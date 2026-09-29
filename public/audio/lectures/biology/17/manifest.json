@@ -1,0 +1,66 @@
+{
+  "lectureId": "77f1f7b8-f30e-4b0b-89e2-2e2482242791",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 17: Inheritance",
+  "totalDuration": 219.57,
+  "majorSections": [
+    {
+      "id": "sec_genetic_code",
+      "title": "1. Nhiễm sắc thể, Gen & Allele"
+    },
+    {
+      "id": "sec_cell_division",
+      "title": "2. Nguyên phân (Mitosis) vs Giảm phân (Meiosis)"
+    },
+    {
+      "id": "sec_monohybrid_inheritance",
+      "title": "3. Bảng lai Punnett & Xác định Giới tính"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 17: Cơ chế Di truyền (Inheritance)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 17: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this central topic, we explore chromosome and gene structures, contrast mitosis and meiosis, decipher genetic terminology, and master monohybrid Punnett crosses and sex determination.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 17: Cơ chế Di truyền. Di truyền học nghiên cứu sự truyền đạt thông tin di truyền qua các thế hệ. Trong bài học này, chúng ta sẽ khảo sát cấu trúc nhiễm sắc thể và gen, so sánh nguyên phân và giảm phân, làm chủ các thuật ngữ di truyền, bảng lai Punnett và cơ chế xác định giới tính.",
+      "duration": 44.99,
+      "startTime": 0.0,
+      "endTime": 44.99,
+      "audioUrl": "/audio/lectures/biology/17/intro.mp3"
+    },
+    {
+      "id": "sec_genetic_code",
+      "title": "1. Cấu trúc Di truyền: Nhiễm sắc thể, Gen & Allele",
+      "selector": "#sec-genetic-code",
+      "en": "Section 1 defines key genetics terms: A Chromosome is a thread-like structure of DNA carrying genetic information in the form of genes. A Gene is a length of DNA coding for a specific protein. An Allele is an alternative form of a gene. A Haploid nucleus contains a single set of unpaired chromosomes (23 in humans). A Diploid nucleus contains two sets of homologous chromosomes (46 in humans).",
+      "vi": "Mục một định nghĩa các thuật ngữ di truyền then chốt: Nhiễm sắc thể là cấu trúc dạng sợi cấu tạo từ phân tử DNA mang thông tin di truyền dưới dạng các gen. Gen là một đoạn phân tử DNA mã hóa cho một loại protein xác định. Allele là các trạng thái biểu hiện khác nhau của cùng một gen. Nhân đơn bội (haploid) chứa một bộ nhiễm sắc thể đơn không bắt cặp (ở người n = 23). Nhân lưỡng bội (diploid) chứa hai bộ nhiễm sắc thể tương đồng (ở người 2n = 46).",
+      "duration": 59.13,
+      "startTime": 44.99,
+      "endTime": 104.12,
+      "audioUrl": "/audio/lectures/biology/17/sec_genetic_code.mp3"
+    },
+    {
+      "id": "sec_cell_division",
+      "title": "2. Phân bào: Nguyên phân (Mitosis) & Giảm phân (Meiosis)",
+      "selector": "#sec-cell-division",
+      "en": "Section 2 contrasts cell divisions: Mitosis is nuclear division giving rise to genetically identical cells in which chromosome number is maintained; it is essential for growth, tissue repair, and asexual reproduction. Meiosis is reduction division in which chromosome number is halved from diploid to haploid, producing four genetically distinct gametes for sexual reproduction and driving genetic variation.",
+      "vi": "Mục hai so sánh hai hình thức phân bào: Nguyên phân (Mitosis) là quá trình phân chia nhân tạo ra hai tế bào con có bộ nhiễm sắc thể giống hệt nhau và giống tế bào mẹ; đóng vai trò cốt lõi trong tăng trưởng cơ thể, làm lành vết thương và sinh sản vô tính. Giảm phân (Meiosis) là phân bào giảm nhiễm làm giảm một nửa số lượng nhiễm sắc thể từ lưỡng bội thành đơn bội, tạo ra 4 giao tử có kiểu gen khác nhau phục vụ sinh sản hữu tính và tạo biến dị tổ hợp.",
+      "duration": 50.54,
+      "startTime": 104.12,
+      "endTime": 154.66,
+      "audioUrl": "/audio/lectures/biology/17/sec_cell_division.mp3"
+    },
+    {
+      "id": "sec_monohybrid_inheritance",
+      "title": "3. Di truyền Đơn gen, Bảng lai Punnett & Giới tính",
+      "selector": "#sec-monohybrid-inheritance",
+      "en": "Section 3 investigates Monohybrid Inheritance: Genotype is the genetic makeup of an organism in terms of alleles (e.g. homozygous BB or heterozygous Bb). Phenotype is the observable physical features. In a cross between two heterozygous parents, the expected phenotypic ratio is three dominant to one recessive. Sex is determined by sex chromosomes: Human females are XX, males are XY, yielding a constant 50% probability of having a son or daughter.",
+      "vi": "Mục ba nghiên cứu Quy luật di truyền đơn gen: Kiểu gen (Genotype) là tổ hợp các allele của sinh vật (như đồng hợp BB, bb hoặc dị hợp Bb). Kiểu hình (Phenotype) là các đặc điểm hình thái quan sát được bên ngoài. Khi cho hai cá thể bố mẹ dị hợp lai với nhau, tỉ lệ phân ly kiểu hình kinh điển ở đời con là 3 trội : 1 lặn. Giới tính ở người do cặp nhiễm sắc thể giới tính quyết định: Nữ giới mang cặp đồng dạng XX, nam giới mang cặp dị dạng XY, xác suất sinh con trai hoặc con gái luôn bằng 50%.",
+      "duration": 64.91,
+      "startTime": 154.66,
+      "endTime": 219.57,
+      "audioUrl": "/audio/lectures/biology/17/sec_monohybrid_inheritance.mp3"
+    }
+  ]
+}

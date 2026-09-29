@@ -1,0 +1,81 @@
+{
+  "lectureId": "a5d1775c-6ecb-4d6c-bc50-8aafbf641c1e",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 5: Enzymes",
+  "totalDuration": 216.25,
+  "majorSections": [
+    {
+      "id": "sec_enzyme_definition",
+      "title": "1. Định nghĩa & Bản chất Enzyme"
+    },
+    {
+      "id": "sec_lock_and_key",
+      "title": "2. Cơ chế Ổ khóa & Chìa khóa"
+    },
+    {
+      "id": "sec_factors_temperature_ph",
+      "title": "3. Nhiệt độ, pH & Biến tính (Denature)"
+    },
+    {
+      "id": "sec_catalase_experiment",
+      "title": "4. Thí nghiệm Catalase (Paper 6)"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5: Enzyme - Chất Xúc tác Sinh học",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 5: Enzymes. Enzymes are the biological catalysts powering all metabolic life processes. In this lesson, we study enzyme action, the Lock and Key hypothesis, the critical effects of temperature and pH, and analyze classic Paper 6 enzyme experiments.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 5: Enzyme - Chất xúc tác sinh học. Enzyme là chất xúc tác sinh học thúc đẩy mọi quá trình trao đổi chất của sự sống. Trong bài học này, chúng ta sẽ tìm hiểu cơ chế hoạt động ổ khóa - chìa khóa, ảnh hưởng quyết định của nhiệt độ và độ pH, cùng các bài thí nghiệm Paper 6 kinh điển.",
+      "duration": 43.65,
+      "startTime": 0.0,
+      "endTime": 43.65,
+      "audioUrl": "/audio/lectures/biology/5/intro.mp3"
+    },
+    {
+      "id": "sec_enzyme_definition",
+      "title": "1. Định nghĩa & Bản chất của Enzyme",
+      "selector": "#sec-enzyme-definition",
+      "en": "Section 1 defines an Enzyme: a protein that functions as a biological catalyst to increase the rate of chemical reactions without being changed or used up in the reaction. Enzymes lower activation energy, enabling vital metabolic reactions to occur rapidly at normal body temperature.",
+      "vi": "Mục một định nghĩa Enzyme: là một loại protein đóng vai trò như chất xúc tác sinh học làm tăng tốc độ phản ứng hóa học mà không bị biến đổi hay tiêu hao sau phản ứng. Enzyme làm giảm năng lượng hoạt hóa, giúp các phản ứng trao đổi chất quan trọng diễn ra nhanh chóng ở nhiệt độ cơ thể bình thường.",
+      "duration": 34.07,
+      "startTime": 43.65,
+      "endTime": 77.72,
+      "audioUrl": "/audio/lectures/biology/5/sec_enzyme_definition.mp3"
+    },
+    {
+      "id": "sec_lock_and_key",
+      "title": "2. Cơ chế Ổ khóa và Chìa khóa (Lock & Key Hypothesis)",
+      "selector": "#sec-lock-and-key",
+      "en": "Section 2 explains the Lock and Key hypothesis: Each enzyme possesses an active site with a unique 3D complementary shape that binds specifically to one substrate. When the substrate collides and binds, an enzyme-substrate complex forms, breaking down or joining molecules into products which detach, leaving the enzyme ready for another reaction.",
+      "vi": "Mục hai giải thích giả thuyết Ổ khóa và Chìa khóa: Mỗi enzyme có một trung tâm hoạt động với cấu hình không gian 3 chiều đặc thù bổ sung khớp với một loại cơ chất xác định. Khi va chạm và liên kết, phức hợp enzyme - cơ chất hình thành, xúc tác tạo thành sản phẩm rồi tách ra, để lại enzyme nguyên vẹn sẵn sàng cho chu trình phản ứng tiếp theo.",
+      "duration": 40.6,
+      "startTime": 77.72,
+      "endTime": 118.32,
+      "audioUrl": "/audio/lectures/biology/5/sec_lock_and_key.mp3"
+    },
+    {
+      "id": "sec_factors_temperature_ph",
+      "title": "3. Ảnh hưởng của Nhiệt độ và pH (Bẫy thi: Denature)",
+      "selector": "#sec-factors-temperature-ph",
+      "en": "Section 3 investigates temperature and pH: As temperature rises towards the optimum, molecules gain kinetic energy and collide more frequently. Above optimum temperature, violent vibrations break bonds holding the enzyme protein structure, permanently altering the active site shape—the enzyme is Denatured! Remember: Enzymes are chemical molecules, not living things, so never say an enzyme dies!",
+      "vi": "Mục ba phân tích ảnh hưởng của nhiệt độ và pH: Khi nhiệt độ tăng đến mức tối ưu, động năng phân tử tăng làm tăng tần số va chạm hiệu quả. Khi vượt quá nhiệt độ tối ưu, các liên kết hydro duy trì cấu trúc bậc cao của enzyme bị phá vỡ, làm biến dạng vĩnh viễn trung tâm hoạt động—hiện tượng này gọi là Biến tính (Denaturation)! Lưu ý bẫy thi: Enzyme là phân tử hóa học không phải sinh vật sống, tuyệt đối không được nói enzyme 'chết'!",
+      "duration": 53.03,
+      "startTime": 118.32,
+      "endTime": 171.35,
+      "audioUrl": "/audio/lectures/biology/5/sec_factors_temperature_ph.mp3"
+    },
+    {
+      "id": "sec_catalase_experiment",
+      "title": "4. Thí nghiệm Thực hành: Enzyme Catalase (Paper 6 Focus)",
+      "selector": "#sec-catalase-experiment",
+      "en": "Section 4 covers the classic catalase investigation: Catalase from potato or liver tissue decomposes toxic hydrogen peroxide into water and oxygen gas. The reaction rate is measured by collecting oxygen gas volume using a gas syringe or measuring foam height over time. Control variables include substrate volume, catalase concentration, and temperature.",
+      "vi": "Mục bốn phân tích thí nghiệm catalase thực hành: Enzyme catalase từ mô khoai tây hoặc gan phân giải hydrogen peroxide độc hại thành nước và khí oxy. Tốc độ phản ứng được đo bằng thể tích khí oxy thu được qua ống tiêm đo khí hoặc chiều cao cột bọt khí theo thời gian. Các biến kiểm soát gồm thể tích cơ chất, nồng độ catalase và nhiệt độ bể điều nhiệt.",
+      "duration": 44.9,
+      "startTime": 171.35,
+      "endTime": 216.25,
+      "audioUrl": "/audio/lectures/biology/5/sec_catalase_experiment.mp3"
+    }
+  ]
+}

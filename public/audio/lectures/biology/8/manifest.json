@@ -1,0 +1,81 @@
+{
+  "lectureId": "37f08657-58e8-4fad-8035-2d935e1259e8",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 8: Transport in plants",
+  "totalDuration": 227.05,
+  "majorSections": [
+    {
+      "id": "sec_vascular_tissues",
+      "title": "1. Mạch gỗ (Xylem) & Mạch rây (Phloem)"
+    },
+    {
+      "id": "sec_vascular_position",
+      "title": "2. Vị trí Mô dẫn ở Rễ & Thân"
+    },
+    {
+      "id": "sec_transpiration",
+      "title": "3. Lực Hút Thoát Hơi Nước"
+    },
+    {
+      "id": "sec_translocation",
+      "title": "4. Translocation: Nguồn & Bể chứa"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 8: Sự Vận chuyển Các chất ở Thực vật",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 8: Transport in plants. Vascular plants possess specialized transport tissues to distribute water, minerals, and organic sugars. In this lesson, we study xylem and phloem, their anatomical arrangements in roots and stems, transpiration mechanisms, and translocation between sources and sinks.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 8: Sự Vận chuyển Các chất ở Thực vật. Thực vật bậc cao có hệ thống mô dẫn chuyên hóa để phân phối nước, khoáng chất và đường hữu cơ. Trong bài học này, chúng ta sẽ khảo sát cấu tạo mạch gỗ và mạch rây, vị trí của chúng ở rễ và thân, cơ chế thoát hơi nước và dòng vận chuyển chất hữu cơ giữa nguồn và bể chứa.",
+      "duration": 46.62,
+      "startTime": 0.0,
+      "endTime": 46.62,
+      "audioUrl": "/audio/lectures/biology/8/intro.mp3"
+    },
+    {
+      "id": "sec_vascular_tissues",
+      "title": "1. Mô Dẫn: Mạch gỗ (Xylem) & Mạch rây (Phloem)",
+      "selector": "#sec-vascular-tissues",
+      "en": "Section 1 contrasts vascular tissues: Xylem vessels consist of hollow, non-living dead cells with lignified walls that provide mechanical support; they transport water and dissolved mineral ions upward from roots to leaves. Phloem tissues are living cells with perforated sieve plates and companion cells, carrying sucrose and amino acids bidirectionally throughout the plant.",
+      "vi": "Mục một so sánh hai loại mô dẫn: Mạch gỗ (Xylem) gồm các tế bào chết rỗng ruột với thành tẩm lignin dày chịu lực tốt; chúng dẫn truyền nước và ion khoáng một chiều từ rễ lên lá. Mạch rây (Phloem) là các tế bào sống có bản rây thủng lỗ kèm theo tế bào đồng hành, vận chuyển đường sucrose và axit amin hai chiều đến khắp các cơ quan của cây.",
+      "duration": 43.89,
+      "startTime": 46.62,
+      "endTime": 90.51,
+      "audioUrl": "/audio/lectures/biology/8/sec_vascular_tissues.mp3"
+    },
+    {
+      "id": "sec_vascular_position",
+      "title": "2. Vị trí Mô dẫn ở Rễ, Thân và Lá",
+      "selector": "#sec-vascular-position",
+      "en": "Section 2 investigates vascular anatomy in dicotyledonous plants: In roots, xylem forms a central star or cross shape, with phloem pockets nestled between the arms to resist pulling forces. In stems, vascular bundles arrange in a perimeter ring near the outer cortex, with xylem located on the inside and phloem on the outside to withstand bending strains.",
+      "vi": "Mục hai nghiên cứu sự phân bố mô dẫn ở thực vật hai lá mầm: Ở rễ, mạch gỗ tập trung thành hình chữ thập hoặc hình sao ở chính giữa, xen giữa là các bó mạch rây để tăng khả năng chống chịu lực kéo. Ở thân, các bó mạch xếp thành một vòng tròn đồng tâm gần vỏ ngoài, trong đó mạch gỗ nằm ở phía trong và mạch rây nằm ở phía ngoài để giúp thân đứng vững trước gió bão.",
+      "duration": 43.41,
+      "startTime": 90.51,
+      "endTime": 133.92,
+      "audioUrl": "/audio/lectures/biology/8/sec_vascular_position.mp3"
+    },
+    {
+      "id": "sec_transpiration",
+      "title": "3. Hút nước & Cơ chế Thoát hơi nước (Transpiration)",
+      "selector": "#sec-transpiration",
+      "en": "Section 3 defines Transpiration: the loss of water vapour from plant leaves by evaporation of water at the surfaces of mesophyll cells followed by diffusion of water vapour through stomata. This evaporation generates a negative suction tension known as Transpiration Pull, drawing continuous water columns through xylem vessels via cohesion between water molecules.",
+      "vi": "Mục ba định nghĩa Thoát hơi nước: là sự mất hơi nước từ lá cây qua quá trình bay hơi từ bề mặt các tế bào thịt lá, sau đó khuếch tán ra ngoài qua khí khổng. Sự bay hơi này tạo ra lực hút thoát hơi nước (Transpiration Pull), kéo theo một cột nước liên tục dâng lên trong mạch gỗ nhờ lực liên kết giữa các phân tử nước và lực bám vào thành mạch.",
+      "duration": 40.6,
+      "startTime": 133.92,
+      "endTime": 174.52,
+      "audioUrl": "/audio/lectures/biology/8/sec_transpiration.mp3"
+    },
+    {
+      "id": "sec_translocation",
+      "title": "4. Vận chuyển Chất hữu cơ: Dòng Mạch rây (Translocation)",
+      "selector": "#sec-translocation",
+      "en": "Section 4 defines Translocation: the movement of sucrose and amino acids in phloem from sources to sinks. Sources are regions of production or release, like photosynthesizing leaves. Sinks are regions of utilization or storage, like growing shoots, developing fruits, and root tubers. Notice the seasonal reversal: In early spring before buds open, root tubers act as sources supplying growing shoots.",
+      "vi": "Mục bốn định nghĩa Dòng vận chuyển chất hữu cơ: là sự vận chuyển đường sucrose và axit amin trong mạch rây từ nguồn (sources) đến bể chứa (sinks). Nguồn là nơi sản xuất đường như lá quang hợp. Bể chứa là nơi tiêu thụ hoặc tích trữ như chồi non, hoa quả và củ. Bẫy đề thi mùa vụ: Vào đầu mùa xuân khi lá chưa mọc, củ dưới rễ đóng vai trò là nguồn giải phóng dinh dưỡng nuôi chồi non sinh trưởng.",
+      "duration": 52.53,
+      "startTime": 174.52,
+      "endTime": 227.05,
+      "audioUrl": "/audio/lectures/biology/8/sec_translocation.mp3"
+    }
+  ]
+}

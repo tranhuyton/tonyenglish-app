@@ -1,0 +1,96 @@
+{
+  "lectureId": "e7d6e813-b7b9-4038-9911-8b886978cd07",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 6: Plant Nutrition",
+  "totalDuration": 289.92,
+  "majorSections": [
+    {
+      "id": "sec_photosynthesis",
+      "title": "1. Phương trình Quang hợp & Diệp lục"
+    },
+    {
+      "id": "sec_minerals",
+      "title": "2. Khoáng chất: Nitrat & Magie"
+    },
+    {
+      "id": "sec_leaf_structure",
+      "title": "3. Cấu tạo Bên trong của Lá"
+    },
+    {
+      "id": "sec_photosynthesis_experiments",
+      "title": "4. Thí nghiệm Tinh bột (Paper 6)"
+    },
+    {
+      "id": "sec_limiting_factors",
+      "title": "5. Các Yếu tố Giới hạn"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6: Dinh dưỡng Thực vật & Quang hợp",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 6: Plant Nutrition. Plants are autotrophic organisms that synthesize their own food through photosynthesis. In this comprehensive lesson, we examine the photosynthesis equation, mineral nutrition, internal leaf adaptations, crucial Paper 6 starch investigations, and limiting factors.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 6: Dinh dưỡng Thực vật và Quang hợp. Thực vật là sinh vật tự dưỡng có khả năng tự tổng hợp chất hữu cơ qua quang hợp. Trong bài học này, chúng ta sẽ khảo sát phương trình quang hợp, nhu cầu khoáng chất, cấu tạo thích nghi của lá, các thí nghiệm tinh bột Paper 6 và các yếu tố giới hạn.",
+      "duration": 44.7,
+      "startTime": 0.0,
+      "endTime": 44.7,
+      "audioUrl": "/audio/lectures/biology/6/intro.mp3"
+    },
+    {
+      "id": "sec_photosynthesis",
+      "title": "1. Phương trình Quang hợp & Vai trò của Diệp lục",
+      "selector": "#sec-photosynthesis",
+      "en": "Section 1 defines Photosynthesis: the process by which plants synthesize carbohydrates from raw materials using energy from light. The balanced chemical equation is: six CO2 plus six H2O yields C6H12O6 plus six O2, catalyzed by light and chlorophyll. Chlorophyll in chloroplasts absorbs light energy and transfers it into chemical energy in synthesized glucose.",
+      "vi": "Mục một định nghĩa Quang hợp: là quá trình thực vật tổng hợp carbohydrate từ các nguyên liệu thô sử dụng năng lượng ánh sáng. Phương trình hóa học cân bằng là: 6 phân tử CO2 kết hợp với 6 phân tử nước, dưới tác dụng của ánh sáng và chất diệp lục, tạo ra một phân tử glucose C6H12O6 và giải phóng 6 phân tử O2. Diệp lục hấp thụ quang năng và chuyển hóa thành hóa năng dự trữ trong glucose.",
+      "duration": 50.32,
+      "startTime": 44.7,
+      "endTime": 95.02,
+      "audioUrl": "/audio/lectures/biology/6/sec_photosynthesis.mp3"
+    },
+    {
+      "id": "sec_minerals",
+      "title": "2. Nhu cầu Khoáng chất: Nitrat và Magie",
+      "selector": "#sec-minerals",
+      "en": "Section 2 investigates essential plant mineral ions: Nitrate ions supply nitrogen required to build amino acids and synthesized plant proteins; deficiency results in stunted growth and weak yellowing stems. Magnesium ions form the central core of the chlorophyll molecule; magnesium deficiency leads to chlorosis, turning leaves completely yellow between veins.",
+      "vi": "Mục hai nghiên cứu các ion khoáng thiết yếu cho thực vật: Ion Nitrat cung cấp nguyên tố nitơ cần thiết để tạo nên axit amin và tổng hợp protein; thiếu nitrat làm cây còi cọc và thân cây vàng yếu. Ion Magie là nguyên tử trung tâm cấu tạo nên phân tử diệp lục; thiếu magie dẫn đến bệnh vàng lá (chlorosis), khiến phiến lá mất màu xanh chuyển sang màu vàng úa.",
+      "duration": 43.96,
+      "startTime": 95.02,
+      "endTime": 138.98,
+      "audioUrl": "/audio/lectures/biology/6/sec_minerals.mp3"
+    },
+    {
+      "id": "sec_leaf_structure",
+      "title": "3. Cấu tạo Bên trong của Lá (Internal Leaf Structure)",
+      "selector": "#sec-leaf-structure",
+      "en": "Section 3 analyzes internal leaf adaptations for maximum photosynthesis: The waxy cuticle prevents excessive water evaporation. The upper epidermis is transparent to let sunlight penetrate. The palisade mesophyll contains tightly packed columnar cells rich in chloroplasts. The spongy mesophyll features large air spaces for rapid carbon dioxide diffusion. The lower epidermis houses stomata regulated by guard cells.",
+      "vi": "Mục ba phân tích cấu tạo thích nghi giải phẫu của lá: Lớp cutin sáp trong suốt chống thoát hơi nước quá mức. Biểu bì trên cho ánh sáng truyền qua. Tầng mô giậu chứa các tế bào hình trụ xếp thẳng đứng với mật độ lục lạp dày đặc nhất để đón ánh sáng. Tầng mô xốp có nhiều khoang rỗng chứa khí giúp khí CO2 khuếch tán nhanh. Biểu bì dưới chứa nhiều khí khổng được đóng mở bởi tế bào hạt đậu.",
+      "duration": 52.74,
+      "startTime": 138.98,
+      "endTime": 191.72,
+      "audioUrl": "/audio/lectures/biology/6/sec_leaf_structure.mp3"
+    },
+    {
+      "id": "sec_photosynthesis_experiments",
+      "title": "4. Thí nghiệm Thực hành Quang hợp (Paper 6 Focus)",
+      "selector": "#sec-photosynthesis-experiments",
+      "en": "Section 4 details Paper 6 practical investigations: Before any photosynthesis experiment, plants must be de-starched by keeping them in darkness for forty-eight hours so existing starch is mobilized. To test a leaf for starch: boil in water to kill cells, boil in ethanol using an electric water bath to dissolve green chlorophyll, soften in warm water, then add yellow-brown iodine solution—turning blue-black indicates starch presence.",
+      "vi": "Mục bốn trình bày các quy trình thực hành Paper 6: Trước khi làm thí nghiệm, cây phải được khử tinh bột (de-starching) bằng cách để trong bóng tối 48 giờ để tiêu thụ hết tinh bột cũ. Quy trình 4 bước thử tinh bột ở lá: đun sôi lá trong nước để phá hủy tế bào; đun cách thủy trong cồn để tẩy sạch chất diệp lục; nhúng nước ấm để làm mềm lá; và nhỏ dung dịch i-ốt màu nâu vàng—lá đổi sang màu xanh đen chứng tỏ có tinh bột quang hợp.",
+      "duration": 52.46,
+      "startTime": 191.72,
+      "endTime": 244.18,
+      "audioUrl": "/audio/lectures/biology/6/sec_photosynthesis_experiments.mp3"
+    },
+    {
+      "id": "sec_limiting_factors",
+      "title": "5. Các Yếu tố Giới hạn Tốc độ Quang hợp",
+      "selector": "#sec-limiting-factors",
+      "en": "Section 5 examines Limiting Factors: an environmental condition in shortest supply that restricts the rate of a physiological process. The three major limiting factors are light intensity, carbon dioxide concentration, and ambient temperature. Commercial greenhouse growers enrich carbon dioxide, employ artificial lights, and maintain optimum temperatures to maximize crop yield.",
+      "vi": "Mục năm phân tích các Yếu tố giới hạn: là điều kiện môi trường ở mức thấp nhất kìm hãm tốc độ của một quá trình sinh lý. Ba yếu tố giới hạn chính của quang hợp gồm cường độ ánh sáng, nồng độ CO2 và nhiệt độ môi trường. Các nhà kính nông nghiệp hiện đại chủ động sục thêm khí CO2, bổ sung đèn LED và duy trì nhiệt độ tối ưu để đạt năng suất cây trồng tối đa.",
+      "duration": 45.74,
+      "startTime": 244.18,
+      "endTime": 289.92,
+      "audioUrl": "/audio/lectures/biology/6/sec_limiting_factors.mp3"
+    }
+  ]
+}

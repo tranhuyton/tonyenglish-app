@@ -1,0 +1,81 @@
+{
+  "lectureId": "55023dc0-7fdc-46ea-a3e9-9a049306d086",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 21: Biotechnology and Genetic Engineering",
+  "totalDuration": 260.77,
+  "majorSections": [
+    {
+      "id": "sec_why_bacteria",
+      "title": "1. Ứng dụng Vi sinh vật trong Công nghệ"
+    },
+    {
+      "id": "sec_industrial_fermenter",
+      "title": "2. Cấu tạo Nồi lên men Công nghiệp"
+    },
+    {
+      "id": "sec_genetic_engineering",
+      "title": "3. Kỹ thuật Di truyền & Insulin Tái tổ hợp"
+    },
+    {
+      "id": "sec_gm_crops",
+      "title": "4. Cây trồng Biến đổi Gen (GM Crops)"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 21: Công nghệ Sinh học & Kỹ thuật Di truyền",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 21: Biotechnology and Genetic Engineering. In this cutting-edge final chapter, we explore industrial microbiology, fermenter design, recombinant DNA technology for human insulin production, and the benefits and hazards of genetically modified crops.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 21: Công nghệ Sinh học và Kỹ thuật Di truyền. Trong bài học kết thúc toàn bộ khóa học này, chúng ta sẽ khảo sát ứng dụng vi sinh vật công nghiệp, cấu tạo nồi lên men, công nghệ DNA tái tổ hợp sản xuất insulin người và các cơ hội cùng thách thức của cây trồng biến đổi gen.",
+      "duration": 39.5,
+      "startTime": 0.0,
+      "endTime": 39.5,
+      "audioUrl": "/audio/lectures/biology/21/intro.mp3"
+    },
+    {
+      "id": "sec_why_bacteria",
+      "title": "1. Ứng dụng Vi sinh vật trong Công nghệ Sinh học",
+      "selector": "#sec-why-bacteria",
+      "en": "Section 1 explains why bacteria are ideal organisms in biotechnology: Bacteria reproduce extremely rapidly via binary fission, possess simple nutritional requirements, share universal genetic code with humans, contain circular plasmids ideal for gene insertion, and produce complex proteins without animal ethical objections.",
+      "vi": "Mục một giải thích vì sao vi khuẩn là đối tượng lý tưởng trong công nghệ sinh học: Vi khuẩn phân chia nhân đôi cực nhanh, nhu cầu dinh dưỡng đơn giản, sử dụng chung mã di truyền phổ quát với con người, sở hữu các plasmid dạng vòng dễ chèn gen ngoại lai và có thể sản xuất protein phức tạp mà không vướng phải các rào cản đạo đức như thử nghiệm trên động vật.",
+      "duration": 39.06,
+      "startTime": 39.5,
+      "endTime": 78.56,
+      "audioUrl": "/audio/lectures/biology/21/sec_why_bacteria.mp3"
+    },
+    {
+      "id": "sec_industrial_fermenter",
+      "title": "2. Nồi lên men Công nghiệp (The Industrial Fermenter)",
+      "selector": "#sec-industrial-fermenter",
+      "en": "Section 2 investigates industrial fermenter engineering: Steam sterilization cleans the vessel beforehand to kill unwanted microbes that would compete for nutrients. A cooling water jacket circulates cold water to dissipate excess metabolic heat from respiration, maintaining optimum temperature. Stirring paddles maintain uniform suspension and nutrient access. Probes constantly monitor pH and temperature, while a sterile air sparger supplies oxygen for aerobic respiration.",
+      "vi": "Mục hai nghiên cứu cấu tạo kỹ thuật của nồi lên men công nghiệp: Khử trùng bằng luồng hơi nước áp suất cao trước khi nuôi cấy để diệt sạch vi sinh vật tạp nhiễm cạnh tranh dinh dưỡng. Áo làm mát tuần hoàn nước lạnh hấp thu nhiệt lượng tỏa ra từ quá trình hô hấp tế bào để giữ nhiệt độ tối ưu. Cánh khuấy khuấy đều giúp vi sinh vật tiếp xúc liên tục với chất dinh dưỡng. Các đầu dò cảm biến liên tục đo pH và nhiệt độ, kết hợp với sục khí vô trùng cung cấp oxy cho hô hấp hiếu khí.",
+      "duration": 56.99,
+      "startTime": 78.56,
+      "endTime": 135.55,
+      "audioUrl": "/audio/lectures/biology/21/sec_industrial_fermenter.mp3"
+    },
+    {
+      "id": "sec_genetic_engineering",
+      "title": "3. Kỹ thuật Di truyền & Sản xuất Insulin người (Recombinant DNA)",
+      "selector": "#sec-genetic-engineering",
+      "en": "Section 3 details the four-step recombinant insulin protocol: Step 1: The human insulin gene is isolated and cut out using a specific restriction endonuclease enzyme, creating complementary sticky ends. Step 2: A bacterial plasmid vector is cut open using the same restriction enzyme. Step 3: The human gene and open plasmid are joined together using DNA ligase enzyme to create a recombinant plasmid. Step 4: The recombinant plasmid is inserted into a host bacterium, which multiplies in fermenters to mass-produce human insulin.",
+      "vi": "Mục ba mô tả quy trình 4 bước tạo insulin tái tổ hợp: Bước 1: Phân lập và cắt đoạn gen mã hóa insulin người bằng enzyme giới hạn cắt nối đặc hiệu (restriction enzyme), để lại các đầu dính so le. Bước 2: Dùng chính enzyme giới hạn đó để cắt mở vòng plasmid của vi khuẩn. Bước 3: Nối đoạn gen người vào plasmid nhờ enzyme nối DNA ligase tạo thành plasmid tái tổ hợp. Bước 4: Chuyển plasmid tái tổ hợp vào tế bào vi khuẩn chủ, nuôi cấy nhân dòng trong nồi lên men để sản xuất hàng loạt hormone insulin người phục vụ bệnh nhân tiểu đường.",
+      "duration": 69.62,
+      "startTime": 135.55,
+      "endTime": 205.17,
+      "audioUrl": "/audio/lectures/biology/21/sec_genetic_engineering.mp3"
+    },
+    {
+      "id": "sec_gm_crops",
+      "title": "4. Cây trồng Biến đổi Gen (Genetically Modified Crops)",
+      "selector": "#sec-gm-crops",
+      "en": "Section 4 weighs the advantages and disadvantages of Genetically Modified (GM) crops: Advantages include higher yields, drought tolerance, enhanced nutritional value like vitamin A in Golden Rice, and insect resistance like Bt maize reducing pesticide expenditure. Disadvantages include risks of herbicide-resistance genes transferring to wild weed relatives creating superweeds, potential human allergenicity, and financial dependency on multinational seed patents.",
+      "vi": "Mục bốn cân nhắc lợi ích và rủi ro của Cây trồng biến đổi gen (GM crops): Lợi ích gồm tăng năng suất cây trồng, tăng khả năng chịu hạn mặn, nâng cao giá trị dinh dưỡng như gạo Vàng giàu tiền chất vitamin A chống mù lòa và giống ngô Bt mang gen diệt sâu giúp giảm phun thuốc hóa học. Rủi ro tiềm ẩn gồm nguy cơ phát tán gen kháng thuốc diệt cỏ sang cỏ dại bản địa tạo ra siêu cỏ dại khó diệt, nguy cơ dị ứng thực phẩm và sự lệ thuộc kinh tế vào các tập đoàn hạt giống độc quyền.",
+      "duration": 55.6,
+      "startTime": 205.17,
+      "endTime": 260.77,
+      "audioUrl": "/audio/lectures/biology/21/sec_gm_crops.mp3"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "lectureId": "da59c2b3-124f-4e25-8537-74059e74f9b0",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 11: Gas exchange in humans",
+  "totalDuration": 213.45,
+  "majorSections": [
+    {
+      "id": "sec_alveoli_features",
+      "title": "1. Cấu tạo Thích nghi của Phế nang"
+    },
+    {
+      "id": "sec_respiratory_anatomy",
+      "title": "2. Giải phẫu Hệ Hô hấp & Lông rung"
+    },
+    {
+      "id": "sec_ventilation_breathing",
+      "title": "3. Cơ chế Hít vào - Thở ra & Vận động"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 11: Trao đổi Khí ở Người",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 11: Gas exchange in humans. Supplying oxygen and purging metabolic carbon dioxide requires specialized respiratory surfaces. In this lesson, we analyze alveoli adaptations, the anatomy of the respiratory tract, goblet and ciliated cells, ventilation mechanics, and the effects of exercise.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 11: Trao đổi Khí ở Người. Việc cung cấp oxy và loại bỏ carbon dioxide đòi hỏi bề mặt trao đổi khí chuyên hóa cao. Trong bài học này, chúng ta sẽ phân tích cấu tạo thích nghi của phế nang, giải phẫu đường hô hấp, tế bào lông rung và tế bào tiết nhầy, cơ chế thông khí hít vào - thở ra cùng tác động của vận động thể chất.",
+      "duration": 48.02,
+      "startTime": 0.0,
+      "endTime": 48.02,
+      "audioUrl": "/audio/lectures/biology/11/intro.mp3"
+    },
+    {
+      "id": "sec_alveoli_features",
+      "title": "1. Đặc điểm Thích nghi của Bề mặt Trao đổi Khí (Phế nang)",
+      "selector": "#sec-alveoli-features",
+      "en": "Section 1 examines alveoli adaptations for rapid gas exchange: Millions of microscopic alveoli provide an immense surface area. The alveolar wall is only one-cell thick, as are surrounding capillary walls, creating an ultra-short diffusion distance. A thin layer of moisture dissolves gases for diffusion. A dense network of blood capillaries maintains a steep concentration gradient.",
+      "vi": "Mục một phân tích cấu tạo thích nghi của phế nang để tối ưu trao đổi khí: Hàng triệu phế nang li ti tạo nên diện tích bề mặt tiếp xúc khổng lồ. Thành phế nang và thành mao mạch bao quanh đều chỉ dày duy nhất một lớp tế bào, tạo ra khoảng cách khuếch tán cực ngắn. Lớp màng ẩm mỏng trên bề mặt giúp hòa tan khí oxy trước khi khuếch tán. Mạng mao mạch dày đặc liên tục đưa máu đi qua để duy trì độ dốc chênh lệch nồng độ cao.",
+      "duration": 49.84,
+      "startTime": 48.02,
+      "endTime": 97.86,
+      "audioUrl": "/audio/lectures/biology/11/sec_alveoli_features.mp3"
+    },
+    {
+      "id": "sec_respiratory_anatomy",
+      "title": "2. Cấu tạo Hệ Hô hấp & Tế bào Lông rung",
+      "selector": "#sec-respiratory-anatomy",
+      "en": "Section 2 traces air pathway: Larynx, trachea supported by C-shaped cartilage rings, branching into two bronchi, multiple bronchioles, ending in alveolar clusters. The airway epithelium features goblet cells that secrete sticky mucus to trap inhaled dust and pathogens, and ciliated epithelial cells whose coordinated beating sweeps contaminated mucus upward towards the throat to be swallowed.",
+      "vi": "Mục hai theo dõi luồng không khí: Khí quản được nâng đỡ bởi các vòng sụn hình chữ C chống xẹp lún, phân nhánh thành hai phế quản chính, các tiểu phế quản rồi tận cùng ở các chùm phế nang. Lớp biểu mô đường thở chứa tế bào hình đài tiết chất nhầy kết dính giữ bụi và vi khuẩn, cùng các tế bào biểu mô có lông rung phối hợp đập nhịp nhàng quét ngược lớp chất nhầy bẩn lên họng để nuốt xuống dạ dày.",
+      "duration": 46.07,
+      "startTime": 97.86,
+      "endTime": 143.93,
+      "audioUrl": "/audio/lectures/biology/11/sec_respiratory_anatomy.mp3"
+    },
+    {
+      "id": "sec_ventilation_breathing",
+      "title": "3. Cơ chế Thông khí (Hít vào - Thở ra) & Luyện tập",
+      "selector": "#sec-ventilation-breathing",
+      "en": "Section 3 analyzes ventilation mechanics: During inspiration, external intercostal muscles contract, ribs move up and out, diaphragm contracts and flattens; thorax volume increases, decreasing thoracic pressure below atmospheric pressure, drawing air into lungs. During expiration, external intercostals relax, ribs drop down and in, diaphragm relaxes and domes up; thorax volume decreases, raising internal pressure to force air out. During exercise, muscle cells respire faster, releasing carbon dioxide that lowers blood pH, triggering the brain to increase breathing rate and tidal depth.",
+      "vi": "Mục ba phân tích cơ chế thông khí: Khi hít vào, cơ liên sườn ngoài co kéo xương sườn nâng lên và nở ra ngoài, cơ hoành co phẳng xuống; thể tích lồng ngực tăng làm áp suất bên trong giảm thấp hơn áp suất khí quyển, hút không khí tràn vào phổi. Khi thở ra, cơ liên sườn ngoài giãn, xương sườn hạ xuống, cơ hoành giãn cong lên hình vòm; thể tích khoang ngực giảm làm áp suất tăng ép đẩy khí ra ngoài. Khi vận động mạnh, hô hấp tế bào tăng tiết nhiều CO2 làm giảm pH máu, kích thích não bộ tăng nhịp thở và độ sâu của mỗi nhịp thở.",
+      "duration": 69.52,
+      "startTime": 143.93,
+      "endTime": 213.45,
+      "audioUrl": "/audio/lectures/biology/11/sec_ventilation_breathing.mp3"
+    }
+  ]
+}

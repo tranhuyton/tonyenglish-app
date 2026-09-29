@@ -1,0 +1,66 @@
+{
+  "lectureId": "7b2384dd-b79d-47fe-b36b-7abf36784f06",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 19: Organisms and their environment",
+  "totalDuration": 207.18,
+  "majorSections": [
+    {
+      "id": "sec_ecological_definitions",
+      "title": "1. Thuật ngữ Sinh thái học"
+    },
+    {
+      "id": "sec_food_chains_energy",
+      "title": "2. Chuỗi Thức ăn & Quy tắc 10%"
+    },
+    {
+      "id": "sec_carbon_cycle",
+      "title": "3. Vòng tuần hoàn Cacbon"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 19: Sinh vật và Môi trường Sinh thái",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 19: Organisms and their environment. Ecology explores the intricate relationships between living organisms and physical habitats. In this lesson, we study core ecological definitions, food chains, webs, and trophic energy loss, and analyze the carbon cycle.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 19: Sinh vật và Môi trường Sinh thái. Sinh thái học khám phá mối quan hệ tương tác phức tạp giữa sinh vật sống và sinh cảnh tự nhiên. Trong bài học này, chúng ta sẽ khảo sát các định nghĩa sinh thái cốt lõi, chuỗi thức ăn, lưới thức ăn, quy luật thất thoát năng lượng và vòng tuần hoàn cacbon.",
+      "duration": 43.36,
+      "startTime": 0.0,
+      "endTime": 43.36,
+      "audioUrl": "/audio/lectures/biology/19/intro.mp3"
+    },
+    {
+      "id": "sec_ecological_definitions",
+      "title": "1. Thuật ngữ Sinh thái: Quần thể, Quần xã & Hệ sinh thái",
+      "selector": "#sec-ecological-definitions",
+      "en": "Section 1 defines ecological foundations: A Population is a group of organisms of one species living in the same area at the same time. A Community is all of the populations of different species in an ecosystem. An Ecosystem is a unit containing a community of organisms and their abiotic environment, interacting together.",
+      "vi": "Mục một định nghĩa các khái niệm nền tảng: Quần thể (Population) là tập hợp các cá thể thuộc cùng một loài cùng sinh sống trong một sinh cảnh tại một thời điểm xác định. Quần xã (Community) là tập hợp tất cả các quần thể thuộc các loài khác nhau cùng tồn tại trong một hệ sinh thái. Hệ sinh thái (Ecosystem) là một chỉnh thể bao gồm quần xã sinh vật và môi trường vô sinh (abiotic) tương tác chặt chẽ với nhau.",
+      "duration": 46.05,
+      "startTime": 43.36,
+      "endTime": 89.41,
+      "audioUrl": "/audio/lectures/biology/19/sec_ecological_definitions.mp3"
+    },
+    {
+      "id": "sec_food_chains_energy",
+      "title": "2. Chuỗi Thức ăn, Lưới Thức ăn & Dòng Năng lượng (Quy tắc 10%)",
+      "selector": "#sec-food-chains-energy",
+      "en": "Section 2 investigates energy flow: The primary source of energy is sunlight, converted into organic chemical energy by photosynthetic producers. Energy passes along trophic levels from primary consumers to apex predators. However, approximately 90% of energy is lost at each transfer as heat through respiration, locomotion, excretion, and uneaten tissue. Because only roughly 10% is incorporated into new biomass, food chains rarely exceed four to five links.",
+      "vi": "Mục hai nghiên cứu dòng năng lượng: Nguồn năng lượng sơ cấp cho mọi hệ sinh thái là ánh sáng mặt trời, được sinh vật sản xuất quang hợp chuyển thành hóa năng dự trữ. Năng lượng truyền qua các bậc dinh dưỡng từ sinh vật tiêu thụ bậc một đến các loài săn mồi đỉnh. Tuy nhiên, khoảng 90% năng lượng bị thất thoát ở mỗi bậc dinh dưỡng dưới dạng nhiệt từ hô hấp, vận động, bài tiết và các phần không ăn được. Vì chỉ có khoảng 10% năng lượng được tích lũy thành sinh khối mới, nên các chuỗi thức ăn trong tự nhiên hiếm khi dài quá 4 đến 5 mắt xích.",
+      "duration": 61.74,
+      "startTime": 89.41,
+      "endTime": 151.15,
+      "audioUrl": "/audio/lectures/biology/19/sec_food_chains_energy.mp3"
+    },
+    {
+      "id": "sec_carbon_cycle",
+      "title": "3. Vòng tuần hoàn Cacbon (The Carbon Cycle)",
+      "selector": "#sec-carbon-cycle",
+      "en": "Section 3 details the Carbon Cycle: Atmospheric carbon dioxide is removed solely by plant photosynthesis. Carbon returns to the atmosphere through three major avenues: cellular respiration by plants, animals, and decomposers; combustion of fossil fuels; and microbial decomposition of dead organic matter. Human combustion of coal, oil, and gas, coupled with deforestation, disrupts this equilibrium and drives global climate change.",
+      "vi": "Mục ba phân tích chi tiết Vòng tuần hoàn Cacbon: Khí CO2 trong khí quyển chỉ được hấp thu duy nhất qua quá trình quang hợp của thực vật. Cacbon được hoàn trả lại khí quyển qua 3 con đường chính: hô hấp tế bào của thực vật, động vật và vi sinh vật; quá trình đốt cháy nhiên liệu hóa thạch; và sự phân hủy xác sinh vật của vi khuẩn và nấm. Hoạt động đốt than đá, dầu mỏ và nạn phá rừng của con người đang làm mất cân bằng vòng tuần hoàn này, dẫn đến biến đổi khí hậu toàn cầu.",
+      "duration": 56.03,
+      "startTime": 151.15,
+      "endTime": 207.18,
+      "audioUrl": "/audio/lectures/biology/19/sec_carbon_cycle.mp3"
+    }
+  ]
+}

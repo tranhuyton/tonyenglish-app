@@ -1,0 +1,81 @@
+{
+  "lectureId": "936affb8-f062-4e39-b415-cc3794fb341e",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 16: Reproduction",
+  "totalDuration": 273.61,
+  "majorSections": [
+    {
+      "id": "sec_asexual_vs_sexual",
+      "title": "1. Sinh sản Vô tính vs Hữu tính"
+    },
+    {
+      "id": "sec_plant_reproduction",
+      "title": "2. Thụ phấn & Nảy mầm ở Thực vật"
+    },
+    {
+      "id": "sec_human_reproduction",
+      "title": "3. Thụ tinh, Nhau thai & Dây rốn"
+    },
+    {
+      "id": "sec_menstrual_cycle",
+      "title": "4. Chu kỳ Kinh nguyệt & Hormone"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 16: Sinh sản & Chu kỳ Kinh nguyệt",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 16: Reproduction. Reproduction ensures the perpetuation of species. In this comprehensive lesson, we contrast asexual and sexual reproduction, examine flower adaptations and pollination, study human reproductive physiology and placental exchange, and master the hormonal control of the menstrual cycle.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 16: Sinh sản và Chu kỳ Kinh nguyệt. Sinh sản đảm bảo sự trường tồn của loài. Trong bài học này, chúng ta sẽ so sánh sinh sản vô tính và hữu tính, cấu tạo hoa và sự thụ phấn, sinh lý sinh sản người và vai trò nhau thai, cùng cơ chế điều hòa hormone trong chu kỳ kinh nguyệt.",
+      "duration": 45.59,
+      "startTime": 0.0,
+      "endTime": 45.59,
+      "audioUrl": "/audio/lectures/biology/16/intro.mp3"
+    },
+    {
+      "id": "sec_asexual_vs_sexual",
+      "title": "1. So sánh Sinh sản Vô tính và Hữu tính",
+      "selector": "#sec-asexual-vs-sexual",
+      "en": "Section 1 contrasts reproduction modes: Asexual reproduction involves a single parent, produces genetically identical offspring (clones) via mitosis without gamete fusion, allowing rapid colonisation of favorable habitats. Sexual reproduction involves the fusion of haploid male and female gamete nuclei to form a diploid zygote via fertilisation, creating genetic variation that equips populations to adapt to fluctuating environments.",
+      "vi": "Mục một so sánh hai hình thức sinh sản: Sinh sản vô tính chỉ có một cơ thể mẹ, tạo ra các thế hệ con giống hệt nhau về mặt di truyền (dòng vô tính) qua nguyên phân mà không có sự kết hợp giao tử, giúp nhân giống cực nhanh trong điều kiện thuận lợi. Sinh sản hữu tính là sự dung hợp nhân giữa giao tử đơn bội đực và cái qua thụ tinh để tạo thành hợp tử lưỡng bội, tạo ra biến dị di truyền phong phú giúp quần thể thích nghi với môi trường sống biến động.",
+      "duration": 52.65,
+      "startTime": 45.59,
+      "endTime": 98.24,
+      "audioUrl": "/audio/lectures/biology/16/sec_asexual_vs_sexual.mp3"
+    },
+    {
+      "id": "sec_plant_reproduction",
+      "title": "2. Sinh sản Hữu tính ở Thực vật có Hoa (Thụ phấn & Nảy mầm)",
+      "selector": "#sec-plant-reproduction",
+      "en": "Section 2 investigates flowering plant reproduction: Male stamens consist of anthers producing pollen grains and filaments; female carpels feature sticky stigmas, styles, and ovaries enclosing ovules. Insect-pollinated flowers have bright petals, scent, and sticky pollen; wind-pollinated flowers feature dangling exposed anthers and feathery stigmas. Seed germination requires WOW conditions: Water to activate enzymes, Oxygen for aerobic respiration, and Warmth for optimum enzyme kinetics.",
+      "vi": "Mục hai nghiên cứu sinh sản ở thực vật hạt kín: Nhị đực gồm bao phấn sinh hạt phấn và chỉ nhị; nhụy cái gồm đầu nhụy dính, vòi nhụy và bầu nhụy chứa noãn. Hoa thụ phấn nhờ côn trùng có cánh hoa sặc sỡ, hương thơm và hạt phấn có gai dính; hoa thụ phấn nhờ gió có bao phấn lòng thòng đu đưa ngoài hoa và đầu nhụy hình lông chim đón gió. Hạt nảy mầm đòi hỏi 3 điều kiện thiết yếu WOW: Nước (Water) để kích hoạt enzyme, Oxy (Oxygen) để hô hấp hiếu khí và Độ ấm (Warmth) để enzyme hoạt động ở nhiệt độ tối ưu.",
+      "duration": 63.86,
+      "startTime": 98.24,
+      "endTime": 162.1,
+      "audioUrl": "/audio/lectures/biology/16/sec_plant_reproduction.mp3"
+    },
+    {
+      "id": "sec_human_reproduction",
+      "title": "3. Sinh sản ở Người: Thụ tinh, Nhau thai & Dây rốn",
+      "selector": "#sec-human-reproduction",
+      "en": "Section 3 analyzes human development: Fertilisation occurs in the oviduct when a sperm nucleus fuses with an ovum nucleus. The zygote undergoes cleavage into an embryo that implants into the uterine lining. The placenta connects fetus to uterus, facilitating diffusion of oxygen, glucose, and antibodies from mother to fetus, and removing fetal urea and carbon dioxide, while shielding the delicate fetal circulation from maternal blood pressure.",
+      "vi": "Mục ba phân tích quá trình phát triển phôi thai: Thụ tinh diễn ra tại 1/3 trên của ống dẫn trứng khi nhân tinh trùng dung hợp với nhân trứng. Hợp tử phân chia nhiều lần tạo phôi nang rồi làm tổ trong lớp niêm mạc tử cung. Nhau thai liên kết thai nhi với cơ thể mẹ, cho phép oxy, glucose và kháng thể khuếch tán từ máu mẹ sang thai nhi, đồng thời đào thải ure và CO2 từ phôi thai, bảo vệ hệ tuần hoàn mong manh của thai nhi khỏi áp lực máu cao của mẹ.",
+      "duration": 54.06,
+      "startTime": 162.1,
+      "endTime": 216.16,
+      "audioUrl": "/audio/lectures/biology/16/sec_human_reproduction.mp3"
+    },
+    {
+      "id": "sec_menstrual_cycle",
+      "title": "4. Chu kỳ Kinh nguyệt & Sự Phối hợp Hooc-môn",
+      "selector": "#sec-menstrual-cycle",
+      "en": "Section 4 details the 28-day menstrual cycle: Pituitary FSH stimulates follicle development in the ovary and triggers oestrogen release. Oestrogen repairs and thickens the endometrium wall, stimulating a surge of pituitary LH which triggers ovulation at day 14. The ruptured follicle becomes the corpus luteum, secreting progesterone to maintain the thickened lining for implantation. If fertilisation fails, progesterone levels plummet, triggering menstruation.",
+      "vi": "Mục bốn phân tích chu kỳ kinh nguyệt 28 ngày: Tuyến yên tiết FSH kích thích nang trứng phát triển và tiết oestrogen. Oestrogen làm dày niêm mạc tử cung và kích thích tuyến yên bùng nổ tiết LH gây rụng trứng vào khoảng ngày thứ 14. Vỏ nang trứng vỡ biến thành thể vàng tiết progesterone để duy trì niêm mạc dày xốp đón phôi thai. Nếu trứng không được thụ tinh, thể vàng thoái hóa, nồng độ progesterone tụt dốc kích hoạt sự bong tróc niêm mạc gây ra hành kinh.",
+      "duration": 57.45,
+      "startTime": 216.16,
+      "endTime": 273.61,
+      "audioUrl": "/audio/lectures/biology/16/sec_menstrual_cycle.mp3"
+    }
+  ]
+}

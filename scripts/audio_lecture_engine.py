@@ -21,7 +21,7 @@ sb = create_client(URL, KEY)
 EN_VOICE = 'en-GB-RyanNeural'       # Authentic British English Male
 VI_VOICE = 'vi-VN-HoaiMyNeural'     # Authentic Hanoi Northern Vietnamese Female
 
-async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 5):
+async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 8):
     for attempt in range(1, max_retries + 1):
         try:
             if os.path.exists(out_file):
@@ -31,7 +31,7 @@ async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 5):
                     pass
             communicate = edge_tts.Communicate(text, voice)
             await asyncio.wait_for(communicate.save(out_file), timeout=45.0)
-            await asyncio.sleep(0.3)
+            await asyncio.sleep(0.5)
             if os.path.exists(out_file) and os.path.getsize(out_file) > 500:
                 return
             raise Exception(f"TTS output file {out_file} missing or too small ({os.path.getsize(out_file) if os.path.exists(out_file) else 0} B)")
@@ -39,7 +39,7 @@ async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 5):
             if attempt == max_retries:
                 print(f"  [ERROR] Failed TTS after {max_retries} attempts: {e}")
                 raise e
-            wait = attempt * 2.0
+            wait = attempt * 2.5
             print(f"  [RETRY] TTS attempt {attempt} failed ({e}), retrying in {wait}s...")
             await asyncio.sleep(wait)
 
@@ -68,6 +68,7 @@ async def generate_segment_audio(seg, output_dir, temp_dir):
     vi_tmp = os.path.join(temp_dir, f"{seg_id}_vi.mp3")
     
     await _gen_tts(seg['en'], EN_VOICE, en_tmp)
+    await asyncio.sleep(0.5)
     await _gen_tts(seg['vi'], VI_VOICE, vi_tmp)
     
     # Concat: en + 0.4s silence + vi

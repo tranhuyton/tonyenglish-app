@@ -1,0 +1,81 @@
+{
+  "lectureId": "11cfe97d-205e-418b-ae79-e39d7e57e0a8",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 1: Characteristics and classification of living organisms",
+  "totalDuration": 229.35,
+  "majorSections": [
+    {
+      "id": "sec_characteristics",
+      "title": "1. Bảy đặc điểm cốt lõi (MRS GREN)"
+    },
+    {
+      "id": "sec_mrs_gren",
+      "title": "1.2. Định nghĩa chuẩn Cambridge"
+    },
+    {
+      "id": "sec_excretion_organs",
+      "title": "Cơ quan bài tiết chính ở người"
+    },
+    {
+      "id": "sec_key_terms",
+      "title": "Bẫy thi: Excretion vs Egestion"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 1: Đặc điểm và Phân loại Sinh vật",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Biology, Topic 1: Characteristics and classification of living organisms. In this foundational chapter, we explore the seven essential characteristics shared by all living organisms, master the mnemonic MRS GREN, and examine the major human organs of excretion and key exam traps.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 1: Đặc điểm và Phân loại sinh vật sống. Trong bài học nền tảng này, chúng ta sẽ khám phá 7 đặc điểm thiết yếu của sự sống qua câu thần chú kinh điển MRS GREN, phân tích các cơ quan bài tiết chính ở người và làm rõ các bẫy đề thi Cambridge quan trọng.",
+      "duration": 39.86,
+      "startTime": 0.0,
+      "endTime": 39.86,
+      "audioUrl": "/audio/lectures/biology/1/intro.mp3"
+    },
+    {
+      "id": "sec_characteristics",
+      "title": "1. Bảy đặc điểm cốt lõi của Sự sống (MRS GREN)",
+      "selector": "#sec-characteristics",
+      "en": "Section 1 presents the universal characteristics of life: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, and Nutrition. Every organism—from microscopic single-celled bacteria to towering redwood trees—exhibits all seven processes to sustain life.",
+      "vi": "Mục một trình bày 7 đặc điểm chung của mọi sinh vật sống: Vận động, Hô hấp tế bào, Cảm ứng, Tăng trưởng, Sinh sản, Bài tiết và Dinh dưỡng. Mọi sinh vật trên Trái Đất—từ vi khuẩn đơn bào siêu nhỏ đến những cây gỗ khổng lồ—đều phải thực hiện đầy đủ 7 quá trình này để duy trì sự sống.",
+      "duration": 37.22,
+      "startTime": 39.86,
+      "endTime": 77.08,
+      "audioUrl": "/audio/lectures/biology/1/sec_characteristics.mp3"
+    },
+    {
+      "id": "sec_mrs_gren",
+      "title": "1.2. Định nghĩa Chuẩn Cambridge (MRS GREN Flashcards)",
+      "selector": "#sec-mrs-gren",
+      "en": "Section 1.2 reinforces precise Cambridge definitions. Movement is an action causing a change of position or place. Respiration is the chemical reactions in cells that break down nutrient molecules and release energy for metabolism. Sensitivity detects and responds to stimuli. Growth is a permanent increase in size and dry mass. Reproduction makes more of the same kind. Excretion removes toxic metabolic waste. Nutrition takes in materials for energy, growth, and development.",
+      "vi": "Mục một chấm hai củng cố các định nghĩa chính xác theo chuẩn khảo thí Cambridge. Vận động là hành động làm thay đổi vị trí. Hô hấp là chuỗi phản ứng hóa học trong tế bào phân giải chất dinh dưỡng để giải phóng năng lượng cho quá trình trao đổi chất. Cảm ứng giúp nhận biết và phản ứng với kích thích. Tăng trưởng là sự gia tăng vĩnh viễn về kích thước và khối lượng khô. Sinh sản tạo ra thế hệ mới. Bài tiết đào thải chất thải độc hại từ chuyển hóa. Dinh dưỡng là hấp thu vật chất để cung cấp năng lượng và phát triển.",
+      "duration": 67.5,
+      "startTime": 77.08,
+      "endTime": 144.58,
+      "audioUrl": "/audio/lectures/biology/1/sec_mrs_gren.mp3"
+    },
+    {
+      "id": "sec_excretion_organs",
+      "title": "Các Cơ quan Bài tiết Chính ở Người",
+      "selector": "#sec-excretion-organs",
+      "en": "This section highlights the three major human excretory organs: The Kidneys filter urea, excess water, and mineral salts into urine. The Lungs excrete carbon dioxide and water vapour produced during cellular respiration. The Skin excretes sweat containing water, mineral salts, and trace amounts of urea.",
+      "vi": "Phần này nêu bật ba cơ quan bài tiết chủ chốt ở cơ thể người: Thận lọc và đào thải ure, lượng nước dư thừa và muối khoáng ra ngoài qua nước tiểu. Phổi bài tiết khí carbon dioxide và hơi nước sinh ra từ quá trình hô hấp tế bào. Da bài tiết mồ hôi chứa nước, muối khoáng và một lượng nhỏ ure.",
+      "duration": 39.06,
+      "startTime": 144.58,
+      "endTime": 183.64,
+      "audioUrl": "/audio/lectures/biology/1/sec_excretion_organs.mp3"
+    },
+    {
+      "id": "sec_key_terms",
+      "title": "Thuật ngữ Cốt lõi & Bẫy Đề thi Cambridge",
+      "selector": "#sec-key-terms",
+      "en": "Section 1.3 tackles critical Cambridge exam traps: Never confuse Excretion with Egestion! Excretion is the removal of metabolic waste substances produced inside cells, such as urea and carbon dioxide. Egestion is merely the passing out of undigested food as faeces through the anus, which has never taken part in cellular metabolism.",
+      "vi": "Mục này giải quyết bẫy đề thi kinh điển của Cambridge: Tuyệt đối không được nhầm lẫn giữa Bài tiết (Excretion) và Thải phân (Egestion)! Bài tiết là quá trình loại bỏ các chất thải chuyển hóa sinh ra từ bên trong tế bào, như ure và CO2. Thải phân chỉ đơn thuần là tống xuất thức ăn chưa được tiêu hóa ra khỏi hậu môn, vốn chưa từng tham gia vào phản ứng chuyển hóa tế bào.",
+      "duration": 45.71,
+      "startTime": 183.64,
+      "endTime": 229.35,
+      "audioUrl": "/audio/lectures/biology/1/sec_key_terms.mp3"
+    }
+  ]
+}

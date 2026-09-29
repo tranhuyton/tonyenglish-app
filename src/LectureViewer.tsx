@@ -80,6 +80,31 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '0e8fbc94-5976-4c7f-8588-471ea93926f5': '/audio/lectures/business/6_1/manifest.json', // 6.1 Economic issues
   'a1d571ff-fa12-46c2-a49d-1df88df13214': '/audio/lectures/business/6_2/manifest.json', // 6.2 Environmental and ethical issues
   '1bc6f5c1-e71b-4d0d-8153-d2f74180a845': '/audio/lectures/business/6_3/manifest.json', // 6.3 Business and globalisation
+
+  // =========================================================================
+  // CAMBRIDGE IGCSE BIOLOGY (0610) BILINGUAL AUDIO LECTURES (TOPICS 1 - 21)
+  // =========================================================================
+  '11cfe97d-205e-418b-ae79-e39d7e57e0a8': '/audio/lectures/biology/1/manifest.json', // Topic 1: Characteristics and classification
+  '2d2545c0-ccb9-4d04-a6fa-f2eec55cdecc': '/audio/lectures/biology/2/manifest.json', // Topic 2: Cells and organisms
+  '0f5013fb-eaf1-4f79-8f41-c6102d2185a2': '/audio/lectures/biology/3/manifest.json', // Topic 3: Movement into and out of cells
+  '821ff271-c9ae-493a-b14c-e3f4b074a9d9': '/audio/lectures/biology/4/manifest.json', // Topic 4: Biological molecules
+  'a5d1775c-6ecb-4d6c-bc50-8aafbf641c1e': '/audio/lectures/biology/5/manifest.json', // Topic 5: Enzymes
+  'e7d6e813-b7b9-4038-9911-8b886978cd07': '/audio/lectures/biology/6/manifest.json', // Topic 6: Plant Nutrition
+  '85f36013-879b-49a8-a531-69c245a9630e': '/audio/lectures/biology/7/manifest.json', // Topic 7: Human nutrition
+  '37f08657-58e8-4fad-8035-2d935e1259e8': '/audio/lectures/biology/8/manifest.json', // Topic 8: Transport in plants
+  'b50dd00a-e2b4-4dba-8b1d-3f679dadae74': '/audio/lectures/biology/9/manifest.json', // Topic 9: Transport in animals
+  '62278d87-97ea-4fa5-aa46-748bca28db68': '/audio/lectures/biology/10/manifest.json', // Topic 10: Diseases and immunity
+  'da59c2b3-124f-4e25-8537-74059e74f9b0': '/audio/lectures/biology/11/manifest.json', // Topic 11: Gas exchange in humans
+  'fb098b77-64fa-463a-9829-64f5c9055de5': '/audio/lectures/biology/12/manifest.json', // Topic 12: Respiration
+  'b8f0539e-9361-4ba4-a96e-74c106494ebe': '/audio/lectures/biology/13/manifest.json', // Topic 13: Excretion in humans
+  'c9abc870-7cbd-4c7e-b6c9-2d6237ff7670': '/audio/lectures/biology/14/manifest.json', // Topic 14: Coordination and response
+  'f87b29a1-56a3-4668-a249-ed9f118d31d8': '/audio/lectures/biology/15/manifest.json', // Topic 15: Drugs
+  '936affb8-f062-4e39-b415-cc3794fb341e': '/audio/lectures/biology/16/manifest.json', // Topic 16: Reproduction
+  '77f1f7b8-f30e-4b0b-89e2-2e2482242791': '/audio/lectures/biology/17/manifest.json', // Topic 17: Inheritance
+  '89750884-8439-4cda-916a-56bf5524741b': '/audio/lectures/biology/18/manifest.json', // Topic 18: Variation and selection
+  '7b2384dd-b79d-47fe-b36b-7abf36784f06': '/audio/lectures/biology/19/manifest.json', // Topic 19: Organisms and their environment
+  '7777b4df-68dd-4600-b4ba-a4ce56ecc6ac': '/audio/lectures/biology/20/manifest.json', // Topic 20: Human influences on ecosystems
+  '55023dc0-7fdc-46ea-a3e9-9a049306d086': '/audio/lectures/biology/21/manifest.json', // Topic 21: Biotechnology and Genetic Engineering
 };
 
 const LECTURE_VIDEO_MAP: Record<string, string> = {

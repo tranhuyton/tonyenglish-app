@@ -1,0 +1,96 @@
+{
+  "lectureId": "2d2545c0-ccb9-4d04-a6fa-f2eec55cdecc",
+  "courseTitle": "Cambridge IGCSE Biology",
+  "lectureTitle": "Topic 2: Cells and organisms",
+  "totalDuration": 255.5,
+  "majorSections": [
+    {
+      "id": "sec_cell_structures",
+      "title": "1. Cấu trúc tế bào & bào quan"
+    },
+    {
+      "id": "sec_cell_comparison",
+      "title": "So sánh tế bào TV vs ĐV"
+    },
+    {
+      "id": "sec_levels_organisation",
+      "title": "2. Các cấp độ tổ chức sống"
+    },
+    {
+      "id": "sec_specialised_cells",
+      "title": "3. Tế bào chuyên hóa"
+    },
+    {
+      "id": "sec_magnification",
+      "title": "4. Công thức tam giác IAM"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2: Tế bào và Cấu trúc Sinh vật",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic 2: Cells and organisms. Cells are the fundamental structural and functional units of all living things. In this lesson, we analyze plant and animal cell ultrastructure, compare cellular components, understand the hierarchy of organization, examine specialized cell adaptations, and master magnification calculations.",
+      "vi": "Chào mừng các bạn đến với Bài 2: Tế bào và sinh vật. Tế bào là đơn vị cấu trúc và chức năng cơ bản của mọi sinh vật sống. Trong bài học này, chúng ta sẽ phân tích cấu trúc siêu vi của tế bào động vật và thực vật, so sánh các bào quan, hiểu rõ các cấp độ tổ chức sống, các tế bào chuyên hóa và công thức tính độ phóng đại.",
+      "duration": 42.5,
+      "startTime": 0.0,
+      "endTime": 42.5,
+      "audioUrl": "/audio/lectures/biology/2/intro.mp3"
+    },
+    {
+      "id": "sec_cell_structures",
+      "title": "1. Cấu trúc Tế bào & Bào quan (Cell Organelles)",
+      "selector": "#sec-cell-structures",
+      "en": "Section 1 explores cell organelles: The nucleus contains genetic material (DNA) controlling cellular activities. The cytoplasm is the site of metabolic chemical reactions. The cell membrane is partially permeable, regulating substance entry and exit. Mitochondria conduct aerobic respiration to release ATP energy. Ribosomes carry out protein synthesis.",
+      "vi": "Mục một khảo sát các bào quan: Nhân tế bào chứa vật chất di truyền DNA điều khiển mọi hoạt động tế bào. Tế bào chất là môi trường diễn ra các phản ứng hóa học chuyển hóa. Màng tế bào có tính thấm chọn lọc, kiểm soát các chất ra vào. Ty thể thực hiện hô hấp hiếu khí giải phóng năng lượng ATP. Ribosome đảm nhiệm quá trình tổng hợp protein.",
+      "duration": 48.81,
+      "startTime": 42.5,
+      "endTime": 91.31,
+      "audioUrl": "/audio/lectures/biology/2/sec_cell_structures.mp3"
+    },
+    {
+      "id": "sec_cell_comparison",
+      "title": "So sánh Tế bào Thực vật và Động vật",
+      "selector": "#sec-cell-comparison",
+      "en": "This section contrasts plant and animal cells. Plant cells possess three unique structures: a rigid cellulose cell wall providing structural support and preventing lysis; chloroplasts containing green chlorophyll pigments for photosynthesis; and a large permanent central vacuole filled with cell sap.",
+      "vi": "Phần này so sánh tế bào thực vật và động vật. Tế bào thực vật có 3 cấu trúc độc nhất mà tế bào động vật không có: thành tế bào bằng cellulose giúp duy trì hình dạng và chống vỡ tế bào; lục lạp chứa diệp lục hấp thụ ánh sáng để quang hợp; và một không bào trung tâm lớn chứa dịch tế bào.",
+      "duration": 35.27,
+      "startTime": 91.31,
+      "endTime": 126.58,
+      "audioUrl": "/audio/lectures/biology/2/sec_cell_comparison.mp3"
+    },
+    {
+      "id": "sec_levels_organisation",
+      "title": "2. Các cấp độ Tổ chức Sống (Levels of Organisation)",
+      "selector": "#sec-levels-organisation",
+      "en": "Section 2 outlines the biological hierarchy: Specialized cells group together to form Tissues, such as muscle tissue or leaf palisade mesophyll. Different tissues coordinate to form Organs, like the heart or stomach. Organs collaborate within Organ Systems, like the digestive or circulatory systems, culminating in a complete Organism.",
+      "vi": "Mục hai phác thảo thứ bậc tổ chức sinh học: Các tế bào chuyên hóa tập hợp lại tạo thành Mô, như mô cơ hoặc mô giậu ở lá. Các mô khác nhau phối hợp tạo thành Cơ quan, như tim hoặc dạ dày. Các cơ quan liên kết trong Hệ cơ quan, như hệ tiêu hóa hoặc tuần hoàn, cấu thành một Cơ thể sinh vật hoàn chỉnh.",
+      "duration": 40.86,
+      "startTime": 126.58,
+      "endTime": 167.44,
+      "audioUrl": "/audio/lectures/biology/2/sec_levels_organisation.mp3"
+    },
+    {
+      "id": "sec_specialised_cells",
+      "title": "3. Tế bào Chuyên hóa (Specialised Cells)",
+      "selector": "#sec-specialised-cells",
+      "en": "Section 3 investigates specialized cells adapted for dedicated physiological roles: Ciliated cells sweep mucus and trapped pathogens out of airways. Root hair cells feature long finger-like projections maximizing surface area for rapid water and mineral absorption. Palisade mesophyll cells pack dense chloroplasts beneath the upper leaf epidermis for maximal light harvesting.",
+      "vi": "Mục ba nghiên cứu các tế bào chuyên hóa thích nghi với chức năng riêng biệt: Tế bào biểu mô có lông rung quét chất nhầy và bụi bẩn ra khỏi khí quản. Tế bào lông hút có phần kéo dài như ngón tay giúp tăng tối đa diện tích bề mặt để hấp thụ nước và khoáng chất. Tế bào mô giậu chứa mật độ lục lạp cực cao nằm ngay dưới biểu bì trên để hấp thu tối đa ánh sáng mặt trời.",
+      "duration": 44.03,
+      "startTime": 167.44,
+      "endTime": 211.47,
+      "audioUrl": "/audio/lectures/biology/2/sec_specialised_cells.mp3"
+    },
+    {
+      "id": "sec_magnification",
+      "title": "4. Tính Độ phóng đại: Quy tắc Tam giác IAM",
+      "selector": "#sec-magnification",
+      "en": "Section 4 covers magnification calculations using the IAM triangle formula: Image size equals Actual size multiplied by Magnification. To find Actual size, divide Image size by Magnification. Remember the golden unit rule: Always convert measurements into the same unit before calculating—one millimetre equals one thousand micrometres!",
+      "vi": "Mục bốn hướng dẫn tính độ phóng đại thông qua tam giác IAM: Kích thước ảnh chụp (Image) bằng Kích thước thực (Actual) nhân với Độ phóng đại (Magnification). Để tìm kích thước thực, ta lấy kích thước ảnh chia cho độ phóng đại. Hãy nhớ quy tắc chuyển đổi đơn vị vàng: 1 milimét bằng 1000 micromét!",
+      "duration": 44.03,
+      "startTime": 211.47,
+      "endTime": 255.5,
+      "audioUrl": "/audio/lectures/biology/2/sec_magnification.mp3"
+    }
+  ]
+}
