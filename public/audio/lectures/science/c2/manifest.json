@@ -1,0 +1,66 @@
+{
+  "lectureId": "ee4f94c2-382b-4dbb-aaf8-981e7b0d7223",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C2: Atoms elements and compounds",
+  "totalDuration": 251.13,
+  "majorSections": [
+    {
+      "id": "sec_atomic_structure",
+      "title": "1. Cấu tạo Nguyên tử & Đồng vị (Isotopes)"
+    },
+    {
+      "id": "sec_elements_compounds",
+      "title": "2. Đơn chất, Hợp chất & Liên kết Hóa học"
+    },
+    {
+      "id": "sec_lattices_macromolecules",
+      "title": "3. Mạng Tinh thể Khổng lồ & Kim loại"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C2: Nguyên tử, Nguyên tố & Hợp chất",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic C2: Atoms, elements and compounds. Matter is constructed from atomic building blocks. In this comprehensive lesson, we decode subatomic particles and isotopes, distinguish elements, compounds, and mixtures, examine ionic and covalent bonding, and analyze giant covalent lattices and metallic structures.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C2: Nguyên tử, Nguyên tố và Hợp chất. Vật chất được cấu tạo từ các viên gạch nguyên tử. Trong bài học này, chúng ta sẽ khảo sát các hạt hạ nguyên tử và đồng vị, phân biệt đơn chất, hợp chất và hỗn hợp, làm chủ liên kết ion và cộng hóa trị, cùng mạng tinh thể khổng lồ và liên kết kim loại.",
+      "duration": 43.31,
+      "startTime": 0.0,
+      "endTime": 43.31,
+      "audioUrl": "/audio/lectures/science/c2/intro.mp3"
+    },
+    {
+      "id": "sec_atomic_structure",
+      "title": "1. Cấu tạo Nguyên tử, Hạt Hạ nguyên tử & Đồng vị (Isotopes)",
+      "selector": "#sec-atomic-structure",
+      "en": "Section 1 details atomic architecture: An atom consists of a tiny dense central nucleus containing positively charged protons and neutral neutrons, surrounded by negatively charged electrons orbiting in energy shells. Proton number or atomic number identifies the element and specifies nuclear charge. Mass number or nucleon number is the total sum of protons plus neutrons. Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons, sharing identical chemical properties due to having the same electron configuration.",
+      "vi": "Mục một chi tiết hóa cấu tạo nguyên tử: Nguyên tử gồm một hạt nhân cực nhỏ đặc ở trung tâm chứa proton mang điện tích dương và neutron không mang điện, bao quanh bởi đám mây electron mang điện tích âm quay trên các lớp vỏ năng lượng. Số proton hay số hiệu nguyên tử Z đặc trưng cho nguyên tố hóa học. Số khối A là tổng số hạt nucleon (proton cộng neutron). Đồng vị (Isotopes) là các nguyên tử của cùng một nguyên tố có cùng số proton nhưng khác số neutron, có tính chất hóa học giống hệt nhau do có cùng cấu hình electron lớp ngoài cùng.",
+      "duration": 65.61,
+      "startTime": 43.31,
+      "endTime": 108.92,
+      "audioUrl": "/audio/lectures/science/c2/sec_atomic_structure.mp3"
+    },
+    {
+      "id": "sec_elements_compounds",
+      "title": "2. Đơn chất, Hợp chất, Hỗn hợp & Liên kết Hóa học",
+      "selector": "#sec-elements-compounds",
+      "en": "Section 2 distinguishes chemical categories and bonds: An Element is a pure substance composed of only one type of atom. A Compound consists of two or more different elements chemically bonded in fixed stoichiometric ratios. A Mixture contains substances physically intermingled without chemical bonds. Ionic bonding occurs between metals and non-metals via electrostatic attraction between oppositely charged ions formed by electron transfer. Covalent bonding occurs between non-metals via electrostatic attraction between shared pairs of electrons and adjacent nuclei.",
+      "vi": "Mục hai phân biệt các khái niệm hóa học và liên kết: Đơn chất (Element) là chất tinh khiết chỉ chứa một loại nguyên tử. Hợp chất (Compound) gồm hai hay nhiều nguyên tố hóa học liên kết với nhau theo tỷ lệ số học xác định. Hỗn hợp (Mixture) gồm các chất trộn lẫn vật lý mà không có liên kết hóa học. Liên kết ion hình thành giữa kim loại và phi kim qua lực hút tĩnh điện giữa các ion trái dấu sau khi chuyển giao electron. Liên kết cộng hóa trị hình thành giữa các phi kim nhờ lực hút tĩnh điện giữa cặp electron dùng chung và hạt nhân nguyên tử.",
+      "duration": 68.06,
+      "startTime": 108.92,
+      "endTime": 176.98,
+      "audioUrl": "/audio/lectures/science/c2/sec_elements_compounds.mp3"
+    },
+    {
+      "id": "sec_lattices_macromolecules",
+      "title": "3. Mạng Tinh thể, Tinh thể Khổng lồ & Kim loại",
+      "selector": "#sec-lattices-macromolecules",
+      "en": "Section 3 compares structural lattices: Giant ionic lattices like sodium chloride feature alternating positive and negative ions held by strong electrostatic forces in all directions, yielding high melting points and electrical conductivity only when molten or aqueous. Giant covalent macromolecules like Diamond feature tetrahedral carbon lattices of immense hardness, whereas Graphite forms hexagonal planar layers with delocalized electrons that conduct electricity and slide easily. Metallic bonding consists of an orderly lattice of positive metal ions embedded in a sea of delocalized mobile electrons, conferring high electrical conductivity and malleability.",
+      "vi": "Mục ba so sánh các mạng tinh thể: Mạng tinh thể ion khổng lồ như muối ăn NaCl gồm các ion dương và âm xen kẽ hút nhau bằng lực tĩnh điện cực mạnh về mọi hướng, có nhiệt độ nóng chảy rất cao và chỉ dẫn điện khi ở trạng thái nóng chảy hoặc dung dịch. Tinh thể cộng hóa trị khổng lồ như Kim cương gồm mạng tứ diện carbon siêu bền cứng, trong khi Than chì (Graphite) gồm các lớp lục giác có electron tự do giúp dẫn điện và trượt êm dùng làm ruột bút chì. Liên kết kim loại gồm mạng tinh thể các ion dương kim loại ngâm trong biển electron tự do chuyển động hỗn loạn, tạo nên tính dẫn điện, dẫn nhiệt tuyệt vời và tính dát mỏng.",
+      "duration": 74.15,
+      "startTime": 176.98,
+      "endTime": 251.13,
+      "audioUrl": "/audio/lectures/science/c2/sec_lattices_macromolecules.mp3"
+    }
+  ]
+}

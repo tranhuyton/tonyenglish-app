@@ -1,0 +1,66 @@
+{
+  "lectureId": "d48c8f84-ba93-49d4-bf61-c7890bd6d2ce",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B16: Inheritance",
+  "totalDuration": 272.87,
+  "majorSections": [
+    {
+      "id": "sec_genetic_code",
+      "title": "1. Khái niệm Nhiễm sắc thể, Gen & Allele"
+    },
+    {
+      "id": "sec_monohybrid_inheritance",
+      "title": "2. Di truyền Đơn gen & Bảng lai Punnett"
+    },
+    {
+      "id": "sec_pedigree-sex",
+      "title": "3. Phả hệ & Xác định Giới tính (XX/XY)"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B16: Di truyền học & Quy luật Phân ly",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B16: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this chapter, we decode chromosomes, genes, and alleles, contrast mitosis and meiosis, master monohybrid Punnett squares, and analyze pedigree charts and sex determination.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B16: Di truyền học và Quy luật Phân ly. Di truyền học nghiên cứu sự truyền đạt thông tin di truyền qua các thế hệ. Trong bài học này, chúng ta sẽ giải mã nhiễm sắc thể, gen và allele, so sánh nguyên phân và giảm phân, làm chủ bảng lai Punnett đơn gen, cùng sơ đồ phả hệ và cơ chế xác định giới tính.",
+      "duration": 42.69,
+      "startTime": 0.0,
+      "endTime": 42.69,
+      "audioUrl": "/audio/lectures/science/b16/intro.mp3"
+    },
+    {
+      "id": "sec_genetic_code",
+      "title": "1. Mã Di truyền: Nhiễm sắc thể, Gen & Allele",
+      "selector": "#sec-genetic-code",
+      "en": "Section 1 establishes core genetic foundations: A Chromosome is a thread-like structure of DNA carrying genetic information in the form of genes. A Gene is a length of DNA that codes for a specific protein. An Allele is an alternative version of a gene. A Haploid nucleus contains a single set of unpaired chromosomes, twenty-three in human gametes; a Diploid nucleus contains two complete sets, forty-six chromosomes in human somatic cells. Mitosis produces two genetically identical diploid daughter cells for growth and repair. Meiosis produces four genetically diverse haploid daughter cells for gamete formation.",
+      "vi": "Mục một thiết lập các khái niệm di truyền nền tảng: Nhiễm sắc thể (Chromosome) là cấu trúc sợi DNA mang thông tin di truyền dưới dạng các gen. Gen là một đoạn phân tử DNA mã hóa cho một chuỗi polypeptide hoặc protein đặc thù. Allele là các trạng thái biểu hiện khác nhau của cùng một gen. Nhân đơn bội (Haploid) chứa một bộ nhiễm sắc thể đơn, gồm 23 chiếc ở giao tử người; Nhân lưỡng bội (Diploid) chứa hai bộ nhiễm sắc thể tương đồng, gồm 46 chiếc ở tế bào sinh dưỡng. Nguyên phân (Mitosis) tạo ra 2 tế bào con lưỡng bội giống hệt nhau phục vụ sinh trưởng và tái tạo mô. Giảm phân (Meiosis) tạo ra 4 tế bào con đơn bội mang biến dị tổ hợp phong phú để hình thành giao tử.",
+      "duration": 84.83,
+      "startTime": 42.69,
+      "endTime": 127.52,
+      "audioUrl": "/audio/lectures/science/b16/sec_genetic_code.mp3"
+    },
+    {
+      "id": "sec_monohybrid_inheritance",
+      "title": "2. Di truyền Đơn gen & Bảng lai Punnett (Punnett Square)",
+      "selector": "#sec-monohybrid-inheritance",
+      "en": "Section 2 investigates monohybrid inheritance: Genotype is the genetic makeup of an organism in terms of alleles present. Phenotype is the observable physical features of an organism. Homozygous organisms have two identical alleles for a particular gene, while Heterozygous organisms possess two different alleles. A Dominant allele is expressed if present; a Recessive allele is expressed only when homozygous. In a monohybrid cross between two heterozygous parents, the theoretical phenotypic ratio among offspring is three dominant to one recessive, yielding a one-to-two-to-one genotypic ratio.",
+      "vi": "Mục hai nghiên cứu quy luật di truyền đơn gen: Kiểu gen (Genotype) là tổ hợp toàn bộ các allele của một cơ thể sinh vật. Kiểu hình (Phenotype) là tập hợp các đặc điểm hình thái và sinh lý quan sát được. Đồng hợp tử (Homozygous) mang hai allele giống hệt nhau, trong khi Dị hợp tử (Heterozygous) mang hai allele khác nhau của cùng một gen. Allele trội biểu hiện kiểu hình ngay cả khi ở trạng thái dị hợp; allele lặn chỉ biểu hiện kiểu hình khi ở trạng thái đồng hợp lặn. Trong phép lai giữa hai bố mẹ dị hợp tử, tỷ lệ phân ly kiểu hình lý thuyết ở đời con là 3 trội : 1 lặn, tương ứng tỷ lệ phân ly kiểu gen 1 đồng hợp trội : 2 dị hợp : 1 đồng hợp lặn.",
+      "duration": 78.88,
+      "startTime": 127.52,
+      "endTime": 206.4,
+      "audioUrl": "/audio/lectures/science/b16/sec_monohybrid_inheritance.mp3"
+    },
+    {
+      "id": "sec_pedigree-sex",
+      "title": "3. Sơ đồ Phả hệ & Cơ chế Xác định Giới tính",
+      "selector": "#sec-pedigree-sex",
+      "en": "Section 3 analyzes pedigree charts and sex determination: Human diploid cells contain twenty-two pairs of autosomes and one pair of sex chromosomes. Human females possess two homologous X chromosomes, while males possess one X and one smaller Y chromosome. During meiosis, all ova receive an X chromosome, whereas half of spermatozoa carry an X and half carry a Y, producing a strict one-to-one sex ratio at fertilization. Pedigree diagrams track phenotypic inheritance across multiple family generations.",
+      "vi": "Mục ba phân tích sơ đồ phả hệ và cơ chế xác định giới tính: Bộ nhiễm sắc thể lưỡng bội ở người gồm 22 cặp nhiễm sắc thể thường và 1 cặp nhiễm sắc thể giới tính. Nữ giới mang cặp nhiễm sắc thể giới tính tương đồng XX, trong khi nam giới mang cặp dị hình XY. Trong giảm phân, mọi trứng đều mang nhiễm sắc thể X, trong khi một nửa tinh trùng mang X và một nửa mang Y, tạo ra tỷ lệ giới tính xấp xỉ 1 nam : 1 nữ khi thụ tinh. Sơ đồ phả hệ giúp theo dõi quy luật di truyền và xác suất xuất hiện bệnh di truyền qua các thế hệ gia đình.",
+      "duration": 66.47,
+      "startTime": 206.4,
+      "endTime": 272.87,
+      "audioUrl": "/audio/lectures/science/b16/sec_pedigree-sex.mp3"
+    }
+  ]
+}

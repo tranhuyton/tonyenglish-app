@@ -1,0 +1,66 @@
+{
+  "lectureId": "04d34896-13fb-411b-9e13-2bc3f9725136",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B10: Diseases and immunity",
+  "totalDuration": 254.49,
+  "majorSections": [
+    {
+      "id": "sec_pathogens",
+      "title": "1. Mầm bệnh & Hàng rào Phòng thủ"
+    },
+    {
+      "id": "sec_immune_response",
+      "title": "2. Kháng nguyên, Kháng thể & Thực bào"
+    },
+    {
+      "id": "sec_vaccination",
+      "title": "3. Cơ chế Tiêm chủng Vắc-xin"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B10: Bệnh truyền nhiễm & Hệ Miễn dịch",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B10: Diseases and immunity. Living organisms constantly defend against microscopic invaders. In this lesson, we study pathogen transmission and bodily defenses, analyze antigen-antibody specificity and phagocytosis, and examine the cellular mechanics of vaccination and herd immunity.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B10: Bệnh truyền nhiễm và Hệ Miễn dịch. Cơ thể sống liên tục phải đối phó với sự xâm lăng của vi sinh vật gây bệnh. Trong bài học này, chúng ta sẽ khảo sát con đường lây truyền và hàng rào phòng thủ cơ thể, cơ chế kháng nguyên - kháng thể, hiện tượng thực bào và nguyên lý tiêm chủng vắc-xin cùng miễn dịch cộng đồng.",
+      "duration": 41.03,
+      "startTime": 0.0,
+      "endTime": 41.03,
+      "audioUrl": "/audio/lectures/science/b10/intro.mp3"
+    },
+    {
+      "id": "sec_pathogens",
+      "title": "1. Mầm bệnh, Đường lây truyền & Hàng rào Phòng thủ Cơ thể",
+      "selector": "#sec-pathogens",
+      "en": "Section 1 defines disease transmission: A Pathogen is a disease-causing organism, such as bacteria, viruses, fungi, or protoctists. A Transmissible disease is an illness whose pathogen can pass from one host to another directly via bodily fluids, or indirectly via contaminated surfaces, food, airborne respiratory droplets, or animal vectors. Mechanical defenses include unbroken skin and nostril hairs. Chemical defenses include hydrochloric acid in gastric juice destroying ingested microbes and lysozyme enzymes in tears.",
+      "vi": "Mục một định nghĩa mầm bệnh và cơ chế lây truyền: Mầm bệnh (Pathogen) là sinh vật gây bệnh, bao gồm vi khuẩn, virus, nấm và sinh vật nguyên sinh. Bệnh truyền nhiễm là bệnh mà mầm bệnh có thể lây từ vật chủ này sang vật chủ khác trực tiếp qua tiếp xúc dịch thể hoặc gián tiếp qua bề mặt nhiễm bẩn, thức ăn, giọt bắn đường hô hấp hoặc sinh vật trung gian truyền bệnh. Hàng rào cơ học gồm lớp da nguyên vẹn và lông mũi cản bụi. Hàng rào hóa học gồm axit clohidric HCl trong dịch vị dạ dày tiêu diệt vi sinh vật và enzyme lysozyme trong nước mắt.",
+      "duration": 67.48,
+      "startTime": 41.03,
+      "endTime": 108.51,
+      "audioUrl": "/audio/lectures/science/b10/sec_pathogens.mp3"
+    },
+    {
+      "id": "sec_immune_response",
+      "title": "2. Kháng nguyên, Kháng thể & Phản ứng Miễn dịch (Phagocytosis)",
+      "selector": "#sec-immune-response",
+      "en": "Section 2 investigates cellular immunity: Pathogens possess unique surface marker proteins called Antigens. Phagocytes provide non-specific defense by engulfing pathogens into vacuoles through phagocytosis and digesting them with intracellular lysosomal enzymes. Lymphocytes provide specific humoral defense: each lymphocyte produces specific Y-shaped Antibodies whose binding sites are precisely complementary to foreign antigens. Antibodies neutralize pathogens, cause them to agglutinate in clumps, and flag them for destruction by phagocytes.",
+      "vi": "Mục hai nghiên cứu cơ chế miễn dịch tế bào: Mầm bệnh mang trên bề mặt các phân tử protein đặc thù gọi là Kháng nguyên (Antigens). Bạch cầu thực bào (Phagocytes) tạo hàng rào miễn dịch không đặc hiệu bằng cách bao vây và bắt nuốt mầm bệnh qua quá trình thực bào (phagocytosis), tiêu hóa chúng bằng enzyme lysozyme nội bào. Bạch cầu lympho (Lymphocytes) tạo miễn dịch dịch thể đặc hiệu: mỗi tế bào lympho sản sinh các phân tử Kháng thể (Antibodies) hình chữ Y có vị trí liên kết tương thích bổ sung chính xác với kháng nguyên lạ. Kháng thể vô hiệu hóa độc tố, làm kết tụ mầm bệnh thành từng cụm và đánh dấu để đại thực bào đến tiêu hủy.",
+      "duration": 72.88,
+      "startTime": 108.51,
+      "endTime": 181.39,
+      "audioUrl": "/audio/lectures/science/b10/sec_immune_response.mp3"
+    },
+    {
+      "id": "sec_vaccination",
+      "title": "3. Cơ chế Tiêm chủng Vắc-xin & Miễn dịch Cộng đồng (Herd Immunity)",
+      "selector": "#sec-vaccination",
+      "en": "Section 3 explains active immunization: A Vaccine contains weakened, killed, or fragmented pathogens possessing harmless antigens. When injected, lymphocytes recognize these antigens, undergo clonal proliferation, and produce antibodies while establishing a population of long-lived Memory Cells. If the host encounters the live virulent pathogen later, memory cells rapidly differentiate, synthesizing massive quantities of specific antibodies before the pathogen can cause clinical symptoms. High vaccination rates create Herd Immunity, shielding vulnerable individuals who cannot be vaccinated.",
+      "vi": "Mục ba giải thích cơ chế tiêm chủng chủ động: Vắc-xin chứa mầm bệnh đã bị làm yếu, bị bất hoạt hoặc các mảnh kháng nguyên vô hại. Khi tiêm vào cơ thể, bạch cầu lympho nhận diện kháng nguyên, tăng sinh dòng vô tính tiết kháng thể và đồng thời biệt hóa thành quần thể Tế bào Ghi nhớ (Memory Cells) tồn tại lâu dài. Khi cơ thể tái nhiễm mầm bệnh sống ngoài tự nhiên, các tế bào ghi nhớ lập tức nhân lên cực nhanh, sản xuất lượng kháng thể khổng lồ tiêu diệt mầm bệnh trước khi kịp phát tác triệu chứng. Tỷ lệ tiêm chủng cao tạo nên Miễn dịch Cộng đồng (Herd Immunity), bảo vệ những người có hệ miễn dịch yếu không thể tiêm phòng.",
+      "duration": 73.1,
+      "startTime": 181.39,
+      "endTime": 254.49,
+      "audioUrl": "/audio/lectures/science/b10/sec_vaccination.mp3"
+    }
+  ]
+}

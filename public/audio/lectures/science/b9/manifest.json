@@ -1,0 +1,81 @@
+{
+  "lectureId": "a79dd569-671f-4559-84a3-eee1e6018172",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B9: Transport in animals",
+  "totalDuration": 331.54,
+  "majorSections": [
+    {
+      "id": "sec_circulation_system",
+      "title": "1. Vòng Tuần hoàn Đơn vs Kép"
+    },
+    {
+      "id": "sec_heart_anatomy",
+      "title": "2. Cấu tạo Tim & Chu kỳ Tim"
+    },
+    {
+      "id": "sec_chd",
+      "title": "3. Bệnh Động mạch Vành (CHD)"
+    },
+    {
+      "id": "sec_vessels_blood",
+      "title": "4. Mạch máu & Thành phần Máu"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B9: Hệ Tuần hoàn Động vật & Tim mạch",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B9: Transport in animals. Large multicellular mammals require a rapid internal convective system to circulate oxygen, glucose, hormones, and wastes. In this chapter, we contrast single and double circulation, examine the mammalian heart anatomy and cardiac cycle, explore Coronary Heart Disease pathogenesis, and investigate blood vessels and blood components.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B9: Hệ Tuần hoàn ở Động vật và Tim mạch. Động vật có vú đa bào cần hệ tuần hoàn đối lưu nhanh chóng để vận chuyển oxy, glucose, hormone và chất thải. Trong bài học này, chúng ta sẽ so sánh vòng tuần hoàn đơn và kép, giải phẫu tim người, bệnh mạch vành (CHD) cùng cấu trúc mạch máu và các thành phần tế bào máu.",
+      "duration": 48.45,
+      "startTime": 0.0,
+      "endTime": 48.45,
+      "audioUrl": "/audio/lectures/science/b9/intro.mp3"
+    },
+    {
+      "id": "sec_circulation_system",
+      "title": "1. Tuần hoàn Đơn vs Tuần hoàn Kép (Circulatory Systems)",
+      "selector": "#sec-circulation-system",
+      "en": "Section 1 compares circulatory architectures: Fish possess a single circulatory system, where blood pumps once through a two-chambered heart to gill capillaries, losing pressure before slowly irrigating systemic tissues. Mammals possess a double circulatory system: blood passes twice through a four-chambered heart in one complete circuit. The pulmonary circuit pumps deoxygenated blood under low pressure to lungs, while the systemic circuit re-pumps newly oxygenated blood under high pressure to body organs, maximizing metabolic rate.",
+      "vi": "Mục một so sánh các hệ tuần hoàn: Cá có hệ tuần hoàn đơn, máu chỉ đi qua quả tim 2 ngăn một lần trong một chu trình, máu qua mao mạch mang bị sụt giảm áp lực nghiêm trọng trước khi chảy chậm đến các mô. Động vật có vú sở hữu hệ tuần hoàn kép: máu đi qua tim 4 ngăn hai lần trong một vòng tuần hoàn hoàn chỉnh. Vòng tuần hoàn phổi bơm máu nghèo oxy dưới áp lực thấp đến phổi trao đổi khí, sau đó vòng tuần hoàn hệ thống bơm máu giàu oxy dưới áp lực rất cao đến toàn cơ thể, đảm bảo tốc độ trao đổi chất tối đa.",
+      "duration": 60.78,
+      "startTime": 48.45,
+      "endTime": 109.23,
+      "audioUrl": "/audio/lectures/science/b9/sec_circulation_system.mp3"
+    },
+    {
+      "id": "sec_heart_anatomy",
+      "title": "2. Cấu tạo Tim Người & Chu kỳ Hoạt động của Tim",
+      "selector": "#sec-heart-anatomy",
+      "en": "Section 2 investigates mammalian heart anatomy: The right side receives deoxygenated blood from the vena cava into the right atrium, pumping it through the tricuspid atrioventricular valve into the right ventricle, and out the pulmonary artery to lungs. The left side receives oxygenated blood from pulmonary veins into the left atrium, through the bicuspid valve into the thick, highly muscular left ventricle, which contracts powerfully to force blood out the aorta to the systemic circulation. Crucially, the left ventricle wall is three times thicker than the right because it must generate sufficient hydrostatic pressure to overcome systemic peripheral resistance throughout the body.",
+      "vi": "Mục hai khảo sát giải phẫu tim người: Nửa tim bên phải nhận máu nghèo oxy từ tĩnh mạch chủ vào tâm nhĩ phải, đẩy qua van ba lá xuống tâm thất phải rồi bơm qua động mạch phổi lên phổi. Nửa tim bên trái nhận máu giàu oxy từ tĩnh mạch phổi vào tâm nhĩ trái, đẩy qua van hai lá xuống tâm thất trái có thành cơ rất dày, co bóp cực mạnh để tống máu vào động mạch chủ đi nuôi toàn thân. Điểm mấu chốt thi cử: thành tâm thất trái dày gấp 3 lần thành tâm thất phải vì phải tạo ra áp lực thủy tĩnh cực lớn để thắng lực cản ngoại vi của toàn bộ hệ thống mạch máu trong cơ thể.",
+      "duration": 70.19,
+      "startTime": 109.23,
+      "endTime": 179.42,
+      "audioUrl": "/audio/lectures/science/b9/sec_heart_anatomy.mp3"
+    },
+    {
+      "id": "sec_chd",
+      "title": "3. Bệnh Động mạch Vành (Coronary Heart Disease - CHD)",
+      "selector": "#sec-chd",
+      "en": "Section 3 analyzes Coronary Heart Disease: The heart muscle is supplied with oxygenated blood by coronary arteries branching off the aorta. Blockage of coronary arteries by fatty atheroma plaques restricts arterial diameter, causing ischemia and angina chest pain. If a thrombus clot forms, blood supply stops completely, causing myocardial infarction or heart attack. Major risk factors include diets high in saturated fats and salt, chronic cigarette smoking, obesity, lack of exercise, high stress, and genetic predisposition.",
+      "vi": "Mục ba phân tích Bệnh động mạch vành (CHD): Cơ tim được nuôi dưỡng trực tiếp bởi các nhánh động mạch vành tách ra từ động mạch chủ. Sự tích tụ các mảng xơ vữa mỡ (atheroma) làm hẹp lòng mạch vành, làm thiếu máu cục bộ gây đau thắt ngực. Nếu hình thành cục máu đông bít kín hoàn toàn mạch máu, vùng cơ tim phía sau sẽ chết do hoại tử gây nhồi máu cơ tim. Các yếu tố nguy cơ hàng đầu gồm chế độ ăn nhiều mỡ bão hòa và muối, hút thuốc lá mãn tính, béo phì, lười vận động, căng thẳng và yếu tố di truyền.",
+      "duration": 66.62,
+      "startTime": 179.42,
+      "endTime": 246.04,
+      "audioUrl": "/audio/lectures/science/b9/sec_chd.mp3"
+    },
+    {
+      "id": "sec_vessels_blood",
+      "title": "4. Mạch máu & Thành phần Máu (Blood Vessels & Components)",
+      "selector": "#sec-vessels-blood",
+      "en": "Section 4 contrasts vascular types and blood elements: Arteries carry blood away from heart under high fluctuating pressure with thick walls rich in elastic fibers and smooth muscle, and narrow lumens. Veins return blood to heart under low pressure with thinner walls, wide lumens, and semilunar valves to prevent backflow. Capillaries connect arteries and veins, having walls only one endothelial cell thick to minimize diffusion distance. Blood consists of 55% liquid plasma transporting dissolved nutrients, urea, carbon dioxide, and hormones; Red Blood Cells with hemoglobin transporting oxygen; White Blood Cells: phagocytes that ingest pathogens and lymphocytes producing antibodies; and Platelets that initiate blood clotting to seal wounds.",
+      "vi": "Mục bốn so sánh các loại mạch và thành phần máu: Động mạch dẫn máu rời khỏi tim dưới áp lực rất cao với thành mạch dày giàu sợi đàn hồi và lớp cơ trơn, lòng mạch hẹp. Tĩnh mạch dẫn máu về tim dưới áp lực thấp với thành mỏng hơn, lòng mạch rộng và có các van bán nguyệt một chiều ngăn máu chảy ngược. Mao mạch nối giữa tiểu động mạch và tiểu tĩnh mạch với thành chỉ dày duy nhất một lớp tế bào nội mô để tối thiểu hóa khoảng cách khuếch tán. Máu gồm 55% huyết tương lỏng vận chuyển chất dinh dưỡng, urê, CO2 và hormone; hồng cầu chứa hemoglobin vận chuyển oxy; bạch cầu gồm thực bào bắt nuốt vi khuẩn và tế bào lympho tiết kháng thể; cùng tiểu cầu khởi phát đông máu bịt kín vết thương.",
+      "duration": 85.5,
+      "startTime": 246.04,
+      "endTime": 331.54,
+      "audioUrl": "/audio/lectures/science/b9/sec_vessels_blood.mp3"
+    }
+  ]
+}

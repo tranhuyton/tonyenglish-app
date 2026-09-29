@@ -1,0 +1,66 @@
+{
+  "lectureId": "8ab2afa2-59e3-4c56-8971-8d93dec5ad8e",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B5: Enzymes",
+  "totalDuration": 205.65,
+  "majorSections": [
+    {
+      "id": "sec_enzyme_nature",
+      "title": "1. Bản chất & Đặc tính của Enzyme"
+    },
+    {
+      "id": "sec_lock_and_key",
+      "title": "2. Thuyết Ổ khóa và Chìa khóa"
+    },
+    {
+      "id": "sec_temp_ph",
+      "title": "3. Ảnh hưởng của Nhiệt độ & pH"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B5: Enzyme & Động học Xúc tác Sinh học",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B5: Enzymes. Enzymes are the biological catalysts that drive every biochemical reaction essential for life. In this topic, we examine enzyme protein structure, model catalytic mechanisms via the Lock and Key hypothesis, and analyze rate curves under changing temperatures and pH conditions.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B5: Enzyme và Động học Xúc tác Sinh học. Enzyme là các chất xúc tác sinh học điều khiển mọi phản ứng trao đổi chất duy trì sự sống. Trong bài học này, chúng ta sẽ khảo sát bản chất protein của enzyme, mô hình xúc tác chìa khóa và ổ khóa, cùng đồ thị động học chịu ảnh hưởng của nhiệt độ và độ pH.",
+      "duration": 42.11,
+      "startTime": 0.0,
+      "endTime": 42.11,
+      "audioUrl": "/audio/lectures/science/b5/intro.mp3"
+    },
+    {
+      "id": "sec_enzyme_nature",
+      "title": "1. Bản chất & Đặc tính của Enzyme (Properties of Enzymes)",
+      "selector": "#sec-enzyme-nature",
+      "en": "Section 1 defines Enzymes: biological catalysts composed of globular proteins that increase the rate of chemical reactions without being modified or used up in the reaction. Because enzymes remain chemically unaltered, small quantities can catalyze the turnover of thousands of substrate molecules per second.",
+      "vi": "Mục một định nghĩa Enzyme: là các chất xúc tác sinh học có bản chất protein hình cầu, làm tăng tốc độ các phản ứng sinh hóa mà không bị tiêu hao hay biến đổi sau phản ứng. Nhờ không bị tiêu tốn trong phản ứng, một lượng nhỏ enzyme có thể xúc tác chuyển hóa hàng nghìn phân tử cơ chất trong mỗi giây.",
+      "duration": 35.61,
+      "startTime": 42.11,
+      "endTime": 77.72,
+      "audioUrl": "/audio/lectures/science/b5/sec_enzyme_nature.mp3"
+    },
+    {
+      "id": "sec_lock_and_key",
+      "title": "2. Cơ chế Hoạt động: Thuyết Ổ khóa và Chìa khóa (Lock & Key)",
+      "selector": "#sec-lock-and-key",
+      "en": "Section 2 investigates catalytic mechanisms: Each enzyme possesses a specifically shaped 3D active site. Under the Lock and Key hypothesis, only a substrate molecule with a complementary geometric shape fits into the active site, forming a temporary enzyme-substrate complex. The enzyme lowers the reaction's activation energy, converting substrate into products which leave the active site, freeing it for subsequent cycles.",
+      "vi": "Mục hai nghiên cứu cơ chế xúc tác: Mỗi enzyme sở hữu một trung tâm hoạt động (active site) có cấu trúc không gian 3 chiều đặc thù. Theo thuyết Chìa khóa và Ổ khóa, chỉ cơ chất có hình dạng hình học tương thích bổ sung mới có thể gắn khớp vào trung tâm hoạt động, tạo thành phức hệ enzyme - cơ chất tạm thời. Enzyme làm giảm năng lượng hoạt hóa của phản ứng, biến đổi cơ chất thành sản phẩm rồi giải phóng sản phẩm, trả lại trung tâm hoạt động nguyên vẹn cho chu trình tiếp theo.",
+      "duration": 53.75,
+      "startTime": 77.72,
+      "endTime": 131.47,
+      "audioUrl": "/audio/lectures/science/b5/sec_lock_and_key.mp3"
+    },
+    {
+      "id": "sec_temp_ph",
+      "title": "3. Ảnh hưởng của Nhiệt độ & Độ pH lên Hoạt tính Enzyme",
+      "selector": "#sec-temp-ph",
+      "en": "Section 3 analyzes environmental factors: As temperature rises from low levels, kinetic energy increases, yielding more frequent successful collisions between enzyme active sites and substrates, accelerating the rate up to an optimum temperature, typically around 37 degrees Celsius in humans. Beyond the optimum, excessive thermal vibrations break hydrogen and ionic bonds holding the tertiary structure, causing denaturation: the active site permanently alters its shape, substrate can no longer bind, and activity plummets to zero. Similarly, deviations from the optimum pH disrupt ionic charges and denature the active site.",
+      "vi": "Mục ba phân tích các yếu tố môi trường: Khi nhiệt độ tăng từ mức thấp, động năng phân tử gia tăng, làm tăng tần suất va chạm hiệu quả giữa trung tâm hoạt động và cơ chất, đẩy tốc độ phản ứng lên mức nhiệt độ tối ưu (khoảng 37 độ C ở cơ thể người). Vượt qua điểm tối ưu, dao động nhiệt quá mạnh phá vỡ các liên kết hydro và ion duy trì cấu trúc bậc ba, dẫn đến hiện tượng biến tính (denaturation): trung tâm hoạt động biến dạng vĩnh viễn, cơ chất không thể gắn vào và hoạt tính tụt dốc về 0. Tương tự, sự lệch khỏi độ pH tối ưu sẽ làm thay đổi điện tích các nhóm ion và gây biến tính trung tâm hoạt động.",
+      "duration": 74.18,
+      "startTime": 131.47,
+      "endTime": 205.65,
+      "audioUrl": "/audio/lectures/science/b5/sec_temp_ph.mp3"
+    }
+  ]
+}

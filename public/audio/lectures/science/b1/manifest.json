@@ -1,0 +1,51 @@
+{
+  "lectureId": "1231b474-8a99-4330-b45d-fdda19a802fe",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B1: Characteristics of living organisms",
+  "totalDuration": 233.3,
+  "majorSections": [
+    {
+      "id": "sec_mrsgren",
+      "title": "1. Bảy Đặc tính Sự sống (MRS GREN)"
+    },
+    {
+      "id": "sec_five_kingdoms",
+      "title": "2. Phân loại Năm Giới Sinh học"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B1: Đặc điểm Sinh vật sống & Phân loại học",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Co-ordinated Sciences Biology, Topic B1: Characteristics of living organisms. Biology is the scientific study of life. In this introductory chapter, we analyze the seven universal characteristics of living organisms encapsulated in MRS GREN, and explore classification across the Five Biological Kingdoms.",
+      "vi": "Chào mừng các bạn đến với phần Sinh học trong môn Khoa học Phối hợp Cambridge IGCSE, Chuyên đề B1: Đặc điểm của sinh vật sống và Phân loại học. Sinh học là khoa học nghiên cứu sự sống. Trong bài mở đầu này, chúng ta sẽ phân tích 7 đặc tính phổ quát của sinh vật sống qua quy tắc MRS GREN và hệ thống phân loại 5 giới sinh vật.",
+      "duration": 44.1,
+      "startTime": 0.0,
+      "endTime": 44.1,
+      "audioUrl": "/audio/lectures/science/b1/intro.mp3"
+    },
+    {
+      "id": "sec_mrsgren",
+      "title": "1. Bảy Đặc tính của Sự sống (Quy tắc MRS GREN)",
+      "selector": "#sec-mrsgren",
+      "en": "Section 1 outlines the seven vital characteristics of life, remembered by the acronym MRS GREN: Movement causes an organism to change position or place. Respiration breaks down nutrient molecules in cells to release energy for metabolism. Sensitivity detects internal or external stimuli and makes responses. Growth increases dry mass and size permanently. Reproduction generates more of the same kind. Excretion removes toxic waste products of metabolism. Nutrition provides nutrients for energy, growth, and tissue repair. Crucially for Cambridge exams, excretion removes metabolic wastes like urea and carbon dioxide, whereas egestion expels undigested food as feces through the anus.",
+      "vi": "Mục một khái quát 7 đặc tính sống cơ bản được ghi nhớ qua cụm từ MRS GREN: Vận động (Movement) là sự thay đổi vị trí của cơ thể hoặc bộ phận. Hô hấp tế bào (Respiration) bẻ gãy phân tử dinh dưỡng để giải phóng năng lượng ATP. Cảm ứng (Sensitivity) là khả năng phát hiện kích thích và phản ứng lại. Sinh trưởng (Growth) gia tăng vĩnh viễn về kích thước và khối lượng khô. Sinh sản (Reproduction) tạo ra thế hệ cá thể mới. Bài tiết (Excretion) đào thải các chất thải độc hại sinh ra từ quá trình chuyển hóa tế bào. Dinh dưỡng (Nutrition) hấp thu các chất cần thiết để phát triển và sửa chữa mô. Điểm nhấn thi cử: bài tiết thải chất chuyển hóa như urê và CO2, khác hoàn toàn với sự tống phân (egestion) thải thức ăn không tiêu hóa qua hậu môn.",
+      "duration": 100.26,
+      "startTime": 44.1,
+      "endTime": 144.36,
+      "audioUrl": "/audio/lectures/science/b1/sec_mrsgren.mp3"
+    },
+    {
+      "id": "sec_five_kingdoms",
+      "title": "2. Phân loại Sinh vật sống: Năm Giới Sinh học",
+      "selector": "#sec-five-kingdoms",
+      "en": "Section 2 explores biological classification and binomial nomenclature: Organisms are grouped using shared morphology, anatomy, and DNA base sequences. In the binomial naming system, each species has a two-part Latin name: Genus capitalized, species in lowercase, italicized in print. All living organisms are classified into Five Kingdoms: Animals are multicellular heterotrophs lacking cell walls. Plants are multicellular autotrophs with cellulose walls and chloroplasts. Fungi have chitin walls and feed saprotrophically via hyphae. Protoctists are mostly unicellular eukaryotes. Prokaryotes lack true nuclei and membrane-bound organelles, possessing circular DNA.",
+      "vi": "Mục hai khảo sát phân loại học và danh pháp kép Linnaeus: Sinh vật được xếp nhóm dựa vào hình thái, giải phẫu học và trình tự DNA. Hệ thống danh pháp kép đặt tên mỗi loài gồm hai từ tiếng Latin: Tên Chi viết hoa, tên loài viết thường, in nghiêng khi in ấn. Toàn bộ sinh giới chia thành 5 Giới: Giới Động vật là sinh vật đa bào dị dưỡng không có thành tế bào. Giới Thực vật là sinh vật đa bào tự dưỡng có thành cellulose và lục lạp. Giới Nấm có thành chitin và dinh dưỡng hoại sinh qua hệ sợi nấm. Giới Nguyên sinh gồm các sinh vật nhân thực đơn bào. Giới Khởi sinh (Prokaryotes) gồm vi khuẩn không có màng nhân và các bào quan có màng, chứa phân tử DNA vòng trần.",
+      "duration": 88.94,
+      "startTime": 144.36,
+      "endTime": 233.3,
+      "audioUrl": "/audio/lectures/science/b1/sec_five_kingdoms.mp3"
+    }
+  ]
+}

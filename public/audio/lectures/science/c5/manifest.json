@@ -1,0 +1,66 @@
+{
+  "lectureId": "71545c83-4d45-4201-978c-aa58d01b57e5",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C5: Chemical energetics",
+  "totalDuration": 218.41,
+  "majorSections": [
+    {
+      "id": "sec_exo_endo",
+      "title": "1. Phản ứng Tỏa nhiệt & Thu nhiệt"
+    },
+    {
+      "id": "sec_reaction_profiles",
+      "title": "2. Giản đồ Năng lượng & Năng lượng Hoạt hóa (Ea)"
+    },
+    {
+      "id": "sec_bond_energies",
+      "title": "3. Tính toán Năng lượng Liên kết (Bond Energies)"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C5: Nhiệt Hóa học & Năng lượng Liên kết",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic C5: Chemical energetics. Every chemical transformation involves energetic exchanges with surroundings. In this lesson, we contrast exothermic and endothermic reactions, interpret reaction pathway energy profiles and activation energy, and compute net enthalpy changes using bond energies.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C5: Nhiệt Hóa học và Năng lượng Liên kết. Mọi biến đổi hóa học đều đi kèm với sự trao đổi năng lượng với môi trường. Trong bài học này, chúng ta sẽ so sánh phản ứng tỏa nhiệt và thu nhiệt, đọc giản đồ năng lượng phản ứng, và tính biến thiên enthalpy dựa vào năng lượng liên kết.",
+      "duration": 40.38,
+      "startTime": 0.0,
+      "endTime": 40.38,
+      "audioUrl": "/audio/lectures/science/c5/intro.mp3"
+    },
+    {
+      "id": "sec_exo_endo",
+      "title": "1. Phản ứng Tỏa nhiệt & Thu nhiệt (Exothermic vs Endothermic)",
+      "selector": "#sec-exo-endo",
+      "en": "Section 1 contrasts reaction energetics: An Exothermic reaction transfers thermal energy to the surroundings, leading to an increase in the temperature of the surroundings, giving a negative enthalpy change (Delta H < 0), such as combustion and neutralization. An Endothermic reaction takes in thermal energy from the surroundings, leading to a decrease in temperature, giving a positive enthalpy change (Delta H > 0), such as thermal decomposition of calcium carbonate and photosynthesis.",
+      "vi": "Mục một so sánh bản chất năng lượng của phản ứng: Phản ứng Tỏa nhiệt (Exothermic) truyền nhiệt lượng ra môi trường xung quanh, làm nhiệt độ môi trường tăng lên, có biến thiên enthalpy âm (Delta H < 0), ví dụ như phản ứng cháy và phản ứng trung hòa axit-bazơ. Phản ứng Thu nhiệt (Endothermic) hấp thu nhiệt năng từ môi trường, làm nhiệt độ môi trường hạ xuống, có biến thiên enthalpy dương (Delta H > 0), ví dụ như phản ứng nhiệt phân đá vôi CaCO3 và quang hợp.",
+      "duration": 58.07,
+      "startTime": 40.38,
+      "endTime": 98.45,
+      "audioUrl": "/audio/lectures/science/c5/sec_exo_endo.mp3"
+    },
+    {
+      "id": "sec_reaction_profiles",
+      "title": "2. Giản đồ Năng lượng Phản ứng & Năng lượng Hoạt hóa (Ea)",
+      "selector": "#sec-reaction-profiles",
+      "en": "Section 2 interprets reaction pathway profiles: In exothermic profiles, reactants start at higher potential energy than products, with an arrow pointing downward representing negative Delta H. In endothermic profiles, products sit at higher energy than reactants, with Delta H pointing upward. Activation Energy (E_a) is the minimum energy that colliding particles must possess to react, represented on profiles by the energy difference between reactants and the peak of the transition state.",
+      "vi": "Mục hai giải mã giản đồ năng lượng: Trong giản đồ phản ứng tỏa nhiệt, chất phản ứng ở mức thế năng cao hơn sản phẩm, mũi tên Delta H chỉ xuống dưới mang giá trị âm. Trong giản đồ phản ứng thu nhiệt, sản phẩm nằm ở mức năng lượng cao hơn chất phản ứng, mũi tên Delta H hướng lên trên mang giá trị dương. Năng lượng Hoạt hóa (Activation Energy - Ea) là mức năng lượng tối thiểu mà các hạt va chạm phải sở hữu để phản ứng diễn ra, biểu diễn bằng khoảng cách năng lượng từ chất phản ứng lên đến đỉnh của trạng thái chuyển tiếp.",
+      "duration": 60.9,
+      "startTime": 98.45,
+      "endTime": 159.35,
+      "audioUrl": "/audio/lectures/science/c5/sec_reaction_profiles.mp3"
+    },
+    {
+      "id": "sec_bond_energies",
+      "title": "3. Tính toán Năng lượng Liên kết (Bond Energies)",
+      "selector": "#sec-bond-energies",
+      "en": "Section 3 calculates enthalpy changes via bond energies: Bond breaking is always endothermic, absorbing energy to overcome chemical attractions. Bond forming is always exothermic, releasing energy as stable bonds form. Net enthalpy change Delta H equals Total energy absorbed to break bonds in reactants minus Total energy released when forming bonds in products. If bond forming exceeds bond breaking, the overall reaction is exothermic.",
+      "vi": "Mục ba hướng dẫn tính toán biến thiên enthalpy qua năng lượng liên kết: Bẻ gãy liên kết luôn là quá trình Thu nhiệt (cần cung cấp năng lượng để tách rời các nguyên tử). Hình thành liên kết mới luôn là quá trình Tỏa nhiệt (giải phóng năng lượng khi liên kết bền vững được thiết lập). Biến thiên enthalpy Delta H bằng Tổng năng lượng bẻ gãy các liên kết ở chất phản ứng trừ đi Tổng năng lượng giải phóng khi tạo thành liên kết ở sản phẩm. Nếu nhiệt tỏa ra khi tạo liên kết lớn hơn nhiệt hấp thu khi phá vỡ liên kết, phản ứng tổng thể là phản ứng tỏa nhiệt.",
+      "duration": 59.06,
+      "startTime": 159.35,
+      "endTime": 218.41,
+      "audioUrl": "/audio/lectures/science/c5/sec_bond_energies.mp3"
+    }
+  ]
+}

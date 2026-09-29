@@ -1,0 +1,81 @@
+{
+  "lectureId": "298327a8-455a-44d5-9a4c-164e2653c456",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B19: Human influences on ecosystems",
+  "totalDuration": 249.92,
+  "majorSections": [
+    {
+      "id": "sec_agriculture",
+      "title": "1. Nông nghiệp Thâm canh & Độc canh"
+    },
+    {
+      "id": "sec_deforestation",
+      "title": "2. Nạn Phá rừng & Mất Bể chứa Carbon"
+    },
+    {
+      "id": "sec_eutrophication",
+      "title": "3. Hiện tượng Phú dưỡng (Eutrophication)"
+    },
+    {
+      "id": "sec_conservation",
+      "title": "4. Chiến lược Bảo tồn Đa dạng Sinh học"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B19: Tác động của Con người lên Hệ sinh thái",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B19: Human influences on ecosystems. Expanding human activity exerts severe pressure on the biosphere. In this final biology chapter, we examine agricultural monocultures, deforestation, the exact stages of aquatic eutrophication, and modern biodiversity conservation strategies.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B19: Tác động của Con người lên Hệ sinh thái. Hoạt động của con người đang gây áp lực nghiêm trọng lên sinh quyển. Trong bài học kết thúc phần sinh học này, chúng ta sẽ khảo sát độc canh nông nghiệp, nạn phá rừng, chuỗi diễn biến phú dưỡng nguồn nước và các chiến lược bảo tồn đa dạng sinh học.",
+      "duration": 40.17,
+      "startTime": 0.0,
+      "endTime": 40.17,
+      "audioUrl": "/audio/lectures/science/b19/intro.mp3"
+    },
+    {
+      "id": "sec_agriculture",
+      "title": "1. Nông nghiệp Thâm canh & Độc canh (Monoculture)",
+      "selector": "#sec-agriculture",
+      "en": "Section 1 analyzes modern agriculture: Monoculture is the continuous cultivation of a single crop over vast areas. Monocultures drastically reduce biodiversity and create ideal conditions for pest explosions, requiring heavy chemical insecticide and herbicide applications. Intensive livestock farming increases meat yields but raises animal welfare concerns and high greenhouse emissions.",
+      "vi": "Mục một phân tích nông nghiệp thâm canh: Độc canh (Monoculture) gieo trồng duy nhất một giống cây trên diện tích bạt ngàn, làm suy giảm nghiêm trọng đa dạng sinh học và tạo điều kiện cho sâu bệnh bùng phát, buộc nông dân phải dùng nhiều thuốc trừ sâu hóa học. Chăn nuôi gia súc tập trung giúp tăng sản lượng thịt sữa nhưng gây lo ngại về đạo đức động vật và phát thải lượng lớn khí nhà kính.",
+      "duration": 45.66,
+      "startTime": 40.17,
+      "endTime": 85.83,
+      "audioUrl": "/audio/lectures/science/b19/sec_agriculture.mp3"
+    },
+    {
+      "id": "sec_deforestation",
+      "title": "2. Phá hủy Môi trường sống & Nạn Phá rừng (Deforestation)",
+      "selector": "#sec-deforestation",
+      "en": "Section 2 investigates Deforestation: Forests are felled for agricultural land, timber, and roads. Ecological consequences include topsoil erosion when tree roots no longer bind soil particles; severe flooding because rain runs off rapidly without canopy interception; destruction of wildlife habitats driving species extinction; and loss of massive carbon sinks, elevating atmospheric carbon dioxide levels.",
+      "vi": "Mục hai nghiên cứu Nạn phá rừng (Deforestation): Rừng bị đốn hạ để lấy đất trồng trọt, khai thác gỗ và mở đường. Hậu quả sinh thái nghiêm trọng gồm xói mòn lớp đất mặt màu mỡ do mất mạng lưới rễ cây giữ đất; gia tăng lũ lụt do nước mưa chảy tràn; phá hủy môi trường sống dẫn đến tuyệt chủng giống loài; và làm mất đi bể hấp thu carbon khổng lồ, khiến lượng CO2 trong khí quyển tăng vọt.",
+      "duration": 48.62,
+      "startTime": 85.83,
+      "endTime": 134.45,
+      "audioUrl": "/audio/lectures/science/b19/sec_deforestation.mp3"
+    },
+    {
+      "id": "sec_eutrophication",
+      "title": "3. Ô nhiễm Nguồn nước & Hiện tượng Phú dưỡng (Eutrophication)",
+      "selector": "#sec-eutrophication",
+      "en": "Section 3 details the five-step Eutrophication sequence: First, excess mineral fertilizers or untreated sewage leach into waterways. Second, algae rapidly proliferate into an algal bloom, blanketing the water surface and blocking sunlight. Third, submerged aquatic plants cannot photosynthesize and die. Fourth, aerobic bacteria multiply exponentially as they decompose dead vegetation, consuming all dissolved oxygen. Fifth, aquatic animals like fish suffocate and die from severe lack of oxygen.",
+      "vi": "Mục ba mô tả 5 bước của Hiện tượng Phú dưỡng (Eutrophication): Bước 1: Phân bón hóa học dư thừa chứa nitrat và photphat hoặc nước thải chưa xử lý rửa trôi xuống sông hồ. Bước 2: Tảo sinh sôi nở hoa bùng phát (algal bloom), che phủ kín mặt nước ngăn ánh sáng mặt trời. Bước 3: Các loài thực vật thủy sinh dưới đáy không thể quang hợp và chết dần. Bước 4: Vi khuẩn phân hủy hiếu khí tăng sinh theo cấp số nhân để tiêu thụ xác thực vật, hút cạn toàn bộ oxy hòa tan trong nước. Bước 5: Các loài cá và động vật thủy sinh ngạt thở và chết hàng loạt do thiếu dưỡng khí.",
+      "duration": 69.35,
+      "startTime": 134.45,
+      "endTime": 203.8,
+      "audioUrl": "/audio/lectures/science/b19/sec_eutrophication.mp3"
+    },
+    {
+      "id": "sec_conservation",
+      "title": "4. Bảo tồn Đa dạng Sinh học (Conservation of Biodiversity)",
+      "selector": "#sec-conservation",
+      "en": "Section 4 covers Conservation strategies: Sustainable development meets current human needs without compromising the ability of future generations to meet theirs. Conservation programmes preserve biodiversity, prevent species extinction, protect vulnerable habitats in national parks, maintain seed banks for agricultural security, and utilize captive breeding to replenish endangered wildlife populations.",
+      "vi": "Mục bốn trình bày các chiến lược Bảo tồn: Phát triển bền vững đáp ứng nhu cầu hiện tại mà không làm tổn hại đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. Các chương trình bảo tồn giúp duy trì đa dạng sinh học, ngăn chặn nguy cơ tuyệt chủng, thành lập các vườn quốc gia bảo vệ sinh cảnh, xây dựng ngân hàng hạt giống và áp dụng kỹ thuật nhân giống bảo tồn để phục hồi các quần thể động vật hoang dã nguy cấp.",
+      "duration": 46.12,
+      "startTime": 203.8,
+      "endTime": 249.92,
+      "audioUrl": "/audio/lectures/science/b19/sec_conservation.mp3"
+    }
+  ]
+}

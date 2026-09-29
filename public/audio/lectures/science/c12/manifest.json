@@ -1,0 +1,66 @@
+{
+  "lectureId": "d51b5192-ff57-48a0-bcd9-d4f8a7d10757",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C12: Experimental techniques and Chemical analysis",
+  "totalDuration": 300.2,
+  "majorSections": [
+    {
+      "id": "sec_separation_techniques",
+      "title": "1. Các Kỹ thuật Tách chất trong Phòng Thí nghiệm"
+    },
+    {
+      "id": "sec_gas_identification",
+      "title": "2. Nhận biết các Chất Khí Thông dụng"
+    },
+    {
+      "id": "sec_ion_identification",
+      "title": "3. Nhận biết Cation Kim loại & Anion Phi kim"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C12: Phương pháp Tách chất & Nhận biết Hóa học",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic C12: Experimental techniques and Chemical analysis. Practical chemistry requires precise separation and qualitative identification. In this final chemistry chapter, we master laboratory apparatus and separation techniques, qualitative gas identification tests, and systematic identification of cations and anions.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C12: Kỹ thuật Thực nghiệm và Phân tích Hóa học Định tính. Hóa học thực nghiệm đòi hỏi kỹ năng tách chất và nhận biết chính xác. Trong bài học kết thúc phần hóa học này, chúng ta sẽ khảo sát dụng cụ và các phương pháp tách chất, thuốc thử nhận biết chất khí, cùng hệ thống nhận biết các cation kim loại và anion phi kim.",
+      "duration": 43.0,
+      "startTime": 0.0,
+      "endTime": 43.0,
+      "audioUrl": "/audio/lectures/science/c12/intro.mp3"
+    },
+    {
+      "id": "sec_separation_techniques",
+      "title": "1. Các Kỹ thuật Tách chất trong Phòng Thí nghiệm",
+      "selector": "#sec-separation-techniques",
+      "en": "Section 1 reviews physical separation techniques: Filtration separates an insoluble solid from a liquid using porous filter paper. Crystallisation recovers a soluble solute from its solution by gentle evaporation to crystallisation point followed by cooling. Simple distillation separates a liquid solvent from a non-volatile dissolved solute using boiling and condenser cooling. Fractional distillation separates miscible liquids with different boiling points using a fractionating column. Paper chromatography separates mixtures of soluble dyes based on differential partition between stationary paper and mobile solvent phases; retention factor R_f equals distance travelled by substance divided by distance travelled by solvent front.",
+      "vi": "Mục một tổng kết các phương pháp tách chất: Phương pháp Lọc (Filtration) tách chất rắn không tan ra khỏi chất lỏng bằng giấy lọc. Kết tinh (Crystallisation) thu hồi chất tan từ dung dịch bằng cách cô cạn nhẹ đến độ bão hòa rồi để nguội cho tinh thể xuất hiện. Chưng cất đơn (Simple distillation) tách dung môi lỏng ra khỏi chất tan không bay hơi bằng cách đun sôi và ngưng tụ qua ống sinh hàn. Chưng cất phân đoạn (Fractional distillation) tách các chất lỏng trộn lẫn vào nhau có nhiệt độ sôi khác nhau qua cột phân đoạn. Sắc ký giấy (Paper chromatography) tách hỗn hợp phẩm nhuộm dựa vào độ tan và độ bám dính khác nhau giữa pha tĩnh giấy và pha động dung môi; hệ số lưu giữ Rf bằng khoảng cách dịch chuyển của chất chia cho khoảng cách dịch chuyển của mức dung môi.",
+      "duration": 87.76,
+      "startTime": 43.0,
+      "endTime": 130.76,
+      "audioUrl": "/audio/lectures/science/c12/sec_separation_techniques.mp3"
+    },
+    {
+      "id": "sec_gas_identification",
+      "title": "2. Phương pháp Nhận biết các Chất Khí Thông dụng",
+      "selector": "#sec-gas-identification",
+      "en": "Section 2 reviews qualitative gas testing: Ammonia (NH3) is a pungent alkaline gas turning damp red litmus paper blue. Carbon dioxide (CO2) turns limewater milky white by forming insoluble calcium carbonate precipitate. Chlorine (Cl2) is a pale yellow-green choking gas that bleaches damp litmus paper white. Hydrogen (H2) ignites with a squeaky pop when tested with a lighted splint. Oxygen (O2) relights a glowing wooden splint.",
+      "vi": "Mục hai tổng hợp các phản ứng nhận biết chất khí: Khí Amoniac NH3 có mùi khai nồng, tính kiềm làm quỳ tím ẩm hóa xanh. Khí Carbon dioxide CO2 làm đục nước vôi trong do tạo kết tủa trắng canxi cacbonat CaCO3. Khí Clo Cl2 màu vàng lục mùi hắc làm mất màu tẩy trắng giấy quỳ tím ẩm. Khí Hydro H2 cháy phát ra tiếng nổ 'bốp' nhỏ khi đưa que đóm đang cháy vào miệng ống nghiệm. Khí Oxy O2 làm que đóm tàn đỏ bùng cháy sáng trở lại.",
+      "duration": 62.46,
+      "startTime": 130.76,
+      "endTime": 193.22,
+      "audioUrl": "/audio/lectures/science/c12/sec_gas_identification.mp3"
+    },
+    {
+      "id": "sec_ion_identification",
+      "title": "3. Nhận biết Ion Kim loại (Cations) & Anion Phi kim",
+      "selector": "#sec-ion-identification",
+      "en": "Section 3 details ion identification protocols: Aqueous sodium hydroxide and aqueous ammonia test for metal cations by precipitate color and solubility: Copper(II) yields a light blue precipitate, insoluble in excess NaOH, dissolving in excess ammonia to form a deep royal blue solution. Iron(II) gives a dirty green precipitate; Iron(III) produces a red-brown precipitate. Flame tests distinguish cations: Lithium burns crimson-red, Sodium yellow-orange, Potassium lilac-violet, Calcium orange-red, Copper(II) blue-green. For anions: Halides test with dilute nitric acid and aqueous silver nitrate: Chloride gives white precipitate, Bromide cream, Iodide yellow. Sulfate tests with dilute nitric acid and aqueous barium nitrate, producing a dense white precipitate.",
+      "vi": "Mục ba chi tiết hóa quy trình nhận biết ion: Thuốc thử dung dịch NaOH và NH3 nhận biết Cation kim loại qua màu kết tủa hiđroxit: Ion đồng(II) Cu2+ tạo kết tủa xanh lam nhạt, không tan trong NaOH dư nhưng tan trong NH3 dư tạo dung dịch phức chất màu xanh thẫm hoàng gia. Ion sắt(II) Fe2+ tạo kết tủa xanh rêu bẩn; Ion sắt(III) Fe3+ tạo kết tủa nâu đỏ. Thử màu ngọn lửa (Flame test): Liti ngọn lửa đỏ thẫm, Natri vàng cam, Kali tím nhạt, Canxi đỏ cam, Đồng xanh lục lam. Nhận biết Anion: Nhóm halogenua thử bằng axit nitric HNO3 loãng và bạc nitrat AgNO3: Clorua tạo kết tủa trắng, Bromua kết tủa vàng nhạt (kem), Iotua kết tủa vàng đậm. Ion Sunfat SO4(2-) thử bằng axit nitric loãng và bari nitrat Ba(NO3)2 tạo kết tủa trắng không tan.",
+      "duration": 106.98,
+      "startTime": 193.22,
+      "endTime": 300.2,
+      "audioUrl": "/audio/lectures/science/c12/sec_ion_identification.mp3"
+    }
+  ]
+}

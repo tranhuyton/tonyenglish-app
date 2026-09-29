@@ -1,0 +1,66 @@
+{
+  "lectureId": "f0988036-6fd0-4768-993d-a5ea5fe4eb0b",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C3: Stoichiometry",
+  "totalDuration": 235.62,
+  "majorSections": [
+    {
+      "id": "sec_formulas_equations",
+      "title": "1. Công thức & Phương trình Cân bằng"
+    },
+    {
+      "id": "sec_mole_concept",
+      "title": "2. Khái niệm Mol & Tam giác Tính toán"
+    },
+    {
+      "id": "sec_empirical_yield",
+      "title": "3. Công thức Thực nghiệm & Hiệu suất Phản ứng"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C3: Hóa học Định lượng & Khái niệm Mol",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic C3: Stoichiometry. Stoichiometry is the quantitative language of chemistry. In this central calculation topic, we balance chemical and ionic equations, master the mole concept and molar mass conversions, calculate gas molar volumes and solution concentrations, and compute empirical formulas and percentage yields.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C3: Hóa học Định lượng và Khái niệm Mol. Tính toán lượng chất là ngôn ngữ định lượng của hóa học. Trong bài học tính toán trọng tâm này, chúng ta sẽ cân bằng phương trình hóa học và phương trình ion, làm chủ khái niệm mol, thể tích mol chất khí, nồng độ dung dịch, công thức thực nghiệm và hiệu suất phản ứng.",
+      "duration": 42.23,
+      "startTime": 0.0,
+      "endTime": 42.23,
+      "audioUrl": "/audio/lectures/science/c3/intro.mp3"
+    },
+    {
+      "id": "sec_formulas_equations",
+      "title": "1. Công thức Hóa học, Phương trình Cân bằng & Phương trình Ion",
+      "selector": "#sec-formulas-equations",
+      "en": "Section 1 reviews chemical formulas and balancing: Chemical formulas show the number of each type of atom in a compound. Under the Law of Conservation of Mass, atoms are neither created nor destroyed during chemical reactions; equations must have identical atom counts on reactant and product sides. State symbols designate physical phase: s for solid, l for liquid, g for gas, and aq for aqueous solution. Ionic equations omit spectator ions, focusing on species actively transferring electrons or forming precipitates.",
+      "vi": "Mục một ôn tập công thức hóa học và cân bằng phương trình: Công thức hóa học biểu thị số lượng từng nguyên tử trong hợp chất. Theo Định luật Bảo toàn Khối lượng, nguyên tử không tự sinh ra và không tự mất đi; số lượng nguyên tử mỗi nguyên tố ở hai vế phương trình phải bằng nhau tuyệt đối. Ký hiệu trạng thái gồm s cho thể rắn, l cho thể lỏng, g cho thể khí và aq cho dung dịch trong nước. Phương trình ion rút gọn triệt tiêu các ion khán giả (spectator ions), chỉ giữ lại các ion trực tiếp tham gia phản ứng tạo kết tủa, khí hoặc chất điện ly yếu.",
+      "duration": 65.82,
+      "startTime": 42.23,
+      "endTime": 108.05,
+      "audioUrl": "/audio/lectures/science/c3/sec_formulas_equations.mp3"
+    },
+    {
+      "id": "sec_mole_concept",
+      "title": "2. Khái niệm Mol & Các Công thức Tính toán Cốt lõi",
+      "selector": "#sec-mole-concept",
+      "en": "Section 2 establishes the Mole: A mole is the amount of substance containing Avogadro's constant, 6.02 times 10 to the 23rd power particles. The three fundamental calculation triangles are: First, mass equals moles multiplied by molar mass (M_r). Second, volume of any gas at room temperature and pressure (r.t.p.) equals moles multiplied by 24 cubic decimeters. Third, moles of solute in a solution equals concentration in moles per cubic decimeter multiplied by volume in cubic decimeters.",
+      "vi": "Mục hai thiết lập khái niệm Mol: Một mol là lượng chất chứa hằng số Avogadro gồm 6.02 nhân 10 mũ 23 hạt vi mô. Ba tam giác công thức tính toán trụ cột gồm: Thứ nhất, Khối lượng chất m bằng số mol n nhân phân tử khối Mr. Thứ hai, Thể tích V của mọi chất khí ở điều kiện phòng (r.t.p.) bằng số mol n nhân 24 decimet khối (hoặc 24000 cm3). Thứ ba, Số mol chất tan n trong dung dịch bằng Nồng độ mol C nhân Thể tích dung dịch V tính bằng decimet khối.",
+      "duration": 66.23,
+      "startTime": 108.05,
+      "endTime": 174.28,
+      "audioUrl": "/audio/lectures/science/c3/sec_mole_concept.mp3"
+    },
+    {
+      "id": "sec_empirical_yield",
+      "title": "3. Công thức Thực nghiệm, Hiệu suất & Độ Tinh khiết",
+      "selector": "#sec-empirical-yield",
+      "en": "Section 3 covers advanced stoichiometry: The Empirical formula represents the simplest whole-number ratio of atoms of each element in a compound, calculated by dividing mass percentages by relative atomic masses and scaling to integers. The Molecular formula shows actual atom counts, obtained by dividing molar mass by empirical formula mass. Percentage Yield compares actual product mass obtained to theoretical maximum calculated yield: Actual yield divided by Theoretical yield multiplied by 100%.",
+      "vi": "Mục ba hướng dẫn các bài toán định lượng nâng cao: Công thức thực nghiệm (Empirical formula) biểu thị tỷ lệ số nguyên tối giản của các nguyên tử trong hợp chất, tính bằng cách chia phần trăm khối lượng cho nguyên tử khối Ar rồi quy về tỷ lệ nguyên. Công thức phân tử biểu thị số nguyên tử thực tế, tính bằng cách nhân công thức thực nghiệm với tỷ số giữa phân tử khối thực tế và khối lượng công thức thực nghiệm. Hiệu suất phản ứng (Percentage Yield) bằng Khối lượng sản phẩm thực tế thu được chia cho Khối lượng lý thuyết tính theo phương trình rồi nhân 100%.",
+      "duration": 61.34,
+      "startTime": 174.28,
+      "endTime": 235.62,
+      "audioUrl": "/audio/lectures/science/c3/sec_empirical_yield.mp3"
+    }
+  ]
+}

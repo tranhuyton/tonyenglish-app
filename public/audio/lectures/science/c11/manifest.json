@@ -1,0 +1,66 @@
+{
+  "lectureId": "69b82c81-05a0-40a8-816f-c21a882cef54",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C11: Organic chemistry",
+  "totalDuration": 254.22,
+  "majorSections": [
+    {
+      "id": "sec_homologous_series",
+      "title": "1. Dãy Đồng đẳng & Danh pháp IUPAC"
+    },
+    {
+      "id": "sec_hydrocarbons_alkanes_alkenes",
+      "title": "2. Ankan No vs Anken Không no & Cracking"
+    },
+    {
+      "id": "sec_polymers",
+      "title": "3. Trùng hợp & Vật liệu Polymer (Plastics)"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C11: Hóa học Hữu cơ & Polymer",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic C11: Organic chemistry. Carbon forms the structural backbone of life and synthetic materials. In this lesson, we study homologous series and IUPAC nomenclature, compare saturated alkanes and unsaturated alkenes, analyze catalytic cracking and addition reactions, and examine addition polymerization yielding plastics.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C11: Hóa học Hữu cơ và Vật liệu Polymer. Nguyên tử carbon tạo nên bộ khung xương của sự sống và các vật liệu tổng hợp hiện đại. Trong bài học này, chúng ta sẽ khảo sát dãy đồng đẳng và danh pháp IUPAC, so sánh ankan no và anken không no, phản ứng cracking và phản ứng cộng, cùng phản ứng trùng hợp tạo chất dẻo polymer.",
+      "duration": 45.16,
+      "startTime": 0.0,
+      "endTime": 45.16,
+      "audioUrl": "/audio/lectures/science/c11/intro.mp3"
+    },
+    {
+      "id": "sec_homologous_series",
+      "title": "1. Dãy Đồng đẳng & Danh pháp Hóa học Hữu cơ",
+      "selector": "#sec-homologous-series",
+      "en": "Section 1 defines a Homologous series: a family of organic compounds with the same functional group, the same general formula, similar chemical properties, and a regular gradation in physical properties such as boiling point as chain length increases, differing by a CH2 unit. Organic prefixes designate carbon chain length: meth for one carbon, eth for two, prop for three, and but for four carbons. Structural isomerism occurs when compounds share the same molecular formula but have different structural arrangements.",
+      "vi": "Mục một định nghĩa Dãy Đồng đẳng (Homologous series): là tập hợp các hợp chất hữu cơ có cùng nhóm chức, cùng công thức phân tử tổng quát, có tính chất hóa học tương tự nhau, có quy luật biến đổi tính chất vật lý đều đặn (như nhiệt độ sôi tăng dần theo chiều dài mạch carbon) và hơn kém nhau một hay nhiều nhóm CH2. Các tiền tố IUPAC chỉ số nguyên tử carbon: met (1C), et (2C), prop (3C), but (4C). Đồng phân cấu tạo là các chất có cùng công thức phân tử nhưng khác nhau về trật tự liên kết giữa các nguyên tử.",
+      "duration": 65.22,
+      "startTime": 45.16,
+      "endTime": 110.38,
+      "audioUrl": "/audio/lectures/science/c11/sec_homologous_series.mp3"
+    },
+    {
+      "id": "sec_hydrocarbons_alkanes_alkenes",
+      "title": "2. Hydrocacbon: Ankan No vs Anken Không no & Cracking",
+      "selector": "#sec-hydrocarbons-alkanes-alkenes",
+      "en": "Section 2 contrasts Alkanes and Alkenes: Alkanes have the general formula C_n H_{2n+2}; they are saturated hydrocarbons containing only single covalent C-C bonds, generally unreactive except for combustion and photochemical halogen substitution under ultraviolet light. Alkenes have general formula C_n H_{2n}; they are unsaturated hydrocarbons containing a reactive carbon-carbon double bond, undergoing addition reactions. Bromine water distinguishes them: orange-brown bromine water remains unchanged with alkanes, but is rapidly decolourised to colourless by alkenes. Catalytic Cracking breaks large alkane molecules into smaller, more valuable alkanes and alkenes at high temperature using a zeolite catalyst.",
+      "vi": "Mục hai so sánh Ankan và Anken: Ankan có công thức tổng quát CnH2n+2; là hydrocacbon no chỉ chứa các liên kết đơn C-C bền vững, khá trơ về mặt hóa học trừ phản ứng cháy và phản ứng thế halogen dưới ánh sáng tử ngoại UV. Anken có công thức tổng quát CnH2n; là hydrocacbon không no chứa liên kết đôi C=C kém bền, dễ tham gia phản ứng cộng. Nước brom dùng để phân biệt hai loại: dung dịch nước brom màu nâu cam không đổi màu khi gặp ankan, nhưng bị anken làm mất màu trong suốt tức thì. Quá trình Cracking nhiệt xúc tác bẻ gãy các phân tử ankan mạch dài nặng nề thành các ankan mạch ngắn giá trị cao và anken dùng cho công nghiệp polymer.",
+      "duration": 88.77,
+      "startTime": 110.38,
+      "endTime": 199.15,
+      "audioUrl": "/audio/lectures/science/c11/sec_hydrocarbons_alkanes_alkenes.mp3"
+    },
+    {
+      "id": "sec_polymers",
+      "title": "3. Phản ứng Trùng hợp & Chất dẻo Polymer (Plastics)",
+      "selector": "#sec-polymers",
+      "en": "Section 3 investigates Addition Polymerization: Monomers containing carbon-carbon double bonds, like ethene, react together under high pressure and catalyst; the double bonds break and link into extremely long continuous chains called addition polymers, like poly(ethene). Synthetic plastics are lightweight, durable, and chemically inert, but their non-biodegradable nature causes acute ecological pollution in landfills and oceans, emitting toxic gases when incinerated.",
+      "vi": "Mục ba nghiên cứu Phản ứng Trùng hợp (Addition Polymerization): Các phân tử monome nhỏ chứa liên kết đôi C=C như etilen, dưới điều kiện áp suất và xúc tác, bẻ gãy liên kết đôi để liên kết hàng nghìn phân tử lại với nhau tạo thành đại phân tử chuỗi dài polymer như polyetylen (PE). Chất dẻo tổng hợp nhẹ, bền, cách điện tốt nhưng không bị vi sinh vật phân hủy sinh học, gây tích tụ rác thải nhựa đe dọa sinh thái đại dương và phát thải khí độc khi bị đốt cháy.",
+      "duration": 55.07,
+      "startTime": 199.15,
+      "endTime": 254.22,
+      "audioUrl": "/audio/lectures/science/c11/sec_polymers.mp3"
+    }
+  ]
+}

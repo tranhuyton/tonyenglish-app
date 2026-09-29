@@ -1,0 +1,70 @@
+{
+  "lectureId": "d11f8920-fe86-4cd4-ad9a-e8b669bc687b",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+  "lectureTitle": "P6: Space physics",
+  "totalDuration": 304.58,
+  "majorSections": [
+    {
+      "title": "Giới thiệu P6",
+      "start": 0.0
+    },
+    {
+      "title": "1. Trái Đất & Hệ Mặt Trời",
+      "start": 0.0
+    },
+    {
+      "title": "2. Tốc độ Quỹ đạo & Lực Hấp dẫn",
+      "start": 0.0
+    },
+    {
+      "title": "3. Các Vì sao & Vũ trụ",
+      "start": 0.0
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề P6: Vật lý Không gian & Vũ trụ (Space Physics)",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic P6: Space Physics, the final chapter of IGCSE Physics. In this inspiring module, we journey across the cosmos. We study Earth's rotation, seasons, and the architecture of the Solar System, calculate orbital speed and analyze gravitational fields, and explore stellar life cycles, nuclear fusion in stars, the expanding universe, and the Big Bang theory.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề P6: Vật lý Vũ trụ và Không gian, chương cuối cùng của Vật lý IGCSE. Trong bài học này, chúng ta sẽ bắt đầu chuyến hành trình khám phá vũ trụ bao la. Chúng ta sẽ nghiên cứu sự tự quay của Trái Đất, các mùa trong năm và cấu trúc Hệ Mặt Trời, tính tốc độ quỹ đạo và phân tích lực hấp dẫn, đồng thời tìm hiểu vòng đời của các vì sao, phản ứng nhiệt hạch, sự giãn nở của vũ trụ và thuyết Vụ nổ lớn Big Bang.",
+      "duration": 52.46,
+      "startTime": 0.0,
+      "endTime": 52.46,
+      "audioUrl": "/audio/lectures/science/p6/intro.mp3"
+    },
+    {
+      "id": "sec_earth_solar_system",
+      "title": "1. Trái Đất & Hệ Mặt Trời (The Earth & The Solar System)",
+      "selector": "#sec-earth-solar-system",
+      "en": "The Earth rotates on its tilted axis every 24 hours, causing the diurnal cycle of day and night. Earth orbits the Sun once every 365.25 days. The 23.5 degree tilt of Earth's rotational axis explains the changing seasons: when a hemisphere is tilted towards the Sun, solar rays strike the surface more directly and daylight hours are longer, creating summer. The Solar System consists of the central Sun, eight planets, dwarf planets, moons, asteroids, and comets. The four inner rocky planets are Mercury, Venus, Earth, and Mars. The four outer gas and ice giants are Jupiter, Saturn, Uranus, and Neptune.",
+      "vi": "Trái Đất tự quay quanh trục nghiêng của mình một vòng mất 24 giờ, tạo nên chu kỳ ngày và đêm luân phiên. Trái Đất quay quanh Mặt Trời một chu kỳ mất 365,25 ngày. Độ nghiêng 23,5 độ của trục Trái Đất giải thích sự thay đổi các mùa trong năm: khi một bán cầu nghiêng về phía Mặt Trời, các tia nắng chiếu thẳng góc hơn và thời gian ban ngày dài hơn, tạo nên mùa hè. Hệ Mặt Trời gồm Mặt Trời ở trung tâm, 8 hành tinh, các hành tinh lùn, vệ tinh tự nhiên, tiểu hành tinh và sao chổi. Bốn hành tinh đất đá bên trong là Thủy tinh, Kim tinh, Trái Đất và Hỏa tinh. Bốn hành tinh khí và băng khổng lồ bên ngoài là Mộc tinh, Thổ tinh, Thiên Vương tinh và Hải Vương tinh.",
+      "duration": 85.14,
+      "startTime": 52.46,
+      "endTime": 137.6,
+      "audioUrl": "/audio/lectures/science/p6/sec_earth_solar_system.mp3"
+    },
+    {
+      "id": "sec_orbital_motion",
+      "title": "2. Tốc độ Quỹ đạo & Lực Hấp dẫn (Orbital Speed & Gravitational Force)",
+      "selector": "#sec-orbital-motion",
+      "en": "Planets, moons, and satellites travel in roughly circular or elliptical orbits held in place by gravitational attraction. Gravitational force acts as the centripetal force directed toward the center of the orbit. For a circular orbit of radius r and orbital period T, the distance travelled in one orbit is the circumference two pi r. Therefore, orbital speed v equals two pi r divided by T. As orbital radius increases, gravitational field strength decreases; consequently, more distant planets travel at significantly lower orbital speeds and have much longer orbital periods.",
+      "vi": "Các hành tinh, mặt trăng và vệ tinh chuyển động theo quỹ đạo tròn hoặc elip nhờ lực hút hấp dẫn. Lực hấp dẫn đóng vai trò là lực hướng tâm hướng về tâm quỹ đạo. Đối với một quỹ đạo tròn bán kính r và chu kỳ quỹ đạo T, quãng đường đi được trong một chu kỳ là chu vi hình tròn 2 pi r. Do đó, tốc độ quỹ đạo v bằng 2 pi r chia cho T. Khi bán kính quỹ đạo tăng lên, cường độ trường hấp dẫn giảm dần; kết quả là các hành tinh càng ở xa Mặt Trời thì chuyển động với tốc độ quỹ đạo càng chậm và chu kỳ quay quanh Mặt Trời càng kéo dài.",
+      "duration": 67.94,
+      "startTime": 137.6,
+      "endTime": 205.54,
+      "audioUrl": "/audio/lectures/science/p6/sec_orbital_motion.mp3"
+    },
+    {
+      "id": "sec_stars_universe",
+      "title": "3. Các Vì sao & Sự Giãn nở của Vũ trụ (Stars & The Universe)",
+      "selector": "#sec-stars-universe",
+      "en": "Stars form from giant nebulae of gas and dust collapsing under gravity. In the core of a star, intense pressure and temperature trigger nuclear fusion, fusing hydrogen into helium and releasing immense energy. For billions of years, a main sequence star remains stable as outward radiation pressure balances inward gravitational collapse. Lower-mass stars expand into red giants, shed outer layers as planetary nebulae, and cool into white dwarfs. Massive stars expand into red supergiants, explode in cataclysmic supernovae, and leave behind neutron stars or black holes. Light from distant galaxies exhibits redshift, showing that galaxies are moving away from us and that the universe has been expanding since the Big Bang approximately 13.8 billion years ago.",
+      "vi": "Các ngôi sao được hình thành từ các đám mây tinh vân khổng lồ gồm khí và bụi sụp đổ dưới tác dụng của lực hấp dẫn. Tại lõi của ngôi sao, áp suất và nhiệt độ cực cao kích hoạt phản ứng nhiệt hạch, kết hợp các hạt nhân hydro thành heli và giải phóng nguồn năng lượng khổng lồ. Trong hàng tỷ năm, một ngôi sao trong dãy chính duy trì ổn định nhờ áp suất bức xạ hướng ra ngoài cân bằng chính xác với lực nén hấp dẫn hướng vào trong. Các ngôi sao khối lượng nhỏ nở rộng thành sao khổng lồ đỏ, thổi bay lớp vỏ ngoài thành tinh vân hành tinh và co lại thành sao lùn trắng nguội dần. Các ngôi sao khối lượng cực lớn trở thành sao siêu khổng lồ đỏ, nổ tung trong vụ nổ siêu tân tinh dữ dội, để lại sao neutron hoặc lỗ đen. Ánh sáng từ các thiên hà xa xôi cho thấy hiện tượng dịch chuyển đỏ, chứng minh các thiên hà đang rời xa chúng ta và toàn bộ vũ trụ đang không ngừng giãn nở kể từ Vụ nổ lớn Big Bang khoảng 13,8 tỷ năm trước.",
+      "duration": 99.04,
+      "startTime": 205.54,
+      "endTime": 304.58,
+      "audioUrl": "/audio/lectures/science/p6/sec_stars_universe.mp3"
+    }
+  ]
+}

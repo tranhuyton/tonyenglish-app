@@ -1,0 +1,66 @@
+{
+  "lectureId": "9a23109e-ad73-4fcf-a599-9605cc4906eb",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B3: Movement into and out of cells",
+  "totalDuration": 197.94,
+  "majorSections": [
+    {
+      "id": "sec_diffusion",
+      "title": "1. Khuyếch tán (Diffusion)"
+    },
+    {
+      "id": "sec_osmosis",
+      "title": "2. Thẩm thấu & Thế nước (Osmosis)"
+    },
+    {
+      "id": "sec_active_transport",
+      "title": "3. Vận chuyển Chủ động (Active Transport)"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B3: Vận chuyển Chất qua Màng Tế bào",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B3: Movement into and out of cells. Living cells constantly exchange nutrients, gases, and wastes across plasma membranes. In this lesson, we master the principles of diffusion, investigate water potential and osmosis in plant and animal tissues, and examine active transport mechanisms.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B3: Vận chuyển các chất qua màng tế bào. Tế bào sống liên tục trao đổi chất dinh dưỡng, khí và chất thải qua màng sinh chất. Trong bài học này, chúng ta sẽ làm chủ hiện tượng khuếch tán, thế nước và thẩm thấu trong tế bào thực vật và động vật, cùng cơ chế vận chuyển chủ động.",
+      "duration": 39.9,
+      "startTime": 0.0,
+      "endTime": 39.9,
+      "audioUrl": "/audio/lectures/science/b3/intro.mp3"
+    },
+    {
+      "id": "sec_diffusion",
+      "title": "1. Khuyếch tán & Các Yếu tố Ảnh hưởng (Diffusion)",
+      "selector": "#sec-diffusion",
+      "en": "Section 1 defines Diffusion: the net movement of particles from a region of higher concentration to a region of lower concentration down a concentration gradient, as a result of their random kinetic movement. Factors accelerating diffusion rate include steeper concentration gradients, higher temperature boosting kinetic energy, larger surface area, and shorter diffusion distance.",
+      "vi": "Mục một định nghĩa Khuyếch tán (Diffusion): là sự chuyển động tịnh của các hạt từ vùng có nồng độ cao đến vùng có nồng độ thấp hơn xuôi theo chiều gradient nồng độ, bắt nguồn từ chuyển động nhiệt hỗn loạn của phân tử. Các yếu tố làm tăng tốc độ khuếch tán gồm: độ dốc gradient nồng độ càng lớn, nhiệt độ càng cao làm tăng động năng phân tử, diện tích bề mặt càng lớn và khoảng cách khuếch tán càng ngắn.",
+      "duration": 44.51,
+      "startTime": 39.9,
+      "endTime": 84.41,
+      "audioUrl": "/audio/lectures/science/b3/sec_diffusion.mp3"
+    },
+    {
+      "id": "sec_osmosis",
+      "title": "2. Thẩm thấu, Thế nước & Thí nghiệm Tế bào (Osmosis)",
+      "selector": "#sec-osmosis",
+      "en": "Section 2 examines Osmosis: the net movement of water molecules from a region of higher water potential to a region of lower water potential through a partially permeable membrane. In pure water, plant cells absorb water by osmosis and become turgid, with internal turgor pressure pressing against the rigid cell wall to support non-woody plant stems. In concentrated salt or sugar solutions, plant cells lose water, the cytoplasm shrinks away from the cell wall, and the cell becomes flaccid and undergoes plasmolysis.",
+      "vi": "Mục hai phân tích hiện tượng Thẩm thấu (Osmosis): là sự chuyển động tịnh của phân tử nước từ vùng có thế nước cao (dung dịch loãng) đến vùng có thế nước thấp hơn (dung dịch đặc) qua màng thấm chọn lọc. Khi ở trong nước tinh khiết, tế bào thực vật hút nước qua thẩm thấu và trở nên trương chắc (turgid), áp suất trương nước ép vào thành tế bào giúp nâng đỡ thân cây mềm. Ngược lại, trong dung dịch ưu trương, tế bào mất nước làm khối bào tương co cụm tách rời khỏi thành tế bào, gây hiện tượng co nguyên sinh (plasmolysis).",
+      "duration": 60.62,
+      "startTime": 84.41,
+      "endTime": 145.03,
+      "audioUrl": "/audio/lectures/science/b3/sec_osmosis.mp3"
+    },
+    {
+      "id": "sec_active_transport",
+      "title": "3. Vận chuyển Chủ động (Active Transport)",
+      "selector": "#sec-active-transport",
+      "en": "Section 3 investigates Active Transport: the movement of particles through a cell membrane from a region of lower concentration to a region of higher concentration against a concentration gradient, using energy released from respiration. Membrane-spanning carrier proteins bind specific solute molecules and utilize ATP energy to change conformational shape, pumping ions like nitrates into plant root hair cells even when soil concentrations are exceptionally low.",
+      "vi": "Mục ba nghiên cứu Vận chuyển Chủ động (Active Transport): là quá trình vận chuyển các hạt qua màng tế bào từ nơi có nồng độ thấp đến nơi có nồng độ cao ngược chiều gradient nồng độ, đòi hỏi tiêu tốn năng lượng giải phóng từ hô hấp tế bào. Các protein vận chuyển đặc hiệu trên màng liên kết với ion và sử dụng năng lượng ATP để thay đổi hình dạng cấu thể, bơm các ion khoáng như nitrat vào tế bào lông hút của rễ cây ngay cả khi nồng độ dinh dưỡng trong đất xung quanh cực kỳ loãng.",
+      "duration": 52.91,
+      "startTime": 145.03,
+      "endTime": 197.94,
+      "audioUrl": "/audio/lectures/science/b3/sec_active_transport.mp3"
+    }
+  ]
+}

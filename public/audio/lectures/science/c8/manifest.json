@@ -1,0 +1,66 @@
+{
+  "lectureId": "856f20da-80e8-4c6a-9cd1-dbe8a1f40828",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C8: Periodic table",
+  "totalDuration": 229.27,
+  "majorSections": [
+    {
+      "id": "sec_arrangement_elements",
+      "title": "1. Cấu trúc Bảng Tuần hoàn: Chu kỳ & Nhóm"
+    },
+    {
+      "id": "sec_group_trends",
+      "title": "2. Kim loại Kiềm Nhóm I vs Halogen Nhóm VII"
+    },
+    {
+      "id": "sec_transition_noblegases",
+      "title": "3. Kim loại Chuyển tiếp & Khí hiếm Nhóm VIII"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C8: Bảng Tuần hoàn các Nguyên tố Hóa học",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic C8: Periodic table. The Periodic Table is the foundational map organizing all known chemical elements. In this chapter, we explore periodic trends across groups and periods, contrast Group I Alkali metals with Group VII Halogens, and analyze the unique properties of transition elements and noble gases.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C8: Bảng Tuần hoàn các Nguyên tố Hóa học. Bảng tuần hoàn là bản đồ phân loại trật tự của toàn bộ nguyên tố hóa học. Trong bài học này, chúng ta sẽ khảo sát quy luật biến đổi tuần hoàn theo chu kỳ và nhóm, so sánh Nhóm I kim loại kiềm và Nhóm VII halogen, cùng đặc tính của kim loại chuyển tiếp và khí hiếm.",
+      "duration": 41.9,
+      "startTime": 0.0,
+      "endTime": 41.9,
+      "audioUrl": "/audio/lectures/science/c8/intro.mp3"
+    },
+    {
+      "id": "sec_arrangement_elements",
+      "title": "1. Cấu trúc Bảng Tuần hoàn: Chu kỳ & Phân nhóm",
+      "selector": "#sec-arrangement-elements",
+      "en": "Section 1 explains Periodic Table architecture: Elements are arranged in order of increasing atomic number or proton number. Vertical columns are Groups: elements in the same group possess the same number of outer-shell valence electrons, resulting in similar chemical properties. Horizontal rows are Periods: the period number corresponds to the number of occupied electron shells. Across a period from left to right, metallic character decreases while non-metallic character increases.",
+      "vi": "Mục một giải thích cấu trúc Bảng tuần hoàn: Các nguyên tố được sắp xếp theo chiều tăng dần của số hiệu nguyên tử (số proton). Các cột thẳng đứng là các Nhóm (Groups): các nguyên tố cùng nhóm có cùng số electron lớp ngoài cùng nên có tính chất hóa học tương tự nhau. Các hàng ngang là các Chu kỳ (Periods): số thứ tự chu kỳ tương ứng với số lớp electron trong nguyên tử. Đi từ trái sang phải qua một chu kỳ, tính kim loại giảm dần và tính phi kim tăng dần.",
+      "duration": 57.26,
+      "startTime": 41.9,
+      "endTime": 99.16,
+      "audioUrl": "/audio/lectures/science/c8/sec_arrangement_elements.mp3"
+    },
+    {
+      "id": "sec_group_trends",
+      "title": "2. Kim loại Kiềm Nhóm I vs Halogen Nhóm VII",
+      "selector": "#sec-group-trends",
+      "en": "Section 2 contrasts Group I and Group VII: Group I Alkali metals are soft, low-density metals with one valence electron that react vigorously with water to form alkaline metal hydroxide solutions and hydrogen gas; reactivity increases down the group as the valence electron is further from the nucleus and more easily lost. Group VII Halogens are diatomic non-metals with seven valence electrons; reactivity decreases down the group from fluorine to iodine because incoming electrons feel less nuclear attraction. A more reactive halogen will displace a less reactive halide ion from aqueous solution.",
+      "vi": "Mục hai so sánh Nhóm I và Nhóm VII: Kim loại kiềm Nhóm I (Alkali metals) là các kim loại mềm, khối lượng riêng thấp, có 1 electron lớp ngoài cùng, phản ứng mãnh liệt với nước tạo dung dịch kiềm hiđroxit và giải phóng khí H2; độ hoạt động hóa học tăng dần từ trên xuống dưới do bán kính nguyên tử tăng làm lực giữ electron ngoài cùng yếu đi. Halogen Nhóm VII là các phi kim hai nguyên tử có 7 electron ngoài cùng; độ hoạt động hóa học giảm dần từ trên xuống dưới từ flo đến iot do hạt nhân hút electron nhận vào ngày càng yếu. Một halogen hoạt động mạnh hơn sẽ đẩy halogen yếu hơn ra khỏi dung dịch muối của nó.",
+      "duration": 71.97,
+      "startTime": 99.16,
+      "endTime": 171.13,
+      "audioUrl": "/audio/lectures/science/c8/sec_group_trends.mp3"
+    },
+    {
+      "id": "sec_transition_noblegases",
+      "title": "3. Kim loại Chuyển tiếp & Khí hiếm Nhóm VIII (Noble Gases)",
+      "selector": "#sec-transition-noblegases",
+      "en": "Section 3 investigates transition metals and noble gases: Transition elements form the central block of the table, characterized by high melting points, high densities, variable oxidation states, ability to form brightly coloured compounds, and extensive utility as industrial catalysts. Group VIII or Group zero Noble Gases are unreactive monatomic gases with full, stable outer electron shells, rendering them chemically inert, used in incandescent lamps and advertising signs.",
+      "vi": "Mục ba nghiên cứu kim loại chuyển tiếp và khí hiếm: Kim loại chuyển tiếp (Transition elements) nằm ở khối giữa của bảng tuần hoàn, có nhiệt độ nóng chảy cao, khối lượng riêng lớn, có nhiều trạng thái oxy hóa khác nhau, tạo nên các hợp chất có màu sắc rực rỡ và được ứng dụng rộng rãi làm chất xúc tác công nghiệp. Khí hiếm Nhóm VIII gồm các đơn nguyên tử khí không màu có lớp electron ngoài cùng bão hòa bền vững tuyệt đối, hoàn toàn trơ về mặt hóa học, được ứng dụng trong bóng đèn dây tóc và đèn quảng cáo neon.",
+      "duration": 58.14,
+      "startTime": 171.13,
+      "endTime": 229.27,
+      "audioUrl": "/audio/lectures/science/c8/sec_transition_noblegases.mp3"
+    }
+  ]
+}

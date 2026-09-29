@@ -105,6 +105,50 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '7b2384dd-b79d-47fe-b36b-7abf36784f06': '/audio/lectures/biology/19/manifest.json', // Topic 19: Organisms and their environment
   '7777b4df-68dd-4600-b4ba-a4ce56ecc6ac': '/audio/lectures/biology/20/manifest.json', // Topic 20: Human influences on ecosystems
   '55023dc0-7fdc-46ea-a3e9-9a049306d086': '/audio/lectures/biology/21/manifest.json', // Topic 21: Biotechnology and Genetic Engineering
+
+  // =========================================================================
+  // CAMBRIDGE IGCSE CO-ORDINATED SCIENCES (0654) BILINGUAL AUDIO LECTURES
+  // =========================================================================
+  // --- BIOLOGY ---
+  '1231b474-8a99-4330-b45d-fdda19a802fe': '/audio/lectures/science/b1/manifest.json', // B1: Characteristics of living organisms
+  '7b3c2e0a-b0d5-4716-a574-6f1c5c379c7c': '/audio/lectures/science/b2/manifest.json', // B2: Cells and organisms
+  '9a23109e-ad73-4fcf-a599-9605cc4906eb': '/audio/lectures/science/b3/manifest.json', // B3: Movement into and out of cells
+  '757409b3-5cec-4e1f-8877-18d81e440103': '/audio/lectures/science/b4/manifest.json', // B4: Biological molecules
+  '8ab2afa2-59e3-4c56-8971-8d93dec5ad8e': '/audio/lectures/science/b5/manifest.json', // B5: Enzymes
+  '1d6a6b7b-ae57-404f-9ad1-58b11219b4d1': '/audio/lectures/science/b6/manifest.json', // B6: Plant Nutrition
+  'cbebf582-244c-48bf-a586-c6c1922d8e20': '/audio/lectures/science/b7/manifest.json', // B7: Human nutrition
+  'e2819423-13ed-47a2-bd80-9a083989e8bd': '/audio/lectures/science/b8/manifest.json', // B8: Transport in plants
+  'a79dd569-671f-4559-84a3-eee1e6018172': '/audio/lectures/science/b9/manifest.json', // B9: Transport in animals
+  '04d34896-13fb-411b-9e13-2bc3f9725136': '/audio/lectures/science/b10/manifest.json', // B10: Diseases and immunity
+  '39003a2f-708e-47fe-b8ad-7aae073273a3': '/audio/lectures/science/b11/manifest.json', // B11: Gas exchange and respiration
+  '58e65add-a67a-4b90-8b84-52de1a2840be': '/audio/lectures/science/b12/manifest.json', // B12: Respiration
+  '2637d6ee-fd5f-48fc-aa7a-fc794fb3e561': '/audio/lectures/science/b13/manifest.json', // B13: Coordination and response
+  '7ed510d0-acd2-4d0a-9079-1f1e4e4fc463': '/audio/lectures/science/b14/manifest.json', // B14: Drugs
+  'deb8222d-2b75-42a3-b454-9601fbfa1bd2': '/audio/lectures/science/b15/manifest.json', // B15: Reproduction
+  'd48c8f84-ba93-49d4-bf61-c7890bd6d2ce': '/audio/lectures/science/b16/manifest.json', // B16: Inheritance
+  '24f0deeb-3cd9-4b82-b253-5a070ca31275': '/audio/lectures/science/b17/manifest.json', // B17: Variation and selection
+  'cbeb6b74-e9c2-4a91-b39f-decb63e72ec0': '/audio/lectures/science/b18/manifest.json', // B18: Organisms and their environment
+  '298327a8-455a-44d5-9a4c-164e2653c456': '/audio/lectures/science/b19/manifest.json', // B19: Human influences on ecosystems
+  // --- CHEMISTRY ---
+  '3fc0ef74-3661-4f23-a8a8-9c33d11051f5': '/audio/lectures/science/c1/manifest.json', // C1: States of matter
+  'ee4f94c2-382b-4dbb-aaf8-981e7b0d7223': '/audio/lectures/science/c2/manifest.json', // C2: Atoms elements and compounds
+  'f0988036-6fd0-4768-993d-a5ea5fe4eb0b': '/audio/lectures/science/c3/manifest.json', // C3: Stoichiometry
+  '4732621b-f827-4b12-934b-3b53e694cc2a': '/audio/lectures/science/c4/manifest.json', // C4: Electrochemistry
+  '71545c83-4d45-4201-978c-aa58d01b57e5': '/audio/lectures/science/c5/manifest.json', // C5: Chemical energetics
+  '7f2b44b2-ba70-4cfc-85b3-3a0709058b46': '/audio/lectures/science/c6/manifest.json', // C6: Chemical reactions
+  '2c83104c-9413-4ee1-bdf3-2c0da8fd96a6': '/audio/lectures/science/c7/manifest.json', // C7: Acids bases and salts
+  '856f20da-80e8-4c6a-9cd1-dbe8a1f40828': '/audio/lectures/science/c8/manifest.json', // C8: Periodic table
+  'd34bbfa2-7449-4192-b471-3a6a8ba49257': '/audio/lectures/science/c9/manifest.json', // C9: Metals
+  '9d61f516-a24c-4485-8490-8485604130ec': '/audio/lectures/science/c10/manifest.json', // C10: Chemistry of the environment
+  '69b82c81-05a0-40a8-816f-c21a882cef54': '/audio/lectures/science/c11/manifest.json', // C11: Organic chemistry
+  'd51b5192-ff57-48a0-bcd9-d4f8a7d10757': '/audio/lectures/science/c12/manifest.json', // C12: Experimental techniques and Chemical analysis
+  // --- PHYSICS ---
+  '690ff013-5d01-4c1e-8546-25b3cd056e64': '/audio/lectures/science/p1/manifest.json', // P1: Motion, forces & energy
+  'dc33ed9d-e328-4f60-8c47-f0dbd103e8c1': '/audio/lectures/science/p2/manifest.json', // P2: Thermal physics
+  'eb3ed0a0-bd5e-4c0f-961f-1b9af74bf4a8': '/audio/lectures/science/p3/manifest.json', // P3: Waves
+  '2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69': '/audio/lectures/science/p4/manifest.json', // P4: Electricity and magnetism
+  'a6077865-db01-4785-9ec7-e8b0f531fcdc': '/audio/lectures/science/p5/manifest.json', // P5: Nuclear physics
+  'd11f8920-fe86-4cd4-ad9a-e8b669bc687b': '/audio/lectures/science/p6/manifest.json', // P6: Space physics
 };
 
 const LECTURE_VIDEO_MAP: Record<string, string> = {

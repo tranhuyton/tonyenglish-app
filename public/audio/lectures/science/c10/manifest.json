@@ -1,0 +1,66 @@
+{
+  "lectureId": "9d61f516-a24c-4485-8490-8485604130ec",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C10: Chemistry of the environment",
+  "totalDuration": 268.91,
+  "majorSections": [
+    {
+      "id": "sec_water_chemistry",
+      "title": "1. Hóa học Nguồn nước & Xử lý Nước sạch"
+    },
+    {
+      "id": "sec_air_pollution",
+      "title": "2. Thành phần Khí quyển & Ô nhiễm Không khí"
+    },
+    {
+      "id": "sec_rusting_fertilizers",
+      "title": "3. Chống Rỉ sét & Phân bón Hóa học NPK"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C10: Hóa học Môi trường, Nước & Không khí",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic C10: Chemistry of the environment. Environmental chemistry investigates natural balances and human-induced pollutants. In this chapter, we study water treatment and chemical testing, composition of clean air and atmospheric pollutants, greenhouse climate forcing, rust prevention, and synthetic agricultural fertilizers.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C10: Hóa học Môi trường, Nước và Không khí. Hóa học môi trường nghiên cứu các cân bằng tự nhiên và tác nhân ô nhiễm do con người. Trong bài học này, chúng ta sẽ khảo sát quy trình xử lý nước và nhận biết nước tinh khiết, thành phần không khí sạch và các chất ô nhiễm khí quyển, hiệu ứng nhà kính, chống rỉ sét sắt và phân bón hóa học NPK.",
+      "duration": 44.75,
+      "startTime": 0.0,
+      "endTime": 44.75,
+      "audioUrl": "/audio/lectures/science/c10/intro.mp3"
+    },
+    {
+      "id": "sec_water_chemistry",
+      "title": "1. Hóa học Nguồn nước: Nhận biết Nước & Xử lý Nước sinh hoạt",
+      "selector": "#sec-water-chemistry",
+      "en": "Section 1 covers water chemistry: Chemical testing for water uses anhydrous copper(II) sulfate, turning from white to blue, or anhydrous cobalt(II) chloride paper, turning from blue to pink. Water purity is confirmed physically by a sharp boiling point at 100 degrees Celsius and melting point at zero degrees. Water treatment plants prepare drinking water via sedimentation of coarse debris, filtration through sand and gravel beds to remove insolubles, carbon adsorption to eliminate odours, and chlorination to disinfect and kill harmful bacteria.",
+      "vi": "Mục một phân tích hóa học nguồn nước: Thử nghiệm hóa học nhận biết sự có mặt của nước dùng tinh thể đồng(II) sunfat khan CuSO4 chuyển từ màu trắng sang màu xanh lam, hoặc giấy tẩm coban(II) clorua khan CoCl2 chuyển từ xanh lam sang hồng phấn. Độ tinh khiết của nước được xác định bằng điểm sôi cố định đúng 100 độ C và đông đặc ở 0 độ C. Quy trình xử lý nước sinh hoạt gồm lắng cặn thô, lọc qua nhiều lớp cát sỏi để loại bỏ chất rắn lơ lửng, lọc than hoạt tính khử mùi và sục khí clo để khử trùng tiêu diệt vi khuẩn gây bệnh.",
+      "duration": 65.58,
+      "startTime": 44.75,
+      "endTime": 110.33,
+      "audioUrl": "/audio/lectures/science/c10/sec_water_chemistry.mp3"
+    },
+    {
+      "id": "sec_air_pollution",
+      "title": "2. Thành phần Khí quyển & Các Chất Ô nhiễm Không khí",
+      "selector": "#sec-air-pollution",
+      "en": "Section 2 investigates clean air and atmospheric pollution: Clean, dry air contains approximately 78% nitrogen, 21% oxygen, 0.9% argon, and 0.04% carbon dioxide. Common air pollutants include: Carbon monoxide from incomplete combustion of carbonaceous fuels, poisoning blood by irreversibly binding to hemoglobin; Sulfur dioxide from combustion of fossil fuels containing sulfur impurities, producing acid rain; Oxides of nitrogen from vehicle engines triggering photochemical smog and acid rain; and Methane and Carbon dioxide driving the enhanced greenhouse effect and global warming.",
+      "vi": "Mục hai khảo sát không khí sạch và các chất gây ô nhiễm khí quyển: Không khí khô sạch gồm 78% nitơ N2, 21% oxy O2, 0.9% agon và 0.04% CO2. Các chất ô nhiễm không khí nguy hiểm gồm: Khí CO từ đốt cháy không hoàn toàn nhiên liệu, liên kết chặt với hemoglobin gây ngạt thở; Khí SO2 từ đốt cháy than đá chứa tạp chất lưu huỳnh gây mưa axit; Các oxit nitơ NOx sinh ra từ buồng đốt động cơ xe hơi gây sương mù quang hóa và mưa axit; cùng khí Methane CH4 và CO2 gây hiệu ứng nhà kính tăng cường và biến đổi khí hậu toàn cầu.",
+      "duration": 74.37,
+      "startTime": 110.33,
+      "endTime": 184.7,
+      "audioUrl": "/audio/lectures/science/c10/sec_air_pollution.mp3"
+    },
+    {
+      "id": "sec_rusting_fertilizers",
+      "title": "3. Sự Rỉ sét của Sắt & Phân bón Hóa học (NPK Fertilizers)",
+      "selector": "#sec-rusting-fertilizers",
+      "en": "Section 3 covers corrosion and fertilizers: Rusting of iron is the formation of hydrated iron(III) oxide, requiring both oxygen and water simultaneously. Rust prevention methods include barrier methods like painting, greasing, and plastic coating; Sacrificial protection attaching blocks of more reactive zinc or magnesium; and Galvanizing: dipping steel in molten zinc, which shields physically and protects sacrificially even if scratched. Agricultural NPK fertilizers supply three vital macronutrients: Nitrogen for leafy vegetative growth and amino acid synthesis; Phosphorus for root development; and Potassium for flower and fruit disease resistance.",
+      "vi": "Mục ba phân tích sự rỉ sét và phân bón hóa học: Sự rỉ sét của sắt là quá trình hình thành oxit sắt(III) ngậm nước, bắt buộc phải có đồng thời cả oxy và nước. Các phương pháp chống rỉ sét gồm: Phương pháp rào cản ngăn tiếp xúc (sơn, tra dầu mỡ, phủ nhựa); Bảo vệ hy sinh bằng cách gắn các khối kim loại hoạt động mạnh hơn như kẽm hoặc magie; và Mạ kẽm (Galvanizing): nhúng thép vào kẽm nóng chảy vừa tạo lớp vỏ bảo vệ vừa bảo vệ hy sinh ngay cả khi lớp mạ bị trầy xước. Phân bón NPK cung cấp 3 nguyên tố đa lượng tối cần thiết cho cây trồng: Nitơ (N) kích thích phát triển thân lá và tổng hợp protein; Photpho (P) phát triển bộ rễ; và Kali (K) kích thích ra hoa đậu quả và tăng sức đề kháng sâu bệnh.",
+      "duration": 84.21,
+      "startTime": 184.7,
+      "endTime": 268.91,
+      "audioUrl": "/audio/lectures/science/c10/sec_rusting_fertilizers.mp3"
+    }
+  ]
+}

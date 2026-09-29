@@ -1,0 +1,51 @@
+{
+  "lectureId": "757409b3-5cec-4e1f-8877-18d81e440103",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B4: Biological molecules",
+  "totalDuration": 213.79,
+  "majorSections": [
+    {
+      "id": "sec_biomolecules",
+      "title": "1. Cấu trúc Hóa học Carbohydrate, Lipid, Protein & DNA"
+    },
+    {
+      "id": "sec_food_tests",
+      "title": "2. Thử nghiệm Hóa sinh Thực phẩm"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B4: Phân tử Sinh học & Phòng Thí nghiệm",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B4: Biological molecules. All living organisms are assembled from organic chemical building blocks. In this lesson, we study the chemical composition and monomer units of carbohydrates, lipids, proteins, and DNA, and master biochemical food tests used in laboratory examinations.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B4: Các phân tử sinh học và Phân tích hóa sinh. Mọi cơ thể sống đều được cấu thành từ các đại phân tử hữu cơ. Trong bài học này, chúng ta sẽ khảo sát thành phần nguyên tố, đơn phân cấu tạo của carbohydrate, lipid, protein, chuỗi xoắn kép DNA và các phản ứng thử nghiệm thực phẩm tiêu chuẩn.",
+      "duration": 42.38,
+      "startTime": 0.0,
+      "endTime": 42.38,
+      "audioUrl": "/audio/lectures/science/b4/intro.mp3"
+    },
+    {
+      "id": "sec_biomolecules",
+      "title": "1. Cấu trúc Hóa học: Carbohydrate, Lipid, Protein & DNA",
+      "selector": "#sec-biomolecules",
+      "en": "Section 1 details macromolecular structures: Carbohydrates contain carbon, hydrogen, and oxygen. Simple sugars like glucose link into large storage polymers: starch and glycogen, or structural cellulose. Lipids contain carbon, hydrogen, and oxygen, formed from one glycerol molecule joined to three fatty acid chains. Proteins contain carbon, hydrogen, oxygen, nitrogen, and sometimes sulfur; they are polymers of twenty different amino acids whose specific sequence dictates three-dimensional folding and enzyme active site specificity. DNA is a double helix constructed from nucleotide chains paired by complementary nitrogenous bases: Adenine pairs with Thymine, and Cytosine pairs with Guanine.",
+      "vi": "Mục một chi tiết hóa cấu trúc các đại phân tử sinh học: Carbohydrate gồm carbon, hydro và oxy. Các đường đơn như glucose liên kết tạo thành đại phân tử dự trữ tinh bột, glycogen hoặc cellulose cấu trúc. Lipid chứa carbon, hydro và oxy, cấu tạo từ một phân tử glycerol gắn với 3 chuỗi axit béo. Protein chứa carbon, hydro, oxy, nitơ và lưu huỳnh; được cấu tạo từ 20 loại axit amin khác nhau, trong đó trình tự axit amin quyết định sự cuộn gập không gian 3 chiều và hình thù trung tâm hoạt động của enzyme. DNA là chuỗi xoắn kép cấu tạo từ các nucleotide liên kết theo nguyên tắc bổ sung: Adenine bắt cặp với Thymine, và Cytosine bắt cặp với Guanine.",
+      "duration": 90.42,
+      "startTime": 42.38,
+      "endTime": 132.8,
+      "audioUrl": "/audio/lectures/science/b4/sec_biomolecules.mp3"
+    },
+    {
+      "id": "sec_food_tests",
+      "title": "2. Thử nghiệm Hóa sinh Thực phẩm (Qualitative Food Tests)",
+      "selector": "#sec-food-tests",
+      "en": "Section 2 reviews standard Cambridge food test protocols: To test for reducing sugars like glucose, add Benedict's reagent and heat in an 80-degree water bath; a positive result changes from blue to green, yellow, orange, and finally brick-red precipitate. To test for starch, add iodine solution; positive turns from yellow-brown to blue-black. To test for proteins, add Biuret reagent; positive turns from pale blue to purple or violet. To test for lipids, dissolve sample in ethanol, then pour into water; positive produces a cloudy white emulsion. To test for vitamin C, add DCPIP; positive decolourises the blue dye.",
+      "vi": "Mục hai tổng hợp các quy trình thử nghiệm hóa sinh thực phẩm: Để thử đường khử như glucose, nhỏ thuốc thử Benedict và đun cách thủy ở 80 độ C; kết quả dương tính chuyển từ xanh lam sang xanh lục, vàng, cam và kết tủa đỏ gạch. Để thử tinh bột, nhỏ dung dịch iot; kết quả dương tính chuyển từ nâu vàng sang xanh đen. Để thử protein, dùng thuốc thử Biuret; kết quả dương tính chuyển từ xanh lam nhạt sang màu tím biếc. Để thử lipid, hòa tan mẫu vào cồn ethanol rồi đổ vào nước cất; dương tính tạo lớp nhũ tương trắng đục như sữa. Để thử vitamin C, nhỏ thuốc thử DCPIP; dương tính làm mất màu xanh của dung dịch.",
+      "duration": 80.99,
+      "startTime": 132.8,
+      "endTime": 213.79,
+      "audioUrl": "/audio/lectures/science/b4/sec_food_tests.mp3"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "lectureId": "3fc0ef74-3661-4f23-a8a8-9c33d11051f5",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "C1: States of matter",
+  "totalDuration": 288.44,
+  "majorSections": [
+    {
+      "id": "sec_states_particles",
+      "title": "1. Ba Trạng thái của Vật chất & Thuyết Động học"
+    },
+    {
+      "id": "sec_heating_curves",
+      "title": "2. Biến đổi Trạng thái & Đồ thị Đun nóng"
+    },
+    {
+      "id": "sec_gas_behavior",
+      "title": "3. Nhiệt độ & Áp suất Chất khí"
+    },
+    {
+      "id": "sec_diffusion_mass",
+      "title": "4. Khuyếch tán & Khối lượng Phân tử (Mr)"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề C1: Các Trạng thái của Vật chất & Thuyết Động học",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Co-ordinated Sciences Chemistry, Topic C1: States of matter. Chemistry begins with the kinetic particle model of matter. In this foundation chapter, we explore solid, liquid, and gas particle arrangements, decipher heating curves and latent heat plateaus, analyze gas volume changes under temperature and pressure, and investigate diffusion rates relative to molecular mass.",
+      "vi": "Chào mừng các bạn đến với phần Hóa học trong môn Khoa học Phối hợp Cambridge IGCSE, Chuyên đề C1: Các Trạng thái của Vật chất và Thuyết Động học Phân tử. Hóa học khởi đầu từ mô hình hạt động học. Trong bài học nền tảng này, chúng ta sẽ khảo sát sự sắp xếp hạt ở thể rắn, lỏng, khí, giải mã đường cong đun nóng, định luật chất khí và tốc độ khuếch tán phụ thuộc khối lượng phân tử.",
+      "duration": 49.12,
+      "startTime": 0.0,
+      "endTime": 49.12,
+      "audioUrl": "/audio/lectures/science/c1/intro.mp3"
+    },
+    {
+      "id": "sec_states_particles",
+      "title": "1. Ba Trạng thái của Vật chất & Cấu trúc Hạt",
+      "selector": "#sec-states-particles",
+      "en": "Section 1 contrasts the three states of matter using the kinetic particle model: In Solids, particles are tightly packed in regular lattice arrangements, vibrating about fixed positions with strong intermolecular forces, giving fixed shape and volume. In Liquids, particles are closely packed but arranged irregularly, sliding past one another with moderate forces, adopting container shape while retaining fixed volume. In Gases, particles are widely separated, moving randomly at high speeds with negligible forces, having neither fixed shape nor fixed volume.",
+      "vi": "Mục một so sánh 3 trạng thái vật chất qua thuyết động học: Ở thể Rắn, các hạt xếp khít nhau theo mạng tinh thể trật tự đều đặn, chỉ dao động quanh vị trí cố định nhờ lực hút liên phân tử mạnh, giữ nguyên hình dạng và thể tích xác định. Ở thể Lỏng, các hạt nằm gần nhau nhưng sắp xếp lộn xộn, trượt tự do lên nhau với lực hút trung bình, chiếm hình dạng của đáy bình chứa nhưng giữ thể tích cố định. Ở thể Khí, các hạt cách rất xa nhau, chuyển động hỗn loạn ở tốc độ cao với lực tương tác không đáng kể, không có hình dạng và thể tích cố định.",
+      "duration": 64.6,
+      "startTime": 49.12,
+      "endTime": 113.72,
+      "audioUrl": "/audio/lectures/science/c1/sec_states_particles.mp3"
+    },
+    {
+      "id": "sec_heating_curves",
+      "title": "2. Biến đổi Trạng thái & Đồ thị Đun nóng (Heating Curves)",
+      "selector": "#sec-heating-curves",
+      "en": "Section 2 investigates phase changes: Melting transforms solid to liquid at a fixed melting point; Boiling transforms liquid into gas throughout the bulk at a specific boiling point. Evaporation occurs only at liquid surfaces at any temperature below boiling. Condensation turns gas to liquid, and Freezing turns liquid to solid. On a heating curve, horizontal plateaus indicate phase transitions where absorbed thermal energy overcomes intermolecular attractions rather than increasing kinetic energy, keeping temperature constant.",
+      "vi": "Mục hai nghiên cứu chuyển pha trạng thái: Nóng chảy chuyển rắn thành lỏng tại điểm nóng chảy xác định; Sôi chuyển lỏng thành khí trong toàn bộ thể tích chất lỏng tại điểm sôi. Bay hơi chỉ diễn ra trên bề mặt chất lỏng ở mọi nhiệt độ dưới điểm sôi. Ngưng tụ chuyển khí thành lỏng, và Đông đặc chuyển lỏng thành rắn. Trên đồ thị đun nóng, các đoạn nằm ngang biểu thị giai đoạn chuyển thể nơi nhiệt năng hấp thu được dùng để phá vỡ lực liên kết liên phân tử thay vì làm tăng động năng, khiến nhiệt độ không đổi.",
+      "duration": 60.16,
+      "startTime": 113.72,
+      "endTime": 173.88,
+      "audioUrl": "/audio/lectures/science/c1/sec_heating_curves.mp3"
+    },
+    {
+      "id": "sec_gas_behavior",
+      "title": "3. Ảnh hưởng của Nhiệt độ & Áp suất lên Thể tích Chất khí",
+      "selector": "#sec-gas-behavior",
+      "en": "Section 3 examines gas behavior: Increasing temperature increases average kinetic energy and velocity of gas particles; if pressure is constant, particles collide more forcefully with container walls, expanding gas volume. If volume is constant, more frequent and energetic collisions increase pressure. Increasing external pressure compresses gas particles closer together, decreasing volume proportionally according to Boyle's law.",
+      "vi": "Mục ba phân tích hành vi của chất khí: Tăng nhiệt độ làm tăng động năng trung bình và tốc độ của các phân tử khí; nếu giữ áp suất không đổi, các hạt va đập mạnh hơn làm giãn nở thể tích khí. Nếu thể tích bình kín cố định, các va chạm dồn dập làm áp suất chất khí tăng vọt. Tăng áp suất nén bên ngoài sẽ ép các phân tử khí lại gần nhau hơn, làm giảm thể tích tương ứng theo định luật Boyle.",
+      "duration": 49.84,
+      "startTime": 173.88,
+      "endTime": 223.72,
+      "audioUrl": "/audio/lectures/science/c1/sec_gas_behavior.mp3"
+    },
+    {
+      "id": "sec_diffusion_mass",
+      "title": "4. Khuyếch tán & Khối lượng Phân tử Tương đối (Mr)",
+      "selector": "#sec-diffusion-mass",
+      "en": "Section 4 covers Diffusion in gases: the random spreading out of particles from regions of higher concentration to lower concentration. The rate of diffusion is inversely proportional to relative molecular mass: lighter gas molecules move with higher average velocity than heavier gas molecules at the same temperature. In the classic reaction tube experiment, ammonia gas with molecular mass seventeen diffuses faster than hydrogen chloride gas with molecular mass 36.5, forming a white ring of ammonium chloride closer to the hydrochloric acid end.",
+      "vi": "Mục bốn phân tích hiện tượng khuếch tán khí: là sự chuyển động hỗn loạn của các hạt từ nơi có nồng độ cao đến nơi có nồng độ thấp hơn. Tốc độ khuếch tán tỷ lệ nghịch với khối lượng phân tử tương đối: phân tử khí nhẹ hơn chuyển động với vận tốc trung bình lớn hơn phân tử khí nặng ở cùng nhiệt độ. Trong thí nghiệm ống thủy tinh kinh điển, khí amoniac NH3 có phân tử khối 17 khuếch tán nhanh hơn khí hydro clorua HCl có phân tử khối 36.5, tạo nên vành khói trắng amoni clorua NH4Cl nằm lệch hẳn về phía đầu bông tẩm axit clohidric.",
+      "duration": 64.72,
+      "startTime": 223.72,
+      "endTime": 288.44,
+      "audioUrl": "/audio/lectures/science/c1/sec_diffusion_mass.mp3"
+    }
+  ]
+}

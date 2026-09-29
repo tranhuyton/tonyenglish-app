@@ -1,0 +1,81 @@
+{
+  "lectureId": "deb8222d-2b75-42a3-b454-9601fbfa1bd2",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B15: Reproduction",
+  "totalDuration": 306.35,
+  "majorSections": [
+    {
+      "id": "sec_reproduction_modes",
+      "title": "1. Sinh sản Vô tính vs Hữu tính"
+    },
+    {
+      "id": "sec_flowering_plants",
+      "title": "2. Sinh sản Hữu tính ở Thực vật"
+    },
+    {
+      "id": "sec_human_reproduction",
+      "title": "3. Sinh sản Người & Chu kỳ Kinh nguyệt"
+    },
+    {
+      "id": "sec_stis_hiv",
+      "title": "4. Bệnh Lây qua Đường Tình dục (STIs) & HIV"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B15: Sinh sản ở Thực vật & Người",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B15: Reproduction. Reproduction ensures the perpetuation of genetic lineages. In this comprehensive lesson, we contrast asexual and sexual modes, examine floral adaptations and pollination in flowering plants, trace human reproductive physiology and hormonal cycles, and study sexually transmitted infections.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B15: Sinh sản ở Thực vật và Người. Sinh sản bảo đảm sự trường tồn của các dòng giống di truyền. Trong bài học này, chúng ta sẽ so sánh sinh sản vô tính và hữu tính, cấu tạo hoa và sự thụ phấn ở thực vật có hoa, sinh lý sinh sản người và chu kỳ hormone, cùng các bệnh lây truyền qua đường tình dục.",
+      "duration": 43.34,
+      "startTime": 0.0,
+      "endTime": 43.34,
+      "audioUrl": "/audio/lectures/science/b15/intro.mp3"
+    },
+    {
+      "id": "sec_reproduction_modes",
+      "title": "1. So sánh Sinh sản Vô tính & Hữu tính",
+      "selector": "#sec-reproduction-modes",
+      "en": "Section 1 contrasts reproductive strategies: Asexual reproduction involves a single parent, producing genetically identical offspring called clones via mitotic division without fusion of gametes, allowing rapid colonization of favorable environments. Sexual reproduction involves the fusion of two haploid gamete nuclei during fertilization to produce a diploid zygote, creating genetic variation that enables populations to adapt to changing environments.",
+      "vi": "Mục một so sánh hai chiến lược sinh sản: Sinh sản vô tính chỉ có một cơ thể mẹ, tạo ra các thế hệ con giống hệt nhau về di truyền (dòng vô tính) qua nguyên phân mà không có sự dung hợp giao tử, giúp nhân nhanh số lượng cá thể trong môi trường thuận lợi. Sinh sản hữu tính là sự kết hợp giữa nhân của hai giao tử đơn bội qua thụ tinh tạo thành hợp tử lưỡng bội, tạo ra sự đa dạng biến dị di truyền giúp quần thể thích nghi với môi trường biến động.",
+      "duration": 52.48,
+      "startTime": 43.34,
+      "endTime": 95.82,
+      "audioUrl": "/audio/lectures/science/b15/sec_reproduction_modes.mp3"
+    },
+    {
+      "id": "sec_flowering_plants",
+      "title": "2. Sinh sản Hữu tính ở Thực vật có hoa: Thụ phấn & Nảy mầm",
+      "selector": "#sec-flowering-plants",
+      "en": "Section 2 investigates angiosperm reproduction: Insect-pollinated flowers have large colourful petals, sweet nectar, and sticky pollen grains to attach to visiting insects, with stigmas located inside the flower. Wind-pollinated flowers have small green petals, long dangling anthers outside the flower exposing lightweight pollen to air currents, and feathery stigmas to trap passing pollen. Pollination transfers pollen from anther to stigma; a pollen tube grows down the style into the ovary micropyle, where fertilization occurs.",
+      "vi": "Mục hai khảo sát sinh sản ở thực vật hạt kín: Hoa thụ phấn nhờ côn trùng có cánh hoa sặc sỡ, tuyến mật ngọt và hạt phấn có gai nham nhở dễ dính vào côn trùng, đầu nhụy nằm sâu bên trong hoa. Hoa thụ phấn nhờ gió có cánh hoa tiêu giảm màu xanh nhạt, bao phấn đung đưa lơ lửng ngoài hoa giải phóng hạt phấn nhẹ bay theo gió và đầu nhụy dạng lông chim đón phấn. Thụ phấn là quá trình chuyển hạt phấn từ bao phấn sang đầu nhụy; hạt phấn nảy mầm mọc ống phấn đâm xuyên qua vòi nhụy vào noãn để thực hiện thụ tinh tạo hạt và quả.",
+      "duration": 61.98,
+      "startTime": 95.82,
+      "endTime": 157.8,
+      "audioUrl": "/audio/lectures/science/b15/sec_flowering_plants.mp3"
+    },
+    {
+      "id": "sec_human_reproduction",
+      "title": "3. Sinh lý Sinh sản Người & Chu kỳ Kinh nguyệt",
+      "selector": "#sec-human-reproduction",
+      "en": "Section 3 details human reproduction: Testes produce sperm and testosterone; ovaries release mature ova and estrogen. Fertilization occurs in the oviduct. The zygote divides into an embryo, which implants into the vascularized uterine lining. The placenta connects mother and fetus via the umbilical cord, facilitating diffusion of oxygen, glucose, and antibodies to the fetus while removing urea and carbon dioxide, without mixing maternal and fetal blood. The menstrual cycle is coordinated by hormones: pituitary FSH stimulates follicle maturation; estrogen thickens uterine lining; LH surge triggers ovulation on day 14; progesterone maintains the lining for implantation.",
+      "vi": "Mục ba chi tiết hóa sinh lý sinh sản người: Tinh hoàn sản sinh tinh trùng và testosterone; buồng trứng rụng trứng chín và tiết estrogen. Sự thụ tinh diễn ra ở 1/3 trên ống dẫn trứng (vòi fallop). Hợp tử phân chia thành phôi nang rồi làm tổ vào lớp niêm mạc tử cung giàu mạch máu. Nhau thai liên kết mẹ và thai nhi qua dây rốn, thực hiện khuếch tán oxy, glucose và kháng thể cho thai nhi đồng thời đào thải urê và CO2 mà không hòa trộn dòng máu mẹ và con. Chu kỳ kinh nguyệt được điều hòa nhịp nhàng: FSH kích thích nang trứng chín; estrogen làm dày niêm mạc tử cung; đỉnh LH kích hoạt rụng trứng vào ngày thứ 14; progesterone duy trì niêm mạc sẵn sàng cho phôi làm tổ.",
+      "duration": 86.01,
+      "startTime": 157.8,
+      "endTime": 243.81,
+      "audioUrl": "/audio/lectures/science/b15/sec_human_reproduction.mp3"
+    },
+    {
+      "id": "sec_stis_hiv",
+      "title": "4. Bệnh Lây truyền qua Đường Tình dục (STIs) & Virus HIV",
+      "selector": "#sec-stis-hiv",
+      "en": "Section 4 covers Sexually Transmitted Infections: An STI is an infection transmitted via sexual contact. Human Immunodeficiency Virus, or HIV, infects and progressively destroys lymphocytes, crippling antibody production and cellular immunity, leading to Acquired Immune Deficiency Syndrome, or AIDS. HIV is transmitted through unprotected sexual intercourse, sharing contaminated hypodermic needles, and mother-to-child during birth or breastfeeding. Transmission is prevented by using barrier contraception like condoms and screening donor blood.",
+      "vi": "Mục bốn phân tích các bệnh lây truyền qua đường tình dục (STIs): HIV là virus gây suy giảm miễn dịch ở người, xâm nhập và phá hủy các tế bào bạch cầu lympho T, làm tê liệt khả năng sản xuất kháng thể và đáp ứng miễn dịch, dẫn đến hội chứng AIDS. HIV lây truyền qua quan hệ tình dục không an toàn, dùng chung kim tiêm nhiễm máu và truyền từ mẹ sang con trong khi sinh hoặc cho con bú. Phòng ngừa lây nhiễm bằng cách sử dụng biện pháp rào cản như bao cao su và sàng lọc kỹ lưỡng máu hiến tặng.",
+      "duration": 62.54,
+      "startTime": 243.81,
+      "endTime": 306.35,
+      "audioUrl": "/audio/lectures/science/b15/sec_stis_hiv.mp3"
+    }
+  ]
+}

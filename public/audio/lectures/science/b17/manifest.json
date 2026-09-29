@@ -1,0 +1,66 @@
+{
+  "lectureId": "24f0deeb-3cd9-4b82-b253-5a070ca31275",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "B17: Variation and selection",
+  "totalDuration": 238.91,
+  "majorSections": [
+    {
+      "id": "sec_variation_mutation",
+      "title": "1. Biến dị Liên tục, Không liên tục & Đột biến"
+    },
+    {
+      "id": "sec_adaptive_features",
+      "title": "2. Thực vật Sa mạc vs Thủy sinh"
+    },
+    {
+      "id": "sec_natural_selection",
+      "title": "3. Chọn lọc Tự nhiên vs Chọn giống Nhân tạo"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Chuyên đề B17: Biến dị, Thích nghi & Chọn lọc Tự nhiên",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic B17: Variation and selection. Biological variation is the raw substrate of evolutionary change. In this chapter, we classify continuous and discontinuous variation, examine mutation causes, analyze xerophyte and hydrophyte adaptations, and study natural selection versus selective breeding.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B17: Biến dị, Thích nghi và Chọn lọc Tự nhiên. Biến dị sinh học là nguyên liệu thô thúc đẩy tiến hóa. Trong bài học này, chúng ta sẽ phân biệt biến dị liên tục và không liên tục, nguyên nhân gây đột biến, cấu tạo thích nghi của thực vật chịu hạn và thủy sinh, cùng cơ chế chọn lọc tự nhiên và chọn giống nhân tạo.",
+      "duration": 42.54,
+      "startTime": 0.0,
+      "endTime": 42.54,
+      "audioUrl": "/audio/lectures/science/b17/intro.mp3"
+    },
+    {
+      "id": "sec_variation_mutation",
+      "title": "1. Biến dị Liên tục, Không liên tục & Đột biến (Mutation)",
+      "selector": "#sec-variation-mutation",
+      "en": "Section 1 classifies biological variation: Continuous variation produces a smooth quantitative spectrum of phenotypes influenced by multiple genes and environmental factors, forming a bell-shaped normal distribution curve like human height and body mass. Discontinuous variation produces distinct qualitative categories determined purely by genetics without intermediate phenotypes, like human ABO blood groups. A Mutation is a spontaneous change in the base sequence of DNA, forming the primary source of novel alleles, accelerated by ionizing radiation and mutagenic chemicals.",
+      "vi": "Mục một phân loại các dạng biến dị: Biến dị liên tục là dải kiểu hình định lượng liên tục chịu sự tác động đồng thời của nhiều gen và môi trường, tạo thành đồ thị phân bố chuẩn hình chuông như chiều cao và cân nặng ở người. Biến dị không liên tục phân thành các nhóm kiểu hình định tính rõ rệt hoàn toàn do gen quy định mà không có dạng trung gian, như nhóm máu ABO. Đột biến (Mutation) là sự biến đổi đột ngột trong trình tự nucleotide của phân tử DNA, là nguồn gốc sơ cấp tạo ra các allele mới, gia tăng khi tiếp xúc với tia phóng xạ ion hóa và hóa chất độc hại.",
+      "duration": 68.54,
+      "startTime": 42.54,
+      "endTime": 111.08,
+      "audioUrl": "/audio/lectures/science/b17/sec_variation_mutation.mp3"
+    },
+    {
+      "id": "sec_adaptive_features",
+      "title": "2. Đặc điểm Thích nghi: Thực vật Sa mạc (Xerophytes) & Thủy sinh (Hydrophytes)",
+      "selector": "#sec-adaptive-features",
+      "en": "Section 2 investigates Adaptive Features: inherited functional characteristics that increase an organism's survival and reproductive fitness in a specific environment. Xerophytes thrive in arid habitats through thick waxy cuticles, sunken stomata in protective pits trapping humid air, rolled leaves, and extensive root systems. Hydrophytes flourish in aquatic habitats with thin cuticles, stomata situated on upper leaf surfaces for atmospheric gas access, and extensive aerenchyma air tissues providing buoyancy.",
+      "vi": "Mục hai nghiên cứu Đặc điểm thích nghi: là những đặc tính hình thái hoặc sinh lý di truyền giúp sinh vật sống sót và sinh sản tối ưu trong sinh cảnh của chúng. Thực vật chịu hạn (Xerophytes) sống ở sa mạc khô cằn có lớp cutin sáp dày, khí khổng nằm sâu trong các hốc để giữ ẩm, lá cuộn tròn hoặc tiêu biến thành gai và rễ cắm rất sâu. Thực vật thủy sinh (Hydrophytes) sống dưới nước có lớp cutin rất mỏng, khí khổng nằm ở mặt trên của lá để trao đổi khí trực tiếp với khí quyển và mô chứa khí (aerenchyma) xốp giúp cây nổi trên mặt nước.",
+      "duration": 63.23,
+      "startTime": 111.08,
+      "endTime": 174.31,
+      "audioUrl": "/audio/lectures/science/b17/sec_adaptive_features.mp3"
+    },
+    {
+      "id": "sec_natural_selection",
+      "title": "3. Chọn lọc Tự nhiên vs Chọn giống Nhân tạo",
+      "selector": "#sec-natural-selection",
+      "en": "Section 3 outlines Natural Selection: Organisms produce more offspring than the environment can sustain, creating a struggle for existence. Random mutations yield phenotypic variation. Individuals with advantageous adaptive features have higher survival and reproductive success, passing advantageous alleles to successive generations, causing progressive adaptation. In contrast, Selective Breeding involves humans selecting individuals exhibiting desirable economic traits over many generations to produce domestic crops and livestock.",
+      "vi": "Mục ba phác thảo Chọn lọc Tự nhiên: Sinh vật sinh ra số lượng con non nhiều hơn mức môi trường có thể nuôi sống, dẫn đến đấu tranh sinh tồn. Các đột biến ngẫu nhiên tạo nên biến dị kiểu hình phong phú. Những cá thể sở hữu đặc điểm thích nghi có ưu thế sinh tồn cao hơn, sống sót đến tuổi sinh sản và truyền lại các allele có lợi cho đời sau, dẫn đến sự tiến hóa thích nghi của quần thể. Ngược lại, Chọn giống Nhân tạo do con người chủ động chọn lọc và lai phối các cá thể mang tính trạng mong muốn qua nhiều thế hệ để phục vụ mục đích kinh tế.",
+      "duration": 64.6,
+      "startTime": 174.31,
+      "endTime": 238.91,
+      "audioUrl": "/audio/lectures/science/b17/sec_natural_selection.mp3"
+    }
+  ]
+}

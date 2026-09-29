@@ -1,0 +1,480 @@
+[
+  {
+    "code": "b1",
+    "lid": "1231b474-8a99-4330-b45d-fdda19a802fe",
+    "title": "B1: Characteristics of living organisms",
+    "margin": "40px",
+    "h2_count": 2,
+    "h2_titles": [
+      "1. The Seven Characteristics of Living Things (MRS GREN)",
+      "2. Classification of Living Organisms: The Five Kingdoms"
+    ]
+  },
+  {
+    "code": "b2",
+    "lid": "7b3c2e0a-b0d5-4716-a574-6f1c5c379c7c",
+    "title": "B2: Cells and organisms",
+    "margin": "40px",
+    "h2_count": 4,
+    "h2_titles": [
+      "1. Comparison of Plant, Animal and Bacterial Cells",
+      "2. Interactive Cell Map & Organelle Functions",
+      "3. Specialised Cells & Their Adaptations",
+      "4. Specimen Calculations: The Magnification Formula (I = A × M)"
+    ]
+  },
+  {
+    "code": "b3",
+    "lid": "9a23109e-ad73-4fcf-a599-9605cc4906eb",
+    "title": "B3: Movement into and out of cells",
+    "margin": "40px",
+    "h2_count": 3,
+    "h2_titles": [
+      "1. Diffusion: Definition & Influencing Factors",
+      "2. Osmosis, Water Potential & Interactive Lab",
+      "3. Active Transport"
+    ]
+  },
+  {
+    "code": "b4",
+    "lid": "757409b3-5cec-4e1f-8877-18d81e440103",
+    "title": "B4: Biological molecules",
+    "margin": "40px",
+    "h2_count": 4,
+    "h2_titles": [
+      "1. Chemical Elements & Building Blocks",
+      "2. Qualitative Food Tests Laboratory",
+      "🧬 1. CẤU TRÚC PHÂN TỬ (Chemical Elements & Building Blocks)",
+      "🧪 2. CHEMICAL FOOD TESTS (Phòng Lab Tương tác)"
+    ]
+  },
+  {
+    "code": "b5",
+    "lid": "8ab2afa2-59e3-4c56-8971-8d93dec5ad8e",
+    "title": "B5: Enzymes",
+    "margin": "40px",
+    "h2_count": 3,
+    "h2_titles": [
+      "1. Nature of Enzymes & Properties",
+      "2. How Enzymes Work: The Lock and Key Hypothesis",
+      "3. Effects of Temperature & pH on Enzyme Activity"
+    ]
+  },
+  {
+    "code": "b6",
+    "lid": "1d6a6b7b-ae57-404f-9ad1-58b11219b4d1",
+    "title": "B6: Plant Nutrition",
+    "margin": "40px",
+    "h2_count": 4,
+    "h2_titles": [
+      "1. The Photosynthesis Process & Equations",
+      "2. Fate of Glucose & Essential Plant Minerals",
+      "3. Dicotyledonous Leaf Anatomy & Interactive Map",
+      "4. Environmental Factors & Hydrogencarbonate Indicator"
+    ]
+  },
+  {
+    "code": "b7",
+    "lid": "cbebf582-244c-48bf-a586-c6c1922d8e20",
+    "title": "B7: Human nutrition",
+    "margin": "40px",
+    "h2_count": 4,
+    "h2_titles": [
+      "1. Balanced Diet & Dietary Requirements",
+      "2. The Five Stages of Food Processing",
+      "3. Interactive Digestive System Map",
+      "4. Chemical Digestion: Digestive Enzymes & Bile"
+    ]
+  },
+  {
+    "code": "b8",
+    "lid": "e2819423-13ed-47a2-bd80-9a083989e8bd",
+    "title": "B8: Transport in plants",
+    "margin": "40px",
+    "h2_count": 7,
+    "h2_titles": [
+      "1. Xylem & Phloem Structure and Function",
+      "2. Vascular Bundle Distribution in Dicot Roots, Stems & Leaves",
+      "💧 1. XYLEM AND PHLOEM (Mạch gỗ & Mạch rây)",
+      "🗺️ 2. POSITION IN DICOT PLANTS (Vị trí phân bố)",
+      "🌬️ 3. TRANSPIRATION (Sự thoát hơi nước)",
+      "🍯 4. TRANSLOCATION (Sự vận chuyển chất hữu cơ)",
+      "3. Water Uptake, Transpiration Stream & Translocation"
+    ]
+  },
+  {
+    "code": "b9",
+    "lid": "a79dd569-671f-4559-84a3-eee1e6018172",
+    "title": "B9: Transport in animals",
+    "margin": "40px",
+    "h2_count": 4,
+    "h2_titles": [
+      "1. Single vs Double Circulation",
+      "2. Mammalian Heart Anatomy & Interactive Map",
+      "3. Coronary Heart Disease (CHD) Progression",
+      "4. Blood Vessels & Blood Composition"
+    ]
+  },
+  {
+    "code": "b10",
+    "lid": "04d34896-13fb-411b-9e13-2bc3f9725136",
+    "title": "B10: Diseases and immunity",
+    "margin": "40px",
+    "h2_count": 3,
+    "h2_titles": [
+      "1. Pathogens, Transmission & Public Hygiene",
+      "2. Antigens, Antibodies & Interactive Immune Response",
+      "3. Step-by-Step Mechanism of Vaccination"
+    ]
+  },
+  {
+    "code": "b11",
+    "lid": "39003a2f-708e-47fe-b8ad-7aae073273a3",
+    "title": "B11: Gas exchange and respiration",
+    "margin": "50px",
+    "h2_count": 3,
+    "h2_titles": [
+      "🫁 1. Features of Gas Exchange Surfaces",
+      "🗺️ 2. Structure of the Respiratory System",
+      "🌬️ 3. Ventilation & Breathing Mechanics"
+    ]
+  },
+  {
+    "code": "b12",
+    "lid": "58e65add-a67a-4b90-8b84-52de1a2840be",
+    "title": "B12: Respiration",
+    "margin": "50px",
+    "h2_count": 3,
+    "h2_titles": [
+      "⚡ 1. Bioenergetics: What is Respiration?",
+      "🔥 2. Aerobic Respiration",
+      "⚠️ 3. Anaerobic Respiration"
+    ]
+  },
+  {
+    "code": "b13",
+    "lid": "2637d6ee-fd5f-48fc-aa7a-fc794fb3e561",
+    "title": "B13: Coordination and response",
+    "margin": "50px",
+    "h2_count": 3,
+    "h2_titles": [
+      "🧠 1. Nervous System & Reflex Arc",
+      "🧪 2. Hormones & The Endocrine System",
+      "🌡️ 3. Homeostasis & Skin Thermoregulation"
+    ]
+  },
+  {
+    "code": "b14",
+    "lid": "7ed510d0-acd2-4d0a-9079-1f1e4e4fc463",
+    "title": "B14: Drugs",
+    "margin": "30px",
+    "h2_count": 3,
+    "h2_titles": [
+      "💊 1. What is a Drug?",
+      "🦠 2. Antibiotics & Why They Don't Affect Viruses",
+      "🧬 3. Antibiotic Resistance & The MRSA Crisis"
+    ]
+  },
+  {
+    "code": "b15",
+    "lid": "deb8222d-2b75-42a3-b454-9601fbfa1bd2",
+    "title": "B15: Reproduction",
+    "margin": "40px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🔄 1. Asexual & Sexual Reproduction",
+      "🌺 2. Sexual Reproduction in Flowering Plants",
+      "🧑‍⚕️ 3. Human Reproduction & Menstrual Cycle",
+      "🦠 4. Sexually Transmitted Infections (STIs) & HIV"
+    ]
+  },
+  {
+    "code": "b16",
+    "lid": "d48c8f84-ba93-49d4-bf61-c7890bd6d2ce",
+    "title": "B16: Inheritance",
+    "margin": "30px",
+    "h2_count": 3,
+    "h2_titles": [
+      "🧬 1. The Genetic Code: Chromosomes, Genes & Alleles",
+      "🧮 2. Monohybrid Inheritance & Punnett Square",
+      "🌳 3. Pedigree Charts & Sex Determination"
+    ]
+  },
+  {
+    "code": "b17",
+    "lid": "24f0deeb-3cd9-4b82-b253-5a070ca31275",
+    "title": "B17: Variation and selection",
+    "margin": "40px",
+    "h2_count": 3,
+    "h2_titles": [
+      "🧬 1. Types of Variation & Mutation",
+      "🌵 2. Adaptive Features: Xerophytes & Hydrophytes",
+      "🌿 3. Natural Selection & Selective Breeding"
+    ]
+  },
+  {
+    "code": "b18",
+    "lid": "cbeb6b74-e9c2-4a91-b39f-decb63e72ec0",
+    "title": "B18: Organisms and their environment",
+    "margin": "40px",
+    "h2_count": 3,
+    "h2_titles": [
+      "🌍 1. Key Ecological Definitions",
+      "⛓️ 2. Food Chains, Trophic Levels & The 10% Energy Rule",
+      "♻️ 3. The Global Carbon Cycle"
+    ]
+  },
+  {
+    "code": "b19",
+    "lid": "298327a8-455a-44d5-9a4c-164e2653c456",
+    "title": "B19: Human influences on ecosystems",
+    "margin": "40px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🌾 1. Food Supply & Modern Agriculture",
+      "🚜 2. Habitat Destruction & Deforestation",
+      "☠️ 3. Pollution & Eutrophication",
+      "🛡️ 4. Conservation of Biodiversity"
+    ]
+  },
+  {
+    "code": "c1",
+    "lid": "3fc0ef74-3661-4f23-a8a8-9c33d11051f5",
+    "title": "C1: States of matter",
+    "margin": "30px",
+    "h2_count": 5,
+    "h2_titles": [
+      "🎬 C1: STATES OF MATTER - FLASH QUIZ",
+      "1. The Three States of Matter & Particle Structure",
+      "2. Changes of State & Heating Curves",
+      "3. Effects of Temperature & Pressure on Gas Volume",
+      "4. Diffusion & Effect of Relative Molecular Mass"
+    ]
+  },
+  {
+    "code": "c2",
+    "lid": "ee4f94c2-382b-4dbb-aaf8-981e7b0d7223",
+    "title": "C2: Atoms elements and compounds",
+    "margin": "30px",
+    "h2_count": 5,
+    "h2_titles": [
+      "C2: ATOMS, ELEMENTS & COMPOUNDS",
+      "🌐 IGCSE INTERACTIVE PERIODIC TABLE",
+      "⚛️ 1. ATOMIC STRUCTURE & ISOTOPES",
+      "🧪 2. ELEMENTS, COMPOUNDS & MIXTURES",
+      "💎 3. LATTICES, METALS & MACROMOLECULES"
+    ]
+  },
+  {
+    "code": "c3",
+    "lid": "f0988036-6fd0-4768-993d-a5ea5fe4eb0b",
+    "title": "C3: Stoichiometry",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C3: STOICHIOMETRY - FLASH QUIZ",
+      "⚖️ 1. FORMULAS & EQUATIONS (Công thức & Phương trình)",
+      "🧮 2. THE MOLE CONCEPT",
+      "🧪 3. EMPIRICAL FORMULA & YIELD"
+    ]
+  },
+  {
+    "code": "c4",
+    "lid": "4732621b-f827-4b12-934b-3b53e694cc2a",
+    "title": "C4: Electrochemistry",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C4: ELECTROCHEMISTRY - FLASH QUIZ",
+      "⚡ 1. THE BASICS OF ELECTROLYSIS",
+      "⚖️ 2. MOLTEN VS AQUEOUS ELECTROLYSIS",
+      "🔋 3. ELECTROPLATING & FUEL CELLS"
+    ]
+  },
+  {
+    "code": "c5",
+    "lid": "71545c83-4d45-4201-978c-aa58d01b57e5",
+    "title": "C5: Chemical energetics",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C5: CHEMICAL ENERGETICS - FLASH QUIZ",
+      "🔥 1. EXOTHERMIC & ENDOTHERMIC REACTIONS",
+      "📈 2. REACTION PROFILES",
+      "🔗 3. BOND ENERGIES"
+    ]
+  },
+  {
+    "code": "c6",
+    "lid": "7f2b44b2-ba70-4cfc-85b3-3a0709058b46",
+    "title": "C6: Chemical reactions",
+    "margin": "30px",
+    "h2_count": 5,
+    "h2_titles": [
+      "🎬 C6: CHEMICAL REACTIONS - FLASH QUIZ",
+      "🧪 1. PHYSICAL & CHEMICAL CHANGES",
+      "⏱️ 2. RATE OF REACTION (Tốc độ phản ứng)",
+      "⚖️ 3. REVERSIBLE REACTIONS & EQUILIBRIUM",
+      "🔄 3. REDOX REACTIONS"
+    ]
+  },
+  {
+    "code": "c7",
+    "lid": "2c83104c-9413-4ee1-bdf3-2c0da8fd96a6",
+    "title": "C7: Acids bases and salts",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C7: ACIDS, BASES & SALTS - FLASH QUIZ",
+      "🧪 1. ACIDS, BASES & ALKALIS (Axit, Bazơ & Kiềm)",
+      "💥 2. TYPICAL REACTIONS OF ACIDS (The 3 Characteristic Reactions of Acids)",
+      "🧂 3. PREPARATION OF SALTS"
+    ]
+  },
+  {
+    "code": "c8",
+    "lid": "856f20da-80e8-4c6a-9cd1-dbe8a1f40828",
+    "title": "C8: Periodic table",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C8: THE PERIODIC TABLE - FLASH QUIZ",
+      "🗺️ 1. ARRANGEMENT OF ELEMENTS",
+      "⚔️ 2. GROUP I VS GROUP VII",
+      "🏗️ 3. TRANSITION ELEMENTS & NOBLE GASES"
+    ]
+  },
+  {
+    "code": "c9",
+    "lid": "d34bbfa2-7449-4192-b471-3a6a8ba49257",
+    "title": "C9: Metals",
+    "margin": "30px",
+    "h2_count": 5,
+    "h2_titles": [
+      "🎬 C9: METALS - FLASH QUIZ",
+      "🛡️ 1. PROPERTIES OF METALS & ALLOYS",
+      "🔥 2. THE REACTIVITY SERIES",
+      "🏭 3. EXTRACTION OF METALS",
+      "🛠️ 4. USES OF METALS"
+    ]
+  },
+  {
+    "code": "c10",
+    "lid": "9d61f516-a24c-4485-8490-8485604130ec",
+    "title": "C10: Chemistry of the environment",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C10: ENVIRONMENT - FLASH QUIZ",
+      "💧 1. WATER",
+      "🌬️ 2. AIR & POLLUTION",
+      "🛡️ 3. RUSTING & FERTILIZERS"
+    ]
+  },
+  {
+    "code": "c11",
+    "lid": "69b82c81-05a0-40a8-816f-c21a882cef54",
+    "title": "C11: Organic chemistry",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C11: ORGANIC CHEMISTRY - FLASH QUIZ",
+      "🧪 1. HOMOLOGOUS SERIES",
+      "⛽ 2. HYDROCARBONS",
+      "🔗 3. POLYMERS"
+    ]
+  },
+  {
+    "code": "c12",
+    "lid": "d51b5192-ff57-48a0-bcd9-d4f8a7d10757",
+    "title": "C12: Experimental techniques and Chemical analysis",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "🎬 C12: EXPERIMENTAL TECHNIQUES - FLASH QUIZ",
+      "⚗️ 1. SEPARATION TECHNIQUES",
+      "💨 2. IDENTIFICATION OF GASES",
+      "🧪 3. IDENTIFICATION OF IONS"
+    ]
+  },
+  {
+    "code": "p1",
+    "lid": "690ff013-5d01-4c1e-8546-25b3cd056e64",
+    "title": "P1: Motion, forces & energy",
+    "margin": "30px",
+    "h2_count": 8,
+    "h2_titles": [
+      "📏 1. Physical Quantities & Measurement Techniques (P1.1)",
+      "📈 2. Motion & Kinematics Graphs (P1.2)",
+      "⚖️ 3. Mass, Weight & Density (P1.3 & P1.4)",
+      "⚙️ 4. Forces, Hooke's Law, Moments & Pressure (P1.5 & P1.7)",
+      "🔋 5. Energy Stores & Transfer Pathways (P1.6)",
+      "🎢 6. Kinetic & Gravitational Potential Energy",
+      "🧮 7. Work, Power & Efficiency (P1.6)",
+      "🌍 8. Energy Resources Comparison"
+    ]
+  },
+  {
+    "code": "p2",
+    "lid": "dc33ed9d-e328-4f60-8c47-f0dbd103e8c1",
+    "title": "P2: Thermal physics",
+    "margin": "30px",
+    "h2_count": 3,
+    "h2_titles": [
+      "🧊 1. Kinetic Particle Model of Matter (P2.1)",
+      "🌡️ 2. Thermal Expansion & Evaporation (P2.2)",
+      "🔥 3. Thermal Energy Transfers (P2.3)"
+    ]
+  },
+  {
+    "code": "p3",
+    "lid": "eb3ed0a0-bd5e-4c0f-961f-1b9af74bf4a8",
+    "title": "P3: Waves",
+    "margin": "30px",
+    "h2_count": 5,
+    "h2_titles": [
+      "🌊 1. General Wave Properties (P3.1)",
+      "🧮 2. The Wave Equation & Wave Behaviors",
+      "👁️ 3. Light, Lenses & Dispersion",
+      "📡 4. The Electromagnetic (EM) Spectrum",
+      "🔊 5. Sound Waves & Echoes (P3.4)"
+    ]
+  },
+  {
+    "code": "p4",
+    "lid": "2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69",
+    "title": "P4: Electricity and magnetism",
+    "margin": "30px",
+    "h2_count": 3,
+    "h2_titles": [
+      "⚡ 1. Electrical Quantities & Ohm's Law (P4.1)",
+      "💡 2. Electric Circuits & Potential Dividers (P4.2)",
+      "⚡ Electromagnetic Effects: Induction & Motors (P4.3)"
+    ]
+  },
+  {
+    "code": "p5",
+    "lid": "a6077865-db01-4785-9ec7-e8b0f531fcdc",
+    "title": "P5: Nuclear physics",
+    "margin": "30px",
+    "h2_count": 4,
+    "h2_titles": [
+      "⚛️ 1. The Nuclear Model of the Atom & Isotopes (P5.1)",
+      "☢️ 2. Radioactivity & Penetration Properties (P5.2)",
+      "⏱️ 3. Radioactive Decay Equations & Half-Life",
+      "🛡️ 4. Practical Uses & Safety Precautions"
+    ]
+  },
+  {
+    "code": "p6",
+    "lid": "d11f8920-fe86-4cd4-ad9a-e8b669bc687b",
+    "title": "P6: Space physics",
+    "margin": "30px",
+    "h2_count": 3,
+    "h2_titles": [
+      "🌍 1. The Earth & The Solar System (P6.1)",
+      "🚀 2. Orbital Speed & Gravitational Force (P6.1)",
+      "✨ 3. Stars & The Universe (P6.2)"
+    ]
+  }
+]

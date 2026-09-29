@@ -21,7 +21,7 @@ sb = create_client(URL, KEY)
 EN_VOICE = 'en-GB-RyanNeural'       # Authentic British English Male
 VI_VOICE = 'vi-VN-HoaiMyNeural'     # Authentic Hanoi Northern Vietnamese Female
 
-async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 8):
+async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 25):
     for attempt in range(1, max_retries + 1):
         try:
             if os.path.exists(out_file):
@@ -29,9 +29,18 @@ async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 8):
                     os.remove(out_file)
                 except Exception:
                     pass
-            communicate = edge_tts.Communicate(text, voice)
+            
+            # Alternate voices on repeated attempts to evade single-voice throttling
+            current_voice = voice
+            if attempt >= 5:
+                if voice == 'vi-VN-HoaiMyNeural':
+                    current_voice = 'vi-VN-NamMinhNeural' if (attempt % 2 == 1) else 'vi-VN-HoaiMyNeural'
+                elif voice == 'en-GB-RyanNeural':
+                    current_voice = 'en-GB-ThomasNeural' if (attempt % 2 == 1) else 'en-GB-RyanNeural'
+
+            communicate = edge_tts.Communicate(text, current_voice)
             await asyncio.wait_for(communicate.save(out_file), timeout=45.0)
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(0.8)
             if os.path.exists(out_file) and os.path.getsize(out_file) > 500:
                 return
             raise Exception(f"TTS output file {out_file} missing or too small ({os.path.getsize(out_file) if os.path.exists(out_file) else 0} B)")
@@ -39,8 +48,15 @@ async def _gen_tts(text: str, voice: str, out_file: str, max_retries: int = 8):
             if attempt == max_retries:
                 print(f"  [ERROR] Failed TTS after {max_retries} attempts: {e}")
                 raise e
-            wait = attempt * 2.5
-            print(f"  [RETRY] TTS attempt {attempt} failed ({e}), retrying in {wait}s...")
+            if attempt <= 4:
+                wait = attempt * 2.0
+            elif attempt <= 8:
+                wait = 15.0
+            elif attempt <= 14:
+                wait = 30.0
+            else:
+                wait = 45.0
+            print(f"  [RETRY] TTS attempt {attempt} failed with {current_voice} ({e}), retrying in {wait}s...")
             await asyncio.sleep(wait)
 
 
@@ -93,6 +109,7 @@ async def generate_segment_audio(seg, output_dir, temp_dir):
                 pass
             
     dur = get_audio_duration(final_mp3)
+    await asyncio.sleep(1.0)
     return dur
 
 async def process_lecture_audio(lecture_code, lecture_id, course_title, lecture_title, segments, major_sections, subject='geography'):
