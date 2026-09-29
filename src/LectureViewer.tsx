@@ -47,6 +47,58 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   'fb30c141-db3a-49e8-aa55-028c913640d4': '/audio/lectures/geography/10_6/manifest.json', // 10.6
 };
 
+const LECTURE_VIDEO_MAP: Record<string, string> = {
+  // Topic 1: Rivers
+  '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': 'aIJplswoSok', // 1.1 The main hydrological characteristics and processes that operate in rivers and drainage basins
+  'bade96ee-497d-4d75-8d82-c691133eb9d6': '3oBcd0vYKSk', // 1.2 The main landforms associated with these processes
+  'fea9a6ec-9ff0-456a-9185-4076073b04c1': 'uNsZOo73pLE', // 1.3 Rivers present opportunities and hazards for people
+  // Topic 2: Coasts
+  'd38db7a8-e92e-450c-a034-b9d46dc10a7f': 'UW2yfjZ7zrM', // 2.1 The physical processes that shape the coast
+  'b0ca05f2-dab3-4223-9c25-c92d73df56c1': 'Q4R59xr8VTc', // 2.2 The main landforms associated with these processes
+  '446dabf6-7c9d-4509-a3f9-78161a684e3e': 'kZJCN0h9DLE', // 2.3 Coasts present opportunities and hazards for people
+  // Topic 3: Ecosystems
+  '1b4caf37-15e4-475a-939c-e6490b366fd0': '_QCvBSfF96M', // 3.1 The characteristics of the Antarctic ecosystem
+  '93a28707-1b95-4ed2-a3ff-4789143118cd': 'yphbpRu_d2I', // 3.2 The threats to the Antarctic ecosystem and how they can be managed
+  '7d543b73-837d-4129-afc6-7196df47b6f6': 'nZAcU_HrUAg', // 3.3 The characteristics of the tropical rainforest ecosystem
+  'c5ce49f0-7b81-4843-a477-3ee46e41928e': 'liAZ7TmiQrA', // 3.4 The threats to the tropical rainforest ecosystem and how they can be managed
+  // Topic 4: Tectonics
+  'e5fde4e7-a1e6-4b3c-aeb2-756155f06ff5': 'VLYGrJ36_Yw', // 4.1 The structure of the Earth and the distribution of earthquakes and volcanoes
+  'f45dd9b1-ef60-4521-a067-04bd896fc7e2': 'fRGhmfyTaK8', // 4.2 The processes and features associated with earthquakes and volcanoes
+  '1f909afc-865f-46d0-bb20-2e6d474fa87b': 'isAwD7t1uiA', // 4.3 The impact of tectonic hazards
+  'c81dc416-7aa4-4e26-a2af-341d6c03fa52': 'vXKcocIppaE', // 4.4 Managing the impacts of tectonic hazards
+  // Topic 5: Weather & Climate
+  '7c30919a-5d22-425a-a167-21e5de07d203': 'MUsve5SkUs4', // 5.1 The natural and human causes of climate change
+  '23eee2fb-427c-4843-8d2d-ec296188730d': 'DZT3vKnDXF8', // 5.2 The impacts of climate change at a range of geographic scales
+  '36e35bdb-986b-4cd5-b8df-6bb0f93282e5': 'xlpkGrJOBgk', // 5.3 The responses to climate change
+  // Topic 6: Population and Migration
+  'c6fccfc5-088b-4145-9a23-9cbb2df1cce9': 'lrvbeVH8-X4', // 6.1 Populations grow and decline
+  '5390b0d7-995c-4c18-a092-b5cdd4eda49a': 'pojs-B-sBeY', // 6.2 Population structures change over time
+  '33c91ae9-b13f-49d7-b29f-0c3b794d192d': 'NX-YJ36nLNs', // 6.3 The causes and impacts of international migration
+  // Topic 7: Settlement & Urbanisation
+  '556bc6b6-1555-49a9-a043-35f059b44559': 'VaVB_D-uQVA', // 7.1 Where people live
+  '30bae547-a9b0-4c09-8850-ce22b96cfea2': '0JSmcb4Gq7c', // 7.2 The opportunities and challenges of urbanisation
+  '0b658b3f-bf70-4991-95d5-d65616b7ec1a': '7ma8mQ1JMzo', // 7.3 The management of urban growth
+  // Topic 8: Economic Development
+  '5ff5f837-df39-4488-bbd2-5138f4faed1e': 'npHWl1MV2jk', // 8.1 Measuring development
+  '9cf90212-43f4-4b28-8014-fd6c130db8ef': '95JKAkAj3Mg', // 8.2 The world is developing unevenly
+  '7da208d1-559d-4e60-a6a3-ebfb8c2d232f': 'os1p-r_O7Fc', // 8.3 Achieving sustainable development
+  // Topic 9: Employment, Globalisation & Tourism
+  '6c14f92b-774a-45d1-a68d-2e9fe5e0b85d': '13WDqq7MSLQ', // 9.1 Changing employment structures
+  '5b7da7e1-3da1-4bf4-9700-6e11d7a7ef6b': 'nbSj6yqgLik', // 9.2 The impact of globalisation and the role of transnational corporations
+  '53517557-9eb4-450d-a8dd-18b73c71938a': 'bF2xyprA4x8', // 9.3 Tourism is a growing industry
+  // Topic 10: Food & Energy Resources
+  '362104be-aedc-4cbe-87b2-29034e93cc9c': '9ElDT579thw', // 10.1 How our food is produced
+  '76dcafbf-e6b8-47f1-8618-be1b14e975ed': '3GK_Y32i_M8', // 10.2 The global patterns of food supply and demand
+  '96d7f427-3b6d-43e3-84dc-f8f052f20033': 'yMTIsH6BJE0', // 10.3 The challenges of food supply
+  '199a26cd-1226-4ff7-b063-f7df7fa7b5ba': 'PFnyXKbH4rc', // 10.4 How our energy is produced
+};
+
+const getYouTubeVideoId = (url: string): string | null => {
+  if (!url) return null;
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+  return match ? match[1] : null;
+};
+
 // =========================================================================================
 // THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE & VISION AI
 // =========================================================================================
@@ -2364,6 +2416,7 @@ export default function LectureViewer({
   const [isLectureThemeModalOpen, setIsLectureThemeModalOpen] = useState(false);
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
 
   const handleSelectLectureTheme = (theme: BoardTheme) => {
     setLectureTheme(theme);
@@ -2381,6 +2434,19 @@ export default function LectureViewer({
   const activeLecture = useMemo(() => {
       return lectures.find(l => l.id === activeLectureId);
   }, [lectures, activeLectureId]);
+
+  const activeLectureVideoId = useMemo(() => {
+    if (activeLectureId && LECTURE_VIDEO_MAP[activeLectureId]) {
+      return LECTURE_VIDEO_MAP[activeLectureId];
+    }
+    if (activeLecture?.video_id) {
+      return activeLecture.video_id;
+    }
+    if (activeLecture?.video_url) {
+      return getYouTubeVideoId(activeLecture.video_url);
+    }
+    return null;
+  }, [activeLectureId, activeLecture]);
 
   const currentSafeTasks = useMemo(() => {
       const raw = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
@@ -4110,15 +4176,26 @@ export default function LectureViewer({
                                     <span className={`leading-snug ${isActive ? 'font-semibold' : 'font-medium'}`}>
                                         {lec.title}
                                     </span>
-                                    {totalTasks > 0 && (
-                                       <span 
-                                         onClick={(e) => { e.stopPropagation(); if (isActive) { setIsTaskMenuOpen(!isTaskMenuOpen); } else { handleSelectLecture(lec.id); setTimeout(() => setIsTaskMenuOpen(true), 300); } }}
-                                         className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-medium cursor-pointer transition-all ${isLecCompleted ? 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100' : isActive ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] hover:bg-[#0ea5e9]/20' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
-                                         title="Bấm để xem nhiệm vụ bài học"
-                                       >
-                                           🎯 {completedCount}/{totalTasks} bài tập
-                                       </span>
-                                    )}
+                                    <div className="flex items-center gap-1.5 flex-wrap">
+                                      {(LECTURE_VIDEO_MAP[lec.id] || (lec as any).video_url) && (
+                                        <span 
+                                          className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-red-50 text-red-600 border border-red-100 flex items-center gap-1 shrink-0" 
+                                          title="Có video bài giảng"
+                                        >
+                                          <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                          Video
+                                        </span>
+                                      )}
+                                      {totalTasks > 0 && (
+                                         <span 
+                                           onClick={(e) => { e.stopPropagation(); if (isActive) { setIsTaskMenuOpen(!isTaskMenuOpen); } else { handleSelectLecture(lec.id); setTimeout(() => setIsTaskMenuOpen(true), 300); } }}
+                                           className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-medium cursor-pointer transition-all ${isLecCompleted ? 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100' : isActive ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] hover:bg-[#0ea5e9]/20' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
+                                           title="Bấm để xem nhiệm vụ bài học"
+                                         >
+                                             🎯 {completedCount}/{totalTasks} bài tập
+                                         </span>
+                                      )}
+                                    </div>
                                  </div>
                                </button>
                              )
@@ -4180,6 +4257,41 @@ export default function LectureViewer({
                        <h2 className="text-[26px] md:text-[36px] text-slate-900 font-extrabold mb-8 md:mb-12 pb-6 border-b border-slate-100 leading-tight tracking-tight">
                            {activeLecture?.title}
                        </h2>
+                       {activeLectureVideoId && currentPage === 1 && (
+                         <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
+                           <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-slate-700/60">
+                             <div className="flex items-center gap-2.5 min-w-0">
+                               <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white text-xs font-bold shadow-sm tracking-wide shrink-0">
+                                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                 </svg>
+                                 Video Bài Giảng
+                               </span>
+                               <span className="text-xs text-slate-300 font-medium hidden sm:inline truncate">
+                                 {activeLecture?.title}
+                               </span>
+                             </div>
+                             <button 
+                               onClick={() => setIsVideoCollapsed(!isVideoCollapsed)}
+                               className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 transition-colors border border-slate-700/50 shrink-0 ml-2"
+                             >
+                               <span>{isVideoCollapsed ? 'Mở video' : 'Thu gọn'}</span>
+                               <span className="text-[10px]">{isVideoCollapsed ? '▼' : '▲'}</span>
+                             </button>
+                           </div>
+                           {!isVideoCollapsed && (
+                             <div className="w-full aspect-video bg-black relative">
+                               <iframe
+                                 src={`https://www.youtube.com/embed/${activeLectureVideoId}?rel=0`}
+                                 title={activeLecture?.title || "Video bài giảng"}
+                                 className="w-full h-full border-0"
+                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                 allowFullScreen
+                               />
+                             </div>
+                           )}
+                         </div>
+                       )}
                        {activeLectureId && currentPage === 1 && LECTURE_MANIFEST_MAP[activeLectureId] && (
                          <InteractiveLecturePlayer 
                            key={activeLectureId}
