@@ -151,7 +151,10 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   'd11f8920-fe86-4cd4-ad9a-e8b669bc687b': '/audio/lectures/science/p6/manifest.json', // P6: Space physics
 };
 
-const LECTURE_VIDEO_MAP: Record<string, string> = {
+type LectureVideoItem = { title: string; videoId: string };
+type LectureVideoConfig = string | LectureVideoItem[];
+
+const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   // Topic 1: Rivers
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': 'aIJplswoSok', // 1.1 The main hydrological characteristics and processes that operate in rivers and drainage basins
   'bade96ee-497d-4d75-8d82-c691133eb9d6': '3oBcd0vYKSk', // 1.2 The main landforms associated with these processes
@@ -197,6 +200,47 @@ const LECTURE_VIDEO_MAP: Record<string, string> = {
   '199a26cd-1226-4ff7-b063-f7df7fa7b5ba': 'PFnyXKbH4rc', // 10.4 How our energy is produced
   'a3a8d904-d277-4eef-b8ff-52a913ebc5f6': 'R9O7708GCbw', // 10.5 The global patterns of energy supply and demand
   'fb30c141-db3a-49e8-aa55-028c913640d4': 'YLWXoCv1UnY', // 10.6 The impacts of energy production
+
+  // ==========================================
+  // Cambridge IGCSE Business Studies 0450
+  // ==========================================
+  // Topic 1: Understanding business activity
+  '6049f916-3af9-428a-bcd0-ce0574f1d7f7': 'BoYOa7pn6tY', // 1.1 Business activity
+  '7027f2e2-0ac5-4ee6-8913-7d93c7857733': 'oqVG5AaiIyM', // 1.2 Classification of businesses
+  'a8ebc541-78ef-4202-96ad-161ed647a1b1': 'fj4ji4q_6AM', // 1.3 Enterprise, business growth and size
+  '71458f5f-ba54-4ac7-a4c2-8bc68f8f15a0': 'WXgH5p34-Hw', // 1.4 Types of business organisation
+  'a6bf8fbd-9c3d-45a3-8cd7-d63a3e79e7b3': '-hE0o1I92Uw', // 1.5 Business objectives and stakeholder objectives
+  // Topic 2: People in business
+  'cd1763a9-f030-4be1-b65b-c6dc6dde91c9': 'RiKN7hyGQNo', // 2.1 Motivating employees
+  'fe4967aa-7d4c-480c-af71-e0d867459044': '4NaB99RTJDY', // 2.2 Organisation and people management
+  'c2d359f6-1921-459e-a295-def7e891c352': '36YjJR4vC98', // 2.3 Recruitment, selection and training of employees
+  '47166a31-2a55-40ea-a86c-81569cfafa32': 'KMkqwS5GEmY', // 2.4 Internal and external communication
+  // Topic 3: Marketing
+  '6cbe4a84-26ed-4a1d-933b-5843e9b9a501': '4wcVhLjnGi0', // 3.1 Marketing, competition and the customer
+  '356dede8-277a-441a-ad73-ef9384973eb7': 'XHzq4yUEI7w', // 3.2 Market research
+  '25fe41d9-780d-41a6-876d-fff3e0d854c5': [
+    { title: '1. Product', videoId: 'ALwDbKo1LZw' },
+    { title: '2. Price', videoId: 'OPpGREn5pIg' },
+    { title: '3. Place', videoId: 'aeZ4oBioUMY' },
+    { title: '4. Promotion', videoId: 'Zbn6fqHmNT0' },
+    { title: '5. Technology', videoId: 'PXbnxsks8OY' },
+  ], // 3.3 The marketing mix
+  'c0d60bf9-ad33-456c-807e-9e29318113b8': '0I-wVlFKHvY', // 3.4 The marketing strategy
+  // Topic 4: Operations management
+  '1e280547-ce64-44c2-8fcf-997f7d61cacf': 'WcdaAxxAUr4', // 4.1 Production of goods and services
+  '66589390-767c-4aab-957b-a970fa1a976e': 'tVabJQ_XpQE', // 4.2 Costs, scale of production and break even analysis
+  '8f0fd09a-d6e6-438f-a2ab-ddc1447e0b00': '7qNmP5MgOPM', // 4.3 Quality management
+  '95eb54ae-44d4-42f6-9d1d-c5c729a69954': 'rypWwJ8tt9M', // 4.4 Location decisions
+  // Topic 5: Financial information and decisions
+  '7b510a8f-757c-4856-9c68-65f98bf96836': 'W5MT_j-pxxg', // 5.1 Business Finance Needs and Sources
+  'dc0411df-d831-468a-9a7d-16fb4009290d': 'mvtMlk16v5M', // 5.2 Cash flow forecasting and working capital
+  '71f25939-98d4-4fa3-8227-be8434f64581': 'V8tYSSQhNIQ', // 5.3 Income statements
+  '5421db93-9d7b-4241-b362-171974092a30': '92ZVr6rC1u8', // 5.4 Statement of financial position
+  'd7564fe9-d338-4abc-acf3-affd8cca23fa': 'Kbhkue0jM8M', // 5.5 Analysis of accounts
+  // Topic 6: External influences on business activity
+  '0e8fbc94-5976-4c7f-8588-471ea93926f5': 'eH8ZU0drvOQ', // 6.1 Economic issues
+  'a1d571ff-fa12-46c2-a49d-1df88df13214': 'cjxhZmsOBAA', // 6.2 Environmental and ethical issues
+  '1bc6f5c1-e71b-4d0d-8153-d2f74180a845': 'QCvbpmvbYLQ', // 6.3 Business and globalisation
 };
 
 const getYouTubeVideoId = (url: string): string | null => {
@@ -2523,6 +2567,11 @@ export default function LectureViewer({
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
+  const [selectedVideoSubIndex, setSelectedVideoSubIndex] = useState<number>(0);
+
+  useEffect(() => {
+    setSelectedVideoSubIndex(0);
+  }, [activeLectureId]);
 
   const handleSelectLectureTheme = (theme: BoardTheme) => {
     setLectureTheme(theme);
@@ -2541,7 +2590,7 @@ export default function LectureViewer({
       return lectures.find(l => l.id === activeLectureId);
   }, [lectures, activeLectureId]);
 
-  const activeLectureVideoId = useMemo(() => {
+  const lectureVideoConfig = useMemo(() => {
     if (activeLectureId && LECTURE_VIDEO_MAP[activeLectureId]) {
       return LECTURE_VIDEO_MAP[activeLectureId];
     }
@@ -2553,6 +2602,26 @@ export default function LectureViewer({
     }
     return null;
   }, [activeLectureId, activeLecture]);
+
+  const currentVideoList = useMemo((): LectureVideoItem[] => {
+    if (!lectureVideoConfig) return [];
+    if (Array.isArray(lectureVideoConfig)) return lectureVideoConfig;
+    if (typeof lectureVideoConfig === 'string') {
+      return [{ title: activeLecture?.title || 'Video bài giảng', videoId: lectureVideoConfig }];
+    }
+    return [];
+  }, [lectureVideoConfig, activeLecture]);
+
+  const activeLectureVideoId = useMemo(() => {
+    if (currentVideoList.length === 0) return null;
+    const item = currentVideoList[selectedVideoSubIndex] || currentVideoList[0];
+    return item?.videoId || null;
+  }, [currentVideoList, selectedVideoSubIndex]);
+
+  const activeLectureVideoSubTitle = useMemo(() => {
+    if (currentVideoList.length <= 1) return activeLecture?.title;
+    return currentVideoList[selectedVideoSubIndex]?.title || activeLecture?.title;
+  }, [currentVideoList, selectedVideoSubIndex, activeLecture]);
 
   const currentSafeTasks = useMemo(() => {
       const raw = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
@@ -4289,7 +4358,7 @@ export default function LectureViewer({
                                           title="Có video bài giảng"
                                         >
                                           <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                                          Video
+                                          {Array.isArray(LECTURE_VIDEO_MAP[lec.id]) ? `Video (${(LECTURE_VIDEO_MAP[lec.id] as any[]).length})` : 'Video'}
                                         </span>
                                       )}
                                       {totalTasks > 0 && (
@@ -4374,7 +4443,7 @@ export default function LectureViewer({
                                  Video Bài Giảng
                                </span>
                                <span className="text-xs text-slate-300 font-medium hidden sm:inline truncate">
-                                 {activeLecture?.title}
+                                 {activeLectureVideoSubTitle}
                                </span>
                              </div>
                              <button 
@@ -4385,11 +4454,30 @@ export default function LectureViewer({
                                <span className="text-[10px]">{isVideoCollapsed ? '▼' : '▲'}</span>
                              </button>
                            </div>
+                           {currentVideoList.length > 1 && (
+                             <div className="flex items-center gap-2 px-4 py-2 bg-slate-800/95 border-b border-slate-700/60 overflow-x-auto custom-scrollbar">
+                               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 mr-1">Các phần:</span>
+                               {currentVideoList.map((item, idx) => (
+                                 <button
+                                   key={idx}
+                                   onClick={() => setSelectedVideoSubIndex(idx)}
+                                   className={`px-3 py-1 rounded-lg text-xs font-bold transition-all shrink-0 flex items-center gap-1.5 ${
+                                     selectedVideoSubIndex === idx
+                                       ? 'bg-red-600 text-white shadow-sm'
+                                       : 'bg-slate-700/60 text-slate-300 hover:bg-slate-700 hover:text-white'
+                                   }`}
+                                 >
+                                   <span>{item.title}</span>
+                                 </button>
+                               ))}
+                             </div>
+                           )}
                            {!isVideoCollapsed && (
                              <div className="w-full aspect-video bg-black relative">
                                <iframe
+                                 key={activeLectureVideoId}
                                  src={`https://www.youtube.com/embed/${activeLectureVideoId}?rel=0`}
-                                 title={activeLecture?.title || "Video bài giảng"}
+                                 title={activeLectureVideoSubTitle || "Video bài giảng"}
                                  className="w-full h-full border-0"
                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                  allowFullScreen
