@@ -195,6 +195,8 @@ const LECTURE_VIDEO_MAP: Record<string, string> = {
   '76dcafbf-e6b8-47f1-8618-be1b14e975ed': '3GK_Y32i_M8', // 10.2 The global patterns of food supply and demand
   '96d7f427-3b6d-43e3-84dc-f8f052f20033': 'yMTIsH6BJE0', // 10.3 The challenges of food supply
   '199a26cd-1226-4ff7-b063-f7df7fa7b5ba': 'PFnyXKbH4rc', // 10.4 How our energy is produced
+  'a3a8d904-d277-4eef-b8ff-52a913ebc5f6': 'R9O7708GCbw', // 10.5 The global patterns of energy supply and demand
+  'fb30c141-db3a-49e8-aa55-028c913640d4': 'YLWXoCv1UnY', // 10.6 The impacts of energy production
 };
 
 const getYouTubeVideoId = (url: string): string | null => {
