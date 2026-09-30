@@ -5,3 +5,4 @@ backups/
 .vercel
 *.pdf
 **/*.pdf
+!public/Business Studies/**/*.pdf
