@@ -2,36 +2,40 @@
   "lectureId": "95eb54ae-44d4-42f6-9d1d-c5c729a69954",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "4.4. Location decisions",
-  "totalDuration": 219.79,
-  "majorSections": [
-    {
-      "id": "sec_location_decisions",
-      "title": "1. Tầm quan trọng Địa điểm"
+  "totalDuration": 341.58,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_factors_location",
-      "title": "2. Tiêu chí chọn Địa điểm theo Ngành"
+    "sec_location_decisions": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_international_location",
-      "title": "3. Địa điểm Quốc tế (Offshoring)"
+    "sec_factors_location": {
+      "start": 2,
+      "end": 5
     },
-    {
-      "id": "sec_legal_location",
-      "title": "4. Pháp lý & Trợ cấp Vùng của Chính phủ"
+    "sec_international_location": {
+      "start": 6,
+      "end": 7
     },
-    {
-      "id": "sec_recommend_location",
-      "title": "5. Chiến lược làm bài thi Cambridge"
+    "sec_legal_location": {
+      "start": 8,
+      "end": 9
+    },
+    "sec_recommend_location": {
+      "start": 10,
+      "end": 10
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 4.4: Quyết định Địa điểm kinh doanh",
+      "title": "Giới thiệu Bài 4.4: Quyết định Địa điểm Kinh doanh",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 4.4: Location Decisions. In this concluding chapter of Topic 4, we evaluate the strategic determinants of choosing business premises for manufacturing, service, and retail firms, analyze overseas offshoring factors, and assess government regional incentives.",
-      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 4.4: Quyết định Địa điểm kinh doanh. Trong bài kết thúc Chủ đề bốn, chúng ta sẽ phân tích các yếu tố chiến lược khi lựa chọn địa điểm đặt cơ sở sản xuất, dịch vụ và bán lẻ, các lý do dịch chuyển nhà máy ra nước ngoài và chính sách hỗ trợ phát triển vùng của chính phủ.",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 4.4: Location Decisions. In this lesson, we examine why location choices are made, analyze key determinants across manufacturing, service, and retail sectors, evaluate international relocation factors, and assess government zoning controls.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 4.4: Quyết định Địa điểm Kinh doanh. Trong bài học này, chúng ta sẽ tìm hiểu lý do đưa ra quyết định chọn địa điểm, phân tích các yếu tố chi phối trong ngành sản xuất, dịch vụ và bán lẻ, đánh giá động lực mở rộng địa điểm ra quốc tế cùng các biện pháp kiểm soát quy hoạch của chính phủ.",
       "duration": 40.17,
       "startTime": 0.0,
       "endTime": 40.17,
@@ -39,10 +43,10 @@
     },
     {
       "id": "sec_location_decisions",
-      "title": "1. Tầm quan trọng Chiến lược của Địa điểm",
+      "title": "1. Tầm quan trọng của Quyết định Địa điểm",
       "selector": "#sec-location-decisions",
-      "en": "Section 1 explains why choosing a location is an irreversible, high-stakes decision. Site selection dictates fixed premises rent, proximity to customers, logistics shipping costs, and access to skilled labour pools.",
-      "vi": "Mục một giải thích lý do lựa chọn địa điểm là quyết định chiến lược dài hạn khó có thể đảo ngược. Địa điểm quyết định mức chi phí thuê mặt bằng, cự ly tiếp cận khách hàng, chi phí vận tải giao nhận hàng hóa và khả năng tuyển dụng lao động có tay nghề.",
+      "en": "Section 1 addresses location decisions. Businesses choose new operating locations at startup, during market expansion, or when current premises prove inefficient. Location directly influences fixed rental expenses, logistics transport costs, skilled worker recruitment, and market reach.",
+      "vi": "Mục một xem xét các quyết định về địa điểm. Doanh nghiệp cần lựa chọn địa điểm khi mới thành lập, khi mở rộng quy mô, hoặc khi địa điểm hiện tại hoạt động kém hiệu quả. Địa điểm chi phối trực tiếp chi phí thuê mặt bằng cố định, chi phí logistics vận chuyển, khả năng tuyển dụng nhân sự lành nghề và độ phủ thị trường.",
       "duration": 28.77,
       "startTime": 40.17,
       "endTime": 68.94,
@@ -50,57 +54,101 @@
     },
     {
       "id": "sec_factors_location",
-      "title": "2. Các Yếu tố ảnh hưởng đến Địa điểm",
+      "title": "2. Các Yếu tố Chi phối Lựa chọn Địa điểm",
       "selector": "#sec-factors-location",
-      "en": "Section 2 investigates site selection criteria across industries: Manufacturing plants locate near raw material deposits or transport hubs to minimize freight charges; Service firms locate near target corporate clients; and Retail stores locate in high-footfall shopping arcades with convenient parking.",
-      "vi": "Mục hai nghiên cứu các tiêu chí chọn vị trí theo từng ngành nghề: Nhà máy sản xuất ưu tiên đặt gần nguồn nguyên liệu thô hoặc đầu mối giao thông cảng biển để giảm cước vận chuyển; Doanh nghiệp dịch vụ đặt văn phòng gần khách hàng doanh nghiệp; còn Cửa hàng bán lẻ bắt buộc phải ở nơi có mật độ người qua lại đông đúc và bãi đỗ xe thuận tiện.",
+      "en": "Section 2 investigates the diverse factors influencing site selection, which differ radically depending on whether the business operates in heavy manufacturing, professional services, or high-street consumer retail.",
+      "vi": "Mục hai nghiên cứu các yếu tố chi phối việc chọn mặt bằng, vốn có sự khác biệt sâu sắc tùy thuộc vào việc doanh nghiệp hoạt động trong lĩnh vực sản xuất công nghiệp, dịch vụ chuyên nghiệp hay bán lẻ tiêu dùng.",
       "duration": 35.32,
       "startTime": 68.94,
       "endTime": 104.26,
       "audioUrl": "/audio/lectures/business/4_4/sec_factors_location.mp3"
     },
     {
-      "id": "card_location_sectors",
-      "title": "So sánh Địa điểm theo Loại hình Doanh nghiệp",
-      "selector": "#card-location-sectors",
-      "en": "Different business sectors prioritize different location variables: heavy industrial factories require expansive cheap land and heavy power grids, whereas boutique retail fashion brands prioritize affluent customer demographics and prestige street visibility.",
-      "vi": "Mỗi loại hình doanh nghiệp ưu tiên những yếu tố mặt bằng khác nhau: nhà máy công nghiệp nặng cần quỹ đất rộng giá rẻ và lưới điện công suất lớn, trong khi thương hiệu thời trang cao cấp lại chú trọng vào mức thu nhập của cư dân khu vực và vị trí mặt tiền đắc địa trên phố sầm uất.",
-      "duration": 29.06,
+      "id": "card_location_manufacturing",
+      "title": "🏭 Yếu tố Địa điểm cho Doanh nghiệp Sản xuất (Manufacturing)",
+      "selector": "#card-location-manufacturing",
+      "en": "Manufacturing location decisions prioritize access to heavy raw materials to reduce freight costs, reliable electric power grids, availability of specialized skilled labour, comprehensive transport links including highways and shipping ports, and affordable industrial land rents.",
+      "vi": "Quyết định địa điểm sản xuất ưu tiên tiếp cận các nguồn nguyên liệu thô cồng kềnh để giảm chi phí vận chuyển, hệ thống lưới điện đáng tin cậy, nguồn lao động lành nghề, mạng lưới giao thông đường bộ và cảng biển thuận tiện, cùng giá thuê đất công nghiệp hợp lý.",
+      "duration": 30.18,
       "startTime": 104.26,
-      "endTime": 133.32,
-      "audioUrl": "/audio/lectures/business/4_4/card_location_sectors.mp3"
+      "endTime": 134.44,
+      "audioUrl": "/audio/lectures/business/4_4/card_location_manufacturing.mp3"
+    },
+    {
+      "id": "card_location_services",
+      "title": "🛎️ Yếu tố Địa điểm cho Doanh nghiệp Dịch vụ (Service-Sector)",
+      "selector": "#card-location-services",
+      "en": "Service businesses with direct customer interaction—such as restaurants and retail clinics—require accessible, prestigious locations. Conversely, back-office IT and bank call centers locate in low-rent, low-wage suburban districts with robust internet connectivity.",
+      "vi": "Doanh nghiệp dịch vụ có tương tác trực tiếp với khách hàng – như nhà hàng và phòng khám – đòi hỏi địa điểm dễ tiếp cận, uy tín. Ngược lại, các trung tâm chăm sóc khách hàng và công nghệ thông tin có thể đặt tại các khu vực ngoại thành có chi phí thuê nhà và tiền lương rẻ hơn với hạ tầng mạng internet ổn định.",
+      "duration": 34.31,
+      "startTime": 134.44,
+      "endTime": 168.75,
+      "audioUrl": "/audio/lectures/business/4_4/card_location_services.mp3"
+    },
+    {
+      "id": "card_location_retailing",
+      "title": "🛍️ Yếu tố Địa điểm cho Cửa hàng Bán lẻ (Retailing)",
+      "selector": "#card-location-retailing",
+      "en": "Retailing locations demand massive pedestrian footfall in shopping malls or prime high streets, convenient customer parking amenities, proximity to complementary retailers, and secure delivery logistics access to avoid stock depletion.",
+      "vi": "Địa điểm bán lẻ đòi hỏi lưu lượng người đi bộ qua lại đông đúc trong các trung tâm mua sắm hoặc tuyến phố lớn, tiện ích đỗ xe thuận tiện cho khách, nằm gần các cửa hàng bổ trợ và lối tiếp cận bốc dỡ hàng an toàn để không bị gián đoạn nguồn hàng.",
+      "duration": 27.09,
+      "startTime": 168.75,
+      "endTime": 195.84,
+      "audioUrl": "/audio/lectures/business/4_4/card_location_retailing.mp3"
     },
     {
       "id": "sec_international_location",
-      "title": "3. Đặt Cơ sở Sản xuất tại Nước ngoài (Offshoring)",
+      "title": "3. Lý do Doanh nghiệp Mở rộng Địa điểm ra Nước ngoài",
       "selector": "#sec-international-location",
-      "en": "Section 3 analyzes multinational overseas relocation: seeking lower wage rates in emerging economies, bypassing import trade tariffs by manufacturing inside regional trade blocs, and securing access to rapidly growing foreign consumer markets.",
-      "vi": "Mục ba phân tích việc mở rộng địa điểm ra nước ngoài: tận dụng giá nhân công rẻ tại các nước đang phát triển, vượt qua hàng rào thuế quan nhập khẩu bằng cách sản xuất trực tiếp bên trong các khối thương mại tự do, và tiếp cận thị trường tiêu dùng mới đang tăng trưởng nhanh chóng.",
+      "en": "Section 3 examines international relocation and offshoring. Businesses set up overseas branches to tap fast-growing customer markets, exploit cheaper foreign wage rates, and secure local raw materials.",
+      "vi": "Mục ba xem xét việc dịch chuyển địa điểm ra nước ngoài. Doanh nghiệp thiết lập chi nhánh quốc tế để khai thác các thị trường tiêu dùng tăng trưởng nhanh, tận dụng mức tiền lương rẻ hơn và tiếp cận nguồn nguyên liệu phong phú tại chỗ.",
       "duration": 29.85,
-      "startTime": 133.32,
-      "endTime": 163.17,
+      "startTime": 195.84,
+      "endTime": 225.69,
       "audioUrl": "/audio/lectures/business/4_4/sec_international_location.mp3"
     },
     {
+      "id": "card_international_factors",
+      "title": "🌍 Động lực Di dời Quốc tế: Thị trường Mới, Chi phí & Hàng rào Thuế quan",
+      "selector": "#card-international-factors",
+      "en": "Businesses expand overseas to access vast new customer demographics when domestic markets saturate, to capitalize on lower regional wage rates, and to bypass import tariffs and quotas by establishing physical operations inside protected trading blocs.",
+      "vi": "Doanh nghiệp mở rộng ra nước ngoài nhằm tiếp cận tệp khách hàng mới tiềm năng khi thị trường trong nước bão hòa, tận dụng mức tiền lương khu vực thấp hơn, và vượt qua các rào cản thuế quan hay hạn ngạch nhập khẩu bằng cách đặt cơ sở sản xuất ngay bên trong các khối thương mại bảo hộ.",
+      "duration": 29.13,
+      "startTime": 225.69,
+      "endTime": 254.82,
+      "audioUrl": "/audio/lectures/business/4_4/card_international_factors.mp3"
+    },
+    {
       "id": "sec_legal_location",
-      "title": "4. Quy hoạch Pháp lý và Trợ cấp của Chính phủ",
+      "title": "4. Kiểm soát Pháp lý & Chính sách Hỗ trợ Địa điểm",
       "selector": "#sec-legal-location",
-      "en": "Section 4 explores statutory planning controls: zoning laws restricting industrial pollution near residential housing, and government regional development grants offering tax holidays and rent subsidies to encourage factories to open in high-unemployment areas.",
-      "vi": "Mục bốn tìm hiểu sự can thiệp của chính phủ: luật quy hoạch phân vùng cấm xây dựng nhà máy gây ô nhiễm gần khu dân cư, cùng các chính sách ưu đãi tài chính và miễn giảm thuế nhằm thu hút doanh nghiệp đặt cơ sở sản xuất tại các vùng có tỷ lệ thất nghiệp cao.",
+      "en": "Section 4 covers government intervention. Authorities encourage investment in regions of high unemployment through subsidies, while imposing zoning regulations and planning restrictions to safeguard protected green spaces from heavy industrial pollution.",
+      "vi": "Mục bốn phân tích sự can thiệp của chính phủ. Nhà nước khuyến khích doanh nghiệp đầu tư vào các khu vực có tỷ lệ thất nghiệp cao thông qua các gói trợ cấp, đồng thời áp đặt các quy định phân vùng và giới hạn quy hoạch để bảo vệ các vành đai xanh khỏi ô nhiễm công nghiệp nặng.",
       "duration": 28.19,
-      "startTime": 163.17,
-      "endTime": 191.36,
+      "startTime": 254.82,
+      "endTime": 283.01,
       "audioUrl": "/audio/lectures/business/4_4/sec_legal_location.mp3"
     },
     {
+      "id": "card_legal_incentives",
+      "title": "⚖️ Trợ cấp Khu vực Khó khăn vs Quy hoạch Phân vùng (Zoning Laws)",
+      "selector": "#card-legal-incentives",
+      "en": "Governments actively guide business location: providing financial regional grants and tax holidays to incentivize job creation in economically depressed areas, while imposing stringent zoning and environmental planning restrictions to protect historic and natural zones.",
+      "vi": "Chính phủ chủ động định hướng địa điểm kinh doanh: cung cấp các khoản trợ cấp phát triển khu vực và miễn giảm thuế để khuyến khích tạo việc làm tại các vùng khó khăn, đồng thời áp đặt các quy định phân vùng và hạn chế quy hoạch môi trường nghiêm ngặt để bảo vệ các khu vực tự nhiên và di sản.",
+      "duration": 30.14,
+      "startTime": 283.01,
+      "endTime": 313.15,
+      "audioUrl": "/audio/lectures/business/4_4/card_legal_incentives.mp3"
+    },
+    {
       "id": "sec_recommend_location",
-      "title": "5. Chiến lược làm bài thi Cambridge: Đề xuất Địa điểm Kinh doanh",
+      "title": "5. Chiến lược làm bài thi Cambridge: Đề xuất & Biện minh Lựa chọn Địa điểm",
       "selector": "#sec-recommend-location",
-      "en": "Section 5 presents the Cambridge Location Evaluation Formula. Candidates must contrast short-term rental costs against long-term revenue potential and logistical convenience to arrive at a well-reasoned, contextualized recommendation.",
-      "vi": "Mục năm cung cấp Công thức đánh giá Địa điểm thi Cambridge. Thí sinh phải so sánh giữa chi phí thuê ngắn hạn với tiềm năng doanh thu dài hạn và sự thuận tiện trong chuỗi cung ứng logistics để đưa ra kết luận thuyết phục nhất gắn liền với tình huống đề bài.",
+      "en": "Section 5 details Cambridge evaluation strategy when comparing Site A and Site B. Candidates must weigh trade-offs: prime high-traffic city centres demand exorbitant rents, whereas cheaper rural sites require heavy transport logistics and customer parking investments.",
+      "vi": "Mục năm cung cấp chiến lược làm bài thi Cambridge khi so sánh Địa điểm A và Địa điểm B. Thí sinh phải cân nhắc sự đánh đổi: khu vực trung tâm đông đúc có chi phí thuê đắt đỏ, trong khi địa điểm ngoại ô giá rẻ lại đòi hỏi đầu tư mạnh cho chi phí vận tải và bãi đỗ xe cho khách.",
       "duration": 28.43,
-      "startTime": 191.36,
-      "endTime": 219.79,
+      "startTime": 313.15,
+      "endTime": 341.58,
       "audioUrl": "/audio/lectures/business/4_4/sec_recommend_location.mp3"
     }
   ]

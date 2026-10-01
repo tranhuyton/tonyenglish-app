@@ -2,33 +2,37 @@
   "lectureId": "1e280547-ce64-44c2-8fcf-997f7d61cacf",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "4.1. Production of goods and services",
-  "totalDuration": 320.85,
-  "majorSections": [
-    {
-      "id": "sec_production_productivity",
-      "title": "1. Năng suất lao động (Productivity)"
+  "totalDuration": 450.5,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_inventory",
-      "title": "2. Quản lý Tồn kho"
+    "sec_production_productivity": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_lean_production",
-      "title": "3. Sản xuất Tinh gọn (Lean, JIT, Kaizen)"
+    "sec_inventory": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_methods_production",
-      "title": "4. Ba Phương pháp Sản xuất (Job, Batch, Flow)"
+    "sec_lean_production": {
+      "start": 5,
+      "end": 6
     },
-    {
-      "id": "sec_tech_production",
-      "title": "5. Công nghệ Sản xuất (CAD, CAM, CIM)"
+    "sec_methods_production": {
+      "start": 7,
+      "end": 8
     },
-    {
-      "id": "sec_recommend_production",
-      "title": "6. Chiến lược làm bài thi Cambridge"
+    "sec_tech_production": {
+      "start": 9,
+      "end": 10
+    },
+    "sec_recommend_production": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -54,7 +58,7 @@
     },
     {
       "id": "card_productivity",
-      "title": "Công thức tính Năng suất và Giải pháp nâng cao",
+      "title": "📈 Công thức tính Năng suất & Giải pháp nâng cao",
       "selector": "#card-productivity",
       "en": "Productivity equals Total Output divided by Total Inputs such as labour hours or capital machines. Ways to increase productivity include: upgrading employee training, modernizing machinery, automating repetitive tasks, and motivating staff through productivity-linked incentives.",
       "vi": "Năng suất được tính bằng Tổng sản lượng đầu ra chia cho Tổng đầu vào như giờ công lao động hoặc số máy móc. Các giải pháp nâng cao năng suất gồm: đào tạo chuyên môn cho công nhân, hiện đại hóa máy móc thiết bị, tự động hóa các khâu lặp đi lặp lại và khuyến khích tài chính gắn liền với năng suất.",
@@ -65,7 +69,7 @@
     },
     {
       "id": "sec_inventory",
-      "title": "2. Quản lý Hàng tồn kho",
+      "title": "2. Quản lý Hàng tồn kho (Inventory Management)",
       "selector": "#sec-inventory",
       "en": "Section 2 investigates inventory management: raw materials, work-in-progress, and finished goods. Holding buffer inventories ensures smooth operations against delivery delays but locks up working capital in storage, insurance, and obsolescence risks.",
       "vi": "Mục hai nghiên cứu quản trị hàng tồn kho: nguyên vật liệu thô, sản phẩm dở dang trên dây chuyền và thành phẩm hoàn chỉnh. Duy trì lượng hàng dự trữ giúp sản xuất liên tục không bị gián đoạn nhưng gây ứ đọng vốn lưu động, tốn chi phí thuê kho bãi, bảo hiểm và đối mặt rủi ro hàng hóa lỗi thời.",
@@ -75,25 +79,36 @@
       "audioUrl": "/audio/lectures/business/4_1/sec_inventory.mp3"
     },
     {
+      "id": "card_inventory_control",
+      "title": "📦 Biểu đồ Kiểm soát Tồn kho: Reorder Level, Lead Time & Buffer Stock",
+      "selector": "#card-inventory-control",
+      "en": "The inventory control chart tracks stock levels over time. The Maximum Inventory Level represents warehouse capacity; the Reorder Level triggers purchase requisitions before stock runs out; Lead Time measures delivery duration; and Buffer Inventory protects the firm from unexpected demand spikes or supplier stock-outs.",
+      "vi": "Biểu đồ kiểm soát tồn kho theo dõi lượng hàng theo thời gian. Mức tồn kho tối đa thể hiện sức chứa của kho; Điểm đặt hàng lại (Reorder Level) kích hoạt đơn mua hàng mới trước khi hết hàng; Thời gian chờ hàng (Lead Time) là khoảng thời gian từ khi đặt đến khi hàng về; và Lượng tồn kho an toàn (Buffer Inventory) bảo vệ doanh nghiệp trước những biến động đột xuất của thị trường.",
+      "duration": 41.18,
+      "startTime": 145.8,
+      "endTime": 186.98,
+      "audioUrl": "/audio/lectures/business/4_1/card_inventory_control.mp3"
+    },
+    {
       "id": "sec_lean_production",
-      "title": "3. Sản xuất Tinh gọn (Lean Production)",
+      "title": "3. Sản xuất Tinh gọn & 7 Loại Lãng phí (Lean Production)",
       "selector": "#sec-lean-production",
       "en": "Section 3 explores Lean Production: operational philosophies aimed at cutting waste and eliminating non-value-adding activities across seven dimensions: overproduction, waiting, transportation, unnecessary inventory, excessive motion, overprocessing, and defects.",
       "vi": "Mục ba tìm hiểu Sản xuất tinh gọn (Lean Production): triết lý vận hành nhằm cắt giảm lãng phí và loại bỏ các hoạt động không tạo ra giá trị gia tăng trên bảy khía cạnh: sản xuất thừa, thời gian chờ đợi, vận chuyển không cần thiết, tồn kho dư thừa, thao tác thừa, xử lý quá mức và hàng lỗi hỏng.",
       "duration": 33.81,
-      "startTime": 145.8,
-      "endTime": 179.61,
+      "startTime": 186.98,
+      "endTime": 220.79,
       "audioUrl": "/audio/lectures/business/4_1/sec_lean_production.mp3"
     },
     {
       "id": "card_lean_methods",
-      "title": "Các Kỹ thuật Lean cốt lõi: JIT và Kaizen",
+      "title": "✨ Các Kỹ thuật Lean cốt lõi: JIT, Kaizen & Cell Production",
       "selector": "#card-lean-methods",
-      "en": "Key lean techniques include Just-In-Time (JIT)—where materials arrive exactly as required on the assembly line, eliminating warehouse storage entirely; and Kaizen, continuous Japanese incremental improvement driven by frontline employee feedback circles.",
-      "vi": "Các kỹ thuật tinh gọn cốt lõi gồm Sản xuất đúng thời điểm (Just-In-Time - JIT) – nguyên vật liệu được giao đúng lúc cần ráp vào dây chuyền, xóa bỏ hoàn toàn chi phí lưu kho; và Kaizen, triết lý cải tiến liên tục từng bước nhỏ của Nhật Bản dựa trên sự đóng góp ý kiến của chính những người công nhân đứng máy.",
+      "en": "Key lean techniques include Just-In-Time (JIT)—where materials arrive exactly as required on the assembly line, eliminating warehouse storage entirely; Kaizen, continuous incremental improvement driven by frontline employee feedback; and Cell Production, organizing workers into autonomous quality units.",
+      "vi": "Các kỹ thuật tinh gọn cốt lõi gồm Sản xuất đúng thời điểm (Just-In-Time - JIT) – nguyên vật liệu được giao đúng lúc cần ráp vào dây chuyền, xóa bỏ hoàn toàn chi phí lưu kho; Kaizen, triết lý cải tiến liên tục từng bước nhỏ dựa trên sáng kiến của công nhân; và Sản xuất theo ô (Cell Production), chia nhỏ dây chuyền thành các tổ độc lập nâng cao tinh thần trách nhiệm.",
       "duration": 33.69,
-      "startTime": 179.61,
-      "endTime": 213.3,
+      "startTime": 220.79,
+      "endTime": 254.48,
       "audioUrl": "/audio/lectures/business/4_1/card_lean_methods.mp3"
     },
     {
@@ -103,9 +118,20 @@
       "en": "Section 4 compares three core manufacturing methods: Job production crafts single customized items like wedding dresses; Batch production creates identical groups of products before resetting equipment, as in bakeries; Flow continuous mass production runs non-stop assembly lines like car factories, yielding massive economies of scale.",
       "vi": "Mục bốn so sánh ba phương pháp sản xuất: Sản xuất đơn chiếc (Job) làm theo yêu cầu cá nhân hóa như may váy cưới; Sản xuất theo lô (Batch) tạo ra từng mẻ sản phẩm giống nhau trước khi chuyển đổi máy móc như tiệm bánh; Sản xuất liên tục (Flow) vận hành dây chuyền tự động hàng loạt 24/7 như lắp ráp ô tô, đạt hiệu quả quy mô tối đa.",
       "duration": 39.81,
-      "startTime": 213.3,
-      "endTime": 253.11,
+      "startTime": 254.48,
+      "endTime": 294.29,
       "audioUrl": "/audio/lectures/business/4_1/sec_methods_production.mp3"
+    },
+    {
+      "id": "card_production_methods",
+      "title": "⚙️ So sánh Job, Batch, Flow & Yếu tố Lựa chọn",
+      "selector": "#card-production-methods",
+      "en": "Job production crafts bespoke individual products with high worker motivation but at high unit labour costs. Batch production manufactures identical product groups with flexible equipment changeovers. Flow continuous production achieves unmatched mass volume and lowest average unit costs through automated lines, but requires substantial capital setup and reduces worker morale.",
+      "vi": "Sản xuất đơn chiếc (Job) tạo ra sản phẩm cá nhân hóa theo yêu cầu với tinh thần làm việc của thợ cao nhưng chi phí nhân công trên mỗi sản phẩm lớn. Sản xuất theo lô (Batch) tạo ra từng đợt sản phẩm giống nhau với khả năng linh hoạt chuyển đổi mẫu mã. Sản xuất liên tục (Flow) đạt sản lượng đại trà khổng lồ và chi phí đơn vị thấp nhất nhờ tự động hóa, nhưng đòi hỏi vốn đầu tư lớn và dễ gây nhàm chán cho công nhân.",
+      "duration": 48.23,
+      "startTime": 294.29,
+      "endTime": 342.52,
+      "audioUrl": "/audio/lectures/business/4_1/card_production_methods.mp3"
     },
     {
       "id": "sec_tech_production",
@@ -114,9 +140,20 @@
       "en": "Section 5 evaluates technological innovation: Computer-Aided Design (CAD) for digital prototyping; Computer-Aided Manufacturing (CAM) utilizing industrial robots; and Computer-Integrated Manufacturing (CIM) unifying entire factories under integrated software controllers.",
       "vi": "Mục năm đánh giá sự đổi mới công nghệ: Thiết kế có sự trợ giúp của máy tính (CAD) giúp phác thảo mẫu kỹ thuật số 3D; Sản xuất có sự trợ giúp của máy tính (CAM) sử dụng robot công nghiệp; và Sản xuất tích hợp máy tính (CIM) đồng bộ hóa toàn bộ nhà máy dưới sự điều khiển của hệ thống phần mềm trung tâm.",
       "duration": 38.42,
-      "startTime": 253.11,
-      "endTime": 291.53,
+      "startTime": 342.52,
+      "endTime": 380.94,
       "audioUrl": "/audio/lectures/business/4_1/sec_tech_production.mp3"
+    },
+    {
+      "id": "card_tech_methods",
+      "title": "💻 Ứng dụng Công nghệ (CAD, CAM, CIM, EPOS) & Ưu nhược điểm",
+      "selector": "#card-tech-methods",
+      "en": "Modern manufacturing incorporates CAD software for digital styling, CAM robotics for automated assembly, CIM networks for factory-wide digital synchronization, and EPOS scanners for real-time inventory decrement. Technology improves precision and slashes operating waste, but carries steep capital costs and employee redundancy risks.",
+      "vi": "Sản xuất hiện đại tích hợp phần mềm thiết kế CAD, robot sản xuất CAM, mạng lưới tích hợp CIM đồng bộ toàn xưởng và máy quét mã vạch EPOS để tự động trừ kho theo thời gian thực. Công nghệ nâng cao độ chuẩn xác và triệt tiêu lãng phí, nhưng đòi hỏi vốn đầu tư lớn và tiềm ẩn nguy cơ dư thừa lao động.",
+      "duration": 40.24,
+      "startTime": 380.94,
+      "endTime": 421.18,
+      "audioUrl": "/audio/lectures/business/4_1/card_tech_methods.mp3"
     },
     {
       "id": "sec_recommend_production",
@@ -125,8 +162,8 @@
       "en": "Section 6 details the Cambridge evaluation strategy for production methods. Candidates must analyze market demand volume, product customization requirements, and capital budget before justifying the optimal manufacturing method.",
       "vi": "Mục sáu hướng dẫn chiến lược trả lời câu hỏi Cambridge về phương pháp sản xuất. Thí sinh phải phân tích quy mô nhu cầu thị trường, mức độ tùy biến sản phẩm theo yêu cầu khách hàng và ngân sách đầu tư thiết bị trước khi đưa ra khuyến nghị lựa chọn phương án tối ưu.",
       "duration": 29.32,
-      "startTime": 291.53,
-      "endTime": 320.85,
+      "startTime": 421.18,
+      "endTime": 450.5,
       "audioUrl": "/audio/lectures/business/4_1/sec_recommend_production.mp3"
     }
   ]

@@ -2,29 +2,33 @@
   "lectureId": "0e8fbc94-5976-4c7f-8588-471ea93926f5",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "6.1. Economic issues",
-  "totalDuration": 263.08,
-  "majorSections": [
-    {
-      "id": "sec_business_cycle",
-      "title": "1. Chu kỳ Kinh tế (Business Cycle)"
+  "totalDuration": 344.83,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_economic_impacts",
-      "title": "2. Tác động của Lạm phát, Thất nghiệp & GDP"
+    "sec_business_cycle": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_gov_objectives",
-      "title": "3. Mục tiêu Kinh tế của Chính phủ"
+    "sec_economic_impacts": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_economic_policies",
-      "title": "4. Chính sách Tài khóa & Tiền tệ"
+    "sec_gov_objectives": {
+      "start": 5,
+      "end": 5
     },
-    {
-      "id": "sec_business_policy_response",
-      "title": "5. Phản ứng Doanh nghiệp & Chiến lược thi Cambridge"
+    "sec_economic_policies": {
+      "start": 6,
+      "end": 7
+    },
+    "sec_business_policy_response": {
+      "start": 8,
+      "end": 8
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -50,7 +54,7 @@
     },
     {
       "id": "card_cycle_stages",
-      "title": "Chiến lược Thích ứng với Chu kỳ Kinh tế",
+      "title": "🔄 Bốn Giai Đoạn Chu Kỳ Kinh Tế: Growth, Boom, Recession & Slump",
       "selector": "#card-cycle-stages",
       "en": "During economic booms, luxury brands expand production lines and raise prices. During recessions, discount retailers thrive as consumers downscale spending to essential budget ranges, while heavy capital machinery producers face collapsing demand.",
       "vi": "Trong thời kỳ đỉnh cao kinh tế, các thương hiệu cao cấp mở rộng sản xuất và tăng giá bán. Trong giai đoạn suy thoái, các nhà bán lẻ giá rẻ lại phát đạt do người tiêu dùng thắt chặt chi tiêu vào các mặt hàng thiết yếu, trong khi các nhà sản xuất máy móc thiết bị nặng phải đối mặt với sự sụt giảm nhu cầu nghiêm trọng.",
@@ -71,14 +75,25 @@
       "audioUrl": "/audio/lectures/business/6_1/sec_economic_impacts.mp3"
     },
     {
+      "id": "card_macro_impacts",
+      "title": "⚡ Tác Động Chi Tiết của Thất Nghiệp, Lạm Phát & Tăng Trưởng GDP",
+      "selector": "#card-macro-impacts",
+      "en": "Macroeconomic shifts dictate commercial realities: High unemployment creates recruitment pools at lower wages but suppresses luxury demand. High inflation increases material procurement costs and triggers central bank interest rate hikes. Growing GDP boosts business confidence, whereas contracting GDP forces inventory liquidation.",
+      "vi": "Biến động kinh tế vĩ mô chi phối hoạt động kinh doanh: Thất nghiệp cao tạo nguồn tuyển dụng dồi dào với tiền lương mềm hơn nhưng lại bóp nghẹt nhu cầu hàng cao cấp. Lạm phát cao làm tăng chi phí thu mua nguyên liệu và khiến ngân hàng trung ương tăng lãi suất. GDP tăng trưởng củng cố niềm tin đầu tư, trong khi GDP suy thoái buộc doanh nghiệp phải xả lỗ hàng tồn kho.",
+      "duration": 42.64,
+      "startTime": 162.47,
+      "endTime": 205.11,
+      "audioUrl": "/audio/lectures/business/6_1/card_macro_impacts.mp3"
+    },
+    {
       "id": "sec_gov_objectives",
       "title": "3. Bốn Mục tiêu Kinh tế của Chính phủ",
       "selector": "#sec-gov-objectives",
       "en": "Section 3 outlines the four core macroeconomic aims of national governments: sustainable economic growth measured by rising real GDP, low stable inflation, low unemployment, and a healthy balance of payments where export revenues balance import expenditures.",
       "vi": "Mục ba tổng kết bốn mục tiêu kinh tế vĩ mô của chính phủ: tăng trưởng kinh tế bền vững đo lường bằng sự gia tăng GDP thực tế, lạm phát thấp và ổn định, duy trì tỷ lệ thất nghiệp thấp, và cân bằng cán cân thanh toán quốc tế giữa kim ngạch xuất khẩu và nhập khẩu.",
       "duration": 30.83,
-      "startTime": 162.47,
-      "endTime": 193.3,
+      "startTime": 205.11,
+      "endTime": 235.94,
       "audioUrl": "/audio/lectures/business/6_1/sec_gov_objectives.mp3"
     },
     {
@@ -88,19 +103,30 @@
       "en": "Section 4 contrasts economic management tools: Fiscal Policy uses taxes and government spending; Monetary Policy adjusts interest rates and credit availability; and Supply-Side Policy invests in vocational training, deregulation, and infrastructure to boost national productive potential.",
       "vi": "Mục bốn phân biệt các công cụ điều hành kinh tế: Chính sách tài khóa (Fiscal Policy) sử dụng thuế và chi tiêu công; Chính sách tiền tệ (Monetary Policy) điều chỉnh lãi suất và hạn mức tín dụng; và Chính sách phía cung (Supply-Side Policy) đầu tư vào đào tạo nghề, giảm bớt thủ tục hành chính và nâng cấp cơ sở hạ tầng để mở rộng năng lực sản xuất quốc gia.",
       "duration": 39.02,
-      "startTime": 193.3,
-      "endTime": 232.32,
+      "startTime": 235.94,
+      "endTime": 274.96,
       "audioUrl": "/audio/lectures/business/6_1/sec_economic_policies.mp3"
     },
     {
+      "id": "card_policy_tools",
+      "title": "⚖️ Công Cụ Chính Sách: Thuế, Chi Tiêu Công & Lãi Suất Ngân Hàng",
+      "selector": "#card-policy-tools",
+      "en": "Governments steer economies through three primary policy levers: Taxation cuts consumer disposable income and corporation retained earnings. Public spending builds state infrastructure and injects commercial demand. Interest rate hikes increase variable debt repayments, depressing credit card and mortgage spending.",
+      "vi": "Chính phủ điều tiết nền kinh tế qua ba đòn bẩy chính sách: Tăng thuế làm giảm thu nhập khả dụng của dân cư và giảm lợi nhuận giữ lại của doanh nghiệp. Chi tiêu công xây dựng cơ sở hạ tầng quốc gia và bơm dòng tiền mua sắm công. Tăng lãi suất làm đội chi phí trả nợ vay ngân hàng, kìm hãm chi tiêu mua sắm trả góp và vay mua nhà.",
+      "duration": 39.11,
+      "startTime": 274.96,
+      "endTime": 314.07,
+      "audioUrl": "/audio/lectures/business/6_1/card_policy_tools.mp3"
+    },
+    {
       "id": "sec_business_policy_response",
-      "title": "5. Phản ứng của Doanh nghiệp trước Chính sách Kinh tế",
+      "title": "5. Phản ứng của Doanh nghiệp trước Chính sách Kinh tế (Cambridge Exam Guide)",
       "selector": "#sec-business-policy-response",
       "en": "Section 5 details corporate adaptation. When central banks hike interest rates, borrowing costs soar and consumer mortgage payments climb, forcing businesses to cancel debt-funded investments and discount inventory to generate immediate cash reserves.",
       "vi": "Mục năm phân tích sự thích ứng của doanh nghiệp. Khi ngân hàng trung ương tăng lãi suất, chi phí vay nợ tăng cao và gánh nặng trả góp của người dân tăng lên, buộc doanh nghiệp phải hủy bỏ các dự án đầu tư sử dụng vốn vay và giảm giá hàng tồn kho để tạo dòng tiền mặt dự phòng.",
       "duration": 30.76,
-      "startTime": 232.32,
-      "endTime": 263.08,
+      "startTime": 314.07,
+      "endTime": 344.83,
       "audioUrl": "/audio/lectures/business/6_1/sec_business_policy_response.mp3"
     }
   ]

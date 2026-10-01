@@ -2,29 +2,33 @@
   "lectureId": "a1d571ff-fa12-46c2-a49d-1df88df13214",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "6.2. Environmental and ethical issues",
-  "totalDuration": 240.95,
-  "majorSections": [
-    {
-      "id": "sec_environmental_concerns",
-      "title": "1. Mối quan tâm Môi trường"
+  "totalDuration": 345.08,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_externalities",
-      "title": "2. Ngoại tác (Social Costs & Benefits)"
+    "sec_environmental_concerns": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_sustainable_development",
-      "title": "3. Phát triển Bền vững & Nhóm Áp lực"
+    "sec_externalities": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_business_ethics",
-      "title": "4. Đạo đức Kinh doanh (Ethics)"
+    "sec_sustainable_development": {
+      "start": 5,
+      "end": 6
     },
-    {
-      "id": "sec_ethics_profitability",
-      "title": "5. Đạo đức vs Lợi nhuận & Chiến lược thi Cambridge"
+    "sec_business_ethics": {
+      "start": 7,
+      "end": 8
+    },
+    "sec_ethics_profitability": {
+      "start": 9,
+      "end": 9
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -49,15 +53,37 @@
       "audioUrl": "/audio/lectures/business/6_2/sec_environmental_concerns.mp3"
     },
     {
+      "id": "card_environmental_impacts",
+      "title": "🌍 Tác Động Môi Trường Cốt Lõi & Biện Pháp Kiểm Soát của Chính Phủ",
+      "selector": "#card-environmental-impacts",
+      "en": "Industrial production inflicts environmental strains: deforestation and fossil energy depletion, microplastic ocean contamination, and unsafe e-waste landfill dumping. Regulatory authorities step in by outlawing toxic chemicals, levying steep cleanup fines, and issuing tradable pollution permits.",
+      "vi": "Sản xuất công nghiệp gây sức ép nặng nề lên môi trường: phá rừng và cạn kiệt năng lượng hóa thạch, rác thải hạt vi nhựa làm ô nhiễm đại dương và bãi chôn lấp rác thải điện tử độc hại. Cơ quan quản lý nhà nước can thiệp bằng cách cấm hóa chất độc hại, phạt tiền nặng phục hồi môi trường và cấp hạn ngạch giấy phép xả thải.",
+      "duration": 36.95,
+      "startTime": 71.36,
+      "endTime": 108.31,
+      "audioUrl": "/audio/lectures/business/6_2/card_environmental_impacts.mp3"
+    },
+    {
       "id": "sec_externalities",
       "title": "2. Ngoại tác: Chi phí Xã hội và Lợi ích Xã hội",
       "selector": "#sec-externalities",
       "en": "Section 2 provides the core economic equation: Social Costs equal Private Costs plus External Costs. Social Benefits equal Private Benefits plus External Benefits. Negative externalities—such as toxic factory smog or heavy traffic congestion—are borne by the local community rather than the polluting firm.",
       "vi": "Mục hai đưa ra công thức kinh tế học cốt lõi: Chi phí xã hội bằng Chi phí tư nhân cộng Chi phí ngoại tác. Lợi ích xã hội bằng Lợi ích tư nhân cộng Lợi ích ngoại tác. Ngoại tác tiêu cực như khói bụi độc hại hay tắc đường do xe tải nhà máy gây ra là những tổn thất mà cộng đồng địa phương phải gánh chịu thay cho doanh nghiệp.",
       "duration": 39.42,
-      "startTime": 71.36,
-      "endTime": 110.78,
+      "startTime": 108.31,
+      "endTime": 147.73,
       "audioUrl": "/audio/lectures/business/6_2/sec_externalities.mp3"
+    },
+    {
+      "id": "card_externalities_formula",
+      "title": "🔗 Công Thức Ngoại Tác & Quyết Định Phê Duyệt Dự Án",
+      "selector": "#card-externalities-formula",
+      "en": "Master the externalities equation: Social Cost equals Private Cost plus External Cost, and Social Benefit equals Private Benefit plus External Benefit. Governments approve commercial factory developments only when Social Benefits definitively outweigh Social Costs.",
+      "vi": "Nắm vững công thức ngoại tác: Chi phí xã hội bằng Chi phí tư nhân cộng Chi phí ngoại tác, và Lợi ích xã hội bằng Lợi ích tư nhân cộng Lợi ích ngoại tác. Chính phủ và chính quyền địa phương chỉ cấp phép cho các dự án xây dựng nhà xưởng khi Lợi ích xã hội tạo ra vượt trội hơn hẳn Chi phí xã hội phát sinh.",
+      "duration": 33.4,
+      "startTime": 147.73,
+      "endTime": 181.13,
+      "audioUrl": "/audio/lectures/business/6_2/card_externalities_formula.mp3"
     },
     {
       "id": "sec_sustainable_development",
@@ -66,19 +92,19 @@
       "en": "Section 3 defines Sustainable Development as economic activity that meets the needs of the present without compromising the ability of future generations to meet their own needs. Enterprises embrace renewable solar energy, biodegradable packaging, and circular recycling initiatives.",
       "vi": "Mục ba định nghĩa Phát triển bền vững là hoạt động kinh tế đáp ứng các nhu cầu của hiện tại mà không làm tổn hại đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. Doanh nghiệp chủ động chuyển đổi sang năng lượng mặt trời, bao bì tự phân hủy sinh học và mô hình tái chế tuần hoàn.",
       "duration": 32.42,
-      "startTime": 110.78,
-      "endTime": 143.2,
+      "startTime": 181.13,
+      "endTime": 213.55,
       "audioUrl": "/audio/lectures/business/6_2/sec_sustainable_development.mp3"
     },
     {
       "id": "card_pressure_groups",
-      "title": "Vai trò của Nhóm Áp lực (Pressure Groups)",
+      "title": "📢 Vai trò của Nhóm Áp lực (Pressure Groups)",
       "selector": "#card-pressure-groups",
       "en": "Pressure Groups are organized citizen associations that seek to influence government policies and corporate actions. Tactics include consumer boycotts, viral social media campaigns, and staging peaceful demonstrations to hold polluting enterprises publicly accountable.",
       "vi": "Nhóm áp lực (Pressure Groups) là tổ chức của người dân nhằm tác động lên chính sách của chính phủ và hành vi của doanh nghiệp. Các biện pháp bao gồm kêu gọi người tiêu dùng tẩy chay sản phẩm, tổ chức chiến dịch truyền thông và biểu tình hòa bình để buộc các doanh nghiệp gây ô nhiễm phải chịu trách nhiệm trước công chúng.",
       "duration": 33.11,
-      "startTime": 143.2,
-      "endTime": 176.31,
+      "startTime": 213.55,
+      "endTime": 246.66,
       "audioUrl": "/audio/lectures/business/6_2/card_pressure_groups.mp3"
     },
     {
@@ -88,9 +114,20 @@
       "en": "Section 4 investigates Business Ethics: moral rules and behavioral standards guiding decision making beyond statutory legal compliance. Issues include child labour in overseas factories, fair trade wages for smallholder farmers, and deceptive marketing to vulnerable children.",
       "vi": "Mục bốn phân tích Đạo đức kinh doanh: các nguyên tắc đạo đức và chuẩn mực hành vi định hướng ra quyết định vượt lên trên các yêu cầu tối thiểu của luật pháp. Các vấn đề bao gồm bóc lột lao động trẻ em tại các xưởng gia công, trả giá thương mại công bằng (fair trade) cho nông dân và cấm quảng cáo lừa dối hướng vào trẻ em.",
       "duration": 35.58,
-      "startTime": 176.31,
-      "endTime": 211.89,
+      "startTime": 246.66,
+      "endTime": 282.24,
       "audioUrl": "/audio/lectures/business/6_2/sec_business_ethics.mp3"
+    },
+    {
+      "id": "card_ethical_practices",
+      "title": "⚖️ Bộ Quy Tắc Đạo Đức: Tiền Lương Sống, Chống Phân Biệt Giới & Nguồn Cung Minh Bạch",
+      "selector": "#card-ethical-practices",
+      "en": "Ethical codes of practice enforce zero child exploitation in supply chains, close the gender wage gap, guarantee fair trade purchasing prices, and eliminate misleading promotional claims. Committing to ethical standards earns strong consumer trust and boosts employee retention.",
+      "vi": "Bộ quy tắc đạo đức doanh nghiệp bảo đảm tuyệt đối không bóc lột lao động trẻ em trong chuỗi cung ứng, thu hẹp khoảng cách lương theo giới tính, cam kết mức giá mua hàng công bằng cho nông dân và loại bỏ quảng cáo gây hiểu lầm. Cam kết đạo đức giúp xây dựng niềm tin tiêu dùng vững chắc và gắn kết người lao động.",
+      "duration": 33.78,
+      "startTime": 282.24,
+      "endTime": 316.02,
+      "audioUrl": "/audio/lectures/business/6_2/card_ethical_practices.mp3"
     },
     {
       "id": "sec_ethics_profitability",
@@ -99,8 +136,8 @@
       "en": "Section 5 details the Cambridge evaluation dilemma: Acting ethically raises operating production costs in the short run, but builds prestigious brand reputation, attracts ethical investors, and avoids crippling consumer boycotts in the long term.",
       "vi": "Mục năm cung cấp chiến lược giải quyết bài toán tình huống Cambridge: Hành xử có đạo đức có thể làm tăng chi phí sản xuất trong ngắn hạn, nhưng về lâu dài lại kiến tạo uy tín thương hiệu vững chắc, thu hút các quỹ đầu tư bền vững và tránh được những làn sóng tẩy chay phá hủy doanh nghiệp.",
       "duration": 29.06,
-      "startTime": 211.89,
-      "endTime": 240.95,
+      "startTime": 316.02,
+      "endTime": 345.08,
       "audioUrl": "/audio/lectures/business/6_2/sec_ethics_profitability.mp3"
     }
   ]

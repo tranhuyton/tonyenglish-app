@@ -2,32 +2,36 @@
   "lectureId": "66589390-767c-4aab-957b-a970fa1a976e",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "4.2. Costs, scale of production and break-even analysis",
-  "totalDuration": 258.55,
-  "majorSections": [
-    {
-      "id": "sec_costs",
-      "title": "1. Phân loại Chi phí"
+  "totalDuration": 346.43,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_scale_production",
-      "title": "2. Lợi thế & Bất lợi thế Quy mô"
+    "sec_costs": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_break_even",
-      "title": "3. Điểm hòa vốn & Biên an toàn"
+    "sec_scale_production": {
+      "start": 3,
+      "end": 5
     },
-    {
-      "id": "sec_breakeven-shifts",
-      "title": "4. Ra quyết định Quản trị dựa trên Hòa vốn"
+    "sec_break_even": {
+      "start": 6,
+      "end": 7
+    },
+    "sec_breakeven-shifts": {
+      "start": 8,
+      "end": 8
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 4.2: Chi phí, Quy mô sản xuất và Điểm hòa vốn",
+      "title": "Giới thiệu Bài 4.2: Chi phí, Quy mô sản xuất & Điểm hòa vốn",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 4.2: Costs, Scale of Production and Break-Even Analysis. In this analytical lesson, we classify business costs, explore economies and diseconomies of scale, construct break-even charts, and compute margins of safety.",
-      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 4.2: Chi phí, Quy mô sản xuất và Phân tích Điểm hòa vốn. Trong bài học mang tính định lượng này, chúng ta sẽ phân loại chi phí kinh doanh, tìm hiểu lợi thế và bất lợi thế kinh tế theo quy mô, vẽ biểu đồ hòa vốn và tính biên độ an toàn.",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 4.2: Costs, Scale of Production, and Break-Even Analysis. In this lesson, we classify business costs, evaluate internal and external economies and diseconomies of scale, interpret break-even charts, and master margin of safety calculations.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 4.2: Chi phí, Quy mô sản xuất và Phân tích điểm hòa vốn. Trong bài học này, chúng ta sẽ phân loại các loại chi phí doanh nghiệp, đánh giá lợi thế và bất lợi kinh tế theo quy mô, giải thích biểu đồ hòa vốn và thực hiện các phép tính biên độ an toàn.",
       "duration": 38.06,
       "startTime": 0.0,
       "endTime": 38.06,
@@ -35,68 +39,90 @@
     },
     {
       "id": "sec_costs",
-      "title": "1. Phân loại Chi phí Kinh doanh",
+      "title": "1. Khái niệm và Phân loại Chi phí (Costs)",
       "selector": "#sec-costs",
-      "en": "Section 1 categorizes enterprise costs: Fixed Costs—such as factory rent and insurance—do not change with output in the short run; Variable Costs—such as raw materials and direct wages—vary in direct proportion to output. Total Cost is the sum of fixed and variable costs, and Average Cost is total cost divided by output.",
-      "vi": "Mục một phân loại chi phí doanh nghiệp: Chi phí cố định (Fixed Costs) như tiền thuê mặt bằng, bảo hiểm không biến động theo sản lượng trong ngắn hạn; Chi phí biến đổi (Variable Costs) như nguyên vật liệu thô, lương sản phẩm tăng giảm tỷ lệ thuận với sản lượng. Tổng chi phí bằng chi phí cố định cộng chi phí biến đổi, và Chi phí bình quân bằng tổng chi phí chia cho sản lượng.",
+      "en": "Section 1 examines business costs. Fixed costs—such as factory rent and insurance premiums—remain constant regardless of production volumes in the short run. Variable costs—like raw materials and piece-rate wages—fluctuate directly with output. Accurate cost data underpins pricing, break-even targets, and location appraisals.",
+      "vi": "Mục một phân tích các khoản chi phí của doanh nghiệp. Chi phí cố định – như tiền thuê nhà xưởng và phí bảo hiểm – không thay đổi theo mức sản lượng trong ngắn hạn. Chi phí biến đổi – như nguyên vật liệu và tiền lương trả theo sản phẩm – biến động trực tiếp theo số lượng làm ra. Dữ liệu chi phí chính xác là nền tảng để định giá, tính điểm hòa vốn và lựa chọn địa điểm.",
       "duration": 43.14,
       "startTime": 38.06,
       "endTime": 81.2,
       "audioUrl": "/audio/lectures/business/4_2/sec_costs.mp3"
     },
     {
-      "id": "sec_scale_production",
-      "title": "2. Lợi thế Kinh tế theo Quy mô (Economies of Scale)",
-      "selector": "#sec-scale-production",
-      "en": "Section 2 investigates economies of scale: factors that cause average unit costs to fall as business output expands. Five main internal economies of scale exist: Purchasing discounts on bulk orders, Marketing cost spreading, Financial lower borrowing interest rates, Technical specialized machinery, and Managerial specialist executives.",
-      "vi": "Mục hai nghiên cứu lợi thế kinh tế theo quy mô (economies of scale): các yếu tố làm giảm chi phí đơn vị bình quân khi quy mô sản xuất mở rộng. Năm lợi thế nội bộ chính gồm: Mua hàng số lượng lớn được chiết khấu cao, Tiếp thị phân bổ trên lượng bán lớn, Tài chính vay ngân hàng lãi suất thấp, Kỹ thuật đầu tư máy móc tự động hóa chuyên sâu, và Quản lý thuê các giám đốc chuyên nghiệp.",
-      "duration": 42.59,
+      "id": "card_cost_concepts",
+      "title": "💵 Phân biệt Chi phí Cố định, Biến đổi & Công thức Tính Chi phí Đơn vị",
+      "selector": "#card-cost-concepts",
+      "en": "Fixed costs do not change with output in the short run and must be paid even if production is zero, such as factory rent and insurance. Variable costs alter in direct proportion to production volumes, including raw materials and piece-rate wages. Total cost combines fixed and variable expenses, while average unit cost divides total cost by units produced.",
+      "vi": "Chi phí cố định không thay đổi theo mức sản lượng trong ngắn hạn và vẫn phải trả ngay cả khi không sản xuất, như tiền thuê nhà xưởng và bảo hiểm. Chi phí biến đổi thay đổi trực tiếp theo số lượng sản phẩm làm ra, bao gồm nguyên vật liệu và tiền lương trả theo sản phẩm. Tổng chi phí là tổng của chi phí cố định và chi phí biến đổi, trong khi chi phí đơn vị lấy tổng chi phí chia cho số sản phẩm sản xuất.",
+      "duration": 45.74,
       "startTime": 81.2,
-      "endTime": 123.79,
+      "endTime": 126.94,
+      "audioUrl": "/audio/lectures/business/4_2/card_cost_concepts.mp3"
+    },
+    {
+      "id": "sec_scale_production",
+      "title": "2. Quy mô Sản xuất (Scale of Production)",
+      "selector": "#sec-scale-production",
+      "en": "Section 2 investigates scale of production. The central economic principle dictates that expanding scale initially reduces average unit costs via economies of scale. However, growing beyond optimal capacity triggers bureaucratic diseconomies that drive unit costs back up.",
+      "vi": "Mục hai khảo sát quy mô sản xuất. Nguyên lý kinh tế trọng tâm chỉ ra rằng việc mở rộng quy mô ban đầu sẽ kéo giảm chi phí trung bình trên mỗi sản phẩm nhờ lợi thế quy mô. Tuy nhiên, nếu phát triển vượt quá quy mô tối ưu sẽ làm phát sinh các bất lợi về bộ máy cồng kềnh, khiến chi phí đơn vị tăng ngược trở lại.",
+      "duration": 42.59,
+      "startTime": 126.94,
+      "endTime": 169.53,
       "audioUrl": "/audio/lectures/business/4_2/sec_scale_production.mp3"
     },
     {
       "id": "card_economies_scale",
-      "title": "Bất lợi thế theo Quy mô (Diseconomies of Scale)",
+      "title": "📉 5 Loại Lợi thế Kinh tế theo Quy mô (Economies of Scale)",
       "selector": "#card-economies-scale",
-      "en": "However, if a business expands beyond optimal capacity, diseconomies of scale set in: poor communication across bloated hierarchies, low employee morale in impersonal mega-factories, and slow coordination problems that drive average costs back up.",
-      "vi": "Tuy nhiên, nếu doanh nghiệp mở rộng vượt quá công suất tối ưu, bất lợi thế theo quy mô sẽ xuất hiện: giao tiếp đình trệ qua các tầng nấc quản lý cồng kềnh, tinh thần làm việc sa sút do công nhân thấy mình bị biến thành mắt xích vô danh và việc điều phối chậm trễ đẩy chi phí bình quân tăng trở lại.",
+      "en": "Firms enjoy five core internal economies of scale: purchasing bulk-buying discounts; marketing economies via dedicated transport and spread advertising; financial economies through preferential bank loan rates; managerial specialization; and technical economies operating large-scale automated lines.",
+      "vi": "Doanh nghiệp được hưởng năm lợi thế quy mô nội bộ chính: mua sỉ nguyên vật liệu được chiết khấu cao; tiếp thị tiết kiệm nhờ sở hữu xe vận tải riêng và chi phí quảng bá chia đều; tài chính ưu đãi với lãi suất vay ngân hàng thấp hơn; chuyên môn hóa bộ máy quản lý; và kỹ thuật vận hành các dây chuyền tự động hóa quy mô lớn.",
       "duration": 31.05,
-      "startTime": 123.79,
-      "endTime": 154.84,
+      "startTime": 169.53,
+      "endTime": 200.58,
       "audioUrl": "/audio/lectures/business/4_2/card_economies_scale.mp3"
     },
     {
+      "id": "card_diseconomies_scale",
+      "title": "📈 Bất lợi Quy mô (Diseconomies of Scale) & Giải pháp",
+      "selector": "#card-diseconomies-scale",
+      "en": "Diseconomies of scale occur when excessive business expansion drives average unit costs upward due to bureaucratic inefficiencies: communication breakdowns across sprawling departments, worker demotivation from feeling impersonal, and slow decision-making along long chains of command. Businesses counteract this by devolving into autonomous operational divisions.",
+      "vi": "Bất lợi kinh tế theo quy mô xảy ra khi doanh nghiệp mở rộng quá lớn khiến chi phí trung bình trên mỗi sản phẩm tăng ngược trở lại do bộ máy cồng kềnh: giao tiếp đứt gãy giữa các phòng ban, người lao động mất động lực vì cảm thấy xa cách lãnh đạo, và quyết định chậm trễ qua nhiều cấp bậc quản lý. Doanh nghiệp khắc phục điều này bằng cách phân quyền thành các đơn vị vận hành tự chủ nhỏ hơn.",
+      "duration": 42.14,
+      "startTime": 200.58,
+      "endTime": 242.72,
+      "audioUrl": "/audio/lectures/business/4_2/card_diseconomies_scale.mp3"
+    },
+    {
       "id": "sec_break_even",
-      "title": "3. Phân tích Điểm hòa vốn (Break-even Analysis)",
+      "title": "3. Phân tích Điểm Hòa vốn & Biểu đồ Hòa vốn (Break-even Chart)",
       "selector": "#sec-break-even",
-      "en": "Section 3 defines the Break-Even Point: the exact level of sales output where total revenue perfectly equals total costs, yielding zero profit and zero loss. The Margin of Safety measures the amount by which current actual sales exceed the break-even output level.",
-      "vi": "Mục ba định nghĩa Điểm hòa vốn (Break-Even Point): mức sản lượng bán ra mà tại đó tổng doanh thu vừa vặn bù đắp toàn bộ tổng chi phí, không có lãi và cũng không bị lỗ. Biên độ an toàn (Margin of Safety) là khoảng chênh lệch mà mức doanh số thực tế hiện tại vượt trên mức sản lượng hòa vốn.",
+      "en": "Section 3 examines break-even analysis: identifying the exact output where Total Revenue equals Total Costs, yielding zero operating profit and zero loss. The Break-Even Chart visually models fixed costs, total costs, total revenue, and the safety buffer separating expected sales from break-even output.",
+      "vi": "Mục ba nghiên cứu phân tích điểm hòa vốn: xác định mức sản lượng chính xác mà tại đó Tổng doanh thu bằng Tổng chi phí, tức lợi nhuận bằng không và không bị lỗ. Biểu đồ hòa vốn trực quan hóa đường chi phí cố định, tổng chi phí, tổng doanh thu và biên độ an toàn giữa mức doanh số dự kiến so với điểm hòa vốn.",
       "duration": 34.29,
-      "startTime": 154.84,
-      "endTime": 189.13,
+      "startTime": 242.72,
+      "endTime": 277.01,
       "audioUrl": "/audio/lectures/business/4_2/sec_break_even.mp3"
     },
     {
       "id": "card_calc_breakeven",
-      "title": "Công thức tính Điểm hòa vốn và Đóng góp biên",
+      "title": "🧮 Công thức Tính Điểm Hòa vốn & Số dư Đảm phí (Contribution)",
       "selector": "#card-calc-breakeven",
-      "en": "The Cambridge mathematical formula computes Break-Even Output as: Total Fixed Costs divided by Contribution per unit. Contribution per unit equals Selling Price minus Variable Cost per unit.",
-      "vi": "Công thức toán học chuẩn Cambridge tính Sản lượng hòa vốn bằng: Tổng chi phí cố định chia cho Đóng góp biên trên mỗi đơn vị sản phẩm (Contribution per unit). Trong đó, Đóng góp biên bằng Giá bán trừ đi Chi phí biến đổi của một sản phẩm.",
+      "en": "Break-even output is calculated mathematically in two steps: first calculate Contribution per unit (Selling Price minus Variable Cost per unit); second, divide Total Fixed Costs by Contribution per unit. Margin of safety measures actual or planned unit sales minus the break-even output.",
+      "vi": "Mức sản lượng hòa vốn được tính theo công thức hai bước: đầu tiên tính Số dư đảm phí trên mỗi đơn vị sản phẩm (Giá bán trừ Chi phí biến đổi một sản phẩm); sau đó lấy Tổng chi phí cố định chia cho Số dư đảm phí đơn vị. Biên độ an toàn bằng sản lượng tiêu thụ thực tế hoặc dự kiến trừ đi sản lượng hòa vốn.",
       "duration": 27.09,
-      "startTime": 189.13,
-      "endTime": 216.22,
+      "startTime": 277.01,
+      "endTime": 304.1,
       "audioUrl": "/audio/lectures/business/4_2/card_calc_breakeven.mp3"
     },
     {
       "id": "sec_breakeven-shifts",
-      "title": "4. Biến động Điểm hòa vốn và Ra quyết định Quản trị",
+      "title": "4. Chiến lược làm bài thi Cambridge: Biến động Điểm Hòa vốn & Ra Quyết định",
       "selector": "#sec-breakeven-shifts",
-      "en": "Section 4 analyzes shifts on the break-even chart. Raising selling prices steepens the total revenue line, lowering the break-even point. Increasing fixed costs shifts the total cost line upwards, raising the break-even point. Managers use break-even charts to model 'what-if' pricing scenarios and assess launch viability.",
-      "vi": "Mục bốn phân tích các dịch chuyển trên đồ thị hòa vốn. Tăng giá bán làm dốc hơn đường tổng doanh thu, kéo giảm sản lượng hòa vốn. Tăng chi phí cố định đẩy đường tổng chi phí lên cao, làm tăng sản lượng hòa vốn cần bán. Ban giám đốc dùng biểu đồ hòa vốn để mô phỏng các kịch bản định giá và đánh giá tính khả thi trước khi ra mắt sản phẩm.",
+      "en": "Section 4 highlights Cambridge examination technique regarding cost variations. Raising selling prices steepens the total revenue slope and lowers the break-even volume, expanding the safety margin. Conversely, escalating supplier prices or factory overheads lift the total cost line upward, increasing commercial risk.",
+      "vi": "Mục bốn nhấn mạnh chiến lược làm bài thi Cambridge về biến động chi phí. Tăng giá bán làm cho đường tổng doanh thu dốc hơn và hạ thấp sản lượng hòa vốn, giúp mở rộng biên độ an toàn. Ngược lại, chi phí nguyên vật liệu hoặc chi phí cố định leo thang sẽ đẩy đường tổng chi phí lên cao, làm tăng rủi ro kinh doanh.",
       "duration": 42.33,
-      "startTime": 216.22,
-      "endTime": 258.55,
+      "startTime": 304.1,
+      "endTime": 346.43,
       "audioUrl": "/audio/lectures/business/4_2/sec_breakeven-shifts.mp3"
     }
   ]

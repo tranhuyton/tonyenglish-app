@@ -2,25 +2,25 @@
   "lectureId": "5421db93-9d7b-4241-b362-171974092a30",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "5.4. Statement of financial position",
-  "totalDuration": 194.58,
-  "majorSections": [
-    {
-      "id": "sec_balance_sheet",
-      "title": "1. Bản chất Bảng Cân đối Kế toán"
+  "totalDuration": 235.68,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "card_assets",
-      "title": "2. Tài sản Dài hạn & Ngắn hạn"
+    "sec_balance_sheet": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "card_liabilities",
-      "title": "3. Nợ Dài hạn & Ngắn hạn"
+    "sec_using_balance_sheet": {
+      "start": 4,
+      "end": 5
     },
-    {
-      "id": "sec_using_balance_sheet",
-      "title": "4. Phân tích Thanh khoản & Vốn chủ sở hữu"
+    "sec_interpret_balance_sheet": {
+      "start": 6,
+      "end": 6
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -46,7 +46,7 @@
     },
     {
       "id": "card_assets",
-      "title": "Tài sản: Tài sản Dài hạn và Tài sản Ngắn hạn",
+      "title": "🟢 Tài sản: Tài sản Dài hạn và Tài sản Ngắn hạn (Assets)",
       "selector": "#card-assets",
       "en": "Assets represent items of value owned by the business. Non-current assets are tangible resources held for longer than one year, such as land, factories, and vehicles. Current assets are short-term resources converted into cash within twelve months: inventory, trade receivables, and bank balances.",
       "vi": "Tài sản là những nguồn lực có giá trị thuộc quyền sở hữu của doanh nghiệp. Tài sản dài hạn (Non-current assets) có thời gian sử dụng trên một năm như đất đai, nhà xưởng, xe cộ. Tài sản ngắn hạn (Current assets) chuyển hóa thành tiền trong vòng 12 tháng: hàng tồn kho, khoản phải thu khách hàng và tiền gửi ngân hàng.",
@@ -57,7 +57,7 @@
     },
     {
       "id": "card_liabilities",
-      "title": "Nợ phải trả: Nợ Ngắn hạn và Nợ Dài hạn",
+      "title": "🔴 Nợ phải trả: Nợ Ngắn hạn và Nợ Dài hạn (Liabilities)",
       "selector": "#card-liabilities",
       "en": "Liabilities represent debts owed to external creditors. Current liabilities must be settled within one year, including trade payables and bank overdrafts. Non-current liabilities represent long-term obligations repayable after more than a year, such as bank mortgages and debentures.",
       "vi": "Nợ phải trả là các nghĩa vụ tài chính mà doanh nghiệp nợ bên thứ ba. Nợ ngắn hạn (Current liabilities) phải trả trong vòng một năm như nợ nhà cung cấp và thấu chi ngân hàng. Nợ dài hạn (Non-current liabilities) là các khoản vay có thời hạn thanh toán trên một năm như vay thế chấp và trái phiếu dài hạn.",
@@ -78,14 +78,25 @@
       "audioUrl": "/audio/lectures/business/5_4/sec_using_balance_sheet.mp3"
     },
     {
+      "id": "card_packer_sports",
+      "title": "📊 Ví dụ Minh họa: Đọc hiểu Bảng Cân đối Kế toán Packer Sports",
+      "selector": "#card-packer-sports",
+      "en": "Reviewing the Packer Sports balance sheet: Total assets of thirty-nine thousand dollars are predominantly tied up in non-current machinery. Current assets of fifteen thousand easily cover five thousand in short-term debts. However, long-term bank loans of twenty thousand exceed shareholder equity, demonstrating elevated financial gearing.",
+      "vi": "Phân tích bảng cân đối kế toán Packer Sports: Tổng tài sản ba mươi chín ngàn đô phần lớn tập trung ở máy móc nhà xưởng dài hạn. Tài sản ngắn hạn mười lăm ngàn thừa sức chi trả năm ngàn nợ ngắn hạn. Tuy nhiên khoản vay ngân hàng dài hạn hai mươi ngàn vượt xa vốn chủ sở hữu, cho thấy tỷ lệ đòn bẩy nợ (gearing) ở mức cao rủi ro.",
+      "duration": 41.1,
+      "startTime": 164.47,
+      "endTime": 205.57,
+      "audioUrl": "/audio/lectures/business/5_4/card_packer_sports.mp3"
+    },
+    {
       "id": "sec_interpret_balance_sheet",
       "title": "3. Phân tích Bảng Cân đối Kế toán theo chuẩn Cambridge",
       "selector": "#sec-interpret-balance-sheet",
       "en": "Section 3 evaluates capital employed and shareholder funds. Candidates must evaluate capital structure: high debt gearing exposes the firm to interest rate surges, while healthy equity reserves provide solid financial resilience.",
       "vi": "Mục ba đánh giá vốn hoạt động (capital employed) và vốn chủ sở hữu. Thí sinh cần phân tích cơ cấu vốn: tỷ lệ nợ vay quá cao khiến doanh nghiệp dễ tổn thương trước biến động lãi suất, trong khi nguồn vốn chủ sở hữu dồi dào tạo nền tảng tài chính vững chắc.",
       "duration": 30.11,
-      "startTime": 164.47,
-      "endTime": 194.58,
+      "startTime": 205.57,
+      "endTime": 235.68,
       "audioUrl": "/audio/lectures/business/5_4/sec_interpret_balance_sheet.mp3"
     }
   ]

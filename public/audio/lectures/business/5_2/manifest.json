@@ -2,21 +2,29 @@
   "lectureId": "dc0411df-d831-468a-9a7d-16fb4009290d",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "5.2. Cash flow forecasting and working capital",
-  "totalDuration": 192.61,
-  "majorSections": [
-    {
-      "id": "sec_cash_flow_forecasts",
-      "title": "1. Bản chất & Chu kỳ Dòng tiền"
+  "totalDuration": 301.31,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_working_capital",
-      "title": "2. Quản trị Vốn lưu động (Working Capital)"
+    "sec_cash_and_cycle": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_overcome_cashflow",
-      "title": "3. Giải pháp Xử lý Khủng hoảng Dòng tiền"
+    "sec_cash_flow_forecasts": {
+      "start": 4,
+      "end": 5
+    },
+    "sec_working_capital": {
+      "start": 6,
+      "end": 7
+    },
+    "sec_overcome_cashflow": {
+      "start": 8,
+      "end": 8
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -30,58 +38,91 @@
       "audioUrl": "/audio/lectures/business/5_2/intro.mp3"
     },
     {
-      "id": "sec_cash_flow_forecasts",
-      "title": "1. Bản chất của Dự báo Dòng tiền",
-      "selector": "#sec-cash-flow-forecasts",
-      "en": "Section 1 defines a Cash Flow Forecast as an estimate of future cash inflows and cash outflows of a business on a month-by-month basis. Forecasting anticipates cash deficits well in advance, allowing managers to arrange bank overdrafts before payroll defaults occur.",
-      "vi": "Mục một định nghĩa Bảng dự báo dòng tiền là ước tính các khoản tiền mặt thực thu vào và chi ra của doanh nghiệp theo từng tháng trong tương lai. Dự báo giúp phát hiện sớm nguy cơ thiếu hụt tiền mặt để chủ động xin hạn mức thấu chi ngân hàng trước khi xảy ra chậm lương nhân viên.",
-      "duration": 31.14,
+      "id": "sec_cash_and_cycle",
+      "title": "1. Bản chất Dòng tiền & Vòng Chu chuyển Dòng tiền",
+      "selector": "#sec-cash-and-cycle",
+      "en": "Section 1 establishes the distinction between liquid cash and accounting profit. Cash is the actual money in the bank available immediately to settle bills. Profit is revenue minus total expenses. A profitable business can still go bankrupt if cash is depleted before trade debts are recollected.",
+      "vi": "Mục một thiết lập sự khác biệt then chốt giữa tiền mặt và lợi nhuận kế toán. Tiền mặt là lượng tiền khả dụng trong ngân hàng để thanh toán tức thì các hóa đơn. Lợi nhuận là doanh thu trừ tổng chi phí. Một doanh nghiệp có lãi trên sổ sách vẫn có thể bị phá sản nếu cạn sạch tiền mặt trước khi thu hồi được các khoản nợ bán chịu.",
+      "duration": 38.75,
       "startTime": 39.35,
-      "endTime": 70.49,
-      "audioUrl": "/audio/lectures/business/5_2/sec_cash_flow_forecasts.mp3"
+      "endTime": 78.1,
+      "audioUrl": "/audio/lectures/business/5_2/sec_cash_and_cycle.mp3"
+    },
+    {
+      "id": "card_cash_vs_profit",
+      "title": "💵 Tiền Mặt vs Lợi Nhuận: Vì sao Doanh nghiệp có lãi vẫn phá sản?",
+      "selector": "#card-cash-vs-profit",
+      "en": "Profit does not equal cash in hand. When goods are sold on credit, revenue and paper profits register immediately, yet cash has not been received. If cash outflows for wages and rent fall due before debtors settle, the business experiences insolvency collapse despite record sales profits.",
+      "vi": "Lợi nhuận không đồng nghĩa với tiền mặt trong tay. Khi bán hàng trả chậm, doanh thu và lợi nhuận trên giấy tờ được ghi nhận ngay, nhưng tiền mặt thực tế chưa về tài khoản. Nếu các khoản chi tiền mặt cho tiền lương và tiền thuê nhà đến hạn trước khi khách trả nợ, doanh nghiệp sẽ rơi vào tình trạng vỡ nợ thanh khoản dù lợi nhuận bán hàng cao kỷ lục.",
+      "duration": 39.02,
+      "startTime": 78.1,
+      "endTime": 117.12,
+      "audioUrl": "/audio/lectures/business/5_2/card_cash_vs_profit.mp3"
     },
     {
       "id": "card_cashflow_cycle",
-      "title": "Vòng chu chuyển Dòng tiền (The Cash Flow Cycle)",
+      "title": "🔄 Vòng Chu chuyển Dòng tiền (The Cash Flow Cycle)",
       "selector": "#card-cashflow-cycle",
       "en": "The Cash Flow Cycle shows how cash is converted into raw materials, transformed into work-in-progress, delivered to trade credit customers as trade receivables, and eventually recollected as cash. The longer this cycle takes, the greater the working capital tied up.",
       "vi": "Vòng chu chuyển dòng tiền mô tả quá trình tiền mặt được dùng để mua nguyên liệu, đưa vào sản xuất dở dang, bán cho khách hàng nợ tiền (khoản phải thu) và cuối cùng thu hồi lại thành tiền mặt. Chu kỳ này càng kéo dài thì lượng vốn lưu động bị ứ đọng càng lớn.",
       "duration": 31.86,
-      "startTime": 70.49,
-      "endTime": 102.35,
+      "startTime": 117.12,
+      "endTime": 148.98,
       "audioUrl": "/audio/lectures/business/5_2/card_cashflow_cycle.mp3"
     },
     {
+      "id": "sec_cash_flow_forecasts",
+      "title": "2. Bảng Dự báo Dòng tiền & Phương pháp Tính toán",
+      "selector": "#sec-cash-flow-forecasts",
+      "en": "Section 2 defines a Cash Flow Forecast as an estimate of future cash inflows and cash outflows on a month-by-month basis. Forecasting anticipates cash deficits well in advance, allowing managers to arrange bank overdrafts before payroll defaults occur.",
+      "vi": "Mục hai định nghĩa Bảng dự báo dòng tiền là ước tính các khoản tiền mặt thực thu vào và chi ra của doanh nghiệp theo từng tháng trong tương lai. Dự báo giúp phát hiện sớm nguy cơ thiếu hụt tiền mặt để chủ động xin hạn mức thấu chi ngân hàng trước khi xảy ra chậm lương nhân viên.",
+      "duration": 31.14,
+      "startTime": 148.98,
+      "endTime": 180.12,
+      "audioUrl": "/audio/lectures/business/5_2/sec_cash_flow_forecasts.mp3"
+    },
+    {
       "id": "card_cashflow_formulas",
-      "title": "Công thức Tính toán Dòng tiền Chuẩn Cambridge",
+      "title": "🧮 Công thức Tính toán Dòng tiền Chuẩn Cambridge",
       "selector": "#card-cashflow-formulas",
       "en": "Master three core formulas: Net Cash Flow equals Total Cash Inflows minus Total Cash Outflows; Closing Bank Balance equals Opening Bank Balance plus Net Cash Flow; and Opening Balance of month two always equals Closing Balance of month one.",
       "vi": "Nắm vững ba công thức tính cốt lõi: Dòng tiền thuần (Net Cash Flow) bằng Tổng thu trừ Tổng chi; Số dư cuối kỳ bằng Số dư đầu kỳ cộng Dòng tiền thuần; và Số dư đầu kỳ của tháng sau luôn bằng chính Số dư cuối kỳ của tháng trước.",
       "duration": 28.79,
-      "startTime": 102.35,
-      "endTime": 131.14,
+      "startTime": 180.12,
+      "endTime": 208.91,
       "audioUrl": "/audio/lectures/business/5_2/card_cashflow_formulas.mp3"
     },
     {
       "id": "sec_working_capital",
-      "title": "2. Vai trò Sống còn của Vốn lưu động (Working Capital)",
+      "title": "3. Vai trò Sống còn của Vốn lưu động (Working Capital)",
       "selector": "#sec-working-capital",
-      "en": "Section 2 defines Working Capital as Current Assets minus Current Liabilities. Known as the lifeblood of day-to-day operations, adequate working capital guarantees prompt settlement of supplier bills and prevents bankruptcy due to sudden illiquidity.",
-      "vi": "Mục hai định nghĩa Vốn lưu động bằng Tài sản ngắn hạn trừ Nợ ngắn hạn. Được ví như mạch máu nuôi dưỡng hoạt động thường nhật, vốn lưu động đầy đủ bảo đảm thanh toán đúng hạn cho nhà cung cấp và ngăn ngừa nguy cơ phá sản do mất khả năng thanh toán tức thời.",
+      "en": "Section 3 defines Working Capital as Current Assets minus Current Liabilities. Known as the lifeblood of day-to-day operations, adequate working capital guarantees prompt settlement of supplier bills and prevents bankruptcy due to sudden illiquidity.",
+      "vi": "Mục ba định nghĩa Vốn lưu động bằng Tài sản ngắn hạn trừ Nợ ngắn hạn. Được ví như mạch máu nuôi dưỡng hoạt động thường nhật, vốn lưu động đầy đủ bảo đảm thanh toán đúng hạn cho nhà cung cấp và ngăn ngừa nguy cơ phá sản do mất khả năng thanh toán tức thời.",
       "duration": 29.08,
-      "startTime": 131.14,
-      "endTime": 160.22,
+      "startTime": 208.91,
+      "endTime": 237.99,
       "audioUrl": "/audio/lectures/business/5_2/sec_working_capital.mp3"
     },
     {
+      "id": "card_working_capital_balance",
+      "title": "⚖️ Cân Bằng Vốn Lưu Động: Thiếu Hụt vs Dư Thừa Vốn Lưu Động",
+      "selector": "#card-working-capital-balance",
+      "en": "Working capital requires delicate balance: a deficit forces clearance stock discounting at severe losses and emergency high-interest overdraft loans, while an excess ties up unproductive liquid funds that could otherwise earn capital returns or finance growth assets.",
+      "vi": "Vốn lưu động đòi hỏi sự cân bằng tinh tế: thiếu hụt vốn lưu động buộc doanh nghiệp phải bán tháo hàng tồn kho chịu lỗ nặng và vay thấu chi lãi suất cao, trong khi dư thừa vốn lưu động lại làm đóng băng các nguồn vốn nhàn rỗi lẽ ra có thể đem lại lợi tức sinh lời hoặc tài trợ mở rộng cơ sở vật chất.",
+      "duration": 30.93,
+      "startTime": 237.99,
+      "endTime": 268.92,
+      "audioUrl": "/audio/lectures/business/5_2/card_working_capital_balance.mp3"
+    },
+    {
       "id": "sec_overcome_cashflow",
-      "title": "3. Giải pháp Khắc phục Khủng hoảng Dòng tiền",
+      "title": "4. Chiến lược thi Cambridge: Giải pháp Khắc phục Khủng hoảng Dòng tiền",
       "selector": "#sec-overcome-cashflow",
-      "en": "Section 3 evaluates methods to overcome cash flow crises: negotiating extended supplier trade credit, factoring debtor invoices for immediate 80% cash advances, selling off obsolete inventory at discount, and delaying non-essential capital equipment investments.",
-      "vi": "Mục ba đánh giá các giải pháp ứng phó khủng hoảng dòng tiền: đàm phán kéo dài thời hạn nợ với nhà cung cấp, bán các hóa đơn nợ cho công ty bao thanh toán (debt factoring) để lấy ngay tiền mặt, giảm giá xả hàng tồn kho ứ đọng và hoãn mua sắm các thiết bị máy móc chưa thực sự cần thiết.",
+      "en": "Section 4 evaluates methods to overcome cash flow crises: negotiating extended supplier trade credit, factoring debtor invoices for immediate 80% cash advances, selling off obsolete inventory at discount, and delaying non-essential capital equipment investments.",
+      "vi": "Mục bốn đánh giá các giải pháp ứng phó khủng hoảng dòng tiền: đàm phán kéo dài thời hạn nợ với nhà cung cấp, bán các hóa đơn nợ cho công ty bao thanh toán (debt factoring) để lấy ngay tiền mặt, giảm giá xả hàng tồn kho ứ đọng và hoãn mua sắm các thiết bị máy móc chưa thực sự cần thiết.",
       "duration": 32.39,
-      "startTime": 160.22,
-      "endTime": 192.61,
+      "startTime": 268.92,
+      "endTime": 301.31,
       "audioUrl": "/audio/lectures/business/5_2/sec_overcome_cashflow.mp3"
     }
   ]

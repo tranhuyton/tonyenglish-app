@@ -2,29 +2,37 @@
   "lectureId": "7b510a8f-757c-4856-9c68-65f98bf96836",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "5.1. Business Finance: Needs and Sources",
-  "totalDuration": 334.47,
-  "majorSections": [
-    {
-      "id": "sec_need_finance",
-      "title": "1. Nhu cầu Vốn Doanh nghiệp"
+  "totalDuration": 522.42,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_short_long_term",
-      "title": "2. Thời hạn Vốn (Ngắn hạn & Dài hạn)"
+    "sec_need_finance": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_internal_external",
-      "title": "3. Nguồn vốn Nội bộ và Bên ngoài"
+    "sec_short_long_term": {
+      "start": 3,
+      "end": 5
     },
-    {
-      "id": "sec_alternative_sources",
-      "title": "4. Vốn Thay thế (Crowdfunding, Venture Capital)"
+    "sec_internal_external": {
+      "start": 6,
+      "end": 8
     },
-    {
-      "id": "sec_choosing_finance",
-      "title": "5. Tiêu chí Lựa chọn & Chiến lược thi Cambridge"
+    "sec_alternative_sources": {
+      "start": 9,
+      "end": 10
+    },
+    "sec_choosing_finance": {
+      "start": 11,
+      "end": 11
+    },
+    "sec_recommend_finance": {
+      "start": 12,
+      "end": 12
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -49,15 +57,48 @@
       "audioUrl": "/audio/lectures/business/5_1/sec_need_finance.mp3"
     },
     {
+      "id": "card_finance_needs",
+      "title": "💰 Ba Mục Đích Cốt Lõi: Khởi Nghiệp, Mở Rộng & Vốn Lưu Động",
+      "selector": "#card-finance-needs",
+      "en": "Enterprises require capital for three fundamental horizons: Start-up capital pays for fixed non-current premises and opening inventories before trading starts. Expansion capital funds R&D projects and larger production facilities. Working capital ensures immediate cash liquidity to satisfy day-to-day payroll, inventory replenishment, and utility overheads.",
+      "vi": "Doanh nghiệp cần vốn cho ba mục đích nền tảng: Vốn khởi nghiệp chi trả cho tài sản cố định ban đầu và lượng hàng tồn kho khai trương trước khi có doanh thu. Vốn mở rộng tài trợ cho các dự án nghiên cứu R&D và xây dựng phân xưởng lớn hơn. Vốn lưu động duy trì thanh khoản tiền mặt sẵn sàng để trả lương nhân viên, bù đắp hàng tồn kho và thanh toán hóa đơn vận hành mỗi ngày.",
+      "duration": 44.87,
+      "startTime": 79.93,
+      "endTime": 124.8,
+      "audioUrl": "/audio/lectures/business/5_1/card_finance_needs.mp3"
+    },
+    {
       "id": "sec_short_long_term",
       "title": "2. Nhu cầu Vốn Ngắn hạn và Dài hạn",
       "selector": "#sec-short-long-term",
       "en": "Section 2 matches financing durations to asset life. Short-term finance, under one year, bridges immediate liquidity deficits via bank overdrafts and trade credit. Long-term finance, extending beyond five years, funds major capital assets through bank mortgages, debentures, and issuing equity share capital.",
       "vi": "Mục hai ghép nối thời hạn vay vốn với tuổi thọ của tài sản. Vốn ngắn hạn dưới một năm bù đắp thiếu hụt thanh khoản tạm thời qua thấu chi ngân hàng và tín dụng thương mại. Vốn dài hạn trên năm năm tài trợ cho các tài sản cố định lớn thông qua các khoản vay thế chấp ngân hàng, trái phiếu doanh nghiệp và phát hành cổ phiếu mới.",
       "duration": 40.34,
-      "startTime": 79.93,
-      "endTime": 120.27,
+      "startTime": 124.8,
+      "endTime": 165.14,
       "audioUrl": "/audio/lectures/business/5_1/sec_short_long_term.mp3"
+    },
+    {
+      "id": "card_short_term",
+      "title": "⚡ Các Nguồn Vốn Ngắn Hạn (< 1 năm): Overdraft, Trade Credit, Debt Factoring",
+      "selector": "#card-short-term",
+      "en": "Short-term instruments solve working capital timing mismatches. Bank overdrafts provide flexible revolving credit lines where interest accrues only on overdrawn balances. Trade credit defers supplier settlements interest-free for 30 to 90 days. Debt factoring liquidates unpaid customer invoices into immediate cash at a modest factoring discount.",
+      "vi": "Các công cụ ngắn hạn giải quyết sự lệch pha về thời gian của vốn lưu động. Thấu chi ngân hàng cung cấp hạn mức tín dụng linh hoạt và chỉ tính lãi trên số tiền rút vượt. Tín dụng thương mại cho phép hoãn trả tiền nhà cung cấp từ 30 đến 90 ngày hoàn toàn không lãi suất. Bán nợ (Debt Factoring) chuyển đổi các hóa đơn khách hàng chưa trả thành tiền mặt ngay lập tức với một khoản chiết khấu nhỏ.",
+      "duration": 46.26,
+      "startTime": 165.14,
+      "endTime": 211.4,
+      "audioUrl": "/audio/lectures/business/5_1/card_short_term.mp3"
+    },
+    {
+      "id": "card_long_term",
+      "title": "🏗️ Các Nguồn Vốn Dài Hạn (> 1 năm): Vay Ngân Hàng, Thuê Tài Chính, Cổ Phiếu & Trái Phiếu",
+      "selector": "#card-long-term",
+      "en": "Long-term instruments fund durable capital acquisitions. Bank loans provide structured, predictable amortized instalments. Hire purchase and leasing eliminate upfront asset capital expenditure while preserving cash reserves. Issuing equity shares raises substantial non-repayable capital for limited companies without incurring debt obligations, while debentures secure long-term loan capital backed by business collateral.",
+      "vi": "Các nguồn vốn dài hạn tài trợ cho tài sản cố định có độ bền cao. Vay ngân hàng cung cấp lịch trình trả nợ định kỳ cố định dễ dự báo. Thuê mua và thuê tài chính giúp loại bỏ chi phí mua sắm ban đầu khổng lồ để bảo toàn quỹ tiền mặt. Phát hành cổ phiếu huy động nguồn vốn cổ phần vĩnh viễn không cần trả nợ cho các công ty TNHH và công ty đại chúng, trong khi trái phiếu (debentures) huy động các khoản vay dài hạn có tài sản thế chấp.",
+      "duration": 52.48,
+      "startTime": 211.4,
+      "endTime": 263.88,
+      "audioUrl": "/audio/lectures/business/5_1/card_long_term.mp3"
     },
     {
       "id": "sec_internal_external",
@@ -66,30 +107,30 @@
       "en": "Section 3 classifies finance by origin. Internal finance comes from retained operating profits, sale of redundant non-current assets, and managing working capital tightly. External finance originates from commercial lenders, leasing companies, new equity investors, and government grants.",
       "vi": "Mục ba phân loại vốn theo xuất xứ. Vốn nội bộ bắt nguồn từ lợi nhuận giữ lại qua các năm, thanh lý tài sản cố định dư thừa và siết chặt quản lý vốn lưu động. Vốn bên ngoài đến từ các ngân hàng thương mại, công ty cho thuê tài chính, cổ đông góp vốn mới và các gói trợ cấp của chính phủ.",
       "duration": 37.38,
-      "startTime": 120.27,
-      "endTime": 157.65,
+      "startTime": 263.88,
+      "endTime": 301.26,
       "audioUrl": "/audio/lectures/business/5_1/sec_internal_external.mp3"
     },
     {
       "id": "card_internal_sources",
-      "title": "Ưu nhược điểm của Nguồn vốn Nội bộ",
+      "title": "🏠 Ưu nhược điểm của Nguồn vốn Nội bộ (Internal Finance)",
       "selector": "#card-internal-sources",
       "en": "Internal finance incurs zero interest charges, requires no debt collateral, and maintains 100% owner control. However, newly formed startups lack retained earnings, and selling essential factory machinery permanently degrades production capacity.",
       "vi": "Vốn nội bộ không phát sinh chi phí lãi vay, không cần thế chấp tài sản và duy trì trọn vẹn quyền kiểm soát của chủ sở hữu. Tuy nhiên, các công ty mới thành lập chưa có lợi nhuận tích lũy, và việc bán máy móc thiết bị thiết yếu có thể làm suy giảm nghiêm trọng năng lực sản xuất.",
       "duration": 32.8,
-      "startTime": 157.65,
-      "endTime": 190.45,
+      "startTime": 301.26,
+      "endTime": 334.06,
       "audioUrl": "/audio/lectures/business/5_1/card_internal_sources.mp3"
     },
     {
       "id": "card_external_sources",
-      "title": "Các Kênh Vốn Bên ngoài Cốt lõi",
+      "title": "🌍 Các Kênh Vốn Bên ngoài Cốt lõi (External Finance)",
       "selector": "#card-external-sources",
       "en": "External financing channels include: Bank overdrafts offering flexible emergency cash; Trade credit providing 30 to 60 days of interest-free supplier financing; Hire purchase and leasing avoiding massive upfront capital outlay; and Share issues raising vast equity without debt repayment deadlines.",
       "vi": "Các kênh vốn bên ngoài cốt lõi gồm: Thấu chi ngân hàng (Bank overdraft) cung ứng tiền mặt linh hoạt trong tình huống khẩn cấp; Tín dụng thương mại (Trade credit) cho phép nợ tiền nhà cung cấp 30 đến 60 ngày không lãi suất; Thuê mua và thuê tài chính giúp tránh chi khoản tiền vốn ban đầu quá lớn; và Phát hành cổ phiếu huy động nguồn vốn khổng lồ mà không phải chịu áp lực trả nợ gốc.",
       "duration": 38.78,
-      "startTime": 190.45,
-      "endTime": 229.23,
+      "startTime": 334.06,
+      "endTime": 372.84,
       "audioUrl": "/audio/lectures/business/5_1/card_external_sources.mp3"
     },
     {
@@ -99,9 +140,20 @@
       "en": "Section 4 explores innovative financing: Crowdfunding raises micro-contributions from thousands of online backers; Microfinance delivers small loans to impoverished entrepreneurs in developing nations; and Venture Capital provides equity funding and mentorship to high-risk, high-growth technology ventures.",
       "vi": "Mục bốn tìm hiểu các nguồn vốn đổi mới sáng tạo: Gọi vốn cộng đồng (Crowdfunding) huy động hàng ngàn khoản tiền nhỏ từ công chúng trực tuyến; Tài chính vi mô (Microfinance) cung cấp các khoản vay nhỏ cho người nghèo khởi nghiệp tại các nước đang phát triển; và Quỹ đầu tư mạo hiểm (Venture Capital) rót vốn cổ phần kèm cố vấn chiến lược cho các startup công nghệ tăng trưởng nhanh.",
       "duration": 38.9,
-      "startTime": 229.23,
-      "endTime": 268.13,
+      "startTime": 372.84,
+      "endTime": 411.74,
       "audioUrl": "/audio/lectures/business/5_1/sec_alternative_sources.mp3"
+    },
+    {
+      "id": "card_crowdfunding_micro",
+      "title": "💡 So Sánh Chi Tiết: Crowdfunding vs Microfinance",
+      "selector": "#card-crowdfunding-micro",
+      "en": "Crowdfunding mobilizes voluntary backing from global online communities on platforms like Kickstarter, testing product market demand with zero loan debt, yet exposing project ideas to public imitators. Microfinance provides crucial financial lifelines to unbanked grassroots entrepreneurs in emerging economies, unlocking micro-enterprise self-sufficiency.",
+      "vi": "Gọi vốn cộng đồng huy động sự ủng hộ tự nguyện từ cộng đồng mạng toàn cầu trên các nền tảng như Kickstarter, giúp đo lường nhu cầu thị trường mà không tạo gánh nặng nợ vay, nhưng có thể để lộ ý tưởng kinh doanh cho đối thủ sao chép. Tài chính vi mô cung cấp đòn bẩy vốn nhỏ thiết yếu cho các cá nhân khó tiếp cận ngân hàng tại các nền kinh tế đang phát triển, mở ra con đường tự chủ tài chính cho các hộ kinh doanh cá thể.",
+      "duration": 44.34,
+      "startTime": 411.74,
+      "endTime": 456.08,
+      "audioUrl": "/audio/lectures/business/5_1/card_crowdfunding_micro.mp3"
     },
     {
       "id": "sec_choosing_finance",
@@ -110,8 +162,8 @@
       "en": "Section 5 presents the selection matrix: purpose and duration of finance, total amount required, legal business structure (sole traders cannot issue shares), interest rate expense, and owner appetite for debt gearing versus equity dilution.",
       "vi": "Mục năm cung cấp ma trận lựa chọn nguồn vốn: mục đích và thời hạn sử dụng vốn, tổng số tiền cần huy động, loại hình pháp lý (doanh nghiệp tư nhân không được phát hành cổ phiếu), chi phí lãi suất vay và mức độ sẵn sàng chấp nhận đòn bẩy nợ so với việc bị pha loãng quyền sở hữu công ty.",
       "duration": 30.76,
-      "startTime": 268.13,
-      "endTime": 298.89,
+      "startTime": 456.08,
+      "endTime": 486.84,
       "audioUrl": "/audio/lectures/business/5_1/sec_choosing_finance.mp3"
     },
     {
@@ -121,8 +173,8 @@
       "en": "Section 6 details the Cambridge evaluation strategy for finance questions. Candidates must evaluate gearing risks: borrowing excessively increases default bankruptcy risks if trading conditions deteriorate, while equity issues permanently surrender future dividend yields to incoming shareholders.",
       "vi": "Mục sáu hướng dẫn chiến lược trả lời câu hỏi thi Cambridge về nguồn vốn. Thí sinh phải phân tích rủi ro tỷ lệ đòn bẩy tài chính (gearing): vay nợ quá nhiều làm tăng nguy cơ vỡ nợ phá sản khi thị trường biến động tiêu cực, trong khi phát hành cổ phiếu mới sẽ vĩnh viễn chia sẻ cổ tức tương lai cho các cổ đông mới.",
       "duration": 35.58,
-      "startTime": 298.89,
-      "endTime": 334.47,
+      "startTime": 486.84,
+      "endTime": 522.42,
       "audioUrl": "/audio/lectures/business/5_1/sec_recommend_finance.mp3"
     }
   ]
