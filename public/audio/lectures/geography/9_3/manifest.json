@@ -3,33 +3,32 @@
   "courseTitle": "Cambridge IGCSE Geography",
   "lectureTitle": "9.3 Tourism is a growing industry",
   "totalDuration": 466.85,
-  "majorSections": [
-    {
-      "id": "sec_growth_tourism",
-      "title": "1. Sự tăng trưởng của du lịch",
-      "startSegmentId": "sec_growth_tourism"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 2
     },
-    {
-      "id": "sec_tourism_flows",
-      "title": "2. Các luồng du lịch toàn cầu",
-      "startSegmentId": "sec_tourism_flows"
+    "sec_growth_tourism": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_types_tourism",
-      "title": "3. Các loại hình du lịch",
-      "startSegmentId": "sec_types_tourism"
+    "sec_tourism_flows": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_impacts_tourism",
-      "title": "4. Tác động của du lịch (EVE)",
-      "startSegmentId": "sec_impacts_tourism"
+    "sec_types_tourism": {
+      "start": 5,
+      "end": 5
     },
-    {
-      "id": "sec_sustainable_tourism",
-      "title": "5. Du lịch bền vững: Jamaica",
-      "startSegmentId": "sec_sustainable_tourism"
+    "sec_impacts_tourism": {
+      "start": 6,
+      "end": 10
+    },
+    "sec_sustainable_tourism": {
+      "start": 11,
+      "end": 12
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
