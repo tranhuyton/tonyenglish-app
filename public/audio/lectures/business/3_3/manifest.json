@@ -1,30 +1,38 @@
 {
   "lectureId": "25fe41d9-780d-41a6-876d-fff3e0d854c5",
   "courseTitle": "Cambridge IGCSE Business Studies",
-  "lectureTitle": "3.3. The marketing mix",
-  "totalDuration": 302.57,
-  "majorSections": [
-    {
-      "id": "sec_product",
-      "title": "1. Chiến lược Sản phẩm & PLC"
+  "lectureTitle": "3.3. Marketing mix",
+  "totalDuration": 539.47,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_price",
-      "title": "2. Chiến lược Giá cả & PED"
+    "sec_product": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_place",
-      "title": "3. Kênh Phân phối (Place)"
+    "sec_price": {
+      "start": 4,
+      "end": 6
     },
-    {
-      "id": "sec_promotion",
-      "title": "4. Phối thức Chiêu thị (Promotion)"
+    "sec_place": {
+      "start": 7,
+      "end": 8
     },
-    {
-      "id": "sec_marketing_tech",
-      "title": "5. E-commerce & Digital Marketing"
+    "sec_promotion": {
+      "start": 9,
+      "end": 10
+    },
+    "sec_marketing_tech": {
+      "start": 11,
+      "end": 12
+    },
+    "sec_recommend_4ps": {
+      "start": 13,
+      "end": 13
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -49,70 +57,136 @@
       "audioUrl": "/audio/lectures/business/3_3/sec_product.mp3"
     },
     {
+      "id": "card_npd_brand",
+      "title": "🚀 Phát triển Sản phẩm Mới (NPD) & Thương hiệu, Bao bì",
+      "selector": "#card-npd-brand",
+      "en": "New Product Development involves six systematic stages: idea generation, screening, sales assessment, prototyping, test launch, and full launch. Concurrently, distinctive branding and protective packaging build customer recognition, command premium prices, and safeguard products during distribution.",
+      "vi": "Quy trình phát triển sản phẩm mới (NPD) gồm sáu bước: tìm ý tưởng, sàng lọc, đánh giá tiềm năng doanh số, tạo mẫu thử, bán thử nghiệm và ra mắt chính thức. Đồng thời, thương hiệu độc đáo và bao bì bảo vệ giúp tăng cường nhận diện của khách hàng, cho phép định giá cao và bảo quản sản phẩm an toàn.",
+      "duration": 38.85,
+      "startTime": 82.02,
+      "endTime": 120.87,
+      "audioUrl": "/audio/lectures/business/3_3/card_npd_brand.mp3"
+    },
+    {
       "id": "card_plc",
-      "title": "Vòng đời Sản phẩm (Product Life Cycle - PLC)",
+      "title": "📈 Vòng đời Sản phẩm (Product Life Cycle - PLC)",
       "selector": "#card-plc",
       "en": "The Product Life Cycle traces sales volume across six stages: Development, Introduction, Growth, Maturity, Saturation, and Decline. Extension strategies—such as rebranding, reformulating ingredients, or entering overseas markets—rejuvenate sales before a product reaches full obsolescence.",
-      "vi": "Vòng đời sản phẩm (PLC) theo dõi doanh số qua sáu giai đoạn: Phát triển, Giới thiệu, Tăng trưởng, Chín muồi, Bão hòa và Suy thoái. Các chiến lược kéo dài vòng đời như đổi mới bao bì, cải tiến công thức hoặc mở rộng thị trường xuất khẩu giúp khôi phục đà tăng trưởng trước khi sản phẩm bị đào thải.",
+      "vi": "Vòng đời sản phẩm (PLC) theo dõi doanh số qua các giai đoạn: Phát triển, Giới thiệu, Tăng trưởng, Chín muồi, Bão hòa và Suy thoái. Các chiến lược kéo dài vòng đời như đổi mới bao bì, cải tiến công thức hoặc mở rộng thị trường xuất khẩu giúp khôi phục đà tăng trưởng trước khi sản phẩm bị đào thải.",
       "duration": 38.68,
-      "startTime": 82.02,
-      "endTime": 120.7,
+      "startTime": 120.87,
+      "endTime": 159.55,
       "audioUrl": "/audio/lectures/business/3_3/card_plc.mp3"
     },
     {
       "id": "sec_price",
       "title": "2. Chữ P thứ hai: Giá cả (Price)",
       "selector": "#sec-price",
-      "en": "Section 2 investigates pricing strategies: Cost-plus pricing adds a markup margin over unit costs; Penetration pricing sets low entry prices to rapidly capture market share; Price skimming charges high initial prices for novel technologies; and Competitive pricing matches prevailing market levels.",
-      "vi": "Mục hai nghiên cứu các chiến lược định giá: Định giá cộng chi phí (Cost-plus) cộng biên lợi nhuận vào chi phí đơn vị; Định giá thâm nhập (Penetration) đặt giá thấp ban đầu để nhanh chóng chiếm thị phần; Định giá hớt váng (Skimming) đặt giá cao ngất ngưởng cho công nghệ mới độc quyền; và Định giá theo đối thủ cạnh tranh.",
+      "en": "Section 2 focuses on Price: the monetary consideration exchanged between buyers and sellers. Pricing decisions must reflect manufacturing costs, product uniqueness, competitive intensity, and the target market's purchasing power.",
+      "vi": "Mục hai tập trung vào Giá cả (Price): số tiền trao đổi giữa người mua và người bán. Quyết định định giá phải phản ánh chi phí sản xuất, tính độc đáo của sản phẩm, mức độ cạnh tranh trên thị trường và khả năng chi trả của khách hàng mục tiêu.",
       "duration": 36.69,
-      "startTime": 120.7,
-      "endTime": 157.39,
+      "startTime": 159.55,
+      "endTime": 196.24,
       "audioUrl": "/audio/lectures/business/3_3/sec_price.mp3"
     },
     {
       "id": "card_pricing_methods",
-      "title": "Độ co giãn của Cầu theo Giá (Price Elasticity of Demand - PED)",
+      "title": "💵 5 Phương pháp Định giá Cốt lõi (Methods of Pricing)",
       "selector": "#card-pricing-methods",
-      "en": "Price Elasticity of Demand measures the responsiveness of quantity demanded to a change in price. For price-elastic goods with many substitutes, price cuts boost total revenue; for price-inelastic necessities, raising prices expands revenue without significantly denting sales volume.",
-      "vi": "Độ co giãn của cầu theo giá (PED) đo lường mức độ phản ứng của lượng cầu khi giá thay đổi. Với hàng hóa co giãn có nhiều sản phẩm thay thế, giảm giá sẽ làm tăng tổng doanh thu; ngược lại với hàng thiết yếu kém co giãn, tăng giá giúp tăng mạnh doanh thu mà không làm sụt giảm sản lượng.",
+      "en": "Businesses utilize distinct pricing tactics: Market Skimming sets high prices for innovative novelties; Penetration Pricing starts low to capture market share; Competitive Pricing aligns with rivals; Cost-plus Pricing guarantees markup over expenses; while Loss Leaders sacrifice immediate margins to drive foot traffic.",
+      "vi": "Doanh nghiệp áp dụng các chiến lược giá khác nhau: Hớt váng (Skimming) đặt giá cao cho sản phẩm đột phá; Thâm nhập (Penetration) đặt giá thấp để giành thị phần; Cạnh tranh (Competitive) bám sát đối thủ; Cộng chi phí (Cost-plus) bảo đảm lợi nhuận trên chi phí; và Giá bán lỗ thu hút (Loss Leader) hy sinh lợi nhuận ngắn hạn để kéo khách hàng đến điểm bán.",
       "duration": 35.18,
-      "startTime": 157.39,
-      "endTime": 192.57,
+      "startTime": 196.24,
+      "endTime": 231.42,
       "audioUrl": "/audio/lectures/business/3_3/card_pricing_methods.mp3"
     },
     {
+      "id": "card_ped",
+      "title": "📊 Độ co giãn của Cầu theo Giá (Price Elasticity of Demand - PED)",
+      "selector": "#card-ped",
+      "en": "Price Elasticity of Demand measures how responsive demand is to price changes. For price-elastic products with close substitutes, cutting prices boosts sales volume and revenue. For inelastic necessities with high brand loyalty, raising prices expands overall revenue because demand barely drops.",
+      "vi": "Độ co giãn của cầu theo giá (PED) đo lường mức độ phản ứng của lượng cầu khi giá bán thay đổi. Với sản phẩm có cầu co giãn (nhiều hàng thay thế), giảm giá sẽ đẩy mạnh doanh số và tổng doanh thu. Với hàng thiết yếu có cầu không co giãn hoặc thương hiệu mạnh, tăng giá sẽ giúp tăng tổng doanh thu vì lượng cầu sụt giảm rất ít.",
+      "duration": 39.9,
+      "startTime": 231.42,
+      "endTime": 271.32,
+      "audioUrl": "/audio/lectures/business/3_3/card_ped.mp3"
+    },
+    {
       "id": "sec_place",
-      "title": "3. Chữ P thứ ba: Phân phối (Place)",
+      "title": "3. Chữ P thứ ba: Kênh phân phối (Place)",
       "selector": "#sec-place",
-      "en": "Section 3 evaluates distribution channels: Channel 1 sells directly from producer to consumer; Channel 2 utilizes independent retailers; Channel 3 introduces wholesalers; and Channel 4 deploys overseas sales agents. Direct selling maximizes profit margins, while wholesaler networks maximize physical retail coverage.",
-      "vi": "Mục ba đánh giá các kênh phân phối: Kênh 1 bán trực tiếp từ nhà sản xuất đến người tiêu dùng; Kênh 2 thông qua nhà bán lẻ; Kênh 3 qua nhà bán buôn và bán lẻ; Kênh 4 qua đại lý xuất khẩu. Bán trực tiếp tối đa hóa biên lợi nhuận, trong khi mạng lưới đại lý và bán buôn tối đa hóa độ phủ sóng trên thị trường.",
+      "en": "Section 3 examines Place: distribution channels connecting manufacturers to end consumers. Whether selling directly, via retailers, through wholesalers, or using specialist overseas agents, channel decisions dictate logistics costs and retail coverage.",
+      "vi": "Mục ba xem xét Kênh phân phối (Place): các mắt xích kết nối nhà sản xuất với người tiêu dùng cuối. Dù bán trực tiếp, qua nhà bán lẻ, thông qua nhà bán buôn hay đại lý nước ngoài, quyết định kênh phân phối quyết định chi phí vận tải và độ phủ thị trường.",
       "duration": 39.62,
-      "startTime": 192.57,
-      "endTime": 232.19,
+      "startTime": 271.32,
+      "endTime": 310.94,
       "audioUrl": "/audio/lectures/business/3_3/sec_place.mp3"
     },
     {
+      "id": "card_distribution_channels",
+      "title": "🚚 4 Kênh Phân phối & Quyết định Lựa chọn Kênh",
+      "selector": "#card-distribution-channels",
+      "en": "Businesses choose between four distribution channels: direct to consumer for maximum profit margins; via retailers for convenience; through wholesalers for bulk breaking; or via overseas agents for export markets. Decisions depend on product perishability, unit value, technical complexity, and target market geography.",
+      "vi": "Doanh nghiệp lựa chọn giữa bốn kênh phân phối: trực tiếp cho người tiêu dùng để giữ trọn lợi nhuận; qua nhà bán lẻ để tạo thuận tiện mua sắm; qua nhà bán buôn để chia nhỏ lô hàng; hoặc qua đại lý xuất khẩu ra nước ngoài. Quyết định phụ thuộc vào hạn sử dụng của sản phẩm, giá trị đơn vị, độ phức tạp kỹ thuật và vị trí địa lý của thị trường mục tiêu.",
+      "duration": 40.77,
+      "startTime": 310.94,
+      "endTime": 351.71,
+      "audioUrl": "/audio/lectures/business/3_3/card_distribution_channels.mp3"
+    },
+    {
       "id": "sec_promotion",
-      "title": "4. Chữ P thứ tư: Chiêu thị (Promotion)",
+      "title": "4. Chữ P thứ tư: Chiêu thị & Quảng bá (Promotion)",
       "selector": "#sec-promotion",
-      "en": "Section 4 covers the promotional mix: Above-the-line advertising via television, radio, billboards, and internet banners; and Below-the-line promotions via point-of-sale discounts, buy-one-get-one-free offers, sponsorship, and public relations.",
-      "vi": "Mục bốn bao quát phối thức chiêu thị: Quảng cáo trên các phương tiện đại chúng (Above-the-line) như truyền hình, phát thanh, biển bảng và banner trực tuyến; cùng các chương trình xúc tiến bán trực tiếp (Below-the-line) như giảm giá tại quầy, mua một tặng một, tài trợ sự kiện và quan hệ công chúng (PR).",
+      "en": "Section 4 covers Promotion: paid advertising, below-the-line sales promotions, personal selling, direct mail, and sponsorships designed to inform and persuade consumers while building enduring brand goodwill.",
+      "vi": "Mục bốn bao quát Chiêu thị (Promotion): quảng cáo truyền thông, khuyến mãi bán hàng, chào hàng trực tiếp, gửi thư quảng bá và tài trợ sự kiện nhằm cung cấp thông tin, thuyết phục người tiêu dùng và xây dựng hình ảnh thương hiệu bền vững.",
       "duration": 33.64,
-      "startTime": 232.19,
-      "endTime": 265.83,
+      "startTime": 351.71,
+      "endTime": 385.35,
       "audioUrl": "/audio/lectures/business/3_3/sec_promotion.mp3"
     },
     {
+      "id": "card_promotion_types",
+      "title": "✨ Các Hình thức Chiêu thị: Quảng cáo, Khuyến mại & Bán hàng trực tiếp",
+      "selector": "#card-promotion-types",
+      "en": "The promotional mix combines above-the-line informative and persuasive advertising with below-the-line tactics: buy-one-get-one-free sales promotions, coupons, personal selling for high-value items, direct mail, and event sponsorship. Decisions reflect promotional budgets, the product life cycle stage, and target audience media habits.",
+      "vi": "Phối thức chiêu thị kết hợp quảng cáo đại chúng (thông tin và thuyết phục) với các hoạt động kích cầu: khuyến mại mua một tặng một, phiếu giảm giá, bán hàng trực tiếp đối với mặt hàng giá trị cao, gửi thư trực tiếp và tài trợ sự kiện. Việc lựa chọn phản ánh ngân sách chiêu thị, giai đoạn vòng đời sản phẩm và thói quen tiếp nhận truyền thông của khách hàng mục tiêu.",
+      "duration": 41.54,
+      "startTime": 385.35,
+      "endTime": 426.89,
+      "audioUrl": "/audio/lectures/business/3_3/card_promotion_types.mp3"
+    },
+    {
       "id": "sec_marketing_tech",
-      "title": "5. Công nghệ trong Tiếp thị: Thương mại điện tử và Mạng xã hội",
+      "title": "5. Công nghệ & Tiếp thị Hỗn hợp (E-Commerce & Social Media)",
       "selector": "#sec-marketing-tech",
-      "en": "Section 5 evaluates how digital technology transforms marketing. E-commerce enables round-the-clock global trading, dynamic algorithmic pricing, and reduced physical shop rent. Social media advertising facilitates precision demographic targeting and viral word-of-mouth campaigns.",
-      "vi": "Mục năm phân tích sự chuyển đổi tiếp thị trong thời đại số. Thương mại điện tử cho phép bán hàng toàn cầu 24/7, định giá linh hoạt theo thuật toán và cắt giảm chi phí thuê mặt bằng vật lý. Quảng cáo mạng xã hội giúp nhắm mục tiêu chính xác theo nhân khẩu học và tạo chiến dịch lan tỏa tự nhiên.",
+      "en": "Section 5 examines Technology in the Marketing Mix, highlighting how e-commerce unlocks global consumer bases 24/7, reduces overhead store costs, and harnesses viral social media promotion—while exposing firms to fierce international competition and cybersecurity risks.",
+      "vi": "Mục năm nghiên cứu Công nghệ trong Tiếp thị hỗn hợp, nhấn mạnh thương mại điện tử giúp tiếp cận khách hàng toàn cầu 24/7, giảm chi phí mặt bằng và tận dụng lan tỏa mạng xã hội – đồng thời đặt doanh nghiệp trước cạnh tranh toàn cầu và rủi ro an ninh mạng.",
       "duration": 36.74,
-      "startTime": 265.83,
-      "endTime": 302.57,
+      "startTime": 426.89,
+      "endTime": 463.63,
       "audioUrl": "/audio/lectures/business/3_3/sec_marketing_tech.mp3"
+    },
+    {
+      "id": "card_ecommerce_impact",
+      "title": "📱 Tác động của E-commerce & Tiếp thị Mạng xã hội",
+      "selector": "#card-ecommerce-impact",
+      "en": "E-commerce empowers businesses with 24/7 global reach, lower fixed retail rents, and dynamic targeted marketing via social media algorithms and viral influencers. However, firms face aggressive global price competition, website maintenance overheads, return logistics, and cybersecurity threats.",
+      "vi": "Thương mại điện tử mang lại cho doanh nghiệp khả năng tiếp cận toàn cầu 24/7, giảm chi phí thuê mặt bằng cố định và cho phép quảng cáo nhắm mục tiêu linh hoạt qua thuật toán mạng xã hội và người ảnh hưởng. Tuy nhiên, doanh nghiệp phải đương đầu với cạnh tranh giá khốc liệt trên toàn cầu, chi phí bảo trì trang web, xử lý hàng hoàn trả và các mối đe dọa an ninh mạng.",
+      "duration": 40.14,
+      "startTime": 463.63,
+      "endTime": 503.77,
+      "audioUrl": "/audio/lectures/business/3_3/card_ecommerce_impact.mp3"
+    },
+    {
+      "id": "sec_recommend_4ps",
+      "title": "6. Chiến lược làm bài thi Cambridge: Đề xuất Phối thức Marketing Mix",
+      "selector": "#sec-recommend-4ps",
+      "en": "Section 6 highlights Cambridge exam strategy for recommending marketing mix decisions. Candidates must ensure full alignment across all four Ps, justify pricing and distribution choices using case study context, respect budgetary limitations, and evaluate potential competitor retaliation.",
+      "vi": "Mục sáu nhấn mạnh chiến lược làm bài thi Cambridge khi đề xuất phối thức tiếp thị hỗn hợp. Thí sinh phải bảo đảm sự nhất quán hoàn hảo giữa cả 4 chữ P, giải thích thuyết phục cho lựa chọn giá và kênh phân phối dựa vào bối cảnh đề bài, tôn trọng giới hạn ngân sách và đánh giá phản ứng đáp trả của đối thủ.",
+      "duration": 35.7,
+      "startTime": 503.77,
+      "endTime": 539.47,
+      "audioUrl": "/audio/lectures/business/3_3/sec_recommend_4ps.mp3"
     }
   ]
 }

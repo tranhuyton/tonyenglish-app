@@ -2,29 +2,33 @@
   "lectureId": "fe4967aa-7d4c-480c-af71-e0d867459044",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "2.2. Organisation and people management",
-  "totalDuration": 350.66,
-  "majorSections": [
-    {
-      "id": "sec_org_structure",
-      "title": "1. Cơ cấu Tổ chức Doanh nghiệp"
+  "totalDuration": 539.1,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_management",
-      "title": "2. Vai trò Quản trị và Sự ủy quyền"
+    "sec_org_structure": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_leadership_styles",
-      "title": "3. Ba Phong cách Lãnh đạo"
+    "sec_management": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_trade_unions",
-      "title": "4. Công đoàn lao động"
+    "sec_leadership_styles": {
+      "start": 5,
+      "end": 8
     },
-    {
-      "id": "sec_recommend_leadership",
-      "title": "5. Chiến lược làm bài thi Cambridge"
+    "sec_trade_unions": {
+      "start": 9,
+      "end": 11
+    },
+    "sec_recommend_leadership": {
+      "start": 12,
+      "end": 12
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -50,7 +54,7 @@
     },
     {
       "id": "card_org_concepts",
-      "title": "Các khái niệm then chốt trong Sơ đồ tổ chức",
+      "title": "🔑 Tầm kiểm soát, Chuỗi mệnh lệnh & Nhà quản lý trực tiếp/chuyên trách",
       "selector": "#card-org-concepts",
       "en": "Key structural concepts include: Chain of Command—the vertical route through which instructions pass down from directors to shopfloor workers; Span of Control—the number of subordinates directly answering to a superior; and the distinction between Line Managers possessing executive authority and Staff Managers providing specialist advisory support.",
       "vi": "Các khái niệm then chốt gồm: Chuỗi mệnh lệnh (Chain of Command) – con đường truyền đạt chỉ thị từ giám đốc xuống nhân viên; Tầm kiểm soát (Span of Control) – số lượng cấp dưới do một cấp trên trực tiếp quản lý; cùng sự phân biệt giữa Nhà quản lý trực tiếp (Line Manager) có quyền ra lệnh và Nhà quản lý chuyên trách (Staff Manager) giữ vai trò cố vấn chuyên môn.",
@@ -72,7 +76,7 @@
     },
     {
       "id": "card_delegation",
-      "title": "Sự Ủy quyền trong Quản lý (Delegation)",
+      "title": "🤝 Sự Ủy quyền trong Quản lý (Delegation)",
       "selector": "#card-delegation",
       "en": "Delegation is the passing down of operational authority from a senior manager to a subordinate to execute specific tasks, while ultimate accountability remains with the manager. Effective delegation frees executive time for strategic planning, trains employees for promotion, and demonstrates trust, though poor supervision risks operational blunders.",
       "vi": "Ủy quyền (Delegation) là việc trao quyền quyết định từ cấp quản lý xuống cấp dưới để hoàn thành công việc cụ thể, nhưng trách nhiệm giải trình cuối cùng vẫn thuộc về nhà quản lý. Ủy quyền hiệu quả giúp cấp trên có thời gian cho chiến lược dài hạn, rèn luyện nhân viên thăng tiến và thể hiện sự tin tưởng, dù việc thiếu giám sát có thể gây sai sót nghiệp vụ.",
@@ -93,25 +97,80 @@
       "audioUrl": "/audio/lectures/business/2_2/sec_leadership_styles.mp3"
     },
     {
+      "id": "card_autocratic",
+      "title": "🗣️ Phong cách Lãnh đạo Độc đoán (Autocratic Style)",
+      "selector": "#card-autocratic",
+      "en": "Autocratic leaders make all decisions independently and demand strict obedience without consulting subordinates. Communication flows strictly downwards. It is ideal in emergency crises, military operations, or urgent factory safety situations, but severely undermines employee morale and initiative over the long term.",
+      "vi": "Nhà lãnh đạo độc đoán tự mình đưa ra toàn bộ quyết định và yêu cầu cấp dưới chấp hành nghiêm ngặt mà không cần thảo luận. Luồng thông tin truyền đạt nghiêm ngặt từ trên xuống. Phong cách này phát huy hiệu quả tối đa trong tình huống khủng hoảng khẩn cấp, quốc phòng hoặc an toàn sản xuất, nhưng về lâu dài sẽ làm triệt tiêu tinh thần chủ động và sáng tạo của nhân viên.",
+      "duration": 40.48,
+      "startTime": 263.15,
+      "endTime": 303.63,
+      "audioUrl": "/audio/lectures/business/2_2/card_autocratic.mp3"
+    },
+    {
+      "id": "card_democratic",
+      "title": "🤝 Phong cách Lãnh đạo Dân chủ (Democratic Style)",
+      "selector": "#card-democratic",
+      "en": "Democratic leaders encourage two-way communication and actively consult employees before making final decisions. This approach boosts worker morale, fosters belonging, and generates innovative ideas from experienced staff, though the consultation process can slow down urgent decision-making.",
+      "vi": "Nhà lãnh đạo dân chủ khuyến khích giao tiếp hai chiều và tích cực tham vấn ý kiến nhân viên trước khi ra quyết định cuối cùng. Cách tiếp cận này nâng cao tinh thần làm việc, tạo cảm giác gắn kết và khai thác được nhiều sáng kiến hữu ích từ đội ngũ nhân viên, dù quá trình thảo luận có thể làm chậm tốc độ xử lý công việc.",
+      "duration": 35.06,
+      "startTime": 303.63,
+      "endTime": 338.69,
+      "audioUrl": "/audio/lectures/business/2_2/card_democratic.mp3"
+    },
+    {
+      "id": "card_laissez_faire",
+      "title": "🕊️ Phong cách Lãnh đạo Tự do (Laissez-faire Style)",
+      "selector": "#card-laissez-faire",
+      "en": "Laissez-faire leadership establishes broad strategic objectives while granting employees full autonomy to make decisions and organize their own tasks. It works best with highly skilled, self-motivated research scientists and software engineers, but risks severe lack of direction if workers lack experience or discipline.",
+      "vi": "Lãnh đạo tự do vạch ra các mục tiêu chiến lược tổng thể nhưng trao quyền tự quyết hoàn toàn cho nhân viên trong việc tổ chức công việc. Mô hình này phù hợp nhất với các nhóm nghiên cứu khoa học và kỹ sư phần mềm có chuyên môn cao và tính tự giác lớn, nhưng tiềm ẩn nguy cơ mất phương hướng nếu nhân sự thiếu kinh nghiệm hoặc kỷ luật.",
+      "duration": 36.3,
+      "startTime": 338.69,
+      "endTime": 374.99,
+      "audioUrl": "/audio/lectures/business/2_2/card_laissez_faire.mp3"
+    },
+    {
       "id": "sec_trade_unions",
       "title": "4. Công đoàn và Thương lượng tập thể",
       "selector": "#sec-trade-unions",
       "en": "Section 4 explores Trade Unions—independent worker associations that engage in collective bargaining with employers to secure fair wages, safe working environments, and legal representation. For employers, negotiating with a single union representative streamlines discussions, although unresolved labour disputes can trigger disruptive industrial action.",
       "vi": "Mục bốn phân tích vai trò của Công đoàn (Trade Unions) – tổ chức đại diện cho người lao động tiến hành thương lượng tập thể với người sử dụng lao động để bảo đảm mức lương công bằng, điều kiện an toàn và hỗ trợ pháp lý. Với chủ doanh nghiệp, việc đàm phán qua một đại diện công đoàn giúp tiết kiệm thời gian, dù tranh chấp bất đồng có thể dẫn tới đình công ảnh hưởng sản xuất.",
       "duration": 41.58,
-      "startTime": 263.15,
-      "endTime": 304.73,
+      "startTime": 374.99,
+      "endTime": 416.57,
       "audioUrl": "/audio/lectures/business/2_2/sec_trade_unions.mp3"
+    },
+    {
+      "id": "card_union_workers",
+      "title": "👥 Lợi ích và Hạn chế của Công đoàn đối với Người lao động",
+      "selector": "#card-union-workers",
+      "en": "For employees, trade unions provide collective strength, legal defense against unfair dismissal, and negotiate higher wages, shorter hours, and safer working conditions. However, workers must pay recurring membership dues and may be compelled to participate in unpaid strike actions they personally oppose.",
+      "vi": "Đối với người lao động, công đoàn mang lại sức mạnh tập thể, bảo vệ quyền lợi pháp lý trước các quyết định sa thải bất công và đàm phán nâng lương, giảm giờ làm, cải thiện an toàn lao động. Tuy nhiên, đoàn viên phải đóng đoàn phí định kỳ và có thể phải tham gia các cuộc đình công không lương dù bản thân không mong muốn.",
+      "duration": 37.1,
+      "startTime": 416.57,
+      "endTime": 453.67,
+      "audioUrl": "/audio/lectures/business/2_2/card_union_workers.mp3"
+    },
+    {
+      "id": "card_union_employers",
+      "title": "🏢 Tác động của Công đoàn đối với Người sử dụng lao động",
+      "selector": "#card-union-employers",
+      "en": "For employers, trade unions simplify human resources through collective bargaining with a single representative rather than hundreds of individuals, fostering structured dispute resolution. Conversely, unions possess bargaining power that increases wage costs, and industrial disputes can halt factory production and damage commercial goodwill.",
+      "vi": "Đối với chủ doanh nghiệp, công đoàn giúp đơn giản hóa quản trị nhân sự nhờ thương lượng tập thể với một đại diện duy nhất thay vì hàng trăm cá nhân riêng lẻ, giúp giải quyết tranh chấp có trật tự. Ngược lại, công đoàn có sức mạnh mặc cả đẩy chi phí tiền lương lên cao, và các cuộc tranh chấp lao động có thể làm tê liệt sản xuất và gây tổn hại uy tín thương mại.",
+      "duration": 39.5,
+      "startTime": 453.67,
+      "endTime": 493.17,
+      "audioUrl": "/audio/lectures/business/2_2/card_union_employers.mp3"
     },
     {
       "id": "sec_recommend_leadership",
       "title": "5. Chiến lược làm bài thi Cambridge: Đề xuất phong cách lãnh đạo",
       "selector": "#sec-recommend-leadership",
-      "en": "Section 5 presents Cambridge exam techniques for recommending leadership styles. High-scoring answers evaluate situational context: autocratic leadership suits crisis turnarounds or low-skilled repetitive assembly, whereas democratic styles maximize productivity among creative teams and R&D engineers. Justify by weighing speed of execution against workforce morale.",
-      "vi": "Mục năm cung cấp kỹ năng làm bài Cambridge khi đề xuất phong cách lãnh đạo. Bài làm điểm cao cần bám sát tình huống: lãnh đạo độc đoán phù hợp khi khủng hoảng cần hành động gấp hoặc công việc lặp đi lặp lại ít đòi hỏi kỹ năng, trong khi phong cách dân chủ phát huy tối đa hiệu quả trong nhóm sáng tạo và nghiên cứu phát triển. Biện minh bằng cách cân đối giữa tốc độ xử lý và tinh thần nhân viên.",
+      "en": "Section 5 outlines exam technique for leadership recommendation questions. Candidates must evaluate contextual factors: crisis situations require autocratic direction; creative technical projects thrive under democratic or laissez-faire autonomy. Always balance employee morale against decision turnaround time.",
+      "vi": "Mục năm cung cấp chiến thuật làm bài thi Cambridge cho câu hỏi đề xuất phong cách lãnh đạo. Thí sinh cần phân tích bối cảnh tình huống: trường hợp khủng hoảng đòi hỏi phong cách độc đoán; dự án sáng tạo kỹ thuật lại phát huy tối đa với phong cách dân chủ hoặc tự do. Luôn đối chiếu giữa tinh thần nhân viên và tốc độ ra quyết định.",
       "duration": 45.93,
-      "startTime": 304.73,
-      "endTime": 350.66,
+      "startTime": 493.17,
+      "endTime": 539.1,
       "audioUrl": "/audio/lectures/business/2_2/sec_recommend_leadership.mp3"
     }
   ]

@@ -2,25 +2,41 @@
   "lectureId": "356dede8-277a-441a-ad73-ef9384973eb7",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "3.2. Market research",
-  "totalDuration": 239.49,
-  "majorSections": [
-    {
-      "id": "sec_business_orientation",
-      "title": "1. Định hướng Doanh nghiệp"
+  "totalDuration": 415.94,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_primary_research",
-      "title": "2. Nghiên cứu Sơ cấp (Primary)"
+    "sec_business_orientation": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_secondary_research",
-      "title": "3. Nghiên cứu Thứ cấp (Secondary)"
+    "sec_market_research_intro": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_sampling_methods",
-      "title": "4. Kỹ thuật Chọn mẫu và Độ chính xác"
+    "sec_primary_research": {
+      "start": 5,
+      "end": 6
+    },
+    "sec_secondary_research": {
+      "start": 7,
+      "end": 8
+    },
+    "sec_accuracy_presentation": {
+      "start": 9,
+      "end": 9
+    },
+    "sec_sampling_methods": {
+      "start": 10,
+      "end": 10
+    },
+    "sec_recommend_research": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -45,15 +61,37 @@
       "audioUrl": "/audio/lectures/business/3_2/sec_business_orientation.mp3"
     },
     {
+      "id": "card_product_market_orientation",
+      "title": "🧭 Doanh nghiệp Định hướng Sản phẩm vs Định hướng Thị trường",
+      "selector": "#card-product-market-orientation",
+      "en": "Product-oriented firms focus on technical design and manufacturing capabilities, risking high launch failure if consumer demand does not materialize. In contrast, market-oriented businesses continuously conduct customer research to identify unmet desires before manufacturing, sharply lowering commercial failure rates and increasing long-term brand loyalty.",
+      "vi": "Doanh nghiệp định hướng sản phẩm chú trọng vào năng lực thiết kế kỹ thuật và sản xuất, tiềm ẩn rủi ro thất bại cao nếu thị trường không có nhu cầu. Ngược lại, doanh nghiệp định hướng thị trường liên tục khảo sát khách hàng để tìm ra các nhu cầu chưa được đáp ứng trước khi sản xuất, giúp giảm thiểu rủi ro thất bại và gia tăng lòng trung thành thương hiệu.",
+      "duration": 40.14,
+      "startTime": 70.38,
+      "endTime": 110.52,
+      "audioUrl": "/audio/lectures/business/3_2/card_product_market_orientation.mp3"
+    },
+    {
       "id": "sec_market_research_intro",
       "title": "2. Vai trò của Nghiên cứu Thị trường",
       "selector": "#sec-market-research-intro",
       "en": "Section 2 introduces Market Research: the systematic gathering, recording, and analysis of data about the market for goods and services. Research minimizes commercial launch risks, identifies market gaps, reveals customer willingness to pay, and gauges competitive strengths.",
       "vi": "Mục hai giới thiệu về Nghiên cứu thị trường: quá trình thu thập, ghi chép và phân tích có hệ thống thông tin về thị trường hàng hóa và dịch vụ. Nghiên cứu giúp hạn chế rủi ro ra mắt sản phẩm mới, phát hiện khoảng trống thị trường, xác định mức giá sẵn sàng chi trả và đánh giá đối thủ cạnh tranh.",
       "duration": 34.84,
-      "startTime": 70.38,
-      "endTime": 105.22,
+      "startTime": 110.52,
+      "endTime": 145.36,
       "audioUrl": "/audio/lectures/business/3_2/sec_market_research_intro.mp3"
+    },
+    {
+      "id": "card_quant_qual_data",
+      "title": "🔢 Dữ liệu Định lượng (Quantitative) vs Dữ liệu Định tính (Qualitative)",
+      "selector": "#card-quant-qual-data",
+      "en": "Market data is gathered in two fundamental forms: Quantitative data provides numerical measurements and statistics such as sales volumes and percentages; Qualitative data reveals in-depth consumer opinions, emotional motivations, and underlying reasons why customers prefer one brand over another.",
+      "vi": "Dữ liệu thị trường được thu thập dưới hai hình thức căn bản: Dữ liệu định lượng (Quantitative data) cung cấp các con số đo lường và thống kê số liệu như sản lượng bán và tỷ lệ phần trăm; Dữ liệu định tính (Qualitative data) đi sâu vào ý kiến, cảm xúc và lý do thực sự vì sao khách hàng lại yêu thích một thương hiệu này hơn thương hiệu khác.",
+      "duration": 36.88,
+      "startTime": 145.36,
+      "endTime": 182.24,
+      "audioUrl": "/audio/lectures/business/3_2/card_quant_qual_data.mp3"
     },
     {
       "id": "sec_primary_research",
@@ -62,9 +100,20 @@
       "en": "Section 3 examines Primary Research: gathering original first-hand data directly from respondents via questionnaires, focus groups, interviews, and direct observation. Primary data is up-to-date, directly relevant, and exclusive to the firm, but is expensive and time-consuming to execute.",
       "vi": "Mục ba phân tích Nghiên cứu sơ cấp (Primary Research): thu thập dữ liệu gốc lần đầu từ đối tượng khảo sát thông qua bảng câu hỏi, nhóm thảo luận tập trung, phỏng vấn sâu và quan sát thực tế. Dữ liệu sơ cấp có tính cập nhật cao, liên quan trực tiếp và mang tính độc quyền nhưng tốn kém chi phí và thời gian.",
       "duration": 36.59,
-      "startTime": 105.22,
-      "endTime": 141.81,
+      "startTime": 182.24,
+      "endTime": 218.83,
       "audioUrl": "/audio/lectures/business/3_2/sec_primary_research.mp3"
+    },
+    {
+      "id": "card_primary_methods",
+      "title": "🛠️ Các Phương pháp Nghiên cứu Sơ cấp (Bảng hỏi, Phỏng vấn, Thảo luận nhóm, Quan sát)",
+      "selector": "#card-primary-methods",
+      "en": "Primary research employs questionnaires for broad sampling, face-to-face interviews to probe complex answers, focus groups to test product prototypes, and observational auditing to track footfall patterns without survey bias.",
+      "vi": "Nghiên cứu sơ cấp sử dụng bảng câu hỏi để khảo sát số đông, phỏng vấn trực tiếp để làm rõ các câu trả lời phức tạp, nhóm thảo luận tập trung (focus groups) để trải nghiệm sản phẩm mẫu và quan sát thực tế để đếm lưu lượng khách hàng mà không bị định kiến phỏng vấn.",
+      "duration": 27.9,
+      "startTime": 218.83,
+      "endTime": 246.73,
+      "audioUrl": "/audio/lectures/business/3_2/card_primary_methods.mp3"
     },
     {
       "id": "sec_secondary_research",
@@ -73,31 +122,53 @@
       "en": "Section 4 covers Secondary Research: gathering second-hand data already published by internal records, government census bureaus, trade journals, or commercial research agencies. Secondary research is cheap and instantly accessible, but may be outdated, biased, or too general.",
       "vi": "Mục bốn trình bày Nghiên cứu thứ cấp (Secondary Research): khai thác dữ liệu đã được công bố từ hồ sơ nội bộ, số liệu thống kê chính phủ, tạp chí chuyên ngành hoặc báo cáo thị trường. Nghiên cứu thứ cấp chi phí thấp và tra cứu tức thì nhưng số liệu có thể bị lỗi thời hoặc không khớp với mục tiêu nghiên cứu cụ thể.",
       "duration": 36.02,
-      "startTime": 141.81,
-      "endTime": 177.83,
+      "startTime": 246.73,
+      "endTime": 282.75,
       "audioUrl": "/audio/lectures/business/3_2/sec_secondary_research.mp3"
+    },
+    {
+      "id": "card_secondary_sources",
+      "title": "🏢 Nguồn Dữ liệu Thứ cấp: Nội bộ vs Bên ngoài",
+      "selector": "#card-secondary-sources",
+      "en": "Secondary research divides into Internal Sources—including historical sales ledgers, customer service complaints, and finance budgets—and External Sources—such as government national statistics, industry journals, trade association analyses, and business media reports.",
+      "vi": "Nghiên cứu thứ cấp chia thành Nguồn nội bộ – bao gồm nhật ký bán hàng quá khứ, khiếu nại chăm sóc khách hàng và báo cáo tài chính – cùng Nguồn bên ngoài – như thống kê dân số chính phủ, tạp chí thương mại ngành, báo cáo hiệp hội ngành nghề và truyền thông kinh doanh.",
+      "duration": 31.12,
+      "startTime": 282.75,
+      "endTime": 313.87,
+      "audioUrl": "/audio/lectures/business/3_2/card_secondary_sources.mp3"
     },
     {
       "id": "sec_accuracy_presentation",
       "title": "5. Độ chính xác và Trình bày Dữ liệu",
       "selector": "#sec-accuracy-presentation",
-      "en": "Section 5 analyzes data presentation via bar charts, pie charts, and line graphs, and identifies sources of inaccuracies such as sample bias, poorly worded leading questions, dishonest respondent replies, and outdated secondary data.",
-      "vi": "Mục năm phân tích cách trình bày dữ liệu bằng biểu đồ cột, biểu đồ tròn và đồ thị đường thẳng, đồng thời chỉ ra các nguyên nhân gây sai lệch số liệu như mẫu khảo sát thiếu đại diện, câu hỏi định kiến dẫn dắt, câu trả lời thiếu trung thực và số liệu thứ cấp đã lỗi thời.",
+      "en": "Section 5 analyzes data presentation via tally tables, bar charts, pie charts, and line graphs, while identifying sources of inaccuracy including sample bias, leading questions, respondent dishonesty, and obsolete secondary archives.",
+      "vi": "Mục năm phân tích cách trình bày dữ liệu bằng bảng kiểm đếm, biểu đồ cột, biểu đồ tròn và đồ thị đường thẳng, đồng thời nhận diện các yếu tố gây sai lệch số liệu gồm mẫu khảo sát thiên lệch, câu hỏi dẫn dắt, câu trả lời thiếu trung thực và số liệu lưu trữ cũ đã lỗi thời.",
       "duration": 30.11,
-      "startTime": 177.83,
-      "endTime": 207.94,
+      "startTime": 313.87,
+      "endTime": 343.98,
       "audioUrl": "/audio/lectures/business/3_2/sec_accuracy_presentation.mp3"
     },
     {
       "id": "sec_sampling_methods",
-      "title": "6. Kỹ thuật Chọn mẫu và Chiến lược thi Cambridge",
+      "title": "6. Kỹ thuật Chọn mẫu: Chọn mẫu Ngẫu nhiên vs Theo Hạn ngạch",
       "selector": "#sec-sampling-methods",
-      "en": "Section 6 explores sampling methods including random sampling and quota sampling. In Cambridge exam evaluations, candidates must balance the budget constraints and speed of secondary desk research against the specialized accuracy of primary field studies.",
-      "vi": "Mục sáu nghiên cứu các phương pháp chọn mẫu như chọn mẫu ngẫu nhiên (random sampling) và chọn mẫu theo hạn ngạch (quota sampling). Trong đề thi Cambridge, thí sinh cần cân đối ngân sách và tốc độ của nghiên cứu thứ cấp với độ chính xác chuyên sâu của nghiên cứu sơ cấp.",
+      "en": "Section 6 contrasts sampling techniques: Random Sampling gives every population member an equal mathematical chance of selection, eliminating researcher bias; Quota Sampling selects predetermined proportions matching target market demographics (such as age and gender), ensuring exact consumer representation.",
+      "vi": "Mục sáu so sánh các kỹ thuật chọn mẫu: Chọn mẫu ngẫu nhiên (Random Sampling) trao cơ hội ngang nhau cho mọi thành viên trong tập số liệu, loại bỏ định kiến của người khảo sát; Chọn mẫu theo hạn ngạch (Quota Sampling) lựa chọn tỷ lệ định trước khớp với đặc tính khách hàng mục tiêu (như độ tuổi và giới tính), bảo đảm tính đại diện chuẩn xác cho phân khúc.",
       "duration": 31.55,
-      "startTime": 207.94,
-      "endTime": 239.49,
+      "startTime": 343.98,
+      "endTime": 375.53,
       "audioUrl": "/audio/lectures/business/3_2/sec_sampling_methods.mp3"
+    },
+    {
+      "id": "sec_recommend_research",
+      "title": "7. Chiến lược làm bài thi Cambridge: Đề xuất Phương pháp Nghiên cứu Thị trường",
+      "selector": "#sec-recommend-research",
+      "en": "Section 7 outlines Cambridge evaluation technique for recommending market research methods. Candidates must evaluate context: innovative new products require primary qualitative feedback; tight budgets and fast deadlines necessitate secondary desk data. Formulate a balanced recommendation mitigating costs against precision.",
+      "vi": "Mục bảy tổng hợp phương pháp làm bài thi Cambridge khi đề xuất phương án nghiên cứu thị trường. Thí sinh phải bám sát bối cảnh: sản phẩm đột phá mới cần nghiên cứu sơ cấp định tính; ngân sách hạn hẹp và tiến độ gấp rút đòi hỏi số liệu thứ cấp có sẵn. Luôn đưa ra kết luận cân đối giữa chi phí đầu tư và độ chính xác của thông tin.",
+      "duration": 40.41,
+      "startTime": 375.53,
+      "endTime": 415.94,
+      "audioUrl": "/audio/lectures/business/3_2/sec_recommend_research.mp3"
     }
   ]
 }

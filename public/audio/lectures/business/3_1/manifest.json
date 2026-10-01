@@ -2,28 +2,40 @@
   "lectureId": "6cbe4a84-26ed-4a1d-933b-5843e9b9a501",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "3.1. Marketing, competition and the customer",
-  "totalDuration": 226.92,
-  "majorSections": [
-    {
-      "id": "sec_what_is_marketing",
-      "title": "1. Bản chất và Mục tiêu Tiếp thị"
+  "totalDuration": 449.31,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_market_changes",
-      "title": "2. Biến động Thị trường và Cạnh tranh"
+    "sec_what_is_marketing": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_niche_mass",
-      "title": "3. Thị trường Ngách và Thị trường Đại trà"
+    "sec_market_changes": {
+      "start": 4,
+      "end": 6
+    },
+    "sec_niche_mass": {
+      "start": 7,
+      "end": 9
+    },
+    "sec_segmentation": {
+      "start": 10,
+      "end": 10
+    },
+    "sec_recommend_segmentation": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
       "title": "Giới thiệu Bài 3.1: Tiếp thị, Cạnh tranh và Khách hàng",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 3.1: Marketing, Competition and the Customer. In this opening chapter of Topic 3, we define the strategic role of marketing, explore why consumer spending patterns change, evaluate intensifying market competition, and contrast niche versus mass marketing.",
-      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 3.1: Tiếp thị, Cạnh tranh và Khách hàng. Trong bài mở đầu của Chủ đề ba về Tiếp thị, chúng ta sẽ định nghĩa vai trò chiến lược của marketing, tìm hiểu lý do thay đổi xu hướng tiêu dùng, đánh giá áp lực cạnh tranh gia tăng và so sánh thị trường ngách với thị trường đại trà.",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 3.1: Marketing, Competition and the Customer. In this opening chapter of Topic 3, we define the strategic role of marketing, explore why consumer spending patterns change, evaluate intensifying market competition, contrast niche versus mass marketing, and analyze market segmentation.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 3.1: Tiếp thị, Cạnh tranh và Khách hàng. Trong bài mở đầu của Chủ đề ba về Tiếp thị, chúng ta sẽ định nghĩa vai trò chiến lược của marketing, tìm hiểu lý do thay đổi xu hướng tiêu dùng, đánh giá áp lực cạnh tranh gia tăng, so sánh thị trường ngách với thị trường đại trà và phân tích phân đoạn thị trường.",
       "duration": 41.32,
       "startTime": 0.0,
       "endTime": 41.32,
@@ -33,8 +45,8 @@
       "id": "sec_what_is_marketing",
       "title": "1. Bản chất và Vai trò của Tiếp thị (Marketing)",
       "selector": "#sec-what-is-marketing",
-      "en": "Section 1 defines marketing as identifying, anticipating, and satisfying customer requirements profitably. Modern marketing centers on building long-term customer relationships and brand loyalty rather than merely making one-off sales.",
-      "vi": "Mục một định nghĩa marketing là quá trình nhận diện, dự đoán và thỏa mãn nhu cầu của khách hàng một cách có sinh lời. Marketing hiện đại tập trung vào việc kiến tạo mối quan hệ lâu dài và lòng trung thành với thương hiệu thay vì chỉ bán hàng một lần.",
+      "en": "Section 1 defines marketing as the management process responsible for identifying, anticipating, and satisfying customer requirements profitably. Modern marketing builds long-term customer relationships and brand equity rather than merely pursuing one-off transactions.",
+      "vi": "Mục một định nghĩa marketing là quá trình quản trị chịu trách nhiệm nhận diện, dự đoán và thỏa mãn các yêu cầu của khách hàng một cách có sinh lời. Marketing hiện đại tập trung vào việc nuôi dưỡng mối quan hệ khách hàng dài hạn và xây dựng giá trị thương hiệu bền vững thay vì chỉ theo đuổi các giao dịch đơn lẻ.",
       "duration": 29.44,
       "startTime": 41.32,
       "endTime": 70.76,
@@ -42,47 +54,113 @@
     },
     {
       "id": "card_marketing_role",
-      "title": "Các Mục tiêu Marketing then chốt",
+      "title": "🌟 Năm Vai trò Trọng tâm của Marketing",
       "selector": "#card-marketing-role",
-      "en": "Core marketing objectives include: boosting sales revenue and market share, building brand image and perceived customer equity, entering foreign overseas markets, and innovating new products to replace declining product lines.",
-      "vi": "Các mục tiêu marketing then chốt gồm: gia tăng doanh thu và mở rộng thị phần, củng cố hình ảnh thương hiệu và giá trị cảm nhận của khách hàng, thâm nhập thị trường quốc tế mới và liên tục cải tiến sản phẩm để thay thế các dòng sản phẩm đang bước vào giai đoạn suy thoái.",
+      "en": "Marketing executes five critical functions: identifying customer needs through research; satisfying those needs with the right product design; maintaining brand loyalty through customer care; gaining competitive intelligence; and anticipating shifting future preferences before rivals.",
+      "vi": "Marketing thực hiện năm chức năng trọng tâm: nhận diện nhu cầu khách hàng qua nghiên cứu thị trường; thỏa mãn nhu cầu bằng việc thiết kế sản phẩm chuẩn xác; duy trì lòng trung thành qua chế độ chăm sóc khách hàng; thu thập thông tin thị trường; và dự đoán các biến chuyển thị hiếu tương lai trước các đối thủ cạnh tranh.",
       "duration": 28.31,
       "startTime": 70.76,
       "endTime": 99.07,
       "audioUrl": "/audio/lectures/business/3_1/card_marketing_role.mp3"
     },
     {
+      "id": "card_marketing_objectives",
+      "title": "🎯 Mục tiêu Marketing & Công thức Tính Thị phần (Market Share)",
+      "selector": "#card-marketing-objectives",
+      "en": "Marketing objectives guide corporate efforts: increasing sales revenue, developing replacement products, and expanding market share. Market share represents the percentage of total industry sales generated by a specific company, calculated by dividing company sales by total market sales and multiplying by one hundred.",
+      "vi": "Các mục tiêu marketing định hướng hoạt động doanh nghiệp: gia tăng doanh thu bán hàng, phát triển sản phẩm mới và mở rộng thị phần. Thị phần (Market share) là tỷ lệ phần trăm doanh số của doanh nghiệp chiếm trong tổng dung lượng thị trường, được tính bằng cách lấy doanh số của doanh nghiệp chia cho tổng doanh số toàn thị trường và nhân với 100.",
+      "duration": 38.78,
+      "startTime": 99.07,
+      "endTime": 137.85,
+      "audioUrl": "/audio/lectures/business/3_1/card_marketing_objectives.mp3"
+    },
+    {
       "id": "sec_market_changes",
       "title": "2. Biến động Thị trường và Áp lực Cạnh tranh",
       "selector": "#sec-market-changes",
-      "en": "Section 2 investigates market dynamics. Customer spending shifts due to changing consumer tastes and fashions, rising disposable incomes, demographic changes such as an aging population, and rapid technological breakthroughs. To survive intensifying globalization and e-commerce rivalry, businesses must maintain competitive prices, uphold superior quality, and sustain promotional presence.",
-      "vi": "Mục hai nghiên cứu sự biến động của thị trường. Hành vi chi tiêu của người tiêu dùng thay đổi do thị hiếu và xu hướng mới, thu nhập khả dụng tăng, biến đổi nhân khẩu học như già hóa dân số và sự phát triển công nghệ vượt bậc. Để tồn tại trước sức ép toàn cầu hóa và thương mại điện tử, doanh nghiệp phải duy trì mức giá cạnh tranh, chất lượng vượt trội và đẩy mạnh truyền thông quảng bá.",
+      "en": "Section 2 investigates dynamic markets. Spending habits constantly shift due to changing trends, technological obsolescence, rising disposable incomes, and demographic aging. Concurrently, globalization, improved international transport, and e-commerce platforms intensify global competition.",
+      "vi": "Mục hai nghiên cứu sự biến động của thị trường. Xu hướng chi tiêu liên tục thay đổi do thị hiếu thời trang mới, công nghệ đào thải các sản phẩm cũ, thu nhập khả dụng gia tăng và xu hướng già hóa dân số. Đồng thời, toàn cầu hóa, sự cải tiến vận tải quốc tế và các nền tảng thương mại điện tử làm bùng nổ áp lực cạnh tranh trên toàn cầu.",
       "duration": 47.56,
-      "startTime": 99.07,
-      "endTime": 146.63,
+      "startTime": 137.85,
+      "endTime": 185.41,
       "audioUrl": "/audio/lectures/business/3_1/sec_market_changes.mp3"
+    },
+    {
+      "id": "card_spending_patterns",
+      "title": "❓ Vì sao Mô hình Chi tiêu của Người tiêu dùng Thay đổi?",
+      "selector": "#card-spending-patterns",
+      "en": "Customer spending shifts in response to four forces: evolving tastes and fashion preferences; technological innovation rendering legacy items obsolete; fluctuations in household disposable income; and demographic shifts such as aging populations demanding specialized healthcare products.",
+      "vi": "Mô hình chi tiêu của khách hàng biến động do bốn động lực chính: sự thay đổi thị hiếu và xu hướng thời trang; đổi mới công nghệ khiến các sản phẩm cũ bị lỗi thời; biến động thu nhập khả dụng của hộ gia đình; và các chuyển dịch nhân khẩu học như già hóa dân số làm tăng nhu cầu các sản phẩm chăm sóc sức khỏe chuyên biệt.",
+      "duration": 33.59,
+      "startTime": 185.41,
+      "endTime": 219.0,
+      "audioUrl": "/audio/lectures/business/3_1/card_spending_patterns.mp3"
+    },
+    {
+      "id": "card_competition_response",
+      "title": "⚔️ Cạnh tranh Gia tăng và Chiến lược Ứng phó của Doanh nghiệp",
+      "selector": "#card-competition-response",
+      "en": "To withstand intense rivalry driven by globalization and digital commerce, businesses must respond strategically: nurturing close customer relationships to retain brand loyalty; continually refining existing products; launching innovative offerings; and maintaining tight cost control to sustain competitive pricing.",
+      "vi": "Để trụ vững trước sự cạnh tranh khốc liệt từ toàn cầu hóa và thương mại điện tử, doanh nghiệp phải ứng phó bằng các chiến lược trọng tâm: nuôi dưỡng mối quan hệ chặt chẽ với khách hàng để giữ vững lòng trung thành; liên tục cải tiến chất lượng sản phẩm hiện có; ra mắt các dòng sản phẩm sáng tạo mới; và quản trị chi phí chặt chẽ để duy trì mức giá bán cạnh tranh.",
+      "duration": 37.1,
+      "startTime": 219.0,
+      "endTime": 256.1,
+      "audioUrl": "/audio/lectures/business/3_1/card_competition_response.mp3"
     },
     {
       "id": "sec_niche_mass",
       "title": "3. Thị trường Ngách (Niche) và Thị trường Đại trà (Mass)",
       "selector": "#sec-niche-mass",
-      "en": "Section 3 compares Niche Marketing—targeting a small, highly specialized segment of a larger market—against Mass Marketing, which sells standardized products to the entire market. Niche marketing avoids giant competitors and commands premium pricing, while mass marketing exploits massive economies of scale and widespread market reach.",
-      "vi": "Mục ba so sánh Thị trường ngách (Niche Marketing) – nhắm vào một phân khúc khách hàng nhỏ có nhu cầu chuyên biệt – với Thị trường đại trà (Mass Marketing) cung cấp sản phẩm chuẩn hóa cho số đông. Thị trường ngách giúp né tránh các đối thủ khổng lồ và định giá cao, trong khi thị trường đại trà tận dụng triệt để lợi thế kinh tế theo quy mô và độ phủ rộng lớn.",
+      "en": "Section 3 compares market scope strategies. Niche marketing targets small, specialized segments with tailored offerings, while mass marketing distributes standardized goods to the wider general public.",
+      "vi": "Mục ba so sánh chiến lược quy mô thị trường. Thị trường ngách (Niche marketing) nhắm vào các phân khúc nhỏ với các sản phẩm chuyên biệt độc đáo, trong khi thị trường đại trà (Mass marketing) phân phối các sản phẩm chuẩn hóa tới đông đảo công chúng trên diện rộng.",
       "duration": 40.77,
-      "startTime": 146.63,
-      "endTime": 187.4,
+      "startTime": 256.1,
+      "endTime": 296.87,
       "audioUrl": "/audio/lectures/business/3_1/sec_niche_mass.mp3"
     },
     {
-      "id": "card_niche_vs_mass",
-      "title": "So sánh Ưu nhược điểm: Niche vs Mass Marketing",
-      "selector": "#card-niche-vs-mass",
-      "en": "Niche marketing benefits from high profit margins and dedicated customer loyalty, but suffers from limited total sales volume and vulnerability if niche demand collapses. Conversely, mass marketing yields high total revenues, but faces cutthroat price competition, heavy advertising expenditures, and standardized product inflexibility.",
-      "vi": "Thị trường ngách mang lại biên lợi nhuận cao và sự gắn bó của khách hàng nhưng quy mô doanh thu bị giới hạn và rủi ro cao nếu nhu cầu phân khúc đó biến mất. Ngược lại, thị trường đại trà đem lại tổng doanh số khổng lồ nhưng phải đối mặt với cuộc chiến giá khốc liệt, ngân sách quảng cáo tốn kém và sự thiếu linh hoạt của sản phẩm đại trà.",
-      "duration": 39.52,
-      "startTime": 187.4,
-      "endTime": 226.92,
-      "audioUrl": "/audio/lectures/business/3_1/card_niche_vs_mass.mp3"
+      "id": "card_niche_marketing",
+      "title": "💎 Thị trường Ngách (Niche Marketing): Ưu và Nhược điểm",
+      "selector": "#card-niche-marketing",
+      "en": "Niche marketing enables smaller businesses to avoid direct confrontation with multinational giants, cater precisely to specialized tastes, and command premium price margins. However, it lacks economies of scale, caps maximum revenue potential, and leaves the firm vulnerable if consumer niche demand collapses.",
+      "vi": "Thị trường ngách cho phép các doanh nghiệp vừa và nhỏ tránh đối đầu trực diện với các tập đoàn đa quốc gia khổng lồ, phục vụ sát sao nhu cầu đặc thù và áp đặt mức giá bán cao với biên lợi nhuận lớn. Tuy nhiên, thị trường ngách thiếu tính kinh tế theo quy mô, giới hạn doanh thu tối đa và dễ rơi vào thế hiểm nghèo nếu nhu cầu phân khúc đó sụt giảm.",
+      "duration": 38.78,
+      "startTime": 296.87,
+      "endTime": 335.65,
+      "audioUrl": "/audio/lectures/business/3_1/card_niche_marketing.mp3"
+    },
+    {
+      "id": "card_mass_marketing",
+      "title": "🌎 Thị trường Đại trà (Mass Marketing): Ưu và Nhược điểm",
+      "selector": "#card-mass-marketing",
+      "en": "Mass marketing achieves massive aggregate sales volumes, exploits extensive production economies of scale to slash average unit costs, and diversifies commercial risks across broad audiences. Its drawbacks include ferocious price competition, costly mass-media marketing budgets, and inability to meet distinct consumer preferences.",
+      "vi": "Thị trường đại trà mang lại sản lượng tiêu thụ khổng lồ, khai thác triệt để tính kinh tế của quy mô để kéo giảm chi phí sản xuất bình quân trên mỗi đơn vị và phân tán rủi ro trên diện rộng. Nhược điểm lớn là cạnh tranh giá khốc liệt từ các đối thủ lớn, chi phí quảng cáo truyền thông tốn kém và không đáp ứng được sở thích riêng biệt của từng nhóm khách hàng.",
+      "duration": 39.9,
+      "startTime": 335.65,
+      "endTime": 375.55,
+      "audioUrl": "/audio/lectures/business/3_1/card_mass_marketing.mp3"
+    },
+    {
+      "id": "sec_segmentation",
+      "title": "🧩 4. Phân đoạn Thị trường (Market Segmentation)",
+      "selector": "#sec-segmentation",
+      "en": "Section 4 examines market segmentation—dividing a broad consumer base into identifiable subgroups sharing common characteristics. Segmentation criteria include socio-economic income brackets, demographic age groups, geographic regions, and gender profiles, enabling targeted four-P marketing mixes.",
+      "vi": "Mục bốn phân tích phân đoạn thị trường – việc phân chia thị trường tổng thể thành các nhóm nhỏ có chung các đặc tính tiêu dùng tương đồng. Các tiêu chí phân đoạn bao gồm mức thu nhập kinh tế xã hội, nhóm tuổi nhân khẩu học, vị trí địa lý vùng miền và giới tính, từ đó giúp doanh nghiệp thiết kế chiến lược 4P chính xác cho từng đối tượng.",
+      "duration": 39.18,
+      "startTime": 375.55,
+      "endTime": 414.73,
+      "audioUrl": "/audio/lectures/business/3_1/sec_segmentation.mp3"
+    },
+    {
+      "id": "sec_recommend_segmentation",
+      "title": "🎯 5. Chiến lược làm bài thi Cambridge: Đề xuất Phân đoạn Thị trường",
+      "selector": "#sec-recommend-segmentation",
+      "en": "Section 5 details Cambridge exam technique for segmentation scenarios. Candidates must recommend the most suitable segmentation method for the case study business, justify how it optimizes advertising expenditure, avoids marketing waste, and supports appropriate pricing strategies.",
+      "vi": "Mục năm cung cấp kỹ năng làm bài thi Cambridge cho các câu hỏi tình huống phân đoạn thị trường. Thí sinh phải đề xuất tiêu chí phân khúc tối ưu cho doanh nghiệp trong đề bài, lập luận cách thức phân khúc giúp tối ưu hóa ngân sách quảng cáo, tránh lãng phí chi phí tiếp thị và hỗ trợ chiến lược định giá phù hợp.",
+      "duration": 34.58,
+      "startTime": 414.73,
+      "endTime": 449.31,
+      "audioUrl": "/audio/lectures/business/3_1/sec_recommend_segmentation.mp3"
     }
   ]
 }

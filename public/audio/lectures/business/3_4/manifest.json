@@ -1,26 +1,30 @@
 {
   "lectureId": "c0d60bf9-ad33-456c-807e-9e29318113b8",
   "courseTitle": "Cambridge IGCSE Business Studies",
-  "lectureTitle": "3.4. The marketing strategy",
-  "totalDuration": 189.18,
-  "majorSections": [
-    {
-      "id": "sec_marketing_strategy",
-      "title": "1. Chiến lược Marketing Tích hợp"
+  "lectureTitle": "3.4. Marketing strategy",
+  "totalDuration": 355.6,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_legal_controls",
-      "title": "2. Pháp lý Bảo vệ Người tiêu dùng"
+    "sec_marketing_strategy": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_entering_markets",
-      "title": "3. Thâm nhập Thị trường Quốc tế"
+    "sec_legal_controls": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_recommend_strategy",
-      "title": "4. Chiến lược làm bài thi Cambridge"
+    "sec_entering_markets": {
+      "start": 5,
+      "end": 8
+    },
+    "sec_recommend_strategy": {
+      "start": 9,
+      "end": 9
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -45,36 +49,91 @@
       "audioUrl": "/audio/lectures/business/3_4/sec_marketing_strategy.mp3"
     },
     {
+      "id": "card_strategy_factors",
+      "title": "🧩 5 Yếu tố Quyết định Chiến lược Tiếp thị",
+      "selector": "#card-strategy-factors",
+      "en": "Marketing strategies are influenced by five critical variables: the financial marketing budget, target market demographics, overarching corporate marketing objectives, rival firms' competitive counter-actions, and the current product life cycle stage.",
+      "vi": "Chiến lược tiếp thị chịu sự chi phối của năm yếu tố then chốt: quy mô ngân sách tiếp thị, đặc điểm khách hàng mục tiêu, các mục tiêu tiếp thị dài hạn của công ty, phản ứng cạnh tranh của đối thủ và giai đoạn hiện tại trong vòng đời sản phẩm.",
+      "duration": 28.55,
+      "startTime": 80.63,
+      "endTime": 109.18,
+      "audioUrl": "/audio/lectures/business/3_4/card_strategy_factors.mp3"
+    },
+    {
       "id": "sec_legal_controls",
       "title": "2. Khung Pháp lý Bảo vệ Người tiêu dùng",
       "selector": "#sec-legal-controls",
       "en": "Section 2 investigates statutory consumer protection laws: bans on misleading advertising, weight and measurement standards, product safety regulations, and laws against anti-competitive price collusion. Businesses failing to comply risk hefty fines, loss of reputation, and product recalls.",
       "vi": "Mục hai khảo sát các quy định pháp luật bảo vệ người tiêu dùng: nghiêm cấm quảng cáo sai sự thật, chuẩn hóa đơn vị đo lường và trọng lượng, quy chuẩn an toàn sản phẩm và luật chống độc quyền thao túng giá. Doanh nghiệp vi phạm sẽ bị xử phạt hành chính nặng nề, mất uy tín thương hiệu và bị buộc thu hồi sản phẩm.",
       "duration": 36.26,
-      "startTime": 80.63,
-      "endTime": 116.89,
+      "startTime": 109.18,
+      "endTime": 145.44,
       "audioUrl": "/audio/lectures/business/3_4/sec_legal_controls.mp3"
     },
     {
+      "id": "card_consumer_protection_laws",
+      "title": "⚖️ 3 Luật Bảo vệ Người tiêu dùng Cốt lõi",
+      "selector": "#card-consumer-protection-laws",
+      "en": "Three key legal pillars protect consumers: Product Quality and Safety legislation prevents sales of hazardous merchandise; Truth-in-Advertising bans deceitful promotional claims; and Anti-Monopoly regulations prevent dominant companies from price gouging in uncompetitive markets.",
+      "vi": "Ba trụ cột pháp lý bảo vệ người tiêu dùng gồm: Luật an toàn và chất lượng sản phẩm ngăn chặn kinh doanh hàng nguy hiểm kém chất lượng; Luật chống quảng cáo sai sự thật xử phạt các tuyên bố phóng đại gian lận; và Luật chống độc quyền ngăn các công ty chiếm vị thế thống lĩnh thao túng chèn ép giá cả.",
+      "duration": 32.15,
+      "startTime": 145.44,
+      "endTime": 177.59,
+      "audioUrl": "/audio/lectures/business/3_4/card_consumer_protection_laws.mp3"
+    },
+    {
       "id": "sec_entering_markets",
-      "title": "3. Thâm nhập Thị trường Quốc tế",
+      "title": "3. Thâm nhập Thị trường Quốc tế (Foreign Market Entry)",
       "selector": "#sec-entering-markets",
-      "en": "Section 3 analyzes the challenges of entering foreign overseas markets: linguistic barriers, cultural differences in consumer tastes, import tariffs and trade quotas, and exchange rate volatility. Strategies to overcome these hurdles include international joint ventures, franchising to domestic partners, and establishing local production subsidiaries.",
-      "vi": "Mục ba phân tích những thách thức khi vươn ra thị trường quốc tế: rào cản ngôn ngữ, khác biệt văn hóa tiêu dùng, thuế quan nhập khẩu và hạn ngạch thương mại, cùng biến động tỷ giá hối đoái. Giải pháp vượt qua khó khăn bao gồm liên doanh quốc tế, nhượng quyền cho đối tác bản địa và thành lập chi nhánh sản xuất tại nước sở tại.",
+      "en": "Section 3 explores overseas expansion. Expanding internationally unlocks immense new sales volumes and spreads commercial risks when domestic markets hit saturation, but forces businesses to navigate cultural divides, currency volatility, and distant distribution logistics.",
+      "vi": "Mục ba tìm hiểu việc mở rộng ra thị trường nước ngoài. Phát triển ra quốc tế đem lại sản lượng tiêu thụ khổng lồ và phân tán rủi ro khi thị trường trong nước đã bão hòa, nhưng đồng thời buộc doanh nghiệp phải xử lý bất đồng văn hóa, biến động tỷ giá và logistics xa xôi.",
       "duration": 40.02,
-      "startTime": 116.89,
-      "endTime": 156.91,
+      "startTime": 177.59,
+      "endTime": 217.61,
       "audioUrl": "/audio/lectures/business/3_4/sec_entering_markets.mp3"
     },
     {
+      "id": "card_foreign_market_problems",
+      "title": "⚠️ 6 Rào cản khi Thâm nhập Thị trường Nước ngoài",
+      "selector": "#card-foreign-market-problems",
+      "en": "Foreign expansion introduces six hurdles: language and cultural miscommunications, lack of local customer familiarity, economic purchasing power disparity, elevated long-distance freight costs, conflicting societal habits, and unfamiliar overseas legal frameworks.",
+      "vi": "Gia nhập thị trường quốc tế đối mặt sáu trở ngại: bất đồng ngôn ngữ và văn hóa, thiếu hiểu biết về thị hiếu bản địa, khác biệt về mức thu nhập kinh tế, chi phí vận chuyển quốc tế cao, phong tục tập quán xã hội khác biệt và các quy định pháp lý nước ngoài phức tạp.",
+      "duration": 31.65,
+      "startTime": 217.61,
+      "endTime": 249.26,
+      "audioUrl": "/audio/lectures/business/3_4/card_foreign_market_problems.mp3"
+    },
+    {
+      "id": "card_joint_venture",
+      "title": "🤝 Phương thức 1: Liên doanh (Joint Venture)",
+      "selector": "#card-joint-venture",
+      "en": "In a Joint Venture, an overseas business partners with a domestic company to share equity and management, as illustrated by Maruti Suzuki. Joint ventures cut initial investment costs and harness local expertise, but can generate governance friction and shared reputational vulnerability.",
+      "vi": "Trong mô hình Liên doanh (Joint Venture), doanh nghiệp nước ngoài hợp tác với một doanh nghiệp bản địa để chia sẻ vốn và quản lý, như trường hợp Maruti Suzuki. Liên doanh giúp giảm gánh nặng vốn ban đầu và tận dụng sự am hiểu địa phương, nhưng tiềm ẩn xung đột phong cách lãnh đạo và rủi ro ảnh hưởng uy tín chung.",
+      "duration": 34.67,
+      "startTime": 249.26,
+      "endTime": 283.93,
+      "audioUrl": "/audio/lectures/business/3_4/card_joint_venture.mp3"
+    },
+    {
+      "id": "card_franchising",
+      "title": "👑 Phương thức 2: Nhượng quyền Thương mại (Franchising & Licensing)",
+      "selector": "#card-franchising",
+      "en": "Franchising permits local franchisees to operate under a global brand name in exchange for upfront fees and recurring royalties. Franchisors achieve rapid, low-capital global scaling, while franchisees gain a proven business model, though franchisors risk brand damage if individual franchisees cut service quality.",
+      "vi": "Nhượng quyền thương mại (Franchising) cho phép bên nhận quyền kinh doanh dưới thương hiệu toàn cầu để đổi lấy phí nhượng quyền ban đầu và tiền bản quyền định kỳ. Bên nhượng quyền mở rộng thần tốc mà ít tốn vốn, còn bên nhận quyền sở hữu mô hình kinh doanh đã thành công, dù vậy bên nhượng quyền đối mặt rủi ro hoen ố thương hiệu nếu bên nhận quyền làm giảm chất lượng.",
+      "duration": 39.4,
+      "startTime": 283.93,
+      "endTime": 323.33,
+      "audioUrl": "/audio/lectures/business/3_4/card_franchising.mp3"
+    },
+    {
       "id": "sec_recommend_strategy",
-      "title": "4. Chiến lược làm bài thi Cambridge: Đề xuất Chiến lược Tiếp thị",
+      "title": "4. Chiến lược làm bài thi Cambridge: Đề xuất & Biện minh Kế hoạch Tiếp thị",
       "selector": "#sec-recommend-strategy",
-      "en": "Section 4 presents the Cambridge examination formula for evaluating marketing strategies. Candidates must synthesize available financial resources, target customer demographic profiles, and competitor strengths to construct a cohesive, fully justified marketing plan.",
-      "vi": "Mục bốn hướng dẫn công thức chấm điểm của giám khảo Cambridge cho câu hỏi chiến lược tiếp thị. Thí sinh cần tổng hợp ngân sách tài chính sẵn có, đặc điểm nhân khẩu học của khách hàng mục tiêu và điểm mạnh của đối thủ để xây dựng một kế hoạch tiếp thị nhất quán và có sức thuyết phục cao.",
+      "en": "Section 4 outlines Cambridge evaluation technique for 12-mark questions. Candidates must harmonise all four marketing mix elements so they tell a consistent story, verify that proposed campaigns fit within stated budget constraints, anticipate rival retaliation, and evaluate whether Joint Ventures or Franchising offer the optimal market entry vehicle.",
+      "vi": "Mục bốn tổng kết phương pháp làm bài thi Cambridge cho câu hỏi đánh giá 12 điểm. Thí sinh phải bảo đảm tính đồng bộ của 4 chữ P để tạo nên một câu chuyện thương hiệu nhất quán, kiểm chứng chiến dịch đề xuất nằm gọn trong ngân sách cho phép, dự đoán phản ứng đáp trả của đối thủ và so sánh xem Liên doanh hay Nhượng quyền là lựa chọn tối ưu cho việc thâm nhập thị trường.",
       "duration": 32.27,
-      "startTime": 156.91,
-      "endTime": 189.18,
+      "startTime": 323.33,
+      "endTime": 355.6,
       "audioUrl": "/audio/lectures/business/3_4/sec_recommend_strategy.mp3"
     }
   ]

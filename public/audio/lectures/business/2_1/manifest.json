@@ -2,29 +2,33 @@
   "lectureId": "cd1763a9-f030-4be1-b65b-c6dc6dde91c9",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "2.1. Motivating employees",
-  "totalDuration": 398.09,
-  "majorSections": [
-    {
-      "id": "sec_motivation_work",
-      "title": "1. Vai trò của Động lực lao động"
+  "totalDuration": 647.68,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_theories",
-      "title": "2. Các Học thuyết Động lực (Taylor, Maslow, Herzberg)"
+    "sec_motivation_work": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_financial",
-      "title": "3. Đãi ngộ Tài chính"
+    "sec_theories": {
+      "start": 4,
+      "end": 7
     },
-    {
-      "id": "sec_non_financial",
-      "title": "4. Đãi ngộ Phi tài chính"
+    "sec_financial": {
+      "start": 8,
+      "end": 10
     },
-    {
-      "id": "sec_recommend_motivation",
-      "title": "5. Chiến lược làm bài thi Cambridge"
+    "sec_non_financial": {
+      "start": 11,
+      "end": 13
+    },
+    "sec_recommend_motivation": {
+      "start": 14,
+      "end": 14
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -49,47 +53,69 @@
       "audioUrl": "/audio/lectures/business/2_1/sec_motivation_work.mp3"
     },
     {
+      "id": "card_why_work",
+      "title": "🤔 Vì sao con người cần làm việc?",
+      "selector": "#card-why-work",
+      "en": "People work for multiple reasons: earning income to achieve a better standard of living for needs and wants; financial security against illness or retirement; social interaction and belonging; gaining professional status and respect; and experiencing intrinsic job satisfaction from completing meaningful tasks.",
+      "vi": "Con người làm việc vì nhiều lý do: kiếm thu nhập để nâng cao mức sống và thỏa mãn nhu cầu; đảm bảo an toàn tài chính trước các rủi ro ốm đau hay hưu trí; giao lưu xã hội và tìm kiếm cảm giác hòa nhập tập thể; xây dựng địa vị và sự tôn trọng trong xã hội; và tận hưởng niềm vui thỏa mãn nội tại khi hoàn thành tốt công việc ý nghĩa.",
+      "duration": 36.11,
+      "startTime": 82.35,
+      "endTime": 118.46,
+      "audioUrl": "/audio/lectures/business/2_1/card_why_work.mp3"
+    },
+    {
+      "id": "card_why_motivate",
+      "title": "🎯 Lợi ích then chốt khi Doanh nghiệp Tạo động lực cho Nhân viên",
+      "selector": "#card-why-motivate",
+      "en": "Firms must motivate workers because motivated staff demonstrate high productivity, reducing unit costs. They take fewer sick days, which minimizes absenteeism and avoids production bottlenecks. Furthermore, low labour turnover retains experienced talent, saving substantial recruitment and training expenditures, directly driving higher corporate profitability.",
+      "vi": "Doanh nghiệp phải tạo động lực cho nhân viên vì nhân viên có tinh thần tốt sẽ tạo ra năng suất vượt trội, giúp hạ giá thành đơn vị. Họ ít nghỉ ốm, giảm tỷ lệ vắng mặt và tránh ách tắc sản xuất. Hơn nữa, tỷ lệ nghỉ việc thấp giúp giữ chân nhân tài lâu năm, tiết kiệm chi phí tuyển dụng và đào tạo tốn kém, trực tiếp gia tăng lợi nhuận công ty.",
+      "duration": 43.72,
+      "startTime": 118.46,
+      "endTime": 162.18,
+      "audioUrl": "/audio/lectures/business/2_1/card_why_motivate.mp3"
+    },
+    {
       "id": "sec_theories",
       "title": "2. Tổng quan các Học thuyết Động lực",
       "selector": "#sec-theories",
       "en": "Section 2 introduces three foundational motivation frameworks examined in the Cambridge syllabus: F.W. Taylor's Scientific Management, Abraham Maslow's Hierarchy of Needs, and Frederick Herzberg's Two-Factor Theory. Understanding how psychological needs evolve is essential for designing effective workforce rewards.",
       "vi": "Mục hai giới thiệu ba học thuyết động lực nền tảng trong chương trình Cambridge: Quản trị khoa học của F.W. Taylor, Tháp nhu cầu của Abraham Maslow và Thuyết hai yếu tố của Frederick Herzberg. Hiểu rõ sự phát triển nhu cầu tâm lý là cơ sở để thiết kế chính sách đãi ngộ nhân sự hiệu quả.",
       "duration": 36.45,
-      "startTime": 82.35,
-      "endTime": 118.8,
+      "startTime": 162.18,
+      "endTime": 198.63,
       "audioUrl": "/audio/lectures/business/2_1/sec_theories.mp3"
     },
     {
       "id": "card_taylor",
-      "title": "Học thuyết F. W. Taylor: Quản trị theo khoa học",
+      "title": "👨‍💼 F. W. Taylor: Quản trị theo Khoa học (Scientific Management)",
       "selector": "#card-taylor",
       "en": "F.W. Taylor viewed workers as purely rational economic agents driven by financial gain. His scientific management model breaks down tasks into standard repetitive movements and links compensation directly to output through differential piece-rates. While effective for simple factory production lines, Taylorism ignores social belonging, causes workplace boredom, and neglects intrinsic job satisfaction.",
       "vi": "F.W. Taylor coi người lao động là những cá nhân kinh tế thuần túy hành động vì tiền bạc. Mô hình quản trị khoa học chia nhỏ quy trình thành các thao tác chuẩn mực lặp đi lặp lại và trả lương theo sản phẩm (piece-rate). Dù rất hiệu quả trong các dây chuyền sản xuất đơn giản, học thuyết Taylor bỏ qua nhu cầu xã hội, gây ra sự nhàm chán và xem nhẹ niềm vui công việc nội tại.",
       "duration": 46.91,
-      "startTime": 118.8,
-      "endTime": 165.71,
+      "startTime": 198.63,
+      "endTime": 245.54,
       "audioUrl": "/audio/lectures/business/2_1/card_taylor.mp3"
     },
     {
       "id": "card_maslow",
-      "title": "Tháp Nhu cầu của Abraham Maslow",
+      "title": "🔺 Tháp Nhu cầu của Abraham Maslow",
       "selector": "#card-maslow",
       "en": "Abraham Maslow proposed that human beings are motivated by five ascending tiers of needs: physiological survival, safety and job security, social belonging and team camaraderie, esteem and recognition, and finally self-actualisation. Once a lower-level need is satisfied, it ceases to motivate, and the individual strives to fulfil the next level.",
       "vi": "Abraham Maslow đưa ra hệ thống phân cấp gồm năm tầng nhu cầu: sinh lý căn bản, an toàn và việc làm ổn định, xã hội và gắn kết đồng đội, được tôn trọng và công nhận, và cuối cùng là hoàn thiện bản thân (self-actualisation). Khi một nhu cầu bậc thấp đã được thỏa mãn, nó không còn là động lực thúc đẩy nữa và con người sẽ hướng lên bậc cao hơn.",
       "duration": 42.71,
-      "startTime": 165.71,
-      "endTime": 208.42,
+      "startTime": 245.54,
+      "endTime": 288.25,
       "audioUrl": "/audio/lectures/business/2_1/card_maslow.mp3"
     },
     {
       "id": "card_herzberg",
-      "title": "Thuyết Hai yếu tố của Frederick Herzberg",
+      "title": "⚖️ Thuyết Hai Yếu tố của Frederick Herzberg",
       "selector": "#card-herzberg",
       "en": "Herzberg separated workplace drivers into Hygiene factors and Motivators. Hygiene factors, such as basic pay, clean working conditions, company policy, and job security, prevent dissatisfaction but cannot stimulate superior performance. True motivation comes exclusively from Motivators: achievement, meaningful responsibility, personal recognition, and career advancement.",
       "vi": "Herzberg chia các yếu tố nơi làm việc thành Yếu tố duy trì (Hygiene factors) và Yếu tố tạo động lực (Motivators). Yếu tố duy trì như mức lương cơ bản, điều kiện làm việc, chính sách công ty và sự an toàn chỉ giúp ngăn ngừa bất mãn chứ không tạo ra động lực bứt phá. Động lực thực sự chỉ đến từ các yếu tố thúc đẩy: thành tựu, trách nhiệm công việc, sự công nhận và cơ hội thăng tiến.",
       "duration": 49.82,
-      "startTime": 208.42,
-      "endTime": 258.24,
+      "startTime": 288.25,
+      "endTime": 338.07,
       "audioUrl": "/audio/lectures/business/2_1/card_herzberg.mp3"
     },
     {
@@ -99,9 +125,31 @@
       "en": "Section 3 evaluates financial reward systems: hourly wages, fixed salaries, piece rates, sales commissions, performance-related bonuses, profit sharing, and share ownership schemes. While financial rewards are direct and quantifiable, over-reliance on individual incentives can sacrifice product quality, undermine teamwork, and escalate total operational costs.",
       "vi": "Mục ba đánh giá các phương thức đãi ngộ tài chính: tiền công theo giờ, tiền lương cố định, trả theo sản phẩm, hoa hồng bán hàng, tiền thưởng hiệu suất, chia sẻ lợi nhuận và cổ phiếu thưởng. Mặc dù khuyến khích tài chính mang lại tác dụng tức thì, việc quá phụ thuộc vào tiền thưởng cá nhân có thể làm giảm chất lượng sản phẩm, chia rẽ tinh thần đồng đội và đẩy chi phí vận hành tăng vọt.",
       "duration": 45.21,
-      "startTime": 258.24,
-      "endTime": 303.45,
+      "startTime": 338.07,
+      "endTime": 383.28,
       "audioUrl": "/audio/lectures/business/2_1/sec_financial.mp3"
+    },
+    {
+      "id": "card_wages_salaries",
+      "title": "💵 Tiền công theo thời gian, theo sản phẩm & Tiền lương cố định",
+      "selector": "#card-wages-salaries",
+      "en": "Wages and salaries represent standard base remuneration: Time-rate pays hourly, providing income certainty but not rewarding higher effort; Piece-rate pays per unit manufactured, strongly boosting output volume but risking poor quality; and Salaries provide fixed monthly payments for management and white-collar professionals.",
+      "vi": "Tiền công và tiền lương đại diện cho các hình thức thù lao cơ bản: Trả theo thời gian (Time-rate) tính theo giờ làm việc, mang lại sự an tâm nhưng không thưởng thêm cho nỗ lực vượt bậc; Trả theo sản phẩm (Piece-rate) trả theo số lượng hoàn thành, kích thích sản lượng tối đa nhưng dễ làm sút giảm chất lượng; và Tiền lương (Salary) là khoản chi trả cố định hàng tháng cho cấp quản lý và nhân viên văn phòng.",
+      "duration": 40.86,
+      "startTime": 383.28,
+      "endTime": 424.14,
+      "audioUrl": "/audio/lectures/business/2_1/card_wages_salaries.mp3"
+    },
+    {
+      "id": "card_incentive_pay",
+      "title": "🎁 Hoa hồng, Tiền thưởng, Đánh giá hiệu suất & Cổ phiếu thưởng",
+      "selector": "#card-incentive-pay",
+      "en": "Incentive pay structures link reward to commercial success: Sales commissions offer a percentage of revenue sold; Lump-sum bonuses reward exceptional achievement; Performance-related pay reflects appraisal ratings; and Profit sharing with employee share ownership aligns staff interests directly with long-term shareholder value.",
+      "vi": "Các cấu trúc thù lao khuyến khích gắn liền quyền lợi nhân viên với kết quả kinh doanh: Hoa hồng (Commission) trích tỷ lệ phần trăm theo doanh số bán; Tiền thưởng (Bonus) trao cho các thành tích vượt chỉ tiêu; Lương theo hiệu suất (PRP) dựa vào kết quả đánh giá năng lực; và Chia sẻ lợi nhuận cùng Cổ phiếu thưởng (Share ownership) giúp gắn kết lợi ích lâu dài của nhân viên với giá trị công ty.",
+      "duration": 40.79,
+      "startTime": 424.14,
+      "endTime": 464.93,
+      "audioUrl": "/audio/lectures/business/2_1/card_incentive_pay.mp3"
     },
     {
       "id": "sec_non_financial",
@@ -110,9 +158,31 @@
       "en": "Section 4 investigates non-financial motivators and job redesign. Techniques include job rotation to relieve monotony, job enlargement to broaden variety, and job enrichment to delegate higher-level decision making. Combined with teamworking, flexible working hours, and subsidized fringe benefits, non-financial strategies foster long-term loyalty and deep intrinsic job engagement.",
       "vi": "Mục bốn phân tích các giải pháp phi tài chính và thiết kế lại công việc. Các kỹ thuật bao gồm luân chuyển công việc (job rotation) giảm sự nhàm chán, mở rộng công việc (job enlargement) tăng thêm đầu việc tương đương, và làm giàu công việc (job enrichment) trao thêm quyền tự quyết cao hơn. Kết hợp cùng làm việc nhóm, giờ giấc linh hoạt và phúc lợi phụ cấp, phương pháp phi tài chính giúp xây dựng lòng trung thành bền vững.",
       "duration": 49.38,
-      "startTime": 303.45,
-      "endTime": 352.83,
+      "startTime": 464.93,
+      "endTime": 514.31,
       "audioUrl": "/audio/lectures/business/2_1/sec_non_financial.mp3"
+    },
+    {
+      "id": "card_fringe_benefits",
+      "title": "🚗 Phúc lợi Bổ sung (Fringe Benefits / Perks)",
+      "selector": "#card-fringe-benefits",
+      "en": "Fringe benefits are non-cash perks provided alongside regular wages. Examples include company cars, private health insurance, subsidized housing, staff discounts, free holidays, and children's education allowances. These benefits elevate social status, ease living expenses, and foster strong organizational commitment.",
+      "vi": "Phúc lợi bổ sung (Fringe benefits) là các đãi ngộ phi tiền mặt đi kèm tiền lương chính. Ví dụ như xe ô tô công vụ, bảo hiểm y tế tư nhân, nhà ở trợ cấp, phiếu giảm giá mua hàng, kỳ nghỉ dưỡng miễn phí và học bổng cho con em nhân viên. Những đãi ngộ này giúp nâng cao vị thế xã hội, giảm áp lực sinh hoạt và thắt chặt cam kết gắn bó của nhân viên với công ty.",
+      "duration": 44.73,
+      "startTime": 514.31,
+      "endTime": 559.04,
+      "audioUrl": "/audio/lectures/business/2_1/card_fringe_benefits.mp3"
+    },
+    {
+      "id": "card_job_satisfaction",
+      "title": "🔄 Thiết kế Công việc & Tạo sự Thỏa mãn Nghề nghiệp",
+      "selector": "#card-job-satisfaction",
+      "en": "Job satisfaction is enhanced through strategic work redesign: Job rotation swaps tasks to prevent monotony; Job enlargement adds diverse tasks of equal skill level; Job enrichment delegates greater autonomy, complex challenge, and responsibility; while Autonomous teamworking empowers groups to coordinate projects collaboratively.",
+      "vi": "Sự thỏa mãn nghề nghiệp được nâng cao thông qua việc thiết kế lại công việc: Luân chuyển công việc (Job rotation) hoán đổi vị trí định kỳ để chống đơn điệu; Mở rộng công việc (Job enlargement) bổ sung thêm các đầu việc có kỹ năng tương đương; Làm giàu công việc (Job enrichment) trao thêm quyền tự quyết và thử thách phức tạp hơn; trong khi Làm việc nhóm (Team-working) trao quyền cho tập thể cùng phối hợp hoàn thành mục tiêu chung.",
+      "duration": 43.38,
+      "startTime": 559.04,
+      "endTime": 602.42,
+      "audioUrl": "/audio/lectures/business/2_1/card_job_satisfaction.mp3"
     },
     {
       "id": "sec_recommend_motivation",
@@ -121,8 +191,8 @@
       "en": "Section 5 details the Cambridge evaluation strategy for motivation questions. Candidates must tailor recommendations to employee types and business context: factory operatives often respond to piece rates and bonuses, whereas creative and professional staff prioritize autonomy and enrichment. Conclude by balancing financial cost against potential productivity gains.",
       "vi": "Mục năm cung cấp chiến lược làm bài thi Cambridge cho các câu hỏi đánh giá tạo động lực. Thí sinh phải gắn giải pháp với từng đối tượng lao động và bối cảnh cụ thể: công nhân sản xuất thường phản ứng tốt với lương sản phẩm và thưởng năng suất, trong khi chuyên gia sáng tạo lại coi trọng sự tự chủ và trao quyền. Luôn kết luận bằng cách cân đối giữa chi phí tài chính và mức tăng năng suất dự kiến.",
       "duration": 45.26,
-      "startTime": 352.83,
-      "endTime": 398.09,
+      "startTime": 602.42,
+      "endTime": 647.68,
       "audioUrl": "/audio/lectures/business/2_1/sec_recommend_motivation.mp3"
     }
   ]
