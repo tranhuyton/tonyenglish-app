@@ -2461,9 +2461,12 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                    el.classList.remove('active-svg-parent-highlight');
                 });
                 if (sel) {
-                   var target = document.querySelector(sel);
-                   if (target) {
+                   var targets = document.querySelectorAll(sel);
+                   targets.forEach(function(target) {
                       target.classList.add('active-lecture-highlight');
+                   });
+                   var target = targets[0];
+                   if (target) {
                       var scrollTarget = target;
                       if (target instanceof SVGElement) {
                          var parentContainer = target.closest('div, section, article') || target.ownerSVGElement;

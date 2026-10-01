@@ -2,43 +2,47 @@
   "lectureId": "6049f916-3af9-428a-bcd0-ce0574f1d7f7",
   "courseTitle": "Cambridge IGCSE Business Studies",
   "lectureTitle": "1.1 Business activity",
-  "totalDuration": 495.65,
-  "majorSections": [
-    {
-      "id": "sec_intro_business",
-      "title": "1. Giới thiệu về Doanh nghiệp"
+  "totalDuration": 798.51,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_economic_problem",
-      "title": "2. Vấn đề kinh tế: Nhu cầu, Mong muốn & Sự khan hiếm"
+    "sec_intro_business": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_opportunity_cost",
-      "title": "3. Chi phí cơ hội (Opportunity Cost)"
+    "sec_economic_problem": {
+      "start": 2,
+      "end": 5
     },
-    {
-      "id": "sec_factors_of_production",
-      "title": "4. Bốn yếu tố sản xuất (Factors of Production)"
+    "sec_opportunity_cost": {
+      "start": 6,
+      "end": 6
     },
-    {
-      "id": "sec_specialisation",
-      "title": "5. Tầm quan trọng của Chuyên môn hóa"
+    "sec_factors_of_production": {
+      "start": 7,
+      "end": 11
     },
-    {
-      "id": "sec_purpose_business",
-      "title": "6. Mục đích của Hoạt động Doanh nghiệp"
+    "sec_specialisation": {
+      "start": 12,
+      "end": 14
     },
-    {
-      "id": "sec_added_value",
-      "title": "7. Giá trị gia tăng (Added Value)"
+    "sec_purpose_business": {
+      "start": 15,
+      "end": 15
+    },
+    "sec_added_value": {
+      "start": 16,
+      "end": 17
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
       "title": "Giới thiệu Bài 1.1: Hoạt động Kinh doanh",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 1.1: Business Activity. In this opening lesson, we establish the foundations of business: how enterprises organise scarce resources to satisfy unlimited consumer demands, the nature of scarcity and opportunity cost, the four factors of production, the importance of specialisation, and how businesses generate added value.",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 1.1: Business Activity. In this foundational lesson, we explore the core purpose of business activity: how enterprises organise scarce resources to satisfy unlimited consumer wants and needs, the concepts of scarcity and opportunity cost, the four factors of production, the role of specialisation, and how businesses create added value.",
       "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 1.1: Hoạt động Kinh doanh. Trong bài học nền tảng này, chúng ta sẽ tìm hiểu mục đích cốt lõi của doanh nghiệp: cách thức tổ chức các nguồn lực khan hiếm để thỏa mãn nhu cầu vô hạn của con người, bản chất của sự khan hiếm và chi phí cơ hội, bốn yếu tố sản xuất, vai trò của chuyên môn hóa và cách thức doanh nghiệp tạo ra giá trị gia tăng.",
       "duration": 47.01,
       "startTime": 0.0,
@@ -49,8 +53,8 @@
       "id": "sec_intro_business",
       "title": "1. Giới thiệu về Doanh nghiệp",
       "selector": "#sec-intro-business",
-      "en": "Section 1 defines business studies. We are surrounded by commercial enterprises that provide goods and services essential to modern life. Academically, business studies examines the economics and management of how enterprises organize physical, human, and financial resources to produce goods and services that satisfy consumer demands in competitive markets.",
-      "vi": "Mục một định nghĩa về hoạt động kinh doanh. Chúng ta được bao quanh bởi vô số các tổ chức thương mại cung ứng hàng hóa và dịch vụ thiết yếu cho cuộc sống. Dưới góc độ học thuật, môn Nghiên cứu Kinh doanh khảo sát các nguyên lý kinh tế và quản trị trong việc điều phối các nguồn lực vật chất, nhân sự và tài chính nhằm thỏa mãn tối ưu nhu cầu của khách hàng trên thị trường.",
+      "en": "Section 1 introduces business studies. Businesses surround us every day, supplying the goods and services that sustain modern civilization. Academically, business studies examines the economics and management of how enterprises organise resources to satisfy consumer demands in competitive markets.",
+      "vi": "Mục 1 giới thiệu về hoạt động kinh doanh. Các doanh nghiệp hiện diện quanh chúng ta mỗi ngày, cung ứng hàng hóa và dịch vụ thiết yếu cho cuộc sống hiện đại. Dưới góc độ học thuật, môn Nghiên cứu Kinh doanh khảo sát cách thức các doanh nghiệp quản trị và tổ chức các nguồn lực nhằm thỏa mãn tối ưu nhu cầu của người tiêu dùng trên thị trường cạnh tranh.",
       "duration": 42.66,
       "startTime": 47.01,
       "endTime": 89.67,
@@ -58,90 +62,178 @@
     },
     {
       "id": "sec_economic_problem",
-      "title": "2. Vấn đề kinh tế: Nhu cầu, Mong muốn & Sự khan hiếm",
+      "title": "2. Vấn đề Kinh tế Cơ bản (The Economic Problem)",
       "selector": "#sec-economic-problem",
-      "en": "Section 2 investigates the foundational economic problem. Human beings have basic needs required for survival, such as water, nutritious food, clothing, and shelter. Beyond survival, humans have unlimited wants—desires for luxury cars, holidays, and fashion. However, economic resources are strictly finite. This imbalance creates scarcity—the fundamental economic problem where unlimited wants collide with limited resources.",
-      "vi": "Mục hai phân tích vấn đề kinh tế căn bản. Con người có những nhu cầu thiết yếu để sinh tồn như nước, lương thực, trang phục và nhà ở. Bên cạnh đó, con người có mong muốn vô hạn đối với các sản phẩm cao cấp, du lịch và giải trí. Tuy nhiên, các nguồn lực kinh tế luôn có hạn. Sự mất cân đối này dẫn đến sự khan hiếm – bài toán kinh tế cốt lõi khi mong muốn vô hạn va chạm với nguồn lực hữu hạn.",
-      "duration": 54.11,
+      "en": "Section 2 investigates the basic economic problem. All societies face the universal challenge of resource allocation. To understand economics and business, we must first distinguish between human needs, human wants, and the inevitable reality of economic scarcity.",
+      "vi": "Mục 2 tìm hiểu về vấn đề kinh tế cơ bản. Mọi xã hội đều phải đối mặt với thách thức phân bổ nguồn lực. Để hiểu bản chất của kinh doanh, trước hết chúng ta cần phân biệt rõ ràng giữa nhu cầu sinh tồn, mong muốn tiện ích và thực tế tất yếu của sự khan hiếm kinh tế.",
+      "duration": 34.24,
       "startTime": 89.67,
-      "endTime": 143.78,
+      "endTime": 123.91,
       "audioUrl": "/audio/lectures/business/1_1/sec_economic_problem.mp3"
     },
     {
+      "id": "sec_economic_need",
+      "title": "🍞 Need (Nhu cầu Thiết yếu)",
+      "selector": "#card-need",
+      "en": "A need is a good or service essential for living and survival. Without basic needs, human life cannot be sustained. Primary examples include clean drinking water, nutritious food, protective clothing, and safe shelter. Businesses that produce basic necessities often enjoy stable, inelastic consumer demand.",
+      "vi": "Nhu cầu thiết yếu (Need) là những hàng hóa hoặc dịch vụ cần thiết sống còn để duy trì sự sống. Nếu thiếu những nhu cầu này, con người không thể tồn tại. Các ví dụ điển hình bao gồm nước sạch, lương thực thực phẩm, quần áo và nhà ở an toàn. Các doanh nghiệp sản xuất nhu yếu phẩm cơ bản thường có lượng cầu tiêu dùng rất ổn định.",
+      "duration": 42.45,
+      "startTime": 123.91,
+      "endTime": 166.36,
+      "audioUrl": "/audio/lectures/business/1_1/sec_economic_need.mp3"
+    },
+    {
+      "id": "sec_economic_want",
+      "title": "🚗 Want (Mong muốn Tiện ích)",
+      "selector": "#card-want",
+      "en": "A want is a good or service that people desire to have, but is not required for basic survival. Human wants are virtually unlimited—as soon as one desire is satisfied, new desires arise. Examples include luxury sports cars, modern smartphones, gourmet dining, and international vacations. Businesses constantly innovate to stimulate and satisfy these endless consumer wants.",
+      "vi": "Mong muốn (Want) là những hàng hóa hoặc dịch vụ mà con người khao khát sở hữu nhưng không bắt buộc phải có để sinh tồn. Mong muốn của con người là vô hạn—khi một mong muốn được thỏa mãn, những mong muốn mới lại nảy sinh. Ví dụ như xe hơi hạng sang, điện thoại thông minh, ẩm thực cao cấp và du lịch quốc tế. Doanh nghiệp luôn đổi mới sáng tạo để kích thích và đáp ứng những mong muốn vô tận này.",
+      "duration": 49.65,
+      "startTime": 166.36,
+      "endTime": 216.01,
+      "audioUrl": "/audio/lectures/business/1_1/sec_economic_want.mp3"
+    },
+    {
+      "id": "sec_economic_scarcity",
+      "title": "⚠️ Scarcity (Sự Khan hiếm Nguồn lực)",
+      "selector": "#card-scarcity",
+      "en": "Scarcity is the fundamental economic problem underlying all human activity. It arises because human wants are unlimited, whereas the resources available to produce goods and services are strictly limited. Because there are never enough resources to satisfy everyone's desires, societies and businesses must make critical choices about what to produce, how to produce, and for whom to produce.",
+      "vi": "Sự khan hiếm (Scarcity) là vấn đề kinh tế cốt lõi chi phối mọi hoạt động xã hội. Hiện tượng này phát sinh do mong muốn của con người là vô hạn, trong khi các nguồn lực sẵn có để sản xuất hàng hóa và dịch vụ lại hữu hạn. Do không bao giờ có đủ nguồn lực để thỏa mãn tất cả mọi người, các xã hội và doanh nghiệp buộc phải đưa ra lựa chọn quan trọng: sản xuất cái gì, sản xuất như thế nào và sản xuất cho ai.",
+      "duration": 48.42,
+      "startTime": 216.01,
+      "endTime": 264.43,
+      "audioUrl": "/audio/lectures/business/1_1/sec_economic_scarcity.mp3"
+    },
+    {
       "id": "sec_opportunity_cost",
-      "title": "3. Chi phí cơ hội (Opportunity Cost)",
+      "title": "3. Chi phí Cơ hội (Opportunity Cost)",
       "selector": "#sec-opportunity-cost",
-      "en": "Section 3 explains opportunity cost. Because resources are scarce, economic agents must make choices. Every choice involves a sacrifice. Opportunity cost is defined as the benefit of the next best alternative given up by deciding to allocate resources elsewhere. For instance, if a business invests its limited capital into buying automated factory robots, the opportunity cost is the marketing campaign that cannot now be funded.",
-      "vi": "Mục ba giải thích về chi phí cơ hội. Vì nguồn lực khan hiếm, các chủ thể kinh tế buộc phải đưa ra sự lựa chọn, và mỗi lựa chọn đều phải đánh đổi. Chi phí cơ hội được định nghĩa là giá trị hoặc lợi ích của phương án tốt nhất tiếp theo bị bỏ qua khi quyết định phân bổ nguồn lực. Ví dụ, nếu doanh nghiệp dành toàn bộ vốn để mua robot tự động hóa, chi phí cơ hội chính là chiến dịch tiếp thị mà họ phải từ bỏ.",
+      "en": "Section 3 explains opportunity cost. Because resources are scarce, every choice comes with a trade-off. Opportunity cost is defined as the next best alternative forgone by choosing another item. For example, if a firm has limited capital and chooses to buy a new delivery van rather than launch an advertising campaign, the opportunity cost is the potential increase in sales and brand awareness that the marketing campaign would have generated.",
+      "vi": "Mục 3 giải thích về chi phí cơ hội. Do nguồn lực khan hiếm, mọi quyết định đều phải đánh đổi. Chi phí cơ hội được định nghĩa là phương án tốt nhất tiếp theo bị bỏ qua khi đưa ra một quyết định lựa chọn. Ví dụ, nếu một doanh nghiệp có vốn hữu hạn và chọn mua xe tải giao hàng thay vì chạy chiến dịch quảng cáo, thì chi phí cơ hội chính là doanh số và mức độ nhận diện thương hiệu mà chiến dịch quảng cáo đó có thể mang lại.",
       "duration": 53.25,
-      "startTime": 143.78,
-      "endTime": 197.03,
+      "startTime": 264.43,
+      "endTime": 317.68,
       "audioUrl": "/audio/lectures/business/1_1/sec_opportunity_cost.mp3"
     },
     {
       "id": "sec_factors_of_production",
-      "title": "4. Bốn yếu tố sản xuất (Factors of Production)",
+      "title": "4. Bốn Yếu tố Sản xuất (Factors of Production)",
       "selector": "#sec-factors-of-production",
-      "en": "Section 4 classifies the four factors of production required to produce any good or service. Land encompasses all natural renewable and non-renewable resources, earning rent. Labour represents the human physical and mental effort, earning wages or salaries. Capital comprises man-made assets like machinery, factories, and technology, earning interest. Enterprise is the skill and risk-taking ability of the entrepreneur who organizes the other three factors, earning profit.",
-      "vi": "Mục bốn phân loại bốn yếu tố sản xuất thiết yếu để tạo ra mọi sản phẩm. Đất đai bao gồm toàn bộ tài nguyên thiên nhiên, mang lại phần thưởng là địa tô. Lao động là sức lực thể chất và trí tuệ của con người, nhận phần thưởng là tiền lương. Vốn là tư liệu sản xuất do con người tạo ra như máy móc, nhà xưởng và công nghệ, sinh ra lãi suất. Và Tinh thần doanh nhân là năng lực chấp nhận rủi ro và điều phối ba yếu tố trên, mang lại lợi nhuận.",
-      "duration": 58.77,
-      "startTime": 197.03,
-      "endTime": 255.8,
+      "en": "Section 4 introduces the four Factors of Production. These are the scarce economic inputs combined by enterprises to produce goods and services. They are categorized into Land, Labour, Capital, and Enterprise. Each factor contributes a unique capability and earns a specific economic reward.",
+      "vi": "Mục 4 giới thiệu bốn yếu tố sản xuất (Factors of Production). Đây là các nguồn lực kinh tế đầu vào khan hiếm được doanh nghiệp phối hợp để tạo ra sản phẩm và dịch vụ. Chúng được phân loại thành: Đất đai, Lao động, Vốn và Tinh thần khởi nghiệp. Mỗi yếu tố đóng góp một năng lực riêng biệt và nhận về phần thưởng kinh tế tương ứng.",
+      "duration": 41.27,
+      "startTime": 317.68,
+      "endTime": 358.95,
       "audioUrl": "/audio/lectures/business/1_1/sec_factors_of_production.mp3"
     },
     {
-      "id": "fop_interactive_map",
-      "title": "Sơ đồ tương tác 4 Yếu tố sản xuất (F.O.P Map)",
-      "selector": "#card-fop-map",
-      "en": "This interactive diagram maps the economic interplay between the four factors of production. Notice that without an entrepreneur to take financial risks and orchestrate operations, land, labour, and capital remain inert. The entrepreneur brings innovation, establishes production systems, and shoulders the ultimate legal and commercial liabilities of the firm in exchange for residual profits.",
-      "vi": "Sơ đồ tương tác này minh họa mối liên kết chặt chẽ giữa bốn yếu tố sản xuất. Hãy chú ý rằng nếu thiếu doanh nhân dám chấp nhận rủi ro tài chính và điều phối hoạt động, đất đai, lao động và vốn sẽ ở trạng thái tĩnh. Doanh nhân chính là nhân tố mang lại sự đổi mới sáng tạo, thiết lập quy trình sản xuất và gánh vác trách nhiệm pháp lý thương mại để đổi lấy phần lợi nhuận thặng dư.",
-      "duration": 45.5,
-      "startTime": 255.8,
-      "endTime": 301.3,
-      "audioUrl": "/audio/lectures/business/1_1/fop_interactive_map.mp3"
+      "id": "fop_land",
+      "title": "🌲 Land (Đất đai & Địa tô)",
+      "selector": "#card-fop-land, #svg-fop-land",
+      "en": "Land refers to all natural resources provided by nature, both renewable and non-renewable. This includes agricultural soil, mineral deposits, crude oil, natural gas, forests, and clean water. The economic reward for the owners of land is Rent.",
+      "vi": "Đất đai (Land) bao gồm toàn bộ các tài nguyên tự nhiên do thiên nhiên ban tặng, cả tài nguyên tái tạo và không tái tạo. Yếu tố này gồm đất canh tác, mỏ khoáng sản, dầu mỏ, khí đốt, rừng và nguồn nước. Phần thưởng kinh tế dành cho chủ sở hữu tài nguyên đất đai là Địa tô (Rent) hay tiền thuê mặt bằng.",
+      "duration": 37.82,
+      "startTime": 358.95,
+      "endTime": 396.77,
+      "audioUrl": "/audio/lectures/business/1_1/fop_land.mp3"
+    },
+    {
+      "id": "fop_labour",
+      "title": "👷‍♂️ Labour (Lao động & Tiền lương)",
+      "selector": "#card-fop-labour, #svg-fop-labour",
+      "en": "Labour encompasses the physical and mental efforts exerted by human workers in the production of goods and services. This includes factory operators, engineers, teachers, doctors, and accountants. The economic reward paid to labour is Wages or Salaries.",
+      "vi": "Lao động (Labour) bao gồm toàn bộ nỗ lực thể chất và trí tuệ của con người đóng góp vào quy trình sản xuất hàng hóa và dịch vụ. Yếu tố này bao gồm công nhân nhà máy, kỹ sư, giáo viên, bác sĩ và kế toán viên. Phần thưởng kinh tế chi trả cho người lao động là Tiền công hoặc Tiền lương (Wages / Salaries).",
+      "duration": 37.65,
+      "startTime": 396.77,
+      "endTime": 434.42,
+      "audioUrl": "/audio/lectures/business/1_1/fop_labour.mp3"
+    },
+    {
+      "id": "fop_capital",
+      "title": "🚜 Capital (Vốn & Lãi suất)",
+      "selector": "#card-fop-capital, #svg-fop-capital",
+      "en": "Capital consists of all man-made physical assets used in the production process, such as machinery, factory buildings, tools, and computer technology, as well as the financial capital used to purchase them. Capital increases worker productivity. The economic reward for providing capital is Interest.",
+      "vi": "Vốn (Capital) là toàn bộ tư liệu sản xuất vật chất do con người tạo ra để phục vụ sản xuất, như máy móc, nhà xưởng, công cụ và công nghệ máy tính, cũng như nguồn vốn tài chính để mua sắm chúng. Vốn giúp tăng mạnh năng suất lao động. Phần thưởng kinh tế khi đầu tư cung cấp vốn là Lãi suất (Interest).",
+      "duration": 39.3,
+      "startTime": 434.42,
+      "endTime": 473.72,
+      "audioUrl": "/audio/lectures/business/1_1/fop_capital.mp3"
+    },
+    {
+      "id": "fop_enterprise",
+      "title": "💡 Enterprise (Khởi nghiệp & Lợi nhuận)",
+      "selector": "#card-fop-enterprise, #svg-fop-enterprise",
+      "en": "Enterprise is the skill, vision, and risk-taking ability of the entrepreneur. The entrepreneur takes the financial risk to bring Land, Labour, and Capital together into a viable operating business. Without enterprise, the other three factors remain idle. The economic reward earned by enterprise is Profit.",
+      "vi": "Tinh thần khởi nghiệp (Enterprise) là năng lực, tầm nhìn và sự sẵn sàng chấp nhận rủi ro của doanh nhân. Doanh nhân dám mạo hiểm tài chính để kết nối Đất đai, Lao động và Vốn thành một doanh nghiệp vận hành hiệu quả. Nếu thiếu tinh thần khởi nghiệp, ba yếu tố còn lại sẽ ở trạng thái tĩnh. Phần thưởng kinh tế nhận được từ tinh thần doanh nhân là Lợi nhuận (Profit).",
+      "duration": 44.03,
+      "startTime": 473.72,
+      "endTime": 517.75,
+      "audioUrl": "/audio/lectures/business/1_1/fop_enterprise.mp3"
     },
     {
       "id": "sec_specialisation",
       "title": "5. Tầm quan trọng của Chuyên môn hóa & Phân công lao động",
       "selector": "#sec-specialisation",
-      "en": "Section 5 examines specialisation and the division of labour. Specialisation occurs when individuals, businesses, or entire nations concentrate on tasks where they have distinct advantages. Division of labour splits complex production into discrete repetitive steps. This dramatically accelerates worker speed, enhances quality, and reduces training costs, though extreme monotony can cause worker alienation, absenteeism, and production bottlenecks.",
-      "vi": "Mục năm tìm hiểu về chuyên môn hóa và phân công lao động. Chuyên môn hóa diễn ra khi cá nhân, doanh nghiệp hoặc quốc gia tập trung vào lĩnh vực mà họ có lợi thế rõ rệt. Phân công lao động chia nhỏ quy trình sản xuất thành các công đoạn lặp lại đơn giản. Điều này giúp tăng vọt năng suất, cải thiện chất lượng và giảm chi phí đào tạo, dù sự đơn điệu quá mức có thể gây ra nhàm chán, nghỉ việc và tắc nghẽn dây chuyền.",
-      "duration": 53.87,
-      "startTime": 301.3,
-      "endTime": 355.17,
+      "en": "Section 5 examines Specialisation and the Division of Labour. Specialisation occurs when individuals, businesses, or countries concentrate on the tasks and products they perform best. Division of labour splits production into separate, sequential steps where each worker specializes in one specific task, dramatically raising output per worker.",
+      "vi": "Mục 5 phân tích về Chuyên môn hóa và Phân công lao động. Chuyên môn hóa diễn ra khi các cá nhân, doanh nghiệp hoặc quốc gia tập trung vào những lĩnh vực và sản phẩm mà họ làm tốt nhất. Phân công lao động chia nhỏ quy trình sản xuất thành các công đoạn tuần tự riêng biệt, nơi mỗi công nhân chuyên tâm làm một việc duy nhất, giúp gia tăng vượt bậc sản lượng trên mỗi lao động.",
+      "duration": 42.06,
+      "startTime": 517.75,
+      "endTime": 559.81,
       "audioUrl": "/audio/lectures/business/1_1/sec_specialisation.mp3"
+    },
+    {
+      "id": "sec_specialisation_advantages",
+      "title": "✅ Ưu điểm của Chuyên môn hóa (Advantages)",
+      "selector": "#card-specialisation-advantages",
+      "en": "Specialisation offers substantial business advantages. Workers become faster and more skilled through continuous repetition. Production moves faster because workers do not waste time switching tools and stations. Furthermore, training labourers for specialized single tasks is much quicker and less costly, significantly driving down unit production costs.",
+      "vi": "Chuyên môn hóa mang lại nhiều lợi thế vượt trội cho doanh nghiệp. Công nhân làm việc nhanh hơn và thành thạo hơn nhờ thao tác lặp đi lặp lại. Tiến độ sản xuất được đẩy nhanh do không lãng phí thời gian chuyển đổi dụng cụ hay vị trí làm việc. Hơn nữa, việc đào tạo công nhân cho một thao tác chuyên biệt diễn ra rất nhanh và ít tốn kém, giúp giảm đáng kể chi phí trên từng đơn vị sản phẩm.",
+      "duration": 45.62,
+      "startTime": 559.81,
+      "endTime": 605.43,
+      "audioUrl": "/audio/lectures/business/1_1/sec_specialisation_advantages.mp3"
+    },
+    {
+      "id": "sec_specialisation_disadvantages",
+      "title": "❌ Nhược điểm của Chuyên môn hóa (Disadvantages)",
+      "selector": "#card-specialisation-disadvantages",
+      "en": "However, specialisation carries significant risks. Performing the same repetitive task all day causes monotony and severe boredom, leading to demotivation, careless errors, and high employee turnover. Crucially, it creates over-dependency: if a key specialized worker is absent, the entire assembly line can grind to a halt.",
+      "vi": "Tuy nhiên, chuyên môn hóa cũng tiềm ẩn nhiều rủi ro lớn. Việc lặp đi lặp lại một thao tác suốt cả ngày gây ra sự đơn điệu và nhàm chán, dẫn đến suy giảm động lực, sai sót và tỷ lệ nghỉ việc cao. Đặc biệt, nó tạo ra sự phụ thuộc quá mức: nếu một công nhân chuyên trách vắng mặt, toàn bộ dây chuyền sản xuất có nguy cơ bị đình trệ hoàn toàn.",
+      "duration": 42.76,
+      "startTime": 605.43,
+      "endTime": 648.19,
+      "audioUrl": "/audio/lectures/business/1_1/sec_specialisation_disadvantages.mp3"
     },
     {
       "id": "sec_purpose_business",
       "title": "6. Mục đích của Hoạt động Doanh nghiệp",
       "selector": "#sec-purpose-business",
-      "en": "Section 6 highlights the primary purpose of business activity: combining scarce factors of production to produce marketable goods and services that satisfy consumer needs and wants. Businesses employ workers, distribute wages that support livelihoods, invent technological solutions, and generate wealth for both local communities and the broader national macroeconomy.",
-      "vi": "Mục sáu nhấn mạnh mục đích cốt lõi của hoạt động kinh doanh: kết hợp các yếu tố sản xuất khan hiếm để tạo ra hàng hóa và dịch vụ thương mại nhằm đáp ứng tối đa nhu cầu của người tiêu dùng. Thông qua đó, doanh nghiệp tạo việc làm, chi trả tiền lương đảm bảo sinh kế cho người lao động, sáng tạo giải pháp công nghệ và đóng góp vào sự phồn vinh của nền kinh tế quốc gia.",
+      "en": "Section 6 highlights the primary purpose of business activity. A business is an organization that combines all four factors of production to produce goods and services that satisfy human wants and needs. In doing so, businesses create employment, pay wages, foster innovation, and generate wealth for the broader economy.",
+      "vi": "Mục 6 nhấn mạnh mục đích cốt lõi của hoạt động kinh doanh. Doanh nghiệp là một tổ chức kết hợp cả bốn yếu tố sản xuất nhằm tạo ra hàng hóa và dịch vụ thỏa mãn nhu cầu và mong muốn của con người. Thông qua đó, doanh nghiệp tạo công ăn việc làm, trả lương nuôi sống gia đình người lao động, thúc đẩy đổi mới sáng tạo và tạo ra của cải cho toàn bộ nền kinh tế.",
       "duration": 41.66,
-      "startTime": 355.17,
-      "endTime": 396.83,
+      "startTime": 648.19,
+      "endTime": 689.85,
       "audioUrl": "/audio/lectures/business/1_1/sec_purpose_business.mp3"
     },
     {
       "id": "sec_added_value",
       "title": "7. Giá trị gia tăng (Added Value)",
       "selector": "#sec-added-value",
-      "en": "Section 7 introduces one of the most critical concepts in IGCSE Business: Added Value. Added value is the difference between the selling price of a finished product and the cost of bought-in raw materials and components used to make it. It is calculated as Selling Price minus Cost of Materials. Importantly, added value is not the same as profit, because it does not yet deduct operational expenses like wages, rent, and utility bills.",
-      "vi": "Mục bảy trình bày một trong những khái niệm trọng tâm nhất của đề thi IGCSE: Giá trị gia tăng. Giá trị gia tăng là phần chênh lệch giữa giá bán của thành phẩm và chi phí mua nguyên vật liệu cấu thành. Công thức tính là: Giá bán trừ đi Chi phí nguyên vật liệu đầu vào. Cần đặc biệt ghi nhớ: Giá trị gia tăng không đồng nhất với lợi nhuận, vì nó chưa trừ đi các chi phí vận hành khác như tiền lương, tiền thuê mặt bằng và chi phí điện nước.",
-      "duration": 53.73,
-      "startTime": 396.83,
-      "endTime": 450.56,
+      "en": "Section 7 introduces one of the most critical concepts in IGCSE Business: Added Value. Added value is the difference between the selling price of a product and the cost of bought-in raw materials used to make it. For example, if a carpenter buys raw timber for 20 dollars and crafts a dining chair sold for 120 dollars, 100 dollars of added value has been created through skill and craftsmanship. Crucially, added value is not profit, because other expenses like rent and wages must still be deducted.",
+      "vi": "Mục 7 trình bày khái niệm trọng tâm bậc nhất trong đề thi IGCSE: Giá trị gia tăng (Added Value). Giá trị gia tăng là phần chênh lệch giữa giá bán của thành phẩm và chi phí mua nguyên vật liệu thô đầu vào. Ví dụ, nếu người thợ mộc mua gỗ thô với giá 20 đô la và đóng thành chiếc ghế ăn bán với giá 120 đô la, họ đã tạo ra 100 đô la giá trị gia tăng nhờ tay nghề và thiết kế. Cần nhớ rằng giá trị gia tăng chưa phải là lợi nhuận, vì doanh nghiệp còn phải trang trải các chi phí khác như tiền thuê xưởng và tiền lương.",
+      "duration": 63.57,
+      "startTime": 689.85,
+      "endTime": 753.42,
       "audioUrl": "/audio/lectures/business/1_1/sec_added_value.mp3"
     },
     {
       "id": "card_increase_added_value",
-      "title": "Các phương pháp gia tăng giá trị cho doanh nghiệp",
+      "title": "Các phương pháp gia tăng giá trị & Ví dụ Thực tiễn",
       "selector": "#card-increase-added-value",
-      "en": "Businesses can increase added value via four primary levers: establishing prestigious branding that commands premium prices, elevating product quality and finishing standards, incorporating unique innovative features and design aesthetics, or delivering exceptional personalised customer service. Higher added value shields firms from intense price competition and expands their operating gross profit margins.",
-      "vi": "Doanh nghiệp có thể gia tăng giá trị thông qua bốn đòn bẩy chiến lược chính: xây dựng thương hiệu uy tín để định giá bán cao hơn, nâng cao tiêu chuẩn chất lượng và độ hoàn thiện của sản phẩm, tích hợp các tính năng thiết kế độc đáo và sáng tạo, hoặc cung cấp dịch vụ chăm sóc khách hàng xuất sắc. Giá trị gia tăng cao giúp doanh nghiệp thoát khỏi áp lực cạnh tranh gay gắt về giá và nới rộng biên lợi nhuận hoạt động.",
+      "en": "Businesses can increase added value in two fundamental ways: by lowering the cost of bought-in materials while maintaining selling price, or by raising the selling price while maintaining material costs. Practical methods include building a prestigious brand reputation, adding unique innovative features, delivering convenience and speed, or providing exceptional personalized customer service, as seen when luxury jewellery stores invest in velvet packaging and ambient showrooms to command premium prices.",
+      "vi": "Doanh nghiệp có thể gia tăng giá trị gia tăng theo hai hướng cơ bản: giảm chi phí nguyên vật liệu mua vào trong khi giữ nguyên giá bán, hoặc tăng giá bán trong khi giữ nguyên chi phí nguyên liệu. Các biện pháp thực tiễn bao gồm xây dựng thương hiệu uy tín, bổ sung tính năng độc đáo, cung cấp dịch vụ nhanh chóng tiện lợi, hoặc mang đến dịch vụ chăm sóc khách hàng đẳng cấp, như cách các cửa hàng trang sức cao cấp đầu tư hộp nhung sang trọng và không gian trưng bày lộng lẫy để bán sản phẩm với mức giá vượt trội.",
       "duration": 45.09,
-      "startTime": 450.56,
-      "endTime": 495.65,
+      "startTime": 753.42,
+      "endTime": 798.51,
       "audioUrl": "/audio/lectures/business/1_1/card_increase_added_value.mp3"
     }
   ]
