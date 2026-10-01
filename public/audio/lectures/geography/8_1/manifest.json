@@ -3,33 +3,32 @@
   "courseTitle": "IGCSE Geography (0460)",
   "lectureTitle": "8.1 Measuring Development",
   "totalDuration": 372.11,
-  "majorSections": [
-    {
-      "id": "sec_what_is_dev",
-      "title": "1. Khái niệm Phát triển & Chất lượng sống",
-      "startSegmentId": "sec_what_is_dev"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 2
     },
-    {
-      "id": "sec_single_indicators",
-      "title": "2. Các chỉ số phát triển đơn lẻ",
-      "startSegmentId": "sec_single_indicators"
+    "sec_what_is_dev": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_hdi",
-      "title": "3. Chỉ số phát triển con người HDI",
-      "startSegmentId": "sec_hdi"
+    "sec_single_indicators": {
+      "start": 3,
+      "end": 5
     },
-    {
-      "id": "sec_brandt_multipolar",
-      "title": "4. Ranh giới Brandt & Thế giới đa cực",
-      "startSegmentId": "sec_brandt_multipolar"
+    "sec_hdi": {
+      "start": 6,
+      "end": 7
     },
-    {
-      "id": "card_exam_summary",
-      "title": "Trọng tâm ôn thi Cambridge",
-      "startSegmentId": "exam_summary"
+    "sec_brandt_multipolar": {
+      "start": 8,
+      "end": 10
+    },
+    "card_exam_summary": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

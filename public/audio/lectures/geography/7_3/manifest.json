@@ -3,38 +3,36 @@
   "courseTitle": "IGCSE Geography (0460)",
   "lectureTitle": "7.3 The Management of Urban Growth",
   "totalDuration": 358.37,
-  "majorSections": [
-    {
-      "id": "sec_housing_brownfield",
-      "title": "1. Nhà ở đô thị: Đất nâu vs Đất xanh",
-      "startSegmentId": "sec_housing_brownfield"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 2
     },
-    {
-      "id": "sec_sustainable_cities",
-      "title": "2. Nguyên lý thành phố bền vững",
-      "startSegmentId": "sec_sustainable_cities"
+    "sec_housing_brownfield": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_transport_strategies",
-      "title": "3. Chiến lược giao thông bền vững",
-      "startSegmentId": "sec_transport_strategies"
+    "sec_sustainable_cities": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_shanghai_casestudy",
-      "title": "4. Quy hoạch siêu đô thị Thượng Hải",
-      "startSegmentId": "sec_shanghai_casestudy"
+    "sec_transport_strategies": {
+      "start": 5,
+      "end": 6
     },
-    {
-      "id": "sec_delhi_hazards",
-      "title": "5. Quản lý chất lượng không khí tại Delhi",
-      "startSegmentId": "sec_delhi_hazards"
+    "sec_shanghai_casestudy": {
+      "start": 7,
+      "end": 8
     },
-    {
-      "id": "card_exam_strategy",
-      "title": "Chiến lược làm bài thi",
-      "startSegmentId": "exam_strategy"
+    "sec_delhi_hazards": {
+      "start": 9,
+      "end": 10
+    },
+    "card_exam_strategy": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

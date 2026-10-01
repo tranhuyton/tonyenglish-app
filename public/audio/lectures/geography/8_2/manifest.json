@@ -3,33 +3,32 @@
   "courseTitle": "IGCSE Geography (0460)",
   "lectureTitle": "8.2 The World is Developing Unevenly",
   "totalDuration": 295.73,
-  "majorSections": [
-    {
-      "id": "sec_uneven_continuum",
-      "title": "1. Thang bậc phát triển thu nhập",
-      "startSegmentId": "sec_uneven_continuum"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 1
     },
-    {
-      "id": "sec_underlying_causes",
-      "title": "2. Nguyên nhân sâu xa của chênh lệch",
-      "startSegmentId": "sec_underlying_causes"
+    "sec_uneven_continuum": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_dev_theories",
-      "title": "3. Thuyết Hiện đại hóa vs Phụ thuộc",
-      "startSegmentId": "sec_dev_theories"
+    "sec_underlying_causes": {
+      "start": 2,
+      "end": 4
     },
-    {
-      "id": "sec_poverty_cycle",
-      "title": "4. Vòng luẩn quẩn nghèo đói & Đòn bẩy",
-      "startSegmentId": "sec_poverty_cycle"
+    "sec_dev_theories": {
+      "start": 5,
+      "end": 6
     },
-    {
-      "id": "card_exam_summary",
-      "title": "Trọng tâm ôn thi Cambridge",
-      "startSegmentId": "exam_summary"
+    "sec_poverty_cycle": {
+      "start": 7,
+      "end": 8
+    },
+    "card_exam_summary": {
+      "start": 9,
+      "end": 9
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

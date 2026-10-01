@@ -3,33 +3,32 @@
   "courseTitle": "IGCSE Geography (0460)",
   "lectureTitle": "7.2 The Opportunities and Challenges of Urbanisation",
   "totalDuration": 379.83,
-  "majorSections": [
-    {
-      "id": "sec_opportunities",
-      "title": "1. Cơ hội kinh tế & xã hội",
-      "startSegmentId": "sec_opportunities"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 2
     },
-    {
-      "id": "sec_hic_challenges",
-      "title": "2. Thách thức ở HIC & Mô hình đất đai",
-      "startSegmentId": "sec_hic_challenges"
+    "sec_opportunities": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_lic_challenges",
-      "title": "3. Thách thức ở LIC & Khu ổ chuột",
-      "startSegmentId": "sec_lic_challenges"
+    "sec_hic_challenges": {
+      "start": 3,
+      "end": 6
     },
-    {
-      "id": "sec_squatter_management",
-      "title": "4. Quản lý ổ chuột & Favela-Bairro",
-      "startSegmentId": "sec_squatter_management"
+    "sec_lic_challenges": {
+      "start": 7,
+      "end": 8
     },
-    {
-      "id": "card_exam_strategy",
-      "title": "Chiến lược làm bài thi",
-      "startSegmentId": "exam_strategy"
+    "sec_squatter_management": {
+      "start": 9,
+      "end": 12
+    },
+    "card_exam_strategy": {
+      "start": 13,
+      "end": 13
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
