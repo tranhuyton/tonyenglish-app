@@ -1,26 +1,30 @@
 {
   "lectureId": "a6bf8fbd-9c3d-45a3-8cd7-d63a3e79e7b3",
   "courseTitle": "Cambridge IGCSE Business Studies",
-  "lectureTitle": "1.5. Business objectives and stakeholder objectives",
-  "totalDuration": 334.12,
-  "majorSections": [
-    {
-      "id": "sec_business_objectives",
-      "title": "1. Mục tiêu kinh doanh"
+  "lectureTitle": "1.5 Business objectives and stakeholder objectives",
+  "totalDuration": 417.67,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_public_objectives",
-      "title": "2. Mục tiêu khu vực nhà nước"
+    "sec_business_objectives": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_stakeholders",
-      "title": "3. Các bên liên quan (Stakeholders)"
+    "sec_public_objectives": {
+      "start": 4,
+      "end": 4
     },
-    {
-      "id": "sec_stakeholder_conflicts",
-      "title": "4. Xung đột mục tiêu"
+    "sec_stakeholders": {
+      "start": 5,
+      "end": 7
+    },
+    "sec_stakeholder_conflicts": {
+      "start": 8,
+      "end": 8
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -35,10 +39,10 @@
     },
     {
       "id": "sec_business_objectives",
-      "title": "1. Mục tiêu kinh doanh và Lợi ích",
+      "title": "1. Mục tiêu Kinh doanh & 4 Lợi ích Cốt lõi",
       "selector": "#sec-business-objectives",
       "en": "Section 1 defines business objectives as measurable targets that direct corporate activities. Setting clear objectives provides strategic focus, unites managers and employees toward common goals, motivates the workforce through clear milestones, guides critical decision-making, and establishes quantifiable benchmarks to evaluate overall business performance.",
-      "vi": "Mục một định nghĩa mục tiêu kinh doanh là các đích đến đo lường được để định hướng toàn bộ hoạt động của doanh nghiệp. Việc xác lập mục tiêu rõ ràng giúp vạch ra định hướng chiến lược, gắn kết ban quản trị và nhân viên, tạo động lực phấn đấu, hỗ trợ ra quyết định kinh doanh chính xác và cung cấp tiêu chuẩn định lượng để đánh giá hiệu quả hoạt động.",
+      "vi": "Mục 1 định nghĩa mục tiêu kinh doanh là các đích đến đo lường được để định hướng toàn bộ hoạt động của doanh nghiệp. Việc xác lập mục tiêu rõ ràng giúp vạch ra định hướng chiến lược, gắn kết ban quản trị và nhân viên, tạo động lực phấn đấu, hỗ trợ ra quyết định kinh doanh chính xác và cung cấp tiêu chuẩn định lượng để đánh giá hiệu quả hoạt động.",
       "duration": 40.24,
       "startTime": 46.86,
       "endTime": 87.1,
@@ -46,57 +50,79 @@
     },
     {
       "id": "card_private_objectives",
-      "title": "Các mục tiêu trọng tâm của Khu vực Tư nhân",
+      "title": "🏢 4 Mục tiêu Trọng tâm của Khu vực Tư nhân",
       "selector": "#card-private-objectives",
-      "en": "In the private sector, commercial objectives vary by enterprise lifecycle. Business survival is paramount for newly launched ventures and during economic recessions. Profitability satisfies owner returns and finances reinvestment. Growth and market share expansion achieve economies of scale and market dominance. Returns to shareholders maintain investor confidence, and corporate social responsibility builds sustainable brand equity.",
-      "vi": "Trong khu vực tư nhân, các mục tiêu kinh doanh thay đổi theo từng giai đoạn phát triển. Mục tiêu sinh tồn (survival) là tối quan trọng đối với doanh nghiệp mới khởi nghiệp hoặc trong khủng hoảng kinh tế. Lợi nhuận (profit) bảo đảm quyền lợi cho chủ sở hữu và tái đầu tư. Tăng trưởng và thị phần (growth & market share) mang lại lợi thế kinh tế theo quy mô. Lợi tức cho cổ đông duy trì niềm tin của nhà đầu tư, trong khi trách nhiệm xã hội củng cố uy tín thương hiệu lâu dài.",
+      "en": "Private sector firms pursue four primary commercial objectives: short-term survival during economic recessions or initial launch; profit maximization to provide returns for owners and fund capital reinvestment; continuous growth to exploit economies of scale and dominate industries; and expanding market share to cement brand loyalty.",
+      "vi": "Các doanh nghiệp khu vực tư nhân theo đuổi 4 mục tiêu thương mại trọng tâm: mục tiêu sinh tồn (survival) trong giai đoạn khởi nghiệp hoặc suy thoái kinh tế; tối đa hóa lợi nhuận (profit) để trả cổ tức cho cổ đông và tái đầu tư mở rộng; tăng trưởng quy mô (growth) nhằm tận dụng tính kinh tế của quy mô; và gia tăng thị phần (market share) để khẳng định vị thế thương hiệu dẫn đầu.",
       "duration": 58.29,
       "startTime": 87.1,
       "endTime": 145.39,
       "audioUrl": "/audio/lectures/business/1_5/card_private_objectives.mp3"
     },
     {
-      "id": "sec_public_objectives",
-      "title": "2. Mục tiêu của Doanh nghiệp Nhà nước",
-      "selector": "#sec-public-objectives",
-      "en": "Section 2 contrasts private motives with public-sector objectives. State-owned enterprises do not prioritize profit maximization; instead, they deliver affordable essential public services like utilities, healthcare, and education, safeguard local employment, and stimulate balanced regional economic development to ensure universal public access and reduce social inequalities.",
-      "vi": "Mục hai đối chiếu động cơ tư nhân với các mục tiêu của khu vực nhà nước. Các tổ chức công không đặt tối đa hóa lợi nhuận lên hàng đầu; thay vào đó, họ tập trung cung cấp các dịch vụ công thiết yếu với giá cả phải chăng như điện nước, y tế, giáo dục, bảo vệ việc làm cho người dân địa phương và thúc đẩy phát triển kinh tế vùng nhằm bảo đảm công bằng xã hội.",
-      "duration": 43.55,
+      "id": "card_social_enterprise",
+      "title": "🤝 Doanh nghiệp Xã hội & Mô hình Triple Bottom Line (3Ps)",
+      "selector": "#card-social-enterprise",
+      "en": "A social enterprise operates with primarily social objectives, reinvesting operational surpluses to benefit society rather than maximizing payouts to private shareholders. It balances the Triple Bottom Line: People, protecting employees and community welfare; Planet, minimizing environmental footprint through green sustainable practices; and Profit, generating self-sustaining financial surplus.",
+      "vi": "Doanh nghiệp xã hội (Social enterprise) vận hành chủ yếu vì các mục tiêu xã hội, tái đầu tư toàn bộ thặng dư tài chính vào các hoạt động cộng đồng thay vì chi trả cổ tức tối đa cho cổ đông tư nhân. Mô hình này cân bằng ba yếu tố (Triple Bottom Line - 3 chữ P): Con người (People - bảo vệ quyền lợi lao động và hỗ trợ người yếu thế); Hành tinh (Planet - bảo vệ môi trường, giảm phát thải và tái chế); và Lợi nhuận (Profit - tạo ra thặng dư tài chính để tự chủ vận hành lâu dài).",
+      "duration": 54.62,
       "startTime": 145.39,
-      "endTime": 188.94,
+      "endTime": 200.01,
+      "audioUrl": "/audio/lectures/business/1_5/card_social_enterprise.mp3"
+    },
+    {
+      "id": "sec_public_objectives",
+      "title": "2. Mục tiêu của Doanh nghiệp Khu vực Nhà nước",
+      "selector": "#sec-public-objectives",
+      "en": "Section 2 contrasts public sector targets with private commerce. State corporations pursue three mandates: Financial targets to meet government budget benchmarks; Service targets guaranteeing universal, reliable, and high-quality access for all citizens; and Social targets creating stable employment, keeping prices subsidized, and fostering balanced regional development.",
+      "vi": "Mục 2 đối chiếu mục tiêu của khu vực nhà nước với thương mại tư nhân. Các tổng công ty nhà nước hướng tới 3 nhóm mục tiêu: Mục tiêu tài chính nhằm đạt chỉ tiêu ngân sách chính phủ giao; Mục tiêu dịch vụ bảo đảm cung ứng dịch vụ công thiết yếu đáng tin cậy với chất lượng cao cho toàn dân; và Mục tiêu xã hội giúp tạo việc làm ổn định, trợ giá hàng hóa thiết yếu và thúc đẩy phát triển kinh tế vùng sâu vùng xa.",
+      "duration": 45.66,
+      "startTime": 200.01,
+      "endTime": 245.67,
       "audioUrl": "/audio/lectures/business/1_5/sec_public_objectives.mp3"
     },
     {
       "id": "sec_stakeholders",
-      "title": "3. Các bên liên quan (Stakeholders)",
+      "title": "3. Khái niệm Các Bên Liên quan (Stakeholders)",
       "selector": "#sec-stakeholders",
-      "en": "Section 3 investigates stakeholders: any individual or group with a direct interest in the operations and performance of a business. Stakeholders are divided into internal stakeholders, such as owners, managers, and workers, and external stakeholders, including customers, suppliers, commercial lenders, local communities, and national governments.",
-      "vi": "Mục ba nghiên cứu về các bên liên quan (stakeholders): bất kỳ cá nhân hay nhóm người nào có quyền lợi hoặc chịu tác động trực tiếp từ hoạt động của doanh nghiệp. Các bên liên quan được chia thành nhóm nội bộ (chủ sở hữu, nhà quản lý, người lao động) và nhóm bên ngoài (khách hàng, nhà cung ứng, ngân hàng, cộng đồng địa phương và chính phủ).",
-      "duration": 41.9,
-      "startTime": 188.94,
-      "endTime": 230.84,
+      "en": "Section 3 defines a stakeholder as any individual or organized group that has a direct interest in, or is affected by, the operations, decisions, and performance of a business. Stakeholders are divided into internal participants and external community members.",
+      "vi": "Mục 3 định nghĩa các bên liên quan (stakeholders) là bất kỳ cá nhân hoặc tổ chức nào có lợi ích trực tiếp, hoặc chịu tác động từ các hoạt động, quyết định và kết quả kinh doanh của doanh nghiệp. Các bên liên quan được phân chia thành nhóm nội bộ bên trong và nhóm cộng đồng bên ngoài.",
+      "duration": 32.44,
+      "startTime": 245.67,
+      "endTime": 278.11,
       "audioUrl": "/audio/lectures/business/1_5/sec_stakeholders.mp3"
     },
     {
-      "id": "card_stakeholder_groups",
-      "title": "Quyền lợi và Động cơ của từng nhóm Stakeholders",
-      "selector": "#card-stakeholder-groups",
-      "en": "Each stakeholder group has distinct motivations. Owners seek high dividends and capital appreciation; managers desire career progression, prestige, and executive bonuses; workers seek job security, safe working environments, and fair wages. Externally, customers demand quality at competitive prices, suppliers demand timely settlement, and governments enforce tax compliance and employment regulations.",
-      "vi": "Mỗi nhóm bên liên quan đều mang những kỳ vọng riêng biệt. Chủ sở hữu và cổ đông kỳ vọng cổ tức cao và tăng giá trị vốn; nhà quản lý mong muốn thăng tiến sự nghiệp và thưởng hiệu quả; người lao động cần sự an toàn việc làm, môi trường làm việc tốt và mức lương thỏa đáng. Bên ngoài, khách hàng đòi hỏi sản phẩm chất lượng với giá hợp lý, nhà cung cấp yêu cầu thanh toán đúng hạn, còn chính phủ kiểm soát tuân thủ thuế và luật lao động.",
-      "duration": 51.21,
-      "startTime": 230.84,
-      "endTime": 282.05,
-      "audioUrl": "/audio/lectures/business/1_5/card_stakeholder_groups.mp3"
+      "id": "card_internal_stakeholders",
+      "title": "🏢 Các Bên Liên quan Nội bộ (Internal Stakeholders)",
+      "selector": "#card-internal-stakeholders",
+      "en": "Internal stakeholders operate directly inside the firm: Shareholders and owners demand strong returns on capital and rising share values; Workers demand job security, safe conditions, fair treatment, and living wages; and Managers seek career advancement, higher salaries, executive bonuses, and the prestige of running growing organisations.",
+      "vi": "Các bên liên quan nội bộ hoạt động trực tiếp bên trong doanh nghiệp: Cổ đông và chủ sở hữu đòi hỏi tỷ suất sinh lời cao trên vốn đầu tư và giá trị cổ phiếu gia tăng; Người lao động đòi hỏi hợp đồng minh bạch, công việc an toàn, môi trường công bằng và tiền lương xứng đáng; và Ban quản lý tìm kiếm sự thăng tiến nghề nghiệp, mức lương thưởng cao cùng uy tín quản trị.",
+      "duration": 39.76,
+      "startTime": 278.11,
+      "endTime": 317.87,
+      "audioUrl": "/audio/lectures/business/1_5/card_internal_stakeholders.mp3"
+    },
+    {
+      "id": "card_external_stakeholders",
+      "title": "🌍 Các Bên Liên quan Bên ngoài (External Stakeholders)",
+      "selector": "#card-external-stakeholders",
+      "en": "External stakeholders exist outside daily company boundaries: Customers expect safe, reliable products priced fairly; Governments demand compliance with labour and tax laws, rising employment, and fiscal contributions; Banks demand steady interest payments and guaranteed capital repayment; and the Local Community demands job opportunities and environmental preservation without toxic pollution.",
+      "vi": "Các bên liên quan bên ngoài hiện diện bên ngoài ranh giới doanh nghiệp: Khách hàng kỳ vọng sản phẩm an toàn, chất lượng tương xứng với giá tiền; Chính phủ đòi hỏi tuân thủ nghiêm pháp luật lao động, nộp thuế đầy đủ và mở rộng việc làm; Ngân hàng đòi hỏi khả năng thanh toán lãi vay đúng hạn và bảo toàn vốn gốc; và Cộng đồng địa phương mong muốn có thêm việc làm, sản xuất không gây ô nhiễm môi trường.",
+      "duration": 43.74,
+      "startTime": 317.87,
+      "endTime": 361.61,
+      "audioUrl": "/audio/lectures/business/1_5/card_external_stakeholders.mp3"
     },
     {
       "id": "sec_stakeholder_conflicts",
-      "title": "4. Xung đột mục tiêu giữa các bên liên quan",
+      "title": "⚔️ 4. Xung đột Mục tiêu giữa các Bên Liên quan",
       "selector": "#sec-stakeholder-conflicts",
-      "en": "Section 4 addresses stakeholder conflicts. Because different stakeholders pursue competing aims, business decisions invariably require compromises. For example, paying higher wages pleases workers but diminishes shareholder profits; automating factory lines cuts costs and boosts efficiency for owners but threatens shopfloor job security. Senior leadership must carefully balance conflicting expectations to achieve long-term commercial harmony.",
-      "vi": "Mục bốn giải quyết bài toán xung đột mục tiêu. Do các nhóm theo đuổi những lợi ích trái ngược, mọi quyết định quản trị đều phải dung hòa. Ví dụ: tăng lương sẽ làm hài lòng người lao động nhưng làm giảm lợi nhuận của cổ đông; đầu tư dây chuyền tự động hóa giúp giảm chi phí và nâng cao hiệu suất nhưng lại đe dọa việc làm của công nhân. Ban điều hành phải cân bằng khéo léo các kỳ vọng để bảo đảm sự phát triển bền vững.",
-      "duration": 52.07,
-      "startTime": 282.05,
-      "endTime": 334.12,
+      "en": "Section 4 analyses unavoidable stakeholder conflicts. Satisfying one group frequently harms another: paying higher wages satisfies workers but slashes shareholder profits; building new factories creates jobs but causes noise and air pollution that outrages the community; and raising prices increases profit margins but angers customers. Successful managers must negotiate pragmatic compromises, adopting corporate social responsibility to achieve sustainable long-term equilibrium.",
+      "vi": "Mục 4 phân tích các mâu thuẫn quyền lợi không thể tránh khỏi giữa các bên liên quan. Thỏa mãn mục tiêu của nhóm này thường xâm phạm lợi ích của nhóm khác: tăng lương làm hài lòng người lao động nhưng lại bào mòn lợi nhuận của cổ đông; xây thêm nhà máy tạo việc làm nhưng lại gây khói bụi và tiếng ồn khiến cư dân phản đối; và tăng giá bán giúp tăng lợi nhuận nhưng lại khiến khách hàng rời bỏ. Nhà quản trị giỏi phải biết dung hòa, thực hiện trách nhiệm xã hội doanh nghiệp để đạt được sự phát triển hài hòa bền vững.",
+      "duration": 56.06,
+      "startTime": 361.61,
+      "endTime": 417.67,
       "audioUrl": "/audio/lectures/business/1_5/sec_stakeholder_conflicts.mp3"
     }
   ]

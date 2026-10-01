@@ -1,38 +1,46 @@
 {
   "lectureId": "71458f5f-ba54-4ac7-a4c2-8bc68f8f15a0",
   "courseTitle": "Cambridge IGCSE Business Studies",
-  "lectureTitle": "1.4. Types of business organisation",
-  "totalDuration": 379.93,
-  "majorSections": [
-    {
-      "id": "sec_sole_trader",
-      "title": "1. Doanh nghiệp tư nhân (Sole Trader)"
+  "lectureTitle": "1.4 Types of business organisation",
+  "totalDuration": 766.32,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_partnerships",
-      "title": "2. Công ty hợp danh (Partnerships)"
+    "sec_sole_trader": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_companies",
-      "title": "3. Công ty cổ phần (Joint-Stock Companies)"
+    "sec_partnerships": {
+      "start": 4,
+      "end": 6
     },
-    {
-      "id": "sec_franchises",
-      "title": "4. Nhượng quyền thương mại (Franchises)"
+    "card_unincorp_vs_incorp": {
+      "start": 7,
+      "end": 7
     },
-    {
-      "id": "sec_joint_ventures",
-      "title": "5. Doanh nghiệp Liên doanh (Joint Ventures)"
+    "sec_companies": {
+      "start": 8,
+      "end": 12
     },
-    {
-      "id": "sec_public_corporations",
-      "title": "6. Tổng công ty Nhà nước"
+    "sec_franchises": {
+      "start": 13,
+      "end": 15
     },
-    {
-      "id": "sec_exam_recommendation",
-      "title": "7. Chiến lược đề xuất loại hình doanh nghiệp"
+    "sec_joint_ventures": {
+      "start": 16,
+      "end": 16
+    },
+    "sec_public_corporations": {
+      "start": 17,
+      "end": 17
+    },
+    "sec_exam_recommendation": {
+      "start": 18,
+      "end": 18
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -47,79 +55,200 @@
     },
     {
       "id": "sec_sole_trader",
-      "title": "1. Doanh nghiệp tư nhân (Sole Trader)",
+      "title": "1. Doanh nghiệp Tư nhân (Sole Trader)",
       "selector": "#sec-sole-trader",
-      "en": "Section 1 analyzes the sole trader structure. Owned and managed by a single individual, sole proprietorships offer total autonomy, simple statutory establishment, and complete retention of profits. However, the crucial legal disadvantage is unlimited liability: the owner is personally responsible for all business debts, placing private assets like houses and vehicles at risk if the business becomes insolvent.",
-      "vi": "Mục một phân tích loại hình doanh nghiệp tư nhân (sole trader). Do một cá nhân sở hữu và điều hành, loại hình này mang lại quyền tự quyết tuyệt đối, thủ tục thành lập đơn giản và hưởng trọn lợi nhuận. Tuy nhiên, bất lợi pháp lý lớn nhất là chế độ trách nhiệm vô hạn (unlimited liability): chủ sở hữu phải chịu trách nhiệm bằng toàn bộ tài sản cá nhân cho các khoản nợ của doanh nghiệp nếu phá sản.",
-      "duration": 48.11,
+      "en": "Section 1 examines the sole trader, also known as a sole proprietorship. This is a business owned, financed, and controlled by a single individual. Although a sole trader can hire employees, the owner assumes all legal and financial liabilities personally.",
+      "vi": "Mục 1 tìm hiểu về doanh nghiệp tư nhân (Sole Trader). Đây là hình thức kinh doanh do một cá nhân duy nhất bỏ vốn thành lập, quản lý và sở hữu toàn bộ. Mặc dù chủ doanh nghiệp tư nhân có thể thuê nhân viên làm việc, nhưng họ phải tự gánh vác mọi trách nhiệm pháp lý và tài chính.",
+      "duration": 34.62,
       "startTime": 46.24,
-      "endTime": 94.35,
+      "endTime": 80.86,
       "audioUrl": "/audio/lectures/business/1_4/sec_sole_trader.mp3"
     },
     {
+      "id": "card_sole_trader_adv",
+      "title": "✅ Ưu điểm của Doanh nghiệp Tư nhân",
+      "selector": "#card-sole-trader-adv",
+      "en": "Sole traders enjoy four major advantages: minimal setup costs with few legal formalities, total autonomy in rapid decision-making, retention of 100% of earned profits, and close personalized contact with customers fostering intense brand loyalty.",
+      "vi": "Doanh nghiệp tư nhân có 4 ưu điểm nổi bật: thủ tục thành lập nhanh gọn và chi phí thấp, toàn quyền tự quyết định linh hoạt không cần hội ý, được hưởng trọn vẹn 100% lợi nhuận làm ra, và duy trì mối quan hệ chăm sóc khách hàng gần gũi giúp xây dựng lòng trung thành thương hiệu.",
+      "duration": 30.59,
+      "startTime": 80.86,
+      "endTime": 111.45,
+      "audioUrl": "/audio/lectures/business/1_4/card_sole_trader_adv.mp3"
+    },
+    {
+      "id": "card_sole_trader_disadv",
+      "title": "❌ Nhược điểm của Doanh nghiệp Tư nhân (Unlimited Liability)",
+      "selector": "#card-sole-trader-disadv",
+      "en": "The critical drawback of a sole trader is unlimited liability: because the business is unincorporated, personal assets such as houses and savings can be seized by court order to pay company debts. Additional limitations include full operational workload on one person, difficulty raising bank loans, and total lack of business continuity if the owner retires or passes away.",
+      "vi": "Bất lợi nghiêm trọng nhất của doanh nghiệp tư nhân là trách nhiệm vô hạn (unlimited liability): do doanh nghiệp không có tư cách pháp nhân tách rời, tài sản cá nhân như nhà cửa và tiền tiết kiệm của chủ sở hữu có thể bị tịch thu để trả nợ. Ngoài ra còn có gánh nặng công việc dồn lên một người, khó vay vốn ngân hàng lớn và không có tính kế thừa liên tục nếu chủ sở hữu nghỉ hưu hoặc qua đời.",
+      "duration": 43.7,
+      "startTime": 111.45,
+      "endTime": 155.15,
+      "audioUrl": "/audio/lectures/business/1_4/card_sole_trader_disadv.mp3"
+    },
+    {
       "id": "sec_partnerships",
-      "title": "2. Công ty hợp danh (Partnerships)",
+      "title": "2. Công ty Hợp danh (Partnerships)",
       "selector": "#sec-partnerships",
-      "en": "Section 2 examines partnerships, formed between two and twenty individuals under a formal Deed of Partnership. Partnerships inject greater capital, share workloads, and combine complementary professional expertise. Yet, partners typically share joint and several unlimited liability, and business continuity is legally dissolved if any partner resigns or passes away.",
-      "vi": "Mục hai tìm hiểu về công ty hợp danh (partnerships), được thành lập giữa 2 đến 20 thành viên dựa trên Hợp đồng hợp danh (Deed of Partnership). Công ty hợp danh giúp huy động nguồn vốn lớn hơn, chia sẻ khối lượng công việc và kết hợp chuyên môn đa dạng. Dù vậy, các thành viên vẫn phải chịu trách nhiệm vô hạn liên đới, và doanh nghiệp có nguy cơ giải thể nếu một thành viên rút vốn hoặc qua đời.",
-      "duration": 46.91,
-      "startTime": 94.35,
-      "endTime": 141.26,
+      "en": "Section 2 investigates partnerships. A partnership is a formal legal agreement between two or more people, typically up to twenty partners, who agree to jointly own, finance, and operate a business and share profits according to a deed of partnership.",
+      "vi": "Mục 2 phân tích về công ty hợp danh (Partnership). Hợp danh là sự thỏa thuận pháp lý giữa từ hai người trở lên, thông thường tối đa 20 thành viên, cùng nhau góp vốn, quản trị doanh nghiệp và phân chia lợi nhuận theo hợp đồng hợp danh.",
+      "duration": 29.82,
+      "startTime": 155.15,
+      "endTime": 184.97,
       "audioUrl": "/audio/lectures/business/1_4/sec_partnerships.mp3"
     },
     {
+      "id": "card_partnerships_adv",
+      "title": "✅ Ưu điểm của Công ty Hợp danh",
+      "selector": "#card-partnerships-adv",
+      "en": "Partnerships offer clear benefits over sole traders: more capital can be invested by pooling resources, diverse specialist skills and management ideas are brought together, and workloads and operational responsibilities are shared among partners.",
+      "vi": "Công ty hợp danh có nhiều ưu thế so với doanh nghiệp tư nhân: huy động được nhiều vốn hơn từ sự đóng góp của các thành viên, kết hợp được nhiều kỹ năng chuyên môn và ý tưởng quản trị đa dạng, đồng thời khối lượng công việc và trách nhiệm điều hành được san sẻ.",
+      "duration": 27.9,
+      "startTime": 184.97,
+      "endTime": 212.87,
+      "audioUrl": "/audio/lectures/business/1_4/card_partnerships_adv.mp3"
+    },
+    {
+      "id": "card_partnerships_disadv",
+      "title": "❌ Nhược điểm của Công ty Hợp danh",
+      "selector": "#card-partnerships-disadv",
+      "en": "However, ordinary partnerships still carry unlimited liability for all partners. Serious disputes can paralyze decision-making, decisions made by one partner legally bind all others, capital remains limited compared to companies, and the partnership legally dissolves if any partner departs.",
+      "vi": "Tuy nhiên, công ty hợp danh thông thường vẫn chịu trách nhiệm vô hạn cho tất cả thành viên. Những bất đồng quan điểm có thể làm đình trệ việc ra quyết định, quyết định của một thành viên có giá trị ràng buộc trách nhiệm lên toàn bộ các thành viên khác, vốn vẫn hạn chế so với công ty cổ phần, và công ty sẽ phải giải thể nếu một thành viên rút lui hoặc qua đời.",
+      "duration": 37.41,
+      "startTime": 212.87,
+      "endTime": 250.28,
+      "audioUrl": "/audio/lectures/business/1_4/card_partnerships_disadv.mp3"
+    },
+    {
+      "id": "card_unincorp_vs_incorp",
+      "title": "⚖️ So sánh Doanh nghiệp Chưa có Pháp nhân & Có Tư cách Pháp nhân",
+      "selector": "#card-unincorp-vs-incorp",
+      "en": "A fundamental Cambridge distinction is between unincorporated entities (sole traders and partnerships) and incorporated companies (Ltd and Plc). Incorporated companies possess a separate legal identity, meaning the company can own property, sign contracts, and be sued in its own name. Crucially, shareholders enjoy limited liability, risking only their invested share capital while personal assets remain 100% protected, and enjoy perpetual continuity.",
+      "vi": "Một phân định nền tảng trong giáo trình Cambridge là giữa doanh nghiệp chưa có tư cách pháp nhân (doanh nghiệp tư nhân, hợp danh) và doanh nghiệp có tư cách pháp nhân độc lập (công ty Ltd và Plc). Công ty có tư cách pháp nhân là một chủ thể pháp lý độc lập tách biệt với các chủ sở hữu, có quyền đứng tên tài sản, ký hợp đồng và chịu kiện tụng. Quan trọng nhất, các cổ đông được hưởng trách nhiệm hữu hạn, chỉ chịu rủi ro trong phạm vi số tiền mua cổ phần và tài sản cá nhân được bảo vệ tuyệt đối, cùng tính hoạt động liên tục không phụ thuộc vào đời sống của người sáng lập.",
+      "duration": 61.34,
+      "startTime": 250.28,
+      "endTime": 311.62,
+      "audioUrl": "/audio/lectures/business/1_4/card_unincorp_vs_incorp.mp3"
+    },
+    {
       "id": "sec_companies",
-      "title": "3. Công ty cổ phần (Joint-Stock Companies)",
+      "title": "3. Công ty Cổ phần (Joint-Stock Companies)",
       "selector": "#sec-companies",
-      "en": "Section 3 introduces joint-stock companies. Unlike unincorporated entities, companies possess separate legal personality from their owners and offer limited liability, meaning shareholders risk only their invested share capital. Private limited companies (Ltd) sell shares privately with existing shareholder consent, preventing hostile takeovers, whereas Public Limited Companies (Plc) trade shares publicly on the stock exchange, raising colossal capital but exposing the firm to hostile acquisition.",
-      "vi": "Mục ba giới thiệu về công ty cổ phần. Khác với doanh nghiệp tư nhân, công ty cổ phần có tư cách pháp nhân độc lập và chế độ trách nhiệm hữu hạn (limited liability), bảo vệ an toàn tài sản cá nhân của cổ đông. Công ty TNHH tư nhân (Ltd) chỉ bán cổ phần nội bộ để tránh nguy cơ bị thâu tóm, trong khi Công ty cổ phần đại chúng (Plc) niêm yết tự do trên sàn chứng khoán, huy động vốn cực lớn nhưng đối mặt nguy cơ bị thâu tóm thù địch.",
-      "duration": 59.97,
-      "startTime": 141.26,
-      "endTime": 201.23,
+      "en": "Section 3 examines joint-stock companies. Companies raise capital by issuing shares of ownership. Those who buy shares become shareholders, earning periodic dividend payments from company profits and electing a Board of Directors to supervise executive management.",
+      "vi": "Mục 3 tìm hiểu về các công ty cổ phần. Doanh nghiệp huy động vốn bằng cách phát hành các cổ phần sở hữu. Những người mua cổ phần trở thành cổ đông, nhận cổ tức định kỳ từ lợi nhuận của công ty và bầu ra Hội đồng quản trị để giám sát ban điều hành.",
+      "duration": 32.13,
+      "startTime": 311.62,
+      "endTime": 343.75,
       "audioUrl": "/audio/lectures/business/1_4/sec_companies.mp3"
     },
     {
+      "id": "card_company_ltd",
+      "title": "🔒 Công ty TNHH Tư nhân (Private Limited Company - Ltd)",
+      "selector": "#card-company-ltd",
+      "en": "A Private Limited Company (Ltd) is owned by shareholders who can sell shares only to people known to existing owners, such as family and close associates. Shares cannot be sold to the general public or traded on a stock exchange, keeping control tightly concentrated in family or private hands.",
+      "vi": "Công ty TNHH Tư nhân (Private Limited Company - Ltd) thuộc sở hữu của các cổ đông chỉ được phép chuyển nhượng hoặc bán cổ phần cho những người quen biết như người thân trong gia đình hoặc đối tác thân thiết. Cổ phần không được chào bán ra công chúng và không được niêm yết trên sàn chứng khoán, giúp quyền kiểm soát luôn nằm chắc trong tay nhóm sáng lập.",
+      "duration": 37.24,
+      "startTime": 343.75,
+      "endTime": 380.99,
+      "audioUrl": "/audio/lectures/business/1_4/card_company_ltd.mp3"
+    },
+    {
+      "id": "card_company_plc",
+      "title": "🌐 Công ty Cổ phần Đại chúng (Public Limited Company - Plc)",
+      "selector": "#card-company-plc",
+      "en": "A Public Limited Company (Plc) is authorized to sell shares to the general public and financial institutions via recognized stock exchanges. This enables Plcs to raise colossal sums of equity capital to fund global expansion, but subjects them to intense regulatory scrutiny.",
+      "vi": "Công ty Cổ phần Đại chúng (Public Limited Company - Plc) được phép chào bán cổ phần rộng rãi cho công chúng và các quỹ tài chính thông qua thị trường chứng khoán. Điều này giúp các công ty đại chúng huy động được những nguồn vốn khổng lồ để bành trướng quy mô toàn cầu, nhưng đổi lại phải chịu sự giám sát pháp lý vô cùng nghiêm ngặt.",
+      "duration": 36.88,
+      "startTime": 380.99,
+      "endTime": 417.87,
+      "audioUrl": "/audio/lectures/business/1_4/card_company_plc.mp3"
+    },
+    {
+      "id": "card_company_adv",
+      "title": "✅ Ưu điểm của Công ty Cổ phần",
+      "selector": "#card-company-adv",
+      "en": "Companies offer immense strategic strengths: limited liability safeguards shareholder wealth, massive capital can be raised to finance large-scale operations, perpetual continuity ensures long-term survival, and professional directors and specialized executives can be hired.",
+      "vi": "Các công ty cổ phần mang lại những thế mạnh chiến lược vượt bậc: trách nhiệm hữu hạn bảo vệ an toàn tài sản cho cổ đông, khả năng huy động vốn khổng lồ để tài trợ sản xuất quy mô lớn, tính trường tồn vĩnh cửu bảo đảm hoạt động lâu dài, và dễ dàng thuê các giám đốc điều hành chuyên nghiệp có trình độ cao.",
+      "duration": 32.15,
+      "startTime": 417.87,
+      "endTime": 450.02,
+      "audioUrl": "/audio/lectures/business/1_4/card_company_adv.mp3"
+    },
+    {
+      "id": "card_company_disadv",
+      "title": "❌ Nhược điểm của Công ty Cổ phần",
+      "selector": "#card-company-disadv",
+      "en": "Drawbacks include complex and expensive legal incorporation procedures, mandatory disclosure of detailed annual financial accounts to the public, high costs of hosting Annual General Meetings, and in Plcs, the risk of divorce of ownership from control where professional managers pursue goals different from shareholder interests.",
+      "vi": "Nhược điểm bao gồm thủ tục pháp lý thành lập phức tạp và tốn kém, bắt buộc phải công khai báo cáo tài chính kiểm toán chi tiết hàng năm ra công chúng, chi phí tổ chức Đại hội đồng cổ đông thường niên tốn kém, và ở các công ty đại chúng dễ phát sinh tình trạng phân ly giữa quyền sở hữu và quyền quản lý, khi ban điều hành theo đuổi các mục tiêu cá nhân khác với kỳ vọng của cổ đông.",
+      "duration": 37.91,
+      "startTime": 450.02,
+      "endTime": 487.93,
+      "audioUrl": "/audio/lectures/business/1_4/card_company_disadv.mp3"
+    },
+    {
       "id": "sec_franchises",
-      "title": "4. Nhượng quyền thương mại (Franchises)",
+      "title": "4. Nhượng quyền Thương mại (Franchises)",
       "selector": "#sec-franchises",
-      "en": "Section 4 investigates the franchise business model. A franchisor licenses a proven commercial brand, recipes, and operational systems to an independent franchisee in exchange for upfront license fees and ongoing management royalties. Franchisees gain immediate brand recognition and head-office support, but must surrender operational flexibility and accept strict brand conformity.",
-      "vi": "Mục bốn phân tích mô hình nhượng quyền thương mại (franchise). Bên nhượng quyền (franchisor) cấp phép thương hiệu, công thức và quy trình vận hành cho bên nhận quyền (franchisee) để thu phí nhượng quyền ban đầu và phần trăm doanh thu định kỳ. Bên nhận quyền được thừa hưởng uy tín thương hiệu ngay từ ngày đầu, nhưng bị ràng buộc nghiêm ngặt và không có quyền tự ý thay đổi sản phẩm.",
-      "duration": 46.24,
-      "startTime": 201.23,
-      "endTime": 247.47,
+      "en": "Section 4 covers franchising. A franchise agreement exists when an established brand owner, the franchisor, licenses an independent operator, the franchisee, to trade under its brand name, business format, and trademark in exchange for initial fees and ongoing royalties.",
+      "vi": "Mục 4 phân tích mô hình nhượng quyền thương mại (Franchising). Nhượng quyền là hợp đồng pháp lý trong đó chủ sở hữu thương hiệu (Franchisor) cấp phép cho một cá nhân hoặc đơn vị kinh doanh độc lập (Franchisee) được quyền sử dụng thương hiệu, mô hình kinh doanh và bí quyết sản phẩm để buôn bán tại một khu vực nhất định để đổi lấy phí nhượng quyền và phí bản quyền định kỳ.",
+      "duration": 38.03,
+      "startTime": 487.93,
+      "endTime": 525.96,
       "audioUrl": "/audio/lectures/business/1_4/sec_franchises.mp3"
     },
     {
+      "id": "card_franchisor",
+      "title": "👑 Lợi ích & Thách thức đối với Bên Nhượng quyền (Franchisor)",
+      "selector": "#card-franchisor",
+      "en": "To the franchisor, advantages include rapid business expansion with minimal capital investment and steady royalty income. However, drawbacks include sharing profits with franchisees, potential loss of direct operational control, and the catastrophic risk that one substandard outlet damages the worldwide reputation of the brand.",
+      "vi": "Đối với bên nhượng quyền (Franchisor), ưu điểm là bành trướng mạng lưới cực nhanh mà không phải tự bỏ vốn đầu tư mặt bằng, cùng dòng tiền bản quyền đều đặn. Tuy nhiên, nhược điểm là phải chia sẻ lợi nhuận, giảm bớt quyền kiểm soát trực tiếp và rủi ro nghiêm trọng khi một cửa hàng nhượng quyền làm ăn cẩu thả có thể phá hủy uy tín của toàn bộ hệ thống thương hiệu.",
+      "duration": 40.07,
+      "startTime": 525.96,
+      "endTime": 566.03,
+      "audioUrl": "/audio/lectures/business/1_4/card_franchisor.mp3"
+    },
+    {
+      "id": "card_franchisee",
+      "title": "🏪 Lợi ích & Thách thức đối với Bên Nhận quyền (Franchisee)",
+      "selector": "#card-franchisee",
+      "en": "To the franchisee, advantages include launching with a globally recognized brand with low failure risk, receiving comprehensive staff training and equipment support, and secure raw material supplies. Disadvantages include steep initial setup fees, ongoing royalty payments, and lack of creative freedom due to strict franchisor operating manuals.",
+      "vi": "Đối với bên nhận quyền (Franchisee), lợi thế là được kinh doanh một thương hiệu nổi tiếng đã được kiểm chứng nên tỷ lệ thất bại rất thấp, được hỗ trợ đào tạo bài bản và cung ứng nguyên vật liệu tận nơi. Ngược lại, điểm bất lợi là chi phí mua quyền kinh doanh ban đầu rất đắt đỏ, phải trích phần trăm doanh thu trả tiền bản quyền liên tục và không có quyền tự do sáng tạo do phải tuân thủ nghiêm ngặt quy trình chuẩn mực.",
+      "duration": 43.55,
+      "startTime": 566.03,
+      "endTime": 609.58,
+      "audioUrl": "/audio/lectures/business/1_4/card_franchisee.mp3"
+    },
+    {
       "id": "sec_joint_ventures",
-      "title": "5. Doanh nghiệp Liên doanh (Joint Ventures)",
+      "title": "5. Liên doanh Thương mại (Joint Ventures)",
       "selector": "#sec-joint-ventures",
-      "en": "Section 5 explores joint ventures—formal collaborations where two or more independent corporations launch a joint project, sharing capital investment, operational risks, and profits. Joint ventures are widely deployed when Western multinationals enter foreign markets, partnering with indigenous domestic firms to navigate local legal regulations, distribution channels, and cultural nuances.",
-      "vi": "Mục năm tìm hiểu về doanh nghiệp liên doanh (joint ventures) – sự hợp tác chính thức giữa hai hay nhiều tập đoàn độc lập nhằm thực hiện một dự án chung, cùng chia sẻ vốn đầu tư, rủi ro và lợi nhuận. Liên doanh thường được các tập đoàn đa quốc gia áp dụng khi thâm nhập thị trường nước ngoài bằng cách bắt tay với doanh nghiệp bản địa để nắm vững luật pháp và thị hiếu địa phương.",
-      "duration": 44.39,
-      "startTime": 247.47,
-      "endTime": 291.86,
+      "en": "Section 5 discusses joint ventures. A joint venture occurs when two or more independent businesses collaborate on a specific commercial project while retaining their separate corporate identities. Joint ventures allow firms to share immense capital costs and operational risks, and combine technical strengths with local market cultural expertise, although disagreements over leadership styles can create conflict.",
+      "vi": "Mục 5 trình bày về hình thức liên doanh (Joint Venture). Liên doanh diễn ra khi hai hoặc nhiều doanh nghiệp độc lập bắt tay hợp tác cùng thực hiện một dự án kinh doanh cụ thể nhưng vẫn giữ nguyên tư cách pháp nhân riêng rẽ. Liên doanh giúp chia sẻ chi phí đầu tư khổng lồ và rủi ro, kết hợp thế mạnh công nghệ với sự am hiểu thị trường bản địa, mặc dù sự khác biệt về văn hóa doanh nghiệp có thể nảy sinh xung đột quản lý.",
+      "duration": 47.92,
+      "startTime": 609.58,
+      "endTime": 657.5,
       "audioUrl": "/audio/lectures/business/1_4/sec_joint_ventures.mp3"
     },
     {
       "id": "sec_public_corporations",
-      "title": "6. Tổng công ty Nhà nước (Public Sector Corporations)",
+      "title": "6. Tổng công ty Khu vực Nhà nước (Public Sector Corporations)",
       "selector": "#sec-public-corporations",
-      "en": "Section 6 examines public sector corporations, fully owned by the state and funded through the national treasury. These entities operate vital strategic infrastructure such as national railways, water utilities, and postal networks, where natural monopolies exist, prioritizing universal affordability and equitable service over short-term commercial profits.",
-      "vi": "Mục sáu xem xét các tổng công ty nhà nước (public sector corporations), thuộc sở hữu nhà nước và cấp vốn từ ngân sách quốc gia. Các tổ chức này quản lý cơ sở hạ tầng chiến lược như đường sắt, mạng lưới cấp nước và bưu chính quốc gia – những lĩnh vực có tính chất độc quyền tự nhiên, ưu tiên phục vụ cộng đồng và giá cả ổn định hơn là chạy theo lợi nhuận trước mắt.",
-      "duration": 42.38,
-      "startTime": 291.86,
-      "endTime": 334.24,
+      "en": "Section 6 highlights public sector corporations. These are enterprises owned and operated by the government to provide essential national infrastructure such as railways, clean water, and healthcare. Main aims are keeping consumer prices affordable, maintaining universal access, and safeguarding employment, although government subsidies and lack of competition can foster operational inefficiency.",
+      "vi": "Mục 6 khái quát các tổng công ty thuộc khu vực nhà nước. Đây là các doanh nghiệp do chính phủ sở hữu và vận hành nhằm cung ứng các hạ tầng và tiện ích quốc gia trọng yếu như đường sắt, nước sạch và chăm sóc y tế. Mục tiêu chính là duy trì giá cả phải chăng cho mọi người dân, bảo đảm phục vụ toàn diện và duy trì việc làm ổn định, mặc dù sự bảo hộ ngân sách và thiếu vắng cạnh tranh có thể dẫn đến sự trì trệ trong vận hành.",
+      "duration": 47.58,
+      "startTime": 657.5,
+      "endTime": 705.08,
       "audioUrl": "/audio/lectures/business/1_4/sec_public_corporations.mp3"
     },
     {
       "id": "sec_exam_recommendation",
-      "title": "7. Chiến lược làm bài thi Cambridge: Đề xuất loại hình doanh nghiệp",
+      "title": "🎯 7. Chiến lược Đề thi: Lựa chọn & Biện minh Loại hình Doanh nghiệp",
       "selector": "#sec-exam-recommendation",
-      "en": "Section 7 details the Cambridge Exam Justification Formula for evaluation questions. When recommending a business structure, candidates must balance capital requirements, the owner's risk appetite regarding unlimited liability, the desired degree of operational secrecy, and the potential threat of losing control. Always evaluate the trade-offs in context before delivering a justified recommendation.",
-      "vi": "Mục bảy hướng dẫn công thức biện minh chuẩn Cambridge cho các câu hỏi đánh giá. Khi đề xuất loại hình doanh nghiệp, học sinh cần cân nhắc nhu cầu vốn, mức độ chấp nhận rủi ro trách nhiệm vô hạn của chủ sở hữu, mức độ bảo mật báo cáo tài chính và nguy cơ mất quyền kiểm soát. Luôn phân tích ưu nhược điểm gắn liền với ngữ cảnh tình huống trước khi đưa ra kết luận thuyết phục.",
-      "duration": 45.69,
-      "startTime": 334.24,
-      "endTime": 379.93,
+      "en": "Section 7 synthesizes the Cambridge exam strategy for choosing the optimal business organisation. When advising entrepreneurs, evaluate four core determinants: capital requirements, degree of risk and liability, desire for managerial control, and the scale of the target market. Sole traders suit small localized services; partnerships suit complementary professional practices; private limited companies protect growing family firms; and public limited companies enable massive industrial expansion.",
+      "vi": "Mục 7 đúc kết chiến lược làm bài thi Cambridge về việc đề xuất và biện minh cho loại hình doanh nghiệp tối ưu. Khi tư vấn cho doanh nhân, hãy đánh giá 4 yếu tố trọng tâm: nhu cầu về vốn, mức độ rủi ro và trách nhiệm pháp lý, mong muốn kiểm soát quyền lực, và quy mô thị trường mục tiêu. Doanh nghiệp tư nhân phù hợp với dịch vụ nhỏ tại chỗ; hợp danh lý tưởng cho văn phòng chuyên môn phối hợp; công ty TNHH tư nhân bảo vệ doanh nghiệp gia đình đang phát triển; và công ty đại chúng mở đường cho sự bành trướng quy mô lớn trên toàn cầu.",
+      "duration": 61.24,
+      "startTime": 705.08,
+      "endTime": 766.32,
       "audioUrl": "/audio/lectures/business/1_4/sec_exam_recommendation.mp3"
     }
   ]

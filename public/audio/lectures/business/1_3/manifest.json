@@ -1,45 +1,49 @@
 {
   "lectureId": "a8ebc541-78ef-4202-96ad-161ed647a1b1",
   "courseTitle": "Cambridge IGCSE Business Studies",
-  "lectureTitle": "1.3. Enterprise, business growth and size",
-  "totalDuration": 408.74,
-  "majorSections": [
-    {
-      "id": "sec_entrepreneurship",
-      "title": "1. Tinh thần Doanh nhân"
+  "lectureTitle": "1.3 Enterprise, business growth and size",
+  "totalDuration": 666.84,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_business_plan",
-      "title": "2. Kế hoạch Kinh doanh"
+    "sec_entrepreneurship": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_gov_support",
-      "title": "3. Hỗ trợ của Chính phủ"
+    "sec_business_plan": {
+      "start": 3,
+      "end": 5
     },
-    {
-      "id": "sec_measuring_size",
-      "title": "4. Đo lường Quy mô Doanh nghiệp"
+    "sec_gov_support": {
+      "start": 6,
+      "end": 8
     },
-    {
-      "id": "sec_business_growth",
-      "title": "5. Tăng trưởng Doanh nghiệp"
+    "sec_measuring_size": {
+      "start": 9,
+      "end": 11
     },
-    {
-      "id": "sec_why_stay_small",
-      "title": "6. Tại sao Doanh nghiệp giữ Quy mô nhỏ"
+    "sec_business_growth": {
+      "start": 12,
+      "end": 14
     },
-    {
-      "id": "sec_why_fail",
-      "title": "7. Nguyên nhân Doanh nghiệp thất bại"
+    "sec_why_stay_small": {
+      "start": 15,
+      "end": 15
+    },
+    "sec_why_fail": {
+      "start": 16,
+      "end": 17
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
       "title": "Giới thiệu Bài 1.3: Khởi sự, Tăng trưởng và Quy mô Doanh nghiệp",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 1.3: Enterprise, Business Growth and Size. In this comprehensive lesson, we investigate the characteristics of successful entrepreneurs, the anatomy of a business plan, government startup initiatives, methods and limitations of measuring business size, internal versus external growth strategies, and the reasons why businesses remain small or fail.",
-      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 1.3: Khởi sự, Tăng trưởng và Quy mô Doanh nghiệp. Trong bài học này, chúng ta sẽ phân tích các phẩm chất của doanh nhân thành công, cấu trúc kế hoạch kinh doanh, chính sách hỗ trợ khởi nghiệp của chính phủ, các thước đo quy mô doanh nghiệp, chiến lược tăng trưởng nội bộ và sáp nhập, cùng nguyên nhân khiến doanh nghiệp giữ quy mô nhỏ hoặc phá sản.",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 1.3: Enterprise, Business Growth and Size. In this lesson, we examine the qualities of successful entrepreneurs, the components and benefits of a business plan, government startup initiatives, methods and limitations of measuring business size, internal versus external growth strategies, and why businesses remain small or fail.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 1.3: Khởi sự, Tăng trưởng và Quy mô Doanh nghiệp. Trong bài học này, chúng ta sẽ tìm hiểu các phẩm chất của doanh nhân thành công, cấu trúc và lợi ích của kế hoạch kinh doanh, chính sách hỗ trợ khởi nghiệp của chính phủ, các thước đo quy mô doanh nghiệp, chiến lược tăng trưởng nội bộ và sáp nhập, cùng lý do doanh nghiệp giữ quy mô nhỏ hoặc phá sản.",
       "duration": 48.54,
       "startTime": 0.0,
       "endTime": 48.54,
@@ -49,78 +53,188 @@
       "id": "sec_entrepreneurship",
       "title": "1. Tinh thần Doanh nhân (Entrepreneurship)",
       "selector": "#sec-entrepreneurship",
-      "en": "Section 1 examines the role and characteristics of entrepreneurs. An entrepreneur is an innovative individual who spots a commercial opportunity, commits capital, and assumes financial risk to start a business. Essential traits include creativity, self-motivation, resilience after failure, leadership, and a willingness to take calculated risks. In return, entrepreneurs achieve financial independence, personal fulfillment, and potentially unlimited profit rewards.",
-      "vi": "Mục một tìm hiểu vai trò và tố chất của doanh nhân. Doanh nhân là người sáng tạo, phát hiện cơ hội thương mại, bỏ vốn và chấp nhận rủi ro tài chính để thành lập doanh nghiệp. Những phẩm chất quan trọng gồm tính tự chủ, kiên định, khả năng lãnh đạo và tinh thần dám mạo hiểm có tính toán. Đổi lại, họ đạt được sự độc lập tài chính, khẳng định bản thân và tiềm năng thu được lợi nhuận không giới hạn.",
-      "duration": 54.45,
+      "en": "Section 1 defines an entrepreneur as an individual who organizes, operates, and assumes the financial risks of a new business venture. Entrepreneurs bring together Land, Labour, and Capital to produce goods and services, driving innovation, employment, and economic growth.",
+      "vi": "Mục 1 định nghĩa doanh nhân (entrepreneur) là người đứng ra tổ chức, vận hành và dám gánh vác rủi ro tài chính cho một dự án kinh doanh mới. Doanh nhân kết nối Đất đai, Lao động và Vốn để sản xuất hàng hóa và dịch vụ, tạo động lực đổi mới, việc làm và tăng trưởng kinh tế.",
+      "duration": 34.67,
       "startTime": 48.54,
-      "endTime": 102.99,
+      "endTime": 83.21,
       "audioUrl": "/audio/lectures/business/1_3/sec_entrepreneurship.mp3"
+    },
+    {
+      "id": "card_entrepreneur_traits",
+      "title": "🎯 8 Phẩm chất Cốt lõi của Doanh nhân Thành công",
+      "selector": "#card-entrepreneur-traits",
+      "en": "Cambridge identifies eight essential characteristics of successful entrepreneurs: calculated risk-taking, creativity, optimism, self-confidence, innovativeness, independence, persuasive communication, and relentless hard work. Possessing these traits enables founders to navigate commercial uncertainty and persevere through early business setbacks.",
+      "vi": "Giáo trình Cambridge chỉ ra 8 phẩm chất cốt lõi của một doanh nhân thành công: dám chấp nhận rủi ro có tính toán, óc sáng tạo, tinh thần lạc quan, sự tự tin, năng lực đổi mới, tính tự chủ độc lập, kỹ năng giao tiếp thuyết phục và sự chăm chỉ kiên trì. Những phẩm chất này giúp nhà sáng lập vượt qua các bất định thương mại và đứng dậy sau những thử thách ban đầu.",
+      "duration": 42.66,
+      "startTime": 83.21,
+      "endTime": 125.87,
+      "audioUrl": "/audio/lectures/business/1_3/card_entrepreneur_traits.mp3"
     },
     {
       "id": "sec_business_plan",
       "title": "2. Kế hoạch Kinh doanh (Business Plan)",
       "selector": "#sec-business-plan",
-      "en": "Section 2 focuses on the business plan—a formal written document setting out the business objectives, marketing strategy, operations structure, and financial forecasts, including cash flow projections and break-even calculations. A robust business plan forces founders to anticipate obstacles, provides strategic operational direction, and is strictly required by banks and venture capitalists when evaluating loan applications.",
-      "vi": "Mục hai tập trung vào kế hoạch kinh doanh (business plan) – văn bản chính thức xác định mục tiêu của doanh nghiệp, chiến lược tiếp thị, kế hoạch vận hành và dự báo tài chính như dòng tiền và điểm hòa vốn. Một bản kế hoạch kinh doanh chặt chẽ giúp nhà sáng lập dự lường rủi ro, định hướng vận hành và là điều kiện tiên quyết để các ngân hàng và nhà đầu tư xem xét cấp vốn vay.",
-      "duration": 47.03,
-      "startTime": 102.99,
-      "endTime": 150.02,
+      "en": "Section 2 focuses on the business plan—a formal written document setting out the business objectives, marketing strategy, operations structure, and financial forecasts, including cash flow projections and break-even calculations. A robust business plan forces founders to anticipate obstacles and provides clear operational direction.",
+      "vi": "Mục 2 tập trung vào bản kế hoạch kinh doanh (business plan) – một văn bản chính thức vạch rõ các mục tiêu của doanh nghiệp, chiến lược tiếp thị, kế hoạch vận hành và các dự báo tài chính như dòng tiền và điểm hòa vốn. Bản kế hoạch kinh doanh chặt chẽ giúp nhà sáng lập lường trước khó khăn và định hướng vận hành xuyên suốt.",
+      "duration": 38.78,
+      "startTime": 125.87,
+      "endTime": 164.65,
       "audioUrl": "/audio/lectures/business/1_3/sec_business_plan.mp3"
     },
     {
+      "id": "card_plan_contents",
+      "title": "📑 9 Nội dung Trọng tâm trong Bản Kế hoạch Kinh doanh",
+      "selector": "#card-plan-contents",
+      "en": "A comprehensive business plan covers nine vital areas: an executive summary, owner background, business description, target market analysis, advertising strategies, premises and equipment requirements, organizational structure, cost and pricing models, and cash flow forecasts.",
+      "vi": "Một bản kế hoạch kinh doanh hoàn chỉnh bao gồm 9 nội dung trọng tâm: tóm tắt dự án, lý lịch và kinh nghiệm của chủ sở hữu, mô tả sản phẩm dịch vụ, phân tích thị trường mục tiêu và đối thủ, kế hoạch quảng bá tiếp thị, địa điểm và trang thiết bị nhà xưởng, cơ cấu tổ chức pháp lý, chi phí và cấu trúc định giá, cùng dự báo dòng tiền và kế hoạch mở rộng tương lai.",
+      "duration": 38.63,
+      "startTime": 164.65,
+      "endTime": 203.28,
+      "audioUrl": "/audio/lectures/business/1_3/card_plan_contents.mp3"
+    },
+    {
+      "id": "card_plan_benefits",
+      "title": "🌟 Lợi ích của Kế hoạch Kinh doanh",
+      "selector": "#card-plan-benefits",
+      "en": "Developing a business plan yields three crucial benefits: it keeps management focused on the core mission and long-term vision, it aligns and motivates employees around transparent targets, and it is strictly required by banks and investors when evaluating loan and equity finance applications.",
+      "vi": "Xây dựng kế hoạch kinh doanh mang lại 3 lợi ích then chốt: giúp ban lãnh đạo không bị chệch hướng khỏi sứ mệnh và tầm nhìn dài hạn, tạo động lực gắn kết nhân viên theo các mục tiêu minh bạch, và là điều kiện bắt buộc để các ngân hàng và nhà đầu tư thẩm định cấp vốn vay hoặc góp vốn cổ phần.",
+      "duration": 31.38,
+      "startTime": 203.28,
+      "endTime": 234.66,
+      "audioUrl": "/audio/lectures/business/1_3/card_plan_benefits.mp3"
+    },
+    {
       "id": "sec_gov_support",
-      "title": "3. Chính sách hỗ trợ khởi nghiệp của Chính phủ",
+      "title": "3. Hỗ trợ của Chính phủ cho Doanh nghiệp Khởi nghiệp (Startups)",
       "selector": "#sec-gov-support",
-      "en": "Section 3 outlines why and how governments support business startups. Governments assist new enterprises to reduce domestic unemployment, spur technological innovation, generate competition that lowers consumer prices, and promote economic diversification. Support mechanisms include non-repayable cash grants, enterprise zones with discounted rent and tax holidays, low-interest microloans, and free vocational training.",
-      "vi": "Mục ba lý giải tại sao và bằng cách nào chính phủ hỗ trợ các doanh nghiệp khởi nghiệp. Chính phủ khuyến khích khởi nghiệp nhằm giảm tỷ lệ thất nghiệp, thúc đẩy đổi mới công nghệ, gia tăng cạnh tranh giúp giảm giá hàng hóa và đa dạng hóa nền kinh tế. Các biện pháp hỗ trợ gồm có viện trợ tài chính không hoàn lại, các khu kinh tế ưu đãi thuế và giá thuê đất, các khoản vay lãi suất thấp và đào tạo kỹ năng quản trị miễn phí.",
-      "duration": 49.91,
-      "startTime": 150.02,
-      "endTime": 199.93,
+      "en": "Section 3 examines government support for startups. A startup is an entrepreneurial venture in its early stages designed to capitalize on perceived market demand. Governments actively foster startup ecosystems to generate broad economic and social benefits.",
+      "vi": "Mục 3 tìm hiểu chính sách hỗ trợ của chính phủ dành cho doanh nghiệp khởi nghiệp (startups). Startup là doanh nghiệp ở giai đoạn đầu thành lập nhằm khai thác nhu cầu thị trường tiềm năng. Chính phủ tích cực nuôi dưỡng hệ sinh thái khởi nghiệp vì những lợi ích to lớn đối với nền kinh tế và xã hội.",
+      "duration": 33.5,
+      "startTime": 234.66,
+      "endTime": 268.16,
       "audioUrl": "/audio/lectures/business/1_3/sec_gov_support.mp3"
     },
     {
+      "id": "card_why_gov_help",
+      "title": "❓ Vì sao Chính phủ Khuyến khích Khởi nghiệp?",
+      "selector": "#card-why-gov-help",
+      "en": "Governments assist startups for four strategic reasons: they create new employment opportunities, expand national economic output and GDP, generate export revenues if internationally competitive, and introduce disruptive technologies and ideas that raise overall industrial productivity.",
+      "vi": "Chính phủ hỗ trợ khởi nghiệp vì 4 lý do chiến lược: giải quyết việc làm cho người lao động, thúc đẩy tăng trưởng sản lượng quốc gia và GDP, đóng góp vào kim ngạch xuất khẩu khi vươn ra thị trường quốc tế, và đưa các ý tưởng công nghệ đột phá vào đời sống giúp nâng cao năng suất toàn ngành.",
+      "duration": 32.61,
+      "startTime": 268.16,
+      "endTime": 300.77,
+      "audioUrl": "/audio/lectures/business/1_3/card_why_gov_help.mp3"
+    },
+    {
+      "id": "card_how_gov_support",
+      "title": "🛠️ Các Biện pháp Hỗ trợ Khởi nghiệp Thực tế",
+      "selector": "#card-how-gov-support",
+      "en": "Governments deploy multiple supportive measures: offering free bureaucratic and legal advice, providing subsidized enterprise zones with affordable rent, issuing low-interest commercial loans, awarding non-repayable capital grants, financing management training workshops, and granting tax holidays.",
+      "vi": "Chính phủ triển khai nhiều hình thức hỗ trợ cụ thể: tư vấn pháp lý và thủ tục hành chính miễn phí, cấp mặt bằng giá ưu đãi tại các khu ươm tạo doanh nghiệp, cung cấp các gói vay lãi suất thấp, tài trợ các khoản viện trợ không hoàn lại để mua sắm máy móc, tổ chức các khóa đào tạo kỹ năng quản trị, và áp dụng chính sách miễn giảm thuế (tax holidays) trong những năm đầu.",
+      "duration": 37.6,
+      "startTime": 300.77,
+      "endTime": 338.37,
+      "audioUrl": "/audio/lectures/business/1_3/card_how_gov_support.mp3"
+    },
+    {
       "id": "sec_measuring_size",
-      "title": "4. Đo lường Quy mô Doanh nghiệp và Hạn chế",
+      "title": "4. Đo lường Quy mô Doanh nghiệp (Measuring Business Size)",
       "selector": "#sec-measuring-size",
-      "en": "Section 4 evaluates the four accepted Cambridge methods of measuring business size: number of employees, value of output, value of sales revenue, and value of capital employed. Critical exam warning: profit is never a measure of business size, as large multinational firms can incur temporary losses. Each measurement has limitations: automated car factories employ few workers but utilize massive capital, while labour-intensive garment workshops exhibit the opposite.",
-      "vi": "Mục bốn đánh giá bốn thước đo quy mô doanh nghiệp theo chuẩn Cambridge: số lượng nhân viên, giá trị sản lượng đầu ra, doanh thu bán hàng và vốn hoạt động (capital employed). Lưu ý sống còn trong bài thi: Lợi nhuận tuyệt đối không phải thước đo quy mô vì một tập đoàn khổng lồ vẫn có thể tạm thời thua lỗ. Mỗi thước đo đều có giới hạn: một nhà máy tự động hóa có ít công nhân nhưng vốn cực lớn, ngược lại xưởng may thủ công thì rất đông lao động nhưng ít vốn.",
-      "duration": 56.34,
-      "startTime": 199.93,
-      "endTime": 256.27,
+      "en": "Section 4 outlines the four accepted Cambridge criteria for measuring business size: total number of employees, total physical volume or value of output, total value of sales revenue, and total capital employed in long-term assets.",
+      "vi": "Mục 4 trình bày 4 tiêu chí chuẩn mực theo Cambridge để đo lường quy mô doanh nghiệp: tổng số lượng lao động tuyển dụng, giá trị hoặc sản lượng sản phẩm đầu ra, doanh thu bán hàng, và tổng số vốn hoạt động dài hạn (capital employed).",
+      "duration": 28.29,
+      "startTime": 338.37,
+      "endTime": 366.66,
       "audioUrl": "/audio/lectures/business/1_3/sec_measuring_size.mp3"
     },
     {
+      "id": "card_profit_not_size",
+      "title": "🚫 Lưu ý Đề thi: Lợi nhuận KHÔNG phải là Thước đo Quy mô",
+      "selector": "#card-profit-not-size",
+      "en": "Examiners stress that profit is never an acceptable measure of business size. A huge multinational with thousands of staff can incur temporary losses during economic downturns, while a tiny boutique firm can earn enormous profit margins. Furthermore, profits fluctuate unpredictably with tax and accounting adjustments.",
+      "vi": "Giám khảo Cambridge đặc biệt lưu ý: Lợi nhuận tuyệt đối không được dùng làm thước đo quy mô doanh nghiệp. Một tập đoàn đa quốc gia khổng lồ với hàng chục ngàn nhân viên vẫn có thể tạm thời thua lỗ trong thời kỳ suy thoái kinh tế, trong khi một văn phòng luật ngách chỉ có hai người lại có thể đạt tỷ suất lợi nhuận cực cao. Hơn nữa, lợi nhuận biến động liên tục theo chính sách thuế và kế toán.",
+      "duration": 41.34,
+      "startTime": 366.66,
+      "endTime": 408.0,
+      "audioUrl": "/audio/lectures/business/1_3/card_profit_not_size.mp3"
+    },
+    {
+      "id": "card_size_limitations",
+      "title": "⚠️ Hạn chế của các Thước đo Quy mô",
+      "selector": "#card-size-limitations",
+      "en": "Each measurement method has significant limitations. Comparing employee numbers fails between automated capital-intensive factories and labour-intensive workshops. Comparing sales revenue or output value is misleading when contrasting high-value luxury goods with cheap mass-market items.",
+      "vi": "Mỗi phương pháp đo lường đều có hạn chế nhất định. Việc so sánh số lượng nhân viên sẽ sai lệch khi so một nhà máy tự động hóa hiện đại với một xưởng thủ công sử dụng nhiều lao động. Việc so sánh doanh thu hay giá trị sản lượng cũng không chính xác khi đặt cạnh nhau sản phẩm xa xỉ giá cao với hàng tiêu dùng đại trà giá rẻ.",
+      "duration": 36.93,
+      "startTime": 408.0,
+      "endTime": 444.93,
+      "audioUrl": "/audio/lectures/business/1_3/card_size_limitations.mp3"
+    },
+    {
       "id": "sec_business_growth",
-      "title": "5. Chiến lược Tăng trưởng Doanh nghiệp",
+      "title": "5. Chiến lược Tăng trưởng Doanh nghiệp (Business Growth)",
       "selector": "#sec-business-growth",
-      "en": "Section 5 explores internal and external business growth. Internal organic growth occurs by purchasing additional machinery, opening new branches, or launching new product lines financed through retained profits. External growth involves mergers and takeovers, categorized into horizontal integration with direct competitors, vertical backward integration with suppliers, vertical forward integration with retail outlets, and conglomerate diversification into unrelated industries.",
-      "vi": "Mục năm tìm hiểu các hình thức tăng trưởng doanh nghiệp. Tăng trưởng nội bộ (internal growth) diễn ra thông qua việc mua thêm máy móc, mở chi nhánh mới hoặc phát triển sản phẩm mới từ lợi nhuận giữ lại. Tăng trưởng bên ngoài (external growth) thực hiện qua sáp nhập và mua lại (M&A), bao gồm: sáp nhập ngang với đối thủ cạnh tranh, sáp nhập dọc lùi với nhà cung cấp, sáp nhập dọc tiến với mạng lưới bán lẻ và sáp nhập tập đoàn đa ngành vào các lĩnh vực hoàn toàn mới.",
-      "duration": 57.59,
-      "startTime": 256.27,
-      "endTime": 313.86,
+      "en": "Section 5 contrasts internal and external growth. Internal organic growth expands existing operations using retained profits. External growth involves mergers and takeovers, enabling rapid market penetration.",
+      "vi": "Mục 5 phân tích hai con đường tăng trưởng doanh nghiệp. Tăng trưởng nội bộ (internal growth) là việc tự mở rộng hoạt động hiện có từ nguồn lợi nhuận giữ lại. Tăng trưởng bên ngoài (external growth) diễn ra thông qua sáp nhập và mua lại (M&A), giúp thâm nhập thị trường thần tốc.",
+      "duration": 33.54,
+      "startTime": 444.93,
+      "endTime": 478.47,
       "audioUrl": "/audio/lectures/business/1_3/sec_business_growth.mp3"
     },
     {
+      "id": "card_external_growth_types",
+      "title": "🔗 4 Hình thức Sáp nhập & Mua lại (Integration Types)",
+      "selector": "#card-external-growth-types",
+      "en": "External integration takes four forms: horizontal integration with a direct competitor at the same production stage; backward vertical integration with a raw material supplier; forward vertical integration with a retail outlet; and conglomerate diversification into an entirely different industry to spread risk.",
+      "vi": "Tăng trưởng bên ngoài gồm 4 hình thức sáp nhập: sáp nhập ngang (horizontal) với đối thủ cạnh tranh cùng ngành ở cùng công đoạn; sáp nhập dọc lùi (backward vertical) với nhà cung ứng nguyên liệu; sáp nhập dọc tiến (forward vertical) với các kênh bán lẻ tiêu thụ; và sáp nhập tập đoàn đa ngành (conglomerate) vào lĩnh vực hoàn toàn mới để phân tán rủi ro.",
+      "duration": 38.73,
+      "startTime": 478.47,
+      "endTime": 517.2,
+      "audioUrl": "/audio/lectures/business/1_3/card_external_growth_types.mp3"
+    },
+    {
+      "id": "card_growth_problems_overcome",
+      "title": "🛡️ Thách thức khi Mở rộng và Giải pháp Quản trị",
+      "selector": "#card-growth-problems-overcome",
+      "en": "Rapid growth introduces managerial diseconomies of scale, cash flow overtrading, and cultural conflict. Managers overcome these by decentralising decision-making, adopting controlled expansion financed by equity, upgrading IT communication networks, and conducting proactive change management.",
+      "vi": "Tăng trưởng nóng thường kéo theo phi tính kinh tế của quy mô, tình trạng cạn kiệt vốn lưu động (overtrading) và xung đột văn hóa sau sáp nhập. Các nhà quản trị khắc phục bằng cách phân quyền quản lý cho cấp dưới, kiểm soát tốc độ mở rộng bằng vốn tự có thay vì nợ ngắn hạn, nâng cấp hạ tầng CNTT kết nối nội bộ và chủ động thực hiện quản trị thay đổi văn hóa doanh nghiệp.",
+      "duration": 40.17,
+      "startTime": 517.2,
+      "endTime": 557.37,
+      "audioUrl": "/audio/lectures/business/1_3/card_growth_problems_overcome.mp3"
+    },
+    {
       "id": "sec_why_stay_small",
-      "title": "6. Tại sao nhiều Doanh nghiệp giữ Quy mô nhỏ",
+      "title": "6. Tại sao Nhiều Doanh nghiệp Chọn Duy trì Quy mô Nhỏ",
       "selector": "#sec-why-stay-small",
-      "en": "Section 6 analyzes why millions of enterprises deliberately remain small. Owners often value personal lifestyle freedom and avoid the high stress and loss of control of larger corporations. Furthermore, small firms excel in specialized niche markets with limited total demand, such as bespoke tailoring, antique restoration, or localized personal services where customers demand direct personal interaction with the proprietor.",
-      "vi": "Mục sáu phân tích lý do hàng triệu doanh nghiệp chủ động duy trì quy mô nhỏ. Chủ doanh nghiệp thường coi trọng sự tự do, cân bằng cuộc sống và muốn duy trì quyền kiểm soát trực tiếp thay vì gánh vác áp lực của tập đoàn lớn. Ngoài ra, doanh nghiệp nhỏ chiếm ưu thế tuyệt đối trong các thị trường ngách có quy mô khiêm tốn như may đo cao cấp, sửa chữa đồ cổ hoặc các dịch vụ cá nhân đòi hỏi sự chăm sóc trực tiếp.",
+      "en": "Section 6 highlights why businesses deliberately stay small: operating in specialized service industries requiring personal touch, serving niche geographic markets with limited total demand, or fulfilling owner lifestyle objectives for independence, personal customer relationships, and low managerial stress.",
+      "vi": "Mục 6 lý giải nguyên nhân nhiều doanh nghiệp chủ động giữ quy mô nhỏ: hoạt động trong các ngành dịch vụ cá nhân đòi hỏi sự chăm sóc trực tiếp như cắt tóc, phục vụ các thị trường ngách có nhu cầu khiêm tốn tại địa phương, hoặc đáp ứng mục tiêu sống của chủ doanh nghiệp muốn tự do, giảm áp lực và duy trì mối quan hệ gần gũi với khách hàng.",
       "duration": 48.71,
-      "startTime": 313.86,
-      "endTime": 362.57,
+      "startTime": 557.37,
+      "endTime": 606.08,
       "audioUrl": "/audio/lectures/business/1_3/sec_why_stay_small.mp3"
     },
     {
-      "id": "sec_why_fail",
-      "title": "7. Nguyên nhân khiến Doanh nghiệp thất bại",
-      "selector": "#sec-why-fail",
-      "en": "Section 7 examines the primary causes of business failure, especially among early-stage startups. Over 50% of new businesses fail within their first five years due to severe working capital shortages, poor liquidity management, inadequate market research leading to unwanted products, intense competitor reactions, macroeconomic recessions, and reckless over-expansion without sufficient long-term finance.",
-      "vi": "Mục bảy tổng kết các nguyên nhân chính dẫn đến thất bại của doanh nghiệp, đặc biệt ở giai đoạn khởi nghiệp. Hơn 50% doanh nghiệp mới đóng cửa trong 5 năm đầu do thiếu hụt vốn lưu động, quản lý dòng tiền yếu kém, nghiên cứu thị trường hời hợt dẫn đến sản phẩm không ai mua, sự đáp trả khốc liệt từ đối thủ cạnh tranh, suy thoái kinh tế hoặc tăng trưởng nóng không kiểm soát được dòng vốn.",
-      "duration": 46.17,
-      "startTime": 362.57,
-      "endTime": 408.74,
-      "audioUrl": "/audio/lectures/business/1_3/sec_why_fail.mp3"
+      "id": "card_why_fail_main",
+      "title": "❌ Nguyên nhân Cốt lõi Dẫn đến Doanh nghiệp Thất bại",
+      "selector": "#card-why-fail-main",
+      "en": "Businesses fail primarily due to poor managerial competency, failure to adapt to changing market environments and technologies, acute liquidity shortages where cash runs out despite paper profits, and aggressive overtrading without sufficient long-term working capital.",
+      "vi": "Doanh nghiệp thất bại chủ yếu do năng lực quản trị non kém, chậm thích ứng trước biến động của thị trường và công nghệ mới, khủng hoảng thanh khoản (dù trên sổ sách có lãi nhưng thực tế cạn kiệt tiền mặt trả nợ), và tăng trưởng nóng không kiểm soát khiến vốn lưu động bị thâm hụt nghiêm trọng.",
+      "duration": 30.14,
+      "startTime": 606.08,
+      "endTime": 636.22,
+      "audioUrl": "/audio/lectures/business/1_3/card_why_fail_main.mp3"
+    },
+    {
+      "id": "card_why_startups_fail",
+      "title": "⚠️ Vì sao Doanh nghiệp Mới Khởi nghiệp có Nguy cơ Thất bại Cao hơn",
+      "selector": "#card-why-startups-fail",
+      "en": "Startups face heightened failure risks during their vulnerable early years due to lack of operational experience, unfamiliarity with consumer market dynamics, low initial sales volumes before establishing a brand reputation, and inadequate reserves of startup capital.",
+      "vi": "Các doanh nghiệp mới khởi nghiệp đối mặt với rủi ro phá sản đặc biệt cao trong những năm đầu do thiếu kinh nghiệm thực chiến, chưa am hiểu tường tận biến động thị hiếu khách hàng, doanh số ban đầu còn thấp khi chưa tạo dựng được uy tín thương hiệu, và thiếu hụt nguồn vốn dự phòng vượt qua giai đoạn đầu.",
+      "duration": 30.62,
+      "startTime": 636.22,
+      "endTime": 666.84,
+      "audioUrl": "/audio/lectures/business/1_3/card_why_startups_fail.mp3"
     }
   ]
 }

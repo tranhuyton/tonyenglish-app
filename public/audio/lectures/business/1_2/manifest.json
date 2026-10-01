@@ -1,18 +1,22 @@
 {
   "lectureId": "7027f2e2-0ac5-4ee6-8913-7d93c7857733",
   "courseTitle": "Cambridge IGCSE Business Studies",
-  "lectureTitle": "1.2. Classification of businesses",
-  "totalDuration": 296.14,
-  "majorSections": [
-    {
-      "id": "sec_sectors",
-      "title": "1. Ba khu vực kinh tế"
+  "lectureTitle": "1.2 Classification of businesses",
+  "totalDuration": 513.77,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_mixed_economy",
-      "title": "2. Khu vực Tư nhân và Nhà nước trong Nền kinh tế hỗn hợp"
+    "sec_sectors": {
+      "start": 1,
+      "end": 6
+    },
+    "sec_mixed_economy": {
+      "start": 7,
+      "end": 10
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -27,58 +31,113 @@
     },
     {
       "id": "sec_sectors",
-      "title": "1. Ba khu vực kinh tế: Sơ cấp, Thứ cấp và Tam cấp",
+      "title": "1. Ba Khu vực Kinh tế (Three Sectors of Industry)",
       "selector": "#sec-sectors",
-      "en": "Section 1 classifies economic activities into three progressive stages. The primary sector extracts and harvests natural resources, such as farming, fishing, forestry, and mining. The secondary sector processes, manufactures, and constructs tangible goods from raw materials. The tertiary sector provides commercial and personal services, including banking, transportation, retail, healthcare, and education.",
-      "vi": "Mục một phân loại hoạt động kinh tế thành ba khu vực kế tiếp nhau. Khu vực sơ cấp (primary sector) khai thác tài nguyên thiên nhiên như nông nghiệp, đánh bắt thủy sản, lâm nghiệp và khai khoáng. Khu vực thứ cấp (secondary sector) chế biến và sản xuất hàng hóa vật chất từ nguyên liệu thô. Khu vực tam cấp (tertiary sector) cung cấp các dịch vụ thương mại và cá nhân, bao gồm ngân hàng, vận tải, bán lẻ, y tế và giáo dục.",
-      "duration": 55.94,
+      "en": "Section 1 classifies all commercial and economic activities into three sequential stages of production: the primary sector, the secondary sector, and the tertiary sector. Each sector plays an indispensable role in transforming raw natural gifts into final goods and services for consumers.",
+      "vi": "Mục 1 phân loại toàn bộ hoạt động kinh tế thành ba giai đoạn sản xuất tuần tự: khu vực sơ cấp, khu vực thứ cấp và khu vực tam cấp. Mỗi khu vực đảm nhiệm một vai trò thiết yếu trong việc biến đổi tài nguyên thiên nhiên thô sơ thành các sản phẩm và dịch vụ hoàn thiện phục vụ đời sống con người.",
+      "duration": 33.42,
       "startTime": 42.88,
-      "endTime": 98.82,
+      "endTime": 76.3,
       "audioUrl": "/audio/lectures/business/1_2/sec_sectors.mp3"
     },
     {
+      "id": "card_sector_primary",
+      "title": "🌾 Khu vực Sơ cấp (Primary Sector)",
+      "selector": "#card-sector-primary",
+      "en": "The primary sector involves the direct extraction and harvesting of natural resources from the earth and sea. Typical industries include agriculture, forestry, commercial fishing, oil and gas extraction, and mineral mining. In early stages of economic development, the primary sector typically employs the majority of the national workforce.",
+      "vi": "Khu vực sơ cấp (Primary Sector) bao gồm các hoạt động trực tiếp khai thác và thu hoạch tài nguyên tự nhiên từ lòng đất, rừng và biển cả. Các ngành nghề điển hình gồm nông nghiệp trồng trọt, lâm nghiệp khai thác gỗ, đánh bắt thủy sản, khai thác dầu khí và khai mỏ khoáng sản. Ở các giai đoạn đầu của sự phát triển kinh tế, khu vực sơ cấp thường thu hút đại đa số lực lượng lao động của quốc gia.",
+      "duration": 44.49,
+      "startTime": 76.3,
+      "endTime": 120.79,
+      "audioUrl": "/audio/lectures/business/1_2/card_sector_primary.mp3"
+    },
+    {
+      "id": "card_sector_secondary",
+      "title": "🏗️ Khu vực Thứ cấp (Secondary Sector)",
+      "selector": "#card-sector-secondary",
+      "en": "The secondary sector involves manufacturing, processing, and constructing physical products using raw materials provided by the primary sector. Examples include automobile assembly, steel smelting, chemical processing, textile manufacturing, electronic fabrication, and building construction. This sector adds significant value to raw materials.",
+      "vi": "Khu vực thứ cấp (Secondary Sector) bao gồm các hoạt động chế tạo, gia công và xây dựng các sản phẩm vật chất từ các nguyên liệu thô do khu vực sơ cấp cung cấp. Ví dụ như lắp ráp ô tô, luyện kim cán thép, hóa chất, may mặc dệt may, sản xuất linh kiện điện tử và thi công xây dựng công trình. Khu vực này đóng vai trò quan trọng trong việc gia tăng giá trị cho các nguồn tài nguyên thô.",
+      "duration": 46.48,
+      "startTime": 120.79,
+      "endTime": 167.27,
+      "audioUrl": "/audio/lectures/business/1_2/card_sector_secondary.mp3"
+    },
+    {
+      "id": "card_sector_tertiary",
+      "title": "🛎️ Khu vực Tam cấp (Tertiary Sector)",
+      "selector": "#card-sector-tertiary",
+      "en": "The tertiary sector provides commercial and personal services to consumers and other enterprises. Rather than producing tangible goods, it delivers intangible utility. Prominent examples include commercial banking, insurance, transportation, warehousing, hotels, tourism, telecommunications, retail stores, healthcare, and education.",
+      "vi": "Khu vực tam cấp (Tertiary Sector) chuyên cung ứng các dịch vụ thương mại và dịch vụ cá nhân cho người tiêu dùng và các doanh nghiệp khác. Thay vì sản xuất hàng hóa vật chất hữu hình, khu vực này tạo ra các tiện ích vô hình. Các ví dụ nổi bật bao gồm ngân hàng thương mại, bảo hiểm, vận tải logistics, lưu kho, khách sạn, du lịch, viễn thông, bán lẻ, y tế và giáo dục.",
+      "duration": 47.1,
+      "startTime": 167.27,
+      "endTime": 214.37,
+      "audioUrl": "/audio/lectures/business/1_2/card_sector_tertiary.mp3"
+    },
+    {
       "id": "card_sector_basis",
-      "title": "Cơ sở phân loại và Chuỗi giá trị kinh tế",
+      "title": "📊 Cơ sở Đo lường Quy mô Khu vực Kinh tế",
       "selector": "#card-sector-basis",
-      "en": "Economists measure the relative importance of these three sectors through two key metrics: the percentage of total national employment in each sector, and the proportion of total output contributing to Gross Domestic Product. All three sectors are deeply interdependent, forming an integrated supply chain that takes raw materials from the earth through factories to retail shelves.",
-      "vi": "Các nhà kinh tế đo lường tầm quan trọng của ba khu vực này dựa trên hai chỉ số chính: tỷ lệ việc làm trong từng khu vực và tỷ trọng đóng góp vào Tổng sản phẩm quốc nội (GDP). Cả ba khu vực đều có mối quan hệ phụ thuộc lẫn nhau chặt chẽ, tạo thành chuỗi cung ứng khép kín từ khâu khai thác tài nguyên, qua nhà máy chế tạo đến kệ hàng bán lẻ.",
+      "en": "Economists measure the relative economic importance of the three sectors using two primary criteria: first, the percentage of the country's total workforce employed in each sector; and second, the monetary value of output each sector adds to Gross Domestic Product (GDP). Crucially, the three sectors are interdependent—a disruption in primary extraction directly impacts factory manufacturing and retail distribution.",
+      "vi": "Các nhà kinh tế đo lường tầm quan trọng tương đối của ba khu vực kinh tế dựa trên hai tiêu chí cơ bản: thứ nhất là tỷ lệ phần trăm lực lượng lao động cả nước làm việc trong từng khu vực; và thứ hai là giá trị sản lượng tiền tệ mà mỗi khu vực đóng góp vào Tổng sản phẩm quốc nội (GDP). Cần lưu ý rằng cả ba khu vực có mối quan hệ phụ thuộc lẫn nhau mật thiết—bất kỳ sự đình trệ nào ở khâu khai thác sơ cấp cũng sẽ ảnh hưởng ngay đến sản xuất nhà máy và chuỗi bán lẻ.",
       "duration": 40.53,
-      "startTime": 98.82,
-      "endTime": 139.35,
+      "startTime": 214.37,
+      "endTime": 254.9,
       "audioUrl": "/audio/lectures/business/1_2/card_sector_basis.mp3"
     },
     {
       "id": "card_deindustrialisation",
-      "title": "Quá trình phi công nghiệp hóa (De-industrialisation)",
+      "title": "🌍 Công nghiệp hóa & Phi công nghiệp hóa (De-industrialisation)",
       "selector": "#card-deindustrialisation",
-      "en": "Over time, economic development alters the balance between sectors. In developed high-income nations, de-industrialisation occurs as manufacturing employment declines while service sector jobs expand. This structural shift is driven by depletion of domestic raw materials, rising local wage rates causing factories to relocate to lower-cost emerging economies, and rising consumer disposable incomes spent increasingly on travel, leisure, and financial services.",
-      "vi": "Theo thời gian, phát triển kinh tế làm thay đổi cán cân giữa các khu vực. Tại các quốc gia phát triển, quá trình phi công nghiệp hóa (de-industrialisation) diễn ra khi việc làm trong ngành sản xuất sụt giảm và dịch vụ tăng vọt. Sự dịch chuyển này bắt nguồn từ sự cạn kiệt tài nguyên thô, chi phí nhân công trong nước tăng khiến nhà máy chuyển dịch sang các nước đang phát triển, và thu nhập khả dụng tăng thúc đẩy người dân chi tiêu nhiều hơn cho du lịch, giải trí và dịch vụ tài chính.",
+      "en": "As national economies develop, the relative balance between sectors shifts dramatically. In developing countries, industrialisation occurs as workers transition from farming to factory jobs. In advanced developed nations, de-industrialisation takes place as manufacturing employment and output decline while the service sector expands to exceed 70% of GDP. This occurs due to rising disposable consumer incomes spent on leisure, travel, and finance, exhaustion of domestic raw materials, and intense competition from low-wage overseas manufacturing economies.",
+      "vi": "Khi nền kinh tế quốc gia phát triển, cán cân tỷ trọng giữa các khu vực có sự dịch chuyển sâu sắc. Ở các nước đang phát triển, quá trình công nghiệp hóa diễn ra mạnh mẽ khi lao động chuyển từ làm nông sang làm việc tại các nhà máy. Ngược lại ở các quốc gia phát triển, quá trình phi công nghiệp hóa (de-industrialisation) xuất hiện khi việc làm và sản lượng trong ngành sản xuất chế tạo suy giảm, nhường chỗ cho ngành dịch vụ bùng nổ chiếm trên 70% GDP. Hiện tượng này phát sinh do thu nhập của người dân tăng cao thúc đẩy chi tiêu vào du lịch, giải trí và tài chính, cùng với sự cạn kiệt tài nguyên trong nước và sự cạnh tranh gay gắt từ các nước sản xuất có chi phí nhân công thấp.",
       "duration": 54.66,
-      "startTime": 139.35,
-      "endTime": 194.01,
+      "startTime": 254.9,
+      "endTime": 309.56,
       "audioUrl": "/audio/lectures/business/1_2/card_deindustrialisation.mp3"
     },
     {
       "id": "sec_mixed_economy",
-      "title": "2. Nền kinh tế hỗn hợp (Mixed Economy)",
+      "title": "2. Nền Kinh tế Hỗn hợp (Mixed Economy)",
       "selector": "#sec-mixed-economy",
-      "en": "Section 2 explores mixed economies, where resources are allocated by both market forces and government intervention. In a pure market economy, all resources are privately owned; in a command economy, the state controls all production. Modern nations operate as mixed economies to capture the efficiency of private enterprise while protecting public welfare through state-funded infrastructure and essential services.",
-      "vi": "Mục hai khám phá nền kinh tế hỗn hợp, nơi nguồn lực được phân bổ bởi cả cơ chế thị trường và sự can thiệp của chính phủ. Trong nền kinh tế thị trường thuần túy, mọi nguồn lực do tư nhân sở hữu; ngược lại trong nền kinh tế chỉ huy, nhà nước kiểm soát toàn bộ. Các quốc gia hiện đại đều áp dụng mô hình kinh tế hỗn hợp nhằm tận dụng tính năng động của doanh nghiệp tư nhân, đồng thời bảo đảm an sinh xã hội qua các dịch vụ công thiết yếu.",
-      "duration": 49.46,
-      "startTime": 194.01,
-      "endTime": 243.47,
+      "en": "Section 2 explores how resources and businesses are owned in a mixed economy. Unlike a pure free-market economy where all resources are privately owned, or a command economy where the state controls everything, a mixed economy features the coexistence of both a private sector and a public sector.",
+      "vi": "Mục 2 tìm hiểu cách thức sở hữu nguồn lực và doanh nghiệp trong nền kinh tế hỗn hợp. Khác với nền kinh tế thị trường tự do thuần túy nơi mọi nguồn lực đều thuộc tư nhân, hay nền kinh tế chỉ huy do nhà nước bao cấp toàn bộ, nền kinh tế hỗn hợp có sự song hành cùng tồn tại của cả khu vực tư nhân và khu vực nhà nước.",
+      "duration": 34.98,
+      "startTime": 309.56,
+      "endTime": 344.54,
       "audioUrl": "/audio/lectures/business/1_2/sec_mixed_economy.mp3"
     },
     {
-      "id": "card_private_public_sector",
-      "title": "So sánh Khu vực Tư nhân và Khu vực Nhà nước",
-      "selector": "#card-private-public-sector",
-      "en": "In the private sector, businesses are owned by private individuals, partners, or shareholders, with primary aims of profitability, growth, and market share. In contrast, the public sector is owned and managed by the government, financed through taxation, and focuses on social equity, universal accessibility, and public healthcare. When governments sell state-owned enterprises to private investors, this process is called privatisation.",
-      "vi": "Trong khu vực tư nhân, doanh nghiệp thuộc sở hữu của các cá nhân hoặc cổ đông, với mục tiêu hàng đầu là lợi nhuận, tăng trưởng và thị phần. Ngược lại, khu vực nhà nước thuộc sở hữu của chính phủ, vận hành bằng tiền thuế và hướng tới mục tiêu phục vụ cộng đồng, duy trì giá cả hợp lý và bảo đảm an sinh xã hội. Quá trình chính phủ bán các doanh nghiệp nhà nước cho các nhà đầu tư tư nhân được gọi là tư nhân hóa (privatisation).",
-      "duration": 52.67,
-      "startTime": 243.47,
-      "endTime": 296.14,
-      "audioUrl": "/audio/lectures/business/1_2/card_private_public_sector.mp3"
+      "id": "card_private_sector",
+      "title": "💼 Khu vực Tư nhân (Private Sector)",
+      "selector": "#card-private-sector",
+      "en": "The private sector comprises businesses owned and financed by private individuals, partners, or shareholders. Its primary objective is profit maximization and business expansion. Private enterprises are driven by consumer demand and market price mechanisms, with all investment risks borne by private owners. Familiar examples include Apple, Nike, and local family restaurants.",
+      "vi": "Khu vực tư nhân (Private Sector) bao gồm các doanh nghiệp do các cá nhân, các thành viên hợp danh hoặc các cổ đông tư nhân bỏ vốn thành lập và quản lý. Mục tiêu hàng đầu của khu vực này là tối đa hóa lợi nhuận và mở rộng quy mô. Doanh nghiệp tư nhân vận hành dựa trên cơ chế thị trường và thị hiếu người tiêu dùng, với mọi rủi ro tài chính do chủ sở hữu tự chịu trách nhiệm. Các ví dụ quen thuộc gồm có Apple, Nike hay các nhà hàng gia đình tại địa phương.",
+      "duration": 52.58,
+      "startTime": 344.54,
+      "endTime": 397.12,
+      "audioUrl": "/audio/lectures/business/1_2/card_private_sector.mp3"
+    },
+    {
+      "id": "card_public_sector",
+      "title": "🏛️ Khu vực Nhà nước (Public Sector)",
+      "selector": "#card-public-sector",
+      "en": "The public sector consists of enterprises and corporations owned, financed, and directed by the national or local government. Its overriding aim is to provide essential public goods and services to enhance citizen welfare, guarantee universal accessibility, and prevent natural monopolies from exploiting consumers. Funding is provided via taxpayer revenue and state budgets. Examples include state public hospitals, national police, public schools, and public transport systems.",
+      "vi": "Khu vực nhà nước (Public Sector) bao gồm các cơ quan, đơn vị sự nghiệp và tổng công ty do chính phủ trung ương hoặc chính quyền địa phương sở hữu và quản lý. Mục tiêu cốt lõi của khu vực này là cung ứng các dịch vụ công cộng thiết yếu nhằm nâng cao phúc lợi xã hội, đảm bảo mọi người dân đều tiếp cận được dịch vụ bình đẳng, và ngăn chặn tình trạng độc quyền tự nhiên lạm quyền thao túng giá. Nguồn vốn vận hành được cấp từ ngân sách nhà nước và tiền thuế của dân. Ví dụ như bệnh viện công lập, lực lượng cảnh sát, trường học công lập và hệ thống giao thông công cộng.",
+      "duration": 62.9,
+      "startTime": 397.12,
+      "endTime": 460.02,
+      "audioUrl": "/audio/lectures/business/1_2/card_public_sector.mp3"
+    },
+    {
+      "id": "card_privatisation",
+      "title": "🔄 Tư nhân hóa (Privatisation)",
+      "selector": "#card-privatisation",
+      "en": "Privatisation is the sale of state-owned public corporations to private sector investors. Proponents argue privatisation improves operational efficiency, introduces market competition, eliminates political interference, and raises capital for government budgets. However, critics point out that privatised monopolies may raise consumer prices, cut unprofitable rural services, and cause widespread job redundancies.",
+      "vi": "Tư nhân hóa (Privatisation) là quá trình chính phủ bán lại các tổng công ty hoặc doanh nghiệp nhà nước cho các nhà đầu tư tư nhân. Những người ủng hộ cho rằng tư nhân hóa giúp nâng cao hiệu quả vận hành, gia tăng tính cạnh tranh thị trường, chấm dứt sự can thiệp hành chính và bổ sung nguồn thu lớn cho ngân sách nhà nước. Tuy nhiên, mặt trái là các doanh nghiệp sau tư nhân hóa có thể tăng giá cước dịch vụ, cắt giảm các tuyến phục vụ vùng sâu vùng xa không sinh lời và cắt giảm ồ ạt nhân sự.",
+      "duration": 53.75,
+      "startTime": 460.02,
+      "endTime": 513.77,
+      "audioUrl": "/audio/lectures/business/1_2/card_privatisation.mp3"
     }
   ]
 }
