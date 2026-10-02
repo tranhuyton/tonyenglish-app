@@ -1077,6 +1077,21 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     />
                   </div>
                 </div>
+
+                <div className="mt-4">
+                  <label className="text-[12px] font-bold text-slate-600 block mb-1">🎬 Video hướng dẫn & gợi ý (URL YouTube, Google Drive, MP4)</label>
+                  <input 
+                    type="text" 
+                    value={testData.basicInfo.guide_video_url || ''} 
+                    onChange={e => setTestData({
+                      ...testData, 
+                      guide_video_url: e.target.value,
+                      basicInfo: { ...testData.basicInfo, guide_video_url: e.target.value }
+                    })} 
+                    placeholder="Dán link YouTube, Google Drive hoặc link video hướng dẫn..." 
+                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]" 
+                  />
+                </div>
               </div>
             </div>
           )}

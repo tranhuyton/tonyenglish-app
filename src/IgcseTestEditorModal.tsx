@@ -23,6 +23,7 @@ export default function IgcseTestEditorModal({
     const [timeLimit, setTimeLimit] = useState<number>(120);
     const [category, setCategory] = useState('test');
     const [pdfUrl, setPdfUrl] = useState('');
+    const [guideVideoUrl, setGuideVideoUrl] = useState('');
     
     const [questions, setQuestions] = useState<any[]>([]);
     const [isSaving, setIsSaving] = useState(false);
@@ -95,6 +96,7 @@ export default function IgcseTestEditorModal({
         setTimeLimit(120);
         setCategory('test');
         setPdfUrl('');
+        setGuideVideoUrl('');
         setQuestions([]);
         setRawJson('[\n  {\n    "question_number": "1",\n    "sub_questions": []\n  }\n]');
         setOriginalCourseId(null);
@@ -111,6 +113,7 @@ export default function IgcseTestEditorModal({
                 setTimeLimit(data.time_limit || data.json_config?.timeLimit || 120);
                 setCategory(data.content_json?.basicInfo?.category || 'test');
                 setPdfUrl(data.insert_pdf_url || '');
+                setGuideVideoUrl(data.guide_video_url || data.content_json?.guide_video_url || data.content_json?.basicInfo?.guide_video_url || data.json_config?.guide_video_url || '');
                 
                 const loadedCourseId = data.course_id || data.content_json?.basicInfo?.courseId || 'all';
                 setSelectedCourseId(loadedCourseId);
@@ -185,7 +188,7 @@ export default function IgcseTestEditorModal({
                 alert("⚠️ Có ID câu hỏi bị trùng! Kiểm tra lại."); setIsSaving(false); return;
             }
 
-            const jsonConfig = { timeLimit: timeLimit, questions: finalQuestions };
+            const jsonConfig = { timeLimit: timeLimit, guide_video_url: guideVideoUrl.trim() || null, questions: finalQuestions };
             const contentJson = {
                 basicInfo: {
                     title,
@@ -194,7 +197,9 @@ export default function IgcseTestEditorModal({
                     courseId: selectedCourseId || 'all',
                     insert_pdf_url: pdfUrl || '',
                     category: category,
+                    guide_video_url: guideVideoUrl.trim() || null,
                 },
+                guide_video_url: guideVideoUrl.trim() || null,
                 questions: finalQuestions,
             };
             const assignedCourseId = selectedCourseId && selectedCourseId !== 'all' ? selectedCourseId : null;
@@ -202,6 +207,7 @@ export default function IgcseTestEditorModal({
                 title, 
                 test_type: testType, 
                 insert_pdf_url: pdfUrl || null, 
+                guide_video_url: guideVideoUrl.trim() || null,
                 content_json: contentJson,
                 json_config: jsonConfig, 
                 course_id: assignedCourseId,
@@ -279,6 +285,16 @@ export default function IgcseTestEditorModal({
                                     <option value="all">-- Dùng chung (không gán khóa học) --</option>
                                     {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                                 </select>
+                            </div>
+                            <div className="col-span-1 md:col-span-2">
+                                <label className="block text-sm font-bold text-slate-700 mb-1.5">🎬 Video hướng dẫn & gợi ý cách giải (URL YouTube / Google Drive / MP4)</label>
+                                <input 
+                                    type="text" 
+                                    value={guideVideoUrl} 
+                                    onChange={(e) => setGuideVideoUrl(e.target.value)} 
+                                    placeholder="Dán link YouTube, Google Drive hoặc link video hướng dẫn..." 
+                                    className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9] text-sm"
+                                />
                             </div>
                             <div className="col-span-1 md:col-span-2">
                                 <label className="block text-sm font-bold text-slate-700 mb-1.5">File PDF Đề bài (nửa trái màn hình) 📄</label>

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
+import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 
 export default function IgcsePaperTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
   const [testData, setTestData] = useState<any>(() => {
@@ -51,6 +52,31 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   const canvasSnapshot = useRef<ImageData|null>(null);
   const [drawText, setDrawText] = useState('');
   const [textPos, setTextPos] = useState<{x:number,y:number}|null>(null);
+
+  // 🎬 Video hướng dẫn & gợi ý
+  const {
+    videoUrl: guideVideoUrl,
+    isOpen: isGuideVideoOpen,
+    setIsOpen: setIsGuideVideoOpen,
+    isTheaterOpen: isGuideVideoTheaterOpen,
+    setIsTheaterOpen: setIsGuideVideoTheaterOpen,
+    isEditModalOpen: isGuideVideoEditModalOpen,
+    setIsEditModalOpen: setIsGuideVideoEditModalOpen,
+    handleSaveVideo: handleSaveGuideVideo,
+  } = useTestGuideVideo(testData, (newUrl) => {
+    setTestData((prev: any) => ({
+      ...prev,
+      guide_video_url: newUrl,
+      content_json: {
+        ...(prev?.content_json || {}),
+        guide_video_url: newUrl,
+        basicInfo: {
+          ...(prev?.content_json?.basicInfo || {}),
+          guide_video_url: newUrl,
+        }
+      }
+    }));
+  });
 
   const [timeLeft, setTimeLeft] = useState(7200); 
   const isFinishingRef = useRef(false);
@@ -759,7 +785,36 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
               {gradeResult ? <><span>✅</span> Kết quả chấm điểm IGCSE</> : <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Answer Sheet (Phiếu trả lời)</>}
             </span>
+
+            {/* 🎬 NÚT BẬT / THÊM VIDEO HƯỚNG DẪN */}
+            <TestGuideVideoButton
+              videoUrl={guideVideoUrl}
+              isOpen={isGuideVideoOpen}
+              onToggleOpen={() => setIsGuideVideoOpen(!isGuideVideoOpen)}
+              onOpenEditModal={() => setIsGuideVideoEditModalOpen(true)}
+              isReviewMode={isReviewMode || !!gradeResult}
+              buttonTheme="dark"
+            />
           </div>
+
+          {/* 🎬 INLINE VIDEO PLAYER (Right below header, stays visible while scrolling) */}
+          <TestGuideVideoPlayer
+            videoUrl={guideVideoUrl}
+            isOpen={isGuideVideoOpen}
+            onClose={() => setIsGuideVideoOpen(false)}
+            isTheaterOpen={isGuideVideoTheaterOpen}
+            onToggleTheater={setIsGuideVideoTheaterOpen}
+            testTitle={testData?.title}
+          />
+
+          {/* 🎬 MODAL CÀI ĐẶT / UPLOAD VIDEO */}
+          <TestGuideVideoEditModal
+            isOpen={isGuideVideoEditModalOpen}
+            onClose={() => setIsGuideVideoEditModalOpen(false)}
+            initialUrl={guideVideoUrl}
+            onSave={handleSaveGuideVideo}
+            testTitle={testData?.title}
+          />
 
           <div onScroll={handleContainerScroll} className={`flex-1 overflow-y-auto p-4 sm:p-8 ${isDragging ? 'pointer-events-none' : ''} custom-scrollbar`}>
             {/* Score Summary */}

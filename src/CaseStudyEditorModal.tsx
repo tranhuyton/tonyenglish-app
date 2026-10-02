@@ -49,6 +49,9 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     if (testRecord.resource_pdf_url_2 || basicInfo.resource_pdf_url_2) {
       basicInfo.resource_pdf_url_2 = testRecord.resource_pdf_url_2 || basicInfo.resource_pdf_url_2;
     }
+    if (testRecord.guide_video_url || testRecord.content_json?.guide_video_url || basicInfo.guide_video_url) {
+      basicInfo.guide_video_url = testRecord.guide_video_url || testRecord.content_json?.guide_video_url || basicInfo.guide_video_url;
+    }
 
     // Tạo json_config_string từ json_config (ưu tiên) hoặc content_json
     let json_config_string = '';
@@ -167,6 +170,22 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                     <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
                   </select>
                 </div>
+              </div>
+
+              <div>
+                <label className="text-[13px] font-bold text-slate-600 block mb-1">
+                  🎬 Video hướng dẫn & gợi ý (URL) <span className="text-slate-400 font-normal">(Tùy chọn)</span>
+                </label>
+                <input 
+                  value={testData.basicInfo.guide_video_url || ''} 
+                  onChange={e => setTestData({
+                    ...testData, 
+                    guide_video_url: e.target.value,
+                    basicInfo: { ...testData.basicInfo, guide_video_url: e.target.value }
+                  })} 
+                  placeholder="Dán link YouTube, Google Drive hoặc link video..." 
+                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none text-[14px] focus:ring-2 focus:ring-[#0a5482]" 
+                />
               </div>
             </div>
 
