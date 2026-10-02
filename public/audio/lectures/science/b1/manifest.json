@@ -2,7 +2,7 @@
   "lectureId": "1231b474-8a99-4330-b45d-fdda19a802fe",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B1: Characteristics of living organisms",
-  "totalDuration": 233.3,
+  "totalDuration": 547.47,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,19 +14,27 @@
     },
     "sec_mrsgren": {
       "start": 1,
-      "end": 1
+      "end": 8
     },
     "sec-mrsgren": {
       "start": 1,
-      "end": 1
+      "end": 8
+    },
+    "sec_excretion_warning": {
+      "start": 9,
+      "end": 9
+    },
+    "sec-excretion-warning": {
+      "start": 9,
+      "end": 9
     },
     "sec_five_kingdoms": {
-      "start": 2,
-      "end": 2
+      "start": 10,
+      "end": 10
     },
     "sec-five-kingdoms": {
-      "start": 2,
-      "end": 2
+      "start": 10,
+      "end": 10
     }
   },
   "segments": [
@@ -34,8 +42,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề B1: Đặc điểm Sinh vật sống & Phân loại học",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Co-ordinated Sciences Biology, Topic B1: Characteristics of living organisms. Biology is the scientific study of life. In this introductory chapter, we analyze the seven universal characteristics of living organisms encapsulated in MRS GREN, and explore classification across the Five Biological Kingdoms.",
-      "vi": "Chào mừng các bạn đến với phần Sinh học trong môn Khoa học Phối hợp Cambridge IGCSE, Chuyên đề B1: Đặc điểm của sinh vật sống và Phân loại học. Sinh học là khoa học nghiên cứu sự sống. Trong bài mở đầu này, chúng ta sẽ phân tích 7 đặc tính phổ quát của sinh vật sống qua quy tắc MRS GREN và hệ thống phân loại 5 giới sinh vật.",
+      "en": "Welcome to Cambridge IGCSE Co-ordinated Sciences Biology, Topic B1: Characteristics of living organisms. In this foundational topic, we study the seven characteristics shared by all living things, captured in the mnemonic MRS GREN, and examine the classification of living organisms into the Five Kingdoms.",
+      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Chuyên đề B1: Đặc điểm của sinh vật sống và Phân loại học. Trong bài học nền tảng này, chúng ta sẽ khám phá 7 đặc tính phổ quát của sự sống qua quy tắc MRS GREN và hệ thống phân loại Năm Giới sinh vật.",
       "duration": 44.1,
       "startTime": 0.0,
       "endTime": 44.1,
@@ -45,22 +53,110 @@
       "id": "sec_mrsgren",
       "title": "1. Bảy Đặc tính của Sự sống (Quy tắc MRS GREN)",
       "selector": "#sec-mrsgren",
-      "en": "Section 1 outlines the seven vital characteristics of life, remembered by the acronym MRS GREN: Movement causes an organism to change position or place. Respiration breaks down nutrient molecules in cells to release energy for metabolism. Sensitivity detects internal or external stimuli and makes responses. Growth increases dry mass and size permanently. Reproduction generates more of the same kind. Excretion removes toxic waste products of metabolism. Nutrition provides nutrients for energy, growth, and tissue repair. Crucially for Cambridge exams, excretion removes metabolic wastes like urea and carbon dioxide, whereas egestion expels undigested food as feces through the anus.",
-      "vi": "Mục một khái quát 7 đặc tính sống cơ bản được ghi nhớ qua cụm từ MRS GREN: Vận động (Movement) là sự thay đổi vị trí của cơ thể hoặc bộ phận. Hô hấp tế bào (Respiration) bẻ gãy phân tử dinh dưỡng để giải phóng năng lượng ATP. Cảm ứng (Sensitivity) là khả năng phát hiện kích thích và phản ứng lại. Sinh trưởng (Growth) gia tăng vĩnh viễn về kích thước và khối lượng khô. Sinh sản (Reproduction) tạo ra thế hệ cá thể mới. Bài tiết (Excretion) đào thải các chất thải độc hại sinh ra từ quá trình chuyển hóa tế bào. Dinh dưỡng (Nutrition) hấp thu các chất cần thiết để phát triển và sửa chữa mô. Điểm nhấn thi cử: bài tiết thải chất chuyển hóa như urê và CO2, khác hoàn toàn với sự tống phân (egestion) thải thức ăn không tiêu hóa qua hậu môn.",
+      "en": "Section 1 introduces the seven fundamental life processes shared by all living organisms. Remember them using the acronym MRS GREN: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, and Nutrition. Cambridge examinations require precise, verbatim definitions for each of these processes.",
+      "vi": "Mục một giới thiệu 7 đặc tính sống cơ bản của mọi sinh vật, được ghi nhớ qua cụm từ viết tắt MRS GREN: Vận động, Hô hấp tế bào, Cảm ứng, Tăng trưởng, Sinh sản, Bài tiết và Dinh dưỡng. Đề thi Cambridge yêu cầu học sinh phải nắm vững định nghĩa chuẩn xác từng từ cho mỗi quá trình.",
       "duration": 100.26,
       "startTime": 44.1,
       "endTime": 144.36,
       "audioUrl": "/audio/lectures/science/b1/sec_mrsgren.mp3"
     },
     {
+      "id": "sec_movement",
+      "title": "🏃 Movement (Vận động)",
+      "selector": "#sec-movement",
+      "en": "Movement is defined as an action by an organism or part of an organism causing a change of position or place. Animals move their entire bodies by locomotion, such as walking, running, flying, or swimming. In contrast, most plants are anchored, but move parts of their structure slowly in response to environmental stimuli, such as shoots bending towards light.",
+      "vi": "Vận động được định nghĩa là hành động của một sinh vật hoặc một phần cơ thể sinh vật làm thay đổi vị trí hoặc chỗ ở. Động vật có thể di chuyển toàn bộ cơ thể bằng cách vận động như đi bộ, chạy, bay hoặc bơi. Ngược lại, thực vật thường cố định nhưng vẫn vận động chậm các bộ phận để đáp ứng các kích thích từ môi trường, ví dụ như ngọn cây uốn cong về phía có ánh sáng.",
+      "duration": 43.07,
+      "startTime": 144.36,
+      "endTime": 187.43,
+      "audioUrl": "/audio/lectures/science/b1/sec_movement.mp3"
+    },
+    {
+      "id": "sec_respiration",
+      "title": "💨 Respiration (Hô hấp tế bào)",
+      "selector": "#sec-respiration",
+      "en": "Respiration is defined as the chemical reactions in cells that break down nutrient molecules and release energy for metabolism. Crucially for Cambridge exams, remember that cellular respiration is a biochemical reaction occurring in all living cells twenty-four hours a day, and is completely different from breathing or ventilation.",
+      "vi": "Hô hấp tế bào được định nghĩa là chuỗi phản ứng hóa học diễn ra trong tế bào giúp phân giải các phân tử dinh dưỡng để giải phóng năng lượng cho quá trình chuyển hóa. Điểm trọng tâm thi cử Cambridge: Hô hấp tế bào là phản ứng hóa sinh diễn ra liên tục 24/7 ở mọi tế bào sống, và khác biệt hoàn toàn với quá trình hít thở thông khí của phổi.",
+      "duration": 38.66,
+      "startTime": 187.43,
+      "endTime": 226.09,
+      "audioUrl": "/audio/lectures/science/b1/sec_respiration.mp3"
+    },
+    {
+      "id": "sec_sensitivity",
+      "title": "👀 Sensitivity (Cảm ứng)",
+      "selector": "#sec-sensitivity",
+      "en": "Sensitivity is defined as the ability to detect and respond to changes in the internal or external environment. Sense organs contain receptor cells that detect environmental stimuli such as light, temperature, sound, and chemicals, while effectors such as muscles and glands carry out appropriate responses.",
+      "vi": "Cảm ứng là khả năng nhận biết và phản ứng trước những thay đổi từ môi trường bên trong hoặc bên ngoài cơ thể. Các cơ quan cảm giác chứa tế bào thụ thể để phát hiện kích thích như ánh sáng, nhiệt độ, âm thanh và hóa chất, trong khi các cơ quan phản ứng như cơ bắp và tuyến sẽ thực hiện các đáp ứng tương ứng.",
+      "duration": 35.78,
+      "startTime": 226.09,
+      "endTime": 261.87,
+      "audioUrl": "/audio/lectures/science/b1/sec_sensitivity.mp3"
+    },
+    {
+      "id": "sec_growth",
+      "title": "🌱 Growth (Sinh trưởng & Tăng trưởng)",
+      "selector": "#sec-growth",
+      "en": "Growth is defined as a permanent increase in size and dry mass. Organisms grow through cell division via mitosis, followed by cell enlargement and differentiation. In Cambridge examinations, dry mass specifically means the mass of an organism after all water has been removed by gentle drying.",
+      "vi": "Sinh trưởng được định nghĩa là sự gia tăng vĩnh viễn về kích thước và khối lượng khô. Sinh vật lớn lên nhờ sự phân chia tế bào qua quá trình nguyên phân, sau đó tế bào dài ra và biệt hóa. Trong các kỳ thi Cambridge, khối lượng khô chỉ khối lượng của sinh vật sau khi đã loại bỏ hoàn toàn lượng nước qua quá trình sấy.",
+      "duration": 37.96,
+      "startTime": 261.87,
+      "endTime": 299.83,
+      "audioUrl": "/audio/lectures/science/b1/sec_growth.mp3"
+    },
+    {
+      "id": "sec_reproduction",
+      "title": "👶 Reproduction (Sinh sản)",
+      "selector": "#sec-reproduction",
+      "en": "Reproduction is defined as the processes that make more of the same kind of organism. Asexual reproduction involves only one parent and produces genetically identical offspring or clones. Sexual reproduction involves two parents and the fusion of haploid gamete nuclei to produce genetically varied offspring.",
+      "vi": "Sinh sản được định nghĩa là các quá trình tạo ra nhiều cá thể mới cùng loài. Sinh sản vô tính chỉ cần một cá thể bố mẹ, tạo ra các cá thể con giống hệt nhau về mặt di truyền hay dòng vô tính. Sinh sản hữu tính cần hai cá thể bố mẹ và sự dung hợp của các nhân giao tử đơn bội để tạo ra thế hệ con có sự đa dạng di truyền.",
+      "duration": 39.16,
+      "startTime": 299.83,
+      "endTime": 338.99,
+      "audioUrl": "/audio/lectures/science/b1/sec_reproduction.mp3"
+    },
+    {
+      "id": "sec_excretion",
+      "title": "🚽 Excretion (Bài tiết)",
+      "selector": "#sec-excretion",
+      "en": "Excretion is defined as the removal of the waste products of metabolism and substances in excess of requirements. Key examples include carbon dioxide excreted by the lungs, and urea and excess mineral salts filtered and excreted by the kidneys.",
+      "vi": "Bài tiết được định nghĩa là quá trình đào thải các chất thải độc hại sinh ra từ quá trình trao đổi chất và các chất dư thừa so với nhu cầu của cơ thể. Các ví dụ điển hình bao gồm khí carbon dioxide được đào thải qua phổi, cùng với urê và các muối khoáng dư thừa được lọc và bài tiết qua thận.",
+      "duration": 32.39,
+      "startTime": 338.99,
+      "endTime": 371.38,
+      "audioUrl": "/audio/lectures/science/b1/sec_excretion.mp3"
+    },
+    {
+      "id": "sec_nutrition",
+      "title": "🍽️ Nutrition (Dinh dưỡng)",
+      "selector": "#sec-nutrition",
+      "en": "Nutrition is defined as the taking in of materials for energy, growth, and development. Plants are autotrophic organisms that synthesise their own organic nutrients through photosynthesis using light, carbon dioxide, and water. Animals are heterotrophic and must ingest pre-formed organic compounds by eating other living organisms.",
+      "vi": "Dinh dưỡng được định nghĩa là việc thu nhận các chất vật chất để cung cấp năng lượng, phục vụ cho sự sinh trưởng và phát triển. Thực vật là sinh vật tự dưỡng, tự tổng hợp chất hữu cơ qua quang hợp từ ánh sáng, CO2 và nước. Động vật là sinh vật dị dưỡng, phải thu nhận dinh dưỡng bằng cách tiêu thụ các sinh vật khác.",
+      "duration": 40.29,
+      "startTime": 371.38,
+      "endTime": 411.67,
+      "audioUrl": "/audio/lectures/science/b1/sec_nutrition.mp3"
+    },
+    {
+      "id": "sec_excretion_warning",
+      "title": "⚠️ Cảnh báo Đề thi: Excretion vs. Egestion",
+      "selector": "#sec-excretion-warning",
+      "en": "Cambridge Exam Warning: Never confuse excretion with egestion! Excretion is the removal of metabolic waste products created inside cells, such as urea in urine and carbon dioxide from respiration. In contrast, egestion is passing out undigested food as faeces through the anus, material that was never absorbed into body cells or involved in metabolism.",
+      "vi": "Cảnh báo đề thi Cambridge: Tuyệt đối không được nhầm lẫn giữa Bài tiết (Excretion) và Tống phân (Egestion)! Bài tiết là việc đào thải các chất cặn bã sinh ra bên trong tế bào như urê trong nước tiểu và CO2 từ hô hấp. Ngược lại, tống phân chỉ là sự thải thức ăn không tiêu hóa được dưới dạng phân qua hậu môn, chất này chưa từng được hấp thu vào tế bào hay tham gia chuyển hóa.",
+      "duration": 46.86,
+      "startTime": 411.67,
+      "endTime": 458.53,
+      "audioUrl": "/audio/lectures/science/b1/sec_excretion_warning.mp3"
+    },
+    {
       "id": "sec_five_kingdoms",
       "title": "2. Phân loại Sinh vật sống: Năm Giới Sinh học",
       "selector": "#sec-five-kingdoms",
-      "en": "Section 2 explores biological classification and binomial nomenclature: Organisms are grouped using shared morphology, anatomy, and DNA base sequences. In the binomial naming system, each species has a two-part Latin name: Genus capitalized, species in lowercase, italicized in print. All living organisms are classified into Five Kingdoms: Animals are multicellular heterotrophs lacking cell walls. Plants are multicellular autotrophs with cellulose walls and chloroplasts. Fungi have chitin walls and feed saprotrophically via hyphae. Protoctists are mostly unicellular eukaryotes. Prokaryotes lack true nuclei and membrane-bound organelles, possessing circular DNA.",
-      "vi": "Mục hai khảo sát phân loại học và danh pháp kép Linnaeus: Sinh vật được xếp nhóm dựa vào hình thái, giải phẫu học và trình tự DNA. Hệ thống danh pháp kép đặt tên mỗi loài gồm hai từ tiếng Latin: Tên Chi viết hoa, tên loài viết thường, in nghiêng khi in ấn. Toàn bộ sinh giới chia thành 5 Giới: Giới Động vật là sinh vật đa bào dị dưỡng không có thành tế bào. Giới Thực vật là sinh vật đa bào tự dưỡng có thành cellulose và lục lạp. Giới Nấm có thành chitin và dinh dưỡng hoại sinh qua hệ sợi nấm. Giới Nguyên sinh gồm các sinh vật nhân thực đơn bào. Giới Khởi sinh (Prokaryotes) gồm vi khuẩn không có màng nhân và các bào quan có màng, chứa phân tử DNA vòng trần.",
+      "en": "Section 2 covers biological classification into the Five Kingdoms: Animals are multicellular heterotrophs lacking cell walls. Plants are multicellular autotrophs with cellulose walls and chloroplasts. Fungi have chitin cell walls and feed saprotrophically via hyphae. Protoctists are mostly unicellular eukaryotes. Prokaryotes, including bacteria, are unicellular organisms without a true nucleus, possessing circular DNA loops and plasmids.",
+      "vi": "Mục hai nghiên cứu phân loại sinh giới thành Năm Giới: Giới Động vật gồm sinh vật đa bào dị dưỡng không có thành tế bào. Giới Thực vật là sinh vật đa bào tự dưỡng có thành cellulose và lục lạp. Giới Nấm có thành chitin và dinh dưỡng hoại sinh qua hệ sợi. Giới Nguyên sinh gồm các sinh vật nhân thực đơn bào. Giới Khởi sinh như vi khuẩn là sinh vật đơn bào không có màng nhân thật, mang phân tử DNA vòng trần và plasmid.",
       "duration": 88.94,
-      "startTime": 144.36,
-      "endTime": 233.3,
+      "startTime": 458.53,
+      "endTime": 547.47,
       "audioUrl": "/audio/lectures/science/b1/sec_five_kingdoms.mp3"
     }
   ]
