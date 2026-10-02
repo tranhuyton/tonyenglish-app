@@ -1,49 +1,41 @@
 {
   "lectureId": "dc33ed9d-e328-4f60-8c47-f0dbd103e8c1",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "P2: Thermal physics",
-  "totalDuration": 288.37,
+  "totalDuration": 386.29,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề P2",
+      "selector": "#sec-header"
     },
     "sec_kinetic_model": {
       "start": 1,
-      "end": 1
-    },
-    "sec-kinetic-model": {
-      "start": 1,
-      "end": 1
+      "end": 2,
+      "title": "1. Mô hình Động học Hạt",
+      "selector": "#sec-kinetic-model"
     },
     "sec_expansion": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-expansion": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4,
+      "title": "2. Nở vì Nhiệt & Bay hơi",
+      "selector": "#sec-expansion"
     },
     "sec_heat_transfer": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-heat-transfer": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 6,
+      "title": "3. Ba Cơ chế Truyền Nhiệt",
+      "selector": "#sec-heat-transfer"
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề P2: Nhiệt học (Thermal Physics)",
+      "title": "Giới thiệu Chuyên đề P2: Vật lý Nhiệt & Thuyết Động học",
       "selector": "#sec-header",
-      "en": "Welcome to Topic P2: Thermal Physics. Heat energy governs the physical states of all matter in our universe. In this lesson, we study the kinetic particle model of matter and Brownian motion, investigate thermal expansion and the cooling mechanism of evaporation, and master the three fundamental mechanisms of heat transfer: conduction, convection, and thermal radiation.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P2: Vật lý Nhiệt học. Nhiệt năng chi phối mọi trạng thái tồn tại của vật chất trong vũ trụ. Trong bài học này, chúng ta sẽ khảo sát mô hình động học hạt và chuyển động Brown, tìm hiểu hiện tượng giãn nở nhiệt và cơ chế làm mát của sự bay hơi, đồng thời làm chủ ba cơ chế truyền nhiệt cơ bản: dẫn nhiệt, đối lưu và bức xạ nhiệt.",
+      "en": "Welcome to Topic P2: Thermal Physics. Thermal physics investigates heat energy and temperature from the microscopic viewpoint of particle motion. In this topic, we study kinetic particle models of matter, Brownian motion, gas pressure, thermal expansion, evaporation, and the three heat transfer mechanisms: conduction, convection, and radiation.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề P2: Vật lý Nhiệt và Thuyết Động học. Vật lý nhiệt nghiên cứu nhiệt năng và nhiệt độ dưới góc nhìn vi mô của các hạt chuyển động. Trong bài học này, chúng ta sẽ khảo sát mô hình hạt động học, chuyển động Brown, áp suất chất khí, sự nở vì nhiệt, sự bay hơi, cùng ba cơ chế truyền nhiệt: dẫn nhiệt, đối lưu và bức xạ.",
       "duration": 45.83,
       "startTime": 0.0,
       "endTime": 45.83,
@@ -51,36 +43,69 @@
     },
     {
       "id": "sec_kinetic_model",
-      "title": "1. Mô hình Động học Hạt của Vật chất (Kinetic Particle Model of Matter)",
+      "title": "1. Mô hình Động học Hạt của Vật chất (Kinetic Particle Model Overview)",
       "selector": "#sec-kinetic-model",
-      "en": "Matter exists in solids, liquids, and gases. In solids, particles are tightly packed in regular lattice arrangements, vibrating about fixed positions. In liquids, particles are close together but arranged irregularly, sliding past one another. In gases, particles are spaced widely apart, moving rapidly and randomly in straight lines until they collide. Brownian motion, observed when smoke particles in air or pollen grains in water exhibit zig-zag motion, provides direct experimental evidence that unseen fluid molecules are moving randomly at high speeds. Gas pressure is caused by gas particles colliding with the container walls.",
-      "vi": "Vật chất tồn tại ở thể rắn, lỏng và khí. Ở thể rắn, các hạt liên kết chặt chẽ trong mạng tinh thể trật tự, dao động quanh vị trí cân bằng cố định. Ở thể lỏng, các hạt ở gần nhau nhưng xếp ngẫu nhiên, trượt tự do qua nhau. Ở thể khí, các hạt cách nhau rất xa, chuyển động nhanh và hỗn loạn theo đường thẳng cho đến khi va chạm. Chuyển động Brown, quan sát được khi các hạt khói trong không khí hay hạt phấn hoa trong nước chuyển động zíc-zắc, là bằng chứng thực nghiệm trực tiếp chứng minh các phân tử môi trường đang chuyển động ngẫu nhiên với vận tốc lớn. Áp suất chất khí sinh ra do các hạt khí va đập vào thành bình chứa.",
+      "en": "Section 1 reviews the three states of matter in terms of particle arrangement, separation, and motion. Brownian motion provides direct experimental evidence that tiny particles are constantly bombarded by fast-moving invisible molecules.",
+      "vi": "Mục một tổng kết ba thể của vật chất dựa trên cách sắp xếp, khoảng cách và chuyển động của hạt. Hiện tượng chuyển động Brown là bằng chứng thực nghiệm trực tiếp chứng minh các hạt siêu nhỏ liên tục bị va đập bởi các phân tử vô hình chuyển động hỗn loạn.",
       "duration": 79.55,
       "startTime": 45.83,
       "endTime": 125.38,
       "audioUrl": "/audio/lectures/science/p2/sec_kinetic_model.mp3"
     },
     {
-      "id": "sec_expansion",
-      "title": "2. Sự Giãn nở Nhiệt & Cơ chế Bay hơi (Thermal Expansion & Evaporation)",
-      "selector": "#sec-expansion",
-      "en": "When substances absorb thermal energy, their particles vibrate or move faster, pushing slightly further apart. This causes thermal expansion. Gases expand significantly more than liquids, which expand more than solids. This expansion is utilized in liquid-in-glass thermometers and bimetallic strips. Evaporation occurs at any temperature below the boiling point, exclusively at the surface of a liquid. The fastest, most energetic molecules overcome intermolecular attractive forces and escape into the gas phase. Because the highest energy particles leave, the average kinetic energy of the remaining liquid decreases, causing a cooling effect.",
-      "vi": "Khi hấp thụ nhiệt năng, các hạt chuyển động hoặc dao động nhanh hơn, đẩy nhau ra xa hơn một chút. Hiện tượng này gây ra sự giãn nở vì nhiệt. Chất khí giãn nở nhiều hơn chất lỏng, và chất lỏng giãn nở nhiều hơn chất rắn. Sự giãn nở nhiệt được ứng dụng trong nhiệt kế thủy ngân và băng kép cảm biến nhiệt. Sự bay hơi diễn ra ở mọi nhiệt độ dưới điểm sôi, chỉ xảy ra tại bề mặt chất lỏng. Những phân tử có động năng lớn nhất sẽ thắng lực hút liên phân tử để thoát ra ngoài không khí. Do các phân tử năng lượng cao nhất đã thoát đi, động năng trung bình của phần chất lỏng còn lại giảm xuống, tạo ra hiệu ứng làm mát.",
-      "duration": 79.0,
+      "id": "sec_brownian_pressure",
+      "title": "🎈 Brownian Motion & Gas Pressure (Chuyển động Brown & Áp suất Khí)",
+      "selector": "#sec-brownian-pressure",
+      "en": "Gas pressure is caused by continuous random collisions of gas molecules against container walls, exerting force per unit area. Increasing temperature increases molecular kinetic energy and collision frequency, thereby raising gas pressure.",
+      "vi": "Áp suất chất khí sinh ra do các phân tử khí liên tục va chạm hỗn loạn vào thành bình, tạo ra lực tác dụng lên một đơn vị diện tích. Khi tăng nhiệt độ, động năng và tần số va chạm của các phân tử tăng lên, làm tăng áp suất chất khí.",
+      "duration": 29.2,
       "startTime": 125.38,
-      "endTime": 204.38,
+      "endTime": 154.58,
+      "audioUrl": "/audio/lectures/science/p2/sec_brownian_pressure.mp3"
+    },
+    {
+      "id": "sec_expansion",
+      "title": "2. Sự Nở vì Nhiệt & Sự Bay hơi (Thermal Expansion & Evaporation Overview)",
+      "selector": "#sec-expansion",
+      "en": "Section 2 investigates thermal expansion: Solids expand slightly, liquids expand moderately, and gases expand significantly when heated. Evaporation occurs at any temperature from liquid surfaces, causing cooling.",
+      "vi": "Mục hai nghiên cứu sự nở vì nhiệt: Chất rắn nở rất ít, chất lỏng nở vừa phải và chất khí nở nhiều nhất khi bị đun nóng. Sự bay hơi diễn ra ở mọi nhiệt độ trên bề mặt chất lỏng và mang lại hiệu ứng làm mát.",
+      "duration": 79.0,
+      "startTime": 154.58,
+      "endTime": 233.58,
       "audioUrl": "/audio/lectures/science/p2/sec_expansion.mp3"
     },
     {
+      "id": "sec_evaporation_cooling",
+      "title": "❄️ Evaporation & Cooling Effect (Cơ chế Bay hơi & Làm mát)",
+      "selector": "#sec-evaporation-cooling",
+      "en": "During evaporation, the most energetic molecules escape from the liquid surface. The average kinetic energy of the remaining molecules decreases, lowering liquid temperature. Factors increasing evaporation rate are higher temperature, greater surface area, and wind draught.",
+      "vi": "Trong quá trình bay hơi, các phân tử có động năng lớn nhất sẽ thoát ra khỏi bề mặt chất lỏng. Động năng trung bình của các phân tử còn lại giảm xuống khiến nhiệt độ chất lỏng hạ đi. Các yếu tố thúc đẩy tốc độ bay hơi gồm nhiệt độ cao, diện tích bề mặt lớn và có gió thổi qua.",
+      "duration": 34.5,
+      "startTime": 233.58,
+      "endTime": 268.08,
+      "audioUrl": "/audio/lectures/science/p2/sec_evaporation_cooling.mp3"
+    },
+    {
       "id": "sec_heat_transfer",
-      "title": "3. Các Cơ chế Truyền Nhiệt: Dẫn nhiệt, Đối lưu & Bức xạ (Thermal Energy Transfers)",
+      "title": "3. Ba Cơ chế Truyền Nhiệt (Thermal Energy Transfers Overview)",
       "selector": "#sec-heat-transfer",
-      "en": "Thermal energy transfers from hot regions to cooler regions through three processes. Conduction occurs mainly in solids; vibrating lattice ions transfer energy to neighboring ions. In metals, delocalized free electrons diffuse rapidly through the structure, making metals excellent thermal conductors. Convection occurs only in fluids: heated fluid expands, becomes less dense, and rises, while cooler, denser fluid sinks, forming a continuous convection current. Radiation transfers energy via infrared electromagnetic waves and can travel through a vacuum. Dull, black surfaces are the best absorbers and emitters of thermal radiation, whereas shiny, white surfaces are the best reflectors.",
-      "vi": "Nhiệt năng truyền từ nơi nóng sang nơi lạnh qua ba quá trình. Dẫn nhiệt xảy ra chủ yếu trong chất rắn; các ion dao động truyền động năng cho các ion kế bên. Trong kim loại, các electron tự do khuếch tán nhanh khắp cấu trúc mạng, biến kim loại thành chất dẫn nhiệt tuyệt vời. Đối lưu chỉ xảy ra trong chất lưu: phần chất lỏng hoặc khí nóng giãn nở, giảm khối lượng riêng và nổi lên, trong khi phần nguội hơn có khối lượng riêng lớn hơn sẽ chìm xuống, tạo thành dòng đối lưu liên tục. Bức xạ truyền nhiệt bằng sóng điện từ hồng ngoại và truyền được qua chân không. Bề mặt đen mờ là vật hấp thụ và phát xạ nhiệt tốt nhất, còn bề mặt sáng bóng là vật phản xạ nhiệt tốt nhất.",
+      "en": "Section 3 analyzes thermal energy transfer: Conduction through solids via lattice vibration and delocalised free electrons in metals, Convection in fluids via density changes, and Radiation via infrared electromagnetic waves through vacuum.",
+      "vi": "Mục ba phân tích ba cơ chế truyền nhiệt: Dẫn nhiệt trong chất rắn nhờ dao động mạng tinh thể và các electron tự do trong kim loại, Đối lưu trong chất lưu nhờ chênh lệch khối lượng riêng, và Bức xạ nhiệt dưới dạng sóng điện từ hồng ngoại truyền qua được chân không.",
       "duration": 83.99,
-      "startTime": 204.38,
-      "endTime": 288.37,
+      "startTime": 268.08,
+      "endTime": 352.07,
       "audioUrl": "/audio/lectures/science/p2/sec_heat_transfer.mp3"
+    },
+    {
+      "id": "sec_convection_radiation",
+      "title": "🔥 Convection & Radiation Emitters (Đối lưu & Bức xạ)",
+      "selector": "#sec-convection-radiation",
+      "en": "In convection, heated fluid expands, becomes less dense, and rises, while cooler dense fluid sinks to form a convection current. In radiation, dull black surfaces are the best absorbers and best emitters, while shiny silver surfaces reflect infrared radiation.",
+      "vi": "Trong hiện tượng đối lưu, chất lưu bị đun nóng sẽ nở ra, nhẹ hơn và nổi lên trên, trong khi chất lưu lạnh nặng hơn chìm xuống tạo thành dòng đối lưu tuần hoàn. Trong bức xạ, bề mặt đen mờ là vật hấp thụ và bức xạ nhiệt tốt nhất, còn bề mặt sáng bạc phản xạ bức xạ hồng ngoại tốt nhất.",
+      "duration": 34.22,
+      "startTime": 352.07,
+      "endTime": 386.29,
+      "audioUrl": "/audio/lectures/science/p2/sec_convection_radiation.mp3"
     }
   ]
 }

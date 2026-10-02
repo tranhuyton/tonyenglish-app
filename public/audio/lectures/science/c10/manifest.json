@@ -2,39 +2,31 @@
   "lectureId": "9d61f516-a24c-4485-8490-8485604130ec",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C10: Chemistry of the environment",
-  "totalDuration": 268.91,
+  "totalDuration": 433.65,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề C10",
+      "selector": "#sec-header"
     },
     "sec_water_chemistry": {
       "start": 1,
-      "end": 1
-    },
-    "sec-water-chemistry": {
-      "start": 1,
-      "end": 1
+      "end": 2,
+      "title": "1. Hóa học Nguồn nước & Xử lý",
+      "selector": "#sec-water-chemistry"
     },
     "sec_air_pollution": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-air-pollution": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 5,
+      "title": "2. Khí quyển & Ô nhiễm",
+      "selector": "#sec-air-pollution"
     },
     "sec_rusting_fertilizers": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-rusting-fertilizers": {
-      "start": 3,
-      "end": 3
+      "start": 6,
+      "end": 8,
+      "title": "3. Chống Rỉ sét & Phân bón NPK",
+      "selector": "#sec-rusting-fertilizers"
     }
   },
   "segments": [
@@ -42,8 +34,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề C10: Hóa học Môi trường, Nước & Không khí",
       "selector": "#sec-header",
-      "en": "Welcome to Topic C10: Chemistry of the environment. Environmental chemistry investigates natural balances and human-induced pollutants. In this chapter, we study water treatment and chemical testing, composition of clean air and atmospheric pollutants, greenhouse climate forcing, rust prevention, and synthetic agricultural fertilizers.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C10: Hóa học Môi trường, Nước và Không khí. Hóa học môi trường nghiên cứu các cân bằng tự nhiên và tác nhân ô nhiễm do con người. Trong bài học này, chúng ta sẽ khảo sát quy trình xử lý nước và nhận biết nước tinh khiết, thành phần không khí sạch và các chất ô nhiễm khí quyển, hiệu ứng nhà kính, chống rỉ sét sắt và phân bón hóa học NPK.",
+      "en": "Welcome to Topic C10: Chemistry of the Environment. Environmental chemistry investigates vital natural resources. In this topic, we examine water purification and testing, explore the composition of clean air, pollutants, and catalytic converters, and study rust prevention and synthetic NPK fertilizers.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C10: Hóa học Môi trường, Nguồn Nước và Không khí. Hóa học môi trường nghiên cứu các tài nguyên sinh thái thiết yếu. Trong bài học này, chúng ta sẽ tìm hiểu quy trình xử lý và kiểm tra độ tinh khiết của nước, thành phần không khí sạch, các chất ô nhiễm và bộ chuyển đổi xúc tác, cùng biện pháp chống rỉ sét và phân bón NPK.",
       "duration": 44.75,
       "startTime": 0.0,
       "endTime": 44.75,
@@ -51,36 +43,91 @@
     },
     {
       "id": "sec_water_chemistry",
-      "title": "1. Hóa học Nguồn nước: Nhận biết Nước & Xử lý Nước sinh hoạt",
+      "title": "1. Hóa học Nguồn nước: Nhận biết & Xử lý (Water Chemistry Overview)",
       "selector": "#sec-water-chemistry",
-      "en": "Section 1 covers water chemistry: Chemical testing for water uses anhydrous copper(II) sulfate, turning from white to blue, or anhydrous cobalt(II) chloride paper, turning from blue to pink. Water purity is confirmed physically by a sharp boiling point at 100 degrees Celsius and melting point at zero degrees. Water treatment plants prepare drinking water via sedimentation of coarse debris, filtration through sand and gravel beds to remove insolubles, carbon adsorption to eliminate odours, and chlorination to disinfect and kill harmful bacteria.",
-      "vi": "Mục một phân tích hóa học nguồn nước: Thử nghiệm hóa học nhận biết sự có mặt của nước dùng tinh thể đồng(II) sunfat khan CuSO4 chuyển từ màu trắng sang màu xanh lam, hoặc giấy tẩm coban(II) clorua khan CoCl2 chuyển từ xanh lam sang hồng phấn. Độ tinh khiết của nước được xác định bằng điểm sôi cố định đúng 100 độ C và đông đặc ở 0 độ C. Quy trình xử lý nước sinh hoạt gồm lắng cặn thô, lọc qua nhiều lớp cát sỏi để loại bỏ chất rắn lơ lửng, lọc than hoạt tính khử mùi và sục khí clo để khử trùng tiêu diệt vi khuẩn gây bệnh.",
+      "en": "Section 1 addresses Water: Chemical tests for water and the industrial treatment stages converting raw river water into safe drinking water.",
+      "vi": "Mục một đề cập đến Nguồn nước: Các phản ứng hóa học nhận biết nước và quy trình xử lý công nghiệp biến nước sông tự nhiên thành nước sinh hoạt an toàn.",
       "duration": 65.58,
       "startTime": 44.75,
       "endTime": 110.33,
       "audioUrl": "/audio/lectures/science/c10/sec_water_chemistry.mp3"
     },
     {
-      "id": "sec_air_pollution",
-      "title": "2. Thành phần Khí quyển & Các Chất Ô nhiễm Không khí",
-      "selector": "#sec-air-pollution",
-      "en": "Section 2 investigates clean air and atmospheric pollution: Clean, dry air contains approximately 78% nitrogen, 21% oxygen, 0.9% argon, and 0.04% carbon dioxide. Common air pollutants include: Carbon monoxide from incomplete combustion of carbonaceous fuels, poisoning blood by irreversibly binding to hemoglobin; Sulfur dioxide from combustion of fossil fuels containing sulfur impurities, producing acid rain; Oxides of nitrogen from vehicle engines triggering photochemical smog and acid rain; and Methane and Carbon dioxide driving the enhanced greenhouse effect and global warming.",
-      "vi": "Mục hai khảo sát không khí sạch và các chất gây ô nhiễm khí quyển: Không khí khô sạch gồm 78% nitơ N2, 21% oxy O2, 0.9% agon và 0.04% CO2. Các chất ô nhiễm không khí nguy hiểm gồm: Khí CO từ đốt cháy không hoàn toàn nhiên liệu, liên kết chặt với hemoglobin gây ngạt thở; Khí SO2 từ đốt cháy than đá chứa tạp chất lưu huỳnh gây mưa axit; Các oxit nitơ NOx sinh ra từ buồng đốt động cơ xe hơi gây sương mù quang hóa và mưa axit; cùng khí Methane CH4 và CO2 gây hiệu ứng nhà kính tăng cường và biến đổi khí hậu toàn cầu.",
-      "duration": 74.37,
+      "id": "sec_water_treatment",
+      "title": "🚰 Water Purification & Tests (Quy trình Xử lý & Nhận biết Nước)",
+      "selector": "#sec-water-treatment",
+      "en": "Water treatment involves sedimentation and filtration to remove insoluble solids, carbon treatment for odor, and chlorination to kill harmful microbes. Water presence is tested using anhydrous cobalt(II) chloride which turns from blue to pink, or anhydrous copper(II) sulfate turning white to blue. Pure water boils precisely at 100 degrees Celsius.",
+      "vi": "Xử lý nước gồm lắng đọng và lọc cát để loại bỏ chất rắn không tan, lọc than hoạt tính khử mùi và khử trùng bằng clo để tiêu diệt vi khuẩn. Nhận biết nước bằng coban hai clorua khan đổi từ xanh sang hồng hoặc đồng hai sunfat khan từ trắng sang xanh. Nước cất tinh khiết sôi chính xác ở 100 độ C.",
+      "duration": 42.35,
       "startTime": 110.33,
-      "endTime": 184.7,
+      "endTime": 152.68,
+      "audioUrl": "/audio/lectures/science/c10/sec_water_treatment.mp3"
+    },
+    {
+      "id": "sec_air_pollution",
+      "title": "2. Thành phần Khí quyển & Chất Ô nhiễm (Air & Pollution Overview)",
+      "selector": "#sec-air-pollution",
+      "en": "Section 2 analyzes atmospheric composition and dangerous pollutants: Clean dry air is approximately 78 percent nitrogen, 21 percent oxygen, with argon, carbon dioxide, and other gases.",
+      "vi": "Mục hai phân tích thành phần khí quyển và các chất ô nhiễm nguy hiểm: Không khí khô sạch chứa khoảng 78 phần trăm nitơ, 21 phần trăm oxy, còn lại là argon, carbon dioxide và các khí khác.",
+      "duration": 74.37,
+      "startTime": 152.68,
+      "endTime": 227.05,
       "audioUrl": "/audio/lectures/science/c10/sec_air_pollution.mp3"
     },
     {
+      "id": "sec_clean_air_composition",
+      "title": "🌬️ Clean Air Composition (Thành phần Không khí Sạch)",
+      "selector": "#sec-clean-air-composition",
+      "en": "Clean air consists of 78% nitrogen, 21% oxygen, 0.9% argon, and 0.04% carbon dioxide. Oxygen supports respiration and combustion, while nitrogen is an unreactive diluent.",
+      "vi": "Không khí sạch bao gồm 78% nitơ, 21% oxy, 0.9% argon và 0.04% carbon dioxide. Khí oxy duy trì hô hấp và sự cháy, trong khi khí nitơ đóng vai trò chất đệm trơ về mặt hóa học.",
+      "duration": 32.22,
+      "startTime": 227.05,
+      "endTime": 259.27,
+      "audioUrl": "/audio/lectures/science/c10/sec_clean_air_composition.mp3"
+    },
+    {
+      "id": "sec_pollutants_catalytic",
+      "title": "🚗 Pollutants & Catalytic Converters (Chất Ô nhiễm & Xúc tác Ô tô)",
+      "selector": "#sec-pollutants-catalytic",
+      "en": "Carbon monoxide from incomplete combustion causes poisoning. Sulfur dioxide and nitrogen oxides cause acid rain. Catalytic converters in car exhausts use platinum or rhodium to convert carbon monoxide and nitrogen oxides into harmless carbon dioxide and nitrogen.",
+      "vi": "Khí CO do đốt cháy không hoàn toàn gây ngộ độc máu. Khí SO2 và NOx gây mưa axit phá hủy rừng và các công trình. Bộ chuyển đổi xúc tác trên ô tô dùng bạch kim và rodi biến khí độc CO và NOx thành CO2 và N2 vô hại.",
+      "duration": 33.86,
+      "startTime": 259.27,
+      "endTime": 293.13,
+      "audioUrl": "/audio/lectures/science/c10/sec_pollutants_catalytic.mp3"
+    },
+    {
       "id": "sec_rusting_fertilizers",
-      "title": "3. Sự Rỉ sét của Sắt & Phân bón Hóa học (NPK Fertilizers)",
+      "title": "3. Rỉ sét & Phân bón NPK (Rusting & Fertilizers Overview)",
       "selector": "#sec-rusting-fertilizers",
-      "en": "Section 3 covers corrosion and fertilizers: Rusting of iron is the formation of hydrated iron(III) oxide, requiring both oxygen and water simultaneously. Rust prevention methods include barrier methods like painting, greasing, and plastic coating; Sacrificial protection attaching blocks of more reactive zinc or magnesium; and Galvanizing: dipping steel in molten zinc, which shields physically and protects sacrificially even if scratched. Agricultural NPK fertilizers supply three vital macronutrients: Nitrogen for leafy vegetative growth and amino acid synthesis; Phosphorus for root development; and Potassium for flower and fruit disease resistance.",
-      "vi": "Mục ba phân tích sự rỉ sét và phân bón hóa học: Sự rỉ sét của sắt là quá trình hình thành oxit sắt(III) ngậm nước, bắt buộc phải có đồng thời cả oxy và nước. Các phương pháp chống rỉ sét gồm: Phương pháp rào cản ngăn tiếp xúc (sơn, tra dầu mỡ, phủ nhựa); Bảo vệ hy sinh bằng cách gắn các khối kim loại hoạt động mạnh hơn như kẽm hoặc magie; và Mạ kẽm (Galvanizing): nhúng thép vào kẽm nóng chảy vừa tạo lớp vỏ bảo vệ vừa bảo vệ hy sinh ngay cả khi lớp mạ bị trầy xước. Phân bón NPK cung cấp 3 nguyên tố đa lượng tối cần thiết cho cây trồng: Nitơ (N) kích thích phát triển thân lá và tổng hợp protein; Photpho (P) phát triển bộ rễ; và Kali (K) kích thích ra hoa đậu quả và tăng sức đề kháng sâu bệnh.",
+      "en": "Section 3 investigates the corrosion of iron and the role of synthetic chemical fertilizers in agricultural crop yields.",
+      "vi": "Mục ba nghiên cứu sự ăn mòn kim loại sắt và vai trò của phân bón hóa học tổng hợp trong năng suất cây trồng.",
       "duration": 84.21,
-      "startTime": 184.7,
-      "endTime": 268.91,
+      "startTime": 293.13,
+      "endTime": 377.34,
       "audioUrl": "/audio/lectures/science/c10/sec_rusting_fertilizers.mp3"
+    },
+    {
+      "id": "sec_rust_prevention",
+      "title": "🛡️ Rusting & Prevention Methods (Cơ chế & Chống Rỉ sét)",
+      "selector": "#sec-rust-prevention",
+      "en": "Rusting of iron requires both oxygen and water, forming hydrated iron(III) oxide. Prevention methods include barrier methods like painting and greasing, galvanising with zinc, and sacrificial protection where more reactive zinc corrodes preferentially.",
+      "vi": "Sự rỉ sét của sắt bắt buộc phải có đồng thời cả oxy và nước, tạo ra sắt ba oxit ngậm nước. Các biện pháp phòng chống gồm phương pháp rào cản như sơn hoặc bôi dầu mỡ, mạ kẽm (galvanising) và bảo vệ bằng vật hiến sinh nơi kẽm hoạt động mạnh hơn sẽ bị ăn mòn trước để bảo vệ sắt.",
+      "duration": 33.4,
+      "startTime": 377.34,
+      "endTime": 410.74,
+      "audioUrl": "/audio/lectures/science/c10/sec_rust_prevention.mp3"
+    },
+    {
+      "id": "sec_npk_fertilizers",
+      "title": "🌱 NPK Fertilizers (Phân bón NPK)",
+      "selector": "#sec-npk-fertilizers",
+      "en": "NPK fertilizers provide three essential elements: Nitrogen for healthy leafy shoot growth, Phosphorus for root development, and Potassium for flowering and disease resistance.",
+      "vi": "Phân bón NPK cung cấp ba nguyên tố dinh dưỡng khoáng đa lượng: Nitơ giúp phát triển thân lá xanh tốt, Photpho kích thích bộ rễ phát triển khỏe mạnh, và Kali giúp ra hoa đậu quả và tăng sức đề kháng sâu bệnh.",
+      "duration": 22.91,
+      "startTime": 410.74,
+      "endTime": 433.65,
+      "audioUrl": "/audio/lectures/science/c10/sec_npk_fertilizers.mp3"
     }
   ]
 }

@@ -2026,7 +2026,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </h3>
                               
                               <div className="flex flex-wrap items-center gap-2 mb-2">
-
+                                  {(test.content_json?.basicInfo?.guide_video_url || test.content_json?.guide_video_url) && (
+                                      <span className="text-[10px] px-2 py-0.5 rounded font-bold tracking-wider bg-red-50 text-red-600 border border-red-100 flex items-center gap-1 shadow-xs" title="Có video hướng dẫn & giải đề">
+                                          🎬 Video gợi ý
+                                      </span>
+                                  )}
                                   {matchedClassId && !isCompleted && (
                                       <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider ${isOverdue ? 'bg-rose-100 text-rose-600' : 'bg-orange-100 text-orange-600'}`}>
                                           {isOverdue ? 'Quá hạn' : 'Hạn: ' + deadlineLabel}

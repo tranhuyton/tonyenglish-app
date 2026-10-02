@@ -3716,6 +3716,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5">
                                <div className="font-bold text-[#0a5482] text-[13px] md:text-[15px] flex items-center gap-2">
                                   {test.title}
+                                  {(test.content_json?.guide_video_url || test.content_json?.basicInfo?.guide_video_url) && (
+                                    <span className="text-[10px] px-1.5 py-0.5 rounded font-bold bg-red-50 text-red-600 border border-red-100 flex items-center gap-1 shrink-0" title="Có video hướng dẫn & gợi ý">
+                                      🎬 Video
+                                    </span>
+                                  )}
                                </div>
                                <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? `Đã gán: ${allFolders.find(f => f.id === test.folder_id)?.title || 'Thư mục khác'}` : 'Chưa gán thư mục'}</div>
                             </td>

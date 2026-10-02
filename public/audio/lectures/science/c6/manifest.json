@@ -2,47 +2,37 @@
   "lectureId": "7f2b44b2-ba70-4cfc-85b3-3a0709058b46",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C6: Chemical reactions",
-  "totalDuration": 313.79,
+  "totalDuration": 529.31,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề C6",
+      "selector": "#sec-header"
     },
     "sec_physical_chemical": {
       "start": 1,
-      "end": 1
-    },
-    "sec-physical-chemical": {
-      "start": 1,
-      "end": 1
+      "end": 3,
+      "title": "1. Biến đổi Vật lý vs Hóa học",
+      "selector": "#sec-physical-chemical"
     },
     "sec_rate_of_reaction": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-rate-of-reaction": {
-      "start": 2,
-      "end": 2
+      "start": 4,
+      "end": 6,
+      "title": "2. Tốc độ Phản ứng & Va chạm",
+      "selector": "#sec-rate-of-reaction"
     },
     "sec_reversible_equilibrium": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-reversible-equilibrium": {
-      "start": 3,
-      "end": 3
+      "start": 7,
+      "end": 9,
+      "title": "3. Cân bằng Động & Haber",
+      "selector": "#sec-reversible-equilibrium"
     },
     "sec_redox_reactions": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-redox-reactions": {
-      "start": 4,
-      "end": 4
+      "start": 10,
+      "end": 12,
+      "title": "4. Phản ứng Oxy hóa - Khử",
+      "selector": "#sec-redox-reactions"
     }
   },
   "segments": [
@@ -50,8 +40,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề C6: Tốc độ Phản ứng, Cân bằng & Oxy hóa Khử",
       "selector": "#sec-header",
-      "en": "Welcome to Topic C6: Chemical reactions. Chemical dynamics governs how quickly and in which direction transformations occur. In this lesson, we contrast physical and chemical changes, analyze collision theory and reaction rates, explore reversible reactions and Le Chatelier's dynamic equilibrium, and decode redox electron transfer.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C6: Tốc độ Phản ứng, Cân bằng Hóa học và Phản ứng Oxy hóa Khử. Động hóa học điều khiển tốc độ và chiều hướng biến đổi của phản ứng. Trong bài học này, chúng ta sẽ phân biệt biến đổi vật lý và hóa học, thuyết va chạm và tốc độ phản ứng, phản ứng thuận nghịch và cân bằng động Le Chatelier, cùng bản chất phản ứng oxy hóa khử.",
+      "en": "Welcome to Topic C6: Chemical Reactions. In this topic, we differentiate physical and chemical changes, investigate rates of reaction using collision theory, explore reversible reactions and dynamic equilibrium in the Haber process, and examine redox processes and tests.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C6: Các phản ứng hóa học. Trong bài học này, chúng ta sẽ phân biệt biến đổi vật lý và hóa học, khảo sát tốc độ phản ứng bằng thuyết va chạm hạt, tìm hiểu phản ứng thuận nghịch và cân bằng động trong quy trình Haber, cùng bản chất và thuốc thử phản ứng oxy hóa - khử.",
       "duration": 44.42,
       "startTime": 0.0,
       "endTime": 44.42,
@@ -59,47 +49,135 @@
     },
     {
       "id": "sec_physical_chemical",
-      "title": "1. Biến đổi Vật lý vs Biến đổi Hóa học",
+      "title": "1. Biến đổi Vật lý vs Biến đổi Hóa học (Physical vs Chemical Changes Overview)",
       "selector": "#sec-physical-chemical",
-      "en": "Section 1 distinguishes physical and chemical changes: A Physical change alters state or appearance without producing new chemical substances, requiring relatively little energy and being readily reversible, like ice melting. A Chemical change breaks and forms bonds to produce one or more entirely new substances with different properties, often accompanied by noticeable energy changes like temperature rise, colour change, gas effervescence, or precipitate formation, and is difficult to reverse.",
-      "vi": "Mục một phân biệt hiện tượng vật lý và hóa học: Biến đổi Vật lý chỉ thay đổi trạng thái hoặc hình dạng mà không tạo ra chất mới, tiêu tốn ít năng lượng và dễ dàng đảo ngược, như nước đá tan thành nước lỏng. Biến đổi Hóa học phá vỡ và thiết lập các liên kết mới để tạo ra các chất hoàn toàn mới với tính chất khác biệt, thường đi kèm các dấu hiệu tỏa nhiệt, đổi màu, sủi bọt khí hoặc xuất hiện kết tủa, và rất khó đảo ngược.",
+      "en": "Section 1 contrasts physical changes with chemical reactions: Physical changes are easily reversible and form no new substances. Chemical reactions form new substances with different properties and are difficult to reverse.",
+      "vi": "Mục một đối chiếu biến đổi vật lý và biến đổi hóa học: Biến đổi vật lý dễ đảo ngược và không tạo ra chất mới. Biến đổi hóa học hình thành nên các chất mới có tính chất hoàn toàn khác và rất khó đảo ngược.",
       "duration": 52.74,
       "startTime": 44.42,
       "endTime": 97.16,
       "audioUrl": "/audio/lectures/science/c6/sec_physical_chemical.mp3"
     },
     {
-      "id": "sec_rate_of_reaction",
-      "title": "2. Tốc độ Phản ứng & Thuyết Va chạm (Collision Theory)",
-      "selector": "#sec-rate-of-reaction",
-      "en": "Section 2 investigates Reaction Rates: Rate of reaction measures the change in concentration, volume of gas evolved, or mass loss of reactant per unit time. Under Collision Theory, reacting particles must collide with sufficient activation energy and correct orientation. Four factors accelerate rate: Increasing concentration or gas pressure packs particles closer, increasing collision frequency. Increasing temperature gives particles higher kinetic energy so more collisions exceed activation energy. Increasing solid surface area exposes more reactive sites. Adding a catalyst lowers activation energy by providing an alternative pathway.",
-      "vi": "Mục hai nghiên cứu Tốc độ Phản ứng: là đại lượng đo sự biến thiên nồng độ, thể tích khí thoát ra hoặc độ giảm khối lượng chất phản ứng trong một đơn vị thời gian. Theo Thuyết Va chạm, các hạt phản ứng phải va chạm với năng lượng lớn hơn hoặc bằng năng lượng hoạt hóa và đúng hướng không gian. Bốn yếu tố làm tăng tốc độ phản ứng: Tăng nồng độ hoặc áp suất khí làm tăng mật độ hạt dẫn đến tần suất va chạm dày đặc hơn; Tăng nhiệt độ làm hạt chuyển động nhanh hơn và tỷ lệ va chạm vượt qua rào cản năng lượng hoạt hóa tăng vọt; Tăng diện tích tiếp xúc bề mặt chất rắn; và Thêm chất xúc tác giúp hạ thấp năng lượng hoạt hóa bằng cách mở ra con đường phản ứng mới.",
-      "duration": 75.86,
+      "id": "sec_phys_chem_diff",
+      "title": "🧪 Physical vs Chemical Differences (So sánh Bản chất)",
+      "selector": "#sec-phys-chem-diff",
+      "en": "In physical changes such as melting ice, particles change only arrangement and energy. In chemical reactions such as combustion or rusting, chemical bonds are broken and rearranged into entirely new chemical compounds.",
+      "vi": "Trong biến đổi vật lý như băng tan, các hạt chỉ thay đổi cách sắp xếp và năng lượng mà không đổi bản chất. Trong phản ứng hóa học như sự cháy hay rỉ sét, các liên kết hóa học bị bẻ gãy và sắp xếp lại tạo thành các hợp chất hoàn toàn mới.",
+      "duration": 27.98,
       "startTime": 97.16,
-      "endTime": 173.02,
+      "endTime": 125.14,
+      "audioUrl": "/audio/lectures/science/c6/sec_phys_chem_diff.mp3"
+    },
+    {
+      "id": "sec_chem_observations",
+      "title": "🔍 4 Observations of Chemical Reaction (4 Dấu hiệu Phản ứng)",
+      "selector": "#sec-chem-observations",
+      "en": "Four key experimental signs indicating a chemical reaction: permanent colour change, gas evolution with effervescence, formation of an insoluble precipitate, and significant temperature change.",
+      "vi": "Bốn dấu hiệu thực nghiệm đặc trưng cho biết phản ứng hóa học xảy ra: sự thay đổi màu sắc vĩnh viễn, sự thoát khí sủi bọt, sự hình thành kết tủa không tan và sự thay đổi nhiệt độ rõ rệt.",
+      "duration": 22.55,
+      "startTime": 125.14,
+      "endTime": 147.69,
+      "audioUrl": "/audio/lectures/science/c6/sec_chem_observations.mp3"
+    },
+    {
+      "id": "sec_rate_of_reaction",
+      "title": "2. Tốc độ Phản ứng & Thuyết Va chạm (Rate of Reaction Overview)",
+      "selector": "#sec-rate-of-reaction",
+      "en": "Section 2 investigates Reaction Rates: Rate of reaction is the change in concentration, mass, or volume of reactants or products per unit of time.",
+      "vi": "Mục hai nghiên cứu Tốc độ phản ứng: Tốc độ phản ứng là sự biến thiên nồng độ, khối lượng hoặc thể tích của chất phản ứng hoặc sản phẩm trong một đơn vị thời gian.",
+      "duration": 75.86,
+      "startTime": 147.69,
+      "endTime": 223.55,
       "audioUrl": "/audio/lectures/science/c6/sec_rate_of_reaction.mp3"
     },
     {
+      "id": "sec_collision_theory",
+      "title": "💥 Collision Theory (Thuyết Va chạm)",
+      "selector": "#sec-collision-theory",
+      "en": "Collision theory dictates that for particles to react, they must collide with each other with energy equal to or greater than the activation energy Ea, and in the correct orientation. Only successful collisions lead to reaction.",
+      "vi": "Thuyết va chạm chỉ ra rằng để phản ứng xảy ra, các hạt phải va chạm với nhau với năng lượng bằng hoặc lớn hơn năng lượng hoạt hóa Ea và theo đúng hướng không gian. Chỉ các va chạm hiệu quả mới dẫn đến phản ứng hóa học.",
+      "duration": 26.75,
+      "startTime": 223.55,
+      "endTime": 250.3,
+      "audioUrl": "/audio/lectures/science/c6/sec_collision_theory.mp3"
+    },
+    {
+      "id": "sec_rate_factors",
+      "title": "🚀 4 Factors Affecting Rate (4 Yếu tố Tăng tốc độ Phản ứng)",
+      "selector": "#sec-rate-factors",
+      "en": "Four factors increase reaction rate: higher concentration or pressure increases collision frequency; higher temperature increases both collision frequency and particle kinetic energy; larger surface area increases accessible sites; and catalysts provide alternative pathways with lower activation energy.",
+      "vi": "Bốn yếu tố làm tăng tốc độ phản ứng: tăng nồng độ hoặc áp suất làm tăng tần số va chạm; tăng nhiệt độ vừa làm tăng tần số va chạm vừa làm tăng động năng hạt; tăng diện tích tiếp xúc tạo thêm vị trí va chạm; và chất xúc tác mở ra con đường phản ứng mới có năng lượng hoạt hóa thấp hơn.",
+      "duration": 33.04,
+      "startTime": 250.3,
+      "endTime": 283.34,
+      "audioUrl": "/audio/lectures/science/c6/sec_rate_factors.mp3"
+    },
+    {
       "id": "sec_reversible_equilibrium",
-      "title": "3. Phản ứng Thuận nghịch & Cân bằng Hóa học (Le Chatelier)",
+      "title": "3. Phản ứng Thuận nghịch & Cân bằng Động (Reversible & Equilibrium Overview)",
       "selector": "#sec-reversible-equilibrium",
-      "en": "Section 3 examines Reversible Reactions: indicated by double equilibrium arrows, where products can react back to reform original reactants, like the thermal decomposition of hydrated copper(II) sulfate. In a closed system, a Reversible reaction reaches Dynamic Equilibrium when forward and reverse reaction rates become equal, and concentrations of reactants and products remain constant. Under Le Chatelier's Principle, if a closed system at equilibrium is disturbed, the equilibrium shifts to counteract the change.",
-      "vi": "Mục ba phân tích Phản ứng Thuận nghịch: được ký hiệu bằng mũi tên hai chiều, trong đó sản phẩm sinh ra có thể phản ứng ngược lại để tái tạo chất ban đầu, ví dụ phản ứng nhiệt phân tinh thể đồng(II) sunfat ngậm nước. Trong hệ kín, phản ứng thuận nghịch đạt Cân bằng Động (Dynamic Equilibrium) khi tốc độ phản ứng thuận bằng tốc độ phản ứng nghịch, và nồng độ các chất trong hệ giữ nguyên không đổi. Theo Nguyên lý chuyển dịch cân bằng Le Chatelier: Khi một hệ cân bằng bị thay đổi các yếu tố nồng độ, nhiệt độ, áp suất, cân bằng sẽ tự động chuyển dịch theo chiều chống lại sự thay đổi đó.",
+      "en": "Section 3 introduces Reversible Reactions, indicated by the double arrow symbol. In a closed system, reversible reactions can reach dynamic equilibrium.",
+      "vi": "Mục ba giới thiệu Phản ứng Thuận nghịch, biểu thị bằng dấu mũi tên hai chiều. Trong một hệ kín, phản ứng thuận nghịch có thể đạt tới trạng thái cân bằng động.",
       "duration": 65.39,
-      "startTime": 173.02,
-      "endTime": 238.41,
+      "startTime": 283.34,
+      "endTime": 348.73,
       "audioUrl": "/audio/lectures/science/c6/sec_reversible_equilibrium.mp3"
     },
     {
+      "id": "sec_dynamic_equilibrium",
+      "title": "⚖️ Dynamic Equilibrium (Trạng thái Cân bằng Động)",
+      "selector": "#sec-dynamic-equilibrium",
+      "en": "At dynamic equilibrium: the rates of the forward and reverse reactions are exactly equal, and the concentrations of reactants and products remain constant.",
+      "vi": "Tại trạng thái cân bằng động: tốc độ của phản ứng thuận và phản ứng nghịch hoàn toàn bằng nhau, và nồng độ của các chất phản ứng cùng chất sản phẩm được giữ không đổi theo thời gian.",
+      "duration": 19.14,
+      "startTime": 348.73,
+      "endTime": 367.87,
+      "audioUrl": "/audio/lectures/science/c6/sec_dynamic_equilibrium.mp3"
+    },
+    {
+      "id": "sec_haber_process",
+      "title": "🏭 Haber Process: N₂ + 3H₂ ⇌ 2NH₃ (Quy trình Haber)",
+      "selector": "#sec-haber-process",
+      "en": "The Haber process synthesises ammonia: Nitrogen from air and hydrogen from natural gas react at 450 degrees Celsius, 200 atmospheres of pressure, over an iron catalyst.",
+      "vi": "Quy trình Haber tổng hợp amoniac: Khí nitơ từ không khí và khí hydro từ khí tự nhiên phản ứng ở nhiệt độ 450 độ C, áp suất 200 atm trên xúc tác sắt để tạo amoniac.",
+      "duration": 23.27,
+      "startTime": 367.87,
+      "endTime": 391.14,
+      "audioUrl": "/audio/lectures/science/c6/sec_haber_process.mp3"
+    },
+    {
       "id": "sec_redox_reactions",
-      "title": "4. Bản chất Phản ứng Oxy hóa - Khử (Redox Reactions)",
+      "title": "4. Bản chất Phản ứng Oxy hóa - Khử & Thuốc thử (Redox Reactions Overview)",
       "selector": "#sec-redox-reactions",
-      "en": "Section 4 defines Redox reactions: Oxidation is the gain of oxygen, loss of hydrogen, or loss of electrons. Reduction is the loss of oxygen, gain of hydrogen, or gain of electrons. Remember OIL RIG: Oxidation Is Loss, Reduction Is Gain of electrons. An Oxidizing agent oxidizes another substance while itself being reduced. A Reducing agent reduces another substance while itself being oxidized. Acidified aqueous potassium manganate(VII) acts as an oxidizing agent, changing from purple to colorless upon reduction; potassium iodide acts as a reducing agent, turning colorless to yellow-brown.",
-      "vi": "Mục bốn định nghĩa Phản ứng Oxy hóa - Khử: Sự Oxy hóa là quá trình kết hợp với oxy, mất hydro, hoặc nhường electron. Sự Khử là quá trình mất oxy, kết hợp với hydro, hoặc nhận electron. Quy tắc cốt lõi: Khử cho - O nhận (Chất khử nhường electron, chất oxy hóa nhận electron). Thuốc thử nhận biết chất khử là dung dịch thuốc tím KMnO4 trong môi trường axit, chuyển từ màu tím sang không màu; thuốc thử nhận biết chất oxy hóa là dung dịch kali iotua KI không màu hóa màu nâu vàng do tạo ra iot đơn chất.",
+      "en": "Section 4 covers Redox: Oxidation is Gain of oxygen, Loss of electrons, or Increase in oxidation number. Reduction is Loss of oxygen, Gain of electrons, or Decrease in oxidation number.",
+      "vi": "Mục bốn phân tích Phản ứng Oxy hóa - Khử: Quá trình oxy hóa là sự kết hợp oxy, mất electron hoặc tăng số oxy hóa. Quá trình khử là sự mất oxy, nhận electron hoặc giảm số oxy hóa.",
       "duration": 75.38,
-      "startTime": 238.41,
-      "endTime": 313.79,
+      "startTime": 391.14,
+      "endTime": 466.52,
       "audioUrl": "/audio/lectures/science/c6/sec_redox_reactions.mp3"
+    },
+    {
+      "id": "sec_redox_definitions",
+      "title": "🔄 Redox Definitions: OIL RIG (Khái niệm Cốt lõi)",
+      "selector": "#sec-redox-definitions",
+      "en": "In terms of electrons: Oxidation Is Loss of electrons, Reduction Is Gain of electrons. An oxidising agent oxidises another substance and is itself reduced. A reducing agent reduces another substance and is itself oxidised.",
+      "vi": "Theo quan điểm electron: Oxy hóa là Mất electron, Khử là Nhận electron (OIL RIG). Chất oxy hóa làm oxy hóa chất khác và bản thân nó bị khử. Chất khử làm khử chất khác và bản thân nó bị oxy hóa.",
+      "duration": 31.79,
+      "startTime": 466.52,
+      "endTime": 498.31,
+      "audioUrl": "/audio/lectures/science/c6/sec_redox_definitions.mp3"
+    },
+    {
+      "id": "sec_redox_tests",
+      "title": "🧪 Tests for Oxidising & Reducing Agents (Thuốc thử Nhận biết)",
+      "selector": "#sec-redox-tests",
+      "en": "Chemical tests: Acidified aqueous potassium manganate(VII) is an oxidising agent that turns from purple to colourless when reduced. Aqueous potassium iodide is a reducing agent that turns from colourless to brown iodine solution when oxidised.",
+      "vi": "Thuốc thử hóa học: Dung dịch thuốc tím kali pemanganat trong môi trường axit là chất oxy hóa mạnh đổi từ màu tím sang không màu khi bị khử. Dung dịch kali iotua KI là chất khử đổi từ không màu sang màu nâu của dung dịch iot khi bị oxy hóa.",
+      "duration": 31.0,
+      "startTime": 498.31,
+      "endTime": 529.31,
+      "audioUrl": "/audio/lectures/science/c6/sec_redox_tests.mp3"
     }
   ]
 }

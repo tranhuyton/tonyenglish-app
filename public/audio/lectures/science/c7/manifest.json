@@ -2,39 +2,31 @@
   "lectureId": "2c83104c-9413-4ee1-bdf3-2c0da8fd96a6",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C7: Acids bases and salts",
-  "totalDuration": 258.64,
+  "totalDuration": 432.82,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề C7",
+      "selector": "#sec-header"
     },
     "sec_acids_bases": {
       "start": 1,
-      "end": 1
-    },
-    "sec-acids-bases": {
-      "start": 1,
-      "end": 1
+      "end": 3,
+      "title": "1. Axit, Bazơ & Thang đo pH",
+      "selector": "#sec-acids-bases"
     },
     "sec_acid_reactions": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-acid-reactions": {
-      "start": 2,
-      "end": 2
+      "start": 4,
+      "end": 5,
+      "title": "2. Ba Phản ứng Đặc trưng của Axit",
+      "selector": "#sec-acid-reactions"
     },
     "sec_salt_preparation": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-salt-preparation": {
-      "start": 3,
-      "end": 3
+      "start": 6,
+      "end": 8,
+      "title": "3. Kỹ thuật Điều chế Muối",
+      "selector": "#sec-salt-preparation"
     }
   },
   "segments": [
@@ -42,8 +34,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề C7: Axit, Bazơ & Phương pháp Điều chế Muối",
       "selector": "#sec-header",
-      "en": "Welcome to Topic C7: Acids, bases and salts. Acid-base chemistry underpins ionic solution behavior. In this lesson, we define proton donor acids and acceptor bases, test pH scales with indicators, examine the three characteristic acid reactions, and master laboratory preparations of soluble and insoluble salts.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C7: Axit, Bazơ và Phương pháp Điều chế Muối. Hóa học axit-bazơ là nền tảng của các phản ứng trong dung dịch nước. Trong bài học này, chúng ta sẽ định nghĩa axit và bazơ theo thuyết proton, thang đo pH và chất chỉ thị, 3 phản ứng đặc trưng của axit, cùng quy trình phòng thí nghiệm điều chế muối tan và muối không tan.",
+      "en": "Welcome to Topic C7: Acids, Bases and Salts. In this lesson, we study the chemical characteristics of acids and alkalis, master the pH scale and indicators, analyze the three core acid reactions, and master laboratory salt preparation techniques including titration and precipitation.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C7: Axit, Bazơ và Muối. Trong bài học này, chúng ta sẽ khảo sát đặc tính hóa học của axit và kiềm, làm chủ thang đo pH và chất chỉ thị màu, phân tích ba phản ứng đặc trưng của axit, cùng các phương pháp điều chế muối trong phòng thí nghiệm như chuẩn độ và kết tủa.",
       "duration": 44.9,
       "startTime": 0.0,
       "endTime": 44.9,
@@ -51,36 +43,91 @@
     },
     {
       "id": "sec_acids_bases",
-      "title": "1. Khái niệm Axit, Bazơ, Kiềm & Thang đo pH",
+      "title": "1. Axit, Bazơ, Kiềm & Thang đo pH (Acids, Bases & pH Overview)",
       "selector": "#sec-acids-bases",
-      "en": "Section 1 defines acids and bases: An Acid is a proton donor, dissociating in water to produce aqueous hydrogen ions (H+). A Base is a proton acceptor, neutralizing acids to produce salt and water. An Alkali is a soluble base that dissociates in aqueous solution to produce hydroxide ions (OH-). The pH scale quantifies acidity: pH 0 to 6 indicates acidic solutions, pH 7 is neutral, and pH 8 to 14 indicates alkaline solutions. Universal indicator displays red in strong acid, green at neutrality, and purple in strong alkali; litmus turns red in acid and blue in alkali.",
-      "vi": "Mục một định nghĩa axit, bazơ và thang đo pH: Axit là chất nhường proton (H+), khi hòa tan trong nước phân ly giải phóng ion H+. Bazơ là chất nhận proton, trung hòa axit tạo thành muối và nước. Kiềm (Alkali) là bazơ tan trong nước, khi hòa tan phân ly giải phóng ion OH-. Thang đo pH đo lường độ axit: pH từ 0 đến 6 biểu thị môi trường axit, pH 7 là trung tính, và pH từ 8 đến 14 biểu thị môi trường kiềm. Chất chỉ thị vạn năng chuyển sang màu đỏ trong axit mạnh, màu xanh lá cây ở môi trường trung tính và màu tím trong kiềm mạnh; quỳ tím hóa đỏ trong axit và hóa xanh trong kiềm.",
+      "en": "Section 1 defines acids and bases: An acid is a proton donor producing hydrogen ions H+ in water. A base is a proton acceptor; a soluble base is called an alkali, producing hydroxide ions OH- in water.",
+      "vi": "Mục một định nghĩa axit và bazơ: Axit là chất nhường proton tạo ra ion H+ trong nước. Bazơ là chất nhận proton; bazơ tan trong nước được gọi là Kiềm (Alkali), tạo ra ion OH- trong dung dịch.",
       "duration": 82.29,
       "startTime": 44.9,
       "endTime": 127.19,
       "audioUrl": "/audio/lectures/science/c7/sec_acids_bases.mp3"
     },
     {
-      "id": "sec_acid_reactions",
-      "title": "2. Ba Phản ứng Đặc trưng của Axit",
-      "selector": "#sec-acid-reactions",
-      "en": "Section 2 investigates the three classic acid reactions: First, Acid reacts with Metal above hydrogen in the reactivity series to produce a Salt and Hydrogen gas, tested by a squeaky pop with a lit splint. Second, Acid reacts with Metal Oxide or Hydroxide base in neutralization to produce a Salt and Water. Third, Acid reacts with Metal Carbonate to produce a Salt, Water, and Carbon Dioxide gas, which effervesces and turns limewater cloudy milk white.",
-      "vi": "Mục hai nghiên cứu 3 phản ứng đặc trưng của axit: Thứ nhất, Axit phản ứng với Kim loại đứng trước hydro trong dãy hoạt động hóa học tạo thành Muối và giải phóng khí Hydro H2 (thử bằng que đóm đang cháy phát ra tiếng nổ 'bốp' nhỏ). Thứ hai, Axit phản ứng với Oxit kim loại hoặc Hiđroxit bazơ trong phản ứng trung hòa tạo thành Muối và Nước. Thứ ba, Axit phản ứng với Muối Cacbonat tạo thành Muối, Nước và sủi bọt khí CO2 (làm đục nước vôi trong).",
-      "duration": 57.06,
+      "id": "sec_acids_bases_def",
+      "title": "🔴 Acids vs Bases vs Alkalis (Axit vs Bazơ vs Kiềm)",
+      "selector": "#sec-acids-bases-def",
+      "en": "Critical distinction: All alkalis are bases, but not all bases are alkalis. Common bases include copper(II) oxide and iron(III) hydroxide which are insoluble in water, whereas sodium hydroxide is an alkali.",
+      "vi": "Phân biệt then chốt: Mọi chất kiềm đều là bazơ, nhưng không phải mọi bazơ đều là kiềm. Các bazơ không tan trong nước như đồng hai oxit CuO hay sắt ba hidroxit không phải là kiềm, trong khi natri hidroxit tan tốt trong nước là kiềm.",
+      "duration": 30.81,
       "startTime": 127.19,
-      "endTime": 184.25,
+      "endTime": 158.0,
+      "audioUrl": "/audio/lectures/science/c7/sec_acids_bases_def.mp3"
+    },
+    {
+      "id": "sec_ph_scale",
+      "title": "🌈 The pH Scale & Indicators (Thang đo pH & Chỉ thị)",
+      "selector": "#sec-ph-scale",
+      "en": "The pH scale ranges from 0 to 14: pH less than 7 indicates acidic solutions, pH 7 is neutral, and pH greater than 7 indicates alkaline solutions. Litmus turns red in acid and blue in alkali. Universal indicator gives a full colour spectrum from red to purple.",
+      "vi": "Thang đo pH chạy từ 0 đến 14: pH nhỏ hơn 7 là môi trường axit, pH bằng 7 là trung tính, và pH lớn hơn 7 là môi trường kiềm. Quỳ tím chuyển đỏ trong axit và chuyển xanh trong kiềm. Chỉ thị vạn năng đổi màu liên tục từ đỏ qua xanh lá đến tím.",
+      "duration": 37.67,
+      "startTime": 158.0,
+      "endTime": 195.67,
+      "audioUrl": "/audio/lectures/science/c7/sec_ph_scale.mp3"
+    },
+    {
+      "id": "sec_acid_reactions",
+      "title": "2. Ba Phản ứng Đặc trưng của Axit (Characteristic Reactions of Acids Overview)",
+      "selector": "#sec-acid-reactions",
+      "en": "Section 2 details the three essential reactions of dilute acids in Cambridge IGCSE: reacting with metals, metal oxides and hydroxides, and metal carbonates.",
+      "vi": "Mục hai chi tiết hóa ba phản ứng nền tảng của dung dịch axit loãng: tác dụng với kim loại, tác dụng với bazơ hoặc oxit bazơ, và tác dụng với muối cacbonat.",
+      "duration": 57.06,
+      "startTime": 195.67,
+      "endTime": 252.73,
       "audioUrl": "/audio/lectures/science/c7/sec_acid_reactions.mp3"
     },
     {
+      "id": "sec_three_acid_reactions",
+      "title": "💥 3 Acid Reactions: Metal, Base & Carbonate (3 Dạng Phản ứng)",
+      "selector": "#sec-three-acid-reactions",
+      "en": "Reaction 1: Acid plus Metal yields Salt plus Hydrogen gas. Reaction 2: Acid plus Base yields Salt plus Water in neutralisation. Reaction 3: Acid plus Metal Carbonate yields Salt plus Water plus Carbon Dioxide gas, turning limewater cloudy.",
+      "vi": "Phản ứng 1: Axit tác dụng với Kim loại tạo Muối và khí Hydro sủi bọt. Phản ứng 2: Axit tác dụng với Bazơ tạo Muối và Nước gọi là phản ứng trung hòa. Phản ứng 3: Axit tác dụng với Muối Cacbonat tạo Muối, Nước và khí Carbon dioxide làm đục nước vôi trong.",
+      "duration": 36.83,
+      "startTime": 252.73,
+      "endTime": 289.56,
+      "audioUrl": "/audio/lectures/science/c7/sec_three_acid_reactions.mp3"
+    },
+    {
       "id": "sec_salt_preparation",
-      "title": "3. Kỹ thuật Điều chế Muối trong Phòng Thí nghiệm",
+      "title": "3. Kỹ thuật Điều chế Muối (Salt Preparation Methods Overview)",
       "selector": "#sec-salt-preparation",
-      "en": "Section 3 details salt preparation methods based on solubility: To prepare a Soluble salt from an Insoluble base or carbonate: add excess solid to warm acid until no more dissolves, filter off unreacted excess solid, heat filtrate to crystallisation point, and cool to form pure crystals. To prepare a Soluble salt from an Alkali: perform acid-base titration using indicator to find exact neutralization endpoint, repeat without indicator, and crystallize. To prepare an Insoluble salt: mix two soluble solutions in Precipitation, filter precipitate, wash thoroughly with distilled water, and dry.",
-      "vi": "Mục ba hướng dẫn quy trình điều chế muối trong phòng thí nghiệm dựa vào độ tan: Để điều chế Muối Tan từ oxit/bazơ không tan: cho từ từ chất rắn dư vào axit đun nóng nhẹ cho đến khi chất rắn không tan thêm, lọc bỏ bã rắn dư, đun bay hơi dung dịch lọc đến điểm kết tinh rồi để nguội cho tinh thể muối kết tinh. Để điều chế Muối Tan từ dung dịch kiềm: chuẩn độ thể tích bằng chất chỉ thị màu để xác định điểm tương đương chính xác, lặp lại thí nghiệm không dùng chất chỉ thị rồi kết tinh. Để điều chế Muối Không Tan: trộn hai dung dịch muối tan trong phản ứng kết tủa (Precipitation), lọc lấy kết tủa trên phễu, rửa sạch nhiều lần bằng nước cất và sấy khô.",
+      "en": "Section 3 covers preparation of soluble and insoluble salts in the laboratory, guided by solubility rules.",
+      "vi": "Mục ba hướng dẫn các phương pháp điều chế muối tan và muối không tan trong phòng thí nghiệm dựa trên quy tắc độ tan.",
       "duration": 74.39,
-      "startTime": 184.25,
-      "endTime": 258.64,
+      "startTime": 289.56,
+      "endTime": 363.95,
       "audioUrl": "/audio/lectures/science/c7/sec_salt_preparation.mp3"
+    },
+    {
+      "id": "sec_solubility_rules",
+      "title": "🧠 SNAP Solubility Rule (Quy tắc Độ tan SNAP)",
+      "selector": "#sec-solubility-rules",
+      "en": "Remember SNAP rule: All Sodium, Nitrate, Ammonium, and Potassium salts are completely soluble in water. All sulfates are soluble except barium, lead, and calcium. All chlorides are soluble except silver and lead.",
+      "vi": "Mẹo nhớ SNAP: Tất cả các muối của Sodium, Nitrate, Ammonium và Potassium đều tan hoàn toàn trong nước. Hầu hết các muối sunfat đều tan trừ bari, chì và canxi. Hầu hết các muối clorua đều tan trừ bạc và chì.",
+      "duration": 33.14,
+      "startTime": 363.95,
+      "endTime": 397.09,
+      "audioUrl": "/audio/lectures/science/c7/sec_solubility_rules.mp3"
+    },
+    {
+      "id": "sec_salt_methods",
+      "title": "🧂 3 Salt Methods: Titration, Excess Solid & Precipitation (3 Phương pháp)",
+      "selector": "#sec-salt-methods",
+      "en": "Method 1: Titration is used for soluble salts prepared from acid plus soluble alkali. Method 2: Excess insoluble solid added to acid, filtered, then crystallised. Method 3: Precipitation mixes two soluble solutions to produce an insoluble salt precipitate.",
+      "vi": "Phương pháp 1: Chuẩn độ dùng cho muối tan tạo từ axit và kiềm tan. Phương pháp 2: Cho dư chất rắn không tan vào axit, lọc bỏ phần dư rồi kết tinh dịch lọc. Phương pháp 3: Kết tủa trộn hai dung dịch muối tan vào nhau để thu được muối kết tủa không tan.",
+      "duration": 35.73,
+      "startTime": 397.09,
+      "endTime": 432.82,
+      "audioUrl": "/audio/lectures/science/c7/sec_salt_methods.mp3"
     }
   ]
 }

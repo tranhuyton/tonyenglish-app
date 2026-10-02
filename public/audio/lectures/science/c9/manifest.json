@@ -2,47 +2,37 @@
   "lectureId": "d34bbfa2-7449-4192-b471-3a6a8ba49257",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C9: Metals",
-  "totalDuration": 317.69,
+  "totalDuration": 489.77,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề C9",
+      "selector": "#sec-header"
     },
     "sec_properties_alloys": {
       "start": 1,
-      "end": 1
-    },
-    "sec-properties-alloys": {
-      "start": 1,
-      "end": 1
+      "end": 2,
+      "title": "1. Tính chất & Hợp kim",
+      "selector": "#sec-properties-alloys"
     },
     "sec_reactivity_series": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-reactivity-series": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 5,
+      "title": "2. Dãy Hoạt động & Phản ứng Thế",
+      "selector": "#sec-reactivity-series"
     },
     "sec_extraction_metals": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-extraction-metals": {
-      "start": 3,
-      "end": 3
+      "start": 6,
+      "end": 7,
+      "title": "3. Luyện kim & Lò cao",
+      "selector": "#sec-extraction-metals"
     },
     "sec_uses_metals": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-uses-metals": {
-      "start": 4,
-      "end": 4
+      "start": 8,
+      "end": 9,
+      "title": "4. Ứng dụng Thực tiễn",
+      "selector": "#sec-uses-metals"
     }
   },
   "segments": [
@@ -50,8 +40,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề C9: Kim loại, Dãy Hoạt động & Luyện kim",
       "selector": "#sec-header",
-      "en": "Welcome to Topic C9: Metals. Metals are indispensable structural and functional materials in modern civilization. In this comprehensive lesson, we study physical properties and alloy structures, master the Reactivity Series and displacement reactions, analyze iron extraction in the Blast Furnace, and explore practical uses of aluminum, copper, and steel.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C9: Kim loại, Dãy Hoạt động Hóa học và Công nghệ Luyện kim. Kim loại là vật liệu kết cấu tối quan trọng của nền văn minh hiện đại. Trong bài học này, chúng ta sẽ khảo sát tính chất vật lý và cấu trúc hợp kim, làm chủ dãy hoạt động hóa học và phản ứng nhiệt nhôm, phân tích lò cao luyện gang thép và ứng dụng thực tiễn của nhôm, đồng và thép.",
+      "en": "Welcome to Topic C9: Metals. Metals are essential materials underpinning global infrastructure. In this lesson, we analyze physical and chemical properties of metals and alloys, master the reactivity series and displacement reactions, investigate the extraction of iron in the blast furnace, and explore vital uses of metals.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C9: Kim loại, Dãy Hoạt động Hóa học và Luyện kim. Kim loại là nền tảng của mọi công trình kỹ thuật. Trong bài học này, chúng ta sẽ khảo sát tính chất của kim loại và hợp kim, làm chủ dãy hoạt động hóa học và phản ứng thế, tìm hiểu quy trình luyện gang thép trong lò cao, cùng các ứng dụng thực tế quan trọng.",
       "duration": 46.14,
       "startTime": 0.0,
       "endTime": 46.14,
@@ -59,47 +49,102 @@
     },
     {
       "id": "sec_properties_alloys",
-      "title": "1. Tính chất Vật lý của Kim loại & Cấu trúc Hợp kim (Alloys)",
+      "title": "1. Tính chất Vật lý của Kim loại & Cấu trúc Hợp kim (Properties & Alloys Overview)",
       "selector": "#sec-properties-alloys",
-      "en": "Section 1 contrasts pure metals and alloys: Pure metals consist of uniform layers of positive ions that easily slide over each other under stress, rendering pure metals ductile and malleable. An Alloy is a mixture of a metal with other elements, such as brass (copper and zinc) or steel (iron and carbon). In alloys, different-sized atoms disrupt the regular lattice layers, preventing layers from sliding easily, which significantly increases hardness and tensile strength while improving corrosion resistance.",
-      "vi": "Mục một so sánh kim loại nguyên chất và hợp kim: Kim loại nguyên chất gồm các lớp ion dương đều đặn dễ dàng trượt lên nhau khi bị tác dụng lực, khiến kim loại dẻo và dễ dát mỏng. Hợp kim (Alloy) là hỗn hợp của kim loại với các nguyên tố khác, như đồng thau (đồng và kẽm) hay thép (sắt và cacbon). Trong hợp kim, các nguyên tử có kích thước khác nhau làm biến dạng mạng tinh thể trật tự, ngăn cản các lớp ion trượt qua nhau, giúp hợp kim cứng hơn, chịu lực kéo tốt hơn và chống ăn mòn vượt trội.",
+      "en": "Section 1 reviews metallic properties: good thermal and electrical conductivity, malleability, ductility, and high density. It explains why alloys are engineered to improve strength.",
+      "vi": "Mục một tổng kết tính chất kim loại: dẫn nhiệt và dẫn điện tốt, dễ dát mỏng, dễ uốn dẻo và khối lượng riêng cao. Đồng thời giải thích cơ chế tạo hợp kim để tăng cường độ cứng.",
       "duration": 61.17,
       "startTime": 46.14,
       "endTime": 107.31,
       "audioUrl": "/audio/lectures/science/c9/sec_properties_alloys.mp3"
     },
     {
-      "id": "sec_reactivity_series",
-      "title": "2. Dãy Hoạt động Hóa học & Phản ứng Đẩy Kim loại",
-      "selector": "#sec-reactivity-series",
-      "en": "Section 2 investigates the Reactivity Series: ranking metals by their tendency to form positive cations by losing electrons: Potassium, Sodium, Calcium, Magnesium, Aluminium, Carbon, Zinc, Iron, Hydrogen, Copper, Silver, and Gold. A more reactive metal will displace a less reactive metal from its aqueous salt solution or solid metal oxide, releasing thermal energy in exothermic displacement reactions, like magnesium displacing copper from copper(II) sulfate.",
-      "vi": "Mục hai nghiên cứu Dãy Hoạt động Hóa học: sắp xếp kim loại theo khả năng nhường electron tạo cation dương: Kali, Natri, Canxi, Magie, Nhôm, Cacbon, Kẽm, Sắt, Hydro, Đồng, Bạc và Vàng. Một kim loại hoạt động mạnh hơn sẽ đẩy kim loại yếu hơn ra khỏi dung dịch muối của nó hoặc khử oxit kim loại ở nhiệt độ cao, giải phóng nhiệt lượng lớn trong phản ứng thế, ví dụ như magie đẩy đồng ra khỏi dung dịch đồng(II) sunfat.",
-      "duration": 59.22,
+      "id": "sec_alloys_hardness",
+      "title": "🛡️ Why are Alloys Harder? (Tại sao Hợp kim Cứng hơn?)",
+      "selector": "#sec-alloys-hardness",
+      "en": "In pure metals, identical atoms are arranged in regular layers that slide easily over one another when force is applied. In an alloy, atoms of different sizes disrupt the regular lattice layers, preventing them from sliding easily and making the alloy much harder.",
+      "vi": "Trong kim loại nguyên chất, các nguyên tử cùng kích thước xếp thành các lớp đều đặn dễ trượt qua nhau khi có ngoại lực tác dụng. Trong hợp kim, sự hiện diện của các nguyên tử có kích thước khác nhau làm biến dạng mạng tinh thể, cản trở các lớp trượt qua nhau, giúp hợp kim cứng hơn rất nhiều.",
+      "duration": 31.74,
       "startTime": 107.31,
-      "endTime": 166.53,
+      "endTime": 139.05,
+      "audioUrl": "/audio/lectures/science/c9/sec_alloys_hardness.mp3"
+    },
+    {
+      "id": "sec_reactivity_series",
+      "title": "2. Dãy Hoạt động Hóa học & Phản ứng Thế (The Reactivity Series Overview)",
+      "selector": "#sec-reactivity-series",
+      "en": "Section 2 establishes the Reactivity Series: ordering metals from most reactive to least reactive based on their tendency to form positive ions by losing electrons.",
+      "vi": "Mục hai thiết lập Dãy Hoạt động Hóa học: sắp xếp các kim loại từ mạnh nhất đến yếu nhất dựa trên xu hướng nhường electron tạo cation dương.",
+      "duration": 59.22,
+      "startTime": 139.05,
+      "endTime": 198.27,
       "audioUrl": "/audio/lectures/science/c9/sec_reactivity_series.mp3"
     },
     {
+      "id": "sec_reactivity_mnemonic",
+      "title": "🧠 Reactivity Series Mnemonic (Mẹo nhớ Dãy Hoạt động)",
+      "selector": "#sec-reactivity-mnemonic",
+      "en": "Remember the mnemonic: Please Send Charlie's Monkeys And Cute Zebras In Heavy Lead Cages Securely Guarded. Potassium, Sodium, Calcium, Magnesium, Aluminium, Carbon, Zinc, Iron, Hydrogen, Copper, Silver, Gold.",
+      "vi": "Mẹo nhớ kinh điển tiếng Việt: Khi Nào Bạn Cần May Áo Giáp Sắt Nhớ Sang Phố Hỏi Cửa Hàng Á Phi Âu. Tương ứng Kali, Natri, Canxi, Magie, Nhôm, Cacbon, Kẽm, Sắt, Chì, Hydro, Đồng, Bạc, Vàng.",
+      "duration": 33.28,
+      "startTime": 198.27,
+      "endTime": 231.55,
+      "audioUrl": "/audio/lectures/science/c9/sec_reactivity_mnemonic.mp3"
+    },
+    {
+      "id": "sec_displacement_reactions",
+      "title": "⚔️ Displacement Reactions (Phản ứng Thế Kim loại)",
+      "selector": "#sec-displacement-reactions",
+      "en": "In a displacement reaction, a more reactive metal displaces a less reactive metal from its aqueous solution or metal oxide. For example, zinc displaces copper from copper sulfate solution, forming colorless zinc sulfate and brown copper metal.",
+      "vi": "Trong phản ứng thế, kim loại hoạt động mạnh hơn sẽ đẩy kim loại kém hoạt động hơn ra khỏi dung dịch muối hoặc oxit kim loại. Ví dụ kẽm đẩy đồng ra khỏi dung dịch đồng sunfat, làm mất màu xanh và giải phóng kim loại đồng màu nâu đỏ.",
+      "duration": 29.13,
+      "startTime": 231.55,
+      "endTime": 260.68,
+      "audioUrl": "/audio/lectures/science/c9/sec_displacement_reactions.mp3"
+    },
+    {
       "id": "sec_extraction_metals",
-      "title": "3. Phương pháp Luyện kim & Lò cao Luyện Sắt (Blast Furnace)",
+      "title": "3. Phương pháp Luyện kim & Lò cao (Extraction of Metals Overview)",
       "selector": "#sec-extraction-metals",
-      "en": "Section 3 details metallurgical extraction: Metals higher than carbon in the series, like aluminium, must be extracted by expensive molten electrolysis. Metals below carbon, like iron and zinc, are economically extracted by chemical reduction with carbon or carbon monoxide. In the iron Blast Furnace, haematite ore, coke, and limestone are fed at the top with hot air blown at the bottom. Coke burns exothermically to carbon dioxide, then reduces to carbon monoxide gas, which reduces iron(III) oxide into molten iron running to the bottom. Limestone thermally decomposes to calcium oxide, which reacts with acidic silica sand impurities to form molten slag.",
-      "vi": "Mục ba chi tiết hóa công nghệ luyện kim: Các kim loại đứng trước cacbon như nhôm phải được tách bằng điện phân nóng chảy tốn kém. Các kim loại đứng sau cacbon như sắt và kẽm được khử bằng than cốc hoặc khí cacbon monoxit CO giá rẻ trong lò luyện kim. Trong Lò cao luyện sắt (Blast Furnace), quặng hematit Fe2O3, than cốc C và đá vôi CaCO3 được nạp từ trên đỉnh lò trong khi luồng gió nóng thổi từ đáy. Than cốc cháy tạo CO2 rồi bị khử thành CO; khí CO khử quặng hematit thành sắt nóng chảy chìm xuống đáy lò. Đá vôi bị nhiệt phân thành vôi sống CaO, phản ứng với tạp chất cát silic tạo xỉ lỏng nổi lên trên bề mặt sắt lỏng.",
+      "en": "Section 3 covers metal extraction: Metals less reactive than carbon, such as iron and zinc, are extracted by reduction using carbon or carbon monoxide. Highly reactive metals above carbon require electrolysis.",
+      "vi": "Mục ba trình bày phương pháp luyện kim: Kim loại kém hoạt động hơn cacbon như sắt và kẽm được điều chế bằng phản ứng nhiệt luyện khử bởi cacbon hoặc CO. Các kim loại hoạt động mạnh đứng trên cacbon bắt buộc phải dùng phương pháp điện phân nóng chảy.",
       "duration": 81.42,
-      "startTime": 166.53,
-      "endTime": 247.95,
+      "startTime": 260.68,
+      "endTime": 342.1,
       "audioUrl": "/audio/lectures/science/c9/sec_extraction_metals.mp3"
     },
     {
+      "id": "sec_blast_furnace",
+      "title": "🏭 Blast Furnace Iron Extraction (Luyện Sắt trong Lò cao)",
+      "selector": "#sec-blast-furnace",
+      "en": "In the blast furnace, iron(III) oxide haematite is reduced to molten iron. Coke burns in hot air producing carbon monoxide, the primary reducing agent. Limestone thermal decomposition generates calcium oxide, which reacts with acidic silica impurities to form molten slag.",
+      "vi": "Trong lò cao, quặng sắt hematit Fe2O3 được khử thành sắt nóng chảy. Than cốc cháy tạo khí CO đóng vai trò chất khử chính. Đá vôi bị nhiệt phân sinh ra canxi oxit, kết hợp với tạp chất cát silic dioxit có tính axit để tạo thành xỉ canxi silicat nổi lên trên.",
+      "duration": 36.95,
+      "startTime": 342.1,
+      "endTime": 379.05,
+      "audioUrl": "/audio/lectures/science/c9/sec_blast_furnace.mp3"
+    },
+    {
       "id": "sec_uses_metals",
-      "title": "4. Ứng dụng Thực tiễn của Kim loại & Hợp kim Thép",
+      "title": "4. Ứng dụng Thực tiễn của Kim loại (Uses of Metals Overview)",
       "selector": "#sec-uses-metals",
-      "en": "Section 4 covers industrial utilities: Aluminium is used in aircraft manufacture due to low density and corrosion resistance from its protective oxide layer, and in overhead power cables due to low density and good conductivity. Copper is used in electrical wiring due to excellent electrical conductivity and ductility, and in cooking utensils due to high thermal conductivity and unreactivity with water. Mild steel with low carbon is malleable for car bodies; High-carbon steel is hard for cutting tools; Stainless steel alloyed with chromium and nickel resists corrosion for cutlery and chemical plant reactors.",
-      "vi": "Mục bốn phân tích ứng dụng công nghiệp: Nhôm được chế tạo vỏ máy bay nhờ khối lượng riêng nhẹ và màng oxit Al2O3 bảo vệ chống ăn mòn, đồng thời làm dây cáp điện cao thế trên cao nhờ trọng lượng nhẹ và dẫn điện tốt. Đồng làm lõi dây điện gia dụng nhờ tính dẫn điện tuyệt vời và dễ uốn dẻo, làm xoong chảo nhờ dẫn nhiệt nhanh và không phản ứng với nước sôi. Thép mềm (Mild steel) ít cacbon dễ dập uốn làm khung xe ô tô; Thép cacbon cao cứng chắc làm lưỡi dao cắt gọt; Thép không gỉ (Inox) pha crom và niken chống rỉ sét tuyệt đối làm dao thìa dĩa và bồn phản ứng hóa chất.",
+      "en": "Section 4 relates properties to everyday uses: Aluminium, copper, and various steels are matched precisely to their technological roles.",
+      "vi": "Mục bốn liên hệ tính chất với ứng dụng đời sống: Nhôm, đồng và các loại thép được ứng dụng chuẩn xác vào các vai trò kỹ thuật khác nhau.",
       "duration": 69.74,
-      "startTime": 247.95,
-      "endTime": 317.69,
+      "startTime": 379.05,
+      "endTime": 448.79,
       "audioUrl": "/audio/lectures/science/c9/sec_uses_metals.mp3"
+    },
+    {
+      "id": "sec_metal_uses_cases",
+      "title": "🛠️ Specific Uses of Metals & Alloys (Các Ứng dụng Đặc thù)",
+      "selector": "#sec-metal-uses-cases",
+      "en": "Aluminium is used for aircraft bodies due to low density and strength, and food packaging due to protective oxide layer. Copper is used for electrical wiring due to excellent electrical conductivity. Mild steel is used for car bodies and machinery. Stainless steel is used for cutlery and chemical plant equipment due to rust resistance.",
+      "vi": "Nhôm dùng làm thân máy bay nhờ khối lượng riêng thấp và bền, làm bao bì thực phẩm nhờ màng oxit bảo vệ không độc. Đồng dùng làm dây dẫn điện nhờ độ dẫn điện xuất sắc. Thép mềm dùng làm khung xe hơi và máy móc. Thép không gỉ dùng làm dao kéo và bồn chứa hóa chất nhờ khả năng chống gỉ tuyệt đối.",
+      "duration": 40.98,
+      "startTime": 448.79,
+      "endTime": 489.77,
+      "audioUrl": "/audio/lectures/science/c9/sec_metal_uses_cases.mp3"
     }
   ]
 }

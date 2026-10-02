@@ -2,39 +2,31 @@
   "lectureId": "4732621b-f827-4b12-934b-3b53e694cc2a",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C4: Electrochemistry",
-  "totalDuration": 272.52,
+  "totalDuration": 420.09,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề C4",
+      "selector": "#sec-header"
     },
     "sec_electrolysis_basics": {
       "start": 1,
-      "end": 1
-    },
-    "sec-electrolysis-basics": {
-      "start": 1,
-      "end": 1
+      "end": 3,
+      "title": "1. Cơ chế & Cấu tạo Bình điện phân",
+      "selector": "#sec-electrolysis-basics"
     },
     "sec_molten_aqueous": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-molten-aqueous": {
-      "start": 2,
-      "end": 2
+      "start": 4,
+      "end": 6,
+      "title": "2. Điện phân Nóng chảy vs Dung dịch",
+      "selector": "#sec-molten-aqueous"
     },
     "sec_electroplating_cells": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-electroplating-cells": {
-      "start": 3,
-      "end": 3
+      "start": 7,
+      "end": 9,
+      "title": "3. Mạ điện & Pin Nhiên liệu",
+      "selector": "#sec-electroplating-cells"
     }
   },
   "segments": [
@@ -42,8 +34,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề C4: Điện hóa học & Điện phân",
       "selector": "#sec-header",
-      "en": "Welcome to Topic C4: Electrochemistry. Electrochemistry couples chemical reactivity with electrical current. In this lesson, we study the fundamental components of electrolytic cells, contrast molten versus aqueous solution electrolysis, predict selective discharge products at electrodes, and examine industrial electroplating and hydrogen fuel cells.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C4: Điện hóa học và Hiện tượng Điện phân. Điện hóa học kết nối phản ứng hóa học với dòng điện. Trong bài học này, chúng ta sẽ khảo sát cấu tạo bình điện phân, so sánh điện phân muối nóng chảy và dung dịch nước, quy tắc phóng điện chọn lọc tại điện cực, cùng kỹ thuật mạ điện công nghiệp và pin nhiên liệu hydro.",
+      "en": "Welcome to Topic C4: Electrochemistry. Electricity can drive non-spontaneous chemical reactions. In this lesson, we study the fundamental components of electrolysis cells, explore molten versus aqueous electrolysis and discharge rules, and investigate electroplating and hydrogen-oxygen fuel cells.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C4: Điện hóa học và Quá trình Điện phân. Dòng điện có thể thúc đẩy các phản ứng hóa học không tự phát. Trong bài học này, chúng ta sẽ tìm hiểu cấu tạo bình điện phân, so sánh điện phân nóng chảy và dung dịch, cùng các ứng dụng mạ điện và pin nhiên liệu hydro-oxy.",
       "duration": 43.77,
       "startTime": 0.0,
       "endTime": 43.77,
@@ -51,36 +43,102 @@
     },
     {
       "id": "sec_electrolysis_basics",
-      "title": "1. Nguyên lý Cơ bản của Hiện tượng Điện phân",
+      "title": "1. Cơ chế Điện phân & Cấu tạo Bình điện phân (Basics of Electrolysis Overview)",
       "selector": "#sec-electrolysis-basics",
-      "en": "Section 1 defines Electrolysis: the breakdown of an ionic compound, molten or in aqueous solution, by the passage of electricity. An Electrolyte is a liquid containing mobile free ions that conducts electricity. The positive electrode is the Anode, attracting negatively charged Anions where oxidation occurs as anions lose electrons. The negative electrode is the Cathode, attracting positively charged Cations where reduction occurs as cations gain electrons. Remember the acronym PANIC: Positive Anode, Negative Is Cathode, and OIL RIG: Oxidation Is Loss, Reduction Is Gain of electrons.",
-      "vi": "Mục một định nghĩa Điện phân (Electrolysis): là sự phân hủy hợp chất ion ở trạng thái nóng chảy hoặc dung dịch bởi dòng điện một chiều. Chất điện phân (Electrolyte) là chất lỏng chứa các ion tự do chuyển động dẫn điện. Cực dương là Anode, hút các Anion âm về phía nó nơi diễn ra sự oxy hóa (anion nhường electron). Cực âm là Cathode, hút các Cation dương về phía nó nơi diễn ra sự khử (cation nhận electron). Quy tắc ghi nhớ quốc tế: PANIC (Positive Anode, Negative Is Cathode - Cực dương là Anot, Cực âm là Catot) và OIL RIG (Oxidation Is Loss, Reduction Is Gain - Oxy hóa là nhường, Khử là nhận electron).",
+      "en": "Section 1 defines Electrolysis: the breakdown of an ionic compound, molten or in aqueous solution, by the passage of electricity.",
+      "vi": "Mục một định nghĩa Quá trình Điện phân: là sự phân hủy một hợp chất ion ở trạng thái nóng chảy hoặc trong dung dịch nước dưới tác dụng của dòng điện một chiều.",
       "duration": 83.49,
       "startTime": 43.77,
       "endTime": 127.26,
       "audioUrl": "/audio/lectures/science/c4/sec_electrolysis_basics.mp3"
     },
     {
-      "id": "sec_molten_aqueous",
-      "title": "2. Điện phân Nóng chảy vs Điện phân Dung dịch Nước",
-      "selector": "#sec-molten-aqueous",
-      "en": "Section 2 contrasts molten and aqueous systems: In molten lead(II) bromide, only two ions exist: lead cations reduce at the cathode forming silvery liquid lead metal, while bromide anions oxidize at the anode producing reddish-brown bromine gas fumes. In aqueous solutions, water molecules partially dissociate into hydrogen and hydroxide ions. At the cathode, hydrogen gas discharges unless the metal cation is less reactive than hydrogen, such as copper. At the anode, oxygen gas discharges from hydroxide ions unless concentrated halide ions like chloride, bromide, or iodide are present, discharging halogen gas.",
-      "vi": "Mục hai so sánh điện phân nóng chảy và dung dịch: Khi điện phân chì(II) bromua PbBr2 nóng chảy chỉ có 2 loại ion: ion chì Pb2+ bị khử tại catot tạo giọt kim loại chì màu bạc, ion bromua Br- bị oxy hóa tại anot tạo khí brom màu nâu đỏ. Trong dung dịch nước, nước phân ly thêm ion H+ và OH-. Tại catot, khí hydro H2 được ưu tiên giải phóng trừ khi ion kim loại kém hoạt động hơn hydro (như đồng Cu2+). Tại anot, khí oxy O2 được phóng điện từ ion OH- trừ khi có mặt ion halogenua đậm đặc (Cl-, Br-, I-) sẽ ưu tiên tạo khí halogen.",
-      "duration": 82.53,
+      "id": "sec_cell_components",
+      "title": "⚡ Electrolysis Cell Anatomy: Anode & Cathode (Cấu tạo Bình điện phân)",
+      "selector": "#sec-cell-components",
+      "en": "An electrolysis cell comprises a power supply, electrolyte containing mobile ions, and two electrodes: Positive Anode attracts negative anions, while Negative Cathode attracts positive cations.",
+      "vi": "Cấu tạo bình điện phân gồm nguồn điện một chiều, chất điện ly chứa các ion chuyển động tự do và hai điện cực: Anode cực dương hút anion âm, còn Cathode cực âm hút cation dương.",
+      "duration": 23.37,
       "startTime": 127.26,
-      "endTime": 209.79,
+      "endTime": 150.63,
+      "audioUrl": "/audio/lectures/science/c4/sec_cell_components.mp3"
+    },
+    {
+      "id": "sec_oil_rig",
+      "title": "🧠 OIL RIG & Redox at Electrodes (Oxy hóa - Khử tại Điện cực)",
+      "selector": "#sec-oil-rig",
+      "en": "Remember OIL RIG: Oxidation Is Loss of electrons, which occurs at the positive Anode. Reduction Is Gain of electrons, which occurs at the negative Cathode.",
+      "vi": "Mẹo nhớ kinh điển OIL RIG: Quá trình Oxy hóa là sự Mất electron xảy ra tại cực dương Anode. Quá trình Khử là sự Nhận electron xảy ra tại cực âm Cathode.",
+      "duration": 22.31,
+      "startTime": 150.63,
+      "endTime": 172.94,
+      "audioUrl": "/audio/lectures/science/c4/sec_oil_rig.mp3"
+    },
+    {
+      "id": "sec_molten_aqueous",
+      "title": "2. Điện phân Nóng chảy vs Dung dịch (Molten vs Aqueous Electrolysis Overview)",
+      "selector": "#sec-molten-aqueous",
+      "en": "Section 2 compares molten and aqueous electrolysis: In aqueous solutions, water partially dissociates into H+ and OH- ions, competing with solute ions at both electrodes.",
+      "vi": "Mục hai so sánh điện phân nóng chảy và dung dịch: Trong dung dịch, nước phân ly một phần ra ion H+ và OH-, tạo ra sự cạnh tranh phóng điện tại cả hai điện cực.",
+      "duration": 82.53,
+      "startTime": 172.94,
+      "endTime": 255.47,
       "audioUrl": "/audio/lectures/science/c4/sec_molten_aqueous.mp3"
     },
     {
+      "id": "sec_molten_lead_bromide",
+      "title": "🔥 Molten Lead(II) Bromide Electrolysis (Điện phân PbBr₂ Nóng chảy)",
+      "selector": "#sec-molten-lead-bromide",
+      "en": "During electrolysis of molten lead(II) bromide: Lead ions gain electrons at the cathode to form silvery molten lead metal. Bromide ions lose electrons at the anode to produce reddish-brown bromine gas.",
+      "vi": "Khi điện phân chì hai bromua nóng chảy: Ion chì Pb2+ nhận electron tại cathode tạo thành kim loại chì lỏng màu bạc. Ion bromua Br- mất electron tại anode sinh ra khí brom màu nâu đỏ.",
+      "duration": 27.66,
+      "startTime": 255.47,
+      "endTime": 283.13,
+      "audioUrl": "/audio/lectures/science/c4/sec_molten_lead_bromide.mp3"
+    },
+    {
+      "id": "sec_aqueous_discharge",
+      "title": "📜 Aqueous Discharge Rules (Quy tắc Phóng điện Dung dịch)",
+      "selector": "#sec-aqueous-discharge",
+      "en": "Discharge rules: At the cathode, hydrogen gas is discharged unless the metal is less reactive than hydrogen, such as copper. At the anode, halide ions produce halogen gas if concentrated; otherwise, hydroxide ions produce oxygen gas.",
+      "vi": "Quy tắc phóng điện: Tại cathode, khí hydrogen thoát ra trừ khi kim loại kém hoạt động hơn hydro như đồng hay bạc. Tại anode, ion halide phóng điện tạo halogen nếu đậm đặc; nếu không, ion hydroxide OH- sẽ phóng điện tạo khí oxygen.",
+      "duration": 32.44,
+      "startTime": 283.13,
+      "endTime": 315.57,
+      "audioUrl": "/audio/lectures/science/c4/sec_aqueous_discharge.mp3"
+    },
+    {
       "id": "sec_electroplating_cells",
-      "title": "3. Kỹ thuật Mạ điện & Pin Nhiên liệu Hydro (Fuel Cells)",
+      "title": "3. Mạ điện & Pin Nhiên liệu (Electroplating & Fuel Cells Overview)",
       "selector": "#sec-electroplating-cells",
-      "en": "Section 3 investigates electrochemical applications: Electroplating coats a metal object with a thin protective or decorative layer of another metal. The object to be plated forms the cathode; the plating metal forms the anode; and the electrolyte contains soluble ions of the plating metal, such as silver nitrate for silver plating spoons. Hydrogen Fuel Cells react hydrogen with oxygen exothermically to produce electricity, with clean water as the sole emission, offering renewable, non-polluting transportation power without greenhouse carbon emissions.",
-      "vi": "Mục ba nghiên cứu ứng dụng điện hóa: Mạ điện (Electroplating) phủ một lớp kim loại mỏng lên bề mặt vật dẫn để chống rỉ sét hoặc trang trí. Vật cần mạ luôn được mắc vào cực âm (Cathode); thanh kim loại mạ mắc vào cực dương (Anode); dung dịch điện phân chứa muối tan của kim loại mạ. Pin nhiên liệu Hydro (Hydrogen Fuel Cell) cho khí hydro phản ứng tỏa nhiệt với khí oxy tạo dòng điện, với sản phẩm phụ duy nhất là nước tinh khiết, là nguồn năng lượng tái tạo sạch không phát thải khí nhà kính.",
+      "en": "Section 3 examines industrial electrochemical applications: Electroplating metals for corrosion resistance and aesthetics, and clean hydrogen-oxygen fuel cells.",
+      "vi": "Mục ba nghiên cứu các ứng dụng công nghiệp: Kỹ thuật mạ điện kim loại chống ăn mòn và tăng tính thẩm mỹ, cùng pin nhiên liệu hydro-oxy sạch.",
       "duration": 62.73,
-      "startTime": 209.79,
-      "endTime": 272.52,
+      "startTime": 315.57,
+      "endTime": 378.3,
       "audioUrl": "/audio/lectures/science/c4/sec_electroplating_cells.mp3"
+    },
+    {
+      "id": "sec_electroplating",
+      "title": "🛡️ Electroplating Principles (Nguyên lý Mạ điện)",
+      "selector": "#sec-electroplating",
+      "en": "To electroplate an object: Connect the object to the negative cathode, use the pure plating metal as the positive anode, and use an electrolyte containing soluble ions of the plating metal.",
+      "vi": "Để mạ điện một vật: Nối vật cần mạ vào cực âm cathode, dùng miếng kim loại mạ tinh khiết làm cực dương anode và dùng dung dịch muối tan của kim loại mạ làm chất điện ly.",
+      "duration": 20.99,
+      "startTime": 378.3,
+      "endTime": 399.29,
+      "audioUrl": "/audio/lectures/science/c4/sec_electroplating.mp3"
+    },
+    {
+      "id": "sec_fuel_cells",
+      "title": "💧 Hydrogen-Oxygen Fuel Cell (Pin Nhiên liệu Hydro-Oxy)",
+      "selector": "#sec-fuel-cells",
+      "en": "The hydrogen-oxygen fuel cell combines hydrogen and oxygen to produce electricity with water as the only byproduct, offering zero greenhouse gas emissions and high efficiency.",
+      "vi": "Pin nhiên liệu hydro-oxy kết hợp khí hydro và oxy để tạo ra dòng điện với chất thải duy nhất là nước tinh khiết, mang lại hiệu suất cao và không phát thải khí nhà kính.",
+      "duration": 20.8,
+      "startTime": 399.29,
+      "endTime": 420.09,
+      "audioUrl": "/audio/lectures/science/c4/sec_fuel_cells.mp3"
     }
   ]
 }

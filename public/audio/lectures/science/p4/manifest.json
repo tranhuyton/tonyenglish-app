@@ -1,49 +1,41 @@
 {
   "lectureId": "2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "P4: Electricity and magnetism",
-  "totalDuration": 291.85,
+  "totalDuration": 354.16,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề P4",
+      "selector": "#sec-header"
     },
     "sec_electrical_quantities": {
       "start": 1,
-      "end": 1
-    },
-    "sec-electrical-quantities": {
-      "start": 1,
-      "end": 1
+      "end": 2,
+      "title": "1. Đại lượng Điện & Định luật Ohm",
+      "selector": "#sec-electrical-quantities"
     },
     "sec_electric_circuits": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-electric-circuits": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4,
+      "title": "2. Mạch Điện & Mạch Phân áp",
+      "selector": "#sec-electric-circuits"
     },
     "sec_electromagnetic_effects": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-electromagnetic-effects": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 5,
+      "title": "3. Tác dụng Điện từ & Biến áp",
+      "selector": "#sec-electromagnetic-effects"
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề P4: Điện học & Từ học (Electricity and Magnetism)",
+      "title": "Giới thiệu Chuyên đề P4: Điện học & Từ học",
       "selector": "#sec-header",
-      "en": "Welcome to Topic P4: Electricity and Magnetism. Modern technology relies entirely on electrical power and electromagnetism. In this lesson, we study electric charges, current, voltage, and Ohm's law, analyze series and parallel circuits including potential dividers, and explore electromagnetic induction, transformers, and electric motors.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P4: Điện học và Từ học. Toàn bộ nền công nghệ hiện đại đều vận hành dựa trên dòng điện và hiện tượng điện từ. Trong bài giảng này, chúng ta sẽ khảo sát điện tích, cường độ dòng điện, hiệu điện thế và định luật Ohm, phân tích mạch nối tiếp và song song gồm cả mạch chia điện thế, đồng thời khám phá hiện tượng cảm ứng điện từ, máy biến áp và động cơ điện.",
+      "en": "Welcome to Topic P4: Electricity and Magnetism. In this lesson, we study electric charge, current, electromotive force, Ohm's law, series and parallel circuits, potential dividers, electrical safety, electromagnetic induction, electric motors, and transformers.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề P4: Điện học và Từ học. Trong bài học này, chúng ta sẽ khảo sát điện tích, dòng điện, suất điện động, định luật Ohm, mạch điện nối tiếp và song song, mạch phân áp, an toàn điện, hiện tượng cảm ứng điện từ, động cơ điện và máy biến áp.",
       "duration": 47.39,
       "startTime": 0.0,
       "endTime": 47.39,
@@ -51,35 +43,57 @@
     },
     {
       "id": "sec_electrical_quantities",
-      "title": "1. Đại lượng Điện & Định luật Ohm (Electrical Quantities & Ohm's Law)",
+      "title": "1. Đại lượng Điện & Định luật Ohm (Electrical Quantities Overview)",
       "selector": "#sec-electrical-quantities",
-      "en": "Electric charge Q is measured in Coulombs, with electrons carrying a negative elementary charge. Electric current I is the rate of flow of charge: I equals Q divided by t, measured in Amperes using an ammeter connected in series. Potential difference or voltage V is the energy transferred per unit charge: V equals W divided by Q, measured in Volts using a voltmeter in parallel. Ohm's law states that for an ohmic conductor at constant temperature, current is directly proportional to potential difference: V equals I times R. Electrical resistance R depends on material, length, and cross-sectional area: longer wires have greater resistance, while thicker wires have lower resistance.",
-      "vi": "Điện tích Q được đo bằng Cu-lông (Coulomb), với hạt electron mang điện tích nguyên tố âm. Cường độ dòng điện I là tốc độ chuyển dịch của dòng điện tích: I bằng Q chia cho t, đo bằng Ampe kế mắc nối tiếp trong mạch. Hiệu điện thế V là năng lượng được truyền trên mỗi đơn vị điện tích: V bằng W chia Q, đo bằng Vôn kế mắc song song. Định luật Ohm phát biểu rằng với một dây dẫn thuần trở ở nhiệt độ không đổi, dòng điện tỉ lệ thuận với hiệu điện thế: V bằng I nhân R. Điện trở R phụ thuộc vào vật liệu, chiều dài và tiết diện dây dẫn: dây càng dài điện trở càng lớn, dây càng có tiết diện to thì điện trở càng nhỏ.",
+      "en": "Section 1 defines current as rate of charge flow: Q equals I times t. Potential difference V is energy per unit charge (V = W / Q). Ohm's law states V equals I times R for an ohmic conductor at constant temperature.",
+      "vi": "Mục một định nghĩa cường độ dòng điện là tốc độ dòng điện tích dịch chuyển: Q bằng I nhân t. Hiệu điện thế V là năng lượng trên một đơn vị điện tích (V = W / Q). Định luật Ohm khẳng định V bằng I nhân R đối với dây dẫn kim loại ở nhiệt độ không đổi.",
       "duration": 79.31,
       "startTime": 47.39,
       "endTime": 126.7,
       "audioUrl": "/audio/lectures/science/p4/sec_electrical_quantities.mp3"
     },
     {
-      "id": "sec_electric_circuits",
-      "title": "2. Mạch Điện & Mạch Phân áp (Electric Circuits & Potential Dividers)",
-      "selector": "#sec-electric-circuits",
-      "en": "In a series circuit, current is identical at all points, while total voltage is shared: V total equals V 1 plus V 2, and total resistance equals R 1 plus R 2. In a parallel circuit, voltage across each parallel branch is identical, current splits between branches, and total combined resistance is less than the resistance of any individual branch. Electrical power is calculated as P equals I times V, and energy transferred equals P times t. A potential divider divides voltage across two resistors in proportion to their resistances. Using sensing components like thermistors or light-dependent resistors allows circuits to respond automatically to changes in temperature or ambient light.",
-      "vi": "Trong đoạn mạch nối tiếp, cường độ dòng điện bằng nhau tại mọi điểm, trong khi tổng hiệu điện thế được chia đều: V tổng bằng V 1 cộng V 2, và điện trở tương đương bằng R 1 cộng R 2. Trong đoạn mạch song song, hiệu điện thế qua mỗi nhánh là như nhau, cường độ dòng điện rẽ vào các nhánh, và điện trở tương đương luôn nhỏ hơn điện trở của bất kỳ nhánh riêng rẽ nào. Công suất điện tính bằng P bằng I nhân V, và điện năng tiêu thụ bằng P nhân t. Mạch phân áp chia hiệu điện thế qua hai điện trở tỉ lệ với giá trị điện trở của chúng. Sử dụng các linh kiện cảm biến như nhiệt điện trở thermistor hay quang điện trở LDR giúp mạch tự động điều khiển theo nhiệt độ hoặc ánh sáng môi trường.",
-      "duration": 83.46,
+      "id": "sec_resistance_factors",
+      "title": "📏 Resistance & Wire Dimensions (Điện trở & Dây dẫn)",
+      "selector": "#sec-resistance-factors",
+      "en": "Resistance of a metallic wire is directly proportional to its length and inversely proportional to its cross-sectional area. Doubling wire length doubles resistance; doubling wire diameter quadruples cross-sectional area, reducing resistance to one quarter.",
+      "vi": "Điện trở của một đoạn dây kim loại tỉ lệ thuận với chiều dài và tỉ lệ nghịch với tiết diện dây. Chiều dài dây tăng gấp đôi thì điện trở tăng gấp đôi; đường kính dây tăng gấp đôi thì tiết diện tăng gấp bốn, làm điện trở giảm đi bốn lần.",
+      "duration": 30.06,
       "startTime": 126.7,
-      "endTime": 210.16,
+      "endTime": 156.76,
+      "audioUrl": "/audio/lectures/science/p4/sec_resistance_factors.mp3"
+    },
+    {
+      "id": "sec_electric_circuits",
+      "title": "2. Mạch Điện Nối tiếp, Song song & Mạch Phân áp (Circuits Overview)",
+      "selector": "#sec-electric-circuits",
+      "en": "Section 2 explores circuit laws: In series, current is identical everywhere and total resistance equals R1 plus R2. In parallel, voltage is identical across branches and combined resistance is smaller than any individual branch.",
+      "vi": "Mục hai khám phá quy luật mạch điện: Trong mạch nối tiếp, cường độ dòng điện như nhau tại mọi điểm và điện trở tương đương bằng tổng R1 cộng R2. Trong mạch song song, hiệu điện thế như nhau ở mọi nhánh và điện trở tương đương luôn nhỏ hơn điện trở của từng nhánh con.",
+      "duration": 83.46,
+      "startTime": 156.76,
+      "endTime": 240.22,
       "audioUrl": "/audio/lectures/science/p4/sec_electric_circuits.mp3"
     },
     {
+      "id": "sec_potential_dividers",
+      "title": "💡 Potential Dividers & Sensors (Mạch Phân áp & Cảm biến LDR, Thermistor)",
+      "selector": "#sec-potential-dividers",
+      "en": "A potential divider uses two resistors in series to divide voltage. In light dependent resistors (LDR), light increases conductivity, dropping resistance. In negative temperature coefficient thermistors, higher temperature drops resistance.",
+      "vi": "Mạch phân áp gồm hai điện trở mắc nối tiếp để chia hiệu điện thế nguồn. Với quang điện trở LDR, khi có ánh sáng chiếu vào, điện trở giảm mạnh. Với nhiệt điện trở thermistor, khi nhiệt độ tăng cao, điện trở của nó giảm xuống.",
+      "duration": 32.25,
+      "startTime": 240.22,
+      "endTime": 272.47,
+      "audioUrl": "/audio/lectures/science/p4/sec_potential_dividers.mp3"
+    },
+    {
       "id": "sec_electromagnetic_effects",
-      "title": "3. Tác dụng Điện từ: Cảm ứng Điện từ & Động cơ (Electromagnetic Effects: Induction & Motors)",
+      "title": "3. Tác dụng Điện từ: Cảm ứng, Động cơ & Biến áp (EM Effects Overview)",
       "selector": "#sec-electromagnetic-effects",
-      "en": "A magnetic field exerts a force on a current-carrying conductor; Fleming's left-hand rule determines the direction of motion, field, and current, forming the basis of the DC electric motor. Conversely, electromagnetic induction occurs when a conductor cuts magnetic field lines or when magnetic flux changes, inducing an electromotive force. Transformers consist of two insulated coils wound around a soft iron core. Transformers step alternating voltages up or down according to the turns ratio: V p over V s equals N p over N s. Stepping up voltage for long-distance grid transmission minimizes current, drastically reducing power loss caused by resistance heating in power lines.",
-      "vi": "Từ trường tác dụng lực lên một dây dẫn mang dòng điện đặt trong nó; quy tắc bàn tay trái Fleming giúp xác định chiều của lực từ, đường sức từ và dòng điện, tạo nền tảng vận hành của động cơ điện một chiều. Ngược lại, hiện tượng cảm ứng điện từ xảy ra khi một dây dẫn cắt các đường sức từ hoặc khi từ thông biến thiên, sinh ra một suất điện động cảm ứng. Máy biến áp gồm hai cuộn dây cách điện quấn quanh lõi sắt non. Máy biến áp biến đổi hiệu điện thế xoay chiều theo tỉ số vòng dây: V sơ cấp chia V thứ cấp bằng N sơ cấp chia N thứ cấp. Tăng thế khi truyền tải điện năng đi xa giúp giảm tối đa cường độ dòng điện, từ đó triệt tiêu sự hao phí điện năng do tỏa nhiệt trên đường dây.",
+      "en": "Section 3 covers electromagnetic effects: A moving conductor cutting magnetic field lines induces an e.m.f. The motor effect uses Fleming's left-hand rule. Transformers change alternating voltages via ratio Vp over Vs equals Np over Ns.",
+      "vi": "Mục ba nghiên cứu tác dụng điện từ: Dây dẫn chuyển động cắt các đường sức từ sẽ sinh ra suất điện động cảm ứng. Lực từ tác dụng lên dòng điện tuân theo quy tắc bàn tay trái Fleming. Máy biến áp biến đổi điện áp xoay chiều dựa trên tỉ số điện áp bằng tỉ số số vòng dây.",
       "duration": 81.69,
-      "startTime": 210.16,
-      "endTime": 291.85,
+      "startTime": 272.47,
+      "endTime": 354.16,
       "audioUrl": "/audio/lectures/science/p4/sec_electromagnetic_effects.mp3"
     }
   ]

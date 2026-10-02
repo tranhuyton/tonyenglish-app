@@ -1,65 +1,53 @@
 {
   "lectureId": "eb3ed0a0-bd5e-4c0f-961f-1b9af74bf4a8",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
-  "lectureTitle": "P3: Waves",
-  "totalDuration": 468.28,
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "lectureTitle": "P3: Properties of waves",
+  "totalDuration": 534.53,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề P3",
+      "selector": "#sec-header"
     },
     "sec_wave_properties": {
       "start": 1,
-      "end": 1
-    },
-    "sec-wave-properties": {
-      "start": 1,
-      "end": 1
+      "end": 2,
+      "title": "1. Tính chất Đại cương của Sóng",
+      "selector": "#sec-wave-properties"
     },
     "sec_wave_equation": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-wave-equation": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4,
+      "title": "2. Phương trình Sóng & Nhiễu xạ",
+      "selector": "#sec-wave-equation"
     },
     "sec_light": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-light": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 5,
+      "title": "3. Ánh sáng, Thấu kính & Tán sắc",
+      "selector": "#sec-light"
     },
     "sec_em_spectrum": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-em-spectrum": {
-      "start": 4,
-      "end": 4
+      "start": 6,
+      "end": 6,
+      "title": "4. Thang Sóng Điện từ",
+      "selector": "#sec-em-spectrum"
     },
     "sec_sound": {
-      "start": 5,
-      "end": 5
-    },
-    "sec-sound": {
-      "start": 5,
-      "end": 5
+      "start": 7,
+      "end": 7,
+      "title": "5. Sóng Âm & Tiếng vang",
+      "selector": "#sec-sound"
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề P3: Sóng & Quang học (Waves)",
+      "title": "Giới thiệu Chuyên đề P3: Tính chất của Sóng, Ánh sáng & Âm thanh",
       "selector": "#sec-header",
-      "en": "Welcome to Topic P3: Waves. Waves are the fundamental mechanism by which energy is transferred without transferring matter. In this lesson, we study transverse and longitudinal waves, calculate wave speed using the wave equation, examine light reflection, refraction, and converging lenses, explore the seven bands of the electromagnetic spectrum, and investigate the physics of sound waves and echoes.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P3: Sóng và Quang học. Sóng là cơ chế cơ bản truyền năng lượng từ nơi này sang nơi khác mà không vận chuyển vật chất. Trong bài học này, chúng ta sẽ khảo sát sóng ngang và sóng dọc, tính tốc độ truyền sóng bằng phương trình sóng, nghiên cứu sự phản xạ, khúc xạ ánh sáng và thấu kính hội tụ, khám phá 7 dải sóng trong thang sóng điện từ, và tìm hiểu tính chất sóng âm cùng tiếng vang.",
+      "en": "Welcome to Topic P3: Properties of Waves. Waves transfer energy without transferring matter. In this lesson, we study transverse and longitudinal waves, the wave equation, reflection, refraction, diffraction, converging lenses, dispersion, the electromagnetic spectrum, and sound waves.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề P3: Tính chất của Sóng, Ánh sáng và Âm thanh. Sóng truyền năng lượng từ nơi này sang nơi khác mà không mang theo vật chất. Trong bài học này, chúng ta sẽ học sóng ngang và sóng dọc, phương trình sóng, phản xạ, khúc xạ, nhiễu xạ, thấu kính hội tụ, tán sắc ánh sáng, thang sóng điện từ và sóng âm.",
       "duration": 49.98,
       "startTime": 0.0,
       "endTime": 49.98,
@@ -67,57 +55,79 @@
     },
     {
       "id": "sec_wave_properties",
-      "title": "1. Tính chất Chung của Sóng (General Wave Properties)",
+      "title": "1. Tính chất Đại cương của Sóng (General Wave Properties Overview)",
       "selector": "#sec-wave-properties",
-      "en": "A wave is an oscillation that transfers energy from one point to another without transferring matter. Waves are classified into transverse and longitudinal waves. In transverse waves, oscillations are perpendicular to the direction of wave travel, creating crests and troughs, as seen in water waves and all electromagnetic radiation. In longitudinal waves, oscillations are parallel to the direction of wave travel, creating alternating compressions and rarefactions, as in sound waves. Key parameters include amplitude, wavelength lambda, frequency f in Hertz, and wave period T equals one divided by f.",
-      "vi": "Sóng là một dao động lan truyền mang năng lượng từ điểm này đến điểm khác mà không truyền theo vật chất. Sóng được chia thành sóng ngang và sóng dọc. Trong sóng ngang, các phần tử dao động vuông góc với phương truyền sóng, tạo thành đỉnh sóng và đáy sóng, như sóng mặt nước và toàn bộ sóng điện từ. Trong sóng dọc, các phần tử dao động song song với phương truyền sóng, tạo thành các vùng nén và vùng dãn xen kẽ, điển hình là sóng âm. Các đại lượng đặc trưng gồm biên độ, bước sóng lambda, tần số f đo bằng Hertz, và chu kỳ T bằng một chia cho f.",
+      "en": "Section 1 defines wave terms: Amplitude is maximum displacement from rest position. Wavelength is distance between consecutive crests. Frequency is number of complete waves per second, measured in Hertz.",
+      "vi": "Mục một định nghĩa các đại lượng sóng: Biên độ là độ dịch chuyển cực đại khỏi vị trí cân bằng. Bước sóng là khoảng cách giữa hai đỉnh sóng liên tiếp. Tần số là số dao động toàn phần trong một giây, đo bằng đơn vị Hertz.",
       "duration": 72.06,
       "startTime": 49.98,
       "endTime": 122.04,
       "audioUrl": "/audio/lectures/science/p3/sec_wave_properties.mp3"
     },
     {
-      "id": "sec_wave_equation",
-      "title": "2. Phương trình Sóng & Hành vi của Sóng (The Wave Equation & Wave Behaviors)",
-      "selector": "#sec-wave-equation",
-      "en": "The wave equation connects wave speed v, frequency f, and wavelength lambda: v equals f times lambda. Waves exhibit three fundamental behaviors: reflection, refraction, and diffraction. In reflection, waves bounce off a flat boundary with the angle of incidence equal to the angle of reflection. In refraction, when waves enter a medium of different optical or physical density, their speed and wavelength change, causing wavefronts to bend, while frequency remains strictly constant. In diffraction, waves spread out when passing through a gap or around an obstacle; diffraction is most pronounced when the gap width is roughly equal to the wavelength.",
-      "vi": "Phương trình truyền sóng liên hệ giữa vận tốc truyền sóng v, tần số f và bước sóng lambda: v bằng f nhân lambda. Sóng thể hiện ba hành vi cơ bản: phản xạ, khúc xạ và nhiễu xạ. Trong phản xạ, sóng dội lại từ mặt chắn với góc tới bằng góc phản xạ. Trong khúc xạ, khi sóng truyền sang một môi trường có mật độ quang học hoặc vật lý khác, vận tốc và bước sóng thay đổi khiến mặt sóng bị bẻ cong, trong khi tần số giữ nguyên tuyệt đối. Trong nhiễu xạ, sóng lan tỏa sang hai bên khi đi qua một khe hẹp hoặc mép vật cản; hiện tượng nhiễu xạ rõ nét nhất khi bề rộng khe xấp xỉ bằng bước sóng.",
-      "duration": 76.55,
+      "id": "sec_transverse_longitudinal",
+      "title": "🌊 Transverse vs Longitudinal Waves (Sóng Ngang vs Sóng Dọc)",
+      "selector": "#sec-transverse-longitudinal",
+      "en": "In a transverse wave, particle vibration is perpendicular to the direction of wave travel, like light and water ripples. In a longitudinal wave, particle vibration is parallel to wave travel, forming compressions and rarefactions, like sound waves.",
+      "vi": "Trong sóng ngang, các phần tử dao động vuông góc với phương truyền sóng, ví dụ sóng ánh sáng và sóng mặt nước. Trong sóng dọc, các phần tử dao động song song với phương truyền sóng, tạo thành các vùng nén và dãn liên tiếp, ví dụ sóng âm.",
+      "duration": 31.29,
       "startTime": 122.04,
-      "endTime": 198.59,
+      "endTime": 153.33,
+      "audioUrl": "/audio/lectures/science/p3/sec_transverse_longitudinal.mp3"
+    },
+    {
+      "id": "sec_wave_equation",
+      "title": "2. Phương trình Sóng & Hiện tượng Sóng (Wave Equation & Behaviors Overview)",
+      "selector": "#sec-wave-equation",
+      "en": "Section 2 introduces the fundamental wave speed equation: Wave speed v equals frequency f multiplied by wavelength lambda. It also investigates reflection, refraction, and diffraction.",
+      "vi": "Mục hai giới thiệu phương trình tốc độ truyền sóng cốt lõi: Tốc độ sóng v bằng tần số f nhân bước sóng lambda. Đồng thời phân tích các hiện tượng phản xạ, khúc xạ và nhiễu xạ qua khe hẹp.",
+      "duration": 76.55,
+      "startTime": 153.33,
+      "endTime": 229.88,
       "audioUrl": "/audio/lectures/science/p3/sec_wave_equation.mp3"
     },
     {
+      "id": "sec_reflection_refraction",
+      "title": "🪞 Reflection, Refraction & Diffraction (Phản xạ, Khúc xạ & Nhiễu xạ)",
+      "selector": "#sec-reflection-refraction",
+      "en": "In reflection, angle of incidence equals angle of reflection. In refraction, waves slow down and bend towards normal when entering denser media. In diffraction, waves spread around obstacles or through gaps, with maximum spreading when gap width equals wavelength.",
+      "vi": "Trong phản xạ, góc tới bằng góc phản xạ. Trong khúc xạ, sóng giảm tốc độ và bẻ cong về phía pháp tuyến khi đi vào môi trường chiết quang hơn. Trong nhiễu xạ, sóng lan tỏa khi đi qua khe hẹp hoặc vòng qua vật cản, đạt độ lan tỏa cực đại khi độ rộng khe xấp xỉ bằng bước sóng.",
+      "duration": 34.96,
+      "startTime": 229.88,
+      "endTime": 264.84,
+      "audioUrl": "/audio/lectures/science/p3/sec_reflection_refraction.mp3"
+    },
+    {
       "id": "sec_light",
-      "title": "3. Quang học: Phản xạ, Khúc xạ & Thấu kính (Light, Lenses & Dispersion)",
+      "title": "3. Ánh sáng, Thấu kính Hội tụ & Tán sắc (Light, Lenses & Dispersion Overview)",
       "selector": "#sec-light",
-      "en": "Light travels in straight lines at 300,000 kilometers per second in a vacuum. The law of reflection states that the angle of incidence equals the angle of reflection, measured from the normal. Refraction occurs because light slows down when entering denser media like glass or water, bending towards the normal according to Snell's law: n equals sin i divided by sin r. When light travels from a denser medium to an air boundary at an angle greater than the critical angle, total internal reflection occurs, the principle behind fiber-optic communications. A converging lens brings parallel rays together at the principal focus. Triangular glass prisms disperse white light into a rainbow spectrum because different wavelengths refract by different amounts.",
-      "vi": "Ánh sáng truyền theo đường thẳng với vận tốc 300.000 kilômét trên giây trong chân không. Định luật phản xạ ánh sáng khẳng định góc tới bằng góc phản xạ, đo so với pháp tuyến. Khúc xạ ánh sáng xảy ra vì ánh sáng giảm tốc độ khi đi vào môi trường chiết quang hơn như thủy tinh hoặc nước, lệch về phía pháp tuyến theo định luật Snell: n bằng sin i chia sin r. Khi ánh sáng truyền từ môi trường chiết quang sang không khí với góc tới lớn hơn góc tới hạn, hiện tượng phản xạ toàn phần sẽ xảy ra, đây là nguyên lý cốt lõi của sợi cáp quang viễn thông. Thấu kính hội tụ gom các tia sáng song song tại tiêu điểm chính. Lăng kính tam giác phân tán ánh sáng trắng thành dải màu cầu vồng vì các bước sóng khác nhau bị khúc xạ với các góc lệch khác nhau.",
+      "en": "Section 3 investigates optics: Law of reflection in plane mirrors, critical angle and total internal reflection, converging lenses forming real or virtual images, and white light dispersion through a glass prism.",
+      "vi": "Mục ba nghiên cứu quang hình học: Định luật phản xạ gương phẳng, góc giới hạn và phản xạ toàn phần trong cáp quang, thấu kính hội tụ tạo ảnh thật hoặc ảnh ảo, cùng hiện tượng tán sắc ánh sáng trắng qua lăng kính thủy tinh.",
       "duration": 86.56,
-      "startTime": 198.59,
-      "endTime": 285.15,
+      "startTime": 264.84,
+      "endTime": 351.4,
       "audioUrl": "/audio/lectures/science/p3/sec_light.mp3"
     },
     {
       "id": "sec_em_spectrum",
-      "title": "4. Thang Sóng Điện từ (The Electromagnetic Spectrum)",
+      "title": "4. Thang Sóng Điện từ (The Electromagnetic Spectrum Overview)",
       "selector": "#sec-em-spectrum",
-      "en": "The electromagnetic spectrum is a continuous family of transverse waves that all travel at the speed of light in vacuum. In order of increasing frequency and decreasing wavelength, the seven bands are: Radio waves, Microwaves, Infrared, Visible light, Ultraviolet, X-rays, and Gamma rays. Radio waves are used for broadcasting and television. Microwaves heat water molecules in cooking and transmit satellite signals. Infrared is used in remote controls and thermal imaging. Ultraviolet causes fluorescence and vitamin D synthesis, but excess exposure causes sunburn and skin cancer. X-rays and Gamma rays are highly penetrating ionizing radiations used in medical imaging and cancer radiotherapy.",
-      "vi": "Thang sóng điện từ là một dải liên tục các sóng ngang lan truyền với tốc độ ánh sáng trong chân không. Theo thứ tự tần số tăng dần và bước sóng giảm dần, 7 dải sóng gồm có: Sóng vô tuyến, Vi sóng, Tia hồng ngoại, Ánh sáng nhìn thấy, Tia tử ngoại, Tia X và Tia gamma. Sóng vô tuyến dùng trong phát thanh và truyền hình. Vi sóng kích thích phân tử nước trong lò vi sóng và truyền tín hiệu vệ tinh. Tia hồng ngoại dùng trong điều khiển từ xa và ghi hình ảnh nhiệt. Tia tử ngoại gây phát quang và tổng hợp vitamin D, nhưng phơi nhiễm quá mức gây cháy nắng và ung thư da. Tia X và tia Gamma là bức xạ ion hóa có tính đâm xuyên mạnh, được dùng trong chụp X-quang y tế và xạ trị tiêu diệt khối u ung thư.",
+      "en": "Section 4 covers the EM spectrum: Radio waves, Microwaves, Infrared, Visible light, Ultraviolet, X-rays, and Gamma rays. All travel at 300 million meters per second in a vacuum.",
+      "vi": "Mục bốn tổng hợp Thang Sóng Điện từ: Sóng vô tuyến, Vi sóng, Tia hồng ngoại, Ánh sáng nhìn thấy, Tia tử ngoại, Tia X và Tia gamma. Tất cả đều truyền đi với tốc độ 300 triệu mét trên giây trong chân không.",
       "duration": 90.69,
-      "startTime": 285.15,
-      "endTime": 375.84,
+      "startTime": 351.4,
+      "endTime": 442.09,
       "audioUrl": "/audio/lectures/science/p3/sec_em_spectrum.mp3"
     },
     {
       "id": "sec_sound",
-      "title": "5. Sóng Âm & Tiếng vang (Sound Waves & Echoes)",
+      "title": "5. Sóng Âm & Tiếng vang (Sound Waves & Echoes Overview)",
       "selector": "#sec-sound",
-      "en": "Sound is produced by vibrating sources and travels as longitudinal mechanical waves through solids, liquids, and gases; sound cannot travel through a vacuum. Sound travels fastest in solids and slowest in gases because closer particles transmit vibrations more quickly. The normal human hearing range extends from 20 Hertz to 20,000 Hertz. Sound waves above 20 kilohertz are called ultrasound, used in medical fetal scans and sonar navigation. Pitch is determined by frequency: higher frequency produces a higher pitch. Loudness is determined by amplitude: larger amplitude carries more energy and sounds louder. An echo is a reflected sound wave, used to measure distances using speed equals two times distance divided by time.",
-      "vi": "Âm thanh được tạo ra từ các nguồn dao động và lan truyền dưới dạng sóng cơ học dọc qua chất rắn, chất lỏng và chất khí; âm thanh không thể truyền trong chân không. Âm thanh truyền nhanh nhất trong chất rắn và chậm nhất trong chất khí vì các hạt nằm sát nhau truyền dao động nhanh hơn. Khoảng nghe thông thường của tai người trải từ 20 Hertz đến 20.000 Hertz. Sóng âm có tần số trên 20 kilohertz gọi là siêu âm, ứng dụng trong siêu âm thai nhi y khoa và máy dò sóng âm sonar dưới đáy biển. Độ cao của âm do tần số quyết định: tần số càng lớn âm càng bổng. Độ to của âm do biên độ quyết định: biên độ càng lớn âm nghe càng to. Tiếng vang là sóng âm bị phản xạ trở lại, được dùng để đo khoảng cách theo công thức vận tốc bằng 2 lần quãng đường chia thời gian.",
+      "en": "Section 5 examines sound: Longitudinal waves produced by vibrating sources requiring a material medium. Approximate speed in air is 330 to 350 meters per second. Human hearing ranges from 20 Hertz to 20,000 Hertz.",
+      "vi": "Mục năm phân tích sóng âm: Là sóng dọc sinh ra từ các vật dao động, bắt buộc phải có môi trường vật chất để lan truyền. Tốc độ âm trong không khí vào khoảng 330 đến 350 mét trên giây. Dải tần số tai người nghe được từ 20 Hertz đến 20,000 Hertz.",
       "duration": 92.44,
-      "startTime": 375.84,
-      "endTime": 468.28,
+      "startTime": 442.09,
+      "endTime": 534.53,
       "audioUrl": "/audio/lectures/science/p3/sec_sound.mp3"
     }
   ]

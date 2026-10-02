@@ -1,57 +1,47 @@
 {
   "lectureId": "a6077865-db01-4785-9ec7-e8b0f531fcdc",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "P5: Nuclear physics",
   "totalDuration": 374.0,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề P5",
+      "selector": "#sec-header"
     },
     "sec_atomic_model": {
       "start": 1,
-      "end": 1
-    },
-    "sec-atomic-model": {
-      "start": 1,
-      "end": 1
+      "end": 1,
+      "title": "1. Mẫu Nguyên tử Hạt nhân",
+      "selector": "#sec-atomic-model"
     },
     "sec_radioactivity": {
       "start": 2,
-      "end": 2
-    },
-    "sec-radioactivity": {
-      "start": 2,
-      "end": 2
+      "end": 2,
+      "title": "2. Ba Loại Tia Phóng xạ",
+      "selector": "#sec-radioactivity"
     },
     "sec_decay_halflife": {
       "start": 3,
-      "end": 3
-    },
-    "sec-decay-halflife": {
-      "start": 3,
-      "end": 3
+      "end": 3,
+      "title": "3. Phương trình Phân rã & Bán rã",
+      "selector": "#sec-decay-halflife"
     },
     "sec_uses_safety": {
       "start": 4,
-      "end": 4
-    },
-    "sec-uses-safety": {
-      "start": 4,
-      "end": 4
+      "end": 4,
+      "title": "4. Ứng dụng & An toàn Bức xạ",
+      "selector": "#sec-uses-safety"
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề P5: Vật lý Hạt nhân (Nuclear Physics)",
+      "title": "Giới thiệu Chuyên đề P5: Vật lý Hạt nhân & Phóng xạ",
       "selector": "#sec-header",
-      "en": "Welcome to Topic P5: Nuclear Physics. Deep within the core of every atom lies the nucleus, a dense source of tremendous energy and fundamental radiation. In this lesson, we study the Rutherford nuclear model and isotopes, examine the ionizing and penetrating properties of alpha, beta, and gamma radiation, master nuclear decay equations and half-life calculations, and explore industrial uses, medical applications, and radiation safety.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P5: Vật lý Hạt nhân. Nằm sâu tại trung tâm của mỗi nguyên tử là hạt nhân, nguồn chứa năng lượng khổng lồ và các loại bức xạ cơ bản. Trong bài học này, chúng ta sẽ khảo sát mô hình hạt nhân Rutherford và đồng vị phóng xạ, nghiên cứu khả năng ion hóa và đâm xuyên của bức xạ alpha, beta và gamma, làm chủ phương trình phân rã phóng xạ cùng phép tính chu kỳ bán rã, và tìm hiểu các ứng dụng y tế, công nghiệp cũng như quy tắc an toàn bức xạ.",
+      "en": "Welcome to Topic P5: Nuclear Physics. Nuclear physics explores the structure of the atomic nucleus and radioactive decay. In this topic, we examine the Rutherford alpha scattering experiment, nuclear notation, alpha, beta, and gamma radiation, decay equations, half-life, and safety precautions.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề P5: Vật lý Hạt nhân và Hiện tượng Phóng xạ. Vật lý hạt nhân nghiên cứu cấu trúc hạt nhân nguyên tử và các quá trình phân rã phóng xạ. Trong bài học này, chúng ta sẽ khảo sát thí nghiệm tán xạ hạt alpha của Rutherford, ký hiệu hạt nhân, ba tia phóng xạ alpha, beta, gamma, phương trình phân rã, chu kỳ bán rã và các quy tắc an toàn bức xạ.",
       "duration": 57.28,
       "startTime": 0.0,
       "endTime": 57.28,
@@ -59,10 +49,10 @@
     },
     {
       "id": "sec_atomic_model",
-      "title": "1. Mô hình Hạt nhân của Nguyên tử & Đồng vị (The Nuclear Model & Isotopes)",
+      "title": "1. Mẫu Nguyên tử Hạt nhân & Đồng vị (Nuclear Atom Model Overview)",
       "selector": "#sec-atomic-model",
-      "en": "The Rutherford alpha scattering experiment proved that the atom is mostly empty space, with virtually all its mass and positive charge concentrated in a tiny central nucleus. The nucleus contains positive protons and uncharged neutrons, collectively called nucleons. Around the nucleus orbit negative electrons. The atomic or proton number Z defines the chemical element. The nucleon or mass number A is the total number of protons plus neutrons. Isotopes are atoms of the same element having the same number of protons but different numbers of neutrons.",
-      "vi": "Thí nghiệm tán xạ hạt alpha của Rutherford đã chứng minh rằng nguyên tử hầu như là khoảng không rỗng, với hầu hết khối lượng và toàn bộ điện tích dương tập trung tại hạt nhân tí hon ở tâm. Hạt nhân gồm các proton mang điện tích dương và các neutron không mang điện, gọi chung là các nuclôn. Chuyển động xung quanh hạt nhân là các electron mang điện tích âm. Số hiệu nguyên tử Z là số proton quyết định nguyên tố hóa học. Số khối A là tổng số proton và neutron. Đồng vị là các nguyên tử của cùng một nguyên tố có cùng số proton nhưng khác nhau về số neutron.",
+      "en": "Section 1 reviews Rutherford's scattering experiment: Most alpha particles passed straight through gold foil, proving the atom is mostly empty space. A tiny fraction deflected at large angles, proving mass and positive charge are concentrated in a tiny dense central nucleus.",
+      "vi": "Mục một ôn lại thí nghiệm tán xạ hạt alpha của Rutherford: Hầu hết các hạt alpha xuyên thẳng qua lá vàng mỏng, chứng minh nguyên tử phần lớn là không gian rỗng. Một tỷ lệ rất nhỏ bị bật ngược lại với góc lớn, chứng minh toàn bộ khối lượng và điện tích dương tập trung ở một hạt nhân cực kỳ nhỏ bé và đậm đặc ở tâm.",
       "duration": 69.28,
       "startTime": 57.28,
       "endTime": 126.56,
@@ -70,10 +60,10 @@
     },
     {
       "id": "sec_radioactivity",
-      "title": "2. Hiện tượng Phóng xạ & Khả năng Đâm xuyên (Radioactivity & Penetration Properties)",
+      "title": "2. Tính chất Phóng xạ: Alpha, Beta & Gamma (Radiation Types Overview)",
       "selector": "#sec-radioactivity",
-      "en": "Unstable atomic nuclei undergo spontaneous and random radioactive decay by emitting radiation to achieve stability. Alpha particles are helium nuclei with two protons and two neutrons: they carry a plus two charge, have the highest ionizing power, but possess the weakest penetrating power, stopped by a single sheet of paper or a few centimeters of air. Beta particles are high-speed electrons emitted when a neutron turns into a proton: they carry a minus one charge, have moderate ionizing power, and are stopped by a few millimeters of aluminum. Gamma rays are high-frequency electromagnetic waves with zero charge and zero mass: they have the weakest ionizing power but extreme penetration, requiring thick lead or concrete to absorb.",
-      "vi": "Các hạt nhân không bền vững trải qua quá trình phân rã phóng xạ tự phát và ngẫu nhiên bằng cách phát ra bức xạ để đạt cấu hình bền. Hạt alpha là hạt nhân heli gồm hai proton và hai neutron: mang điện tích dương hai, có khả năng ion hóa mạnh nhất, nhưng khả năng đâm xuyên yếu nhất, bị chặn lại bởi một tờ giấy mỏng hoặc vài xentimét không khí. Hạt beta là các electron tốc độ cao phóng ra khi neutron biến thành proton: mang điện tích âm một, khả năng ion hóa trung bình, và bị chặn bởi vài milimét nhôm. Tia gamma là sóng điện từ tần số rất cao, không mang điện và không có khối lượng: có khả năng ion hóa yếu nhất nhưng khả năng đâm xuyên cực mạnh, đòi hỏi các khối chì dày hoặc tường bê tông dày để ngăn chặn.",
+      "en": "Section 2 compares radiation types: Alpha particles are helium nuclei with high ionizing power and low penetration stopped by paper. Beta particles are fast electrons with moderate penetration stopped by aluminium. Gamma rays are high-frequency EM waves stopped only by thick lead.",
+      "vi": "Mục hai so sánh ba loại tia phóng xạ: Hạt alpha là hạt nhân heli có khả năng ion hóa mạnh nhất nhưng khả năng đâm xuyên yếu nhất, bị chặn lại bởi một tờ giấy. Hạt beta là dòng electron chuyển động nhanh bị chặn bởi miếng nhôm vài milimét. Tia gamma là sóng điện từ tần số cao chỉ bị cản bớt bởi khối chì dày.",
       "duration": 86.01,
       "startTime": 126.56,
       "endTime": 212.57,
@@ -81,10 +71,10 @@
     },
     {
       "id": "sec_decay_halflife",
-      "title": "3. Phương trình Phân rã & Chu kỳ Bán rã (Decay Equations & Half-Life)",
+      "title": "3. Phương trình Phân rã & Chu kỳ Bán rã (Decay Equations & Half-Life Overview)",
       "selector": "#sec-decay-halflife",
-      "en": "In nuclear decay equations, total nucleon number and total proton number must balance on both sides. In alpha decay, nucleon number decreases by four and proton number decreases by two. In beta decay, nucleon number remains unchanged while proton number increases by one. Half-life is defined as the time taken for half the radioactive nuclei in a sample to decay, or the time taken for the activity to halve. Radioactive decay is completely unaffected by temperature, pressure, or chemical bonding. Always subtract background radiation before calculating corrected count rates from detector data.",
-      "vi": "Trong phương trình phân rã phóng xạ, tổng số khối và tổng số proton ở hai vế luôn luôn bảo toàn. Trong phân rã alpha, số khối giảm 4 đơn vị và số proton giảm 2 đơn vị. Trong phân rã beta, số khối giữ nguyên không đổi trong khi số proton tăng thêm 1 đơn vị. Chu kỳ bán rã được định nghĩa là thời gian để một nửa số hạt nhân phóng xạ ban đầu bị phân rã, hoặc thời gian để độ phóng xạ giảm đi một nửa. Quá trình phân rã phóng xạ hoàn toàn không bị ảnh hưởng bởi nhiệt độ, áp suất hay liên kết hóa học. Cần luôn trừ bức xạ nền tự nhiên trước khi tính tốc độ đếm thực từ dữ liệu máy đếm bức xạ.",
+      "en": "Section 3 balances nuclear decay equations where total nucleon number and proton number are conserved. Half-life is the time taken for half the radioactive nuclei in any sample to decay.",
+      "vi": "Mục ba hướng dẫn cân bằng phương trình phân rã hạt nhân bảo toàn số khối nucleon và số proton. Chu kỳ bán rã là khoảng thời gian cần thiết để một nửa số hạt nhân phóng xạ trong mẫu phân rã hết.",
       "duration": 75.88,
       "startTime": 212.57,
       "endTime": 288.45,
@@ -92,10 +82,10 @@
     },
     {
       "id": "sec_uses_safety",
-      "title": "4. Ứng dụng Thực tiễn & An toàn Bức xạ (Practical Uses & Safety Precautions)",
+      "title": "4. Ứng dụng Thực tiễn & An toàn Bức xạ (Uses & Safety Overview)",
       "selector": "#sec-uses-safety",
-      "en": "Radioactive isotopes have vital applications. Americium-241, an alpha emitter, is used in domestic smoke detectors. Beta emitters like strontium-90 monitor paper and metal foil thickness in factories. Gamma emitters like cobalt-60 sterilize medical equipment and treat cancerous tumors. Technetium-99m serves as a medical tracer because of its short six-hour half-life. Ionizing radiation damages living cell DNA, causing cell death or cancerous mutations. Safety precautions include using lead-lined shielding, handling radioactive sources with tongs, increasing distance, and minimizing exposure time.",
-      "vi": "Các đồng vị phóng xạ có nhiều ứng dụng quan trọng. Americium-241 phát hạt alpha dùng trong đầu báo khói gia đình. Nguồn phát hạt beta như stronti-90 giúp kiểm soát độ dày giấy và màng kim loại trong nhà máy tự động. Nguồn phát tia gamma như coban-60 khử trùng dụng cụ y tế và tiêu diệt tế bào ung thư trong xạ trị. Techneti-99m được dùng làm chất đánh dấu y học nhờ chu kỳ bán rã ngắn chỉ 6 giờ. Bức xạ ion hóa phá hủy cấu trúc DNA trong tế bào sống, gây chết tế bào hoặc đột biến gây ung thư. Quy tắc an toàn bao gồm sử dụng tấm chắn chì bảo vệ, gắp mẫu phóng xạ bằng kẹp dài, giữ khoảng cách xa và giảm tối thiểu thời gian phơi nhiễm.",
+      "en": "Section 4 details practical applications: Americium-241 in smoke detectors, Beta emitters for paper thickness control, and Gamma radiation for cancer radiotherapy and medical sterilisation. Safety precautions include lead shielding, forceps handling, and minimised exposure time.",
+      "vi": "Mục bốn tổng hợp các ứng dụng thực tế: Đồng vị Americium-241 trong đầu báo khói, nguồn phát hạt beta kiểm soát độ dày giấy công nghiệp, và tia gamma trong xạ trị tiêu diệt khối u và khử trùng y tế. Quy tắc an toàn gồm che chắn bằng chì, gắp bằng kẹp từ xa và hạn chế tối đa thời gian tiếp xúc.",
       "duration": 85.55,
       "startTime": 288.45,
       "endTime": 374.0,

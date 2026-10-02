@@ -2,39 +2,37 @@
   "lectureId": "ee4f94c2-382b-4dbb-aaf8-981e7b0d7223",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C2: Atoms elements and compounds",
-  "totalDuration": 251.13,
+  "totalDuration": 498.05,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề C2",
+      "selector": "#sec-header"
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+    "sec_periodic_table": {
+      "start": 1,
+      "end": 1,
+      "title": "Bảng tuần hoàn 20 Nguyên tố",
+      "selector": "#sec-periodic-table"
     },
     "sec_atomic_structure": {
-      "start": 1,
-      "end": 1
-    },
-    "sec-atomic-structure": {
-      "start": 1,
-      "end": 1
+      "start": 2,
+      "end": 5,
+      "title": "1. Cấu tạo Nguyên tử & Đồng vị",
+      "selector": "#sec-atomic-structure"
     },
     "sec_elements_compounds": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-elements-compounds": {
-      "start": 2,
-      "end": 2
+      "start": 6,
+      "end": 9,
+      "title": "2. Đơn chất, Hợp chất & Liên kết",
+      "selector": "#sec-elements-compounds"
     },
     "sec_lattices_macromolecules": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-lattices-macromolecules": {
-      "start": 3,
-      "end": 3
+      "start": 10,
+      "end": 12,
+      "title": "3. Mạng Tinh thể & Đại phân tử",
+      "selector": "#sec-lattices-macromolecules"
     }
   },
   "segments": [
@@ -42,45 +40,144 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề C2: Nguyên tử, Nguyên tố & Hợp chất",
       "selector": "#sec-header",
-      "en": "Welcome to Topic C2: Atoms, elements and compounds. Matter is constructed from atomic building blocks. In this comprehensive lesson, we decode subatomic particles and isotopes, distinguish elements, compounds, and mixtures, examine ionic and covalent bonding, and analyze giant covalent lattices and metallic structures.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C2: Nguyên tử, Nguyên tố và Hợp chất. Vật chất được cấu tạo từ các viên gạch nguyên tử. Trong bài học này, chúng ta sẽ khảo sát các hạt hạ nguyên tử và đồng vị, phân biệt đơn chất, hợp chất và hỗn hợp, làm chủ liên kết ion và cộng hóa trị, cùng mạng tinh thể khổng lồ và liên kết kim loại.",
+      "en": "Welcome to Topic C2: Atoms, elements and compounds. Matter is constructed from atomic building blocks. In this comprehensive lesson, we decode subatomic particles and isotopes, explore the periodic table, distinguish elements, compounds, and mixtures, examine ionic and covalent bonding, and analyze giant covalent lattices and metallic structures.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề C2: Nguyên tử, Nguyên tố và Hợp chất. Vật chất được cấu tạo từ các nguyên tử. Trong bài học này, chúng ta sẽ khảo sát hạt hạ nguyên tử và đồng vị, bảng tuần hoàn, phân biệt đơn chất, hợp chất và hỗn hợp, làm chủ liên kết ion và cộng hóa trị, cùng cấu trúc mạng tinh thể khổng lồ và kim loại.",
       "duration": 43.31,
       "startTime": 0.0,
       "endTime": 43.31,
       "audioUrl": "/audio/lectures/science/c2/intro.mp3"
     },
     {
-      "id": "sec_atomic_structure",
-      "title": "1. Cấu tạo Nguyên tử, Hạt Hạ nguyên tử & Đồng vị (Isotopes)",
-      "selector": "#sec-atomic-structure",
-      "en": "Section 1 details atomic architecture: An atom consists of a tiny dense central nucleus containing positively charged protons and neutral neutrons, surrounded by negatively charged electrons orbiting in energy shells. Proton number or atomic number identifies the element and specifies nuclear charge. Mass number or nucleon number is the total sum of protons plus neutrons. Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons, sharing identical chemical properties due to having the same electron configuration.",
-      "vi": "Mục một chi tiết hóa cấu tạo nguyên tử: Nguyên tử gồm một hạt nhân cực nhỏ đặc ở trung tâm chứa proton mang điện tích dương và neutron không mang điện, bao quanh bởi đám mây electron mang điện tích âm quay trên các lớp vỏ năng lượng. Số proton hay số hiệu nguyên tử Z đặc trưng cho nguyên tố hóa học. Số khối A là tổng số hạt nucleon (proton cộng neutron). Đồng vị (Isotopes) là các nguyên tử của cùng một nguyên tố có cùng số proton nhưng khác số neutron, có tính chất hóa học giống hệt nhau do có cùng cấu hình electron lớp ngoài cùng.",
-      "duration": 65.61,
+      "id": "sec_periodic_table",
+      "title": "🌐 IGCSE Periodic Table Hub (Bảng tuần hoàn 20 Nguyên tố)",
+      "selector": "#sec-periodic-table",
+      "en": "The Periodic Table arranges elements by increasing proton number. For Cambridge IGCSE, mastering the first 20 elements from Hydrogen to Calcium is essential, including their electron configurations and group properties.",
+      "vi": "Bảng tuần hoàn sắp xếp các nguyên tố theo số proton tăng dần. Với chương trình IGCSE, nắm vững 20 nguyên tố đầu tiên từ Hydrogen đến Calcium là bắt buộc, bao gồm cấu hình electron và tính chất của các nhóm.",
+      "duration": 28.24,
       "startTime": 43.31,
-      "endTime": 108.92,
+      "endTime": 71.55,
+      "audioUrl": "/audio/lectures/science/c2/sec_periodic_table.mp3"
+    },
+    {
+      "id": "sec_atomic_structure",
+      "title": "1. Cấu tạo Nguyên tử & Đồng vị (Atomic Structure & Isotopes Overview)",
+      "selector": "#sec-atomic-structure",
+      "en": "Section 1 details atomic architecture: An atom consists of a tiny dense nucleus containing protons and neutrons, surrounded by electrons in electron shells.",
+      "vi": "Mục một chi tiết hóa cấu tạo nguyên tử: Nguyên tử gồm hạt nhân trung tâm đặc chứa proton và neutron, được bao quanh bởi các electron chuyển động trên các lớp vỏ.",
+      "duration": 65.61,
+      "startTime": 71.55,
+      "endTime": 137.16,
       "audioUrl": "/audio/lectures/science/c2/sec_atomic_structure.mp3"
     },
     {
+      "id": "sec_subatomic_particles",
+      "title": "⚛️ Subatomic Particles (Hạt Hạ nguyên tử)",
+      "selector": "#sec-subatomic-particles",
+      "en": "Subatomic particle properties: Protons carry relative charge plus one and mass one. Neutrons carry zero charge and mass one. Electrons carry relative charge minus one and negligible mass of 1 over 1840.",
+      "vi": "Tính chất hạt hạ nguyên tử: Proton mang điện tích cộng một, khối lượng tương đối bằng một. Neutron không mang điện, khối lượng bằng một. Electron mang điện tích trừ một, khối lượng không đáng kể xấp xỉ một phần 1840.",
+      "duration": 30.42,
+      "startTime": 137.16,
+      "endTime": 167.58,
+      "audioUrl": "/audio/lectures/science/c2/sec_subatomic_particles.mp3"
+    },
+    {
+      "id": "sec_calculating_particles",
+      "title": "🧮 Calculating Particles & Notation (Tính toán Hạt & Ký hiệu)",
+      "selector": "#sec-calculating-particles",
+      "en": "Atomic notation: Proton number Z equals the number of protons and electrons in a neutral atom. Nucleon number A is the total number of protons plus neutrons. Neutrons equal A minus Z.",
+      "vi": "Ký hiệu nguyên tử: Số hiệu nguyên tử Z bằng số proton và bằng số electron trong nguyên tử trung hòa. Số khối A là tổng số proton và neutron. Do đó, số neutron bằng A trừ Z.",
+      "duration": 27.93,
+      "startTime": 167.58,
+      "endTime": 195.51,
+      "audioUrl": "/audio/lectures/science/c2/sec_calculating_particles.mp3"
+    },
+    {
+      "id": "sec_isotopes",
+      "title": "⚖️ Isotopes (Đồng vị)",
+      "selector": "#sec-isotopes",
+      "en": "Isotopes are atoms of the same element having the same number of protons but different numbers of neutrons. They exhibit identical chemical properties because they have the same outer shell electron configuration.",
+      "vi": "Đồng vị là các nguyên tử của cùng một nguyên tố có cùng số proton nhưng khác nhau về số neutron. Chúng có tính chất hóa học giống hệt nhau vì có cùng cấu hình electron lớp ngoài cùng.",
+      "duration": 23.56,
+      "startTime": 195.51,
+      "endTime": 219.07,
+      "audioUrl": "/audio/lectures/science/c2/sec_isotopes.mp3"
+    },
+    {
       "id": "sec_elements_compounds",
-      "title": "2. Đơn chất, Hợp chất, Hỗn hợp & Liên kết Hóa học",
+      "title": "2. Đơn chất, Hợp chất & Liên kết (Elements, Compounds & Bonding Overview)",
       "selector": "#sec-elements-compounds",
-      "en": "Section 2 distinguishes chemical categories and bonds: An Element is a pure substance composed of only one type of atom. A Compound consists of two or more different elements chemically bonded in fixed stoichiometric ratios. A Mixture contains substances physically intermingled without chemical bonds. Ionic bonding occurs between metals and non-metals via electrostatic attraction between oppositely charged ions formed by electron transfer. Covalent bonding occurs between non-metals via electrostatic attraction between shared pairs of electrons and adjacent nuclei.",
-      "vi": "Mục hai phân biệt các khái niệm hóa học và liên kết: Đơn chất (Element) là chất tinh khiết chỉ chứa một loại nguyên tử. Hợp chất (Compound) gồm hai hay nhiều nguyên tố hóa học liên kết với nhau theo tỷ lệ số học xác định. Hỗn hợp (Mixture) gồm các chất trộn lẫn vật lý mà không có liên kết hóa học. Liên kết ion hình thành giữa kim loại và phi kim qua lực hút tĩnh điện giữa các ion trái dấu sau khi chuyển giao electron. Liên kết cộng hóa trị hình thành giữa các phi kim nhờ lực hút tĩnh điện giữa cặp electron dùng chung và hạt nhân nguyên tử.",
+      "en": "Section 2 explores substances and chemical bonding: Distinguishing pure elements, chemically bonded compounds, and physical mixtures.",
+      "vi": "Mục hai tìm hiểu về các chất và liên kết hóa học: Phân biệt đơn chất tinh khiết, hợp chất liên kết hóa học và hỗn hợp vật lý.",
       "duration": 68.06,
-      "startTime": 108.92,
-      "endTime": 176.98,
+      "startTime": 219.07,
+      "endTime": 287.13,
       "audioUrl": "/audio/lectures/science/c2/sec_elements_compounds.mp3"
     },
     {
+      "id": "sec_elem_comp_mix",
+      "title": "🥗 Element, Compound & Mixture (Đơn chất, Hợp chất, Hỗn hợp)",
+      "selector": "#sec-elem-comp-mix",
+      "en": "An element contains only one type of atom. A compound contains two or more different elements chemically combined in fixed ratios. A mixture contains two or more substances physically mixed without chemical bonds and can be separated by physical methods.",
+      "vi": "Đơn chất chỉ chứa một loại nguyên tử. Hợp chất chứa từ hai nguyên tố khác nhau trở lên liên kết hóa học theo tỷ lệ cố định. Hỗn hợp chứa nhiều chất trộn lẫn vật lý không có liên kết hóa học và có thể tách rời bằng các phương pháp cơ học.",
+      "duration": 30.78,
+      "startTime": 287.13,
+      "endTime": 317.91,
+      "audioUrl": "/audio/lectures/science/c2/sec_elem_comp_mix.mp3"
+    },
+    {
+      "id": "sec_ionic_bonding",
+      "title": "⚡ Ionic Bonding (Liên kết Ion)",
+      "selector": "#sec-ionic-bonding",
+      "en": "Ionic bonding occurs between metals and non-metals via electron transfer. Metals lose electrons to form positive cations, while non-metals gain electrons to form negative anions, creating strong electrostatic attraction.",
+      "vi": "Liên kết ion xảy ra giữa kim loại và phi kim thông qua sự nhường nhận electron. Kim loại nhường electron tạo cation dương, phi kim nhận electron tạo anion âm, hút nhau bằng lực hút tĩnh điện rất mạnh.",
+      "duration": 27.78,
+      "startTime": 317.91,
+      "endTime": 345.69,
+      "audioUrl": "/audio/lectures/science/c2/sec_ionic_bonding.mp3"
+    },
+    {
+      "id": "sec_covalent_bonding",
+      "title": "🤝 Covalent Bonding (Liên kết Cộng hóa trị)",
+      "selector": "#sec-covalent-bonding",
+      "en": "Covalent bonding occurs between non-metal atoms via sharing pairs of electrons to achieve stable noble gas electron configurations.",
+      "vi": "Liên kết cộng hóa trị hình thành giữa các nguyên tử phi kim thông qua việc dùng chung các cặp electron để đạt cấu hình electron bền vững của khí hiếm.",
+      "duration": 16.74,
+      "startTime": 345.69,
+      "endTime": 362.43,
+      "audioUrl": "/audio/lectures/science/c2/sec_covalent_bonding.mp3"
+    },
+    {
       "id": "sec_lattices_macromolecules",
-      "title": "3. Mạng Tinh thể, Tinh thể Khổng lồ & Kim loại",
+      "title": "3. Cấu trúc Mạng Tinh thể & Đại phân tử (Lattices & Macromolecules Overview)",
       "selector": "#sec-lattices-macromolecules",
-      "en": "Section 3 compares structural lattices: Giant ionic lattices like sodium chloride feature alternating positive and negative ions held by strong electrostatic forces in all directions, yielding high melting points and electrical conductivity only when molten or aqueous. Giant covalent macromolecules like Diamond feature tetrahedral carbon lattices of immense hardness, whereas Graphite forms hexagonal planar layers with delocalized electrons that conduct electricity and slide easily. Metallic bonding consists of an orderly lattice of positive metal ions embedded in a sea of delocalized mobile electrons, conferring high electrical conductivity and malleability.",
-      "vi": "Mục ba so sánh các mạng tinh thể: Mạng tinh thể ion khổng lồ như muối ăn NaCl gồm các ion dương và âm xen kẽ hút nhau bằng lực tĩnh điện cực mạnh về mọi hướng, có nhiệt độ nóng chảy rất cao và chỉ dẫn điện khi ở trạng thái nóng chảy hoặc dung dịch. Tinh thể cộng hóa trị khổng lồ như Kim cương gồm mạng tứ diện carbon siêu bền cứng, trong khi Than chì (Graphite) gồm các lớp lục giác có electron tự do giúp dẫn điện và trượt êm dùng làm ruột bút chì. Liên kết kim loại gồm mạng tinh thể các ion dương kim loại ngâm trong biển electron tự do chuyển động hỗn loạn, tạo nên tính dẫn điện, dẫn nhiệt tuyệt vời và tính dát mỏng.",
+      "en": "Section 3 investigates giant structures: Metallic bonding and giant covalent macromolecules including diamond, graphite, and silicon dioxide.",
+      "vi": "Mục ba nghiên cứu cấu trúc mạng tinh thể khổng lồ: Liên kết kim loại và các đại phân tử cộng hóa trị như kim cương, than chì và silic đioxit.",
       "duration": 74.15,
-      "startTime": 176.98,
-      "endTime": 251.13,
+      "startTime": 362.43,
+      "endTime": 436.58,
       "audioUrl": "/audio/lectures/science/c2/sec_lattices_macromolecules.mp3"
+    },
+    {
+      "id": "sec_metallic_bonding",
+      "title": "🛡️ Metallic Bonding (Liên kết Kim loại)",
+      "selector": "#sec-metallic-bonding",
+      "en": "Metallic bonding is an electrostatic attraction between a regular lattice of positive metal ions and a sea of delocalised electrons, explaining high electrical conductivity and malleability.",
+      "vi": "Liên kết kim loại là lực hút tĩnh điện giữa mạng tinh thể ion dương kim loại và biển electron tự do di chuyển hỗn loạn, giải thích tính dẫn điện tốt và tính dễ dát mỏng của kim loại.",
+      "duration": 21.57,
+      "startTime": 436.58,
+      "endTime": 458.15,
+      "audioUrl": "/audio/lectures/science/c2/sec_metallic_bonding.mp3"
+    },
+    {
+      "id": "sec_giant_covalent",
+      "title": "💎 Giant Covalent: Diamond vs Graphite vs SiO₂ (Đại phân tử Khổng lồ)",
+      "selector": "#sec-giant-covalent",
+      "en": "In Diamond, each carbon atom forms 4 strong covalent bonds in a tetrahedral lattice, making it extremely hard. In Graphite, each carbon bonds to 3 others in layers with delocalised electrons, making it soft, slippery, and electrically conductive. Silicon dioxide has a similar rigid tetrahedral structure to diamond.",
+      "vi": "Trong Kim cương, mỗi nguyên tử carbon tạo 4 liên kết cộng hóa trị tứ diện rất cứng. Trong Than chì, mỗi carbon chỉ liên kết với 3 carbon khác tạo thành các lớp trượt với electron tự do, giúp than chì mềm và dẫn điện tốt. Silic đioxit có mạng tinh thể tứ diện tương tự như kim cương.",
+      "duration": 39.9,
+      "startTime": 458.15,
+      "endTime": 498.05,
+      "audioUrl": "/audio/lectures/science/c2/sec_giant_covalent.mp3"
     }
   ]
 }

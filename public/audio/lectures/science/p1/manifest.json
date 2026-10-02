@@ -1,80 +1,62 @@
 {
   "lectureId": "690ff013-5d01-4c1e-8546-25b3cd056e64",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "P1: Motion, forces & energy",
-  "totalDuration": 586.26,
+  "totalDuration": 769.01,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0
-    },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+      "end": 0,
+      "title": "Giới thiệu Chuyên đề P1",
+      "selector": "#sec-header"
     },
     "sec_quantities": {
       "start": 1,
-      "end": 1
-    },
-    "sec-quantities": {
-      "start": 1,
-      "end": 1
+      "end": 3,
+      "title": "1. Đại lượng Vật lý & Đo lường",
+      "selector": "#sec-quantities"
     },
     "sec_kinematics": {
-      "start": 2,
-      "end": 2
-    },
-    "sec-kinematics": {
-      "start": 2,
-      "end": 2
+      "start": 4,
+      "end": 6,
+      "title": "2. Đồ thị Động học & Chuyển động",
+      "selector": "#sec-kinematics"
     },
     "sec_density": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-density": {
-      "start": 3,
-      "end": 3
+      "start": 7,
+      "end": 8,
+      "title": "3. Khối lượng, Trọng lượng & Khối lượng Riêng",
+      "selector": "#sec-density"
     },
     "sec_forces": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-forces": {
-      "start": 4,
-      "end": 4
+      "start": 9,
+      "end": 10,
+      "title": "4. Lực, Momen & Áp suất",
+      "selector": "#sec-forces"
     },
     "sec_energy_stores": {
-      "start": 5,
-      "end": 5
-    },
-    "sec-energy-stores": {
-      "start": 5,
-      "end": 5
+      "start": 11,
+      "end": 11,
+      "title": "5. Kho Năng lượng & Đường truyền",
+      "selector": "#sec-energy-stores"
     },
     "sec_ke_gpe": {
-      "start": 6,
-      "end": 6
-    },
-    "sec-ke-gpe": {
-      "start": 6,
-      "end": 6
+      "start": 12,
+      "end": 12,
+      "title": "6. Động năng & Thế năng",
+      "selector": "#sec-ke-gpe"
     },
     "sec_work_power": {
-      "start": 7,
-      "end": 7
-    },
-    "sec-work-power": {
-      "start": 7,
-      "end": 7
+      "start": 13,
+      "end": 13,
+      "title": "7. Công, Công suất & Hiệu suất",
+      "selector": "#sec-work-power"
     },
     "sec_energy_resources": {
-      "start": 8,
-      "end": 8
-    },
-    "sec-energy-resources": {
-      "start": 8,
-      "end": 8
+      "start": 14,
+      "end": 14,
+      "title": "8. So sánh Nguồn Năng lượng",
+      "selector": "#sec-energy-resources"
     }
   },
   "segments": [
@@ -82,8 +64,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề P1: Chuyển động, Lực & Năng lượng",
       "selector": "#sec-header",
-      "en": "Welcome to Topic P1: Motion, Forces and Energy, the foundational pillar of IGCSE Physics. In this comprehensive module, we study physical measurement techniques, analyze motion and kinematics graphs, master density and Newton's laws of force, explore Hooke's law, and examine energy stores, kinetic and gravitational potential energy, work, power, and global energy resources.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P1: Chuyển động, Lực và Năng lượng, trụ cột nền tảng của Vật lý IGCSE. Trong bài giảng này, chúng ta sẽ khảo sát các phương pháp đo lường đại lượng vật lý, phân tích đồ thị chuyển động, làm chủ khối lượng riêng và các định luật Newton về lực, định luật Hooke, cùng các dạng dự trữ năng lượng, thế năng trọng trường, công, công suất và các nguồn tài nguyên năng lượng.",
+      "en": "Welcome to Topic P1: Motion, Forces and Energy. Classical mechanics describes how physical quantities are measured, how objects accelerate and collide, how forces cause extension and turning effects, and how energy is stored, transferred, and conserved throughout the universe.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề P1: Chuyển động, Lực và Năng lượng. Cơ học cổ điển nghiên cứu các phép đo đại lượng vật lý, quy luật chuyển động và va chạm, tác dụng làm biến dạng và quay của lực, cùng các dạng dự trữ, truyền tải và bảo toàn năng lượng trong tự nhiên.",
       "duration": 48.95,
       "startTime": 0.0,
       "endTime": 48.95,
@@ -91,90 +73,156 @@
     },
     {
       "id": "sec_quantities",
-      "title": "1. Đại lượng Vật lý & Phương pháp Đo lường (Physical Quantities & Measurement)",
+      "title": "1. Đại lượng Vật lý & Kỹ thuật Đo lường (Physical Quantities Overview)",
       "selector": "#sec-quantities",
-      "en": "Physical quantities are divided into scalars and vectors. Scalars have magnitude only, such as mass, distance, speed, and time. Vectors have both magnitude and direction, such as weight, displacement, velocity, and force. To measure lengths accurately, we use a ruler for millimeters, vernier calipers for inner and outer diameters down to 0.1 millimeters, and a micrometer screw gauge for fine wires down to 0.01 millimeters. Time is measured using digital stopwatches, often taking multiple oscillations of a pendulum and dividing by the count to reduce human reaction error.",
-      "vi": "Đại lượng vật lý được chia thành đại lượng vô hướng và đại lượng có hướng (vectơ). Đại lượng vô hướng chỉ có độ lớn, ví dụ như khối lượng, quãng đường, tốc độ và thời gian. Đại lượng vectơ vừa có độ lớn vừa có hướng, ví dụ như trọng lượng, độ dịch chuyển, vận tốc và lực. Để đo chiều dài chính xác, ta dùng thước kẻ cho milimét, thước cặp kẹp đường kính trong và ngoài chính xác đến 0,1 milimét, và thước pan-me đo dây mảnh đến 0,01 milimét. Thời gian đo bằng đồng hồ bấm giây, thường đo nhiều chu kỳ dao động của con lắc rồi chia ra để triệt tiêu sai số phản xạ con người.",
+      "en": "Section 1 covers physical measurement: Using rulers, measuring cylinders, and stopwatches accurately while avoiding parallax error. It also contrasts scalar quantities having magnitude only with vector quantities having both magnitude and direction.",
+      "vi": "Mục một bao gồm kỹ thuật đo lường vật lý: Sử dụng thước thẳng, ống đong và đồng hồ bấm giây chính xác, tránh lỗi thị sai. Đồng thời phân biệt đại lượng vô hướng chỉ có độ lớn với đại lượng vecto có cả độ lớn và hướng.",
       "duration": 75.14,
       "startTime": 48.95,
       "endTime": 124.09,
       "audioUrl": "/audio/lectures/science/p1/sec_quantities.mp3"
     },
     {
-      "id": "sec_kinematics",
-      "title": "2. Động học & Phân tích Đồ thị Chuyển động (Motion & Kinematics Graphs)",
-      "selector": "#sec-kinematics",
-      "en": "Speed is defined as distance divided by time, whereas acceleration is the rate of change of velocity: delta v divided by delta t. On a distance-time graph, the gradient represents speed, and a horizontal line represents a stationary object. On a speed-time graph, the gradient represents acceleration, a horizontal line represents constant speed, and crucially, the area under the line represents the total distance travelled. When falling under gravity, air resistance increases with speed until it equals weight, resulting in zero resultant force and constant terminal velocity.",
-      "vi": "Tốc độ được định nghĩa bằng quãng đường chia thời gian, còn gia tốc là tốc độ thay đổi của vận tốc: delta v chia delta t. Trên đồ thị quãng đường - thời gian, độ dốc biểu diễn tốc độ, và đường nằm ngang biểu thị vật đứng yên. Trên đồ thị vận tốc - thời gian, độ dốc biểu diễn gia tốc, đường nằm ngang biểu diễn vận tốc không đổi, và đặc biệt diện tích dưới đường đồ thị biểu diễn tổng quãng đường đi được. Khi rơi tự do dưới trọng lực, lực cản không khí tăng theo tốc độ cho đến khi cân bằng với trọng lượng, tạo ra hợp lực bằng không và vật đạt vận tốc giới hạn không đổi.",
-      "duration": 68.22,
+      "id": "sec_measuring_instruments",
+      "title": "📏 Measuring Instruments & Multiples (Dụng cụ Đo & Đo Bội số)",
+      "selector": "#sec-measuring-instruments",
+      "en": "To measure tiny quantities accurately, measure a large multiple and divide. For example, measure the thickness of 500 sheets of paper and divide by 500, or time 20 pendulum oscillations and divide by 20 to reduce reaction time error.",
+      "vi": "Để đo các đại lượng rất nhỏ một cách chính xác, hãy đo một tập hợp nhiều lần rồi chia đều. Ví dụ đo độ dày của 500 trang giấy rồi chia cho 500, hoặc bấm thời gian 20 dao động con lắc rồi chia cho 20 để giảm thiểu sai số thời gian phản ứng.",
+      "duration": 30.66,
       "startTime": 124.09,
-      "endTime": 192.31,
+      "endTime": 154.75,
+      "audioUrl": "/audio/lectures/science/p1/sec_measuring_instruments.mp3"
+    },
+    {
+      "id": "sec_scalars_vectors",
+      "title": "🧭 Scalars vs Vectors (Vô hướng vs Vecto)",
+      "selector": "#sec-scalars-vectors",
+      "en": "Scalars have magnitude only: distance, speed, time, mass, energy, and temperature. Vectors have both magnitude and direction: force, weight, velocity, acceleration, and gravitational field strength.",
+      "vi": "Đại lượng vô hướng chỉ có độ lớn: quãng đường, tốc độ, thời gian, khối lượng, năng lượng và nhiệt độ. Đại lượng vecto có cả độ lớn và phương chiều: lực, trọng lượng, vận tốc, gia tốc và cường độ trọng trường.",
+      "duration": 30.21,
+      "startTime": 154.75,
+      "endTime": 184.96,
+      "audioUrl": "/audio/lectures/science/p1/sec_scalars_vectors.mp3"
+    },
+    {
+      "id": "sec_kinematics",
+      "title": "2. Đồ thị Động học & Chuyển động (Motion & Kinematics Graphs Overview)",
+      "selector": "#sec-kinematics",
+      "en": "Section 2 investigates speed, velocity, and acceleration. On a distance-time graph, gradient represents speed. On a speed-time graph, gradient represents acceleration, and the area under the graph equals distance travelled.",
+      "vi": "Mục hai nghiên cứu tốc độ, vận tốc và gia tốc. Trên đồ thị quãng đường - thời gian, độ dốc biểu diễn tốc độ. Trên đồ thị tốc độ - thời gian, độ dốc biểu diễn gia tốc và diện tích hình phẳng dưới đồ thị biểu diễn quãng đường đi được.",
+      "duration": 68.22,
+      "startTime": 184.96,
+      "endTime": 253.18,
       "audioUrl": "/audio/lectures/science/p1/sec_kinematics.mp3"
     },
     {
+      "id": "sec_kinematics_graphs",
+      "title": "📈 Graph Interpretation & Area Under Curve (Phân tích Đồ thị)",
+      "selector": "#sec-kinematics-graphs",
+      "en": "Key rules for speed-time graphs: A horizontal line indicates constant speed with zero acceleration. A constant upward slope indicates uniform acceleration. The area under the line, calculated by summing triangles and rectangles, gives total distance travelled.",
+      "vi": "Quy tắc vàng cho đồ thị tốc độ - thời gian: Đường nằm ngang biểu thị tốc độ không đổi với gia tốc bằng 0. Đoạn thẳng dốc lên biểu thị gia tốc không đổi. Diện tích bên dưới đồ thị, tính bằng tổng diện tích các hình tam giác và hình chữ nhật, chính là tổng quãng đường di chuyển.",
+      "duration": 34.74,
+      "startTime": 253.18,
+      "endTime": 287.92,
+      "audioUrl": "/audio/lectures/science/p1/sec_kinematics_graphs.mp3"
+    },
+    {
+      "id": "sec_free_fall",
+      "title": "🪂 Free Fall & Terminal Velocity (Rơi Tự do & Tốc độ Giới hạn)",
+      "selector": "#sec-free-fall",
+      "en": "In a vacuum, all falling objects accelerate downwards at 9.8 meters per second squared due to gravity. In air, air resistance opposes weight. As speed increases, drag increases until upward drag equals downward weight, resulting in zero net force and constant terminal velocity.",
+      "vi": "Trong chân không, mọi vật rơi tự do đều tăng tốc xuống dưới với gia tốc 9.8 mét trên giây bình phương do trọng lực. Trong không khí, lực cản không khí cản trở chuyển động. Khi tốc độ tăng, lực cản tăng theo cho đến khi lực cản hướng lên cân bằng với trọng lượng hướng xuống, hợp lực bằng 0 và vật đạt tốc độ giới hạn không đổi.",
+      "duration": 38.61,
+      "startTime": 287.92,
+      "endTime": 326.53,
+      "audioUrl": "/audio/lectures/science/p1/sec_free_fall.mp3"
+    },
+    {
       "id": "sec_density",
-      "title": "3. Khối lượng, Trọng lượng & Khối lượng riêng (Mass, Weight & Density)",
+      "title": "3. Khối lượng, Trọng lượng & Khối lượng Riêng (Mass, Weight & Density Overview)",
       "selector": "#sec-density",
-      "en": "Mass is the measure of the quantity of matter in an object, measured in kilograms, and remains unchanged anywhere in the universe. Weight is the gravitational force acting on that mass: W equals m times g, where gravitational field strength g is approximately 9.8 Newtons per kilogram on Earth. Density is mass per unit volume: rho equals m divided by V. For regular solids, volume is calculated from dimensions. For irregular objects, we submerge them in water in a measuring cylinder; the volume of displaced liquid equals the volume of the object.",
-      "vi": "Khối lượng là thước đo lượng chất chứa trong một vật, đo bằng kilôgam, và không thay đổi ở bất kỳ nơi nào trong vũ trụ. Trọng lượng là lực hấp dẫn tác dụng lên khối lượng đó: W bằng m nhân g, trong đó cường độ trường hấp dẫn g xấp xỉ 9,8 Newton trên kilôgam trên Trái Đất. Khối lượng riêng là khối lượng trên một đơn vị thể tích: rho bằng m chia V. Với vật rắn thông thường, thể tích tính từ kích thước hình học. Với vật rắn không đều, ta nhúng ngập vào ống đong chứa nước; thể tích nước dâng lên đúng bằng thể tích của vật.",
+      "en": "Section 3 defines mass as the measure of matter in a body, and weight as the gravitational force acting on that mass: Weight equals mass times gravitational field strength g.",
+      "vi": "Mục ba định nghĩa khối lượng là lượng vật chất tạo nên vật thể, và trọng lượng là lực hấp dẫn tác dụng lên khối lượng đó: Trọng lượng bằng khối lượng nhân cường độ trọng trường g.",
       "duration": 68.42,
-      "startTime": 192.31,
-      "endTime": 260.73,
+      "startTime": 326.53,
+      "endTime": 394.95,
       "audioUrl": "/audio/lectures/science/p1/sec_density.mp3"
     },
     {
+      "id": "sec_density_calc",
+      "title": "⚖️ Density Determination (Xác định Khối lượng Riêng)",
+      "selector": "#sec-density-calc",
+      "en": "Density rho equals mass divided by volume. For irregular solid objects, volume is determined using the displacement method in a measuring cylinder containing water.",
+      "vi": "Khối lượng riêng rho bằng khối lượng chia thể tích. Đối với vật thể rắn có hình dạng bất kỳ, thể tích được đo bằng phương pháp choán chỗ chất lỏng trong ống đong chứa nước.",
+      "duration": 21.3,
+      "startTime": 394.95,
+      "endTime": 416.25,
+      "audioUrl": "/audio/lectures/science/p1/sec_density_calc.mp3"
+    },
+    {
       "id": "sec_forces",
-      "title": "4. Lực, Định luật Hooke, Mômen & Áp suất (Forces, Hooke's Law, Moments & Pressure)",
+      "title": "4. Lực, Định luật Hooke, Momen & Áp suất (Forces, Moments & Pressure Overview)",
       "selector": "#sec-forces",
-      "en": "Forces can change the size, shape, and motion of a body. According to Newton's second law, resultant force F equals mass times acceleration: F equals m a. Hooke's law states that extension is directly proportional to force applied: F equals k x, up to the limit of proportionality. The moment of a force is its turning effect: moment equals force times perpendicular distance from the pivot. For an object in rotational equilibrium, total clockwise moments equal total anticlockwise moments. Pressure is force applied per unit area: P equals F divided by A, measured in Pascals.",
-      "vi": "Lực có thể làm thay đổi kích thước, hình dạng và chuyển động của vật. Theo định luật II Newton, hợp lực F bằng khối lượng nhân gia tốc: F bằng m nhân a. Định luật Hooke phát biểu rằng độ biến dạng tỉ lệ thuận với lực tác dụng: F bằng k x, cho đến giới hạn đàn hồi. Mômen lực là tác dụng làm quay: mômen bằng lực nhân khoảng cách vuông góc từ trục quay. Khi một vật ở trạng thái cân bằng quay, tổng mômen cùng chiều kim đồng hồ bằng tổng mômen ngược chiều. Áp suất là lực tác dụng vuông góc trên một đơn vị diện tích: P bằng F chia A, đo bằng Pascal.",
+      "en": "Section 4 examines forces: Resultant force equals mass times acceleration (F = ma). Hooke's law states that force is directly proportional to extension up to the limit of proportionality (F = kx).",
+      "vi": "Mục bốn phân tích các loại lực: Hợp lực bằng khối lượng nhân gia tốc theo định luật hai Newton (F = ma). Định luật Hooke khẳng định lực kéo tỉ lệ thuận với độ dãn của lò xo cho đến giới hạn đàn hồi (F = kx).",
       "duration": 70.89,
-      "startTime": 260.73,
-      "endTime": 331.62,
+      "startTime": 416.25,
+      "endTime": 487.14,
       "audioUrl": "/audio/lectures/science/p1/sec_forces.mp3"
     },
     {
+      "id": "sec_moments_pressure",
+      "title": "⚙️ Moments & Pressure (Momen Lực & Áp suất)",
+      "selector": "#sec-moments-pressure",
+      "en": "The moment of a force equals force times perpendicular distance to pivot. For equilibrium, clockwise moments equal anticlockwise moments. Pressure equals force divided by contact area.",
+      "vi": "Momen của lực bằng lực nhân khoảng cách vuông góc từ giá của lực đến trục quay. Ở trạng thái cân bằng, tổng momen quay theo chiều kim đồng hồ bằng tổng momen quay ngược chiều. Áp suất bằng áp lực chia cho diện tích tiếp xúc.",
+      "duration": 27.23,
+      "startTime": 487.14,
+      "endTime": 514.37,
+      "audioUrl": "/audio/lectures/science/p1/sec_moments_pressure.mp3"
+    },
+    {
       "id": "sec_energy_stores",
-      "title": "5. Các Dạng Dự trữ Năng lượng & Đường truyền (Energy Stores & Transfer Pathways)",
+      "title": "5. Các Dạng Năng lượng & Đường truyền (Energy Stores & Pathways Overview)",
       "selector": "#sec-energy-stores",
-      "en": "The principle of conservation of energy states that energy cannot be created or destroyed, only transferred from one store to another. The primary energy stores include kinetic, gravitational potential, chemical, elastic, nuclear, thermal, electrostatic, and magnetic stores. Energy transfers between these stores via four main pathways: mechanically by forces doing work, electrically by moving charges, by heating through temperature differences, and by radiation through light or sound waves.",
-      "vi": "Định luật bảo toàn năng lượng khẳng định năng lượng không thể tự sinh ra hay tự mất đi, mà chỉ chuyển hóa từ dạng này sang dạng khác. Các dạng dự trữ năng lượng chính bao gồm: động năng, thế năng hấp dẫn, hóa năng, thế năng đàn hồi, năng lượng hạt nhân, nhiệt năng, năng lượng tĩnh điện và từ trường. Năng lượng được truyền giữa các kho chứa qua bốn con đường chính: cơ học do lực sinh công, điện học do dòng điện di chuyển, truyền nhiệt do chênh lệch nhiệt độ, và bức xạ qua sóng ánh sáng hoặc âm thanh.",
+      "en": "Section 5 details eight energy stores: kinetic, gravitational, chemical, elastic, nuclear, electrostatic, magnetic, and thermal. Energy is transferred between stores via mechanical work, electrical work, heating, and radiation.",
+      "vi": "Mục năm phân loại tám kho dự trữ năng lượng: động năng, thế năng trọng trường, hóa năng, thế năng đàn hồi, năng lượng hạt nhân, tĩnh điện, từ trường và nhiệt năng. Năng lượng luân chuyển qua bốn con đường: công cơ học, công điện, truyền nhiệt và bức xạ.",
       "duration": 60.38,
-      "startTime": 331.62,
-      "endTime": 392.0,
+      "startTime": 514.37,
+      "endTime": 574.75,
       "audioUrl": "/audio/lectures/science/p1/sec_energy_stores.mp3"
     },
     {
       "id": "sec_ke_gpe",
-      "title": "6. Động năng & Thế năng Trọng trường (Kinetic & Gravitational Potential Energy)",
+      "title": "6. Động năng & Thế năng Trọng trường (Kinetic & Gravitational Energy)",
       "selector": "#sec-ke-gpe",
-      "en": "Kinetic energy is the energy of a moving object, given by the formula E k equals half m v squared, where m is mass in kilograms and v is speed in meters per second. Notice that doubling speed quadruples kinetic energy. Gravitational potential energy is energy stored due to height in a gravitational field: Delta E p equals m g Delta h, where h is vertical height change. In ideal situations without friction, loss of gravitational potential energy equals gain in kinetic energy, as seen in rollercoasters and falling pendulums.",
-      "vi": "Động năng là năng lượng của một vật chuyển động, được tính bằng công thức E k bằng một nửa m v bình phương, trong đó m là khối lượng tính bằng kg và v là vận tốc tính bằng mét trên giây. Lưu ý rằng khi vận tốc tăng gấp đôi thì động năng tăng gấp bốn lần. Thế năng hấp dẫn là năng lượng dự trữ do độ cao trong trường trọng lực: Delta E p bằng m g Delta h, với h là độ cao thẳng đứng. Trong điều kiện lý tưởng không có ma sát, độ giảm thế năng trọng trường chuyển hóa hoàn toàn thành độ tăng động năng, như trong tàu lượn siêu tốc và con lắc đơn.",
+      "en": "Section 6 calculates mechanical energy: Kinetic energy equals half mass times velocity squared. Gravitational potential energy equals mass times g times change in height.",
+      "vi": "Mục sáu tính toán cơ năng: Động năng bằng một nửa khối lượng nhân bình phương vận tốc. Thế năng trọng trường bằng khối lượng nhân g nhân độ cao thay đổi.",
       "duration": 66.95,
-      "startTime": 392.0,
-      "endTime": 458.95,
+      "startTime": 574.75,
+      "endTime": 641.7,
       "audioUrl": "/audio/lectures/science/p1/sec_ke_gpe.mp3"
     },
     {
       "id": "sec_work_power",
-      "title": "7. Công cơ học, Công suất & Hiệu suất (Work, Power & Efficiency)",
+      "title": "7. Công, Công suất & Hiệu suất (Work, Power & Efficiency Overview)",
       "selector": "#sec-work-power",
-      "en": "Work is done when a force moves an object through a distance in the direction of the force: W equals F times d, measured in Joules. Power is the rate of doing work or transferring energy: P equals W divided by t, measured in Watts or Joules per second. No mechanical system is 100 percent efficient because energy is dissipated as thermal energy due to friction. Percentage efficiency equals useful energy output divided by total energy input, multiplied by 100 percent.",
-      "vi": "Công cơ học được sinh ra khi một lực làm vật dịch chuyển một quãng đường theo phương của lực: W bằng F nhân d, đo bằng Jun. Công suất là tốc độ thực hiện công hay tốc độ truyền năng lượng: P bằng W chia cho t, đo bằng Oát (Watt) hoặc Jun trên giây. Không có hệ cơ học nào đạt hiệu suất 100% vì năng lượng luôn bị tiêu hao thành nhiệt năng do ma sát. Hiệu suất phần trăm bằng năng lượng đầu ra có ích chia cho tổng năng lượng đầu vào, nhân với 100%.",
+      "en": "Section 7 establishes: Work done equals force times distance in the direction of force. Power is the rate of transferring energy or doing work. Efficiency equals useful energy output divided by total energy input, expressed as a percentage.",
+      "vi": "Mục bảy thiết lập: Công cơ học bằng lực nhân quãng đường dịch chuyển theo phương của lực. Công suất là tốc độ thực hiện công hay tốc độ tiêu thụ năng lượng. Hiệu suất bằng năng lượng có ích sinh ra chia cho tổng năng lượng đầu vào, tính theo phần trăm.",
       "duration": 58.89,
-      "startTime": 458.95,
-      "endTime": 517.84,
+      "startTime": 641.7,
+      "endTime": 700.59,
       "audioUrl": "/audio/lectures/science/p1/sec_work_power.mp3"
     },
     {
       "id": "sec_energy_resources",
-      "title": "8. Đánh giá So sánh Nguồn Tài nguyên Năng lượng (Energy Resources Comparison)",
+      "title": "8. Nguồn Năng lượng Tái tạo & Không tái tạo (Energy Resources Overview)",
       "selector": "#sec-energy-resources",
-      "en": "Global energy resources are categorized into non-renewable and renewable sources. Non-renewable resources like coal, oil, natural gas, and uranium are finite, reliable, but emit greenhouse gases or create hazardous radioactive waste. Renewable resources like solar, wind, hydroelectric, tidal, and geothermal energy are replenished naturally and produce zero carbon emissions during operation. However, wind and solar are weather-dependent and intermittent, requiring large land areas and energy storage systems to maintain grid stability.",
-      "vi": "Các nguồn tài nguyên năng lượng trên thế giới được chia thành nguồn không tái tạo và nguồn tái tạo. Nguồn không tái tạo như than đá, dầu mỏ, khí tự nhiên và uranium là hữu hạn, độ tin cậy cung cấp cao, nhưng phát thải khí nhà kính hoặc tạo chất thải phóng xạ nguy hại. Các nguồn tái tạo như năng lượng mặt trời, gió, thủy điện, thủy triều và địa nhiệt được bổ sung tự nhiên và không phát thải carbon khi vận hành. Tuy nhiên, điện gió và điện mặt trời phụ thuộc vào thời tiết và gián đoạn, đòi hỏi diện tích lớn và hệ thống lưu trữ điện để duy trì ổn định lưới điện.",
+      "en": "Section 8 compares energy sources: Fossil fuels and nuclear are non-renewable reliable sources with high environmental impact. Solar, wind, hydroelectric, and tidal are clean renewable sources derived mostly from the Sun's radiation.",
+      "vi": "Mục tám so sánh các nguồn năng lượng: Nhiên liệu hóa thạch và hạt nhân là nguồn không tái tạo có độ ổn định cao nhưng tác động đến môi trường. Năng lượng mặt trời, gió, thủy điện và thủy triều là các nguồn năng lượng tái tạo sạch mà phần lớn có nguồn gốc từ bức xạ của Mặt Trời.",
       "duration": 68.42,
-      "startTime": 517.84,
-      "endTime": 586.26,
+      "startTime": 700.59,
+      "endTime": 769.01,
       "audioUrl": "/audio/lectures/science/p1/sec_energy_resources.mp3"
     }
   ]
