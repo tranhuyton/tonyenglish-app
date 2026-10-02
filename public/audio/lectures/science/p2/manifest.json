@@ -3,24 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P2: Thermal physics",
   "totalDuration": 288.37,
-  "majorSections": [
-    {
-      "title": "Giới thiệu P2",
-      "start": 0.0
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "1. Mô hình Động học Hạt",
-      "start": 0.0
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "2. Giãn nở Nhiệt & Bay hơi",
-      "start": 0.0
+    "sec_kinetic_model": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "3. Ba Cơ chế Truyền Nhiệt",
-      "start": 0.0
+    "sec-kinetic-model": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_expansion": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-expansion": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_heat_transfer": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-heat-transfer": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

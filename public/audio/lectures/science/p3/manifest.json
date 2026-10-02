@@ -3,32 +3,56 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P3: Waves",
   "totalDuration": 468.28,
-  "majorSections": [
-    {
-      "title": "Giới thiệu P3",
-      "start": 0.0
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "1. Tính chất Chung của Sóng",
-      "start": 0.0
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "2. Phương trình Sóng",
-      "start": 0.0
+    "sec_wave_properties": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "3. Quang học & Khúc xạ",
-      "start": 0.0
+    "sec-wave-properties": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "4. Thang Sóng Điện từ",
-      "start": 0.0
+    "sec_wave_equation": {
+      "start": 2,
+      "end": 2
     },
-    {
-      "title": "5. Sóng Âm & Tiếng vang",
-      "start": 0.0
+    "sec-wave-equation": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_light": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-light": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_em_spectrum": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-em-spectrum": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_sound": {
+      "start": 5,
+      "end": 5
+    },
+    "sec-sound": {
+      "start": 5,
+      "end": 5
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

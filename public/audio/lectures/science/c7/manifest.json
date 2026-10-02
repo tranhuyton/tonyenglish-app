@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C7: Acids bases and salts",
   "totalDuration": 258.64,
-  "majorSections": [
-    {
-      "id": "sec_acids_bases",
-      "title": "1. Khái niệm Axit, Bazơ & Thang đo pH"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_acid_reactions",
-      "title": "2. Ba Phản ứng Đặc trưng của Axit"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_salt_preparation",
-      "title": "3. Phương pháp Điều chế Muối"
+    "sec_acids_bases": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-acids-bases": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_acid_reactions": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-acid-reactions": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_salt_preparation": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-salt-preparation": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

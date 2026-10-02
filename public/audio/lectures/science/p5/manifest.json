@@ -3,28 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P5: Nuclear physics",
   "totalDuration": 374.0,
-  "majorSections": [
-    {
-      "title": "Giới thiệu P5",
-      "start": 0.0
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "1. Mô hình Hạt nhân & Đồng vị",
-      "start": 0.0
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "2. Hiện tượng Phóng xạ",
-      "start": 0.0
+    "sec_atomic_model": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "3. Phân rã & Chu kỳ Bán rã",
-      "start": 0.0
+    "sec-atomic-model": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "4. Ứng dụng & An toàn Bức xạ",
-      "start": 0.0
+    "sec_radioactivity": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-radioactivity": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_decay_halflife": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-decay-halflife": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_uses_safety": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-uses-safety": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

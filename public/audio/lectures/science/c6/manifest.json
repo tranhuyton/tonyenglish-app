@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C6: Chemical reactions",
   "totalDuration": 313.79,
-  "majorSections": [
-    {
-      "id": "sec_physical_chemical",
-      "title": "1. Biến đổi Vật lý vs Biến đổi Hóa học"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_rate_of_reaction",
-      "title": "2. Tốc độ Phản ứng & Thuyết Va chạm"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_reversible_equilibrium",
-      "title": "3. Phản ứng Thuận nghịch & Cân bằng Động"
+    "sec_physical_chemical": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_redox_reactions",
-      "title": "4. Bản chất Phản ứng Oxy hóa - Khử (Redox)"
+    "sec-physical-chemical": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_rate_of_reaction": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-rate-of-reaction": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_reversible_equilibrium": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-reversible-equilibrium": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_redox_reactions": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-redox-reactions": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

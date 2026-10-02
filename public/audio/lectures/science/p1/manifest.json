@@ -3,44 +3,80 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P1: Motion, forces & energy",
   "totalDuration": 586.26,
-  "majorSections": [
-    {
-      "title": "Giới thiệu P1",
-      "start": 0.0
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "1. Đại lượng & Đo lường",
-      "start": 0.0
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "2. Động học & Đồ thị",
-      "start": 0.0
+    "sec_quantities": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "3. Khối lượng & Khối lượng riêng",
-      "start": 0.0
+    "sec-quantities": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "4. Lực, Hooke & Áp suất",
-      "start": 0.0
+    "sec_kinematics": {
+      "start": 2,
+      "end": 2
     },
-    {
-      "title": "5. Dạng Năng lượng",
-      "start": 0.0
+    "sec-kinematics": {
+      "start": 2,
+      "end": 2
     },
-    {
-      "title": "6. Động năng & Thế năng",
-      "start": 0.0
+    "sec_density": {
+      "start": 3,
+      "end": 3
     },
-    {
-      "title": "7. Công, Công suất & Hiệu suất",
-      "start": 0.0
+    "sec-density": {
+      "start": 3,
+      "end": 3
     },
-    {
-      "title": "8. Nguồn Tài nguyên Năng lượng",
-      "start": 0.0
+    "sec_forces": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-forces": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_energy_stores": {
+      "start": 5,
+      "end": 5
+    },
+    "sec-energy-stores": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_ke_gpe": {
+      "start": 6,
+      "end": 6
+    },
+    "sec-ke-gpe": {
+      "start": 6,
+      "end": 6
+    },
+    "sec_work_power": {
+      "start": 7,
+      "end": 7
+    },
+    "sec-work-power": {
+      "start": 7,
+      "end": 7
+    },
+    "sec_energy_resources": {
+      "start": 8,
+      "end": 8
+    },
+    "sec-energy-resources": {
+      "start": 8,
+      "end": 8
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

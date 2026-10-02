@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C8: Periodic table",
   "totalDuration": 229.27,
-  "majorSections": [
-    {
-      "id": "sec_arrangement_elements",
-      "title": "1. Cấu trúc Bảng Tuần hoàn: Chu kỳ & Nhóm"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_group_trends",
-      "title": "2. Kim loại Kiềm Nhóm I vs Halogen Nhóm VII"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_transition_noblegases",
-      "title": "3. Kim loại Chuyển tiếp & Khí hiếm Nhóm VIII"
+    "sec_arrangement_elements": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-arrangement-elements": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_group_trends": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-group-trends": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_transition_noblegases": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-transition-noblegases": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

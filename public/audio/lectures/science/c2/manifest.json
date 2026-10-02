@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C2: Atoms elements and compounds",
   "totalDuration": 251.13,
-  "majorSections": [
-    {
-      "id": "sec_atomic_structure",
-      "title": "1. Cấu tạo Nguyên tử & Đồng vị (Isotopes)"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_elements_compounds",
-      "title": "2. Đơn chất, Hợp chất & Liên kết Hóa học"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_lattices_macromolecules",
-      "title": "3. Mạng Tinh thể Khổng lồ & Kim loại"
+    "sec_atomic_structure": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-atomic-structure": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_elements_compounds": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-elements-compounds": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_lattices_macromolecules": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-lattices-macromolecules": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

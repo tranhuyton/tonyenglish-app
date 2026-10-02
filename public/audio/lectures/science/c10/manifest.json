@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C10: Chemistry of the environment",
   "totalDuration": 268.91,
-  "majorSections": [
-    {
-      "id": "sec_water_chemistry",
-      "title": "1. Hóa học Nguồn nước & Xử lý Nước sạch"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_air_pollution",
-      "title": "2. Thành phần Khí quyển & Ô nhiễm Không khí"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_rusting_fertilizers",
-      "title": "3. Chống Rỉ sét & Phân bón Hóa học NPK"
+    "sec_water_chemistry": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-water-chemistry": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_air_pollution": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-air-pollution": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_rusting_fertilizers": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-rusting-fertilizers": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

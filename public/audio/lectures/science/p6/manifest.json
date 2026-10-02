@@ -3,24 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P6: Space physics",
   "totalDuration": 304.58,
-  "majorSections": [
-    {
-      "title": "Giới thiệu P6",
-      "start": 0.0
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "1. Trái Đất & Hệ Mặt Trời",
-      "start": 0.0
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "2. Tốc độ Quỹ đạo & Lực Hấp dẫn",
-      "start": 0.0
+    "sec_earth_solar_system": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "3. Các Vì sao & Vũ trụ",
-      "start": 0.0
+    "sec-earth-solar-system": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_orbital_motion": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-orbital-motion": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_stars_universe": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-stars-universe": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

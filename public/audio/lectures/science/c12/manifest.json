@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C12: Experimental techniques and Chemical analysis",
   "totalDuration": 300.2,
-  "majorSections": [
-    {
-      "id": "sec_separation_techniques",
-      "title": "1. Các Kỹ thuật Tách chất trong Phòng Thí nghiệm"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_gas_identification",
-      "title": "2. Nhận biết các Chất Khí Thông dụng"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_ion_identification",
-      "title": "3. Nhận biết Cation Kim loại & Anion Phi kim"
+    "sec_separation_techniques": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-separation-techniques": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_gas_identification": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-gas-identification": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_ion_identification": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-ion-identification": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

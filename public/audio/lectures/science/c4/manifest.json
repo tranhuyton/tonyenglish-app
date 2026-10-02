@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C4: Electrochemistry",
   "totalDuration": 272.52,
-  "majorSections": [
-    {
-      "id": "sec_electrolysis_basics",
-      "title": "1. Nguyên lý Cơ bản của Điện phân (PANIC & OIL RIG)"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_molten_aqueous",
-      "title": "2. Điện phân Nóng chảy vs Dung dịch Nước"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_electroplating_cells",
-      "title": "3. Kỹ thuật Mạ điện & Pin Nhiên liệu Hydro"
+    "sec_electrolysis_basics": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-electrolysis-basics": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_molten_aqueous": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-molten-aqueous": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_electroplating_cells": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-electroplating-cells": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

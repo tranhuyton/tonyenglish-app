@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C3: Stoichiometry",
   "totalDuration": 235.62,
-  "majorSections": [
-    {
-      "id": "sec_formulas_equations",
-      "title": "1. Công thức & Phương trình Cân bằng"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_mole_concept",
-      "title": "2. Khái niệm Mol & Tam giác Tính toán"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_empirical_yield",
-      "title": "3. Công thức Thực nghiệm & Hiệu suất Phản ứng"
+    "sec_formulas_equations": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-formulas-equations": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_mole_concept": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-mole-concept": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_empirical_yield": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-empirical-yield": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

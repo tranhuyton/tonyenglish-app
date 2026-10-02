@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C1: States of matter",
   "totalDuration": 288.44,
-  "majorSections": [
-    {
-      "id": "sec_states_particles",
-      "title": "1. Ba Trạng thái của Vật chất & Thuyết Động học"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_heating_curves",
-      "title": "2. Biến đổi Trạng thái & Đồ thị Đun nóng"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_gas_behavior",
-      "title": "3. Nhiệt độ & Áp suất Chất khí"
+    "sec_states_particles": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_diffusion_mass",
-      "title": "4. Khuyếch tán & Khối lượng Phân tử (Mr)"
+    "sec-states-particles": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_heating_curves": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-heating-curves": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_gas_behavior": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-gas-behavior": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_diffusion_mass": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-diffusion-mass": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C9: Metals",
   "totalDuration": 317.69,
-  "majorSections": [
-    {
-      "id": "sec_properties_alloys",
-      "title": "1. Tính chất Kim loại & Cấu trúc Hợp kim"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_reactivity_series",
-      "title": "2. Dãy Hoạt động Hóa học & Phản ứng Thế"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_extraction_metals",
-      "title": "3. Luyện kim & Lò cao Luyện Sắt"
+    "sec_properties_alloys": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_uses_metals",
-      "title": "4. Ứng dụng Thực tiễn của Kim loại & Thép"
+    "sec-properties-alloys": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_reactivity_series": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-reactivity-series": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_extraction_metals": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-extraction-metals": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_uses_metals": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-uses-metals": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

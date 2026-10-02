@@ -3,24 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P4: Electricity and magnetism",
   "totalDuration": 291.85,
-  "majorSections": [
-    {
-      "title": "Giới thiệu P4",
-      "start": 0.0
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "1. Đại lượng Điện & Định luật Ohm",
-      "start": 0.0
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "title": "2. Mạch Điện & Mạch Phân áp",
-      "start": 0.0
+    "sec_electrical_quantities": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "title": "3. Cảm ứng Điện từ & Động cơ",
-      "start": 0.0
+    "sec-electrical-quantities": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_electric_circuits": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-electric-circuits": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_electromagnetic_effects": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-electromagnetic-effects": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

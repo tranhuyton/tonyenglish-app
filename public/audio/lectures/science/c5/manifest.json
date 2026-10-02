@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C5: Chemical energetics",
   "totalDuration": 218.41,
-  "majorSections": [
-    {
-      "id": "sec_exo_endo",
-      "title": "1. Phản ứng Tỏa nhiệt & Thu nhiệt"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_reaction_profiles",
-      "title": "2. Giản đồ Năng lượng & Năng lượng Hoạt hóa (Ea)"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_bond_energies",
-      "title": "3. Tính toán Năng lượng Liên kết (Bond Energies)"
+    "sec_exo_endo": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-exo-endo": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_reaction_profiles": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-reaction-profiles": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_bond_energies": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-bond-energies": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

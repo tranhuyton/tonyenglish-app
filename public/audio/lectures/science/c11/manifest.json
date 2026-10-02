@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "C11: Organic chemistry",
   "totalDuration": 254.22,
-  "majorSections": [
-    {
-      "id": "sec_homologous_series",
-      "title": "1. Dãy Đồng đẳng & Danh pháp IUPAC"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_hydrocarbons_alkanes_alkenes",
-      "title": "2. Ankan No vs Anken Không no & Cracking"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_polymers",
-      "title": "3. Trùng hợp & Vật liệu Polymer (Plastics)"
+    "sec_homologous_series": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-homologous-series": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_hydrocarbons_alkanes_alkenes": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-hydrocarbons-alkanes-alkenes": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_polymers": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-polymers": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
