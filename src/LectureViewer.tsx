@@ -241,6 +241,50 @@ const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   '0e8fbc94-5976-4c7f-8588-471ea93926f5': 'eH8ZU0drvOQ', // 6.1 Economic issues
   'a1d571ff-fa12-46c2-a49d-1df88df13214': 'cjxhZmsOBAA', // 6.2 Environmental and ethical issues
   '1bc6f5c1-e71b-4d0d-8153-d2f74180a845': 'QCvbpmvbYLQ', // 6.3 Business and globalisation
+
+  // ==========================================
+  // Cambridge IGCSE Co-ordinated Sciences 0654
+  // ==========================================
+  // --- Biology ---
+  '1231b474-8a99-4330-b45d-fdda19a802fe': 'FQX0C3emIJg', // B1: Characteristics of living organisms
+  '7b3c2e0a-b0d5-4716-a574-6f1c5c379c7c': 'ojDhyUwS0AQ', // B2: Cells and organisms
+  '9a23109e-ad73-4fcf-a599-9605cc4906eb': 'ThkdsJ4O02k', // B3: Movement into and out of cells
+  '757409b3-5cec-4e1f-8877-18d81e440103': '8Ytt_jpCspg', // B4: Biological molecules
+  '8ab2afa2-59e3-4c56-8971-8d93dec5ad8e': 'CKXmyzhongw', // B5: Enzymes
+  '1d6a6b7b-ae57-404f-9ad1-58b11219b4d1': 'T0tkVxCRqF4', // B6: Plant Nutrition
+  'cbebf582-244c-48bf-a586-c6c1922d8e20': 'il6Xv0sYOFE', // B7: Human nutrition
+  'e2819423-13ed-47a2-bd80-9a083989e8bd': '3579l3NtlEs', // B8: Transport in plants
+  'a79dd569-671f-4559-84a3-eee1e6018172': 'W3GVWAGetcw', // B9: Transport in animals
+  '04d34896-13fb-411b-9e13-2bc3f9725136': 'QhmEtSF0RXg', // B10: Diseases and immunity
+  '39003a2f-708e-47fe-b8ad-7aae073273a3': 'mhCPspWCP1E', // B11: Gas exchange and respiration
+  '58e65add-a67a-4b90-8b84-52de1a2840be': '48gGdqCkZR8', // B12: Respiration
+  '2637d6ee-fd5f-48fc-aa7a-fc794fb3e561': 'Y3LPEiVRs_E', // B13: Coordination and response
+  '7ed510d0-acd2-4d0a-9079-1f1e4e4fc463': 'Ogbbwhy7us0', // B14: Drugs
+  'deb8222d-2b75-42a3-b454-9601fbfa1bd2': 'RaxNh_8P_J4', // B15: Reproduction
+  'd48c8f84-ba93-49d4-bf61-c7890bd6d2ce': 'tdFJ9HXK8Mw', // B16: Inheritance
+  '24f0deeb-3cd9-4b82-b253-5a070ca31275': 'XYGpw4-MOZA', // B17: Variation and selection
+  'cbeb6b74-e9c2-4a91-b39f-decb63e72ec0': 'rhb581LgbH0', // B18: Organisms and their environment
+  '298327a8-455a-44d5-9a4c-164e2653c456': 'TZGhMqpEBOY', // B19: Human influences on ecosystems
+  // --- Chemistry ---
+  '3fc0ef74-3661-4f23-a8a8-9c33d11051f5': 'LxRkVccWZRA', // C1: States of matter
+  'ee4f94c2-382b-4dbb-aaf8-981e7b0d7223': 'RIdAsC6D5mY', // C2: Atoms elements and compounds
+  'f0988036-6fd0-4768-993d-a5ea5fe4eb0b': '3Mh95hVf0-Y', // C3: Stoichiometry
+  '4732621b-f827-4b12-934b-3b53e694cc2a': 'd-RgbhQC6P8', // C4: Electrochemistry
+  '71545c83-4d45-4201-978c-aa58d01b57e5': 'd23r_Hv8uBc', // C5: Chemical energetics
+  '7f2b44b2-ba70-4cfc-85b3-3a0709058b46': 'ilGzTGcCth0', // C6: Chemical reactions
+  '2c83104c-9413-4ee1-bdf3-2c0da8fd96a6': 'XBSyl4h8qC8', // C7: Acids bases and salts
+  '856f20da-80e8-4c6a-9cd1-dbe8a1f40828': 'ixdo6J_GdVA', // C8: Periodic table
+  'd34bbfa2-7449-4192-b471-3a6a8ba49257': 'sLJNWrawAjw', // C9: Metals
+  '9d61f516-a24c-4485-8490-8485604130ec': 'zR-JPRQh2S0', // C10: Chemistry of the environment
+  '69b82c81-05a0-40a8-816f-c21a882cef54': 'ev99Cdk19Ns', // C11: Organic chemistry
+  'd51b5192-ff57-48a0-bcd9-d4f8a7d10757': 'FJd9E7AQ6yE', // C12: Experimental techniques and Chemical analysis
+  // --- Physics ---
+  '690ff013-5d01-4c1e-8546-25b3cd056e64': 'YwihvOJ1w7o', // P1: Motion, forces & energy
+  'dc33ed9d-e328-4f60-8c47-f0dbd103e8c1': 'pY_TRZC1JRw', // P2: Thermal physics
+  'eb3ed0a0-bd5e-4c0f-961f-1b9af74bf4a8': 'P_uH3pzbH7c', // P3: Waves
+  '2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69': 'llyYTGan-eQ', // P4: Electricity and magnetism
+  'a6077865-db01-4785-9ec7-e8b0f531fcdc': 'DeZjM41nqmo', // P5: Nuclear physics
+  'd11f8920-fe86-4cd4-ad9a-e8b669bc687b': 'Ec9yMahD5xA', // P6: Space physics
 };
 
 const getYouTubeVideoId = (url: string): string | null => {
