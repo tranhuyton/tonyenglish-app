@@ -1,8 +1,8 @@
 {
   "lectureId": "39003a2f-708e-47fe-b8ad-7aae073273a3",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
-  "lectureTitle": "B11: Gas exchange and respiration",
-  "totalDuration": 239.34,
+  "lectureTitle": "B11: Gas exchange in humans",
+  "totalDuration": 429.24,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,36 +14,76 @@
     },
     "sec_gas_exchange_surfaces": {
       "start": 1,
-      "end": 1
+      "end": 2
     },
     "sec-gas-exchange-surfaces": {
       "start": 1,
-      "end": 1
+      "end": 2
+    },
+    "sec_gas_adaptations": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-gas-adaptations": {
+      "start": 2,
+      "end": 2
     },
     "sec_respiratory_system": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 5
     },
     "sec-respiratory-system": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 5
+    },
+    "sec_resp_trachea_cartilage": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-resp-trachea-cartilage": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_resp_goblet_cilia": {
+      "start": 5,
+      "end": 5
+    },
+    "sec-resp-goblet-cilia": {
+      "start": 5,
+      "end": 5
     },
     "sec_ventilation_mechanics": {
-      "start": 3,
-      "end": 3
+      "start": 6,
+      "end": 8
     },
     "sec-ventilation-mechanics": {
-      "start": 3,
-      "end": 3
+      "start": 6,
+      "end": 8
+    },
+    "sec_inhalation_exhalation": {
+      "start": 7,
+      "end": 7
+    },
+    "sec-inhalation-exhalation": {
+      "start": 7,
+      "end": 7
+    },
+    "sec_inspired_expired": {
+      "start": 8,
+      "end": 8
+    },
+    "sec-inspired-expired": {
+      "start": 8,
+      "end": 8
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B11: Hệ Hô hấp & Trao đổi Khí ở Người",
+      "title": "Giới thiệu Chuyên đề B11: Trao đổi Khí ở Người",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B11: Gas exchange and respiration. Aerobic organisms require rapid gas exchange to deliver oxygen to metabolizing cells. In this lesson, we study the essential structural adaptations of gas exchange surfaces, map respiratory anatomy from trachea to alveoli, and analyze ventilation biomechanics.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B11: Hệ Hô hấp và Trao đổi Khí ở Người. Các sinh vật hiếu khí đòi hỏi bề mặt trao đổi khí hiệu quả để cung cấp oxy liên tục cho tế bào. Trong bài học này, chúng ta sẽ khảo sát các đặc điểm thích nghi của bề mặt trao đổi khí, giải phẫu đường dẫn khí và phế nang, cùng cơ chế thông khí phổi.",
+      "en": "Welcome to Topic B11: Gas Exchange in Humans. Cellular respiration requires a continuous supply of oxygen and the removal of metabolic carbon dioxide. In this topic, we study gas exchange surfaces, respiratory anatomy, ventilation mechanics, and the effects of physical exercise.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B11: Trao đổi Khí ở Người. Hô hấp tế bào đòi hỏi nguồn cung cấp oxy liên tục và sự đào thải carbon dioxide chuyển hóa. Trong chuyên đề này, chúng ta sẽ học về bề mặt trao đổi khí, giải phẫu hệ hô hấp, cơ chế thông khí và tác động của hoạt động thể lực.",
       "duration": 42.28,
       "startTime": 0.0,
       "endTime": 42.28,
@@ -51,36 +91,91 @@
     },
     {
       "id": "sec_gas_exchange_surfaces",
-      "title": "1. Đặc điểm Thích nghi của Bề mặt Trao đổi Khí",
+      "title": "1. Đặc điểm Bề mặt Trao đổi Khí (Gas Exchange Surfaces Overview)",
       "selector": "#sec-gas-exchange-surfaces",
-      "en": "Section 1 details alveolar adaptations: Gas exchange surfaces must maximize diffusion rate by satisfying Fick's law: A large surface area provided by hundreds of millions of alveoli; extremely thin walls only one epithelial cell thick to minimize diffusion distance; a thin film of moisture lining alveolar walls so oxygen dissolves before diffusing; and a dense surrounding capillary network coupled with continuous ventilation to maintain steep concentration gradients for oxygen and carbon dioxide.",
-      "vi": "Mục một chi tiết hóa các đặc tính thích nghi của phế nang: Bề mặt trao đổi khí tối đa hóa tốc độ khuếch tán theo định luật Fick: Diện tích tiếp xúc khổng lồ từ hàng trăm triệu phế nang; vách phế nang và thành mao mạch cực mỏng chỉ dày một lớp tế bào biểu mô giúp tối thiểu hóa khoảng cách khuếch tán; lớp màng ẩm mỏng lót mặt trong phế nang giúp khí oxy hòa tan trước khi khuếch tán; và mạng lưới mao mạch máu dày đặc bao quanh kết hợp với sự thông khí liên tục để duy trì độ dốc gradient nồng độ cao cho O2 và CO2.",
+      "en": "Section 1 examines gas exchange surfaces: In humans, gas exchange takes place across microscopic alveoli in the lungs. To maximize diffusion rate, gas exchange surfaces have five key adaptations.",
+      "vi": "Mục một khảo sát bề mặt trao đổi khí: Ở người, sự trao đổi khí diễn ra qua các phế nang vi thể trong phổi. Để tối đa hóa tốc độ khuếch tán, bề mặt trao đổi khí có 5 đặc điểm thích nghi cốt lõi.",
       "duration": 58.55,
       "startTime": 42.28,
       "endTime": 100.83,
       "audioUrl": "/audio/lectures/science/b11/sec_gas_exchange_surfaces.mp3"
     },
     {
-      "id": "sec_respiratory_system",
-      "title": "2. Cấu trúc Giải phẫu Hệ Hô hấp Người",
-      "selector": "#sec-respiratory-system",
-      "en": "Section 2 maps human respiratory anatomy: Air enters via the nasal cavity, passes through the larynx into the trachea, which is reinforced by C-shaped rings of cartilage that prevent airway collapse during pressure drops. The trachea bifurcates into two bronchi, branching into narrower bronchioles that terminate in clusters of microscopic alveoli. Goblet cells secrete sticky mucus to trap inhaled dirt and microbes, while ciliated epithelial cells beat rhythmically to propel mucus upward toward the throat.",
-      "vi": "Mục hai khảo sát giải phẫu hệ hô hấp: Không khí đi qua khoang mũi, qua thanh quản vào khí quản được gia cố bởi các vòng sụn hình chữ C giúp đường dẫn khí không bị xẹp khi áp suất lồng ngực giảm. Khí quản chia thành hai phế quản chính dẫn vào hai lá phổi, phân nhánh thành các tiểu phế quản nhỏ và tận cùng bằng các chùm phế nang vi thể. Các tế bào hình đài tiết chất nhầy dính bẫy giữ bụi bẩn và vi sinh vật, trong khi các tế bào biểu mô có lông rung quét liên tục đẩy dịch nhầy lên hầu họng để nuốt hoặc khạc ra ngoài.",
-      "duration": 58.84,
+      "id": "sec_gas_adaptations",
+      "title": "🫁 Five Adaptations of Alveoli (Năm Thích nghi của Phế nang)",
+      "selector": "#sec-gas-adaptations",
+      "en": "Five alveolar adaptations: 1. Enormous surface area of ~70 m² provided by millions of alveoli. 2. Extremely thin diffusion barrier only one cell thick (under 1 µm). 3. Dense capillary network maintaining a steep concentration gradient. 4. Constant ventilation renewing fresh air. 5. Moist lining dissolving gases for rapid diffusion.",
+      "vi": "Năm đặc điểm thích nghi của phế nang: Một là diện tích bề mặt khổng lồ khoảng 70 mét vuông từ hàng triệu phế nang. Hai là màng khuếch tán cực mỏng chỉ dày một lớp tế bào. Ba là mạng lưới mao mạch dày đặc duy trì gradient nồng độ dốc. Bốn là cử động thông khí liên tục làm mới không khí. Năm là lớp dịch ẩm hòa tan khí để khuếch tán nhanh.",
+      "duration": 49.22,
       "startTime": 100.83,
-      "endTime": 159.67,
+      "endTime": 150.05,
+      "audioUrl": "/audio/lectures/science/b11/sec_gas_adaptations.mp3"
+    },
+    {
+      "id": "sec_respiratory_system",
+      "title": "2. Cấu tạo Hệ Hô hấp & Bảo vệ Đường thở (Respiratory Anatomy Overview)",
+      "selector": "#sec-respiratory-system",
+      "en": "Section 2 investigates the anatomy of the respiratory tract: Trachea, bronchi, bronchioles, alveoli, lungs, ribs, intercostal muscles, and the diaphragm, protected by mucus and cilia.",
+      "vi": "Mục hai nghiên cứu giải phẫu đường hô hấp: Khí quản, phế quản, tiểu phế quản, phế nang, phổi, lồng xương sườn, cơ liên sườn và cơ hoành, được bảo vệ bởi chất nhầy và lông rung.",
+      "duration": 58.84,
+      "startTime": 150.05,
+      "endTime": 208.89,
       "audioUrl": "/audio/lectures/science/b11/sec_respiratory_system.mp3"
     },
     {
+      "id": "sec_resp_trachea_cartilage",
+      "title": "🛡️ Trachea & Cartilage Rings (Khí quản & Vòng sụn chữ C)",
+      "selector": "#sec-resp-trachea-cartilage",
+      "en": "The trachea is reinforced with C-shaped rings of cartilage. Cartilage keeps the airway permanently open and prevents the trachea from collapsing inwards when pressure drops during inhalation.",
+      "vi": "Khí quản được gia cố bằng các vòng sụn hình chữ C. Sụn giữ cho đường thở luôn mở và ngăn không cho khí quản bị xẹp xuống khi áp suất giảm trong lúc hít vào.",
+      "duration": 20.61,
+      "startTime": 208.89,
+      "endTime": 229.5,
+      "audioUrl": "/audio/lectures/science/b11/sec_resp_trachea_cartilage.mp3"
+    },
+    {
+      "id": "sec_resp_goblet_cilia",
+      "title": "🧹 Goblet Cells & Cilia (Tế bào Hình đài & Biểu mô Lông rung)",
+      "selector": "#sec-resp-goblet-cilia",
+      "en": "Airway defense: Goblet cells secrete sticky mucus to trap inhaled dust, bacteria, and airborne pathogens. Ciliated epithelial cells beat rhythmically in synchronized waves to sweep the mucus up to the pharynx, where it is safely swallowed into stomach acid.",
+      "vi": "Hàng rào bảo vệ đường thở: Tế bào hình đài tiết chất nhầy dính giữ lại bụi bẩn, vi khuẩn và mầm bệnh từ không khí. Các tế bào biểu mô lông rung chuyển động nhịp nhàng quét lớp nhầy lên họng để nuốt xuống dạ dày tiêu diệt bằng acid.",
+      "duration": 30.11,
+      "startTime": 229.5,
+      "endTime": 259.61,
+      "audioUrl": "/audio/lectures/science/b11/sec_resp_goblet_cilia.mp3"
+    },
+    {
       "id": "sec_ventilation_mechanics",
-      "title": "3. Cơ chế Thông khí: Hít vào & Thở ra (Ventilation Mechanics)",
+      "title": "3. Cơ chế Thông khí & Khí Hít vào/Thở ra (Ventilation Mechanics Overview)",
       "selector": "#sec-ventilation-mechanics",
-      "en": "Section 3 investigates ventilation mechanics: During Inhalation, external intercostal muscles contract pulling the ribcage upwards and outwards, while the diaphragm contracts and flattens downwards; thoracic volume expands, decreasing internal pulmonary pressure below atmospheric, drawing air inward. During Exhalation, external intercostals relax and internal intercostals contract, dropping ribs downwards and inwards, while the diaphragm relaxes into a dome shape; thoracic volume decreases, increasing pressure and expelling air. Inspired air contains 21% oxygen and 0.04% carbon dioxide; Expired air contains roughly 16% oxygen and 4% carbon dioxide, which turns limewater cloudy milk white.",
-      "vi": "Mục ba nghiên cứu cơ chế thông khí phổi: Khi Hít vào, cơ liên sườn ngoài co nâng lồng ngực lên trên và ra ngoài, đồng thời cơ hoành co phẳng xuống dưới; thể tích khoang ngực tăng lên làm áp suất trong phổi giảm thấp hơn áp suất khí quyển, hút không khí tràn vào phổi. Khi Thở ra, cơ liên sườn ngoài giãn, xương sườn hạ xuống, cơ hoành giãn cong lồi lên hình vòm; thể tích lồng ngực thu nhỏ làm tăng áp suất tống khí ra ngoài. Khí hít vào chứa 21% oxy và 0.04% CO2; khí thở ra chứa khoảng 16% oxy và 4% CO2, làm đục nước vôi trong nhanh chóng.",
+      "en": "Section 3 investigates breathing movements and gas composition: Muscle contractions alter thoracic volume, changing internal lung pressure to draw air in or expel it out.",
+      "vi": "Mục ba khảo sát cử động hô hấp và thành phần khí: Sự co giãn của các cơ làm thay đổi thể tích khoang ngực, biến đổi áp suất bên trong phổi để hút không khí vào hoặc đẩy ra ngoài.",
       "duration": 79.67,
-      "startTime": 159.67,
-      "endTime": 239.34,
+      "startTime": 259.61,
+      "endTime": 339.28,
       "audioUrl": "/audio/lectures/science/b11/sec_ventilation_mechanics.mp3"
+    },
+    {
+      "id": "sec_inhalation_exhalation",
+      "title": "⚖️ Mechanics of Breathing (Cơ chế Hít vào & Thở ra)",
+      "selector": "#sec-inhalation-exhalation",
+      "en": "Breathing mechanics: During inhalation, external intercostal muscles contract, ribs move up and out, diaphragm contracts and flattens; thorax volume increases, pressure drops below atmospheric, drawing air in. During exhalation, external intercostals relax, ribs move down and in, diaphragm relaxes and curves up; thorax volume decreases, pressure rises, pushing air out.",
+      "vi": "Cơ chế hít thở: Khi hít vào, cơ liên sườn ngoài co kéo xương sườn nâng lên và nở ra, cơ hoành co phẳng xuống; thể tích khoang ngực tăng, áp suất giảm hút khí vào. Khi thở ra, cơ liên sườn ngoài giãn xương sườn hạ xuống, cơ hoành giãn cong lên hình vòm; thể tích khoang ngực giảm, áp suất tăng đẩy khí ra.",
+      "duration": 43.94,
+      "startTime": 339.28,
+      "endTime": 383.22,
+      "audioUrl": "/audio/lectures/science/b11/sec_inhalation_exhalation.mp3"
+    },
+    {
+      "id": "sec_inspired_expired",
+      "title": "📊 Composition of Air & Exercise (Thành phần Khí & Thể dục)",
+      "selector": "#sec-inspired-expired",
+      "en": "Gas comparison: Inspired air contains 21% oxygen, 0.04% carbon dioxide, and variable water vapour. Expired air contains 16% oxygen, 4% carbon dioxide, and saturated water vapour. During exercise, muscle cells respire faster; the brain detects increased CO₂ in blood and stimulates faster, deeper breathing.",
+      "vi": "So sánh thành phần khí: Khí hít vào chứa 21% oxy, 0.04% CO2 và hơi nước thay đổi. Khí thở ra chứa 16% oxy, 4% CO2 và bão hòa hơi nước. Khi vận động thể thao, cơ bắp hô hấp mạnh hơn; não phát hiện CO2 tăng trong máu sẽ kích thích thở nhanh hơn và sâu hơn.",
+      "duration": 46.02,
+      "startTime": 383.22,
+      "endTime": 429.24,
+      "audioUrl": "/audio/lectures/science/b11/sec_inspired_expired.mp3"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "lectureId": "cbeb6b74-e9c2-4a91-b39f-decb63e72ec0",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B18: Organisms and their environment",
-  "totalDuration": 208.79,
+  "totalDuration": 286.05,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -22,28 +22,44 @@
     },
     "sec_food_chains_energy": {
       "start": 2,
-      "end": 2
+      "end": 3
     },
     "sec-food-chains-energy": {
       "start": 2,
-      "end": 2
+      "end": 3
+    },
+    "sec_energy_loss_rule": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-energy-loss-rule": {
+      "start": 3,
+      "end": 3
     },
     "sec_carbon_cycle": {
-      "start": 3,
-      "end": 3
+      "start": 4,
+      "end": 5
     },
     "sec-carbon-cycle": {
-      "start": 3,
-      "end": 3
+      "start": 4,
+      "end": 5
+    },
+    "sec_carbon_processes": {
+      "start": 5,
+      "end": 5
+    },
+    "sec-carbon-processes": {
+      "start": 5,
+      "end": 5
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B18: Sinh thái học & Vòng tuần hoàn Cacbon",
+      "title": "Giới thiệu Chuyên đề B18: Sinh vật & Môi trường",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B18: Organisms and their environment. Ecology investigates interactions between organisms and physical habitats. In this lesson, we study key ecological definitions, analyze trophic levels and energy loss along food webs, and trace the global carbon cycle.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B18: Sinh vật và Môi trường Sinh thái. Sinh thái học khám phá mối tương tác phức tạp giữa sinh vật sống và sinh cảnh tự nhiên. Trong bài học này, chúng ta sẽ khảo sát các khái niệm sinh thái học nền tảng, bậc dinh dưỡng và dòng năng lượng trong chuỗi thức ăn, cùng vòng tuần hoàn cacbon toàn cầu.",
+      "en": "Welcome to Topic B18: Organisms and their Environment. Ecology examines the complex interrelationships between organisms and their physical habitats. In this topic, we study ecological definitions, food chains, energy losses, and the global carbon cycle.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B18: Sinh vật và Môi trường. Sinh thái học nghiên cứu mối quan hệ tương hỗ phức tạp giữa các sinh vật và môi trường sống của chúng. Trong chuyên đề này, chúng ta sẽ học về các thuật ngữ sinh thái, chuỗi thức ăn, sự thất thoát năng lượng và chu trình carbon toàn cầu.",
       "duration": 39.18,
       "startTime": 0.0,
       "endTime": 39.18,
@@ -51,10 +67,10 @@
     },
     {
       "id": "sec_ecological_definitions",
-      "title": "1. Khái niệm Sinh thái: Quần thể, Quần xã & Hệ sinh thái",
+      "title": "1. Các Khái niệm Sinh thái Cốt lõi (Ecological Definitions Overview)",
       "selector": "#sec-ecological-definitions",
-      "en": "Section 1 defines ecological foundations: A Population is a group of organisms of one species living in the same area at the same time. A Community is all of the populations of different species in an ecosystem. An Ecosystem is a unit containing a community of organisms and their abiotic physical environment, interacting together as a functional system.",
-      "vi": "Mục một định nghĩa các khái niệm nền tảng: Quần thể (Population) là tập hợp các cá thể thuộc cùng một loài cùng sinh sống trong một sinh cảnh tại một thời điểm xác định. Quần xã (Community) là tập hợp tất cả các quần thể thuộc các loài khác nhau cùng tồn tại trong một hệ sinh thái. Hệ sinh thái (Ecosystem) là một chỉnh thể bao gồm quần xã sinh vật và môi trường vô sinh (abiotic) tương tác chặt chẽ với nhau.",
+      "en": "Section 1 defines fundamental ecological terms: A population is a group of organisms of one species living in the same area at the same time. A community is all the populations of different species in an ecosystem. An ecosystem is a unit containing a community of organisms and their non-living environment interacting together.",
+      "vi": "Mục một định nghĩa các thuật ngữ sinh thái cơ bản: Quần thể là tập hợp các cá thể cùng một loài sống trong cùng một khu vực tại cùng một thời điểm. Quần xã là tập hợp tất cả các quần thể thuộc các loài khác nhau cùng sinh sống. Hệ sinh thái là một thể thống nhất bao gồm quần xã sinh vật và môi trường vô sinh tác động qua lại lẫn nhau.",
       "duration": 47.61,
       "startTime": 39.18,
       "endTime": 86.79,
@@ -62,25 +78,47 @@
     },
     {
       "id": "sec_food_chains_energy",
-      "title": "2. Chuỗi Thức ăn, Bậc Dinh dưỡng & Quy luật 10% Năng lượng",
+      "title": "2. Chuỗi Thức ăn & Dòng Năng lượng (Food Chains & Energy Flow Overview)",
       "selector": "#sec-food-chains-energy",
-      "en": "Section 2 investigates energy flow: The principal energy source for almost all ecosystems is sunlight, harnessed by photosynthetic producers. Energy passes along trophic levels from primary consumers to apex predators. Crucially, approximately 90% of energy is lost at each trophic transfer as heat from cellular respiration, kinetic movement, excretion of metabolic wastes, and uneaten organic tissues. Because only roughly 10% of energy is converted into new biomass, food chains rarely exceed four to five links.",
-      "vi": "Mục hai nghiên cứu dòng năng lượng: Nguồn năng lượng sơ cấp cho mọi hệ sinh thái là ánh sáng mặt trời, được sinh vật sản xuất quang hợp chuyển thành hóa năng dự trữ. Năng lượng truyền qua các bậc dinh dưỡng từ sinh vật tiêu thụ bậc một đến các loài săn mồi đỉnh. Điểm mấu chốt: khoảng 90% năng lượng bị thất thoát ở mỗi bậc dinh dưỡng dưới dạng nhiệt từ hô hấp, vận động, bài tiết và các phần không ăn được. Vì chỉ có khoảng 10% năng lượng được tích lũy thành sinh khối mới, nên các chuỗi thức ăn trong tự nhiên hiếm khi dài quá 4 đến 5 mắt xích.",
+      "en": "Section 2 investigates food chains and energy flow: The Sun is the principal source of energy input to biological systems. Energy flows unidirectionally through trophic levels: producer ➔ primary consumer ➔ secondary consumer ➔ tertiary consumer.",
+      "vi": "Mục hai nghiên cứu chuỗi thức ăn và dòng năng lượng: Mặt trời là nguồn cung cấp năng lượng chủ yếu cho sinh giới. Năng lượng truyền một chiều qua các bậc dinh dưỡng: sinh vật sản xuất ➔ sinh vật tiêu thụ bậc một ➔ bậc hai ➔ bậc ba.",
       "duration": 64.62,
       "startTime": 86.79,
       "endTime": 151.41,
       "audioUrl": "/audio/lectures/science/b18/sec_food_chains_energy.mp3"
     },
     {
-      "id": "sec_carbon_cycle",
-      "title": "3. Vòng Tuần hoàn Cacbon Toàn cầu (The Carbon Cycle)",
-      "selector": "#sec-carbon-cycle",
-      "en": "Section 3 details the Carbon Cycle: Atmospheric carbon dioxide is removed solely by plant photosynthesis. Carbon returns to the atmosphere through three major avenues: cellular respiration by plants, animals, and decomposers; combustion of fossil fuels; and microbial decomposition of dead organic matter. Human combustion of fossil fuels and extensive deforestation disrupt this equilibrium, increasing greenhouse gas concentrations and accelerating global climate change.",
-      "vi": "Mục ba phân tích chi tiết Vòng tuần hoàn Cacbon: Khí CO2 trong khí quyển chỉ được hấp thu duy nhất qua quá trình quang hợp của thực vật. Cacbon được hoàn trả lại khí quyển qua 3 con đường chính: hô hấp tế bào của thực vật, động vật và vi sinh vật; quá trình đốt cháy nhiên liệu hóa thạch; và sự phân hủy xác sinh vật của vi khuẩn và nấm. Hoạt động đốt than đá, dầu mỏ và nạn phá rừng của con người đang làm mất cân bằng vòng tuần hoàn này, dẫn đến biến đổi khí hậu toàn cầu.",
-      "duration": 57.38,
+      "id": "sec_energy_loss_rule",
+      "title": "📉 The 10% Energy Loss Rule (Quy tắc Thất thoát Năng lượng 90%)",
+      "selector": "#sec-energy-loss-rule",
+      "en": "The 10% rule in food chains: Only approximately 10% of energy is transferred from one trophic level to the next. Roughly 90% of energy is lost at each step due to metabolic heat during respiration, uneaten body parts, and energy lost in excretion and egestion.",
+      "vi": "Quy tắc 10% trong chuỗi thức ăn: Chỉ có khoảng 10% năng lượng được truyền từ bậc dinh dưỡng này sang bậc kế tiếp. Khoảng 90% năng lượng bị thất thoát ở mỗi mắt xích do nhiệt chuyển hóa khi hô hấp, các bộ phận không ăn được và chất bài tiết, phân.",
+      "duration": 32.32,
       "startTime": 151.41,
-      "endTime": 208.79,
+      "endTime": 183.73,
+      "audioUrl": "/audio/lectures/science/b18/sec_energy_loss_rule.mp3"
+    },
+    {
+      "id": "sec_carbon_cycle",
+      "title": "3. Chu trình Carbon Toàn cầu (The Global Carbon Cycle Overview)",
+      "selector": "#sec-carbon-cycle",
+      "en": "Section 3 covers the carbon cycle: Photosynthesis is the only biological process that removes carbon dioxide from the atmosphere. Respiration by plants, animals, and decomposers, alongside the combustion of fossil fuels, returns carbon dioxide back into the atmosphere.",
+      "vi": "Mục ba phân tích chu trình carbon toàn cầu: Quang hợp là quá trình sinh học duy nhất giúp hấp thụ khí CO2 ra khỏi khí quyển. Hô hấp ở thực vật, động vật và vi sinh vật phân giải, cùng hoạt động đốt cháy nhiên liệu hóa thạch, sẽ giải phóng CO2 trả lại vào khí quyển.",
+      "duration": 57.38,
+      "startTime": 183.73,
+      "endTime": 241.11,
       "audioUrl": "/audio/lectures/science/b18/sec_carbon_cycle.mp3"
+    },
+    {
+      "id": "sec_carbon_processes",
+      "title": "♻️ 4 Key Carbon Cycle Processes (4 Quá trình Chu trình Carbon)",
+      "selector": "#sec-carbon-processes",
+      "en": "Four processes driving the global carbon cycle: 1. Photosynthesis removes carbon dioxide from the atmosphere. 2. Respiration by all living organisms releases carbon dioxide. 3. Decomposition breaks down organic matter releasing carbon dioxide. 4. Combustion of fossil fuels burns coal, oil, and gas releasing immense volumes of carbon dioxide.",
+      "vi": "Bốn quá trình thúc đẩy chu trình carbon toàn cầu: Một là quang hợp hấp thụ CO2 từ khí quyển. Hai là hô hấp của các sinh vật sống giải phóng CO2. Ba là phân hủy xác sinh vật giải phóng CO2. Bốn là đốt cháy nhiên liệu hóa thạch than đá, dầu mỏ và khí đốt thải ra lượng lớn khí CO2.",
+      "duration": 44.94,
+      "startTime": 241.11,
+      "endTime": 286.05,
+      "audioUrl": "/audio/lectures/science/b18/sec_carbon_processes.mp3"
     }
   ]
 }

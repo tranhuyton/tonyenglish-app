@@ -2,7 +2,7 @@
   "lectureId": "757409b3-5cec-4e1f-8877-18d81e440103",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B4: Biological molecules",
-  "totalDuration": 213.79,
+  "totalDuration": 527.96,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,28 +14,108 @@
     },
     "sec_biomolecules": {
       "start": 1,
-      "end": 1
+      "end": 6
     },
     "sec-biomolecules": {
       "start": 1,
-      "end": 1
+      "end": 6
+    },
+    "sec_carbohydrates": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-carbohydrates": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_lipids": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-lipids": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_proteins": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-proteins": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_dna": {
+      "start": 5,
+      "end": 5
+    },
+    "sec-dna": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_water": {
+      "start": 6,
+      "end": 6
+    },
+    "sec-water": {
+      "start": 6,
+      "end": 6
     },
     "sec_food_tests": {
-      "start": 2,
-      "end": 2
+      "start": 7,
+      "end": 12
     },
     "sec-food-tests": {
-      "start": 2,
-      "end": 2
+      "start": 7,
+      "end": 12
+    },
+    "sec_test_sugar": {
+      "start": 8,
+      "end": 8
+    },
+    "sec-test-sugar": {
+      "start": 8,
+      "end": 8
+    },
+    "sec_test_starch": {
+      "start": 9,
+      "end": 9
+    },
+    "sec-test-starch": {
+      "start": 9,
+      "end": 9
+    },
+    "sec_test_protein": {
+      "start": 10,
+      "end": 10
+    },
+    "sec-test-protein": {
+      "start": 10,
+      "end": 10
+    },
+    "sec_test_lipid": {
+      "start": 11,
+      "end": 11
+    },
+    "sec-test-lipid": {
+      "start": 11,
+      "end": 11
+    },
+    "sec_test_vitc": {
+      "start": 12,
+      "end": 12
+    },
+    "sec-test-vitc": {
+      "start": 12,
+      "end": 12
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B4: Phân tử Sinh học & Phòng Thí nghiệm",
+      "title": "Giới thiệu Chuyên đề B4: Các Phân tử Sinh học",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B4: Biological molecules. All living organisms are assembled from organic chemical building blocks. In this lesson, we study the chemical composition and monomer units of carbohydrates, lipids, proteins, and DNA, and master biochemical food tests used in laboratory examinations.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B4: Các phân tử sinh học và Phân tích hóa sinh. Mọi cơ thể sống đều được cấu thành từ các đại phân tử hữu cơ. Trong bài học này, chúng ta sẽ khảo sát thành phần nguyên tố, đơn phân cấu tạo của carbohydrate, lipid, protein, chuỗi xoắn kép DNA và các phản ứng thử nghiệm thực phẩm tiêu chuẩn.",
+      "en": "Welcome to Topic B4: Biological Molecules. All living organisms are constructed from organic biomolecules: carbohydrates, lipids, proteins, and nucleic acids. In this lesson, we master their chemical composition, building blocks, and the qualitative food tests used to detect them.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B4: Các phân tử sinh học. Mọi sinh vật sống đều được cấu tạo từ các đại phân tử hữu cơ: carbohydrate, lipid, protein và acid nucleic. Trong bài học này, chúng ta sẽ nắm vững thành phần hóa học, đơn phân cấu tạo và các phản ứng thử nghiệm định tính phát hiện dinh dưỡng.",
       "duration": 42.38,
       "startTime": 0.0,
       "endTime": 42.38,
@@ -43,25 +123,135 @@
     },
     {
       "id": "sec_biomolecules",
-      "title": "1. Cấu trúc Hóa học: Carbohydrate, Lipid, Protein & DNA",
+      "title": "1. Cấu trúc Hóa học của các Phân tử Sinh học (Biomolecules Overview)",
       "selector": "#sec-biomolecules",
-      "en": "Section 1 details macromolecular structures: Carbohydrates contain carbon, hydrogen, and oxygen. Simple sugars like glucose link into large storage polymers: starch and glycogen, or structural cellulose. Lipids contain carbon, hydrogen, and oxygen, formed from one glycerol molecule joined to three fatty acid chains. Proteins contain carbon, hydrogen, oxygen, nitrogen, and sometimes sulfur; they are polymers of twenty different amino acids whose specific sequence dictates three-dimensional folding and enzyme active site specificity. DNA is a double helix constructed from nucleotide chains paired by complementary nitrogenous bases: Adenine pairs with Thymine, and Cytosine pairs with Guanine.",
-      "vi": "Mục một chi tiết hóa cấu trúc các đại phân tử sinh học: Carbohydrate gồm carbon, hydro và oxy. Các đường đơn như glucose liên kết tạo thành đại phân tử dự trữ tinh bột, glycogen hoặc cellulose cấu trúc. Lipid chứa carbon, hydro và oxy, cấu tạo từ một phân tử glycerol gắn với 3 chuỗi axit béo. Protein chứa carbon, hydro, oxy, nitơ và lưu huỳnh; được cấu tạo từ 20 loại axit amin khác nhau, trong đó trình tự axit amin quyết định sự cuộn gập không gian 3 chiều và hình thù trung tâm hoạt động của enzyme. DNA là chuỗi xoắn kép cấu tạo từ các nucleotide liên kết theo nguyên tắc bổ sung: Adenine bắt cặp với Thymine, và Cytosine bắt cặp với Guanine.",
+      "en": "Section 1 examines the chemical elements and structural units of biomolecules. Carbohydrates and lipids contain Carbon, Hydrogen, and Oxygen. Proteins additionally contain Nitrogen and some Sulfur. DNA contains Carbon, Hydrogen, Oxygen, Nitrogen, and Phosphorus.",
+      "vi": "Mục một khảo sát các nguyên tố hóa học và đơn vị cấu tạo của các phân tử sinh học. Carbohydrate và lipid chứa Carbon, Hydro và Oxy. Protein có thêm Nitơ và một số chứa Lưu huỳnh. Phân tử DNA chứa Carbon, Hydro, Oxy, Nitơ và Photpho.",
       "duration": 90.42,
       "startTime": 42.38,
       "endTime": 132.8,
       "audioUrl": "/audio/lectures/science/b4/sec_biomolecules.mp3"
     },
     {
-      "id": "sec_food_tests",
-      "title": "2. Thử nghiệm Hóa sinh Thực phẩm (Qualitative Food Tests)",
-      "selector": "#sec-food-tests",
-      "en": "Section 2 reviews standard Cambridge food test protocols: To test for reducing sugars like glucose, add Benedict's reagent and heat in an 80-degree water bath; a positive result changes from blue to green, yellow, orange, and finally brick-red precipitate. To test for starch, add iodine solution; positive turns from yellow-brown to blue-black. To test for proteins, add Biuret reagent; positive turns from pale blue to purple or violet. To test for lipids, dissolve sample in ethanol, then pour into water; positive produces a cloudy white emulsion. To test for vitamin C, add DCPIP; positive decolourises the blue dye.",
-      "vi": "Mục hai tổng hợp các quy trình thử nghiệm hóa sinh thực phẩm: Để thử đường khử như glucose, nhỏ thuốc thử Benedict và đun cách thủy ở 80 độ C; kết quả dương tính chuyển từ xanh lam sang xanh lục, vàng, cam và kết tủa đỏ gạch. Để thử tinh bột, nhỏ dung dịch iot; kết quả dương tính chuyển từ nâu vàng sang xanh đen. Để thử protein, dùng thuốc thử Biuret; kết quả dương tính chuyển từ xanh lam nhạt sang màu tím biếc. Để thử lipid, hòa tan mẫu vào cồn ethanol rồi đổ vào nước cất; dương tính tạo lớp nhũ tương trắng đục như sữa. Để thử vitamin C, nhỏ thuốc thử DCPIP; dương tính làm mất màu xanh của dung dịch.",
-      "duration": 80.99,
+      "id": "sec_carbohydrates",
+      "title": "🍞 Carbohydrates (Đường & Tinh bột)",
+      "selector": "#sec-carbohydrates",
+      "en": "Carbohydrates are composed of Carbon, Hydrogen, and Oxygen. Simple monomers like glucose are monosaccharides used immediately for respiration. Monomers bond together to form large insoluble storage polymers: starch in plants and glycogen in animals, or cellulose for plant cell walls.",
+      "vi": "Carbohydrate được cấu tạo từ Carbon, Hydro và Oxy. Các đơn phân đơn giản như glucose là monosaccharide được dùng ngay cho hô hấp tế bào. Các đơn phân liên kết lại tạo thành polymer dự trữ không tan: tinh bột ở thực vật và glycogen ở động vật, hoặc cellulose tạo thành tế bào thực vật.",
+      "duration": 38.54,
       "startTime": 132.8,
-      "endTime": 213.79,
+      "endTime": 171.34,
+      "audioUrl": "/audio/lectures/science/b4/sec_carbohydrates.mp3"
+    },
+    {
+      "id": "sec_lipids",
+      "title": "🥑 Fats & Oils / Lipids (Chất béo)",
+      "selector": "#sec-lipids",
+      "en": "Lipids (fats and oils) are made of Carbon, Hydrogen, and Oxygen. Each lipid molecule is synthesised from one glycerol molecule chemically bonded to three fatty acid chains. Lipids provide high-density long-term energy storage, thermal insulation, and buoyancy.",
+      "vi": "Lipid (chất béo và dầu) cấu tạo từ Carbon, Hydro và Oxy. Mỗi phân tử chất béo được tổng hợp từ một phân tử glycerol liên kết hóa học với ba chuỗi acid béo. Chất béo giúp dự trữ năng lượng đậm đặc lâu dài, cách nhiệt giữ ấm cơ thể và tạo sức nổi.",
+      "duration": 36.02,
+      "startTime": 171.34,
+      "endTime": 207.36,
+      "audioUrl": "/audio/lectures/science/b4/sec_lipids.mp3"
+    },
+    {
+      "id": "sec_proteins",
+      "title": "🥩 Proteins (Chất đạm)",
+      "selector": "#sec-proteins",
+      "en": "Proteins are composed of Carbon, Hydrogen, Oxygen, and Nitrogen, with some containing sulfur. They are polymers of 20 different amino acids joined by peptide bonds. The specific sequence of amino acids folds into a precise 3D shape, enabling proteins to function as enzymes, antibodies, hemoglobin, and keratin.",
+      "vi": "Protein được cấu tạo từ Carbon, Hydro, Oxy và Nitơ, một số chứa lưu huỳnh. Chúng là polymer của 20 loại amino acid khác nhau nối với nhau bằng liên kết peptide. Trình tự amino acid đặc thù sẽ cuộn gập thành hình thể không gian 3 chiều chuẩn xác, giúp protein hoạt động như enzyme, kháng thể, hemoglobin hay keratin.",
+      "duration": 44.1,
+      "startTime": 207.36,
+      "endTime": 251.46,
+      "audioUrl": "/audio/lectures/science/b4/sec_proteins.mp3"
+    },
+    {
+      "id": "sec_dna",
+      "title": "🧬 DNA Structure (Cấu trúc DNA)",
+      "selector": "#sec-dna",
+      "en": "DNA consists of two polynucleotide strands coiled into a double helix. The strands are cross-linked by complementary base pairs: Adenine always pairs with Thymine (A with T), and Cytosine always pairs with Guanine (C with G).",
+      "vi": "Cấu trúc DNA gồm hai chuỗi polynucleotide cuộn xoắn thành chuỗi xoắn kép đều đặn. Hai chuỗi được liên kết bắt chéo bởi các cặp bazơ bổ sung: Adenine luôn liên kết với Thymine (A với T), và Cytosine luôn liên kết với Guanine (C với G).",
+      "duration": 31.77,
+      "startTime": 251.46,
+      "endTime": 283.23,
+      "audioUrl": "/audio/lectures/science/b4/sec_dna.mp3"
+    },
+    {
+      "id": "sec_water",
+      "title": "💧 Role of Water (Dung môi Sinh học)",
+      "selector": "#sec-water",
+      "en": "Water acts as a vital universal biological solvent. It dissolves metabolic waste products like urea for excretion in urine, and transports nutrients, mineral ions, and hormones through blood plasma and plant vascular bundles.",
+      "vi": "Nước đóng vai trò là dung môi sinh học phổ quát tối quan trọng. Nước hòa tan các chất cặn bã chuyển hóa như urê để bài tiết qua nước tiểu, đồng thời vận chuyển chất dinh dưỡng, ion khoáng và hormone qua huyết tương máu và bó mạch thực vật.",
+      "duration": 28.94,
+      "startTime": 283.23,
+      "endTime": 312.17,
+      "audioUrl": "/audio/lectures/science/b4/sec_water.mp3"
+    },
+    {
+      "id": "sec_food_tests",
+      "title": "2. Thí nghiệm Định tính Thực phẩm (Qualitative Food Tests Overview)",
+      "selector": "#sec-food-tests",
+      "en": "Section 2 presents qualitative food tests examined in Cambridge Paper 4 and Paper 6. Remember each specific reagent, temperature requirement, and diagnostic color change.",
+      "vi": "Mục hai trình bày các thí nghiệm định tính dinh dưỡng thường xuất hiện trong đề thi Paper 4 và Paper 6 của Cambridge. Hãy ghi nhớ thuốc thử, điều kiện nhiệt độ và màu sắc chỉ thị chuẩn xác của từng phép thử.",
+      "duration": 80.99,
+      "startTime": 312.17,
+      "endTime": 393.16,
       "audioUrl": "/audio/lectures/science/b4/sec_food_tests.mp3"
+    },
+    {
+      "id": "sec_test_sugar",
+      "title": "🍬 Benedict's Test for Reducing Sugars",
+      "selector": "#sec-test-sugar",
+      "en": "Reducing Sugars: Add Benedict's reagent and heat in a hot water bath at 80°C for 3 to 5 minutes. Initial color is blue. A positive result turns green, yellow, orange, and finally forms a brick-red precipitate.",
+      "vi": "Đường khử: Cho thuốc thử Benedict và đun cách thủy trong nồi nước nóng ở 80°C từ 3 đến 5 phút. Màu ban đầu là xanh lam. Khi có đường khử, dung dịch chuyển dần sang xanh lá, vàng, cam và kết tủa đỏ gạch.",
+      "duration": 31.58,
+      "startTime": 393.16,
+      "endTime": 424.74,
+      "audioUrl": "/audio/lectures/science/b4/sec_test_sugar.mp3"
+    },
+    {
+      "id": "sec_test_starch",
+      "title": "🍞 Iodine Test for Starch",
+      "selector": "#sec-test-starch",
+      "en": "Starch: Add drops of iodine solution directly at room temperature. Initial color is yellow-brown. A positive result turns blue-black.",
+      "vi": "Tinh bột: Nhỏ trực tiếp vài giọt dung dịch iod ở nhiệt độ phòng. Màu ban đầu là vàng nâu. Phản ứng dương tính sẽ chuyển thành màu xanh đen đặc trưng.",
+      "duration": 20.99,
+      "startTime": 424.74,
+      "endTime": 445.73,
+      "audioUrl": "/audio/lectures/science/b4/sec_test_starch.mp3"
+    },
+    {
+      "id": "sec_test_protein",
+      "title": "🥩 Biuret Test for Proteins",
+      "selector": "#sec-test-protein",
+      "en": "Proteins: Add Biuret reagent (potassium hydroxide followed by dilute copper sulfate) at room temperature. Initial color is pale blue. A positive result turns violet or purple.",
+      "vi": "Protein: Cho thuốc thử Biuret (dung dịch KOH và đồng sunfat loãng) ở nhiệt độ phòng. Màu ban đầu là xanh lam nhạt. Phản ứng dương tính sẽ chuyển sang màu tím hoặc tím hoa cà.",
+      "duration": 26.61,
+      "startTime": 445.73,
+      "endTime": 472.34,
+      "audioUrl": "/audio/lectures/science/b4/sec_test_protein.mp3"
+    },
+    {
+      "id": "sec_test_lipid",
+      "title": "🥑 Ethanol Emulsion Test for Lipids",
+      "selector": "#sec-test-lipid",
+      "en": "Lipids: Dissolve sample in pure ethanol, shake well, then pour the liquid into cold water. Initial solution is clear and colourless. A positive result forms a cloudy white emulsion.",
+      "vi": "Lipid (Chất béo): Hòa tan mẫu thử vào cồn ethanol tinh khiết, lắc đều, sau đó rót dịch lọc vào nước lạnh. Dung dịch ban đầu trong suốt không màu. Khi có chất béo, hỗn hợp sẽ xuất hiện lớp nhũ tương màu trắng đục như sữa.",
+      "duration": 28.46,
+      "startTime": 472.34,
+      "endTime": 500.8,
+      "audioUrl": "/audio/lectures/science/b4/sec_test_lipid.mp3"
+    },
+    {
+      "id": "sec_test_vitc",
+      "title": "🍋 DCPIP Test for Vitamin C",
+      "selector": "#sec-test-vitc",
+      "en": "Vitamin C: Add sample drop by drop to blue DCPIP solution. Initial color is dark blue. A positive result rapidly decolourises the DCPIP solution, turning it completely colourless.",
+      "vi": "Vitamin C: Nhỏ từng giọt dịch mẫu vào dung dịch DCPIP màu xanh lam. Khi có vitamin C, dung dịch DCPIP bị mất màu nhanh chóng và trở nên trong suốt không màu.",
+      "duration": 27.16,
+      "startTime": 500.8,
+      "endTime": 527.96,
+      "audioUrl": "/audio/lectures/science/b4/sec_test_vitc.mp3"
     }
   ]
 }

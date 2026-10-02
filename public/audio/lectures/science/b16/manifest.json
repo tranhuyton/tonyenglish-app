@@ -2,7 +2,7 @@
   "lectureId": "d48c8f84-ba93-49d4-bf61-c7890bd6d2ce",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B16: Inheritance",
-  "totalDuration": 272.87,
+  "totalDuration": 393.4,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,36 +14,60 @@
     },
     "sec_genetic_code": {
       "start": 1,
-      "end": 1
+      "end": 2
     },
     "sec-genetic-code": {
       "start": 1,
-      "end": 1
+      "end": 2
+    },
+    "sec_mitosis_meiosis": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-mitosis-meiosis": {
+      "start": 2,
+      "end": 2
     },
     "sec_monohybrid_inheritance": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
     },
     "sec-monohybrid-inheritance": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
+    },
+    "sec_punnett_summary": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-punnett-summary": {
+      "start": 4,
+      "end": 4
     },
     "sec_pedigree-sex": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 6
     },
     "sec-pedigree-sex": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 6
+    },
+    "sec_sex_determination": {
+      "start": 6,
+      "end": 6
+    },
+    "sec-sex-determination": {
+      "start": 6,
+      "end": 6
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B16: Di truyền học & Quy luật Phân ly",
+      "title": "Giới thiệu Chuyên đề B16: Di truyền học",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B16: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this chapter, we decode chromosomes, genes, and alleles, contrast mitosis and meiosis, master monohybrid Punnett squares, and analyze pedigree charts and sex determination.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B16: Di truyền học và Quy luật Phân ly. Di truyền học nghiên cứu sự truyền đạt thông tin di truyền qua các thế hệ. Trong bài học này, chúng ta sẽ giải mã nhiễm sắc thể, gen và allele, so sánh nguyên phân và giảm phân, làm chủ bảng lai Punnett đơn gen, cùng sơ đồ phả hệ và cơ chế xác định giới tính.",
+      "en": "Welcome to Topic B16: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this topic, we study chromosomes, genes, monohybrid crosses using Punnett squares, and sex determination.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B16: Di truyền học. Di truyền là sự truyền đạt thông tin di truyền từ thế hệ này sang thế hệ khác. Trong chuyên đề này, chúng ta sẽ học về nhiễm sắc thể, gen, phép lai một cặp tính trạng qua khung Punnett và cơ chế xác định giới tính.",
       "duration": 42.69,
       "startTime": 0.0,
       "endTime": 42.69,
@@ -51,36 +75,69 @@
     },
     {
       "id": "sec_genetic_code",
-      "title": "1. Mã Di truyền: Nhiễm sắc thể, Gen & Allele",
+      "title": "1. Nhiễm sắc thể, Gen & Alen (Genetic Code Overview)",
       "selector": "#sec-genetic-code",
-      "en": "Section 1 establishes core genetic foundations: A Chromosome is a thread-like structure of DNA carrying genetic information in the form of genes. A Gene is a length of DNA that codes for a specific protein. An Allele is an alternative version of a gene. A Haploid nucleus contains a single set of unpaired chromosomes, twenty-three in human gametes; a Diploid nucleus contains two complete sets, forty-six chromosomes in human somatic cells. Mitosis produces two genetically identical diploid daughter cells for growth and repair. Meiosis produces four genetically diverse haploid daughter cells for gamete formation.",
-      "vi": "Mục một thiết lập các khái niệm di truyền nền tảng: Nhiễm sắc thể (Chromosome) là cấu trúc sợi DNA mang thông tin di truyền dưới dạng các gen. Gen là một đoạn phân tử DNA mã hóa cho một chuỗi polypeptide hoặc protein đặc thù. Allele là các trạng thái biểu hiện khác nhau của cùng một gen. Nhân đơn bội (Haploid) chứa một bộ nhiễm sắc thể đơn, gồm 23 chiếc ở giao tử người; Nhân lưỡng bội (Diploid) chứa hai bộ nhiễm sắc thể tương đồng, gồm 46 chiếc ở tế bào sinh dưỡng. Nguyên phân (Mitosis) tạo ra 2 tế bào con lưỡng bội giống hệt nhau phục vụ sinh trưởng và tái tạo mô. Giảm phân (Meiosis) tạo ra 4 tế bào con đơn bội mang biến dị tổ hợp phong phú để hình thành giao tử.",
+      "en": "Section 1 defines key genetic concepts: A chromosome is a thread-like structure of DNA carrying genetic information in the form of genes. A gene is a length of DNA that codes for a specific protein. An allele is an alternative form of a gene.",
+      "vi": "Mục một định nghĩa các khái niệm di truyền cốt lõi: Nhiễm sắc thể là cấu trúc dạng sợi chứa phân tử DNA mang thông tin di truyền dưới dạng các gen. Gen là một đoạn phân tử DNA mã hóa cho một loại protein xác định. Alen là các trạng thái biểu hiện khác nhau của cùng một gen.",
       "duration": 84.83,
       "startTime": 42.69,
       "endTime": 127.52,
       "audioUrl": "/audio/lectures/science/b16/sec_genetic_code.mp3"
     },
     {
-      "id": "sec_monohybrid_inheritance",
-      "title": "2. Di truyền Đơn gen & Bảng lai Punnett (Punnett Square)",
-      "selector": "#sec-monohybrid-inheritance",
-      "en": "Section 2 investigates monohybrid inheritance: Genotype is the genetic makeup of an organism in terms of alleles present. Phenotype is the observable physical features of an organism. Homozygous organisms have two identical alleles for a particular gene, while Heterozygous organisms possess two different alleles. A Dominant allele is expressed if present; a Recessive allele is expressed only when homozygous. In a monohybrid cross between two heterozygous parents, the theoretical phenotypic ratio among offspring is three dominant to one recessive, yielding a one-to-two-to-one genotypic ratio.",
-      "vi": "Mục hai nghiên cứu quy luật di truyền đơn gen: Kiểu gen (Genotype) là tổ hợp toàn bộ các allele của một cơ thể sinh vật. Kiểu hình (Phenotype) là tập hợp các đặc điểm hình thái và sinh lý quan sát được. Đồng hợp tử (Homozygous) mang hai allele giống hệt nhau, trong khi Dị hợp tử (Heterozygous) mang hai allele khác nhau của cùng một gen. Allele trội biểu hiện kiểu hình ngay cả khi ở trạng thái dị hợp; allele lặn chỉ biểu hiện kiểu hình khi ở trạng thái đồng hợp lặn. Trong phép lai giữa hai bố mẹ dị hợp tử, tỷ lệ phân ly kiểu hình lý thuyết ở đời con là 3 trội : 1 lặn, tương ứng tỷ lệ phân ly kiểu gen 1 đồng hợp trội : 2 dị hợp : 1 đồng hợp lặn.",
-      "duration": 78.88,
+      "id": "sec_mitosis_meiosis",
+      "title": "➗ Mitosis vs Meiosis (Nguyên phân & Giảm phân)",
+      "selector": "#sec-mitosis-meiosis",
+      "en": "Mitosis versus meiosis: Mitosis is nuclear division giving rise to genetically identical diploid cells with 46 chromosomes for growth, tissue repair, and asexual reproduction. Meiosis is reduction division halving chromosome number to produce four genetically different haploid gametes with 23 chromosomes for sexual reproduction.",
+      "vi": "So sánh nguyên phân và giảm phân: Nguyên phân là phân chia tế bào tạo ra các tế bào lưỡng bội giống hệt nhau về di truyền với 46 nhiễm sắc thể để sinh trưởng, tái tạo mô và sinh sản vô tính. Giảm phân là phân chia giảm nhiễm làm giảm một nửa số lượng nhiễm sắc thể để tạo ra bốn giao tử đơn bội khác nhau về di truyền với 23 nhiễm sắc thể cho sinh sản hữu tính.",
+      "duration": 41.73,
       "startTime": 127.52,
-      "endTime": 206.4,
+      "endTime": 169.25,
+      "audioUrl": "/audio/lectures/science/b16/sec_mitosis_meiosis.mp3"
+    },
+    {
+      "id": "sec_monohybrid_inheritance",
+      "title": "2. Di truyền Đơn tính & Khung Punnett (Monohybrid Crosses Overview)",
+      "selector": "#sec-monohybrid-inheritance",
+      "en": "Section 2 investigates monohybrid inheritance: Homozygous individuals have two identical alleles for a particular gene (BB or bb). Heterozygous individuals have two different alleles (Bb). A dominant allele is expressed in both homozygotes and heterozygotes. A recessive allele is only expressed when homozygous recessive.",
+      "vi": "Mục hai nghiên cứu di truyền đơn tính: Cá thể đồng hợp mang hai alen giống hệt nhau của cùng một gen (BB hoặc bb). Cá thể dị hợp mang hai alen khác nhau (Bb). Alen trội được biểu hiện ra kiểu hình ở cả trạng thái đồng hợp trội và dị hợp. Alen lặn chỉ được biểu hiện khi ở trạng thái đồng hợp lặn.",
+      "duration": 78.88,
+      "startTime": 169.25,
+      "endTime": 248.13,
       "audioUrl": "/audio/lectures/science/b16/sec_monohybrid_inheritance.mp3"
     },
     {
+      "id": "sec_punnett_summary",
+      "title": "📊 Punnett Summary: 3:1 Ratio (Tỷ lệ Kiểu hình 3:1)",
+      "selector": "#sec-punnett-summary",
+      "en": "Summary of heterozygous monohybrid cross: Crossing two heterozygous tall parents (Tt × Tt) produces a genotypic ratio of 1 TT : 2 Tt : 1 tt, yielding a classic phenotypic ratio of 3 tall plants to 1 short plant (75% tall, 25% short).",
+      "vi": "Tổng kết phép lai phân tích một cặp tính trạng: Lai hai cá thể bố mẹ dị hợp thân cao (Tt × Tt) cho tỷ lệ kiểu gen 1 TT : 2 Tt : 1 tt, dẫn đến tỷ lệ kiểu hình kinh điển là 3 thân cao : 1 thân lùn (75% cao, 25% lùn).",
+      "duration": 37.43,
+      "startTime": 248.13,
+      "endTime": 285.56,
+      "audioUrl": "/audio/lectures/science/b16/sec_punnett_summary.mp3"
+    },
+    {
       "id": "sec_pedigree-sex",
-      "title": "3. Sơ đồ Phả hệ & Cơ chế Xác định Giới tính",
+      "title": "3. Phả hệ & Xác định Giới tính (Pedigree Charts & Sex Determination Overview)",
       "selector": "#sec-pedigree-sex",
-      "en": "Section 3 analyzes pedigree charts and sex determination: Human diploid cells contain twenty-two pairs of autosomes and one pair of sex chromosomes. Human females possess two homologous X chromosomes, while males possess one X and one smaller Y chromosome. During meiosis, all ova receive an X chromosome, whereas half of spermatozoa carry an X and half carry a Y, producing a strict one-to-one sex ratio at fertilization. Pedigree diagrams track phenotypic inheritance across multiple family generations.",
-      "vi": "Mục ba phân tích sơ đồ phả hệ và cơ chế xác định giới tính: Bộ nhiễm sắc thể lưỡng bội ở người gồm 22 cặp nhiễm sắc thể thường và 1 cặp nhiễm sắc thể giới tính. Nữ giới mang cặp nhiễm sắc thể giới tính tương đồng XX, trong khi nam giới mang cặp dị hình XY. Trong giảm phân, mọi trứng đều mang nhiễm sắc thể X, trong khi một nửa tinh trùng mang X và một nửa mang Y, tạo ra tỷ lệ giới tính xấp xỉ 1 nam : 1 nữ khi thụ tinh. Sơ đồ phả hệ giúp theo dõi quy luật di truyền và xác suất xuất hiện bệnh di truyền qua các thế hệ gia đình.",
+      "en": "Section 3 covers sex determination and pedigree charts: Pedigree charts track phenotypes across generations to deduce genotypes. Squares represent males, circles represent females, and shading indicates individuals affected by the genetic trait.",
+      "vi": "Mục ba trình bày sơ đồ phả hệ và cơ chế xác định giới tính: Sơ đồ phả hệ theo dõi kiểu hình qua các thế hệ để suy luận kiểu gen. Hình vuông biểu thị nam, hình tròn biểu thị nữ và hình tô đậm biểu thị cá thể mang tính trạng bệnh.",
       "duration": 66.47,
-      "startTime": 206.4,
-      "endTime": 272.87,
+      "startTime": 285.56,
+      "endTime": 352.03,
       "audioUrl": "/audio/lectures/science/b16/sec_pedigree-sex.mp3"
+    },
+    {
+      "id": "sec_sex_determination",
+      "title": "👦👧 Sex Determination in Humans (Xác định Giới tính 50:50)",
+      "selector": "#sec-sex-determination",
+      "en": "Sex determination in humans: The 23rd chromosome pair determines biological sex. Females are homogametic XX; males are heterogametic XY. Crossing XX and XY always results in a 1:1 ratio, meaning a 50% chance of a boy and 50% chance of a girl at each fertilisation.",
+      "vi": "Cơ chế xác định giới tính ở người: Cặp nhiễm sắc thể số 23 quyết định giới tính sinh học. Nữ giới mang cặp đồng giao tử XX; nam giới mang cặp dị giao tử XY. Phép lai XX và XY luôn cho tỷ lệ 1:1, nghĩa là xác suất 50% sinh con trai và 50% sinh con gái trong mỗi lần thụ tinh.",
+      "duration": 41.37,
+      "startTime": 352.03,
+      "endTime": 393.4,
+      "audioUrl": "/audio/lectures/science/b16/sec_sex_determination.mp3"
     }
   ]
 }

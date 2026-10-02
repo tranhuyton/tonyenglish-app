@@ -2,7 +2,7 @@
   "lectureId": "8ab2afa2-59e3-4c56-8971-8d93dec5ad8e",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B5: Enzymes",
-  "totalDuration": 205.65,
+  "totalDuration": 367.66,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,36 +14,68 @@
     },
     "sec_enzyme_nature": {
       "start": 1,
-      "end": 1
+      "end": 2
     },
     "sec-enzyme-nature": {
       "start": 1,
-      "end": 1
+      "end": 2
+    },
+    "sec_enzyme_properties": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-enzyme-properties": {
+      "start": 2,
+      "end": 2
     },
     "sec_lock_and_key": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
     },
     "sec-lock-and-key": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
+    },
+    "sec_lock_key_mechanism": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-lock-key-mechanism": {
+      "start": 4,
+      "end": 4
     },
     "sec_temp_ph": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 7
     },
     "sec-temp-ph": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 7
+    },
+    "sec_temp_effect": {
+      "start": 6,
+      "end": 6
+    },
+    "sec-temp-effect": {
+      "start": 6,
+      "end": 6
+    },
+    "sec_ph_effect": {
+      "start": 7,
+      "end": 7
+    },
+    "sec-ph-effect": {
+      "start": 7,
+      "end": 7
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B5: Enzyme & Động học Xúc tác Sinh học",
+      "title": "Giới thiệu Chuyên đề B5: Enzyme & Xúc tác Sinh học",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B5: Enzymes. Enzymes are the biological catalysts that drive every biochemical reaction essential for life. In this topic, we examine enzyme protein structure, model catalytic mechanisms via the Lock and Key hypothesis, and analyze rate curves under changing temperatures and pH conditions.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B5: Enzyme và Động học Xúc tác Sinh học. Enzyme là các chất xúc tác sinh học điều khiển mọi phản ứng trao đổi chất duy trì sự sống. Trong bài học này, chúng ta sẽ khảo sát bản chất protein của enzyme, mô hình xúc tác chìa khóa và ổ khóa, cùng đồ thị động học chịu ảnh hưởng của nhiệt độ và độ pH.",
+      "en": "Welcome to Topic B5: Enzymes. Enzymes are biological catalysts that accelerate every biochemical reaction in living cells without being consumed. In this topic, we study the lock and key model and examine the critical impacts of temperature and pH on enzyme activity.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B5: Enzyme và Xúc tác Sinh học. Enzyme là các chất xúc tác sinh học giúp đẩy nhanh mọi phản ứng hóa sinh trong tế bào sống mà không bị biến đổi hay tiêu hao. Trong chuyên đề này, chúng ta sẽ tìm hiểu mô hình ổ khóa và chìa khóa, cùng tác động then chốt của nhiệt độ và độ pH lên hoạt tính enzyme.",
       "duration": 42.11,
       "startTime": 0.0,
       "endTime": 42.11,
@@ -51,36 +83,80 @@
     },
     {
       "id": "sec_enzyme_nature",
-      "title": "1. Bản chất & Đặc tính của Enzyme (Properties of Enzymes)",
+      "title": "1. Bản chất & Đặc tính của Enzyme (Nature of Enzymes Overview)",
       "selector": "#sec-enzyme-nature",
-      "en": "Section 1 defines Enzymes: biological catalysts composed of globular proteins that increase the rate of chemical reactions without being modified or used up in the reaction. Because enzymes remain chemically unaltered, small quantities can catalyze the turnover of thousands of substrate molecules per second.",
-      "vi": "Mục một định nghĩa Enzyme: là các chất xúc tác sinh học có bản chất protein hình cầu, làm tăng tốc độ các phản ứng sinh hóa mà không bị tiêu hao hay biến đổi sau phản ứng. Nhờ không bị tiêu tốn trong phản ứng, một lượng nhỏ enzyme có thể xúc tác chuyển hóa hàng nghìn phân tử cơ chất trong mỗi giây.",
+      "en": "Section 1 defines catalysts and enzymes: A catalyst is a substance that increases the rate of a chemical reaction and is not changed by the reaction. Enzymes are proteins that are involved in all metabolic reactions, where they function as biological catalysts.",
+      "vi": "Mục một định nghĩa chất xúc tác và enzyme: Chất xúc tác là chất làm tăng tốc độ phản ứng hóa học và không bị thay đổi sau phản ứng. Enzyme là các protein tham gia vào mọi phản ứng trao đổi chất, đóng vai trò là chất xúc tác sinh học.",
       "duration": 35.61,
       "startTime": 42.11,
       "endTime": 77.72,
       "audioUrl": "/audio/lectures/science/b5/sec_enzyme_nature.mp3"
     },
     {
-      "id": "sec_lock_and_key",
-      "title": "2. Cơ chế Hoạt động: Thuyết Ổ khóa và Chìa khóa (Lock & Key)",
-      "selector": "#sec-lock-and-key",
-      "en": "Section 2 investigates catalytic mechanisms: Each enzyme possesses a specifically shaped 3D active site. Under the Lock and Key hypothesis, only a substrate molecule with a complementary geometric shape fits into the active site, forming a temporary enzyme-substrate complex. The enzyme lowers the reaction's activation energy, converting substrate into products which leave the active site, freeing it for subsequent cycles.",
-      "vi": "Mục hai nghiên cứu cơ chế xúc tác: Mỗi enzyme sở hữu một trung tâm hoạt động (active site) có cấu trúc không gian 3 chiều đặc thù. Theo thuyết Chìa khóa và Ổ khóa, chỉ cơ chất có hình dạng hình học tương thích bổ sung mới có thể gắn khớp vào trung tâm hoạt động, tạo thành phức hệ enzyme - cơ chất tạm thời. Enzyme làm giảm năng lượng hoạt hóa của phản ứng, biến đổi cơ chất thành sản phẩm rồi giải phóng sản phẩm, trả lại trung tâm hoạt động nguyên vẹn cho chu trình tiếp theo.",
-      "duration": 53.75,
+      "id": "sec_enzyme_properties",
+      "title": "⭐ Key Properties of Enzymes (Đặc tính Trọng tâm)",
+      "selector": "#sec-enzyme-properties",
+      "en": "Key enzyme properties: All enzymes are proteins. They are highly specific, catalyzing only one particular reaction. They remain completely unchanged after the reaction and can be reused repeatedly. They work by lowering the activation energy needed for reactions to occur.",
+      "vi": "Các đặc tính cốt lõi của enzyme: Mọi enzyme đều có bản chất là protein. Chúng có tính đặc hiệu cao, chỉ xúc tác cho một phản ứng duy nhất. Chúng hoàn toàn không đổi sau phản ứng và có thể tái sử dụng nhiều lần. Chúng hoạt động bằng cách hạ thấp năng lượng hoạt hóa cần thiết cho phản ứng.",
+      "duration": 37.74,
       "startTime": 77.72,
-      "endTime": 131.47,
+      "endTime": 115.46,
+      "audioUrl": "/audio/lectures/science/b5/sec_enzyme_properties.mp3"
+    },
+    {
+      "id": "sec_lock_and_key",
+      "title": "2. Cơ chế Hoạt động: Mô hình Ổ khóa và Chìa khóa (Lock & Key Overview)",
+      "selector": "#sec-lock-and-key",
+      "en": "Section 2 explains the Lock and Key hypothesis: The active site of an enzyme possesses a complementary 3D shape into which only a specific substrate molecule can fit, like a key into a lock.",
+      "vi": "Mục hai giải thích thuyết Ổ khóa và Chìa khóa: Trung tâm hoạt động của enzyme có cấu trúc không gian 3 chiều bổ sung chuẩn xác, chỉ cho phép phân tử cơ chất đặc hiệu khớp khít vào, tương tự như chiếc chìa khóa cắm vào đúng ổ khóa.",
+      "duration": 53.75,
+      "startTime": 115.46,
+      "endTime": 169.21,
       "audioUrl": "/audio/lectures/science/b5/sec_lock_and_key.mp3"
     },
     {
+      "id": "sec_lock_key_mechanism",
+      "title": "🔬 Three Stages of Lock & Key Mechanism (Ba Bước Phản ứng)",
+      "selector": "#sec-lock-key-mechanism",
+      "en": "Reaction stages: First, the substrate approaches the complementary active site. Second, the substrate binds to form a temporary enzyme-substrate complex where chemical bonds are broken or made. Third, the products leave the active site, leaving the enzyme completely unchanged and ready for the next substrate.",
+      "vi": "Ba giai đoạn phản ứng: Bước một, cơ chất tiến vào trung tâm hoạt động bổ sung. Bước hai, cơ chất liên kết tạo thành phức hệ enzyme-cơ chất tạm thời, nơi các liên kết hóa học được bẻ gãy hoặc tạo mới. Bước ba, sản phẩm rời khỏi trung tâm hoạt động, trả lại phân tử enzyme nguyên vẹn sẵn sàng đón cơ chất tiếp theo.",
+      "duration": 39.45,
+      "startTime": 169.21,
+      "endTime": 208.66,
+      "audioUrl": "/audio/lectures/science/b5/sec_lock_key_mechanism.mp3"
+    },
+    {
       "id": "sec_temp_ph",
-      "title": "3. Ảnh hưởng của Nhiệt độ & Độ pH lên Hoạt tính Enzyme",
+      "title": "3. Ảnh hưởng của Nhiệt độ & Độ pH (Temperature & pH Overview)",
       "selector": "#sec-temp-ph",
-      "en": "Section 3 analyzes environmental factors: As temperature rises from low levels, kinetic energy increases, yielding more frequent successful collisions between enzyme active sites and substrates, accelerating the rate up to an optimum temperature, typically around 37 degrees Celsius in humans. Beyond the optimum, excessive thermal vibrations break hydrogen and ionic bonds holding the tertiary structure, causing denaturation: the active site permanently alters its shape, substrate can no longer bind, and activity plummets to zero. Similarly, deviations from the optimum pH disrupt ionic charges and denature the active site.",
-      "vi": "Mục ba phân tích các yếu tố môi trường: Khi nhiệt độ tăng từ mức thấp, động năng phân tử gia tăng, làm tăng tần suất va chạm hiệu quả giữa trung tâm hoạt động và cơ chất, đẩy tốc độ phản ứng lên mức nhiệt độ tối ưu (khoảng 37 độ C ở cơ thể người). Vượt qua điểm tối ưu, dao động nhiệt quá mạnh phá vỡ các liên kết hydro và ion duy trì cấu trúc bậc ba, dẫn đến hiện tượng biến tính (denaturation): trung tâm hoạt động biến dạng vĩnh viễn, cơ chất không thể gắn vào và hoạt tính tụt dốc về 0. Tương tự, sự lệch khỏi độ pH tối ưu sẽ làm thay đổi điện tích các nhóm ion và gây biến tính trung tâm hoạt động.",
+      "en": "Section 3 investigates environmental impacts on enzyme kinetics: Temperature alters kinetic energy and causes thermal denaturation, while pH extremes disrupt ionic bonds maintaining the active site shape.",
+      "vi": "Mục ba nghiên cứu tác động của môi trường lên động học enzyme: Nhiệt độ làm thay đổi động năng phân tử và gây biến tính nhiệt, trong khi độ pH cực đoan làm phá vỡ các liên kết ion duy trì hình thể trung tâm hoạt động.",
       "duration": 74.18,
-      "startTime": 131.47,
-      "endTime": 205.65,
+      "startTime": 208.66,
+      "endTime": 282.84,
       "audioUrl": "/audio/lectures/science/b5/sec_temp_ph.mp3"
+    },
+    {
+      "id": "sec_temp_effect",
+      "title": "🔥 Temperature Effect & Denaturation (Nhiệt độ & Biến tính)",
+      "selector": "#sec-temp-effect",
+      "en": "Temperature effects: At low temperatures, molecules have low kinetic energy and collide infrequently. As temperature rises to the optimum around 37°C in humans, reaction rate reaches maximum. Above optimum, excessive thermal vibration breaks bonds holding the tertiary structure; the active site permanently changes shape and denatures, halting the reaction.",
+      "vi": "Tác động nhiệt độ: Ở nhiệt độ thấp, phân tử có động năng thấp nên ít va chạm. Khi nhiệt độ tăng đến mức tối ưu khoảng 37°C ở người, tốc độ phản ứng đạt cực đại. Vượt qua nhiệt độ tối ưu, các dao động nhiệt phá vỡ liên kết cấu trúc bậc 3; trung tâm hoạt động biến đổi vĩnh viễn hình dạng và enzyme bị biến tính, khiến phản ứng ngừng trệ.",
+      "duration": 44.94,
+      "startTime": 282.84,
+      "endTime": 327.78,
+      "audioUrl": "/audio/lectures/science/b5/sec_temp_effect.mp3"
+    },
+    {
+      "id": "sec_ph_effect",
+      "title": "🧪 Optimum pH in Human Digestion (Độ pH Tối ưu trong Tiêu hóa)",
+      "selector": "#sec-ph-effect",
+      "en": "pH effects: Each enzyme has an optimum pH. For example, stomach pepsin operates optimally in acidic conditions at pH 2, while intestinal amylase and lipase require alkaline conditions around pH 8. Deviations from optimum pH alter ionic charges and denature the active site.",
+      "vi": "Tác động độ pH: Mỗi enzyme có một mức pH tối ưu riêng. Ví dụ, pepsin dạ dày hoạt động tối ưu trong môi trường acid mạnh ở pH 2, trong khi amylase và lipase ruột non lại cần môi trường kiềm khoảng pH 8. Độ pH lệch xa mức tối ưu sẽ làm thay đổi điện tích và biến tính trung tâm hoạt động.",
+      "duration": 39.88,
+      "startTime": 327.78,
+      "endTime": 367.66,
+      "audioUrl": "/audio/lectures/science/b5/sec_ph_effect.mp3"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "lectureId": "2637d6ee-fd5f-48fc-aa7a-fc794fb3e561",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B13: Coordination and response",
-  "totalDuration": 250.81,
+  "totalDuration": 359.72,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,27 +14,51 @@
     },
     "sec_nervous_reflex": {
       "start": 1,
-      "end": 1
+      "end": 2
     },
     "sec-nervous-reflex": {
       "start": 1,
-      "end": 1
+      "end": 2
+    },
+    "sec_reflex_arc_path": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-reflex-arc-path": {
+      "start": 2,
+      "end": 2
     },
     "sec_endocrine_system": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
     },
     "sec-endocrine-system": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
+    },
+    "sec_endocrine_glands": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-endocrine-glands": {
+      "start": 4,
+      "end": 4
     },
     "sec_homeostasis": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 6
     },
     "sec-homeostasis": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 6
+    },
+    "sec_skin_thermo": {
+      "start": 6,
+      "end": 6
+    },
+    "sec-skin-thermo": {
+      "start": 6,
+      "end": 6
     }
   },
   "segments": [
@@ -42,8 +66,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề B13: Điều hòa, Phản xạ & Cân bằng Nội môi",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B13: Coordination and response. Survival hinges on rapid detection and adaptive responses to stimuli. In this topic, we examine the nervous system and the five-component reflex arc, compare electrical and hormonal communication, and master homeostatic thermoregulation via negative feedback.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B13: Điều hòa, Phản xạ và Cân bằng Nội môi. Sự sinh tồn của sinh vật dựa vào khả năng phát hiện và đáp ứng thích nghi trước các kích thích. Trong bài học này, chúng ta sẽ khảo sát hệ thần kinh và cung phản xạ 5 khâu, so sánh dẫn truyền xung thần kinh và hormone, cùng cơ chế điều hòa thân nhiệt qua phản hồi âm tính.",
+      "en": "Welcome to Topic B13: Coordination and Response. Organisms detect internal and external stimuli and execute coordinated responses via the nervous and endocrine systems, maintaining physiological homeostasis.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B13: Điều hòa, Phản xạ và Cân bằng Nội môi. Sinh vật nhận biết kích thích môi trường và thực hiện các đáp ứng phối hợp nhịp nhàng thông qua hệ thần kinh và hệ nội tiết để duy trì cân bằng nội môi.",
       "duration": 43.02,
       "startTime": 0.0,
       "endTime": 43.02,
@@ -51,36 +75,69 @@
     },
     {
       "id": "sec_nervous_reflex",
-      "title": "1. Hệ Thần kinh & Cung Phản xạ Tủy sống (Reflex Arc)",
+      "title": "1. Hệ Thần kinh & Cung Phản xạ (Nervous System & Reflex Arc Overview)",
       "selector": "#sec-nervous-reflex",
-      "en": "Section 1 outlines the nervous system: The Central Nervous System comprises the brain and spinal cord, connected to receptors and effectors by peripheral nerves. A Reflex action is an automatic, rapid, and protective response to a stimulus without conscious cerebral thought. The reflex arc consists of five components: Receptor detects stimulus; Sensory neurone conducts impulses to CNS; Relay neurone in spinal cord gray matter integrates signal across synaptic gaps using neurotransmitter chemicals; Motor neurone transmits impulses outward; Effector muscle or gland executes the response.",
-      "vi": "Mục một khái quát hệ thần kinh: Hệ thần kinh trung ương gồm não bộ và tủy sống, liên lạc với các cơ quan thụ cảm và đáp ứng qua các dây thần kinh ngoại biên. Phản xạ (Reflex action) là phản ứng nhanh chóng, tự động và mang tính bảo vệ cơ thể trước kích thích mà không cần suy nghĩ ý thức từ vỏ não. Cung phản xạ gồm 5 khâu tuần tự: Thụ quan tiếp nhận kích thích; Nơron cảm giác dẫn truyền xung thần kinh vào tủy sống; Nơron trung gian trong chất xám tích hợp tín hiệu qua khe synapse bằng chất dẫn truyền hóa học; Nơron vận động truyền xung ra ngoài; Cơ quan đáp ứng (cơ hoặc tuyến) thực hiện co cơ hoặc tiết dịch.",
+      "en": "Section 1 examines the nervous system: The central nervous system consists of the brain and spinal cord. Reflex arcs provide rapid, involuntary, automatic protection against hazards.",
+      "vi": "Mục một khảo sát hệ thần kinh: Hệ thần kinh trung ương gồm não bộ và tủy sống. Cung phản xạ mang lại các phản ứng tự động, tức thì và không chủ ý để bảo vệ cơ thể khỏi nguy hiểm.",
       "duration": 71.58,
       "startTime": 43.02,
       "endTime": 114.6,
       "audioUrl": "/audio/lectures/science/b13/sec_nervous_reflex.mp3"
     },
     {
-      "id": "sec_endocrine_system",
-      "title": "2. Tuyến Nội tiết, Hormone & Phản ứng Sinh tồn (Adrenaline)",
-      "selector": "#sec-endocrine-system",
-      "en": "Section 2 investigates the endocrine system: A Hormone is a chemical substance produced by an endocrine gland, carried by blood plasma, which alters the activity of specific target organs. Compared to nervous impulses which are rapid and short-lived, hormonal control is slower but longer-lasting. Adrenaline, secreted by adrenal glands during fear or stress, triggers fight-or-flight responses: increasing heart rate, dilating bronchioles and pupils, and stimulating liver glycogen breakdown into glucose to supply fuel for emergency muscle exertion.",
-      "vi": "Mục hai nghiên cứu hệ nội tiết: Hormone là chất hóa học do tuyến nội tiết tiết trực tiếp vào huyết tương, làm biến đổi hoạt động sinh lý của các cơ quan đích đặc hiệu. So với xung thần kinh truyền điện thế nhanh và thoáng qua, hormone tác động chậm hơn nhưng duy trì hiệu ứng kéo dài. Adrenaline do tủy tuyến thượng thận tiết ra khi sợ hãi hoặc căng thẳng, kích hoạt phản ứng chiến-hay-chạy (fight-or-flight): tăng nhịp tim và huyết áp, giãn phế quản và đồng tử, kích thích gan phân giải glycogen thành glucose cung cấp nhiên liệu khẩn cấp cho cơ bắp.",
-      "duration": 64.12,
+      "id": "sec_reflex_arc_path",
+      "title": "⚡ Reflex Arc Pathway (Đường dẫn truyền Cung Phản xạ)",
+      "selector": "#sec-reflex-arc-path",
+      "en": "Reflex arc pathway: Stimulus detected by receptor ➔ Sensory neurone transmits electrical impulses to CNS ➔ Relay neurone in spinal cord grey matter ➔ Motor neurone conducts impulse to effector ➔ Effector (muscle contracts or gland secretes) carries out immediate response.",
+      "vi": "Đường dẫn truyền cung phản xạ: Kích thích được thụ thể phát hiện ➔ Nơ-ron cảm giác truyền xung điện về tủy sống ➔ Nơ-ron trung gian xử lý tại chất xám ➔ Nơ-ron vận động dẫn truyền xung đến cơ quan đáp ứng ➔ Cơ bắp co hoặc tuyến tiết dịch thực hiện phản xạ tức thì.",
+      "duration": 29.92,
       "startTime": 114.6,
-      "endTime": 178.72,
+      "endTime": 144.52,
+      "audioUrl": "/audio/lectures/science/b13/sec_reflex_arc_path.mp3"
+    },
+    {
+      "id": "sec_endocrine_system",
+      "title": "2. Tuyến Nội tiết & Hormone (Endocrine System Overview)",
+      "selector": "#sec-endocrine-system",
+      "en": "Section 2 investigates hormones: A hormone is a chemical substance produced by an endocrine gland and carried by the blood, which alters the activity of one or more specific target organs.",
+      "vi": "Mục hai nghiên cứu hormone: Hormone là chất hóa học do tuyến nội tiết tiết ra và được máu vận chuyển đi khắp cơ thể, làm biến đổi hoạt động của một hoặc nhiều cơ quan đích xác định.",
+      "duration": 64.12,
+      "startTime": 144.52,
+      "endTime": 208.64,
       "audioUrl": "/audio/lectures/science/b13/sec_endocrine_system.mp3"
     },
     {
+      "id": "sec_endocrine_glands",
+      "title": "🧪 Key Hormones: Adrenaline & Insulin (Adrenaline & Insulin)",
+      "selector": "#sec-endocrine-glands",
+      "en": "Key hormones: Adrenal glands secrete adrenaline in 'fight or flight' situations, accelerating heart rate, dilating pupils, and boosting blood glucose. The pancreas secretes insulin to lower blood glucose by converting it to glycogen, and glucagon to raise glucose levels.",
+      "vi": "Các hormone chính: Tuyến thượng thận tiết adrenaline trong tình huống khẩn cấp, làm tim đập nhanh, giãn đồng tử và tăng đường huyết. Tuyến tụy tiết insulin để hạ đường huyết chuyển thành glycogen dự trữ, và glucagon để nâng đường huyết khi đói.",
+      "duration": 32.99,
+      "startTime": 208.64,
+      "endTime": 241.63,
+      "audioUrl": "/audio/lectures/science/b13/sec_endocrine_glands.mp3"
+    },
+    {
       "id": "sec_homeostasis",
-      "title": "3. Cân bằng Nội môi & Điều hòa Thân nhiệt (Homeostasis)",
+      "title": "3. Cân bằng Nội môi & Điều nhiệt Da (Homeostasis & Thermoregulation Overview)",
       "selector": "#sec-homeostasis",
-      "en": "Section 3 details Homeostasis: the maintenance of a constant internal environment within tight physiological parameters using negative feedback. Thermoregulation stabilizes core temperature around 37 degrees Celsius. When body temperature rises, arterioles near the skin surface undergo Vasodilation, increasing cutaneous blood flow to radiate heat away, while sweat glands secrete perspiration whose evaporation cools the skin. When body temperature drops, arterioles undergo Vasoconstriction to minimize heat loss, shivering skeletal muscles generate metabolic heat, and arrector pili muscles contract to erect hairs.",
-      "vi": "Mục ba phân tích Cân bằng Nội môi (Homeostasis): là sự duy trì ổn định môi trường bên trong cơ thể xung quanh các giá trị sinh lý tối ưu nhờ cơ chế điều hòa ngược âm tính (negative feedback). Điều hòa thân nhiệt giữ nhiệt độ cơ thể ổn định khoảng 37 độ C. Khi thân nhiệt tăng, tiểu động mạch dưới da Giãn mạch (Vasodilation) tăng lưu lượng máu đến da để tỏa nhiệt ra ngoài, tuyến mồ hôi tiết mồ hôi bay hơi làm mát cơ thể. Khi trời lạnh, tiểu động mạch Co mạch (Vasoconstriction) hạn chế mất nhiệt, cơ xương run rẩy sinh nhiệt và cơ dựng lông co lại để giữ lớp khí cách nhiệt.",
+      "en": "Section 3 investigates homeostasis: The maintenance of a constant internal environment, such as regulating core body temperature at 37°C and stabilizing blood glucose levels.",
+      "vi": "Mục ba nghiên cứu cân bằng nội môi: Là sự duy trì ổn định của môi trường bên trong cơ thể, ví dụ như điều hòa thân nhiệt ở 37°C và ổn định nồng độ glucose trong máu.",
       "duration": 72.09,
-      "startTime": 178.72,
-      "endTime": 250.81,
+      "startTime": 241.63,
+      "endTime": 313.72,
       "audioUrl": "/audio/lectures/science/b13/sec_homeostasis.mp3"
+    },
+    {
+      "id": "sec_skin_thermo",
+      "title": "🌡️ Skin Thermoregulation Mechanics (Cơ chế Điều nhiệt của Da)",
+      "selector": "#sec-skin-thermo",
+      "en": "Skin temperature control: When hot, arterioles undergo vasodilation to increase blood flow to surface capillaries for heat radiation, sweat glands secrete sweat which evaporates to cool the skin, and hair muscles relax so hairs lie flat. When cold, vasoconstriction diverts blood away from the skin surface, shivering generates metabolic heat, and hair muscles contract causing hairs to stand erect trapping an insulating layer of warm air.",
+      "vi": "Cơ chế điều nhiệt của da: Khi trời nóng, tiểu động mạch giãn (vasodilation) tăng lưu lượng máu đến mao mạch dưới da để tỏa nhiệt, tuyến mồ hôi tiết mồ hôi bốc hơi làm mát da, lông nằm rạp. Khi trời lạnh, tiểu động mạch co (vasoconstriction) hạn chế mất nhiệt, run cơ sinh nhiệt, lông dựng đứng giữ lớp khí ấm cách nhiệt.",
+      "duration": 46.0,
+      "startTime": 313.72,
+      "endTime": 359.72,
+      "audioUrl": "/audio/lectures/science/b13/sec_skin_thermo.mp3"
     }
   ]
 }

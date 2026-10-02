@@ -1,8 +1,8 @@
 {
   "lectureId": "1d6a6b7b-ae57-404f-9ad1-58b11219b4d1",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
-  "lectureTitle": "B6: Plant Nutrition",
-  "totalDuration": 294.49,
+  "lectureTitle": "B6: Plant nutrition",
+  "totalDuration": 576.39,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -22,27 +22,99 @@
     },
     "sec_glucose_minerals": {
       "start": 2,
-      "end": 2
+      "end": 4
     },
     "sec-glucose-minerals": {
       "start": 2,
-      "end": 2
+      "end": 4
+    },
+    "sec_glucose_uses": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-glucose-uses": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_minerals": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-minerals": {
+      "start": 4,
+      "end": 4
     },
     "sec_leaf_anatomy": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 10
     },
     "sec-leaf-anatomy": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 10
+    },
+    "sec_leaf_cuticle": {
+      "start": 6,
+      "end": 6
+    },
+    "sec-leaf-cuticle": {
+      "start": 6,
+      "end": 6
+    },
+    "sec_leaf_palisade": {
+      "start": 7,
+      "end": 7
+    },
+    "sec-leaf-palisade": {
+      "start": 7,
+      "end": 7
+    },
+    "sec_leaf_spongy": {
+      "start": 8,
+      "end": 8
+    },
+    "sec-leaf-spongy": {
+      "start": 8,
+      "end": 8
+    },
+    "sec_leaf_vein": {
+      "start": 9,
+      "end": 9
+    },
+    "sec-leaf-vein": {
+      "start": 9,
+      "end": 9
+    },
+    "sec_leaf_stomata": {
+      "start": 10,
+      "end": 10
+    },
+    "sec-leaf-stomata": {
+      "start": 10,
+      "end": 10
     },
     "sec_limiting_factors": {
-      "start": 4,
-      "end": 4
+      "start": 11,
+      "end": 13
     },
     "sec-limiting-factors": {
-      "start": 4,
-      "end": 4
+      "start": 11,
+      "end": 13
+    },
+    "sec_limiting_detail": {
+      "start": 12,
+      "end": 12
+    },
+    "sec-limiting-detail": {
+      "start": 12,
+      "end": 12
+    },
+    "sec_hydrogencarbonate": {
+      "start": 13,
+      "end": 13
+    },
+    "sec-hydrogencarbonate": {
+      "start": 13,
+      "end": 13
     }
   },
   "segments": [
@@ -50,8 +122,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề B6: Quang hợp & Dinh dưỡng Thực vật",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Co-ordinated Sciences Biology, Topic B6: Plant Nutrition. Photosynthesis is the fundamental biological process synthesizing organic fuel on Earth. In this chapter, we explore balanced photosynthetic equations, glucose utilization and mineral nutrition, leaf anatomy adaptations, and limiting factor experiments.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B6: Dinh dưỡng Thực vật và Quang hợp. Quang hợp là quá trình sinh học nền tảng chuyển hóa năng lượng mặt trời thành năng lượng hóa học cho sinh quyển. Trong bài học này, chúng ta sẽ khảo sát phương trình quang hợp, chuyển hóa glucose và khoáng chất, giải phẫu thích nghi của lá, cùng các thí nghiệm về nhân tố giới hạn.",
+      "en": "Welcome to Topic B6: Plant Nutrition. Plants are autotrophic organisms that manufacture their own food through photosynthesis. In this topic, we master the photosynthetic equations, the fate of synthesized glucose, essential mineral ions, leaf anatomy adaptations, and limiting factors.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B6: Dinh dưỡng Thực vật và Quang hợp. Thực vật là sinh vật tự dưỡng, tự tổng hợp thức ăn qua quang hợp. Trong chuyên đề này, chúng ta sẽ làm chủ phương trình quang hợp, số phận của phân tử glucose, ion khoáng thiết yếu, cấu trúc thích nghi của lá cây và các yếu tố giới hạn.",
       "duration": 44.39,
       "startTime": 0.0,
       "endTime": 44.39,
@@ -59,10 +131,10 @@
     },
     {
       "id": "sec_photosynthesis",
-      "title": "1. Quá trình Quang hợp & Phương trình Hóa học",
+      "title": "1. Quá trình & Phương trình Quang hợp (Photosynthesis Overview)",
       "selector": "#sec-photosynthesis",
-      "en": "Section 1 defines Photosynthesis: the process by which plants synthesize carbohydrates from raw materials using energy from light. Chlorophyll inside chloroplasts absorbs solar energy, transferring it into chemical bonds. The balanced chemical equation is: six molecules of carbon dioxide react with six molecules of water in the presence of light and chlorophyll to produce one molecule of glucose and six molecules of oxygen gas.",
-      "vi": "Mục một định nghĩa Quang hợp: là quá trình thực vật tổng hợp carbohydrate từ các nguyên liệu thô sử dụng năng lượng ánh sáng. Sắc tố diệp lục trong lục lạp hấp thu năng lượng photon mặt trời và chuyển hóa thành hóa năng trong các liên kết hóa học. Phương trình hóa học cân bằng: 6 phân tử carbon dioxide kết hợp với 6 phân tử nước, dưới tác dụng của ánh sáng và diệp lục, tạo ra 1 phân tử glucose và giải phóng 6 phân tử khí oxy.",
+      "en": "Section 1 defines photosynthesis: the process by which plants synthesise carbohydrates from raw materials (carbon dioxide and water) using light energy. Word equation: carbon dioxide plus water in the presence of light and chlorophyll produces glucose plus oxygen. Balanced chemical equation: 6CO₂ + 6H₂O yields C₆H₁₂O₆ + 6O₂.",
+      "vi": "Mục một định nghĩa quang hợp: là quá trình thực vật tổng hợp carbohydrate từ nguyên liệu vô cơ (carbon dioxide và nước) bằng năng lượng ánh sáng. Phương trình chữ: carbon dioxide cộng nước, với ánh sáng và diệp lục, tạo ra glucose cộng oxy. Phương trình hóa học cân bằng: 6CO2 cộng 6H2O tạo ra C6H12O6 cộng 6O2.",
       "duration": 51.98,
       "startTime": 44.39,
       "endTime": 96.37,
@@ -70,36 +142,135 @@
     },
     {
       "id": "sec_glucose_minerals",
-      "title": "2. Chuyển hóa Glucose & Dinh dưỡng Khoáng Thực vật",
+      "title": "2. Sử dụng Glucose & Khoáng chất Thiết yếu (Glucose & Minerals Overview)",
       "selector": "#sec-glucose-minerals",
-      "en": "Section 2 investigates glucose fate and mineral ions: Glucose produced in photosynthesis is oxidized in respiration for energy, converted into insoluble starch for compact storage, polymerized into cellulose for cell wall construction, converted into sucrose for phloem transport, or combined with mineral ions. Plants absorb Magnesium ions to synthesize the green pigment chlorophyll; magnesium deficiency causes chlorosis, resulting in yellow leaves. Plants absorb Nitrate ions to supply nitrogen for synthesizing amino acids and proteins; nitrate deficiency severely stunting plant growth.",
-      "vi": "Mục hai nghiên cứu sự chuyển hóa glucose và các ion khoáng thiết yếu: Glucose sinh ra được dùng ngay trong hô hấp tế bào để tạo năng lượng, chuyển hóa thành tinh bột không tan để dự trữ trong rễ và củ, tổng hợp thành cellulose để xây dựng thành tế bào, chuyển thành đường sucrose để vận chuyển qua mạch rây, hoặc kết hợp với ion khoáng. Thực vật hấp thu ion Magie để tổng hợp diệp lục; thiếu magie gây bệnh vàng lá (chlorosis). Thực vật hấp thu ion Nitrat để cung cấp nitơ tổng hợp các axit amin và protein; thiếu nitrat làm cây còi cọc nghiêm trọng.",
+      "en": "Section 2 covers the utilisation of glucose and essential plant minerals: Glucose is converted into storage starch, structural cellulose, sucrose for phloem transport, or oxidised in respiration. Plants absorb nitrate ions for amino acid synthesis and magnesium ions to build chlorophyll.",
+      "vi": "Mục hai phân tích việc sử dụng glucose và các khoáng chất thiết yếu: Glucose được chuyển hóa thành tinh bột dự trữ, cellulose tạo thành tế bào, sucrose vận chuyển trong mạch rây hoặc oxy hóa trong hô hấp. Cây hấp thu ion nitrat để tổng hợp amino acid và ion magie để tạo diệp lục.",
       "duration": 70.43,
       "startTime": 96.37,
       "endTime": 166.8,
       "audioUrl": "/audio/lectures/science/b6/sec_glucose_minerals.mp3"
     },
     {
-      "id": "sec_leaf_anatomy",
-      "title": "3. Giải phẫu Thích nghi của Lá Cây Hai lá mầm",
-      "selector": "#sec-leaf-anatomy",
-      "en": "Section 3 examines dicotyledonous leaf adaptations: The transparent waxy cuticle reduces evaporation while allowing sunlight penetration. The upper epidermis protects inner layers. The palisade mesophyll consists of densely packed columnar cells packed with chloroplasts near the upper surface to maximize light absorption. The spongy mesophyll contains loose cells with large interconnected air spaces, accelerating internal carbon dioxide and water vapor diffusion toward stomata guarded by specialized guard cells on the lower epidermis.",
-      "vi": "Mục ba phân tích giải phẫu thích nghi của lá cây hai lá mầm: Lớp cutin sáp trong suốt phía trên chống mất nước nhưng cho ánh sáng xuyên qua. Biểu bì trên bảo vệ các mô bên trong. Mô giậu (Palisade mesophyll) gồm các tế bào hình trụ xếp sát nhau chứa mật độ lục lạp dày đặc nhất nằm ngay dưới mặt trên để tối đa hóa sự hấp thu ánh sáng. Mô khuyết (Spongy mesophyll) gồm các tế bào xếp xốp rỗng với các khoảng gian bào lớn giúp khí CO2 và hơi nước khuếch tán nhanh chóng đến các khí khổng được đóng mở bởi cặp tế bào hình hạt đậu ở biểu bì dưới.",
-      "duration": 65.42,
+      "id": "sec_glucose_uses",
+      "title": "🍬 Fate of Glucose in Plants (Số phận Phân tử Glucose)",
+      "selector": "#sec-glucose-uses",
+      "en": "Uses of glucose: Starch is an insoluble storage polymer stored in chloroplasts and tubers without exerting osmotic effects. Cellulose builds cell walls. Respiration breaks down glucose to release energy. Sucrose is the transport carbohydrate translocated in phloem sieve tubes. Nectar attracts pollinators.",
+      "vi": "Số phận của glucose: Tinh bột là polymer dự trữ không tan trong lục lạp và củ rễ, không gây áp suất thẩm thấu. Cellulose xây dựng thành tế bào. Hô hấp tế bào phân giải glucose để giải phóng ATP. Sucrose là dạng đường vận chuyển trong mạch rây. Mật hoa thu hút côn trùng thụ phấn.",
+      "duration": 43.02,
       "startTime": 166.8,
-      "endTime": 232.22,
+      "endTime": 209.82,
+      "audioUrl": "/audio/lectures/science/b6/sec_glucose_uses.mp3"
+    },
+    {
+      "id": "sec_minerals",
+      "title": "🌾 Essential Mineral Ions (Ion Khoáng Thiết yếu)",
+      "selector": "#sec-minerals",
+      "en": "Essential mineral ions: Nitrate ions supply nitrogen to build amino acids and proteins; deficiency causes stunted growth and yellow older leaves. Magnesium ions are the central atom in chlorophyll; deficiency causes chlorosis, resulting in yellow leaves with green veins.",
+      "vi": "Ion khoáng thiết yếu: Ion nitrat cung cấp nguyên tố nitơ để tổng hợp amino acid và protein; thiếu nitrat cây bị còi cọc và vàng lá già. Ion magie là nguyên tử trung tâm của phân tử diệp lục; thiếu magie cây bị bệnh úa vàng (chlorosis) làm lá mất màu xanh.",
+      "duration": 35.37,
+      "startTime": 209.82,
+      "endTime": 245.19,
+      "audioUrl": "/audio/lectures/science/b6/sec_minerals.mp3"
+    },
+    {
+      "id": "sec_leaf_anatomy",
+      "title": "3. Cấu tạo Giải phẫu Lá cây (Leaf Anatomy Overview)",
+      "selector": "#sec-leaf-anatomy",
+      "en": "Section 3 examines dicotyledonous leaf adaptations: The broad, thin blade maximizes sunlight capture and shortens gas diffusion pathways.",
+      "vi": "Mục ba khảo sát giải phẫu thích nghi của lá cây hai lá mầm: Phiến lá rộng và mỏng giúp hấp thu tối đa ánh sáng mặt trời và rút ngắn quãng đường khuếch tán khí.",
+      "duration": 65.42,
+      "startTime": 245.19,
+      "endTime": 310.61,
       "audioUrl": "/audio/lectures/science/b6/sec_leaf_anatomy.mp3"
     },
     {
+      "id": "sec_leaf_cuticle",
+      "title": "💧 Cuticle & Upper Epidermis (Lớp Cutin & Biểu bì Trên)",
+      "selector": "#sec-leaf-cuticle",
+      "en": "The waxy cuticle is a waterproof transparent layer that prevents water loss by evaporation. The upper epidermis consists of transparent cells without chloroplasts, letting light penetrate into the palisade layer below.",
+      "vi": "Lớp cutin sáp không thấm nước giúp ngăn ngừa mất nước do bốc hơi. Biểu bì trên gồm một lớp tế bào trong suốt không chứa lục lạp, cho phép ánh sáng chiếu xuyên qua thẳng xuống tầng mô giậu bên dưới.",
+      "duration": 25.38,
+      "startTime": 310.61,
+      "endTime": 335.99,
+      "audioUrl": "/audio/lectures/science/b6/sec_leaf_cuticle.mp3"
+    },
+    {
+      "id": "sec_leaf_palisade",
+      "title": "☀️ Palisade Mesophyll (Mô giậu Quang hợp)",
+      "selector": "#sec-leaf-palisade",
+      "en": "Palisade mesophyll consists of tall, vertically packed columnar cells containing the highest concentration of chloroplasts. Positioned at the top of the leaf, it is the primary site of photosynthesis.",
+      "vi": "Mô giậu gồm các tế bào hình cột xếp khít thẳng đứng chứa mật độ lục lạp cao nhất lá cây. Nằm ngay sát mặt trên của lá, đây là nơi diễn ra phần lớn quá trình quang hợp.",
+      "duration": 23.39,
+      "startTime": 335.99,
+      "endTime": 359.38,
+      "audioUrl": "/audio/lectures/science/b6/sec_leaf_palisade.mp3"
+    },
+    {
+      "id": "sec_leaf_spongy",
+      "title": "💨 Spongy Mesophyll (Mô xốp Khí khổng)",
+      "selector": "#sec-leaf-spongy",
+      "en": "Spongy mesophyll features loosely arranged rounded cells with large intercellular air spaces. These air spaces allow rapid diffusion of carbon dioxide and oxygen between stomata and photosynthetic cells.",
+      "vi": "Mô xốp gồm các tế bào tròn xếp lỏng lẻo tạo nên nhiều khoảng gian bào lớn. Các khoang khí này cho phép khí CO2 và O2 khuếch tán nhanh chóng giữa khí khổng và các tế bào quang hợp.",
+      "duration": 24.86,
+      "startTime": 359.38,
+      "endTime": 384.24,
+      "audioUrl": "/audio/lectures/science/b6/sec_leaf_spongy.mp3"
+    },
+    {
+      "id": "sec_leaf_vein",
+      "title": "🌿 Vascular Bundle (Bó Mạch: Gỗ & Rây)",
+      "selector": "#sec-leaf-vein",
+      "en": "The vascular bundle contains xylem vessels delivering water and mineral ions from roots to mesophyll cells, and phloem sieve tubes translocating sucrose and amino acids away from the leaf to growing sinks.",
+      "vi": "Bó mạch dẫn gồm mạch gỗ (xylem) vận chuyển nước và ion khoáng từ rễ lên mô lá, và mạch rây (phloem) vận chuyển đường sucrose và amino acid từ lá đến các cơ quan dự trữ và sinh trưởng.",
+      "duration": 24.86,
+      "startTime": 384.24,
+      "endTime": 409.1,
+      "audioUrl": "/audio/lectures/science/b6/sec_leaf_vein.mp3"
+    },
+    {
+      "id": "sec_leaf_stomata",
+      "title": "🚪 Stomata & Guard Cells (Khí khổng & Tế bào Khí khổng)",
+      "selector": "#sec-leaf-stomata",
+      "en": "Stomata are microscopic pores mainly on the lower epidermis, bordered by paired guard cells. Guard cells swell with water to open stomata for gas exchange and shrink to close them, preventing excessive transpiration.",
+      "vi": "Khí khổng là các lỗ hiển vi tập trung ở biểu bì dưới, được đóng mở bởi cặp tế bào hình hạt đậu. Tế bào hạt đậu trương nước làm mở khí khổng để trao đổi khí và xẹp lại khi mất nước để hạn chế thoát hơi nước.",
+      "duration": 26.61,
+      "startTime": 409.1,
+      "endTime": 435.71,
+      "audioUrl": "/audio/lectures/science/b6/sec_leaf_stomata.mp3"
+    },
+    {
       "id": "sec_limiting_factors",
-      "title": "4. Nhân tố Giới hạn & Dung dịch Chỉ thị Màu",
+      "title": "4. Yếu tố Giới hạn & Chất Chỉ thị (Limiting Factors Overview)",
       "selector": "#sec-limiting-factors",
-      "en": "Section 4 covers Limiting Factors: environmental factors that are in shortest supply and directly restrict the rate of a physiological process. The three principal limiting factors of photosynthesis are light intensity, carbon dioxide concentration, and ambient temperature. Hydrogencarbonate indicator reveals gas exchange: in darkness, respiration dominates releasing carbon dioxide, turning indicator yellow; in bright light, photosynthesis exceeds respiration, consuming carbon dioxide and turning indicator purple; at compensation point, it remains orange-red.",
-      "vi": "Mục bốn phân tích Nhân tố Giới hạn: là yếu tố ở mức thấp nhất và trực tiếp kiềm chế tốc độ của quá trình quang hợp. Ba nhân tố giới hạn chính gồm cường độ ánh sáng, nồng độ CO2 và nhiệt độ môi trường. Dung dịch chỉ thị hydrogencarbonate phản ánh sự trao đổi khí: trong bóng tối chỉ có hô hấp thải CO2 làm dung dịch hóa vàng; dưới ánh sáng mạnh quang hợp vượt trội hô hấp làm cạn CO2 khiến dung dịch hóa tím; tại điểm bù ánh sáng dung dịch giữ nguyên màu đỏ cam ban đầu.",
+      "en": "Section 4 investigates environmental factors that limit the rate of photosynthesis: light intensity, carbon dioxide concentration, and temperature, alongside hydrogencarbonate indicator experiments.",
+      "vi": "Mục bốn phân tích các yếu tố môi trường giới hạn tốc độ quang hợp: cường độ ánh sáng, nồng độ CO2 và nhiệt độ, cùng thí nghiệm chất chỉ thị hydrogencarbonate.",
       "duration": 62.27,
-      "startTime": 232.22,
-      "endTime": 294.49,
+      "startTime": 435.71,
+      "endTime": 497.98,
       "audioUrl": "/audio/lectures/science/b6/sec_limiting_factors.mp3"
+    },
+    {
+      "id": "sec_limiting_detail",
+      "title": "☀️ Limiting Factors (Các Yếu tố Giới hạn)",
+      "selector": "#sec-limiting-detail",
+      "en": "A limiting factor is something present in the environment in such short supply that it restricts life processes. Increasing light intensity or carbon dioxide concentration increases photosynthetic rate until another factor becomes limiting. Temperature increases rate up to the optimum before enzymes denature.",
+      "vi": "Yếu tố giới hạn là yếu tố có nồng độ thấp nhất trong môi trường gây kìm hãm tốc độ phản ứng. Tăng cường độ ánh sáng hoặc nồng độ CO2 sẽ làm tăng tốc độ quang hợp cho đến khi một yếu tố khác trở thành yếu tố giới hạn. Nhiệt độ làm tăng tốc độ cho tới nhiệt độ tối ưu trước khi enzyme bị biến tính.",
+      "duration": 37.38,
+      "startTime": 497.98,
+      "endTime": 535.36,
+      "audioUrl": "/audio/lectures/science/b6/sec_limiting_detail.mp3"
+    },
+    {
+      "id": "sec_hydrogencarbonate",
+      "title": "🧪 Hydrogencarbonate Indicator (Chỉ thị Hydrogencarbonate)",
+      "selector": "#sec-hydrogencarbonate",
+      "en": "Hydrogencarbonate indicator detects carbon dioxide levels: In bright light, photosynthesis exceeds respiration, consuming CO2 and turning the indicator purple. In darkness, only respiration occurs, producing CO2 and turning the indicator yellow. In dim light at compensation point, rates are equal and the indicator remains red.",
+      "vi": "Chỉ thị hydrogencarbonate phát hiện nồng độ CO2: Khi có ánh sáng mạnh, quang hợp mạnh hơn hô hấp làm giảm CO2, dung dịch hóa tím. Trong bóng tối, chỉ có hô hấp sinh ra CO2, dung dịch hóa vàng. Trong ánh sáng yếu tại điểm bù, tốc độ bằng nhau nên dung dịch giữ màu đỏ.",
+      "duration": 41.03,
+      "startTime": 535.36,
+      "endTime": 576.39,
+      "audioUrl": "/audio/lectures/science/b6/sec_hydrogencarbonate.mp3"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "lectureId": "298327a8-455a-44d5-9a4c-164e2653c456",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B19: Human influences on ecosystems",
-  "totalDuration": 249.92,
+  "totalDuration": 323.85,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,35 +14,51 @@
     },
     "sec_agriculture": {
       "start": 1,
-      "end": 1
+      "end": 2
     },
     "sec-agriculture": {
       "start": 1,
-      "end": 1
+      "end": 2
+    },
+    "sec_monoculture_livestock": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-monoculture-livestock": {
+      "start": 2,
+      "end": 2
     },
     "sec_deforestation": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
     },
     "sec-deforestation": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 4
+    },
+    "sec_deforestation_effects": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-deforestation-effects": {
+      "start": 4,
+      "end": 4
     },
     "sec_eutrophication": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 5
     },
     "sec-eutrophication": {
-      "start": 3,
-      "end": 3
+      "start": 5,
+      "end": 5
     },
     "sec_conservation": {
-      "start": 4,
-      "end": 4
+      "start": 6,
+      "end": 6
     },
     "sec-conservation": {
-      "start": 4,
-      "end": 4
+      "start": 6,
+      "end": 6
     }
   },
   "segments": [
@@ -50,8 +66,8 @@
       "id": "intro",
       "title": "Giới thiệu Chuyên đề B19: Tác động của Con người lên Hệ sinh thái",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B19: Human influences on ecosystems. Expanding human activity exerts severe pressure on the biosphere. In this final biology chapter, we examine agricultural monocultures, deforestation, the exact stages of aquatic eutrophication, and modern biodiversity conservation strategies.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B19: Tác động của Con người lên Hệ sinh thái. Hoạt động của con người đang gây áp lực nghiêm trọng lên sinh quyển. Trong bài học kết thúc phần sinh học này, chúng ta sẽ khảo sát độc canh nông nghiệp, nạn phá rừng, chuỗi diễn biến phú dưỡng nguồn nước và các chiến lược bảo tồn đa dạng sinh học.",
+      "en": "Welcome to Topic B19: Human Influences on Ecosystems. Human activities exert immense pressures on global environments. In this topic, we study modern agriculture impacts, deforestation, eutrophication water pollution, and sustainable conservation strategies.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B19: Tác động của Con người lên Hệ sinh thái. Hoạt động của loài người đang gây áp lực to lớn lên môi trường toàn cầu. Trong chuyên đề này, chúng ta sẽ học về tác động của nông nghiệp hiện đại, nạn phá rừng, hiện tượng phú dưỡng nguồn nước và các chiến lược bảo tồn đa dạng sinh học.",
       "duration": 40.17,
       "startTime": 0.0,
       "endTime": 40.17,
@@ -59,46 +75,68 @@
     },
     {
       "id": "sec_agriculture",
-      "title": "1. Nông nghiệp Thâm canh & Độc canh (Monoculture)",
+      "title": "1. Nông nghiệp & Nguồn Cung Thực phẩm (Food Supply & Agriculture Overview)",
       "selector": "#sec-agriculture",
-      "en": "Section 1 analyzes modern agriculture: Monoculture is the continuous cultivation of a single crop over vast areas. Monocultures drastically reduce biodiversity and create ideal conditions for pest explosions, requiring heavy chemical insecticide and herbicide applications. Intensive livestock farming increases meat yields but raises animal welfare concerns and high greenhouse emissions.",
-      "vi": "Mục một phân tích nông nghiệp thâm canh: Độc canh (Monoculture) gieo trồng duy nhất một giống cây trên diện tích bạt ngàn, làm suy giảm nghiêm trọng đa dạng sinh học và tạo điều kiện cho sâu bệnh bùng phát, buộc nông dân phải dùng nhiều thuốc trừ sâu hóa học. Chăn nuôi gia súc tập trung giúp tăng sản lượng thịt sữa nhưng gây lo ngại về đạo đức động vật và phát thải lượng lớn khí nhà kính.",
+      "en": "Section 1 examines modern agricultural practices: Monocultures and intensive livestock farming increase production yields to meet human food demand, but create severe environmental challenges.",
+      "vi": "Mục một phân tích các hoạt động nông nghiệp hiện đại: Trồng độc canh và chăn nuôi gia súc tập trung giúp tăng năng suất để đáp ứng nhu cầu lương thực, nhưng tạo ra các thách thức môi trường nghiêm trọng.",
       "duration": 45.66,
       "startTime": 40.17,
       "endTime": 85.83,
       "audioUrl": "/audio/lectures/science/b19/sec_agriculture.mp3"
     },
     {
-      "id": "sec_deforestation",
-      "title": "2. Phá hủy Môi trường sống & Nạn Phá rừng (Deforestation)",
-      "selector": "#sec-deforestation",
-      "en": "Section 2 investigates Deforestation: Forests are felled for agricultural land, timber, and roads. Ecological consequences include topsoil erosion when tree roots no longer bind soil particles; severe flooding because rain runs off rapidly without canopy interception; destruction of wildlife habitats driving species extinction; and loss of massive carbon sinks, elevating atmospheric carbon dioxide levels.",
-      "vi": "Mục hai nghiên cứu Nạn phá rừng (Deforestation): Rừng bị đốn hạ để lấy đất trồng trọt, khai thác gỗ và mở đường. Hậu quả sinh thái nghiêm trọng gồm xói mòn lớp đất mặt màu mỡ do mất mạng lưới rễ cây giữ đất; gia tăng lũ lụt do nước mưa chảy tràn; phá hủy môi trường sống dẫn đến tuyệt chủng giống loài; và làm mất đi bể hấp thu carbon khổng lồ, khiến lượng CO2 trong khí quyển tăng vọt.",
-      "duration": 48.62,
+      "id": "sec_monoculture_livestock",
+      "title": "🌾 Monocultures & Intensive Livestock (Độc canh & Chăn nuôi)",
+      "selector": "#sec-monoculture-livestock",
+      "en": "Modern agriculture trade-offs: Monocultures maximize crop yield efficiency but severely reduce biodiversity and cause pest outbreaks. Intensive livestock farming reduces kinetic energy loss to boost meat production but raises severe ethical concerns, antibiotic resistance risks, and methane emissions.",
+      "vi": "Mặt trái của nông nghiệp hiện đại: Trồng độc canh tối đa hóa năng suất nhưng làm suy giảm đa dạng sinh học và bùng phát sâu bệnh. Chăn nuôi gia súc tập trung giảm tiêu hao năng lượng vận động để tăng sản lượng thịt nhưng gây lo ngại về đạo đức, kháng kháng sinh và phát thải khí mê-tan.",
+      "duration": 35.06,
       "startTime": 85.83,
-      "endTime": 134.45,
+      "endTime": 120.89,
+      "audioUrl": "/audio/lectures/science/b19/sec_monoculture_livestock.mp3"
+    },
+    {
+      "id": "sec_deforestation",
+      "title": "2. Phá hủy Môi trường sống & Nạn Phá rừng (Deforestation Overview)",
+      "selector": "#sec-deforestation",
+      "en": "Section 2 investigates deforestation: Clearing forests for agriculture, timber, and urban growth results in habitat destruction and species extinction, severe soil erosion, increased flooding, and higher atmospheric CO₂ levels exacerbating the enhanced greenhouse effect.",
+      "vi": "Mục hai nghiên cứu nạn phá rừng: Việc chặt phá rừng để lấy đất canh tác, khai thác gỗ và phát triển đô thị dẫn đến mất môi trường sống và tuyệt chủng loài, xói mòn đất nghiêm trọng, gia tăng lũ lụt và nâng cao nồng độ CO2 trong khí quyển thúc đẩy hiệu ứng nhà kính.",
+      "duration": 48.62,
+      "startTime": 120.89,
+      "endTime": 169.51,
       "audioUrl": "/audio/lectures/science/b19/sec_deforestation.mp3"
     },
     {
+      "id": "sec_deforestation_effects",
+      "title": "🚜 Deforestation Environmental Damages (Hậu quả Nạn Phá rừng)",
+      "selector": "#sec-deforestation-effects",
+      "en": "Four severe impacts of deforestation: 1. Atmospheric CO₂ rise and enhanced greenhouse effect. 2. Severe topsoil erosion washed away by rain. 3. Increased downstream flooding due to loss of tree water uptake. 4. Irreversible habitat loss driving widespread species extinction.",
+      "vi": "Bốn tác động nghiêm trọng của nạn phá rừng: Một là tăng CO2 khí quyển thúc đẩy hiệu ứng nhà kính. Hai là xói mòn lớp đất màu mỡ do mưa trôi. Ba là gia tăng lũ lụt hạ lưu do mất thảm thực vật giữ nước. Bốn là mất môi trường sống dẫn đến tuyệt chủng loài không thể cứu vãn.",
+      "duration": 38.87,
+      "startTime": 169.51,
+      "endTime": 208.38,
+      "audioUrl": "/audio/lectures/science/b19/sec_deforestation_effects.mp3"
+    },
+    {
       "id": "sec_eutrophication",
-      "title": "3. Ô nhiễm Nguồn nước & Hiện tượng Phú dưỡng (Eutrophication)",
+      "title": "3. Ô nhiễm Nước & Hiện tượng Phú dưỡng (Eutrophication Overview)",
       "selector": "#sec-eutrophication",
-      "en": "Section 3 details the five-step Eutrophication sequence: First, excess mineral fertilizers or untreated sewage leach into waterways. Second, algae rapidly proliferate into an algal bloom, blanketing the water surface and blocking sunlight. Third, submerged aquatic plants cannot photosynthesize and die. Fourth, aerobic bacteria multiply exponentially as they decompose dead vegetation, consuming all dissolved oxygen. Fifth, aquatic animals like fish suffocate and die from severe lack of oxygen.",
-      "vi": "Mục ba mô tả 5 bước của Hiện tượng Phú dưỡng (Eutrophication): Bước 1: Phân bón hóa học dư thừa chứa nitrat và photphat hoặc nước thải chưa xử lý rửa trôi xuống sông hồ. Bước 2: Tảo sinh sôi nở hoa bùng phát (algal bloom), che phủ kín mặt nước ngăn ánh sáng mặt trời. Bước 3: Các loài thực vật thủy sinh dưới đáy không thể quang hợp và chết dần. Bước 4: Vi khuẩn phân hủy hiếu khí tăng sinh theo cấp số nhân để tiêu thụ xác thực vật, hút cạn toàn bộ oxy hòa tan trong nước. Bước 5: Các loài cá và động vật thủy sinh ngạt thở và chết hàng loạt do thiếu dưỡng khí.",
+      "en": "Section 3 investigates eutrophication: Artificial nitrate fertilisers leach into waterways ➔ rapid growth of surface algae (algal bloom) blocks sunlight ➔ submerged aquatic plants die ➔ aerobic decomposer bacteria multiply and deplete dissolved oxygen ➔ aquatic animals suffocate and die.",
+      "vi": "Mục ba phân tích quá trình phú dưỡng: Phân bón nitrat rửa trôi vào sông hồ ➔ tảo nở hoa bao phủ mặt nước che khuất ánh sáng ➔ thực vật thủy sinh dưới đáy chết ➔ vi khuẩn phân hủy hiếu khí sinh sôi tiêu thụ cạn kiệt lượng oxy hòa tan ➔ cá và động vật thủy sinh bị ngạt thở chết hàng loạt.",
       "duration": 69.35,
-      "startTime": 134.45,
-      "endTime": 203.8,
+      "startTime": 208.38,
+      "endTime": 277.73,
       "audioUrl": "/audio/lectures/science/b19/sec_eutrophication.mp3"
     },
     {
       "id": "sec_conservation",
-      "title": "4. Bảo tồn Đa dạng Sinh học (Conservation of Biodiversity)",
+      "title": "4. Bảo tồn Đa dạng Sinh học (Conservation of Biodiversity Overview)",
       "selector": "#sec-conservation",
-      "en": "Section 4 covers Conservation strategies: Sustainable development meets current human needs without compromising the ability of future generations to meet theirs. Conservation programmes preserve biodiversity, prevent species extinction, protect vulnerable habitats in national parks, maintain seed banks for agricultural security, and utilize captive breeding to replenish endangered wildlife populations.",
-      "vi": "Mục bốn trình bày các chiến lược Bảo tồn: Phát triển bền vững đáp ứng nhu cầu hiện tại mà không làm tổn hại đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. Các chương trình bảo tồn giúp duy trì đa dạng sinh học, ngăn chặn nguy cơ tuyệt chủng, thành lập các vườn quốc gia bảo vệ sinh cảnh, xây dựng ngân hàng hạt giống và áp dụng kỹ thuật nhân giống bảo tồn để phục hồi các quần thể động vật hoang dã nguy cấp.",
+      "en": "Section 4 covers conservation strategies: A species becomes endangered when its population falls so low that it is at risk of extinction. Conservation methods include establishing protected nature reserves, captive breeding programs, seed banks, reducing fossil fuel reliance, and international treaties.",
+      "vi": "Mục bốn trình bày các biện pháp bảo tồn: Một loài trở nên nguy cấp khi số lượng cá thể giảm xuống mức có nguy cơ tuyệt chủng. Các chiến lược bảo tồn bao gồm thành lập khu bảo tồn thiên nhiên, nhân giống nuôi nhốt, ngân hàng hạt giống, giảm phụ thuộc vào nhiên liệu hóa thạch và các công ước quốc tế.",
       "duration": 46.12,
-      "startTime": 203.8,
-      "endTime": 249.92,
+      "startTime": 277.73,
+      "endTime": 323.85,
       "audioUrl": "/audio/lectures/science/b19/sec_conservation.mp3"
     }
   ]

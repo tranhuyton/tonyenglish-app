@@ -2,7 +2,7 @@
   "lectureId": "58e65add-a67a-4b90-8b84-52de1a2840be",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B12: Respiration",
-  "totalDuration": 222.47,
+  "totalDuration": 371.44,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,36 +14,68 @@
     },
     "sec_bioenergetics": {
       "start": 1,
-      "end": 1
+      "end": 2
     },
     "sec-bioenergetics": {
       "start": 1,
-      "end": 1
+      "end": 2
+    },
+    "sec_respiration_def": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-respiration-def": {
+      "start": 2,
+      "end": 2
     },
     "sec_aerobic_respiration": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 3
     },
     "sec-aerobic-respiration": {
-      "start": 2,
-      "end": 2
+      "start": 3,
+      "end": 3
     },
     "sec_anaerobic_respiration": {
-      "start": 3,
-      "end": 3
+      "start": 4,
+      "end": 7
     },
     "sec-anaerobic-respiration": {
-      "start": 3,
-      "end": 3
+      "start": 4,
+      "end": 7
+    },
+    "sec_anaerobic_muscles": {
+      "start": 5,
+      "end": 5
+    },
+    "sec-anaerobic-muscles": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_anaerobic_yeast": {
+      "start": 6,
+      "end": 6
+    },
+    "sec-anaerobic-yeast": {
+      "start": 6,
+      "end": 6
+    },
+    "sec_oxygen_debt": {
+      "start": 7,
+      "end": 7
+    },
+    "sec-oxygen-debt": {
+      "start": 7,
+      "end": 7
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B12: Năng lượng Sinh học & Hô hấp Tế bào",
+      "title": "Giới thiệu Chuyên đề B12: Hô hấp Tế bào & Năng lượng Sinh học",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B12: Respiration. Cellular respiration is the master biochemical energy engine of all living organisms. In this lesson, we define bioenergetic ATP usage, contrast aerobic and anaerobic pathways, examine lactic acid production and oxygen debt in human muscles, and explore industrial yeast fermentation.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B12: Năng lượng Sinh học và Hô hấp Tế bào. Hô hấp tế bào là động cơ hóa sinh cung cấp năng lượng cho mọi hoạt động sống. Trong bài học này, chúng ta sẽ khảo sát vai trò của đồng tiền năng lượng ATP, so sánh hô hấp hiếu khí và kỵ khí, cơ chế tích tụ axit lactic và nợ oxy ở cơ bắp, cùng ứng dụng lên men của nấm men.",
+      "en": "Welcome to Topic B12: Respiration and Bioenergetics. Respiration is the fundamental biochemical process releasing usable ATP energy in all living cells. In this topic, we contrast aerobic and anaerobic respiration and examine oxygen debt.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B12: Hô hấp Tế bào và Năng lượng Sinh học. Hô hấp là chuỗi phản ứng sinh hóa cốt lõi giải phóng năng lượng ATP trong mọi tế bào sống. Trong chuyên đề này, chúng ta sẽ so sánh hô hấp hiếu khí, kỵ khí và hiện tượng nợ oxy.",
       "duration": 45.4,
       "startTime": 0.0,
       "endTime": 45.4,
@@ -51,36 +83,80 @@
     },
     {
       "id": "sec_bioenergetics",
-      "title": "1. Khái niệm Hô hấp Tế bào & Đồng tiền Năng lượng ATP",
+      "title": "1. Hô hấp Tế bào & Ứng dụng Năng lượng (Bioenergetics Overview)",
       "selector": "#sec-bioenergetics",
-      "en": "Section 1 defines Respiration: the chemical reactions in cells that break down nutrient molecules and release energy for metabolism. Unlike ventilation which is physical breathing, respiration is an intracellular enzymatic chemical reaction. Living organisms utilize the released ATP energy for muscle contraction, active transport across membranes, protein synthesis, cell division, nerve impulse conduction, and homeostatic thermoregulation.",
-      "vi": "Mục một định nghĩa Hô hấp Tế bào: là chuỗi phản ứng sinh hóa diễn ra bên trong tế bào bẻ gãy các phân tử dinh dưỡng để giải phóng năng lượng cho các hoạt động chuyển hóa. Khác với sự thông khí phổi chỉ là động tác cơ học, hô hấp là phản ứng enzym nội bào. Năng lượng ATP giải phóng được tế bào sử dụng cho sự co cơ, vận chuyển chủ động qua màng, tổng hợp protein, phân chia tế bào, dẫn truyền xung thần kinh và duy trì thân nhiệt ổn định.",
+      "en": "Section 1 defines respiration: The chemical reactions in cells that break down nutrient molecules and release energy for metabolism.",
+      "vi": "Mục một định nghĩa hô hấp tế bào: Là chuỗi phản ứng hóa học trong tế bào phân giải phân tử dinh dưỡng để giải phóng năng lượng cho các hoạt động trao đổi chất.",
       "duration": 53.99,
       "startTime": 45.4,
       "endTime": 99.39,
       "audioUrl": "/audio/lectures/science/b12/sec_bioenergetics.mp3"
     },
     {
-      "id": "sec_aerobic_respiration",
-      "title": "2. Hô hấp Hiếu khí (Aerobic Respiration)",
-      "selector": "#sec-aerobic-respiration",
-      "en": "Section 2 explores Aerobic Respiration: the chemical reactions in cells that use oxygen to break down nutrient molecules to release energy. The balanced chemical equation is: one molecule of glucose reacts with six molecules of oxygen to produce six molecules of carbon dioxide and six molecules of water, liberating a high yield of approximately thirty-two ATP molecules per glucose inside mitochondria.",
-      "vi": "Mục hai nghiên cứu Hô hấp Hiếu khí (Aerobic Respiration): là các phản ứng hóa sinh trong tế bào sử dụng khí oxy để oxy hóa hoàn toàn phân tử dinh dưỡng giải phóng năng lượng. Phương trình hóa học cân bằng: 1 phân tử glucose kết hợp với 6 phân tử oxy tạo ra 6 phân tử carbon dioxide và 6 phân tử nước, giải phóng lượng năng lượng rất lớn khoảng 32 phân tử ATP cho mỗi phân tử glucose diễn ra trong ty thể.",
-      "duration": 50.34,
+      "id": "sec_respiration_def",
+      "title": "🔋 Seven Vital Uses of ATP Energy (Bảy Ứng dụng của Năng lượng)",
+      "selector": "#sec-respiration-def",
+      "en": "Uses of released energy: 1. Muscle contraction. 2. Protein synthesis. 3. Cell division for growth. 4. Active transport of ions. 5. Growth and repair of tissues. 6. Transmission of nerve impulses. 7. Maintenance of a constant body temperature in mammals.",
+      "vi": "Bảy ứng dụng của năng lượng giải phóng: 1. Co cơ vận động. 2. Tổng hợp protein. 3. Phân chia tế bào lớn lên. 4. Vận chuyển chủ động qua màng. 5. Tăng trưởng và phục hồi mô. 6. Dẫn truyền xung thần kinh. 7. Duy trì thân nhiệt ổn định ở động vật có vú.",
+      "duration": 45.14,
       "startTime": 99.39,
-      "endTime": 149.73,
+      "endTime": 144.53,
+      "audioUrl": "/audio/lectures/science/b12/sec_respiration_def.mp3"
+    },
+    {
+      "id": "sec_aerobic_respiration",
+      "title": "2. Hô hấp Hiếu khí & Phương trình Hóa học (Aerobic Respiration Overview)",
+      "selector": "#sec-aerobic-respiration",
+      "en": "Section 2 investigates aerobic respiration: The chemical reactions in cells that use oxygen to break down nutrient molecules to release energy. Word equation: glucose plus oxygen yields carbon dioxide plus water. Balanced chemical equation: C₆H₁₂O₆ + 6O₂ produces 6CO₂ + 6H₂O, releasing large amounts of ATP.",
+      "vi": "Mục hai phân tích hô hấp hiếu khí: Là phản ứng hóa học trong tế bào sử dụng oxy để phân giải chất dinh dưỡng giải phóng năng lượng. Phương trình chữ: glucose cộng oxy tạo ra carbon dioxide cộng nước. Phương trình hóa học: C6H12O6 cộng 6O2 tạo ra 6CO2 cộng 6H2O, giải phóng lượng lớn ATP.",
+      "duration": 50.34,
+      "startTime": 144.53,
+      "endTime": 194.87,
       "audioUrl": "/audio/lectures/science/b12/sec_aerobic_respiration.mp3"
     },
     {
       "id": "sec_anaerobic_respiration",
-      "title": "3. Hô hấp Kỵ khí, Axit Lactic & Nợ Oxy (Oxygen Debt)",
+      "title": "3. Hô hấp Kỵ khí, Lên men & Nợ Oxy (Anaerobic Respiration Overview)",
       "selector": "#sec-anaerobic-respiration",
-      "en": "Section 3 investigates Anaerobic Respiration: releasing energy from glucose without using oxygen, yielding far less energy per glucose due to incomplete breakdown. In vigorously exercising human muscle cells when oxygen cannot reach tissues fast enough, glucose breaks down into toxic Lactic Acid, which causes muscle fatigue and cramps. The volume of oxygen required to break down accumulated lactic acid in the liver during recovery is termed the Oxygen Debt. In yeast cells, anaerobic respiration produces Ethanol and Carbon Dioxide, harnessed globally in brewing and breadmaking.",
-      "vi": "Mục ba phân tích Hô hấp Kỵ khí (Anaerobic Respiration): là quá trình giải phóng năng lượng từ glucose mà không dùng oxy, tạo ra ít năng lượng hơn do phân tử bị bẻ gãy không hoàn toàn. Ở tế bào cơ người khi vận động cường độ cao mà máu không cung cấp đủ oxy, glucose chuyển hóa thành Axit Lactic gây mỏi cơ và chuột rút. Lượng oxy cần thiết sau vận động để oxy hóa sạch axit lactic tại gan được gọi là Hiện tượng Nợ Oxy (Oxygen Debt). Ở tế bào nấm men, hô hấp kỵ khí tạo ra Cồn Ethanol và khí CO2, được ứng dụng rộng rãi trong nấu bia và làm bánh mì nở xốp.",
+      "en": "Section 3 investigates anaerobic respiration: The chemical reactions in cells that break down nutrient molecules to release energy without using oxygen, yielding much less energy per glucose molecule.",
+      "vi": "Mục ba nghiên cứu hô hấp kỵ khí: Là phản ứng hóa học phân giải chất dinh dưỡng giải phóng năng lượng mà không dùng oxy, tạo ra ít năng lượng hơn nhiều trên mỗi phân tử glucose.",
       "duration": 72.74,
-      "startTime": 149.73,
-      "endTime": 222.47,
+      "startTime": 194.87,
+      "endTime": 267.61,
       "audioUrl": "/audio/lectures/science/b12/sec_anaerobic_respiration.mp3"
+    },
+    {
+      "id": "sec_anaerobic_muscles",
+      "title": "🏃 Anaerobic Respiration in Muscles (Hô hấp Kỵ khí ở Cơ bắp)",
+      "selector": "#sec-anaerobic-muscles",
+      "en": "In human muscle cells during vigorous exercise: When oxygen supply cannot meet muscle demands, glucose is broken down anaerobically into lactic acid. Word equation: glucose yields lactic acid. Lactic acid accumulation causes muscle fatigue and cramps.",
+      "vi": "Ở cơ bắp người khi vận động gắng sức: Khi lượng oxy hít vào không đủ đáp ứng, glucose bị phân giải kỵ khí thành acid lactic. Phương trình chữ: glucose tạo ra acid lactic. Sự tích tụ acid lactic làm mỏi cơ và chuột rút.",
+      "duration": 33.4,
+      "startTime": 267.61,
+      "endTime": 301.01,
+      "audioUrl": "/audio/lectures/science/b12/sec_anaerobic_muscles.mp3"
+    },
+    {
+      "id": "sec_anaerobic_yeast",
+      "title": "🍞 Anaerobic Respiration in Yeast (Lên men Rượu ở Nấm men)",
+      "selector": "#sec-anaerobic-yeast",
+      "en": "In yeast (fermentation): Glucose is broken down into alcohol (ethanol) and carbon dioxide. Word equation: glucose yields alcohol plus carbon dioxide. Equation: C₆H₁₂O₆ yields 2C₂H₅OH + 2CO₂. Used commercially in breadmaking (CO₂ causes dough to rise) and brewing alcohol.",
+      "vi": "Ở nấm men (lên men rượu): Glucose bị phân giải thành cồn ethanol và carbon dioxide. Phương trình: C6H12O6 tạo ra 2 C2H5OH cộng 2 CO2. Ứng dụng trong làm bánh mì (khí CO2 làm nở bột) và sản xuất bia rượu.",
+      "duration": 39.74,
+      "startTime": 301.01,
+      "endTime": 340.75,
+      "audioUrl": "/audio/lectures/science/b12/sec_anaerobic_yeast.mp3"
+    },
+    {
+      "id": "sec_oxygen_debt",
+      "title": "🩸 Oxygen Debt (Hiện tượng Nợ Oxy)",
+      "selector": "#sec-oxygen-debt",
+      "en": "Oxygen debt: After vigorous sprinting, deep breathing continues to repay the oxygen debt. Blood transports accumulated lactic acid from muscles to the liver, where extra oxygen is consumed to oxidise lactic acid aerobically into carbon dioxide and water.",
+      "vi": "Nợ oxy: Sau khi chạy nước rút, ta tiếp tục thở gấp để trả nợ oxy. Máu vận chuyển acid lactic tích tụ từ cơ bắp về gan, nơi oxy bổ sung được dùng để oxy hóa hiếu khí acid lactic thành CO2 và nước.",
+      "duration": 30.69,
+      "startTime": 340.75,
+      "endTime": 371.44,
+      "audioUrl": "/audio/lectures/science/b12/sec_oxygen_debt.mp3"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "lectureId": "7ed510d0-acd2-4d0a-9079-1f1e4e4fc463",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B14: Drugs",
-  "totalDuration": 218.97,
+  "totalDuration": 308.91,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -22,28 +22,44 @@
     },
     "sec_antibiotics": {
       "start": 2,
-      "end": 2
+      "end": 3
     },
     "sec-antibiotics": {
       "start": 2,
-      "end": 2
+      "end": 3
+    },
+    "sec_antibiotics_target": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-antibiotics-target": {
+      "start": 3,
+      "end": 3
     },
     "sec_mrsa_crisis": {
-      "start": 3,
-      "end": 3
+      "start": 4,
+      "end": 5
     },
     "sec-mrsa-crisis": {
-      "start": 3,
-      "end": 3
+      "start": 4,
+      "end": 5
+    },
+    "sec_resistance_selection": {
+      "start": 5,
+      "end": 5
+    },
+    "sec-resistance-selection": {
+      "start": 5,
+      "end": 5
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B14: Dược lý học, Kháng sinh & Kháng thuốc",
+      "title": "Giới thiệu Chuyên đề B14: Thuốc, Kháng sinh & Kháng thuốc",
       "selector": "#sec-header",
-      "en": "Welcome to Topic B14: Drugs. Pharmacology examines chemical substances that modify human physiology. In this lesson, we define drugs, contrast medicinal and non-medicinal substances, investigate how antibiotics selectively target bacterial pathogens without affecting human cells or viruses, and analyze the emergence of antibiotic resistance.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B14: Thuốc, Kháng sinh và Khủng hoảng Kháng thuốc. Dược lý học nghiên cứu các chất hóa học làm thay đổi phản ứng sinh lý cơ thể. Trong bài học này, chúng ta sẽ định nghĩa thuốc, cơ chế kháng sinh tiêu diệt vi khuẩn mà vô hiệu trước virus, cùng quá trình tiến hóa kháng thuốc nguy hiểm của vi khuẩn.",
+      "en": "Welcome to Topic B14: Drugs and Antibiotics. A drug is any substance taken into the body that modifies or affects chemical reactions. In this topic, we examine antibiotics, explain why they are ineffective against viruses, and analyze the development of antibiotic-resistant superbugs like MRSA.",
+      "vi": "Chào mừng các bạn đến với Chuyên đề B14: Thuốc, Kháng sinh và Kháng thuốc. Thuốc là bất kỳ chất nào đưa vào cơ thể làm thay đổi hoặc ảnh hưởng đến các phản ứng hóa sinh. Trong chuyên đề này, chúng ta sẽ tìm hiểu về kháng sinh, lý do kháng sinh vô dụng với virus và sự xuất hiện của siêu vi khuẩn kháng thuốc như MRSA.",
       "duration": 43.41,
       "startTime": 0.0,
       "endTime": 43.41,
@@ -51,10 +67,10 @@
     },
     {
       "id": "sec_what_is_drug",
-      "title": "1. Khái niệm Thuốc & Phân loại Dược chất (What is a Drug?)",
+      "title": "1. Khái niệm về Thuốc (What is a Drug? Overview)",
       "selector": "#sec-what-is-drug",
-      "en": "Section 1 defines a Drug: any substance taken into the body that modifies or affects chemical reactions in the body. Medicinal drugs, like analgesics and antibiotics, relieve symptoms and eradicate infections under clinical supervision. Misused drugs like alcohol and tobacco depress nervous transmission or damage respiratory mucosa, leading to chemical dependency, tolerance, and organ damage.",
-      "vi": "Mục một định nghĩa Thuốc (Drug): là bất kỳ chất nào đưa vào cơ thể làm thay đổi hoặc ảnh hưởng đến các phản ứng hóa sinh trong cơ thể. Thuốc chữa bệnh (Medicinal drugs) như thuốc giảm đau và kháng sinh giúp xoa dịu triệu chứng và tiêu diệt mầm bệnh theo chỉ dẫn y khoa. Các chất gây nghiện bị lạm dụng như rượu bia và thuốc lá ức chế dẫn truyền thần kinh hoặc phá hủy niêm mạc phổi, dẫn đến tình trạng lệnh thuộc thuốc, lờn thuốc và suy đa tạng.",
+      "en": "Section 1 defines a drug: A drug is any substance taken into the body that modifies or affects chemical reactions in the body. Medicinal drugs treat symptoms or cure diseases; non-medicinal drugs alter mood or perception.",
+      "vi": "Mục một định nghĩa thuốc: Thuốc là bất kỳ chất nào đưa vào cơ thể làm biến đổi hoặc ảnh hưởng đến các phản ứng hóa học trong cơ thể. Thuốc y tế dùng để điều trị triệu chứng hoặc chữa bệnh; chất kích thích làm thay đổi tâm trạng hoặc tri giác.",
       "duration": 50.75,
       "startTime": 43.41,
       "endTime": 94.16,
@@ -62,25 +78,47 @@
     },
     {
       "id": "sec_antibiotics",
-      "title": "2. Kháng sinh & Vì sao Kháng sinh Vô hiệu trước Virus?",
+      "title": "2. Kháng sinh & Vì sao Vô dụng với Virus (Antibiotics Overview)",
       "selector": "#sec-antibiotics",
-      "en": "Section 2 investigates Antibiotics: chemical substances produced by microorganisms that kill or inhibit the growth of bacteria. Penicillin disrupts peptidoglycan cell wall cross-linking, causing bacterial cells to burst by osmotic lysis. Critically, antibiotics are completely ineffective against viruses: viruses possess no cellular structures, no cell walls, and no independent metabolic machinery of their own, reproducing solely inside host cells by hijacking host biochemical mechanisms.",
-      "vi": "Mục hai nghiên cứu Thuốc Kháng sinh (Antibiotics): là các chất hóa học do vi sinh vật sản sinh có khả năng tiêu diệt hoặc ức chế sự sinh trưởng của vi khuẩn. Ví dụ kháng sinh Penicillin ngăn chặn sự liên kết ngang của thành tế bào peptidoglycan, khiến vi khuẩn trương vỡ dưới áp suất thẩm thấu. Điểm nhấn cốt lõi: Kháng sinh hoàn toàn bất lực trước virus vì virus không có cấu trúc tế bào, không có thành tế bào và không có bộ máy chuyển hóa riêng mà ký sinh bắt buộc bên trong tế bào chủ.",
+      "en": "Section 2 investigates antibiotics: Chemical substances produced by microorganisms (like Penicillium fungus) that kill or inhibit the growth of bacteria. Crucially, antibiotics are completely ineffective against viral diseases like influenza or HIV.",
+      "vi": "Mục hai nghiên cứu thuốc kháng sinh: Là các hợp chất hóa học do vi sinh vật (như nấm Penicillium) tiết ra để tiêu diệt hoặc ức chế vi khuẩn. Điểm cốt lõi: Kháng sinh hoàn toàn vô dụng trước các bệnh do virus như cúm hay HIV.",
       "duration": 59.39,
       "startTime": 94.16,
       "endTime": 153.55,
       "audioUrl": "/audio/lectures/science/b14/sec_antibiotics.mp3"
     },
     {
-      "id": "sec_mrsa_crisis",
-      "title": "3. Kháng thuốc Kháng sinh & Khủng hoảng MRSA",
-      "selector": "#sec-mrsa-crisis",
-      "en": "Section 3 examines Antibiotic Resistance: In any large bacterial population, random genetic mutations occasionally produce individual bacteria with resistance to specific antibiotics. When exposed to antibiotics, non-resistant bacteria perish while resistant mutants survive, reproduce rapidly via binary fission, and pass resistance genes to progeny. Overuse of antibiotics in livestock and patients who fail to complete their prescribed course accelerates this selection pressure, yielding superbugs like Methicillin-Resistant Staphylococcus aureus, or MRSA.",
-      "vi": "Mục ba phân tích Kháng thuốc Kháng sinh: Trong một quần thể vi khuẩn đông đúc, các đột biến gen ngẫu nhiên tạo ra các cá thể có khả năng kháng lại một loại kháng sinh nhất định. Khi dùng kháng sinh, vi khuẩn nhạy cảm bị tiêu diệt trong khi vi khuẩn đột biến kháng thuốc sống sót, phân chia nhân đôi nhanh chóng và truyền gen kháng thuốc cho thế hệ sau. Việc lạm dụng kháng sinh trong chăn nuôi và việc bệnh nhân tự ý ngừng thuốc khi chưa hết liệu trình đã tạo áp lực chọn lọc gay gắt, sinh ra các siêu vi khuẩn đa kháng thuốc như tụ cầu vàng kháng methicillin (MRSA).",
-      "duration": 65.42,
+      "id": "sec_antibiotics_target",
+      "title": "🦠 Why Antibiotics Don't Affect Viruses (Kháng sinh & Virus)",
+      "selector": "#sec-antibiotics-target",
+      "en": "Mechanism: Antibiotics target bacterial cellular structures, such as disrupting bacterial peptidoglycan cell walls or inhibiting bacterial protein synthesis. Viruses have no cell walls, no cell membrane, and no independent metabolic machinery; they replicate exclusively inside host human cells, remaining invulnerable to antibiotics.",
+      "vi": "Cơ chế: Kháng sinh tấn công vào cấu trúc tế bào vi khuẩn, như phá hủy thành tế bào peptidoglycan hoặc ức chế tổng hợp protein vi khuẩn. Virus không có thành tế bào, không có màng sinh chất và không có bộ máy chuyển hóa độc lập; chúng nhân lên bên trong tế bào chủ nên kháng sinh không thể tác động.",
+      "duration": 40.41,
       "startTime": 153.55,
-      "endTime": 218.97,
+      "endTime": 193.96,
+      "audioUrl": "/audio/lectures/science/b14/sec_antibiotics_target.mp3"
+    },
+    {
+      "id": "sec_mrsa_crisis",
+      "title": "3. Kháng Kháng sinh & Siêu vi khuẩn MRSA (Antibiotic Resistance Overview)",
+      "selector": "#sec-mrsa-crisis",
+      "en": "Section 3 examines antibiotic resistance: Natural selection among bacteria leads to the survival and reproduction of mutant resistant strains when antibiotics are overused.",
+      "vi": "Mục ba phân tích hiện tượng kháng kháng sinh: Chọn lọc tự nhiên ở vi khuẩn dẫn đến sự sống sót và sinh sôi của các chủng đột biến kháng thuốc khi kháng sinh bị lạm dụng.",
+      "duration": 65.42,
+      "startTime": 193.96,
+      "endTime": 259.38,
       "audioUrl": "/audio/lectures/science/b14/sec_mrsa_crisis.mp3"
+    },
+    {
+      "id": "sec_resistance_selection",
+      "title": "🧬 Natural Selection of Resistance (Chọn lọc Tự nhiên Kháng thuốc)",
+      "selector": "#sec-resistance-selection",
+      "en": "Mechanism of resistance: 1. Random mutation in bacterial DNA creates a gene conferring resistance. 2. When treated with antibiotic, non-resistant bacteria die, removing competition. 3. The mutant resistant bacterium survives and reproduces rapidly by binary fission. 4. All offspring inherit the resistance gene, forming an antibiotic-resistant strain like MRSA.",
+      "vi": "Cơ chế kháng thuốc: 1. Đột biến ngẫu nhiên trong DNA vi khuẩn tạo gen kháng thuốc. 2. Khi dùng kháng sinh, vi khuẩn không kháng bị tiêu diệt, làm mất sự cạnh tranh. 3. Vi khuẩn đột biến kháng thuốc sống sót và sinh sôi nhanh chóng qua phân đôi. 4. Toàn bộ thế hệ con cháu mang gen kháng thuốc, tạo nên chủng siêu vi khuẩn như MRSA.",
+      "duration": 49.53,
+      "startTime": 259.38,
+      "endTime": 308.91,
+      "audioUrl": "/audio/lectures/science/b14/sec_resistance_selection.mp3"
     }
   ]
 }
