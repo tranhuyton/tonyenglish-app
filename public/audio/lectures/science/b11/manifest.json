@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B11: Gas exchange and respiration",
   "totalDuration": 239.34,
-  "majorSections": [
-    {
-      "id": "sec_gas_exchange_surfaces",
-      "title": "1. Đặc điểm Bề mặt Trao đổi Khí"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_respiratory_system",
-      "title": "2. Cấu trúc Giải phẫu Hệ Hô hấp"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_ventilation_mechanics",
-      "title": "3. Cơ chế Thông khí Hít vào & Thở ra"
+    "sec_gas_exchange_surfaces": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-gas-exchange-surfaces": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_respiratory_system": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-respiratory-system": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_ventilation_mechanics": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-ventilation-mechanics": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

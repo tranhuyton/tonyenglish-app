@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B15: Reproduction",
   "totalDuration": 306.35,
-  "majorSections": [
-    {
-      "id": "sec_reproduction_modes",
-      "title": "1. Sinh sản Vô tính vs Hữu tính"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_flowering_plants",
-      "title": "2. Sinh sản Hữu tính ở Thực vật"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_human_reproduction",
-      "title": "3. Sinh sản Người & Chu kỳ Kinh nguyệt"
+    "sec_reproduction_modes": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_stis_hiv",
-      "title": "4. Bệnh Lây qua Đường Tình dục (STIs) & HIV"
+    "sec-reproduction-modes": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_flowering_plants": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-flowering-plants": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_human_reproduction": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-human-reproduction": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_stis_hiv": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-stis-hiv": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B16: Inheritance",
   "totalDuration": 272.87,
-  "majorSections": [
-    {
-      "id": "sec_genetic_code",
-      "title": "1. Khái niệm Nhiễm sắc thể, Gen & Allele"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_monohybrid_inheritance",
-      "title": "2. Di truyền Đơn gen & Bảng lai Punnett"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_pedigree-sex",
-      "title": "3. Phả hệ & Xác định Giới tính (XX/XY)"
+    "sec_genetic_code": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-genetic-code": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_monohybrid_inheritance": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-monohybrid-inheritance": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_pedigree-sex": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-pedigree-sex": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B13: Coordination and response",
   "totalDuration": 250.81,
-  "majorSections": [
-    {
-      "id": "sec_nervous_reflex",
-      "title": "1. Hệ Thần kinh & Cung Phản xạ (Reflex Arc)"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_endocrine_system",
-      "title": "2. Tuyến Nội tiết & Hormone Adrenaline"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_homeostasis",
-      "title": "3. Cân bằng Nội môi & Điều hòa Thân nhiệt"
+    "sec_nervous_reflex": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-nervous-reflex": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_endocrine_system": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-endocrine-system": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_homeostasis": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-homeostasis": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

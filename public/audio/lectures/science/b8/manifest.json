@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B8: Transport in plants",
   "totalDuration": 298.11,
-  "majorSections": [
-    {
-      "id": "sec_xylem_phloem",
-      "title": "1. Cấu tạo Mạch gỗ & Mạch rây"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_vascular_position",
-      "title": "2. Phân bố Bó mạch ở Rễ, Thân & Lá"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_transpiration",
-      "title": "3. Thoát hơi nước (Transpiration Stream)"
+    "sec_xylem_phloem": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_translocation",
-      "title": "4. Vận chuyển Từ Nguồn đến Đích (Translocation)"
+    "sec-xylem-phloem": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_vascular_position": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-vascular-position": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_transpiration": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-transpiration": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_translocation": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-translocation": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

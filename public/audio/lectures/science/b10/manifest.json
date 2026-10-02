@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B10: Diseases and immunity",
   "totalDuration": 254.49,
-  "majorSections": [
-    {
-      "id": "sec_pathogens",
-      "title": "1. Mầm bệnh & Hàng rào Phòng thủ"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_immune_response",
-      "title": "2. Kháng nguyên, Kháng thể & Thực bào"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_vaccination",
-      "title": "3. Cơ chế Tiêm chủng Vắc-xin"
+    "sec_pathogens": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-pathogens": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_immune_response": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-immune-response": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_vaccination": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-vaccination": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B17: Variation and selection",
   "totalDuration": 238.91,
-  "majorSections": [
-    {
-      "id": "sec_variation_mutation",
-      "title": "1. Biến dị Liên tục, Không liên tục & Đột biến"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_adaptive_features",
-      "title": "2. Thực vật Sa mạc vs Thủy sinh"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_natural_selection",
-      "title": "3. Chọn lọc Tự nhiên vs Chọn giống Nhân tạo"
+    "sec_variation_mutation": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-variation-mutation": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_adaptive_features": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-adaptive-features": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_natural_selection": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-natural-selection": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

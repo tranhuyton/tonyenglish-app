@@ -3,16 +3,32 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B1: Characteristics of living organisms",
   "totalDuration": 233.3,
-  "majorSections": [
-    {
-      "id": "sec_mrsgren",
-      "title": "1. Bảy Đặc tính Sự sống (MRS GREN)"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_five_kingdoms",
-      "title": "2. Phân loại Năm Giới Sinh học"
+    "sec-header": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_mrsgren": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-mrsgren": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_five_kingdoms": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-five-kingdoms": {
+      "start": 2,
+      "end": 2
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

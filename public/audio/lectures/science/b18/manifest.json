@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B18: Organisms and their environment",
   "totalDuration": 208.79,
-  "majorSections": [
-    {
-      "id": "sec_ecological_definitions",
-      "title": "1. Khái niệm Sinh thái học"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_food_chains_energy",
-      "title": "2. Chuỗi Thức ăn & Quy tắc 10%"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_carbon_cycle",
-      "title": "3. Vòng tuần hoàn Cacbon"
+    "sec_ecological_definitions": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-ecological-definitions": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_food_chains_energy": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-food-chains-energy": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_carbon_cycle": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-carbon-cycle": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

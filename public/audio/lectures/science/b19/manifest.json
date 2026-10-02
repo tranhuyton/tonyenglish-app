@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B19: Human influences on ecosystems",
   "totalDuration": 249.92,
-  "majorSections": [
-    {
-      "id": "sec_agriculture",
-      "title": "1. Nông nghiệp Thâm canh & Độc canh"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_deforestation",
-      "title": "2. Nạn Phá rừng & Mất Bể chứa Carbon"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_eutrophication",
-      "title": "3. Hiện tượng Phú dưỡng (Eutrophication)"
+    "sec_agriculture": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_conservation",
-      "title": "4. Chiến lược Bảo tồn Đa dạng Sinh học"
+    "sec-agriculture": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_deforestation": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-deforestation": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_eutrophication": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-eutrophication": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_conservation": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-conservation": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B12: Respiration",
   "totalDuration": 222.47,
-  "majorSections": [
-    {
-      "id": "sec_bioenergetics",
-      "title": "1. Khái niệm Hô hấp Tế bào & ATP"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_aerobic_respiration",
-      "title": "2. Hô hấp Hiếu khí (Aerobic Respiration)"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_anaerobic_respiration",
-      "title": "3. Hô hấp Kỵ khí & Nợ Oxy (Oxygen Debt)"
+    "sec_bioenergetics": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-bioenergetics": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_aerobic_respiration": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-aerobic-respiration": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_anaerobic_respiration": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-anaerobic-respiration": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

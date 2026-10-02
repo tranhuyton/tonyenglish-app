@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B3: Movement into and out of cells",
   "totalDuration": 197.94,
-  "majorSections": [
-    {
-      "id": "sec_diffusion",
-      "title": "1. Khuyếch tán (Diffusion)"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_osmosis",
-      "title": "2. Thẩm thấu & Thế nước (Osmosis)"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_active_transport",
-      "title": "3. Vận chuyển Chủ động (Active Transport)"
+    "sec_diffusion": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-diffusion": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_osmosis": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-osmosis": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_active_transport": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-active-transport": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

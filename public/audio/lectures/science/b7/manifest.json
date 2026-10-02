@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B7: Human nutrition",
   "totalDuration": 319.5,
-  "majorSections": [
-    {
-      "id": "sec_balanced_diet",
-      "title": "1. Khẩu phần Ăn Cân bằng & Bệnh Thiếu hụt"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_food_processing",
-      "title": "2. Năm Giai đoạn Xử lý Thức ăn"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_digestive_system",
-      "title": "3. Giải phẫu Ống Tiêu hóa & Nhu động"
+    "sec_balanced_diet": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_chemical_digestion",
-      "title": "4. Tiêu hóa Hóa học & Dịch Mật"
+    "sec-balanced-diet": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_food_processing": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-food-processing": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_digestive_system": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-digestive-system": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_chemical_digestion": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-chemical-digestion": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

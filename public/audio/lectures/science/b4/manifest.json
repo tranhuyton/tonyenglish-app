@@ -3,16 +3,32 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B4: Biological molecules",
   "totalDuration": 213.79,
-  "majorSections": [
-    {
-      "id": "sec_biomolecules",
-      "title": "1. Cấu trúc Hóa học Carbohydrate, Lipid, Protein & DNA"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_food_tests",
-      "title": "2. Thử nghiệm Hóa sinh Thực phẩm"
+    "sec-header": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_biomolecules": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-biomolecules": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_food_tests": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-food-tests": {
+      "start": 2,
+      "end": 2
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B2: Cells and organisms",
   "totalDuration": 264.88,
-  "majorSections": [
-    {
-      "id": "sec_cell_comparison",
-      "title": "1. So sánh Tế bào Thực vật, Động vật & Vi khuẩn"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_organelles",
-      "title": "2. Chức năng các Bào quan"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_specialised_cells",
-      "title": "3. Tế bào Chuyên hóa"
+    "sec_cell_comparison": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_magnification",
-      "title": "4. Công thức Độ phóng đại (I = A × M)"
+    "sec-cell-comparison": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_organelles": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-organelles": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_specialised_cells": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-specialised-cells": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_magnification": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-magnification": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

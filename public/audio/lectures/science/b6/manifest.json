@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B6: Plant Nutrition",
   "totalDuration": 294.49,
-  "majorSections": [
-    {
-      "id": "sec_photosynthesis",
-      "title": "1. Quá trình Quang hợp & Phương trình"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_glucose_minerals",
-      "title": "2. Chuyển hóa Glucose & Khoáng chất"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_leaf_anatomy",
-      "title": "3. Cấu tạo Thích nghi của Lá cây"
+    "sec_photosynthesis": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_limiting_factors",
-      "title": "4. Nhân tố Giới hạn & Thí nghiệm"
+    "sec-photosynthesis": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_glucose_minerals": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-glucose-minerals": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_leaf_anatomy": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-leaf-anatomy": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_limiting_factors": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-limiting-factors": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

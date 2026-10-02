@@ -3,24 +3,48 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B9: Transport in animals",
   "totalDuration": 331.54,
-  "majorSections": [
-    {
-      "id": "sec_circulation_system",
-      "title": "1. Vòng Tuần hoàn Đơn vs Kép"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_heart_anatomy",
-      "title": "2. Cấu tạo Tim & Chu kỳ Tim"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_chd",
-      "title": "3. Bệnh Động mạch Vành (CHD)"
+    "sec_circulation_system": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_vessels_blood",
-      "title": "4. Mạch máu & Thành phần Máu"
+    "sec-circulation-system": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_heart_anatomy": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-heart-anatomy": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_chd": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-chd": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_vessels_blood": {
+      "start": 4,
+      "end": 4
+    },
+    "sec-vessels-blood": {
+      "start": 4,
+      "end": 4
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",

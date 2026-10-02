@@ -3,20 +3,40 @@
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B5: Enzymes",
   "totalDuration": 205.65,
-  "majorSections": [
-    {
-      "id": "sec_enzyme_nature",
-      "title": "1. Bản chất & Đặc tính của Enzyme"
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_lock_and_key",
-      "title": "2. Thuyết Ổ khóa và Chìa khóa"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_temp_ph",
-      "title": "3. Ảnh hưởng của Nhiệt độ & pH"
+    "sec_enzyme_nature": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-enzyme-nature": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_lock_and_key": {
+      "start": 2,
+      "end": 2
+    },
+    "sec-lock-and-key": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_temp_ph": {
+      "start": 3,
+      "end": 3
+    },
+    "sec-temp-ph": {
+      "start": 3,
+      "end": 3
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
