@@ -686,6 +686,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleOpenCourse = (course: any) => {
     resetWorkspaceAndChat();
     setSelectedCourseId(String(course.id)); 
+    setFilterCourse(course.id);
+    setAnalyticsCourse(course.id);
     setCurrentFolderId(null); 
     setSearchTest(''); 
     setFolderPage(1); 
@@ -1429,6 +1431,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     setFilterCourse('all');
                     setAnalyticsCourse('all');
                     setFilterCourseDropdownOpen(false);
+                    if (activeView === 'course') {
+                      setActiveView('dashboard');
+                      setSelectedCourseId(null);
+                    }
                   }}
                   className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                 >
@@ -1441,6 +1447,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       setFilterCourse(course.id);
                       setAnalyticsCourse(course.id);
                       setFilterCourseDropdownOpen(false);
+                      if (activeView === 'course') {
+                        handleOpenCourse(course);
+                      }
                     }}
                     className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                   >
@@ -1857,32 +1866,86 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <div className="animate-in fade-in slide-in-from-right-8 duration-500">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 bg-white p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm mx-2 md:mx-0">
                 <div className="flex items-center gap-1.5 sm:gap-2 text-[13px] sm:text-[14px] font-semibold text-slate-500 overflow-x-auto whitespace-nowrap max-w-full pb-1 custom-scrollbar">
-                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); }} className="hover:text-[#0ea5e9] transition-colors p-1 rounded-md hover:bg-sky-50">
+                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); }} className="hover:text-[#0ea5e9] transition-colors p-1 rounded-md hover:bg-sky-50 cursor-pointer">
                         Khóa học
                     </button>
                     <span className="text-slate-300">/</span>
-                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`p-1 rounded-md hover:bg-sky-50 transition-colors ${!currentFolderId ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
+                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`p-1 rounded-md hover:bg-sky-50 transition-colors cursor-pointer ${!currentFolderId ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
                         {selectedCourse.title}
                     </button>
                     {breadcrumbs.map((b, i) => (
                       <React.Fragment key={b.id}>
                         <span className="text-slate-300">/</span>
-                        <button onClick={() => handleFolderClick(b.id)} className={`p-1 rounded-md hover:bg-sky-50 transition-colors ${i === breadcrumbs.length - 1 ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
+                        <button onClick={() => handleFolderClick(b.id)} className={`p-1 rounded-md hover:bg-sky-50 transition-colors cursor-pointer ${i === breadcrumbs.length - 1 ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
                             {b.title}
                         </button>
                       </React.Fragment>
                     ))}
                 </div>
                 
-                <button 
-                  onClick={() => {
-                      resetWorkspaceAndChat(); 
-                      if(onOpenLecture && selectedCourse) onOpenLecture(selectedCourse.id);
-                  }} 
-                  className="w-full md:w-auto bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-500 hover:text-white font-bold text-[13px] px-6 py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wide shrink-0"
-                >
-                  📖 Mở Bài Giảng Lý Thuyết
-                </button>
+                {/* ACTION CONTROLS: COURSE FILTER DROPDOWN & MỞ BÀI GIẢNG */}
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full md:w-auto shrink-0">
+                  {/* DROPDOWN CHUYỂN KHÓA HỌC */}
+                  <div className="relative w-full sm:w-60 z-30">
+                    <div 
+                      onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+                      className="w-full bg-white hover:bg-sky-50/50 border border-sky-300 hover:border-[#0ea5e9] rounded-xl px-3.5 py-2 flex items-center justify-between cursor-pointer shadow-xs transition-all"
+                    >
+                      <div className="flex items-center gap-2 min-w-0 pr-1.5">
+                        <span className="text-slate-400 text-xs">🎓</span>
+                        <span className="font-bold text-xs text-sky-900 truncate">
+                          {selectedCourse ? selectedCourse.title : (filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học')}
+                        </span>
+                      </div>
+                      <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                    </div>
+                    
+                    {filterCourseDropdownOpen && (
+                      <>
+                        <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+                        <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
+                          <div 
+                            onClick={() => {
+                              setFilterCourse('all');
+                              setAnalyticsCourse('all');
+                              setActiveView('dashboard');
+                              setSelectedCourseId(null);
+                              setFilterCourseDropdownOpen(false);
+                            }}
+                            className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' && !selectedCourse ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                          >
+                            🌟 Tất cả khóa học (Trang chủ)
+                          </div>
+                          {courses.map(course => (
+                            <div 
+                              key={course.id}
+                              onClick={() => {
+                                setFilterCourse(course.id);
+                                setAnalyticsCourse(course.id);
+                                setFilterCourseDropdownOpen(false);
+                                handleOpenCourse(course);
+                              }}
+                              className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(selectedCourse?.id) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            >
+                              📖 {course.title}
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+
+                  {/* NÚT MỞ BÀI GIẢNG LÝ THUYẾT */}
+                  <button 
+                    onClick={() => {
+                        resetWorkspaceAndChat(); 
+                        if(onOpenLecture && selectedCourse) onOpenLecture(selectedCourse.id);
+                    }} 
+                    className="w-full sm:w-auto bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-500 hover:text-white font-bold text-[13px] px-5 py-2 rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs uppercase tracking-wide shrink-0 cursor-pointer active:scale-95"
+                  >
+                    <span>📖</span> <span>Mở Bài Giảng Lý Thuyết</span>
+                  </button>
+                </div>
             </div>
 
             <div className="space-y-8 md:space-y-12 px-2 md:px-0">
@@ -2065,6 +2128,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                    Thư mục này hiện đang trống.
                 </div>
               )}
+
+              {/* DOCK BỘ 3 NÚT TẬP TRUNG (STICKY BOTTOM CONTROLS) */}
+              <div className="hidden sm:block sticky bottom-2 z-30 mt-6 pb-2">
+                {renderBottomControls}
+              </div>
             </div>
           </div>
         )}
