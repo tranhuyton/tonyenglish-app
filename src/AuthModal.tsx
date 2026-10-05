@@ -17,20 +17,35 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
     e.preventDefault();
     setLoading(true);
     try {
-      // Timeout 10 giây — nếu Supabase chậm thì báo lỗi thay vì treo vô hạn
-      const loginPromise = supabase.auth.signInWithPassword({ email, password });
+      const cleanEmail = email.trim().toLowerCase();
+      // Timeout 15 giây — nếu Supabase chậm thì báo lỗi thay vì treo vô hạn
+      const loginPromise = supabase.auth.signInWithPassword({ email: cleanEmail, password });
       const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('TIMEOUT')), 10000)
+        setTimeout(() => reject(new Error('TIMEOUT')), 15000)
       );
       
       const { data, error } = await Promise.race([loginPromise, timeoutPromise]) as any;
       if (error) throw error;
       
       if (data?.user) {
-        const { data: profile } = await supabase.from('profiles').select('role, status').eq('id', data.user.id).single();
-        if (profile?.role !== 'admin' && profile?.status === 'inactive') {
+        const isAdmin = cleanEmail.includes('admin');
+        let profile: any = null;
+
+        // Bọc query profile bằng timeout 4s — đảm bảo không bao giờ bị kẹt
+        try {
+          const profilePromise = supabase.from('profiles').select('role, status').eq('id', data.user.id).single();
+          const profileTimeout = new Promise<any>((_, reject) => setTimeout(() => reject('TIMEOUT'), 4000));
+          const res = await Promise.race([profilePromise, profileTimeout]);
+          profile = res?.data;
+        } catch (pErr) {
+          console.warn('Profile status check warning:', pErr);
+        }
+
+        // Chặn học viên bị tạm dừng đăng nhập
+        if (profile?.role !== 'admin' && !isAdmin && profile?.status === 'inactive') {
           await supabase.auth.signOut();
           alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          setLoading(false);
           return;
         }
 
@@ -40,13 +55,17 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
             action_type: 'login',
             details: { message: 'Đăng nhập vào hệ thống LMS' }
         }]).then(() => {});
-      }
-      
-      if (typeof onClose === 'function') onClose();
-      if (typeof onNavigate === 'function') {
-        onNavigate('portal');
-      } else {
-        window.location.href = '/';
+
+        if (typeof onClose === 'function') onClose();
+        if (typeof onNavigate === 'function') {
+          if (profile?.role === 'admin' || isAdmin) {
+            onNavigate('admin');
+          } else {
+            onNavigate('portal');
+          }
+        } else {
+          window.location.href = (profile?.role === 'admin' || isAdmin) ? '/admin' : '/';
+        }
       }
     } catch (error: any) {
       if (error.message === 'TIMEOUT') {

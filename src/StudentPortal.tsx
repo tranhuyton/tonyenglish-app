@@ -323,7 +323,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             safeQuery('day_plan_tasks', () => supabase.from('day_plan_tasks').select('title, course_day_plans(course_id)'))
         ]);
         const profile = profileRes.data;
-        if (profile && profile.role !== 'admin' && profile.status === 'inactive') {
+        const isUserAdmin = user.email?.toLowerCase().includes('admin') || profile?.role === 'admin';
+        if (profile && !isUserAdmin && profile.status === 'inactive') {
             await supabase.auth.signOut();
             alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
             if (onNavigate) onNavigate('home');

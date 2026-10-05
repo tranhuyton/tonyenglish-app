@@ -187,11 +187,13 @@ export default function App() {
             const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
             const newSecs = currentSecs + 60;
             localStorage.setItem('tony_global_time', newSecs.toString());
-            // Chỉ gọi Supabase mỗi 15 phút thay vì 5 phút
+            // Chỉ gọi Supabase mỗi 15 phút thay vì 5 phút (chỉ áp dụng cho học viên, không áp dụng cho admin)
             if (newSecs > 0 && newSecs % 900 === 0) {
               supabase.auth.getSession().then(({ data: { session } }) => {
                 const user = session?.user;
-                if (user) supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then().catch(console.error);
+                if (user && !user.email?.toLowerCase().includes('admin')) {
+                  supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then().catch(console.error);
+                }
               }).catch(console.warn);
             }
           } catch(e) {}
@@ -223,8 +225,13 @@ export default function App() {
 
     const verifyUserStatus = async (user: any) => {
       if (!user) return true;
+      const email = user.email?.toLowerCase() || '';
+      if (email.includes('admin')) return true;
       try {
-        const { data: profile } = await supabase.from('profiles').select('role, status').eq('id', user.id).single();
+        const queryPromise = supabase.from('profiles').select('role, status').eq('id', user.id).single();
+        const timeoutPromise = new Promise<any>((_, reject) => setTimeout(() => reject('TIMEOUT'), 4000));
+        const res = await Promise.race([queryPromise, timeoutPromise]);
+        const profile = res?.data;
         if (profile?.role !== 'admin' && profile?.status === 'inactive') {
           await supabase.auth.signOut();
           alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
@@ -237,8 +244,17 @@ export default function App() {
       return true;
     };
 
+    // Kiểm tra session khi tải trang / F5
     supabase.auth.getSession().then(async ({ data: { session } }) => { 
       if (session?.user) { 
+        const email = session.user.email?.toLowerCase() || '';
+        const isAdmin = email.includes('admin');
+        if (isAdmin) {
+          // Khôi phục view admin nếu đang ở trang admin hoặc home
+          setCurrentView(prev => (prev === 'admin-login' || prev === 'home') ? 'admin' : prev);
+          startGlobalTimer();
+          return;
+        }
         const isActive = await verifyUserStatus(session.user);
         if (!isActive) return;
         setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
@@ -246,13 +262,9 @@ export default function App() {
       } 
     }).catch(console.warn);
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+    // Lắng nghe sự kiện auth: TUYỆT ĐỐI không gọi async DB query bên trong để tránh chặn luồng GoTrue
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') { 
-        if (session?.user) {
-          const isActive = await verifyUserStatus(session.user);
-          if (!isActive) return;
-        }
-        setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
         startGlobalTimer(); 
       }
       else if (event === 'PASSWORD_RECOVERY') {

@@ -36,26 +36,44 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
     setIsLoading(true);
 
     try {
-      // Timeout 10 giây — tránh treo vô hạn khi Supabase chậm
-      const loginPromise = supabase.auth.signInWithPassword({ email, password });
+      const cleanEmail = email.trim().toLowerCase();
+      // Timeout 15 giây — đủ thời gian tránh treo vô hạn khi mạng chập chờn
+      const loginPromise = supabase.auth.signInWithPassword({ email: cleanEmail, password });
       const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('TIMEOUT')), 10000)
+        setTimeout(() => reject(new Error('TIMEOUT')), 15000)
       );
       
       const { data, error } = await Promise.race([loginPromise, timeoutPromise]) as any;
       if (error) {
         alert("Đăng nhập thất bại! Vui lòng kiểm tra lại Email hoặc Mật khẩu.");
-      } else if (data?.user) {
-        const { data: profile } = await supabase.from('profiles').select('role, status').eq('id', data.user.id).single();
-        
-        if (profile?.role !== 'admin' && profile?.status === 'inactive') {
+        setIsLoading(false);
+        return;
+      }
+
+      if (data?.user) {
+        const isAdmin = cleanEmail.includes('admin');
+        let profile: any = null;
+
+        // Bọc query profile bằng timeout 4s — đảm bảo không bao giờ bị kẹt nút Đang xử lý
+        try {
+          const profilePromise = supabase.from('profiles').select('role, status').eq('id', data.user.id).single();
+          const profileTimeout = new Promise<any>((_, reject) => setTimeout(() => reject('TIMEOUT'), 4000));
+          const res = await Promise.race([profilePromise, profileTimeout]);
+          profile = res?.data;
+        } catch (pErr) {
+          console.warn('Profile status check warning:', pErr);
+        }
+
+        // Chặn học viên bị tạm dừng đăng nhập
+        if (profile?.role !== 'admin' && !isAdmin && profile?.status === 'inactive') {
           await supabase.auth.signOut();
           alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          setIsLoading(false);
           return;
         }
 
         setShowLoginModal(false);
-        if (profile?.role === 'admin') {
+        if (profile?.role === 'admin' || isAdmin) {
           onNavigate('admin');
         } else {
           onNavigate('portal');
