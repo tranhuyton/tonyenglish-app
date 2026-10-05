@@ -1,0 +1,114 @@
+{
+  "lectureId": "34bbcc7c-6b51-40fd-9585-9eb3c37da582",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "2. The Factors of Production",
+  "totalDuration": 299.04,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_factors": {
+      "start": 1,
+      "end": 3
+    },
+    "sec_mobility": {
+      "start": 4,
+      "end": 5
+    },
+    "sec_quant_qual": {
+      "start": 6,
+      "end": 7
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2: Các Yếu tố Sản xuất",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 2: The Factors of Production. In this lesson, we study the four essential productive inputs: land, labour, capital, and enterprise, along with their respective economic rewards. We also analyze the geographical and occupational mobility of these factors and examine how an economy can expand its output through increases in their quantity and quality.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 2: Các Yếu tố Sản xuất. Trong bài học này, chúng ta sẽ tìm hiểu bốn nguồn lực sản xuất thiết yếu: đất đai, lao động, tư bản và doanh nhân, cùng với các phần thưởng kinh tế tương ứng. Chúng ta cũng sẽ phân tích tính linh hoạt về địa lý và nghề nghiệp của các yếu tố này, đồng thời khảo sát cách nền kinh tế mở rộng sản lượng thông qua việc nâng cao số lượng và chất lượng của chúng.",
+      "duration": 51.18,
+      "startTime": 0.0,
+      "endTime": 51.18,
+      "audioUrl": "/audio/lectures/economics/2/intro.mp3"
+    },
+    {
+      "id": "sec_factors",
+      "title": "1. Bốn Yếu tố Sản xuất và Phần thưởng Kinh tế",
+      "selector": "#sec-factors",
+      "en": "Section 1 examines the four factors of production. Land encompasses all gifts of nature, earning rent. Labour represents all human physical and mental effort, rewarded by wages. Capital denotes man-made physical resources used to make other goods, earning interest. Enterprise is the risk-taking initiative of the entrepreneur, rewarded with profit.",
+      "vi": "Mục 1 phân tích bốn yếu tố sản xuất. Đất đai bao gồm tất cả các tặng phẩm của tự nhiên, nhận tiền thuê. Lao động đại diện cho thể lực và trí lực của con người, được trả công bằng tiền lương. Tư bản là các tài sản vật chất do con người tạo ra để sản xuất hàng hóa khác, nhận tiền lãi. Doanh nhân là sáng kiến và tinh thần dám chịu rủi ro, được thưởng bằng lợi nhuận.",
+      "duration": 47.63,
+      "startTime": 51.18,
+      "endTime": 98.81,
+      "audioUrl": "/audio/lectures/economics/2/sec_factors.mp3"
+    },
+    {
+      "id": "card_factors_grid",
+      "title": "Sơ đồ 4 Yếu tố: Đất đai, Lao động, Tư bản & Doanh nhân",
+      "selector": "#card-factors-grid",
+      "en": "The interactive factor map highlights each input: Land provides raw materials and earns rent; Labour applies human skills for wages; Capital provides tools and factories earning interest; and Enterprise coordinates the other three factors to create a viable business earning profit.",
+      "vi": "Sơ đồ tương tác làm nổi bật từng yếu tố: Đất đai cung cấp tài nguyên tự nhiên và nhận tiền thuê; Lao động cống hiến kỹ năng và nhận tiền lương; Tư bản cung cấp máy móc, nhà xưởng và nhận tiền lãi; và Doanh nhân điều phối cả ba yếu tố trên để vận hành doanh nghiệp sinh lời.",
+      "duration": 31.89,
+      "startTime": 98.81,
+      "endTime": 130.7,
+      "audioUrl": "/audio/lectures/economics/2/card_factors_grid.mp3"
+    },
+    {
+      "id": "card_capital_distinction",
+      "title": "🔍 Phân biệt: Tư bản Thực tế vs Tiền vốn (Capital vs Money)",
+      "selector": "#card-capital-distinction",
+      "en": "In economics, capital refers strictly to physical capital goods—man-made physical assets like machinery and factories. Money itself is financial capital and not an economic factor of production, because currency cannot physically produce goods; it merely purchases real capital.",
+      "vi": "Trong kinh tế học, tư bản chỉ bao gồm tư bản vật chất thực tế—những tài sản vật chất do con người tạo ra như máy móc và nhà xưởng. Tiền bản thân nó là vốn tài chính chứ không phải yếu tố sản xuất, vì tiền không thể tự tạo ra sản phẩm mà chỉ dùng để mua các tư liệu sản xuất thực tế.",
+      "duration": 34.14,
+      "startTime": 130.7,
+      "endTime": 164.84,
+      "audioUrl": "/audio/lectures/economics/2/card_capital_distinction.mp3"
+    },
+    {
+      "id": "sec_mobility",
+      "title": "2. Tính Linh hoạt của các Yếu tố Sản xuất (Mobility)",
+      "selector": "#sec-mobility",
+      "en": "Section 2 investigates factor mobility—how easily resources relocate between locations or transfer between different occupations. High mobility allows an economy to adapt swiftly to structural changes and consumer demand shifts.",
+      "vi": "Mục 2 tìm hiểu tính linh hoạt của các yếu tố sản xuất—mức độ dễ dàng khi nguồn lực di chuyển giữa các địa phương hoặc chuyển đổi giữa các ngành nghề. Tính linh hoạt cao giúp nền kinh tế thích ứng nhanh chóng với các thay đổi cơ cấu và sự dịch chuyển của nhu cầu người tiêu dùng.",
+      "duration": 30.33,
+      "startTime": 164.84,
+      "endTime": 195.17,
+      "audioUrl": "/audio/lectures/economics/2/sec_mobility.mp3"
+    },
+    {
+      "id": "card_mobility_types",
+      "title": "🏃‍♂️ Độ linh hoạt Địa lý và Nghề nghiệp của 4 Yếu tố",
+      "selector": "#card-mobility-types",
+      "en": "Land is geographically immobile but occupationally mobile. Labour faces geographical hurdles like housing costs, and occupational hurdles like training deficits. Capital varies: computers are highly mobile, while blast furnaces are immovable. Enterprise is highly mobile across both dimensions.",
+      "vi": "Đất đai bất động về mặt địa lý nhưng có thể chuyển đổi mục đích sử dụng. Lao động gặp rào cản địa lý như chi phí nhà ở và rào cản nghề nghiệp do thiếu kỹ năng. Tư bản rất đa dạng: máy tính rất linh hoạt nhưng lò luyện kim thì bất động. Doanh nhân có tính linh hoạt rất cao ở cả hai khía cạnh.",
+      "duration": 40.36,
+      "startTime": 195.17,
+      "endTime": 235.53,
+      "audioUrl": "/audio/lectures/economics/2/card_mobility_types.mp3"
+    },
+    {
+      "id": "sec_quant_qual",
+      "title": "3. Số lượng và Chất lượng của các Yếu tố Sản xuất",
+      "selector": "#sec-quant-qual",
+      "en": "Section 3 analyzes how economies expand output by increasing factor quantity or enhancing factor quality. Quantity increases via resource discoveries, investment, and immigration. Quality rises through education, technical training, and technological innovation.",
+      "vi": "Mục 3 phân tích cách nền kinh tế mở rộng sản lượng bằng cách tăng số lượng hoặc nâng cao chất lượng của các yếu tố sản xuất. Số lượng tăng lên nhờ phát hiện tài nguyên, đầu tư và nhập cư. Chất lượng cải thiện thông qua giáo dục, đào tạo tay nghề và đổi mới công nghệ.",
+      "duration": 34.79,
+      "startTime": 235.53,
+      "endTime": 270.32,
+      "audioUrl": "/audio/lectures/economics/2/sec_quant_qual.mp3"
+    },
+    {
+      "id": "card_quant_qual_table",
+      "title": "📈 Bảng Tổng hợp Biến động Số lượng & Chất lượng",
+      "selector": "#card-quant-qual-table",
+      "en": "Our comprehensive table shows that land quality improves with irrigation, labour quality rises with higher healthcare and schooling, capital quality advances through automation and AI, and enterprise improves through executive training and mentorship.",
+      "vi": "Bảng tổng hợp chi tiết cho thấy chất lượng đất đai được nâng cao nhờ hệ thống tưới tiêu, chất lượng lao động tăng lên nhờ y tế và giáo dục, chất lượng tư bản tiến bộ nhờ tự động hóa và AI, còn năng lực doanh nhân được hoàn thiện qua đào tạo và kinh nghiệm quản trị.",
+      "duration": 28.72,
+      "startTime": 270.32,
+      "endTime": 299.04,
+      "audioUrl": "/audio/lectures/economics/2/card_quant_qual_table.mp3"
+    }
+  ]
+}

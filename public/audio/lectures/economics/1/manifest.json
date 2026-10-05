@@ -1,0 +1,199 @@
+{
+  "lectureId": "1fba7e8c-742f-4697-b93e-a0205fc7d825",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "1. The Basic Economic Problem",
+  "totalDuration": 511.56,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_nature": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_contexts": {
+      "start": 3,
+      "end": 7
+    },
+    "sec_questions": {
+      "start": 8,
+      "end": 9
+    },
+    "sec_distinctions": {
+      "start": 10,
+      "end": 12
+    },
+    "sec_goods": {
+      "start": 13,
+      "end": 14
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 1: Vấn đề Kinh tế Cơ bản",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 1: The Basic Economic Problem. In this lesson, we explore how finite resources clash with unlimited human wants, causing universal scarcity and compelling consumers, workers, firms, and governments to make critical choices. We will also examine the three core economic questions and distinguish between economic goods and free goods.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 1: Vấn đề Kinh tế Cơ bản. Trong bài học này, chúng ta sẽ tìm hiểu cách các nguồn lực hữu hạn đối mặt với nhu cầu vô hạn của con người, dẫn đến sự khan hiếm phổ quát và buộc người tiêu dùng, người lao động, doanh nghiệp và chính phủ phải đưa ra các lựa chọn kinh tế. Chúng ta cũng sẽ tìm hiểu ba câu hỏi kinh tế cốt lõi và phân biệt giữa hàng hóa kinh tế và hàng hóa tự do.",
+      "duration": 51.16,
+      "startTime": 0.0,
+      "endTime": 51.16,
+      "audioUrl": "/audio/lectures/economics/1/intro.mp3"
+    },
+    {
+      "id": "sec_nature",
+      "title": "1. Bản chất của Vấn đề Kinh tế Cơ bản",
+      "selector": "#sec-nature",
+      "en": "Section 1 defines the nature of the basic economic problem: finite economic resources are insufficient to satisfy infinite human wants and needs. Scarcity exists everywhere and can never be completely eliminated. Because resources cannot satisfy every desire, society is forced to make fundamental economic choices.",
+      "vi": "Mục 1 phân tích bản chất của vấn đề kinh tế cơ bản: nguồn lực kinh tế hữu hạn không thể đáp ứng đầy đủ nhu cầu vô hạn của con người. Sự khan hiếm tồn tại ở mọi nơi và không bao giờ có thể bị loại bỏ hoàn toàn. Do nguồn lực không đủ đáp ứng mọi mong muốn, xã hội bắt buộc phải đưa ra các quyết định lựa chọn kinh tế.",
+      "duration": 39.74,
+      "startTime": 51.16,
+      "endTime": 90.9,
+      "audioUrl": "/audio/lectures/economics/1/sec_nature.mp3"
+    },
+    {
+      "id": "card_concept_map",
+      "title": "Sơ đồ Khái niệm: Nhu cầu vô hạn, Nguồn lực hữu hạn & Sự khan hiếm",
+      "selector": "#card-concept-map",
+      "en": "The interactive concept map illustrates the core economic chain: unlimited wants collide with finite resources, generating persistent scarcity. This forces society to make choices by resolving three fundamental questions: what to produce, how to produce, and who to produce for.",
+      "vi": "Sơ đồ khái niệm tương tác minh họa chuỗi mắt xích cốt lõi: mong muốn vô hạn va chạm với các nguồn lực hữu hạn, sinh ra sự khan hiếm dai dẳng. Điều này buộc xã hội phải lựa chọn thông qua việc giải quyết ba câu hỏi nền tảng: sản xuất cái gì, sản xuất như thế nào và sản xuất cho ai.",
+      "duration": 34.67,
+      "startTime": 90.9,
+      "endTime": 125.57,
+      "audioUrl": "/audio/lectures/economics/1/card_concept_map.mp3"
+    },
+    {
+      "id": "sec_contexts",
+      "title": "2. Vấn đề Kinh tế Cơ bản trong 4 Hoàn cảnh",
+      "selector": "#sec-contexts",
+      "en": "Section 2 explores how scarcity impacts four major economic decision-makers. Every agent operates under tight constraints and must prioritize competing desires.",
+      "vi": "Mục 2 tìm hiểu cách sự khan hiếm tác động đến bốn chủ thể quyết định kinh tế chính. Mỗi chủ thể đều chịu các ràng buộc nguồn lực và phải sắp xếp thứ tự ưu tiên cho những mục tiêu của mình.",
+      "duration": 21.9,
+      "startTime": 125.57,
+      "endTime": 147.47,
+      "audioUrl": "/audio/lectures/economics/1/sec_contexts.mp3"
+    },
+    {
+      "id": "card_consumers",
+      "title": "🛒 Người tiêu dùng (Consumers)",
+      "selector": "#card-consumers",
+      "en": "Consumers face limited incomes and savings against unlimited wants for food, technology, and travel. They must prioritize essential necessities and forgo discretionary luxury items.",
+      "vi": "Người tiêu dùng đối mặt với thu nhập và tiền tiết kiệm có hạn trước mong muốn vô tận về thực phẩm, đồ công nghệ và du lịch. Họ phải ưu tiên các nhu cầu thiết yếu và hy sinh những mặt hàng xa xỉ.",
+      "duration": 24.23,
+      "startTime": 147.47,
+      "endTime": 171.7,
+      "audioUrl": "/audio/lectures/economics/1/card_consumers.mp3"
+    },
+    {
+      "id": "card_workers",
+      "title": "👷 Người lao động (Workers)",
+      "selector": "#card-workers",
+      "en": "Workers face a strict constraint of 24 hours per day and finite physical stamina. They must balance working overtime to maximize wage income against enjoying valuable leisure and family time.",
+      "vi": "Người lao động bị giới hạn bởi 24 giờ mỗi ngày và thể lực có hạn. Họ phải cân bằng giữa việc làm thêm giờ để kiếm thêm tiền lương với thời gian quý giá dành cho gia đình và giải trí.",
+      "duration": 24.02,
+      "startTime": 171.7,
+      "endTime": 195.72,
+      "audioUrl": "/audio/lectures/economics/1/card_workers.mp3"
+    },
+    {
+      "id": "card_producers",
+      "title": "🏭 Doanh nghiệp / Nhà sản xuất (Producers)",
+      "selector": "#card-producers",
+      "en": "Producers have limited investment capital, factory space, and machinery. They must decide whether to allocate capital towards manufacturing electric vehicles or traditional petrol vehicles to maximize profit.",
+      "vi": "Nhà sản xuất có vốn đầu tư, diện tích nhà xưởng và máy móc hạn chế. Họ phải quyết định phân bổ vốn để sản xuất xe điện hay xe xăng truyền thống nhằm tối đa hóa lợi nhuận.",
+      "duration": 24.21,
+      "startTime": 195.72,
+      "endTime": 219.93,
+      "audioUrl": "/audio/lectures/economics/1/card_producers.mp3"
+    },
+    {
+      "id": "card_governments",
+      "title": "🏛️ Chính phủ (Governments)",
+      "selector": "#card-governments",
+      "en": "Governments collect finite tax revenue and possess borrowing limits. They face critical trade-offs between funding modern healthcare, public education, national defence, and new transportation infrastructure.",
+      "vi": "Chính phủ thu ngân sách có hạn từ thuế và bị giới hạn trần nợ công. Họ phải đối mặt với các đánh đổi mang tính chiến lược giữa tài trợ y tế hiện đại, giáo dục công lập, quốc phòng và hạ tầng giao thông mới.",
+      "duration": 26.34,
+      "startTime": 219.93,
+      "endTime": 246.27,
+      "audioUrl": "/audio/lectures/economics/1/card_governments.mp3"
+    },
+    {
+      "id": "sec_questions",
+      "title": "3. Ba Câu hỏi Phân bổ Nguồn lực Cơ bản",
+      "selector": "#sec-questions",
+      "en": "Section 3 addresses the three fundamental questions every economy must resolve: What to produce, deciding the mix of consumer versus capital goods; How to produce, choosing between labor-intensive and capital-intensive methods; and Who to produce for, determining whether goods are distributed by purchasing power or government allocation.",
+      "vi": "Mục 3 phân tích ba câu hỏi kinh tế căn bản mà mọi quốc gia phải giải quyết: Sản xuất cái gì, lựa chọn tỷ lệ giữa hàng tiêu dùng và tư liệu sản xuất; Sản xuất như thế nào, lựa chọn giữa phương thức thâm dụng lao động hay thâm dụng vốn; và Sản xuất cho ai, quyết định hàng hóa được phân phối theo sức mua thị trường hay do nhà nước phân bổ.",
+      "duration": 37.62,
+      "startTime": 246.27,
+      "endTime": 283.89,
+      "audioUrl": "/audio/lectures/economics/1/sec_questions.mp3"
+    },
+    {
+      "id": "card_three_questions",
+      "title": "⚖️ Chi tiết 3 Câu hỏi Kinh tế",
+      "selector": "#card-three-questions",
+      "en": "The three allocation questions dictate resource deployment: What to produce balances immediate consumption against future investment; How to produce determines production efficiency and technology; and Who to produce for governs wealth and output distribution across society.",
+      "vi": "Ba câu hỏi phân bổ định hình cách thức sử dụng nguồn lực: Sản xuất cái gì giúp cân đối giữa tiêu dùng hiện tại và đầu tư tương lai; Sản xuất như thế nào xác định công nghệ và hiệu quả sản xuất; và Sản xuất cho ai chi phối sự phân phối của cải và thành quả kinh tế trong xã hội.",
+      "duration": 30.04,
+      "startTime": 283.89,
+      "endTime": 313.93,
+      "audioUrl": "/audio/lectures/economics/1/card_three_questions.mp3"
+    },
+    {
+      "id": "sec_distinctions",
+      "title": "4. Phân biệt Nhu cầu Thiết yếu vs Mong muốn & Khu vực Kinh tế",
+      "selector": "#sec-distinctions",
+      "en": "Section 4 highlights key distinctions. Needs are goods and services essential for survival, like water and shelter, whereas wants are discretionary desires that continually expand. In the private sector, individuals own enterprises and seek profit maximisation, whereas the public sector is state-owned and strives to advance social welfare.",
+      "vi": "Mục 4 nhấn mạnh các phân biệt quan trọng. Nhu cầu thiết yếu là các hàng hóa, dịch vụ sống còn như nước và chỗ ở, trong khi mong muốn là những nhu cầu tiện ích không ngừng mở rộng. Ở khu vực tư nhân, cá nhân làm chủ doanh nghiệp với mục tiêu tối đa hóa lợi nhuận, còn khu vực công thuộc sở hữu nhà nước hướng đến nâng cao phúc lợi xã hội.",
+      "duration": 41.3,
+      "startTime": 313.93,
+      "endTime": 355.23,
+      "audioUrl": "/audio/lectures/economics/1/sec_distinctions.mp3"
+    },
+    {
+      "id": "card_needs_wants",
+      "title": "💧 Nhu cầu thiết yếu vs 📱 Mong muốn",
+      "selector": "#card-needs-wants",
+      "en": "A need is indispensable for human survival, including clean water, basic food, shelter, and medical care. Wants represent infinite desires for luxury and comfort, such as smartphones, designer clothing, and holidays, which continually evolve as incomes grow.",
+      "vi": "Nhu cầu thiết yếu là điều kiện không thể thiếu để sinh tồn, gồm nước sạch, lương thực cơ bản, nhà ở và y tế. Mong muốn là khao khát vô tận về sự tiện nghi và xa xỉ như điện thoại thông minh, quần áo hàng hiệu và du lịch, liên tục phát triển khi thu nhập tăng lên.",
+      "duration": 33.35,
+      "startTime": 355.23,
+      "endTime": 388.58,
+      "audioUrl": "/audio/lectures/economics/1/card_needs_wants.mp3"
+    },
+    {
+      "id": "card_sectors",
+      "title": "🏢 Khu vực Tư nhân vs 🏛️ Khu vực Công",
+      "selector": "#card-sectors",
+      "en": "The private sector is owned by private individuals whose main incentive is profit maximisation, such as commercial retailers and private tech companies. The public sector is governed by the state to provide public services like state schools, police, and hospitals.",
+      "vi": "Khu vực tư nhân thuộc sở hữu của tư nhân với mục tiêu tối đa hóa lợi nhuận như các cửa hàng bán lẻ và công ty công nghệ. Khu vực công do nhà nước quản lý nhằm cung ứng các dịch vụ công như trường học công lập, cảnh sát và bệnh viện công.",
+      "duration": 30.09,
+      "startTime": 388.58,
+      "endTime": 418.67,
+      "audioUrl": "/audio/lectures/economics/1/card_sectors.mp3"
+    },
+    {
+      "id": "sec_goods",
+      "title": "5. Hàng hóa Kinh tế vs Hàng hóa Tự do",
+      "selector": "#sec-goods",
+      "en": "Section 5 distinguishes between economic goods and free goods. Economic goods are scarce, consume valuable factors of production, carry an opportunity cost, and command a market price. Free goods are abundant gifts of nature, like fresh air and sunlight, involving zero opportunity cost. Crucially, free government services are economic goods, not free goods, because tax resources are used.",
+      "vi": "Mục 5 phân biệt hàng hóa kinh tế và hàng hóa tự do. Hàng hóa kinh tế có tính khan hiếm, tiêu tốn các yếu tố sản xuất, có chi phí cơ hội và có giá thị trường. Hàng hóa tự do là quà tặng dồi dào từ thiên nhiên như không khí và ánh nắng, không có chi phí cơ hội. Cần ghi nhớ, các dịch vụ công miễn phí của chính phủ vẫn là hàng hóa kinh tế, không phải hàng hóa tự do, vì tiền thuế và các nguồn lực xã hội đã được sử dụng.",
+      "duration": 53.87,
+      "startTime": 418.67,
+      "endTime": 472.54,
+      "audioUrl": "/audio/lectures/economics/1/sec_goods.mp3"
+    },
+    {
+      "id": "card_goods_comparison",
+      "title": "📦 Economic Goods vs 🌬️ Free Goods & Lưu ý thi cử",
+      "selector": "#card-goods-comparison",
+      "en": "Economic goods require scarce resources and incur an opportunity cost when produced. Free goods exist naturally in unlimited supply with zero opportunity cost. In exams, remember that state-provided healthcare is an economic good because scarce tax revenues fund doctors and medical equipment.",
+      "vi": "Hàng hóa kinh tế đòi hỏi nguồn lực khan hiếm và phát sinh chi phí cơ hội khi sản xuất. Hàng hóa tự do tồn tại sẵn trong tự nhiên với số lượng không giới hạn và không có chi phí cơ hội. Khi đi thi, hãy nhớ rằng y tế công miễn phí vẫn là hàng hóa kinh tế vì ngân sách thuế có hạn đã được dùng để trả lương bác sĩ và mua trang thiết bị.",
+      "duration": 39.02,
+      "startTime": 472.54,
+      "endTime": 511.56,
+      "audioUrl": "/audio/lectures/economics/1/card_goods_comparison.mp3"
+    }
+  ]
+}

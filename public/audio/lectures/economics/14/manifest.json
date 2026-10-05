@@ -1,0 +1,85 @@
+{
+  "lectureId": "69df5ed2-ce91-4e2a-b818-0e2957483b12",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "14. Market Failure",
+  "totalDuration": 180.9,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_market_failure_intro": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_causes": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_externalities": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_consequences": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 14: Thất bại Thị trường (Market Failure)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 14: Market Failure. In this critical topic, we analyze why free market forces fail to achieve an efficient and socially optimal allocation of resources. We examine the six major causes of market failure, master the formulas for social costs and benefits, and dissect negative and positive externalities.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 14: Thất bại Thị trường (Market Failure). Trong chủ đề trọng yếu này, chúng ta sẽ phân tích lý do tại sao các lực lượng thị trường tự do lại thất bại trong việc đạt được mức phân bổ nguồn lực tối ưu cho xã hội. Chúng ta sẽ khảo sát sáu nguyên nhân chính gây thất bại thị trường, nắm vững các công thức chi phí và lợi ích xã hội, đồng thời mổ xẻ các ngoại ứng tiêu cực và tích cực.",
+      "duration": 49.24,
+      "startTime": 0.0,
+      "endTime": 49.24,
+      "audioUrl": "/audio/lectures/economics/14/intro.mp3"
+    },
+    {
+      "id": "sec_market_failure_intro",
+      "title": "1. Khái niệm Thất bại Thị trường & Sai lệch Nguồn lực",
+      "selector": "#sec-market-failure-intro",
+      "en": "Section 1 defines market failure as a situation where the free market mechanism leads to a misallocation of resources, resulting in allocative or productive inefficiency, deadweight social loss, and reduced economic welfare.",
+      "vi": "Mục 1 định nghĩa thất bại thị trường là tình trạng cơ chế thị trường tự do dẫn đến việc phân bổ sai lệch các nguồn lực, gây ra sự kém hiệu quả trong phân bổ hoặc sản xuất, tạo ra tổn thất xã hội và làm suy giảm phúc lợi kinh tế chung.",
+      "duration": 25.89,
+      "startTime": 49.24,
+      "endTime": 75.13,
+      "audioUrl": "/audio/lectures/economics/14/sec_market_failure_intro.mp3"
+    },
+    {
+      "id": "sec_causes",
+      "title": "2. Sáu Nguyên nhân Cốt lõi Gây ra Thất bại Thị trường",
+      "selector": "#sec-causes",
+      "en": "Section 2 explores the six primary causes: missing public goods due to non-excludability and the free rider problem; underconsumption of merit goods; overconsumption of demerit goods; unpriced externalities; monopoly abuse; and factor immobility causing structural unemployment.",
+      "vi": "Mục 2 khảo sát sáu nguyên nhân chính: thiếu vắng hoàn toàn hàng hóa công cộng do tính không thể loại trừ và hiện tượng 'kẻ đi nhờ' miễn phí; tiêu dùng dưới mức tối ưu các hàng hóa khuyến dụng; tiêu dùng quá mức các hàng hóa phi khuyến dụng; các ngoại ứng không được định giá; lạm quyền độc quyền; và sự bất linh hoạt của các yếu tố sản xuất gây thất nghiệp cơ cấu.",
+      "duration": 36.16,
+      "startTime": 75.13,
+      "endTime": 111.29,
+      "audioUrl": "/audio/lectures/economics/14/sec_causes.mp3"
+    },
+    {
+      "id": "sec_externalities",
+      "title": "3. Ngoại ứng (Externalities) & Công thức Chi phí Xã hội",
+      "selector": "#sec-externalities",
+      "en": "Section 3 masters the Cambridge social equations: Social Cost equals Private Cost plus External Cost. Social Benefit equals Private Benefit plus External Benefit. When negative externalities occur, social cost exceeds private cost, causing market overproduction and pollution.",
+      "vi": "Mục 3 làm chủ các công thức xã hội chuẩn Cambridge: Chi phí Xã hội bằng Chi phí Tư nhân cộng Chi phí Ngoại ứng. Lợi ích Xã hội bằng Lợi ích Tư nhân cộng Lợi ích Ngoại ứng. Khi có ngoại ứng tiêu cực, chi phí xã hội lớn hơn chi phí tư nhân, dẫn đến sản xuất dư thừa và gây ô nhiễm môi trường.",
+      "duration": 37.29,
+      "startTime": 111.29,
+      "endTime": 148.58,
+      "audioUrl": "/audio/lectures/economics/14/sec_externalities.mp3"
+    },
+    {
+      "id": "sec_consequences",
+      "title": "4. Hậu quả Thực tế & Trọng tâm Thi cử về Thất bại Thị trường",
+      "selector": "#sec-consequences",
+      "en": "Section 4 highlights exam implications: Market failure justifies government intervention. Free markets overprovide tobacco and alcohol while underproviding healthcare and schools, requiring corrective taxes, subsidies, and regulations.",
+      "vi": "Mục 4 nhấn mạnh trọng tâm thi cử: Thất bại thị trường là lý do căn bản biện minh cho sự can thiệp của chính phủ. Thị trường tự do cung ứng thừa thuốc lá, rượu bia nhưng lại cung ứng thiếu trạm xá, trường học, đòi hỏi nhà nước phải can thiệp bằng thuế, trợ cấp và luật định.",
+      "duration": 32.32,
+      "startTime": 148.58,
+      "endTime": 180.9,
+      "audioUrl": "/audio/lectures/economics/14/sec_consequences.mp3"
+    }
+  ]
+}

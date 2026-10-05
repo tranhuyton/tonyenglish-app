@@ -1,0 +1,81 @@
+{
+  "lectureId": "4a814791-86ae-4aab-b9e2-a94b2565c55c",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "23. Market Structure: Competition vs Monopoly",
+  "totalDuration": 216.44,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_competition_vs_monopoly": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_impact_price_output": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_evaluating_monopoly": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 23: Cấu trúc Thị trường: Cạnh tranh vs Độc quyền",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 23: Market Structure: Competitive Markets versus Monopoly. In this concluding lesson of Topic 3, we contrast competitive market structures with pure monopoly, assess barriers to entry, observe how competition disciplines prices and quality, and evaluate whether monopolies are inevitably harmful to consumer welfare.",
+      "vi": "Chào mừng các bạn đến với Bài 23: Cấu trúc Thị trường: Thị trường Cạnh tranh vs Độc quyền. Trong bài học kết bài của Chủ đề 3 này, chúng ta sẽ so sánh cấu trúc thị trường cạnh tranh với độc quyền thuần túy, phân tích rào cản gia nhập thị trường, quan sát cách cạnh tranh điều tiết giá cả và chất lượng, đồng thời đánh giá xem liệu độc quyền có luôn gây hại cho phúc lợi người tiêu dùng hay không.",
+      "duration": 42.93,
+      "startTime": 0.0,
+      "endTime": 42.93,
+      "audioUrl": "/audio/lectures/economics/23/intro.mp3"
+    },
+    {
+      "id": "sec_competition_vs_monopoly",
+      "title": "1. Thị trường Cạnh tranh vs Thị trường Độc quyền",
+      "selector": "#sec-competition-vs-monopoly",
+      "en": "Section 1 defines the structural spectrum: Highly competitive markets feature many buyers and sellers, homogeneous or differentiated products, low entry barriers, and firms acting as price takers. A pure monopoly features a single dominant supplier, unique products with no close substitutes, high entry barriers, and the power to act as a price maker.",
+      "vi": "Mục 1 xác định phổ cấu trúc thị trường: Thị trường cạnh tranh cao có rất nhiều người mua và người bán, sản phẩm đồng nhất hoặc có sự khác biệt nhẹ, rào cản gia nhập thị trường thấp và các doanh nghiệp là người chấp nhận giá thị trường. Ngược lại, độc quyền thuần túy chỉ có duy nhất một nhà cung ứng độc tôn, sản phẩm độc nhất không có hàng thay thế gần gũi, rào cản gia nhập cực cao và doanh nghiệp nắm quyền lực định đoạt giá bán.",
+      "duration": 44.68,
+      "startTime": 42.93,
+      "endTime": 87.61,
+      "audioUrl": "/audio/lectures/economics/23/sec_competition_vs_monopoly.mp3"
+    },
+    {
+      "id": "card_comparison_table",
+      "title": "📊 Bảng So sánh 4 Chiều kích Cốt lõi",
+      "selector": "#card-comparison-table",
+      "en": "The comparison table synthesises four vital dimensions: 1. Number of Sellers (many versus single); 2. Nature of Product (standardised versus unique); 3. Barriers to Entry (free entry versus formidable legal, financial, or technical barriers); and 4. Pricing Power (price taker versus price maker).",
+      "vi": "Bảng so sánh tổng hợp bốn chiều kích nền tảng: 1. Số lượng Người bán (vô số đối thủ cạnh tranh so với một doanh nghiệp duy nhất); 2. Đặc tính Sản phẩm (tiêu chuẩn hóa so với sản phẩm độc nhất vô nhị); 3. Rào cản Gia nhập (tự do ra vào thị trường so với rào cản pháp lý, công nghệ và tài chính khổng lồ); và 4. Quyền lực Định giá (người chấp nhận giá so với người quyết định giá).",
+      "duration": 48.3,
+      "startTime": 87.61,
+      "endTime": 135.91,
+      "audioUrl": "/audio/lectures/economics/23/card_comparison_table.mp3"
+    },
+    {
+      "id": "sec_impact_price_output",
+      "title": "3. Tác động của Cạnh tranh lên Giá cả và Sản lượng",
+      "selector": "#sec-impact-price-output",
+      "en": "Section 3 demonstrates market mechanics: Competition forces firms to operate efficiently, lowering prices toward minimum average cost and expanding total market supply. Monopoly power restricts market output, allowing the monopolist to push prices above competitive levels and extract economic supernormal profits.",
+      "vi": "Mục 3 minh chứng cơ chế vận hành thị trường: Áp lực cạnh tranh buộc các doanh nghiệp phải tối ưu hóa năng suất, kéo giá bán xuống sát mức chi phí bình quân tối thiểu và mở rộng sản lượng cung ứng cho xã hội. Quyền lực độc quyền hạn chế sản lượng trên thị trường, giúp nhà độc quyền đẩy giá lên cao vượt xa mức cạnh tranh để thâu tóm siêu lợi nhuận kinh tế.",
+      "duration": 38.44,
+      "startTime": 135.91,
+      "endTime": 174.35,
+      "audioUrl": "/audio/lectures/economics/23/sec_impact_price_output.mp3"
+    },
+    {
+      "id": "sec_evaluating_monopoly",
+      "title": "4. Đánh giá Độc quyền: Ưu và Nhược điểm đối với Người tiêu dùng",
+      "selector": "#sec-evaluating-monopoly",
+      "en": "Section 4 provides an objective economic appraisal: Monopolies can disadvantage consumers through higher prices, restricted choices, and complacency. Conversely, natural monopolies avoid wasteful duplication of infrastructure like water pipes, and substantial supernormal profits fund heavy research and development into ground-breaking innovations.",
+      "vi": "Mục 4 đưa ra đánh giá kinh tế khách quan: Độc quyền có thể gây thiệt thòi cho người tiêu dùng vì giá bán đắt đỏ, sự lựa chọn nghèo nàn và thói chây ỳ trì trệ. Tuy nhiên, độc quyền tự nhiên giúp tránh sự trùng lặp lãng phí hệ thống cơ sở hạ tầng như đường ống nước, và nguồn siêu lợi nhuận khổng lồ cung cấp ngân sách dồi dào cho hoạt động nghiên cứu phát triển các phát minh công nghệ đột phá.",
+      "duration": 42.09,
+      "startTime": 174.35,
+      "endTime": 216.44,
+      "audioUrl": "/audio/lectures/economics/23/sec_evaluating_monopoly.mp3"
+    }
+  ]
+}

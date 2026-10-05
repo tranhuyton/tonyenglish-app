@@ -1,0 +1,115 @@
+{
+  "lectureId": "4a5f97fd-91d2-41f4-8cbb-b928f5aea5e9",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "11. Price Easticity of Demand",
+  "totalDuration": 260.68,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_ped_intro": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_elastic_inelastic": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_special_cases": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_determinants": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_revenue": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_significance": {
+      "start": 6,
+      "end": 6
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 11: Độ co giãn của Cầu theo Giá (PED)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 11: Price Elasticity of Demand, or PED. In this crucial lesson, we calculate PED using the percentage formula, contrast elastic and inelastic demand, explore three special cases, evaluate the SPLAT determinants, and examine how PED dictates business revenues and government tax policies.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 11: Độ co giãn của Cầu theo Giá (PED). Trong bài học then chốt này, chúng ta sẽ tính toán PED bằng công thức phần trăm, so sánh cầu co giãn và không co giãn, tìm hiểu ba trường hợp đặc biệt, đánh giá các yếu tố quyết định theo quy tắc SPLAT, và xem xét cách PED chi phối doanh thu doanh nghiệp cùng chính sách thuế của chính phủ.",
+      "duration": 47.75,
+      "startTime": 0.0,
+      "endTime": 47.75,
+      "audioUrl": "/audio/lectures/economics/11/intro.mp3"
+    },
+    {
+      "id": "sec_ped_intro",
+      "title": "1. Khái niệm & Công thức Tính PED (The PED Formula)",
+      "selector": "#sec-ped-intro",
+      "en": "Section 1 defines PED as the numerical responsiveness of quantity demanded to a change in price. The formula is: percentage change in quantity demanded divided by percentage change in price. Because price and quantity demanded move inversely, PED is negative, but economists evaluate its absolute value.",
+      "vi": "Mục 1 định nghĩa PED là thước đo mức độ phản ứng của lượng cầu khi giá sản phẩm thay đổi. Công thức là: phần trăm thay đổi lượng cầu chia cho phần trăm thay đổi giá cả. Do giá và lượng cầu biến thiên ngược chiều, giá trị PED mang dấu âm, nhưng các nhà kinh tế học thường xét giá trị tuyệt đối của nó.",
+      "duration": 39.64,
+      "startTime": 47.75,
+      "endTime": 87.39,
+      "audioUrl": "/audio/lectures/economics/11/sec_ped_intro.mp3"
+    },
+    {
+      "id": "sec_elastic_inelastic",
+      "title": "2. Cầu Co giãn vs Cầu Không co giãn (Elastic vs Inelastic)",
+      "selector": "#sec-elastic-inelastic",
+      "en": "Section 2 contrasts elastic and inelastic demand. Demand is inelastic when absolute PED is less than 1, meaning quantity demanded changes by a smaller percentage than price. Demand is elastic when absolute PED is greater than 1, meaning quantity responds more than proportionately.",
+      "vi": "Mục 2 so sánh cầu co giãn và không co giãn. Cầu không co giãn khi trị tuyệt đối của PED nhỏ hơn 1, nghĩa là phần trăm thay đổi lượng cầu nhỏ hơn phần trăm thay đổi giá. Cầu co giãn khi trị tuyệt đối của PED lớn hơn 1, nghĩa là lượng cầu phản ứng mạnh hơn tỷ lệ biến động của giá.",
+      "duration": 37.7,
+      "startTime": 87.39,
+      "endTime": 125.09,
+      "audioUrl": "/audio/lectures/economics/11/sec_elastic_inelastic.mp3"
+    },
+    {
+      "id": "sec_special_cases",
+      "title": "3. Ba Trường hợp Đặc biệt của PED",
+      "selector": "#sec-special-cases",
+      "en": "Section 3 covers three extreme cases: Perfectly Inelastic demand (PED = 0), a vertical line where quantity never changes; Perfectly Elastic demand (PED = infinity), a horizontal line where price is fixed; and Unitary Elastic demand (PED = -1), where percentage changes in price and quantity are identical.",
+      "vi": "Mục 3 trình bày ba trường hợp đặc biệt: Cầu hoàn toàn không co giãn (PED = 0) là đường thẳng đứng với lượng cầu cố định; Cầu co giãn hoàn toàn (PED = vô cùng) là đường nằm ngang với giá cố định; và Cầu co giãn đơn vị (PED = -1) khi tỷ lệ thay đổi của giá và lượng cầu hoàn toàn bằng nhau.",
+      "duration": 40.91,
+      "startTime": 125.09,
+      "endTime": 166.0,
+      "audioUrl": "/audio/lectures/economics/11/sec_special_cases.mp3"
+    },
+    {
+      "id": "sec_determinants",
+      "title": "4. Các Yếu tố Xác định PED (Quy tắc SPLAT)",
+      "selector": "#sec-determinants",
+      "en": "Section 4 outlines the key determinants of PED, remembered by the acronym SPLAT: Substitutes availability, Proportion of income spent, Luxury vs necessity, Addictive nature, and Time period to adjust.",
+      "vi": "Mục 4 chỉ ra các yếu tố quyết định độ co giãn qua chữ viết tắt SPLAT: Sự sẵn có của hàng thay thế (Substitutes), Tỷ trọng thu nhập chi trả (Proportion), Hàng xa xỉ hay thiết yếu (Luxury), Tính gây nghiện (Addictive), và Khoảng thời gian thích ứng (Time).",
+      "duration": 30.71,
+      "startTime": 166.0,
+      "endTime": 196.71,
+      "audioUrl": "/audio/lectures/economics/11/sec_determinants.mp3"
+    },
+    {
+      "id": "sec_revenue",
+      "title": "5. Mối quan hệ giữa PED và Tổng Doanh thu (Total Revenue)",
+      "selector": "#sec-revenue",
+      "en": "Section 5 reveals the golden rule of pricing: If demand is inelastic, raising price increases total revenue. If demand is elastic, raising price reduces total revenue, whereas cutting price expands total revenue.",
+      "vi": "Mục 5 tiết lộ nguyên tắc vàng về giá: Nếu cầu không co giãn, tăng giá sẽ làm tăng tổng doanh thu. Nếu cầu co giãn, tăng giá làm giảm doanh thu, trong khi giảm giá lại làm tăng tổng doanh thu.",
+      "duration": 27.23,
+      "startTime": 196.71,
+      "endTime": 223.94,
+      "audioUrl": "/audio/lectures/economics/11/sec_revenue.mp3"
+    },
+    {
+      "id": "sec_significance",
+      "title": "6. Ứng dụng Thực tiễn của PED đối với Doanh nghiệp & Chính phủ",
+      "selector": "#sec-significance",
+      "en": "Section 6 highlights the real-world significance. Producers use PED to set profitable pricing strategies and implement price discrimination. Governments target price-inelastic goods like petrol, cigarettes, and alcohol with indirect taxes because tax yield is high and demand does not collapse.",
+      "vi": "Mục 6 nêu bật ý nghĩa thực tiễn. Doanh nghiệp dùng PED để định giá sinh lời và áp dụng chính sách phân biệt giá. Chính phủ áp thuế tiêu thụ đặc biệt vào các mặt hàng có cầu kém co giãn như xăng dầu, thuốc lá, rượu bia vì nguồn thu thuế ổn định và lượng cầu không bị sụt giảm quá nhiều.",
+      "duration": 36.74,
+      "startTime": 223.94,
+      "endTime": 260.68,
+      "audioUrl": "/audio/lectures/economics/11/sec_significance.mp3"
+    }
+  ]
+}

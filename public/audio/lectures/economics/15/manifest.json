@@ -1,0 +1,115 @@
+{
+  "lectureId": "1af33337-f02c-45ff-a8d0-040864272c98",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "15. Mixed Economic System",
+  "totalDuration": 238.57,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_mixed_system": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_price_controls": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_intervention": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_privatisation": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_direct_provision": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_merits_demerits": {
+      "start": 6,
+      "end": 6
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 15: Hệ thống Kinh tế Hỗn hợp",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 15: The Mixed Economic System. In this concluding lesson of Topic 2, we explore how modern economies combine private market enterprise with government intervention. We evaluate price controls including maximum and minimum prices, indirect taxation, subsidies, state regulations, privatization, and nationalization.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 15: Hệ thống Kinh tế Hỗn hợp. Trong bài học kết thúc Chủ đề 2 này, chúng ta sẽ tìm hiểu cách các nền kinh tế hiện đại kết hợp giữa thị trường tư nhân với sự can thiệp của nhà nước. Chúng ta sẽ đánh giá các biện pháp kiểm soát giá gồm giá trần và giá sàn, thuế gián thu, trợ cấp, quy định pháp luật, tư nhân hóa và quốc hữu hóa.",
+      "duration": 49.24,
+      "startTime": 0.0,
+      "endTime": 49.24,
+      "audioUrl": "/audio/lectures/economics/15/intro.mp3"
+    },
+    {
+      "id": "sec_mixed_system",
+      "title": "1. Khái niệm & Bản chất của Hệ thống Kinh tế Hỗn hợp",
+      "selector": "#sec-mixed-system",
+      "en": "Section 1 defines a mixed economy as an economic system combining private enterprise guided by market price mechanism with public sector intervention by the government to correct market failures.",
+      "vi": "Mục 1 định nghĩa nền kinh tế hỗn hợp là hệ thống kinh tế kết hợp giữa doanh nghiệp tư nhân vận hành theo cơ chế giá thị trường với sự can thiệp của khu vực công nhằm khắc phục các thất bại thị trường.",
+      "duration": 21.38,
+      "startTime": 49.24,
+      "endTime": 70.62,
+      "audioUrl": "/audio/lectures/economics/15/sec_mixed_system.mp3"
+    },
+    {
+      "id": "sec_price_controls",
+      "title": "2. Biện pháp Kiểm soát Giá: Giá Trần (Max Price) & Giá Sàn (Min Price)",
+      "selector": "#sec-price-controls",
+      "en": "Section 2 analyzes price controls. A maximum price or price ceiling is set below equilibrium to make staple foods or rents affordable, but risks shortages and black markets. A minimum price or price floor is set above equilibrium to guarantee farmer incomes or minimum wages, creating unsold surpluses.",
+      "vi": "Mục 2 phân tích các biện pháp kiểm soát giá. Giá trần (maximum price) được ấn định dưới mức giá cân bằng để giữ giá lương thực thiết yếu hoặc tiền thuê nhà ở mức phải chăng, nhưng có nguy cơ gây khan hiếm và thị trường chợ đen. Giá sàn (minimum price) được đặt trên mức cân bằng để bảo vệ thu nhập nông dân hoặc tiền lương tối thiểu, dẫn đến dư thừa lượng cung.",
+      "duration": 42.64,
+      "startTime": 70.62,
+      "endTime": 113.26,
+      "audioUrl": "/audio/lectures/economics/15/sec_price_controls.mp3"
+    },
+    {
+      "id": "sec_intervention",
+      "title": "3. Các Biện pháp Can thiệp Khác: Thuế, Trợ cấp & Quy định",
+      "selector": "#sec-intervention",
+      "en": "Section 3 explores additional intervention tools: indirect taxes on demerit goods to internalize external costs; subsidies on merit goods like public transit and vaccines to expand consumption; and strict legal regulations such as smoking bans and mandatory seatbelts.",
+      "vi": "Mục 3 khảo sát các công cụ can thiệp khác: thuế gián thu đánh vào hàng hóa phi khuyến dụng để nội hóa chi phí ngoại ứng; trợ cấp cho hàng hóa khuyến dụng như xe buýt công cộng và vắc xin để mở rộng tiêu dùng; và các quy định pháp luật nghiêm ngặt như cấm hút thuốc nơi công cộng và bắt buộc thắt dây an toàn.",
+      "duration": 32.49,
+      "startTime": 113.26,
+      "endTime": 145.75,
+      "audioUrl": "/audio/lectures/economics/15/sec_intervention.mp3"
+    },
+    {
+      "id": "sec_privatisation",
+      "title": "4. Tư nhân hóa (Privatisation) & Quốc hữu hóa (Nationalisation)",
+      "selector": "#sec-privatisation",
+      "en": "Section 4 contrasts privatization—selling state-owned businesses to private investors to boost efficiency and competition—with nationalization, bringing critical private firms into public ownership to secure vital public services and prevent private monopoly abuse.",
+      "vi": "Mục 4 so sánh tư nhân hóa—bán doanh nghiệp nhà nước cho tư nhân để tăng hiệu quả và cạnh tranh—với quốc hữu hóa, chuyển các doanh nghiệp tư nhân trọng yếu về sở hữu nhà nước để bảo vệ lợi ích công cộng và ngăn ngừa lạm quyền độc quyền.",
+      "duration": 28.46,
+      "startTime": 145.75,
+      "endTime": 174.21,
+      "audioUrl": "/audio/lectures/economics/15/sec_privatisation.mp3"
+    },
+    {
+      "id": "sec_direct_provision",
+      "title": "5. Cung cấp Trực tiếp Dịch vụ Công & Hạn ngạch (Quotas)",
+      "selector": "#sec-direct-provision",
+      "en": "Section 5 examines direct provision of public and merit goods like state schooling and defence free at the point of delivery, funded by taxation. It also discusses environmental quotas limiting fishing catches and carbon emissions to conserve scarce natural resources.",
+      "vi": "Mục 5 tìm hiểu việc cung cấp trực tiếp các hàng hóa công cộng và khuyến dụng như giáo dục công lập và quốc phòng miễn phí khi thụ hưởng, chi trả bằng tiền thuế. Phần này cũng phân tích hạn ngạch môi trường giới hạn sản lượng đánh bắt cá và phát thải carbon để bảo tồn tài nguyên thiên nhiên.",
+      "duration": 31.7,
+      "startTime": 174.21,
+      "endTime": 205.91,
+      "audioUrl": "/audio/lectures/economics/15/sec_direct_provision.mp3"
+    },
+    {
+      "id": "sec_merits_demerits",
+      "title": "6. Đánh giá Ưu và Nhược điểm của Kinh tế Hỗn hợp",
+      "selector": "#sec-merits_demerits",
+      "en": "Section 6 synthesizes the evaluation: Mixed economies aim to capture the dynamic efficiency and innovation of markets while providing a vital social safety net. However, governments risk government failure, regulatory capture, and bureaucratic inefficiencies.",
+      "vi": "Mục 6 tổng hợp đánh giá: Kinh tế hỗn hợp nhằm tận dụng tính hiệu quả và sáng tạo của thị trường, đồng thời xây dựng lưới an sinh xã hội vững chắc. Tuy nhiên, chính phủ cũng có nguy cơ vấp phải thất bại chính phủ, sự chi phối của nhóm lợi ích và bộ máy hành chính quan liêu.",
+      "duration": 32.66,
+      "startTime": 205.91,
+      "endTime": 238.57,
+      "audioUrl": "/audio/lectures/economics/15/sec_merits_demerits.mp3"
+    }
+  ]
+}

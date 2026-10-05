@@ -1,0 +1,118 @@
+{
+  "lectureId": "06450a33-0477-4bd2-9d1b-4e424f8e973d",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "7. Demand",
+  "totalDuration": 230.07,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_demand_intro": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_movements": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_shifts": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_determinants": {
+      "start": 6,
+      "end": 7
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 7: Cầu (Demand)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 7: Demand. In this lesson, we define effective demand and the law of demand, distinguish movements along the demand curve from shifts of the curve, and analyze the key non-price determinants that increase or decrease consumer demand.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 7: Cầu (Demand). Trong bài học này, chúng ta sẽ định nghĩa cầu có khả năng thanh toán và quy luật cầu, phân biệt sự di chuyển dọc theo đường cầu với sự dịch chuyển của toàn bộ đường cầu, đồng thời phân tích các yếu tố phi giá làm tăng hoặc giảm lượng cầu tiêu dùng.",
+      "duration": 37.55,
+      "startTime": 0.0,
+      "endTime": 37.55,
+      "audioUrl": "/audio/lectures/economics/7/intro.mp3"
+    },
+    {
+      "id": "sec_demand_intro",
+      "title": "1. Khái niệm Cầu & Quy luật Cầu (The Law of Demand)",
+      "selector": "#sec-demand-intro",
+      "en": "Section 1 defines demand in economics as effective demand—the willingness and financial ability of consumers to buy a good at various prices over a given period. The Law of Demand states that as price rises, quantity demanded falls, ceteris paribus, creating a downward-sloping curve.",
+      "vi": "Mục 1 định nghĩa cầu trong kinh tế học là cầu có khả năng thanh toán—sự sẵn sàng và khả năng chi trả của người tiêu dùng để mua một hàng hóa ở các mức giá khác nhau trong một khoảng thời gian nhất định. Quy luật Cầu chỉ ra rằng khi giá tăng thì lượng cầu giảm (trong điều kiện các yếu tố khác không đổi), tạo nên đường cầu dốc xuống.",
+      "duration": 36.06,
+      "startTime": 37.55,
+      "endTime": 73.61,
+      "audioUrl": "/audio/lectures/economics/7/sec_demand_intro.mp3"
+    },
+    {
+      "id": "card_law_of_demand",
+      "title": "⚖️ Quy luật Cầu & Cầu Cá nhân vs Cầu Thị trường",
+      "selector": "#card-law-of-demand",
+      "en": "Individual demand reflects one buyer's purchases, while market demand is the horizontal sum of all individual demands at each price level. The downward slope reflects the substitution effect and the income effect.",
+      "vi": "Cầu cá nhân phản ánh lượng mua của một người tiêu dùng, còn cầu thị trường là tổng theo chiều ngang của tất cả các mức cầu cá nhân tại từng mức giá. Độ dốc đi xuống phản ánh hiệu ứng thay thế và hiệu ứng thu nhập.",
+      "duration": 25.7,
+      "startTime": 73.61,
+      "endTime": 99.31,
+      "audioUrl": "/audio/lectures/economics/7/card_law_of_demand.mp3"
+    },
+    {
+      "id": "sec_movements",
+      "title": "2. Di chuyển Dọc theo Đường Cầu (Movements along a Demand Curve)",
+      "selector": "#sec-movements",
+      "en": "Section 2 investigates movements along the curve, caused strictly by changes in the good's own price. A price rise causes a contraction in demand; a price fall causes an extension in demand.",
+      "vi": "Mục 2 khảo sát sự di chuyển dọc theo đường cầu, chỉ xảy ra khi giá của chính hàng hóa đó thay đổi. Khi giá tăng sẽ gây ra sự co hẹp của cầu; khi giá giảm sẽ gây ra sự mở rộng của cầu.",
+      "duration": 24.81,
+      "startTime": 99.31,
+      "endTime": 124.12,
+      "audioUrl": "/audio/lectures/economics/7/sec_movements.mp3"
+    },
+    {
+      "id": "card_movements",
+      "title": "📉 Co hẹp Cầu (Contraction) vs 🟢 Mở rộng Cầu (Extension)",
+      "selector": "#card-movements",
+      "en": "Remember for exams: when the price of the good itself changes, you move ALONG the existing curve. It is called a change in quantity demanded, not a change in demand.",
+      "vi": "Cần nhớ kỹ khi làm bài thi: khi giá của chính sản phẩm thay đổi, chúng ta DI CHUYỂN DỌC trên đường cầu hiện có. Đây được gọi là sự thay đổi lượng cầu, chứ không phải sự thay đổi của cầu.",
+      "duration": 23.01,
+      "startTime": 124.12,
+      "endTime": 147.13,
+      "audioUrl": "/audio/lectures/economics/7/card_movements.mp3"
+    },
+    {
+      "id": "sec_shifts",
+      "title": "3. Dịch chuyển Toàn bộ Đường Cầu (Shifts in the Demand Curve)",
+      "selector": "#sec-shifts",
+      "en": "Section 3 explains shifts of the entire curve, caused by non-price factors. A rightward shift represents an increase in demand at all prices; a leftward shift represents a decrease in demand.",
+      "vi": "Mục 3 giải thích sự dịch chuyển của toàn bộ đường cầu, do các yếu tố phi giá gây ra. Dịch chuyển sang phải thể hiện cầu tăng ở mọi mức giá; dịch chuyển sang trái thể hiện cầu giảm.",
+      "duration": 24.47,
+      "startTime": 147.13,
+      "endTime": 171.6,
+      "audioUrl": "/audio/lectures/economics/7/sec_shifts.mp3"
+    },
+    {
+      "id": "sec_determinants",
+      "title": "4. Các Yếu tố Phi giá Xác định Cầu (Non-Price Determinants)",
+      "selector": "#sec-determinants",
+      "en": "Section 4 details non-price determinants: consumer disposable income, prices of substitutes and complements, consumer tastes and advertising, demographic changes, interest rates, and weather conditions.",
+      "vi": "Mục 4 trình bày chi tiết các yếu tố phi giá: thu nhập khả dụng của người tiêu dùng, giá của hàng hóa thay thế và bổ sung, thị hiếu và quảng cáo, sự thay đổi dân số, lãi suất vay và điều kiện thời tiết.",
+      "duration": 25.6,
+      "startTime": 171.6,
+      "endTime": 197.2,
+      "audioUrl": "/audio/lectures/economics/7/sec_determinants.mp3"
+    },
+    {
+      "id": "card_determinants",
+      "title": "🧠 6 Yếu tố Dịch chuyển Cầu: Thu nhập, Hàng thay thế, Thị hiếu...",
+      "selector": "#card-determinants",
+      "en": "For normal goods, higher income shifts demand rightward. For inferior goods, higher income shifts demand leftward. A price rise in tea increases demand for coffee, while a price rise in petrol reduces demand for large cars.",
+      "vi": "Với hàng hóa thông thường, thu nhập cao hơn làm đường cầu dịch sang phải. Với hàng hóa thứ cấp, thu nhập cao lại làm cầu dịch sang trái. Giá trà tăng làm tăng cầu cà phê (hàng thay thế), trong khi giá xăng tăng làm giảm cầu xe hơi phân khối lớn (hàng bổ sung).",
+      "duration": 32.87,
+      "startTime": 197.2,
+      "endTime": 230.07,
+      "audioUrl": "/audio/lectures/economics/7/card_determinants.mp3"
+    }
+  ]
+}

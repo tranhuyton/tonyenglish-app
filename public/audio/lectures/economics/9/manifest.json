@@ -1,0 +1,103 @@
+{
+  "lectureId": "763cd322-6b7d-43b0-a18d-15da34137d9d",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "9. Price Determination",
+  "totalDuration": 189.25,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_price_mechanism": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_equilibrium": {
+      "start": 2,
+      "end": 3
+    },
+    "sec_disequilibrium": {
+      "start": 4,
+      "end": 6
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 9: Sự Hình thành Giá cả (Price Determination)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 9: Price Determination. In this lesson, we bring demand and supply together to determine market equilibrium. We analyze the market clearing price, examine disequilibrium situations involving surpluses and shortages, and discover how price movements automatically restore market balance.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 9: Sự Hình thành Giá cả (Price Determination). Trong bài học này, chúng ta sẽ kết hợp cung và cầu để xác định trạng thái cân bằng thị trường. Chúng ta sẽ phân tích mức giá cân bằng, xem xét các tình huống mất cân bằng gồm dư thừa và thiếu hụt hàng hóa, đồng thời khám phá cách biến động giá tự động tái lập cân bằng thị trường.",
+      "duration": 45.88,
+      "startTime": 0.0,
+      "endTime": 45.88,
+      "audioUrl": "/audio/lectures/economics/9/intro.mp3"
+    },
+    {
+      "id": "sec_price_mechanism",
+      "title": "1. Cơ chế Giá cả (The Price Mechanism)",
+      "selector": "#sec-price-mechanism",
+      "en": "Section 1 reviews how free market interaction determines prices without government intervention. Prices fluctuate until the quantity consumers want to buy equals the quantity producers want to sell.",
+      "vi": "Mục 1 ôn lại cách thức tương tác của thị trường tự do xác định giá cả mà không cần sự can thiệp của chính phủ. Giá cả sẽ tự điều chỉnh cho đến khi lượng người mua muốn mua bằng đúng lượng người bán muốn bán.",
+      "duration": 24.26,
+      "startTime": 45.88,
+      "endTime": 70.14,
+      "audioUrl": "/audio/lectures/economics/9/sec_price_mechanism.mp3"
+    },
+    {
+      "id": "sec_equilibrium",
+      "title": "2. Cân bằng Thị trường (Market Equilibrium)",
+      "selector": "#sec-equilibrium",
+      "en": "Section 2 defines market equilibrium, where the demand curve intersects the supply curve. At this equilibrium price, there is neither an unsold surplus nor an unsatisfied shortage; the market completely clears.",
+      "vi": "Mục 2 định nghĩa cân bằng thị trường, nơi đường cầu cắt đường cung. Tại mức giá cân bằng này, không có tình trạng ế thừa hàng cũng như không có sự thiếu hụt hàng hóa; thị trường hoàn toàn được giải tỏa.",
+      "duration": 26.15,
+      "startTime": 70.14,
+      "endTime": 96.29,
+      "audioUrl": "/audio/lectures/economics/9/sec_equilibrium.mp3"
+    },
+    {
+      "id": "card_equilibrium",
+      "title": "✅ Giá Cân bằng, Lượng Cân bằng & Biểu Lịch Thị trường",
+      "selector": "#card-equilibrium",
+      "en": "At equilibrium price Pe, quantity demanded exactly equals quantity supplied Qe. All consumers willing and able to pay Pe acquire the good, and all producers willing to sell at Pe sell their goods.",
+      "vi": "Tại mức giá cân bằng Pe, lượng cầu bằng chính xác lượng cung Qe. Tất cả người tiêu dùng sẵn sàng và có khả năng trả Pe đều mua được hàng, và tất cả nhà sản xuất sẵn sàng bán ở giá Pe đều tiêu thụ được sản phẩm.",
+      "duration": 26.73,
+      "startTime": 96.29,
+      "endTime": 123.02,
+      "audioUrl": "/audio/lectures/economics/9/card_equilibrium.mp3"
+    },
+    {
+      "id": "sec_disequilibrium",
+      "title": "3. Mất Cân bằng Thị trường (Market Disequilibrium)",
+      "selector": "#sec-disequilibrium",
+      "en": "Section 3 investigates market disequilibrium when current price deviates from equilibrium, creating either excess supply or excess demand.",
+      "vi": "Mục 3 khảo sát trạng thái mất cân bằng thị trường khi mức giá hiện tại chênh lệch khỏi mức giá cân bằng, tạo ra tình trạng dư cung hoặc dư cầu.",
+      "duration": 17.1,
+      "startTime": 123.02,
+      "endTime": 140.12,
+      "audioUrl": "/audio/lectures/economics/9/sec_disequilibrium.mp3"
+    },
+    {
+      "id": "card_excess_supply",
+      "title": "📈 Dư thừa Hàng hóa (Excess Supply / Market Surplus)",
+      "selector": "#card-excess-supply",
+      "en": "If price is set above equilibrium, quantity supplied exceeds quantity demanded, creating unsold stock. To eliminate surplus inventories, competing sellers cut prices back toward equilibrium.",
+      "vi": "Nếu giá bị đặt cao hơn mức cân bằng, lượng cung vượt quá lượng cầu tạo ra hàng tồn kho ế thừa. Để giải phóng hàng tồn, các nhà bán cạnh tranh buộc phải hạ giá dần về mức cân bằng.",
+      "duration": 24.9,
+      "startTime": 140.12,
+      "endTime": 165.02,
+      "audioUrl": "/audio/lectures/economics/9/card_excess_supply.mp3"
+    },
+    {
+      "id": "card_excess_demand",
+      "title": "📉 Thiếu hụt Hàng hóa (Excess Demand / Market Shortage)",
+      "selector": "#card-excess-demand",
+      "en": "If price is below equilibrium, quantity demanded exceeds quantity supplied, causing empty shelves and long queues. Recognizing unmet demand, sellers raise prices back up to equilibrium.",
+      "vi": "Nếu giá thấp hơn mức cân bằng, lượng cầu vượt xa lượng cung gây ra tình trạng khan hiếm và xếp hàng dài. Nhận thấy nhu cầu chưa được đáp ứng, người bán sẽ nâng giá dần lên mức cân bằng.",
+      "duration": 24.23,
+      "startTime": 165.02,
+      "endTime": 189.25,
+      "audioUrl": "/audio/lectures/economics/9/card_excess_demand.mp3"
+    }
+  ]
+}

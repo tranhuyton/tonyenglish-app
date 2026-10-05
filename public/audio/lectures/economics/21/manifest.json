@@ -1,0 +1,85 @@
+{
+  "lectureId": "604d1490-caed-47aa-a562-a6a902790a30",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "21. Firms and Production: Factor Demand & Productivity",
+  "totalDuration": 207.39,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_factor_demand": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_intensity": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_productivity": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_short_run_costs": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 21: Doanh nghiệp & Sản xuất: Cầu Yếu tố, Năng suất & Chi phí",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 21: Firms and Production: Factor Demand, Productivity, and Short-Run Costs. In this lesson, we study what drives demand for land, labour, and capital, contrast labour-intensive with capital-intensive production, distinguish between total output and efficiency, and define fixed and variable costs.",
+      "vi": "Chào mừng các bạn đến với Bài 21: Doanh nghiệp và Sản xuất: Cầu Yếu tố Sản xuất, Năng suất và Chi phí Ngắn hạn. Trong bài này, chúng ta sẽ tìm hiểu các nhân tố quyết định cầu về đất đai, lao động và vốn, so sánh phương thức sản xuất thâm dụng lao động với thâm dụng vốn, phân biệt tổng sản lượng và năng suất hiệu quả, cùng các khái niệm chi phí cố định và chi phí biến đổi.",
+      "duration": 42.59,
+      "startTime": 0.0,
+      "endTime": 42.59,
+      "audioUrl": "/audio/lectures/economics/21/intro.mp3"
+    },
+    {
+      "id": "sec_factor_demand",
+      "title": "1. Cầu về các Yếu tố Sản xuất (Derived Demand)",
+      "selector": "#sec-factor-demand",
+      "en": "Section 1 explains that factor demand is derived: firms purchase machinery and hire workers solely to manufacture goods that consumers demand. A rise in market demand for consumer goods elevates factor demand, alongside the relative costs and productivity of labour compared to automated capital equipment.",
+      "vi": "Mục 1 giải thích bản chất cầu phái sinh: doanh nghiệp chỉ mua máy móc và tuyển dụng nhân công nhằm chế tạo những hàng hóa mà người tiêu dùng có nhu cầu. Nhu cầu thị trường đối với sản phẩm tiêu dùng tăng lên sẽ kéo theo sự gia tăng cầu về các yếu tố sản xuất, song hành với tương quan chi phí và năng suất của lao động so với máy móc tự động hóa.",
+      "duration": 37.07,
+      "startTime": 42.59,
+      "endTime": 79.66,
+      "audioUrl": "/audio/lectures/economics/21/sec_factor_demand.mp3"
+    },
+    {
+      "id": "sec_intensity",
+      "title": "2. Thâm dụng Lao động vs Thâm dụng Vốn",
+      "selector": "#sec-intensity",
+      "en": "Section 2 compares production intensity: Labour-intensive production relies predominantly on human workforce, suited for personalized services, handmade goods, and low-wage economies. Capital-intensive production relies on heavy machinery, robotics, and advanced automation, enabling standardized mass production at lower unit costs.",
+      "vi": "Mục 2 so sánh cường độ sản xuất: Sản xuất thâm dụng lao động dựa chủ yếu vào lực lượng nhân công, rất phù hợp với các dịch vụ cá nhân hóa, hàng thủ công tinh xảo và các quốc gia có tiền lương thấp. Sản xuất thâm dụng vốn dựa vào máy móc cơ giới, robot và dây chuyền tự động hóa tiên tiến, cho phép sản xuất hàng loạt với chi phí trên từng đơn vị sản phẩm cực thấp.",
+      "duration": 42.16,
+      "startTime": 79.66,
+      "endTime": 121.82,
+      "audioUrl": "/audio/lectures/economics/21/sec_intensity.mp3"
+    },
+    {
+      "id": "sec_productivity",
+      "title": "3. Phân biệt Sản lượng (Production) vs Năng suất (Productivity)",
+      "selector": "#sec-productivity",
+      "en": "Section 3 addresses a critical conceptual boundary: Production is the total physical volume of goods and services produced. Productivity is a measure of efficiency, calculated as output per unit of input, such as output per worker per hour. Boosting productivity through capital investment, staff training, and technological innovation lowers average production costs.",
+      "vi": "Mục 3 phân định ranh giới khái niệm quan trọng: Sản lượng là tổng khối lượng vật chất của hàng hóa và dịch vụ được tạo ra. Năng suất là thước đo hiệu quả kinh tế, được tính bằng sản lượng trên mỗi đơn vị yếu tố đầu vào, chẳng hạn như sản lượng trên mỗi công nhân mỗi giờ. Nâng cao năng suất qua đầu tư máy móc, đào tạo tay nghề và đổi mới công nghệ giúp giảm chi phí sản xuất bình quân.",
+      "duration": 45.26,
+      "startTime": 121.82,
+      "endTime": 167.08,
+      "audioUrl": "/audio/lectures/economics/21/sec_productivity.mp3"
+    },
+    {
+      "id": "sec_short_run_costs",
+      "title": "4. Chi phí Sản xuất Ngắn hạn: Cố định vs Biến đổi",
+      "selector": "#sec-short-run-costs",
+      "en": "Section 4 defines cost behaviors in the short run: Fixed Costs do not alter with changes in output, such as factory rent and insurance. Variable Costs vary directly with output volume, such as raw material costs and direct hourly wages. Total Cost equals total fixed cost plus total variable cost.",
+      "vi": "Mục 4 định nghĩa hành vi chi phí trong ngắn hạn: Chi phí cố định không thay đổi theo mức sản lượng tạo ra, ví dụ như tiền thuê nhà xưởng và phí bảo hiểm. Chi phí biến đổi thay đổi trực tiếp theo số lượng sản phẩm, như tiền mua nguyên vật liệu và tiền lương trả theo giờ. Tổng chi phí bằng tổng chi phí cố định cộng tổng chi phí biến đổi.",
+      "duration": 40.31,
+      "startTime": 167.08,
+      "endTime": 207.39,
+      "audioUrl": "/audio/lectures/economics/21/sec_short_run_costs.mp3"
+    }
+  ]
+}

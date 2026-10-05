@@ -1,0 +1,140 @@
+{
+  "lectureId": "3adca75c-b852-48be-9cbf-5074ae12e430",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "16. Money and Banking",
+  "totalDuration": 407.03,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_evolution": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_functions": {
+      "start": 3,
+      "end": 5
+    },
+    "sec_banking": {
+      "start": 6,
+      "end": 8
+    },
+    "sec_borrowing": {
+      "start": 9,
+      "end": 9
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 16: Tiền tệ và Hệ thống Ngân hàng",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 3: Microeconomic Decision Makers. In Lesson 16, we explore Money and Banking. We will trace the historical transition from barter systems to modern digital money, examine the four core functions and six characteristics of good money, compare the roles of central banks and commercial banks, and evaluate why businesses face lending constraints.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Chủ đề 3: Các Chủ thể Quyết định Kinh tế Vi mô. Trong Bài 16, chúng ta tìm hiểu về Tiền tệ và Hệ thống Ngân hàng. Chúng ta sẽ theo dõi hành trình chuyển đổi từ hình thức đổi hàng lấy hàng sang tiền tệ kỹ thuật số hiện đại, phân tích bốn chức năng cốt lõi và sáu đặc tính của tiền tệ, so sánh vai trò của ngân hàng trung ương với ngân hàng thương mại, và tìm hiểu lý do tại sao doanh nghiệp gặp rào cản khi vay vốn.",
+      "duration": 52.34,
+      "startTime": 0.0,
+      "endTime": 52.34,
+      "audioUrl": "/audio/lectures/economics/16/intro.mp3"
+    },
+    {
+      "id": "sec_evolution",
+      "title": "1. Sự Tiến hóa & Các Hình thức của Tiền tệ",
+      "selector": "#sec-evolution",
+      "en": "Section 1 charts the history of exchange. Barter economies suffered from the double coincidence of wants, where trade only occurred if both parties desired each other's goods. Money emerged as a universal medium of exchange, evolving from commodity money like cattle and shells, to precious metals, minted coins, paper fiat money, and contemporary digital payment cards and mobile transfers.",
+      "vi": "Mục 1 phác họa lịch sử giao thương. Nền kinh tế đổi hàng từng gặp trở ngại lớn bởi yêu cầu trùng khớp kép về nhu cầu, nghĩa là trao đổi chỉ diễn ra khi hai bên cùng cần hàng hóa của nhau. Tiền tệ ra đời như một phương tiện trao đổi phổ quát, tiến hóa từ tiền hàng hóa như gia súc và vỏ sò, sang kim loại quý, tiền kim loại đúc, tiền giấy pháp định và ngày nay là thẻ thanh toán điện tử cùng chuyển khoản di động.",
+      "duration": 48.69,
+      "startTime": 52.34,
+      "endTime": 101.03,
+      "audioUrl": "/audio/lectures/economics/16/sec_evolution.mp3"
+    },
+    {
+      "id": "card_forms",
+      "title": "A. Các Hình thức Tiến hóa của Tiền tệ",
+      "selector": "#card-forms",
+      "en": "The evolution of money shows continuous improvements in convenience: starting with Commodity Money having intrinsic value; transitioning to Metal Coins with standardised weights; developing Paper Banknotes representing legal tender backed by central banks; and culminating in Digital and Electronic Money enabling instant global settlement.",
+      "vi": "Tiến trình phát triển của tiền tệ liên tục nâng cao sự tiện lợi: khởi đầu từ Tiền hàng hóa có giá trị nội tại; chuyển sang Tiền kim loại với trọng lượng tiêu chuẩn; phát triển thành Tiền giấy pháp định được ngân hàng trung ương bảo chứng; và đỉnh cao là Tiền kỹ thuật số điện tử cho phép thanh toán toàn cầu tức thì.",
+      "duration": 35.34,
+      "startTime": 101.03,
+      "endTime": 136.37,
+      "audioUrl": "/audio/lectures/economics/16/card_forms.mp3"
+    },
+    {
+      "id": "sec_functions",
+      "title": "2. Chức năng & Đặc điểm của Tiền tệ",
+      "selector": "#sec-functions",
+      "en": "Section 2 establishes the economic foundations of money. Money must fulfill four distinct functions: medium of exchange, unit of account, store of value, and standard for deferred payments. To perform these roles reliably, an asset must possess six physical and economic traits: acceptability, durability, portability, divisibility, scarcity, and uniformity.",
+      "vi": "Mục 2 xác lập nền tảng kinh tế của tiền tệ. Tiền tệ phải đảm bảo bốn chức năng: phương tiện trao đổi, thước đo giá trị, phương tiện cất trữ giá trị và phương tiện thanh toán trả chậm. Để hoàn thành những vai trò này, một tài sản cần có đủ sáu đặc tính: được chấp nhận rộng rãi, bền bỉ, dễ mang theo, có thể chia nhỏ, khan hiếm và đồng nhất.",
+      "duration": 46.5,
+      "startTime": 136.37,
+      "endTime": 182.87,
+      "audioUrl": "/audio/lectures/economics/16/sec_functions.mp3"
+    },
+    {
+      "id": "card_four_functions",
+      "title": "A. Bốn Chức năng Cốt lõi của Tiền tệ",
+      "selector": "#card-four-functions",
+      "en": "Money operates across four roles: First, as a Medium of Exchange eliminating the barter problem. Second, as a Unit of Account providing common pricing benchmarks. Third, as a Store of Value preserving purchasing power into the future. Fourth, as a Standard of Deferred Payment enabling credit contracts and borrowing.",
+      "vi": "Tiền tệ vận hành qua bốn vai trò: Thứ nhất, là Phương tiện Trao đổi xóa bỏ trở ngại của đổi hàng. Thứ hai, là Thước đo Giá trị làm chuẩn mực định giá thống nhất. Thứ ba, là Phương tiện Cất trữ Giá trị bảo toàn sức mua cho tương lai. Thứ tư, là Tiêu chuẩn Thanh toán Trả chậm tạo tiền đề cho các hợp đồng tín dụng và vay nợ.",
+      "duration": 42.57,
+      "startTime": 182.87,
+      "endTime": 225.44,
+      "audioUrl": "/audio/lectures/economics/16/card_four_functions.mp3"
+    },
+    {
+      "id": "card_characteristics",
+      "title": "B. Sáu Đặc tính Thiết yếu của Tiền tệ Tốt",
+      "selector": "#card-characteristics",
+      "en": "The six characteristics guarantee confidence in money: Acceptability ensures people trust it; Durability withstands wear and tear; Portability makes everyday transport effortless; Divisibility allows exact change; Scarcity maintains real purchasing power; and Uniformity standardises value across identical denominations.",
+      "vi": "Sáu đặc tính bảo đảm niềm tin vào tiền tệ: Tính được chấp nhận tạo dựng lòng tin; Tính bền bỉ giúp tiền không bị mục nát; Tính dễ di chuyển giúp mang theo nhẹ nhàng; Tính dễ chia nhỏ cho phép giao dịch chính xác; Tính khan hiếm giữ vững sức mua thực tế; và Tính đồng nhất chuẩn hóa giá trị của mọi tờ tiền cùng mệnh giá.",
+      "duration": 36.95,
+      "startTime": 225.44,
+      "endTime": 262.39,
+      "audioUrl": "/audio/lectures/economics/16/card_characteristics.mp3"
+    },
+    {
+      "id": "sec_banking",
+      "title": "3. Hệ thống Ngân hàng: Ngân hàng Trung ương vs NHTM",
+      "selector": "#sec-banking",
+      "en": "Section 3 contrasts the two tiers of the banking system. The Central Bank is the state-owned monetary authority responsible for macroeconomic stability, interest rates, issuing banknotes, and acting as the lender of last resort. Commercial Banks are profit-seeking private enterprises that accept consumer deposits, provide business loans, and facilitate everyday payments.",
+      "vi": "Mục 3 phân biệt hai cấp trong hệ thống ngân hàng. Ngân hàng Trung ương là cơ quan tiền tệ thuộc sở hữu nhà nước, chịu trách nhiệm ổn định kinh tế vĩ mô, ấn định lãi suất cơ bản, phát hành tiền giấy và giữ vai trò người cho vay cứu cánh cuối cùng. Ngân hàng Thương mại là doanh nghiệp tư nhân hoạt động vì lợi nhuận, thực hiện nhận tiền gửi, cấp tín dụng và cung cấp các dịch vụ thanh toán hàng ngày.",
+      "duration": 45.57,
+      "startTime": 262.39,
+      "endTime": 307.96,
+      "audioUrl": "/audio/lectures/economics/16/sec_banking.mp3"
+    },
+    {
+      "id": "card_central_bank",
+      "title": "🏛️ Ngân hàng Trung ương (Central Bank)",
+      "selector": "#card-central-bank",
+      "en": "Key functions of a central bank include: monopoly issuer of currency; managing national foreign exchange reserves; setting monetary policy and official interest rates; supervising the commercial banking sector; and advising the government on public debt management.",
+      "vi": "Các chức năng cốt lõi của ngân hàng trung ương gồm có: độc quyền phát hành tiền tệ quốc gia; quản lý dự trữ ngoại hối; điều hành chính sách tiền tệ và lãi suất; thanh tra giám sát ngân hàng thương mại; và làm đại lý tư vấn quản lý nợ công cho chính phủ.",
+      "duration": 29.51,
+      "startTime": 307.96,
+      "endTime": 337.47,
+      "audioUrl": "/audio/lectures/economics/16/card_central_bank.mp3"
+    },
+    {
+      "id": "card_commercial_bank",
+      "title": "🏢 Ngân hàng Thương mại (Commercial Bank)",
+      "selector": "#card-commercial-bank",
+      "en": "Commercial banks intermediate between savers and borrowers: accepting demand and savings deposits; providing overdrafts, mortgages, and commercial loans; making money through net interest margins; and offering modern digital payment facilities.",
+      "vi": "Ngân hàng thương mại đóng vai trò trung gian tài chính giữa người gửi tiền và người đi vay: tiếp nhận tiền gửi thanh toán và tiết kiệm; cấp hạn mức thấu chi, cho vay mua nhà và tín dụng doanh nghiệp; tạo lợi nhuận từ biên lãi thuần; và cung cấp tiện ích thanh toán điện tử hiện đại.",
+      "duration": 29.87,
+      "startTime": 337.47,
+      "endTime": 367.34,
+      "audioUrl": "/audio/lectures/economics/16/card_commercial_bank.mp3"
+    },
+    {
+      "id": "sec_borrowing",
+      "title": "4. Trọng tâm Thi: Tại sao Doanh nghiệp khó Vay vốn?",
+      "selector": "#sec-borrowing",
+      "en": "Section 4 highlights a vital examination topic: lending constraints. Small and startup firms often struggle to borrow from commercial banks due to a lack of collateral, unproven credit history, high default risk, and information asymmetry, compelling them to rely on retained profits, trade credit, or venture capital.",
+      "vi": "Mục 4 tập trung vào một câu hỏi then chốt trong các kỳ thi: rào cản tiếp cận vốn vay. Các doanh nghiệp nhỏ và mới thành lập thường gặp khó khăn khi vay ngân hàng thương mại do thiếu tài sản bảo đảm, chưa có lịch sử tín dụng uy tín, rủi ro vỡ nợ cao và bất cân xứng thông tin, buộc họ phải dựa vào lợi nhuận giữ lại, tín dụng thương mại hoặc vốn khởi nghiệp.",
+      "duration": 39.69,
+      "startTime": 367.34,
+      "endTime": 407.03,
+      "audioUrl": "/audio/lectures/economics/16/sec_borrowing.mp3"
+    }
+  ]
+}

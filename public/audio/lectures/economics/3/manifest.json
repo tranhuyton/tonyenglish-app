@@ -1,0 +1,92 @@
+{
+  "lectureId": "9b0e6a87-ed26-43bb-a20c-ffa636f9ef11",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "3. Opportunity Cost",
+  "totalDuration": 241.06,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_definition": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_decision_making": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_pitfalls": {
+      "start": 5,
+      "end": 5
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3: Chi phí Cơ hội",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 3: Opportunity Cost. In this lesson, we master the fundamental definition of opportunity cost as the next best alternative forgone when making a decision. We examine how this concept influences consumers, workers, firms, and governments, and clarify common exam pitfalls.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 3: Chi phí Cơ hội. Trong bài học này, chúng ta sẽ nắm vững định nghĩa cốt lõi của chi phí cơ hội là phương án thay thế tốt nhất bị bỏ qua khi đưa ra quyết định. Chúng ta sẽ xem xét cách khái niệm này chi phối người tiêu dùng, người lao động, doanh nghiệp và chính phủ, đồng thời giải quyết các bẫy thường gặp trong kỳ thi.",
+      "duration": 45.16,
+      "startTime": 0.0,
+      "endTime": 45.16,
+      "audioUrl": "/audio/lectures/economics/3/intro.mp3"
+    },
+    {
+      "id": "sec_definition",
+      "title": "1. Định nghĩa Chuẩn của Chi phí Cơ hội",
+      "selector": "#sec-definition",
+      "en": "Section 1 introduces the Cambridge standard definition: Opportunity cost is the cost of the next best alternative forgone when making a decision. Because economic resources are scarce, committing resources to one use automatically requires sacrificing the benefits of the alternative option.",
+      "vi": "Mục 1 giới thiệu định nghĩa chuẩn Cambridge: Chi phí cơ hội là chi phí của phương án thay thế tốt nhất bị bỏ qua khi đưa ra một quyết định. Do nguồn lực kinh tế khan hiếm, việc dành nguồn lực cho một mục đích đồng nghĩa với việc bắt buộc phải hy sinh lợi ích của phương án thay thế tiếp theo.",
+      "duration": 32.85,
+      "startTime": 45.16,
+      "endTime": 78.01,
+      "audioUrl": "/audio/lectures/economics/3/sec_definition.mp3"
+    },
+    {
+      "id": "card_definition",
+      "title": "⚖️ Định nghĩa & Các Ví dụ Thực tế Sinh động",
+      "selector": "#card-definition",
+      "en": "Everyday examples demonstrate the concept: for a graduate attending university, the opportunity cost is full-time wage income forgone; for a government building an airport, it is the public hospitals that cannot be funded; and for a farmer growing wheat, it is the yield of soybeans sacrificed.",
+      "vi": "Các ví dụ thực tế chứng minh khái niệm này: đối với một sinh viên học đại học, chi phí cơ hội là khoản tiền lương đi làm toàn thời gian bị mất; đối với chính phủ xây sân bay, đó là các bệnh viện công không đủ tiền xây; và với người nông dân trồng lúa mì, đó là sản lượng đậu tương bị bỏ qua.",
+      "duration": 32.92,
+      "startTime": 78.01,
+      "endTime": 110.93,
+      "audioUrl": "/audio/lectures/economics/3/card_definition.mp3"
+    },
+    {
+      "id": "sec_decision_making",
+      "title": "2. Chi phí Cơ hội trong Quyết định Kinh tế",
+      "selector": "#sec-decision-making",
+      "en": "Section 2 illustrates how opportunity cost guides economic agents. Consumers trade off spending on immediate luxuries against future savings. Workers trade off extra overtime earnings against leisure. Producers trade off launching new product lines against upgrading current machinery. Governments trade off funding defence against spending on healthcare and schools.",
+      "vi": "Mục 2 minh họa cách chi phí cơ hội định hướng các chủ thể kinh tế. Người tiêu dùng đánh đổi giữa mua đồ xa xỉ với tiền tiết kiệm tương lai. Người lao động đánh đổi giữa tiền làm thêm giờ với sự nghỉ ngơi. Doanh nghiệp đánh đổi giữa ra mắt sản phẩm mới với nâng cấp dây chuyền cũ. Chính phủ đánh đổi giữa chi cho quốc phòng với đầu tư cho y tế và trường học.",
+      "duration": 46.41,
+      "startTime": 110.93,
+      "endTime": 157.34,
+      "audioUrl": "/audio/lectures/economics/3/sec_decision_making.mp3"
+    },
+    {
+      "id": "card_agent_tradeoffs",
+      "title": "👥 Sơ đồ Tương tác 4 Chủ thể: Đánh đổi & Quyết định",
+      "selector": "#card-agent-tradeoffs",
+      "en": "Our interactive decision map shows the specific dilemmas: consumers face income limits; workers face 24-hour time constraints; firms face investment capital limits; and governments face finite tax revenues. Every choice carries an inescapable opportunity cost.",
+      "vi": "Sơ đồ quyết định tương tác thể hiện rõ các thế tiến thoái lưỡng nan: người tiêu dùng bị giới hạn thu nhập; người lao động bị giới hạn quỹ thời gian 24 giờ; doanh nghiệp bị giới hạn vốn đầu tư; và chính phủ bị giới hạn bởi ngân sách thuế. Mọi lựa chọn đều đi kèm một chi phí cơ hội không thể tránh khỏi.",
+      "duration": 35.2,
+      "startTime": 157.34,
+      "endTime": 192.54,
+      "audioUrl": "/audio/lectures/economics/3/card_agent_tradeoffs.mp3"
+    },
+    {
+      "id": "sec_pitfalls",
+      "title": "3. Nguyên lý Trọng tâm & Bẫy Thi cử Cần tránh",
+      "selector": "#sec-pitfalls",
+      "en": "Section 3 highlights crucial principles for exam success. First, opportunity cost refers only to the single next best alternative, not all discarded options combined. Second, it includes non-monetary sacrifices such as lost time and leisure. Third, free goods like sunlight involve zero opportunity cost because their use deprives no one else.",
+      "vi": "Mục 3 nhấn mạnh các nguyên tắc then chốt để đạt điểm cao trong kỳ thi. Thứ nhất, chi phí cơ hội chỉ là một phương án thay thế tốt nhất duy nhất, không phải tổng gộp của tất cả các phương án bị bỏ. Thứ hai, nó bao gồm cả các hy sinh phi tiền tệ như thời gian và sự thư giãn. Thứ ba, hàng hóa tự do như ánh nắng mặt trời có chi phí cơ hội bằng không vì việc sử dụng chúng không tước đoạt cơ hội của ai khác.",
+      "duration": 48.52,
+      "startTime": 192.54,
+      "endTime": 241.06,
+      "audioUrl": "/audio/lectures/economics/3/sec_pitfalls.mp3"
+    }
+  ]
+}

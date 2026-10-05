@@ -1,0 +1,122 @@
+{
+  "lectureId": "95fb66bf-66f0-4bbd-a7e4-418f191f487a",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "18. Workers: Wage Determination & Labour Mobility",
+  "totalDuration": 302.12,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_occupation": {
+      "start": 1,
+      "end": 3
+    },
+    "sec_wage_determination": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_nmw": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_wage_differentials": {
+      "start": 6,
+      "end": 6
+    },
+    "sec_mobility_division": {
+      "start": 7,
+      "end": 7
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 18: Người Lao động: Lựa chọn Nghề nghiệp & Tiền lương",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 18: Workers: Wage Determination, Specialisation, and Labour Mobility. In this lesson, we analyse the factors individuals weigh when choosing a career, how wages are determined through labour demand and supply, the consequences of national minimum wages, reasons behind wage differentials, and the advantages of division of labour.",
+      "vi": "Chào mừng các bạn đến với Bài 18: Người Lao động: Xác định Tiền lương, Chuyên môn hóa và Tính Cơ động của Lao động. Trong bài này, chúng ta sẽ phân tích các nhân tố khi lựa chọn nghề nghiệp, cách tiền lương được quyết định qua cung cầu lao động, tác động của mức lương tối thiểu quốc gia, nguyên nhân gây chênh lệch thu nhập và lợi thế của phân công lao động.",
+      "duration": 41.42,
+      "startTime": 0.0,
+      "endTime": 41.42,
+      "audioUrl": "/audio/lectures/economics/18/intro.mp3"
+    },
+    {
+      "id": "sec_occupation",
+      "title": "1. Lựa chọn Nghề nghiệp: Yếu tố Lương vs Phi Lương",
+      "selector": "#sec-occupation",
+      "en": "Section 1 divides occupational influences into wage and non-wage factors. While basic pay, overtime rates, and bonuses provide financial incentives, individuals often value non-wage factors like job satisfaction, working hours, commuting distances, job security, promotional prospects, and holiday allowances just as highly.",
+      "vi": "Mục 1 chia các yếu tố định hình lựa chọn nghề nghiệp thành yếu tố tiền lương và yếu tố phi tiền lương. Mặc dù lương cơ bản, tiền làm thêm giờ và tiền thưởng là động lực tài chính mạnh mẽ, người lao động cũng coi trọng không kém các yếu tố phi tiền lương như sự hài lòng công việc, giờ giấc làm việc, khoảng cách đi lại, độ ổn định của công việc, cơ hội thăng tiến và chế độ nghỉ phép.",
+      "duration": 43.31,
+      "startTime": 41.42,
+      "endTime": 84.73,
+      "audioUrl": "/audio/lectures/economics/18/sec_occupation.mp3"
+    },
+    {
+      "id": "card_wage_factors",
+      "title": "💰 Yếu tố Tiền lương & Thu nhập",
+      "selector": "#card-wage-factors",
+      "en": "Wage payment methods include: time rates paid per hour; piece rates paid per unit produced; commission paid as a percentage of sales; and performance-related pay linking compensation to achieving operational targets.",
+      "vi": "Các phương thức trả lương gồm có: trả lương theo thời gian làm việc mỗi giờ; trả lương theo sản phẩm hoàn thành; trả hoa hồng tính theo phần trăm doanh thu bán hàng; và trả lương theo hiệu quả hoàn thành mục tiêu công việc.",
+      "duration": 24.62,
+      "startTime": 84.73,
+      "endTime": 109.35,
+      "audioUrl": "/audio/lectures/economics/18/card_wage_factors.mp3"
+    },
+    {
+      "id": "card_non_wage_factors",
+      "title": "🌟 Yếu tố Phi Tiền lương",
+      "selector": "#card-non-wage-factors",
+      "en": "Non-wage considerations frequently determine job choice: intrinsic job satisfaction, positive workplace environment, training and career development opportunities, fringe benefits such as healthcare or company transport, and flexible working arrangements.",
+      "vi": "Các yếu tố phi tiền lương thường quyết định sự gắn bó nghề nghiệp: sự đam mê và yêu thích công việc, môi trường làm việc thân thiện, cơ hội đào tạo và nâng cao tay nghề, các phúc lợi phụ như bảo hiểm sức khỏe hoặc xe đưa đón, cùng thời gian làm việc linh hoạt.",
+      "duration": 30.06,
+      "startTime": 109.35,
+      "endTime": 139.41,
+      "audioUrl": "/audio/lectures/economics/18/card_non_wage_factors.mp3"
+    },
+    {
+      "id": "sec_wage_determination",
+      "title": "2. Xác định Tiền lương trên Thị trường Lao động",
+      "selector": "#sec-wage-determination",
+      "en": "Section 2 illustrates wage determination through market equilibrium: Labour Demand is a derived demand originating from the consumer demand for the final goods workers produce. Labour Supply reflects the willingness of qualified workers to offer their labour at various wage rates. The intersection yields the equilibrium wage and employment level.",
+      "vi": "Mục 2 minh họa cách xác định tiền lương thông qua cân bằng thị trường: Cầu lao động là cầu phái sinh bắt nguồn từ nhu cầu tiêu dùng hàng hóa cuối cùng do người lao động tạo ra. Cung lao động thể hiện số lượng nhân lực sẵn sàng làm việc tại các mức lương khác nhau. Điểm giao nhau quyết định mức tiền lương và số lượng lao động cân bằng.",
+      "duration": 39.54,
+      "startTime": 139.41,
+      "endTime": 178.95,
+      "audioUrl": "/audio/lectures/economics/18/sec_wage_determination.mp3"
+    },
+    {
+      "id": "sec_nmw",
+      "title": "3. Mức lương Tối thiểu Quốc gia (National Minimum Wage)",
+      "selector": "#sec-nmw",
+      "en": "Section 3 evaluates a statutory National Minimum Wage. Imposed as a price floor above the free market wage, it aims to prevent worker exploitation and reduce poverty. However, if set too high, it increases employers' production costs, which may cause businesses to cut hours or create surplus unemployment.",
+      "vi": "Mục 3 đánh giá chính sách Mức lương Tối thiểu Quốc gia do nhà nước quy định. Đóng vai trò là giá sàn đặt trên mức lương cân bằng thị trường tự do, chính sách này nhằm ngăn chặn bóc lột và giảm nghèo đói. Tuy nhiên, nếu quy định quá cao, nó làm tăng chi phí sản xuất của doanh nghiệp, có thể dẫn đến việc cắt giảm giờ làm hoặc gây ra thất nghiệp dư thừa.",
+      "duration": 40.41,
+      "startTime": 178.95,
+      "endTime": 219.36,
+      "audioUrl": "/audio/lectures/economics/18/sec_nmw.mp3"
+    },
+    {
+      "id": "sec_wage_differentials",
+      "title": "4. Chênh lệch Tiền lương (Wage Differentials)",
+      "selector": "#sec-wage-differentials",
+      "en": "Section 4 explains why wages differ across occupations. Skilled workers command higher wages because their supply is inelastic due to lengthy education and training, while their productivity is high. Differentials also arise between public and private sectors, manual and non-manual work, and traditional gender pay gaps.",
+      "vi": "Mục 4 lý giải nguyên nhân dẫn đến chênh lệch tiền lương giữa các ngành nghề. Lao động có tay nghề cao nhận được mức lương vượt trội vì cung lao động kém co giãn do đòi hỏi thời gian đào tạo dài lâu, đồng thời năng suất đóng góp của họ rất lớn. Chênh lệch tiền lương cũng xuất hiện giữa khu vực công và tư nhân, lao động chân tay và trí óc, cũng như khoảng cách giới tính.",
+      "duration": 41.85,
+      "startTime": 219.36,
+      "endTime": 261.21,
+      "audioUrl": "/audio/lectures/economics/18/sec_wage_differentials.mp3"
+    },
+    {
+      "id": "sec_mobility_division",
+      "title": "5. Tính Cơ động của Lao động & Phân công Lao động",
+      "selector": "#sec-mobility-division",
+      "en": "Section 5 examines labour mobility and specialisation: Occupational mobility requires transferable skills, while geographical mobility requires affordable housing and moving grants. Division of labour breaks production into repetitive sub-tasks, boosting output and worker efficiency, but risks worker boredom and structural unemployment.",
+      "vi": "Mục 5 tìm hiểu tính cơ động của lao động và chuyên môn hóa: Cơ động nghề nghiệp đòi hỏi kỹ năng có thể chuyển đổi, còn cơ động địa lý cần nhà ở giá hợp lý và trợ cấp di chuyển. Phân công lao động chia nhỏ quy trình sản xuất thành các khâu lặp lại, nâng cao sản lượng và sự thành thạo, nhưng có thể gây nhàm chán và nguy cơ thất nghiệp cơ cấu.",
+      "duration": 40.91,
+      "startTime": 261.21,
+      "endTime": 302.12,
+      "audioUrl": "/audio/lectures/economics/18/sec_mobility_division.mp3"
+    }
+  ]
+}

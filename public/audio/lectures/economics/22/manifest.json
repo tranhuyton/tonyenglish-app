@@ -1,0 +1,81 @@
+{
+  "lectureId": "d2019792-c956-44e2-98ed-c247617a9162",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "22. Firms' Objectives, Costs, Revenue & Break-even",
+  "totalDuration": 202.21,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_objectives": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_formulas": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_revenue_breakeven": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 22: Mục tiêu Doanh nghiệp, Chi phí, Doanh thu & Điểm Hòa vốn",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 22: Firms' Objectives, Costs, Revenue, and Break-even Analysis. In this lesson, we study the multiple goals firms pursue, compute average and marginal revenues, apply cost formulas, and interpret break-even charts to determine the margin of safety.",
+      "vi": "Chào mừng các bạn đến với Bài 22: Mục tiêu Doanh nghiệp, Chi phí, Doanh thu và Phân tích Hòa vốn. Trong bài này, chúng ta sẽ tìm hiểu các mục tiêu đa dạng của doanh nghiệp, tính toán doanh thu bình quân và cận biên, áp dụng các công thức chi phí, và phân tích biểu đồ hòa vốn để xác định giới hạn an toàn tài chính.",
+      "duration": 36.81,
+      "startTime": 0.0,
+      "endTime": 36.81,
+      "audioUrl": "/audio/lectures/economics/22/intro.mp3"
+    },
+    {
+      "id": "sec_objectives",
+      "title": "1. Các Mục tiêu của Doanh nghiệp (Objectives of Firms)",
+      "selector": "#sec-objectives",
+      "en": "Section 1 reviews business goals: While textbook economics assumes profit maximisation, firms frequently pursue other aims such as short-term survival during recessions, sales growth to capture dominant market share, social welfare enhancement, and environmental sustainability.",
+      "vi": "Mục 1 phân tích các mục tiêu kinh doanh: Dù kinh tế học truyền thống giả định tối đa hóa lợi nhuận, trên thực tế doanh nghiệp thường theo đuổi các mục tiêu khác như duy trì sự tồn tại trong khủng hoảng, mở rộng doanh thu để chiếm lĩnh thị phần, nâng cao phúc lợi cộng đồng và phát triển bền vững bảo vệ môi trường.",
+      "duration": 32.92,
+      "startTime": 36.81,
+      "endTime": 69.73,
+      "audioUrl": "/audio/lectures/economics/22/sec_objectives.mp3"
+    },
+    {
+      "id": "card_objectives_grid",
+      "title": "🎯 Bốn Mục tiêu Doanh nghiệp Cốt lõi",
+      "selector": "#card-objectives-grid",
+      "en": "The four main business objectives include: 1. Profit Maximisation (widening the gap between revenue and costs); 2. Survival (maintaining liquidity in tough markets); 3. Growth and Market Share (expanding scale to secure pricing power); and 4. Corporate Social Responsibility (ethical sourcing and reduced emissions).",
+      "vi": "Bốn mục tiêu kinh doanh chủ chốt gồm: 1. Tối đa hóa Lợi nhuận (nới rộng khoảng cách giữa doanh thu và chi phí); 2. Tồn tại và Duy trì Hoạt động (bảo toàn thanh khoản trong nghịch cảnh); 3. Tăng trưởng Thị phần (mở rộng quy mô để gia tăng vị thế định giá); và 4. Trách nhiệm Xã hội Doanh nghiệp (sản xuất có đạo đức và giảm thiểu khí thải).",
+      "duration": 46.72,
+      "startTime": 69.73,
+      "endTime": 116.45,
+      "audioUrl": "/audio/lectures/economics/22/card_objectives_grid.mp3"
+    },
+    {
+      "id": "sec_formulas",
+      "title": "2. Các Công thức Chi phí & Bảng Tính Chi phí",
+      "selector": "#sec-formulas",
+      "en": "Section 2 focuses on essential mathematical relationships: Average Fixed Cost falls continuously as output expands, spreading fixed costs over more units. Average Variable Cost initially declines before rising due to diminishing returns. Average Total Cost equals Total Cost divided by total output.",
+      "vi": "Mục 2 tập trung vào các công thức tính toán cốt lõi: Chi phí cố định bình quân liên tục giảm khi sản lượng tăng, do chi phí cố định được san sẻ cho nhiều đơn vị hàng hóa hơn. Chi phí biến đổi bình quân ban đầu giảm dần rồi sau đó tăng lên do hiệu suất giảm dần. Chi phí tổng bình quân bằng tổng chi phí chia cho tổng sản lượng.",
+      "duration": 39.57,
+      "startTime": 116.45,
+      "endTime": 156.02,
+      "audioUrl": "/audio/lectures/economics/22/sec_formulas.mp3"
+    },
+    {
+      "id": "sec_revenue_breakeven",
+      "title": "3. Doanh thu, Lợi nhuận & Phân tích Điểm Hòa vốn",
+      "selector": "#sec-revenue-breakeven",
+      "en": "Section 3 examines financial results: Total Revenue equals Price times Quantity sold. Profit equals Total Revenue minus Total Cost. The Break-Even point occurs where Total Revenue precisely equals Total Cost, leaving neither profit nor loss. Operating above break-even establishes a margin of safety against unexpected demand downturns.",
+      "vi": "Mục 3 phân tích kết quả tài chính: Tổng doanh thu bằng giá bán nhân số lượng bán ra. Lợi nhuận bằng tổng doanh thu trừ đi tổng chi phí. Điểm hòa vốn là điểm mà tại đó tổng doanh thu vừa vặn bù đắp toàn bộ tổng chi phí, không có lãi cũng không chịu lỗ. Sản xuất và bán hàng trên mức hòa vốn tạo ra biên an toàn bảo vệ doanh nghiệp trước các sụt giảm bất ngờ của thị trường.",
+      "duration": 46.19,
+      "startTime": 156.02,
+      "endTime": 202.21,
+      "audioUrl": "/audio/lectures/economics/22/sec_revenue_breakeven.mp3"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "lectureId": "1943e7bc-cdee-45b1-93d5-830b704a4017",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "19. Trade Unions",
+  "totalDuration": 221.98,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_union_intro": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_industrial_action": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_bargaining_power": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_evaluation": {
+      "start": 5,
+      "end": 5
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 19: Công đoàn Lao động (Trade Unions)",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 19: Trade Unions. In this lesson, we explore how worker organisations use collective bargaining to negotiate higher wages and improved conditions, inspect the forms of industrial action they take, analyse factors determining their bargaining power, and evaluate their overall economic benefits and costs.",
+      "vi": "Chào mừng các bạn đến với Bài 19: Công đoàn Lao động. Trong bài này, chúng ta sẽ tìm hiểu cách các tổ chức người lao động sử dụng đàm phán tập thể để thương lượng nâng lương và cải thiện điều kiện làm việc, khảo sát các hình thức đấu tranh công nghiệp, phân tích các yếu tố quyết định sức mạnh thương lượng, và đánh giá toàn diện lợi ích cùng chi phí đối với nền kinh tế.",
+      "duration": 39.57,
+      "startTime": 0.0,
+      "endTime": 39.57,
+      "audioUrl": "/audio/lectures/economics/19/intro.mp3"
+    },
+    {
+      "id": "sec_union_intro",
+      "title": "1. Khái niệm & Vai trò Cốt lõi của Công đoàn",
+      "selector": "#sec-union-intro",
+      "en": "Section 1 defines a trade union as an organisation of employees formed to protect and promote their common interests. Through collective bargaining, a union represents all member workers in wage negotiations, securing safety standards, job security, and training opportunities more effectively than individual workers could alone.",
+      "vi": "Mục 1 định nghĩa công đoàn là tổ chức của người lao động được thành lập nhằm bảo vệ và thúc đẩy các quyền lợi chung. Thông qua thương lượng tập thể, công đoàn đại diện cho toàn thể đoàn viên trong các cuộc đàm phán tiền lương, bảo đảm tiêu chuẩn an toàn lao động, việc làm ổn định và cơ hội bồi dưỡng tay nghề hiệu quả hơn nhiều so với từng cá nhân riêng lẻ.",
+      "duration": 38.61,
+      "startTime": 39.57,
+      "endTime": 78.18,
+      "audioUrl": "/audio/lectures/economics/19/sec_union_intro.mp3"
+    },
+    {
+      "id": "card_union_types",
+      "title": "A. Bốn Loại hình Công đoàn Chính",
+      "selector": "#card-union-types",
+      "en": "Trade unions span four main categories: Craft unions organising workers with specific craft skills; Industrial unions grouping all workers in an entire industry; General unions enrolling workers across diverse skill levels and industries; and White-collar unions representing professional and administrative staff.",
+      "vi": "Công đoàn được chia thành bốn nhóm chính: Công đoàn thợ thủ công tập hợp lao động có cùng kỹ năng nghề chuyên biệt; Công đoàn ngành kết nạp toàn bộ công nhân trong một ngành công nghiệp; Công đoàn đại chúng mở rộng cho mọi lao động thuộc nhiều ngành nghề; và Công đoàn lao động trí óc đại diện cho giới nhân viên văn phòng và chuyên viên.",
+      "duration": 35.03,
+      "startTime": 78.18,
+      "endTime": 113.21,
+      "audioUrl": "/audio/lectures/economics/19/card_union_types.mp3"
+    },
+    {
+      "id": "sec_industrial_action",
+      "title": "2. Các Hình thức Đấu tranh Công nghiệp",
+      "selector": "#sec-industrial-action",
+      "en": "Section 2 reviews industrial action when negotiations stall: Strikes represent complete withdrawal of labour; Overtime bans refuse work beyond standard contracts; Work-to-rule obeys employment rules to the letter to slow operational pace; and Go-slow deliberately reduces worker output speeds.",
+      "vi": "Mục 2 điểm qua các hình thức đấu tranh công nghiệp khi đàm phán bế tắc: Đình công là việc ngừng việc hoàn toàn; Cấm làm thêm giờ là từ chối làm việc ngoài giờ chuẩn; Làm việc theo đúng quy chế là tuân thủ máy móc các nội quy để làm chậm tiến độ vận hành; và Lãnh công có chủ đích làm giảm tốc độ sản xuất của công nhân.",
+      "duration": 34.53,
+      "startTime": 113.21,
+      "endTime": 147.74,
+      "audioUrl": "/audio/lectures/economics/19/sec_industrial_action.mp3"
+    },
+    {
+      "id": "sec_bargaining_power",
+      "title": "3. Sức mạnh Đàm phán của Công đoàn",
+      "selector": "#sec-bargaining-power",
+      "en": "Section 3 evaluates union bargaining leverage. Union strength increases when: a high percentage of the workforce are members (closed shop); the demand for the final product and labour is price inelastic; the firm earns high monopoly profits; and the legal framework provides robust strike protections.",
+      "vi": "Mục 3 đánh giá quyền lực đàm phán của công đoàn. Sức mạnh của công đoàn gia tăng khi: tỷ lệ công nhân tham gia công đoàn rất cao; cầu đối với sản phẩm cuối cùng và lao động kém co giãn; doanh nghiệp đang thu được lợi nhuận độc quyền lớn; và hệ thống luật pháp bảo vệ quyền đình công vững chắc.",
+      "duration": 35.34,
+      "startTime": 147.74,
+      "endTime": 183.08,
+      "audioUrl": "/audio/lectures/economics/19/sec_bargaining_power.mp3"
+    },
+    {
+      "id": "sec_evaluation",
+      "title": "4. Đánh giá: Lợi ích và Chi phí của Công đoàn",
+      "selector": "#sec-evaluation",
+      "en": "Section 4 weighs trade union impacts: Unions can improve wages, bolster worker motivation, and facilitate clear communication with employers. However, excessive wage demands can spark cost-push inflation, reduce international competitiveness, and cause employer cutbacks leading to structural unemployment.",
+      "vi": "Mục 4 cân nhắc tác động hai mặt của công đoàn: Công đoàn có thể nâng cao tiền lương, tạo động lực làm việc và làm cầu nối đối thoại minh bạch với chủ sử dụng lao động. Tuy nhiên, đòi hỏi tăng lương quá mức có thể châm ngòi cho lạm phát chi phí đẩy, giảm sức cạnh tranh quốc tế và buộc doanh nghiệp phải sa thải bớt nhân sự, gây thất nghiệp cơ cấu.",
+      "duration": 38.9,
+      "startTime": 183.08,
+      "endTime": 221.98,
+      "audioUrl": "/audio/lectures/economics/19/sec_evaluation.mp3"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "lectureId": "07e42111-1e2c-4810-bce3-02d8df497c97",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "20. Firms: Size, Growth & Integration",
+  "totalDuration": 225.19,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_classification": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_firm_size": {
+      "start": 2,
+      "end": 3
+    },
+    "sec_integration": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_economies_scale": {
+      "start": 5,
+      "end": 5
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 20: Doanh nghiệp: Quy mô, Tăng trưởng & Sáp nhập",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 20: Firms: Size, Growth, and Integration. In this lesson, we classify firms by economic sector, examine the competitive advantages that allow small businesses to coexist alongside large multinationals, explore internal and external growth routes through mergers, and uncover internal and external economies and diseconomies of scale.",
+      "vi": "Chào mừng các bạn đến với Bài 20: Doanh nghiệp: Quy mô, Tăng trưởng và Sáp nhập. Trong bài này, chúng ta sẽ phân loại doanh nghiệp theo các khu vực kinh tế, khảo sát những lợi thế cạnh tranh giúp doanh nghiệp nhỏ cùng tồn tại song song với các tập đoàn đa quốc gia, tìm hiểu các con đường tăng trưởng nội sinh và sáp nhập, cùng các tính kinh tế và phi kinh tế theo quy mô.",
+      "duration": 43.0,
+      "startTime": 0.0,
+      "endTime": 43.0,
+      "audioUrl": "/audio/lectures/economics/20/intro.mp3"
+    },
+    {
+      "id": "sec_classification",
+      "title": "1. Phân loại Doanh nghiệp theo Ngành & Khu vực",
+      "selector": "#sec-classification",
+      "en": "Section 1 categorises firms: by economic stage into primary extraction, secondary manufacturing, and tertiary services; and by ownership structure into sole traders, partnerships, private and public limited companies, and state-owned public corporations.",
+      "vi": "Mục 1 phân loại doanh nghiệp: theo các giai đoạn kinh tế gồm khu vực sơ cấp khai thác, khu vực thứ cấp chế biến chế tạo và khu vực tam cấp dịch vụ; cũng như theo hình thức sở hữu gồm hộ kinh doanh cá thể, công ty hợp danh, công ty trách nhiệm hữu hạn tư nhân, công ty cổ phần đại chúng và tập đoàn nhà nước.",
+      "duration": 33.26,
+      "startTime": 43.0,
+      "endTime": 76.26,
+      "audioUrl": "/audio/lectures/economics/20/sec_classification.mp3"
+    },
+    {
+      "id": "sec_firm_size",
+      "title": "2. Quy mô Doanh nghiệp: Doanh nghiệp Nhỏ vs Lớn",
+      "selector": "#sec-firm-size",
+      "en": "Section 2 investigates why small firms survive despite large firm cost advantages: Small firms thrive in niche markets offering personalised customer care, flexible customized production, geographical convenience, and personal services where economies of scale are negligible.",
+      "vi": "Mục 2 tìm hiểu lý do các doanh nghiệp nhỏ vẫn tồn tại vững chắc trước lợi thế chi phí của các tập đoàn lớn: Doanh nghiệp nhỏ phát triển mạnh ở các thị trường ngách nhờ dịch vụ chăm sóc khách hàng tận tâm, khả năng sản xuất linh hoạt theo yêu cầu, thuận tiện về địa lý và cung cấp các dịch vụ cá nhân hóa nơi tính kinh tế theo quy mô không đáng kể.",
+      "duration": 34.55,
+      "startTime": 76.26,
+      "endTime": 110.81,
+      "audioUrl": "/audio/lectures/economics/20/sec_firm_size.mp3"
+    },
+    {
+      "id": "card_small_vs_large",
+      "title": "🏪 Doanh nghiệp Nhỏ vs 🏢 Doanh nghiệp Lớn",
+      "selector": "#card-small-vs-large",
+      "en": "Comparison reveals distinct traits: Small firms enjoy agile decision-making, direct staff motivation, and niche adaptability. Large firms command massive investment resources, global brand recognition, and lower unit production costs.",
+      "vi": "So sánh làm nổi bật các đặc trưng riêng biệt: Doanh nghiệp nhỏ có tốc độ ra quyết định linh hoạt, động lực gắn kết nhân viên trực tiếp và dễ thích nghi thị trường ngách. Doanh nghiệp lớn nắm giữ nguồn lực tài chính khổng lồ, danh tiếng thương hiệu toàn cầu và chi phí sản xuất trên từng đơn vị sản phẩm thấp hơn.",
+      "duration": 32.46,
+      "startTime": 110.81,
+      "endTime": 143.27,
+      "audioUrl": "/audio/lectures/economics/20/card_small_vs_large.mp3"
+    },
+    {
+      "id": "sec_integration",
+      "title": "3. Sáp nhập & Hợp nhất Doanh nghiệp (Integration)",
+      "selector": "#sec-integration",
+      "en": "Section 3 outlines external growth via integration: Horizontal integration combines firms in the same industry at the same stage of production; Vertical integration joins firms at consecutive stages either backward toward raw materials or forward toward consumers; Conglomerate integration unites completely unrelated industries to diversify business risk.",
+      "vi": "Mục 3 trình bày các hình thức tăng trưởng thông qua sáp nhập: Hợp nhất theo chiều ngang kết hợp các doanh nghiệp cùng ngành ở cùng một công đoạn sản xuất; Hợp nhất theo chiều dọc liên kết các khâu liên tiếp hoặc về phía sau để kiểm soát nguồn nguyên liệu hoặc về phía trước để tiếp cận người tiêu dùng; Hợp nhất tập đoàn kết hợp các ngành hoàn toàn độc lập nhằm đa dạng hóa rủi ro kinh doanh.",
+      "duration": 38.78,
+      "startTime": 143.27,
+      "endTime": 182.05,
+      "audioUrl": "/audio/lectures/economics/20/sec_integration.mp3"
+    },
+    {
+      "id": "sec_economies_scale",
+      "title": "4. Tính kinh tế & Phi kinh tế theo Quy mô",
+      "selector": "#sec-economies-scale",
+      "en": "Section 4 analyzes scale dynamics: Internal economies of scale reduce long-run average costs through purchasing discounts, technical machinery, financial credit terms, and managerial specialization. Beyond optimal capacity, diseconomies of scale emerge due to communication bottlenecks, bureaucratic delays, and worker alienation.",
+      "vi": "Mục 4 phân tích tính quy mô: Tính kinh tế theo quy mô nội bộ giúp hạ thấp chi phí bình quân dài hạn thông qua chiết khấu mua hàng số lượng lớn, máy móc kỹ thuật hiện đại, điều kiện vay vốn ưu đãi và chuyên môn hóa quản lý. Vượt quá quy mô tối ưu, tính phi kinh tế theo quy mô xuất hiện do tắc nghẽn thông tin liên lạc, bộ máy quan liêu chậm chạp và tinh thần làm việc sa sút của công nhân.",
+      "duration": 43.14,
+      "startTime": 182.05,
+      "endTime": 225.19,
+      "audioUrl": "/audio/lectures/economics/20/sec_economies_scale.mp3"
+    }
+  ]
+}

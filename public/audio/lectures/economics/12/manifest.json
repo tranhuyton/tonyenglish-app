@@ -1,0 +1,100 @@
+{
+  "lectureId": "38954a57-c9bc-4714-b53e-e404e78379cd",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "12. Price Elasticity of Supply",
+  "totalDuration": 214.99,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_pes_intro": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_elastic_inelastic": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_special_cases": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_determinants": {
+      "start": 4,
+      "end": 4
+    },
+    "sec_significance": {
+      "start": 5,
+      "end": 5
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 12: Độ co giãn của Cung theo Giá (PES)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 12: Price Elasticity of Supply, or PES. In this lesson, we define and calculate PES, distinguish elastic and inelastic supply curves, explore three special cases, evaluate factors that make supply responsive, and analyze its importance for producers and governments.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 12: Độ co giãn của Cung theo Giá (PES). Trong bài học này, chúng ta sẽ định nghĩa và tính toán PES, phân biệt cung co giãn và kém co giãn, khám phá ba trường hợp đặc biệt, đánh giá các yếu tố giúp tăng độ linh hoạt của cung, và phân tích tầm quan trọng của PES đối với doanh nghiệp và chính phủ.",
+      "duration": 44.44,
+      "startTime": 0.0,
+      "endTime": 44.44,
+      "audioUrl": "/audio/lectures/economics/12/intro.mp3"
+    },
+    {
+      "id": "sec_pes_intro",
+      "title": "1. Khái niệm & Công thức Tính PES (The PES Formula)",
+      "selector": "#sec-pes-intro",
+      "en": "Section 1 defines PES as the responsiveness of quantity supplied to a change in the price of the good. The formula is percentage change in quantity supplied divided by percentage change in price. Because price and supply are positively related, PES is always positive.",
+      "vi": "Mục 1 định nghĩa PES là thước đo mức độ phản ứng của lượng cung khi giá sản phẩm thay đổi. Công thức là phần trăm thay đổi lượng cung chia cho phần trăm thay đổi giá cả. Do giá và lượng cung tỷ lệ thuận, giá trị PES luôn là số dương.",
+      "duration": 32.8,
+      "startTime": 44.44,
+      "endTime": 77.24,
+      "audioUrl": "/audio/lectures/economics/12/sec_pes_intro.mp3"
+    },
+    {
+      "id": "sec_elastic_inelastic",
+      "title": "2. Cung Co giãn vs Cung Không co giãn (Elastic vs Inelastic Supply)",
+      "selector": "#sec-elastic-inelastic",
+      "en": "Section 2 contrasts elastic and inelastic supply. Supply is price-elastic (PES > 1) when producers can quickly and substantially increase production following a price rise. Supply is price-inelastic (PES < 1) when output cannot easily expand due to technical or resource constraints.",
+      "vi": "Mục 2 so sánh cung co giãn và kém co giãn. Cung co giãn (PES > 1) khi người sản xuất có thể nhanh chóng tăng mạnh sản lượng khi giá tăng. Cung kém co giãn (PES < 1) khi sản lượng khó có thể mở rộng do hạn chế về kỹ thuật hoặc khan hiếm nguồn lực đầu vào.",
+      "duration": 37.55,
+      "startTime": 77.24,
+      "endTime": 114.79,
+      "audioUrl": "/audio/lectures/economics/12/sec_elastic_inelastic.mp3"
+    },
+    {
+      "id": "sec_special_cases",
+      "title": "3. Ba Trường hợp Đặc biệt của PES",
+      "selector": "#sec-special-cases",
+      "en": "Section 3 examines three special cases: Perfectly Inelastic supply (PES = 0), a vertical supply curve like original artwork or stadium seating; Perfectly Elastic supply (PES = infinity), a horizontal line; and Unitary Elastic supply (PES = 1), any straight-line supply curve starting from the origin.",
+      "vi": "Mục 3 khảo sát ba trường hợp đặc biệt: Cung hoàn toàn không co giãn (PES = 0) là đường thẳng đứng như tác phẩm nghệ thuật độc bản hay số ghế sân vận động; Cung co giãn hoàn toàn (PES = vô cùng) là đường nằm ngang; và Cung co giãn đơn vị (PES = 1) là bất kỳ đường cung thẳng nào đi qua gốc tọa độ.",
+      "duration": 39.86,
+      "startTime": 114.79,
+      "endTime": 154.65,
+      "audioUrl": "/audio/lectures/economics/12/sec_special_cases.mp3"
+    },
+    {
+      "id": "sec_determinants",
+      "title": "4. Các Yếu tố Xác định Độ co giãn của Cung (Determinants of PES)",
+      "selector": "#sec-determinants",
+      "en": "Section 4 covers determinants of PES: spare productive capacity in factories, availability of inventory and stocks, the length of the production period, factor mobility, and time horizon.",
+      "vi": "Mục 4 bao gồm các yếu tố quyết định PES: công suất máy móc còn dư thừa, mức độ sẵn có của hàng tồn kho, chu kỳ thời gian sản xuất dài hay ngắn, độ linh hoạt của các yếu tố đầu vào và khoảng thời gian phản ứng.",
+      "duration": 24.64,
+      "startTime": 154.65,
+      "endTime": 179.29,
+      "audioUrl": "/audio/lectures/economics/12/sec_determinants.mp3"
+    },
+    {
+      "id": "sec_significance",
+      "title": "5. Tầm quan trọng của PES đối với Doanh nghiệp & Chính phủ",
+      "selector": "#sec-significance",
+      "en": "Section 5 highlights why PES matters. Highly elastic supply allows businesses to swiftly capture profit windfalls during price booms. For governments, understanding farm product inelasticity explains why agricultural prices and farmers' incomes fluctuate dramatically.",
+      "vi": "Mục 5 chỉ ra tầm quan trọng của PES. Cung có độ co giãn cao giúp doanh nghiệp nhanh chóng chớp lấy cơ hội siêu lợi nhuận khi giá thị trường tăng vọt. Đối với chính phủ, việc hiểu tính kém co giãn của nông sản giúp giải thích tại sao giá nông sản và thu nhập người nông dân thường biến động rất mạnh.",
+      "duration": 35.7,
+      "startTime": 179.29,
+      "endTime": 214.99,
+      "audioUrl": "/audio/lectures/economics/12/sec_significance.mp3"
+    }
+  ]
+}

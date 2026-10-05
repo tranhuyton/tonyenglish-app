@@ -149,6 +149,38 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69': '/audio/lectures/science/p4/manifest.json', // P4: Electricity and magnetism
   'a6077865-db01-4785-9ec7-e8b0f531fcdc': '/audio/lectures/science/p5/manifest.json', // P5: Nuclear physics
   'd11f8920-fe86-4cd4-ad9a-e8b669bc687b': '/audio/lectures/science/p6/manifest.json', // P6: Space physics
+
+  // =========================================================================
+  // CAMBRIDGE IGCSE ECONOMICS (0455) BILINGUAL AUDIO LECTURES
+  // =========================================================================
+  // --- TOPIC 1: THE BASIC ECONOMIC PROBLEM ---
+  '1fba7e8c-742f-4697-b93e-a0205fc7d825': '/audio/lectures/economics/1/manifest.json', // 1. The Basic Economic Problem
+  '34bbcc7c-6b51-40fd-9585-9eb3c37da582': '/audio/lectures/economics/2/manifest.json', // 2. The Factors of Production
+  '9b0e6a87-ed26-43bb-a20c-ffa636f9ef11': '/audio/lectures/economics/3/manifest.json', // 3. Opportunity Cost
+  '9d5f779b-5254-48ed-8284-3918eaacd579': '/audio/lectures/economics/4/manifest.json', // 4. Production Possibility Curve
+
+  // --- TOPIC 2: THE ALLOCATION OF RESOURCES ---
+  'd6e6ad94-1106-43ae-b37c-1b36832f03e6': '/audio/lectures/economics/5/manifest.json', // 5. Microeconomics and Macroeconomics
+  '71e51517-0174-49fc-9796-802abee0c5a5': '/audio/lectures/economics/6/manifest.json', // 6. The Role of Market in Allocating Resources
+  '06450a33-0477-4bd2-9d1b-4e424f8e973d': '/audio/lectures/economics/7/manifest.json', // 7. Demand
+  'd15b56e7-9b09-4120-829c-1955efd21602': '/audio/lectures/economics/8/manifest.json', // 8. Supply
+  '763cd322-6b7d-43b0-a18d-15da34137d9d': '/audio/lectures/economics/9/manifest.json', // 9. Price Determination
+  '16314014-7787-41dc-9ff5-47fd1d2c7409': '/audio/lectures/economics/10/manifest.json', // 10. Price Changes
+  '4a5f97fd-91d2-41f4-8cbb-b928f5aea5e9': '/audio/lectures/economics/11/manifest.json', // 11. Price Elasticity of Demand (PED)
+  '38954a57-c9bc-4714-b53e-e404e78379cd': '/audio/lectures/economics/12/manifest.json', // 12. Price Elasticity of Supply (PES)
+  '6f3173be-e12a-4a93-8f76-8cb09fb026fe': '/audio/lectures/economics/13/manifest.json', // 13. Market Economic System
+  '69df5ed2-ce91-4e2a-b818-0e2957483b12': '/audio/lectures/economics/14/manifest.json', // 14. Market Failure
+  '1af33337-f02c-45ff-a8d0-040864272c98': '/audio/lectures/economics/15/manifest.json', // 15. Mixed Economic System
+
+  // --- TOPIC 3: MICROECONOMIC DECISION MAKERS ---
+  '3adca75c-b852-48be-9cbf-5074ae12e430': '/audio/lectures/economics/16/manifest.json', // 16. Money and Banking
+  '123d8a13-d619-45cd-b363-702e9039627a': '/audio/lectures/economics/17/manifest.json', // 17. Households: Income, Saving, Borrowing & Spending
+  '95fb66bf-66f0-4bbd-a7e4-418f191f487a': '/audio/lectures/economics/18/manifest.json', // 18. Workers: Wage Determination, Specialisation & Trade Unions
+  '1943e7bc-cdee-45b1-93d5-830b704a4017': '/audio/lectures/economics/19/manifest.json', // 19. Trade Unions
+  '07e42111-1e2c-4810-bce3-02d8df497c97': '/audio/lectures/economics/20/manifest.json', // 20. Firms: Size, Growth & Integration
+  '604d1490-caed-47aa-a562-a6a902790a30': '/audio/lectures/economics/21/manifest.json', // 21. Firms and Production: Costs, Revenue & Objectives
+  'd2019792-c956-44e2-98ed-c247617a9162': '/audio/lectures/economics/22/manifest.json', // 22. Market Structure: Competitive Markets
+  '4a814791-86ae-4aab-b9e2-a94b2565c55c': '/audio/lectures/economics/23/manifest.json', // 23. Market Structure: Monopoly
 };
 
 type LectureVideoItem = { title: string; videoId: string };

@@ -1,0 +1,66 @@
+{
+  "lectureId": "6f3173be-e12a-4a93-8f76-8cb09fb026fe",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "13. Market Economic System",
+  "totalDuration": 154.51,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_market_system": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_merits_demerits": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 13: Hệ thống Kinh tế Thị trường",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 13: The Market Economic System. In this lesson, we study the core pillars of a free market economy: private property rights, profit incentives, consumer sovereignty, and the price mechanism. We also evaluate the significant merits of market efficiency alongside critical demerits like monopoly exploitation and social inequality.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 13: Hệ thống Kinh tế Thị trường. Trong bài học này, chúng ta sẽ tìm hiểu các trụ cột cốt lõi của nền kinh tế thị trường tự do: quyền sở hữu tư nhân, động lực lợi nhuận, chủ quyền của người tiêu dùng và cơ chế giá. Chúng ta cũng sẽ đánh giá những ưu điểm lớn về hiệu quả kinh tế cùng với những nhược điểm nghiêm trọng như độc quyền và bất bình đẳng xã hội.",
+      "duration": 49.82,
+      "startTime": 0.0,
+      "endTime": 49.82,
+      "audioUrl": "/audio/lectures/economics/13/intro.mp3"
+    },
+    {
+      "id": "sec_market_system",
+      "title": "1. Bản chất & Đặc trưng của Hệ thống Kinh tế Thị trường",
+      "selector": "#sec-market-system",
+      "en": "Section 1 defines the market economy, where resource allocation decisions are determined solely by market supply and demand with zero state intervention. Key features include private ownership of land and capital, the pursuit of profit, consumer sovereignty deciding what gets made, and decentralized price rationing.",
+      "vi": "Mục 1 định nghĩa nền kinh tế thị trường, nơi các quyết định phân bổ nguồn lực hoàn toàn do cung và cầu quyết định mà không có sự can thiệp của nhà nước. Các đặc trưng chính gồm quyền sở hữu tư nhân về đất đai và tư bản, mục tiêu theo đuổi lợi nhuận, quyền tối cao của người tiêu dùng trong việc định đoạt sản phẩm, và cơ chế giá phân bổ phi tập trung.",
+      "duration": 38.2,
+      "startTime": 49.82,
+      "endTime": 88.02,
+      "audioUrl": "/audio/lectures/economics/13/sec_market_system.mp3"
+    },
+    {
+      "id": "card_features",
+      "title": "🏛️ 4 Trụ cột Cốt lõi: Sở hữu Tư nhân, Lợi nhuận, Quyền Người tiêu dùng & Cơ chế Giá",
+      "selector": "#card-features",
+      "en": "Private property motivates hard work and investment; profit motive drives innovation; consumer sovereignty ensures firms cater strictly to buyer preferences; and the price mechanism allocates scarce resources efficiently.",
+      "vi": "Quyền sở hữu tư nhân thúc đẩy làm việc chăm chỉ và đầu tư; động lực lợi nhuận kích thích đổi mới sáng tạo; quyền tối cao của người tiêu dùng buộc doanh nghiệp phải phục vụ đúng nhu cầu; và cơ chế giá tự động phân bổ nguồn lực khan hiếm hiệu quả.",
+      "duration": 26.27,
+      "startTime": 88.02,
+      "endTime": 114.29,
+      "audioUrl": "/audio/lectures/economics/13/card_features.mp3"
+    },
+    {
+      "id": "sec_merits_demerits",
+      "title": "2. Đánh giá Ưu điểm & Nhược điểm (Merits & Demerits)",
+      "selector": "#sec-merits-demerits",
+      "en": "Section 2 evaluates the market economy. Merits include productive efficiency, intense innovation, consumer choice, and freedom from bureaucratic red tape. Demerits include underprovision of merit goods like schooling, missing public goods like street lighting, negative pollution externalities, and severe income inequality.",
+      "vi": "Mục 2 đánh giá nền kinh tế thị trường. Ưu điểm bao gồm hiệu quả sản xuất cao, sáng tạo liên tục, tự do lựa chọn và không bị thủ tục hành chính cồng kềnh cản trở. Nhược điểm gồm sự thiếu hụt hàng hóa công cộng như đèn đường, cung ứng thiếu hàng hóa khuyến dụng như giáo dục, ô nhiễm môi trường và khoảng cách giàu nghèo gia tăng.",
+      "duration": 40.22,
+      "startTime": 114.29,
+      "endTime": 154.51,
+      "audioUrl": "/audio/lectures/economics/13/sec_merits_demerits.mp3"
+    }
+  ]
+}

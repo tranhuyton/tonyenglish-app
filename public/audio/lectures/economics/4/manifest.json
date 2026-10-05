@@ -1,0 +1,118 @@
+{
+  "lectureId": "9d5f779b-5254-48ed-8284-3918eaacd579",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "4. Production Possibility Curve",
+  "totalDuration": 307.38,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_ppc_intro": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_movements": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_shape": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_shifts": {
+      "start": 6,
+      "end": 7
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4: Đường Giới hạn Khả năng Sản xuất (PPC)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 4: The Production Possibility Curve, or PPC. In this lesson, we explore how the PPC graphically models resource scarcity, opportunity cost, and productive efficiency. We analyze movements along the curve, contrast bowed-out versus straight-line curves, and examine the causes of outward and inward shifts representing economic growth and decline.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 4: Đường Giới hạn Khả năng Sản xuất (PPC). Trong bài học này, chúng ta sẽ tìm hiểu cách đồ thị PPC mô hình hóa sự khan hiếm nguồn lực, chi phí cơ hội và hiệu quả sản xuất. Chúng ta sẽ phân tích sự dịch chuyển dọc theo đường cong, so sánh đường cong lồi và đường thẳng, đồng thời khảo sát các nguyên nhân làm dịch chuyển đường PPC ra ngoài hoặc vào trong.",
+      "duration": 51.59,
+      "startTime": 0.0,
+      "endTime": 51.59,
+      "audioUrl": "/audio/lectures/economics/4/intro.mp3"
+    },
+    {
+      "id": "sec_ppc_intro",
+      "title": "1. Khái niệm Đường Giới hạn Khả năng Sản xuất (PPC)",
+      "selector": "#sec-ppc-intro",
+      "en": "Section 1 defines the PPC as the boundary illustrating the maximum combinations of two goods an economy can produce when all resources are fully and efficiently employed. It maps the frontier of national productive capacity at a given point in time.",
+      "vi": "Mục 1 định nghĩa đường PPC là đường ranh giới thể hiện các tổ hợp sản lượng tối đa của hai loại hàng hóa mà một nền kinh tế có thể sản xuất được khi sử dụng toàn bộ nguồn lực một cách đầy đủ và hiệu quả nhất. Nó xác định giới hạn năng lực sản xuất của quốc gia tại một thời điểm nhất định.",
+      "duration": 31.1,
+      "startTime": 51.59,
+      "endTime": 82.69,
+      "audioUrl": "/audio/lectures/economics/4/sec_ppc_intro.mp3"
+    },
+    {
+      "id": "card_ppc_points",
+      "title": "📈 Sơ đồ Tương tác PPC: Điểm Dưới, Trên và Ngoài Đường Cong",
+      "selector": "#card-ppc-points",
+      "en": "Our interactive diagram demonstrates three crucial positions: Point A inside represents inefficiency and unemployed resources, where output can grow with zero opportunity cost; Point B on the boundary shows productive efficiency and full employment; and Point C beyond the curve is unattainable in the short run without economic growth.",
+      "vi": "Sơ đồ tương tác minh họa ba vị trí trọng yếu: Điểm A nằm bên trong thể hiện sự kém hiệu quả và nguồn lực nhàn rỗi, nơi sản lượng có thể tăng mà không tốn chi phí cơ hội; Điểm B nằm trên đường cong thể hiện hiệu quả sản xuất và toàn dụng nguồn lực; còn Điểm C nằm bên ngoài là bất khả thi trong ngắn hạn nếu không có tăng trưởng kinh tế.",
+      "duration": 37.19,
+      "startTime": 82.69,
+      "endTime": 119.88,
+      "audioUrl": "/audio/lectures/economics/4/card_ppc_points.mp3"
+    },
+    {
+      "id": "sec_movements",
+      "title": "2. Di chuyển Dọc theo Đường PPC (Movements along a PPC)",
+      "selector": "#sec-movements",
+      "en": "Section 2 investigates movements along the PPC. Moving along the curve reflects reallocating scarce resources from one industry to another. Gaining more consumer goods requires sacrificing some capital goods, illustrating the principle of opportunity cost under full employment.",
+      "vi": "Mục 2 khảo sát sự di chuyển dọc theo đường PPC. Việc di chuyển trên đường cong phản ánh việc tái phân bổ nguồn lực khan hiếm từ ngành này sang ngành khác. Để có thêm hàng tiêu dùng, bắt buộc phải hy sinh một lượng tư liệu sản xuất nhất định, minh chứng cho nguyên lý chi phí cơ hội trong điều kiện toàn dụng nguồn lực.",
+      "duration": 35.9,
+      "startTime": 119.88,
+      "endTime": 155.78,
+      "audioUrl": "/audio/lectures/economics/4/sec_movements.mp3"
+    },
+    {
+      "id": "card_movements",
+      "title": "🔄 Tái phân bổ Nguồn lực & Hai Điều kiện Vận hành trên PPC",
+      "selector": "#card-movements",
+      "en": "An economy operates strictly on its PPC when two conditions are fulfilled: full employment of all available factors, leaving zero involuntary unemployment; and productive efficiency, ensuring zero waste in production techniques.",
+      "vi": "Nền kinh tế chỉ vận hành chuẩn xác trên đường PPC khi thỏa mãn hai điều kiện: toàn dụng mọi nguồn lực sẵn có, không có lao động hay máy móc bị thất nghiệp ngoài ý muốn; và đạt hiệu quả sản xuất cao nhất, đảm bảo quy trình không bị lãng phí.",
+      "duration": 27.45,
+      "startTime": 155.78,
+      "endTime": 183.23,
+      "audioUrl": "/audio/lectures/economics/4/card_movements.mp3"
+    },
+    {
+      "id": "sec_shape",
+      "title": "3. Hình dạng Đường PPC: Chi phí Cơ hội Tăng dần vs Không đổi",
+      "selector": "#sec-shape",
+      "en": "Section 3 analyzes the shape of the PPC. A bowed-out curve, concave to the origin, reflects increasing opportunity cost because economic factors are imperfectly substitutable between industries. A straight-line PPC indicates constant opportunity cost, meaning resources are perfectly adaptable and equally suited to producing both goods.",
+      "vi": "Mục 3 phân tích hình dạng đường PPC. Đường cong hình cánh cung lồi ra ngoài phản ánh chi phí cơ hội tăng dần do các yếu tố sản xuất không thể thay thế hoàn hảo cho nhau giữa các ngành. Đường PPC dạng đường thẳng thể hiện chi phí cơ hội không đổi, hàm ý các nguồn lực có thể thích nghi hoàn hảo và phù hợp như nhau để sản xuất cả hai loại hàng.",
+      "duration": 42.74,
+      "startTime": 183.23,
+      "endTime": 225.97,
+      "audioUrl": "/audio/lectures/economics/4/sec_shape.mp3"
+    },
+    {
+      "id": "sec_shifts",
+      "title": "4. Dịch chuyển Đường PPC: Tăng trưởng Kinh tế & Suy giảm",
+      "selector": "#sec-shifts",
+      "en": "Section 4 explains shifts of the entire PPC. An outward shift signifies potential economic growth, driven by new resource discoveries, skilled immigration, better education, and automated technology. An inward shift indicates depleted productive capacity, caused by natural disasters, armed conflicts, or severe brain drain.",
+      "vi": "Mục 4 giải thích sự dịch chuyển của toàn bộ đường PPC. Dịch chuyển ra ngoài biểu thị tăng trưởng kinh tế tiềm năng nhờ phát hiện tài nguyên mới, lao động nhập cư tay nghề cao, giáo dục cải thiện và công nghệ tự động hóa. Dịch chuyển vào trong thể hiện năng lực sản xuất bị suy giảm do thiên tai, chiến tranh tàn phá hoặc tình trạng chảy máu chất xám nghiêm trọng.",
+      "duration": 42.54,
+      "startTime": 225.97,
+      "endTime": 268.51,
+      "audioUrl": "/audio/lectures/economics/4/sec_shifts.mp3"
+    },
+    {
+      "id": "card_shifts_comparison",
+      "title": "🚀 Phân biệt Tăng trưởng Thực tế (Actual) vs Tăng trưởng Tiềm năng (Potential)",
+      "selector": "#card-shifts-comparison",
+      "en": "In exams, carefully distinguish actual growth from potential growth. Actual growth is moving from an internal point of unemployment towards the curve, putting idle factories to work. Potential growth is the outward expansion of the boundary itself, increasing the nation's maximum productive ceiling.",
+      "vi": "Khi làm bài thi, cần phân biệt cẩn thận giữa tăng trưởng thực tế và tăng trưởng tiềm năng. Tăng trưởng thực tế là sự di chuyển từ một điểm thất nghiệp bên trong tiến dần ra đường biên, đưa các nhà xưởng nhàn rỗi vào vận hành. Tăng trưởng tiềm năng là sự mở rộng của chính đường biên ra phía ngoài, nâng cao mức trần năng lực sản xuất tối đa của cả quốc gia.",
+      "duration": 38.87,
+      "startTime": 268.51,
+      "endTime": 307.38,
+      "audioUrl": "/audio/lectures/economics/4/card_shifts_comparison.mp3"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "lectureId": "71e51517-0174-49fc-9796-802abee0c5a5",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "6. The Role of Market in Allocating Resources",
+  "totalDuration": 340.32,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_market_work": {
+      "start": 1,
+      "end": 3
+    },
+    "sec_allocation_decisions": {
+      "start": 4,
+      "end": 5
+    },
+    "sec_price_mechanism": {
+      "start": 6,
+      "end": 8
+    },
+    "sec_economic_systems": {
+      "start": 9,
+      "end": 10
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6: Vai trò của Thị trường trong Phân bổ Nguồn lực",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 6: The Role of the Market in Allocating Resources. In this lesson, we explore how markets coordinate buyers and sellers, how the price mechanism signals shortages and surpluses, and how different economic systems—planned, mixed, and free market—resolve the three core allocation questions.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 6: Vai trò của Thị trường trong Phân bổ Nguồn lực. Trong bài học này, chúng ta sẽ khám phá cách thị trường kết nối người mua và người bán, cách cơ chế giá phát tín hiệu về tình trạng dư thừa và khan hiếm, và cách các hệ thống kinh tế khác nhau—kế hoạch hóa, hỗn hợp và thị trường tự do—giải quyết ba câu hỏi phân bổ nguồn lực.",
+      "duration": 44.82,
+      "startTime": 0.0,
+      "endTime": 44.82,
+      "audioUrl": "/audio/lectures/economics/6/intro.mp3"
+    },
+    {
+      "id": "sec_market_work",
+      "title": "1. Khái niệm Thị trường & Cách thức Vận hành",
+      "selector": "#sec-market-work",
+      "en": "Section 1 defines a market as any arrangement bringing buyers and sellers together to agree on an exchange of goods or services. Markets operate across physical retail stores, 24/7 digital e-commerce platforms, and factor markets for labour and capital.",
+      "vi": "Mục 1 định nghĩa thị trường là bất kỳ cơ chế nào kết nối người mua và người bán để thống nhất việc trao đổi hàng hóa hoặc dịch vụ. Thị trường hoạt động đa dạng qua các cửa hàng bán lẻ truyền thống, các sàn thương mại điện tử 24/7 và thị trường yếu tố sản xuất cho lao động và vốn.",
+      "duration": 32.54,
+      "startTime": 44.82,
+      "endTime": 77.36,
+      "audioUrl": "/audio/lectures/economics/6/sec_market_work.mp3"
+    },
+    {
+      "id": "card_market_types",
+      "title": "🏪 Phân loại: Thị trường Vật lý, Trực tuyến & Thị trường Yếu tố",
+      "selector": "#card-market-types",
+      "en": "Physical markets involve face-to-face transactions in retail shops; online markets connect global users electronically; and factor markets trade productive inputs like raw materials, commercial loans, and skilled labour.",
+      "vi": "Thị trường vật lý bao gồm các giao dịch trực tiếp tại cửa hàng; thị trường trực tuyến kết nối người dùng toàn cầu qua mạng internet; còn thị trường yếu tố sản xuất là nơi giao dịch các nguồn lực đầu vào như nguyên vật liệu, vốn vay thương mại và lao động tay nghề cao.",
+      "duration": 27.9,
+      "startTime": 77.36,
+      "endTime": 105.26,
+      "audioUrl": "/audio/lectures/economics/6/card_market_types.mp3"
+    },
+    {
+      "id": "card_participants",
+      "title": "⚖️ Vai trò của Người mua (Demand) và Người bán (Supply)",
+      "selector": "#card-participants",
+      "en": "Buyers represent market demand seeking to maximize utility within their income constraints. Sellers represent market supply aiming to maximize profits where total revenues exceed total costs.",
+      "vi": "Người mua đại diện cho cầu thị trường với mục tiêu tối đa hóa mức độ thỏa mãn trong giới hạn thu nhập. Người bán đại diện cho cung thị trường với mục tiêu tối đa hóa lợi nhuận khi tổng doanh thu vượt trên tổng chi phí.",
+      "duration": 24.93,
+      "startTime": 105.26,
+      "endTime": 130.19,
+      "audioUrl": "/audio/lectures/economics/6/card_participants.mp3"
+    },
+    {
+      "id": "sec_allocation_decisions",
+      "title": "2. Ba Quyết định Phân bổ Nguồn lực Cốt lõi",
+      "selector": "#sec-allocation-decisions",
+      "en": "Section 2 revisits the three fundamental questions. In resolving how to produce, economies choose between capital-intensive production relying on machinery and automation, and labour-intensive production relying on manual human effort.",
+      "vi": "Mục 2 xem xét lại ba câu hỏi phân bổ căn bản. Khi giải quyết câu hỏi sản xuất như thế nào, nền kinh tế lựa chọn giữa sản xuất thâm dụng vốn dựa vào máy móc, tự động hóa; và sản xuất thâm dụng lao động dựa vào bàn tay con người.",
+      "duration": 28.77,
+      "startTime": 130.19,
+      "endTime": 158.96,
+      "audioUrl": "/audio/lectures/economics/6/sec_allocation_decisions.mp3"
+    },
+    {
+      "id": "card_how_to_produce",
+      "title": "🚜 Thâm dụng Vốn vs 👷‍♂️ Thâm dụng Lao động",
+      "selector": "#card-how-to-produce",
+      "en": "Capital-intensive production uses a high proportion of advanced machinery and robotics, offering high consistency and lower long-run unit costs. Labour-intensive production uses predominantly manual workers, providing flexibility and customization.",
+      "vi": "Sản xuất thâm dụng vốn sử dụng tỷ trọng lớn máy móc hiện đại và robot, mang lại tính đồng bộ cao và chi phí đơn vị thấp trong dài hạn. Sản xuất thâm dụng lao động sử dụng chủ yếu công nhân thủ công, đem lại sự linh hoạt và khả năng cá nhân hóa sản phẩm.",
+      "duration": 31.07,
+      "startTime": 158.96,
+      "endTime": 190.03,
+      "audioUrl": "/audio/lectures/economics/6/card_how_to_produce.mp3"
+    },
+    {
+      "id": "sec_price_mechanism",
+      "title": "3. Cơ chế Giá và Phân bổ Nguồn lực",
+      "selector": "#sec-price-mechanism",
+      "en": "Section 3 examines the price mechanism—the Adam Smith 'invisible hand'. Prices guide resource allocation through three core functions: the signalling function, the incentive function, and the rationing function.",
+      "vi": "Mục 3 phân tích cơ chế giá—được ví như 'bàn tay vô hình' của Adam Smith. Giá cả định hướng việc phân bổ nguồn lực qua ba chức năng cốt lõi: chức năng phát tín hiệu, chức năng khuyến khích và chức năng phân phối hạn ngạch.",
+      "duration": 26.99,
+      "startTime": 190.03,
+      "endTime": 217.02,
+      "audioUrl": "/audio/lectures/economics/6/sec_price_mechanism.mp3"
+    },
+    {
+      "id": "card_price_functions",
+      "title": "🚦 3 Chức năng của Giá: Phát tín hiệu, Khuyến khích & Phân phối",
+      "selector": "#card-price-functions",
+      "en": "Prices perform three essential jobs: Prices signal changing consumer tastes; price increases incentivize producers to supply more output to earn higher profits; and high prices ration scarce goods to consumers willing and able to pay.",
+      "vi": "Giá cả đảm nhận ba nhiệm vụ thiết yếu: Giá phát tín hiệu về thị hiếu tiêu dùng thay đổi; giá tăng khuyến khích nhà sản xuất cung ứng nhiều hàng hơn để tìm kiếm lợi nhuận; và giá cao sẽ phân phối hạn ngạch lượng hàng khan hiếm cho những người có khả năng và sẵn sàng chi trả.",
+      "duration": 28.55,
+      "startTime": 217.02,
+      "endTime": 245.57,
+      "audioUrl": "/audio/lectures/economics/6/card_price_functions.mp3"
+    },
+    {
+      "id": "card_price_in_action",
+      "title": "🔍 Cơ chế Giá trong Thực tế: Phân tích Dịch chuyển Cung Cầu",
+      "selector": "#card-price-in-action",
+      "en": "When consumer demand surges, higher prices signal profitability, inducing firms to reallocate land, labour, and capital into that expanding industry until market balance is restored.",
+      "vi": "Khi nhu cầu tiêu dùng tăng đột biến, mức giá cao hơn sẽ phát tín hiệu về cơ hội sinh lời, thu hút các doanh nghiệp tái phân bổ đất đai, lao động và vốn vào ngành đang mở rộng đó cho đến khi thiết lập trạng thái cân bằng mới.",
+      "duration": 23.73,
+      "startTime": 245.57,
+      "endTime": 269.3,
+      "audioUrl": "/audio/lectures/economics/6/card_price_in_action.mp3"
+    },
+    {
+      "id": "sec_economic_systems",
+      "title": "4. Quang phổ các Hệ thống Kinh tế",
+      "selector": "#sec-economic-systems",
+      "en": "Section 4 surveys the economic systems spectrum. In a planned economy, the state makes all allocation decisions. In a free market, private enterprise and price mechanism govern entirely. In a mixed economy, market forces and government intervention work together.",
+      "vi": "Mục 4 khảo sát quang phổ các hệ thống kinh tế. Trong nền kinh tế chỉ huy, nhà nước quyết định mọi việc phân bổ. Trong nền kinh tế thị trường tự do, doanh nghiệp tư nhân và cơ chế giá quyết định hoàn toàn. Trong nền kinh tế hỗn hợp, lực lượng thị trường và sự can thiệp của chính phủ cùng song hành.",
+      "duration": 37.62,
+      "startTime": 269.3,
+      "endTime": 306.92,
+      "audioUrl": "/audio/lectures/economics/6/sec_economic_systems.mp3"
+    },
+    {
+      "id": "card_economic_spectrum",
+      "title": "⚖️ So sánh Kinh tế Chỉ huy, Hỗn hợp & Thị trường Tự do",
+      "selector": "#card-economic-spectrum",
+      "en": "Planned economies eliminate wasteful competition but suffer shortages and inefficiency. Free markets maximize dynamism and choice but cause inequality and ignore externalities. Mixed economies combine private efficiency with public protection.",
+      "vi": "Kinh tế chỉ huy loại bỏ cạnh tranh lãng phí nhưng dễ rơi vào tình trạng thiếu hụt hàng hóa và trì trệ. Kinh tế thị trường tự do tối đa hóa sự năng động và đa dạng nhưng gây bất bình đẳng và bỏ qua ngoại ứng. Kinh tế hỗn hợp kết hợp sự hiệu quả của tư nhân với sự bảo trợ của nhà nước.",
+      "duration": 33.4,
+      "startTime": 306.92,
+      "endTime": 340.32,
+      "audioUrl": "/audio/lectures/economics/6/card_economic_spectrum.mp3"
+    }
+  ]
+}

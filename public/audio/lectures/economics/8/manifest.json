@@ -1,0 +1,118 @@
+{
+  "lectureId": "d15b56e7-9b09-4120-829c-1955efd21602",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "8. Supply",
+  "totalDuration": 209.96,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_supply_intro": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_movements": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_shifts": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_determinants": {
+      "start": 6,
+      "end": 7
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 8: Cung (Supply)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 8: Supply. In this lesson, we explore how firms respond to market prices according to the law of supply, distinguish movements along the supply curve from whole-curve shifts, and examine the critical non-price determinants influencing production.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 8: Cung (Supply). Trong bài học này, chúng ta sẽ tìm hiểu cách các doanh nghiệp phản ứng trước giá thị trường theo quy luật cung, phân biệt sự di chuyển dọc theo đường cung với sự dịch chuyển của toàn bộ đường cung, và khảo sát các yếu tố phi giá quan trọng chi phối sản xuất.",
+      "duration": 37.58,
+      "startTime": 0.0,
+      "endTime": 37.58,
+      "audioUrl": "/audio/lectures/economics/8/intro.mp3"
+    },
+    {
+      "id": "sec_supply_intro",
+      "title": "1. Khái niệm Cung & Quy luật Cung (The Law of Supply)",
+      "selector": "#sec-supply-intro",
+      "en": "Section 1 defines supply as the quantity of a good or service that producers are willing and able to offer for sale at various prices over a given period. The Law of Supply states that as price rises, quantity supplied increases, creating an upward-sloping supply curve.",
+      "vi": "Mục 1 định nghĩa cung là lượng hàng hóa hoặc dịch vụ mà người sản xuất sẵn sàng và có khả năng bán ở các mức giá khác nhau trong một thời kỳ nhất định. Quy luật Cung chỉ ra rằng khi giá tăng thì lượng cung tăng, tạo nên đường cung dốc lên.",
+      "duration": 29.68,
+      "startTime": 37.58,
+      "endTime": 67.26,
+      "audioUrl": "/audio/lectures/economics/8/sec_supply_intro.mp3"
+    },
+    {
+      "id": "card_law_of_supply",
+      "title": "⚖️ Quy luật Cung & Cung Cá nhân vs Cung Thị trường",
+      "selector": "#card-law-of-supply",
+      "en": "The positive relationship exists because higher prices offer greater profit margins, incentivizing existing producers to expand output and attracting new firms into the industry.",
+      "vi": "Mối quan hệ tỷ lệ thuận tồn tại vì mức giá cao hơn mang lại biên lợi nhuận lớn hơn, khuyến khích các nhà sản xuất hiện tại mở rộng quy mô và thu hút các doanh nghiệp mới gia nhập ngành.",
+      "duration": 20.46,
+      "startTime": 67.26,
+      "endTime": 87.72,
+      "audioUrl": "/audio/lectures/economics/8/card_law_of_supply.mp3"
+    },
+    {
+      "id": "sec_movements",
+      "title": "2. Di chuyển Dọc theo Đường Cung (Movements along a Supply Curve)",
+      "selector": "#sec-movements",
+      "en": "Section 2 investigates movements along the curve, caused exclusively by changes in the market price of the good. A price rise leads to an extension in supply; a price drop causes a contraction in supply.",
+      "vi": "Mục 2 khảo sát sự di chuyển dọc theo đường cung, chỉ do sự thay đổi mức giá thị trường của chính sản phẩm đó. Giá tăng dẫn đến sự mở rộng cung; giá giảm dẫn đến sự co hẹp cung.",
+      "duration": 24.64,
+      "startTime": 87.72,
+      "endTime": 112.36,
+      "audioUrl": "/audio/lectures/economics/8/sec_movements.mp3"
+    },
+    {
+      "id": "card_movements",
+      "title": "⬆️ Mở rộng Cung (Extension) vs ⬇️ Co hẹp Cung (Contraction)",
+      "selector": "#card-movements",
+      "en": "Always distinguish a change in quantity supplied (movement along the curve due to price) from a change in supply (a shift of the curve due to costs or technology).",
+      "vi": "Hãy luôn phân biệt sự thay đổi lượng cung (di chuyển dọc theo đường cung do giá) với sự thay đổi của cung (dịch chuyển cả đường cung do chi phí hoặc công nghệ).",
+      "duration": 19.02,
+      "startTime": 112.36,
+      "endTime": 131.38,
+      "audioUrl": "/audio/lectures/economics/8/card_movements.mp3"
+    },
+    {
+      "id": "sec_shifts",
+      "title": "3. Dịch chuyển Toàn bộ Đường Cung (Shifts in the Supply Curve)",
+      "selector": "#sec-shifts",
+      "en": "Section 3 explains shifts in supply. An outward shift to the right means producers offer more output at every price level. An inward shift to the left means producers supply less at every price.",
+      "vi": "Mục 3 giải thích sự dịch chuyển của đường cung. Dịch chuyển sang phải nghĩa là nhà sản xuất cung ứng nhiều hàng hơn ở mọi mức giá. Dịch chuyển sang trái nghĩa là nhà sản xuất cung ứng ít hơn ở mọi mức giá.",
+      "duration": 25.84,
+      "startTime": 131.38,
+      "endTime": 157.22,
+      "audioUrl": "/audio/lectures/economics/8/sec_shifts.mp3"
+    },
+    {
+      "id": "sec_determinants",
+      "title": "4. Các Yếu tố Phi giá Xác định Cung (Non-Price Determinants)",
+      "selector": "#sec-determinants",
+      "en": "Section 4 covers non-price determinants: costs of production (wages, raw materials), indirect taxes and government subsidies, technological advances, weather and climate shocks, and prices of substitute products in production.",
+      "vi": "Mục 4 bao gồm các yếu tố phi giá: chi phí sản xuất (tiền lương, giá nguyên liệu), thuế gián thu và trợ cấp của chính phủ, tiến bộ công nghệ, điều kiện thời tiết khí hậu và giá của các hàng hóa thay thế trong sản xuất.",
+      "duration": 27.4,
+      "startTime": 157.22,
+      "endTime": 184.62,
+      "audioUrl": "/audio/lectures/economics/8/sec_determinants.mp3"
+    },
+    {
+      "id": "card_determinants",
+      "title": "🧠 5 Yếu tố Dịch chuyển Cung: Chi phí, Thuế, Trợ cấp, Công nghệ...",
+      "selector": "#card-determinants",
+      "en": "Lower production costs, new automation technology, and state subsidies shift the supply curve to the right. Higher business taxes, expensive raw materials, and poor harvest weather shift supply to the left.",
+      "vi": "Chi phí sản xuất giảm, công nghệ tự động hóa mới và trợ cấp nhà nước làm đường cung dịch sang phải. Thuế doanh nghiệp tăng, nguyên liệu đắt đỏ và thời tiết mất mùa làm đường cung dịch sang trái.",
+      "duration": 25.34,
+      "startTime": 184.62,
+      "endTime": 209.96,
+      "audioUrl": "/audio/lectures/economics/8/card_determinants.mp3"
+    }
+  ]
+}

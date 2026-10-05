@@ -1,0 +1,121 @@
+{
+  "lectureId": "d6e6ad94-1106-43ae-b37c-1b36832f03e6",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "5. Microeconomics and Macroeconomics",
+  "totalDuration": 272.23,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_micro_macro": {
+      "start": 1,
+      "end": 4
+    },
+    "sec_decision_makers": {
+      "start": 5,
+      "end": 8
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5: Kinh tế Vi mô và Kinh tế Vĩ mô",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 5: Microeconomics and Macroeconomics. In this foundational lesson for Topic 2, we distinguish between the study of individual decision-makers and markets in microeconomics, and the aggregate economy in macroeconomics. We also examine the primary aims of households, firms, and the government.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Bài 5: Kinh tế Vi mô và Kinh tế Vĩ mô. Trong bài học nền tảng của Chủ đề 2 này, chúng ta sẽ phân biệt giữa việc nghiên cứu các chủ thể và thị trường riêng lẻ trong kinh tế vi mô, với việc phân tích toàn bộ nền kinh tế tổng thể trong kinh tế vĩ mô. Chúng ta cũng sẽ tìm hiểu mục tiêu cốt lõi của hộ gia đình, doanh nghiệp và chính phủ.",
+      "duration": 47.39,
+      "startTime": 0.0,
+      "endTime": 47.39,
+      "audioUrl": "/audio/lectures/economics/5/intro.mp3"
+    },
+    {
+      "id": "sec_micro_macro",
+      "title": "1. Khái niệm & Phân biệt Kinh tế Vi mô và Vĩ mô",
+      "selector": "#sec-micro-macro",
+      "en": "Section 1 divides economic analysis into microeconomics and macroeconomics. Microeconomics examines individual consumers, workers, firms, and specific markets like housing or agriculture. Macroeconomics studies the economy as a whole, focusing on national output, inflation, unemployment, and the balance of payments.",
+      "vi": "Mục 1 chia phân tích kinh tế thành kinh tế vi mô và kinh tế vĩ mô. Kinh tế vi mô nghiên cứu các cá nhân tiêu dùng, người lao động, doanh nghiệp và các thị trường cụ thể như nhà ở hoặc nông sản. Kinh tế vĩ mô nghiên cứu toàn bộ nền kinh tế, tập trung vào tổng sản lượng quốc gia, lạm phát, tỷ lệ thất nghiệp và cán cân thanh toán.",
+      "duration": 42.98,
+      "startTime": 47.39,
+      "endTime": 90.37,
+      "audioUrl": "/audio/lectures/economics/5/sec_micro_macro.mp3"
+    },
+    {
+      "id": "card_micro",
+      "title": "🔬 Kinh tế Vi mô (Microeconomics)",
+      "selector": "#card-micro",
+      "en": "Microeconomics focuses on small-scale economic units. It investigates how individual consumers allocate their income, how firms set prices and output to maximize profits, and how supply and demand interact in single commodity markets.",
+      "vi": "Kinh tế vi mô tập trung vào các đơn vị kinh tế quy mô nhỏ. Lĩnh vực này khảo sát cách người tiêu dùng phân bổ thu nhập, cách doanh nghiệp định giá và sản lượng để tối đa hóa lợi nhuận, cũng như cách cung cầu tương tác trên từng thị trường hàng hóa riêng lẻ.",
+      "duration": 30.02,
+      "startTime": 90.37,
+      "endTime": 120.39,
+      "audioUrl": "/audio/lectures/economics/5/card_micro.mp3"
+    },
+    {
+      "id": "card_macro",
+      "title": "🌍 Kinh tế Vĩ mô (Macroeconomics)",
+      "selector": "#card-macro",
+      "en": "Macroeconomics evaluates aggregate national performance. Key topics include economic growth measured by Gross Domestic Product, government policies like fiscal and monetary interventions, exchange rates, and international trade.",
+      "vi": "Kinh tế vĩ mô đánh giá hiệu quả hoạt động tổng thể của cả quốc gia. Các chủ đề trọng tâm bao gồm tăng trưởng kinh tế đo bằng Tổng sản phẩm quốc nội GDP, các chính sách tài khóa và tiền tệ của chính phủ, tỷ giá hối đoái và thương mại quốc tế.",
+      "duration": 29.34,
+      "startTime": 120.39,
+      "endTime": 149.73,
+      "audioUrl": "/audio/lectures/economics/5/card_macro.mp3"
+    },
+    {
+      "id": "card_criteria_table",
+      "title": "📊 Bảng So sánh Tiêu chí Vi mô vs Vĩ mô",
+      "selector": "#card-criteria-table",
+      "en": "Our comparison table clarifies the differences: microeconomics investigates individual prices and single industry wages, while macroeconomics addresses the general price level, national unemployment, and economic stability.",
+      "vi": "Bảng so sánh làm rõ các tiêu chuẩn: kinh tế vi mô khảo sát giá cả của từng mặt hàng và tiền lương trong từng ngành; trong khi kinh tế vĩ mô giải quyết mức giá chung của nền kinh tế, tỷ lệ thất nghiệp toàn quốc và sự ổn định kinh tế.",
+      "duration": 26.8,
+      "startTime": 149.73,
+      "endTime": 176.53,
+      "audioUrl": "/audio/lectures/economics/5/card_criteria_table.mp3"
+    },
+    {
+      "id": "sec_decision_makers",
+      "title": "2. Ba Chủ thể Kinh tế Quyết định và Mục tiêu Cốt lõi",
+      "selector": "#sec-decision-makers",
+      "en": "Section 2 identifies the three main economic decision-makers and their economic aims: Households seek to maximize utility and living standards; Firms aim to maximize profits; and the Government strives to maximize overall social welfare.",
+      "vi": "Mục 2 xác định ba chủ thể quyết định kinh tế chính và mục tiêu cốt lõi của họ: Hộ gia đình tìm cách tối đa hóa mức độ hài lòng và mức sống; Doanh nghiệp hướng tới tối đa hóa lợi nhuận; và Chính phủ phấn đấu tối đa hóa phúc lợi xã hội nói chung.",
+      "duration": 28.43,
+      "startTime": 176.53,
+      "endTime": 204.96,
+      "audioUrl": "/audio/lectures/economics/5/sec_decision_makers.mp3"
+    },
+    {
+      "id": "card_households",
+      "title": "🛒 Hộ gia đình / Người tiêu dùng",
+      "selector": "#card-households",
+      "en": "Households allocate disposable income to purchase goods and services that generate maximum satisfaction and utility, while providing labor to earn wages.",
+      "vi": "Hộ gia đình phân bổ thu nhập khả dụng để mua hàng hóa, dịch vụ mang lại mức độ thỏa mãn tối đa, đồng thời cung ứng sức lao động để kiếm tiền lương.",
+      "duration": 18.09,
+      "startTime": 204.96,
+      "endTime": 223.05,
+      "audioUrl": "/audio/lectures/economics/5/card_households.mp3"
+    },
+    {
+      "id": "card_firms",
+      "title": "🏭 Doanh nghiệp / Nhà sản xuất",
+      "selector": "#card-firms",
+      "en": "Firms combine land, labour, and capital to produce goods. Their overarching commercial objective is profit maximisation, achieved when total revenue exceeds total costs by the widest margin.",
+      "vi": "Doanh nghiệp kết hợp đất đai, lao động và tư bản để sản xuất hàng hóa. Mục tiêu thương mại bao trùm của họ là tối đa hóa lợi nhuận, đạt được khi tổng doanh thu vượt trên tổng chi phí ở mức cao nhất.",
+      "duration": 25.31,
+      "startTime": 223.05,
+      "endTime": 248.36,
+      "audioUrl": "/audio/lectures/economics/5/card_firms.mp3"
+    },
+    {
+      "id": "card_government",
+      "title": "🏛️ Chính phủ (Government)",
+      "selector": "#card-government",
+      "en": "Governments aim to maximize social welfare. They intervene to correct market failure, provide public goods like policing and healthcare, and ensure equitable resource distribution.",
+      "vi": "Chính phủ hướng tới mục tiêu tối đa hóa phúc lợi xã hội. Họ can thiệp để khắc phục thất bại thị trường, cung ứng hàng hóa công như an ninh trật tự và y tế, đồng thời đảm bảo sự phân phối nguồn lực công bằng.",
+      "duration": 23.87,
+      "startTime": 248.36,
+      "endTime": 272.23,
+      "audioUrl": "/audio/lectures/economics/5/card_government.mp3"
+    }
+  ]
+}
