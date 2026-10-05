@@ -317,6 +317,108 @@ const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   '2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69': 'llyYTGan-eQ', // P4: Electricity and magnetism
   'a6077865-db01-4785-9ec7-e8b0f531fcdc': 'DeZjM41nqmo', // P5: Nuclear physics
   'd11f8920-fe86-4cd4-ad9a-e8b669bc687b': 'Ec9yMahD5xA', // P6: Space physics
+
+  // ==========================================
+  // Cambridge IGCSE Biology 0610
+  // ==========================================
+  '11cfe97d-205e-418b-ae79-e39d7e57e0a8': [
+    { title: '1. Characteristics of living organisms', videoId: 'bKcUMgzGvhg' },
+    { title: '2. Classification systems', videoId: 'vlQvflBYS8A' },
+    { title: '3. Features of organisms', videoId: '3n_h19qGOOk' },
+  ], // Topic 1: Characteristics and classification of living organisms
+  '2d2545c0-ccb9-4d04-a6fa-f2eec55cdecc': [
+    { title: '1. Cell structure and organisation', videoId: 'x97BLnxK2Bg' },
+    { title: '2. Size of specimens', videoId: '1svEJYR2acw' },
+  ], // Topic 2: Cells and organisms
+  '0f5013fb-eaf1-4f79-8f41-c6102d2185a2': [
+    { title: '1. Diffusion', videoId: '6pjddhlErzE' },
+    { title: '2. Osmosis', videoId: 'F8RlY9DF9iE' },
+    { title: '3. Active transport', videoId: 'hbcqa8Ynw_0' },
+  ], // Topic 3: Movement into and out of cells
+  '821ff271-c9ae-493a-b14c-e3f4b074a9d9': [
+    { title: '1. Biological molecules', videoId: 'PnmEomL_Qss' },
+    { title: '2. Structure of DNA', videoId: 'tsKCHHW5D-s' },
+  ], // Topic 4: Biological molecules
+  'a5d1775c-6ecb-4d6c-bc50-8aafbf641c1e': 'T2TnsUCO0Jg', // Topic 5: Enzymes
+  'e7d6e813-b7b9-4038-9911-8b886978cd07': [
+    { title: '1. Photosynthesis', videoId: 'gJ2KE6YCHgo' },
+    { title: '2. Leaf structure', videoId: 'BxV5LQafe3c' },
+    { title: '3. Mineral requirements', videoId: 'pqj0tpnEd1w' },
+  ], // Topic 6: Plant Nutrition
+  '85f36013-879b-49a8-a531-69c245a9630e': [
+    { title: '1. Diet', videoId: 'nC3Xlwixqlk' },
+    { title: '2. Digestive system', videoId: 'Ei5X_eIOetA' },
+    { title: '3. Physical digestion', videoId: 'GHxnzZkASnM' },
+    { title: '4. Chemical digestion', videoId: '6rmiyTexRwU' },
+    { title: '5. Absorption', videoId: 'huKS787qa7U' },
+  ], // Topic 7: Human nutrition
+  '37f08657-58e8-4fad-8035-2d935e1259e8': [
+    { title: '1. Xylem and phloem', videoId: 'e7jH24b-hIA' },
+    { title: '2. Water uptake', videoId: '5Bo6-FhYxYs' },
+    { title: '3. Transpiration', videoId: 'upenwiIznos' },
+    { title: '4. Translocation', videoId: 'i92Zk6vTJYU' },
+    { title: '5. Leaf, stem and root structure', videoId: 'ncjR0BrhtkM' },
+  ], // Topic 8: Transport in plants
+  'b50dd00a-e2b4-4dba-8b1d-3f679dadae74': [
+    { title: '1. Circulatory systems', videoId: '4vGZbh83GaM' },
+    { title: '2. Heart', videoId: '5e2FOAB9yx0' },
+    { title: '3. Blood vessels', videoId: 'GL6n-BBnaFs' },
+    { title: '4. Blood', videoId: 'SmIoisDnQic' },
+  ], // Topic 9: Transport in animals
+  '62278d87-97ea-4fa5-aa46-748bca28db68': [
+    { title: '1. Pathogens and transmission', videoId: 'LQytBpCY0pE' },
+    { title: '2. Defences against disease', videoId: 'fSTjfq2LRow' },
+  ], // Topic 10: Diseases and immunity
+  'da59c2b3-124f-4e25-8537-74059e74f9b0': 'LWxDndUR8Dg', // Topic 11: Gas exchange in humans
+  'fb098b77-64fa-463a-9829-64f5c9055de5': [
+    { title: '1. Respiration', videoId: 'wznxFqx7Lqw' },
+    { title: '2. Aerobic respiration', videoId: '_a2It6ZkkNo' },
+    { title: '3. Anaerobic respiration', videoId: 'IWlMLuA6qUI' },
+  ], // Topic 12: Respiration
+  'b8f0539e-9361-4ba4-a96e-74c106494ebe': 'HpENNSFbeEM', // Topic 13: Excretion in humans
+  'c9abc870-7cbd-4c7e-b6c9-2d6237ff7670': [
+    { title: '1. Coordination and response', videoId: 'xf__OW4hDOU' },
+    { title: '2. Nervous control in humans', videoId: 'Ar22UcjAG3c' },
+    { title: '3. Hormones', videoId: '5i9xXjy1pZ8' },
+    { title: '4. Homeostasis', videoId: '8Jm3GQ-fVJ0' },
+    { title: '5. Tropic responses', videoId: '3yW6unFD7yI' },
+  ], // Topic 14: Coordination and response
+  'f87b29a1-56a3-4668-a249-ed9f118d31d8': 'NL_Iw7qqzmU', // Topic 15: Drugs
+  '936affb8-f062-4e39-b415-cc3794fb341e': [
+    { title: '1. Asexual reproduction', videoId: 'yV5p5amlE0A' },
+    { title: '2. Sexual reproduction', videoId: 'aWEneELEhlw' },
+    { title: '3. Sexual reproduction in plants', videoId: 'ECqbUp-XeFA' },
+    { title: '4. Sexual reproduction in humans', videoId: 'lpCagvh8NJI' },
+    { title: '5. Sexual hormones in humans', videoId: 'oeTpLvSK2AY' },
+    { title: '6. Sexually transmitted infections', videoId: 'b1BthpJ91gM' },
+  ], // Topic 16: Reproduction
+  '77f1f7b8-f30e-4b0b-89e2-2e2482242791': [
+    { title: '1. Chromosomes, genes and proteins', videoId: '_4Lyprt1s2M' },
+    { title: '2. Mitosis', videoId: 'OsgwzH6i4n8' },
+    { title: '3. Meiosis', videoId: 'hAgF_hoOhpk' },
+    { title: '4. Monohybrid inheritance', videoId: 'ug8SGHUcqOM' },
+  ], // Topic 17: Inheritance
+  '89750884-8439-4cda-916a-56bf5524741b': [
+    { title: '1. Variation', videoId: 'mhF09ZFCupc' },
+    { title: '2. Adaptive features', videoId: 'pUdkmwKCdVA' },
+    { title: '3. Selection', videoId: 'VF4nTOE1M9o' },
+  ], // Topic 18: Variation and selection
+  '7b2384dd-b79d-47fe-b36b-7abf36784f06': [
+    { title: '1. Energy flow', videoId: 'E03idQ4Kyo8' },
+    { title: '2. Food chains and food webs', videoId: 'a5K0BT4XbRE' },
+    { title: '3. Nutrient cycles', videoId: 'nFPOXQ7e7UM' },
+    { title: '4. Populations', videoId: 'XASTEPupjwA' },
+  ], // Topic 19: Organisms and their environment
+  '7777b4df-68dd-4600-b4ba-a4ce56ecc6ac': [
+    { title: '1. Food supply', videoId: 'eMpMnePtVp4' },
+    { title: '2. Habitat destruction', videoId: 'uqbePk2VEGw' },
+    { title: '3. Pollution', videoId: 'szBcHO9JvOE' },
+    { title: '4. Conservation', videoId: 'Jm6VySV-eDw' },
+  ], // Topic 20: Human influences on ecosystems
+  '55023dc0-7fdc-46ea-a3e9-9a049306d086': [
+    { title: '1. Biotechnology', videoId: 'qCCTkxsc178' },
+    { title: '2. Genetic modification', videoId: 'VkxbDdc2ye0' },
+  ], // Topic 21: Biotechnology and Genetic Engineering
 };
 
 const getYouTubeVideoId = (url: string): string | null => {
