@@ -46,8 +46,14 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
       if (error) {
         alert("Đăng nhập thất bại! Vui lòng kiểm tra lại Email hoặc Mật khẩu.");
       } else if (data?.user) {
-        const { data: profile } = await supabase.from('profiles').select('role').eq('id', data.user.id).single();
+        const { data: profile } = await supabase.from('profiles').select('role, status').eq('id', data.user.id).single();
         
+        if (profile?.role !== 'admin' && profile?.status === 'inactive') {
+          await supabase.auth.signOut();
+          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          return;
+        }
+
         setShowLoginModal(false);
         if (profile?.role === 'admin') {
           onNavigate('admin');

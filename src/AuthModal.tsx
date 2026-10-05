@@ -26,15 +26,21 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
       const { data, error } = await Promise.race([loginPromise, timeoutPromise]) as any;
       if (error) throw error;
       
-      // 🚀 GHI LOG ĐĂNG NHẬP (fire-and-forget, không block login flow)
       if (data?.user) {
-          supabase.from('activity_logs').insert([{
-              user_id: data.user.id,
-              action_type: 'login',
-              details: { message: 'Đăng nhập vào hệ thống LMS' }
-          }]).then(() => {});
+        const { data: profile } = await supabase.from('profiles').select('role, status').eq('id', data.user.id).single();
+        if (profile?.role !== 'admin' && profile?.status === 'inactive') {
+          await supabase.auth.signOut();
+          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          return;
+        }
+
+        // 🚀 GHI LOG ĐĂNG NHẬP (fire-and-forget, không block login flow)
+        supabase.from('activity_logs').insert([{
+            user_id: data.user.id,
+            action_type: 'login',
+            details: { message: 'Đăng nhập vào hệ thống LMS' }
+        }]).then(() => {});
       }
-      // 🚀 KẾT THÚC GHI LOG
       
       if (typeof onClose === 'function') onClose();
       if (typeof onNavigate === 'function') {

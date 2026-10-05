@@ -221,9 +221,40 @@ export default function App() {
       }
     } catch (e) {}
 
-    supabase.auth.getSession().then(({ data: { session } }) => { if (session) { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); } }).catch(console.warn);
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN') { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); }
+    const verifyUserStatus = async (user: any) => {
+      if (!user) return true;
+      try {
+        const { data: profile } = await supabase.from('profiles').select('role, status').eq('id', user.id).single();
+        if (profile?.role !== 'admin' && profile?.status === 'inactive') {
+          await supabase.auth.signOut();
+          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          setCurrentView('home');
+          return false;
+        }
+      } catch (err) {
+        console.warn('Status verification error:', err);
+      }
+      return true;
+    };
+
+    supabase.auth.getSession().then(async ({ data: { session } }) => { 
+      if (session?.user) { 
+        const isActive = await verifyUserStatus(session.user);
+        if (!isActive) return;
+        setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
+        startGlobalTimer(); 
+      } 
+    }).catch(console.warn);
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'SIGNED_IN') { 
+        if (session?.user) {
+          const isActive = await verifyUserStatus(session.user);
+          if (!isActive) return;
+        }
+        setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
+        startGlobalTimer(); 
+      }
       else if (event === 'PASSWORD_RECOVERY') {
         setShowResetPasswordModal(true);
       }
