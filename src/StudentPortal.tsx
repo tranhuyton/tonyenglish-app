@@ -2128,11 +2128,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                    Thư mục này hiện đang trống.
                 </div>
               )}
-
-              {/* DOCK BỘ 3 NÚT TẬP TRUNG (STICKY BOTTOM CONTROLS) */}
-              <div className="hidden sm:block sticky bottom-2 z-30 mt-6 pb-2">
-                {renderBottomControls}
-              </div>
             </div>
           </div>
         )}
