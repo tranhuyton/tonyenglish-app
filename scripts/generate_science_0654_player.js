@@ -61,50 +61,7 @@ function generateSciencePodcastPlayerHtml(episodes, lang = 'vi') {
       padding: 12px 16px 28px;
     }
 
-    /* LANGUAGE SWITCHER BAR */
-    .lang-switch-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
 
-    .lang-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
-      border-radius: 12px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: all 0.2s ease;
-      border: 1.5px solid transparent;
-      text-decoration: none;
-      line-height: 1;
-    }
-
-    .lang-pill.active {
-      background: #0284c7;
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
-    }
-
-    .lang-pill.switch-btn {
-      background: #ffffff;
-      color: var(--slate-700);
-      border-color: var(--slate-200);
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .lang-pill.switch-btn:hover {
-      background: #f8fafc;
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.06);
-    }
 
     /* HERO PLAYER CARD */
     .player-card {
@@ -686,28 +643,6 @@ function generateSciencePodcastPlayerHtml(episodes, lang = 'vi') {
     }
   </style>
 
-  <!-- LANGUAGE SWITCHER -->
-  <div class="lang-switch-bar">
-    ${isEn ? `
-    <button type="button" class="lang-pill switch-btn" data-page="1" onclick="switchLecturePage(1)">
-      <span>🇻🇳</span>
-      <span>Chuyển sang Bản Tiếng Việt (Trang 1) ➜</span>
-    </button>
-    <div class="lang-pill active">
-      <span>🇬🇧</span>
-      <span>English Edition (Trang 2)</span>
-    </div>
-    ` : `
-    <div class="lang-pill active">
-      <span>🇻🇳</span>
-      <span>Bản Tiếng Việt (Trang 1)</span>
-    </div>
-    <button type="button" class="lang-pill switch-btn" data-page="2" onclick="switchLecturePage(2)">
-      <span>🇬🇧</span>
-      <span>Chuyển sang Bản Tiếng Anh (Trang 2) ➜</span>
-    </button>
-    `}
-  </div>
 
   <!-- HERO AUDIO PLAYER -->
   <div class="player-card">

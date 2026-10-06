@@ -1384,6 +1384,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
             --text-main: #334155;
             --bg-light: #f8fafc;
          }
+         .lang-switch-bar {
+             display: none !important;
+         }
          html, body { 
              height: max-content !important;
              min-height: 0 !important;
