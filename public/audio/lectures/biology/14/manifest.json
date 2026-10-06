@@ -1,37 +1,65 @@
 {
   "lectureId": "c9abc870-7cbd-4c7e-b6c9-2d6237ff7670",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 14: Coordination and response",
-  "totalDuration": 301.91,
-  "majorSections": [
-    {
-      "id": "sec_nervous_reflexes",
-      "title": "1. Hệ Thần kinh & Cung Phản xạ"
+  "totalDuration": 523.7,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_eye_anatomy",
-      "title": "2. Cấu tạo Mắt & Phản xạ Điều tiết"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_endocrine_system",
-      "title": "3. Hệ Nội tiết & Adrenaline"
+    "sec_nervous_reflexes": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_homeostasis",
-      "title": "4. Cân bằng Nội môi & Điều nhiệt"
+    "sec-nervous-reflexes": {
+      "start": 1,
+      "end": 3
     },
-    {
-      "id": "sec_plant_tropisms",
-      "title": "5. Hướng động & Hooc-môn Auxin"
+    "sec_eye_anatomy": {
+      "start": 4,
+      "end": 5
+    },
+    "sec-eye-anatomy": {
+      "start": 4,
+      "end": 5
+    },
+    "sec_endocrine_system": {
+      "start": 6,
+      "end": 7
+    },
+    "sec-endocrine-system": {
+      "start": 6,
+      "end": 7
+    },
+    "sec_homeostasis": {
+      "start": 8,
+      "end": 10
+    },
+    "sec-homeostasis": {
+      "start": 8,
+      "end": 10
+    },
+    "sec_plant_tropisms": {
+      "start": 11,
+      "end": 11
+    },
+    "sec-plant-tropisms": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 14: Điều hòa Hoạt động & Đáp ứng Sinh học",
+      "title": "Giới thiệu Topic 14: Điều hòa Hoạt động & Đáp ứng Sinh học",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 14: Coordination and response. Organisms maintain internal equilibrium and respond to dynamic external environments. In this rich chapter, we explore nervous reflexes, eye anatomy and accommodation, endocrine hormones, homeostasis and thermoregulation, and plant tropisms mediated by auxin.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 14: Điều hòa Hoạt động và Đáp ứng Sinh học. Sinh vật liên tục duy trì cân bằng nội môi và thích ứng với biến đổi của môi trường. Trong bài học này, chúng ta sẽ khảo sát phản xạ thần kinh, giải phẫu mắt và phản xạ điều tiết, hệ nội tiết, cân bằng thân nhiệt nội môi và tính hướng động ở thực vật qua hormone auxin.",
+      "en": "Welcome to Topic 14: Coordination and Response. Organisms detect changes in their internal and external environment and respond to maintain homeostasis and survival. In this lesson, we study the human nervous system, reflex arcs, synapse neurochemistry, sense organs including the eye and pupil accommodation, endocrine adrenaline regulation, skin thermoregulation, and plant auxin tropisms.",
+      "vi": "Chào mừng các bạn đến với Bài 14: Điều hòa Hoạt động & Đáp ứng Sinh học. Sinh vật cảm nhận sự biến đổi của môi trường nội bào và ngoại cảnh để đáp ứng duy trì cân bằng nội môi và sinh tồn. Trong bài học này, chúng ta sẽ học về hệ thần kinh, cung phản xạ, chất truyền tin sinap, giải phẫu mắt và phản xạ điều tiết, hoocmôn adrenaline, điều hòa thân nhiệt ở da và hướng động auxin ở thực vật.",
       "duration": 47.87,
       "startTime": 0.0,
       "endTime": 47.87,
@@ -41,55 +69,121 @@
       "id": "sec_nervous_reflexes",
       "title": "1. Hệ Thần kinh & Cung Phản xạ (Reflex Arc)",
       "selector": "#sec-nervous-reflexes",
-      "en": "Section 1 outlines the nervous system: The Central Nervous System comprises the brain and spinal cord. Reflex arcs deliver rapid, automatic, and protective responses along a dedicated pathway: Stimulus excites Receptors, firing electrical impulses along Sensory Neurones across synapses to Relay Neurones in the spinal cord, onward through Motor Neurones to Effector muscles or glands.",
-      "vi": "Mục một trình bày hệ thần kinh: Hệ thần kinh trung ương gồm não bộ và tủy sống. Cung phản xạ (Reflex Arc) mang lại các phản ứng tự động, cực nhanh và bảo vệ cơ thể theo một cung đường khép kín: Kích thích tác động lên Thụ thể, phát xung điện truyền qua Nơron hướng tâm cảm giác, vượt qua khe synapse đến Nơron trung gian tại tủy sống, truyền tiếp qua Nơron ly tâm vận động đến Cơ quan đáp ứng (cơ hoặc tuyến).",
+      "en": "Section 1: The nervous system consists of the central nervous system—the brain and spinal cord—and the peripheral nervous system. A reflex action is an involuntary, rapid, automatic response to a stimulus that protects the body from injury.",
+      "vi": "Mục 1: Hệ thần kinh gồm hệ thần kinh trung ương—não bộ và tủy sống—cùng hệ thần kinh ngoại biên. Phản xạ là phản ứng tự động, nhanh chóng và vô thức của cơ thể đối với kích thích nhằm bảo vệ cơ thể khỏi tổn thương.",
       "duration": 47.97,
       "startTime": 47.87,
       "endTime": 95.84,
       "audioUrl": "/audio/lectures/biology/14/sec_nervous_reflexes.mp3"
     },
     {
+      "id": "card_reflex_arc",
+      "title": "⚡ Chuỗi Cung Phản Xạ (Reflex Arc Sequence)",
+      "selector": "#card-reflex-arc",
+      "en": "The reflex arc pathway: Stimulus is detected by a receptor, triggering electrical impulses along a sensory neurone into the spinal cord. In the CNS, the impulse passes across a synapse to a relay neurone, then along a motor neurone to an effector muscle or gland, producing an immediate protective response.",
+      "vi": "Đường truyền cung phản xạ: Kích thích được thụ thể tiếp nhận, khởi phát xung điện truyền dọc nơ-ron cảm giác vào tủy sống. Tại thần kinh trung ương, xung điện qua khe sinap truyền sang nơ-ron trung gian, rồi theo nơ-ron vận động đến cơ quan đáp ứng (cơ hoặc tuyến) tạo phản xạ tức thì.",
+      "duration": 35.97,
+      "startTime": 95.84,
+      "endTime": 131.81,
+      "audioUrl": "/audio/lectures/biology/14/card_reflex_arc.mp3"
+    },
+    {
+      "id": "card_synapse",
+      "title": "🌉 Khe Sinap & Dẫn truyền Xung 1 Chiều",
+      "selector": "#card-synapse",
+      "en": "Synapse structure and function: A synapse is a junction between two neurones. When an impulse reaches the presynaptic knob, neurotransmitter chemical molecules are released from vesicles into the synaptic cleft. They diffuse across the gap and bind to receptor proteins on the postsynaptic membrane, triggering a new impulse unidirectionally.",
+      "vi": "Cấu tạo và hoạt động của sinap: Sinap là điểm tiếp xúc giữa hai nơ-ron. Khi xung điện đến cúc tận cùng trước sinap, chất truyền tin hóa học được giải phóng từ các bọc vào khe sinap. Chúng khuếch tán qua khe gắn vào thụ thể màng sau sinap, khởi phát xung điện mới truyền theo đúng một chiều.",
+      "duration": 39.14,
+      "startTime": 131.81,
+      "endTime": 170.95,
+      "audioUrl": "/audio/lectures/biology/14/card_synapse.mp3"
+    },
+    {
       "id": "sec_eye_anatomy",
       "title": "2. Cơ quan Thị giác: Cấu tạo Mắt & Cơ chế Điều tiết",
       "selector": "#sec-eye-anatomy",
-      "en": "Section 2 investigates eye anatomy and accommodation: The pupil reflex protects the retina from damage: In bright light, circular iris muscles contract and radial muscles relax, constricting the pupil. Accommodation focuses on near versus distant objects: For near objects, ciliary muscles contract, suspensory ligaments slacken, allowing the lens to become thicker and more convex, refracting light rays strongly onto the retina.",
-      "vi": "Mục hai nghiên cứu cấu tạo mắt và phản xạ điều tiết: Phản xạ đồng tử bảo vệ võng mạc: Khi ánh sáng mạnh, cơ vòng mống mắt co, cơ nan hoa giãn làm co nhỏ con ngươi. Cơ chế điều tiết nhìn gần - nhìn xa: Khi nhìn vật ở gần, cơ thể mi co lại, các dây chằng treo giãn chùng ra, làm thể thủy tinh phồng dày và lồi hơn, khúc xạ ánh sáng mạnh hơn hội tụ chính xác trên võng mạc.",
+      "en": "Section 2: The human eye: Light passes through the transparent cornea, pupil aperture controlled by the iris, and flexible convex lens onto the photoreceptor retina. The fovea contains the highest density of cone cells providing sharp colour vision.",
+      "vi": "Mục 2: Cơ quan thị giác: Ánh sáng đi qua giác mạc trong suốt, lỗ đồng tử điều khiển bởi mống mắt, thấu kính đàn hồi và hội tụ lên võng mạc. Điểm vàng (fovea) chứa mật độ tế bào nón cao nhất mang lại thị lực sắc nét và nhìn màu chuẩn xác.",
       "duration": 48.95,
-      "startTime": 95.84,
-      "endTime": 144.79,
+      "startTime": 170.95,
+      "endTime": 219.9,
       "audioUrl": "/audio/lectures/biology/14/sec_eye_anatomy.mp3"
+    },
+    {
+      "id": "card_eye_accommodation",
+      "title": "👁️ Phản xạ Điều tiết của Thể Thủy tinh (Accommodation)",
+      "selector": "#card-eye-accommodation",
+      "en": "Accommodation reflex: When viewing a near object, ciliary muscles contract, suspensory ligaments become slack, allowing the lens to become thicker and more convex, refracting light strongly. When viewing a distant object, ciliary muscles relax, suspensory ligaments pull tight, stretching the lens thin.",
+      "vi": "Cơ chế điều tiết mắt: Khi nhìn vật ở gần, cơ thể mi co lại, dây chằng treo giãn chùng, thấu kính phồng dày hình cầu khúc xạ ánh sáng mạnh. Khi nhìn vật ở xa, cơ thể mi giãn ra, dây chằng treo căng kéo làm thấu kính dẹt mỏng để hội tụ chuẩn xác lên võng mạc.",
+      "duration": 35.42,
+      "startTime": 219.9,
+      "endTime": 255.32,
+      "audioUrl": "/audio/lectures/biology/14/card_eye_accommodation.mp3"
     },
     {
       "id": "sec_endocrine_system",
       "title": "3. Hệ Nội tiết & Hooc-môn (Adrenaline Focus)",
       "selector": "#sec-endocrine-system",
-      "en": "Section 3 defines a Hormone: a chemical substance produced by an endocrine gland, carried by blood plasma, which alters the activity of one or more specific target organs. Adrenaline, released by adrenal glands during flight-or-flight emergencies, increases heart rate, dilates breathing airways, and stimulates glycogen breakdown into glucose, equipping muscles for rapid action.",
-      "vi": "Mục ba định nghĩa Hooc-môn (Hormone): là chất hóa học do tuyến nội tiết tiết ra, vận chuyển qua huyết tương trong máu, làm biến đổi hoạt động sinh lý của một hoặc nhiều cơ quan đích xác định. Hooc-môn Adrenaline do tuyến thượng thận tiết ra trong trạng thái chiến-hay-chạy (fight or flight), làm tăng nhịp tim, giãn phế quản và chuyển hóa glycogen ở gan thành glucose cung cấp năng lượng tức thì cho cơ bắp.",
+      "en": "Section 3: The endocrine system consists of glands that secrete hormones directly into the bloodstream. Hormones are chemical messengers transported by blood plasma that alter the metabolic activity of specific target organs.",
+      "vi": "Mục 3: Hệ nội tiết gồm các tuyến nội tiết tiết hoocmôn trực tiếp vào máu. Hoocmôn là những chất truyền tin hóa học được huyết tương vận chuyển đến tác động và điều chỉnh hoạt động của các cơ quan đích chuyên biệt.",
       "duration": 46.12,
-      "startTime": 144.79,
-      "endTime": 190.91,
+      "startTime": 255.32,
+      "endTime": 301.44,
       "audioUrl": "/audio/lectures/biology/14/sec_endocrine_system.mp3"
+    },
+    {
+      "id": "card_adrenaline",
+      "title": "🔥 Hoocmôn Adrenaline (Fight or Flight Response)",
+      "selector": "#card-adrenaline",
+      "en": "Adrenaline function: Secreted by adrenal glands in fear or stress, it triggers the 'fight or flight' response: increasing heart rate and stroke volume, accelerating breathing rate, dilating pupils, and stimulating liver glycogenolysis to raise blood glucose for muscular ATP respiration.",
+      "vi": "Tác dụng của Adrenaline: Tiết ra từ tuyến thượng thận khi sợ hãi hoặc căng thẳng, kích hoạt phản ứng 'Chiến-hay-Biến': tăng nhịp tim và lưu lượng máu, tăng nhịp thở, giãn đồng tử và kích thích gan phân giải glycogen thành glucose cung cấp năng lượng ATP cho cơ bắp hoạt động.",
+      "duration": 33.45,
+      "startTime": 301.44,
+      "endTime": 334.89,
+      "audioUrl": "/audio/lectures/biology/14/card_adrenaline.mp3"
     },
     {
       "id": "sec_homeostasis",
       "title": "4. Cân bằng Nội môi: Đường huyết & Điều nhiệt",
       "selector": "#sec-homeostasis",
-      "en": "Section 4 defines Homeostasis: the maintenance of a constant internal environment via negative feedback. Blood glucose homeostasis is governed by the pancreas: High glucose triggers insulin release to store glucose as glycogen in liver cells; low glucose triggers glucagon to release stored glucose. Thermoregulation in skin counters cold via vasoconstriction, shivering, and erecting hairs, and counters heat via vasodilation and sweat evaporation.",
-      "vi": "Mục bốn định nghĩa Cân bằng nội môi (Homeostasis): là sự duy trì môi trường bên trong cơ thể luôn ổn định thông qua cơ chế điều hòa ngược âm tính. Kiểm soát đường huyết do tuyến tụy đảm nhận: Khi đường huyết tăng cao, tụy tiết insulin chuyển glucose thành glycogen dự trữ tại gan; khi đường huyết hạ, tụy tiết glucagon chuyển ngược glycogen thành glucose. Điều hòa thân nhiệt tại da đối phó với trời lạnh bằng co mạch ngoại vi, run cơ và dựng lông; đối phó với trời nóng bằng giãn mạch và thoát mồ hôi.",
+      "en": "Section 4: Homeostasis is the maintenance of a constant internal environment within narrow physiological limits. Negative feedback restores variable parameters back towards set point levels.",
+      "vi": "Mục 4: Cân bằng nội môi là sự duy trì môi trường bên trong cơ thể ổn định trong giới hạn sinh lý hẹp. Cơ chế điều hòa ngược âm tính (negative feedback) giúp đưa các chỉ số sinh lý dao động trở lại mức điểm chuẩn.",
       "duration": 57.42,
-      "startTime": 190.91,
-      "endTime": 248.33,
+      "startTime": 334.89,
+      "endTime": 392.31,
       "audioUrl": "/audio/lectures/biology/14/sec_homeostasis.mp3"
     },
     {
+      "id": "card_blood_glucose",
+      "title": "🩸 Điều hòa Đường huyết bởi Insulin và Glucagon",
+      "selector": "#card-blood-glucose",
+      "en": "Blood glucose regulation: When blood glucose rises after a meal, the pancreas secretes insulin, stimulating liver and muscle cells to absorb glucose and convert it into insoluble glycogen. When blood glucose drops during fasting, the pancreas secretes glucagon, stimulating liver cells to break glycogen back into glucose.",
+      "vi": "Điều hòa đường huyết: Khi nồng độ glucose trong máu tăng cao sau bữa ăn, tuyến tụy tiết insulin kích thích tế bào gan và cơ hấp thu glucose chuyển thành glycogen dự trữ. Khi đường huyết hạ thấp lúc đói, tuyến tụy tiết glucagon kích thích gan phân giải glycogen thành glucose giải phóng vào máu.",
+      "duration": 38.03,
+      "startTime": 392.31,
+      "endTime": 430.34,
+      "audioUrl": "/audio/lectures/biology/14/card_blood_glucose.mp3"
+    },
+    {
+      "id": "card_thermoregulation_skin",
+      "title": "🌡️ Điều hòa Thân nhiệt ở Da (Thermoregulation)",
+      "selector": "#card-thermoregulation-skin",
+      "en": "Skin thermoregulation: In hot conditions, arterioles near the skin surface dilate (vasodilation) and sweat glands secrete sweat, dissipating latent heat of vaporization. In cold conditions, arterioles constrict (vasoconstriction) redirecting blood to core organs, hair erector muscles contract, and skeletal muscles shiver.",
+      "vi": "Điều hòa thân nhiệt ở da: Khi trời nóng, tiểu động mạch dưới da giãn (vasodilation) và tuyến mồ hôi tiết mồ hôi tỏa nhiệt bay hơi. Khi trời lạnh, tiểu động mạch co lại (vasoconstriction) dồn máu về nội tạng trung tâm, cơ dựng lông co tạo lớp khí cách nhiệt và cơ vân run rẩy sinh nhiệt.",
+      "duration": 39.78,
+      "startTime": 430.34,
+      "endTime": 470.12,
+      "audioUrl": "/audio/lectures/biology/14/card_thermoregulation_skin.mp3"
+    },
+    {
       "id": "sec_plant_tropisms",
-      "title": "5. Hướng động ở Thực vật & Hooc-môn Auxin",
+      "title": "🌱 5. Hướng động ở Thực vật & Hooc-môn Auxin",
       "selector": "#sec-plant-tropisms",
-      "en": "Section 5 examines Plant Tropisms: directional growth responses to stimuli. Phototropism is response to light; gravitropism is response to gravity. Auxin, synthesized at shoot tips, stimulates cell elongation. In shoots, unilateral light drives auxin to the shaded side, causing shaded cells to elongate more rapidly than illuminated cells, bending the shoot towards the light.",
-      "vi": "Mục năm nghiên cứu Tính hướng động ở thực vật: là phản ứng sinh trưởng định hướng trước kích thích môi trường. Hướng sáng (Phototropism) hướng về ánh sáng; hướng trọng lực (Gravitropism) theo chiều trọng trường. Hooc-môn thực vật Auxin sinh ra ở đỉnh chồi kích thích tế bào dãn dài. Khi chiếu sáng từ một phía, auxin di chuyển tập trung ở phía bóng râm, kích thích các tế bào bên tối sinh trưởng dài nhanh hơn bên sáng, làm ngọn cây uốn cong về phía có ánh sáng.",
+      "en": "Section 5: Plant tropisms: A tropism is a growth response towards or away from a directional stimulus. Plant shoots exhibit positive phototropism and negative gravitropism. The plant hormone auxin is produced at the shoot tip, diffuses down, and accumulates on the shaded side, stimulating cell elongation so the shoot bends towards light.",
+      "vi": "Mục 5: Hướng động ở thực vật: Hướng động là phản ứng sinh trưởng định hướng đối với kích thích từ một phía. Ngọn cây có tính hướng sáng dương và hướng trọng lực âm. Hoocmôn thực vật auxin được sản sinh ở đỉnh ngọn, khuếch tán xuống dưới và tập trung ở phía bị che tối, kích thích kéo dài tế bào khiến ngọn cây uốn cong về phía ánh sáng.",
       "duration": 53.58,
-      "startTime": 248.33,
-      "endTime": 301.91,
+      "startTime": 470.12,
+      "endTime": 523.7,
       "audioUrl": "/audio/lectures/biology/14/sec_plant_tropisms.mp3"
     }
   ]

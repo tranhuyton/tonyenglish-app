@@ -1,29 +1,49 @@
 {
   "lectureId": "89750884-8439-4cda-916a-56bf5524741b",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 18: Variation and selection",
-  "totalDuration": 232.32,
-  "majorSections": [
-    {
-      "id": "sec_variation_mutation",
-      "title": "1. Biến dị Liên tục, Không liên tục & Đột biến"
+  "totalDuration": 432.73,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_adaptive_features",
-      "title": "2. Thực vật Sa mạc vs Thủy sinh"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_natural_selection",
-      "title": "3. Chọn lọc Tự nhiên vs Chọn giống Nhân tạo"
+    "sec_variation_mutation": {
+      "start": 1,
+      "end": 3
+    },
+    "sec-variation-mutation": {
+      "start": 1,
+      "end": 3
+    },
+    "sec_adaptive_features": {
+      "start": 4,
+      "end": 6
+    },
+    "sec-adaptive-features": {
+      "start": 4,
+      "end": 6
+    },
+    "sec_natural_selection": {
+      "start": 7,
+      "end": 8
+    },
+    "sec-natural-selection": {
+      "start": 7,
+      "end": 8
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 18: Biến dị, Thích nghi & Chọn lọc Tự nhiên",
+      "title": "Giới thiệu Topic 18: Biến dị, Thích nghi & Chọn lọc Tự nhiên",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 18: Variation and selection. Biological diversity powers evolutionary change. In this chapter, we compare continuous and discontinuous variation, examine mutation causes, analyze xerophyte and hydrophyte adaptations, and study the mechanics of natural selection versus artificial selective breeding.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 18: Biến dị, Thích nghi và Chọn lọc Tự nhiên. Đa dạng sinh học là động lực thúc đẩy tiến hóa. Trong bài học này, chúng ta sẽ phân biệt biến dị liên tục và không liên tục, nguyên nhân gây đột biến, cấu tạo thích nghi của thực vật chịu hạn và thủy sinh, cùng cơ chế chọn lọc tự nhiên và chọn giống nhân tạo.",
+      "en": "Welcome to Topic 18: Variation and Selection. Biological variation is the differences between individuals of the same species. In this lesson, we distinguish continuous from discontinuous variation, investigate gene mutations and mutagenic agents, analyze adaptive morphological features in desert xerophytes and aquatic hydrophytes, and master the mechanism of natural selection and selective breeding.",
+      "vi": "Chào mừng các bạn đến với Bài 18: Biến dị và Chọn lọc. Biến dị sinh học là những sai khác giữa các cá thể trong cùng một loài. Trong bài học này, chúng ta sẽ phân biệt biến dị liên tục và không liên tục, tìm hiểu đột biến gen và các tác nhân gây đột biến, phân tích đặc điểm thích nghi hình thái ở thực vật chịu hạn sa mạc và thực vật thủy sinh, cùng cơ chế chọn lọc tự nhiên và chọn lọc nhân tạo.",
       "duration": 46.65,
       "startTime": 0.0,
       "endTime": 46.65,
@@ -33,34 +53,89 @@
       "id": "sec_variation_mutation",
       "title": "1. Biến dị Liên tục, Không liên tục & Đột biến (Mutation)",
       "selector": "#sec-variation-mutation",
-      "en": "Section 1 classifies biological variation: Continuous variation results in a quantitative spectrum of phenotypes influenced by multiple genes and environmental factors, producing normal bell-curve distributions like human height and mass. Discontinuous variation produces distinct, non-overlapping categories determined purely by genes, like ABO blood groups. A Mutation is a genetic change that forms the ultimate source of all novel alleles, accelerated by ionizing radiation and mutagenic chemicals.",
-      "vi": "Mục một phân loại các dạng biến dị: Biến dị liên tục là dải kiểu hình định lượng liên tục chịu sự chi phối của nhiều gen kết hợp với yếu tố môi trường, tạo thành đồ thị phân bố chuẩn hình chuông như chiều cao và cân nặng. Biến dị không liên tục phân chia thành các nhóm kiểu hình định tính rõ rệt hoàn toàn do gen quy định, như nhóm máu ABO. Đột biến (Mutation) là sự biến đổi đột ngột trong cấu trúc vật chất di truyền, là nguồn gốc phát sinh các allele mới, gia tăng khi tiếp xúc với tia phóng xạ ion hóa và hóa chất gây đột biến.",
+      "en": "Section 1: Variation and mutation: Continuous variation results in a range of phenotypes between two extremes, influenced by both multiple genes and environmental factors, such as human height and body mass. Discontinuous variation produces distinct, non-overlapping phenotypic categories caused solely by genes, such as ABO blood groups.",
+      "vi": "Mục 1: Biến dị và đột biến: Biến dị liên tục tạo ra một dải kiểu hình liên tục giữa hai cực trị, chịu tác động của nhiều gen và môi trường, như chiều cao và cân nặng ở người. Biến dị không liên tục tạo ra các nhóm kiểu hình phân biệt rõ rệt không chồng lấn do gen quy định hoàn toàn, như các nhóm máu hệ ABO.",
       "duration": 62.06,
       "startTime": 46.65,
       "endTime": 108.71,
       "audioUrl": "/audio/lectures/biology/18/sec_variation_mutation.mp3"
     },
     {
+      "id": "card_mutation",
+      "title": "⚠️ Đột biến Gen & Các Tác nhân Gây Đột biến (Mutagens)",
+      "selector": "#card-mutation",
+      "en": "Mutation and mutagens: A mutation is a spontaneous genetic change in a gene or chromosome that forms new alleles. Mutation frequency is increased by exposure to ionizing radiation such as ultraviolet rays, X-rays, and gamma rays, as well as mutagenic chemicals like heavy metals and tobacco tar.",
+      "vi": "Đột biến gen và tác nhân gây đột biến: Đột biến là sự thay đổi di truyền ngẫu nhiên trong cấu trúc của gen hoặc nhiễm sắc thể tạo ra các alen mới. Tần số đột biến gia tăng mạnh khi tiếp xúc với bức xạ ion hóa như tia cực tím UV, tia X, tia phóng xạ gamma, và các hóa chất gây đột biến như kim loại nặng và hắc ín thuốc lá.",
+      "duration": 38.94,
+      "startTime": 108.71,
+      "endTime": 147.65,
+      "audioUrl": "/audio/lectures/biology/18/card_mutation.mp3"
+    },
+    {
+      "id": "card_sources_variation",
+      "title": "🧬 4 Nguồn gốc Tạo Biến dị Di truyền",
+      "selector": "#card-sources-variation",
+      "en": "Sources of genetic variation: Genetic variation in populations arises from four primary sources: mutation producing novel alleles, crossing over between homologous chromosomes during meiosis, independent random assortment of chromosomes into gametes, and random fertilisation between haploid gametes.",
+      "vi": "Bốn nguồn gốc tạo biến dị di truyền: Biến dị di truyền trong quần thể xuất phát từ bốn nguồn chính: đột biến sinh ra các alen mới, trao đổi chéo giữa các nhiễm sắc thể tương đồng trong giảm phân, sự phân ly độc lập ngẫu nhiên của các nhiễm sắc thể vào giao tử, và sự thụ tinh ngẫu nhiên giữa các giao tử đơn bội.",
+      "duration": 35.61,
+      "startTime": 147.65,
+      "endTime": 183.26,
+      "audioUrl": "/audio/lectures/biology/18/card_sources_variation.mp3"
+    },
+    {
       "id": "sec_adaptive_features",
       "title": "2. Đặc điểm Thích nghi: Thực vật Chịu hạn & Thủy sinh",
       "selector": "#sec-adaptive-features",
-      "en": "Section 2 investigates Adaptive Features: inherited functional characteristics that enhance survival and reproduction in specific habitats. Xerophytes thrive in arid deserts with thick waxy cuticles, sunken stomata in pits to trap humid air, rolled leaves, and extensive root systems. Hydrophytes flourish in aquatic habitats with thin cuticles, stomata located on upper leaf surfaces for atmospheric gas access, and extensive internal air spaces (aerenchyma) for buoyancy.",
-      "vi": "Mục hai nghiên cứu Đặc điểm thích nghi: là những đặc tính hình thái hoặc sinh lý di truyền giúp sinh vật sống sót và sinh sản tối ưu trong sinh cảnh của chúng. Thực vật chịu hạn (Xerophytes) sống ở sa mạc khô cằn có lớp cutin sáp dày, khí khổng nằm sâu trong các hốc để giữ ẩm, lá cuộn tròn hoặc tiêu biến thành gai và rễ cắm rất sâu. Thực vật thủy sinh (Hydrophytes) sống dưới nước có lớp cutin rất mỏng, khí khổng nằm ở mặt trên của lá để trao đổi khí trực tiếp với khí quyển và mô chứa khí (aerenchyma) xốp giúp cây nổi trên mặt nước.",
+      "en": "Section 2: Adaptive features are inherited functional, structural, or behavioral characteristics of an organism that increase its fitness and chances of survival and reproduction in its natural environment.",
+      "vi": "Mục 2: Đặc điểm thích nghi là các đặc tính di truyền về hình thái, sinh lý hoặc tập tính của sinh vật giúp gia tăng độ thích nghi sinh học và nâng cao cơ hội sống sót, sinh sản trong môi trường tự nhiên của chúng.",
       "duration": 62.06,
-      "startTime": 108.71,
-      "endTime": 170.77,
+      "startTime": 183.26,
+      "endTime": 245.32,
       "audioUrl": "/audio/lectures/biology/18/sec_adaptive_features.mp3"
+    },
+    {
+      "id": "card_xerophytes",
+      "title": "🌵 Thích nghi ở Thực vật Chịu hạn (Xerophytes)",
+      "selector": "#card-xerophytes",
+      "en": "Xerophyte adaptations: Desert plants conserve water through sunken stomata creating localized humid microclimates, thick waxy cuticles preventing epidermal evaporation, rolled leaves trapping moist air, reduced leaves forming protective spines, succulent fleshy stems storing water, and deep taproots reaching underground water tables.",
+      "vi": "Thích nghi ở thực vật chịu hạn (Xerophytes): Cây sa mạc tiết kiệm nước nhờ khí khổng thụt sâu tạo vi khí hậu ẩm, lớp cutin sáp dày ngăn bay hơi biểu bì, lá cuộn tròn giữ không khí ẩm, lá tiêu giảm biến thành gai nhọn, thân mọng nước dự trữ nước, và hệ rễ cọc đâm sâu xuống mạch nước ngầm ngầm dưới lòng đất.",
+      "duration": 37.53,
+      "startTime": 245.32,
+      "endTime": 282.85,
+      "audioUrl": "/audio/lectures/biology/18/card_xerophytes.mp3"
+    },
+    {
+      "id": "card_hydrophytes",
+      "title": "🪷 Thích nghi ở Thực vật Thủy sinh (Hydrophytes)",
+      "selector": "#card-hydrophytes",
+      "en": "Hydrophyte adaptations: Aquatic plants living submerged or floating in water feature extensive aerenchyma air spaces providing buoyancy and internal oxygen diffusion pathways, stomata restricted exclusively to upper leaf surfaces in floating leaves, highly reduced cuticles, and thin vestigial root systems.",
+      "vi": "Thích nghi ở thực vật thủy sinh (Hydrophytes): Thực vật sống ngập hoặc nổi trên mặt nước sở hữu các khoang khí xốp aerenchyma tạo sức nổi và dẫn khí oxy bên trong, khí khổng chỉ tập trung ở mặt trên của lá nổi, lớp cutin tiêu giảm mỏng manh, và hệ thống rễ rất nhỏ làm nhiệm vụ neo giữ.",
+      "duration": 34.94,
+      "startTime": 282.85,
+      "endTime": 317.79,
+      "audioUrl": "/audio/lectures/biology/18/card_hydrophytes.mp3"
     },
     {
       "id": "sec_natural_selection",
       "title": "3. Chọn lọc Tự nhiên vs Chọn lọc Nhân tạo",
       "selector": "#sec-natural-selection",
-      "en": "Section 3 outlines Natural Selection: Organisms produce more offspring than the environment can support, triggering a struggle for survival. Random mutations generate phenotypic variation. Individuals with advantageous adaptations are more likely to survive, reproduce, and pass their favorable alleles to successive generations, causing adaptation and evolution. In contrast, Artificial Selection involves humans selectively breeding individuals showing desired economic traits over many generations.",
-      "vi": "Mục ba phác thảo Chọn lọc Tự nhiên: Sinh vật có xu hướng sinh ra nhiều con non hơn mức môi trường có thể nuôi sống, dẫn đến đấu tranh sinh tồn cạnh tranh nguồn tài nguyên. Các cá thể mang biến dị thích nghi có ưu thế sinh tồn cao hơn, sống sót đến tuổi sinh sản và truyền lại các allele có lợi cho thế hệ sau, dẫn đến sự tiến hóa thích nghi của quần thể. Ngược lại, Chọn giống Nhân tạo (Artificial Selection) do con người chủ động chọn và lai các cá thể mang tính trạng mong muốn qua nhiều thế hệ để phục vụ mục đích kinh tế.",
+      "en": "Section 3: Natural and artificial selection: Natural selection is the process where individuals with favorable phenotypic adaptations are more likely to survive, reproduce, and pass on their advantageous alleles to the next generation, driving evolutionary adaptation.",
+      "vi": "Mục 3: Chọn lọc tự nhiên và nhân tạo: Chọn lọc tự nhiên là quá trình các cá thể sở hữu kiểu hình thích nghi thuận lợi có xác suất sống sót, sinh sản cao hơn và truyền lại các alen ưu thế cho thế hệ con cháu, thúc đẩy sự tiến hóa thích nghi của loài.",
       "duration": 61.55,
-      "startTime": 170.77,
-      "endTime": 232.32,
+      "startTime": 317.79,
+      "endTime": 379.34,
       "audioUrl": "/audio/lectures/biology/18/sec_natural_selection.mp3"
+    },
+    {
+      "id": "card_natural_selection_steps",
+      "title": "🌿 5 Bước Cốt lõi của Chọn lọc Tự nhiên",
+      "selector": "#card-natural-selection-steps",
+      "en": "The 5 steps of natural selection: First, overproduction of offspring. Second, struggle for existence due to limited resources. Third, phenotypic variation within the population. Fourth, survival of the fittest possessing advantageous alleles. Fifth, differential reproduction passing advantageous alleles to offspring, increasing allele frequency over generations.",
+      "vi": "Năm bước cốt lõi của chọn lọc tự nhiên: Thứ nhất, sinh vật sinh sản quá mức tạo ra số lượng con non lớn. Thứ hai, xảy ra đấu tranh sinh tồn do tài nguyên môi trường có hạn. Thứ ba, biến dị di truyền tồn tại sẵn trong quần thể. Thứ tư, các cá thể thích nghi nhất sở hữu alen có lợi sẽ sống sót. Thứ năm, sinh sản phân hóa giúp truyền alen có lợi cho đời sau, làm tăng tần số alen thích nghi qua các thế hệ.",
+      "duration": 53.39,
+      "startTime": 379.34,
+      "endTime": 432.73,
+      "audioUrl": "/audio/lectures/biology/18/card_natural_selection_steps.mp3"
     }
   ]
 }

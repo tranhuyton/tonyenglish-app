@@ -1,33 +1,57 @@
 {
   "lectureId": "55023dc0-7fdc-46ea-a3e9-9a049306d086",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 21: Biotechnology and Genetic Engineering",
-  "totalDuration": 260.77,
-  "majorSections": [
-    {
-      "id": "sec_why_bacteria",
-      "title": "1. Ứng dụng Vi sinh vật trong Công nghệ"
+  "totalDuration": 477.42,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_industrial_fermenter",
-      "title": "2. Cấu tạo Nồi lên men Công nghiệp"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_genetic_engineering",
-      "title": "3. Kỹ thuật Di truyền & Insulin Tái tổ hợp"
+    "sec_why_bacteria": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_gm_crops",
-      "title": "4. Cây trồng Biến đổi Gen (GM Crops)"
+    "sec-why-bacteria": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_biotech_enzymes": {
+      "start": 3,
+      "end": 4
+    },
+    "sec-biotech-enzymes": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_industrial_fermenter": {
+      "start": 5,
+      "end": 6
+    },
+    "sec-industrial-fermenter": {
+      "start": 5,
+      "end": 6
+    },
+    "sec_genetic_engineering": {
+      "start": 7,
+      "end": 9
+    },
+    "sec-genetic-engineering": {
+      "start": 7,
+      "end": 9
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 21: Công nghệ Sinh học & Kỹ thuật Di truyền",
+      "title": "Giới thiệu Topic 21: Công nghệ Sinh học & Kỹ thuật Di truyền",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 21: Biotechnology and Genetic Engineering. In this cutting-edge final chapter, we explore industrial microbiology, fermenter design, recombinant DNA technology for human insulin production, and the benefits and hazards of genetically modified crops.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 21: Công nghệ Sinh học và Kỹ thuật Di truyền. Trong bài học kết thúc toàn bộ khóa học này, chúng ta sẽ khảo sát ứng dụng vi sinh vật công nghiệp, cấu tạo nồi lên men, công nghệ DNA tái tổ hợp sản xuất insulin người và các cơ hội cùng thách thức của cây trồng biến đổi gen.",
+      "en": "Welcome to Topic 21: Biotechnology and Genetic Engineering. Biotechnology is the application of biological organisms, systems, or processes to manufacturing and service industries. In this lesson, we study bacterial and yeast physiology, commercial enzyme applications including pectinase and lactase, industrial fermenter engineering, and recombinant DNA technology producing human insulin and genetically modified crops.",
+      "vi": "Chào mừng các bạn đến với Bài 21: Công nghệ Sinh học và Kỹ thuật Di truyền. Công nghệ sinh học là ứng dụng các sinh vật, hệ thống sinh học vào công nghiệp sản xuất và dịch vụ đời sống. Trong bài học này, chúng ta sẽ học về vi khuẩn và nấm men, ứng dụng enzyme công nghiệp như pectinase và lactase, thiết kế bồn lên men công nghiệp, cùng kỹ thuật tái tổ hợp ADN sản xuất insulin người và cây trồng chuyển gen.",
       "duration": 39.5,
       "startTime": 0.0,
       "endTime": 39.5,
@@ -37,45 +61,100 @@
       "id": "sec_why_bacteria",
       "title": "1. Ứng dụng Vi sinh vật trong Công nghệ Sinh học",
       "selector": "#sec-why-bacteria",
-      "en": "Section 1 explains why bacteria are ideal organisms in biotechnology: Bacteria reproduce extremely rapidly via binary fission, possess simple nutritional requirements, share universal genetic code with humans, contain circular plasmids ideal for gene insertion, and produce complex proteins without animal ethical objections.",
-      "vi": "Mục một giải thích vì sao vi khuẩn là đối tượng lý tưởng trong công nghệ sinh học: Vi khuẩn phân chia nhân đôi cực nhanh, nhu cầu dinh dưỡng đơn giản, sử dụng chung mã di truyền phổ quát với con người, sở hữu các plasmid dạng vòng dễ chèn gen ngoại lai và có thể sản xuất protein phức tạp mà không vướng phải các rào cản đạo đức như thử nghiệm trên động vật.",
+      "en": "Section 1: Microorganisms in biotechnology: Bacteria and fungi are ideal for industrial use because they reproduce extremely rapidly, possess simple nutritional requirements, synthesize complex organic molecules, share the universal genetic code, and raise fewer ethical concerns than using animals.",
+      "vi": "Mục 1: Vi sinh vật trong công nghệ sinh học: Vi khuẩn và nấm rất lý tưởng trong công nghiệp vì tốc độ sinh sản cực nhanh, nhu cầu dinh dưỡng đơn giản, khả năng tổng hợp các phân tử hữu cơ phức tạp, dùng chung mã di truyền phổ quát và ít vấp phải vấn đề đạo đức so với sử dụng động vật.",
       "duration": 39.06,
       "startTime": 39.5,
       "endTime": 78.56,
       "audioUrl": "/audio/lectures/biology/21/sec_why_bacteria.mp3"
     },
     {
-      "id": "sec_industrial_fermenter",
-      "title": "2. Nồi lên men Công nghiệp (The Industrial Fermenter)",
-      "selector": "#sec-industrial-fermenter",
-      "en": "Section 2 investigates industrial fermenter engineering: Steam sterilization cleans the vessel beforehand to kill unwanted microbes that would compete for nutrients. A cooling water jacket circulates cold water to dissipate excess metabolic heat from respiration, maintaining optimum temperature. Stirring paddles maintain uniform suspension and nutrient access. Probes constantly monitor pH and temperature, while a sterile air sparger supplies oxygen for aerobic respiration.",
-      "vi": "Mục hai nghiên cứu cấu tạo kỹ thuật của nồi lên men công nghiệp: Khử trùng bằng luồng hơi nước áp suất cao trước khi nuôi cấy để diệt sạch vi sinh vật tạp nhiễm cạnh tranh dinh dưỡng. Áo làm mát tuần hoàn nước lạnh hấp thu nhiệt lượng tỏa ra từ quá trình hô hấp tế bào để giữ nhiệt độ tối ưu. Cánh khuấy khuấy đều giúp vi sinh vật tiếp xúc liên tục với chất dinh dưỡng. Các đầu dò cảm biến liên tục đo pH và nhiệt độ, kết hợp với sục khí vô trùng cung cấp oxy cho hô hấp hiếu khí.",
-      "duration": 56.99,
+      "id": "card_bacteria_yeast_role",
+      "title": "🧫 Ưu thế của Vi khuẩn & Lên men Rượu ở Nấm men",
+      "selector": "#card-bacteria-yeast-role",
+      "en": "Yeast anaerobic respiration: Yeast respires anaerobically via alcohol fermentation, converting glucose into ethanol and carbon dioxide. Carbon dioxide bubbles trapped in dough cause bread to rise, while ethanol is used in brewing beer and making wine.",
+      "vi": "Hô hấp kỵ khí ở nấm men: Nấm men hô hấp kỵ khí qua lên men rượu, chuyển hóa glucose thành rượu ethanol và khí CO2. Khí CO2 tạo bọt khí nở xốp bột làm bánh mì phồng xốp, còn ethanol được ứng dụng trong sản xuất bia và rượu vang.",
+      "duration": 32.54,
       "startTime": 78.56,
-      "endTime": 135.55,
+      "endTime": 111.1,
+      "audioUrl": "/audio/lectures/biology/21/card_bacteria_yeast_role.mp3"
+    },
+    {
+      "id": "sec_biotech_enzymes",
+      "title": "2. Ứng dụng Enzyme trong Công nghệ Sinh học",
+      "selector": "#sec-biotech-enzymes",
+      "en": "Section 2: Enzymes in biotechnology: Enzymes act as biological catalysts functioning at mild temperatures and pressures, lowering industrial operational energy costs.",
+      "vi": "Mục 2: Enzyme trong công nghệ sinh học: Enzyme là chất xúc tác sinh học hoạt động hiệu quả ở nhiệt độ và áp suất ôn hòa, giúp tiết kiệm đáng kể chi phí năng lượng trong vận hành công nghiệp.",
+      "duration": 22.05,
+      "startTime": 111.1,
+      "endTime": 133.15,
+      "audioUrl": "/audio/lectures/biology/21/sec_biotech_enzymes.mp3"
+    },
+    {
+      "id": "card_biotech_enzymes",
+      "title": "🧪 Enzyme Pectinase, Bột giặt Sinh học & Sữa Lactose-Free",
+      "selector": "#card-biotech-enzymes",
+      "en": "Commercial enzyme applications: Pectinase breaks down plant cell wall pectin, increasing juice yield and clarity. Biological washing powders contain proteases and lipases that digest blood and grease stains at low temperatures. Lactase breaks milk sugar lactose into glucose and galactose, producing lactose-free milk for lactose-intolerant people.",
+      "vi": "Các ứng dụng enzyme thương mại: Pectinase phân giải pectin ở thành tế bào thực vật giúp tăng sản lượng nước ép và làm trong nước trái cây. Bột giặt sinh học chứa protease và lipase phân giải vết bẩn protein máu và dầu mỡ ở nhiệt độ giặt thấp. Lactase phân giải đường lactose thành glucose và galactose, sản xuất sữa không chứa lactose cho người không dung nạp đường sữa.",
+      "duration": 44.1,
+      "startTime": 133.15,
+      "endTime": 177.25,
+      "audioUrl": "/audio/lectures/biology/21/card_biotech_enzymes.mp3"
+    },
+    {
+      "id": "sec_industrial_fermenter",
+      "title": "3. Nồi lên men Công nghiệp (The Industrial Fermenter)",
+      "selector": "#sec-industrial-fermenter",
+      "en": "Section 3: The industrial fermenter: A fermenter is a large stainless-steel vessel providing optimal aseptic conditions for mass microorganism culture producing antibiotics, enzymes, or recombinant proteins.",
+      "vi": "Mục 3: Bồn lên men công nghiệp: Bồn lên men là một thiết bị inox lớn cung cấp môi trường vô trùng và các điều kiện tối ưu để nuôi cấy vi sinh vật số lượng lớn nhằm thu hoạch kháng sinh, enzyme hoặc protein tái tổ hợp.",
+      "duration": 56.99,
+      "startTime": 177.25,
+      "endTime": 234.24,
       "audioUrl": "/audio/lectures/biology/21/sec_industrial_fermenter.mp3"
     },
     {
+      "id": "card_fermenter_engineering",
+      "title": "🏭 Thiết kế Bồn Lên men & Tiệt trùng Hơi nước Nóng",
+      "selector": "#card-fermenter-engineering",
+      "en": "Fermenter components and sterile conditions: Cooling water jackets remove metabolic heat, preventing enzyme denaturation. Stirring impellers ensure uniform nutrient and oxygen distribution. Sterile air inlets supply oxygen for aerobic respiration. Probes monitor temperature and pH, adjusted with automated acid or alkali additions. Fermenters are steam-sterilized before inoculation to eliminate contaminating microorganisms that would compete for nutrients or destroy the yield.",
+      "vi": "Cấu tạo bồn lên men và khử trùng vô trùng: Áo làm mát dẫn nước giải nhiệt trao đổi chất, ngăn ngừa biến tính enzyme. Cánh khuấy đảo trộn liên tục đảm bảo dưỡng chất và oxy phân tán đồng đều. Luồng khí vô trùng cung cấp oxy cho hô hấp hiếu khí. Các đầu dò theo dõi nhiệt độ và độ pH, tự động bơm thêm axit hoặc kiềm điều chỉnh. Bồn lên men phải được tiệt trùng bằng hơi nước nóng trước khi cấy giống để tiêu diệt mọi vi sinh vật tạp nhiễm cạnh tranh thức ăn hoặc làm hỏng mẻ nuôi.",
+      "duration": 60.35,
+      "startTime": 234.24,
+      "endTime": 294.59,
+      "audioUrl": "/audio/lectures/biology/21/card_fermenter_engineering.mp3"
+    },
+    {
       "id": "sec_genetic_engineering",
-      "title": "3. Kỹ thuật Di truyền & Sản xuất Insulin người (Recombinant DNA)",
+      "title": "4. Kỹ thuật Di truyền & Sản xuất Insulin Người",
       "selector": "#sec-genetic-engineering",
-      "en": "Section 3 details the four-step recombinant insulin protocol: Step 1: The human insulin gene is isolated and cut out using a specific restriction endonuclease enzyme, creating complementary sticky ends. Step 2: A bacterial plasmid vector is cut open using the same restriction enzyme. Step 3: The human gene and open plasmid are joined together using DNA ligase enzyme to create a recombinant plasmid. Step 4: The recombinant plasmid is inserted into a host bacterium, which multiplies in fermenters to mass-produce human insulin.",
-      "vi": "Mục ba mô tả quy trình 4 bước tạo insulin tái tổ hợp: Bước 1: Phân lập và cắt đoạn gen mã hóa insulin người bằng enzyme giới hạn cắt nối đặc hiệu (restriction enzyme), để lại các đầu dính so le. Bước 2: Dùng chính enzyme giới hạn đó để cắt mở vòng plasmid của vi khuẩn. Bước 3: Nối đoạn gen người vào plasmid nhờ enzyme nối DNA ligase tạo thành plasmid tái tổ hợp. Bước 4: Chuyển plasmid tái tổ hợp vào tế bào vi khuẩn chủ, nuôi cấy nhân dòng trong nồi lên men để sản xuất hàng loạt hormone insulin người phục vụ bệnh nhân tiểu đường.",
+      "en": "Section 4: Genetic engineering: Genetic engineering is the artificial modification of an organism's genome by transferring a specific gene from another organism.",
+      "vi": "Mục 4: Kỹ thuật di truyền: Kỹ thuật di truyền là sự can thiệp biến đổi nhân tạo hệ gen của sinh vật bằng cách chuyển một gen mong muốn từ sinh vật này sang sinh vật khác.",
       "duration": 69.62,
-      "startTime": 135.55,
-      "endTime": 205.17,
+      "startTime": 294.59,
+      "endTime": 364.21,
       "audioUrl": "/audio/lectures/biology/21/sec_genetic_engineering.mp3"
     },
     {
-      "id": "sec_gm_crops",
-      "title": "4. Cây trồng Biến đổi Gen (Genetically Modified Crops)",
-      "selector": "#sec-gm-crops",
-      "en": "Section 4 weighs the advantages and disadvantages of Genetically Modified (GM) crops: Advantages include higher yields, drought tolerance, enhanced nutritional value like vitamin A in Golden Rice, and insect resistance like Bt maize reducing pesticide expenditure. Disadvantages include risks of herbicide-resistance genes transferring to wild weed relatives creating superweeds, potential human allergenicity, and financial dependency on multinational seed patents.",
-      "vi": "Mục bốn cân nhắc lợi ích và rủi ro của Cây trồng biến đổi gen (GM crops): Lợi ích gồm tăng năng suất cây trồng, tăng khả năng chịu hạn mặn, nâng cao giá trị dinh dưỡng như gạo Vàng giàu tiền chất vitamin A chống mù lòa và giống ngô Bt mang gen diệt sâu giúp giảm phun thuốc hóa học. Rủi ro tiềm ẩn gồm nguy cơ phát tán gen kháng thuốc diệt cỏ sang cỏ dại bản địa tạo ra siêu cỏ dại khó diệt, nguy cơ dị ứng thực phẩm và sự lệ thuộc kinh tế vào các tập đoàn hạt giống độc quyền.",
-      "duration": 55.6,
-      "startTime": 205.17,
-      "endTime": 260.77,
-      "audioUrl": "/audio/lectures/biology/21/sec_gm_crops.mp3"
+      "id": "card_insulin_production",
+      "title": "🧬 5 Bước Sản xuất Insulin Người bằng ADN Tái tổ hợp",
+      "selector": "#card-insulin-production",
+      "en": "5 steps of human insulin production: First, human insulin gene is isolated and cut using a restriction enzyme. Second, bacterial plasmid DNA is cut with the same restriction enzyme, creating complementary sticky ends. Third, DNA ligase joins the human gene with plasmid forming recombinant DNA. Fourth, recombinant plasmid is inserted into host bacterium. Fifth, transgenic bacteria multiply in fermenters, expressing and secreting identical human insulin.",
+      "vi": "Năm bước sản xuất insulin người: Thứ nhất, phân lập gen mã hóa insulin người và cắt bằng enzyme giới hạn restriction enzyme. Thứ hai, cắt plasmid của vi khuẩn bằng chính enzyme giới hạn đó để tạo các đầu dính bổ sung. Thứ ba, dùng enzyme nối DNA ligase gắn gen người vào plasmid tạo ADN tái tổ hợp. Thứ tư, chuyển plasmid tái tổ hợp vào vi khuẩn chủ. Thứ năm, vi khuẩn chuyển gen nhân lên trong bồn lên men, biểu hiện và tiết ra insulin người tinh khiết.",
+      "duration": 64.07,
+      "startTime": 364.21,
+      "endTime": 428.28,
+      "audioUrl": "/audio/lectures/biology/21/card_insulin_production.mp3"
+    },
+    {
+      "id": "card_gm_crops_pros_cons",
+      "title": "🌾 Cây trồng Chuyển Gen (GM Crops): Lợi ích & Quan ngại",
+      "selector": "#card-gm-crops-pros-cons",
+      "en": "GM crops benefits and concerns: Genetically modified crops can carry genes for herbicide resistance allowing selective weed control, insect resistance reducing pesticide use, and biofortification like Golden Rice producing Vitamin A. Concerns include potential gene transfer to wild weeds creating superweeds, disruption of food chains, pest resistance evolution, and socioeconomic dependence on multinational seed corporations.",
+      "vi": "Lợi ích và mối lo ngại về cây trồng chuyển gen (GM crops): Cây trồng GM có thể mang gen kháng thuốc diệt cỏ giúp làm cỏ chọn lọc, gen kháng sâu bệnh giúp giảm thuốc trừ sâu hóa học, và tăng giá trị dinh dưỡng như Gạo Vàng tổng hợp Vitamin A. Mối lo ngại gồm nguy cơ phát tán gen sang cỏ dại tạo cỏ siêu kháng thuốc, xáo trộn chuỗi thức ăn tự nhiên, sâu hại tiến hóa kháng độc tố và sự phụ thuộc kinh tế vào các tập đoàn hạt giống.",
+      "duration": 49.14,
+      "startTime": 428.28,
+      "endTime": 477.42,
+      "audioUrl": "/audio/lectures/biology/21/card_gm_crops_pros_cons.mp3"
     }
   ]
 }

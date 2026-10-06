@@ -1,29 +1,65 @@
 {
   "lectureId": "7b2384dd-b79d-47fe-b36b-7abf36784f06",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 19: Organisms and their environment",
-  "totalDuration": 207.18,
-  "majorSections": [
-    {
-      "id": "sec_ecological_definitions",
-      "title": "1. Thuật ngữ Sinh thái học"
+  "totalDuration": 459.51,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_food_chains_energy",
-      "title": "2. Chuỗi Thức ăn & Quy tắc 10%"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_carbon_cycle",
-      "title": "3. Vòng tuần hoàn Cacbon"
+    "sec_ecological_definitions": {
+      "start": 1,
+      "end": 3
+    },
+    "sec-ecological-definitions": {
+      "start": 1,
+      "end": 3
+    },
+    "sec_food_chains_energy": {
+      "start": 4,
+      "end": 5
+    },
+    "sec-food-chains-energy": {
+      "start": 4,
+      "end": 5
+    },
+    "sec_nutrient_cycles": {
+      "start": 6,
+      "end": 8
+    },
+    "sec-nutrient-cycles": {
+      "start": 6,
+      "end": 8
+    },
+    "sec_carbon_cycle": {
+      "start": 6,
+      "end": 8
+    },
+    "sec-carbon-cycle": {
+      "start": 6,
+      "end": 8
+    },
+    "sec_populations": {
+      "start": 9,
+      "end": 10
+    },
+    "sec-populations": {
+      "start": 9,
+      "end": 10
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 19: Sinh vật và Môi trường Sinh thái",
+      "title": "Giới thiệu Topic 19: Sinh vật và Môi trường Sinh thái",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 19: Organisms and their environment. Ecology explores the intricate relationships between living organisms and physical habitats. In this lesson, we study core ecological definitions, food chains, webs, and trophic energy loss, and analyze the carbon cycle.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 19: Sinh vật và Môi trường Sinh thái. Sinh thái học khám phá mối quan hệ tương tác phức tạp giữa sinh vật sống và sinh cảnh tự nhiên. Trong bài học này, chúng ta sẽ khảo sát các định nghĩa sinh thái cốt lõi, chuỗi thức ăn, lưới thức ăn, quy luật thất thoát năng lượng và vòng tuần hoàn cacbon.",
+      "en": "Welcome to Topic 19: Organisms and their Environment. Ecology is the scientific study of interactions among organisms and between organisms and their abiotic physical environment. In this lesson, we define ecological levels, analyze energy transfer efficiency across trophic levels, construct ecological pyramids, trace the carbon cycle and microbial nitrogen cycle, and evaluate factors governing population sigmoid growth curves.",
+      "vi": "Chào mừng các bạn đến với Bài 19: Sinh vật và Môi trường Sinh thái. Sinh thái học là ngành khoa học nghiên cứu mối tương tác giữa các sinh vật với nhau và giữa sinh vật với môi trường vật lý vô sinh. Trong bài học này, chúng ta sẽ định nghĩa các cấp độ sinh thái, phân tích hiệu suất truyền năng lượng qua các bậc dinh dưỡng, xây dựng tháp sinh thái, chu trình carbon và chu trình nitơ của vi sinh vật, cùng các giai đoạn tăng trưởng quần thể hình chữ S.",
       "duration": 43.36,
       "startTime": 0.0,
       "endTime": 43.36,
@@ -33,34 +69,111 @@
       "id": "sec_ecological_definitions",
       "title": "1. Thuật ngữ Sinh thái: Quần thể, Quần xã & Hệ sinh thái",
       "selector": "#sec-ecological-definitions",
-      "en": "Section 1 defines ecological foundations: A Population is a group of organisms of one species living in the same area at the same time. A Community is all of the populations of different species in an ecosystem. An Ecosystem is a unit containing a community of organisms and their abiotic environment, interacting together.",
-      "vi": "Mục một định nghĩa các khái niệm nền tảng: Quần thể (Population) là tập hợp các cá thể thuộc cùng một loài cùng sinh sống trong một sinh cảnh tại một thời điểm xác định. Quần xã (Community) là tập hợp tất cả các quần thể thuộc các loài khác nhau cùng tồn tại trong một hệ sinh thái. Hệ sinh thái (Ecosystem) là một chỉnh thể bao gồm quần xã sinh vật và môi trường vô sinh (abiotic) tương tác chặt chẽ với nhau.",
+      "en": "Section 1: Ecological definitions: A producer makes its own organic nutrients using sunlight energy through photosynthesis. A consumer obtains its energy by feeding on other organisms. Herbivores feed on plants; carnivores feed on other animals; decomposers obtain energy from dead organic waste.",
+      "vi": "Mục 1: Các thuật ngữ sinh thái cốt lõi: Sinh vật sản xuất tự tổng hợp chất hữu cơ bằng năng lượng ánh sáng mặt trời qua quang hợp. Sinh vật tiêu thụ nhận năng lượng bằng cách ăn các sinh vật khác. Động vật ăn cỏ ăn thực vật; động vật ăn thịt ăn động vật khác; sinh vật phân giải lấy năng lượng từ xác và chất thải hữu cơ.",
       "duration": 46.05,
       "startTime": 43.36,
       "endTime": 89.41,
       "audioUrl": "/audio/lectures/biology/19/sec_ecological_definitions.mp3"
     },
     {
+      "id": "card_eco_definitions",
+      "title": "🌱 Sinh vật Sản xuất vs 🦊 Tiêu thụ vs 🪱 Phân giải",
+      "selector": "#card-eco-definitions",
+      "en": "Trophic classifications: Primary consumers are herbivores. Secondary and tertiary consumers are carnivores. Decomposers secrete extracellular digestive enzymes to break down complex dead organic macromolecules into simple inorganic mineral ions returned to the soil.",
+      "vi": "Phân loại bậc dinh dưỡng: Sinh vật tiêu thụ bậc một là động vật ăn cỏ. Sinh vật tiêu thụ bậc hai và bậc ba là động vật ăn thịt. Sinh vật phân giải tiết enzyme ngoại bào phân giải các đại phân tử hữu cơ từ xác chết thành các ion khoáng vô cơ đơn giản trả lại cho đất.",
+      "duration": 34.46,
+      "startTime": 89.41,
+      "endTime": 123.87,
+      "audioUrl": "/audio/lectures/biology/19/card_eco_definitions.mp3"
+    },
+    {
+      "id": "card_eco_levels",
+      "title": "🏕️ Quần thể vs Quần xã vs Hệ sinh thái",
+      "selector": "#card-eco-levels",
+      "en": "Levels of ecological organization: A population is a group of organisms of one species living in the same area at the same time. A community is all the populations of different species living in an ecosystem. An ecosystem is a unit containing a community of organisms interacting with their abiotic environment.",
+      "vi": "Các cấp độ tổ chức sinh thái: Quần thể là tập hợp các cá thể cùng một loài cùng sinh sống trong một sinh cảnh tại một thời điểm. Quần xã là tập hợp tất cả các quần thể thuộc các loài khác nhau cùng chung sống trong một hệ sinh thái. Hệ sinh thái là một hệ thống hoàn chỉnh gồm quần xã sinh vật tương tác mật thiết với môi trường vô sinh.",
+      "duration": 38.8,
+      "startTime": 123.87,
+      "endTime": 162.67,
+      "audioUrl": "/audio/lectures/biology/19/card_eco_levels.mp3"
+    },
+    {
       "id": "sec_food_chains_energy",
       "title": "2. Chuỗi Thức ăn, Lưới Thức ăn & Dòng Năng lượng (Quy tắc 10%)",
       "selector": "#sec-food-chains-energy",
-      "en": "Section 2 investigates energy flow: The primary source of energy is sunlight, converted into organic chemical energy by photosynthetic producers. Energy passes along trophic levels from primary consumers to apex predators. However, approximately 90% of energy is lost at each transfer as heat through respiration, locomotion, excretion, and uneaten tissue. Because only roughly 10% is incorporated into new biomass, food chains rarely exceed four to five links.",
-      "vi": "Mục hai nghiên cứu dòng năng lượng: Nguồn năng lượng sơ cấp cho mọi hệ sinh thái là ánh sáng mặt trời, được sinh vật sản xuất quang hợp chuyển thành hóa năng dự trữ. Năng lượng truyền qua các bậc dinh dưỡng từ sinh vật tiêu thụ bậc một đến các loài săn mồi đỉnh. Tuy nhiên, khoảng 90% năng lượng bị thất thoát ở mỗi bậc dinh dưỡng dưới dạng nhiệt từ hô hấp, vận động, bài tiết và các phần không ăn được. Vì chỉ có khoảng 10% năng lượng được tích lũy thành sinh khối mới, nên các chuỗi thức ăn trong tự nhiên hiếm khi dài quá 4 đến 5 mắt xích.",
+      "en": "Section 2: Food chains and energy flow: The sun is the principal source of energy input to biological ecosystems. Energy flows unidirectionally through food chains and food webs, being dissipated continually as metabolic heat.",
+      "vi": "Mục 2: Chuỗi thức ăn và dòng năng lượng: Mặt trời là nguồn năng lượng sơ cấp khởi nguồn cho mọi hệ sinh thái sinh học. Năng lượng truyền một chiều qua chuỗi và lưới thức ăn, liên tục bị tiêu hao ra môi trường dưới dạng nhiệt trao đổi chất.",
       "duration": 61.74,
-      "startTime": 89.41,
-      "endTime": 151.15,
+      "startTime": 162.67,
+      "endTime": 224.41,
       "audioUrl": "/audio/lectures/biology/19/sec_food_chains_energy.mp3"
     },
     {
-      "id": "sec_carbon_cycle",
-      "title": "3. Vòng tuần hoàn Cacbon (The Carbon Cycle)",
-      "selector": "#sec-carbon-cycle",
-      "en": "Section 3 details the Carbon Cycle: Atmospheric carbon dioxide is removed solely by plant photosynthesis. Carbon returns to the atmosphere through three major avenues: cellular respiration by plants, animals, and decomposers; combustion of fossil fuels; and microbial decomposition of dead organic matter. Human combustion of coal, oil, and gas, coupled with deforestation, disrupts this equilibrium and drives global climate change.",
-      "vi": "Mục ba phân tích chi tiết Vòng tuần hoàn Cacbon: Khí CO2 trong khí quyển chỉ được hấp thu duy nhất qua quá trình quang hợp của thực vật. Cacbon được hoàn trả lại khí quyển qua 3 con đường chính: hô hấp tế bào của thực vật, động vật và vi sinh vật; quá trình đốt cháy nhiên liệu hóa thạch; và sự phân hủy xác sinh vật của vi khuẩn và nấm. Hoạt động đốt than đá, dầu mỏ và nạn phá rừng của con người đang làm mất cân bằng vòng tuần hoàn này, dẫn đến biến đổi khí hậu toàn cầu.",
-      "duration": 56.03,
-      "startTime": 151.15,
-      "endTime": 207.18,
-      "audioUrl": "/audio/lectures/biology/19/sec_carbon_cycle.mp3"
+      "id": "card_energy_flow_10pct",
+      "title": "📉 Quy tắc 10% & Giới hạn Độ dài Chuỗi Thức ăn",
+      "selector": "#card-energy-flow-10pct",
+      "en": "The 10 percent energy rule: Approximately 90 percent of energy is lost between successive trophic levels through cellular respiration, heat dissipation, incomplete digestion excreted in feces, and uneaten biomass. Consequently, food chains rarely exceed four or five trophic levels.",
+      "vi": "Quy tắc 10 phần trăm năng lượng: Khoảng 90 phần trăm năng lượng bị thất thoát giữa các bậc dinh dưỡng kế tiếp qua hô hấp tế bào, tỏa nhiệt, thức ăn không tiêu hóa đào thải qua phân và các bộ phận không bị ăn. Do đó, chuỗi thức ăn hiếm khi vượt quá bốn đến năm bậc dinh dưỡng.",
+      "duration": 34.5,
+      "startTime": 224.41,
+      "endTime": 258.91,
+      "audioUrl": "/audio/lectures/biology/19/card_energy_flow_10pct.mp3"
+    },
+    {
+      "id": "sec_nutrient_cycles",
+      "title": "3. Chu trình Dinh dưỡng (Cacbon & Nitơ)",
+      "selector": "#sec-nutrient-cycles",
+      "en": "Section 3: Nutrient cycles: Unlike energy which flows linearly and dissipates, chemical nutrients like carbon and nitrogen cycle continuously between living organisms and the abiotic environment.",
+      "vi": "Mục 3: Chu trình dinh dưỡng: Khác với năng lượng chỉ truyền một chiều và tiêu hao, các nguyên tố hóa học như cacbon và nitơ tuần hoàn liên tục không ngừng giữa sinh vật sống và môi trường vô sinh.",
+      "duration": 23.25,
+      "startTime": 258.91,
+      "endTime": 282.16,
+      "audioUrl": "/audio/lectures/biology/19/sec_nutrient_cycles.mp3"
+    },
+    {
+      "id": "card_carbon_cycle",
+      "title": "♻️ Vòng tuần hoàn Cacbon (The Carbon Cycle)",
+      "selector": "#card-carbon-cycle",
+      "en": "The carbon cycle: Carbon dioxide is removed from the atmosphere exclusively by photosynthesis in plants and algae. Carbon is returned to the atmosphere by cellular respiration of plants, animals, and decomposers, and by combustion of fossil fuels.",
+      "vi": "Chu trình cacbon: Khí CO2 chỉ được loại bỏ khỏi khí quyển duy nhất thông qua quá trình quang hợp của thực vật và tảo. Khí CO2 được trả lại khí quyển thông qua hô hấp tế bào của thực vật, động vật, sinh vật phân giải và qua quá trình đốt cháy nhiên liệu hóa thạch.",
+      "duration": 31.48,
+      "startTime": 282.16,
+      "endTime": 313.64,
+      "audioUrl": "/audio/lectures/biology/19/card_carbon_cycle.mp3"
+    },
+    {
+      "id": "card_nitrogen_cycle",
+      "title": "🧪 Chu trình Nitơ & 4 Nhóm Vi khuẩn Cốt lõi",
+      "selector": "#card-nitrogen-cycle",
+      "en": "The nitrogen cycle and 4 bacterial roles: Nitrogen gas in air is inert and unusable by plants. Nitrogen-fixing bacteria in soil and root nodules convert nitrogen gas into ammonium ions. Nitrifying bacteria oxidize ammonium into nitrites then nitrates absorbed by plant roots. Decomposing bacteria convert protein urea in waste into ammonium. Denitrifying bacteria in anaerobic waterlogged soil convert nitrates back into atmospheric nitrogen gas.",
+      "vi": "Chu trình nitơ và bốn nhóm vi khuẩn cốt lõi: Khí nitơ trong khí quyển trơ và thực vật không thể hấp thụ trực tiếp. Vi khuẩn cố định đạm trong đất và nốt sần rễ cây họ Đậu chuyển khí nitơ thành ion amoni. Vi khuẩn nitrat hóa oxy hóa amoni thành nitrit rồi thành nitrat cho rễ cây hấp thụ. Vi khuẩn phân giải biến protein và urê thành amoni. Vi khuẩn phản nitrat hóa trong đất ngập úng kỵ khí biến nitrat thành khí nitơ trả lại khí quyển.",
+      "duration": 61.26,
+      "startTime": 313.64,
+      "endTime": 374.9,
+      "audioUrl": "/audio/lectures/biology/19/card_nitrogen_cycle.mp3"
+    },
+    {
+      "id": "sec_populations",
+      "title": "4. Động lực học Quần thể & Đường cong Tăng trưởng Sigmoid",
+      "selector": "#sec-populations",
+      "en": "Section 4: Population dynamics: Population size is determined by the balance between birth rate, death rate, immigration, and emigration. Populations exhibiting exponential growth eventually face limiting factors forming a sigmoid curve.",
+      "vi": "Mục 4: Động lực học quần thể: Kích thước quần thể được quyết định bởi sự cân bằng giữa mức sinh sản, mức tử vong, nhập cư và xuất cư. Quần thể tăng trưởng ban đầu theo cấp số nhân nhưng sau đó chịu sự kìm hãm của các yếu tố giới hạn tạo thành đường cong chữ S (Sigmoid).",
+      "duration": 32.78,
+      "startTime": 374.9,
+      "endTime": 407.68,
+      "audioUrl": "/audio/lectures/biology/19/sec_populations.mp3"
+    },
+    {
+      "id": "card_population_sigmoid",
+      "title": "📈 Các Pha của Đường cong Tăng trưởng Chữ S (Sigmoid)",
+      "selector": "#card-population-sigmoid",
+      "en": "Phases of the sigmoid growth curve: The lag phase is slow initial growth as organisms adapt to conditions. The exponential log phase shows rapid multiplying with birth rate far exceeding death rate. The stationary phase occurs when birth rate equals death rate as carrying capacity is reached due to food shortage or disease. The death phase ensues when toxins accumulate and death rate exceeds birth rate.",
+      "vi": "Các pha của đường cong sinh trưởng chữ S: Pha tiềm phát (lag phase) số lượng tăng chậm do sinh vật đang thích nghi. Pha lũy thừa (exponential phase) số lượng bùng nổ do tỷ lệ sinh vượt xa tỷ lệ chết. Pha cân bằng (stationary phase) đạt sức chứa môi trường khi tỷ lệ sinh bằng tỷ lệ chết do thiếu thức ăn hoặc bệnh tật. Pha tử vong (death phase) xảy ra khi độc tố tích tụ khiến tỷ lệ chết vượt tỷ lệ sinh.",
+      "duration": 51.83,
+      "startTime": 407.68,
+      "endTime": 459.51,
+      "audioUrl": "/audio/lectures/biology/19/card_population_sigmoid.mp3"
     }
   ]
 }

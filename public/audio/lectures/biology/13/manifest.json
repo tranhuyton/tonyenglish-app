@@ -1,29 +1,49 @@
 {
   "lectureId": "b8f0539e-9361-4ba4-a96e-74c106494ebe",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 13: Excretion in humans",
-  "totalDuration": 203.42,
-  "majorSections": [
-    {
-      "id": "sec_excretion_liver",
-      "title": "1. Bài tiết & Khử Amin tại Gan"
+  "totalDuration": 359.57,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_kidneys",
-      "title": "2. Siêu lọc & Tái hấp thu ở Thận"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_kidney_failure",
-      "title": "3. Điều trị Suy thận & Ghép thận"
+    "sec_excretion_liver": {
+      "start": 1,
+      "end": 3
+    },
+    "sec-excretion-liver": {
+      "start": 1,
+      "end": 3
+    },
+    "sec_kidneys": {
+      "start": 4,
+      "end": 5
+    },
+    "sec-kidneys": {
+      "start": 4,
+      "end": 5
+    },
+    "sec_kidney_failure": {
+      "start": 6,
+      "end": 7
+    },
+    "sec-kidney-failure": {
+      "start": 6,
+      "end": 7
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 13: Hệ Bài tiết ở Người & Cấu tạo Thận",
+      "title": "Giới thiệu Topic 13: Hệ Bài tiết ở Người & Cấu tạo Thận",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 13: Excretion in humans. Accumulation of metabolic wastes threatens cell viability. In this lesson, we study excretion definition, liver deamination of excess amino acids, nephron filtration and selective reabsorption in kidneys, and dialysis treatments for kidney failure.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 13: Hệ Bài tiết ở Người và Cấu tạo Thận. Sự tích tụ chất thải chuyển hóa đe dọa sự sống tế bào. Trong bài học này, chúng ta sẽ khảo sát định nghĩa bài tiết, quá trình khử amin tại gan, cơ chế lọc và tái hấp thu chọn lọc ở nephron thận cùng phương pháp chạy thận nhân tạo.",
+      "en": "Welcome to Topic 13: Excretion in Humans. Excretion is the removal of the waste products of metabolism and substances in excess of requirements. In this lesson, we study liver deamination of amino acids, the clear distinction between excretion and egestion, gross kidney anatomy and nephron filtration, and modern treatments for kidney failure.",
+      "vi": "Chào mừng các bạn đến với Bài 13: Hệ Bài tiết ở Người & Cấu tạo Thận. Bài tiết là sự thải loại các chất cặn bã sinh ra từ trao đổi chất cùng các chất dư thừa khỏi cơ thể. Trong bài học này, chúng ta sẽ học về quá trình khử amin tại gan, phân biệt bài tiết và thải phân, giải phẫu thận và nephron lọc máu, cùng các biện pháp điều trị suy thận.",
       "duration": 44.42,
       "startTime": 0.0,
       "endTime": 44.42,
@@ -33,34 +53,78 @@
       "id": "sec_excretion_liver",
       "title": "1. Bài tiết & Quá trình Khử amin tại Gan (Deamination)",
       "selector": "#sec-excretion-liver",
-      "en": "Section 1 defines Excretion: the removal of toxic materials and substances in excess of requirements from an organism. Excess dietary amino acids cannot be stored. The liver undergoes Deamination: the removal of the nitrogen-containing amino group from amino acids to form urea, while the remaining carbohydrate portion is converted into glycogen or respired for energy.",
-      "vi": "Mục một định nghĩa Bài tiết: là quá trình đào thải các chất thải độc hại từ chuyển hóa tế bào và các chất dư thừa ra khỏi cơ thể. Cơ thể không thể dự trữ axit amin thừa. Gan thực hiện quá trình Khử amin (Deamination): tách nhóm amin chứa nitơ ra khỏi phân tử axit amin để tổng hợp thành ure bài tiết qua thận, phần còn lại chuyển thành glycogen dự trữ hoặc dùng cho hô hấp tế bào.",
+      "en": "Section 1: Excretion is defined as the removal of toxic substances and substances in excess of requirements from an organism. The primary excretory organs are lungs excreting carbon dioxide, kidneys excreting urea, excess water and mineral ions, and skin excreting sweat.",
+      "vi": "Mục 1: Bài tiết được định nghĩa là sự đào thải các chất độc hại và các chất dư thừa ra khỏi cơ thể sinh vật. Các cơ quan bài tiết chính gồm phổi bài tiết CO2, thận bài tiết urê, nước và muối khoáng dư thừa, cùng da bài tiết mồ hôi.",
       "duration": 47.32,
       "startTime": 44.42,
       "endTime": 91.74,
       "audioUrl": "/audio/lectures/biology/13/sec_excretion_liver.mp3"
     },
     {
+      "id": "card_deamination",
+      "title": "🥩 Đồng hóa & Khử Amin tại Gan (Deamination)",
+      "selector": "#card-deamination",
+      "en": "Deamination process: Excess dietary amino acids cannot be stored in the body. In the liver, the nitrogen-containing amino group is chemically removed from each amino acid molecule and converted into toxic ammonia, which is rapidly combined with CO2 into harmless, water-soluble urea excreted by kidneys.",
+      "vi": "Quá trình khử amin: Axit amin dư thừa từ thức ăn không thể tích trữ trong cơ thể. Tại gan, nhóm amin chứa nitơ bị tách khỏi phân tử axit amin tạo thành amoniac độc, sau đó nhanh chóng kết hợp với CO2 tạo thành urê tan trong nước và được thận bài tiết ra ngoài.",
+      "duration": 36.81,
+      "startTime": 91.74,
+      "endTime": 128.55,
+      "audioUrl": "/audio/lectures/biology/13/card_deamination.mp3"
+    },
+    {
+      "id": "card_egestion_vs_excretion",
+      "title": "🚨 BẪY ĐỀ THI: Thải phân (Egestion) vs Bài tiết (Excretion)",
+      "selector": "#card-egestion-vs-excretion",
+      "en": "Critical Cambridge Exam Warning: Never confuse egestion with excretion! Egestion is the passing out of undigested, unabsorbed food material such as cellulose dietary fibre via the anus as faeces; this material never took part in cellular metabolism. Excretion is the removal of metabolic wastes produced inside living cells.",
+      "vi": "Cảnh báo tử huyệt thi cử Cambridge: Tuyệt đối không bao giờ nhầm lẫn giữa thải phân và bài tiết! Thải phân (Egestion) là sự tống chất xơ và bã thức ăn không tiêu hóa không hấp thụ qua hậu môn dưới dạng phân; chúng chưa từng tham gia vào trao đổi chất tế bào. Bài tiết (Excretion) là đào thải các sản phẩm phụ chuyển hóa sinh ra bên trong tế bào sống.",
+      "duration": 43.74,
+      "startTime": 128.55,
+      "endTime": 172.29,
+      "audioUrl": "/audio/lectures/biology/13/card_egestion_vs_excretion.mp3"
+    },
+    {
       "id": "sec_kidneys",
       "title": "2. Cấu tạo và Chức năng của Thận (Nephron & Filtration)",
       "selector": "#sec-kidneys",
-      "en": "Section 2 investigates kidney anatomy: Blood enters via the renal artery into microscopic nephrons. Ultrafiltration occurs under high pressure across glomerulus capillaries into the Bowman's capsule, squeezing out water, glucose, urea, and salts, leaving large blood cells and proteins behind. In the kidney tubule, selective reabsorption retrieves all glucose by active transport, together with essential water by osmosis and salts, leaving urea and excess water to drain as urine via ureters into the bladder.",
-      "vi": "Mục hai nghiên cứu giải phẫu và chức năng thận: Máu theo động mạch thận đi vào hàng triệu đơn vị thận (nephron). Quá trình Siêu lọc (Ultrafiltration) diễn ra dưới áp lực máu cao qua búi mao mạch cuộn vào nang Bowman, ép nước, glucose, ure và muối khoáng vào ống thận, giữ lại tế bào máu và protein lớn. Tiếp theo, quá trình Tái hấp thu chọn lọc vận chuyển chủ động 100% glucose, một phần nước qua thẩm thấu và muối khoáng cần thiết trở lại máu, phần nước tiểu chứa ure theo niệu quản đổ về bàng quang.",
+      "en": "Section 2: Urinary system and kidney anatomy: Oxygenated blood high in urea arrives via the renal artery. The outer renal cortex performs ultrafiltration. The inner renal medulla contains loops of Henle reabsorbing water and salts. Purified blood exits via the renal vein, and collected urine drains through the renal pelvis into the ureter to the bladder.",
+      "vi": "Mục 2: Hệ tiết niệu và cấu tạo thận: Máu giàu oxy chứa nhiều urê theo động mạch thận đi vào thận. Vỏ thận (cortex) bên ngoài thực hiện siêu lọc. Tủy thận (medulla) bên trong chứa các quai Henle tái hấp thu nước và muối. Máu đã làm sạch thoát ra theo tĩnh mạch thận, và nước tiểu thu gom tại bể thận chảy qua niệu quản xuống bàng quang.",
       "duration": 64.14,
-      "startTime": 91.74,
-      "endTime": 155.88,
+      "startTime": 172.29,
+      "endTime": 236.43,
       "audioUrl": "/audio/lectures/biology/13/sec_kidneys.mp3"
+    },
+    {
+      "id": "card_kidney_regions",
+      "title": "🔍 Sơ đồ Giải phẫu Thận Tương tác (Kidney Anatomy)",
+      "selector": "#card-kidney-regions",
+      "en": "Kidney anatomy zones: The cortex is dense with Bowman's capsules and glomeruli. The medulla contains collecting ducts and medullary pyramids. The renal pelvis funnels urine down the ureter to be stored temporarily in the muscular bladder before release via the urethra.",
+      "vi": "Các phân vùng giải phẫu thận: Vỏ thận tập trung dày đặc các nang Bowman và búi mao mạch cuộn. Tủy thận chứa các ống góp và tháp thận. Bể thận như một chiếc phễu gom nước tiểu dẫn xuống niệu quản để tích trữ tạm thời trong bàng quang trước khi thải ra ngoài qua niệu đạo.",
+      "duration": 32.94,
+      "startTime": 236.43,
+      "endTime": 269.37,
+      "audioUrl": "/audio/lectures/biology/13/card_kidney_regions.mp3"
     },
     {
       "id": "sec_kidney_failure",
       "title": "3. Suy thận: Chạy thận Nhân tạo & Ghép thận",
       "selector": "#sec-kidney-failure",
-      "en": "Section 3 compares treatments for kidney failure: Hemodialysis filters blood across a cellulose partially permeable membrane bathed in dialysis fluid with precise concentrations of glucose and ions but zero urea, driving urea out of blood by diffusion down its gradient. Kidney transplants provide permanent filtration, but require tissue matching and lifelong immunosuppressive drugs to prevent immune rejection.",
-      "vi": "Mục ba so sánh các giải pháp điều trị suy thận: Chạy thận nhân tạo (Dialysis) lọc máu qua màng bán thấm ngâm trong dịch lọc có nồng độ glucose và muối khoáng chuẩn nhưng không chứa ure, giúp ure khuếch tán ra khỏi máu theo chênh lệch nồng độ. Ghép thận mang lại giải pháp lâu dài hơn, nhưng đòi hỏi sự tương thích mô kháng nguyên và người bệnh phải uống thuốc ức chế miễn dịch suốt đời để chống đào thải cơ quan ghép.",
+      "en": "Section 3: Treatment of kidney failure: When kidneys fail, toxic urea builds up rapidly to lethal levels. Patients require regular hemodialysis using a dialysis machine or a donor kidney transplant.",
+      "vi": "Mục 3: Điều trị suy thận: Khi thận bị suy, lượng urê độc hại tăng vọt nhanh chóng đe dọa tính mạng. Bệnh nhân cần chạy thận nhân tạo định kỳ bằng máy lọc máu hoặc được ghép thận từ người hiến tặng.",
       "duration": 47.54,
-      "startTime": 155.88,
-      "endTime": 203.42,
+      "startTime": 269.37,
+      "endTime": 316.91,
       "audioUrl": "/audio/lectures/biology/13/sec_kidney_failure.mp3"
+    },
+    {
+      "id": "card_dialysis_machine",
+      "title": "💡 Nguyên lý Máy Chạy thận Nhân tạo (Dialysis Machine)",
+      "selector": "#card-dialysis-machine",
+      "en": "Dialysis mechanism: Patient's blood flows through cellulose dialysis tubing surrounded by dialysis fluid. The tubing is partially permeable: urea, excess water, and salts diffuse out down concentration gradients. The dialysis fluid has identical glucose and amino acid concentrations as normal blood, preventing any net loss of these valuable nutrients.",
+      "vi": "Nguyên lý máy lọc máu: Máu bệnh nhân chảy qua ống màng lọc bán thấm cellulose ngâm trong dịch lọc máu. Màng bán thấm cho phép urê, nước và muối dư thừa khuếch tán ra dịch lọc xuôi theo gradien nồng độ. Dịch lọc có nồng độ glucose và axit amin tương đương máu bình thường để chống thất thoát dưỡng chất quý giá của cơ thể.",
+      "duration": 42.66,
+      "startTime": 316.91,
+      "endTime": 359.57,
+      "audioUrl": "/audio/lectures/biology/13/card_dialysis_machine.mp3"
     }
   ]
 }

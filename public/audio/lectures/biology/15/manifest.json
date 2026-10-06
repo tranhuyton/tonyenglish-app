@@ -1,29 +1,49 @@
 {
   "lectureId": "f87b29a1-56a3-4668-a249-ed9f118d31d8",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 15: Drugs",
-  "totalDuration": 216.16,
-  "majorSections": [
-    {
-      "id": "sec_what_is_drug",
-      "title": "1. Định nghĩa Thuốc & Phân loại"
+  "totalDuration": 287.25,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_antibiotics",
-      "title": "2. Kháng sinh & Vì sao Vô dụng với Virus"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_antibiotic_resistance",
-      "title": "3. Kháng Kháng sinh & Siêu vi khuẩn MRSA"
+    "sec_what_is_drug": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-what-is-drug": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_antibiotics": {
+      "start": 2,
+      "end": 3
+    },
+    "sec-antibiotics": {
+      "start": 2,
+      "end": 3
+    },
+    "sec_antibiotic_resistance": {
+      "start": 4,
+      "end": 5
+    },
+    "sec-antibiotic-resistance": {
+      "start": 4,
+      "end": 5
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 15: Thuốc và Chất Dược lý (Drugs)",
+      "title": "Giới thiệu Topic 15: Thuốc và Chất Dược lý (Drugs)",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 15: Drugs. Pharmacological substances profoundly alter human physiology. In this topic, we unpack the definition of drugs, medicinal versus recreational uses, antibiotic mechanisms against bacterial cell walls, the critical reason antibiotics cannot destroy viruses, and the global crisis of MRSA antibiotic resistance.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 15: Thuốc và Chất Dược lý. Các chất dược lý có tác động sâu sắc đến sinh lý cơ thể người. Trong bài học này, chúng ta sẽ tìm hiểu định nghĩa thuốc, thuốc điều trị và chất gây nghiện, cơ chế tiêu diệt vi khuẩn của kháng sinh, lý do vì sao kháng sinh vô dụng trước virus cùng hiểm họa kháng kháng sinh của siêu vi khuẩn MRSA.",
+      "en": "Welcome to Topic 15: Drugs. In biology, a drug is defined as any substance taken into the body that modifies or affects chemical reactions in the body. In this lesson, we study medicinal drugs versus drugs of abuse, antibiotics and why they are totally ineffective against viruses, and the development and prevention of antibiotic resistance including MRSA.",
+      "vi": "Chào mừng các bạn đến với Bài 15: Thuốc và Chất Dược lý (Drugs). Trong sinh học, thuốc được định nghĩa là bất kỳ chất nào đưa vào cơ thể làm thay đổi hoặc ảnh hưởng đến các phản ứng hóa sinh trong cơ thể. Trong bài học này, chúng ta sẽ học về thuốc chữa bệnh và chất gây nghiện lạm dụng, kháng sinh và lý do kháng sinh vô dụng với virus, cùng cơ chế hình thành vi khuẩn kháng kháng sinh như MRSA.",
       "duration": 50.51,
       "startTime": 0.0,
       "endTime": 50.51,
@@ -33,8 +53,8 @@
       "id": "sec_what_is_drug",
       "title": "1. Định nghĩa Thuốc & Phân loại Dược phẩm",
       "selector": "#sec-what-is-drug",
-      "en": "Section 1 defines a Drug: any substance taken into the body that modifies or affects chemical reactions in the body. Medicinal drugs, like analgesics and antibiotics, treat symptoms or cure infections. Misused recreational drugs, including alcohol and tobacco, trigger psychological addiction, physical tolerance, withdrawal symptoms, and severe long-term organ pathology like liver cirrhosis.",
-      "vi": "Mục một định nghĩa Thuốc (Drug): là bất kỳ chất nào khi đưa vào cơ thể làm biến đổi hoặc ảnh hưởng đến các phản ứng hóa học chuyển hóa bên trong cơ thể. Thuốc chữa bệnh như thuốc giảm đau và kháng sinh giúp điều trị triệu chứng hoặc tiêu diệt mầm bệnh. Các chất gây nghiện bị lạm dụng như rượu và thuốc lá dẫn đến nghiện ngập tâm thần, hiện tượng lờn thuốc, hội chứng cai và hủy hoại cơ quan nội tạng lâu dài như xơ gan.",
+      "en": "Section 1: What is a drug? Drugs are classified into medicinal drugs prescribed to treat symptoms or cure diseases, and recreational drugs taken for non-medical psychological reasons. Many drugs can cause psychological and physical dependence leading to addiction and withdrawal symptoms.",
+      "vi": "Mục 1: Thuốc là gì? Thuốc được chia thành thuốc điều trị dùng theo đơn để chữa triệu chứng hay bệnh tật, và chất kích thích lạm dụng cho mục đích giải trí phi y khoa. Nhiều loại thuốc có thể gây lệ thuộc tâm lý và thể chất dẫn đến nghiện và hội chứng cai thuốc.",
       "duration": 49.53,
       "startTime": 50.51,
       "endTime": 100.04,
@@ -44,23 +64,45 @@
       "id": "sec_antibiotics",
       "title": "2. Kháng sinh & Lý do Vô dụng trước Virus",
       "selector": "#sec-antibiotics",
-      "en": "Section 2 investigates Antibiotics: chemical substances that kill or inhibit bacteria without harming human host cells. For instance, penicillin disrupts bacterial cell wall synthesis during binary fission, causing osmotic lysis. Crucial Cambridge exam fact: Antibiotics are completely ineffective against viruses because viruses have no cell wall, no cell membrane, and no cell machinery, reproducing solely inside host cells.",
-      "vi": "Mục hai nghiên cứu Thuốc kháng sinh (Antibiotics): là các hợp chất hóa học tiêu diệt hoặc ức chế vi khuẩn mà không làm tổn hại đến tế bào cơ thể người. Ví dụ, penicillin ngăn chặn vi khuẩn tổng hợp thành tế bào khi phân chia, khiến vi khuẩn trương phồng và vỡ do áp suất thẩm thấu. Điểm thi Cambridge then chốt: Kháng sinh hoàn toàn vô dụng trước virus vì virus không có thành tế bào, không có màng sinh chất và không có bộ máy trao đổi chất độc lập, chúng chỉ nhân lên ký sinh bên trong tế bào vật chủ.",
+      "en": "Section 2: Antibiotics are chemical substances produced by microorganisms that kill bacteria or inhibit their growth by disrupting bacterial cell wall synthesis or protein translation. Crucially, antibiotics are completely ineffective against viruses because viruses have no cell wall, no cellular structure, and rely entirely on host cell machinery to replicate.",
+      "vi": "Mục 2: Thuốc kháng sinh là các hoạt chất do vi sinh vật tiết ra có tác dụng tiêu diệt hoặc ức chế vi khuẩn bằng cách phá hủy thành tế bào peptidoglycan hoặc quá trình dịch mã. Cực kỳ quan trọng: Kháng sinh hoàn toàn vô dụng trước virus vì virus không có thành tế bào, không có cấu tạo tế bào và ký sinh hoàn toàn vào tế bào vật chủ để nhân lên.",
       "duration": 56.9,
       "startTime": 100.04,
       "endTime": 156.94,
       "audioUrl": "/audio/lectures/biology/15/sec_antibiotics.mp3"
     },
     {
+      "id": "card_antibiotics_viruses",
+      "title": "🦠 Kháng sinh Diệt Vi khuẩn vs Bất lực trước Virus",
+      "selector": "#card-antibiotics-viruses",
+      "en": "Why antibiotics fail against viruses: Penicillin inhibits the enzyme cross-linking bacterial peptidoglycan cell walls, causing bacteria to burst by osmotic lysis. Viruses consist merely of a genetic nucleic acid core inside a protein capsid coat with no target cell wall or metabolic enzymes.",
+      "vi": "Tại sao kháng sinh bất lực trước virus: Penicillin ức chế enzyme đan lưới thành tế bào peptidoglycan của vi khuẩn làm vi khuẩn vỡ tan do thẩm thấu. Virus chỉ gồm một lõi axit nucleic nằm trong vỏ capsid protein, không hề có thành tế bào hay enzyme trao đổi chất cho kháng sinh tấn công.",
+      "duration": 37.31,
+      "startTime": 156.94,
+      "endTime": 194.25,
+      "audioUrl": "/audio/lectures/biology/15/card_antibiotics_viruses.mp3"
+    },
+    {
       "id": "sec_antibiotic_resistance",
       "title": "3. Sự Kháng Kháng sinh & Siêu vi khuẩn MRSA",
       "selector": "#sec-antibiotic-resistance",
-      "en": "Section 3 analyzes Antibiotic Resistance: Random genetic mutations produce rare resistant bacteria. When antibiotics are overused or patients fail to finish prescribed courses, non-resistant strains perish while resistant mutants survive and multiply unchecked—an acute example of natural selection. Strains like MRSA resist multiple antibiotics. Prevention mandates completing full courses and strictly limiting unnecessary prescriptions.",
-      "vi": "Mục ba phân tích Hiện tượng Kháng Kháng sinh: Các đột biến gen ngẫu nhiên tạo ra các cá thể vi khuẩn kháng thuốc. Khi kháng sinh bị lạm dụng hoặc bệnh nhân tự ý bỏ thuốc không uống hết liều, các vi khuẩn nhạy cảm sẽ bị tiêu diệt trong khi vi khuẩn đột biến kháng thuốc sống sót và sinh sôi nhanh chóng—đây là minh chứng sống động của chọn lọc tự nhiên. Các chủng siêu vi khuẩn như MRSA kháng được hầu hết các loại kháng sinh thông thường. Biện pháp phòng ngừa đòi hỏi phải uống đủ liều theo đơn và hạn chế tối đa kê đơn kháng sinh không cần thiết.",
+      "en": "Section 3: Antibiotic resistance: Random DNA mutations in bacteria occasionally grant resistance against a specific antibiotic. When patients overuse antibiotics or fail to complete the full course, susceptible bacteria die while resistant mutants survive, reproduce by binary fission, and pass the resistance gene to offspring by natural selection, spawning superbugs like MRSA.",
+      "vi": "Mục 3: Sự kháng kháng sinh: Đột biến gen ngẫu nhiên ở vi khuẩn đôi khi mang lại khả năng kháng lại một loại kháng sinh. Khi bệnh nhân lạm dụng hoặc không uống hết liệu trình, vi khuẩn nhạy cảm bị tiêu diệt trong khi vi khuẩn đột biến sống sót, phân chia nhân đôi và truyền gen kháng thuốc cho đời sau qua chọn lọc tự nhiên, tạo ra các siêu vi khuẩn như MRSA.",
       "duration": 59.22,
-      "startTime": 156.94,
-      "endTime": 216.16,
+      "startTime": 194.25,
+      "endTime": 253.47,
       "audioUrl": "/audio/lectures/biology/15/sec_antibiotic_resistance.mp3"
+    },
+    {
+      "id": "card_resistance_prevention",
+      "title": "🛡️ Biện pháp Hạn chế Vi khuẩn Kháng thuốc",
+      "selector": "#card-resistance-prevention",
+      "en": "Controlling antibiotic resistance: Doctors must avoid prescribing antibiotics for viral colds, patients must always complete the full prescribed antibiotic course to eliminate all bacteria, hygiene standards in hospitals must be rigorous, and agricultural use of antibiotics as animal growth promoters must be strictly banned.",
+      "vi": "Biện pháp kiểm soát kháng thuốc: Bác sĩ không kê đơn kháng sinh cho bệnh cảm cúm do virus, bệnh nhân bắt buộc phải uống hết toàn bộ đơn thuốc dù đã thấy đỡ, nâng cao quy chuẩn khử trùng bệnh viện và cấm triệt để việc trộn kháng sinh vào thức ăn gia súc để kích thích tăng trọng.",
+      "duration": 33.78,
+      "startTime": 253.47,
+      "endTime": 287.25,
+      "audioUrl": "/audio/lectures/biology/15/card_resistance_prevention.mp3"
     }
   ]
 }

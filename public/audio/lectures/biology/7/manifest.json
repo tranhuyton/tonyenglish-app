@@ -1,41 +1,73 @@
 {
   "lectureId": "85f36013-879b-49a8-a531-69c245a9630e",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 7: Human nutrition",
-  "totalDuration": 331.51,
-  "majorSections": [
-    {
-      "id": "sec_balanced_diet",
-      "title": "1. Chế độ Ăn Cân bằng & 7 Nhóm Chất"
+  "totalDuration": 529.78,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_digestive_processes",
-      "title": "2. Sáu Giai đoạn Tiêu hóa"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_teeth",
-      "title": "3. Răng & Tiêu hóa Cơ học"
+    "sec_balanced_diet": {
+      "start": 1,
+      "end": 5
     },
-    {
-      "id": "sec_digestive_organs",
-      "title": "4. Ống Tiêu hóa & Nhu động Ruột"
+    "sec-balanced-diet": {
+      "start": 1,
+      "end": 5
     },
-    {
-      "id": "sec_chemical_digestion",
-      "title": "5. Tiêu hóa Hóa học & Enzyme"
+    "sec_digestive_processes": {
+      "start": 6,
+      "end": 6
     },
-    {
-      "id": "sec_absorption_villi",
-      "title": "6. Cấu tạo Lông ruột (Villi)"
+    "sec-digestive-processes": {
+      "start": 6,
+      "end": 6
+    },
+    "sec_teeth": {
+      "start": 7,
+      "end": 9
+    },
+    "sec-teeth": {
+      "start": 7,
+      "end": 9
+    },
+    "sec_digestive_organs": {
+      "start": 10,
+      "end": 10
+    },
+    "sec-digestive-organs": {
+      "start": 10,
+      "end": 10
+    },
+    "sec_chemical_digestion": {
+      "start": 11,
+      "end": 11
+    },
+    "sec-chemical-digestion": {
+      "start": 11,
+      "end": 11
+    },
+    "sec_absorption_villi": {
+      "start": 12,
+      "end": 12
+    },
+    "sec-absorption-villi": {
+      "start": 12,
+      "end": 12
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 7: Dinh dưỡng ở Người & Hệ Tiêu hóa",
+      "title": "Giới thiệu Topic 7: Dinh dưỡng ở Người & Hệ Tiêu hóa",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 7: Human nutrition. This major topic explores a balanced diet, the six stages of food processing, mechanical digestion by specialized teeth, organs of the alimentary canal, digestive enzymes and bile, and the absorption adaptations of intestinal villi.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 7: Dinh dưỡng ở Người và Hệ Tiêu hóa. Bài học trọng tâm này nghiên cứu chế độ ăn cân bằng, 6 giai đoạn tiêu hóa thức ăn, vai trò của các loại răng, ống tiêu hóa, các enzyme và dịch mật, cùng cấu tạo thích nghi hấp thu của lông ruột.",
+      "en": "Welcome to Topic 7: Human Nutrition. Heterotrophic human nutrition involves ingesting organic macromolecules, mechanically and chemically breaking them down, absorbing nutrients into blood, assimilating them into tissues, and egesting undigested wastes. In this lesson, we study balanced diets, malnutrition diseases, dental anatomy, alimentary canal organs, digestive enzymes, and villi absorption adaptations.",
+      "vi": "Chào mừng các bạn đến với Bài 7: Dinh dưỡng ở Người & Hệ Tiêu hóa. Dinh dưỡng dị dưỡng ở người bao gồm việc lấy thức ăn, biến đổi cơ học và hóa học, hấp thụ chất dinh dưỡng vào máu, đồng hóa vào mô và thải bỏ chất cặn bã. Trong bài học này, chúng ta sẽ học về chế độ ăn cân bằng, bệnh suy dinh dưỡng, giải phẫu răng, các cơ quan tiêu hóa, enzyme tiêu hóa và cấu tạo lông ruột thích nghi cho hấp thụ.",
       "duration": 39.28,
       "startTime": 0.0,
       "endTime": 39.28,
@@ -45,66 +77,132 @@
       "id": "sec_balanced_diet",
       "title": "1. Chế độ Ăn Cân bằng & 7 Nhóm Dinh dưỡng",
       "selector": "#sec-balanced-diet",
-      "en": "Section 1 defines a balanced diet containing all seven nutrient classes in correct proportions: carbohydrates, lipids, proteins, vitamins C and D, mineral calcium and iron, dietary fibre, and water. Deficiency diseases include scurvy from lack of vitamin C, rickets from lack of vitamin D or calcium, and anaemia from lack of iron.",
-      "vi": "Mục một định nghĩa chế độ ăn cân bằng cung cấp đủ 7 nhóm dưỡng chất theo tỉ lệ thích hợp: carbohydrate, lipid, protein, vitamin C và D, khoáng chất canxi và sắt, chất xơ và nước. Các bệnh thiếu hụt gồm bệnh scorbut (chảy máu chân răng) do thiếu vitamin C, còi xương do thiếu vitamin D hoặc canxi, và thiếu máu do thiếu sắt.",
+      "en": "Section 1: A balanced diet contains all seven essential dietary components in correct proportions: carbohydrates, fats, proteins, vitamins, minerals, water, and dietary fibre.",
+      "vi": "Mục 1: Chế độ ăn cân bằng chứa đầy đủ 7 nhóm dưỡng chất thiết yếu theo tỷ lệ cân đối: carbohydrate, chất béo, protein, vitamin, khoáng chất, nước và chất xơ.",
       "duration": 44.39,
       "startTime": 39.28,
       "endTime": 83.67,
       "audioUrl": "/audio/lectures/biology/7/sec_balanced_diet.mp3"
     },
     {
-      "id": "sec_digestive_processes",
-      "title": "2. Các Giai đoạn của Quá trình Tiêu hóa",
-      "selector": "#sec-digestive-processes",
-      "en": "Section 2 outlines the six distinct digestive stages: Ingestion is taking food into the mouth. Mechanical digestion physically breaks down food into smaller pieces without chemical modification. Chemical digestion enzymatically breaks down large insoluble molecules into small soluble molecules. Absorption transports digested molecules into blood. Assimilation incorporates nutrients into cells. Egestion expels undigested waste as faeces.",
-      "vi": "Mục hai hệ thống hóa 6 giai đoạn tiêu hóa: Thu nạp thức ăn (Ingestion) qua đường miệng. Tiêu hóa cơ học (Mechanical digestion) nghiền nhỏ thức ăn để tăng diện tích tiếp xúc. Tiêu hóa hóa học (Chemical digestion) sử dụng enzyme thủy phân phân tử lớn không tan thành phân tử nhỏ tan được. Hấp thụ (Absorption) chất dinh dưỡng vào máu. Đồng hóa (Assimilation) biến dưỡng chất thành tế bào cơ thể. Thải phân (Egestion) tống xuất chất cặn bã qua hậu môn.",
-      "duration": 64.24,
+      "id": "card_diet_carbs_fats_protein",
+      "title": "🍞 Carbohydrates, Chất béo & Protein",
+      "selector": "#card-diet-carbs-fats-protein",
+      "en": "Macronutrients: Carbohydrates supply fast cellular energy. Lipids provide high-density long-term energy storage and insulation. Proteins provide amino acid building blocks for cellular growth and tissue repair.",
+      "vi": "Đại dưỡng chất: Carbohydrate cung cấp năng lượng nhanh cho hoạt động tế bào. Lipid dự trữ năng lượng dài hạn đậm đặc và cách nhiệt. Protein cung cấp các axit amin làm vật liệu kiến tạo để sinh trưởng tế bào và phục hồi mô tổn thương.",
+      "duration": 29.97,
       "startTime": 83.67,
-      "endTime": 147.91,
+      "endTime": 113.64,
+      "audioUrl": "/audio/lectures/biology/7/card_diet_carbs_fats_protein.mp3"
+    },
+    {
+      "id": "card_diet_water_fibre",
+      "title": "💧 Nước & 🥬 Chất xơ (Roughage)",
+      "selector": "#card-diet-water-fibre",
+      "en": "Water and Dietary Fibre: Water provides the aqueous solvent for metabolic reactions and circulatory transport. Insoluble cellulose fibre provides bulk for intestinal muscles to push against during peristalsis, preventing constipation and bowel disorders.",
+      "vi": "Nước và Chất xơ: Nước tạo môi trường dung môi cho các phản ứng sinh hóa và vận chuyển tuần hoàn. Chất xơ cellulose không tan tạo khối bã để cơ thành ruột co bóp trong nhu động ruột (peristalsis), phòng chống táo bón và các bệnh lý đường ruột.",
+      "duration": 31.29,
+      "startTime": 113.64,
+      "endTime": 144.93,
+      "audioUrl": "/audio/lectures/biology/7/card_diet_water_fibre.mp3"
+    },
+    {
+      "id": "card_vitamins_minerals",
+      "title": "💊 Vitamin & Khoáng chất Thiết yếu",
+      "selector": "#card-vitamins-minerals",
+      "en": "Micronutrients: Vitamin C forms collagen protein; deficiency causes scurvy with bleeding gums. Vitamin D and Calcium strengthen bones and teeth; deficiency causes rickets. Iron synthesizes haemoglobin; deficiency causes anaemia.",
+      "vi": "Vi chất dinh dưỡng: Vitamin C giúp tổng hợp collagen; thiếu hụt gây bệnh scorbut chảy máu chân răng. Vitamin D và Canxi làm xương và răng chắc khỏe; thiếu hụt gây bệnh còi xương (rickets). Sắt tổng hợp huyết sắc tố hemoglobin; thiếu sắt gây bệnh thiếu máu (anaemia).",
+      "duration": 36.04,
+      "startTime": 144.93,
+      "endTime": 180.97,
+      "audioUrl": "/audio/lectures/biology/7/card_vitamins_minerals.mp3"
+    },
+    {
+      "id": "card_malnutrition",
+      "title": "⚠️ Suy dinh dưỡng Nặng: Kwashiorkor & Marasmus",
+      "selector": "#card-malnutrition",
+      "en": "Severe Malnutrition: Kwashiorkor is caused by severe protein deficiency, characterized by fluid accumulation in abdominal tissues causing oedema. Marasmus is caused by total calorie starvation, characterized by extreme muscle and fat wasting.",
+      "vi": "Suy dinh dưỡng thể nặng: Kwashiorkor do thiếu hụt protein trầm trọng, biểu hiện đặc trưng là ứ dịch gây phù thũng bụng (oedema). Marasmus do thiếu hụt toàn bộ năng lượng calo, biểu hiện là teo cơ và mất hoàn toàn mô mỡ dưới da.",
+      "duration": 31.46,
+      "startTime": 180.97,
+      "endTime": 212.43,
+      "audioUrl": "/audio/lectures/biology/7/card_malnutrition.mp3"
+    },
+    {
+      "id": "sec_digestive_processes",
+      "title": "2. 5 Giai đoạn của Quá trình Tiêu hóa",
+      "selector": "#sec-digestive-processes",
+      "en": "Section 2 outlines the five digestive stages: Ingestion is taking substances into the body through the mouth. Digestion breaks down large insoluble food molecules into small water-soluble molecules. Absorption moves digested food molecules through the intestinal wall into the blood. Assimilation incorporates absorbed food into body cells. Egestion passes out undigested food as faeces through the anus.",
+      "vi": "Mục 2 phác thảo 5 giai đoạn tiêu hóa: Ăn (Ingestion) là đưa thức ăn vào miệng. Tiêu hóa (Digestion) phân giải phân tử lớn khó tan thành phân tử nhỏ tan được. Hấp thụ (Absorption) đưa chất tan qua thành ruột vào máu. Đồng hóa (Assimilation) đưa dưỡng chất vào tế bào cơ thể để sử dụng. Thải bã (Egestion) tống cặn bã không tiêu hóa ra ngoài qua hậu môn dưới dạng phân.",
+      "duration": 64.24,
+      "startTime": 212.43,
+      "endTime": 276.67,
       "audioUrl": "/audio/lectures/biology/7/sec_digestive_processes.mp3"
     },
     {
       "id": "sec_teeth",
       "title": "3. Răng và Tiêu hóa Cơ học (Types of Teeth)",
       "selector": "#sec-teeth",
-      "en": "Section 3 examines human dentition: Incisors have chisel-shaped blades for biting and cutting. Canines are pointed for tearing meat. Premolars and molars have broad cusped crowns for chewing and grinding food. Tooth decay occurs when mouth bacteria feed on trapped sugars, producing acidic secretions that dissolve hard enamel and dentine.",
-      "vi": "Mục ba phân tích bộ răng người: Răng cửa sắc bén hình lưỡi đục dùng để cắn và cắt thức ăn. Răng nanh nhọn để xé thức ăn. Răng tiền hàm và răng hàm có bề mặt rộng nhiều múi để nghiền nát thức ăn. Sâu răng xảy ra khi vi khuẩn lên men đường đọng lại trên răng tạo ra axit ăn mòn lớp men và ngà răng.",
+      "en": "Section 3 examines dentition: Humans possess incisors for biting, canines for tearing, and premolars and molars with broad ridged surfaces for chewing and grinding food to increase surface area for enzyme action.",
+      "vi": "Mục 3 nghiên cứu về bộ răng: Răng cửa dùng để cắn, răng nanh dùng để xé, răng tiền hàm và răng hàm có mặt nhai rộng có gờ dùng để nhai và nghiền nát thức ăn, giúp gia tăng tối đa diện tích bề mặt cho enzyme tiêu hóa tác dụng.",
       "duration": 41.56,
-      "startTime": 147.91,
-      "endTime": 189.47,
+      "startTime": 276.67,
+      "endTime": 318.23,
       "audioUrl": "/audio/lectures/biology/7/sec_teeth.mp3"
+    },
+    {
+      "id": "card_tooth_structure",
+      "title": "🦷 Cấu trúc Giải phẫu của Răng",
+      "selector": "#card-tooth-structure",
+      "en": "Internal tooth anatomy: The crown is protected by extremely hard enamel overlying softer bone-like dentine. The inner pulp cavity contains sensitive nerve endings and blood capillaries supplying living cells with nutrients. The root is cemented firmly into the jawbone by cement and periodontal fibers.",
+      "vi": "Giải phẫu răng bên trong: Thân răng bọc bởi lớp men răng (enamel) cực cứng, bên dưới là lớp ngà răng (dentine) mềm hơn. Tủy răng (pulp cavity) ở giữa chứa đầu dây thần kinh cảm giác và mao mạch máu nuôi tế bào sống. Chân răng được cố định vững chắc vào xương hàm nhờ lớp cement và dây chằng nha chu.",
+      "duration": 39.59,
+      "startTime": 318.23,
+      "endTime": 357.82,
+      "audioUrl": "/audio/lectures/biology/7/card_tooth_structure.mp3"
+    },
+    {
+      "id": "card_dental_decay",
+      "title": "⚠️ Sâu Răng & Biện pháp Chăm sóc (Tooth Decay)",
+      "selector": "#card-dental_decay",
+      "en": "Tooth decay pathogenesis: Bacteria feeding on sugary food residues produce acidic metabolic by-products. This acid dissolves calcium phosphate in the protective enamel and dentine, creating cavities that expose nerve endings in the pulp cavity, causing toothache.",
+      "vi": "Cơ chế sâu răng: Vi khuẩn trong mảng bám lên men đường dư thừa sinh ra axit. Axit này hòa tan canxi photphat làm mòn lớp men và ngà răng, tạo lỗ sâu ăn sâu vào tủy răng kích thích dây thần kinh gây đau nhức buốt.",
+      "duration": 29.92,
+      "startTime": 357.82,
+      "endTime": 387.74,
+      "audioUrl": "/audio/lectures/biology/7/card_dental_decay.mp3"
     },
     {
       "id": "sec_digestive_organs",
       "title": "4. Các Cơ quan trong Hệ Tiêu hóa (Alimentary Canal)",
       "selector": "#sec-digestive-organs",
-      "en": "Section 4 traces food through the alimentary canal: Food moves along the oesophagus via peristalsis—wave-like rhythmic contractions of circular and longitudinal muscles. The stomach secretes gastric juice with hydrochloric acid that kills harmful microorganisms and establishes an optimum low pH for pepsin protease.",
-      "vi": "Mục bốn theo dõi hành trình thức ăn: Thức ăn di chuyển xuống thực quản nhờ nhu động ruột (peristalsis)—các làn sóng co bóp nhịp nhàng của lớp cơ vòng và cơ dọc. Dạ dày tiết dịch vị chứa axit clohydric HCl giúp tiêu diệt vi khuẩn gây bệnh và tạo môi trường axit pH thấp lý tưởng cho enzyme pepsin hoạt động.",
+      "en": "Section 4 traces food through the alimentary canal: Mouth and salivary glands, bolus transport through oesophagus by peristalsis, protein churning in acidic stomach hydrochloric acid, neutralization and lipid emulsification by liver bile in duodenum, enzyme hydrolysis, nutrient absorption in ileum, water reabsorption in colon, and faecal storage in rectum.",
+      "vi": "Mục 4 theo dõi hành trình thức ăn qua ống tiêu hóa: Khoang miệng và tuyến nước bọt, viên thức ăn di chuyển qua thực quản nhờ nhu động, nhào trộn và tiêu hóa protein trong dạ dày chứa axit HCl, trung hòa và nhũ hóa chất béo nhờ dịch mật từ gan ở tá tràng, enzyme phân giải, hấp thu tại ruột non, tái hấp thu nước ở đại tràng và tích trữ phân ở trực tràng.",
       "duration": 37.65,
-      "startTime": 189.47,
-      "endTime": 227.12,
+      "startTime": 387.74,
+      "endTime": 425.39,
       "audioUrl": "/audio/lectures/biology/7/sec_digestive_organs.mp3"
     },
     {
       "id": "sec_chemical_digestion",
       "title": "5. Tiêu hóa Hóa học & Các Enzyme Tiêu hóa",
       "selector": "#sec-chemical-digestion",
-      "en": "Section 5 details enzyme action: Amylase breaks down starch into maltose; maltase hydrolyzes maltose to glucose. Proteases break down proteins into amino acids. Lipase breaks down fats into fatty acids and glycerol. Bile, synthesized in the liver and stored in the gall bladder, neutralizes acidic stomach chyme and emulsifies large fat droplets into tiny droplets, vastly increasing surface area for lipase.",
-      "vi": "Mục năm trình bày hoạt động của các enzyme: Amylase phân giải tinh bột thành maltose; maltase tiếp tục thủy phân maltose thành glucose. Protease phân giải protein thành các axit amin. Lipase phân giải chất béo thành axit béo và glycerol. Dịch mật do gan sản xuất và dự trữ ở túi mật giúp trung hòa axit dịch vị và nhũ tương hóa chất béo thành vô số hạt mỡ nhỏ li ti, làm tăng diện tích tiếp xúc cho enzyme lipase.",
+      "en": "Section 5 details enzyme chemistry: Amylase breaks starch into maltose; maltase cleaves maltose into glucose. Proteases include pepsin in acidic stomach and trypsin in alkaline duodenum, breaking proteins into peptides and amino acids. Lipase digests emulsified fats into fatty acids and glycerol. Bile from the liver emulsifies large fat globules into tiny droplets to increase surface area.",
+      "vi": "Mục 5 trình bày chi tiết hóa học enzyme: Amylase phân giải tinh bột thành maltose; maltase cắt maltose thành glucose. Protease gồm pepsin trong môi trường axit dạ dày và trypsin trong môi trường kiềm tá tràng, cắt protein thành peptide và axit amin. Lipase tiêu hóa chất béo đã nhũ hóa thành axit béo và glycerol. Dịch mật nhũ hóa giọt mỡ lớn thành hàng triệu giọt li ti để tăng diện tích bề mặt.",
       "duration": 55.05,
-      "startTime": 227.12,
-      "endTime": 282.17,
+      "startTime": 425.39,
+      "endTime": 480.44,
       "audioUrl": "/audio/lectures/biology/7/sec_chemical_digestion.mp3"
     },
     {
       "id": "sec_absorption_villi",
       "title": "6. Hấp thụ và Cấu tạo Thích nghi của Lông ruột (Villi)",
       "selector": "#sec-absorption-villi",
-      "en": "Section 6 highlights the ileum adaptations: Millions of finger-like villi with microvilli provide a massive surface area. The epithelium is only one-cell thick for short diffusion distances. Extensive blood capillaries absorb glucose, amino acids, water, and minerals directly into the bloodstream, while central lacteals absorb fatty acids and glycerol into the lymphatic system.",
-      "vi": "Mục sáu làm nổi bật sự thích nghi của hồi tràng: Hàng triệu lông ruột (villi) và vi nhung mao (microvilli) tạo ra diện tích hấp thu khổng lồ. Lớp biểu mô mỏng chỉ dày một lớp tế bào giúp rút ngắn khoảng cách khuếch tán. Mạng lưới mao mạch máu dày đặc hấp thu glucose, axit amin, nước và khoáng chất, trong khi mạch dưỡng trấp trung tâm (lacteal) hấp thu axit béo và glycerol vào hệ bạch huyết.",
+      "en": "Section 6 examines villi adaptations: The small intestine lining is folded into millions of finger-like villi with microvilli, expanding absorption surface area thousands of times. Each villus has a thin one-cell-thick epithelium for short diffusion distance, a dense capillary network absorbing glucose and amino acids, and a central lacteal absorbing fatty acids and glycerol.",
+      "vi": "Mục 6 khảo sát các đặc điểm thích nghi của lông ruột: Niêm mạc ruột non gấp nếp thành hàng triệu nhung mao (villi) và vi nhung mao (microvilli), mở rộng diện tích tiếp xúc hấp thụ gấp hàng ngàn lần. Mỗi lông ruột có lớp biểu mô mỏng chỉ dày một lớp tế bào giúp rút ngắn khoảng cách khuếch tán, mạng lưới mao mạch dày đặc hấp thu glucose và axit amin, cùng mạch dưỡng chấp trung tâm (lacteal) chuyên hấp thu axit béo và glycerol.",
       "duration": 49.34,
-      "startTime": 282.17,
-      "endTime": 331.51,
+      "startTime": 480.44,
+      "endTime": 529.78,
       "audioUrl": "/audio/lectures/biology/7/sec_absorption_villi.mp3"
     }
   ]

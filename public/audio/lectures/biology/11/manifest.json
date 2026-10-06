@@ -1,29 +1,49 @@
 {
   "lectureId": "da59c2b3-124f-4e25-8537-74059e74f9b0",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 11: Gas exchange in humans",
-  "totalDuration": 213.45,
-  "majorSections": [
-    {
-      "id": "sec_alveoli_features",
-      "title": "1. Cấu tạo Thích nghi của Phế nang"
+  "totalDuration": 374.01,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_respiratory_anatomy",
-      "title": "2. Giải phẫu Hệ Hô hấp & Lông rung"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_ventilation_breathing",
-      "title": "3. Cơ chế Hít vào - Thở ra & Vận động"
+    "sec_alveoli_features": {
+      "start": 1,
+      "end": 1
+    },
+    "sec-alveoli-features": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_respiratory_anatomy": {
+      "start": 2,
+      "end": 3
+    },
+    "sec-respiratory-anatomy": {
+      "start": 2,
+      "end": 3
+    },
+    "sec_ventilation_breathing": {
+      "start": 4,
+      "end": 7
+    },
+    "sec-ventilation-breathing": {
+      "start": 4,
+      "end": 7
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 11: Trao đổi Khí ở Người",
+      "title": "Giới thiệu Topic 11: Trao đổi Khí ở Người",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 11: Gas exchange in humans. Supplying oxygen and purging metabolic carbon dioxide requires specialized respiratory surfaces. In this lesson, we analyze alveoli adaptations, the anatomy of the respiratory tract, goblet and ciliated cells, ventilation mechanics, and the effects of exercise.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 11: Trao đổi Khí ở Người. Việc cung cấp oxy và loại bỏ carbon dioxide đòi hỏi bề mặt trao đổi khí chuyên hóa cao. Trong bài học này, chúng ta sẽ phân tích cấu tạo thích nghi của phế nang, giải phẫu đường hô hấp, tế bào lông rung và tế bào tiết nhầy, cơ chế thông khí hít vào - thở ra cùng tác động của vận động thể chất.",
+      "en": "Welcome to Topic 11: Gas Exchange in Humans. Cellular aerobic respiration requires a continuous supply of oxygen and prompt removal of carbon dioxide waste. In this lesson, we examine alveoli adaptations, the anatomy of the respiratory tract, the antagonistic muscle mechanism of breathing, composition differences between inspired and expired air, and brainstem regulation.",
+      "vi": "Chào mừng các bạn đến với Bài 11: Trao đổi Khí ở Người. Quá trình hô hấp tế bào đòi hỏi nguồn cung cấp oxy liên tục và loại bỏ kịp thời carbon dioxide độc hại. Trong bài học này, chúng ta sẽ khảo sát đặc điểm phế nang, giải phẫu đường hô hấp, cơ chế đối kháng cơ khi hít thở, so sánh khí hít vào và thở ra, cùng cơ chế điều hòa nhịp thở ở thân não.",
       "duration": 48.02,
       "startTime": 0.0,
       "endTime": 48.02,
@@ -33,8 +53,8 @@
       "id": "sec_alveoli_features",
       "title": "1. Đặc điểm Thích nghi của Bề mặt Trao đổi Khí (Phế nang)",
       "selector": "#sec-alveoli-features",
-      "en": "Section 1 examines alveoli adaptations for rapid gas exchange: Millions of microscopic alveoli provide an immense surface area. The alveolar wall is only one-cell thick, as are surrounding capillary walls, creating an ultra-short diffusion distance. A thin layer of moisture dissolves gases for diffusion. A dense network of blood capillaries maintains a steep concentration gradient.",
-      "vi": "Mục một phân tích cấu tạo thích nghi của phế nang để tối ưu trao đổi khí: Hàng triệu phế nang li ti tạo nên diện tích bề mặt tiếp xúc khổng lồ. Thành phế nang và thành mao mạch bao quanh đều chỉ dày duy nhất một lớp tế bào, tạo ra khoảng cách khuếch tán cực ngắn. Lớp màng ẩm mỏng trên bề mặt giúp hòa tan khí oxy trước khi khuếch tán. Mạng mao mạch dày đặc liên tục đưa máu đi qua để duy trì độ dốc chênh lệch nồng độ cao.",
+      "en": "Section 1: Alveoli adaptations: Millions of microscopic alveoli provide a massive surface area of over seventy square metres. The alveolar and capillary walls are only one cell thick, creating an extremely thin diffusion pathway. A rich capillary network maintains steep concentration gradients, and ventilation continually replenishes oxygen and removes carbon dioxide.",
+      "vi": "Mục 1: Đặc điểm thích nghi của phế nang: Hàng triệu phế nang siêu vi tạo diện tích bề mặt trao đổi khí khổng lồ trên 70 mét vuông. Thành phế nang và mao mạch chỉ dày một lớp tế bào tạo khoảng cách khuếch tán siêu mỏng. Mạng lưới mao mạch phong phú duy trì gradien nồng độ dốc, và cử động thông khí liên tục làm mới oxy và đào thải CO2.",
       "duration": 49.84,
       "startTime": 48.02,
       "endTime": 97.86,
@@ -44,23 +64,67 @@
       "id": "sec_respiratory_anatomy",
       "title": "2. Cấu tạo Hệ Hô hấp & Tế bào Lông rung",
       "selector": "#sec-respiratory-anatomy",
-      "en": "Section 2 traces air pathway: Larynx, trachea supported by C-shaped cartilage rings, branching into two bronchi, multiple bronchioles, ending in alveolar clusters. The airway epithelium features goblet cells that secrete sticky mucus to trap inhaled dust and pathogens, and ciliated epithelial cells whose coordinated beating sweeps contaminated mucus upward towards the throat to be swallowed.",
-      "vi": "Mục hai theo dõi luồng không khí: Khí quản được nâng đỡ bởi các vòng sụn hình chữ C chống xẹp lún, phân nhánh thành hai phế quản chính, các tiểu phế quản rồi tận cùng ở các chùm phế nang. Lớp biểu mô đường thở chứa tế bào hình đài tiết chất nhầy kết dính giữ bụi và vi khuẩn, cùng các tế bào biểu mô có lông rung phối hợp đập nhịp nhàng quét ngược lớp chất nhầy bẩn lên họng để nuốt xuống dạ dày.",
+      "en": "Section 2: Respiratory tract anatomy: Air flows through nasal cavities, larynx, trachea, bronchi, bronchioles, and terminates in alveoli. C-shaped rings of flexible cartilage prevent the trachea and bronchi from collapsing when thoracic pressure drops during inhalation.",
+      "vi": "Mục 2: Cấu tạo đường dẫn khí: Không khí đi qua khoang mũi, thanh quản, khí quản, phế quản, tiểu phế quản và kết thúc tại các phế nang. Các vòng sụn hình chữ C đàn hồi giữ cho khí quản và phế quản không bị xẹp xuống khi áp suất trong lồng ngực hạ thấp trong lúc hít vào.",
       "duration": 46.07,
       "startTime": 97.86,
       "endTime": 143.93,
       "audioUrl": "/audio/lectures/biology/11/sec_respiratory_anatomy.mp3"
     },
     {
+      "id": "card_ciliated_goblet",
+      "title": "🛡️ Tế bào Lông rung & Tế bào Tiết nhầy (Goblet Cells)",
+      "selector": "#card-ciliated-goblet",
+      "en": "Airway cleansing mechanisms: Goblet cells synthesize and secrete sticky mucus to trap inhaled dust particles, pollen, and bacteria. Epithelial ciliated cells possess microscopic cilia that beat in coordinated rhythmic upward waves, sweeping the dirty mucus up to the pharynx to be swallowed safely into stomach acid.",
+      "vi": "Cơ chế làm sạch đường thở: Tế bào hình đài (goblet cells) tiết ra chất nhầy quánh dính để giữ lại hạt bụi, phấn hoa và vi khuẩn. Tế bào biểu mô có lông rung cử động nhịp nhàng như làn sóng hướng lên trên, quét chất nhầy bẩn lên họng để nuốt xuống dạ dày diệt khuẩn bằng axit.",
+      "duration": 36.26,
+      "startTime": 143.93,
+      "endTime": 180.19,
+      "audioUrl": "/audio/lectures/biology/11/card_ciliated_goblet.mp3"
+    },
+    {
       "id": "sec_ventilation_breathing",
       "title": "3. Cơ chế Thông khí (Hít vào - Thở ra) & Luyện tập",
       "selector": "#sec-ventilation-breathing",
-      "en": "Section 3 analyzes ventilation mechanics: During inspiration, external intercostal muscles contract, ribs move up and out, diaphragm contracts and flattens; thorax volume increases, decreasing thoracic pressure below atmospheric pressure, drawing air into lungs. During expiration, external intercostals relax, ribs drop down and in, diaphragm relaxes and domes up; thorax volume decreases, raising internal pressure to force air out. During exercise, muscle cells respire faster, releasing carbon dioxide that lowers blood pH, triggering the brain to increase breathing rate and tidal depth.",
-      "vi": "Mục ba phân tích cơ chế thông khí: Khi hít vào, cơ liên sườn ngoài co kéo xương sườn nâng lên và nở ra ngoài, cơ hoành co phẳng xuống; thể tích lồng ngực tăng làm áp suất bên trong giảm thấp hơn áp suất khí quyển, hút không khí tràn vào phổi. Khi thở ra, cơ liên sườn ngoài giãn, xương sườn hạ xuống, cơ hoành giãn cong lên hình vòm; thể tích khoang ngực giảm làm áp suất tăng ép đẩy khí ra ngoài. Khi vận động mạnh, hô hấp tế bào tăng tiết nhiều CO2 làm giảm pH máu, kích thích não bộ tăng nhịp thở và độ sâu của mỗi nhịp thở.",
+      "en": "Section 3: Mechanics of ventilation: During inhalation, external intercostal muscles contract pulling ribs up and out, while the diaphragm contracts and flattens, expanding thorax volume, decreasing internal pressure below atmospheric, drawing air in. During exhalation, external intercostals and diaphragm relax, ribs drop, thorax volume decreases, pressure rises above atmospheric, forcing air out.",
+      "vi": "Mục 3: Cơ chế thông khí: Khi hít vào, cơ liên sườn ngoài co kéo xương sườn lên và ra ngoài, cơ hoành co dẹt xuống làm tăng thể tích lồng ngực, áp suất phổi giảm thấp hơn khí quyển hút không khí vào. Khi thở ra, cơ liên sườn ngoài và cơ hoành giãn, xương sườn hạ xuống, thể tích lồng ngực giảm, áp suất tăng cao hơn khí quyển đẩy khí ra ngoài.",
       "duration": 69.52,
-      "startTime": 143.93,
-      "endTime": 213.45,
+      "startTime": 180.19,
+      "endTime": 249.71,
       "audioUrl": "/audio/lectures/biology/11/sec_ventilation_breathing.mp3"
+    },
+    {
+      "id": "card_inspired_expired_comparison",
+      "title": "📊 So sánh Thành phần: Khí Hít vào vs Khí Thở ra",
+      "selector": "#card-inspired-expired-comparison",
+      "en": "Inspired vs Expired air composition: Inspired air contains twenty-one percent oxygen, zero point zero four percent carbon dioxide, and variable humidity. Expired air contains sixteen percent oxygen because oxygen diffused into blood, four percent carbon dioxide because CO2 diffused out, and saturated water vapour at body temperature.",
+      "vi": "So sánh khí hít vào vs thở ra: Khí hít vào chứa 21% oxy, 0,04% carbon dioxide và độ ẩm thay đổi. Khí thở ra chứa 16% oxy do oxy đã khuếch tán vào máu, 4% carbon dioxide do CO2 khuếch tán từ máu ra ngoài, cùng hơi nước bão hòa ở nhiệt độ cơ thể.",
+      "duration": 42.16,
+      "startTime": 249.71,
+      "endTime": 291.87,
+      "audioUrl": "/audio/lectures/biology/11/card_inspired_expired_comparison.mp3"
+    },
+    {
+      "id": "card_limewater_test",
+      "title": "🧪 Thí nghiệm Nước vôi trong đo CO₂ (Limewater Test)",
+      "selector": "#card-limewater-test",
+      "en": "Limewater investigation: Breathing in and out through a two-tube apparatus demonstrates gas differences. Expired air bubbled through Tube B turns clear limewater milky white in seconds due to high carbon dioxide precipitating calcium carbonate. Inspired air drawn through Tube A remains clear because atmospheric CO2 is too low to react noticeably.",
+      "vi": "Thí nghiệm nước vôi trong: Hít thở qua dụng cụ hai ống nghiệm chứng minh sự khác biệt khí. Khí thở ra sục qua Ống B làm nước vôi trong chuyển đục màu trắng sữa chỉ sau vài giây do nồng độ CO2 cao tạo kết tủa CaCO3. Khí hít vào qua Ống A vẫn trong suốt do lượng CO2 trong khí quyển quá thấp.",
+      "duration": 40.17,
+      "startTime": 291.87,
+      "endTime": 332.04,
+      "audioUrl": "/audio/lectures/biology/11/card_limewater_test.mp3"
+    },
+    {
+      "id": "card_breathing_regulation",
+      "title": "🏃 5. Tác động của Vận động & Điều hòa Nhịp thở",
+      "selector": "#card-breathing-regulation",
+      "en": "Regulation during exercise: Vigorous physical exercise accelerates cellular aerobic respiration in muscles, producing high amounts of carbon dioxide. Dissolved CO2 lowers blood pH. Chemoreceptors in the brainstem detect this acidity and signal respiratory muscles to dramatically increase breathing rate and depth to eliminate CO2.",
+      "vi": "Điều hòa khi vận động: Khi tập luyện nặng, hô hấp tế bào ở cơ vân tăng vọt sinh ra nhiều CO2. Khí CO2 hòa tan trong máu tạo axit làm giảm độ pH máu. Thụ thể hóa học ở thân não phát hiện môi trường axit này và kích thích cơ hô hấp tăng mạnh tần số và biên độ thở để nhanh chóng thải trừ CO2.",
+      "duration": 41.97,
+      "startTime": 332.04,
+      "endTime": 374.01,
+      "audioUrl": "/audio/lectures/biology/11/card_breathing_regulation.mp3"
     }
   ]
 }

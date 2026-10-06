@@ -1,29 +1,49 @@
 {
   "lectureId": "77f1f7b8-f30e-4b0b-89e2-2e2482242791",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 17: Inheritance",
-  "totalDuration": 219.57,
-  "majorSections": [
-    {
-      "id": "sec_genetic_code",
-      "title": "1. Nhiễm sắc thể, Gen & Allele"
+  "totalDuration": 334.46,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_cell_division",
-      "title": "2. Nguyên phân (Mitosis) vs Giảm phân (Meiosis)"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_monohybrid_inheritance",
-      "title": "3. Bảng lai Punnett & Xác định Giới tính"
+    "sec_genetic_code": {
+      "start": 1,
+      "end": 2
+    },
+    "sec-genetic-code": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_cell_division": {
+      "start": 3,
+      "end": 4
+    },
+    "sec-cell-division": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_monohybrid_inheritance": {
+      "start": 5,
+      "end": 6
+    },
+    "sec-monohybrid-inheritance": {
+      "start": 5,
+      "end": 6
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 17: Cơ chế Di truyền (Inheritance)",
+      "title": "Giới thiệu Topic 17: Cơ chế Di truyền (Inheritance)",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 17: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this central topic, we explore chromosome and gene structures, contrast mitosis and meiosis, decipher genetic terminology, and master monohybrid Punnett crosses and sex determination.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 17: Cơ chế Di truyền. Di truyền học nghiên cứu sự truyền đạt thông tin di truyền qua các thế hệ. Trong bài học này, chúng ta sẽ khảo sát cấu trúc nhiễm sắc thể và gen, so sánh nguyên phân và giảm phân, làm chủ các thuật ngữ di truyền, bảng lai Punnett và cơ chế xác định giới tính.",
+      "en": "Welcome to Topic 17: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this lesson, we study chromosomes and the genetic code, the stages of protein synthesis, mitosis versus meiosis cell divisions, stem cells, monohybrid crosses with Punnett squares, ABO blood codominance, and pedigree diagrams.",
+      "vi": "Chào mừng các bạn đến với Bài 17: Cơ chế Di truyền (Inheritance). Di truyền là sự truyền đạt thông tin di truyền qua các thế hệ. Trong bài học này, chúng ta sẽ học về nhiễm sắc thể và mã di truyền, các giai đoạn tổng hợp protein, phân bào nguyên phân và giảm phân, tế bào gốc, lai đơn tính với bảng Punnett, đồng trội nhóm máu ABO và sơ đồ phả hệ.",
       "duration": 44.99,
       "startTime": 0.0,
       "endTime": 44.99,
@@ -33,34 +53,67 @@
       "id": "sec_genetic_code",
       "title": "1. Cấu trúc Di truyền: Nhiễm sắc thể, Gen & Allele",
       "selector": "#sec-genetic-code",
-      "en": "Section 1 defines key genetics terms: A Chromosome is a thread-like structure of DNA carrying genetic information in the form of genes. A Gene is a length of DNA coding for a specific protein. An Allele is an alternative form of a gene. A Haploid nucleus contains a single set of unpaired chromosomes (23 in humans). A Diploid nucleus contains two sets of homologous chromosomes (46 in humans).",
-      "vi": "Mục một định nghĩa các thuật ngữ di truyền then chốt: Nhiễm sắc thể là cấu trúc dạng sợi cấu tạo từ phân tử DNA mang thông tin di truyền dưới dạng các gen. Gen là một đoạn phân tử DNA mã hóa cho một loại protein xác định. Allele là các trạng thái biểu hiện khác nhau của cùng một gen. Nhân đơn bội (haploid) chứa một bộ nhiễm sắc thể đơn không bắt cặp (ở người n = 23). Nhân lưỡng bội (diploid) chứa hai bộ nhiễm sắc thể tương đồng (ở người 2n = 46).",
+      "en": "Section 1: Genetic hierarchy: A chromosome is a thread-like structure of DNA carrying genes. A gene is a length of DNA coding for a protein. An allele is an alternative version of a gene. A diploid nucleus has two complete sets of chromosomes, while a haploid gamete nucleus contains a single set.",
+      "vi": "Mục 1: Trật tự di truyền: Nhiễm sắc thể là cấu trúc sợi dạng chuỗi của DNA mang các gen. Gen là một đoạn DNA mã hóa cho một phân tử protein. Allele là các trạng thái biểu hiện khác nhau của cùng một gen. Nhân lưỡng bội chứa hai bộ nhiễm sắc thể hoàn chỉnh, còn nhân đơn bội ở giao tử chỉ chứa một bộ đơn.",
       "duration": 59.13,
       "startTime": 44.99,
       "endTime": 104.12,
       "audioUrl": "/audio/lectures/biology/17/sec_genetic_code.mp3"
     },
     {
+      "id": "card_protein_synthesis",
+      "title": "⚙️ Quá trình Tổng hợp Protein (Transcription & Translation)",
+      "selector": "#card-protein-synthesis",
+      "en": "Protein synthesis mechanism: In the nucleus, the DNA code is transcribed into a complementary single-stranded messenger RNA molecule. mRNA travels out through nuclear pores to a ribosome in the cytoplasm. The ribosome reads the mRNA triplet codon sequence, linking specific amino acids together into a polypeptide protein chain.",
+      "vi": "Cơ chế tổng hợp protein: Tại nhân tế bào, mã DNA được phiên mã thành phân tử mARN sợi đơn bổ sung. mARN đi qua lỗ màng nhân ra tế bào chất đến ribosome. Ribosome đọc trình tự bộ ba mã sao (codon) trên mARN và liên kết các axit amin tương ứng thành chuỗi polypeptide hoàn chỉnh.",
+      "duration": 41.58,
+      "startTime": 104.12,
+      "endTime": 145.7,
+      "audioUrl": "/audio/lectures/biology/17/card_protein_synthesis.mp3"
+    },
+    {
       "id": "sec_cell_division",
       "title": "2. Phân bào: Nguyên phân (Mitosis) & Giảm phân (Meiosis)",
       "selector": "#sec-cell-division",
-      "en": "Section 2 contrasts cell divisions: Mitosis is nuclear division giving rise to genetically identical cells in which chromosome number is maintained; it is essential for growth, tissue repair, and asexual reproduction. Meiosis is reduction division in which chromosome number is halved from diploid to haploid, producing four genetically distinct gametes for sexual reproduction and driving genetic variation.",
-      "vi": "Mục hai so sánh hai hình thức phân bào: Nguyên phân (Mitosis) là quá trình phân chia nhân tạo ra hai tế bào con có bộ nhiễm sắc thể giống hệt nhau và giống tế bào mẹ; đóng vai trò cốt lõi trong tăng trưởng cơ thể, làm lành vết thương và sinh sản vô tính. Giảm phân (Meiosis) là phân bào giảm nhiễm làm giảm một nửa số lượng nhiễm sắc thể từ lưỡng bội thành đơn bội, tạo ra 4 giao tử có kiểu gen khác nhau phục vụ sinh sản hữu tính và tạo biến dị tổ hợp.",
+      "en": "Section 2: Nuclear divisions: Mitosis is nuclear division producing two genetically identical diploid cells for growth, tissue repair, and asexual reproduction. Meiosis is reduction division producing four genetically distinct haploid gametes, halving chromosome number for sexual reproduction.",
+      "vi": "Mục 2: Phân chia nhân: Nguyên phân là phân bào tạo ra hai tế bào con lưỡng bội giống hệt nhau về mặt di truyền phục vụ sinh trưởng, phục hồi mô tổn thương và sinh sản vô tính. Giảm phân là phân bào giảm nhiễm tạo ra bốn giao tử đơn bội biến dị di truyền, giảm một nửa số nhiễm sắc thể phục vụ sinh sản hữu tính.",
       "duration": 50.54,
-      "startTime": 104.12,
-      "endTime": 154.66,
+      "startTime": 145.7,
+      "endTime": 196.24,
       "audioUrl": "/audio/lectures/biology/17/sec_cell_division.mp3"
+    },
+    {
+      "id": "card_stem_cells",
+      "title": "💡 Tế bào Gốc (Stem Cells)",
+      "selector": "#card-stem-cells",
+      "en": "Stem cells: Unspecialised cells that retain the ability to divide indefinitely by mitosis and differentiate into distinct specialised cell types. Embryonic stem cells can form any body cell, whereas adult bone marrow stem cells differentiate primarily into blood cells.",
+      "vi": "Tế bào gốc: Những tế bào chưa biệt hóa duy trì khả năng phân chia nguyên phân liên tục và có thể biệt hóa thành các loại tế bào chuyên trách khác nhau. Tế bào gốc phôi có thể phát triển thành bất kỳ loại tế bào nào, trong khi tế bào gốc tủy xương người lớn chủ yếu biệt hóa thành các tế bào máu.",
+      "duration": 33.38,
+      "startTime": 196.24,
+      "endTime": 229.62,
+      "audioUrl": "/audio/lectures/biology/17/card_stem_cells.mp3"
     },
     {
       "id": "sec_monohybrid_inheritance",
       "title": "3. Di truyền Đơn gen, Bảng lai Punnett & Giới tính",
       "selector": "#sec-monohybrid-inheritance",
-      "en": "Section 3 investigates Monohybrid Inheritance: Genotype is the genetic makeup of an organism in terms of alleles (e.g. homozygous BB or heterozygous Bb). Phenotype is the observable physical features. In a cross between two heterozygous parents, the expected phenotypic ratio is three dominant to one recessive. Sex is determined by sex chromosomes: Human females are XX, males are XY, yielding a constant 50% probability of having a son or daughter.",
-      "vi": "Mục ba nghiên cứu Quy luật di truyền đơn gen: Kiểu gen (Genotype) là tổ hợp các allele của sinh vật (như đồng hợp BB, bb hoặc dị hợp Bb). Kiểu hình (Phenotype) là các đặc điểm hình thái quan sát được bên ngoài. Khi cho hai cá thể bố mẹ dị hợp lai với nhau, tỉ lệ phân ly kiểu hình kinh điển ở đời con là 3 trội : 1 lặn. Giới tính ở người do cặp nhiễm sắc thể giới tính quyết định: Nữ giới mang cặp đồng dạng XX, nam giới mang cặp dị dạng XY, xác suất sinh con trai hoặc con gái luôn bằng 50%.",
+      "en": "Section 3: Monohybrid inheritance: Genotype is the genetic makeup; phenotype is the observable feature. A heterozygous cross between two carriers yields a classic three-to-one phenotypic ratio. Sex is determined by XX in human females and XY in human males, giving a fifty percent probability of each sex at conception.",
+      "vi": "Mục 3: Di truyền đơn gen: Kiểu gen là tổ hợp các gen; kiểu hình là đặc điểm biểu hiện ra ngoài quan sát được. Phép lai giữa hai cá thể dị hợp tử tạo tỉ lệ phân ly kiểu hình kinh điển 3 trội : 1 lặn. Giới tính được quyết định bởi cặp XX ở nữ và XY ở nam, cho xác suất 50% nam : 50% nữ trong mỗi lần thụ thai.",
       "duration": 64.91,
-      "startTime": 154.66,
-      "endTime": 219.57,
+      "startTime": 229.62,
+      "endTime": 294.53,
       "audioUrl": "/audio/lectures/biology/17/sec_monohybrid_inheritance.mp3"
+    },
+    {
+      "id": "card_codominance_blood",
+      "title": "🩸 4. Đồng trội, Nhóm Máu ABO & Sơ đồ Phả hệ",
+      "selector": "#card-codominance-blood",
+      "en": "Codominance and Pedigrees: Codominance occurs when both alleles are expressed in the phenotype, as in blood group AB where alleles IA and IB are codominant over recessive Io. Pedigree family tree diagrams trace inherited phenotypes across generations to determine carrier probabilities and autosomal dominant versus recessive patterns.",
+      "vi": "Đồng trội và Sơ đồ Phả hệ: Hiện tượng đồng trội xảy ra khi cả hai allele đều biểu hiện ra kiểu hình, như nhóm máu AB khi allele IA và IB cùng trội so với allele lặn Io. Sơ đồ phả hệ gia đình theo dõi sự di truyền kiểu hình qua các thế hệ để tính xác suất người lành mang gen và xác định quy luật di truyền trội hay lặn.",
+      "duration": 39.93,
+      "startTime": 294.53,
+      "endTime": 334.46,
+      "audioUrl": "/audio/lectures/biology/17/card_codominance_blood.mp3"
     }
   ]
 }

@@ -1,41 +1,65 @@
 {
   "lectureId": "7777b4df-68dd-4600-b4ba-a4ce56ecc6ac",
-  "courseTitle": "Cambridge IGCSE Biology",
+  "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 20: Human influences on ecosystems",
-  "totalDuration": 371.16,
-  "majorSections": [
-    {
-      "id": "sec_agriculture",
-      "title": "1. Nông nghiệp Thâm canh & Độc canh"
+  "totalDuration": 560.44,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_deforestation",
-      "title": "2. Nạn Phá rừng & Mất Bể chứa Carbon"
+    "sec-header": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_eutrophication",
-      "title": "3. Phú dưỡng Nguồn nước (Eutrophication)"
+    "sec_agriculture": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_climate_acid_rain",
-      "title": "4. Biến đổi Khí hậu & Mưa Axit"
+    "sec-agriculture": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_conservation",
-      "title": "5. Chiến lược Bảo tồn Đa dạng Sinh học"
+    "sec_deforestation": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_captive_breeding",
-      "title": "6. Nhân giống Bảo tồn (AI & IVF)"
+    "sec-deforestation": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_eutrophication": {
+      "start": 5,
+      "end": 6
+    },
+    "sec-eutrophication": {
+      "start": 5,
+      "end": 6
+    },
+    "sec_climate_acid_rain": {
+      "start": 7,
+      "end": 8
+    },
+    "sec-climate-acid-rain": {
+      "start": 7,
+      "end": 8
+    },
+    "sec_conservation": {
+      "start": 9,
+      "end": 11
+    },
+    "sec-conservation": {
+      "start": 9,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Bài 20: Tác động của Con người lên Hệ sinh thái",
+      "title": "Giới thiệu Topic 20: Tác động của Con người lên Hệ sinh thái",
       "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Biology, Topic 20: Human influences on ecosystems. Expanding human populations exert unprecedented pressures on the biosphere. In this comprehensive lesson, we analyze modern agriculture, deforestation, the exact stages of eutrophication, global warming and acid rain, and wildlife conservation programmes.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Bài 20: Tác động của Con người lên Hệ sinh thái. Dân số nhân loại gia tăng đang tạo áp lực chưa từng có lên sinh quyển. Trong bài học này, chúng ta sẽ khảo sát nông nghiệp hiện đại, nạn phá rừng, các bước diễn biến của hiện tượng phú dưỡng, biến đổi khí hậu, mưa axit và các chương trình bảo tồn loài nguy cấp.",
+      "en": "Welcome to Topic 20: Human Influences on Ecosystems. Human activities increasingly disrupt ecological balances on a global scale. In this lesson, we evaluate agricultural impacts of monocultures and intensive livestock, mechanisms and consequences of deforestation, aquatic eutrophication cascades, enhanced greenhouse effect, acid rain, and modern conservation strategies for endangered species.",
+      "vi": "Chào mừng các bạn đến với Bài 20: Tác động của Con người lên Hệ sinh thái. Hoạt động của loài người đang làm xáo trộn các cân bằng sinh thái trên quy mô toàn cầu. Trong bài học này, chúng ta sẽ đánh giá tác động của độc canh nông nghiệp và chăn nuôi thâm canh, cơ chế và hậu quả của nạn phá rừng, chuỗi phản ứng phú dưỡng nguồn nước, hiệu ứng nhà kính tăng cường, mưa axit và các chiến lược bảo tồn đa dạng sinh học hiện đại.",
       "duration": 46.34,
       "startTime": 0.0,
       "endTime": 46.34,
@@ -45,67 +69,122 @@
       "id": "sec_agriculture",
       "title": "1. Nông nghiệp & Cung ứng Lương thực (Monoculture)",
       "selector": "#sec-agriculture",
-      "en": "Section 1 examines agricultural intensification: Monocultures cultivate a single crop over vast areas, which drastically reduces biodiversity and creates ideal conditions for pest infestations, demanding heavy pesticide applications. Intensive livestock farming increases food yields but raises animal welfare concerns, disease transmission risks, and high greenhouse gas emissions like methane.",
-      "vi": "Mục một phân tích thâm canh nông nghiệp: Độc canh (Monoculture) gieo trồng duy nhất một giống cây trên diện tích bạt ngàn, làm suy giảm nghiêm trọng đa dạng sinh học và tạo điều kiện cho sâu bệnh bùng phát, buộc nông dân phải dùng nhiều thuốc trừ sâu hóa học. Chăn nuôi gia súc tập trung giúp tăng sản lượng thịt sữa nhưng gây lo ngại về đạo đức động vật, nguy cơ lây lan dịch bệnh và phát thải lượng lớn khí methane.",
+      "en": "Section 1: Food supply and modern agriculture: Growing human populations demand increased food production through agricultural machinery, chemical fertilizers, synthetic insecticides, herbicides, and selective breeding.",
+      "vi": "Mục 1: Cung ứng lương thực và nông nghiệp hiện đại: Dân số gia tăng nhanh đòi hỏi tăng sản lượng lương thực thông qua cơ giới hóa máy móc, phân bón hóa học, thuốc trừ sâu tổng hợp, thuốc diệt cỏ và chọn lọc nhân tạo giống cây trồng vật nuôi.",
       "duration": 46.94,
       "startTime": 46.34,
       "endTime": 93.28,
       "audioUrl": "/audio/lectures/biology/20/sec_agriculture.mp3"
     },
     {
+      "id": "card_monoculture_livestock",
+      "title": "🌽 Độc canh Quy mô lớn & Chăn nuôi Thâm canh",
+      "selector": "#card-monoculture-livestock",
+      "en": "Monocultures and intensive livestock: Monoculture is growing a single crop species over large land areas, causing severe biodiversity loss, rapid pest population surges, and soil nutrient depletion. Intensive livestock farming confines animals in high densities, risking antibiotic resistance transmission, high greenhouse gas emissions, and massive slurry pollution.",
+      "vi": "Độc canh và chăn nuôi thâm canh: Độc canh là trồng duy nhất một loài cây trên diện tích lớn, làm suy giảm đa dạng sinh học, bùng phát sâu bệnh và thoái hóa cạn kiệt dinh dưỡng đất. Chăn nuôi thâm canh nuôi nhốt gia súc mật độ cao dẫn đến nguy cơ kháng kháng sinh lây lan, phát thải khí nhà kính và ô nhiễm chất thải phân chuồng nghiêm trọng.",
+      "duration": 41.99,
+      "startTime": 93.28,
+      "endTime": 135.27,
+      "audioUrl": "/audio/lectures/biology/20/card_monoculture_livestock.mp3"
+    },
+    {
       "id": "sec_deforestation",
       "title": "2. Phá hủy Môi trường sống & Nạn Phá rừng (Deforestation)",
       "selector": "#sec-deforestation",
-      "en": "Section 2 investigates Deforestation: Forests are felled for agricultural land, timber, and urban expansion. Ecological damages include topsoil erosion when tree roots no longer bind soil particles; severe flooding because rainfall runs off rapidly; destruction of natural habitats driving species extinction; and loss of massive carbon sinks, elevating atmospheric carbon dioxide levels.",
-      "vi": "Mục hai nghiên cứu Nạn phá rừng (Deforestation): Rừng bị đốn hạ để lấy đất trồng trọt, khai thác gỗ và mở rộng đô thị. Hậu quả sinh thái nghiêm trọng gồm xói mòn lớp đất mặt màu mỡ do mất mạng lưới rễ cây giữ đất; gia tăng lũ lụt do nước mưa chảy tràn; phá hủy môi trường sống dẫn đến tuyệt chủng giống loài; và làm mất đi bể hấp thu carbon khổng lồ, khiến lượng CO2 trong khí quyển tăng vọt.",
+      "en": "Section 2: Habitat destruction and deforestation: Clearing forests for agriculture, livestock grazing, timber extraction, and urban expansion destroys habitats, driving biodiversity loss and climate instability.",
+      "vi": "Mục 2: Phá hủy môi trường sống và nạn phá rừng: Chặt phá rừng lấy đất canh tác, chăn thả gia súc, khai thác gỗ và mở rộng đô thị phá hủy nơi cư trú tự nhiên, làm mất đa dạng sinh học và gây mất ổn định khí hậu.",
       "duration": 47.97,
-      "startTime": 93.28,
-      "endTime": 141.25,
+      "startTime": 135.27,
+      "endTime": 183.24,
       "audioUrl": "/audio/lectures/biology/20/sec_deforestation.mp3"
+    },
+    {
+      "id": "card_deforestation_impacts",
+      "title": "🔥 Hậu quả của Phá rừng: Xói mòn, Lũ lụt & CO2",
+      "selector": "#card-deforestation-impacts",
+      "en": "Deforestation impacts: Tree clearance reduces photosynthesis while combustion of felled timber releases massive carbon dioxide, accelerating global warming. The absence of tree root networks leads to topsoil erosion by heavy rainfall, siltation of riverbeds, and downstream flash flooding.",
+      "vi": "Hậu quả của nạn phá rừng: Mất cây xanh làm giảm hấp thụ CO2 qua quang hợp, trong khi đốt gỗ giải phóng lượng lớn CO2 đẩy nhanh biến đổi khí hậu. Mất hệ rễ cây giữ đất khiến đất mặt bị mưa xói mòn rửa trôi, bồi lấp lòng sông gây sạt lở và lũ quét ngập lụt vùng hạ lưu.",
+      "duration": 34.72,
+      "startTime": 183.24,
+      "endTime": 217.96,
+      "audioUrl": "/audio/lectures/biology/20/card_deforestation_impacts.mp3"
     },
     {
       "id": "sec_eutrophication",
       "title": "3. Ô nhiễm Nước & Hiện tượng Phú dưỡng (Eutrophication)",
       "selector": "#sec-eutrophication",
-      "en": "Section 3 details the classic five-step Eutrophication sequence: First, excess mineral fertilizers or untreated sewage leach into lakes and rivers. Second, algae rapidly proliferate into an algal bloom, blanketing the water surface and blocking sunlight. Third, submerged aquatic plants cannot photosynthesize and die. Fourth, aerobic bacteria multiply rapidly as they decompose the dead vegetation, consuming all dissolved oxygen. Fifth, aquatic animals like fish suffocate from lack of oxygen.",
-      "vi": "Mục ba mô tả 5 bước kinh điển của Hiện tượng Phú dưỡng (Eutrophication): Bước 1: Phân bón hóa học dư thừa chứa nitrat và photphat hoặc nước thải chưa xử lý rửa trôi xuống sông hồ. Bước 2: Tảo sinh sôi nở hoa bùng phát (algal bloom), che phủ kín mặt nước ngăn ánh sáng mặt trời. Bước 3: Các loài thực vật thủy sinh dưới đáy không thể quang hợp và chết dần. Bước 4: Vi khuẩn phân hủy hiếu khí tăng sinh theo cấp số nhân để tiêu thụ xác thực vật, hút cạn toàn bộ oxy hòa tan trong nước. Bước 5: Các loài cá và động vật thủy sinh ngạt thở và chết hàng loạt do thiếu dưỡng khí.",
+      "en": "Section 3: Pollution and eutrophication: Runoff of synthetic inorganic nitrate and phosphate fertilizers or untreated sewage into aquatic freshwater ecosystems causes deadly eutrophication.",
+      "vi": "Mục 3: Ô nhiễm nguồn nước và hiện tượng phú dưỡng: Sự rửa trôi phân bón hóa học chứa nitrat, photphat hoặc nước thải chưa qua xử lý vào các hệ sinh thái nước ngọt gây nên hiện tượng phú dưỡng độc hại.",
       "duration": 69.35,
-      "startTime": 141.25,
-      "endTime": 210.6,
+      "startTime": 217.96,
+      "endTime": 287.31,
       "audioUrl": "/audio/lectures/biology/20/sec_eutrophication.mp3"
+    },
+    {
+      "id": "card_eutrophication_stages",
+      "title": "☠️ 5 Giai đoạn của Hiện tượng Phú dưỡng",
+      "selector": "#card-eutrophication-stages",
+      "en": "The 5 stages of eutrophication: First, fertilizer nutrients leach into lakes. Second, algae rapidly multiply forming dense surface algal blooms that block sunlight. Third, submerged plants die from lack of light. Fourth, aerobic decomposing bacteria feed on dead vegetation, reproducing explosively and consuming dissolved oxygen. Fifth, severe hypoxia leads to mass death of fish and aquatic invertebrates.",
+      "vi": "Năm giai đoạn của hiện tượng phú dưỡng: Thứ nhất, phân bón giàu nitrat rửa trôi vào hồ. Thứ hai, tảo sinh sôi bùng nổ tạo màng tảo xanh dày đặc che khuất ánh sáng. Thứ ba, thực vật thủy sinh dưới đáy chết do thiếu sáng không quang hợp được. Thứ tư, vi khuẩn hiếu khí phân hủy xác thực vật bùng nổ tiêu thụ cạn kiệt oxy hòa tan. Thứ năm, sự thiếu oxy nghiêm trọng làm cá và các động vật thủy sinh chết hàng loạt ngạt thở.",
+      "duration": 56.54,
+      "startTime": 287.31,
+      "endTime": 343.85,
+      "audioUrl": "/audio/lectures/biology/20/card_eutrophication_stages.mp3"
     },
     {
       "id": "sec_climate_acid_rain",
       "title": "4. Biến đổi Khí hậu & Mưa Axit",
       "selector": "#sec-climate-acid-rain",
-      "en": "Section 4 covers atmospheric pollution: The enhanced greenhouse effect results from elevated carbon dioxide from fossil fuel combustion and methane from livestock and rice paddy decomposition, trapping thermal infrared radiation within the atmosphere and driving global warming. Acid rain is produced when sulfur dioxide from coal power plants and nitrogen oxides from vehicles dissolve into rain clouds, forming dilute sulfuric and nitric acids that lower lake pH and damage tree foliage.",
-      "vi": "Mục bốn phân tích ô nhiễm khí quyển: Hiệu ứng nhà kính tăng cường do khí CO2 từ đốt cháy nhiên liệu hóa thạch và khí methane từ chăn nuôi gia súc giữ lại bức xạ hồng ngoại, gây hiện tượng nóng lên toàn cầu. Mưa axit hình thành khi khí sulfur dioxide SO2 từ các nhà máy nhiệt điện than và oxit nitơ từ khói xe hòa tan vào nước mưa tạo thành axit sunfuric và axit nitric loãng, làm chua hóa nguồn nước sông hồ và hủy hoại tán lá rừng.",
+      "en": "Section 4: Climate change and acid rain: Burning fossil fuels produces carbon dioxide and methane that trap outgoing thermal infrared radiation, amplifying the greenhouse effect. Sulfur dioxide and nitrogen oxides dissolve in atmospheric moisture forming dilute sulfuric and nitric acids, which leach toxic aluminium ions from soil and lower freshwater pH.",
+      "vi": "Mục 4: Biến đổi khí hậu và mưa axit: Đốt nhiên liệu hóa thạch phát thải CO2 và mêtan giữ lại bức xạ nhiệt hồng ngoại làm tăng hiệu ứng nhà kính và biến đổi khí hậu toàn cầu. Khí lưu huỳnh đioxit và oxit nitơ hòa tan vào hơi nước tạo mưa axit sunfuric và nitric, làm chua hóa nguồn nước và rửa trôi ion nhôm độc hại vào sông hồ làm chết cá.",
       "duration": 53.44,
-      "startTime": 210.6,
-      "endTime": 264.04,
+      "startTime": 343.85,
+      "endTime": 397.29,
       "audioUrl": "/audio/lectures/biology/20/sec_climate_acid_rain.mp3"
     },
     {
+      "id": "card_greenhouse_acid_rain",
+      "title": "🌍 Hiệu ứng Nhà kính Tăng cường & Biện pháp Khắc phục",
+      "selector": "#card-greenhouse-acid-rain",
+      "en": "Mitigating atmospheric pollution: Solutions require transitioning to renewable energy, installing catalytic converters in vehicles, utilizing scrubbers in power stations to desulfurize flue gases, and reforestation to restore natural carbon sinks.",
+      "vi": "Biện pháp giảm thiểu ô nhiễm khí quyển: Các giải pháp cấp thiết gồm chuyển đổi sang năng lượng tái tạo, lắp bộ lọc xúc tác cho khí thải xe cộ, sử dụng tháp lọc khí để khử lưu huỳnh tại nhà máy nhiệt điện, và tích cực trồng rừng khôi phục bể hấp thụ carbon tự nhiên.",
+      "duration": 30.18,
+      "startTime": 397.29,
+      "endTime": 427.47,
+      "audioUrl": "/audio/lectures/biology/20/card_greenhouse_acid_rain.mp3"
+    },
+    {
       "id": "sec_conservation",
-      "title": "5. Bảo tồn Đa dạng Sinh học & Động vật Nguy cấp",
+      "title": "5. Bảo tồn Đa dạng Sinh học & Quản lý Tài nguyên Bền vững",
       "selector": "#sec-conservation",
-      "en": "Section 5 presents Conservation strategies: Sustainable development satisfies current human needs without compromising the ability of future generations to meet their needs. Conservation programmes preserve biodiversity, prevent species extinction, protect vulnerable habitats in national parks, maintain seed banks for crop security, and use captive breeding, artificial insemination, and in vitro fertilization to restore endangered populations.",
-      "vi": "Mục năm trình bày các chiến lược Bảo tồn: Phát triển bền vững đáp ứng nhu cầu hiện tại mà không làm tổn hại đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. Các chương trình bảo tồn giúp duy trì đa dạng sinh học, ngăn chặn nguy cơ tuyệt chủng, thành lập các vườn quốc gia bảo vệ sinh cảnh, xây dựng ngân hàng hạt giống và áp dụng kỹ thuật thụ tinh nhân tạo và thụ tinh trong ống nghiệm (IVF) để nhân giống động vật hoang dã nguy cấp.",
+      "en": "Section 5: Conservation and sustainable resources: Conservation is the maintenance of biodiversity through the preservation and restoration of natural habitats and sustainable management of natural resources.",
+      "vi": "Mục 5: Bảo tồn đa dạng sinh học và tài nguyên bền vững: Bảo tồn là việc duy trì sự đa dạng sinh học thông qua bảo vệ và phục hồi các môi trường sống tự nhiên, đồng thời quản lý khai thác bền vững các nguồn tài nguyên.",
       "duration": 51.21,
-      "startTime": 264.04,
-      "endTime": 315.25,
+      "startTime": 427.47,
+      "endTime": 478.68,
       "audioUrl": "/audio/lectures/biology/20/sec_conservation.mp3"
     },
     {
-      "id": "sec_captive_breeding",
-      "title": "6. Kỹ thuật Nhân giống Động vật Nguy cấp (Captive Breeding)",
-      "selector": "#sec-captive-breeding",
-      "en": "Section 6 highlights assisted reproductive technologies for endangered fauna: Artificial Insemination (AI) transfers collected sperm into female reproductive tracts, avoiding transportation stress between zoos. In Vitro Fertilisation (IVF) fertilizes harvested ova in laboratory vessels before implanting embryos into surrogate females. These techniques expand gene pools and minimize genetic inbreeding risks in dwindling populations.",
-      "vi": "Mục sáu nêu bật các công nghệ hỗ trợ sinh sản cho động vật nguy cấp: Thụ tinh nhân tạo (Artificial Insemination) đưa tinh trùng vào đường sinh sản của con cái mà không cần phải vận chuyển động vật giữa các vườn thú. Thụ tinh trong ống nghiệm (IVF) kết hợp trứng và tinh trùng trong phòng thí nghiệm rồi cấy phôi vào con cái mang thai hộ. Các công nghệ này giúp đa dạng hóa vốn gen và hạn chế tối đa nguy cơ suy thoái do giao phối cận huyết ở các quần thể số lượng nhỏ.",
-      "duration": 55.91,
-      "startTime": 315.25,
-      "endTime": 371.16,
-      "audioUrl": "/audio/lectures/biology/20/sec_captive_breeding.mp3"
+      "id": "card_sustainable_resources",
+      "title": "🌲 Quản lý Bền vững Tài nguyên Rừng & Thủy sản",
+      "selector": "#card-sustainable-resources",
+      "en": "Sustainable resource management: Sustainable harvesting meets human needs today without compromising the availability of resources for future generations. Forestry employs quotas, selective felling, and replanting. Fisheries enforce fishing quotas, restricted mesh sizes allowing young fish to escape, and marine protected areas during breeding seasons.",
+      "vi": "Quản lý tài nguyên bền vững: Phát triển bền vững đáp ứng nhu cầu hiện tại mà không làm tổn hại đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. Lâm nghiệp áp dụng hạn ngạch khai thác, đốn hạ có chọn lọc và trồng rừng thay thế. Ngư nghiệp áp đặt hạn ngạch đánh bắt, quy định kích thước mắt lưới mắt lớn để cá non thoát được, và lập khu bảo tồn biển trong mùa sinh sản.",
+      "duration": 43.94,
+      "startTime": 478.68,
+      "endTime": 522.62,
+      "audioUrl": "/audio/lectures/biology/20/card_sustainable_resources.mp3"
+    },
+    {
+      "id": "card_captive_breeding_methods",
+      "title": "🐼 Quản lý Loài Nguy cấp & Kỹ thuật Nhân giống Nuôi nhốt",
+      "selector": "#card-captive-breeding-methods",
+      "en": "Endangered species management and captive breeding: Endangered species are protected in national parks and botanic gardens. Captive breeding programs in zoos maintain genetic diversity using studbooks, in vitro fertilization, and embryo transfer, with ultimate reintroduction into protected wild habitats.",
+      "vi": "Quản lý loài nguy cấp và nhân giống nuôi nhốt: Các loài có nguy cơ tuyệt chủng được bảo vệ trong các vườn quốc gia và vườn thực vật. Các chương trình nhân giống nuôi nhốt trong thảo cầm viên duy trì đa dạng di truyền qua sổ theo dõi phả hệ, thụ tinh trong ống nghiệm và chuyển phôi, hướng tới tái thả cá thể trở lại môi trường hoang dã an toàn.",
+      "duration": 37.82,
+      "startTime": 522.62,
+      "endTime": 560.44,
+      "audioUrl": "/audio/lectures/biology/20/card_captive_breeding_methods.mp3"
     }
   ]
 }
