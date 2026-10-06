@@ -1,0 +1,572 @@
+
+<div style="font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width:920px; margin:0 auto; color:#1e293b; line-height:1.65; font-size:16px;">
+
+    <!-- Top Badge & Header -->
+    <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
+        <span style="background:#dbeafe; color:#1e40af; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; text-transform:uppercase;">IGCSE Geography</span>
+        <span style="background:#dcfce7; color:#166534; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px;">Chủ đề 3: Các Hệ Sinh Thái</span>
+        <span style="background:#fee2e2; color:#991b1b; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px;">Lý Thuyết + Việt Sub Song Ngữ</span>
+    </div>
+    
+    <h1 style="color:#0f172a; font-size:30px; font-weight:800; border-bottom:3px solid #dc2626; padding-bottom:12px; margin-top:0; letter-spacing:-0.5px;">
+        3.4 Các Mối Đe Dọa Đối Với Rừng Mưa Nhiệt Đới & Quản Lý Bền Vững
+    </h1>
+
+    <div style="background:#fef2f2; border-left:4px solid #dc2626; border-radius:8px; padding:16px 20px; margin-bottom:28px;">
+        <p style="margin:0; font-size:15.5px; color:#991b1b; font-weight:500;">
+            Mỗi năm, ước tính có khoảng <strong>10 triệu hecta</strong> rừng mưa nhiệt đới bị san phẳng trên khắp hành tinh — tương đương với 27 sân bóng đá rừng biến mất trong từng phút. Hơn <strong>17% diện tích rừng Amazon tại Brazil đã bị phá hủy hoàn toàn</strong>. Nếu tỷ lệ mất rừng vượt ngưỡng nguy kịch <strong>20% đến 25% (điểm bùng phát)</strong>, rừng Amazon sẽ tự sụp đổ không thể phục hồi và biến thành trảng cỏ xavan khô cằn ("savannification"), giải phóng 140 tỷ tấn CO₂ vào khí quyển.
+        </p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #fecaca; border-radius: 12px; box-shadow: 0 4px 12px rgba(220,38,38,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #b91c1c, #991b1b); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🔥 Bản Đồ Tương Tác: Các Điểm Nóng Phá Rừng & Tác Nhân Kinh Tế Toàn Cầu</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Deforestation Fronts</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc; position: relative;">
+        <svg viewBox="0 0 940 500" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #fef2f2;" id="threatMapSvg34">
+            <style>
+                .driver-hotspot { cursor: pointer; }
+                .driver-hotspot circle.hotspot-center { transition: fill 0.2s ease, stroke-width 0.2s ease; }
+                .driver-hotspot:hover circle.hotspot-center { fill: #facc15; stroke: #ffffff; stroke-width: 3; }
+                .driver-hotspot:hover circle.hotspot-pulse { opacity: 0.8; stroke: #ef4444; stroke-width: 3; }
+                .map-grid { fill: none; stroke: #fca5a5; stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.5; }
+            </style>
+            
+            <!-- Ocean Background -->
+            <rect width="940" height="500" fill="#fef2f2"/>
+            
+            <!-- Latitude Lines -->
+            <line x1="0" y1="160" x2="940" y2="160" class="map-grid"/>
+            <text x="15" y="154" fill="#ef4444" font-size="10.5" font-family="'Inter',sans-serif">Chí Tuyến Bắc (23.5° Bắc)</text>
+
+            <line x1="0" y1="260" x2="940" y2="260" stroke="#dc2626" stroke-width="2"/>
+            <text x="15" y="254" fill="#b91c1c" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">ĐƯỜNG XÍCH ĐẠO (0°)</text>
+
+            <line x1="0" y1="360" x2="940" y2="360" class="map-grid"/>
+            <text x="15" y="375" fill="#ef4444" font-size="10.5" font-family="'Inter',sans-serif">Chí Tuyến Nam (23.5° Nam)</text>
+
+            <!-- Equatorial Danger Belt -->
+            <rect x="0" y="220" width="940" height="80" fill="#ef4444" opacity="0.08"/>
+            <text x="790" y="235" fill="#b91c1c" font-size="10" font-weight="bold" font-family="'Inter',sans-serif">Vành đai nguy cơ cực điểm</text>
+
+            <!-- World Continental Outlines (Stylized) -->
+            <!-- North & Central America -->
+            <path d="M 120,60 L 220,70 L 250,130 L 200,160 L 170,180 L 140,150 Z" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.5"/>
+            <!-- South America -->
+            <path d="M 220,230 C 280,220 330,260 340,320 C 350,380 290,440 270,470 C 250,450 240,380 220,330 C 200,280 200,250 220,230 Z" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+            <!-- Africa -->
+            <path d="M 440,140 C 500,130 550,170 560,220 C 570,250 550,280 540,330 C 530,380 500,430 480,440 C 460,440 450,390 440,350 C 420,320 400,270 410,230 C 420,180 410,150 440,140 Z" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+            <!-- Eurasia & SE Asia -->
+            <path d="M 430,70 L 650,60 L 800,90 L 780,180 L 720,200 L 650,180 L 520,140 Z" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.5"/>
+            <!-- Indonesia Islands -->
+            <ellipse cx="730" cy="275" rx="35" ry="12" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+            <ellipse cx="780" cy="270" rx="30" ry="25" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+            <ellipse cx="850" cy="285" rx="45" ry="15" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+
+            <!-- Arc of Deforestation (Amazon) Highlight Line -->
+            <path d="M 240,290 Q 290,320 325,300" fill="none" stroke="#dc2626" stroke-width="4" stroke-dasharray="6 3"/>
+            <text x="210" y="330" fill="#991b1b" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">"Vòng Cung Phá Rừng"</text>
+            <text x="210" y="344" fill="#b91c1c" font-size="9.5" font-family="'Inter',sans-serif">(Arc of Deforestation)</text>
+
+            <!-- 4 INTERACTIVE HOTSPOTS -->
+            <!-- 1. Brazilian Amazon -->
+            <g class="driver-hotspot" transform="translate(280, 275)" onmouseenter="showThreatTip34(evt, '🐂 Rừng Mưa Amazon (Brazil): Chăn Nuôi Bò & Đậu Nành', 'Tác Nhân Số 1: 80% Diện Tích Rừng Bị Phá Chuyển Thành Đồng Cỏ', '• Chăn nuôi bò (80%) và trồng đậu nành thương phẩm phục vụ xuất khẩu thức ăn gia súc toàn cầu', '• Cao tốc Xuyên Amazon tạo vết phá rừng xương cá; Bang Pará (34.3%) và Mato Grosso (27.6%) thiệt hại nặng nhất')" onmouseleave="hideThreatTip34()">
+                <circle cx="0" cy="0" r="18" fill="#dc2626" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="8" fill="#b91c1c" class="hotspot-center" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="14" y="4" font-size="11.5" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">Amazon: Bò & Đậu Nành</text>
+            </g>
+
+            <!-- 2. Borneo & Sumatra -->
+            <g class="driver-hotspot" transform="translate(760, 260)" onmouseenter="showThreatTip34(evt, '🌴 Borneo & Sumatra: Độc Canh Đồn Điền Cọ Dầu', 'Sản Xuất 85% Lượng Dầu Cọ Thế Giới (Thực Phẩm & Nhiên Liệu)', '• Đào kênh thoát nước làm khô đầm lầy than bùn; Cháy ngầm dưới lòng đất thải hàng tỷ tấn CO₂', '• Đẩy Đười ươi Borneo & Hổ Sumatra đến bờ tuyệt chủng; Điểm sáng bảo tồn: Thung lũng Danum (Sabah)')" onmouseleave="hideThreatTip34()">
+                <circle cx="0" cy="0" r="18" fill="#dc2626" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="8" fill="#b91c1c" class="hotspot-center" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="14" y="4" font-size="11.5" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">Borneo: Cọ Dầu</text>
+            </g>
+
+            <!-- 3. Congo Basin -->
+            <g class="driver-hotspot" transform="translate(490, 265)" onmouseenter="showThreatTip34(evt, '🔥 Lưu Vực Sông Congo: Nông Nghiệp Nương Rẫy & Củi Đun', 'Tập Quán Du Canh Chiếm 84% Nạn Mất Rừng Rậm Nhiệt Đới', '• Đốt than củi và lấy củi đun phục vụ nhu cầu năng lượng khổng lồ của các siêu đô thị (Kinshasa)', '• Dân số tăng nhanh (~3%/năm); Đường lâm nghiệp tạo lối vào cho nạn săn trộm thịt rừng thương mại')" onmouseleave="hideThreatTip34()">
+                <circle cx="0" cy="0" r="16" fill="#dc2626" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="7" fill="#b91c1c" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="11.5" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">Congo: Than Củi & Du Canh</text>
+            </g>
+
+            <!-- 4. Sarawak (Batang Ai Dam) -->
+            <g class="driver-hotspot" transform="translate(730, 240)" onmouseenter="showThreatTip34(evt, '💧 Thủy Điện Batang Ai & Khai Thác Gỗ (Sarawak - Malaysia)', 'Thủy Điện & Xung Đột Đất Đai Của Bộ Tộc Bản Địa', '• Đập thủy điện nhấn chìm 8.500 ha rừng nguyên sinh họ Dầu; Di dời 3.000 cư dân thổ dân bộ tộc Iban', '• Nạn xói mòn đất cuốn bùn cát bồi lắng lòng hồ (siltation), giảm công suất phát điện')" onmouseleave="hideThreatTip34()">
+                <circle cx="0" cy="0" r="14" fill="#0284c7" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="6" fill="#0369a1" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="12" y="4" font-size="11" font-weight="bold" fill="#0369a1" font-family="'Inter',sans-serif">Sarawak: Thủy Điện</text>
+            </g>
+
+            <!-- TOPMOST TOOLTIP GROUP -->
+            <g id="threat-tip-34" pointer-events="none" opacity="0" style="transition: opacity 0.2s ease;">
+                <rect id="threat-tip-bg-34" x="0" y="0" width="410" height="98" rx="8" fill="#0f172a" stroke="#f87171" stroke-width="1.5" filter="drop-shadow(0 6px 18px rgba(0,0,0,0.45))"/>
+                <text id="threat-tip-title-34" x="14" y="24" fill="#f87171" font-size="12.5" font-weight="bold" font-family="'Inter',sans-serif"></text>
+                <text id="threat-tip-sub-34" x="14" y="42" fill="#fde047" font-size="11" font-weight="600" font-family="'Inter',sans-serif"></text>
+                <text id="threat-tip-l1-34" x="14" y="62" fill="#f8fafc" font-size="10.5" font-family="'Inter',sans-serif"></text>
+                <text id="threat-tip-l2-34" x="14" y="80" fill="#f8fafc" font-size="10.5" font-family="'Inter',sans-serif"></text>
+            </g>
+        </svg>
+    </div>
+    <div id="threat-card-34" style="padding: 12px 20px; background: #fff1f2; border-top: 1px solid #fecdd3; font-size: 13.5px; color: #9f1239; line-height:1.5;">
+        ⚠️ <strong>Khác Biệt Kinh Tế Theo Khu Vực:</strong> Tại Amazon, 80% nạn phá rừng do chăn nuôi bò và trồng đậu nành công nghiệp; tại Đông Nam Á, đồn điền độc canh cọ dầu chiếm ưu thế tuyệt đối; còn tại Lưu vực Congo, canh tác nương rẫy sinh tồn và nhu cầu than củi đô thị là động lực tàn phá chính.
+    </div>
+</div>
+
+<script>
+function showThreatTip34(evt, title, sub, l1, l2) {
+    const tip = document.getElementById('threat-tip-34');
+    document.getElementById('threat-tip-title-34').textContent = title;
+    document.getElementById('threat-tip-sub-34').textContent = sub;
+    document.getElementById('threat-tip-l1-34').textContent = l1;
+    document.getElementById('threat-tip-l2-34').textContent = l2;
+    
+    const node = evt.currentTarget;
+    const transform = node.getAttribute('transform');
+    let x = 400, y = 250;
+    if (transform) {
+        const match = /translate\(\s*([\d\.]+)[,\s]+([\d\.]+)\s*\)/.exec(transform);
+        if (match) {
+            x = parseFloat(match[1]);
+            y = parseFloat(match[2]);
+        }
+    }
+    let tipX = x - 60;
+    let tipY = y - 110;
+    if (tipY < 15) tipY = y + 25;
+    if (tipX < 20) tipX = 20;
+    if (tipX > 510) tipX = 510;
+    
+    tip.setAttribute('transform', 'translate(' + tipX + ', ' + tipY + ')');
+    tip.style.opacity = '1';
+    
+    const card = document.getElementById('threat-card-34');
+    if (card) {
+        card.innerHTML = '<strong>' + title + '</strong> (' + sub + '): ' + l1 + ' ' + l2;
+    }
+}
+function hideThreatTip34() {
+    const tip = document.getElementById('threat-tip-34');
+    if (tip) tip.style.opacity = '0';
+    const card = document.getElementById('threat-card-34');
+    if (card) {
+        card.innerHTML = '⚠️ <strong>Khác Biệt Kinh Tế Theo Khu Vực:</strong> Tại Amazon, 80% nạn phá rừng do chăn nuôi bò và trồng đậu nành công nghiệp; tại Đông Nam Á, đồn điền độc canh cọ dầu chiếm ưu thế tuyệt đối; còn tại Lưu vực Congo, canh tác nương rẫy sinh tồn và nhu cầu than củi đô thị là động lực tàn phá chính.';
+    }
+}
+</script>
+
+    <!-- SECTION 1 -->
+    <h2 style="color:#b91c1c; font-size:22px; font-weight:700; border-bottom:2px solid #fca5a5; padding-bottom:6px; margin-top:36px;">
+        1. Các Động Lực Kinh Tế Chính Gây Phá Rừng (Drivers of Deforestation)
+    </h2>
+    <p>
+        Nạn phá rừng không phải là hiện tượng tự nhiên hay ngẫu nhiên; nó bị thúc đẩy bởi các động lực thị trường kinh tế toàn cầu và chính sách phát triển của các quốc gia đang phát triển:
+    </p>
+
+    <div style="background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #dc2626; border-radius:8px; padding:14px 18px; margin:16px 0; font-size:14.5px; color:#334155;">
+        <strong style="color:#b91c1c; font-size:15px;">🇻🇳 Bản Dịch & Phân Tích 4 Nguyên Nhân Cốt Lõi:</strong>
+        <ul style="margin:8px 0 0 0; padding-left:20px;">
+            <li><strong>Chăn Nuôi Gia Súc Lấy Thịt (Cattle Ranching - 80% Amazon):</strong> Chiếm tới gần 80% diện tích rừng bị phá tại Amazon. Các chủ trang trại đốt rừng tạo đồng cỏ nuôi bò thịt xuất khẩu. Đất rừng bạc màu nhanh chóng sau 3-5 năm buộc họ phải liên tục đốt thêm những dải rừng nguyên sinh mới.</li>
+            <li><strong>Nông Nghiệp Hàng Hóa Quy Mô Lớn (Đậu Tương & Cọ Dầu):</strong> Tại Brazil (bang Mato Grosso, Pará), rừng bị ủi phẳng để trồng <strong>đậu tương</strong> làm thức ăn chăn nuôi heo/gà cho châu Âu và Trung Quốc. Tại Đông Nam Á (Indonesia, Malaysia), rừng bị thay thế bằng bạt ngàn <strong>cọ dầu (oil palm)</strong> phục vụ ngành thực phẩm chế biến, mỹ phẩm và diesel sinh học.</li>
+            <li><strong>Khai Thác Gỗ Thương Mại & Đường Giao Thông "Xương Cá":</strong> Khai thác các loại gỗ quý như cẩm lai, gụ, tếch. Các công ty mở đường xuyên rừng sâu tạo ra mô hình <strong>phá rừng hình xương cá (fishbone pattern)</strong>, mở lối cho dân di cư bất hợp pháp vào chiếm đất và đốt rừng.</li>
+            <li><strong>Thủy Điện Khổng Lồ & Khai Khoáng:</strong> Các đập thủy điện khổng lồ (như Belo Monte ở Brazil, Batang Ai ở Malaysia) làm ngập chìm hàng ngàn km² rừng nguyên sinh. Khai mỏ vàng thổ phỉ (<em>garimpo</em>) xả thủy ngân độc hại đầu độc sông ngòi của các bộ tộc bản địa.</li>
+        </ul>
+    </div>
+
+    <!-- Textbook Figures 3.20 & 3.21 -->
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:24px 0;">
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_amazon_state_pie.png" alt="Figure 3.20 Amazon Deforestation by State" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Hình 3.20: Tỷ Lệ Phá Rừng Amazon Phân Bổ Theo Bang Của Brazil (2023)</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Bang Pará (34.3%) và Mato Grosso (27.6%) tạo thành "Vòng Cung Phá Rừng" khét tiếng.</p>
+        </div>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_amazon_presidents_bar.png" alt="Figure 3.21 Deforestation under Brazilian Presidents" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Hình 3.21: Tốc Độ Phá Rừng Qua Các Đời Tổng Thống Brazil</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Chứng minh vai trò quyết định của luật pháp kiểm lâm, giám sát vệ tinh và ý chí chính trị.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 style="color:#b91c1c; font-size:22px; font-weight:700; border-bottom:2px solid #fca5a5; padding-bottom:6px; margin-top:36px;">
+        2. Tác Động Nghiêm Trọng Của Nạn Phá Rừng (Environmental Impacts)
+    </h2>
+    <p>
+        Khi thảm tán rừng biến mất, sự cân bằng mong manh giữa khí hậu, thủy văn và đất đai lập tức sụp đổ kéo theo một chuỗi thảm họa sinh thái.
+    </p>
+
+    <!-- Figure 3.18: Block Diagram -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_deforestation_impacts.png" alt="Figure 3.18 Deforestation Impacts 3D Block" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Hình 3.18: Sơ Đồ Khối 3D Thể Hiện Các Tác Động Môi Trường Của Nạn Phá Rừng</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Hậu quả trực tiếp: Xói mòn đất, bồi lắng lòng sông, mất khả năng thoát hơi nước và lũ lụt cục bộ nghiêm trọng.</p>
+    </div>
+
+    <!-- Figure 3.19: Batang Ai Flooding -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_batang_ai.png" alt="Figure 3.19 Batang Ai Dam Flooding" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Hình 3.19: Lòng Hồ Thủy Điện Batang Ai Nhấn Chìm Rừng tại Sarawak, Malaysia</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Việc tích nước nhấn chìm 8.500 hecta rừng già và buộc hơn 3.000 người dân tộc bản địa Iban phải di dời tái định cư.</p>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; overflow:hidden; margin:24px 0;">
+        <div style="background:#b91c1c; color:#ffffff; padding:10px 16px; font-weight:700; font-size:15px;">
+            Bảng Đối Chiếu Các Hậu Quả Địa Lý Của Nạn Phá Rừng
+        </div>
+        <table style="width:100%; border-collapse:collapse; font-size:14px; text-align:left;">
+            <thead>
+                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1;">
+                    <th style="padding:10px 12px; width:22%;">Lĩnh Vực Tác Động</th>
+                    <th style="padding:10px 12px; width:38%;">Quá Trình Vật Lý & Địa Mạo</th>
+                    <th style="padding:10px 12px; width:40%;">Hậu Quả Sinh Thái & Đời Sống</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Xói Mòn & Thoái Hóa Đất</td>
+                    <td style="padding:10px 12px; color:#334155;">Nước mưa xối trực tiếp xuống mặt đất trần không còn tán lá che chắn; rửa trôi tầng đất mặt màu mỡ.</td>
+                    <td style="padding:10px 12px; color:#475569;">Hình thành các rãnh xói lở sâu, đất bị ánh nắng nung cứng thành lớp đá ong laterite trơ trọi không thể trồng trọt.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Thủy Văn & Sa Bồi Lòng Sông</td>
+                    <td style="padding:10px 12px; color:#334155;">Khả năng ngấm nước của đất giảm mạnh; nước mưa tạo thành dòng chảy tràn bề mặt cực nhanh đổ vào sông.</td>
+                    <td style="padding:10px 12px; color:#475569;">Bùn cát bồi lấp lòng sông (siltation) làm cạn luồng tàu bè, hỏng tua-bin đập thủy điện và gây lũ lụt dữ dội mùa mưa.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Đứt Gãy "Dòng Sông Bay"</td>
+                    <td style="padding:10px 12px; color:#334155;">Mất hàng triệu cây xanh làm giảm lượng hơi nước bốc lên khí quyển (mỗi ngày rừng Amazon từng bơm 20 tỷ tấn hơi nước).</td>
+                    <td style="padding:10px 12px; color:#475569;">Các "dòng sông ẩm trên trời" (flying rivers) suy yếu, làm giảm 20-30% lượng mưa tại các trung tâm nông nghiệp miền nam Brazil.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Phát Thải Khí Nhà Kính</td>
+                    <td style="padding:10px 12px; color:#334155;">Gỗ rừng bị đốt cháy giải phóng toàn bộ carbon tích lũy hàng thế kỷ thành khí CO₂ vào bầu khí quyển.</td>
+                    <td style="padding:10px 12px; color:#475569;">Phá rừng chiếm khoảng 10% tổng lượng khí thải nhà kính toàn cầu, làm nóng hành tinh và tạo vòng lặp hạn hán cực đoan.</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Xâm Hại Bộ Tộc Bản Địa</td>
+                    <td style="padding:10px 12px; color:#334155;">Lâm tặc, chủ trại bò và dân đào vàng xâm lấn lãnh thổ thiêng liêng, mang theo vũ khí và dịch bệnh truyền nhiễm.</td>
+                    <td style="padding:10px 12px; color:#475569;">Đe dọa sinh mạng các bộ tộc sống biệt lập (Yanomami); làm mai một kho tàng tri thức dược liệu cổ truyền quý báu.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECTION 3: THE TIPPING POINT -->
+    <h2 style="color:#b91c1c; font-size:22px; font-weight:700; border-bottom:2px solid #fca5a5; padding-bottom:6px; margin-top:36px;">
+        3. Điểm Bùng Phát Của Rừng Amazon & Quá Trình Savanna Hóa
+    </h2>
+    <p>
+        Các nhà khí hậu học hàng đầu thế giới cảnh báo rằng rừng Amazon có khả năng tự duy trì vi khí hậu của mình thông qua chu trình tái tạo nước mưa: một phân tử nước rơi xuống đất rồi bốc hơi để tạo thành mưa từ <strong>5 đến 6 lần</strong> khi di chuyển qua lục địa Nam Mỹ.
+    </p>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #fed7aa; border-radius: 12px; box-shadow: 0 4px 12px rgba(234,88,12,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #ea580c, #c2410c); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🔄 Sơ Đồ Vòng Lặp Phản Hồi Tiêu Cực & Điểm Bùng Phát Của Rừng Amazon</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Ecological Tipping Point</span>
+    </div>
+    <div style="padding: 16px; background: #fffaf5;">
+        <svg viewBox="0 0 920 480" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #ffffff;">
+            <style>
+                .loop-step { cursor: pointer; }
+                .loop-step rect { transition: stroke-width 0.2s ease, stroke 0.2s ease, filter 0.2s ease; }
+                .loop-step:hover rect { stroke-width: 4px; filter: drop-shadow(0 6px 16px rgba(220,38,38,0.25)); }
+            </style>
+            
+            <defs>
+                <marker id="loopArrowVn" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+                </marker>
+            </defs>
+
+            <!-- Step 1: Forest Clearance -->
+            <g class="loop-step" transform="translate(60, 40)">
+                <rect width="220" height="120" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+                <text x="110" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#b91c1c" font-family="'Inter',sans-serif">1. NẠN PHÁ RỪNG TRẮNG</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Chăn nuôi bò & khai thác gỗ</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• &gt;17% diện tích rừng đã biến mất</text>
+                <text x="14" y="91" font-size="11.5" fill="#b91c1c" font-weight="bold" font-family="'Inter',sans-serif">• Mất vòm tán che phủ mặt đất</text>
+            </g>
+
+            <!-- Arrow 1 -> 2 -->
+            <path d="M 280,100 L 350,100" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrowVn)"/>
+
+            <!-- Step 2: Reduced Transpiration -->
+            <g class="loop-step" transform="translate(360, 40)">
+                <rect width="220" height="120" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+                <text x="110" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#c2410c" font-family="'Inter',sans-serif">2. GIẢM THOÁT HƠI NƯỚC</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Giảm hơi ẩm bơm vào khí quyển</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• "Dòng sông bay" bị đứt gãy</text>
+                <text x="14" y="91" font-size="11.5" fill="#c2410c" font-weight="bold" font-family="'Inter',sans-serif">• Không khí khu vực khô cằn</text>
+            </g>
+
+            <!-- Arrow 2 -> 3 -->
+            <path d="M 580,100 L 650,100" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrowVn)"/>
+
+            <!-- Step 3: Regional Drought & Higher Temps -->
+            <g class="loop-step" transform="translate(660, 40)">
+                <rect width="200" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                <text x="100" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309" font-family="'Inter',sans-serif">3. HẠN HÁN & NẮNG NÓNG</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Mùa khô kéo dài bất thường</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Lượng mưa giảm 20-30%</text>
+                <text x="14" y="91" font-size="11.5" fill="#b45309" font-weight="bold" font-family="'Inter',sans-serif">• Nhiệt độ ban ngày tăng vọt</text>
+            </g>
+
+            <!-- Arrow Down from 3 to 4 -->
+            <path d="M 760,160 L 760,230" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrowVn)"/>
+
+            <!-- Step 4: Forest Flammability & Wildfires -->
+            <g class="loop-step" transform="translate(640, 240)">
+                <rect width="220" height="120" rx="10" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+                <text x="110" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#9f1239" font-family="'Inter',sans-serif">4. CHÁY RỪNG LAN TRÀN</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Thảm lá rụng bị sấy khô kiệt</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Cháy vô tình lan rộng không kiểm soát</text>
+                <text x="14" y="91" font-size="11.5" fill="#9f1239" font-weight="bold" font-family="'Inter',sans-serif">• Cây rừng chết hàng loạt</text>
+            </g>
+
+            <!-- Arrow 4 -> 5 (Leftwards) -->
+            <path d="M 640,300 L 590,300" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrowVn)"/>
+
+            <!-- Step 5: THE TIPPING POINT (SAVANNIFICATION) -->
+            <g class="loop-step" transform="translate(250, 210)">
+                <rect width="330" height="175" rx="12" fill="#7f1d1d" stroke="#dc2626" stroke-width="3" filter="drop-shadow(0 4px 12px rgba(185,28,28,0.35))"/>
+                <text x="165" y="32" text-anchor="middle" font-size="15" font-weight="900" fill="#fef2f2" font-family="'Inter',sans-serif">⚠️ 5. ĐIỂM BÙNG PHÁT 20-25%</text>
+                <text x="165" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#fca5a5" font-family="'Inter',sans-serif">SAVANNA HÓA (SAVANNIFICATION)</text>
+                <text x="18" y="80" font-size="11.5" fill="#ffffff" font-family="'Inter',sans-serif">• Rừng mất khả năng tự duy trì vi khí hậu nội tại</text>
+                <text x="18" y="98" font-size="11.5" fill="#ffffff" font-family="'Inter',sans-serif">• Sụp đổ vĩnh viễn thành trảng cỏ và cây bụi xavan cằn cỗi</text>
+                <text x="18" y="116" font-size="11.5" fill="#fde047" font-weight="bold" font-family="'Inter',sans-serif">• GIẢI PHÓNG 140 TỶ TẤN CO₂ LƯU TRỮ RA KHÍ QUYỂN</text>
+                <text x="18" y="134" font-size="11.5" fill="#ffffff" font-family="'Inter',sans-serif">• Thúc đẩy biến đổi khí hậu toàn cầu không thể đảo ngược</text>
+                <text x="18" y="152" font-size="11" fill="#fca5a5" font-family="'Inter',sans-serif">• Các nhà khoa học cảnh báo: Hiện đã mất 17-18% (Ranh giới đỏ)</text>
+            </g>
+
+            <!-- Feedback Loop Arrow back to 1 -->
+            <path d="M 250,300 Q 170,300 170,165" fill="none" stroke="#dc2626" stroke-width="5" stroke-dasharray="6 4" marker-end="url(#loopArrowVn)"/>
+            <text x="80" y="240" font-size="12" font-weight="bold" fill="#dc2626" font-family="'Inter',sans-serif">VÒNG LẶP TỰ HỦY</text>
+            <text x="80" y="255" font-size="10" fill="#991b1b" font-family="'Inter',sans-serif">(Feedback Loop)</text>
+        </svg>
+    </div>
+</div>
+
+    <!-- SECTION 4: MANAGEMENT STRATEGIES -->
+    <h2 style="color:#15803d; font-size:22px; font-weight:700; border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin-top:36px;">
+        4. Các Chiến Lược Quản Lý & Bảo Tồn Rừng Bền Vững (Sustainable Management)
+    </h2>
+    <p>
+        Giải quyết vấn nạn phá rừng đòi hỏi phải kết hợp hài hòa giữa bảo tồn sinh thái và giải bài toán kinh tế cho hàng triệu người dân nghèo tại các nước nhiệt đới. Quản lý bền vững đảm bảo khai thác tài nguyên phục vụ hôm nay mà không hủy hoại sinh kế của tương lai.
+    </p>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #bbf7d0; border-radius: 12px; box-shadow: 0 4px 12px rgba(22,163,74,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #15803d, #166534); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🛡️ Khung Chiến Lược Quản Lý & Bảo Tồn Bền Vững Rừng Mưa Nhiệt Đới</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Conservation Matrix</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 920 460" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #ffffff;">
+            <style>
+                .strat-card { cursor: pointer; }
+                .strat-card rect.card-box { transition: stroke-width 0.2s ease, stroke 0.2s ease, filter 0.2s ease; }
+                .strat-card:hover rect.card-box { stroke-width: 4px; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.2)); }
+            </style>
+
+            <!-- 1. Selective Logging & FSC -->
+            <g class="strat-card" transform="translate(40, 30)">
+                <rect class="card-box" width="250" height="180" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(59,130,246,0.15))"/>
+                <rect width="250" height="34" rx="10" fill="#2563eb"/>
+                <text x="125" y="22" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold" font-family="'Inter',sans-serif">1. KHAI THÁC CÓ CHỌN LỌC (FSC)</text>
+                <text x="14" y="58" fill="#1e3a8a" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Chỉ đốn hạ cây cổ thụ già (&gt;60cm)</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Chu kỳ luân phiên 30-40 năm</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Giữ lại vòm tán bảo vệ cấu trúc đất</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Dán tem chứng nhận FSC quốc tế</text>
+                <text x="14" y="138" fill="#166534" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Đảm bảo nguồn cung gỗ bền vững</text>
+            </g>
+
+            <!-- 2. Agroforestry & Permaculture -->
+            <g class="strat-card" transform="translate(335, 30)">
+                <rect class="card-box" width="250" height="180" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(16,185,129,0.15))"/>
+                <rect width="250" height="34" rx="10" fill="#059669"/>
+                <text x="125" y="22" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold" font-family="'Inter',sans-serif">2. NÔNG LÂM KẾT HỢP</text>
+                <text x="14" y="58" fill="#065f46" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Canh tác xen canh dưới bóng râm</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Trồng ca cao, cà phê, vani dưới tán</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Hệ rễ cây gỗ bám đất chống xói mòn</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Sinh kế ổn định quanh năm cho dân nghèo</text>
+                <text x="14" y="138" fill="#059669" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Xóa bỏ tập quán đốt nương làm rẫy</text>
+            </g>
+
+            <!-- 3. Ecotourism (Danum Valley Model) -->
+            <g class="strat-card" transform="translate(630, 30)">
+                <rect class="card-box" width="250" height="180" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(245,158,11,0.15))"/>
+                <rect width="250" height="34" rx="10" fill="#d97706"/>
+                <text x="125" y="22" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold" font-family="'Inter',sans-serif">3. DU LỊCH SINH THÁI (DANUM)</text>
+                <text x="14" y="58" fill="#92400e" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Du khách số lượng ít, giá trị cao</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Cầu treo vòm tán & lối đi bộ bằng ván</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Thuê hướng dẫn viên bản địa</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Tiền vé tài trợ đội tuần tra chống săn trộm</text>
+                <text x="14" y="138" fill="#b45309" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Động lực kinh tế để giữ rừng sống</text>
+            </g>
+
+            <!-- 4. Debt-for-Nature Swaps & REDD+ -->
+            <g class="strat-card" transform="translate(180, 240)">
+                <rect class="card-box" width="260" height="180" rx="10" fill="#faf5ff" stroke="#a855f7" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(168,85,247,0.15))"/>
+                <rect width="260" height="34" rx="10" fill="#7e22ce"/>
+                <text x="130" y="22" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold" font-family="'Inter',sans-serif">4. ĐỔI NỢ LẤY THIÊN NHIÊN (REDD+)</text>
+                <text x="14" y="58" fill="#581c87" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Cơ chế tài chính sinh thái quốc tế</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Nước phát triển xóa nợ cho nước nghèo</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Đổi lại: Cam kết pháp lý bảo tồn rừng</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Ví dụ: Mỹ xóa 26 triệu USD nợ Costa Rica</text>
+                <text x="14" y="138" fill="#7e22ce" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Tín chỉ carbon REDD+ thưởng việc giữ rừng</text>
+            </g>
+
+            <!-- 5. Indigenous Land Demarcation -->
+            <g class="strat-card" transform="translate(480, 240)">
+                <rect class="card-box" width="260" height="180" rx="10" fill="#fff1f2" stroke="#f43f5e" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(244,63,94,0.15))"/>
+                <rect width="260" height="34" rx="10" fill="#e11d48"/>
+                <text x="130" y="22" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold" font-family="'Inter',sans-serif">5. KHU BẢO TỒN BỘ TỘC BẢN ĐỊA</text>
+                <text x="14" y="58" fill="#881337" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Công nhận chủ quyền đất đai tổ tiên</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Lãnh thổ bộ tộc Yanomami & Kayapo</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Vệ tinh chứng minh: Tỷ lệ phá rừng thấp nhất (&lt;2%)</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Quân đội cưỡng chế trục xuất đào vàng trái phép</text>
+                <text x="14" y="138" fill="#9f1239" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Người bản địa là vệ sĩ bảo vệ 20% rừng thế giới</text>
+            </g>
+        </svg>
+    </div>
+</div>
+
+    <!-- Figure 3.22: Danum Valley -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_danum_valley.png" alt="Figure 3.22 Danum Valley Conservation Area" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Hình 3.22: Khu Bảo Tồn Thung Lũng Danum tại Sabah, Đảo Borneo (Malaysia)</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Hình mẫu bảo tồn thành công: 438 km² rừng cổ thụ họ Dầu nguyên sinh được bảo vệ tuyệt đối để nghiên cứu khoa học, du lịch sinh thái trên vòm cây và nơi trú ẩn cho đười ươi.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:20px 0;">
+        <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:16px;">
+            <h4 style="margin:0 0 8px 0; color:#15803d; font-size:15px; font-weight:700;">🌍 Biện Pháp Cấp Quốc Tế</h4>
+            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Đổi Nợ Lấy Thiên Nhiên (Debt-for-Nature Swaps):</strong> Các nước phát triển hoặc tổ chức phi chính phủ xóa một phần nợ quốc tế cho nước nghèo để đổi lấy cam kết đầu tư bảo tồn rừng (ví dụ Mỹ xóa 26 triệu USD tiền nợ cho Costa Rica).</li>
+                <li><strong>Cơ Chế REDD+ Của Liên Hợp Quốc:</strong> Trả tiền trực tiếp cho các nước nhiệt đới giữ rừng nguyên vẹn thông qua thị trường mua bán tín chỉ carbon.</li>
+                <li><strong>Chứng Chỉ Rừng FSC & Công Ước CITES:</strong> Gắn nhãn Hội đồng Quản lý Rừng (FSC) cho gỗ khai thác hợp chuẩn bền vững; người tiêu dùng phương Tây tẩy chay gỗ phá rừng trái phép.</li>
+            </ul>
+        </div>
+        <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:16px;">
+            <h4 style="margin:0 0 8px 0; color:#15803d; font-size:15px; font-weight:700;">🏡 Biện Pháp Cấp Quốc Gia & Cộng Đồng</h4>
+            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Giao Quyền Đất Cho Bộ Tộc Bản Địa:</strong> Khảo sát vệ tinh chứng minh tỷ lệ phá rừng trên các khu bảo tồn bộ tộc Yanomami và Kayapo dưới 2% — thấp nhất toàn châu lục.</li>
+                <li><strong>Khai Thác Gỗ Có Chọn Lọc (Selective Logging):</strong> Chỉ đốn hạ những cây cổ thụ đạt đường kính &gt;60cm theo chu kỳ 30-40 năm, giữ lại tầng tán và cây con để rừng tự tái sinh.</li>
+                <li><strong>Mô Hình Nông Lâm Kết Hợp (Agroforestry):</strong> Trồng xen canh ca cao, cà phê, vani dưới tán cây rừng, vừa chống xói mòn đất vừa tạo thu nhập bền vững cho nông dân.</li>
+                <li><strong>Du Lịch Sinh Thái Cao Cấp (Ecotourism):</strong> Đón lượng khách nhỏ trả phí cao, tạo nguồn thu nuôi đội ngũ kiểm lâm bảo vệ rừng mà không cần đốn một cây gỗ nào.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- VOCABULARY SECTION -->
+    <h2 style="color:#b91c1c; font-size:22px; font-weight:700; border-bottom:2px solid #fca5a5; padding-bottom:6px; margin-top:40px;">
+        5. Bảng Từ Vựng Địa Lý Chuyên Sâu (Key Geographical Vocabulary)
+    </h2>
+    <p style="font-size:14.5px; color:#475569;">
+        Dưới đây là 16 thuật ngữ địa lý chuyên sâu trọng tâm cho bài thi IGCSE về các mối đe dọa và bảo tồn rừng mưa nhiệt đới:
+    </p>
+
+    <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; overflow:hidden; margin:20px 0;">
+        <table style="width:100%; border-collapse:collapse; font-size:13.5px; text-align:left;">
+            <thead>
+                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; color:#0f172a;">
+                    <th style="padding:10px 12px; width:22%;">Thuật Ngữ Tiếng Anh</th>
+                    <th style="padding:10px 12px; width:22%;">Phiên Âm & Dịch Nghĩa</th>
+                    <th style="padding:10px 12px; width:56%;">Định Nghĩa Địa Lý & Ngữ Cảnh IGCSE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Deforestation</td>
+                    <td style="padding:8px 12px; color:#334155;">/diːˌfɒrɪˈsteɪʃən/<br/><strong>Nạn phá rừng</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Hành vi đốn hạ hoặc đốt phá rừng trên diện rộng phục vụ các mục đích phi nông lâm nghiệp khác (đồng cỏ nuôi bò, trồng trọt, khai mỏ).</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Tipping point</td>
+                    <td style="padding:8px 12px; color:#334155;">/ˈtɪpɪŋ pɔɪnt/<br/><strong>Điểm bùng phát nguy kịch</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Ngưỡng giới hạn sinh thái (20-25% diện tích rừng Amazon) mà khi vượt qua, hệ thống sẽ tự động sụp đổ không thể phục hồi.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Savannification</td>
+                    <td style="padding:8px 12px; color:#334155;">/səˌvænɪfɪˈkeɪʃən/<br/><strong>Sự hoang hóa thành xavan</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Quá trình rừng mưa nhiệt đới rậm rạp bị suy thoái và biến đổi vĩnh viễn thành đồng cỏ xavan khô cằn do khí hậu khô hạn và cháy rừng.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Flying rivers</td>
+                    <td style="padding:8px 12px; color:#334155;">/ˈflaɪɪŋ ˈrɪvəz/<br/><strong>Dòng sông bay trên khí quyển</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Các luồng hơi nước khổng lồ (20 tỷ tấn/ngày) bốc lên từ vòm lá rừng Amazon được gió mậu dịch thổi cung cấp mưa cho cả Nam Mỹ.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Soil erosion</td>
+                    <td style="padding:8px 12px; color:#334155;">/sɔɪl ɪˈrəʊʒən/<br/><strong>Xói mòn đất</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Hiện tượng nước mưa trút xuống cuốn trôi lớp đất mặt màu mỡ sau khi cây cối và thảm rễ đã bị đốn sạch.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Siltation</td>
+                    <td style="padding:8px 12px; color:#334155;">/sɪlˈteɪʃən/<br/><strong>Sự bồi lắng bùn cát</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Sự lắng tụ của bùn đất bị xói mòn vào lòng hồ thủy điện và lòng sông ngòi, làm cạn kiệt dung tích chứa và gây lũ lụt.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Selective logging</td>
+                    <td style="padding:8px 12px; color:#334155;">/sɪˈlɛktɪv ˈlɒɡɪŋ/<br/><strong>Khai thác gỗ có chọn lọc</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Phương pháp chỉ cưa chặt những cây gỗ cổ thụ đạt kích thước quy định theo chu kỳ 30-40 năm, bảo tồn tầng tán để rừng tự tái sinh.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Agroforestry</td>
+                    <td style="padding:8px 12px; color:#334155;">/ˌæɡrəʊˈfɒrɪstri/<br/><strong>Nông lâm kết hợp</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Hình thức canh tác trồng cây lương thực và cây công nghiệp (cà phê, ca cao) dưới bóng râm của các cây gỗ bản địa.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">Debt-for-nature swap</td>
+                    <td style="padding:8px 12px; color:#334155;">/dɛt fɔː ˈneɪtʃə swɒp/<br/><strong>Đổi nợ lấy thiên nhiên</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Thỏa thuận tài chính quốc tế trong đó một phần nợ nước ngoài được xóa bỏ để đổi lấy việc quốc gia đó đầu tư thành lập khu bảo tồn rừng.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:8px 12px; font-weight:700; color:#dc2626;">FSC certification</td>
+                    <td style="padding:8px 12px; color:#334155;">/ˌɛf.ɛsˈsiː ˌsɜːtɪfɪˈkeɪʃən/<br/><strong>Chứng nhận FSC</strong></td>
+                    <td style="padding:8px 12px; color:#475569;">Dấu kiểm định của Hội đồng Quản lý Rừng chứng nhận sản phẩm gỗ được khai thác từ nguồn rừng quản lý bền vững và có trách nhiệm xã hội.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- SECTION 6: 7-MARK IGCSE EXAM MODEL ANSWER -->
+    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 26px 30px; margin: 32px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: #fee2e2; color: #dc2626; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;">7</div>
+            <h2 style="color: #0f172a; margin: 0; font-size: 22px; font-weight: 700;">Bài Thi Tự Luận 7 Điểm Chuẩn IGCSE (7-Mark Model Exam Answer)</h2>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 18px; margin-bottom: 20px;">
+            <div style="font-size: 13px; font-weight: 700; color: #dc2626; text-transform: uppercase; margin-bottom: 4px;">Past Paper Exam Prompt (7 Marks)</div>
+            <div style="font-size: 16px; font-weight: 700; color: #0f172a; line-height: 1.5;">
+                "With reference to examples you have studied, evaluate the success of different strategies used to manage tropical rainforest ecosystems sustainably." [7 marks]
+            </div>
+        </div>
+
+        <div style="border-left: 4px solid #dc2626; background: #fafafa; padding: 18px 20px; border-radius: 0 10px 10px 0;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <h4 style="margin: 0; color: #991b1b; font-size: 16px; font-weight: 700;">Bài Làm Mẫu Đạt Điểm Tuyệt Đối Level 3 (Model Answer - 7/7 Marks):</h4>
+                <span style="background:#dc2626; color:#fff; font-size:12px; font-weight:700; padding:2px 8px; border-radius:4px;">Top Band 7/7</span>
+            </div>
+            
+            <div style="font-size: 14px; color: #334155; line-height: 1.7;">
+                <p style="margin: 0 0 10px 0;">
+                    <strong>[Introduction & Context]:</strong> Managing tropical rainforests sustainably requires balancing urgent local economic demands (employment, agriculture, national revenue) with the vital global need to conserve biodiversity and prevent climate change tipping points, as observed in the <strong>Malaysian Borneo (Sabah)</strong> and the <strong>Brazilian Amazon</strong>.
+                </p>
+                <p style="margin: 0 0 10px 0;">
+                    <strong>[Strategy 1: Selective Logging & Conservation Reserves (Danum Valley)]:</strong> In Sabah, Malaysia, the establishment of the <strong>Danum Valley Conservation Area</strong> (438 km² of pristine lowland dipterocarp forest) successfully protects endangered species like the Bornean orangutan and pygmy elephant while generating substantial revenue through high-value, low-impact <strong>ecotourism</strong> and international scientific research. Surrounding commercial concessions practice <em>selective logging</em> under Forest Stewardship Council (FSC) criteria, harvesting only trees exceeding 60cm diameter every 30 to 40 years. This preserves canopy density and intercepts heavy equatorial rainfall, successfully preventing topsoil erosion and river siltation. However, its scope remains localized, as vast tracts of unprotected lowland forest across Sabah and Sarawak continue to be clear-felled for lucrative oil palm monocultures.
+                </p>
+                <p style="margin: 0 0 10px 0;">
+                    <strong>[Strategy 2: International Financial Mechanisms (Debt-for-Nature & REDD+)]:</strong> On an international scale, <strong>Debt-for-Nature Swaps</strong> (such as the United States cancelling $26 million of debt for Costa Rica) and the UN's <strong>REDD+ program</strong> provide direct financial compensation to developing nations for keeping forests intact. These funds subsidize armed satellite anti-poaching patrols and create local alternative livelihoods. Nevertheless, these schemes depend heavily on foreign political goodwill, and corruption or land-tenure ambiguity can dilute the flow of funds to rural indigenous communities.
+                </p>
+                <p style="margin: 0;">
+                    <strong>[Evaluation & Conclusion]:</strong> In conclusion, while community-based agroforestry and protected reserves like Danum Valley demonstrate clear ecological success at a regional scale, sustainable management will ultimately remain ineffective unless accompanied by aggressive law enforcement against illegal cattle ranching and global trade embargoes on non-certified agricultural commodities.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

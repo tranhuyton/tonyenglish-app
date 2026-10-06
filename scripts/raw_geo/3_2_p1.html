@@ -1,0 +1,494 @@
+
+<div style="font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width:920px; margin:0 auto; color:#1e293b; line-height:1.65; font-size:16px;">
+
+    <!-- Top Badge & Header -->
+    <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
+        <span style="background:#dbeafe; color:#1e40af; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; text-transform:uppercase;">IGCSE Geography</span>
+        <span style="background:#dcfce7; color:#166534; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px;">Topic 3: Biomes & Ecosystems</span>
+        <span style="background:#fee2e2; color:#991b1b; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px;">Threats & Governance</span>
+    </div>
+    
+    <h1 style="color:#0f172a; font-size:30px; font-weight:800; border-bottom:3px solid #0284c7; padding-bottom:12px; margin-top:0; letter-spacing:-0.5px;">
+        3.2 Threats to the Antarctic Ecosystem & Global Management
+    </h1>
+
+    <div id="sec-header" class="lecture-interactive-card" data-lecture-section="intro" style="background:#f0f9ff; border-left:4px solid #0284c7; border-radius:8px; padding:16px 20px; margin-bottom:28px; cursor:pointer;">
+        <p style="margin:0; font-size:15.5px; color:#0369a1; font-weight:500;">
+            Despite its extreme isolation, Antarctica is increasingly besieged by human-induced threats operating at planetary and local scales: <strong>accelerated climate change</strong>, <strong>stratospheric ozone depletion</strong>, <strong>commercial krill overfishing</strong>, <strong>expanding cruise tourism</strong>, and the scientific footprint of over 70 research stations. Protecting this fragile wilderness requires unprecedented international cooperation anchored by the <strong>Antarctic Treaty System (ATS)</strong>.
+        </p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #bae6fd; border-radius: 12px; box-shadow: 0 4px 12px rgba(2,132,199,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #0284c7, #0369a1); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🗺️ Interactive Map: Antarctic Threat Hotspots & Conservation Zones</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">SVG Interactive</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 920 650" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #f0f9ff;">
+            <style>
+                .threat-node { cursor: pointer; transition: all 0.3s ease; }
+                .threat-node:hover circle.hotspot-pulse { transform: scale(1.45); opacity: 0.7; }
+                .threat-node:hover circle.hotspot-center { fill: #f59e0b; stroke: #ffffff; stroke-width: 3; }
+                .threat-tooltip { pointer-events: none; opacity: 0; transition: opacity 0.25s ease; }
+                .threat-node:hover .threat-tooltip { opacity: 1; }
+                .map-label { font-family: 'Inter', sans-serif; fill: #0369a1; font-weight: 600; font-size: 11px; }
+            </style>
+            
+            <!-- Ocean Background -->
+            <rect width="920" height="650" fill="#e0f2fe"/>
+            
+            <!-- Graticules & Polar Circles -->
+            <circle cx="460" cy="330" r="290" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+            <text x="755" y="335" class="map-label" fill="#0284c7">50°S (Convergence)</text>
+            
+            <circle cx="460" cy="330" r="225" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="5 3" opacity="0.7"/>
+            <text x="690" y="335" class="map-label" font-weight="bold" fill="#0369a1">66.5°S (Antarctic Circle)</text>
+            
+            <!-- CCAMLR Subarea 48.1 - 48.3 Krill Fishing Zone Boundary -->
+            <path d="M 230,100 Q 320,130 380,210 L 290,260 L 190,180 Z" fill="#fef3c7" opacity="0.5" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 2"/>
+            <text x="270" y="145" fill="#b45309" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">CCAMLR Area 48</text>
+            <text x="270" y="160" fill="#b45309" font-size="9" font-family="'Inter',sans-serif">(Krill Fishery Core)</text>
+
+            <!-- Ross Sea Marine Protected Area (MPA) -->
+            <path d="M 360,430 C 370,480 430,550 510,540 C 530,490 480,440 430,420 Z" fill="#dcfce7" opacity="0.6" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 3"/>
+            <text x="440" y="490" fill="#15803d" font-size="12" font-weight="bold" font-family="'Inter',sans-serif" text-anchor="middle">ROSS SEA MPA</text>
+            <text x="440" y="505" fill="#166534" font-size="10" font-family="'Inter',sans-serif" text-anchor="middle">(1.55M km² Marine Sanctuary)</text>
+
+            <!-- Continental Landmass Base (Antarctica) -->
+            <!-- East Antarctica -->
+            <path d="M 460,170 
+                     C 540,160 620,200 670,260 
+                     C 710,310 700,390 650,440 
+                     C 600,490 530,500 470,480 
+                     C 430,470 400,490 370,460 
+                     C 340,430 360,390 380,370
+                     C 390,350 410,340 420,290
+                     C 430,230 410,190 460,170 Z" 
+                  fill="#ffffff" stroke="#94a3b8" stroke-width="2" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.08))"/>
+
+            <!-- West Antarctica -->
+            <path d="M 410,290 
+                     C 370,280 320,290 290,330 
+                     C 260,370 270,420 310,450 
+                     C 340,470 370,450 390,420 
+                     C 410,390 420,350 410,290 Z" 
+                  fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+
+            <!-- Antarctic Peninsula -->
+            <path d="M 320,290 
+                     C 300,260 270,220 250,180 
+                     C 240,160 250,150 260,160 
+                     C 280,200 310,240 340,270 Z" 
+                  fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+
+            <!-- Transantarctic Mountains -->
+            <path d="M 350,260 Q 410,350 430,450" fill="none" stroke="#78350f" stroke-width="3" stroke-dasharray="5 3"/>
+
+            <!-- Region Labels -->
+            <text x="560" y="310" font-size="16" font-weight="bold" fill="#475569" text-anchor="middle" font-family="'Inter',sans-serif">EAST ANTARCTICA</text>
+            <text x="560" y="328" font-size="11" fill="#94a3b8" text-anchor="middle" font-family="'Inter',sans-serif">(Stable continental bedrock)</text>
+
+            <text x="310" y="380" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle" font-family="'Inter',sans-serif">WEST ANTARCTICA</text>
+            <text x="310" y="396" font-size="10" fill="#dc2626" text-anchor="middle" font-family="'Inter',sans-serif">⚠️ Rapid Marine Melting</text>
+
+            <!-- INTERACTIVE HOTSPOTS -->
+            
+            <!-- 1. Antarctic Peninsula: Tourism & Warming Hotspot -->
+            <g id="hotspot-peninsula" class="threat-node lecture-interactive-card" data-lecture-section="hotspot_peninsula" style="cursor:pointer;" transform="translate(245, 175)">
+                <circle cx="0" cy="0" r="16" fill="#ef4444" class="hotspot-pulse" opacity="0.35"/>
+                <circle cx="0" cy="0" r="7" fill="#ef4444" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="11" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">Antarctic Peninsula</text>
+                <g class="threat-tooltip" transform="translate(-160, -115)">
+                    <rect width="320" height="105" rx="8" fill="#1e293b" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#f87171" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🔥 Antarctic Peninsula Hotspot</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Warmed by ~3°C over past 50 years (global apex)</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Focus of >95% of polar cruise tourism (>100k visitors)</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Invasive Poa annua grass introduced on hiking gear</text>
+                    <text x="14" y="88" fill="#38bdf8" font-size="11" font-family="'Inter',sans-serif">• Larsen A (1995) & B (2002) ice shelves collapsed</text>
+                </g>
+            </g>
+
+            <!-- 2. Rothera Research Station -->
+            <g id="hotspot-rothera" class="threat-node lecture-interactive-card" data-lecture-section="hotspot_rothera" style="cursor:pointer;" transform="translate(260, 220)">
+                <circle cx="0" cy="0" r="14" fill="#0284c7" class="hotspot-pulse" opacity="0.35"/>
+                <circle cx="0" cy="0" r="6" fill="#0284c7" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="12" y="4" font-size="11" font-weight="bold" fill="#0369a1" font-family="'Inter',sans-serif">Rothera Station (UK)</text>
+                <g class="threat-tooltip" transform="translate(-150, -100)">
+                    <rect width="310" height="90" rx="8" fill="#1e293b" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#38bdf8" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🔬 Rothera Research Station (BAS)</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Located on Adelaide Island (67°34'S, 68°08'W)</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Upgraded under modern ATS Environmental Protocol</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• 100% solid waste sorted & shipped back to UK</text>
+                </g>
+            </g>
+
+            <!-- 3. Thwaites Glacier ("Doomsday Glacier") -->
+            <g id="hotspot-thwaites" class="threat-node lecture-interactive-card" data-lecture-section="hotspot_thwaites" style="cursor:pointer;" transform="translate(290, 420)">
+                <circle cx="0" cy="0" r="16" fill="#dc2626" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="7" fill="#dc2626" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="11" font-weight="bold" fill="#b91c1c" font-family="'Inter',sans-serif">Thwaites Glacier</text>
+                <g class="threat-tooltip" transform="translate(-160, -105)">
+                    <rect width="330" height="95" rx="8" fill="#1e293b" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#f87171" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">⚠️ Thwaites ("Doomsday") Glacier</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Marine-grounded: bedrock lies up to 1km below sea level</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Warm deep water melting glacier base from underneath</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Unstable retreat could trigger +0.65m to +3m sea level rise</text>
+                </g>
+            </g>
+
+            <!-- 4. Ross Sea MPA & McMurdo Station -->
+            <g id="hotspot-ross-mpa" class="threat-node lecture-interactive-card" data-lecture-section="hotspot_ross_mpa" style="cursor:pointer;" transform="translate(425, 450)">
+                <circle cx="0" cy="0" r="16" fill="#16a34a" class="hotspot-pulse" opacity="0.35"/>
+                <circle cx="0" cy="0" r="7" fill="#16a34a" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="11" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">McMurdo & Ross Sea</text>
+                <g class="threat-tooltip" transform="translate(-170, -110)">
+                    <rect width="330" height="100" rx="8" fill="#1e293b" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#4ade80" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🛡️ Ross Sea MPA & McMurdo Base</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Largest Marine Sanctuary on Earth (1.55 million km²)</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Protects toothfish, 38% of world's Adelie penguins</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• McMurdo (USA): Largest base (>1,000 summer pop)</text>
+                    <text x="14" y="88" fill="#38bdf8" font-size="11" font-family="'Inter',sans-serif">• Historic waste dump now excavated and cleaned</text>
+                </g>
+            </g>
+
+            <!-- 5. Commercial Krill Fishery Zone (Scotia Sea) -->
+            <g id="hotspot-trawling" class="threat-node lecture-interactive-card" data-lecture-section="hotspot_trawling" style="cursor:pointer;" transform="translate(300, 130)">
+                <circle cx="0" cy="0" r="14" fill="#d97706" class="hotspot-pulse" opacity="0.35"/>
+                <circle cx="0" cy="0" r="6" fill="#d97706" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="12" y="4" font-size="11" font-weight="bold" fill="#b45309" font-family="'Inter',sans-serif">Commercial Krill Trawling</text>
+                <g class="threat-tooltip" transform="translate(-140, -95)">
+                    <rect width="300" height="85" rx="8" fill="#1e293b" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#fbbf24" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🦐 CCAMLR Area 48 Krill Fishery</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Industrial vacuum trawlers harvest ~400,000 t/yr</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Processed into aquaculture feed & Omega-3 pills</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Competes directly with feeding blue whales & seals</text>
+                </g>
+            </g>
+
+            <!-- 6. South Pole / Ozone Depletion Core -->
+            <g id="hotspot-ozone" class="threat-node lecture-interactive-card" data-lecture-section="hotspot_ozone" style="cursor:pointer;" transform="translate(460, 330)">
+                <circle cx="0" cy="0" r="14" fill="#8b5cf6" class="hotspot-pulse" opacity="0.35"/>
+                <circle cx="0" cy="0" r="6" fill="#8b5cf6" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="12" y="4" font-size="11" font-weight="bold" fill="#6d28d9" font-family="'Inter',sans-serif">South Pole (Ozone Layer)</text>
+                <g class="threat-tooltip" transform="translate(-150, -95)">
+                    <rect width="310" height="85" rx="8" fill="#1e293b" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#c084fc" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🌌 Stratospheric Ozone Hole (1985)</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• CFCs caused seasonal spring destruction of O₃</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• 1987 Montreal Protocol banned ozone depleters</text>
+                    <text x="14" y="72" fill="#4ade80" font-size="11" font-family="'Inter',sans-serif">• Scientific success: projected full recovery by ~2066</text>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div style="padding: 10px 20px; background: #fffbeb; border-top: 1px solid #fef3c7; font-size: 13px; color: #92400e;">
+        🛡️ <strong>Geographical Insight:</strong> Antarctic threats exhibit clear spatial clustering: The Antarctic Peninsula bears the dual brunt of accelerated warming and 95% of cruise tourism; the Amundsen Sea faces catastrophic grounding line retreat at Thwaites Glacier; while the Scotia Sea experiences concentrated industrial krill trawling.
+    </div>
+</div>
+
+
+    <!-- SECTION 1 -->
+    <h2 id="sec-climate-threats" class="lecture-interactive-card" data-lecture-section="sec_climate_threats" style="color:#0369a1; font-size:22px; font-weight:700; border-bottom:2px solid #bae6fd; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        1. Climate Change, Sea Ice Decline & Glacial Instability
+    </h2>
+    <p>
+        The polar regions are the bellwethers of global warming. The <strong>Antarctic Peninsula</strong> has been one of the fastest-warming regions on Earth, experiencing an average surface temperature increase of nearly <strong>3°C over the past 50 years</strong> (almost three times the global average).
+    </p>
+
+    <!-- Textbook Figure 3.6: Sea ice decline -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_2_sea_ice_decline.png?v=2" alt="Figure 3.6 Antarctic Sea Ice Decline 1981-2010 vs 2023" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.6: Antarctic Sea Ice Extent Decline (1981–2010 Median vs. Record Minimum in February 2023)</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">In February 2023, Antarctic sea ice reached a catastrophic record low of just 1.79 million km² — over 1 million km² below the 1981–2010 average.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:20px 0;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #ef4444; border-radius:8px; padding:16px;">
+            <strong style="color:#b91c1c; font-size:15px;">🐧 Ecological Disaster for Emperor Penguins</strong>
+            <p style="margin:8px 0 0 0; font-size:14px; color:#334155;">
+                Emperor penguins breed on stable winter sea ice (fast ice) from April to December. In 2022 and 2023, early sea ice breakup in the Bellingshausen Sea caused <strong>100% breeding failure</strong> across four out of five colonies. Unfledged chicks, lacking waterproof adult feathers, plunged into the sub-zero ocean and drowned or succumbed to hypothermia.
+            </p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #f59e0b; border-radius:8px; padding:16px;">
+            <strong style="color:#b45309; font-size:15px;">🦐 Collapse of Krill Nursery Habitat</strong>
+            <p style="margin:8px 0 0 0; font-size:14px; color:#334155;">
+                Antarctic krill larvae rely on winter pack ice, grazing on photosynthetic ice algae attached to the underside of floes. Diminishing sea ice reduces juvenile recruitment, driving krill populations southward and replacing them with gelatinous <strong>salps</strong>, which offer zero nutritional value to penguins, seals, and whales.
+            </p>
+        </div>
+    </div>
+
+    <!-- Glacial Collapse & Thwaites Glacier -->
+    <div id="card-thwaites-glacier" class="lecture-interactive-card" data-lecture-section="thwaites_glacier" style="background:#fef2f2; border:1px solid #fecaca; border-radius:10px; padding:18px; margin:24px 0; cursor:pointer;">
+        <h3 style="margin:0 0 10px 0; color:#991b1b; font-size:17px; font-weight:700;">🌊 Glacial Instability & The "Doomsday Glacier" (Thwaites)</h3>
+        <p style="margin:0 0 10px 0; font-size:14.5px; color:#334155;">
+            While ice shelves already float and do not raise sea levels directly when they break (e.g., the dramatic collapse of <strong>Larsen A in 1995</strong> and <strong>Larsen B in 2002</strong>: 3,250 km² disintegrated in 35 days), they act as giant buttresses holding back land glaciers. Once an ice shelf collapses, tributary glaciers surge into the ocean up to <strong>eight times faster</strong>.
+        </p>
+        <p style="margin:0; font-size:14.5px; color:#334155;">
+            In West Antarctica, the <strong>Thwaites Glacier</strong> rests on bedrock over 1,000 meters below sea level. Relatively warm Circumpolar Deep Water (+1°C to +2°C) is intruding under its floating ice tongue, melting the grounding line backward. If Thwaites destabilizes, it could single-handedly raise global sea level by <strong>65 cm</strong> and trigger the collapse of the entire West Antarctic Ice Sheet, eventually adding <strong>3.3 meters</strong> to world sea levels.
+        </p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 id="sec-overfishing" class="lecture-interactive-card" data-lecture-section="sec_overfishing" style="color:#0369a1; font-size:22px; font-weight:700; border-bottom:2px solid #bae6fd; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        2. Commercial Overfishing & Marine Resource Exploitation
+    </h2>
+    <p>
+        The history of Antarctica is marked by boom-and-bust cycles of commercial overexploitation: 18th-century fur sealers drove Antarctic fur seals near extinction, followed by 20th-century commercial whaling that slaughtered over <strong>1.5 million whales</strong>, reducing blue whale numbers to less than 1% of their original stock.
+    </p>
+
+    <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:18px; margin:20px 0;">
+        <div id="card-krill-harvesting" class="lecture-interactive-card" data-lecture-section="krill_harvesting" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:16px; cursor:pointer;">
+            <h4 style="margin:0 0 8px 0; color:#0369a1; font-size:15px; font-weight:700;">🦐 Industrial Krill Fishery Pressures</h4>
+            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Catch Volume:</strong> Modern super-trawlers harvest ~400,000 tonnes of krill annually, equipped with continuous mid-water vacuum suction systems that pump living krill directly onto processing decks.</li>
+                <li><strong>Destination:</strong> Marketed not for human hunger, but for <strong>aquaculture fishmeal</strong> (salmon farming) and lucrative human <strong>Omega-3 health supplements</strong> and pet food.</li>
+                <li><strong>Spatial Concentration:</strong> Fishing fleets concentrate their efforts in protected coastal bays where breeding chinstrap and gentoo penguins are foraging, forcing wildlife to travel farther for food.</li>
+            </ul>
+        </div>
+        <div id="card-toothfish-seabird" class="lecture-interactive-card" data-lecture-section="toothfish_seabird" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:16px; cursor:pointer;">
+            <h4 style="margin:0 0 8px 0; color:#0369a1; font-size:15px; font-weight:700;">🐟 Toothfish & Albatross Bycatch</h4>
+            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Patagonian Toothfish:</strong> Branded as luxury "Chilean Sea Bass". Slow-growing and late-maturing (living over 50 years), making them highly vulnerable to overexploitation.</li>
+                <li><strong>Illegal, Unreported, and Unregulated (IUU) Fishing:</strong> "Pirate" vessels deploy bottom gillnets and longlines, evading radar in isolated waters.</li>
+                <li><strong>Albatross Bycatch:</strong> Longline vessels trail lines up to 130 km long with thousands of baited hooks. Foraging seabirds (e.g., the magnificent <strong>Wandering Albatross</strong>) dive for the bait, get hooked, and are dragged underwater to drown.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 id="sec-research" class="lecture-interactive-card" data-lecture-section="sec_research" style="color:#0369a1; font-size:22px; font-weight:700; border-bottom:2px solid #bae6fd; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        3. Scientific Research & Rothera Case Study
+    </h2>
+    <p>
+        Over 70 permanent and seasonal research stations operate across Antarctica, housing approximately 4,000 scientists and support staff in summer and 1,000 in winter. While science is the primary peaceful purpose protected by the Treaty, research stations inevitably generate an environmental footprint through fuel use, airstrips, ship docks, and sewage disposal.
+    </p>
+
+    <!-- Figures 3.8 & 3.9: Rothera Station Photo and Map -->
+    <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:16px; margin:24px 0;">
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_2_rothera_station.png" alt="Figure 3.8 Rothera Research Station" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Figure 3.8: Rothera Research Station, British Antarctic Survey</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Modernized polar infrastructure on Adelaide Island featuring the new Discovery Building.</p>
+        </div>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_2_rothera_location.png" alt="Figure 3.9 Rothera Station Location Map" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Figure 3.9: Map Showing Rothera Station on Adelaide Island</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Strategic hub located on the Antarctic Peninsula at 67°34'S, 68°08'W.</p>
+        </div>
+    </div>
+
+    <!-- Case Study Box: Modern Environmental Management at Rothera -->
+    <div id="card-rothera-case" class="lecture-interactive-card" data-lecture-section="rothera_case" style="background:#f0fdf4; border:1px solid #bbf7d0; border-left:4px solid #16a34a; border-radius:8px; padding:16px 20px; margin:20px 0; cursor:pointer;">
+        <h4 style="margin:0 0 8px 0; color:#166534; font-size:16px; font-weight:700;">🔬 Case Study: How Rothera Station Minimizes Its Ecological Footprint</h4>
+        <ul style="margin:0; padding-left:18px; font-size:14px; color:#14532d; line-height:1.6;">
+            <li><strong>Zero Solid Waste Left Behind:</strong> All domestic and scientific solid waste is segregated into seven streams, compacted, packed into shipping containers, and transported over 14,000 km back to the United Kingdom for recycling or licensed landfill.</li>
+            <li><strong>Biological Wastewater Treatment:</strong> Human sewage passes through a multi-stage aerobic biological digestion plant and UV disinfection before clean effluent is discharged, preventing pathogen transfer to wild penguin populations.</li>
+            <li><strong>Fuel Spill Prevention:</strong> Aviation kerosene and marine diesel are stored in double-walled, bunded steel tanks equipped with continuous electronic leak sensors and automated shut-off valves.</li>
+            <li><strong>Biosecurity Screening:</strong> All incoming personnel, fresh foods, scientific gear, and construction materials undergo mandatory vacuuming, brush-scrubbing, and chemical disinfection to prevent accidental introduction of non-native fungi, insects, or seeds.</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2 id="sec-tourism" class="lecture-interactive-card" data-lecture-section="sec_tourism" style="color:#0369a1; font-size:22px; font-weight:700; border-bottom:2px solid #bae6fd; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        4. Tourism Pressures & Biosecurity Challenges
+    </h2>
+    <p>
+        Antarctic tourism has undergone explosive growth over the past three decades. In the 1992–1993 austral summer, fewer than <strong>7,000 tourists</strong> visited Antarctica. By the 2022–2023 season, visitor numbers exceeded <strong>105,000 tourists</strong> — an increase of over 1,400%.
+    </p>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:20px 0;">
+        <div id="card-tourism-threats" class="lecture-interactive-card" data-lecture-section="tourism_threats" style="background:#fffbeb; border:1px solid #fef3c7; border-left:4px solid #f59e0b; border-radius:8px; padding:16px; cursor:pointer;">
+            <strong style="color:#b45309; font-size:15px;">⚠️ Ecological Threats from Tourism</strong>
+            <ul style="margin:8px 0 0 0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Fuel Spills in Remote Waters:</strong> The sinking of the MV Explorer in 2002 spilled 178,000 liters of marine gas oil and lubricants near the South Shetland Islands, threatening penguin rookeries.</li>
+                <li><strong>Invasive Non-Native Species:</strong> Seeds of invasive alien meadow grass (<em>Poa annua</em>) carried on tourists' velcro jackets and muddy hiking boots have successfully germinated on de-glaciated peninsula soils.</li>
+                <li><strong>Wildlife Stress & Disturbance:</strong> Close proximity of tourists elevates heart rates and cortisol in nesting skuas and penguins, sometimes causing adults to flee nests and leave eggs vulnerable to predators.</li>
+            </ul>
+        </div>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:16px;">
+            <strong style="color:#0369a1; font-size:15px;">🛡️ IAATO Regulatory Framework</strong>
+            <ul style="margin:8px 0 0 0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Vessel Size Caps:</strong> Ships carrying over 500 passengers are strictly prohibited from landing tourists ashore; they can only conduct scenic cruising.</li>
+                <li><strong>Landing Quotas:</strong> A maximum of <strong>100 passengers</strong> are permitted ashore simultaneously at any single landing site, supervised by a mandatory 1:20 guide-to-passenger ratio.</li>
+                <li><strong>Strict Biosecurity:</strong> Mandatory boot scrubbing with <em>Virkon-S</em> disinfectant before boarding Zodiac landing craft and upon return.</li>
+                <li><strong>Distance Rules:</strong> Visitors must maintain a strict <strong>5-meter buffer</strong> from all wildlife and yield right of way on "penguin highways".</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <h2 id="sec-governance" class="lecture-interactive-card" data-lecture-section="sec_governance" style="color:#0369a1; font-size:22px; font-weight:700; border-bottom:2px solid #bae6fd; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        5. Global Governance: The Antarctic Treaty System (ATS)
+    </h2>
+    <p>
+        Antarctica has no indigenous human population, no government, and belongs to no single nation. Instead, it is governed through a unique multilateral framework established during the Cold War: the <strong>Antarctic Treaty System (ATS)</strong>.
+    </p>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #0f172a, #1e293b); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>📜 The Antarctic Treaty System (ATS) & International Governance Framework</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 20px;">ATS Architecture</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #ffffff;">
+            <style>
+                .pillar-card { transition: transform 0.2s ease; cursor: pointer; }
+                .pillar-card:hover { transform: translateY(-4px); }
+            </style>
+            
+            <!-- Baseline Timeline Bar -->
+            <line x1="60" y1="240" x2="840" y2="240" stroke="#cbd5e1" stroke-width="4"/>
+            
+            <!-- 1. 1959 Antarctic Treaty -->
+            <g class="pillar-card" transform="translate(60, 40)">
+                <rect width="180" height="170" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(59,130,246,0.15))"/>
+                <rect width="180" height="32" rx="10" fill="#2563eb"/>
+                <text x="90" y="21" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">1959: ANTARCTIC TREATY</text>
+                <text x="14" y="55" fill="#1e3a8a" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Signed in Washington</text>
+                <text x="14" y="73" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• 12 original (now 56 states)</text>
+                <text x="14" y="91" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Article 1: Peace only</text>
+                <text x="14" y="109" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Article 2: Free science</text>
+                <text x="14" y="127" fill="#dc2626" font-size="10.5" font-weight="bold" font-family="'Inter',sans-serif">• Article 4: Claims frozen</text>
+                <text x="14" y="145" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Article 5: Bans nuclear tests</text>
+                <circle cx="90" cy="200" r="6" fill="#2563eb"/>
+                <line x1="90" y1="200" x2="90" y2="240" stroke="#2563eb" stroke-width="2"/>
+            </g>
+            <circle cx="150" cy="240" r="9" fill="#2563eb" stroke="#ffffff" stroke-width="3"/>
+            <text x="150" y="262" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a" font-family="'Inter',sans-serif">1959</text>
+
+            <!-- 2. 1980 CCAMLR -->
+            <g class="pillar-card" transform="translate(260, 270)">
+                <line x1="90" y1="0" x2="90" y2="-30" stroke="#059669" stroke-width="2"/>
+                <rect width="180" height="170" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(16,185,129,0.15))"/>
+                <rect width="180" height="32" rx="10" fill="#059669"/>
+                <text x="90" y="21" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">1980: CCAMLR</text>
+                <text x="14" y="55" fill="#065f46" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Marine Living Resources</text>
+                <text x="14" y="73" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Ecosystem-based quotas</text>
+                <text x="14" y="91" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Precautionary krill limits</text>
+                <text x="14" y="109" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Satellite vessel tracking (VMS)</text>
+                <text x="14" y="127" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Combats IUU toothfish piracy</text>
+                <text x="14" y="145" fill="#059669" font-size="10.5" font-weight="bold" font-family="'Inter',sans-serif">• Established Ross Sea MPA</text>
+            </g>
+            <circle cx="350" cy="240" r="9" fill="#059669" stroke="#ffffff" stroke-width="3"/>
+            <text x="350" y="225" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46" font-family="'Inter',sans-serif">1980</text>
+
+            <!-- 3. 1991 Madrid Protocol -->
+            <g class="pillar-card" transform="translate(460, 40)">
+                <rect width="190" height="170" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(249,115,22,0.15))"/>
+                <rect width="190" height="32" rx="10" fill="#ea580c"/>
+                <text x="95" y="21" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">1991: MADRID PROTOCOL</text>
+                <text x="14" y="55" fill="#9a3412" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Environmental Protocol</text>
+                <text x="14" y="73" fill="#dc2626" font-size="10.5" font-weight="bold" font-family="'Inter',sans-serif">• 50-Yr Mining Moratorium</text>
+                <text x="14" y="91" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Reviewable in 2041</text>
+                <text x="14" y="109" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Mandatory EIA for all acts</text>
+                <text x="14" y="127" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Zero waste dumping in sea</text>
+                <text x="14" y="145" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">• Protects flora & fauna</text>
+                <line x1="95" y1="200" x2="95" y2="240" stroke="#ea580c" stroke-width="2"/>
+            </g>
+            <circle cx="555" cy="240" r="9" fill="#ea580c" stroke="#ffffff" stroke-width="3"/>
+            <text x="555" y="262" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412" font-family="'Inter',sans-serif">1991</text>
+
+            <!-- 4. 2041 Horizon / IAATO Tourism -->
+            <g class="pillar-card" transform="translate(670, 270)">
+                <line x1="95" y1="0" x2="95" y2="-30" stroke="#7c3aed" stroke-width="2"/>
+                <rect width="190" height="170" rx="10" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(139,92,246,0.15))"/>
+                <rect width="190" height="32" rx="10" fill="#7c3aed"/>
+                <text x="95" y="21" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">2041 HORIZON & IAATO</text>
+                <text x="14" y="55" fill="#5b21b6" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• IAATO Self-Regulation:</text>
+                <text x="14" y="73" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">  - Max 100 tourists ashore</text>
+                <text x="14" y="91" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">  - Boot wash in Virkon-S</text>
+                <text x="14" y="109" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">  - 5m wildlife distance</text>
+                <text x="14" y="127" fill="#dc2626" font-size="10.5" font-weight="bold" font-family="'Inter',sans-serif">• 2041 Mining Review:</text>
+                <text x="14" y="145" fill="#334155" font-size="10.5" font-family="'Inter',sans-serif">  - Threat of resource race</text>
+            </g>
+            <circle cx="765" cy="240" r="9" fill="#7c3aed" stroke="#ffffff" stroke-width="3"/>
+            <text x="765" y="225" text-anchor="middle" font-size="12" font-weight="bold" fill="#5b21b6" font-family="'Inter',sans-serif">2041</text>
+        </svg>
+    </div>
+</div>
+
+
+    <div id="card-treaty-madrid" class="lecture-interactive-card" data-lecture-section="treaty_madrid" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; overflow:hidden; margin:24px 0; cursor:pointer;">
+        <div style="background:#0f172a; color:#ffffff; padding:12px 18px; font-weight:700; font-size:15px;">
+            Key Legal Pillars of the Antarctic Treaty System
+        </div>
+        <table style="width:100%; border-collapse:collapse; font-size:14px; text-align:left;">
+            <thead>
+                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1;">
+                    <th style="padding:10px 14px; width:22%;">Agreement / Instrument</th>
+                    <th style="padding:10px 14px; width:38%;">Core Principles & Mandates</th>
+                    <th style="padding:10px 14px; width:40%;">Geographical Significance & Enforcement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 14px; font-weight:700; color:#1e3a8a;">1959 Antarctic Treaty</td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        • Applies south of 60°S latitude.<br/>
+                        • Article 1: Peace only; military bases, maneuvers, and weapons tests banned.<br/>
+                        • Article 4: All territorial claims frozen; no new claims permitted.
+                    </td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        Successfully demilitarized an entire continent during the height of the Cold War. Guaranteed open scientific inspection between USA and USSR.
+                    </td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:10px 14px; font-weight:700; color:#065f46;">1980 CCAMLR</td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        • Conserves marine living resources.<br/>
+                        • Sets precautionary catch quotas for krill.<br/>
+                        • Created 1.55 million km² Ross Sea Marine Protected Area.
+                    </td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        Pioneered the "ecosystem approach" — fishing is regulated not just to sustain target fish, but to protect dependent predators (whales, seals).
+                    </td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 14px; font-weight:700; color:#c2410c;">1991 Madrid Protocol</td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        • Protocol on Environmental Protection.<br/>
+                        • Declares Antarctica a "natural reserve devoted to peace and science".<br/>
+                        • <strong>Article 7: 50-year comprehensive ban on all mineral resource mining.</strong>
+                    </td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        Prevents commercial exploitation of coal in Transantarctic Mountains and offshore oil. Reviewable in <strong>2041</strong> if requested by any consultative party.
+                    </td>
+                </tr>
+                <tr style="background:#f8fafc;">
+                    <td style="padding:10px 14px; font-weight:700; color:#6b21a8;">1987 Montreal Protocol</td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        • Phased out chlorofluorocarbons (CFCs) and halons.<br/>
+                        • Atmospheric chlorine levels peaked and are now declining.
+                    </td>
+                    <td style="padding:10px 14px; color:#334155;">
+                        Regarded as the single most successful global environmental treaty; Antarctic ozone hole is projected to heal completely by ~2066.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- The 2041 Mining Challenge Box -->
+    <div id="card-geopolitical-2041" class="lecture-interactive-card" data-lecture-section="geopolitical_2041" style="background:#fff1f2; border:1px solid #fecdd3; border-left:4px solid #e11d48; border-radius:8px; padding:16px 20px; margin:24px 0; cursor:pointer;">
+        <h4 style="margin:0 0 8px 0; color:#9f1239; font-size:16px; font-weight:700;">⛏️ The Geopolitical Dilemma: What Happens in 2041?</h4>
+        <p style="margin:0 0 8px 0; font-size:14px; color:#4c0519; line-height:1.6;">
+            Geological surveys indicate that the Transantarctic Mountains contain extensive seams of <strong>coal</strong> and <strong>iron ore</strong>, while the continental shelf may hold an estimated <strong>50 to 200 billion barrels of crude oil and natural gas</strong>. In addition, rare earth elements, gold, and platinum are locked beneath the ice.
+        </p>
+        <p style="margin:0; font-size:14px; color:#4c0519; line-height:1.6;">
+            The Madrid Protocol's mining moratorium does not expire automatically in 2041, but from that date, any single consultative party can call a review conference to amend Article 7. If global resource scarcity escalates, the pressure to lift the mining ban could shatter the historic consensus of the Antarctic Treaty System.
+        </p>
+    </div>
+
+    <!-- Summary Box -->
+    <div id="card-summary-takeaways" class="lecture-interactive-card" data-lecture-section="summary_takeaways" style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:18px; margin-top:32px; cursor:pointer;">
+        <h3 style="margin:0 0 10px 0; color:#0f172a; font-size:17px; font-weight:700;">📌 Summary & Key Takeaways</h3>
+        <ul style="margin:0; padding-left:20px; font-size:14.5px; color:#334155; line-height:1.65;">
+            <li><strong>Climate Change:</strong> The Antarctic Peninsula warmed by ~3°C in 50 years, causing catastrophic sea ice loss (record low 1.79M km² in Feb 2023), 100% breeding failure in emperor penguin colonies, and marine ice sheet instability at Thwaites Glacier.</li>
+            <li><strong>Fishing Pressures:</strong> Over 400,000 tonnes of krill are vacuum-harvested annually for aquaculture feed and omega-3 supplements, threatening the keystone foundation of polar wildlife.</li>
+            <li><strong>Tourism Footprint:</strong> Tourist numbers surged from 7,000 to over 105,000, managed by IAATO via 100-passenger landing limits, boot wash, and wildlife buffers.</li>
+            <li><strong>Governance:</strong> The Antarctic Treaty System preserves peace and science, while the 1991 Madrid Protocol bans commercial mining until at least 2041.</li>
+        </ul>
+    </div>
+
+</div>

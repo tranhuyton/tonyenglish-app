@@ -1,0 +1,246 @@
+
+<style>
+    .topic-container {
+        font-family: 'Inter', sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+        color: #1e293b;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+    .topic-container h1 {
+        color: #0f766e;
+        border-bottom: 3px solid #5eead4;
+        padding-bottom: 5px;
+        margin-top: 30px;
+    }
+    .topic-container h2 {
+        color: #0f766e;
+        border-bottom: 2px solid #5eead4;
+        padding-bottom: 5px;
+        margin-top: 25px;
+    }
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 20px 0;
+    }
+    .image-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+    }
+    .image-card img{width:70%;max-width:80%;min-width:50%;height:auto;display:block;margin:20px auto 8px auto;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.08);}
+    .image-card p {
+        margin: 0;
+        font-size: 14px;
+        color: #475569;
+        font-weight: 600;
+    }
+    .interactive-svg-container {
+        background: #f0fdfa;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        border: 1px solid #ccfbf1;
+        position: relative;
+    }
+    .svg-tooltip {
+        position: absolute;
+        background: white;
+        border: 1px solid #cbd5e1;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        display: none;
+        pointer-events: none;
+        z-index: 10;
+        min-width: 200px;
+    }
+</style>
+
+<div class="topic-container">
+    <div id="sec-header" class="lecture-interactive-card" data-lecture-section="intro" style="cursor:pointer; margin-bottom:20px;">
+        <h1 style="margin-top:0;">9.1 Changing employment structures</h1>
+    </div>
+    
+    <h2 id="sec-four-sectors" class="lecture-interactive-card" data-lecture-section="sec_four_sectors" style="cursor:pointer;">1. The Four Economic Sectors</h2>
+    <p>In all modern economies, jobs are divided into four broad economic sectors. As a country develops, the proportion of people working in each sector changes significantly.</p>
+    
+    <div id="card-four-sectors-grid" class="lecture-interactive-card image-grid" data-lecture-section="four_sectors_grid" style="cursor:pointer;">
+        <div class="image-card">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t9_fig_9_1.png?v=3" alt="Primary Sector"  style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;"/>
+            <p>Primary Sector (e.g., Dairy farming in New Zealand)<br/><span style="font-weight:normal; font-size:13px;">Extracts raw materials from the earth or sea (farming, fishing, mining).</span></p>
+        </div>
+        <div class="image-card">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t9_fig_9_2.png?v=3" alt="Secondary Sector"  style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;"/>
+            <p>Secondary Sector (e.g., Grain processing in USA)<br/><span style="font-weight:normal; font-size:13px;">Manufactures raw materials into finished products (factories, construction).</span></p>
+        </div>
+        <div class="image-card">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t9_fig_9_3.png?v=3" alt="Tertiary Sector"  style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;"/>
+            <p>Tertiary Sector (e.g., Trans-Siberian Railway transport)<br/><span style="font-weight:normal; font-size:13px;">Provides services to people and businesses (retail, transport, banking).</span></p>
+        </div>
+        <div class="image-card">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t9_fig_9_5.png?v=3" alt="Quaternary Sector"  style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;"/>
+            <p>Quaternary Sector (e.g., Research scientist)<br/><span style="font-weight:normal; font-size:13px;">Provides high-tech information, research, and expertise (biotech, aerospace).</span></p>
+        </div>
+    </div>
+
+    <h2 id="sec-employment-map" class="lecture-interactive-card" data-lecture-section="sec_employment_map" style="cursor:pointer;">2. Interactive Map: Employment Structures Globally</h2>
+    <p>Hover over or click on the highlighted countries below to see how employment structures vary across different levels of development (LICs, MICs, and HICs).</p>
+    
+    <div id="card-employment-map-svg" class="lecture-interactive-card interactive-svg-container" data-lecture-section="employment_map_svg" style="cursor:pointer;">
+        <div id="map-tooltip" class="svg-tooltip"></div>
+        <svg viewBox="0 0 800 400" width="100%" height="auto" id="world-map">
+            <!-- Simplified World Map Background -->
+            <path d="M50 100 Q 100 50 150 100 T 250 100 T 350 80 T 450 120 T 550 80 T 650 150 T 750 100" fill="none" stroke="#e2e8f0" stroke-width="2"/>
+            
+            <!-- Mali (LIC) -->
+            <circle id="pin-emp-mali"  cx="380" cy="220" r="15" fill="#ef4444" class="map-point lecture-interactive-card" data-lecture-section="emp_mali" data-country="Mali" data-type="LIC (Pre-industrial)" data-p="80%" data-s="10%" data-t="10%" style="cursor:pointer; transition: 0.2s;" onmouseover="this.setAttribute('r', '20')" onmouseout="this.setAttribute('r', '15')"/>
+            <text x="380" y="250" font-size="12" text-anchor="middle" font-weight="bold">Mali (LIC)</text>
+            
+            <!-- Vietnam (MIC) -->
+            <circle id="pin-emp-vietnam"  cx="620" cy="230" r="15" fill="#eab308" class="map-point lecture-interactive-card" data-lecture-section="emp_vietnam" data-country="Vietnam" data-type="MIC (Industrialising)" data-p="35%" data-s="30%" data-t="35%" style="cursor:pointer; transition: 0.2s;" onmouseover="this.setAttribute('r', '20')" onmouseout="this.setAttribute('r', '15')"/>
+            <text x="620" y="260" font-size="12" text-anchor="middle" font-weight="bold">Vietnam (MIC)</text>
+            
+            <!-- USA (HIC) -->
+            <circle id="pin-emp-usa"  cx="180" cy="150" r="15" fill="#3b82f6" class="map-point lecture-interactive-card" data-lecture-section="emp_usa" data-country="USA" data-type="HIC (Post-industrial)" data-p="2%" data-s="15%" data-t="83%" style="cursor:pointer; transition: 0.2s;" onmouseover="this.setAttribute('r', '20')" onmouseout="this.setAttribute('r', '15')"/>
+            <text x="180" y="180" font-size="12" text-anchor="middle" font-weight="bold">USA (HIC)</text>
+            
+            <!-- UK (HIC) -->
+            <circle id="pin-emp-uk"  cx="360" cy="120" r="15" fill="#8b5cf6" class="map-point lecture-interactive-card" data-lecture-section="emp_uk" data-country="UK" data-type="HIC (Post-industrial)" data-p="1%" data-s="18%" data-t="81%" style="cursor:pointer; transition: 0.2s;" onmouseover="this.setAttribute('r', '20')" onmouseout="this.setAttribute('r', '15')"/>
+            <text x="360" y="95" font-size="12" text-anchor="middle" font-weight="bold">UK (HIC)</text>
+        </svg>
+    </div>
+
+    <h2 id="sec-clark-fisher" class="lecture-interactive-card" data-lecture-section="sec_clark_fisher" style="cursor:pointer;">3. The Clark-Fisher Model</h2>
+    <p>As an economy develops, countries move through three stages (Pre-industrial, Industrial, Post-industrial). This model illustrates the global shift in employment over time.</p>
+<div class="img-box" style="margin:24px 0; text-align:center;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t9_fig_9_7.png?v=3" alt="The Clark-Fisher Model" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <p style="font-size:13px; color:#475569; margin-top:8px;"><strong>Figure 9.7:</strong> The Clark-Fisher economic sector model illustrating employment shifts through pre-industrial, industrial, and post-industrial stages.</p>
+</div>
+
+    
+    <div id="card-clark-fisher-svg" class="lecture-interactive-card interactive-svg-container" data-lecture-section="clark_fisher_svg" style="text-align: center; cursor:pointer;">
+        <svg viewBox="0 0 600 400" width="100%" height="auto">
+            <rect x="0" y="0" width="600" height="400" fill="#ffffff" />
+            <line x1="50" y1="350" x2="550" y2="350" stroke="#334155" stroke-width="2" />
+            <line x1="50" y1="50" x2="50" y2="350" stroke="#334155" stroke-width="2" />
+            <text x="300" y="385" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#334155" font-weight="bold">Time / Level of Development</text>
+            <text x="20" y="200" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#334155" transform="rotate(-90 20 200)" font-weight="bold">% of Workforce</text>
+            
+            <path d="M50 80 Q 200 120, 300 250 T 550 330" fill="none" stroke="#ef4444" stroke-width="4" />
+            <path d="M50 320 Q 200 300, 300 150 T 550 280" fill="none" stroke="#3b82f6" stroke-width="4" />
+            <path d="M50 340 Q 200 330, 300 200 T 550 100" fill="none" stroke="#10b981" stroke-width="4" />
+            <path d="M350 350 Q 450 330, 550 250" fill="none" stroke="#8b5cf6" stroke-width="4" />
+            
+            <rect x="100" y="90" width="70" height="20" fill="rgba(255,255,255,0.8)" rx="4"/>
+            <text x="135" y="105" font-family="sans-serif" font-size="12" fill="#ef4444" font-weight="bold" text-anchor="middle">Primary</text>
+            
+            <rect x="215" y="170" width="75" height="20" fill="rgba(255,255,255,0.8)" rx="4"/>
+            <text x="252" y="185" font-family="sans-serif" font-size="12" fill="#3b82f6" font-weight="bold" text-anchor="middle">Secondary</text>
+            
+            <rect x="420" y="120" width="60" height="20" fill="rgba(255,255,255,0.8)" rx="4"/>
+            <text x="450" y="135" font-family="sans-serif" font-size="12" fill="#10b981" font-weight="bold" text-anchor="middle">Tertiary</text>
+            
+            <rect x="440" y="260" width="80" height="20" fill="rgba(255,255,255,0.8)" rx="4"/>
+            <text x="480" y="275" font-family="sans-serif" font-size="12" fill="#8b5cf6" font-weight="bold" text-anchor="middle">Quaternary</text>
+            
+            <line x1="220" y1="50" x2="220" y2="350" stroke="#94a3b8" stroke-dasharray="5,5" stroke-width="2" />
+            <line x1="420" y1="50" x2="420" y2="350" stroke="#94a3b8" stroke-dasharray="5,5" stroke-width="2" />
+            
+            <text x="135" y="40" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#475569" font-weight="bold">Pre-industrial</text>
+            <text x="320" y="40" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#475569" font-weight="bold">Industrial</text>
+            <text x="485" y="40" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#475569" font-weight="bold">Post-industrial</text>
+        </svg>
+    </div>
+
+    
+<div id="card-triangular-graph" class="img-box lecture-interactive-card" data-lecture-section="triangular_graph" style="margin:24px 0; text-align:center; cursor:pointer;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t9_fig_9_11.png?v=3" alt="Triangular graph of employment structures" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <p style="font-size:13px; color:#475569; margin-top:8px;"><strong>Figure 9.11:</strong> Triangular graph comparing the employment structures of LICs, MICs, and HICs.</p>
+</div>
+<h2 id="sec-product-chain" class="lecture-interactive-card" data-lecture-section="sec_product_chain" style="cursor:pointer;">4. The Food Industry's Product Chain</h2>
+    <p>A product chain shows the relationship between the four sectors. Here is how a farm product is processed into food sold in supermarkets.</p>
+<div class="img-box" style="margin:24px 0; text-align:center;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t9_fig_9_6.png?v=3" alt="The Food Industry Product Chain" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <p style="font-size:13px; color:#475569; margin-top:8px;"><strong>Figure 9.6:</strong> The food industry product chain linking primary farming, secondary processing, and tertiary retailing.</p>
+</div>
+
+    
+    <div id="card-product-chain-svg" class="lecture-interactive-card interactive-svg-container" data-lecture-section="product_chain_svg" style="text-align: center; background: #fffbeb; border-color: #fde68a; cursor:pointer;">
+        <svg viewBox="0 0 700 200" width="100%" height="auto">
+            <!-- Arrows -->
+            <path d="M 160 100 L 250 100" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+            <path d="M 400 100 L 490 100" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+            <path d="M 325 140 L 325 180" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+            
+            <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b" />
+                </marker>
+            </defs>
+
+            <!-- Primary Box -->
+            <rect x="50" y="70" width="110" height="60" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
+            <text x="105" y="95" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">Primary</text>
+            <text x="105" y="115" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#92400e">Farms</text>
+
+            <text x="205" y="90" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#b45309">Transport</text>
+            <text x="205" y="115" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#b45309">(tertiary)</text>
+
+            <!-- Secondary Box -->
+            <rect x="250" y="70" width="150" height="60" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
+            <text x="325" y="95" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">Secondary</text>
+            <text x="325" y="115" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#92400e">Food-processing</text>
+
+            <text x="445" y="90" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#b45309">Transport</text>
+            <text x="445" y="115" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#b45309">(tertiary)</text>
+
+            <!-- Tertiary Box -->
+            <rect x="490" y="60" width="160" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
+            <text x="570" y="85" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">Tertiary</text>
+            <text x="570" y="105" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#92400e">Supermarkets and</text>
+            <text x="570" y="125" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#92400e">other food sales</text>
+
+            <!-- Quaternary Box -->
+            <rect x="250" y="150" width="150" height="50" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
+            <text x="325" y="170" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">Quaternary</text>
+            <text x="325" y="190" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#92400e">Research & Dev</text>
+        </svg>
+    </div>
+</div>
+
+<script>
+    // Note: React dangerouslySetInnerHTML strips regular script tags unless handled.
+    // Assuming the platform can handle basic inline events or we just use hover effects via CSS.
+    // The interactive logic will be handled via simple mouse events on the SVG elements.
+    document.querySelectorAll('.map-point').forEach(point => {
+        point.addEventListener('mouseenter', (e) => {
+            const tooltip = document.getElementById('map-tooltip');
+            tooltip.style.display = 'block';
+            tooltip.style.left = (e.pageX + 10) + 'px';
+            tooltip.style.top = (e.pageY + 10) + 'px';
+            tooltip.innerHTML = `
+                <strong>${e.target.dataset.country}</strong><br/>
+                ${e.target.dataset.type}<br/><br/>
+                <div style="font-size:12px;">
+                    <span style="color:#ef4444">Primary:</span> ${e.target.dataset.p}<br/>
+                    <span style="color:#3b82f6">Secondary:</span> ${e.target.dataset.s}<br/>
+                    <span style="color:#10b981">Tertiary/Quat:</span> ${e.target.dataset.t}
+                </div>
+            `;
+        });
+        point.addEventListener('mouseleave', () => {
+            document.getElementById('map-tooltip').style.display = 'none';
+        });
+        point.addEventListener('mousemove', (e) => {
+            const tooltip = document.getElementById('map-tooltip');
+            tooltip.style.left = (e.pageX + 10) + 'px';
+            tooltip.style.top = (e.pageY + 10) + 'px';
+        });
+    });
+</script>

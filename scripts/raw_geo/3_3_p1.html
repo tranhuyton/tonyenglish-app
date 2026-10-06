@@ -1,0 +1,618 @@
+
+<div style="font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width:920px; margin:0 auto; color:#1e293b; line-height:1.65; font-size:16px;">
+
+    <!-- Top Badge & Header -->
+    <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
+        <span style="background:#dbeafe; color:#1e40af; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; text-transform:uppercase;">IGCSE Geography</span>
+        <span style="background:#dcfce7; color:#166534; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px;">Topic 3: Biomes & Ecosystems</span>
+        <span style="background:#f1f5f9; color:#475569; font-size:12px; font-weight:600; padding:4px 10px; border-radius:20px;">Ecosystem Characteristics</span>
+    </div>
+    
+    <h1 style="color:#0f172a; font-size:30px; font-weight:800; border-bottom:3px solid #16a34a; padding-bottom:12px; margin-top:0; letter-spacing:-0.5px;">
+        3.3 The Characteristics of Tropical Rainforest Ecosystems
+    </h1>
+
+    <div id="sec-header" class="lecture-interactive-card" data-lecture-section="intro" style="background:#f0fdf4; border-left:4px solid #16a34a; border-radius:8px; padding:16px 20px; margin-bottom:28px; cursor:pointer;">
+        <p style="margin:0; font-size:15.5px; color:#166534; font-weight:500;">
+            Tropical rainforests represent the most biologically productive and diverse terrestrial biome on Earth, supporting over <strong>50% of the planet's plant and animal species</strong> while covering less than 6% of its land surface. This biome thrives on a continuous year-round input of high solar insolation and heavy convectional rainfall along the <strong>Equatorial low-pressure belt (ITCZ)</strong>.
+        </p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #bbf7d0; border-radius: 12px; box-shadow: 0 4px 12px rgba(22,163,74,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #15803d, #166534); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🗺️ Interactive Map: Global Distribution of Tropical Rainforests</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">SVG Interactive</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 940 500" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #f0fdf4;">
+            <style>
+                .trf-hotspot { cursor: pointer; transition: all 0.3s ease; }
+                .trf-hotspot:hover circle.hotspot-pulse { transform: scale(1.5); opacity: 0.7; }
+                .trf-hotspot:hover circle.hotspot-center { fill: #facc15; stroke: #ffffff; stroke-width: 3; }
+                .trf-tooltip { pointer-events: none; opacity: 0; transition: opacity 0.25s ease; }
+                .trf-hotspot:hover .trf-tooltip { opacity: 1; }
+                .map-grid { fill: none; stroke: #86efac; stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.6; }
+            </style>
+            
+            <!-- Ocean Background -->
+            <rect width="940" height="500" fill="#ecfdf5"/>
+            
+            <!-- Latitude Lines -->
+            <!-- Tropic of Cancer (23.5°N) -->
+            <line x1="0" y1="160" x2="940" y2="160" class="map-grid"/>
+            <text x="15" y="154" fill="#059669" font-size="10" font-family="'Inter',sans-serif">23.5°N (Tropic of Cancer)</text>
+
+            <!-- Equator (0°) -->
+            <line x1="0" y1="260" x2="940" y2="260" stroke="#16a34a" stroke-width="2"/>
+            <text x="15" y="254" fill="#15803d" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">0° (EQUATOR)</text>
+
+            <!-- Tropic of Capricorn (23.5°S) -->
+            <line x1="0" y1="360" x2="940" y2="360" class="map-grid"/>
+            <text x="15" y="375" fill="#059669" font-size="10" font-family="'Inter',sans-serif">23.5°S (Tropic of Capricorn)</text>
+
+            <!-- Equatorial Belt 10°N to 10°S Shading -->
+            <rect x="0" y="220" width="940" height="80" fill="#22c55e" opacity="0.08"/>
+            <text x="830" y="235" fill="#15803d" font-size="10.5" font-weight="bold" font-family="'Inter',sans-serif">10°N Core Belt</text>
+            <text x="830" y="295" fill="#15803d" font-size="10.5" font-weight="bold" font-family="'Inter',sans-serif">10°S Core Belt</text>
+
+            <!-- World Continental Outlines (Stylized) -->
+            <!-- North America -->
+            <path d="M 120,60 L 220,70 L 250,130 L 200,160 L 170,180 L 140,150 Z" fill="#d1fae5" stroke="#a7f3d0" stroke-width="1.5"/>
+            <!-- Central America -->
+            <path d="M 170,180 Q 200,210 220,230" fill="none" stroke="#a7f3d0" stroke-width="2"/>
+            <!-- South America -->
+            <path d="M 220,230 
+                     C 280,220 330,260 340,320 
+                     C 350,380 290,440 270,470 
+                     C 250,450 240,380 220,330 
+                     C 200,280 200,250 220,230 Z" 
+                  fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+
+            <!-- Africa -->
+            <path d="M 440,140 
+                     C 500,130 550,170 560,220 
+                     C 570,250 550,280 540,330 
+                     C 530,380 500,430 480,440 
+                     C 460,440 450,390 440,350 
+                     C 420,320 400,270 410,230 
+                     C 420,180 410,150 440,140 Z" 
+                  fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+            <!-- Madagascar -->
+            <path d="M 570,330 C 580,340 580,380 570,390 C 565,380 565,350 570,330 Z" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+
+            <!-- Eurasia -->
+            <path d="M 430,70 L 650,60 L 800,90 L 780,180 L 720,200 L 650,180 L 520,140 Z" fill="#d1fae5" stroke="#a7f3d0" stroke-width="1.5"/>
+            <!-- India -->
+            <path d="M 640,180 L 670,250 L 630,240 Z" fill="#d1fae5" stroke="#a7f3d0" stroke-width="1.5"/>
+            <!-- Southeast Asia & Sundaland (Malay Peninsula, Sumatra, Borneo, Java) -->
+            <path d="M 700,210 L 730,240 L 720,280" fill="none" stroke="#a7f3d0" stroke-width="2"/>
+            <!-- Indonesia Islands & New Guinea -->
+            <ellipse cx="730" cy="275" rx="35" ry="12" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+            <ellipse cx="780" cy="270" rx="30" ry="25" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+            <ellipse cx="850" cy="285" rx="45" ry="15" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1.5"/>
+            <!-- Australia -->
+            <path d="M 780,340 C 850,330 890,370 870,430 C 820,450 780,420 770,380 Z" fill="#d1fae5" stroke="#a7f3d0" stroke-width="1.5"/>
+
+            <!-- TROPICAL RAINFOREST BIOME PATCHES (Vibrant Green) -->
+            <!-- 1. Amazon Basin Patch -->
+            <path d="M 230,235 C 270,230 320,250 325,290 C 310,320 260,320 235,280 Z" fill="#15803d" opacity="0.85" stroke="#14532d" stroke-width="1.5"/>
+            
+            <!-- 2. Congo Basin Patch -->
+            <path d="M 450,240 C 490,235 520,250 515,285 C 480,295 455,275 450,240 Z" fill="#15803d" opacity="0.85" stroke="#14532d" stroke-width="1.5"/>
+
+            <!-- 3. Southeast Asia / Sundaland Patch (Borneo, Sumatra, Peninsular Malaysia) -->
+            <path d="M 710,245 C 730,235 750,250 745,280 C 720,290 710,270 710,245 Z" fill="#15803d" opacity="0.85" stroke="#14532d" stroke-width="1.5"/>
+            <circle cx="780" cy="265" r="22" fill="#15803d" opacity="0.85" stroke="#14532d" stroke-width="1.5"/>
+            <circle cx="850" cy="285" r="16" fill="#15803d" opacity="0.85" stroke="#14532d" stroke-width="1.5"/>
+
+            <!-- 4. Madagascar Eastern Strip -->
+            <path d="M 572,340 Q 576,365 572,385" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+
+            <!-- INTERACTIVE HOTSPOTS -->
+            
+            <!-- Hotspot 1: Amazon Basin -->
+            <g id="hotspot-amazon" class="trf-hotspot lecture-interactive-card" data-lecture-section="dist_amazon" style="cursor:pointer;" transform="translate(275, 275)">
+                <circle cx="0" cy="0" r="16" fill="#22c55e" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="7" fill="#16a34a" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="12" font-weight="bold" fill="#14532d" font-family="'Inter',sans-serif">Amazon Basin (60%)</text>
+                <g class="trf-tooltip" transform="translate(-160, -115)">
+                    <rect width="320" height="105" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#4ade80" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🌿 The Amazon Rainforest (Neotropics)</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Area: ~6 million km² (60% of world TRF total)</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Spans 9 South American nations (60% in Brazil)</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Drained by Amazon River: 20% of Earth's river water</text>
+                    <text x="14" y="88" fill="#38bdf8" font-size="11" font-family="'Inter',sans-serif">• >40,000 plant species; 1,300 birds; 2.5M insect types</text>
+                </g>
+            </g>
+
+            <!-- Hotspot 2: Congo Basin -->
+            <g id="hotspot-congo" class="trf-hotspot lecture-interactive-card" data-lecture-section="dist_congo" style="cursor:pointer;" transform="translate(485, 265)">
+                <circle cx="0" cy="0" r="16" fill="#22c55e" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="7" fill="#16a34a" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="12" font-weight="bold" fill="#14532d" font-family="'Inter',sans-serif">Congo Basin (18%)</text>
+                <g class="trf-tooltip" transform="translate(-160, -115)">
+                    <rect width="320" height="105" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#4ade80" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🦍 The Congo Basin (Afrotropics)</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Area: ~1.8 million km² (2nd largest contiguous block)</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Encompasses DRC, Republic of Congo, Gabon, Cameroon</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Critical stronghold for lowland gorillas & forest elephants</text>
+                    <text x="14" y="88" fill="#38bdf8" font-size="11" font-family="'Inter',sans-serif">• Contains world's largest tropical peatland (Cuvette Centrale)</text>
+                </g>
+            </g>
+
+            <!-- Hotspot 3: Southeast Asia / Sundaland -->
+            <g id="hotspot-seasia" class="trf-hotspot lecture-interactive-card" data-lecture-section="dist_seasia" style="cursor:pointer;" transform="translate(760, 260)">
+                <circle cx="0" cy="0" r="16" fill="#22c55e" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="7" fill="#16a34a" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="12" font-weight="bold" fill="#14532d" font-family="'Inter',sans-serif">SE Asia / Sundaland (18%)</text>
+                <g class="trf-tooltip" transform="translate(-170, -115)">
+                    <rect width="330" height="105" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#4ade80" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🦧 Southeast Asia & Sundaland (Indomalayan)</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Borneo, Sumatra, Peninsular Malaysia, New Guinea</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Oldest rainforest on Earth (~130 million years continuous)</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Dominated by massive Dipterocarp trees exceeding 80m</text>
+                    <text x="14" y="88" fill="#f87171" font-size="11" font-family="'Inter',sans-serif">• Under extreme pressure from palm oil monoculture expansion</text>
+                </g>
+            </g>
+
+            <!-- Hotspot 4: Madagascar & Daintree -->
+            <g class="trf-hotspot" transform="translate(575, 360)">
+                <circle cx="0" cy="0" r="12" fill="#22c55e" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="5" fill="#16a34a" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="10" y="4" font-size="11" font-weight="bold" fill="#14532d" font-family="'Inter',sans-serif">Madagascar</text>
+                <g class="trf-tooltip" transform="translate(-130, -85)">
+                    <rect width="260" height="75" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="12" y="20" fill="#4ade80" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🦎 Madagascar Rainforest Strip</text>
+                    <text x="12" y="38" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• 88M years of island isolation</text>
+                    <text x="12" y="54" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• 90% endemic wildlife (all lemur species)</text>
+                    <text x="12" y="70" fill="#f87171" font-size="11" font-family="'Inter',sans-serif">• >80% destroyed by slash-and-burn (tavy)</text>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div style="padding: 10px 20px; background: #f0fdf4; border-top: 1px solid #bbf7d0; font-size: 13px; color: #166534;">
+        🌿 <strong>Spatial Distribution Rule:</strong> Tropical rainforests form a continuous equatorial belt between 10°N and 10°S where high solar insolation at near-perpendicular angles drives the low-pressure Intertropical Convergence Zone (ITCZ), creating year-round warm temperatures and torrential convectional rain.
+    </div>
+</div>
+
+
+    <!-- SECTION 1 -->
+    <h2 id="sec-climate-regime" class="lecture-interactive-card" data-lecture-section="sec_climate_regime" style="color:#15803d; font-size:22px; font-weight:700; border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        1. Global Distribution & The Equatorial Climate Regime
+    </h2>
+    <p>
+        Tropical rainforests are situated in a continuous equatorial belt roughly between <strong>10° North and 10° South</strong> of the Equator. The biome spans three primary global realms:
+    </p>
+    <ul style="margin:8px 0 16px 0; padding-left:20px; font-size:15px; color:#334155;">
+        <li><strong>The Neotropics (South & Central America):</strong> Dominated by the vast <strong>Amazon Basin</strong> (approx. 6 million km²), representing roughly 60% of all surviving rainforest, with extensions along the Atlantic Forest and Central America.</li>
+        <li><strong>The Afrotropics (Central Africa):</strong> The <strong>Congo Basin</strong> (1.8 million km², 18% of global total), stretching across the Democratic Republic of Congo, Gabon, and Cameroon.</li>
+        <li><strong>The Indomalayan / Australasian Realm (Southeast Asia):</strong> The ancient island archipelagos of <strong>Sundaland</strong> (Borneo, Sumatra, Peninsular Malaysia) and New Guinea (18% of global total), renowned for having the tallest continuous rainforest canopy on Earth.</li>
+    </ul>
+
+    <!-- Textbook Figure 3.10: World TRF Distribution -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_3_world_trf.png" alt="Figure 3.10 World Distribution of Tropical Rainforests" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.10: World Distribution of Tropical Rainforests and the 10°N–10°S Belt</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Notice how the biome strictly aligns with the equatorial belt where the sun is directly overhead at midday throughout the year.</p>
+    </div>
+
+    <h3 style="color:#0f172a; font-size:18px; font-weight:700; margin-top:24px;">The Equatorial Climate: Distinctive Meteorological Features</h3>
+    
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:16px 0;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #16a34a; border-radius:8px; padding:16px;">
+            <strong style="color:#15803d; font-size:15px;">🌡️ Uniform High Temperatures</strong>
+            <p style="margin:8px 0 0 0; font-size:13.5px; color:#334155; line-height:1.6;">
+                Mean monthly temperatures remain consistently hot at <strong>26°C to 28°C</strong> throughout all 12 months. Because the noon sun is perpetually high in the sky, the <strong>annual temperature range is exceptionally small (under 2°C to 3°C)</strong>. In fact, the diurnal (day-to-night) temperature variation of ~8°C is significantly larger than the seasonal variation ("night is the winter of the tropics").
+            </p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:16px;">
+            <strong style="color:#0369a1; font-size:15px;">🌧️ Heavy, Year-Round Precipitation</strong>
+            <p style="margin:8px 0 0 0; font-size:13.5px; color:#334155; line-height:1.6;">
+                Rainfall totals are astronomical, ranging between <strong>2,000 mm and 4,000 mm annually</strong>. There is no true dry season; even the "drier" months typically receive well over 100 mm of rain. Relative atmospheric humidity stays continuously between <strong>80% and 90%</strong>, creating a perpetual greenhouse atmosphere.
+            </p>
+        </div>
+    </div>
+
+    <!-- The Daily Convectional Rainfall Cycle & Fig 3.11 -->
+    <div id="card-daily-rainfall" class="lecture-interactive-card" data-lecture-section="daily_rainfall" style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:18px; margin:24px 0; cursor:pointer;">
+        <h4 style="margin:0 0 8px 0; color:#1e40af; font-size:16px; font-weight:700;">⚡ The Daily Convectional Rainfall Cycle (Afternoon Thunderstorms)</h4>
+        <p style="margin:0 0 12px 0; font-size:14.5px; color:#1e3a8a; line-height:1.6;">
+            Rainfall in the rainforest follows a highly predictable daily diurnal rhythm driven by the <strong>Intertropical Convergence Zone (ITCZ)</strong>:
+        </p>
+        <ol style="margin:0; padding-left:20px; font-size:14px; color:#1e3a8a; line-height:1.65;">
+            <li><strong>Morning (08:00–11:00):</strong> Skies are generally clear with intense solar heating. Rapid evaporation occurs from rivers, soil, and massive plant evapotranspiration (a single mature tree can pump hundreds of liters of water vapor into the air daily).</li>
+            <li><strong>Midday (11:00–14:00):</strong> Warm, moisture-laden air expands, becomes buoyant, and rises rapidly in powerful convection currents. As air ascends into the troposphere, it cools adiabatically, reaching its dew point temperature. Condensation begins around microscopic dust nuclei, forming towering cumulus clouds.</li>
+            <li><strong>Afternoon (15:00–17:00):</strong> Clouds swell into colossal <strong>cumulonimbus anvil clouds</strong> reaching 12 to 15 km in height. Torrential downpours, accompanied by violent thunder, lightning, and squally downdrafts, drench the canopy.</li>
+            <li><strong>Evening (18:00 onwards):</strong> Heat energy is dissipated, the storm blows over, skies clear, and temperatures drop slightly into the comfortable low 20s (°C).</li>
+        </ol>
+    </div>
+
+    <!-- Textbook Figure 3.11: Convectional Uplift in Sarawak -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_3_convectional_sarawak.png" alt="Figure 3.11 Convectional uplift clouds in Sarawak" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.11: Convectional Uplift and Cloud Formation over Sarawak, Malaysia</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Notice the moisture-laden cloud layer rising rapidly above the rainforest canopy in the early afternoon.</p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 id="sec-stratification" class="lecture-interactive-card" data-lecture-section="sec_stratification" style="color:#15803d; font-size:22px; font-weight:700; border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        2. Rainforest Vertical Stratification & Forest Architecture
+    </h2>
+    <p>
+        Because light is the primary limiting resource in a tropical rainforest, competition for solar radiation has produced a complex, multi-tiered vertical structure known as <strong>stratification</strong>. Each layer possesses distinct microclimates, light levels, humidity, and specialized ecological niches.
+    </p>
+
+    <!-- Textbook Figure 3.13: TRF Layers -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_3_trf_layers.png" alt="Figure 3.13 TRF Strata" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.13: Vertical Stratification of Vegetation in the Tropical Rainforest</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Showing the four distinct tiers: Emergents, Main Canopy, Understory/Under-canopy, and Shrub/Ground layer.</p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #bbf7d0; border-radius: 12px; box-shadow: 0 4px 12px rgba(22,163,74,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #166534, #14532d); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🌳 Interactive Diagram: Vertical Stratification & Ecological Adaptations</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Vertical Architecture</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 920 620" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #ffffff;">
+            <style>
+                .strata-band { cursor: pointer; transition: opacity 0.2s ease; }
+                .strata-band:hover rect.strata-bg { fill-opacity: 0.25 !important; }
+                .strata-tooltip { pointer-events: none; opacity: 0; transition: opacity 0.25s ease; }
+                .strata-band:hover .strata-tooltip { opacity: 1; }
+            </style>
+            
+            <!-- Gradient Sunlight on Left -->
+            <defs>
+                <linearGradient id="sunlightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#fef08a" stop-opacity="0.9"/>
+                    <stop offset="35%" stop-color="#86efac" stop-opacity="0.5"/>
+                    <stop offset="70%" stop-color="#15803d" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#052e16" stop-opacity="0.2"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Altitude Axis on Left -->
+            <rect x="0" y="0" width="70" height="620" fill="#f1f5f9"/>
+            <line x1="70" y1="0" x2="70" y2="620" stroke="#cbd5e1" stroke-width="2"/>
+            <text x="35" y="25" text-anchor="middle" font-size="11" font-weight="bold" fill="#475569" font-family="'Inter',sans-serif">ALTITUDE</text>
+            
+            <text x="55" y="70" text-anchor="end" font-size="12" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">50m+</text>
+            <line x1="60" y1="65" x2="70" y2="65" stroke="#94a3b8" stroke-width="1.5"/>
+
+            <text x="55" y="170" text-anchor="end" font-size="12" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">35m</text>
+            <line x1="60" y1="165" x2="70" y2="165" stroke="#94a3b8" stroke-width="1.5"/>
+
+            <text x="55" y="330" text-anchor="end" font-size="12" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">20m</text>
+            <line x1="60" y1="325" x2="70" y2="325" stroke="#94a3b8" stroke-width="1.5"/>
+
+            <text x="55" y="470" text-anchor="end" font-size="12" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">5m</text>
+            <line x1="60" y1="465" x2="70" y2="465" stroke="#94a3b8" stroke-width="1.5"/>
+
+            <text x="55" y="560" text-anchor="end" font-size="12" font-weight="bold" fill="#78350f" font-family="'Inter',sans-serif">0m</text>
+            <line x1="60" y1="555" x2="70" y2="555" stroke="#94a3b8" stroke-width="1.5"/>
+
+            <!-- Light Penetration Bar -->
+            <rect x="75" y="20" width="16" height="535" fill="url(#sunlightGrad)" rx="8"/>
+            <text x="83" y="15" text-anchor="middle" font-size="9" font-weight="bold" fill="#eab308">☀️</text>
+            <text x="83" y="70" text-anchor="middle" font-size="9" font-weight="bold" fill="#854d0e">100%</text>
+            <text x="83" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#166534">80%</text>
+            <text x="83" y="380" text-anchor="middle" font-size="9" font-weight="bold" fill="#14532d">10%</text>
+            <text x="83" y="520" text-anchor="middle" font-size="8" font-weight="bold" fill="#ffffff">1-2%</text>
+
+            <!-- STRATA 1: EMERGENT LAYER (0 - 165px) -->
+            <g id="strata-emergents" class="strata-band lecture-interactive-card" data-lecture-section="strata_emergents" style="cursor:pointer;" transform="translate(100, 20)">
+                <rect class="strata-bg" width="800" height="145" rx="8" fill="#fef08a" fill-opacity="0.1" stroke="#ca8a04" stroke-width="1.5" stroke-dasharray="6 4"/>
+                <text x="20" y="35" font-size="16" font-weight="800" fill="#a16207" font-family="'Inter',sans-serif">1. EMERGENT LAYER (TẦNG VƯỢT TÁN: 40m - 60m+)</text>
+                <text x="20" y="58" font-size="12" fill="#475569" font-family="'Inter',sans-serif">☀️ Sunlight: 100% (Intense direct solar radiation) • 💨 Winds: Strong gale gusts • 💧 Humidity: Fluctuate 60-80%</text>
+                <!-- Emergent Tree Crown Graphic -->
+                <circle cx="280" cy="85" r="45" fill="#15803d" opacity="0.85"/>
+                <circle cx="620" cy="80" r="50" fill="#16a34a" opacity="0.85"/>
+                <text x="280" y="90" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">Kapok / Brazil Nut</text>
+                <text x="620" y="85" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">Giant Dipterocarp</text>
+                <!-- Key Wildlife Badge -->
+                <rect x="20" y="85" width="220" height="42" rx="6" fill="#fef9c3" stroke="#fde047" stroke-width="1"/>
+                <text x="30" y="102" font-size="11" font-weight="bold" fill="#854d0e" font-family="'Inter',sans-serif">🦅 Harpy Eagle • Bats • Swifts</text>
+                <text x="30" y="118" font-size="10" fill="#a16207" font-family="'Inter',sans-serif">Small waxy leaves prevent water loss</text>
+                <!-- Tooltip -->
+                <g class="strata-tooltip" transform="translate(420, 10)">
+                    <rect width="360" height="110" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.3))"/>
+                    <text x="14" y="24" fill="#fde047" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">Tầng Vượt Tán (Emergents)</text>
+                    <text x="14" y="44" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Cây gỗ khổng lồ vượt hẳn lên trên vòm tán chính</text>
+                    <text x="14" y="60" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Thân cây thẳng tắp, không có cành lá ở đoạn dưới</text>
+                    <text x="14" y="76" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Lá nhỏ, phủ lớp sáp dày để giảm thoát hơi nước do gió mạnh</text>
+                    <text x="14" y="92" fill="#4ade80" font-size="11" font-family="'Inter',sans-serif">• Rễ bạnh vè (buttress roots) xòe rộng neo giữ cây đứng vững</text>
+                </g>
+            </g>
+
+            <!-- STRATA 2: CANOPY LAYER (165 - 325px) -->
+            <g id="strata-canopy" class="strata-band lecture-interactive-card" data-lecture-section="strata_canopy" style="cursor:pointer;" transform="translate(100, 175)">
+                <rect class="strata-bg" width="800" height="150" rx="8" fill="#86efac" fill-opacity="0.12" stroke="#16a34a" stroke-width="2"/>
+                <text x="20" y="30" font-size="16" font-weight="800" fill="#15803d" font-family="'Inter',sans-serif">2. CANOPY LAYER (TẦNG TÁN CHÍNH: 25m - 35m)</text>
+                <text x="20" y="50" font-size="12" fill="#475569" font-family="'Inter',sans-serif">🌿 Sunlight: Absorbs 70-80% of all solar energy • 🍃 Continuous green ceiling • 🦋 Houses >50% of ALL rainforest life</text>
+                <!-- Canopy Foliage Cloud -->
+                <path d="M 180,105 Q 240,65 300,100 Q 380,60 460,95 Q 540,65 620,95 Q 700,65 780,110 L 780,135 L 180,135 Z" fill="#15803d" opacity="0.9"/>
+                <!-- Epiphytes and Lianas -->
+                <text x="20" y="80" font-size="11" font-weight="bold" fill="#065f46" font-family="'Inter',sans-serif">🌺 Epiphytes (Orchids, Bromeliads) & Woody Lianas</text>
+                <text x="20" y="96" font-size="10" fill="#047857" font-family="'Inter',sans-serif">Lianas climb tree trunks up to 100m to reach canopy light</text>
+                <!-- Wildlife Badge -->
+                <rect x="20" y="105" width="220" height="36" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+                <text x="30" y="121" font-size="11" font-weight="bold" fill="#065f46" font-family="'Inter',sans-serif">🐒 Howler Monkeys • Toucans • Sloths</text>
+                <text x="30" y="134" font-size="9.5" fill="#059669" font-family="'Inter',sans-serif">Prehensile tails & specialized reach</text>
+                <!-- Tooltip -->
+                <g class="strata-tooltip" transform="translate(420, 10)">
+                    <rect width="360" height="115" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.3))"/>
+                    <text x="14" y="24" fill="#4ade80" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">Tầng Tán Chính (Canopy) - "Trần Nhà Màu Xanh"</text>
+                    <text x="14" y="44" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Đan cài thành thảm thực vật khép tán liên tục dày 6-10m</text>
+                    <text x="14" y="60" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Hấp thụ 80% ánh nắng mặt trời, chặn phần lớn nước mưa rơi thẳng</text>
+                    <text x="14" y="76" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Phong lan & dứa dại sống bám (epiphytes) hứng nước mưa trên cành</text>
+                    <text x="14" y="92" fill="#38bdf8" font-size="11" font-family="'Inter',sans-serif">• Dây leo thân gỗ (lianas) bắt rễ từ đất uốn lượn lên đỉnh để đón nắng</text>
+                </g>
+            </g>
+
+            <!-- STRATA 3: UNDERSTORY LAYER (335 - 475px) -->
+            <g id="strata-understory" class="strata-band lecture-interactive-card" data-lecture-section="strata_understory" style="cursor:pointer;" transform="translate(100, 335)">
+                <rect class="strata-bg" width="800" height="135" rx="8" fill="#15803d" fill-opacity="0.1" stroke="#047857" stroke-width="1.5" stroke-dasharray="6 4"/>
+                <text x="20" y="28" font-size="15" font-weight="800" fill="#065f46" font-family="'Inter',sans-serif">3. UNDERSTORY / UNDER-CANOPY (TẦNG DƯỚI TÁN: 5m - 20m)</text>
+                <text x="20" y="46" font-size="12" fill="#475569" font-family="'Inter',sans-serif">🌫️ Sunlight: Only 5-15% reaches here • 💧 Humidity: Constant 85-95% • 🌴 Dwarf palms, tree ferns, young saplings</text>
+                <!-- Tree Trunks & Lianas -->
+                <line x1="280" y1="0" x2="280" y2="135" stroke="#78350f" stroke-width="12"/>
+                <line x1="620" y1="0" x2="620" y2="135" stroke="#78350f" stroke-width="14"/>
+                <!-- Winding Liana -->
+                <path d="M 270,135 Q 295,90 270,50 Q 295,20 275,0" fill="none" stroke="#b45309" stroke-width="4"/>
+                <!-- Broad Leaf adaptation callout -->
+                <rect x="20" y="60" width="220" height="60" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+                <text x="30" y="78" font-size="11" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">🍃 Large Broad Leaves with Drip Tips</text>
+                <text x="30" y="94" font-size="10" fill="#166534" font-family="'Inter',sans-serif">Maximizes capture of dim sunlight</text>
+                <text x="30" y="108" font-size="10" fill="#166534" font-family="'Inter',sans-serif">🐆 Tree Frogs • Pythons • Jaguars stalking</text>
+                <!-- Tooltip -->
+                <g class="strata-tooltip" transform="translate(420, 10)">
+                    <rect width="360" height="110" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.3))"/>
+                    <text x="14" y="24" fill="#4ade80" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">Tầng Dưới Tán (Understory)</text>
+                    <text x="14" y="44" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Không gian tối, ẩm ướt và tĩnh lặng, gần như không có gió</text>
+                    <text x="14" y="60" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Lá cây cực to với diện tích bề mặt lớn để gom từng vệt sáng le lói</text>
+                    <text x="14" y="76" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Đầu lá vuốt nhọn hình giọt nước (drip tips) thoát nước mưa cực nhanh</text>
+                    <text x="14" y="92" fill="#fde047" font-size="11" font-family="'Inter',sans-serif">• Báo đốm (jaguar) ẩn nấp trên cành cây thấp rình mồi</text>
+                </g>
+            </g>
+
+            <!-- STRATA 4: FOREST FLOOR (480 - 580px) -->
+            <g id="strata-floor" class="strata-band lecture-interactive-card" data-lecture-section="strata_floor" style="cursor:pointer;" transform="translate(100, 480)">
+                <rect class="strata-bg" width="800" height="85" rx="8" fill="#78350f" fill-opacity="0.1" stroke="#78350f" stroke-width="2"/>
+                <text x="20" y="24" font-size="15" font-weight="800" fill="#78350f" font-family="'Inter',sans-serif">4. FOREST FLOOR / SHRUB LAYER (TẦNG ĐÁY RỪNG: 0m - 5m)</text>
+                <text x="20" y="42" font-size="12" fill="#475569" font-family="'Inter',sans-serif">🌑 Deep Gloom: &lt;2% sunlight • 🍂 Rapid decomposition of leaf litter (6 weeks) • 🍄 Fungi & Mycorrhizal roots</text>
+                <!-- Buttress Root Flanges on Trunks -->
+                <polygon points="274,40 250,75 295,75" fill="#78350f"/>
+                <polygon points="613,40 580,75 645,75" fill="#78350f"/>
+                <text x="230" y="70" font-size="10" font-weight="bold" fill="#78350f" font-family="'Inter',sans-serif">Buttress</text>
+                <!-- Wildlife Badge -->
+                <rect x="20" y="48" width="190" height="30" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+                <text x="28" y="67" font-size="10.5" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">🐜 Tapirs • Agouti • Army Ants</text>
+                <!-- Tooltip -->
+                <g class="strata-tooltip" transform="translate(420, -20)">
+                    <rect width="360" height="100" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.3))"/>
+                    <text x="14" y="22" fill="#f87171" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">Tầng Đáy Rừng (Forest Floor) & Rễ Bạnh Vè</text>
+                    <text x="14" y="42" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Gần như tối mịt, thực vật thân cỏ rất thưa thớt do thiếu sáng</text>
+                    <text x="14" y="58" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Thảm lá rụng phân hủy thần tốc chỉ trong 6 tuần nhờ nấm và vi khuẩn</text>
+                    <text x="14" y="74" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Rễ cây nông lan ngang bề mặt hút khoáng chất lập tức trước khi bị rửa trôi</text>
+                </g>
+            </g>
+
+            <!-- SOIL CROSS-SECTION (570 - 620px) -->
+            <rect x="100" y="570" width="800" height="40" fill="#b45309" opacity="0.8" rx="4"/>
+            <text x="500" y="595" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">FERRALSOL / LATOSOL SOIL (Đất Đỏ Vàng Latosol - Sâu, Nghèo Dinh Dưỡng, Rửa Trôi Mạnh)</text>
+        </svg>
+    </div>
+</div>
+
+
+    <!-- SECTION 3 -->
+    <h2 id="sec-adaptations" class="lecture-interactive-card" data-lecture-section="sec_adaptations" style="color:#15803d; font-size:22px; font-weight:700; border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        3. Plant & Animal Adaptations to Rainforest Niches
+    </h2>
+    <p>
+        Every organism in the rainforest has evolved specialized morphological and behavioral adaptations to exploit unique ecological niches created by stratification and high humidity.
+    </p>
+
+    <!-- Textbook Figures 3.14 & 3.15 -->
+    <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:16px; margin:24px 0;">
+        <div id="card-adapt-flora-trf" class="lecture-interactive-card" data-lecture-section="adapt_flora_trf" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center; cursor:pointer;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_3_drip_pitcher.png" alt="Figure 3.14 Plant Adaptations" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Figure 3.14: Specialised Plant Adaptations</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Left: Drip-tip leaves shedding water; Right: Insect-trapping Nepenthes pitcher plant.</p>
+        </div>
+        <div id="card-adapt-fauna-trf" class="lecture-interactive-card" data-lecture-section="adapt_fauna_trf" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center; cursor:pointer;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_3_food_chain.png" alt="Figure 3.15 Simplified Food Chain" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Figure 3.15: Tropical Rainforest Food Chain</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Primary producers (trees/figs) to apex predators (harpy eagle, jaguar).</p>
+        </div>
+    </div>
+
+    <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; overflow:hidden; margin:24px 0;">
+        <div style="background:#15803d; color:#ffffff; padding:10px 16px; font-weight:700; font-size:15px;">
+            Key Botanical & Anatomical Adaptations in the Rainforest
+        </div>
+        <table style="width:100%; border-collapse:collapse; font-size:14px; text-align:left;">
+            <thead>
+                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1;">
+                    <th style="padding:10px 12px; width:22%;">Feature / Adaptation</th>
+                    <th style="padding:10px 12px; width:38%;">Morphological Mechanism</th>
+                    <th style="padding:10px 12px; width:40%;">Geographical & Evolutionary Function</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 12px; font-weight:700; color:#166534;">Buttress Roots</td>
+                    <td style="padding:10px 12px; color:#334155;">Massive wooden flanges extending up to 5 to 9 meters up the base of emergent tree trunks.</td>
+                    <td style="padding:10px 12px; color:#475569;">Provides essential mechanical stability against high winds in shallow, waterlogged, nutrient-poor topsoils without requiring deep taproots.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:10px 12px; font-weight:700; color:#166534;">Drip-Tip Leaves</td>
+                    <td style="padding:10px 12px; color:#334155;">Elongated downward-pointing grooved apex on smooth, waxy leaf blades.</td>
+                    <td style="padding:10px 12px; color:#475569;">Channels torrential rainwater off the leaf within seconds. Prevents fungi, algae, and lichens from growing on the leaf and blocking photosynthesis.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 12px; font-weight:700; color:#166534;">Lianas</td>
+                    <td style="padding:10px 12px; color:#334155;">Thick woody climbing vines rooted in the forest floor that loop around tree trunks up to 100m.</td>
+                    <td style="padding:10px 12px; color:#475569;">Bypasses the energy-expensive cost of growing a massive structural trunk by using host trees to reach sunny canopy light.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:10px 12px; font-weight:700; color:#166534;">Epiphytes (Air Plants)</td>
+                    <td style="padding:10px 12px; color:#334155;">Plants like orchids and bromeliads growing non-parasitically on high tree branches.</td>
+                    <td style="padding:10px 12px; color:#475569;">Accesses canopy sunlight directly. Leaves form vase-like central cisterns that trap rainwater and falling debris, creating tiny aerial micro-ponds.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 12px; font-weight:700; color:#166534;">Carnivorous Pitchers</td>
+                    <td style="padding:10px 12px; color:#334155;">Modified pitcher-shaped leaf traps filled with digestive digestive enzymes (e.g., <em>Nepenthes</em>).</td>
+                    <td style="padding:10px 12px; color:#475569;">Allows plants to capture and digest insects and small vertebrates to extract vital nitrogen and phosphorus missing in leached tropical soils.</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px 12px; font-weight:700; color:#166534;">Smooth, Thin Bark</td>
+                    <td style="padding:10px 12px; color:#334155;">Bark only 1 to 2 mm thick, lacking thick cork layers found in temperate trees.</td>
+                    <td style="padding:10px 12px; color:#475569;">Trees do not require protection against freezing temperatures or drought; smooth surfaces make it harder for climbing vines and epiphytes to take hold.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2 id="sec-gersmehl" class="lecture-interactive-card" data-lecture-section="sec_gersmehl" style="color:#15803d; font-size:22px; font-weight:700; border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin-top:36px; cursor:pointer;">
+        4. Nutrient Cycling & Soil Dynamics: The Gersmehl Model
+    </h2>
+    <p>
+        The tropical rainforest is characterized by an astonishing ecological paradox: it supports the most luxuriant, biomass-heavy vegetation on Earth, yet grows on some of the <strong>oldest, most deeply weathered, and infertile soils in the world (Latosols / Ferralsols)</strong>.
+    </p>
+
+    <!-- Textbook Figure 3.12: Nutrient Climate Links -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_3_nutrient_climate_links.png" alt="Figure 3.12 Links between climate, soil and vegetation" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.12: The Interdependence of Climate, Soil, and Vegetation in the Rainforest</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Demonstrating how rapid nutrient cycling keeps this fragile closed ecosystem alive.</p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #fed7aa; border-radius: 12px; box-shadow: 0 4px 12px rgba(234,88,12,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #c2410c, #9a3412); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🔄 Interactive Gersmehl Nutrient Cycle Model: Tropical Rainforest</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Gersmehl Biome Model</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #ffffff;">
+            <style>
+                .cycle-node { cursor: pointer; transition: transform 0.25s ease; }
+                .cycle-node:hover circle { stroke-width: 6px; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.25)); }
+                .flow-arrow { stroke-linecap: round; }
+            </style>
+
+            <defs>
+                <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#15803d"/>
+                </marker>
+                <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#ea580c"/>
+                </marker>
+                <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+                </marker>
+                <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#0284c7"/>
+                </marker>
+            </defs>
+
+            <!-- 1. BIOMASS STORE (HUGE CIRCLE) -->
+            <g id="node-biomass" class="cycle-node lecture-interactive-card" data-lecture-section="gersmehl_biomass" style="cursor:pointer;" transform="translate(450, 150)">
+                <circle cx="0" cy="0" r="110" fill="#dcfce7" stroke="#16a34a" stroke-width="5" filter="drop-shadow(0 4px 8px rgba(22,163,74,0.2))"/>
+                <text x="0" y="-30" text-anchor="middle" font-size="20" font-weight="900" fill="#14532d" font-family="'Inter',sans-serif">BIOMASS (B)</text>
+                <text x="0" y="-8" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">SINH KHỐI KHỔNG LỒ</text>
+                <text x="0" y="16" text-anchor="middle" font-size="12" fill="#334155" font-family="'Inter',sans-serif">• >75% of total ecosystem nutrients</text>
+                <text x="0" y="34" text-anchor="middle" font-size="12" fill="#334155" font-family="'Inter',sans-serif">• Stored in trunks, canopy, roots</text>
+                <text x="0" y="54" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626" font-family="'Inter',sans-serif">⚠️ Lost forever upon deforestation</text>
+            </g>
+
+            <!-- 2. LITTER STORE (SMALL CIRCLE) -->
+            <g id="node-litter" class="cycle-node lecture-interactive-card" data-lecture-section="gersmehl_litter" style="cursor:pointer;" transform="translate(720, 370)">
+                <circle cx="0" cy="0" r="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="3" filter="drop-shadow(0 4px 6px rgba(245,158,11,0.15))"/>
+                <text x="0" y="-18" text-anchor="middle" font-size="15" font-weight="800" fill="#b45309" font-family="'Inter',sans-serif">LITTER (L)</text>
+                <text x="0" y="2" text-anchor="middle" font-size="12" font-weight="bold" fill="#d97706" font-family="'Inter',sans-serif">THẢM MỤC NHỎ</text>
+                <text x="0" y="22" text-anchor="middle" font-size="10.5" fill="#475569" font-family="'Inter',sans-serif">• Constant high leaf fall</text>
+                <text x="0" y="38" text-anchor="middle" font-size="10.5" fill="#475569" font-family="'Inter',sans-serif">• Rapid decay in 6-8 wks</text>
+            </g>
+
+            <!-- 3. SOIL STORE (SMALL-MEDIUM CIRCLE) -->
+            <g id="node-soil" class="cycle-node lecture-interactive-card" data-lecture-section="gersmehl_soil" style="cursor:pointer;" transform="translate(180, 370)">
+                <circle cx="0" cy="0" r="75" fill="#ffedd5" stroke="#ea580c" stroke-width="3" filter="drop-shadow(0 4px 6px rgba(234,88,12,0.15))"/>
+                <text x="0" y="-20" text-anchor="middle" font-size="15" font-weight="800" fill="#9a3412" font-family="'Inter',sans-serif">SOIL (S)</text>
+                <text x="0" y="0" text-anchor="middle" font-size="12" font-weight="bold" fill="#c2410c" font-family="'Inter',sans-serif">ĐẤT LATOSOL NGHÈO</text>
+                <text x="0" y="20" text-anchor="middle" font-size="10.5" fill="#475569" font-family="'Inter',sans-serif">• Ancient weathered clay</text>
+                <text x="0" y="36" text-anchor="middle" font-size="10.5" fill="#475569" font-family="'Inter',sans-serif">• Low natural nutrient pool</text>
+                <text x="0" y="52" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626" font-family="'Inter',sans-serif">Intense downward leaching</text>
+            </g>
+
+            <!-- FLOW ARROWS & LABELS -->
+            <!-- 1. Fall-out (Biomass -> Litter): Thick arrow -->
+            <path d="M 540,210 Q 640,250 680,310" fill="none" stroke="#ea580c" stroke-width="6" marker-end="url(#arrowOrange)"/>
+            <text x="635" y="240" font-size="12" font-weight="bold" fill="#c2410c" font-family="'Inter',sans-serif">Fallout (Lá & cành rụng)</text>
+            <text x="635" y="255" font-size="10.5" fill="#64748b" font-family="'Inter',sans-serif">Continuous massive leaf fall</text>
+
+            <!-- 2. Decay (Litter -> Soil): Thick arrow -->
+            <path d="M 655,380 L 265,380" fill="none" stroke="#ea580c" stroke-width="7" marker-end="url(#arrowOrange)"/>
+            <text x="460" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#c2410c" font-family="'Inter',sans-serif">Rapid Decomposition / Decay (Phân Hủy Cực Nhanh)</text>
+            <text x="460" y="400" text-anchor="middle" font-size="11" fill="#64748b" font-family="'Inter',sans-serif">Warm (27°C) & humid (90%) conditions drive fungi & bacteria turnover in weeks</text>
+
+            <!-- 3. Uptake (Soil -> Biomass): Huge thick arrow -->
+            <path d="M 220,300 Q 280,220 340,180" fill="none" stroke="#15803d" stroke-width="9" marker-end="url(#arrowGreen)"/>
+            <text x="210" y="225" font-size="13" font-weight="bold" fill="#15803d" font-family="'Inter',sans-serif">Nutrient Uptake (Hấp Thụ Nhanh)</text>
+            <text x="210" y="242" font-size="11" fill="#475569" font-family="'Inter',sans-serif">Dense surface root mat reabsorbs minerals instantly</text>
+
+            <!-- INPUTS AND OUTPUTS -->
+            <!-- Precipitation into Litter -->
+            <path d="M 830,280 L 765,325" fill="none" stroke="#0284c7" stroke-width="4" marker-end="url(#arrowBlue)"/>
+            <text x="815" y="270" font-size="11" font-weight="bold" fill="#0284c7" font-family="'Inter',sans-serif">Precipitation (Mưa)</text>
+            <text x="815" y="285" font-size="10" fill="#64748b" font-family="'Inter',sans-serif">Dissolved nutrients in rain</text>
+
+            <!-- Runoff out of Litter -->
+            <path d="M 770,410 L 840,440" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+            <text x="815" y="460" font-size="11" font-weight="bold" fill="#dc2626" font-family="'Inter',sans-serif">Runoff (Rửa trôi bề mặt)</text>
+
+            <!-- Weathering into Soil -->
+            <path d="M 80,450 L 130,420" fill="none" stroke="#059669" stroke-width="4" marker-end="url(#arrowGreen)"/>
+            <text x="30" y="475" font-size="11" font-weight="bold" fill="#059669" font-family="'Inter',sans-serif">Weathering (Phong hóa)</text>
+            <text x="30" y="490" font-size="10" fill="#64748b" font-family="'Inter',sans-serif">Deep chemical rock decay</text>
+
+            <!-- Leaching out of Soil -->
+            <path d="M 170,450 L 170,500" fill="none" stroke="#dc2626" stroke-width="7" marker-end="url(#arrowRed)"/>
+            <text x="180" y="485" font-size="12" font-weight="bold" fill="#dc2626" font-family="'Inter',sans-serif">Leaching (Rửa trôi khoáng chất xuống sâu)</text>
+            <text x="180" y="500" font-size="10" fill="#64748b" font-family="'Inter',sans-serif">2,500mm rain washes soluble minerals past roots</text>
+        </svg>
+    </div>
+    <div style="padding: 10px 20px; background: #fff7ed; border-top: 1px solid #fed7aa; font-size: 13px; color: #9a3412;">
+        💡 <strong>The Rainforest Soil Paradox:</strong> The ecological paradox: Despite hosting luxuriant biodiversity, rainforest soils are naturally sterile and nutrient-poor. Almost all nutrients are locked in the living trees (Biomass). When forests are clear-felled, the closed nutrient cycle is destroyed permanently, leaving infertile soils prone to rapid erosion and desertification.
+    </div>
+</div>
+
+
+    <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:18px; margin:24px 0;">
+        <h3 style="margin:0 0 10px 0; color:#0f172a; font-size:17px; font-weight:700;">🔬 Explaining the Gersmehl Nutrient Stores & Flows in TRF</h3>
+        <ul style="margin:0; padding-left:20px; font-size:14.5px; color:#334155; line-height:1.65;">
+            <li><strong>The Biomass Store (B) is Enormous:</strong> Over 75% to 80% of all available nitrogen, phosphorus, potassium, and calcium in the entire ecosystem is locked directly inside the living plant tissues (trunks, branches, foliage) and animals.</li>
+            <li><strong>The Litter Store (L) is Small:</strong> Although trees shed tons of leaves, twigs, and dead organic matter every day, the litter layer on the forest floor is very thin. Under constant 27°C heat and 90% humidity, armies of termites, ants, bacteria, and saprophytic fungi decompose dead matter within <strong>6 to 8 weeks</strong> (compared to 3 to 5 years in temperate forests).</li>
+            <li><strong>The Soil Store (S) is Small & Infertile:</strong> Latosols are rich in insoluble red iron and aluminium sesquioxides (giving the soil its distinct reddish-orange color), but almost completely devoid of soluble nutrients. Torrential rains (2,500mm+) cause severe <strong>leaching</strong> (the downward percolation and washing away of soluble basic minerals past the root zone into groundwater).</li>
+            <li><strong>The Dense Surface Root Mat:</strong> Rainforest trees do not grow deep taproots into the sterile subsoil. Instead, they form a dense, shallow carpet of lateral roots in the top 10–20 cm of soil. These roots partner with <strong>mycorrhizal fungi</strong> that weave directly into decomposing leaves, absorbing liberated minerals instantly before rain can leach them away.</li>
+        </ul>
+    </div>
+
+    <!-- Summary Box -->
+    <div id="card-summary-concepts" class="lecture-interactive-card" data-lecture-section="summary_concepts" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:18px; margin-top:32px; cursor:pointer;">
+        <h3 style="margin:0 0 10px 0; color:#14532d; font-size:17px; font-weight:700;">📌 Summary & Key Geographical Concepts</h3>
+        <ul style="margin:0; padding-left:20px; font-size:14.5px; color:#166534; line-height:1.65;">
+            <li><strong>Location & Climate:</strong> Found in equatorial belt 10°N–10°S (Amazon, Congo, SE Asia). Constant high temps (26–28°C), small annual range (&lt;3°C), huge rainfall (2,000–4,000 mm) driven by daily afternoon ITCZ convectional storms.</li>
+            <li><strong>Vertical Stratification:</strong> 4 distinct tiers: Emergents (>40m), Canopy (25–35m, absorbs 80% light), Understory (5–20m, dark/humid), and Forest Floor (&lt;2% light).</li>
+            <li><strong>Plant Adaptations:</strong> Buttress roots for shallow support, drip-tip leaves to shed rain and stop fungal rot, lianas looping to the canopy, epiphytes harvesting aerial rainfall.</li>
+            <li><strong>Gersmehl Closed Cycle:</strong> Almost all nutrients are stored in living Biomass. Rapid decomposition turnover feeds a shallow root network. Leaching removes minerals from soil, meaning deforestation permanently sterilizes the land.</li>
+        </ul>
+    </div>
+
+</div>

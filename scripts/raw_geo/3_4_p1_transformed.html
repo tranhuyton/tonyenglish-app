@@ -1,0 +1,516 @@
+
+<div style="font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width:920px; margin:0 auto; color:#1e293b; line-height:1.65; font-size:16px;">
+
+    <!-- Top Badge & Header -->
+    <div style="display:flex; gap:8px; align-items:center; margin-bottom:12px;">
+        <span style="background:#dbeafe; color:#1e40af; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; text-transform:uppercase;">IGCSE Geography</span>
+        <span style="background:#dcfce7; color:#166534; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px;">Topic 3: Biomes & Ecosystems</span>
+        <span style="background:#fee2e2; color:#991b1b; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px;">Threats & Sustainability</span>
+    </div>
+    
+    <h1 style="color:#0f172a; font-size:30px; font-weight:800; border-bottom:3px solid #dc2626; padding-bottom:12px; margin-top:0; letter-spacing:-0.5px;">
+        3.4 Threats to Tropical Rainforests & Sustainable Management
+    </h1>
+
+    <div id="sec-header" class="lecture-interactive-card" data-lecture-section="intro" style="background:#fef2f2; border-left:4px solid #dc2626; border-radius:8px; padding:16px 20px; margin-bottom:28px; cursor:pointer;">
+        <p style="margin:0; font-size:15.5px; color:#991b1b; font-weight:500;">
+            Every year, an estimated <strong>10 million hectares</strong> of tropical rainforest are cleared globally — equivalent to losing 27 football pitches of forest every single minute. Over <strong>17% of the Brazilian Amazon has already been destroyed</strong>. If total deforestation crosses the critical <strong>20% to 25% tipping point</strong>, scientists warn of catastrophic, irreversible "savannification", permanently transforming the world's greatest carbon sink into a carbon emitter.
+        </p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #fecaca; border-radius: 12px; box-shadow: 0 4px 12px rgba(220,38,38,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #b91c1c, #991b1b); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🔥 Interactive Map: Global Deforestation Hotspots & Primary Drivers</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Deforestation Fronts</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 940 500" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #fef2f2;">
+            <style>
+                .driver-hotspot { cursor: pointer; transition: all 0.3s ease; }
+                .driver-hotspot:hover circle.hotspot-pulse { opacity: 0.8; stroke: #ef4444; stroke-width: 3; }
+                .driver-hotspot:hover circle.hotspot-center { fill: #facc15; stroke: #ffffff; stroke-width: 3; }
+                .driver-tooltip { pointer-events: none; opacity: 0; transition: opacity 0.25s ease; }
+                .driver-hotspot:hover .driver-tooltip { opacity: 1; }
+                .map-grid { fill: none; stroke: #fca5a5; stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.5; }
+            </style>
+            
+            <!-- Ocean Background -->
+            <rect width="940" height="500" fill="#fef2f2"/>
+            
+            <!-- Latitude Lines -->
+            <line x1="0" y1="160" x2="940" y2="160" class="map-grid"/>
+            <text x="15" y="154" fill="#ef4444" font-size="10" font-family="'Inter',sans-serif">23.5°N (Tropic of Cancer)</text>
+
+            <line x1="0" y1="260" x2="940" y2="260" stroke="#dc2626" stroke-width="2"/>
+            <text x="15" y="254" fill="#b91c1c" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">0° (EQUATOR)</text>
+
+            <line x1="0" y1="360" x2="940" y2="360" class="map-grid"/>
+            <text x="15" y="375" fill="#ef4444" font-size="10" font-family="'Inter',sans-serif">23.5°S (Tropic of Capricorn)</text>
+
+            <!-- Equatorial Danger Belt -->
+            <rect x="0" y="220" width="940" height="80" fill="#ef4444" opacity="0.08"/>
+
+            <!-- World Continental Outlines (Stylized) -->
+            <!-- North & Central America -->
+            <path d="M 120,60 L 220,70 L 250,130 L 200,160 L 170,180 L 140,150 Z" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.5"/>
+            <!-- South America -->
+            <path d="M 220,230 
+                     C 280,220 330,260 340,320 
+                     C 350,380 290,440 270,470 
+                     C 250,450 240,380 220,330 
+                     C 200,280 200,250 220,230 Z" 
+                  fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+
+            <!-- Africa -->
+            <path d="M 440,140 
+                     C 500,130 550,170 560,220 
+                     C 570,250 550,280 540,330 
+                     C 530,380 500,430 480,440 
+                     C 460,440 450,390 440,350 
+                     C 420,320 400,270 410,230 
+                     C 420,180 410,150 440,140 Z" 
+                  fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+
+            <!-- Eurasia & SE Asia -->
+            <path d="M 430,70 L 650,60 L 800,90 L 780,180 L 720,200 L 650,180 L 520,140 Z" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.5"/>
+            <!-- Indonesia Islands -->
+            <ellipse cx="730" cy="275" rx="35" ry="12" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+            <ellipse cx="780" cy="270" rx="30" ry="25" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+            <ellipse cx="850" cy="285" rx="45" ry="15" fill="#fee2e2" stroke="#f87171" stroke-width="1.5"/>
+
+            <!-- Arc of Deforestation (Amazon) Highlight Line -->
+            <path d="M 240,290 Q 290,320 325,300" fill="none" stroke="#dc2626" stroke-width="4" stroke-dasharray="6 3"/>
+            <text x="240" y="325" fill="#991b1b" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">"Arc of Deforestation"</text>
+
+            <!-- INTERACTIVE HOTSPOTS -->
+            
+            <!-- Hotspot 1: Brazilian Amazon (Cattle Ranching & Soy) -->
+            <g id="driver-cattle" class="driver-hotspot lecture-interactive-card" data-lecture-section="driver_cattle" style="cursor:pointer;" transform="translate(280, 275)">
+                <circle cx="0" cy="0" r="18" fill="#dc2626" class="hotspot-pulse" opacity="0.45"/>
+                <circle cx="0" cy="0" r="8" fill="#b91c1c" class="hotspot-center" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="14" y="4" font-size="12" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">Amazon: Cattle & Soy</text>
+                <g class="driver-tooltip" transform="translate(-160, -125)">
+                    <rect width="330" height="115" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#f87171" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🐂 Brazilian Amazon: Cattle Ranching (80%)</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• #1 Driver: 80% of cleared forest converted to pasture</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Commercial Soy: Exported globally for livestock feed</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Infrastructure: Trans-Amazonian Highway (fishbone clear)</text>
+                    <text x="14" y="88" fill="#facc15" font-size="11" font-family="'Inter',sans-serif">• States affected: Pará (34.3%), Mato Grosso (27.6%)</text>
+                    <text x="14" y="104" fill="#38bdf8" font-size="11" font-family="'Inter',sans-serif">• Wildcat gold mining (garimpo) poisons Yanomami rivers</text>
+                </g>
+            </g>
+
+            <!-- Hotspot 2: Borneo & Sumatra (Palm Oil & Peatland Burning) -->
+            <g id="driver-palmoil" class="driver-hotspot lecture-interactive-card" data-lecture-section="driver_palmoil" style="cursor:pointer;" transform="translate(760, 260)">
+                <circle cx="0" cy="0" r="18" fill="#dc2626" class="hotspot-pulse" opacity="0.45"/>
+                <circle cx="0" cy="0" r="8" fill="#b91c1c" class="hotspot-center" stroke="#ffffff" stroke-width="2.5"/>
+                <text x="14" y="4" font-size="12" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">Borneo: Palm Oil</text>
+                <g class="driver-tooltip" transform="translate(-170, -125)">
+                    <rect width="340" height="115" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#f87171" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🌴 Borneo & Sumatra: Palm Oil Monoculture</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Produces 85% of world's palm oil (processed food/diesel)</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Peatland drainage: Canal digging desiccates peat swamp</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Subterranean fires release gigatonnes of choking smog</text>
+                    <text x="14" y="88" fill="#f87171" font-size="11" font-family="'Inter',sans-serif">• Critically endangers Bornean Orangutan & Sumatran Tiger</text>
+                    <text x="14" y="104" fill="#4ade80" font-size="11" font-family="'Inter',sans-serif">• Conservation: Danum Valley Reserve (Fig 3.22)</text>
+                </g>
+            </g>
+
+            <!-- Hotspot 3: Congo Basin (Smallholder Agriculture & Fuelwood) -->
+            <g id="driver-logging" class="driver-hotspot lecture-interactive-card" data-lecture-section="driver_logging" style="cursor:pointer;" transform="translate(490, 265)">
+                <circle cx="0" cy="0" r="16" fill="#dc2626" class="hotspot-pulse" opacity="0.45"/>
+                <circle cx="0" cy="0" r="7" fill="#b91c1c" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="14" y="4" font-size="12" font-weight="bold" fill="#991b1b" font-family="'Inter',sans-serif">Congo: Fuelwood & Shifting Ag</text>
+                <g class="driver-tooltip" transform="translate(-160, -115)">
+                    <rect width="320" height="105" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="14" y="22" fill="#f87171" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">🔥 Congo Basin: Smallholder Agriculture</text>
+                    <text x="14" y="40" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Primary Driver: Slash-and-burn subsistence farming (84%)</text>
+                    <text x="14" y="56" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Charcoal & Fuelwood: Feeds massive urban demand (Kinshasa)</text>
+                    <text x="14" y="72" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Industrial logging roads facilitate commercial bushmeat hunting</text>
+                    <text x="14" y="88" fill="#facc15" font-size="11" font-family="'Inter',sans-serif">• High population growth rate (~3%/yr) increases food pressure</text>
+                </g>
+            </g>
+
+            <!-- Hotspot 4: Sarawak (Batang Ai Dam & Commercial Timber) -->
+            <g id="driver-infrastructure" class="driver-hotspot lecture-interactive-card" data-lecture-section="driver_infrastructure" style="cursor:pointer;" transform="translate(730, 240)">
+                <circle cx="0" cy="0" r="14" fill="#0284c7" class="hotspot-pulse" opacity="0.4"/>
+                <circle cx="0" cy="0" r="6" fill="#0369a1" class="hotspot-center" stroke="#ffffff" stroke-width="2"/>
+                <text x="12" y="4" font-size="11" font-weight="bold" fill="#0369a1" font-family="'Inter',sans-serif">Sarawak: Dams</text>
+                <g class="driver-tooltip" transform="translate(-140, -95)">
+                    <rect width="280" height="85" rx="8" fill="#0f172a" opacity="0.96" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.35))"/>
+                    <text x="12" y="20" fill="#38bdf8" font-size="12" font-weight="bold" font-family="'Inter',sans-serif">💧 Batang Ai Hydro Dam (Sarawak)</text>
+                    <text x="12" y="38" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Flooded 8,500 hectares of virgin forest</text>
+                    <text x="12" y="54" fill="#f8fafc" font-size="11" font-family="'Inter',sans-serif">• Displaced 3,000 indigenous Iban tribespeople</text>
+                    <text x="12" y="70" fill="#f87171" font-size="11" font-family="'Inter',sans-serif">• Soil erosion silts turbines & causes flash floods</text>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div style="padding: 10px 20px; background: #fff1f2; border-top: 1px solid #fecdd3; font-size: 13px; color: #9f1239;">
+        ⚠️ <strong>Regional Economic Variation:</strong> Regional drivers differ markedly: In the Amazon, 80% of clearance is driven by cattle ranching and soy; in Southeast Asia, oil palm monoculture dominates; in the Congo Basin, shifting subsistence agriculture and urban charcoal demand remain the primary catalysts.
+    </div>
+</div>
+
+
+    <!-- SECTION 1 -->
+    <div id="sec-deforestation-drivers" class="lecture-interactive-card" data-lecture-section="sec_deforestation_drivers" style="margin-bottom: 24px; padding: 22px 24px; background: #ffffff; border: 1.5px solid #fca5a5; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); cursor: pointer; transition: all 0.2s ease;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; border-bottom: 2px solid #fca5a5; padding-bottom: 8px;">
+            <h2 style="color: #b91c1c; font-size: 22px; font-weight: 700; margin: 0;">
+        1. Primary Economic Drivers (Causes) of Deforestation
+    </h2>
+            <span style="font-size: 11px; font-weight: 700; background: #fef2f2; color: #dc2626; padding: 3px 8px; border-radius: 4px; border: 1px solid #fca5a5;">Nghe phần này</span>
+        </div>
+        <p style="margin: 0; color: #334155; font-size: 15px; line-height: 1.6;">
+            
+        Tropical deforestation is not an accidental phenomenon; it is propelled by powerful global economic forces, domestic development policies, and agricultural commodity markets:
+    
+        </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:20px 0;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #dc2626; border-radius:8px; padding:16px;">
+            <strong style="color:#b91c1c; font-size:15px;">🐂 1. Cattle Ranching (The #1 Driver in Amazonia)</strong>
+            <p style="margin:8px 0 0 0; font-size:13.5px; color:#334155; line-height:1.6;">
+                Accounts for <strong>nearly 80% of all deforested land in the Amazon</strong>. Large cattle companies and speculators slash and burn pristine forest to create extensive grazing pastures for beef export. Because tropical soils quickly degrade within 3 to 5 years, ranchers continuously clear new tracts of primary forest rather than investing in pasture restoration.
+            </p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #f59e0b; border-radius:8px; padding:16px;">
+            <strong style="color:#b45309; font-size:15px;">🌱 2. Commercial Agribusiness (Soy & Palm Oil)</strong>
+            <p style="margin:8px 0 0 0; font-size:13.5px; color:#334155; line-height:1.6;">
+                In Brazil (Mato Grosso and Pará), vast mechanised farms produce millions of tonnes of <strong>soybeans</strong> exported to feed poultry and pigs in Europe and China. In Southeast Asia (Borneo and Sumatra), <strong>oil palm monoculture</strong> dominates, feeding global industrial demand for chocolate, cosmetics, detergents, and biofuels.
+            </p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #78350f; border-radius:8px; padding:16px;">
+            <strong style="color:#78350f; font-size:15px;">🪵 3. Commercial Logging & "Fishbone" Roads</strong>
+            <p style="margin:8px 0 0 0; font-size:13.5px; color:#334155; line-height:1.6;">
+                High-value hardwoods such as mahogany, rosewood, and teak are selectively extracted for luxury timber. Logging companies bulldoze deep penetration roads. These pioneer roads create a classic <strong>"fishbone" spatial pattern</strong> visible from space, allowing illegal settlers, ranchers, and gold miners to access and clear the surrounding forest interior.
+            </p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:16px;">
+            <strong style="color:#0369a1; font-size:15px;">⚡ 4. Hydroelectric Dams & Mining</strong>
+            <p style="margin:8px 0 0 0; font-size:13.5px; color:#334155; line-height:1.6;">
+                Mega-dams like Belo Monte and Tucuruí in Brazil flood thousands of square kilometers of virgin jungle, submerging biomass that decays anaerobically into potent <strong>methane (CH₄)</strong>. Mineral extraction, including open-cast iron ore at Carajás and wildcat gold panning (<em>garimpo</em>), discharges toxic mercury directly into indigenous riverways.
+            </p>
+        </div>
+    </div>
+
+    <!-- Textbook Figures 3.20 & 3.21: Amazon Data -->
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:24px 0;">
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_amazon_state_pie.png" alt="Figure 3.20 Amazon Deforestation by State" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Figure 3.20: Amazon Deforestation Share by Brazilian State (2023)</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Pará (34.3%) and Mato Grosso (27.6%) form the epicentre of the "Arc of Deforestation".</p>
+        </div>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center;">
+            <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_amazon_presidents_bar.png" alt="Figure 3.21 Deforestation under Brazilian Presidents" style="width: 100%; max-height: 250px; height: auto; object-fit: contain; border-radius: 8px; display: block; margin: 0 auto 8px auto;" />
+            <p style="font-size:13px; font-weight:700; color:#1e293b; margin:10px 0 2px 0;">Figure 3.21: Deforestation Rates under Brazilian Presidencies</p>
+            <p style="font-size:12px; color:#64748b; margin:0;">Illustrating how environmental policing, satellite tracking (PRODES/DETER), and political will govern deforestation.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div id="sec-environmental-impacts" class="lecture-interactive-card" data-lecture-section="sec_environmental_impacts" style="margin-bottom: 24px; padding: 22px 24px; background: #ffffff; border: 1.5px solid #fca5a5; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); cursor: pointer; transition: all 0.2s ease;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; border-bottom: 2px solid #fca5a5; padding-bottom: 8px;">
+            <h2 style="color: #b91c1c; font-size: 22px; font-weight: 700; margin: 0;">
+        2. Severe Environmental Impacts of Forest Clearance
+    </h2>
+            <span style="font-size: 11px; font-weight: 700; background: #fef2f2; color: #dc2626; padding: 3px 8px; border-radius: 4px; border: 1px solid #fca5a5;">Nghe phần này</span>
+        </div>
+        <p style="margin: 0; color: #334155; font-size: 15px; line-height: 1.6;">
+            
+        When the rainforest canopy is removed, the delicate equilibrium connecting climate, hydrology, and soils collapses in a rapid cascade of degradation.
+    
+        </p>
+    </div>
+
+    <!-- Textbook Figure 3.18: 3D Block Diagram -->
+    <div id="card-impact-erosion" class="lecture-interactive-card" data-lecture-section="impact_erosion" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center; cursor:pointer;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_deforestation_impacts.png" alt="Figure 3.18 Deforestation Impacts 3D Block" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.18: Block Diagram of the Environmental Impacts of Deforestation</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Showing the direct consequence of canopy removal: soil erosion, river siltation, loss of evapotranspiration, and catastrophic flash flooding.</p>
+    </div>
+
+    <!-- Textbook Figure 3.19: Batang Ai Flooding -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_batang_ai.png" alt="Figure 3.19 Batang Ai Dam Flooding" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.19: Reservoir Inundation & Soil Erosion at Batang Ai, Sarawak</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">Flooding of virgin valleys destroyed 8,500 hectares of forest and forced the displacement of indigenous Iban communities.</p>
+    </div>
+
+    <div id="card-impact-carbon" class="lecture-interactive-card" data-lecture-section="impact_carbon" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; overflow:hidden; margin:24px 0; cursor:pointer;">
+        <div style="background:#b91c1c; color:#ffffff; padding:10px 16px; font-weight:700; font-size:15px;">
+            Systemic Consequences of Rainforest Destruction
+        </div>
+        <table style="width:100%; border-collapse:collapse; font-size:14px; text-align:left;">
+            <thead>
+                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1;">
+                    <th style="padding:10px 12px; width:22%;">Domain</th>
+                    <th style="padding:10px 12px; width:38%;">Physical Process</th>
+                    <th style="padding:10px 12px; width:40%;">Geographical & Ecological Consequence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Soil Degradation & Erosion</td>
+                    <td style="padding:10px 12px; color:#334155;">Torrential rains strike bare earth directly without canopy interception, washing away the thin topsoil layer.</td>
+                    <td style="padding:10px 12px; color:#475569;">Loss of topsoil nutrients leads to deep gullying and permanent land barrenness; soils bake into rock-hard laterite crusts under hot sun.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Hydrology & River Siltation</td>
+                    <td style="padding:10px 12px; color:#334155;">Infiltration capacity plummets; water rushes over bare ground as rapid surface runoff into streams.</td>
+                    <td style="padding:10px 12px; color:#475569;">Severely elevated riverbed sedimentation (siltation) chokes fish spawning grounds, silts up hydroelectric dam reservoirs, and triggers flash floods.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Disruption of "Flying Rivers"</td>
+                    <td style="padding:10px 12px; color:#334155;">Loss of millions of trees halts atmospheric evapotranspiration (which pumps ~20 billion tonnes of water vapor daily).</td>
+                    <td style="padding:10px 12px; color:#475569;">The airborne moisture streams ("flying rivers") that deliver rainfall across South America weaken, triggering severe droughts in São Paulo and agricultural regions.</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0; background:#f8fafc;">
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Global Carbon Release</td>
+                    <td style="padding:10px 12px; color:#334155;">Trees that previously absorbed CO₂ are burned or left to decay, releasing stored carbon immediately.</td>
+                    <td style="padding:10px 12px; color:#475569;">Deforestation accounts for approx. 10% of all global greenhouse gas emissions, driving positive feedback warming.</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px 12px; font-weight:700; color:#b91c1c;">Loss of Indigenous Cultures</td>
+                    <td style="padding:10px 12px; color:#334155;">Invasion of ancestral lands by loggers, ranchers, and wildcat miners bringing violence and introduced diseases.</td>
+                    <td style="padding:10px 12px; color:#475569;">Erosion of centuries of invaluable ethnobotanical medical knowledge; tragic decline of uncontacted tribal populations.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECTION 3: THE TIPPING POINT -->
+    <div id="sec-tipping-point" class="lecture-interactive-card" data-lecture-section="sec_tipping_point" style="margin-bottom: 24px; padding: 22px 24px; background: #ffffff; border: 1.5px solid #fca5a5; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); cursor: pointer; transition: all 0.2s ease;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; border-bottom: 2px solid #fca5a5; padding-bottom: 8px;">
+            <h2 style="color: #b91c1c; font-size: 22px; font-weight: 700; margin: 0;">
+        3. The Amazon Tipping Point & Savannification Feedback Loop
+    </h2>
+            <span style="font-size: 11px; font-weight: 700; background: #fef2f2; color: #dc2626; padding: 3px 8px; border-radius: 4px; border: 1px solid #fca5a5;">Nghe phần này</span>
+        </div>
+        <p style="margin: 0; color: #334155; font-size: 15px; line-height: 1.6;">
+            
+        Leading climatologists (e.g., Carlos Nobre and Thomas Lovejoy) warn that the Amazon rainforest creates its own self-sustaining climate through rainfall recycling: a single molecule of water is evaporated and falls as rain <strong>five to six times</strong> as it crosses the continent.
+    
+        </p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #fed7aa; border-radius: 12px; box-shadow: 0 4px 12px rgba(234,88,12,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #ea580c, #c2410c); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🔄 The Vicious Degradation Loop & The Amazon Tipping Point</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Ecological Tipping Point</span>
+    </div>
+    <div style="padding: 16px; background: #fffaf5;">
+        <svg viewBox="0 0 920 480" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #ffffff;">
+            <style>
+                .loop-step { cursor: pointer; transition: transform 0.25s ease; }
+                .loop-step:hover rect { stroke-width: 4px; filter: drop-shadow(0 6px 16px rgba(220,38,38,0.25)); }
+            </style>
+            
+            <defs>
+                <marker id="loopArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+                </marker>
+            </defs>
+
+            <!-- Step 1: Forest Clearance -->
+            <g class="loop-step" transform="translate(60, 40)">
+                <rect width="220" height="120" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+                <text x="110" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#b91c1c" font-family="'Inter',sans-serif">1. DEFORESTATION</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Cattle ranching & logging</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Over 17% of Amazon lost</text>
+                <text x="14" y="91" font-size="11.5" fill="#b91c1c" font-weight="bold" font-family="'Inter',sans-serif">• Loss of tree canopy cover</text>
+            </g>
+
+            <!-- Arrow 1 -> 2 -->
+            <path d="M 280,100 L 350,100" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrow)"/>
+
+            <!-- Step 2: Reduced Transpiration -->
+            <g id="step-lost-transpiration" class="loop-step lecture-interactive-card" data-lecture-section="loop_transpiration" style="cursor:pointer;" transform="translate(360, 40)">
+                <rect width="220" height="120" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+                <text x="110" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#c2410c" font-family="'Inter',sans-serif">2. LOST TRANSPIRATION</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Less moisture pumped to air</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• "Flying Rivers" disrupted</text>
+                <text x="14" y="91" font-size="11.5" fill="#c2410c" font-weight="bold" font-family="'Inter',sans-serif">• Regional air becomes drier</text>
+            </g>
+
+            <!-- Arrow 2 -> 3 -->
+            <path d="M 580,100 L 650,100" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrow)"/>
+
+            <!-- Step 3: Regional Drought & Higher Temps -->
+            <g class="loop-step" transform="translate(660, 40)">
+                <rect width="200" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                <text x="100" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309" font-family="'Inter',sans-serif">3. SEVERE DROUGHT</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Prolonged dry seasons</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Rainfall drops by 20-30%</text>
+                <text x="14" y="91" font-size="11.5" fill="#b45309" font-weight="bold" font-family="'Inter',sans-serif">• Extreme daytime heat</text>
+            </g>
+
+            <!-- Arrow Down from 3 to 4 -->
+            <path d="M 760,160 L 760,230" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrow)"/>
+
+            <!-- Step 4: Forest Flammability & Wildfires -->
+            <g class="loop-step" transform="translate(640, 240)">
+                <rect width="220" height="120" rx="10" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+                <text x="110" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#9f1239" font-family="'Inter',sans-serif">4. WILDFIRES & FLAME</text>
+                <text x="14" y="55" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Leaf litter desiccates</text>
+                <text x="14" y="73" font-size="11.5" fill="#334155" font-family="'Inter',sans-serif">• Accidental fires spread</text>
+                <text x="14" y="91" font-size="11.5" fill="#9f1239" font-weight="bold" font-family="'Inter',sans-serif">• Huge tree mortality</text>
+            </g>
+
+            <!-- Arrow 4 -> 5 (Leftwards) -->
+            <path d="M 640,300 L 590,300" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#loopArrow)"/>
+
+            <!-- Step 5: THE TIPPING POINT (SAVANNIFICATION) -->
+            <g class="loop-step" transform="translate(250, 210)">
+                <rect width="330" height="175" rx="12" fill="#7f1d1d" stroke="#dc2626" stroke-width="3" filter="drop-shadow(0 4px 12px rgba(185,28,28,0.35))"/>
+                <text x="165" y="32" text-anchor="middle" font-size="16" font-weight="900" fill="#fef2f2" font-family="'Inter',sans-serif">⚠️ 5. THE 20-25% TIPPING POINT</text>
+                <text x="165" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#fca5a5" font-family="'Inter',sans-serif">SAVANNIFICATION (SAVANNA HÓA)</text>
+                <text x="18" y="80" font-size="12" fill="#ffffff" font-family="'Inter',sans-serif">• Forest cannot sustain its own microclimate</text>
+                <text x="18" y="98" font-size="12" fill="#ffffff" font-family="'Inter',sans-serif">• TRF permanently collapses into degraded scrub savanna</text>
+                <text x="18" y="116" font-size="12" fill="#fde047" font-weight="bold" font-family="'Inter',sans-serif">• Releases 140 BILLION TONNES of stored CO₂</text>
+                <text x="18" y="134" font-size="12" fill="#ffffff" font-family="'Inter',sans-serif">• Accelerates runaway planetary climate change</text>
+                <text x="18" y="152" font-size="11" fill="#fca5a5" font-family="'Inter',sans-serif">• Scientists: Currently at 17-18% loss (Critical Danger)</text>
+            </g>
+
+            <!-- Feedback Loop Arrow back to 1 -->
+            <path d="M 250,300 Q 170,300 170,165" fill="none" stroke="#dc2626" stroke-width="5" stroke-dasharray="6 4" marker-end="url(#loopArrow)"/>
+            <text x="100" y="240" font-size="12" font-weight="bold" fill="#dc2626" font-family="'Inter',sans-serif">FEEDBACK LOOP</text>
+            <text x="100" y="255" font-size="10" fill="#991b1b" font-family="'Inter',sans-serif">Accelerating clearance</text>
+        </svg>
+    </div>
+</div>
+
+
+    <!-- SECTION 4: MANAGEMENT STRATEGIES -->
+    <div id="sec-management" class="lecture-interactive-card" data-lecture-section="sec_management" style="margin-bottom: 24px; padding: 22px 24px; background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); cursor: pointer; transition: all 0.2s ease;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; border-bottom: 2px solid #bbf7d0; padding-bottom: 8px;">
+            <h2 style="color: #15803d; font-size: 22px; font-weight: 700; margin: 0;">
+        4. Sustainable Management & Conservation Strategies
+    </h2>
+            <span style="font-size: 11px; font-weight: 700; background: #f0fdf4; color: #16a34a; padding: 3px 8px; border-radius: 4px; border: 1px solid #bbf7d0;">Nghe phần này</span>
+        </div>
+        <p style="margin: 0; color: #334155; font-size: 15px; line-height: 1.6;">
+            
+        Halting the destruction of the rainforest requires balancing conservation with the economic survival of millions of people living in developing equatorial nations. Sustainable management ensures resources are used today without compromising future generations.
+    
+        </p>
+    </div>
+
+    
+<div style="margin: 24px 0; background: #ffffff; border: 1px solid #bbf7d0; border-radius: 12px; box-shadow: 0 4px 12px rgba(22,163,74,0.08); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #15803d, #166534); color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: space-between;">
+        <span>🛡️ Sustainable Tropical Rainforest Management Framework</span>
+        <span style="font-size: 12px; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">Conservation Matrix</span>
+    </div>
+    <div style="padding: 16px; background: #f8fafc;">
+        <svg viewBox="0 0 920 460" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; border-radius: 8px; background: #ffffff;">
+            <style>
+                .strat-card { cursor: pointer; transition: transform 0.2s ease; }
+                .strat-card:hover rect { stroke-width: 4px; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.2)); }
+            </style>
+
+            <!-- 1. Selective Logging & FSC -->
+            <g id="strat-selective-logging" class="strat-card lecture-interactive-card" data-lecture-section="strat_selective" style="cursor:pointer;" transform="translate(40, 30)">
+                <rect width="250" height="180" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(59,130,246,0.15))"/>
+                <rect width="250" height="34" rx="10" fill="#2563eb"/>
+                <text x="125" y="22" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">1. SELECTIVE LOGGING & FSC</text>
+                <text x="14" y="58" fill="#1e3a8a" font-size="11.5" font-weight="bold" font-family="'Inter',sans-serif">• Harvest only mature trees (&gt;60cm)</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• 30-40 year felling rotation cycles</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Canopy preserved to protect soils</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• FSC (Forest Stewardship Council) label</text>
+                <text x="14" y="138" fill="#166534" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Guarantees sustainable timber supply</text>
+            </g>
+
+            <!-- 2. Agroforestry & Permaculture -->
+            <g id="strat-agroforestry" class="strat-card lecture-interactive-card" data-lecture-section="strat_agroforestry" style="cursor:pointer;" transform="translate(335, 30)">
+                <rect width="250" height="180" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(16,185,129,0.15))"/>
+                <rect width="250" height="34" rx="10" fill="#059669"/>
+                <text x="125" y="22" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">2. AGROFORESTRY SYSTEMS</text>
+                <text x="14" y="58" fill="#065f46" font-size="11.5" font-weight="bold" font-family="'Inter',sans-serif">• Multi-crop shade agriculture</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Cocoa, coffee, vanilla grown under canopy</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Tree roots prevent soil erosion</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Provides year-round rural livelihoods</text>
+                <text x="14" y="138" fill="#059669" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Halts slash-and-burn expansion</text>
+            </g>
+
+            <!-- 3. Ecotourism (Danum Valley Model) -->
+            <g id="strat-ecotourism" class="strat-card lecture-interactive-card" data-lecture-section="strat_ecotourism" style="cursor:pointer;" transform="translate(630, 30)">
+                <rect width="250" height="180" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(245,158,11,0.15))"/>
+                <rect width="250" height="34" rx="10" fill="#d97706"/>
+                <text x="125" y="22" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">3. ECOTOURISM (DANUM)</text>
+                <text x="14" y="58" fill="#92400e" font-size="11.5" font-weight="bold" font-family="'Inter',sans-serif">• Low-impact, high-value visitors</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Canopy walkways & guided boardwalks</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Employs local indigenous guides</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Entry fees fund anti-poaching patrols</text>
+                <text x="14" y="138" fill="#b45309" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Economic incentive to keep trees alive</text>
+            </g>
+
+            <!-- 4. Debt-for-Nature Swaps & REDD+ -->
+            <g id="strat-debt-redd" class="strat-card lecture-interactive-card" data-lecture-section="strat_debt_redd" style="cursor:pointer;" transform="translate(180, 240)">
+                <rect width="260" height="180" rx="10" fill="#faf5ff" stroke="#a855f7" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(168,85,247,0.15))"/>
+                <rect width="260" height="34" rx="10" fill="#7e22ce"/>
+                <text x="130" y="22" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">4. DEBT-FOR-NATURE & REDD+</text>
+                <text x="14" y="58" fill="#581c87" font-size="11.5" font-weight="bold" font-family="'Inter',sans-serif">• International financial mechanisms</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Donor nations cancel national debt</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• In exchange: legal rainforest protection</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• E.g., USA cancelled $26M for Costa Rica</text>
+                <text x="14" y="138" fill="#7e22ce" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• REDD+ carbon credits reward carbon sinks</text>
+            </g>
+
+            <!-- 5. Indigenous Land Demarcation -->
+            <g id="strat-indigenous" class="strat-card lecture-interactive-card" data-lecture-section="strat_indigenous" style="cursor:pointer;" transform="translate(480, 240)">
+                <rect width="260" height="180" rx="10" fill="#fff1f2" stroke="#f43f5e" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(244,63,94,0.15))"/>
+                <rect width="260" height="34" rx="10" fill="#e11d48"/>
+                <text x="130" y="22" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="'Inter',sans-serif">5. INDIGENOUS RESERVES</text>
+                <text x="14" y="58" fill="#881337" font-size="11.5" font-weight="bold" font-family="'Inter',sans-serif">• Legal recognition of ancestral rights</text>
+                <text x="14" y="78" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Yanomami & Kayapo tribal territories</text>
+                <text x="14" y="98" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Satellite data: Lowest deforestation rates</text>
+                <text x="14" y="118" fill="#334155" font-size="11" font-family="'Inter',sans-serif">• Armed eviction of illegal miners (garimpeiros)</text>
+                <text x="14" y="138" fill="#9f1239" font-size="11" font-weight="bold" font-family="'Inter',sans-serif">• Guardians of 20% of world rainforests</text>
+            </g>
+        </svg>
+    </div>
+</div>
+
+
+    <!-- Textbook Figure 3.22: Danum Valley -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin:24px 0; text-align:center;">
+        <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/tasks/geo_3_4_danum_valley.png" alt="Figure 3.22 Danum Valley Conservation Area" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);" />
+        <p style="font-size:14px; font-weight:700; color:#1e293b; margin:12px 0 4px 0;">Figure 3.22: Danum Valley Conservation Area in Sabah, Malaysian Borneo</p>
+        <p style="font-size:13px; color:#64748b; margin:0; line-height:1.5;">A model of sustainable rainforest management: 438 km² of pristine lowland dipterocarp rainforest protected for scientific research, canopy ecotourism, and wildlife sanctuary.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin:20px 0;">
+        <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:16px;">
+            <h4 style="margin:0 0 8px 0; color:#15803d; font-size:15px; font-weight:700;">🌍 International Level Interventions</h4>
+            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Debt-for-Nature Swaps:</strong> Highly indebted tropical countries have portions of external debt written off by richer nations or conservation NGOs in return for legally binding domestic conservation programs. (E.g., USA canceled $26 million in Costa Rican debt to fund national park networks).</li>
+                <li><strong>REDD+ (UN Framework):</strong> Offers financial incentives for developing countries to reduce emissions from forested lands by putting a monetary value on carbon stored in standing trees.</li>
+                <li><strong>CITES & FSC Timber Certification:</strong> Regulates international trade in endangered woods like mahogany and certifies sustainably logged timber. Consumers in importing nations refuse to buy uncertified timber.</li>
+            </ul>
+        </div>
+        <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; padding:16px;">
+            <h4 style="margin:0 0 8px 0; color:#15803d; font-size:15px; font-weight:700;">🏡 Local & National Level Solutions</h4>
+            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#334155; line-height:1.6;">
+                <li><strong>Indigenous Land Rights:</strong> Demarcating official territories for tribes like the Yanomami and Kayapo. Deforestation inside demarcated indigenous lands is less than 2% compared to surrounding public lands.</li>
+                <li><strong>Selective Logging (Reduced-Impact Logging):</strong> Strictly cutting mature trees on 30–40 year rotational cycles. Directional felling prevents falling giants from crushing adjacent young trees.</li>
+                <li><strong>Agroforestry:</strong> Inter-cropping valuable shade crops (cacao, coffee, vanilla) beneath the forest canopy, preventing soil erosion and generating sustainable income for local peasant families.</li>
+                <li><strong>High-End Ecotourism:</strong> Generates foreign exchange revenue that directly funds ranger patrols, anti-poaching infrastructure, and local healthcare without cutting down a single tree.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Summary Box -->
+    <div id="card-summary-insights" class="lecture-interactive-card" data-lecture-section="summary_insights" style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:18px; margin-top:32px; cursor:pointer;">
+        <h3 style="margin:0 0 10px 0; color:#0f172a; font-size:17px; font-weight:700;">📌 Summary & Key Geographical Insights</h3>
+        <ul style="margin:0; padding-left:20px; font-size:14.5px; color:#334155; line-height:1.65;">
+            <li><strong>Scale & Drivers:</strong> 10M ha/yr lost. Driven primarily by cattle ranching (80% in Amazon), soy farming, palm oil plantations (SE Asia), commercial logging, and mining.</li>
+            <li><strong>Severe Consequences:</strong> Rapid soil erosion, siltation of river channels, flash flooding, disruption of continental "flying rivers", loss of tribal heritage, and positive climate feedback.</li>
+            <li><strong>The Tipping Point:</strong> Crossing 20–25% deforestation in the Amazon risks triggering irreversible savannification, releasing 140 billion tonnes of CO₂.</li>
+            <li><strong>Sustainable Framework:</strong> Combines international mechanisms (Debt-for-Nature, REDD+, FSC) with local community empowerment (indigenous reserves, agroforestry, ecotourism like Danum Valley).</li>
+        </ul>
+    </div>
+
+</div>

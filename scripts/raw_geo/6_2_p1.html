@@ -1,0 +1,534 @@
+<div style="font-family:'Inter',sans-serif; max-width:920px; margin:0 auto; color:#1e293b; line-height:1.65; font-size:16px;">
+  
+  <!-- HERO HEADER -->
+  <div id="sec-header" class="lecture-interactive-card" data-lecture-section="intro" style="background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 60%, #7c3aed 100%); color:#ffffff; padding:32px 28px; border-radius:16px; margin-bottom:32px; box-shadow:0 10px 25px -5px rgba(109, 40, 217, 0.25); cursor:pointer;">
+    <div style="display:inline-block; background:rgba(255,255,255,0.2); padding:4px 12px; border-radius:20px; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">
+      Cambridge IGCSE Geography • Topic 6: Changing Populations
+    </div>
+    <h1 style="font-size:32px; font-weight:800; line-height:1.2; margin:0 0 12px 0; color:#ffffff;">6.2 Population Structures Change Over Time</h1>
+    <p style="font-size:16px; opacity:0.95; margin:0; max-width:760px; line-height:1.6;">
+      Examine how age and gender compositions evolve across nations: mastering population pyramids, calculating Dependency Ratios, contrasting the challenges of Youthful populations with Ageing societies, and analyzing demographic disparities in India.
+    </p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2 id="sec-structure-dependency" class="lecture-interactive-card" data-lecture-section="sec_structure_dependency" style="color:#4c1d95; border-bottom:2px solid #ddd6fe; padding-bottom:8px; margin-top:36px; margin-bottom:18px; font-size:22px; font-weight:700; cursor:pointer;">
+    1. Population Structure, Cohorts & The Dependency Ratio
+  </h2>
+  <p>While total population size dictates a country's absolute resource consumption, the <strong>structure</strong> of the population—specifically its division by <strong>age and sex</strong>—governs its economic vitality, social demands, and infrastructural requirements.</p>
+
+  <p>Demographers divide any national population into three primary functional age cohorts:</p>
+  <div id="card-age-cohorts" class="lecture-interactive-card" data-lecture-section="age_cohorts" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin:20px 0; cursor:pointer;">
+    <div style="background:#fef2f2; border-left:4px solid #ef4444; padding:16px; border-radius:8px;">
+      <div style="font-weight:700; color:#991b1b; margin-bottom:6px;">1. Young Dependents (Aged 0–14)</div>
+      <p style="margin:0; font-size:14px; color:#475569; line-height:1.5;">
+        Children who do not contribute to national tax revenues and require massive state investment in pediatric healthcare, immunizations, primary and secondary schooling, and family allowances.
+      </p>
+    </div>
+
+    <div style="background:#eff6ff; border-left:4px solid #3b82f6; padding:16px; border-radius:8px;">
+      <div style="font-weight:700; color:#1d4ed8; margin-bottom:6px;">2. Economically Active (Aged 15–64)</div>
+      <p style="margin:0; font-size:14px; color:#475569; line-height:1.5;">
+        The national labor force. This cohort works, pays income taxes, produces goods and services, and economically sustains the dependent cohorts.
+      </p>
+    </div>
+
+    <div style="background:#faf5ff; border-left:4px solid #a855f7; padding:16px; border-radius:8px;">
+      <div style="font-weight:700; color:#6b21a8; margin-bottom:6px;">3. Elderly Dependents (Aged 65 and over)</div>
+      <p style="margin:0; font-size:14px; color:#475569; line-height:1.5;">
+        Retired citizens who rely on accumulated state pensions, geriatric medical care, chronic illness treatment, and residential nursing facilities.
+      </p>
+    </div>
+  </div>
+
+  <h3 style="color:#6d28d9; font-size:18px; margin-top:24px; margin-bottom:12px;">Calculating the Dependency Ratio</h3>
+  <p>The <strong>Dependency Ratio</strong> is an indispensable demographic indicator that measures the financial and care burden placed upon the working-age population by non-working dependents:</p>
+
+  <div id="card-dependency-formula" class="lecture-interactive-card" data-lecture-section="dependency_formula" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin:18px 0; text-align:center; cursor:pointer;">
+    <div style="font-family:monospace; font-size:18px; font-weight:800; color:#4c1d95;">
+      Dependency Ratio = [(% Pop aged 0–14) + (% Pop aged 65+)] / (% Pop aged 15–64) × 100
+    </div>
+    <div style="font-size:13px; color:#64748b; margin-top:8px;">
+      Expressed as the number of dependents supported by every 100 economically active workers.
+    </div>
+  </div>
+
+  <p>This ratio can be subdivided into the <strong>Youth Dependency Ratio</strong>: <code>[(0–14) / (15–64)] × 100</code> and the <strong>Old-Age Dependency Ratio</strong>: <code>[(65+) / (15–64)] × 100</code>.</p>
+
+  <!-- INTERACTIVE SVG 1 -->
+  
+<div id="card-pyramid-anatomy" class="lecture-interactive-card" data-lecture-section="pyramid_anatomy" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin:24px 0; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05); cursor:pointer;">
+  <div style="font-weight:700; font-size:17px; color:#4c1d95; margin-bottom:6px; display:flex; align-items:center; gap:8px;">
+    <span style="display:inline-block; width:10px; height:10px; background:#7c3aed; border-radius:50%;"></span>
+    Interactive Vector Diagram: Anatomy of a Population Pyramid & The Three Cohort Tiers
+  </div>
+  <p style="font-size:13px; color:#64748b; margin-top:0; margin-bottom:14px;">Anatomical breakdown of an age-sex population pyramid showing Elderly Dependents (65+), Economically Active (15–64), and Young Dependents (0–14) with Dependency Ratio metrics.</p>
+
+  <svg viewBox="0 0 940 450" style="width:100%; height:auto; font-family:'Inter', sans-serif; display:block;">
+    <defs>
+      <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+      </filter>
+    </defs>
+
+    <rect width="940" height="450" fill="#f8fafc" rx="8"/>
+
+    <!-- LEFT SIDE: PYRAMID GRAPH (X: 40 to 520) -->
+    <!-- Cohort Background Tiers -->
+    <!-- Tier 3: 65+ Elderly Dependents (y: 60 to 140) -->
+    <rect x="60" y="60" width="440" height="90" fill="#faf5ff" opacity="0.8"/>
+    <text x="510" y="110" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="start">ELDERLY DEPENDENTS (65+)</text>
+    <line x1="50" y1="150" x2="510" y2="150" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+    <!-- Tier 2: 15-64 Economically Active (y: 150 to 330) -->
+    <rect x="60" y="150" width="440" height="180" fill="#eff6ff" opacity="0.7"/>
+    <text x="510" y="245" font-size="11" font-weight="700" fill="#1d4ed8" text-anchor="start">ECONOMICALLY ACTIVE (15–64)</text>
+    <line x1="50" y1="330" x2="510" y2="330" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+    <!-- Tier 1: 0-14 Young Dependents (y: 330 to 410) -->
+    <rect x="60" y="330" width="440" height="80" fill="#fef2f2" opacity="0.8"/>
+    <text x="510" y="375" font-size="11" font-weight="700" fill="#dc2626" text-anchor="start">YOUNG DEPENDENTS (0–14)</text>
+
+    <!-- Central Axis (Age Line) -->
+    <line x1="280" y1="50" x2="280" y2="410" stroke="#475569" stroke-width="2"/>
+
+    <!-- Age cohort ticks and labels on central axis -->
+    <g font-size="10" fill="#475569" text-anchor="middle" font-weight="600">
+      <text x="280" y="55">85+</text>
+      <text x="280" y="85">80-84</text>
+      <text x="280" y="115">70-74</text>
+      <text x="280" y="145">65-69</text>
+      <text x="280" y="180">55-59</text>
+      <text x="280" y="220">40-44</text>
+      <text x="280" y="260">30-34</text>
+      <text x="280" y="300">20-24</text>
+      <text x="280" y="340">10-14</text>
+      <text x="280" y="380">5-9</text>
+      <text x="280" y="415">0-4</text>
+    </g>
+
+    <!-- Side Labels -->
+    <text x="170" y="40" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">◀ MALES (%)</text>
+    <text x="390" y="40" font-size="13" font-weight="700" fill="#db2777" text-anchor="middle">FEMALES (%) ▶</text>
+
+    <!-- Model Pyramid Bars (Illustrative Transition Profile: Stage 2 vs Stage 4) -->
+    <!-- Male bars (Left of 280) -->
+    <g fill="#3b82f6" opacity="0.85">
+      <rect x="255" y="75" width="20" height="18" rx="2"/>
+      <rect x="240" y="105" width="35" height="18" rx="2"/>
+      <rect x="220" y="135" width="55" height="18" rx="2"/>
+      <rect x="195" y="170" width="80" height="18" rx="2"/>
+      <rect x="175" y="210" width="100" height="18" rx="2"/>
+      <rect x="160" y="250" width="115" height="18" rx="2"/>
+      <rect x="145" y="290" width="130" height="18" rx="2"/>
+      <rect x="125" y="330" width="150" height="18" rx="2"/>
+      <rect x="105" y="370" width="170" height="18" rx="2"/>
+      <rect x="85" y="400" width="190" height="18" rx="2"/>
+    </g>
+
+    <!-- Female bars (Right of 280) -->
+    <g fill="#ec4899" opacity="0.85">
+      <rect x="285" y="75" width="28" height="18" rx="2"/>
+      <rect x="285" y="105" width="42" height="18" rx="2"/>
+      <rect x="285" y="135" width="60" height="18" rx="2"/>
+      <rect x="285" y="170" width="80" height="18" rx="2"/>
+      <rect x="285" y="210" width="98" height="18" rx="2"/>
+      <rect x="285" y="250" width="112" height="18" rx="2"/>
+      <rect x="285" y="290" width="128" height="18" rx="2"/>
+      <rect x="285" y="330" width="148" height="18" rx="2"/>
+      <rect x="285" y="370" width="168" height="18" rx="2"/>
+      <rect x="285" y="400" width="186" height="18" rx="2"/>
+    </g>
+
+    <!-- Annotation Callouts -->
+    <!-- Top apex annotation -->
+    <circle cx="313" cy="84" r="4" fill="#7c3aed"/>
+    <line x1="317" y1="84" x2="350" y2="70" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="355" y="74" font-size="10" font-weight="700" fill="#6b21a8">Apex: Female longevity advantage</text>
+
+    <!-- Base annotation -->
+    <circle cx="85" cy="409" r="4" fill="#dc2626"/>
+    <line x1="85" y1="409" x2="60" y2="435" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="65" y="442" font-size="10" font-weight="700" fill="#dc2626">Wide Base: High Birth Rate</text>
+
+    <!-- RIGHT PANEL: 4 DTM PYRAMID ARCHETYPES & FORMULA (X: 520 to 920) -->
+    <!-- Formula Box -->
+    <g transform="translate(530, 20)">
+      <rect width="385" height="105" rx="10" fill="#fdf4ff" stroke="#d8b4fe" stroke-width="1.5"/>
+      <text x="15" y="24" font-size="12" font-weight="700" fill="#581c87">THE DEPENDENCY RATIO FORMULA:</text>
+      
+      <rect x="15" y="36" width="355" height="36" rx="6" fill="#ffffff" stroke="#c084fc"/>
+      <text x="192" y="60" font-size="12" font-weight="700" fill="#4c1d95" text-anchor="middle">
+        Dependency Ratio = [(0–14) + (65+)] / (15–64) × 100
+      </text>
+      
+      <text x="15" y="90" font-size="10.5" fill="#6b21a8">
+        • Measures how many non-working dependents rely on every 100 economic workers.
+      </text>
+    </g>
+
+    <!-- 4 Small Comparative Shape Cards -->
+    <g transform="translate(530, 140)">
+      <!-- Niger -->
+      <g transform="translate(0, 0)">
+        <rect width="185" height="135" rx="8" fill="#ffffff" stroke="#fca5a5" filter="url(#cardShadow)"/>
+        <text x="12" y="20" font-size="11" font-weight="700" fill="#991b1b">1. NIGER (Stage 2)</text>
+        <text x="12" y="34" font-size="9.5" fill="#dc2626">Shape: Expansive (Broad Base)</text>
+        <!-- Mini shape -->
+        <polygon points="92,42 165,85 20,85" fill="#f87171" opacity="0.6"/>
+        <line x1="92" y1="42" x2="92" y2="85" stroke="#ffffff" stroke-width="1.5"/>
+        <text x="12" y="102" font-size="9" fill="#475569">0–14: 49% | 65+: 2.6%</text>
+        <text x="12" y="116" font-size="9" font-weight="700" fill="#991b1b">Dependency Ratio: 106%</text>
+        <text x="12" y="128" font-size="8.5" fill="#64748b">Extreme youthful burden</text>
+      </g>
+
+      <!-- Pakistan -->
+      <g transform="translate(200, 0)">
+        <rect width="185" height="135" rx="8" fill="#ffffff" stroke="#fcd34d" filter="url(#cardShadow)"/>
+        <text x="12" y="20" font-size="11" font-weight="700" fill="#92400e">2. PAKISTAN (Stage 3)</text>
+        <text x="12" y="34" font-size="9.5" fill="#d97706">Shape: Rapidly Narrowing</text>
+        <polygon points="92,42 155,85 30,85" fill="#fbbf24" opacity="0.6"/>
+        <line x1="92" y1="42" x2="92" y2="85" stroke="#ffffff" stroke-width="1.5"/>
+        <text x="12" y="102" font-size="9" fill="#475569">0–14: 37% | 65+: 4.4%</text>
+        <text x="12" y="116" font-size="9" font-weight="700" fill="#92400e">Dependency Ratio: 68%</text>
+        <text x="12" y="128" font-size="8.5" fill="#64748b">Entering demographic dividend</text>
+      </g>
+
+      <!-- Canada -->
+      <g transform="translate(0, 150)">
+        <rect width="185" height="135" rx="8" fill="#ffffff" stroke="#86efac" filter="url(#cardShadow)"/>
+        <text x="12" y="20" font-size="11" font-weight="700" fill="#166534">3. CANADA (Stage 4)</text>
+        <text x="12" y="34" font-size="9.5" fill="#16a34a">Shape: Stationary (Beehive)</text>
+        <polygon points="92,42 125,50 135,70 120,85 65,85 50,70 60,50" fill="#4ade80" opacity="0.6"/>
+        <line x1="92" y1="42" x2="92" y2="85" stroke="#ffffff" stroke-width="1.5"/>
+        <text x="12" y="102" font-size="9" fill="#475569">0–14: 16% | 65+: 19%</text>
+        <text x="12" y="116" font-size="9" font-weight="700" fill="#166534">Dependency Ratio: 54%</text>
+        <text x="12" y="128" font-size="8.5" fill="#64748b">Balanced by high immigration</text>
+      </g>
+
+      <!-- Japan -->
+      <g transform="translate(200, 150)">
+        <rect width="185" height="135" rx="8" fill="#ffffff" stroke="#c084fc" filter="url(#cardShadow)"/>
+        <text x="12" y="20" font-size="11" font-weight="700" fill="#6b21a8">4. JAPAN (Stage 5)</text>
+        <text x="12" y="34" font-size="9.5" fill="#9333ea">Shape: Constrictive / Inverted</text>
+        <polygon points="92,42 135,50 140,65 95,85 90,85 45,65 50,50" fill="#c084fc" opacity="0.6"/>
+        <line x1="92" y1="42" x2="92" y2="85" stroke="#ffffff" stroke-width="1.5"/>
+        <text x="12" y="102" font-size="9" fill="#475569">0–14: 12% | 65+: 30%</text>
+        <text x="12" y="116" font-size="9" font-weight="700" fill="#6b21a8">Dependency Ratio: 71%</text>
+        <text x="12" y="128" font-size="8.5" fill="#64748b">Critical silver crisis</text>
+      </g>
+    </g>
+  </svg>
+</div>
+
+
+  <!-- FIGURE 6.15 -->
+  <div style="margin:24px 0; text-align:center;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t6_fig_6_15.png?v=3" alt="Figure 6.15 An annotated population pyramid" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <div style="font-size:13px; color:#64748b; font-style:italic; margin-top:8px;">
+      Figure 6.15: Annotated population pyramid from the textbook, illustrating how base width, pyramid height, gender asymmetries, and historical indents disclose demographic events.
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2 id="sec-pyramid-stages" class="lecture-interactive-card" data-lecture-section="sec_pyramid_stages" style="color:#4c1d95; border-bottom:2px solid #ddd6fe; padding-bottom:8px; margin-top:40px; margin-bottom:18px; font-size:22px; font-weight:700; cursor:pointer;">
+    2. Interpreting Population Pyramids Across DTM Stages
+  </h2>
+  <p>As a country progresses through the stages of economic development, its population pyramid undergoes a profound morphological evolution. We can trace this progression through four real-world benchmark nations (relatable to DTM Stages 2 to 5):</p>
+
+  <!-- FIGURE 6.16 -->
+  <div style="margin:24px 0; text-align:center;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t6_fig_6_16.png?v=2" alt="Figure 6.16 Four population pyramids, 2022" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <div style="font-size:13px; color:#64748b; font-style:italic; margin-top:8px;">
+      Figure 6.16: Four population pyramids (2022) demonstrating structural transformation: Niger (Stage 2 Expansive), Pakistan (Stage 3 Transitional), Canada (Stage 4 Stationary), and Japan (Stage 5 Constrictive).
+    </div>
+  </div>
+
+  <!-- COMPARATIVE TABLE (TABLE 6.7 DATA) -->
+  <div id="card-pyramid-comparison-table" class="lecture-interactive-card" data-lecture-section="pyramid_comparison_table" style="overflow-x:auto; margin:20px 0; cursor:pointer;">
+    <table style="width:100%; border-collapse:collapse; font-size:14px; text-align:left; background:#ffffff; border-radius:8px; overflow:hidden; border:1px solid #e2e8f0;">
+      <thead>
+        <tr style="background:#7c3aed; color:#ffffff;">
+          <th style="padding:10px 14px; border:1px solid #6d28d9;">Demographic Indicator</th>
+          <th style="padding:10px 14px; border:1px solid #6d28d9;">Niger (Stage 2)</th>
+          <th style="padding:10px 14px; border:1px solid #6d28d9;">Pakistan (Stage 3)</th>
+          <th style="padding:10px 14px; border:1px solid #6d28d9;">Canada (Stage 4)</th>
+          <th style="padding:10px 14px; border:1px solid #6d28d9;">Japan (Stage 5)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:10px 14px; font-weight:700;">GNI per capita (US$)</td>
+          <td style="padding:10px 14px;">$610 (LIC)</td>
+          <td style="padding:10px 14px;">$1,560 (LMIC)</td>
+          <td style="padding:10px 14px;">$51,690 (HIC)</td>
+          <td style="padding:10px 14px;">$42,440 (HIC)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9; background:#faf5ff;">
+          <td style="padding:10px 14px; font-weight:700;">Crude Birth Rate</td>
+          <td style="padding:10px 14px; font-weight:700; color:#dc2626;">45 / 1,000</td>
+          <td style="padding:10px 14px;">28 / 1,000</td>
+          <td style="padding:10px 14px;">10 / 1,000</td>
+          <td style="padding:10px 14px; font-weight:700; color:#6b21a8;">7 / 1,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:10px 14px; font-weight:700;">Crude Death Rate</td>
+          <td style="padding:10px 14px;">8 / 1,000</td>
+          <td style="padding:10px 14px;">7 / 1,000</td>
+          <td style="padding:10px 14px;">8 / 1,000</td>
+          <td style="padding:10px 14px; font-weight:700; color:#2563eb;">12 / 1,000 (Elderly)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9; background:#faf5ff;">
+          <td style="padding:10px 14px; font-weight:700;">Rate of Natural Increase</td>
+          <td style="padding:10px 14px; font-weight:700; color:#dc2626;">+3.7% / year</td>
+          <td style="padding:10px 14px;">+2.1% / year</td>
+          <td style="padding:10px 14px;">+0.2% / year</td>
+          <td style="padding:10px 14px; font-weight:700; color:#9333ea;">-0.5% / year</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:10px 14px; font-weight:700;">Infant Mortality Rate</td>
+          <td style="padding:10px 14px; font-weight:700; color:#dc2626;">40 / 1,000</td>
+          <td style="padding:10px 14px;">52 / 1,000</td>
+          <td style="padding:10px 14px;">4.5 / 1,000</td>
+          <td style="padding:10px 14px;">1.7 / 1,000</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9; background:#faf5ff;">
+          <td style="padding:10px 14px; font-weight:700;">Life Expectancy</td>
+          <td style="padding:10px 14px;">62 years</td>
+          <td style="padding:10px 14px;">66 years</td>
+          <td style="padding:10px 14px;">82 years</td>
+          <td style="padding:10px 14px; font-weight:700; color:#059669;">85 years (World #1)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9;">
+          <td style="padding:10px 14px; font-weight:700;">Population Under 15 (%)</td>
+          <td style="padding:10px 14px; font-weight:700; color:#dc2626;">49% (Half of nation)</td>
+          <td style="padding:10px 14px;">37%</td>
+          <td style="padding:10px 14px;">16%</td>
+          <td style="padding:10px 14px; font-weight:700; color:#6b21a8;">12%</td>
+        </tr>
+        <tr style="background:#f8fafc;">
+          <td style="padding:10px 14px; font-weight:700;">Population Aged 65+ (%)</td>
+          <td style="padding:10px 14px;">2.6%</td>
+          <td style="padding:10px 14px;">4.4%</td>
+          <td style="padding:10px 14px;">19%</td>
+          <td style="padding:10px 14px; font-weight:700; color:#6b21a8;">30% (Hyper-aged)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="card-pyramid-anomalies" class="lecture-interactive-card" data-lecture-section="pyramid_anomalies" style="color:#6d28d9; font-size:18px; margin-top:24px; margin-bottom:12px; cursor:pointer;">Reading Anomalies, Indents and Asymmetries</h3>
+  <p>Experienced geographers look beyond the broad outline of a pyramid to detect historical disruptions:</p>
+  <ul>
+    <li><strong>Indentations / Notches:</strong> A localized narrowing across a specific age group. For instance, wars leave severe notches on the male side for cohorts who were military-age during conflict. Famines and epidemics (such as the 1918 influenza or Cambodian genocide) suppress births and elevate infant mortality, leaving a permanent waistline indent that climbs up the pyramid over decades.</li>
+    <li><strong>Bulges (Baby Booms & Labor In-Migration):</strong> Post-crisis fertility rebounds create wide cohorts that advance over time (e.g., the 1946–1964 baby boom now entering the 65+ category). In Gulf oil states (UAE, Qatar), pyramids exhibit extreme lateral asymmetry, with male cohorts aged 20–49 protruding 3 to 4 times wider than corresponding female bars due to hundreds of thousands of foreign construction and engineering guest workers.</li>
+    <li><strong>The Gender Longevity Divergence:</strong> In virtually every country on Earth, the female side of the pyramid is visibly wider and taller above age 75. Biologically and behaviorally, women enjoy greater life expectancy than men (averaging 4 to 6 years longer in HICs).</li>
+  </ul>
+
+  <!-- SECTION 3 -->
+  <h2 id="sec-youthful-gambia" class="lecture-interactive-card" data-lecture-section="sec_youthful_gambia" style="color:#4c1d95; border-bottom:2px solid #ddd6fe; padding-bottom:8px; margin-top:40px; margin-bottom:18px; font-size:22px; font-weight:700; cursor:pointer;">
+    3. The Youthful Population Challenge & Case Study: The Gambia
+  </h2>
+  <p>A <strong>youthful population</strong> occurs when a high proportion of a country's total population is under the age of 15 (frequently 40% to 50%). It is the demographic hallmark of Stage 2 nations experiencing rapid natural increase.</p>
+
+  <!-- INTERACTIVE COMPARISON MATRIX -->
+  
+<div id="card-case-study-matrix" class="lecture-interactive-card" data-lecture-section="case_study_matrix" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin:24px 0; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05); cursor:pointer;">
+  <div style="font-weight:700; font-size:17px; color:#4c1d95; margin-bottom:6px; display:flex; align-items:center; gap:8px;">
+    <span style="display:inline-block; width:10px; height:10px; background:#f59e0b; border-radius:50%;"></span>
+    Demographic Case Study Matrix: Youthful Population (The Gambia) vs. Ageing Society (Japan & EU)
+  </div>
+  <p style="font-size:13px; color:#64748b; margin-top:0; margin-bottom:14px;">Side-by-side structural comparison of challenges, economic strains, and governmental policy responses.</p>
+
+  <svg viewBox="0 0 920 380" style="width:100%; height:auto; font-family:'Inter', sans-serif; display:block;">
+    <rect width="920" height="380" fill="#f8fafc" rx="8"/>
+
+    <!-- LEFT COLUMN: YOUTHFUL POPULATION (THE GAMBIA) -->
+    <g transform="translate(20, 20)">
+      <rect width="430" height="340" rx="10" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+      <rect width="430" height="46" rx="10" fill="#fee2e2"/>
+      <text x="215" y="28" font-size="14" font-weight="800" fill="#991b1b" text-anchor="middle">
+        CASE STUDY 1: YOUTHFUL POPULATION (The Gambia)
+      </text>
+
+      <!-- Key Demographic Data Banner -->
+      <g transform="translate(15, 58)">
+        <rect width="400" height="30" rx="6" fill="#fef2f2"/>
+        <text x="200" y="20" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">
+          TFR: 5.1 | Pop <15: 44% | NIR: +2.9%/yr | Median Age: 17.5 yrs
+        </text>
+      </g>
+
+      <!-- Challenges List -->
+      <g transform="translate(20, 105)" font-size="11" fill="#334155">
+        <text x="0" y="16" font-weight="700" fill="#991b1b" font-size="12">Key Pressures & Challenges:</text>
+        
+        <text x="0" y="38">• <strong>Overcrowded Schools:</strong> 2-shift daily system (morning/afternoon);</text>
+        <text x="12" y="54" fill="#64748b">shortage of trained teachers and educational materials.</text>
+        
+        <text x="0" y="74">• <strong>High Youth Dependency:</strong> >85 dependents per 100 workers;</text>
+        <text x="12" y="90" fill="#64748b">state tax revenue diverted to basic survival, not infrastructure.</text>
+        
+        <text x="0" y="110">• <strong>Healthcare Deficits:</strong> High maternal mortality; child malnutrition;</text>
+        <text x="12" y="126" fill="#64748b">lack of rural clinics and childhood immunizations.</text>
+
+        <text x="0" y="146">• <strong>Environmental Degradation:</strong> Severe fuelwood deforestation</text>
+        <text x="12" y="162" fill="#64748b">around Banjul; land fragmentation and rapid soil depletion.</text>
+      </g>
+
+      <!-- Management Responses -->
+      <g transform="translate(20, 285)">
+        <rect width="390" height="40" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="195" y="16" font-size="10.5" font-weight="700" fill="#991b1b" text-anchor="middle">
+          Government Responses:
+        </text>
+        <text x="195" y="30" font-size="10" fill="#475569" text-anchor="middle">
+          Subsidized contraception • NGO health education • Forest protection reserves
+        </text>
+      </g>
+    </g>
+
+    <!-- RIGHT COLUMN: AGEING POPULATION (JAPAN & EU) -->
+    <g transform="translate(470, 20)">
+      <rect width="430" height="340" rx="10" fill="#ffffff" stroke="#c084fc" stroke-width="1.5"/>
+      <rect width="430" height="46" rx="10" fill="#f3e8ff"/>
+      <text x="215" y="28" font-size="14" font-weight="800" fill="#6b21a8" text-anchor="middle">
+        CASE STUDY 2: AGEING POPULATION (Japan & EU)
+      </text>
+
+      <!-- Key Demographic Data Banner -->
+      <g transform="translate(15, 58)">
+        <rect width="400" height="30" rx="6" fill="#faf5ff"/>
+        <text x="200" y="20" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">
+          TFR: 1.26 | Pop 65+: 29.9% (World #1) | Life Expectancy: 84.8 yrs
+        </text>
+      </g>
+
+      <!-- Challenges List -->
+      <g transform="translate(20, 105)" font-size="11" fill="#334155">
+        <text x="0" y="16" font-weight="700" fill="#6b21a8" font-size="12">Key Pressures & Challenges:</text>
+        
+        <text x="0" y="38">• <strong>Pension & Fiscal Crisis:</strong> Shrinking tax base while state</text>
+        <text x="12" y="54" fill="#64748b">pension and long-term geriatric care expenditures explode.</text>
+        
+        <text x="0" y="74">• <strong>Acute Labor Shortages:</strong> Deficits in agriculture, transport, and</text>
+        <text x="12" y="90" fill="#64748b">care homes; factory closures and vacant rural homes ("Akiya").</text>
+        
+        <text x="0" y="110">• <strong>"Sandwich Generation":</strong> Working-age adults squeezed caring</text>
+        <text x="12" y="126" fill="#64748b">for frail grandparents while bearing childcare and housing costs.</text>
+
+        <text x="0" y="146">• <strong>Medical Resourcing:</strong> Surging demand for dementia and stroke units;</text>
+        <text x="12" y="162" fill="#64748b">disproportionate medical budget consumed by elderly cohorts.</text>
+      </g>
+
+      <!-- Management Responses -->
+      <g transform="translate(20, 285)">
+        <rect width="390" height="40" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="195" y="16" font-size="10.5" font-weight="700" fill="#6b21a8" text-anchor="middle">
+          Government Responses:
+        </text>
+        <text x="195" y="30" font-size="10" fill="#475569" text-anchor="middle">
+          Retirement age raised (65→70) • Carebot robotics • Targeted worker visas
+        </text>
+      </g>
+    </g>
+  </svg>
+</div>
+
+
+  <!-- FIGURE 6.17 -->
+  <div style="margin:24px 0; text-align:center;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t6_fig_6_17.png?v=3" alt="Figure 6.17 A school in The Gambia" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <div style="font-size:13px; color:#64748b; font-style:italic; margin-top:8px;">
+      Figure 6.17: Overcrowded classroom in The Gambia. Many schools must operate a strict two-shift system (one cohort in the morning, another in the afternoon) to cope with the surge of school-age children.
+    </div>
+  </div>
+
+  <h3 style="color:#6d28d9; font-size:18px; margin-top:20px; margin-bottom:12px;">Detailed Case Study: The Republic of The Gambia</h3>
+  <p>The Gambia is a small West African nation of roughly 2.7 million people. While its Total Fertility Rate has declined from 6.1 in 1970 to approximately 5.1 in recent years, its rate of natural increase remains exceptionally high at nearly 3.0% per year, meaning its population doubles in roughly 24 years.</p>
+  
+  <div id="card-gambia-details" class="lecture-interactive-card" data-lecture-section="gambia_details" style="background:#fdf4ff; border-left:4px solid #a855f7; padding:16px; border-radius:8px; margin:18px 0; cursor:pointer;">
+    <div style="font-weight:700; color:#581c87; margin-bottom:8px;">Key Socio-Economic Impacts in The Gambia:</div>
+    <ul style="margin:0; padding-left:18px; font-size:14px; color:#334155; line-height:1.6;">
+      <li><strong>Severe Pressure on Education:</strong> With ~44% of the population under 15, the state cannot build schools fast enough. Class sizes routinely exceed 50–60 pupils, leading to a mandatory two-shift school system. Shortages of textbooks, desks, and qualified teachers depress literacy rates.</li>
+      <li><strong>Healthcare Infrastructure Strain:</strong> High maternal mortality rates and inadequate pediatric immunization clinics. Basic childhood illnesses like diarrheal dehydration and malaria cause preventable infant deaths.</li>
+      <li><strong>Deforestation & Environmental Crisis:</strong> Wood is the principal cooking fuel for 85%+ of households. Rapid population growth has decimated surrounding forest reserves around the capital Banjul, leading to severe soil erosion and advancing Sahel desertification.</li>
+      <li><strong>Youth Unemployment & Rural-Urban Migration:</strong> Thousands of youth migrate from rural farming regions to the urbanized coastal strip (Serrekunda/Banjul), creating sprawling informal settlements, sanitation deficits, and high youth underemployment.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2 id="sec-ageing-crisis" class="lecture-interactive-card" data-lecture-section="sec_ageing_crisis" style="color:#4c1d95; border-bottom:2px solid #ddd6fe; padding-bottom:8px; margin-top:40px; margin-bottom:18px; font-size:22px; font-weight:700; cursor:pointer;">
+    4. The Ageing Population Crisis & Case Study: The European Union & Japan
+  </h2>
+  <p><strong>Demographic ageing</strong> is defined as a persistent rise in the median age of a population. It occurs when fertility rates fall below replacement level (2.1) while medical advances extend average life expectancy well beyond 80 years.</p>
+
+  <!-- FIGURE 6.18 -->
+  <div style="margin:24px 0; text-align:center;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t6_fig_6_18.png?v=3" alt="Figure 6.18 European Union working age population and old-age dependency" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <div style="font-size:13px; color:#64748b; font-style:italic; margin-top:8px;">
+      Figure 6.18: European Union projections (2000–2070). The working-age population contracts continuously after 2010, while the old-age dependency ratio surges from 25% to nearly 60% by 2070.
+    </div>
+  </div>
+
+  <h3 style="color:#6d28d9; font-size:18px; margin-top:20px; margin-bottom:12px;">Detailed Case Study: Japan's Hyper-Aged Society</h3>
+  <p>Japan is the world's most demographically aged nation. By 2023, nearly <strong>30% of its population was aged 65 or older</strong>, and its total population has been shrinking by roughly 500,000 to 800,000 people each year since peaking in 2008 at 128 million.</p>
+
+  <div id="card-japan-details" class="lecture-interactive-card" data-lecture-section="japan_details" style="background:#eff6ff; border-left:4px solid #3b82f6; padding:16px; border-radius:8px; margin:18px 0; cursor:pointer;">
+    <div style="font-weight:700; color:#1d4ed8; margin-bottom:8px;">Structural Ramifications for Japan:</div>
+    <ul style="margin:0; padding-left:18px; font-size:14px; color:#334155; line-height:1.6;">
+      <li><strong>Fiscal Pension Crisis:</strong> Japan operates a "pay-as-you-go" pension model. In 1960, there were roughly 11 workers per retiree; today there are barely 2 workers per retiree, and by 2050 this will drop to 1.3 workers. The national debt has ballooned to over 260% of GDP.</li>
+      <li><strong>Labor Shortages & Economic Stagnation:</strong> Chronic shortages of bus drivers, agricultural workers, construction crew, and elderly care nurses. Tens of thousands of schools have closed permanently across rural prefectures. Over 9 million rural homes ("Akiya") sit abandoned.</li>
+      <li><strong>Surging Geriatric Healthcare Demands:</strong> Soaring prevalence of dementia, Alzheimer's, and chronic cardiovascular conditions requiring dedicated nursing home beds and high government subsidization.</li>
+      <li><strong>Technological Adaptation:</strong> Japan is pioneering robotic elder care (carebots like "Paro", robotic lift exoskeletons for nurses, automated delivery drones) and raising the retirement age to 70.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 id="sec-india-disparities" class="lecture-interactive-card" data-lecture-section="sec_india_disparities" style="color:#4c1d95; border-bottom:2px solid #ddd6fe; padding-bottom:8px; margin-top:40px; margin-bottom:18px; font-size:22px; font-weight:700; cursor:pointer;">
+    5. Regional Demographic Disparities: Case Study of India
+  </h2>
+  <p>National demographic averages often mask dramatic internal variations within large countries. India—the world's most populous nation with over 1.43 billion people—provides a vivid geographical illustration of regional demographic divergence.</p>
+
+  <!-- FIGURE 6.19 -->
+  <div style="margin:24px 0; text-align:center;">
+    <img src="https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/geography/images/t6_fig_6_19.png?v=2" alt="Figure 6.19 Total fertility rate by state in India" style="width: 72%; max-width: 80%; min-width: 50%; height: auto; display: block; margin: 20px auto 8px auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);"/>
+    <div style="font-size:13px; color:#64748b; font-style:italic; margin-top:8px;">
+      Figure 6.19: Total fertility rate by state in India (2019–2020), showing stark divergence between northern high-fertility states (Bihar: 3.0, Uttar Pradesh: 2.4) and southern below-replacement states (Kerala: 1.8, Tamil Nadu: 1.8).
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(380px, 1fr)); gap:16px; margin:20px 0;">
+    <div style="background:#fef2f2; border-left:4px solid #ef4444; padding:16px; border-radius:8px;">
+      <div style="font-weight:700; color:#991b1b; margin-bottom:6px;">Northern Hindi Heartland (Bihar, UP)</div>
+      <ul style="margin:0; padding-left:18px; font-size:14px; color:#334155; line-height:1.5;">
+        <li>TFR remains significantly above replacement level (Bihar ~3.0, UP ~2.4).</li>
+        <li>Lower female literacy rates (~50–60%), early age of marriage, and strong agrarian dependence.</li>
+        <li>Rapid population growth creates intense pressure on arable land, resulting in mass labor migration toward southern and western industrial hubs.</li>
+      </ul>
+    </div>
+
+    <div style="background:#f0fdf4; border-left:4px solid #22c55e; padding:16px; border-radius:8px;">
+      <div style="font-weight:700; color:#166534; margin-bottom:6px;">Southern States (Kerala, Tamil Nadu)</div>
+      <ul style="margin:0; padding-left:18px; font-size:14px; color:#334155; line-height:1.5;">
+        <li>TFR has plunged well below replacement level to 1.7–1.8 births per woman.</li>
+        <li>Kerala achieved near-100% female literacy decades ago; women possess high social status, autonomy, and enter white-collar professions.</li>
+        <li>Comprehensive primary healthcare and family planning clinics have reduced infant mortality to single digits. These states are now entering Stage 4/5 aging issues.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EXAM HINT CALLOUT BOX -->
+  <div id="card-exam-strategy" class="lecture-interactive-card" data-lecture-section="exam_strategy" style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border:1px solid #c4b5fd; border-left:6px solid #7c3aed; border-radius:10px; padding:20px; margin:32px 0; cursor:pointer;">
+    <div style="font-weight:700; color:#4c1d95; font-size:16px; margin-bottom:6px; display:flex; align-items:center; gap:8px;">
+      💡 Cambridge IGCSE Examination Strategy: Topic 6.2
+    </div>
+    <p style="margin:0; font-size:14px; color:#334155; line-height:1.6;">
+      When answering questions comparing youthful vs. ageing population pyramids:
+      <br/>1. <strong>Use precise cohort brackets:</strong> Refer explicitly to <em>Young Dependents (0–14)</em>, <em>Economically Active (15–64)</em>, and <em>Elderly Dependents (65+)</em>.
+      <br/>2. <strong>Calculate and compare Dependency Ratios:</strong> Showing your work using the formula earns direct analytical credit.
+      <br/>3. <strong>Link pyramid shape to the DTM:</strong> State clearly whether the pyramid is expansive (wide base, Stage 2), stationary (columnar, Stage 4), or constrictive/inverted (narrow base, Stage 5).
+    </p>
+  </div>
+
+</div>
