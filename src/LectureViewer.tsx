@@ -706,7 +706,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     </div>
   );
 };
-const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOpenDict, onCloseDict }: any) => {
+const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(600);
 
@@ -1266,7 +1266,11 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
         } else if (e.data?.type === 'LECTURE_RESIZE') {
           const h = e.data.height;
           if (h && h > 0) {
-              setIframeHeight(Math.max(400, Math.ceil(h) + 40));
+              const targetHeight = Math.max(400, Math.ceil(h) + 16);
+              setIframeHeight((prev: number) => {
+                if (Math.abs(prev - targetHeight) <= 6) return prev;
+                return targetHeight;
+              });
           }
         } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
           if (iframeRef.current) {
@@ -1312,11 +1316,17 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
         else if (e.data?.type === 'LECTURE_PLAY_SECTION') {
           window.dispatchEvent(new CustomEvent('tony-lecture-play-section', { detail: { sectionId: e.data.sectionId } }));
         }
+        else if (e.data?.type === 'LECTURE_SWITCH_PAGE') {
+          const targetP = parseInt(e.data.page, 10);
+          if (onSwitchPage && !isNaN(targetP)) {
+            onSwitchPage(targetP);
+          }
+        }
       };
       
       window.addEventListener('message', handleMessage);
       return () => window.removeEventListener('message', handleMessage);
-    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate, stopAllCurrentAudio]);
+    }, [onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate, stopAllCurrentAudio]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -2980,6 +2990,23 @@ export default function LectureViewer({
   };
 
   useEffect(() => {
+    const handleSwitchPageMsg = (e: MessageEvent) => {
+      if (e.data?.type === 'LECTURE_SWITCH_PAGE') {
+        const targetP = parseInt(e.data.page, 10);
+        if (!isNaN(targetP) && targetP >= 1) {
+          setCurrentPage(targetP);
+          persistPage(targetP);
+          try {
+            containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+          } catch(err) {}
+        }
+      }
+    };
+    window.addEventListener('message', handleSwitchPageMsg);
+    return () => window.removeEventListener('message', handleSwitchPageMsg);
+  }, [activeLectureId, currentUser]);
+
+  useEffect(() => {
     if (courseId && courseId !== currentCourseId) {
       setCurrentCourseId(courseId);
     }
@@ -4542,6 +4569,15 @@ export default function LectureViewer({
                                           {Array.isArray(LECTURE_VIDEO_MAP[lec.id]) ? `Video (${(LECTURE_VIDEO_MAP[lec.id] as any[]).length})` : 'Video'}
                                         </span>
                                       )}
+                                      {lec.title.toLowerCase().includes('podcast') && (
+                                        <span 
+                                          className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1 shrink-0" 
+                                          title="Bài giảng Audio Podcast"
+                                        >
+                                          <svg className="w-2.5 h-2.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
+                                          Podcast (64)
+                                        </span>
+                                      )}
                                       {totalTasks > 0 && (
                                          <span 
                                            onClick={(e) => { e.stopPropagation(); if (isActive) { setIsTaskMenuOpen(!isTaskMenuOpen); } else { handleSelectLecture(lec.id); setTimeout(() => setIsTaskMenuOpen(true), 300); } }}
@@ -4613,6 +4649,34 @@ export default function LectureViewer({
                        <h2 className="text-[26px] md:text-[36px] text-slate-900 font-extrabold mb-8 md:mb-12 pb-6 border-b border-slate-100 leading-tight tracking-tight">
                            {activeLecture?.title}
                        </h2>
+                       {activeLecture?.title?.toLowerCase().includes('podcast') && totalPages > 1 && (
+                         <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                           <button
+                             type="button"
+                             onClick={() => { setCurrentPage(1); persistPage(1); }}
+                             className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                               currentPage === 1 
+                                 ? 'bg-emerald-600 text-white border-emerald-600 shadow-md shadow-emerald-600/20' 
+                                 : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                             }`}
+                           >
+                             <span>🇻🇳</span>
+                             <span>Bản Tiếng Việt (Trang 1)</span>
+                           </button>
+                           <button
+                             type="button"
+                             onClick={() => { setCurrentPage(2); persistPage(2); }}
+                             className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                               currentPage === 2 
+                                 ? 'bg-emerald-600 text-white border-emerald-600 shadow-md shadow-emerald-600/20' 
+                                 : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                             }`}
+                           >
+                             <span>🇬🇧</span>
+                             <span>Bản Tiếng Anh (Trang 2)</span>
+                           </button>
+                         </div>
+                       )}
                        {activeLectureVideoId && currentPage === 1 && (
                          <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
                            <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-slate-700/60">
@@ -4680,6 +4744,7 @@ export default function LectureViewer({
                            onOpenPopup={setPopupUrl} 
                            onOpenDict={triggerDictionary} 
                            onCloseDict={() => setDictPopup(null)} 
+                           onSwitchPage={(page: number) => { setCurrentPage(page); persistPage(page); }}
                        />
                     </div>
                   )}
