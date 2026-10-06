@@ -470,6 +470,13 @@ const getYouTubeVideoId = (url: string): string | null => {
   return match ? match[1] : null;
 };
 
+const COURSE_PODCAST_COUNT: Record<string, number> = {
+  'a68bae8c-a21c-4cb2-8cd7-6097de211060': 64, // Biology 0610
+  'a2a949c7-c23e-45a7-82fa-cdeda5cc32a7': 35, // Co-ordinated Science 0654
+  '9331cc50-d76b-4247-860e-25b2096e93cb': 35, // Geography 0460
+  '564f9e56-b77c-43af-9299-23eb2e7dcb7e': 29, // Business Studies 0450
+};
+
 // =========================================================================================
 // THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE & VISION AI
 // =========================================================================================
@@ -4621,7 +4628,7 @@ export default function LectureViewer({
                                           title="Bài giảng Audio Podcast"
                                         >
                                           <svg className="w-2.5 h-2.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
-                                          {currentCourseId === 'a2a949c7-c23e-45a7-82fa-cdeda5cc32a7' || currentCourseId === '9331cc50-d76b-4247-860e-25b2096e93cb' ? 'Podcast (35)' : 'Podcast (64)'}
+                                          Podcast ({COURSE_PODCAST_COUNT[currentCourseId] || 64})
                                         </span>
                                       )}
                                       {totalTasks > 0 && (
