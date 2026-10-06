@@ -1,0 +1,342 @@
+# -*- coding: utf-8 -*-
+"""
+Audio generation script for Cambridge IGCSE Biology (0610) Topic 1:
+Characteristics and classification of living organisms.
+Generates 40 granular audio segments and writes manifest.json.
+"""
+
+import os
+import sys
+import asyncio
+import json
+
+sys.path.insert(0, os.path.dirname(__file__))
+from audio_lecture_engine import process_lecture_audio
+
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+
+LECTURE_CODE = '1'
+LECTURE_ID = '11cfe97d-205e-418b-ae79-e39d7e57e0a8'
+COURSE_TITLE = 'Cambridge IGCSE Biology (0610)'
+LECTURE_TITLE = 'Topic 1: Characteristics and classification of living organisms'
+
+SEGMENTS = [
+    {
+        "id": "intro",
+        "title": "Giới thiệu Topic 1: Đặc điểm và Phân loại Sinh vật sống",
+        "selector": "#sec-header",
+        "en": "Welcome to Cambridge IGCSE Biology, Topic 1: Characteristics and classification of living organisms. In this comprehensive master lecture, we explore the seven fundamental life processes of MRS GREN, biological classification and binomial nomenclature, the five kingdoms, vertebrates and arthropods, monocots and dicots, and dichotomous keys.",
+        "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Chuyên đề 1: Đặc điểm và phân loại của sinh vật sống. Trong bài học tổng thể này, chúng ta sẽ cùng khám phá 7 đặc tính sống cơ bản MRS GREN, hệ thống danh pháp nhị phân, năm giới sinh vật, các lớp động vật có xương sống và chân khớp, thực vật một lá mầm, hai lá mầm cùng kỹ năng sử dụng khóa lưỡng phân."
+    },
+    {
+        "id": "sec_characteristics",
+        "title": "1. Bảy đặc điểm cốt lõi của sinh vật sống (MRS GREN)",
+        "selector": "#sec-characteristics",
+        "en": "Section 1: Characteristics of living organisms. All living things, from microscopic bacteria to giant blue whales, share seven fundamental life processes. Memorize them using the mnemonic MRS GREN: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, and Nutrition. Cambridge mark schemes demand precise, verbatim definitions for each process.",
+        "vi": "Mục 1: Bảy đặc tính cốt lõi của sinh vật sống. Mọi sinh vật trên Trái Đất, từ vi khuẩn siêu nhỏ đến cá voi xanh khổng lồ, đều chia sẻ 7 quá trình sống cơ bản. Các bạn hãy ghi nhớ bằng quy tắc MRS GREN: Vận động, Hô hấp tế bào, Cảm ứng, Tăng trưởng, Sinh sản, Bài tiết và Dinh dưỡng. Đề thi Cambridge yêu cầu học sinh phải trình bày chính xác từng từ trong định nghĩa của mỗi quá trình."
+    },
+    {
+        "id": "card_movement",
+        "title": "🏃 Movement (Vận động)",
+        "selector": "#card-movement",
+        "en": "Movement is defined as an action by an organism or part of an organism causing a change of position or place. Most animals move their entire bodies through locomotion to find food or escape predators. Most plants are stationary but move parts slowly in response to directional stimuli, known as tropisms.",
+        "vi": "Vận động được định nghĩa là hành động của một sinh vật hoặc một bộ phận sinh vật làm thay đổi vị trí hoặc chỗ ở. Đa số động vật có thể chủ động di chuyển toàn bộ cơ thể để tìm kiếm thức ăn hoặc trốn tránh kẻ thù. Ngược lại, thực vật thường cố định nhưng vẫn cử động chậm các bộ phận hướng về kích thích, gọi là tính hướng động."
+    },
+    {
+        "id": "card_respiration",
+        "title": "💨 Respiration (Hô hấp tế bào)",
+        "selector": "#card-respiration",
+        "en": "Respiration is defined as the chemical reactions in cells that break down nutrient molecules and release energy for metabolism. Remember for exams: Respiration is a biochemical cellular process occurring in all living cells day and night, and is entirely different from the physical process of breathing or gas exchange.",
+        "vi": "Hô hấp tế bào là chuỗi các phản ứng hóa học diễn ra trong tế bào giúp phân giải các phân tử dinh dưỡng để giải phóng năng lượng cho quá trình trao đổi chất. Điểm mấu chốt trong bài thi: Hô hấp tế bào là quá trình sinh hóa diễn ra liên tục 24/7 ở mọi tế bào sống, và khác biệt hoàn toàn với quá trình hít thở cơ học hay trao đổi khí ở phổi."
+    },
+    {
+        "id": "card_sensitivity",
+        "title": "👀 Sensitivity (Cảm ứng)",
+        "selector": "#card-sensitivity",
+        "en": "Sensitivity is defined as the ability to detect and respond to changes in the internal or external environment. Sensory receptors detect environmental changes, called stimuli, such as light, temperature, and chemicals. Effectors, such as muscles and glands, then produce appropriate responses to ensure survival.",
+        "vi": "Cảm ứng là khả năng nhận biết và phản ứng trước những thay đổi từ môi trường bên trong hoặc bên ngoài cơ thể. Các tế bào thụ cảm phát hiện những thay đổi của môi trường, gọi là kích thích, như ánh sáng, nhiệt độ và hóa chất. Sau đó, các cơ quan phản ứng như cơ và tuyến sẽ thực hiện đáp ứng phù hợp để đảm bảo sự sống còn."
+    },
+    {
+        "id": "card_growth",
+        "title": "📈 Growth (Sinh trưởng)",
+        "selector": "#card-growth",
+        "en": "Growth is defined as a permanent increase in size and dry mass. Dry mass is the mass of an organism after all water has been removed by drying. Organisms grow through mitotic cell division followed by cell enlargement and specialised differentiation.",
+        "vi": "Sinh trưởng là sự gia tăng vĩnh viễn về kích thước và khối lượng khô của sinh vật. Khối lượng khô là khối lượng cơ thể sau khi đã làm bay hơi hoàn toàn lượng nước. Sinh vật lớn lên nhờ sự phân chia tế bào qua nguyên phân, tiếp theo là sự gia tăng kích thước và biệt hóa tế bào thành các mô chuyên biệt."
+    },
+    {
+        "id": "card_reproduction",
+        "title": "👶 Reproduction (Sinh sản)",
+        "selector": "#card-reproduction",
+        "en": "Reproduction is defined as the processes that make more of the same kind of organism. Asexual reproduction involves a single parent producing genetically identical offspring or clones. Sexual reproduction involves two parents and the fusion of haploid gametes, creating genetic variation.",
+        "vi": "Sinh sản là các quá trình tạo ra thêm nhiều cá thể mới cùng loài. Sinh sản vô tính chỉ cần một cá thể bố mẹ và tạo ra các cá thể con giống hệt nhau về mặt di truyền hay dòng vô tính. Sinh sản hữu tính cần hai cá thể bố mẹ cùng sự kết hợp của các giao tử đơn bội, tạo ra sự đa dạng di truyền phong phú."
+    },
+    {
+        "id": "card_excretion",
+        "title": "🚽 Excretion (Bài tiết)",
+        "selector": "#card-excretion",
+        "en": "Excretion is defined as the removal of the waste products of metabolism and substances in excess of requirements. Waste products include carbon dioxide from cellular respiration and urea produced from excess amino acids in the liver.",
+        "vi": "Bài tiết là quá trình loại bỏ các chất thải độc hại sinh ra từ quá trình trao đổi chất và các chất dư thừa so với nhu cầu cơ thể. Các chất thải chuyển hóa điển hình bao gồm khí CO2 từ hô hấp tế bào và urê được tổng hợp tại gan từ các axit amin dư thừa."
+    },
+    {
+        "id": "card_nutrition",
+        "title": "🍎 Nutrition (Dinh dưỡng)",
+        "selector": "#card-nutrition",
+        "en": "Nutrition is defined as the taking in of materials for energy, growth and development. Autotrophic organisms like plants absorb water, carbon dioxide, and sunlight to synthesise organic nutrients. Heterotrophic organisms like animals must ingest pre-formed organic matter made by other organisms.",
+        "vi": "Dinh dưỡng là quá trình thu nhận các chất vật chất để cung cấp năng lượng, phục vụ cho sự sinh trưởng và phát triển. Sinh vật tự dưỡng như thực vật hấp thu nước, CO2 và năng lượng ánh sáng để quang hợp tổng hợp chất hữu cơ. Sinh vật dị dưỡng như động vật phải ăn và tiêu thụ các hợp chất hữu cơ có sẵn từ sinh vật khác."
+    },
+    {
+        "id": "sec_excretion_organs",
+        "title": "💧 Cơ quan bài tiết chính ở người",
+        "selector": "#sec-excretion-organs",
+        "en": "Major organs of excretion in humans include the skin, the kidneys, and the lungs. Each organ specialises in removing specific toxic metabolic wastes and excess substances to maintain cellular homeostasis.",
+        "vi": "Các cơ quan bài tiết chính ở người gồm có da, thận và phổi. Mỗi cơ quan chuyên trách lọc và đào thải các sản phẩm thải chuyển hóa nguy hiểm cùng các chất dư thừa nhằm duy trì cân bằng nội môi cho cơ thể."
+    },
+    {
+        "id": "card_skin",
+        "title": "✋ Skin (Da)",
+        "selector": "#card-skin",
+        "en": "The skin excretes sweat via sweat glands. Sweat is primarily water containing dissolved mineral salts, mainly sodium chloride, and trace amounts of urea. Sweat evaporation also cools the body during thermoregulation.",
+        "vi": "Da bài tiết mồ hôi thông qua các tuyến mồ hôi. Mồ hôi có thành phần chủ yếu là nước chứa muối khoáng hòa tan, đặc biệt là natri clorua, cùng một lượng nhỏ urê. Sự bay hơi của mồ hôi còn giúp làm mát cơ thể khi điều hòa thân nhiệt."
+    },
+    {
+        "id": "card_kidneys",
+        "title": "🫘 Kidneys (Thận)",
+        "selector": "#card-kidneys",
+        "en": "The kidneys are the principal organs of the excretory system. They filter blood to remove urea, produced during the deamination of excess amino acids in the liver, along with excess water and mineral ions, excreting them as urine.",
+        "vi": "Thận là cơ quan bài tiết chủ chốt của hệ bài tiết nước tiểu. Thận lọc máu để đào thải urê, sản phẩm sinh ra từ quá trình khử amin các axit amin dư thừa tại gan, cùng với nước và các ion khoáng dư thừa dưới dạng nước tiểu."
+    },
+    {
+        "id": "card_lungs",
+        "title": "🫁 Lungs (Phổi)",
+        "selector": "#card-lungs",
+        "en": "The lungs excrete carbon dioxide and water vapour during expiration. Carbon dioxide is a toxic waste product continuously produced by aerobic cellular respiration and must be removed to prevent blood acidosis.",
+        "vi": "Phổi bài tiết khí carbon dioxide và hơi nước trong mỗi nhịp thở ra. Khí CO2 là sản phẩm thải độc hại liên tục được tạo ra từ quá trình hô hấp hiếu khí trong tế bào, cần được thải nhanh để tránh làm toan hóa máu."
+    },
+    {
+        "id": "sec_key_terms",
+        "title": "📌 Thuật ngữ: Ingestion vs Egestion",
+        "selector": "#sec-key-terms",
+        "en": "Key terms to distinguish: Ingestion is taking substances such as food and drink into the body through the mouth. Egestion is passing out food that has not been digested or absorbed, as faeces through the anus.",
+        "vi": "Phân biệt hai thuật ngữ nền tảng: Ingestion là sự ăn uống, đưa thức ăn và nước vào cơ thể qua đường miệng. Egestion là sự tống phân, đào thải những thức ăn không được tiêu hóa hoặc hấp thu ra ngoài cơ thể qua hậu môn."
+    },
+    {
+        "id": "card_trap_egestion",
+        "title": "⚠️ Bẫy đề thi: Excretion vs Egestion",
+        "selector": "#card-trap-egestion",
+        "en": "Crucial Exam Trap: Egestion is NOT excretion! Excretion is removing metabolic waste made inside body cells, such as urea and carbon dioxide. In contrast, egestion is simply discharging undigested fibre that passed straight through the alimentary canal without ever entering body cells.",
+        "vi": "Bẫy thi cử cực kỳ phổ biến: Tống phân (Egestion) tuyệt đối KHÔNG PHẢI là Bài tiết (Excretion)! Bài tiết là đào thải chất thải chuyển hóa sinh ra BÊN TRONG tế bào như urê và CO2. Trong khi đó, tống phân chỉ là sự đẩy các chất bã xơ không tiêu hóa đi dọc ống tiêu hóa ra ngoài mà chưa từng được hấp thu vào tế bào cơ thể."
+    },
+    {
+        "id": "sec_classification",
+        "title": "2.1. Hệ thống Phân loại & Nhận diện Sinh vật",
+        "selector": "#sec-classification",
+        "en": "Section 2.1: Classification Systems and Identification. Biological classification groups organisms based on shared characteristics and evolutionary ancestry. The closer the evolutionary relationship, the more base sequences in DNA organisms have in common.",
+        "vi": "Mục 2.1: Hệ thống phân loại và nhận diện sinh vật. Phân loại sinh học sắp xếp sinh vật vào các nhóm dựa trên các đặc điểm tương đồng và mối quan hệ tiến hóa. Hai loài có họ hàng càng gần nhau thì trình tự nucleotide trên phân tử DNA càng tương đồng cao."
+    },
+    {
+        "id": "sec_species",
+        "title": "🔑 Định nghĩa Species (Loài)",
+        "selector": "#sec-species",
+        "en": "Cambridge key definition: A species is a group of organisms that can reproduce to produce fertile offspring. If two organisms reproduce but their offspring is sterile, such as a mule from a horse and donkey, they belong to different species.",
+        "vi": "Định nghĩa chuẩn Cambridge: Loài là một nhóm các sinh vật có khả năng giao phối sinh sản với nhau để tạo ra con non có khả năng sinh sản. Nếu hai sinh vật giao phối nhưng con non sinh ra bị vô sinh, như con la do ngựa lai với lừa, thì chúng thuộc về hai loài khác nhau."
+    },
+    {
+        "id": "sec_binomial",
+        "title": "Hệ thống danh pháp Nhị phân (Binomial System)",
+        "selector": "#sec-binomial",
+        "en": "The Binomial system gives each organism a two-word scientific name. The first word is the Genus, written with a capital letter. The second word is the species, written in lowercase. For example, the scientific name for the lion is Panthera leo.",
+        "vi": "Hệ thống danh pháp nhị phân đặt tên cho mỗi loài bằng hai từ la-tinh. Từ thứ nhất là tên Chi hay Giống, luôn viết hoa chữ cái đầu. Từ thứ hai là tên loài, viết thường toàn bộ. Ví dụ, tên khoa học của loài sư tử là Panthera leo."
+    },
+    {
+        "id": "card_rule_typography",
+        "title": "🚨 Quy tắc viết tên khoa học trong đề thi",
+        "selector": "#card-rule-typography",
+        "en": "Exam Rule 1 on typography: When typed or printed, binomial names must be in italics. When written by hand in exam papers, the Genus and species must be underlined separately, with Genus capitalized and species in lowercase.",
+        "vi": "Quy tắc thi cử số 1 về cách viết tên khoa học: Khi in ấn trên máy, tên khoa học bắt buộc phải in nghiêng. Khi học sinh làm bài thi viết tay, tên Chi và tên loài phải được gạch chân riêng biệt từng từ, với chữ cái đầu của Chi viết hoa và tên loài viết thường."
+    },
+    {
+        "id": "card_rule_viruses",
+        "title": "🚨 Cấu trúc Virus & Vì sao không xếp vào 5 giới",
+        "selector": "#card-rule-viruses",
+        "en": "Exam Rule 2 on viruses: Why are viruses not classified into the Five Kingdoms? Because viruses are not cellular organisms. They have no cytoplasm or cell membrane, consisting only of genetic material DNA or RNA surrounded by a protein coat, replicating only inside living host cells.",
+        "vi": "Quy tắc thi cử số 2 về Virus: Vì sao virus không được xếp vào bất kỳ giới nào trong 5 giới sinh vật? Vì virus không có cấu tạo tế bào. Chúng không có màng tế bào hay tế bào chất, mà chỉ gồm một lõi vật chất di truyền DNA hoặc RNA bọc bởi vỏ protein capsid, và chỉ có thể nhân lên bên trong tế bào vật chủ sống."
+    },
+    {
+        "id": "sec_five_kingdoms",
+        "title": "🌍 Hệ thống 5 Giới & Phân loại DNA hiện đại",
+        "selector": "#sec-five-kingdoms",
+        "en": "The Five Kingdoms of living organisms are Animals, Plants, Fungi, Prokaryotes, and Protoctists. Modern classification relies on sequencing DNA bases and amino acids in proteins rather than superficial morphology to reveal true evolutionary kinship.",
+        "vi": "Năm Giới sinh vật sống bao gồm Động vật, Thực vật, Nấm, Khởi sinh và Nguyên sinh. Phân loại học hiện đại dựa vào việc giải trình tự các base trên DNA và axit amin trên protein thay vì chỉ quan sát hình thái bên ngoài, giúp xác định chuẩn xác nhánh tiến hóa của muôn loài."
+    },
+    {
+        "id": "sec_dichotomous",
+        "title": "🔍 Khóa lưỡng phân (Dichotomous Keys)",
+        "selector": "#sec-dichotomous",
+        "en": "Dichotomous keys are identification tools that present a sequence of paired, contrasting statements based on easily observable external features. Following the numbered choices leads you systematically to the correct organism name.",
+        "vi": "Khóa lưỡng phân là công cụ nhận diện đưa ra một chuỗi các cặp đặc điểm đối lập nhau dựa trên hình thái bên ngoài dễ quan sát. Bằng cách lần theo từng cặp lựa chọn được đánh số, bạn sẽ nhanh chóng tìm ra chính xác tên của sinh vật cần xác định."
+    },
+    {
+        "id": "sec_animal_kingdom",
+        "title": "🦁 2.2. Giới Động vật: Động vật có xương sống & Chân khớp",
+        "selector": "#sec-animal-kingdom",
+        "en": "Section 2.2: The Animal Kingdom. Animals are multicellular heterotrophic organisms whose eukaryotic cells lack cell walls. The syllabus highlights two major groups: Vertebrates, which have an internal backbone, and Arthropods, which have jointed legs and an exoskeleton.",
+        "vi": "Mục 2.2: Giới Động vật. Động vật là các sinh vật đa bào dị dưỡng có tế bào nhân thực nhưng không có thành tế bào. Chương trình Cambridge tập trung vào hai nhóm chính: Động vật có xương sống có cột sống nâng đỡ bên trong, và Động vật chân khớp có các chân phân đốt và bộ xương ngoài bằng chitin."
+    },
+    {
+        "id": "sec_vertebrates",
+        "title": "🦴 Tổng quan Động vật có xương sống (Vertebrates)",
+        "selector": "#sec-vertebrates",
+        "en": "Vertebrates possess a supportive internal skeleton and spinal column. They are classified into five distinct classes: fish, amphibians, reptiles, birds, and mammals, differentiated by skin coverings, respiratory organs, and reproductive adaptations.",
+        "vi": "Động vật có xương sống sở hữu bộ xương trong và cột sống nâng đỡ cơ thể. Chúng được phân loại thành năm lớp riêng biệt: cá, lưỡng cư, bò sát, chim và thú, được phân biệt dựa vào lớp da bao bọc, cơ quan hô hấp và phương thức sinh sản."
+    },
+    {
+        "id": "card_fish",
+        "title": "🐟 Lớp Cá (Fish)",
+        "selector": "#card-fish",
+        "en": "Fish are aquatic vertebrates covered in wet, slimy scales. They breathe using gills, use streamlined fins for swimming and stability, and reproduce by laying eggs with jelly coats in water through external fertilisation.",
+        "vi": "Cá là động vật có xương sống sống dưới nước, da phủ vảy nhớt ẩm ướt. Chúng hô hấp bằng mang, sử dụng các vây để bơi lội và giữ thăng bằng, sinh sản bằng cách đẻ trứng có màng nhầy thụ tinh ngoài trong môi trường nước."
+    },
+    {
+        "id": "card_amphibians",
+        "title": "🐸 Lớp Lưỡng cư (Amphibians)",
+        "selector": "#card-amphibians",
+        "en": "Amphibians have moist, permeable skin without scales that allows cutaneous gas exchange. Larvae like tadpoles breathe with gills in water, while four-legged adults use lungs and moist skin on land, returning to water to breed.",
+        "vi": "Lưỡng cư có làn da ẩm ướt, mỏng và không có vảy giúp trao đổi khí trực tiếp qua da. Ấu trùng như nòng nọc hô hấp bằng mang dưới nước, trong khi con trưởng thành bốn chân dùng phổi và da trên cạn, nhưng vẫn phải quay về nước để đẻ trứng."
+    },
+    {
+        "id": "card_reptiles",
+        "title": "🦎 Lớp Bò sát (Reptiles)",
+        "selector": "#card-reptiles",
+        "en": "Reptiles have dry, waterproof skin covered with hard keratin scales to survive on dry land without dehydrating. They breathe entirely with lungs and lay rubbery-shelled, waterproof eggs on land through internal fertilisation.",
+        "vi": "Bò sát có lớp da khô phủ vảy sừng cứng bằng chất sừng keratin giúp ngăn ngừa mất nước tối đa trên cạn. Chúng thở hoàn toàn bằng phổi và đẻ trứng có vỏ dai không thấm nước trên cạn nhờ quá trình thụ tinh trong."
+    },
+    {
+        "id": "card_birds",
+        "title": "🦅 Lớp Chim (Birds)",
+        "selector": "#card-birds",
+        "en": "Birds are endothermic warm-blooded vertebrates covered with feathers and scales on their legs. They possess wings, a lightweight toothless beak, breathe with highly efficient lungs, and lay hard calcium-carbonate shelled eggs.",
+        "vi": "Chim là động vật hằng nhiệt máu nóng có lông vũ bao phủ toàn thân và vảy sừng ở chân. Chúng có cánh, mỏ sừng nhẹ không có răng, hô hấp bằng hệ thống phổi hiệu quả cao và đẻ trứng có vỏ đá vôi cứng rắn."
+    },
+    {
+        "id": "card_mammals",
+        "title": "🐆 Lớp Thú (Mammals)",
+        "selector": "#card-mammals",
+        "en": "Mammals are endothermic vertebrates possessing fur or hair, mammary glands that produce milk to suckle young, external ear flaps called pinnae, differentiated teeth, and give birth to live young.",
+        "vi": "Thú là động vật hằng nhiệt có lớp lông mao bao phủ, có tuyến sữa nuôi con non, vành tai ngoài để định hướng âm thanh, bộ răng phân hóa theo chức năng và đa số sinh con non hoàn chỉnh."
+    },
+    {
+        "id": "sec_arthropods",
+        "title": "🦑 Tổng quan Động vật chân khớp (Arthropods)",
+        "selector": "#sec-arthropods",
+        "en": "Arthropods are the largest phylum of invertebrates. All arthropods share a tough, waterproof exoskeleton made of chitin, a segmented body, and jointed limbs, requiring periodic moulting during growth.",
+        "vi": "Động vật chân khớp là ngành động vật không xương sống đông đảo nhất hành tinh. Tất cả chân khớp đều có bộ xương ngoài bằng chất chitin không thấm nước, cơ thể phân đốt và các chi có khớp nối, đòi hỏi phải lột xác định kỳ để lớn lên."
+    },
+    {
+        "id": "card_insects",
+        "title": "🐜 Lớp Côn trùng (Insects)",
+        "selector": "#card-insects",
+        "en": "Insects have bodies divided into three regions: head, thorax, and abdomen. They have three pairs of jointed legs attached to the thorax, one pair of antennae, compound eyes, and usually two pairs of wings.",
+        "vi": "Côn trùng có cơ thể chia làm 3 phần rõ rệt: đầu, ngực và bụng. Chúng có 3 cặp chân phân đốt gắn ở phần ngực (tổng cộng 6 chân), 1 cặp râu cảm giác, mắt kép và thường sở hữu 2 cặp cánh."
+    },
+    {
+        "id": "card_arachnids",
+        "title": "🕷️ Lớp Nhện (Arachnids)",
+        "selector": "#card-arachnids",
+        "en": "Arachnids, including spiders, scorpions, and ticks, have bodies divided into two parts: a cephalothorax and an abdomen. They possess four pairs of walking legs, chelicerae, simple eyes, and have no antennae or wings.",
+        "vi": "Lớp Nhện bao gồm nhện, bọ cạp và ve bét, có cơ thể chia làm 2 phần: phần đầu ngực liền và phần bụng. Chúng sở hữu 4 cặp chân bò (8 chân), kìm chelicerae, nhiều mắt đơn, tuyệt đối không có râu và không có cánh."
+    },
+    {
+        "id": "card_crustaceans",
+        "title": "🦀 Lớp Giáp xác (Crustaceans)",
+        "selector": "#card-crustaceans",
+        "en": "Crustaceans include crabs, lobsters, prawns, and woodlice. Most are aquatic, possessing five or more pairs of jointed legs, with front limbs often modified into claws, two pairs of antennae, and gills for respiration.",
+        "vi": "Giáp xác gồm cua, tôm hùm, tôm đồng và mọt ẩm. Đa số sống dưới nước, có từ 5 cặp chân phân đốt trở lên với đôi chân đầu thường biến đổi thành càng kẹp, có 2 cặp râu và thở bằng mang."
+    },
+    {
+        "id": "card_myriapods",
+        "title": "🐛 Lớp Đa túc (Myriapods)",
+        "selector": "#card-myriapods",
+        "en": "Myriapods include centipedes and millipedes. Their elongated bodies consist of many repetitive segments. Centipedes have one pair of legs per segment and are venomous carnivores, while millipedes have two pairs of legs per segment and are slow herbivores.",
+        "vi": "Đa túc bao gồm rết và cuốn chiếu, cơ thể kéo dài gồm nhiều đốt lặp lại. Rết có 1 cặp chân trên mỗi đốt, di chuyển rất nhanh và là loài săn mồi có nọc độc. Cuốn chiếu có 2 cặp chân trên mỗi đốt, di chuyển chậm chạp và ăn mùn thực vật."
+    },
+    {
+        "id": "sec_plant_kingdom",
+        "title": "🌿 2.3. Giới Thực vật: Monocots vs Dicots",
+        "selector": "#sec-plant-kingdom",
+        "en": "Section 2.3: The Plant Kingdom. Flowering plants are multicellular autotrophs whose cells have cellulose walls and chloroplasts. They are divided into two main classes: Monocotyledons and Dicotyledons.",
+        "vi": "Mục 2.3: Giới Thực vật. Thực vật có hoa là các sinh vật đa bào tự dưỡng có thành tế bào bằng cellulose và lục lạp quang hợp. Chúng được chia thành hai nhóm chính: Cây Một lá mầm (Monocotyledons) và Cây Hai lá mầm (Dicotyledons)."
+    },
+    {
+        "id": "card_monocots",
+        "title": "🌱 Monocotyledons (Cây một lá mầm)",
+        "selector": "#card-monocots",
+        "en": "Monocotyledons develop seeds containing only one cotyledon. Their leaves are long and strap-like with parallel veins, their root system is fibrous and branching, and flower petals appear in multiples of three, such as grasses, maize, and lilies.",
+        "vi": "Cây Một lá mầm có hạt chỉ chứa duy nhất một lá mầm. Lá cây thon dài dạng dải với hệ gân lá song song, hệ rễ chùm phân nhánh nông và các cánh hoa là bội số của 3, ví dụ như lúa, ngô, mía và cỏ."
+    },
+    {
+        "id": "card_dicots",
+        "title": "🌳 Dicotyledons (Cây hai lá mầm)",
+        "selector": "#card-dicots",
+        "en": "Dicotyledons develop seeds containing two cotyledons. Their leaves are broad with a branching reticulate network of veins, they grow a deep central taproot system, and flower petals appear in multiples of four or five, such as beans, sunflowers, and roses.",
+        "vi": "Cây Hai lá mầm có hạt chứa hai lá mầm tích trữ dinh dưỡng. Lá cây bản rộng với mạng lưới gân lá phân nhánh chằng chịt, phát triển hệ rễ cọc đâm sâu và các cánh hoa là bội số của 4 hoặc 5, ví dụ như đậu, hướng dương và hoa hồng."
+    },
+    {
+        "id": "card_fungi",
+        "title": "🍄 Fungi (Giới Nấm)",
+        "selector": "#card-fungi",
+        "en": "Kingdom Fungi includes moulds, mushrooms, and single-celled yeasts. Fungi are eukaryotes with cell walls made of chitin, lacking chloroplasts. They feed saprotrophically by secreting extracellular enzymes to digest organic matter, growing as a network of thread-like hyphae.",
+        "vi": "Giới Nấm bao gồm nấm mốc, nấm rơm và nấm men đơn bào. Nấm là sinh vật nhân thực có thành tế bào bằng chitin và không có lục lạp. Chúng dinh dưỡng hoại sinh bằng cách tiết enzym ngoại bào phân giải chất hữu cơ rồi hấp thụ, cơ thể đa bào mọc thành mạng lưới sợi nấm hyphae."
+    },
+    {
+        "id": "card_prokaryotes",
+        "title": "🦠 Prokaryotes (Sinh vật nhân sơ / Vi khuẩn)",
+        "selector": "#card-prokaryotes",
+        "en": "Kingdom Prokaryotes consists of bacteria. They are unicellular organisms lacking a true nucleus and membrane-bound organelles. Their genetic material is a circular loop of DNA free in the cytoplasm alongside plasmids, enclosed by a peptidoglycan cell wall.",
+        "vi": "Giới Khởi sinh gồm các loài vi khuẩn. Chúng là sinh vật đơn bào chưa có màng nhân thật và không có các bào quan có màng. Vật chất di truyền là một phân tử DNA trần dạng vòng tự do trong tế bào chất cùng các plasmid nhỏ, được bao bọc bởi thành tế bào peptidoglycan."
+    },
+    {
+        "id": "card_protoctists",
+        "title": "🔬 Protoctists (Nguyên sinh vật)",
+        "selector": "#card-protoctists",
+        "en": "Kingdom Protoctists contains mostly unicellular eukaryotic organisms with a true nucleus. They are highly diverse: some feed heterotrophically like animal cells such as Amoeba, while others possess chloroplasts and cellulose walls like plant cells such as Chlorella and seaweeds.",
+        "vi": "Giới Nguyên sinh chứa các sinh vật nhân thực có màng nhân, đa số là đơn bào. Chúng vô cùng phong phú: một số dị dưỡng giống động vật như trùng biến hình Amoeba, trong khi một số khác có lục lạp và thành cellulose quang hợp giống thực vật như tảo lục Chlorella và rong biển."
+    }
+]
+
+MAJOR_SECTIONS = {
+    "intro": {"start": 0, "end": 0},
+    "sec-header": {"start": 0, "end": 0},
+    "sec_characteristics": {"start": 1, "end": 8},
+    "sec-characteristics": {"start": 1, "end": 8},
+    "sec_excretion_organs": {"start": 9, "end": 12},
+    "sec-excretion-organs": {"start": 9, "end": 12},
+    "sec_key_terms": {"start": 13, "end": 14},
+    "sec-key-terms": {"start": 13, "end": 14},
+    "sec_classification": {"start": 15, "end": 21},
+    "sec-classification": {"start": 15, "end": 21},
+    "sec_animal_kingdom": {"start": 22, "end": 33},
+    "sec-animal-kingdom": {"start": 22, "end": 33},
+    "sec_vertebrates": {"start": 23, "end": 28},
+    "sec-vertebrates": {"start": 23, "end": 28},
+    "sec_arthropods": {"start": 29, "end": 33},
+    "sec-arthropods": {"start": 29, "end": 33},
+    "sec_plant_kingdom": {"start": 34, "end": 39},
+    "sec-plant-kingdom": {"start": 34, "end": 39}
+}
+
+async def main():
+    print(f"Building audio for {LECTURE_TITLE} ({len(SEGMENTS)} segments)...")
+    manifest = await process_lecture_audio(
+        lecture_code=LECTURE_CODE,
+        lecture_id=LECTURE_ID,
+        course_title=COURSE_TITLE,
+        lecture_title=LECTURE_TITLE,
+        segments=SEGMENTS,
+        major_sections=MAJOR_SECTIONS,
+        subject='biology'
+    )
+    print("Process complete! Manifest has", len(manifest['segments']), "segments.")
+
+if __name__ == '__main__':
+    asyncio.run(main())
