@@ -1,0 +1,1368 @@
+[
+  {
+    "id": "1231b474-8a99-4330-b45d-fdda19a802fe",
+    "title": "B1: Characteristics of living organisms",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 19894,
+      "2": 15136,
+      "3": 2645
+    },
+    "toolbars": {
+      "p1": false,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [],
+    "syl_count": 1,
+    "syl_sample": [
+      "1. Describe the characteristics of living organisms by defining:"
+    ]
+  },
+  {
+    "id": "7b3c2e0a-b0d5-4716-a574-6f1c5c379c7c",
+    "title": "B2: Cells and organisms",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 43184,
+      "2": 22676,
+      "3": 3971
+    },
+    "toolbars": {
+      "p1": false,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Danh mục bài giảng chi tiết từng bào quan:",
+      "🧬 Nucleus (Nhân tế bào)",
+      "🛡️ Cell Membrane (Màng tế bào)",
+      "💧 Cytoplasm (Tế bào chất)",
+      "⚡ Mitochondria (Ti thể)",
+      "🧱 Cell Wall (Thành tế bào)",
+      "🍃 Chloroplast (Lục lạp)",
+      "💧 Permanent Vacuole (Không bào)",
+      "💧 Cytoplasm (Tế bào chất)",
+      "🛡️ Cell Membrane (Màng tế bào)",
+      "🧬 Nucleus (Nhân tế bào)",
+      "⚡ Mitochondria (Ti thể)",
+      "🧱 Cell Wall (Thành tế bào - Plants Only)",
+      "🍃 Chloroplast (Lục lạp - Plants Only)",
+      "💧 Permanent Vacuole (Không bào trung tâm - Plants Only)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "data-nucleus",
+      "data-vacuole",
+      "data-cytoplasm",
+      "data-membrane",
+      "te-main-info-panel",
+      "data-mitochondria",
+      "data-cellwall",
+      "data-chloroplast"
+    ],
+    "syl_count": 10,
+    "syl_sample": [
+      "1. Describe and compare the structure of a plant cell with an animal cell, limited to: cell wall, cell membrane, nucleus",
+      "2. Describe the structure of a bacterial cell, limited to: cell wall, cell membrane, cytoplasm, ribosomes, circular DNA,",
+      "3. Identify the cell structures listed in 2.1.1 and 2.1.2 in diagrams and images of plant, animal and bacterial cells.",
+      "4. Describe the functions of the structures listed in 2.1.1 and 2.1.2 in plant, animal and bacterial cells.",
+      "5. State that new cells are produced by division of existing cells."
+    ]
+  },
+  {
+    "id": "9a23109e-ad73-4fcf-a599-9605cc4906eb",
+    "title": "B3: Movement into and out of cells",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 25376,
+      "2": 20629,
+      "3": 5358
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "arrow-water-red",
+      "data-os-pure",
+      "arrow-water",
+      "data-os-salt",
+      "data-os-equal",
+      "arrow-water-grey",
+      "os-panel-display"
+    ],
+    "syl_count": 12,
+    "syl_sample": [
+      "1. Describe diffusion as the net movement of particles from a region of their higher concentration to a region of their ",
+      "2. State that some substances move into and out of cells by diffusion through the cell membrane.",
+      "3. Describe the importance of diffusion of gases and solutes in living organisms.",
+      "4. Investigate the factors that influence diffusion, limited to: surface area, temperature, concentration gradient and d",
+      "1. State that water diffuses through partially permeable membranes by osmosis."
+    ]
+  },
+  {
+    "id": "757409b3-5cec-4e1f-8877-18d81e440103",
+    "title": "B4: Biological molecules",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 34271,
+      "2": 26259,
+      "3": 2246
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "💧 Vai trò của Nước",
+      "🧪 2. CHEMICAL FOOD TESTS (Phòng Lab Tương tác)",
+      "🍬 Benedict's Test (Thử Đường khử)",
+      "🍞 Iodine Test (Thử Tinh bột)",
+      "🍬 Benedict's Test (Thử Đường khử)",
+      "🥩 Biuret Test (Thử Protein)",
+      "🥑 Ethanol Emulsion Test (Thử Lipid)",
+      "🍋 DCPIP Test (Thử Vitamin C)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "test-lipid",
+      "test-starch",
+      "test-vitc",
+      "test-sugar",
+      "test-protein",
+      "virtual-lab-display"
+    ],
+    "syl_count": 3,
+    "syl_sample": [
+      "1. List the chemical elements that make up: carbohydrates, fats and proteins.",
+      "2. State that large molecules are made from smaller molecules, limited to: (a) starch, glycogen and cellulose from gluco",
+      "3. Describe the use of: (a) iodine solution test for starch (b) Benedict's solution test for reducing sugars (c) biuret "
+    ]
+  },
+  {
+    "id": "8ab2afa2-59e3-4c56-8971-8d93dec5ad8e",
+    "title": "B5: Enzymes",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 22664,
+      "2": 16473,
+      "3": 2358
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Hãy tương tác với sơ đồ bên cạnh 👆"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "data-step2",
+      "enz-info-panel",
+      "data-step1",
+      "arrow-enz",
+      "temp-info-panel",
+      "data-step3"
+    ],
+    "syl_count": 6,
+    "syl_sample": [
+      "1. Describe enzymes as proteins that are involved in all metabolic reactions, where they function as biological catalyst",
+      "2. Investigate and describe the effect of changes in temperature and pH on enzyme activity.",
+      "3. Describe and explain enzyme action with reference to: the active site, enzyme-substrate complex, substrate and produc",
+      "4. Describe and explain the specificity of enzymes in terms of the complementary shape and fit of the active site with t",
+      "5. Explain the effect of changes in temperature on enzyme activity in terms of kinetic energy, shape and fit, frequency "
+    ]
+  },
+  {
+    "id": "1d6a6b7b-ae57-404f-9ad1-58b11219b4d1",
+    "title": "B6: Plant Nutrition",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 28123,
+      "2": 23207,
+      "3": 4571
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "l-spongy",
+      "l-upper",
+      "l-cuticle",
+      "l-vein",
+      "l-stomata",
+      "l-palisade",
+      "leaf-panel"
+    ],
+    "syl_count": 13,
+    "syl_sample": [
+      "1. Describe photosynthesis as the process by which plants synthesise carbohydrates from raw materials using energy from ",
+      "2. State the word equation for photosynthesis as: carbon dioxide + water → glucose + oxygen in the presence of light and",
+      "3. State that chlorophyll is a green pigment that is found in chloroplasts.",
+      "4. Investigate and understand the need for chlorophyll, light and carbon dioxide for photosynthesis.",
+      "5. State the balanced symbol equation for photosynthesis as: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂"
+    ]
+  },
+  {
+    "id": "cbebf582-244c-48bf-a586-c6c1922d8e20",
+    "title": "B7: Human nutrition",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 27727,
+      "2": 23689,
+      "3": 6407
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "ds-oesophagus",
+      "digestive-panel",
+      "ds-pancreas",
+      "ds-mouth",
+      "ds-small",
+      "ds-colon",
+      "ds-gall",
+      "ds-stomach",
+      "ds-rectum",
+      "ds-liver"
+    ],
+    "syl_count": 14,
+    "syl_sample": [
+      "1. Describe what is meant by a balanced diet.",
+      "2. State the principal dietary sources and describe the importance of: (a) carbohydrates (b) fats and oils (c) proteins ",
+      "3. State the causes of scurvy and rickets.",
+      "1. Identify in diagrams and images the main organs of the digestive system, limited to: (a) alimentary canal: mouth, oes",
+      "2. Describe the functions of the organs of the digestive system listed in 7.2.1, in relation to: (a) ingestion - the tak"
+    ]
+  },
+  {
+    "id": "e2819423-13ed-47a2-bd80-9a083989e8bd",
+    "title": "B8: Transport in plants",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 35489,
+      "2": 29708,
+      "3": 6519
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "💧 1. XYLEM AND PHLOEM (Mạch gỗ & Mạch rây)",
+      "💧 Xylem Tissue (Mạch Gỗ)",
+      "🍯 Phloem Tissue (Mạch Rây)",
+      "🗺️ 2. POSITION IN DICOT PLANTS (Vị trí phân bố)",
+      "🌱 In Roots (Rễ)",
+      "🎋 In Stem (Thân)",
+      "🍃 In Leaves (Lá)",
+      "🌬️ 3. TRANSPIRATION (Sự thoát hơi nước)",
+      "1. Water Uptake in Roots (Hút nước ở rễ)",
+      "Làm thế nào để thay đổi tốc độ bọt khí chạy?",
+      "🍯 4. TRANSLOCATION (Sự vận chuyển chất hữu cơ)",
+      "🚨 CẢNH BÁO BẪY ĐỀ THI: SỰ ĐỔI VAI THEO MÙA"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "arrow-in",
+      "arrow-flow"
+    ],
+    "syl_count": 12,
+    "syl_sample": [
+      "1. State the functions of xylem and phloem: (a) xylem - transport of water and mineral ions, and support (b) phloem - tr",
+      "2. Identify in diagrams and images the position of xylem and phloem as seen in sections of roots, stems and leaves of no",
+      "1. Identify in diagrams and images root hair cells and state their functions.",
+      "2. State that the large surface area of root hairs increases the uptake of water and mineral ions.",
+      "3. Outline the pathway taken by water through root, stem and leaf as: root hair cells, root cortex cells, xylem, mesophy"
+    ]
+  },
+  {
+    "id": "a79dd569-671f-4559-84a3-eee1e6018172",
+    "title": "B9: Transport in animals",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 27436,
+      "2": 24492,
+      "3": 7530
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Right Atrium (Tâm nhĩ phải)",
+      "Right Ventricle (Tâm thất phải)",
+      "Left Atrium (Tâm nhĩ trái)",
+      "Left Ventricle (Tâm thất trái)",
+      "Muscular Septum (Vách liên thất)",
+      "Aorta (Động mạch chủ)",
+      "Vena Cava (Tĩnh mạch chủ)",
+      "Pulmonary Artery (Động mạch phổi)",
+      "Pulmonary Vein (Tĩnh mạch phổi)",
+      "Hãy tương tác với sơ đồ bên cạnh 👆",
+      "2. Atherosclerosis (Mảng bám)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "h-rv",
+      "h-venacava",
+      "h-aorta",
+      "h-septum",
+      "chd-panel",
+      "data-chd-clot",
+      "data-chd-normal",
+      "h-la",
+      "heart-panel",
+      "h-pul-art",
+      "data-chd-plaque",
+      "h-ra",
+      "h-pul-vein",
+      "arrow-rbc",
+      "h-lv"
+    ],
+    "syl_count": 23,
+    "syl_sample": [
+      "1. Describe the circulatory system as a system of blood vessels with a pump and valves to ensure one-way flow of blood.",
+      "2. Describe the single circulation of a fish.",
+      "3. Describe the double circulation of a mammal.",
+      "4. Explain the advantages of a double circulation.",
+      "1. Identify in diagrams and images the structures of the mammalian heart, limited to: muscular wall, septum, left and ri"
+    ]
+  },
+  {
+    "id": "04d34896-13fb-411b-9e13-2bc3f9725136",
+    "title": "B10: Diseases and immunity",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 15718,
+      "2": 11372,
+      "3": 3581
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "data-im-1",
+      "immune-panel",
+      "data-im-3",
+      "data-im-2"
+    ],
+    "syl_count": 14,
+    "syl_sample": [
+      "1. Describe a pathogen as a disease-causing organism.",
+      "2. Describe a transmissible disease as a disease in which the pathogen can be passed from one host to another.",
+      "3. State that a pathogen is transmitted: (a) by direct contact, including through blood and other body fluids (b) indire",
+      "4. Describe the body defences against pathogens, limited to: skin, hairs in the nose, mucus, stomach acid and white bloo",
+      "5. Explain the importance of the following in controlling the spread of disease: (a) a clean water supply (b) hygienic f"
+    ]
+  },
+  {
+    "id": "39003a2f-708e-47fe-b8ad-7aae073273a3",
+    "title": "B11: Gas exchange and respiration",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 22771,
+      "2": 17795,
+      "3": 3034
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Trachea & Bronchi (Khí quản & Phế quản)",
+      "⚖️ Cơ chế Hít vào & Thở ra"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "r-lungs",
+      "r-trachea",
+      "resp-panel",
+      "data-inhale",
+      "data-exhale",
+      "r-diaphragm",
+      "breathe-panel"
+    ],
+    "syl_count": 7,
+    "syl_sample": [
+      "1. Identify in diagrams and images the following parts of the breathing system: lungs, diaphragm, ribs, intercostal musc",
+      "2. Investigate the differences in composition between inspired and expired air using limewater as a test for carbon diox",
+      "3. Describe the differences in composition between inspired and expired air, limited to: oxygen, carbon dioxide and wate",
+      "4. Investigate and describe the effects of physical activity on the rate and depth of breathing.[cite: 2167]",
+      "5. Describe the features of gas exchange surfaces in humans, limited to: large surface area, thin surface, good blood su"
+    ]
+  },
+  {
+    "id": "58e65add-a67a-4b90-8b84-52de1a2840be",
+    "title": "B12: Respiration",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 15825,
+      "2": 11055,
+      "3": 3038
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [],
+    "syl_count": 9,
+    "syl_sample": [
+      "1. State the uses of energy in living organisms, including: muscle contraction, protein synthesis, cell division, growth",
+      "2. Describe aerobic respiration as the chemical reactions in cells that use oxygen to break down nutrient molecules to r",
+      "3. State the word equation for aerobic respiration as: glucose + oxygen → carbon dioxide + water",
+      "6. State that anaerobic respiration releases much less energy per glucose molecule than aerobic respiration.",
+      "7. State the word equation for anaerobic respiration in muscles during vigorous exercise as: glucose → lactic acid"
+    ]
+  },
+  {
+    "id": "2637d6ee-fd5f-48fc-aa7a-fc794fb3e561",
+    "title": "B13: Coordination and response",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 31780,
+      "2": 28744,
+      "3": 6898
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "🟣 Relay Neurone (Nơ-ron trung gian)",
+      "Pancreas (Tuyến tụy)",
+      "Fatty Tissue (Mô mỡ)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "g-ovary",
+      "skin-panel",
+      "s-receptor",
+      "n-sensory",
+      "n-motor",
+      "g-adrenal",
+      "g-pancreas",
+      "s-hair",
+      "arrow-red",
+      "g-testes",
+      "arrow-blue",
+      "s-sweat",
+      "arrow-purple",
+      "s-blood",
+      "endo-panel",
+      "s-fat",
+      "n-relay",
+      "reflex-panel"
+    ],
+    "syl_count": 17,
+    "syl_sample": [
+      "1. State that electrical impulses travel along neurones.[cite: 2195]",
+      "2. Describe the mammalian nervous system in terms of: (a) the central nervous system (CNS) consisting of the brain and s",
+      "3. Describe the role of the nervous system as coordination and regulation of body functions.[cite: 2195]",
+      "4. Identify in diagrams and images sensory, relay and motor neurones.[cite: 2195]",
+      "5. Describe a simple reflex arc in terms of: receptor, sensory neurone, relay neurone, motor neurone and effector.[cite:"
+    ]
+  },
+  {
+    "id": "7ed510d0-acd2-4d0a-9079-1f1e4e4fc463",
+    "title": "B14: Drugs",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 14140,
+      "2": 10082,
+      "3": 2322
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Tại sao Kháng sinh vô dụng với Virus?",
+      "Lướt chuột vào Hình ảnh 👆"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "anti-panel",
+      "a-virus",
+      "arrow-red",
+      "a-bacteria"
+    ],
+    "syl_count": 5,
+    "syl_sample": [
+      "1. Describe a drug as any substance taken into the body that modifies or affects chemical reactions in the body.[cite: 2",
+      "2. Describe the use of antibiotics for the treatment of bacterial infections.[cite: 2261]",
+      "3. State that some bacteria are resistant to antibiotics which reduces the effectiveness of antibiotics.[cite: 2262]",
+      "4. State that antibiotics kill bacteria but do not affect viruses.[cite: 2263]",
+      "5. Explain how using antibiotics only when essential can limit the development of resistant bacteria such as MRSA.[cite:"
+    ]
+  },
+  {
+    "id": "deb8222d-2b75-42a3-b454-9601fbfa1bd2",
+    "title": "B15: Reproduction",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 32547,
+      "2": 27920,
+      "3": 10367
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Petal (Cánh hoa)",
+      "The Menstrual Cycle (Chu kỳ Kinh nguyệt)",
+      "🛡️ Days 15-28: Maintenance (Duy trì niêm mạc)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "fl-petal",
+      "mr-testis",
+      "female-panel",
+      "fr-oviduct",
+      "mr-penis",
+      "fl-stamen",
+      "mc-day14",
+      "mr-duct",
+      "fl-carpel",
+      "fr-cervix",
+      "mc-day15",
+      "fr-uterus",
+      "flower-panel",
+      "male-panel",
+      "fl-sepal",
+      "mc-day1",
+      "cycle-panel",
+      "fr-ovary",
+      "mr-gland",
+      "mc-day6",
+      "fr-vagina"
+    ],
+    "syl_count": 27,
+    "syl_sample": [
+      "1. Describe asexual reproduction as a process resulting in the production of genetically identical offspring from one pa",
+      "2. Identify examples of asexual reproduction in diagrams, images and information provided.[cite: 2276]",
+      "3. Discuss the advantages and disadvantages of asexual reproduction to a population of a species in the wild.[cite: 2283",
+      "1. Describe sexual reproduction as a process involving the fusion of the nuclei of two gametes to form a zygote and the ",
+      "2. Describe a species as a group of organisms that can reproduce to produce fertile offspring.[cite: 2290]"
+    ]
+  },
+  {
+    "id": "d48c8f84-ba93-49d4-bf61-c7890bd6d2ce",
+    "title": "B16: Inheritance",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 22541,
+      "2": 18731,
+      "3": 6667
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Interactive Punnett Square (Bảng lai)",
+      "Lướt chuột vào 4 ô kết quả 👆",
+      "Interactive Pedigree Map (Sơ đồ phả hệ)",
+      "Lướt chuột vào các hình 👆"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "ps-tt-dom",
+      "ps-tt-rec",
+      "ps-tt-het1",
+      "pd-unaffected-child",
+      "pedigree-panel",
+      "punnett-panel",
+      "pd-unaffected-parent",
+      "ps-tt-het2",
+      "pd-affected-child"
+    ],
+    "syl_count": 25,
+    "syl_sample": [
+      "1. State that chromosomes are made of DNA, which contains genetic information in the form of genes.",
+      "2. Define a gene as a length of DNA that codes for a protein.",
+      "3. Define an allele as an alternative form of a gene.",
+      "4. Describe the inheritance of sex in humans with reference to XX and XY chromosomes.",
+      "5. Describe a haploid nucleus as a nucleus containing a single set of chromosomes."
+    ]
+  },
+  {
+    "id": "24f0deeb-3cd9-4b82-b253-5a070ca31275",
+    "title": "B17: Variation and selection",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 13174,
+      "2": 7869,
+      "3": 4178
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [],
+    "syl_count": 9,
+    "syl_sample": [
+      "1. Describe variation as differences between individuals of the same species.",
+      "2. State that continuous variation results in a range of phenotypes between two extremes; examples include body length.",
+      "3. State that discontinuous variation results in a limited number of phenotypes with no intermediates; examples include ",
+      "4. Describe mutation as a genetic change.",
+      "5. State that mutation is the way in which new alleles are formed."
+    ]
+  },
+  {
+    "id": "cbeb6b74-e9c2-4a91-b39f-decb63e72ec0",
+    "title": "B18: Organisms and their environment",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 13184,
+      "2": 8284,
+      "3": 6129
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [],
+    "syl_count": 18,
+    "syl_sample": [
+      "1. State that the Sun is the principal source of energy input to biological systems.",
+      "2. Describe the flow of energy through living organisms, including light energy from the Sun and chemical energy in orga",
+      "1. Describe a food chain as showing the transfer of energy from one organism to the next, beginning with a producer.",
+      "2. Construct and interpret simple food chains.",
+      "3. Describe a food web as a network of interconnected food chains and interpret food webs."
+    ]
+  },
+  {
+    "id": "298327a8-455a-44d5-9a4c-164e2653c456",
+    "title": "B19: Human influences on ecosystems",
+    "module": "IGCSE Coordinated Sciences: Biology [color:#dcfce7,#15803d]",
+    "lengths": {
+      "1": 21415,
+      "2": 16169,
+      "3": 4063
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "🌊 Soil Erosion & Flooding (Xói mòn & Lũ lụt)",
+      "Interactive Lab: Eutrophication (Phú dưỡng)",
+      "Quá trình Eutrophication 👆"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "eu-step4",
+      "deforest-panel",
+      "eu-panel",
+      "eu-step2",
+      "eu-step3",
+      "eu-step1",
+      "arrow-b-eu",
+      "df-air",
+      "df-soil",
+      "df-habitat"
+    ],
+    "syl_count": 7,
+    "syl_sample": [
+      "1. Describe an ecosystem as a unit containing the community of organisms and their environment, interacting together.",
+      "2. Describe biodiversity as the number of different species that live in an area.",
+      "3. Describe the reasons for habitat destruction, including: (a) increased area for housing, crop plant production and li",
+      "4. State the undesirable effects of deforestation as an example of habitat destruction, to include: reducing biodiversit",
+      "5. Explain the undesirable effects of deforestation as an example of habitat destruction, to include: reducing biodivers"
+    ]
+  },
+  {
+    "id": "3fc0ef74-3661-4f23-a8a8-9c33d11051f5",
+    "title": "C1: States of matter",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 28515,
+      "2": 24664,
+      "3": 3413
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [],
+    "syl_count": 8,
+    "syl_sample": [
+      "1. State the distinguishing properties of solids, liquids and gases.",
+      "2. Describe the structure of solids, liquids and gases in terms of particle separation, arrangement and motion.",
+      "3. Describe changes of state in terms of melting, boiling, evaporating, freezing and condensing.",
+      "4. Describe the effects of temperature and pressure on the volume of a gas.",
+      "5. Explain changes of state in terms of kinetic particle theory, including the interpretation of heating and cooling cur"
+    ]
+  },
+  {
+    "id": "ee4f94c2-382b-4dbb-aaf8-981e7b0d7223",
+    "title": "C2: Atoms elements and compounds",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 53819,
+      "2": 49751,
+      "3": 12104
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Cấu trúc Nguyên tử 👆",
+      "Hạt nhân",
+      "Lớp vỏ",
+      "Silicon Dioxide (SiO₂ - Cát)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "pt-H",
+      "pt-B",
+      "a-electron",
+      "pt-P",
+      "pt-Ca",
+      "pt-S",
+      "pt-Na",
+      "pt-N",
+      "a-nucleus",
+      "pt-F",
+      "pt-Mg",
+      "atom-panel",
+      "pt-O",
+      "pt-Cl",
+      "pt-He",
+      "pt-Ar",
+      "pt-Ne",
+      "pt-Si",
+      "pt-info",
+      "pt-Be",
+      "pt-Li",
+      "pt-C",
+      "pt-K",
+      "pt-Al"
+    ],
+    "syl_count": 26,
+    "syl_sample": [
+      "1. Describe the differences between elements, compounds and mixtures.",
+      "1. Describe the structure of the atom as a central nucleus containing neutrons and protons, surrounded by electrons in s",
+      "2. State the relative charges and relative masses of a proton, a neutron and an electron.",
+      "3. Define proton number/atomic number as the number of protons in the nucleus of an atom.",
+      "4. Define mass number/nucleon number as the total number of protons and neutrons in the nucleus of an atom."
+    ]
+  },
+  {
+    "id": "f0988036-6fd0-4768-993d-a5ea5fe4eb0b",
+    "title": "C3: Stoichiometry",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 20307,
+      "2": 15474,
+      "3": 5910
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "⚖️ 1. FORMULAS & EQUATIONS (Công thức & Phương trình)",
+      "Nồng độ Dung dịch",
+      "Khối lượng & Mol (Mass & Moles)",
+      "Thể tích Chất Khí",
+      "Nồng độ Dung dịch"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "f-mass",
+      "f-gas",
+      "formula-panel",
+      "f-conc"
+    ],
+    "syl_count": 16,
+    "syl_sample": [
+      "1. State the formulas of the elements and compounds named in the subject content.",
+      "2. Define the molecular formula of a compound as the number and type of atoms in one molecule.",
+      "3. Deduce the formula of a simple molecular compound from the relative numbers of atoms present in a model or a diagramm",
+      "4. Construct word equations to show how reactants form products.",
+      "5. Balance and interpret simple symbol equations, including state symbols."
+    ]
+  },
+  {
+    "id": "4732621b-f827-4b12-934b-3b53e694cc2a",
+    "title": "C4: Electrochemistry",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 22010,
+      "2": 17456,
+      "3": 4389
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Cấu tạo bể điện phân 👆",
+      "Tại Cathode (-)",
+      "Tại Anode (+)",
+      "🧠 Mẹo nhớ IGCSE: OIL RIG"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "e-power",
+      "e-anode",
+      "e-cathode",
+      "e-panel",
+      "e-wire",
+      "e-electrolyte"
+    ],
+    "syl_count": 10,
+    "syl_sample": [
+      "1. Define electrolysis as the decomposition of an ionic compound, when molten or in aqueous solution, by the passage of ",
+      "2. Identify in simple electrolytic cells: (a) the anode as the positive electrode (b) the cathode as the negative electr",
+      "3. Identify the products formed at the electrodes and describe the observations made during the electrolysis of: (a) mol",
+      "4. Describe the transfer of charge during electrolysis: (a) the movement of electrons in the external circuit (b) the lo",
+      "5. Identify the products formed at the electrodes and describe the observations made during the electrolysis of aqueous "
+    ]
+  },
+  {
+    "id": "71545c83-4d45-4201-978c-aa58d01b57e5",
+    "title": "C5: Chemical energetics",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 18812,
+      "2": 14174,
+      "3": 2708
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Lướt chuột vào ký hiệu Ea và ΔH trên biểu đồ 👆"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "rp-dh",
+      "arrow-axis",
+      "profile-panel",
+      "rp-ea"
+    ],
+    "syl_count": 7,
+    "syl_sample": [
+      "1. State that an exothermic reaction transfers thermal energy to the surroundings leading to an increase in the temperat",
+      "2. State that an endothermic reaction takes in thermal energy from the surroundings leading to a decrease in the tempera",
+      "3. Interpret reaction pathway diagrams showing exothermic and endothermic reactions.",
+      "4. State that the transfer of thermal energy during a reaction is called the enthalpy change, ΔH, of the reaction. ΔH is",
+      "5. Define activation energy, Ea, as the minimum energy that colliding particles must have to react."
+    ]
+  },
+  {
+    "id": "7f2b44b2-ba70-4cfc-85b3-3a0709058b46",
+    "title": "C6: Chemical reactions",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 58425,
+      "2": 53578,
+      "3": 5640
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "⏱️ 2. RATE OF REACTION (Tốc độ phản ứng)",
+      "💥 Collision Theory (Thuyết va chạm)",
+      "High Concentration (Nồng độ cao)",
+      "Low Concentration (Nồng độ thấp)",
+      "High Concentration (Nồng độ cao)",
+      "🚨 CẢNH BÁO BẪY ĐỀ THI: Vai trò của Xúc tác (Catalyst)",
+      "Phản ứng Thuận nghịch (⇌)",
+      "🔄 Le Chatelier's Principle (Nguyên lý Chuyển dịch Cân bằng)",
+      "🏭 Ứng dụng: The Haber Process (Sản xuất Amoniac)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "rate-panel",
+      "change-phys",
+      "change-chem",
+      "rate-low",
+      "rate-high",
+      "change-panel"
+    ],
+    "syl_count": 14,
+    "syl_sample": [
+      "1. Identify physical and chemical changes, and understand the differences between them.",
+      "1. Describe the effect on the rate of reaction of: (a) changing the concentration of solutions (b) changing the pressure",
+      "2. State that a catalyst increases the rate of a reaction and is unchanged at the end of a reaction.",
+      "3. Describe practical methods for investigating the rate of a reaction including change in mass of a reactant or product",
+      "4. Interpret data, including graphs, from rate of reaction experiments."
+    ]
+  },
+  {
+    "id": "2c83104c-9413-4ee1-bdf3-2c0da8fd96a6",
+    "title": "C7: Acids bases and salts",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 22235,
+      "2": 17676,
+      "3": 5407
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "🧪 1. ACIDS, BASES & ALKALIS (Axit, Bazơ & Kiềm)",
+      "Lướt chuột vào các ô màu phía trên 👆",
+      "CẢNH BÁO BẪY ĐỀ THI: Phản ứng với Đồng"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "ph-panel",
+      "ph-strong-acid",
+      "ph-neutral",
+      "ph-weak-alkali",
+      "ph-strong-alkali",
+      "ph-weak-acid"
+    ],
+    "syl_count": 13,
+    "syl_sample": [
+      "1. Describe the characteristic properties of acids in terms of their reactions with: (a) metals (b) bases (c) carbonates",
+      "2. Describe acids in terms of their effect on the indicators: (a) litmus (b) methyl orange.",
+      "3. State that bases are oxides or hydroxides of metals and that alkalis are soluble bases.",
+      "4. Describe the characteristic properties of bases in terms of their reactions with acids.",
+      "5. Describe alkalis in terms of their effect on the indicators: (a) litmus (b) methyl orange."
+    ]
+  },
+  {
+    "id": "856f20da-80e8-4c6a-9cd1-dbe8a1f40828",
+    "title": "C8: Periodic table",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 14628,
+      "2": 10207,
+      "3": 7658
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [],
+    "syl_count": 12,
+    "syl_sample": [
+      "1. Describe the Periodic Table as an arrangement of elements in periods and groups and in order of increasing proton num",
+      "2. Describe the change from metallic to non-metallic character across a period.",
+      "3. Explain similarities in the chemical properties of elements in the same group of the Periodic Table in terms of their",
+      "4. Identify trends in groups, given information about the elements.",
+      "1. Describe the Group I alkali metals, lithium, sodium and potassium, as relatively soft metals with general trends down"
+    ]
+  },
+  {
+    "id": "d34bbfa2-7449-4192-b471-3a6a8ba49257",
+    "title": "C9: Metals",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 21578,
+      "2": 16696,
+      "3": 11502
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Hợp kim",
+      "Kim loại tinh khiết",
+      "Hợp kim",
+      "⚔️ Phản ứng Thế"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "a-pure",
+      "alloy-panel",
+      "pure-slide",
+      "a-alloy"
+    ],
+    "syl_count": 21,
+    "syl_sample": [
+      "1. Compare the general physical properties of metals and non-metals, including: (a) thermal conductivity (b) electrical ",
+      "2. Describe the general chemical properties of metals, limited to their reactions with: (a) dilute acids (b) cold water ",
+      "1. Describe the uses of metals in terms of their physical properties, including: (a) aluminium in the manufacture of air",
+      "1. Describe alloys as mixtures of a metal with other elements, including: (a) brass as a mixture of copper and zinc (b) ",
+      "2. State that alloys can be harder and stronger than the pure metals and are more useful.[cite: 2932]"
+    ]
+  },
+  {
+    "id": "9d61f516-a24c-4485-8490-8485604130ec",
+    "title": "C10: Chemistry of the environment",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 17713,
+      "2": 13100,
+      "3": 4949
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Thành phần của Không khí sạch",
+      "Khái niệm Rusting"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "air-info"
+    ],
+    "syl_count": 11,
+    "syl_sample": [
+      "1. Describe chemical tests for the presence of water using anhydrous cobalt(II) chloride and anhydrous copper(II) sulfat",
+      "2. Describe how to test for the purity of water using melting point and boiling point.[cite: 3006]",
+      "3. State that distilled water is used in practical chemistry rather than tap water because it contains fewer chemical im",
+      "4. Describe the treatment of the domestic water supply in terms of: (a) sedimentation and filtration to remove solids (b",
+      "1. State the composition of clean, dry air as approximately 78% nitrogen, 21% oxygen, and the remainder as a mixture of "
+    ]
+  },
+  {
+    "id": "69b82c81-05a0-40a8-816f-c21a882cef54",
+    "title": "C11: Organic chemistry",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 15699,
+      "2": 11125,
+      "3": 8310
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "Với Alkane:",
+      "Với Alkene:"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [],
+    "syl_count": 15,
+    "syl_sample": [
+      "1. Draw and interpret the displayed formula of a molecule to show all the atoms and all the bonds.[cite: 3063]",
+      "2. State that a saturated compound has molecules in which all carbon-carbon bonds are single bonds.[cite: 3066]",
+      "3. State that an unsaturated compound has molecules in which one or more carbon-carbon bonds are not single bonds.[cite:",
+      "4. State that a homologous series is a family of similar compounds with similar chemical properties.[cite: 3083]",
+      "5. Describe the general characteristics of a homologous series as: (a) having the same general formula (b) displaying a "
+    ]
+  },
+  {
+    "id": "d51b5192-ff57-48a0-bcd9-d4f8a7d10757",
+    "title": "C12: Experimental techniques and Chemical analysis",
+    "module": "IGCSE Coordinated Sciences: Chemistry [color:#fee2e2,#b91c1c]",
+    "lengths": {
+      "1": 21742,
+      "2": 17068,
+      "3": 6253
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "💧 Mức Dung môi"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "c-rf",
+      "arrow-blue",
+      "c-solvent",
+      "chroma-panel",
+      "arrow-orange",
+      "c-baseline"
+    ],
+    "syl_count": 12,
+    "syl_sample": [
+      "1. Name appropriate apparatus for the measurement of time, temperature, mass and volume, including: stop-watches, thermo",
+      "2. Describe a solvent, solute, solution, saturated solution, residue, and filtrate.[cite: 3174]",
+      "3. Describe an acid-base titration to include the use of a burette, volumetric pipette, and suitable indicator.[cite: 31",
+      "4. Describe how to identify the end-point of a titration using an indicator.[cite: 3174]",
+      "1. Describe how paper chromatography is used to separate mixtures of soluble coloured substances, using a suitable solve"
+    ]
+  },
+  {
+    "id": "690ff013-5d01-4c1e-8546-25b3cd056e64",
+    "title": "P1: Motion, forces & energy",
+    "module": "IGCSE Coordinated Sciences: Physics [color:#f3e8ff,#7e22ce]",
+    "lengths": {
+      "1": 62459,
+      "2": 54624,
+      "3": 16233
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [
+      "🔨 Pressure (Áp suất)"
+    ],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "g-st-2",
+      "arrow-axis-2",
+      "g-dt-3",
+      "p2-f-eff",
+      "p2-left",
+      "p2-right",
+      "p2-f-work",
+      "p2-mid",
+      "arrow-axis",
+      "p2-f-power",
+      "g-dt-2",
+      "arrow-axis-1",
+      "g-dt-1",
+      "p2-formula-panel",
+      "graph-panel",
+      "g-st-1",
+      "g-st-3",
+      "p2-pendulum-panel"
+    ],
+    "syl_count": 61,
+    "syl_sample": [
+      "1. Describe the use of rulers and measuring cylinders to find a length or a volume.",
+      "2. Describe how to measure a variety of time intervals using clocks and digital timers.",
+      "3. Determine an average value for a small distance and for a short interval of time by measuring multiples (including th",
+      "4. Understand that a scalar quantity has magnitude (size) only and that a vector quantity has magnitude and direction.",
+      "5. Know that the following quantities are scalars: distance, speed, time, mass, energy and temperature."
+    ]
+  },
+  {
+    "id": "dc33ed9d-e328-4f60-8c47-f0dbd103e8c1",
+    "title": "P2: Thermal physics",
+    "module": "IGCSE Coordinated Sciences: Physics [color:#f3e8ff,#7e22ce]",
+    "lengths": {
+      "1": 26988,
+      "2": 21761,
+      "3": 8433
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "arrow-red-th",
+      "t-cond",
+      "t-rad",
+      "arrow-blue-th",
+      "t-convec",
+      "thermal-panel"
+    ],
+    "syl_count": 31,
+    "syl_sample": [
+      "1. State the distinguishing properties of solids, liquids and gases.",
+      "2. Know the terms for the changes in state between solids, liquids and gases.",
+      "1. Describe the structure of solids, liquids and gases in terms of the arrangement, separation and motion of the particl",
+      "2. Describe the relationship between the motion of particles and temperature.",
+      "3. Know that the random motion of particles in a suspension is evidence for the kinetic particle model of matter."
+    ]
+  },
+  {
+    "id": "eb3ed0a0-bd5e-4c0f-961f-1b9af74bf4a8",
+    "title": "P3: Waves",
+    "module": "IGCSE Coordinated Sciences: Physics [color:#f3e8ff,#7e22ce]",
+    "lengths": {
+      "1": 40365,
+      "2": 33858,
+      "3": 9299
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "em-radio",
+      "arrow-red-w",
+      "em-micro",
+      "arrow-green-w",
+      "em-gamma",
+      "w-trans",
+      "em-info",
+      "em-ir",
+      "em-vis",
+      "w-long",
+      "wave-panel",
+      "em-xray",
+      "em-uv",
+      "arrow-green-lens"
+    ],
+    "syl_count": 46,
+    "syl_sample": [
+      "1. Know that waves transfer energy without transferring matter.",
+      "2. Describe what is meant by wave motion as illustrated by vibration (oscillation) in ropes and springs and by experimen",
+      "3. Describe the features of a wave in terms of wavelength, frequency, crest (peak), trough, amplitude and wave speed.",
+      "4. Describe how waves can undergo: (a) reflection at a plane surface (b) refraction due to a change of speed.",
+      "5. Recall and use the equation for wave speed v = f × λ"
+    ]
+  },
+  {
+    "id": "2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69",
+    "title": "P4: Electricity and magnetism",
+    "module": "IGCSE Coordinated Sciences: Physics [color:#f3e8ff,#7e22ce]",
+    "lengths": {
+      "1": 37089,
+      "2": 31926,
+      "3": 13256
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "ind-panel",
+      "ef-piv",
+      "e-form-panel",
+      "pd-hot",
+      "arrow-f-p4",
+      "ind-out",
+      "ef-vir",
+      "pd-bright",
+      "pd-cold",
+      "arrow-b-p4",
+      "circuit-panel",
+      "ind-in",
+      "c-series",
+      "arrow-i-p4",
+      "c-parallel",
+      "pd-dark",
+      "pd-panel"
+    ],
+    "syl_count": 51,
+    "syl_sample": [
+      "1. Describe the forces between magnetic poles and between magnets and magnetic materials, including attraction and repul",
+      "2. State the differences between the properties of temporary magnets (made of soft iron) and permanent magnets (made of ",
+      "3. State the difference between magnetic and non-magnetic materials.[cite: 1518]",
+      "4. Describe how a permanent magnet differs from an electromagnet.[cite: 1518]",
+      "5. Describe a magnetic field as a region in which a magnetic pole experiences a force.[cite: 1518]"
+    ]
+  },
+  {
+    "id": "a6077865-db01-4785-9ec7-e8b0f531fcdc",
+    "title": "P5: Nuclear physics",
+    "module": "IGCSE Coordinated Sciences: Physics [color:#f3e8ff,#7e22ce]",
+    "lengths": {
+      "1": 25515,
+      "2": 19838,
+      "3": 6191
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "nuc-gamma",
+      "nuc-panel",
+      "nuc-alpha",
+      "nuc-beta"
+    ],
+    "syl_count": 20,
+    "syl_sample": [
+      "1. Describe the composition of the nucleus in terms of protons and neutrons.[cite: 1518]",
+      "2. State the relative charges of protons, neutrons and electrons as +1, 0 and -1 respectively.[cite: 1518]",
+      "3. Define the terms proton number (atomic number) Z and nucleon number (mass number) A and be able to calculate the numb",
+      "4. Use the nuclide notation AZX.[cite: 1518]",
+      "5. State that an element may have more than one isotope and know that some isotopes are radioactive.[cite: 1518]"
+    ]
+  },
+  {
+    "id": "d11f8920-fe86-4cd4-ad9a-e8b669bc687b",
+    "title": "P6: Space physics",
+    "module": "IGCSE Coordinated Sciences: Physics [color:#f3e8ff,#7e22ce]",
+    "lengths": {
+      "1": 23839,
+      "2": 19058,
+      "3": 5801
+    },
+    "toolbars": {
+      "p1": true,
+      "p2": false,
+      "p3": false
+    },
+    "vn_headings_p1": [],
+    "has_bilingual_p2": false,
+    "id_collisions": [
+      "space-panel",
+      "s-day",
+      "s-month",
+      "s-year"
+    ],
+    "syl_count": 15,
+    "syl_sample": [
+      "1. Describe the Solar System as containing: (a) one star, the Sun (b) the eight named planets and know their order from ",
+      "2. Define orbital speed from the equation v = 2πr / T where r is the radius of the orbit and T is the orbital period.[ci",
+      "3. Know that the strength of the Sun's gravitational field decreases and that the orbital speeds of the planets decrease",
+      "1. Know that: (a) the Sun is the closest star to the Earth (b) astronomical distances can be measured in light-years.[ci",
+      "1. Know that: (a) galaxies are each made up of many billions of stars (b) the Sun is a star in the Milky Way (c) other s"
+    ]
+  }
+]
