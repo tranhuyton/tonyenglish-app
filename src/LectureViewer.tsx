@@ -475,6 +475,7 @@ const COURSE_PODCAST_COUNT: Record<string, number> = {
   'a2a949c7-c23e-45a7-82fa-cdeda5cc32a7': 35, // Co-ordinated Science 0654
   '9331cc50-d76b-4247-860e-25b2096e93cb': 35, // Geography 0460
   '564f9e56-b77c-43af-9299-23eb2e7dcb7e': 29, // Business Studies 0450
+  'f21fe521-aaf9-4917-8c2a-1931666237b5': 39, // Economics 0455
 };
 
 // =========================================================================================
