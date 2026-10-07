@@ -478,6 +478,26 @@ const COURSE_PODCAST_COUNT: Record<string, number> = {
   'f21fe521-aaf9-4917-8c2a-1931666237b5': 39, // Economics 0455
 };
 
+const LECTURE_PODCAST_COUNT: Record<string, number> = {
+  // IELTS Premium Podcast Lectures
+  'ede14d51-3169-4f0e-a1a8-a2d8b9a31a4b': 6,  // Podcast Viết Task 1
+  'b01279e6-fed1-4647-8b45-65c39f73003e': 5,  // Podcast Viết Task 2
+  '4474b4db-59d1-4f50-9a44-004a547b6521': 6,  // Podcast Luyện Đọc
+  '11f45a0a-3288-479d-8b90-fcf9ce6ca484': 9,  // Podcast Luyện Nghe
+  'bbd2be97-406d-41b5-a337-8e210e2f49c9': 10, // Podcast Luyện Nói
+};
+
+const getPodcastCount = (lecture: { id: string; title: string }, courseId: string): number => {
+  if (LECTURE_PODCAST_COUNT[lecture.id]) return LECTURE_PODCAST_COUNT[lecture.id];
+  const t = (lecture.title || '').toLowerCase();
+  if (t.includes('task 1') || t.includes('task1')) return 6;
+  if (t.includes('task 2') || t.includes('task2')) return 5;
+  if (t.includes('đọc') || t.includes('reading')) return 6;
+  if (t.includes('nghe') || t.includes('listening')) return 9;
+  if (t.includes('nói') || t.includes('speaking')) return 10;
+  return COURSE_PODCAST_COUNT[courseId] || 64;
+};
+
 // =========================================================================================
 // THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE & VISION AI
 // =========================================================================================
@@ -4630,7 +4650,7 @@ export default function LectureViewer({
                                           title="Bài giảng Audio Podcast"
                                         >
                                           <svg className="w-2.5 h-2.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
-                                          Podcast ({COURSE_PODCAST_COUNT[currentCourseId] || 64})
+                                          Podcast ({getPodcastCount(lec, currentCourseId)})
                                         </span>
                                       )}
                                       {totalTasks > 0 && (

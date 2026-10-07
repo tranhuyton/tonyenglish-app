@@ -1,0 +1,458 @@
+{
+  "task1": {
+    "moduleId": "4d5cce14-0b7e-44c3-91a9-c05eccdc01e3",
+    "moduleName": "Luyện thi Viết : Task 1",
+    "lectureTitle": "Podcast Viết Task 1",
+    "storageFolder": "audio/podcast/ielts-premium/task1",
+    "themeColor": "#0f766e",
+    "themeBg": "linear-gradient(135deg, #134e4a 0%, #0f766e 50%, #0d9488 100%)",
+    "badge": "6 TẬP PODCAST TASK 1",
+    "desc": "Chiến thuật ghép khung bất biến, từ vựng xu hướng và phân tích dữ liệu chuyên sâu cho tất cả các dạng biểu đồ IELTS Writing Task 1.",
+    "episodes": [
+      {
+        "episode": 1,
+        "code": "1",
+        "title": "Task 1 Dynamic Chart (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật ghép khung với từ vựng chỉ xu hướng tăng, giảm, dao động, chạm mốc và từ nối mô tả sự thay đổi qua các mốc thời gian.",
+        "localFile": "01-Cấu trúc bất biến Dynamic Chart IELTS.mp3",
+        "storageFileName": "ep_01.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task1/ep_01.mp3",
+        "durationSec": 1074,
+        "durationStr": "17:54"
+      },
+      {
+        "episode": 2,
+        "code": "2",
+        "title": "Task 1 Static Chart (thầy Tôn - tonyenglish.vn)",
+        "sub": "Phương pháp ghép khung với từ vựng so sánh hơn, so sánh nhất, nhóm hạng mục, tỷ trọng cho bài không có mốc thời gian.",
+        "localFile": "02-Tư duy logic viết Task 1 IELTS.mp3",
+        "storageFileName": "ep_02.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task1/ep_02.mp3",
+        "durationSec": 1028,
+        "durationStr": "17:08"
+      },
+      {
+        "episode": 3,
+        "code": "3",
+        "title": "Task 1 Process (thầy Tôn - tonyenglish.vn)",
+        "sub": "Bí quyết ghép khung quy trình tự nhiên/nhân tạo với câu bị động (Passive Voice), từ nối thứ tự các bước và động từ chuyển hóa giai đoạn.",
+        "localFile": "03-Cấu trúc bất biến IELTS Process.mp3",
+        "storageFileName": "ep_03.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task1/ep_03.mp3",
+        "durationSec": 1068,
+        "durationStr": "17:48"
+      },
+      {
+        "episode": 4,
+        "code": "4",
+        "title": "Task 1 Outdoor Map (thầy Tôn - tonyenglish.vn)",
+        "sub": "Kỹ thuật ghép khung bản đồ quy hoạch khu vực với từ vựng mở rộng, phá bỏ, thay thế và hướng phương vị (Bắc-Nam-Đông-Tây).",
+        "localFile": "04-Cách viết bài IELTS Outdoor Map.mp3",
+        "storageFileName": "ep_04.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task1/ep_04.mp3",
+        "durationSec": 1056,
+        "durationStr": "17:36"
+      },
+      {
+        "episode": 5,
+        "code": "5",
+        "title": "Task 1 Indoor Map (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật ghép khung sơ đồ mặt bằng/nội thất không gian hẹp với từ vựng chỉ vị trí đối diện, kế bên, góc phòng và cải tạo mặt bằng.",
+        "localFile": "05-Cách viết Indoor Map IELTS.mp3",
+        "storageFileName": "ep_05.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task1/ep_05.mp3",
+        "durationSec": 1227,
+        "durationStr": "20:27"
+      },
+      {
+        "episode": 6,
+        "code": "6",
+        "title": "Task 1 Mixed Charts (thầy Tôn - tonyenglish.vn)",
+        "sub": "Phương pháp xử lý biểu đồ kết hợp, cách chia Body 1 & Body 2 cho 2 biểu đồ riêng biệt và kỹ thuật viết Overview 2 ý song song.",
+        "localFile": "06-Chiến thuật viết Mixed Charts IELTS.mp3",
+        "storageFileName": "ep_06.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task1/ep_06.mp3",
+        "durationSec": 1281,
+        "durationStr": "21:21"
+      }
+    ]
+  },
+  "task2": {
+    "moduleId": "fe69b202-583e-4aee-9bd6-31a7f95d331e",
+    "moduleName": "Luyện thi Viết : Task 2",
+    "lectureTitle": "Podcast Viết Task 2",
+    "storageFolder": "audio/podcast/ielts-premium/task2",
+    "themeColor": "#7e22ce",
+    "themeBg": "linear-gradient(135deg, #581c87 0%, #7e22ce 50%, #9333ea 100%)",
+    "badge": "5 TẬP PODCAST TASK 2",
+    "desc": "Bộ khung cấu trúc bất biến kết hợp hệ thống trụ ý Idea Pillars độc quyền của thầy Tôn, xử lý triệt để 5 dạng bài luận IELTS Writing Task 2.",
+    "episodes": [
+      {
+        "episode": 1,
+        "code": "1",
+        "title": "Discussion Essay Task 2 ghép Framework & Idea Pillars",
+        "sub": "Thảo luận cách nhận diện dạng bài thảo luận 2 quan điểm, phương pháp chia 2 Body cân bằng và kỹ thuật ghép trụ ý Idea Pillars (Freedom, Cost, Job, Health...) vào từng góc nhìn.",
+        "localFile": "01-Chiến thuật viết Discussion Essay IELTS.mp3",
+        "storageFileName": "ep_01.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task2/ep_01.mp3",
+        "durationSec": 1098,
+        "durationStr": "18:18"
+      },
+      {
+        "episode": 2,
+        "code": "2",
+        "title": "Opinion Essay Task 2 ghép Framework & Idea Pillars",
+        "sub": "Phân tích chiến thuật chọn nghiêng hẳn (100%) hoặc trung lập (balanced/partially agree), cách dùng khung cấu trúc bất biến để bảo vệ quan điểm cá nhân chặt chẽ.",
+        "localFile": "02-Công thức viết Opinion Essay IELTS.mp3",
+        "storageFileName": "ep_02.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task2/ep_02.mp3",
+        "durationSec": 1257,
+        "durationStr": "20:57"
+      },
+      {
+        "episode": 3,
+        "code": "3",
+        "title": "Advantage & Disadvantage Essay Task 2",
+        "sub": "Phân biệt dạng bài Lợi ích / Tác hại thuần túy và dạng Outweigh, cách ghép khung phân tích mặt tích cực - tiêu cực với hệ thống trụ ý Idea Pillars tương ứng.",
+        "localFile": "03-Cấu trúc bất biến bài IELTS Writing.mp3",
+        "storageFileName": "ep_03.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task2/ep_03.mp3",
+        "durationSec": 1326,
+        "durationStr": "22:06"
+      },
+      {
+        "episode": 4,
+        "code": "4",
+        "title": "Problem & Solution Essay Task 2",
+        "sub": "Chiến thuật ghép cấu trúc Nguyên nhân - Giải pháp với các trụ giải pháp vĩ mô (Macro Solution Pillars: Chính phủ, Pháp luật) và vi mô (Micro Solution Pillars: Giáo dục, Cá nhân, Nhà trường).",
+        "localFile": "04-Cấu trúc bất biến IELTS Writing.mp3",
+        "storageFileName": "ep_04.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task2/ep_04.mp3",
+        "durationSec": 1253,
+        "durationStr": "20:53"
+      },
+      {
+        "episode": 5,
+        "code": "5",
+        "title": "Two-Part Questions Essay Task 2",
+        "sub": "Phương pháp xử lý dạng câu hỏi đôi / trực tiếp, cách dùng khung cấu trúc trả lời lần lượt từng câu hỏi ở Body 1 & Body 2 kết hợp linh hoạt các trụ ý.",
+        "localFile": "05-Chiến thuật xử lý IELTS Two Part.mp3",
+        "storageFileName": "ep_05.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/task2/ep_05.mp3",
+        "durationSec": 1359,
+        "durationStr": "22:39"
+      }
+    ]
+  },
+  "reading": {
+    "moduleId": "65bda52c-a4f3-4bfe-bb81-ccc9b20dc7f7",
+    "moduleName": "Luyện thi Đọc",
+    "lectureTitle": "Podcast Luyện Đọc",
+    "storageFolder": "audio/podcast/ielts-premium/reading",
+    "themeColor": "#15803d",
+    "themeBg": "linear-gradient(135deg, #14532d 0%, #15803d 50%, #16a34a 100%)",
+    "badge": "6 TẬP PODCAST READING",
+    "desc": "Tư duy định vị thông tin, bóc tách các bẫy phổ biến và chiến thuật xử lý tốc độ cho 6 dạng bài IELTS Reading then chốt.",
+    "episodes": [
+      {
+        "episode": 1,
+        "code": "1",
+        "title": "True/False/Not Given IELTS Reading (thầy Tôn - tonyenglish.vn)",
+        "sub": "Kỹ thuật phân biệt False vs Not Given, chiến lược quét từ khóa định vị và nhận diện bẫy suy diễn thông tin.",
+        "localFile": "01-Bẫy True False Not Given IELTS.mp3",
+        "storageFileName": "ep_01.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/reading/ep_01.mp3",
+        "durationSec": 1276,
+        "durationStr": "21:16"
+      },
+      {
+        "episode": 2,
+        "code": "2",
+        "title": "Completion Types IELTS Reading (thầy Tôn - tonyenglish.vn)",
+        "sub": "Bẫy ngữ pháp, giới hạn số từ (word limit), dự đoán loại từ và kỹ thuật dò tìm từ đồng nghĩa (paraphrasing).",
+        "localFile": "02-Bẫy dạng điền từ IELTS Reading.mp3",
+        "storageFileName": "ep_02.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/reading/ep_02.mp3",
+        "durationSec": 1269,
+        "durationStr": "21:09"
+      },
+      {
+        "episode": 3,
+        "code": "3",
+        "title": "Matching Information & Features IELTS Reading (thầy Tôn - tonyenglish.vn)",
+        "sub": "Tư duy định vị quét tên riêng, mốc thời gian, nối đặc điểm với danh sách đối tượng nghiên cứu.",
+        "localFile": "03-Tư duy định vị IELTS Reading.mp3",
+        "storageFileName": "ep_03.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/reading/ep_03.mp3",
+        "durationSec": 1238,
+        "durationStr": "20:38"
+      },
+      {
+        "episode": 4,
+        "code": "4",
+        "title": "Matching Headings IELTS Reading (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật nắm bắt Topic Sentence, phân biệt ý chính đoạn văn với ví dụ minh họa chi tiết.",
+        "localFile": "04-Chiến thuật làm bài Matching Headings.mp3",
+        "storageFileName": "ep_04.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/reading/ep_04.mp3",
+        "durationSec": 1190,
+        "durationStr": "19:50"
+      },
+      {
+        "episode": 5,
+        "code": "5",
+        "title": "Multiple Choice IELTS Reading (thầy Tôn - tonyenglish.vn)",
+        "sub": "Phương pháp loại trừ phương án nhiễu, bẫy từ khóa lặp lại nguyên văn và bẫy tuyệt đối hóa.",
+        "localFile": "05-Phá bẫy Multiple Choice IELTS Reading.mp3",
+        "storageFileName": "ep_05.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/reading/ep_05.mp3",
+        "durationSec": 1169,
+        "durationStr": "19:29"
+      },
+      {
+        "episode": 6,
+        "code": "6",
+        "title": "Short Answer Questions IELTS Reading (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật định vị câu trả lời ngắn, trích xuất nguyên văn cụm từ chính xác từ bài đọc.",
+        "localFile": "06-Chiến thuật IELTS Reading trả lời ngắn.mp3",
+        "storageFileName": "ep_06.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/reading/ep_06.mp3",
+        "durationSec": 1017,
+        "durationStr": "16:57"
+      }
+    ]
+  },
+  "listening": {
+    "moduleId": "2db0cf32-3ea1-4fe2-afc7-37b8dae49afd",
+    "moduleName": "Luyện thi Nghe",
+    "lectureTitle": "Podcast Luyện Nghe",
+    "storageFolder": "audio/podcast/ielts-premium/listening",
+    "themeColor": "#c2410c",
+    "themeBg": "linear-gradient(135deg, #7c2d12 0%, #c2410c 50%, #ea580c 100%)",
+    "badge": "9 TẬP PODCAST LISTENING",
+    "desc": "Chiến lược nhận diện cạm bẫy âm thanh, kỹ thuật nghe bắt từ khóa và xử lý toàn diện 9 dạng câu hỏi IELTS Listening.",
+    "episodes": [
+      {
+        "episode": 1,
+        "code": "1",
+        "title": "Letters & Numbers IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Bẫy đánh vần tên riêng, chữ cái dễ nhầm (A-E-I, J-G, H-8), số điện thoại, mã bưu chính và đơn vị tiền tệ.",
+        "localFile": "01-Bẫy chữ cái và con số IELTS.mp3",
+        "storageFileName": "ep_01.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_01.mp3",
+        "durationSec": 1145,
+        "durationStr": "19:05"
+      },
+      {
+        "episode": 2,
+        "code": "2",
+        "title": "Form Completion IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật nghe bắt thông tin Section 1, bẫy sửa lại thông tin (self-correction) và định dạng ngày tháng.",
+        "localFile": "02-Bẫy Form Completion trong IELTS Listening.mp3",
+        "storageFileName": "ep_02.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_02.mp3",
+        "durationSec": 1442,
+        "durationStr": "24:02"
+      },
+      {
+        "episode": 3,
+        "code": "3",
+        "title": "Map Labelling IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật xử gọn sơ đồ bản đồ, xác định điểm xuất phát, phương hướng và từ chỉ vị trí không gian.",
+        "localFile": "03-Chiến thuật xử gọn IELTS Map Labelling.mp3",
+        "storageFileName": "ep_03.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_03.mp3",
+        "durationSec": 1428,
+        "durationStr": "23:48"
+      },
+      {
+        "episode": 4,
+        "code": "4",
+        "title": "Short Answer Questions IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Kỹ thuật bắt từ khóa then chốt, tháo gỡ bẫy từ gây nhiễu và kiểm soát giới hạn số từ cho phép.",
+        "localFile": "04-Tháo bẫy Short Answer Questions IELTS.mp3",
+        "storageFileName": "ep_04.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_04.mp3",
+        "durationSec": 700,
+        "durationStr": "11:40"
+      },
+      {
+        "episode": 5,
+        "code": "5",
+        "title": "Diagram & Flow-chart IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Kỹ thuật theo dõi quy trình từng bước, nhận diện các từ nối chuyển giao giai đoạn trong bài nghe.",
+        "localFile": "05-Chiến thuật làm Diagram IELTS Listening.mp3",
+        "storageFileName": "ep_05.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_05.mp3",
+        "durationSec": 1331,
+        "durationStr": "22:11"
+      },
+      {
+        "episode": 6,
+        "code": "6",
+        "title": "Note, Table & Sentence Completion IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Dự đoán loại từ cần điền, kỹ thuật bám sát cấu trúc ngữ pháp và nhận diện từ đồng nghĩa tức thời.",
+        "localFile": "06-Né bẫy IELTS Listening Completion.mp3",
+        "storageFileName": "ep_06.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_06.mp3",
+        "durationSec": 1074,
+        "durationStr": "17:54"
+      },
+      {
+        "episode": 7,
+        "code": "7",
+        "title": "Multiple Choice IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật đọc trước đáp án Section 2 & 3, nhận diện bẫy nói về cả 3 phương án để đánh lừa.",
+        "localFile": "07-Né bẫy trắc nghiệm IELTS Listening.mp3",
+        "storageFileName": "ep_07.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_07.mp3",
+        "durationSec": 901,
+        "durationStr": "15:01"
+      },
+      {
+        "episode": 8,
+        "code": "8",
+        "title": "Matching IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Phương pháp ghi chú nhanh, ghép cặp thông tin nhân vật, ý kiến với danh sách lựa chọn rút gọn.",
+        "localFile": "08-Thoát bẫy Matching trong IELTS Listening.mp3",
+        "storageFileName": "ep_08.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_08.mp3",
+        "durationSec": 1084,
+        "durationStr": "18:04"
+      },
+      {
+        "episode": 9,
+        "code": "9",
+        "title": "Summary Completion IELTS Listening (thầy Tôn - tonyenglish.vn)",
+        "sub": "Chiến thuật chinh phục tóm tắt Section 4, bám sát dàn ý bài giảng học thuật của diễn giả.",
+        "localFile": "09-Chiến thuật làm bài Summary Completion IELTS.mp3",
+        "storageFileName": "ep_09.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/listening/ep_09.mp3",
+        "durationSec": 802,
+        "durationStr": "13:22"
+      }
+    ]
+  },
+  "speaking": {
+    "moduleId": "5a9c8837-eb63-4492-af17-dbb0f39a90b1",
+    "moduleName": "Luyện thi Nói",
+    "lectureTitle": "Podcast Luyện Nói",
+    "storageFolder": "audio/podcast/ielts-premium/speaking",
+    "themeColor": "#be185d",
+    "themeBg": "linear-gradient(135deg, #831843 0%, #be185d 50%, #db2777 100%)",
+    "badge": "10 TẬP PODCAST SPEAKING PART 2",
+    "desc": "Chiến thuật 9 Templates bẻ lái độc quyền của thầy Tôn, giúp thí sinh làm chủ mọi chủ đề IELTS Speaking Part 2 một cách tự tin và lưu loát.",
+    "episodes": [
+      {
+        "episode": 1,
+        "code": "1",
+        "title": "Template 1 - Mr. John (Mô tả người / Thầy giáo / Người ngưỡng mộ) [1]",
+        "sub": "Cấu trúc 4 giai đoạn mô tả ngoại hình, tính cách, kỷ niệm sâu sắc và tác động tích cực đến bản thân.",
+        "localFile": "01-Bí quyết tả người IELTS Speaking.mp3",
+        "storageFileName": "ep_01.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_01.mp3",
+        "durationSec": 1358,
+        "durationStr": "22:38"
+      },
+      {
+        "episode": 2,
+        "code": "2",
+        "title": "Template 2 - A Modern Flat (Mô tả địa điểm / Căn hộ / Tòa nhà hiện đại) [1]",
+        "sub": "Kỹ thuật mô tả kiến trúc không gian, tiện nghi hiện đại, vị trí và cảm giác thoải mái khi ở đó.",
+        "localFile": "02-Template Modern Flat cho IELTS Speaking.mp3",
+        "storageFileName": "ep_02.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_02.mp3",
+        "durationSec": 1221,
+        "durationStr": "20:21"
+      },
+      {
+        "episode": 3,
+        "code": "3",
+        "title": "Template 3 - The Bicycle (Mô tả đồ vật / Phương tiện / Món đồ yêu thích) [1]",
+        "sub": "Chiến thuật kể câu chuyện nguồn gốc món đồ, công dụng hàng ngày, giá trị tinh thần và kỷ niệm.",
+        "localFile": "03-Cấu trúc 4 giai đoạn IELTS Speaking.mp3",
+        "storageFileName": "ep_03.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_03.mp3",
+        "durationSec": 1260,
+        "durationStr": "21:00"
+      },
+      {
+        "episode": 4,
+        "code": "4",
+        "title": "Template 4 - Bicycle Racing (Mô tả sự kiện / Cuộc thi / Môn thể thao) [1]",
+        "sub": "Cách xây dựng cao trào sự kiện, không khí hồi hộp, sự chuẩn bị và bài học vượt qua giới hạn.",
+        "localFile": "04-Template Cuộc đua xe đạp IELTS Speaking.mp3",
+        "storageFileName": "ep_04.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_04.mp3",
+        "durationSec": 1111,
+        "durationStr": "18:31"
+      },
+      {
+        "episode": 5,
+        "code": "5",
+        "title": "Template 5 - Bai Dinh Temple (Mô tả địa điểm lịch sử / Văn hóa / Chuyến đi) [1]",
+        "sub": "Khung miêu tả danh lam thắng cảnh, kiến trúc cổ kính, không khí trang nghiêm và ý nghĩa lịch sử.",
+        "localFile": "05-Cấu trúc 4 bước Template Bái Đính.mp3",
+        "storageFileName": "ep_05.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_05.mp3",
+        "durationSec": 1234,
+        "durationStr": "20:34"
+      },
+      {
+        "episode": 6,
+        "code": "6",
+        "title": "Template 6 - Autumn Weather (Mô tả thời tiết / Mùa yêu thích / Thời điểm) [1]",
+        "sub": "Bản thiết kế mô tả khí hậu, sắc thái thiên nhiên mùa thu Hà Nội, tâm trạng thư thái và hoạt động ngoài trời.",
+        "localFile": "06-Bản thiết kế Template 6 Thầy Tôn.mp3",
+        "storageFileName": "ep_06.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_06.mp3",
+        "durationSec": 1206,
+        "durationStr": "20:06"
+      },
+      {
+        "episode": 7,
+        "code": "7",
+        "title": "Template 7 - Korean BBQ (Mô tả món ăn / Bữa ăn / Ẩm thực) [1]",
+        "sub": "Cấu trúc 4 giai đoạn miêu tả hương vị, nguyên liệu, trải nghiệm ẩm thực ấm cúng bên người thân.",
+        "localFile": "07-Cấu trúc 4 Stage Template Korean BBQ.mp3",
+        "storageFileName": "ep_07.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_07.mp3",
+        "durationSec": 1240,
+        "durationStr": "20:40"
+      },
+      {
+        "episode": 8,
+        "code": "8",
+        "title": "Template 8 - The Bamboo (Mô tả cây cối / Thực vật / Biểu tượng) [1]",
+        "sub": "Nghệ thuật miêu tả cây tre Việt Nam: đặc tính kiên cường, công dụng truyền thống và biểu tượng văn hóa.",
+        "localFile": "08-Cấu trúc 4 giai đoạn bài nói.mp3",
+        "storageFileName": "ep_08.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_08.mp3",
+        "durationSec": 1138,
+        "durationStr": "18:58"
+      },
+      {
+        "episode": 9,
+        "code": "9",
+        "title": "Template 9 - The Happy Couple (Mô tả mối quan hệ / Cặp đôi / Kỷ niệm) [1]",
+        "sub": "Khung kể chuyện tình cảm hạnh phúc của bố mẹ/ông bà, những thử thách đã qua và cảm hứng yêu thương.",
+        "localFile": "09-Template Speaking Cặp đôi hạnh phúc.mp3",
+        "storageFileName": "ep_09.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_09.mp3",
+        "durationSec": 978,
+        "durationStr": "16:18"
+      },
+      {
+        "episode": 10,
+        "code": "10",
+        "title": "Hướng dẫn Ghép 9 Templates với các Chủ đề Speaking Part 2 (Tư duy bẻ lái đề bài và ứng biến linh hoạt) [1]",
+        "sub": "Tư duy bẻ lái đề bài linh hoạt (topic shifting), cách liên kết mọi đề thi bất ngờ về 9 khung tủ vững chắc.",
+        "localFile": "10-9 template bẻ lái Speaking Part 2.mp3",
+        "storageFileName": "ep_10.mp3",
+        "audioUrl": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/podcast/ielts-premium/speaking/ep_10.mp3",
+        "durationSec": 1314,
+        "durationStr": "21:54"
+      }
+    ]
+  }
+}
