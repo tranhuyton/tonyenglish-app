@@ -489,11 +489,11 @@ const COURSE_PODCAST_COUNT: Record<string, number> = {
 
 const LECTURE_PODCAST_COUNT: Record<string, number> = {
   // IELTS Premium Lectures
-  'ede14d51-3169-4f0e-a1a8-a2d8b9a31a4b': 6,  // Hướng dẫn và Phân tích Viết Task 1
-  'b01279e6-fed1-4647-8b45-65c39f73003e': 5,  // Hướng dẫn và Phân tích Viết Task 2
-  '4474b4db-59d1-4f50-9a44-004a547b6521': 6,  // Hướng dẫn và Phân tích Luyện Đọc
-  '11f45a0a-3288-479d-8b90-fcf9ce6ca484': 9,  // Hướng dẫn và Phân tích Luyện Nghe
-  'bbd2be97-406d-41b5-a337-8e210e2f49c9': 10, // Hướng dẫn và Phân tích Luyện Nói
+  'de1b8a6b-2f61-4bc4-86c2-b14cd50ebea4': 6,  // Podcast Viết Task 1
+  'ec9fe735-7379-4590-87be-d2447c83e95e': 5,  // Podcast Viết Task 2
+  'aa4ab4ae-be09-4957-a47c-f97f6be18ba5': 6,  // Podcast Luyện Đọc
+  '64970f0b-4756-4926-a5c1-6f9b548943af': 9,  // Podcast Luyện Nghe
+  '2dfc8d7c-a4b4-47c4-b092-b9699a74dce9': 10, // Podcast Luyện Nói
 };
 
 const getPodcastCount = (lecture: { id: string; title: string }, courseId: string): number => {

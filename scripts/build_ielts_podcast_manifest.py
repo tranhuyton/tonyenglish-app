@@ -22,37 +22,37 @@ skills_meta = {
         "episodes": [
             {
                 "ch": 1,
-                "title": "Task 1 Dynamic Chart (thầy Tôn - tonyenglish.vn)",
+                "title": "Task 1 Dynamic Chart",
                 "sub": "Chiến thuật ghép khung với từ vựng chỉ xu hướng tăng, giảm, dao động, chạm mốc và từ nối mô tả sự thay đổi qua các mốc thời gian.",
                 "file": "01-Cấu trúc bất biến Dynamic Chart IELTS.mp3"
             },
             {
                 "ch": 2,
-                "title": "Task 1 Static Chart (thầy Tôn - tonyenglish.vn)",
+                "title": "Task 1 Static Chart",
                 "sub": "Phương pháp ghép khung với từ vựng so sánh hơn, so sánh nhất, nhóm hạng mục, tỷ trọng cho bài không có mốc thời gian.",
                 "file": "02-Tư duy logic viết Task 1 IELTS.mp3"
             },
             {
                 "ch": 3,
-                "title": "Task 1 Process (thầy Tôn - tonyenglish.vn)",
+                "title": "Task 1 Process",
                 "sub": "Bí quyết ghép khung quy trình tự nhiên/nhân tạo với câu bị động (Passive Voice), từ nối thứ tự các bước và động từ chuyển hóa giai đoạn.",
                 "file": "03-Cấu trúc bất biến IELTS Process.mp3"
             },
             {
                 "ch": 4,
-                "title": "Task 1 Outdoor Map (thầy Tôn - tonyenglish.vn)",
+                "title": "Task 1 Outdoor Map",
                 "sub": "Kỹ thuật ghép khung bản đồ quy hoạch khu vực với từ vựng mở rộng, phá bỏ, thay thế và hướng phương vị (Bắc-Nam-Đông-Tây).",
                 "file": "04-Cách viết bài IELTS Outdoor Map.mp3"
             },
             {
                 "ch": 5,
-                "title": "Task 1 Indoor Map (thầy Tôn - tonyenglish.vn)",
+                "title": "Task 1 Indoor Map",
                 "sub": "Chiến thuật ghép khung sơ đồ mặt bằng/nội thất không gian hẹp với từ vựng chỉ vị trí đối diện, kế bên, góc phòng và cải tạo mặt bằng.",
                 "file": "05-Cách viết Indoor Map IELTS.mp3"
             },
             {
                 "ch": 6,
-                "title": "Task 1 Mixed Charts (thầy Tôn - tonyenglish.vn)",
+                "title": "Task 1 Mixed Charts",
                 "sub": "Phương pháp xử lý biểu đồ kết hợp, cách chia Body 1 & Body 2 cho 2 biểu đồ riêng biệt và kỹ thuật viết Overview 2 ý song song.",
                 "file": "06-Chiến thuật viết Mixed Charts IELTS.mp3"
             }
@@ -114,37 +114,37 @@ skills_meta = {
         "episodes": [
             {
                 "ch": 1,
-                "title": "True/False/Not Given IELTS Reading (thầy Tôn - tonyenglish.vn)",
+                "title": "True/False/Not Given IELTS Reading",
                 "sub": "Kỹ thuật phân biệt False vs Not Given, chiến lược quét từ khóa định vị và nhận diện bẫy suy diễn thông tin.",
                 "file": "01-Bẫy True False Not Given IELTS.mp3"
             },
             {
                 "ch": 2,
-                "title": "Completion Types IELTS Reading (thầy Tôn - tonyenglish.vn)",
+                "title": "Completion Types IELTS Reading",
                 "sub": "Bẫy ngữ pháp, giới hạn số từ (word limit), dự đoán loại từ và kỹ thuật dò tìm từ đồng nghĩa (paraphrasing).",
                 "file": "02-Bẫy dạng điền từ IELTS Reading.mp3"
             },
             {
                 "ch": 3,
-                "title": "Matching Information & Features IELTS Reading (thầy Tôn - tonyenglish.vn)",
+                "title": "Matching Information & Features IELTS Reading",
                 "sub": "Tư duy định vị quét tên riêng, mốc thời gian, nối đặc điểm với danh sách đối tượng nghiên cứu.",
                 "file": "03-Tư duy định vị IELTS Reading.mp3"
             },
             {
                 "ch": 4,
-                "title": "Matching Headings IELTS Reading (thầy Tôn - tonyenglish.vn)",
+                "title": "Matching Headings IELTS Reading",
                 "sub": "Chiến thuật nắm bắt Topic Sentence, phân biệt ý chính đoạn văn với ví dụ minh họa chi tiết.",
                 "file": "04-Chiến thuật làm bài Matching Headings.mp3"
             },
             {
                 "ch": 5,
-                "title": "Multiple Choice IELTS Reading (thầy Tôn - tonyenglish.vn)",
+                "title": "Multiple Choice IELTS Reading",
                 "sub": "Phương pháp loại trừ phương án nhiễu, bẫy từ khóa lặp lại nguyên văn và bẫy tuyệt đối hóa.",
                 "file": "05-Phá bẫy Multiple Choice IELTS Reading.mp3"
             },
             {
                 "ch": 6,
-                "title": "Short Answer Questions IELTS Reading (thầy Tôn - tonyenglish.vn)",
+                "title": "Short Answer Questions IELTS Reading",
                 "sub": "Chiến thuật định vị câu trả lời ngắn, trích xuất nguyên văn cụm từ chính xác từ bài đọc.",
                 "file": "06-Chiến thuật IELTS Reading trả lời ngắn.mp3"
             }
@@ -163,55 +163,55 @@ skills_meta = {
         "episodes": [
             {
                 "ch": 1,
-                "title": "Letters & Numbers IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Letters & Numbers IELTS Listening",
                 "sub": "Bẫy đánh vần tên riêng, chữ cái dễ nhầm (A-E-I, J-G, H-8), số điện thoại, mã bưu chính và đơn vị tiền tệ.",
                 "file": "01-Bẫy chữ cái và con số IELTS.mp3"
             },
             {
                 "ch": 2,
-                "title": "Form Completion IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Form Completion IELTS Listening",
                 "sub": "Chiến thuật nghe bắt thông tin Section 1, bẫy sửa lại thông tin (self-correction) và định dạng ngày tháng.",
                 "file": "02-Bẫy Form Completion trong IELTS Listening.mp3"
             },
             {
                 "ch": 3,
-                "title": "Map Labelling IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Map Labelling IELTS Listening",
                 "sub": "Chiến thuật xử gọn sơ đồ bản đồ, xác định điểm xuất phát, phương hướng và từ chỉ vị trí không gian.",
                 "file": "03-Chiến thuật xử gọn IELTS Map Labelling.mp3"
             },
             {
                 "ch": 4,
-                "title": "Short Answer Questions IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Short Answer Questions IELTS Listening",
                 "sub": "Kỹ thuật bắt từ khóa then chốt, tháo gỡ bẫy từ gây nhiễu và kiểm soát giới hạn số từ cho phép.",
                 "file": "04-Tháo bẫy Short Answer Questions IELTS.mp3"
             },
             {
                 "ch": 5,
-                "title": "Diagram & Flow-chart IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Diagram & Flow-chart IELTS Listening",
                 "sub": "Kỹ thuật theo dõi quy trình từng bước, nhận diện các từ nối chuyển giao giai đoạn trong bài nghe.",
                 "file": "05-Chiến thuật làm Diagram IELTS Listening.mp3"
             },
             {
                 "ch": 6,
-                "title": "Note, Table & Sentence Completion IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Note, Table & Sentence Completion IELTS Listening",
                 "sub": "Dự đoán loại từ cần điền, kỹ thuật bám sát cấu trúc ngữ pháp và nhận diện từ đồng nghĩa tức thời.",
                 "file": "06-Né bẫy IELTS Listening Completion.mp3"
             },
             {
                 "ch": 7,
-                "title": "Multiple Choice IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Multiple Choice IELTS Listening",
                 "sub": "Chiến thuật đọc trước đáp án Section 2 & 3, nhận diện bẫy nói về cả 3 phương án để đánh lừa.",
                 "file": "07-Né bẫy trắc nghiệm IELTS Listening.mp3"
             },
             {
                 "ch": 8,
-                "title": "Matching IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Matching IELTS Listening",
                 "sub": "Phương pháp ghi chú nhanh, ghép cặp thông tin nhân vật, ý kiến với danh sách lựa chọn rút gọn.",
                 "file": "08-Thoát bẫy Matching trong IELTS Listening.mp3"
             },
             {
                 "ch": 9,
-                "title": "Summary Completion IELTS Listening (thầy Tôn - tonyenglish.vn)",
+                "title": "Summary Completion IELTS Listening",
                 "sub": "Chiến thuật chinh phục tóm tắt Section 4, bám sát dàn ý bài giảng học thuật của diễn giả.",
                 "file": "09-Chiến thuật làm bài Summary Completion IELTS.mp3"
             }
