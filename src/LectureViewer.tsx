@@ -1322,6 +1322,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 if (Math.abs(prev - targetHeight) <= 6) return prev;
                 return targetHeight;
               });
+              window.dispatchEvent(new CustomEvent('tony-lecture-rehighlight'));
           }
         } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
           if (iframeRef.current) {
@@ -4731,7 +4732,50 @@ export default function LectureViewer({
                            </button>
                          </div>
                        )}
-                       {activeLectureVideoId && currentPage === 1 && (
+                       {/* Tab bar cho các bài giảng có audio và nhiều trang (Ví dụ Biology 0610) */}
+                        {!activeLecture?.title?.toLowerCase().includes('podcast') && LECTURE_MANIFEST_MAP[activeLectureId] && totalPages > 1 && (
+                          <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                            <button
+                              type="button"
+                              onClick={() => { setCurrentPage(1); persistPage(1); }}
+                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                currentPage === 1 
+                                  ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                              }`}
+                            >
+                              <span>🇬🇧</span>
+                              <span>Bản Tiếng Anh (Trang 1)</span>
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => { setCurrentPage(2); persistPage(2); }}
+                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                currentPage === 2 
+                                  ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                              }`}
+                            >
+                              <span>🇻🇳</span>
+                              <span>Bản Song ngữ (Trang 2)</span>
+                            </button>
+                            {totalPages >= 3 && (
+                              <button
+                                type="button"
+                                onClick={() => { setCurrentPage(3); persistPage(3); }}
+                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                  currentPage === 3 
+                                    ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                }`}
+                              >
+                                <span>🎯</span>
+                                <span>Syllabus Content (Trang 3)</span>
+                              </button>
+                            )}
+                          </div>
+                        )}
+                        {activeLectureVideoId && (currentPage === 1 || currentPage === 2) && (
                          <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
                            <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-slate-700/60">
                              <div className="flex items-center gap-2.5 min-w-0">
@@ -4785,7 +4829,7 @@ export default function LectureViewer({
                            )}
                          </div>
                        )}
-                       {activeLectureId && currentPage === 1 && LECTURE_MANIFEST_MAP[activeLectureId] && (
+                       {activeLectureId && (currentPage === 1 || currentPage === 2) && LECTURE_MANIFEST_MAP[activeLectureId] && (
                          <InteractiveLecturePlayer 
                            key={activeLectureId}
                            manifestUrl={LECTURE_MANIFEST_MAP[activeLectureId]} 

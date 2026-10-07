@@ -114,6 +114,18 @@ export default function InteractiveLecturePlayer({
     }
   }, [currentSegment, autoScroll, onHighlightSection]);
 
+  useEffect(() => {
+    const handleReHighlight = () => {
+      if (currentSegment) {
+        window.dispatchEvent(new CustomEvent('tony-lecture-highlight-section', {
+          detail: { selector: currentSegment.selector, autoScroll: true }
+        }));
+      }
+    };
+    window.addEventListener('tony-lecture-rehighlight', handleReHighlight);
+    return () => window.removeEventListener('tony-lecture-rehighlight', handleReHighlight);
+  }, [currentSegment]);
+
   // Xử lý khi kết thúc 1 audio segment
   const handleEnded = useCallback(() => {
     const curIdx = currentSegmentIndexRef.current;
