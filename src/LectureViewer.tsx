@@ -462,6 +462,15 @@ const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   '0497aa28-0b26-45b3-a233-74fb121c1824': 'lrbcT5nZ_Ew', // Topic 37. Globalisation, Free Trade and Protection
   'ecb53067-d586-4806-9702-e52ad5c659e1': 'kof_fh3_k3M', // Topic 38. Foreign Exchange Rates
   '2d85d85e-815b-44f3-b6dd-82585e41b669': 'T67ZxnqM0iI', // Topic 39. Current Account of Balance of Payments
+
+  // ==========================================
+  // IELTS Premium (Course ID: 239a64f0-c106-40e5-a6e2-4e685a0d70fb)
+  // ==========================================
+  'ede14d51-3169-4f0e-a1a8-a2d8b9a31a4b': 'QM1HfK1QtHY', // Hướng dẫn và Phân tích Viết Task 1
+  'b01279e6-fed1-4647-8b45-65c39f73003e': 'Z4cUUkbgfVA', // Hướng dẫn và Phân tích Viết Task 2
+  'bbd2be97-406d-41b5-a337-8e210e2f49c9': 'nwlmhaeEwpQ', // Hướng dẫn và Phân tích Luyện Nói
+  '11f45a0a-3288-479d-8b90-fcf9ce6ca484': 'ockbvPUOPJk', // Hướng dẫn và Phân tích Luyện Nghe
+  '4474b4db-59d1-4f50-9a44-004a547b6521': '11mFWJ8izco', // Hướng dẫn và Phân tích Luyện Đọc
 };
 
 const getYouTubeVideoId = (url: string): string | null => {
@@ -479,12 +488,12 @@ const COURSE_PODCAST_COUNT: Record<string, number> = {
 };
 
 const LECTURE_PODCAST_COUNT: Record<string, number> = {
-  // IELTS Premium Podcast Lectures
-  'ede14d51-3169-4f0e-a1a8-a2d8b9a31a4b': 6,  // Podcast Viết Task 1
-  'b01279e6-fed1-4647-8b45-65c39f73003e': 5,  // Podcast Viết Task 2
-  '4474b4db-59d1-4f50-9a44-004a547b6521': 6,  // Podcast Luyện Đọc
-  '11f45a0a-3288-479d-8b90-fcf9ce6ca484': 9,  // Podcast Luyện Nghe
-  'bbd2be97-406d-41b5-a337-8e210e2f49c9': 10, // Podcast Luyện Nói
+  // IELTS Premium Lectures
+  'ede14d51-3169-4f0e-a1a8-a2d8b9a31a4b': 6,  // Hướng dẫn và Phân tích Viết Task 1
+  'b01279e6-fed1-4647-8b45-65c39f73003e': 5,  // Hướng dẫn và Phân tích Viết Task 2
+  '4474b4db-59d1-4f50-9a44-004a547b6521': 6,  // Hướng dẫn và Phân tích Luyện Đọc
+  '11f45a0a-3288-479d-8b90-fcf9ce6ca484': 9,  // Hướng dẫn và Phân tích Luyện Nghe
+  'bbd2be97-406d-41b5-a337-8e210e2f49c9': 10, // Hướng dẫn và Phân tích Luyện Nói
 };
 
 const getPodcastCount = (lecture: { id: string; title: string }, courseId: string): number => {
@@ -4644,7 +4653,7 @@ export default function LectureViewer({
                                           {Array.isArray(LECTURE_VIDEO_MAP[lec.id]) ? `Video (${(LECTURE_VIDEO_MAP[lec.id] as any[]).length})` : 'Video'}
                                         </span>
                                       )}
-                                      {lec.title.toLowerCase().includes('podcast') && (
+                                      {(lec.title.toLowerCase().includes('podcast') || LECTURE_PODCAST_COUNT[lec.id]) && (
                                         <span 
                                           className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1 shrink-0" 
                                           title="Bài giảng Audio Podcast"
@@ -4724,7 +4733,7 @@ export default function LectureViewer({
                        <h2 className="text-[26px] md:text-[36px] text-slate-900 font-extrabold mb-8 md:mb-12 pb-6 border-b border-slate-100 leading-tight tracking-tight">
                            {activeLecture?.title}
                        </h2>
-                       {activeLecture?.title?.toLowerCase().includes('podcast') && totalPages > 1 && (
+                       {(activeLecture?.title?.toLowerCase().includes('podcast') || (activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId])) && totalPages > 1 && (
                          <div className="flex items-center gap-2.5 mb-8 flex-wrap">
                            <button
                              type="button"
@@ -4753,7 +4762,7 @@ export default function LectureViewer({
                          </div>
                        )}
                        {/* Tab bar cho các bài giảng có audio và nhiều trang (Ví dụ Biology 0610) */}
-                        {!activeLecture?.title?.toLowerCase().includes('podcast') && LECTURE_MANIFEST_MAP[activeLectureId] && totalPages > 1 && (
+                        {!activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && LECTURE_MANIFEST_MAP[activeLectureId] && totalPages > 1 && (
                           <div className="flex items-center gap-2.5 mb-8 flex-wrap">
                             <button
                               type="button"
