@@ -628,15 +628,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
           if (!isTextMode) {
               if (!streamRef.current) {
-                  streamRef.current = await navigator.mediaDevices.getUserMedia({ 
-                      audio: {
-                          echoCancellation: true,
-                          noiseSuppression: true,
-                          autoGainControl: true,
-                          sampleRate: 16000,
-                          channelCount: 1
-                      } 
-                  });
+                  streamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
               }
               audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
               if (audioCtxInputRef.current.state === 'suspended') {
@@ -661,7 +653,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
                       },
                       systemInstruction: { parts: [{ text: sysPrompt }] },
-                      inputAudioTranscription: { model: "models/gemini-3.1-flash-live-preview", languageCode: "en-US" },
+                      inputAudioTranscription: {},
                       outputAudioTranscription: {},
                       // 🚀 TẮT VAD: AI chỉ trả lời khi user THẢ nút "Nhấn nói"
                       // Không tự động cắt ngang khi user ngừng nói giữa chừng
