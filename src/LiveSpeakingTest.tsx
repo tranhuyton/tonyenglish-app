@@ -258,6 +258,23 @@ export default function LiveSpeakingTest({
   const [splitWidthVw, setSplitWidthVw] = useState(50);
   const isSplitDraggingRef = useRef(false);
 
+  // 🧭 Chế độ đàm thoại & chủ đề (Khai báo sớm để useMemo & functions dùng an toàn, không bị TDZ)
+  const currentMode = (typeof window !== 'undefined' ? sessionStorage.getItem('tony_live_mode') : null) || 'EXAMINER';
+  const currentTopic = (typeof window !== 'undefined' ? sessionStorage.getItem('tony_live_topic') : null) || "Bài tập giao tiếp tổng hợp";
+
+  const isReflexMode = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || Boolean(courseTitle && courseTitle.toLowerCase().includes('giao tiếp'));
+  const isIeltsMode = Boolean(courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
+
+  const getDisplayTopic = () => {
+      if (currentMode === 'TUTOR') return "Chữa bài & Giải đáp thắc mắc chuyên sâu";
+      if (currentTopic.startsWith('Hãy đóng vai là trợ lý luyện phản xạ') || currentTopic.includes('luyện phản xạ')) {
+          const match = currentTopic.match(/luyện phản xạ\s+([^:.]+)/i);
+          if (match) return `Luyện phản xạ: ${match[1].trim()}`;
+          return "Luyện phản xạ: 10 cấu trúc câu giao tiếp cơ bản (Dò bài & Tình huống thực chiến)";
+      }
+      return currentTopic;
+  };
+
   // REFS QUAN TRỌNG ĐIỀU KHIỂN LUỒNG
   const wsRef = useRef<WebSocket | null>(null);
   const isSetupCompleteRef = useRef<boolean>(false);
@@ -349,7 +366,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
 2. NẾU ĐỀ BÀI KHÔNG LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
    - Bạn BẮT BUỘC PHẢI TỪ CHỐI GIẢI ĐÁP NGAY LẬP TỨC.
-   - Câu trả lời từ chối bắt buộc phải viết: "Thầy/Cô không thể giải bài này vì nó thuộc môn học khác, không nằm trong phạm vi của khóa học ${finalCourseTitle}. Con vui lòng gửi đề bài đúng môn học nhé!"
+   - Câu trả lời từ chối bắt buộc phải viết: "Thầy/Cô không thể giải bài này vì nó thuộc môn học khác, không nằm trong phạm vi của khóa học ${finalCourseTitle}. Em vui lòng gửi đề bài đúng môn học nhé!"
    - Tuyệt đối KHÔNG giải thích thêm, KHÔNG đưa ra lời khuyên hay đáp án mẫu của đề bài đó.
 
 3. NẾU ĐỀ BÀI LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
@@ -363,7 +380,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               throw new Error("Lỗi kết nối bộ não Mắt Thần.");
           }
 
-          const resultText = data.result || "Thầy đang bị mờ mắt một chút, con chụp lại đề bài gửi lại cho thầy nhé.";
+          const resultText = data.result || "Thầy đang bị mờ mắt một chút, em chụp lại đề bài gửi lại cho thầy/cô nhé.";
           
           setIsProcessing(false);
           
@@ -384,7 +401,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
       } catch (err) {
           setIsProcessing(false);
-          setMessages(prev => [...prev, { role: 'model', text: "Hệ thống Mắt Thần đang quá tải, con vui lòng thử lại sau nhé!" }]);
+          setMessages(prev => [...prev, { role: 'model', text: "Hệ thống Mắt Thần đang quá tải, em vui lòng thử lại sau nhé!" }]);
       }
   };
 
@@ -643,8 +660,8 @@ ${currentTopic}
           setStatus('CONNECTED');
           
           const welcomeMsg = examiner === 'TONY' 
-              ? "Chào con! Thầy đã nhìn thấy trang tài liệu PDF của con ở bên trái rồi. Con cần thầy trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!"
-              : "Chào con! Cô đã nhìn thấy trang tài liệu PDF của con ở bên trái rồi. Con cần cô trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!";
+              ? "Chào em! Thầy đã nhìn thấy trang tài liệu PDF của em ở bên trái rồi. Em cần thầy trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!"
+              : "Chào em! Cô đã nhìn thấy trang tài liệu PDF của em ở bên trái rồi. Em cần cô trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!";
           
           setMessages([{ role: 'model', text: welcomeMsg }]);
           setLiveTranscript('');
@@ -668,13 +685,17 @@ ${currentTopic}
       isSetupCompleteRef.current = false;
       callStartTimeRef.current = Date.now();
       
-      if (!isBlackboardMode) {
+      if (!isBlackboardMode && currentMode === 'TUTOR') {
           onMinimize();
       }
 
       try {
           const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-          audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
+          try {
+              audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
+          } catch (audioErr) {
+              audioCtxOutputRef.current = new AudioContextClass();
+          }
           if (audioCtxOutputRef.current.state === 'suspended') {
               await audioCtxOutputRef.current.resume();
           }
@@ -901,8 +922,9 @@ ${currentTopic}
               console.warn("WebSocket closed. Code:", event.code, "Reason:", event.reason);
               setStatus('IDLE');
           };
-      } catch (e) {
-          alert("Lỗi: Không thể khởi tạo kết nối.");
+      } catch (e: any) {
+          console.error("Lỗi khởi tạo live speaking session:", e);
+          alert(`Lỗi: Không thể khởi tạo kết nối (${e?.message || e})`);
           setStatus('IDLE');
       }
   };
@@ -974,7 +996,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
 2. NẾU ĐỀ BÀI KHÔNG LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
    - Bạn BẮT BUỘC PHẢI TỪ CHỐI GIẢI ĐÁP NGAY LẬP TỨC.
-   - Câu trả lời từ chối bắt buộc phải viết: "Thầy/Cô không thể giải bài này vì nó thuộc môn học khác, không nằm trong phạm vi của khóa học ${finalCourseTitle}. Con vui lòng gửi đề bài đúng môn học nhé!"
+   - Câu trả lời từ chối bắt buộc phải viết: "Thầy/Cô không thể giải bài này vì nó thuộc môn học khác, không nằm trong phạm vi của khóa học ${finalCourseTitle}. Em vui lòng gửi đề bài đúng môn học nhé!"
    - Tuyệt đối KHÔNG giải thích thêm, KHÔNG đưa ra lời khuyên hay đáp án mẫu của đề bài đó.
 
 3. NẾU ĐỀ BÀI LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
@@ -986,7 +1008,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
               if (error || !data) throw new Error("Lỗi API Vision");
 
-              const resultText = data.result || "Dạ hệ thống vừa gặp trục trặc một xíu, con gõ lại câu hỏi nha.";
+              const resultText = data.result || "Dạ hệ thống vừa gặp trục trặc một xíu, em gõ lại câu hỏi nha.";
               setIsProcessing(false);
               
               // 🚀 Lại kích hoạt hiệu ứng viết phấn
@@ -1004,7 +1026,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
           } catch (err) {
               setIsProcessing(false);
-              setMessages(prev => [...prev, { role: 'model', text: "Hệ thống đang quá tải, con vui lòng thử lại sau nhé!" }]);
+              setMessages(prev => [...prev, { role: 'model', text: "Hệ thống đang quá tải, em vui lòng thử lại sau nhé!" }]);
           }
           return;
       }
@@ -1208,14 +1230,14 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
              {messages.map((m, i) => (
                  <div key={i} className={`mb-1 p-2 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
                      <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{m.role === 'user' ? 'Câu hỏi của em:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
-                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
+                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{m.text}</ReactMarkdown>
                  </div>
              ))}
              
              {liveTranscript && (
                  <div className="mb-1 p-2 rounded-xl text-white">
                      <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'}</strong>
-                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
+                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{liveTranscript}</ReactMarkdown>
                  </div>
              )}
              
@@ -1252,14 +1274,14 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">
                           {m.role === 'user' ? 'Em nói:' : (isReflexMode ? (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:') : (isIeltsMode ? 'Giám khảo:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')))}
                       </strong>
-                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
+                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{m.text}</ReactMarkdown>
                   </div>
               ))}
               
               {liveTranscript && (
                   <div className={`p-3 rounded-lg bg-white border border-slate-200`}>
                       <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">{isReflexMode ? (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:') : (isIeltsMode ? 'Giám khảo:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'))}</strong>
-                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
+                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{liveTranscript}</ReactMarkdown>
                   </div>
               )}
               
@@ -1272,23 +1294,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               <div ref={messagesEndRef} />
           </div>
       );
-  }, [messages, isRecording, liveTranscript, currentDraft]);
-
-  const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
-  const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
-
-  const isReflexMode = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || (courseTitle && courseTitle.toLowerCase().includes('giao tiếp'));
-  const isIeltsMode = (courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
-
-  const getDisplayTopic = () => {
-      if (currentMode === 'TUTOR') return "Chữa bài & Giải đáp thắc mắc chuyên sâu";
-      if (currentTopic.startsWith('Hãy đóng vai là trợ lý luyện phản xạ') || currentTopic.includes('luyện phản xạ')) {
-          const match = currentTopic.match(/luyện phản xạ\s+([^:.]+)/i);
-          if (match) return `Luyện phản xạ: ${match[1].trim()}`;
-          return "Luyện phản xạ: 10 cấu trúc câu giao tiếp cơ bản (Dò bài & Tình huống thực chiến)";
-      }
-      return currentTopic;
-  };
+  }, [messages, isRecording, liveTranscript, currentDraft, examiner, isReflexMode, isIeltsMode]);
   
   const handleYellowButtonClick = () => { 
       if (onOpenAI) {

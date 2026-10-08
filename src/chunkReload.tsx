@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 /**
  * Quản lý tự động tải lại trang khi gặp lỗi Stale Chunk / 404 Dynamic Import.
@@ -179,11 +179,22 @@ export class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorB
               {isChunk ? 'Đã có bản cập nhật mới' : 'Có sự cố khi tải nội dung'}
             </h2>
             
-            <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+            <p className="text-sm text-slate-600 mb-4 leading-relaxed">
               {isChunk 
                 ? 'Hệ thống vừa cập nhật tính năng mới. Vui lòng bấm nút bên dưới để tải lại phiên bản mới nhất.'
                 : 'Đã xảy ra lỗi tạm thời khi kết nối đến trang này. Vui lòng tải lại hoặc quay về trang chủ.'}
             </p>
+
+            {this.state.error && !isChunk && (
+              <details className="mb-6 text-left bg-red-50 border border-red-200 rounded-xl p-3">
+                <summary className="text-[12px] font-bold text-red-600 cursor-pointer select-none">
+                  Chi tiết kỹ thuật
+                </summary>
+                <div className="mt-2 text-[11px] font-mono text-red-700 break-all whitespace-pre-wrap max-h-32 overflow-y-auto">
+                  {this.state.error?.message || String(this.state.error)}
+                </div>
+              </details>
+            )}
 
             <div className="flex flex-col gap-3">
               <button

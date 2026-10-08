@@ -367,8 +367,9 @@ export default function App() {
             />
           )}
 
-          <AITutorSidebar 
-            isOpen={isAISidebarOpen}
+          <AppErrorBoundary fallback={null}>
+            <AITutorSidebar 
+              isOpen={isAISidebarOpen}
             onClose={() => setIsAISidebarOpen(false)}
             mode={aiMode}
             topicTitle={ieltsTopic}
@@ -378,25 +379,53 @@ export default function App() {
             htmlContent={currentHtmlContent}
             courseTitle={activeCourseTitle}
             isCallActive={liveTutorState !== 'CLOSED'}
-          />
+            />
+          </AppErrorBoundary>
 
           {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG */}
           {liveTutorState !== 'CLOSED' && (
-            <LiveSpeakingTest 
-               viewState={liveTutorState}
-               onMinimize={() => setLiveTutorState('MINIMIZED')}
-               onMaximize={() => setLiveTutorState('FULLSCREEN')}
-               onClose={() => setLiveTutorState('CLOSED')}
-               courseTitle={activeCourseTitle}
-               onOpenAI={() => {
-                  const topic = sessionStorage.getItem('tony_live_topic') || '';
-                  if (topic) {
-                     setAiMode('ielts');
-                     setIeltsTopic(topic);
-                  }
-                  setIsAISidebarOpen(true);
-               }}
-            />
+            <AppErrorBoundary fallback={
+              <div className="fixed bottom-6 right-6 z-[99999] bg-slate-900/95 border border-red-500/50 text-white p-4 rounded-2xl shadow-2xl flex items-center gap-3 animate-in fade-in">
+                <span className="text-xl">⚠️</span>
+                <div className="text-xs">
+                  <div className="font-bold text-red-400">Lỗi đàm thoại AI</div>
+                  <div className="text-slate-400">Đã xảy ra sự cố trong phiên kết nối</div>
+                </div>
+                <button 
+                  onClick={() => setLiveTutorState('CLOSED')} 
+                  className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-all ml-2"
+                >
+                  Đóng
+                </button>
+              </div>
+            }>
+              <LiveSpeakingTest 
+                 viewState={liveTutorState}
+                 onMinimize={() => setLiveTutorState('MINIMIZED')}
+                 onMaximize={() => setLiveTutorState('FULLSCREEN')}
+                 onClose={() => setLiveTutorState('CLOSED')}
+                 courseTitle={activeCourseTitle}
+                 onOpenAI={(passedMode?: string) => {
+                    let topic = '';
+                    let liveMode = '';
+                    try {
+                      topic = sessionStorage.getItem('tony_live_topic') || '';
+                      liveMode = sessionStorage.getItem('tony_live_mode') || '';
+                    } catch (e) {}
+
+                    if (passedMode === 'tutor' || liveMode === 'TUTOR') {
+                       setAiMode('tutor');
+                    } else if (topic) {
+                       setAiMode('ielts');
+                       setIeltsTopic(topic);
+                       setIeltsTaskType('speaking');
+                    } else {
+                       setAiMode('tutor');
+                    }
+                    setIsAISidebarOpen(true);
+                 }}
+              />
+            </AppErrorBoundary>
           )}
         </Suspense>
       </AppErrorBoundary>
