@@ -81,6 +81,20 @@ type ChatMessage = {
 };
 
 // === HÀM HỖ TRỢ XỬ LÝ ÂM THANH PCM ===
+const resampleTo16k = (input: Float32Array, fromRate: number): Float32Array => {
+    if (!fromRate || fromRate === 16000) return input;
+    const ratio = fromRate / 16000;
+    const newLen = Math.round(input.length / ratio);
+    const output = new Float32Array(newLen);
+    for (let i = 0; i < newLen; i++) {
+        const srcPos = i * ratio;
+        const srcIndex = Math.floor(srcPos);
+        const frac = srcPos - srcIndex;
+        const nextIndex = Math.min(srcIndex + 1, input.length - 1);
+        output[i] = input[srcIndex] * (1 - frac) + input[nextIndex] * frac;
+    }
+    return output;
+};
 const floatTo16BitPCM = (float32Array: Float32Array) => {
     const buffer = new ArrayBuffer(float32Array.length * 2);
     const view = new DataView(buffer);
@@ -550,6 +564,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
             return `Bạn là ${teacherName}, Huấn luyện viên chuyên sâu luyện phản xạ giao tiếp tiếng Anh (English Communication & Reflex Coach).
 Tuyệt đối KHÔNG được tự nhận là giám khảo IELTS hay nhắc tới kỳ thi IELTS.
 
+[QUY TẮC XƯNG HÔ BẮT BUỘC - RẤT QUAN TRỌNG]:
+- Đây là khóa học giao tiếp cho người lớn và người đi làm.
+- Bạn BẮT BUỘC xưng là "Thầy" (hoặc "Cô" nếu là cô Diệp) và gọi người học là "Em".
+- TUYỆT ĐỐI CẤM xưng hô là "Thầy và Con" hay gọi người học là "con". Luôn luôn gọi người học là "em".
+
 CHỈ DẪN VÀ NHIỆM VỤ CỤ THỂ CỦA BÀI HỌC NÀY:
 """
 ${currentTopic}
@@ -557,20 +576,20 @@ ${currentTopic}
 
 [QUY TẮC BẮT BUỘC KHI DÒ BÀI & LUYỆN PHẢN XẠ - KỶ LUẬT TUYỆT ĐỐI]:
 1. KIỂM SOÁT TẠP ÂM VÀ CHỐNG ẢO GIÁC:
-   - Học sinh CHỈ nói TIẾNG ANH hoặc TIẾNG VIỆT. Bỏ qua mọi tiếng thở, khoảng lặng hoặc tiếng ồn máy tính.
+   - Người học CHỈ nói TIẾNG ANH hoặc TIẾNG VIỆT. Bỏ qua mọi tiếng thở, khoảng lặng hoặc tiếng ồn máy tính.
    - TUYỆT ĐỐI KHÔNG nhận diện hay bịa ra tiếng Tây Ban Nha hay bất kỳ ngoại ngữ nào khác.
-   - Nếu âm thanh chỉ có tiếng ồn hoặc học sinh im lặng/chưa nói: Nhẹ nhàng bảo: "Thầy/Cô chưa nghe rõ con nói, con thử nói lại giúp thầy/cô nhé!" hoặc "Con tự tin dịch câu này sang tiếng Anh nhé!".
+   - Nếu âm thanh chỉ có tiếng ồn hoặc người học im lặng/chưa nói: Nhẹ nhàng bảo: "Thầy/Cô chưa nghe rõ em nói, em nói lại giúp thầy/cô nhé!" hoặc "Em cứ tự tin dịch câu này sang tiếng Anh nhé!".
 
 2. QUY TRÌNH DÒ BÀI VÀ ĐỐI CHIẾU CÂU DỊCH:
-   - Khi bạn đọc 1 câu tiếng Việt để học sinh dịch sang tiếng Anh: Bạn BẮT BUỘC phải lắng nghe và đối chiếu xem câu học sinh nói có ĐÚNG NGHĨA và ĐÚNG CẤU TRÚC tiếng Anh của bài hay chưa.
-   - NẾU HỌC SINH DỊCH SAI HOẶC NÓI CÂU KHÔNG LIÊN QUAN:
+   - Khi bạn đọc 1 câu tiếng Việt để người học dịch sang tiếng Anh: Bạn BẮT BUỘC phải lắng nghe và đối chiếu xem câu người học nói có ĐÚNG NGHĨA và ĐÚNG CẤU TRÚC tiếng Anh của bài hay chưa.
+   - NẾU NGƯỜI HỌC DỊCH SAI HOẶC NÓI CÂU KHÔNG LIÊN QUAN:
      + TUYỆT ĐỐI CẤM khen "Rất tốt" hay chuyển sang câu tiếp theo.
-     + Phải nhẹ nhàng chỉ ra lỗi, làm mẫu câu dịch chuẩn và yêu cầu học sinh đọc lại câu đó trước khi tiếp tục.
-   - NẾU HỌC SINH DỊCH ĐÚNG:
+     + Phải nhẹ nhàng chỉ ra lỗi, làm mẫu câu dịch chuẩn và yêu cầu em nói lại câu đó trước khi tiếp tục.
+   - NẾU NGƯỜI HỌC DỊCH ĐÚNG:
      + Khen ngắn gọn ("Tốt!", "Chính xác!"), góp ý phát âm/nối âm nếu cần (thật súc tích), rồi mới đọc câu tiếng Việt tiếp theo.
 
 3. PHONG CÁCH:
-   - Thân thiện, khích lệ, năng lượng tích cực, mỗi câu nói cực kỳ ngắn gọn và tự nhiên (1-2 câu ngắn).
+   - Thân thiện, lịch thiệp, tôn trọng, khích lệ, năng lượng tích cực, mỗi câu nói cực kỳ ngắn gọn và tự nhiên (1-2 câu ngắn).
    ${promptKienNhan} ${contextInstruction}`;
         }
 
@@ -667,13 +686,11 @@ ${currentTopic}
                       audio: {
                           echoCancellation: true,
                           noiseSuppression: true,
-                          autoGainControl: true,
-                          sampleRate: 16000,
-                          channelCount: 1
+                          autoGainControl: true
                       }
                   });
               }
-              audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
+              audioCtxInputRef.current = new AudioContextClass();
               if (audioCtxInputRef.current.state === 'suspended') {
                   await audioCtxInputRef.current.resume();
               }
@@ -713,7 +730,9 @@ ${currentTopic}
                   processorNodeRef.current.onaudioprocess = (e) => {
                       if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN && isSetupCompleteRef.current && isMicOpenRef.current) {
                           const inputData = e.inputBuffer.getChannelData(0);
-                          const pcm16Buffer = floatTo16BitPCM(inputData);
+                          const inputRate = audioCtxInputRef.current?.sampleRate || 48000;
+                          const resampled = resampleTo16k(inputData, inputRate);
+                          const pcm16Buffer = floatTo16BitPCM(resampled);
                           const base64Data = arrayBufferToBase64(pcm16Buffer);
                           
                           wsRef.current.send(JSON.stringify({
@@ -755,7 +774,7 @@ ${currentTopic}
 
                       let welcomePrompt = `[HỆ THỐNG]: Học sinh vừa bước vào lớp. Bạn là ${teacherName}. Hãy cất tiếng chào ngắn gọn và giới thiệu bản thân trong 1 câu.`;
                       if (isReflex) {
-                          welcomePrompt = `[HỆ THỐNG]: Học sinh vừa bấm nút bắt đầu luyện tập phản xạ. Bạn là ${teacherName}. Hãy chào học sinh thật ngắn gọn trong 1 câu (ví dụ: "Chào con, thầy Tôn đây, chúng ta cùng luyện phản xạ nhé!"), rồi đọc ngay câu tiếng Việt đầu tiên của Vòng 1 để học sinh dịch sang tiếng Anh.`;
+                          welcomePrompt = `[HỆ THỐNG]: Học viên vừa bấm nút bắt đầu luyện tập phản xạ. Bạn là ${teacherName}. Hãy chào học viên ngắn gọn trong 1 câu (ví dụ: "Chào em, thầy Tôn đây, chúng ta cùng luyện phản xạ nhé!"), rồi đọc ngay câu tiếng Việt đầu tiên của Vòng 1 để em dịch sang tiếng Anh. Nhớ xưng Thầy/Cô và gọi Em.`;
                       } else if (isIelts) {
                           welcomePrompt = `[HỆ THỐNG]: Thí sinh vừa bước vào phòng thi IELTS Speaking. Bạn là giám khảo ${teacherName}. Hãy chào thí sinh và bắt đầu câu hỏi đầu tiên của chủ đề "${currentTopic}".`;
                       }
@@ -822,7 +841,7 @@ ${currentTopic}
                       || null;
                   
                   if (outputTx) {
-                      const aiText = (outputTx.text || '').trim();
+                      const aiText = outputTx.text || '';
                       if (aiText) {
                           console.log("🤖 AI TRANSCRIPT:", aiText);
                           transcriptRef.current += aiText;
@@ -1060,6 +1079,9 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           }
       } else {
           // ====== BẮT ĐẦU GHI ÂM ======
+          if (audioCtxInputRef.current && audioCtxInputRef.current.state === 'suspended') {
+              audioCtxInputRef.current.resume();
+          }
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
               setCurrentDraft('');
               geminiUserTranscriptRef.current = '';
@@ -1200,7 +1222,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
              {isRecording && (
                  <div className="mb-1 p-2 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
                      <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">Đang ghi âm...</strong>
-                     {currentDraft.trim() || "🎤 Đang thu âm giọng nói của con..."}
+                     {currentDraft.trim() || "🎤 Đang thu âm giọng nói của em..."}
                  </div>
              )}
              
@@ -1228,7 +1250,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               {messages.map((m, i) => (
                   <div key={i} className={`p-3 rounded-lg ${m.role === 'user' ? 'bg-blue-50 text-blue-900 border border-blue-100' : 'bg-white border border-slate-200'}`}>
                       <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">
-                          {m.role === 'user' ? 'Em nói:' : 'Giám khảo:'}
+                          {m.role === 'user' ? 'Em nói:' : (isReflexMode ? (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:') : (isIeltsMode ? 'Giám khảo:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')))}
                       </strong>
                       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
                   </div>
@@ -1236,7 +1258,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               
               {liveTranscript && (
                   <div className={`p-3 rounded-lg bg-white border border-slate-200`}>
-                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Giám khảo:</strong>
+                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">{isReflexMode ? (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:') : (isIeltsMode ? 'Giám khảo:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'))}</strong>
                       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
                   </div>
               )}
@@ -1244,7 +1266,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               {isRecording && (
                   <div className="p-3 rounded-lg bg-blue-50/50 text-blue-900 border border-blue-100/50 border-dashed animate-pulse">
                       <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Đang ghi âm...</strong>
-                      {currentDraft.trim() || "🎤 Đang thu âm giọng nói của con..."}
+                      {currentDraft.trim() || "🎤 Đang thu âm giọng nói của em..."}
                   </div>
               )}
               <div ref={messagesEndRef} />
