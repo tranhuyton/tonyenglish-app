@@ -541,9 +541,44 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
         
         if (mode === 'TUTOR' && tutorData) {
             return `Bạn là ${teacherName}. BỐI CẢNH BÀI HỌC: ${tutorData.transcript}. NHIỆM VỤ: ${tutorData.feedback}. ${promptKienNhan} ${contextInstruction}`;
-        } else {
-            return `Bạn là giám khảo IELTS tên ${teacherName}. Hãy yêu cầu tôi nói về chủ đề: "${currentTopic}". Luôn lắng nghe và phản hồi trực tiếp dựa trên nội dung của thí sinh. ${promptKienNhan} ${contextInstruction}`;
         }
+
+        const isReflex = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || (courseTitle && courseTitle.toLowerCase().includes('giao tiếp'));
+        const isIelts = (courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
+
+        if (isReflex) {
+            return `Bạn là ${teacherName}, Huấn luyện viên chuyên sâu luyện phản xạ giao tiếp tiếng Anh (English Communication & Reflex Coach).
+Tuyệt đối KHÔNG được tự nhận là giám khảo IELTS hay nhắc tới kỳ thi IELTS.
+
+CHỈ DẪN VÀ NHIỆM VỤ CỤ THỂ CỦA BÀI HỌC NÀY:
+"""
+${currentTopic}
+"""
+
+[QUY TẮC BẮT BUỘC KHI DÒ BÀI & LUYỆN PHẢN XẠ - KỶ LUẬT TUYỆT ĐỐI]:
+1. KIỂM SOÁT TẠP ÂM VÀ CHỐNG ẢO GIÁC:
+   - Học sinh CHỈ nói TIẾNG ANH hoặc TIẾNG VIỆT. Bỏ qua mọi tiếng thở, khoảng lặng hoặc tiếng ồn máy tính.
+   - TUYỆT ĐỐI KHÔNG nhận diện hay bịa ra tiếng Tây Ban Nha hay bất kỳ ngoại ngữ nào khác.
+   - Nếu âm thanh chỉ có tiếng ồn hoặc học sinh im lặng/chưa nói: Nhẹ nhàng bảo: "Thầy/Cô chưa nghe rõ con nói, con thử nói lại giúp thầy/cô nhé!" hoặc "Con tự tin dịch câu này sang tiếng Anh nhé!".
+
+2. QUY TRÌNH DÒ BÀI VÀ ĐỐI CHIẾU CÂU DỊCH:
+   - Khi bạn đọc 1 câu tiếng Việt để học sinh dịch sang tiếng Anh: Bạn BẮT BUỘC phải lắng nghe và đối chiếu xem câu học sinh nói có ĐÚNG NGHĨA và ĐÚNG CẤU TRÚC tiếng Anh của bài hay chưa.
+   - NẾU HỌC SINH DỊCH SAI HOẶC NÓI CÂU KHÔNG LIÊN QUAN:
+     + TUYỆT ĐỐI CẤM khen "Rất tốt" hay chuyển sang câu tiếp theo.
+     + Phải nhẹ nhàng chỉ ra lỗi, làm mẫu câu dịch chuẩn và yêu cầu học sinh đọc lại câu đó trước khi tiếp tục.
+   - NẾU HỌC SINH DỊCH ĐÚNG:
+     + Khen ngắn gọn ("Tốt!", "Chính xác!"), góp ý phát âm/nối âm nếu cần (thật súc tích), rồi mới đọc câu tiếng Việt tiếp theo.
+
+3. PHONG CÁCH:
+   - Thân thiện, khích lệ, năng lượng tích cực, mỗi câu nói cực kỳ ngắn gọn và tự nhiên (1-2 câu ngắn).
+   ${promptKienNhan} ${contextInstruction}`;
+        }
+
+        if (isIelts) {
+            return `Bạn là giám khảo IELTS tên ${teacherName}. Hãy đóng vai trò giám khảo nghiêm túc, thân thiện và chuyên nghiệp. Chủ đề thi nói: "${currentTopic}". Luôn lắng nghe và phản hồi trực tiếp dựa trên nội dung của thí sinh. Tuyệt đối không ảo giác sang ngoại ngữ khác ngoài tiếng Anh và tiếng Việt. ${promptKienNhan} ${contextInstruction}`;
+        }
+
+        return `Bạn là ${teacherName}, giáo viên hướng dẫn đàm thoại tiếng Anh 1-1. Hãy trò chuyện, đặt câu hỏi và luyện nói cùng học sinh về chủ đề: "${currentTopic}". Luôn lắng nghe và phản hồi trực tiếp câu trả lời của học sinh. Tuyệt đối không ảo giác sang ngôn ngữ khác ngoài tiếng Anh và tiếng Việt. ${promptKienNhan} ${contextInstruction}`;
   };
 
   // =========================================================================================
@@ -628,7 +663,15 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
           if (!isTextMode) {
               if (!streamRef.current) {
-                  streamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
+                  streamRef.current = await navigator.mediaDevices.getUserMedia({ 
+                      audio: {
+                          echoCancellation: true,
+                          noiseSuppression: true,
+                          autoGainControl: true,
+                          sampleRate: 16000,
+                          channelCount: 1
+                      }
+                  });
               }
               audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
               if (audioCtxInputRef.current.state === 'suspended') {
@@ -705,9 +748,21 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                   if (msg.setupComplete) {
                       isSetupCompleteRef.current = true;
                       
+                      const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
+                      const teacherName = examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp';
+                      const isReflex = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || (courseTitle && courseTitle.toLowerCase().includes('giao tiếp'));
+                      const isIelts = (courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
+
+                      let welcomePrompt = `[HỆ THỐNG]: Học sinh vừa bước vào lớp. Bạn là ${teacherName}. Hãy cất tiếng chào ngắn gọn và giới thiệu bản thân trong 1 câu.`;
+                      if (isReflex) {
+                          welcomePrompt = `[HỆ THỐNG]: Học sinh vừa bấm nút bắt đầu luyện tập phản xạ. Bạn là ${teacherName}. Hãy chào học sinh thật ngắn gọn trong 1 câu (ví dụ: "Chào con, thầy Tôn đây, chúng ta cùng luyện phản xạ nhé!"), rồi đọc ngay câu tiếng Việt đầu tiên của Vòng 1 để học sinh dịch sang tiếng Anh.`;
+                      } else if (isIelts) {
+                          welcomePrompt = `[HỆ THỐNG]: Thí sinh vừa bước vào phòng thi IELTS Speaking. Bạn là giám khảo ${teacherName}. Hãy chào thí sinh và bắt đầu câu hỏi đầu tiên của chủ đề "${currentTopic}".`;
+                      }
+
                       ws.send(JSON.stringify({ 
                           clientContent: { 
-                              turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa bước vào lớp. Hãy cất tiếng chào, giới thiệu bản thân." }] }], 
+                              turns: [{ role: "user", parts: [{ text: welcomePrompt }] }], 
                               turnComplete: true 
                           } 
                       }));
@@ -1199,6 +1254,19 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
+
+  const isReflexMode = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || (courseTitle && courseTitle.toLowerCase().includes('giao tiếp'));
+  const isIeltsMode = (courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
+
+  const getDisplayTopic = () => {
+      if (currentMode === 'TUTOR') return "Chữa bài & Giải đáp thắc mắc chuyên sâu";
+      if (currentTopic.startsWith('Hãy đóng vai là trợ lý luyện phản xạ') || currentTopic.includes('luyện phản xạ')) {
+          const match = currentTopic.match(/luyện phản xạ\s+([^:.]+)/i);
+          if (match) return `Luyện phản xạ: ${match[1].trim()}`;
+          return "Luyện phản xạ: 10 cấu trúc câu giao tiếp cơ bản (Dò bài & Tình huống thực chiến)";
+      }
+      return currentTopic;
+  };
   
   const handleYellowButtonClick = () => { 
       if (onOpenAI) {
@@ -1473,11 +1541,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                  // Không minimize → sidebar hiện cùng lúc với cuộc gọi
              }}
              className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-white transition-all flex items-center gap-2 font-bold bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2.5 md:px-5 md:py-3 rounded-2xl shadow-[0_10px_25px_rgba(245,158,11,0.3)] z-20 hover:scale-105 active:scale-95 hover:shadow-[0_15px_35px_rgba(245,158,11,0.4)]"
-             title={currentMode === 'TUTOR' ? 'Mở lại khung Chat Text' : 'Xem gợi ý kịch bản IELTS'}
+             title={currentMode === 'TUTOR' ? 'Mở lại khung Chat Text' : (isReflexMode ? 'Xem mẫu câu phản xạ' : 'Xem gợi ý kịch bản IELTS')}
           >
              <span className="text-xl drop-shadow-sm">💬</span> 
              <span className="hidden sm:inline text-[13px] md:text-[14px] drop-shadow-sm uppercase tracking-wider">
-                 {currentMode === 'TUTOR' ? 'Mở khung chat' : 'Kịch bản AI'}
+                 {currentMode === 'TUTOR' ? 'Mở khung chat' : (isReflexMode ? 'Cấu trúc câu' : 'Kịch bản AI')}
              </span>
           </button>
       )}
@@ -1489,10 +1557,10 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
         <div className="mb-8 mt-12 md:mt-10 shrink-0">
            <h2 className="text-2xl md:text-[32px] font-black mb-2 text-slate-800 tracking-tight leading-tight">
-               {currentMode === 'TUTOR' ? 'Gia Sư Giải Đáp 1-1' : 'Phòng Luyện Nói 1-1'}
+               {currentMode === 'TUTOR' ? 'Gia Sư Giải Đáp 1-1' : (isReflexMode ? 'Phòng Luyện Phản Xạ 1-1' : 'Phòng Luyện Nói 1-1')}
            </h2>
            <p className="text-[#0ea5e9] font-bold text-[13px] md:text-[15px] uppercase tracking-widest">
-               {currentMode === 'TUTOR' ? 'Phân tích nội dung bài học cùng chuyên gia' : 'Đàm thoại trực tiếp với Giám khảo IELTS'}
+               {currentMode === 'TUTOR' ? 'Phân tích nội dung bài học cùng chuyên gia' : (isReflexMode ? 'Luyện phản xạ giao tiếp cùng Huấn luyện viên AI' : (isIeltsMode ? 'Đàm thoại trực tiếp với Giám khảo IELTS' : 'Đàm thoại tiếng Anh 1-1 cùng Huấn luyện viên AI'))}
            </p>
         </div>
 
@@ -1512,12 +1580,12 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                  <div className="bg-slate-50 p-5 md:p-6 rounded-2xl border border-slate-200 mb-8 text-left shadow-sm flex flex-col">
                     <span className="block text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2 shrink-0">Chủ đề đàm thoại:</span>
                     <div className="text-[15px] font-semibold text-slate-800 whitespace-pre-wrap leading-relaxed">
-                        {currentMode === 'TUTOR' ? "Chữa bài & Giải đáp thắc mắc chuyên sâu" : `"${currentTopic}"`}
+                        {getDisplayTopic()}
                     </div>
                  </div>
                  
                  <div className="mb-8 shrink-0">
-                    <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
+                    <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">{isIeltsMode ? 'Lựa chọn Giám khảo' : 'Lựa chọn Huấn luyện viên'}</h3>
                     <div className="flex justify-center gap-4">
                         <button onClick={() => { setExaminer('TONY'); sessionStorage.setItem('tony_voice_examiner', 'TONY'); }} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/10 border-[#0ea5e9] shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-[#0ea5e9]/50'}`}>
                            <div className="text-4xl drop-shadow-sm mb-1">👨‍🏫</div>
@@ -1531,7 +1599,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                  </div>
                  
                  <button onClick={() => startSession(false)} className="w-full shrink-0 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 md:py-5 rounded-2xl text-[15px] md:text-[16px] shadow-[0_10px_30px_rgba(14,165,233,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all uppercase tracking-wide">
-                     <span className="text-xl">📞</span> Bắt Đầu Đàm Thoại
+                     <span className="text-xl">📞</span> {isReflexMode ? 'Bắt Đầu Luyện Phản Xạ' : 'Bắt Đầu Đàm Thoại'}
                  </button>
               </div>
           )
