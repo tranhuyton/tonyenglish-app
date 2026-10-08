@@ -896,21 +896,39 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     return stats;
   }, [courses, allFolders, allTests, allLectures, historyData, lectureProgressData]);
 
+  // 🛡️ Tự động phát hiện và sửa lỗi folder "lạc trôi" (mismatch giữa các khóa học hoặc folder bị xóa)
+  useEffect(() => {
+    if (currentFolderId && courseFolders.length > 0) {
+      const folderExists = courseFolders.some(f => String(f.id) === String(currentFolderId));
+      if (!folderExists) {
+        console.warn(`[StudentPortal] Folder ID ${currentFolderId} không tồn tại trong khóa học hiện tại. Đang tự động quay về thư mục gốc.`);
+        setCurrentFolderId(null);
+        sessionStorage.removeItem('portal_current_folder_id');
+      }
+    }
+  }, [currentFolderId, courseFolders]);
+
   const courseTests = useMemo(() => {
       if (!selectedCourse) return [];
       const folderIdsSet = new Set(courseFolders.map(f => f.id));
-      return allTests.filter(t => folderIdsSet.has(t.folder_id) || t.content_json?.basicInfo?.courseId === selectedCourse.id);
+      return allTests.filter(t => 
+          String(t.course_id) === String(selectedCourse.id) || 
+          folderIdsSet.has(t.folder_id) || 
+          t.content_json?.basicInfo?.courseId === selectedCourse.id
+      );
   }, [selectedCourse, allTests, courseFolders]);
 
   const currentSubFolders = useMemo(() => {
-      return courseFolders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0));
+      const validFolderId = (currentFolderId && courseFolders.some(f => String(f.id) === String(currentFolderId))) ? currentFolderId : null;
+      return courseFolders.filter(f => validFolderId ? f.parent_id === validFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0));
   }, [courseFolders, currentFolderId]);
 
   const currentTests = useMemo(() => {
-      if (currentFolderId) return courseTests.filter(t => t.folder_id === currentFolderId);
-      if (currentSubFolders.length === 0) return courseTests.filter(t => !t.folder_id || t.folder_id === 'null' || t.folder_id === '');
-      return [];
-  }, [courseTests, currentFolderId, currentSubFolders.length]);
+      const validFolderId = (currentFolderId && courseFolders.some(f => String(f.id) === String(currentFolderId))) ? currentFolderId : null;
+      if (validFolderId) return courseTests.filter(t => t.folder_id === validFolderId);
+      // Ở root: hiển thị các bài test trực tiếp không thuộc folder nào (nếu có)
+      return courseTests.filter(t => !t.folder_id || t.folder_id === 'null' || t.folder_id === '');
+  }, [courseTests, currentFolderId, courseFolders]);
 
   const processedTests = useMemo(() => {
       return currentTests.filter(t => (t.title || '').toLowerCase().includes(searchTest.toLowerCase()))
@@ -1874,11 +1892,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <div className="animate-in fade-in slide-in-from-right-8 duration-500">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 bg-white p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm mx-2 md:mx-0">
                 <div className="flex items-center gap-1.5 sm:gap-2 text-[13px] sm:text-[14px] font-semibold text-slate-500 overflow-x-auto whitespace-nowrap max-w-full pb-1 custom-scrollbar">
-                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); }} className="hover:text-[#0ea5e9] transition-colors p-1 rounded-md hover:bg-sky-50 cursor-pointer">
+                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); sessionStorage.removeItem('portal_current_folder_id'); }} className="hover:text-[#0ea5e9] transition-colors p-1 rounded-md hover:bg-sky-50 cursor-pointer">
                         Khóa học
                     </button>
                     <span className="text-slate-300">/</span>
-                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`p-1 rounded-md hover:bg-sky-50 transition-colors cursor-pointer ${!currentFolderId ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
+                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); sessionStorage.removeItem('portal_current_folder_id'); }} className={`p-1 rounded-md hover:bg-sky-50 transition-colors cursor-pointer ${!currentFolderId ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
                         {selectedCourse.title}
                     </button>
                     {breadcrumbs.map((b, i) => (
@@ -2130,7 +2148,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
               )}
 
-              {currentSubFolders.length === 0 && currentTests.length === 0 && (
+              {isLoading ? (
+                <div className="text-center py-24 bg-white rounded-2xl border border-slate-200 shadow-sm mx-2 md:mx-0 flex flex-col items-center justify-center">
+                   <div className="w-10 h-10 border-4 border-sky-200 border-t-[#0ea5e9] rounded-full animate-spin mb-4"></div>
+                   <span className="text-slate-500 font-medium text-sm">Đang tải danh mục và bài tập...</span>
+                </div>
+              ) : currentSubFolders.length === 0 && currentTests.length === 0 && (
                 <div className="text-center py-24 bg-white rounded-2xl border border-slate-200 text-slate-400 font-medium text-base shadow-sm mx-2 md:mx-0 flex flex-col items-center justify-center">
                    <div className="text-5xl mb-4 grayscale opacity-30">📭</div>
                    Thư mục này hiện đang trống.

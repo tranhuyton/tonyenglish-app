@@ -2775,7 +2775,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
          srcDoc={iframeContent}
          style={{ width: '100%', height: isIframeOnly ? '100%' : `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
          sandbox="allow-scripts allow-same-origin allow-popups"
-         allow="microphone; camera; clipboard-read; clipboard-write;"
+         allow="autoplay; microphone; camera; clipboard-read; clipboard-write;"
          scrolling="no"
          allowFullScreen
        />
@@ -3182,6 +3182,7 @@ export default function LectureViewer({
       sessionStorage.setItem('portal_selected_course_id', newCourseId);
       sessionStorage.setItem('portal_filter_course', newCourseId);
       localStorage.setItem('portal_filter_course', newCourseId);
+      sessionStorage.removeItem('portal_current_folder_id');
       window.dispatchEvent(new CustomEvent('tony-change-course', { detail: newCourseId }));
     } catch(e) {}
     
