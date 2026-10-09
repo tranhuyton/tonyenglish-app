@@ -636,14 +636,16 @@ const handleFinish = async () => {
   };
 
   // Tính năng Hỏi AI
-  const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
+  const askAIToExplain = (questionId: string, qContent?: string, qExplanation?: string) => {
     const activePart = parts.find((p:any) => p.sections?.some((s:any) => s.questions?.some((sq:any) => String(sq.id) === questionId)));
     const passageContent = activePart?.content ? activePart.content.replace(stripHtmlRegex, '') : "";
     window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
       detail: { title: basicInfo.title, html: passageContent }
     }));
     
-    const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}`;
+    const safeContent = String(qContent || '').replace(stripHtmlRegex, '').trim();
+    const safeExplanation = String(qExplanation || 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.').replace(stripHtmlRegex, '').trim();
+    const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
     
     const fakeBtn = document.createElement('button');
     fakeBtn.className = 'btn-ai-trigger hidden';

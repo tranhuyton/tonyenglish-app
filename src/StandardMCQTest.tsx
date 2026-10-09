@@ -748,8 +748,10 @@ const handleFinish = async () => {
   // =========================================================================================
   // CÔNG CỤ TƯƠNG TÁC VỚI GIA SƯ AI (CHAT VÀ VOICE)
   // =========================================================================================
-  const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
-     const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(/<[^>]+>/g, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(/<[^>]+>/g, '')}`;
+  const askAIToExplain = (questionId: string, qContent?: string, qExplanation?: string) => {
+     const safeContent = String(qContent || '').replace(/<[^>]+>/g, '').trim();
+     const safeExplanation = String(qExplanation || 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.').replace(/<[^>]+>/g, '').trim();
+     const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
      
      const fakeBtn = document.createElement('button');
      fakeBtn.className = 'btn-ai-trigger hidden';

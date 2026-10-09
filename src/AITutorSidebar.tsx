@@ -87,10 +87,14 @@ export default function AITutorSidebar({
   const generateWelcome = () => {
     let welcomeText = "";
     if (mode === 'parent_mode') {
-      const studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh';
+      let studentName = 'học sinh';
+      try { studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh'; } catch(e) {}
       welcomeText = `Dạ chào anh/chị! Tôi là Trợ lý AI chủ nhiệm của bé **${studentName}**.\n\nHệ thống đã tổng hợp xong dữ liệu học tập của cháu trong 14 ngày qua. Anh/chị cần xem báo cáo tổng quan hay có câu hỏi cụ thể nào về tình hình của cháu không ạ?`;
     } else if (mode === 'ielts') {
-      if (taskType === 'reading') {
+      const isReflex = (topicTitle || '').toLowerCase().includes('phản xạ') || (topicTitle || '').toLowerCase().includes('giao tiếp');
+      if (isReflex) {
+        welcomeText = `Chào em! Thầy là Huấn luyện viên Luyện Phản Xạ Giao Tiếp.\n\n🎯 **Nội dung:** Luyện phản xạ cấu trúc câu giao tiếp thực chiến.\n\nEm có thể bấm chọn gợi ý bên dưới hoặc gửi câu hỏi để thầy gợi ý mẫu câu, từ vựng và hỗ trợ em luyện tập nhé!`;
+      } else if (taskType === 'reading') {
         welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
       } else if (taskType === 'speaking') {
         welcomeText = `Chào em! Thầy là trợ lý Speaking.\n\n`;
@@ -285,6 +289,11 @@ export default function AITutorSidebar({
 
     if (mode === 'tutor') {
         return TUTOR_PROMPTS;
+    }
+
+    const isReflex = (topicTitle || '').toLowerCase().includes('phản xạ') || (topicTitle || '').toLowerCase().includes('giao tiếp');
+    if (isReflex) {
+        return ["💡 Gợi ý mẫu câu phản xạ", "🧠 Mở rộng từ vựng giao tiếp", "✍️ Sửa lỗi phát âm / diễn đạt"];
     }
     
     switch (taskType) {
@@ -520,7 +529,7 @@ export default function AITutorSidebar({
             }; 
          } else {
              payload = { 
-                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}\n\n${UNICODE_FORMAT_INSTRUCTION}`,
+                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}\n\n[QUY TẮC XƯNG HÔ]: BẮT BUỘC xưng Thầy/Cô và gọi Em (TUYỆT ĐỐI CẤM xưng con). Hướng dẫn ân cần, giải thích chi tiết, chuẩn xác.\n${UNICODE_FORMAT_INSTRUCTION}`,
                 imageUrl: currentImage || topicImage,
                 imageUrls: currentImage ? [currentImage] : (topicImage ? [topicImage] : []),
                 taskType: taskType 
@@ -528,7 +537,7 @@ export default function AITutorSidebar({
          }
       } else {
          const subjectRule = courseTitle ? `\n[KỶ LUẬT CHUYÊN MÔN]: Đây là lớp học môn: "${courseTitle}". Nếu câu hỏi không liên quan đến môn học này, bạn PHẢI TỪ CHỐI KHÉO LÉO.` : '';
-         const systemPrompt = `Bạn là gia sư AI tận tâm, chuyên nghiệp. Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". ${subjectRule}\n${UNICODE_FORMAT_INSTRUCTION}\nHãy trả lời học sinh: "${userMsg}"`;
+         const systemPrompt = `Bạn là gia sư AI tận tâm, chuyên nghiệp. Luôn xưng Thầy/Cô và gọi Em (TUYỆT ĐỐI CẤM xưng con). Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". ${subjectRule}\n${UNICODE_FORMAT_INSTRUCTION}\nHãy trả lời học sinh: "${userMsg}"`;
          
          payload = { 
              prompt: systemPrompt, 
