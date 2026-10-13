@@ -2915,6 +2915,14 @@ export default function LectureViewer({
 
   const totalPages = pages.length;
 
+  const isEconomicsCourse = useMemo(() => {
+    const courseTitle = course?.title?.toLowerCase() || '';
+    return courseTitle.includes('economics') || 
+           currentCourseId === 'f21fe521-aaf9-4917-8c2a-1931666237b5' ||
+           courseId === 'f21fe521-aaf9-4917-8c2a-1931666237b5' ||
+           activeLecture?.course_id === 'f21fe521-aaf9-4917-8c2a-1931666237b5';
+  }, [course, currentCourseId, courseId, activeLecture]);
+
   const currentHtmlContent = useMemo(() => { 
       const page = pages.find(p => p.page_number === currentPage); 
       return page ? page.content_html : ''; 
@@ -4814,49 +4822,98 @@ export default function LectureViewer({
                            </button>
                          </div>
                        )}
-                       {/* Tab bar cho các bài giảng có audio và nhiều trang (Ví dụ Biology 0610) */}
-                        {!activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && LECTURE_MANIFEST_MAP[activeLectureId] && totalPages > 1 && (
-                          <div className="flex items-center gap-2.5 mb-8 flex-wrap">
-                            <button
-                              type="button"
-                              onClick={() => { setCurrentPage(1); persistPage(1); }}
-                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
-                                currentPage === 1 
-                                  ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
-                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
-                              }`}
-                            >
-                              <span>🇬🇧</span>
-                              <span>Bản Tiếng Anh (Trang 1)</span>
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => { setCurrentPage(2); persistPage(2); }}
-                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
-                                currentPage === 2 
-                                  ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
-                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
-                              }`}
-                            >
-                              <span>🇻🇳</span>
-                              <span>Bản Song ngữ (Trang 2)</span>
-                            </button>
-                            {totalPages >= 3 && (
-                              <button
-                                type="button"
-                                onClick={() => { setCurrentPage(3); persistPage(3); }}
-                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
-                                  currentPage === 3 
-                                    ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
-                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
-                                }`}
-                              >
-                                <span>🎯</span>
-                                <span>Syllabus Content (Trang 3)</span>
-                              </button>
-                            )}
-                          </div>
-                        )}
+                        {/* Tab bar cho các bài giảng có audio và nhiều trang (Ví dụ Biology 0610, Economics 0455) */}
+                         {!activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && (LECTURE_MANIFEST_MAP[activeLectureId] || isEconomicsCourse) && totalPages > 1 && (
+                           <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                             <button
+                               type="button"
+                               onClick={() => { setCurrentPage(1); persistPage(1); }}
+                               className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                 currentPage === 1 
+                                   ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                   : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                               }`}
+                             >
+                               <span>🇬🇧</span>
+                               <span>Bản Tiếng Anh (Trang 1)</span>
+                             </button>
+                             <button
+                               type="button"
+                               onClick={() => { setCurrentPage(2); persistPage(2); }}
+                               className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                 currentPage === 2 
+                                   ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                   : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                               }`}
+                             >
+                               <span>🇻🇳</span>
+                               <span>{isEconomicsCourse ? 'Bản Tiếng Việt (Trang 2)' : 'Bản Song ngữ (Trang 2)'}</span>
+                             </button>
+                             {isEconomicsCourse ? (
+                               <>
+                                 {totalPages >= 3 && (
+                                   <button
+                                     type="button"
+                                     onClick={() => { setCurrentPage(3); persistPage(3); }}
+                                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                       currentPage === 3 
+                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                     }`}
+                                   >
+                                     <span>📝</span>
+                                     <span>Câu hỏi & Trả lời mẫu Paper 2 (Trang 3)</span>
+                                   </button>
+                                 )}
+                                 {totalPages >= 4 && (
+                                   <button
+                                     type="button"
+                                     onClick={() => { setCurrentPage(4); persistPage(4); }}
+                                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                       currentPage === 4 
+                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                     }`}
+                                   >
+                                     <span>🎯</span>
+                                     <span>Syllabus Content (Trang 4)</span>
+                                   </button>
+                                 )}
+                               </>
+                             ) : (
+                               <>
+                                 {totalPages >= 3 && (
+                                   <button
+                                     type="button"
+                                     onClick={() => { setCurrentPage(3); persistPage(3); }}
+                                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                       currentPage === 3 
+                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                     }`}
+                                   >
+                                     <span>🎯</span>
+                                     <span>Syllabus Content (Trang 3)</span>
+                                   </button>
+                                 )}
+                                 {totalPages >= 4 && (
+                                   <button
+                                     type="button"
+                                     onClick={() => { setCurrentPage(4); persistPage(4); }}
+                                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                       currentPage === 4 
+                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                     }`}
+                                   >
+                                     <span>📄</span>
+                                     <span>Trang 4</span>
+                                   </button>
+                                 )}
+                               </>
+                             )}
+                           </div>
+                         )}
                         {activeLectureVideoId && (currentPage === 1 || currentPage === 2) && (
                          <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
                            <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-slate-700/60">
