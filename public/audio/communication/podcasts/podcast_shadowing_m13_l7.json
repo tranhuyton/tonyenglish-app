@@ -1,0 +1,507 @@
+{
+  "module": "Chiến thuật giao tiếp",
+  "slug": "m13_l7",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Nói về quá khứ",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m13_l7.mp3",
+  "total_duration": 329.67,
+  "patterns": [
+    {
+      "pattern_num": 1,
+      "pattern_title": "Tình huống 1: Hỏi lý do vắng mặt ở bữa tiệc tối qua",
+      "pattern_translation": "Missing Last Night's Party",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 1,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Why didn't you come to my party last night?",
+          "audio_key": "c13_l7p1_d1_t1_a",
+          "translation": "Tại sao tối qua bạn không đến dự bữa tiệc của mình?",
+          "start_time": 0.0,
+          "duration": 3.24,
+          "pause_duration": 4.74,
+          "end_time": 7.98
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 1,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I'm sorry I couldn't make it. I had to go visit my grandmother at the hospital.",
+          "audio_key": "c13_l7p1_d1_t2_b",
+          "translation": "Mình xin lỗi vì đã không thể tới được. Mình phải vào bệnh viện thăm bà.",
+          "start_time": 7.98,
+          "duration": 5.95,
+          "pause_duration": 7.45,
+          "end_time": 21.38
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 1,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Oh, I'm sorry to hear that. Is she doing ok?",
+          "audio_key": "c13_l7p1_d1_t3_a",
+          "translation": "Ồ, rất tiếc khi nghe điều đó. Bà của bạn có ổn không?",
+          "start_time": 21.38,
+          "duration": 4.85,
+          "pause_duration": 6.35,
+          "end_time": 32.58
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 1,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "They just completed a small operation and the doctors said she should recover.",
+          "audio_key": "c13_l7p1_d1_t4_b",
+          "translation": "Các bác sĩ vừa thực hiện xong một ca tiểu phẫu và nói rằng bà sẽ sớm bình phục thôi.",
+          "start_time": 32.58,
+          "duration": 4.68,
+          "pause_duration": 6.18,
+          "end_time": 43.44
+        }
+      ]
+    },
+    {
+      "pattern_num": 2,
+      "pattern_title": "Tình huống 2: Trải nghiệm tệ ở nhà hàng mới mở",
+      "pattern_translation": "Bad Restaurant Experience",
+      "start_time": 44.44,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Did you get a chance to go to that new restaurant down the street?",
+          "audio_key": "c13_l7p1_d2_t1_a",
+          "translation": "Cậu đã có dịp ghé thử nhà hàng mới mở ở cuối phố chưa?",
+          "start_time": 44.44,
+          "duration": 3.94,
+          "pause_duration": 5.44,
+          "end_time": 53.82
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Yeah. I ordered the special, but the server screwed up my order.",
+          "audio_key": "c13_l7p1_d2_t2_b",
+          "translation": "Rồi. Tớ đã gọi món đặc biệt của quán, nhưng nhân viên phục vụ lại làm nhầm món của tớ.",
+          "start_time": 53.82,
+          "duration": 5.21,
+          "pause_duration": 6.71,
+          "end_time": 65.74
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "That sucks. So what ended up happening?",
+          "audio_key": "c13_l7p1_d2_t3_a",
+          "translation": "Chán thế. Rồi cuối cùng chuyện gì đã xảy ra?",
+          "start_time": 65.74,
+          "duration": 4.1,
+          "pause_duration": 5.6,
+          "end_time": 75.44
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "They finally got my steak out, but it was overcooked. It was a terrible experience.",
+          "audio_key": "c13_l7p1_d2_t4_b",
+          "translation": "Cuối cùng họ cũng mang phần bít tết của tớ ra, nhưng thịt lại bị nướng chín kỹ quá mức. Đúng là một trải nghiệm tồi tệ.",
+          "start_time": 75.44,
+          "duration": 6.36,
+          "pause_duration": 7.86,
+          "end_time": 89.66
+        }
+      ]
+    },
+    {
+      "pattern_num": 3,
+      "pattern_title": "Tình huống 3: Kể về buổi hẹn hò tuyệt vời với Sammy",
+      "pattern_translation": "Great Date with Sammy",
+      "start_time": 90.66,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What did you do last weekend?",
+          "audio_key": "c13_l7p1_d3_t1_a",
+          "translation": "Cuối tuần trước cậu đã làm gì?",
+          "start_time": 90.66,
+          "duration": 2.52,
+          "pause_duration": 4.02,
+          "end_time": 97.2
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I went on a date with Sammy.",
+          "audio_key": "c13_l7p1_d3_t2_b",
+          "translation": "Tớ đã có một buổi hẹn hò với Sammy.",
+          "start_time": 97.2,
+          "duration": 2.5,
+          "pause_duration": 4.0,
+          "end_time": 103.7
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Really? How was it?",
+          "audio_key": "c13_l7p1_d3_t3_a",
+          "translation": "Thật á? Buổi hẹn thế nào?",
+          "start_time": 103.7,
+          "duration": 3.07,
+          "pause_duration": 4.57,
+          "end_time": 111.34
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I couldn't ask for a better night. We talked all throughout our two hour dinner, and then we sat by the river and cuddled in the night.",
+          "audio_key": "c13_l7p1_d3_t4_b",
+          "translation": "Không thể tuyệt vời hơn được nữa! Bọn tớ đã trò chuyện suốt bữa tối kéo dài hai tiếng, rồi sau đó ngồi bên bờ sông ôm nhau dưới màn đêm.",
+          "start_time": 111.34,
+          "duration": 8.59,
+          "pause_duration": 10.09,
+          "end_time": 130.02
+        }
+      ]
+    },
+    {
+      "pattern_num": 4,
+      "pattern_title": "Tình huống 4: Kể về tuần thi cuối kỳ căng thẳng",
+      "pattern_translation": "Tough Finals Week",
+      "start_time": 131.02,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Didn't you finish finals week?",
+          "audio_key": "c13_l7p1_d4_t1_a",
+          "translation": "Chẳng phải cậu đã thi xong tuần thi cuối kỳ rồi sao?",
+          "start_time": 131.02,
+          "duration": 2.52,
+          "pause_duration": 4.02,
+          "end_time": 137.56
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Don't remind me. I think I failed most of the exams.",
+          "audio_key": "c13_l7p1_d4_t2_b",
+          "translation": "Đừng nhắc nữa. Tớ nghĩ là mình đã trượt hầu hết các môn thi rồi.",
+          "start_time": 137.56,
+          "duration": 4.99,
+          "pause_duration": 6.49,
+          "end_time": 149.04
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Why did you do so terrible?",
+          "audio_key": "c13_l7p1_d4_t3_a",
+          "translation": "Sao cậu lại làm bài tệ đến vậy?",
+          "start_time": 149.04,
+          "duration": 2.54,
+          "pause_duration": 4.04,
+          "end_time": 155.62
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "My mind just went blank. I think I overloaded my brain. I just couldn't concentrate during the exams.",
+          "audio_key": "c13_l7p1_d4_t4_b",
+          "translation": "Đầu óc tớ lúc đó cứ trống rỗng. Tớ nghĩ não mình bị quá tải nên không tài nào tập trung được trong lúc làm bài thi.",
+          "start_time": 155.62,
+          "duration": 8.5,
+          "pause_duration": 10.0,
+          "end_time": 174.12
+        }
+      ]
+    },
+    {
+      "pattern_num": 5,
+      "pattern_title": "Hội thoại thực hành 1: Đi uống cùng bạn ở quán bar tối qua",
+      "pattern_translation": "Practice Dialogue 1 - Night Out",
+      "start_time": 175.12,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 5,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What did you do last night?",
+          "audio_key": "c13_l7p1_d5_t1_a",
+          "translation": "Tối qua cậu đã làm gì thế?",
+          "start_time": 175.12,
+          "duration": 2.45,
+          "pause_duration": 3.95,
+          "end_time": 181.52
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 5,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I met some friends and we had some drinks at a bar.",
+          "audio_key": "c13_l7p1_d5_t2_b",
+          "translation": "Tớ gặp vài người bạn và bọn tớ đã uống vài ly ở quán bar.",
+          "start_time": 181.52,
+          "duration": 3.58,
+          "pause_duration": 5.08,
+          "end_time": 190.18
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 5,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Did you drink a lot?",
+          "audio_key": "c13_l7p1_d5_t3_a",
+          "translation": "Cậu có uống nhiều không?",
+          "start_time": 190.18,
+          "duration": 2.09,
+          "pause_duration": 3.59,
+          "end_time": 195.86
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 5,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I got so drunk that I don't remember how I got home.",
+          "audio_key": "c13_l7p1_d5_t4_b",
+          "translation": "Tớ say đến mức chẳng còn nhớ mình đã về nhà bằng cách nào nữa.",
+          "start_time": 195.86,
+          "duration": 3.65,
+          "pause_duration": 5.15,
+          "end_time": 204.66
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 5,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Why did you drink so much?",
+          "audio_key": "c13_l7p1_d5_t5_a",
+          "translation": "Sao cậu lại uống nhiều đến thế?",
+          "start_time": 204.66,
+          "duration": 2.52,
+          "pause_duration": 4.02,
+          "end_time": 211.2
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 5,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I was so depressed. I just wanted to forget about everything.",
+          "audio_key": "c13_l7p1_d5_t6_b",
+          "translation": "Tớ buồn chán quá. Tớ chỉ muốn quên đi hết mọi chuyện thôi.",
+          "start_time": 211.2,
+          "duration": 4.9,
+          "pause_duration": 6.4,
+          "end_time": 222.5
+        }
+      ]
+    },
+    {
+      "pattern_num": 6,
+      "pattern_title": "Hội thoại thực hành 2: Chuyến bay quốc tế 12 tiếng mệt mỏi",
+      "pattern_translation": "Practice Dialogue 2 - Long Flight",
+      "start_time": 223.5,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 6,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "How was the airplane ride?",
+          "audio_key": "c13_l7p1_d6_t1_a",
+          "translation": "Chuyến bay của bạn thế nào?",
+          "start_time": 223.5,
+          "duration": 2.64,
+          "pause_duration": 4.14,
+          "end_time": 230.28
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 6,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "It was a twelve hour flight. It was so boring. I tried to sleep but it was too uncomfortable on the plane.",
+          "audio_key": "c13_l7p1_d6_t2_b",
+          "translation": "Đó là một chuyến bay kéo dài tận 12 tiếng. Chán kinh khủng. Mình đã cố ngủ nhưng chỗ ngồi trên máy bay quá bất tiện.",
+          "start_time": 230.28,
+          "duration": 8.26,
+          "pause_duration": 9.76,
+          "end_time": 248.3
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 6,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "How about the movies they play on international flights?",
+          "audio_key": "c13_l7p1_d6_t3_a",
+          "translation": "Thế còn những bộ phim họ chiếu trên các chuyến bay quốc tế thì sao?",
+          "start_time": 248.3,
+          "duration": 4.01,
+          "pause_duration": 5.51,
+          "end_time": 257.82
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 6,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I saw both movies they played. I was just unlucky.",
+          "audio_key": "c13_l7p1_d6_t4_b",
+          "translation": "Mình đã xem cả hai bộ phim họ chiếu từ trước rồi. Đúng là không may chút nào.",
+          "start_time": 257.82,
+          "duration": 4.78,
+          "pause_duration": 6.28,
+          "end_time": 268.88
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 6,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Did you take a book with you?",
+          "audio_key": "c13_l7p1_d6_t5_a",
+          "translation": "Bạn có mang theo sách để đọc không?",
+          "start_time": 268.88,
+          "duration": 2.21,
+          "pause_duration": 3.71,
+          "end_time": 274.8
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 6,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I accidentally packed it with my luggage that I checked in.",
+          "audio_key": "c13_l7p1_d6_t6_b",
+          "translation": "Mình lại vô tình xếp nó vào trong vali hành lý ký gửi mất rồi.",
+          "start_time": 274.8,
+          "duration": 3.84,
+          "pause_duration": 5.34,
+          "end_time": 283.98
+        }
+      ]
+    },
+    {
+      "pattern_num": 7,
+      "pattern_title": "Hội thoại thực hành 3: Bữa tiệc đông đúc cuối tuần trước",
+      "pattern_translation": "Practice Dialogue 3 - Weekend Party",
+      "start_time": 284.98,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 7,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What did you do last weekend?",
+          "audio_key": "c13_l7p1_d7_t1_a",
+          "translation": "Cuối tuần trước bạn đã làm gì?",
+          "start_time": 284.98,
+          "duration": 2.52,
+          "pause_duration": 4.02,
+          "end_time": 291.52
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 7,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I went to a party.",
+          "audio_key": "c13_l7p1_d7_t2_b",
+          "translation": "Mình đã đi dự một bữa tiệc.",
+          "start_time": 291.52,
+          "duration": 2.04,
+          "pause_duration": 3.54,
+          "end_time": 297.1
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 7,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "How was the party?",
+          "audio_key": "c13_l7p1_d7_t3_a",
+          "translation": "Bữa tiệc đó thế nào?",
+          "start_time": 297.1,
+          "duration": 2.14,
+          "pause_duration": 3.64,
+          "end_time": 302.88
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 7,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "It was way too crowded and the food was gone before I got there.",
+          "audio_key": "c13_l7p1_d7_t4_b",
+          "translation": "Ở đó quá đông đúc và đồ ăn thì đã hết sạch trước cả khi mình tới nơi.",
+          "start_time": 302.88,
+          "duration": 4.25,
+          "pause_duration": 5.75,
+          "end_time": 312.88
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 7,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What time did you get home?",
+          "audio_key": "c13_l7p1_d7_t5_a",
+          "translation": "Bạn về nhà lúc mấy giờ?",
+          "start_time": 312.88,
+          "duration": 2.35,
+          "pause_duration": 3.85,
+          "end_time": 319.08
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 7,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "It was pretty boring so I left at ten and got home before eleven.",
+          "audio_key": "c13_l7p1_d7_t6_b",
+          "translation": "Bữa tiệc khá chán nên mình rời đi lúc 10 giờ và về đến nhà trước 11 giờ đêm.",
+          "start_time": 319.08,
+          "duration": 4.56,
+          "pause_duration": 6.06,
+          "end_time": 329.7
+        }
+      ]
+    }
+  ]
+}

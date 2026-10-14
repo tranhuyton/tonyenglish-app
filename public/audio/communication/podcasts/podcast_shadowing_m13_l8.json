@@ -1,0 +1,254 @@
+{
+  "module": "Chiến thuật giao tiếp",
+  "slug": "m13_l8",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Hỏi đáp về những thứ yêu thích nhất",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m13_l8.mp3",
+  "total_duration": 155.68,
+  "patterns": [
+    {
+      "pattern_num": 1,
+      "pattern_title": "Hội thoại 1: Bộ phim yêu thích (Last of the Mohicans)",
+      "pattern_translation": "Favorite Movie",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 1,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What are you doing tomorrow?",
+          "audio_key": "c13_l8p1_d1_t1_a",
+          "translation": "Ngày mai bạn định làm gì?",
+          "start_time": 0.0,
+          "duration": 2.33,
+          "pause_duration": 3.83,
+          "end_time": 6.16
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 1,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I'm going to stay home and watch a video.",
+          "audio_key": "c13_l8p1_d1_t2_b",
+          "translation": "Mình định ở nhà và xem một bộ phim băng đĩa.",
+          "start_time": 6.16,
+          "duration": 3.0,
+          "pause_duration": 4.5,
+          "end_time": 13.66
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 1,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What are you going to watch?",
+          "audio_key": "c13_l8p1_d1_t3_a",
+          "translation": "Bạn định xem phim gì thế?",
+          "start_time": 13.66,
+          "duration": 2.38,
+          "pause_duration": 3.88,
+          "end_time": 19.92
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 1,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I rented Last of the Mohican. Have you seen it?",
+          "audio_key": "c13_l8p1_d1_t4_b",
+          "translation": "Mình đã thuê phim Người Mohican cuối cùng. Bạn đã xem phim đó chưa?",
+          "start_time": 19.92,
+          "duration": 4.34,
+          "pause_duration": 5.84,
+          "end_time": 30.1
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 1,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "That was one of my favorite movies. You will not be disappointed.",
+          "audio_key": "c13_l8p1_d1_t5_a",
+          "translation": "Đó từng là một trong những bộ phim yêu thích nhất của mình đấy. Bạn chắc chắn sẽ không thất vọng đâu.",
+          "start_time": 30.1,
+          "duration": 5.42,
+          "pause_duration": 6.92,
+          "end_time": 42.44
+        }
+      ]
+    },
+    {
+      "pattern_num": 2,
+      "pattern_title": "Hội thoại 2: Món ăn & nhà hàng Trung Hoa yêu thích",
+      "pattern_translation": "Favorite Food & Restaurant",
+      "start_time": 43.44,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What's your favorite food?",
+          "audio_key": "c13_l8p1_d2_t1_a",
+          "translation": "Món ăn yêu thích của bạn là gì?",
+          "start_time": 43.44,
+          "duration": 2.42,
+          "pause_duration": 3.92,
+          "end_time": 49.78
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I like Chinese food the most.",
+          "audio_key": "c13_l8p1_d2_t2_b",
+          "translation": "Mình thích đồ ăn Trung Hoa nhất.",
+          "start_time": 49.78,
+          "duration": 2.76,
+          "pause_duration": 4.26,
+          "end_time": 56.8
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Have you been to the Chinese restaurant on 44th street?",
+          "audio_key": "c13_l8p1_d2_t3_a",
+          "translation": "Bạn đã từng đến nhà hàng Trung Hoa ở đường số 44 chưa?",
+          "start_time": 56.8,
+          "duration": 3.98,
+          "pause_duration": 5.48,
+          "end_time": 66.26
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "No I haven't. Is it any good?",
+          "audio_key": "c13_l8p1_d2_t4_b",
+          "translation": "Mình chưa từng đến. Ở đó ăn có ngon không?",
+          "start_time": 66.26,
+          "duration": 3.55,
+          "pause_duration": 5.05,
+          "end_time": 74.86
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "It's my favorite Chinese restaurant. I believe you will like it.",
+          "audio_key": "c13_l8p1_d2_t5_a",
+          "translation": "Đó là nhà hàng Trung Hoa yêu thích nhất của mình đấy. Mình tin là bạn sẽ thích nó.",
+          "start_time": 74.86,
+          "duration": 5.3,
+          "pause_duration": 6.8,
+          "end_time": 86.96
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "That sounds great. Let's go.",
+          "audio_key": "c13_l8p1_d2_t6_b",
+          "translation": "Nghe tuyệt quá. Chúng mình cùng đi nhé.",
+          "start_time": 86.96,
+          "duration": 3.62,
+          "pause_duration": 5.12,
+          "end_time": 95.7
+        }
+      ]
+    },
+    {
+      "pattern_num": 3,
+      "pattern_title": "Hội thoại 3: Môn học yêu thích ở trường đại học",
+      "pattern_translation": "Favorite College Class",
+      "start_time": 96.7,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Hey Jack. How were your classes this semester?",
+          "audio_key": "c13_l8p1_d3_t1_a",
+          "translation": "Chào Jack. Các lớp học kỳ này của cậu thế nào?",
+          "start_time": 96.7,
+          "duration": 4.46,
+          "pause_duration": 5.96,
+          "end_time": 107.12
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Would you consider it your favorite class?",
+          "audio_key": "c13_l8p1_d3_t2_a",
+          "translation": "Cậu có coi đó là môn học yêu thích nhất của mình không?",
+          "start_time": 107.12,
+          "duration": 3.07,
+          "pause_duration": 4.57,
+          "end_time": 114.76
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I don't know if I would call it my favorite, but it ranks up there.",
+          "audio_key": "c13_l8p1_d3_t3_b",
+          "translation": "Tớ không biết có gọi đó là môn yêu thích nhất được không, nhưng nó cũng nằm trong nhóm đầu đấy.",
+          "start_time": 114.76,
+          "duration": 4.22,
+          "pause_duration": 5.72,
+          "end_time": 124.7
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What class was your favorite then?",
+          "audio_key": "c13_l8p1_d3_t4_a",
+          "translation": "Vậy môn học nào mới là môn yêu thích nhất của cậu?",
+          "start_time": 124.7,
+          "duration": 2.74,
+          "pause_duration": 4.24,
+          "end_time": 131.68
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I took a business communication class last year and it was terrific.",
+          "audio_key": "c13_l8p1_d3_t5_b",
+          "translation": "Năm ngoái tớ đã học lớp Giao tiếp Kinh doanh và môn đó thực sự rất tuyệt vời.",
+          "start_time": 131.68,
+          "duration": 4.54,
+          "pause_duration": 6.04,
+          "end_time": 142.26
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "I never took that yet. If that was your favorite, I think I will check it out.",
+          "audio_key": "c13_l8p1_d3_t6_a",
+          "translation": "Tớ vẫn chưa học môn đó. Nếu đó là môn cậu thích nhất thì tớ nghĩ mình sẽ tìm hiểu để đăng ký học thử.",
+          "start_time": 142.26,
+          "duration": 5.95,
+          "pause_duration": 7.45,
+          "end_time": 155.66
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "module": "Chiến thuật giao tiếp",
+  "slug": "m13_l3",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Khí hậu & Thời tiết",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m13_l3.mp3",
+  "total_duration": 171.74,
+  "patterns": [
+    {
+      "pattern_num": 1,
+      "pattern_title": "Đổi nhiệt độ độ C và độ F (Seoul tháng 6)",
+      "pattern_translation": "Celsius & Fahrenheit Conversion",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 1,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What is the average temperature in Seoul during June?",
+          "audio_key": "c13_l3p1_d1_t1_a",
+          "translation": "Nhiệt độ trung bình ở Seoul vào tháng Sáu là bao nhiêu?",
+          "start_time": 0.0,
+          "duration": 3.82,
+          "pause_duration": 5.32,
+          "end_time": 9.14
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 1,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "It is usually about 26 degrees Celsius during June.",
+          "audio_key": "c13_l3p1_d1_t2_b",
+          "translation": "Vào tháng Sáu, nhiệt độ thường rơi vào khoảng 26 độ C.",
+          "start_time": 9.14,
+          "duration": 4.32,
+          "pause_duration": 5.82,
+          "end_time": 19.28
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 1,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What is that in Fahrenheit?",
+          "audio_key": "c13_l3p1_d1_t3_a",
+          "translation": "Đổi sang độ F thì là bao nhiêu?",
+          "start_time": 19.28,
+          "duration": 2.5,
+          "pause_duration": 4.0,
+          "end_time": 25.78
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 1,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "That would be about 80 degrees Fahrenheit.",
+          "audio_key": "c13_l3p1_d1_t4_b",
+          "translation": "Sẽ vào khoảng 80 độ F.",
+          "start_time": 25.78,
+          "duration": 3.19,
+          "pause_duration": 4.69,
+          "end_time": 33.66
+        }
+      ]
+    },
+    {
+      "pattern_num": 2,
+      "pattern_title": "Hội thoại thực hành 1: Trời đẹp & dự báo mưa ngày mai",
+      "pattern_translation": "Practice Dialogue 1 - Weather Forecast",
+      "start_time": 34.66,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Hey John, it's beautiful out today, isn't it?",
+          "audio_key": "c13_l3p1_d2_t1_a",
+          "translation": "Chào John, hôm nay trời bên ngoài đẹp quá nhỉ?",
+          "start_time": 34.66,
+          "duration": 3.86,
+          "pause_duration": 5.36,
+          "end_time": 43.88
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Yeah. I wish it would be like this everyday.",
+          "audio_key": "c13_l3p1_d2_t2_b",
+          "translation": "Ừ, mình ước gì ngày nào thời tiết cũng đẹp như thế này.",
+          "start_time": 43.88,
+          "duration": 3.98,
+          "pause_duration": 5.48,
+          "end_time": 53.34
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Did you see the weather forecast?",
+          "audio_key": "c13_l3p1_d2_t3_a",
+          "translation": "Cậu có xem dự báo thời tiết không?",
+          "start_time": 53.34,
+          "duration": 2.62,
+          "pause_duration": 4.12,
+          "end_time": 60.08
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Unfortunately, it's supposed to start raining tomorrow night.",
+          "audio_key": "c13_l3p1_d2_t4_b",
+          "translation": "Đáng tiếc là theo dự báo thì tối mai trời sẽ bắt đầu mưa.",
+          "start_time": 60.08,
+          "duration": 4.27,
+          "pause_duration": 5.77,
+          "end_time": 70.12
+        }
+      ]
+    },
+    {
+      "pattern_num": 3,
+      "pattern_title": "Hội thoại thực hành 2: Mong thời tiết đẹp đi Everland cuối tuần",
+      "pattern_translation": "Practice Dialogue 2 - Weekend Plans",
+      "start_time": 71.12,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Do you know what the weather is going to be like tomorrow?",
+          "audio_key": "c13_l3p1_d3_t1_a",
+          "translation": "Bạn có biết thời tiết ngày mai sẽ như thế nào không?",
+          "start_time": 71.12,
+          "duration": 3.36,
+          "pause_duration": 4.86,
+          "end_time": 79.34
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "It's supposed to be the same as today. I don't think the weather will change much for the next week or so.",
+          "audio_key": "c13_l3p1_d3_t2_b",
+          "translation": "Dự báo là sẽ giống như hôm nay. Mình nghĩ thời tiết sẽ không thay đổi nhiều trong khoảng một tuần tới.",
+          "start_time": 79.34,
+          "duration": 6.82,
+          "pause_duration": 8.32,
+          "end_time": 94.48
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "That's great.",
+          "audio_key": "c13_l3p1_d3_t3_a",
+          "translation": "Thế thì tuyệt quá.",
+          "start_time": 94.48,
+          "duration": 1.87,
+          "pause_duration": 3.37,
+          "end_time": 99.72
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Why are you so happy? Do you have anything planned?",
+          "audio_key": "c13_l3p1_d3_t4_b",
+          "translation": "Sao bạn vui thế? Bạn có kế hoạch gì à?",
+          "start_time": 99.72,
+          "duration": 4.49,
+          "pause_duration": 5.99,
+          "end_time": 110.2
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Yeah, I'm going to Everland with my family this weekend so I was hoping for good weather.",
+          "audio_key": "c13_l3p1_d3_t5_a",
+          "translation": "Ừ, cuối tuần này mình định đi công viên Everland cùng gia đình nên mình rất mong trời đẹp.",
+          "start_time": 110.2,
+          "duration": 5.3,
+          "pause_duration": 6.8,
+          "end_time": 122.3
+        }
+      ]
+    },
+    {
+      "pattern_num": 4,
+      "pattern_title": "Hội thoại thực hành 3: Trò chuyện về mùa mưa bão",
+      "pattern_translation": "Practice Dialogue 3 - Monsoon Season",
+      "start_time": 123.3,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "I can't believe it is raining so much.",
+          "audio_key": "c13_l3p1_d4_t1_a",
+          "translation": "Mình không thể tin nổi là trời lại mưa nhiều đến thế.",
+          "start_time": 123.3,
+          "duration": 3.05,
+          "pause_duration": 4.55,
+          "end_time": 130.9
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "It's not that bad. Last year we had floods in 4 different areas of the city.",
+          "audio_key": "c13_l3p1_d4_t2_b",
+          "translation": "Như thế này vẫn chưa tệ lắm đâu. Năm ngoái chúng ta còn bị ngập lụt ở 4 khu vực khác nhau trong thành phố cơ.",
+          "start_time": 130.9,
+          "duration": 6.07,
+          "pause_duration": 7.57,
+          "end_time": 144.54
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Really? Does it always rain so much during this time of year?",
+          "audio_key": "c13_l3p1_d4_t3_a",
+          "translation": "Thật sao? Vào thời điểm này trong năm trời lúc nào cũng mưa nhiều thế à?",
+          "start_time": 144.54,
+          "duration": 5.04,
+          "pause_duration": 6.54,
+          "end_time": 156.12
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "This is not as bad as usual. During the monsoon season, we usually have rain for 3 weeks.",
+          "audio_key": "c13_l3p1_d4_t4_b",
+          "translation": "Thế này vẫn chưa dữ dội như mọi năm đâu. Vào mùa mưa gió mùa, trời thường mưa suốt 3 tuần liền.",
+          "start_time": 156.12,
+          "duration": 7.06,
+          "pause_duration": 8.56,
+          "end_time": 171.74
+        }
+      ]
+    }
+  ]
+}

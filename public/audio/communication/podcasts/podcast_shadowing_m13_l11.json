@@ -1,0 +1,168 @@
+{
+  "module": "Chiến thuật giao tiếp",
+  "slug": "m13_l11",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Đi máy bay",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m13_l11.mp3",
+  "total_duration": 111.0,
+  "patterns": [
+    {
+      "pattern_num": 1,
+      "pattern_title": "Hội thoại 1: Gọi điện xác nhận chuyến bay & vé máy bay",
+      "pattern_translation": "Confirming a Flight",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 1,
+          "speaker": "You",
+          "role": "A",
+          "sentence": "I would like to confirm my flight.",
+          "audio_key": "c13_l11p1_d1_t1_a",
+          "translation": "Tôi muốn xác nhận lại chuyến bay của mình.",
+          "start_time": 0.0,
+          "duration": 2.83,
+          "pause_duration": 4.33,
+          "end_time": 7.16
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 1,
+          "speaker": "Agent",
+          "role": "B",
+          "sentence": "Can I get your ticket number?",
+          "audio_key": "c13_l11p1_d1_t2_b",
+          "translation": "Cho tôi xin mã số vé của quý khách được không ạ?",
+          "start_time": 7.16,
+          "duration": 2.4,
+          "pause_duration": 3.9,
+          "end_time": 13.46
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 1,
+          "speaker": "You",
+          "role": "A",
+          "sentence": "The number is 45-6-43.",
+          "audio_key": "c13_l11p1_d1_t3_a",
+          "translation": "Mã số vé là 45-6-43.",
+          "start_time": 13.46,
+          "duration": 4.03,
+          "pause_duration": 5.53,
+          "end_time": 23.02
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 1,
+          "speaker": "Agent",
+          "role": "B",
+          "sentence": "You are scheduled to depart on June 15th at 1:00 pm. Is this correct?",
+          "audio_key": "c13_l11p1_d1_t4_b",
+          "translation": "Quý khách có lịch khởi hành vào ngày 15 tháng 6 lúc 1 giờ chiều. Thông tin này có chính xác không ạ?",
+          "start_time": 23.02,
+          "duration": 6.02,
+          "pause_duration": 7.52,
+          "end_time": 36.56
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 1,
+          "speaker": "You",
+          "role": "A",
+          "sentence": "Yes it is.",
+          "audio_key": "c13_l11p1_d1_t5_a",
+          "translation": "Vâng, chính xác.",
+          "start_time": 36.56,
+          "duration": 1.87,
+          "pause_duration": 3.37,
+          "end_time": 41.8
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 1,
+          "speaker": "Agent",
+          "role": "B",
+          "sentence": "Is anybody else traveling with you?",
+          "audio_key": "c13_l11p1_d1_t6_b",
+          "translation": "Có ai khác đi cùng chuyến bay với quý khách không ạ?",
+          "start_time": 41.8,
+          "duration": 2.71,
+          "pause_duration": 4.21,
+          "end_time": 48.72
+        },
+        {
+          "turn_num": 7,
+          "dialogue_num": 1,
+          "speaker": "You",
+          "role": "A",
+          "sentence": "Yes, my wife. Her ticket is 45-6-44.",
+          "audio_key": "c13_l11p1_d1_t7_a",
+          "translation": "Có, vợ của tôi. Mã số vé của cô ấy là 45-6-44.",
+          "start_time": 48.72,
+          "duration": 6.36,
+          "pause_duration": 7.86,
+          "end_time": 62.94
+        },
+        {
+          "turn_num": 8,
+          "dialogue_num": 1,
+          "speaker": "Agent",
+          "role": "B",
+          "sentence": "Your tickets have been confirmed. Please arrive at the airport 3 hours before your flight departs.",
+          "audio_key": "c13_l11p1_d1_t8_b",
+          "translation": "Vé của quý khách đã được xác nhận. Xin quý khách vui lòng có mặt tại sân bay trước giờ khởi hành 3 tiếng.",
+          "start_time": 62.94,
+          "duration": 7.01,
+          "pause_duration": 8.51,
+          "end_time": 78.46
+        }
+      ]
+    },
+    {
+      "pattern_num": 2,
+      "pattern_title": "Hội thoại 2: Chọn ghế ngồi tại quầy làm thủ tục (Check-in)",
+      "pattern_translation": "Choosing a Seat at the Counter",
+      "start_time": 79.46,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 2,
+          "speaker": "Agent",
+          "role": "A",
+          "sentence": "Do you prefer window or aisle?",
+          "audio_key": "c13_l11p1_d2_t1_a",
+          "translation": "Quý khách thích ngồi ghế cạnh cửa sổ hay ghế cạnh lối đi ạ?",
+          "start_time": 79.46,
+          "duration": 2.93,
+          "pause_duration": 4.43,
+          "end_time": 86.82
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 2,
+          "speaker": "Agent",
+          "role": "A",
+          "sentence": "We do not have any aisle seats remaining. Is a window seat ok with you or would you prefer a middle seat?",
+          "audio_key": "c13_l11p1_d2_t2_a",
+          "translation": "Hiện chúng tôi không còn ghế trống nào cạnh lối đi. Quý khách ngồi ghế cạnh cửa sổ có được không hay quý khách muốn ngồi ghế ở giữa ạ?",
+          "start_time": 86.82,
+          "duration": 7.01,
+          "pause_duration": 8.51,
+          "end_time": 102.34
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 2,
+          "speaker": "You",
+          "role": "B",
+          "sentence": "Can I have a seat closest to the emergency exit?",
+          "audio_key": "c13_l11p1_d2_t3_b",
+          "translation": "Cho tôi xin một chỗ ngồi gần cửa thoát hiểm nhất được không?",
+          "start_time": 102.34,
+          "duration": 3.58,
+          "pause_duration": 5.08,
+          "end_time": 111.0
+        }
+      ]
+    }
+  ]
+}

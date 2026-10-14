@@ -526,6 +526,19 @@ const DIALOGUE_PODCAST_LECTURES: Record<string, number> = {
   '2ac10b91-9c1e-4d27-b59e-7ffa69d9fff0': 2, // 2. Booking a table
   '96ede3db-6e10-4674-8ae7-42ad9bee717f': 2, // 3. Party at the restaurant
   'd35ec2e2-7d02-4d7c-a8da-ead7208d6c2a': 2, // 4. On the train
+  // Module 13: Chiến thuật giao tiếp
+  '3416832d-f0aa-4d94-809e-fefb206f91f5': 2, // 1. Chiến Thuật Chào hỏi cơ bản
+  '490ecff4-9cac-464f-a59a-61de2e6ade8e': 2, // 2. Bắt chuyện tán ngẫu
+  '70bf2eda-d593-4421-9841-8101f4236c3e': 2, // 3. Khí hậu & Thời tiết
+  'f0163e91-8e30-40c4-b7cb-b7b248b5eb98': 2, // 4. Buồn chán
+  'd6bad7d1-ff68-4da0-9dde-9b04a036039e': 2, // 5. Hỏi thăm về ngày hôm nay của bạn
+  '7cd3298f-1f6a-4d27-b493-b9d1657dd92f': 2, // 6. Nói về Kế hoạch tương lai
+  'a52a2f87-94cd-4870-bd1b-74597a4c557e': 2, // 7. Nói về quá khứ
+  'd7b52c98-9ada-46b4-9145-06c94aaab0c1': 2, // 8. Hỏi đáp về những thứ yêu thích nhất
+  '808eb836-6eab-4013-909b-e355b161a5e7': 2, // 9. Sở thích cá nhân
+  '6897dd88-0948-4c87-8fda-35f80a7e0a85': 2, // 10. Thảo luận về phim ảnh
+  '4e11fc54-3dd6-443b-bd18-d3434061daa3': 2, // 11. Đi máy bay
+  'e4a688d4-5e93-46a7-b072-09105a530666': 2, // 12. Đi công tác
 };
 
 const getPodcastCount = (lecture: { id: string; title: string }, courseId: string): number => {

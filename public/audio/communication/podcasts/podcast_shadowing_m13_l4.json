@@ -1,0 +1,353 @@
+{
+  "module": "Chiến thuật giao tiếp",
+  "slug": "m13_l4",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Buồn chán",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m13_l4.mp3",
+  "total_duration": 231.09,
+  "patterns": [
+    {
+      "pattern_num": 1,
+      "pattern_title": "Tình huống 1: Nói chuyện với người quen xã giao (Jill & Jane)",
+      "pattern_translation": "Talking to an Acquaintance",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 1,
+          "speaker": "Jill",
+          "role": "A",
+          "sentence": "Hi Jane, Do you have time to talk?",
+          "audio_key": "c13_l4p1_d1_t1_a",
+          "translation": "Chào Jane, bạn có thời gian nói chuyện một chút không?",
+          "start_time": 0.0,
+          "duration": 3.24,
+          "pause_duration": 4.74,
+          "end_time": 7.98
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 1,
+          "speaker": "Jane",
+          "role": "B",
+          "sentence": "Sure, I was just watching TV. What are you doing?",
+          "audio_key": "c13_l4p1_d1_t2_b",
+          "translation": "Được chứ, mình chỉ đang xem TV thôi. Bạn đang làm gì thế?",
+          "start_time": 7.98,
+          "duration": 4.2,
+          "pause_duration": 5.7,
+          "end_time": 17.88
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 1,
+          "speaker": "Jill",
+          "role": "A",
+          "sentence": "Nothing much. I really wanted to start studying... but I can't seem to motivate myself.",
+          "audio_key": "c13_l4p1_d1_t3_a",
+          "translation": "Chẳng làm gì nhiều. Mình thực sự rất muốn bắt đầu học bài... nhưng dường như chẳng thể lấy lại động lực cho bản thân.",
+          "start_time": 17.88,
+          "duration": 6.91,
+          "pause_duration": 8.41,
+          "end_time": 33.2
+        }
+      ]
+    },
+    {
+      "pattern_num": 2,
+      "pattern_title": "Tình huống 2: Than chán & rủ bạn thân đi cà phê Starbucks",
+      "pattern_translation": "Talking to a Close Friend",
+      "start_time": 34.2,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "What are you doing?",
+          "audio_key": "c13_l4p1_d2_t1_a",
+          "translation": "Cậu đang làm gì đấy?",
+          "start_time": 34.2,
+          "duration": 1.97,
+          "pause_duration": 3.47,
+          "end_time": 39.64
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I'm doing the laundry.",
+          "audio_key": "c13_l4p1_d2_t2_b",
+          "translation": "Tớ đang giặt quần áo.",
+          "start_time": 39.64,
+          "duration": 2.16,
+          "pause_duration": 3.66,
+          "end_time": 45.46
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "I'm so bored. I have nothing to do.",
+          "audio_key": "c13_l4p1_d2_t3_a",
+          "translation": "Tớ chán quá đi mất. Chẳng có việc gì để làm cả.",
+          "start_time": 45.46,
+          "duration": 4.2,
+          "pause_duration": 5.7,
+          "end_time": 55.36
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 2,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Why don't you come over and help me?",
+          "audio_key": "c13_l4p1_d2_t4_b",
+          "translation": "Sao cậu không sang đây phụ giúp tớ?",
+          "start_time": 55.36,
+          "duration": 2.78,
+          "pause_duration": 4.28,
+          "end_time": 62.42
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 2,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "I'd rather do my own house chores. Hey, you wanna take a break and have coffee at Starbucks with me?",
+          "audio_key": "c13_l4p1_d2_t5_a",
+          "translation": "Thế thì thà tớ tự làm việc nhà của tớ còn hơn. Này, cậu có muốn nghỉ giải lao một lát rồi đi uống cà phê ở Starbucks với tớ không?",
+          "start_time": 62.42,
+          "duration": 7.15,
+          "pause_duration": 8.65,
+          "end_time": 78.22
+        }
+      ]
+    },
+    {
+      "pattern_num": 3,
+      "pattern_title": "Hội thoại thực hành 1: Than thở về công việc nhàm chán",
+      "pattern_translation": "Practice Dialogue 1 - Boring Job",
+      "start_time": 79.22,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Hey there. What have you been up to?",
+          "audio_key": "c13_l4p1_d3_t1_a",
+          "translation": "Chào đằng ấy. Dạo này cậu đang làm gì thế?",
+          "start_time": 79.22,
+          "duration": 3.58,
+          "pause_duration": 5.08,
+          "end_time": 87.88
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Nothing really.",
+          "audio_key": "c13_l4p1_d3_t2_b",
+          "translation": "Chẳng có gì đặc biệt cả.",
+          "start_time": 87.88,
+          "duration": 1.87,
+          "pause_duration": 3.37,
+          "end_time": 93.12
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "How about your work?",
+          "audio_key": "c13_l4p1_d3_t3_a",
+          "translation": "Thế còn công việc của cậu thì sao?",
+          "start_time": 93.12,
+          "duration": 2.21,
+          "pause_duration": 3.71,
+          "end_time": 99.04
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "It's so boring there. I really wish I had a different job.",
+          "audio_key": "c13_l4p1_d3_t4_b",
+          "translation": "Ở chỗ làm chán lắm. Tớ thực sự ước gì mình có một công việc khác.",
+          "start_time": 99.04,
+          "duration": 5.06,
+          "pause_duration": 6.56,
+          "end_time": 110.66
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Is it really that bad?",
+          "audio_key": "c13_l4p1_d3_t5_a",
+          "translation": "Thực sự tệ đến mức đó sao?",
+          "start_time": 110.66,
+          "duration": 2.26,
+          "pause_duration": 3.76,
+          "end_time": 116.68
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Yeah. Most of the time, I have nothing to do. But whenever I have something to do, it's boring work because it is the same old thing.",
+          "audio_key": "c13_l4p1_d3_t6_b",
+          "translation": "Ừ. Phần lớn thời gian tớ chẳng có việc gì để làm. Mà hễ có việc để làm thì toàn là việc nhàm chán vì cứ lặp đi lặp lại một kiểu cũ rích.",
+          "start_time": 116.68,
+          "duration": 9.74,
+          "pause_duration": 11.24,
+          "end_time": 137.66
+        },
+        {
+          "turn_num": 7,
+          "dialogue_num": 3,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Why don't you find a different job then?",
+          "audio_key": "c13_l4p1_d3_t7_a",
+          "translation": "Vậy sao cậu không tìm một công việc khác đi?",
+          "start_time": 137.66,
+          "duration": 2.81,
+          "pause_duration": 4.31,
+          "end_time": 144.78
+        },
+        {
+          "turn_num": 8,
+          "dialogue_num": 3,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "Maybe I should.",
+          "audio_key": "c13_l4p1_d3_t8_b",
+          "translation": "Có lẽ tớ nên làm vậy.",
+          "start_time": 144.78,
+          "duration": 1.87,
+          "pause_duration": 3.37,
+          "end_time": 150.02
+        }
+      ]
+    },
+    {
+      "pattern_num": 4,
+      "pattern_title": "Hội thoại thực hành 2: Rủ bạn đi chơi tối nay",
+      "pattern_translation": "Practice Dialogue 2 - Plans for Tonight",
+      "start_time": 151.02,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Hi Steve, what's your plan for tonight?",
+          "audio_key": "c13_l4p1_d4_t1_a",
+          "translation": "Chào Steve, tối nay cậu có kế hoạch gì chưa?",
+          "start_time": 151.02,
+          "duration": 3.38,
+          "pause_duration": 4.88,
+          "end_time": 159.28
+        },
+        {
+          "turn_num": 2,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "I don't have any plans. Are you doing anything special?",
+          "audio_key": "c13_l4p1_d4_t2_b",
+          "translation": "Tớ chưa có kế hoạch gì cả. Cậu có làm gì đặc biệt không?",
+          "start_time": 159.28,
+          "duration": 4.63,
+          "pause_duration": 6.13,
+          "end_time": 170.04
+        },
+        {
+          "turn_num": 3,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Well, if you're bored, let's plan on meeting up tonight.",
+          "audio_key": "c13_l4p1_d4_t3_a",
+          "translation": "À, nếu cậu đang chán thì tối nay chúng mình hẹn nhau đi chơi đi.",
+          "start_time": 170.04,
+          "duration": 4.32,
+          "pause_duration": 5.82,
+          "end_time": 180.18
+        },
+        {
+          "turn_num": 4,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "That sounds like a good idea. Should we invite Bob?",
+          "audio_key": "c13_l4p1_d4_t4_b",
+          "translation": "Nghe có vẻ là một ý kiến hay đấy. Chúng mình có nên rủ thêm Bob không?",
+          "start_time": 180.18,
+          "duration": 4.66,
+          "pause_duration": 6.16,
+          "end_time": 191.0
+        },
+        {
+          "turn_num": 5,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "He's a little boring.",
+          "audio_key": "c13_l4p1_d4_t5_a",
+          "translation": "Cậu ấy hơi nhạt nhẽo, buồn tẻ lắm.",
+          "start_time": 191.0,
+          "duration": 2.09,
+          "pause_duration": 3.59,
+          "end_time": 196.68
+        },
+        {
+          "turn_num": 6,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "What do you mean?",
+          "audio_key": "c13_l4p1_d4_t6_b",
+          "translation": "Ý cậu là sao?",
+          "start_time": 196.68,
+          "duration": 1.87,
+          "pause_duration": 3.37,
+          "end_time": 201.92
+        },
+        {
+          "turn_num": 7,
+          "dialogue_num": 4,
+          "speaker": "A",
+          "role": "A",
+          "sentence": "Well, he doesn't drink, play video games, pool, or really anything. The only thing he talks about is history.",
+          "audio_key": "c13_l4p1_d4_t7_a",
+          "translation": "Thì cậu ấy chẳng uống rượu bia, chẳng chơi điện tử, không đánh bi-a hay chơi bất cứ thứ gì. Thứ duy nhất cậu ấy nói tới là lịch sử.",
+          "start_time": 201.92,
+          "duration": 8.71,
+          "pause_duration": 10.21,
+          "end_time": 220.84
+        },
+        {
+          "turn_num": 8,
+          "dialogue_num": 4,
+          "speaker": "B",
+          "role": "B",
+          "sentence": "You do have a point. We'll leave him out tonight.",
+          "audio_key": "c13_l4p1_d4_t8_b",
+          "translation": "Cậu nói cũng có lý đấy. Tối nay chúng mình không rủ cậu ấy nữa vậy.",
+          "start_time": 220.84,
+          "duration": 4.37,
+          "pause_duration": 5.87,
+          "end_time": 231.08
+        }
+      ]
+    }
+  ]
+}
