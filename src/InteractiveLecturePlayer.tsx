@@ -83,9 +83,12 @@ export default function InteractiveLecturePlayer({
   const isPlayingRef = useRef(isPlaying);
   isPlayingRef.current = isPlaying;
 
+  const hasActiveSessionRef = useRef<boolean>(false);
+
   // 1. Tải Manifest
   useEffect(() => {
     let isMounted = true;
+    hasActiveSessionRef.current = false;
     fetch(manifestUrl)
       .then(res => {
         if (!res.ok) throw new Error('Cannot load manifest');
@@ -102,23 +105,34 @@ export default function InteractiveLecturePlayer({
 
   const currentSegment = manifest?.segments[currentSegmentIndex] || null;
 
-  // 2. Highlight mục đang giảng (bắn event & gọi callback)
+  // 2. Highlight mục đang giảng (CHỈ highlight khi đang thực sự phát âm thanh isPlaying === true)
   useEffect(() => {
-    if (currentSegment) {
+    if (currentSegment && isPlaying) {
       if (onHighlightSection) {
         onHighlightSection(currentSegment.selector, autoScroll);
       }
       window.dispatchEvent(new CustomEvent('tony-lecture-highlight-section', {
         detail: { selector: currentSegment.selector, autoScroll }
       }));
+    } else {
+      if (onHighlightSection) {
+        onHighlightSection('', false);
+      }
+      window.dispatchEvent(new CustomEvent('tony-lecture-highlight-section', {
+        detail: { selector: null, autoScroll: false }
+      }));
     }
-  }, [currentSegment, autoScroll, onHighlightSection]);
+  }, [currentSegment, isPlaying, autoScroll, onHighlightSection]);
 
   useEffect(() => {
     const handleReHighlight = () => {
-      if (currentSegment) {
+      if (currentSegment && isPlayingRef.current) {
         window.dispatchEvent(new CustomEvent('tony-lecture-highlight-section', {
-          detail: { selector: currentSegment.selector, autoScroll: true }
+          detail: { selector: currentSegment.selector, autoScroll: false }
+        }));
+      } else {
+        window.dispatchEvent(new CustomEvent('tony-lecture-highlight-section', {
+          detail: { selector: null, autoScroll: false }
         }));
       }
     };
@@ -136,6 +150,7 @@ export default function InteractiveLecturePlayer({
 
     if (mode === 'single') {
       // Khi bấm vào mỗi tiểu mục: đọc xong tiểu mục nào thì dừng chỗ đấy không đọc tiếp
+      hasActiveSessionRef.current = false;
       setIsPlaying(false);
       if (audioRef.current) {
         audioRef.current.currentTime = 0;
@@ -147,6 +162,7 @@ export default function InteractiveLecturePlayer({
         setIsPlaying(true);
       } else {
         // Đã đọc xong toàn bộ tiểu mục của mục lớn -> Dừng lại
+        hasActiveSessionRef.current = false;
         setIsPlaying(false);
         if (audioRef.current) {
           audioRef.current.currentTime = 0;
@@ -158,6 +174,7 @@ export default function InteractiveLecturePlayer({
         setCurrentSegmentIndex(curIdx + 1);
         setIsPlaying(true);
       } else {
+        hasActiveSessionRef.current = false;
         setIsPlaying(false);
         if (audioRef.current) {
           audioRef.current.currentTime = 0;
@@ -254,35 +271,42 @@ export default function InteractiveLecturePlayer({
     const isCurrentlyPlaying = isPlayingRef.current;
     const audio = audioRef.current;
 
-    // A. Kiểm tra xem có đang click lại vào đúng mục/tiểu mục đang được chọn không
+    // A. Kiểm tra xem có đang click lại vào đúng mục/tiểu mục đang được chọn không (chỉ khi đã bắt đầu phiên nghe)
     const isSameSegment = idx === curIdx;
     const isInsideActiveSection = isMajor && curIdx >= range.start && curIdx <= range.end && playModeRef.current === 'section';
 
-    if (isSameSegment || isInsideActiveSection) {
+    if (hasActiveSessionRef.current && (isSameSegment || isInsideActiveSection)) {
       if (isCurrentlyPlaying) {
         // Đang đọc mà bấm vào một lần nữa thì dừng (pause)
         audio?.pause();
         setIsPlaying(false);
       } else {
         // Bấm thêm lần nữa lại tiếp tục play
-        audio?.play().then(() => setIsPlaying(true)).catch(console.warn);
+        setIsPlaying(true);
+        audio?.play().catch(console.warn);
       }
       return;
     }
 
-    // B. Click vào một mục / tiểu mục mới
+    // B. Click vào một mục / tiểu mục mới (hoặc click lần đầu tiên khi mới vào trang)
+    hasActiveSessionRef.current = true;
+    const targetIdx = isMajor ? range.start : idx;
     if (isMajor) {
       // Khi bấm vào mục lớn: đọc lần lượt hết tiểu mục này đến tiểu mục khác
       setPlayMode('section');
       setSectionEndIndex(range.end);
-      setCurrentSegmentIndex(range.start);
+      setCurrentSegmentIndex(targetIdx);
       setIsPlaying(true);
     } else {
       // Khi bấm vào mỗi tiểu mục: đọc xong tiểu mục nào thì dừng chỗ đấy không đọc tiếp
       setPlayMode('single');
       setSectionEndIndex(null);
-      setCurrentSegmentIndex(idx);
+      setCurrentSegmentIndex(targetIdx);
       setIsPlaying(true);
+    }
+    if (targetIdx === curIdx && audio) {
+      audio.currentTime = 0;
+      audio.play().catch(console.warn);
     }
   }, [manifest]);
 
@@ -310,8 +334,10 @@ export default function InteractiveLecturePlayer({
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
+      hasActiveSessionRef.current = true;
       audioRef.current.playbackRate = playbackRate;
-      audioRef.current.play().then(() => setIsPlaying(true)).catch(console.warn);
+      setIsPlaying(true);
+      audioRef.current.play().catch(console.warn);
     }
   }, [isPlaying, playbackRate]);
 
@@ -338,6 +364,7 @@ export default function InteractiveLecturePlayer({
   // Chuyển sang segment cụ thể từ Mục lục hoặc Prev/Next
   const handleSelectSegment = useCallback((index: number) => {
     if (!manifest) return;
+    hasActiveSessionRef.current = true;
     const seg = manifest.segments[index];
     const ranges = manifest.majorSections || MAJOR_SECTION_RANGES;
     const range = ranges[seg.id];
@@ -350,6 +377,10 @@ export default function InteractiveLecturePlayer({
     }
     setCurrentSegmentIndex(index);
     setIsPlaying(true);
+    if (index === currentSegmentIndexRef.current && audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play().catch(console.warn);
+    }
     setShowChapters(false);
   }, [manifest]);
 
@@ -437,8 +468,8 @@ export default function InteractiveLecturePlayer({
               <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs font-extrabold text-[#2bd6eb] uppercase tracking-wider flex items-center gap-1.5">
-                    <Headphones className="w-3.5 h-3.5 animate-bounce" />
-                    Đang phát: {currentSegment?.title}
+                    <Headphones className={`w-3.5 h-3.5 ${isPlaying ? 'animate-bounce' : ''}`} />
+                    {isPlaying ? 'Đang phát:' : (currentTime > 0 ? 'Tạm dừng:' : 'Sẵn sàng phát:')} {currentSegment?.title}
                   </span>
                   {playMode === 'single' ? (
                     <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30">

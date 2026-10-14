@@ -1622,6 +1622,15 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               letter-spacing: 0.5px;
               pointer-events: none;
           }
+          .active-lecture-highlight.lecture-interactive-card > div[style*="pointer-events: none"] {
+              opacity: 0 !important;
+          }
+          .active-lecture-highlight.lecture-interactive-card::before {
+              top: 12px;
+              right: 14px;
+              font-size: 12px;
+              padding: 4px 12px;
+          }
           /* SVG Element Active Highlight */
           g.active-lecture-highlight circle,
           g.active-lecture-highlight rect,
