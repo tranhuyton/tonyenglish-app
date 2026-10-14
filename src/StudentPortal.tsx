@@ -861,7 +861,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
     const testCourseMap: Record<string, string> = {};
     allTests.forEach(t => {
-        let cId = t.course_id || t.content_json?.basicInfo?.courseId || folderCourseMap[t.folder_id];
+        if (!t.folder_id || t.folder_id === 'null' || t.folder_id === '' || !folderCourseMap[t.folder_id]) return;
+        let cId = folderCourseMap[t.folder_id] || t.course_id || t.content_json?.basicInfo?.courseId;
         if (cId && stats[cId]) {
             stats[cId].testCount++;
             testCourseMap[t.id] = cId;
@@ -911,11 +912,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const courseTests = useMemo(() => {
       if (!selectedCourse) return [];
       const folderIdsSet = new Set(courseFolders.map(f => f.id));
-      return allTests.filter(t => 
-          String(t.course_id) === String(selectedCourse.id) || 
-          folderIdsSet.has(t.folder_id) || 
-          t.content_json?.basicInfo?.courseId === selectedCourse.id
-      );
+      return allTests.filter(t => t.folder_id && folderIdsSet.has(t.folder_id));
   }, [selectedCourse, allTests, courseFolders]);
 
   const currentSubFolders = useMemo(() => {
@@ -925,9 +922,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const currentTests = useMemo(() => {
       const validFolderId = (currentFolderId && courseFolders.some(f => String(f.id) === String(currentFolderId))) ? currentFolderId : null;
-      if (validFolderId) return courseTests.filter(t => t.folder_id === validFolderId);
-      // Ở root: hiển thị các bài test trực tiếp không thuộc folder nào (nếu có)
-      return courseTests.filter(t => !t.folder_id || t.folder_id === 'null' || t.folder_id === '');
+      if (!validFolderId) return [];
+      return courseTests.filter(t => t.folder_id === validFolderId);
   }, [courseTests, currentFolderId, courseFolders]);
 
   const processedTests = useMemo(() => {
