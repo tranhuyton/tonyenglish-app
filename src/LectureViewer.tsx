@@ -1456,7 +1456,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
             --text-main: #334155;
             --bg-light: #f8fafc;
          }
-         .lang-switch-bar {
+         .lang-switch-bar, .mp-lang-switcher {
              display: none !important;
          }
          html, body { 

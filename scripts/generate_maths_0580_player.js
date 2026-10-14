@@ -544,7 +544,7 @@ function generateMathsPodcastAndRevisionHtml(episodes, defaultLang = 'vi') {
     }
   </style>
 
-  <!-- HEADER & IN-PLAYER LANGUAGE SWITCHER -->
+  <!-- HEADER -->
   <div class="mp-header-bar">
     <div class="mp-header-title-group">
       <h3 class="mp-header-title">
@@ -556,17 +556,6 @@ function generateMathsPodcastAndRevisionHtml(episodes, defaultLang = 'vi') {
           ? 'Comprehensive audio revision across all 9 syllabus topics (Core & Extended)'
           : 'Hệ thống 9 bài giảng âm thanh tổng ôn toàn bộ 9 chủ đề trọng tâm Toán IGCSE 0580'}
       </p>
-    </div>
-
-    <div class="mp-lang-switcher">
-      <button type="button" class="mp-lang-btn ${initialLang === 'vi' ? 'active' : ''}" id="mpLangBtnVi" data-lang="vi">
-        <span>🇻🇳</span>
-        <span>Tiếng Việt</span>
-      </button>
-      <button type="button" class="mp-lang-btn ${initialLang === 'en' ? 'active' : ''}" id="mpLangBtnEn" data-lang="en">
-        <span>🇬🇧</span>
-        <span>English</span>
-      </button>
     </div>
   </div>
 
@@ -800,8 +789,6 @@ function generateMathsPodcastAndRevisionHtml(episodes, defaultLang = 'vi') {
   const epListEl = document.getElementById('mpEpisodesList');
   const headerTitleText = document.getElementById('mpHeaderTitleText');
   const headerSubText = document.getElementById('mpHeaderSubText');
-  const langBtnVi = document.getElementById('mpLangBtnVi');
-  const langBtnEn = document.getElementById('mpLangBtnEn');
 
   const speeds = [1.0, 1.25, 1.5, 1.75, 2.0];
   let curSpeedIdx = 0;
@@ -838,14 +825,6 @@ function generateMathsPodcastAndRevisionHtml(episodes, defaultLang = 'vi') {
     searchInput.placeholder = isEn
       ? 'Search topic, formula, keywords...'
       : 'Tìm kiếm chủ đề Toán, công thức, từ khóa...';
-
-    if (isEn) {
-      langBtnEn.classList.add('active');
-      langBtnVi.classList.remove('active');
-    } else {
-      langBtnVi.classList.add('active');
-      langBtnEn.classList.remove('active');
-    }
   }
 
   function loadEpisode(index, autoPlay = true) {
@@ -1038,17 +1017,6 @@ function generateMathsPodcastAndRevisionHtml(episodes, defaultLang = 'vi') {
       });
     });
   }
-
-  function switchLanguage(newLang) {
-    if (newLang === currentLang) return;
-    const wasPlaying = !audio.paused;
-    currentLang = newLang;
-    updateHeaderLangUI();
-    loadEpisode(currentIndex, wasPlaying);
-  }
-
-  langBtnVi.addEventListener('click', () => switchLanguage('vi'));
-  langBtnEn.addEventListener('click', () => switchLanguage('en'));
 
   searchInput.addEventListener('input', (e) => {
     searchTerm = e.target.value.trim();
