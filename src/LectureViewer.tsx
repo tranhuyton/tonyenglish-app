@@ -471,6 +471,19 @@ const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   'bbd2be97-406d-41b5-a337-8e210e2f49c9': 'nwlmhaeEwpQ', // Hướng dẫn và Phân tích Luyện Nói
   '11f45a0a-3288-479d-8b90-fcf9ce6ca484': 'ockbvPUOPJk', // Hướng dẫn và Phân tích Luyện Nghe
   '4474b4db-59d1-4f50-9a44-004a547b6521': '11mFWJ8izco', // Hướng dẫn và Phân tích Luyện Đọc
+
+  // ==========================================
+  // IGCSE Maths 0580 (Course ID: 7211abb0-ccba-479f-92ad-2d218121f717)
+  // ==========================================
+  'ba51741b-3534-4ceb-b6a3-15a9c73e0676': 'PQNwpfTsOZg', // Topic 1: Number
+  '1a32c5e3-4c4c-4af8-9c97-20beff177f28': 'v-2jR7hAA80', // Topic 2: Algebra and graphs
+  '2fd58c65-e34a-4246-a7f5-6b8d6c217389': 'PZRUc4-qqww', // Topic 3: Coordinate geometry
+  'fc09421c-8575-48fa-a89e-4107213f13a4': 'VCOVIrIZV3o', // Topic 4: Geometry
+  'adaa9f75-8966-4fce-a899-af02bd6be790': 'Vhq0ZA5S6R0', // Topic 5: Mensuration
+  '4f18be76-c754-4401-86a6-7ac3c74ae400': '6D6B_rcpU8g', // Topic 6: Trigonometry
+  '43613f7b-d2d6-48d3-970c-19619c42a0fe': 'SlWieUnsZmY', // Topic 7: Vectors and transformation
+  '4876cb39-b169-47a2-94b1-d4737dc767e8': 'JCdvPtuKTs8', // Topic 8: Probability
+  '86c531a2-1c21-40a3-828f-b59e531a2bee': '_KVZ9Vw6YC0', // Topic 9: Statistic
 };
 
 const getYouTubeVideoId = (url: string): string | null => {
