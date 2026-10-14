@@ -498,6 +498,7 @@ const COURSE_PODCAST_COUNT: Record<string, number> = {
   '9331cc50-d76b-4247-860e-25b2096e93cb': 35, // Geography 0460
   '564f9e56-b77c-43af-9299-23eb2e7dcb7e': 29, // Business Studies 0450
   'f21fe521-aaf9-4917-8c2a-1931666237b5': 39, // Economics 0455
+  '7211abb0-ccba-479f-92ad-2d218121f717': 9,  // Maths 0580
 };
 
 const LECTURE_PODCAST_COUNT: Record<string, number> = {
@@ -507,6 +508,8 @@ const LECTURE_PODCAST_COUNT: Record<string, number> = {
   '4474b4db-59d1-4f50-9a44-004a547b6521': 6,  // Hướng dẫn và Phân tích Luyện Đọc
   '11f45a0a-3288-479d-8b90-fcf9ce6ca484': 9,  // Hướng dẫn và Phân tích Luyện Nghe
   'bbd2be97-406d-41b5-a337-8e210e2f49c9': 10, // Hướng dẫn và Phân tích Luyện Nói
+  // IGCSE Maths 0580
+  '975e20ef-ab09-4aca-a1fb-a1e64f07a91e': 9,  // Year End Revision
 };
 
 const getPodcastCount = (lecture: { id: string; title: string }, courseId: string): number => {
