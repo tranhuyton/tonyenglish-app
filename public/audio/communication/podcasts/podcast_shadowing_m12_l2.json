@@ -1,0 +1,197 @@
+{
+  "module": "Luyện câu cơ bản 01-90: Ôn tập",
+  "slug": "m12_l2",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Booking a table",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m12_l2.mp3",
+  "total_duration": 278.68,
+  "patterns": [
+    {
+      "pattern_num": 2,
+      "pattern_title": "Booking a table",
+      "pattern_translation": "Luyện câu cơ bản 01-90: Ôn tập",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Hello. It's Smith speaking. How it going?",
+          "audio_key": "dial_m12l2_01_mrsmith_hello_its_smith_speaking_how_it",
+          "translation": "Xin chào. Tôi là Smith đây. Dạo này thế nào rồi?",
+          "start_time": 0.0,
+          "duration": 5.35,
+          "pause_duration": 6.85,
+          "end_time": 12.2
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Mrs. Lan",
+          "role": "B",
+          "sentence": "Hi Smith, long time no talk. I'm alright. Thanks. How about you? You seem very happy.",
+          "audio_key": "dial_m12l2_02_mrslan_hi_smith_long_time_no_talk",
+          "translation": "Chào Smith, lâu lắm không nói chuyện. Tôi ổn. Cảm ơn nhé. Thế còn anh thì sao? Trông anh có vẻ rất vui.",
+          "start_time": 12.2,
+          "duration": 8.52,
+          "pause_duration": 10.02,
+          "end_time": 30.74
+        },
+        {
+          "turn_num": 3,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Same ole, same ole. How time files. It's been 7 years already since I last saw you. Lan, can I ask you to do me a favour?",
+          "audio_key": "dial_m12l2_03_mrsmith_same_ole_same_ole_how_time",
+          "translation": "Vẫn như mọi khi thôi. Thời gian trôi nhanh thật. Đã 7 năm rồi kể từ lần cuối tôi gặp cô. Lan à, tôi có thể nhờ cô giúp tôi một việc được không?",
+          "start_time": 30.74,
+          "duration": 12.17,
+          "pause_duration": 13.67,
+          "end_time": 56.58
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Mrs. Lan",
+          "role": "B",
+          "sentence": "There' no need to act so strange. We've been close friends for so long. What can I do for you? There's nothing I cannot do for my dear old friend.",
+          "audio_key": "dial_m12l2_04_mrslan_there_no_need_to_act_so",
+          "translation": "Không cần phải tỏ ra xa lạ thế đâu. Chúng ta là bạn thân bấy lâu nay rồi mà. Tôi có thể giúp gì cho anh? Chẳng có việc gì mà tôi không làm được cho người bạn cũ thân thiết của mình cả.",
+          "start_time": 56.58,
+          "duration": 10.06,
+          "pause_duration": 11.56,
+          "end_time": 78.2
+        },
+        {
+          "turn_num": 5,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Thanks. It is very kind of you to be so nice to me. I'm calling to book a reservation at your restaurant. I have something planned for my son, Jimmy's birthday.",
+          "audio_key": "dial_m12l2_05_mrsmith_thanks_it_is_very_kind_of",
+          "translation": "Cảm ơn nhé. Cô thật tốt bụng với tôi. Tôi gọi để đặt bàn trước tại nhà hàng của cô. Tôi có chút kế hoạch cho sinh nhật của con trai tôi, Jimmy.",
+          "start_time": 78.2,
+          "duration": 12.55,
+          "pause_duration": 14.05,
+          "end_time": 104.8
+        },
+        {
+          "turn_num": 6,
+          "speaker": "Mrs. Lan",
+          "role": "B",
+          "sentence": "Okie dokie. I'll help you find the best table but let me get some information for your reservation first: What time will you come? How many people will be at the table? Do you want a regular or a Deluxe table?",
+          "audio_key": "dial_m12l2_06_mrslan_okie_dokie_ill_help_you_find",
+          "translation": "Được thôi. Tôi sẽ giúp anh tìm bàn tốt nhất nhưng hãy để tôi lấy một vài thông tin đặt bàn trước nhé: Mấy giờ mọi người sẽ đến? Sẽ có bao nhiêu người tại bàn? Anh muốn bàn thông thường hay bàn Deluxe?",
+          "start_time": 104.8,
+          "duration": 13.92,
+          "pause_duration": 15.42,
+          "end_time": 134.14
+        },
+        {
+          "turn_num": 7,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "About half past seven pm. There're supposed to be three people but I don't know how many he'll bring. I think it should be at least four people. How much does it cost for a regular and a Deluxe table?",
+          "audio_key": "dial_m12l2_07_mrsmith_about_half_past_seven_pm_therere",
+          "translation": "Khoảng 7 giờ rưỡi tối. Đáng lẽ là 3 người nhưng tôi không biết nó sẽ dẫn theo bao nhiêu người. Tôi nghĩ ít nhất nên là 4 người. Giá bàn thông thường và bàn Deluxe là bao nhiêu thế?",
+          "start_time": 134.14,
+          "duration": 14.26,
+          "pause_duration": 15.76,
+          "end_time": 164.16
+        },
+        {
+          "turn_num": 8,
+          "speaker": "Mrs. Lan",
+          "role": "B",
+          "sentence": "It costs 40 dollars per person for a regular table and 65 dollars per person for a Deluxe table. The Deluxe table is much better I have to say but the regular one is not bad either. If I were you I would go for a Deluxe table.",
+          "audio_key": "dial_m12l2_08_mrslan_it_costs_40_dollars_per_person",
+          "translation": "Giá 40 đô một người cho bàn thường và 65 đô một người cho bàn Deluxe. Tôi phải nói là bàn Deluxe tốt hơn nhiều nhưng bàn thường cũng không tệ đâu. Nếu tôi là anh, tôi sẽ chọn bàn Deluxe.",
+          "start_time": 164.16,
+          "duration": 15.41,
+          "pause_duration": 16.91,
+          "end_time": 196.48
+        },
+        {
+          "turn_num": 9,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Ok I'll go for a Deluxe table. Thanks.",
+          "audio_key": "dial_m12l2_09_mrsmith_ok_ill_go_for_a_deluxe",
+          "translation": "Được rồi, tôi sẽ chọn bàn Deluxe. Cảm ơn nhé.",
+          "start_time": 196.48,
+          "duration": 4.51,
+          "pause_duration": 6.01,
+          "end_time": 207.0
+        },
+        {
+          "turn_num": 10,
+          "speaker": "Mrs. Lan",
+          "role": "B",
+          "sentence": "7.30 pm. Table for four. Deluxe… Anything else do you want Smith?",
+          "audio_key": "dial_m12l2_10_mrslan_730_pm_table_for_four_deluxe",
+          "translation": "7 giờ 30 tối. Bàn cho 4 người. Loại Deluxe… Anh còn cần gì khác nữa không Smith?",
+          "start_time": 207.0,
+          "duration": 7.1,
+          "pause_duration": 8.6,
+          "end_time": 222.7
+        },
+        {
+          "turn_num": 11,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "And a birthday cake for dessert please... Thanks.",
+          "audio_key": "dial_m12l2_11_mrsmith_and_a_birthday_cake_for_dessert",
+          "translation": "Và một chiếc bánh sinh nhật để tráng miệng nhé... Cảm ơn.",
+          "start_time": 222.7,
+          "duration": 4.75,
+          "pause_duration": 6.25,
+          "end_time": 233.7
+        },
+        {
+          "turn_num": 12,
+          "speaker": "Mrs. Lan",
+          "role": "B",
+          "sentence": "Do you want me to put some candles and his name on it?",
+          "audio_key": "dial_m12l2_12_mrslan_do_you_want_me_to_put",
+          "translation": "Anh có muốn tôi cắm thêm nến và viết tên nó lên bánh không?",
+          "start_time": 233.7,
+          "duration": 3.53,
+          "pause_duration": 5.03,
+          "end_time": 242.26
+        },
+        {
+          "turn_num": 13,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Of course. I think that's all for tomorrow night. Thanks.",
+          "audio_key": "dial_m12l2_13_mrsmith_of_course_i_think_thats_all",
+          "translation": "Dĩ nhiên rồi. Tôi nghĩ đó là tất cả cho buổi tối mai. Cảm ơn nhé.",
+          "start_time": 242.26,
+          "duration": 6.12,
+          "pause_duration": 7.62,
+          "end_time": 256.0
+        },
+        {
+          "turn_num": 14,
+          "speaker": "Mrs. Lan",
+          "role": "B",
+          "sentence": "Thank you for choosing our restaurant for dinner. I'm looking forward to seeing you with your family tomorrow.",
+          "audio_key": "dial_m12l2_14_mrslan_thank_you_for_choosing_our_restaurant",
+          "translation": "Cảm ơn anh đã chọn nhà hàng của chúng tôi cho bữa tối. Tôi rất mong được gặp anh cùng gia đình vào ngày mai.",
+          "start_time": 256.0,
+          "duration": 6.67,
+          "pause_duration": 8.17,
+          "end_time": 270.84
+        },
+        {
+          "turn_num": 15,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Me too. Cya.",
+          "audio_key": "dial_m12l2_15_mrsmith_me_too_cya",
+          "translation": "Tôi cũng vậy. Hẹn gặp lại nhé.",
+          "start_time": 270.84,
+          "duration": 3.17,
+          "pause_duration": 4.67,
+          "end_time": 278.68
+        }
+      ]
+    }
+  ]
+}

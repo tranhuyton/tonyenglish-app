@@ -1,0 +1,113 @@
+{
+  "module": "Luyện câu cơ bản 1-60: Ôn tập",
+  "slug": "m8_l2",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Working in the gym",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m8_l2.mp3",
+  "total_duration": 135.23,
+  "patterns": [
+    {
+      "pattern_num": 2,
+      "pattern_title": "Working in the gym",
+      "pattern_translation": "Luyện câu cơ bản 1-60: Ôn tập",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "PT",
+          "role": "A",
+          "sentence": "Thank you for choosing our gym club. Please let me know your training target and I'll help you create a proper training plan",
+          "audio_key": "dial_m8l2_01_pt_thank_you_for_choosing_our_gym",
+          "translation": "Cảm ơn bạn vì đã chọn câu lạc bộ thể hình của chúng tôi. Hãy làm ơn cho tôi biết mục tiêu luyện tập của bạn và tôi sẽ giúp bạn thiết lập một kế hoạch tập luyện hợp lý.",
+          "start_time": 0.0,
+          "duration": 7.46,
+          "pause_duration": 8.96,
+          "end_time": 16.42
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Man",
+          "role": "B",
+          "sentence": "I'm dying to lose some weight because I'm overweighed now. So, I'm working on reducing my body fat but I'm thinking of gaining a bit of muscles in the long run. Can I reach my goals in the next two months?",
+          "audio_key": "dial_m8l2_02_man_im_dying_to_lose_some_weight",
+          "translation": "Tôi đang muốn giảm cân chết đi được vì tôi hiện đang bị quá cân. Do đó, tôi đang cố gắng giảm mỡ cơ thể nhưng tôi đang nghĩ về việc tăng thêm chút cơ về lâu về dài. Liệu tôi có thể đạt được những mục tiêu của mình trong vòng hai tháng tới không?",
+          "start_time": 16.42,
+          "duration": 13.13,
+          "pause_duration": 14.63,
+          "end_time": 44.18
+        },
+        {
+          "turn_num": 3,
+          "speaker": "PT",
+          "role": "A",
+          "sentence": "How often do you go to the gym?",
+          "audio_key": "dial_m8l2_03_pt_how_often_do_you_go_to",
+          "translation": "Bao lâu thì bạn lại đến phòng tập một lần?",
+          "start_time": 44.18,
+          "duration": 2.38,
+          "pause_duration": 3.88,
+          "end_time": 50.44
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Man",
+          "role": "B",
+          "sentence": "Twice a week at most. I wish I could spend more time in the gym but you know I'm a busy man",
+          "audio_key": "dial_m8l2_04_man_twice_a_week_at_most_i",
+          "translation": "Tối đa là 2 lần 1 tuần. Tôi ước mình có thể dành nhiều thời gian ở phòng tập hơn nhưng bạn biết đấy tôi là người bận rộn.",
+          "start_time": 50.44,
+          "duration": 6.72,
+          "pause_duration": 8.22,
+          "end_time": 65.38
+        },
+        {
+          "turn_num": 5,
+          "speaker": "PT",
+          "role": "A",
+          "sentence": "How about your eating plan?",
+          "audio_key": "dial_m8l2_05_pt_how_about_your_eating_plan",
+          "translation": "Thế còn kế hoạch ăn của bạn?",
+          "start_time": 65.38,
+          "duration": 2.14,
+          "pause_duration": 3.64,
+          "end_time": 71.16
+        },
+        {
+          "turn_num": 6,
+          "speaker": "Man",
+          "role": "B",
+          "sentence": "Well I took your advice from last time and I did my best to follow a healthy diet. It occurred to me that eating healthy alone makes me feel better.",
+          "audio_key": "dial_m8l2_06_man_well_i_took_your_advice_from",
+          "translation": "À Tôi đã thực hiện lời khuyên lần trước của bạn và đã cố hết sức để theo một chế độ ăn kiêng lành mạnh. Tôi chợt nhận ra là riêng việc ăn uống lành mạnh cũng đã làm tôi khoẻ lên rồi.",
+          "start_time": 71.16,
+          "duration": 9.22,
+          "pause_duration": 10.72,
+          "end_time": 91.1
+        },
+        {
+          "turn_num": 7,
+          "speaker": "PT",
+          "role": "A",
+          "sentence": "I know, but I'm afraid that eating healthy alone will not help you reach your targets in just two months. It's hard for me to guarantee your success without spending more time in the gym. I suggest that you should reconsider your target plan.",
+          "audio_key": "dial_m8l2_07_pt_i_know_but_im_afraid_that",
+          "translation": "Tôi biết, nhưng tôi e rằng chỉ ăn uống thôi thì sẽ không giúp bạn đạt được mục tiêu chỉ trong hai tháng. Thật khó cho tôi có thể đảm bảo thành công của bạn mà không dành nhiều thời gian hơn ở phòng tập. Tôi gợi ý bạn nên xem xét lại kế hoạch cho mục tiêu của mình.",
+          "start_time": 91.1,
+          "duration": 14.93,
+          "pause_duration": 16.43,
+          "end_time": 122.46
+        },
+        {
+          "turn_num": 8,
+          "speaker": "Man",
+          "role": "B",
+          "sentence": "Thank you for your advice. I think I should spend more time in the gym then…",
+          "audio_key": "dial_m8l2_08_man_thank_you_for_your_advice_i",
+          "translation": "Cảm ơn bạn vì lời khuyên. Tôi nghĩ vậy thì tôi nên dành nhiều thời gian ở phòng tập hơn…",
+          "start_time": 122.46,
+          "duration": 5.64,
+          "pause_duration": 7.14,
+          "end_time": 135.24
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "module": "Luyện câu cơ bản 01-30: Ôn tập",
+  "slug": "m4_l3",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: The pizza story",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m4_l3.mp3",
+  "total_duration": 77.87,
+  "patterns": [
+    {
+      "pattern_num": 3,
+      "pattern_title": "The pizza story",
+      "pattern_translation": "Luyện câu cơ bản 01-30: Ôn tập",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "Are you going out tonight, Shaj?",
+          "audio_key": "dial_m4_l3_01_tony_are_you_going_out_tonight_shaj",
+          "translation": "Tối nay cậu đi chơi không, Shaj?",
+          "start_time": 0.0,
+          "duration": 2.95,
+          "pause_duration": 4.45,
+          "end_time": 7.4
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Shaj",
+          "role": "B",
+          "sentence": "No. I'm busy doing my homework. Are you?",
+          "audio_key": "dial_m4_l3_02_shaj_no_im_busy_doing_my_homework",
+          "translation": "Không. Tôi đang bận làm bài về nhà. Còn cậu?",
+          "start_time": 7.4,
+          "duration": 5.16,
+          "pause_duration": 6.66,
+          "end_time": 19.22
+        },
+        {
+          "turn_num": 3,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "No, but I have something important to tell you. I've eaten your pizza in the fridge.",
+          "audio_key": "dial_m4_l3_03_tony_no_but_i_have_something_important",
+          "translation": "Không, nhưng tôi có vài điều quan trọng muốn nói với cậu. Tôi đã lỡ ăn cái pizza của cậu trong tủ lạnh.",
+          "start_time": 19.22,
+          "duration": 6.36,
+          "pause_duration": 7.86,
+          "end_time": 33.44
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Shaj",
+          "role": "B",
+          "sentence": "Oh no…",
+          "audio_key": "dial_m4_l3_04_shaj_oh_no",
+          "translation": "Ôi không…",
+          "start_time": 33.44,
+          "duration": 1.87,
+          "pause_duration": 3.37,
+          "end_time": 38.68
+        },
+        {
+          "turn_num": 5,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "Sorry, I didn't mean to eat it. I thought the pizza was mine. You know I don’t have time to cook... I promise not to do it again and I've decided to buy you a new one.",
+          "audio_key": "dial_m4_l3_05_tony_sorry_i_didnt_mean_to_eat",
+          "translation": "Xin lỗi, tôi không cố ý ăn nó. Tôi tưởng cái pizza là của tôi. Cậu biết đấy mình không có thời gian nấu ăn... Tôi hứa là sẽ không làm thế nữa và tôi vừa quyết định mua cho cậu một cái mới.",
+          "start_time": 38.68,
+          "duration": 12.43,
+          "pause_duration": 13.93,
+          "end_time": 65.04
+        },
+        {
+          "turn_num": 6,
+          "speaker": "Shaj",
+          "role": "B",
+          "sentence": "Ah. Don't worry about it. It was out of date anyway…",
+          "audio_key": "dial_m4_l3_06_shaj_ah_dont_worry_about_it_it",
+          "translation": "À, đừng lo về điều đó. Dù sao nó cũng quá hạn rồi…",
+          "start_time": 65.04,
+          "duration": 5.66,
+          "pause_duration": 7.16,
+          "end_time": 77.86
+        }
+      ]
+    }
+  ]
+}

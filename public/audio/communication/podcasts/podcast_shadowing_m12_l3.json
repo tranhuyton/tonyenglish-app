@@ -1,0 +1,149 @@
+{
+  "module": "Luyện câu cơ bản 01-90: Ôn tập",
+  "slug": "m12_l3",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Party at the restaurant",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m12_l3.mp3",
+  "total_duration": 198.96,
+  "patterns": [
+    {
+      "pattern_num": 3,
+      "pattern_title": "Party at the restaurant",
+      "pattern_translation": "Luyện câu cơ bản 01-90: Ôn tập",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "How are your things these days son?",
+          "audio_key": "dial_m12l3_01_mrsmith_how_are_your_things_these_days",
+          "translation": "Dạo này công việc của con thế nào rồi con trai?",
+          "start_time": 0.0,
+          "duration": 2.88,
+          "pause_duration": 4.38,
+          "end_time": 7.26
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Jimmy",
+          "role": "B",
+          "sentence": "I'm working on a big project. It's supposed to take 6 months to complete but it is too bad that there is something wrong with the plan and there is no way we're gonna meet the deadline on time.",
+          "audio_key": "dial_m12l3_02_jimmy_im_working_on_a_big_project",
+          "translation": "Con đang thực hiện một dự án lớn. Đáng lẽ phải mất 6 tháng để hoàn thành nhưng thật tệ là có vấn đề gì đó với kế hoạch và chắc chắn là chúng con không thể kịp hạn chót.",
+          "start_time": 7.26,
+          "duration": 11.59,
+          "pause_duration": 13.09,
+          "end_time": 31.94
+        },
+        {
+          "turn_num": 3,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "I'm sorry to hear about that. How about Elly? How come she is not coming with you? How often do you go out together?",
+          "audio_key": "dial_m12l3_03_mrsmith_im_sorry_to_hear_about_that",
+          "translation": "Bố rất tiếc khi nghe điều đó. Thế còn Elly thì sao? Làm sao mà con bé không đi cùng con? Hai đứa có thường đi chơi cùng nhau không?",
+          "start_time": 31.94,
+          "duration": 9.82,
+          "pause_duration": 11.32,
+          "end_time": 53.08
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Jimmy",
+          "role": "B",
+          "sentence": "She's fine. She is busy with her project now in Singapare. We see each other once a month maybe. We used to go out quite a lot at first but now we have works to do and it's hard for me to stay with her that often.",
+          "audio_key": "dial_m12l3_04_jimmy_shes_fine_she_is_busy_with",
+          "translation": "Cô ấy vẫn ổn ạ. Hiện cô ấy đang bận với dự án ở Singapore. Bọn con có lẽ gặp nhau mỗi tháng một lần. Ban đầu bọn con đã từng đi chơi khá nhiều nhưng giờ bọn con có công việc phải làm và thật khó cho con để ở bên cô ấy thường xuyên như vậy.",
+          "start_time": 53.08,
+          "duration": 15.05,
+          "pause_duration": 16.55,
+          "end_time": 84.68
+        },
+        {
+          "turn_num": 5,
+          "speaker": "Mrs. Smith",
+          "role": "A",
+          "sentence": "Let me give you some advice. It is no use working hard without relaxing. Your father and I could have broken up if he did not spend more time with me...",
+          "audio_key": "dial_m12l3_05_mrssmith_let_me_give_you_some_advice",
+          "translation": "Để mẹ cho con một lời khuyên nhé. Thật vô ích khi làm việc chăm chỉ mà không thư giãn. Bố con và mẹ có lẽ đã chia tay nếu ông ấy không dành nhiều thời gian hơn cho mẹ...",
+          "start_time": 84.68,
+          "duration": 10.01,
+          "pause_duration": 11.51,
+          "end_time": 106.2
+        },
+        {
+          "turn_num": 6,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Why don't we change the subject. Today is a happy day for all of us here. Do you know what day it is son?",
+          "audio_key": "dial_m12l3_06_mrsmith_why_dont_we_change_the_subject",
+          "translation": "Sao chúng ta không đổi chủ đề nhỉ. Hôm nay là ngày vui cho tất cả chúng ta ở đây. Con có biết hôm nay là ngày gì không con trai?",
+          "start_time": 106.2,
+          "duration": 8.45,
+          "pause_duration": 9.95,
+          "end_time": 124.6
+        },
+        {
+          "turn_num": 7,
+          "speaker": "Jimmy",
+          "role": "B",
+          "sentence": "I've no idea… I thought we came here to check out the new restaurant.",
+          "audio_key": "dial_m12l3_07_jimmy_ive_no_idea_i_thought_we",
+          "translation": "Con không biết nữa… Con cứ nghĩ chúng ta đến đây để thử nhà hàng mới chứ.",
+          "start_time": 124.6,
+          "duration": 5.38,
+          "pause_duration": 6.88,
+          "end_time": 136.86
+        },
+        {
+          "turn_num": 8,
+          "speaker": "Mr. Smith",
+          "role": "A",
+          "sentence": "Son, you are so busy that you have already forgotten your birthday. Happy birthday…",
+          "audio_key": "dial_m12l3_08_mrsmith_son_you_are_so_busy_that",
+          "translation": "Con trai, con bận đến mức đã quên luôn cả sinh nhật của mình rồi. Chúc mừng sinh nhật con…",
+          "start_time": 136.86,
+          "duration": 6.67,
+          "pause_duration": 8.17,
+          "end_time": 151.7
+        },
+        {
+          "turn_num": 9,
+          "speaker": "Jimmy",
+          "role": "B",
+          "sentence": "Wow I don't know what to say… Thank you guys so much. I could have missed my birthday. Oh, Elly just sent me a text message for my birthday too. How nice.",
+          "audio_key": "dial_m12l3_09_jimmy_wow_i_dont_know_what_to",
+          "translation": "Oa, con không biết phải nói gì nữa… Cảm ơn bố mẹ nhiều lắm. Con suýt nữa thì đã bỏ lỡ sinh nhật của mình. Ồ, Elly cũng vừa gửi tin nhắn chúc mừng sinh nhật con này. Thật tuyệt quá.",
+          "start_time": 151.7,
+          "duration": 13.25,
+          "pause_duration": 14.75,
+          "end_time": 179.7
+        },
+        {
+          "turn_num": 10,
+          "speaker": "Mrs. Smith",
+          "role": "A",
+          "sentence": "Let's drink up son, may all your best wishes come true. Here's to your birthday…",
+          "audio_key": "dial_m12l3_10_mrssmith_lets_drink_up_son_may_all",
+          "translation": "Uống cạn ly nào con trai, chúc mọi điều ước tốt đẹp nhất của con thành hiện thực. Nâng ly mừng sinh nhật con…",
+          "start_time": 179.7,
+          "duration": 5.76,
+          "pause_duration": 7.26,
+          "end_time": 192.72
+        },
+        {
+          "turn_num": 11,
+          "speaker": "All",
+          "role": "A",
+          "sentence": "Here is to the birthday…",
+          "audio_key": "dial_m12l3_11_all_here_is_to_the_birthday",
+          "translation": "Nâng ly mừng sinh nhật nào…",
+          "start_time": 192.72,
+          "duration": 2.38,
+          "pause_duration": 3.88,
+          "end_time": 198.98
+        }
+      ]
+    }
+  ]
+}

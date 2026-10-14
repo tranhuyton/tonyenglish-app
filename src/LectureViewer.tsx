@@ -512,8 +512,25 @@ const LECTURE_PODCAST_COUNT: Record<string, number> = {
   '975e20ef-ab09-4aca-a1fb-a1e64f07a91e': 9,  // Year End Revision
 };
 
+const DIALOGUE_PODCAST_LECTURES: Record<string, number> = {
+  // Module 04: Luyện câu cơ bản 01-30: Ôn tập
+  'bff7be22-4bf6-4e6e-a8ab-84d3953cacde': 2, // 1. On the phone - A football match proposal
+  '8504c99c-1701-4800-9e30-8cd3d8c8d04f': 2, // 2. At the exam hall
+  '92582403-0d4f-4582-8f0d-c0cc80251e44': 2, // 3. The pizza story
+  // Module 08: Luyện câu cơ bản 1-60: Ôn tập
+  '6d944481-3e7a-48ea-a881-2d8e8d341f8c': 2, // 1. In the night club
+  '2646b808-da8c-4d4e-bfe2-027287f08e4c': 2, // 2. Working in the gym
+  '5eaa187e-8dac-41d7-99c7-68accfc0a2a0': 2, // 3. Visiting mum
+  // Module 12: Luyện câu cơ bản 01-90: Ôn tập
+  '2a4c4821-66d3-48a9-8d59-1f63f773559d': 2, // 1. Birthday party planning
+  '2ac10b91-9c1e-4d27-b59e-7ffa69d9fff0': 2, // 2. Booking a table
+  '96ede3db-6e10-4674-8ae7-42ad9bee717f': 2, // 3. Party at the restaurant
+  'd35ec2e2-7d02-4d7c-a8da-ead7208d6c2a': 2, // 4. On the train
+};
+
 const getPodcastCount = (lecture: { id: string; title: string }, courseId: string): number => {
   if (LECTURE_PODCAST_COUNT[lecture.id]) return LECTURE_PODCAST_COUNT[lecture.id];
+  if (DIALOGUE_PODCAST_LECTURES[lecture.id]) return DIALOGUE_PODCAST_LECTURES[lecture.id];
   const t = (lecture.title || '').toLowerCase();
   if (t.includes('thực chiến') || t.includes('phản xạ')) return 10;
   if (t.includes('task 1') || t.includes('task1')) return 6;
@@ -4656,7 +4673,7 @@ export default function LectureViewer({
                              const isLecCompleted = completedLectures.has(lec.id);
                              const lecTitleLower = (lec.title || '').toLowerCase();
                              const isReflexAi = lecTitleLower.includes('thực chiến') || (lecTitleLower.includes('luyện') && lecTitleLower.includes('ai'));
-                             const hasPodcast = lecTitleLower.includes('podcast') || !!LECTURE_PODCAST_COUNT[lec.id] || isReflexAi;
+                             const hasPodcast = lecTitleLower.includes('podcast') || !!LECTURE_PODCAST_COUNT[lec.id] || !!DIALOGUE_PODCAST_LECTURES[lec.id] || isReflexAi;
 
                              return (
                                <button 
@@ -4796,7 +4813,8 @@ export default function LectureViewer({
                        {activeLecture && (() => {
                           const activeTitleLower = (activeLecture.title || '').toLowerCase();
                           const isActiveReflexAi = activeTitleLower.includes('thực chiến') || (activeTitleLower.includes('luyện') && activeTitleLower.includes('ai'));
-                          const hasActivePodcast = activeTitleLower.includes('podcast') || !!(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) || isActiveReflexAi;
+                          const isDialoguePod = !!(activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId]);
+                          const hasActivePodcast = activeTitleLower.includes('podcast') || !!(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) || isDialoguePod || isActiveReflexAi;
                           
                           if (!isActiveReflexAi && !hasActivePodcast) return null;
                           return (
@@ -4804,7 +4822,7 @@ export default function LectureViewer({
                               {hasActivePodcast && (
                                 <span className="text-xs px-2.5 py-1 rounded-md font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1.5 shadow-xs">
                                   <svg className="w-3.5 h-3.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
-                                  <span>Podcast ({getPodcastCount(activeLecture, currentCourseId)} tập chuyên sâu)</span>
+                                  <span>{isDialoguePod ? 'Podcast (2 chế độ: Shadowing & Phản xạ)' : `Podcast (${getPodcastCount(activeLecture, currentCourseId)} tập chuyên sâu)`}</span>
                                 </span>
                               )}
                               {isActiveReflexAi && (
@@ -4819,6 +4837,34 @@ export default function LectureViewer({
                        <h2 className="text-[26px] md:text-[36px] text-slate-900 font-extrabold mb-8 md:mb-12 pb-6 border-b border-slate-100 leading-tight tracking-tight">
                            {activeLecture?.title}
                        </h2>
+                       {activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId] && totalPages > 1 && (
+                         <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                           <button
+                             type="button"
+                             onClick={() => { setCurrentPage(1); persistPage(1); }}
+                             className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                               currentPage === 1 
+                                 ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                 : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                             }`}
+                           >
+                             <span>💬</span>
+                             <span>Bài hội thoại & Thực hành (Trang 1)</span>
+                           </button>
+                           <button
+                             type="button"
+                             onClick={() => { setCurrentPage(2); persistPage(2); }}
+                             className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                               currentPage === 2 
+                                 ? 'bg-emerald-600 text-white border-emerald-600 shadow-md shadow-emerald-600/20' 
+                                 : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                             }`}
+                           >
+                             <span>🎧</span>
+                             <span>Podcast Shadowing & Phản xạ (Trang 2)</span>
+                           </button>
+                         </div>
+                       )}
                        {(activeLecture?.title?.toLowerCase().includes('podcast') || (activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId])) && totalPages > 1 && (
                          <div className="flex items-center gap-2.5 mb-8 flex-wrap">
                            <button

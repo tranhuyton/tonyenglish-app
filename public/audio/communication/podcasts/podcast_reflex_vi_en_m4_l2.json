@@ -1,0 +1,87 @@
+{
+  "slug": "m4_l2",
+  "title": "Podcast Phản Xạ Dịch Việt - Anh: At the exam hall",
+  "mode": "bilingual_reflex",
+  "total_duration": 98.75,
+  "patterns": [
+    {
+      "pattern_num": 2,
+      "pattern_title": "At the exam hall",
+      "pattern_translation": "Luyện câu cơ bản 01-30: Ôn tập",
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "Tony",
+          "role": "A",
+          "audio_key": "dial_m4_l2_01_tony_jason_what_are_you_doing_here",
+          "sentence": "Jason, what are you doing here?",
+          "translation_vi": "Jason, cậu đang làm gì ở đây?",
+          "start_time": 0.0,
+          "vi_start": 0.0,
+          "vi_dur": 3.0,
+          "pause_reflex_start": 3.0,
+          "pause_reflex_dur": 5.05,
+          "en_start": 8.05,
+          "en_dur": 3.05,
+          "pause_absorb_start": 11.1,
+          "pause_absorb_dur": 2.0,
+          "end_time": 13.1
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Jason",
+          "role": "B",
+          "audio_key": "dial_m4_l2_02_jason_oh_im_here_to_take_a",
+          "sentence": "Oh I'm here to take a test. I'm so tired and nervous because I've failed this test before and besides, I'm not used to having so much stress. Anyway, I'm looking forward to graduating from college after this.",
+          "translation_vi": "Ồ, tôi ở đây để làm bài thi. Tôi rất mệt mỏi và hồi hộp vì mình đã trượt bài thi này trước đây và bên cạnh đó, tôi không quen chịu nhiều áp lực như vậy. Dù sao thì tôi cũng mong ngóng được tốt nghiệp đại học sau lần này.",
+          "start_time": 13.1,
+          "vi_start": 13.1,
+          "vi_dur": 13.75,
+          "pause_reflex_start": 26.85,
+          "pause_reflex_dur": 16.3,
+          "en_start": 43.15,
+          "en_dur": 14.3,
+          "pause_absorb_start": 57.45,
+          "pause_absorb_dur": 2.0,
+          "end_time": 59.45
+        },
+        {
+          "turn_num": 3,
+          "speaker": "Tony",
+          "role": "A",
+          "audio_key": "dial_m4_l2_03_tony_same_here_but_take_it_easy",
+          "sentence": "Same here, but take it easy and good luck to your test. I want you to succeed this time.",
+          "translation_vi": "Tôi cũng vậy, nhưng cứ thong thả thôi và chúc may mắn với bài thi. Tôi muốn cậu thành công lần này.",
+          "start_time": 59.45,
+          "vi_start": 59.45,
+          "vi_dur": 7.01,
+          "pause_reflex_start": 66.46,
+          "pause_reflex_dur": 8.84,
+          "en_start": 75.3,
+          "en_dur": 6.84,
+          "pause_absorb_start": 82.14,
+          "pause_absorb_dur": 2.0,
+          "end_time": 84.14
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Jason",
+          "role": "B",
+          "audio_key": "dial_m4_l2_04_jason_cheers_you_too_man",
+          "sentence": "Cheers. You too man.",
+          "translation_vi": "Cảm ơn. Cậu cũng thế nhé anh bạn.",
+          "start_time": 84.14,
+          "vi_start": 84.14,
+          "vi_dur": 3.89,
+          "pause_reflex_start": 88.03,
+          "pause_reflex_dur": 5.36,
+          "en_start": 93.39,
+          "en_dur": 3.36,
+          "pause_absorb_start": 96.75,
+          "pause_absorb_dur": 2.0,
+          "end_time": 98.75
+        }
+      ]
+    }
+  ]
+}

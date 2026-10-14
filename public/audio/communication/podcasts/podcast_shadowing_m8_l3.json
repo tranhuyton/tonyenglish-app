@@ -1,0 +1,101 @@
+{
+  "module": "Luyện câu cơ bản 1-60: Ôn tập",
+  "slug": "m8_l3",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: Visiting mum",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m8_l3.mp3",
+  "total_duration": 102.28,
+  "patterns": [
+    {
+      "pattern_num": 3,
+      "pattern_title": "Visiting mum",
+      "pattern_translation": "Luyện câu cơ bản 1-60: Ôn tập",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "I've heard that your mum is in the hospital. I'm thinking of visiting her sometime this week.",
+          "audio_key": "dial_m8l3_01_tony_ive_heard_that_your_mum_is",
+          "translation": "Tôi nghe nói mẹ bạn đang ở trong bệnh viện. Tôi đang suy nghĩ về việc thăm bà ý một lúc vào tuần này.",
+          "start_time": 0.0,
+          "duration": 6.36,
+          "pause_duration": 7.86,
+          "end_time": 14.22
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Jason",
+          "role": "B",
+          "sentence": "Doctor says she's having a heart disease from smoking too much.",
+          "audio_key": "dial_m8l3_02_jason_doctor_says_shes_having_a_heart",
+          "translation": "Bác sỹ nói bà ấy đang bị bệnh tim vì hút thuốc quá nhiều.",
+          "start_time": 14.22,
+          "duration": 4.44,
+          "pause_duration": 5.94,
+          "end_time": 24.6
+        },
+        {
+          "turn_num": 3,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "I'm sorry to hear about your sick mother. Is there anything that I can help?",
+          "audio_key": "dial_m8l3_03_tony_im_sorry_to_hear_about_your",
+          "translation": "Tôi lấy làm tiếc khi nghe tin mẹ cậu ốm. Tôi có thể giúp được gì không?",
+          "start_time": 24.6,
+          "duration": 5.52,
+          "pause_duration": 7.02,
+          "end_time": 37.14
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Jason",
+          "role": "B",
+          "sentence": "Thank you, I appreciate it. I'm having a hard time taking care of mum but it also means it's hard for me to concentrate on my assignment.",
+          "audio_key": "dial_m8l3_04_jason_thank_you_i_appreciate_it_im",
+          "translation": "Cảm ơn, tôi cảm kích vì điều đó. Tôi đang gặp khó khăn trong việc chăm sóc mẹ nhưng điều đó cũng đồng nghĩa sẽ khó cho tôi có thể tập trung vào bài tập.",
+          "start_time": 37.14,
+          "duration": 9.58,
+          "pause_duration": 11.08,
+          "end_time": 57.8
+        },
+        {
+          "turn_num": 5,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "I'll help you complete your work. It occurred to me that we are in the same assignment group.",
+          "audio_key": "dial_m8l3_05_tony_ill_help_you_complete_your_work",
+          "translation": "Tôi sẽ giúp cậu hoàn thành công việc. Tôi vừa chợt nhận ra là chúng ta ở cùng nhóm làm bài.",
+          "start_time": 57.8,
+          "duration": 6.19,
+          "pause_duration": 7.69,
+          "end_time": 71.68
+        },
+        {
+          "turn_num": 6,
+          "speaker": "Jason",
+          "role": "B",
+          "sentence": "Thank you. I don't know what to do to make up for that.",
+          "audio_key": "dial_m8l3_06_jason_thank_you_i_dont_know_what",
+          "translation": "Cảm ơn cậu. Tôi không biết phải làm gì để có thể đền bù lại cho cậu.",
+          "start_time": 71.68,
+          "duration": 4.51,
+          "pause_duration": 6.01,
+          "end_time": 82.2
+        },
+        {
+          "turn_num": 7,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "Don't mention it. You helped me with my last assignment. It's my turn to repay you. We're even now.",
+          "audio_key": "dial_m8l3_07_tony_dont_mention_it_you_helped_me",
+          "translation": "Đừng đề cập chuyện này. Cậu đã giúp tôi làm bài lần trước. Đến lượt tôi trả ơn cậu. Bây giờ chúng ta hoà rồi.",
+          "start_time": 82.2,
+          "duration": 9.29,
+          "pause_duration": 10.79,
+          "end_time": 102.28
+        }
+      ]
+    }
+  ]
+}

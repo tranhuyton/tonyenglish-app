@@ -1,0 +1,149 @@
+{
+  "module": "Luyện câu cơ bản 1-60: Ôn tập",
+  "slug": "m8_l1",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: In the night club",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m8_l1.mp3",
+  "total_duration": 156.04,
+  "patterns": [
+    {
+      "pattern_num": 1,
+      "pattern_title": "In the night club",
+      "pattern_translation": "Luyện câu cơ bản 1-60: Ôn tập",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "Boy",
+          "role": "A",
+          "sentence": "Can I get you a drink? You seem upset.",
+          "audio_key": "dial_m8l1_01_boy_can_i_get_you_a_drink",
+          "translation": "Tôi lấy cho cô đồ uống nhé. Cô trông có vẻ buồn bã.",
+          "start_time": 0.0,
+          "duration": 4.2,
+          "pause_duration": 5.7,
+          "end_time": 9.9
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Girl",
+          "role": "B",
+          "sentence": "Yeah, I'm alright. Thank you. I'm having a hard time understanding my boyfriend. It's so hard for me to keep in relationship with him. I really don't know what to do now…",
+          "audio_key": "dial_m8l1_02_girl_yeah_im_alright_thank_you_im",
+          "translation": "Vâng, tôi ổn. Cảm ơn anh. Dạo này tôi đang gặp khó khăn trong việc hiểu người bạn trai của mình. Thật khó cho tôi có thể giữ được mối quan hệ với anh ta. Tôi không biết phải làm gì bây giờ…",
+          "start_time": 9.9,
+          "duration": 12.36,
+          "pause_duration": 13.86,
+          "end_time": 36.12
+        },
+        {
+          "turn_num": 3,
+          "speaker": "Boy",
+          "role": "A",
+          "sentence": "I'm sorry to hear that. I think I should buy you another drink… Please tell me more about it.",
+          "audio_key": "dial_m8l1_03_boy_im_sorry_to_hear_that_i",
+          "translation": "Tôi lấy làm tiếc khi nghe về điều đó. Tôi nghĩ tôi nên mời cô thêm một ly… Làm ơn hãy nói rõ thêm xem nào.",
+          "start_time": 36.12,
+          "duration": 7.54,
+          "pause_duration": 9.04,
+          "end_time": 52.7
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Girl",
+          "role": "B",
+          "sentence": "I've heard that he's been going out with another girl. He's not supposed to do that to me. Anyway, I should have ended relationship with him ages ago…",
+          "audio_key": "dial_m8l1_04_girl_ive_heard_that_hes_been_going",
+          "translation": "Tôi nghe nói rằng anh ta đang hò hẹn với một cô gái khác. Anh ấy đáng ra không được làm thế với tôi. Dù sao thì tôi đáng ra phải kết thúc mối quan hệ với anh ta từ lâu rồi…",
+          "start_time": 52.7,
+          "duration": 9.62,
+          "pause_duration": 11.12,
+          "end_time": 73.44
+        },
+        {
+          "turn_num": 5,
+          "speaker": "Boy",
+          "role": "A",
+          "sentence": "Let me see if I can cheer you up. Are you into movies? There is a cinema near here. It only takes 5 minutes to get there on foot.",
+          "audio_key": "dial_m8l1_05_boy_let_me_see_if_i_can",
+          "translation": "Để tôi xem mình có thể làm cô vui lên được không. Cô có thích xem phim không? Có một rạp phim gần đây. Chỉ mất 5 phút đi bộ từ đây thôi.",
+          "start_time": 73.44,
+          "duration": 10.82,
+          "pause_duration": 12.32,
+          "end_time": 96.58
+        },
+        {
+          "turn_num": 6,
+          "speaker": "Girl",
+          "role": "B",
+          "sentence": "Hang on. Are you trying to flirt me? Let me warn you that I might hurt you because I'm not sure if I'm ready for a new relationship.",
+          "audio_key": "dial_m8l1_06_girl_hang_on_are_you_trying_to",
+          "translation": "Khoan đã. Anh đang cố tán tỉnh tôi đấy à? Để tôi cảnh báo anh rằng tôi có thể làm anh tổn thương vì tôi không chắc là mình đã sẵn sàng cho một mối quan hệ mới.",
+          "start_time": 96.58,
+          "duration": 8.66,
+          "pause_duration": 10.16,
+          "end_time": 115.4
+        },
+        {
+          "turn_num": 7,
+          "speaker": "Boy",
+          "role": "A",
+          "sentence": "Don't be so cautious...",
+          "audio_key": "dial_m8l1_07_boy_dont_be_so_cautious",
+          "translation": "Đừng thận trọng như vậy...",
+          "start_time": 115.4,
+          "duration": 2.26,
+          "pause_duration": 3.76,
+          "end_time": 121.42
+        },
+        {
+          "turn_num": 8,
+          "speaker": "Girl",
+          "role": "B",
+          "sentence": "Ok cute boy, it's my turn to ask you a question and you'd better answer it honestly.",
+          "audio_key": "dial_m8l1_08_girl_ok_cute_boy_its_my_turn",
+          "translation": "Được rồi anh chàng dễ thương, đến lượt tôi hỏi anh một câu và anh tốt hơn hết hãy trả lời một cách trung thực.",
+          "start_time": 121.42,
+          "duration": 5.45,
+          "pause_duration": 6.95,
+          "end_time": 133.82
+        },
+        {
+          "turn_num": 9,
+          "speaker": "Boy",
+          "role": "A",
+          "sentence": "I'm all ears.",
+          "audio_key": "dial_m8l1_09_boy_im_all_ears",
+          "translation": "Tôi đang lắng nghe đây.",
+          "start_time": 133.82,
+          "duration": 2.06,
+          "pause_duration": 3.56,
+          "end_time": 139.44
+        },
+        {
+          "turn_num": 10,
+          "speaker": "Girl",
+          "role": "B",
+          "sentence": "Do you like watching movie at my place tonight?",
+          "audio_key": "dial_m8l1_10_girl_do_you_like_watching_movie_at",
+          "translation": "Anh có muốn xem phim ở chỗ tôi tối nay không?",
+          "start_time": 139.44,
+          "duration": 3.22,
+          "pause_duration": 4.72,
+          "end_time": 147.38
+        },
+        {
+          "turn_num": 11,
+          "speaker": "Boy",
+          "role": "A",
+          "sentence": "Hell yeah. Let's go for it.",
+          "audio_key": "dial_m8l1_11_boy_hell_yeah_lets_go_for_it",
+          "translation": "Ôi có chứ. Hãy xúc tiến thôi.",
+          "start_time": 147.38,
+          "duration": 3.58,
+          "pause_duration": 5.08,
+          "end_time": 156.04
+        }
+      ]
+    }
+  ]
+}

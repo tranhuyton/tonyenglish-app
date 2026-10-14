@@ -1,0 +1,65 @@
+{
+  "module": "Luyện câu cơ bản 01-30: Ôn tập",
+  "slug": "m4_l2",
+  "title": "Podcast Luyện Nghe & Đọc Nhại Hội Thoại: At the exam hall",
+  "audio_url": "/audio/communication/podcasts/podcast_shadowing_m4_l2.mp3",
+  "total_duration": 61.1,
+  "patterns": [
+    {
+      "pattern_num": 2,
+      "pattern_title": "At the exam hall",
+      "pattern_translation": "Luyện câu cơ bản 01-30: Ôn tập",
+      "start_time": 0.0,
+      "sentences": [
+        {
+          "turn_num": 1,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "Jason, what are you doing here?",
+          "audio_key": "dial_m4_l2_01_tony_jason_what_are_you_doing_here",
+          "translation": "Jason, cậu đang làm gì ở đây?",
+          "start_time": 0.0,
+          "duration": 3.05,
+          "pause_duration": 4.55,
+          "end_time": 7.6
+        },
+        {
+          "turn_num": 2,
+          "speaker": "Jason",
+          "role": "B",
+          "sentence": "Oh I'm here to take a test. I'm so tired and nervous because I've failed this test before and besides, I'm not used to having so much stress. Anyway, I'm looking forward to graduating from college after this.",
+          "audio_key": "dial_m4_l2_02_jason_oh_im_here_to_take_a",
+          "translation": "Ồ, tôi ở đây để làm bài thi. Tôi rất mệt mỏi và hồi hộp vì mình đã trượt bài thi này trước đây và bên cạnh đó, tôi không quen chịu nhiều áp lực như vậy. Dù sao thì tôi cũng mong ngóng được tốt nghiệp đại học sau lần này.",
+          "start_time": 7.6,
+          "duration": 14.3,
+          "pause_duration": 15.8,
+          "end_time": 37.7
+        },
+        {
+          "turn_num": 3,
+          "speaker": "Tony",
+          "role": "A",
+          "sentence": "Same here, but take it easy and good luck to your test. I want you to succeed this time.",
+          "audio_key": "dial_m4_l2_03_tony_same_here_but_take_it_easy",
+          "translation": "Tôi cũng vậy, nhưng cứ thong thả thôi và chúc may mắn với bài thi. Tôi muốn cậu thành công lần này.",
+          "start_time": 37.7,
+          "duration": 6.84,
+          "pause_duration": 8.34,
+          "end_time": 52.88
+        },
+        {
+          "turn_num": 4,
+          "speaker": "Jason",
+          "role": "B",
+          "sentence": "Cheers. You too man.",
+          "audio_key": "dial_m4_l2_04_jason_cheers_you_too_man",
+          "translation": "Cảm ơn. Cậu cũng thế nhé anh bạn.",
+          "start_time": 52.88,
+          "duration": 3.36,
+          "pause_duration": 4.86,
+          "end_time": 61.1
+        }
+      ]
+    }
+  ]
+}
