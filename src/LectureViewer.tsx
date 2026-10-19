@@ -485,6 +485,20 @@ const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   '43613f7b-d2d6-48d3-970c-19619c42a0fe': 'SlWieUnsZmY', // Topic 7: Vectors and transformation
   '4876cb39-b169-47a2-94b1-d4737dc767e8': 'JCdvPtuKTs8', // Topic 8: Probability
   '86c531a2-1c21-40a3-828f-b59e531a2bee': '_KVZ9Vw6YC0', // Topic 9: Statistic
+
+  // ==========================================
+  // Giao tiếp và phản xạ - Module 13: Chiến thuật giao tiếp (Course ID: 2389dc0a-53d5-4c75-a495-da7e05815dee)
+  // ==========================================
+  '3416832d-f0aa-4d94-809e-fefb206f91f5': '0ONapBj0sB8', // 01. Chiến Thuật Chào hỏi cơ bản
+  'f0163e91-8e30-40c4-b7cb-b7b248b5eb98': 'bcwNfuSNack', // 04. Buồn chán
+  'd6bad7d1-ff68-4da0-9dde-9b04a036039e': 'ObK5XHtDQx4', // 05. Hỏi thăm về ngày hôm nay của bạn
+  '7cd3298f-1f6a-4d27-b493-b9d1657dd92f': 'E2QTAbysJfw', // 06. Nói về Kế hoạch tương lai
+  'a52a2f87-94cd-4870-bd1b-74597a4c557e': 'Wdf9jsyljcw', // 07. Nói về quá khứ
+  'd7b52c98-9ada-46b4-9145-06c94aaab0c1': 'OjinmX4-4TQ', // 08. Hỏi đáp về những thứ yêu thích nhất
+  '808eb836-6eab-4013-909b-e355b161a5e7': 'gNCaUGi2m6A', // 09. Sở thích cá nhân
+  '6897dd88-0948-4c87-8fda-35f80a7e0a85': 'mKIVh8IpHd8', // 10. Thảo luận về phim ảnh
+  '4e11fc54-3dd6-443b-bd18-d3434061daa3': 'EfghDPb-o5w', // 11. Đi máy bay
+  'e4a688d4-5e93-46a7-b072-09105a530666': 'j6T49ChdepA', // 12. Đi công tác
 };
 
 const getYouTubeVideoId = (url: string): string | null => {
