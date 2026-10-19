@@ -142,7 +142,13 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             </div>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              onClick={() => onNavigate('promo')}
+              className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-[11px] sm:text-[13px] font-black px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg sm:rounded-xl transition shadow-xs active:scale-95 whitespace-nowrap"
+            >
+              🎁 Các gói học & Học thử
+            </button>
             {!currentUserRole ? (
               <button 
                 onClick={() => setShowLoginModal(true)} 
@@ -215,8 +221,8 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
                   <button onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-cyan-500/30 w-full sm:w-auto active:scale-95">
                     Làm bài test năng lực ➜
                   </button>
-                  <button onClick={() => setShowLoginModal(true)} className="bg-white hover:bg-slate-50 text-slate-700 text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-md border border-slate-200 w-full sm:w-auto active:scale-95">
-                    Tìm hiểu khóa học
+                  <button onClick={() => onNavigate('promo')} className="bg-white hover:bg-slate-50 text-slate-700 text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-md border border-slate-200 w-full sm:w-auto active:scale-95">
+                    Tìm hiểu khóa học & Học thử ➜
                   </button>
                 </>
               )}

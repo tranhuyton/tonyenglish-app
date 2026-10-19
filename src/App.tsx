@@ -24,6 +24,7 @@ const IgcseDirectPaperTest = lazyWithRetry(() => import('./IgcseDirectPaperTest'
 const AITutorSidebar = lazyWithRetry(() => import('./AITutorSidebar'));
 const LiveSpeakingTest = lazyWithRetry(() => import('./LiveSpeakingTest'));
 const MixedPaperTest = lazyWithRetry(() => import('./MixedPaperTest'));
+const CoursePromoPage = lazyWithRetry(() => import('./CoursePromoPage'));
 
 // Loading fallback khi đang tải component
 const LoadingFallback = () => (
@@ -35,8 +36,17 @@ const LoadingFallback = () => (
 
 export default function App() {
   const getInitialView = () => {
-    const path = window.location.pathname;
-    if (path === '/admin' || path === '/admin/') return 'admin-login'; 
+    const path = window.location.pathname.toLowerCase();
+    if (path === '/admin' || path === '/admin/') return 'admin-login';
+    if (
+      path.startsWith('/khoa-hoc') ||
+      path.startsWith('/hoc-thu') ||
+      path.startsWith('/dang-ky') ||
+      path.startsWith('/promo') ||
+      path.startsWith('/courses')
+    ) {
+      return 'promo';
+    }
     try { return sessionStorage.getItem('lms_current_view') || 'home'; } catch(e) { return 'home'; }
   };
 
@@ -174,6 +184,12 @@ export default function App() {
     // 🚀 Xóa lựa chọn giọng khi chuyển trang → hỏi lại khi vào trang mới
     try { sessionStorage.removeItem('tony_voice_examiner'); } catch(e) {}
     if (currentView === 'admin' || currentView === 'admin-login') window.history.pushState(null, '', '/admin');
+    else if (currentView === 'promo') {
+      const p = window.location.pathname.toLowerCase();
+      if (!p.startsWith('/khoa-hoc') && !p.startsWith('/hoc-thu') && !p.startsWith('/dang-ky') && !p.startsWith('/promo') && !p.startsWith('/courses')) {
+        window.history.pushState(null, '', '/khoa-hoc');
+      }
+    }
     else if (currentView === 'home') window.history.pushState(null, '', '/');
   }, [currentView]);
 
@@ -271,7 +287,7 @@ export default function App() {
         setShowResetPasswordModal(true);
       }
       else if (event === 'SIGNED_OUT') {
-        setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login') ? 'home' : prev); 
+        setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login' && prev !== 'promo') ? 'home' : prev); 
         try { sessionStorage.removeItem('lms_current_view'); sessionStorage.removeItem('lms_current_test'); sessionStorage.removeItem('lms_active_course_id'); sessionStorage.removeItem('lms_return_view'); } catch(e) {}
         stopGlobalTimer(); 
       }
@@ -313,7 +329,7 @@ export default function App() {
     }, 150);
   };
 
-  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'mixed-paper', 'standard', 'standard-splitscreen', 'case-study', 'igcse', 'igcse-direct', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
+  const validViews = ['admin-login', 'home', 'promo', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'mixed-paper', 'standard', 'standard-splitscreen', 'case-study', 'igcse', 'igcse-direct', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
 
   return (
     <React.Fragment>
@@ -324,6 +340,7 @@ export default function App() {
       {/* Lazy-loaded components (chỉ tải khi cần) bọc trong AppErrorBoundary chống sập màn hình trắng */}
       <AppErrorBoundary>
         <Suspense fallback={<LoadingFallback />}>
+          {currentView === 'promo' && <CoursePromoPage onNavigate={handleNavigate} onStartTest={handleStartTest} />}
           {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
           
           {/* 🚀 ĐÃ NỐI CẦU ONSTARTTEST VÀO ADMIN PANEL */}
