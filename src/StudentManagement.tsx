@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from './supabase';
 import { createClient } from '@supabase/supabase-js';
+import { parseClassConfig } from './classConfigUtils';
 
 const authSupabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -49,6 +50,10 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
 
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [isAssigning, setIsAssigning] = useState(false);
+  const [allClasses, setAllClasses] = useState<any[]>([]);
+  const [studentClassIds, setStudentClassIds] = useState<string[]>([]);
+  const [selectedAssignCourseId, setSelectedAssignCourseId] = useState<string>('');
+  const [selectedAssignClassId, setSelectedAssignClassId] = useState<string>('');
 
   // Auto-distribute
   const [showAutoDistribute, setShowAutoDistribute] = useState(false);
@@ -79,6 +84,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   useEffect(() => {
     fetchStudents();
     fetchCourses();
+    supabase.from('classes').select('*').order('created_at', { ascending: false }).then(({data}) => setAllClasses(data || []));
     supabase.from('tests').select('id, title, test_type, course_id, skill').then(({data}) => setAllTests(data || []));
   }, []);
 
@@ -474,8 +480,12 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     setActiveDetailTab('courses');
     
     try {
-      const { data: enrollData } = await supabase.from('enrollments').select('*, courses(title, type)').eq('user_id', student.id).order('enrolled_at', { ascending: false });
+      const [{ data: enrollData }, { data: csData }] = await Promise.all([
+        supabase.from('enrollments').select('*, courses(title, type)').eq('user_id', student.id).order('enrolled_at', { ascending: false }),
+        supabase.from('class_students').select('class_id').eq('user_id', student.id)
+      ]);
       setStudentEnrollments(enrollData || []);
+      setStudentClassIds((csData || []).map((x: any) => x.class_id));
 
       const { data: historyData } = await supabase.from('test_results').select('*').eq('user_id', student.id).order('created_at', { ascending: false });
       setStudentHistory(historyData || []);
@@ -585,7 +595,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const handleAssignCourse = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const courseId = formData.get('courseId') as string;
+    const courseId = (formData.get('courseId') as string) || selectedAssignCourseId;
+    const classId = (formData.get('classId') as string) || selectedAssignClassId;
     
     if (!courseId || !selectedStudent) return;
     setIsAssigning(true);
@@ -601,9 +612,19 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
         if (error.code === '23505') throw new Error("Học viên này đã được gán khóa học này rồi!");
         throw error;
       }
+
+      if (classId) {
+        await supabase.from('class_students').insert([{
+          class_id: classId,
+          user_id: selectedStudent.id
+        }]);
+        setStudentClassIds(prev => [...prev, classId]);
+      }
       
       setStudentEnrollments([data[0], ...studentEnrollments]);
       setShowAssignModal(false);
+      setSelectedAssignCourseId('');
+      setSelectedAssignClassId('');
       alert("✅ Đã gán khóa học thành công!");
     } catch (err: any) {
       alert("❌ Lỗi: " + err.message);
@@ -612,10 +633,40 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     }
   };
 
+  const handleChangeStudentCourseClass = async (courseId: string, newClassId: string) => {
+    if (!selectedStudent) return;
+    try {
+      const courseClassIds = allClasses.filter(c => c.course_id === courseId).map(c => c.id);
+      if (courseClassIds.length > 0) {
+        await supabase.from('class_students').delete().eq('user_id', selectedStudent.id).in('class_id', courseClassIds);
+      }
+      if (newClassId) {
+        await supabase.from('class_students').insert([{
+          class_id: newClassId,
+          user_id: selectedStudent.id
+        }]);
+      }
+      setStudentClassIds(prev => {
+        const filtered = prev.filter(id => !courseClassIds.includes(id));
+        return newClassId ? [...filtered, newClassId] : filtered;
+      });
+    } catch (err: any) {
+      alert("Lỗi khi đổi lớp học: " + err.message);
+    }
+  };
+
   const handleRemoveCourse = async (enrollmentId: string) => {
     if (!window.confirm("Xóa quyền truy cập khóa học này của học viên?")) return;
     try {
+      const targetEnroll = studentEnrollments.find(e => e.id === enrollmentId);
       await supabase.from('enrollments').delete().eq('id', enrollmentId);
+      if (targetEnroll && selectedStudent) {
+        const courseClassIds = allClasses.filter(c => c.course_id === targetEnroll.course_id).map(c => c.id);
+        if (courseClassIds.length > 0) {
+          await supabase.from('class_students').delete().eq('user_id', selectedStudent.id).in('class_id', courseClassIds);
+          setStudentClassIds(prev => prev.filter(id => !courseClassIds.includes(id)));
+        }
+      }
       setStudentEnrollments(studentEnrollments.filter(e => e.id !== enrollmentId));
     } catch (err: any) {
       alert("Lỗi khi xóa: " + err.message);
@@ -792,21 +843,60 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                 <div>
                   <div className="flex justify-between items-center mb-6">
                     <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest">Danh sách khóa học được phép truy cập</h3>
-                    <button onClick={() => setShowAssignModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-sm transition">+ GÁN KHÓA HỌC</button>
+                    <button onClick={() => { setSelectedAssignCourseId(''); setSelectedAssignClassId(''); setShowAssignModal(true); }} className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-sm transition">+ GÁN KHÓA HỌC</button>
                   </div>
                   
                   {studentEnrollments.length === 0 ? (
                     <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Học viên này chưa được gán khóa học nào.</div>
                   ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                      {studentEnrollments.map(e => (
-                        <div key={e.id} className="border border-slate-200 p-5 rounded-xl bg-slate-50 flex flex-col relative group">
-                          <span className="bg-blue-100 text-blue-700 font-black uppercase text-[10px] px-2 py-1 rounded w-fit mb-3">{e.courses?.type || 'Khóa học'}</span>
-                          <h4 className="font-bold text-slate-800 text-[15px] mb-2">{e.courses?.title || 'Khóa học đã xóa'}</h4>
-                          <p className="text-[12px] text-slate-500 font-medium">Gán ngày: {formatDate(e.enrolled_at).split(' ')[0]}</p>
-                          <button onClick={() => handleRemoveCourse(e.id)} className="absolute top-4 right-4 text-red-400 hover:text-red-600 font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">Gỡ bỏ ✖</button>
-                        </div>
-                      ))}
+                      {studentEnrollments.map(e => {
+                        const courseClasses = allClasses.filter(c => c.course_id === e.course_id);
+                        const currentClass = courseClasses.find(c => studentClassIds.includes(c.id));
+                        const currentClassCfg = currentClass ? parseClassConfig(currentClass.name) : null;
+
+                        return (
+                          <div key={e.id} className={`border p-5 rounded-xl flex flex-col relative group transition-colors ${currentClassCfg?.isTrial ? 'border-amber-200 bg-amber-50/40' : 'border-slate-200 bg-slate-50'}`}>
+                            <div className="flex items-center gap-2 mb-3 flex-wrap">
+                              <span className="bg-blue-100 text-blue-700 font-black uppercase text-[10px] px-2 py-1 rounded w-fit">{e.courses?.type || 'Khóa học'}</span>
+                              {currentClassCfg?.isTrial && (
+                                <span className="bg-amber-100 text-amber-700 border border-amber-200 font-black uppercase text-[10px] px-2 py-0.5 rounded-full">
+                                  🎁 Học thử
+                                </span>
+                              )}
+                            </div>
+                            <h4 className="font-bold text-slate-800 text-[15px] mb-2">{e.courses?.title || 'Khóa học đã xóa'}</h4>
+                            <p className="text-[12px] text-slate-500 font-medium mb-3">Gán ngày: {formatDate(e.enrolled_at).split(' ')[0]}</p>
+
+                            {courseClasses.length > 0 && (
+                              <div className="mt-auto pt-3 border-t border-slate-200/70">
+                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider block mb-1">Chế độ / Lớp học:</label>
+                                <select
+                                  value={currentClass?.id || ''}
+                                  onChange={(ev) => handleChangeStudentCourseClass(e.course_id, ev.target.value)}
+                                  className={`w-full text-xs font-bold px-2.5 py-2 rounded-lg border outline-none transition ${
+                                    currentClassCfg?.isTrial
+                                      ? 'bg-amber-50 border-amber-300 text-amber-800'
+                                      : 'bg-white border-slate-200 text-slate-700'
+                                  }`}
+                                >
+                                  <option value="">🌟 Toàn khóa học (Mở đầy đủ)</option>
+                                  {courseClasses.map(cls => {
+                                    const cfg = parseClassConfig(cls.name);
+                                    return (
+                                      <option key={cls.id} value={cls.id}>
+                                        {cfg.isTrial ? `🎁 [Học thử] ${cfg.cleanName}` : `👨‍🏫 [Lớp] ${cfg.cleanName}`}
+                                      </option>
+                                    );
+                                  })}
+                                </select>
+                              </div>
+                            )}
+
+                            <button onClick={() => handleRemoveCourse(e.id)} className="absolute top-4 right-4 text-red-400 hover:text-red-600 font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">Gỡ bỏ ✖</button>
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -1418,15 +1508,51 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
             <form onSubmit={handleAssignCourse} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
               <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4">Gán Khóa Học</h2>
               <div className="space-y-4 mb-8">
-                <label className="text-[13px] font-bold text-slate-500 uppercase">Chọn khóa học</label>
-                <select name="courseId" required defaultValue="" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] font-medium bg-slate-50">
-                  <option value="" disabled>-- Chọn khóa học --</option>
-                  {availableCourses.length === 0 ? (
-                     <option value="" disabled>Học viên đã gán tất cả khóa học</option>
-                  ) : (
-                     availableCourses.map(c => <option key={c.id} value={c.id}>[{c.type}] {c.title}</option>)
-                  )}
-                </select>
+                <div>
+                  <label className="text-[13px] font-bold text-slate-500 uppercase block mb-2">Chọn khóa học</label>
+                  <select
+                    name="courseId"
+                    required
+                    value={selectedAssignCourseId}
+                    onChange={(e) => {
+                      setSelectedAssignCourseId(e.target.value);
+                      setSelectedAssignClassId('');
+                    }}
+                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] font-medium bg-slate-50"
+                  >
+                    <option value="" disabled>-- Chọn khóa học --</option>
+                    {availableCourses.length === 0 ? (
+                       <option value="" disabled>Học viên đã gán tất cả khóa học</option>
+                    ) : (
+                       availableCourses.map(c => <option key={c.id} value={c.id}>[{c.type}] {c.title}</option>)
+                    )}
+                  </select>
+                </div>
+
+                {selectedAssignCourseId && allClasses.some(c => c.course_id === selectedAssignCourseId) && (
+                  <div>
+                    <label className="text-[13px] font-bold text-slate-500 uppercase block mb-2">Chọn lớp học / Chế độ học</label>
+                    <select
+                      name="classId"
+                      value={selectedAssignClassId}
+                      onChange={(e) => setSelectedAssignClassId(e.target.value)}
+                      className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] font-medium bg-slate-50"
+                    >
+                      <option value="">🌟 Toàn khóa học (Mở đầy đủ tất cả bài giảng)</option>
+                      {allClasses.filter(c => c.course_id === selectedAssignCourseId).map(cls => {
+                        const cfg = parseClassConfig(cls.name);
+                        return (
+                          <option key={cls.id} value={cls.id}>
+                            {cfg.isTrial ? `🎁 [Học thử] ${cfg.cleanName}` : `👨‍🏫 [Lớp chính thức] ${cfg.cleanName}`}
+                          </option>
+                        );
+                      })}
+                    </select>
+                    <p className="text-[11px] text-slate-400 font-medium mt-1.5">
+                      💡 Nếu chọn <b>Lớp Học Thử</b>, học viên sẽ thấy đầy đủ mục lục khóa học nhưng chỉ mở được các bài giảng/học phần được cho phép học thử.
+                    </p>
+                  </div>
+                )}
               </div>
               <div className="flex gap-4">
                 <button type="button" onClick={() => setShowAssignModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>

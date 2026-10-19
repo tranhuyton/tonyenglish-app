@@ -9,6 +9,7 @@ import BatchImportModal from './BatchImportModal';
 import BatchImportJsonModal from './BatchImportJsonModal';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorSelector, ModuleColorModal } from './moduleTheme';
 import { parseLectureFromItem, formatLectureTaskDescription } from './lectureTaskUtils';
+import { parseClassConfig, formatClassConfig } from './classConfigUtils';
 import './tailwind.css';
 
 let adminSearchTimer: any;
@@ -67,8 +68,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [classes, setClasses] = useState<any[]>([]);
   const [selectedClass, setSelectedClass] = useState<any>(null);
   const [classModules, setClassModules] = useState<any[]>([]); 
+  const [newClassIsTrial, setNewClassIsTrial] = useState(false);
+  const [expandedTrialModuleIds, setExpandedTrialModuleIds] = useState<string[]>([]);
   
   const [courseStudentsList, setCourseStudentsList] = useState<any[]>([]); 
+  const [allSystemStudents, setAllSystemStudents] = useState<any[]>([]);
+  const [assignStudentSearch, setAssignStudentSearch] = useState('');
   const [classStudentsList, setClassStudentsList] = useState<any[]>([]); 
   const [showAssignStudentModal, setShowAssignStudentModal] = useState(false); 
   
@@ -825,11 +830,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       fetchRichData();
     }
 
-    const { data: enrolls } = await supabase.from('enrollments').select('user_id').eq('course_id', courseId);
+    const [{ data: enrolls }, { data: allProfiles }] = await Promise.all([
+      supabase.from('enrollments').select('user_id').eq('course_id', courseId),
+      supabase.from('profiles').select('id, full_name, email, status').order('created_at', { ascending: false })
+    ]);
+    const validProfiles = (allProfiles || []).filter(p => p.status !== 'inactive');
+    setAllSystemStudents(validProfiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
     if (enrolls && enrolls.length > 0) {
-       const userIds = enrolls.map(e => e.user_id);
-       const { data: profiles } = await supabase.from('profiles').select('id, full_name, email').in('id', userIds);
-       if (profiles) setCourseStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
+       const enrolledSet = new Set(enrolls.map(e => e.user_id));
+       setCourseStudentsList(validProfiles.filter(p => enrolledSet.has(p.id)).map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
     } else {
        setCourseStudentsList([]);
     }
@@ -920,7 +929,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleAssignStudentToClass = async (userId: string) => {
-     if (!selectedClass) return;
+     if (!selectedClass || !selectedCourse) return;
+     // Ensure student is also enrolled in the course so the course appears in their portal
+     if (!courseStudentsList.some(cs => cs.user_id === userId)) {
+       await supabase.from('enrollments').insert([{ user_id: userId, course_id: selectedCourse.id, status: 'active' }]);
+       const found = allSystemStudents.find(s => s.user_id === userId);
+       if (found) setCourseStudentsList(prev => [...prev, found]);
+     }
      await supabase.from('class_students').insert([{ class_id: selectedClass.id, user_id: userId }]); 
      fetchClassDetails(selectedClass.id);
   };
@@ -1150,20 +1165,39 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     }
   };
 
-  const handleUpdateClassName = async (classId: string, newName: string) => {
-    if (!newName.trim()) { setEditingClassId(null); return; }
-    await supabase.from('classes').update({ name: newName }).eq('id', classId);
-    setClasses(classes.map(c => c.id === classId ? { ...c, name: newName } : c));
-    if (selectedClass?.id === classId) setSelectedClass({ ...selectedClass, name: newName });
+  const handleUpdateClassName = async (classId: string, newCleanName: string) => {
+    if (!newCleanName.trim()) { setEditingClassId(null); return; }
+    const targetCls = classes.find(c => c.id === classId);
+    const existingCfg = parseClassConfig(targetCls?.name);
+    const formattedName = formatClassConfig(newCleanName, existingCfg.isTrial, existingCfg.trialLectureIds);
+    await supabase.from('classes').update({ name: formattedName }).eq('id', classId);
+    setClasses(classes.map(c => c.id === classId ? { ...c, name: formattedName } : c));
+    if (selectedClass?.id === classId) setSelectedClass({ ...selectedClass, name: formattedName });
     setEditingClassId(null);
+  };
+
+  const handleToggleClassTrialMode = async (cls: any) => {
+    const cfg = parseClassConfig(cls.name);
+    const nextIsTrial = !cfg.isTrial;
+    const formattedName = formatClassConfig(cfg.cleanName, nextIsTrial, cfg.trialLectureIds);
+    await supabase.from('classes').update({ name: formattedName }).eq('id', cls.id);
+    setClasses(classes.map(c => c.id === cls.id ? { ...c, name: formattedName } : c));
+    if (selectedClass?.id === cls.id) setSelectedClass({ ...selectedClass, name: formattedName });
   };
 
   const handleCreateClass = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); 
     if (!selectedCourse) return;
-    const name = (new FormData(e.currentTarget).get('name') as string);
-    const { data } = await supabase.from('classes').insert([{ course_id: selectedCourse.id, name }]).select();
-    if (data) { setClasses([data[0], ...classes]); setShowClassModal(false); }
+    const rawName = (new FormData(e.currentTarget).get('name') as string);
+    const formattedName = formatClassConfig(rawName, newClassIsTrial, []);
+    const { data } = await supabase.from('classes').insert([{ course_id: selectedCourse.id, name: formattedName }]).select();
+    if (data && data[0]) {
+      setClasses([data[0], ...classes]);
+      setSelectedClass(data[0]);
+      fetchClassDetails(data[0].id);
+      setShowClassModal(false);
+      setNewClassIsTrial(false);
+    }
   };
 
   const handleDeleteClass = async (id: string) => {
@@ -1183,7 +1217,113 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const handleUnassignModuleFromClass = async (moduleId: string) => {
     if (!selectedClass) return;
     await supabase.from('class_modules').delete().match({ class_id: selectedClass.id, module_id: moduleId }); 
+    // Also remove any individual lectures of this module from trialLectureIds if present
+    const cfg = parseClassConfig(selectedClass.name);
+    if (cfg.isTrial && cfg.trialLectureIds.length > 0) {
+      const modLecIds = new Set(lectures.filter(l => l.module_id === moduleId).map(l => l.id));
+      const nextLecIds = cfg.trialLectureIds.filter(id => !modLecIds.has(id));
+      if (nextLecIds.length !== cfg.trialLectureIds.length) {
+        const formattedName = formatClassConfig(cfg.cleanName, true, nextLecIds);
+        await supabase.from('classes').update({ name: formattedName }).eq('id', selectedClass.id);
+        setClasses(prev => prev.map(c => c.id === selectedClass.id ? { ...c, name: formattedName } : c));
+        setSelectedClass((prev: any) => prev ? { ...prev, name: formattedName } : prev);
+      }
+    }
     fetchClassDetails(selectedClass.id);
+  };
+
+  const handleToggleWholeModuleForClass = async (moduleId: string) => {
+    if (!selectedClass) return;
+    const cfg = parseClassConfig(selectedClass.name);
+    const modLecIds = lectures.filter(l => l.module_id === moduleId).map(l => l.id);
+    const isWholeUnlocked = classModules.includes(moduleId) || (modLecIds.length > 0 && modLecIds.every(id => cfg.trialLectureIds.includes(id)));
+
+    if (isWholeUnlocked) {
+      if (classModules.includes(moduleId)) {
+        await supabase.from('class_modules').delete().match({ class_id: selectedClass.id, module_id: moduleId });
+      }
+      if (cfg.isTrial && cfg.trialLectureIds.length > 0) {
+        const modSet = new Set(modLecIds);
+        const nextIds = cfg.trialLectureIds.filter(id => !modSet.has(id));
+        const formattedName = formatClassConfig(cfg.cleanName, true, nextIds);
+        await supabase.from('classes').update({ name: formattedName }).eq('id', selectedClass.id);
+        setClasses(prev => prev.map(c => c.id === selectedClass.id ? { ...c, name: formattedName } : c));
+        setSelectedClass((prev: any) => prev ? { ...prev, name: formattedName } : prev);
+      }
+    } else {
+      if (!classModules.includes(moduleId)) {
+        await supabase.from('class_modules').insert([{ class_id: selectedClass.id, module_id: moduleId }]);
+      }
+      if (cfg.isTrial && cfg.trialLectureIds.length > 0) {
+        const modSet = new Set(modLecIds);
+        const nextIds = cfg.trialLectureIds.filter(id => !modSet.has(id));
+        const formattedName = formatClassConfig(cfg.cleanName, true, nextIds);
+        await supabase.from('classes').update({ name: formattedName }).eq('id', selectedClass.id);
+        setClasses(prev => prev.map(c => c.id === selectedClass.id ? { ...c, name: formattedName } : c));
+        setSelectedClass((prev: any) => prev ? { ...prev, name: formattedName } : prev);
+      }
+    }
+    fetchClassDetails(selectedClass.id);
+  };
+
+  const handleToggleTrialLecture = async (lectureId: string, moduleId: string) => {
+    if (!selectedClass) return;
+    const cfg = parseClassConfig(selectedClass.name);
+    const modLecIds = lectures.filter(l => l.module_id === moduleId).map(l => l.id);
+
+    let nextIds = [...cfg.trialLectureIds];
+    if (classModules.includes(moduleId)) {
+      // Module was fully unlocked in class_modules -> switch to individual lectures (all except lectureId)
+      await supabase.from('class_modules').delete().match({ class_id: selectedClass.id, module_id: moduleId });
+      setClassModules(prev => prev.filter(id => id !== moduleId));
+      const otherIds = modLecIds.filter(id => id !== lectureId);
+      nextIds = Array.from(new Set([...nextIds.filter(id => !modLecIds.includes(id)), ...otherIds]));
+    } else {
+      if (nextIds.includes(lectureId)) {
+        nextIds = nextIds.filter(id => id !== lectureId);
+      } else {
+        nextIds.push(lectureId);
+      }
+    }
+
+    const formattedName = formatClassConfig(cfg.cleanName, true, nextIds);
+    await supabase.from('classes').update({ name: formattedName }).eq('id', selectedClass.id);
+    setClasses(prev => prev.map(c => c.id === selectedClass.id ? { ...c, name: formattedName } : c));
+    setSelectedClass((prev: any) => prev ? { ...prev, name: formattedName } : prev);
+  };
+
+  const handleQuickSelectFirstLecturePerModule = async () => {
+    if (!selectedClass) return;
+    const cfg = parseClassConfig(selectedClass.name);
+    // Clear whole modules in class_modules first
+    if (classModules.length > 0) {
+      await supabase.from('class_modules').delete().eq('class_id', selectedClass.id);
+      setClassModules([]);
+    }
+    const firstLecIds: string[] = [];
+    lectureModules.forEach(mod => {
+      const modLecs = lectures.filter(l => l.module_id === mod.id);
+      if (modLecs.length > 0) {
+        firstLecIds.push(modLecs[0].id);
+      }
+    });
+    const formattedName = formatClassConfig(cfg.cleanName, true, firstLecIds);
+    await supabase.from('classes').update({ name: formattedName }).eq('id', selectedClass.id);
+    setClasses(prev => prev.map(c => c.id === selectedClass.id ? { ...c, name: formattedName } : c));
+    setSelectedClass((prev: any) => prev ? { ...prev, name: formattedName } : prev);
+  };
+
+  const handleClearAllTrialSelections = async () => {
+    if (!selectedClass) return;
+    const cfg = parseClassConfig(selectedClass.name);
+    if (classModules.length > 0) {
+      await supabase.from('class_modules').delete().eq('class_id', selectedClass.id);
+      setClassModules([]);
+    }
+    const formattedName = formatClassConfig(cfg.cleanName, cfg.isTrial, []);
+    await supabase.from('classes').update({ name: formattedName }).eq('id', selectedClass.id);
+    setClasses(prev => prev.map(c => c.id === selectedClass.id ? { ...c, name: formattedName } : c));
+    setSelectedClass((prev: any) => prev ? { ...prev, name: formattedName } : prev);
   };
 
   const handleInitiateTest = (mode: 'manual' | 'import' | 'case-study') => {
@@ -3232,66 +3372,179 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
               </div>
 
               {courseViewMode === 'classes' && (
-                <div className="flex flex-col lg:flex-row gap-4 md:gap-6 h-auto lg:h-[600px] animate-in fade-in">
-                   <div className="w-full lg:w-1/3 bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm flex flex-col overflow-hidden h-[300px] lg:h-auto shrink-0">
-                      <div className="p-4 md:p-5 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
+                <div className="flex flex-col lg:flex-row gap-4 md:gap-6 h-auto lg:h-[620px] animate-in fade-in">
+                   <div className="w-full lg:w-1/3 bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm flex flex-col overflow-hidden h-[320px] lg:h-auto shrink-0">
+                      <div className="p-3.5 md:p-5 bg-slate-50 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2 shrink-0">
                          <h3 className="font-black text-slate-700 uppercase text-[11px] md:text-xs tracking-widest">Danh sách Lớp</h3>
-                         <button onClick={() => setShowClassModal(true)} className="bg-[#0a5482] hover:bg-[#084266] transition text-white px-3 py-1.5 md:px-4 md:py-1.5 rounded-lg text-[11px] md:text-xs font-bold">+ THÊM LỚP</button>
+                         <div className="flex items-center gap-1.5">
+                           <button onClick={() => { setNewClassIsTrial(true); setShowClassModal(true); }} className="bg-amber-500 hover:bg-amber-600 transition text-white px-2.5 py-1.5 rounded-lg text-[10px] md:text-xs font-bold shadow-xs whitespace-nowrap">🎁 + LỚP HỌC THỬ</button>
+                           <button onClick={() => { setNewClassIsTrial(false); setShowClassModal(true); }} className="bg-[#0a5482] hover:bg-[#084266] transition text-white px-2.5 py-1.5 md:px-3.5 md:py-1.5 rounded-lg text-[10px] md:text-xs font-bold shadow-xs whitespace-nowrap">+ THÊM LỚP</button>
+                         </div>
                       </div>
                       <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-2 custom-scrollbar">
                          {classes.length === 0 ? <p className="text-[12px] md:text-sm text-slate-400 text-center mt-4 italic">Chưa có lớp nào</p> : (
-                            classes.map(cls => (
-                               <div key={cls.id} onClick={() => { setSelectedClass(cls); fetchClassDetails(cls.id); }} className={`p-3 md:p-4 border rounded-xl cursor-pointer transition-all flex justify-between items-center group ${selectedClass?.id === cls.id ? 'bg-blue-50 border-blue-400' : 'bg-white border-slate-200 hover:border-[#2bd6eb]'}`}>
+                            classes.map(cls => {
+                               const clsCfg = parseClassConfig(cls.name);
+                               return (
+                               <div key={cls.id} onClick={() => { setSelectedClass(cls); fetchClassDetails(cls.id); }} className={`p-3 md:p-4 border rounded-xl cursor-pointer transition-all flex justify-between items-center group ${selectedClass?.id === cls.id ? (clsCfg.isTrial ? 'bg-amber-50/70 border-amber-400' : 'bg-blue-50 border-blue-400') : 'bg-white border-slate-200 hover:border-[#2bd6eb]'}`}>
                                   <div className="flex-1 mr-2 min-w-0">
                                      {editingClassId === cls.id ? (
                                         <form onClick={(e) => e.stopPropagation()} onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); handleUpdateClassName(cls.id, new FormData(e.currentTarget).get('name') as string); }}>
-                                           <input name="name" autoFocus defaultValue={cls.name} className="w-full border border-slate-300 rounded px-2 py-1 font-black text-[12px] md:text-sm outline-none mb-1 focus:border-[#0a5482]" />
+                                           <input name="name" autoFocus defaultValue={clsCfg.cleanName} className="w-full border border-slate-300 rounded px-2 py-1 font-black text-[12px] md:text-sm outline-none mb-1 focus:border-[#0a5482]" />
                                            <div className="flex gap-2">
                                                <button type="submit" className="text-[10px] font-bold text-white bg-emerald-500 px-2 py-0.5 rounded">Lưu</button>
                                                <button type="button" onClick={() => setEditingClassId(null)} className="text-[10px] font-bold bg-slate-200 px-2 py-0.5 rounded text-slate-600">Hủy</button>
                                            </div>
                                         </form>
-                                     ) : ( <p className={`font-black text-[13px] md:text-sm truncate ${selectedClass?.id === cls.id ? 'text-blue-800' : 'text-slate-700'}`}>{cls.name}</p> )}
+                                     ) : (
+                                        <div className="flex items-center gap-2 min-w-0">
+                                          <p className={`font-black text-[13px] md:text-sm truncate ${selectedClass?.id === cls.id ? (clsCfg.isTrial ? 'text-amber-900' : 'text-blue-800') : 'text-slate-700'}`}>{clsCfg.cleanName}</p>
+                                          {clsCfg.isTrial && (
+                                            <span className="bg-amber-100 text-amber-800 border border-amber-300 text-[9px] md:text-[10px] font-black px-2 py-0.5 rounded-full shrink-0 uppercase tracking-wider">🎁 Học thử</span>
+                                          )}
+                                        </div>
+                                     )}
                                   </div>
                                   <div className="flex items-center gap-1.5 md:opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
-                                     <button onClick={(e) => { e.stopPropagation(); setEditingClassId(cls.id); }} className="text-blue-400 hover:text-blue-600 text-xs font-bold transition-colors bg-white p-1 md:p-1.5 rounded border border-blue-200">✏️</button>
-                                     <button onClick={(e) => { e.stopPropagation(); handleDeleteClass(cls.id); }} className="text-red-400 hover:text-red-600 text-xs font-bold transition-colors bg-white p-1 md:p-1.5 rounded border border-red-200">✕</button>
+                                     <button onClick={(e) => { e.stopPropagation(); setEditingClassId(cls.id); }} className="text-blue-400 hover:text-blue-600 text-xs font-bold transition-colors bg-white p-1 md:p-1.5 rounded border border-blue-200" title="Đổi tên lớp">✏️</button>
+                                     <button onClick={(e) => { e.stopPropagation(); handleDeleteClass(cls.id); }} className="text-red-400 hover:text-red-600 text-xs font-bold transition-colors bg-white p-1 md:p-1.5 rounded border border-red-200" title="Xóa lớp">✕</button>
                                   </div>
                                </div>
-                            ))
+                               );
+                            })
                          )}
                       </div>
                    </div>
 
-                   <div className="flex-1 bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm flex flex-col overflow-hidden min-h-[400px] lg:min-h-0">
+                   <div className="flex-1 bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm flex flex-col overflow-hidden min-h-[420px] lg:min-h-0">
                       {!selectedClass ? (
                          <div className="flex-1 flex items-center justify-center text-slate-400 font-medium border-2 border-dashed border-slate-100 m-4 md:m-8 rounded-2xl text-[13px] md:text-base text-center px-4">👈 Chọn một lớp học để xem dữ liệu</div>
-                      ) : (
+                      ) : (() => {
+                         const selCfg = parseClassConfig(selectedClass.name);
+                         const totalCourseLecs = lectures.length;
+                         const unlockedTrialLecCount = lectures.filter(l => classModules.includes(l.module_id) || selCfg.trialLectureIds.includes(l.id)).length;
+                         return (
                          <div className="flex-1 flex flex-col overflow-hidden animate-in fade-in">
-                            <div className="p-4 md:p-6 bg-blue-50/50 border-b border-blue-100 shrink-0"><h2 className="text-[15px] md:text-lg font-black text-[#0a5482] uppercase tracking-wide truncate">LỚP: {selectedClass.name}</h2></div>
+                            <div className={`p-4 md:p-5 border-b shrink-0 flex flex-wrap justify-between items-center gap-3 ${selCfg.isTrial ? 'bg-amber-50/70 border-amber-200' : 'bg-blue-50/50 border-blue-100'}`}>
+                              <div className="flex items-center gap-2.5 min-w-0">
+                                <h2 className={`text-[15px] md:text-lg font-black uppercase tracking-wide truncate ${selCfg.isTrial ? 'text-amber-900' : 'text-[#0a5482]'}`}>
+                                  LỚP: {selCfg.cleanName}
+                                </h2>
+                                {selCfg.isTrial ? (
+                                  <span className="bg-amber-500 text-white text-[10px] md:text-[11px] font-black px-2.5 py-0.5 rounded-full shrink-0 shadow-xs">
+                                    🎁 LỚP HỌC THỬ ({unlockedTrialLecCount}/{totalCourseLecs} bài mở)
+                                  </span>
+                                ) : (
+                                  <span className="bg-blue-100 text-[#0a5482] text-[10px] md:text-[11px] font-bold px-2.5 py-0.5 rounded-full shrink-0">
+                                    👨‍🏫 Lớp chính thức
+                                  </span>
+                                )}
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => handleToggleClassTrialMode(selectedClass)}
+                                className={`text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-lg border transition shrink-0 ${
+                                  selCfg.isTrial
+                                    ? 'bg-white text-slate-600 border-slate-300 hover:bg-slate-100'
+                                    : 'bg-amber-50 text-amber-800 border-amber-300 hover:bg-amber-100'
+                                }`}
+                                title="Chuyển đổi giữa Lớp chính thức và Lớp học thử"
+                              >
+                                {selCfg.isTrial ? '🔄 Chuyển thành Lớp chính thức' : '🎁 Chuyển thành Lớp học thử'}
+                              </button>
+                            </div>
                             
                             <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
-                               <div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col h-[250px] md:h-auto shrink-0 md:shrink">
+                               <div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col h-[280px] md:h-auto shrink-0 md:shrink">
                                   <div className="p-3 md:p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
-                                     <h3 className="font-bold text-[12px] md:text-sm text-slate-700">Học phần của lớp</h3>
-                                     <button onClick={() => setShowAssignClassModuleModal(true)} className="text-[10px] md:text-xs bg-emerald-500 hover:bg-emerald-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">+ Gán</button>
+                                     <h3 className="font-bold text-[12px] md:text-sm text-slate-700">
+                                       {selCfg.isTrial ? 'Học phần / Bài giảng mở thử' : 'Học phần của lớp'}
+                                     </h3>
+                                     <button onClick={() => {
+                                       if (selCfg.isTrial && expandedTrialModuleIds.length === 0 && lectureModules.length > 0) {
+                                         setExpandedTrialModuleIds([lectureModules[0].id]);
+                                       }
+                                       setShowAssignClassModuleModal(true);
+                                     }} className="text-[10px] md:text-xs bg-emerald-500 hover:bg-emerald-600 transition text-white font-bold px-2.5 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">
+                                       {selCfg.isTrial ? '⚙️ Chọn bài mở' : '+ Gán'}
+                                     </button>
                                   </div>
-                                  <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-2 custom-scrollbar">
-                                     {lectureModules.filter(m => classModules.includes(m.id)).length === 0 ? <p className="text-[11px] md:text-xs text-slate-400 italic text-center mt-4">Chưa có học phần nào.</p> : (
-                                        lectureModules.filter(m => classModules.includes(m.id)).map(m => (
-                                           <div key={m.id} className="p-2.5 md:p-3 bg-white border border-slate-200 rounded-lg flex justify-between items-center shadow-sm hover:border-slate-300 transition">
-                                              <span className="font-bold text-[12px] md:text-sm text-slate-700 truncate mr-2">{m.title}</span>
-                                              <button onClick={() => handleUnassignModuleFromClass(m.id)} className="text-red-500 text-[11px] md:text-xs font-bold hover:underline transition shrink-0">Gỡ</button>
-                                           </div>
-                                        ))
-                                     )}
+                                  <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-2.5 custom-scrollbar">
+                                     {(() => {
+                                        const activeMods = lectureModules.filter(m => {
+                                          if (classModules.includes(m.id)) return true;
+                                          if (selCfg.isTrial) {
+                                            const modLecs = lectures.filter(l => l.module_id === m.id);
+                                            return modLecs.some(l => selCfg.trialLectureIds.includes(l.id));
+                                          }
+                                          return false;
+                                        });
+                                        if (activeMods.length === 0) {
+                                          return (
+                                            <div className="text-center mt-6 px-2">
+                                              <p className="text-[11px] md:text-xs text-slate-400 italic">
+                                                {selCfg.isTrial
+                                                  ? 'Chưa mở học phần hay bài giảng học thử nào. Bấm "⚙️ Chọn bài mở" để chọn học phần hoặc từng bài giảng.'
+                                                  : 'Chưa có học phần nào.'}
+                                              </p>
+                                            </div>
+                                          );
+                                        }
+                                        return activeMods.map(m => {
+                                          const cleanModTitle = parseModuleTheme(m.title, m).cleanTitle;
+                                          const modLecs = lectures.filter(l => l.module_id === m.id);
+                                          const isWholeMod = classModules.includes(m.id);
+                                          const unlockedLecs = isWholeMod
+                                            ? modLecs
+                                            : modLecs.filter(l => selCfg.trialLectureIds.includes(l.id));
+
+                                          return (
+                                            <div key={m.id} className="p-2.5 md:p-3 bg-white border border-slate-200 rounded-xl shadow-xs hover:border-slate-300 transition space-y-2">
+                                              <div className="flex justify-between items-start gap-2">
+                                                <div className="min-w-0 flex-1">
+                                                  <p className="font-bold text-[12px] md:text-[13px] text-slate-800 truncate">📑 {cleanModTitle}</p>
+                                                  <span className={`inline-block mt-0.5 text-[10px] font-bold px-2 py-0.5 rounded-md ${
+                                                    isWholeMod
+                                                      ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                                                      : 'bg-amber-50 text-amber-700 border border-amber-200'
+                                                  }`}>
+                                                    {isWholeMod
+                                                      ? `✅ Mở cả học phần (${modLecs.length} bài)`
+                                                      : `🔓 Mở ${unlockedLecs.length}/${modLecs.length} bài giảng`}
+                                                  </span>
+                                                </div>
+                                                <button onClick={() => handleUnassignModuleFromClass(m.id)} className="text-red-500 text-[10px] md:text-xs font-bold hover:underline transition shrink-0">
+                                                  Gỡ
+                                                </button>
+                                              </div>
+                                              {!isWholeMod && unlockedLecs.length > 0 && (
+                                                <div className="pl-2 border-l-2 border-amber-200 space-y-1 pt-1">
+                                                  {unlockedLecs.map(lec => (
+                                                    <div key={lec.id} className="flex items-center justify-between gap-2 text-[11px] bg-slate-50 px-2 py-1 rounded border border-slate-100">
+                                                      <span className="text-slate-600 font-medium truncate">📖 {lec.title}</span>
+                                                      <button
+                                                        type="button"
+                                                        onClick={() => handleToggleTrialLecture(lec.id, m.id)}
+                                                        className="text-slate-400 hover:text-red-500 font-bold shrink-0"
+                                                        title="Khóa lại bài giảng này"
+                                                      >
+                                                        ✕
+                                                      </button>
+                                                    </div>
+                                                  ))}
+                                                </div>
+                                              )}
+                                            </div>
+                                          );
+                                        });
+                                     })()}
                                   </div>
                                </div>
 
                                <div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col bg-[#f8fafc] h-[250px] md:h-auto shrink-0 md:shrink">
                                   <div className="p-3 md:p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
-                                     <h3 className="font-bold text-[12px] md:text-sm text-slate-700">Học sinh trong lớp</h3>
-                                     <button onClick={() => setShowAssignStudentModal(true)} className="text-[10px] md:text-xs bg-blue-500 hover:bg-blue-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">+ Thêm</button>
+                                     <h3 className="font-bold text-[12px] md:text-sm text-slate-700">Học sinh trong lớp ({classStudentsList.length})</h3>
+                                     <button onClick={() => { setAssignStudentSearch(''); setShowAssignStudentModal(true); }} className="text-[10px] md:text-xs bg-blue-500 hover:bg-blue-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">+ Thêm</button>
                                   </div>
                                   <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-2 custom-scrollbar">
                                      {classStudentsList.length === 0 ? <p className="text-[11px] md:text-xs text-slate-400 italic text-center mt-4">Chưa có học sinh nào.</p> : (
@@ -3353,7 +3606,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                </div>
                             </div>
                          </div>
-                      )}
+                         );
+                      })()}
                    </div>
                 </div>
               )}
@@ -3799,7 +4053,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center shrink-0">
                         <div>
                             <h2 className="font-black uppercase text-[12px] md:text-[15px] tracking-widest text-orange-400">Giao Bài & Đặt Deadline</h2>
-                            <p className="text-[11px] md:text-[12px] text-slate-400 mt-1">Lớp: {selectedClass.name}</p>
+                            <p className="text-[11px] md:text-[12px] text-slate-400 mt-1">Lớp: {parseClassConfig(selectedClass.name).cleanName}</p>
                         </div>
                         <button onClick={() => setShowAssignDeadlineModal(false)} className="text-xl md:text-2xl hover:text-red-400 transition-colors">&times;</button>
                     </div>
@@ -3939,63 +4193,299 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         {/* Modal Class */}
         {showClassModal && ( 
             <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
-                <form onSubmit={handleCreateClass} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl">
-                    <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Thêm Lớp Mới</h2>
-                    <input name="name" required autoFocus placeholder="VD: Lớp IELTS K20" className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" />
-                    <div className="flex gap-3 md:gap-4">
+                <form onSubmit={handleCreateClass} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-5 animate-in zoom-in-95 shadow-2xl">
+                    <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">
+                      {newClassIsTrial ? '🎁 Thêm Lớp Học Thử' : 'Thêm Lớp Mới'}
+                    </h2>
+
+                    <div className="space-y-2">
+                      <label className="block text-[11px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Loại lớp học</label>
+                      <div className="grid grid-cols-2 gap-2.5">
+                        <button
+                          type="button"
+                          onClick={() => setNewClassIsTrial(false)}
+                          className={`p-3 rounded-xl border-2 text-left transition-all ${
+                            !newClassIsTrial
+                              ? 'border-[#0a5482] bg-blue-50/70 text-[#0a5482]'
+                              : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
+                          }`}
+                        >
+                          <div className="font-black text-xs md:text-[13px] flex items-center gap-1.5">
+                            <span>👨‍🏫</span>
+                            <span>Lớp Chính Thức</span>
+                          </div>
+                          <p className="text-[10px] text-slate-500 mt-1 leading-snug">Học viên xem toàn bộ bài giảng trong khóa</p>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => setNewClassIsTrial(true)}
+                          className={`p-3 rounded-xl border-2 text-left transition-all ${
+                            newClassIsTrial
+                              ? 'border-amber-500 bg-amber-50/80 text-amber-900'
+                              : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
+                          }`}
+                        >
+                          <div className="font-black text-xs md:text-[13px] flex items-center gap-1.5">
+                            <span>🎁</span>
+                            <span>Lớp Học Thử</span>
+                          </div>
+                          <p className="text-[10px] text-slate-500 mt-1 leading-snug">Chỉ mở học phần / bài giảng được chọn, còn lại hiện xám & khóa</p>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label className="block text-[11px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Tên lớp</label>
+                      <input
+                        key={newClassIsTrial ? 'trial' : 'regular'}
+                        name="name"
+                        required
+                        autoFocus
+                        defaultValue={newClassIsTrial ? 'Lớp Học Thử' : ''}
+                        placeholder={newClassIsTrial ? 'VD: Lớp Học Thử Online' : 'VD: Lớp IELTS K20'}
+                        className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px] font-bold text-slate-800"
+                      />
+                    </div>
+
+                    <div className="flex gap-3 md:gap-4 pt-1">
                         <button type="button" onClick={() => setShowClassModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-[13px] md:text-base text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition">Hủy</button>
-                        <button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO LỚP</button>
+                        <button type="submit" className={`flex-1 transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base ${newClassIsTrial ? 'bg-amber-500 hover:bg-amber-600' : 'bg-[#0a5482] hover:bg-[#084266]'}`}>
+                          {newClassIsTrial ? 'TẠO LỚP HỌC THỬ' : 'TẠO LỚP'}
+                        </button>
                     </div>
                 </form>
             </div> 
         )}
         
-        {/* Modal Gán Học phần */}
-        {showAssignClassModuleModal && selectedClass && ( 
+        {/* Modal Gán Học phần & Bài giảng Học thử */}
+        {showAssignClassModuleModal && selectedClass && (() => {
+            const selCfg = parseClassConfig(selectedClass.name);
+            return ( 
             <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
-                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg shadow-2xl overflow-hidden animate-in fade-in">
-                    <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
-                        <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Chọn học phần mở cho lớp</h2>
-                        <button onClick={() => setShowAssignClassModuleModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-2xl shadow-2xl overflow-hidden animate-in fade-in flex flex-col max-h-[85vh]">
+                    <div className="bg-[#0f172a] p-4 md:p-5 text-white flex justify-between items-center shrink-0">
+                        <div>
+                          <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest flex items-center gap-2">
+                            <span>{selCfg.isTrial ? '🎁' : '📑'}</span>
+                            <span>{selCfg.isTrial ? `Cấu hình Học phần & Bài giảng Học thử — ${selCfg.cleanName}` : `Chọn học phần mở cho lớp — ${selCfg.cleanName}`}</span>
+                          </h2>
+                          {selCfg.isTrial && (
+                            <p className="text-[11px] text-slate-300 mt-1">
+                              Có thể mở trọn bộ một số học phần, hoặc bấm vào từng học phần để tích chọn lẻ các bài giảng cho phép học thử.
+                            </p>
+                          )}
+                        </div>
+                        <button onClick={() => setShowAssignClassModuleModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors ml-3">&times;</button>
                     </div>
-                    <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
-                        {lectureModules.filter(m => !classModules.includes(m.id)).map(mod => (
-                            <div key={mod.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-emerald-400 transition-colors">
-                                <p className="font-black text-slate-700 text-[13px] md:text-sm truncate pr-2">{mod.title}</p>
-                                <button onClick={() => handleAssignModuleToClass(mod.id)} className="bg-emerald-500 hover:bg-emerald-600 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">MỞ ➜</button>
-                            </div>
-                        ))}
-                        {lectureModules.filter(m => !classModules.includes(m.id)).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm">Đã mở tất cả học phần.</p>}
+
+                    {selCfg.isTrial && (
+                      <div className="px-4 md:px-6 py-2.5 bg-amber-50 border-b border-amber-200 flex flex-wrap items-center justify-between gap-2 shrink-0">
+                        <span className="text-[11px] md:text-xs font-bold text-amber-900">
+                          💡 Những bài giảng không được tích sẽ hiện màu xám & khóa ở cột danh mục của học viên học thử.
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={handleQuickSelectFirstLecturePerModule}
+                            className="text-[11px] font-bold bg-amber-500 hover:bg-amber-600 text-white px-2.5 py-1 rounded-lg shadow-xs transition"
+                          >
+                            ⚡ Mở 1 bài đầu mỗi học phần
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handleClearAllTrialSelections}
+                            className="text-[11px] font-bold bg-white hover:bg-red-50 text-red-600 border border-red-200 px-2.5 py-1 rounded-lg transition"
+                          >
+                            Khóa tất cả
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="p-4 md:p-6 overflow-y-auto space-y-3 custom-scrollbar flex-1">
+                        {lectureModules.length === 0 ? (
+                          <p className="text-center text-slate-400 text-[13px] md:text-sm py-8">Khóa học này chưa có học phần nào.</p>
+                        ) : (
+                          lectureModules.map((mod, idx) => {
+                            const cleanModTitle = parseModuleTheme(mod.title, mod).cleanTitle;
+                            const modLecs = lectures.filter(l => l.module_id === mod.id);
+                            const isWholeModUnlocked = classModules.includes(mod.id) || (selCfg.isTrial && modLecs.length > 0 && modLecs.every(l => selCfg.trialLectureIds.includes(l.id)));
+                            const unlockedCount = classModules.includes(mod.id)
+                              ? modLecs.length
+                              : modLecs.filter(l => selCfg.trialLectureIds.includes(l.id)).length;
+                            const isExpanded = expandedTrialModuleIds.includes(mod.id);
+
+                            return (
+                              <div key={mod.id} className={`border rounded-xl overflow-hidden transition-all ${unlockedCount > 0 ? 'border-emerald-300 bg-emerald-50/20' : 'border-slate-200 bg-slate-50/60'}`}>
+                                <div className="flex flex-wrap sm:flex-nowrap justify-between items-center p-3 md:p-4 gap-2 bg-white">
+                                  <div
+                                    onClick={() => {
+                                      if (selCfg.isTrial) {
+                                        setExpandedTrialModuleIds(prev => prev.includes(mod.id) ? prev.filter(id => id !== mod.id) : [...prev, mod.id]);
+                                      }
+                                    }}
+                                    className={`flex items-center gap-2.5 min-w-0 flex-1 ${selCfg.isTrial ? 'cursor-pointer select-none' : ''}`}
+                                  >
+                                    <span className="text-xs font-black px-2 py-0.5 rounded bg-slate-100 text-slate-600 shrink-0">
+                                      {(idx + 1).toString().padStart(2, '0')}
+                                    </span>
+                                    <div className="min-w-0 flex-1">
+                                      <p className="font-black text-slate-800 text-[13px] md:text-sm truncate">{cleanModTitle}</p>
+                                      <div className="flex items-center gap-2 mt-0.5">
+                                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
+                                          isWholeModUnlocked
+                                            ? 'bg-emerald-100 text-emerald-700'
+                                            : unlockedCount > 0
+                                              ? 'bg-amber-100 text-amber-800'
+                                              : 'bg-slate-100 text-slate-500'
+                                        }`}>
+                                          {isWholeModUnlocked
+                                            ? `✅ Đang mở cả học phần (${modLecs.length} bài)`
+                                            : unlockedCount > 0
+                                              ? `🔓 Đang mở ${unlockedCount}/${modLecs.length} bài giảng`
+                                              : `🔒 Đang khóa (0/${modLecs.length} bài)`}
+                                        </span>
+                                        {selCfg.isTrial && modLecs.length > 0 && (
+                                          <span className="text-[11px] font-bold text-blue-600 hover:underline">
+                                            {isExpanded ? 'Ẩn danh sách bài ▲' : `Chọn lẻ bài giảng (${modLecs.length}) ▼`}
+                                          </span>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="flex items-center gap-2 shrink-0">
+                                    <button
+                                      type="button"
+                                      onClick={() => selCfg.isTrial ? handleToggleWholeModuleForClass(mod.id) : (classModules.includes(mod.id) ? handleUnassignModuleFromClass(mod.id) : handleAssignModuleToClass(mod.id))}
+                                      className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-xs transition whitespace-nowrap ${
+                                        isWholeModUnlocked
+                                          ? 'bg-red-50 hover:bg-red-100 text-red-600 border border-red-200'
+                                          : 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                                      }`}
+                                    >
+                                      {isWholeModUnlocked ? 'Khóa học phần' : 'Mở cả học phần'}
+                                    </button>
+                                  </div>
+                                </div>
+
+                                {selCfg.isTrial && isExpanded && (
+                                  <div className="border-t border-slate-100 bg-slate-50/80 p-3 space-y-1.5">
+                                    {modLecs.length === 0 ? (
+                                      <p className="text-xs text-slate-400 italic px-2 py-1">Học phần này chưa có bài giảng nào.</p>
+                                    ) : (
+                                      modLecs.map((lec, lIdx) => {
+                                        const isLecUnlocked = classModules.includes(mod.id) || selCfg.trialLectureIds.includes(lec.id);
+                                        return (
+                                          <label
+                                            key={lec.id}
+                                            onClick={() => handleToggleTrialLecture(lec.id, mod.id)}
+                                            className={`flex items-center justify-between gap-3 p-2.5 rounded-lg border cursor-pointer transition-all select-none ${
+                                              isLecUnlocked
+                                                ? 'bg-white border-emerald-300 shadow-2xs'
+                                                : 'bg-slate-100/70 border-slate-200/80 text-slate-400 hover:bg-white'
+                                            }`}
+                                          >
+                                            <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                                              <input
+                                                type="checkbox"
+                                                checked={isLecUnlocked}
+                                                onChange={() => {}}
+                                                className="w-4 h-4 accent-emerald-600 rounded cursor-pointer shrink-0"
+                                              />
+                                              <span className={`text-xs md:text-[13px] truncate ${isLecUnlocked ? 'font-bold text-slate-800' : 'font-medium text-slate-400'}`}>
+                                                {lIdx + 1}. {lec.title}
+                                              </span>
+                                            </div>
+                                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded shrink-0 ${
+                                              isLecUnlocked
+                                                ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                                                : 'bg-slate-200/70 text-slate-500'
+                                            }`}>
+                                              {isLecUnlocked ? '🔓 Cho học thử' : '🔒 Khóa (Xám)'}
+                                            </span>
+                                          </label>
+                                        );
+                                      })
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })
+                        )}
+                    </div>
+
+                    <div className="p-3.5 md:p-4 bg-slate-50 border-t border-slate-200 flex justify-end shrink-0">
+                      <button
+                        type="button"
+                        onClick={() => setShowAssignClassModuleModal(false)}
+                        className="bg-[#0a5482] hover:bg-[#084266] text-white font-black text-xs md:text-sm px-6 py-2.5 rounded-xl shadow-sm transition"
+                      >
+                        HOÀN TẤT
+                      </button>
                     </div>
                 </div>
-            </div> 
-        )}
+            </div>
+            );
+        })()}
         
         {/* Modal Gán Học Sinh */}
-        {showAssignStudentModal && selectedClass && ( 
+        {showAssignStudentModal && selectedClass && (() => {
+            const q = assignStudentSearch.trim().toLowerCase();
+            const enrolledIds = new Set(courseStudentsList.map(cs => cs.user_id));
+            const sourceList = q
+              ? allSystemStudents
+              : (courseStudentsList.length > 0 ? courseStudentsList : allSystemStudents);
+            const candidates = sourceList
+              .filter(st => !classStudentsList.some(cls => cls.user_id === st.user_id))
+              .filter(st => !q || (st.full_name || '').toLowerCase().includes(q) || (st.email || '').toLowerCase().includes(q));
+
+            return ( 
             <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
-                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg shadow-2xl overflow-hidden animate-in fade-in">
-                    <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
-                        <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Thêm Học Sinh</h2>
+                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg shadow-2xl overflow-hidden animate-in fade-in flex flex-col max-h-[80vh]">
+                    <div className="bg-[#0f172a] p-4 md:p-5 text-white flex justify-between items-center shrink-0">
+                        <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">
+                          Thêm Học Sinh Vào {parseClassConfig(selectedClass.name).cleanName}
+                        </h2>
                         <button onClick={() => setShowAssignStudentModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
                     </div>
-                    <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
-                        {courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).map(st => (
-                            <div key={st.user_id} className="flex justify-between items-center p-3 md:p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-blue-400 transition-colors">
+                    <div className="p-3 md:p-4 border-b border-slate-100 bg-slate-50 shrink-0">
+                        <input
+                          type="text"
+                          value={assignStudentSearch}
+                          onChange={(e) => setAssignStudentSearch(e.target.value)}
+                          placeholder="🔍 Tìm tên hoặc email học viên trên toàn hệ thống..."
+                          className="w-full border border-slate-200 bg-white rounded-xl px-3.5 py-2 text-xs md:text-sm outline-none focus:border-[#0a5482]"
+                        />
+                    </div>
+                    <div className="p-4 md:p-5 overflow-y-auto space-y-2 md:space-y-2.5 custom-scrollbar flex-1">
+                        {candidates.map(st => {
+                            const isEnrolled = enrolledIds.has(st.user_id);
+                            return (
+                            <div key={st.user_id} className="flex justify-between items-center p-3 md:p-3.5 border border-slate-200 rounded-xl bg-slate-50 hover:border-blue-400 transition-colors">
                                 <div className="min-w-0 pr-2">
-                                    <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{st.full_name || 'Học viên'}</p>
+                                    <div className="flex items-center gap-1.5">
+                                      <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{st.full_name || 'Học viên'}</p>
+                                      {!isEnrolled && (
+                                        <span className="text-[9px] font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded shrink-0">Tự động gán khóa</span>
+                                      )}
+                                    </div>
                                     <p className="text-[10px] md:text-[11px] text-slate-500 truncate">{st.email}</p>
                                 </div>
                                 <button onClick={() => handleAssignStudentToClass(st.user_id)} className="bg-blue-500 hover:bg-blue-600 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">THÊM ➜</button>
                             </div>
-                        ))}
-                        {courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).length === 0 && (
-                            <p className="text-center text-slate-400 text-[13px] md:text-sm">Không còn học sinh nào để thêm.</p>
+                            );
+                        })}
+                        {candidates.length === 0 && (
+                            <p className="text-center text-slate-400 text-[13px] md:text-sm py-6">Không tìm thấy học viên nào phù hợp.</p>
                         )}
                     </div>
                 </div>
-            </div> 
-        )}
+            </div>
+            );
+        })()}
         
         {/* Modal Gán Bài Giảng */}
         {showAssignLectureModal.show && ( 

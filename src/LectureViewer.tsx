@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { supabase } from './supabase';
 import { parseModuleTheme } from './moduleTheme';
+import { parseClassConfig } from './classConfigUtils';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import InteractiveLecturePlayer from './InteractiveLecturePlayer';
 
@@ -2877,6 +2878,8 @@ export default function LectureViewer({
   const [completedLectures, setCompletedLectures] = useState<Set<string>>(new Set());
   const [viewedPages, setViewedPages] = useState<Set<number>>(new Set());
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
+  const [isTrialMode, setIsTrialMode] = useState<boolean>(false);
+  const [trialUnlockedLectureIds, setTrialUnlockedLectureIds] = useState<Set<string>>(new Set());
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
   const [currentLectureAssignments, setCurrentLectureAssignments] = useState<any[]>([]);
@@ -3047,6 +3050,7 @@ export default function LectureViewer({
       const targetLecId = e.detail || sessionStorage.getItem('tony_target_lecture_id');
       if (targetLecId && lectures.length > 0) {
         sessionStorage.removeItem('tony_target_lecture_id');
+        if (isTrialMode && !trialUnlockedLectureIds.has(targetLecId)) return;
         const found = lectures.find(l => l.id === targetLecId);
         if (found) {
           if (found.module_id) {
@@ -3058,7 +3062,7 @@ export default function LectureViewer({
     };
     window.addEventListener('tony-open-target-lecture', handleTargetLectureEvent);
     return () => window.removeEventListener('tony-open-target-lecture', handleTargetLectureEvent);
-  }, [lectures, currentUser]);
+  }, [lectures, currentUser, isTrialMode, trialUnlockedLectureIds]);
 
   useEffect(() => {
       if (!currentUser || !activeLectureId || pages.length === 0) return;
@@ -3274,11 +3278,13 @@ export default function LectureViewer({
       const [
           { data: courseData, error: courseErr },
           { data: modData },
-          { data: lecData }
+          { data: lecData },
+          { data: courseClassesData }
       ] = await Promise.all([
           supabase.from('courses').select('*').eq('id', activeId).single(),
           supabase.from('lecture_modules').select('*').eq('course_id', activeId).order('order_index'),
-          supabase.from('lectures').select('*').eq('course_id', activeId).eq('is_published', true)
+          supabase.from('lectures').select('*').eq('course_id', activeId).eq('is_published', true),
+          supabase.from('classes').select('*').eq('course_id', activeId)
       ]);
 
       if (courseErr || !courseData) {
@@ -3312,6 +3318,44 @@ export default function LectureViewer({
       });
 
       setLectures(validLectures);
+
+      // 🚀 KIỂM TRA LỚP HỌC THỬ (TRIAL CLASS) CỦA HỌC VIÊN TRONG KHÓA HỌC NÀY
+      let trialActive = false;
+      const unlockedSet = new Set<string>();
+      const courseClasses = courseClassesData || [];
+
+      if (user && courseClasses.length > 0) {
+        const [{ data: profileData }, { data: userClassLinks }] = await Promise.all([
+          supabase.from('profiles').select('role').eq('id', user.id).single(),
+          supabase.from('class_students').select('class_id').eq('user_id', user.id)
+        ]);
+        const isUserAdmin = user.email?.toLowerCase().includes('admin') || profileData?.role === 'admin';
+        if (!isUserAdmin && userClassLinks && userClassLinks.length > 0) {
+          const userClassIdSet = new Set(userClassLinks.map((x: any) => x.class_id));
+          const userCourseClasses = courseClasses.filter((c: any) => userClassIdSet.has(c.id));
+          // Nếu học viên thuộc lớp trong khóa này và TẤT CẢ các lớp đó đều là lớp học thử
+          if (userCourseClasses.length > 0 && userCourseClasses.every((c: any) => parseClassConfig(c.name).isTrial)) {
+            trialActive = true;
+            const trialClassIds = userCourseClasses.map((c: any) => c.id);
+            const { data: cmData } = await supabase.from('class_modules').select('module_id').in('class_id', trialClassIds);
+            const unlockedModIds = new Set((cmData || []).map((x: any) => x.module_id));
+            const unlockedDirectLecIds = new Set<string>();
+            userCourseClasses.forEach((c: any) => {
+              const cfg = parseClassConfig(c.name);
+              cfg.trialLectureIds.forEach(lid => unlockedDirectLecIds.add(lid));
+            });
+
+            validLectures.forEach(lec => {
+              if (unlockedModIds.has(lec.module_id) || unlockedDirectLecIds.has(lec.id)) {
+                unlockedSet.add(lec.id);
+              }
+            });
+          }
+        }
+      }
+
+      setIsTrialMode(trialActive);
+      setTrialUnlockedLectureIds(unlockedSet);
 
       if (user && validLectures.length > 0) {
          const lectureIds = validLectures.map(l => l.id);
@@ -3368,19 +3412,29 @@ export default function LectureViewer({
          setCompletedLectures(compSet);
       }
 
-      if (validLectures && validLectures.length > 0) {
+      const selectableLectures = trialActive
+        ? validLectures.filter(l => unlockedSet.has(l.id))
+        : validLectures;
+
+      if (selectableLectures && selectableLectures.length > 0) {
          const targetLecId = sessionStorage.getItem('tony_target_lecture_id');
          if (targetLecId) {
            sessionStorage.removeItem('tony_target_lecture_id');
          }
          const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${activeId}`);
-         const targetLecture = (targetLecId && validLectures.find(l => l.id === targetLecId)) || validLectures.find(l => l.id === savedLectureId) || validLectures[0];
-         if (targetLecture.module_id) {
+         const targetLecture = (targetLecId && selectableLectures.find(l => l.id === targetLecId)) || selectableLectures.find(l => l.id === savedLectureId) || selectableLectures[0];
+         if (trialActive) {
+             setExpandedModules(safeModData.map(m => m.id));
+         } else if (targetLecture.module_id) {
              setExpandedModules([targetLecture.module_id]);
          }
-         handleSelectLecture(targetLecture.id, user?.id);
+         handleSelectLecture(targetLecture.id, user?.id, true);
       } else {
-         if (safeModData.length > 0) {
+         if (trialActive) {
+             setExpandedModules(safeModData.map(m => m.id));
+             setActiveLectureId(null);
+             setPages([]);
+         } else if (safeModData.length > 0) {
              setExpandedModules([safeModData[0].id]);
          }
       }
@@ -3391,7 +3445,10 @@ export default function LectureViewer({
     }
   };
 
-  const handleSelectLecture = async (lectureId: string, userIdOverride?: string) => {
+  const handleSelectLecture = async (lectureId: string, userIdOverride?: string, bypassTrialCheck?: boolean) => {
+    if (isTrialMode && !bypassTrialCheck && !trialUnlockedLectureIds.has(lectureId)) {
+      return;
+    }
     const targetUserId = userIdOverride || currentUser?.id;
     // Read saved page BEFORE any state changes (persist effect would overwrite it)
     const savedPageStr = localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`);
@@ -3827,10 +3884,13 @@ export default function LectureViewer({
         setCurrentPage(nextP);
         persistPage(nextP);
     } else {
-      const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
+      const navLectures = isTrialMode
+        ? lectures.filter(l => trialUnlockedLectureIds.has(l.id))
+        : lectures;
+      const currentIndex = navLectures.findIndex(l => l.id === activeLectureId);
 
-      if (currentIndex !== -1 && currentIndex < lectures.length - 1) {
-         const nextLecture = lectures[currentIndex + 1];
+      if (currentIndex !== -1 && currentIndex < navLectures.length - 1) {
+         const nextLecture = navLectures[currentIndex + 1];
 
          if (nextLecture.module_id && !expandedModules.includes(nextLecture.module_id)) {
              setExpandedModules(prev => [...prev, nextLecture.module_id]);
@@ -3847,10 +3907,13 @@ export default function LectureViewer({
         setCurrentPage(prevP);
         persistPage(prevP);
     } else {
-       const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
+       const navLectures = isTrialMode
+         ? lectures.filter(l => trialUnlockedLectureIds.has(l.id))
+         : lectures;
+       const currentIndex = navLectures.findIndex(l => l.id === activeLectureId);
 
        if (currentIndex > 0) {
-          const prevLecture = lectures[currentIndex - 1];
+          const prevLecture = navLectures[currentIndex - 1];
 
           if (prevLecture.module_id && !expandedModules.includes(prevLecture.module_id)) {
               setExpandedModules(prev => [...prev, prevLecture.module_id]);
@@ -4590,7 +4653,14 @@ export default function LectureViewer({
            
            <div className="p-5 border-b border-slate-100 shrink-0 bg-slate-50/50">
               <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-slate-800 text-[16px]">Nội dung khóa học</h3>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-bold text-slate-800 text-[16px]">Nội dung khóa học</h3>
+                    {isTrialMode && (
+                      <span className="bg-amber-100 text-amber-700 border border-amber-200 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
+                        🎁 Học thử
+                      </span>
+                    )}
+                  </div>
                   <button 
                       onClick={() => setIsSidebarOpen(false)} 
                       className="md:hidden w-8 h-8 rounded-full bg-slate-200/60 hover:bg-slate-200 flex items-center justify-center font-bold text-slate-500 hover:text-slate-700 text-sm transition-colors"
@@ -4601,8 +4671,10 @@ export default function LectureViewer({
               </div>
               <div className="flex flex-col gap-1.5">
                   <div className="flex justify-between text-[12px] font-medium text-slate-500">
-                      <span>Tiến độ</span>
-                      <span className="text-[#0ea5e9]">{completedLectures.size} / {lectures.length} bài</span>
+                      <span>{isTrialMode ? 'Bài học thử được mở' : 'Tiến độ'}</span>
+                      <span className="text-[#0ea5e9]">
+                        {isTrialMode ? `${trialUnlockedLectureIds.size} / ${lectures.length} bài` : `${completedLectures.size} / ${lectures.length} bài`}
+                      </span>
                   </div>
                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
                       <div className="h-full bg-[#0ea5e9] rounded-full transition-all duration-500" style={{ width: `${courseProgress}%` }}></div>
@@ -4619,6 +4691,7 @@ export default function LectureViewer({
                   const moduleLectures = lectures.filter(l => l.module_id === mod.id);
                   const isExpanded = expandedModules.includes(mod.id);
                   const theme = parseModuleTheme(mod.title, mod);
+                  const isModuleAllLocked = isTrialMode && moduleLectures.length > 0 && moduleLectures.every(l => !trialUnlockedLectureIds.has(l.id));
                   
                   return (
                     <div key={mod.id} id={`module-container-${mod.id}`} className="border-b border-slate-100 last:border-0">
@@ -4635,40 +4708,42 @@ export default function LectureViewer({
                                   }, 310);
                               }
                           }} 
-                          style={theme.hasColor ? {
+                          style={!isModuleAllLocked && theme.hasColor ? {
                               backgroundColor: theme.bg,
                               borderColor: theme.border,
                           } : {}}
                           className={`w-full text-left px-5 py-3.5 transition-all flex justify-between items-center ${
-                              theme.hasColor 
-                                ? 'hover:brightness-95' 
-                                : isExpanded ? 'bg-slate-50/70' : 'hover:bg-slate-50'
+                              isModuleAllLocked
+                                ? 'bg-slate-50/80 text-slate-400 hover:bg-slate-100/70'
+                                : theme.hasColor 
+                                  ? 'hover:brightness-95' 
+                                  : isExpanded ? 'bg-slate-50/70' : 'hover:bg-slate-50'
                           }`}
                       >
                         <div className="flex items-center gap-3 min-w-0 pr-2">
                             <span 
                                 className="font-bold text-xs px-2 py-0.5 rounded-md shrink-0 shadow-sm"
-                                style={theme.hasColor ? { 
+                                style={!isModuleAllLocked && theme.hasColor ? { 
                                     backgroundColor: 'rgba(255,255,255,0.7)', 
                                     color: theme.text,
                                     border: `1px solid ${theme.border}`
                                 } : { 
                                     backgroundColor: '#f1f5f9',
-                                    color: '#64748b' 
+                                    color: '#94a3b8' 
                                 }}
                             >
                                 {(index+1).toString().padStart(2, '0')}
                             </span>
                             <h4 
                                 className="text-[13.5px] md:text-[14px] font-bold leading-snug truncate"
-                                style={theme.hasColor ? { color: theme.text } : { color: '#1e293b' }}
+                                style={isModuleAllLocked ? { color: '#94a3b8' } : theme.hasColor ? { color: theme.text } : { color: '#1e293b' }}
                             >
                                 {theme.cleanTitle}
                             </h4>
                         </div>
                         <span 
                             className={`text-[10px] transition-transform duration-200 shrink-0 ml-2 ${isExpanded ? 'rotate-180' : ''}`}
-                            style={theme.hasColor ? { color: theme.text, opacity: 0.8 } : { color: '#94a3b8' }}
+                            style={!isModuleAllLocked && theme.hasColor ? { color: theme.text, opacity: 0.8 } : { color: '#94a3b8' }}
                         >
                             ▼
                         </span>
@@ -4677,13 +4752,14 @@ export default function LectureViewer({
                       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                         <div 
                             className="py-2 bg-white flex flex-col gap-0.5 px-2"
-                            style={theme.hasColor ? { borderLeft: `3px solid ${theme.border}`, marginLeft: '8px', marginRight: '4px' } : {}}
+                            style={!isModuleAllLocked && theme.hasColor ? { borderLeft: `3px solid ${theme.border}`, marginLeft: '8px', marginRight: '4px' } : {}}
                         >
                           {moduleLectures.map((lec) => {
-                             const isActive = activeLectureId === lec.id;
+                             const isLocked = isTrialMode && !trialUnlockedLectureIds.has(lec.id);
+                             const isActive = !isLocked && activeLectureId === lec.id;
                              const totalTasks = Array.isArray(lec.task_list) ? lec.task_list.length : 0;
                              const completedCount = allLectureProgress[lec.id]?.length || 0;
-                             const isLecCompleted = completedLectures.has(lec.id);
+                             const isLecCompleted = !isLocked && completedLectures.has(lec.id);
                              const lecTitleLower = (lec.title || '').toLowerCase();
                              const isReflexAi = lecTitleLower.includes('thực chiến') || (lecTitleLower.includes('luyện') && lecTitleLower.includes('ai'));
                              const hasPodcast = lecTitleLower.includes('podcast') || !!LECTURE_PODCAST_COUNT[lec.id] || !!DIALOGUE_PODCAST_LECTURES[lec.id] || isReflexAi;
@@ -4691,19 +4767,27 @@ export default function LectureViewer({
                              return (
                                <button 
                                    key={lec.id} 
-                                   onClick={() => handleSelectLecture(lec.id)} 
+                                   disabled={isLocked}
+                                   onClick={() => { if (!isLocked) handleSelectLecture(lec.id); }} 
+                                   title={isLocked ? 'Bài giảng này chỉ dành cho học viên chính thức' : lec.title}
                                    className={`w-full text-left px-3 py-2.5 rounded-lg text-[13px] transition-all flex items-start gap-3 relative group ${
-                                     isActive 
-                                       ? (isReflexAi 
-                                           ? 'bg-gradient-to-r from-indigo-500/15 via-[#0ea5e9]/10 to-purple-500/10 text-indigo-900 border border-indigo-300 shadow-xs' 
-                                           : 'bg-[#0ea5e9]/10 text-[#0ea5e9]')
-                                       : isReflexAi 
-                                         ? 'text-indigo-950 bg-gradient-to-r from-indigo-50/60 to-violet-50/40 hover:from-indigo-100/70 hover:to-violet-100/60 border border-indigo-200/70' 
-                                         : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                     isLocked
+                                       ? 'bg-slate-100/80 text-slate-400 cursor-not-allowed opacity-65 select-none'
+                                       : isActive 
+                                         ? (isReflexAi 
+                                             ? 'bg-gradient-to-r from-indigo-500/15 via-[#0ea5e9]/10 to-purple-500/10 text-indigo-900 border border-indigo-300 shadow-xs' 
+                                             : 'bg-[#0ea5e9]/10 text-[#0ea5e9]')
+                                         : isReflexAi 
+                                           ? 'text-indigo-950 bg-gradient-to-r from-indigo-50/60 to-violet-50/40 hover:from-indigo-100/70 hover:to-violet-100/60 border border-indigo-200/70' 
+                                           : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                                    }`}
                                >
                                  <div className="mt-0.5 shrink-0">
-                                     {isLecCompleted ? (
+                                     {isLocked ? (
+                                        <div className="w-5 h-5 rounded-full bg-slate-200 text-slate-400 flex items-center justify-center shrink-0 text-[10px]">
+                                            🔒
+                                        </div>
+                                     ) : isLecCompleted ? (
                                         <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
                                         </div>
@@ -4724,13 +4808,15 @@ export default function LectureViewer({
                                      )}
                                  </div>
                                  <div className="flex-1 min-w-0 flex flex-col gap-1">
-                                    <span className={`leading-snug ${isActive ? 'font-semibold' : isReflexAi ? 'font-semibold text-indigo-950' : 'font-medium'}`}>
+                                    <span className={`leading-snug ${isLocked ? 'font-medium text-slate-400' : isActive ? 'font-semibold' : isReflexAi ? 'font-semibold text-indigo-950' : 'font-medium'}`}>
                                         {lec.title}
                                     </span>
                                     <div className="flex items-center gap-1.5 flex-wrap">
                                       {(LECTURE_VIDEO_MAP[lec.id] || (lec as any).video_url) && (
                                         <span 
-                                          className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-red-50 text-red-600 border border-red-100 flex items-center gap-1 shrink-0" 
+                                          className={`text-[10px] px-1.5 py-0.5 rounded font-medium flex items-center gap-1 shrink-0 ${
+                                            isLocked ? 'bg-slate-200/70 text-slate-400 border border-slate-200' : 'bg-red-50 text-red-600 border border-red-100'
+                                          }`}
                                           title="Có video bài giảng"
                                         >
                                           <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -4739,7 +4825,9 @@ export default function LectureViewer({
                                       )}
                                       {hasPodcast && (
                                         <span 
-                                          className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1 shrink-0 shadow-xs" 
+                                          className={`text-[10px] px-1.5 py-0.5 rounded font-medium flex items-center gap-1 shrink-0 ${
+                                            isLocked ? 'bg-slate-200/70 text-slate-400 border border-slate-200' : 'bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-xs'
+                                          }`}
                                           title="Bài giảng Audio Podcast"
                                         >
                                           <svg className="w-2.5 h-2.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
@@ -4748,7 +4836,9 @@ export default function LectureViewer({
                                       )}
                                       {isReflexAi && (
                                         <span 
-                                          className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center gap-1 shrink-0 shadow-xs" 
+                                          className={`text-[10px] px-1.5 py-0.5 rounded font-medium flex items-center gap-1 shrink-0 ${
+                                            isLocked ? 'bg-slate-200/70 text-slate-400 border border-slate-200' : 'bg-indigo-50 text-indigo-700 border border-indigo-200 shadow-xs'
+                                          }`}
                                           title="Luyện phản xạ thực chiến cùng Trợ lý AI"
                                         >
                                           <span className="text-[11px] leading-none">🤖</span>
@@ -4757,9 +4847,21 @@ export default function LectureViewer({
                                       )}
                                       {totalTasks > 0 && (
                                          <span 
-                                           onClick={(e) => { e.stopPropagation(); if (isActive) { setIsTaskMenuOpen(!isTaskMenuOpen); } else { handleSelectLecture(lec.id); setTimeout(() => setIsTaskMenuOpen(true), 300); } }}
-                                           className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-medium cursor-pointer transition-all ${isLecCompleted ? 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100' : isActive ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] hover:bg-[#0ea5e9]/20' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
-                                           title="Bấm để xem nhiệm vụ bài học"
+                                           onClick={(e) => {
+                                             e.stopPropagation();
+                                             if (isLocked) return;
+                                             if (isActive) { setIsTaskMenuOpen(!isTaskMenuOpen); } else { handleSelectLecture(lec.id); setTimeout(() => setIsTaskMenuOpen(true), 300); }
+                                           }}
+                                           className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-medium transition-all ${
+                                             isLocked
+                                               ? 'bg-slate-200/70 text-slate-400 cursor-not-allowed'
+                                               : isLecCompleted
+                                                 ? 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100 cursor-pointer'
+                                                 : isActive
+                                                   ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] hover:bg-[#0ea5e9]/20 cursor-pointer'
+                                                   : 'bg-slate-100 text-slate-500 hover:bg-slate-200 cursor-pointer'
+                                           }`}
+                                           title={isLocked ? 'Bài giảng bị khóa trong chế độ học thử' : 'Bấm để xem nhiệm vụ bài học'}
                                          >
                                              🎯 {completedCount}/{totalTasks} bài tập
                                          </span>
