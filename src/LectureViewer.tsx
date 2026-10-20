@@ -490,6 +490,8 @@ const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   // Giao tiếp và phản xạ - Module 13: Chiến thuật giao tiếp (Course ID: 2389dc0a-53d5-4c75-a495-da7e05815dee)
   // ==========================================
   '3416832d-f0aa-4d94-809e-fefb206f91f5': '0ONapBj0sB8', // 01. Chiến Thuật Chào hỏi cơ bản
+  '490ecff4-9cac-464f-a59a-61de2e6ade8e': 'ZQB-iAWTIaM', // 02. Bắt chuyện tán ngẫu
+  '70bf2eda-d593-4421-9841-8101f4236c3e': 'rURJS5bWnbQ', // 03. Khí hậu & Thời tiết
   'f0163e91-8e30-40c4-b7cb-b7b248b5eb98': 'bcwNfuSNack', // 04. Buồn chán
   'd6bad7d1-ff68-4da0-9dde-9b04a036039e': 'ObK5XHtDQx4', // 05. Hỏi thăm về ngày hôm nay của bạn
   '7cd3298f-1f6a-4d27-b493-b9d1657dd92f': 'E2QTAbysJfw', // 06. Nói về Kế hoạch tương lai
