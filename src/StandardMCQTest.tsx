@@ -269,6 +269,7 @@ export default function StandardMCQTest({
   const initIsReview = !!safeData?.isReview;
   const [testStarted, setTestStarted] = useState(initIsReview);
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   
   useEffect(() => {
@@ -854,13 +855,13 @@ const handleFinish = async () => {
       if (!selection || selection.rangeCount === 0) return;
       const text = selection.toString().trim();
       if (!text) return;
-      if (text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
+      if (isReviewMode && text.length > 0 && text.length < 40 && text.split(/\s+/).length >= 2 && text.split(/\s+/).length <= 4) {
         const range = selection.getRangeAt(0);
         const rect = range.getBoundingClientRect();
         triggerDictionary(text, rect.left + (rect.width / 2), rect.bottom, rect.top);
       }
     }, 100);
-  }, [triggerDictionary]);
+  }, [triggerDictionary, isReviewMode]);
 
   // Close dictionary popup when clicking outside
   useEffect(() => {

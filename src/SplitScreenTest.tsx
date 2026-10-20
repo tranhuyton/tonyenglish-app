@@ -14,6 +14,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   // 🚀 NHẬN TÍN HIỆU TỪ STUDENT PORTAL XEM CÓ PHẢI LÀ CHẾ ĐỘ XEM LẠI LỊCH SỬ KHÔNG
   const initIsReview = !!testData?.isReview;
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
   const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
 
   // KHÔI PHỤC BẢN NHÁP HOẶC ĐÁP ÁN LỊCH SỬ

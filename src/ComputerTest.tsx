@@ -179,6 +179,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const initIsReview = !!safeTestData?.isReview;
   const [testStarted, setTestStarted] = useState(initIsReview);
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
   const [scoreResult, setScoreResult] = useState({ 
       score: parseInt(safeTestData?.past_score || 0), 
       total: parseInt(safeTestData?.past_total || 0), 

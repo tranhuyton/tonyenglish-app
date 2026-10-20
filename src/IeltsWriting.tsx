@@ -65,6 +65,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
   const [reviewFlags, setReviewFlags] = useState<Record<number, boolean>>({});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isSubmitted) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isSubmitted]);
   const [isGrading, setIsGrading] = useState(false);
   const [aiResult, setAiResult] = useState<any>(null);
 

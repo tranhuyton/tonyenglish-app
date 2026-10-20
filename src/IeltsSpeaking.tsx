@@ -186,6 +186,7 @@ export default function IeltsSpeaking({
   
   const [isGrading, setIsGrading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isSubmitted) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isSubmitted]);
   const [aiResult, setAiResult] = useState<any>(null);
 
   // 5. Điều khiển thời gian đếm ngược tổng

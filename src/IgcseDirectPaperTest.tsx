@@ -298,6 +298,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   const [isLoading, setIsLoading] = useState(!testData);
   const initIsReview = !!testData?.isReview;
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [gradeResult, setGradeResult] = useState<any>(() => {

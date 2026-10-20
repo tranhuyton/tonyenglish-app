@@ -3,6 +3,7 @@ import { supabase } from './supabase';
 import Home from './Home';
 import StudentPortal from './StudentPortal';
 import ResetPasswordModal from './ResetPasswordModal';
+import DictionaryWidget from './DictionaryWidget';
 import { lazyWithRetry, AppErrorBoundary } from './chunkReload';
 
 // 🚀 CODE SPLITTING: Lazy load các component nặng có cơ chế tự động phục hồi khi có bản cập nhật mới
@@ -446,6 +447,12 @@ export default function App() {
           )}
         </Suspense>
       </AppErrorBoundary>
+
+      {/* 📖 TỪ ĐIỂN CLICK ĐÚP & TỪ ĐIỂN RIÊNG BIỆT (CHỈ BẬT TRONG BÀI GIẢNG & CHẾ ĐỘ CHỮA BÀI) */}
+      <DictionaryWidget
+        currentView={currentView}
+        initialIsReview={Boolean(currentTestData?.isReview)}
+      />
 
       {/* 🔐 MODAL ĐẶT LẠI MẬT KHẨU MỚI KHI CLICK LINK EMAIL */}
       <ResetPasswordModal 

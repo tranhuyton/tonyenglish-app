@@ -4020,7 +4020,7 @@ export default function LectureViewer({
         const text = selection.toString().trim();
         if (!text) return;
         
-        if (text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
+        if (text.length > 0 && text.length < 40 && text.split(/\s+/).length >= 2 && text.split(/\s+/).length <= 4) {
            const range = selection.getRangeAt(0);
            const rect = range.getBoundingClientRect();
            triggerDictionary(text, rect.left + (rect.width/2), rect.bottom, rect.top);
