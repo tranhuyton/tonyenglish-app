@@ -2738,7 +2738,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
          }, true);
          
          var selectionTimer = null;
-         document.addEventListener('mouseup', function(e) {
+         document.addEventListener('dblclick', function(e) {
            clearTimeout(selectionTimer);
            
            selectionTimer = setTimeout(function() {
@@ -3954,7 +3954,7 @@ export default function LectureViewer({
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
     const cleanWord = word.trim();
     if (!cleanWord) return;
-    setDictPopup({ show: true, word: cleanWord, x, y, rectTop, data: null, isLoading: true });
+    setDictPopup(null); window.dispatchEvent(new CustomEvent('tony-open-quick-dictionary', { detail: { word: cleanWord, x, y, rectTop } })); return;
     
     Promise.allSettled([
         fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord.toLowerCase())}`)
@@ -4374,7 +4374,7 @@ export default function LectureViewer({
          {/* 📖 THANH TRA TỪ ĐIỂN - CHÍNH GIỮA */}
          <div className="hidden md:flex flex-1 justify-center mx-4 max-w-md relative" ref={dictRef}>
            <div className="relative w-full max-w-[340px]">
-             <div className="flex items-center bg-white/15 hover:bg-white/25 focus-within:bg-white/30 rounded-full border border-white/20 transition-all px-3 h-9">
+             <div onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="flex items-center bg-white/15 hover:bg-white/25 focus-within:bg-white/30 rounded-full border border-white/20 transition-all px-3 h-9 cursor-pointer" title="Mở Từ điển Anh-Việt / Việt-Anh">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-white/70 shrink-0">
                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                </svg>
@@ -4382,10 +4382,10 @@ export default function LectureViewer({
                  type="text"
                  value={dictQuery}
                  onChange={(e) => handleDictInput(e.target.value)}
-                 onFocus={() => { if (dictResults) setIsDictOpen(true); }}
+                 readOnly onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} onFocus={(e) => { e.target.blur(); window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary')); }}
                  onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); lookupDictionary(dictQuery); } }}
                  placeholder="Tra từ điển EN ↔ VI..."
-                 className="flex-1 bg-transparent text-white placeholder-white/50 text-[13px] font-medium px-2 py-1 outline-none border-none min-w-0"
+                 className="flex-1 bg-transparent text-white placeholder-white/70 text-[13px] font-medium px-2 py-1 outline-none border-none min-w-0 cursor-pointer"
                />
                {isDictLoading && (
                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin shrink-0"></div>
@@ -4398,7 +4398,7 @@ export default function LectureViewer({
              </div>
 
              {/* DROPDOWN KẾT QUẢ */}
-             {isDictOpen && dictResults && (
+             {false && isDictOpen && dictResults && (
                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[380px] max-h-[420px] overflow-y-auto bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-slate-100 z-[100] animate-in slide-in-from-top-2 duration-200 custom-scrollbar">
                  
                  {dictResults.type === 'error' && (
@@ -5180,7 +5180,7 @@ export default function LectureViewer({
                            isIframeOnly={isIframeOnly}
                            onOpenPopup={setPopupUrl} 
                            onOpenDict={triggerDictionary} 
-                           onCloseDict={() => setDictPopup(null)} 
+                           onCloseDict={() => { setDictPopup(null); window.dispatchEvent(new CustomEvent('tony-close-quick-dictionary')); }} 
                            onSwitchPage={(page: number) => { setCurrentPage(page); persistPage(page); }}
                        />
                     </div>

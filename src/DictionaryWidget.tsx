@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const TEST_VIEWS = [
   'computer',
@@ -20,7 +20,7 @@ interface DictionaryWidgetProps {
 
 export default function DictionaryWidget({ currentView, initialIsReview = false }: DictionaryWidgetProps) {
   const [isReviewMode, setIsReviewMode] = useState<boolean>(initialIsReview);
-  const [quickDict, setQuickDict] = useState<{ word: string; x: number; y: number; above: boolean } | null>(null);
+  const [quickDict, setQuickDict] = useState<{ word: string; x: number; y: number } | null>(null);
   const [standaloneOpen, setStandaloneOpen] = useState<boolean>(false);
   const popupRef = useRef<HTMLDivElement>(null);
 
@@ -33,7 +33,39 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
     }
   }, [currentView, initialIsReview]);
 
-  // Lắng nghe sự kiện chuyển sang chế độ Chữa bài (Review Mode) từ các component làm bài
+  // Chỉ bật tính năng Từ điển khi đang ở:
+  // 1. Bài giảng (currentView === 'lecture')
+  // 2. Phần chữa bài của các bài test/thi (TEST_VIEWS.includes(currentView) && isReviewMode === true)
+  const isEnabled = currentView === 'lecture' || (TEST_VIEWS.includes(currentView) && isReviewMode);
+
+  const openQuickLookupAt = useCallback((rawWord: string, clientX: number, clientY: number, rectTop?: number) => {
+    const cleanWord = rawWord
+      .replace(/^[^a-zA-Z0-9À-ỹ'-]+|[^a-zA-Z0-9À-ỹ'-]+$/g, '')
+      .trim()
+      .toLowerCase();
+
+    if (cleanWord.length > 1 && cleanWord.length <= 45 && cleanWord.split(/\s+/).length <= 3) {
+      const popupWidth = 340;
+      const popupHeight = 265;
+      const margin = 12;
+
+      let x = clientX - popupWidth / 2;
+      if (x < margin) x = margin;
+      if (x + popupWidth > window.innerWidth - margin) {
+        x = Math.max(margin, window.innerWidth - popupWidth - margin);
+      }
+
+      let y = clientY + 12;
+      if (y + popupHeight > window.innerHeight - margin) {
+        const topAnchor = typeof rectTop === 'number' ? rectTop : clientY;
+        y = Math.max(margin, topAnchor - popupHeight - 12);
+      }
+
+      setQuickDict({ word: cleanWord, x: Math.round(x), y: Math.round(y) });
+    }
+  }, []);
+
+  // Lắng nghe sự kiện chuyển sang chế độ Chữa bài (Review Mode), mở từ điển lớn, hoặc mở tra nhanh từ iframe bài giảng
   useEffect(() => {
     const handleReviewChange = (e: Event) => {
       const customEvent = e as CustomEvent<boolean>;
@@ -42,19 +74,32 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
     const handleOpenStandalone = () => {
       setStandaloneOpen(true);
     };
+    const handleOpenQuick = (e: Event) => {
+      const customEvent = e as CustomEvent<{ word: string; x: number; y: number; rectTop?: number }>;
+      if (customEvent.detail?.word) {
+        openQuickLookupAt(
+          customEvent.detail.word,
+          customEvent.detail.x,
+          customEvent.detail.y,
+          customEvent.detail.rectTop
+        );
+      }
+    };
+    const handleCloseQuick = () => {
+      setQuickDict(null);
+    };
 
     window.addEventListener('tony-review-mode-change', handleReviewChange);
     window.addEventListener('tony-open-standalone-dictionary', handleOpenStandalone);
+    window.addEventListener('tony-open-quick-dictionary', handleOpenQuick);
+    window.addEventListener('tony-close-quick-dictionary', handleCloseQuick);
     return () => {
       window.removeEventListener('tony-review-mode-change', handleReviewChange);
       window.removeEventListener('tony-open-standalone-dictionary', handleOpenStandalone);
+      window.removeEventListener('tony-open-quick-dictionary', handleOpenQuick);
+      window.removeEventListener('tony-close-quick-dictionary', handleCloseQuick);
     };
-  }, []);
-
-  // Chỉ bật tính năng Từ điển khi đang ở:
-  // 1. Bài giảng (currentView === 'lecture')
-  // 2. Phần chữa bài của các bài test/thi (TEST_VIEWS.includes(currentView) && isReviewMode === true)
-  const isEnabled = currentView === 'lecture' || (TEST_VIEWS.includes(currentView) && isReviewMode);
+  }, [openQuickLookupAt]);
 
   // Tự động đóng mọi popup nếu chuyển sang trạng thái làm bài thi hoặc trang không hỗ trợ
   useEffect(() => {
@@ -84,40 +129,27 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
       const selection = window.getSelection();
       if (!selection) return;
       const rawText = selection.toString().trim();
-      const cleanWord = rawText.replace(/^[^a-zA-Z0-9À-ỹ'-]+|[^a-zA-Z0-9À-ỹ'-]+$/g, '').trim().toLowerCase();
+      if (!rawText) return;
 
-      if (cleanWord.length > 1 && cleanWord.length <= 45 && cleanWord.split(/\s+/).length <= 3) {
-        const popupWidth = 340;
-        const popupHeight = 265;
-        const margin = 12;
-
-        let x = e.clientX + 12;
-        if (x + popupWidth > window.innerWidth - margin) {
-          x = Math.max(margin, window.innerWidth - popupWidth - margin);
+      let rectBottom = e.clientY;
+      let rectTop = e.clientY;
+      let centerX = e.clientX;
+      if (selection.rangeCount > 0) {
+        const rect = selection.getRangeAt(0).getBoundingClientRect();
+        if (rect.width > 0 || rect.height > 0) {
+          centerX = rect.left + rect.width / 2;
+          rectBottom = rect.bottom;
+          rectTop = rect.top;
         }
-
-        let above = false;
-        let y = e.clientY + 16;
-        if (y + popupHeight > window.innerHeight - margin) {
-          y = Math.max(margin, e.clientY - popupHeight - 12);
-          above = true;
-        }
-
-        setQuickDict({ word: cleanWord, x, y, above });
       }
+      openQuickLookupAt(rawText, centerX, rectBottom, rectTop);
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
         const rawText = window.getSelection()?.toString().trim() || '';
-        const cleanWord = rawText.replace(/^[^a-zA-Z0-9À-ỹ'-]+|[^a-zA-Z0-9À-ỹ'-]+$/g, '').trim().toLowerCase();
-        if (cleanWord.length > 1 && cleanWord.length <= 45) {
-          setQuickDict({
-            word: cleanWord,
-            x: Math.max(12, Math.round(window.innerWidth / 2 - 170)),
-            y: Math.max(12, Math.round(window.innerHeight / 2 - 135)),
-            above: false,
-          });
+        if (rawText) {
+          openQuickLookupAt(rawText, window.innerWidth / 2, window.innerHeight / 2 - 40, window.innerHeight / 2 - 40);
         }
       } else if (e.key === 'Escape') {
         setQuickDict(null);
@@ -139,23 +171,12 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
-  }, [isEnabled]);
+  }, [isEnabled, openQuickLookupAt]);
 
   if (!isEnabled) return null;
 
   return (
     <>
-      {/* NÚT NỔI MỞ TỪ ĐIỂN RIÊNG BIỆT (CHỈ HIỆN TRONG BÀI GIẢNG & CHẾ ĐỘ CHỮA BÀI) */}
-      <button
-        type="button"
-        onClick={() => setStandaloneOpen(true)}
-        title="Mở Từ điển Anh-Việt / Việt-Anh (Mẹo: Click đúp vào từ bất kỳ để tra nhanh)"
-        className="fixed bottom-4 left-4 z-[9990] flex items-center gap-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-[#0284c7] to-[#0ea5e9] hover:from-[#0369a1] hover:to-[#0284c7] text-white font-bold text-xs sm:text-[13px] shadow-[0_8px_25px_rgba(14,165,233,0.35)] border border-white/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
-      >
-        <span className="text-base leading-none">📖</span>
-        <span>Từ điển</span>
-      </button>
-
       {/* POPUP TRA NHANH KHI CLICK ĐÚP CHUỘT (LẤY TỪ DIC.TIENGANH123.COM) */}
       {quickDict && (
         <div

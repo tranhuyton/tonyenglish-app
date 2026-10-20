@@ -791,7 +791,7 @@ const handleFinish = async () => {
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
     const cleanWord = word.trim();
     if (!cleanWord) return;
-    setDictPopup({ show: true, word: cleanWord, x, y, rectTop, data: null, isLoading: true });
+    setDictPopup(null); window.dispatchEvent(new CustomEvent('tony-open-quick-dictionary', { detail: { word: cleanWord, x, y, rectTop } })); return;
     
     Promise.allSettled([
         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord.toLowerCase())}`)
@@ -1202,7 +1202,12 @@ const handleFinish = async () => {
             </span>
           </div>
 
-          {/* Nút Gọi Gia Sư AI đã bị gỡ theo yêu cầu */}
+          {isReviewMode && (
+            <div onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="hidden md:flex items-center bg-white/15 hover:bg-white/25 rounded-full border border-white/20 transition-all px-3.5 h-9 w-[280px] cursor-pointer text-white/90 text-[13px] font-medium gap-2" title="Mở Từ điển Anh-Việt / Việt-Anh">
+              <span>🔍</span>
+              <span>Tra từ điển EN ↔ VI...</span>
+            </div>
+          )}
 
           <div className="flex items-center gap-3 md:gap-6 shrink-0">
             {/* LABEL AND TIMER (TOP RIGHT) */}

@@ -1244,6 +1244,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                      <button onClick={toggleFullscreen} className="hover:text-white text-slate-300 transition" title="Toàn màn hình">
                         {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
                      </button>
+                     <button onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="text-[12px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white cursor-pointer">📖 Từ điển</button>
                      <button onClick={resetTest} className="text-[12px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">
                          Retake Test
                      </button>
