@@ -1,5 +1,26 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "lms.tonyenglish.vn"
+        }
+      ],
+      "destination": "https://tonyenglish.vn/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/uploads/flash/:path*",
+      "destination": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/tonyenglish_uploads/flash/:path*"
+    },
+    {
+      "source": "/uploads/:path*.mp3",
+      "destination": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/tonyenglish_uploads/:path*.mp3"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
