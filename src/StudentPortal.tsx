@@ -1504,6 +1504,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </div>
           </div>
 
+          <button
+            type="button"
+            onClick={() => {
+              resetWorkspaceAndChat();
+              onNavigate?.('home');
+            }}
+            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-sky-50 text-slate-600 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs font-bold transition-all cursor-pointer shrink-0"
+            title="Quay ra Cổng thông tin, Thư viện bài đọc & Kho Video TonyEnglish.vn"
+          >
+            <span>🌐</span>
+            <span>Trang chủ &amp; Thư viện</span>
+          </button>
+
 
 
           <div className="flex items-center gap-3 md:gap-5 ml-auto">

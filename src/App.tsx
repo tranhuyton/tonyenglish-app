@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { supabase } from './supabase';
-import Home from './Home';
+import WebPortal from './web/WebPortal';
 import StudentPortal from './StudentPortal';
 import ResetPasswordModal from './ResetPasswordModal';
 import DictionaryWidget from './DictionaryWidget';
@@ -38,15 +38,20 @@ const LoadingFallback = () => (
 export default function App() {
   const getInitialView = () => {
     const path = window.location.pathname.toLowerCase();
-    if (path === '/admin' || path === '/admin/') return 'admin-login';
+    if (path === '/admin' || path === '/admin/' || path === '/admincp' || path === '/admincp/') return 'admin-login';
     if (
       path.startsWith('/khoa-hoc') ||
       path.startsWith('/hoc-thu') ||
       path.startsWith('/dang-ky') ||
-      path.startsWith('/promo') ||
-      path.startsWith('/courses')
+      path.startsWith('/promo')
     ) {
-      return 'promo';
+      return 'home';
+    }
+    if (path === '/lms' || path === '/lms/' || path === '/portal' || path === '/portal/') {
+      return 'portal';
+    }
+    if (path !== '/' && path !== '/vi' && path !== '/en' && path !== '/vi/' && path !== '/en/') {
+      return 'home';
     }
     try { return sessionStorage.getItem('lms_current_view') || 'home'; } catch(e) { return 'home'; }
   };
@@ -187,11 +192,16 @@ export default function App() {
     if (currentView === 'admin' || currentView === 'admin-login') window.history.pushState(null, '', '/admin');
     else if (currentView === 'promo') {
       const p = window.location.pathname.toLowerCase();
-      if (!p.startsWith('/khoa-hoc') && !p.startsWith('/hoc-thu') && !p.startsWith('/dang-ky') && !p.startsWith('/promo') && !p.startsWith('/courses')) {
+      if (!p.startsWith('/khoa-hoc') && !p.startsWith('/hoc-thu') && !p.startsWith('/dang-ky') && !p.startsWith('/promo')) {
         window.history.pushState(null, '', '/khoa-hoc');
       }
     }
-    else if (currentView === 'home') window.history.pushState(null, '', '/');
+    else if (currentView === 'home') {
+      const p = window.location.pathname.toLowerCase();
+      if (p === '/admin' || p === '/admin/' || p.startsWith('/khoa-hoc') || p.startsWith('/hoc-thu') || p.startsWith('/dang-ky') || p.startsWith('/promo') || p === '/lms' || p === '/portal') {
+        window.history.pushState(null, '', '/');
+      }
+    }
   }, [currentView]);
 
   useEffect(() => {
@@ -267,14 +277,12 @@ export default function App() {
         const email = session.user.email?.toLowerCase() || '';
         const isAdmin = email.includes('admin');
         if (isAdmin) {
-          // Khôi phục view admin nếu đang ở trang admin hoặc home
-          setCurrentView(prev => (prev === 'admin-login' || prev === 'home') ? 'admin' : prev);
+          setCurrentView(prev => prev === 'admin-login' ? 'admin' : prev);
           startGlobalTimer();
           return;
         }
         const isActive = await verifyUserStatus(session.user);
         if (!isActive) return;
-        setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
         startGlobalTimer(); 
       } 
     }).catch(console.warn);
@@ -335,7 +343,7 @@ export default function App() {
   return (
     <React.Fragment>
       {/* Eager-loaded components (luôn cần) */}
-      {currentView === 'home' && <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />}
+      {currentView === 'home' && <WebPortal onNavigate={handleNavigate} onStartTest={handleStartTest} />}
       {currentView === 'portal' && <StudentPortal onNavigate={handleNavigate} onStartTest={handleStartTest} onOpenLecture={handleOpenLecture} />}
       
       {/* Lazy-loaded components (chỉ tải khi cần) bọc trong AppErrorBoundary chống sập màn hình trắng */}

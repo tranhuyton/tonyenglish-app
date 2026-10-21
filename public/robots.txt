@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admincp
+
+Sitemap: https://tonyenglish.vn/sitemap.xml

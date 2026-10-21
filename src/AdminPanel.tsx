@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { supabase } from './supabase';
 import TestEditorModal from './TestEditorModal';
 import CaseStudyEditorModal from './CaseStudyEditorModal'; 
-import StudentManagement from './StudentManagement'; 
+import StudentManagement from './StudentManagement';
+import WebCmsManager from './WebCmsManager'; 
 import LectureEditorModal from './LectureEditorModal';
 import IgcseTestEditorModal from './IgcseTestEditorModal';
 import BatchImportModal from './BatchImportModal';
@@ -1825,6 +1826,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
           <button onClick={() => {setActiveTab('assignments-mgmt'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'assignments-mgmt' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📝 Giao bài học viên</button>
           <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
+          <div className="pt-4 mt-4 border-t border-slate-800">
+            <p className="text-[10px] font-black uppercase text-[#2bd6eb] tracking-widest ml-3 mb-2">Cổng thông tin & Web</p>
+            <button onClick={() => {setActiveTab('web-cms'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'web-cms' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>🌐 Quản trị Web (tonyenglish.vn)</button>
+          </div>
         </div>
       </aside>
 
@@ -1836,7 +1841,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
              </button>
              <h1 className="text-[16px] md:text-xl font-black text-slate-800 uppercase tracking-tight truncate">
-               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : activeTab === 'documents' ? 'Tài Liệu Cloud' : activeTab === 'assignments-mgmt' ? 'Giao Bài Học Viên' : 'Học viên'}
+               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : activeTab === 'documents' ? 'Tài Liệu Cloud' : activeTab === 'assignments-mgmt' ? 'Giao Bài Học Viên' : activeTab === 'web-cms' ? 'Quản Trị Website (tonyenglish.vn)' : 'Học viên'}
              </h1>
           </div>
           
@@ -4025,6 +4030,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           )}
 
           {activeTab === 'students' && <StudentManagement onStartTest={onStartTest} autoSelectUserId={notifTargetUserId} autoTab={notifTargetTab as any} onAutoSelectDone={() => { setNotifTargetUserId(null); setNotifTargetTab(null); }} />}
+          {activeTab === 'web-cms' && <WebCmsManager />}
         </div>
 
         {/* ========================================================= */}

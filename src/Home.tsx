@@ -142,6 +142,16 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             </div>
           </div>
 
+          {/* Synchronized Ecosystem Navigation Links */}
+          <div className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-2xl border border-slate-200/80">
+            <a href="https://tonyenglish.vn/vi" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Trang chủ</a>
+            <a href="https://tonyenglish.vn/vi/courses" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Các khóa học</a>
+            <a href="https://tonyenglish.vn/vi/news" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Thư viện</a>
+            <a href="https://tonyenglish.vn/vi/videos" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Kho Video</a>
+            <a href="https://tonyenglish.vn/vi/about-us" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Về chúng tôi</a>
+            <span className="px-3.5 py-2 rounded-xl text-[13px] font-black bg-[#0a5482] text-white shadow-sm">🎓 LMS Luyện Thi</span>
+          </div>
+
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button
               onClick={() => onNavigate('promo')}
