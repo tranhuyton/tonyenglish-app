@@ -78,20 +78,31 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           const childCates = allCategories.filter((c) => Number(c.news_cc_parent) === Number(targetCate.news_cc_id));
           const cateIds = childCates.length > 0 ? childCates.map((c) => c.news_cc_id) : [targetCate.news_cc_id];
 
-          const from = (pageParam - 1) * pageSize;
-          const to = from + pageSize - 1;
+          const isCambridgeCate =
+            Number(targetCate.news_cc_id) === 38 || Number(targetCate.news_cc_parent) === 38;
+          const curPageSize = isCambridgeCate ? 12 : pageSize;
+          const from = (pageParam - 1) * curPageSize;
+          const to = from + curPageSize - 1;
 
-          const { data, count } = await supabase
+          let query = supabase
             .from('te_news')
             .select(
-              'news_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,public',
+              'news_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,news_rank,public',
               { count: 'exact' }
             )
             .eq('deleted', 0)
             .eq('news_status', 1)
-            .in('news_cc_id', cateIds)
-            .order('news_id', { ascending: false })
-            .range(from, to);
+            .in('news_cc_id', cateIds);
+
+          if (isCambridgeCate) {
+            query = query
+              .order('news_rank', { ascending: true, nullsFirst: false })
+              .order('news_id', { ascending: true });
+          } else {
+            query = query.order('news_id', { ascending: false });
+          }
+
+          const { data, count } = await query.range(from, to);
 
           setNewsList(data || []);
           setTotalCount(count || 0);
@@ -148,13 +159,14 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
           const { data: rel } = await supabase
             .from('te_news')
-            .select('news_id,news_title,news_title_url')
+            .select('news_id,news_title,news_title_url,news_byname,news_rank')
             .eq('deleted', 0)
             .eq('news_status', 1)
             .eq('news_cc_id', found.news_cc_id)
             .neq('news_id', found.news_id)
+            .order('news_rank', { ascending: true, nullsFirst: false })
             .order('news_id', { ascending: false })
-            .limit(10);
+            .limit(11);
           setRelatedNews(rel || []);
         }
       }
@@ -178,7 +190,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
     ? `${t('Search')}: "${searchQuery}"`
     : t('Library');
 
-  const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
+  const effectivePageSize =
+    currentCategory &&
+    (Number(currentCategory.news_cc_id) === 38 || Number(currentCategory.news_cc_parent) === 38)
+      ? 12
+      : pageSize;
+  const totalPages = Math.max(1, Math.ceil(totalCount / effectivePageSize));
 
   useEffect(() => {
     if (mode === 'detail' && article) {
@@ -942,9 +959,16 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                       <span className="w-6 h-6 rounded-lg bg-white border border-slate-200/80 text-slate-400 group-hover:text-[#0a5482] group-hover:border-sky-200 text-xs font-bold flex items-center justify-center shrink-0 transition-colors">
                         {idx + 1}
                       </span>
-                      <span className="text-[15.5px] sm:text-[16px] font-semibold text-slate-700 group-hover:text-[#0a5482] leading-snug line-clamp-1 transition-colors">
-                        {rel.news_title}
-                      </span>
+                      <div className="min-w-0">
+                        <span className="text-[15.5px] sm:text-[16px] font-semibold text-slate-700 group-hover:text-[#0a5482] leading-snug line-clamp-1 transition-colors block">
+                          {rel.news_title}
+                        </span>
+                        {rel.news_byname && (
+                          <span className="text-xs font-semibold text-slate-400 group-hover:text-sky-700 transition-colors block mt-0.5">
+                            {rel.news_byname}
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <svg
                       className="w-4 h-4 text-slate-300 group-hover:text-[#0a5482] group-hover:translate-x-0.5 transition-all shrink-0"
