@@ -557,11 +557,14 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
                   {/* Featured Image if enabled */}
                   {article.news_thumb && Number(article.news_status_avatar) === 1 && (
-                    <figure className="rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 max-w-xl mx-auto">
+                    <figure className="rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 max-w-2xl mx-auto">
                       <img
                         src={resolveUploadUrl(article.news_thumb)}
                         alt={article.news_title}
-                        className="w-full h-auto object-cover"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                        }}
+                        className="w-full aspect-16/9 max-h-[340px] object-cover"
                       />
                       {article.news_desc_thumb && (
                         <figcaption className="p-3 text-center text-sm italic text-slate-500">
