@@ -40,6 +40,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   const [showVocab, setShowVocab] = useState(false);
   const [camMode, setCamMode] = useState<'paragraph' | 'sentence' | 'english'>('paragraph');
   const [revealedParas, setRevealedParas] = useState<Record<number, boolean>>({});
+  const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
 
   const pageSize = 10;
 
@@ -88,7 +89,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           let query = supabase
             .from('te_news')
             .select(
-              'news_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,news_rank,public',
+              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,news_rank,public',
               { count: 'exact' }
             )
             .eq('deleted', 0)
@@ -113,7 +114,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           let query = supabase
             .from('te_news')
             .select(
-              'news_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,public',
+              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,public',
               { count: 'exact' }
             )
             .eq('deleted', 0)
@@ -138,6 +139,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
         setShowVocab(false);
         setCamMode('paragraph');
         setRevealedParas({});
+        setZoomImageUrl(null);
 
         const { data: rows } = await supabase
           .from('te_news')
@@ -407,6 +409,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     <div className="space-y-5">
                       {newsList.map((item) => {
                         const itemUrl = `/news/view/${(item.news_title_url || '').trim()}`;
+                        const isChartThumb = [59, 60, 61, 62, 73].includes(Number(item.news_cc_id));
                         return (
                           <div
                             key={item.news_id}
@@ -414,7 +417,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                           >
                             <Link
                               to={itemUrl}
-                              className="w-full sm:w-56 h-44 sm:h-36 rounded-xl overflow-hidden bg-slate-100 shrink-0 block"
+                              className={`w-full sm:w-56 h-44 sm:h-36 rounded-xl overflow-hidden shrink-0 block ${
+                                isChartThumb ? 'bg-white border border-slate-200/70 p-1.5' : 'bg-slate-100'
+                              }`}
                             >
                               <img
                                 src={resolveUploadUrl(item.news_thumb)}
@@ -422,7 +427,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 onError={(e) => {
                                   (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
                                 }}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                className={`w-full h-full ${
+                                  isChartThumb ? 'object-contain' : 'object-cover'
+                                } group-hover:scale-105 transition-transform duration-500`}
                               />
                             </Link>
 
@@ -583,19 +590,20 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     />
                   )}
 
-                  {/* Featured Image if enabled */}
+                  {/* Featured Image if enabled - Display full uploaded image without cropping */}
                   {article.news_thumb && Number(article.news_status_avatar) === 1 && (
-                    <figure className="rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 max-w-2xl mx-auto">
+                    <figure className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-2xs p-2 sm:p-4 max-w-3xl mx-auto">
                       <img
                         src={resolveUploadUrl(article.news_thumb)}
                         alt={article.news_title}
+                        onClick={() => setZoomImageUrl(resolveUploadUrl(article.news_thumb))}
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
                         }}
-                        className="w-full aspect-16/9 max-h-[340px] object-cover"
+                        className="w-full h-auto max-h-[820px] object-contain mx-auto block cursor-zoom-in rounded-xl"
                       />
                       {article.news_desc_thumb && (
-                        <figcaption className="p-3 text-center text-sm italic text-slate-500">
+                        <figcaption className="pt-3 text-center text-sm italic text-slate-500">
                           {stripTags(article.news_desc_thumb)}
                         </figcaption>
                       )}
@@ -1017,6 +1025,30 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           )}
         </div>
       </div>
+
+      {/* Full Image Lightbox Modal */}
+      {zoomImageUrl && (
+        <div
+          className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={() => setZoomImageUrl(null)}
+        >
+          <div className="relative max-w-5xl max-h-[92vh] bg-white rounded-2xl p-2 sm:p-4 shadow-2xl overflow-auto">
+            <button
+              type="button"
+              onClick={() => setZoomImageUrl(null)}
+              className="absolute top-3 right-3 w-9 h-9 rounded-full bg-slate-900/75 hover:bg-[#0a5482] text-white font-bold flex items-center justify-center shadow-md transition-colors cursor-pointer"
+              aria-label="Close zoom"
+            >
+              ✕
+            </button>
+            <img
+              src={zoomImageUrl}
+              alt={article?.news_title || 'Full view'}
+              className="max-w-full max-h-[85vh] w-auto h-auto object-contain mx-auto block rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
