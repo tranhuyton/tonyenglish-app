@@ -1431,8 +1431,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   const renderBottomControls = (
-    <div className="shrink-0 p-0 flex items-center justify-center z-30">
-      <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-xs rounded-xl px-2.5 py-1 flex flex-wrap items-center justify-center gap-2 transition-all">
+    <div className="shrink-0 p-0 flex items-center justify-center relative z-30">
+      <div className="bg-white border border-slate-200/90 shadow-xs rounded-xl px-2.5 py-1 flex flex-wrap items-center justify-center gap-2 transition-all">
         {/* NÚT BÀI GIẢNG */}
         <button
           type="button"
@@ -2108,7 +2108,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </nav>
 
             {/* TONYENGLISH LIBRARY SECTION HEADER BANNER (Giống NewsPage.tsx) */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] rounded-2xl sm:rounded-3xl px-5 sm:px-8 py-5 sm:py-6 text-white mb-6 sm:mb-8 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] rounded-2xl sm:rounded-3xl px-5 sm:px-8 py-5 sm:py-6 text-white mb-6 sm:mb-8 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4 relative z-30">
               <div className="min-w-0">
                 <div className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1 flex items-center gap-2">
                   <span>📚 TonyEnglish Course &amp; Test Library</span>
@@ -2506,14 +2506,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           >
             {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
             <div 
-              className="w-full rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all relative overflow-hidden border border-slate-800/20" 
+              className="w-full rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all relative z-30 border border-slate-800/20" 
               style={{ background: analyticsTheme.titleBg || 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)' }}
             >
               {/* Decorative Ambient Glow */}
-              <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
-              <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
+              <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
+                <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
+                <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
+              </div>
 
-              <div className="relative z-10 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4">
+              <div className="relative z-20 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4">
                 {/* CỘT 1 (BÊN TRÁI): TIÊU ĐỀ + 3 NÚT FILTER */}
                 <div className="flex flex-col gap-3">
                   <div>

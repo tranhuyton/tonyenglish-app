@@ -431,14 +431,16 @@ export default function AssignmentCalendar({
       <div className="w-full space-y-5">
         {/* TONYENGLISH.VN SYNCHRONIZED HERO BANNER */}
         <div 
-          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 relative overflow-hidden border border-slate-800/20"
+          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 relative z-30 border border-slate-800/20"
           style={{ background: calendarTheme.titleBg }}
         >
           {/* Decorative Ambient Glow */}
-          <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
+          <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
+          </div>
 
-          <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+          <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
             <div className="flex items-start justify-between w-full lg:w-auto gap-3">
               <div>
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
@@ -566,7 +568,7 @@ export default function AssignmentCalendar({
           </div>
 
           {headerActions && (
-            <div className="relative z-20 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
+            <div className="relative z-30 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
               <span className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80 hidden sm:inline">
                 Lối tắt học tập &amp; Bộ lọc khóa học:
               </span>

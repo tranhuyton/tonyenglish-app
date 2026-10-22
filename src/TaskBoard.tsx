@@ -721,16 +721,18 @@ export default function TaskBoard({
       )}
 
       {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
-      <div className="mb-5 sm:mb-6 shrink-0">
+      <div className="mb-5 sm:mb-6 shrink-0 relative z-30">
         <div 
-          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 transition-all duration-300 relative overflow-hidden border border-slate-800/20"
+          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 transition-all duration-300 relative border border-slate-800/20"
           style={{ background: boardTheme.titleBg }}
         >
           {/* Decorative Ambient Glow */}
-          <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
+          <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
+          </div>
 
-          <div className="relative z-10 flex items-center justify-between w-full xl:w-auto gap-3">
+          <div className="relative z-20 flex items-center justify-between w-full xl:w-auto gap-3">
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -799,7 +801,7 @@ export default function TaskBoard({
             </div>
           </div>
 
-          <div className="relative z-10 flex flex-wrap items-center gap-2 sm:gap-2.5 w-full xl:w-auto justify-between xl:justify-end">
+          <div className="relative z-30 flex flex-wrap items-center gap-2 sm:gap-2.5 w-full xl:w-auto justify-between xl:justify-end">
             {/* Switch tabs if multiple boards exist */}
             {boardsData.length > 1 && (
               <div className="flex items-center gap-1 bg-white/10 backdrop-blur-xs border border-white/15 p-1 rounded-xl overflow-x-auto max-w-full custom-scrollbar">
