@@ -19,8 +19,8 @@
                 "theft and routine",
                 "nut and cereal"
               ],
-              "explanation": "nut (hạt) và cereal (ngũ cốc) đều là các loại thức ăn.",
-              "correctAnswer": "A"
+              "explanation": "nut (hạt) và cereal (ngũ cốc) đều là các loại thực phẩm.",
+              "correctAnswer": "D"
             },
             {
               "id": "2",
@@ -284,13 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Why Monkey Has No Home</h1>        <p style=\"margin-bottom: 1rem;\">For five years, there was a <strong>famine</strong>. The farmers asked people to <strong>bless</strong> them and finally, they had a good <strong>harvest</strong>. Since there was now plenty of food, the <strong>pharaoh</strong> decided to have a party. The party was a happy <strong>affair</strong>. For five days they had a huge feast.</p>    <p style=\"margin-bottom: 1rem;\">Monkey was very happy. Because of the <strong>famine</strong>, he was very <strong>slim</strong>. He wanted to eat a lot of food.</p>    <p style=\"margin-bottom: 1rem;\">When he arrived at the feast, hundreds of long tables were filled with food. There were <strong>nuts</strong>, bowls of <strong>cereal</strong>, and <strong>ripe</strong> fruit. He could also smell hot <strong>roasted</strong> meat cooking on the <strong>stove</strong>.</p>    <p style=\"margin-bottom: 1rem;\">The <strong>assembly</strong> of animals was <strong>merry</strong>. However, during the feast, Monkey thought of a <strong>scheme</strong> to <strong>exploit</strong> the <strong>pharaoh</strong>'s kindness. He decided to steal some of the food and then eat it at home.</p>    <p style=\"margin-bottom: 1rem;\">All the animals were <strong>cheerful</strong>. They didn't notice that monkey was hiding food. After the feast, Monkey took the food to his house and ate it. He repeated this <strong>routine</strong> every day for four days.</p>    <p style=\"margin-bottom: 1rem;\">But on the fifth day, the <strong>pharaoh</strong> had a surprise. He was going to give all the animals a home. Monkey was very excited. But when he arrived at the <strong>pharaoh</strong>'s home, he could not get through the door. The <strong>diameter</strong> of his waist was wider than the doorway. He was too fat!</p>    <p style=\"margin-bottom: 1rem;\">Monkey asked the <strong>pharaoh</strong> to forgive him for his <strong>theft</strong>. But the <strong>pharaoh</strong> said no.</p>    <p style=\"margin-bottom: 1rem;\">\"<strong>Pardon</strong>?\" asked the monkey. He didn't understand why the <strong>pharaoh</strong> was being unkind.</p>    <p style=\"margin-bottom: 1rem;\">\"Everybody else will have a home now, but not you. Now you know that greed gets you nothing,\" explained the <strong>pharaoh</strong>.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Why Monkey Has No Home</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">For five years, there was a <strong>famine</strong>. The farmers asked people to <strong>bless</strong> them and finally, they had a good <strong>harvest</strong>. Since there was now plenty of food, the <strong>pharaoh</strong> decided to have a party. The party was a happy <strong>affair</strong>. For five days they had a huge feast.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Monkey was very happy. Because of the <strong>famine</strong>, he was very <strong>slim</strong>. He wanted to eat a lot of food.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When he arrived at the feast, hundreds of long tables were filled with food. There were <strong>nuts</strong>, bowls of <strong>cereal</strong>, and <strong>ripe</strong> fruit. He could also smell hot <strong>roasted</strong> meat cooking on the <strong>stove</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <strong>assembly</strong> of animals was <strong>merry</strong>. However, during the feast, Monkey thought of a <strong>scheme</strong> to <strong>exploit</strong> the <strong>pharaoh</strong>'s kindness. He decided to steal some of the food and then eat it at home.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">All the animals were <strong>cheerful</strong>. They didn't notice that monkey was hiding food. After the feast, Monkey took the food to his house and ate it. He repeated this <strong>routine</strong> every day for four days.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But on the fifth day, the <strong>pharaoh</strong> had a surprise. He was going to give all the animals a home. Monkey was very excited. But when he arrived at the <strong>pharaoh</strong>'s home, he could not get through the door. The <strong>diameter</strong> of his waist was wider than the doorway. He was too fat!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Monkey asked the <strong>pharaoh</strong> to forgive him for his <strong>theft</strong>. But the <strong>pharaoh</strong> said no.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"<strong>Pardon</strong>?\" asked the monkey. He didn't understand why the <strong>pharaoh</strong> was being unkind.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Everybody else will have a home now, but not you. Now you know that greed gets you nothing,\" explained the <strong>pharaoh</strong>.</p></div>",
       "imageUrl": "/unit15_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -352,12 +351,12 @@
               "explanation": "Khỉ là người đã hỏi 'Pardon?' chứ không phải pharaoh.",
               "correctAnswer": "False"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -407,9 +406,11 @@
               "explanation": "Eo quá béo (fat waist) khiến khỉ không thể lọt qua cửa.",
               "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit15_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tại sao Khỉ không có nhà</h1>\n\n<p style=\"margin-bottom: 1rem;\">Trong suốt năm năm, đã có một <b>nạn đói</b>. Các nông dân đã cầu xin mọi người <b>ban phước</b> cho họ và cuối cùng, họ đã có một <b>vụ thu hoạch</b> tốt. Vì bây giờ đã có nhiều thức ăn, <b>pharaoh</b> quyết định tổ chức một bữa tiệc. Bữa tiệc là một <b>sự kiện</b> vui vẻ. Trong năm ngày, họ đã có một bữa tiệc khổng lồ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khỉ rất vui. Bởi vì <b>nạn đói</b>, cậu ta rất <b>gầy gò</b>. Cậu ta muốn ăn thật nhiều thức ăn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi cậu ta đến bữa tiệc, hàng trăm chiếc bàn dài đã chứa đầy thức ăn. Có <b>các loại hạt</b>, những bát <b>ngũ cốc</b>, và trái cây <b>chín</b>. Cậu ta cũng có thể ngửi thấy mùi thịt <b>nướng</b> nóng hổi đang được nấu trên <b>bếp lò</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Cuộc hội họp</b> của các loài động vật diễn ra rất <b>hân hoan</b>. Tuy nhiên, trong bữa tiệc, Khỉ đã nghĩ ra một <b>âm mưu</b> để <b>lợi dụng</b> lòng tốt của <b>pharaoh</b>. Cậu ta quyết định đánh cắp một ít thức ăn và sau đó mang về nhà ăn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tất cả các loài động vật đều <b>vui vẻ</b>. Chúng không nhận ra rằng khỉ đang giấu thức ăn. Sau bữa tiệc, Khỉ mang thức ăn về nhà và ăn. Cậu ta lặp lại <b>thói quen</b> này mỗi ngày trong suốt bốn ngày.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng vào ngày thứ năm, <b>pharaoh</b> đã có một bất ngờ. Ngài sẽ cho tất cả các con vật một ngôi nhà. Khỉ rất hào hứng. Nhưng khi cậu ta đến nhà của <b>pharaoh</b>, cậu ta không thể lọt qua cửa. <b>Đường kính</b> vòng eo của cậu ta rộng hơn cả ngưỡng cửa. Cậu ta đã quá béo!</p>\n\n<p style=\"margin-bottom: 1rem;\">Khỉ cầu xin <b>pharaoh</b> tha thứ cho <b>vụ trộm</b> của mình. Nhưng <b>pharaoh</b> nói không.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"<b>Xin lỗi</b>?\" Khỉ hỏi. Cậu ta không hiểu tại sao <b>pharaoh</b> lại tỏ ra nhẫn tâm.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Bây giờ tất cả những người khác sẽ có một ngôi nhà, nhưng ngươi thì không. Bây giờ ngươi đã biết rằng sự tham lam không mang lại cho ngươi điều gì cả,\" <b>pharaoh</b> giải thích.</p>\n</div>"
     }
   ],
   "basicInfo": {

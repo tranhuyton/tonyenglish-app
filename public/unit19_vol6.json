@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 19: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -443,12 +437,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Seizures Then and Now</h1>        <p style=\"margin-bottom: 1rem;\">If a person who lived 200 years ago was treated for a <b>seizure</b> today, they would be surprised by the treatment’s <b>novelty</b>. That’s because doctors in the 1800s were influenced more by <b>primal</b> medical beliefs than science.</p>    <p style=\"margin-bottom: 1rem;\">Rather than thinking the brain caused <b>seizures</b>, people in the 1800s still thought they were the result of strange forces. They <b>equated</b> <b>seizures</b> with the work of evil spirits. Others felt that the <b>seizures</b> had a cosmic or <b>lunar</b> cause. They believed that the cycles of the moon and <b>constellations</b> could make someone have a <b>seizure</b>.</p>    <p style=\"margin-bottom: 1rem;\">During a <b>session</b> to treat a patient who had <b>seizures</b>, doctors would force the patient to <b>invoke</b> the grace of the <b>Almighty</b>. They thought if the patient did this, then the patient would rid themselves of the evil spirits causing the <b>seizures</b>.</p>    <p style=\"margin-bottom: 1rem;\">The <b>advent</b> of modern <b>psychiatry</b> occurred during the 1800s. At that time people who suffered from <b>seizures</b> were placed in <b>psychiatric</b> hospitals. They were treated like they were insane. However, none of the <b>outmoded</b> treatments worked.</p>    <p style=\"margin-bottom: 1rem;\">It wasn’t until the late 1850s that the causes of <b>seizures</b> were understood. We know today that these causes <b>pertain</b> to the brain. Misfired signals from the brain cause a jerking <b>reflex</b> in the body. These usually occur when someone is very tired.</p>    <p style=\"margin-bottom: 1rem;\">Once the causes of <b>seizures</b> were known, <b>definitive</b> treatments were developed. Today, treatments range from taking pills to having surgery. Treatment is <b>personalized</b> according to the type of <b>seizure</b> the patient has.</p>    <p style=\"margin-bottom: 1rem;\">Even today, some people are unsure about <b>seizures</b>. Their most common mistake is thinking that a person having a <b>seizure</b> will swallow their tongue. They often shove some <b>utensil</b> in the person’s mouth. However, this doesn’t help. The <b>utensil</b> often blocks the <b>airway</b> and prevents the person from <b>inhaling</b>. Yet most of the public no longer fear people who have <b>seizures</b>. Instead, they can now help and comfort a person if they have a <b>seizure</b>.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Seizures Then and Now</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">If a person who lived 200 years ago was treated for a <b>seizure</b> today, they would be surprised by the treatment’s <b>novelty</b>. That’s because doctors in the 1800s were influenced more by <b>primal</b> medical beliefs than science.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Rather than thinking the brain caused <b>seizures</b>, people in the 1800s still thought they were the result of strange forces. They <b>equated</b> <b>seizures</b> with the work of evil spirits. Others felt that the <b>seizures</b> had a cosmic or <b>lunar</b> cause. They believed that the cycles of the moon and <b>constellations</b> could make someone have a <b>seizure</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">During a <b>session</b> to treat a patient who had <b>seizures</b>, doctors would force the patient to <b>invoke</b> the grace of the <b>Almighty</b>. They thought if the patient did this, then the patient would rid themselves of the evil spirits causing the <b>seizures</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>advent</b> of modern <b>psychiatry</b> occurred during the 1800s. At that time people who suffered from <b>seizures</b> were placed in <b>psychiatric</b> hospitals. They were treated like they were insane. However, none of the <b>outmoded</b> treatments worked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It wasn’t until the late 1850s that the causes of <b>seizures</b> were understood. We know today that these causes <b>pertain</b> to the brain. Misfired signals from the brain cause a jerking <b>reflex</b> in the body. These usually occur when someone is very tired.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Once the causes of <b>seizures</b> were known, <b>definitive</b> treatments were developed. Today, treatments range from taking pills to having surgery. Treatment is <b>personalized</b> according to the type of <b>seizure</b> the patient has.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Even today, some people are unsure about <b>seizures</b>. Their most common mistake is thinking that a person having a <b>seizure</b> will swallow their tongue. They often shove some <b>utensil</b> in the person’s mouth. However, this doesn’t help. The <b>utensil</b> often blocks the <b>airway</b> and prevents the person from <b>inhaling</b>. Yet most of the public no longer fear people who have <b>seizures</b>. Instead, they can now help and comfort a person if they have a <b>seizure</b>.</p></div>",
       "imageUrl": "/unit19_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -513,13 +507,13 @@
               "id": "36",
               "content": "Why would someone from the past be surprised by the novelty of today’s treatments for seizures?",
               "options": [
-                "Because doctors in the 1800s were influenced more by primal medical beliefs than science.",
                 "Because they didn't have hospitals.",
                 "Because they used to swallow their tongue.",
-                "Because doctors only prescribed pills."
+                "Because doctors only prescribed pills.",
+                "Because doctors in the 1800s were influenced more by primal medical beliefs than science."
               ],
               "explanation": "Dịch câu hỏi: Tại sao một người đến từ quá khứ lại ngạc nhiên trước sự mới mẻ của các phương pháp điều trị co giật ngày nay?\nGiải thích: Chọn A.\nĐoạn 1 nêu lý do: \"If a person who lived 200 years ago was treated for a seizure today, they would be surprised by the treatment’s novelty. That’s because doctors in the 1800s were influenced more by primal medical beliefs than science.\" (Bởi vì các bác sĩ vào những năm 1800 bị ảnh hưởng bởi những niềm tin y học nguyên thủy nhiều hơn là khoa học).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "37",
@@ -537,42 +531,50 @@
               "id": "38",
               "content": "During the advent of modern psychiatry, how were people treated in psychiatric hospitals?",
               "options": [
-                "They were treated like they were insane.",
                 "They were given surgery.",
+                "They were treated like they were insane.",
                 "They were given personalized treatments.",
                 "They were told to look at constellations."
               ],
               "explanation": "Dịch câu hỏi: Trong thời kỳ khởi đầu của ngành tâm thần học hiện đại, những người ở bệnh viện tâm thần được đối xử như thế nào?\nGiải thích: Chọn A.\nĐoạn 4 nói về sự khởi đầu của tâm thần học hiện đại: \"The advent of modern psychiatry occurred during the 1800s... They were treated like they were insane.\" (Sự ra đời của ngành tâm thần học hiện đại diễn ra vào những năm 1800... Họ bị đối xử như thể họ bị điên).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "39",
               "content": "What did some people believe constellations and lunar cycles could cause?",
               "options": [
-                "They believed they could make someone have a seizure.",
                 "They believed they could cure a seizure.",
                 "They believed they could block an airway.",
+                "They believed they could make someone have a seizure.",
                 "They believed they could invoke the Almighty."
               ],
               "explanation": "Dịch câu hỏi: Một số người tin rằng các chòm sao và chu kỳ mặt trăng có thể gây ra điều gì?\nGiải thích: Chọn A.\nĐoạn 2 có chi tiết: \"Others felt that the seizures had a cosmic or lunar cause. They believed that the cycles of the moon and constellations could make someone have a seizure.\" (Những người khác cảm thấy rằng các cơn co giật có nguyên nhân từ vũ trụ hoặc mặt trăng. Họ tin rằng các chu kỳ của mặt trăng và các chòm sao có thể khiến ai đó lên cơn co giật).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "40",
               "content": "What did doctors force seizure patients to invoke in order to treat their seizures?",
               "options": [
-                "They would force the patient to invoke the grace of the Almighty.",
                 "They would force the patient to inhale deeply.",
                 "They would force the patient to look at a lunar eclipse.",
-                "They would force the patient to equate seizures to a reflex."
+                "They would force the patient to equate seizures to a reflex.",
+                "They would force the patient to invoke the grace of the Almighty."
               ],
               "explanation": "Dịch câu hỏi: Các bác sĩ đã bắt bệnh nhân bị co giật cầu xin ai để chữa trị các cơn co giật của họ?\nGiải thích: Chọn A.\nTrong đoạn 3: \"During a session to treat a patient who had seizures, doctors would force the patient to invoke the grace of the Almighty.\" (Trong một buổi điều trị cho một bệnh nhân bị co giật, các bác sĩ sẽ buộc bệnh nhân phải cầu xin ân sủng của Đấng Toàn Năng). Vậy họ bị ép cầu xin sự giúp đỡ của Đấng Toàn Năng (the Almighty).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit19_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bệnh động kinh ngày ấy và bây giờ</h1>\n\n<p style=\"margin-bottom: 1rem;\">Nếu một người sống cách đây 200 năm được điều trị chứng <b>động kinh</b> vào ngày nay, họ sẽ rất ngạc nhiên trước <b>sự mới lạ</b> của phương pháp điều trị. Đó là bởi vì các bác sĩ vào những năm 1800 bị ảnh hưởng nhiều bởi các niềm tin y học <b>nguyên thủy</b> hơn là khoa học.</p>\n\n<p style=\"margin-bottom: 1rem;\">Thay vì nghĩ rằng não bộ gây ra <b>động kinh</b>, con người vào những năm 1800 vẫn nghĩ rằng chúng là kết quả của những thế lực kỳ lạ. Họ <b>đánh đồng</b> chứng <b>động kinh</b> với công việc của các linh hồn tà ác. Những người khác cảm thấy rằng chứng <b>động kinh</b> có nguyên nhân từ vũ trụ hoặc <b>mặt trăng</b>. Họ tin rằng các chu kỳ của mặt trăng và <b>các chòm sao</b> có thể khiến ai đó lên cơn <b>động kinh</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong một <b>buổi</b> điều trị cho bệnh nhân bị <b>động kinh</b>, các bác sĩ sẽ ép bệnh nhân <b>cầu khẩn</b> ân sủng của <b>Đấng Toàn Năng</b>. Họ nghĩ rằng nếu bệnh nhân làm điều này, thì bệnh nhân sẽ giải thoát bản thân khỏi những linh hồn tà ác gây ra chứng <b>động kinh</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Sự ra đời</b> của <b>tâm thần học</b> hiện đại đã diễn ra trong suốt những năm 1800. Vào thời điểm đó, những người bị <b>động kinh</b> được đưa vào các bệnh viện <b>tâm thần</b>. Họ bị đối xử như thể họ bị điên. Tuy nhiên, không có phương pháp điều trị <b>lỗi thời</b> nào mang lại hiệu quả.</p>\n\n<p style=\"margin-bottom: 1rem;\">Phải cho đến cuối những năm 1850, nguyên nhân của chứng <b>động kinh</b> mới được hiểu rõ. Ngày nay, chúng ta biết rằng những nguyên nhân này <b>liên quan</b> đến não bộ. Những tín hiệu bị bắn sai từ não bộ gây ra một <b>phản xạ</b> giật trong cơ thể. Những điều này thường xảy ra khi ai đó đang rất mệt mỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi nguyên nhân của chứng <b>động kinh</b> được biết đến, các phương pháp điều trị <b>dứt điểm</b> đã được phát triển. Ngày nay, các phương pháp điều trị trải dài từ việc uống thuốc đến phẫu thuật. Việc điều trị được <b>cá nhân hóa</b> theo loại <b>động kinh</b> mà bệnh nhân mắc phải.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngay cả ngày nay, một số người vẫn không chắc chắn về chứng <b>động kinh</b>. Sai lầm phổ biến nhất của họ là nghĩ rằng một người đang lên cơn <b>động kinh</b> sẽ nuốt lưỡi của họ. Họ thường nhét một <b>dụng cụ</b> nào đó vào miệng người đó. Tuy nhiên, điều này không giúp ích gì. <b>Dụng cụ</b> này thường chặn <b>đường thở</b> và ngăn cản người bệnh <b>hít vào</b>. Tuy nhiên, hầu hết công chúng không còn sợ hãi những người bị <b>động kinh</b> nữa. Thay vào đó, họ giờ đây có thể giúp đỡ và an ủi một người nếu người đó lên cơn <b>động kinh</b>.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 19: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

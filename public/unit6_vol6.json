@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 6: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -338,12 +332,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Amazing Komodo Dragons</h1>        <p style=\"margin-bottom: 1rem;\">Once, a British <b>gazette</b> had an unusual story. Scientists at a zoo made a discovery about komodo dragons. Komodo dragons are giant lizards that grow up to two and a half meters long. A female lizard at the zoo had babies. However, it had never been around a male lizard in its entire life. After the scientists <b>publicized</b> their discovery, many people thought it was <b>fictitious</b>.</p>    <p style=\"margin-bottom: 1rem;\">But it was true. It was discovered that female komodo dragons can have babies without the help of their male <b>counterparts</b>. This <b>contradicts</b> what scientists know about how most animals have babies.</p>    <p style=\"margin-bottom: 1rem;\">In most cases, there are many things that can <b>obstruct</b> this type of reproduction. For example, adult males and females carry different genes needed to make an <b>embryo</b>. If the genes are <b>homogeneous</b>, the babies are weaker and have genetic problems. Over time, the weakened species dies out completely. This makes it necessary for the male to be involved. However, scientists <b>verified</b> that when Komodo babies are born, their genes aren’t the exact same genes as their mother. Also, they are <b>devoid</b> of any genetic problems.</p>    <p style=\"margin-bottom: 1rem;\">Scientists <b>theorize</b> that Komodo dragons developed the ability because it helps the species <b>fend</b> off extinction. If a volcano erupts, lava can kill all of the komodo dragons on an island. However, as long as one female <b>eludes</b> death, she can <b>prolong</b> the survival of the species. Luckily, Komodo dragons are <b>vigorous</b> swimmers. So the surviving female can <b>plunge</b> into the ocean and swim to another island. When she comes <b>ashore</b>, she can reproduce by herself. Over time, the genes within the population <b>diverge</b>. Then, the <b>sparse</b> population increases. Once again there is a <b>surplus</b> of lizards on one island. Scientists think that this may be how the lizards took over all of the islands in that area.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Amazing Komodo Dragons</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Once, a British <b>gazette</b> had an unusual story. Scientists at a zoo made a discovery about komodo dragons. Komodo dragons are giant lizards that grow up to two and a half meters long. A female lizard at the zoo had babies. However, it had never been around a male lizard in its entire life. After the scientists <b>publicized</b> their discovery, many people thought it was <b>fictitious</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But it was true. It was discovered that female komodo dragons can have babies without the help of their male <b>counterparts</b>. This <b>contradicts</b> what scientists know about how most animals have babies.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In most cases, there are many things that can <b>obstruct</b> this type of reproduction. For example, adult males and females carry different genes needed to make an <b>embryo</b>. If the genes are <b>homogeneous</b>, the babies are weaker and have genetic problems. Over time, the weakened species dies out completely. This makes it necessary for the male to be involved. However, scientists <b>verified</b> that when Komodo babies are born, their genes aren’t the exact same genes as their mother. Also, they are <b>devoid</b> of any genetic problems.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Scientists <b>theorize</b> that Komodo dragons developed the ability because it helps the species <b>fend</b> off extinction. If a volcano erupts, lava can kill all of the komodo dragons on an island. However, as long as one female <b>eludes</b> death, she can <b>prolong</b> the survival of the species. Luckily, Komodo dragons are <b>vigorous</b> swimmers. So the surviving female can <b>plunge</b> into the ocean and swim to another island. When she comes <b>ashore</b>, she can reproduce by herself. Over time, the genes within the population <b>diverge</b>. Then, the <b>sparse</b> population increases. Once again there is a <b>surplus</b> of lizards on one island. Scientists think that this may be how the lizards took over all of the islands in that area.</p></div>",
       "imageUrl": "/unit6_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -408,25 +402,25 @@
               "id": "36",
               "content": "How do komodo dragons contradict what scientists know about reproduction?",
               "options": [
-                "They can reproduce without a father.",
                 "They lay eggs in the water.",
                 "They don't reproduce.",
+                "They can reproduce without a father.",
                 "They reproduce every day."
               ],
               "explanation": "Đáp án đúng là A nhé. Ở đoạn 2 có giải thích: '...female komodo dragons can have babies without the help of their male counterparts. This contradicts what scientists know...' (...rồng komodo cái có thể sinh con mà không cần sự giúp đỡ của con đực. Điều này mâu thuẫn với những gì các nhà khoa học biết...). Do đó chọn A là chuẩn nhất !",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "37",
               "content": "Why is it possible for a komodo dragon to come ashore at a different island?",
               "options": [
-                "Because they are vigorous swimmers and can plunge into the water.",
                 "Because they can fly.",
                 "Because they ride on boats.",
-                "Because they have a compass."
+                "Because they have a compass.",
+                "Because they are vigorous swimmers and can plunge into the water."
               ],
               "explanation": "Đáp án đúng là A . Đoạn 4 đã miêu tả: 'Luckily, Komodo dragons are vigorous swimmers. So the surviving female can plunge into the ocean...' (May mắn thay, rồng Komodo là những con vật bơi lội mạnh mẽ. Vì vậy con cái sống sót có thể lao xuống đại dương...). Nhờ khả năng này mà chúng có thể dạt vào bờ (ashore) ở một hòn đảo khác.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "38",
@@ -444,30 +438,38 @@
               "id": "39",
               "content": "According to the passage, what happens to the genes of the population overtime?",
               "options": [
-                "Over time, the genes diverge.",
                 "They stay the same.",
+                "Over time, the genes diverge.",
                 "They disappear.",
                 "They become homogenous."
               ],
               "explanation": "Đáp án đúng là A . Câu này có thể tìm thấy trực tiếp trong bài ở đoạn 4: 'Over time, the genes within the population diverge.' (Theo thời gian, các gen trong quần thể bị phân hóa). Cứ chọn A là đúng chuẩn luôn!",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "40",
               "content": "What will happen to the komodo babies if the genes are homogeneous?",
               "options": [
-                "The babies will be weaker and have genetic problems.",
                 "They will be stronger.",
                 "They will be smarter.",
+                "The babies will be weaker and have genetic problems.",
                 "They will run faster."
               ],
               "explanation": "Đáp án đúng là A nhé. Đoạn 3 có nêu giả thiết này: 'If the genes are homogeneous, the babies are weaker and have genetic problems.' (Nếu các gen đồng nhất, những đứa con sẽ yếu hơn và có các vấn đề về di truyền). Câu trả lời bê nguyên ý của đoạn này !",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit6_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Những Con Rồng Komodo Đáng Kinh Ngạc</h1>\n\n<p style=\"margin-bottom: 1rem;\">Có một lần, một tờ <b>báo</b> của Anh đã đăng một câu chuyện khác thường. Các nhà khoa học tại một sở thú đã có một khám phá về rồng komodo. Rồng komodo là loài thằn lằn khổng lồ có thể dài tới hai mét rưỡi. Một con thằn lằn cái tại sở thú đã sinh con. Tuy nhiên, nó chưa từng ở gần một con thằn lằn đực nào trong suốt cuộc đời. Sau khi các nhà khoa học <b>công bố</b> khám phá của họ, nhiều người nghĩ rằng điều đó là <b>hư cấu</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng đó là sự thật. Người ta phát hiện ra rằng rồng komodo cái có thể sinh con mà không cần sự trợ giúp của <b>các cá thể đực tương ứng</b>. Điều này <b>mâu thuẫn</b> với những gì các nhà khoa học biết về cách hầu hết các loài động vật sinh sản.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong hầu hết các trường hợp, có nhiều điều có thể <b>cản trở</b> hình thức sinh sản này. Ví dụ, con đực và con cái trưởng thành mang các gen khác nhau cần thiết để tạo ra <b>phôi thai</b>. Nếu các gen này <b>đồng nhất</b>, những đứa con sinh ra sẽ yếu hơn và có các vấn đề về di truyền. Qua thời gian, loài yếu dần sẽ chết hoàn toàn. Điều này làm cho sự tham gia của con đực trở nên cần thiết. Tuy nhiên, các nhà khoa học đã <b>xác minh</b> rằng khi những con rồng Komodo con sinh ra, gen của chúng không hoàn toàn giống hệt gen của mẹ chúng. Hơn nữa, chúng <b>không có</b> bất kỳ vấn đề di truyền nào.</p>\n\n<p style=\"margin-bottom: 1rem;\">Các nhà khoa học <b>đưa ra giả thuyết</b> rằng rồng Komodo đã phát triển khả năng này vì nó giúp loài này <b>chống lại</b> sự tuyệt chủng. Nếu một ngọn núi lửa phun trào, dung nham có thể giết chết tất cả rồng komodo trên một hòn đảo. Tuy nhiên, chỉ cần một con cái <b>thoát khỏi</b> cái chết, nó có thể <b>kéo dài</b> sự sống sót của loài. May mắn thay, rồng Komodo là những con vật bơi lội <b>mạnh mẽ</b>. Vì vậy, con cái sống sót có thể <b>lao</b> xuống đại dương và bơi đến hòn đảo khác. Khi nó lên <b>bờ</b>, nó có thể tự sinh sản. Qua thời gian, các gen trong quần thể sẽ <b>phân hóa</b>. Sau đó, quần thể <b>thưa thớt</b> sẽ tăng lên. Một lần nữa lại có <b>sự dư thừa</b> thằn lằn trên một hòn đảo. Các nhà khoa học cho rằng đây có thể là cách mà những con thằn lằn này đã chiếm lĩnh toàn bộ các hòn đảo trong khu vực đó.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 6: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 11: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -20,13 +14,13 @@
               "id": "1",
               "content": "Who is a person with the power to authorize a war?",
               "options": [
-                "A president",
                 "A teacher",
                 "A guard",
-                "A chef"
+                "A chef",
+                "A president"
               ],
               "explanation": "A president has the power to authorize a war.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "2",
@@ -44,37 +38,37 @@
               "id": "3",
               "content": "What best describes a sage?",
               "options": [
-                "Intelligent",
                 "Alert",
+                "Intelligent",
                 "Heavy",
                 "Unreliable"
               ],
               "explanation": "A sage is very wise or intelligent.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "4",
               "content": "Which of the following is a valuable commodity?",
               "options": [
-                "Oil",
                 "Mountains",
                 "Rainwater",
+                "Oil",
                 "Grass"
               ],
               "explanation": "Oil is a valuable commodity.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "5",
               "content": "What might cause unrest at a school?",
               "options": [
-                "Students having daily tests",
                 "Students receiving lunch for free",
                 "Students getting rewarded for good grades",
-                "Students being told to go home early"
+                "Students being told to go home early",
+                "Students having daily tests"
               ],
               "explanation": "Students having daily tests might cause unrest.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -100,37 +94,37 @@
               "id": "7",
               "content": "conquest",
               "options": [
-                "liberation",
                 "combination",
+                "liberation",
                 "eliminate",
                 "shortage"
               ],
               "explanation": "The opposite of conquest is liberation.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "8",
               "content": "disclose",
               "options": [
-                "conceal",
                 "support",
                 "dry out",
+                "conceal",
                 "show as guilty"
               ],
               "explanation": "The opposite of disclose is conceal.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "9",
               "content": "euphoria",
               "options": [
-                "depression",
                 "measurement",
                 "suggestion",
-                "untruthfulness"
+                "untruthfulness",
+                "depression"
               ],
               "explanation": "The opposite of euphoria is depression.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -148,37 +142,37 @@
               "id": "11",
               "content": "sage",
               "options": [
-                "fool",
                 "stubborn",
+                "fool",
                 "gloomy",
                 "praiseworthy"
               ],
               "explanation": "The opposite of sage is fool.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "12",
               "content": "civilian",
               "options": [
-                "soldier",
                 "traditionalist",
                 "salesman",
+                "soldier",
                 "preacher"
               ],
               "explanation": "The opposite of civilian is soldier.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "13",
               "content": "festive",
               "options": [
-                "unhappy",
                 "honest",
                 "penniless",
-                "unchanging"
+                "unchanging",
+                "unhappy"
               ],
               "explanation": "The opposite of festive is unhappy.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -196,13 +190,13 @@
               "id": "15",
               "content": "advocate",
               "options": [
-                "oppose",
                 "fallen",
+                "oppose",
                 "sinner",
                 "antisocial"
               ],
               "explanation": "The opposite of advocate is oppose.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -216,37 +210,37 @@
               "id": "16",
               "content": "lentil",
               "options": [
-                "bean",
                 "prize",
+                "bean",
                 "nut",
                 "coin"
               ],
               "explanation": "A lentil is similar to a bean.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "17",
               "content": "envious",
               "options": [
-                "jealous",
                 "awkward",
                 "sensible",
+                "jealous",
                 "cowardly"
               ],
               "explanation": "Envious is similar to jealous.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "18",
               "content": "commodity",
               "options": [
-                "product",
                 "inactivity",
                 "genius",
-                "act of scolding"
+                "act of scolding",
+                "product"
               ],
               "explanation": "A commodity is similar to a product.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "19",
@@ -264,37 +258,37 @@
               "id": "20",
               "content": "prophecy",
               "options": [
-                "prediction",
                 "comes before",
+                "prediction",
                 "true story",
                 "large amount"
               ],
               "explanation": "A prophecy is similar to a prediction.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "21",
               "content": "morale",
               "options": [
-                "confidence",
                 "goodness",
                 "sympathy",
+                "confidence",
                 "temperature"
               ],
               "explanation": "Morale is similar to confidence.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "22",
               "content": "marshal",
               "options": [
-                "assemble",
                 "promise",
                 "attempt",
-                "contain"
+                "contain",
+                "assemble"
               ],
               "explanation": "To marshal is similar to assemble.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "23",
@@ -312,25 +306,25 @@
               "id": "24",
               "content": "senate",
               "options": [
-                "government",
                 "nice feeling",
+                "government",
                 "aspiration",
                 "school"
               ],
               "explanation": "A senate is similar to a government.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
               "content": "sentiment",
               "options": [
-                "opinion",
                 "confidence",
                 "effort",
+                "opinion",
                 "acceptance"
               ],
               "explanation": "Sentiment is similar to opinion.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -398,12 +392,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lydian King</h1>        <p style=\"margin-bottom: 1rem;\">King Croesus was once one of the richest kings in the world. He ruled over Lydia, an ancient empire located near modern-day Turkey and controlled a valuable <b>commodity</b>: gold. Many people were very <b>envious</b> of him.</p>    <p style=\"margin-bottom: 1rem;\">One day, a messenger <b>disclosed</b> some interesting news: political <b>unrest</b> in Persia had weakened the empire. Before then, the Persians had taken over many countries. Many leaders were scared of the Persian <b>conquest</b>. But King Croesus understood the <b>dynamics</b> of war better than most. He decided that it would be a good time to try to beat the Persians while they were weak.</p>    <p style=\"margin-bottom: 1rem;\">He <b>advocated</b> starting war, but nobody shared his <b>sentiment</b>. Then he asked a wise member of the <b>senate</b> who was visiting from Athens. The <b>sage</b> didn’t say whether he should attack the Persians or not. He only warned him that his good luck wouldn’t last.</p>    <p style=\"margin-bottom: 1rem;\">Finally, King Croesus sent a messenger to visit the Oracle, a special lady who could see the future. The messenger gave the Oracle jugs of wine and baskets of <b>lentils</b> in order to make her happy.</p>    <p style=\"margin-bottom: 1rem;\">When the messenger came back, he was in a <b>festive</b> mood.</p>    <p style=\"margin-bottom: 1rem;\">“What was the Oracle’s <b>prophecy</b>?” asked King Croesus.</p>    <p style=\"margin-bottom: 1rem;\">The <b>jolly</b> messenger responded, “She said that if you attack Persia, you will destroy a great empire.”</p>    <p style=\"margin-bottom: 1rem;\">The news filled Croesus with <b>euphoria</b>. After hearing the Oracle’s <b>prophecy</b>, many <b>civilians</b> <b>enrolled</b> in the Lydian army. The king <b>marshaled</b> his troops and prepared them for a war with Persia. Their <b>morale</b> was high because they were sure they would win. Soon, King Croesus <b>authorized</b> an attack against the Persians.</p>    <p style=\"margin-bottom: 1rem;\">However, the Persian army was still very strong. After a few months of fighting, it was obvious that the Oracle’s <b>prophecy</b> had come true: by attacking the Persians, King Croesus had destroyed a great empire—his own! King Croesus should have considered the advice more carefully.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lydian King</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">King Croesus was once one of the richest kings in the world. He ruled over Lydia, an ancient empire located near modern-day Turkey and controlled a valuable <b>commodity</b>: gold. Many people were very <b>envious</b> of him.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, a messenger <b>disclosed</b> some interesting news: political <b>unrest</b> in Persia had weakened the empire. Before then, the Persians had taken over many countries. Many leaders were scared of the Persian <b>conquest</b>. But King Croesus understood the <b>dynamics</b> of war better than most. He decided that it would be a good time to try to beat the Persians while they were weak.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He <b>advocated</b> starting war, but nobody shared his <b>sentiment</b>. Then he asked a wise member of the <b>senate</b> who was visiting from Athens. The <b>sage</b> didn’t say whether he should attack the Persians or not. He only warned him that his good luck wouldn’t last.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Finally, King Croesus sent a messenger to visit the Oracle, a special lady who could see the future. The messenger gave the Oracle jugs of wine and baskets of <b>lentils</b> in order to make her happy.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When the messenger came back, he was in a <b>festive</b> mood.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“What was the Oracle’s <b>prophecy</b>?” asked King Croesus.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>jolly</b> messenger responded, “She said that if you attack Persia, you will destroy a great empire.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The news filled Croesus with <b>euphoria</b>. After hearing the Oracle’s <b>prophecy</b>, many <b>civilians</b> <b>enrolled</b> in the Lydian army. The king <b>marshaled</b> his troops and prepared them for a war with Persia. Their <b>morale</b> was high because they were sure they would win. Soon, King Croesus <b>authorized</b> an attack against the Persians.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">However, the Persian army was still very strong. After a few months of fighting, it was obvious that the Oracle’s <b>prophecy</b> had come true: by attacking the Persians, King Croesus had destroyed a great empire—his own! King Croesus should have considered the advice more carefully.</p></div>",
       "imageUrl": "/unit11_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -468,13 +462,13 @@
               "id": "36",
               "content": "Why did King Croesus advocate war against the Persians?",
               "options": [
-                "King Croesus advocated war with the Persians because the Persians were politically weak.",
                 "He wanted to take their gold.",
                 "The sage told him to.",
-                "The Oracle's prophecy was good."
+                "The Oracle's prophecy was good.",
+                "King Croesus advocated war with the Persians because the Persians were politically weak."
               ],
               "explanation": "Đáp án đúng là A. Ở đoạn hai, tác giả viết: \"He decided that it would be a good time to try to beat the Persians while they were weak\" (Ông quyết định rằng đây sẽ là thời điểm tốt để đánh bại người Ba Tư trong khi họ đang suy yếu).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "37",
@@ -492,42 +486,50 @@
               "id": "38",
               "content": "How did King Croesus feel after he heard the Oracle’s prophecy?",
               "options": [
-                "King Croesus was filled with euphoria after he heard the Oracle’s prophecy.",
                 "He was very angry.",
+                "King Croesus was filled with euphoria after he heard the Oracle’s prophecy.",
                 "He felt sad and envious.",
                 "He was filled with unrest."
               ],
               "explanation": "Đáp án đúng là A. Ngay đầu đoạn tám, bài viết miêu tả cảm xúc của nhà vua: \"The news filled Croesus with euphoria\" (Tin tức khiến Croesus tràn ngập cảm giác sung sướng tột độ).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "39",
               "content": "How did the civilians who enrolled and were marshaled in the Lydian army feel about the war?",
               "options": [
-                "The civilians who enrolled and were marshaled in the army had high morale because they thought they would win.",
                 "They had low morale and wanted to quit.",
                 "They were scared of the Persians.",
+                "The civilians who enrolled and were marshaled in the army had high morale because they thought they would win.",
                 "They were envious of the king."
               ],
               "explanation": "Đáp án đúng là A. Ở đoạn tám miêu tả tâm trạng của binh lính và dân thường tham gia quân đội: \"Their morale was high because they were sure they would win\" (Tinh thần của họ rất cao vì họ chắc chắn rằng mình sẽ chiến thắng).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "40",
               "content": "What did King Croesus learn from the experience?",
               "options": [
-                "King Croesus learned that he should have considered advice more carefully.",
                 "He learned how to fight better.",
                 "He learned that the Oracle lied.",
-                "He learned that Persians are friendly."
+                "He learned that Persians are friendly.",
+                "King Croesus learned that he should have considered advice more carefully."
               ],
               "explanation": "Đáp án đúng là A. Câu cuối cùng của câu chuyện đúc kết lại bài học mà ông nhận được: \"King Croesus should have considered the advice more carefully\" (Vua Croesus lẽ ra nên cân nhắc lời khuyên một cách cẩn thận hơn).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n<img src=\"/unit11_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Vị vua nước Lydia</h1>\n\n<p style=\"margin-bottom: 1rem;\">Vua Croesus từng là một trong những vị vua giàu có nhất thế giới. Ông cai trị Lydia, một đế chế cổ đại nằm gần Thổ Nhĩ Kỳ ngày nay và kiểm soát một <b>hàng hoá</b> có giá trị: vàng. Nhiều người rất <b>ghen tị</b> với ông.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, một sứ giả <b>tiết lộ</b> một số tin tức thú vị: <b>sự bất ổn</b> chính trị ở Ba Tư đã làm suy yếu đế chế này. Trước đó, người Ba Tư đã chiếm lấy nhiều quốc gia. Nhiều nhà lãnh đạo sợ hãi <b>sự chinh phục</b> của Ba Tư. Nhưng Vua Croesus hiểu rõ <b>động lực</b> của chiến tranh hơn hầu hết mọi người. Ông quyết định rằng đây sẽ là thời điểm tốt để cố gắng đánh bại người Ba Tư trong khi họ đang suy yếu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông <b>ủng hộ</b> việc bắt đầu chiến tranh, nhưng không ai chia sẻ <b>quan điểm</b> của ông. Sau đó, ông đã hỏi một thành viên thông thái của <b>thượng viện</b> đang đến thăm từ Athens. Vị <b>hiền triết</b> không nói liệu ông có nên tấn công người Ba Tư hay không. Ông ấy chỉ cảnh báo ông rằng sự may mắn của ông sẽ không kéo dài.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, Vua Croesus cử một sứ giả đến thăm Nhà tiên tri Oracle, một người phụ nữ đặc biệt có thể nhìn thấy tương lai. Người sứ giả đã đưa cho Oracle những bình rượu và những giỏ <b>đậu lăng</b> để làm bà vui vẻ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi sứ giả trở về, anh ta đang trong một tâm trạng <b>hân hoan</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"<b>Lời tiên tri</b> của Oracle là gì?\" Vua Croesus hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người sứ giả <b>vui vẻ</b> trả lời: \"Bà ấy nói rằng nếu ngài tấn công Ba Tư, ngài sẽ phá huỷ một đế chế vĩ đại.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Tin tức này khiến Croesus tràn ngập sự <b>hưng phấn</b>. Sau khi nghe <b>lời tiên tri</b> của Oracle, nhiều <b>dân thường</b> đã <b>đăng ký</b> vào quân đội Lydia. Nhà vua đã <b>tập hợp</b> quân đội của mình và chuẩn bị cho họ một cuộc chiến với Ba Tư. <b>Tinh thần</b> của họ rất cao vì họ chắc chắn rằng mình sẽ chiến thắng. Chẳng bao lâu, Vua Croesus đã <b>cho phép</b> một cuộc tấn công chống lại người Ba Tư.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, quân đội Ba Tư vẫn rất mạnh. Sau một vài tháng chiến đấu, rõ ràng là <b>lời tiên tri</b> của Oracle đã trở thành sự thật: bằng cách tấn công người Ba Tư, Vua Croesus đã phá huỷ một đế chế vĩ đại — đế chế của chính mình! Vua Croesus đáng lẽ nên xem xét lời khuyên một cách cẩn thận hơn.</p>\n</div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 11: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

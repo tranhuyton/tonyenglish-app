@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 7: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -455,12 +449,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Small World</h1>        <p style=\"margin-bottom: 1rem;\">Even though people can't see me, I'm an important part of Earth's <b>biosphere</b>. Scientists who study <b>ecology</b> know that I was the first life form on Earth. There is more of my kind than any other plant or animal in the world. Without me, other plants and animals would not even exist. I am a protist, and my tiny body is made up of one single cell.</p>    <p style=\"margin-bottom: 1rem;\">In my small world, things can be absolutely <b>bizarre</b>. Unlike most <b>aquatic</b> plants and animals, I don't need a <b>temperate</b> climate. I have a very high <b>tolerance</b> for extreme conditions. Right now, I'm swimming around in a bucket of boiling water! The temperature is 150 degrees <b>Celsius</b>, but I feel comfortable. I have <b>coarse</b> hairs called cilia that help me swim around in here. I move my cilia in a <b>repetitive</b> motion for the <b>duration</b> of my swim. I cannot go very fast, though. It takes me about five minutes to swim a distance of just one millimeter!</p>    <p style=\"margin-bottom: 1rem;\">When I get hungry, I look for tiny, <b>vulnerable</b> <b>parasites</b>. I swim up to one and swallow it whole. I <b>digest</b> things much like people do. I have an organ that works just like a human stomach. After I eat, I release nitrogen gas. Nitrogen is a <b>prominent</b> gas in the earth's atmosphere. Other plants and animals need my nitrogen to survive.</p>    <p style=\"margin-bottom: 1rem;\">My <b>reproductive</b> ability is my most unique trait. I don't need a <b>companion</b> to mate with. Instead, I <b>undergo</b> a process called fission, where my own <b>nucleus</b> splits in half. An exact copy of my nucleus is made, which forms into another protist. It really is an impressive <b>feat</b>. I can create an <b>infinite</b> number of new protists all by myself!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Small World</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Even though people can't see me, I'm an important part of Earth's <b>biosphere</b>. Scientists who study <b>ecology</b> know that I was the first life form on Earth. There is more of my kind than any other plant or animal in the world. Without me, other plants and animals would not even exist. I am a protist, and my tiny body is made up of one single cell.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In my small world, things can be absolutely <b>bizarre</b>. Unlike most <b>aquatic</b> plants and animals, I don't need a <b>temperate</b> climate. I have a very high <b>tolerance</b> for extreme conditions. Right now, I'm swimming around in a bucket of boiling water! The temperature is 150 degrees <b>Celsius</b>, but I feel comfortable. I have <b>coarse</b> hairs called cilia that help me swim around in here. I move my cilia in a <b>repetitive</b> motion for the <b>duration</b> of my swim. I cannot go very fast, though. It takes me about five minutes to swim a distance of just one millimeter!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When I get hungry, I look for tiny, <b>vulnerable</b> <b>parasites</b>. I swim up to one and swallow it whole. I <b>digest</b> things much like people do. I have an organ that works just like a human stomach. After I eat, I release nitrogen gas. Nitrogen is a <b>prominent</b> gas in the earth's atmosphere. Other plants and animals need my nitrogen to survive.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">My <b>reproductive</b> ability is my most unique trait. I don't need a <b>companion</b> to mate with. Instead, I <b>undergo</b> a process called fission, where my own <b>nucleus</b> splits in half. An exact copy of my nucleus is made, which forms into another protist. It really is an impressive <b>feat</b>. I can create an <b>infinite</b> number of new protists all by myself!</p></div>",
       "imageUrl": "/unit7_vol5_story.png",
       "sections": [
         {
           "id": "sec4_reading_tf",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -584,7 +578,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit7_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thế Giới Nhỏ Bé</h1>\n\n<p style=\"margin-bottom: 1rem;\">Mặc dù con người không thể nhìn thấy tôi, tôi là một phần quan trọng của <b>sinh quyển</b> trên Trái Đất. Các nhà khoa học nghiên cứu <b>sinh thái học</b> biết rằng tôi là dạng sống đầu tiên trên Trái Đất. Có nhiều đồng loại của tôi hơn bất kỳ loài thực vật hay động vật nào khác trên thế giới. Nếu không có tôi, các loài thực vật và động vật khác thậm chí sẽ không tồn tại. Tôi là một sinh vật nguyên sinh, và cơ thể nhỏ bé của tôi được tạo thành từ một tế bào duy nhất.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong thế giới nhỏ bé của tôi, mọi thứ có thể hoàn toàn <b>kỳ quái</b>. Không giống như hầu hết các loài thực vật và động vật <b>dưới nước</b>, tôi không cần một khí hậu <b>ôn hòa</b>. Tôi có <b>sức chịu đựng</b> rất cao đối với các điều kiện khắc nghiệt. Ngay bây giờ, tôi đang bơi lội trong một xô nước sôi! Nhiệt độ là 150 độ <b>C</b>, nhưng tôi cảm thấy thoải mái. Tôi có những sợi lông <b>thô ráp</b> được gọi là lông rung giúp tôi bơi lội trong này. Tôi di chuyển các lông rung của mình trong một chuyển động <b>lặp đi lặp lại</b> trong suốt <b>khoảng thời gian</b> bơi của tôi. Tuy nhiên, tôi không thể đi rất nhanh. Tôi mất khoảng năm phút để bơi một khoảng cách chỉ một milimét!</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi tôi cảm thấy đói, tôi tìm kiếm những <b>ký sinh trùng</b> nhỏ bé, <b>dễ bị tổn thương</b>. Tôi bơi lại gần một con và nuốt chửng nó. Tôi <b>tiêu hóa</b> mọi thứ khá giống với con người. Tôi có một cơ quan hoạt động giống hệt như dạ dày của con người. Sau khi ăn, tôi giải phóng khí nitơ. Nitơ là một loại khí <b>nổi bật</b> trong bầu khí quyển của Trái Đất. Những loài thực vật và động vật khác cần lượng nitơ của tôi để sinh tồn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khả năng <b>sinh sản</b> của tôi là đặc điểm độc đáo nhất. Tôi không cần một <b>bạn tình</b> để giao phối cùng. Thay vào đó, tôi <b>trải qua</b> một quá trình gọi là phân hạch, nơi mà <b>nhân</b> của chính tôi chia làm đôi. Một bản sao chính xác của nhân của tôi được tạo ra, cái mà sau đó hình thành nên một sinh vật nguyên sinh khác. Đó thực sự là một <b>kỳ tích</b> đáng ấn tượng. Tôi có thể tự mình tạo ra một số lượng <b>vô hạn</b> các sinh vật nguyên sinh mới!</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 7: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

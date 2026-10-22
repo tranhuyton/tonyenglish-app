@@ -26,37 +26,37 @@
               "id": "2",
               "content": "It takes a lot of _____ to design new airplanes. You have to know how to make them go _____ in the easiest way.",
               "options": [
-                "arithmetic / upwards",
                 "ashamed / couch",
+                "arithmetic / upwards",
                 "burst / dripped",
                 "carpenter / sew"
               ],
               "explanation": "arithmetic: toán học, upwards: hướng lên.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "3",
               "content": "You should be _____ of yourself! You know you're not supposed to eat on the _____.",
               "options": [
-                "ashamed / couch",
                 "burst / dripped",
                 "carpenter / sew",
+                "ashamed / couch",
                 "highlands / coal"
               ],
               "explanation": "ashamed: xấu hổ, couch: ghế dài.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "4",
               "content": "When the wind blew, the door _____ open. And since it was raining, water _____ into the room.",
               "options": [
-                "burst / dripped",
                 "carpenter / sew",
                 "highlands / coal",
-                "needle / ivory"
+                "needle / ivory",
+                "burst / dripped"
               ],
               "explanation": "burst: bật mở, dripped: nhỏ giọt.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -74,37 +74,37 @@
               "id": "6",
               "content": "I heard a news story about something in the _____. I guess they found _____ under the ground.",
               "options": [
-                "highlands / coal",
                 "needle / ivory",
+                "highlands / coal",
                 "mill / threads",
                 "polish / fabric"
               ],
               "explanation": "highlands: vùng cao nguyên, coal: than đá.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "7",
               "content": "Archeologist found _____ made from _____ in Africa.",
               "options": [
-                "needles / ivory",
                 "mills / threads",
                 "polishes / fabrics",
+                "needles / ivory",
                 "sheds / trims"
               ],
               "explanation": "needles: cây kim, ivory: ngà voi. (Lưu ý: số nhiều của needle).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "8",
               "content": "People who work at the _____ do many things to stay safe. For example, they do not have _____ hanging from their clothing because they can get caught in the machinery.",
               "options": [
-                "mill / threads",
                 "polish / fabric",
                 "shed / trim",
-                "anniversary / elegant"
+                "anniversary / elegant",
+                "mill / threads"
               ],
               "explanation": "mill: cối xay, threads: sợi chỉ.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "9",
@@ -122,13 +122,13 @@
               "id": "10",
               "content": "On Saturday, my dad made me clean out the _____. I also had to _____ the bushes.",
               "options": [
-                "shed / trim",
                 "anniversary / elegant",
+                "shed / trim",
                 "arithmetic / upwards",
                 "ashamed / couch"
               ],
               "explanation": "shed: nhà kho, trim: cắt tỉa.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -150,14 +150,14 @@
               "content": "",
               "options": [],
               "explanation": "thin strings (sợi chỉ) tương đương threads.",
-              "correctAnswer": "THREADS"
+              "correctAnswer": "threads / thread"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
               "explanation": "cut off (cắt tỉa) tương đương trimmed. Lưu ý từ gốc là trim.",
-              "correctAnswer": "TRIMMED"
+              "correctAnswer": "trimmed / trim"
             },
             {
               "id": "14",
@@ -284,13 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Anniversary Gift</h1>        <p style=\"margin-bottom: 1rem;\">Joe was a <strong>carpenter</strong>. He built houses in the <strong>highlands</strong>. Joe's wife Stella used a <strong>needle</strong> and <strong>thread</strong> to <strong>sew</strong> <strong>elegant</strong> clothing. She only used beautiful <strong>fabric</strong> to make clothes.</p>    <p style=\"margin-bottom: 1rem;\">Since they didn't have a lot of money, they lived in an old <strong>shed</strong>. Water dripped in when it rained. They had broken chairs instead of a <strong>couch</strong>. But they had <strong>coal</strong> for heat, and flour from the <strong>mill</strong> for bread. Together, they trimmed the bushes to make their house look nice. Joe and Stella were poor, but not <strong>ashamed</strong>. They were happy.</p>    <p style=\"margin-bottom: 1rem;\">Sometimes in the evening, they walked downtown. They looked in store windows and dreamed. Stella wanted a hairbrush with an <strong>ivory</strong> handle. She pulled her hair <strong>upwards</strong> every day because she didn't have a brush to make it nice. Joe wanted to fix his grandfather's watch.</p>    <p style=\"margin-bottom: 1rem;\">For their <strong>anniversary</strong>, Stella wanted to get Joe what he wanted. But then she did the <strong>arithmetic</strong>. It would take at least six months to save enough money. Then she had an idea. She cut off all of her hair and sold it.</p>    <p style=\"margin-bottom: 1rem;\">Meanwhile, Joe knew that he could never fix his watch. So he <strong>polished</strong> it and sold it. He made enough to buy the brush.</p>    <p style=\"margin-bottom: 1rem;\">On their <strong>anniversary</strong>, the door <strong>burst</strong> open. Joe was excited to give Stella his gift. But first, Stella gave him the money to fix the watch. When he saw his wife without any hair, he smiled. \"I sold my watch to buy you something,\" Joe said. He gave her the brush, and she laughed. They were both willing to give up something very special to make each other happy.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Anniversary Gift</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Joe was a <strong>carpenter</strong>. He built houses in the <strong>highlands</strong>. Joe's wife Stella used a <strong>needle</strong> and <strong>thread</strong> to <strong>sew</strong> <strong>elegant</strong> clothing. She only used beautiful <strong>fabric</strong> to make clothes.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Since they didn't have a lot of money, they lived in an old <strong>shed</strong>. Water dripped in when it rained. They had broken chairs instead of a <strong>couch</strong>. But they had <strong>coal</strong> for heat, and flour from the <strong>mill</strong> for bread. Together, they trimmed the bushes to make their house look nice. Joe and Stella were poor, but not <strong>ashamed</strong>. They were happy.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Sometimes in the evening, they walked downtown. They looked in store windows and dreamed. Stella wanted a hairbrush with an <strong>ivory</strong> handle. She pulled her hair <strong>upwards</strong> every day because she didn't have a brush to make it nice. Joe wanted to fix his grandfather's watch.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">For their <strong>anniversary</strong>, Stella wanted to get Joe what he wanted. But then she did the <strong>arithmetic</strong>. It would take at least six months to save enough money. Then she had an idea. She cut off all of her hair and sold it.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Meanwhile, Joe knew that he could never fix his watch. So he <strong>polished</strong> it and sold it. He made enough to buy the brush.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">On their <strong>anniversary</strong>, the door <strong>burst</strong> open. Joe was excited to give Stella his gift. But first, Stella gave him the money to fix the watch. When he saw his wife without any hair, he smiled. \"I sold my watch to buy you something,\" Joe said. He gave her the brush, and she laughed. They were both willing to give up something very special to make each other happy.</p></div>",
       "imageUrl": "/unit8_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -352,12 +351,12 @@
               "explanation": "Đáp án: True. Ở đoạn 2, tác giả có nhắc đến ngôi nhà của họ: 'Water dripped in when it rained.' Tức là nước mưa nhỏ giọt vào trong nhà mỗi khi trời mưa. Do vậy nhận định này là đúng.",
               "correctAnswer": "True"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -407,9 +406,11 @@
               "explanation": "Đáp án: Sold her hair. Câu hỏi muốn biết Stella đã làm gì cho Joe vào ngày kỷ niệm. Cuối đoạn 4 có viết: 'She cut off all of her hair and sold it.' Stella đã cắt mái tóc của mình và bán đi để có tiền mua quà cho Joe.",
               "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit8_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Món quà kỷ niệm</h1>\n\n<p style=\"margin-bottom: 1rem;\">Joe là một <strong>thợ mộc</strong>. Anh ấy xây những ngôi nhà ở <strong>vùng cao nguyên</strong>. Vợ của Joe là Stella dùng <strong>cây kim</strong> và <strong>sợi chỉ</strong> để <strong>may</strong> những bộ quần áo <strong>thanh lịch</strong>. Cô ấy chỉ sử dụng những tấm <strong>vải</strong> đẹp để may quần áo.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vì không có nhiều tiền, họ sống trong một cái <strong>nhà kho</strong> cũ. Nước nhỏ giọt vào nhà khi trời mưa. Họ có những chiếc ghế gãy thay vì một chiếc <strong>ghế sô pha</strong>. Nhưng họ có <strong>than đá</strong> để sưởi ấm, và bột mì từ <strong>nhà máy xay</strong> để làm bánh mì. Cùng nhau, họ cắt tỉa các bụi cây để làm cho ngôi nhà của họ trông đẹp hơn. Joe và Stella tuy nghèo nhưng không hề <strong>xấu hổ</strong>. Họ rất hạnh phúc.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đôi khi vào buổi tối, họ đi dạo quanh trung tâm thị trấn. Họ nhìn vào cửa sổ các cửa hàng và mơ mộng. Stella muốn một chiếc lược chải tóc có tay cầm bằng <strong>ngà voi</strong>. Cô ấy phải búi tóc <strong>hướng lên trên</strong> mỗi ngày vì không có một chiếc lược để chải cho đẹp. Joe thì muốn sửa lại chiếc đồng hồ của ông nội mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhân <strong>lễ kỷ niệm</strong> của họ, Stella muốn tặng Joe những gì anh ấy muốn. Nhưng sau đó cô làm một <strong>phép tính</strong>. Sẽ phải mất ít nhất sáu tháng để tiết kiệm đủ tiền. Rồi cô nảy ra một ý tưởng. Cô đã cắt hết tóc của mình và bán nó đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong khi đó, Joe biết rằng mình sẽ không bao giờ có thể sửa được chiếc đồng hồ. Vì vậy, anh ấy đã <strong>đánh bóng</strong> nó và bán đi. Anh ấy kiếm đủ tiền để mua chiếc lược chải tóc.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào <strong>lễ kỷ niệm</strong> của họ, cánh cửa <strong>bật tung</strong> mở. Joe rất háo hức muốn tặng Stella món quà của mình. Nhưng trước tiên, Stella đưa cho anh số tiền để sửa đồng hồ. Khi nhìn thấy người vợ không còn tóc, anh mỉm cười. \"Anh đã bán chiếc đồng hồ của mình để mua cho em một thứ,\" Joe nói. Anh đưa cho cô chiếc lược, và cô bật cười. Cả hai đều sẵn sàng từ bỏ một thứ rất đặc biệt để làm cho nhau hạnh phúc.</p>\n</div>"
     }
   ],
   "basicInfo": {

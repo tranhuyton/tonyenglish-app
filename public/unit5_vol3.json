@@ -14,37 +14,37 @@
               "id": "1",
               "content": "Mary ____________ the creature that came into her yard and ____________ her dog.",
               "options": [
-                "cursed / scared",
                 "scared / cursed",
+                "cursed / scared",
                 "curses / scares",
                 "cursing / scary"
               ],
               "explanation": "cursed (nguyền rủa), scared (làm hoảng sợ).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "2",
               "content": "I don't like to walk in the ____________. I always think about the ____________ that are under the ground there.",
               "options": [
-                "cemetery / skeletons",
                 "skeletons / cemetery",
                 "cemeteries / skeleton",
+                "cemetery / skeletons",
                 "skeleton / cemeteries"
               ],
               "explanation": "cemetery (nghĩa trang), skeletons (bộ xương).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "3",
               "content": "My mother bought me a ____________ new coat. My favorite part is the warm ____________.",
               "options": [
-                "fancy / hood",
                 "hood / fancy",
                 "fancies / hoods",
-                "hoods / fancies"
+                "hoods / fancies",
+                "fancy / hood"
               ],
               "explanation": "fancy (lộng lẫy/đẹp đẽ), hood (mũ trùm đầu).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,37 +62,37 @@
               "id": "5",
               "content": "Judy wanted to find a ____________ that was scary. Finally, she decided to dress like a ____________ witch.",
               "options": [
-                "disguise / wicked",
                 "wicked / disguise",
+                "disguise / wicked",
                 "disguises / wickedness",
                 "wickedness / disguises"
               ],
               "explanation": "disguise (đồ hóa trang), wicked (độc ác).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "6",
               "content": "We planted a vegetable garden to help ____________ our family. But many of the plants ____________ before we could eat them.",
               "options": [
-                "nourish / rotted",
                 "rotted / nourish",
                 "nourishes / rotting",
+                "nourish / rotted",
                 "rotting / nourishes"
               ],
               "explanation": "nourish (nuôi dưỡng), rotted (đã thối rữa).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "7",
               "content": "The poor family was ____________ after all of their food ____________.",
               "options": [
-                "starving / spoiled",
                 "spoiled / starving",
                 "starves / spoils",
-                "spoils / starves"
+                "spoils / starves",
+                "starving / spoiled"
               ],
               "explanation": "starving (chết đói), spoiled (đã hỏng).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -110,25 +110,25 @@
               "id": "9",
               "content": "I entered a contest that was in my favorite ____________. Imagine the ____________ when I won!",
               "options": [
-                "publication / thrill",
                 "thrill / publication",
+                "publication / thrill",
                 "publications / thrills",
                 "thrills / publications"
               ],
               "explanation": "publication (ấn phẩm), thrill (sự phấn khích).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "10",
               "content": "Christie ____________ me with her city's library. Since then, I have read every book they have about ____________.",
               "options": [
-                "acquainted / pirates",
                 "pirates / acquainted",
                 "acquaints / pirate",
+                "acquainted / pirates",
                 "pirate / acquaints"
               ],
               "explanation": "acquainted (làm quen), pirates (cướp biển).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -284,13 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Trick-or-treat!</h1>        <p style=\"margin-bottom: 1rem;\">Many different cultures have had traditions about the dead. People in places like Ireland, China, Egypt and Mexico believed that souls needed food. They thought the food <strong>nourished</strong> them on their journey from cemeteries to heaven. People had to put out good things for souls to eat. However, if the food rotted or <strong>spoiled</strong>, the soul got mad. The <strong>wicked</strong> soul might <strong>curse</strong> the family and make them <strong>starve</strong> during the winter.</p>    <p style=\"margin-bottom: 1rem;\">In other places, people begged for food on a holiday that remembers the souls of dead saints. People wore <strong>disguises</strong> with <strong>hoods</strong> that covered their faces. If they did not get food, they played a trick on the home. For this reason, the activity is known as \"trick-or-treating.\" <strong>Shortly</strong> after people first began trick-or-treating, parents started sending their children to beg on that day. Housewives gave the children food if they performed a song or a dance. When people moved to America from all over the world, they brought this tradition with them.</p>    <p style=\"margin-bottom: 1rem;\"><strong>Inhabitants</strong> of villages started trick-or-treating in the early 1900s. In 1939 a children's <strong>publication</strong> <strong>acquainted</strong> the whole country with the tradition. It became very popular.</p>    <p style=\"margin-bottom: 1rem;\">Today, trick-or-treaters are not begging for food, and they are not <strong>scared</strong> of souls. They just enjoy the <strong>thrill</strong> of dressing up like creatures and getting candy. Ghosts and <strong>skeletons</strong> are favorite costumes. But some children wear <strong>fancy</strong> <strong>disguises</strong>, like <strong>pirates</strong>. They carry <strong>flashlights</strong> instead of fires. In some places, children still perform songs or <strong>riddles</strong> to get candy. But most of the time, they just say \"Trick-or-Treat!\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Trick-or-treat!</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Many different cultures have had traditions about the dead. People in places like Ireland, China, Egypt and Mexico believed that souls needed food. They thought the food <strong>nourished</strong> them on their journey from cemeteries to heaven. People had to put out good things for souls to eat. However, if the food rotted or <strong>spoiled</strong>, the soul got mad. The <strong>wicked</strong> soul might <strong>curse</strong> the family and make them <strong>starve</strong> during the winter.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In other places, people begged for food on a holiday that remembers the souls of dead saints. People wore <strong>disguises</strong> with <strong>hoods</strong> that covered their faces. If they did not get food, they played a trick on the home. For this reason, the activity is known as \"trick-or-treating.\" <strong>Shortly</strong> after people first began trick-or-treating, parents started sending their children to beg on that day. Housewives gave the children food if they performed a song or a dance. When people moved to America from all over the world, they brought this tradition with them.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\"><strong>Inhabitants</strong> of villages started trick-or-treating in the early 1900s. In 1939 a children's <strong>publication</strong> <strong>acquainted</strong> the whole country with the tradition. It became very popular.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Today, trick-or-treaters are not begging for food, and they are not <strong>scared</strong> of souls. They just enjoy the <strong>thrill</strong> of dressing up like creatures and getting candy. Ghosts and <strong>skeletons</strong> are favorite costumes. But some children wear <strong>fancy</strong> <strong>disguises</strong>, like <strong>pirates</strong>. They carry <strong>flashlights</strong> instead of fires. In some places, children still perform songs or <strong>riddles</strong> to get candy. But most of the time, they just say \"Trick-or-Treat!\"</p></div>",
       "imageUrl": "/unit5_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -352,12 +351,12 @@
               "explanation": "Xem lại đoạn 3 của bài viết: \"Inhabitants of villages started trick-or-treating in the early 1900s.\" (Cư dân của các ngôi làng đã bắt đầu trò 'trick-or-treat' vào đầu những năm 1900). Chứ không phải vào những năm 1940. Vậy câu này là Sai (False) nhé.",
               "correctAnswer": "False"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -407,9 +406,11 @@
               "explanation": "Đoạn cuối bài viết có nói \"In some places, children still perform songs or riddles to get candy.\" (Ở một số nơi, trẻ em vẫn biểu diễn các bài hát hoặc câu đố để nhận được kẹo). Mục đích là để có được kẹo (To get candy).",
               "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit5_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cho kẹo hay bị ghẹo!</h1>\n\n<p style=\"margin-bottom: 1rem;\">Nhiều nền văn hóa khác nhau đã có những truyền thống về người chết. Người dân ở những nơi như Ireland, Trung Quốc, Ai Cập và Mexico tin rằng các linh hồn cần thức ăn. Họ nghĩ rằng thức ăn sẽ <strong>nourished</strong> (nuôi dưỡng) các linh hồn trên hành trình từ nghĩa trang lên thiên đường. Mọi người phải bày ra những món ngon cho các linh hồn ăn. Tuy nhiên, nếu thức ăn bị thối rữa hoặc <strong>spoiled</strong> (hư hỏng), linh hồn sẽ nổi giận. Linh hồn <strong>wicked</strong> (độc ác) đó có thể <strong>curse</strong> (nguyền rủa) gia đình và khiến họ <strong>starve</strong> (chết đói) trong suốt mùa đông.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ở những nơi khác, mọi người đi xin thức ăn vào một ngày lễ tưởng nhớ linh hồn của các vị thánh đã khuất. Mọi người mặc những bộ đồ <strong>disguises</strong> (hóa trang) với những chiếc mũ trùm đầu (<strong>hoods</strong>) che kín mặt. Nếu không nhận được thức ăn, họ sẽ bày trò chọc ghẹo ngôi nhà đó. Vì lý do này, hoạt động này được biết đến với tên gọi \"cho kẹo hay bị ghẹo\". <strong>Shortly</strong> (Chẳng bao lâu) sau khi mọi người bắt đầu đi xin kẹo, các bậc cha mẹ bắt đầu cử con cái của họ đi xin ăn vào ngày đó. Các bà nội trợ sẽ cho trẻ em thức ăn nếu chúng biểu diễn một bài hát hoặc một điệu nhảy. Khi mọi người từ khắp nơi trên thế giới chuyển đến Mỹ, họ đã mang theo truyền thống này.</p>\n\n<p style=\"margin-bottom: 1rem;\"><strong>Inhabitants</strong> (Cư dân) của các ngôi làng bắt đầu chơi trò \"cho kẹo hay bị ghẹo\" vào đầu những năm 1900. Năm 1939, một <strong>publication</strong> (ấn phẩm) dành cho trẻ em đã giúp cả nước Mỹ <strong>acquainted</strong> (làm quen) với truyền thống này. Nó đã trở nên rất phổ biến.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày nay, những đứa trẻ chơi trò \"cho kẹo hay bị ghẹo\" không đi xin thức ăn và chúng cũng không <strong>scared</strong> (sợ hãi) các linh hồn. Chúng chỉ tận hưởng sự <strong>thrill</strong> (hồi hộp) khi hóa trang thành các sinh vật và nhận kẹo. Ma và bộ xương (<strong>skeletons</strong>) là những trang phục được yêu thích nhất. Nhưng một số trẻ em mặc những bộ đồ hóa trang <strong>fancy</strong> (đẹp mắt), như cướp biển (<strong>pirates</strong>). Chúng mang theo đèn pin (<strong>flashlights</strong>) thay vì đuốc lửa. Ở một số nơi, trẻ em vẫn biểu diễn các bài hát hoặc câu đố (<strong>riddles</strong>) để nhận được kẹo. Nhưng hầu hết mọi lúc, chúng chỉ nói \"Cho kẹo hay bị ghẹo!\"</p>\n</div>"
     }
   ],
   "basicInfo": {

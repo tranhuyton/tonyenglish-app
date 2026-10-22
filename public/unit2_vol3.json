@@ -150,25 +150,25 @@
               "id": "11",
               "content": "<p class=\"mb-4\">a. discourage b. lodge c. venture d. hut</p>",
               "options": [
-                "lodge and hut",
                 "venture and hut",
                 "discourage and hut",
+                "lodge and hut",
                 "lodge and venture"
               ],
               "explanation": "Lodge và hut đều chỉ các loại nhà gỗ, lều nhỏ.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "12",
               "content": "<p class=\"mb-4\">a. shepherd b. caretaker c. repay d. wheat</p>",
               "options": [
-                "shepherd and caretaker",
                 "repay and wheat",
                 "shepherd and wheat",
-                "caretaker and repay"
+                "caretaker and repay",
+                "shepherd and caretaker"
               ],
               "explanation": "Shepherd và caretaker đều chỉ người chăm sóc, trông nom.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "13",
@@ -186,25 +186,25 @@
               "id": "14",
               "content": "<p class=\"mb-4\">a. acquire b. awkward c. newcomer d. ridiculous</p>",
               "options": [
-                "awkward and ridiculous",
                 "newcomer and ridiculous",
+                "awkward and ridiculous",
                 "acquire and ridiculous",
                 "awkward and newcomer"
               ],
               "explanation": "Awkward (kỳ cục) và ridiculous (nực cười) có nghĩa gần giống nhau.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
               "content": "<p class=\"mb-4\">a. overlook b. inferior c. neglect d. satisfactory</p>",
               "options": [
-                "overlook and neglect",
                 "neglect and satisfactory",
                 "overlook and satisfactory",
+                "overlook and neglect",
                 "inferior and neglect"
               ],
               "explanation": "Overlook (bỏ qua) và neglect (bỏ bê) đều liên quan đến sự thiếu chú ý.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -218,28 +218,34 @@
               "id": "16",
               "content": "The girl didn't like the ________, so she played a joke on them. She put ________ bugs in their drinks. (fake / newcomers)",
               "options": [
+                "fake / newcomers",
+                "acquire / lodge",
                 "newcomers / fake",
-                "fake / newcomers"
+                "repay / neglected"
               ],
               "explanation": "newcomers (người mới đến) và fake (giả mạo).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "17",
               "content": "Dave hoped to ________ a new house. The ________ where he lived was too old. (acquire / lodge)",
               "options": [
-                "acquire / lodge",
-                "lodge / acquire"
+                "lodge / acquire",
+                "repay / neglected",
+                "discouraged / offenses",
+                "acquire / lodge"
               ],
               "explanation": "acquire (sở hữu) và lodge (căn nhà gỗ).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "18",
               "content": "She was eager to ________ the boy that had helped her repair her bike. While others had simply ________ her, he was happy to help. (repay / neglected)",
               "options": [
                 "repay / neglected",
-                "neglected / repay"
+                "neglected / repay",
+                "discouraged / offenses",
+                "shepherd / venturing"
               ],
               "explanation": "repay (đền đáp) và neglected (bỏ mặc).",
               "correctAnswer": "A"
@@ -248,38 +254,46 @@
               "id": "19",
               "content": "Going to jail ________ the man from any ________ in the future. (offenses / discouraged)",
               "options": [
+                "offenses / discouraged",
                 "discouraged / offenses",
-                "offenses / discouraged"
+                "shepherd / venturing",
+                "deceive / ridiculous"
               ],
               "explanation": "discouraged (làm nản lòng) và offenses (hành vi vi phạm).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
               "content": "In the middle of the storm, the ________ looked for his lost sheep by ________ up the mountain. (shepherd / venturing)",
               "options": [
+                "venturing / shepherd",
+                "deceive / ridiculous",
                 "shepherd / venturing",
-                "venturing / shepherd"
+                "hut / wheat"
               ],
               "explanation": "shepherd (người chăn cừu) và venturing (đánh liều, đi đến nơi nguy hiểm).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "21",
               "content": "My little brother tried to ________ us by dressing in Dad's clothes, but he just looked ________. (deceive / ridiculous)",
               "options": [
-                "deceive / ridiculous",
-                "ridiculous / deceive"
+                "ridiculous / deceive",
+                "hut / wheat",
+                "caretaker / awkward",
+                "deceive / ridiculous"
               ],
               "explanation": "deceive (lừa phỉnh) và ridiculous (nực cười).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "22",
               "content": "The farmer built his ________ close to the ________ field so he could constantly watch it. (wheat / hut)",
               "options": [
                 "hut / wheat",
-                "wheat / hut"
+                "wheat / hut",
+                "caretaker / awkward",
+                "overlook / inferior"
               ],
               "explanation": "hut (túp lều) và wheat (lúa mì).",
               "correctAnswer": "A"
@@ -288,31 +302,37 @@
               "id": "23",
               "content": "After the ________ started a small fire in the kitchen, he felt very ________. (awkward / caretaker)",
               "options": [
+                "awkward / caretaker",
                 "caretaker / awkward",
-                "awkward / caretaker"
+                "overlook / inferior",
+                "hatred / satisfactory"
               ],
               "explanation": "caretaker (người trông nom) và awkward (lúng túng, bối rối).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
               "content": "Most shoppers tend to ________ any products that they think are ________ to similar things. (overlook / inferior)",
               "options": [
+                "inferior / overlook",
+                "hatred / satisfactory",
                 "overlook / inferior",
-                "inferior / overlook"
+                "fake / newcomers"
               ],
               "explanation": "overlook (bỏ qua) và inferior (kém chất lượng hơn).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "25",
               "content": "She had a ________ for food with tomatoes, but everything else on the menu was ________. (hatred / satisfactory)",
               "options": [
-                "hatred / satisfactory",
-                "satisfactory / hatred"
+                "satisfactory / hatred",
+                "fake / newcomers",
+                "lodge / acquire",
+                "hatred / satisfactory"
               ],
               "explanation": "hatred (sự căm ghét) và satisfactory (đủ tốt, thỏa đáng).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -322,13 +342,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Shepherd and the Wild Sheep</h1>        <p style=\"margin-bottom: 1rem;\">Once there was a <strong>shepherd</strong>. Every night he counted and gathered his sheep. He was sure never to <strong>overlook</strong> any of them. One night, he saw some wild sheep had joined his herd. He hoped to <strong>acquire</strong> the <strong>newcomers</strong>.</p>    <p style=\"margin-bottom: 1rem;\">It snowed that night. In the morning, the <strong>shepherd</strong> couldn't take his sheep out of his <strong>lodge</strong>. Instead, he had to feed them inside. He gave a small amount of <strong>wheat</strong> to his own sheep. But he gave more of the food to the wild sheep. He thought the extra <strong>wheat</strong> would <strong>discourage</strong> them from leaving.</p>    <p style=\"margin-bottom: 1rem;\">It snowed for several days. During that time, the <strong>shepherd</strong>'s sheep ate very little. The wild sheep, however, ate very well.</p>    <p style=\"margin-bottom: 1rem;\">At last, the snow melted, and they <strong>ventured</strong> outdoors. As soon as he opened the door of his <strong>hut</strong>, the wild sheep started to run away.</p>    <p style=\"margin-bottom: 1rem;\">\"Wait! This is how you <strong>repay</strong> me? After I treated you so kindly, why do you run away?\" the <strong>shepherd</strong> asked. His voice was full of <strong>hatred</strong>.</p>    <p style=\"margin-bottom: 1rem;\">The wild sheep stopped and turned toward the <strong>shepherd</strong>.</p>    <p style=\"margin-bottom: 1rem;\">\"We're leaving because you fed us better than your own sheep,\" one of the wild sheep replied. \"You tried to <strong>deceive</strong> us with your <strong>ridiculous</strong> plan. Yesterday you treated us kindly, but tomorrow you might be different. If more wild sheep joined your herd, you would treat us as <strong>inferior</strong> sheep.\"</p>    <p style=\"margin-bottom: 1rem;\">As the wild sheep ran away, the <strong>shepherd</strong> understood his <strong>offense</strong>. He knew this <strong>awkward</strong> situation was his own fault. He had not been a <strong>satisfactory</strong> <strong>caretaker</strong>. He was a <strong>fake</strong> friend to the wild sheep. Because of this, he had <strong>neglected</strong> his own herd.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Shepherd and the Wild Sheep</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Once there was a <strong>shepherd</strong>. Every night he counted and gathered his sheep. He was sure never to <strong>overlook</strong> any of them. One night, he saw some wild sheep had joined his herd. He hoped to <strong>acquire</strong> the <strong>newcomers</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It snowed that night. In the morning, the <strong>shepherd</strong> couldn't take his sheep out of his <strong>lodge</strong>. Instead, he had to feed them inside. He gave a small amount of <strong>wheat</strong> to his own sheep. But he gave more of the food to the wild sheep. He thought the extra <strong>wheat</strong> would <strong>discourage</strong> them from leaving.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It snowed for several days. During that time, the <strong>shepherd</strong>'s sheep ate very little. The wild sheep, however, ate very well.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">At last, the snow melted, and they <strong>ventured</strong> outdoors. As soon as he opened the door of his <strong>hut</strong>, the wild sheep started to run away.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Wait! This is how you <strong>repay</strong> me? After I treated you so kindly, why do you run away?\" the <strong>shepherd</strong> asked. His voice was full of <strong>hatred</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The wild sheep stopped and turned toward the <strong>shepherd</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"We're leaving because you fed us better than your own sheep,\" one of the wild sheep replied. \"You tried to <strong>deceive</strong> us with your <strong>ridiculous</strong> plan. Yesterday you treated us kindly, but tomorrow you might be different. If more wild sheep joined your herd, you would treat us as <strong>inferior</strong> sheep.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">As the wild sheep ran away, the <strong>shepherd</strong> understood his <strong>offense</strong>. He knew this <strong>awkward</strong> situation was his own fault. He had not been a <strong>satisfactory</strong> <strong>caretaker</strong>. He was a <strong>fake</strong> friend to the wild sheep. Because of this, he had <strong>neglected</strong> his own herd.</p></div>",
       "imageUrl": "/unit2_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -390,12 +409,12 @@
               "explanation": "Đoạn cuối bài viết \"As the wild sheep ran away, the shepherd understood his offense.\" (Khi những con cừu hoang bỏ chạy, người chăn cừu đã hiểu ra lỗi lầm của mình). Như vậy ông ấy biết mình làm sai điều gì. Câu này là Sai (False).",
               "correctAnswer": "False"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -445,9 +464,11 @@
               "explanation": "Câu chốt của bài là \"Because of this, he had neglected his own herd.\" (Chính vì điều này, ông ấy đã bỏ bê bầy cừu của mình). Đó chính là lỗi lầm lớn nhất của ông ấy. Đáp án đúng là He did not care for his own sheep.",
               "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit2_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Người chăn cừu và bầy cừu hoang</h1>\n\n<p style=\"margin-bottom: 1rem;\">Ngày xưa có một người chăn cừu (<strong>shepherd</strong>). Mỗi đêm anh ta đếm và tập hợp bầy cừu của mình. Anh ta chắc chắn không bao giờ <strong>overlook</strong> (bỏ sót) bất kỳ con nào. Một đêm nọ, anh thấy vài con cừu hoang đã gia nhập vào bầy của mình. Anh hy vọng sẽ <strong>acquire</strong> (thu nhận) những <strong>newcomers</strong> (kẻ mới đến) này.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đêm đó trời đổ tuyết. Sáng hôm sau, người chăn cừu không thể đưa bầy cừu ra khỏi <strong>lodge</strong> (túp lều) của mình. Thay vào đó, anh ta phải cho chúng ăn ở bên trong. Anh ta đưa một lượng nhỏ lúa mì (<strong>wheat</strong>) cho bầy cừu của mình. Nhưng anh ta lại cho bầy cừu hoang nhiều thức ăn hơn. Anh ta nghĩ lượng lúa mì phụ thêm này sẽ <strong>discourage</strong> (ngăn cản) chúng rời đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trời đổ tuyết trong nhiều ngày. Trong thời gian đó, bầy cừu của người chăn cừu ăn rất ít. Tuy nhiên, bầy cừu hoang lại được ăn rất no nê.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, tuyết tan, và chúng <strong>ventured</strong> (đánh liều đi ra) ngoài trời. Ngay khi anh ta mở cửa <strong>hut</strong> (túp lều), bầy cừu hoang bắt đầu chạy đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đợi đã! Đây là cách các ngươi <strong>repay</strong> (đáp đền) ta sao? Sau khi ta đã đối xử quá tử tế với các ngươi, tại sao các ngươi lại bỏ chạy?\" người chăn cừu hỏi. Giọng của anh ta đầy sự <strong>hatred</strong> (căm ghét).</p>\n\n<p style=\"margin-bottom: 1rem;\">Bầy cừu hoang dừng lại và quay về phía người chăn cừu.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Chúng tôi rời đi vì anh đã cho chúng tôi ăn tốt hơn chính bầy cừu của anh,\" một con cừu hoang đáp lại. \"Anh đã cố <strong>deceive</strong> (lừa dối) chúng tôi bằng kế hoạch <strong>ridiculous</strong> (nực cười) của mình. Hôm qua anh đối xử tốt với chúng tôi, nhưng ngày mai anh có thể sẽ khác. Nếu có thêm những con cừu hoang khác gia nhập bầy, anh sẽ đối xử với chúng tôi như những con cừu <strong>inferior</strong> (kém cỏi).\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi bầy cừu hoang chạy đi, người chăn cừu đã hiểu ra <strong>offense</strong> (lỗi lầm) của mình. Anh biết tình huống <strong>awkward</strong> (khó xử) này là lỗi của chính mình. Anh đã không phải là một <strong>caretaker</strong> (người chăm sóc) <strong>satisfactory</strong> (thỏa đáng). Anh là một người bạn <strong>fake</strong> (giả tạo) đối với bầy cừu hoang. Chính vì điều này, anh đã <strong>neglected</strong> (bỏ bê) bầy cừu của chính mình.</p>\n</div>"
     }
   ],
   "basicInfo": {

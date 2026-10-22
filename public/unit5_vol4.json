@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 5: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. cyberspace / global / operate / recent</b><br/>If you know how to [ 2 ] a computer, you can get access to [ 4 ]. A [ 6 ] study shows that [ 8 ] hunger is a very big problem.</p><p style=\"margin-bottom: 12px;\"><b>2. edit / essays / ignorant / weird</b><br/>My mom is completely [ 10 ] about computers. She thinks that email and chat rooms are [ 12 ] ways to spend one's time. Joe has the ability to write great [ 14 ]. His writing is so good that he never has to [ 16 ] his work.</p><p style=\"margin-bottom: 12px;\"><b>3. fainted / index / lecture / semester</b><br/>The report is due at the end of the [ 18 ]. You should look in the [ 20 ] to see if this book will help you with the report. Our teacher [ 11 ] while she was giving us a [ 12 ] about health!</p><p style=\"margin-bottom: 12px;\"><b>4. gymnasium / highlighted / resolution / typewritten</b><br/>Jennifer's notes are very neat! They are [ 13 ], and she has [ 14 ] the most important parts with a green pen. I made a [ 15 ] to go to the [ 16 ] more often to improve my health.</p><p style=\"margin-bottom: 12px;\"><b>5. awhile / evaluated / moral / private</b><br/>The [ 17 ] of the story is that you should think [ 18 ] before saying anything that might hurt someone. We [ 19 ] the company, and our suggestions are written in this [ 20 ] document.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. cyberspace / global / operate / recent</b><br/>If you know how to [ 1 ] a computer, you can get access to [ 2 ]. A [ 3 ] study shows that [ 4 ] hunger is a very big problem.</p><p style=\"margin-bottom: 12px;\"><b>2. edit / essays / ignorant / weird</b><br/>My mom is completely [ 5 ] about computers. She thinks that email and chat rooms are [ 6 ] ways to spend one's time. Joe has the ability to write great [ 7 ]. His writing is so good that he never has to [ 8 ] his work.</p><p style=\"margin-bottom: 12px;\"><b>3. fainted / index / lecture / semester</b><br/>The report is due at the end of the [ 9 ]. You should look in the [ 10 ] to see if this book will help you with the report. Our teacher [ 11 ] while she was giving us a [ 12 ] about health!</p><p style=\"margin-bottom: 12px;\"><b>4. gymnasium / highlighted / resolution / typewritten</b><br/>Jennifer's notes are very neat! They are [ 13 ], and she has [ 14 ] the most important parts with a green pen. I made a [ 15 ] to go to the [ 16 ] more often to improve my health.</p><p style=\"margin-bottom: 12px;\"><b>5. awhile / evaluated / moral / private</b> (Hint: The...) [ 17 ] of the story is that you should think [ 18 ] before saying anything that might hurt someone. We [ 19 ] the company, and our suggestions are written in this [ 20 ] document.</p>",
               "options": [],
-              "correctAnswer": "operate",
-              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
+              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'.",
+              "correctAnswer": "operate"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "cyberspace",
-              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
+              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'.",
+              "correctAnswer": "cyberspace"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "recent",
-              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
+              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn.",
+              "correctAnswer": "recent"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "global",
-              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
+              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn.",
+              "correctAnswer": "global"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "ignorant",
-              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
+              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian.",
+              "correctAnswer": "ignorant"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "weird",
-              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
+              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian.",
+              "correctAnswer": "weird"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "essays",
-              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
+              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình.",
+              "correctAnswer": "essays"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "edit",
-              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
+              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình.",
+              "correctAnswer": "edit"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "semester",
-              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
+              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích.",
+              "correctAnswer": "semester"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "index",
-              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
+              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích.",
+              "correctAnswer": "index"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "fainted",
-              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
+              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe.",
+              "correctAnswer": "fainted"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "lecture",
-              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
+              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe.",
+              "correctAnswer": "lecture"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "typewritten",
-              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
+              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất.",
+              "correctAnswer": "typewritten"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "highlighted",
-              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
+              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất.",
+              "correctAnswer": "highlighted"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "resolution",
-              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
+              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn.",
+              "correctAnswer": "resolution"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "gymnasium",
-              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
+              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn.",
+              "correctAnswer": "gymnasium"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "moral",
-              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
+              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói.",
+              "correctAnswer": "moral"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "awhile",
-              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
+              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói.",
+              "correctAnswer": "awhile"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "evaluated",
-              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này."
+              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này.",
+              "correctAnswer": "evaluated"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "private",
-              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này."
+              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này.",
+              "correctAnswer": "private"
             }
           ],
           "questionType": "Điền từ"
@@ -541,13 +534,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Magic Computer</h1>        <p style=\"margin-bottom: 1rem;\">I had a difficult geography project to finish by the end of the <b>semester</b>. My teacher wanted it to be <b>typewritten</b>, so I went to the school computer room. But when I got there, all the computers were turned off. Apparently there was a <b>recent</b> problem, and technicians were fixing it.</p>    <p style=\"margin-bottom: 1rem;\">I knew of some <b>private</b> study rooms downstairs. They were small and dark, and the computers were very old, but I had no choice. At least the computers were <b>operating</b> correctly. I typed and <b>highlighted</b> the assignment’s title: “<b>Evaluate</b> the Government’s Response to <b>Global</b> Warming.” But I didn’t know what to write in my <b>essay</b>. Finally I decided to find a book to help me. I went to the library, checked the book <b>indexes</b> and eventually found a useful book. Then I returned to the computer.</p>    <p style=\"margin-bottom: 1rem;\">When I looked at the screen, I saw something so <b>weird</b> that I nearly <b>fainted</b>! The <b>essay</b> was complete! Had somebody in <b>cyberspace</b> written it? I didn’t know, but I was very happy. I printed it out and handed it in. I got an “A.”</p>    <p style=\"margin-bottom: 1rem;\">After that, I used the computer for all my assignments. I’d type the title, wait <b>awhile</b>, and the computer would do it. Every assignment was perfect; I never had to <b>edit</b> anything. I stopped paying attention to my teacher’s <b>lectures</b> and spent my extra time in the <b>gymnasium</b>. And my grades got better and better.</p>    <p style=\"margin-bottom: 1rem;\">A month later, I was walking into class when my friend said, “Are you prepared for the test?”</p>    <p style=\"margin-bottom: 1rem;\">“What test?” I asked.</p>    <p style=\"margin-bottom: 1rem;\">“The geography test!” he replied. “I hope you studied. It’s worth seventy percent of our final grade!”</p>    <p style=\"margin-bottom: 1rem;\">I failed the test, of course. I was completely <b>ignorant</b> about the subject.</p>    <p style=\"margin-bottom: 1rem;\">After that, I made a <b>resolution</b> never to use the magic computer again. The <b>moral</b> of this story is that if you cheat at school, you won’t learn anything.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Magic Computer</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">I had a difficult geography project to finish by the end of the <b>semester</b>. My teacher wanted it to be <b>typewritten</b>, so I went to the school computer room. But when I got there, all the computers were turned off. Apparently there was a <b>recent</b> problem, and technicians were fixing it.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">I knew of some <b>private</b> study rooms downstairs. They were small and dark, and the computers were very old, but I had no choice. At least the computers were <b>operating</b> correctly. I typed and <b>highlighted</b> the assignment’s title: “<b>Evaluate</b> the Government’s Response to <b>Global</b> Warming.” But I didn’t know what to write in my <b>essay</b>. Finally I decided to find a book to help me. I went to the library, checked the book <b>indexes</b> and eventually found a useful book. Then I returned to the computer.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When I looked at the screen, I saw something so <b>weird</b> that I nearly <b>fainted</b>! The <b>essay</b> was complete! Had somebody in <b>cyberspace</b> written it? I didn’t know, but I was very happy. I printed it out and handed it in. I got an “A.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After that, I used the computer for all my assignments. I’d type the title, wait <b>awhile</b>, and the computer would do it. Every assignment was perfect; I never had to <b>edit</b> anything. I stopped paying attention to my teacher’s <b>lectures</b> and spent my extra time in the <b>gymnasium</b>. And my grades got better and better.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A month later, I was walking into class when my friend said, “Are you prepared for the test?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“What test?” I asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“The geography test!” he replied. “I hope you studied. It’s worth seventy percent of our final grade!”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">I failed the test, of course. I was completely <b>ignorant</b> about the subject.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After that, I made a <b>resolution</b> never to use the magic computer again. The <b>moral</b> of this story is that if you cheat at school, you won’t learn anything.</p></div>",
       "imageUrl": "/unit5_vol4_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Reading Comprehension Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "41",
@@ -668,7 +661,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit5_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chiếc máy tính ma thuật</h1>\n\n<p style=\"margin-bottom: 1rem;\">Tôi có một dự án địa lý khó nhằn cần hoàn thành vào cuối <b>học kỳ</b>. Giáo viên của tôi muốn nó được <b>đánh máy</b>, vì vậy tôi đã đến phòng máy tính của trường. Nhưng khi tôi đến đó, tất cả các máy tính đều bị tắt. Có vẻ như có một vấn đề <b>gần đây</b>, và các kỹ thuật viên đang sửa chữa nó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tôi biết có một vài phòng tự học <b>riêng tư</b> ở tầng dưới. Chúng nhỏ và tối, và máy tính thì rất cũ, nhưng tôi không có sự lựa chọn nào khác. Ít nhất thì các máy tính vẫn <b>hoạt động</b> đúng cách. Tôi đã gõ và <b>bôi sáng</b> tiêu đề của bài tập: “<b>Đánh giá</b> Phản ứng của Chính phủ đối với Hiện tượng Ấm lên <b>Toàn cầu</b>.” Nhưng tôi không biết phải viết gì trong bài <b>luận</b> của mình. Cuối cùng, tôi quyết định tìm một cuốn sách để giúp mình. Tôi đến thư viện, kiểm tra các <b>mục lục</b> sách và cuối cùng đã tìm thấy một cuốn sách hữu ích. Sau đó, tôi quay trở lại máy tính.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi nhìn vào màn hình, tôi thấy một điều quá <b>kỳ lạ</b> đến nỗi tôi gần như <b>ngất xỉu</b>! Bài <b>luận</b> đã hoàn tất! Có ai đó trong <b>không gian mạng</b> đã viết nó sao? Tôi không biết, nhưng tôi rất hạnh phúc. Tôi in nó ra và nộp. Tôi đạt điểm “A.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó, tôi sử dụng máy tính cho tất cả các bài tập của mình. Tôi chỉ gõ tiêu đề, chờ <b>một lúc</b>, và máy tính sẽ làm phần còn lại. Mọi bài tập đều hoàn hảo; tôi không bao giờ phải <b>chỉnh sửa</b> bất cứ điều gì. Tôi không còn chú ý đến những bài <b>giảng</b> của giáo viên và dành thời gian rảnh rỗi của mình trong phòng <b>thể dục</b>. Và điểm số của tôi ngày càng tốt hơn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một tháng sau, tôi đang bước vào lớp thì bạn tôi nói, “Cậu đã chuẩn bị cho bài kiểm tra chưa?”</p>\n\n<p style=\"margin-bottom: 1rem;\">“Bài kiểm tra nào cơ?” tôi hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Bài kiểm tra địa lý!” cậu ấy trả lời. “Tớ hy vọng cậu đã học bài. Nó chiếm bảy mươi phần trăm điểm tổng kết của chúng ta đấy!”</p>\n\n<p style=\"margin-bottom: 1rem;\">Tất nhiên là tôi đã trượt bài kiểm tra. Tôi hoàn toàn <b>thiếu hiểu biết</b> về môn học đó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó, tôi đã đưa ra <b>quyết tâm</b> không bao giờ sử dụng chiếc máy tính ma thuật nữa. Bài học <b>đạo đức</b> của câu chuyện này là nếu bạn gian lận ở trường, bạn sẽ không học được bất cứ điều gì.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 5: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

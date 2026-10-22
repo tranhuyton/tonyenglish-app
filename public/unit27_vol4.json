@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 27: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -349,13 +342,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Dying Forest</h1>        <p style=\"margin-bottom: 1rem;\"><b>Rainforests</b> provide much of the world’s <b>oxygen</b> supply. But the forests’ <b>exotic</b> trees and animals are being killed to make room for farmers and roads. People have been trying to <b>conserve</b> rainforests for years. But another type of forest—the cloud forest—is just as <b>beneficial</b> to humans. Cloud forests are also in danger of disappearing, but little is being done to save them.</p>    <p style=\"margin-bottom: 1rem;\">These forests are located at the tops of mountains, generally near the <b>equator</b>. These humid, <b>wooded</b> mountaintops are mainly in African and Central and South American countries. They are called “cloud forests” because their height allows for the <b>formation</b> of clouds among the trees.</p>    <p style=\"margin-bottom: 1rem;\">Rainforests produce large amounts of oxygen. Cloud forests produce <b>comparative</b> amounts of water. The trees in these forests pull water out of the clouds. The moisture gathers on the leaves. When it drips, it is <b>deposited</b> into streams. The streams flow into towns at the bottom of the mountain. Then, it’s <b>distributed</b> to people. The yearly <b>cumulative</b> rainfall in these areas is 173-198 centimeters. Cloud forests can pull in up to 60 percent of that. This water is <b>crucial</b> to the plants and the people in the area. It helps them survive.</p>    <p style=\"margin-bottom: 1rem;\">Cloud forests are also the <b>birthplace</b> of countless species of plants that can’t be found anywhere else. One small cloud forest has the <b>capacity</b> for as many types of plants as there are in all of Europe. There are so many, in fact, that scientists haven’t made a <b>comprehensive</b> list of them yet.</p>    <p style=\"margin-bottom: 1rem;\">These forests are being destroyed with increasing <b>frequency</b>. Trees are being cut down, and roads are being built in their place. Some people have an <b>objective</b> to get <b>federal</b> money to protect the forests. But they have had little success. Another <b>strategy</b> is to replace the destroyed plants. That, too, has been difficult because the plants are so unique. There’s plenty of work to be done, but saving the cloud forests is still a possibility.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Dying Forest</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\"><b>Rainforests</b> provide much of the world’s <b>oxygen</b> supply. But the forests’ <b>exotic</b> trees and animals are being killed to make room for farmers and roads. People have been trying to <b>conserve</b> rainforests for years. But another type of forest—the cloud forest—is just as <b>beneficial</b> to humans. Cloud forests are also in danger of disappearing, but little is being done to save them.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">These forests are located at the tops of mountains, generally near the <b>equator</b>. These humid, <b>wooded</b> mountaintops are mainly in African and Central and South American countries. They are called “cloud forests” because their height allows for the <b>formation</b> of clouds among the trees.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Rainforests produce large amounts of oxygen. Cloud forests produce <b>comparative</b> amounts of water. The trees in these forests pull water out of the clouds. The moisture gathers on the leaves. When it drips, it is <b>deposited</b> into streams. The streams flow into towns at the bottom of the mountain. Then, it’s <b>distributed</b> to people. The yearly <b>cumulative</b> rainfall in these areas is 173-198 centimeters. Cloud forests can pull in up to 60 percent of that. This water is <b>crucial</b> to the plants and the people in the area. It helps them survive.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Cloud forests are also the <b>birthplace</b> of countless species of plants that can’t be found anywhere else. One small cloud forest has the <b>capacity</b> for as many types of plants as there are in all of Europe. There are so many, in fact, that scientists haven’t made a <b>comprehensive</b> list of them yet.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">These forests are being destroyed with increasing <b>frequency</b>. Trees are being cut down, and roads are being built in their place. Some people have an <b>objective</b> to get <b>federal</b> money to protect the forests. But they have had little success. Another <b>strategy</b> is to replace the destroyed plants. That, too, has been difficult because the plants are so unique. There’s plenty of work to be done, but saving the cloud forests is still a possibility.</p></div>",
       "imageUrl": "/unit27_vol4_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Reading Comprehension",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "26",
@@ -476,7 +469,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<div style=\"font-family: Arial, sans-serif; \">\n\n<img src=\"/unit27_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Một Khu Rừng Đang Chết</h1>\n\n<p style=\"margin-bottom: 1rem;\"><b>Rừng mưa nhiệt đới</b> cung cấp phần lớn nguồn <b>oxy</b> cho thế giới. Nhưng những loài cây và động vật <b>kỳ lạ</b> của khu rừng đang bị giết để lấy chỗ cho nông dân và đường sá. Con người đã cố gắng <b>bảo tồn</b> các khu rừng mưa nhiệt đới trong nhiều năm. Nhưng một loại rừng khác—rừng sương mù—cũng <b>có lợi ích</b> đối với con người không kém. Các khu rừng sương mù cũng đang đứng trước nguy cơ biến mất, nhưng có rất ít hành động được thực hiện để cứu chúng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những khu rừng này nằm trên các đỉnh núi, thường là gần đường <b>xích đạo</b>. Những đỉnh núi ẩm ướt, <b>nhiều cây cối</b> này chủ yếu nằm ở các nước Châu Phi, Trung và Nam Mỹ. Chúng được gọi là “rừng sương mù” vì độ cao của chúng cho phép sự <b>hình thành</b> của những đám mây giữa các tán cây.</p>\n\n<p style=\"margin-bottom: 1rem;\">Rừng mưa nhiệt đới tạo ra một lượng lớn oxy. Rừng sương mù tạo ra một lượng nước <b>tương đương</b>. Cây cối trong những khu rừng này hút nước ra khỏi những đám mây. Hơi ẩm tích tụ trên lá. Khi nó nhỏ giọt, nó được <b>lắng đọng</b> vào các dòng suối. Các dòng suối chảy vào các thị trấn ở chân núi. Sau đó, nó được <b>phân phối</b> cho người dân. Lượng mưa <b>tích lũy</b> hàng năm ở những khu vực này là 173-198 cm. Rừng sương mù có thể hút tới 60% lượng nước đó. Nước này rất <b>quan trọng</b> đối với cây cối và người dân trong khu vực. Nó giúp họ sống sót.</p>\n\n<p style=\"margin-bottom: 1rem;\">Rừng sương mù cũng là <b>nơi sinh ra</b> vô số loài thực vật không thể tìm thấy ở bất kỳ nơi nào khác. Một khu rừng sương mù nhỏ có <b>sức chứa</b> nhiều loại thực vật bằng toàn bộ châu Âu. Trên thực tế, có quá nhiều loại nên các nhà khoa học vẫn chưa lập được một danh sách <b>toàn diện</b> về chúng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những khu rừng này đang bị phá hủy với <b>tần suất</b> ngày càng tăng. Cây cối đang bị đốn hạ, và những con đường đang được xây dựng vào chỗ của chúng. Một số người có <b>mục tiêu</b> là nhận được tiền từ <b>liên bang</b> để bảo vệ các khu rừng. Nhưng họ ít đạt được thành công. Một <b>chiến lược</b> khác là thay thế những cây bị phá hủy. Điều đó cũng rất khó khăn vì những loài thực vật này quá độc đáo. Có rất nhiều việc phải làm, nhưng việc cứu các khu rừng sương mù vẫn là một khả năng.</p>\n\n</div>\\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 27: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

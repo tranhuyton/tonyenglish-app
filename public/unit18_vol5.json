@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 18: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -398,7 +392,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Soldier's Decision</h1>        <p style=\"margin-bottom: 1rem;\">A soldier was captured while fighting in an enemy king's land. It was well known that this king would make <b>captives</b> fight one another. This was <b>commonplace</b> during his <b>reign</b>. For these fights, the king had built several large <b>arenas</b>. He often awarded the winners by setting them free or even having them join his elite army <b>corps</b>.</p>    <p style=\"margin-bottom: 1rem;\">The soldier, however, decided he had seen too much violence. He now felt that all life was <b>sacred</b>. The night before his first match, he made a risky decision. He decided that he would not engage in <b>combat</b>. He knew he may never be set free, but it was a decision that he was willing to accept.</p>    <p style=\"margin-bottom: 1rem;\">In the morning, he was led from the prisoners' <b>compound</b> to one of the king's arenas. A gate coated in <b>rust</b> stood between him and the <b>auditorium</b>'s floor. He was worried, but he knew what he had to do.</p>    <p style=\"margin-bottom: 1rem;\">When the gate opened, he calmly walked to the center of the arena and sat. He started to <b>meditate</b>. His <b>foe</b> Darius, who was skilled in the <b>realm</b> of sword fighting and was typically not very <b>aggressive</b>, would not fight the quiet soldier until he attacked Darius first.</p>    <p style=\"margin-bottom: 1rem;\">Darius tried to <b>provoke</b> him by <b>hacking</b> at the air close to his head with his sword. But the soldier was not <b>distracted</b>. He sat quietly, as if he were <b>dumb</b>, and looked calmly up at the sky. Even when Darius <b>nicked</b> him on the cheek with the edge of his sword, the soldier did not move.</p>    <p style=\"margin-bottom: 1rem;\">At last he threw down his sword and shield and gave up.</p>    <p style=\"margin-bottom: 1rem;\">\"I can't fight someone who refuses to fight me!\" Darius shouted to the king.</p>    <p style=\"margin-bottom: 1rem;\">The king was very impressed with the soldier. Never in any battle had he seen someone so brave. As a result, he gave the peaceful soldier <b>amnesty</b>. The soldier's actions proved to the king and everyone in the arena that peace was more powerful than fighting.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Soldier's Decision</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A soldier was captured while fighting in an enemy king's land. It was well known that this king would make <b>captives</b> fight one another. This was <b>commonplace</b> during his <b>reign</b>. For these fights, the king had built several large <b>arenas</b>. He often awarded the winners by setting them free or even having them join his elite army <b>corps</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The soldier, however, decided he had seen too much violence. He now felt that all life was <b>sacred</b>. The night before his first match, he made a risky decision. He decided that he would not engage in <b>combat</b>. He knew he may never be set free, but it was a decision that he was willing to accept.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In the morning, he was led from the prisoners' <b>compound</b> to one of the king's arenas. A gate coated in <b>rust</b> stood between him and the <b>auditorium</b>'s floor. He was worried, but he knew what he had to do.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When the gate opened, he calmly walked to the center of the arena and sat. He started to <b>meditate</b>. His <b>foe</b> Darius, who was skilled in the <b>realm</b> of sword fighting and was typically not very <b>aggressive</b>, would not fight the quiet soldier until he attacked Darius first.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Darius tried to <b>provoke</b> him by <b>hacking</b> at the air close to his head with his sword. But the soldier was not <b>distracted</b>. He sat quietly, as if he were <b>dumb</b>, and looked calmly up at the sky. Even when Darius <b>nicked</b> him on the cheek with the edge of his sword, the soldier did not move.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">At last he threw down his sword and shield and gave up.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I can't fight someone who refuses to fight me!\" Darius shouted to the king.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The king was very impressed with the soldier. Never in any battle had he seen someone so brave. As a result, he gave the peaceful soldier <b>amnesty</b>. The soldier's actions proved to the king and everyone in the arena that peace was more powerful than fighting.</p></div>",
       "imageUrl": "/unit18_vol5_story.png",
       "sections": [
         {
@@ -468,25 +462,25 @@
               "id": "36",
               "content": "Why did the captive seem like he was dumb?",
               "options": [
-                "He was quiet",
                 "He was aggressive",
                 "He didn't know how to fight",
+                "He was quiet",
                 "He didn't know the king"
               ],
               "explanation": "Tù binh có vẻ như bị câm (dumb) bởi vì anh ta rất im lặng (quiet).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "37",
               "content": "What was commonplace during the reign of the enemy king?",
               "options": [
-                "Making captives fight one another",
                 "Giving amnesty",
                 "Meditating",
-                "Rust on gates"
+                "Rust on gates",
+                "Making captives fight one another"
               ],
               "explanation": "Việc bắt các tù binh chiến đấu với nhau (making captives fight one another) là phổ biến (commonplace) dưới thời vị vua này.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "38",
@@ -504,30 +498,38 @@
               "id": "39",
               "content": "Where did the soldier get nicked by his opponent?",
               "options": [
-                "On his cheek",
                 "On his leg",
+                "On his cheek",
                 "On his arm",
                 "On his head"
               ],
               "explanation": "Người lính bị đối thủ sượt nhẹ (nicked) vào má (on his cheek).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "40",
               "content": "What did the quiet soldier prove by refusing to engage his foe in combat?",
               "options": [
-                "That peace can conquer violence",
                 "That he was a coward",
                 "That he was a traitor",
+                "That peace can conquer violence",
                 "That he wanted to join the army corps"
               ],
               "explanation": "Anh ta đã chứng minh rằng hòa bình có thể chiến thắng bạo lực (peace can conquer violence).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit18_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Quyết định của người lính</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một người lính đã bị bắt khi đang chiến đấu trên vùng đất của một vị vua thù địch. Ai cũng biết rằng vị vua này sẽ bắt <b>những người bị bắt giữ</b> chiến đấu với nhau. Đây là <b>chuyện bình thường</b> trong <b>sự trị vì</b> của ông ta. Đối với những trận chiến này, nhà vua đã xây dựng một số <b>đấu trường</b> lớn. Ông thường trao thưởng cho những người chiến thắng bằng cách trả tự do cho họ hoặc thậm chí cho họ gia nhập <b>quân đoàn</b> tinh nhuệ của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, người lính quyết định rằng anh ta đã chứng kiến quá nhiều bạo lực. Bây giờ anh ta cảm thấy rằng mọi sự sống đều <b>thiêng liêng</b>. Đêm trước trận đấu đầu tiên của mình, anh đã đưa ra một quyết định mạo hiểm. Anh quyết định rằng mình sẽ không tham gia vào <b>sự chiến đấu</b>. Anh biết mình có thể không bao giờ được trả tự do, nhưng đó là một quyết định mà anh sẵn sàng chấp nhận.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào buổi sáng, anh bị dẫn từ <b>khu trại</b> của các tù nhân đến một trong những đấu trường của nhà vua. Một cánh cổng phủ đầy <b>rỉ sét</b> nằm giữa anh và sàn của <b>khán phòng</b>. Anh ấy lo lắng, nhưng anh ấy biết mình phải làm gì.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi cánh cổng mở ra, anh bình tĩnh đi đến giữa đấu trường và ngồi xuống. Anh bắt đầu <b>thiền định</b>. <b>Đối thủ</b> của anh là Darius, người rất có kỹ năng trong <b>lĩnh vực</b> đấu kiếm và thường không quá <b>hung hăng</b>, sẽ không chiến đấu với người lính trầm lặng cho đến khi anh ta tấn công Darius trước.</p>\n\n<p style=\"margin-bottom: 1rem;\">Darius cố gắng <b>khiêu khích</b> anh bằng cách <b>chém</b> vào không khí sát đầu anh bằng thanh kiếm của mình. Nhưng người lính không <b>bị phân tâm</b>. Anh ngồi im lặng, như thể mình <b>bị câm</b>, và bình tĩnh nhìn lên bầu trời. Ngay cả khi Darius <b>cắt nhẹ</b> vào má anh bằng lưỡi kiếm của mình, người lính vẫn không nhúc nhích.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, hắn ném kiếm và khiên xuống và bỏ cuộc.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi không thể chiến đấu với một người từ chối chiến đấu với tôi!\" Darius hét lên với nhà vua.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhà vua rất ấn tượng với người lính. Chưa bao giờ trong bất kỳ trận chiến nào ông thấy một người dũng cảm như vậy. Kết quả là, ông đã ban <b>sự ân xá</b> cho người lính ôn hòa. Hành động của người lính đã chứng minh cho nhà vua và mọi người trong đấu trường thấy rằng hòa bình mạnh mẽ hơn chiến đấu.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 18: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

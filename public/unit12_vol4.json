@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 12: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. bid - belly / muscles - violence</b><br/>It was bad that the man had a lot of [ 2 ] because he used it to cause [ 4 ]. He had a [ 6 ] to win the race, but he had to quit when he got a bad pain in his [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enthusiasm - continent / timid - disrespect</b><br/>The boy was always [ 10 ] because his classmates were mean and treated him with [ 12 ]. The boy had a lot of [ 14 ] before his trip to Europe. He had never been to a different [ 16 ] before.</p><p style=\"margin-bottom: 12px;\"><b>3. avenue - alternative / meantime - lean</b><br/>The movie will start soon. In the [ 18 ], help me to [ 20 ] these heavy boards against the wall. The [ 11 ] that the man wanted to drive on was blocked, so he found an [ 12 ] route.</p><p style=\"margin-bottom: 12px;\"><b>4. rescue - conflict / terrain - harsh</b><br/>The police officer had to [ 13 ] the woman from a bad [ 14 ] she had with another woman. The girl walked along the rough beach. The rocky [ 15 ] was [ 16 ] on her feet.</p><p style=\"margin-bottom: 12px;\"><b>5. blow - current / mischief - succession</b><br/>The boys were up to their usual [ 17 ] and were throwing balls of paper at each other in [ 18 ]. I turned on the fan so that it would [ 19 ] air on me. The [ 20 ] of cool air felt wonderful.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. bid - belly / muscles - violence</b><br/>It was bad that the man had a lot of [ 1 ] because he used it to cause [ 2 ]. He had a [ 3 ] to win the race, but he had to quit when he got a bad pain in his [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enthusiasm - continent / timid - disrespect</b><br/>The boy was always [ 5 ] because his classmates were mean and treated him with [ 6 ]. The boy had a lot of [ 7 ] before his trip to Europe. He had never been to a different [ 8 ] before.</p><p style=\"margin-bottom: 12px;\"><b>3. avenue - alternative / meantime - lean</b><br/>The movie will start soon. In the [ 9 ], help me to [ 10 ] these heavy boards against the wall. The [ 11 ] that the man wanted to drive on was blocked, so he found an [ 12 ] route.</p><p style=\"margin-bottom: 12px;\"><b>4. rescue - conflict / terrain - harsh</b><br/>The police officer had to [ 13 ] the woman from a bad [ 14 ] she had with another woman. The girl walked along the rough beach. The rocky [ 15 ] was [ 16 ] on her feet.</p><p style=\"margin-bottom: 12px;\"><b>5. blow - current / mischief - succession</b><br/>The boys were up to their usual [ 17 ] and were throwing balls of paper at each other in [ 18 ]. I turned on the fan so that it would [ 19 ] air on me. The [ 20 ] of cool air felt wonderful.</p>",
               "options": [],
-              "correctAnswer": "muscles - violence",
-              "explanation": "\"muscle\" (cơ bắp) và \"violence\" (bạo lực). Người đàn ông có nhiều cơ bắp (muscles) và sử dụng nó để gây ra bạo lực (violence)."
+              "explanation": "Đáp án đúng là 'muscles'.",
+              "correctAnswer": "muscles"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"muscle\" (cơ bắp) và \"violence\" (bạo lực). Người đàn ông có nhiều cơ bắp (muscles) và sử dụng nó để gây ra bạo lực (violence)."
+              "explanation": "Đáp án đúng là 'violence'.",
+              "correctAnswer": "violence"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "bid - belly",
-              "explanation": "\"bid\" (sự nỗ lực) và \"belly\" (bụng). Anh ta đã nỗ lực (bid) để chiến thắng nhưng phải từ bỏ vì đau bụng (belly)."
+              "explanation": "Đáp án đúng là 'bid'.",
+              "correctAnswer": "bid"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"bid\" (sự nỗ lực) và \"belly\" (bụng). Anh ta đã nỗ lực (bid) để chiến thắng nhưng phải từ bỏ vì đau bụng (belly)."
+              "explanation": "Đáp án đúng là 'belly'.",
+              "correctAnswer": "belly"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "timid - disrespect",
-              "explanation": "\"timid\" (rụt rè) và \"disrespect\" (sự thiếu tôn trọng). Cậu bé rụt rè (timid) vì bạn học đối xử thiếu tôn trọng (disrespect)."
+              "explanation": "Đáp án đúng là 'timid'.",
+              "correctAnswer": "timid"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"timid\" (rụt rè) và \"disrespect\" (sự thiếu tôn trọng). Cậu bé rụt rè (timid) vì bạn học đối xử thiếu tôn trọng (disrespect)."
+              "explanation": "Đáp án đúng là 'disrespect'.",
+              "correctAnswer": "disrespect"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "enthusiasm - continent",
-              "explanation": "\"enthusiasm\" (sự nhiệt tình, hăng hái) và \"continent\" (lục địa). Cậu bé rất hăng hái (enthusiasm) vì chưa từng đến một lục địa (continent) khác."
+              "explanation": "Đáp án đúng là 'enthusiasm'.",
+              "correctAnswer": "enthusiasm"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"enthusiasm\" (sự nhiệt tình, hăng hái) và \"continent\" (lục địa). Cậu bé rất hăng hái (enthusiasm) vì chưa từng đến một lục địa (continent) khác."
+              "explanation": "Đáp án đúng là 'continent'.",
+              "correctAnswer": "continent"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "meantime - lean",
-              "explanation": "\"meantime\" (trong lúc đó) và \"lean\" (tựa). Trong lúc đó (meantime), giúp tôi tựa (lean) tấm ván này vào tường."
+              "explanation": "Đáp án đúng là 'meantime'.",
+              "correctAnswer": "meantime"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"meantime\" (trong lúc đó) và \"lean\" (tựa). Trong lúc đó (meantime), giúp tôi tựa (lean) tấm ván này vào tường."
+              "explanation": "Đáp án đúng là 'lean'.",
+              "correctAnswer": "lean"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "avenue - alternative",
-              "explanation": "\"avenue\" (đại lộ) và \"alternative\" (sự thay thế). Đại lộ (avenue) bị kẹt nên anh ta phải tìm đường thay thế (alternative)."
+              "explanation": "Đáp án đúng là 'avenue'.",
+              "correctAnswer": "avenue"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"avenue\" (đại lộ) và \"alternative\" (sự thay thế). Đại lộ (avenue) bị kẹt nên anh ta phải tìm đường thay thế (alternative)."
+              "explanation": "Đáp án đúng là 'alternative'.",
+              "correctAnswer": "alternative"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "rescue - conflict",
-              "explanation": "\"rescue\" (giải cứu) và \"conflict\" (cuộc xung đột). Cảnh sát phải giải cứu (rescue) người phụ nữ khỏi cuộc xung đột (conflict)."
+              "explanation": "Đáp án đúng là 'rescue'.",
+              "correctAnswer": "rescue"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"rescue\" (giải cứu) và \"conflict\" (cuộc xung đột). Cảnh sát phải giải cứu (rescue) người phụ nữ khỏi cuộc xung đột (conflict)."
+              "explanation": "Đáp án đúng là 'conflict'.",
+              "correctAnswer": "conflict"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "terrain - harsh",
-              "explanation": "\"terrain\" (địa hình) và \"harsh\" (khắc nghiệt, thô ráp). Địa hình (terrain) nhiều đá rất thô ráp/khắc nghiệt (harsh) với chân cô."
+              "explanation": "Đáp án đúng là 'terrain'.",
+              "correctAnswer": "terrain"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"terrain\" (địa hình) và \"harsh\" (khắc nghiệt, thô ráp). Địa hình (terrain) nhiều đá rất thô ráp/khắc nghiệt (harsh) với chân cô."
+              "explanation": "Đáp án đúng là 'harsh'.",
+              "correctAnswer": "harsh"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "mischief - succession",
-              "explanation": "\"mischief\" (trò nghịch ngợm) và \"succession\" (liên tiếp). Bọn trẻ nghịch ngợm (mischief) và ném giấy liên tiếp (succession) vào nhau."
+              "explanation": "Đáp án đúng là 'mischief'.",
+              "correctAnswer": "mischief"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"mischief\" (trò nghịch ngợm) và \"succession\" (liên tiếp). Bọn trẻ nghịch ngợm (mischief) và ném giấy liên tiếp (succession) vào nhau."
+              "explanation": "Đáp án đúng là 'succession'.",
+              "correctAnswer": "succession"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "blow - current",
-              "explanation": "\"blow\" (thổi) và \"current\" (dòng chảy). Quạt thổi (blow) ra dòng (current) không khí mát mẻ."
+              "explanation": "Đáp án đúng là 'blow'.",
+              "correctAnswer": "blow"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "",
-              "explanation": "\"blow\" (thổi) và \"current\" (dòng chảy). Quạt thổi (blow) ra dòng (current) không khí mát mẻ."
+              "explanation": "Đáp án đúng là 'current'.",
+              "correctAnswer": "current"
             }
           ],
           "questionType": "Điền từ"
@@ -361,13 +354,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Sun and the North Wind</h1>        <p style=\"margin-bottom: 1rem;\">The Sun and the North Wind were talking to each other in the sky. The North Wind was saying that he was better than everyone else. The Sun listened as the North Wind talked with <b>enthusiasm</b> about how powerful he was and how he could push something from one <b>continent</b> to another with one breath. He said, “I am the strongest thing in the sky.”</p>    <p style=\"margin-bottom: 1rem;\">“Really?” asked the Sun. “How do you know that you are more powerful than the stars, or the rain, or even me?”</p>    <p style=\"margin-bottom: 1rem;\">The North Wind laughed with <b>disrespect</b>. He yelled, “You? That’s a joke!”</p>    <p style=\"margin-bottom: 1rem;\">This hurt the Sun. He was usually <b>timid</b> and did not want to cause <b>conflict</b>. Today he decided that he should teach the North Wind a lesson.</p>    <p style=\"margin-bottom: 1rem;\">In the <b>meantime</b>, a man began walking along the <b>avenue</b> down on Earth. When the Sun looked down on the <b>terrain</b> below, he saw the man. He pointed down to the Earth and said, “Do you see that man walking below? I bet I can get his jacket off of him. Can you?”</p>    <p style=\"margin-bottom: 1rem;\">“Of course!” the North Wind replied as he took a deep breath and filled his lungs with air. He used all of his <b>muscles</b> in his face and <b>belly</b> to <b>blow</b> winds at his target in <b>succession</b>.</p>    <p style=\"margin-bottom: 1rem;\">The <b>harsh</b> air <b>currents</b> made the man cold. The man pulled his jacket more tightly around him. It did not come off. The Sun decided to <b>rescue</b> the man from the <b>mischief</b> of the North Wind. He said, “May I try?” Then he sent down sunlight that made the man warm. The man <b>leaned</b> against a tree. He took off his jacket and enjoyed the nice weather.</p>    <p style=\"margin-bottom: 1rem;\">“You are very powerful,” the Sun said to the North Wind, “but you use <b>violence</b> in your <b>bid</b> to appear strong. You should think of an <b>alternative</b>. The strongest people don’t use force to get what they want.”</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Sun and the North Wind</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The Sun and the North Wind were talking to each other in the sky. The North Wind was saying that he was better than everyone else. The Sun listened as the North Wind talked with <b>enthusiasm</b> about how powerful he was and how he could push something from one <b>continent</b> to another with one breath. He said, “I am the strongest thing in the sky.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Really?” asked the Sun. “How do you know that you are more powerful than the stars, or the rain, or even me?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The North Wind laughed with <b>disrespect</b>. He yelled, “You? That’s a joke!”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">This hurt the Sun. He was usually <b>timid</b> and did not want to cause <b>conflict</b>. Today he decided that he should teach the North Wind a lesson.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In the <b>meantime</b>, a man began walking along the <b>avenue</b> down on Earth. When the Sun looked down on the <b>terrain</b> below, he saw the man. He pointed down to the Earth and said, “Do you see that man walking below? I bet I can get his jacket off of him. Can you?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Of course!” the North Wind replied as he took a deep breath and filled his lungs with air. He used all of his <b>muscles</b> in his face and <b>belly</b> to <b>blow</b> winds at his target in <b>succession</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>harsh</b> air <b>currents</b> made the man cold. The man pulled his jacket more tightly around him. It did not come off. The Sun decided to <b>rescue</b> the man from the <b>mischief</b> of the North Wind. He said, “May I try?” Then he sent down sunlight that made the man warm. The man <b>leaned</b> against a tree. He took off his jacket and enjoyed the nice weather.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“You are very powerful,” the Sun said to the North Wind, “but you use <b>violence</b> in your <b>bid</b> to appear strong. You should think of an <b>alternative</b>. The strongest people don’t use force to get what they want.”</p></div>",
       "imageUrl": "/unit12_vol4_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Reading Comprehension - Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement True or False.</p>",
           "questions": [
             {
               "id": "36",
@@ -488,7 +481,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit12_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Mặt trời và Gió Bắc</h1>\n\n<p style=\"margin-bottom: 1rem;\">Mặt trời và Gió Bắc đang nói chuyện với nhau trên bầu trời. Gió Bắc nói rằng mình giỏi hơn mọi người. Mặt trời lắng nghe Gió Bắc nói với sự <b>nhiệt tình, hăng hái (enthusiasm)</b> về sức mạnh của hắn và cách hắn có thể đẩy một vật từ <b>lục địa (continent)</b> này sang lục địa khác chỉ bằng một hơi thở. Hắn nói, “Tôi là thứ mạnh nhất trên bầu trời.”</p>\n\n<p style=\"margin-bottom: 1rem;\">“Thật sao?” Mặt trời hỏi. “Làm sao anh biết rằng anh mạnh hơn các vì sao, hay cơn mưa, hay thậm chí là tôi?”</p>\n\n<p style=\"margin-bottom: 1rem;\">Gió Bắc cười với vẻ <b>thiếu tôn trọng (disrespect)</b>. Hắn hét lên, “Anh á? Đúng là một trò đùa!”</p>\n\n<p style=\"margin-bottom: 1rem;\">Điều này làm Mặt trời tổn thương. Mặt trời thường <b>rụt rè (timid)</b> và không muốn gây <b>xung đột (conflict)</b>. Hôm nay ông quyết định rằng mình nên dạy cho Gió Bắc một bài học.</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Trong khi đó (meantime)</b>, một người đàn ông bắt đầu đi bộ dọc theo <b>đại lộ (avenue)</b> dưới Trái đất. Khi Mặt trời nhìn xuống <b>địa hình (terrain)</b> bên dưới, ông đã nhìn thấy người đàn ông. Ông chỉ xuống Trái đất và nói, “Anh có thấy người đàn ông đang đi bộ bên dưới không? Tôi cá là tôi có thể cởi được áo khoác của anh ta. Anh có làm được không?”</p>\n\n<p style=\"margin-bottom: 1rem;\">“Tất nhiên rồi!” Gió Bắc đáp khi hắn hít một hơi thật sâu và làm đầy không khí vào phổi. Hắn sử dụng toàn bộ <b>cơ bắp (muscles)</b> trên mặt và <b>bụng (belly)</b> của mình để <b>thổi (blow)</b> gió vào mục tiêu <b>liên tiếp (succession)</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Các <b>luồng (currents)</b> không khí <b>khắc nghiệt (harsh)</b> làm cho người đàn ông cảm thấy lạnh. Người đàn ông kéo áo khoác chặt hơn quanh người. Áo khoác không hề bị bung ra. Mặt trời quyết định <b>giải cứu (rescue)</b> người đàn ông khỏi <b>trò tinh nghịch (mischief)</b> của Gió Bắc. Ông nói, “Tôi có thể thử không?” Sau đó, ông chiếu ánh nắng xuống làm người đàn ông ấm lên. Người đàn ông <b>dựa (leaned)</b> vào một cái cây. Anh ta cởi áo khoác ra và tận hưởng thời tiết đẹp.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Anh rất mạnh mẽ,” Mặt trời nói với Gió Bắc, “nhưng anh lại dùng <b>bạo lực (violence)</b> trong <b>nỗ lực (bid)</b> để tỏ ra mạnh mẽ. Anh nên nghĩ đến một <b>sự thay thế, phương án khác (alternative)</b>. Những người mạnh mẽ nhất không sử dụng vũ lực để đạt được những gì họ muốn.”</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 12: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

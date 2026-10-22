@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 4: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -408,12 +402,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Butler's Bad Day</h1>        <p style=\"margin-bottom: 1rem;\">The <b>superintendent</b> of <b>civic</b> projects was a busy man. He worked every day of the week and had fancy parties at his house every night.</p>    <p style=\"margin-bottom: 1rem;\">However, if there was someone busier than him, it was his butler. He worked all day organizing the <b>superintendent</b>'s parties and then cleaned up after them late at night. <b>Hence</b>, while the <b>superintendent</b> slept <b>soundly</b>, <b>snoring</b> loudly in his bed, the butler was still awake.</p>    <p style=\"margin-bottom: 1rem;\">Sadly, though the butler was always <b>overworked</b>, his profession's <b>intrinsic</b> nature demanded he never be <b>outspoken</b>. Therefore, his employer never knew the butler hadn't slept for several days. On any day the butler might make a mistake.</p>    <p style=\"margin-bottom: 1rem;\">One day, the <b>superintendent</b> said, \"This <b>particular</b> party is important. People from the <b>ministry</b> are coming. Everything must be perfect.\"</p>    <p style=\"margin-bottom: 1rem;\">The butler began preparing at once. First he went to the <b>attic</b> to get more chairs and tables. But on his <b>descent</b>, he realized he needed to make the food. A <b>gourmet</b> dinner was necessary for such a party. He boiled water in a <b>kettle</b> for soup and chopped some beef into <b>chunks</b>. Just as he was starting the soup, he remembered that he had to sweep the veranda. As he was sweeping the veranda, he realized that he had to clean the sauna.</p>    <p style=\"margin-bottom: 1rem;\">By this time, the first guests had arrived. The veranda was still dirty. There were not enough chairs for the guests to sit on, and the soup tasted too <b>pungent</b>. Some guests were <b>dissatisfied</b>. They started to make a <b>fuss</b>, and the party was filled with a <b>din</b> of complaints.</p>    <p style=\"margin-bottom: 1rem;\">The <b>superintendent</b>'s party was a disaster. He wondered why his butler had made so many mistakes. At last, the butler admitted to being exhausted. His boss felt pity for the butler. He had no idea the butler was so tired. He said, \"You should have told me earlier, then we could have avoided this whole <b>ordeal</b>.\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Butler's Bad Day</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>superintendent</b> of <b>civic</b> projects was a busy man. He worked every day of the week and had fancy parties at his house every night.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">However, if there was someone busier than him, it was his butler. He worked all day organizing the <b>superintendent</b>'s parties and then cleaned up after them late at night. <b>Hence</b>, while the <b>superintendent</b> slept <b>soundly</b>, <b>snoring</b> loudly in his bed, the butler was still awake.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Sadly, though the butler was always <b>overworked</b>, his profession's <b>intrinsic</b> nature demanded he never be <b>outspoken</b>. Therefore, his employer never knew the butler hadn't slept for several days. On any day the butler might make a mistake.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, the <b>superintendent</b> said, \"This <b>particular</b> party is important. People from the <b>ministry</b> are coming. Everything must be perfect.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The butler began preparing at once. First he went to the <b>attic</b> to get more chairs and tables. But on his <b>descent</b>, he realized he needed to make the food. A <b>gourmet</b> dinner was necessary for such a party. He boiled water in a <b>kettle</b> for soup and chopped some beef into <b>chunks</b>. Just as he was starting the soup, he remembered that he had to sweep the veranda. As he was sweeping the veranda, he realized that he had to clean the sauna.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">By this time, the first guests had arrived. The veranda was still dirty. There were not enough chairs for the guests to sit on, and the soup tasted too <b>pungent</b>. Some guests were <b>dissatisfied</b>. They started to make a <b>fuss</b>, and the party was filled with a <b>din</b> of complaints.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>superintendent</b>'s party was a disaster. He wondered why his butler had made so many mistakes. At last, the butler admitted to being exhausted. His boss felt pity for the butler. He had no idea the butler was so tired. He said, \"You should have told me earlier, then we could have avoided this whole <b>ordeal</b>.\"</p></div>",
       "imageUrl": "/unit4_vol6_story.png",
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -490,37 +484,37 @@
               "id": "42",
               "content": "On his descent from the attic, what did the butler realize?",
               "options": [
-                "On his descent from the attic, he realized he needed to make the food.",
                 "He realized he lost his keys.",
+                "On his descent from the attic, he realized he needed to make the food.",
                 "He realized someone was at the door.",
                 "He realized he forgot to clean the attic."
               ],
               "explanation": "Đáp án đúng là A . Đoạn 5 có miêu tả: 'But on his descent, he realized he needed to make the food.' (Nhưng trên đường đi xuống, ông nhận ra mình cần phải làm đồ ăn). Chọn A là chuẩn luôn!",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "43",
               "content": "How could the butler have avoided the entire ordeal?",
               "options": [
-                "If he had told the superintendent earlier that he was tired, then he could have avoided the whole ordeal.",
                 "If he had quit his job.",
                 "If he had slept during the day.",
+                "If he had told the superintendent earlier that he was tired, then he could have avoided the whole ordeal.",
                 "If he had made the food earlier."
               ],
               "explanation": "Đáp án đúng là A nhé. Câu cuối cùng của bài viết trích lời của viên giám đốc: 'You should have told me earlier, then we could have avoided this whole ordeal.' (Ông nên nói với tôi sớm hơn, thì chúng ta đã có thể tránh được toàn bộ thử thách này). Rất khớp với đáp án A .",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "44",
               "content": "Just as he started the soup, what did the butler remember?",
               "options": [
-                "As he started the soup, he remembered that he had to sweep the veranda.",
                 "He remembered to add salt.",
                 "He remembered he had to buy more beef.",
-                "He remembered to lock the door."
+                "He remembered to lock the door.",
+                "As he started the soup, he remembered that he had to sweep the veranda."
               ],
               "explanation": "Đáp án đúng là A . Đoạn 5 có câu kể rất rõ: 'Just as he was starting the soup, he remembered that he had to sweep the veranda.' (Ngay khi vừa bắt đầu nấu món súp, ông lại nhớ ra mình phải quét dọn hiên nhà). Vì thế đáp án A là câu trả lời đúng nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "45",
@@ -537,7 +531,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit4_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Ngày Tồi Tệ Của Người Quản Gia</h1>\n\n<p style=\"margin-bottom: 1rem;\">Vị <b>người giám sát</b> các dự án <b>công dân</b> là một người bận rộn. Ông ta làm việc mỗi ngày trong tuần và tổ chức những bữa tiệc sang trọng tại nhà mình mỗi đêm.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, nếu có ai đó bận rộn hơn ông ta, thì đó chính là người quản gia của ông. Anh ta làm việc cả ngày để tổ chức các bữa tiệc cho <b>người giám sát</b> và sau đó dọn dẹp vào tối muộn. <b>Vì thế</b>, trong khi <b>người giám sát</b> ngủ <b>say sưa</b>, <b>ngáy</b> lớn trên giường, người quản gia vẫn còn thức.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đáng buồn thay, mặc dù người quản gia luôn bị <b>làm việc quá sức</b>, bản chất <b>nội tại</b> của nghề nghiệp đòi hỏi anh không bao giờ được <b>thẳng thắn</b> lên tiếng. Do đó, ông chủ của anh không bao giờ biết được rằng người quản gia đã không ngủ trong vài ngày. Vào bất kỳ ngày nào, người quản gia cũng có thể mắc phải sai lầm.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, <b>người giám sát</b> nói: “Bữa tiệc <b>cụ thể</b> này rất quan trọng. Những người từ <b>bộ</b> sẽ tới. Mọi thứ phải thật hoàn hảo.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Người quản gia bắt đầu chuẩn bị ngay lập tức. Trước tiên, anh lên <b>gác xép</b> để lấy thêm bàn ghế. Nhưng trên <b>đường đi xuống</b>, anh chợt nhận ra mình cần phải làm thức ăn. Một bữa tối <b>hảo hạng</b> là điều cần thiết cho một bữa tiệc như vậy. Anh đun nước trong một chiếc <b>ấm đun nước</b> để nấu súp và thái thịt bò thành những <b>khúc</b> lớn. Ngay khi bắt đầu nấu súp, anh nhớ ra rằng mình phải quét dọn hiên nhà. Khi đang quét dọn hiên nhà, anh lại nhận ra mình phải dọn dẹp phòng xông hơi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Lúc này, những vị khách đầu tiên đã đến. Hiên nhà vẫn còn bẩn. Không có đủ ghế cho khách ngồi, và món súp có vị quá <b>nồng</b>. Vài vị khách tỏ ra <b>không hài lòng</b>. Họ bắt đầu <b>làm ầm ĩ</b>, và bữa tiệc ngập trong những <b>tiếng ồn ào</b> phàn nàn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bữa tiệc của <b>người giám sát</b> là một thảm họa. Ông tự hỏi tại sao quản gia của mình lại mắc quá nhiều sai lầm. Cuối cùng, người quản gia thừa nhận rằng anh đã kiệt sức. Ông chủ cảm thấy thương hại người quản gia. Ông không hề hay biết rằng anh ta lại mệt mỏi đến thế. Ông nói: “Đáng lẽ anh nên nói cho tôi biết sớm hơn, như vậy chúng ta đã có thể tránh được toàn bộ <b>sự thử thách khó khăn</b> này.”</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 4: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 1: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -202,12 +196,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The North Star</h1>        <p style=\"margin-bottom: 1rem;\">Among the <b>multitude</b> of stars in the universe, there are a couple that are of great importance to people on Earth. The sun, of course, is one of them. The other is known as Polaris, the North Star. Polaris is special because it is the only star that always appears to be in the same place in the sky. Therefore, Polaris is a great compass. When people in the northern hemisphere of Earth look toward Polaris, they can be certain that they are facing north. The <b>permanence</b> of Polaris in the north sky has helped countless people find their destinations.</p>    <p style=\"margin-bottom: 1rem;\">Before the invention of modern navigation tools, <b>mariners</b> relied on Polaris. From the top of their <b>hulls</b>, sailors would look for Polaris to figure out their place at sea. They figured out the angle between the star and the horizon to determine their <b>latitude</b>. As long as the <b>equations</b> weren’t <b>erroneous</b>, the results were very reliable. Polaris also let sailors determine North, South, East, and West. By knowing directions and their location, <b>mariners</b> could easily navigate their ships.</p>    <p style=\"margin-bottom: 1rem;\">To those who sail at night, <b>volatile</b> storms and dark clouds were more than <b>nuisances</b>. They could <b>disrupt</b> entire journeys by blocking the view of Polaris. A captain could <b>err</b> and make an <b>inadvertent</b> wrong turn. The ship could become <b>stranded</b> at sea, and the <b>frantic</b> captain would have no way to <b>improvise</b> to get the ship back on the right course. The <b>mariner</b>’s fears wouldn’t be <b>soothed</b> until the clouds cleared and Polaris came back into view. Even today, sailors sometimes opt to navigate by using Polaris on clear nights.</p>    <p style=\"margin-bottom: 1rem;\">It’s not difficult to <b>differentiate</b> Polaris from other stars. The Big Dipper, a constellation that is well known in <b>astrology</b>, appears to <b>revolve</b> around Polaris. The handle of the Big Dipper always points to the North Star. When people get lost, it’s comforting to know that their problems can be <b>alleviated</b> by looking at the sky.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The North Star</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Among the <b>multitude</b> of stars in the universe, there are a couple that are of great importance to people on Earth. The sun, of course, is one of them. The other is known as Polaris, the North Star. Polaris is special because it is the only star that always appears to be in the same place in the sky. Therefore, Polaris is a great compass. When people in the northern hemisphere of Earth look toward Polaris, they can be certain that they are facing north. The <b>permanence</b> of Polaris in the north sky has helped countless people find their destinations.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Before the invention of modern navigation tools, <b>mariners</b> relied on Polaris. From the top of their <b>hulls</b>, sailors would look for Polaris to figure out their place at sea. They figured out the angle between the star and the horizon to determine their <b>latitude</b>. As long as the <b>equations</b> weren’t <b>erroneous</b>, the results were very reliable. Polaris also let sailors determine North, South, East, and West. By knowing directions and their location, <b>mariners</b> could easily navigate their ships.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">To those who sail at night, <b>volatile</b> storms and dark clouds were more than <b>nuisances</b>. They could <b>disrupt</b> entire journeys by blocking the view of Polaris. A captain could <b>err</b> and make an <b>inadvertent</b> wrong turn. The ship could become <b>stranded</b> at sea, and the <b>frantic</b> captain would have no way to <b>improvise</b> to get the ship back on the right course. The <b>mariner</b>’s fears wouldn’t be <b>soothed</b> until the clouds cleared and Polaris came back into view. Even today, sailors sometimes opt to navigate by using Polaris on clear nights.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It’s not difficult to <b>differentiate</b> Polaris from other stars. The Big Dipper, a constellation that is well known in <b>astrology</b>, appears to <b>revolve</b> around Polaris. The handle of the Big Dipper always points to the North Star. When people get lost, it’s comforting to know that their problems can be <b>alleviated</b> by looking at the sky.</p></div>",
       "imageUrl": "/unit1_vol6_story.png",
       "sections": [
         {
           "id": "sec3",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -272,37 +266,37 @@
               "id": "26",
               "content": "How did sailors figure out their latitude?",
               "options": [
-                "They figured out the angle between the star and the horizon.",
                 "They calculated their speed.",
+                "They figured out the angle between the star and the horizon.",
                 "They used modern navigation tools.",
                 "They asked other sailors."
               ],
               "explanation": "Đáp án đúng là A nhé. Để trả lời câu hỏi các thủy thủ đã xác định vĩ độ (latitude) như thế nào, bạn hãy xem đoạn 2: 'They figured out the angle between the star and the horizon to determine their latitude.' (Họ tính toán góc giữa ngôi sao và đường chân trời để xác định vĩ độ của họ). Rất khớp với đáp án A luôn!",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
               "content": "What has the permanence of Polaris done for people?",
               "options": [
-                "Helped countless people find their destinations.",
                 "Made people blind.",
                 "Caused frantic storms.",
+                "Helped countless people find their destinations.",
                 "Disrupted entire journeys."
               ],
               "explanation": "Đáp án đúng là A . Câu hỏi là sự cố định của sao Bắc Đẩu (permanence of Polaris) đã giúp gì cho con người. Đoạn 1 có câu chốt rất rõ: 'The permanence of Polaris in the north sky has helped countless people find their destinations.' (Sự cố định của sao Bắc Đẩu trên bầu trời phía bắc đã giúp vô số người tìm thấy điểm đến của họ). Vì vậy đáp án A là chính xác nhất.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "28",
               "content": "What well-known constellation in astrology revolves around Polaris?",
               "options": [
-                "The Big Dipper",
                 "Orion",
                 "Leo",
-                "Taurus"
+                "Taurus",
+                "The Big Dipper"
               ],
               "explanation": "Đáp án đúng là A nhé. Chòm sao nào xoay quanh sao Bắc Đẩu? Đoạn cuối bài có nhắc tới: 'The Big Dipper, a constellation that is well known in astrology, appears to revolve around Polaris.' (Chòm sao Bắc Đẩu - The Big Dipper, một chòm sao nổi tiếng trong chiêm tinh học, dường như xoay quanh Polaris). Do đó chọn A là chuẩn không cần chỉnh .",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "29",
@@ -319,7 +313,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit1_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Sao Bắc Đẩu</h1>\n\n<p style=\"margin-bottom: 1rem;\">Trong số <b>vô vàn</b> các ngôi sao trong vũ trụ, có một vài ngôi sao có tầm quan trọng to lớn đối với con người trên Trái Đất. Tất nhiên, Mặt Trời là một trong số đó. Ngôi sao còn lại được biết đến với tên gọi Polaris, tức Sao Bắc Đẩu. Polaris rất đặc biệt vì nó là ngôi sao duy nhất dường như luôn ở cùng một vị trí trên bầu trời. Do đó, Polaris là một chiếc la bàn tuyệt vời. Khi mọi người ở bán cầu bắc của Trái Đất nhìn về phía Polaris, họ có thể chắc chắn rằng mình đang đối mặt với hướng Bắc. Sự <b>thường trực</b> của Polaris trên bầu trời phía bắc đã giúp vô số người tìm được đích đến của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trước khi có các công cụ định vị hiện đại, các <b>thủy thủ</b> phải dựa vào Polaris. Từ đỉnh của những chiếc <b>thân tàu</b>, các thủy thủ sẽ tìm kiếm Polaris để xác định vị trí của họ trên biển. Họ tính toán góc giữa ngôi sao và đường chân trời để xác định <b>vĩ độ</b> của mình. Chừng nào các <b>phương trình</b> không bị <b>sai lệch</b>, kết quả sẽ rất đáng tin cậy. Polaris cũng cho phép các thủy thủ xác định hướng Bắc, Nam, Đông và Tây. Bằng cách biết các hướng và vị trí của mình, các <b>thủy thủ</b> có thể dễ dàng định hướng cho con tàu của họ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đối với những người đi biển vào ban đêm, những cơn bão <b>dữ dội</b> và những đám mây đen không chỉ là <b>sự phiền toái</b>. Chúng có thể <b>làm gián đoạn</b> toàn bộ hành trình bằng cách che khuất tầm nhìn về phía Polaris. Một vị thuyền trưởng có thể <b>mắc sai lầm</b> và <b>vô tình</b> rẽ sai hướng. Con tàu có thể bị <b>mắc cạn</b> trên biển, và vị thuyền trưởng <b>hoảng loạn</b> sẽ không có cách nào để <b>tùy cơ ứng biến</b> nhằm đưa con tàu trở lại đúng hướng. Nỗi sợ hãi của người <b>thủy thủ</b> sẽ không được <b>xoa dịu</b> cho đến khi mây tan và Polaris hiện ra trở lại. Ngay cả ngày nay, các thủy thủ đôi khi vẫn chọn cách định vị bằng Polaris vào những đêm quang đãng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Không khó để <b>phân biệt</b> Polaris với các ngôi sao khác. Bắc Đẩu Thất Tinh (Big Dipper), một chòm sao nổi tiếng trong <b>chiêm tinh học</b>, dường như <b>quay quanh</b> Polaris. Phần đuôi của Bắc Đẩu Thất Tinh luôn chỉ về phía Sao Bắc Đẩu. Khi mọi người bị lạc, thật an ủi khi biết rằng vấn đề của họ có thể được <b>giảm bớt</b> bằng cách nhìn lên bầu trời.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 1: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

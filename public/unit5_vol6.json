@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 5: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -395,12 +389,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Bet</h1>        <p style=\"margin-bottom: 1rem;\">Russell finished running a <b>relay</b> and joined his friend Becky in the cafeteria. He asked, \"What's for lunch?\"</p>    <p style=\"margin-bottom: 1rem;\">\"<b>Sesame</b> chicken. It's OK, except the meat's <b>charred</b>. Oh, and watch out for the chili peppers,\" Becky said.</p>    <p style=\"margin-bottom: 1rem;\">\"Chilies don't bother me!\" said Russell.</p>    <p style=\"margin-bottom: 1rem;\">\"My stepmother says you should be careful with them,\" replied Becky.</p>    <p style=\"margin-bottom: 1rem;\">An argument <b>ensued</b> about eating chilies. \"Chilies aren't so bad. I bet I can take more bites of this chili than you,\" Russell said.</p>    <p style=\"margin-bottom: 1rem;\">Becky was <b>wary</b> of eating the pepper. Despite her <b>reluctance</b>, she didn't want to say no to the bet. She <b>wavered</b> about whether to do it or not. She <b>negotiated</b> the details. \"What will the winner get?\" she asked.</p>    <p style=\"margin-bottom: 1rem;\">\"The loser has to carry the winner's books for a year! I'll even let you go first.\"</p>    <p style=\"margin-bottom: 1rem;\">Becky replied, \"Fine, but to <b>clarify</b>, you'll carry my books for the entire school year, right?\"</p>    <p style=\"margin-bottom: 1rem;\">Russell <b>restated</b> the agreement, \"That's right—I'll carry your books all year if you win—which you won't!\"</p>    <p style=\"margin-bottom: 1rem;\">His <b>dogged</b> <b>persuasion</b> convinced her. The chili looked <b>benign</b>, but Becky knew it could cause a lot of pain. She bit the bottom of the pepper. Surprisingly, she felt nothing.</p>    <p style=\"margin-bottom: 1rem;\">\"My turn,\" said Russell. He bit the middle of the chili. Immediately, he seemed to be in <b>distress</b>. He <b>gasped</b> and his face <b>alternated</b> between brave and pained expressions. He experienced an <b>overdose</b> of spice. He was on the <b>verge</b> of tears and finally let out a horrible cry.</p>    <p style=\"margin-bottom: 1rem;\">\"Take this,\" said Becky, handing him her drink.</p>    <p style=\"margin-bottom: 1rem;\">\"That was awful!\" he said, continuing to <b>sip</b> from the glass.</p>    <p style=\"margin-bottom: 1rem;\">That night, Becky researched chilies. The next day she said in an <b>apologetic</b> voice, \"I read that the hot part of chilies is in the middle, where the seeds are. I'm sorry—I feel like I cheated by going first.\"</p>    <p style=\"margin-bottom: 1rem;\">Russell was relieved, not only did he learn something new about chilies, but he learned that Becky was a good friend.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Bet</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Russell finished running a <b>relay</b> and joined his friend Becky in the cafeteria. He asked, \"What's for lunch?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"<b>Sesame</b> chicken. It's OK, except the meat's <b>charred</b>. Oh, and watch out for the chili peppers,\" Becky said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Chilies don't bother me!\" said Russell.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"My stepmother says you should be careful with them,\" replied Becky.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">An argument <b>ensued</b> about eating chilies. \"Chilies aren't so bad. I bet I can take more bites of this chili than you,\" Russell said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Becky was <b>wary</b> of eating the pepper. Despite her <b>reluctance</b>, she didn't want to say no to the bet. She <b>wavered</b> about whether to do it or not. She <b>negotiated</b> the details. \"What will the winner get?\" she asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"The loser has to carry the winner's books for a year! I'll even let you go first.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Becky replied, \"Fine, but to <b>clarify</b>, you'll carry my books for the entire school year, right?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Russell <b>restated</b> the agreement, \"That's right—I'll carry your books all year if you win—which you won't!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">His <b>dogged</b> <b>persuasion</b> convinced her. The chili looked <b>benign</b>, but Becky knew it could cause a lot of pain. She bit the bottom of the pepper. Surprisingly, she felt nothing.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"My turn,\" said Russell. He bit the middle of the chili. Immediately, he seemed to be in <b>distress</b>. He <b>gasped</b> and his face <b>alternated</b> between brave and pained expressions. He experienced an <b>overdose</b> of spice. He was on the <b>verge</b> of tears and finally let out a horrible cry.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Take this,\" said Becky, handing him her drink.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"That was awful!\" he said, continuing to <b>sip</b> from the glass.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">That night, Becky researched chilies. The next day she said in an <b>apologetic</b> voice, \"I read that the hot part of chilies is in the middle, where the seeds are. I'm sorry—I feel like I cheated by going first.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Russell was relieved, not only did he learn something new about chilies, but he learned that Becky was a good friend.</p></div>",
       "imageUrl": "/unit5_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -465,37 +459,37 @@
               "id": "36",
               "content": "Why did Becky take the bet in spite of her reluctance?",
               "options": [
-                "Becky took the bet because of Russell's dogged persuasion.",
                 "She wanted to win.",
+                "Becky took the bet because of Russell's dogged persuasion.",
                 "She liked chilies.",
                 "She was hungry."
               ],
               "explanation": "Đáp án đúng là A nhé. Ở đầu đoạn 10 có giải thích nguyên nhân Becky đồng ý dù miễn cưỡng: 'His dogged persuasion convinced her.' (Sự thuyết phục dai dẳng của anh ấy đã thuyết phục được cô ấy). Vì vậy đáp án A là hoàn toàn chính xác !",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "37",
               "content": "Why did Russell have to restate the terms of the bet?",
               "options": [
-                "Russell had to restate the terms to clarify for Becky.",
                 "He forgot what he said.",
                 "He wanted to trick her.",
+                "Russell had to restate the terms to clarify for Becky.",
                 "He changed his mind."
               ],
               "explanation": "Đáp án đúng là A . Ở đoạn 8, Becky nói: 'Fine, but to clarify...' (Được thôi, nhưng để làm rõ...). Do đó, mục đích của việc Russell nhắc lại điều khoản là để làm rõ (clarify) cho Becky hiểu. Chọn A là chuẩn luôn!",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "38",
               "content": "How did Becky know that Russell was in distress and had an overdose of spice after he ate the pepper?",
               "options": [
-                "He gasped, alternated between pained and brave, and was on the verge of tears.",
                 "He said he was fine.",
                 "He ate another pepper.",
-                "He ran away."
+                "He ran away.",
+                "He gasped, alternated between pained and brave, and was on the verge of tears."
               ],
               "explanation": "Đáp án đúng là A nhé. Đoạn 11 đã mô tả biểu cảm của Russell: 'He gasped and his face alternated between brave and pained expressions... He was on the verge of tears...' (Cậu ấy thở hổn hển và khuôn mặt cậu xen kẽ giữa vẻ dũng cảm và đau đớn... Cậu ấy chực khóc). Tất cả những chi tiết này đều nằm trong đáp án A .",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "39",
@@ -513,18 +507,26 @@
               "id": "40",
               "content": "What did Russell do after he ate the chili?",
               "options": [
-                "Russell sipped from the beverage.",
                 "He ate another one.",
+                "Russell sipped from the beverage.",
                 "He cried.",
                 "He threw the chili away."
               ],
               "explanation": "Đáp án đúng là A nhé. Ở đoạn 13 có viết: '...he said, continuing to sip from the glass.' (...cậu ấy nói, tiếp tục nhấp từng ngụm từ chiếc cốc). Từ 'beverage' trong đáp án A đồng nghĩa với thức uống trong chiếc cốc ('glass') mà Becky đưa cho cậu. Nên A là chính xác nhé!",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit5_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Một Vụ Cược</h1>\n\n<p style=\"margin-bottom: 1rem;\">Russell vừa kết thúc cuộc đua <b>tiếp sức</b> và đến ngồi cùng bạn của mình là Becky trong căn tin. Cậu hỏi: \"Bữa trưa nay có món gì vậy?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Gà xào <b>vừng</b>. Ăn cũng được, ngoại trừ việc thịt bị <b>cháy xém</b>. À, và cẩn thận với những quả ớt nhé,\" Becky nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Ớt chẳng nhằm nhò gì với mình!\" Russell nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Mẹ kế của mình bảo rằng cậu nên cẩn thận với chúng,\" Becky đáp lại.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một cuộc tranh cãi <b>kéo theo sau đó</b> về việc ăn ớt. \"Ớt đâu có tệ đến vậy. Mình cá là mình có thể cắn quả ớt này nhiều miếng hơn cậu,\" Russell nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Becky khá <b>cảnh giác</b> với việc ăn ớt. Mặc dù <b>miễn cưỡng</b>, cô không muốn từ chối vụ cá cược. Cô <b>do dự</b> về việc có nên làm hay không. Cô <b>thương lượng</b> các chi tiết. \"Người thắng sẽ được gì?\" cô hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Người thua sẽ phải xách sách vở cho người thắng trong vòng một năm! Mình thậm chí sẽ nhường cậu làm trước.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Becky trả lời: \"Được thôi, nhưng để <b>làm rõ</b> nhé, cậu sẽ xách sách vở cho mình trong suốt cả năm học, đúng không?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Russell <b>nhấn mạnh lại</b> thỏa thuận: \"Đúng thế—mình sẽ xách sách vở cho cậu cả năm nếu cậu thắng—điều mà cậu sẽ không thể nào làm được!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Sự <b>thuyết phục</b> một cách <b>dai dẳng</b> của cậu đã khiến cô xiêu lòng. Quả ớt trông có vẻ <b>vô hại</b>, nhưng Becky biết nó có thể gây ra rất nhiều đau đớn. Cô cắn vào phần dưới cùng của quả ớt. Đáng ngạc nhiên là cô không cảm thấy gì cả.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đến lượt mình,\" Russell nói. Cậu cắn vào phần giữa của quả ớt. Ngay lập tức, cậu trông như đang ở trong <b>tình trạng khốn khổ</b>. Cậu <b>thở hổn hển</b> và khuôn mặt cậu <b>luân phiên</b> thay đổi giữa biểu cảm dũng cảm và đau đớn. Cậu đã trải qua việc bị <b>quá liều</b> vị cay. Cậu đang ở <b>bờ vực</b> của việc rơi nước mắt và cuối cùng bật ra một tiếng kêu thảm thiết.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Cầm lấy này,\" Becky nói, đưa cho cậu đồ uống của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Thật kinh khủng!\" cậu nói, và tiếp tục <b>nhấm nháp</b> ly nước.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tối hôm đó, Becky đã tìm hiểu về ớt. Ngày hôm sau, cô nói bằng một giọng <b>đầy hối lỗi</b>: \"Mình đọc được rằng phần cay của ớt nằm ở giữa, chỗ có hạt. Mình xin lỗi—mình cảm thấy như mình đã gian lận khi đi trước.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Russell cảm thấy nhẹ nhõm, không chỉ vì cậu học thêm được điều gì đó mới về ớt, mà cậu còn nhận ra Becky là một người bạn tốt.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 5: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

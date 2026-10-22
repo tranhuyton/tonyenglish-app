@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 10: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -448,12 +442,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Life on the Farm</h1>        <p style=\"margin-bottom: 1rem;\">Bill was an excellent <b>capitalist</b>. He <b>financed</b> a large aviation <b>enterprise</b> that made a lot of money. He knew how to <b>maximize</b> <b>monetary</b> gains in every business deal he made. Bill had one big problem, though. He was unhappy all the time. Bill knew that he had to do something about it, or he would be depressed for the rest of his life.</p>    <p style=\"margin-bottom: 1rem;\">One day, Bill was in his office when he heard a knock at the door. \"Come in!\" Bill said loudly.</p>    <p style=\"margin-bottom: 1rem;\">His <b>accountant</b>, Jane, walked in. Jane said, \"Sir, I haven't seen you smile in a year. What are you so sad about? Your company is doing very well.\"</p>    <p style=\"margin-bottom: 1rem;\">Bill told her, \"I'm <b>indifferent</b> about my company's success. I have <b>contempt</b> toward my job. I just want to do something I enjoy. I've always loved growing plants as a hobby. I'm going to quit my job and become a farmer!\"</p>    <p style=\"margin-bottom: 1rem;\">\"You're crazy!\" Jane said.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't think so,\" Bill replied. \"I want the <b>simplicity</b> of a life on a farm. I'm tired of all this stress. Farming will make me happy.\"</p>    <p style=\"margin-bottom: 1rem;\">The very next day, Bill carried out the <b>preliminary</b> task of buying land and tools. Then he got to work. He <b>sowed</b> many types of seeds. He planted <b>soy</b>, cabbage, carrots, and onions. \"The <b>upcoming</b> summer is going to be very dry,\" thought Bill. \"I need to <b>irrigate</b> my crops as a <b>precaution</b>, in case it doesn't rain enough.\"</p>    <p style=\"margin-bottom: 1rem;\">He took his <b>spade</b> and dug a <b>ditch</b> down the middle of his farm. \"Water from the stream will flow down the ditch and <b>saturate</b> the soil around every plant,\" Bill thought.</p>    <p style=\"margin-bottom: 1rem;\">Bill <b>dedicated</b> himself to farming. After a year, his farm looked <b>exquisite</b>. Most importantly, Bill was happy. He finally had the life he always wanted.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Life on the Farm</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Bill was an excellent <b>capitalist</b>. He <b>financed</b> a large aviation <b>enterprise</b> that made a lot of money. He knew how to <b>maximize</b> <b>monetary</b> gains in every business deal he made. Bill had one big problem, though. He was unhappy all the time. Bill knew that he had to do something about it, or he would be depressed for the rest of his life.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, Bill was in his office when he heard a knock at the door. \"Come in!\" Bill said loudly.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">His <b>accountant</b>, Jane, walked in. Jane said, \"Sir, I haven't seen you smile in a year. What are you so sad about? Your company is doing very well.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Bill told her, \"I'm <b>indifferent</b> about my company's success. I have <b>contempt</b> toward my job. I just want to do something I enjoy. I've always loved growing plants as a hobby. I'm going to quit my job and become a farmer!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"You're crazy!\" Jane said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I don't think so,\" Bill replied. \"I want the <b>simplicity</b> of a life on a farm. I'm tired of all this stress. Farming will make me happy.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The very next day, Bill carried out the <b>preliminary</b> task of buying land and tools. Then he got to work. He <b>sowed</b> many types of seeds. He planted <b>soy</b>, cabbage, carrots, and onions. \"The <b>upcoming</b> summer is going to be very dry,\" thought Bill. \"I need to <b>irrigate</b> my crops as a <b>precaution</b>, in case it doesn't rain enough.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He took his <b>spade</b> and dug a <b>ditch</b> down the middle of his farm. \"Water from the stream will flow down the ditch and <b>saturate</b> the soil around every plant,\" Bill thought.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Bill <b>dedicated</b> himself to farming. After a year, his farm looked <b>exquisite</b>. Most importantly, Bill was happy. He finally had the life he always wanted.</p></div>",
       "imageUrl": "/unit10_vol5_story.png",
       "sections": [
         {
           "id": "sec5_reading_tf",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -577,7 +571,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit10_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cuộc Sống Trên Nông Trại</h1>\n\n<p style=\"margin-bottom: 1rem;\">Bill là một <b>nhà tư bản</b> xuất sắc. Anh ấy đã <b>tài trợ</b> cho một <b>doanh nghiệp</b> hàng không lớn kiếm được rất nhiều tiền. Anh ấy biết cách <b>tối đa hóa</b> lợi ích <b>tiền bạc</b> trong mọi thương vụ kinh doanh mà anh ấy thực hiện. Tuy nhiên, Bill có một vấn đề lớn. Anh ấy lúc nào cũng không hạnh phúc. Bill biết rằng mình phải làm gì đó về điều đó, nếu không anh ấy sẽ bị trầm cảm trong suốt phần đời còn lại.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, Bill đang ở trong văn phòng thì nghe thấy một tiếng gõ cửa. \"Vào đi!\" Bill nói lớn.</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Kế toán</b> của anh, Jane, bước vào. Jane nói, \"Thưa ngài, tôi đã không thấy ngài mỉm cười trong suốt một năm nay. Ngài đang buồn về chuyện gì vậy? Công ty của ngài đang làm ăn rất tốt.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Bill nói với cô ấy, \"Tôi <b>thờ ơ</b> với sự thành công của công ty tôi. Tôi có sự <b>khinh miệt</b> đối với công việc của mình. Tôi chỉ muốn làm một điều gì đó mà tôi thích. Tôi luôn thích trồng cây như một sở thích. Tôi sẽ nghỉ việc và trở thành một nông dân!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Ngài điên rồi!\" Jane nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi không nghĩ vậy,\" Bill trả lời. \"Tôi muốn <b>sự giản dị</b> của một cuộc sống trên nông trại. Tôi mệt mỏi với tất cả những căng thẳng này. Công việc đồng áng sẽ làm tôi hạnh phúc.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngay ngày hôm sau, Bill tiến hành nhiệm vụ <b>sơ bộ</b> là mua đất và dụng cụ. Sau đó anh ấy bắt tay vào làm việc. Anh ấy đã <b>gieo</b> nhiều loại hạt giống. Anh trồng <b>đậu nành</b>, bắp cải, cà rốt và hành tây. \"Mùa hè <b>sắp tới</b> sẽ rất khô hạn,\" Bill nghĩ. \"Mình cần phải <b>tưới tiêu</b> cho cây trồng của mình như một <b>biện pháp phòng ngừa</b>, phòng trường hợp không có đủ mưa.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh ấy lấy <b>cái mai</b> của mình và đào một cái <b>rãnh</b> ở giữa trang trại của mình. \"Nước từ suối sẽ chảy xuống rãnh và <b>thấm đẫm</b> đất xung quanh mỗi cây,\" Bill nghĩ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bill <b>cống hiến</b> bản thân cho công việc đồng áng. Sau một năm, trang trại của anh ấy trông <b>tuyệt đẹp</b>. Quan trọng nhất, Bill đã rất hạnh phúc. Cuối cùng thì anh cũng có được cuộc sống mà anh luôn mong muốn.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 10: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

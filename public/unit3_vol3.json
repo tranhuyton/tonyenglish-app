@@ -3,267 +3,464 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit3_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bloom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blu:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a plant blooms, it makes flowers.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Roses look so pretty when they bloom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kampaekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is compact, it is smaller than normal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A laptop computer is much more compact than a desktop model.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dikei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To decay is to be destroyed naturally.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The old wooden house was slowly decaying.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dessert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dize:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Dessert is a sweet food that you eat after a meal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Kayla wants ice cream for dessert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dip something is to put part of it into a liquid for a short time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Laurel dipped her strawberry into the chocolate.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[distent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is distant, it is far away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Michael could barely see the distant island.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">eclipse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iklips]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An eclipse is an occasion when the moon moves in front of the sun.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A complete eclipse of the sun is a very rare occurrence.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fairy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feari]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fairy is a small, magic creature with wings.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are usually fairies in fantasy stories.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">curl</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kerl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A curl is a small piece of something with a round shape.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The colorful ribbons were bent into curls.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Grace is a quality of moving in a smooth, relaxed and attractive way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The ballerina danced with grace.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">leisure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:39:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Leisure is time when you do not have to do work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Eve likes to listen to music in her leisure time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mankind</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[maenkaind]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Mankind is all of the world’s people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All of mankind has to work to make this a better world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">passion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paejan]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Passion is a very strong feeling of wanting to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She had a passion for dancing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pillow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pilou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pillow is something that you put your head on when you sleep.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I travel, I usually take along my favorite pillow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pulse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pAls]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pulse is the beat of the heart.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor checked the patient’s pulse by feeling his wrist.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refresh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rifrej]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To refresh someone is to make them feel less hot or tired.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The baby was refreshed after taking a cool bath.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sneeze</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sni:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sneeze is to suddenly blow air out of your nose and mouth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He sneezed after smelling the flower.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spais]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spice is a flavor for food and drinks.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Two common spices found in many homes are salt and pepper.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whistle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwisl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To whistle is to make a sound by putting your lips together and blowing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ As he was listening to music, Daryl whistled.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wool</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Wool is the hair that a sheep has.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Grandma wants to use the blue wool to knit me a sweater.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit3_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alley</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An alley is a narrow road behind houses or buildings.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The alley behind my house looks dirty.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ax</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ax is a tool used to cut wood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She used an ax to cut some wood for the fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bunch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bʌntʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bunch is a group of the same things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was hungry, so she ate the entire bunch of grapes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chore is a job that you have to do but don’t like.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It’s Nikki’s chore to do the dishes every Tuesday and Wednesday night.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[di:sənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is decent, it is OK or good enough.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Eric did a decent job painting the fence.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disgrace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disgreis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Disgrace is a feeling of shame.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He felt a sense of disgrace after failing his big exam.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elbow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[elbou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The elbow is the middle part of a person’s arm that lets you bend it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She pointed to her elbow to show me where she hurt herself.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grateful</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greitfəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you are grateful for something, you are happy that it happened.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girls were grateful to have a chance to spend time with their grandfather.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">irritate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iriteit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To irritate means to annoy someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was irritated when her brother told her that he had lost her camera.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">kid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To kid is to make a joke to make someone believe something which is not true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I am not really mad. I was kidding when I said I was angry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lu:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is loose, it is not held in place well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bolt was loose, so I tightened it with the wrench.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">offend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əfend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To offend someone means to make them angry or upset.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They were both offended by what they had said to each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overnight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərnait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something happens overnight, it happens during the night.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The campers stayed in the tent overnight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">persist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pərsist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To persist means to keep doing something even when it is hard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Even though the lesson was difficult, he persisted until he understood.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pine is a type of tree that is tall and thin.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were many beautiful pine trees in the forest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scar</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skɑ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A scar is a mark on the skin after a wound heals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The monster had horrible scars on his cheek and forehead.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sensation</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[senseiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sensation is a feeling a person gets from their senses.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom got a painful sensation in her head from the loud noise.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sled</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sled]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sled is a small vehicle that you use on snow.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Marvin likes to ride his sled down the hill in winter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tease</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ti:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tease someone means to laugh at or make fun of them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jake teased Charlie because he was the new student.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">valentine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[væləntain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A valentine is someone you love or admire with great affection.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Harry wanted Molly to be his valentine.</div></div></div></div></div></div>",
       "sections": [
         {
           "id": "sec_wordlist_0",
-          "title": "Part A: Choose the right word for the given definition.",
+          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "far away",
+              "content": "not strongly put in place",
               "options": [
-                "compact",
-                "leisure",
-                "distant",
-                "passion"
+                "kid",
+                "loose",
+                "disgrace",
+                "sensation"
               ],
-              "explanation": "“far away” có nghĩa là xa xôi, xa cách. Từ đồng nghĩa là “distant”.",
-              "correctAnswer": "C"
+              "correctAnswer": "B",
+              "explanation": "loose có nghĩa là lỏng lẻo, không được gắn chặt."
             },
             {
               "id": "2",
-              "content": "a sweet thing to eat",
+              "content": "thankful",
               "options": [
-                "dessert",
-                "wool",
-                "mankind",
-                "bloom"
+                "decent",
+                "irritate",
+                "grateful",
+                "offend"
               ],
-              "explanation": "“a sweet thing to eat” là đồ ngọt để ăn. Đáp án là “dessert” (món tráng miệng).",
-              "correctAnswer": "A"
+              "correctAnswer": "C",
+              "explanation": "grateful có nghĩa là biết ơn (thankful)."
             },
             {
               "id": "3",
-              "content": "a small magical creature",
+              "content": "a job or task",
               "options": [
-                "pulse",
-                "pillow",
-                "grace",
-                "fairy"
+                "sled",
+                "chore",
+                "alley",
+                "ax"
               ],
-              "explanation": "“a small magical creature” là sinh vật ma thuật nhỏ bé. Đáp án là “fairy” (tiên nữ).",
-              "correctAnswer": "D"
+              "correctAnswer": "B",
+              "explanation": "chore là công việc vặt, nhiệm vụ phải làm."
             },
             {
               "id": "4",
-              "content": "an event that covers the sun",
+              "content": "someone you love or admire",
               "options": [
-                "whistle",
-                "decay",
-                "eclipse",
-                "curl"
+                "valentine",
+                "pine",
+                "bunch",
+                "elbow"
               ],
-              "explanation": "“an event that covers the sun” là sự kiện che khuất mặt trời. Đáp án là “eclipse” (nhật thực).",
-              "correctAnswer": "C"
+              "correctAnswer": "A",
+              "explanation": "valentine là người bạn yêu quý hoặc ngưỡng mộ."
             },
             {
               "id": "5",
-              "content": "to make someone feel less tired",
+              "content": "to make angry",
               "options": [
-                "spice",
-                "refresh",
-                "dip",
-                "sneeze"
+                "offend",
+                "scar",
+                "persist",
+                "overnight"
               ],
-              "explanation": "“to make someone feel less tired” là làm cho ai đó bớt mệt mỏi. Đáp án là “refresh” (làm sảng khoái).",
-              "correctAnswer": "B"
+              "correctAnswer": "A",
+              "explanation": "offend có nghĩa là xúc phạm, làm ai đó tức giận."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         },
         {
           "id": "sec_wordlist_1",
-          "title": "Part B: Choose the right definition for the given word.",
+          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "whistle",
+              "content": "bunch",
               "options": [
-                "a flavor",
-                "to make noise with one’s lips",
-                "people",
-                "a flower"
+                "a group of things",
+                "a tool",
+                "a narrow road",
+                "wood from a tree"
               ],
-              "explanation": "“whistle” là huýt sáo, tức là tạo ra âm thanh bằng môi.",
-              "correctAnswer": "B"
+              "correctAnswer": "A",
+              "explanation": "bunch là một chùm, một bó, một nhóm đồ vật cùng loại."
             },
             {
               "id": "7",
-              "content": "compact",
+              "content": "elbow",
               "options": [
-                "far",
-                "not at work",
-                "small",
-                "to help tired people"
+                "a picture",
+                "a mark on the skin",
+                "a part of the arm",
+                "a vehicle for snow"
               ],
-              "explanation": "“compact” có nghĩa là nhỏ gọn (small).",
-              "correctAnswer": "C"
+              "correctAnswer": "C",
+              "explanation": "elbow là khuỷu tay (một bộ phận của cánh tay)."
             },
             {
               "id": "8",
-              "content": "wool",
+              "content": "irritate",
               "options": [
-                "sheep’s hair",
-                "magic creature",
-                "something to eat",
-                "strong feeling"
+                "to keep trying",
+                "to annoy",
+                "not being serious",
+                "full of thanks"
               ],
-              "explanation": "“wool” là len, lông cừu.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "irritate là làm phiền, chọc tức (to annoy)."
             },
             {
               "id": "9",
-              "content": "grace",
+              "content": "disgrace",
               "options": [
-                "to chase after",
-                "to get old and rot",
-                "a nice way to move",
-                "in the shape of a circle"
+                "shame",
+                "to make angry",
+                "during the night",
+                "not strongly attached"
               ],
-              "explanation": "“grace” là vẻ duyên dáng, di chuyển uyển chuyển (a nice way to move).",
-              "correctAnswer": "C"
+              "correctAnswer": "A",
+              "explanation": "disgrace là sự hổ thẹn, nhục nhã (shame)."
             },
             {
               "id": "10",
-              "content": "dip",
+              "content": "decent",
               "options": [
-                "to blow out air",
-                "something soft for your head",
-                "to put in and out",
-                "one of the things on your feet"
+                "to make fun",
+                "a feeling from the senses",
+                "a job or task",
+                "good or correct"
               ],
-              "explanation": "“dip” là nhúng vào rồi rút ra.",
-              "correctAnswer": "C"
+              "correctAnswer": "D",
+              "explanation": "decent có nghĩa là tươm tất, khá tốt, tử tế."
             },
             {
               "id": "11",
-              "content": "spice",
+              "content": "overnight",
               "options": [
-                "a flavor added to food or drink",
-                "something with a round shape",
-                "to make one feel less tired",
-                "a sweet thing to eat"
+                "happening during the night",
+                "to make fun of someone",
+                "not held in place",
+                "a feeling one gets from their senses"
               ],
-              "explanation": "“spice” là gia vị, hương vị thêm vào thức ăn.",
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "overnight có nghĩa là diễn ra qua đêm."
             },
             {
               "id": "12",
-              "content": "leisure",
+              "content": "ax",
               "options": [
-                "time when you do not have to work",
-                "to become naturally destroyed",
-                "the hair of sheep",
-                "a feeling of wanting"
+                "a tall tree",
+                "a tool used for cutting",
+                "a part of the arm",
+                "a feeling of shame"
               ],
-              "explanation": "“leisure” là thời gian rảnh rỗi, không phải làm việc.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "ax là cái rìu dùng để chặt gỗ."
             },
             {
               "id": "13",
-              "content": "curl",
+              "content": "tease",
               "options": [
-                "to get old and fall apart",
-                "something with a curve",
-                "something small",
-                "to go after"
+                "a group of things",
+                "to make a joke",
+                "when something is enough",
+                "to make fun of someone"
               ],
-              "explanation": "“curl” là lọn tóc xoăn hoặc vật có hình uốn cong.",
-              "correctAnswer": "B"
+              "correctAnswer": "D",
+              "explanation": "tease có nghĩa là trêu chọc, chế giễu ai đó."
             },
             {
               "id": "14",
-              "content": "pillow",
+              "content": "pine",
               "options": [
-                "something you sleep on",
-                "the quality of moving well",
-                "an event that covers the sun",
-                "far away"
+                "a job one has to do",
+                "a tall tree",
+                "a mark left on the skin",
+                "a vehicle used in the snow"
               ],
-              "explanation": "“pillow” là cái gối để ngủ.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "pine là cây thông (một loại cây cao)."
             },
             {
               "id": "15",
-              "content": "pulse",
+              "content": "sensation",
               "options": [
-                "not at work",
-                "a magic creature",
-                "the beat of one’s heart",
-                "to go away"
+                "someone one loves or admires",
+                "to make someone angry or mad",
+                "a feeling",
+                "a scar"
               ],
-              "explanation": "“pulse” là nhịp tim.",
-              "correctAnswer": "C"
+              "correctAnswer": "C",
+              "explanation": "sensation là cảm giác (a feeling)."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 2: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. The man bought a big ________. He needed it to cut down a(n) ________ tree in his yard. (ax / pine)",
+              "options": [
+                "ax / pine",
+                "pine / ax",
+                "tease / offend",
+                "loose / overnight"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mua một chiếc rìu (ax) lớn để đốn cây thông (pine)."
+            },
+            {
+              "id": "17",
+              "content": "2. The bully likes to ________ the smaller children. He does not know that his actions ________ them. (tease / offend)",
+              "options": [
+                "offend / tease",
+                "tease / offend",
+                "loose / overnight",
+                "chore / grateful"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Kẻ bắt nạt thích trêu chọc (tease) những đứa trẻ nhỏ hơn và làm tổn thương/xúc phạm (offend) chúng."
+            },
+            {
+              "id": "18",
+              "content": "3. The door to the shed is ________. It will be windy tomorrow, so I must work ________ to fix it so it does not blow away. (loose / overnight)",
+              "options": [
+                "overnight / loose",
+                "chore / grateful",
+                "loose / overnight",
+                "alley / sled"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Cánh cửa bị lỏng (loose) nên phải làm việc qua đêm (overnight) để sửa."
+            },
+            {
+              "id": "19",
+              "content": "4. The ________ of cutting the grass was difficult. However, the boy was ________ when he was paid for his hard work. (chore / grateful)",
+              "options": [
+                "grateful / chore",
+                "alley / sled",
+                "elbow / scar",
+                "chore / grateful"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Công việc (chore) cắt cỏ rất vất vả, nhưng cậu bé rất biết ơn (grateful) khi được trả công."
+            },
+            {
+              "id": "20",
+              "content": "5. After the snow storm, the ________ was covered with snow and ice. It was fun to ride our ________ down the path. (alley / sled)",
+              "options": [
+                "alley / sled",
+                "sled / alley",
+                "elbow / scar",
+                "bunch / persist"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Con hẻm (alley) phủ đầy tuyết, thật vui khi trượt xe trượt tuyết (sled)."
+            },
+            {
+              "id": "21",
+              "content": "6. She hurt her ________ and had to go to the doctor. There is a large ________ where the cut healed. (elbow / scar)",
+              "options": [
+                "scar / elbow",
+                "elbow / scar",
+                "bunch / persist",
+                "kids / irritate"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cô ấy bị thương ở khuỷu tay (elbow) và để lại một vết sẹo (scar) lớn."
+            },
+            {
+              "id": "22",
+              "content": "7. She must put all of the leaves into a ________. It will not be easy, but she must ________ to get the job done. (bunch / persist)",
+              "options": [
+                "persist / bunch",
+                "kids / irritate",
+                "bunch / persist",
+                "decent / valentine"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Gom lá thành một đống/bó (bunch) và phải kiên trì (persist) để hoàn thành."
+            },
+            {
+              "id": "23",
+              "content": "8. The boy always ________ his friend about things that aren’t true. But he will ________ his friend if he continues this action. (kids / irritate)",
+              "options": [
+                "irritate / kids",
+                "decent / valentine",
+                "disgrace / sensation",
+                "kids / irritate"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Cậu bé hay nói đùa (kids) nhưng sẽ làm bạn mình bực mình (irritate) nếu tiếp tục."
+            },
+            {
+              "id": "24",
+              "content": "9. He thought that until he got a ________ haircut, Elena would never be his ________. (decent / valentine)",
+              "options": [
+                "decent / valentine",
+                "valentine / decent",
+                "disgrace / sensation",
+                "ax / pine"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cho đến khi anh ấy có một kiểu tóc tươm tất (decent), Elena sẽ không làm người yêu (valentine) của anh ấy."
+            },
+            {
+              "id": "25",
+              "content": "10. The runner felt ________ when he lost the race. He had a terrible ________ in his stomach. (disgrace / sensation)",
+              "options": [
+                "sensation / disgrace",
+                "disgrace / sensation",
+                "ax / pine",
+                "tease / offend"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Vận động viên cảm thấy xấu hổ (disgrace) khi thua cuộc và có cảm giác (sensation) tồi tệ trong bụng."
+            }
+          ]
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tiny Tina</h1>        <p style=\"margin-bottom: 1rem;\">In a <strong>distant</strong> land, there was a kingdom where fairies lived. Tina was a <strong>fairy</strong>. She had yellow <strong>curls</strong> and wore a dress made of <strong>wool</strong>. She always moved with <strong>grace</strong>. However, because of her <strong>compact</strong> size, she was scared of <strong>mankind</strong>.</p>    <p style=\"margin-bottom: 1rem;\">One day, there was an <strong>eclipse</strong> of the sun. The fairies didn’t know what was happening. They were scared, so they ran away.</p>    <p style=\"margin-bottom: 1rem;\">Tina looked for a place to hide. She found a garden with flowers <strong>blooming</strong>. Tina had a <strong>passion</strong> for flowers. She decided to hide there. She became sleepy and made a <strong>pillow</strong> with some leaves. She <strong>whistled</strong> happily as she worked, and she fell asleep.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, somebody <strong>sneezed</strong>. The sound woke Tina up. She saw a very big face looking at her! Tina was so scared that she couldn’t move. She could feel her <strong>pulse</strong> going very fast.</p>    <p style=\"margin-bottom: 1rem;\">The big woman went into her house. When she came back, she gave Tina a cup.</p>    <p style=\"margin-bottom: 1rem;\">The woman sat on the ground among some <strong>decaying</strong> leaves. Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious <strong>spices</strong> in it. Tina felt <strong>refreshed</strong> after drinking the tea.</p>    <p style=\"margin-bottom: 1rem;\">“I’m Wilma,” the lady said. “I spend all my <strong>leisure</strong> time in my garden cutting flowers. Would you like some <strong>dessert</strong>?”</p>    <p style=\"margin-bottom: 1rem;\">Tina said yes. She was hungry, and she wasn’t frightened anymore. She took a bite of cake and relaxed. “How did you get to my garden?”</p>    <p style=\"margin-bottom: 1rem;\">Tina told Wilma how she got lost.</p>    <p style=\"margin-bottom: 1rem;\">“That’s terrible! Let us take you home.”</p>    <p style=\"margin-bottom: 1rem;\">“Actually, I think that I want to stay with you,” Tina said. She wasn’t scared of big people anymore. Wilma and Tina lived happily ever after.</p></div>",
       "imageUrl": "/unit3_v3_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Boy and his Sled</h1><p style=\"margin-bottom: 1rem;\">Mike was the smallest child in school. Another boy, Joe, always <strong>teased</strong> Mike. Joe had a large <strong>scar</strong> on his face from fighting other children. One day, Joe <strong>offended</strong> Mike when he made fun of Mike’s <strong>valentine</strong>, Jane. Mike felt <strong>disgrace</strong>, but he didn’t know how to make Joe stop.</p><p style=\"margin-bottom: 1rem;\">That day, Mike walked home down an <strong>alley</strong>. He found a <strong>bunch</strong> of wood boards next to a <strong>pine</strong> tree. He thought to himself, “I could build a <strong>decent</strong> <strong>sled</strong> from this. If I let Joe use it, he will be nicer to me and Jane.” He took the wood home.</p><p style=\"margin-bottom: 1rem;\">Mike got an <strong>ax</strong> and cut the wood. He used nails to make sure that the pieces were not <strong>loose</strong>. As he worked, he bumped his <strong>elbow</strong> on the boards. The painful <strong>sensation</strong> made him want to cry. It was a hard <strong>chore</strong>, but he <strong>persisted</strong>. He worked <strong>overnight</strong>. By morning, the <strong>sled</strong> was finished.</p><p style=\"margin-bottom: 1rem;\">Mike called Joe on the telephone. He said, “Hi Joe. Come over to my house right away.”</p><p style=\"margin-bottom: 1rem;\">Joe didn’t know why Mike wanted him to come over. When Joe arrived, Mike told him, “Joe, it <strong>irritated</strong> me the other day when you said mean things about my card to Jane. You weren’t <strong>kidding</strong> when you said those mean things. But I’m not like you. I just built this <strong>sled</strong>, and I’ll let you ride it with me if you are nice.”</p><p style=\"margin-bottom: 1rem;\">They became friends, and Joe was <strong>grateful</strong> that Mike was so nice to him. Joe learned that it was better to have friends than enemies.</p></div>",
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit3_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cậu Bé Và Chiếc Xe Trượt Tuyết</h1>\n<p style=\"margin-bottom: 1rem;\">Mike là đứa trẻ nhỏ con nhất trường. Một cậu bé khác tên là Joe luôn <strong>trêu chọc</strong> Mike. Joe có một <strong>vết sẹo</strong> lớn trên mặt do đánh nhau với những đứa trẻ khác. Một ngày nọ, Joe đã <strong>xúc phạm</strong> Mike khi chế giễu <strong>người thương</strong> của Mike là Jane. Mike cảm thấy <strong>tủi hổ</strong>, nhưng cậu không biết làm sao để khiến Joe dừng lại.</p>\n<p style=\"margin-bottom: 1rem;\">Hôm đó, Mike đi bộ về nhà qua một <strong>con hẻm</strong>. Cậu tìm thấy một <strong>bó</strong> ván gỗ cạnh một cây <strong>thông</strong>. Cậu tự nhủ: “Mình có thể đóng một chiếc <strong>xe trượt tuyết</strong> <strong>tươm tất</strong> từ chỗ gỗ này. Nếu mình cho Joe dùng chung, cậu ấy sẽ đối xử tốt hơn với mình và Jane.” Cậu liền mang số gỗ về nhà.</p>\n<p style=\"margin-bottom: 1rem;\">Mike lấy một chiếc <strong>rìu</strong> và đẽo gỗ. Cậu dùng đinh để đảm bảo các mảnh ghép không bị <strong>lỏng lẻo</strong>. Trong lúc làm việc, cậu va <strong>khuỷu tay</strong> vào tấm ván. <strong>Cảm giác</strong> đau đớn khiến cậu chỉ muốn khóc. Đó là một <strong>công việc</strong> nặng nhọc, nhưng cậu vẫn <strong>kiên trì</strong>. Cậu đã làm việc <strong>suốt đêm</strong>. Đến sáng, chiếc <strong>xe trượt tuyết</strong> đã hoàn thành.</p>\n<p style=\"margin-bottom: 1rem;\">Mike gọi điện thoại cho Joe. Cậu nói: “Chào Joe. Hãy sang nhà tớ ngay nhé.”</p>\n<p style=\"margin-bottom: 1rem;\">Joe không biết tại sao Mike lại muốn mình sang nhà. Khi Joe đến, Mike nói với cậu: “Joe à, hôm trước tớ đã rất <strong>bực mình</strong> khi cậu nói những lời ác ý về tấm thiệp tớ tặng Jane. Cậu không hề <strong>nói đùa</strong> khi nói những điều đó. Nhưng tớ không giống cậu. Tớ vừa mới đóng chiếc <strong>xe trượt tuyết</strong> này, và tớ sẽ cho cậu trượt cùng nếu cậu cư xử tốt.”</p>\n<p style=\"margin-bottom: 1rem;\">Họ trở thành bạn bè, và Joe rất <strong>biết ơn</strong> vì Mike đã đối xử tốt với mình. Joe nhận ra rằng có thêm bạn tốt hơn là có thêm kẻ thù.</p></div>",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Answer the questions based on the story.",
-          "content": "",
+          "id": "sec_reading_0",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "<p>True / False</p>",
+          "questionType": "TFNG",
           "questions": [
             {
-              "id": "16",
-              "content": "Why did Tina suddenly wake up?",
+              "id": "26",
+              "content": "Joe offended Mike by saying mean things about his valentine, Jane.",
               "options": [
-                "She felt refreshed",
-                "She heard someone sneeze",
-                "The leaves were decayed",
-                "She had a fast pulse"
+                "True",
+                "False"
               ],
-              "explanation": "Câu văn trong bài ghi rõ \"Suddenly, somebody sneezed. The sound woke Tina up.\" (Đột nhiên, có ai đó hắt hơi. Âm thanh đó đã đánh thức Tina dậy). Vì vậy, lý do cô ấy tỉnh giấc là do nghe thấy tiếng hắt hơi. Đáp án chính xác là She heard someone sneeze.",
-              "correctAnswer": "B"
+              "correctAnswer": "True",
+              "explanation": "Trong bài viết: 'One day, Joe offended Mike when he made fun of Mike’s valentine, Jane.' -> Đúng (True)."
             },
             {
-              "id": "17",
-              "content": "All of the following describe Tina EXCEPT ___.",
+              "id": "27",
+              "content": "Mike found a bunch of pine trees.",
               "options": [
-                "she had curls in her hair",
-                "she moved with grace",
-                "she did not like tea with spice",
-                "she was compact"
+                "True",
+                "False"
               ],
-              "explanation": "Bài đọc viết \"Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious spices in it. Tina felt refreshed after drinking the tea.\" (Tina nhúng một ngón tay vào cốc và nếm thử. Đó là trà có đủ loại gia vị thơm ngon. Tina cảm thấy sảng khoái sau khi uống). Như vậy cô ấy rất thích loại trà này, việc nói cô ấy không thích (did not like) là thông tin sai.",
-              "correctAnswer": "C"
+              "correctAnswer": "False",
+              "explanation": "Mike tìm thấy một bó ván gỗ cạnh cây thông ('He found a bunch of wood boards next to a pine tree'), không phải một bó cây thông -> Sai (False)."
             },
             {
-              "id": "18",
-              "content": "What does Wilma do with the flowers?",
+              "id": "28",
+              "content": "Joe was a decent person at the beginning of the reading.",
               "options": [
-                "She makes dessert with them",
-                "She cuts them",
-                "She dips them in gold",
-                "She lets them decay"
+                "True",
+                "False"
               ],
-              "explanation": "Trong bài, bà Wilma đã nói \"I spend all my leisure time in my garden cutting flowers.\" (Tôi dành toàn bộ thời gian rảnh rỗi trong khu vườn của mình để cắt hoa). Vì vậy, hành động bà ấy làm với những bông hoa là cắt chúng (She cuts them).",
-              "correctAnswer": "B"
+              "correctAnswer": "False",
+              "explanation": "Đầu truyện Joe luôn trêu chọc và đánh nhau với bạn khác nên không phải người tử tế -> Sai (False)."
             },
             {
-              "id": "19",
-              "content": "Where did Tina live before she met Wilma?",
+              "id": "29",
+              "content": "Mike persisted even though the chore was very hard.",
               "options": [
-                "In Wilma’s garden",
-                "In a tiny house",
-                "On a street with big cars",
-                "In a distant country"
+                "True",
+                "False"
               ],
-              "explanation": "Ngay câu đầu tiên của bài đọc đã giới thiệu \"In a distant land, there was a kingdom where fairies lived.\" (Ở một vùng đất xa xôi, có một vương quốc nơi các nàng tiên sinh sống). Vùng đất xa xôi (distant land) cũng đồng nghĩa với distant country.",
-              "correctAnswer": "D"
+              "correctAnswer": "True",
+              "explanation": "Trong bài viết: 'It was a hard chore, but he persisted.' -> Đúng (True)."
+            },
+            {
+              "id": "30",
+              "content": "Mike used his elbows to put together loose pieces.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Mike dùng đinh ('He used nails to make sure that the pieces were not loose'), không phải dùng khuỷu tay -> Sai (False)."
+            },
+            {
+              "id": "31",
+              "content": "Mike told Joe he was sharing his new sled because he was a civil person.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Mike nói: 'But I’m not like you. I just built this sled, and I’ll let you ride it with me if you are nice.' -> Đúng (True)."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
+        },
+        {
+          "id": "sec_reading_1",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "32",
+              "content": "Which item did Mike NOT use when building the sled?",
+              "options": [
+                "Ax",
+                "Nail",
+                "Alley",
+                "Wood boards"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Con hẻm (Alley) là nơi Mike đi bộ qua và nhặt gỗ, không phải vật dụng dùng để đóng xe."
+            },
+            {
+              "id": "33",
+              "content": "At the end of the reading, Joe ________.",
+              "options": [
+                "was grateful that Mike was nice",
+                "did not get to ride on the sled",
+                "irritated Mike again",
+                "said he was kidding"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cuối bài viết: 'They became friends, and Joe was grateful that Mike was so nice to him.'"
+            },
+            {
+              "id": "34",
+              "content": "Why did Mike feel a painful sensation?",
+              "options": [
+                "Joe teased him with the hammer.",
+                "He dragged the wood home.",
+                "He got a scar on his face.",
+                "He bumped his elbow on the boards."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Trong bài viết: 'As he worked, he bumped his elbow on the boards. The painful sensation made him want to cry.'"
+            },
+            {
+              "id": "35",
+              "content": "According to the reading, when did Mike build the sled?",
+              "options": [
+                "The next morning",
+                "Overnight",
+                "Before school",
+                "Throughout the day"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Trong bài viết: 'He worked overnight. By morning, the sled was finished.'"
+            }
+          ]
         }
       ]
     }

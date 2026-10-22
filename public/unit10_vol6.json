@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 10: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -503,12 +497,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Avalanche</h1>        <p style=\"margin-bottom: 1rem;\">Randy was a forest <b>ranger</b>. Because of his job, he was <b>secluded</b> in a cabin in the wilderness.</p>    <p style=\"margin-bottom: 1rem;\">One day, the radio reported, “<b>Convection</b> in the atmosphere is causing a lot of clouds to form. A serious storm . . . ” Suddenly, the radio went silent. The signal was lost.</p>    <p style=\"margin-bottom: 1rem;\">He went outside and looked at the <b>overcast</b> sky. Anybody else would have taken the dark sky as an <b>omen</b> of a very bad storm, but not Randy. His <b>upbringing</b> had taught him <b>consistency</b>. He had done this job for years, and nothing could stop him. Besides, he thought nothing could hurt him.</p>    <p style=\"margin-bottom: 1rem;\">Today, he had a very important task to do. The snow was starting to pile up high on the mountain. If too much <b>accumulated</b>, it could cause an <b>avalanche</b>. But Randy had an <b>apparatus</b> to get rid of the snow. It used dynamite to shake the snow and make the top layer of snow come down.</p>    <p style=\"margin-bottom: 1rem;\">As the snow started falling, he thought about returning to the office until the storm stopped, but he decided not to. Suddenly, he heard a loud noise behind him. It was an <b>avalanche</b>! He started to run, but within seconds, he was knocked <b>sideways</b> and buried by the snow and <b>rubble</b> from an old cabin that had been destroyed. An <b>aerial</b> rescue team came quickly. Randy was just a <b>speck</b> amongst the great pile of snow, but the team found him thanks to his brightly colored jacket. They quickly took him to a hospital.</p>    <p style=\"margin-bottom: 1rem;\">After a few hours, Randy woke up in the hospital. He looked at the <b>sober</b> faces of the doctors and saw his wife <b>sobbing</b>.</p>    <p style=\"margin-bottom: 1rem;\">“What’s wrong?” he asked. He didn’t remember what had happened.</p>    <p style=\"margin-bottom: 1rem;\">“You were almost killed!” his wife said.</p>    <p style=\"margin-bottom: 1rem;\">“You broke several ribs. But the rest of you is still reasonably <b>intact</b>. You are really lucky to be alive,” the doctor said.</p>    <p style=\"margin-bottom: 1rem;\">After five days, Randy was <b>discharged</b> from the hospital. The experience had taught him a <b>poignant</b> lesson: he was a <b>mortal</b>, and nature was much more powerful than him.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Avalanche</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Randy was a forest <b>ranger</b>. Because of his job, he was <b>secluded</b> in a cabin in the wilderness.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, the radio reported, “<b>Convection</b> in the atmosphere is causing a lot of clouds to form. A serious storm . . . ” Suddenly, the radio went silent. The signal was lost.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He went outside and looked at the <b>overcast</b> sky. Anybody else would have taken the dark sky as an <b>omen</b> of a very bad storm, but not Randy. His <b>upbringing</b> had taught him <b>consistency</b>. He had done this job for years, and nothing could stop him. Besides, he thought nothing could hurt him.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Today, he had a very important task to do. The snow was starting to pile up high on the mountain. If too much <b>accumulated</b>, it could cause an <b>avalanche</b>. But Randy had an <b>apparatus</b> to get rid of the snow. It used dynamite to shake the snow and make the top layer of snow come down.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">As the snow started falling, he thought about returning to the office until the storm stopped, but he decided not to. Suddenly, he heard a loud noise behind him. It was an <b>avalanche</b>! He started to run, but within seconds, he was knocked <b>sideways</b> and buried by the snow and <b>rubble</b> from an old cabin that had been destroyed. An <b>aerial</b> rescue team came quickly. Randy was just a <b>speck</b> amongst the great pile of snow, but the team found him thanks to his brightly colored jacket. They quickly took him to a hospital.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After a few hours, Randy woke up in the hospital. He looked at the <b>sober</b> faces of the doctors and saw his wife <b>sobbing</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“What’s wrong?” he asked. He didn’t remember what had happened.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“You were almost killed!” his wife said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“You broke several ribs. But the rest of you is still reasonably <b>intact</b>. You are really lucky to be alive,” the doctor said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After five days, Randy was <b>discharged</b> from the hospital. The experience had taught him a <b>poignant</b> lesson: he was a <b>mortal</b>, and nature was much more powerful than him.</p></div>",
       "imageUrl": "/unit10_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -573,25 +567,25 @@
               "id": "41",
               "content": "What was the overcast sky an omen of?",
               "options": [
-                "A very bad storm",
                 "A beautiful sunny day",
                 "A visitor arriving soon",
+                "A very bad storm",
                 "A successful hunting trip"
               ],
               "explanation": "Đáp án đúng là A. Ở đoạn ba, bài đọc viết: \"Anybody else would have taken the dark sky as an omen of a very bad storm...\" (Bất cứ ai khác cũng sẽ coi bầu trời u ám là điềm báo của một cơn bão rất tồi tệ...).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "42",
               "content": "What did Randy see when he woke up after the avalanche?",
               "options": [
-                "His wife sobbing and the sober faces of the doctors",
                 "A beautiful forest and sunny sky",
                 "The rubble of his old cabin",
-                "An aerial rescue team taking photos"
+                "An aerial rescue team taking photos",
+                "His wife sobbing and the sober faces of the doctors"
               ],
               "explanation": "Đáp án đúng là A. Đoạn sáu miêu tả cảnh khi anh tỉnh dậy ở bệnh viện: \"He looked at the sober faces of the doctors and saw his wife sobbing.\" (Anh nhìn những khuôn mặt nghiêm nghị của các bác sĩ và thấy vợ mình đang nức nở).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "43",
@@ -609,30 +603,38 @@
               "id": "44",
               "content": "How long was it before Randy was discharged from the hospital?",
               "options": [
-                "Five days",
                 "One month",
+                "Five days",
                 "Two weeks",
                 "Three days"
               ],
               "explanation": "Đáp án đúng là A. Câu đầu tiên của đoạn cuối (đoạn mười) viết: \"After five days, Randy was discharged from the hospital.\" (Sau năm ngày, Randy được xuất viện).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "45",
               "content": "What poignant lesson did Randy learn from his experience?",
               "options": [
-                "He was only a mortal and nature was much more powerful than him",
                 "He should never trust the radio weather reports",
                 "Dynamite is too dangerous to use for avalanches",
+                "He was only a mortal and nature was much more powerful than him",
                 "Forest rangers need better protective clothing"
               ],
               "explanation": "Đáp án đúng là A. Câu cuối cùng của bài đọc tổng kết: \"The experience had taught him a poignant lesson: he was a mortal, and nature was much more powerful than him.\" (Trải nghiệm này đã dạy anh một bài học sâu sắc: anh chỉ là một người phàm, và thiên nhiên mạnh mẽ hơn anh rất nhiều).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit10_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Trận Lở Tuyết</h1>\n\n<p style=\"margin-bottom: 1rem;\">Randy là một <b>nhân viên kiểm lâm</b>. Vì công việc của mình, anh <b>bị cô lập</b> trong một căn nhà gỗ ở nơi hoang dã.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, đài phát thanh thông báo, \"<b>Sự đối lưu</b> trong bầu khí quyển đang gây ra việc hình thành rất nhiều mây. Một cơn bão nghiêm trọng . . .\" Đột nhiên, đài phát thanh im bặt. Tín hiệu đã bị mất.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh đi ra ngoài và nhìn lên bầu trời <b>âm u</b>. Bất kỳ ai khác cũng sẽ coi bầu trời tối đen đó là một <b>điềm báo</b> về một cơn bão rất tồi tệ, nhưng Randy thì không. <b>Sự giáo dục</b> của anh đã dạy cho anh tính <b>kiên định</b>. Anh đã làm công việc này trong nhiều năm, và không gì có thể ngăn cản anh. Hơn nữa, anh nghĩ không gì có thể làm hại mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Hôm nay, anh có một nhiệm vụ rất quan trọng phải làm. Tuyết đang bắt đầu chất đống cao trên núi. Nếu tuyết <b>tích tụ</b> quá nhiều, nó có thể gây ra <b>trận tuyết lở</b>. Nhưng Randy có một <b>thiết bị</b> để loại bỏ tuyết. Nó sử dụng thuốc nổ để làm rung chuyển tuyết và khiến lớp tuyết trên cùng rơi xuống.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi tuyết bắt đầu rơi, anh nghĩ đến việc quay trở lại văn phòng cho đến khi cơn bão ngừng, nhưng anh quyết định không làm thế. Đột nhiên, anh nghe thấy một tiếng ồn lớn đằng sau. Đó là một <b>trận tuyết lở</b>! Anh bắt đầu chạy, nhưng chỉ trong vài giây, anh đã bị đánh bật <b>sang một bên</b> và bị vùi lấp bởi tuyết và <b>đống đổ nát</b> từ một căn nhà gỗ cũ đã bị phá hủy. Một đội cứu hộ <b>trên không</b> đã đến nhanh chóng. Randy chỉ là một <b>chấm nhỏ</b> giữa đống tuyết lớn, nhưng đội cứu hộ đã tìm thấy anh nhờ chiếc áo khoác sáng màu của anh. Họ nhanh chóng đưa anh đến bệnh viện.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau vài giờ, Randy tỉnh dậy trong bệnh viện. Anh nhìn vào những khuôn mặt <b>nghiêm trang</b> của các bác sĩ và thấy vợ mình đang <b>nức nở</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Có chuyện gì vậy?\" anh hỏi. Anh không nhớ những gì đã xảy ra.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Anh suýt bị giết chết rồi!\" vợ anh nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Anh bị gãy vài xương sườn. Nhưng phần còn lại của anh vẫn còn <b>nguyên vẹn</b> một cách hợp lý. Anh thực sự may mắn khi còn sống,\" bác sĩ nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau năm ngày, Randy được <b>xuất viện</b>. Trải nghiệm này đã dạy cho anh một bài học <b>đau buồn</b>: anh chỉ là một <b>người trần mắt thịt</b>, và thiên nhiên mạnh mẽ hơn anh rất nhiều.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 10: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

@@ -141,6 +141,21 @@ const isAnswerCorrect = (userAns: string, correctAns: string) => {
   return false;
 };
 
+const isOptionAnswerCorrect = (userAns: string, correctAns: string, options?: any[]) => {
+  if (isAnswerCorrect(userAns, correctAns)) return true;
+  if (!userAns || !correctAns || !Array.isArray(options) || options.length === 0) return false;
+  const u = String(userAns).trim().toUpperCase();
+  const c = String(correctAns).trim().toUpperCase();
+  for (let i = 0; i < options.length; i++) {
+    const val = String(options[i] || '').replace(stripHtmlRegex, '').trim().toUpperCase();
+    const letter = String.fromCharCode(65 + i);
+    const uMatchesOpt = isAnswerCorrect(u, val) || isAnswerCorrect(u, letter);
+    const cMatchesOpt = isAnswerCorrect(c, val) || isAnswerCorrect(c, letter);
+    if (uMatchesOpt && cMatchesOpt) return true;
+  }
+  return false;
+};
+
 const parseStyle = (styleStr: string) => {
   const style: any = {};
   if (!styleStr) return style;
@@ -478,17 +493,7 @@ const handleFinish = async () => {
              const uAns = String(currentAnswers[String(q.id)] || '').trim();
              const cAns = String(q.correctAnswer || '').trim();
              
-             let isCorrect = isAnswerCorrect(uAns, cAns);
-             if (!isCorrect && q.options) {
-                 const optIndex = q.options.findIndex((opt:string) => {
-                     const val = String(opt).replace(/<[^>]*>/g, '').trim().toUpperCase();
-                     return val === uAns.toUpperCase();
-                 });
-                 if (optIndex !== -1) {
-                     const letter = String.fromCharCode(65 + optIndex);
-                     isCorrect = isAnswerCorrect(letter, cAns);
-                 }
-             }
+             let isCorrect = isOptionAnswerCorrect(uAns, cAns, q.options);
 
              if (isCorrect) { 
                  score++; 
@@ -1702,10 +1707,10 @@ const handleFinish = async () => {
                                 const cleanQText = getCleanQuestionText(q.content);
                                 const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
                                 const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
-                                const isQuestionCorrect = isAnswerCorrect(userAns, correctAns);
+                                const isQuestionCorrect = isOptionAnswerCorrect(userAns, correctAns, q.options);
                                 const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                 
-                                const isTFNG = sec?.questionType === "TFNG" || q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
+                                const isTFNG = sec?.questionType === "TFNG" || (Array.isArray(q.options) && q.options.length > 0 && q.options.length <= 3 && q.options.every((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO', 'T', 'F', 'NG'].includes(String(opt || '').replace(stripHtmlRegex, '').trim().toUpperCase())));
 
                                 if (isTFNG) {
                                    return (

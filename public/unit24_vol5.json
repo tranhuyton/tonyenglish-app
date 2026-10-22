@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 24: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -92,7 +86,9 @@
                   "answer": "employs"
                 }
               ],
-              "content": "<p class=\"mb-4\">His company <u>gives work to</u> about 100 people in the community.<br/>em [ 6 ]</p><p class=\"mb-4\">Joan was <u>forced to leave</u> from the auditorium for her hostile comments.<br/>ex [ 7 ]</p><p class=\"mb-4\">My new apartment in the city was <u>complete with bed, sofa, and TV</u>.<br/>fu [ 8 ]</p><p class=\"mb-4\">The prisoner’s condition for <u>health and cleanliness</u> was absolutely terrible.<br/>hy [ 9 ]</p><p class=\"mb-4\">I’m going to <u>rent</u> the apartment for only six months.<br/>le [ 10 ]</p><p class=\"mb-4\">I need to <u>fix the hole in</u> my pants.<br/>me [ 11 ]</p><p class=\"mb-4\">He was lucky to find <u>employees</u> who are honest and hardworking.<br/>pe [ 12 ]</p><p class=\"mb-4\">We need to have our <u>system of pipes that brings water into our house</u> checked.<br/>pl [ 13 ]</p><p class=\"mb-4\">The popular and <u>new fashion</u> these days for men is boots.<br/>tr [ 14 ]</p><p class=\"mb-4\">Did you remember to pay the <u>company that provides our water</u>?<br/>ut [ 15 ]</p>"
+              "content": "<p class=\"mb-4\">His company <u>gives work to</u> about 100 people in the community. (Hint: em...) [ 6 ]</p><p class=\"mb-4\">Joan was <u>forced to leave</u> from the auditorium for her hostile comments. (Hint: ex...) [ 7 ]</p><p class=\"mb-4\">My new apartment in the city was <u>complete with bed, sofa, and TV</u>. (Hint: fu...) [ 8 ]</p><p class=\"mb-4\">The prisoner’s condition for <u>health and cleanliness</u> was absolutely terrible. (Hint: hy...) [ 9 ]</p><p class=\"mb-4\">I’m going to <u>rent</u> the apartment for only six months. (Hint: le...) [ 10 ]</p><p class=\"mb-4\">I need to <u>fix the hole in</u> my pants. (Hint: me...) [ 11 ]</p><p class=\"mb-4\">He was lucky to find <u>employees</u> who are honest and hardworking. (Hint: pe...) [ 12 ]</p><p class=\"mb-4\">We need to have our <u>system of pipes that brings water into our house</u> checked. (Hint: pl...) [ 13 ]</p><p class=\"mb-4\">The popular and <u>new fashion</u> these days for men is boots. (Hint: tr...) [ 14 ]</p><p class=\"mb-4\">Did you remember to pay the <u>company that provides our water</u>? (Hint: ut...) [ 15 ]</p>",
+              "correctAnswer": "employs",
+              "explanation": "Đáp án đúng là 'employs'."
             },
             {
               "id": "7",
@@ -102,7 +98,9 @@
                   "answer": "expelled"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "expelled",
+              "explanation": "Đáp án đúng là 'expelled'."
             },
             {
               "id": "8",
@@ -112,7 +110,9 @@
                   "answer": "furnished"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "furnished",
+              "explanation": "Đáp án đúng là 'furnished'."
             },
             {
               "id": "9",
@@ -122,7 +122,9 @@
                   "answer": "hygiene"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "hygiene",
+              "explanation": "Đáp án đúng là 'hygiene'."
             },
             {
               "id": "10",
@@ -132,7 +134,9 @@
                   "answer": "lease"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "lease",
+              "explanation": "Đáp án đúng là 'lease'."
             },
             {
               "id": "11",
@@ -142,7 +146,9 @@
                   "answer": "mend"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "mend",
+              "explanation": "Đáp án đúng là 'mend'."
             },
             {
               "id": "12",
@@ -152,7 +158,9 @@
                   "answer": "personnel"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "personnel",
+              "explanation": "Đáp án đúng là 'personnel'."
             },
             {
               "id": "13",
@@ -162,7 +170,9 @@
                   "answer": "plumbing"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "plumbing",
+              "explanation": "Đáp án đúng là 'plumbing'."
             },
             {
               "id": "14",
@@ -172,7 +182,9 @@
                   "answer": "trendy"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "trendy",
+              "explanation": "Đáp án đúng là 'trendy'."
             },
             {
               "id": "15",
@@ -182,7 +194,9 @@
                   "answer": "utility"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "utility",
+              "explanation": "Đáp án đúng là 'utility'."
             }
           ],
           "questionType": "Điền từ"
@@ -400,12 +414,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Resourceful Landlord</h1>        <p style=\"margin-bottom: 1rem;\">A kind <b>landlord</b> was afraid that he would lose his apartment building. He needed to make some <b>mandatory</b> repairs to the old building, or his <b>tenants</b> would have to leave by the end of the month. Without tenants to <b>lease</b> the rooms, the landlord would be unable to pay his <b>mortgage</b>. He’d be <b>bankrupt</b>, and the bank would take his building.</p>    <p style=\"margin-bottom: 1rem;\">But he didn’t have the money <b>whereby</b> he could <b>employ</b> the <b>personnel</b> needed to make the repairs. It would seem like he did not want to <b>conform</b> to the city’s codes before the <b>forthcoming</b> inspection. He had requested an <b>extension</b>, but it was denied by the city.</p>    <p style=\"margin-bottom: 1rem;\">He held a meeting with his tenants and explained the unfortunate situation. “If the building does not meet the appropriate standards for safety and <b>hygiene</b>,” he said, “the city will <b>expel</b> everyone.”</p>    <p style=\"margin-bottom: 1rem;\">The tenants were all sad for the kind old man.</p>    <p style=\"margin-bottom: 1rem;\">“Maybe we can help,” the hairdresser who lived on the first floor stated. The other tenants agreed.</p>    <p style=\"margin-bottom: 1rem;\">One tenant had worked for the city’s <b>utilities</b>. He knew a lot about <b>plumbing</b>, so that’s how he helped. Another tenant was a carpenter; he <b>mended</b> the holes in the floor and walls. Others cleaned the building from top to bottom so that it was more <b>hygienic</b>. They even <b>furnished</b> some of the apartments with new beds, dressers, and chairs. When they were done, all of the people dispersed, and the landlord went home to rest.</p>    <p style=\"margin-bottom: 1rem;\">When the deadline of the inspection arrived, the apartment building was hygienic and safe. The landlord couldn’t believe it. His old building now looked like one of the <b>trendiest</b> buildings in town.</p>    <p style=\"margin-bottom: 1rem;\">The building passed its inspection, and the landlord and the tenants had a big party.</p>    <p style=\"margin-bottom: 1rem;\">“Thank you all so much,” the landlord said during the party. “I could never have done it by myself. But by working together, we now all have a beautiful place to live.”</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Resourceful Landlord</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A kind <b>landlord</b> was afraid that he would lose his apartment building. He needed to make some <b>mandatory</b> repairs to the old building, or his <b>tenants</b> would have to leave by the end of the month. Without tenants to <b>lease</b> the rooms, the landlord would be unable to pay his <b>mortgage</b>. He’d be <b>bankrupt</b>, and the bank would take his building.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But he didn’t have the money <b>whereby</b> he could <b>employ</b> the <b>personnel</b> needed to make the repairs. It would seem like he did not want to <b>conform</b> to the city’s codes before the <b>forthcoming</b> inspection. He had requested an <b>extension</b>, but it was denied by the city.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He held a meeting with his tenants and explained the unfortunate situation. “If the building does not meet the appropriate standards for safety and <b>hygiene</b>,” he said, “the city will <b>expel</b> everyone.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The tenants were all sad for the kind old man.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Maybe we can help,” the hairdresser who lived on the first floor stated. The other tenants agreed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One tenant had worked for the city’s <b>utilities</b>. He knew a lot about <b>plumbing</b>, so that’s how he helped. Another tenant was a carpenter; he <b>mended</b> the holes in the floor and walls. Others cleaned the building from top to bottom so that it was more <b>hygienic</b>. They even <b>furnished</b> some of the apartments with new beds, dressers, and chairs. When they were done, all of the people dispersed, and the landlord went home to rest.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When the deadline of the inspection arrived, the apartment building was hygienic and safe. The landlord couldn’t believe it. His old building now looked like one of the <b>trendiest</b> buildings in town.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The building passed its inspection, and the landlord and the tenants had a big party.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Thank you all so much,” the landlord said during the party. “I could never have done it by myself. But by working together, we now all have a beautiful place to live.”</p></div>",
       "imageUrl": "/unit24_vol5_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -529,7 +543,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit24_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Resourceful Landlord</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một <b>chủ nhà</b> tốt bụng sợ rằng ông sẽ mất tòa nhà chung cư của mình. Ông cần phải thực hiện một số sửa chữa <b>bắt buộc</b> đối với tòa nhà cũ, nếu không những <b>người thuê nhà</b> của ông sẽ phải rời đi vào cuối tháng. Nếu không có những người thuê để <b>cho thuê</b> các căn phòng, chủ nhà sẽ không thể trả số tiền <b>thế chấp</b> của mình. Ông ấy sẽ bị <b>phá sản</b> và ngân hàng sẽ tịch thu tòa nhà của ông.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng ông không có tiền <b>nhờ đó</b> ông có thể <b>thuê</b> <b>nhân sự</b> cần thiết để thực hiện các công việc sửa chữa. Có vẻ như ông đã không muốn <b>tuân thủ</b> các quy định của thành phố trước cuộc thanh tra <b>sắp tới</b>. Ông đã yêu cầu được <b>gia hạn</b>, nhưng đã bị thành phố từ chối.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông đã tổ chức một cuộc họp với những người thuê nhà của mình và giải thích về tình huống không may này. “Nếu tòa nhà không đáp ứng các tiêu chuẩn phù hợp về an toàn và <b>vệ sinh</b>,” ông nói, “thành phố sẽ <b>trục xuất</b> tất cả mọi người.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Tất cả những người thuê nhà đều cảm thấy buồn cho ông lão tốt bụng.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Có lẽ chúng tôi có thể giúp,” người thợ làm tóc sống ở tầng một nói. Những người thuê nhà khác đều đồng ý.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một người thuê nhà đã từng làm việc cho các cơ sở <b>tiện ích</b> của thành phố. Anh ấy biết rất nhiều về <b>hệ thống ống nước</b>, vì vậy đó là cách anh ấy giúp đỡ. Một người thuê nhà khác là một thợ mộc; anh ấy đã <b>sửa chữa</b> những lỗ hổng trên sàn và các bức tường. Những người khác thì dọn dẹp tòa nhà từ trên xuống dưới để nó trở nên <b>hợp vệ sinh</b> hơn. Họ thậm chí còn <b>trang bị</b> cho một số căn hộ những chiếc giường, tủ quần áo và ghế mới. Khi họ hoàn thành, tất cả mọi người giải tán, và chủ nhà về nhà để nghỉ ngơi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi thời hạn của cuộc thanh tra đến, tòa nhà chung cư đã hợp vệ sinh và an toàn. Chủ nhà không thể tin được. Tòa nhà cũ của ông bây giờ trông giống như một trong những tòa nhà <b>thời thượng nhất</b> trong thị trấn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tòa nhà đã vượt qua cuộc thanh tra, và chủ nhà cùng với những người thuê đã tổ chức một bữa tiệc lớn.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Cảm ơn tất cả các bạn rất nhiều,” chủ nhà nói trong bữa tiệc. “Tôi không bao giờ có thể tự mình làm được điều đó. Nhưng bằng cách làm việc cùng nhau, bây giờ tất cả chúng ta đã có một nơi tuyệt đẹp để sống.”</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 24: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

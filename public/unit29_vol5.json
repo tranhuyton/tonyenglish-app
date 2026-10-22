@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 29: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -468,12 +462,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jen's New Job</h1>        <p style=\"margin-bottom: 1rem;\">The history museum needed to <b>recruit</b> a new tour guide. The director interviewed dozens of <b>applicants</b> before he decided to hire Jen. She was chosen because she was friendly, <b>punctual</b> and had a great attitude.</p>    <p style=\"margin-bottom: 1rem;\">On her first day, Jen got to work and prepared to give her first tour. She looked at the names on the <b>register</b>. She saw that the Queen of England and a <b>diplomat</b> were visiting the museum. She thought, \"It's my very first day, and I have to impress a <b>monarch</b>! I hope I don't <b>humiliate</b> myself in front of a person of such <b>renown</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">Jen was nervous. She took a deep breath and said, \"Hello, everyone! I'm going to talk to you about the <b>chronology</b> of ancient Egypt.\" As she turned around to show the group some <b>artifacts</b>, she bumped into a <b>fossil</b> of an <b>authentic</b> elephant <b>tusk</b>. It fell to the ground and broke into a million pieces! \"Oh no!\" said Jen in a subtle voice. \"I sure hope the rest of the tour goes better than this!\"</p>    <p style=\"margin-bottom: 1rem;\">The rest of the tour did not go any better. She tripped over an <b>antique</b> vase and broke a piece off of it. As she was reading an <b>excerpt</b> from a <b>lyric</b> poem, she sneezed and tore a page of the <b>epic</b>.</p>    <p style=\"margin-bottom: 1rem;\">After the tour, Jen approached the queen to apologize. She said, \"I'm sorry, Your <b>Majesty</b>. I was a terrible tour guide. Let me give you a <b>refund</b> for the money you spent.\"</p>    <p style=\"margin-bottom: 1rem;\">The queen laughed. She said, \"I don't want my money back, Jen. I loved the tour. You just have to be a little more careful and work hard to become the best at your job. Hard work <b>precedes</b> success.\"</p>    <p style=\"margin-bottom: 1rem;\">Jen smiled and thanked the queen. She decided to be extra careful from then on. She was persistent and worked hard. In time, Jen became the best tour guide at the museum.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jen's New Job</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The history museum needed to <b>recruit</b> a new tour guide. The director interviewed dozens of <b>applicants</b> before he decided to hire Jen. She was chosen because she was friendly, <b>punctual</b> and had a great attitude.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">On her first day, Jen got to work and prepared to give her first tour. She looked at the names on the <b>register</b>. She saw that the Queen of England and a <b>diplomat</b> were visiting the museum. She thought, \"It's my very first day, and I have to impress a <b>monarch</b>! I hope I don't <b>humiliate</b> myself in front of a person of such <b>renown</b>!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jen was nervous. She took a deep breath and said, \"Hello, everyone! I'm going to talk to you about the <b>chronology</b> of ancient Egypt.\" As she turned around to show the group some <b>artifacts</b>, she bumped into a <b>fossil</b> of an <b>authentic</b> elephant <b>tusk</b>. It fell to the ground and broke into a million pieces! \"Oh no!\" said Jen in a subtle voice. \"I sure hope the rest of the tour goes better than this!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The rest of the tour did not go any better. She tripped over an <b>antique</b> vase and broke a piece off of it. As she was reading an <b>excerpt</b> from a <b>lyric</b> poem, she sneezed and tore a page of the <b>epic</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After the tour, Jen approached the queen to apologize. She said, \"I'm sorry, Your <b>Majesty</b>. I was a terrible tour guide. Let me give you a <b>refund</b> for the money you spent.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The queen laughed. She said, \"I don't want my money back, Jen. I loved the tour. You just have to be a little more careful and work hard to become the best at your job. Hard work <b>precedes</b> success.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jen smiled and thanked the queen. She decided to be extra careful from then on. She was persistent and worked hard. In time, Jen became the best tour guide at the museum.</p></div>",
       "imageUrl": "/unit29_vol5_story.png",
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -538,37 +532,37 @@
               "id": "36",
               "content": "What did Jen say she hoped for in a subtle voice?",
               "options": [
-                "Jen hoped that the rest of the tour would go better.",
                 "Jen hoped that she would get a raise.",
+                "Jen hoped that the rest of the tour would go better.",
                 "Jen hoped that the queen would leave.",
                 "Jen hoped that she could find the pieces."
               ],
               "explanation": "Cuối đoạn 3, Jen lẩm bẩm: \"I sure hope the rest of the tour goes better than this!\" Cô ấy hy vọng phần còn lại của chuyến tham quan sẽ diễn ra suôn sẻ hơn. Đáp án A là chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "37",
               "content": "What chronology did Jen want to talk about to her tour group?",
               "options": [
-                "Jen wanted to talk about the chronology of Ancient Egypt.",
                 "Jen wanted to talk about the chronology of Rome.",
                 "Jen wanted to talk about the chronology of the museum.",
+                "Jen wanted to talk about the chronology of Ancient Egypt.",
                 "Jen wanted to talk about the chronology of dinosaurs."
               ],
               "explanation": "Trong đoạn 3 Jen đã nói I'm going to talk to you about the chronology of ancient Egypt. Cô ấy muốn thuyết minh về trình tự thời gian (chronology) của đất nước Ai Cập cổ đại. Chọn đáp án A nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "38",
               "content": "What happened as Jen was reading the excerpt from the epic lyric poem?",
               "options": [
-                "She sneezed and tore a page of the epic.",
                 "She dropped the book.",
                 "She forgot the words.",
-                "She began to cry."
+                "She began to cry.",
+                "She sneezed and tore a page of the epic."
               ],
               "explanation": "Đoạn 4 kể lại As she was reading an excerpt from a lyric poem, she sneezed and tore a page of the epic. Khi đang đọc đoạn trích, Jen hắt xì hơi và vô tình xé rách một trang của cuốn sử thi. Đáp án đúng là A.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "39",
@@ -586,18 +580,26 @@
               "id": "40",
               "content": "What precedes success, according to the queen?",
               "options": [
-                "Hard work",
                 "Good luck",
+                "Hard work",
                 "Many friends",
                 "Being a monarch"
               ],
               "explanation": "Cuối đoạn 6, nữ hoàng đã khuyên Jen: Hard work precedes success. Sự chăm chỉ (hard work) là điều kiện đi trước (precede) thành công. Đáp án A là hoàn toàn chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<img src=\"/unit29_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Công Việc Mới Của Jen</h1>\n\n<p style=\"margin-bottom: 1rem;\">Bảo tàng lịch sử cần <b>tuyển dụng</b> một hướng dẫn viên du lịch mới. Vị giám đốc đã phỏng vấn hàng chục <b>ứng viên</b> trước khi ông quyết định thuê Jen. Cô ấy được chọn vì cô ấy thân thiện, <b>đúng giờ</b> và có một thái độ tuyệt vời.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào ngày đầu tiên, Jen đi làm và chuẩn bị thực hiện chuyến tham quan đầu tiên của mình. Cô ấy nhìn vào những cái tên trên <b>sổ đăng ký</b>. Cô ấy thấy Nữ hoàng Anh và một <b>nhà ngoại giao</b> đang đến thăm bảo tàng. Cô ấy nghĩ, \"Đây là ngày đầu tiên của mình, và mình phải gây ấn tượng với một <b>quốc vương</b>! Mình hy vọng mình sẽ không tự làm <b>bẽ mặt</b> bản thân trước một người có <b>danh tiếng</b> như vậy!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Jen rất lo lắng. Cô ấy hít một hơi thật sâu và nói, \"Xin chào mọi người! Tôi sẽ nói cho các bạn nghe về <b>niên biểu</b> của Ai Cập cổ đại.\" Khi cô ấy quay lại để cho cả nhóm xem một số <b>đồ tạo tác</b>, cô ấy đã va vào <b>hóa thạch</b> của một chiếc <b>ngà</b> voi <b>thật</b>. Nó rơi xuống đất và vỡ thành hàng triệu mảnh! \"Ôi không!\" Jen nói với một giọng thì thầm. \"Tôi thực sự hy vọng phần còn lại của chuyến tham quan sẽ diễn ra tốt đẹp hơn thế này!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Phần còn lại của chuyến tham quan không diễn ra tốt đẹp hơn chút nào. Cô ấy vấp phải một chiếc bình <b>cổ</b> và làm vỡ một mảnh của nó. Khi đang đọc một <b>đoạn trích</b> từ một bài thơ <b>trữ tình</b>, cô ấy hắt hơi và làm rách một trang của <b>sử thi</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau chuyến tham quan, Jen đến gần nữ hoàng để xin lỗi. Cô ấy nói, \"Thần xin lỗi, thưa <b>Bệ hạ</b>. Thần là một hướng dẫn viên du lịch tồi tệ. Xin hãy để thần <b>hoàn tiền</b> lại số tiền mà người đã chi trả.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Nữ hoàng bật cười. Bà ấy nói, \"Ta không muốn lấy lại tiền của mình, Jen. Ta rất thích chuyến đi này. Cô chỉ cần cẩn thận hơn một chút và làm việc chăm chỉ để trở thành người giỏi nhất trong công việc của mình. Làm việc chăm chỉ <b>đi trước</b> sự thành công.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Jen mỉm cười và cảm ơn nữ hoàng. Cô ấy quyết định sẽ cẩn thận hơn từ đó trở đi. Cô ấy rất kiên trì và làm việc chăm chỉ. Dần dần, Jen đã trở thành người hướng dẫn viên du lịch giỏi nhất tại bảo tàng.</p>\\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 29: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

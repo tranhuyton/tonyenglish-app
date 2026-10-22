@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 8: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -498,12 +492,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Becoming a Healer</h1>        <p style=\"margin-bottom: 1rem;\">Years ago, I worked at a small health clinic in a remote country. I had gone there to treat an <b>obscure</b> syndrome. It attacked people's lungs, causing them to need a <b>respirator</b> to breathe. I was trying out a new <b>medication</b> to treat these people instead of using a respirator. If I was successful, I would become famous.</p>    <p style=\"margin-bottom: 1rem;\">Everything was going fine until war broke out in a nearby country. Many people from that country fled the <b>hostile</b> invading army. The army wanted to <b>dominate</b> the people, but the people didn't want to be <b>oppressed</b>. So they walked hundreds of miles across <b>barren</b> land to get away.</p>    <p style=\"margin-bottom: 1rem;\">Some of these people came to our clinic for treatment. I talked with them and learned of their difficulties. They did not beg or complain. I was impressed by their <b>dignity</b>.</p>    <p style=\"margin-bottom: 1rem;\">There was one woman I will never forget. Her son suffered from <b>malnutrition</b> and stomach pain, and she didn't know what to do. Neither did I. I was not <b>adept</b> at treating malnutrition. Nonetheless, when I saw her sadness, I knew I had to help her son.</p>    <p style=\"margin-bottom: 1rem;\">The woman had been feeding her son bread and water. She had a <b>misconception</b> that it would be enough for him. However, I knew that he needed to eat vegetables, too. So I took her outside and showed her a <b>dense</b> patch of <b>edible</b> plants. I taught her how to dig up the roots, <b>peel</b> them, and cook them for her son. I explained that she should increase her son's <b>intake</b> of these vegetables. <b>Likewise</b>, she should <b>strive</b> to get him some meat once a week to help him regain his strength.</p>    <p style=\"margin-bottom: 1rem;\">I sent her off with a <b>prescription</b> for some pain medicine, but she also left my office with some new <b>culinary</b> skills. A few weeks later, she returned to tell me her son was healthy again. As thanks, she gave me a beautiful <b>ceramic</b> bowl.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Becoming a Healer</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Years ago, I worked at a small health clinic in a remote country. I had gone there to treat an <b>obscure</b> syndrome. It attacked people's lungs, causing them to need a <b>respirator</b> to breathe. I was trying out a new <b>medication</b> to treat these people instead of using a respirator. If I was successful, I would become famous.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Everything was going fine until war broke out in a nearby country. Many people from that country fled the <b>hostile</b> invading army. The army wanted to <b>dominate</b> the people, but the people didn't want to be <b>oppressed</b>. So they walked hundreds of miles across <b>barren</b> land to get away.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Some of these people came to our clinic for treatment. I talked with them and learned of their difficulties. They did not beg or complain. I was impressed by their <b>dignity</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There was one woman I will never forget. Her son suffered from <b>malnutrition</b> and stomach pain, and she didn't know what to do. Neither did I. I was not <b>adept</b> at treating malnutrition. Nonetheless, when I saw her sadness, I knew I had to help her son.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The woman had been feeding her son bread and water. She had a <b>misconception</b> that it would be enough for him. However, I knew that he needed to eat vegetables, too. So I took her outside and showed her a <b>dense</b> patch of <b>edible</b> plants. I taught her how to dig up the roots, <b>peel</b> them, and cook them for her son. I explained that she should increase her son's <b>intake</b> of these vegetables. <b>Likewise</b>, she should <b>strive</b> to get him some meat once a week to help him regain his strength.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">I sent her off with a <b>prescription</b> for some pain medicine, but she also left my office with some new <b>culinary</b> skills. A few weeks later, she returned to tell me her son was healthy again. As thanks, she gave me a beautiful <b>ceramic</b> bowl.</p></div>",
       "imageUrl": "/unit8_vol5_story.png",
       "sections": [
         {
           "id": "sec5_reading_tf",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -627,7 +621,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit8_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Trở Thành Một Người Chữa Bệnh</h1>\n\n<p style=\"margin-bottom: 1rem;\">Nhiều năm trước, tôi làm việc tại một phòng khám sức khỏe nhỏ ở một đất nước xa xôi. Tôi đã đến đó để điều trị một hội chứng <b>mơ hồ</b>. Nó tấn công phổi của mọi người, khiến họ cần một <b>máy thở</b> để thở. Tôi đang thử nghiệm một loại <b>thuốc</b> mới để điều trị cho những người này thay vì sử dụng máy thở. Nếu tôi thành công, tôi sẽ trở nên nổi tiếng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mọi chuyện đang diễn ra tốt đẹp cho đến khi chiến tranh nổ ra ở một đất nước lân cận. Nhiều người từ đất nước đó đã chạy trốn khỏi đội quân xâm lược <b>thù địch</b>. Quân đội muốn <b>thống trị</b> người dân, nhưng người dân không muốn bị <b>áp bức</b>. Vì vậy, họ đã đi bộ hàng trăm dặm qua vùng đất <b>khô cằn</b> để chạy trốn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một số người trong số họ đã đến phòng khám của chúng tôi để điều trị. Tôi đã nói chuyện với họ và biết được những khó khăn của họ. Họ không van xin hay than vãn. Tôi đã bị ấn tượng bởi <b>lòng tự trọng</b> của họ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Có một người phụ nữ mà tôi sẽ không bao giờ quên. Con trai của cô ấy phải chịu đựng chứng <b>suy dinh dưỡng</b> và đau dạ dày, và cô ấy không biết phải làm gì. Tôi cũng vậy. Tôi không <b>giỏi</b> trong việc điều trị chứng suy dinh dưỡng. Tuy nhiên, khi nhìn thấy sự buồn bã của cô ấy, tôi biết mình phải giúp đỡ con trai cô.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người phụ nữ đã cho con trai mình ăn bánh mì và uống nước. Cô ấy có một <b>quan niệm sai lầm</b> rằng như vậy là đủ cho cậu bé. Tuy nhiên, tôi biết rằng cậu bé cần phải ăn thêm rau nữa. Vì vậy, tôi dẫn cô ấy ra ngoài và chỉ cho cô ấy một khoảnh đất <b>dày đặc</b> những loại cây <b>có thể ăn được</b>. Tôi dạy cô ấy cách đào rễ, <b>gọt vỏ</b> chúng, và nấu chúng cho con trai cô. Tôi giải thích rằng cô ấy nên tăng lượng <b>tiêu thụ</b> những loại rau này cho con trai mình. <b>Tương tự như vậy</b>, cô ấy nên <b>cố gắng</b> kiếm cho cậu bé một ít thịt mỗi tuần một lần để giúp cậu lấy lại sức mạnh.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tôi tiễn cô ấy ra về với một <b>đơn thuốc</b> cho một số loại thuốc giảm đau, nhưng cô ấy cũng rời phòng làm việc của tôi với một số kỹ năng <b>nấu nướng</b> mới. Vài tuần sau, cô ấy quay lại để báo cho tôi biết rằng con trai cô ấy đã khỏe mạnh trở lại. Như một lời cảm ơn, cô ấy đã tặng tôi một chiếc bát <b>bằng gốm</b> tuyệt đẹp.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 8: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

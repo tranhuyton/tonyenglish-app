@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 15: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -290,12 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Epidemic in Zimbabwe</h1>        <p style=\"margin-bottom: 1rem;\">In August of 2008, a deadly cholera <b>epidemic</b> <b>manifested</b> in Zimbabwe. A severe health <b>hazard</b> caused the outbreak. There was an extreme lack of clean drinking water in the <b>overcrowded</b> urban cities. Garbage and chemicals got into the public water supplies and <b>contaminated</b> them. Since people did not have access to other sources, they had to drink the dirty water.</p>    <p style=\"margin-bottom: 1rem;\">The outbreak spread rapidly and infected almost 16,000 people. The illness caused extreme pain in people’s <b>intestines</b>. It also caused a <b>deficiency</b> of important fluids in sick people’s bodies. Without the proper fluids and minerals, <b>metabolic</b> processes stopped working correctly. People were unable to digest food properly or <b>replenish</b> their lost nutrients. If they had not received <b>viable</b> treatment, they would have been likely to die. It was <b>imperative</b> for help to come soon.</p>    <p style=\"margin-bottom: 1rem;\">However, the government of Zimbabwe was unable to provide help to its people. The government didn’t have a plan to stop the spread of cholera. In addition, the country was too poor to get clean water or medication for the sick. The people seemed to be doomed.</p>    <p style=\"margin-bottom: 1rem;\">Luckily, many other countries recognized the <b>paramount</b> need to contain the outbreak. Dozens of <b>voluntary</b> <b>practitioners</b> from Britain, France, the United States, and other countries went to Zimbabwe to treat the disease. Through the <b>provision</b> of <b>sterile</b> drinking water and medication, people finally got the treatment they badly needed. The <b>compassionate</b> doctors were able to save the lives of thousands. By January of 2009, the <b>epidemic</b> was almost completely contained.</p>    <p style=\"margin-bottom: 1rem;\">Today, the Zimbabwean government is working with other countries to prevent future <b>epidemics</b>. They are cleaning up the water supply and learning how to avoid health <b>hazards</b>. The system used to filter water is being <b>upgraded</b>. The government now <b>administers</b> the water supply plants and makes sure that they <b>adhere</b> to strict safety guidelines. Hopefully, future instances of cholera will be treated before they start deadly <b>epidemics</b>.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Epidemic in Zimbabwe</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In August of 2008, a deadly cholera <b>epidemic</b> <b>manifested</b> in Zimbabwe. A severe health <b>hazard</b> caused the outbreak. There was an extreme lack of clean drinking water in the <b>overcrowded</b> urban cities. Garbage and chemicals got into the public water supplies and <b>contaminated</b> them. Since people did not have access to other sources, they had to drink the dirty water.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The outbreak spread rapidly and infected almost 16,000 people. The illness caused extreme pain in people’s <b>intestines</b>. It also caused a <b>deficiency</b> of important fluids in sick people’s bodies. Without the proper fluids and minerals, <b>metabolic</b> processes stopped working correctly. People were unable to digest food properly or <b>replenish</b> their lost nutrients. If they had not received <b>viable</b> treatment, they would have been likely to die. It was <b>imperative</b> for help to come soon.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">However, the government of Zimbabwe was unable to provide help to its people. The government didn’t have a plan to stop the spread of cholera. In addition, the country was too poor to get clean water or medication for the sick. The people seemed to be doomed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Luckily, many other countries recognized the <b>paramount</b> need to contain the outbreak. Dozens of <b>voluntary</b> <b>practitioners</b> from Britain, France, the United States, and other countries went to Zimbabwe to treat the disease. Through the <b>provision</b> of <b>sterile</b> drinking water and medication, people finally got the treatment they badly needed. The <b>compassionate</b> doctors were able to save the lives of thousands. By January of 2009, the <b>epidemic</b> was almost completely contained.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Today, the Zimbabwean government is working with other countries to prevent future <b>epidemics</b>. They are cleaning up the water supply and learning how to avoid health <b>hazards</b>. The system used to filter water is being <b>upgraded</b>. The government now <b>administers</b> the water supply plants and makes sure that they <b>adhere</b> to strict safety guidelines. Hopefully, future instances of cholera will be treated before they start deadly <b>epidemics</b>.</p></div>",
       "imageUrl": "/unit15_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -360,13 +354,13 @@
               "id": "31",
               "content": "What paramount need did other countries recognize?",
               "options": [
-                "Countries recognized the paramount need to contain the outbreak.",
                 "Countries recognized the need to build a new hospital.",
                 "Countries recognized the need to start a war.",
-                "Countries recognized the need to abandon Zimbabwe."
+                "Countries recognized the need to abandon Zimbabwe.",
+                "Countries recognized the paramount need to contain the outbreak."
               ],
               "explanation": "Đoạn 4 có ghi: \"Luckily, many other countries recognized the paramount need to contain the outbreak.\" (May mắn thay, nhiều quốc gia khác đã nhận ra nhu cầu tối cao là phải kiểm soát đợt bùng phát dịch bệnh này).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "32",
@@ -384,42 +378,50 @@
               "id": "33",
               "content": "Where did the voluntary practitioners come from?",
               "options": [
-                "Britain, France, the United States, and other countries.",
                 "Only from Britain.",
+                "Britain, France, the United States, and other countries.",
                 "From the neighboring countries.",
                 "From Asia and Australia."
               ],
               "explanation": "Trong đoạn 4 có đề cập: \"Dozens of voluntary practitioners from Britain, France, the United States, and other countries went to Zimbabwe...\" (Hàng chục bác sĩ tình nguyện từ Anh, Pháp, Mỹ và các quốc gia khác đã đến...).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
               "content": "What were infected people unable to replenish in their intestines?",
               "options": [
-                "Infected people were unable to replenish lost nutrients.",
                 "Infected people were unable to replenish blood.",
                 "Infected people were unable to replenish air.",
+                "Infected people were unable to replenish lost nutrients.",
                 "Infected people were unable to replenish bad bacteria."
               ],
               "explanation": "Đoạn 2 có viết: \"People were unable to digest food properly or replenish their lost nutrients.\" (Mọi người không thể tiêu hóa thức ăn đúng cách hoặc bổ sung lại các chất dinh dưỡng đã mất của họ). Do đó đáp án là nutrients.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "35",
               "content": "What provisions did the compassionate doctors provide?",
               "options": [
-                "The doctors provided sterile drinking water and medication.",
                 "The doctors provided beds and blankets.",
                 "The doctors provided books and pencils.",
-                "The doctors provided toys and games."
+                "The doctors provided toys and games.",
+                "The doctors provided sterile drinking water and medication."
               ],
               "explanation": "Trong đoạn 4 có ghi: \"Through the provision of sterile drinking water and medication, people finally got the treatment...\" (Thông qua việc cung cấp nước uống vô trùng và thuốc men, mọi người cuối cùng đã nhận được sự điều trị).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n<img src=\"/unit15_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bệnh dịch ở Zimbabwe</h1>\n\n<p style=\"margin-bottom: 1rem;\">Vào tháng 8 năm 2008, một <b>bệnh dịch</b> tả chết người đã <b>bùng phát</b> ở Zimbabwe. Một <b>mối nguy hiểm</b> sức khỏe nghiêm trọng đã gây ra đợt bùng phát này. Có một sự thiếu hụt nước uống sạch cực kỳ nghiêm trọng ở các thành phố đô thị <b>đông đúc</b>. Rác thải và hóa chất đã đi vào các nguồn cung cấp nước công cộng và <b>làm ô nhiễm</b> chúng. Bởi vì người dân không có khả năng tiếp cận với các nguồn nước khác, họ phải uống nước bẩn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đợt bùng phát lây lan nhanh chóng và đã lây nhiễm cho gần 16.000 người. Căn bệnh đã gây ra những cơn đau dữ dội trong <b>ruột</b> của mọi người. Nó cũng gây ra sự <b>thiếu hụt</b> các chất lỏng quan trọng trong cơ thể người bệnh. Không có các chất lỏng và khoáng chất phù hợp, quá trình <b>trao đổi chất</b> ngừng hoạt động một cách chính xác. Mọi người không thể tiêu hoá thức ăn đúng cách hoặc <b>bổ sung</b> lượng chất dinh dưỡng đã mất. Nếu họ không nhận được điều trị <b>khả thi</b>, họ rất có thể đã chết. Rất <b>cấp bách</b> để sự trợ giúp đến sớm.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, chính phủ Zimbabwe không thể cung cấp sự trợ giúp cho người dân của mình. Chính phủ đã không có một kế hoạch để ngăn chặn sự lây lan của bệnh tả. Thêm vào đó, đất nước này quá nghèo để có được nước sạch hoặc thuốc men cho những người mắc bệnh. Người dân dường như phải chịu số phận bi đát.</p>\n\n<p style=\"margin-bottom: 1rem;\">May mắn thay, nhiều quốc gia khác đã nhận ra nhu cầu <b>tối quan trọng</b> phải kiểm soát đợt bùng phát này. Hàng chục <b>người hành nghề y</b> <b>tự nguyện</b> từ Anh, Pháp, Hoa Kỳ và các quốc gia khác đã đến Zimbabwe để điều trị căn bệnh này. Thông qua việc <b>cung cấp</b> nước uống <b>vô trùng</b> và thuốc men, người dân cuối cùng đã nhận được sự điều trị mà họ rất cần. Các bác sĩ <b>đầy lòng trắc ẩn</b> đã có thể cứu sống hàng ngàn người. Đến tháng 1 năm 2009, <b>bệnh dịch</b> đã gần như được kiểm soát hoàn toàn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày nay, chính phủ Zimbabwe đang làm việc với các quốc gia khác để ngăn chặn các <b>bệnh dịch</b> trong tương lai. Họ đang làm sạch nguồn cung cấp nước và học cách tránh các <b>mối nguy hiểm</b> đối với sức khoẻ. Hệ thống được sử dụng để lọc nước đang được <b>nâng cấp</b>. Chính phủ hiện nay <b>quản lý</b> các nhà máy cung cấp nước và đảm bảo rằng chúng <b>tuân thủ</b> các nguyên tắc an toàn nghiêm ngặt. Hy vọng rằng, các trường hợp bệnh tả trong tương lai sẽ được điều trị trước khi chúng bắt đầu các <b>bệnh dịch</b> chết người.</p>\n</div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 15: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

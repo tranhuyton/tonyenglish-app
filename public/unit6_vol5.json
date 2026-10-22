@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 6: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -420,15 +414,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Island</h1>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Where am I?\" Bob thought to himself when he woke up on a <b>peculiar</b> beach. \"I can't remember what happened.\" There had been a bad storm, and Bob's fishing boat sunk. He washed ashore on a small island, but he had gotten hurt during the storm. He had a terrible <b>migraine</b>, and he had a <b>fracture</b> in his shoulder. He felt awful. But he had a strong desire to make it home to his <b>spouse</b> and children. He had to <b>tolerate</b> all the pain and <b>devise</b> a plan.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Bob stood up and looked around. \"I'll walk to a higher <b>altitude</b>, so I can see everything around me,\" thought Bob. \"Maybe I'll gain some <b>insight</b> about this island and find something to help me escape.\" As he walked along a mountain <b>ridge</b>, he noticed that the tall <b>indigenous</b> trees looked sturdy and thick. Bob got a brilliant idea. He could build a raft! He cut down some leaves and tree <b>limbs</b>. Even though his shoulder injury <b>impaired</b> his ability to carry the materials, he slowly dragged them down the mountain until he reached the <b>coastline</b>.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Bob was a <b>proficient</b> builder. He used his building <b>expertise</b> to line up the limbs and tie them together with long vines. When the raft was finished, Bob was happy with his work. \"This will bring me home to my family,\" he said with a smile.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">At last, Bob was ready to <b>implement</b> his escape plan. With all his might, he <b>thrust</b> the raft into the water. He climbed on and began the <b>quest</b> to find his way home. Bob smiled again, and thought, \"I'm glad I kept a good attitude. It prevented the pain from <b>deterring</b> me from my plan. <b>Optimism</b> and ambition make anything possible.\"</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Slowly, he floated out to sea. In a few days, he made it to shore and ran home to see his happy family.</p></div>",
       "imageUrl": "/unit6_vol5_story.png",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Island</h1>\n<p style=\"margin-bottom: 1rem;\">\"Where am I?\" Bob thought to himself when he woke up on a <b>peculiar</b> beach. \"I can't remember what happened.\" There had been a bad storm, and Bob's fishing boat sunk. He washed ashore on a small island, but he had gotten hurt during the storm. He had a terrible <b>migraine</b>, and he had a <b>fracture</b> in his shoulder. He felt awful. But he had a strong desire to make it home to his <b>spouse</b> and children. He had to <b>tolerate</b> all the pain and <b>devise</b> a plan.</p>\n<p style=\"margin-bottom: 1rem;\">Bob stood up and looked around. \"I'll walk to a higher <b>altitude</b>, so I can see everything around me,\" thought Bob. \"Maybe I'll gain some <b>insight</b> about this island and find something to help me escape.\" As he walked along a mountain <b>ridge</b>, he noticed that the tall <b>indigenous</b> trees looked sturdy and thick. Bob got a brilliant idea. He could build a raft! He cut down some leaves and tree <b>limbs</b>. Even though his shoulder injury <b>impaired</b> his ability to carry the materials, he slowly dragged them down the mountain until he reached the <b>coastline</b>.</p>\n<p style=\"margin-bottom: 1rem;\">Bob was a <b>proficient</b> builder. He used his building <b>expertise</b> to line up the limbs and tie them together with long vines. When the raft was finished, Bob was happy with his work. \"This will bring me home to my family,\" he said with a smile.</p>\n<p style=\"margin-bottom: 1rem;\">At last, Bob was ready to <b>implement</b> his escape plan. With all his might, he <b>thrust</b> the raft into the water. He climbed on and began the <b>quest</b> to find his way home. Bob smiled again, and thought, \"I'm glad I kept a good attitude. It prevented the pain from <b>deterring</b> me from my plan. <b>Optimism</b> and ambition make anything possible.\"</p>\n<p style=\"margin-bottom: 1rem;\">Slowly, he floated out to sea. In a few days, he made it to shore and ran home to see his happy family.</p></div>",
-      "explanation": "",
       "sections": [
         {
           "id": "sec6_reading_A",
-          "title": "Part A: Mark each statement True or False.",
-          "content": "",
-          "questionType": "TFNG",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A: Mark each statement True or False.</p>",
           "questions": [
             {
               "id": "36",
@@ -437,8 +429,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Đúng. Bài đọc có câu: \"He had a terrible migraine, and he had a fracture in his shoulder.\""
+              "explanation": "Đúng. Bài đọc có câu: \"He had a terrible migraine, and he had a fracture in his shoulder.\"",
+              "correctAnswer": "True"
             },
             {
               "id": "37",
@@ -447,8 +439,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Sai. Bob thực hiện kế hoạch để \"return home to his spouse and children\" (trở về nhà với vợ và các con), chứ không phải mang họ đến hòn đảo."
+              "explanation": "Sai. Bob thực hiện kế hoạch để \"return home to his spouse and children\" (trở về nhà với vợ và các con), chứ không phải mang họ đến hòn đảo.",
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -457,8 +449,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Sai. Bài đọc viết \"his shoulder injury impaired his ability to carry the materials\" (chấn thương vai của anh ấy làm suy yếu khả năng mang vác vật liệu), không phải do cành cây."
+              "explanation": "Sai. Bài đọc viết \"his shoulder injury impaired his ability to carry the materials\" (chấn thương vai của anh ấy làm suy yếu khả năng mang vác vật liệu), không phải do cành cây.",
+              "correctAnswer": "False"
             },
             {
               "id": "39",
@@ -467,8 +459,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Đúng. Bài đọc có câu: \"Bob was a proficient builder. He used his building expertise to line up the limbs...\""
+              "explanation": "Đúng. Bài đọc có câu: \"Bob was a proficient builder. He used his building expertise to line up the limbs...\"",
+              "correctAnswer": "True"
             },
             {
               "id": "40",
@@ -477,16 +469,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Đúng. Bài đọc viết: \"he thrust the raft into the water. He climbed on and began the quest to find his way home.\""
+              "explanation": "Đúng. Bài đọc viết: \"he thrust the raft into the water. He climbed on and began the quest to find his way home.\"",
+              "correctAnswer": "True"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading_B",
           "title": "Part B: Answer the questions.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B: Choose the correct answer for each question.</p>",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -497,8 +489,8 @@
                 "Insight into how the storm started.",
                 "Insight about the indigenous animals on the island."
               ],
-              "correctAnswer": "A",
-              "explanation": "Bob hy vọng có cái nhìn sâu sắc (insight) về hòn đảo và tìm thấy thứ gì đó giúp anh ta trốn thoát."
+              "explanation": "Bob hy vọng có cái nhìn sâu sắc (insight) về hòn đảo và tìm thấy thứ gì đó giúp anh ta trốn thoát.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -509,8 +501,8 @@
                 "Because he needed to find food and water.",
                 "Because he wanted to build a permanent shelter."
               ],
-              "correctAnswer": "B",
-              "explanation": "Bob phải chịu đựng cơn đau và vạch ra kế hoạch vì anh có khao khát mãnh liệt được trở về nhà với gia đình."
+              "explanation": "Bob phải chịu đựng cơn đau và vạch ra kế hoạch vì anh có khao khát mãnh liệt được trở về nhà với gia đình.",
+              "correctAnswer": "B"
             },
             {
               "id": "43",
@@ -521,8 +513,8 @@
                 "He dragged tree limbs and vines.",
                 "He dragged heavy stones to build a fire."
               ],
-              "correctAnswer": "C",
-              "explanation": "Bob đã chặt cành cây và kéo chúng từ sườn núi xuống bờ biển để làm bè."
+              "explanation": "Bob đã chặt cành cây và kéo chúng từ sườn núi xuống bờ biển để làm bè.",
+              "correctAnswer": "C"
             },
             {
               "id": "44",
@@ -533,8 +525,8 @@
                 "By resting for several days.",
                 "By ignoring the pain completely."
               ],
-              "correctAnswer": "A",
-              "explanation": "Bob nghĩ: \"I'm glad I kept a good attitude. It prevented the pain from deterring me from my plan.\""
+              "explanation": "Bob nghĩ: \"I'm glad I kept a good attitude. It prevented the pain from deterring me from my plan.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -545,12 +537,22 @@
                 "They make anything possible.",
                 "They are not as important as survival skills."
               ],
-              "correctAnswer": "C",
-              "explanation": "Cuối bài, Bob nghĩ: \"Optimism and ambition make anything possible.\" (Sự lạc quan và hoài bão làm cho mọi thứ trở nên khả thi.)"
+              "explanation": "Cuối bài, Bob nghĩ: \"Optimism and ambition make anything possible.\" (Sự lạc quan và hoài bão làm cho mọi thứ trở nên khả thi.)",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "explanation": "",
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit6_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Những Người Anh Em và Chiếc Bánh Mì</h1>\n\n<p style=\"margin-bottom: 1rem;\">Hai anh em muốn ra ngoài chơi. Tuy nhiên, vì chiếc bánh mì duy nhất trong nhà đã <b>cũ</b>, mẹ của họ bảo rằng họ cần phải nướng bánh mì mới.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Mẹ phải đem xe đi sửa,\" bà nói. \"Khi mẹ về, nếu bánh mì đã sẵn sàng, các con có thể đi chơi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Hai anh em vội vã chuẩn bị bánh mì, nhưng không cẩn thận. Họ không <b>rây</b> bột. Họ bất cẩn và rắc quá nhiều muối vào hỗn hợp. <b>Khối bột nhào</b> cần phải mềm và <b>dẻo</b>, nhưng muối đã biến nó thành một <b>cục</b> cứng như gạch.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người em trai <b>thốt lên</b> một tiếng thở dài. \"Bây giờ chúng ta phải bắt đầu lại từ đầu,\" cậu bé nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Không, không cần đâu,\" người anh trai trả lời. \"Anh sẽ sửa nó. Anh chỉ cần làm cho khối bột phẳng lại và thêm nước vào đó.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu bé quyết định đấm khối bột bằng nắm đấm của mình để làm nó phẳng ra. Nhưng cậu đánh mạnh đến nỗi nó bay ra khỏi bàn và làm đổ một cái ly, khiến nó vỡ <b>tan tành</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khối bột sau đó va vào <b>cửa chớp</b> của cửa sổ nhà bếp và vỡ vụn. May mắn thay, hai anh em không bị <b>thương</b>, nhưng họ đã tạo ra một mớ hỗn độn lớn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một <b>vết ửng đỏ</b> nhẹ xuất hiện trên khuôn mặt của người anh trai. Cậu bé nhìn mớ hỗn độn một cách <b>bực tức</b>. Cậu đã <b>hiểu</b> ra mình vừa mắc phải một sai lầm khủng khiếp. \"Anh đoán là anh đã hơi <b>hấp tấp</b> trong việc đưa ra quyết định,\" cậu nói. \"Chúng ta không nên cố gắng <b>vội vã</b>. Bây giờ chúng ta có một mớ hỗn độn để dọn dẹp và một ổ bánh mới để nướng.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Chúng ta phải <b>tập hợp</b> lại các nguyên liệu thôi,\" người em trai nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ quét dọn những mảnh kính vỡ và bột nhào. Sau đó, họ bắt đầu <b>làm</b> một ổ bánh mới. Lần này, họ thực hiện <b>việc vặt</b> này một cách cẩn thận.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi mẹ trở về, bánh mì đang nguội trên quầy. Nhà bếp <b>sạch bóng</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Các con thật <b>thông minh xuất chúng</b>,\" bà nói. \"Bánh mì trông thật tuyệt vời. Nó hoàn toàn là một <b>kiệt tác</b>. Mẹ đã <b>lo lắng bồn chồn</b> rằng các con sẽ mất cả ngày, nhưng các con đã làm xong nó rất nhanh. Bây giờ các con có thể đi chơi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Hai anh em mỉm cười. Họ biết rằng học cách hoàn thành một nhiệm vụ đúng cách là một <b>phần</b> lớn của sự trưởng thành.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 6: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

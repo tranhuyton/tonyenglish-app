@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 20: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -508,12 +502,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Greedy Bee</h1>        <p style=\"margin-bottom: 1rem;\">A young bee had passed his <b>intermediate</b> level exams. He now knew everything about flowers. He understood how they used <b>photosynthesis</b> to make oxygen and which ones produced the best <b>pollen</b>. Bees had an important <b>dependency</b> on <b>pollen</b>. From the beginning of time, bees' <b>eternal</b> task was to gather <b>pollen</b> and make honey with it.</p>    <p style=\"margin-bottom: 1rem;\">Since he passed his exams, the little bee had earned his <b>inclusion</b> in the <b>swarms</b> that gathered <b>pollen</b>. He was excited because he was finally allowed to leave the hive. He left with the next <b>swarm</b> and was determined to find the perfect flower. Soon he saw a large, <b>vibrant</b> flower full of <b>pollen</b>. He landed on a petal and walked toward the <b>pollen</b> at the flower's center.</p>    <p style=\"margin-bottom: 1rem;\">Immediately, he began rolling in the <b>pollen</b>, gathering it on his legs and wings. The fine <b>texture</b> of the <b>pollen</b> <b>tickled</b> when it stuck to his body. It was the best experience the little bee had ever had. He gathered as much as he could.</p>    <p style=\"margin-bottom: 1rem;\">But when he was flying back home, he realized that all the <b>pollen</b> had an <b>adverse</b> effect. He had no control over his flight. The <b>intermittent</b> wind <b>fluctuated</b> in power. He was blown to and <b>fro</b>. One minute he was flying straight, and the next minute the wind had <b>reversed</b> his course.</p>    <p style=\"margin-bottom: 1rem;\">He tried to <b>dump</b> some of the <b>pollen</b>, but it acted as an <b>adhesive</b>. He couldn't get it off. He became tired and fell to the ground.</p>    <p style=\"margin-bottom: 1rem;\">\"What am I going to do now?\" he thought. Just then, his <b>mentor</b> landed next to him and began cleaning the excess <b>pollen</b> off the little bee. \"You shouldn't have taken so much,\" his <b>mentor</b> said.</p>    <p style=\"margin-bottom: 1rem;\">Finally, with the <b>pollen</b> off of him, the bee easily <b>regained</b> his strength, and like a <b>phoenix</b>, the young bee flew back into the air. When he returned to the hive, he turned to his <b>mentor</b> and said, \"I learned an important lesson today. I will never be greedy again.\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Greedy Bee</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A young bee had passed his <b>intermediate</b> level exams. He now knew everything about flowers. He understood how they used <b>photosynthesis</b> to make oxygen and which ones produced the best <b>pollen</b>. Bees had an important <b>dependency</b> on <b>pollen</b>. From the beginning of time, bees' <b>eternal</b> task was to gather <b>pollen</b> and make honey with it.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Since he passed his exams, the little bee had earned his <b>inclusion</b> in the <b>swarms</b> that gathered <b>pollen</b>. He was excited because he was finally allowed to leave the hive. He left with the next <b>swarm</b> and was determined to find the perfect flower. Soon he saw a large, <b>vibrant</b> flower full of <b>pollen</b>. He landed on a petal and walked toward the <b>pollen</b> at the flower's center.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Immediately, he began rolling in the <b>pollen</b>, gathering it on his legs and wings. The fine <b>texture</b> of the <b>pollen</b> <b>tickled</b> when it stuck to his body. It was the best experience the little bee had ever had. He gathered as much as he could.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But when he was flying back home, he realized that all the <b>pollen</b> had an <b>adverse</b> effect. He had no control over his flight. The <b>intermittent</b> wind <b>fluctuated</b> in power. He was blown to and <b>fro</b>. One minute he was flying straight, and the next minute the wind had <b>reversed</b> his course.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He tried to <b>dump</b> some of the <b>pollen</b>, but it acted as an <b>adhesive</b>. He couldn't get it off. He became tired and fell to the ground.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"What am I going to do now?\" he thought. Just then, his <b>mentor</b> landed next to him and began cleaning the excess <b>pollen</b> off the little bee. \"You shouldn't have taken so much,\" his <b>mentor</b> said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Finally, with the <b>pollen</b> off of him, the bee easily <b>regained</b> his strength, and like a <b>phoenix</b>, the young bee flew back into the air. When he returned to the hive, he turned to his <b>mentor</b> and said, \"I learned an important lesson today. I will never be greedy again.\"</p></div>",
       "imageUrl": "/unit20_vol6_story.png",
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -590,37 +584,37 @@
               "id": "42",
               "content": "What did his inclusion in the swarms finally allow the little bee to do?",
               "options": [
-                "Finally, he was allowed to leave the hive.",
                 "He was allowed to eat all the honey.",
+                "Finally, he was allowed to leave the hive.",
                 "He was allowed to sleep all day.",
                 "He was allowed to sting animals."
               ],
               "explanation": "Trong bài có viết: \"Since he passed his exams, the little bee had earned his inclusion in the swarms that gathered pollen. He was excited because he was finally allowed to leave the hive.\" (Vì đã vượt qua kỳ thi, cậu ong nhỏ đã giành được vị trí trong đàn ong đi hái phấn. Cậu rất hào hứng vì cuối cùng cũng được phép rời khỏi tổ). Do đó đáp án A là đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "43",
               "content": "What was the bees’ eternal task?",
               "options": [
-                "From the beginning of time, bees' eternal task was to gather pollen and make honey with it.",
                 "Their task was to protect the queen at all costs.",
                 "Their task was to build a new hive.",
+                "From the beginning of time, bees' eternal task was to gather pollen and make honey with it.",
                 "Their task was to fight other insects."
               ],
               "explanation": "Cuối đoạn 1 viết: \"From the beginning of time, bees' eternal task was to gather pollen and make honey with it.\" (Từ thuở sơ khai, nhiệm vụ muôn thuở của loài ong là thu thập phấn hoa và dùng nó để làm mật). Đáp án A trùng khớp hoàn toàn.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "44",
               "content": "How did the excess pollen have an adverse effect on the bee’s flight?",
               "options": [
-                "He had no control over his flight.",
                 "He flew much faster than before.",
                 "He flew higher into the sky.",
-                "He became completely invisible."
+                "He became completely invisible.",
+                "He had no control over his flight."
               ],
               "explanation": "Đoạn 4 viết: \"...all the pollen had an adverse effect. He had no control over his flight.\" (...tất cả số phấn hoa này đã gây ra một tác động tiêu cực. Cậu không thể kiểm soát được chuyến bay của mình). Do vậy, đáp án A đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "45",
@@ -637,7 +631,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit20_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chú ong tham lam</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một chú ong trẻ đã vượt qua các kỳ thi cấp <b>trung gian</b>. Giờ đây chú đã biết mọi thứ về các loài hoa. Chú hiểu cách chúng sử dụng <b>quá trình quang hợp</b> để tạo ra oxy và loài hoa nào tạo ra loại <b>phấn hoa</b> tốt nhất. Những chú ong có sự <b>phụ thuộc</b> quan trọng vào <b>phấn hoa</b>. Ngay từ thuở sơ khai, nhiệm vụ <b>vĩnh cửu</b> của loài ong là thu thập <b>phấn hoa</b> và tạo ra mật ong bằng chúng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Kể từ khi vượt qua các kỳ thi, chú ong nhỏ đã giành được <b>sự kết nạp</b> vào các <b>đàn ong</b> đi lấy <b>phấn hoa</b>. Chú rất hào hứng vì cuối cùng chú cũng được phép rời khỏi tổ. Chú rời đi cùng <b>đàn ong</b> tiếp theo và quyết tâm tìm ra bông hoa hoàn hảo nhất. Chẳng mấy chốc, chú nhìn thấy một bông hoa lớn, <b>rực rỡ</b> chứa đầy <b>phấn hoa</b>. Chú đáp xuống một cánh hoa và đi về phía <b>phấn hoa</b> ở giữa bông hoa.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngay lập tức, chú bắt đầu lăn lộn trong <b>phấn hoa</b>, gom nó vào chân và cánh của mình. <b>Kết cấu</b> mịn của <b>phấn hoa</b> đã làm chú <b>nhột</b> khi nó dính vào cơ thể. Đó là trải nghiệm tuyệt vời nhất mà chú ong nhỏ từng có. Chú đã thu thập được càng nhiều càng tốt.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng khi chú đang bay trở về nhà, chú nhận ra rằng tất cả <b>phấn hoa</b> đó đã có tác động <b>bất lợi</b>. Chú không thể kiểm soát được chuyến bay của mình. Cơn gió <b>không liên tục</b> <b>biến động</b> về sức mạnh. Chú bị thổi bay <b>tới lui</b>. Một phút trước chú bay thẳng, và phút tiếp theo cơn gió đã <b>đảo ngược</b> lộ trình của chú.</p>\n\n<p style=\"margin-bottom: 1rem;\">Chú cố gắng <b>trút bỏ</b> một ít <b>phấn hoa</b>, nhưng nó đóng vai trò như một <b>chất kết dính</b>. Chú không thể lấy nó ra được. Chú trở nên mệt mỏi và rơi xuống đất.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Bây giờ mình phải làm gì đây?\" chú nghĩ. Ngay lúc đó, <b>người cố vấn</b> của chú đã đáp xuống bên cạnh chú và bắt đầu làm sạch lượng <b>phấn hoa</b> thừa trên người chú ong nhỏ. \"Cháu không nên lấy nhiều như vậy,\" <b>người cố vấn</b> của chú nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, với lượng <b>phấn hoa</b> được rũ bỏ khỏi người, chú ong dễ dàng <b>lấy lại</b> được sức mạnh của mình, và giống như một con <b>chim phượng hoàng</b>, chú ong trẻ bay trở lại không trung. Khi trở về tổ, chú quay sang <b>người cố vấn</b> của mình và nói, \"Hôm nay cháu đã học được một bài học quan trọng. Cháu sẽ không bao giờ tham lam nữa.\"</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 20: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

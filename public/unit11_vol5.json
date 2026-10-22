@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 11: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -370,12 +364,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Beethoven’s Gift</h1>        <p style=\"margin-bottom: 1rem;\">Beethoven was a great composer of classical music in the 1800s. Many <b>biographies</b> have been written that <b>narrate</b> his <b>dominance</b> in the music world. But do you know what really makes him special? Even though millions of people got to hear his <b>multiple masterpieces</b>, he never did. Beethoven wrote his best pieces after he went completely deaf!</p>    <p style=\"margin-bottom: 1rem;\">His <b>partiality</b> toward classical music developed when he was very young. He wasn’t interested in anything else as a child. When he was five, he learned how to play the piano. From then, nothing could stop his passion for writing and playing music.</p>    <p style=\"margin-bottom: 1rem;\">When Beethoven was twenty, he began to lose his hearing. He got <b>acute</b>, <b>spontaneous</b> pains in his ears. His hearing kept getting worse over time. It was <b>inevitable</b> that he would eventually lose it altogether. It was very hard for him to keep writing music. He lost the <b>virtue</b> of patience, and he became <b>notorious</b> for his <b>aggression</b>. Still, he never stopped trying. His passion for music <b>compelled</b> him to keep performing even after he went deaf. He couldn’t hear himself play, but he knew that his creations sounded <b>gorgeous</b>.</p>    <p style=\"margin-bottom: 1rem;\">His final concert was held at a huge <b>banquet</b>. He gave the musicians a cue, and they began to play. He directed the concert with all his heart. He couldn’t hear the music, but he said that he could feel it. <b>Overall</b>, performance was one of the finest in history. When it was over, he turned to the crowd. They <b>clapped</b> and cheered wildly. In that beautiful moment, the applause <b>boosted</b> his emotions, and he began to cry.</p>    <p style=\"margin-bottom: 1rem;\">In 1827, he suffered from lead poisoning. He didn’t survive the sickness, but his music did because great music never becomes <b>outdated</b>. Even though Beethoven is gone, his <b>legacy</b> will live on forever.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Beethoven’s Gift</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Beethoven was a great composer of classical music in the 1800s. Many <b>biographies</b> have been written that <b>narrate</b> his <b>dominance</b> in the music world. But do you know what really makes him special? Even though millions of people got to hear his <b>multiple masterpieces</b>, he never did. Beethoven wrote his best pieces after he went completely deaf!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">His <b>partiality</b> toward classical music developed when he was very young. He wasn’t interested in anything else as a child. When he was five, he learned how to play the piano. From then, nothing could stop his passion for writing and playing music.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When Beethoven was twenty, he began to lose his hearing. He got <b>acute</b>, <b>spontaneous</b> pains in his ears. His hearing kept getting worse over time. It was <b>inevitable</b> that he would eventually lose it altogether. It was very hard for him to keep writing music. He lost the <b>virtue</b> of patience, and he became <b>notorious</b> for his <b>aggression</b>. Still, he never stopped trying. His passion for music <b>compelled</b> him to keep performing even after he went deaf. He couldn’t hear himself play, but he knew that his creations sounded <b>gorgeous</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">His final concert was held at a huge <b>banquet</b>. He gave the musicians a cue, and they began to play. He directed the concert with all his heart. He couldn’t hear the music, but he said that he could feel it. <b>Overall</b>, performance was one of the finest in history. When it was over, he turned to the crowd. They <b>clapped</b> and cheered wildly. In that beautiful moment, the applause <b>boosted</b> his emotions, and he began to cry.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In 1827, he suffered from lead poisoning. He didn’t survive the sickness, but his music did because great music never becomes <b>outdated</b>. Even though Beethoven is gone, his <b>legacy</b> will live on forever.</p></div>",
       "imageUrl": "/unit11_vol5_story.png",
       "sections": [
         {
           "id": "sec4_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -386,7 +380,7 @@
                 "False"
               ],
               "explanation": "Tiểu sử (biographies) là thứ kể lại (narrate) sự thống trị của ông trong giới âm nhạc, chứ không phải mọi người (people) kể lại các cuốn tiểu sử. Do đó nhận định này sai.",
-              "correctAnswer": "False"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
@@ -499,7 +493,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit11_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Món Quà Của Beethoven</h1>\n\n<p style=\"margin-bottom: 1rem;\">Beethoven là một nhà soạn nhạc cổ điển vĩ đại vào những năm 1800. Đã có rất nhiều cuốn <b>tiểu sử (biographies)</b> được viết ra nhằm <b>kể lại (narrate)</b> <b>sự thống trị (dominance)</b> của ông trong thế giới âm nhạc. Nhưng bạn có biết điều gì thực sự làm cho ông ấy trở nên đặc biệt không? Mặc dù hàng triệu người đã được nghe <b>những kiệt tác (multiple masterpieces)</b> của ông, nhưng bản thân ông thì chưa bao giờ. Beethoven đã viết những bản nhạc xuất sắc nhất của mình sau khi ông hoàn toàn bị điếc!</p>\n\n<p style=\"margin-bottom: 1rem;\">Sự <b>yêu thích đặc biệt (partiality)</b> của ông đối với âm nhạc cổ điển đã phát triển từ khi ông còn rất trẻ. Ngay từ bé, ông đã không hứng thú với bất cứ điều gì khác. Năm lên năm tuổi, ông đã học cách chơi đàn piano. Kể từ đó, không có gì có thể ngăn cản niềm đam mê viết và chơi nhạc của ông.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi Beethoven 20 tuổi, ông bắt đầu mất đi thính giác. Ông gặp phải những cơn đau <b>cấp tính (acute)</b>, <b>tự phát (spontaneous)</b> trong tai của mình. Thính giác của ông ngày càng trở nên tồi tệ hơn theo thời gian. Việc ông <b>chắc chắn (inevitable)</b> mất đi thính giác hoàn toàn chỉ là vấn đề thời gian. Rất khó khăn để ông có thể tiếp tục sáng tác nhạc. Ông đã đánh mất đi <b>đức tính (virtue)</b> kiên nhẫn và trở nên <b>nổi tiếng xấu (notorious)</b> vì <b>sự hung hăng (aggression)</b> của mình. Tuy nhiên, ông chưa bao giờ ngừng cố gắng. Niềm đam mê âm nhạc đã <b>thôi thúc (compelled)</b> ông tiếp tục biểu diễn ngay cả khi đã bị điếc. Ông không thể nghe chính mình chơi đàn, nhưng ông biết rằng những tác phẩm của mình nghe rất <b>lộng lẫy (gorgeous)</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Buổi hòa nhạc cuối cùng của ông được tổ chức tại một bữa tiệc <b>lớn (banquet)</b>. Ông đã ra hiệu cho các nhạc công và họ bắt đầu chơi. Ông đã chỉ đạo buổi hòa nhạc bằng cả trái tim mình. Ông không thể nghe thấy tiếng nhạc, nhưng ông nói rằng mình có thể cảm nhận được nó. <b>Nhìn chung (Overall)</b>, màn trình diễn này là một trong những tiết mục xuất sắc nhất trong lịch sử. Khi buổi hòa nhạc kết thúc, ông quay về phía đám đông. Họ đã <b>vỗ tay (clapped)</b> và reo hò cuồng nhiệt. Trong khoảnh khắc tươi đẹp đó, những tràng pháo tay đã <b>khích lệ (boosted)</b> cảm xúc của ông, và ông bắt đầu khóc.</p>\n\n<p style=\"margin-bottom: 1rem;\">Năm 1827, ông bị ngộ độc chì. Ông đã không thể qua khỏi căn bệnh này, nhưng âm nhạc của ông thì còn mãi bởi vì âm nhạc vĩ đại không bao giờ trở nên <b>lỗi thời (outdated)</b>. Mặc dù Beethoven đã ra đi, nhưng <b>di sản (legacy)</b> của ông sẽ còn sống mãi mãi.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 11: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

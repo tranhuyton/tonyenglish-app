@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 27: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -420,12 +414,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The First Organ Transplant</h1>        <p style=\"margin-bottom: 1rem;\">In 1954, a man named Richard was dying of kidney disease. He wouldn't survive for long unless he got a new kidney right away. Richard's twin brother, Robert, was willing to donate one of his kidneys to his dying brother. At the time, however, no doctor had ever performed a successful <b>internal</b> organ <b>transplant</b>. The idea of taking an organ out of one person and putting it into another was just a <b>fantasy</b>. But the brothers decided to be brave and found a doctor who could make organ transplants a reality.</p>    <p style=\"margin-bottom: 1rem;\">Since Richard and Robert were twins, their <b>heredity</b> was identical. They had the exact same <b>biological</b> traits. Even their kidneys were identical on the <b>cellular</b> level. Therefore, Robert's working kidney could be <b>substituted</b> for Richard's bad one. Richard's body could <b>adapt</b> to the new organ if the operation was done correctly.</p>    <p style=\"margin-bottom: 1rem;\">The twins went to Dr. Murray, who was a <b>pioneer</b> of new surgical methods. His <b>dynamic</b> team of <b>surgeons</b> performed the transplant. Dr. Murray made sure his surgeons followed a <b>rigid</b> <b>sequence</b> of directions so that no mistakes were made. First, they made a <b>minimal</b> cut in Richard's side and removed the bad kidney. Then, they made another small cut in Robert's side, removed his kidney, and <b>transferred</b> it into Richard's body. Finally, they sewed up the <b>respective</b> cuts. The entire operation only took about one hour.</p>    <p style=\"margin-bottom: 1rem;\">After the surgery, it was clear that both brothers were going to be OK. The operation was confirmed a success. Richard's new kidney worked great! Doctors <b>prescribed</b> medicine for the pain caused by the surgery. Since Richard was still weak, he used physical <b>therapy</b> to <b>revive</b> his strength. At last, Richard's <b>transition</b> into a healthy, happy person was complete.</p>    <p style=\"margin-bottom: 1rem;\">Dr. Murray became a hero in the medical world. His success gave other doctors confidence to try organ transplants themselves. Now, doctors perform life-saving transplants and surgeries every day.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The First Organ Transplant</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In 1954, a man named Richard was dying of kidney disease. He wouldn't survive for long unless he got a new kidney right away. Richard's twin brother, Robert, was willing to donate one of his kidneys to his dying brother. At the time, however, no doctor had ever performed a successful <b>internal</b> organ <b>transplant</b>. The idea of taking an organ out of one person and putting it into another was just a <b>fantasy</b>. But the brothers decided to be brave and found a doctor who could make organ transplants a reality.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Since Richard and Robert were twins, their <b>heredity</b> was identical. They had the exact same <b>biological</b> traits. Even their kidneys were identical on the <b>cellular</b> level. Therefore, Robert's working kidney could be <b>substituted</b> for Richard's bad one. Richard's body could <b>adapt</b> to the new organ if the operation was done correctly.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The twins went to Dr. Murray, who was a <b>pioneer</b> of new surgical methods. His <b>dynamic</b> team of <b>surgeons</b> performed the transplant. Dr. Murray made sure his surgeons followed a <b>rigid</b> <b>sequence</b> of directions so that no mistakes were made. First, they made a <b>minimal</b> cut in Richard's side and removed the bad kidney. Then, they made another small cut in Robert's side, removed his kidney, and <b>transferred</b> it into Richard's body. Finally, they sewed up the <b>respective</b> cuts. The entire operation only took about one hour.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After the surgery, it was clear that both brothers were going to be OK. The operation was confirmed a success. Richard's new kidney worked great! Doctors <b>prescribed</b> medicine for the pain caused by the surgery. Since Richard was still weak, he used physical <b>therapy</b> to <b>revive</b> his strength. At last, Richard's <b>transition</b> into a healthy, happy person was complete.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Dr. Murray became a hero in the medical world. His success gave other doctors confidence to try organ transplants themselves. Now, doctors perform life-saving transplants and surgeries every day.</p></div>",
       "imageUrl": "/unit27_vol5_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -490,13 +484,13 @@
               "id": "41",
               "content": "What was substituted in the passage?",
               "options": [
-                "Robert’s working kidney was substituted for Richard’s bad one.",
                 "Richard’s bad kidney was substituted for Robert’s working one.",
                 "Dr. Murray substituted the heart of a patient.",
-                "The liver was substituted."
+                "The liver was substituted.",
+                "Robert’s working kidney was substituted for Richard’s bad one."
               ],
               "explanation": "Đoạn 2 có viết Robert's working kidney could be substituted for Richard's bad one. Quả thận đang hoạt động tốt của Robert đã được dùng để thay thế (substitute) cho quả thận bị hỏng của Richard. Chọn đáp án A nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "42",
@@ -514,42 +508,50 @@
               "id": "43",
               "content": "What did the doctors prescribe to revive Richard’s strength?",
               "options": [
-                "Doctors prescribed physical therapy to revive Richard's strength.",
                 "Doctors prescribed more medicine.",
+                "Doctors prescribed physical therapy to revive Richard's strength.",
                 "Doctors prescribed a new diet.",
                 "Doctors prescribed daily exercise."
               ],
               "explanation": "Đoạn 4 nhắc đến việc he used physical therapy to revive his strength. Anh ấy đã dùng vật lý trị liệu (physical therapy) để phục hồi lại sức khỏe của mình. Chọn đáp án A nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "44",
               "content": "Where did the surgeons make minimal cuts in the respective bodies of each twin?",
               "options": [
-                "The surgeons made minimal cuts in the twins’ sides.",
                 "The surgeons made minimal cuts in the twins’ backs.",
                 "The surgeons made minimal cuts in the twins’ chests.",
+                "The surgeons made minimal cuts in the twins’ sides.",
                 "The surgeons made minimal cuts in the twins’ legs."
               ],
               "explanation": "Ở đoạn 3, ta thấy First, they made a minimal cut in Richard's side... made another small cut in Robert's side. Bác sĩ đã tạo những vết cắt rất nhỏ (minimal cuts) ở bên hông (side) của hai anh em. Đáp án đúng là A.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "45",
               "content": "What was the result of Richard’s transition after his therapy?",
               "options": [
-                "Richard was a healthy, happy person.",
                 "Richard became a doctor.",
                 "Richard remained very weak.",
-                "Richard became a pioneer."
+                "Richard became a pioneer.",
+                "Richard was a healthy, happy person."
               ],
               "explanation": "Đoạn cuối cùng của bài mô tả At last, Richard's transition into a healthy, happy person was complete. Quá trình hồi phục (transition) đã biến Richard thành một người khỏe mạnh và hạnh phúc. Mình chọn đáp án A nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<img src=\"/unit27_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Ca Ghép Tạng Đầu Tiên</h1>\n\n<p style=\"margin-bottom: 1rem;\">Năm 1954, một người đàn ông tên Richard đang hấp hối vì bệnh thận. Anh ấy sẽ không sống sót được lâu nữa trừ khi nhận được một quả thận mới ngay lập tức. Người anh em sinh đôi của Richard, Robert, sẵn sàng hiến một trong những quả thận của mình cho người anh em đang hấp hối. Tuy nhiên, vào thời điểm đó, chưa có bác sĩ nào từng thực hiện thành công một ca <b>cấy ghép</b> <b>nội tạng</b>. Ý tưởng lấy một cơ quan ra khỏi một người và đưa nó vào một người khác chỉ là một điều <b>viển vông</b>. Nhưng hai anh em quyết định can đảm và tìm một bác sĩ có thể biến việc ghép tạng thành hiện thực.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vì Richard và Robert là anh em sinh đôi, nên tính <b>di truyền</b> của họ giống hệt nhau. Họ có những đặc điểm <b>sinh học</b> hoàn toàn giống nhau. Ngay cả thận của họ cũng giống hệt nhau ở cấp độ <b>tế bào</b>. Vì vậy, quả thận đang hoạt động của Robert có thể được <b>thay thế</b> cho quả thận bị hỏng của Richard. Cơ thể của Richard có thể <b>thích nghi</b> với cơ quan mới nếu ca phẫu thuật được thực hiện đúng cách.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cặp song sinh đến gặp Bác sĩ Murray, người là <b>người tiên phong</b> cho các phương pháp phẫu thuật mới. Đội ngũ <b>bác sĩ phẫu thuật</b> <b>năng động</b> của ông đã thực hiện ca cấy ghép. Bác sĩ Murray đảm bảo các bác sĩ phẫu thuật của mình tuân theo một <b>chuỗi</b> các chỉ dẫn <b>cứng nhắc</b> để không mắc phải sai sót nào. Đầu tiên, họ rạch một đường <b>nhỏ nhất</b> ở hông của Richard và cắt bỏ quả thận bị hỏng. Sau đó, họ thực hiện một vết cắt nhỏ khác ở hông của Robert, lấy quả thận của anh ra và <b>chuyển</b> nó vào cơ thể của Richard. Cuối cùng, họ khâu các vết cắt <b>tương ứng</b> lại. Toàn bộ ca phẫu thuật chỉ mất khoảng một giờ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau ca phẫu thuật, rõ ràng là cả hai anh em đều sẽ ổn. Ca phẫu thuật được xác nhận là đã thành công. Quả thận mới của Richard hoạt động rất tuyệt vời! Các bác sĩ <b>kê đơn</b> thuốc cho cơn đau do phẫu thuật gây ra. Vì Richard vẫn còn yếu, anh ấy đã sử dụng <b>liệu pháp</b> vật lý để <b>phục hồi</b> sức mạnh của mình. Cuối cùng, sự <b>chuyển tiếp</b> của Richard thành một người khỏe mạnh, hạnh phúc đã hoàn tất.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bác sĩ Murray đã trở thành một vị anh hùng trong thế giới y học. Sự thành công của ông đã mang lại cho các bác sĩ khác sự tự tin để tự mình thử nghiệm cấy ghép tạng. Giờ đây, các bác sĩ thực hiện các ca cấy ghép và phẫu thuật cứu người mỗi ngày.</p>\\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 27: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

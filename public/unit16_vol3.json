@@ -162,37 +162,37 @@
               "id": "12",
               "content": "It was hard for the students not to feel sadness or regret at the end of the school year.",
               "options": [
-                "sorrow",
                 "justice",
+                "sorrow",
                 "liberty",
                 "privacy"
               ],
               "explanation": "Cụm từ 'sadness or regret' (sự buồn bã hoặc hối tiếc) đồng nghĩa với 'sorrow' (sự đau buồn).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "13",
               "content": "The newspaper was known for its excellent work in writing news stories.",
               "options": [
-                "journalism",
                 "jury",
                 "pharmacy",
+                "journalism",
                 "punishment"
               ],
               "explanation": "Cụm từ 'writing news stories' (viết các bản tin) liên quan trực tiếp đến 'journalism' (nghề báo).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "14",
               "content": "The pregnant woman’s stomach started to grow larger and rounder.",
               "options": [
-                "swell",
                 "presume",
                 "hinder",
-                "compliment"
+                "compliment",
+                "swell"
               ],
               "explanation": "Cụm từ 'grow larger and rounder' (to lên và tròn hơn) đồng nghĩa với 'swell' (phình lên, sưng lên).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "15",
@@ -210,37 +210,37 @@
               "id": "16",
               "content": "Henry’s sentence for doing wrong was to spend two years in prison.",
               "options": [
-                "punishment",
                 "justice",
+                "punishment",
                 "liberty",
                 "jury"
               ],
               "explanation": "Cụm từ 'sentence for doing wrong' (bản án cho việc làm sai trái) đồng nghĩa với 'punishment' (sự trừng phạt).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "17",
               "content": "Everybody in the group received three pieces or portions of pizza each.",
               "options": [
-                "slices",
                 "straws",
                 "pills",
+                "slices",
                 "adolescents"
               ],
               "explanation": "Cụm từ 'pieces or portions' (những mảnh hoặc phần) đồng nghĩa với 'slices' (những lát cắt).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "18",
               "content": "I asked my father if we had any long tubes for drinking liquid.",
               "options": [
-                "straws",
                 "slices",
                 "pills",
-                "pharmacies"
+                "pharmacies",
+                "straws"
               ],
               "explanation": "Cụm từ 'long tubes for drinking liquid' (những ống dài dùng để uống chất lỏng) đồng nghĩa với 'straws' (ống hút).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "19",
@@ -258,13 +258,13 @@
               "id": "20",
               "content": "The doctor’s office was clean and orderly.",
               "options": [
-                "tidy",
                 "sensible",
+                "tidy",
                 "literary",
                 "miserable"
               ],
               "explanation": "Cụm từ 'clean and orderly' (sạch sẽ và có trật tự) đồng nghĩa với 'tidy' (gọn gàng, ngăn nắp).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -274,7 +274,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Matthew Learns a Lesson</h1>        <p style=\"margin-bottom: 1rem;\">Matthew was a <b>sensible</b> boy. He always kept his room <b>tidy</b> and had a natural <b>literary</b> <b>aptitude</b>. One day, he hoped to have a career in <b>journalism</b>. The <b>adolescent</b> spent much of his time reading and liked having <b>privacy</b>. But his quiet personality <b>hindered</b> his ability to make friends.</p>    <p style=\"margin-bottom: 1rem;\">One day, Matthew went to the <b>pharmacy</b> to pick up some <b>pills</b> for his grandmother. He saw some boys leaning against a pole outside. One of the boys <b>complimented</b> Matthew. \"I like your jacket.\"</p>    <p style=\"margin-bottom: 1rem;\">Another boy asked, \"Do you want to go to Nate's Restaurant?\"</p>    <p style=\"margin-bottom: 1rem;\">\"Sure!\" Matthew said.</p>    <p style=\"margin-bottom: 1rem;\">The boys walked to the restaurant. They were going to have <b>slices</b> of pizza. They ordered their food and drank soda with <b>straws</b>. They ate until their bellies <b>swelled</b> up. Matthew was having so much fun.</p>    <p style=\"margin-bottom: 1rem;\">One of the boys said, \"Let's leave without paying.\"</p>    <p style=\"margin-bottom: 1rem;\">Matthew didn't want to. But he <b>presumed</b> his new friends wouldn't like him if he didn't.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, the waiter yelled, \"Stop!\" The two other boys ran, leaving Matthew there alone.</p>    <p style=\"margin-bottom: 1rem;\">Soon, the police arrived. \"Leaving without paying for your meal is the same as stealing,\" said the police officer. \"The restaurant wants <b>justice</b>. So next week you have to go to court and let a <b>jury</b> decide your <b>punishment</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">When he went to court, the judge asked, \"Do you have anything to say, Matthew?\"</p>    <p style=\"margin-bottom: 1rem;\">He said, \"I feel <b>sorrow</b> for what I've done. Now I know that real friends won't ask you to do something illegal.\"</p>    <p style=\"margin-bottom: 1rem;\">The <b>jury</b> then let him have his <b>liberty</b>. But they made Matthew pick up trash as <b>punishment</b>. Much to Matthew's surprise, he ended up meeting some new friends.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Matthew Learns a Lesson</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Matthew was a <b>sensible</b> boy. He always kept his room <b>tidy</b> and had a natural <b>literary</b> <b>aptitude</b>. One day, he hoped to have a career in <b>journalism</b>. The <b>adolescent</b> spent much of his time reading and liked having <b>privacy</b>. But his quiet personality <b>hindered</b> his ability to make friends.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, Matthew went to the <b>pharmacy</b> to pick up some <b>pills</b> for his grandmother. He saw some boys leaning against a pole outside. One of the boys <b>complimented</b> Matthew. \"I like your jacket.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Another boy asked, \"Do you want to go to Nate's Restaurant?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Sure!\" Matthew said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The boys walked to the restaurant. They were going to have <b>slices</b> of pizza. They ordered their food and drank soda with <b>straws</b>. They ate until their bellies <b>swelled</b> up. Matthew was having so much fun.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One of the boys said, \"Let's leave without paying.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Matthew didn't want to. But he <b>presumed</b> his new friends wouldn't like him if he didn't.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Suddenly, the waiter yelled, \"Stop!\" The two other boys ran, leaving Matthew there alone.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Soon, the police arrived. \"Leaving without paying for your meal is the same as stealing,\" said the police officer. \"The restaurant wants <b>justice</b>. So next week you have to go to court and let a <b>jury</b> decide your <b>punishment</b>.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When he went to court, the judge asked, \"Do you have anything to say, Matthew?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He said, \"I feel <b>sorrow</b> for what I've done. Now I know that real friends won't ask you to do something illegal.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>jury</b> then let him have his <b>liberty</b>. But they made Matthew pick up trash as <b>punishment</b>. Much to Matthew's surprise, he ended up meeting some new friends.</p></div>",
       "imageUrl": "/unit16_v3_story.png",
       "sections": [
         {
@@ -401,7 +401,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n<img src=\"/unit16_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Matthew Học Được Một Bài Học</h1>\n\n<p style=\"margin-bottom: 1rem;\">Matthew là một cậu bé <b>biết điều</b>. Cậu luôn giữ phòng mình <b>ngăn nắp</b> và có một <b>năng khiếu</b> <b>văn học</b> bẩm sinh. Cậu hy vọng một ngày nào đó sẽ có một sự nghiệp trong ngành <b>báo chí</b>. Cậu <b>thiếu niên</b> dành nhiều thời gian để đọc sách và thích có <b>sự riêng tư</b>. Nhưng tính cách trầm lặng của cậu đã <b>cản trở</b> khả năng kết bạn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, Matthew đến <b>tiệm thuốc</b> để lấy vài <b>viên thuốc</b> cho bà mình. Cậu nhìn thấy vài cậu bé đang dựa vào một cây cột bên ngoài. Một trong những cậu bé đã <b>khen ngợi</b> Matthew. \"Tớ thích cái áo khoác của cậu.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Một cậu bé khác hỏi, \"Cậu có muốn đến Nhà hàng của Nate không?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Chắc chắn rồi!\" Matthew nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những cậu bé đi bộ đến nhà hàng. Họ định ăn những <b>lát</b> pizza. Họ gọi đồ ăn và uống nước ngọt bằng <b>ống hút</b>. Họ ăn cho đến khi bụng <b>căng tròn</b>. Matthew đang có khoảng thời gian rất vui vẻ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một trong những cậu bé nói, \"Chúng ta hãy đi mà không trả tiền thôi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Matthew không muốn. Nhưng cậu <b>cho rằng</b> những người bạn mới của cậu sẽ không thích cậu nếu cậu không làm vậy.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đột nhiên, người phục vụ hét lên, \"Dừng lại!\" Hai cậu bé kia bỏ chạy, để lại Matthew ở đó một mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Chẳng bao lâu, cảnh sát đến. \"Rời đi mà không trả tiền cho bữa ăn của cháu cũng giống như ăn cắp vậy,\" viên cảnh sát nói. \"Nhà hàng muốn <b>công lý</b>. Vì vậy, tuần tới cháu phải ra tòa và để <b>bồi thẩm đoàn</b> quyết định <b>hình phạt</b> của cháu.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi cậu ra tòa, thẩm phán hỏi, \"Cháu có điều gì muốn nói không, Matthew?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu nói, \"Cháu cảm thấy <b>hối lỗi</b> vì những gì cháu đã làm. Bây giờ cháu biết rằng những người bạn thực sự sẽ không yêu cầu cháu làm điều gì đó bất hợp pháp.\"</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Bồi thẩm đoàn</b> sau đó đã trả lại <b>sự tự do</b> cho cậu. Nhưng họ bắt Matthew nhặt rác như một <b>hình phạt</b>. Thật đáng ngạc nhiên với Matthew, cuối cùng cậu lại gặp được vài người bạn mới.</p>\n</div>\n</div>"
     }
   ],
   "basicInfo": {

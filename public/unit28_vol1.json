@@ -13,8 +13,6 @@
             {
               "id": "1",
               "content": "If you don't understand the class, you should ask your [ 1 ] for help.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "professor",
               "options": [
                 "predict",
                 "professor",
@@ -26,13 +24,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "professor"
             },
             {
               "id": "2",
               "content": "I could [ 2 ] hear his speech because of all the noise.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "barely",
               "options": [
                 "predict",
                 "professor",
@@ -44,13 +42,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "barely"
             },
             {
               "id": "3",
               "content": "I [ 3 ] that tomorrow will be a good day.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "predict",
               "options": [
                 "predict",
                 "professor",
@@ -62,13 +60,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "predict"
             },
             {
               "id": "4",
               "content": "There was a lot of [ 4 ] in his closet.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "garbage",
               "options": [
                 "predict",
                 "professor",
@@ -80,13 +78,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "garbage"
             },
             {
               "id": "5",
               "content": "I made a [ 5 ] of things I want for my birthday.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "list",
               "options": [
                 "predict",
                 "professor",
@@ -98,13 +96,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "list"
             },
             {
               "id": "6",
               "content": "I think that this TV show is [ 6 ]. Let's watch something else.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "boring",
               "options": [
                 "predict",
                 "professor",
@@ -116,13 +114,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "boring"
             },
             {
               "id": "7",
               "content": "Have you ever heard this [ 7 ]? I really like its music.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "band",
               "options": [
                 "predict",
                 "professor",
@@ -134,13 +132,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "band"
             },
             {
               "id": "8",
               "content": "Do you have time in your [ 8 ] to come over this week?",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "schedule",
               "options": [
                 "predict",
                 "professor",
@@ -152,13 +150,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "schedule"
             },
             {
               "id": "9",
               "content": "If I am not home when you call, just leave a [ 9 ].",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "message",
               "options": [
                 "predict",
                 "professor",
@@ -170,13 +168,13 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "message"
             },
             {
               "id": "10",
               "content": "If you wake up early, you don't need to [ 10 ] to get to school.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "rush",
               "options": [
                 "predict",
                 "professor",
@@ -188,7 +186,9 @@
                 "rush",
                 "barely",
                 "garbage"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "rush"
             }
           ],
           "questionType": "Kéo thả"
@@ -324,7 +324,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Party</h1>        <p style=\"margin-bottom: 1rem;\">Cody's family moved to a new house. His dad got a new job as a <b>professor</b>. Cody liked his new town, but he missed his grandparents. For his birthday, Cody wanted to have a party. His dad said, \"Yes, we could even have a <b>band</b> play!\"</p>    <p style=\"margin-bottom: 1rem;\">On the day of the party, Cody woke up and <b>rush</b>ed to get ready. He started to check his <b>list</b> of things to do. He was so excited! But then he <b>notice</b>d something terrible. There was snow on the ground and lots of it! \"Dad!\" he yelled. \"How can the <b>band</b> play their <b>instrument</b>s outside?\"</p>    <p style=\"margin-bottom: 1rem;\">Dad said, \"We'll move the <b>stage</b> inside.\" It <b>barely</b> fit <b>within</b> the garage because there were some boxes and <b>garbage</b> there. But when they finished, they got a call from the <b>band</b>. They did not want to come in the snow <b>storm</b>.</p>    <p style=\"margin-bottom: 1rem;\">Dad said, \"Let's get someone to perform <b>magic</b>.\" But no one would come because of the snow.</p>    <p style=\"margin-bottom: 1rem;\">Finally, Dad said, \"Cody, there's too much snow. We need to <b>cancel</b> the party.\"</p>    <p style=\"margin-bottom: 1rem;\">\"Yes, sir,\" Cody said sadly. \"It's going to be a <b>boring</b> birthday,\" he <b>predict</b>ed.</p>    <p style=\"margin-bottom: 1rem;\">Cody wanted to <b>share</b> his birthday with someone. He wanted to be at his old home. He wanted to see his grandparents.</p>    <p style=\"margin-bottom: 1rem;\">But then something got his attention. He <b>notice</b>d a car in the <b>driveway</b>. His grandparents <b>own</b>ed a car like that!</p>    <p style=\"margin-bottom: 1rem;\">Cody was right. His grandparents came for his birthday! \"Happy birthday, Cody! We're sorry we are late. But there was so much snow. It made us go off <b>schedule</b>. We tried to leave a <b>message</b> to tell you.\"</p>    <p style=\"margin-bottom: 1rem;\">Cody told them what happened. \"I'm sorry,\" said Grandpa.</p>    <p style=\"margin-bottom: 1rem;\">\"I was sad,\" Cody said. \"But I'm not anymore. I'm so happy to see you.\" Dad brought out Cody's birthday treat. It was his favorite type, a sundae with whipped cream on top. Then Cody told his grandparents about the new town. It was his best birthday ever.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Party</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Cody's family moved to a new house. His dad got a new job as a <b>professor</b>. Cody liked his new town, but he missed his grandparents. For his birthday, Cody wanted to have a party. His dad said, \"Yes, we could even have a <b>band</b> play!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">On the day of the party, Cody woke up and <b>rush</b>ed to get ready. He started to check his <b>list</b> of things to do. He was so excited! But then he <b>notice</b>d something terrible. There was snow on the ground and lots of it! \"Dad!\" he yelled. \"How can the <b>band</b> play their <b>instrument</b>s outside?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Dad said, \"We'll move the <b>stage</b> inside.\" It <b>barely</b> fit <b>within</b> the garage because there were some boxes and <b>garbage</b> there. But when they finished, they got a call from the <b>band</b>. They did not want to come in the snow <b>storm</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Dad said, \"Let's get someone to perform <b>magic</b>.\" But no one would come because of the snow.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Finally, Dad said, \"Cody, there's too much snow. We need to <b>cancel</b> the party.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Yes, sir,\" Cody said sadly. \"It's going to be a <b>boring</b> birthday,\" he <b>predict</b>ed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Cody wanted to <b>share</b> his birthday with someone. He wanted to be at his old home. He wanted to see his grandparents.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But then something got his attention. He <b>notice</b>d a car in the <b>driveway</b>. His grandparents <b>own</b>ed a car like that!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Cody was right. His grandparents came for his birthday! \"Happy birthday, Cody! We're sorry we are late. But there was so much snow. It made us go off <b>schedule</b>. We tried to leave a <b>message</b> to tell you.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Cody told them what happened. \"I'm sorry,\" said Grandpa.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I was sad,\" Cody said. \"But I'm not anymore. I'm so happy to see you.\" Dad brought out Cody's birthday treat. It was his favorite type, a sundae with whipped cream on top. Then Cody told his grandparents about the new town. It was his best birthday ever.</p></div>",
       "imageUrl": "/unit28_story.png",
       "sections": [
         {
@@ -395,7 +395,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit28_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bữa Tiệc</h1>\n\n<p style=\"margin-bottom: 1rem;\">Gia đình của Cody đã chuyển đến một ngôi nhà mới. Bố cậu có một công việc mới là một <b>giáo sư</b>. Cody thích thị trấn mới của mình, nhưng cậu nhớ ông bà của mình. Cho ngày sinh nhật của mình, Cody muốn tổ chức một bữa tiệc. Bố cậu nói, \"Được chứ, chúng ta thậm chí có thể nhờ một <b>ban nhạc</b> đến chơi!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào ngày của bữa tiệc, Cody thức dậy và <b>vội vã</b> chuẩn bị. Cậu bắt đầu kiểm tra <b>danh sách</b> những việc cần làm của mình. Cậu rất hào hứng! Nhưng sau đó cậu <b>chú ý</b> thấy một điều tồi tệ. Có tuyết trên mặt đất và có rất nhiều tuyết! \"Bố ơi!\" cậu hét lên. \"Làm sao <b>ban nhạc</b> có thể chơi <b>nhạc cụ</b> của họ ở bên ngoài được?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Bố nói, \"Chúng ta sẽ chuyển <b>sân khấu</b> vào trong.\" Nó <b>hầu như không</b> vừa <b>bên trong</b> nhà để xe bởi vì có vài chiếc hộp và <b>rác</b> ở đó. Nhưng khi họ làm xong, họ nhận được một cuộc gọi từ <b>ban nhạc</b>. Họ không muốn đến trong <b>cơn bão</b> tuyết.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bố nói, \"Hãy nhờ ai đó đến biểu diễn <b>ảo thuật</b>.\" Nhưng không có ai chịu đến vì tuyết.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, bố nói, \"Cody, có quá nhiều tuyết. Chúng ta cần phải <b>hủy bỏ</b> bữa tiệc.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Vâng thưa bố,\" Cody nói một cách buồn bã. \"Đây sẽ là một sinh nhật <b>nhàm chán</b>,\" cậu <b>dự đoán</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cody muốn <b>chia sẻ</b> ngày sinh nhật của mình với ai đó. Cậu muốn ở ngôi nhà cũ của mình. Cậu muốn gặp ông bà của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng sau đó có thứ gì đó đã thu hút sự chú ý của cậu. Cậu <b>chú ý</b> thấy một chiếc xe hơi trên <b>đường lái xe vào nhà</b>. Ông bà của cậu cũng <b>sở hữu</b> một chiếc xe như thế!</p>\n\n<p style=\"margin-bottom: 1rem;\">Cody đã đúng. Ông bà của cậu đã đến dự sinh nhật của cậu! \"Chúc mừng sinh nhật, Cody! Ông bà xin lỗi vì đã đến muộn. Nhưng đã có rất nhiều tuyết. Nó đã khiến ông bà đi sai <b>lịch trình</b>. Ông bà đã cố gắng để lại một <b>tin nhắn</b> để nói với cháu.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cody kể cho họ nghe chuyện gì đã xảy ra. \"Ông rất tiếc,\" ông nội nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Cháu đã buồn,\" Cody nói. \"Nhưng cháu không buồn nữa. Cháu rất vui khi gặp ông bà.\" Bố mang ra món quà sinh nhật của Cody. Đó là loại món cậu thích nhất, một ly kem sundae với kem tươi phủ bên trên. Sau đó Cody kể cho ông bà nghe về thị trấn mới. Đó là sinh nhật tuyệt vời nhất từ trước đến nay của cậu.</p>\n</div>"
     }
   ],
   "basicInfo": {

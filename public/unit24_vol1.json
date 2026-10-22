@@ -87,8 +87,9 @@
                   "explanation": "hit tương đương với strike."
                 }
               ],
-              "content": "<p class=\"mb-4\">The car will <u>hit</u> the wall if they don't slow down.<br/>st [ 6 ]</p><p class=\"mb-4\">The athletes <u>run to stay healthy</u> every morning.<br/>ex [ 7 ]</p><p class=\"mb-4\">I hope they will <u>do in public</u> a funny play.<br/>pe [ 8 ]</p><p class=\"mb-4\">Is there a <u>way to get from one place to another</u> in the city?<br/>pa [ 9 ]</p><p class=\"mb-4\">Her <u>effort to make someone do something</u> made Brad change his mind.<br/>pr [ 10 ]</p>",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "content": "<p class=\"mb-4\">The car will <u>hit</u> the wall if they don't slow down. (Hint: st...) [ 6 ]</p><p class=\"mb-4\">The athletes <u>run to stay healthy</u> every morning. (Hint: ex...) [ 7 ]</p><p class=\"mb-4\">I hope they will <u>do in public</u> a funny play. (Hint: pe...) [ 8 ]</p><p class=\"mb-4\">Is there a <u>way to get from one place to another</u> in the city? (Hint: pa...) [ 9 ]</p><p class=\"mb-4\">Her <u>effort to make someone do something</u> made Brad change his mind. (Hint: pr...) [ 10 ]</p>",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "strike"
             },
             {
               "id": "7",
@@ -100,7 +101,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "exercise"
             },
             {
               "id": "8",
@@ -112,7 +114,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "perform"
             },
             {
               "id": "9",
@@ -124,7 +127,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "passage"
             },
             {
               "id": "10",
@@ -136,7 +140,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "pressure"
             }
           ],
           "questionType": "Điền từ"
@@ -254,7 +259,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Strong Friendship</h1>        <p style=\"margin-bottom: 1rem;\">Tim was the strongest man in the town. When he played sports, he always won. He <b>performed</b> and <b>exercised</b> in the <b>public</b> park. He did this to show everyone how strong he was. Most people liked him, but one man didn't. His name was Jack.</p>    <p style=\"margin-bottom: 1rem;\">Jack hated Tim. Jack was a movie <b>critic</b> and the smartest man in town. He could solve <b>complex</b> math problems. But no one cared. Jack wanted to be famous like Tim.</p>    <p style=\"margin-bottom: 1rem;\">One day, there was an unusual <b>event</b>. A big storm came suddenly. Snow covered the town. No one could get out. They needed food. The people said, \"This is a <b>task</b> for a strong man.\" Tim was under <b>pressure</b> to save them. But Jack wanted to be the hero, so they both went. Tim said, \"You can't help because of your <b>lack</b> of strength.\"</p>    <p style=\"margin-bottom: 1rem;\">But Jack found some small <b>passages</b> under the snow. One of them led toward another town. That town had food. Because Tim was so big and strong, he almost couldn't <b>fit</b> inside. They walked until there was a <b>block</b> of ice in their way. Jack said, \"We can't get past it. But if you <b>strike</b> it, it might break.\" Tim knew that was <b>probable</b>.</p>    <p style=\"margin-bottom: 1rem;\">He broke it. When there were more ice blocks, Tim broke them. That made him tired. He couldn't walk anymore.</p>    <p style=\"margin-bottom: 1rem;\">Jack said, \"Let's <b>unite</b> and <b>support</b> each other. I'll get the food alone. You rest here.\"</p>    <p style=\"margin-bottom: 1rem;\">Jack came back with food. Tim couldn't remember which <b>passage</b> led home. He needed Jack to be his <b>guide</b>. The men became friends by working together.</p>    <p style=\"margin-bottom: 1rem;\">In town, people saw Jack with the food and <b>cheered</b>. They called Jack a hero. But Jack didn't care. He was thinking of something else. He said to Tim, \"I thought I was smart, but I learned a new <b>term</b> today: <b>friendship</b>.\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Strong Friendship</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tim was the strongest man in the town. When he played sports, he always won. He <b>performed</b> and <b>exercised</b> in the <b>public</b> park. He did this to show everyone how strong he was. Most people liked him, but one man didn't. His name was Jack.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jack hated Tim. Jack was a movie <b>critic</b> and the smartest man in town. He could solve <b>complex</b> math problems. But no one cared. Jack wanted to be famous like Tim.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, there was an unusual <b>event</b>. A big storm came suddenly. Snow covered the town. No one could get out. They needed food. The people said, \"This is a <b>task</b> for a strong man.\" Tim was under <b>pressure</b> to save them. But Jack wanted to be the hero, so they both went. Tim said, \"You can't help because of your <b>lack</b> of strength.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But Jack found some small <b>passages</b> under the snow. One of them led toward another town. That town had food. Because Tim was so big and strong, he almost couldn't <b>fit</b> inside. They walked until there was a <b>block</b> of ice in their way. Jack said, \"We can't get past it. But if you <b>strike</b> it, it might break.\" Tim knew that was <b>probable</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He broke it. When there were more ice blocks, Tim broke them. That made him tired. He couldn't walk anymore.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jack said, \"Let's <b>unite</b> and <b>support</b> each other. I'll get the food alone. You rest here.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jack came back with food. Tim couldn't remember which <b>passage</b> led home. He needed Jack to be his <b>guide</b>. The men became friends by working together.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In town, people saw Jack with the food and <b>cheered</b>. They called Jack a hero. But Jack didn't care. He was thinking of something else. He said to Tim, \"I thought I was smart, but I learned a new <b>term</b> today: <b>friendship</b>.\"</p></div>",
       "imageUrl": "/unit24_story.png",
       "sections": [
         {
@@ -325,7 +330,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit24_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Một Tình Bạn Bền Chặt</h1>\n\n<p style=\"margin-bottom: 1rem;\">Tim là người đàn ông khỏe nhất thị trấn. Khi chơi thể thao, anh ấy luôn giành chiến thắng. Anh ấy <b>biểu diễn</b> và <b>tập thể dục</b> trong công viên <b>công cộng</b>. Anh làm vậy để cho mọi người thấy anh ấy khỏe như thế nào. Hầu hết mọi người đều thích anh ấy, nhưng có một người thì không. Tên anh ta là Jack.</p>\n\n<p style=\"margin-bottom: 1rem;\">Jack ghét Tim. Jack là một nhà <b>phê bình</b> phim và là người thông minh nhất thị trấn. Anh ta có thể giải quyết những bài toán <b>phức tạp</b>. Nhưng không ai quan tâm. Jack muốn được nổi tiếng giống như Tim.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, có một <b>sự kiện</b> bất thường. Một cơn bão lớn bất ngờ ập đến. Tuyết bao phủ thị trấn. Không ai có thể ra ngoài. Họ cần thức ăn. Người dân nói, \"Đây là một <b>nhiệm vụ</b> dành cho một người đàn ông khỏe mạnh.\" Tim chịu <b>áp lực</b> phải cứu họ. Nhưng Jack muốn trở thành anh hùng, vì vậy cả hai người cùng đi. Tim nói, \"Anh không thể giúp được vì sự <b>thiếu hụt</b> sức mạnh của anh đâu.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng Jack đã tìm thấy một vài <b>lối đi</b> nhỏ dưới tuyết. Một trong số đó dẫn về phía một thị trấn khác. Thị trấn đó có thức ăn. Bởi vì Tim quá to lớn và khỏe mạnh, anh ấy gần như không thể <b>vừa</b> vào bên trong. Họ đi bộ cho đến khi có một <b>khối</b> băng cản đường họ. Jack nói, \"Chúng ta không thể vượt qua nó. Nhưng nếu anh <b>đánh</b> nó, nó có thể vỡ.\" Tim biết điều đó là <b>có thể xảy ra</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh ấy đã phá vỡ nó. Khi có nhiều khối băng hơn, Tim đã đập vỡ chúng. Việc đó khiến anh ấy mệt mỏi. Anh ấy không thể đi bộ được nữa.</p>\n\n<p style=\"margin-bottom: 1rem;\">Jack nói, \"Hãy <b>đoàn kết</b> và <b>hỗ trợ</b> lẫn nhau. Tôi sẽ đi lấy thức ăn một mình. Anh nghỉ ngơi ở đây đi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Jack quay lại với thức ăn. Tim không thể nhớ <b>lối đi</b> nào dẫn về nhà. Anh cần Jack làm người <b>hướng dẫn</b> cho mình. Hai người đàn ông trở thành bạn bè nhờ làm việc cùng nhau.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong thị trấn, mọi người nhìn thấy Jack với thức ăn và đã <b>reo hò</b>. Họ gọi Jack là một anh hùng. Nhưng Jack không quan tâm. Anh ấy đang nghĩ về một điều gì đó khác. Anh ấy nói với Tim, \"Tôi cứ nghĩ mình thông minh, nhưng hôm nay tôi đã học được một <b>thuật ngữ</b> mới: <b>tình bạn</b>.\"</p></div>\n</div>"
     }
   ],
   "basicInfo": {

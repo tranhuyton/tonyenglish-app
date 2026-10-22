@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">Sarah <u>let</u> Tim go to the game.<br/>al [ 6 ]</p><p class=\"mb-4\">The child promised not to <u>hurt</u> our cat.<br/>ha [ 7 ]</p><p class=\"mb-4\">She was a <u>well-known</u> writer in our town.<br/>fa [ 8 ]</p><p class=\"mb-4\">You should <u>say it's true</u> that you never lie.<br/>cl [ 9 ]</p><p class=\"mb-4\">The food was <u>cut into smaller parts</u> so we could all eat.<br/>di [ 10 ]</p>",
+              "content": "<p class=\"mb-4\">Sarah <u>let</u> Tim go to the game. (Hint: al...) [ 6 ]</p><p class=\"mb-4\">The child promised not to <u>hurt</u> our cat. (Hint: ha...) [ 7 ]</p><p class=\"mb-4\">She was a <u>well-known</u> writer in our town. (Hint: fa...) [ 8 ]</p><p class=\"mb-4\">You should <u>say it's true</u> that you never lie. (Hint: cl...) [ 9 ]</p><p class=\"mb-4\">The food was <u>cut into smaller parts</u> so we could all eat. (Hint: di...) [ 10 ]</p>",
               "explanation": "let go -> allowed (từ cho trước là allow)",
               "correctAnswer": "allowed"
             },
@@ -224,7 +224,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Best Prince</h1>        <p style=\"margin-bottom: 1rem;\">King Minos was very sick. His <b>condition</b> was getting worse. He had three sons. He loved them all. He had to <b>announce</b> who would become king.</p>    <p style=\"margin-bottom: 1rem;\">Two of the princes stood waiting outside the king's room. Theseus was the oldest and strongest. He thought his father would make him king. Pelias, the second son, thought differently. He was an <b>expert</b> with weapons. He thought the king would choose him.</p>    <p style=\"margin-bottom: 1rem;\">\"When I'm king,\" Theseus told Pelias, \"I'll let you <b>contribute</b> to the defense of our country. You can lead the army.\"</p>    <p style=\"margin-bottom: 1rem;\">Pelias became angry. \"Father knows I'm <b>famous</b> for my sword skills. He'll make me king.\"</p>    <p style=\"margin-bottom: 1rem;\">\"You?\" Theseus yelled. \"He won't choose you!\"</p>    <p style=\"margin-bottom: 1rem;\">\"The kingdom is mine!\" Pelias <b>claimed</b>. \"Father will give it to me—or I'll use <b>force</b> to take it!\"</p>    <p style=\"margin-bottom: 1rem;\">Theseus made a <b>sudden</b> move to take out his sword. Then Pelias did the same.</p>    <p style=\"margin-bottom: 1rem;\">\"Beating me will be a <b>challenge</b>,\" Theseus said. \"Fight me now. The winner gets the kingdom!\"</p>    <p style=\"margin-bottom: 1rem;\">Pelias agreed.</p>    <p style=\"margin-bottom: 1rem;\">King Minos could hear his sons fighting. The youngest son, Jason, stood <b>beside</b> him. He <b>sensed</b> his father's sadness. The king <b>laid</b> his hand flat on Jason's arm.</p>    <p style=\"margin-bottom: 1rem;\">\"Your brothers fight too much,\" the king told him. \"I must <b>protect</b> my kingdom from all <b>harm</b>. They'll <b>divide</b> it between them. The people won't know what to do. There'll be war. I can't <b>allow</b> either of them to be king. <b>Therefore</b>, I'm making you king. Your kindness has always made you special. It's the <b>difference</b> between you and your brothers. You can bring <b>peace</b>. They can't.\"</p>    <p style=\"margin-bottom: 1rem;\">Then the king died. Theseus and Pelias heard that their youngest brother was king. They were surprised.</p>    <p style=\"margin-bottom: 1rem;\">They realized that their fighting was wrong. It had kept them from saying goodbye to their father. They agreed to have Jason as their king. He was the best choice.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Best Prince</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">King Minos was very sick. His <b>condition</b> was getting worse. He had three sons. He loved them all. He had to <b>announce</b> who would become king.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Two of the princes stood waiting outside the king's room. Theseus was the oldest and strongest. He thought his father would make him king. Pelias, the second son, thought differently. He was an <b>expert</b> with weapons. He thought the king would choose him.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"When I'm king,\" Theseus told Pelias, \"I'll let you <b>contribute</b> to the defense of our country. You can lead the army.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Pelias became angry. \"Father knows I'm <b>famous</b> for my sword skills. He'll make me king.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"You?\" Theseus yelled. \"He won't choose you!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"The kingdom is mine!\" Pelias <b>claimed</b>. \"Father will give it to me—or I'll use <b>force</b> to take it!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Theseus made a <b>sudden</b> move to take out his sword. Then Pelias did the same.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Beating me will be a <b>challenge</b>,\" Theseus said. \"Fight me now. The winner gets the kingdom!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Pelias agreed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">King Minos could hear his sons fighting. The youngest son, Jason, stood <b>beside</b> him. He <b>sensed</b> his father's sadness. The king <b>laid</b> his hand flat on Jason's arm.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Your brothers fight too much,\" the king told him. \"I must <b>protect</b> my kingdom from all <b>harm</b>. They'll <b>divide</b> it between them. The people won't know what to do. There'll be war. I can't <b>allow</b> either of them to be king. <b>Therefore</b>, I'm making you king. Your kindness has always made you special. It's the <b>difference</b> between you and your brothers. You can bring <b>peace</b>. They can't.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Then the king died. Theseus and Pelias heard that their youngest brother was king. They were surprised.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They realized that their fighting was wrong. It had kept them from saying goodbye to their father. They agreed to have Jason as their king. He was the best choice.</p></div>",
       "imageUrl": "/unit7_story.png",
       "sections": [
         {
@@ -279,25 +279,24 @@
               ],
               "explanation": "Sự khác biệt là sự nhân hậu của Jason ('Your kindness has always made you special. It\\'s the difference...').",
               "correctAnswer": "D"
+            },
+            {
+              "id": "25",
+              "content": "<p class=\"mb-4\">What did the king have to announce?</p>",
+              "options": [
+                "Who would become the next king",
+                "How to divide the kingdom into two parts",
+                "When the princes would leave the castle",
+                "Why the guard stood beside the door"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trong bài đọc có câu: 'He would have to announce who would become king.' (Nhà vua phải công bố ai sẽ trở thành vị vua tiếp theo)."
             }
           ],
           "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec3_sa",
-          "title": "Short Answer",
-          "content": "",
-          "questions": [
-            {
-              "id": "25",
-              "content": "What did the king have to announce?",
-              "explanation": "The story states that the king had to announce who would become king.",
-              "correctAnswer": "He would have to announce who would become king."
-            }
-          ],
-          "questionType": "Đoạn văn"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit7_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Vị Hoàng Tử Xuất Sắc Nhất</h1>\n\n<p style=\"margin-bottom: 1rem;\">Vua Minos bị ốm rất nặng. <b>Tình trạng</b> của ông đang trở nên tồi tệ hơn. Ông có ba người con trai. Ông yêu tất cả họ. Ông phải <b>thông báo</b> ai sẽ trở thành vua.</p>\n\n<p style=\"margin-bottom: 1rem;\">Hai vị hoàng tử đứng đợi bên ngoài phòng của nhà vua. Theseus là người lớn tuổi nhất và mạnh mẽ nhất. Chàng nghĩ cha mình sẽ phong chàng làm vua. Pelias, người con trai thứ hai, lại nghĩ khác. Chàng là một <b>chuyên gia</b> về vũ khí. Chàng nghĩ nhà vua sẽ chọn chàng.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Khi ta làm vua,\" Theseus nói với Pelias, \"ta sẽ để em <b>đóng góp</b> vào việc phòng thủ đất nước của chúng ta. Em có thể lãnh đạo quân đội.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Pelias trở nên tức giận. \"Cha biết em <b>nổi tiếng</b> với kỹ năng dùng kiếm. Cha sẽ phong em làm vua.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Em ư?\" Theseus hét lên. \"Cha sẽ không chọn em đâu!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Vương quốc là của em!\" Pelias <b>tuyên bố</b>. \"Cha sẽ trao nó cho em—hoặc em sẽ dùng <b>vũ lực</b> để chiếm lấy nó!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Theseus có một hành động <b>bất ngờ</b> rút kiếm ra. Sau đó Pelias cũng làm như vậy.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đánh bại ta sẽ là một <b>thách thức</b>,\" Theseus nói. \"Đấu với ta ngay bây giờ. Người chiến thắng sẽ có được vương quốc!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Pelias đồng ý.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vua Minos có thể nghe thấy các con trai mình đang đánh nhau. Người con trai út, Jason, đứng <b>bên cạnh</b> ông. Chàng <b>cảm nhận</b> được nỗi buồn của cha mình. Nhà vua <b>đặt</b> bàn tay phẳng của ông lên cánh tay của Jason.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Các anh của con đánh nhau quá nhiều,\" nhà vua nói với chàng. \"Ta phải <b>bảo vệ</b> vương quốc của mình khỏi mọi <b>tổn hại</b>. Bọn họ sẽ <b>chia cắt</b> nó ra làm đôi. Dân chúng sẽ không biết phải làm gì. Sẽ có chiến tranh. Ta không thể <b>cho phép</b> một trong hai người họ làm vua. <b>Vì vậy</b>, ta sẽ phong con làm vua. Sự tốt bụng của con luôn làm con trở nên đặc biệt. Đó là <b>sự khác biệt</b> giữa con và các anh của mình. Con có thể mang lại <b>hòa bình</b>. Bọn họ thì không thể.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó nhà vua băng hà. Theseus và Pelias nghe tin người em út của họ làm vua. Họ rất ngạc nhiên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ nhận ra rằng việc họ đánh nhau là sai trái. Nó đã ngăn cản họ nói lời tạm biệt với cha mình. Họ đồng ý để Jason làm vua của họ. Chàng là sự lựa chọn tuyệt vời nhất.</p>\n</div>"
     }
   ],
   "basicInfo": {

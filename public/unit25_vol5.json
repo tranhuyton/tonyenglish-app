@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 25: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -122,7 +116,7 @@
             },
             {
               "id": "8",
-              "content": "He had a(n) [ 102 ] about ancient cultures. He thought that all their customs and ideas were [ 103 ].",
+              "content": "He had a(n) [ 8 ] about ancient cultures. He thought that all their customs and ideas were [ 9 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -158,7 +152,7 @@
             },
             {
               "id": "10",
-              "content": "The [ 104 ] led travelers to the top of the mountain. I was astonished by the [ 105 ] view.",
+              "content": "The [ 10 ] led travelers to the top of the mountain. I was astonished by the [ 11 ] view.",
               "options": [
                 "welfare",
                 "trail",
@@ -194,7 +188,7 @@
             },
             {
               "id": "12",
-              "content": "A line of [ 106 ] stretched from the mound across the forest floor. They were all going to eat a [ 107 ] that had fallen off a tree.",
+              "content": "A line of [ 12 ] stretched from the mound across the forest floor. They were all going to eat a [ 13 ] that had fallen off a tree.",
               "options": [
                 "welfare",
                 "trail",
@@ -230,7 +224,7 @@
             },
             {
               "id": "14",
-              "content": "People thought that the water from the [ 108 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 109 ].",
+              "content": "People thought that the water from the [ 14 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 15 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -408,7 +402,9 @@
                   "answer": "twigs"
                 }
               ],
-              "content": "<p class=\"mb-4\">The kids gathered <u>short, thing branches</u> for their school art project.<br/>tw [ 26 ]</p><p class=\"mb-4\">The glue was <u>covered with a substance that made things stick to it</u>.<br/>st [ 27 ]</p><p class=\"mb-4\">Early rocket development was <u>simple and basic</u> compared to what we have in the 21st century.<br/>pr [ 28 ]</p><p class=\"mb-4\"><u>Monkeys, apes, and humans</u> are some of the few animals with opposable thumbs.<br/>pr [ 29 ]</p><p class=\"mb-4\">After walking 12 kilometers, I was filled with a sense of <u>extreme tiredness</u>.<br/>fa [ 30 ]</p>"
+              "content": "<p class=\"mb-4\">The kids gathered <u>short, thing branches</u> for their school art project. (Hint: tw...) [ 26 ]</p><p class=\"mb-4\">The glue was <u>covered with a substance that made things stick to it</u>. (Hint: st...) [ 27 ]</p><p class=\"mb-4\">Early rocket development was <u>simple and basic</u> compared to what we have in the 21st century. (Hint: pr...) [ 28 ]</p><p class=\"mb-4\"><u>Monkeys, apes, and humans</u> are some of the few animals with opposable thumbs. (Hint: pr...) [ 29 ]</p><p class=\"mb-4\">After walking 12 kilometers, I was filled with a sense of <u>extreme tiredness</u>. (Hint: fa...) [ 30 ]</p>",
+              "correctAnswer": "twigs",
+              "explanation": "Đáp án đúng là 'twigs'."
             },
             {
               "id": "27",
@@ -418,7 +414,9 @@
                   "answer": "sticky"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "sticky",
+              "explanation": "Đáp án đúng là 'sticky'."
             },
             {
               "id": "28",
@@ -428,7 +426,9 @@
                   "answer": "primitive"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "primitive",
+              "explanation": "Đáp án đúng là 'primitive'."
             },
             {
               "id": "29",
@@ -438,7 +438,9 @@
                   "answer": "primates"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "primates",
+              "explanation": "Đáp án đúng là 'primates'."
             },
             {
               "id": "30",
@@ -448,7 +450,9 @@
                   "answer": "fatigue"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "fatigue",
+              "explanation": "Đáp án đúng là 'fatigue'."
             }
           ],
           "questionType": "Điền từ"
@@ -458,12 +462,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Man and the Monkey</h1>        <p style=\"margin-bottom: 1rem;\">While flying over a jungle, a wealthy <b>executive’s</b> private plane crashed. Some of the crew were hurt, so the pilot decided to stay with them and wait for help. The <b>arrogant</b> executive, though, didn’t care about the <b>welfare</b> of the pilot and crew. Rather, he thought he could walk out of the jungle and find a town to stay in.</p>    <p style=\"margin-bottom: 1rem;\">He followed a <b>trail</b> through a <b>canyon</b> and along a <b>creek</b>. The jungle was actually very stunning. If the arrogant executive had stopped to look around, he might have <b>perceived</b> the jungle’s beauty. But he was in a <b>nasty</b> mood and had no care for the <b>aesthetic</b> value of the jungle. He continued to walk up the steep <b>incline</b> of the jungle’s hills.</p>    <p style=\"margin-bottom: 1rem;\">Soon, he was lost. Several days passed, and <b>fatigue</b> and hunger weakened him. He was very tired and afraid.</p>    <p style=\"margin-bottom: 1rem;\">Just then, a monkey came out of the trees. It was carrying a <b>twig</b> covered in honey. It walked up to a mound where <b>termites</b> lived. He then used the twig like a <b>drill</b> to make a hole in the mound. Then very carefully, it removed the twig from the hole. The <b>sticky</b> twig was covered with termites.</p>    <p style=\"margin-bottom: 1rem;\">Instead of eating the bugs, the monkey offered them to the executive, but he didn’t want what the monkey offered. He shouted at the monkey, “Get away from me, you stupid <b>primate</b>!”</p>    <p style=\"margin-bottom: 1rem;\">The executive’s <b>stereotype</b> of the monkey was wrong. The monkey was not stupid. It knew how to find food, whereas the executive did not. He refused the help of the monkey, <b>thereby</b> leaving himself to starve.</p>    <p style=\"margin-bottom: 1rem;\">When the executive was finally found, he was very skinny and sick. He had not eaten for a very long time. Because he held a <b>bias</b> against the <b>primitive</b> ways of the monkey, he had gone hungry and almost died. The executive didn’t understand that it was his arrogant attitude that had caused all of his problems.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Man and the Monkey</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">While flying over a jungle, a wealthy <b>executive’s</b> private plane crashed. Some of the crew were hurt, so the pilot decided to stay with them and wait for help. The <b>arrogant</b> executive, though, didn’t care about the <b>welfare</b> of the pilot and crew. Rather, he thought he could walk out of the jungle and find a town to stay in.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He followed a <b>trail</b> through a <b>canyon</b> and along a <b>creek</b>. The jungle was actually very stunning. If the arrogant executive had stopped to look around, he might have <b>perceived</b> the jungle’s beauty. But he was in a <b>nasty</b> mood and had no care for the <b>aesthetic</b> value of the jungle. He continued to walk up the steep <b>incline</b> of the jungle’s hills.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Soon, he was lost. Several days passed, and <b>fatigue</b> and hunger weakened him. He was very tired and afraid.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Just then, a monkey came out of the trees. It was carrying a <b>twig</b> covered in honey. It walked up to a mound where <b>termites</b> lived. He then used the twig like a <b>drill</b> to make a hole in the mound. Then very carefully, it removed the twig from the hole. The <b>sticky</b> twig was covered with termites.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Instead of eating the bugs, the monkey offered them to the executive, but he didn’t want what the monkey offered. He shouted at the monkey, “Get away from me, you stupid <b>primate</b>!”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The executive’s <b>stereotype</b> of the monkey was wrong. The monkey was not stupid. It knew how to find food, whereas the executive did not. He refused the help of the monkey, <b>thereby</b> leaving himself to starve.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When the executive was finally found, he was very skinny and sick. He had not eaten for a very long time. Because he held a <b>bias</b> against the <b>primitive</b> ways of the monkey, he had gone hungry and almost died. The executive didn’t understand that it was his arrogant attitude that had caused all of his problems.</p></div>",
       "imageUrl": "/unit25_vol5_story.png",
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -587,7 +591,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit25_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Man and the Monkey</h1>\n\n<p style=\"margin-bottom: 1rem;\">Trong khi đang bay trên một khu rừng nhiệt đới, máy bay tư nhân của một <b>giám đốc điều hành</b> giàu có đã bị rơi. Một số thành viên phi hành đoàn bị thương, vì vậy phi công quyết định ở lại với họ và chờ người tới giúp. Mặc dù vậy, vị giám đốc <b>kiêu ngạo</b> không quan tâm đến <b>sự an nguy</b> của phi công và phi hành đoàn. Thay vào đó, ông ta nghĩ rằng mình có thể đi bộ ra khỏi khu rừng và tìm một thị trấn để nghỉ lại.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông ta đi theo một <b>con đường mòn</b> qua một <b>hẻm núi</b> và dọc theo một <b>con suối</b>. Khu rừng thực sự rất đẹp. Nếu vị giám đốc kiêu ngạo dừng lại để nhìn xung quanh, ông ta có thể đã <b>nhận thức</b> được vẻ đẹp của khu rừng. Nhưng ông ta đang trong một tâm trạng <b>xấu xa</b> (cáu kỉnh) và không quan tâm gì đến giá trị <b>thẩm mỹ</b> của khu rừng. Ông ta tiếp tục đi lên độ <b>dốc</b> cheo leo của những ngọn đồi trong rừng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Chẳng bao lâu, ông ta bị lạc. Vài ngày trôi qua, sự <b>mệt mỏi</b> và cơn đói đã làm ông ta yếu đi. Ông ta rất mệt và sợ hãi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đúng lúc đó, một con khỉ từ trong các lùm cây đi ra. Nó đang mang một <b>cành cây non</b> được phủ đầy mật ong. Nó tiến đến một cái gò nơi những con <b>mối</b> sinh sống. Sau đó, nó dùng cành cây như một cái <b>khoan</b> để tạo ra một cái lỗ trên gò. Rồi một cách rất cẩn thận, nó rút cành cây ra khỏi lỗ. Cành cây <b>dính dấp</b> đã bị bao phủ bởi đầy những con mối.</p>\n\n<p style=\"margin-bottom: 1rem;\">Thay vì ăn những con bọ, con khỉ đã đưa chúng cho vị giám đốc, nhưng ông ta không muốn những gì con khỉ đưa. Ông ta hét vào mặt con khỉ: “Tránh xa ta ra, đồ <b>động vật linh trưởng</b> ngu ngốc!”</p>\n\n<p style=\"margin-bottom: 1rem;\">Khuôn mẫu <b>định kiến</b> của vị giám đốc về con khỉ đã sai. Con khỉ không hề ngu ngốc. Nó biết cách tìm thức ăn, trong khi vị giám đốc thì không. Ông ta đã từ chối sự giúp đỡ của con khỉ, <b>bằng cách đó</b> tự để cho mình chết đói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi người ta cuối cùng cũng tìm thấy vị giám đốc, ông ta đã rất gầy và ốm yếu. Ông ta đã không ăn gì trong một thời gian rất dài. Bởi vì ông ta giữ một <b>thành kiến</b> đối với những cách thức <b>nguyên thủy</b> của con khỉ, ông ta đã bị đói và suýt chết. Vị giám đốc đã không hiểu rằng chính thái độ kiêu ngạo của ông ta đã gây ra tất cả những vấn đề của mình.</p>\n</div>"
     }
   ]
 }

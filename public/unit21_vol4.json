@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 21: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part_wordlist",
@@ -539,12 +532,13 @@
     {
       "id": "part_reading",
       "title": "Comprehensive Reading",
-      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Teller and the Thieves</h1><div style=\"display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px;\"><div style=\"display: flex; flex-direction: column; gap: 16px; color: #334155; font-size: 1.05rem; line-height: 1.7;\"><p style=\"margin: 0;\">A <b>teller</b> at a bank suspected some of her fellow employees of not being very <b>trustworthy</b>. She thought they were stealing. In order to catch them, though, she needed some way to link them to the crime.</p>    <p style=\"margin: 0;\">She had a <b>background</b> in <b>religion</b> and <b>folklore</b>. She remembered that one <b>religion</b>'s <b>literature</b> had a <b>myth</b> that chronicled how a group of thieves was captured.</p>    <p style=\"margin: 0;\">In the <b>millennium</b>-old story, coins of <b>copper</b> were covered with <b>venom</b> taken from a poisonous snake. The coins were left as <b>bait</b> for the robbers. When they touched the coins, the <b>venom</b> infected their bodies through their skin. The <b>venom</b> ran through their veins, and they all became very sick as if they had a <b>disease</b>. It made their skin purple. The police arrested whoever had purple skin.</p>    <p style=\"margin: 0;\">She knew she couldn't use <b>venom</b> because it might hurt someone. However, she thought of a way to <b>update</b> the old story. She decided to cover a <b>sum</b> of money with a special powder. If people touched the money, the powder would cause their skin to <b>itch</b>. She placed the stack of money in the bank's safe. No one was supposed to take money from the safe. If somebody did, then they had to be stealing.</p>    <p style=\"margin: 0;\">Within a few hours, three of her coworkers were scratching their hands and arms. They itched so badly that they couldn't even work. She checked the money, and it was gone. She told her boss what she had done, and he had the thieves arrested. He thanked her and promoted her.</p>    <p style=\"margin: 0;\">Because events from history often repeat, ancient <b>literature</b> had helped the <b>teller</b> solve a crime. She proved that stories from the past still <b>relate</b> with the problems of today, and they can be helpful in solving problems.</p></div></div>",
+      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Teller and the Thieves</h1><div style=\"display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px;\"><div style=\"display: flex; flex-direction: column; gap: 16px; color: #334155; font-size: 1.05rem; line-height: 1.7;\"><p class=\"mb-4\" style=\"margin: 0;\">A <b>teller</b> at a bank suspected some of her fellow employees of not being very <b>trustworthy</b>. She thought they were stealing. In order to catch them, though, she needed some way to link them to the crime.</p>    <p class=\"mb-4\" style=\"margin: 0;\">She had a <b>background</b> in <b>religion</b> and <b>folklore</b>. She remembered that one <b>religion</b>'s <b>literature</b> had a <b>myth</b> that chronicled how a group of thieves was captured.</p>    <p class=\"mb-4\" style=\"margin: 0;\">In the <b>millennium</b>-old story, coins of <b>copper</b> were covered with <b>venom</b> taken from a poisonous snake. The coins were left as <b>bait</b> for the robbers. When they touched the coins, the <b>venom</b> infected their bodies through their skin. The <b>venom</b> ran through their veins, and they all became very sick as if they had a <b>disease</b>. It made their skin purple. The police arrested whoever had purple skin.</p>    <p class=\"mb-4\" style=\"margin: 0;\">She knew she couldn't use <b>venom</b> because it might hurt someone. However, she thought of a way to <b>update</b> the old story. She decided to cover a <b>sum</b> of money with a special powder. If people touched the money, the powder would cause their skin to <b>itch</b>. She placed the stack of money in the bank's safe. No one was supposed to take money from the safe. If somebody did, then they had to be stealing.</p>    <p class=\"mb-4\" style=\"margin: 0;\">Within a few hours, three of her coworkers were scratching their hands and arms. They itched so badly that they couldn't even work. She checked the money, and it was gone. She told her boss what she had done, and he had the thieves arrested. He thanked her and promoted her.</p>    <p class=\"mb-4\" style=\"margin: 0;\">Because events from history often repeat, ancient <b>literature</b> had helped the <b>teller</b> solve a crime. She proved that stories from the past still <b>relate</b> with the problems of today, and they can be helpful in solving problems.</p></div></div>",
+      "imageUrl": "/unit21_vol4_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Reading Comprehension Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "36",
@@ -666,7 +660,14 @@
           "questionType": "Trắc nghiệm"
         }
       ],
-      "imageUrl": "/unit21_vol4_story.png"
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit21_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">Giao Dịch Viên và Những Tên Trộm</h1><div style=\"display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px;\"><div style=\"display: flex; flex-direction: column; gap: 16px; color: #334155; font-size: 1.05rem; line-height: 1.7;\"><p style=\"margin: 0;\">Một <b>giao dịch viên</b> tại một ngân hàng nghi ngờ một số đồng nghiệp của mình không <b>đáng tin cậy</b> lắm. Cô ấy nghĩ rằng họ đang ăn cắp. Tuy nhiên, để bắt được họ, cô ấy cần một cách nào đó để liên kết họ với tội ác.</p>\n\n<p style=\"margin: 0;\">Cô ấy có một <b>nền tảng</b> về <b>tôn giáo</b> và <b>văn hóa dân gian</b>. Cô nhớ rằng <b>văn học</b> của một <b>tôn giáo</b> có một <b>thần thoại</b> ghi lại cách một nhóm trộm bị bắt.</p>\n\n<p style=\"margin: 0;\">Trong câu chuyện từ một <b>thiên niên kỷ</b> trước, những đồng tiền bằng <b>đồng</b> được phủ <b>nọc độc</b> lấy từ một con rắn độc. Những đồng tiền được để lại làm <b>mồi nhử</b> cho bọn cướp. Khi chúng chạm vào những đồng tiền, <b>nọc độc</b> đã lây nhiễm vào cơ thể chúng qua da. <b>Nọc độc</b> chạy qua các tĩnh mạch của chúng, và tất cả chúng trở nên ốm yếu nghiêm trọng như thể chúng mắc một căn <b>bệnh</b>. Nó làm cho da chúng chuyển sang màu tím. Cảnh sát đã bắt giữ bất cứ ai có làn da màu tím.</p>\n\n<p style=\"margin: 0;\">Cô ấy biết mình không thể sử dụng <b>nọc độc</b> vì nó có thể làm tổn thương ai đó. Tuy nhiên, cô ấy đã nghĩ ra một cách để <b>cập nhật</b> câu chuyện cũ. Cô ấy quyết định phủ một <b>khoản tiền</b> bằng một loại bột đặc biệt. Nếu có người chạm vào tiền, loại bột đó sẽ khiến da họ bị <b>ngứa</b>. Cô đặt cọc tiền trong két sắt của ngân hàng. Đáng lẽ không ai được lấy tiền từ két sắt. Nếu có người làm vậy, thì chắc chắn họ đang ăn cắp.</p>\n\n<p style=\"margin: 0;\">Trong vòng vài giờ, ba người đồng nghiệp của cô ấy đã gãi tay và cánh tay của họ. Họ ngứa ngáy đến mức thậm chí không thể làm việc. Cô ấy kiểm tra tiền và nó đã biến mất. Cô kể lại cho sếp nghe những gì mình đã làm, và ông ấy đã cho bắt những tên trộm. Ông ấy đã cảm ơn cô và thăng chức cho cô.</p>\n\n<p style=\"margin: 0;\">Vì những sự kiện lịch sử thường lặp lại, <b>văn học</b> cổ đại đã giúp <b>giao dịch viên</b> giải quyết một vụ án. Cô ấy đã chứng minh rằng những câu chuyện từ quá khứ vẫn <b>liên hệ</b> với những vấn đề của ngày nay, và chúng có thể hữu ích trong việc giải quyết vấn đề.</p></div></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 21: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

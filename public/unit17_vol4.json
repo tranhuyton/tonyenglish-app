@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 17: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -85,13 +78,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Kara Goes Camping</h1>        <p style=\"margin-bottom: 1rem;\">\"Kara, would you like to go camping with my family?\" asked Tracy. Kara had never been camping before, but she decided to go anyway. That weekend, they drove to Estes Park. When they arrived, Kara looked around. She felt so far from <b>civilization</b>.</p>    <p style=\"margin-bottom: 1rem;\">After they set up the camp, they went for a walk. Tracy's father, Mr. Grieves, showed them the <b>native</b> plants and animals. \"Look,\" he said, \"that's a fox's <b>den</b>. Do you see that bunch of <b>mushrooms</b> next to it. Don't touch them. They contain <b>poison</b>.\" Kara was bored. She didn't care about nature.</p>    <p style=\"margin-bottom: 1rem;\">As the day went on, <b>mighty</b> clouds soon <b>loomed</b> in the distance. \"It looks like <b>stormy</b> weather,\" said Tracy. \"We should go back.\" It suddenly began to rain. They used an umbrella to <b>shield</b> them from the rain. Back at the camp, they ate cold sandwiches for dinner and went to sleep.</p>    <p style=\"margin-bottom: 1rem;\">By morning, the rain had stopped. It was a <b>drastic</b> change from the previous day's weather. They <b>folded</b> their sleeping bags and put them in a box. Tracy closed the <b>lid</b> and told Kara, \"Today will be fun, I promise!\" Kara didn't believe her. She missed her <b>convenient</b> life in the city. She was used to an <b>urban</b> lifestyle.</p>    <p style=\"margin-bottom: 1rem;\">After breakfast, they went for a walk. The grass was covered with <b>dew</b>, and it gleamed in the sunlight. Finally, they reached a lake. Kara and Tracy <b>waded</b> into the water. The <b>reeds</b> <b>swayed</b> in the wind, and a <b>flock</b> of birds flew above. Kara felt very peaceful.</p>    <p style=\"margin-bottom: 1rem;\">That night, they made a fire. They sat around it while Mr. Grieves told scary stories. Kara had a lot of fun. Camping was a good way for friends to spend time together, she realized.</p>    <p style=\"margin-bottom: 1rem;\">The next day, it was time for them to leave. She felt sad while they <b>exited</b> the park. She didn't like camping at first, but she learned how fun it could be over the weekend.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Kara Goes Camping</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Kara, would you like to go camping with my family?\" asked Tracy. Kara had never been camping before, but she decided to go anyway. That weekend, they drove to Estes Park. When they arrived, Kara looked around. She felt so far from <b>civilization</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After they set up the camp, they went for a walk. Tracy's father, Mr. Grieves, showed them the <b>native</b> plants and animals. \"Look,\" he said, \"that's a fox's <b>den</b>. Do you see that bunch of <b>mushrooms</b> next to it. Don't touch them. They contain <b>poison</b>.\" Kara was bored. She didn't care about nature.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">As the day went on, <b>mighty</b> clouds soon <b>loomed</b> in the distance. \"It looks like <b>stormy</b> weather,\" said Tracy. \"We should go back.\" It suddenly began to rain. They used an umbrella to <b>shield</b> them from the rain. Back at the camp, they ate cold sandwiches for dinner and went to sleep.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">By morning, the rain had stopped. It was a <b>drastic</b> change from the previous day's weather. They <b>folded</b> their sleeping bags and put them in a box. Tracy closed the <b>lid</b> and told Kara, \"Today will be fun, I promise!\" Kara didn't believe her. She missed her <b>convenient</b> life in the city. She was used to an <b>urban</b> lifestyle.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After breakfast, they went for a walk. The grass was covered with <b>dew</b>, and it gleamed in the sunlight. Finally, they reached a lake. Kara and Tracy <b>waded</b> into the water. The <b>reeds</b> <b>swayed</b> in the wind, and a <b>flock</b> of birds flew above. Kara felt very peaceful.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">That night, they made a fire. They sat around it while Mr. Grieves told scary stories. Kara had a lot of fun. Camping was a good way for friends to spend time together, she realized.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next day, it was time for them to leave. She felt sad while they <b>exited</b> the park. She didn't like camping at first, but she learned how fun it could be over the weekend.</p></div>",
       "imageUrl": "/unit17_vol4_story.png",
       "sections": [
         {
           "id": "sec2_reading_tf",
           "title": "Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "6",
@@ -212,7 +205,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit17_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Kara Đi Cắm Trại</h1>\n\n<p style=\"margin-bottom: 1rem;\">\"Kara, bạn có muốn đi cắm trại cùng gia đình mình không?\" Tracy hỏi. Kara chưa từng đi cắm trại bao giờ, nhưng cô ấy vẫn quyết định đi. Cuối tuần đó, họ lái xe đến Công viên Estes. Khi đến nơi, Kara nhìn xung quanh. Cô ấy cảm thấy thật xa rời <b>nền văn minh</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau khi dựng trại xong, họ đi dạo. Bố của Tracy, ông Grieves, đã chỉ cho họ những loài thực vật và động vật <b>bản địa</b>. \"Nhìn kìa,\" ông nói, \"đó là một cái <b>hang</b> cáo. Các cháu có thấy khóm <b>nấm</b> cạnh đó không. Đừng chạm vào chúng. Chúng có chứa <b>chất độc</b>.\" Kara cảm thấy chán nản. Cô ấy không quan tâm đến thiên nhiên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi ngày dần trôi qua, những đám mây <b>to lớn</b> chẳng mấy chốc <b>hiện ra lù lù</b> ở phía xa. \"Trời có vẻ sắp có <b>bão</b>,\" Tracy nói. \"Chúng ta nên quay lại.\" Bầu trời đột nhiên đổ mưa. Họ dùng một chiếc ô để <b>che chắn</b> khỏi cơn mưa. Quay trở lại trại, họ ăn bánh sandwich lạnh cho bữa tối và đi ngủ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đến sáng, trời đã tạnh mưa. Đó là một sự thay đổi <b>quyết liệt</b> so với thời tiết của ngày hôm trước. Họ <b>gấp</b> túi ngủ lại và cất vào hộp. Tracy đóng <b>nắp</b> lại và nói với Kara, \"Hôm nay sẽ rất vui đấy, mình hứa!\" Kara không tin cô ấy. Cô ấy nhớ cuộc sống <b>tiện lợi</b> ở thành phố. Cô ấy đã quen với lối sống <b>thành thị</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau bữa sáng, họ đi dạo. Bãi cỏ phủ đầy <b>sương</b>, và nó lấp lánh dưới ánh sáng mặt trời. Cuối cùng, họ đến một cái hồ. Kara và Tracy <b>lội</b> xuống nước. Những cây <b>sậy</b> <b>đu đưa</b> trong gió, và một <b>đàn</b> chim bay ngang qua. Kara cảm thấy rất yên bình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tối hôm đó, họ nhóm lửa. Họ ngồi quanh đống lửa trong khi ông Grieves kể những câu chuyện đáng sợ. Kara đã rất vui vẻ. Cô nhận ra rằng cắm trại là một cách tuyệt vời để bạn bè dành thời gian bên nhau.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày hôm sau, đã đến lúc họ phải rời đi. Cô cảm thấy buồn bã khi họ <b>rời khỏi</b> công viên. Ban đầu cô không thích cắm trại, nhưng cô đã hiểu được nó có thể thú vị như thế nào qua kỳ nghỉ cuối tuần.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 17: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

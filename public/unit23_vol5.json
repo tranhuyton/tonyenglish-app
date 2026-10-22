@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 23: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -348,7 +342,9 @@
                   "answer": "crescent"
                 }
               ],
-              "content": "<p class=\"mb-4\">The night was extremely dark because little light came from the <u>curved shaped moon</u>.<br/>cr [ 26 ]</p><p class=\"mb-4\">They <u>moved without a purpose</u> around the mall while waiting for their friend to get off of work.<br/>ro [ 27 ]</p><p class=\"mb-4\">The moon has <u>large holes</u> on the surface.<br/>cr [ 28 ]</p><p class=\"mb-4\">The <u>distance from one side to the other</u> of a baby’s hand is very small.<br/>br [ 29 ]</p><p class=\"mb-4\">Mom couldn’t fix the bowl because a <u>small part</u> of it was missing.<br/>fr [ 30 ]</p><p class=\"mb-4\">A lot of energy is stored within just one simple <u>smallest unit of matter</u>.<br/>at [ 31 ]</p><p class=\"mb-4\">The bee’s stinger was <u>placed firmly within</u> the skin of his right hand.<br/>em [ 32 ]</p><p class=\"mb-4\">Guarding the camp was a <u>lonely</u> job, so he gladly accepted the young man’s company.<br/>so [ 33 ]</p><p class=\"mb-4\">When it’s low on fuel, the heater <u>emits</u> a small level of heat.<br/>ra [ 34 ]</p><p class=\"mb-4\">He was so concerned about his <u>position to others</u> in school that he studied very hard.<br/>st [ 35 ]</p>"
+              "content": "<p class=\"mb-4\">The night was extremely dark because little light came from the <u>curved shaped moon</u>. (Hint: cr...) [ 26 ]</p><p class=\"mb-4\">They <u>moved without a purpose</u> around the mall while waiting for their friend to get off of work. (Hint: ro...) [ 27 ]</p><p class=\"mb-4\">The moon has <u>large holes</u> on the surface. (Hint: cr...) [ 28 ]</p><p class=\"mb-4\">The <u>distance from one side to the other</u> of a baby’s hand is very small. (Hint: br...) [ 29 ]</p><p class=\"mb-4\">Mom couldn’t fix the bowl because a <u>small part</u> of it was missing. (Hint: fr...) [ 30 ]</p><p class=\"mb-4\">A lot of energy is stored within just one simple <u>smallest unit of matter</u>. (Hint: at...) [ 31 ]</p><p class=\"mb-4\">The bee’s stinger was <u>placed firmly within</u> the skin of his right hand. (Hint: em...) [ 32 ]</p><p class=\"mb-4\">Guarding the camp was a <u>lonely</u> job, so he gladly accepted the young man’s company. (Hint: so...) [ 33 ]</p><p class=\"mb-4\">When it’s low on fuel, the heater <u>emits</u> a small level of heat. (Hint: ra...) [ 34 ]</p><p class=\"mb-4\">He was so concerned about his <u>position to others</u> in school that he studied very hard. (Hint: st...) [ 35 ]</p>",
+              "correctAnswer": "crescent",
+              "explanation": "Đáp án đúng là 'crescent'."
             },
             {
               "id": "27",
@@ -358,7 +354,9 @@
                   "answer": "roamed"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "roamed",
+              "explanation": "Đáp án đúng là 'roamed'."
             },
             {
               "id": "28",
@@ -368,7 +366,9 @@
                   "answer": "craters"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "craters",
+              "explanation": "Đáp án đúng là 'craters'."
             },
             {
               "id": "29",
@@ -378,7 +378,9 @@
                   "answer": "breadth"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "breadth",
+              "explanation": "Đáp án đúng là 'breadth'."
             },
             {
               "id": "30",
@@ -388,7 +390,9 @@
                   "answer": "fragment"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "fragment",
+              "explanation": "Đáp án đúng là 'fragment'."
             },
             {
               "id": "31",
@@ -398,7 +402,9 @@
                   "answer": "atom"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "atom",
+              "explanation": "Đáp án đúng là 'atom'."
             },
             {
               "id": "32",
@@ -408,7 +414,9 @@
                   "answer": "embedded"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "embedded",
+              "explanation": "Đáp án đúng là 'embedded'."
             },
             {
               "id": "33",
@@ -418,7 +426,9 @@
                   "answer": "solitary"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "solitary",
+              "explanation": "Đáp án đúng là 'solitary'."
             },
             {
               "id": "34",
@@ -428,7 +438,9 @@
                   "answer": "radiates"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "radiates",
+              "explanation": "Đáp án đúng là 'radiates'."
             },
             {
               "id": "35",
@@ -438,7 +450,9 @@
                   "answer": "status"
                 }
               ],
-              "content": ""
+              "content": "",
+              "correctAnswer": "status",
+              "explanation": "Đáp án đúng là 'status'."
             }
           ],
           "questionType": "Điền từ"
@@ -448,12 +462,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How Comet Got His Tail</h1>        <p style=\"margin-bottom: 1rem;\">A <b>solitary</b> rock <b>roamed</b> through the cold <b>gloom</b> of outer space. It slowly drifted through the <b>debris</b> of broken asteroids with a feeling of sadness. In the vast and beautiful <b>galaxy</b>, it was only a tiny rock. It felt like an insignificant <b>atom</b>.</p>    <p style=\"margin-bottom: 1rem;\">In its journeys it encountered many amazing objects. It flew by beautiful <b>crescent</b> moons that were covered with <b>craters</b> and moon dust.</p>    <p style=\"margin-bottom: 1rem;\">“Why can’t I be as beautiful as them?” it thought.</p>    <p style=\"margin-bottom: 1rem;\">The rock passed a <b>gigantic</b> planet. The <b>sphere</b> had a <b>circumference</b> hundreds of times larger than the <b>breadth</b> of the small rock.</p>    <p style=\"margin-bottom: 1rem;\">“Why can’t I be as large as that?” it wondered.</p>    <p style=\"margin-bottom: 1rem;\">The rock was filled with <b>despair</b>. It was surrounded by beauty and greatness, yet it was just a small and ugly <b>fragment</b> of rock.</p>    <p style=\"margin-bottom: 1rem;\">One day, it approached the area of an <b>astronomical</b> star.</p>    <p style=\"margin-bottom: 1rem;\">“What’s wrong?” the star asked.</p>    <p style=\"margin-bottom: 1rem;\">“Oh, I wish I had a higher <b>status</b> in the galaxy. All the other objects are so beautiful and large,” the rock replied. “But I’m just an ugly rock.”</p>    <p style=\"margin-bottom: 1rem;\">The star considered the problem.</p>    <p style=\"margin-bottom: 1rem;\">At last it said, “You don’t have to worry anymore. I think I can help.” The star <b>radiated</b> its light brighter and hotter than it had ever done before. “Come a little closer,” the star said to the rock.</p>    <p style=\"margin-bottom: 1rem;\">The rock drifted closer to the star. Suddenly, the ice that was <b>embedded</b> in the rock’s tiny cracks melted and became steam. Then the steam extended behind the <b>comet</b> to form a brilliant tail. The tail shined with all the colors of the <b>spectrum</b>.</p>    <p style=\"margin-bottom: 1rem;\">The little rock had become a beautiful <b>comet</b>. It looked so amazing. It realized that the star helped it change its appearance. “Thank you,” the comet said and then flew away with its new beautiful tail following behind it like a galactic cape.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How Comet Got His Tail</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A <b>solitary</b> rock <b>roamed</b> through the cold <b>gloom</b> of outer space. It slowly drifted through the <b>debris</b> of broken asteroids with a feeling of sadness. In the vast and beautiful <b>galaxy</b>, it was only a tiny rock. It felt like an insignificant <b>atom</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In its journeys it encountered many amazing objects. It flew by beautiful <b>crescent</b> moons that were covered with <b>craters</b> and moon dust.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Why can’t I be as beautiful as them?” it thought.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The rock passed a <b>gigantic</b> planet. The <b>sphere</b> had a <b>circumference</b> hundreds of times larger than the <b>breadth</b> of the small rock.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Why can’t I be as large as that?” it wondered.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The rock was filled with <b>despair</b>. It was surrounded by beauty and greatness, yet it was just a small and ugly <b>fragment</b> of rock.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, it approached the area of an <b>astronomical</b> star.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“What’s wrong?” the star asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Oh, I wish I had a higher <b>status</b> in the galaxy. All the other objects are so beautiful and large,” the rock replied. “But I’m just an ugly rock.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The star considered the problem.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">At last it said, “You don’t have to worry anymore. I think I can help.” The star <b>radiated</b> its light brighter and hotter than it had ever done before. “Come a little closer,” the star said to the rock.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The rock drifted closer to the star. Suddenly, the ice that was <b>embedded</b> in the rock’s tiny cracks melted and became steam. Then the steam extended behind the <b>comet</b> to form a brilliant tail. The tail shined with all the colors of the <b>spectrum</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The little rock had become a beautiful <b>comet</b>. It looked so amazing. It realized that the star helped it change its appearance. “Thank you,” the comet said and then flew away with its new beautiful tail following behind it like a galactic cape.</p></div>",
       "imageUrl": "/unit23_vol5_story.png",
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -577,7 +591,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit23_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How Comet Got His Tail</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một tảng đá <b>cô độc</b> đã <b>đi lang thang</b> qua màn <b>đêm đen</b> lạnh lẽo của không gian bao la. Nó từ từ trôi dạt qua những <b>mảnh vỡ</b> của các tiểu hành tinh vỡ vụn với một cảm giác buồn bã. Trong <b>thiên hà</b> rộng lớn và xinh đẹp, nó chỉ là một tảng đá nhỏ bé. Nó cảm thấy mình giống như một <b>nguyên tử</b> vô nghĩa.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong những chuyến hành trình của mình, nó đã chạm trán với nhiều vật thể tuyệt đẹp. Nó bay qua những mặt trăng <b>lưỡi liềm</b> xinh đẹp được bao phủ bởi các <b>miệng núi lửa</b> và bụi mặt trăng.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Tại sao mình không thể xinh đẹp như chúng nhỉ?” nó nghĩ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tảng đá đi qua một hành tinh <b>khổng lồ</b>. <b>Khối cầu</b> đó có <b>chu vi</b> lớn gấp hàng trăm lần so với <b>bề ngang</b> của tảng đá nhỏ.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Tại sao mình không thể to lớn như vậy nhỉ?” nó tự hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tảng đá tràn ngập sự <b>tuyệt vọng</b>. Nó được bao quanh bởi vẻ đẹp và sự vĩ đại, nhưng nó chỉ là một <b>mảnh vỡ</b> đất đá nhỏ bé và xấu xí.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, nó tiến đến gần khu vực của một ngôi sao <b>thiên văn</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Có chuyện gì vậy?” ngôi sao hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Ồ, cháu ước mình có một <b>địa vị</b> cao hơn trong thiên hà. Tất cả các vật thể khác đều rất đẹp và to lớn,” tảng đá trả lời. “Còn cháu chỉ là một tảng đá xấu xí.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngôi sao suy ngẫm về vấn đề này.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, nó nói, “Cháu không cần phải lo lắng nữa. Ta nghĩ ta có thể giúp.” Ngôi sao <b>tỏa ra</b> ánh sáng của nó sáng hơn và nóng hơn bao giờ hết. “Hãy lại gần một chút,” ngôi sao nói với tảng đá.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tảng đá trôi lại gần ngôi sao hơn. Đột nhiên, lớp băng <b>bám chặt</b> trong những vết nứt nhỏ xíu của tảng đá tan chảy và biến thành hơi nước. Sau đó, hơi nước kéo dài ra phía sau <b>sao chổi</b> để tạo thành một chiếc đuôi rực rỡ. Chiếc đuôi tỏa sáng với tất cả các màu sắc của <b>quang phổ</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tảng đá nhỏ đã trở thành một <b>sao chổi</b> xinh đẹp. Nó trông thật tuyệt vời. Nó nhận ra rằng ngôi sao đã giúp nó thay đổi diện mạo. “Cháu cảm ơn,” sao chổi nói và sau đó bay đi với chiếc đuôi mới tuyệt đẹp theo sau nó giống như một chiếc áo choàng của thiên hà.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 23: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

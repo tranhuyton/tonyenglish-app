@@ -14,36 +14,36 @@
               "id": "1",
               "content": "<p class=\"mb-4\">Jennifer <u>looked for a long time</u> at the girl who looked just like her sister. [ 1 ]</p><p class=\"mb-4\">Even though the noise scared me, I <u>returned to my calm mood</u>. [ 2 ]</p><p class=\"mb-4\">The man's speech <u>went on for another thirty minutes</u>. [ 3 ]</p><p class=\"mb-4\">I am quiet in a <u>big crowd of people</u>. [ 4 ]</p><p class=\"mb-4\">My little brother woke up with a <u>really bad hot temperature</u> today. [ 5 ]</p>",
               "options": [],
-              "correctAnswer": "stared",
-              "explanation": "Từ 'stare' có nghĩa là nhìn chằm chằm."
+              "explanation": "Từ 'stare' có nghĩa là nhìn chằm chằm.",
+              "correctAnswer": "stared"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "recovered",
-              "explanation": "Từ 'recover' có nghĩa là hồi phục, trở lại trạng thái bình thường."
+              "explanation": "Từ 'recover' có nghĩa là hồi phục, trở lại trạng thái bình thường.",
+              "correctAnswer": "recovered"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "lasted",
-              "explanation": "Từ 'last' có nghĩa là kéo dài (trong một khoảng thời gian)."
+              "explanation": "Từ 'last' có nghĩa là kéo dài (trong một khoảng thời gian).",
+              "correctAnswer": "lasted"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "shy",
-              "explanation": "Từ 'shy' có nghĩa là nhút nhát, e thẹn."
+              "explanation": "Từ 'shy' có nghĩa là nhút nhát, e thẹn.",
+              "correctAnswer": "shy"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "fever",
-              "explanation": "Từ 'fever' có nghĩa là cơn sốt (nhiệt độ cơ thể cao)."
+              "explanation": "Từ 'fever' có nghĩa là cơn sốt (nhiệt độ cơ thể cao).",
+              "correctAnswer": "fever"
             }
           ],
           "questionType": "Điền từ"
@@ -60,8 +60,8 @@
                 "but I didn't, so I denied it",
                 "so I relied on what she told me"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'but I didn't, so I denied it' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'but I didn't, so I denied it' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -70,8 +70,8 @@
                 "I was shocked by what I saw",
                 "it made a funny gesture"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'I was shocked by what I saw' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'I was shocked by what I saw' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -80,8 +80,8 @@
                 "wanted to take a likeness of the class this year",
                 "emphasized that students must follow the classroom rules"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'emphasized that students must follow the classroom rules' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'emphasized that students must follow the classroom rules' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -90,8 +90,8 @@
                 "thus I finished it in two days",
                 "so I recovered a harder book"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'thus I finished it in two days' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'thus I finished it in two days' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -100,8 +100,8 @@
                 "seemed really shy",
                 "gave me a new perspective"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'gave me a new perspective' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'gave me a new perspective' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -118,8 +118,8 @@
                 "chamber",
                 "fever"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'fever' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'fever' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -128,8 +128,8 @@
                 "chamber",
                 "fever"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'chamber' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'chamber' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -138,8 +138,8 @@
                 "perspective",
                 "likeness"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'perspective' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'perspective' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -148,8 +148,8 @@
                 "perspective",
                 "likeness"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'likeness' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'likeness' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -158,8 +158,8 @@
                 "rational",
                 "document"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'document' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'document' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "16",
@@ -168,8 +168,8 @@
                 "rational",
                 "document"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'rational' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'rational' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -178,8 +178,8 @@
                 "stared",
                 "shocked"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'shocked' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'shocked' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -188,8 +188,8 @@
                 "stared",
                 "shocked"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'stared' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'stared' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -198,8 +198,8 @@
                 "moreover",
                 "flu"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'moreover' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'moreover' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -208,8 +208,8 @@
                 "moreover",
                 "flu"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'flu' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'flu' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "21",
@@ -218,8 +218,8 @@
                 "interrupted",
                 "gesture"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'gesture' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'gesture' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -228,8 +228,8 @@
                 "interrupted",
                 "gesture"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'interrupted' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'interrupted' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -238,8 +238,8 @@
                 "thus",
                 "relied"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'relied' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'relied' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
@@ -248,8 +248,8 @@
                 "thus",
                 "relied"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'thus' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'thus' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -258,8 +258,8 @@
                 "recovered",
                 "lasted"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'lasted' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'lasted' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "26",
@@ -268,8 +268,8 @@
                 "recovered",
                 "lasted"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'recovered' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'recovered' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -278,8 +278,8 @@
                 "deny",
                 "shy"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'shy' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'shy' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -288,8 +288,8 @@
                 "deny",
                 "shy"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'deny' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'deny' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -298,8 +298,8 @@
                 "emphasized",
                 "freeze"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đáp án đúng là A. Lý do: 'emphasized' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là A. Lý do: 'emphasized' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -308,8 +308,8 @@
                 "emphasized",
                 "freeze"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đáp án đúng là B. Lý do: 'freeze' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
+              "explanation": "Đáp án đúng là B. Lý do: 'freeze' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -319,7 +319,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Prince Sam</h1>        <p style=\"margin-bottom: 1rem;\">Sam's mother cooked at the royal palace. One day, he went to work with her. She <b>emphasized</b> that he should stay in the kitchen. But Sam was bored. <b>Thus</b>, he decided to look around.</p>    <p style=\"margin-bottom: 1rem;\">He went around a corner. It <b>shocked</b> him to see a boy who had a strong <b>likeness</b> to him. Sam soon <b>recovered</b>. The other boy <b>stared</b> at him. Then he spoke. \"Come with me.\"</p>    <p style=\"margin-bottom: 1rem;\">He needed to be <b>rational</b>. But he couldn't <b>deny</b> that he wanted to go. So he followed the boy to a <b>chamber</b>. \"I am Prince Bertram,\" the boy said.</p>    <p style=\"margin-bottom: 1rem;\">Sam felt <b>shy</b> talking to a prince. \"I'm Sam.\"</p>    <p style=\"margin-bottom: 1rem;\">\"Trade places with me.\" The prince said.</p>    <p style=\"margin-bottom: 1rem;\">\"We can't. My mother will kill me. <b>Moreover</b>, I don't know anything about being a prince.\"</p>    <p style=\"margin-bottom: 1rem;\">\"No one will find out,\" the prince <b>interrupted</b>. \"We look the same, and even our <b>gestures</b> are the same. It will only <b>last</b> for a week.\"</p>    <p style=\"margin-bottom: 1rem;\">Sam said OK. Soon, Sam's <b>perspective</b> on being a prince changed. He spent most of his day signing royal <b>documents</b>. At night, the prince's <b>chamber</b> was cold. He thought he was going to <b>freeze</b> or get sick with a <b>fever</b> or the <b>flu</b>. He was happy when the week ended. So was the prince.</p>    <p style=\"margin-bottom: 1rem;\">\"I didn't know how to do anything,\" the prince said. \"I've always <b>relied</b> on my servants to do everything for me.\"</p>    <p style=\"margin-bottom: 1rem;\">\"I think I like being a regular person,\" Sam said. \"Being a prince isn't fun.\" So, they both returned to their normal positions and enjoyed their lives more than before.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Prince Sam</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Sam's mother cooked at the royal palace. One day, he went to work with her. She <b>emphasized</b> that he should stay in the kitchen. But Sam was bored. <b>Thus</b>, he decided to look around.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He went around a corner. It <b>shocked</b> him to see a boy who had a strong <b>likeness</b> to him. Sam soon <b>recovered</b>. The other boy <b>stared</b> at him. Then he spoke. \"Come with me.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He needed to be <b>rational</b>. But he couldn't <b>deny</b> that he wanted to go. So he followed the boy to a <b>chamber</b>. \"I am Prince Bertram,\" the boy said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Sam felt <b>shy</b> talking to a prince. \"I'm Sam.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Trade places with me.\" The prince said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"We can't. My mother will kill me. <b>Moreover</b>, I don't know anything about being a prince.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"No one will find out,\" the prince <b>interrupted</b>. \"We look the same, and even our <b>gestures</b> are the same. It will only <b>last</b> for a week.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Sam said OK. Soon, Sam's <b>perspective</b> on being a prince changed. He spent most of his day signing royal <b>documents</b>. At night, the prince's <b>chamber</b> was cold. He thought he was going to <b>freeze</b> or get sick with a <b>fever</b> or the <b>flu</b>. He was happy when the week ended. So was the prince.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I didn't know how to do anything,\" the prince said. \"I've always <b>relied</b> on my servants to do everything for me.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I think I like being a regular person,\" Sam said. \"Being a prince isn't fun.\" So, they both returned to their normal positions and enjoyed their lives more than before.</p></div>",
       "imageUrl": "/unit16_story.png",
       "sections": [
         {
@@ -336,8 +336,8 @@
                 "How two boys who bore a likeness to each other traded places",
                 "A prince who has a rational perspective"
               ],
-              "correctAnswer": "C",
-              "explanation": "Đoạn văn kể về hai cậu bé có ngoại hình giống nhau đã đổi chỗ cho nhau."
+              "explanation": "Đoạn văn kể về hai cậu bé có ngoại hình giống nhau đã đổi chỗ cho nhau.",
+              "correctAnswer": "C"
             },
             {
               "id": "32",
@@ -348,8 +348,8 @@
                 "Sam couldn't talk; thus, he ran away.",
                 "Sam made a gesture."
               ],
-              "correctAnswer": "B",
-              "explanation": "Theo bài đọc, hoàng tử đã nhìn chằm chằm (stared) vào Sam."
+              "explanation": "Theo bài đọc, hoàng tử đã nhìn chằm chằm (stared) vào Sam.",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -360,8 +360,8 @@
                 "He liked to rely on the servants at the palace.",
                 "He was afraid he would freeze or get a fever or the flu."
               ],
-              "correctAnswer": "C",
-              "explanation": "Bài đọc cho biết Sam thích việc có thể dựa dẫm (rely) vào những người hầu trong cung điện."
+              "explanation": "Bài đọc cho biết Sam thích việc có thể dựa dẫm (rely) vào những người hầu trong cung điện.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -372,8 +372,8 @@
                 "Signing all of the official documents",
                 "People not emphasizing how important he was"
               ],
-              "correctAnswer": "B",
-              "explanation": "Hoàng tử nhớ cảm giác có người hầu làm việc cho mình (having servants do things for him)."
+              "explanation": "Hoàng tử nhớ cảm giác có người hầu làm việc cho mình (having servants do things for him).",
+              "correctAnswer": "B"
             },
             {
               "id": "35",
@@ -384,13 +384,14 @@
                 "Because it was dirty.",
                 "Because he didn't like the color."
               ],
-              "correctAnswer": "A",
-              "explanation": "Sam không thích phòng của hoàng tử vì ban đêm ở đó rất lạnh."
+              "explanation": "Sam không thích phòng của hoàng tử vì ban đêm ở đó rất lạnh.",
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit16_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Hoàng tử Sam</h1>\n\n<p style=\"margin-bottom: 1rem;\">Mẹ của Sam làm đầu bếp tại cung điện hoàng gia. Một ngày nọ, cậu đi làm cùng mẹ. Bà <b>nhấn mạnh</b> rằng cậu nên ở trong bếp. Nhưng Sam thấy buồn chán. <b>Vì vậy</b>, cậu quyết định đi loanh quanh xem thử.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu rẽ qua một góc. Cậu bị <b>sốc</b> khi nhìn thấy một cậu bé có <b>sự giống nhau</b> đến kỳ lạ với mình. Sam sớm <b>bình tĩnh lại</b>. Cậu bé kia <b>nhìn chằm chằm</b> vào cậu. Sau đó cậu ta cất lời. \"Đi theo tôi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu cần phải <b>lý trí</b>. Nhưng cậu không thể <b>phủ nhận</b> rằng cậu muốn đi theo. Vì vậy, cậu theo cậu bé đến một <b>căn phòng</b>. \"Tôi là Hoàng tử Bertram,\" cậu bé nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sam cảm thấy <b>xấu hổ</b> khi nói chuyện với một hoàng tử. \"Tôi là Sam.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đổi chỗ với tôi đi,\" hoàng tử nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Chúng ta không thể. Mẹ tôi sẽ giết tôi mất. <b>Hơn nữa</b>, tôi không biết bất cứ điều gì về việc làm một hoàng tử.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Không ai phát hiện ra đâu,\" hoàng tử <b>ngắt lời</b>. \"Chúng ta trông giống nhau, và thậm chí <b>những cử chỉ</b> của chúng ta cũng giống nhau. Chuyện này sẽ chỉ <b>kéo dài</b> trong một tuần thôi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Sam đồng ý. Chẳng mấy chốc, <b>góc nhìn</b> của Sam về việc làm một hoàng tử đã thay đổi. Cậu dành phần lớn thời gian trong ngày để ký <b>các tài liệu</b> hoàng gia. Vào ban đêm, <b>căn phòng</b> của hoàng tử rất lạnh. Cậu nghĩ mình sẽ <b>đóng băng</b> hoặc bị ốm với một <b>cơn sốt</b> hay bệnh <b>cúm</b>. Cậu rất vui khi tuần đó kết thúc. Hoàng tử cũng vậy.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi đã không biết làm bất cứ điều gì,\" hoàng tử nói. \"Tôi luôn <b>dựa dẫm</b> vào những người hầu của mình để làm mọi thứ cho tôi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi nghĩ tôi thích làm một người bình thường hơn,\" Sam nói. \"Làm hoàng tử không vui chút nào.\" Vì vậy, cả hai đều trở lại vị trí bình thường của mình và tận hưởng cuộc sống của họ nhiều hơn trước.</p>\n</div>"
     }
   ],
   "basicInfo": {

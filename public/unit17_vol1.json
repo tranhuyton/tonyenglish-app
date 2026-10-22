@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">His final offer was very <u>reasonable</u>.<br/>fa [ 6 ]</p><p class=\"mb-4\">Don't <u>throw it in the trash without using all of it</u>.<br/>wa [ 7 ]</p><p class=\"mb-4\">The rabbit will <u>go away</u> if you get too close.<br/>di [ 8 ]</p><p class=\"mb-4\">He asked <u>if</u> I liked new movies or old movies.<br/>wh [ 9 ]</p><p class=\"mb-4\">You must <u>decide</u> what to do next.<br/>de [ 10 ]</p>",
+              "content": "<p class=\"mb-4\">His final offer was very <u>reasonable</u>. (Hint: fa...) [ 6 ]</p><p class=\"mb-4\">Don't <u>throw it in the trash without using all of it</u>. (Hint: wa...) [ 7 ]</p><p class=\"mb-4\">The rabbit will <u>go away</u> if you get too close. (Hint: di...) [ 8 ]</p><p class=\"mb-4\">He asked <u>if</u> I liked new movies or old movies. (Hint: wh...) [ 9 ]</p><p class=\"mb-4\">You must <u>decide</u> what to do next. (Hint: de...) [ 10 ]</p>",
               "explanation": "fair = reasonable",
               "correctAnswer": "fair"
             },
@@ -94,19 +94,19 @@
               "id": "8",
               "content": "",
               "explanation": "disappear = go away",
-              "correctAnswer": "appear"
+              "correctAnswer": "disappear"
             },
             {
               "id": "9",
               "content": "",
               "explanation": "whether = if (choosing between two things)",
-              "correctAnswer": "ether"
+              "correctAnswer": "whether"
             },
             {
               "id": "10",
               "content": "",
               "explanation": "determine = decide",
-              "correctAnswer": "etermine"
+              "correctAnswer": "determine"
             }
           ],
           "questionType": "Điền từ"
@@ -119,67 +119,67 @@
             {
               "id": "11",
               "content": "That [ 11 ] is too high to climb.",
-              "explanation": "hill fits the context.",
-              "correctAnswer": "hill",
               "options": [
                 "response",
                 "solution",
                 "hill",
                 "appreciate",
                 "puddles"
-              ]
+              ],
+              "explanation": "hill fits the context.",
+              "correctAnswer": "hill"
             },
             {
               "id": "12",
               "content": "We must find a [ 12 ] to the difficult problem.",
-              "explanation": "solution fits the context.",
-              "correctAnswer": "solution",
               "options": [
                 "response",
                 "solution",
                 "hill",
                 "appreciate",
                 "puddles"
-              ]
+              ],
+              "explanation": "solution fits the context.",
+              "correctAnswer": "solution"
             },
             {
               "id": "13",
               "content": "I asked you a question. What is your [ 13 ]?",
-              "explanation": "response fits the context.",
-              "correctAnswer": "response",
               "options": [
                 "response",
                 "solution",
                 "hill",
                 "appreciate",
                 "puddles"
-              ]
+              ],
+              "explanation": "response fits the context.",
+              "correctAnswer": "response"
             },
             {
               "id": "14",
               "content": "The rain formed [ 14 ] on the road.",
-              "explanation": "puddles fits the context.",
-              "correctAnswer": "puddles",
               "options": [
                 "response",
                 "solution",
                 "hill",
                 "appreciate",
                 "puddles"
-              ]
+              ],
+              "explanation": "puddles fits the context.",
+              "correctAnswer": "puddles"
             },
             {
               "id": "15",
               "content": "Do you [ 15 ] the thought that went into the gifts you got?",
-              "explanation": "appreciate fits the context.",
-              "correctAnswer": "appreciate",
               "options": [
                 "response",
                 "solution",
                 "hill",
                 "appreciate",
                 "puddles"
-              ]
+              ],
+              "explanation": "appreciate fits the context.",
+              "correctAnswer": "appreciate"
             }
           ],
           "questionType": "Kéo thả"
@@ -247,7 +247,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Race for Water</h1>        <p style=\"margin-bottom: 1rem;\">There was a town next to a river. The people there had a lot of water. But they <b>waste</b>d it. That made the Sky angry. It said, “If you <b>waste</b> water, I will take it away from you.” But the people didn’t listen.</p>    <p style=\"margin-bottom: 1rem;\">When the <b>season</b> changed from spring to summer, the clouds <b>disappear</b>ed. The <b>bright</b> sun was hot and made the river dry. There was no water <b>available</b>. People asked, “When will the rain fall?”</p>    <p style=\"margin-bottom: 1rem;\">The Sky’s <b>response</b> was, “You don’t <b>appreciate</b> water. You <b>waste</b> it, and now I will never make rain again.”</p>    <p style=\"margin-bottom: 1rem;\">A boy <b>determine</b>d that this wasn’t <b>fair</b>. He thought of a <b>solution</b>. He asked the Sky to race him. He said, “If I get to the top of that <b>hill</b> before your rain can form <b>puddle</b>s, you must fill our river.”</p>    <p style=\"margin-bottom: 1rem;\">The Sky laughed. “Little boy, I am the Sky. I am above everything <b>else</b>. You cannot <b>beat</b> me.” But the boy knew he would win.</p>    <p style=\"margin-bottom: 1rem;\">When the race began, the boy ran <b>forward</b>. The Sky started raining on the <b>hill</b>. But <b>puddle</b>s did not form there. When it rained on the <b>hill</b>, the water went down.</p>    <p style=\"margin-bottom: 1rem;\">The Sky kept raining. The water <b>flow</b>ed down into the river. When the boy reached the top of the <b>hill</b>, the river was full. The people began to <b>celebrate</b>. It was the highest <b>level</b> the river had ever been at before.</p>    <p style=\"margin-bottom: 1rem;\">The Sky was angry. “A boy can’t <b>beat</b> me! I won’t fill your river,” it said.</p>    <p style=\"margin-bottom: 1rem;\">Now the boy laughed. “It doesn’t matter <b>whether</b> you want to fill it or not,” he said. “You already did.” The Sky looked at the full river.</p>    <p style=\"margin-bottom: 1rem;\">“You tricked me,” it said. It asked the people, “Do you <b>appreciate</b> water now?”</p>    <p style=\"margin-bottom: 1rem;\">“Yes,” they said. “We won’t <b>waste</b> it.”</p>    <p style=\"margin-bottom: 1rem;\">That is how a <b>lone</b> boy saved his town and won the race for water.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Race for Water</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There was a town next to a river. The people there had a lot of water. But they <b>waste</b>d it. That made the Sky angry. It said, “If you <b>waste</b> water, I will take it away from you.” But the people didn’t listen.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When the <b>season</b> changed from spring to summer, the clouds <b>disappear</b>ed. The <b>bright</b> sun was hot and made the river dry. There was no water <b>available</b>. People asked, “When will the rain fall?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The Sky’s <b>response</b> was, “You don’t <b>appreciate</b> water. You <b>waste</b> it, and now I will never make rain again.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A boy <b>determine</b>d that this wasn’t <b>fair</b>. He thought of a <b>solution</b>. He asked the Sky to race him. He said, “If I get to the top of that <b>hill</b> before your rain can form <b>puddle</b>s, you must fill our river.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The Sky laughed. “Little boy, I am the Sky. I am above everything <b>else</b>. You cannot <b>beat</b> me.” But the boy knew he would win.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When the race began, the boy ran <b>forward</b>. The Sky started raining on the <b>hill</b>. But <b>puddle</b>s did not form there. When it rained on the <b>hill</b>, the water went down.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The Sky kept raining. The water <b>flow</b>ed down into the river. When the boy reached the top of the <b>hill</b>, the river was full. The people began to <b>celebrate</b>. It was the highest <b>level</b> the river had ever been at before.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The Sky was angry. “A boy can’t <b>beat</b> me! I won’t fill your river,” it said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Now the boy laughed. “It doesn’t matter <b>whether</b> you want to fill it or not,” he said. “You already did.” The Sky looked at the full river.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“You tricked me,” it said. It asked the people, “Do you <b>appreciate</b> water now?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Yes,” they said. “We won’t <b>waste</b> it.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">That is how a <b>lone</b> boy saved his town and won the race for water.</p></div>",
       "imageUrl": "/unit17_story.png",
       "sections": [
         {
@@ -318,7 +318,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">    <img src=\"/unit17_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cuộc Đua Tìm Nước</h1>\n\n<p style=\"margin-bottom: 1rem;\">Có một thị trấn nằm ngay cạnh một con sông. Người dân ở đó có rất nhiều nước. Nhưng họ đã <b>lãng phí</b> nó. Điều đó đã khiến Bầu Trời tức giận. Bầu Trời nói, “Nếu các người <b>lãng phí</b> nước, ta sẽ lấy nó đi khỏi các người.” Nhưng người dân đã không chịu lắng nghe.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi <b>mùa</b> thay đổi từ mùa xuân sang mùa hè, những đám mây đã <b>biến mất</b>. Mặt trời <b>chói chang</b> nóng bức và làm cho con sông cạn khô. Không có một giọt nước nào <b>có sẵn</b> để dùng. Người dân hỏi, “Khi nào thì mưa mới rơi đây?”</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Câu trả lời</b> của Bầu Trời là, “Các người không biết <b>trân trọng</b> nước. Các người <b>lãng phí</b> nó, và giờ ta sẽ không bao giờ làm mưa nữa.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Một cậu bé <b>nhận định</b> rằng điều này không <b>công bằng</b>. Cậu ấy đã nghĩ ra một <b>giải pháp</b>. Cậu bé thách Bầu Trời chạy đua với mình. Cậu nói, “Nếu cháu chạy đến đỉnh <b>ngọn đồi</b> kia trước khi mưa của ông có thể tạo thành những <b>vũng nước</b>, ông phải đổ đầy nước cho con sông của chúng cháu.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Bầu Trời bật cười. “Cậu bé, ta là Bầu Trời. Ta ở trên mọi thứ <b>khác</b>. Ngươi không thể nào <b>đánh bại</b> được ta.” Nhưng cậu bé biết mình sẽ chiến thắng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi cuộc đua bắt đầu, cậu bé lao <b>về phía trước</b>. Bầu Trời bắt đầu đổ mưa xuống <b>ngọn đồi</b>. Nhưng những <b>vũng nước</b> đã không hình thành ở đó. Khi mưa trút xuống <b>ngọn đồi</b>, nước đã chảy xuống dưới.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bầu Trời tiếp tục đổ mưa. Nước <b>chảy</b> xuống con sông. Khi cậu bé lên đến đỉnh <b>ngọn đồi</b>, con sông đã đầy ắp nước. Mọi người bắt đầu <b>ăn mừng</b>. Đó là <b>mức</b> nước cao nhất mà con sông từng đạt tới trước đây.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bầu Trời vô cùng tức giận. “Một thằng bé không thể <b>đánh bại</b> ta! Ta sẽ không đổ đầy sông cho các người đâu,” nó nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bây giờ cậu bé mới bật cười. “<b>Liệu</b> ông có muốn làm đầy nó hay không cũng không còn quan trọng nữa,” cậu bé nói. “Ông đã làm vậy rồi mà.” Bầu Trời nhìn xuống dòng sông đầy ắp nước.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Ngươi đã lừa ta,” nó nói. Nó hỏi người dân, “Bây giờ các người đã biết <b>trân trọng</b> nước chưa?”</p>\n\n<p style=\"margin-bottom: 1rem;\">“Rồi ạ,” họ nói. “Chúng tôi sẽ không <b>lãng phí</b> nó nữa đâu.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Đó là cách mà một cậu bé <b>đơn độc</b> đã cứu thị trấn của mình và giành chiến thắng trong cuộc đua tìm nước.</p></div>\n</div>"
     }
   ],
   "basicInfo": {

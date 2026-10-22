@@ -222,49 +222,49 @@
               "id": "17",
               "content": "Watching the ________ was very exciting. Afterwards, I could feel my ________ going very fast.",
               "options": [
-                "eclipse / pulse",
                 "pulse / eclipse",
+                "eclipse / pulse",
                 "fairy / leisure",
                 "leisure / fairy"
               ],
               "explanation": "eclipse: nhật thực; pulse: nhịp tim",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "18",
               "content": "Early members of ________ walked slowly and strangely. However, people learned how to move with ________ over the years.",
               "options": [
                 "grace / mankind",
-                "mankind / grace",
                 "wool / curls",
+                "mankind / grace",
                 "curls / wool"
               ],
               "explanation": "mankind: loài người; grace: sự uyển chuyển",
-              "correctAnswer": "B"
+              "correctAnswer": "C"
             },
             {
               "id": "19",
               "content": "My favorite ________ is cinnamon. I put it in all of my favorite ________.",
               "options": [
-                "spice / desserts",
                 "desserts / spice",
                 "pillow / passion",
-                "passion / pillow"
+                "passion / pillow",
+                "spice / desserts"
               ],
               "explanation": "spice: gia vị (quế); desserts: các món tráng miệng",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "20",
               "content": "In the fall, the flowers do not ________. I clean them up when they start to ________.",
               "options": [
-                "decay / bloom",
                 "bloom / decay",
+                "decay / bloom",
                 "whistled / refresh",
                 "refresh / whistled"
               ],
               "explanation": "bloom: nở hoa; decay: tàn úa",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -282,37 +282,37 @@
               "id": "22",
               "content": "When my father was a boy, he learned all about a sheep's ________. For example, he learned that it forms ________.",
               "options": [
-                "wool / curls",
                 "curls / wool",
                 "passion / pillow",
+                "wool / curls",
                 "pillow / passion"
               ],
               "explanation": "wool: lông cừu; curls: uốn lọn",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "23",
               "content": "Jennifer likes to paint in her ________ time. The most recent picture she painted was of a ________.",
               "options": [
-                "leisure / fairy",
                 "fairy / leisure",
                 "distant / compact",
-                "compact / distant"
+                "compact / distant",
+                "leisure / fairy"
               ],
               "explanation": "leisure time: thời gian rảnh rỗi; fairy: nàng tiên",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "24",
               "content": "Kelly ________ her feet into the pool but decided not to get in because she was ________ a lot. She was afraid she might get others sick if she got in.",
               "options": [
-                "sneezing / dipped",
                 "dipped / sneezing",
+                "sneezing / dipped",
                 "whistled / refresh",
                 "refresh / whistled"
               ],
               "explanation": "dipped: nhúng; sneezing: hắt hơi",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -334,7 +334,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tiny Tina</h1>        <p style=\"margin-bottom: 1rem;\">In a <strong>distant</strong> land, there was a kingdom where fairies lived. Tina was a <strong>fairy</strong>. She had yellow <strong>curls</strong> and wore a dress made of <strong>wool</strong>. She always moved with <strong>grace</strong>. However, because of her <strong>compact</strong> size, she was scared of <strong>mankind</strong>.</p>    <p style=\"margin-bottom: 1rem;\">One day, there was an <strong>eclipse</strong> of the sun. The fairies didn't know what was happening. They were scared, so they ran away.</p>    <p style=\"margin-bottom: 1rem;\">Tina looked for a place to hide. She found a garden with flowers <strong>blooming</strong>. Tina had a <strong>passion</strong> for flowers. She decided to hide there. She became sleepy and made a <strong>pillow</strong> with some leaves. She <strong>whistled</strong> happily as she worked, and she fell asleep.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, somebody <strong>sneezed</strong>. The sound woke Tina up. She saw a very big face looking at her! Tina was so scared that she couldn't move. She could feel her <strong>pulse</strong> going very fast.</p>    <p style=\"margin-bottom: 1rem;\">The big woman went into her house. When she came back, she gave Tina a cup. The woman sat on the ground among some <strong>decaying</strong> leaves. Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious <strong>spices</strong> in it. Tina felt <strong>refreshed</strong> after drinking the tea.</p>    <p style=\"margin-bottom: 1rem;\">\"I'm Wilma,\" the lady said. \"I spend all my <strong>leisure</strong> time in my garden cutting flowers. Would you like some <strong>dessert</strong>?\"</p>    <p style=\"margin-bottom: 1rem;\">Tina said yes. She was hungry, and she wasn't frightened anymore. She took a bite of cake and relaxed. \"How did you get to my garden?\"</p>    <p style=\"margin-bottom: 1rem;\">Tina told Wilma how she got lost.</p>    <p style=\"margin-bottom: 1rem;\">\"That's terrible! Let us take you home.\"</p>    <p style=\"margin-bottom: 1rem;\">\"Actually, I think that I want to stay with you,\" Tina said. She wasn't scared of big people anymore. Wilma and Tina lived happily ever after.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tiny Tina</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In a <strong>distant</strong> land, there was a kingdom where fairies lived. Tina was a <strong>fairy</strong>. She had yellow <strong>curls</strong> and wore a dress made of <strong>wool</strong>. She always moved with <strong>grace</strong>. However, because of her <strong>compact</strong> size, she was scared of <strong>mankind</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, there was an <strong>eclipse</strong> of the sun. The fairies didn't know what was happening. They were scared, so they ran away.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tina looked for a place to hide. She found a garden with flowers <strong>blooming</strong>. Tina had a <strong>passion</strong> for flowers. She decided to hide there. She became sleepy and made a <strong>pillow</strong> with some leaves. She <strong>whistled</strong> happily as she worked, and she fell asleep.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Suddenly, somebody <strong>sneezed</strong>. The sound woke Tina up. She saw a very big face looking at her! Tina was so scared that she couldn't move. She could feel her <strong>pulse</strong> going very fast.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The big woman went into her house. When she came back, she gave Tina a cup. The woman sat on the ground among some <strong>decaying</strong> leaves. Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious <strong>spices</strong> in it. Tina felt <strong>refreshed</strong> after drinking the tea.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I'm Wilma,\" the lady said. \"I spend all my <strong>leisure</strong> time in my garden cutting flowers. Would you like some <strong>dessert</strong>?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tina said yes. She was hungry, and she wasn't frightened anymore. She took a bite of cake and relaxed. \"How did you get to my garden?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tina told Wilma how she got lost.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"That's terrible! Let us take you home.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Actually, I think that I want to stay with you,\" Tina said. She wasn't scared of big people anymore. Wilma and Tina lived happily ever after.</p></div>",
       "imageUrl": "/unit4_v3_story.png",
       "sections": [
         {
@@ -393,7 +393,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit4_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cô bé Tina nhỏ bé</h1>\n\n<p style=\"margin-bottom: 1rem;\">Ở một vùng đất <strong>distant</strong> (xa xôi), có một vương quốc nơi các nàng tiên sinh sống. Tina là một nàng tiên (<strong>fairy</strong>). Cô có những lọn tóc xoăn (<strong>curls</strong>) màu vàng và mặc một chiếc váy làm từ len (<strong>wool</strong>). Cô luôn di chuyển với sự <strong>grace</strong> (duyên dáng). Tuy nhiên, vì kích thước <strong>compact</strong> (nhỏ gọn) của mình, cô rất sợ <strong>mankind</strong> (loài người).</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, có một hiện tượng nhật thực (<strong>eclipse</strong>). Các nàng tiên không biết chuyện gì đang xảy ra. Họ rất sợ hãi, vì vậy họ đã bỏ chạy.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tina tìm kiếm một nơi để trốn. Cô tìm thấy một khu vườn với những bông hoa đang <strong>blooming</strong> (nở rộ). Tina có một niềm <strong>passion</strong> (đam mê) với các loài hoa. Cô quyết định trốn ở đó. Cô bắt đầu buồn ngủ và làm một chiếc gối (<strong>pillow</strong>) bằng vài chiếc lá. Cô vui vẻ <strong>whistled</strong> (huýt sáo) trong lúc làm việc, và rồi chìm vào giấc ngủ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đột nhiên, ai đó <strong>sneezed</strong> (hắt hơi). Âm thanh đó đã đánh thức Tina. Cô nhìn thấy một khuôn mặt rất lớn đang nhìn mình! Tina quá sợ hãi đến mức không thể cử động. Cô có thể cảm nhận được <strong>pulse</strong> (nhịp tim) của mình đang đập rất nhanh.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người phụ nữ to lớn đi vào trong nhà của mình. Khi quay lại, bà đưa cho Tina một cái cốc. Người phụ nữ ngồi trên mặt đất giữa những chiếc lá đang <strong>decaying</strong> (mục nát). Tina nhúng một ngón tay vào cốc và nếm thử. Đó là trà với đủ các loại gia vị (<strong>spices</strong>) thơm ngon. Tina cảm thấy <strong>refreshed</strong> (sảng khoái) sau khi uống trà.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Ta là Wilma,\" người phụ nữ nói. \"Ta dành toàn bộ thời gian <strong>leisure</strong> (rảnh rỗi) của mình trong vườn để cắt tỉa hoa. Cháu có muốn dùng chút món tráng miệng (<strong>dessert</strong>) không?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Tina đồng ý. Cô đang đói, và cô không còn sợ hãi nữa. Cô cắn một miếng bánh và thư giãn. \"Làm thế nào mà cháu lại đến được khu vườn của ta?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Tina kể cho Wilma nghe việc cô đã bị lạc như thế nào.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Thật tồi tệ! Hãy để ta đưa cháu về nhà.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Thực ra, cháu nghĩ là cháu muốn ở lại với cô,\" Tina nói. Cô không còn sợ những người to lớn nữa. Wilma và Tina sống hạnh phúc mãi mãi về sau.</p>\n</div>"
     }
   ],
   "basicInfo": {

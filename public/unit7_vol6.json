@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 7: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -418,12 +412,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Greek Magical Papyri</h1>        <p style=\"margin-bottom: 1rem;\">The Greek Magical Papyri is a collection of writing about magic. After it was found in the Egyptian desert, it took experts years to <b>decipher</b> it. The text was written in at least three different ancient languages. After many years, experts realized it contained a number of spells that varied greatly in <b>scope</b>.</p>    <p style=\"margin-bottom: 1rem;\">The most common types of magic in the collection dealt with healing illnesses like <b>pneumonia</b>. Some spells also gave advice for treating people with mental illnesses, such as those who became <b>psychotic</b>. Some spells asked for unusual things, like crocodile <b>dung</b>.</p>    <p style=\"margin-bottom: 1rem;\">But <b>botany</b> was an important part of the magic. Many healing spells gave instructions on how to use herbs and plants that were believed to be <b>therapeutic</b>. For example, in order to cure <b>arthritis</b>, the book says that the magician should build an <b>ornate</b> <b>altar</b>. Then he should <b>mash</b> different types of herbs and place them on top of it. At <b>dusk</b>, he is supposed to say a spell, so the gods would be <b>gratified</b>.</p>    <p style=\"margin-bottom: 1rem;\">Other parts of the collection describe how to <b>hone</b> one’s <b>psychic</b> abilities and how to give <b>credible</b> descriptions of the future. Often, the book advised people how to use different objects to tell the future, including tea leaves. Also, one part of the book tells what different dreams might mean. It gives advice for using dreams to tell the future.</p>    <p style=\"margin-bottom: 1rem;\">A small part of the book, however, is more <b>sinister</b> than the rest. It is meant to cause <b>strife</b> and <b>deception</b>. For example, one tells how to give someone warts, while another will make all of the victim’s farm animals die. However, if someone’s farm animals died as a result of a curse, he could ask a magician to perform magic that makes the <b>deceased</b> come back to life.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Greek Magical Papyri</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The Greek Magical Papyri is a collection of writing about magic. After it was found in the Egyptian desert, it took experts years to <b>decipher</b> it. The text was written in at least three different ancient languages. After many years, experts realized it contained a number of spells that varied greatly in <b>scope</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The most common types of magic in the collection dealt with healing illnesses like <b>pneumonia</b>. Some spells also gave advice for treating people with mental illnesses, such as those who became <b>psychotic</b>. Some spells asked for unusual things, like crocodile <b>dung</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But <b>botany</b> was an important part of the magic. Many healing spells gave instructions on how to use herbs and plants that were believed to be <b>therapeutic</b>. For example, in order to cure <b>arthritis</b>, the book says that the magician should build an <b>ornate</b> <b>altar</b>. Then he should <b>mash</b> different types of herbs and place them on top of it. At <b>dusk</b>, he is supposed to say a spell, so the gods would be <b>gratified</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Other parts of the collection describe how to <b>hone</b> one’s <b>psychic</b> abilities and how to give <b>credible</b> descriptions of the future. Often, the book advised people how to use different objects to tell the future, including tea leaves. Also, one part of the book tells what different dreams might mean. It gives advice for using dreams to tell the future.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A small part of the book, however, is more <b>sinister</b> than the rest. It is meant to cause <b>strife</b> and <b>deception</b>. For example, one tells how to give someone warts, while another will make all of the victim’s farm animals die. However, if someone’s farm animals died as a result of a curse, he could ask a magician to perform magic that makes the <b>deceased</b> come back to life.</p></div>",
       "imageUrl": "/unit7_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -488,13 +482,13 @@
               "id": "36",
               "content": "What illnesses does the book have advice for healing?",
               "options": [
-                "The book gives advice for curing arthritis, pneumonia, and psychotic people.",
                 "It gives advice for treating the common cold.",
                 "It helps people with asthma.",
-                "It is only about healing animals."
+                "It is only about healing animals.",
+                "The book gives advice for curing arthritis, pneumonia, and psychotic people."
               ],
               "explanation": "Đáp án đúng là A. Bài đọc cho biết cuốn sách chứa các loại phép thuật chữa bệnh như viêm phổi và cả bệnh tâm thần: \"The most common types of magic in the collection dealt with healing illnesses like pneumonia. Some spells also gave advice for treating people with mental illnesses, such as those who became psychotic.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "37",
@@ -512,42 +506,50 @@
               "id": "38",
               "content": "What should someone do if they want to cure arthritis?",
               "options": [
-                "Build an ornate altar, place mashed herbs on it, and say a spell at dusk.",
                 "They should sleep more and drink plenty of water.",
+                "Build an ornate altar, place mashed herbs on it, and say a spell at dusk.",
                 "They should perform magic on farm animals.",
                 "They should read the book aloud at dawn."
               ],
               "explanation": "Đáp án đúng là A. Đoạn ba hướng dẫn rất cụ thể: \"For example, in order to cure arthritis, the book says that the magician should build an ornate altar. Then he should mash different types of herbs and place them on top of it. At dusk, he is supposed to say a spell...\"",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "39",
               "content": "What does the sinister part of the book focus on?",
               "options": [
-                "Causing strife and deception.",
                 "Teaching how to use tea leaves.",
                 "Honing one's psychic abilities.",
+                "Causing strife and deception.",
                 "Interpreting dreams."
               ],
               "explanation": "Đáp án đúng là A. Đoạn cuối có viết: \"A small part of the book, however, is more sinister than the rest. It is meant to cause strife and deception.\" (Tuy nhiên, một phần nhỏ của cuốn sách lại nham hiểm hơn phần còn lại. Nó nhằm mục đích gây ra xung đột và lừa dối).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "40",
               "content": "What could someone ask a magician to do if their farm animals died?",
               "options": [
-                "Perform magic that makes the deceased come back to life.",
                 "Perform magic to give someone warts.",
                 "Mash different types of herbs.",
-                "Read from the Greek Magical Papyri."
+                "Read from the Greek Magical Papyri.",
+                "Perform magic that makes the deceased come back to life."
               ],
               "explanation": "Đáp án đúng là A. Dòng cuối cùng của bài đọc cho biết: \"However, if someone’s farm animals died as a result of a curse, he could ask a magician to perform magic that makes the deceased come back to life.\" (nếu động vật chết do lời nguyền, có thể yêu cầu pháp sư thực hiện phép thuật làm chúng sống lại).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit7_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cuộn Giấy Cói Phép Thuật Hy Lạp</h1>\n\n<p style=\"margin-bottom: 1rem;\">Cuộn Giấy Cói Phép Thuật Hy Lạp là một bộ sưu tập các bài viết về phép thuật. Sau khi nó được tìm thấy ở sa mạc Ai Cập, các chuyên gia đã mất nhiều năm để <b>giải mã</b> nó. Văn bản được viết bằng ít nhất ba ngôn ngữ cổ khác nhau. Sau nhiều năm, các chuyên gia nhận ra rằng nó chứa một số câu thần chú có <b>phạm vi</b> rất đa dạng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Các loại phép thuật phổ biến nhất trong bộ sưu tập này liên quan đến việc chữa trị các bệnh tật như bệnh <b>viêm phổi</b>. Một số thần chú cũng đưa ra lời khuyên để điều trị cho những người mắc bệnh tâm thần, chẳng hạn như những người bị <b>rối loạn tâm thần</b>. Một số thần chú yêu cầu những thứ kỳ lạ, như <b>phân</b> cá sấu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng <b>thực vật học</b> là một phần quan trọng của phép thuật. Nhiều thần chú chữa bệnh đưa ra các hướng dẫn về cách sử dụng thảo mộc và thực vật được cho là có <b>tác dụng chữa bệnh</b>. Ví dụ, để chữa bệnh <b>viêm khớp</b>, cuốn sách nói rằng pháp sư nên xây dựng một <b>bàn thờ</b> <b>trang trí lộng lẫy</b>. Sau đó, anh ta nên <b>nghiền nát</b> các loại thảo mộc khác nhau và đặt chúng lên trên đó. Vào lúc <b>chạng vạng</b>, anh ta được cho là phải đọc một câu thần chú, để các vị thần sẽ được <b>hài lòng</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Các phần khác của bộ sưu tập mô tả cách <b>rèn luyện</b> khả năng <b>tâm linh</b> của một người và cách đưa ra các mô tả <b>đáng tin cậy</b> về tương lai. Thường thì, cuốn sách khuyên mọi người cách sử dụng các vật thể khác nhau để bói tương lai, bao gồm cả lá trà. Ngoài ra, một phần của cuốn sách cho biết những giấc mơ khác nhau có thể mang ý nghĩa gì. Nó đưa ra lời khuyên về việc sử dụng những giấc mơ để đoán tương lai.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, một phần nhỏ của cuốn sách lại <b>nham hiểm</b> hơn phần còn lại. Nó nhằm gây ra <b>sự xung đột</b> và <b>sự lừa dối</b>. Ví dụ, một thần chú chỉ cách làm cho ai đó bị mụn cóc, trong khi một thần chú khác sẽ làm cho tất cả các động vật nuôi ở trang trại của nạn nhân chết. Tuy nhiên, nếu động vật ở trang trại của ai đó chết vì một lời nguyền, người đó có thể yêu cầu pháp sư thực hiện phép thuật làm cho <b>những con vật đã chết</b> sống lại.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 7: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

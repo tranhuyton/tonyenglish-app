@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">Sam was happy to <u>go back to</u> his house.<br/>re [ 1 ]</p><p class=\"mb-4\">Her grandfather is a <u>smart</u> old man.<br/>wi [ 2 ]</p><p class=\"mb-4\">William wanted an <u>animal to live with</u>.<br/>pe [ 3 ]</p><p class=\"mb-4\">He studies what the <u>condition of the air</u> is like.<br/>we [ 4 ]</p><p class=\"mb-4\">I have to <u>deal with</u> my rising credit card bill.<br/>fa [ 5 ]</p>",
+              "content": "<p class=\"mb-4\">Sam was happy to <u>go back to</u> his house. (Hint: re...) [ 1 ]</p><p class=\"mb-4\">Her grandfather is a <u>smart</u> old man. (Hint: wi...) [ 2 ]</p><p class=\"mb-4\">William wanted an <u>animal to live with</u>. (Hint: pe...) [ 3 ]</p><p class=\"mb-4\">He studies what the <u>condition of the air</u> is like. (Hint: we...) [ 4 ]</p><p class=\"mb-4\">I have to <u>deal with</u> my rising credit card bill. (Hint: fa...) [ 5 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "return"
             },
@@ -51,102 +51,102 @@
             {
               "id": "6",
               "content": "<p class=\"mb-4\">fright / ghost</p>The [ 6 ] lives in the old house.</p>A scary place might cause [ 7 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. dead / upset</p>The tree fell down because it was [ 8 ].</p>I was [ 9 ] when I got a bad grade on the test.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. advantage / reached</p>After 10 hours of driving, I finally [ 10 ] California.</p>He is smart and has a(n) [ 11 ] in class.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. escape / distance</p>He wanted to [ 12 ] from the room.</p>He lived a long [ 13 ] from the school.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. community / individual</p>The man is a nice [ 14 ].</p>The town is a small [ 15 ].</p>",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "ghost",
               "options": [
                 "fright",
                 "ghost"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "ghost"
             },
             {
               "id": "7",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "fright",
               "options": [
                 "fright",
                 "ghost"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "fright"
             },
             {
               "id": "8",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "dead",
               "options": [
                 "dead",
                 "upset"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "dead"
             },
             {
               "id": "9",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "upset",
               "options": [
                 "dead",
                 "upset"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "upset"
             },
             {
               "id": "10",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "reached",
               "options": [
                 "advantage",
                 "reached"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "reached"
             },
             {
               "id": "11",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "advantage",
               "options": [
                 "advantage",
                 "reached"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "advantage"
             },
             {
               "id": "12",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "escape",
               "options": [
                 "escape",
                 "distance"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "escape"
             },
             {
               "id": "13",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "distance",
               "options": [
                 "escape",
                 "distance"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "distance"
             },
             {
               "id": "14",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "individual",
               "options": [
                 "community",
                 "individual"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "individual"
             },
             {
               "id": "15",
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "community",
               "options": [
                 "community",
                 "individual"
-              ]
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "community"
             }
           ],
           "questionType": "Điền từ"
@@ -264,7 +264,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Friendly Ghost</h1>        <p style=\"margin-bottom: 1rem;\">A nice woman lived by a large river. She loved children. She wanted to help them in any way. She loved her <b>community</b>, and everyone in the <b>community</b> loved her. She lived a very long time and became very <b>wise</b>.</p>    <p style=\"margin-bottom: 1rem;\">When she died, she became a <b>ghost</b>. She was <b>dead</b>, but every night she <b>returned</b> to her <b>community</b>. She wanted to help children and not to <b>cause</b> them <b>fright</b>. But she had a scary <b>voice</b>. Children were afraid of her, but the <b>ghost</b> was a good one. She only scared them to help them.</p>    <p style=\"margin-bottom: 1rem;\">One night, some children and a dog were playing by the river. They were having fun with their <b>pet</b>. But they were far from home. Then the <b>weather</b> became bad. It rained and rained. The river was rising. It was very dark. The children knew they were lost. They needed to go north, but they didn't know which direction it was. When the moon came out, they saw a <b>ghost</b> by the river. The <b>ghost</b> said, \"Go away!\"</p>    <p style=\"margin-bottom: 1rem;\">The children felt great <b>fright</b>. They knew it was a <b>ghost</b>. Then the <b>ghost</b> moved closer. She yelled again, \"Go away!\" The children became very <b>upset</b>. Some of them began to cry. The children knew they had a <b>choice</b>: they could <b>escape</b>, or they could stay and <b>face</b> this scary <b>individual</b> in the dark.</p>    <p style=\"margin-bottom: 1rem;\">The children ran a long <b>distance</b> away. The <b>ghost</b> <b>followed</b> them all the way. Finally, the children <b>reached</b> home. The <b>ghost</b> was very happy. Soon the river rose higher and higher. It was very dangerous. The <b>ghost</b> had helped the children <b>survive</b>! She had saved them from the rising water. She also used her power to lead them home. Sometimes, meeting a <b>ghost</b> has <b>advantages</b>. A <b>ghost</b> can save your life!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Friendly Ghost</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A nice woman lived by a large river. She loved children. She wanted to help them in any way. She loved her <b>community</b>, and everyone in the <b>community</b> loved her. She lived a very long time and became very <b>wise</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When she died, she became a <b>ghost</b>. She was <b>dead</b>, but every night she <b>returned</b> to her <b>community</b>. She wanted to help children and not to <b>cause</b> them <b>fright</b>. But she had a scary <b>voice</b>. Children were afraid of her, but the <b>ghost</b> was a good one. She only scared them to help them.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One night, some children and a dog were playing by the river. They were having fun with their <b>pet</b>. But they were far from home. Then the <b>weather</b> became bad. It rained and rained. The river was rising. It was very dark. The children knew they were lost. They needed to go north, but they didn't know which direction it was. When the moon came out, they saw a <b>ghost</b> by the river. The <b>ghost</b> said, \"Go away!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The children felt great <b>fright</b>. They knew it was a <b>ghost</b>. Then the <b>ghost</b> moved closer. She yelled again, \"Go away!\" The children became very <b>upset</b>. Some of them began to cry. The children knew they had a <b>choice</b>: they could <b>escape</b>, or they could stay and <b>face</b> this scary <b>individual</b> in the dark.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The children ran a long <b>distance</b> away. The <b>ghost</b> <b>followed</b> them all the way. Finally, the children <b>reached</b> home. The <b>ghost</b> was very happy. Soon the river rose higher and higher. It was very dangerous. The <b>ghost</b> had helped the children <b>survive</b>! She had saved them from the rising water. She also used her power to lead them home. Sometimes, meeting a <b>ghost</b> has <b>advantages</b>. A <b>ghost</b> can save your life!</p></div>",
       "imageUrl": "/unit6_story.png",
       "sections": [
         {
@@ -335,7 +335,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Hồn Ma Thân Thiện</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một người phụ nữ tốt bụng sống cạnh một con sông lớn. Bà ấy yêu trẻ em. Bà ấy muốn giúp đỡ chúng bằng mọi cách. Bà yêu <b>cộng đồng</b> của mình, và mọi người trong <b>cộng đồng</b> đều yêu quý bà. Bà sống một cuộc đời rất dài và trở nên rất <b>khôn ngoan</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi qua đời, bà trở thành một <b>hồn ma</b>. Bà đã <b>chết</b>, nhưng mỗi đêm bà lại <b>trở về</b> <b>cộng đồng</b> của mình. Bà muốn giúp đỡ lũ trẻ và không <b>gây ra</b> cho chúng sự <b>sợ hãi</b>. Nhưng bà có một <b>giọng nói</b> đáng sợ. Lũ trẻ sợ bà, nhưng <b>hồn ma</b> là một người tốt. Bà chỉ dọa chúng để giúp chúng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một đêm, vài đứa trẻ và một con chó đang chơi bên sông. Chúng đang đùa nghịch với <b>thú cưng</b> của mình. Nhưng chúng ở rất xa nhà. Rồi <b>thời tiết</b> trở nên tồi tệ. Trời mưa tầm tã. Nước sông đang dâng cao. Trời rất tối. Lũ trẻ biết rằng chúng đã bị lạc. Chúng cần đi về hướng bắc, nhưng chúng không biết hướng đó ở đâu. Khi mặt trăng lên, chúng nhìn thấy một <b>hồn ma</b> bên sông. <b>Hồn ma</b> nói: \"Đi đi!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Lũ trẻ cảm thấy <b>sợ hãi</b> tột độ. Chúng biết đó là một <b>hồn ma</b>. Rồi <b>hồn ma</b> tiến lại gần hơn. Bà ấy lại hét lên: \"Đi đi!\" Lũ trẻ trở nên rất <b>buồn bã</b>. Một vài đứa bắt đầu khóc. Lũ trẻ biết chúng có một <b>sự lựa chọn</b>: chúng có thể <b>trốn thoát</b>, hoặc chúng có thể ở lại và <b>đối mặt</b> với <b>cá nhân</b> đáng sợ này trong bóng tối.</p>\n\n<p style=\"margin-bottom: 1rem;\">Lũ trẻ chạy ra xa một <b>khoảng cách</b> dài. <b>Hồn ma</b> đã <b>đi theo</b> chúng suốt chặng đường. Cuối cùng, lũ trẻ cũng <b>về đến</b> nhà. <b>Hồn ma</b> rất vui mừng. Chẳng mấy chốc, nước sông ngày càng dâng cao hơn. Thật là nguy hiểm. <b>Hồn ma</b> đã giúp lũ trẻ <b>sống sót</b>! Bà đã cứu chúng khỏi dòng nước đang dâng cao. Bà cũng dùng sức mạnh của mình để dẫn chúng về nhà. Đôi khi, gặp một <b>hồn ma</b> cũng có <b>những lợi thế</b>. Một <b>hồn ma</b> có thể cứu mạng bạn!</p>\n</div>"
     }
   ],
   "basicInfo": {

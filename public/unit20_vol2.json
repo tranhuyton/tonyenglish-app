@@ -71,67 +71,67 @@
             {
               "id": "6",
               "content": "My new friend is an [ 6 ] who came from Italy. He goes to the same [ 7 ] school that I do. He does not know many English words. Having to learn new words is a hard [ 8 ] for him to get past. When he says things wrong, he feels like a [ 9 ]. I tell him not to worry. Soon he will know English very well. When I help him learn, he is happy and gives me [ 10 ] for my good deed.",
-              "correctAnswer": "immigrant",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
               "options": [
                 "immigrant",
                 "failure",
                 "elementary",
                 "barrier",
                 "recognition"
-              ]
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "immigrant"
             },
             {
               "id": "7",
               "content": "",
-              "correctAnswer": "elementary",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
               "options": [
                 "immigrant",
                 "failure",
                 "elementary",
                 "barrier",
                 "recognition"
-              ]
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "elementary"
             },
             {
               "id": "8",
               "content": "",
-              "correctAnswer": "barrier",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
               "options": [
                 "immigrant",
                 "failure",
                 "elementary",
                 "barrier",
                 "recognition"
-              ]
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "barrier"
             },
             {
               "id": "9",
               "content": "",
-              "correctAnswer": "failure",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
               "options": [
                 "immigrant",
                 "failure",
                 "elementary",
                 "barrier",
                 "recognition"
-              ]
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "failure"
             },
             {
               "id": "10",
               "content": "",
-              "correctAnswer": "recognition",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
               "options": [
                 "immigrant",
                 "failure",
                 "elementary",
                 "barrier",
                 "recognition"
-              ]
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "recognition"
             }
           ],
           "questionType": "Kéo thả"
@@ -141,7 +141,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif;\">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Albert Einstein</h1>        <p style=\"margin-bottom: 1rem;\">My name is Albert Einstein. Many people know about the great things I've <b>accomplished</b>. But I had many <b>barriers</b> before I became famous.</p>    <p style=\"margin-bottom: 1rem;\">I was born in Germany. When I was in <b>elementary</b> school, I already knew about math and <b>statistics</b>. When I was a boy, I <b>pretended</b> to be a great scientist. I loved school, but my life at home was hard. My father lost his job, so my family lived in <b>poverty</b>. We could not pay the <b>rent</b> in Germany. We became <b>immigrants</b> and went to Italy. I finished high school and went to college in Switzerland.</p>    <p style=\"margin-bottom: 1rem;\">After college, I began writing about science. I did not reach success in an <b>instant</b>, though. At first, other scientists did not <b>approve</b> of my work. They thought I was a <b>failure</b>. Rising to the <b>rank</b> of an admired scientist was a <b>gradual</b> process. Soon, people started to notice that I was right. At last, I began to get some <b>recognition</b>.</p>    <p style=\"margin-bottom: 1rem;\">I showed how to find the <b>approximate</b> size of very big things, like stars. I also <b>detected</b> and explained the movement of very small things, like atoms. And for fun, I made a machine that could <b>refrigerate</b> food by <b>inserting</b> heat. I never <b>retired</b>. It was my <b>duty</b> to keep working. I overcame many hard times, and I will be remembered for my important works.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif;\">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Albert Einstein</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">My name is Albert Einstein. Many people know about the great things I've <b>accomplished</b>. But I had many <b>barriers</b> before I became famous.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">I was born in Germany. When I was in <b>elementary</b> school, I already knew about math and <b>statistics</b>. When I was a boy, I <b>pretended</b> to be a great scientist. I loved school, but my life at home was hard. My father lost his job, so my family lived in <b>poverty</b>. We could not pay the <b>rent</b> in Germany. We became <b>immigrants</b> and went to Italy. I finished high school and went to college in Switzerland.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After college, I began writing about science. I did not reach success in an <b>instant</b>, though. At first, other scientists did not <b>approve</b> of my work. They thought I was a <b>failure</b>. Rising to the <b>rank</b> of an admired scientist was a <b>gradual</b> process. Soon, people started to notice that I was right. At last, I began to get some <b>recognition</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">I showed how to find the <b>approximate</b> size of very big things, like stars. I also <b>detected</b> and explained the movement of very small things, like atoms. And for fun, I made a machine that could <b>refrigerate</b> food by <b>inserting</b> heat. I never <b>retired</b>. It was my <b>duty</b> to keep working. I overcame many hard times, and I will be remembered for my important works.</p></div>",
       "imageUrl": "/unit20_story.png",
       "sections": [
         {
@@ -196,25 +196,24 @@
               ],
               "explanation": "Tất cả các thông tin đều đúng ngoại trừ việc ông có nghĩa vụ phải nghỉ hưu. Đoạn cuối ghi rõ ràng rằng ông chưa bao giờ nghỉ hưu: \"I never retired. It was my duty to keep working.\" (Tôi chưa bao giờ nghỉ hưu. Nghĩa vụ của tôi là tiếp tục làm việc).",
               "correctAnswer": "C"
+            },
+            {
+              "id": "15",
+              "content": "<p class=\"mb-4\">Why did Albert's family live in poverty?</p>",
+              "options": [
+                "Because his father lost his job",
+                "Because they spent all their money on a new house",
+                "Because Albert refused to work at the rank of captain",
+                "Because a storm destroyed their farm"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Gia đình Albert sống trong cảnh nghèo khó vì bố của cậu bị mất việc ('Albert's family lived in poverty because his father lost his job.')."
             }
           ],
           "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec4",
-          "title": "Answer the question.",
-          "content": "",
-          "questions": [
-            {
-              "id": "15",
-              "content": "Why did Albert's family live in poverty?",
-              "explanation": "From the text.",
-              "correctAnswer": "Albert's family lived in poverty because his father lost his job."
-            }
-          ],
-          "questionType": "Đoạn văn"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit20_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Albert Einstein</h1>\n\n<p style=\"margin-bottom: 1rem;\">Tên tôi là Albert Einstein. Nhiều người biết về những điều vĩ đại mà tôi đã <b>đạt được</b>. Nhưng tôi đã có nhiều <b>rào cản</b> trước khi tôi trở nên nổi tiếng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tôi sinh ra ở Đức. Khi tôi còn học ở trường <b>tiểu học</b>, tôi đã biết về toán học và <b>thống kê</b>. Khi còn là một cậu bé, tôi đã <b>giả vờ</b> làm một nhà khoa học vĩ đại. Tôi yêu trường học, nhưng cuộc sống ở nhà của tôi rất khó khăn. Cha tôi mất việc, vì vậy gia đình tôi sống trong <b>nghèo đói</b>. Chúng tôi không thể trả tiền <b>thuê nhà</b> ở Đức. Chúng tôi trở thành những <b>người nhập cư</b> và đến Ý. Tôi học xong trung học và vào đại học ở Thụy Sĩ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau khi tốt nghiệp đại học, tôi bắt đầu viết về khoa học. Dù vậy, tôi không đạt được thành công ngay <b>lập tức</b>. Lúc đầu, các nhà khoa học khác không <b>tán thành</b> công việc của tôi. Họ nghĩ tôi là một <b>kẻ thất bại</b>. Vươn lên <b>vị trí</b> của một nhà khoa học được ngưỡng mộ là một quá trình <b>dần dần</b>. Chẳng mấy chốc, mọi người bắt đầu nhận ra rằng tôi đã đúng. Cuối cùng, tôi bắt đầu nhận được một số <b>sự công nhận</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tôi đã chỉ ra cách để tìm kích thước <b>gần đúng</b> của những thứ rất lớn, như các ngôi sao. Tôi cũng đã <b>phát hiện</b> và giải thích chuyển động của những thứ rất nhỏ, như các nguyên tử. Và để cho vui, tôi đã chế tạo một cỗ máy có thể <b>làm lạnh</b> thức ăn bằng cách <b>đưa</b> nhiệt vào. Tôi chưa bao giờ <b>nghỉ hưu</b>. Việc tiếp tục làm việc là <b>nhiệm vụ</b> của tôi. Tôi đã vượt qua nhiều khoảng thời gian khó khăn, và tôi sẽ được nhớ đến vì những công trình quan trọng của mình.</p>\n</div>"
     }
   ],
   "basicInfo": {

@@ -210,25 +210,25 @@
               "id": "16",
               "content": "I asked my mom ________ where she was going. She told me she was going ________. (aloud / nowhere)",
               "options": [
-                "aloud / nowhere",
                 "nowhere / aloud",
                 "aloud / aloud",
+                "aloud / nowhere",
                 "nowhere / nowhere"
               ],
               "explanation": "aloud (lớn tiếng) phù hợp với 'asked' (hỏi), nowhere (không đi đâu) phù hợp với 'going' (đi).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "17",
               "content": "The ________ has perfect skin without any scars or ________. (infant / wrinkles)",
               "options": [
-                "infant / wrinkles",
                 "wrinkles / infant",
                 "infant / infant",
-                "wrinkles / wrinkles"
+                "wrinkles / wrinkles",
+                "infant / wrinkles"
               ],
               "explanation": "infant (trẻ sơ sinh) có làn da hoàn hảo không có wrinkles (nếp nhăn).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "18",
@@ -246,37 +246,37 @@
               "id": "19",
               "content": "My boss asked me to ________ the image for her customers. She said it was very ________. (urgent / reproduce)",
               "options": [
-                "reproduce / urgent",
                 "urgent / reproduce",
+                "reproduce / urgent",
                 "reproduce / reproduce",
                 "urgent / urgent"
               ],
               "explanation": "reproduce (tái tạo, sao chép) hình ảnh, và việc đó rất urgent (cấp bách).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
               "content": "After I fell, I ________ on my finger where I cut it. Then my mom ________ me on the back and told me to get up. (sucked / patted)",
               "options": [
-                "sucked / patted",
                 "patted / sucked",
                 "sucked / sucked",
+                "sucked / patted",
                 "patted / patted"
               ],
               "explanation": "sucked (mút) ngón tay bị đứt, mẹ patted (vỗ nhẹ) vào lưng.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "21",
               "content": "The ________ man on television entertained viewers by saying ________. (bald / rhymes)",
               "options": [
-                "bald / rhymes",
                 "rhymes / bald",
                 "bald / bald",
-                "rhymes / rhymes"
+                "rhymes / rhymes",
+                "bald / rhymes"
               ],
               "explanation": "người đàn ông bald (hói đầu) giải trí bằng cách nói rhymes (vần điệu).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "22",
@@ -294,37 +294,37 @@
               "id": "23",
               "content": "I was scared when my big sister left me in the ________. I was afraid someone would ________ me. (wagon / kidnap)",
               "options": [
-                "wagon / kidnap",
                 "kidnap / wagon",
+                "wagon / kidnap",
                 "wagon / wagon",
                 "kidnap / kidnap"
               ],
               "explanation": "để lại trong wagon (xe kéo), sợ ai đó sẽ kidnap (bắt cóc).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
               "content": "It was such a ________ to be finished with the long exam. I was so tired afterward that I needed to take a ________. (nap / relief)",
               "options": [
-                "relief / nap",
                 "nap / relief",
                 "relief / relief",
+                "relief / nap",
                 "nap / nap"
               ],
               "explanation": "hoàn thành bài thi là một sự relief (nhẹ nhõm), quá mệt nên cần một nap (giấc ngủ ngắn).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "25",
               "content": "Nellie wrapped a ________ around her and made funny sounds. She was ________ a ghost. (imitating / blanket)",
               "options": [
-                "blanket / imitating",
                 "imitating / blanket",
                 "blanket / blanket",
-                "imitating / imitating"
+                "imitating / imitating",
+                "blanket / imitating"
               ],
               "explanation": "quấn blanket (chăn) và imitating (bắt chước) một con ma.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -334,13 +334,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Anna the Babysitter</h1>        <p style=\"margin-bottom: 1rem;\">Since her parents got a <strong>divorce</strong>, Anna has had to help her mother. In her mother's <strong>absence</strong>, Anna takes care of Grace, the baby. At first, Anna thought it was an easy job.</p>    <p style=\"margin-bottom: 1rem;\">One afternoon, Anna played with Grace. She meowed like a cat and Grace <strong>imitated</strong> her. In fact, Grace <strong>reproduced</strong> every sound that Anna made. She took her sister outside. She put Grace in the <strong>wagon</strong>, but there was <strong>nowhere</strong> for them to go. So they went back inside.</p>    <p style=\"margin-bottom: 1rem;\">Anna put the <strong>infant</strong> on the floor and went into her room. But when she came back, Grace had <strong>vanished</strong>! Anna looked everywhere, but she could not find her sister. Maybe the baby had been kidnapped! \"Where are you?\" Anna called <strong>aloud</strong>.</p>    <p style=\"margin-bottom: 1rem;\">The situation was becoming <strong>urgent</strong>. She wanted to call her mom, but she didn't want her to think Anna couldn't do the job. Anna sat down. What was she going to do?</p>    <p style=\"margin-bottom: 1rem;\">But then, Anna heard something. It was coming from her room. \"Grace?\" She got down on her knees and looked under the bed. She could see Grace's <strong>bald</strong> head. Grace had followed Anna into her room and crept under the bed.</p>    <p style=\"margin-bottom: 1rem;\">\"What a <strong>relief</strong>!\" Anna cried.</p>    <p style=\"margin-bottom: 1rem;\">She picked up her sister and patted her on the head. Her head was soft and had no <strong>wrinkles</strong>. Grace was <strong>sucking</strong> on her thumb and looked tired. So, Anna wrapped her in a <strong>blanket</strong> and sang <strong>rhymes</strong> for her. Then she put Grace in bed for a <strong>nap</strong>.</p>    <p style=\"margin-bottom: 1rem;\">After that afternoon, Anna knew that taking care of Grace was not an easy job. It takes a lot of work to take care of a baby!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Anna the Babysitter</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Since her parents got a <strong>divorce</strong>, Anna has had to help her mother. In her mother's <strong>absence</strong>, Anna takes care of Grace, the baby. At first, Anna thought it was an easy job.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One afternoon, Anna played with Grace. She meowed like a cat and Grace <strong>imitated</strong> her. In fact, Grace <strong>reproduced</strong> every sound that Anna made. She took her sister outside. She put Grace in the <strong>wagon</strong>, but there was <strong>nowhere</strong> for them to go. So they went back inside.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Anna put the <strong>infant</strong> on the floor and went into her room. But when she came back, Grace had <strong>vanished</strong>! Anna looked everywhere, but she could not find her sister. Maybe the baby had been kidnapped! \"Where are you?\" Anna called <strong>aloud</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The situation was becoming <strong>urgent</strong>. She wanted to call her mom, but she didn't want her to think Anna couldn't do the job. Anna sat down. What was she going to do?</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But then, Anna heard something. It was coming from her room. \"Grace?\" She got down on her knees and looked under the bed. She could see Grace's <strong>bald</strong> head. Grace had followed Anna into her room and crept under the bed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"What a <strong>relief</strong>!\" Anna cried.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">She picked up her sister and patted her on the head. Her head was soft and had no <strong>wrinkles</strong>. Grace was <strong>sucking</strong> on her thumb and looked tired. So, Anna wrapped her in a <strong>blanket</strong> and sang <strong>rhymes</strong> for her. Then she put Grace in bed for a <strong>nap</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After that afternoon, Anna knew that taking care of Grace was not an easy job. It takes a lot of work to take care of a baby!</p></div>",
       "imageUrl": "/unit10_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -402,12 +401,12 @@
               "explanation": "Đáp án: False. Theo đoạn 7, việc Anna hát những bài vần điệu (sang rhymes) là để ru Grace ngủ ('put Grace in bed for a nap'), chứ không phải là để tìm bé nhanh hơn. Do đó nhận định này sai.",
               "correctAnswer": "False"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -457,9 +456,11 @@
               "explanation": "Đáp án: So she could take a nap. Ở đoạn 7, tác giả viết: 'Anna wrapped her in a blanket... Then she put Grace in bed for a nap.' Việc quấn chăn là để chuẩn bị cho Grace có một giấc ngủ trưa ngoan ngoãn.",
               "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit10_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Anna người giữ trẻ</h1>\n\n<p style=\"margin-bottom: 1rem;\">Kể từ khi bố mẹ cô <strong>ly hôn</strong>, Anna đã phải giúp đỡ mẹ cô. Trong <strong>sự vắng mặt</strong> của mẹ, Anna chăm sóc Grace, em bé nhỏ. Lúc đầu, Anna nghĩ rằng đó là một công việc dễ dàng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một buổi chiều, Anna chơi với Grace. Cô kêu meo meo như một con mèo và Grace <strong>bắt chước</strong> cô. Thực tế, Grace đã <strong>sao chép</strong> lại mọi âm thanh mà Anna tạo ra. Cô đưa em gái mình ra ngoài. Cô đặt Grace vào trong <strong>xe kéo</strong>, nhưng không có <strong>nơi nào</strong> để họ đi cả. Vì vậy, họ lại đi vào trong nhà.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anna đặt đứa <strong>trẻ sơ sinh</strong> lên sàn và đi vào phòng của mình. Nhưng khi cô quay lại, Grace đã <strong>biến mất</strong>! Anna tìm kiếm khắp nơi, nhưng cô không thể tìm thấy em gái mình. Có thể em bé đã bị bắt cóc! \"Em ở đâu?\" Anna gọi <strong>lớn tiếng</strong>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tình hình đang trở nên <strong>khẩn cấp</strong>. Cô muốn gọi cho mẹ, nhưng cô không muốn mẹ nghĩ rằng Anna không thể làm được công việc này. Anna ngồi xuống. Cô phải làm gì bây giờ?</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng sau đó, Anna nghe thấy tiếng gì đó. Nó phát ra từ phòng của cô. \"Grace?\" Cô quỳ gối xuống và nhìn dưới gầm giường. Cô có thể nhìn thấy cái đầu <strong>trọc</strong> của Grace. Grace đã theo Anna vào phòng và bò dưới gầm giường.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Thật là một <strong>sự nhẹ nhõm</strong>!\" Anna kêu lên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô bế em gái lên và vỗ nhẹ vào đầu em. Đầu em thật mềm mại và không có <strong>nếp nhăn</strong>. Grace đang <strong>mút</strong> ngón tay cái của mình và trông có vẻ mệt mỏi. Vì vậy, Anna quấn em trong một cái <strong>chăn</strong> và hát những <strong>bài thơ vần</strong> cho em nghe. Sau đó, cô đặt Grace vào giường cho một <strong>giấc ngủ ngắn</strong>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau buổi chiều hôm đó, Anna biết rằng chăm sóc Grace không phải là một công việc dễ dàng. Cần rất nhiều công sức để chăm sóc một em bé!</p>\n</div>"
     }
   ],
   "basicInfo": {

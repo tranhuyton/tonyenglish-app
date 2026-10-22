@@ -225,7 +225,7 @@
               "content": "",
               "options": [],
               "explanation": "\"Carbohydrates\" (tinh bột) như bánh mì và gạo cung cấp năng lượng.",
-              "correctAnswer": "CARBOHYDRATES"
+              "correctAnswer": "carbohydrates / carbohydrate"
             },
             {
               "id": "19",
@@ -239,7 +239,7 @@
               "content": "",
               "options": [],
               "explanation": "\"stung\" (bị chích, đốt) đồng nghĩa với bị đau bởi một vật nhọn.",
-              "correctAnswer": "STUNG"
+              "correctAnswer": "stung / stinging"
             },
             {
               "id": "21",
@@ -266,8 +266,8 @@
               "id": "24",
               "content": "",
               "options": [],
-              "explanation": "\"strained\" (cố sức) đồng nghĩa với việc cố gắng hết sức.",
-              "correctAnswer": "STRAINED"
+              "explanation": "was sick for a long time đồng nghĩa với ailed (ốm đau).",
+              "correctAnswer": "ailed"
             },
             {
               "id": "25",
@@ -284,13 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dalton vs. the Bully</h1>        <p style=\"margin-bottom: 1rem;\">Dalton was a nice boy, but sometimes the other boys made fun of him because he was so tall and skinny. Dalton's biggest problem was Mitch. He was a <strong>bully</strong> who <strong>boasted</strong> about his strength. He <strong>quarreled</strong> with the other boys. Sometimes, if boys gave Mitch their lunch money, he would have <strong>mercy</strong> and leave them alone.</p>    <p style=\"margin-bottom: 1rem;\">One day, the boys learned about a special Middle School Olympics. Their gym class was going to be in it. Many kids were excited. But Dalton thought it sounded like <strong>torture</strong>.</p>    <p style=\"margin-bottom: 1rem;\">That morning, Dalton ate plenty of <strong>carbohydrates</strong> for breakfast. He entered the gym and looked at the <strong>dial</strong> on the clock. It was time to begin. The teacher asked if they were ready. Everyone nodded, except Dalton.</p>    <p style=\"margin-bottom: 1rem;\">\"I got stung by a bee. I need to see the nurse.\" said Dalton. He made it up so he wouldn't have to play.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't believe you. Get ready to play,\" responded the coach.</p>    <p style=\"margin-bottom: 1rem;\">First, they <strong>wrestled</strong>. Then they jumped, <strong>crawled</strong> and played other games. But Mitch was <strong>dominant</strong> in every event.</p>    <p style=\"margin-bottom: 1rem;\">They <strong>strained</strong> all morning to <strong>defeat</strong> him. By lunch, they were <strong>sore</strong>. Their entire bodies <strong>ailed</strong> them. They thought about how to win. They knew the last game of the day was volleyball. Kids who used to be Dalton's <strong>rivals</strong> became his allies. They wanted him to help them beat Mitch. Dalton was going to be Mitch's <strong>opponent</strong>.</p>    <p style=\"margin-bottom: 1rem;\">The game started. Every time Mitch tried to hit the ball over the net, Dalton stopped it. Finally, Mitch used all of his strength. But the ball <strong>bounced</strong> off Dalton's hands and back into Mitch's face! Finally Mitch was <strong>defeated</strong>.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dalton vs. the Bully</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Dalton was a nice boy, but sometimes the other boys made fun of him because he was so tall and skinny. Dalton's biggest problem was Mitch. He was a <strong>bully</strong> who <strong>boasted</strong> about his strength. He <strong>quarreled</strong> with the other boys. Sometimes, if boys gave Mitch their lunch money, he would have <strong>mercy</strong> and leave them alone.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, the boys learned about a special Middle School Olympics. Their gym class was going to be in it. Many kids were excited. But Dalton thought it sounded like <strong>torture</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">That morning, Dalton ate plenty of <strong>carbohydrates</strong> for breakfast. He entered the gym and looked at the <strong>dial</strong> on the clock. It was time to begin. The teacher asked if they were ready. Everyone nodded, except Dalton.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I got stung by a bee. I need to see the nurse.\" said Dalton. He made it up so he wouldn't have to play.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I don't believe you. Get ready to play,\" responded the coach.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">First, they <strong>wrestled</strong>. Then they jumped, <strong>crawled</strong> and played other games. But Mitch was <strong>dominant</strong> in every event.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They <strong>strained</strong> all morning to <strong>defeat</strong> him. By lunch, they were <strong>sore</strong>. Their entire bodies <strong>ailed</strong> them. They thought about how to win. They knew the last game of the day was volleyball. Kids who used to be Dalton's <strong>rivals</strong> became his allies. They wanted him to help them beat Mitch. Dalton was going to be Mitch's <strong>opponent</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The game started. Every time Mitch tried to hit the ball over the net, Dalton stopped it. Finally, Mitch used all of his strength. But the ball <strong>bounced</strong> off Dalton's hands and back into Mitch's face! Finally Mitch was <strong>defeated</strong>.</p></div>",
       "imageUrl": "/unit9_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -340,7 +339,7 @@
                 "False"
               ],
               "explanation": "Đáp án đúng theo bài đọc là True. Theo đoạn 6: 'First, they wrestled... But Mitch was dominant in every event.' Do đó Mitch chiếm ưu thế ở mọi phần thi, bao gồm cả môn vật.",
-              "correctAnswer": "True"
+              "correctAnswer": "False"
             },
             {
               "id": "31",
@@ -352,12 +351,12 @@
               "explanation": "Đáp án: True. Đoạn 7 viết: 'By lunch, they were sore.' Nghĩa là đến giờ ăn trưa, cả người họ đều cảm thấy đau nhức. Thông tin này hoàn toàn chính xác.",
               "correctAnswer": "True"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -407,9 +406,11 @@
               "explanation": "Đáp án: Defeat him. Trong đoạn 7, tác giả viết: 'They wanted him to help them beat Mitch.' Cụm từ beat Mitch đồng nghĩa với defeat him, tức là họ muốn đánh bại Mitch.",
               "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit9_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dalton và kẻ bắt nạt</h1>\n\n<p style=\"margin-bottom: 1rem;\">Dalton là một cậu bé tốt bụng, nhưng đôi khi những cậu bé khác hay trêu chọc cậu vì cậu quá cao và gầy. Vấn đề lớn nhất của Dalton là Mitch. Cậu ta là một <strong>kẻ bắt nạt</strong> thường <strong>khoe khoang</strong> về sức mạnh của mình. Cậu ta hay <strong>gây sự</strong> với những cậu bé khác. Đôi khi, nếu các cậu bé đưa tiền ăn trưa cho Mitch, cậu ta sẽ rủ <strong>lòng thương xót</strong> và để cho họ yên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, các cậu bé biết được về một Thế vận hội đặc biệt dành cho trường Trung học cơ sở. Lớp thể dục của họ sẽ tham gia vào đó. Nhiều học sinh rất hào hứng. Nhưng Dalton thì nghĩ điều đó nghe giống như một <strong>sự tra tấn</strong>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sáng hôm đó, Dalton đã ăn rất nhiều <strong>tinh bột</strong> cho bữa sáng. Cậu bước vào phòng tập thể dục và nhìn vào <strong>mặt đồng hồ</strong>. Đã đến giờ bắt đầu. Thầy giáo hỏi xem họ đã sẵn sàng chưa. Mọi người đều gật đầu, ngoại trừ Dalton.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Em bị ong đốt. Em cần đi gặp y tá.\" Dalton nói. Cậu ta đã bịa ra chuyện đó để không phải chơi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi không tin em. Chuẩn bị chơi đi,\" huấn luyện viên đáp lại.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đầu tiên, họ <strong>đấu vật</strong>. Sau đó họ nhảy, <strong>bò</strong> và chơi các trò chơi khác. Nhưng Mitch luôn <strong>vượt trội</strong> trong mọi nội dung.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ đã <strong>cố gắng hết sức</strong> suốt buổi sáng để <strong>đánh bại</strong> cậu ta. Đến bữa trưa, họ đều <strong>đau nhức</strong>. Toàn bộ cơ thể của họ <strong>đau ốm</strong> rã rời. Họ suy nghĩ cách làm sao để chiến thắng. Họ biết trò chơi cuối cùng của ngày là bóng chuyền. Những đứa trẻ từng là <strong>đối thủ</strong> của Dalton đã trở thành đồng minh của cậu. Họ muốn cậu giúp họ đánh bại Mitch. Dalton sẽ trở thành <strong>đối thủ</strong> của Mitch.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trận đấu bắt đầu. Mỗi khi Mitch cố gắng đánh quả bóng qua lưới, Dalton đều chặn nó lại. Cuối cùng, Mitch đã dùng toàn bộ sức lực của mình. Nhưng quả bóng đã <strong>nảy bật</strong> ra khỏi tay của Dalton và đập ngược lại vào mặt Mitch! Cuối cùng Mitch đã <strong>bị đánh bại</strong>.</p>\n</div>"
     }
   ],
   "basicInfo": {

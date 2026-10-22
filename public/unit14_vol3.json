@@ -284,14 +284,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Apprentice</h1>        <p style=\"margin-bottom: 1rem;\">There was once a small restaurant. People said that the best <strong>chef</strong> in the world worked there. But the <strong>chef</strong> was a <strong>horrible</strong> person to work for. He was <strong>impolite</strong> and <strong>scolded</strong> his workers all the time.</p>    <p style=\"margin-bottom: 1rem;\">The <strong>chef</strong> had a young <strong>apprentice</strong>. The <strong>apprentice</strong>'s first <strong>priority</strong> was to make the best food in the world. He was happy to have a good teacher, but he didn't like the <strong>chef</strong>. The boy was a <strong>diligent</strong> worker, but the <strong>chef</strong> <strong>scolded</strong> him more than anyone else.</p>    <p style=\"margin-bottom: 1rem;\">Then one day, the <strong>chef</strong> got great news. The <strong>emperor</strong> wanted to have dinner there that night. He was very excited. He was working very fast, and he made a mistake. He cut his hand with a knife, and it started to <strong>bleed</strong>. The <strong>apprentice</strong> gave him a <strong>bandage</strong>, but the <strong>chef</strong> still couldn't cook.</p>    <p style=\"margin-bottom: 1rem;\">The <strong>chef</strong> started to <strong>panic</strong>. The <strong>apprentice</strong> tried to <strong>assure</strong> him. \"Everything will be OK,\" he said. But the <strong>chef</strong> was still afraid. Then they started to work together. They began to <strong>bond</strong>. The <strong>chef</strong> told the <strong>apprentice</strong> what to do. The boy cooked a great meal.</p>    <p style=\"margin-bottom: 1rem;\">As soon as they finished, the <strong>emperor</strong> arrived. He wore a beautiful <strong>robe</strong> made of soft <strong>fibers</strong>. He also had a <strong>massive</strong> <strong>crown</strong>. Everyone in the restaurant <strong>kneeled</strong> when the <strong>emperor</strong> came in. The <strong>chef</strong> and the boy brought out his food. The <strong>emperor</strong> was used to luxuries. Would he like the food?</p>    <p style=\"margin-bottom: 1rem;\">The <strong>emperor</strong> loved the food. After his <strong>departure</strong>, the <strong>chef</strong> was very proud and very thankful to his new friend, the <strong>apprentice</strong>.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Apprentice</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There was once a small restaurant. People said that the best <strong>chef</strong> in the world worked there. But the <strong>chef</strong> was a <strong>horrible</strong> person to work for. He was <strong>impolite</strong> and <strong>scolded</strong> his workers all the time.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <strong>chef</strong> had a young <strong>apprentice</strong>. The <strong>apprentice</strong>'s first <strong>priority</strong> was to make the best food in the world. He was happy to have a good teacher, but he didn't like the <strong>chef</strong>. The boy was a <strong>diligent</strong> worker, but the <strong>chef</strong> <strong>scolded</strong> him more than anyone else.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Then one day, the <strong>chef</strong> got great news. The <strong>emperor</strong> wanted to have dinner there that night. He was very excited. He was working very fast, and he made a mistake. He cut his hand with a knife, and it started to <strong>bleed</strong>. The <strong>apprentice</strong> gave him a <strong>bandage</strong>, but the <strong>chef</strong> still couldn't cook.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <strong>chef</strong> started to <strong>panic</strong>. The <strong>apprentice</strong> tried to <strong>assure</strong> him. \"Everything will be OK,\" he said. But the <strong>chef</strong> was still afraid. Then they started to work together. They began to <strong>bond</strong>. The <strong>chef</strong> told the <strong>apprentice</strong> what to do. The boy cooked a great meal.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">As soon as they finished, the <strong>emperor</strong> arrived. He wore a beautiful <strong>robe</strong> made of soft <strong>fibers</strong>. He also had a <strong>massive</strong> <strong>crown</strong>. Everyone in the restaurant <strong>kneeled</strong> when the <strong>emperor</strong> came in. The <strong>chef</strong> and the boy brought out his food. The <strong>emperor</strong> was used to luxuries. Would he like the food?</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <strong>emperor</strong> loved the food. After his <strong>departure</strong>, the <strong>chef</strong> was very proud and very thankful to his new friend, the <strong>apprentice</strong>.</p></div>",
       "imageUrl": "/unit14_v3_story.png",
       "sections": [
         {
           "id": "sec_story_tf",
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -300,8 +299,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Theo nội dung bài đọc."
+              "explanation": "Theo nội dung bài đọc.",
+              "correctAnswer": "True"
             },
             {
               "id": "27",
@@ -310,8 +309,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Theo nội dung bài đọc."
+              "explanation": "Theo nội dung bài đọc.",
+              "correctAnswer": "False"
             },
             {
               "id": "28",
@@ -320,8 +319,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Theo nội dung bài đọc."
+              "explanation": "Theo nội dung bài đọc.",
+              "correctAnswer": "True"
             },
             {
               "id": "29",
@@ -330,8 +329,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Theo nội dung bài đọc."
+              "explanation": "Theo nội dung bài đọc.",
+              "correctAnswer": "True"
             },
             {
               "id": "30",
@@ -340,8 +339,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Theo nội dung bài đọc."
+              "explanation": "Theo nội dung bài đọc.",
+              "correctAnswer": "False"
             },
             {
               "id": "31",
@@ -350,16 +349,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Theo nội dung bài đọc."
+              "explanation": "Theo nội dung bài đọc.",
+              "correctAnswer": "True"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "id": "sec_story_mc",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -409,9 +408,11 @@
               "explanation": "Đầu bếp rất tệ vì ông thường xuyên mắng chửi nhân viên.",
               "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit14_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Người học việc hữu ích</h1>\n\n<p style=\"margin-bottom: 1rem;\">Ngày xưa có một nhà hàng nhỏ. Mọi người nói rằng <b>đầu bếp</b> giỏi nhất thế giới làm việc ở đó. Nhưng vị <b>đầu bếp</b> này là một người <b>khủng khiếp</b> để làm việc cùng. Ông ta <b>bất lịch sự</b> và <b>mắng mỏ</b> nhân viên của mình mọi lúc.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vị <b>đầu bếp</b> có một <b>người học việc</b> trẻ tuổi. <b>Ưu tiên</b> hàng đầu của <b>người học việc</b> là làm ra những món ăn ngon nhất thế giới. Cậu rất vui khi có một người thầy giỏi, nhưng cậu không thích vị <b>đầu bếp</b> này. Cậu bé là một người làm việc <b>siêng năng</b>, nhưng vị <b>đầu bếp</b> lại <b>mắng mỏ</b> cậu nhiều hơn bất kỳ ai khác.</p>\n\n<p style=\"margin-bottom: 1rem;\">Thế rồi một ngày nọ, vị <b>đầu bếp</b> nhận được tin tuyệt vời. <b>Hoàng đế</b> muốn dùng bữa tối ở đó vào tối hôm ấy. Ông ta rất hào hứng. Ông ta làm việc rất nhanh, và đã mắc một sai lầm. Ông ta vô tình dùng dao cắt vào tay mình, và nó bắt đầu <b>chảy máu</b>. <b>Người học việc</b> đưa cho ông một miếng <b>băng gạc</b>, nhưng <b>đầu bếp</b> vẫn không thể nấu ăn được.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vị <b>đầu bếp</b> bắt đầu <b>hoảng loạn</b>. <b>Người học việc</b> cố gắng <b>trấn an</b> ông. \"Mọi chuyện sẽ ổn thôi ạ,\" cậu nói. Nhưng vị <b>đầu bếp</b> vẫn lo sợ. Sau đó họ bắt đầu làm việc cùng nhau. Họ bắt đầu <b>gắn kết</b>. Vị <b>đầu bếp</b> bảo <b>người học việc</b> những gì cần làm. Cậu bé đã nấu một bữa ăn tuyệt vời.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngay khi họ làm xong, <b>hoàng đế</b> đến. Ngài mặc một chiếc <b>áo choàng</b> tuyệt đẹp làm từ những <b>sợi</b> vải mềm mại. Ngài cũng đội một chiếc <b>vương miện</b> <b>to lớn</b>. Mọi người trong nhà hàng đều <b>quỳ gối</b> khi <b>hoàng đế</b> bước vào. <b>Đầu bếp</b> và cậu bé mang thức ăn ra. <b>Hoàng đế</b> đã quen với những thứ xa xỉ. Liệu ngài ấy có thích đồ ăn này không?</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Hoàng đế</b> rất yêu thích món ăn. Sau khi ngài <b>rời đi</b>, <b>đầu bếp</b> rất tự hào và vô cùng biết ơn người bạn mới của mình, <b>người học việc</b>.</p>\n</div>"
     }
   ],
   "basicInfo": {

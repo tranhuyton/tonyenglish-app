@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 17: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -558,7 +552,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">\"I Didn't Do It!\"</h1>        <p style=\"margin-bottom: 1rem;\">Billy was in big trouble. The day before, a <b>donor</b> gave the school a painting with a sports <b>theme</b>. It showed a <b>referee</b> congratulating two athletes. The principal hung the painting in front of the office, hoping that it would be a <b>stimulus</b> for students to play sports. The next morning, however, the painting was destroyed. There was <b>graffiti</b> on it, and it had many holes in it. The worst part was that one of Billy's <b>fellow</b> students said she thought she saw Billy do it!</p>    <p style=\"margin-bottom: 1rem;\">But Billy didn't do it. The principal called Billy's parents and said, \"Billy won't tell us the truth. He's a <b>chronic</b> liar, and he ruined the painting. If you don't pay for it, we'll <b>terminate</b> his education here.\"</p>    <p style=\"margin-bottom: 1rem;\">Billy's parents didn't have enough money to pay for the painting and for his <b>tuition</b>. But Billy's parents had an idea. That afternoon, they went to see Mr. Meyers, an <b>attorney</b>.</p>    <p style=\"margin-bottom: 1rem;\">\"Mr. Meyers, my son has been <b>implicated</b> in a crime he says he didn't do,\" Billy's father said. \"Everybody believes the <b>gossip</b>. Even some of our own <b>kin</b> think he did it!\"</p>    <p style=\"margin-bottom: 1rem;\">\"I believe you. My <b>suspicion</b> is that the tape from the security cameras will show who really did it,\" said Mr. Meyers.</p>    <p style=\"margin-bottom: 1rem;\">The next day, Mr. Meyers received a packet with the videotape from the school. It showed another student who resembled Billy walking up to the painting and writing on it. Then the student took a knife by the <b>shaft</b> and started to <b>stab</b> large holes in it. Finally, he <b>severed</b> the rope that held up the painting, and it fell to the floor.</p>    <p style=\"margin-bottom: 1rem;\">Mr. Meyers showed the tape to the principal. \"Clearly, that's not Billy,\" he said. \"This boy is actually responsible and needs some <b>discipline</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">Billy was happy that someone believed him. He said to Mr. Meyers, \"When I <b>graduate</b> and go to university, I will major in law, so I can be a <b>guardian</b> of justice like you!\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">\"I Didn't Do It!\"</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Billy was in big trouble. The day before, a <b>donor</b> gave the school a painting with a sports <b>theme</b>. It showed a <b>referee</b> congratulating two athletes. The principal hung the painting in front of the office, hoping that it would be a <b>stimulus</b> for students to play sports. The next morning, however, the painting was destroyed. There was <b>graffiti</b> on it, and it had many holes in it. The worst part was that one of Billy's <b>fellow</b> students said she thought she saw Billy do it!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But Billy didn't do it. The principal called Billy's parents and said, \"Billy won't tell us the truth. He's a <b>chronic</b> liar, and he ruined the painting. If you don't pay for it, we'll <b>terminate</b> his education here.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Billy's parents didn't have enough money to pay for the painting and for his <b>tuition</b>. But Billy's parents had an idea. That afternoon, they went to see Mr. Meyers, an <b>attorney</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Mr. Meyers, my son has been <b>implicated</b> in a crime he says he didn't do,\" Billy's father said. \"Everybody believes the <b>gossip</b>. Even some of our own <b>kin</b> think he did it!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I believe you. My <b>suspicion</b> is that the tape from the security cameras will show who really did it,\" said Mr. Meyers.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next day, Mr. Meyers received a packet with the videotape from the school. It showed another student who resembled Billy walking up to the painting and writing on it. Then the student took a knife by the <b>shaft</b> and started to <b>stab</b> large holes in it. Finally, he <b>severed</b> the rope that held up the painting, and it fell to the floor.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Mr. Meyers showed the tape to the principal. \"Clearly, that's not Billy,\" he said. \"This boy is actually responsible and needs some <b>discipline</b>.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Billy was happy that someone believed him. He said to Mr. Meyers, \"When I <b>graduate</b> and go to university, I will major in law, so I can be a <b>guardian</b> of justice like you!\"</p></div>",
       "imageUrl": "/unit17_vol5_story.png",
       "sections": [
         {
@@ -628,37 +622,37 @@
               "id": "46",
               "content": "What did the principal say about Billy?",
               "options": [
-                "That he was a chronic liar",
                 "That he was a guardian",
+                "That he was a chronic liar",
                 "That he was an attorney",
                 "That he had a lot of discipline"
               ],
               "explanation": "Hiệu trưởng nói rằng Billy là một kẻ nói dối mãn tính (chronic liar).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "47",
               "content": "What was Mr. Meyers’ suspicion?",
               "options": [
-                "That the tape from the security cameras would show who really did the crime",
                 "That Billy was guilty",
                 "That the graffiti was beautiful",
+                "That the tape from the security cameras would show who really did the crime",
                 "That the tuition was too high"
               ],
               "explanation": "Sự nghi ngờ (suspicion) của ông Meyers là đoạn băng từ camera an ninh sẽ cho thấy ai thực sự làm việc đó.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "48",
               "content": "What did the videotape show?",
               "options": [
-                "Another boy leaving graffiti, stabbing it, and severing the string",
                 "Billy doing the crime",
                 "A donor giving the painting",
-                "A referee in a game"
+                "A referee in a game",
+                "Another boy leaving graffiti, stabbing it, and severing the string"
               ],
               "explanation": "Đoạn băng cho thấy một cậu bé khác đang vẽ bậy, đâm (stab) bức tranh và cắt đứt (sever) sợi dây.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "49",
@@ -676,18 +670,26 @@
               "id": "50",
               "content": "Why did Billy say he wanted his major to be law when he went to university?",
               "options": [
-                "So he could be a guardian of justice like Mr. Meyers",
                 "So he could be a referee",
+                "So he could be a guardian of justice like Mr. Meyers",
                 "So he could stop gossip",
                 "So he could sever the rope"
               ],
               "explanation": "Billy muốn học luật để có thể trở thành người bảo vệ công lý (guardian of justice) giống như ông Meyers.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit17_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">\"Tôi không làm điều đó!\"</h1>\n\n<p style=\"margin-bottom: 1rem;\">Billy đang gặp rắc rối lớn. Ngày hôm trước, một <b>người hiến tặng</b> đã tặng cho trường một bức tranh với <b>chủ đề</b> thể thao. Bức tranh vẽ một <b>trọng tài</b> đang chúc mừng hai vận động viên. Hiệu trưởng đã treo bức tranh trước văn phòng, hy vọng rằng nó sẽ là một <b>sự khích lệ</b> để học sinh chơi thể thao. Tuy nhiên, sáng hôm sau, bức tranh đã bị phá hủy. Có những <b>hình vẽ bậy</b> trên đó, và nó có nhiều lỗ thủng. Tồi tệ nhất là một trong những <b>bạn học cùng lớp</b> của Billy nói rằng cô ấy nghĩ mình đã nhìn thấy Billy làm điều đó!</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng Billy đã không làm điều đó. Hiệu trưởng gọi điện cho bố mẹ Billy và nói, \"Billy sẽ không nói cho chúng tôi sự thật. Cậu ta là một kẻ nói dối <b>kinh niên</b>, và cậu ta đã làm hỏng bức tranh. Nếu anh chị không đền bù cho nó, chúng tôi sẽ <b>chấm dứt</b> việc học của cậu ta ở đây.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Bố mẹ Billy không có đủ tiền để trả cho bức tranh và <b>học phí</b> của cậu. Nhưng bố mẹ Billy có một ý tưởng. Chiều hôm đó, họ đến gặp ông Meyers, một <b>luật sư</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Ông Meyers, con trai tôi đã <b>bị dính líu</b> vào một tội lỗi mà nó nói rằng nó không làm,\" bố của Billy nói. \"Mọi người đều tin vào <b>lời đồn đại</b>. Thậm chí một số <b>người thân</b> của chúng tôi cũng nghĩ rằng nó đã làm điều đó!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi tin anh chị. <b>Sự nghi ngờ</b> của tôi là cuộn băng từ các camera an ninh sẽ cho thấy ai thực sự đã làm điều đó,\" ông Meyers nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày hôm sau, ông Meyers nhận được một bưu kiện có cuộn băng video từ trường học. Nó cho thấy một học sinh khác trông giống Billy đang đi về phía bức tranh và viết lên đó. Sau đó, học sinh này cầm lấy <b>cán</b> của một con dao và bắt đầu <b>đâm</b> những lỗ lớn trên đó. Cuối cùng, cậu ta <b>cắt đứt</b> sợi dây treo bức tranh, và nó rơi xuống sàn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông Meyers cho hiệu trưởng xem cuộn băng. \"Rõ ràng, đó không phải là Billy,\" ông nói. \"Cậu bé này thực sự phải chịu trách nhiệm và cần một số <b>kỷ luật</b>.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Billy rất vui vì có người đã tin mình. Cậu nói với ông Meyers, \"Khi cháu <b>tốt nghiệp</b> và vào đại học, cháu sẽ học chuyên ngành luật, để cháu có thể trở thành một <b>người bảo vệ</b> công lý như chú!\"</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 17: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

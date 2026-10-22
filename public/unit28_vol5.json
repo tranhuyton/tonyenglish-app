@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 28: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -420,12 +414,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lottery</h1>        <p style=\"margin-bottom: 1rem;\">Joe was watching television when he heard a knock at the door. He thought, \"Who could that be? It's probably one of the <b>naughty</b> neighborhood children.\" Joe stood up and walked to the door. When he opened it, he saw a beautiful woman.</p>    <p style=\"margin-bottom: 1rem;\">She said, \"Good morning, Joe! I have great news. You're the <b>recipient</b> of this check for one million dollars! You won the lottery!\"</p>    <p style=\"margin-bottom: 1rem;\">Joe couldn't believe it. His mind was <b>overloaded</b> with emotions. Joe said, \"Thank you! Thank you!\"</p>    <p style=\"margin-bottom: 1rem;\">After he calmed down, Joe made a photocopy of the check in case he <b>misplaced</b> the original one. He sat and thought about what he wanted to do with the money. He didn't want to spend it in an <b>arbitrary</b> way. Joe thought, \"I know there are others who need this money more than I do. I've always loved animals, so I think I'll buy things for the zoo!\"</p>    <p style=\"margin-bottom: 1rem;\">Joe knew that the zoo was in bad shape. The cages were too small, and they weren't <b>insulated</b> from the cold. Animals couldn't <b>thrive</b> in such conditions.</p>    <p style=\"margin-bottom: 1rem;\">He took out some stationery and wrote a letter to the zoo. He offered to help the zoo buy huge cages for the large mammals and <b>reptiles</b>. He offered to buy healthy food for the <b>orangutans</b> to increase their <b>longevity</b>. He even said that he would buy new glass walls for the <b>aquarium</b> because the old ones were cracked.</p>    <p style=\"margin-bottom: 1rem;\">Joe's act of <b>philanthropy</b> <b>intrigued</b> the zookeeper. He <b>probed</b> Joe to learn why he spent his money to <b>improve</b> the zoo. It wasn't a social <b>convention</b> for a person to be so <b>gracious</b>.</p>    <p style=\"margin-bottom: 1rem;\">Joe told the zookeeper, \"I know it's not the <b>norm</b>, but my <b>ultimate</b> decision to help these animals is better than anything I could have done for myself. If I ever write an <b>autobiography</b>, I will write that this was the happiest day of my life.\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lottery</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Joe was watching television when he heard a knock at the door. He thought, \"Who could that be? It's probably one of the <b>naughty</b> neighborhood children.\" Joe stood up and walked to the door. When he opened it, he saw a beautiful woman.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">She said, \"Good morning, Joe! I have great news. You're the <b>recipient</b> of this check for one million dollars! You won the lottery!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Joe couldn't believe it. His mind was <b>overloaded</b> with emotions. Joe said, \"Thank you! Thank you!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After he calmed down, Joe made a photocopy of the check in case he <b>misplaced</b> the original one. He sat and thought about what he wanted to do with the money. He didn't want to spend it in an <b>arbitrary</b> way. Joe thought, \"I know there are others who need this money more than I do. I've always loved animals, so I think I'll buy things for the zoo!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Joe knew that the zoo was in bad shape. The cages were too small, and they weren't <b>insulated</b> from the cold. Animals couldn't <b>thrive</b> in such conditions.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He took out some stationery and wrote a letter to the zoo. He offered to help the zoo buy huge cages for the large mammals and <b>reptiles</b>. He offered to buy healthy food for the <b>orangutans</b> to increase their <b>longevity</b>. He even said that he would buy new glass walls for the <b>aquarium</b> because the old ones were cracked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Joe's act of <b>philanthropy</b> <b>intrigued</b> the zookeeper. He <b>probed</b> Joe to learn why he spent his money to <b>improve</b> the zoo. It wasn't a social <b>convention</b> for a person to be so <b>gracious</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Joe told the zookeeper, \"I know it's not the <b>norm</b>, but my <b>ultimate</b> decision to help these animals is better than anything I could have done for myself. If I ever write an <b>autobiography</b>, I will write that this was the happiest day of my life.\"</p></div>",
       "imageUrl": "/unit28_vol5_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -502,37 +496,37 @@
               "id": "42",
               "content": "Why did Joe take out stationery?",
               "options": [
-                "He took out some stationery to write a letter to the zoo.",
                 "He took out some stationery to write a book.",
+                "He took out some stationery to write a letter to the zoo.",
                 "He took out some stationery to draw a picture.",
                 "He took out some stationery to write a check."
               ],
               "explanation": "Trong đoạn 6 có câu He took out some stationery and wrote a letter to the zoo. Anh ấy lấy giấy bút ra với mục đích viết một lá thư gửi cho sở thú. Chọn đáp án A.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "43",
               "content": "What did Joe improve to help the orangutans increase their longevity?",
               "options": [
-                "He bought healthy food for them.",
                 "He bought new toys for them.",
                 "He bought bigger trees for them.",
+                "He bought healthy food for them.",
                 "He bought new cages for them."
               ],
               "explanation": "Đoạn 6 cũng viết He offered to buy healthy food for the orangutans to increase their longevity. Anh ấy muốn mua thức ăn tốt cho đười ươi để giúp chúng sống lâu hơn. Đáp án đúng là A nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "44",
               "content": "What was the purpose of the zookeeper wanting to probe Joe with questions?",
               "options": [
-                "He probed Joe to learn why he spent his money on the zoo instead of on himself.",
                 "He probed Joe to see if he was rich.",
                 "He probed Joe to ask for more money.",
-                "He probed Joe to sell him a ticket."
+                "He probed Joe to sell him a ticket.",
+                "He probed Joe to learn why he spent his money on the zoo instead of on himself."
               ],
               "explanation": "Ở đoạn 7, nhân viên sở thú đã gạn hỏi: He probed Joe to learn why he spent his money to improve the zoo. Nhân viên sở thú muốn biết tại sao Joe lại dùng tiền của mình để cải tạo sở thú. Chọn đáp án A nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "45",
@@ -549,7 +543,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<img src=\"/unit28_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Xổ Số</h1>\n\n<p style=\"margin-bottom: 1rem;\">Joe đang xem tivi thì nghe thấy tiếng gõ cửa. Anh ấy nghĩ, \"Đó có thể là ai được nhỉ? Có lẽ là một trong những đứa trẻ <b>nghịch ngợm</b> trong xóm.\" Joe đứng dậy và bước ra cửa. Khi mở cửa, anh nhìn thấy một người phụ nữ xinh đẹp.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô ấy nói, \"Chào buổi sáng, Joe! Tôi có một tin tuyệt vời. Bạn là <b>người nhận</b> tấm séc trị giá một triệu đô la này! Bạn đã trúng xổ số!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Joe không thể tin được. Tâm trí anh ấy bị <b>quá tải</b> bởi những cảm xúc. Joe nói, \"Cảm ơn bạn! Cảm ơn bạn!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau khi bình tĩnh lại, Joe đi photo tấm séc phòng trường hợp anh <b>để quên</b> bản gốc. Anh ấy ngồi và suy nghĩ về việc mình muốn làm gì với số tiền đó. Anh ấy không muốn tiêu nó một cách <b>tùy tiện</b>. Joe nghĩ, \"Tôi biết có những người khác cần số tiền này hơn tôi. Tôi luôn yêu động vật, vì vậy tôi nghĩ tôi sẽ mua đồ cho sở thú!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Joe biết rằng sở thú đang trong tình trạng tồi tệ. Những chiếc lồng quá nhỏ và chúng không được <b>cách nhiệt</b> với cái lạnh. Các loài động vật không thể <b>phát triển mạnh</b> trong những điều kiện như vậy.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh ấy lấy ra một vài tờ giấy viết thư và viết một bức thư cho sở thú. Anh ấy đề nghị giúp sở thú mua những chiếc lồng khổng lồ cho các loài động vật có vú lớn và <b>bò sát</b>. Anh ấy đề nghị mua thức ăn lành mạnh cho <b>đười ươi</b> để tăng <b>tuổi thọ</b> của chúng. Anh ấy thậm chí còn nói rằng mình sẽ mua những bức tường kính mới cho <b>thủy cung</b> vì những cái cũ đã bị nứt.</p>\n\n<p style=\"margin-bottom: 1rem;\">Hành động <b>từ thiện</b> của Joe đã <b>gây tò mò</b> cho người trông coi sở thú. Ông ấy đã <b>thăm dò</b> Joe để tìm hiểu lý do tại sao anh ấy lại tiêu tiền của mình để <b>cải thiện</b> sở thú. Việc một người <b>tử tế</b> như vậy không phải là một <b>tục lệ</b> xã hội.</p>\n\n<p style=\"margin-bottom: 1rem;\">Joe nói với người trông coi sở thú, \"Tôi biết đó không phải là <b>tiêu chuẩn</b>, nhưng quyết định <b>cuối cùng</b> của tôi là giúp đỡ những con vật này còn tốt hơn bất cứ điều gì tôi có thể làm cho bản thân mình. Nếu có bao giờ tôi viết một cuốn <b>tự truyện</b>, tôi sẽ viết rằng đây là ngày hạnh phúc nhất trong đời tôi.\"</p>\\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 28: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

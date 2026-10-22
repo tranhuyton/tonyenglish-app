@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 29: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -418,12 +412,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Shortcut</h1>        <p style=\"margin-bottom: 1rem;\">A truck driver was driving cargo from the <b>outback</b> to the coast. His load was <b>comprised</b> of many types of <b>ore</b>. He needed a huge truck to carry its <b>bulk</b> to a ship waiting at a <b>pier</b> on the country’s eastern coast. At the border between two counties, he’d have to pay a <b>tariff</b> on the cargo. However, he could keep his money if he avoided the station at the border. He worried about getting in trouble for not paying the <b>tariff</b>, but the thought of extra money <b>outweighed</b> this concern.</p>    <p style=\"margin-bottom: 1rem;\">He took out his road map. To his surprise, it <b>depicted</b> a small road that had a <b>dual</b> advantage. It not only avoided the border station but also was a shorter route to the coast. He decided to take the <b>shortcut</b>.</p>    <p style=\"margin-bottom: 1rem;\">However, along his journey, he soon ran into problems. First, he had to cross a small wooden bridge. His truck weighed too much for the bridge. It was <b>analogous</b> to an elephant trying to stand on a tree branch. The bridge started to break as the truck crossed, and the trailer <b>tilted</b> to the right. Fortunately, the truck made it safely across, but most of the <b>ore</b> fell into the river below.</p>    <p style=\"margin-bottom: 1rem;\">Next, it was a very hot day. The <b>thermometer</b> read over 100 degrees <b>Fahrenheit</b>. The truck’s engine became too hot, so the driver parked it in the shade of a <b>grove</b> of trees until it cooled down.</p>    <p style=\"margin-bottom: 1rem;\">Later, he took a wrong turn. He stopped and took out his <b>binoculars</b>. He scanned his surroundings and eventually discovered a landmark that led him back to the proper route.</p>    <p style=\"margin-bottom: 1rem;\">Finally, he arrived at the <b>pier</b>, but the ship wasn’t there. When he asked about the ship’s <b>whereabouts</b>, a man said that it had left thirty minutes ago. He had not <b>fulfilled</b> his duty. He realized then the <b>paradox</b> of the <b>shortcut</b>. The shortest route can be the longest, and <b>vice versa</b>, a long route may be the fastest.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Shortcut</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A truck driver was driving cargo from the <b>outback</b> to the coast. His load was <b>comprised</b> of many types of <b>ore</b>. He needed a huge truck to carry its <b>bulk</b> to a ship waiting at a <b>pier</b> on the country’s eastern coast. At the border between two counties, he’d have to pay a <b>tariff</b> on the cargo. However, he could keep his money if he avoided the station at the border. He worried about getting in trouble for not paying the <b>tariff</b>, but the thought of extra money <b>outweighed</b> this concern.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He took out his road map. To his surprise, it <b>depicted</b> a small road that had a <b>dual</b> advantage. It not only avoided the border station but also was a shorter route to the coast. He decided to take the <b>shortcut</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">However, along his journey, he soon ran into problems. First, he had to cross a small wooden bridge. His truck weighed too much for the bridge. It was <b>analogous</b> to an elephant trying to stand on a tree branch. The bridge started to break as the truck crossed, and the trailer <b>tilted</b> to the right. Fortunately, the truck made it safely across, but most of the <b>ore</b> fell into the river below.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Next, it was a very hot day. The <b>thermometer</b> read over 100 degrees <b>Fahrenheit</b>. The truck’s engine became too hot, so the driver parked it in the shade of a <b>grove</b> of trees until it cooled down.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Later, he took a wrong turn. He stopped and took out his <b>binoculars</b>. He scanned his surroundings and eventually discovered a landmark that led him back to the proper route.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Finally, he arrived at the <b>pier</b>, but the ship wasn’t there. When he asked about the ship’s <b>whereabouts</b>, a man said that it had left thirty minutes ago. He had not <b>fulfilled</b> his duty. He realized then the <b>paradox</b> of the <b>shortcut</b>. The shortest route can be the longest, and <b>vice versa</b>, a long route may be the fastest.</p></div>",
       "imageUrl": "/unit29_vol6_story.png",
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -488,37 +482,37 @@
               "id": "36",
               "content": "What was the truck crossing the bridge analogous to?",
               "options": [
-                "It was analogous to an elephant trying to stand on a tree branch.",
                 "It was analogous to a bird flying in the sky.",
+                "It was analogous to an elephant trying to stand on a tree branch.",
                 "It was analogous to a fish swimming in the sea.",
                 "It was analogous to a horse running in the field."
               ],
               "explanation": "Trong đoạn 3, tác giả so sánh sức nặng của chiếc xe tải với cây cầu: \"It was analogous to an elephant trying to stand on a tree branch.\" (Nó tương tự như một con voi đang cố gắng đứng trên một cành cây). Do đó đáp án A là chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "37",
               "content": "What outweighed the driver’s concern of being punished for not paying the tariff?",
               "options": [
-                "The thought of extra money outweighed this concern.",
                 "The thought of a faster trip.",
                 "The fear of getting lost.",
+                "The thought of extra money outweighed this concern.",
                 "The beauty of the scenery."
               ],
               "explanation": "Ở cuối đoạn 1 có viết: \"He worried about getting in trouble for not paying the tariff, but the thought of extra money outweighed this concern.\" (Ông ta lo lắng về việc gặp rắc rối vì không trả thuế, nhưng suy nghĩ về số tiền dư ra đã lấn át nỗi lo này). Đáp án A là đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "38",
               "content": "What was the dual advantage of the route depicted on the map?",
               "options": [
-                "It not only avoided the border station but also was a shorter route to the coast.",
                 "It avoided the traffic and police.",
                 "It was scenic and fast.",
-                "It had better roads and less wind."
+                "It had better roads and less wind.",
+                "It not only avoided the border station but also was a shorter route to the coast."
               ],
               "explanation": "Trong đoạn 2 có đề cập: \"It not only avoided the border station but also was a shorter route to the coast.\" (Nó không chỉ tránh được trạm biên giới mà còn là một con đường ngắn hơn đến bờ biển). Đây chính là lợi thế kép (dual advantage) của con đường. Đáp án A đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "39",
@@ -536,18 +530,26 @@
               "id": "40",
               "content": "Why couldn’t the driver determine the ship’s whereabouts at the pier?",
               "options": [
-                "The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago.",
                 "The pier was destroyed.",
+                "The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago.",
                 "It was too dark.",
                 "The ship sank."
               ],
               "explanation": "Trong đoạn 6 có viết: \"When he asked about the ship’s whereabouts, a man said that it had left thirty minutes ago.\" (Khi ông hỏi về tung tích của con tàu, một người đàn ông nói rằng nó đã rời đi cách đây ba mươi phút). Vì vậy đáp án A đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit29_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Đường tắt</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một tài xế xe tải đang chở hàng hóa từ <b>vùng hẻo lánh</b> đến bờ biển. Chuyến hàng của ông <b>bao gồm</b> nhiều loại <b>quặng</b>. Ông cần một chiếc xe tải khổng lồ để chở <b>khối lượng lớn</b> đó đến một con tàu đang đợi ở một <b>bến tàu</b> trên bờ biển phía đông của đất nước. Ở biên giới giữa hai hạt, ông sẽ phải trả một khoản <b>thuế</b> cho số hàng hóa này. Tuy nhiên, ông có thể giữ lại tiền nếu tránh được trạm kiểm soát ở biên giới. Ông lo lắng về việc gặp rắc rối vì không trả <b>thuế</b>, nhưng ý nghĩ về số tiền dư ra đã <b>lấn át</b> mối bận tâm này.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông lấy bản đồ đường đi của mình ra. Thật ngạc nhiên, nó <b>mô tả</b> một con đường nhỏ có lợi thế <b>kép</b>. Nó không chỉ tránh được trạm biên giới mà còn là một tuyến đường ngắn hơn đến bờ biển. Ông quyết định đi <b>đường tắt</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, trên hành trình của mình, ông sớm gặp phải vấn đề. Đầu tiên, ông phải đi qua một cây cầu gỗ nhỏ. Xe tải của ông quá nặng so với cây cầu. Nó <b>tương tự</b> như một con voi đang cố gắng đứng trên cành cây. Cây cầu bắt đầu gãy khi chiếc xe tải đi qua, và rơ moóc <b>nghiêng</b> sang bên phải. Thật may mắn, chiếc xe tải đã vượt qua an toàn, nhưng hầu hết <b>quặng</b> đã rơi xuống dòng sông bên dưới.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tiếp đó, hôm đó là một ngày rất nóng. <b>Nhiệt kế</b> chỉ hơn 100 <b>độ F</b>. Động cơ của chiếc xe tải trở nên quá nóng, vì vậy người tài xế đỗ nó dưới bóng râm của một <b>lùm cây</b> cho đến khi nó nguội đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó, ông lại rẽ nhầm đường. Ông dừng lại và lấy <b>ống nhòm</b> của mình ra. Ông quan sát kỹ xung quanh và cuối cùng phát hiện ra một cột mốc dẫn ông trở lại đúng tuyến đường.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, ông đến <b>bến tàu</b>, nhưng con tàu không có ở đó. Khi ông hỏi về <b>tung tích</b> của con tàu, một người đàn ông nói rằng nó đã rời đi ba mươi phút trước. Ông đã không <b>hoàn thành</b> nhiệm vụ của mình. Lúc đó ông mới nhận ra <b>nghịch lý</b> của con <b>đường tắt</b>. Tuyến đường ngắn nhất có thể là dài nhất, và <b>ngược lại</b>, một tuyến đường dài có thể là nhanh nhất.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 29: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

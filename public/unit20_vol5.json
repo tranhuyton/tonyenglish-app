@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 20: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -458,7 +452,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Microchips</h1>        <p style=\"margin-bottom: 1rem;\">The bond between humans and computers is becoming more <b>intimate</b> than ever before. Scientists are now putting <b>microchips</b> inside people's bodies. They are made up of <b>compressed</b> electrical <b>circuits</b> that can detect and record data about the body. They are tiny, but they hold the <b>equivalent</b> amount of data as most computers.</p>    <p style=\"margin-bottom: 1rem;\">A <b>microchip</b> is put to use inside a person with a simple procedure. First, a doctor must put data about the patient onto a chip. <b>Input</b> about the person's age, race, gender, and medical history is stored on the chip. The second <b>phase</b> of the process involves putting it in the person's skin. The doctor <b>pinches</b> a piece of skin and cuts a tiny hole with a tool shaped like a <b>spiral</b>. The chip is inserted, and the skin is allowed to heal. At last, it begins the task of putting data into its <b>database</b>.</p>    <p style=\"margin-bottom: 1rem;\">Microchips scan the patient's body to record what is happening on the <b>quantum</b> level. They can find problems with the person's <b>metabolism</b> and organs. They can also detect <b>viral</b> infections. They can find the <b>aggregate</b> number of <b>immune</b> and infected cells and present the results in a <b>ratio</b>. They can even tell doctors what type of <b>antibiotic</b> to give to the patient!</p>    <p style=\"margin-bottom: 1rem;\">To recover the chip's data, the doctor uses a special <b>magnet</b> that copies it. This way, the doctor can put the information from the chip onto a computer. Then they can find out exactly what is wrong with the person.</p>    <p style=\"margin-bottom: 1rem;\">The idea of putting chips in humans is still very new. However, it is now becoming more <b>prevalent</b>. Scientists and doctors are hopeful about the future uses of microchips. Someday, all new babies might get a microchip soon after they are born. Doctors will be able to know about any problems from the very beginning. It is obvious that medicine and computers <b>complement</b> each other well.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Microchips</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The bond between humans and computers is becoming more <b>intimate</b> than ever before. Scientists are now putting <b>microchips</b> inside people's bodies. They are made up of <b>compressed</b> electrical <b>circuits</b> that can detect and record data about the body. They are tiny, but they hold the <b>equivalent</b> amount of data as most computers.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A <b>microchip</b> is put to use inside a person with a simple procedure. First, a doctor must put data about the patient onto a chip. <b>Input</b> about the person's age, race, gender, and medical history is stored on the chip. The second <b>phase</b> of the process involves putting it in the person's skin. The doctor <b>pinches</b> a piece of skin and cuts a tiny hole with a tool shaped like a <b>spiral</b>. The chip is inserted, and the skin is allowed to heal. At last, it begins the task of putting data into its <b>database</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Microchips scan the patient's body to record what is happening on the <b>quantum</b> level. They can find problems with the person's <b>metabolism</b> and organs. They can also detect <b>viral</b> infections. They can find the <b>aggregate</b> number of <b>immune</b> and infected cells and present the results in a <b>ratio</b>. They can even tell doctors what type of <b>antibiotic</b> to give to the patient!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">To recover the chip's data, the doctor uses a special <b>magnet</b> that copies it. This way, the doctor can put the information from the chip onto a computer. Then they can find out exactly what is wrong with the person.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The idea of putting chips in humans is still very new. However, it is now becoming more <b>prevalent</b>. Scientists and doctors are hopeful about the future uses of microchips. Someday, all new babies might get a microchip soon after they are born. Doctors will be able to know about any problems from the very beginning. It is obvious that medicine and computers <b>complement</b> each other well.</p></div>",
       "imageUrl": "/unit20_vol5_story.png",
       "sections": [
         {
@@ -540,37 +534,37 @@
               "id": "42",
               "content": "What holds the equivalent amount of storage as most computers?",
               "options": [
-                "Microchips",
                 "Databases",
+                "Microchips",
                 "Magnets",
                 "Ratios"
               ],
               "explanation": "Ở đoạn 1 có viết \"They are tiny, but they hold the equivalent amount of data as most computers.\" (Chúng rất nhỏ, nhưng chứa lượng dữ liệu tương đương với hầu hết các máy tính). Từ They ở đây chính là đang nhắc tới Microchips.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "43",
               "content": "After the input is stored on the chip, what is the next phase of the process?",
               "options": [
-                "Putting it underneath the person's skin",
                 "Finding a viral infection",
                 "Taking an antibiotic",
+                "Putting it underneath the person's skin",
                 "Using a magnet"
               ],
               "explanation": "Theo đoạn 2, \"The second phase of the process involves putting it in the person's skin.\" (Giai đoạn thứ hai của quá trình bao gồm việc đặt nó vào dưới da của người bệnh). Đây là bước ngay sau khi lưu dữ liệu.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "44",
               "content": "What do microchips do to record what is happening on the quantum level?",
               "options": [
-                "They scan the patient's body.",
                 "They pinch the skin.",
                 "They create a spiral.",
-                "They detect the metabolism."
+                "They detect the metabolism.",
+                "They scan the patient's body."
               ],
               "explanation": "Đoạn 3 có nhắc \"Microchips scan the patient's body to record what is happening on the quantum level.\" (Các vi mạch quét cơ thể bệnh nhân để ghi lại những gì đang xảy ra ở cấp độ lượng tử). Do đó, hành động chúng làm là quét cơ thể người bệnh.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "45",
@@ -587,7 +581,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit20_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Vi mạch</h1>\n\n<p style=\"margin-bottom: 1rem;\">Mối liên kết giữa con người và máy tính đang trở nên <b>gần gũi</b> hơn bao giờ hết. Các nhà khoa học hiện đang đưa các <b>vi mạch</b> vào bên trong cơ thể con người. Chúng được tạo thành từ các <b>mạch điện</b> bị <b>nén</b> có thể phát hiện và ghi lại dữ liệu về cơ thể. Chúng rất nhỏ, nhưng lại chứa lượng dữ liệu <b>tương đương</b> như hầu hết các máy tính.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một <b>vi mạch</b> được đưa vào sử dụng bên trong một người với một quy trình đơn giản. Đầu tiên, một bác sĩ phải đưa dữ liệu về bệnh nhân vào một con chip. <b>Dữ liệu đầu vào</b> về độ tuổi, chủng tộc, giới tính và tiền sử bệnh lý của người đó được lưu trữ trên con chip. <b>Giai đoạn</b> thứ hai của quá trình này liên quan đến việc đặt nó vào da của người đó. Bác sĩ <b>véo</b> một mảng da và cắt một lỗ nhỏ bằng một công cụ có hình dạng như một <b>hình xoắn ốc</b>. Con chip được chèn vào, và phần da được để tự lành lại. Cuối cùng, nó bắt đầu nhiệm vụ đưa dữ liệu vào <b>cơ sở dữ liệu</b> của nó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vi mạch quét cơ thể bệnh nhân để ghi lại những gì đang xảy ra ở cấp độ <b>lượng tử</b>. Chúng có thể tìm ra các vấn đề với <b>quá trình trao đổi chất</b> và các cơ quan của người đó. Chúng cũng có thể phát hiện các bệnh nhiễm trùng do <b>virus</b>. Chúng có thể tìm ra <b>tổng số</b> tế bào <b>miễn dịch</b> và tế bào bị nhiễm bệnh và trình bày kết quả dưới dạng một <b>tỷ lệ</b>. Chúng thậm chí có thể cho các bác sĩ biết loại <b>thuốc kháng sinh</b> nào nên cho bệnh nhân sử dụng!</p>\n\n<p style=\"margin-bottom: 1rem;\">Để khôi phục dữ liệu của con chip, bác sĩ sử dụng một <b>nam châm</b> đặc biệt sao chép nó. Bằng cách này, bác sĩ có thể đưa thông tin từ con chip lên máy tính. Sau đó, họ có thể tìm ra chính xác người đó đang gặp vấn đề gì.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ý tưởng đặt chip vào con người vẫn còn rất mới. Tuy nhiên, nó hiện đang trở nên <b>phổ biến</b> hơn. Các nhà khoa học và bác sĩ rất hy vọng về việc sử dụng vi mạch trong tương lai. Một ngày nào đó, tất cả những đứa trẻ sơ sinh có thể nhận được một vi mạch ngay sau khi chúng được sinh ra. Bác sĩ sẽ có thể biết về bất kỳ vấn đề nào ngay từ đầu. Rõ ràng là y học và máy tính <b>bổ sung</b> cho nhau rất tốt.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 20: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

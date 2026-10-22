@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 4: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -147,143 +140,143 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. fond / oblivious / perish / roost</b><br/>All of the people in the movie will [ 1 ] if they remain [ 2 ] of the monster. When the owl wants to make a [ 3 ], it is [ 4 ] of using an empty barn.</p><p style=\"margin-bottom: 12px;\"><b>2. flight / pit / rim / soars</b><br/>He grabbed the can by its [ 5 ], then tossed it far down into the [ 6 ]. The eagle [ 7 ] into the clouds when it goes on a long [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. immoral / moan / typical / weep</b><br/>Every time the sick woman would [ 9 ] in pain, her daughter would [ 10 ]. It is not [ 12 ] for a policeman to do [ 14 ] things like stealing.</p><p style=\"margin-bottom: 12px;\"><b>4. beak / disapprove / except / trivial</b><br/>Every part of the bird was beautiful, [ 16 ] for its short, ugly [ 18 ]. Because his assistant is teaching them [ 20 ] plays, the coach will [ 22 ] of the time wasted.</p><p style=\"margin-bottom: 12px;\"><b>5. damp / ivy / slippery / utterly</b><br/>Because it [ 24 ] covered the fence, the gardener had to remove all of the [ 26 ]. The ground became dangerous and [ 28 ] because everyone placed their [ 30 ] towels there.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. fond / oblivious / perish / roost</b><br/>All of the people in the movie will [ 11 ] if they remain [ 12 ] of the monster. When the owl wants to make a [ 13 ], it is [ 14 ] of using an empty barn.</p><p style=\"margin-bottom: 12px;\"><b>2. flight / pit / rim / soars</b><br/>He grabbed the can by its [ 15 ], then tossed it far down into the [ 16 ]. The eagle [ 17 ] into the clouds when it goes on a long [ 18 ].</p><p style=\"margin-bottom: 12px;\"><b>3. immoral / moan / typical / weep</b><br/>Every time the sick woman would [ 19 ] in pain, her daughter would [ 20 ]. It is not [ 21 ] for a policeman to do [ 22 ] things like stealing.</p><p style=\"margin-bottom: 12px;\"><b>4. beak / disapprove / except / trivial</b><br/>Every part of the bird was beautiful, [ 23 ] for its short, ugly [ 24 ]. Because his assistant is teaching them [ 25 ] plays, the coach will [ 26 ] of the time wasted.</p><p style=\"margin-bottom: 12px;\"><b>5. damp / ivy / slippery / utterly</b><br/>Because it [ 27 ] covered the fence, the gardener had to remove all of the [ 28 ]. The ground became dangerous and [ 29 ] because everyone placed their [ 30 ] towels there.</p>",
               "options": [],
-              "correctAnswer": "perish",
-              "explanation": "perish: chết; oblivious: không hay biết."
+              "explanation": "perish: chết; oblivious: không hay biết.",
+              "correctAnswer": "perish"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "oblivious",
-              "explanation": "perish: chết; oblivious: không hay biết."
+              "explanation": "perish: chết; oblivious: không hay biết.",
+              "correctAnswer": "oblivious"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "roost",
-              "explanation": "roost: chỗ đậu; fond of: thích."
+              "explanation": "roost: chỗ đậu; fond of: thích.",
+              "correctAnswer": "roost"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "fond",
-              "explanation": "roost: chỗ đậu; fond of: thích."
+              "explanation": "roost: chỗ đậu; fond of: thích.",
+              "correctAnswer": "fond"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "rim",
-              "explanation": "rim: miệng lon; pit: cái hố."
+              "explanation": "rim: miệng lon; pit: cái hố.",
+              "correctAnswer": "rim"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "pit",
-              "explanation": "rim: miệng lon; pit: cái hố."
+              "explanation": "rim: miệng lon; pit: cái hố.",
+              "correctAnswer": "pit"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "soars",
-              "explanation": "soar: bay lượn; flight: chuyến bay."
+              "explanation": "soar: bay lượn; flight: chuyến bay.",
+              "correctAnswer": "soars"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "flight",
-              "explanation": "soar: bay lượn; flight: chuyến bay."
+              "explanation": "soar: bay lượn; flight: chuyến bay.",
+              "correctAnswer": "flight"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "moan",
-              "explanation": "moan: rên rỉ; weep: khóc."
+              "explanation": "moan: rên rỉ; weep: khóc.",
+              "correctAnswer": "moan"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "weep",
-              "explanation": "moan: rên rỉ; weep: khóc."
+              "explanation": "moan: rên rỉ; weep: khóc.",
+              "correctAnswer": "weep"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "correctAnswer": "typical",
-              "explanation": "typical: điển hình; immoral: vô đạo đức."
+              "explanation": "typical: điển hình; immoral: vô đạo đức.",
+              "correctAnswer": "typical"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "correctAnswer": "immoral",
-              "explanation": "typical: điển hình; immoral: vô đạo đức."
+              "explanation": "typical: điển hình; immoral: vô đạo đức.",
+              "correctAnswer": "immoral"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "correctAnswer": "except",
-              "explanation": "except for: ngoại trừ; beak: mỏ chim."
+              "explanation": "except for: ngoại trừ; beak: mỏ chim.",
+              "correctAnswer": "except"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "correctAnswer": "beak",
-              "explanation": "except for: ngoại trừ; beak: mỏ chim."
+              "explanation": "except for: ngoại trừ; beak: mỏ chim.",
+              "correctAnswer": "beak"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "correctAnswer": "trivial",
-              "explanation": "trivial: tầm thường; disapprove of: không tán thành."
+              "explanation": "trivial: tầm thường; disapprove of: không tán thành.",
+              "correctAnswer": "trivial"
             },
             {
               "id": "26",
               "content": "",
               "options": [],
-              "correctAnswer": "disapprove",
-              "explanation": "trivial: tầm thường; disapprove of: không tán thành."
+              "explanation": "trivial: tầm thường; disapprove of: không tán thành.",
+              "correctAnswer": "disapprove"
             },
             {
               "id": "27",
               "content": "",
               "options": [],
-              "correctAnswer": "utterly",
-              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
+              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân.",
+              "correctAnswer": "utterly"
             },
             {
               "id": "28",
               "content": "",
               "options": [],
-              "correctAnswer": "ivy",
-              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
+              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân.",
+              "correctAnswer": "ivy"
             },
             {
               "id": "29",
               "content": "",
               "options": [],
-              "correctAnswer": "slippery",
-              "explanation": "slippery: trơn trượt; damp: ẩm ướt."
+              "explanation": "slippery: trơn trượt; damp: ẩm ướt.",
+              "correctAnswer": "slippery"
             },
             {
               "id": "30",
               "content": "",
               "options": [],
-              "correctAnswer": "damp",
-              "explanation": "slippery: trơn trượt; damp: ẩm ướt."
+              "explanation": "slippery: trơn trượt; damp: ẩm ướt.",
+              "correctAnswer": "damp"
             }
           ],
           "questionType": "Điền từ"
@@ -293,13 +286,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Tricky Fox</h1>        <p style=\"margin-bottom: 1rem;\">There was a fox that lived in the forest. Fox loved to play mean tricks on the other animals. One day, he used the sharp <b>rim</b> of a bottle to dig a <b>pit</b> in the ground. He hid in a tree until Rabbit came to the pit's edge. Then, he jumped out and pushed Rabbit into the pit. Fox laughed and ran away. The angry Rabbit climbed out and told the other animals what happened.</p>    <p style=\"margin-bottom: 1rem;\">The others said, \"That is <b>typical</b> behavior for Fox. He does mean things all the time. Sometimes, he is completely <b>immoral</b>. We all <b>disapprove</b> of his actions, so we should teach him a lesson. Tomorrow, we'll push Fox into that pit.\"</p>    <p style=\"margin-bottom: 1rem;\">The next day, all of the animals hid near the pit and waited for Fox. Fox was <b>oblivious</b> to the hidden animals. He walked up to the pit to see if Rabbit was still trapped. Just then, the other animals ran up to Fox and pushed him in. All the animals laughed and cheered, <b>except</b> Fox, of course.</p>    <p style=\"margin-bottom: 1rem;\">Fox couldn't get out! The walls of the pit were covered in <b>damp</b> <b>ivy</b>. It was too <b>slippery</b> for him to climb out. He was <b>utterly</b> helpless. He <b>moaned</b> and began to <b>weep</b>.</p>    <p style=\"margin-bottom: 1rem;\">At last, he saw Eagle watching him from her <b>roost</b>. He yelled, \"Eagle, please help me! If I don't get out of here, I will <b>perish</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">Eagle said, \"You may think your tricks are <b>trivial</b>, but you hurt others when you do mean things. I'll help you if you promise to be nice.\"</p>    <p style=\"margin-bottom: 1rem;\">Fox said, \"I promise!\"</p>    <p style=\"margin-bottom: 1rem;\">Eagle began her <b>flight</b> to the bottom of the pit. She picked up Fox with her <b>beak</b> and <b>soared</b> out of the pit. She dropped Fox safely on the ground.</p>    <p style=\"margin-bottom: 1rem;\">Fox thanked Eagle and kept his promise. He was nice to the other animals.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Tricky Fox</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There was a fox that lived in the forest. Fox loved to play mean tricks on the other animals. One day, he used the sharp <b>rim</b> of a bottle to dig a <b>pit</b> in the ground. He hid in a tree until Rabbit came to the pit's edge. Then, he jumped out and pushed Rabbit into the pit. Fox laughed and ran away. The angry Rabbit climbed out and told the other animals what happened.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The others said, \"That is <b>typical</b> behavior for Fox. He does mean things all the time. Sometimes, he is completely <b>immoral</b>. We all <b>disapprove</b> of his actions, so we should teach him a lesson. Tomorrow, we'll push Fox into that pit.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next day, all of the animals hid near the pit and waited for Fox. Fox was <b>oblivious</b> to the hidden animals. He walked up to the pit to see if Rabbit was still trapped. Just then, the other animals ran up to Fox and pushed him in. All the animals laughed and cheered, <b>except</b> Fox, of course.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Fox couldn't get out! The walls of the pit were covered in <b>damp</b> <b>ivy</b>. It was too <b>slippery</b> for him to climb out. He was <b>utterly</b> helpless. He <b>moaned</b> and began to <b>weep</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">At last, he saw Eagle watching him from her <b>roost</b>. He yelled, \"Eagle, please help me! If I don't get out of here, I will <b>perish</b>!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Eagle said, \"You may think your tricks are <b>trivial</b>, but you hurt others when you do mean things. I'll help you if you promise to be nice.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Fox said, \"I promise!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Eagle began her <b>flight</b> to the bottom of the pit. She picked up Fox with her <b>beak</b> and <b>soared</b> out of the pit. She dropped Fox safely on the ground.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Fox thanked Eagle and kept his promise. He was nice to the other animals.</p></div>",
       "imageUrl": "/unit4_vol4_story.png",
       "sections": [
         {
           "id": "sec3_reading",
           "title": "Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "31",
@@ -420,7 +413,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit4_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Con cáo xảo quyệt</h1>\n\n<p style=\"margin-bottom: 1rem;\">Có một con cáo sống trong rừng. Cáo thích chơi những trò lừa gạt ác ý với những loài động vật khác. Một ngày nọ, nó sử dụng <b>vành</b> sắc nhọn của một cái chai để đào một cái <b>hố</b> trên mặt đất. Nó trốn trên một cái cây cho đến khi Thỏ đi đến mép hố. Sau đó, nó nhảy ra và đẩy Thỏ xuống hố. Cáo cười lớn và chạy đi. Thỏ tức giận trèo ra ngoài và kể cho các loài động vật khác nghe chuyện gì đã xảy ra.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những con khác nói, \"Đó là hành vi <b>điển hình</b> của Cáo. Nó luôn làm những việc xấu tính mọi lúc. Đôi khi, nó hoàn toàn <b>vô đạo đức</b>. Tất cả chúng ta đều <b>không tán thành</b> những hành động của nó, vì vậy chúng ta nên dạy cho nó một bài học. Ngày mai, chúng ta sẽ đẩy Cáo xuống cái hố đó.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày hôm sau, tất cả các loài động vật trốn gần cái hố và chờ Cáo. Cáo <b>không hay biết</b> gì về những con vật đang ẩn nấp. Nó đi đến cái hố để xem Thỏ có còn bị mắc kẹt hay không. Ngay lúc đó, các loài động vật khác chạy đến chỗ Cáo và đẩy nó xuống. Tất cả các loài động vật đều cười lớn và reo hò, tất nhiên là <b>ngoại trừ</b> Cáo.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cáo không thể thoát ra! Các bức tường của cái hố được bao phủ bởi cây <b>thường xuân</b> <b>ẩm ướt</b>. Nó quá <b>trơn trượt</b> để nó có thể trèo ra ngoài. Nó <b>hoàn toàn</b> bất lực. Nó <b>than vãn</b> và bắt đầu <b>khóc lóc</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, nó nhìn thấy Đại bàng đang theo dõi nó từ <b>chỗ đậu</b> của cô ấy. Nó hét lên, \"Đại bàng, làm ơn giúp tôi! Nếu tôi không thoát khỏi đây, tôi sẽ <b>bỏ mạng</b> mất!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Đại bàng nói, \"Anh có thể nghĩ rằng những trò lừa gạt của anh là <b>nhỏ nhặt</b>, nhưng anh làm tổn thương người khác khi anh làm những việc tồi tệ. Tôi sẽ giúp anh nếu anh hứa sẽ cư xử tử tế.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cáo nói, \"Tôi hứa!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Đại bàng bắt đầu <b>chuyến bay</b> của mình xuống đáy hố. Cô dùng <b>mỏ</b> của mình gắp Cáo lên và <b>bay vút</b> ra khỏi hố. Cô thả Cáo xuống đất an toàn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cáo cảm ơn Đại bàng và giữ lời hứa của mình. Nó đã đối xử tử tế với những loài động vật khác.</p>\n</div>"
     }
   ]
 }

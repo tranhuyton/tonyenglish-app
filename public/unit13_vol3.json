@@ -14,46 +14,46 @@
               "id": "1",
               "content": "We cannot go on our ___________ because there are too many passengers on the small ___________. (voyage / vessel)",
               "options": [
-                "voyage",
-                "vessel",
-                "port",
-                "aboard"
+                "vessel / voyage",
+                "voyage / vessel",
+                "port / aboard",
+                "sweat / sheriff"
               ],
               "explanation": "voyage (chuyến đi biển) hợp lý cho câu: không thể đi chuyến đi của chúng ta.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "2",
               "content": "The ship entered the ___________, and boxes of supplies were put ___________. (aboard / port)",
               "options": [
-                "port",
-                "aboard",
-                "harbor",
-                "vessel"
+                "aboard / port",
+                "sweat / sheriff",
+                "port / aboard",
+                "millionaire / fountain"
               ],
               "explanation": "port (cảng) là nơi con tàu đi vào.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "3",
               "content": "The criminal’s shirt was soaked with ___________ because he had been running from the ___________. (sheriff / sweat)",
               "options": [
-                "sweat",
-                "sheriff",
-                "fountain",
-                "devil"
+                "sheriff / sweat",
+                "millionaire / fountain",
+                "harbor / worship",
+                "sweat / sheriff"
               ],
               "explanation": "sweat (mồ hôi) làm ướt áo.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "4",
               "content": "The ___________ flew his private jet across the world to visit a new ___________ that was said to bring people luck. (millionaire / fountain)",
               "options": [
-                "millionaire",
-                "fountain",
-                "sheriff",
-                "trigger"
+                "millionaire / fountain",
+                "fountain / millionaire",
+                "harbor / worship",
+                "inhabit / march"
               ],
               "explanation": "millionaire (triệu phú) có máy bay riêng.",
               "correctAnswer": "A"
@@ -62,46 +62,46 @@
               "id": "5",
               "content": "Churches ___________ many people that want a safe, quiet place to ___________. (worship / harbor)",
               "options": [
-                "harbor",
-                "worship",
-                "inhabit",
-                "march"
+                "worship / harbor",
+                "harbor / worship",
+                "inhabit / march",
+                "enforce / trigger"
               ],
               "explanation": "harbor (chứa chấp, là nơi trú ẩn) phù hợp trong ngữ cảnh này.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "6",
               "content": "Criminals ___________ a prison, and the guards ___________ the rules. (enforce / inhabit)",
               "options": [
-                "inhabit",
-                "enforce",
-                "unify",
-                "startle"
+                "march / inhabit",
+                "enforce / trigger",
+                "inhabit / march",
+                "startled / bullets"
               ],
               "explanation": "inhabit (cư ngụ, ở) tại nhà tù.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "7",
               "content": "The criminal pulled the ___________ of the gun, but it had no ___________. (bullets / trigger)",
               "options": [
-                "trigger",
-                "bullets",
-                "sweat",
-                "devil"
+                "trigger / enforce",
+                "startled / bullets",
+                "unified / devil",
+                "enforce / trigger"
               ],
               "explanation": "trigger (cò súng) được kéo.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "8",
               "content": "To ___________ the new soldiers, the officer had them ___________ together for an hour. (unify / march)",
               "options": [
-                "unify",
-                "march",
-                "drift",
-                "startle"
+                "startled / bullets",
+                "bullets / startled",
+                "unified / devil",
+                "drift / bitter"
               ],
               "explanation": "unify (thống nhất, gắn kết) những người lính mới.",
               "correctAnswer": "A"
@@ -110,25 +110,25 @@
               "id": "9",
               "content": "I’m going to ___________ my friends when I show up to the costume party dressed as a ___________. (startle / devil)",
               "options": [
-                "startle",
-                "devil",
-                "bitter",
-                "worship"
+                "devil / unified",
+                "unified / devil",
+                "drift / bitter",
+                "vessel / voyage"
               ],
               "explanation": "startle (làm giật mình) bạn bè.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "10",
               "content": "The boy will be quite ___________ if you let his kite ___________ away. (bitter / drift)",
               "options": [
-                "bitter",
-                "drift",
-                "aboard",
-                "sweat"
+                "bitter / drift",
+                "vessel / voyage",
+                "drift / bitter",
+                "aboard / port"
               ],
               "explanation": "bitter (tức giận/cay đắng) khi để diều bay mất.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -284,13 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Sheriff Dan</h1>        <p style=\"margin-bottom: 1rem;\">Dan was the evil <strong>sheriff</strong> of Oceantown. Dan was as cruel as the <strong>devil</strong>. He worshipped money. Dan was a <strong>millionaire</strong>, but he paid his police officers almost nothing. The police were very <strong>bitter</strong>, but Dan didn’t care. He only cared about his money.</p>    <p style=\"margin-bottom: 1rem;\">Every person who <strong>inhabited</strong> Oceantown disliked him. Dan <strong>enforced</strong> cruel laws. Once, Dan even put his own brother in jail for throwing a coin into a <strong>fountain</strong>! Sometimes he pointed his gun into the air and pulled the <strong>trigger</strong>. He didn’t want the <strong>bullets</strong> to hit anyone. He just wanted to scare people with the loud sound.</p>    <p style=\"margin-bottom: 1rem;\">Finally, the people of Oceantown decided that they had to get rid of <strong>Sheriff</strong> Dan. With their understanding, the crowd sought to <strong>unify</strong> the town. They <strong>marched</strong> to Dan’s house. He was <strong>startled</strong> by the sight when he ran to the door. When he opened the door, the crowd jumped on him. They used a rope to tie him to a chair. Dan yelled, “Get your hands off of me! I’ll put you all in jail for the rest of your lives!”</p>    <p style=\"margin-bottom: 1rem;\">The crowd didn’t listen. They carried Dan to the <strong>harbor</strong> and put him <strong>aboard</strong> a <strong>vessel</strong>. Dan was so scared that he began to <strong>sweat</strong>. He begged, “If you let me go, I will give you all my money!”</p>    <p style=\"margin-bottom: 1rem;\">The crowd said back, “<strong>Sheriff</strong>, we don’t care about your money. We know you will never change. We’re sending you on a <strong>voyage</strong> to the middle of the ocean.” The boat <strong>drifted</strong> out of the <strong>port</strong>, and Dan was never seen again. The people voted for a new <strong>sheriff</strong> who was kind and fair.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Sheriff Dan</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Dan was the evil <strong>sheriff</strong> of Oceantown. Dan was as cruel as the <strong>devil</strong>. He worshipped money. Dan was a <strong>millionaire</strong>, but he paid his police officers almost nothing. The police were very <strong>bitter</strong>, but Dan didn’t care. He only cared about his money.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Every person who <strong>inhabited</strong> Oceantown disliked him. Dan <strong>enforced</strong> cruel laws. Once, Dan even put his own brother in jail for throwing a coin into a <strong>fountain</strong>! Sometimes he pointed his gun into the air and pulled the <strong>trigger</strong>. He didn’t want the <strong>bullets</strong> to hit anyone. He just wanted to scare people with the loud sound.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Finally, the people of Oceantown decided that they had to get rid of <strong>Sheriff</strong> Dan. With their understanding, the crowd sought to <strong>unify</strong> the town. They <strong>marched</strong> to Dan’s house. He was <strong>startled</strong> by the sight when he ran to the door. When he opened the door, the crowd jumped on him. They used a rope to tie him to a chair. Dan yelled, “Get your hands off of me! I’ll put you all in jail for the rest of your lives!”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The crowd didn’t listen. They carried Dan to the <strong>harbor</strong> and put him <strong>aboard</strong> a <strong>vessel</strong>. Dan was so scared that he began to <strong>sweat</strong>. He begged, “If you let me go, I will give you all my money!”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The crowd said back, “<strong>Sheriff</strong>, we don’t care about your money. We know you will never change. We’re sending you on a <strong>voyage</strong> to the middle of the ocean.” The boat <strong>drifted</strong> out of the <strong>port</strong>, and Dan was never seen again. The people voted for a new <strong>sheriff</strong> who was kind and fair.</p></div>",
       "imageUrl": "/unit13_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -352,12 +351,12 @@
               "explanation": "Ngay đầu đoạn 2 có câu 'Every person who inhabited Oceantown disliked him.' Tất cả cư dân đều ghét ông ta, còn người duy nhất tôn thờ tiền bạc là chính Dan ('He worshipped money'). Vì vậy đáp án phải là False.",
               "correctAnswer": "False"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -407,9 +406,11 @@
               "explanation": "Trong đoạn 1 tác giả có viết 'Dan was as cruel as the devil.' Dù đám đông không nói trực tiếp câu này khi thả Dan đi, nhưng họ nói 'We know you will never change' (Chúng tôi biết ông sẽ không bao giờ thay đổi), chứng tỏ họ tống khứ ông ta vì bản tính tàn ác như ác quỷ của ông. Do đó đáp án Dan was a devil to them là hợp lý nhất.",
               "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit13_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cảnh sát trưởng Dan</h1>\n\n<p style=\"margin-bottom: 1rem;\">Dan là vị <b>cảnh sát trưởng</b> độc ác của thị trấn Oceantown. Dan tàn nhẫn như <b>ác quỷ</b>. Hắn tôn thờ tiền bạc. Dan là một <b>triệu phú</b>, nhưng hắn hầu như không trả đồng nào cho các sĩ quan cảnh sát của mình. Cảnh sát rất <b>cay đắng</b>, nhưng Dan không quan tâm. Hắn chỉ quan tâm đến tiền của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mọi người <b>sống</b> ở Oceantown đều ghét hắn. Dan đã <b>thi hành</b> những đạo luật tàn ác. Có lần, Dan thậm chí đã bỏ tù chính em trai mình vì đã ném một đồng xu vào <b>đài phun nước</b>! Đôi khi hắn chĩa súng lên trời và kéo <b>cò</b>. Hắn không muốn <b>đạn</b> trúng bất kỳ ai. Hắn chỉ muốn làm mọi người sợ hãi với âm thanh lớn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, người dân Oceantown quyết định rằng họ phải loại bỏ <b>Cảnh sát trưởng</b> Dan. Với sự thấu hiểu lẫn nhau, đám đông đã tìm cách <b>thống nhất</b> thị trấn. Họ <b>diễu hành</b> đến nhà của Dan. Hắn <b>giật mình</b> trước cảnh tượng đó khi chạy ra cửa. Khi hắn mở cửa, đám đông nhảy bổ vào hắn. Họ dùng một sợi dây thừng để trói hắn vào ghế. Dan hét lên, “Bỏ tay ra khỏi người ta! Ta sẽ bỏ tù tất cả các ngươi đến hết phần đời còn lại!”</p>\n\n<p style=\"margin-bottom: 1rem;\">Đám đông không lắng nghe. Họ khiêng Dan đến <b>bến cảng</b> và đưa hắn <b>lên</b> một con <b>tàu</b>. Dan sợ đến mức bắt đầu <b>đổ mồ hôi</b>. Hắn cầu xin, “Nếu các người thả ta đi, ta sẽ đưa cho các người toàn bộ tiền của ta!”</p>\n\n<p style=\"margin-bottom: 1rem;\">Đám đông đáp lại, “<b>Cảnh sát trưởng</b>, chúng tôi không quan tâm đến tiền của ông. Chúng tôi biết ông sẽ không bao giờ thay đổi. Chúng tôi sẽ gửi ông vào một <b>chuyến hành trình</b> ra giữa đại dương.” Con thuyền <b>trôi dạt</b> ra khỏi <b>cảng</b>, và không ai còn nhìn thấy Dan nữa. Người dân đã bầu cho một <b>cảnh sát trưởng</b> mới, tốt bụng và công bằng.</p>\n</div>"
     }
   ],
   "basicInfo": {

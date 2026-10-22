@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 26: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -468,12 +462,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cosmo's Flight</h1>        <p style=\"margin-bottom: 1rem;\">When Cosmo woke up, he was crying. He had a dream that he was falling. This dream had <b>recurred</b> for the <b>previous</b> five nights. Cosmo was scared that his dreams were a <b>preview</b> of what was going to happen on his flight the next day.</p>    <p style=\"margin-bottom: 1rem;\">Cosmo was a <b>supernatural</b> being who was about to turn 15 years old. In his culture, boys of his age were required to participate in an important <b>rite</b>. They were given wings and instructed to <b>orbit</b> the Earth. After successful flights, the boys officially became men. Cosmo certainly wanted to be a man, but he was scared. He went to the <b>oracle</b> of a god named Dano. Cosmo said, \"I'm not sure I can make such a long trip. What if I get tired? What if my strength <b>stalls</b>, and I can't stay in the air. I'll crash and die!\"</p>    <p style=\"margin-bottom: 1rem;\">Dano replied, \"Don't be afraid. You have all the <b>relevant</b> skills in your personal <b>inventory</b> that have been building up over the years. To ease your worry, let me tell you a little about what will happen tomorrow. You'll begin over Africa. You'll keep flying north until you come to the Himalayas. The mountaintops will look like small <b>loaves</b> of bread at such a high distance. The rivers of the world will look like pieces of blue string that cross the <b>globe</b>. Keep your body <b>horizontal</b> when flying against the winds of the Pacific Ocean. Keep your eyes open and enjoy the beauty of the Earth. You will be fine, you'll see.\"</p>    <p style=\"margin-bottom: 1rem;\">Cosmo replied, \"Thanks for the <b>overview</b> of my journey, I'll do my best.\"</p>    <p style=\"margin-bottom: 1rem;\">The next morning, Cosmo was <b>provided</b> with a divine set of wings and sent on his way. He <b>flapped</b> his wings and went high above the Earth. He flew over mountains, oceans, and <b>glaciers</b>. After a while, his <b>inward</b> thoughts were no longer about falling. He was actually having fun! He began to <b>hum</b> a song as he enjoyed the view. When he reached home, his tribe was there to greet him.</p>    <p style=\"margin-bottom: 1rem;\">The chief said, \"On <b>behalf</b> of the tribe, I declare you a man. We're proud of you, Cosmo!\" Cosmo was proud of himself, too.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cosmo's Flight</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When Cosmo woke up, he was crying. He had a dream that he was falling. This dream had <b>recurred</b> for the <b>previous</b> five nights. Cosmo was scared that his dreams were a <b>preview</b> of what was going to happen on his flight the next day.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Cosmo was a <b>supernatural</b> being who was about to turn 15 years old. In his culture, boys of his age were required to participate in an important <b>rite</b>. They were given wings and instructed to <b>orbit</b> the Earth. After successful flights, the boys officially became men. Cosmo certainly wanted to be a man, but he was scared. He went to the <b>oracle</b> of a god named Dano. Cosmo said, \"I'm not sure I can make such a long trip. What if I get tired? What if my strength <b>stalls</b>, and I can't stay in the air. I'll crash and die!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Dano replied, \"Don't be afraid. You have all the <b>relevant</b> skills in your personal <b>inventory</b> that have been building up over the years. To ease your worry, let me tell you a little about what will happen tomorrow. You'll begin over Africa. You'll keep flying north until you come to the Himalayas. The mountaintops will look like small <b>loaves</b> of bread at such a high distance. The rivers of the world will look like pieces of blue string that cross the <b>globe</b>. Keep your body <b>horizontal</b> when flying against the winds of the Pacific Ocean. Keep your eyes open and enjoy the beauty of the Earth. You will be fine, you'll see.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Cosmo replied, \"Thanks for the <b>overview</b> of my journey, I'll do my best.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next morning, Cosmo was <b>provided</b> with a divine set of wings and sent on his way. He <b>flapped</b> his wings and went high above the Earth. He flew over mountains, oceans, and <b>glaciers</b>. After a while, his <b>inward</b> thoughts were no longer about falling. He was actually having fun! He began to <b>hum</b> a song as he enjoyed the view. When he reached home, his tribe was there to greet him.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The chief said, \"On <b>behalf</b> of the tribe, I declare you a man. We're proud of you, Cosmo!\" Cosmo was proud of himself, too.</p></div>",
       "imageUrl": "/unit26_vol5_story.png",
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -538,25 +532,25 @@
               "id": "36",
               "content": "What inward thoughts were no longer relevant to Cosmo after he started having fun?",
               "options": [
-                "His inward thoughts about falling.",
                 "His inward thoughts about his family.",
                 "His inward thoughts about flying too fast.",
+                "His inward thoughts about falling.",
                 "His inward thoughts about the cold."
               ],
               "explanation": "Ở đoạn 5 có câu After a while, his inward thoughts were no longer about falling. He was actually having fun! Khi bắt đầu thấy vui vẻ, những suy nghĩ nội tâm của Cosmo về việc bị rơi không còn nữa. Chọn đáp án A nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "37",
               "content": "What did Dano tell Cosmo that the tops of the Himalaya Mountains will look like?",
               "options": [
-                "They will look like loaves of bread.",
                 "They will look like pieces of blue string.",
                 "They will look like big clouds.",
-                "They will look like white hats."
+                "They will look like white hats.",
+                "They will look like loaves of bread."
               ],
               "explanation": "Đoạn 3 Dano dặn The mountaintops will look like small loaves of bread at such a high distance. Nhìn từ trên cao, những đỉnh núi Himalaya trông sẽ giống hệt những ổ bánh mì nhỏ (loaves of bread). Đáp án A là chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "38",
@@ -574,30 +568,38 @@
               "id": "39",
               "content": "The oracle told Cosmo that the rivers of the world will look like what?",
               "options": [
-                "Pieces of blue string.",
                 "Long green snakes.",
+                "Pieces of blue string.",
                 "Silver ribbons.",
                 "Deep blue lines."
               ],
               "explanation": "Trong đoạn 3, nhà tiên tri bảo The rivers of the world will look like pieces of blue string that cross the globe. Những dòng sông trông sẽ giống như những sợi dây màu xanh lam (Pieces of blue string). Đáp án A đúng nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "40",
               "content": "What did the chief declare on behalf of the tribe?",
               "options": [
-                "He declared Cosmo a man.",
                 "He declared Cosmo a warrior.",
                 "He declared Cosmo a hero.",
+                "He declared Cosmo a man.",
                 "He declared Cosmo an adult."
               ],
               "explanation": "Đoạn cuối cùng trích lời trưởng làng: The chief said, \"On behalf of the tribe, I declare you a man.\" Vị trưởng làng đã thay mặt bộ lạc tuyên bố Cosmo đã trở thành một người đàn ông thực thụ (a man). Chọn đáp án A.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<img src=\"/unit26_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chuyến Bay Của Cosmo</h1>\n\n<p style=\"margin-bottom: 1rem;\">Khi Cosmo thức dậy, cậu đang khóc. Cậu đã mơ thấy mình đang rơi. Giấc mơ này đã <b>tái diễn</b> trong năm đêm <b>trước đó</b>. Cosmo sợ hãi rằng những giấc mơ của mình là một sự <b>xem trước</b> về những gì sẽ xảy ra trong chuyến bay của cậu vào ngày hôm sau.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cosmo là một sinh vật <b>siêu nhiên</b> sắp tròn 15 tuổi. Trong nền văn hóa của cậu, các cậu bé ở độ tuổi của cậu được yêu cầu tham gia vào một <b>nghi lễ</b> quan trọng. Họ được ban cho những đôi cánh và được hướng dẫn để <b>bay quanh quỹ đạo</b> Trái Đất. Sau những chuyến bay thành công, các cậu bé chính thức trở thành đàn ông. Chắc chắn Cosmo muốn trở thành một người đàn ông, nhưng cậu rất sợ hãi. Cậu đã đến <b>nhà tiên tri</b> của một vị thần tên là Dano. Cosmo nói, \"Tôi không chắc mình có thể thực hiện một chuyến đi dài như vậy. Nếu tôi mệt thì sao? Nếu sức mạnh của tôi <b>đình trệ</b> và tôi không thể ở trên không thì sao. Tôi sẽ đâm sầm xuống và chết mất!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Dano trả lời, \"Đừng sợ hãi. Cậu có tất cả những kỹ năng <b>liên quan</b> trong <b>kho</b> vũ khí cá nhân của mình, những thứ đã được xây dựng trong nhiều năm. Để làm giảm sự lo lắng của cậu, hãy để ta kể cho cậu nghe một chút về những gì sẽ xảy ra vào ngày mai. Cậu sẽ bắt đầu bay trên bầu trời Châu Phi. Cậu sẽ tiếp tục bay về phía bắc cho đến khi tới dãy Himalaya. Những đỉnh núi sẽ trông giống như những <b>ổ</b> bánh mì nhỏ ở khoảng cách cao như vậy. Những con sông trên thế giới sẽ trông giống như những mảnh dây xanh vắt ngang qua <b>địa cầu</b>. Hãy giữ cơ thể của cậu <b>nằm ngang</b> khi bay ngược lại với những cơn gió của Thái Bình Dương. Hãy mở to mắt và tận hưởng vẻ đẹp của Trái Đất. Cậu sẽ ổn thôi, cậu sẽ thấy.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cosmo trả lời, \"Cảm ơn vì <b>cái nhìn tổng quan</b> về chuyến hành trình của tôi, tôi sẽ cố gắng hết sức.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Sáng hôm sau, Cosmo được <b>cung cấp</b> một đôi cánh thần thánh và được tiễn lên đường. Cậu <b>vỗ</b> cánh và bay lên tít trên cao so với Trái Đất. Cậu bay qua những ngọn núi, đại dương và những <b>sông băng</b>. Sau một lúc, những suy nghĩ <b>bên trong</b> cậu không còn là về việc bị rơi nữa. Cậu thực sự đang rất vui vẻ! Cậu bắt đầu <b>ngân nga</b> một bài hát trong khi thưởng thức khung cảnh. Khi cậu về đến nhà, bộ lạc của cậu đã ở đó để chào đón cậu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tộc trưởng nói, \"<b>Thay mặt</b> cho bộ lạc, ta tuyên bố cậu đã trở thành một người đàn ông. Chúng ta tự hào về cậu, Cosmo!\" Cosmo cũng cảm thấy tự hào về bản thân mình.</p>\\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 26: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

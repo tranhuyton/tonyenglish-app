@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 28: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -155,143 +148,143 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. defined / paraphrased / riot / shrine</b><br/>There was a [ 1 ] in the city yesterday, but the [ 2 ] was not damaged. For the book report, I [ 3 ] the story and [ 4 ] my purpose for writing it.</p><p style=\"margin-bottom: 12px;\"><b>2. avail / expand / presently / solitude</b><br/>There are 15 members in the group [ 5 ] . We should [ 6 ] it. His attempt to catch the train was to no [ 7 ] . He sat in [ 8 ] waiting for the next one.</p><p style=\"margin-bottom: 12px;\"><b>3. fundamental / linger / scribble / worsen</b><br/>The [ 9 ] point of my speech was to show that people need to act. If we don’t do something, things will [ 10 ] . I tried to [ 12 ] the information as fast as I could because I didn’t have time to [ 14 ] .</p><p style=\"margin-bottom: 12px;\"><b>4. dreaded / horrifying / incredulous / stark</b><br/>After seeing that [ 16 ] plane crash, I [ 18 ] getting on an airplane. She was [ 20 ] that there could be such a [ 22 ] contrast between boys’ and girls’ grades.</p><p style=\"margin-bottom: 12px;\"><b>5. organism / plague / random / summon</b><br/>We had to [ 24 ] scientists from around the world to study this new [ 26 ] . At first we thought it was [ 28 ] that people were getting sick. Then we realized that a [ 30 ] was spreading.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. defined / paraphrased / riot / shrine</b><br/>There was a [ 11 ] in the city yesterday, but the [ 12 ] was not damaged. For the book report, I [ 13 ] the story and [ 14 ] my purpose for writing it.</p><p style=\"margin-bottom: 12px;\"><b>2. avail / expand / presently / solitude</b><br/>There are 15 members in the group [ 15 ] . We should [ 16 ] it. His attempt to catch the train was to no [ 17 ] . He sat in [ 18 ] waiting for the next one.</p><p style=\"margin-bottom: 12px;\"><b>3. fundamental / linger / scribble / worsen</b> (Hint: The...) [ 19 ] point of my speech was to show that people need to act. If we don’t do something, things will [ 20 ] . I tried to [ 21 ] the information as fast as I could because I didn’t have time to [ 22 ] .</p><p style=\"margin-bottom: 12px;\"><b>4. dreaded / horrifying / incredulous / stark</b><br/>After seeing that [ 23 ] plane crash, I [ 24 ] getting on an airplane. She was [ 25 ] that there could be such a [ 26 ] contrast between boys’ and girls’ grades.</p><p style=\"margin-bottom: 12px;\"><b>5. organism / plague / random / summon</b><br/>We had to [ 27 ] scientists from around the world to study this new [ 28 ] . At first we thought it was [ 29 ] that people were getting sick. Then we realized that a [ 30 ] was spreading.</p>",
               "options": [],
-              "correctAnswer": "riot",
-              "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì)."
+              "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì).",
+              "correctAnswer": "riot"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "shrine",
-              "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì)."
+              "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì).",
+              "correctAnswer": "shrine"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "paraphrased",
-              "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ)."
+              "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ).",
+              "correctAnswer": "paraphrased"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "defined",
-              "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ)."
+              "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ).",
+              "correctAnswer": "defined"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "presently",
-              "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo)."
+              "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo).",
+              "correctAnswer": "presently"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "expand",
-              "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo)."
+              "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo).",
+              "correctAnswer": "expand"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "avail",
-              "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông)."
+              "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông).",
+              "correctAnswer": "avail"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "solitude",
-              "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông)."
+              "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông).",
+              "correctAnswer": "solitude"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "fundamental",
-              "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn."
+              "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn.",
+              "correctAnswer": "fundamental"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "worsen",
-              "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn."
+              "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn.",
+              "correctAnswer": "worsen"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "correctAnswer": "scribble",
-              "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại."
+              "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại.",
+              "correctAnswer": "scribble"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "correctAnswer": "linger",
-              "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại."
+              "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại.",
+              "correctAnswer": "linger"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "correctAnswer": "horrifying",
-              "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay."
+              "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay.",
+              "correctAnswer": "horrifying"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "correctAnswer": "dreaded",
-              "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay."
+              "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay.",
+              "correctAnswer": "dreaded"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "correctAnswer": "incredulous",
-              "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ."
+              "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ.",
+              "correctAnswer": "incredulous"
             },
             {
               "id": "26",
               "content": "",
               "options": [],
-              "correctAnswer": "stark",
-              "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ."
+              "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ.",
+              "correctAnswer": "stark"
             },
             {
               "id": "27",
               "content": "",
               "options": [],
-              "correctAnswer": "summon",
-              "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này."
+              "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này.",
+              "correctAnswer": "summon"
             },
             {
               "id": "28",
               "content": "",
               "options": [],
-              "correctAnswer": "organism",
-              "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này."
+              "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này.",
+              "correctAnswer": "organism"
             },
             {
               "id": "29",
               "content": "",
               "options": [],
-              "correctAnswer": "random",
-              "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan."
+              "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan.",
+              "correctAnswer": "random"
             },
             {
               "id": "30",
               "content": "",
               "options": [],
-              "correctAnswer": "plague",
-              "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan."
+              "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan.",
+              "correctAnswer": "plague"
             }
           ],
           "questionType": "Điền từ"
@@ -301,13 +294,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thucydides and the Plague of Athens</h1>        <p style=\"margin-bottom: 1rem;\">Thucydides was the world’s first historian. <b>Presently</b>, we get most of our knowledge about ancient Greece from his writing. But Thucydides didn’t just write about history, he lived through it. However, he almost didn’t survive one historical event: the <b>Plague</b> of Athens.</p>    <p style=\"margin-bottom: 1rem;\">In 430 BCE, an army attacked the city of Athens, where Thucydides lived. Thousands of people hid from the army behind Athens’ large walls. The city became very crowded as the population <b>expanded</b>. Then a <b>horrifying</b> disease broke out. People <b>summoned</b> doctors. But it was to no <b>avail</b> because no one understood how the disease spread.</p>    <p style=\"margin-bottom: 1rem;\">It seemed <b>random</b>. They didn’t know that it was an <b>organism</b>. Instead, they <b>defined</b> disease as a punishment from their gods. Thucydides was <b>incredulous</b> that gods caused the <b>plague</b>, but he explained why others believed it. There was an old, long verse which predicted the disease. To <b>paraphrase</b> it, the verse said the gods would send a disease during a war. As a result, large crowds gathered at <b>shrines</b> to ask the gods to stop the <b>plague</b>. But the situation only <b>worsened</b> because these people were so close to each other they became sick. That’s how they learned a <b>fundamental</b> lesson about the <b>plague</b>: it spread from person to person.</p>    <p style=\"margin-bottom: 1rem;\">People wanted to leave the crowded city, but they <b>dreaded</b> what the army outside would do to them. At this time, Thucydides got sick, too. He quickly <b>scribbled</b> down notes because he thought he would soon die. His writing shows a <b>stark</b> contrast between people’s behavior before and during the <b>plague</b>. There were <b>riots</b>, and people ignored laws. They didn’t think they’d live long enough to be punished. Many sick people were left to die in <b>solitude</b> because no one wanted to be near them. The <b>plague</b> <b>lingered</b> for two years. But luckily, Thucydides survived. Without his writing, we would know much less about ancient Greece and the <b>Plague</b> of Athens.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thucydides and the Plague of Athens</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Thucydides was the world’s first historian. <b>Presently</b>, we get most of our knowledge about ancient Greece from his writing. But Thucydides didn’t just write about history, he lived through it. However, he almost didn’t survive one historical event: the <b>Plague</b> of Athens.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In 430 BCE, an army attacked the city of Athens, where Thucydides lived. Thousands of people hid from the army behind Athens’ large walls. The city became very crowded as the population <b>expanded</b>. Then a <b>horrifying</b> disease broke out. People <b>summoned</b> doctors. But it was to no <b>avail</b> because no one understood how the disease spread.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It seemed <b>random</b>. They didn’t know that it was an <b>organism</b>. Instead, they <b>defined</b> disease as a punishment from their gods. Thucydides was <b>incredulous</b> that gods caused the <b>plague</b>, but he explained why others believed it. There was an old, long verse which predicted the disease. To <b>paraphrase</b> it, the verse said the gods would send a disease during a war. As a result, large crowds gathered at <b>shrines</b> to ask the gods to stop the <b>plague</b>. But the situation only <b>worsened</b> because these people were so close to each other they became sick. That’s how they learned a <b>fundamental</b> lesson about the <b>plague</b>: it spread from person to person.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">People wanted to leave the crowded city, but they <b>dreaded</b> what the army outside would do to them. At this time, Thucydides got sick, too. He quickly <b>scribbled</b> down notes because he thought he would soon die. His writing shows a <b>stark</b> contrast between people’s behavior before and during the <b>plague</b>. There were <b>riots</b>, and people ignored laws. They didn’t think they’d live long enough to be punished. Many sick people were left to die in <b>solitude</b> because no one wanted to be near them. The <b>plague</b> <b>lingered</b> for two years. But luckily, Thucydides survived. Without his writing, we would know much less about ancient Greece and the <b>Plague</b> of Athens.</p></div>",
       "imageUrl": "/unit28_vol4_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Reading Comprehension, Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement True or False.</p>",
           "questions": [
             {
               "id": "31",
@@ -428,7 +421,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<div style=\"font-family: Arial, sans-serif; \">\n\n<img src=\"/unit28_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thucydides và Bệnh Dịch ở Athens</h1>\n\n<p style=\"margin-bottom: 1rem;\">Thucydides là nhà sử học đầu tiên trên thế giới. <b>Hiện tại</b>, chúng ta có được hầu hết kiến thức về Hy Lạp cổ đại từ các tác phẩm của ông. Nhưng Thucydides không chỉ viết về lịch sử, ông đã sống qua thời kỳ đó. Tuy nhiên, ông suýt nữa đã không sống sót qua một sự kiện lịch sử: <b>Bệnh dịch</b> ở Athens.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào năm 430 TCN, một đội quân đã tấn công thành phố Athens, nơi Thucydides sinh sống. Hàng ngàn người đã trốn tránh đội quân này sau những bức tường lớn của Athens. Thành phố trở nên rất đông đúc khi dân số <b>mở rộng</b>. Sau đó, một căn bệnh <b>kinh hoàng</b> đã bùng phát. Mọi người <b>triệu tập</b> các bác sĩ. Nhưng không có <b>kết quả</b> vì không ai hiểu được căn bệnh này lây lan như thế nào.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nó có vẻ <b>ngẫu nhiên</b>. Họ không biết rằng đó là một <b>sinh vật</b>. Thay vào đó, họ <b>định nghĩa</b> bệnh tật như một sự trừng phạt từ các vị thần của họ. Thucydides <b>hoài nghi</b> rằng các vị thần đã gây ra <b>bệnh dịch</b>, nhưng ông giải thích lý do tại sao những người khác lại tin vào điều đó. Có một bài thơ cổ, dài đã dự đoán về căn bệnh này. <b>Diễn giải</b> lại, bài thơ nói rằng các vị thần sẽ giáng xuống một căn bệnh trong một cuộc chiến tranh. Kết quả là, những đám đông lớn đã tụ tập tại các <b>ngôi đền</b> để cầu xin các vị thần ngăn chặn <b>bệnh dịch</b>. Nhưng tình hình chỉ trở nên <b>tồi tệ hơn</b> vì những người này ở quá gần nhau nên họ đã ngã bệnh. Đó là cách họ học được một bài học <b>cơ bản</b> về <b>bệnh dịch</b>: nó lây lan từ người sang người.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mọi người muốn rời khỏi thành phố đông đúc, nhưng họ <b>khiếp sợ</b> những gì đội quân bên ngoài sẽ làm với họ. Vào thời điểm này, Thucydides cũng ngã bệnh. Ông nhanh chóng <b>viết nguệch ngoạc</b> những ghi chú vì nghĩ rằng mình sẽ sớm qua đời. Các tác phẩm của ông cho thấy sự tương phản <b>hoàn toàn</b> giữa hành vi của con người trước và trong thời gian xảy ra <b>bệnh dịch</b>. Có những cuộc <b>bạo loạn</b>, và mọi người phớt lờ luật pháp. Họ không nghĩ rằng họ sẽ sống đủ lâu để bị trừng phạt. Nhiều người bệnh bị bỏ lại để chết trong sự <b>cô đơn</b> vì không ai muốn đến gần họ. <b>Bệnh dịch</b> đã <b>kéo dài</b> trong hai năm. Nhưng may mắn thay, Thucydides đã sống sót. Nếu không có những tác phẩm của ông, chúng ta sẽ biết ít hơn rất nhiều về Hy Lạp cổ đại và <b>Bệnh dịch</b> ở Athens.</p>\n\n</div>\\n</div>"
     }
   ]
 }

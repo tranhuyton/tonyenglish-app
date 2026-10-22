@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 13: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -418,12 +412,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Old Hound</h1>        <p style=\"margin-bottom: 1rem;\">Elvis was a dog that loved to run. He possessed all the <b>criteria</b> to be a great racing dog. He had long legs, lean muscles, and a strong heart. He was so good that he never lost a race in the northern <b>hemisphere</b>. <b>Spectators</b> who bet on dog races always picked Elvis to win.</p>    <p style=\"margin-bottom: 1rem;\">After ten years of racing, however, Elvis was getting old. His <b>faculties</b> were not as strong as they used to be. His owner got upset when Elvis started losing. Elvis’s owner wasn’t a <b>considerate</b> person. He <b>degraded</b> the dog all the time. Finally, his owner decided to get rid of him. He threw Elvis in his car and took him to the middle of the forest. He tossed him out and drove away. Elvis was cold and scared. He decided to follow a <b>brook</b> into the city.</p>    <p style=\"margin-bottom: 1rem;\">Elvis soon found out that the city was a big and <b>impersonal</b> place. Everywhere he went, he saw signs that said, “No Dogs Allowed.” <b>Pedestrians</b> yelled at him. He was sad, hungry, and exhausted. He thought that nobody cared about him anymore. He was ready to give up when he heard a soft voice say, “What a beautiful <b>hound</b>!” Elvis looked up and saw an old woman. She said, “You’re <b>entitled</b> to a better life than this. I can take you to a <b>sanctuary</b> for old dogs like you. I’ll <b>cater</b> to all your needs. Would you like to come with me?”</p>    <p style=\"margin-bottom: 1rem;\">The woman <b>escorted</b> Elvis to a beautiful <b>facility</b>. There was a sign on the <b>external</b> door that said, “Dogs Welcome!” The interior of the building was painted blue, and shiny <b>ornaments</b> hung from the ceiling. There was a <b>heap</b> of tasty bones and bread <b>crusts</b> for <b>consumption</b>.</p>    <p style=\"margin-bottom: 1rem;\">Elvis learned there were kind people in the world after all.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Old Hound</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Elvis was a dog that loved to run. He possessed all the <b>criteria</b> to be a great racing dog. He had long legs, lean muscles, and a strong heart. He was so good that he never lost a race in the northern <b>hemisphere</b>. <b>Spectators</b> who bet on dog races always picked Elvis to win.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After ten years of racing, however, Elvis was getting old. His <b>faculties</b> were not as strong as they used to be. His owner got upset when Elvis started losing. Elvis’s owner wasn’t a <b>considerate</b> person. He <b>degraded</b> the dog all the time. Finally, his owner decided to get rid of him. He threw Elvis in his car and took him to the middle of the forest. He tossed him out and drove away. Elvis was cold and scared. He decided to follow a <b>brook</b> into the city.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Elvis soon found out that the city was a big and <b>impersonal</b> place. Everywhere he went, he saw signs that said, “No Dogs Allowed.” <b>Pedestrians</b> yelled at him. He was sad, hungry, and exhausted. He thought that nobody cared about him anymore. He was ready to give up when he heard a soft voice say, “What a beautiful <b>hound</b>!” Elvis looked up and saw an old woman. She said, “You’re <b>entitled</b> to a better life than this. I can take you to a <b>sanctuary</b> for old dogs like you. I’ll <b>cater</b> to all your needs. Would you like to come with me?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The woman <b>escorted</b> Elvis to a beautiful <b>facility</b>. There was a sign on the <b>external</b> door that said, “Dogs Welcome!” The interior of the building was painted blue, and shiny <b>ornaments</b> hung from the ceiling. There was a <b>heap</b> of tasty bones and bread <b>crusts</b> for <b>consumption</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Elvis learned there were kind people in the world after all.</p></div>",
       "imageUrl": "/unit13_vol5_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -547,7 +541,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit13_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chú Chó Săn Già</h1>\n\n<p style=\"margin-bottom: 1rem;\">Elvis là một chú chó rất thích chạy. Chú hội tụ tất cả các <b>tiêu chuẩn (criteria)</b> để trở thành một chú chó đua xuất sắc. Chú có đôi chân dài, cơ bắp săn chắc và một trái tim khỏe mạnh. Chú xuất sắc đến mức chưa từng thua một cuộc đua nào ở <b>bán cầu (hemisphere)</b> Bắc. <b>Những khán giả (Spectators)</b> đặt cược vào các cuộc đua chó luôn chọn Elvis là người chiến thắng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, sau mười năm đua, Elvis ngày càng già đi. <b>Những giác quan (faculties)</b> của chú không còn nhạy bén như trước nữa. Chủ của chú đã rất tức giận khi Elvis bắt đầu thua cuộc. Chủ của Elvis không phải là một người <b>chu đáo (considerate)</b>. Ông ta liên tục <b>hạ thấp (degraded)</b> chú chó. Cuối cùng, ông chủ quyết định tống khứ chú đi. Ông ta ném Elvis vào xe và chở chú đến giữa khu rừng. Ông ném chú ra ngoài rồi lái xe đi. Elvis cảm thấy lạnh lẽo và sợ hãi. Chú quyết định đi theo một <b>dòng suối (brook)</b> để vào thành phố.</p>\n\n<p style=\"margin-bottom: 1rem;\">Elvis sớm nhận ra rằng thành phố là một nơi rộng lớn và <b>lạnh lùng (impersonal)</b>. Đi đến đâu, chú cũng thấy những tấm biển ghi dòng chữ: \"Cấm Chó.\" <b>Người đi bộ (Pedestrians)</b> đã hét vào mặt chú. Chú cảm thấy buồn bã, đói lả và kiệt sức. Chú nghĩ rằng không còn ai quan tâm đến mình nữa. Chú chuẩn bị bỏ cuộc thì chợt nghe thấy một giọng nói nhẹ nhàng vang lên, \"Quả là một chú <b>chó săn (hound)</b> xinh đẹp!\" Elvis ngẩng lên và nhìn thấy một bà lão. Bà ấy nói, \"Mày <b>xứng đáng (entitled)</b> có một cuộc sống tốt hơn thế này. Ta có thể đưa mày đến một <b>khu bảo tồn (sanctuary)</b> dành cho những chú chó già như mày. Ta sẽ <b>phục vụ (cater)</b> mọi nhu cầu của mày. Mày có muốn đi cùng ta không?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Người phụ nữ đã <b>hộ tống (escorted)</b> Elvis đến một <b>cơ sở (facility)</b> tuyệt đẹp. Có một tấm biển trên cánh cửa <b>bên ngoài (external)</b> ghi rằng: \"Chào mừng những chú chó!\" Bên trong tòa nhà được sơn màu xanh dương, và những đồ <b>trang trí (ornaments)</b> lấp lánh được treo trên trần nhà. Có một <b>đống (heap)</b> xương ngon lành và những <b>vỏ bánh mì (crusts)</b> để <b>tiêu thụ (consumption)</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau tất cả, Elvis đã học được rằng trên đời này vẫn còn những người tốt bụng.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 13: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

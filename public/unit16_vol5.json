@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 16: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -123,12 +117,170 @@
           "questionType": "Điền từ"
         },
         {
+          "id": "sec4",
+          "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "The farmer lived on a large <i>estate</i>. It was given to him by his father.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"estate\" (điền trang) dùng chính xác trong ngữ cảnh này.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "The principal was a <i>proponent</i> of group learning. He wanted students to learn on their own.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"proponent of group learning\" (người ủng hộ học nhóm) mâu thuẫn với \"learn on their own\" (tự học). Dùng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "13",
+              "content": "He wanted to <i>refine</i> the machine before he sold it. He spent three years improving it.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"refine\" (cải tiến) đồng nghĩa với \"improving it\" (cải thiện nó). Dùng chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "The seat belt <i>restricted</i> the child’s movement in the car. He was able to move a lot.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"restricted\" (hạn chế) mâu thuẫn với \"able to move a lot\" (có thể di chuyển nhiều). Dùng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "After an accident in the laboratory, <i>hydrogen</i> filled the air. The gas was completely invisible.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"hydrogen\" (khí hydro) là một loại khí (gas). Dùng chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "The boy had a different <i>outlook</i> than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"outlook\" (quan điểm) được dùng chính xác để chỉ sự khác biệt trong suy nghĩ.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "The scientists found many <i>archeological</i> items in the desert. It would help them study modern societies.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"archeological\" (thuộc về khảo cổ, đồ cổ) mâu thuẫn với \"modern societies\" (xã hội hiện đại). Dùng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "Brian <i>brainstormed</i> with his group. After an hour, they came up with a great idea.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"brainstormed\" (tập trung suy nghĩ) để đưa ra \"great idea\" (ý tưởng tuyệt vời). Dùng chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "The people in the plane crash were saved by <i>parachutes</i>. They dropped safely to the ground using the device.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"parachutes\" (cái dù) dùng để rơi an toàn xuống đất. Dùng chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "Ellen wanted to learn how to <i>knit</i>. She wanted to save people from fires.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"knit\" (đan len) không liên quan đến việc \"save people from fires\" (cứu người khỏi hỏa hoạn). Dùng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "21",
+              "content": "The man was found guilty of <i>fraud</i>. He told people he was selling medicine, but it was only river water.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"fraud\" (lừa đảo) phù hợp với hành động bán nước sông giả làm thuốc. Dùng chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "The woman showed her <i>integrity</i> by lying to the police about her involvement in the crime.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"integrity\" (sự trung thực) mâu thuẫn với hành động \"lying\" (nói dối). Dùng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "23",
+              "content": "The chocolate <i>addict</i> ate chocolate bars about once a month.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"addict\" (người nghiện) mâu thuẫn với việc chỉ ăn một lần một tháng (once a month). Dùng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "The <i>archeology</i> expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"archeology\" (khảo cổ học) liên quan đến nghiên cứu xương cổ đại (ancient bones). Dùng chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "25",
+              "content": "The children ran into the <i>courtyard</i> when it started raining. They didn’t want to get wet.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "\"courtyard\" (sân trong) là khu vực ngoài trời (outdoor area), chạy ra đó vẫn bị ướt (get wet). Dùng sai.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
           "id": "sec3",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
           "questions": [
             {
-              "id": "11",
+              "id": "26",
               "content": "prehistoric",
               "options": [
                 "large",
@@ -140,7 +292,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "12",
+              "id": "27",
               "content": "outlook",
               "options": [
                 "outside",
@@ -152,7 +304,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "13",
+              "id": "28",
               "content": "proponent",
               "options": [
                 "supporter",
@@ -164,7 +316,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "14",
+              "id": "29",
               "content": "estate",
               "options": [
                 "gas",
@@ -176,7 +328,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "15",
+              "id": "30",
               "content": "brainstorm",
               "options": [
                 "to come up with",
@@ -189,171 +341,13 @@
             }
           ],
           "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec4",
-          "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
-          "content": "",
-          "questions": [
-            {
-              "id": "16",
-              "content": "The farmer lived on a large <i>estate</i>. It was given to him by his father.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"estate\" (điền trang) dùng chính xác trong ngữ cảnh này.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "17",
-              "content": "The principal was a <i>proponent</i> of group learning. He wanted students to learn on their own.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"proponent of group learning\" (người ủng hộ học nhóm) mâu thuẫn với \"learn on their own\" (tự học). Dùng sai.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "18",
-              "content": "He wanted to <i>refine</i> the machine before he sold it. He spent three years improving it.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"refine\" (cải tiến) đồng nghĩa với \"improving it\" (cải thiện nó). Dùng chính xác.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "19",
-              "content": "The seat belt <i>restricted</i> the child’s movement in the car. He was able to move a lot.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"restricted\" (hạn chế) mâu thuẫn với \"able to move a lot\" (có thể di chuyển nhiều). Dùng sai.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "20",
-              "content": "After an accident in the laboratory, <i>hydrogen</i> filled the air. The gas was completely invisible.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"hydrogen\" (khí hydro) là một loại khí (gas). Dùng chính xác.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "21",
-              "content": "The boy had a different <i>outlook</i> than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"outlook\" (quan điểm) được dùng chính xác để chỉ sự khác biệt trong suy nghĩ.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "22",
-              "content": "The scientists found many <i>archeological</i> items in the desert. It would help them study modern societies.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"archeological\" (thuộc về khảo cổ, đồ cổ) mâu thuẫn với \"modern societies\" (xã hội hiện đại). Dùng sai.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "23",
-              "content": "Brian <i>brainstormed</i> with his group. After an hour, they came up with a great idea.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"brainstormed\" (tập trung suy nghĩ) để đưa ra \"great idea\" (ý tưởng tuyệt vời). Dùng chính xác.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "24",
-              "content": "The people in the plane crash were saved by <i>parachutes</i>. They dropped safely to the ground using the device.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"parachutes\" (cái dù) dùng để rơi an toàn xuống đất. Dùng chính xác.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "25",
-              "content": "Ellen wanted to learn how to <i>knit</i>. She wanted to save people from fires.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"knit\" (đan len) không liên quan đến việc \"save people from fires\" (cứu người khỏi hỏa hoạn). Dùng sai.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "26",
-              "content": "The man was found guilty of <i>fraud</i>. He told people he was selling medicine, but it was only river water.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"fraud\" (lừa đảo) phù hợp với hành động bán nước sông giả làm thuốc. Dùng chính xác.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "27",
-              "content": "The woman showed her <i>integrity</i> by lying to the police about her involvement in the crime.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"integrity\" (sự trung thực) mâu thuẫn với hành động \"lying\" (nói dối). Dùng sai.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "28",
-              "content": "The chocolate <i>addict</i> ate chocolate bars about once a month.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"addict\" (người nghiện) mâu thuẫn với việc chỉ ăn một lần một tháng (once a month). Dùng sai.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "29",
-              "content": "The <i>archeology</i> expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"archeology\" (khảo cổ học) liên quan đến nghiên cứu xương cổ đại (ancient bones). Dùng chính xác.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "30",
-              "content": "The children ran into the <i>courtyard</i> when it started raining. They didn’t want to get wet.",
-              "options": [
-                "Correct",
-                "Incorrect"
-              ],
-              "explanation": "\"courtyard\" (sân trong) là khu vực ngoài trời (outdoor area), chạy ra đó vẫn bị ướt (get wet). Dùng sai.",
-              "correctAnswer": "B"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The History of Parachutes</h1>        <p style=\"margin-bottom: 1rem;\">Scientists who study <b>archeology</b> say that there may be some evidence of <b>prehistoric</b> parachutes. But the first written history of the device comes from China about 2,100 years ago. Scientists <b>cite</b> an ancient book that describes parachutes. However, there is no <b>archeological</b> evidence that proves that an actual <b>parachute</b> was ever made. Later, people from northern Africa and Italy also had ideas about a similar invention. In fact, a Leonardo Da Vinci's drawing <b>corresponds</b> closely with the modern parachute design!</p>    <p style=\"margin-bottom: 1rem;\">In 1783, French scientist Sebastian Lenormand invented the first modern parachute. Sebastian <b>brainstormed</b> with other scientists to come up with a way to help people jump safely out of burning buildings. He thought the solution was to give people an object to <b>restrict</b> their speed while they traveled toward the ground. Many people thought that he was up to some kind of <b>fraud</b>, but Sebastian had a lot of <b>integrity</b>. His <b>budget</b> was limited, so he first tested his theory by using two umbrellas. He jumped out of a tree and found that the umbrellas worked.</p>    <p style=\"margin-bottom: 1rem;\">Next, he <b>refined</b> his invention. Rather than using umbrellas, he <b>knit</b> a large parachute. Finally, he jumped off a tall building on a French <b>estate</b> and landed safely in the <b>courtyard</b>.</p>    <p style=\"margin-bottom: 1rem;\">Sebastian's work gave another man an idea. Jean-Pierre Blanchard had a different <b>outlook</b> than Sebastian. He was a hot air balloon <b>addict</b>. He was one of the first people to ride in a hot air balloon powered by <b>hydrogen</b> gas. He was a <b>proponent</b> of using the parachutes to exit from hot air balloons. Starting in 1785, he used his dog to show that animals could land safely from hot air balloons by using parachutes. Then, in 1793, he was faced with a <b>chaotic</b> experience. The hot air balloon he was riding in burst and started to fall. He was forced to use a parachute himself. And much to his relief, it saved his life!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The History of Parachutes</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Scientists who study <b>archeology</b> say that there may be some evidence of <b>prehistoric</b> parachutes. But the first written history of the device comes from China about 2,100 years ago. Scientists <b>cite</b> an ancient book that describes parachutes. However, there is no <b>archeological</b> evidence that proves that an actual <b>parachute</b> was ever made. Later, people from northern Africa and Italy also had ideas about a similar invention. In fact, a Leonardo Da Vinci's drawing <b>corresponds</b> closely with the modern parachute design!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In 1783, French scientist Sebastian Lenormand invented the first modern parachute. Sebastian <b>brainstormed</b> with other scientists to come up with a way to help people jump safely out of burning buildings. He thought the solution was to give people an object to <b>restrict</b> their speed while they traveled toward the ground. Many people thought that he was up to some kind of <b>fraud</b>, but Sebastian had a lot of <b>integrity</b>. His <b>budget</b> was limited, so he first tested his theory by using two umbrellas. He jumped out of a tree and found that the umbrellas worked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Next, he <b>refined</b> his invention. Rather than using umbrellas, he <b>knit</b> a large parachute. Finally, he jumped off a tall building on a French <b>estate</b> and landed safely in the <b>courtyard</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Sebastian's work gave another man an idea. Jean-Pierre Blanchard had a different <b>outlook</b> than Sebastian. He was a hot air balloon <b>addict</b>. He was one of the first people to ride in a hot air balloon powered by <b>hydrogen</b> gas. He was a <b>proponent</b> of using the parachutes to exit from hot air balloons. Starting in 1785, he used his dog to show that animals could land safely from hot air balloons by using parachutes. Then, in 1793, he was faced with a <b>chaotic</b> experience. The hot air balloon he was riding in burst and started to fall. He was forced to use a parachute himself. And much to his relief, it saved his life!</p></div>",
       "imageUrl": "/unit16_vol5_story.png",
       "sections": [
         {
@@ -482,7 +476,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit16_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Lịch sử của những chiếc dù</h1>\n\n<p style=\"margin-bottom: 1rem;\">Các nhà khoa học nghiên cứu về <b>khảo cổ học</b> cho rằng có thể có một số bằng chứng về những chiếc dù <b>thời tiền sử</b>. Nhưng lịch sử bằng văn bản đầu tiên về thiết bị này bắt nguồn từ Trung Quốc khoảng 2.100 năm trước. Các nhà khoa học <b>trích dẫn</b> một cuốn sách cổ mô tả về những chiếc dù. Tuy nhiên, không có bằng chứng <b>thuộc về khảo cổ</b> nào chứng minh rằng một <b>chiếc dù</b> thực sự đã từng được chế tạo. Sau đó, những người từ Bắc Phi và Ý cũng có ý tưởng về một phát minh tương tự. Trên thực tế, một bản vẽ của Leonardo Da Vinci <b>trùng khớp</b> chặt chẽ với thiết kế dù hiện đại!</p>\n\n<p style=\"margin-bottom: 1rem;\">Năm 1783, nhà khoa học người Pháp Sebastian Lenormand đã phát minh ra chiếc dù hiện đại đầu tiên. Sebastian đã <b>động não</b> cùng các nhà khoa học khác để tìm ra cách giúp mọi người nhảy an toàn ra khỏi các tòa nhà đang cháy. Ông nghĩ giải pháp là cung cấp cho mọi người một vật thể để <b>hạn chế</b> tốc độ của họ khi họ di chuyển xuống mặt đất. Nhiều người cho rằng ông đang làm một <b>trò lừa đảo</b> nào đó, nhưng Sebastian có rất nhiều <b>sự chính trực</b>. <b>Ngân sách</b> của ông rất hạn hẹp, vì vậy ban đầu ông thử nghiệm lý thuyết của mình bằng cách sử dụng hai chiếc ô. Ông nhảy xuống từ một cái cây và thấy rằng những chiếc ô đã hoạt động.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tiếp theo, ông đã <b>cải tiến</b> phát minh của mình. Thay vì sử dụng những chiếc ô, ông đã <b>đan</b> một chiếc dù lớn. Cuối cùng, ông nhảy từ một tòa nhà cao tầng trên một <b>điền trang</b> ở Pháp và hạ cánh an toàn xuống <b>sân</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Công việc của Sebastian đã mang lại cho một người đàn ông khác một ý tưởng. Jean-Pierre Blanchard có một <b>quan điểm</b> khác với Sebastian. Ông ấy là một <b>người đam mê</b> khinh khí cầu. Ông là một trong những người đầu tiên đi khinh khí cầu chạy bằng khí <b>hydro</b>. Ông là một <b>người ủng hộ</b> việc sử dụng dù để thoát khỏi khinh khí cầu. Bắt đầu từ năm 1785, ông sử dụng chú chó của mình để chứng minh rằng động vật có thể hạ cánh an toàn từ khinh khí cầu bằng cách sử dụng dù. Sau đó, vào năm 1793, ông phải đối mặt với một trải nghiệm <b>hỗn loạn</b>. Khinh khí cầu ông đang đi bị vỡ và bắt đầu rơi. Ông buộc phải tự mình sử dụng một chiếc dù. Và thật nhẹ nhõm, nó đã cứu mạng ông!</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 16: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

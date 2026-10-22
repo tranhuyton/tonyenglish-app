@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 3: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. admonished / idiot / option / torment</b><br/>I had the [ 2 ] of going with them or staying home. I felt like an [ 4 ] for the choice I made. Because he liked to [ 6 ] the kitten by pouring water on it, the boy's mother [ 8 ] him for his cruel behavior.</p><p style=\"margin-bottom: 12px;\"><b>2. brag / echoed / perfect / pinpoint</b><br/>It was difficult to [ 10 ] the dog's location because its cries [ 12 ] off of the hills. My sister likes to [ 14 ] about how my mother and father think her behavior is [ 16 ].</p><p style=\"margin-bottom: 12px;\"><b>3. beware / eventual / pastime / switch</b><br/>When you [ 18 ] the machine on, you need to [ 20 ] because the machine is dangerous. All of the accidents at the swimming pool led to the [ 11 ] closing of it and the end of a favorite summer [ 12 ].</p><p style=\"margin-bottom: 12px;\"><b>4. audible / awesome / conscious / disagreed</b><br/>The king wanted people to think that his power was [ 13 ] . He would put people in jail if they [ 14 ] with him. Even though the little girl was trying to sneak up on her parents, her [ 15 ] steps made her parents [ 16 ] of her.</p><p style=\"margin-bottom: 12px;\"><b>5. hint / immense / indirect / thorough</b><br/>An [ 17 ] tree fell across the road, forcing the travelers to take a more [ 18 ] route through the countryside. The police could not find a single clue to the crime, which gave a [ 19 ] as to how [ 20 ] the thief had been.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. admonished / idiot / option / torment</b><br/>I had the [ 1 ] of going with them or staying home. I felt like an [ 2 ] for the choice I made. Because he liked to [ 3 ] the kitten by pouring water on it, the boy's mother [ 4 ] him for his cruel behavior.</p><p style=\"margin-bottom: 12px;\"><b>2. brag / echoed / perfect / pinpoint</b><br/>It was difficult to [ 5 ] the dog's location because its cries [ 6 ] off of the hills. My sister likes to [ 7 ] about how my mother and father think her behavior is [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. beware / eventual / pastime / switch</b><br/>When you [ 9 ] the machine on, you need to [ 10 ] because the machine is dangerous. All of the accidents at the swimming pool led to the [ 11 ] closing of it and the end of a favorite summer [ 12 ].</p><p style=\"margin-bottom: 12px;\"><b>4. audible / awesome / conscious / disagreed</b><br/>The king wanted people to think that his power was [ 13 ] . He would put people in jail if they [ 14 ] with him. Even though the little girl was trying to sneak up on her parents, her [ 15 ] steps made her parents [ 16 ] of her.</p><p style=\"margin-bottom: 12px;\"><b>5. hint / immense / indirect / thorough</b> (Hint: An...) [ 17 ] tree fell across the road, forcing the travelers to take a more [ 18 ] route through the countryside. The police could not find a single clue to the crime, which gave a [ 19 ] as to how [ 20 ] the thief had been.</p>",
               "options": [],
-              "correctAnswer": "option",
-              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
+              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2.",
+              "correctAnswer": "option"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "idiot",
-              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
+              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2.",
+              "correctAnswer": "idiot"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "torment",
-              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
+              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2.",
+              "correctAnswer": "torment"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "admonished",
-              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
+              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2.",
+              "correctAnswer": "admonished"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "pinpoint",
-              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
+              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2.",
+              "correctAnswer": "pinpoint"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "echoed",
-              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
+              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2.",
+              "correctAnswer": "echoed"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "brag",
-              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
+              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2.",
+              "correctAnswer": "brag"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "perfect",
-              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
+              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2.",
+              "correctAnswer": "perfect"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "switch",
-              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
+              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2.",
+              "correctAnswer": "switch"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "beware",
-              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
+              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2.",
+              "correctAnswer": "beware"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "eventual",
-              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
+              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2.",
+              "correctAnswer": "eventual"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "pastime",
-              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
+              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2.",
+              "correctAnswer": "pastime"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "awesome",
-              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
+              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2.",
+              "correctAnswer": "awesome"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "disagreed",
-              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
+              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2.",
+              "correctAnswer": "disagreed"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "audible",
-              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
+              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2.",
+              "correctAnswer": "audible"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "conscious",
-              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
+              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2.",
+              "correctAnswer": "conscious"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "immense",
-              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
+              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2.",
+              "correctAnswer": "immense"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "indirect",
-              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
+              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2.",
+              "correctAnswer": "indirect"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "hint",
-              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2."
+              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2.",
+              "correctAnswer": "hint"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "thorough",
-              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2."
+              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2.",
+              "correctAnswer": "thorough"
             }
           ],
           "questionType": "Điền từ"
@@ -169,181 +162,181 @@
               "id": "21",
               "content": "You should beware",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "beware of (cẩn thận với) phù hợp với 'the hole in the bridge'.",
-              "correctAnswer": "b. of the hole in the bridge"
+              "correctAnswer": "of the hole in the bridge"
             },
             {
               "id": "22",
               "content": "My favorite pastime",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "pastime (thú vui) phù hợp với 'listening to music'.",
-              "correctAnswer": "d. is listening to music"
+              "correctAnswer": "is listening to music"
             },
             {
               "id": "23",
               "content": "The doctor did a thorough check",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "thorough check (kiểm tra kỹ lưỡng) phù hợp với sức khỏe của bệnh nhân.",
-              "correctAnswer": "b. of the sick man's health"
+              "correctAnswer": "of the sick man's health"
             },
             {
               "id": "24",
               "content": "The two friends disagreed",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "disagreed about (không đồng tình về) phù hợp với việc trò chơi nào tốt hơn.",
-              "correctAnswer": "a. about which game was better"
+              "correctAnswer": "about which game was better"
             },
             {
               "id": "25",
               "content": "She switched the bag",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "switched (chuyển đổi) từ tay trái sang tay phải.",
-              "correctAnswer": "c. from her left hand to her right"
+              "correctAnswer": "from her left hand to her right"
             },
             {
               "id": "26",
               "content": "His proud sister brags",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "brags about (khoe khoang về) khả năng chơi thể thao.",
-              "correctAnswer": "a. about how good she is at sports"
+              "correctAnswer": "about how good she is at sports"
             },
             {
               "id": "27",
               "content": "An immense pile of garbage",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "immense pile of garbage (đống rác khổng lồ) là nguyên nhân gây mùi hôi.",
-              "correctAnswer": "d. was the reason for the bad smell"
+              "correctAnswer": "was the reason for the bad smell"
             },
             {
               "id": "28",
               "content": "The indirect route",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "indirect route (đường vòng) mất thêm một giờ lái xe.",
-              "correctAnswer": "c. took an hour more to drive"
+              "correctAnswer": "took an hour more to drive"
             },
             {
               "id": "29",
               "content": "The awesome storm caused",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "awesome storm (cơn bão đáng sợ) gây ra nỗi sợ hãi.",
-              "correctAnswer": "d. fear that his home would be damaged"
+              "correctAnswer": "fear that his home would be damaged"
             },
             {
               "id": "30",
               "content": "She admonished the student",
               "options": [
-                "a. about how good she is at sports",
-                "a. about which game was better",
-                "b. of the hole in the bridge",
-                "b. of the sick man's health",
-                "c. for talking during the test",
-                "c. from her left hand to her right",
-                "c. took an hour more to drive",
-                "d. fear that his home would be damaged",
-                "d. is listening to music",
-                "d. was the reason for the bad smell"
+                "about how good she is at sports",
+                "about which game was better",
+                "of the hole in the bridge",
+                "of the sick man's health",
+                "for talking during the test",
+                "from her left hand to her right",
+                "took an hour more to drive",
+                "fear that his home would be damaged",
+                "is listening to music",
+                "was the reason for the bad smell"
               ],
               "explanation": "admonished (khiển trách) học sinh vì nói chuyện trong giờ kiểm tra.",
-              "correctAnswer": "c. for talking during the test"
+              "correctAnswer": "for talking during the test"
             }
           ],
           "questionType": "Matching"
@@ -357,181 +350,181 @@
               "id": "31",
               "content": "He couldn't sleep at night",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "bad dreams tormented him (những giấc mơ xấu hành hạ anh ta) khiến anh ta không thể ngủ.",
-              "correctAnswer": "c. because bad dreams tormented him"
+              "correctAnswer": "because bad dreams tormented him"
             },
             {
               "id": "32",
               "content": "We knew he broke his leg when he fell",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "sound of the bone breaking was audible (tiếng gãy xương có thể nghe rõ).",
-              "correctAnswer": "d. because the sound of the bone breaking was audible"
+              "correctAnswer": "because the sound of the bone breaking was audible"
             },
             {
               "id": "33",
               "content": "He had to choose the blue car",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "there weren't any other options (không còn lựa chọn nào khác).",
-              "correctAnswer": "b. because there weren't any other options"
+              "correctAnswer": "because there weren't any other options"
             },
             {
               "id": "34",
               "content": "The hiker always carried a compass and map,",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "pinpoint his location (xác định vị trí chính xác) bằng la bàn và bản đồ.",
-              "correctAnswer": "c. so he could pinpoint his location in the wild"
+              "correctAnswer": "so he could pinpoint his location in the wild"
             },
             {
               "id": "35",
               "content": "She didn't eat good food and didn't exercise,",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "led to her eventual illness (dẫn đến căn bệnh cuối cùng của cô ấy) do thói quen xấu.",
-              "correctAnswer": "a. and it led to her eventual illness"
+              "correctAnswer": "and it led to her eventual illness"
             },
             {
               "id": "36",
               "content": "The students had to answer all the questions correctly",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "get a perfect grade (đạt điểm hoàn hảo) nếu trả lời đúng tất cả.",
-              "correctAnswer": "c. if they wanted to get a perfect grade"
+              "correctAnswer": "if they wanted to get a perfect grade"
             },
             {
               "id": "37",
               "content": "The captain did not see the ship approaching behind him,",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "conscious of the other boats (nhận thức được các thuyền khác).",
-              "correctAnswer": "d. but he was conscious of the other boats"
+              "correctAnswer": "but he was conscious of the other boats"
             },
             {
               "id": "38",
               "content": "She thought someone was calling to her from the other cliff,",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "echo of her voice (tiếng vang giọng nói của cô ấy).",
-              "correctAnswer": "c. but it was just the echo of her voice"
+              "correctAnswer": "but it was just the echo of her voice"
             },
             {
               "id": "39",
               "content": "He knew his friends were having a surprise party for him",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "gave him so many hints (đã cho anh ta quá nhiều gợi ý).",
-              "correctAnswer": "b. because they gave him so many hints"
+              "correctAnswer": "because they gave him so many hints"
             },
             {
               "id": "40",
               "content": "If you can't tie your own shoes by the time you're twelve years old",
               "options": [
-                "a. and it led to her eventual illness",
-                "b. because there weren't any other options",
-                "b. because they gave him so many hints",
-                "b. then people might think you're an idiot",
-                "c. because bad dreams tormented him",
-                "c. but it was just the echo of her voice",
-                "c. if they wanted to get a perfect grade",
-                "c. so he could pinpoint his location in the wild",
-                "d. because the sound of the bone breaking was audible",
-                "d. but he was conscious of the other boats"
+                "and it led to her eventual illness",
+                "because there weren't any other options",
+                "because they gave him so many hints",
+                "then people might think you're an idiot",
+                "because bad dreams tormented him",
+                "but it was just the echo of her voice",
+                "if they wanted to get a perfect grade",
+                "so he could pinpoint his location in the wild",
+                "because the sound of the bone breaking was audible",
+                "but he was conscious of the other boats"
               ],
               "explanation": "people might think you're an idiot (mọi người có thể nghĩ bạn là kẻ ngốc).",
-              "correctAnswer": "b. then people might think you're an idiot"
+              "correctAnswer": "then people might think you're an idiot"
             }
           ],
           "questionType": "Matching"
@@ -541,13 +534,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Young Man and the Old Man</h1>        <p style=\"margin-bottom: 1rem;\">A proud young man was looking for a new <b>pastime</b>. He heard about people hiking in the national parks and decided to try it for himself. As he started his stroll, an old man walked up to him.</p>    <p style=\"margin-bottom: 1rem;\">\"Don't go this way,\" the old man said. \"<b>Beware</b>. The paths are not clear. It's easy to become lost.\"</p>    <p style=\"margin-bottom: 1rem;\">But the young man <b>disagreed</b> with the old man and <b>bragged</b> that he had a <b>perfect</b> understanding of the park. \"I studied maps of this area,\" he told him. \"I believe I have a <b>thorough</b> knowledge of these trails. I won't become lost.\"</p>    <p style=\"margin-bottom: 1rem;\">The old man listened to the young man and then <b>admonished</b> him for his pride.</p>    <p style=\"margin-bottom: 1rem;\">\"I have walked these trails my entire life,\" he said. \"If you think you will be safe, then go ahead.\"</p>    <p style=\"margin-bottom: 1rem;\">The young man ignored the old man and started along the trail.</p>    <p style=\"margin-bottom: 1rem;\">Whenever he had to choose between an easy or difficult route, he always chose the more difficult <b>option</b>. In addition, he was not <b>conscious</b> of which direction he was going. After a while, he decided to return home. Because his course through the wilderness was so <b>indirect</b>, he had no idea where he was.</p>    <p style=\"margin-bottom: 1rem;\">He looked at his map but could not <b>pinpoint</b> his location. He walked one path after another but soon realized he was lost.</p>    <p style=\"margin-bottom: 1rem;\">The sun was going down, and sudden strong winds gave a <b>hint</b> that it might rain. <b>Immense</b> clouds filled the sky. <b>Awesome</b> sounds of thunder were <b>audible</b> from all directions. It <b>echoed</b> off the mountains. The thought of the <b>eventual</b> storm <b>tormented</b> the young man. He hurried in one direction, but soon <b>switched</b> out of confusion. Luckily, it led him out of the park.</p>    <p style=\"margin-bottom: 1rem;\">When he arrived home, he knew that he had acted like an <b>idiot</b>. He realized he was lucky to be alive. He decided to listen to people with more experience than himself.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Young Man and the Old Man</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A proud young man was looking for a new <b>pastime</b>. He heard about people hiking in the national parks and decided to try it for himself. As he started his stroll, an old man walked up to him.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Don't go this way,\" the old man said. \"<b>Beware</b>. The paths are not clear. It's easy to become lost.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But the young man <b>disagreed</b> with the old man and <b>bragged</b> that he had a <b>perfect</b> understanding of the park. \"I studied maps of this area,\" he told him. \"I believe I have a <b>thorough</b> knowledge of these trails. I won't become lost.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The old man listened to the young man and then <b>admonished</b> him for his pride.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I have walked these trails my entire life,\" he said. \"If you think you will be safe, then go ahead.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The young man ignored the old man and started along the trail.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Whenever he had to choose between an easy or difficult route, he always chose the more difficult <b>option</b>. In addition, he was not <b>conscious</b> of which direction he was going. After a while, he decided to return home. Because his course through the wilderness was so <b>indirect</b>, he had no idea where he was.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He looked at his map but could not <b>pinpoint</b> his location. He walked one path after another but soon realized he was lost.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The sun was going down, and sudden strong winds gave a <b>hint</b> that it might rain. <b>Immense</b> clouds filled the sky. <b>Awesome</b> sounds of thunder were <b>audible</b> from all directions. It <b>echoed</b> off the mountains. The thought of the <b>eventual</b> storm <b>tormented</b> the young man. He hurried in one direction, but soon <b>switched</b> out of confusion. Luckily, it led him out of the park.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When he arrived home, he knew that he had acted like an <b>idiot</b>. He realized he was lucky to be alive. He decided to listen to people with more experience than himself.</p></div>",
       "imageUrl": "/unit3_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Reading Comprehension",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A</p>Mark each statement T for true or F for false.",
           "questions": [
             {
               "id": "41",
@@ -668,7 +661,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit3_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chàng trai trẻ và ông lão</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một chàng trai trẻ kiêu ngạo đang tìm kiếm một <b>thú tiêu khiển</b> mới. Anh nghe nói về những người đi bộ đường dài trong các công viên quốc gia và quyết định tự mình thử nghiệm. Khi anh bắt đầu chuyến đi dạo của mình, một ông lão đi về phía anh.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đừng đi lối này,\" ông lão nói. \"<b>Hãy cẩn thận</b>. Những con đường này không rõ ràng. Rất dễ bị lạc.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng chàng trai trẻ <b>không đồng ý</b> với ông lão và <b>khoe khoang</b> rằng anh ta hiểu rõ <b>hoàn toàn</b> về công viên. \"Cháu đã nghiên cứu bản đồ của khu vực này,\" anh nói với ông. \"Cháu tin rằng mình có kiến thức <b>thấu đáo</b> về những con đường mòn này. Cháu sẽ không bị lạc đâu.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông lão lắng nghe chàng trai trẻ và sau đó <b>khiển trách</b> anh ta vì sự kiêu ngạo của anh.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi đã đi bộ trên những con đường mòn này cả đời mình,\" ông nói. \"Nếu cậu nghĩ mình sẽ an toàn, thì cứ đi đi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Chàng trai trẻ phớt lờ ông lão và bắt đầu đi dọc theo con đường mòn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bất cứ khi nào anh ta phải chọn giữa một tuyến đường dễ dàng hay khó khăn, anh ta luôn chọn <b>lựa chọn</b> khó khăn hơn. Thêm vào đó, anh ta không <b>ý thức</b> được mình đang đi theo hướng nào. Một lúc sau, anh ta quyết định trở về nhà. Vì lộ trình của anh ta xuyên qua vùng hoang dã quá <b>lòng vòng</b>, anh ta không biết mình đang ở đâu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh ta nhìn vào bản đồ của mình nhưng không thể <b>xác định chính xác</b> vị trí của mình. Anh ta đi hết con đường này đến con đường khác nhưng chẳng mấy chốc nhận ra mình đã bị lạc.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mặt trời đang lặn xuống, và những cơn gió mạnh bất chợt đưa ra một <b>dấu hiệu</b> rằng trời có thể mưa. Những đám mây <b>khổng lồ</b> lấp đầy bầu trời. Những âm thanh sấm sét <b>đáng kinh ngạc</b> có thể <b>nghe thấy</b> từ mọi hướng. Nó <b>vang vọng</b> lại từ những ngọn núi. Ý nghĩ về một cơn bão <b>cuối cùng</b> sắp xảy ra đã <b>dằn vặt</b> chàng trai trẻ. Anh ta vội vã đi về một hướng, nhưng ngay sau đó đã <b>chuyển hướng</b> vì bối rối. May mắn thay, nó đã dẫn anh ta ra khỏi công viên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi về đến nhà, anh ta biết rằng mình đã hành động như một <b>tên ngốc</b>. Anh ta nhận ra mình may mắn vì vẫn còn sống. Anh ta quyết định lắng nghe những người có kinh nghiệm hơn mình.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

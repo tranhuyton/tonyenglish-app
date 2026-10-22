@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 1: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. rapid / rate</b><br/>The population growth in the city was incredibly [ 1 ]. It is quite surprising that people settled there at such a fast [ 2 ].</p><p style=\"margin-bottom: 12px;\"><b>2. contemporary / vary</b><br/>Many [ 3 ] laws make it illegal for business to compete in unfair ways. However, the specific laws in different countries [ 4 ] greatly.</p><p style=\"margin-bottom: 12px;\"><b>3. humid / toxic</b><br/>Because it is quite [ 5 ] on the island, various kinds of plants grow well there. However, some of these plants are [ 6 ] to humans.</p><p style=\"margin-bottom: 12px;\"><b>4. aroma / texture</b><br/>The cheese has a smooth [ 7 ]. However, some people find it hard to eat because of its powerful [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>5. cluster / combined</b><br/>A [ 9 ] of people suggested that nearby cities could fight the invaders if they cooperated with each other. As a result, everyone [ 10 ] their efforts and defeated the invaders.</p><p style=\"margin-bottom: 12px;\"><b>6. soothing / subtle</b><br/>The artist uses [ 11 ] differences of color in her landscapes. This has an overall calming and [ 12 ] effect on the viewer.</p><p style=\"margin-bottom: 12px;\"><b>7. cultivated / odor</b><br/>A huge garden was [ 13 ] in the middle of the city. However, a species of rare plants gave off an unpleasant [ 14 ].</p><p style=\"margin-bottom: 12px;\"><b>8. beverage / palate</b><br/>During a four or five course meal, one should drink something to clean the [ 15 ] between courses. The perfect [ 16 ] for this is, of course, water.</p><p style=\"margin-bottom: 12px;\"><b>9. condensed / divine</b><br/>I can explain the basic story in a simple, [ 17 ] way. A boy is given a [ 18 ] message, and he begins an exciting adventure.</p><p style=\"margin-bottom: 12px;\"><b>10. paradise / plantations</b><br/>The island of Oahu is not a natural [ 19 ] like Maui. However, tourists still visit its many [ 20 ].</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. rapid / rate</b><br/>The population growth in the city was incredibly [ 1 ]. It is quite surprising that people settled there at such a fast [ 2 ].</p><p style=\"margin-bottom: 12px;\"><b>2. contemporary / vary</b> (Hint: Many...) [ 3 ] laws make it illegal for business to compete in unfair ways. However, the specific laws in different countries [ 4 ] greatly.</p><p style=\"margin-bottom: 12px;\"><b>3. humid / toxic</b><br/>Because it is quite [ 5 ] on the island, various kinds of plants grow well there. However, some of these plants are [ 6 ] to humans.</p><p style=\"margin-bottom: 12px;\"><b>4. aroma / texture</b><br/>The cheese has a smooth [ 7 ]. However, some people find it hard to eat because of its powerful [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>5. cluster / combined</b> (Hint: A...) [ 9 ] of people suggested that nearby cities could fight the invaders if they cooperated with each other. As a result, everyone [ 10 ] their efforts and defeated the invaders.</p><p style=\"margin-bottom: 12px;\"><b>6. soothing / subtle</b><br/>The artist uses [ 11 ] differences of color in her landscapes. This has an overall calming and [ 12 ] effect on the viewer.</p><p style=\"margin-bottom: 12px;\"><b>7. cultivated / odor</b><br/>A huge garden was [ 13 ] in the middle of the city. However, a species of rare plants gave off an unpleasant [ 14 ].</p><p style=\"margin-bottom: 12px;\"><b>8. beverage / palate</b><br/>During a four or five course meal, one should drink something to clean the [ 15 ] between courses. The perfect [ 16 ] for this is, of course, water.</p><p style=\"margin-bottom: 12px;\"><b>9. condensed / divine</b><br/>I can explain the basic story in a simple, [ 17 ] way. A boy is given a [ 18 ] message, and he begins an exciting adventure.</p><p style=\"margin-bottom: 12px;\"><b>10. paradise / plantations</b><br/>The island of Oahu is not a natural [ 19 ] like Maui. However, tourists still visit its many [ 20 ].</p>",
               "options": [],
-              "correctAnswer": "rapid",
-              "explanation": "'rapid' (nhanh chóng) là tính từ phù hợp để mô tả sự gia tăng dân số."
+              "explanation": "'rapid' (nhanh chóng) là tính từ phù hợp để mô tả sự gia tăng dân số.",
+              "correctAnswer": "rapid"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "rate",
-              "explanation": "'rate' (tốc độ) phù hợp với cụm từ 'at a fast rate' (với một tốc độ nhanh)."
+              "explanation": "'rate' (tốc độ) phù hợp với cụm từ 'at a fast rate' (với một tốc độ nhanh).",
+              "correctAnswer": "rate"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "contemporary",
-              "explanation": "'contemporary' (đương đại/hiện đại) là tính từ bổ nghĩa cho 'laws'."
+              "explanation": "'contemporary' (đương đại/hiện đại) là tính từ bổ nghĩa cho 'laws'.",
+              "correctAnswer": "contemporary"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "vary",
-              "explanation": "'vary' (khác nhau) là động từ chính của câu."
+              "explanation": "'vary' (khác nhau) là động từ chính của câu.",
+              "correctAnswer": "vary"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "humid",
-              "explanation": "'humid' (ẩm ướt) phù hợp với điều kiện khí hậu trên đảo."
+              "explanation": "'humid' (ẩm ướt) phù hợp với điều kiện khí hậu trên đảo.",
+              "correctAnswer": "humid"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "toxic",
-              "explanation": "'toxic' (có độc) đi kèm với 'to humans' (đối với con người)."
+              "explanation": "'toxic' (có độc) đi kèm với 'to humans' (đối với con người).",
+              "correctAnswer": "toxic"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "texture",
-              "explanation": "'texture' (kết cấu) phù hợp với tính từ 'smooth' (mịn màng)."
+              "explanation": "'texture' (kết cấu) phù hợp với tính từ 'smooth' (mịn màng).",
+              "correctAnswer": "texture"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "aroma",
-              "explanation": "'aroma' (mùi hương) phù hợp với 'powerful' (mạnh mẽ/nồng)."
+              "explanation": "'aroma' (mùi hương) phù hợp với 'powerful' (mạnh mẽ/nồng).",
+              "correctAnswer": "aroma"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "cluster",
-              "explanation": "'A cluster of people' (một nhóm người)."
+              "explanation": "'A cluster of people' (một nhóm người).",
+              "correctAnswer": "cluster"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "combined",
-              "explanation": "'combined' (kết hợp) là động từ phù hợp cho hành động kết hợp nỗ lực."
+              "explanation": "'combined' (kết hợp) là động từ phù hợp cho hành động kết hợp nỗ lực.",
+              "correctAnswer": "combined"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "subtle",
-              "explanation": "'subtle differences' (những sự khác biệt tinh tế)."
+              "explanation": "'subtle differences' (những sự khác biệt tinh tế).",
+              "correctAnswer": "subtle"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "soothing",
-              "explanation": "'soothing effect' (tác dụng êm dịu), đồng nghĩa với 'calming'."
+              "explanation": "'soothing effect' (tác dụng êm dịu), đồng nghĩa với 'calming'.",
+              "correctAnswer": "soothing"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "cultivated",
-              "explanation": "'cultivated' (được trồng trọt) là dạng bị động phù hợp ở đây."
+              "explanation": "'cultivated' (được trồng trọt) là dạng bị động phù hợp ở đây.",
+              "correctAnswer": "cultivated"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "odor",
-              "explanation": "'unpleasant odor' (mùi khó chịu)."
+              "explanation": "'unpleasant odor' (mùi khó chịu).",
+              "correctAnswer": "odor"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "palate",
-              "explanation": "'clean the palate' (làm sạch vòm miệng/khẩu vị) là một cụm từ phổ biến."
+              "explanation": "'clean the palate' (làm sạch vòm miệng/khẩu vị) là một cụm từ phổ biến.",
+              "correctAnswer": "palate"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "beverage",
-              "explanation": "'beverage' (thức uống) ám chỉ nước trong câu này."
+              "explanation": "'beverage' (thức uống) ám chỉ nước trong câu này.",
+              "correctAnswer": "beverage"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "condensed",
-              "explanation": "'condensed way' (cách tóm tắt/ngắn gọn)."
+              "explanation": "'condensed way' (cách tóm tắt/ngắn gọn).",
+              "correctAnswer": "condensed"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "divine",
-              "explanation": "'divine message' (thông điệp từ thần linh)."
+              "explanation": "'divine message' (thông điệp từ thần linh).",
+              "correctAnswer": "divine"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "paradise",
-              "explanation": "'natural paradise' (thiên đường tự nhiên)."
+              "explanation": "'natural paradise' (thiên đường tự nhiên).",
+              "correctAnswer": "paradise"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "plantations",
-              "explanation": "'plantations' (đồn điền) là danh từ số nhiều phù hợp."
+              "explanation": "'plantations' (đồn điền) là danh từ số nhiều phù hợp.",
+              "correctAnswer": "plantations"
             }
           ],
           "questionType": "Điền từ"
@@ -541,13 +534,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The History of Chocolate</h1>        <p style=\"margin-bottom: 1rem;\">Many people believe that chocolate originally came from Europe. However, chocolate, called the \"food of the gods,\" was first made in the Americas. The first chocolate was very different from <b>contemporary</b> chocolate.</p>    <p style=\"margin-bottom: 1rem;\">Wild chocolate trees can grow easily in the <b>humid</b> Amazon rainforest. <b>Clusters</b> of flowers growing on these trees turn to seeds. About 20 to 60 cacao beans can be found in the seeds. Cacao beans are the ingredient needed to create sweet, <b>soothing</b>, and delicious chocolate treats.</p>    <p style=\"margin-bottom: 1rem;\">The Mayan and Aztec cultures both thought that chocolate trees were brought from <b>paradise</b> by gods. The Mayans and Aztecs used the beans from this <b>divine</b> tree to create a special <b>beverage</b> with a very pleasant <b>odor</b>. Surprisingly, the Aztecs believed that it would be <b>toxic</b> to women and children.</p>    <p style=\"margin-bottom: 1rem;\">In the 1500s, the Spanish explorer Cortes met the Aztecs. Cortes became quite interested in the <b>plantations</b> where the Aztecs <b>cultivated</b> chocolate trees. When he returned to Europe, he took cacao beans with him. He introduced the people of Spain to the Aztecs’ chocolate <b>beverage</b>.</p>    <p style=\"margin-bottom: 1rem;\">Over the next 100 years or so, kings, queens, and members of the upper class enjoyed drinking chocolate. They enjoyed it even more once they learned to add sugar to the <b>beverage</b>! Soon, chocolate had spread all across Europe. New machines allowed chocolate makers to perfect their products and produce them at a very <b>rapid</b> <b>rate</b>. Preparing the beans in special ways brought out the <b>aroma</b> of chocolate. The beans were <b>combined</b> with <b>condensed</b> milk to give the chocolate a smooth <b>texture</b>.</p>    <p style=\"margin-bottom: 1rem;\">Today, <b>contemporary</b> chocolates with <b>subtle</b> flavors fill the shelves of expensive chocolate shops. The different types of chocolate available today <b>vary</b> widely. True chocolate lovers can tell which is best, though. They will tell you that the flavor of high quality chocolate stays on the <b>palate</b> long after you finish it.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The History of Chocolate</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Many people believe that chocolate originally came from Europe. However, chocolate, called the \"food of the gods,\" was first made in the Americas. The first chocolate was very different from <b>contemporary</b> chocolate.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Wild chocolate trees can grow easily in the <b>humid</b> Amazon rainforest. <b>Clusters</b> of flowers growing on these trees turn to seeds. About 20 to 60 cacao beans can be found in the seeds. Cacao beans are the ingredient needed to create sweet, <b>soothing</b>, and delicious chocolate treats.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The Mayan and Aztec cultures both thought that chocolate trees were brought from <b>paradise</b> by gods. The Mayans and Aztecs used the beans from this <b>divine</b> tree to create a special <b>beverage</b> with a very pleasant <b>odor</b>. Surprisingly, the Aztecs believed that it would be <b>toxic</b> to women and children.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In the 1500s, the Spanish explorer Cortes met the Aztecs. Cortes became quite interested in the <b>plantations</b> where the Aztecs <b>cultivated</b> chocolate trees. When he returned to Europe, he took cacao beans with him. He introduced the people of Spain to the Aztecs’ chocolate <b>beverage</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Over the next 100 years or so, kings, queens, and members of the upper class enjoyed drinking chocolate. They enjoyed it even more once they learned to add sugar to the <b>beverage</b>! Soon, chocolate had spread all across Europe. New machines allowed chocolate makers to perfect their products and produce them at a very <b>rapid</b> <b>rate</b>. Preparing the beans in special ways brought out the <b>aroma</b> of chocolate. The beans were <b>combined</b> with <b>condensed</b> milk to give the chocolate a smooth <b>texture</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Today, <b>contemporary</b> chocolates with <b>subtle</b> flavors fill the shelves of expensive chocolate shops. The different types of chocolate available today <b>vary</b> widely. True chocolate lovers can tell which is best, though. They will tell you that the flavor of high quality chocolate stays on the <b>palate</b> long after you finish it.</p></div>",
       "imageUrl": "/unit1_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Reading Comprehension Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True or False</p>",
           "questions": [
             {
               "id": "41",
@@ -668,7 +661,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit1_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Lịch sử của sô-cô-la</h1>\n\n<p style=\"margin-bottom: 1rem;\">Nhiều người tin rằng sô-cô-la ban đầu có nguồn gốc từ châu Âu. Tuy nhiên, sô-cô-la, được gọi là \"thức ăn của các vị thần\", lần đầu tiên được tạo ra ở châu Mỹ. Sô-cô-la ban đầu rất khác so với sô-cô-la <b>đương đại</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những cây sô-cô-la hoang dã có thể phát triển dễ dàng trong khu rừng nhiệt đới Amazon <b>ẩm ướt</b>. Những <b>chùm</b> hoa mọc trên những cây này biến thành hạt. Khoảng 20 đến 60 hạt ca cao có thể được tìm thấy trong hạt. Hạt ca cao là thành phần cần thiết để tạo ra những món sô-cô-la ngọt ngào, <b>êm dịu</b> và ngon miệng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cả hai nền văn hóa Maya và Aztec đều cho rằng cây sô-cô-la được các vị thần mang đến từ <b>thiên đường</b>. Người Maya và người Aztec đã sử dụng hạt từ cái cây <b>thần thánh</b> này để tạo ra một loại <b>đồ uống</b> đặc biệt với <b>mùi hương</b> rất dễ chịu. Đáng ngạc nhiên là người Aztec tin rằng nó sẽ có <b>độc</b> đối với phụ nữ và trẻ em.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào những năm 1500, nhà thám hiểm người Tây Ban Nha Cortes đã gặp người Aztec. Cortes trở nên khá quan tâm đến những <b>đồn điền</b> nơi người Aztec <b>trồng trọt</b> cây sô-cô-la. Khi trở về châu Âu, ông đã mang theo hạt ca cao. Ông đã giới thiệu cho người dân Tây Ban Nha <b>đồ uống</b> sô-cô-la của người Aztec.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong khoảng 100 năm tiếp theo, các vị vua, nữ hoàng và các thành viên của tầng lớp thượng lưu rất thích uống sô-cô-la. Họ thậm chí còn thích nó hơn khi họ học được cách thêm đường vào <b>đồ uống</b>! Chẳng bao lâu, sô-cô-la đã lan rộng khắp châu Âu. Máy móc mới cho phép những người làm sô-cô-la hoàn thiện sản phẩm của họ và sản xuất chúng với <b>tốc độ</b> rất <b>nhanh</b>. Việc chuẩn bị hạt theo những cách đặc biệt đã làm nổi bật <b>hương thơm</b> của sô-cô-la. Các hạt được <b>kết hợp</b> với sữa <b>đặc</b> để mang lại cho sô-cô-la một <b>kết cấu</b> mịn màng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày nay, những loại sô-cô-la <b>đương đại</b> với hương vị <b>tinh tế</b> lấp đầy các kệ của những cửa hàng sô-cô-la đắt tiền. Các loại sô-cô-la khác nhau có sẵn ngày nay <b>đa dạng</b> một cách rộng rãi. Tuy nhiên, những người thực sự yêu thích sô-cô-la có thể cho biết loại nào là tốt nhất. Họ sẽ cho bạn biết rằng hương vị của sô-cô-la chất lượng cao vẫn đọng lại trên <b>vòm miệng</b> rất lâu sau khi bạn ăn xong.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 1: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

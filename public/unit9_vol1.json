@@ -209,102 +209,102 @@
             {
               "id": "16",
               "content": "<p class=\"mb-4\">beach / wave</p><p>I like to play on the [ 16 ].</p><p>The big [ 17 ] pushed the swimmer back.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. island / ocean</p><p>They walked across the [ 18 ] to find food.</p><p>I am scared of some animals that live in the [ 19 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. fix / damage</p><p>My dad knows how to [ 20 ] cars.</p><p>If you [ 21 ] the light, we won't be able to see at night.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. rock / still</p><p>We have to go around that large [ 22 ].</p><p>We are [ 23 ] planning to go to Florida this winter.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. throw / step</p><p>Do you know how to [ 24 ] a football?</p><p>Please [ 25 ] into the house.</p>",
-              "correctAnswer": "beach",
               "options": [
                 "beach",
                 "wave"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "beach"
             },
             {
               "id": "17",
               "content": "",
-              "correctAnswer": "wave",
               "options": [
                 "beach",
                 "wave"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "wave"
             },
             {
               "id": "18",
               "content": "",
-              "correctAnswer": "island",
               "options": [
                 "island",
                 "ocean"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "island"
             },
             {
               "id": "19",
               "content": "",
-              "correctAnswer": "ocean",
               "options": [
                 "island",
                 "ocean"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "ocean"
             },
             {
               "id": "20",
               "content": "",
-              "correctAnswer": "fix",
               "options": [
                 "fix",
                 "damage"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "fix"
             },
             {
               "id": "21",
               "content": "",
-              "correctAnswer": "damage",
               "options": [
                 "fix",
                 "damage"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "damage"
             },
             {
               "id": "22",
               "content": "",
-              "correctAnswer": "rock",
               "options": [
                 "rock",
                 "still"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "rock"
             },
             {
               "id": "23",
               "content": "",
-              "correctAnswer": "still",
               "options": [
                 "rock",
                 "still"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "still"
             },
             {
               "id": "24",
               "content": "",
-              "correctAnswer": "throw",
               "options": [
                 "throw",
                 "step"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "throw"
             },
             {
               "id": "25",
               "content": "",
-              "correctAnswer": "step",
               "options": [
                 "throw",
                 "step"
               ],
-              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu.",
+              "correctAnswer": "step"
             }
           ],
           "questionType": "Điền từ"
@@ -314,7 +314,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Starfish</h1>        <p style=\"margin-bottom: 1rem;\">Last summer I took a trip to an <b>island</b>. I had a lot of fun. I sat and watched the <b>wave</b>s and listened to the <b>ocean</b>. I learned to <b>identify</b> birds. I <b>discover</b>ed pretty things and enjoyed the <b>taste</b> of new foods. It was a very nice time.</p>    <p style=\"margin-bottom: 1rem;\">One evening I took a <b>pleasant</b> walk by the ocean. When the waves came in, many starfish fell on the <b>beach</b>. Some starfish went back into the water, and they were <b>save</b>d. But other starfish were <b>still</b> on the sand. They would die if they did not get into the water. There were many starfish on the beach that night. It made me sad, but I knew I could not <b>fix</b> the problem. I <b>step</b>ped very carefully so I did not <b>damage</b> them.</p>    <p style=\"margin-bottom: 1rem;\">Then I saw a little girl. She was also sad about the starfish. She wanted to <b>prevent</b> all of them from dying. She asked me if I could <b>perhaps</b> help her.</p>    <p style=\"margin-bottom: 1rem;\">\"To be <b>frank</b>, I don't think we can do anything,\" I said.</p>    <p style=\"margin-bottom: 1rem;\">The little girl started to cry. She sat back <b>against</b> a <b>rock</b> and thought for a while. Finally, the <b>emotion</b> was gone. She stopped crying and stood up. Then she picked up a starfish and <b>throw</b> threw it into the water.</p>    <p style=\"margin-bottom: 1rem;\">\"What are you doing?\" I asked her. But she did not answer me. She just threw as many starfish as she could. \"You cannot save all of them!\" I said.</p>    <p style=\"margin-bottom: 1rem;\">She stopped to look at me. \"No, I cannot save them all,\" she replied. Then she picked up a very big starfish and said, \"But I can save this one.\" And then she smiled and threw the starfish as far as she could into the ocean.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Starfish</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Last summer I took a trip to an <b>island</b>. I had a lot of fun. I sat and watched the <b>wave</b>s and listened to the <b>ocean</b>. I learned to <b>identify</b> birds. I <b>discover</b>ed pretty things and enjoyed the <b>taste</b> of new foods. It was a very nice time.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One evening I took a <b>pleasant</b> walk by the ocean. When the waves came in, many starfish fell on the <b>beach</b>. Some starfish went back into the water, and they were <b>save</b>d. But other starfish were <b>still</b> on the sand. They would die if they did not get into the water. There were many starfish on the beach that night. It made me sad, but I knew I could not <b>fix</b> the problem. I <b>step</b>ped very carefully so I did not <b>damage</b> them.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Then I saw a little girl. She was also sad about the starfish. She wanted to <b>prevent</b> all of them from dying. She asked me if I could <b>perhaps</b> help her.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"To be <b>frank</b>, I don't think we can do anything,\" I said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The little girl started to cry. She sat back <b>against</b> a <b>rock</b> and thought for a while. Finally, the <b>emotion</b> was gone. She stopped crying and stood up. Then she picked up a starfish and <b>throw</b> threw it into the water.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"What are you doing?\" I asked her. But she did not answer me. She just threw as many starfish as she could. \"You cannot save all of them!\" I said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">She stopped to look at me. \"No, I cannot save them all,\" she replied. Then she picked up a very big starfish and said, \"But I can save this one.\" And then she smiled and threw the starfish as far as she could into the ocean.</p></div>",
       "imageUrl": "/unit9_story.png",
       "sections": [
         {
@@ -369,25 +369,24 @@
               ],
               "explanation": "Cô bé hỏi người đàn ông xem ông có thể giúp cô bé cứu sao biển không.",
               "correctAnswer": "D"
+            },
+            {
+              "id": "30",
+              "content": "<p class=\"mb-4\">Which starfish were safe on the beach?</p>",
+              "options": [
+                "The starfish that stayed on the warm sand",
+                "The starfish that hid behind the rocks",
+                "The starfish that were thrown back into the water",
+                "The starfish that were too big to carry"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Những con sao biển được ném trở lại xuống nước thì được an toàn ('Some starfish went back into the water, and they were safe.')."
             }
           ],
           "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec4",
-          "title": "Answer the question.",
-          "content": "",
-          "questions": [
-            {
-              "id": "30",
-              "content": "Which starfish were safe on the beach?\n(sec4[25])",
-              "explanation": "Những con sao biển có thể quay trở lại nước thì được an toàn.",
-              "correctAnswer": "{\"1\":\"Some starfish went back into the water, and they were safe.\"}"
-            }
-          ],
-          "questionType": "Điền từ"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit9_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Những Con Sao Biển</h1>\n\n<p style=\"margin-bottom: 1rem;\">Mùa hè năm ngoái, tôi đã có một chuyến đi đến một <b>hòn đảo</b>. Tôi đã có rất nhiều niềm vui. Tôi ngồi xem những <b>con sóng</b> và lắng nghe <b>đại dương</b>. Tôi học cách <b>nhận diện</b> các loài chim. Tôi đã <b>khám phá</b> ra những thứ xinh đẹp và thưởng thức <b>hương vị</b> của những món ăn mới. Đó là một khoảng thời gian rất tuyệt vời.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một buổi tối, tôi có một buổi đi dạo <b>dễ chịu</b> bên bờ đại dương. Khi những con sóng tràn vào, rất nhiều sao biển rơi trên <b>bãi biển</b>. Một số con sao biển đã quay trở lại nước, và chúng đã được <b>cứu</b>. Nhưng những con sao biển khác thì <b>vẫn</b> nằm trên cát. Chúng sẽ chết nếu không xuống nước. Có rất nhiều sao biển trên bãi biển đêm đó. Điều đó làm tôi buồn, nhưng tôi biết mình không thể <b>sửa chữa</b> vấn đề này. Tôi <b>bước đi</b> rất cẩn thận để không làm <b>tổn thương</b> chúng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó tôi nhìn thấy một cô bé. Cô bé cũng đang buồn bã về những con sao biển. Cô bé muốn <b>ngăn chặn</b> tất cả chúng khỏi việc bị chết. Cô bé hỏi tôi liệu tôi có thể <b>có lẽ</b> giúp được gì cho cô không.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Nói một cách <b>thẳng thắn</b>, chú không nghĩ chúng ta có thể làm gì được,\" tôi nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô bé bắt đầu khóc. Cô bé ngồi dựa <b>vào</b> một <b>tảng đá</b> và suy nghĩ một lúc. Cuối cùng, <b>cảm xúc</b> đó đã biến mất. Cô bé ngừng khóc và đứng dậy. Sau đó, cô nhặt một con sao biển và <b>ném</b> nó xuống nước.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Cháu đang làm gì vậy?\" Tôi hỏi cô bé. Nhưng cô bé không trả lời tôi. Cô bé chỉ ném càng nhiều sao biển càng tốt. \"Cháu không thể cứu tất cả chúng đâu!\" Tôi nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô bé dừng lại nhìn tôi. \"Dạ không, cháu không thể cứu tất cả chúng,\" cô bé trả lời. Sau đó cô nhặt một con sao biển rất lớn và nói, \"Nhưng cháu có thể cứu con này.\" Và rồi cô bé mỉm cười và ném con sao biển ra đại dương xa nhất có thể.</p>\n</div>"
     }
   ],
   "basicInfo": {

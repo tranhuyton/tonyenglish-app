@@ -200,14 +200,13 @@
               "id": "16",
               "content": "If something is _____, you can use it often.",
               "options": [
+                "practical",
                 "urge",
                 "borrow",
-                "practical",
-                "appeal",
-                "downtown"
+                "appeal"
               ],
               "explanation": "practical: thực tế, hữu ích (có thể sử dụng thường xuyên).",
-              "correctAnswer": "C"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -216,8 +215,7 @@
                 "urge",
                 "borrow",
                 "practical",
-                "appeal",
-                "downtown"
+                "appeal"
               ],
               "explanation": "borrow: mượn. (Mượn mũ và sau đó trả lại).",
               "correctAnswer": "B"
@@ -228,38 +226,35 @@
               "options": [
                 "urge",
                 "borrow",
-                "practical",
-                "appeal",
-                "downtown"
+                "downtown",
+                "practical"
               ],
               "explanation": "downtown: trung tâm thành phố. (Nơi thú vị để sống).",
-              "correctAnswer": "E"
+              "correctAnswer": "C"
             },
             {
               "id": "19",
               "content": "I _____ you to save money; you might need it later.",
               "options": [
-                "urge",
                 "borrow",
                 "practical",
                 "appeal",
-                "downtown"
+                "urge"
               ],
               "explanation": "urge: thúc giục, khuyên nhủ. (Khuyên nên tiết kiệm tiền).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "20",
               "content": "Does flying _____ to you? I've always wanted to try it.",
               "options": [
+                "appeal",
                 "urge",
                 "borrow",
-                "practical",
-                "appeal",
-                "downtown"
+                "practical"
               ],
               "explanation": "appeal: hấp dẫn, lôi cuốn. (Việc bay lượn có hấp dẫn bạn không?).",
-              "correctAnswer": "D"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -269,7 +264,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Taxi Driver</h1>        <p style=\"margin-bottom: 1rem;\">Peter's job was driving a taxi <b>downtown</b>. He made a small <b>salary</b>. But he liked his job because it wasn't <b>dull</b>. Every day, he saw new things that <b>appealed</b> to him. Peter was <b>practical</b> about the future. \"Maybe I can get a <b>scholarship</b> to college,\" he thought. \"I could learn mathematical <b>formulas</b> and get a job at a bank. I could help <b>clients</b> <b>invest</b> their money.\"</p>    <p style=\"margin-bottom: 1rem;\">Peter stopped to pick up a passenger. \"Where to?\" he asked.</p>    <p style=\"margin-bottom: 1rem;\">\"Go to the Fourth Street Bank. And don't talk to me. I've had a rough day,\" the man said. Peter was angry, but he had a peaceful philosophy. When they stopped, the man's <b>fare</b> came to $10.25. He put his hands in his pockets. \"I can't find my wallet!\" he said. \"I can't pay the <b>fare</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">Peter said, \"Maybe I'll give you a <b>temporary</b> <b>loan</b>. You can <b>borrow</b> ten dollars and a <b>quarter</b> from me.\"</p>    <p style=\"margin-bottom: 1rem;\">The man was <b>embarrassed</b>, saying, \"I was mean to you, but now I want to help you. I <b>founded</b> this bank. I want to give you one thousand dollars.\"</p>    <p style=\"margin-bottom: 1rem;\">That much money was like a <b>treasure</b> to Peter. The man <b>urged</b> him to take the money, but he didn't.</p>    <p style=\"margin-bottom: 1rem;\">\"You're an honest person,\" the man said. \"I <b>assumed</b> you would take it. I want you to work for me.\"</p>    <p style=\"margin-bottom: 1rem;\">The next day, Peter started his job at the bank. He was happy to be done with his <b>former</b> job.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Taxi Driver</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Peter's job was driving a taxi <b>downtown</b>. He made a small <b>salary</b>. But he liked his job because it wasn't <b>dull</b>. Every day, he saw new things that <b>appealed</b> to him. Peter was <b>practical</b> about the future. \"Maybe I can get a <b>scholarship</b> to college,\" he thought. \"I could learn mathematical <b>formulas</b> and get a job at a bank. I could help <b>clients</b> <b>invest</b> their money.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Peter stopped to pick up a passenger. \"Where to?\" he asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Go to the Fourth Street Bank. And don't talk to me. I've had a rough day,\" the man said. Peter was angry, but he had a peaceful philosophy. When they stopped, the man's <b>fare</b> came to $10.25. He put his hands in his pockets. \"I can't find my wallet!\" he said. \"I can't pay the <b>fare</b>!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Peter said, \"Maybe I'll give you a <b>temporary</b> <b>loan</b>. You can <b>borrow</b> ten dollars and a <b>quarter</b> from me.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The man was <b>embarrassed</b>, saying, \"I was mean to you, but now I want to help you. I <b>founded</b> this bank. I want to give you one thousand dollars.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">That much money was like a <b>treasure</b> to Peter. The man <b>urged</b> him to take the money, but he didn't.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"You're an honest person,\" the man said. \"I <b>assumed</b> you would take it. I want you to work for me.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next day, Peter started his job at the bank. He was happy to be done with his <b>former</b> job.</p></div>",
       "imageUrl": "/unit30_story.png",
       "sections": [
         {
@@ -340,7 +335,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit30_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Người Lái Xe Taxi</h1>\n\n<p style=\"margin-bottom: 1rem;\">Công việc của Peter là lái xe taxi ở <b>khu trung tâm thành phố</b>. Anh ấy kiếm được một mức <b>lương</b> nhỏ. Nhưng anh ấy thích công việc của mình vì nó không hề <b>tẻ nhạt</b>. Mỗi ngày, anh ấy nhìn thấy những điều mới mẻ <b>hấp dẫn</b> mình. Peter rất <b>thực tế</b> về tương lai. \"Có lẽ mình có thể kiếm được một <b>học bổng</b> để vào đại học,\" anh nghĩ. \"Mình có thể học các <b>công thức</b> toán học và có được một công việc tại ngân hàng. Mình có thể giúp các <b>khách hàng</b> <b>đầu tư</b> tiền của họ.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Peter dừng lại để đón một hành khách. \"Đến đâu vậy?\" anh hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đến Ngân hàng Phố Thứ Tư. Và đừng nói chuyện với tôi. Tôi đã có một ngày tồi tệ,\" người đàn ông nói. Peter rất tức giận, nhưng anh ấy có một triết lý ôn hòa. Khi họ dừng lại, <b>tiền vé</b> của người đàn ông là 10,25 đô la. Ông ta đút tay vào túi. \"Tôi không thể tìm thấy ví của mình!\" ông ta nói. \"Tôi không thể trả <b>tiền vé</b>!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Peter nói, \"Có lẽ tôi sẽ cho ông một khoản <b>vay</b> <b>tạm thời</b>. Ông có thể <b>vay</b> mười đô la và một <b>đồng một phần tư đô la</b> từ tôi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Người đàn ông cảm thấy <b>xấu hổ</b>, nói rằng, \"Tôi đã tồi tệ với cậu, nhưng bây giờ tôi muốn giúp cậu. Tôi đã <b>thành lập</b> ngân hàng này. Tôi muốn cho cậu một ngàn đô la.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Số tiền lớn như vậy giống như một <b>kho báu</b> đối với Peter. Người đàn ông <b>thúc giục</b> anh ấy lấy tiền, nhưng anh ấy đã không nhận.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Cậu là một người trung thực,\" người đàn ông nói. \"Tôi <b>đã cho rằng</b> cậu sẽ lấy nó. Tôi muốn cậu làm việc cho tôi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày hôm sau, Peter bắt đầu công việc của mình tại ngân hàng. Anh ấy rất vui vì đã kết thúc với công việc <b>cũ</b> của mình.</p>\n</div>"
     }
   ],
   "basicInfo": {

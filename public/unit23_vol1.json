@@ -18,8 +18,9 @@
                   "answer": "matches"
                 }
               ],
-              "content": "<p class=\"mb-4\">I need to find the other sock that is <u>the same as this one</u>.<br/>ma [ 1 ]</p><p class=\"mb-4\">Please <u>take away</u> your feet from the table.<br/>re [ 2 ]</p><p class=\"mb-4\">This is a(an) <u>very normal</u> morning. Nothing bad has happened.<br/>av [ 3 ]</p><p class=\"mb-4\">The bell <u>rattled</u>, so we changed classes.<br/>so [ 4 ]</p><p class=\"mb-4\">William wanted to <u>go forward</u>, but a wall stopped him.<br/>ad [ 5 ]</p><p class=\"mb-4\">Clara is a <u>person in a group</u> of the running club.<br/>me [ 6 ]</p><p class=\"mb-4\">jesse is a <u>very good sports player</u>.<br/>at [ 7 ]</p><p class=\"mb-4\">What is your favorite <u>class</u>?<br/>co [ 8 ]</p><p class=\"mb-4\">He was a <u>person taking a ride</u> on the ship.<br/>pa [ 9 ]</p><p class=\"mb-4\">What kind of <u>character</u> does Ted have?<br/>pe [ 10 ]</p>",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "content": "<p class=\"mb-4\">I need to find the other sock that is <u>the same as this one</u>. (Hint: ma...) [ 1 ]</p><p class=\"mb-4\">Please <u>take away</u> your feet from the table. (Hint: re...) [ 2 ]</p><p class=\"mb-4\">This is a(an) <u>very normal</u> morning. Nothing bad has happened. (Hint: av...) [ 3 ]</p><p class=\"mb-4\">The bell <u>rattled</u>, so we changed classes. (Hint: so...) [ 4 ]</p><p class=\"mb-4\">William wanted to <u>go forward</u>, but a wall stopped him. (Hint: ad...) [ 5 ]</p><p class=\"mb-4\">Clara is a <u>person in a group</u> of the running club. (Hint: me...) [ 6 ]</p><p class=\"mb-4\">jesse is a <u>very good sports player</u>. (Hint: at...) [ 7 ]</p><p class=\"mb-4\">What is your favorite <u>class</u>? (Hint: co...) [ 8 ]</p><p class=\"mb-4\">He was a <u>person taking a ride</u> on the ship. (Hint: pa...) [ 9 ]</p><p class=\"mb-4\">What kind of <u>character</u> does Ted have? (Hint: pe...) [ 10 ]</p>",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "matches"
             },
             {
               "id": "2",
@@ -30,7 +31,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "remove"
             },
             {
               "id": "3",
@@ -41,7 +43,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "average"
             },
             {
               "id": "4",
@@ -52,7 +55,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "sounded"
             },
             {
               "id": "5",
@@ -63,7 +67,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "advance"
             },
             {
               "id": "6",
@@ -74,7 +79,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "member"
             },
             {
               "id": "7",
@@ -85,7 +91,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "athlete"
             },
             {
               "id": "8",
@@ -96,7 +103,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "course"
             },
             {
               "id": "9",
@@ -107,7 +115,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "passenger"
             },
             {
               "id": "10",
@@ -118,7 +127,8 @@
                 }
               ],
               "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "personality"
             }
           ],
           "questionType": "Điền từ"
@@ -254,7 +264,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Camp</h1>        <p style=\"margin-bottom: 1rem;\">Stacie wanted to stay at a nice hotel for vacation. But her parents sent her to a terrible camp instead. For breakfast, Stacie liked fresh juice and chocolate milk, but she got water at the camp. In the afternoon she wanted to write <b>poems</b>, but she had to <b>swim</b>. The camp was near an airport with loud planes. Spider<b>webs</b> hung over her bed. To her, the kids' <b>average</b> <b>behavior</b> was very bad. No girl <b>matched</b> her <b>personality</b>. She hated it.</p>    <p style=\"margin-bottom: 1rem;\">One day, they had a class. <b>Mental</b> exercise <b>sounded</b> good to Stacie. But it was a <b>course</b> on water <b>safety</b>. They learned how to be safe <b>passengers</b> on a boat. Stacie didn't ever plan to go on a boat.</p>    <p style=\"margin-bottom: 1rem;\">The next day, they played a game. There were a red team and a blue team. Stacie was on the blue team. Each team had to try to <b>remove</b> the other team's flag from a <b>pole</b>. They also had to use water guns. \"I'm not much of an <b>athlete</b>,\" she said. But she still had to play.</p>    <p style=\"margin-bottom: 1rem;\">Stacie took a water gun and looked for somewhere to hide. A boy said, \"Stacie, you <b>advance</b> to the middle. I will go right. Those two will go left.\"</p>    <p style=\"margin-bottom: 1rem;\">Stacie still didn't want to play. She walked into the forest and saw a red team player coming. Stacie hid <b>behind</b> a tree and then jumped out and <b>shot</b> the other player. \"This is fun!\" Stacie thought.</p>    <p style=\"margin-bottom: 1rem;\">Several minutes after <b>advancing</b> further, Stacie saw the red flag. A red team <b>member</b> was watching over it. She <b>shot</b> him with her water gun. Then she <b>lowered</b> the flag and ran back to her team. \"I got it!\" she yelled. The blue team won!</p>    <p style=\"margin-bottom: 1rem;\">Stacie was the hero. For the rest of the week, Stacie had fun.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Camp</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Stacie wanted to stay at a nice hotel for vacation. But her parents sent her to a terrible camp instead. For breakfast, Stacie liked fresh juice and chocolate milk, but she got water at the camp. In the afternoon she wanted to write <b>poems</b>, but she had to <b>swim</b>. The camp was near an airport with loud planes. Spider<b>webs</b> hung over her bed. To her, the kids' <b>average</b> <b>behavior</b> was very bad. No girl <b>matched</b> her <b>personality</b>. She hated it.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, they had a class. <b>Mental</b> exercise <b>sounded</b> good to Stacie. But it was a <b>course</b> on water <b>safety</b>. They learned how to be safe <b>passengers</b> on a boat. Stacie didn't ever plan to go on a boat.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next day, they played a game. There were a red team and a blue team. Stacie was on the blue team. Each team had to try to <b>remove</b> the other team's flag from a <b>pole</b>. They also had to use water guns. \"I'm not much of an <b>athlete</b>,\" she said. But she still had to play.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Stacie took a water gun and looked for somewhere to hide. A boy said, \"Stacie, you <b>advance</b> to the middle. I will go right. Those two will go left.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Stacie still didn't want to play. She walked into the forest and saw a red team player coming. Stacie hid <b>behind</b> a tree and then jumped out and <b>shot</b> the other player. \"This is fun!\" Stacie thought.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Several minutes after <b>advancing</b> further, Stacie saw the red flag. A red team <b>member</b> was watching over it. She <b>shot</b> him with her water gun. Then she <b>lowered</b> the flag and ran back to her team. \"I got it!\" she yelled. The blue team won!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Stacie was the hero. For the rest of the week, Stacie had fun.</p></div>",
       "imageUrl": "/unit23_story.png",
       "sections": [
         {
@@ -325,7 +335,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit23_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Hội Trại</h1>\n\n<p style=\"margin-bottom: 1rem;\">Stacie muốn ở lại một khách sạn đẹp cho kỳ nghỉ. Nhưng thay vào đó, bố mẹ cô lại gửi cô đến một hội trại tồi tệ. Vào bữa sáng, Stacie thích nước ép trái cây tươi và sữa sô-cô-la, nhưng cô bé lại chỉ có nước lọc ở trại. Vào buổi chiều, cô bé muốn viết <b>những bài thơ</b>, nhưng lại phải đi <b>bơi</b>. Hội trại nằm gần một sân bay với những chiếc máy bay ồn ào. <b>Mạng</b> nhện chăng lủng lẳng trên giường cô bé. Đối với cô, <b>hành vi</b> <b>trung bình</b> của những đứa trẻ ở đây là rất tệ. Không có cô gái nào <b>hợp</b> với <b>tính cách</b> của cô bé. Cô bé ghét điều đó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, họ có một lớp học. Bài tập <b>trí tuệ</b> <b>nghe có vẻ</b> thú vị với Stacie. Nhưng đó lại là một <b>khóa học</b> về <b>sự an toàn</b> dưới nước. Họ học cách trở thành những <b>hành khách</b> an toàn trên một chiếc thuyền. Stacie chưa bao giờ có ý định sẽ đi thuyền.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày hôm sau, họ chơi một trò chơi. Có một đội đỏ và một đội xanh. Stacie ở đội xanh. Mỗi đội phải cố gắng <b>gỡ bỏ</b> lá cờ của đội kia khỏi một cái <b>cột</b>. Họ cũng phải sử dụng súng nước. \"Mình không phải là một <b>vận động viên</b> cừ khôi,\" cô bé nói. Nhưng cô vẫn phải chơi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Stacie cầm lấy một khẩu súng nước và tìm nơi nào đó để trốn. Một cậu bé nói, \"Stacie, bạn hãy <b>tiến lên</b> vào giữa. Mình sẽ đi bên phải. Hai bạn kia sẽ đi bên trái.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Stacie vẫn không muốn chơi. Cô bé đi vào rừng và thấy một người chơi của đội đỏ đang tiến đến. Stacie nấp <b>sau</b> một cái cây rồi nhảy ra và <b>bắn</b> người chơi kia. \"Trò này vui đấy!\" Stacie nghĩ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vài phút sau khi <b>tiến lên</b> xa hơn, Stacie nhìn thấy lá cờ đỏ. Một <b>thành viên</b> đội đỏ đang canh chừng nó. Cô bé đã <b>bắn</b> cậu ta bằng khẩu súng nước của mình. Sau đó, cô bé <b>hạ</b> lá cờ xuống và chạy về phía đội mình. \"Mình lấy được rồi!\" cô bé hét lên. Đội xanh đã giành chiến thắng!</p>\n\n<p style=\"margin-bottom: 1rem;\">Stacie là một người hùng. Trong suốt phần còn lại của tuần lễ đó, Stacie đã có những khoảng thời gian rất vui vẻ.</p></div>\n</div>"
     }
   ],
   "basicInfo": {

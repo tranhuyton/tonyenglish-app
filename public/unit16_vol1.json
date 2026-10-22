@@ -209,67 +209,67 @@
             {
               "id": "16",
               "content": "My school was playing against a private [ 16 ]",
-              "explanation": "Chống lại một trường học (academy) tư thục.",
-              "correctAnswer": "academy",
               "options": [
                 "theater",
                 "academy",
                 "process",
                 "flat",
                 "maybe"
-              ]
+              ],
+              "explanation": "Chống lại một trường học (academy) tư thục.",
+              "correctAnswer": "academy"
             },
             {
               "id": "17",
               "content": "In the [ 17 ] of winning games, we had worked hard and had fun.",
-              "explanation": "Quá trình (process) chiến thắng.",
-              "correctAnswer": "process",
               "options": [
                 "theater",
                 "academy",
                 "process",
                 "flat",
                 "maybe"
-              ]
+              ],
+              "explanation": "Quá trình (process) chiến thắng.",
+              "correctAnswer": "process"
             },
             {
               "id": "18",
               "content": "If we won today, our coach said that [ 18 ] he would take us all...",
-              "explanation": "Có lẽ (maybe) huấn luyện viên sẽ dẫn chúng tôi đi...",
-              "correctAnswer": "maybe",
               "options": [
                 "theater",
                 "academy",
                 "process",
                 "flat",
                 "maybe"
-              ]
+              ],
+              "explanation": "Có lẽ (maybe) huấn luyện viên sẽ dẫn chúng tôi đi...",
+              "correctAnswer": "maybe"
             },
             {
               "id": "19",
               "content": "...to the [ 19 ] to see a new movie",
-              "explanation": "Tới rạp hát/rạp chiếu phim (theater) để xem phim mới.",
-              "correctAnswer": "theater",
               "options": [
                 "theater",
                 "academy",
                 "process",
                 "flat",
                 "maybe"
-              ]
+              ],
+              "explanation": "Tới rạp hát/rạp chiếu phim (theater) để xem phim mới.",
+              "correctAnswer": "theater"
             },
             {
               "id": "20",
               "content": "...on their latest [ 20 ] screen.",
-              "explanation": "Màn hình phẳng (flat screen).",
-              "correctAnswer": "flat",
               "options": [
                 "theater",
                 "academy",
                 "process",
                 "flat",
                 "maybe"
-              ]
+              ],
+              "explanation": "Màn hình phẳng (flat screen).",
+              "correctAnswer": "flat"
             }
           ],
           "questionType": "Kéo thả"
@@ -279,7 +279,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Adams County's Gold</h1>        <p style=\"margin-bottom: 1rem;\">Adams <b>Academy</b> was a good school. Boys lived there and took classes. Tom worked hard all week. On a spring Saturday, he wanted to do something fun!</p>    <p style=\"margin-bottom: 1rem;\">He asked his friend Jeff to go to the movie <b>theater</b>. \"Sorry,\" Jeff answered. \"I'm going to a <b>concert</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Tom asked Joe to go to the movies. But Joe's soccer team had a game.</p>    <p style=\"margin-bottom: 1rem;\">Next, Tom went down the hall to Brad's room. Brad was reading a very large old book. \"Hi, Brad,\" Tom said. \"Are you reading a <b>dictionary</b>? It looks <b>ancient</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">\"No. This is called The <b>Wealth</b> of Adams <b>County</b>. It's about <b>hidden</b> gold in Adams County. It's more than a <b>century</b> old. It was <b>published</b> in 1870! Look, it even has the <b>original</b> cover on it.\"</p>    <p style=\"margin-bottom: 1rem;\">Tom asked, \"Where did you get it?\"</p>    <p style=\"margin-bottom: 1rem;\">\"It's from my dad's friend. He is a nice <b>gentleman</b>, an <b>officer</b> in the army,\" answered Brad.</p>    <p style=\"margin-bottom: 1rem;\">\"The gold doesn't really <b>exist</b>, does it?\" Tom asked.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't know, but <b>maybe</b>! There are <b>clues</b> to it in this book. Let's find it!\"</p>    <p style=\"margin-bottom: 1rem;\">Looking for gold sounded like fun.</p>    <p style=\"margin-bottom: 1rem;\">The first clue was to find a <b>flat</b> tree underground. \"It must be in the forest,\" Tom said.</p>    <p style=\"margin-bottom: 1rem;\">Brad said, \"The flat tree could be a <b>board</b> under the dirt. It could cover the gold.\"</p>    <p style=\"margin-bottom: 1rem;\">Tom and Brad dug in the dirt all morning. The <b>process</b> of looking for gold made them hungry. They were ready to stop for lunch.</p>    <p style=\"margin-bottom: 1rem;\">But then Brad hit something hard. It was a board!</p>    <p style=\"margin-bottom: 1rem;\">Brad <b>pounded</b> on the board until it broke. There was a small hole under it. \"Look!\" He held up a gold coin.</p>    <p style=\"margin-bottom: 1rem;\">Tom saw a piece of paper in the hole. \"Brad, there's more. It's a map to the rest of the gold!\"</p>    <p style=\"margin-bottom: 1rem;\">Brad smiled. \"Let's go!\" And they hurried to find the wealth of Adams County.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Adams County's Gold</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Adams <b>Academy</b> was a good school. Boys lived there and took classes. Tom worked hard all week. On a spring Saturday, he wanted to do something fun!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He asked his friend Jeff to go to the movie <b>theater</b>. \"Sorry,\" Jeff answered. \"I'm going to a <b>concert</b>.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">So Tom asked Joe to go to the movies. But Joe's soccer team had a game.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Next, Tom went down the hall to Brad's room. Brad was reading a very large old book. \"Hi, Brad,\" Tom said. \"Are you reading a <b>dictionary</b>? It looks <b>ancient</b>.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"No. This is called The <b>Wealth</b> of Adams <b>County</b>. It's about <b>hidden</b> gold in Adams County. It's more than a <b>century</b> old. It was <b>published</b> in 1870! Look, it even has the <b>original</b> cover on it.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tom asked, \"Where did you get it?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"It's from my dad's friend. He is a nice <b>gentleman</b>, an <b>officer</b> in the army,\" answered Brad.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"The gold doesn't really <b>exist</b>, does it?\" Tom asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I don't know, but <b>maybe</b>! There are <b>clues</b> to it in this book. Let's find it!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Looking for gold sounded like fun.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The first clue was to find a <b>flat</b> tree underground. \"It must be in the forest,\" Tom said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Brad said, \"The flat tree could be a <b>board</b> under the dirt. It could cover the gold.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tom and Brad dug in the dirt all morning. The <b>process</b> of looking for gold made them hungry. They were ready to stop for lunch.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But then Brad hit something hard. It was a board!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Brad <b>pounded</b> on the board until it broke. There was a small hole under it. \"Look!\" He held up a gold coin.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tom saw a piece of paper in the hole. \"Brad, there's more. It's a map to the rest of the gold!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Brad smiled. \"Let's go!\" And they hurried to find the wealth of Adams County.</p></div>",
       "imageUrl": "/unit16_story.png",
       "sections": [
         {
@@ -350,7 +350,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">    <img src=\"/unit16_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Vàng của Hạt Adams</h1>\n\n<p style=\"margin-bottom: 1rem;\"><b>Học viện</b> Adams là một ngôi trường tốt. Các nam sinh sống ở đó và tham gia các lớp học. Tom đã làm việc chăm chỉ suốt cả tuần. Vào một ngày thứ Bảy mùa xuân, cậu ấy muốn làm điều gì đó thú vị!</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu ấy rủ người bạn tên Jeff đi đến <b>rạp chiếu phim</b>. \"Xin lỗi,\" Jeff trả lời. \"Tớ đang định đi xem một <b>buổi hòa nhạc</b>.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Vì vậy, Tom đã rủ Joe đi xem phim. Nhưng đội bóng đá của Joe lại có một trận đấu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tiếp đó, Tom đi dọc hành lang đến phòng của Brad. Brad đang đọc một cuốn sách cũ rất lớn. \"Chào Brad,\" Tom nói. \"Cậu đang đọc <b>từ điển</b> à? Trông nó có vẻ <b>cổ xưa</b> quá.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Không. Cuốn này tên là <b>Sự giàu có</b> của <b>Hạt</b> Adams. Nó viết về số vàng bị <b>giấu kín</b> ở Hạt Adams. Nó đã hơn một <b>thế kỷ</b> tuổi rồi. Nó được <b>xuất bản</b> vào năm 1870! Nhìn này, nó thậm chí còn giữ nguyên bìa <b>gốc</b> nữa.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Tom hỏi, \"Cậu lấy nó ở đâu vậy?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đó là từ một người bạn của bố tớ. Chú ấy là một <b>quý ông</b> tốt bụng, một <b>sĩ quan</b> trong quân đội,\" Brad trả lời.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Số vàng đó đâu có thực sự <b>tồn tại</b>, đúng không?\" Tom hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tớ không biết, nhưng <b>có thể</b> đấy! Có những <b>manh mối</b> dẫn đến nó trong cuốn sách này. Chúng ta hãy cùng tìm nó nhé!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Việc đi tìm vàng nghe có vẻ thú vị.</p>\n\n<p style=\"margin-bottom: 1rem;\">Manh mối đầu tiên là tìm một cái cây <b>phẳng</b> dưới lòng đất. \"Nó chắc chắn phải nằm trong khu rừng,\" Tom nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Brad nói, \"Cái cây phẳng đó có thể là một tấm <b>ván</b> nằm dưới lớp đất. Nó có thể che giấu số vàng.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Tom và Brad đã đào bới trong đất suốt cả buổi sáng. <b>Quá trình</b> tìm kiếm vàng khiến họ cảm thấy đói. Họ đã sẵn sàng dừng lại để ăn trưa.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng ngay lúc đó, Brad đập trúng một vật gì đó cứng. Đó là một tấm ván!</p>\n\n<p style=\"margin-bottom: 1rem;\">Brad <b>đập</b> mạnh vào tấm ván cho đến khi nó vỡ ra. Có một cái lỗ nhỏ bên dưới nó. \"Nhìn kìa!\" Cậu ấy giơ lên một đồng tiền vàng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tom nhìn thấy một mảnh giấy trong cái lỗ. \"Brad, vẫn còn nữa. Đó là một tấm bản đồ dẫn đến phần còn lại của số vàng!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Brad mỉm cười. \"Đi thôi!\" Và họ vội vã đi tìm sự giàu có của Hạt Adams.</p></div>\n</div>"
     }
   ],
   "basicInfo": {

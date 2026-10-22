@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 3: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -398,7 +392,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Bachelor’s Lesson</h1>        <p style=\"margin-bottom: 1rem;\">A <b>keen</b> young <b>bachelor</b> had finished his studies at the university. As soon as he had received his <b>diploma</b>, he <b>asserted</b> to everyone he met that he was the smartest person in town.</p>    <p style=\"margin-bottom: 1rem;\">“I <b>excel</b> at everything I study,” he said, bragging about his knowledge. “I’ve mastered <b>calculus</b> and <b>physiology</b>. I even understand the great <b>theoretical</b> teachings of science, such as <b>relativity</b>. There is nothing that I don’t know. Whether it’s the movements of <b>celestial</b> objects, like planets and stars, or how to <b>harness</b> the power of <b>radioactive</b> substances, I know everything.”</p>    <p style=\"margin-bottom: 1rem;\">But actually, there was something the bachelor did not know. Though his <b>analytic</b> abilities were great, he failed to notice he was missing something very important in his life.</p>    <p style=\"margin-bottom: 1rem;\">One day while walking through town, the bachelor witnessed a <b>collision</b> between two cars. Both drivers appeared to be injured, but the scholar only stood and watched.</p>    <p style=\"margin-bottom: 1rem;\">He thought to himself, “Those idiots should have been more alert. They really must not be very <b>competent</b>.” He never thought the drivers needed help.</p>    <p style=\"margin-bottom: 1rem;\">“Please help me,” said the female driver in a weak voice. “Help me, too,” said the male driver. “I’m hurt and can’t move.”</p>    <p style=\"margin-bottom: 1rem;\">Suddenly the bachelor realized he was the only person near the accident. He quit thinking and ran to help the drivers. He carefully helped them out of their vehicles and then called an ambulance.</p>    <p style=\"margin-bottom: 1rem;\">The drivers were saved, and the bachelor felt the best he had in his entire life. Studying <b>mythology</b>, <b>sociology</b>, and <b>geology</b> didn’t give him this wonderful feeling. It was the act of helping others, not his <b>cognitive</b> skills, that gave him this great feeling.</p>    <p style=\"margin-bottom: 1rem;\">He had learned an important lesson. He learned that <b>intellect</b> isn’t everything; being helpful is just as important. “Having only a brain is not enough,” he thought. “You must also have a heart.”</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Bachelor’s Lesson</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A <b>keen</b> young <b>bachelor</b> had finished his studies at the university. As soon as he had received his <b>diploma</b>, he <b>asserted</b> to everyone he met that he was the smartest person in town.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“I <b>excel</b> at everything I study,” he said, bragging about his knowledge. “I’ve mastered <b>calculus</b> and <b>physiology</b>. I even understand the great <b>theoretical</b> teachings of science, such as <b>relativity</b>. There is nothing that I don’t know. Whether it’s the movements of <b>celestial</b> objects, like planets and stars, or how to <b>harness</b> the power of <b>radioactive</b> substances, I know everything.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But actually, there was something the bachelor did not know. Though his <b>analytic</b> abilities were great, he failed to notice he was missing something very important in his life.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day while walking through town, the bachelor witnessed a <b>collision</b> between two cars. Both drivers appeared to be injured, but the scholar only stood and watched.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He thought to himself, “Those idiots should have been more alert. They really must not be very <b>competent</b>.” He never thought the drivers needed help.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Please help me,” said the female driver in a weak voice. “Help me, too,” said the male driver. “I’m hurt and can’t move.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Suddenly the bachelor realized he was the only person near the accident. He quit thinking and ran to help the drivers. He carefully helped them out of their vehicles and then called an ambulance.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The drivers were saved, and the bachelor felt the best he had in his entire life. Studying <b>mythology</b>, <b>sociology</b>, and <b>geology</b> didn’t give him this wonderful feeling. It was the act of helping others, not his <b>cognitive</b> skills, that gave him this great feeling.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He had learned an important lesson. He learned that <b>intellect</b> isn’t everything; being helpful is just as important. “Having only a brain is not enough,” he thought. “You must also have a heart.”</p></div>",
       "imageUrl": "/unit3_vol5_story.png",
       "sections": [
         {
@@ -468,13 +462,13 @@
               "id": "41",
               "content": "What did the keen bachelor assert after receiving his diploma?",
               "options": [
-                "He asserted to everyone he met that he was the smartest person in town.",
                 "He asserted he wanted to travel the world.",
                 "He asserted he would become a doctor.",
-                "He asserted he wanted to get married."
+                "He asserted he wanted to get married.",
+                "He asserted to everyone he met that he was the smartest person in town."
               ],
               "explanation": "Theo đoạn 1, \"As soon as he had received his diploma, he asserted to everyone he met that he was the smartest person in town.\" (Ngay sau khi nhận được bằng tốt nghiệp, anh ta đã tuyên bố với tất cả những người mình gặp rằng anh ta là người thông minh nhất thị trấn).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "42",
@@ -492,42 +486,50 @@
               "id": "43",
               "content": "How did the bachelor feel after saving the drivers?",
               "options": [
-                "He felt the best he had in his entire life.",
                 "He felt very tired and hungry.",
+                "He felt the best he had in his entire life.",
                 "He felt angry at them.",
                 "He felt like he wasted his time."
               ],
               "explanation": "Dựa vào đoạn 8, \"The drivers were saved, and the bachelor felt the best he had in his entire life.\" (Các tài xế đã được cứu, và anh chàng độc thân cảm thấy tuyệt vời nhất trong cả cuộc đời mình).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "44",
               "content": "Despite his analytic abilities, what did the bachelor fail to notice about his life?",
               "options": [
-                "He failed to notice he was missing something very important in his life.",
                 "He failed to notice his clothes were dirty.",
                 "He failed to notice the beautiful weather.",
+                "He failed to notice he was missing something very important in his life.",
                 "He failed to notice his family."
               ],
               "explanation": "Theo đoạn 3, \"Though his analytic abilities were great, he failed to notice he was missing something very important in his life.\" (Mặc dù khả năng phân tích của anh rất tốt, anh lại không nhận ra mình đang thiếu một thứ rất quan trọng trong cuộc đời).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "45",
               "content": "Besides a brain, what did the bachelor realize was important to have in life?",
               "options": [
-                "He realized that you must also have a heart.",
                 "He realized he needed a lot of money.",
                 "He realized he needed to read more books.",
-                "He realized he must have a car."
+                "He realized he must have a car.",
+                "He realized that you must also have a heart."
               ],
               "explanation": "Trong đoạn cuối cùng, anh ta suy nghĩ: \"Having only a brain is not enough... You must also have a heart.\" (Chỉ có bộ não thôi là chưa đủ... Bạn còn phải có một trái tim).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit3_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bài học của người cử nhân</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một <b>cử nhân</b> trẻ <b>sắc sảo</b> đã hoàn thành chương trình học tại trường đại học. Ngay sau khi nhận được <b>bằng cấp</b>, anh ta <b>khẳng định</b> với mọi người anh ta gặp rằng anh ta là người thông minh nhất thị trấn.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi <b>xuất sắc</b> ở mọi thứ tôi học,\" anh ta nói, khoe khoang về kiến thức của mình. \"Tôi đã nắm vững <b>giải tích</b> và <b>sinh lý học</b>. Tôi thậm chí còn hiểu các học thuyết <b>lý thuyết</b> vĩ đại của khoa học, chẳng hạn như <b>thuyết tương đối</b>. Không có gì mà tôi không biết. Dù là sự chuyển động của các vật thể <b>trên trời</b>, như các hành tinh và ngôi sao, hay cách <b>khai thác</b> sức mạnh của các chất <b>phóng xạ</b>, tôi đều biết mọi thứ.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng thực ra, có một điều mà người cử nhân này không biết. Mặc dù khả năng <b>phân tích</b> của anh ta rất tuyệt vời, anh ta đã không nhận ra rằng mình đang thiếu một điều gì đó rất quan trọng trong cuộc đời.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ khi đang đi bộ qua thị trấn, người cử nhân chứng kiến một vụ <b>va chạm</b> giữa hai chiếc xe. Cả hai tài xế dường như đều bị thương, nhưng vị học giả chỉ đứng và nhìn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh ta tự nghĩ: \"Những kẻ ngốc đó lẽ ra phải tỉnh táo hơn. Chắc chắn họ không <b>có năng lực</b> lắm.\" Anh ta chưa bao giờ nghĩ rằng các tài xế cần được giúp đỡ.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Làm ơn giúp tôi,\" nữ tài xế nói với giọng yếu ớt. \"Giúp tôi nữa,\" nam tài xế nói. \"Tôi bị thương và không thể cử động.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Đột nhiên người cử nhân nhận ra mình là người duy nhất ở gần vụ tai nạn. Anh ta ngừng suy nghĩ và chạy đến giúp các tài xế. Anh ta cẩn thận giúp họ ra khỏi xe rồi gọi xe cấp cứu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Các tài xế đã được cứu, và người cử nhân cảm thấy tuyệt vời nhất trong cả cuộc đời mình. Việc nghiên cứu <b>thần thoại học</b>, <b>xã hội học</b> và <b>địa chất học</b> không mang lại cho anh ta cảm giác tuyệt vời này. Đó là hành động giúp đỡ người khác, chứ không phải các kỹ năng <b>nhận thức</b> của anh ta, đã mang lại cho anh ta cảm giác tuyệt vời này.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh ta đã học được một bài học quan trọng. Anh ta học được rằng <b>trí tuệ</b> không phải là tất cả; việc hay giúp đỡ người khác cũng quan trọng không kém. \"Chỉ có một cái đầu là không đủ,\" anh ta nghĩ. \"Bạn cũng phải có một trái tim.\"</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 26: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part_wordlist",
@@ -15,7 +8,6 @@
         {
           "id": "sec_ex1_a",
           "title": "Exercise 1 Part A",
-          "questionType": "Trắc nghiệm",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
@@ -73,12 +65,12 @@
               ],
               "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec_ex1_b",
           "title": "Exercise 1 Part B",
-          "questionType": "Trắc nghiệm",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
@@ -136,12 +128,12 @@
               ],
               "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec_ex2_a",
           "title": "Exercise 2 Part A",
-          "questionType": "Matching",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences.</p>",
           "questions": [
             {
@@ -314,12 +306,12 @@
               ],
               "correctAnswer": "are manufactured in Japan"
             }
-          ]
+          ],
+          "questionType": "Matching"
         },
         {
           "id": "sec_ex2_b",
           "title": "Exercise 2 Part B",
-          "questionType": "Matching",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences.</p>",
           "questions": [
             {
@@ -492,20 +484,21 @@
               ],
               "correctAnswer": "if you go on vacation in the tropics"
             }
-          ]
+          ],
+          "questionType": "Matching"
         }
       ]
     },
     {
       "id": "part_reading",
       "title": "Comprehensive Reading",
-      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Forest People</h1><div class=\"story-content\"><p><b>Colonel</b> Wilbur and his wife Mary were flying over the <b>tropics</b> in their private plane. But suddenly the engine caught fire. It was impossible to <b>extinguish</b> the fire, so they were forced to land in the forest.</p>    <p>\"What are we going to do?\" said Mary. \"Can you fix the plane?\"</p>    <p>Wilbur said, \"That's impossible. I am not a <b>technician</b>, and the plane is out of gasoline. We'll have to find help.\"</p>    <p>Wilbur and Mary walked through the forest. It was difficult to find a path through the trees. Mary even tore her dress on sharp thorns. Suddenly, they saw some huts and lots of <b>miniature</b> people, cooking and making weapons with <b>flint</b>.</p>    <p>\"I'll ask them for help,\" said Wilbur.</p>    <p>\"No! Don't go! They are <b>deformed</b>!\" said Mary. \"They'll <b>harass</b> us! They may have a <b>contagious</b> virus that will make us sick! We won't know how to <b>cure</b> it. We'll surely end up as corpses!\"</p>    <p>Wilbur tried to persuade Mary to go to the forest people, but she refused to <b>integrate</b> with them. She had the <b>assumption</b> that the small people were dangerous. \"Let's keep walking. We're sure to find someone sooner or later.\"</p>    <p>For three days, the couple searched, but they found no one who could help them in their <b>crisis</b>. It was uncomfortable, and they were hungry without any source of <b>nutrition</b>. Plus, the forest was filled with dangerous beasts. Finally, Mary agreed to return to the forest people.</p>    <p>When Wilbur and Mary arrived at the village, the forest people immediately welcomed them. They gave them bread made from <b>barley</b> to eat and a place to sleep. The next day, the forest people led Wilbur and Mary through the trees, and they <b>promptly</b> arrived at a small town. From there, they took a bus to the city where they found an <b>embassy</b>.</p>    <p>Mary was sorry that she had not trusted the forest people sooner. She learned the value of not discriminating against people who are different.</p></div>",
+      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Forest People</h1><div class=\"story-content\"><p class=\"mb-4\"><b>Colonel</b> Wilbur and his wife Mary were flying over the <b>tropics</b> in their private plane. But suddenly the engine caught fire. It was impossible to <b>extinguish</b> the fire, so they were forced to land in the forest.</p>    <p class=\"mb-4\">\"What are we going to do?\" said Mary. \"Can you fix the plane?\"</p>    <p class=\"mb-4\">Wilbur said, \"That's impossible. I am not a <b>technician</b>, and the plane is out of gasoline. We'll have to find help.\"</p>    <p class=\"mb-4\">Wilbur and Mary walked through the forest. It was difficult to find a path through the trees. Mary even tore her dress on sharp thorns. Suddenly, they saw some huts and lots of <b>miniature</b> people, cooking and making weapons with <b>flint</b>.</p>    <p class=\"mb-4\">\"I'll ask them for help,\" said Wilbur.</p>    <p class=\"mb-4\">\"No! Don't go! They are <b>deformed</b>!\" said Mary. \"They'll <b>harass</b> us! They may have a <b>contagious</b> virus that will make us sick! We won't know how to <b>cure</b> it. We'll surely end up as corpses!\"</p>    <p class=\"mb-4\">Wilbur tried to persuade Mary to go to the forest people, but she refused to <b>integrate</b> with them. She had the <b>assumption</b> that the small people were dangerous. \"Let's keep walking. We're sure to find someone sooner or later.\"</p>    <p class=\"mb-4\">For three days, the couple searched, but they found no one who could help them in their <b>crisis</b>. It was uncomfortable, and they were hungry without any source of <b>nutrition</b>. Plus, the forest was filled with dangerous beasts. Finally, Mary agreed to return to the forest people.</p>    <p class=\"mb-4\">When Wilbur and Mary arrived at the village, the forest people immediately welcomed them. They gave them bread made from <b>barley</b> to eat and a place to sleep. The next day, the forest people led Wilbur and Mary through the trees, and they <b>promptly</b> arrived at a small town. From there, they took a bus to the city where they found an <b>embassy</b>.</p>    <p class=\"mb-4\">Mary was sorry that she had not trusted the forest people sooner. She learned the value of not discriminating against people who are different.</p></div>",
+      "imageUrl": "/unit26_vol4_story.png",
       "sections": [
         {
           "id": "sec_read_a",
           "title": "Reading Comprehension Part A",
-          "questionType": "TFNG",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "31",
@@ -561,12 +554,12 @@
               ],
               "correctAnswer": "False"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "id": "sec_read_b",
           "title": "Reading Comprehension Part B",
-          "questionType": "Trắc nghiệm",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
@@ -613,10 +606,18 @@
               ],
               "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ],
-      "imageUrl": "/unit26_vol4_story.png"
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<img src=\"/unit26_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">Người Rừng</h1>\n\n<div class=\"story-content\">\n\n<p><b>Đại tá</b> Wilbur và vợ ông là Mary đang bay qua vùng <b>nhiệt đới</b> trên chiếc máy bay riêng của họ. Nhưng đột nhiên động cơ bốc cháy. Không thể <b>dập tắt</b> ngọn lửa, vì vậy họ buộc phải hạ cánh xuống khu rừng.</p>\n\n<p>\"Chúng ta sẽ làm gì đây?\" Mary nói. \"Ông có thể sửa máy bay được không?\"</p>\n\n<p>Wilbur nói, \"Điều đó là không thể. Tôi không phải là <b>kỹ thuật viên</b>, và máy bay đã hết xăng. Chúng ta sẽ phải tìm kiếm sự giúp đỡ.\"</p>\n\n<p>Wilbur và Mary đi bộ xuyên qua khu rừng. Rất khó để tìm thấy một con đường xuyên qua những hàng cây. Mary thậm chí còn bị rách váy vì những chiếc gai nhọn. Đột nhiên, họ nhìn thấy một vài túp lều và rất nhiều người <b>nhỏ bé</b>, đang nấu ăn và làm vũ khí bằng <b>đá lửa</b>.</p>\n\n<p>\"Tôi sẽ yêu cầu họ giúp đỡ,\" Wilbur nói.</p>\n\n<p>\"Không! Đừng đi! Họ bị <b>dị dạng</b>!\" Mary nói. \"Họ sẽ <b>quấy rối</b> chúng ta! Họ có thể mang một loại virus <b>truyền nhiễm</b> khiến chúng ta mắc bệnh! Chúng ta sẽ không biết làm thế nào để <b>chữa trị</b> nó. Chắc chắn chúng ta sẽ trở thành những cái xác không hồn!\"</p>\n\n<p>Wilbur cố gắng thuyết phục Mary đi đến chỗ người rừng, nhưng bà từ chối <b>hòa nhập</b> với họ. Bà có <b>giả định</b> rằng những người nhỏ bé này rất nguy hiểm. \"Hãy tiếp tục đi bộ. Chúng ta chắc chắn sẽ tìm thấy ai đó sớm hay muộn thôi.\"</p>\n\n<p>Trong ba ngày, cặp đôi này đã tìm kiếm, nhưng họ không tìm thấy ai có thể giúp họ trong cơn <b>khủng hoảng</b>. Cảm giác thật không thoải mái, và họ đói vì không có bất kỳ nguồn <b>dinh dưỡng</b> nào. Thêm vào đó, khu rừng có đầy những con thú nguy hiểm. Cuối cùng, Mary đồng ý quay lại chỗ những người rừng.</p>\n\n<p>Khi Wilbur và Mary đến ngôi làng, những người rừng ngay lập tức chào đón họ. Họ đưa cho hai người bánh mì làm từ <b>lúa mạch</b> để ăn và một chỗ để ngủ. Ngày hôm sau, những người rừng dẫn Wilbur và Mary xuyên qua những hàng cây, và họ <b>nhanh chóng</b> đến một thị trấn nhỏ. Từ đó, họ bắt xe buýt đến thành phố nơi họ tìm thấy một <b>đại sứ quán</b>.</p>\n\n<p>Mary rất hối hận vì đã không tin tưởng những người rừng sớm hơn. Bà đã học được giá trị của việc không phân biệt đối xử với những người khác biệt.</p>\n\n</div>\\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 26: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

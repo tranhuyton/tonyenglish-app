@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 29: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. candidate / enhance</b><br/>A survey found that not very many people like the [ 2 ]. So he is trying to think of ways to [ 4 ] his image and make people like him.</p><p style=\"margin-bottom: 12px;\"><b>2. era / solar</b><br/>We live in a(n) [ 6 ] where people are very concerned about conserving our natural resources. Many people think using [ 8 ] energy is a good way to do this.</p><p style=\"margin-bottom: 12px;\"><b>3. incorporate / pollute</b><br/>The company doesn't want to [ 10 ] the air anymore, so they are going to [ 12 ] new rules for disposing waste.</p><p style=\"margin-bottom: 12px;\"><b>4. confidential / corporate</b><br/>The [ 14 ] files were locked in the basement. The information in them was about important customers and had to be kept [ 16 ].</p><p style=\"margin-bottom: 12px;\"><b>5. mobile / phenomenon</b><br/>In the early 1900s, music records were an amazing [ 18 ]. People back then would have been even more amazed by today's [ 20 ] music players.</p><p style=\"margin-bottom: 12px;\"><b>6. automobile / parallel</b><br/>The old [ 11 ] was very large and difficult to drive. Jane had trouble parking it between the [ 12 ] lines in the parking lot.</p><p style=\"margin-bottom: 12px;\"><b>7. ridiculed / transportation</b><br/>Ben didn't listen to my advice about [ 13 ]. Instead, he [ 14 ] me and continued to drive fast, eventually causing an accident.</p><p style=\"margin-bottom: 12px;\"><b>8. guidelines / intervals</b><br/>The [ 15 ] for the race are very simple: just run as fast as you can. There will be short [ 16 ] when you can stop for a drink of water.</p><p style=\"margin-bottom: 12px;\"><b>9. modify / territories</b><br/>The government decided to [ 17 ] its borders. It made several of its [ 18 ] smaller so that it could create a new one.</p><p style=\"margin-bottom: 12px;\"><b>10. interact / tournament</b><br/>The baseball [ 19 ] is always a lot of fun. It allows students from all over the city to [ 20 ] with each other.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. candidate / enhance</b><br/>A survey found that not very many people like the [ 1 ]. So he is trying to think of ways to [ 2 ] his image and make people like him.</p><p style=\"margin-bottom: 12px;\"><b>2. era / solar</b><br/>We live in a(n) [ 3 ] where people are very concerned about conserving our natural resources. Many people think using [ 4 ] energy is a good way to do this.</p><p style=\"margin-bottom: 12px;\"><b>3. incorporate / pollute</b><br/>The company doesn't want to [ 5 ] the air anymore, so they are going to [ 6 ] new rules for disposing waste.</p><p style=\"margin-bottom: 12px;\"><b>4. confidential / corporate</b> (Hint: The...) [ 7 ] files were locked in the basement. The information in them was about important customers and had to be kept [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>5. mobile / phenomenon</b><br/>In the early 1900s, music records were an amazing [ 9 ]. People back then would have been even more amazed by today's [ 10 ] music players.</p><p style=\"margin-bottom: 12px;\"><b>6. automobile / parallel</b><br/>The old [ 11 ] was very large and difficult to drive. Jane had trouble parking it between the [ 12 ] lines in the parking lot.</p><p style=\"margin-bottom: 12px;\"><b>7. ridiculed / transportation</b><br/>Ben didn't listen to my advice about [ 13 ]. Instead, he [ 14 ] me and continued to drive fast, eventually causing an accident.</p><p style=\"margin-bottom: 12px;\"><b>8. guidelines / intervals</b> (Hint: The...) [ 15 ] for the race are very simple: just run as fast as you can. There will be short [ 16 ] when you can stop for a drink of water.</p><p style=\"margin-bottom: 12px;\"><b>9. modify / territories</b><br/>The government decided to [ 17 ] its borders. It made several of its [ 18 ] smaller so that it could create a new one.</p><p style=\"margin-bottom: 12px;\"><b>10. interact / tournament</b><br/>The baseball [ 19 ] is always a lot of fun. It allows students from all over the city to [ 20 ] with each other.</p>",
               "options": [],
-              "correctAnswer": "candidate",
-              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng."
+              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng.",
+              "correctAnswer": "candidate"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "enhance",
-              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng."
+              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng.",
+              "correctAnswer": "enhance"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "era",
-              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng."
+              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng.",
+              "correctAnswer": "era"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "solar",
-              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng."
+              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng.",
+              "correctAnswer": "solar"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "pollute",
-              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng."
+              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng.",
+              "correctAnswer": "pollute"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "incorporate",
-              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng."
+              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng.",
+              "correctAnswer": "incorporate"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "corporate",
-              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng."
+              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng.",
+              "correctAnswer": "corporate"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "confidential",
-              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng."
+              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng.",
+              "correctAnswer": "confidential"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "phenomenon",
-              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng."
+              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng.",
+              "correctAnswer": "phenomenon"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "mobile",
-              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng."
+              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng.",
+              "correctAnswer": "mobile"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "automobile",
-              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng."
+              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng.",
+              "correctAnswer": "automobile"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "parallel",
-              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng."
+              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng.",
+              "correctAnswer": "parallel"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "transportation",
-              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng."
+              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng.",
+              "correctAnswer": "transportation"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "ridiculed",
-              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng."
+              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng.",
+              "correctAnswer": "ridiculed"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "guidelines",
-              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng."
+              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng.",
+              "correctAnswer": "guidelines"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "intervals",
-              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng."
+              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng.",
+              "correctAnswer": "intervals"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "modify",
-              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng."
+              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng.",
+              "correctAnswer": "modify"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "territories",
-              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng."
+              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng.",
+              "correctAnswer": "territories"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "tournament",
-              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng."
+              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng.",
+              "correctAnswer": "tournament"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "interact",
-              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng."
+              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng.",
+              "correctAnswer": "interact"
             }
           ],
           "questionType": "Điền từ"
@@ -311,13 +304,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Solar Car Race</h1>        <p style=\"margin-bottom: 1rem;\">We live in a <b>mobile</b> society. But the cars we drive require too much gas, plus they <b>pollute</b> the air. Eventually, the natural resources used to make gas will run out. So what happens then? Many people think <b>solar</b>-powered <b>automobiles</b> are the answer. To learn more about this type of <b>transportation</b>, teams from universities and <b>corporate</b> organizations gather in Australia every two years for a <b>solar</b> car race.</p>    <p style=\"margin-bottom: 1rem;\">The race is called the World Solar Challenge. <b>Candidates</b> for this <b>tournament</b> must design their own cars. The teams keep all their plans <b>confidential</b>. They don't <b>interact</b> with other teams because the race is very competitive. And these cars aren't just <b>enhanced</b> and <b>modified</b> versions of normal cars. They are completely different.</p>    <p style=\"margin-bottom: 1rem;\">The cars only have room for one person and are very simple inside—they don't even have a cushion for the driver to sit on. These cars are shorter and much more flat than normal cars. Most importantly, the cars <b>incorporate</b> <b>solar</b> panels onto the outside that lie <b>parallel</b> to each other. These panels are made from materials that take in light from the sun and turn it into electric energy. That's how they move.</p>    <p style=\"margin-bottom: 1rem;\">These cars race over 3,000 kilometers across the Australian <b>territories</b>. The drivers have to heed strict <b>guidelines</b>. They must stop at certain <b>intervals</b> to charge their batteries. And unlike normal race cars, they can't go very fast. They have to drive at the normal speed limits. Although the drivers want to finish the race quickly, that is not the main goal. The objective is to see how well the cars work under normal driving conditions.</p>    <p style=\"margin-bottom: 1rem;\">Because of the World Solar Challenge, a new <b>era</b> in car making and in driving is beginning. People may <b>ridicule</b> the <b>solar</b> cars because they look strange, but this is a <b>phenomenon</b> that isn't going away. Using the technology from the vehicles, car makers will eventually create <b>solar</b> cars for the rest of us.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Solar Car Race</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">We live in a <b>mobile</b> society. But the cars we drive require too much gas, plus they <b>pollute</b> the air. Eventually, the natural resources used to make gas will run out. So what happens then? Many people think <b>solar</b>-powered <b>automobiles</b> are the answer. To learn more about this type of <b>transportation</b>, teams from universities and <b>corporate</b> organizations gather in Australia every two years for a <b>solar</b> car race.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The race is called the World Solar Challenge. <b>Candidates</b> for this <b>tournament</b> must design their own cars. The teams keep all their plans <b>confidential</b>. They don't <b>interact</b> with other teams because the race is very competitive. And these cars aren't just <b>enhanced</b> and <b>modified</b> versions of normal cars. They are completely different.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The cars only have room for one person and are very simple inside—they don't even have a cushion for the driver to sit on. These cars are shorter and much more flat than normal cars. Most importantly, the cars <b>incorporate</b> <b>solar</b> panels onto the outside that lie <b>parallel</b> to each other. These panels are made from materials that take in light from the sun and turn it into electric energy. That's how they move.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">These cars race over 3,000 kilometers across the Australian <b>territories</b>. The drivers have to heed strict <b>guidelines</b>. They must stop at certain <b>intervals</b> to charge their batteries. And unlike normal race cars, they can't go very fast. They have to drive at the normal speed limits. Although the drivers want to finish the race quickly, that is not the main goal. The objective is to see how well the cars work under normal driving conditions.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Because of the World Solar Challenge, a new <b>era</b> in car making and in driving is beginning. People may <b>ridicule</b> the <b>solar</b> cars because they look strange, but this is a <b>phenomenon</b> that isn't going away. Using the technology from the vehicles, car makers will eventually create <b>solar</b> cars for the rest of us.</p></div>",
       "imageUrl": "/unit29_vol4_story.png",
       "sections": [
         {
           "id": "sec2_read_a",
           "title": "Reading Comprehension",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A - Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "36",
@@ -438,7 +431,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\\n<div style=\"font-family: Arial, sans-serif; \">\n\n<img src=\"/unit29_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cuộc Đua Xe Năng Lượng Mặt Trời</h1>\n\n<p style=\"margin-bottom: 1rem;\">Chúng ta đang sống trong một xã hội <b>di động</b>. Nhưng những chiếc xe chúng ta lái tiêu tốn quá nhiều nhiên liệu, cộng thêm việc chúng <b>gây ô nhiễm</b> không khí. Cuối cùng, các nguồn tài nguyên thiên nhiên được sử dụng để tạo ra nhiên liệu sẽ cạn kiệt. Vậy chuyện gì sẽ xảy ra lúc đó? Nhiều người nghĩ rằng <b>ô tô</b> chạy bằng <b>năng lượng mặt trời</b> chính là câu trả lời. Để tìm hiểu thêm về loại hình <b>giao thông</b> này, các đội đến từ các trường đại học và các tổ chức <b>doanh nghiệp</b> tụ họp tại Úc hai năm một lần cho một cuộc đua xe <b>năng lượng mặt trời</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuộc đua này được gọi là Thử thách Năng lượng Mặt trời Thế giới. Những <b>ứng cử viên</b> cho <b>giải đấu</b> này phải tự thiết kế ô tô của riêng mình. Các đội giữ tất cả các kế hoạch của họ một cách <b>bảo mật</b>. Họ không <b>tương tác</b> với các đội khác vì cuộc đua này rất cạnh tranh. Và những chiếc xe này không chỉ là những phiên bản được <b>nâng cao</b> và <b>sửa đổi</b> từ những chiếc xe bình thường. Chúng hoàn toàn khác biệt.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những chiếc xe này chỉ có chỗ cho một người và bên trong rất đơn giản—chúng thậm chí không có đệm cho tài xế ngồi. Những chiếc xe này ngắn hơn và phẳng hơn nhiều so với xe bình thường. Quan trọng nhất là, những chiếc xe <b>kết hợp</b> các tấm pin <b>năng lượng mặt trời</b> ở bên ngoài nằm <b>song song</b> với nhau. Những tấm pin này được làm từ các vật liệu hấp thụ ánh sáng từ mặt trời và biến nó thành năng lượng điện. Đó là cách chúng di chuyển.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những chiếc xe này đua qua hơn 3.000 km trên khắp các <b>lãnh thổ</b> của Úc. Những người lái xe phải tuân thủ các <b>hướng dẫn</b> nghiêm ngặt. Họ phải dừng lại ở những <b>khoảng thời gian</b> nhất định để sạc pin. Và không giống như xe đua bình thường, chúng không thể chạy quá nhanh. Họ phải lái xe ở giới hạn tốc độ bình thường. Mặc dù các tài xế muốn hoàn thành cuộc đua thật nhanh, nhưng đó không phải là mục tiêu chính. Mục đích là để xem những chiếc xe này hoạt động tốt như thế nào trong điều kiện lái xe bình thường.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhờ có Thử thách Năng lượng Mặt trời Thế giới, một <b>kỷ nguyên</b> mới trong việc chế tạo xe hơi và trong việc lái xe đang bắt đầu. Mọi người có thể <b>nhạo báng</b> những chiếc xe <b>năng lượng mặt trời</b> vì chúng trông kỳ lạ, nhưng đây là một <b>hiện tượng</b> sẽ không biến mất. Bằng cách sử dụng công nghệ từ những phương tiện này, các nhà sản xuất xe hơi cuối cùng sẽ tạo ra những chiếc xe <b>năng lượng mặt trời</b> cho phần còn lại của chúng ta.</p>\n\n</div>\\n</div>"
     }
   ]
 }

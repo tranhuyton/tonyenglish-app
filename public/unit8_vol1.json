@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">She looks like someone that I <u>know well</u>.<br/>fa [ 1 ]</p><p class=\"mb-4\">Drinking water is something that she <u>must do</u>.<br/>ne [ 2 ]</p><p class=\"mb-4\">He has an <u>idea</u> of how the machine works.<br/>th [ 3 ]</p><p class=\"mb-4\">The <u>reason</u> that I am doing this is to help children.<br/>pu [ 4 ]</p><p class=\"mb-4\">My teacher will <u>make me want to</u> get good grades.<br/>en [ 5 ]</p><p class=\"mb-4\">I <u>agree with</u> your idea. I think it will work.<br/>ac [ 6 ]</p><p class=\"mb-4\">It is difficult to <u>keep from falling</u> when you stand on one foot.<br/>ba [ 7 ]</p><p class=\"mb-4\">Her <u>routine</u> of exercising after work is common for many people.<br/>pa [ 8 ]</p><p class=\"mb-4\">There is a big <u>difference</u> between day and night.<br/>co [ 9 ]</p><p class=\"mb-4\">The Earth has a <u>solitary</u> moon.<br/>si [ 10 ]</p>",
+              "content": "<p class=\"mb-4\">She looks like someone that I <u>know well</u>. (Hint: fa...) [ 1 ]</p><p class=\"mb-4\">Drinking water is something that she <u>must do</u>. (Hint: ne...) [ 2 ]</p><p class=\"mb-4\">He has an <u>idea</u> of how the machine works. (Hint: th...) [ 3 ]</p><p class=\"mb-4\">The <u>reason</u> that I am doing this is to help children. (Hint: pu...) [ 4 ]</p><p class=\"mb-4\">My teacher will <u>make me want to</u> get good grades. (Hint: en...) [ 5 ]</p><p class=\"mb-4\">I <u>agree with</u> your idea. I think it will work. (Hint: ac...) [ 6 ]</p><p class=\"mb-4\">It is difficult to <u>keep from falling</u> when you stand on one foot. (Hint: ba...) [ 7 ]</p><p class=\"mb-4\">Her <u>routine</u> of exercising after work is common for many people. (Hint: pa...) [ 8 ]</p><p class=\"mb-4\">There is a big <u>difference</u> between day and night. (Hint: co...) [ 9 ]</p><p class=\"mb-4\">The Earth has a <u>solitary</u> moon. (Hint: si...) [ 10 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "familiar"
             },
@@ -204,7 +204,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Sun and the Moon Were Made</h1>        <p style=\"margin-bottom: 1rem;\">Do you ever wonder where the moon and the sun came from? The Inuit people of Alaska have a <b>theory</b>.</p>    <p style=\"margin-bottom: 1rem;\">They tell a story about a beautiful girl. She was very nice. In <b>contrast</b>, her brother was a mean little boy. One day he <b>proposed</b> something. \"We should go to a party,\" he said. The girl <b>accepted</b>. First, it was <b>necessary</b> for her to prepare. She <b>arranged</b> her hair and put on nice clothes. This <b>required</b> a lot of time. But the girl worked hard, and soon she had <b>success</b>. She looked perfect.</p>    <p style=\"margin-bottom: 1rem;\">They <b>attended</b> the party together. The girl was having fun. Later, she walked into the bathroom. Suddenly, the lights were turned off! Someone <b>grabbed</b> her hair and <b>tore</b> her clothes. She ran out of the bathroom. She wanted to know who did this to her.</p>    <p style=\"margin-bottom: 1rem;\">Then she had an idea. She fixed her hair again. This time it was even more beautiful. She even <b>balanced</b> beautiful jewels in it. She wanted to <b>encourage</b> the person to <b>grab</b> it again. She put black dirt in her hair. The <b>purpose</b> of this was to catch the person.</p>    <p style=\"margin-bottom: 1rem;\">She went to the bathroom again, and it was the same <b>pattern</b>. The lights went off, and someone <b>grabbed</b> her hair. When he <b>released</b> it, his hand was black. The girl returned to the party. She knew there was only a <b>single</b> person with a black hand. When she saw that person, he was very <b>familiar</b>. It was her brother!</p>    <p style=\"margin-bottom: 1rem;\">He ran into the woods. The girl ran after him. They both carried fire so they could see in the dark. The smoke went into the air. As they ran, they grew. They became <b>huge</b>. Then they went into space. When the girl's fire went out, she <b>hung</b> in the sky. She became the moon, and her brother became the sun. They chase each other forever.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Sun and the Moon Were Made</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Do you ever wonder where the moon and the sun came from? The Inuit people of Alaska have a <b>theory</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They tell a story about a beautiful girl. She was very nice. In <b>contrast</b>, her brother was a mean little boy. One day he <b>proposed</b> something. \"We should go to a party,\" he said. The girl <b>accepted</b>. First, it was <b>necessary</b> for her to prepare. She <b>arranged</b> her hair and put on nice clothes. This <b>required</b> a lot of time. But the girl worked hard, and soon she had <b>success</b>. She looked perfect.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They <b>attended</b> the party together. The girl was having fun. Later, she walked into the bathroom. Suddenly, the lights were turned off! Someone <b>grabbed</b> her hair and <b>tore</b> her clothes. She ran out of the bathroom. She wanted to know who did this to her.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Then she had an idea. She fixed her hair again. This time it was even more beautiful. She even <b>balanced</b> beautiful jewels in it. She wanted to <b>encourage</b> the person to <b>grab</b> it again. She put black dirt in her hair. The <b>purpose</b> of this was to catch the person.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">She went to the bathroom again, and it was the same <b>pattern</b>. The lights went off, and someone <b>grabbed</b> her hair. When he <b>released</b> it, his hand was black. The girl returned to the party. She knew there was only a <b>single</b> person with a black hand. When she saw that person, he was very <b>familiar</b>. It was her brother!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He ran into the woods. The girl ran after him. They both carried fire so they could see in the dark. The smoke went into the air. As they ran, they grew. They became <b>huge</b>. Then they went into space. When the girl's fire went out, she <b>hung</b> in the sky. She became the moon, and her brother became the sun. They chase each other forever.</p></div>",
       "imageUrl": "/unit8_story.png",
       "sections": [
         {
@@ -259,25 +259,24 @@
               ],
               "explanation": "Cô gái nhận ra người làm việc đó chính là em trai của mình.",
               "correctAnswer": "D"
+            },
+            {
+              "id": "25",
+              "content": "<p class=\"mb-4\">How does the girl get ready for the party?</p>",
+              "options": [
+                "She buys new shoes and a necklace.",
+                "She arranges her hair and wears a dress with a beautiful pattern.",
+                "She asks her mother to make a yellow dress.",
+                "She practices dancing with her friends."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Trong bài đọc, cô gái chuẩn bị dự tiệc bằng cách sửa soạn mái tóc và mặc chiếc váy có họa tiết đẹp mắt ('She arranged her hair and wore a dress with a beautiful pattern.')."
             }
           ],
           "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec2_reading_q5",
-          "title": "Answer the questions.",
-          "content": "",
-          "questions": [
-            {
-              "id": "25",
-              "content": "How does the girl get ready for the party?",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "She arranged her hair and wore a dress with a beautiful pattern."
-            }
-          ],
-          "questionType": "Đoạn văn"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit8_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Mặt Trời và Mặt Trăng Được Tạo Ra Như Thế Nào</h1>\n\n<p style=\"margin-bottom: 1rem;\">Bạn có bao giờ thắc mắc mặt trăng và mặt trời đến từ đâu không? Người Inuit ở Alaska có một <b>giả thuyết</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ kể một câu chuyện về một cô gái xinh đẹp. Cô ấy rất tốt bụng. <b>Trái ngược</b> lại, em trai cô là một cậu bé nhỏ nhen và xấu tính. Một ngày nọ, cậu bé <b>đề nghị</b> một điều. \"Chúng ta nên đi dự tiệc,\" cậu nói. Cô gái <b>đồng ý</b>. Đầu tiên, cô <b>cần thiết</b> phải chuẩn bị. Cô <b>sắp xếp</b> lại mái tóc của mình và mặc những bộ quần áo đẹp. Điều này <b>đòi hỏi</b> rất nhiều thời gian. Nhưng cô gái đã làm việc chăm chỉ, và chẳng bao lâu cô đã có được <b>sự thành công</b>. Cô trông thật hoàn hảo.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ cùng nhau <b>tham dự</b> bữa tiệc. Cô gái đang vui vẻ. Một lúc sau, cô bước vào phòng tắm. Đột nhiên, đèn bị tắt! Ai đó đã <b>túm lấy</b> tóc cô và <b>xé</b> quần áo của cô. Cô chạy ra khỏi phòng tắm. Cô muốn biết ai đã làm điều này với mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó, cô nảy ra một ý tưởng. Cô sửa lại mái tóc của mình lần nữa. Lần này nó thậm chí còn đẹp hơn. Cô thậm chí còn <b>giữ thăng bằng</b> những viên ngọc đẹp đẽ trên đó. Cô muốn <b>khuyến khích</b> người đó <b>túm lấy</b> nó lần nữa. Cô bôi bụi bẩn màu đen vào tóc mình. <b>Mục đích</b> của việc này là để bắt kẻ đó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô lại vào phòng tắm, và nó lại diễn ra theo cùng một <b>kiểu mẫu</b>. Đèn tắt, và ai đó đã <b>túm lấy</b> tóc cô. Khi hắn <b>buông</b> nó ra, bàn tay hắn có màu đen. Cô gái quay trở lại bữa tiệc. Cô biết chỉ có một người <b>duy nhất</b> có bàn tay đen. Khi cô nhìn thấy người đó, hắn trông rất <b>quen thuộc</b>. Đó chính là em trai cô!</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu ta chạy vào rừng. Cô gái chạy đuổi theo. Cả hai đều mang theo lửa để có thể nhìn thấy trong bóng tối. Khói bốc lên không trung. Khi họ chạy, họ lớn dần lên. Họ trở nên <b>khổng lồ</b>. Sau đó họ bay vào không gian. Khi ngọn lửa của cô gái tắt đi, cô <b>treo lơ lửng</b> trên bầu trời. Cô trở thành mặt trăng, và em trai cô trở thành mặt trời. Họ đuổi theo nhau mãi mãi.</p>\n</div>"
     }
   ],
   "basicInfo": {

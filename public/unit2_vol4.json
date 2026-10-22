@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 2: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -155,7 +148,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">Tom was promoted, and now he is an <u>important sea officer that controls military ships</u>.<br/>ad [ 11 ]</p><p class=\"mb-4\">Some people thought that the meal was too <u>sharp and unpleasant tasting</u>.<br/>so [ 12 ]</p><p class=\"mb-4\">The <u>oil in lamps and stoves</u> is a very cheap form of heat.<br/>ke [ 13 ]</p><p class=\"mb-4\">Why did you steal the woman's bag? Don't you have a <u>mind that understands what is wrong</u>?<br/>co [ 14 ]</p><p class=\"mb-4\">Can you buy three yellow <u>pieces of fruit that are like oranges</u> from the supermarket please?<br/>gr [ 15 ]</p><p class=\"mb-4\">I hope that the <u>waiter on the plane</u> will bring some water soon.<br/>st [ 16 ]</p><p class=\"mb-4\">After lightning struck the tree, the forest turned into a <u>burning blaze</u>.<br/>fi [ 17 ]</p><p class=\"mb-4\">Use this <u>thin rope</u> to tie the package.<br/>st [ 18 ]</p><p class=\"mb-4\">I cleaned the rabbit's cage and left some <u>dry grass</u> for it to eat.<br/>ha [ 19 ]</p><p class=\"mb-4\">I threw the ball through the <u>line in the shape of a circle</u>.<br/>lo [ 20 ]</p>",
+              "content": "<p class=\"mb-4\">Tom was promoted, and now he is an <u>important sea officer that controls military ships</u>. (Hint: ad...) [ 11 ]</p><p class=\"mb-4\">Some people thought that the meal was too <u>sharp and unpleasant tasting</u>. (Hint: so...) [ 12 ]</p><p class=\"mb-4\">The <u>oil in lamps and stoves</u> is a very cheap form of heat. (Hint: ke...) [ 13 ]</p><p class=\"mb-4\">Why did you steal the woman's bag? Don't you have a <u>mind that understands what is wrong</u>? (Hint: co...) [ 14 ]</p><p class=\"mb-4\">Can you buy three yellow <u>pieces of fruit that are like oranges</u> from the supermarket please? (Hint: gr...) [ 15 ]</p><p class=\"mb-4\">I hope that the <u>waiter on the plane</u> will bring some water soon. (Hint: st...) [ 16 ]</p><p class=\"mb-4\">After lightning struck the tree, the forest turned into a <u>burning blaze</u>. (Hint: fi...) [ 17 ]</p><p class=\"mb-4\">Use this <u>thin rope</u> to tie the package. (Hint: st...) [ 18 ]</p><p class=\"mb-4\">I cleaned the rabbit's cage and left some <u>dry grass</u> for it to eat. (Hint: ha...) [ 19 ]</p><p class=\"mb-4\">I threw the ball through the <u>line in the shape of a circle</u>. (Hint: lo...) [ 20 ]</p>",
               "options": [],
               "explanation": "\"an important sea officer that controls military ships\" (một sĩ quan hải quân quan trọng điều khiển tàu quân sự) có nghĩa là \"admiral\" (đô đốc).",
               "correctAnswer": "admiral"
@@ -221,7 +214,7 @@
               "content": "",
               "options": [],
               "explanation": "\"line in the shape of a circle\" (sợi dây có hình vòng tròn) có nghĩa là \"loop\" (vòng lặp).",
-              "correctAnswer": "loop"
+              "correctAnswer": "hoop"
             }
           ],
           "questionType": "Điền từ"
@@ -304,13 +297,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Monkey Island</h1>        <p style=\"margin-bottom: 1rem;\">In the middle of the ocean, there is a small island shaped like an <b>arc</b>. Here, monkeys play on the beach and in the trees. But how did the monkeys get there?</p>    <p style=\"margin-bottom: 1rem;\">Once, an English <b>admiral</b> was exploring Africa when he found hundreds of monkeys. The admiral's <b>character</b> was mean. He thought, \"I could sell these monkeys and become very rich! I'm going to take them to England.\"</p>    <p style=\"margin-bottom: 1rem;\">So the admiral set traps to catch the monkeys. He put <b>stakes</b> in the ground, tied <b>string</b> around them and made <b>loops</b> in the <b>string</b>. When the monkeys ran through the forest, their feet got caught in the <b>loops</b>, and they couldn't escape. Then the <b>admiral</b> put the monkeys in cages on his ship and sailed away.</p>    <p style=\"margin-bottom: 1rem;\">The cages were small and uncomfortable. There was no soft <b>hay</b> for the monkeys to sleep on. Instead, they slept on branches with sharp <b>thorns</b> that cut into the monkeys' <b>flesh</b>. For dinner, he gave them tiny pieces of <b>sour</b> <b>grapefruit</b> to eat. The monkeys grew hungry and weak.</p>    <p style=\"margin-bottom: 1rem;\">But one day, the <b>admiral</b> hired a new <b>steward</b>. He was a kind man with a good <b>conscience</b>. He was <b>horrified</b> to see the thin monkeys in the cages. So one night he let them out.</p>    <p style=\"margin-bottom: 1rem;\">The monkeys ran and played all over the ship! They attacked the <b>admiral</b> and the <b>steward</b> and ate their food. They completely <b>wrecked</b> the ship. One monkey ran into a <b>kerosene</b> lamp, and it fell over. The ship caught fire and began to sink! The whole crew was lost except for the monkeys.</p>    <p style=\"margin-bottom: 1rem;\">After the <b>accident</b>, the monkeys jumped onto a <b>raft</b>. They floated away from the <b>fiery</b> blaze of the ship. In the morning, they saw a little island in the distance. The monkeys used a piece of wood as a <b>paddle</b>, and they went toward it. They found the island shaped like an <b>arc</b>. They felt so happy to find a new home, and they still live there today.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Monkey Island</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In the middle of the ocean, there is a small island shaped like an <b>arc</b>. Here, monkeys play on the beach and in the trees. But how did the monkeys get there?</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Once, an English <b>admiral</b> was exploring Africa when he found hundreds of monkeys. The admiral's <b>character</b> was mean. He thought, \"I could sell these monkeys and become very rich! I'm going to take them to England.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">So the admiral set traps to catch the monkeys. He put <b>stakes</b> in the ground, tied <b>string</b> around them and made <b>loops</b> in the <b>string</b>. When the monkeys ran through the forest, their feet got caught in the <b>loops</b>, and they couldn't escape. Then the <b>admiral</b> put the monkeys in cages on his ship and sailed away.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The cages were small and uncomfortable. There was no soft <b>hay</b> for the monkeys to sleep on. Instead, they slept on branches with sharp <b>thorns</b> that cut into the monkeys' <b>flesh</b>. For dinner, he gave them tiny pieces of <b>sour</b> <b>grapefruit</b> to eat. The monkeys grew hungry and weak.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But one day, the <b>admiral</b> hired a new <b>steward</b>. He was a kind man with a good <b>conscience</b>. He was <b>horrified</b> to see the thin monkeys in the cages. So one night he let them out.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The monkeys ran and played all over the ship! They attacked the <b>admiral</b> and the <b>steward</b> and ate their food. They completely <b>wrecked</b> the ship. One monkey ran into a <b>kerosene</b> lamp, and it fell over. The ship caught fire and began to sink! The whole crew was lost except for the monkeys.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After the <b>accident</b>, the monkeys jumped onto a <b>raft</b>. They floated away from the <b>fiery</b> blaze of the ship. In the morning, they saw a little island in the distance. The monkeys used a piece of wood as a <b>paddle</b>, and they went toward it. They found the island shaped like an <b>arc</b>. They felt so happy to find a new home, and they still live there today.</p></div>",
       "imageUrl": "/unit2_vol4_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "26",
@@ -431,7 +424,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit2_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Đảo khỉ</h1>\n\n<p style=\"margin-bottom: 1rem;\">Ở giữa đại dương, có một hòn đảo nhỏ có hình dạng như một <b>vòng cung</b>. Tại đây, những chú khỉ chơi đùa trên bãi biển và trên cây. Nhưng làm thế nào những chú khỉ đến được đó?</p>\n\n<p style=\"margin-bottom: 1rem;\">Có một lần, một <b>đô đốc</b> người Anh đang khám phá châu Phi thì ông tìm thấy hàng trăm chú khỉ. <b>Tính cách</b> của vị đô đốc này rất xấu tính. Ông nghĩ: \"Mình có thể bán những con khỉ này và trở nên rất giàu có! Mình sẽ đưa chúng đến Anh.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Vì vậy, đô đốc đã đặt bẫy để bắt những con khỉ. Ông cắm những cái <b>cọc</b> xuống đất, buộc <b>dây</b> xung quanh chúng và tạo thành những <b>vòng thắt</b> bằng <b>dây</b>. Khi những con khỉ chạy qua khu rừng, chân của chúng bị mắc vào các <b>vòng thắt</b>, và chúng không thể trốn thoát. Sau đó, <b>đô đốc</b> nhốt những con khỉ vào lồng trên tàu của mình và giăng buồm rời đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những chiếc lồng nhỏ và không thoải mái. Không có <b>cỏ khô</b> mềm cho khỉ ngủ. Thay vào đó, chúng ngủ trên những cành cây có <b>gai</b> nhọn đâm vào <b>thịt</b> của những con khỉ. Đối với bữa tối, ông cho chúng ăn những miếng <b>bưởi chua</b> nhỏ xíu. Những con khỉ trở nên đói và yếu ớt.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng một ngày nọ, <b>đô đốc</b> thuê một <b>người phục vụ</b> mới. Anh ấy là một người đàn ông tốt bụng có <b>lương tâm</b> tốt. Anh ấy đã <b>kinh hoàng</b> khi nhìn thấy những con khỉ gầy gò trong lồng. Vì vậy, vào một đêm nọ, anh ấy đã thả chúng ra.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những con khỉ chạy và chơi đùa khắp con tàu! Chúng tấn công <b>đô đốc</b> và <b>người phục vụ</b> và ăn thức ăn của họ. Chúng hoàn toàn <b>phá hủy</b> con tàu. Một con khỉ chạy đụng vào một chiếc đèn <b>dầu hỏa</b>, và nó bị đổ. Con tàu bốc cháy và bắt đầu chìm! Toàn bộ thủy thủ đoàn đã thiệt mạng ngoại trừ những con khỉ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau <b>tai nạn</b>, những con khỉ nhảy lên một chiếc <b>bè</b>. Chúng trôi dạt ra xa khỏi ngọn lửa <b>cháy rực</b> của con tàu. Vào buổi sáng, chúng nhìn thấy một hòn đảo nhỏ ở phía xa. Những con khỉ dùng một mảnh gỗ làm <b>mái chèo</b>, và chúng đi về phía đó. Chúng tìm thấy hòn đảo có hình dạng như một <b>vòng cung</b>. Chúng cảm thấy rất hạnh phúc khi tìm thấy một ngôi nhà mới, và chúng vẫn sống ở đó cho đến ngày nay.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

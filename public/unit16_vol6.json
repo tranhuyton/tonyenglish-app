@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 16: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -100,37 +94,37 @@
               "id": "7",
               "content": "It was so loud that the actors could hear it ________ .",
               "options": [
-                "backstage",
                 "segregated",
+                "backstage",
                 "premature",
                 "amid"
               ],
               "explanation": "backstage fits the context.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "8",
               "content": "He placed the rags ________ the pile of logs.",
               "options": [
-                "amid",
                 "underestimate",
                 "culprits",
+                "amid",
                 "clumsy"
               ],
               "explanation": "amid fits the context.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "9",
               "content": "The rags were very ________ and would help start the fire.",
               "options": [
-                "flammable",
                 "backstage",
                 "uproar",
-                "segregated"
+                "segregated",
+                "flammable"
               ],
               "explanation": "flammable fits the context.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -148,37 +142,37 @@
               "id": "11",
               "content": "I’ve heard that he is actually a(n) ________ .",
               "options": [
-                "billionaire",
                 "flammable",
+                "billionaire",
                 "clumsy",
                 "culprits"
               ],
               "explanation": "billionaire fits the context.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "12",
               "content": "It might have been ________ of her to walk so soon after the operation.",
               "options": [
-                "premature",
                 "uproar",
                 "backstage",
+                "premature",
                 "amid"
               ],
               "explanation": "premature fits the context.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "13",
               "content": "Her movements were very ________, and she might have hurt herself.",
               "options": [
-                "clumsy",
                 "underestimate",
                 "billionaire",
-                "flammable"
+                "flammable",
+                "clumsy"
               ],
               "explanation": "clumsy fits the context.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -196,13 +190,13 @@
               "id": "15",
               "content": "One group was innocent people, and the other was the ________.",
               "options": [
-                "culprits",
                 "uproar",
+                "culprits",
                 "clumsy",
                 "underestimate"
               ],
               "explanation": "culprits fits the context.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -448,12 +442,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Brute and the Billionaire</h1>        <p style=\"margin-bottom: 1rem;\">Hundreds of people had come to see a popular <b>satire</b>, but during the performance a fire started in the theater. The audience and actors <b>evacuated</b> the building. Luckily, no one was hurt, and the fire was soon put out. Immediately, the audience assembled into an angry <b>mob</b> and demanded to know what had happened.</p>    <p style=\"margin-bottom: 1rem;\">It was soon revealed that the fire had started <b>backstage</b>, and only two people were in the area at the time. One was the husband of the play’s star actress, the <b>billionaire</b> Henry Rich. The other was the theater’s janitor, Bill, a large and strong man who looked like a <b>brute</b>.</p>    <p style=\"margin-bottom: 1rem;\">The crowd <b>segregated</b> the two men and demanded to know who the <b>culprit</b> was. Most of the crowd thought that Bill was to blame. They felt that he had started the fire without ever <b>subjecting</b> him to any <b>scrutiny</b>. Bill <b>resented</b> this but said nothing.</p>    <p style=\"margin-bottom: 1rem;\">Luckily, the <b>billionaire</b>’s wife <b>testified</b> in his defense. “Your decision is <b>premature</b>,” she told the crowd. “I fell down <b>amid</b> the <b>tumult</b> while everyone fled the fire. Bill rescued me and carried me out of the building. I think you <b>underestimate</b> his character. Besides, in order to be close enough to save me, he couldn’t have been near the place where the fire began.”</p>    <p style=\"margin-bottom: 1rem;\">The crowd then turned their eyes to the <b>billionaire</b>. “He did it!” they shouted. “Make him pay!”</p>    <p style=\"margin-bottom: 1rem;\">“Wait,” the <b>billionaire</b> said over the <b>uproar</b>. “I admit that I started the fire, but it was an accident. I was going <b>backstage</b> to see my wife and was <b>clumsy</b>. I <b>collided</b> with a lamp, and it fell to the floor. The floor was <b>flammable</b>. A fire started, and I fled.”</p>    <p style=\"margin-bottom: 1rem;\">The <b>mob</b> was surprised. The man they blamed was innocent, and the <b>billionaire</b> was guilty. To pay for his error, the <b>billionaire</b> not only repaired the theater but had it remade to be better than before.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Brute and the Billionaire</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Hundreds of people had come to see a popular <b>satire</b>, but during the performance a fire started in the theater. The audience and actors <b>evacuated</b> the building. Luckily, no one was hurt, and the fire was soon put out. Immediately, the audience assembled into an angry <b>mob</b> and demanded to know what had happened.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It was soon revealed that the fire had started <b>backstage</b>, and only two people were in the area at the time. One was the husband of the play’s star actress, the <b>billionaire</b> Henry Rich. The other was the theater’s janitor, Bill, a large and strong man who looked like a <b>brute</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The crowd <b>segregated</b> the two men and demanded to know who the <b>culprit</b> was. Most of the crowd thought that Bill was to blame. They felt that he had started the fire without ever <b>subjecting</b> him to any <b>scrutiny</b>. Bill <b>resented</b> this but said nothing.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Luckily, the <b>billionaire</b>’s wife <b>testified</b> in his defense. “Your decision is <b>premature</b>,” she told the crowd. “I fell down <b>amid</b> the <b>tumult</b> while everyone fled the fire. Bill rescued me and carried me out of the building. I think you <b>underestimate</b> his character. Besides, in order to be close enough to save me, he couldn’t have been near the place where the fire began.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The crowd then turned their eyes to the <b>billionaire</b>. “He did it!” they shouted. “Make him pay!”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Wait,” the <b>billionaire</b> said over the <b>uproar</b>. “I admit that I started the fire, but it was an accident. I was going <b>backstage</b> to see my wife and was <b>clumsy</b>. I <b>collided</b> with a lamp, and it fell to the floor. The floor was <b>flammable</b>. A fire started, and I fled.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>mob</b> was surprised. The man they blamed was innocent, and the <b>billionaire</b> was guilty. To pay for his error, the <b>billionaire</b> not only repaired the theater but had it remade to be better than before.</p></div>",
       "imageUrl": "/unit16_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -530,37 +524,37 @@
               "id": "42",
               "content": "When the mob segregated the two men, who did they first think was the culprit?",
               "options": [
-                "Bill",
                 "The billionaire",
+                "Bill",
                 "The actress",
                 "The director"
               ],
               "explanation": "Dịch câu hỏi: Khi đám đông tách hai người đàn ông ra, ban đầu họ nghĩ ai là thủ phạm?\nGiải thích: Chọn A.\nĐoạn 3 có ghi: \"The crowd segregated the two men and demanded to know who the culprit was. Most of the crowd thought that Bill was to blame.\" (Đám đông tách hai người đàn ông ra và đòi biết ai là thủ phạm. Hầu hết đám đông đều nghĩ rằng Bill là người có lỗi). Do đó, đáp án là Bill.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "43",
               "content": "Who testified in the Bill’s defense since the mob didn’t subject him to any scrutiny?",
               "options": [
-                "The billionaire's wife",
                 "The director",
                 "The police",
+                "The billionaire's wife",
                 "Henry Rich"
               ],
               "explanation": "Dịch câu hỏi: Ai đã làm chứng để bảo vệ Bill vì đám đông không hề xem xét kỹ lưỡng sự việc?\nGiải thích: Chọn A.\nĐầu đoạn 4: \"Luckily, the billionaire’s wife testified in his defense.\" (May mắn thay, vợ của vị tỷ phú đã làm chứng để bảo vệ anh ấy). Vậy người làm chứng chính là vợ của vị tỷ phú.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "44",
               "content": "What was the flammable object that caught fire when Mr. Rich collided with a lamp?",
               "options": [
-                "The floor",
                 "The curtains",
                 "The paint",
-                "The wood"
+                "The wood",
+                "The floor"
               ],
               "explanation": "Dịch câu hỏi: Vật dễ cháy nào đã bắt lửa khi ông Rich va phải chiếc đèn?\nGiải thích: Chọn A.\nTrong đoạn 6, vị tỷ phú kể: \"I collided with a lamp, and it fell to the floor. The floor was flammable.\" (Tôi đã va phải một chiếc đèn, và nó rơi xuống sàn. Sàn nhà là vật dễ cháy). Nên đáp án đúng là sàn nhà (the floor).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "45",
@@ -577,7 +571,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit16_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Kẻ cục súc và Nhà tỷ phú</h1>\n\n<p style=\"margin-bottom: 1rem;\">Hàng trăm người đã đến để xem một vở <b>kịch châm biếm</b> nổi tiếng, nhưng trong suốt buổi biểu diễn, một ngọn lửa đã bùng lên trong nhà hát. Khán giả và các diễn viên đã <b>sơ tán</b> khỏi tòa nhà. May mắn thay, không có ai bị thương, và ngọn lửa đã nhanh chóng được dập tắt. Ngay lập tức, khán giả đã tụ tập thành một <b>đám đông</b> tức giận và yêu cầu được biết những gì đã xảy ra.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhanh chóng có thông tin tiết lộ rằng ngọn lửa đã bắt đầu ở <b>hậu trường</b>, và chỉ có hai người ở khu vực đó vào lúc bấy giờ. Một người là chồng của nữ diễn viên chính của vở kịch, <b>nhà tỷ phú</b> Henry Rich. Người còn lại là người gác cổng của nhà hát, Bill, một người đàn ông to lớn và mạnh mẽ trông giống như một <b>kẻ cục súc</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đám đông đã <b>cách ly</b> hai người đàn ông và yêu cầu được biết <b>thủ phạm</b> là ai. Hầu hết đám đông đều cho rằng Bill là người có lỗi. Họ cảm thấy rằng anh ta đã châm ngòi cho ngọn lửa mà không hề <b>bắt</b> anh ta phải chịu bất kỳ sự <b>kiểm tra kỹ lưỡng</b> nào. Bill đã <b>phẫn nộ</b> về điều này nhưng không nói gì.</p>\n\n<p style=\"margin-bottom: 1rem;\">May mắn thay, vợ của <b>nhà tỷ phú</b> đã <b>làm chứng</b> để bảo vệ anh. \"Quyết định của mọi người là <b>vội vàng</b>,\" cô nói với đám đông. \"Tôi đã ngã xuống <b>giữa</b> <b>sự hỗn loạn</b> trong khi mọi người chạy trốn khỏi ngọn lửa. Bill đã cứu tôi và bế tôi ra khỏi tòa nhà. Tôi nghĩ mọi người đã <b>đánh giá thấp</b> nhân cách của anh ấy. Bên cạnh đó, để có thể ở đủ gần để cứu tôi, anh ấy không thể ở gần nơi bắt đầu ngọn lửa.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Đám đông sau đó đổ dồn ánh mắt vào <b>nhà tỷ phú</b>. \"Ông ta đã làm điều đó!\" họ hét lên. \"Bắt ông ta phải trả giá!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Khoan đã,\" <b>nhà tỷ phú</b> nói lớn hơn <b>sự ồn ào</b>. \"Tôi thừa nhận rằng tôi đã gây ra ngọn lửa, nhưng đó là một tai nạn. Tôi đang đi vào <b>hậu trường</b> để gặp vợ tôi và đã <b>hậu đậu</b>. Tôi đã <b>va chạm</b> với một chiếc đèn, và nó rơi xuống sàn. Sàn nhà <b>dễ cháy</b>. Một ngọn lửa đã bắt đầu, và tôi đã bỏ chạy.\"</p>\n\n<p style=\"margin-bottom: 1rem;\"><b>Đám đông</b> đã rất ngạc nhiên. Người mà họ đổ lỗi là vô tội, và <b>nhà tỷ phú</b> mới là người có tội. Để trả giá cho lỗi lầm của mình, <b>nhà tỷ phú</b> không chỉ sửa chữa nhà hát mà còn cho xây dựng lại nó để tốt hơn trước.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 16: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

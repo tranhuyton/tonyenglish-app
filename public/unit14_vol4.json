@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 14: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -155,143 +148,143 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. brick / lump / reconciled / uttering</b><br/>Before the project, the clay was one big [ 1 ]. But when he was finished, he made a perfectly square [ 2 ]. Five minutes ago, the two senators were [ 3 ] insults at each other, but now they have [ 4 ] because they both agree with the new law.</p><p style=\"margin-bottom: 12px;\"><b>2. flushed / shutters / sparkled / stale</b><br/>In the middle of the night, she got out of bed and opened the [ 5 ]. She gazed at the sky where the stars [ 6 ] like tiny fires. The rice was not eaten soon enough, so it tasted [ 7 ]. It made me feel sick and my face became [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. crumbled / dough / shattered / sift</b><br/>The cook picked up the block of cheese and [ 9 ] it into little pieces. Then he mixed them with the [ 10 ] before placing it in the oven. When he started to [ 12 ] the flour into the bowl, he slipped and dropped it. The bowl hit the ground and [ 14 ].</p><p style=\"margin-bottom: 12px;\"><b>4. fist / flexible / mixture / sprinkle</b><br/>He hit the punching bag with his [ 16 ]. Since the bag was [ 18 ], it did not break. The [ 20 ] of ice cream and chocolate tastes good, but it will be even better if you [ 22 ] sugar on the top of it.</p><p style=\"margin-bottom: 12px;\"><b>5. expressed / injured / ruined / slight</b><br/>The doctor [ 24 ] a lot of concern for my hurt ankle, but I told him the pain was only [ 26 ]. The ship was [ 28 ] when it crashed into the island. Even though it was greatly damaged, none of the passengers were [ 30 ].</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. brick / lump / reconciled / uttering</b><br/>Before the project, the clay was one big [ 11 ]. But when he was finished, he made a perfectly square [ 12 ]. Five minutes ago, the two senators were [ 13 ] insults at each other, but now they have [ 14 ] because they both agree with the new law.</p><p style=\"margin-bottom: 12px;\"><b>2. flushed / shutters / sparkled / stale</b><br/>In the middle of the night, she got out of bed and opened the [ 15 ]. She gazed at the sky where the stars [ 16 ] like tiny fires. The rice was not eaten soon enough, so it tasted [ 17 ]. It made me feel sick and my face became [ 18 ].</p><p style=\"margin-bottom: 12px;\"><b>3. crumbled / dough / shattered / sift</b><br/>The cook picked up the block of cheese and [ 19 ] it into little pieces. Then he mixed them with the [ 20 ] before placing it in the oven. When he started to [ 21 ] the flour into the bowl, he slipped and dropped it. The bowl hit the ground and [ 22 ].</p><p style=\"margin-bottom: 12px;\"><b>4. fist / flexible / mixture / sprinkle</b><br/>He hit the punching bag with his [ 23 ]. Since the bag was [ 24 ], it did not break. The [ 25 ] of ice cream and chocolate tastes good, but it will be even better if you [ 26 ] sugar on the top of it.</p><p style=\"margin-bottom: 12px;\"><b>5. expressed / injured / ruined / slight</b><br/>The doctor [ 27 ] a lot of concern for my hurt ankle, but I told him the pain was only [ 28 ]. The ship was [ 29 ] when it crashed into the island. Even though it was greatly damaged, none of the passengers were [ 30 ].</p>",
               "options": [],
-              "correctAnswer": "lump",
-              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick)."
+              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick).",
+              "correctAnswer": "lump"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "brick",
-              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick)."
+              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick).",
+              "correctAnswer": "brick"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "uttering",
-              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải."
+              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải.",
+              "correctAnswer": "uttering"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "reconciled",
-              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải."
+              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải.",
+              "correctAnswer": "reconciled"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "shutters",
-              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled)."
+              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled).",
+              "correctAnswer": "shutters"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "sparkled",
-              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled)."
+              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled).",
+              "correctAnswer": "sparkled"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "stale",
-              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed)."
+              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed).",
+              "correctAnswer": "stale"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "flushed",
-              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed)."
+              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed).",
+              "correctAnswer": "flushed"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "crumbled",
-              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough)."
+              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough).",
+              "correctAnswer": "crumbled"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "dough",
-              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough)."
+              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough).",
+              "correctAnswer": "dough"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "correctAnswer": "sift",
-              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered)."
+              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered).",
+              "correctAnswer": "sift"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "correctAnswer": "shattered",
-              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered)."
+              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered).",
+              "correctAnswer": "shattered"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "correctAnswer": "fist",
-              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible)."
+              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible).",
+              "correctAnswer": "fist"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "correctAnswer": "flexible",
-              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible)."
+              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible).",
+              "correctAnswer": "flexible"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "correctAnswer": "mixture",
-              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường."
+              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường.",
+              "correctAnswer": "mixture"
             },
             {
               "id": "26",
               "content": "",
               "options": [],
-              "correctAnswer": "sprinkle",
-              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường."
+              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường.",
+              "correctAnswer": "sprinkle"
             },
             {
               "id": "27",
               "content": "",
               "options": [],
-              "correctAnswer": "expressed",
-              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight)."
+              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight).",
+              "correctAnswer": "expressed"
             },
             {
               "id": "28",
               "content": "",
               "options": [],
-              "correctAnswer": "slight",
-              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight)."
+              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight).",
+              "correctAnswer": "slight"
             },
             {
               "id": "29",
               "content": "",
               "options": [],
-              "correctAnswer": "ruined",
-              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured)."
+              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured).",
+              "correctAnswer": "ruined"
             },
             {
               "id": "30",
               "content": "",
               "options": [],
-              "correctAnswer": "injured",
-              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured)."
+              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured).",
+              "correctAnswer": "injured"
             }
           ],
           "questionType": "Điền từ"
@@ -301,13 +294,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Brothers and the Bread</h1>        <p style=\"margin-bottom: 1rem;\">Two brothers wanted to go outside and play. However, because the only bread in the house was <b>stale</b>, their mother told them they needed to bake fresh bread.</p>    <p style=\"margin-bottom: 1rem;\">\"I have to have the car repaired,\" she said. \"When I return, if the bread is ready, you can play.\"</p>    <p style=\"margin-bottom: 1rem;\">The brothers hurried to prepare the bread, but not carefully. They didn't <b>sift</b> the flour. They were careless and <b>sprinkled</b> too much salt into the <b>mixture</b>. The <b>dough</b> needed to be soft and <b>flexible</b>, but the salt made it into a <b>lump</b> that was as hard as a <b>brick</b>.</p>    <p style=\"margin-bottom: 1rem;\">The younger brother <b>uttered</b> a sigh. \"Now we have to start again,\" he said.</p>    <p style=\"margin-bottom: 1rem;\">\"No, we don't,\" the older brother replied. \"I'll fix it. I just need to make the <b>dough</b> flat again and add water to it.\"</p>    <p style=\"margin-bottom: 1rem;\">He decided to hit the ball of <b>dough</b> with his <b>fist</b> to make it flat. But he hit it so hard that it flew right off of the table and knocked over a glass, which <b>shattered</b>. The <b>dough</b> then crashed into the kitchen window's <b>shutters</b> and <b>crumbled</b>. Luckily, the brothers were not <b>injured</b>, but they did make a huge mess.</p>    <p style=\"margin-bottom: 1rem;\">A <b>slight</b> mistake now became a major problem. The brothers had <b>ruined</b> the kitchen. Just then their mother returned. She saw the mess and became <b>flushed</b> with anger.</p>    <p style=\"margin-bottom: 1rem;\">\"Now you can't play,\" she said. \"Instead, you have to clean the kitchen. I want this kitchen to be so clean that it may <b>sparkle</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">The brothers cleaned the floor and <b>expressed</b> their sorrow to their mother. Soon, they were <b>reconciled</b>. But there was no bread, and it was too late to play. They realized that trying to do something quickly often makes more work.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Brothers and the Bread</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Two brothers wanted to go outside and play. However, because the only bread in the house was <b>stale</b>, their mother told them they needed to bake fresh bread.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I have to have the car repaired,\" she said. \"When I return, if the bread is ready, you can play.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The brothers hurried to prepare the bread, but not carefully. They didn't <b>sift</b> the flour. They were careless and <b>sprinkled</b> too much salt into the <b>mixture</b>. The <b>dough</b> needed to be soft and <b>flexible</b>, but the salt made it into a <b>lump</b> that was as hard as a <b>brick</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The younger brother <b>uttered</b> a sigh. \"Now we have to start again,\" he said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"No, we don't,\" the older brother replied. \"I'll fix it. I just need to make the <b>dough</b> flat again and add water to it.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He decided to hit the ball of <b>dough</b> with his <b>fist</b> to make it flat. But he hit it so hard that it flew right off of the table and knocked over a glass, which <b>shattered</b>. The <b>dough</b> then crashed into the kitchen window's <b>shutters</b> and <b>crumbled</b>. Luckily, the brothers were not <b>injured</b>, but they did make a huge mess.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A <b>slight</b> mistake now became a major problem. The brothers had <b>ruined</b> the kitchen. Just then their mother returned. She saw the mess and became <b>flushed</b> with anger.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Now you can't play,\" she said. \"Instead, you have to clean the kitchen. I want this kitchen to be so clean that it may <b>sparkle</b>!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The brothers cleaned the floor and <b>expressed</b> their sorrow to their mother. Soon, they were <b>reconciled</b>. But there was no bread, and it was too late to play. They realized that trying to do something quickly often makes more work.</p></div>",
       "imageUrl": "/unit14_vol4_story.png",
       "sections": [
         {
           "id": "sec4_reading_A",
           "title": "Reading Comprehension Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "31",
@@ -428,7 +421,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit14_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Hai anh em và chiếc bánh mì</h1>\n\n<p style=\"margin-bottom: 1rem;\">Hai anh em muốn ra ngoài chơi. Tuy nhiên, vì món bánh mì duy nhất trong nhà đã bị <b>ôi thiu, cũ (stale)</b>, nên mẹ của chúng bảo chúng cần phải nướng bánh mì mới.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Mẹ phải mang xe đi sửa,\" bà nói. \"Khi mẹ về, nếu bánh mì đã sẵn sàng, các con có thể đi chơi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Hai anh em vội vàng chuẩn bị làm bánh mì, nhưng lại không cẩn thận. Chúng đã không <b>rây (sift)</b> bột. Chúng bất cẩn và <b>rắc (sprinkled)</b> quá nhiều muối vào <b>hỗn hợp (mixture)</b>. <b>Khối bột (dough)</b> cần phải mềm và <b>dẻo dai, linh hoạt (flexible)</b>, nhưng muối đã khiến nó trở thành một <b>cục (lump)</b> cứng như <b>cục gạch (brick)</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người em trai <b>thốt ra (uttered)</b> một tiếng thở dài. \"Bây giờ chúng ta phải bắt đầu lại rồi,\" cậu nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Không, chúng ta không cần đâu,\" người anh trai trả lời. \"Anh sẽ sửa nó. Anh chỉ cần làm cho <b>khối bột (dough)</b> phẳng ra và thêm nước vào.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu quyết định dùng <b>nắm đấm (fist)</b> của mình đập vào quả bóng bột để làm phẳng nó. Nhưng cậu đánh mạnh đến nỗi nó bay ra khỏi bàn và làm đổ một cái ly, khiến nó <b>vỡ vụn (shattered)</b>. <b>Khối bột (dough)</b> sau đó va vào cửa <b>chớp (shutters)</b> của cửa sổ nhà bếp và <b>vỡ vụn (crumbled)</b>. May mắn thay, hai anh em không bị <b>thương (injured)</b>, nhưng chúng đã làm ra một mớ hỗn độn lớn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một sai lầm <b>nhỏ (slight)</b> bây giờ đã trở thành một vấn đề lớn. Hai anh em đã <b>hủy hoại (ruined)</b> nhà bếp. Vừa lúc đó, mẹ của chúng trở về. Bà nhìn thấy đống lộn xộn và trở nên <b>đỏ bừng mặt (flushed)</b> vì tức giận.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Bây giờ các con không được đi chơi nữa,\" bà nói. \"Thay vào đó, các con phải dọn dẹp nhà bếp. Mẹ muốn nhà bếp này phải sạch sẽ đến mức nó có thể <b>lấp lánh (sparkle)</b>!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Hai anh em lau dọn sàn nhà và <b>bày tỏ (expressed)</b> sự hối lỗi với mẹ của chúng. Chẳng bao lâu, họ đã <b>giảng hòa (reconciled)</b>. Nhưng không có chiếc bánh mì nào, và cũng đã quá muộn để đi chơi. Chúng nhận ra rằng cố gắng làm một việc gì đó nhanh chóng thường sẽ tạo ra nhiều việc phải làm hơn.</p>\n</div>"
     }
   ]
 }

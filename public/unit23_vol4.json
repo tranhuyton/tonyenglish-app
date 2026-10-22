@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 23: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -713,13 +706,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Dinosaurs Really Died</h1>        <p style=\"margin-bottom: 1rem;\">Many scientists and <b>intellectuals</b> think that dinosaurs died when an <b>asteroid</b> smashed into the Earth millions of years ago. However, recently, there has been some <b>controversy</b> over this theory. Some scientists think that it isn't <b>accurate</b>. They think that a tiny insect may have been the biggest <b>factor</b> in the death of these huge creatures. That insect was the mosquito.</p>    <p style=\"margin-bottom: 1rem;\">These scientists do think that an <b>asteroid</b> hit the Earth at the time of the dinosaurs. But that wasn't what killed all of them. At that time, insects, including the mosquito, were beginning to <b>evolve</b>. Today, we can <b>regulate</b> the number of mosquitoes with <b>pesticides</b>. But that was impossible millions of years ago. The mosquitoes <b>multiplied</b> quickly. And they were certainly not idle. Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease. So the dinosaurs were <b>stricken</b> with the disease. A <b>vast</b> <b>majority</b> of them, from the <b>vegetarians</b> to the meat eaters, died.</p>    <p style=\"margin-bottom: 1rem;\">To <b>reinforce</b> this idea, scientists stress how gradually the dinosaurs died. If an <b>asteroid</b> killed them, they would have died very quickly. But the number of dinosaurs decreased slowly. In addition, scientists have found <b>genetic</b> material of mosquitoes in fossils. This material proves that mosquitoes existed back then. Although there may have been other <b>factors</b>, the dinosaurs died mainly because of disease, the scientists say.</p>    <p style=\"margin-bottom: 1rem;\">No matter how it happened, the dinosaurs' death had a major impact on other living things. Many dinosaurs ate <b>mammals</b>. After the dinosaurs died, <b>mammals</b> were able to <b>evolve</b> and produce <b>offspring</b>. Birds also <b>evolved</b>. Scientists have <b>analyzed</b> the <b>genomes</b> of birds, and they discovered that birds have <b>identical</b> <b>genetic</b> material to some dinosaurs. So there may still be dinosaurs among us after all.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Dinosaurs Really Died</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Many scientists and <b>intellectuals</b> think that dinosaurs died when an <b>asteroid</b> smashed into the Earth millions of years ago. However, recently, there has been some <b>controversy</b> over this theory. Some scientists think that it isn't <b>accurate</b>. They think that a tiny insect may have been the biggest <b>factor</b> in the death of these huge creatures. That insect was the mosquito.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">These scientists do think that an <b>asteroid</b> hit the Earth at the time of the dinosaurs. But that wasn't what killed all of them. At that time, insects, including the mosquito, were beginning to <b>evolve</b>. Today, we can <b>regulate</b> the number of mosquitoes with <b>pesticides</b>. But that was impossible millions of years ago. The mosquitoes <b>multiplied</b> quickly. And they were certainly not idle. Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease. So the dinosaurs were <b>stricken</b> with the disease. A <b>vast</b> <b>majority</b> of them, from the <b>vegetarians</b> to the meat eaters, died.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">To <b>reinforce</b> this idea, scientists stress how gradually the dinosaurs died. If an <b>asteroid</b> killed them, they would have died very quickly. But the number of dinosaurs decreased slowly. In addition, scientists have found <b>genetic</b> material of mosquitoes in fossils. This material proves that mosquitoes existed back then. Although there may have been other <b>factors</b>, the dinosaurs died mainly because of disease, the scientists say.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">No matter how it happened, the dinosaurs' death had a major impact on other living things. Many dinosaurs ate <b>mammals</b>. After the dinosaurs died, <b>mammals</b> were able to <b>evolve</b> and produce <b>offspring</b>. Birds also <b>evolved</b>. Scientists have <b>analyzed</b> the <b>genomes</b> of birds, and they discovered that birds have <b>identical</b> <b>genetic</b> material to some dinosaurs. So there may still be dinosaurs among us after all.</p></div>",
       "imageUrl": "/unit23_vol4_story.png",
       "sections": [
         {
           "id": "sec3",
           "title": "Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "31",
@@ -840,7 +833,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit23_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Khủng Long Đã Thực Sự Chết Như Thế Nào</h1>        <p style=\"margin-bottom: 1rem;\">Nhiều nhà khoa học và <b>trí thức</b> nghĩ rằng khủng long đã chết khi một <b>tiểu hành tinh</b> lao vào Trái Đất hàng triệu năm trước. Tuy nhiên, gần đây, đã có một số <b>sự tranh cãi</b> xung quanh giả thuyết này. Một số nhà khoa học nghĩ rằng nó không <b>chính xác</b>. Họ nghĩ rằng một loài côn trùng nhỏ bé có thể là <b>yếu tố</b> lớn nhất trong cái chết của những sinh vật khổng lồ này. Loài côn trùng đó chính là muỗi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những nhà khoa học này thực sự nghĩ rằng một <b>tiểu hành tinh</b> đã va vào Trái Đất vào thời của khủng long. Nhưng đó không phải là thứ đã giết chết tất cả chúng. Vào thời điểm đó, các loài côn trùng, bao gồm cả muỗi, đang bắt đầu <b>tiến hóa</b>. Ngày nay, chúng ta có thể <b>kiểm soát</b> số lượng muỗi bằng <b>thuốc trừ sâu</b>. Nhưng điều đó là không thể vào hàng triệu năm trước. Những con muỗi đã <b>nhân lên</b> nhanh chóng. Và chúng chắc chắn không hề nhàn rỗi. Vì có quá nhiều muỗi, nên rất dễ dàng để chúng cắn nhiều con khủng long. Khi chúng cắn một sinh vật sống khác, những con muỗi đã truyền một căn bệnh chết người. Vì vậy, những con khủng long đã <b>mắc bệnh</b>. Một <b>đa số</b> <b>rộng lớn</b> trong số chúng, từ những <b>động vật ăn cỏ</b> đến những loài ăn thịt, đều đã chết.</p>\n\n<p style=\"margin-bottom: 1rem;\">Để <b>củng cố</b> ý tưởng này, các nhà khoa học nhấn mạnh cách mà khủng long chết dần dần. Nếu một <b>tiểu hành tinh</b> giết chết chúng, chúng sẽ chết rất nhanh chóng. Nhưng số lượng khủng long lại giảm đi một cách chậm chạp. Ngoài ra, các nhà khoa học đã tìm thấy vật chất <b>di truyền</b> của muỗi trong các hóa thạch. Vật chất này chứng minh rằng muỗi đã tồn tại vào thời điểm đó. Mặc dù có thể có những <b>yếu tố</b> khác, nhưng các nhà khoa học nói rằng khủng long chủ yếu chết vì bệnh tật.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bất kể chuyện gì đã xảy ra, cái chết của khủng long đã có một tác động lớn đến các sinh vật sống khác. Nhiều loài khủng long ăn <b>động vật có vú</b>. Sau khi khủng long chết, <b>động vật có vú</b> đã có thể <b>tiến hóa</b> và sinh ra <b>con cái</b>. Các loài chim cũng đã <b>tiến hóa</b>. Các nhà khoa học đã <b>phân tích</b> <b>bộ gen</b> của các loài chim, và họ phát hiện ra rằng chim có vật chất <b>di truyền</b> <b>giống hệt nhau</b> với một số loài khủng long. Vậy rốt cuộc có thể vẫn còn những con khủng long tồn tại ở giữa chúng ta.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 23: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

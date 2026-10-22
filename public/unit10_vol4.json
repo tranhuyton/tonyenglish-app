@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 10: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -156,143 +149,143 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. animate / handy / numerous / particle</b><br/>animate / particle\nScientists thought that the tiny [ 1 ] was not a living thing, so they were very surprised to find that it was indeed [ 2 ]. handy / numerous\nMy uncle, the carpenter, keeps [ 3 ] tools in his truck. However, he keeps the most [ 4 ] ones on his tool belt at all times.</p><p style=\"margin-bottom: 12px;\"><b>2. classify / longing / plea / upright</b><br/>classify / upright\nOne way that scientists [ 5 ] the different species of early humans is by how they walked. Homo Erectus, for example, walked [ 6 ]. longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a [ 7 ] to be free. He made a [ 8 ] to the officers to release him immediately.</p><p style=\"margin-bottom: 12px;\"><b>3. concept / review / sophisticated / worthwhile</b><br/>sophisticated / worthwhile\nLearning how to speak another language is a [ 9 ] skill to have in the world of international business. It also can make one into a more [ 10 ] person. review / concept\nJack had a great [ 12 ] for a new system, but his boss needs to conduct a thorough [ 14 ] to see if it will work.</p><p style=\"margin-bottom: 12px;\"><b>4. constructed / decades / diagram / isolate</b><br/>diagram / isolate\nWilliam used a piece of white paper to [ 16 ] the different plants in the garden. That made it easier for him to draw a [ 18 ] of the leaves of each type of plant. constructed / decades\nThe great pyramids of Egypt were not [ 20 ] overnight. In fact, it took many [ 22 ] to complete them.</p><p style=\"margin-bottom: 12px;\"><b>5. concede / ferry / refrain / surrender</b><br/>concede / ferry\nAs he drove his car onto the [ 24 ], John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to [ 26 ] that air travel was just too expensive. refrain / surrender\nIn maintaining good health, it is important to [ 28 ] from eating unhealthy foods. But that doesn't mean you must [ 30 ] all of the foods that you enjoy.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. animate / handy / numerous / particle</b><br/>Scientists thought that the tiny [ 11 ] was not a living thing, so they were very surprised to find that it was indeed [ 12 ]. handy / numerous\nMy uncle, the carpenter, keeps [ 13 ] tools in his truck. However, he keeps the most [ 14 ] ones on his tool belt at all times.</p><p style=\"margin-bottom: 12px;\"><b>2. classify / longing / plea / upright</b><br/>One way that scientists [ 15 ] the different species of early humans is by how they walked. Homo Erectus, for example, walked [ 16 ]. longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a [ 17 ] to be free. He made a [ 18 ] to the officers to release him immediately.</p><p style=\"margin-bottom: 12px;\"><b>3. concept / review / sophisticated / worthwhile</b><br/>Learning how to speak another language is a [ 19 ] skill to have in the world of international business. It also can make one into a more [ 20 ] person. review / concept\nJack had a great [ 21 ] for a new system, but his boss needs to conduct a thorough [ 22 ] to see if it will work.</p><p style=\"margin-bottom: 12px;\"><b>4. constructed / decades / diagram / isolate</b><br/>William used a piece of white paper to [ 23 ] the different plants in the garden. That made it easier for him to draw a [ 24 ] of the leaves of each type of plant. constructed / decades\nThe great pyramids of Egypt were not [ 25 ] overnight. In fact, it took many [ 26 ] to complete them.</p><p style=\"margin-bottom: 12px;\"><b>5. concede / ferry / refrain / surrender</b><br/>As he drove his car onto the [ 27 ], John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to [ 28 ] that air travel was just too expensive. refrain / surrender\nIn maintaining good health, it is important to [ 29 ] from eating unhealthy foods. But that doesn't mean you must [ 30 ] all of the foods that you enjoy.</p>",
               "options": [],
-              "correctAnswer": "particle",
-              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống)."
+              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống).",
+              "correctAnswer": "particle"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "animate",
-              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống)."
+              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống).",
+              "correctAnswer": "animate"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "numerous",
-              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất)."
+              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất).",
+              "correctAnswer": "numerous"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "handy",
-              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất)."
+              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất).",
+              "correctAnswer": "handy"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "classify",
-              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng)."
+              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng).",
+              "correctAnswer": "classify"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "upright",
-              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng)."
+              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng).",
+              "correctAnswer": "upright"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "longing",
-              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin)."
+              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin).",
+              "correctAnswer": "longing"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "plea",
-              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin)."
+              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin).",
+              "correctAnswer": "plea"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "worthwhile",
-              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn)."
+              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn).",
+              "correctAnswer": "worthwhile"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "sophisticated",
-              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn)."
+              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn).",
+              "correctAnswer": "sophisticated"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "correctAnswer": "concept",
-              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng)."
+              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng).",
+              "correctAnswer": "concept"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "correctAnswer": "review",
-              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng)."
+              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng).",
+              "correctAnswer": "review"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "correctAnswer": "isolate",
-              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ)."
+              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ).",
+              "correctAnswer": "isolate"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "correctAnswer": "diagram",
-              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ)."
+              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ).",
+              "correctAnswer": "diagram"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "correctAnswer": "constructed",
-              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ)."
+              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ).",
+              "correctAnswer": "constructed"
             },
             {
               "id": "26",
               "content": "",
               "options": [],
-              "correctAnswer": "decades",
-              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ)."
+              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ).",
+              "correctAnswer": "decades"
             },
             {
               "id": "27",
               "content": "",
               "options": [],
-              "correctAnswer": "ferry",
-              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận)."
+              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận).",
+              "correctAnswer": "ferry"
             },
             {
               "id": "28",
               "content": "",
               "options": [],
-              "correctAnswer": "concede",
-              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận)."
+              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận).",
+              "correctAnswer": "concede"
             },
             {
               "id": "29",
               "content": "",
               "options": [],
-              "correctAnswer": "refrain",
-              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ)."
+              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ).",
+              "correctAnswer": "refrain"
             },
             {
               "id": "30",
               "content": "",
               "options": [],
-              "correctAnswer": "surrender",
-              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ)."
+              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ).",
+              "correctAnswer": "surrender"
             }
           ],
           "questionType": "Điền từ"
@@ -302,13 +295,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"padding: 24px; background: #f8fafc; border-radius: 12px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #334155; line-height: 1.8; font-size: 1.05rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0;\"><h2 style=\"color: #0f172a; text-align: center; margin-top: 0; margin-bottom: 24px; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #cbd5e1; padding-bottom: 12px;\">Reading Passage</h2>mm<br>Exercise 1<br>PABTf A Choose the right word for the given definition.<br>1. a formal inspection <br>a. review<br>c. plea<br>2. to accept the truth <br>a. isolate<br>c. construct<br>3. an idea about how something is <br>a. decade<br>c. concept<br>4. knowing a lot about the world <br>a. upright<br>c. handy<br>5. important <br>a. refrain<br>c. worthwhile<br>b. diagram <br>d. longing<br>b. classify <br>d. concede<br>b. ferry <br>d. particle<br>b. sophisticated <br>d. surrender<br>b. numerous <br>d. animate<br>B Choose the right definition for the given word.<br>1. particle<br>a. a small piece of something <br>c. a formal inspection<br>2. decade<br>a. an idea about something<br>c. a type of boat<br>3. upright<br>a. important<br>c. standing straight<br>4. isolate<br>a. to separate<br>c. to give up<br>5. handy<br>a. to make something<br>c. plentiful<br>b. a drawing<br>d. a strong feeling of want<br>b. a period often years<br>d. a thing that has life<br>b. to not do something<br>d. a request<br>b. to group together by type<br>c. to accept the truth<br>b. common<br>d. useful<br><br>Exercise 2<br>10<br>Choose the word that is the better fit for each blank.<br>1. animate / particle<br>Scientists thought that the tiny___________was not a living thing, so they were very<br>surprised to find that it was indeed__________ .<br>2. handy / numerous<br>My uncle, the carpenter, keeps___________tools in his truck. However, he keeps<br>the most___________ones on his tool belt at all times.<br>3. classify / upright<br>One way that scientists___________the different species of early humans is by how<br>they walked. Homo Erectus, for example, walked__________ .<br>4. longing / plea<br>After sitting in the cell for just one hour, the prisoner felt a __________ to be free.<br>He made a ___________to the officers to release him immediately.<br>5. sophisticated / worthwhile<br>Learning how to speak another language is a ___________skill to have in the world<br>of international business. It also can make one into a more___________person.<br>6. review / concept<br>Jack had a great__________ for a new system, but his boss needs to conduct a<br>thorough___________to see if it will work.<br>7. diagram / isolate<br>William used a piece of white paperto__________ the different plants in the<br>garden. That made it easier for him to draw a __________ of the leaves of each type<br>of plant.<br>8. constructed / decades<br>The great pyramids of Egypt were not__________ overnight. In fact, it took many<br>__________to complete them.<br>9. concede / ferry<br>As he drove his car onto the__________ , John felt sad. He wanted to travel by<br>airplane, but after looking at ticket prices, he had to___________that air travel was<br>just too expensive.<br>10. refrain / surrender<br>In maintaining good health, it is important to__________ from eating unhealthy<br>foods. But that doesn’t mean you must__________ all of the foods that you enjoy.<br><br>Anton’s Great Discovery<br>Anton Van Leeuwenhoek was a Dutch cloth merchant. His life began to change after <br>he got his first microscope in 1653. It was a very simple microscope. It had a lens in an <br>upright stand. It could make small things look large. It was handy for looking closely at <br>cloth.<br>Soon, Anton felt a longing to build a more powerful microscope. He dreamed of <br>using it to make an important scientific discovery. He wanted to become famous. Three <br>decades later, he did.<br>For many years, Anton experimented with microscopes and lenses. Eventually he <br>constructed a very powerful microscope. If he had sold the concept to others, it would <br>have made him very rich. However, Anton refrained from surrendering his secret <br>to anyone. Instead, he wanted to use it to become famous. So he used his secret <br>microscope to study the natural world.<br>One day he was looking at saliva from his mouth with the microscope. In the saliva, <br>he saw numerous tiny particles. Some of them were moving! He thought that the <br>particles were tiny organisms. So he isolated them from each other and studied each<br>one carefully. Then he classified them into different categories. Some <br>were round. Others were long and had tails. All were alive.<br>Anton was so excited. He knew he could become famous <br>now. He was the first person to see these tiny organisms. So <br>he drew diagrams of the organisms and sent them to a group <br>of scientists in London. The scientists were sophisticated men <br>who did not believe tiny, animate organisms could live in our <br>mouths. Anton made a plea for them to come to Holland to <br>see the organisms with their own eyes. The men took a ferry <br>to Holland and met Anton. They performed a careful review of <br>his work, and they conceded that he had made a <br>worthwhile discovery. Anton Van Leeuwenhoek <br>had discovered bacteria. After decades of <br>hard work, he had become famous.<br>■ <br>■</div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Anton's Great Discovery</h1>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Anton Van Leeuwenhoek was a Dutch cloth merchant. His life began to change after he got his first microscope in 1653. It was a very simple microscope. It had a lens in an <b>upright</b> stand. It could make small things look large. It was <b>handy</b> for looking closely at cloth.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Soon, Anton felt a <b>longing</b> to build a more powerful microscope. He dreamed of using it to make an important scientific discovery. He wanted to become famous. Three <b>decades</b> later, he did.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">For many years, Anton experimented with microscopes and lenses. Eventually he <b>constructed</b> a very powerful microscope. If he had sold the <b>concept</b> to others, it would have made him very rich. However, Anton <b>refrained</b> from <b>surrendering</b> his secret to anyone. Instead, he wanted to use it to become famous. So he used his secret microscope to study the natural world.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day he was looking at saliva from his mouth with the microscope. In the saliva, he saw <b>numerous</b> tiny <b>particles</b>. Some of them were moving! He thought that the <b>particles</b> were tiny organisms. So he <b>isolated</b> them from each other and studied each one carefully. Then he <b>classified</b> them into different categories. Some were round. Others were long and had tails. All were alive.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Anton was so excited. He knew he could become famous now. He was the first person to see these tiny organisms. So he drew <b>diagrams</b> of the organisms and sent them to a group of scientists in London. The scientists were <b>sophisticated</b> men who did not believe tiny, <b>animate</b> organisms could live in our mouths. Anton made a <b>plea</b> for them to come to Holland to see the organisms with their own eyes. The men took a <b>ferry</b> to Holland and met Anton. They performed a careful <b>review</b> of his work, and they <b>conceded</b> that he had made a <b>worthwhile</b> discovery. Anton Van Leeuwenhoek had discovered bacteria. After <b>decades</b> of hard work, he had become famous.</p></div>",
       "imageUrl": "/unit10_vol4_story.png",
       "sections": [
         {
           "id": "reading_comp_A",
           "title": "Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "31",
@@ -429,7 +422,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n\n<img src=\"/unit10_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Khám Phá Vĩ Đại Của Anton</h1>\n\n<p style=\"margin-bottom: 1rem;\">Anton Van Leeuwenhoek là một thương gia buôn vải người Hà Lan. Cuộc đời ông bắt đầu thay đổi sau khi ông có được chiếc kính hiển vi đầu tiên vào năm 1653. Đó là một chiếc kính hiển vi rất đơn giản. Nó có một thấu kính được đặt trên một giá đỡ <b>thẳng đứng</b>. Nó có thể làm cho những vật nhỏ trông lớn hơn. Nó rất <b>tiện dụng</b> để nhìn cận cảnh vào vải vóc.</p>\n\n<p style=\"margin-bottom: 1rem;\">Chẳng bao lâu sau, Anton cảm thấy <b>khao khát</b> chế tạo một chiếc kính hiển vi mạnh hơn. Ông mơ ước sử dụng nó để thực hiện một khám phá khoa học quan trọng. Ông muốn trở nên nổi tiếng. Ba <b>thập kỷ</b> sau, ông đã làm được.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong nhiều năm, Anton đã thử nghiệm với kính hiển vi và thấu kính. Cuối cùng, ông đã <b>chế tạo</b> được một chiếc kính hiển vi rất mạnh. Nếu ông bán <b>ý tưởng</b> này cho người khác, nó sẽ khiến ông trở nên rất giàu có. Tuy nhiên, Anton đã <b>kiềm chế</b> việc <b>từ bỏ</b> bí mật của mình cho bất kỳ ai. Thay vào đó, ông muốn sử dụng nó để trở nên nổi tiếng. Vì vậy, ông đã sử dụng chiếc kính hiển vi bí mật của mình để nghiên cứu thế giới tự nhiên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, ông đang quan sát nước bọt từ miệng mình bằng kính hiển vi. Trong nước bọt, ông nhìn thấy <b>vô số</b> những <b>hạt</b> nhỏ li ti. Một số trong đó đang chuyển động! Ông nghĩ rằng những <b>hạt</b> đó là những sinh vật nhỏ bé. Vì vậy, ông đã <b>tách biệt</b> chúng ra khỏi nhau và nghiên cứu từng con một cách cẩn thận. Sau đó, ông <b>phân loại</b> chúng thành các loại khác nhau. Một số có hình tròn. Những con khác dài và có đuôi. Tất cả đều còn sống.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anton quá đỗi vui mừng. Ông biết giờ đây mình có thể trở nên nổi tiếng. Ông là người đầu tiên nhìn thấy những sinh vật nhỏ bé này. Vì vậy, ông đã vẽ <b>sơ đồ</b> của các sinh vật và gửi chúng đến một nhóm các nhà khoa học ở London. Các nhà khoa học là những người <b>sành sỏi</b>, những người không tin rằng những sinh vật <b>có sự sống</b> nhỏ bé có thể sống trong miệng của chúng ta. Anton đã đưa ra một <b>lời cầu xin</b> để họ đến Hà Lan và tận mắt nhìn thấy các sinh vật đó. Những người đàn ông này đã bắt một chuyến <b>phà</b> đến Hà Lan và gặp Anton. Họ đã thực hiện một cuộc <b>đánh giá</b> cẩn thận về công việc của ông, và họ đã <b>thừa nhận</b> rằng ông đã thực hiện một khám phá <b>đáng giá</b>. Anton Van Leeuwenhoek đã phát hiện ra vi khuẩn. Sau nhiều <b>thập kỷ</b> làm việc chăm chỉ, ông đã trở nên nổi tiếng.</p>\n\n</div>\n</div>"
     }
   ]
 }

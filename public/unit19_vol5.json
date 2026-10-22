@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 19: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -370,7 +364,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jane's Pride</h1>        <p style=\"margin-bottom: 1rem;\">Jane and her father, Mike, owned a <b>secondhand</b> boat. They called it \"High Hopes.\" The two loved to spend time together on the ocean and would often go on long fishing trips.</p>    <p style=\"margin-bottom: 1rem;\">Mike taught Jane how to perform important tasks. Jane learned how to steer the boat and adjust the sails. She learned how to put <b>grease</b> on the <b>intricate</b> gears of the motor. She learned how to <b>submerge</b> the <b>anchor</b> and secure it by putting a rope in a <b>slot</b>. Jane liked helping her father, but she thought that she wasn't very good at it. Sometimes, she omitted important steps and made <b>frequent</b> mistakes. Jane thought she wasn't capable of manual labor.</p>    <p style=\"margin-bottom: 1rem;\">Mike wanted to prove to her that she was indeed capable and important. He thought of a <b>tactic</b> to test Jane's skills in the <b>context</b> of a <b>catastrophe</b>. He hid under the deck and pretended to be trapped. He shouted, \"Jane, I can't get out! You have to get back to the <b>dock</b> and find help!\"</p>    <p style=\"margin-bottom: 1rem;\">Jane began to panic. She thought she might make her usual mistakes, which would <b>precipitate</b> a disaster. However, she had to listen to her dad and act <b>accordingly</b>. She pulled up the anchor with all of her might. She remembered to <b>overlap</b> the sails to <b>offset</b> the wind. She steered the boat around <b>buoys</b> where the water was shallow. When they got to shore, Mike came out from under the deck.</p>    <p style=\"margin-bottom: 1rem;\">Jane said, \"I thought you were trapped!\"</p>    <p style=\"margin-bottom: 1rem;\">Mike laughed. He said, \"It wasn't a <b>genuine</b> emergency. I <b>distorted</b> the truth to test your abilities. Look at what a great job you did getting the boat home safely! I knew you could do it.\"</p>    <p style=\"margin-bottom: 1rem;\">To honor his daughter, Mike decided to rename his boat. He <b>designated</b> it \"Jane's Pride\" and painted the name on the <b>fore</b> of the ship. Jane finally had something to be proud of.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jane's Pride</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jane and her father, Mike, owned a <b>secondhand</b> boat. They called it \"High Hopes.\" The two loved to spend time together on the ocean and would often go on long fishing trips.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Mike taught Jane how to perform important tasks. Jane learned how to steer the boat and adjust the sails. She learned how to put <b>grease</b> on the <b>intricate</b> gears of the motor. She learned how to <b>submerge</b> the <b>anchor</b> and secure it by putting a rope in a <b>slot</b>. Jane liked helping her father, but she thought that she wasn't very good at it. Sometimes, she omitted important steps and made <b>frequent</b> mistakes. Jane thought she wasn't capable of manual labor.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Mike wanted to prove to her that she was indeed capable and important. He thought of a <b>tactic</b> to test Jane's skills in the <b>context</b> of a <b>catastrophe</b>. He hid under the deck and pretended to be trapped. He shouted, \"Jane, I can't get out! You have to get back to the <b>dock</b> and find help!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jane began to panic. She thought she might make her usual mistakes, which would <b>precipitate</b> a disaster. However, she had to listen to her dad and act <b>accordingly</b>. She pulled up the anchor with all of her might. She remembered to <b>overlap</b> the sails to <b>offset</b> the wind. She steered the boat around <b>buoys</b> where the water was shallow. When they got to shore, Mike came out from under the deck.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jane said, \"I thought you were trapped!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Mike laughed. He said, \"It wasn't a <b>genuine</b> emergency. I <b>distorted</b> the truth to test your abilities. Look at what a great job you did getting the boat home safely! I knew you could do it.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">To honor his daughter, Mike decided to rename his boat. He <b>designated</b> it \"Jane's Pride\" and painted the name on the <b>fore</b> of the ship. Jane finally had something to be proud of.</p></div>",
       "imageUrl": "/unit19_vol5_story.png",
       "sections": [
         {
@@ -440,13 +434,13 @@
               "id": "41",
               "content": "Where did Jane have to steer the boat to find help?",
               "options": [
-                "To the dock",
                 "To the buoy",
                 "To the anchor",
-                "To the context"
+                "To the context",
+                "To the dock"
               ],
               "explanation": "Trong đoạn 3, bố của Jane đã hét lên \"You have to get back to the dock and find help!\" (Con phải quay lại bến tàu và tìm sự giúp đỡ!). Do đó, đáp án đúng là đưa thuyền về bến tàu (To the dock).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "42",
@@ -464,42 +458,50 @@
               "id": "43",
               "content": "On which part of the boat did they paint the name?",
               "options": [
-                "On the fore of the ship",
                 "On the anchor",
+                "On the fore of the ship",
                 "On the slot",
                 "On the dock"
               ],
               "explanation": "Trong đoạn cuối, tác giả viết \"He designated it 'Jane's Pride' and painted the name on the fore of the ship.\" (Ông ấy đã đặt tên nó là 'Niềm tự hào của Jane' và sơn tên đó lên phần mũi của con tàu). Mũi tàu tiếng Anh là fore of the ship.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "44",
               "content": "When Jane overlapped the sails, what was she trying to offset?",
               "options": [
-                "The wind",
                 "The grease",
                 "The catastrophe",
+                "The wind",
                 "The frequent mistakes"
               ],
               "explanation": "Đoạn 4 có câu \"She remembered to overlap the sails to offset the wind.\" (Cô ấy nhớ phải xếp chồng các cánh buồm lên nhau để cản sức gió). Vì vậy, cô ấy muốn cản lại gió (The wind).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "45",
               "content": "What was the purpose of Mike deceiving his daughter?",
               "options": [
-                "To prove to her that she was capable and important",
                 "To distort the truth",
                 "To test the intricate gears",
-                "To make her precipitate a disaster"
+                "To make her precipitate a disaster",
+                "To prove to her that she was capable and important"
               ],
               "explanation": "Đầu đoạn 3 có nhắc đến lý do Mike làm việc này \"Mike wanted to prove to her that she was indeed capable and important.\" (Mike muốn chứng minh cho cô ấy thấy rằng cô ấy thực sự có năng lực và quan trọng). Đây là mục đích chính để ông lừa con gái mình.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit19_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Niềm tự hào của Jane</h1>\n\n<p style=\"margin-bottom: 1rem;\">Jane và bố cô, Mike, sở hữu một chiếc thuyền <b>cũ</b>. Họ gọi nó là \"High Hopes\". Hai người rất thích dành thời gian bên nhau trên đại dương và thường có những chuyến đi câu cá dài ngày.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mike đã dạy Jane cách thực hiện những nhiệm vụ quan trọng. Jane đã học được cách bẻ lái con thuyền và điều chỉnh những cánh buồm. Cô đã học cách tra <b>dầu mỡ bôi trơn</b> vào các bánh răng <b>phức tạp</b> của động cơ. Cô đã học được cách <b>thả chìm</b> <b>mỏ neo</b> và cố định nó bằng cách đặt một sợi dây thừng vào một <b>khe</b>. Jane thích giúp đỡ bố, nhưng cô nghĩ rằng mình không giỏi việc đó lắm. Đôi khi, cô đã bỏ qua những bước quan trọng và <b>thường xuyên</b> mắc lỗi. Jane nghĩ rằng cô không có khả năng làm lao động chân tay.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mike muốn chứng minh cho cô thấy rằng cô thực sự có khả năng và rất quan trọng. Ông nghĩ ra một <b>chiến thuật</b> để kiểm tra các kỹ năng của Jane trong <b>bối cảnh</b> của một <b>thảm họa</b>. Ông trốn dưới boong tàu và giả vờ bị mắc kẹt. Ông hét lên, \"Jane, bố không thể ra ngoài được! Con phải quay lại <b>bến tàu</b> và tìm người giúp đỡ!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Jane bắt đầu hoảng loạn. Cô nghĩ mình có thể sẽ mắc phải những lỗi lầm thường ngày, điều này sẽ <b>gây ra</b> một thảm họa. Tuy nhiên, cô phải nghe lời bố và hành động <b>một cách phù hợp</b>. Cô kéo mỏ neo lên bằng tất cả sức lực của mình. Cô nhớ phải <b>xếp chồng</b> những cánh buồm <b>lên nhau</b> để <b>cân bằng</b> với sức gió. Cô bẻ lái con thuyền vòng qua những chiếc <b>phao</b> nơi nước cạn. Khi họ vào đến bờ, Mike từ dưới boong tàu bước ra.</p>\n\n<p style=\"margin-bottom: 1rem;\">Jane nói, \"Con tưởng bố bị mắc kẹt cơ mà!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Mike cười. Ông nói, \"Đó không phải là một trường hợp khẩn cấp <b>thật</b>. Bố đã <b>bóp méo</b> sự thật để kiểm tra khả năng của con. Hãy nhìn xem con đã làm tốt như thế nào khi đưa chiếc thuyền về nhà an toàn! Bố biết con có thể làm được.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Để tôn vinh con gái mình, Mike quyết định đổi tên chiếc thuyền của mình. Ông <b>đặt tên</b> nó là \"Niềm tự hào của Jane\" và sơn tên đó lên phần <b>mũi</b> của con tàu. Cuối cùng thì Jane cũng có một điều gì đó để tự hào.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 19: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

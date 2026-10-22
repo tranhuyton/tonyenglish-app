@@ -141,67 +141,67 @@
             {
               "id": "11",
               "content": "If you [ 11 ] something widely, everyone will know about it.",
-              "explanation": "Từ cần điền là advertise (quảng cáo).",
-              "correctAnswer": "advertise",
               "options": [
                 "vote",
                 "advertise",
                 "major",
                 "skills",
                 "competition"
-              ]
+              ],
+              "explanation": "Từ cần điền là advertise (quảng cáo).",
+              "correctAnswer": "advertise"
             },
             {
               "id": "12",
               "content": "If you have a [ 12 ] problem, you might need more help.",
-              "explanation": "Từ cần điền là major (lớn, quan trọng).",
-              "correctAnswer": "major",
               "options": [
                 "vote",
                 "advertise",
                 "major",
                 "skills",
                 "competition"
-              ]
+              ],
+              "explanation": "Từ cần điền là major (lớn, quan trọng).",
+              "correctAnswer": "major"
             },
             {
               "id": "13",
               "content": "I want to be in the [ 13 ] to show that I am the best.",
-              "explanation": "Từ cần điền là competition (cuộc thi).",
-              "correctAnswer": "competition",
               "options": [
                 "vote",
                 "advertise",
                 "major",
                 "skills",
                 "competition"
-              ]
+              ],
+              "explanation": "Từ cần điền là competition (cuộc thi).",
+              "correctAnswer": "competition"
             },
             {
               "id": "14",
               "content": "His skiing [ 14 ] are great! He can be a professional.",
-              "explanation": "Từ cần điền là skills (kỹ năng).",
-              "correctAnswer": "skills",
               "options": [
                 "vote",
                 "advertise",
                 "major",
                 "skills",
                 "competition"
-              ]
+              ],
+              "explanation": "Từ cần điền là skills (kỹ năng).",
+              "correctAnswer": "skills"
             },
             {
               "id": "15",
               "content": "Next month, our country will [ 15 ] for a new president.",
-              "explanation": "Từ cần điền là vote (bầu cử).",
-              "correctAnswer": "vote",
               "options": [
                 "vote",
                 "advertise",
                 "major",
                 "skills",
                 "competition"
-              ]
+              ],
+              "explanation": "Từ cần điền là vote (bầu cử).",
+              "correctAnswer": "vote"
             }
           ],
           "questionType": "Kéo thả"
@@ -269,7 +269,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the World Got Light</h1>        <p style=\"margin-bottom: 1rem;\">The <b>president</b> of Darkland was a pig—a very bad pig. He was a pig of <b>major</b> <b>importance</b>. He was <b>rich</b>, and he had a lot of <b>strength</b>. But he was <b>mean</b> to all the animals in Darkland. He kept all of the world's light in a bag. He <b>preferred</b> to keep the world <b>cool</b> and dark. He wanted to stop the <b>progress</b> of the city. The animals couldn't work in the dark. He didn't have any <b>respect</b> for them. \"Light is too good for them,\" he said. \"Only I should have light.\"</p>    <p style=\"margin-bottom: 1rem;\">But the animals needed light. So they decided to hold a <b>competition</b>. They wanted to find the smartest animal in Darkland. That animal had to steal light from the <b>president</b>. They <b>advertised</b> the <b>competition</b> everywhere. All the animals came.</p>    <p style=\"margin-bottom: 1rem;\">The animals all showed off their <b>skills</b>. The <b>audience</b> watched and then <b>voted</b> for the animal with the most <b>knowledge</b>. The winner was a tall bird named Raven. They <b>assigned</b> him the job of getting light.</p>    <p style=\"margin-bottom: 1rem;\">The next morning, Raven ate <b>breakfast</b> and then left his home. \"How will I <b>gain</b> light from the <b>president</b>?\" thought Raven. He needed to trick the <b>president</b> <b>somehow</b>. Then, Raven had an idea. Raven could make his voice sound like anything!</p>    <p style=\"margin-bottom: 1rem;\">Raven walked up to the <b>president</b>'s door. He made the sound of a crying baby. He cried very loudly. Soon, the <b>president</b> opened the door.</p>    <p style=\"margin-bottom: 1rem;\">\"Be quiet!\" the <b>president</b> yelled. Right then, Raven quickly made his move. He flew by the pig and found the soft bag. He took it outside. The sun was inside the bag!</p>    <p style=\"margin-bottom: 1rem;\">Raven flew high and put the sun in the sky. The <b>president</b> was very mad. Raven tricked him! But the animals were very happy. At last, they had light—all because of Raven's smart thinking.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the World Got Light</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>president</b> of Darkland was a pig—a very bad pig. He was a pig of <b>major</b> <b>importance</b>. He was <b>rich</b>, and he had a lot of <b>strength</b>. But he was <b>mean</b> to all the animals in Darkland. He kept all of the world's light in a bag. He <b>preferred</b> to keep the world <b>cool</b> and dark. He wanted to stop the <b>progress</b> of the city. The animals couldn't work in the dark. He didn't have any <b>respect</b> for them. \"Light is too good for them,\" he said. \"Only I should have light.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But the animals needed light. So they decided to hold a <b>competition</b>. They wanted to find the smartest animal in Darkland. That animal had to steal light from the <b>president</b>. They <b>advertised</b> the <b>competition</b> everywhere. All the animals came.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The animals all showed off their <b>skills</b>. The <b>audience</b> watched and then <b>voted</b> for the animal with the most <b>knowledge</b>. The winner was a tall bird named Raven. They <b>assigned</b> him the job of getting light.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next morning, Raven ate <b>breakfast</b> and then left his home. \"How will I <b>gain</b> light from the <b>president</b>?\" thought Raven. He needed to trick the <b>president</b> <b>somehow</b>. Then, Raven had an idea. Raven could make his voice sound like anything!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Raven walked up to the <b>president</b>'s door. He made the sound of a crying baby. He cried very loudly. Soon, the <b>president</b> opened the door.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Be quiet!\" the <b>president</b> yelled. Right then, Raven quickly made his move. He flew by the pig and found the soft bag. He took it outside. The sun was inside the bag!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Raven flew high and put the sun in the sky. The <b>president</b> was very mad. Raven tricked him! But the animals were very happy. At last, they had light—all because of Raven's smart thinking.</p></div>",
       "imageUrl": "/unit29_story.png",
       "sections": [
         {
@@ -340,7 +340,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit29_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thế Giới Đã Có Ánh Sáng Như Thế Nào</h1>\n\n<p style=\"margin-bottom: 1rem;\"><b>Tổng thống</b> của Darkland (Vùng đất tối) là một con lợn—một con lợn rất tồi tệ. Hắn là một con lợn có <b>tầm quan trọng</b> <b>lớn</b>. Hắn rất <b>giàu có</b>, và hắn có nhiều <b>sức mạnh</b>. Nhưng hắn lại <b>xấu tính</b> với tất cả động vật ở Darkland. Hắn cất giữ tất cả ánh sáng của thế giới trong một cái túi. Hắn <b>thích</b> giữ cho thế giới <b>mát mẻ</b> và tăm tối. Hắn muốn ngăn chặn sự <b>tiến bộ</b> của thành phố. Các loài động vật không thể làm việc trong bóng tối. Hắn không có chút <b>tôn trọng</b> nào dành cho họ. \"Ánh sáng là quá tốt cho chúng,\" hắn nói. \"Chỉ có ta mới nên có ánh sáng.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng các loài động vật cần ánh sáng. Vì vậy họ quyết định tổ chức một <b>cuộc thi</b>. Họ muốn tìm loài động vật thông minh nhất ở Darkland. Con vật đó phải đánh cắp ánh sáng từ <b>tổng thống</b>. Họ đã <b>quảng cáo</b> <b>cuộc thi</b> ở khắp mọi nơi. Tất cả các loài động vật đều đến.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tất cả các loài động vật đều phô diễn <b>kỹ năng</b> của chúng. <b>Khán giả</b> theo dõi và sau đó <b>bầu chọn</b> cho con vật có <b>kiến thức</b> uyên bác nhất. Người chiến thắng là một con chim cao lớn tên là Raven (Quạ). Họ đã <b>giao phó</b> cho cậu ta nhiệm vụ lấy lại ánh sáng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sáng hôm sau, Raven ăn <b>bữa sáng</b> và sau đó rời khỏi nhà. \"Làm thế nào để mình có thể <b>giành được</b> ánh sáng từ <b>tổng thống</b>?\" Raven nghĩ. Cậu ta cần phải lừa <b>tổng thống</b> <b>bằng cách nào đó</b>. Sau đó, Raven có một ý tưởng. Raven có thể làm cho giọng nói của mình nghe giống như bất cứ thứ gì!</p>\n\n<p style=\"margin-bottom: 1rem;\">Raven đi đến cửa nhà <b>tổng thống</b>. Cậu ta tạo ra âm thanh của một em bé đang khóc. Cậu ta khóc rất to. Ngay sau đó, <b>tổng thống</b> đã mở cửa.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Im lặng đi!\" <b>tổng thống</b> hét lên. Ngay lúc đó, Raven nhanh chóng hành động. Cậu bay qua con lợn và tìm thấy cái túi mềm. Cậu ta mang nó ra ngoài. Mặt trời ở bên trong cái túi!</p>\n\n<p style=\"margin-bottom: 1rem;\">Raven bay vút lên cao và đặt mặt trời lên bầu trời. <b>Tổng thống</b> rất tức giận. Raven đã lừa hắn! Nhưng các loài động vật rất hạnh phúc. Cuối cùng, họ đã có ánh sáng—tất cả là nhờ suy nghĩ thông minh của Raven.</p>\n</div>"
     }
   ],
   "basicInfo": {

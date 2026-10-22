@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 25: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -223,143 +216,143 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. A. hardy / B. celebrity / institute / traverse</b><br/>You need to be [ 1 ] if you want to [ 2 ] the mountains. A(n) [ 3 ] is going to give a talk at the [ 4 ] of Drama.</p><p style=\"margin-bottom: 12px;\"><b>2. B. jealousy / B. migrate / aircraft / esteemed</b><br/>Many people [ 5 ] by ship or [ 6 ]. She felt a lot of [ 7 ] because her sister was highly [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. B. extinct / B. species / secluded / swamp</b><br/>They found the remains of [ 9 ] animals in the [ 10 ]. You can see many different bird [ 11 ] in this [ 12 ] location.</p><p style=\"margin-bottom: 12px;\"><b>4. A. zoology / B. decisive / ethical / nurture</b><br/>He made a quick, [ 13 ] choice, but he was worried if it was the [ 14 ] thing to fire him over the holidays. He chose to study [ 15 ] because he has always liked to [ 17 ] animals.</p><p style=\"margin-bottom: 12px;\"><b>5. B. principle / B. rural / concrete / overhead</b><br/>I like to be in [ 19 ] areas where there are no planes flying [ 21 ]. I don't like the [ 23 ] of covering the garden in [ 25 ].</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. A. hardy / B. celebrity / institute / traverse</b><br/>You need to be [ 16 ] if you want to [ 17 ] the mountains. A(n) [ 18 ] is going to give a talk at the [ 19 ] of Drama.</p><p style=\"margin-bottom: 12px;\"><b>2. B. jealousy / B. migrate / aircraft / esteemed</b><br/>Many people [ 20 ] by ship or [ 21 ]. She felt a lot of [ 22 ] because her sister was highly [ 23 ].</p><p style=\"margin-bottom: 12px;\"><b>3. B. extinct / B. species / secluded / swamp</b><br/>They found the remains of [ 24 ] animals in the [ 25 ]. You can see many different bird [ 26 ] in this [ 27 ] location.</p><p style=\"margin-bottom: 12px;\"><b>4. A. zoology / B. decisive / ethical / nurture</b><br/>He made a quick, [ 28 ] choice, but he was worried if it was the [ 29 ] thing to fire him over the holidays. He chose to study [ 30 ] because he has always liked to [ 31 ] animals.</p><p style=\"margin-bottom: 12px;\"><b>5. B. principle / B. rural / concrete / overhead</b><br/>I like to be in [ 32 ] areas where there are no planes flying [ 33 ]. I don't like the [ 34 ] of covering the garden in [ 35 ].</p>",
               "options": [],
-              "correctAnswer": "hardy",
-              "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi."
+              "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi.",
+              "correctAnswer": "hardy"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "traverse",
-              "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi."
+              "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi.",
+              "correctAnswer": "traverse"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "celebrity",
-              "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute)."
+              "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute).",
+              "correctAnswer": "celebrity"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "institute",
-              "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute)."
+              "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute).",
+              "correctAnswer": "institute"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "migrate",
-              "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft)."
+              "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft).",
+              "correctAnswer": "migrate"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "correctAnswer": "aircraft",
-              "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft)."
+              "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft).",
+              "correctAnswer": "aircraft"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "correctAnswer": "jealousy",
-              "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed)."
+              "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed).",
+              "correctAnswer": "jealousy"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "correctAnswer": "esteemed",
-              "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed)."
+              "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed).",
+              "correctAnswer": "esteemed"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "correctAnswer": "extinct",
-              "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp)."
+              "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp).",
+              "correctAnswer": "extinct"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "correctAnswer": "swamp",
-              "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp)."
+              "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp).",
+              "correctAnswer": "swamp"
             },
             {
               "id": "26",
               "content": "",
               "options": [],
-              "correctAnswer": "species",
-              "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded)."
+              "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded).",
+              "correctAnswer": "species"
             },
             {
               "id": "27",
               "content": "",
               "options": [],
-              "correctAnswer": "secluded",
-              "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded)."
+              "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded).",
+              "correctAnswer": "secluded"
             },
             {
               "id": "28",
               "content": "",
               "options": [],
-              "correctAnswer": "decisive",
-              "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical)."
+              "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical).",
+              "correctAnswer": "decisive"
             },
             {
               "id": "29",
               "content": "",
               "options": [],
-              "correctAnswer": "ethical",
-              "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical)."
+              "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical).",
+              "correctAnswer": "ethical"
             },
             {
               "id": "30",
               "content": "",
               "options": [],
-              "correctAnswer": "zoology",
-              "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật."
+              "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật.",
+              "correctAnswer": "zoology"
             },
             {
               "id": "31",
               "content": "",
               "options": [],
-              "correctAnswer": "nurture",
-              "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật."
+              "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật.",
+              "correctAnswer": "nurture"
             },
             {
               "id": "32",
               "content": "",
               "options": [],
-              "correctAnswer": "rural",
-              "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead)."
+              "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead).",
+              "correctAnswer": "rural"
             },
             {
               "id": "33",
               "content": "",
               "options": [],
-              "correctAnswer": "overhead",
-              "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead)."
+              "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead).",
+              "correctAnswer": "overhead"
             },
             {
               "id": "34",
               "content": "",
               "options": [],
-              "correctAnswer": "principle",
-              "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete)."
+              "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete).",
+              "correctAnswer": "principle"
             },
             {
               "id": "35",
               "content": "",
               "options": [],
-              "correctAnswer": "concrete",
-              "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete)."
+              "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete).",
+              "correctAnswer": "concrete"
             }
           ],
           "questionType": "Điền từ"
@@ -369,13 +362,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gilbert and the Lizard</h1>        <p style=\"margin-bottom: 1rem;\">Eliza disliked Australia. Firstly, she'd had to spend twenty uncomfortable hours on an <b>aircraft</b> getting here. She wanted to go to the beach, but her husband was a <b>zoology</b> professor and wanted to look for some interesting animals. So now she was <b>traversing</b> a <b>swamp</b> in the midday heat.</p>    <p style=\"margin-bottom: 1rem;\">\"Let me sit down, Gilbert. I'm not <b>hardy</b> like you,\" she said, eventually.</p>    <p style=\"margin-bottom: 1rem;\">They sat under a tree. There were lots of birds in that <b>secluded</b>, <b>rural</b> place, and they watched them flying <b>overhead</b>.</p>    <p style=\"margin-bottom: 1rem;\">Then suddenly Gilbert saw something on a rock.</p>    <p style=\"margin-bottom: 1rem;\">\"That's strange,\" said Gilbert. \"That looks like a Red Swamp Lizard, but I thought that <b>species</b> was <b>extinct</b>.\" He carefully picked it up. \"Yes, it is! I'm going to take it back to the Zoology <b>Institute</b>. They will be filled with so much <b>jealousy</b> when they see what I have found!\"</p>    <p style=\"margin-bottom: 1rem;\">\"Are you sure we should take it from its home?\" asked Eliza.</p>    <p style=\"margin-bottom: 1rem;\">\"Nonsense, many animals <b>migrate</b>. They're used to changes,\" said Gilbert.</p>    <p style=\"margin-bottom: 1rem;\">\"Hmm, I don't agree with the <b>principle</b> of it,\" said Eliza. \"It isn't <b>ethical</b>.\" But Gilbert was <b>decisive</b> and took the lizard back to the hotel in the city. He thought that this find would make him a highly <b>esteemed</b> <b>celebrity</b> at the Zoology Institute.</p>    <p style=\"margin-bottom: 1rem;\">For the next few days, Gilbert fed and <b>nurtured</b> the lizard. But the lizard wasn't happy. It lost its beautiful red color and began to look ordinary. In fact, Gilbert started to wonder whether it was special at all. He went outside and found a common lizard on a piece of <b>concrete</b>. When he compared them, they looked exactly alike. The lizard was only red in the swamp!</p>    <p style=\"margin-bottom: 1rem;\">Gilbert said to Eliza, \"I'm going to return this lizard to the swamp. I've learned an important lesson. Home is where we are happiest. At home, we are special like the red lizard. We can never be so happy when we are away.\"</p>    <p style=\"margin-bottom: 1rem;\">\"Good,\" said Eliza. \"So, can we go home now?\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gilbert and the Lizard</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Eliza disliked Australia. Firstly, she'd had to spend twenty uncomfortable hours on an <b>aircraft</b> getting here. She wanted to go to the beach, but her husband was a <b>zoology</b> professor and wanted to look for some interesting animals. So now she was <b>traversing</b> a <b>swamp</b> in the midday heat.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Let me sit down, Gilbert. I'm not <b>hardy</b> like you,\" she said, eventually.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They sat under a tree. There were lots of birds in that <b>secluded</b>, <b>rural</b> place, and they watched them flying <b>overhead</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Then suddenly Gilbert saw something on a rock.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"That's strange,\" said Gilbert. \"That looks like a Red Swamp Lizard, but I thought that <b>species</b> was <b>extinct</b>.\" He carefully picked it up. \"Yes, it is! I'm going to take it back to the Zoology <b>Institute</b>. They will be filled with so much <b>jealousy</b> when they see what I have found!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Are you sure we should take it from its home?\" asked Eliza.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Nonsense, many animals <b>migrate</b>. They're used to changes,\" said Gilbert.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Hmm, I don't agree with the <b>principle</b> of it,\" said Eliza. \"It isn't <b>ethical</b>.\" But Gilbert was <b>decisive</b> and took the lizard back to the hotel in the city. He thought that this find would make him a highly <b>esteemed</b> <b>celebrity</b> at the Zoology Institute.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">For the next few days, Gilbert fed and <b>nurtured</b> the lizard. But the lizard wasn't happy. It lost its beautiful red color and began to look ordinary. In fact, Gilbert started to wonder whether it was special at all. He went outside and found a common lizard on a piece of <b>concrete</b>. When he compared them, they looked exactly alike. The lizard was only red in the swamp!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Gilbert said to Eliza, \"I'm going to return this lizard to the swamp. I've learned an important lesson. Home is where we are happiest. At home, we are special like the red lizard. We can never be so happy when we are away.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Good,\" said Eliza. \"So, can we go home now?\"</p></div>",
       "imageUrl": "/unit25_vol4_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "36",
@@ -496,7 +489,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit25_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gilbert và Con Thằn Lằn</h1>        <p style=\"margin-bottom: 1rem;\">Eliza không thích Úc. Trước hết, cô ấy đã phải trải qua hai mươi giờ không thoải mái trên một chiếc <b>máy bay</b> để đến đây. Cô ấy muốn đi đến bãi biển, nhưng chồng cô là một giáo sư <b>động vật học</b> và muốn tìm kiếm một số động vật thú vị. Vì vậy, bây giờ cô đang <b>băng qua</b> một <b>đầm lầy</b> trong cái nóng giữa trưa.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Hãy để em ngồi xuống, Gilbert. Em không <b>cứng cỏi</b> như anh,\" cô ấy nói sau một hồi lâu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ ngồi dưới một gốc cây. Có rất nhiều chim ở nơi <b>nông thôn</b>, <b>hẻo lánh</b> đó, và họ ngắm nhìn chúng bay <b>trên đầu</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đột nhiên Gilbert nhìn thấy thứ gì đó trên một tảng đá.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Thật kỳ lạ,\" Gilbert nói. \"Trông nó giống một con Thằn Lằn Đầm Lầy Đỏ, nhưng anh tưởng <b>loài</b> này đã <b>tuyệt chủng</b> rồi chứ.\" Anh cẩn thận nhặt nó lên. \"Đúng là nó rồi! Anh sẽ mang nó về <b>Viện nghiên cứu</b> Động vật học. Họ sẽ tràn ngập <b>sự ghen tị</b> khi thấy những gì anh đã tìm được!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Anh có chắc là chúng ta nên đưa nó rời khỏi nhà của nó không?\" Eliza hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Vớ vẩn, nhiều loài động vật <b>di cư</b> mà. Chúng đã quen với những sự thay đổi rồi,\" Gilbert nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Hmm, em không đồng ý với <b>nguyên tắc</b> của việc này,\" Eliza nói. \"Nó không <b>hợp đạo đức</b>.\" Nhưng Gilbert rất <b>kiên quyết</b> và mang con thằn lằn về khách sạn trong thành phố. Anh nghĩ rằng khám phá này sẽ khiến anh trở thành một <b>người nổi tiếng</b> <b>được kính trọng</b> cao tại Viện nghiên cứu Động vật học.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong vài ngày tiếp theo, Gilbert cho ăn và <b>nuôi dưỡng</b> con thằn lằn. Nhưng con thằn lằn không hề vui vẻ. Nó đánh mất màu đỏ tuyệt đẹp của mình và bắt đầu trông thật bình thường. Trên thực tế, Gilbert bắt đầu tự hỏi liệu nó có còn đặc biệt hay không. Anh bước ra ngoài và tìm thấy một con thằn lằn bình thường trên một tảng <b>bê tông</b>. Khi anh so sánh chúng, chúng trông hoàn toàn giống nhau. Con thằn lằn này chỉ có màu đỏ khi ở trong đầm lầy!</p>\n\n<p style=\"margin-bottom: 1rem;\">Gilbert nói với Eliza, \"Anh sẽ trả con thằn lằn này về đầm lầy. Anh đã học được một bài học quan trọng. Nhà là nơi chúng ta hạnh phúc nhất. Ở nhà, chúng ta đặc biệt giống như con thằn lằn đỏ. Chúng ta không bao giờ có thể hạnh phúc như vậy khi chúng ta đi xa.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tốt lắm,\" Eliza nói. \"Vậy, bây giờ chúng ta có thể về nhà được chưa?\"</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 25: Volume 4",
+    "category": "exercise",
+    "timeLimit": 0,
+    "description": "4000 Essential English Words - Volume 4"
+  }
 }

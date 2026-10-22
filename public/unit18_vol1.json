@@ -140,7 +140,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">I <u>suggest</u> the oranges. They are delicious!<br/>re [ 11 ]</p><p class=\"mb-4\">Do not <u>disagree</u> with your sister.<br/>ar [ 12 ]</p><p class=\"mb-4\">The company's <u>things that it makes</u> are very useful in the kitchen.<br/>pr [ 13 ]</p><p class=\"mb-4\">We can <u>talk</u> by phone.<br/>co [ 14 ]</p><p class=\"mb-4\">Why don't you <u>present</u> her a fair price for her house?<br/>of [ 15 ]</p>",
+              "content": "<p class=\"mb-4\">I <u>suggest</u> the oranges. They are delicious! (Hint: re...) [ 11 ]</p><p class=\"mb-4\">Do not <u>disagree</u> with your sister. (Hint: ar...) [ 12 ]</p><p class=\"mb-4\">The company's <u>things that it makes</u> are very useful in the kitchen. (Hint: pr...) [ 13 ]</p><p class=\"mb-4\">We can <u>talk</u> by phone. (Hint: co...) [ 14 ]</p><p class=\"mb-4\">Why don't you <u>present</u> her a fair price for her house? (Hint: of...) [ 15 ]</p>",
               "explanation": "recommend (gợi ý) tương đồng với suggest.",
               "correctAnswer": "recommend"
             },
@@ -179,67 +179,67 @@
             {
               "id": "16",
               "content": "Today, my friend [ 16 ] me so nicely. First, he gave me some beautiful [ 17 ] flowers. Next, he asked me to [ 18 ] any CD from the store, and he bought it for me! Later when we got home, he made me close my eyes. When I opened them, I saw a great meal on a pretty [ 19 ]. There was even a vase full of flowers that he had [ 20 ] from earlier that day. I will never forget this wonderful day.",
-              "explanation": "treated: đối xử",
-              "correctAnswer": "treated",
               "options": [
                 "select",
                 "treated",
                 "dish",
                 "fresh",
                 "gathered"
-              ]
+              ],
+              "explanation": "treated: đối xử",
+              "correctAnswer": "treated"
             },
             {
               "id": "17",
               "content": "",
-              "explanation": "fresh: tươi",
-              "correctAnswer": "fresh",
               "options": [
                 "select",
                 "treated",
                 "dish",
                 "fresh",
                 "gathered"
-              ]
+              ],
+              "explanation": "fresh: tươi",
+              "correctAnswer": "fresh"
             },
             {
               "id": "18",
               "content": "",
-              "explanation": "select: chọn lựa",
-              "correctAnswer": "select",
               "options": [
                 "select",
                 "treated",
                 "dish",
                 "fresh",
                 "gathered"
-              ]
+              ],
+              "explanation": "select: chọn lựa",
+              "correctAnswer": "select"
             },
             {
               "id": "19",
               "content": "",
-              "explanation": "dish: cái đĩa",
-              "correctAnswer": "dish",
               "options": [
                 "select",
                 "treated",
                 "dish",
                 "fresh",
                 "gathered"
-              ]
+              ],
+              "explanation": "dish: cái đĩa",
+              "correctAnswer": "dish"
             },
             {
               "id": "20",
               "content": "",
-              "explanation": "gathered: thu thập, hái",
-              "correctAnswer": "gathered",
               "options": [
                 "select",
                 "treated",
                 "dish",
                 "fresh",
                 "gathered"
-              ]
+              ],
+              "explanation": "gathered: thu thập, hái",
+              "correctAnswer": "gathered"
             }
           ],
           "questionType": "Kéo thả"
@@ -249,7 +249,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Little Red Chicken</h1>        <p style=\"margin-bottom: 1rem;\">A little red chicken had a store in a small town. She sold many different <b>items</b> to people in the town. The people loved her <b>products</b>.</p>    <p style=\"margin-bottom: 1rem;\">One day, a cat came to her <b>property</b>. He saw the sign that <b>indicated</b> where the chicken's store was located. He wanted to <b>purchase</b> bread, but the chicken's store was almost <b>empty</b>. She had only a bag of wheat.*</p>    <p style=\"margin-bottom: 1rem;\">\"You can use the wheat to make bread,\" the chicken said.</p>    <p style=\"margin-bottom: 1rem;\">\"No, I don't want to work,\" the cat said. \"I just want to buy bread.\" The cat became angry and left the store.</p>    <p style=\"margin-bottom: 1rem;\">Later, the little red chicken saw the cat in a <b>crowd</b>.</p>    <p style=\"margin-bottom: 1rem;\">\"I will help you make the bread,\" she said.</p>    <p style=\"margin-bottom: 1rem;\">But the cat <b>treated</b> her badly. He did not even <b>communicate</b> with her. He did not want to do any work.</p>    <p style=\"margin-bottom: 1rem;\">So the chicken decided to make the bread. She <b>selected</b> the <b>exact</b> amount of wheat to make <b>fresh</b> bread. She used a stone to pound the wheat to get it ready. Soon, her bread was ready.</p>    <p style=\"margin-bottom: 1rem;\">The cat came and saw the bread on a <b>dish</b>.</p>    <p style=\"margin-bottom: 1rem;\">\"Give me some of your bread,\" he said.</p>    <p style=\"margin-bottom: 1rem;\">\"No,\" said the little red chicken. \"You did not help me make the bread. So you shall not have any to eat.\"</p>    <p style=\"margin-bottom: 1rem;\">The cat <b>argued</b> with the chicken. He tried to <b>offer</b> a <b>price</b> for it. But the little red chicken did not want to sell her bread.</p>    <p style=\"margin-bottom: 1rem;\">\"Don't <b>depend</b> on others to do work for you,\" said the little red chicken.</p>    <p style=\"margin-bottom: 1rem;\">\"Then how will I get bread?\" the cat asked.</p>    <p style=\"margin-bottom: 1rem;\">\"I <b>recommend</b> doing some work,\" said the little red chicken. \"Use a <b>tool</b> to plant your own wheat. When it grows big, you can <b>gather</b> it and make your own bread. You need to learn to do work for what you want.\"</p>    <p style=\"margin-bottom: 1rem;\">*wheat - a type of plant used to make bread</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Little Red Chicken</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A little red chicken had a store in a small town. She sold many different <b>items</b> to people in the town. The people loved her <b>products</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, a cat came to her <b>property</b>. He saw the sign that <b>indicated</b> where the chicken's store was located. He wanted to <b>purchase</b> bread, but the chicken's store was almost <b>empty</b>. She had only a bag of wheat.*</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"You can use the wheat to make bread,\" the chicken said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"No, I don't want to work,\" the cat said. \"I just want to buy bread.\" The cat became angry and left the store.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Later, the little red chicken saw the cat in a <b>crowd</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I will help you make the bread,\" she said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But the cat <b>treated</b> her badly. He did not even <b>communicate</b> with her. He did not want to do any work.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">So the chicken decided to make the bread. She <b>selected</b> the <b>exact</b> amount of wheat to make <b>fresh</b> bread. She used a stone to pound the wheat to get it ready. Soon, her bread was ready.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The cat came and saw the bread on a <b>dish</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Give me some of your bread,\" he said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"No,\" said the little red chicken. \"You did not help me make the bread. So you shall not have any to eat.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The cat <b>argued</b> with the chicken. He tried to <b>offer</b> a <b>price</b> for it. But the little red chicken did not want to sell her bread.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Don't <b>depend</b> on others to do work for you,\" said the little red chicken.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Then how will I get bread?\" the cat asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"I <b>recommend</b> doing some work,\" said the little red chicken. \"Use a <b>tool</b> to plant your own wheat. When it grows big, you can <b>gather</b> it and make your own bread. You need to learn to do work for what you want.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">*wheat - a type of plant used to make bread</p></div>",
       "imageUrl": "/unit18_story.png",
       "sections": [
         {
@@ -320,7 +320,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">    <img src=\"/unit18_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cô Gà Mái Đỏ Nhỏ Bé</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một cô gà mái đỏ nhỏ bé mở một cửa hàng ở một thị trấn nhỏ. Cô ấy bán rất nhiều <b>mặt hàng</b> khác nhau cho người dân trong thị trấn. Mọi người đều rất yêu thích những <b>sản phẩm</b> của cô.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, một con mèo tìm đến <b>tài sản</b> của cô. Hắn nhìn thấy tấm biển <b>chỉ dẫn</b> nơi cửa hàng của cô gà mái tọa lạc. Hắn muốn <b>mua</b> bánh mì, nhưng cửa hàng của cô gà mái đã gần như <b>trống rỗng</b>. Cô ấy chỉ còn lại một bao lúa mì.*</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Anh có thể dùng lúa mì này để làm bánh mì,\" cô gà mái nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Không, tôi không muốn làm việc,\" con mèo nói. \"Tôi chỉ muốn mua bánh mì.\" Con mèo trở nên tức giận và rời khỏi cửa hàng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một lúc sau, cô gà mái đỏ nhỏ bé nhìn thấy con mèo đang ở trong một <b>đám đông</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi sẽ giúp anh làm bánh mì,\" cô nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng con mèo lại <b>đối xử</b> với cô thật tồi tệ. Hắn thậm chí không thèm <b>giao tiếp</b> với cô. Hắn không muốn làm bất cứ công việc nào cả.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vì vậy, cô gà mái quyết định tự làm bánh mì. Cô <b>đã chọn lựa</b> một lượng <b>chính xác</b> lúa mì để làm bánh mì <b>tươi</b>. Cô dùng một tảng đá để giã lúa mì cho sẵn sàng. Chẳng mấy chốc, ổ bánh mì của cô đã hoàn thành.</p>\n\n<p style=\"margin-bottom: 1rem;\">Con mèo đi tới và nhìn thấy ổ bánh mì được đặt trên một cái <b>đĩa</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Cho tôi một ít bánh mì của cô đi,\" hắn nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Không,\" cô gà mái đỏ nhỏ bé đáp. \"Anh đã không giúp tôi làm bánh mì. Vì vậy, anh sẽ không có chút nào để ăn đâu.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Con mèo <b>cãi lý</b> với cô gà mái. Hắn cố gắng <b>đề nghị</b> một <b>mức giá</b> cho ổ bánh. Nhưng cô gà mái đỏ nhỏ bé không muốn bán bánh mì của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đừng <b>dựa dẫm</b> vào người khác để họ làm việc thay cho anh,\" cô gà mái đỏ nhỏ bé nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Vậy thì làm thế nào để tôi có bánh mì?\" con mèo hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Tôi <b>khuyên</b> anh nên làm một số việc đi,\" cô gà mái đỏ nhỏ bé nói. \"Hãy dùng <b>công cụ</b> để tự trồng lúa mì cho chính mình. Khi nó lớn lên, anh có thể <b>thu hoạch</b> nó và tự làm bánh mì. Anh cần phải học cách làm việc để có được những thứ mình muốn.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">*lúa mì - một loại cây trồng được sử dụng để làm bánh mì</p></div>\n</div>"
     }
   ],
   "basicInfo": {

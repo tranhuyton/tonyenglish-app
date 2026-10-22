@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 3: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -483,12 +477,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dressed to Excess</h1>        <p style=\"margin-bottom: 1rem;\">If you traveled back in time to the 1700s in Europe, you would laugh when you saw how the <b>aristocracy</b> dressed. Soon you’d realize, though, that the <b>aristocrats</b> of Europe were very serious about their appearance.</p>    <p style=\"margin-bottom: 1rem;\">The <b>predominant</b> style in women’s <b>attire</b> was enormous dresses. They were often three times larger than the wearer. Ladies even used <b>pads</b> to <b>enlarge</b> the appearance of their hips and shoulders. On the other extreme, the aristocratic women made their waists appear extremely thin. It took several maids stretching fabric and pulling <b>straps</b> in order to get a lady’s waist to the proper thinness. These ladies could barely breathe and often fainted.</p>    <p style=\"margin-bottom: 1rem;\">Pale skin was also a <b>craze</b>, yet this too was done in <b>excess</b>. One could not simply be pale. Instead, she needed to look as if she had <b>anemia</b>. In order to look paler, ladies actually cut themselves daily, so they would bleed.</p>    <p style=\"margin-bottom: 1rem;\">The hairstyles, however, were the <b>hallmark</b> of women’s fashion. These stood a meter high on the ladies’ heads. The columns of hair were a ridiculous <b>tangle</b> of wigs, jewels, flowers, and even stuffed birds.</p>    <p style=\"margin-bottom: 1rem;\">Men’s fashion was similarly <b>absurd</b>. Today it would probably seem very <b>feminine</b>. <b>Reputable</b> men wore wigs of long curly hair. Their shoes had large soles or high heels so that they could walk high above the filth on the streets. Furthermore, just like the ladies, the men wore lipstick and put <b>rouge</b> on their cheeks.</p>    <p style=\"margin-bottom: 1rem;\">Their clothes were brightly colored, often purple and pink. They were made from the finest of fabrics and decorated with jewels and lace. The men <b>vied</b> with one another to see who wore the more expensive clothes, for the clothing <b>signified</b> his wealth and status.</p>    <p style=\"margin-bottom: 1rem;\">Both men and women spent huge amounts of money and time on how they looked. Though such <b>vanity</b> would seem <b>vulgar</b> today, three hundred years from now, the fashions of our time might also seem completely ridiculous.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dressed to Excess</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">If you traveled back in time to the 1700s in Europe, you would laugh when you saw how the <b>aristocracy</b> dressed. Soon you’d realize, though, that the <b>aristocrats</b> of Europe were very serious about their appearance.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <b>predominant</b> style in women’s <b>attire</b> was enormous dresses. They were often three times larger than the wearer. Ladies even used <b>pads</b> to <b>enlarge</b> the appearance of their hips and shoulders. On the other extreme, the aristocratic women made their waists appear extremely thin. It took several maids stretching fabric and pulling <b>straps</b> in order to get a lady’s waist to the proper thinness. These ladies could barely breathe and often fainted.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Pale skin was also a <b>craze</b>, yet this too was done in <b>excess</b>. One could not simply be pale. Instead, she needed to look as if she had <b>anemia</b>. In order to look paler, ladies actually cut themselves daily, so they would bleed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The hairstyles, however, were the <b>hallmark</b> of women’s fashion. These stood a meter high on the ladies’ heads. The columns of hair were a ridiculous <b>tangle</b> of wigs, jewels, flowers, and even stuffed birds.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Men’s fashion was similarly <b>absurd</b>. Today it would probably seem very <b>feminine</b>. <b>Reputable</b> men wore wigs of long curly hair. Their shoes had large soles or high heels so that they could walk high above the filth on the streets. Furthermore, just like the ladies, the men wore lipstick and put <b>rouge</b> on their cheeks.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Their clothes were brightly colored, often purple and pink. They were made from the finest of fabrics and decorated with jewels and lace. The men <b>vied</b> with one another to see who wore the more expensive clothes, for the clothing <b>signified</b> his wealth and status.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Both men and women spent huge amounts of money and time on how they looked. Though such <b>vanity</b> would seem <b>vulgar</b> today, three hundred years from now, the fashions of our time might also seem completely ridiculous.</p></div>",
       "imageUrl": "/unit3_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -553,13 +547,13 @@
               "id": "41",
               "content": "What was the predominant style in women’s attire?",
               "options": [
-                "Enormous dresses.",
                 "Bright red socks.",
                 "Short skirts.",
-                "Large coats."
+                "Large coats.",
+                "Enormous dresses."
               ],
               "explanation": "Đáp án đúng là A . Ngay câu đầu của đoạn 2 đã trả lời trực tiếp câu hỏi này: 'The predominant style in women’s attire was enormous dresses.' (Phong cách nổi bật trong trang phục của phụ nữ là những chiếc váy khổng lồ). Dễ quá phải không nào!",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "42",
@@ -577,42 +571,50 @@
               "id": "43",
               "content": "What craze was done in such excess that women had to look like they had anemia?",
               "options": [
-                "Pale skin.",
                 "Red cheeks.",
+                "Pale skin.",
                 "High heels.",
                 "Large wigs."
               ],
               "explanation": "Đáp án đúng là A . Bạn xem đầu đoạn 3 nhé: 'Pale skin was also a craze, yet this too was done in excess. One could not simply be pale. Instead, she needed to look as if she had anemia.' (Làn da nhợt nhạt cũng là một cơn sốt, nhưng điều này cũng được làm quá mức. Người ta không thể chỉ đơn giản là nhợt nhạt. Thay vào đó, cô ấy cần phải trông giống như bị thiếu máu). Từ đó suy ra trào lưu đó chính là 'Pale skin' (làn da nhợt nhạt).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "44",
               "content": "What was the hallmark of women’s fashion?",
               "options": [
-                "Hairstyles.",
                 "Shoes.",
                 "Dresses.",
+                "Hairstyles.",
                 "Jewels."
               ],
               "explanation": "Đáp án đúng là A nhé. Đầu đoạn 4 có một câu khẳng định rất rõ: 'The hairstyles, however, were the hallmark of women’s fashion.' (Tuy nhiên, các kiểu tóc mới là dấu ấn/đặc điểm nổi bật của thời trang nữ giới). Vì thế chọn A là chuẩn nhất !",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "45",
               "content": "When reputable men vied with each other, what were they trying to see?",
               "options": [
-                "Who wore the more expensive clothes.",
                 "Who was the strongest.",
                 "Who had the tallest hair.",
-                "Who had the best shoes."
+                "Who had the best shoes.",
+                "Who wore the more expensive clothes."
               ],
               "explanation": "Đáp án đúng là A . Câu cuối của đoạn 6 có nhắc đến cuộc đua của các quý ông: 'The men vied with one another to see who wore the more expensive clothes...' (Những người đàn ông ganh đua với nhau xem ai mặc bộ quần áo đắt tiền hơn...). Đáp án A mô tả y hệt thông tin này luôn!",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit3_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Mặc Đồ Quá Mức</h1>\n\n<p style=\"margin-bottom: 1rem;\">Nếu bạn du hành ngược thời gian về những năm 1700 ở châu Âu, bạn sẽ bật cười khi thấy cách <b>giới quý tộc</b> ăn mặc. Tuy nhiên, bạn sẽ sớm nhận ra rằng <b>những người thuộc tầng lớp quý tộc</b> ở châu Âu rất coi trọng vẻ bề ngoài của họ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Kiểu dáng <b>thịnh hành</b> trong <b>trang phục</b> của phụ nữ là những chiếc váy khổng lồ. Chúng thường lớn gấp ba lần so với người mặc. Các quý cô thậm chí còn sử dụng <b>miếng độn</b> để <b>làm to</b> phần hông và vai của mình. Ở một thái cực khác, những người phụ nữ quý tộc lại làm cho vòng eo của họ trông cực kỳ nhỏ nhắn. Phải cần đến vài người hầu gái kéo giãn vải và kéo <b>dây thắt</b> để giúp quý cô có được vòng eo thon gọn thích hợp. Những quý cô này hầu như không thể thở được và thường xuyên ngất xỉu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Làn da nhợt nhạt cũng là một <b>trào lưu</b>, nhưng điều này cũng được thực hiện ở mức <b>thái quá</b>. Một người không thể chỉ đơn giản là có làn da nhợt nhạt. Thay vào đó, cô ấy cần phải trông như thể mình bị mắc bệnh <b>thiếu máu</b>. Để trông nhợt nhạt hơn, các quý cô thực sự đã tự rạch da mỗi ngày để làm chảy máu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, kiểu tóc lại là <b>điểm nhấn</b> trong thời trang của phụ nữ. Những kiểu tóc này cao tới một mét trên đầu các quý cô. Các cột tóc là một mớ <b>hỗn độn</b> lố bịch bao gồm tóc giả, đồ trang sức, hoa và thậm chí cả những con chim nhồi bông.</p>\n\n<p style=\"margin-bottom: 1rem;\">Thời trang của nam giới cũng <b>ngớ ngẩn</b> không kém. Ngày nay, nó có lẽ sẽ trông rất <b>nữ tính</b>. Những người đàn ông <b>có danh tiếng</b> đội những bộ tóc giả dài và xoăn. Đôi giày của họ có đế lớn hoặc gót cao để họ có thể bước cao hơn những thứ rác rưởi bẩn thỉu trên đường phố. Hơn nữa, giống như các quý cô, những người đàn ông cũng tô son và thoa <b>phấn hồng</b> lên má.</p>\n\n<p style=\"margin-bottom: 1rem;\">Quần áo của họ có màu sắc sặc sỡ, thường là màu tím và hồng. Chúng được làm từ những loại vải <b>hảo hạng</b> nhất và được trang trí bằng đồ trang sức cùng ren. Các quý ông <b>cạnh tranh</b> với nhau xem ai mặc bộ quần áo đắt tiền hơn, bởi vì quần áo <b>biểu thị</b> sự giàu có và địa vị của họ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cả nam giới và nữ giới đều dành một lượng lớn tiền bạc và thời gian cho vẻ bề ngoài của mình. Mặc dù <b>thói hư vinh</b> như vậy dường như rất <b>thô tục</b> ở thời nay, nhưng ba trăm năm nữa kể từ bây giờ, phong cách thời trang trong thời đại của chúng ta có lẽ cũng sẽ trở nên hoàn toàn lố bịch.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

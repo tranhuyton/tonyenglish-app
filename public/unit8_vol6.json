@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 8: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -408,12 +402,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Watch Out!</h1>        <p style=\"margin-bottom: 1rem;\">Kevin stepped off the <b>tram</b> and walked toward the ship, holding a package tightly in his hands. He had been hired as a <b>courier</b> for an important broker. All he needed to do was deliver a package to an office in New York City; the ship would take him there.</p>    <p style=\"margin-bottom: 1rem;\">When he boarded, the ship was <b>congested</b> with people. As Kevin walked to his cabin, he saw the <b>exclusive</b> first-class section. Everybody inside was wearing fancy <b>garments</b>. He would have liked to <b>socialize</b> with the people inside, but it was against proper <b>etiquette</b>. People paid a <b>premium</b> for the <b>privilege</b> to ride in first-class.</p>    <p style=\"margin-bottom: 1rem;\">Instead, he went to his cabin next to the <b>freight</b> section of the boat. His room smelled bad, and the floorboards were <b>warped</b> and <b>deformed</b> in some areas. He could also hear the motor humming as it waited to <b>propel</b> the ship forward. Suddenly, Kevin was <b>unsettled</b> by something, but he wasn’t sure why.</p>    <p style=\"margin-bottom: 1rem;\">He took a short walk on the ship’s deck, but he still felt strange. That night, he suffered from <b>insomnia</b>—he couldn’t <b>suppress</b> his <b>obsessing</b> over how strange he felt.</p>    <p style=\"margin-bottom: 1rem;\">Kevin went back on deck. It was cold and dark outside. He looked <b>overboard</b>, but it seemed that everything was all right. “Just go back inside,” he thought. Then Kevin saw it. A giant iceberg was sticking out of the ocean in the distance!</p>    <p style=\"margin-bottom: 1rem;\">“Help!” he yelled.</p>    <p style=\"margin-bottom: 1rem;\">People looked at him as if he was crazy, but he continued to shout until he saw the captain.</p>    <p style=\"margin-bottom: 1rem;\">“There’s an iceberg out there,” Kevin said to him. “If the ship doesn’t move, we’re <b>liable</b> to crash,” he said, pointing toward the iceberg.</p>    <p style=\"margin-bottom: 1rem;\">The captain saw it and immediately instructed the crew to change the ship’s direction. “Without your help, we would have definitely hit the iceberg. That would have been a terrible disaster!” he said to Kevin.</p>    <p style=\"margin-bottom: 1rem;\">Kevin felt relieved. Now he knew to always trust his <b>intuitive</b> sense.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Watch Out!</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Kevin stepped off the <b>tram</b> and walked toward the ship, holding a package tightly in his hands. He had been hired as a <b>courier</b> for an important broker. All he needed to do was deliver a package to an office in New York City; the ship would take him there.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When he boarded, the ship was <b>congested</b> with people. As Kevin walked to his cabin, he saw the <b>exclusive</b> first-class section. Everybody inside was wearing fancy <b>garments</b>. He would have liked to <b>socialize</b> with the people inside, but it was against proper <b>etiquette</b>. People paid a <b>premium</b> for the <b>privilege</b> to ride in first-class.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Instead, he went to his cabin next to the <b>freight</b> section of the boat. His room smelled bad, and the floorboards were <b>warped</b> and <b>deformed</b> in some areas. He could also hear the motor humming as it waited to <b>propel</b> the ship forward. Suddenly, Kevin was <b>unsettled</b> by something, but he wasn’t sure why.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He took a short walk on the ship’s deck, but he still felt strange. That night, he suffered from <b>insomnia</b>—he couldn’t <b>suppress</b> his <b>obsessing</b> over how strange he felt.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Kevin went back on deck. It was cold and dark outside. He looked <b>overboard</b>, but it seemed that everything was all right. “Just go back inside,” he thought. Then Kevin saw it. A giant iceberg was sticking out of the ocean in the distance!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Help!” he yelled.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">People looked at him as if he was crazy, but he continued to shout until he saw the captain.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“There’s an iceberg out there,” Kevin said to him. “If the ship doesn’t move, we’re <b>liable</b> to crash,” he said, pointing toward the iceberg.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The captain saw it and immediately instructed the crew to change the ship’s direction. “Without your help, we would have definitely hit the iceberg. That would have been a terrible disaster!” he said to Kevin.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Kevin felt relieved. Now he knew to always trust his <b>intuitive</b> sense.</p></div>",
       "imageUrl": "/unit8_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -490,37 +484,37 @@
               "id": "37",
               "content": "While he was on the ship, what could Kevin hear humming?",
               "options": [
-                "Kevin could hear the humming of the motors as he was on the ship.",
                 "He heard people socializing.",
+                "Kevin could hear the humming of the motors as he was on the ship.",
                 "He heard an iceberg.",
                 "He heard the tram."
               ],
               "explanation": "Đáp án đúng là A. Trong đoạn ba, bài đọc có đề cập: \"He could also hear the motor humming as it waited to propel the ship forward\" (Anh cũng có thể nghe thấy tiếng động cơ rầm rì khi nó chờ để đẩy con tàu tiến về phía trước).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "38",
               "content": "What did Kevin see when he looked overboard the first time?",
               "options": [
-                "Kevin didn’t see anything when he looked overboard the first time.",
                 "He saw an iceberg.",
                 "He saw another ship.",
+                "Kevin didn’t see anything when he looked overboard the first time.",
                 "He saw a fish."
               ],
               "explanation": "Đáp án đúng là A. Ở đoạn năm, khi Kevin nhìn ra ngoài lần đầu, bài viết miêu tả: \"He looked overboard, but it seemed that everything was all right\" (Anh nhìn xuống mạn tàu, nhưng có vẻ như mọi thứ đều ổn), tức là anh không thấy điều gì bất thường cả.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "39",
               "content": "What did the captain do when he heard the news about the iceberg?",
               "options": [
-                "The captain instructed the crew to change the ship’s direction.",
                 "He ignored Kevin.",
                 "He fell overboard.",
-                "He paid a premium."
+                "He paid a premium.",
+                "The captain instructed the crew to change the ship’s direction."
               ],
               "explanation": "Đáp án đúng là A. Ngay khi nghe tin, theo đoạn chín: \"The captain saw it and immediately instructed the crew to change the ship’s direction\" (Thuyền trưởng đã nhìn thấy tảng băng và ngay lập tức chỉ thị cho thủy thủ đoàn thay đổi hướng đi của con tàu).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "40",
@@ -537,7 +531,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit8_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Coi chừng!</h1>\n\n<p style=\"margin-bottom: 1rem;\">Kevin bước xuống khỏi <b>xe điện</b> và đi về phía con tàu, hai tay ôm chặt một gói hàng. Anh đã được thuê làm <b>người đưa thư</b> cho một người môi giới quan trọng. Tất cả những gì anh cần làm là giao một gói hàng đến một văn phòng ở thành phố New York; con tàu sẽ đưa anh đến đó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi anh lên tàu, con tàu đã <b>tắc nghẽn</b> với đông đảo người. Khi Kevin đi về phía khoang của mình, anh nhìn thấy khu vực hạng nhất <b>dành riêng</b>. Mọi người bên trong đều mặc những <b>bộ trang phục</b> sang trọng. Anh rất muốn <b>giao lưu</b> với những người bên trong, nhưng điều đó trái với <b>phép xã giao</b> đúng mực. Mọi người đã phải trả một khoản <b>phí cao</b> cho <b>đặc quyền</b> đi ở khoang hạng nhất.</p>\n\n<p style=\"margin-bottom: 1rem;\">Thay vào đó, anh đi đến khoang của mình nằm cạnh khu vực <b>chở hàng hóa</b> của con tàu. Phòng của anh có mùi rất khó chịu, và ván sàn bị <b>cong vênh</b> và <b>biến dạng</b> ở một số chỗ. Anh cũng có thể nghe thấy tiếng động cơ gầm gừ khi nó chờ để <b>đẩy</b> con tàu tiến về phía trước. Đột nhiên, Kevin cảm thấy <b>bất an</b> về điều gì đó, nhưng anh không chắc tại sao.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh đi dạo một lát trên boong tàu, nhưng vẫn cảm thấy kỳ lạ. Đêm đó, anh bị chứng <b>mất ngủ</b>—anh không thể <b>kìm nén</b> <b>sự ám ảnh</b> của mình về cảm giác kỳ lạ đó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Kevin quay lại boong tàu. Bên ngoài trời lạnh và tối. Anh nhìn <b>qua mạn tàu</b>, nhưng có vẻ như mọi thứ đều ổn. \"Cứ vào trong đi,\" anh nghĩ. Rồi Kevin nhìn thấy nó. Một tảng băng trôi khổng lồ đang nhô lên khỏi đại dương ở phía xa!</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Cứu với!\" anh hét lên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mọi người nhìn anh như thể anh bị điên, nhưng anh vẫn tiếp tục hét cho đến khi nhìn thấy thuyền trưởng.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Có một tảng băng trôi ngoài kia,\" Kevin nói với ông ấy. \"Nếu con tàu không di chuyển, chúng ta <b>có khả năng</b> sẽ đâm vào nó,\" anh nói và chỉ về phía tảng băng trôi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Thuyền trưởng đã nhìn thấy nó và ngay lập tức chỉ thị cho thủy thủ đoàn thay đổi hướng của con tàu. \"Nếu không có sự giúp đỡ của cậu, chúng ta chắc chắn đã đâm vào tảng băng trôi rồi. Đó sẽ là một thảm họa tồi tệ!\" ông nói với Kevin.</p>\n\n<p style=\"margin-bottom: 1rem;\">Kevin cảm thấy nhẹ nhõm. Bây giờ anh đã biết luôn luôn tin vào giác quan <b>trực giác</b> của mình.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 8: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

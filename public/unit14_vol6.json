@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 14: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -102,12 +96,11 @@
               "options": [
                 "bright",
                 "runny",
-                "colorful",
                 "broken",
                 "small"
               ],
               "explanation": "Substantial means of great size or value. The opposite is small.",
-              "correctAnswer": "E"
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -261,12 +254,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Coward’s Lesson</h1>        <p style=\"margin-bottom: 1rem;\">Tom was easily frightened. He <b>enlisted</b> in the army because he thought the military would teach him courage. And though he needed courage, he never imagined how he would learn it.</p>    <p style=\"margin-bottom: 1rem;\">During a march across a <b>tract</b> of wilderness near his country’s <b>frontier</b>, Tom <b>strayed</b> from his squad. He had stopped to gaze at a <b>splendid</b> view of a <b>lush</b> valley. When he turned around, his squad was gone. He searched for them, but because their <b>outfits</b> had <b>camouflage</b>, he couldn’t find them.</p>    <p style=\"margin-bottom: 1rem;\">It was getting dark, and Tom grew <b>weary</b>. All he had was a knife, a boomerang, and his <b>handbook</b>. He made a camp for the night. It was cold, and the ground was hard. He wished he had his <b>cot</b> and a blanket. Instead, he made a fire, wrapped himself tightly in his jacket, and fell asleep.</p>    <p style=\"margin-bottom: 1rem;\">A loud noise roused him from his sleep. “What was that?” he wondered.</p>    <p style=\"margin-bottom: 1rem;\">Then he noticed it. An animal of <b>substantial</b> size had left a print from its <b>paw</b> in the dirt. He sat closer to the fire and looked into the darkness. He imagined a large beast jumping from the gloom and attacking him. He shook so much from fear that it felt like the <b>marrow</b> in his bones <b>quivered</b>.</p>    <p style=\"margin-bottom: 1rem;\">Tom <b>contemplated</b> many different plans. He was <b>hesitant</b> to act. He decided to stay by the fire, but during his <b>vigil</b>, he heard more noises.</p>    <p style=\"margin-bottom: 1rem;\">He couldn’t <b>contend</b> with his fear any longer. He knew what he had to do. He made a <b>torch</b> and followed the prints. He heard a twig snap very close ahead, but he bravely went on. Seconds later, he discovered what had scared him. It was only a kangaroo.</p>    <p style=\"margin-bottom: 1rem;\">Tom went back to his camp and slept. In the morning, he found his squad. He had finally learned courage. He learned that he had to confront his fear in order to conquer it.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Coward’s Lesson</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tom was easily frightened. He <b>enlisted</b> in the army because he thought the military would teach him courage. And though he needed courage, he never imagined how he would learn it.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">During a march across a <b>tract</b> of wilderness near his country’s <b>frontier</b>, Tom <b>strayed</b> from his squad. He had stopped to gaze at a <b>splendid</b> view of a <b>lush</b> valley. When he turned around, his squad was gone. He searched for them, but because their <b>outfits</b> had <b>camouflage</b>, he couldn’t find them.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It was getting dark, and Tom grew <b>weary</b>. All he had was a knife, a boomerang, and his <b>handbook</b>. He made a camp for the night. It was cold, and the ground was hard. He wished he had his <b>cot</b> and a blanket. Instead, he made a fire, wrapped himself tightly in his jacket, and fell asleep.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A loud noise roused him from his sleep. “What was that?” he wondered.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Then he noticed it. An animal of <b>substantial</b> size had left a print from its <b>paw</b> in the dirt. He sat closer to the fire and looked into the darkness. He imagined a large beast jumping from the gloom and attacking him. He shook so much from fear that it felt like the <b>marrow</b> in his bones <b>quivered</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tom <b>contemplated</b> many different plans. He was <b>hesitant</b> to act. He decided to stay by the fire, but during his <b>vigil</b>, he heard more noises.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He couldn’t <b>contend</b> with his fear any longer. He knew what he had to do. He made a <b>torch</b> and followed the prints. He heard a twig snap very close ahead, but he bravely went on. Seconds later, he discovered what had scared him. It was only a kangaroo.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tom went back to his camp and slept. In the morning, he found his squad. He had finally learned courage. He learned that he had to confront his fear in order to conquer it.</p></div>",
       "imageUrl": "/unit14_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -331,25 +324,25 @@
               "id": "26",
               "content": "Why did Tom enlist in the military?",
               "options": [
-                "He thought the military would teach him courage.",
                 "He wanted to fight in a war.",
                 "He needed a job.",
+                "He thought the military would teach him courage.",
                 "He liked wearing camouflage."
               ],
               "explanation": "Dịch câu hỏi: Tại sao Tom nhập ngũ?\nGiải thích: Chọn A.\nĐoạn 1 có ghi: \"He enlisted in the army because he thought the military would teach him courage.\" (Anh ấy đã nhập ngũ vì anh ấy nghĩ rằng quân đội sẽ dạy cho anh ấy sự can đảm). Vậy lý do là anh ấy muốn học được sự can đảm nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "27",
               "content": "What roused Tom from his sleep?",
               "options": [
-                "A loud noise.",
                 "A bright light.",
                 "A large beast.",
-                "A soldier calling his name."
+                "A soldier calling his name.",
+                "A loud noise."
               ],
               "explanation": "Dịch câu hỏi: Điều gì đã đánh thức Tom khỏi giấc ngủ?\nGiải thích: Chọn A.\nĐoạn 4 nói rất rõ: \"A loud noise roused him from his sleep.\" (Một tiếng động lớn đã đánh thức anh ấy khỏi giấc ngủ). Do đó tiếng động lớn (A loud noise) là đáp án đúng!",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "28",
@@ -367,30 +360,38 @@
               "id": "29",
               "content": "Though he contemplated many plans, he was hesitant to act. What did he finally decide to do?",
               "options": [
-                "He decided to stay by the fire.",
                 "He ran away.",
+                "He decided to stay by the fire.",
                 "He fought the beast.",
                 "He called for help."
               ],
               "explanation": "Dịch câu hỏi: Dù đã suy tính nhiều kế hoạch nhưng anh vẫn do dự không hành động. Cuối cùng anh ấy quyết định làm gì?\nGiải thích: Chọn A.\nTrong đoạn 6, bài đọc cho biết: \"Tom contemplated many different plans. He was hesitant to act. He decided to stay by the fire...\" (Tom đã suy tính nhiều kế hoạch khác nhau. Anh ấy ngần ngại hành động. Cuối cùng anh ấy quyết định ở lại bên đống lửa...). Vậy nên anh ấy đã chọn ở lại bên đống lửa.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
               "content": "During his vigil, what could Tom not contend with any longer?",
               "options": [
-                "His fear.",
                 "The cold.",
                 "His hunger.",
+                "His fear.",
                 "His squad."
               ],
               "explanation": "Dịch câu hỏi: Trong suốt thời gian thức canh, Tom không thể chống chọi thêm với điều gì nữa?\nGiải thích: Chọn A.\nỞ đầu đoạn 7 có viết: \"He couldn’t contend with his fear any longer. He knew what he had to do.\" (Anh ấy không thể chống chọi với nỗi sợ hãi của mình thêm được nữa. Anh ấy biết mình phải làm gì). Suy ra điều anh ấy không thể chịu đựng thêm là nỗi sợ hãi (his fear).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n<img src=\"/unit14_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bài học của kẻ hèn nhát</h1>\n\n<p style=\"margin-bottom: 1rem;\">Tom rất dễ bị hoảng sợ. Anh đã <b>nhập ngũ</b> vào quân đội vì anh nghĩ rằng quân đội sẽ dạy cho anh sự can đảm. Và mặc dù anh cần lòng can đảm, anh chưa bao giờ tưởng tượng ra cách anh sẽ học được nó như thế nào.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong một cuộc hành quân qua một <b>vùng đất</b> hoang vu gần <b>biên giới</b> đất nước mình, Tom đã <b>đi lạc</b> khỏi tiểu đội của mình. Anh đã dừng lại để ngắm nhìn một khung cảnh <b>tuyệt đẹp</b> của một thung lũng <b>tươi tốt</b>. Khi anh quay lại, tiểu đội của anh đã biến mất. Anh đã tìm kiếm họ, nhưng bởi vì <b>trang phục</b> của họ có <b>nguỵ trang</b>, anh không thể tìm thấy họ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trời bắt đầu tối, và Tom trở nên <b>mệt mỏi</b>. Tất cả những gì anh có là một con dao, một chiếc boomerang và <b>sổ tay</b> của mình. Anh đã cắm trại để qua đêm. Trời rất lạnh, và mặt đất thì cứng. Anh ước gì mình có <b>giường gấp</b> và một cái chăn. Thay vào đó, anh đã đốt lửa, quấn mình thật chặt trong chiếc áo khoác và chìm vào giấc ngủ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một tiếng ồn lớn đã đánh thức anh khỏi giấc ngủ. \"Đó là tiếng gì vậy?\" anh tự hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó anh nhận ra nó. Một con vật có kích thước <b>đáng kể</b> đã để lại một dấu vết từ <b>bàn chân</b> của nó trên đất. Anh ngồi gần đống lửa hơn và nhìn vào bóng tối. Anh tưởng tượng ra một con quái vật lớn nhảy ra từ bóng tối và tấn công mình. Anh run rẩy vì sợ hãi đến mức cảm thấy như <b>tuỷ</b> trong xương của mình đang <b>run lên</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tom đã <b>suy ngẫm</b> nhiều kế hoạch khác nhau. Anh khá <b>do dự</b> để hành động. Anh quyết định ở lại bên đống lửa, nhưng trong suốt thời gian <b>canh thức</b> của mình, anh đã nghe thấy thêm nhiều tiếng ồn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Anh không thể <b>chiến đấu</b> với nỗi sợ hãi của mình thêm nữa. Anh biết mình phải làm gì. Anh tạo ra một <b>ngọn đuốc</b> và lần theo các dấu chân. Anh nghe thấy một cành cây gãy ngay phía trước mặt, nhưng anh vẫn dũng cảm tiến lên. Vài giây sau, anh phát hiện ra thứ đã làm anh hoảng sợ. Đó chỉ là một con kangaroo.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tom quay lại trại của mình và ngủ. Buổi sáng, anh đã tìm thấy tiểu đội của mình. Cuối cùng anh đã học được lòng can đảm. Anh học được rằng anh phải đối mặt với nỗi sợ hãi của mình để chiến thắng nó.</p>\n</div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 14: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

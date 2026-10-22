@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 15: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. await / beloved / misery / research</b><br/>After weeks of hard work, the scientists must [ 2 ] the results of their [ 4 ]. After the death of her [ 6 ] pet, the woman felt nothing but [ 8 ] for many weeks.</p><p style=\"margin-bottom: 12px;\"><b>2. complained / confused / due / variety</b><br/>The store had a [ 10 ] of canned vegetables, but the man [ 12 ] that they didn’t have his favorite brand. The new schedule [ 14 ] passengers who thought the train was [ 16 ] at 8 a.m.</p><p style=\"margin-bottom: 12px;\"><b>3. Although / climate / establish / prior</b><br/>The island was a great place to [ 18 ] a hotel since the [ 20 ] was warm throughout the year. [ 11 ] he had a lot of bad luck in the past, he refused to let [ 12 ] events stop him from moving forward.</p><p style=\"margin-bottom: 12px;\"><b>4. entire / furnace / mature / midst</b><br/>The [ 13 ] was turned up to the highest temperature, but it couldn’t heat the [ 14 ] room. In the [ 15 ] of a terrible war, the young boys had to [ 16 ] quickly.</p><p style=\"margin-bottom: 12px;\"><b>5. apply / buried / leash / measured</b><br/>To make sure the dog’s [ 17 ] was long enough, Bob took out a ruler and [ 18 ] it. She insisted that they [ 19 ] her mother’s favorite perfume before they [ 20 ] her.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. await / beloved / misery / research</b><br/>After weeks of hard work, the scientists must [ 1 ] the results of their [ 2 ]. After the death of her [ 3 ] pet, the woman felt nothing but [ 4 ] for many weeks.</p><p style=\"margin-bottom: 12px;\"><b>2. complained / confused / due / variety</b><br/>The store had a [ 5 ] of canned vegetables, but the man [ 6 ] that they didn’t have his favorite brand. The new schedule [ 7 ] passengers who thought the train was [ 8 ] at 8 a.m.</p><p style=\"margin-bottom: 12px;\"><b>3. Although / climate / establish / prior</b><br/>The island was a great place to [ 9 ] a hotel since the [ 10 ] was warm throughout the year. [ 11 ] he had a lot of bad luck in the past, he refused to let [ 12 ] events stop him from moving forward.</p><p style=\"margin-bottom: 12px;\"><b>4. entire / furnace / mature / midst</b> (Hint: The...) [ 13 ] was turned up to the highest temperature, but it couldn’t heat the [ 14 ] room. In the [ 15 ] of a terrible war, the young boys had to [ 16 ] quickly.</p><p style=\"margin-bottom: 12px;\"><b>5. apply / buried / leash / measured</b><br/>To make sure the dog’s [ 17 ] was long enough, Bob took out a ruler and [ 18 ] it. She insisted that they [ 19 ] her mother’s favorite perfume before they [ 20 ] her.</p>",
               "options": [],
-              "correctAnswer": "await",
-              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
+              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ).",
+              "correctAnswer": "await"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "research",
-              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
+              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ).",
+              "correctAnswer": "research"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "beloved",
-              "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
+              "explanation": "beloved là yêu dấu, misery là sự khốn khổ.",
+              "correctAnswer": "beloved"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "misery",
-              "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
+              "explanation": "beloved là yêu dấu, misery là sự khốn khổ.",
+              "correctAnswer": "misery"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "variety",
-              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
+              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại.",
+              "correctAnswer": "variety"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "complained",
-              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
+              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại.",
+              "correctAnswer": "complained"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "confused",
-              "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
+              "explanation": "confused là làm bối rối, due là đến hạn (có mặt).",
+              "correctAnswer": "confused"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "due",
-              "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
+              "explanation": "confused là làm bối rối, due là đến hạn (có mặt).",
+              "correctAnswer": "due"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "establish",
-              "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
+              "explanation": "establish là thành lập/xây dựng, climate là khí hậu.",
+              "correctAnswer": "establish"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "climate",
-              "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
+              "explanation": "establish là thành lập/xây dựng, climate là khí hậu.",
+              "correctAnswer": "climate"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "Although",
-              "explanation": "Although là mặc dù, prior là trước đó."
+              "explanation": "Although là mặc dù, prior là trước đó.",
+              "correctAnswer": "Although"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "prior",
-              "explanation": "Although là mặc dù, prior là trước đó."
+              "explanation": "Although là mặc dù, prior là trước đó.",
+              "correctAnswer": "prior"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "furnace",
-              "explanation": "furnace là lò sưởi, entire là toàn bộ."
+              "explanation": "furnace là lò sưởi, entire là toàn bộ.",
+              "correctAnswer": "furnace"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "entire",
-              "explanation": "furnace là lò sưởi, entire là toàn bộ."
+              "explanation": "furnace là lò sưởi, entire là toàn bộ.",
+              "correctAnswer": "entire"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "midst",
-              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
+              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó.",
+              "correctAnswer": "midst"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "mature",
-              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
+              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó.",
+              "correctAnswer": "mature"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "leash",
-              "explanation": "leash là dây xích chó, measured là đã đo đạc."
+              "explanation": "leash là dây xích chó, measured là đã đo đạc.",
+              "correctAnswer": "leash"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "measured",
-              "explanation": "leash là dây xích chó, measured là đã đo đạc."
+              "explanation": "leash là dây xích chó, measured là đã đo đạc.",
+              "correctAnswer": "measured"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "apply",
-              "explanation": "apply là bôi/thoa, buried là đã chôn cất."
+              "explanation": "apply là bôi/thoa, buried là đã chôn cất.",
+              "correctAnswer": "apply"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "buried",
-              "explanation": "apply là bôi/thoa, buried là đã chôn cất."
+              "explanation": "apply là bôi/thoa, buried là đã chôn cất.",
+              "correctAnswer": "buried"
             }
           ],
           "questionType": "Điền từ"
@@ -541,13 +534,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Laika, the Space Dog</h1>        <p style=\"margin-bottom: 1rem;\">One of the world's most <b>beloved</b> space travelers was also the furriest. Laika was a little dog living on the streets of Moscow, Russia. She <b>matured</b> on the streets because no one would give her a home. She had to learn how to live without eating much. She found ways to keep warm in a very cold <b>climate</b>. Scientists thought a tough dog like Laika would do well in a project they were putting together.</p>    <p style=\"margin-bottom: 1rem;\">In a <b>prior</b> launch, Russia had put the first man-made object into space. Now, scientists wanted to see if a living thing could go to space. <b>Although</b> many facts about space had been learned, they weren't enough to help send humans to space safely.</p>    <p style=\"margin-bottom: 1rem;\">Laika and two other dogs were chosen to help scientists with their <b>research</b>. The animals were used in a <b>variety</b> of tests. In the end, though, only Laika would go to space. On November 3, 1957 the Sputnik 2 spaceship was <b>due</b> to leave Earth.</p>    <p style=\"margin-bottom: 1rem;\">Scientists carefully <b>applied</b> wires to Laika's skin to <b>measure</b> her body's reactions once she got into space. Laika also wore a special <b>leash</b>. Without it, she would float around in the spaceship. Soon after, Laika left the planet. Scientists on Earth <b>awaited</b> information from the ship.</p>    <p style=\"margin-bottom: 1rem;\">But in the <b>midst</b> of so much excitement, something very sad happened. Scientists were able to tell that Laika was under a lot of stress. The trip <b>confused</b> and scared her. Laika's <b>entire</b> ship had become as hot as a <b>furnace</b>. Scientists were powerless to help the dog in her <b>misery</b>. After about five hours, Laika died.</p>    <p style=\"margin-bottom: 1rem;\">Some have <b>complained</b> that the little dog should never have been used in the mission. Scientists knew that she would not survive the trip. Laika was never <b>buried</b>, but a memorial has been <b>established</b> in Moscow. There are many songs and books about her, too. It seems that Laika became a hero to many people.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Laika, the Space Dog</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One of the world's most <b>beloved</b> space travelers was also the furriest. Laika was a little dog living on the streets of Moscow, Russia. She <b>matured</b> on the streets because no one would give her a home. She had to learn how to live without eating much. She found ways to keep warm in a very cold <b>climate</b>. Scientists thought a tough dog like Laika would do well in a project they were putting together.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In a <b>prior</b> launch, Russia had put the first man-made object into space. Now, scientists wanted to see if a living thing could go to space. <b>Although</b> many facts about space had been learned, they weren't enough to help send humans to space safely.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Laika and two other dogs were chosen to help scientists with their <b>research</b>. The animals were used in a <b>variety</b> of tests. In the end, though, only Laika would go to space. On November 3, 1957 the Sputnik 2 spaceship was <b>due</b> to leave Earth.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Scientists carefully <b>applied</b> wires to Laika's skin to <b>measure</b> her body's reactions once she got into space. Laika also wore a special <b>leash</b>. Without it, she would float around in the spaceship. Soon after, Laika left the planet. Scientists on Earth <b>awaited</b> information from the ship.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But in the <b>midst</b> of so much excitement, something very sad happened. Scientists were able to tell that Laika was under a lot of stress. The trip <b>confused</b> and scared her. Laika's <b>entire</b> ship had become as hot as a <b>furnace</b>. Scientists were powerless to help the dog in her <b>misery</b>. After about five hours, Laika died.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Some have <b>complained</b> that the little dog should never have been used in the mission. Scientists knew that she would not survive the trip. Laika was never <b>buried</b>, but a memorial has been <b>established</b> in Moscow. There are many songs and books about her, too. It seems that Laika became a hero to many people.</p></div>",
       "imageUrl": "/unit15_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Reading Comprehension",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A</p>Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "questions": [
             {
               "id": "41",
@@ -668,7 +661,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit15_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Laika, chú chó không gian</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một trong những du khách vũ trụ <b>được yêu mến (beloved)</b> nhất trên thế giới cũng là du khách có nhiều lông nhất. Laika là một chú chó nhỏ sống trên đường phố Moscow, Nga. Cô chó đã <b>trưởng thành (matured)</b> trên đường phố vì không ai cho nó một mái nhà. Nó phải học cách sống mà không được ăn nhiều. Nó đã tìm ra nhiều cách để giữ ấm trong một <b>khí hậu (climate)</b> rất lạnh. Các nhà khoa học nghĩ rằng một chú chó cứng cỏi như Laika sẽ làm tốt trong một dự án mà họ đang cùng nhau thực hiện.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong một lần phóng <b>trước đó (prior)</b>, Nga đã đưa vật thể nhân tạo đầu tiên vào không gian. Bây giờ, các nhà khoa học muốn xem liệu một sinh vật sống có thể bay vào vũ trụ hay không. <b>Mặc dù (Although)</b> nhiều sự thật về vũ trụ đã được tìm hiểu, nhưng chúng không đủ để giúp đưa con người lên vũ trụ một cách an toàn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Laika và hai chú chó khác đã được chọn để giúp các nhà khoa học trong <b>nghiên cứu (research)</b> của họ. Những con vật này đã được sử dụng trong <b>nhiều loại (variety)</b> thử nghiệm. Tuy nhiên, cuối cùng, chỉ có Laika là sẽ đi vào không gian. Vào ngày 3 tháng 11 năm 1957, con tàu vũ trụ Sputnik 2 <b>dự kiến (due)</b> sẽ rời khỏi Trái đất.</p>\n\n<p style=\"margin-bottom: 1rem;\">Các nhà khoa học đã cẩn thận <b>gắn (applied)</b> các dây điện vào da của Laika để <b>đo (measure)</b> phản ứng của cơ thể nó một khi nó lên tới không gian. Laika cũng đeo một chiếc <b>dây xích (leash)</b> đặc biệt. Nếu không có nó, cô chó sẽ trôi nổi khắp con tàu vũ trụ. Ngay sau đó, Laika rời khỏi hành tinh. Các nhà khoa học trên Trái đất <b>chờ đợi (awaited)</b> thông tin từ con tàu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng <b>ở giữa (midst)</b> của sự phấn khích tột độ, một điều rất đáng buồn đã xảy ra. Các nhà khoa học có thể nhận ra rằng Laika đang chịu rất nhiều căng thẳng. Chuyến đi đã làm cô chó <b>bối rối (confused)</b> và sợ hãi. <b>Toàn bộ (entire)</b> con tàu của Laika đã trở nên nóng như một <b>lò sưởi (furnace)</b>. Các nhà khoa học đã bất lực trong việc giúp đỡ chú chó trong <b>sự đau khổ (misery)</b> của nó. Sau khoảng năm giờ, Laika đã qua đời.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một số người đã <b>phàn nàn (complained)</b> rằng chú chó nhỏ lẽ ra không bao giờ nên được sử dụng trong nhiệm vụ này. Các nhà khoa học biết rằng nó sẽ không thể sống sót qua chuyến đi. Laika không bao giờ được <b>chôn cất (buried)</b>, nhưng một đài tưởng niệm đã được <b>thành lập (established)</b> ở Moscow. Cũng có nhiều bài hát và sách viết về cô chó này. Có vẻ như Laika đã trở thành một anh hùng đối với rất nhiều người.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 15: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

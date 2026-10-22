@@ -14,37 +14,37 @@
               "id": "1",
               "content": "<p class=\"mb-4\">a. explosion b. meteor c. counsel d. bring</p>",
               "options": [
-                "explosion and meteor",
                 "counsel and bring",
+                "explosion and meteor",
                 "meteor and bring",
                 "counsel and explosion"
               ],
               "explanation": "Câu này hợp lý vì 'meteor' (thiên thạch) khi rơi xuống thường tạo ra 'explosion' (tiếng nổ).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "2",
               "content": "<p class=\"mb-4\">a. northern b. southern c. remote d. meteor</p>",
               "options": [
-                "northern and southern",
                 "remote and meteor",
                 "northern and remote",
+                "northern and southern",
                 "southern and meteor"
               ],
               "explanation": "Câu này hợp lý vì 'northern' (phương Bắc) và 'southern' (phương Nam) đều là các từ chỉ phương hướng.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "3",
               "content": "<p class=\"mb-4\">a. castle b. temple c. land d. steam</p>",
               "options": [
-                "castle and temple",
                 "land and steam",
                 "steam and castle",
-                "land and temple"
+                "land and temple",
+                "castle and temple"
               ],
               "explanation": "Câu này hợp lý vì 'castle' (lâu đài) và 'temple' (đền thờ) đều là các công trình kiến trúc.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,13 +62,13 @@
               "id": "5",
               "content": "<p class=\"mb-4\">a. command b. submit c. statue d. weed</p>",
               "options": [
-                "command and submit",
                 "statue and weed",
+                "command and submit",
                 "statue and command",
                 "weed and submit"
               ],
               "explanation": "Câu này hợp lý vì 'command' (ra lệnh) và 'submit' (tuân phục) là hai hành động có quan hệ chặt chẽ thường đi chung trong một ngữ cảnh mệnh lệnh.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -82,25 +82,25 @@
               "id": "6",
               "content": "The bird hurt its <u>body part that helps it fly</u>.",
               "options": [
-                "wing",
                 "statue",
                 "weed",
+                "wing",
                 "meteor"
               ],
               "explanation": "Từ 'wing' (cánh) đồng nghĩa với 'body part that helps it fly' (bộ phận cơ thể giúp bay).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "7",
               "content": "There are many <u>stone images</u> in the museum.",
               "options": [
-                "statues",
                 "castles",
                 "temples",
-                "weeds"
+                "weeds",
+                "statues"
               ],
               "explanation": "Từ 'statues' (bức tượng) đồng nghĩa với 'stone images' (những hình ảnh bằng đá).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -118,25 +118,25 @@
               "id": "9",
               "content": "The teacher told me to <u>listen to and follow</u> his rules.",
               "options": [
-                "submit",
                 "command",
+                "submit to",
                 "counsel",
                 "ensure"
               ],
               "explanation": "Từ 'submit' (tuân theo/phục tùng) mang ý nghĩa tương tự như 'listen to and follow' (lắng nghe và làm theo).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "10",
               "content": "Go to the <u>higher part</u> of the building and clean the windows.",
               "options": [
-                "upper",
                 "northern",
                 "southern",
+                "upper",
                 "remote"
               ],
               "explanation": "Từ 'upper' (phía trên/cao hơn) đồng nghĩa với 'higher part' (phần cao hơn).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -254,7 +254,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Dragon</h1>        <p style=\"margin-bottom: 1rem;\">An evil dragon lived in a <b>castle</b> in the <b>remote</b> <b>southern</b> mountains.</p>    <p style=\"margin-bottom: 1rem;\">One day the <b>monster</b> <b>landed</b> in a town. The dragon <b>commanded</b> the people, \"Give me food now, or I will eat you!\" The dragon lifted its <b>wings</b> so that its lungs could be completely filled with hot <b>steam</b>, and breathed it upon the people. A man turned into a stone <b>statue</b>!</p>    <p style=\"margin-bottom: 1rem;\">The people <b>submitted</b> and <b>brought</b> food. The dragon ate all of it and left.</p>    <p style=\"margin-bottom: 1rem;\">The people sent a boy to ask for help from a wise old man. He resided in a <b>temple</b>.</p>    <p style=\"margin-bottom: 1rem;\">The boy told the old man about the dragon. Then, the old man <b>counseled</b> the boy. \"A <b>meteor</b> will fall in the <b>northern</b> sky. It will make a huge <b>explosion</b>. Find the meteor and <b>bring</b> it to me. I will use it to make a sword for you.\"</p>    <p style=\"margin-bottom: 1rem;\">The boy did as the old man said. Soon, the sword was ready.</p>    <p style=\"margin-bottom: 1rem;\">\"Use this to kill the dragon. But be careful. You must cover yourself with <b>weeds</b> that smell bad. That will <b>ensure</b> that he does not smell you,\" the man said.</p>    <p style=\"margin-bottom: 1rem;\">The boy traveled for many days to find the <b>castle</b>. He went to the <b>upper</b> level and opened a door. He could see the dragon's tail. It was sleeping, so the boy killed it. Then, he took the dragon's gold and <b>jewelry</b> and returned to his town. The people were happy.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Dragon</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">An evil dragon lived in a <b>castle</b> in the <b>remote</b> <b>southern</b> mountains.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day the <b>monster</b> <b>landed</b> in a town. The dragon <b>commanded</b> the people, \"Give me food now, or I will eat you!\" The dragon lifted its <b>wings</b> so that its lungs could be completely filled with hot <b>steam</b>, and breathed it upon the people. A man turned into a stone <b>statue</b>!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The people <b>submitted</b> and <b>brought</b> food. The dragon ate all of it and left.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The people sent a boy to ask for help from a wise old man. He resided in a <b>temple</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The boy told the old man about the dragon. Then, the old man <b>counseled</b> the boy. \"A <b>meteor</b> will fall in the <b>northern</b> sky. It will make a huge <b>explosion</b>. Find the meteor and <b>bring</b> it to me. I will use it to make a sword for you.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The boy did as the old man said. Soon, the sword was ready.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Use this to kill the dragon. But be careful. You must cover yourself with <b>weeds</b> that smell bad. That will <b>ensure</b> that he does not smell you,\" the man said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The boy traveled for many days to find the <b>castle</b>. He went to the <b>upper</b> level and opened a door. He could see the dragon's tail. It was sleeping, so the boy killed it. Then, he took the dragon's gold and <b>jewelry</b> and returned to his town. The people were happy.</p></div>",
       "imageUrl": "/unit2_story.png",
       "sections": [
         {
@@ -313,7 +313,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit2_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Con Rồng</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một con rồng độc ác sống trong một <b>lâu đài</b> ở những ngọn núi <b>phía nam</b> <b>xa xôi</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, con <b>quái vật</b> <b>đáp xuống</b> một thị trấn. Con rồng <b>ra lệnh</b> cho mọi người: \"Đưa thức ăn cho ta ngay, nếu không ta sẽ ăn thịt các ngươi!\" Con rồng nhấc <b>đôi cánh</b> của nó lên để phổi của nó có thể chứa đầy <b>hơi nước</b> nóng, và thổi nó vào mọi người. Một người đàn ông đã biến thành một <b>bức tượng</b> đá!</p>\n\n<p style=\"margin-bottom: 1rem;\">Mọi người <b>khuất phục</b> và <b>mang</b> thức ăn đến. Con rồng ăn sạch rồi rời đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người dân cử một cậu bé đến xin một ông lão thông thái giúp đỡ. Ông sống ở một <b>ngôi đền</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu bé kể cho ông lão nghe về con rồng. Sau đó, ông lão <b>khuyên bảo</b> cậu bé: \"Một <b>thiên thạch</b> sẽ rơi trên bầu trời <b>phía bắc</b>. Nó sẽ tạo ra một <b>vụ nổ</b> lớn. Hãy tìm <b>thiên thạch</b> đó và <b>mang</b> đến cho ta. Ta sẽ dùng nó để rèn cho cháu một thanh kiếm.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu bé làm theo lời ông lão. Chẳng bao lâu, thanh kiếm đã hoàn thành.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Hãy dùng cái này để giết con rồng. Nhưng hãy cẩn thận. Cháu phải phủ lên người mình những cây <b>cỏ dại</b> có mùi hôi. Điều đó sẽ <b>đảm bảo</b> rằng nó không ngửi thấy mùi của cháu,\" ông lão nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cậu bé đã đi nhiều ngày để tìm <b>lâu đài</b>. Cậu đi lên tầng <b>phía trên</b> và mở một cánh cửa. Cậu có thể thấy đuôi của con rồng. Nó đang ngủ, vì vậy cậu bé đã giết nó. Sau đó, cậu lấy vàng và <b>trang sức</b> của con rồng rồi trở về thị trấn của mình. Mọi người đều rất hạnh phúc.</p>\n</div>"
     }
   ],
   "basicInfo": {

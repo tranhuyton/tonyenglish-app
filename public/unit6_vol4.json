@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 6: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -529,13 +522,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jack Frost and the Pudding</h1>        <p style=\"margin-bottom: 1rem;\">Every winter, a magical boy with a wild <b>spirit</b> named Jack Frost arrives in town. He wears a white <b>cape</b>, and his <b>role</b> is to cover everything with frost and ice. But Jack Frost also gets <b>pleasure</b> from playing tricks on common <b>folks</b>.</p>    <p style=\"margin-bottom: 1rem;\">One dark winter evening, he was sitting on the <b>rail</b> of a fence near a river, pointing at some trees. When he did so, there was a <b>pop</b>, and the trees were <b>evenly</b> covered in frost.</p>    <p style=\"margin-bottom: 1rem;\">Then old Tom Muggins came along the path. He was carrying a basket of ingredients for his wife’s cake <b>recipe</b>. \"I’ll have some fun with him!\" said Jack Frost. He pointed, and suddenly there was a <b>patch</b> of ice on the path. Poor Tom slipped and fell into the river.</p>    <p style=\"margin-bottom: 1rem;\">The bags of flour, fruit and sugar fell open and got wet. A couple of eggs broke, and a stick of butter <b>shrank</b> in the water. Tom gathered the ingredients and climbed out of the river. The food made an <b>absolute</b> mess of the path. \"<b>Alas</b>!\" he cried. \"There’ll be no cake for me!\"</p>    <p style=\"margin-bottom: 1rem;\">Jack Frost laughed at poor Tom because his nice <b>suit</b> got <b>soaked</b> as well. \"Are you cold?\" he said. \"Don’t worry, I’ll make you warm!\" He pointed at the mess in Tom’s basket. Suddenly, there was a <b>spark</b>.</p>    <p style=\"margin-bottom: 1rem;\">What was left of the food caught fire! Jack Frost ran off laughing.</p>    <p style=\"margin-bottom: 1rem;\">Poor Tom sat by the fire. He could only <b>envision</b> how angry his wife would be. He wished he had been more <b>attentive</b> and noticed that Jack was around.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, a pleasant smell came from the basket. Tom looked inside. The butter was <b>melting</b> and the eggs were starting to cook! Even the fruit began to simmer. Soon there was a fat, brown <b>pudding</b> in the basket! Tom tasted it. It was delicious! He happily took it home for dessert. Although Jack Frost had tried to make Tom’s life difficult, Jack had actually made Tom a wonderful <b>pudding</b>!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jack Frost and the Pudding</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Every winter, a magical boy with a wild <b>spirit</b> named Jack Frost arrives in town. He wears a white <b>cape</b>, and his <b>role</b> is to cover everything with frost and ice. But Jack Frost also gets <b>pleasure</b> from playing tricks on common <b>folks</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One dark winter evening, he was sitting on the <b>rail</b> of a fence near a river, pointing at some trees. When he did so, there was a <b>pop</b>, and the trees were <b>evenly</b> covered in frost.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Then old Tom Muggins came along the path. He was carrying a basket of ingredients for his wife’s cake <b>recipe</b>. \"I’ll have some fun with him!\" said Jack Frost. He pointed, and suddenly there was a <b>patch</b> of ice on the path. Poor Tom slipped and fell into the river.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The bags of flour, fruit and sugar fell open and got wet. A couple of eggs broke, and a stick of butter <b>shrank</b> in the water. Tom gathered the ingredients and climbed out of the river. The food made an <b>absolute</b> mess of the path. \"<b>Alas</b>!\" he cried. \"There’ll be no cake for me!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jack Frost laughed at poor Tom because his nice <b>suit</b> got <b>soaked</b> as well. \"Are you cold?\" he said. \"Don’t worry, I’ll make you warm!\" He pointed at the mess in Tom’s basket. Suddenly, there was a <b>spark</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">What was left of the food caught fire! Jack Frost ran off laughing.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Poor Tom sat by the fire. He could only <b>envision</b> how angry his wife would be. He wished he had been more <b>attentive</b> and noticed that Jack was around.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Suddenly, a pleasant smell came from the basket. Tom looked inside. The butter was <b>melting</b> and the eggs were starting to cook! Even the fruit began to simmer. Soon there was a fat, brown <b>pudding</b> in the basket! Tom tasted it. It was delicious! He happily took it home for dessert. Although Jack Frost had tried to make Tom’s life difficult, Jack had actually made Tom a wonderful <b>pudding</b>!</p></div>",
       "imageUrl": "/unit6_vol4_story.png",
       "sections": [
         {
           "id": "sec1_reading",
           "title": "Reading Comprehension - Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "31",
@@ -656,7 +649,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n\n<img src=\"/unit6_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jack Frost và Chiếc Bánh Pudding</h1>\n\n<p style=\"margin-bottom: 1rem;\">Mỗi mùa đông, một cậu bé ma thuật với một <b>tinh thần</b> hoang dã tên là Jack Frost lại đến thị trấn. Cậu ấy mặc một chiếc <b>áo choàng</b> trắng, và <b>vai trò</b> của cậu là bao phủ mọi thứ bằng sương giá và băng. Nhưng Jack Frost cũng tìm thấy <b>niềm vui</b> từ việc chơi khăm những <b>người dân</b> bình thường.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào một buổi tối mùa đông tối tăm nọ, cậu đang ngồi trên <b>thanh chắn</b> của một hàng rào gần một con sông, chỉ tay vào những cái cây. Khi cậu làm vậy, có một tiếng <b>bốp</b>, và những cái cây được bao phủ <b>đồng đều</b> trong sương giá.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau đó, ông già Tom Muggins đi dọc theo con đường. Ông ấy đang mang một giỏ nguyên liệu cho <b>công thức</b> làm bánh của vợ mình. \"Mình sẽ có chút niềm vui với ông ta!\" Jack Frost nói. Cậu ta chỉ tay, và đột nhiên có một <b>mảng</b> băng trên đường. Tom tội nghiệp trượt chân và ngã xuống sông.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những túi bột, trái cây và đường bung ra và bị ướt. Một vài quả trứng bị vỡ, và một thanh bơ <b>teo lại</b> trong nước. Tom thu gom các nguyên liệu và leo ra khỏi sông. Thức ăn tạo ra một mớ hỗn độn <b>hoàn toàn</b> trên con đường. \"<b>Than ôi</b>!\" ông khóc. \"Sẽ không có bánh cho tôi nữa!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Jack Frost cười nhạo Tom tội nghiệp vì bộ <b>com lê</b> đẹp đẽ của ông ấy cũng bị <b>ướt sũng</b>. \"Ông có lạnh không?\" cậu ta nói. \"Đừng lo, tôi sẽ làm ông ấm lên!\" Cậu ta chỉ vào mớ hỗn độn trong giỏ của Tom. Đột nhiên, có một <b>tia lửa</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những gì còn lại của thức ăn đã bốc cháy! Jack Frost bỏ chạy và cười lớn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tom tội nghiệp ngồi bên đống lửa. Ông chỉ có thể <b>mường tượng</b> ra vợ mình sẽ tức giận như thế nào. Ông ước mình đã <b>chú ý</b> hơn và nhận ra rằng Jack đang ở quanh đó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đột nhiên, một mùi thơm dễ chịu phát ra từ chiếc giỏ. Tom nhìn vào bên trong. Bơ đang <b>tan chảy</b> và trứng đang bắt đầu chín! Thậm chí cả trái cây cũng bắt đầu sủi bọt. Chẳng mấy chốc đã có một chiếc bánh <b>pudding</b> to béo, màu nâu trong giỏ! Tom nếm thử. Nó rất ngon! Ông vui vẻ mang nó về nhà làm món tráng miệng. Mặc dù Jack Frost đã cố gắng làm khó cuộc sống của Tom, nhưng Jack thực sự đã làm cho Tom một chiếc bánh <b>pudding</b> tuyệt vời!</p>\n\n</div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 6: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

@@ -81,67 +81,67 @@
             {
               "id": "6",
               "content": "I left my coat in the [ 6 ] by the window.",
-              "explanation": "spot (vị trí, chỗ).",
-              "correctAnswer": "spot",
               "options": [
                 "feed",
                 "cell",
                 "whole",
                 "spot",
                 "correct"
-              ]
+              ],
+              "explanation": "spot (vị trí, chỗ).",
+              "correctAnswer": "spot"
             },
             {
               "id": "7",
               "content": "The poor man had no money to [ 7 ] his family.",
-              "explanation": "feed (cho ăn).",
-              "correctAnswer": "feed",
               "options": [
                 "feed",
                 "cell",
                 "whole",
                 "spot",
                 "correct"
-              ]
+              ],
+              "explanation": "feed (cho ăn).",
+              "correctAnswer": "feed"
             },
             {
               "id": "8",
               "content": "The robber was locked in a [ 8 ] for a year.",
-              "explanation": "cell (phòng giam).",
-              "correctAnswer": "cell",
               "options": [
                 "feed",
                 "cell",
                 "whole",
                 "spot",
                 "correct"
-              ]
+              ],
+              "explanation": "cell (phòng giam).",
+              "correctAnswer": "cell"
             },
             {
               "id": "9",
               "content": "Did you read the [ 9 ] book or just part of it?",
-              "explanation": "whole (toàn bộ).",
-              "correctAnswer": "whole",
               "options": [
                 "feed",
                 "cell",
                 "whole",
                 "spot",
                 "correct"
-              ]
+              ],
+              "explanation": "whole (toàn bộ).",
+              "correctAnswer": "whole"
             },
             {
               "id": "10",
               "content": "If I get the answers [ 10 ], I will pass the test.",
-              "explanation": "correct (chính xác).",
-              "correctAnswer": "correct",
               "options": [
                 "feed",
                 "cell",
                 "whole",
                 "spot",
                 "correct"
-              ]
+              ],
+              "explanation": "correct (chính xác).",
+              "correctAnswer": "correct"
             }
           ],
           "questionType": "Kéo thả"
@@ -212,102 +212,102 @@
             {
               "id": "16",
               "content": "<p class=\"mb-4\">cell / structure</p>The bad guy sat on the floor of his [ 16 ].</p>Dad says the old [ 17 ] is not safe.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. lord / owe</p>The [ 18 ] ruled over 100 people in the town.</p>I still [ 19 ] the bank money for my university loan.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. position / spot</p>Won't your legs hurt if you stay in that [ 20 ] for long?</p>This is our favorite picnic [ 21 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. whole / hole</p>The [ 22 ] class was excited.</p>I dug a [ 23 ] to put a tree in.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. feed / crop</p>Do not [ 24 ] any of the animals at the zoo.</p>The farmer grew a [ 25 ] of potatoes.</p>",
-              "explanation": "cell (phòng giam).",
-              "correctAnswer": "cell",
               "options": [
                 "cell",
                 "structure"
-              ]
+              ],
+              "explanation": "cell (phòng giam).",
+              "correctAnswer": "cell"
             },
             {
               "id": "17",
               "content": "",
-              "explanation": "structure (công trình).",
-              "correctAnswer": "structure",
               "options": [
                 "cell",
                 "structure"
-              ]
+              ],
+              "explanation": "structure (công trình).",
+              "correctAnswer": "structure"
             },
             {
               "id": "18",
               "content": "",
-              "explanation": "lord (lãnh chúa).",
-              "correctAnswer": "lord",
               "options": [
                 "lord",
                 "owe"
-              ]
+              ],
+              "explanation": "lord (lãnh chúa).",
+              "correctAnswer": "lord"
             },
             {
               "id": "19",
               "content": "",
-              "explanation": "owe (nợ).",
-              "correctAnswer": "owe",
               "options": [
                 "lord",
                 "owe"
-              ]
+              ],
+              "explanation": "owe (nợ).",
+              "correctAnswer": "owe"
             },
             {
               "id": "20",
               "content": "",
-              "explanation": "position (vị trí/tư thế).",
-              "correctAnswer": "position",
               "options": [
                 "position",
                 "spot"
-              ]
+              ],
+              "explanation": "position (vị trí/tư thế).",
+              "correctAnswer": "position"
             },
             {
               "id": "21",
               "content": "",
-              "explanation": "spot (địa điểm).",
-              "correctAnswer": "spot",
               "options": [
                 "position",
                 "spot"
-              ]
+              ],
+              "explanation": "spot (địa điểm).",
+              "correctAnswer": "spot"
             },
             {
               "id": "22",
               "content": "",
-              "explanation": "whole (toàn bộ).",
-              "correctAnswer": "whole",
               "options": [
                 "whole",
                 "hole"
-              ]
+              ],
+              "explanation": "whole (toàn bộ).",
+              "correctAnswer": "whole"
             },
             {
               "id": "23",
               "content": "",
-              "explanation": "hole (cái hố).",
-              "correctAnswer": "hole",
               "options": [
                 "whole",
                 "hole"
-              ]
+              ],
+              "explanation": "hole (cái hố).",
+              "correctAnswer": "hole"
             },
             {
               "id": "24",
               "content": "",
-              "explanation": "feed (cho ăn).",
-              "correctAnswer": "feed",
               "options": [
                 "feed",
                 "crop"
-              ]
+              ],
+              "explanation": "feed (cho ăn).",
+              "correctAnswer": "feed"
             },
             {
               "id": "25",
               "content": "",
-              "explanation": "crop (vụ mùa).",
-              "correctAnswer": "crop",
               "options": [
                 "feed",
                 "crop"
-              ]
+              ],
+              "explanation": "crop (vụ mùa).",
+              "correctAnswer": "crop"
             }
           ],
           "questionType": "Điền từ"
@@ -317,7 +317,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \">        <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farmer and the Cats</h1>        <p style=\"margin-bottom: 1rem;\">Arthur was a <b>responsible</b> farmer, and Maria was a nice lady. But they were poor. They <b>owed</b> the town <b>lord</b> money for their land. One summer, their farm <b>burned</b>. One <b>structure</b> caught fire, and most of the animals ran away. Only the cats stayed. So Arthur and Maria had to bring in their <b>crops</b> without an animal's help.</p>    <p style=\"margin-bottom: 1rem;\">On a fall day, the lord <b>demanded</b> his money. Arthur asked if the lord could wait until he brought in his crops.</p>    <p style=\"margin-bottom: 1rem;\">The lord was angry. He <b>raised</b> his hands high and yelled, \"Pay me by the end of the week. If you don't, I will <b>increase</b> the money you have to pay. I might put you in a jail <b>cell</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Arthur and Maria worked until there was <b>blood</b> on their hands. They finished four lines of corn and went to bed.</p>    <p style=\"margin-bottom: 1rem;\">But the next morning, eight lines were finished! \"Maria, didn't we stop in this <b>spot</b> here?\" Arthur asked.</p>    <p style=\"margin-bottom: 1rem;\">\"Yes, that is <b>correct</b>. And the tools were in a different <b>position</b>, too,\" Maria said. They were surprised and happy. That day, they worked hard and finished five lines.</p>    <p style=\"margin-bottom: 1rem;\">But in the morning, ten lines were done! Each day they did a lot of work. Each night, someone else did an <b>equal</b> amount of work. In a week, the <b>whole</b> field was finished. \"Tomorrow I will sell the crops and pay the lord,\" Arthur said. But that morning, the crops were gone. A bag was in the middle of the field. It <b>contained</b> money.</p>    <p style=\"margin-bottom: 1rem;\">\"Maria, let's see who has helped us work.\" Through a <b>hole</b> in the wall, they saw a funny <b>sight</b>. The cats were dancing in the field and eating corn! Now Arthur knew what had happened. The cats had worked at night! After that, Arthur was very nice to his cats and <b>fed</b> them lots of corn.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">        <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farmer and the Cats</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Arthur was a <b>responsible</b> farmer, and Maria was a nice lady. But they were poor. They <b>owed</b> the town <b>lord</b> money for their land. One summer, their farm <b>burned</b>. One <b>structure</b> caught fire, and most of the animals ran away. Only the cats stayed. So Arthur and Maria had to bring in their <b>crops</b> without an animal's help.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">On a fall day, the lord <b>demanded</b> his money. Arthur asked if the lord could wait until he brought in his crops.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The lord was angry. He <b>raised</b> his hands high and yelled, \"Pay me by the end of the week. If you don't, I will <b>increase</b> the money you have to pay. I might put you in a jail <b>cell</b>.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">So Arthur and Maria worked until there was <b>blood</b> on their hands. They finished four lines of corn and went to bed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But the next morning, eight lines were finished! \"Maria, didn't we stop in this <b>spot</b> here?\" Arthur asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Yes, that is <b>correct</b>. And the tools were in a different <b>position</b>, too,\" Maria said. They were surprised and happy. That day, they worked hard and finished five lines.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But in the morning, ten lines were done! Each day they did a lot of work. Each night, someone else did an <b>equal</b> amount of work. In a week, the <b>whole</b> field was finished. \"Tomorrow I will sell the crops and pay the lord,\" Arthur said. But that morning, the crops were gone. A bag was in the middle of the field. It <b>contained</b> money.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Maria, let's see who has helped us work.\" Through a <b>hole</b> in the wall, they saw a funny <b>sight</b>. The cats were dancing in the field and eating corn! Now Arthur knew what had happened. The cats had worked at night! After that, Arthur was very nice to his cats and <b>fed</b> them lots of corn.</p></div>",
       "imageUrl": "/unit13_story.png",
       "sections": [
         {
@@ -388,7 +388,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit13_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Người nông dân và những chú mèo</h1>\n\n<p style=\"margin-bottom: 1rem;\">Arthur là một người nông dân <b>có trách nhiệm</b>, và Maria là một người phụ nữ tốt bụng. Nhưng họ rất nghèo. Họ <b>nợ</b> vị <b>lãnh chúa</b> của thị trấn tiền thuê đất. Một mùa hè nọ, trang trại của họ bị <b>cháy</b>. Một <b>công trình</b> đã bắt lửa, và hầu hết các con vật đều chạy trốn. Chỉ có những chú mèo ở lại. Vì vậy, Arthur và Maria phải tự mình thu hoạch <b>mùa màng</b> mà không có sự giúp đỡ của động vật.</p>\n\n<p style=\"margin-bottom: 1rem;\">Vào một ngày mùa thu, lãnh chúa <b>yêu cầu</b> số tiền của mình. Arthur hỏi liệu lãnh chúa có thể đợi cho đến khi ông thu hoạch xong mùa màng không.</p>\n\n<p style=\"margin-bottom: 1rem;\">Lãnh chúa rất tức giận. Ông ta <b>giơ</b> hai tay lên cao và hét lên, \"Trả tiền cho ta trước cuối tuần. Nếu không, ta sẽ <b>tăng</b> số tiền các ngươi phải trả. Ta có thể tống các ngươi vào <b>phòng giam</b>.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Thế là Arthur và Maria làm việc cho đến khi tay họ rướm <b>máu</b>. Họ làm xong bốn luống ngô rồi đi ngủ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng sáng hôm sau, tám luống đã hoàn thành! \"Maria, không phải chúng ta đã dừng lại ở <b>chỗ</b> này sao?\" Arthur hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Đúng vậy, điều đó là <b>chính xác</b>. Và các công cụ cũng được đặt ở một <b>vị trí</b> khác,\" Maria nói. Họ rất ngạc nhiên và hạnh phúc. Ngày hôm đó, họ làm việc chăm chỉ và hoàn thành năm luống.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng vào buổi sáng, mười luống đã được làm xong! Mỗi ngày họ đều làm rất nhiều việc. Mỗi đêm, một ai đó khác đã làm một lượng công việc <b>tương đương</b>. Trong một tuần, <b>toàn bộ</b> cánh đồng đã hoàn thành. \"Ngày mai tôi sẽ bán nông sản và trả tiền cho lãnh chúa,\" Arthur nói. Nhưng sáng hôm đó, nông sản đã biến mất. Có một cái túi nằm giữa cánh đồng. Nó <b>chứa</b> tiền.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Maria, hãy xem ai đã giúp chúng ta làm việc.\" Qua một <b>cái lỗ</b> trên tường, họ nhìn thấy một <b>cảnh tượng</b> buồn cười. Những chú mèo đang nhảy múa trên cánh đồng và ăn ngô! Bây giờ Arthur đã biết chuyện gì xảy ra. Những chú mèo đã làm việc vào ban đêm! Sau đó, Arthur rất tử tế với bầy mèo của mình và <b>cho</b> chúng <b>ăn</b> rất nhiều ngô.</p>\n</div>"
     }
   ],
   "basicInfo": {

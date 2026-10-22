@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 22: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -122,7 +116,7 @@
             },
             {
               "id": "8",
-              "content": "The students asked the school’s [ 102 ] to buy a better kind of meat. The meat served there is too high in fat and [ 103 ].",
+              "content": "The students asked the school’s [ 8 ] to buy a better kind of meat. The meat served there is too high in fat and [ 9 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -158,7 +152,7 @@
             },
             {
               "id": "10",
-              "content": "I can’t stand companies that are [ 104 ]. Customers have to make sure they get [ 105 ] information about all details.",
+              "content": "I can’t stand companies that are [ 10 ]. Customers have to make sure they get [ 11 ] information about all details.",
               "options": [
                 "straightforward",
                 "framework",
@@ -194,7 +188,7 @@
             },
             {
               "id": "12",
-              "content": "Citizens formed a [ 106 ] because the city’s air was making people ill. Elderly people and infants were the most [ 107 ] to becoming sick.",
+              "content": "Citizens formed a [ 12 ] because the city’s air was making people ill. Elderly people and infants were the most [ 13 ] to becoming sick.",
               "options": [
                 "straightforward",
                 "framework",
@@ -230,7 +224,7 @@
             },
             {
               "id": "14",
-              "content": "To solve our problem, we’ll first need a strong [ 108 ]. Our ideas need to be intelligent and [ 109 ].",
+              "content": "To solve our problem, we’ll first need a strong [ 14 ]. Our ideas need to be intelligent and [ 15 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -480,12 +474,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The New Bioco</h1>        <p style=\"margin-bottom: 1rem;\">Jack got a new job at a <b>biotechnology</b> company called Bioco. Bioco <b>manufactured</b> drugs to treat <b>diabetes</b> and high <b>cholesterol</b>. Jack’s job was to use a tiny <b>mechanism</b> to get <b>nectar</b> from flowers. The nectar was a main ingredient in the drugs. Jack liked his job, and he thought that Bioco was a caring company. However, Jack soon learned that the company wasn’t as kind as he first thought.</p>    <p style=\"margin-bottom: 1rem;\">Bioco’s motto was “Make the Earth a Better Place.” However, this motto was <b>deceptive</b>. The company actually did a number of really bad things to the environment. The company produced a lot of smog and harmful <b>acid</b>. Bioco poured the acid in a nearby river, which caused <b>erosion</b> and made fish <b>prone</b> to illness.</p>    <p style=\"margin-bottom: 1rem;\">After a few weeks at the new job, Jack saw all the bad things Bioco was doing. He had always had strong <b>ethics</b>, and he knew he had to do something. One day, while the Bioco workers were eating in the cafeteria, Jack stood up and gave a speech. He said, “My fellow coworkers, I know you have all seen the evil things our company is doing. I have a <b>notion</b> that we can fix them if we form a <b>coalition</b>. We can go to the <b>administration</b> and tell them we’ll quit if they don’t <b>eliminate</b> the problems. They’ll have no choice but to listen to us.”</p>    <p style=\"margin-bottom: 1rem;\">Jack explained what they were to do. His coworkers liked his <b>explicit</b> plan. They went to the <b>administrative</b> offices and demanded that Bioco stop damaging the environment, or they all would quit. One supervisor said to them, “Thank you for being <b>straightforward</b> about this issue. Since I can’t afford to lose all of you workers, I guess we’ll just have to fix things.”</p>    <p style=\"margin-bottom: 1rem;\">Jack, his supervisor, and his coworkers spent the next month designing a new <b>framework</b> for the company. They cleaned up the acid from the river and <b>minimized</b> the amount of air pollution the company released. At last, the company motto became apt.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The New Bioco</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jack got a new job at a <b>biotechnology</b> company called Bioco. Bioco <b>manufactured</b> drugs to treat <b>diabetes</b> and high <b>cholesterol</b>. Jack’s job was to use a tiny <b>mechanism</b> to get <b>nectar</b> from flowers. The nectar was a main ingredient in the drugs. Jack liked his job, and he thought that Bioco was a caring company. However, Jack soon learned that the company wasn’t as kind as he first thought.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Bioco’s motto was “Make the Earth a Better Place.” However, this motto was <b>deceptive</b>. The company actually did a number of really bad things to the environment. The company produced a lot of smog and harmful <b>acid</b>. Bioco poured the acid in a nearby river, which caused <b>erosion</b> and made fish <b>prone</b> to illness.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">After a few weeks at the new job, Jack saw all the bad things Bioco was doing. He had always had strong <b>ethics</b>, and he knew he had to do something. One day, while the Bioco workers were eating in the cafeteria, Jack stood up and gave a speech. He said, “My fellow coworkers, I know you have all seen the evil things our company is doing. I have a <b>notion</b> that we can fix them if we form a <b>coalition</b>. We can go to the <b>administration</b> and tell them we’ll quit if they don’t <b>eliminate</b> the problems. They’ll have no choice but to listen to us.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jack explained what they were to do. His coworkers liked his <b>explicit</b> plan. They went to the <b>administrative</b> offices and demanded that Bioco stop damaging the environment, or they all would quit. One supervisor said to them, “Thank you for being <b>straightforward</b> about this issue. Since I can’t afford to lose all of you workers, I guess we’ll just have to fix things.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Jack, his supervisor, and his coworkers spent the next month designing a new <b>framework</b> for the company. They cleaned up the acid from the river and <b>minimized</b> the amount of air pollution the company released. At last, the company motto became apt.</p></div>",
       "imageUrl": "/unit22_vol5_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -609,7 +603,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit22_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The New Bioco</h1>\n\n<p style=\"margin-bottom: 1rem;\">Jack nhận được một công việc mới tại một công ty <b>công nghệ sinh học</b> tên là Bioco. Bioco <b>sản xuất</b> các loại thuốc để điều trị bệnh <b>tiểu đường</b> và <b>cholesterol</b> cao. Công việc của Jack là sử dụng một <b>cơ chế</b> nhỏ xíu để lấy <b>mật hoa</b> từ những bông hoa. Mật hoa là một thành phần chính trong các loại thuốc. Jack thích công việc của mình và anh ấy nghĩ rằng Bioco là một công ty chu đáo. Tuy nhiên, Jack sớm nhận ra rằng công ty không hề tử tế như anh nghĩ ban đầu.</p>\n\n<p style=\"margin-bottom: 1rem;\">Phương châm của Bioco là “Làm cho Trái Đất Trở Thành Nơi Tốt Đẹp Hơn”. Tuy nhiên, phương châm này mang tính <b>lừa dối</b>. Công ty thực sự đã làm một số việc rất tồi tệ đối với môi trường. Công ty đã tạo ra rất nhiều khói bụi và <b>axit</b> độc hại. Bioco đã đổ axit xuống một con sông gần đó, gây ra sự <b>xói mòn</b> và khiến cá <b>dễ mắc</b> bệnh.</p>\n\n<p style=\"margin-bottom: 1rem;\">Sau vài tuần ở công việc mới, Jack đã thấy tất cả những điều tồi tệ mà Bioco đang làm. Anh ấy luôn có <b>đạo đức</b> mạnh mẽ, và anh ấy biết mình phải làm gì đó. Một ngày nọ, trong khi các công nhân của Bioco đang ăn trong căng tin, Jack đứng lên và phát biểu. Anh ấy nói, “Thưa các đồng nghiệp của tôi, tôi biết tất cả các bạn đều đã thấy những điều xấu xa mà công ty chúng ta đang làm. Tôi có một <b>ý tưởng</b> rằng chúng ta có thể sửa chữa chúng nếu chúng ta thành lập một <b>liên minh</b>. Chúng ta có thể đến gặp <b>ban quản lý</b> và nói với họ rằng chúng ta sẽ nghỉ việc nếu họ không <b>loại bỏ</b> các vấn đề này. Họ sẽ không có lựa chọn nào khác ngoài việc lắng nghe chúng ta.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Jack giải thích những việc họ phải làm. Các đồng nghiệp của anh ấy rất thích kế hoạch <b>rõ ràng</b> của anh. Họ đã đến các văn phòng <b>hành chính</b> và yêu cầu Bioco ngừng phá hoại môi trường, nếu không tất cả họ sẽ nghỉ việc. Một người giám sát đã nói với họ, “Cảm ơn các bạn vì đã <b>thẳng thắn</b> về vấn đề này. Vì tôi không thể để mất tất cả các công nhân các bạn, tôi đoán chúng ta sẽ phải sửa chữa mọi thứ.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Jack, người giám sát của anh ấy và các đồng nghiệp đã dành cả tháng tiếp theo để thiết kế một <b>khuôn khổ</b> mới cho công ty. Họ đã dọn dẹp sạch axit từ con sông và <b>giảm thiểu</b> lượng ô nhiễm không khí mà công ty thải ra. Cuối cùng, phương châm của công ty đã trở nên phù hợp.</p>\n</div>"
     }
   ]
 }

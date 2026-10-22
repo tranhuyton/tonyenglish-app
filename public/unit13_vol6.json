@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 13: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -350,12 +344,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The End of Smallpox</h1>        <p style=\"margin-bottom: 1rem;\"><b>Smallpox</b> was once the most deadly disease in the world. During the 1800s, more than 20 million people got the disease every year. Of those, nearly half died. At the <b>onset</b> of <b>smallpox</b>, people suffered from high fevers, headaches, vomiting, and aching muscles. Yet the worst symptom of all was an <b>intolerable</b> <b>rash</b> that caused irritation on the entire body. Those who survived the disease were often <b>rendered</b> blind or left with <b>gross</b> scars on their face and body.</p>    <p style=\"margin-bottom: 1rem;\">Today, however, cases of <b>smallpox</b> are very rare due to the work of many countries during the late 1900s. This <b>federation</b> of countries <b>collaborated</b> to completely destroy <b>smallpox</b>. Early in the century, wealthy countries in Europe and North America had developed a substance that made the body immune to <b>smallpox</b>. They had required all their citizens to get this vaccine to <b>counteract</b> the disease. Hence, the people of these countries no longer had to worry about <b>smallpox</b>.</p>    <p style=\"margin-bottom: 1rem;\">However, many of the <b>needy</b> people in poorer parts of the world still suffered from the disease. Their countries could not afford the vaccine nor supply enough doctors to <b>curb</b> the spread of <b>smallpox</b>.</p>    <p style=\"margin-bottom: 1rem;\">In 1950, the wealthier countries of the world <b>vowed</b> to free the world of the disease. They <b>pledged</b> to supply the vaccine to any country that could not afford it. Scientists <b>compiled</b> lists of areas where the disease still thrived. Then doctors <b>diagnosed</b> people who had the disease in these areas. They <b>enacted</b> laws that <b>prohibited</b> people with <b>smallpox</b> from mixing with those who did not. In this way, they could not <b>transmit</b> the disease to others. Then the doctors gave all of them the vaccine.</p>    <p style=\"margin-bottom: 1rem;\">It took a long time and a lot of work. But nearly thirty years later, on December 9, 1979, a group of scientists <b>certified</b> that <b>smallpox</b> had been successfully stopped. The <b>humane</b> efforts of people from all over the world had accomplished a great task.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The End of Smallpox</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\"><b>Smallpox</b> was once the most deadly disease in the world. During the 1800s, more than 20 million people got the disease every year. Of those, nearly half died. At the <b>onset</b> of <b>smallpox</b>, people suffered from high fevers, headaches, vomiting, and aching muscles. Yet the worst symptom of all was an <b>intolerable</b> <b>rash</b> that caused irritation on the entire body. Those who survived the disease were often <b>rendered</b> blind or left with <b>gross</b> scars on their face and body.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Today, however, cases of <b>smallpox</b> are very rare due to the work of many countries during the late 1900s. This <b>federation</b> of countries <b>collaborated</b> to completely destroy <b>smallpox</b>. Early in the century, wealthy countries in Europe and North America had developed a substance that made the body immune to <b>smallpox</b>. They had required all their citizens to get this vaccine to <b>counteract</b> the disease. Hence, the people of these countries no longer had to worry about <b>smallpox</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">However, many of the <b>needy</b> people in poorer parts of the world still suffered from the disease. Their countries could not afford the vaccine nor supply enough doctors to <b>curb</b> the spread of <b>smallpox</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In 1950, the wealthier countries of the world <b>vowed</b> to free the world of the disease. They <b>pledged</b> to supply the vaccine to any country that could not afford it. Scientists <b>compiled</b> lists of areas where the disease still thrived. Then doctors <b>diagnosed</b> people who had the disease in these areas. They <b>enacted</b> laws that <b>prohibited</b> people with <b>smallpox</b> from mixing with those who did not. In this way, they could not <b>transmit</b> the disease to others. Then the doctors gave all of them the vaccine.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It took a long time and a lot of work. But nearly thirty years later, on December 9, 1979, a group of scientists <b>certified</b> that <b>smallpox</b> had been successfully stopped. The <b>humane</b> efforts of people from all over the world had accomplished a great task.</p></div>",
       "imageUrl": "/unit13_vol6_story.png",
       "sections": [
         {
           "id": "sec4_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -420,37 +414,37 @@
               "id": "36",
               "content": "What did people suffer from at the onset of smallpox?",
               "options": [
-                "High fevers, headaches, vomiting, and aching muscles.",
                 "A loss of hair and hearing.",
+                "High fevers, headaches, vomiting, and aching muscles.",
                 "Blindness immediately.",
                 "Nothing until the rash appeared."
               ],
               "explanation": "Dịch câu hỏi: Mọi người phải chịu đựng những gì khi mới phát bệnh đậu mùa?\nGiải thích: Chọn A.\nDựa vào đoạn 1: \"At the onset of smallpox, people suffered from high fevers, headaches, vomiting, and aching muscles.\" (Khi mới phát bệnh đậu mùa, người bệnh bị sốt cao, nhức đầu, nôn mửa và đau nhức cơ bắp). Các đáp án khác không được đề cập đến là triệu chứng lúc khởi phát nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "37",
               "content": "What did the federation of countries collaborate in order to do?",
               "options": [
-                "Completely destroy smallpox.",
                 "Compile a new vaccine.",
                 "Build more hospitals.",
+                "Completely destroy smallpox.",
                 "Invade other countries."
               ],
               "explanation": "Dịch câu hỏi: Liên minh các quốc gia đã hợp tác để làm gì?\nGiải thích: Chọn A.\nĐoạn 2 có viết: \"This federation of countries collaborated to completely destroy smallpox.\" (Liên minh các quốc gia này đã hợp tác để tiêu diệt hoàn toàn căn bệnh đậu mùa). Đáp án A là chính xác nhất nha bạn!",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "38",
               "content": "Why couldn’t the needy peoples’ countries curb the spread of smallpox?",
               "options": [
-                "Their countries could not afford the vaccine nor supply enough doctors.",
                 "They didn't believe in the vaccine.",
                 "They had too many people.",
-                "The disease mutated too quickly."
+                "The disease mutated too quickly.",
+                "Their countries could not afford the vaccine nor supply enough doctors."
               ],
               "explanation": "Dịch câu hỏi: Tại sao các nước nghèo không thể kiềm chế sự lây lan của bệnh đậu mùa?\nGiải thích: Chọn A.\nThông tin ở đoạn 3: \"Their countries could not afford the vaccine nor supply enough doctors to curb the spread of smallpox.\" (Các quốc gia của họ không có khả năng mua vắc-xin cũng như không thể cung cấp đủ bác sĩ để kiềm chế sự lây lan của bệnh đậu mùa). Rất rõ ràng phải không nào!",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "39",
@@ -468,18 +462,26 @@
               "id": "40",
               "content": "Who certified that smallpox had been stopped in December of 1979?",
               "options": [
-                "A group of scientists.",
                 "The federation.",
+                "A group of scientists.",
                 "The needy people.",
                 "The United Nations."
               ],
               "explanation": "Dịch câu hỏi: Ai đã xác nhận rằng bệnh đậu mùa đã được ngăn chặn vào tháng 12 năm 1979?\nGiải thích: Chọn A.\nĐoạn 5 có cung cấp thông tin: \"But nearly thirty years later, on December 9, 1979, a group of scientists certified that smallpox had been successfully stopped.\" (Nhưng gần 30 năm sau, vào ngày 9 tháng 12 năm 1979, một nhóm các nhà khoa học đã xác nhận rằng bệnh đậu mùa đã được ngăn chặn thành công). Do đó đáp án đúng là một nhóm nhà khoa học (A group of scientists) .",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n<img src=\"/unit13_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Sự kết thúc của bệnh đậu mùa</h1>\n\n<p style=\"margin-bottom: 1rem;\"><b>Bệnh đậu mùa</b> từng là căn bệnh chết người nhất thế giới. Trong những năm 1800, hơn 20 triệu người mắc bệnh này mỗi năm. Trong số đó, gần một nửa đã tử vong. Vào lúc <b>khởi phát</b> của <b>bệnh đậu mùa</b>, người bệnh phải chịu đựng những cơn sốt cao, đau đầu, nôn mửa và đau nhức cơ bắp. Tuy nhiên, triệu chứng tồi tệ nhất trong tất cả là một <b>phát ban</b> <b>không thể chịu đựng được</b> gây ra sự ngứa ngáy trên toàn bộ cơ thể. Những người sống sót qua căn bệnh này thường bị <b>làm cho</b> mù lòa hoặc bị bỏ lại với những vết sẹo <b>lớn</b> trên mặt và cơ thể.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, ngày nay, các trường hợp <b>bệnh đậu mùa</b> rất hiếm do nỗ lực của nhiều quốc gia trong cuối những năm 1900. <b>Liên đoàn</b> các quốc gia này đã <b>hợp tác</b> để tiêu diệt hoàn toàn <b>bệnh đậu mùa</b>. Vào đầu thế kỷ, các quốc gia giàu có ở Châu Âu và Bắc Mỹ đã phát triển một chất làm cho cơ thể miễn dịch với <b>bệnh đậu mùa</b>. Họ đã yêu cầu tất cả công dân của mình tiêm loại vắc-xin này để <b>chống lại</b> căn bệnh. Do đó, người dân ở những quốc gia này không còn phải lo lắng về <b>bệnh đậu mùa</b> nữa.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, nhiều người <b>nghèo túng</b> ở các khu vực nghèo hơn trên thế giới vẫn phải chịu đựng căn bệnh này. Các quốc gia của họ không thể chi trả cho vắc-xin cũng như không thể cung cấp đủ bác sĩ để <b>kiềm chế</b> sự lây lan của <b>bệnh đậu mùa</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Năm 1950, các quốc gia giàu có hơn trên thế giới đã <b>thề</b> sẽ giải phóng thế giới khỏi căn bệnh này. Họ <b>cam kết</b> cung cấp vắc-xin cho bất kỳ quốc gia nào không thể chi trả. Các nhà khoa học đã <b>biên soạn</b> danh sách các khu vực nơi căn bệnh vẫn còn phát triển mạnh. Sau đó, các bác sĩ đã <b>chẩn đoán</b> những người mắc bệnh ở các khu vực này. Họ đã <b>ban hành</b> luật <b>cấm</b> những người mắc <b>bệnh đậu mùa</b> tiếp xúc với những người không mắc bệnh. Bằng cách này, họ không thể <b>truyền</b> căn bệnh cho người khác. Sau đó, các bác sĩ đã tiêm vắc-xin cho tất cả họ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Việc này mất rất nhiều thời gian và công sức. Nhưng gần ba mươi năm sau, vào ngày 9 tháng 12 năm 1979, một nhóm các nhà khoa học đã <b>chứng nhận</b> rằng <b>bệnh đậu mùa</b> đã được ngăn chặn thành công. Những nỗ lực <b>nhân đạo</b> của mọi người từ khắp nơi trên thế giới đã hoàn thành một nhiệm vụ vĩ đại.</p>\n</div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 13: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

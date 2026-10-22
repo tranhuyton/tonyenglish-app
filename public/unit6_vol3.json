@@ -14,73 +14,73 @@
               "id": "1",
               "content": "The ___________ lived in one of the poorest ___________ in the country.",
               "options": [
-                "senator / districts",
                 "districts / senator",
                 "skull / tapped",
+                "senator / districts",
                 "tapped / skull"
               ],
               "explanation": "senator (thượng nghị sĩ) chỉ người, sống ở districts (quận/khu vực) nghèo nhất.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "2",
               "content": "When he ___________ his fist on the top of his ___________ , it made a funny sound.",
               "options": [
-                "tapped / skull",
                 "skull / tapped",
                 "underneath / worm",
-                "worm / underneath"
+                "worm / underneath",
+                "tapped / skull"
               ],
               "explanation": "tapped (gõ nhẹ) nắm đấm lên skull (hộp sọ) tạo ra âm thanh buồn cười.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "3",
               "content": "If you want to find a ___________ , try looking ___________ rocks or pieces of wood.",
               "options": [
-                "underneath / worm",
                 "worm / underneath",
+                "underneath / worm",
                 "consoled / broadcast",
                 "broadcast / consoled"
               ],
               "explanation": "Tìm worm (con giun) bằng cách nhìn underneath (bên dưới) các hòn đá.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
               "content": "She ___________ her children by watching a humorous ___________ with them after school.",
               "options": [
-                "consoled / broadcast",
                 "broadcast / consoled",
+                "consoled / broadcast",
                 "execute / tremendous",
                 "tremendous / execute"
               ],
               "explanation": "consoled (an ủi) bọn trẻ bằng cách xem một broadcast (chương trình phát sóng) hài hước.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "5",
               "content": "She felt ___________ sorrow after her husband was ___________ for his crime.",
               "options": [
-                "tremendous / executed",
                 "execute / tremendous",
                 "endure / bulletin",
+                "tremendous / executed",
                 "bulletin / endure"
               ],
               "explanation": "felt tremendous (to lớn) sorrow khi chồng bị executed (xử tử).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "6",
               "content": "He decided to listen to the news ___________ because he could no longer ___________ the boredom of being home alone.",
               "options": [
-                "bulletin / endure",
                 "endure / bulletin",
                 "grasp / stir",
-                "stir / grasp"
+                "stir / grasp",
+                "bulletin / endure"
               ],
               "explanation": "Nghe news bulletin (bản tin) vì không thể endure (chịu đựng) sự nhàm chán.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -98,37 +98,37 @@
               "id": "8",
               "content": "The television news ___________ us of the storm. We put the car in the ___________ of the house where it would be protected.",
               "options": [
-                "alerted / rear",
                 "rear / alerted",
+                "alerted / rear",
                 "chop / drawer",
                 "drawer / chop"
               ],
               "explanation": "Bản tin alerted (cảnh báo) về cơn bão, đỗ xe ở rear (phía sau) nhà.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "9",
               "content": "She looked at all the tools in the ___________ but could not find anything to use to ___________ the meat.",
               "options": [
-                "drawer / chop",
                 "chop / drawer",
                 "bump / closet",
+                "drawer / chop",
                 "closet / bump"
               ],
               "explanation": "Tìm trong drawer (ngăn kéo) nhưng không có dụng cụ để chop (băm/thái) thịt.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "10",
               "content": "Many toys had been piled beneath the carpet in the ___________ . The ___________ I got from hitting my head on the door was painful.",
               "options": [
-                "closet / bump",
                 "bump / closet",
                 "drawer / chop",
-                "chop / drawer"
+                "chop / drawer",
+                "closet / bump"
               ],
               "explanation": "Đồ chơi trong closet (tủ quần áo), vết bump (sưng/u) trên đầu rất đau.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -284,13 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Senator and the Worm</h1>        <p style=\"margin-bottom: 1rem;\">A rich <strong>senator</strong> lived in a big house. He had more money than anyone in his <strong>district</strong>. One day, he was sitting on a chair listening to a radio <strong>broadcast</strong>. As he listened to the news <strong>bulletin</strong>, a <strong>worm</strong> crawled from <strong>underneath</strong> the chair and onto his head.</p>    <p style=\"margin-bottom: 1rem;\">His cook was in the kitchen stirring some spaghetti sauce. Suddenly, a cry from the <strong>senator</strong> <strong>alerted</strong> him. He ran to the <strong>rear</strong> of the house where the <strong>senator</strong> was sitting.</p>    <p style=\"margin-bottom: 1rem;\">The cook looked and saw the <strong>worm</strong>. He tried to <strong>console</strong> the <strong>senator</strong>. \"I'll take it off right away,\" he said.</p>    <p style=\"margin-bottom: 1rem;\">\"No!\" shouted the <strong>senator</strong>. \"I want you to kill it.\"</p>    <p style=\"margin-bottom: 1rem;\">\"But it's only a <strong>worm</strong>,\" the cook said. \"Why should we <strong>execute</strong> it? It hasn't committed a crime.\"</p>    <p style=\"margin-bottom: 1rem;\">The <strong>senator</strong> could not <strong>endure</strong> the <strong>worm</strong> on his head. \"Hurry!\" he shouted.</p>    <p style=\"margin-bottom: 1rem;\">The cook looked through several <strong>drawers</strong>, but found nothing. Then he ran to the <strong>closet</strong> and took out a pipe. He returned to the <strong>senator</strong> and lifted the pipe over his head. He knew he couldn't just <strong>tap</strong> the <strong>worm</strong>. He was going to hit it hard. He <strong>grasped</strong> the pipe tightly.</p>    <p style=\"margin-bottom: 1rem;\">\"What are you waiting for?\" said the <strong>senator</strong>. \"Kill it!\"</p>    <p style=\"margin-bottom: 1rem;\">The cook swung the pipe at the <strong>senator</strong>'s head.</p>    <p style=\"margin-bottom: 1rem;\">\"Oh, no,\" the <strong>worm</strong> said. \"He's going to <strong>chop</strong> me in half.\" It jumped off the <strong>senator</strong>'s head.</p>    <p style=\"margin-bottom: 1rem;\">There was a <strong>tremendous</strong> noise. \"Owww!\" cried the <strong>senator</strong>.</p>    <p style=\"margin-bottom: 1rem;\">A <strong>bump</strong> rose upon his <strong>skull</strong>. Meanwhile, the <strong>worm</strong> crawled outside.</p>    <p style=\"margin-bottom: 1rem;\">\"That was close,\" said the <strong>worm</strong>. \"Instead of being nice, he wanted to hurt me. Now, that man has a big <strong>bump</strong> on his head.\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Senator and the Worm</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A rich <strong>senator</strong> lived in a big house. He had more money than anyone in his <strong>district</strong>. One day, he was sitting on a chair listening to a radio <strong>broadcast</strong>. As he listened to the news <strong>bulletin</strong>, a <strong>worm</strong> crawled from <strong>underneath</strong> the chair and onto his head.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">His cook was in the kitchen stirring some spaghetti sauce. Suddenly, a cry from the <strong>senator</strong> <strong>alerted</strong> him. He ran to the <strong>rear</strong> of the house where the <strong>senator</strong> was sitting.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The cook looked and saw the <strong>worm</strong>. He tried to <strong>console</strong> the <strong>senator</strong>. \"I'll take it off right away,\" he said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"No!\" shouted the <strong>senator</strong>. \"I want you to kill it.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"But it's only a <strong>worm</strong>,\" the cook said. \"Why should we <strong>execute</strong> it? It hasn't committed a crime.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The <strong>senator</strong> could not <strong>endure</strong> the <strong>worm</strong> on his head. \"Hurry!\" he shouted.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The cook looked through several <strong>drawers</strong>, but found nothing. Then he ran to the <strong>closet</strong> and took out a pipe. He returned to the <strong>senator</strong> and lifted the pipe over his head. He knew he couldn't just <strong>tap</strong> the <strong>worm</strong>. He was going to hit it hard. He <strong>grasped</strong> the pipe tightly.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"What are you waiting for?\" said the <strong>senator</strong>. \"Kill it!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The cook swung the pipe at the <strong>senator</strong>'s head.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"Oh, no,\" the <strong>worm</strong> said. \"He's going to <strong>chop</strong> me in half.\" It jumped off the <strong>senator</strong>'s head.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There was a <strong>tremendous</strong> noise. \"Owww!\" cried the <strong>senator</strong>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A <strong>bump</strong> rose upon his <strong>skull</strong>. Meanwhile, the <strong>worm</strong> crawled outside.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">\"That was close,\" said the <strong>worm</strong>. \"Instead of being nice, he wanted to hurt me. Now, that man has a big <strong>bump</strong> on his head.\"</p></div>",
       "imageUrl": "/unit6_v3_story.png",
       "sections": [
         {
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -352,12 +351,12 @@
               "explanation": "Khi bị đánh, con giun nói \"He's going to chop me in half. It jumped off the senator's head.\" (Ông ta định chặt tôi ra làm đôi. Nó nhảy khỏi đầu của thượng nghị sĩ). Con giun đã nhảy ra trước khi bị chặt làm đôi. Nên câu này là Sai (False).",
               "correctAnswer": "False"
             }
-          ]
+          ],
+          "questionType": "TFNG"
         },
         {
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
@@ -407,9 +406,11 @@
               "explanation": "Cùng lúc thượng nghị sĩ bị đánh trúng đầu thì \"Meanwhile, the worm crawled outside.\" (Trong khi đó, con giun đã bò ra ngoài). Vậy con giun bò ra bên ngoài ngôi nhà (Outside the house).",
               "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit6_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thượng nghị sĩ và con sâu</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một vị <strong>thượng nghị sĩ</strong> giàu có sống trong một ngôi nhà lớn. Ông ấy có nhiều tiền hơn bất kỳ ai trong <strong>khu vực</strong> của mình. Một ngày nọ, ông đang ngồi trên ghế nghe một <strong>chương trình phát thanh</strong>. Khi ông đang nghe <strong>bản tin</strong> thời sự, một <strong>con sâu</strong> bò từ <strong>bên dưới</strong> ghế lên đầu ông.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đầu bếp của ông đang ở trong bếp khuấy nước sốt spaghetti. Đột nhiên, một tiếng kêu từ <strong>thượng nghị sĩ</strong> đã <strong>báo động</strong> anh ta. Anh ta chạy ra <strong>phía sau</strong> ngôi nhà nơi <strong>thượng nghị sĩ</strong> đang ngồi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người đầu bếp nhìn và thấy <strong>con sâu</strong>. Anh ta cố gắng <strong>an ủi</strong> <strong>thượng nghị sĩ</strong>. \"Tôi sẽ lấy nó ra ngay lập tức,\" anh ta nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Không!\" <strong>thượng nghị sĩ</strong> hét lên. \"Tôi muốn anh giết nó.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Nhưng nó chỉ là một <strong>con sâu</strong>,\" người đầu bếp nói. \"Tại sao chúng ta phải <strong>tử hình</strong> nó? Nó đâu có phạm tội gì.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Vị <strong>thượng nghị sĩ</strong> không thể <strong>chịu đựng</strong> được <strong>con sâu</strong> trên đầu mình. \"Nhanh lên!\" ông hét lên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Người đầu bếp lục tìm qua vài <strong>ngăn kéo</strong>, nhưng không thấy gì. Sau đó anh ta chạy đến <strong>tủ đồ</strong> và lấy ra một cái ống nước. Anh ta quay lại chỗ <strong>thượng nghị sĩ</strong> và nâng cái ống lên trên đầu ông. Anh ta biết mình không thể chỉ <strong>gõ nhẹ</strong> vào <strong>con sâu</strong>. Anh ta định sẽ đánh nó thật mạnh. Anh ta <strong>nắm chặt</strong> cái ống.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Anh còn chờ gì nữa?\" <strong>thượng nghị sĩ</strong> nói. \"Giết nó đi!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Người đầu bếp vung ống nước đập vào đầu <strong>thượng nghị sĩ</strong>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Ôi không,\" <strong>con sâu</strong> nói. \"Anh ta sẽ <strong>chặt</strong> mình làm đôi mất.\" Nó nhảy ra khỏi đầu <strong>thượng nghị sĩ</strong>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Có một tiếng động <strong>kinh khủng</strong>. \"Á!\" <strong>thượng nghị sĩ</strong> kêu lên.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một <strong>cục u</strong> nổi lên trên <strong>hộp sọ</strong> của ông. Trong khi đó, <strong>con sâu</strong> bò ra ngoài.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Thật là suýt sao,\" <strong>con sâu</strong> nói. \"Thay vì tử tế, ông ta lại muốn làm hại mình. Bây giờ, người đàn ông đó đã có một <strong>cục u</strong> lớn trên đầu.\"</p>\n</div>"
     }
   ],
   "basicInfo": {

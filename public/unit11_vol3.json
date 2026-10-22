@@ -3,357 +3,472 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">anticipate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æntísəpèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To anticipate something is to think that it will happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Carrie anticipated the arrival of her baby.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">barrel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bǽrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A barrel is a round thing that you can keep liquids in.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was an empty barrel outside the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beam</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bi:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A beam is a heavy bar.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Modern skyscrapers are made with several beams.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">casual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kǽʒuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is casual, it is relaxed or simple.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ You can wear casual clothes to the party like jeans.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">caution</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔ́:ʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Caution is care and attention in order to avoid danger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please use the power saw with caution. It is very dangerous.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contrary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑ́ntreri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is contrary to something else, it is the opposite.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It isn't warm outside at all. On the contrary, it is quite cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deliberate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dilíbərit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are deliberate, you do something on purpose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Bernie made a deliberate attempt to injure Andy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dissolve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dizɑ́lv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dissolve something is to mix it into a liquid and disappear.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I dissolved the pill in a glass of water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">explode</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksplóud]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something explodes, it blows up.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My new radio exploded when I plugged it in.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fasten</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fǽsn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To fasten something is to close it or put it in the correct place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Elizabeth fastened her seat belt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">germ</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒə:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A germ is something that makes you sick.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Germs are on everything that you touch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">kit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A kit is a set of all the things needed to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Is there a first aid kit in your office?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">puff</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A puff is a little bit of smoke or steam.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A puff of smoke came from the burnt match.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rag</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræg]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rag is a small towel.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please use a rag to clean the dust off the table.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scatter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skǽtər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To scatter something is to make it go in many places.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I accidentally scattered all of my pills.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A scent is a smell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Julie enjoyed the scent of the flowers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sti:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Steel is a shiny gray metal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new apartment building was made with steel.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">swift</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[swift]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is swift, it is fast.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The swift horse easily jumped over the hurdle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">toss</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tɔ:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you toss something, you throw it softly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He tossed a coin into the air.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">triumph</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tráiəmf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Triumph is what you feel when you win or finish something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He raised the award in triumph at the end of his speech.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abnormal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æbnɔ:rməl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is abnormal, it is strange or not normal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her idea of art is a bit too abnormal for me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bamboo</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bæmbu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Bamboo is a hard plant with thin branches and leaves.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Outside his home, there is a lot of bamboo.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blossom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blɑsəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A blossom is a flower or group of flowers.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were colorful blossoms in the yard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compass</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kʌmpəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A compass is a device used to tell what direction one is going.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A compass is an important tool to have when you are traveling.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dialect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[daiəlekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dialect is a regional variety of language showing where you are from.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People from the U.K. have a different dialect of English from those in the U.S.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dishonest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disɑnist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is dishonest, they do not tell the truth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was being dishonest when she copied the answers from his test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dwarf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dwɔ:rf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dwarf is a creature from stories that often looks like a short, hairy man.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dwarf had a pleasant look on his face.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ecosystem</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[i:kousistəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ecosystem is a group of plants and animals in an area.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The river’s ecosystem not only includes fish but other insects and plants.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fatal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feitl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fatal, it causes death.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They passed away in a fatal car crash.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impatient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impeiʃənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is impatient, they are not able to wait for things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Bob was so impatient that he could barely wait for the light to turn green.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">leaf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:f]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A leaf is the flat green thing on trees or bushes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the fall, the leaves on the trees change colors.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">manuscript</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mænjəskript]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A manuscript is an old book or paper written by hand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The manuscript was written over 150 years ago.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">marsh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑ:rʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A marsh is a type of wet land covered with grasses and short plants.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The marsh looked so lovely against the mountains.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">patience</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[peiʃəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Patience is the ability to wait for something without becoming upset.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sue’s patience was rewarded by catching her very first fish.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perfume</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pə:rfju:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Perfume is a good-smelling liquid that girls wear.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When she wore her perfume, everyone said she smelled great.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pond</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɑnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pond is a very small area of water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The ducks swam in the pond.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">proverb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑvə:rb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A proverb is a short saying that tells you something important.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The proverb “egg on your face” means you’ve done something embarrassing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pursuit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pərsu:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pursuit is a chase.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dinosaur was in pursuit of the caveman.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[risait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To recite something means to repeat or say aloud in front of a group.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Katie recited the Pledge of Allegiance in class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wilderness</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wildərnis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wilderness is an area where no people live.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you are not careful, you can get lost in the wilderness.</div></div></div></div></div></div>",
       "sections": [
         {
           "id": "sec_wordlist_0",
-          "title": "Part A: Choose the right definition for the given word.",
+          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "anticipate",
+              "content": "to speak openly",
               "options": [
-                "to win",
-                "to wait for",
-                "to blow up",
-                "to go everywhere"
+                "abnormal",
+                "compass",
+                "recite",
+                "pursuit"
               ],
-              "explanation": "anticipate (mong đợi, dự đoán) = to wait for",
-              "correctAnswer": "B"
+              "correctAnswer": "C",
+              "explanation": "recite có nghĩa là đọc to, ngâm thơ trước đám đông."
             },
             {
               "id": "2",
-              "content": "kit",
+              "content": "capable of causing death",
               "options": [
-                "something that makes you sick",
-                "set of things needed to do something",
-                "a round container",
-                "a smell"
+                "wilderness",
+                "fatal",
+                "impatient",
+                "blossom"
               ],
-              "explanation": "kit (bộ dụng cụ) = set of things needed to do something",
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "fatal có nghĩa là gây chết người, chí mạng."
             },
             {
               "id": "3",
-              "content": "steel",
+              "content": "a group of living things",
               "options": [
-                "a large bar",
-                "a small towel",
-                "shiny metal",
-                "opposite"
+                "ecosystem",
+                "manuscript",
+                "dwarf",
+                "bamboo"
               ],
-              "explanation": "steel (thép) = shiny metal",
-              "correctAnswer": "C"
+              "correctAnswer": "A",
+              "explanation": "ecosystem là hệ sinh thái (quần thể sinh vật sống trong một khu vực)."
             },
             {
               "id": "4",
-              "content": "contrary",
+              "content": "the ability to wait without getting upset",
               "options": [
-                "careful",
-                "the opposite",
-                "fast",
-                "to lockdown"
+                "proverb",
+                "marsh",
+                "patience",
+                "abnormal"
               ],
-              "explanation": "contrary (ngược lại) = the opposite",
-              "correctAnswer": "B"
+              "correctAnswer": "C",
+              "explanation": "patience là sự kiên nhẫn."
             },
             {
               "id": "5",
-              "content": "toss",
+              "content": "a very short character in stories",
               "options": [
-                "to throw",
-                "small amount",
-                "to smell",
-                "smoke"
+                "leaf",
+                "dialect",
+                "recite",
+                "dwarf"
               ],
-              "explanation": "toss (quăng, ném) = to throw",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "6",
-              "content": "triumph",
-              "options": [
-                "to win",
-                "the opposite",
-                "to lock something in place",
-                "a heavy metal bar"
-              ],
-              "explanation": "triumph (chiến thắng) = to win",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "7",
-              "content": "scatter",
-              "options": [
-                "careful",
-                "metal",
-                "relaxed or simple",
-                "to go in many places"
-              ],
-              "explanation": "scatter (phân tán, rải rác) = to go in many places",
-              "correctAnswer": "D"
-            },
-            {
-              "id": "8",
-              "content": "casual",
-              "options": [
-                "a large bar",
-                "not fancy",
-                "relaxed or simple",
-                "opposite"
-              ],
-              "explanation": "casual (thông thường, tự nhiên) = relaxed or simple",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "9",
-              "content": "rag",
-              "options": [
-                "careful",
-                "a small towel",
-                "on purpose",
-                "to expect something"
-              ],
-              "explanation": "rag (giẻ lau) = a small towel",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "10",
-              "content": "beam",
-              "options": [
-                "to throw",
-                "metal",
-                "to be careful",
-                "a heavy metal bar"
-              ],
-              "explanation": "beam (cột, xà) = a heavy metal bar",
-              "correctAnswer": "B"
+              "correctAnswer": "D",
+              "explanation": "dwarf là chú lùn trong các câu chuyện."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         },
         {
           "id": "sec_wordlist_1",
-          "title": "Part B: Choose the right word for the given definition.",
+          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "11",
-              "content": "a round container",
+              "id": "6",
+              "content": "manuscript",
               "options": [
-                "scent",
-                "kit",
-                "beam",
-                "barrel"
+                "grass with thin branches",
+                "an area not settled by people",
+                "being able to wait",
+                "an old book"
               ],
-              "explanation": "barrel: thùng rỗng, hình trụ",
-              "correctAnswer": "D"
+              "correctAnswer": "D",
+              "explanation": "manuscript là bản thảo hoặc cuốn sách cổ viết tay."
             },
             {
-              "id": "12",
-              "content": "on purpose",
+              "id": "7",
+              "content": "proverb",
               "options": [
-                "deliberate",
-                "casual",
-                "swift",
-                "contrary"
+                "a short saying",
+                "a device used to tell direction",
+                "a small area of water",
+                "to say something aloud"
               ],
-              "explanation": "deliberate: cố ý",
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "proverb là câu tục ngữ, châm ngôn ngắn."
             },
             {
-              "id": "13",
-              "content": "something that makes you sick",
+              "id": "8",
+              "content": "pursuit",
               "options": [
-                "puff",
-                "rag",
-                "germs",
-                "triumph"
+                "a chase",
+                "not normal",
+                "a book",
+                "speaking"
               ],
-              "explanation": "germs: vi trùng",
-              "correctAnswer": "C"
+              "correctAnswer": "A",
+              "explanation": "pursuit là sự đuổi bắt, theo đuổi (a chase)."
             },
             {
-              "id": "14",
-              "content": "to lock something in place",
+              "id": "9",
+              "content": "dialect",
               "options": [
-                "anticipate",
-                "fasten",
-                "scatter",
-                "explode"
+                "can cause death",
+                "a different way of speaking",
+                "a flat green thing",
+                "a creature from stories"
               ],
-              "explanation": "fasten: thắt chặt, khóa chặt",
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "dialect là phương ngữ (cách nói chuyện theo vùng miền)."
             },
             {
-              "id": "15",
-              "content": "to mix in a liquid and disappear",
+              "id": "10",
+              "content": "marsh",
               "options": [
-                "caution",
-                "toss",
-                "dissolve",
-                "steel"
+                "flowers",
+                "wet land",
+                "lies",
+                "living things"
               ],
-              "explanation": "dissolve: hòa tan",
-              "correctAnswer": "C"
+              "correctAnswer": "B",
+              "explanation": "marsh là vùng đầm lầy, vùng đất ngập nước."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         },
         {
           "id": "sec_wordlist_2",
-          "title": "Part C: Write a word that is similar in meaning to the underlined part.",
+          "title": "Exercise 2: Choose the answer that best fits the question.",
           "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "What would you call some place where no one lives?",
+              "options": [
+                "Fatal",
+                "Abnormal",
+                "Wilderness",
+                "Dishonest"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Wilderness là vùng hoang dã nơi không có người ở."
+            },
+            {
+              "id": "12",
+              "content": "Where would you most likely find a fish?",
+              "options": [
+                "In a pond",
+                "On a leaf",
+                "In the wilderness",
+                "On some bamboo"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bạn có nhiều khả năng tìm thấy cá ở dưới ao (In a pond)."
+            },
+            {
+              "id": "13",
+              "content": "People use flowers to ________.",
+              "options": [
+                "be a dwarf",
+                "make perfume",
+                "recite a song",
+                "read a manuscript"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Con người dùng hoa để làm nước hoa (make perfume)."
+            },
+            {
+              "id": "14",
+              "content": "What would someone sailing in the ocean use to know which way they were going?",
+              "options": [
+                "An ecosystem",
+                "Patience",
+                "A dialect",
+                "A compass"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Người đi biển dùng la bàn (A compass) để xác định phương hướng."
+            },
+            {
+              "id": "15",
+              "content": "Which of the following is a part of a plant?",
+              "options": [
+                "A blossom",
+                "A marsh",
+                "A proverb",
+                "A pursuit"
+              ],
+              "correctAnswer": "A",
+              "explanation": "A blossom (bông hoa) là một bộ phận của cây."
+            }
+          ]
+        },
+        {
+          "id": "sec_wordlist_3",
+          "title": "Exercise 3: Choose the word that is a better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">When the house burned, <u>a large heavy bar</u> fell from the ceiling. [ 16 ]</p><p class=\"mb-4\">Joshua smiled in <u>great emotion and feeling after</u> he got a good grade on his science test. [ 17 ]</p><p class=\"mb-4\">She walked on the ice <u>with care</u> so she wouldn't fall. [ 18 ]</p><p class=\"mb-4\">It was scary when the car <u>blew up</u>, but luckily no one was hurt. [ 19 ]</p><p class=\"mb-4\">I used <u>a small towel</u> from the sink to clean up the milk I spilled. [ 20 ]</p><p class=\"mb-4\">The basketball player was <u>fast</u> and stole the ball. [ 21 ]</p><p class=\"mb-4\">You can wear <u>relaxed and simple</u> clothes to the school. [ 22 ]</p><p class=\"mb-4\">I really like the <u>smell</u> of this candle. [ 23 ]</p><p class=\"mb-4\">My cat made her food <u>go in many places</u>. [ 24 ]</p><p class=\"mb-4\">When we lit the fire, <u>a little smoke</u> came out of the chimney. [ 25 ]</p>",
-              "options": [],
-              "explanation": "a large heavy bar = beam (cái xà)",
-              "correctAnswer": "BEAM"
+              "content": "1. Frogs are an important part of the ________, especially around a(n) ________. (ecosystem / pond)",
+              "options": [
+                "ecosystem / pond",
+                "pond / ecosystem",
+                "recited / dialect",
+                "abnormal / dwarf"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Ếch là một phần quan trọng của hệ sinh thái (ecosystem), đặc biệt là quanh ao (pond)."
             },
             {
               "id": "17",
-              "content": "",
-              "options": [],
-              "explanation": "great emotion and feeling (after winning) = triumph (sự chiến thắng)",
-              "correctAnswer": "TRIUMPH"
+              "content": "2. When he ________ the poem in front of the class, they could not understand him because he spoke with a different ________. (recited / dialect)",
+              "options": [
+                "dialect / recited",
+                "recited / dialect",
+                "abnormal / dwarf",
+                "manuscript / impatient"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Khi anh ấy ngâm (recited) bài thơ, cả lớp không hiểu vì anh nói bằng một phương ngữ (dialect) khác."
             },
             {
               "id": "18",
-              "content": "",
-              "options": [],
-              "explanation": "with care = caution (sự cẩn thận)",
-              "correctAnswer": "CAUTION"
+              "content": "3. They had never seen anything as ________ as this creature. It looked and dressed like a man, but the ________ was short and had a long nose. (abnormal / dwarf)",
+              "options": [
+                "dwarf / abnormal",
+                "manuscript / impatient",
+                "abnormal / dwarf",
+                "proverbs / patience"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Chưa từng thấy sinh vật nào kỳ lạ (abnormal) như chú lùn (dwarf) này."
             },
             {
               "id": "19",
-              "content": "",
-              "options": [],
-              "explanation": "blew up = exploded (nổ tung)",
-              "correctAnswer": "EXPLODED"
+              "content": "4. The ________ was so old that the words were hard to read. Though she tried to read it, she soon became ________ and put the old book away. (manuscript / impatient)",
+              "options": [
+                "impatient / manuscript",
+                "proverbs / patience",
+                "pursuit / marsh",
+                "manuscript / impatient"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Bản thảo (manuscript) quá cũ khó đọc nên cô nhanh chóng mất kiên nhẫn (impatient)."
             },
             {
               "id": "20",
-              "content": "",
-              "options": [],
-              "explanation": "a small towel = rag (giẻ lau)",
-              "correctAnswer": "RAG"
+              "content": "5. Many ________ try to teach lessons about human qualities such as honesty and ________. (proverbs / patience)",
+              "options": [
+                "proverbs / patience",
+                "patience / proverbs",
+                "pursuit / marsh",
+                "blossom / perfume"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nhiều câu tục ngữ (proverbs) dạy bài học về lòng trung thực và sự kiên nhẫn (patience)."
             },
             {
               "id": "21",
-              "content": "",
-              "options": [],
-              "explanation": "fast = swift (nhanh chóng)",
-              "correctAnswer": "SWIFT"
+              "content": "6. The ________ through the ________ was very difficult because the ground was too wet to stand on. (pursuit / marsh)",
+              "options": [
+                "marsh / pursuit",
+                "pursuit / marsh",
+                "blossom / perfume",
+                "dishonest / fatal"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cuộc rượt đuổi (pursuit) băng qua đầm lầy (marsh) rất khó khăn vì đất ướt."
             },
             {
               "id": "22",
-              "content": "",
-              "options": [],
-              "explanation": "relaxed and simple = casual (đơn giản, bình thường)",
-              "correctAnswer": "CASUAL"
+              "content": "7. She crushed the ________ and mixed it with some water so she could make the ________. (blossom / perfume)",
+              "options": [
+                "perfume / blossom",
+                "dishonest / fatal",
+                "blossom / perfume",
+                "leaves / bamboo"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Nghiền cánh hoa (blossom) trộn với nước để làm nước hoa (perfume)."
             },
             {
               "id": "23",
-              "content": "",
-              "options": [],
-              "explanation": "smell = scent (mùi hương)",
-              "correctAnswer": "SCENT"
+              "content": "8. The label on the bottle was ________. It said that the powder didn’t hurt children when it was actually ________ for them to consume. (dishonest / fatal)",
+              "options": [
+                "fatal / dishonest",
+                "leaves / bamboo",
+                "wilderness / compass",
+                "dishonest / fatal"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Nhãn chai gian dối (dishonest) vì bột đó thực chất gây chết người (fatal)."
             },
             {
               "id": "24",
-              "content": "",
-              "options": [],
-              "explanation": "go in many places = scattered (phân tán, rải rác)",
-              "correctAnswer": "SCATTERED"
+              "content": "9. The ________ that grow on the ________ are thick and hard to chew. (leaves / bamboo)",
+              "options": [
+                "leaves / bamboo",
+                "bamboo / leaves",
+                "wilderness / compass",
+                "ecosystem / pond"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Những chiếc lá (leaves) mọc trên cây tre (bamboo) rất dày và khó nhai."
             },
             {
               "id": "25",
-              "content": "",
-              "options": [],
-              "explanation": "a little smoke = puff (luồng khói)",
-              "correctAnswer": "PUFF"
+              "content": "10. Because it is easy to lose your way in the ________, it’s a good idea to bring a ________ with you. (wilderness / compass)",
+              "options": [
+                "compass / wilderness",
+                "wilderness / compass",
+                "ecosystem / pond",
+                "recited / dialect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Vì dễ lạc trong vùng hoang dã (wilderness), bạn nên mang theo la bàn (compass)."
             }
-          ],
-          "questionType": "Điền từ"
+          ]
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Ice Cream Cone Explosion</h1>        <p style=\"margin-bottom: 1rem;\">One day, John walked to his uncle's ice cream shop. When he reached the sidewalk, he caught the <strong>scent</strong> of ice cream cones and <strong>anticipated</strong> eating some ice cream.</p>    <p style=\"margin-bottom: 1rem;\">Sam opened the door. Uncle John had a new, <strong>steel</strong> machine. \"What is that?\"</p>    <p style=\"margin-bottom: 1rem;\">\"It's a cone maker. I built it from a <strong>kit</strong>. You take flour from the <strong>barrel</strong> and put it in this pan,\" Uncle John said. \"Then add water and sugar here and stir it so the sugar <strong>dissolves</strong>. Next, you <strong>fasten</strong> down the <strong>beam</strong>.\" Uncle John wanted to look <strong>casual</strong>, but he was excited. He made a few <strong>swift</strong> motions and turned it on. There was a <strong>puff</strong> of smoke, and then cones came out the other end.</p>    <p style=\"margin-bottom: 1rem;\">\"Is it hard to use?\" Sam asked.</p>    <p style=\"margin-bottom: 1rem;\">\"On the <strong>contrary</strong>. It's easy to use. Want to try?\"</p>    <p style=\"margin-bottom: 1rem;\">Sam washed his hands with <strong>caution</strong>. He made a <strong>deliberate</strong> attempt to keep <strong>germs</strong> out of the dough. Soon, Sam had his first cone. He smiled in <strong>triumph</strong>!</p>    <p style=\"margin-bottom: 1rem;\">Uncle John tried to turn the machine off, but it just kept making cones. Sam and Uncle John put them on the counter, then on chairs. Before long, cones <strong>scattered</strong> all over the floor.</p>    <p style=\"margin-bottom: 1rem;\">They tried everything to stop it, but it wouldn't stop!</p>    <p style=\"margin-bottom: 1rem;\">\"What are we going to do?\" he said.</p>    <p style=\"margin-bottom: 1rem;\">\"Kick it!\" yelled Sam. Uncle John lifted his foot and gave the machine a kick. It made a funny noise and <strong>exploded</strong>. They were both covered with dough.</p>    <p style=\"margin-bottom: 1rem;\">Uncle John laughed when he knew Sam was OK. He <strong>tossed</strong> Sam a <strong>rag</strong> to clean his face and smiled. \"I guess we have enough cones now!\"</p></div>",
       "imageUrl": "/unit11_v3_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Peter and the Dwarf</h1><p style=\"margin-bottom: 1rem;\">Peter was a hunter. One day, he was in <strong>pursuit</strong> of a deer and became lost. He usually carried a <strong>compass</strong> with him when he went into the <strong>wilderness</strong>, but that day he left it at home.</p><p style=\"margin-bottom: 1rem;\">As he walked, the forest began to look different. He didn’t see any <strong>bamboo</strong>. Instead, there were bushes with long <strong>leaves</strong>. The <strong>ecosystem</strong> was now very <strong>abnormal</strong>. Peter knew he was in the Magic <strong>Marsh</strong>.</p><p style=\"margin-bottom: 1rem;\">Now he was tired and thirsty. He was afraid. Being lost in the <strong>marsh</strong> could be <strong>fatal</strong>. When people entered it, they never came out.</p><p style=\"margin-bottom: 1rem;\">At last, he found a <strong>pond</strong>. Flowers grew around it. The <strong>blossoms</strong> smelled like the best <strong>perfume</strong>. He felt relaxed so he drank some water and fell asleep. When he awoke, he saw an evil <strong>dwarf</strong> staring at him.</p><p style=\"margin-bottom: 1rem;\">“What are you doing here?” it asked. The <strong>dwarf</strong> spoke in a strange <strong>dialect</strong>.</p><p style=\"margin-bottom: 1rem;\">“I’m lost,” said Peter. “Can you help me?”</p><p style=\"margin-bottom: 1rem;\">“Yes,” it said, but Peter didn’t know it was <strong>dishonest</strong>.</p><p style=\"margin-bottom: 1rem;\">The <strong>dwarf</strong> took an old <strong>manuscript</strong> from his pocket. It was a magic map. “Just <strong>recite</strong> the words at the bottom,” the <strong>dwarf</strong> explained. “It will show you how to get home.”</p><p style=\"margin-bottom: 1rem;\">“Good,” Peter said. He was <strong>impatient</strong> and quickly grabbed the map.</p><p style=\"margin-bottom: 1rem;\">He <strong>recited</strong> the magic words, and a line appeared on the map. He walked for many days but never left the <strong>marsh</strong>. Finally, the map led him back to the <strong>pond</strong>. He walked in a circle!</p><p style=\"margin-bottom: 1rem;\">The <strong>dwarf</strong> was still there. “Here’s a <strong>proverb</strong> for you to think about,” it said. “When you are lost, <strong>patience</strong> is your best friend.”</p></div>",
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit11_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Peter Và Chú Lùn</h1>\n<p style=\"margin-bottom: 1rem;\">Peter là một thợ săn. Một ngày nọ, anh đang <strong>đuổi theo</strong> một con nai thì bị lạc. Anh thường mang theo <strong>la bàn</strong> bên mình khi đi vào <strong>vùng hoang dã</strong>, nhưng hôm đó anh lại để quên ở nhà.</p>\n<p style=\"margin-bottom: 1rem;\">Khi anh bước đi, khu rừng bắt đầu trông khác lạ. Anh không nhìn thấy bất kỳ cây <strong>tre</strong> nào. Thay vào đó là những bụi cây có <strong>lá</strong> dài. <strong>Hệ sinh thái</strong> lúc này trông rất <strong>bất thường</strong>. Peter biết mình đã lạc vào <strong>Đầm Lầy</strong> Phép Thuật.</p>\n<p style=\"margin-bottom: 1rem;\">Lúc này anh vừa mệt vừa khát. Anh cảm thấy sợ hãi. Bị lạc trong <strong>đầm lầy</strong> này có thể <strong>mất mạng</strong>. Khi người ta bước vào đó, họ không bao giờ thoát ra được.</p>\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, anh tìm thấy một cái <strong>ao</strong>. Hoa mọc xung quanh ao. Những <strong>bông hoa</strong> tỏa hương thơm như loại <strong>nước hoa</strong> tuyệt nhất. Anh cảm thấy thư giãn nên đã uống một chút nước rồi ngủ thiếp đi. Khi tỉnh dậy, anh thấy một <strong>chú lùn</strong> độc ác đang nhìn mình chằm chằm.</p>\n<p style=\"margin-bottom: 1rem;\">“Ngươi đang làm gì ở đây?” nó hỏi. <strong>Chú lùn</strong> nói bằng một <strong>phương ngữ</strong> kỳ lạ.</p>\n<p style=\"margin-bottom: 1rem;\">“Tôi bị lạc,” Peter nói. “Ông có thể giúp tôi không?”</p>\n<p style=\"margin-bottom: 1rem;\">“Được chứ,” nó đáp, nhưng Peter không hề biết rằng nó là kẻ <strong>gian dối</strong>.</p>\n<p style=\"margin-bottom: 1rem;\"><strong>Chú lùn</strong> lấy một <strong>bản thảo</strong> cũ từ trong túi ra. Đó là một tấm bản đồ phép thuật. “Chỉ cần <strong>đọc to</strong> những từ ở phía dưới,” <strong>chú lùn</strong> giải thích. “Nó sẽ chỉ cho ngươi đường về nhà.”</p>\n<p style=\"margin-bottom: 1rem;\">“Tốt quá,” Peter nói. Anh <strong>nóng vội</strong> và nhanh chóng chộp lấy tấm bản đồ.</p>\n<p style=\"margin-bottom: 1rem;\">Anh <strong>đọc to</strong> những lời thần chú, và một đường kẻ hiện lên trên bản đồ. Anh đi bộ suốt nhiều ngày nhưng vẫn không thoát khỏi <strong>đầm lầy</strong>. Cuối cùng, tấm bản đồ dẫn anh quay trở lại cái <strong>ao</strong>. Anh đã đi thành một vòng tròn!</p>\n<p style=\"margin-bottom: 1rem;\"><strong>Chú lùn</strong> vẫn ở đó. “Đây là một <strong>câu tục ngữ</strong> để ngươi suy ngẫm,” nó nói. “Khi bị lạc, <strong>sự kiên nhẫn</strong> là người bạn tốt nhất của ngươi.”</p></div>",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Answer the questions based on the story.",
-          "content": "",
+          "id": "sec_reading_0",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "<p>True / False</p>",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Mark each statement T for true or F for false.",
+              "content": "Peter left his compass at home.",
               "options": [
-                "1.T 2.T 3.F 4.F 5.T 6.T",
-                "1.F 2.T 3.T 4.F 5.T 6.F",
-                "1.T 2.F 3.T 4.T 5.F 6.T",
-                "1.F 2.F 3.F 4.T 5.T 6.T"
+                "True",
+                "False"
               ],
-              "explanation": "Đáp án đúng là lựa chọn A (1.T 2.T 3.F 4.F 5.T 6.T). Cụ thể các thông tin trong bài như sau:\n1. True: Đoạn 1 viết 'he caught the scent of ice cream cones'.\n2. True: Đoạn 3 bác John nói 'I built it from a kit'.\n3. False: Trong đoạn 3 bác John hướng dẫn 'Next, you fasten down the beam', nghĩa là bạn phải khóa thanh gạt lại.\n4. False: Đoạn 6 nói rõ 'Sam washed his hands with caution. He made a deliberate attempt to keep germs out of the dough', Sam đã cẩn thận rửa tay để loại bỏ vi khuẩn.\n5. True: Đoạn 7 viết 'Before long, cones scattered all over the floor'.\n6. True: Đoạn 11 viết 'He tossed Sam a rag to clean his face'.",
-              "correctAnswer": "A"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 1: 'He usually carried a compass with him... but that day he left it at home.' -> Đúng (True)."
             },
             {
               "id": "27",
-              "content": "Why did Uncle John toss a rag to Sam?",
+              "content": "When people entered the Magic Marsh, they always came out.",
               "options": [
-                "To clean the floor",
-                "To dissolve the sugar",
-                "To clean his face",
-                "To clean the steel"
+                "True",
+                "False"
               ],
-              "explanation": "Đáp án: To clean his face. Đoạn cuối cùng của truyện có viết: 'He tossed Sam a rag to clean his face' (Ông ném cho Sam một chiếc giẻ để lau mặt).",
-              "correctAnswer": "C"
+              "correctAnswer": "False",
+              "explanation": "Đoạn 3: 'When people entered it, they never came out.' -> Sai (False)."
             },
             {
               "id": "28",
-              "content": "What did Sam anticipate?",
+              "content": "Peter ate some flowers and fell asleep.",
               "options": [
-                "Going to the shop",
-                "Getting an ice cream cone",
-                "Working with his uncle",
-                "The machine exploding"
+                "True",
+                "False"
               ],
-              "explanation": "Đáp án: Getting an ice cream cone. Ở đoạn 1, tác giả mô tả: '...he caught the scent of ice cream cones and anticipated eating some ice cream.' Nghĩa là Sam đã ngửi thấy mùi hương và rất háo hức mong đợi được ăn một vài cây kem.",
-              "correctAnswer": "B"
+              "correctAnswer": "False",
+              "explanation": "Đoạn 4: 'He felt relaxed so he drank some water and fell asleep.' (Anh uống nước chứ không ăn hoa) -> Sai (False)."
             },
             {
               "id": "29",
-              "content": "What did the machine do?",
+              "content": "The dwarf spoke with a strange dialect.",
               "options": [
-                "Break the barrel",
-                "Give a bad scent",
-                "Scatter dough",
-                "Give a puff of smoke"
+                "True",
+                "False"
               ],
-              "explanation": "Đáp án: Give a puff of smoke. Theo đoạn 3, sau khi bác John khởi động máy thì: 'There was a puff of smoke' (Có một luồng khói phà ra).",
-              "correctAnswer": "D"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 5: 'The dwarf spoke in a strange dialect.' -> Đúng (True)."
             },
             {
               "id": "30",
-              "content": "What did Uncle John say about the machine?",
+              "content": "Peter knew the dwarf was dishonest.",
               "options": [
-                "It's easy to use.",
-                "It was swift.",
-                "It was deliberate.",
-                "It was contrary."
+                "True",
+                "False"
               ],
-              "explanation": "Đáp án: It's easy to use. Trong đoạn 5, bác John tự tin nói về cỗ máy: 'On the contrary. It's easy to use.' (Ngược lại chứ. Nó rất dễ sử dụng).",
-              "correctAnswer": "A"
+              "correctAnswer": "False",
+              "explanation": "Đoạn 7: 'but Peter didn’t know it was dishonest.' -> Sai (False)."
+            },
+            {
+              "id": "31",
+              "content": "The map led Peter back to the pond.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Đoạn 10: 'Finally, the map led him back to the pond.' -> Đúng (True)."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
+        },
+        {
+          "id": "sec_reading_1",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "32",
+              "content": "Why was Peter in the wilderness?",
+              "options": [
+                "He was in pursuit of a deer.",
+                "He was weak and hungry.",
+                "He was looking for the Magic Marsh.",
+                "He was lost."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đoạn 1: 'One day, he was in pursuit of a deer and became lost.'"
+            },
+            {
+              "id": "33",
+              "content": "How did Peter know he was in the Magic Marsh?",
+              "options": [
+                "There was a lot of bamboo.",
+                "There were no leaves.",
+                "The ecosystem was abnormal.",
+                "He smelled blossoms."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Đoạn 2: 'The ecosystem was now very abnormal. Peter knew he was in the Magic Marsh.'"
+            },
+            {
+              "id": "34",
+              "content": "What did the dwarf have that could help Peter escape the marsh?",
+              "options": [
+                "A bottle of perfume",
+                "A magic manuscript",
+                "A compass",
+                "Patience"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Đoạn 8: 'The dwarf took an old manuscript from his pocket. It was a magic map.'"
+            },
+            {
+              "id": "35",
+              "content": "Why was Peter afraid of the Magic Marsh?",
+              "options": [
+                "He was impatient.",
+                "Being lost there could be fatal.",
+                "He was tired and thirsty.",
+                "There was an evil dwarf in it."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Đoạn 3: 'He was afraid. Being lost in the marsh could be fatal.'"
+            }
+          ]
         }
       ]
     }

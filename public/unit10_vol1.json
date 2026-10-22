@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">It is <u>very important</u> that you call your mother soon.<br/>es [ 1 ]</p><p class=\"mb-4\">The <u>good thing</u> about being old is that you know many things.<br/>be [ 2 ]</p><p class=\"mb-4\">I have <u>problems</u> with my science homework.<br/>tr [ 3 ]</p><p class=\"mb-4\">I am <u>sure</u> that she will come to his party.<br/>ce [ 4 ]</p><p class=\"mb-4\">The <u>job</u> of the stove is to cook.<br/>fu [ 5 ]</p><p class=\"mb-4\">That is the <u>place</u> where they met.<br/>si [ 6 ]</p><p class=\"mb-4\">I saw his <u>picture</u> on TV.<br/>im [ 7 ]</p><p class=\"mb-4\">The twins don't like to be <u>apart</u>.<br/>se [ 8 ]</p><p class=\"mb-4\">I like to <u>stay</u> at home on the weekends.<br/>re [ 9 ]</p><p class=\"mb-4\">His <u>part that comes out of his rear</u> was shaking because he was happy.<br/>ta [ 10 ]</p>",
+              "content": "<p class=\"mb-4\">It is <u>very important</u> that you call your mother soon. (Hint: es...) [ 1 ]</p><p class=\"mb-4\">The <u>good thing</u> about being old is that you know many things. (Hint: be...) [ 2 ]</p><p class=\"mb-4\">I have <u>problems</u> with my science homework. (Hint: tr...) [ 3 ]</p><p class=\"mb-4\">I am <u>sure</u> that she will come to his party. (Hint: ce...) [ 4 ]</p><p class=\"mb-4\">The <u>job</u> of the stove is to cook. (Hint: fu...) [ 5 ]</p><p class=\"mb-4\">That is the <u>place</u> where they met. (Hint: si...) [ 6 ]</p><p class=\"mb-4\">I saw his <u>picture</u> on TV. (Hint: im...) [ 7 ]</p><p class=\"mb-4\">The twins don't like to be <u>apart</u>. (Hint: se...) [ 8 ]</p><p class=\"mb-4\">I like to <u>stay</u> at home on the weekends. (Hint: re...) [ 9 ]</p><p class=\"mb-4\">His <u>part that comes out of his rear</u> was shaking because he was happy. (Hint: ta...) [ 10 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "essential"
             },
@@ -244,7 +244,8 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The First Peacock</h1>\n<p style=\"margin-bottom: 1rem;\">Argos lived in Ancient Greece. He was a husband and a <b>proud</b> father. He worked hard and did well at his job. But one thing about him wasn't normal. He was born with 100 eyes. Having many eyes was usually a <b>benefit</b> to him. He had a <b>chance</b> to see many things.</p>\n<p style=\"margin-bottom: 1rem;\">Also, since he had so many eyes, he was very good at <b>guarding</b> things. While sleeping, he only <b>rested</b> a few eyes at a time. The others stayed awake. He worked for Hera, a great goddess. His <b>primary function</b> was to <b>guard</b> a special cow. The cow was very important to Hera. It was her favorite pet. The most <b>essential</b> part of his job was to keep the cow alone. It had to be kept <b>separate</b> from all the other cows and <b>far</b> away from people.</p>\n<p style=\"margin-bottom: 1rem;\">This was an easy job for Argos. The cow just ate <b>grass</b> all day. But the god Zeus wanted the cow. He wanted to take it away from Hera. He had a plan. He found a great music player. He asked the man to play a beautiful song for Argos. Zeus was <b>certain</b> Argos would go to sleep.</p>\n<p style=\"margin-bottom: 1rem;\">The song had an <b>immediate effect</b>. Argos couldn't <b>focus</b> on his job. He fell asleep. Zeus saw this, and he took the cow.</p>\n<p style=\"margin-bottom: 1rem;\">Hera was very angry with Argos. She turned him into a peacock. She put his many eyes on his <b>tail</b>. Argos was very sad.</p>\n<p style=\"margin-bottom: 1rem;\">Zeus saw how much <b>trouble</b> he had caused Argos. He made another plan. He turned Argos into a group of stars. He wanted Argos to <b>remain</b> in the sky forever. Even today, Argos' <b>image</b> remains there, above the <b>site</b> where all his problems began. We can still see him in the night sky.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The First Peacock</h1>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Argos lived in Ancient Greece. He was a husband and a <b>proud</b> father. He worked hard and did well at his job. But one thing about him wasn't normal. He was born with 100 eyes. Having many eyes was usually a <b>benefit</b> to him. He had a <b>chance</b> to see many things.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Also, since he had so many eyes, he was very good at <b>guarding</b> things. While sleeping, he only <b>rested</b> a few eyes at a time. The others stayed awake. He worked for Hera, a great goddess. His <b>primary function</b> was to <b>guard</b> a special cow. The cow was very important to Hera. It was her favorite pet. The most <b>essential</b> part of his job was to keep the cow alone. It had to be kept <b>separate</b> from all the other cows and <b>far</b> away from people.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">This was an easy job for Argos. The cow just ate <b>grass</b> all day. But the god Zeus wanted the cow. He wanted to take it away from Hera. He had a plan. He found a great music player. He asked the man to play a beautiful song for Argos. Zeus was <b>certain</b> Argos would go to sleep.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The song had an <b>immediate effect</b>. Argos couldn't <b>focus</b> on his job. He fell asleep. Zeus saw this, and he took the cow.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Hera was very angry with Argos. She turned him into a peacock. She put his many eyes on his <b>tail</b>. Argos was very sad.</p>\n<p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Zeus saw how much <b>trouble</b> he had caused Argos. He made another plan. He turned Argos into a group of stars. He wanted Argos to <b>remain</b> in the sky forever. Even today, Argos' <b>image</b> remains there, above the <b>site</b> where all his problems began. We can still see him in the night sky.</p></div>",
+      "imageUrl": "/unit10_peacock.png",
       "sections": [
         {
           "id": "sec6_reading",
@@ -298,27 +299,25 @@
               ],
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "B"
+            },
+            {
+              "id": "30",
+              "content": "<p class=\"mb-4\">How did Argos sleep?</p>",
+              "options": [
+                "He slept only during the daytime.",
+                "He only rested a few eyes at a time while the others stayed awake.",
+                "He never slept at all.",
+                "He closed all one hundred eyes when he heard music."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Trong bài đọc có câu: 'He only rested a few eyes at a time. The others stayed awake.' (Mỗi lần Argos chỉ nhắm nghỉ một vài con mắt, những con mắt còn lại vẫn thức)."
             }
           ],
           "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec6_reading_sa",
-          "title": "Short Answer",
-          "content": "",
-          "questions": [
-            {
-              "id": "30",
-              "content": "How did Argos sleep?",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "He only rested a few eyes at a time. The others stayed awake."
-            }
-          ],
-          "questionType": "Đoạn văn"
         }
       ],
       "explanation": "",
-      "imageUrl": "/unit10_peacock.png"
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit10_peacock.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Con Công Đầu Tiên</h1>\n\n<p style=\"margin-bottom: 1rem;\">Argos sống ở Hy Lạp Cổ đại. Ông là một người chồng và một người cha <b>đầy tự hào</b>. Ông làm việc chăm chỉ và làm rất tốt công việc của mình. Nhưng có một điều về ông không được bình thường. Ông sinh ra đã có 100 con mắt. Việc có nhiều mắt thường là một <b>lợi ích</b> đối với ông. Ông có <b>cơ hội</b> để nhìn thấy rất nhiều thứ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngoài ra, vì ông có quá nhiều mắt, ông rất giỏi trong việc <b>canh gác</b> mọi thứ. Trong khi ngủ, ông chỉ <b>cho nghỉ ngơi</b> vài con mắt cùng một lúc. Những con mắt khác vẫn thức. Ông làm việc cho Hera, một nữ thần vĩ đại. <b>Chức năng chính</b> của ông là <b>bảo vệ</b> một con bò đặc biệt. Con bò này rất quan trọng đối với Hera. Nó là thú cưng yêu thích của bà. Phần <b>thiết yếu</b> nhất trong công việc của ông là giữ cho con bò ở một mình. Nó phải được giữ <b>tách biệt</b> khỏi tất cả những con bò khác và ở <b>xa</b> con người.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đây là một công việc dễ dàng đối với Argos. Con bò chỉ ăn <b>cỏ</b> cả ngày. Nhưng thần Zeus lại muốn con bò đó. Ông muốn cướp nó khỏi tay Hera. Ông đã có một kế hoạch. Ông tìm thấy một người chơi nhạc tuyệt vời. Ông yêu cầu người đàn ông đó chơi một bài hát hay cho Argos nghe. Zeus <b>chắc chắn</b> rằng Argos sẽ ngủ thiếp đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Bài hát đã có một <b>tác động ngay lập tức</b>. Argos không thể <b>tập trung</b> vào công việc của mình. Ông ngủ thiếp đi. Zeus nhìn thấy điều này, và ông đã bắt con bò đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Hera rất tức giận với Argos. Bà biến ông thành một con công. Bà đặt vô số con mắt của ông lên <b>đuôi</b> của nó. Argos rất buồn bã.</p>\n\n<p style=\"margin-bottom: 1rem;\">Zeus nhìn thấy bao nhiêu <b>rắc rối</b> mà ông đã gây ra cho Argos. Ông lập một kế hoạch khác. Ông biến Argos thành một chòm sao. Ông muốn Argos <b>ở lại</b> trên bầu trời mãi mãi. Thậm chí cho đến ngày nay, <b>hình ảnh</b> của Argos vẫn còn ở đó, phía trên <b>địa điểm</b> nơi tất cả những vấn đề của ông bắt đầu. Chúng ta vẫn có thể nhìn thấy ông trên bầu trời đêm.</p>\n</div>"
     }
   ],
   "basicInfo": {

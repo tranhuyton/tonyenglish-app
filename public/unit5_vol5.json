@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 5: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -410,7 +404,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Famous Accident</h1>        <p style=\"margin-bottom: 1rem;\">One of the greatest <b>pharmaceutical</b> discoveries happened by accident. In his <b>haste</b> to go on vacation, Alexander Fleming had left his laboratory in a mess. The <b>essence</b> of his <b>ongoing</b> work involved a type of bacteria. An infection caused by the bacteria was often <b>terminal</b>, and he was looking for a <b>remedy</b>. He had left the bacteria out while he was away.</p>    <p style=\"margin-bottom: 1rem;\">When he returned from vacation, he found that his lab was covered in fungus. He started cleaning up the mess. While he was cleaning, he had an <b>impulse</b> to examine the fungus. He saw that whenever the fungus was in close <b>proximity</b> to the bacteria, the bacteria died.</p>    <p style=\"margin-bottom: 1rem;\">Though he was a messy scientist, his experiments were <b>precise</b>. He thought that there might be some <b>significance</b> to the fungus. He immediately <b>commenced</b> an experiment to <b>assess</b> what had happened to the bacteria. It had either died by accident or the fungus had killed it. The <b>subsequent</b> tests proved it was the <b>latter</b> reason.</p>    <p style=\"margin-bottom: 1rem;\">What he found <b>astonished</b> him. The fungus actually killed the bad bacteria. All this time, he had been looking for a <b>synthetic</b> material to kill the bacteria. Instead, a common fungus did the job.</p>    <p style=\"margin-bottom: 1rem;\">He knew that something in the fungus had killed the bacteria. His next step was to find those <b>molecules</b> that had done it. When he found them, he <b>extracted</b> them and put them into a pill. The drug proved to be very effective. It also worked against other types of harmful bacteria.</p>    <p style=\"margin-bottom: 1rem;\">The discovery received a lot of <b>publicity</b>. Soon after, the new drug was being used all over the world. Because of the success, the scientist was able to develop even more <b>fabulous</b> drugs to help people. His accidental discovery changed the world and helped save many people’s lives.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Famous Accident</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One of the greatest <b>pharmaceutical</b> discoveries happened by accident. In his <b>haste</b> to go on vacation, Alexander Fleming had left his laboratory in a mess. The <b>essence</b> of his <b>ongoing</b> work involved a type of bacteria. An infection caused by the bacteria was often <b>terminal</b>, and he was looking for a <b>remedy</b>. He had left the bacteria out while he was away.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When he returned from vacation, he found that his lab was covered in fungus. He started cleaning up the mess. While he was cleaning, he had an <b>impulse</b> to examine the fungus. He saw that whenever the fungus was in close <b>proximity</b> to the bacteria, the bacteria died.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Though he was a messy scientist, his experiments were <b>precise</b>. He thought that there might be some <b>significance</b> to the fungus. He immediately <b>commenced</b> an experiment to <b>assess</b> what had happened to the bacteria. It had either died by accident or the fungus had killed it. The <b>subsequent</b> tests proved it was the <b>latter</b> reason.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">What he found <b>astonished</b> him. The fungus actually killed the bad bacteria. All this time, he had been looking for a <b>synthetic</b> material to kill the bacteria. Instead, a common fungus did the job.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He knew that something in the fungus had killed the bacteria. His next step was to find those <b>molecules</b> that had done it. When he found them, he <b>extracted</b> them and put them into a pill. The drug proved to be very effective. It also worked against other types of harmful bacteria.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The discovery received a lot of <b>publicity</b>. Soon after, the new drug was being used all over the world. Because of the success, the scientist was able to develop even more <b>fabulous</b> drugs to help people. His accidental discovery changed the world and helped save many people’s lives.</p></div>",
       "imageUrl": "/unit5_vol5_story.png",
       "sections": [
         {
@@ -480,37 +474,37 @@
               "id": "36",
               "content": "In his haste to go on vacation, how had Alexander Fleming left his laboratory?",
               "options": [
-                "In his haste to go on vacation, Alexander Fleming left his laboratory in a mess.",
                 "He left it very clean.",
+                "In his haste to go on vacation, Alexander Fleming left his laboratory in a mess.",
                 "He left it locked.",
                 "He left it empty."
               ],
               "explanation": "Theo đoạn 1, \"In his haste to go on vacation, Alexander Fleming had left his laboratory in a mess.\" (Trong lúc vội vã đi nghỉ, Alexander Fleming đã để phòng thí nghiệm của mình trong tình trạng bừa bộn).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "37",
               "content": "What was the significance of the fungus?",
               "options": [
-                "The significance of the fungus was that it could kill the bacteria.",
                 "It was very rare.",
                 "It smelled bad.",
+                "The significance of the fungus was that it could kill the bacteria.",
                 "It could cure headaches."
               ],
               "explanation": "Trong đoạn 4, \"The fungus actually killed the bad bacteria.\" (Loại nấm này thực sự đã tiêu diệt được vi khuẩn xấu).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "38",
               "content": "When did the scientist get an impulse to examine the fungus?",
               "options": [
-                "While he was cleaning, he had an impulse to examine the fungus.",
                 "Before he went on vacation.",
                 "When he was dreaming.",
-                "When he saw a rat."
+                "When he saw a rat.",
+                "While he was cleaning, he had an impulse to examine the fungus."
               ],
               "explanation": "Theo đoạn 2, \"While he was cleaning, he had an impulse to examine the fungus.\" (Trong khi dọn dẹp, ông bỗng nảy ra ý định kiểm tra nấm).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "39",
@@ -528,18 +522,26 @@
               "id": "40",
               "content": "What received a lot of publicity?",
               "options": [
-                "The discovery received a lot of publicity.",
                 "His vacation received a lot of publicity.",
+                "The discovery received a lot of publicity.",
                 "His messy lab received a lot of publicity.",
                 "The bacteria received a lot of publicity."
               ],
               "explanation": "Theo đoạn 6, \"The discovery received a lot of publicity.\" (Khám phá này đã nhận được rất nhiều sự chú ý của công chúng).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit5_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Một tai nạn nổi tiếng</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một trong những khám phá <b>dược phẩm</b> vĩ đại nhất đã xảy ra một cách tình cờ. Trong sự <b>vội vã</b> để đi nghỉ, Alexander Fleming đã để lại phòng thí nghiệm của mình trong một mớ hỗn độn. <b>Bản chất</b> của công việc <b>đang diễn ra</b> của ông liên quan đến một loại vi khuẩn. Một bệnh nhiễm trùng do vi khuẩn này gây ra thường dẫn đến <b>giai đoạn cuối</b>, và ông đang tìm kiếm một <b>phương thuốc</b>. Ông đã để vi khuẩn ở bên ngoài trong khi đi vắng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi trở về sau kỳ nghỉ, ông thấy phòng thí nghiệm của mình bị bao phủ bởi nấm. Ông bắt đầu dọn dẹp mớ hỗn độn. Trong khi dọn dẹp, ông có một <b>sự thôi thúc</b> muốn kiểm tra loại nấm này. Ông thấy rằng bất cứ khi nào nấm ở <b>khoảng cách gần</b> với vi khuẩn, vi khuẩn đều bị chết.</p>\n\n<p style=\"margin-bottom: 1rem;\">Mặc dù ông là một nhà khoa học bừa bộn, nhưng các thí nghiệm của ông lại rất <b>chính xác</b>. Ông nghĩ rằng có thể có <b>tầm quan trọng</b> nào đó đối với loại nấm này. Ngay lập tức ông đã <b>bắt đầu</b> một thí nghiệm để <b>đánh giá</b> điều gì đã xảy ra với vi khuẩn. Nó đã chết do tình cờ hoặc là nấm đã giết chết nó. Các bài kiểm tra <b>sau đó</b> đã chứng minh rằng đó là lý do <b>sau</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những gì ông tìm thấy đã làm ông <b>kinh ngạc</b>. Loại nấm này thực sự đã tiêu diệt các vi khuẩn xấu. Trong suốt thời gian này, ông đã tìm kiếm một loại vật liệu <b>tổng hợp</b> để diệt vi khuẩn. Thay vào đó, một loại nấm thông thường lại làm được công việc đó.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông biết rằng một thứ gì đó trong nấm đã giết chết vi khuẩn. Bước tiếp theo của ông là tìm ra những <b>phân tử</b> đã làm điều đó. Khi ông tìm thấy chúng, ông đã <b>chiết xuất</b> chúng và đưa chúng vào một viên thuốc. Loại thuốc này được chứng minh là rất hiệu quả. Nó cũng có tác dụng chống lại các loại vi khuẩn có hại khác.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khám phá này đã nhận được rất nhiều <b>sự chú ý của công chúng</b>. Ngay sau đó, loại thuốc mới đã được sử dụng trên toàn thế giới. Nhờ sự thành công này, nhà khoa học đã có thể phát triển thêm nhiều loại thuốc <b>tuyệt vời</b> hơn để giúp đỡ con người. Khám phá tình cờ của ông đã thay đổi thế giới và giúp cứu sống nhiều người.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 5: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

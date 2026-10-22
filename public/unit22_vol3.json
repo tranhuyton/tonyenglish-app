@@ -3,257 +3,269 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit22_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit22_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚨</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alarm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əlá:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An alarm is something that warns people of danger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the students heard the fire alarm, they left the building.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">↔️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">apart</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əpά:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people or things are apart, they are not close together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The couple decided to live apart from each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👮</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arrest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ərést]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To arrest someone means to catch them for doing something bad.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man was arrested for breaking the law.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏆</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">award</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əwɔ́:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An award is a prize someone gets for doing something well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He got an award for having the best grades in class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🐕</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">breed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bri:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A breed is a group of animals within a species.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I like small dog breeds, such as terriers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🪣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bucket</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bΛkit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bucket is a round container to put things in.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I filled the bucket with water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏁</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kάntest]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A contest is a game or a race.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girls had a contest to see who could jump higher.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⚖️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvíkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To convict someone means to prove that they did a bad thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was convicted of the crime and sent to jail.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚗</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">garage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gərά:ʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A garage is the part of a house where people put their cars.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My car does not get dirty because I keep it in the garage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📝</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">journalist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒə́:rnəlist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A journalist is a person who writes news stories.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The journalist took notes for a story he was writing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🐶</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pup</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pup is a young dog.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All the girl wanted for her birthday was a pup.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✅</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">qualify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kwάləfài]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To qualify is to get, or to be declared, adequate or good enough.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He qualified to go to the final match by beating the opponent.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🔧</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">repair</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ripέər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To repair something is to fix it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I repaired the flat tire on my car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">▶️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resume</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rizú:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To resume something means to start it again after taking a break.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I put the newspaper down to eat breakfast. Then I resumed reading.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🦹</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rob</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɑb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rob a person or place is to take their property by using force.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A thief has robbed me of my passport.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🍌</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[slip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To slip means to slide and fall down.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man slipped on the wet floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤏</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">somewhat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sΛmw(h)Λt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Somewhat means to some degree, but not to a large degree.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ James was somewhat upset when he had to move some boxes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🪑</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stéibl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is stable, it will not fall over.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chair is stable. Its legs are strong.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤧</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tissue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tíʃu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tissue is a soft piece of paper people use to wipe their noses.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a box of tissue on the table.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">yard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[jɑ:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A yard is the ground just outside of a person's house.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girls jumped rope in the yard.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit22_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit22_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accommodate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkɑmədeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To accommodate is to have enough room.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The meeting room can accommodate nine people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">circus</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sə:rkəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A circus is a traveling show with animals and people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I like to go to the circus to see the animals do tricks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coincide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kouinsaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If two things coincide, they happen at the same time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My birthday coincides with Christmas.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">commission</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To commission someone to do something is to pay them to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The artist was commissioned to create a picture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dous]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dose is a certain amount of medicine that you take at one time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My mother gave me a dose of medicine before I went to bed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dye</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dye something is to make it a certain color by using a special chemical.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Valery got her hair dyed at the salon yesterday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikstent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The extent of something is how large, important, or serious it is.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He ate to such an extent that he became overweight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gender</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒendər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Gender is a category that describes being either a boy or a girl.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Do you know the gender of her new baby?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">headline</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hedlain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A headline is the title of a newspaper story.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The headline on the front page was about the economy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">informal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[infɔ:rməl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is informal, it is not official.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They had an informal meeting to talk about their experiences.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inquire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkwaiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To inquire about something is to ask about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Dad called to inquire about the price of tickets for the show.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">messenger</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mesəndʒər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A messenger is one who carries information from one place to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The messenger delivered an important document to the office.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">peer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[piər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To peer at something is to watch it carefully.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She peered at people through the window.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">portrait</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɔ:rtrit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A portrait is a painting or photograph of someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw many religious portraits when I went to the museum.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pouz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pose is to stay in one place without moving.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The kids and their dog posed for a picture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ranch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræntʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ranch is a large farm where animals are kept.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My uncle has many horses on his ranch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To steer something is to control where it goes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He steered the go-cart around the track.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stripe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[straip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A stripe is a thick line.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The flag of the United States has red and white stripes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[teim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When an animal is tame, it is not afraid to be near people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The tame bird rested on his hand.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tempt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tempt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tempt people is to offer them something they want but shouldn’t have.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I wasn’t hungry, but she tempted me with a piece of my favorite cake.</div></div></div></div></div></div>",
       "sections": [
         {
-          "id": "sec1_wordlist",
-          "title": "Exercise 1 Part A: Choose the right definition for the given word.",
+          "id": "sec_wordlist_0",
+          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "repair",
+              "content": "to have enough room",
               "options": [
-                "to fix",
-                "to start after a break",
-                "to slide and fall",
-                "to catch a bad person"
+                "accommodate",
+                "circus",
+                "tame",
+                "steer"
               ],
-              "explanation": "repair: sửa chữa (to fix)",
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "accommodate có nghĩa là có đủ chỗ chứa."
             },
             {
               "id": "2",
-              "content": "tissue",
+              "content": "to change the color of something",
               "options": [
-                "a soft paper",
-                "a machine that blows air",
-                "a news writer",
-                "a container with wheels"
+                "tempt",
+                "dye",
+                "stripe",
+                "dose"
               ],
-              "explanation": "tissue: khăn giấy (a soft paper)",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "dye có nghĩa là nhuộm màu."
             },
             {
               "id": "3",
-              "content": "pup",
+              "content": "a category of being either a boy or a girl",
               "options": [
-                "a place for a car",
-                "a prize",
-                "a baby dog",
-                "a game or race"
+                "wipe",
+                "extent",
+                "informal",
+                "gender"
               ],
-              "explanation": "pup: chó con (a baby dog)",
-              "correctAnswer": "C"
+              "correctAnswer": "D",
+              "explanation": "gender là giới tính."
             },
             {
               "id": "4",
-              "content": "resume",
+              "content": "the title of a newspaper story",
               "options": [
-                "to slide and fall",
-                "to start after a break",
-                "to prove",
-                "to fix"
+                "pose",
+                "headline",
+                "ranch",
+                "inquire"
               ],
-              "explanation": "resume: tiếp tục (to start after a break)",
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "headline là tiêu đề bài báo."
             },
             {
               "id": "5",
-              "content": "stable",
+              "content": "to pay someone to do something",
               "options": [
-                "a little bit",
-                "a place for a car",
-                "type of animal",
-                "will not fall"
+                "portrait",
+                "commission",
+                "peer",
+                "messenger"
               ],
-              "explanation": "stable: ổn định (will not fall)",
-              "correctAnswer": "D"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec2_wordlist",
-          "title": "Exercise 1 Part B: Choose the right word for the given definition.",
-          "content": "",
-          "questions": [
-            {
-              "id": "6",
-              "content": "a place to put a car",
-              "options": [
-                "stable",
-                "bucket",
-                "alarm",
-                "garage"
-              ],
-              "explanation": "garage: nhà để xe (a place to put a car)",
-              "correctAnswer": "D"
-            },
-            {
-              "id": "7",
-              "content": "to prove someone did a bad thing",
-              "options": [
-                "somewhat",
-                "repair",
-                "convict",
-                "resume"
-              ],
-              "explanation": "convict: kết án (to prove someone did a bad thing)",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "8",
-              "content": "not close together",
-              "options": [
-                "apart",
-                "arrest",
-                "slip",
-                "qualify"
-              ],
-              "explanation": "apart: cách xa (not close together)",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "9",
-              "content": "a type of animal",
-              "options": [
-                "tissue",
-                "breed",
-                "yard",
-                "contest"
-              ],
-              "explanation": "breed: giống loài (a type of animal)",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "10",
-              "content": "a news writer",
-              "options": [
-                "pup",
-                "journalist",
-                "award",
-                "qualify"
-              ],
-              "explanation": "journalist: nhà báo (a news writer)",
-              "correctAnswer": "B"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec3_wordlist_tf",
-          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
-          "content": "",
-          "questionType": "TFNG",
-          "questions": [
-            {
-              "id": "16",
-              "content": "",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "stable: ổn định, vững chắc.",
-              "correctAnswer": "True"
+              "correctAnswer": "B",
+              "explanation": "commission có nghĩa là ủy thác, thuê ai làm gì."
             }
           ]
         },
         {
-          "id": "sec3_wordlist_mc",
-          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "id": "sec_wordlist_1",
+          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "inquire",
+              "options": [
+                "to pay someone for something",
+                "to ask about something",
+                "to make someone want something",
+                "not wild"
+              ],
+              "correctAnswer": "B",
+              "explanation": "inquire có nghĩa là hỏi thăm thông tin."
+            },
+            {
+              "id": "7",
+              "content": "steer",
+              "options": [
+                "a picture of someone",
+                "to stay in one position",
+                "a traveling show",
+                "to control the direction of a car"
+              ],
+              "correctAnswer": "D",
+              "explanation": "steer có nghĩa là lái, điều khiển hướng đi."
+            },
+            {
+              "id": "8",
+              "content": "stripe",
+              "options": [
+                "a line",
+                "a person who carries news",
+                "an amount of medicine",
+                "describes being either a boy or a girl"
+              ],
+              "correctAnswer": "A",
+              "explanation": "stripe là đường kẻ sọc, vằn."
+            },
+            {
+              "id": "9",
+              "content": "extent",
+              "options": [
+                "to have room for",
+                "how much",
+                "to change color",
+                "a place with many animals"
+              ],
+              "correctAnswer": "B",
+              "explanation": "extent là mức độ, phạm vi."
+            },
+            {
+              "id": "10",
+              "content": "coincide",
+              "options": [
+                "to happen at the same time",
+                "not official",
+                "to watch carefully",
+                "the title of a news story"
+              ],
+              "correctAnswer": "A",
+              "explanation": "coincide là trùng hợp, xảy ra cùng một lúc."
+            }
+          ]
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 2: Choose the word that is a better fit for each blank.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "",
+              "content": "1. The patient ________ if the doctor could help his shoulder pain. The doctor gave him a ________ of medication that would relieve the pain. (inquired / dose)",
               "options": [
-                "Be careful not to <b>slip</b> on the ice.",
-                "I hope my <b>yard</b> is ready to eat."
+                "inquired / dose",
+                "dose / inquired",
+                "peered / pose",
+                "portrait / commissioned"
               ],
-              "explanation": "slip: trượt té.",
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "Bệnh nhân hỏi (inquired) bác sĩ và được cho một liều (dose) thuốc giảm đau."
             },
             {
               "id": "12",
-              "content": "",
+              "content": "2. The photographer ________ through the camera, but the picture didn’t seem right. So he asked the people to ________ differently. (peered / pose)",
               "options": [
-                "I made a cake with my <b>stable</b>.",
-                "The man <b>robbed</b> the store of over 200 dollars."
+                "pose / peered",
+                "peered / pose",
+                "portrait / commissioned",
+                "coincided / accommodate"
               ],
-              "explanation": "rob: cướp.",
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "Nhiếp ảnh gia nhìn kỹ (peered) qua máy ảnh và yêu cầu mọi người tạo dáng (pose) khác đi."
             },
             {
               "id": "13",
-              "content": "",
+              "content": "3. Her grandfather gave her a ________ that was painted when he was a boy. Her grandfather’s family had ________ a famous artist to do it. (portrait / commissioned)",
               "options": [
-                "The boy carried sand in his <b>bucket</b>.",
-                "He used the <b>contest</b> to clean the floor."
+                "commissioned / portrait",
+                "coincided / accommodate",
+                "portrait / commissioned",
+                "circus / dyed"
               ],
-              "explanation": "bucket: cái xô.",
-              "correctAnswer": "A"
+              "correctAnswer": "C",
+              "explanation": "Bức chân dung (portrait) mà gia đình ông đã thuê (commissioned) một họa sĩ nổi tiếng vẽ."
             },
             {
               "id": "14",
-              "content": "",
+              "content": "4. The day of the wedding ________ with an important baseball game. As a result, the hotels couldn’t ________ the extra guests. (coincided / accommodate)",
               "options": [
-                "The <b>award</b> for winning the game is a new toy.",
-                "The boy pulled the car <b>apart</b> by washing it."
+                "accommodate / coincided",
+                "circus / dyed",
+                "extent / headline",
+                "coincided / accommodate"
               ],
-              "explanation": "award: phần thưởng.",
-              "correctAnswer": "A"
+              "correctAnswer": "D",
+              "explanation": "Ngày cưới trùng (coincided) với trận bóng chày nên khách sạn không đủ chỗ chứa (accommodate)."
             },
             {
               "id": "15",
-              "content": "",
+              "content": "5. The performers at the ________ had clothing that was ________ funny colors. (circus / dyed)",
               "options": [
-                "The mother <b>arrested</b> dinner for her family.",
-                "An <b>alarm</b> sounds to warn us of a fire."
+                "circus / dyed",
+                "dyed / circus",
+                "extent / headline",
+                "messenger / stripe"
               ],
-              "explanation": "alarm: báo động.",
-              "correctAnswer": "B"
+              "correctAnswer": "A",
+              "explanation": "Các nghệ sĩ ở rạp xiếc (circus) mặc trang phục được nhuộm (dyed) màu sắc vui nhộn."
+            },
+            {
+              "id": "16",
+              "content": "6. They didn’t understand the ________ of the damage until they saw the ________ that said that thousands of people had lost their homes in the storm. (extent / headline)",
+              "options": [
+                "headline / extent",
+                "extent / headline",
+                "messenger / stripe",
+                "ranch / informal"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Họ không hiểu mức độ (extent) thiệt hại cho đến khi đọc dòng tiêu đề (headline) trên báo."
             },
             {
               "id": "17",
-              "content": "",
+              "content": "7. The ________ carried the notes in a bag that had a long green ________ on the side. (messenger / stripe)",
               "options": [
-                "My dog likes to play in the <b>yard</b>.",
-                "The man was upset after he <b>robbed</b> himself."
+                "stripe / messenger",
+                "ranch / informal",
+                "messenger / stripe",
+                "gender / steering"
               ],
-              "explanation": "yard: cái sân.",
-              "correctAnswer": "A"
+              "correctAnswer": "C",
+              "explanation": "Người đưa thư (messenger) mang chiếc túi có một đường sọc (stripe) màu xanh lá."
             },
             {
               "id": "18",
-              "content": "",
+              "content": "8. The owner of the ________ had an ________ meeting with his employees to talk to them about the recent problems. (ranch / informal)",
               "options": [
-                "I fell down and got hurt as an <b>award</b>.",
-                "I won the <b>contest</b> because I was the fastest runner."
+                "informal / ranch",
+                "gender / steering",
+                "tempted / tame",
+                "ranch / informal"
               ],
-              "explanation": "contest: cuộc thi.",
-              "correctAnswer": "B"
+              "correctAnswer": "D",
+              "explanation": "Chủ trang trại (ranch) có cuộc họp thân mật/không chính thức (informal) với nhân viên."
             },
             {
               "id": "19",
-              "content": "",
+              "content": "9. I couldn’t tell the ________ of the person ________ the car because it was dark outside. (gender / steering)",
               "options": [
-                "China and Mexico are far <b>apart</b>.",
-                "The <b>alarm</b> washed away the dirt."
+                "gender / steering",
+                "steering / gender",
+                "tempted / tame",
+                "inquired / dose"
               ],
-              "explanation": "apart: cách xa.",
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "Không thể phân biệt giới tính (gender) của người đang lái (steering) xe vì trời tối."
             },
             {
               "id": "20",
-              "content": "",
+              "content": "10. The trainer ________ the tiger with a treat, but the animal remained ________ in his place. (tempted / tame)",
               "options": [
-                "The <b>bucket</b> wrote down every word.",
-                "If you steal, the police will <b>arrest</b> you."
+                "tame / tempted",
+                "tempted / tame",
+                "inquired / dose",
+                "peered / pose"
               ],
-              "explanation": "arrest: bắt giữ.",
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "Người huấn luyện dụ (tempted) con hổ bằng phần thưởng nhưng nó vẫn ngoan ngoãn/thuần (tame) tại chỗ."
             }
           ]
         }
@@ -262,76 +274,133 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farm Festival</h1>        <p style=\"margin-bottom: 1rem;\">Once there was a farm. Many animals lived there. One day, they had a <b>contest</b> in the <b>yard</b>. They were going to race from the barn to the farmer's <b>garage</b>. The barn and the <b>garage</b> were far <b>apart</b>. It would be a long race. The winner <b>qualified</b> to win a bag full of apples as an <b>award</b>.</p>    <p style=\"margin-bottom: 1rem;\">But the race did not start well. The cart with all the apples was not <b>stable</b>, and the animals had to <b>repair</b> it. Then the <b>pup</b> knocked over the apples. The pig yelled, \"We are going to <b>slip</b>! We must clean up this mess.\" The <b>pup</b> felt bad, and she began to cry. The dog gave her a <b>tissue</b> to wipe her tears.</p>    <p style=\"margin-bottom: 1rem;\">Then the race <b>resumed</b>. But the duck tried to <b>rob</b> them and take all the apples. The cat said, \"I will have you <b>arrested</b>!\" The duck said, \"You can't <b>convict</b> me! You can't prove I took it.\" The race stopped yet again.</p>    <p style=\"margin-bottom: 1rem;\">The animals tried to race one more time. Then they heard an <b>alarm</b> coming from the barn. There was a fire! They got <b>buckets</b> of water to put out the fire. A <b>journalist</b> came to write a story about the festival and the race. The horse told her, \"I am a special <b>breed</b> of horse. I would have won the race easily.\" The pig said, \"It was <b>somewhat</b> hard to have the race. But we had fun. That is what's important.\"</p></div>",
-      "imageUrl": "/unit22_story.png",
+      "imageUrl": "/unit22_v3_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Circus</h1><p style=\"margin-bottom: 1rem;\">Ben was unhappy. He lived on a <strong>ranch</strong> near a small town, and he didn’t have many friends. Then one day a <strong>messenger</strong> came to the <strong>ranch</strong>. He showed the <strong>headline</strong> in the town newspaper. The <strong>circus</strong> was coming to the town. It even <strong>coincided</strong> with Ben’s birthday!</p><p style=\"margin-bottom: 1rem;\">Ben was very excited as his father <strong>steered</strong> the car through the town. The <strong>circus</strong> couldn’t <strong>accommodate</strong> all the people who wanted to see the show, but Ben had a ticket.</p><p style=\"margin-bottom: 1rem;\">Ben <strong>peered</strong> at the activity around him. He watched people of both <strong>genders</strong> dance all around. They wore funny costumes, and their hair was <strong>dyed</strong> many different colors. Also, <strong>tame</strong> tigers with <strong>stripes</strong> on their fur did tricks. Outside, people could <strong>commission</strong> an <strong>informal</strong> <strong>portrait</strong>. They <strong>posed</strong> in front of a funny picture while an artist quickly drew them. Ben couldn’t believe it. He was happier than he had ever been before.</p><p style=\"margin-bottom: 1rem;\">That day, Ben knew what he wanted to do. He loved the <strong>circus</strong> to such an <strong>extent</strong> that he wanted to have his own <strong>circus</strong> when he grew older. Seeing the <strong>circus</strong> was like a <strong>dose</strong> of medicine for him. He wasn’t unhappy anymore. He felt special. He <strong>inquired</strong> about what he needed to do to have his own <strong>circus</strong>. He studied hard and learned about business.</p><p style=\"margin-bottom: 1rem;\">Ben worked very hard, and one day, he had his own <strong>circus</strong>. It was a great <strong>circus</strong>. People told him that he could be very rich. But he wasn’t <strong>tempted</strong> by money. He just wanted to make children happy. He knew the <strong>circus</strong> had changed his life, and he wanted to do the same thing for others.</p></div>",
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit22_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Rạp Xiếc</h1>\n<p style=\"margin-bottom: 1rem;\">Ben cảm thấy buồn bã. Cậu sống trên một <strong>trang trại chăn nuôi</strong> gần một thị trấn nhỏ và không có nhiều bạn bè. Rồi một ngày nọ, một <strong>người đưa tin</strong> đến <strong>trang trại</strong>. Anh ta chỉ vào <strong>dòng tiêu đề</strong> trên tờ báo của thị trấn. <strong>Rạp xiếc</strong> sắp đến thị trấn. Ngày đó thậm chí còn <strong>trùng</strong> với sinh nhật của Ben!</p>\n<p style=\"margin-bottom: 1rem;\">Ben vô cùng hào hứng khi bố cậu <strong>lái</strong> xe qua thị trấn. <strong>Rạp xiếc</strong> không thể <strong>đủ chỗ chứa</strong> tất cả những người muốn xem buổi biểu diễn, nhưng Ben đã có vé.</p>\n<p style=\"margin-bottom: 1rem;\">Ben <strong>chăm chú nhìn</strong> các hoạt động xung quanh mình. Cậu xem những người thuộc cả hai <strong>giới tính</strong> nhảy múa khắp nơi. Họ mặc những bộ trang phục vui nhộn và tóc được <strong>nhuộm</strong> đủ màu sắc khác nhau. Ngoài ra, những chú hổ <strong>đã thuần hóa</strong> với những <strong>vằn sọc</strong> trên bộ lông cũng biểu diễn làm trò. Ở bên ngoài, mọi người có thể <strong>thuê vẽ</strong> một bức <strong>chân dung</strong> <strong>thân mật</strong>. Họ <strong>tạo dáng</strong> trước một bức tranh ngộ nghĩnh trong khi họa sĩ nhanh tay phác họa. Ben không thể tin vào mắt mình. Cậu hạnh phúc hơn bao giờ hết.</p>\n<p style=\"margin-bottom: 1rem;\">Ngày hôm đó, Ben đã biết mình muốn làm gì. Cậu yêu <strong>rạp xiếc</strong> đến <strong>mức</strong> muốn có một <strong>rạp xiếc</strong> của riêng mình khi lớn lên. Việc được xem <strong>rạp xiếc</strong> giống như một <strong>liều</strong> thuốc tinh thần đối với cậu. Cậu không còn buồn bã nữa. Cậu cảm thấy mình thật đặc biệt. Cậu <strong>hỏi thăm</strong> về những gì mình cần làm để mở được <strong>rạp xiếc</strong> riêng. Cậu đã học tập chăm chỉ và tìm hiểu về kinh doanh.</p>\n<p style=\"margin-bottom: 1rem;\">Ben làm việc rất chăm chỉ, và một ngày nọ, cậu đã có <strong>rạp xiếc</strong> của riêng mình. Đó là một <strong>rạp xiếc</strong> tuyệt vời. Mọi người nói với cậu rằng cậu có thể trở nên rất giàu có. Nhưng cậu không bị tiền bạc <strong>cám dỗ</strong>. Cậu chỉ muốn mang lại niềm vui cho trẻ em. Cậu biết <strong>rạp xiếc</strong> đã thay đổi cuộc đời mình, và cậu muốn làm điều tương tự cho những người khác.</p></div>",
       "sections": [
         {
-          "id": "sec4_reading",
-          "title": "Reading Comprehension",
-          "content": "",
+          "id": "sec_reading_0",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "<p>True / False</p>",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "21",
-              "content": "What is this story about?",
+              "content": "Ben was unhappy because he lived on a ranch near a small town and didn’t have many friends.",
               "options": [
-                "Why contests have awards",
-                "How a special breed of racehorse would've won the race",
-                "Why animals have to repair things on a farm",
-                "How animals had trouble during a race"
+                "True",
+                "False"
               ],
-              "explanation": "Đoạn văn kể về các vấn đề mà các con vật gặp phải trong cuộc đua.",
-              "correctAnswer": "D"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 1: 'Ben was unhappy. He lived on a ranch near a small town, and he didn’t have many friends.' -> Đúng (True)."
             },
             {
               "id": "22",
-              "content": "When the cart with the apples fell over, why did the animals stop running?",
+              "content": "Ben was tempted by money when he had his own circus.",
               "options": [
-                "Because they did not want to slip on the apples",
-                "Because they had to find tissue",
-                "Because they did not want to resume the race",
-                "Because the yard was far apart"
+                "True",
+                "False"
               ],
-              "explanation": "Pig nói: 'We are going to slip!'",
-              "correctAnswer": "A"
+              "correctAnswer": "False",
+              "explanation": "Đoạn 5: 'But he wasn’t tempted by money.' -> Sai (False)."
             },
             {
               "id": "23",
-              "content": "What did the duck do wrong?",
+              "content": "The circus coincided with Ben’s birthday.",
               "options": [
-                "He was arrested and convicted of stealing a bag of money.",
-                "He stole the bucket.",
-                "He tried to steal the award.",
-                "He set the garage on fire."
+                "True",
+                "False"
               ],
-              "explanation": "Vịt định trộm túi táo (phần thưởng).",
-              "correctAnswer": "C"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 1: 'It even coincided with Ben’s birthday!' -> Đúng (True)."
             },
             {
               "id": "24",
-              "content": "According to the passage, all the following are true EXCEPT",
+              "content": "Seeing the circus was like a dose of medicine for Ben.",
               "options": [
-                "the alarm sounded when there was a fire",
-                "the animals were somewhat angry",
-                "the cart was not stable",
-                "a journalist wrote about the festival"
+                "True",
+                "False"
               ],
-              "explanation": "Không có chỗ nào nói các con vật 'somewhat angry', chúng nói 'somewhat hard' nhưng 'had fun'.",
-              "correctAnswer": "B"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 4: 'Seeing the circus was like a dose of medicine for him.' -> Đúng (True)."
             },
             {
               "id": "25",
-              "content": "How far was the race going to be?",
+              "content": "Ben learned about the circus from a television advertisement.",
               "options": [
-                "From the barn to the farmer's garage",
-                "From the yard to the house",
-                "From the stable to the barn",
-                "From the house to the field"
+                "True",
+                "False"
               ],
-              "explanation": "Cuộc đua từ the barn đến the farmer's garage.",
-              "correctAnswer": "A"
+              "correctAnswer": "False",
+              "explanation": "Ben biết tin về rạp xiếc nhờ người đưa tin cho xem tiêu đề báo thị trấn -> Sai (False)."
+            },
+            {
+              "id": "26",
+              "content": "Ben was commissioned to paint informal portraits of people posing in front of a funny picture.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Một họa sĩ (artist) được thuê vẽ chân dung chứ không phải Ben -> Sai (False)."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
+        },
+        {
+          "id": "sec_reading_1",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "27",
+              "content": "Why did Ben like the circus to such an extent?",
+              "options": [
+                "He could be very rich.",
+                "He inquired about getting his own circus.",
+                "It made him feel special.",
+                "He took a dose of special medicine."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Đoạn 4: 'He wasn’t unhappy anymore. He felt special.'"
+            },
+            {
+              "id": "28",
+              "content": "What good news did the messenger bring?",
+              "options": [
+                "The circus was coming.",
+                "Ice cream was free.",
+                "Good weather was coming.",
+                "A new movie was showing."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đoạn 1: 'He showed the headline in the town newspaper. The circus was coming to the town.'"
+            },
+            {
+              "id": "29",
+              "content": "What did Ben’s dad do on his birthday?",
+              "options": [
+                "He tamed tigers.",
+                "He paid for Ben’s portrait.",
+                "He taught Ben how to drive.",
+                "He steered around town looking for the circus."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Đoạn 2: 'Ben was very excited as his father steered the car through the town.'"
+            },
+            {
+              "id": "30",
+              "content": "Why wasn’t Ben tempted by money?",
+              "options": [
+                "His circus wasn’t very good.",
+                "He was already very rich.",
+                "He wanted other kids to like him.",
+                "He only wanted to make people happy."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Đoạn 5: 'But he wasn’t tempted by money. He just wanted to make children happy.'"
+            }
+          ]
         }
       ]
     }

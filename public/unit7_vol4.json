@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 7: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part_wordlist",
@@ -15,7 +8,7 @@
         {
           "id": "sec_0",
           "title": "Exercise 1 Part A",
-          "questionType": "Trắc nghiệm",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
               "id": "1",
@@ -26,8 +19,8 @@
                 "conceal",
                 "volunteer"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"Intervene\" có nghĩa là can thiệp để giúp giải quyết một vấn đề."
+              "explanation": "\"Intervene\" có nghĩa là can thiệp để giúp giải quyết một vấn đề.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +31,8 @@
                 "memorable",
                 "gratitude"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"Legal\" có nghĩa là hợp pháp, được pháp luật cho phép."
+              "explanation": "\"Legal\" có nghĩa là hợp pháp, được pháp luật cho phép.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +43,8 @@
                 "resolve",
                 "rally"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"Resolve\" có nghĩa là tìm ra giải pháp, giải quyết vấn đề."
+              "explanation": "\"Resolve\" có nghĩa là tìm ra giải pháp, giải quyết vấn đề.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -62,8 +55,8 @@
                 "account",
                 "resource"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"Landmark\" là cột mốc, vật thể giúp mọi người ghi nhớ một địa điểm."
+              "explanation": "\"Landmark\" là cột mốc, vật thể giúp mọi người ghi nhớ một địa điểm.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,16 +67,16 @@
                 "habitat",
                 "crime"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"Crime\" là tội phạm, tội ác có thể bị pháp luật trừng phạt."
+              "explanation": "\"Crime\" là tội phạm, tội ác có thể bị pháp luật trừng phạt.",
+              "correctAnswer": "D"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec_1",
           "title": "Exercise 1 Part B",
-          "questionType": "Trắc nghiệm",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "6",
@@ -94,8 +87,8 @@
                 "special",
                 "public"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"Memorable\" (đáng nhớ) được dùng để chỉ điều gì đó đặc biệt, dễ ghi nhớ."
+              "explanation": "\"Memorable\" (đáng nhớ) được dùng để chỉ điều gì đó đặc biệt, dễ ghi nhớ.",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
@@ -106,8 +99,8 @@
                 "someone who obeys the law",
                 "a person who sees a crime"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"Witness\" (nhân chứng) là người đã nhìn thấy hoặc nghe thấy một tội ác, một tai nạn."
+              "explanation": "\"Witness\" (nhân chứng) là người đã nhìn thấy hoặc nghe thấy một tội ác, một tai nạn.",
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -118,8 +111,8 @@
                 "a natural home",
                 "an action that breaks the law"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"Deed\" (văn tự, giấy tờ sở hữu) là bằng chứng xác nhận quyền sở hữu."
+              "explanation": "\"Deed\" (văn tự, giấy tờ sở hữu) là bằng chứng xác nhận quyền sở hữu.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -130,8 +123,8 @@
                 "something against the law",
                 "a large public meeting"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"Sentence\" (bản án) là hình phạt cho một tội phạm."
+              "explanation": "\"Sentence\" (bản án) là hình phạt cho một tội phạm.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,16 +135,16 @@
                 "to say in public",
                 "to stop a problem"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"Proclaim\" (tuyên bố) có nghĩa là nói hay thông báo điều gì đó trước công chúng."
+              "explanation": "\"Proclaim\" (tuyên bố) có nghĩa là nói hay thông báo điều gì đó trước công chúng.",
+              "correctAnswer": "C"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec_2",
           "title": "Exercise 2",
-          "questionType": "Trắc nghiệm",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "11",
@@ -162,8 +155,8 @@
                 "A broom",
                 "A picture"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"Habitat\" là môi trường sống. \"A pond\" (một cái ao) là môi trường sống của nhiều loài động vật và thực vật."
+              "explanation": "\"Habitat\" là môi trường sống. \"A pond\" (một cái ao) là môi trường sống của nhiều loài động vật và thực vật.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -174,8 +167,8 @@
                 "Hidden",
                 "Quick"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"Conceal\" có nghĩa là che giấu, nên một vật bị che giấu thì được gọi là \"hidden\" (bị giấu)."
+              "explanation": "\"Conceal\" có nghĩa là che giấu, nên một vật bị che giấu thì được gọi là \"hidden\" (bị giấu).",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -186,8 +179,8 @@
                 "A cake",
                 "A dress"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"Architect\" (kiến trúc sư) là người thiết kế các tòa nhà, vì vậy họ làm ra \"a house\" (một ngôi nhà)."
+              "explanation": "\"Architect\" (kiến trúc sư) là người thiết kế các tòa nhà, vì vậy họ làm ra \"a house\" (một ngôi nhà).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -198,8 +191,8 @@
                 "Crying",
                 "Stealing"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"Legal\" là hợp pháp. \"Stealing\" (ăn trộm) là hành vi không hợp pháp."
+              "explanation": "\"Legal\" là hợp pháp. \"Stealing\" (ăn trộm) là hành vi không hợp pháp.",
+              "correctAnswer": "D"
             },
             {
               "id": "15",
@@ -210,101 +203,102 @@
                 "\"Go away.\"",
                 "\"Thank you.\""
               ],
-              "correctAnswer": "D",
-              "explanation": "\"Gratitude\" là lòng biết ơn, vì vậy người có lòng biết ơn thường nói \"Thank you.\" (Cảm ơn)."
+              "explanation": "\"Gratitude\" là lòng biết ơn, vì vậy người có lòng biết ơn thường nói \"Thank you.\" (Cảm ơn).",
+              "correctAnswer": "D"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec_3",
           "title": "Exercise 3",
-          "questionType": "Điền từ",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>",
           "questions": [
             {
               "id": "16",
               "content": "<p style=\"margin-bottom: 12px;\">The government has enough <u>money and materials</u> to help all its people. [ 16 ]</p><p style=\"margin-bottom: 12px;\">The town had a large public meeting to discuss the problem with the sidewalks. [ 17 ]</p><p style=\"margin-bottom: 12px;\">The necklace was remembered for a special reason because it was from her grandmother. [ 18 ]</p><p style=\"margin-bottom: 12px;\">His act that broke the law was serious enough to require him to stay in jail for 60 days. [ 19 ]</p><p style=\"margin-bottom: 12px;\">She had just enough money in her arrangement with the bank. [ 20 ]</p><p style=\"margin-bottom: 12px;\">Children are required to go to school in most countries. [ 21 ]</p><p style=\"margin-bottom: 12px;\">My uncle said in public that he was an old friend of the mayor. [ 22 ]</p><p style=\"margin-bottom: 12px;\">Four students offered to help to carry the table downstairs. [ 23 ]</p><p style=\"margin-bottom: 12px;\">A bear's natural home is usually large forests areas with mountains. [ 24 ]</p><p style=\"margin-bottom: 12px;\">He was filled with a feeling of being thankful when he was given the dog. [ 25 ]</p>",
               "options": [],
-              "correctAnswer": "resources",
-              "explanation": "\"money and materials\" tương đương với \"resources\" (tài nguyên)."
+              "explanation": "\"money and materials\" tương đương với \"resources\" (tài nguyên).",
+              "correctAnswer": "resources"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "rally",
-              "explanation": "\"large public meeting\" tương đương với \"rally\" (cuộc tụ họp, biểu tình)."
+              "explanation": "\"large public meeting\" tương đương với \"rally\" (cuộc tụ họp, biểu tình).",
+              "correctAnswer": "rally"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "memorable",
-              "explanation": "\"remembered for a special reason\" tương đương với \"memorable\" (đáng nhớ)."
+              "explanation": "\"remembered for a special reason\" tương đương với \"memorable\" (đáng nhớ).",
+              "correctAnswer": "memorable"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "offense",
-              "explanation": "\"act that broke the law\" tương đương với \"offense\" (sự vi phạm, tội lỗi)."
+              "explanation": "\"act that broke the law\" tương đương với \"offense\" (sự vi phạm, tội lỗi).",
+              "correctAnswer": "offense"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "account",
-              "explanation": "\"arrangement with the bank\" tương đương với \"account\" (tài khoản)."
+              "explanation": "\"arrangement with the bank\" tương đương với \"account\" (tài khoản).",
+              "correctAnswer": "account"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "correctAnswer": "obliged",
-              "explanation": "\"required\" tương đương với \"obliged\" (bắt buộc)."
+              "explanation": "\"required\" tương đương với \"obliged\" (bắt buộc).",
+              "correctAnswer": "obliged"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "correctAnswer": "proclaimed",
-              "explanation": "\"said in public\" tương đương với \"proclaimed\" (tuyên bố)."
+              "explanation": "\"said in public\" tương đương với \"proclaimed\" (tuyên bố).",
+              "correctAnswer": "proclaimed"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "correctAnswer": "volunteered",
-              "explanation": "\"offered to help\" tương đương với \"volunteered\" (tình nguyện)."
+              "explanation": "\"offered to help\" tương đương với \"volunteered\" (tình nguyện).",
+              "correctAnswer": "volunteered"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "correctAnswer": "habitat",
-              "explanation": "\"natural home\" tương đương với \"habitat\" (môi trường sống)."
+              "explanation": "\"natural home\" tương đương với \"habitat\" (môi trường sống).",
+              "correctAnswer": "habitat"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "correctAnswer": "gratitude",
-              "explanation": "\"feeling of being thankful\" tương đương với \"gratitude\" (lòng biết ơn)."
+              "explanation": "\"feeling of being thankful\" tương đương với \"gratitude\" (lòng biết ơn).",
+              "correctAnswer": "gratitude"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>"
+          "questionType": "Điền từ"
         }
       ]
     },
     {
       "id": "part_reading",
       "title": "Comprehensive Reading",
-      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Architect’s Plan</h1><div class=\"reading-materials\"><div class=\"reading-section\"><div class=\"reading-image\"></div><div class=\"reading-text\"><p>An <b>architect</b> wanted to build a new office building. He selected some land that seemed perfect. He planned to cut down the trees to make room for the building. But there was a problem ... a big problem.</p>    <p>The land was actually the <b>habitat</b> of several types of birds. Some nature lovers were very upset with the <b>architect</b>. First, they held a <b>rally</b> and told others about the issue. Then, they decided to take <b>legal</b> action because the <b>architect</b> didn't respect the animals' rights.</p>    <p>To <b>resolve</b> the problem, they asked a judge to <b>intervene</b>.</p>    <p>The judge could not call any witnesses for the nature lovers, so he first asked the <b>architect</b> to tell his side of the story.</p>    <p>\"Why are you going to destroy the birds' <b>habitat</b>?\" the judge asked.</p>    <p>The <b>architect</b> replied, \"I have the <b>deed</b> to the land. I want to make a great building there. As you may know, all my buildings become <b>memorable</b> landmarks.\"</p>    <p>Then one of the nature lovers spoke. \"We believe that there's no reason to destroy all the trees. We just want to protect the birds.\"</p>    <p>Then the judge made his decision. \"I <b>proclaim</b> that the office building should be built,\" he said. \"It is not a <b>crime</b> to remove those trees. I cannot give you a <b>sentence</b> for any offenses, but I feel obliged to make one request. I will only allow you to use half of the land. The other half will remain free, so the birds have a place to live.\"</p>    <p>The nature lovers could not <b>conceal</b> their <b>gratitude</b>. All of the people cheered.</p>    <p>The <b>architect</b> said, \"I have an idea. I will <b>volunteer</b> my time and efforts to design a new type of building. It will provide bushes on the roof where birds can live. There are enough resources in my company's bank <b>account</b> to create the best building ever made.\"</p>    <p>The <b>architect</b> did exactly as he promised. He built this new type of building, which was loved by everyone.</p></div></div></div>",
+      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Architect’s Plan</h1><div class=\"reading-materials\"><div class=\"reading-section\"><div class=\"reading-image\"></div><div class=\"reading-text\"><p class=\"mb-4\">An <b>architect</b> wanted to build a new office building. He selected some land that seemed perfect. He planned to cut down the trees to make room for the building. But there was a problem ... a big problem.</p>    <p class=\"mb-4\">The land was actually the <b>habitat</b> of several types of birds. Some nature lovers were very upset with the <b>architect</b>. First, they held a <b>rally</b> and told others about the issue. Then, they decided to take <b>legal</b> action because the <b>architect</b> didn't respect the animals' rights.</p>    <p class=\"mb-4\">To <b>resolve</b> the problem, they asked a judge to <b>intervene</b>.</p>    <p class=\"mb-4\">The judge could not call any witnesses for the nature lovers, so he first asked the <b>architect</b> to tell his side of the story.</p>    <p class=\"mb-4\">\"Why are you going to destroy the birds' <b>habitat</b>?\" the judge asked.</p>    <p class=\"mb-4\">The <b>architect</b> replied, \"I have the <b>deed</b> to the land. I want to make a great building there. As you may know, all my buildings become <b>memorable</b> landmarks.\"</p>    <p class=\"mb-4\">Then one of the nature lovers spoke. \"We believe that there's no reason to destroy all the trees. We just want to protect the birds.\"</p>    <p class=\"mb-4\">Then the judge made his decision. \"I <b>proclaim</b> that the office building should be built,\" he said. \"It is not a <b>crime</b> to remove those trees. I cannot give you a <b>sentence</b> for any offenses, but I feel obliged to make one request. I will only allow you to use half of the land. The other half will remain free, so the birds have a place to live.\"</p>    <p class=\"mb-4\">The nature lovers could not <b>conceal</b> their <b>gratitude</b>. All of the people cheered.</p>    <p class=\"mb-4\">The <b>architect</b> said, \"I have an idea. I will <b>volunteer</b> my time and efforts to design a new type of building. It will provide bushes on the roof where birds can live. There are enough resources in my company's bank <b>account</b> to create the best building ever made.\"</p>    <p class=\"mb-4\">The <b>architect</b> did exactly as he promised. He built this new type of building, which was loved by everyone.</p></div></div></div>",
+      "imageUrl": "/unit7_vol4_story.png",
       "sections": [
         {
           "id": "sec_4",
           "title": "Reading Comprehension Part A",
-          "questionType": "TFNG",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "26",
@@ -313,8 +307,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Câu văn đầu tiên trong bài đọc đã nêu rõ: \"An architect wanted to build a new office building.\" (Một kiến trúc sư muốn xây dựng một tòa nhà văn phòng mới). Do đó, thông tin ông ấy muốn xây trường học (school) là sai (False)."
+              "explanation": "Câu văn đầu tiên trong bài đọc đã nêu rõ: \"An architect wanted to build a new office building.\" (Một kiến trúc sư muốn xây dựng một tòa nhà văn phòng mới). Do đó, thông tin ông ấy muốn xây trường học (school) là sai (False).",
+              "correctAnswer": "False"
             },
             {
               "id": "27",
@@ -323,8 +317,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Trong bài đọc có viết: \"The land was actually the habitat of several types of birds.\" (Khu đất đó thực sự là môi trường sống của một vài loài chim). Vì vậy, câu nhận định này là đúng (True)."
+              "explanation": "Trong bài đọc có viết: \"The land was actually the habitat of several types of birds.\" (Khu đất đó thực sự là môi trường sống của một vài loài chim). Vì vậy, câu nhận định này là đúng (True).",
+              "correctAnswer": "True"
             },
             {
               "id": "28",
@@ -333,8 +327,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Bài đọc có nhắc đến: \"...so he first asked the architect to tell his side of the story.\" (vì vậy ông ấy đã hỏi kiến trúc sư kể lại câu chuyện từ phía ông ấy trước). Điều này đồng nghĩa với việc thẩm phán đã hỏi kiến trúc sư chuyện gì đã xảy ra, nên câu này là đúng (True)."
+              "explanation": "Bài đọc có nhắc đến: \"...so he first asked the architect to tell his side of the story.\" (vì vậy ông ấy đã hỏi kiến trúc sư kể lại câu chuyện từ phía ông ấy trước). Điều này đồng nghĩa với việc thẩm phán đã hỏi kiến trúc sư chuyện gì đã xảy ra, nên câu này là đúng (True).",
+              "correctAnswer": "True"
             },
             {
               "id": "29",
@@ -343,8 +337,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Khi được hỏi, kiến trúc sư đã trả lời: \"I have the deed to the land.\" (Tôi có giấy tờ sở hữu khu đất này). Vậy nên thông tin ông ấy có giấy tờ đất là chính xác (True)."
+              "explanation": "Khi được hỏi, kiến trúc sư đã trả lời: \"I have the deed to the land.\" (Tôi có giấy tờ sở hữu khu đất này). Vậy nên thông tin ông ấy có giấy tờ đất là chính xác (True).",
+              "correctAnswer": "True"
             },
             {
               "id": "30",
@@ -353,8 +347,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Đoạn văn viết: \"The nature lovers could not conceal their gratitude. All of the people cheered.\" (Những người yêu thiên nhiên không thể giấu được sự biết ơn của họ. Tất cả mọi người đều reo hò). Như vậy, người không giấu được sự biết ơn là những người yêu thiên nhiên chứ không phải kiến trúc sư, nên đáp án là sai (False)."
+              "explanation": "Đoạn văn viết: \"The nature lovers could not conceal their gratitude. All of the people cheered.\" (Những người yêu thiên nhiên không thể giấu được sự biết ơn của họ. Tất cả mọi người đều reo hò). Như vậy, người không giấu được sự biết ơn là những người yêu thiên nhiên chứ không phải kiến trúc sư, nên đáp án là sai (False).",
+              "correctAnswer": "False"
             },
             {
               "id": "31",
@@ -363,16 +357,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Kiến trúc sư đã khẳng định: \"There are enough resources in my company's bank account to create the best building ever made.\" (Có đủ tài nguyên trong tài khoản ngân hàng của công ty tôi để tạo ra tòa nhà tốt nhất từng được xây dựng). Vậy nên thông tin này là đúng (True)."
+              "explanation": "Kiến trúc sư đã khẳng định: \"There are enough resources in my company's bank account to create the best building ever made.\" (Có đủ tài nguyên trong tài khoản ngân hàng của công ty tôi để tạo ra tòa nhà tốt nhất từng được xây dựng). Vậy nên thông tin này là đúng (True).",
+              "correctAnswer": "True"
             }
           ],
-          "content": ""
+          "questionType": "TFNG"
         },
         {
           "id": "sec_5",
           "title": "Reading Comprehension Part B",
-          "questionType": "Trắc nghiệm",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "32",
@@ -383,8 +377,8 @@
                 "To list names of witnesses",
                 "To talk to the architect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài đọc có đề cập: \"First, they held a rally and told others about the issue.\" (Đầu tiên, họ tổ chức một cuộc tụ tập và kể cho những người khác nghe về vấn đề này). Vì vậy, mục đích của họ là để nói về vấn đề đang xảy ra."
+              "explanation": "Bài đọc có đề cập: \"First, they held a rally and told others about the issue.\" (Đầu tiên, họ tổ chức một cuộc tụ tập và kể cho những người khác nghe về vấn đề này). Vì vậy, mục đích của họ là để nói về vấn đề đang xảy ra.",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -395,8 +389,8 @@
                 "He thought nobody lived there.",
                 "His building would be a memorable landmark."
               ],
-              "correctAnswer": "C",
-              "explanation": "Kiến trúc sư nói với thẩm phán rằng ông ấy có giấy tờ đất (have the deed), muốn xây một tòa nhà tuyệt vời (make a great building) và tòa nhà sẽ trở thành một cột mốc đáng nhớ (memorable landmarks). Ông ấy không hề nói rằng mình nghĩ không có ai sống ở đó."
+              "explanation": "Kiến trúc sư nói với thẩm phán rằng ông ấy có giấy tờ đất (have the deed), muốn xây một tòa nhà tuyệt vời (make a great building) và tòa nhà sẽ trở thành một cột mốc đáng nhớ (memorable landmarks). Ông ấy không hề nói rằng mình nghĩ không có ai sống ở đó.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -407,8 +401,8 @@
                 "Move the birds to a new habitat",
                 "Sell the land to the architect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trong bài có viết rõ: \"To resolve the problem, they asked a judge to intervene.\" (Để giải quyết vấn đề, họ đã yêu cầu một thẩm phán can thiệp). Vậy đáp án đúng là yêu cầu thẩm phán can thiệp."
+              "explanation": "Trong bài có viết rõ: \"To resolve the problem, they asked a judge to intervene.\" (Để giải quyết vấn đề, họ đã yêu cầu một thẩm phán can thiệp). Vậy đáp án đúng là yêu cầu thẩm phán can thiệp.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -419,14 +413,21 @@
                 "He could not build any more buildings.",
                 "He was not given a sentence."
               ],
-              "correctAnswer": "D",
-              "explanation": "Thẩm phán đã tuyên bố: \"I cannot give you a sentence for any offenses...\" (Tôi không thể đưa ra bất kỳ bản án nào cho anh vì bất cứ tội danh gì...). Điều này có nghĩa là kiến trúc sư không phải nhận hình phạt hay bản án nào cả."
+              "explanation": "Thẩm phán đã tuyên bố: \"I cannot give you a sentence for any offenses...\" (Tôi không thể đưa ra bất kỳ bản án nào cho anh vì bất cứ tội danh gì...). Điều này có nghĩa là kiến trúc sư không phải nhận hình phạt hay bản án nào cả.",
+              "correctAnswer": "D"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>"
+          "questionType": "Trắc nghiệm"
         }
       ],
-      "imageUrl": "/unit7_vol4_story.png"
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit7_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">Kế Hoạch Của Kiến Trúc Sư</h1>\n\n<div class=\"reading-materials\">\n<div class=\"reading-section\">\n<div class=\"reading-image\"></div>\n<div class=\"reading-text\">\n\n<p>Một <b>kiến trúc sư</b> muốn xây dựng một tòa nhà văn phòng mới. Anh ấy đã chọn một mảnh đất có vẻ hoàn hảo. Anh dự định chặt cây để lấy chỗ cho tòa nhà. Nhưng có một vấn đề ... một vấn đề lớn.</p>\n\n<p>Mảnh đất thực ra là <b>môi trường sống</b> của một số loài chim. Một số người yêu thiên nhiên rất tức giận với <b>kiến trúc sư</b> này. Đầu tiên, họ tổ chức một cuộc <b>mít tinh</b> và nói với những người khác về vấn đề này. Sau đó, họ quyết định thực hiện hành động <b>pháp lý</b> vì <b>kiến trúc sư</b> đã không tôn trọng quyền của động vật.</p>\n\n<p>Để <b>giải quyết</b> vấn đề, họ đã yêu cầu một thẩm phán <b>can thiệp</b>.</p>\n\n<p>Thẩm phán không thể triệu tập bất kỳ nhân chứng nào cho những người yêu thiên nhiên, vì vậy trước tiên ông yêu cầu <b>kiến trúc sư</b> kể câu chuyện từ phía anh ta.</p>\n\n<p>\"Tại sao anh định phá hủy <b>môi trường sống</b> của các loài chim?\" thẩm phán hỏi.</p>\n\n<p><b>Kiến trúc sư</b> trả lời, \"Tôi có <b>chứng thư</b> của mảnh đất này. Tôi muốn xây một tòa nhà tuyệt vời ở đó. Như ngài có thể biết, tất cả các tòa nhà của tôi đều trở thành những điểm nhấn <b>đáng nhớ</b>.\"</p>\n\n<p>Sau đó, một trong những người yêu thiên nhiên lên tiếng. \"Chúng tôi tin rằng không có lý do gì để phá hủy tất cả cây cối. Chúng tôi chỉ muốn bảo vệ các loài chim.\"</p>\n\n<p>Sau đó, thẩm phán đưa ra quyết định của mình. \"Tôi <b>tuyên bố</b> rằng tòa nhà văn phòng nên được xây dựng,\" ông nói. \"Việc loại bỏ những cái cây đó không phải là một <b>tội ác</b>. Tôi không thể đưa ra một <b>bản án</b> nào cho ngài về bất kỳ hành vi vi phạm nào, nhưng tôi cảm thấy có nghĩa vụ phải đưa ra một yêu cầu. Tôi sẽ chỉ cho phép ngài sử dụng một nửa khu đất. Nửa còn lại sẽ được giữ trống, để các loài chim có nơi sinh sống.\"</p>\n\n<p>Những người yêu thiên nhiên không thể <b>che giấu</b> lòng <b>biết ơn</b> của họ. Tất cả mọi người đều reo hò.</p>\n\n<p><b>Kiến trúc sư</b> nói, \"Tôi có một ý tưởng. Tôi sẽ <b>tình nguyện</b> dành thời gian và nỗ lực của mình để thiết kế một loại tòa nhà mới. Nó sẽ cung cấp những bụi cây trên mái nhà nơi các loài chim có thể sinh sống. Có đủ tài nguyên trong <b>tài khoản</b> ngân hàng của công ty tôi để tạo ra tòa nhà tốt nhất từng được xây dựng.\"</p>\n\n<p><b>Kiến trúc sư</b> đã làm đúng như những gì anh ấy hứa. Anh đã xây dựng loại tòa nhà mới này, điều mà mọi người đều yêu thích.</p>\n\n</div>\n</div>\n</div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 7: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

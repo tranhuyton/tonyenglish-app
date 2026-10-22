@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 18: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -290,12 +284,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Nurse's Lesson</h1>        <p style=\"margin-bottom: 1rem;\">One of the children in the <b>nursery</b> was sick. The child's mother, who was usually quite <b>vivacious</b> and <b>chattered</b> constantly, was quiet and worried. She knew that if she did not act quickly, the child's condition would <b>deteriorate</b>.</p>    <p style=\"margin-bottom: 1rem;\">She summoned the children's nurse and said to her, “The monks make a medicine that can cure my child’s sickness. Please, hurry tonight to the <b>monastery</b> and get it.”</p>    <p style=\"margin-bottom: 1rem;\">The nurse immediately hurried from the <b>manor</b> to get the medicine. The <b>monastery</b> was far away by Rabbit <b>Cove</b>, and there was no <b>freeway</b> leading to it. The only way there was to walk along a dark and <b>winding</b> trail.</p>    <p style=\"margin-bottom: 1rem;\">The temperature was close to zero degrees <b>centigrade</b>, and it was raining. Luckily, the nurse had grabbed her raincoat <b>beforehand</b>. She <b>zipped</b> it up and pulled the hood over her head.</p>    <p style=\"margin-bottom: 1rem;\">“I’ll never make it there,” she thought. “Perhaps I should return and go in the morning.” But she remembered the sick child and decided to continue.</p>    <p style=\"margin-bottom: 1rem;\">Finally, she arrived at the <b>monastery</b>. It was very late. She feared the monks would not be <b>hospitable</b>. But she approached the door and knocked anyway. The rain had <b>condensed</b> on the <b>exterior</b> of the windows by the door. All she could see was the <b>profile</b> of a large man coming to answer the door. Again, she was filled with fear.</p>    <p style=\"margin-bottom: 1rem;\">But the monk smiled at her when he opened the door. He took her <b>outstretched</b> hand and welcomed her with a <b>hearty</b> voice. The place was warm, and she heard a <b>concerto</b> playing in another room. She relaxed.</p>    <p style=\"margin-bottom: 1rem;\">“How can I help you?” the monk asked, and the nurse explained the situation.</p>    <p style=\"margin-bottom: 1rem;\">He instantly knew what to do. He grabbed a <b>parcel</b> of medicine and took her back to the <b>manor</b> in a carriage. The medicine worked. The nurse was happy she had persevered through the bad weather and found the <b>monastery</b>. Now the boy would be able to live a long natural life.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Nurse's Lesson</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One of the children in the <b>nursery</b> was sick. The child's mother, who was usually quite <b>vivacious</b> and <b>chattered</b> constantly, was quiet and worried. She knew that if she did not act quickly, the child's condition would <b>deteriorate</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">She summoned the children's nurse and said to her, “The monks make a medicine that can cure my child’s sickness. Please, hurry tonight to the <b>monastery</b> and get it.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The nurse immediately hurried from the <b>manor</b> to get the medicine. The <b>monastery</b> was far away by Rabbit <b>Cove</b>, and there was no <b>freeway</b> leading to it. The only way there was to walk along a dark and <b>winding</b> trail.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The temperature was close to zero degrees <b>centigrade</b>, and it was raining. Luckily, the nurse had grabbed her raincoat <b>beforehand</b>. She <b>zipped</b> it up and pulled the hood over her head.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“I’ll never make it there,” she thought. “Perhaps I should return and go in the morning.” But she remembered the sick child and decided to continue.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Finally, she arrived at the <b>monastery</b>. It was very late. She feared the monks would not be <b>hospitable</b>. But she approached the door and knocked anyway. The rain had <b>condensed</b> on the <b>exterior</b> of the windows by the door. All she could see was the <b>profile</b> of a large man coming to answer the door. Again, she was filled with fear.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">But the monk smiled at her when he opened the door. He took her <b>outstretched</b> hand and welcomed her with a <b>hearty</b> voice. The place was warm, and she heard a <b>concerto</b> playing in another room. She relaxed.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“How can I help you?” the monk asked, and the nurse explained the situation.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He instantly knew what to do. He grabbed a <b>parcel</b> of medicine and took her back to the <b>manor</b> in a carriage. The medicine worked. The nurse was happy she had persevered through the bad weather and found the <b>monastery</b>. Now the boy would be able to live a long natural life.</p></div>",
       "imageUrl": "/unit18_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -360,25 +354,25 @@
               "id": "31",
               "content": "Where did the dark and winding trail lead?",
               "options": [
-                "The dark and winding trail went to the monastery.",
                 "It went to the freeway.",
                 "It went to the cove.",
+                "The dark and winding trail went to the monastery.",
                 "It went to the manor."
               ],
               "explanation": "Dịch câu hỏi: Con đường tối tăm và ngoằn ngoèo dẫn đến đâu?\nGiải thích: Chọn A.\nĐoạn 3 có viết: \"The monastery was far away... The only way there was to walk along a dark and winding trail.\" (Tu viện ở rất xa... Cách duy nhất đến đó là đi dọc theo một con đường mòn tối tăm và ngoằn ngoèo). Vậy con đường đó dẫn đến tu viện (monastery).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "32",
               "content": "Who took the nurse's outstretched hand and welcomed her with a hearty voice?",
               "options": [
-                "The monk took the nurse's outstretched hand and welcomed her with a hearty voice.",
                 "The mother took her hand.",
                 "The child took her hand.",
-                "The doctor took her hand."
+                "The doctor took her hand.",
+                "The monk took the nurse's outstretched hand and welcomed her with a hearty voice."
               ],
               "explanation": "Dịch câu hỏi: Ai đã nắm lấy bàn tay đang dang ra của người y tá và chào đón cô bằng một giọng điệu nồng nhiệt?\nGiải thích: Chọn A.\nĐoạn 7 có viết: \"But the monk smiled at her when he opened the door. He took her outstretched hand and welcomed her with a hearty voice.\" (Nhưng nhà sư đã mỉm cười với cô ấy khi ông mở cửa. Ông nắm lấy bàn tay đang dang ra của cô và chào đón cô bằng một giọng điệu nồng nhiệt). Đó chính là nhà sư (the monk).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "33",
@@ -396,30 +390,38 @@
               "id": "34",
               "content": "What had condensed on the exterior of the monastery's windows?",
               "options": [
-                "Rain had condensed on the exterior of the monastery's windows.",
                 "Snow had condensed.",
+                "Rain had condensed on the exterior of the monastery's windows.",
                 "Tears had condensed.",
                 "Clouds had condensed."
               ],
               "explanation": "Dịch câu hỏi: Thứ gì đã đọng lại trên mặt ngoài của cửa sổ tu viện?\nGiải thích: Chọn A.\nĐoạn 6 viết: \"The rain had condensed on the exterior of the windows by the door.\" (Mưa đã đọng lại trên mặt ngoài của những chiếc cửa sổ cạnh cửa ra vào). Vậy nên đáp án đúng là mưa (rain).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
               "content": "What was in the parcel that the nurse took back to the manor?",
               "options": [
-                "Medicine was in the parcel that the nurse took back to the manor.",
                 "Food was in the parcel.",
                 "Clothes were in the parcel.",
+                "Medicine was in the parcel that the nurse took back to the manor.",
                 "Money was in the parcel."
               ],
               "explanation": "Dịch câu hỏi: Có gì trong gói đồ mà người y tá mang về dinh thự?\nGiải thích: Chọn A.\nĐoạn 9 viết: \"He grabbed a parcel of medicine and took her back to the manor in a carriage.\" (Ông ấy lấy một gói thuốc và đưa cô quay lại dinh thự bằng xe ngựa). Bên trong gói đồ là thuốc (medicine).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit18_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bài học của người bảo mẫu</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một trong những đứa trẻ ở <b>nhà trẻ</b> bị ốm. Mẹ của đứa trẻ, người thường rất <b>hoạt bát</b> và <b>nói chuyện liến thoắng</b> không ngừng, lại im lặng và lo lắng. Cô biết rằng nếu không hành động nhanh chóng, tình trạng của đứa trẻ sẽ <b>xấu đi</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô đã gọi bảo mẫu của bọn trẻ và nói với cô ấy, “Các nhà sư làm ra một loại thuốc có thể chữa khỏi bệnh cho con tôi. Làm ơn, hãy nhanh chóng đến <b>tu viện</b> tối nay và lấy nó.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Người bảo mẫu ngay lập tức vội vã rời khỏi <b>trang viên</b> để lấy thuốc. <b>Tu viện</b> nằm ở rất xa cạnh <b>Vịnh</b> Thỏ, và không có <b>đường cao tốc</b> nào dẫn đến đó. Con đường duy nhất để đến đó là đi bộ dọc theo một con đường mòn tối tăm và <b>quanh co</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhiệt độ gần bằng 0 độ <b>C</b>, và trời đang mưa. May mắn thay, người bảo mẫu đã lấy áo mưa của mình từ <b>trước</b>. Cô <b>kéo khóa</b> áo lên và đội mũ trùm đầu.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Mình sẽ không bao giờ đến được đó,” cô nghĩ. “Có lẽ mình nên quay lại và đi vào buổi sáng.” Nhưng cô nhớ đến đứa trẻ ốm yếu và quyết định tiếp tục đi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cuối cùng, cô cũng đến <b>tu viện</b>. Lúc đó đã rất muộn. Cô sợ các nhà sư sẽ không <b>hiếu khách</b>. Nhưng cô vẫn tiến đến cánh cửa và gõ. Nước mưa đã <b>ngưng tụ</b> trên bề mặt <b>bên ngoài</b> của những ô cửa sổ bên cạnh cánh cửa. Tất cả những gì cô có thể nhìn thấy là <b>hình bóng</b> của một người đàn ông to lớn đang đến để mở cửa. Một lần nữa, cô lại tràn ngập sợ hãi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Nhưng nhà sư đã mỉm cười với cô khi ông mở cửa. Ông nắm lấy bàn tay đang <b>chìa ra</b> của cô và chào đón cô bằng một giọng nói <b>nhiệt tình</b>. Nơi này rất ấm áp, và cô nghe thấy một bản <b>hòa tấu</b> đang vang lên ở một căn phòng khác. Cô thư giãn.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Tôi có thể giúp gì cho cô?” nhà sư hỏi, và người bảo mẫu giải thích tình hình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông ngay lập tức biết phải làm gì. Ông lấy một <b>gói</b> thuốc và đưa cô trở lại <b>trang viên</b> trên một cỗ xe ngựa. Thuốc đã phát huy tác dụng. Người bảo mẫu rất vui vì cô đã kiên trì vượt qua thời tiết xấu và tìm thấy <b>tu viện</b>. Giờ đây, cậu bé sẽ có thể sống một cuộc sống lâu dài và tự nhiên.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 18: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

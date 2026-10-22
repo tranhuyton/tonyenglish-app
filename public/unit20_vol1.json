@@ -81,67 +81,67 @@
             {
               "id": "6",
               "content": "Chicken, pork, and beef are all kinds of. [ 6 ]",
-              "explanation": "meat: thịt (gà, lợn, bò đều là thịt).",
-              "correctAnswer": "meat",
               "options": [
                 "war",
                 "meat",
                 "regard",
                 "destroy",
                 "serve"
-              ]
+              ],
+              "explanation": "meat: thịt (gà, lợn, bò đều là thịt).",
+              "correctAnswer": "meat"
             },
             {
               "id": "7",
               "content": "Don't drop the glass bowl. You will it. [ 7 ]",
-              "explanation": "destroy: phá huỷ.",
-              "correctAnswer": "destroy",
               "options": [
                 "war",
                 "meat",
                 "regard",
                 "destroy",
                 "serve"
-              ]
+              ],
+              "explanation": "destroy: phá huỷ.",
+              "correctAnswer": "destroy"
             },
             {
               "id": "8",
               "content": "Restaurants often tea and coffee with breakfast. [ 8 ]",
-              "explanation": "serve: phục vụ.",
-              "correctAnswer": "serve",
               "options": [
                 "war",
                 "meat",
                 "regard",
                 "destroy",
                 "serve"
-              ]
+              ],
+              "explanation": "serve: phục vụ.",
+              "correctAnswer": "serve"
             },
             {
               "id": "9",
               "content": "Many teachers their students as smart kids. [ 9 ]",
-              "explanation": "regard: xem như, đánh giá.",
-              "correctAnswer": "regard",
               "options": [
                 "war",
                 "meat",
                 "regard",
                 "destroy",
                 "serve"
-              ]
+              ],
+              "explanation": "regard: xem như, đánh giá.",
+              "correctAnswer": "regard"
             },
             {
               "id": "10",
               "content": "It is sad when two countries start a with each other. [ 10 ]",
-              "explanation": "war: chiến tranh.",
-              "correctAnswer": "war",
               "options": [
                 "war",
                 "meat",
                 "regard",
                 "destroy",
                 "serve"
-              ]
+              ],
+              "explanation": "war: chiến tranh.",
+              "correctAnswer": "war"
             }
           ],
           "questionType": "Kéo thả"
@@ -259,7 +259,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Seven Cities of Gold</h1>        <p style=\"margin-bottom: 1rem;\">Many years ago, a Spanish officer named Coronado heard the story of seven great cities. \"The walls of these cities are made of gold,\" his friends told him. \"The people eat <b>meat</b> from golden plates and dress in nice clothes,\" they said. They called these cities the Seven Cities of Gold. Were the cities <b>real</b>? Coronado never <b>considered</b> asking his friends.</p>    <p style=\"margin-bottom: 1rem;\">Coronado thought to himself, \"The things in these cities must be <b>worth</b> a lot of money.\" So he went to find the Seven Cities of Gold. He took along three hundred men, many horses, and <b>extra</b> food. They headed west. Coronado wanted to <b>achieve</b> his <b>goal</b> very badly.</p>    <p style=\"margin-bottom: 1rem;\">Coronado and his men rode for many days. Then they saw some cities. \"We found the Seven Cities of Gold!\" his men yelled, but Coronado wasn't happy. He had a different <b>opinion</b>. \"These can't be the Seven Cities of Gold,\" he said. \"Look, they're made of dirt!\"</p>    <p style=\"margin-bottom: 1rem;\">Coronado was right. The cities weren't bright and golden. They were dirty and brown. The people didn't eat <b>meat</b> from golden plates. They ate <b>vegetables</b> from regular bowls. They wore the most <b>basic</b> clothes.</p>    <p style=\"margin-bottom: 1rem;\">Coronado <b>regarded</b> the cities as ugly places. \"What happened to the cities of gold?\" he thought. \"Did someone <b>destroy</b> them? Was there a <b>war</b>? Did someone <b>already</b> come and take the gold?\"</p>    <p style=\"margin-bottom: 1rem;\">That night, the people of the cities <b>entertained</b> Coronado and his men and <b>served</b> them food. They <b>advised</b> Coronado to go home. \"There is no gold here,\" they told him. Coronado was angry. Did his friends <b>lie</b> to him?</p>    <p style=\"margin-bottom: 1rem;\">He left the next morning. He looked back at the cities one more time. The sun <b>reflected</b> light on the dirt houses. Coronado thought he saw a <b>bit</b> of gold. Were his friends right after all? \"No,\" he told himself. \"It's just the sun.\" Then he turned away and went home.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Seven Cities of Gold</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Many years ago, a Spanish officer named Coronado heard the story of seven great cities. \"The walls of these cities are made of gold,\" his friends told him. \"The people eat <b>meat</b> from golden plates and dress in nice clothes,\" they said. They called these cities the Seven Cities of Gold. Were the cities <b>real</b>? Coronado never <b>considered</b> asking his friends.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Coronado thought to himself, \"The things in these cities must be <b>worth</b> a lot of money.\" So he went to find the Seven Cities of Gold. He took along three hundred men, many horses, and <b>extra</b> food. They headed west. Coronado wanted to <b>achieve</b> his <b>goal</b> very badly.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Coronado and his men rode for many days. Then they saw some cities. \"We found the Seven Cities of Gold!\" his men yelled, but Coronado wasn't happy. He had a different <b>opinion</b>. \"These can't be the Seven Cities of Gold,\" he said. \"Look, they're made of dirt!\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Coronado was right. The cities weren't bright and golden. They were dirty and brown. The people didn't eat <b>meat</b> from golden plates. They ate <b>vegetables</b> from regular bowls. They wore the most <b>basic</b> clothes.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Coronado <b>regarded</b> the cities as ugly places. \"What happened to the cities of gold?\" he thought. \"Did someone <b>destroy</b> them? Was there a <b>war</b>? Did someone <b>already</b> come and take the gold?\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">That night, the people of the cities <b>entertained</b> Coronado and his men and <b>served</b> them food. They <b>advised</b> Coronado to go home. \"There is no gold here,\" they told him. Coronado was angry. Did his friends <b>lie</b> to him?</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">He left the next morning. He looked back at the cities one more time. The sun <b>reflected</b> light on the dirt houses. Coronado thought he saw a <b>bit</b> of gold. Were his friends right after all? \"No,\" he told himself. \"It's just the sun.\" Then he turned away and went home.</p></div>",
       "imageUrl": "/unit20_story.png",
       "sections": [
         {
@@ -330,7 +330,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">    <img src=\"/unit20_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bảy Thành Phố Vàng</h1>\n\n<p style=\"margin-bottom: 1rem;\">Nhiều năm trước, một sĩ quan Tây Ban Nha tên là Coronado đã nghe được câu chuyện về bảy thành phố vĩ đại. \"Những bức tường của các thành phố này được làm bằng vàng,\" những người bạn của ông kể với ông. \"Mọi người ăn <b>thịt</b> từ những chiếc đĩa bằng vàng và mặc những bộ quần áo đẹp,\" họ nói. Họ gọi những thành phố này là Bảy Thành Phố Vàng. Những thành phố này có <b>thật</b> không? Coronado chưa từng <b>cân nhắc</b> việc hỏi bạn bè của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Coronado thầm nghĩ, \"Những thứ trong các thành phố này hẳn phải <b>đáng giá</b> rất nhiều tiền.\" Vì vậy, ông đã lên đường đi tìm Bảy Thành Phố Vàng. Ông mang theo ba trăm người, rất nhiều ngựa và <b>thêm</b> cả lương thực dự trữ. Họ hướng về phía tây. Coronado vô cùng khao khát <b>đạt được</b> <b>mục tiêu</b> của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Coronado và đoàn tùy tùng cưỡi ngựa suốt nhiều ngày. Rồi họ nhìn thấy vài thành phố. \"Chúng ta tìm thấy Bảy Thành Phố Vàng rồi!\" những người của ông hét lên, nhưng Coronado lại không vui. Ông có một <b>ý kiến</b> khác. \"Đây không thể là Bảy Thành Phố Vàng được,\" ông nói. \"Nhìn xem, chúng được làm bằng đất mà!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Coronado đã đúng. Những thành phố đó không hề sáng chói và lấp lánh sắc vàng. Chúng bẩn thỉu và có màu nâu. Mọi người không ăn <b>thịt</b> từ những chiếc đĩa bằng vàng. Họ ăn <b>rau củ</b> từ những chiếc bát bình thường. Họ mặc những bộ quần áo <b>cơ bản</b> nhất.</p>\n\n<p style=\"margin-bottom: 1rem;\">Coronado <b>đánh giá</b> những thành phố này là những nơi xấu xí. \"Điều gì đã xảy ra với những thành phố vàng?\" ông nghĩ. \"Có ai đó đã <b>phá hủy</b> chúng chăng? Có một <b>cuộc chiến tranh</b> nào đã nổ ra sao? Có ai đó <b>đã</b> đến và lấy đi số vàng rồi sao?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Đêm đó, người dân ở các thành phố đã <b>chiêu đãi</b> Coronado cùng những người của ông và <b>phục vụ</b> đồ ăn cho họ. Họ <b>khuyên</b> Coronado nên về nhà. \"Không có vàng ở đây đâu,\" họ nói với ông. Coronado rất tức giận. Có phải bạn bè ông đã <b>nói dối</b> ông không?</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông rời đi vào sáng hôm sau. Ông ngoái nhìn lại các thành phố một lần nữa. Mặt trời <b>phản chiếu</b> ánh sáng trên những ngôi nhà bằng đất. Coronado tưởng rằng mình nhìn thấy một <b>chút</b> vàng. Rốt cuộc thì có phải bạn bè của ông đã đúng không? \"Không,\" ông tự nhủ. \"Đó chỉ là ánh mặt trời thôi.\" Rồi ông quay mặt đi và trở về nhà.</p></div>\n</div>"
     }
   ],
   "basicInfo": {

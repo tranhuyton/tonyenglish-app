@@ -3,307 +3,404 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abstract</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æbstrækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If ideas are abstract, they are based on general ways of thinking.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The idea of beauty is abstract and changes over time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">annual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænjuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is annual, it happens once a year.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The only time I see my aunts and uncles is at our annual family picnic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Clay is a type of heavy, wet soil used to make pots.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She made a bowl out of the clay.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cloth</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klɔ(:)θ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cloth is material used to make clothes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His shirt is made of a very soft type of cloth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">curtain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kə:rtən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A curtain is a cloth hung over a window or used to divide a room.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She opened the curtains to let light into the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deserve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dizə:rv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To deserve is to be worthy of something as a result of one’s actions.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dog deserved a bone for behaving very well.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">feather</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Feathers are the things covering birds’ bodies.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That bird has orange feathers on its chest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fertile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fə:rtl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If land is fertile, it is able to produce good crops and plants.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The farmer grew many vegetables in the fertile soil.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flood</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flʌd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A flood is an event in which water covers an area which is usually dry.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After three days of rain, there was a flood in the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">furniture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fə:rnitʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Furniture is the things used in a house such as tables and chairs.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His living room only had a few simple pieces of furniture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A grave is the place where a dead person is buried.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We visit our grandfather’s grave each year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ideal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aidi:əl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ideal, it is the best that it can possibly be.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This house is an ideal place for my family. It has everything we need.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intelligence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intelədʒəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Intelligence is the ability to learn and understand things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because of his high intelligence, he finished school early.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nowadays</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nauədeiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens nowadays, it happens at the present time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the past people walked everywhere. Nowadays, they use cars.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">obtain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbtein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To obtain is to get something you want or need.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After I passed the test, I obtained my driver’s license.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">religious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rilidʒəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is religious, it has to do with religion.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The holy man spoke about religious topics.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">romantic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[roumæntik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is romantic, it has to do with love.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The young couple went to see a romantic movie.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shell</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shell is a hard covering that protects the body of some sea creatures.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were many pretty shells on the beach.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shore is the edge of a large body of water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All of the boats were floating near the shore.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wheel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwi:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wheel is a round thing on a vehicle that turns when it moves.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A car has four wheels.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bomb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɑm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bomb is an object that explodes and destroys large areas.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bomb will destroy anything that is near.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">certificate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sərtifəkit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A certificate is a document that says that something is true or happened.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was given a certificate after completing the computer course.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">circumstance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sə:rkəmstæns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A circumstance is an event that makes a situation what it is.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were many circumstances behind their success like hard work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coffin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔ:fin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A coffin is a box used to bury dead people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When a person passes away, they are usually buried inside of a coffin.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cope</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[koup]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cope with a difficult or stressful situation means to deal with it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He copes with work stress by exercising three or four times a week.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">criticism</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kritisizəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Criticism is the act of saying that you don’t like or approve of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She had a lot of criticism about their new plan.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">devastate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[devəsteit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To devastate something means to completely destroy it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The entire wall was devastated.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frown</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fraun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To frown is to make an unhappy look with your face.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Melissa frowned when she found out that the party had been cancelled.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gaze</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[geiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To gaze at something means to look at it for a long time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We used a telescope to gaze at the stars for over an hour.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">glance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[glæns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To glance at something means to look at it quickly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She glanced behind her to see if he was looking at her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grief</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gri:f]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Grief is the feeling of deep sadness, usually when a person dies.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The grief caused by losing her parents was very difficult for her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">groom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gru:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A groom is a man who is going to be married.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The groom looked happy as he walked with his new wife.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">license</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[laisəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A license is an official document that gives one permission to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the United States you need a driver’s license to drive legally.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">microscope</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[maikrəskoup]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A microscope is a device that makes small objects look bigger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Germs cannot be seen without a microscope.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nuclear</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nju:kliər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is nuclear, it relates to the division or joining of atoms.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Nuclear power plants provide inexpensive energy to cities.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">portray</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɔ:rtrei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To portray something means to describe it or show it in a picture.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her picture portrayed the house she grew up in when she was little.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rotate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[routeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rotate something means to turn it around in a circle.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ An airplane’s propellers rotate quickly to help it fly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">souvenir</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[su:vəniər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A souvenir is something you buy to remind you of a place or event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I bought a Russian doll as a souvenir from my trip to Moscow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">submarine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌbməri:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A submarine is a boat that can go underwater for long periods of time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The submarine dove under the sea so the enemy couldn’t see it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[treis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To trace something means to follow over it with the eyes or a finger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He traced over the graph with his finger.</div></div></div></div></div></div>",
       "sections": [
         {
-          "id": "sec1_wordlist",
-          "title": "Exercise 1: Part A: Write a word that is similar in meaning to the underlined part.",
+          "id": "sec_wordlist_0",
+          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">I need your help to move the <u>tables and chairs</u>. [ 1 ]</p><p class=\"mb-4\">This problem will test your <u>ability to understand</u>. [ 2 ]</p><p class=\"mb-4\">I don’t like to be in dark rooms with <u>covers over the windows</u>. [ 3 ]</p><p class=\"mb-4\">Tom and Rob are the <u>best</u> roommates. [ 4 ]</p><p class=\"mb-4\">I need to <u>get a ticket</u> before I can board the train. [ 5 ]</p>",
-              "options": [],
-              "explanation": "furniture (n): đồ nội thất (bàn, ghế, v.v.).",
-              "correctAnswer": "furniture"
+              "content": "to show in a picture",
+              "options": [
+                "portray",
+                "trace",
+                "gaze",
+                "rotate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "portray có nghĩa là khắc họa, miêu tả trong tranh ảnh."
             },
             {
               "id": "2",
-              "content": "",
-              "options": [],
-              "explanation": "intelligence (n): sự thông minh (khả năng học hỏi và hiểu biết).",
-              "correctAnswer": "intelligence"
+              "content": "something that causes an event",
+              "options": [
+                "souvenir",
+                "certificate",
+                "circumstance",
+                "criticism"
+              ],
+              "correctAnswer": "C",
+              "explanation": "circumstance là hoàn cảnh, tình huống dẫn đến sự việc."
             },
             {
               "id": "3",
-              "content": "",
-              "options": [],
-              "explanation": "curtains (n): rèm cửa (vải treo trên cửa sổ).",
-              "correctAnswer": "curtains"
+              "content": "a feeling of sadness",
+              "options": [
+                "frown",
+                "grief",
+                "bomb",
+                "glance"
+              ],
+              "correctAnswer": "B",
+              "explanation": "grief là nỗi đau buồn sâu sắc."
             },
             {
               "id": "4",
-              "content": "",
-              "options": [],
-              "explanation": "ideal (adj): lý tưởng (tốt nhất có thể).",
-              "correctAnswer": "ideal"
+              "content": "a box for burying dead people",
+              "options": [
+                "groom",
+                "license",
+                "coffin",
+                "cope"
+              ],
+              "correctAnswer": "C",
+              "explanation": "coffin là quan tài."
             },
             {
               "id": "5",
-              "content": "",
-              "options": [],
-              "explanation": "obtain (v): đạt được, thu được (có được thứ bạn muốn hoặc cần).",
-              "correctAnswer": "obtain"
+              "content": "a device for making small things look bigger",
+              "options": [
+                "submarine",
+                "microscope",
+                "devastate",
+                "nuclear"
+              ],
+              "correctAnswer": "B",
+              "explanation": "microscope là kính hiển vi."
             }
-          ],
-          "questionType": "Điền từ"
+          ]
         },
         {
-          "id": "sec2_wordlist",
-          "title": "Exercise 1: Part B: Fill in the blanks with the correct words from the word bank.",
-          "content": "WORD BANK: clay, cloth, fertile, graves, flood. Jimmy went on a trip to Egypt. There, he visited the great pyramids. Inside them were the 1._________ of old kings. He also visited a village near the river and learned about a recent 2._________. People grew many crops on this 3._________ land. They used 4._________ pots to carry water from the river into their homes. One friendly man gave Jimmy a white 5._________ to cover his head from the hot sun. It was a wonderful trip.",
+          "id": "sec_wordlist_1",
+          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "Inside them were the [ 6 ] of old kings.",
+              "content": "certificate",
               "options": [
-                "graves",
-                "cloth",
-                "flood",
-                "clay",
-                "fertile"
+                "a document for permission",
+                "something bought to remind of a place",
+                "between two sizes",
+                "a document that claims a fact"
               ],
-              "explanation": "graves (n): ngôi mộ (nơi chôn cất người chết).",
-              "correctAnswer": "graves"
+              "correctAnswer": "D",
+              "explanation": "certificate là giấy chứng nhận."
             },
             {
               "id": "7",
-              "content": "He also visited a village near the river and learned about a recent [ 7 ].",
+              "content": "cope",
               "options": [
-                "graves",
-                "cloth",
-                "flood",
-                "clay",
-                "fertile"
+                "to deal with a difficult situation",
+                "to look at something quickly",
+                "to completely destroy something",
+                "to turn around in a circle"
               ],
-              "explanation": "flood (n): lũ lụt (sự kiện nước bao phủ một khu vực thường khô ráo).",
-              "correctAnswer": "flood"
+              "correctAnswer": "A",
+              "explanation": "cope có nghĩa là đương đầu, đối phó với tình huống khó khăn."
             },
             {
               "id": "8",
-              "content": "People grew many crops on this [ 8 ] land.",
+              "content": "trace",
               "options": [
-                "graves",
-                "cloth",
-                "flood",
-                "clay",
-                "fertile"
+                "to look at for a long time",
+                "to follow over with the eyes",
+                "to show in a picture",
+                "to express dislike or sadness"
               ],
-              "explanation": "fertile (adj): màu mỡ (có khả năng sản sinh ra cây trồng và thực vật tốt).",
-              "correctAnswer": "fertile"
+              "correctAnswer": "B",
+              "explanation": "trace có nghĩa là lần theo bằng mắt hoặc ngón tay."
             },
             {
               "id": "9",
-              "content": "They used [ 9 ] pots to carry water from the river into their homes.",
+              "content": "groom",
               "options": [
-                "graves",
-                "cloth",
-                "flood",
-                "clay",
-                "fertile"
+                "a boat that can go under water",
+                "a box used to bury dead people",
+                "a man about to be married",
+                "something that causes an event"
               ],
-              "explanation": "clay (n): đất sét (một loại đất nặng, ướt được dùng để làm chậu).",
-              "correctAnswer": "clay"
+              "correctAnswer": "C",
+              "explanation": "groom là chú rể (người đàn ông sắp kết hôn)."
             },
             {
               "id": "10",
-              "content": "One friendly man gave Jimmy a white [ 10 ] to cover his head from the hot sun.",
+              "content": "bomb",
               "options": [
-                "graves",
-                "cloth",
-                "flood",
-                "clay",
-                "fertile"
+                "to go between two places",
+                "the act of finding fault with someone",
+                "an object that explodes",
+                "a feeling of sadness because of death"
               ],
-              "explanation": "cloth (n): vải (vật liệu dùng để may quần áo).",
-              "correctAnswer": "cloth"
+              "correctAnswer": "C",
+              "explanation": "bomb là quả bom (vật phát nổ)."
             }
-          ],
-          "questionType": "Kéo thả"
+          ]
         },
         {
-          "id": "sec3_wordlist",
-          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "id": "sec_wordlist_2",
+          "title": "Exercise 2: Choose the word that is a better fit for each blank.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "",
+              "content": "1. The engineer ________ a line with his finger to where he thought the police officers would find the ________. (traced / bomb)",
               "options": [
-                "a. Many people wear a <b>shell</b> before going out into the rain.",
-                "b. In the past three years, the city has had two <b>floods</b>."
+                "traced / bomb",
+                "bomb / traced",
+                "circumstances / nuclear",
+                "glance / certificate"
               ],
-              "explanation": "flood (n): lũ lụt. Lũ lụt là hiện tượng nước bao phủ một khu vực vốn dĩ khô ráo.",
-              "correctAnswer": "B"
+              "correctAnswer": "A",
+              "explanation": "Kỹ sư dò theo (traced) một đường bằng ngón tay đến nơi có quả bom (bomb)."
             },
             {
               "id": "12",
-              "content": "",
+              "content": "2. The politician said that there were many ________ that led to the US using a ________ weapon on Japan. (circumstances / nuclear)",
               "options": [
-                "a. <b>Nowadays</b>, many students like using the Internet to do research.",
-                "b. Many groups have <b>annual</b> meetings every month."
+                "nuclear / circumstances",
+                "circumstances / nuclear",
+                "glance / certificate",
+                "grief / coffin"
               ],
-              "explanation": "nowadays (adv): ngày nay. Nowadays có nghĩa là ở thời điểm hiện tại.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "Có nhiều hoàn cảnh (circumstances) dẫn đến việc sử dụng vũ khí hạt nhân (nuclear)."
             },
             {
               "id": "13",
-              "content": "",
+              "content": "3. I was so busy that I could only ________ at my daughter’s ________ of achievement. I will take a better look at it when I get home. (glance / certificate)",
               "options": [
-                "a. Some dogs have interesting <b>feathers</b>.",
-                "b. You cannot ride a bicycle if it doesn’t have <b>wheels</b>."
+                "certificate / glance",
+                "grief / coffin",
+                "glance / certificate",
+                "devastated / cope"
               ],
-              "explanation": "wheel (n): bánh xe. Bánh xe là một bộ phận hình tròn trên các phương tiện giao thông, có thể quay khi di chuyển.",
-              "correctAnswer": "B"
+              "correctAnswer": "C",
+              "explanation": "Quá bận nên chỉ có thể liếc nhìn (glance) tờ giấy chứng nhận (certificate) thành tích."
             },
             {
               "id": "14",
-              "content": "",
+              "content": "4. The entire family was filled with ________ as their father’s ________ was slowly lowered into the ground. (grief / coffin)",
               "options": [
-                "a. Churches don’t let people read <b>religious</b> books.",
-                "b. Birds use their <b>feathers</b> to help them fly."
+                "coffin / grief",
+                "devastated / cope",
+                "rotated / souvenir",
+                "grief / coffin"
               ],
-              "explanation": "feather (n): lông vũ. Lông vũ là những chiếc lông bao phủ cơ thể loài chim.",
-              "correctAnswer": "B"
+              "correctAnswer": "D",
+              "explanation": "Cả gia đình tràn ngập nỗi đau buồn (grief) khi quan tài (coffin) được hạ xuống."
             },
             {
               "id": "15",
-              "content": "",
+              "content": "5. I was completely ________ when I heard the news of her accident. I hope that her husband can ________ with the situation. (devastated / cope)",
               "options": [
-                "a. Many people enjoy watching <b>romantic</b> movies.",
-                "b. If you get good grades, you don’t <b>deserve</b> to graduate."
+                "devastated / cope",
+                "cope / devastated",
+                "rotated / souvenir",
+                "criticism / frowned"
               ],
-              "explanation": "romantic (adj): lãng mạn. Lãng mạn có nghĩa là những gì liên quan đến tình yêu.",
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "Hoàn toàn suy sụp (devastated) khi nghe tin và hy vọng chồng cô ấy có thể vượt qua/đối phó (cope)."
             },
             {
               "id": "16",
-              "content": "",
+              "content": "6. Maria ________ her ________ so that all of her classmates could get a good view of it. (rotated / souvenir)",
               "options": [
-                "a. A crab is an example of an animal that has a <b>shell</b>.",
-                "b. People never go fishing near the <b>shore</b>."
+                "souvenir / rotated",
+                "rotated / souvenir",
+                "criticism / frowned",
+                "gazed / microscope"
               ],
-              "explanation": "shell (n): vỏ cứng. Vỏ cứng là lớp vỏ bảo vệ cơ thể của một số sinh vật biển.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "Maria xoay tròn (rotated) món quà lưu niệm (souvenir) để cả lớp cùng xem."
             },
             {
               "id": "17",
-              "content": "",
+              "content": "7. After receiving a great deal of ________ about her idea, Katie ________, but was determined not to quit. (criticism / frowned)",
               "options": [
-                "a. People who do bad things <b>deserve</b> to be punished.",
-                "b. Mountains and hills are examples of <b>floods</b>."
+                "frowned / criticism",
+                "gazed / microscope",
+                "criticism / frowned",
+                "license / submarine"
               ],
-              "explanation": "deserve (v): xứng đáng. Xứng đáng có nghĩa là đáng được nhận một điều gì đó như là kết quả của những hành động mình đã làm.",
-              "correctAnswer": "A"
+              "correctAnswer": "C",
+              "explanation": "Sau khi nhận nhiều lời chỉ trích (criticism), Katie cau mày (frowned) nhưng quyết không bỏ cuộc."
             },
             {
               "id": "18",
-              "content": "",
+              "content": "8. Tony ________ at the pictures of the new forms of bacteria that were discovered. Curious, he viewed samples of them through a powerful ________. (gazed / microscope)",
               "options": [
-                "a. Horses are more common than cars <b>nowadays</b>.",
-                "b. People who are <b>religious</b> go to church."
+                "microscope / gazed",
+                "license / submarine",
+                "portrayed / groom",
+                "gazed / microscope"
               ],
-              "explanation": "religious (adj): thuộc về tôn giáo. Religious có nghĩa là những gì liên quan đến tôn giáo.",
-              "correctAnswer": "B"
+              "correctAnswer": "D",
+              "explanation": "Tony nhìn chằm chằm (gazed) vào bức ảnh và quan sát mẫu vật qua kính hiển vi (microscope)."
             },
             {
               "id": "19",
-              "content": "",
+              "content": "9. Eric did not have a ________ to operate the sophisticated ________. (license / submarine)",
               "options": [
-                "a. If you are <b>romantic</b>, you probably don’t like movies about love.",
-                "b. There are beaches along the <b>shore</b> of some oceans and lakes."
+                "license / submarine",
+                "submarine / license",
+                "portrayed / groom",
+                "traced / bomb"
               ],
-              "explanation": "shore (n): bờ biển/bờ hồ. Shore là phần rìa của một vùng nước lớn.",
-              "correctAnswer": "B"
+              "correctAnswer": "A",
+              "explanation": "Eric không có giấy phép (license) để vận hành tàu ngầm (submarine)."
             },
             {
               "id": "20",
-              "content": "",
+              "content": "10. Lisa ________ her new ________ as the perfect husband. But we all knew that he had many faults. (portrayed / groom)",
               "options": [
-                "a. You should see your doctor once a year for an <b>annual</b> checkup.",
-                "b. The wind makes the <b>wheels</b> of a car turn."
+                "groom / portrayed",
+                "portrayed / groom",
+                "traced / bomb",
+                "circumstances / nuclear"
               ],
-              "explanation": "annual (adj): hàng năm. Annual có nghĩa là sự việc xảy ra mỗi năm một lần.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "Lisa miêu tả (portrayed) chú rể (groom) mới của mình như một người chồng hoàn hảo."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Osiris and the Nile</h1>        <p style=\"margin-bottom: 1rem;\">Long ago, Osiris was the king of Egypt, and Isis was the queen. They ruled the <b>fertile</b> land by the Nile River. They had great <b>intelligence</b>, and they shared their <b>abstract</b> ideas with everyone. Osiris taught the Egyptians how to make <b>wheels</b> and <b>furniture</b>. Isis taught them how to make things from <b>clay</b> and <b>cloth</b>. The people thought they <b>deserved</b> a gift. So they built Osiris and Isis a pyramid. Everyone loved Osiris except his brother, Set. Set wanted to be king.</p>    <p style=\"margin-bottom: 1rem;\">Osiris made his <b>annual</b> trip around Egypt and led <b>religious</b> events. The villages gave him beautiful <b>shells</b> and colorful <b>feathers</b> as gifts.</p>    <p style=\"margin-bottom: 1rem;\">When Osiris returned, Set brought a beautiful wooden box from behind a <b>curtain</b>.</p>    <p style=\"margin-bottom: 1rem;\">\"If someone fits inside this box, I will give it to him or her,\" Set said.</p>    <p style=\"margin-bottom: 1rem;\">Osiris got in it. It was an <b>ideal</b> fit!</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, Set closed the box and threw it into the river. \"Now I will be king!\" Set said.</p>    <p style=\"margin-bottom: 1rem;\">The box washed up on a foreign <b>shore</b> after a <b>flood</b>. Isis brought his body home and <b>obtained</b> a <b>grave</b> for him in Egypt. The Egyptian gods thought Isis had done something very <b>romantic</b>.</p>    <p style=\"margin-bottom: 1rem;\">Because of her love, the gods made him the god of the underworld. Osiris returned every spring to help the farmers. Even <b>nowadays</b>, people say Osiris keeps their crops alive.</p></div>",
-      "imageUrl": "/unit29_story.png",
+      "imageUrl": "/unit29_v3_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">An Interesting Life</h1><p style=\"margin-bottom: 1rem;\">A man looked through some boxes with his grandson. They were filled with old photographs and objects that <strong>portrayed</strong> important events from the grandfather’s life. He wished to share the <strong>circumstances</strong> behind each event with his grandson.</p><p style=\"margin-bottom: 1rem;\">The grandson, however, thought his grandfather’s stories were boring. The grandfather <strong>coped</strong> with this. He ignored his grandson’s <strong>criticism</strong>.</p><p style=\"margin-bottom: 1rem;\">He took a photo from the box. “That’s the <strong>submarine</strong> I was on during the war,” he explained. The grandson <strong>gazed</strong> at it.</p><p style=\"margin-bottom: 1rem;\">The grandfather <strong>glanced</strong> at the next picture and <strong>frowned</strong>. It showed a row of <strong>coffins</strong>. His grandson noticed the <strong>grief</strong> in his grandfather’s face.</p><p style=\"margin-bottom: 1rem;\">“What is it?” the boy inquired.</p><p style=\"margin-bottom: 1rem;\">“This was after a <strong>nuclear</strong> <strong>bomb</strong> was dropped,” the grandfather answered. “It <strong>devastated</strong> a city.”</p><p style=\"margin-bottom: 1rem;\">Next the grandfather pulled a toy <strong>microscope</strong> from the box and <strong>rotated</strong> it in his hand.</p><p style=\"margin-bottom: 1rem;\">“Where did you get that?” the grandson asked.</p><p style=\"margin-bottom: 1rem;\">“This is a <strong>souvenir</strong> I bought at the science museum,” the grandfather said.</p><p style=\"margin-bottom: 1rem;\">Now the boy was really interested. He started to understand that his grandfather was telling him a larger story. It was the story of his grandfather’s life.</p><p style=\"margin-bottom: 1rem;\">He got another photo. It showed a young bride and <strong>groom</strong>. They were very happy. A <strong>certificate</strong> was attached to the photo. The boy couldn’t read it, but he <strong>traced</strong> his finger over the paper.</p><p style=\"margin-bottom: 1rem;\">“What’s this from, Granddad?” he asked.</p><p style=\"margin-bottom: 1rem;\">“That’s my marriage <strong>license</strong> from the day I married your grandmother,” the grandfather said.</p><p style=\"margin-bottom: 1rem;\">“Wow!” said the boy. “Granddad, now I know all about your life!”</p></div>",
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit29_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Một Cuộc Đời Thú Vị</h1>\n<p style=\"margin-bottom: 1rem;\">Một người đàn ông đang cùng cháu trai xem lại vài chiếc hộp. Chúng chứa đầy những bức ảnh cũ và những kỷ vật <strong>khắc họa</strong> các sự kiện quan trọng trong cuộc đời người ông. Ông muốn chia sẻ <strong>hoàn cảnh</strong> đằng sau mỗi sự kiện với cháu trai mình.</p>\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, cậu cháu trai lại nghĩ những câu chuyện của ông thật nhàm chán. Người ông <strong>đối phó</strong> với điều đó bằng cách phớt lờ những <strong>lời chê bai</strong> của cháu.</p>\n<p style=\"margin-bottom: 1rem;\">Ông lấy một bức ảnh từ trong hộp ra. “Đó là chiếc <strong>tàu ngầm</strong> mà ông đã phục vụ trong thời chiến,” ông giải thích. Cậu cháu trai <strong>nhìn chăm chú</strong> vào bức ảnh.</p>\n<p style=\"margin-bottom: 1rem;\">Người ông <strong>liếc nhìn</strong> bức ảnh tiếp theo và <strong>cau mày</strong>. Bức ảnh chụp một hàng <strong>quan tài</strong>. Cậu cháu trai nhận thấy <strong>nỗi đau buồn</strong> trên gương mặt ông.</p>\n<p style=\"margin-bottom: 1rem;\">“Đây là gì vậy ông?” cậu bé hỏi.</p>\n<p style=\"margin-bottom: 1rem;\">“Bức ảnh này chụp sau khi một <strong>quả bom</strong> <strong>hạt nhân</strong> được thả xuống,” người ông trả lời. “Nó đã <strong>tàn phá hoàn toàn</strong> cả một thành phố.”</p>\n<p style=\"margin-bottom: 1rem;\">Tiếp theo, người ông lấy một chiếc <strong>kính hiển vi</strong> đồ chơi từ trong hộp ra và <strong>xoay</strong> nó trên tay.</p>\n<p style=\"margin-bottom: 1rem;\">“Ông mua cái đó ở đâu vậy ạ?” cậu cháu trai hỏi.</p>\n<p style=\"margin-bottom: 1rem;\">“Đây là <strong>món quà lưu niệm</strong> ông mua ở bảo tàng khoa học,” người ông đáp.</p>\n<p style=\"margin-bottom: 1rem;\">Lúc này cậu bé đã thực sự thích thú. Cậu bắt đầu hiểu rằng ông mình đang kể cho cậu nghe một câu chuyện lớn hơn. Đó chính là câu chuyện về cuộc đời của ông.</p>\n<p style=\"margin-bottom: 1rem;\">Ông lấy ra một bức ảnh khác. Bức ảnh chụp một cô dâu và <strong>chú rể</strong> trẻ tuổi. Họ trông rất hạnh phúc. Một <strong>giấy chứng nhận</strong> được đính kèm với bức ảnh. Cậu bé không đọc được chữ trên đó, nhưng cậu <strong>lần</strong> ngón tay theo từng nét chữ trên tờ giấy.</p>\n<p style=\"margin-bottom: 1rem;\">“Tờ giấy này là gì vậy ông?” cậu hỏi.</p>\n<p style=\"margin-bottom: 1rem;\">“Đó là <strong>giấy phép</strong> kết hôn từ ngày ông cưới bà của cháu,” người ông nói.</p>\n<p style=\"margin-bottom: 1rem;\">“Chà!” cậu bé reo lên. “Ông ơi, giờ thì cháu đã biết tất cả về cuộc đời của ông rồi!”</p></div>",
       "sections": [
         {
-          "id": "sec4_reading",
-          "title": "Answer the questions.",
-          "content": "",
+          "id": "sec_reading_0",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "<p>True / False</p>",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "21",
-              "content": "What is this story about?",
+              "content": "The photographs portrayed important events from the grandson’s life.",
               "options": [
-                "a. Why Osiris built a pyramid for Isis",
-                "b. How Set created a grave for Osiris",
-                "c. How Osiris died and returned to make Egypt fertile",
-                "d. Why the gods thought Isis’ actions were romantic"
+                "True",
+                "False"
               ],
-              "explanation": "Câu chuyện chủ yếu kể về việc Osiris bị người anh em là Set hãm hại và giết chết như thế nào, và cuối cùng trở lại để giúp cho đất đai Ai Cập trở nên màu mỡ (Osiris returned every spring to help the farmers). Do đó đáp án C là chính xác.",
-              "correctAnswer": "C"
+              "correctAnswer": "False",
+              "explanation": "Đoạn 1: 'portrayed important events from the grandfather’s life' (cuộc đời của người ông chứ không phải người cháu) -> Sai (False)."
             },
             {
               "id": "22",
-              "content": "What happened each spring?",
+              "content": "The grandfather explained that the picture of the coffins was taken after a nuclear bomb devastated a city.",
               "options": [
-                "a. Osiris gave people feathers and shells.",
-                "b. Set obtained furniture from people.",
-                "c. Set hid a box behind a curtain.",
-                "d. Osiris made an annual trip to villages."
+                "True",
+                "False"
               ],
-              "explanation": "Đoạn văn có đề cập: Osiris made his annual trip around Egypt and led religious events (Osiris đã thực hiện chuyến đi hàng năm quanh Ai Cập và dẫn dắt các sự kiện tôn giáo). Chuyến đi hàng năm (annual) này chính là sự việc lặp lại mỗi mùa xuân. Do đó đáp án D là chính xác.",
-              "correctAnswer": "D"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 6: 'This was after a nuclear bomb was dropped... It devastated a city.' -> Đúng (True)."
             },
             {
               "id": "23",
-              "content": "In the last paragraph, we can infer that______________ .",
+              "content": "The first photo the grandson gazed at was of a submarine.",
               "options": [
-                "a. the shore is the ideal home for Osiris",
-                "b. Set had greater intelligence than the gods",
-                "c. the gods felt that Isis did a good deed",
-                "d. nowadays, the Egyptians don’t use Osiris’ abstract ideas"
+                "True",
+                "False"
               ],
-              "explanation": "Trong bài đọc viết: The Egyptian gods thought Isis had done something very romantic. Because of her love, the gods made him the god of the underworld (Các vị thần Ai Cập cho rằng Isis đã làm một điều vô cùng lãng mạn. Vì tình yêu của bà, các vị thần đã phong ông làm thần của thế giới ngầm). Điều này cho thấy các vị thần cảm thấy Isis đã làm một việc làm tốt đẹp. Do đó đáp án C là chính xác.",
-              "correctAnswer": "C"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 3: '“That’s the submarine I was on during the war,” he explained. The grandson gazed at it.' -> Đúng (True)."
             },
             {
               "id": "24",
-              "content": "According to the passage, all the following are true EXCEPT",
+              "content": "The toy microscope was a souvenir from a science museum.",
               "options": [
-                "a. the Egyptians made wheels",
-                "b. the Egyptians used clay pots",
-                "c. the Egyptians made cloth",
-                "d. the Egyptians built religious villages"
+                "True",
+                "False"
               ],
-              "explanation": "Đoạn văn đề cập đến việc người Ai Cập được dạy cách làm bánh xe (wheels), đồ nội thất (furniture), đồ vật từ đất sét (clay) và vải (cloth). Bài đọc không nhắc đến việc họ xây dựng các ngôi làng tôn giáo. Do đó đáp án D là chính xác.",
-              "correctAnswer": "D"
+              "correctAnswer": "True",
+              "explanation": "Đoạn 9: 'This is a souvenir I bought at the science museum' -> Đúng (True)."
             },
             {
               "id": "25",
-              "content": "What did the Egyptians do for their king and queen?",
+              "content": "The certificate was from the day the grandson was born.",
               "options": [
-                "a. They made religious cloth.",
-                "b. They obtained furniture.",
-                "c. They built them a pyramid.",
-                "d. They threw them in a flood."
+                "True",
+                "False"
               ],
-              "explanation": "Đoạn văn có viết: The people thought they deserved a gift. So they built Osiris and Isis a pyramid (Người dân nghĩ rằng họ xứng đáng với một món quà. Vì vậy, họ đã xây dựng cho Osiris và Isis một kim tự tháp). Do đó đáp án C là chính xác.",
-              "correctAnswer": "C"
+              "correctAnswer": "False",
+              "explanation": "Đó là giấy đăng ký kết hôn ngày ông cưới bà ('from the day I married your grandmother') -> Sai (False)."
+            },
+            {
+              "id": "26",
+              "content": "The groom and bride in the last photo were happy.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Đoạn 11: 'It showed a young bride and groom. They were very happy.' -> Đúng (True)."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
+        },
+        {
+          "id": "sec_reading_1",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "27",
+              "content": "Which of the following was NOT in the box?",
+              "options": [
+                "Photographs",
+                "Souvenirs",
+                "Letters",
+                "A marriage license"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Trong hộp có ảnh (photographs), quà lưu niệm (souvenir), và giấy đăng ký kết hôn (marriage license), không có những bức thư (Letters)."
+            },
+            {
+              "id": "28",
+              "content": "What did the grandfather say he did during the war?",
+              "options": [
+                "Worked on a submarine",
+                "Made nuclear bombs",
+                "Worked in a souvenir shop",
+                "Took photographs"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đoạn 3: 'That’s the submarine I was on during the war.'"
+            },
+            {
+              "id": "29",
+              "content": "How did the grandson feel at first about the circumstances behind each photograph?",
+              "options": [
+                "He frowned.",
+                "He was full of grief.",
+                "He was bored.",
+                "He was interested."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Đoạn 2: 'The grandson, however, thought his grandfather’s stories were boring.'"
+            },
+            {
+              "id": "30",
+              "content": "All of the following are true about the toy microscope EXCEPT ________.",
+              "options": [
+                "it was a souvenir",
+                "the grandfather rotated it in his hand",
+                "the grandson only glanced at it",
+                "the grandfather bought it at a museum"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Cậu cháu trai rất hứng thú và hỏi ông mua nó ở đâu, chứ không phải chỉ liếc nhìn qua ('the grandson only glanced at it' là sai)."
+            }
+          ]
         }
       ]
     }

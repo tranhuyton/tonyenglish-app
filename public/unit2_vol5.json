@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 2: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -408,7 +402,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Abbey</h1>        <p style=\"margin-bottom: 1rem;\">It had not rained on the <b>prairie</b> for several months. Because of the <b>drought</b>, the climate had become very <b>arid</b>. There was no <b>moisture</b> left in the soil. No crops could grow in the dry ground. By wintertime, the people had nothing to eat.</p>    <p style=\"margin-bottom: 1rem;\">The hungry families heard about an <b>abbey</b> near the mountains where food and water was still <b>abundant</b>. So they traveled <b>inland</b>, across the prairie, to the abbey.</p>    <p style=\"margin-bottom: 1rem;\">At first only a few families arrived, seeking food and shelter. Then there was <b>ample</b> food. The monks fed them and let them sleep in the small <b>cathedral</b>.</p>    <p style=\"margin-bottom: 1rem;\">Soon, however, more families were arriving every day. These people had to travel farther, so they were in worse condition. The <b>rugged</b> journey had made their clothes <b>ragged</b>. They were cold and tired. The tiny cathedral was soon full.</p>    <p style=\"margin-bottom: 1rem;\">Food became <b>scarce</b>. The monks began to <b>grumble</b>. They began to <b>speculate</b> that there would be no food. “If more families come, we won’t make it through the winter,” said a young monk. “We must ask some of them to leave.”</p>    <p style=\"margin-bottom: 1rem;\">The abbot heard this. “We cannot do that,” he said. “It would be wrong to <b>deprive</b> them of food and shelter. We took an <b>oath</b> to help those that need help. All here are in need, so all are <b>eligible</b> to receive our food and shelter.”</p>    <p style=\"margin-bottom: 1rem;\">“But we won’t have enough,” the monk said.</p>    <p style=\"margin-bottom: 1rem;\">“That might be true, but we must help them <b>nonetheless</b>. We will <b>fast</b>,” the abbot replied. “Also, we will give our rooms in the abbey to those sleeping outside, and we will sleep in the churchyard that <b>adjoins</b> the cathedral.”</p>    <p style=\"margin-bottom: 1rem;\">The monks were reluctant at first, but they did what the oldest monk said. By the end of winter, there was still enough food and shelter for everyone. They learned that sometimes helping others means you must give more help than you first expected.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Abbey</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">It had not rained on the <b>prairie</b> for several months. Because of the <b>drought</b>, the climate had become very <b>arid</b>. There was no <b>moisture</b> left in the soil. No crops could grow in the dry ground. By wintertime, the people had nothing to eat.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The hungry families heard about an <b>abbey</b> near the mountains where food and water was still <b>abundant</b>. So they traveled <b>inland</b>, across the prairie, to the abbey.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">At first only a few families arrived, seeking food and shelter. Then there was <b>ample</b> food. The monks fed them and let them sleep in the small <b>cathedral</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Soon, however, more families were arriving every day. These people had to travel farther, so they were in worse condition. The <b>rugged</b> journey had made their clothes <b>ragged</b>. They were cold and tired. The tiny cathedral was soon full.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Food became <b>scarce</b>. The monks began to <b>grumble</b>. They began to <b>speculate</b> that there would be no food. “If more families come, we won’t make it through the winter,” said a young monk. “We must ask some of them to leave.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The abbot heard this. “We cannot do that,” he said. “It would be wrong to <b>deprive</b> them of food and shelter. We took an <b>oath</b> to help those that need help. All here are in need, so all are <b>eligible</b> to receive our food and shelter.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“But we won’t have enough,” the monk said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“That might be true, but we must help them <b>nonetheless</b>. We will <b>fast</b>,” the abbot replied. “Also, we will give our rooms in the abbey to those sleeping outside, and we will sleep in the churchyard that <b>adjoins</b> the cathedral.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The monks were reluctant at first, but they did what the oldest monk said. By the end of winter, there was still enough food and shelter for everyone. They learned that sometimes helping others means you must give more help than you first expected.</p></div>",
       "imageUrl": "/unit2_vol5_story.png",
       "sections": [
         {
@@ -478,25 +472,25 @@
               "id": "36",
               "content": "According to the abbot, who was eligible to receive the monks’ help?",
               "options": [
-                "All were eligible",
                 "Only monks",
                 "Only the rich",
+                "All were eligible",
                 "Only the healthy"
               ],
               "explanation": "Trong đoạn 6, vị trụ trì khẳng định: \"All here are in need, so all are eligible to receive our food and shelter.\" (Tất cả mọi người ở đây đều đang cần giúp đỡ, vì vậy tất cả đều đủ điều kiện nhận thức ăn và nơi ở của chúng ta).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "37",
               "content": "When the monks grumbled, what did the young monk speculate would happen if more families arrived?",
               "options": [
-                "They wouldn't make it through the winter",
                 "They would have more food",
                 "They would build more houses",
-                "They would dance"
+                "They would dance",
+                "They wouldn't make it through the winter"
               ],
               "explanation": "Theo đoạn 5, vị sư trẻ suy đoán: \"If more families come, we won’t make it through the winter\" (Nếu có thêm nhiều gia đình đến, chúng ta sẽ không thể sống sót qua mùa đông).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "38",
@@ -514,30 +508,38 @@
               "id": "39",
               "content": "What was the oath that the monks had taken?",
               "options": [
-                "To help those that need help",
                 "To eat abundant food",
+                "To help those that need help",
                 "To travel inland",
                 "To ignore the poor"
               ],
               "explanation": "Trong đoạn 6, vị trụ trì nhắc lại lời thề: \"We took an oath to help those that need help.\" (Chúng ta đã lập lời thề sẽ giúp đỡ những người cần giúp đỡ).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "40",
               "content": "What did the monks learn about helping others?",
               "options": [
-                "Sometimes it means giving more help than expected",
                 "It is always easy",
                 "It is not worth it",
+                "Sometimes it means giving more help than expected",
                 "They shouldn't help strangers"
               ],
               "explanation": "Đoạn cuối của câu chuyện kết luận: \"They learned that sometimes helping others means you must give more help than you first expected.\" (Họ học được rằng đôi khi việc giúp đỡ người khác có nghĩa là bạn phải cho đi nhiều sự giúp đỡ hơn mức bạn mong đợi lúc đầu).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit2_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tu viện hữu ích</h1>\n\n<p style=\"margin-bottom: 1rem;\">Đã không có mưa trên <b>thảo nguyên</b> trong vài tháng. Vì <b>hạn hán</b>, khí hậu đã trở nên rất <b>khô cằn</b>. Không còn chút <b>độ ẩm</b> nào trong đất. Không loại cây trồng nào có thể mọc trên mặt đất khô cằn. Đến mùa đông, mọi người không có gì để ăn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những gia đình đói khát đã nghe về một <b>tu viện</b> gần núi, nơi thức ăn và nước uống vẫn còn <b>dồi dào</b>. Vì vậy, họ đã đi sâu vào <b>nội địa</b>, băng qua thảo nguyên, đến tu viện.</p>\n\n<p style=\"margin-bottom: 1rem;\">Lúc đầu chỉ có một vài gia đình đến tìm kiếm thức ăn và nơi trú ẩn. Khi đó vẫn có thức ăn <b>đủ nhiều</b>. Các tu sĩ đã cho họ ăn và để họ ngủ trong <b>nhà thờ lớn</b> nhỏ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, chẳng bao lâu sau, ngày càng có nhiều gia đình đến mỗi ngày. Những người này phải đi xa hơn, vì vậy họ ở trong tình trạng tồi tệ hơn. Cuộc hành trình <b>gian khổ</b> đã làm quần áo của họ <b>rách rưới</b>. Họ lạnh lẽo và mệt mỏi. Nhà thờ nhỏ bé chẳng mấy chốc đã chật kín.</p>\n\n<p style=\"margin-bottom: 1rem;\">Thức ăn trở nên <b>khan hiếm</b>. Các tu sĩ bắt đầu <b>cằn nhằn</b>. Họ bắt đầu <b>suy đoán</b> rằng sẽ không còn thức ăn. \"Nếu có thêm nhiều gia đình đến, chúng ta sẽ không thể vượt qua mùa đông,\" một tu sĩ trẻ nói. \"Chúng ta phải yêu cầu một số người trong số họ rời đi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Viện trưởng đã nghe thấy điều này. \"Chúng ta không thể làm vậy,\" ông nói. \"Sẽ là sai trái nếu <b>tước đoạt</b> thức ăn và nơi trú ẩn của họ. Chúng ta đã thề một <b>lời thề</b> để giúp đỡ những người cần giúp đỡ. Tất cả những người ở đây đều đang cần, vì vậy tất cả đều <b>đủ điều kiện</b> để nhận thức ăn và nơi trú ẩn của chúng ta.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Nhưng chúng ta sẽ không có đủ,\" tu sĩ nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Điều đó có thể đúng, <b>tuy nhiên</b> chúng ta vẫn phải giúp họ. Chúng ta sẽ <b>nhịn ăn</b>,\" viện trưởng trả lời. \"Ngoài ra, chúng ta sẽ nhường phòng của mình trong tu viện cho những người ngủ ngoài trời, và chúng ta sẽ ngủ trong sân nhà thờ <b>nằm liền kề</b> nhà thờ lớn.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Ban đầu các tu sĩ miễn cưỡng, nhưng họ đã làm theo lời của vị tu sĩ già nhất. Vào cuối mùa đông, vẫn có đủ thức ăn và nơi trú ẩn cho mọi người. Họ học được rằng đôi khi giúp đỡ người khác có nghĩa là bạn phải cho đi nhiều sự giúp đỡ hơn bạn mong đợi ban đầu.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

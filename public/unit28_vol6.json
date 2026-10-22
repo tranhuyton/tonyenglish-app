@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 28: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -430,12 +424,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lord and the Farmers</h1>        <p style=\"margin-bottom: 1rem;\">A wealthy lord was <b>renovating</b> his <b>mansion</b>. He had added another story to his home with large windows that overlooked the farmers’ <b>pastures</b> on the eastern border of his land. Around the <b>mansion</b>, he then <b>erected</b> a great wall. He built an <b>arch</b> for the gate out of huge <b>slabs</b> of stone. The lord was <b>overjoyed</b> with the addition to his home.</p>    <p style=\"margin-bottom: 1rem;\">However, one day while he was sitting on the <b>terrace</b>, some farmers knocked at his door. He invited them in. Despite his <b>hospitality</b>, the farmers appeared to be in a <b>foul</b> mood.</p>    <p style=\"margin-bottom: 1rem;\">“Why are you so upset?” the lord asked.</p>    <p style=\"margin-bottom: 1rem;\">One farmer replied, “That is actually the reason for our visit.” He then handed the lord a <b>petition</b>. It <b>alleged</b> that the shadow cast by the <b>mansion</b> was harming their <b>pastures</b>. “Your <b>mansion</b> now casts a shadow over several <b>hectares</b> of our land,” the farmer explained. “The <b>turf</b> in the shadow has died, and our cattle now have less grass to eat.”</p>    <p style=\"margin-bottom: 1rem;\">“It is too late for me to <b>revise</b> my plans,” the lord answered. “You will just have to live with the change.”</p>    <p style=\"margin-bottom: 1rem;\">His reply only <b>heightened</b> the farmers’ anger. They left, but they <b>assembled</b> that night outside the <b>mansion</b>’s gate. They planned to destroy the <b>mansion</b>. The lord’s servants tried to defend the house, but the farmers <b>outnumbered</b> them.</p>    <p style=\"margin-bottom: 1rem;\">The servants fled, and the farmers rushed into the <b>mansion</b> and set it on fire. Everyone got out of the house, and there were no <b>casualties</b>. However, the fire soon spread from the house to the <b>adjoining</b> <b>pastures</b> that belonged to the farmers.</p>    <p style=\"margin-bottom: 1rem;\">Both sides’ properties were destroyed. The lord and the farmers were sorry for their actions. The lord promised to pay for the burned <b>pastures</b>, and the farmers promised to rebuild the <b>mansion</b>. They had learned that when you fight, both sides lose.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lord and the Farmers</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">A wealthy lord was <b>renovating</b> his <b>mansion</b>. He had added another story to his home with large windows that overlooked the farmers’ <b>pastures</b> on the eastern border of his land. Around the <b>mansion</b>, he then <b>erected</b> a great wall. He built an <b>arch</b> for the gate out of huge <b>slabs</b> of stone. The lord was <b>overjoyed</b> with the addition to his home.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">However, one day while he was sitting on the <b>terrace</b>, some farmers knocked at his door. He invited them in. Despite his <b>hospitality</b>, the farmers appeared to be in a <b>foul</b> mood.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Why are you so upset?” the lord asked.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One farmer replied, “That is actually the reason for our visit.” He then handed the lord a <b>petition</b>. It <b>alleged</b> that the shadow cast by the <b>mansion</b> was harming their <b>pastures</b>. “Your <b>mansion</b> now casts a shadow over several <b>hectares</b> of our land,” the farmer explained. “The <b>turf</b> in the shadow has died, and our cattle now have less grass to eat.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“It is too late for me to <b>revise</b> my plans,” the lord answered. “You will just have to live with the change.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">His reply only <b>heightened</b> the farmers’ anger. They left, but they <b>assembled</b> that night outside the <b>mansion</b>’s gate. They planned to destroy the <b>mansion</b>. The lord’s servants tried to defend the house, but the farmers <b>outnumbered</b> them.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The servants fled, and the farmers rushed into the <b>mansion</b> and set it on fire. Everyone got out of the house, and there were no <b>casualties</b>. However, the fire soon spread from the house to the <b>adjoining</b> <b>pastures</b> that belonged to the farmers.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Both sides’ properties were destroyed. The lord and the farmers were sorry for their actions. The lord promised to pay for the burned <b>pastures</b>, and the farmers promised to rebuild the <b>mansion</b>. They had learned that when you fight, both sides lose.</p></div>",
       "imageUrl": "/unit28_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -512,37 +506,37 @@
               "id": "42",
               "content": "While renovating, what did the lord erect around his mansion?",
               "options": [
-                "He erected a great wall.",
                 "He erected a new farm.",
+                "He erected a great wall.",
                 "He erected a fountain.",
                 "He erected a hospital."
               ],
               "explanation": "Trong đoạn 1 có viết: \"Around the mansion, he then erected a great wall.\" (Sau đó, xung quanh dinh thự, ông ta đã dựng lên một bức tường lớn). Đáp án A là chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "43",
               "content": "What happened to the pastures adjoining the burning mansion?",
               "options": [
-                "The pastures adjoining the burning mansion also burned.",
                 "They were sold.",
                 "They flourished with new turf.",
+                "The pastures adjoining the burning mansion also burned.",
                 "They were flooded."
               ],
               "explanation": "Cuối đoạn 7 có viết: \"However, the fire soon spread from the house to the adjoining pastures that belonged to the farmers.\" (Tuy nhiên, ngọn lửa đã nhanh chóng lan từ ngôi nhà sang những đồng cỏ liền kề thuộc về những người nông dân). Vậy nên đồng cỏ cũng bị cháy, đáp án A đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "44",
               "content": "Why were there no casualties in the fire at the mansion?",
               "options": [
-                "There were no casualties in the fire at the mansion because everyone got out of the house.",
                 "They sued him for the loss of their pastures.",
                 "Because the fire was very small.",
-                "Because it was raining."
+                "Because it was raining.",
+                "There were no casualties in the fire at the mansion because everyone got out of the house."
               ],
               "explanation": "Ở đoạn 7 có ghi: \"Everyone got out of the house, and there were no casualties.\" (Mọi người đều đã thoát ra khỏi nhà, và không có thương vong nào). Đáp án A là câu trả lời chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "45",
@@ -559,7 +553,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit28_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Lãnh chúa và Những người nông dân</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một vị lãnh chúa giàu có đang <b>cải tạo</b> <b>dinh thự</b> của mình. Ông ta đã xây thêm một tầng cho ngôi nhà của mình với những ô cửa sổ lớn nhìn ra <b>đồng cỏ</b> của những người nông dân ở biên giới phía đông vùng đất của mình. Xung quanh <b>dinh thự</b>, sau đó ông ta <b>dựng lên</b> một bức tường lớn. Ông ta xây một <b>mái vòm</b> cho cổng bằng những <b>phiến</b> đá khổng lồ. Vị lãnh chúa <b>vô cùng vui sướng</b> với sự bổ sung này cho ngôi nhà của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tuy nhiên, một ngày nọ khi ông ta đang ngồi trên <b>sân hiên</b>, một số nông dân gõ cửa nhà ông. Ông ta mời họ vào. Bất chấp <b>sự hiếu khách</b> của ông, những người nông dân có vẻ đang trong tâm trạng <b>tồi tệ</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">“Sao các người lại tức giận như vậy?” vị lãnh chúa hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một người nông dân trả lời, “Đó chính là lý do chúng tôi đến đây.” Sau đó, anh ta trao cho lãnh chúa một <b>bản kiến nghị</b>. Nó <b>cáo buộc</b> rằng bóng râm do <b>dinh thự</b> hắt xuống đang làm hại <b>đồng cỏ</b> của họ. “<b>Dinh thự</b> của ngài bây giờ phủ bóng râm lên vài <b>hecta</b> đất của chúng tôi,” người nông dân giải thích. “<b>Lớp cỏ</b> trong bóng râm đã chết, và gia súc của chúng tôi bây giờ có ít cỏ hơn để ăn.”</p>\n\n<p style=\"margin-bottom: 1rem;\">“Đã quá muộn để ta <b>thay đổi</b> kế hoạch của mình rồi,” vị lãnh chúa trả lời. “Các người sẽ chỉ còn cách phải sống chung với sự thay đổi này thôi.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Câu trả lời của ông ta chỉ <b>làm tăng thêm</b> sự tức giận của những người nông dân. Họ rời đi, nhưng họ đã <b>tập hợp</b> vào đêm đó bên ngoài cổng <b>dinh thự</b>. Họ định phá hủy <b>dinh thự</b>. Những người hầu của vị lãnh chúa cố gắng bảo vệ ngôi nhà, nhưng những người nông dân đã <b>áp đảo về số lượng</b> so với họ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những người hầu bỏ chạy, và những người nông dân lao vào <b>dinh thự</b> rồi châm lửa đốt nó. Mọi người đều thoát ra khỏi nhà, và không có <b>thương vong</b> nào. Tuy nhiên, ngọn lửa nhanh chóng lan từ ngôi nhà sang các <b>đồng cỏ</b> <b>liền kề</b> thuộc về những người nông dân.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tài sản của cả hai bên đều bị thiêu rụi. Vị lãnh chúa và những người nông dân đều hối hận về hành động của mình. Vị lãnh chúa hứa sẽ trả tiền cho những <b>đồng cỏ</b> bị cháy, và những người nông dân hứa sẽ xây lại <b>dinh thự</b>. Họ đã học được rằng khi bạn chiến đấu, cả hai bên đều sẽ thua cuộc.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 28: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

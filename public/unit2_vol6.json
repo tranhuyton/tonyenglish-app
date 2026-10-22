@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 2: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -370,12 +364,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Fossil Hunters</h1>        <p style=\"margin-bottom: 1rem;\">Tim and Dean were great fossil hunters. They were the very best at finding dinosaur bones. Although Tim and Dean were quite similar, they were <b>outright</b> enemies. The two men got into <b>vicious</b> arguments all the time. They couldn’t <b>coexist</b> peacefully because their <b>egos</b> were too large. Tim thought he was the best fossil hunter, while Dean was sure that he was much better than Tim.</p>    <p style=\"margin-bottom: 1rem;\">One day, Tim was searching for fossils on the <b>periphery</b> of the city when he discovered a huge bone. He had never seen anything like it! He took his <b>shovel</b> and carefully <b>excavated</b> the dirt around it. As he dug, he uncovered more <b>jagged</b> bones. He realized that he had found an entire dinosaur skeleton! Tim couldn’t <b>conceive</b> a plan to remove the huge skeleton all by himself. Such an <b>endeavor</b> would be too <b>arduous</b>. He needed help. He tried to think of people who would be capable of helping him remove the skeleton without breaking it. The only person Tim could think of was Dean, his enemy.</p>    <p style=\"margin-bottom: 1rem;\">Tim ran into the city to find Dean. Tim found him and said, “Dean, I’ve found the <b>skeletal</b> remains of a huge <b>terrestrial</b> animal. But I can’t get the skeleton out by myself. Will you please help me?”</p>    <p style=\"margin-bottom: 1rem;\">Dean thought that Tim’s claim might be <b>dubious</b>. He replied, “If you’re serious about the skeleton, I’ll help.”</p>    <p style=\"margin-bottom: 1rem;\">Tim excitedly showed Dean the skeleton’s <b>locale</b>. They worked together to carefully remove each bone. And to keep the bones together, they tied them with <b>elastic</b> strips. When they were finished, they had <b>attained</b> a perfect skeleton. They used <b>plaster</b> to make a <b>mold</b> of the dinosaur’s skull. They <b>engraved</b> their initials into it and gave it to the curator of a local museum.</p>    <p style=\"margin-bottom: 1rem;\">Tim and Dean found out that they could work very well together. They decided to end their feud and become friends. By combining their talents, the men became even greater than they were before.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Fossil Hunters</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tim and Dean were great fossil hunters. They were the very best at finding dinosaur bones. Although Tim and Dean were quite similar, they were <b>outright</b> enemies. The two men got into <b>vicious</b> arguments all the time. They couldn’t <b>coexist</b> peacefully because their <b>egos</b> were too large. Tim thought he was the best fossil hunter, while Dean was sure that he was much better than Tim.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One day, Tim was searching for fossils on the <b>periphery</b> of the city when he discovered a huge bone. He had never seen anything like it! He took his <b>shovel</b> and carefully <b>excavated</b> the dirt around it. As he dug, he uncovered more <b>jagged</b> bones. He realized that he had found an entire dinosaur skeleton! Tim couldn’t <b>conceive</b> a plan to remove the huge skeleton all by himself. Such an <b>endeavor</b> would be too <b>arduous</b>. He needed help. He tried to think of people who would be capable of helping him remove the skeleton without breaking it. The only person Tim could think of was Dean, his enemy.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tim ran into the city to find Dean. Tim found him and said, “Dean, I’ve found the <b>skeletal</b> remains of a huge <b>terrestrial</b> animal. But I can’t get the skeleton out by myself. Will you please help me?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Dean thought that Tim’s claim might be <b>dubious</b>. He replied, “If you’re serious about the skeleton, I’ll help.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tim excitedly showed Dean the skeleton’s <b>locale</b>. They worked together to carefully remove each bone. And to keep the bones together, they tied them with <b>elastic</b> strips. When they were finished, they had <b>attained</b> a perfect skeleton. They used <b>plaster</b> to make a <b>mold</b> of the dinosaur’s skull. They <b>engraved</b> their initials into it and gave it to the curator of a local museum.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Tim and Dean found out that they could work very well together. They decided to end their feud and become friends. By combining their talents, the men became even greater than they were before.</p></div>",
       "imageUrl": "/unit2_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -440,25 +434,25 @@
               "id": "41",
               "content": "Why couldn’t Tim and Dean coexist peacefully?",
               "options": [
-                "Their egos were too large.",
                 "They wanted to attain different goals.",
                 "Dean was dubious about Tim.",
+                "Their egos were too large.",
                 "They were both vicious."
               ],
               "explanation": "Đáp án đúng là A nhé. Để biết tại sao Tim và Dean không thể chung sống hòa bình, bạn nhìn vào đoạn 1: 'They couldn’t coexist peacefully because their egos were too large.' (Họ không thể cùng tồn tại một cách hòa bình bởi vì cái tôi của họ quá lớn). Vậy chọn A là chuẩn xác nhất !",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "42",
               "content": "What did Tim use his shovel to do?",
               "options": [
-                "Tim used his shovel to carefully excavate the land around the bone.",
                 "Tim used his shovel to hit Dean.",
                 "Tim used his shovel to build a house.",
-                "Tim used his shovel to engrave his name."
+                "Tim used his shovel to engrave his name.",
+                "Tim used his shovel to carefully excavate the land around the bone."
               ],
               "explanation": "Đáp án đúng là A . Đoạn 2 miêu tả việc Tim dùng xẻng làm gì: 'He took his shovel and carefully excavated the dirt around it.' (Anh ấy lấy chiếc xẻng của mình và cẩn thận đào lớp bụi bẩn xung quanh nó). Vậy đáp án A diễn tả chính xác hành động này nhé!",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "43",
@@ -476,30 +470,38 @@
               "id": "44",
               "content": "What did the fossil hunters do to the plaster mold before they gave it to the curator?",
               "options": [
-                "They engraved their initials into it.",
                 "They painted it red.",
+                "They engraved their initials into it.",
                 "They broke it into pieces.",
                 "They tied it with elastic."
               ],
               "explanation": "Đáp án đúng là A . Đoạn 5 có nhắc đến: 'They used plaster to make a mold... They engraved their initials into it and gave it to the curator...' (Họ đã sử dụng thạch cao để tạo khuôn... Họ khắc tên viết tắt của mình vào đó và đưa nó cho người phụ trách...). Nên đáp án đúng phải là A nhé!",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "45",
               "content": "What did Dean say before he went to the locale of the terrestrial animal’s skeletal remains?",
               "options": [
-                "“If you’re serious about the skeleton, I’ll help.”",
                 "“I don't believe you.”",
                 "“Let's go together.”",
+                "“If you’re serious about the skeleton, I’ll help.”",
                 "“I am the best fossil hunter.”"
               ],
               "explanation": "Đáp án đúng là A nhé. Ở đoạn 4, Dean đã đáp lại lời nhờ vả của Tim rằng: 'If you’re serious about the skeleton, I’ll help.' (Nếu bạn nghiêm túc về bộ xương, tôi sẽ giúp). Vậy A là lựa chọn chính xác !",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit2_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Những Nhà Săn Hóa Thạch</h1>\n\n<p style=\"margin-bottom: 1rem;\">Tim và Dean là những nhà săn hóa thạch cừ khôi. Họ là những người giỏi nhất trong việc tìm kiếm xương khủng long. Mặc dù Tim và Dean khá giống nhau, họ lại là những kẻ thù <b>không đội trời chung</b>. Hai người đàn ông này lúc nào cũng vướng vào những cuộc tranh cãi <b>ác liệt</b>. Họ không thể <b>sống chung</b> hòa bình vì <b>cái tôi</b> của họ quá lớn. Tim nghĩ anh ta là nhà săn hóa thạch giỏi nhất, trong khi Dean cũng chắc chắn rằng anh ta giỏi hơn Tim rất nhiều.</p>\n\n<p style=\"margin-bottom: 1rem;\">Một ngày nọ, Tim đang tìm kiếm hóa thạch ở <b>vùng ngoại ô</b> thành phố thì anh phát hiện ra một khúc xương khổng lồ. Anh chưa từng thấy điều gì giống như vậy! Anh lấy <b>xẻng</b> của mình và cẩn thận <b>đào</b> đất xung quanh nó. Khi đào xuống, anh phát hiện thêm những khúc xương <b>lởm chởm</b>. Anh nhận ra rằng mình đã tìm thấy một bộ xương khủng long nguyên vẹn! Tim không thể <b>nghĩ ra</b> kế hoạch nào để tự mình di dời bộ xương khổng lồ đó. Một <b>nỗ lực</b> như vậy sẽ quá <b>gian nan</b>. Anh cần sự giúp đỡ. Anh cố nghĩ xem có ai đủ khả năng giúp anh di dời bộ xương mà không làm gãy nó. Người duy nhất Tim có thể nghĩ đến là Dean, kẻ thù của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tim chạy vào thành phố để tìm Dean. Tim tìm thấy anh ta và nói: “Dean, tôi đã tìm thấy hài cốt <b>dạng xương</b> của một loài động vật <b>trên cạn</b> khổng lồ. Nhưng tôi không thể tự mình lấy bộ xương ra được. Anh làm ơn giúp tôi được không?”</p>\n\n<p style=\"margin-bottom: 1rem;\">Dean nghĩ rằng lời khẳng định của Tim có thể <b>đáng ngờ</b>. Anh đáp lại: “Nếu anh nghiêm túc về bộ xương đó, tôi sẽ giúp.”</p>\n\n<p style=\"margin-bottom: 1rem;\">Tim hào hứng cho Dean xem <b>địa điểm</b> của bộ xương. Họ làm việc cùng nhau để cẩn thận lấy từng khúc xương ra. Và để giữ các mảnh xương lại với nhau, họ buộc chúng bằng những dải <b>dây thun</b>. Khi họ hoàn thành, họ đã <b>đạt được</b> một bộ xương hoàn hảo. Họ dùng <b>thạch cao</b> để tạo <b>khuôn</b> hộp sọ của khủng long. Họ <b>khắc</b> tên viết tắt của mình vào đó và trao nó cho người quản lý của một bảo tàng địa phương.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tim và Dean nhận ra rằng họ có thể hợp tác rất ăn ý với nhau. Họ quyết định chấm dứt mối thù hằn và trở thành bạn bè. Bằng cách kết hợp tài năng của mình, hai người đàn ông thậm chí còn trở nên vĩ đại hơn trước đây.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

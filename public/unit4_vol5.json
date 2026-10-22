@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 4: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -398,7 +392,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Corrupt Administrator</h1>        <p style=\"margin-bottom: 1rem;\">Mr. Pig was an <b>administrator</b> at a big factory that made different kinds of <b>merchandise</b>. During a meeting at the company’s <b>headquarters</b>, his bosses said they wanted the factory to make more money.</p>    <p style=\"margin-bottom: 1rem;\">“If the factory makes more money, then you will too,” his boss, Mr. Horse, told him. It was a great <b>incentive</b>. Pig had always wanted to be as <b>affluent</b> as his bosses.</p>    <p style=\"margin-bottom: 1rem;\">Mr. Pig returned to the factory and started making changes. However, most were not very nice, and some were not <b>legitimate</b>.</p>    <p style=\"margin-bottom: 1rem;\">First, he fired all his employees. Then he <b>automated</b> the entire factory. Machines now made everything, and the other animals, Mr. Rabbit, Mr. Sheep, and Mr. Dog had no jobs. Next, he <b>bribed</b> some <b>corrupt</b> senators into <b>legislating</b> special <b>subsidies</b> for the factory. Finally, instead of paying a company to <b>dispose</b> of the factory’s <b>rubbish</b> properly, he <b>violated</b> the law by throwing it into the river to save money.</p>    <p style=\"margin-bottom: 1rem;\">At first, all the changes to the factory’s <b>infrastructure</b> created more <b>revenue</b>. But soon many stores could no longer sell the factory’s goods at <b>retail</b>. It seemed that the machines couldn’t make products as well as the workers. The customers were disappointed with the factory’s merchandise.</p>    <p style=\"margin-bottom: 1rem;\">There were other problems, too. The animals had told their friends and family to stop buying the factory’s goods. Officials discovered the factory’s rubbish in the river, and when they <b>audited</b> the company, they discovered that Pig had <b>manipulated</b> the law in order to get more money.</p>    <p style=\"margin-bottom: 1rem;\">All <b>transactions</b> with Pig’s factory stopped. The factory lost money, and Pig lost his job. He realized his mistakes too late. He had tried to become rich by saving money any way possible, but the cheapest way was not always the best.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Corrupt Administrator</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Mr. Pig was an <b>administrator</b> at a big factory that made different kinds of <b>merchandise</b>. During a meeting at the company’s <b>headquarters</b>, his bosses said they wanted the factory to make more money.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“If the factory makes more money, then you will too,” his boss, Mr. Horse, told him. It was a great <b>incentive</b>. Pig had always wanted to be as <b>affluent</b> as his bosses.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Mr. Pig returned to the factory and started making changes. However, most were not very nice, and some were not <b>legitimate</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">First, he fired all his employees. Then he <b>automated</b> the entire factory. Machines now made everything, and the other animals, Mr. Rabbit, Mr. Sheep, and Mr. Dog had no jobs. Next, he <b>bribed</b> some <b>corrupt</b> senators into <b>legislating</b> special <b>subsidies</b> for the factory. Finally, instead of paying a company to <b>dispose</b> of the factory’s <b>rubbish</b> properly, he <b>violated</b> the law by throwing it into the river to save money.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">At first, all the changes to the factory’s <b>infrastructure</b> created more <b>revenue</b>. But soon many stores could no longer sell the factory’s goods at <b>retail</b>. It seemed that the machines couldn’t make products as well as the workers. The customers were disappointed with the factory’s merchandise.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There were other problems, too. The animals had told their friends and family to stop buying the factory’s goods. Officials discovered the factory’s rubbish in the river, and when they <b>audited</b> the company, they discovered that Pig had <b>manipulated</b> the law in order to get more money.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">All <b>transactions</b> with Pig’s factory stopped. The factory lost money, and Pig lost his job. He realized his mistakes too late. He had tried to become rich by saving money any way possible, but the cheapest way was not always the best.</p></div>",
       "imageUrl": "/unit4_vol5_story.png",
       "sections": [
         {
@@ -480,37 +474,37 @@
               "id": "42",
               "content": "What happened to the other animals after Pig automated his factory?",
               "options": [
-                "After Pig automated his factory, the other animals had no jobs.",
                 "They got more jobs",
+                "After Pig automated his factory, the other animals had no jobs.",
                 "They were promoted",
                 "They got better tools to work"
               ],
               "explanation": "Trong đoạn 4, sau khi tự động hóa toàn bộ nhà máy: \"Machines now made everything, and the other animals... had no jobs.\" (Bây giờ máy móc làm mọi thứ, và các động vật khác... không còn việc làm).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "43",
               "content": "According to the officials who audited Pig’s factory, why did he manipulate the law?",
               "options": [
-                "According to the officials, Pig manipulated the law in order to get more money.",
                 "Pig manipulated the law to help the animals",
                 "Pig manipulated the law to build a new factory",
+                "According to the officials, Pig manipulated the law in order to get more money.",
                 "Pig manipulated the law by mistake"
               ],
               "explanation": "Ở cuối đoạn 6, \"...when they audited the company, they discovered that Pig had manipulated the law in order to get more money.\" (...khi họ kiểm toán công ty, họ phát hiện ra rằng Lợn đã thao túng luật pháp để kiếm thêm tiền).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "44",
               "content": "What happened to Mr. Pig and his factory when all transactions stopped?",
               "options": [
-                "When all transactions stopped, the factory lost money, and Pig lost his job.",
                 "Pig got a promotion",
                 "Pig was sent to another country",
-                "Pig bought a new house"
+                "Pig bought a new house",
+                "When all transactions stopped, the factory lost money, and Pig lost his job."
               ],
               "explanation": "Theo đoạn cuối: \"All transactions with Pig’s factory stopped. The factory lost money, and Pig lost his job.\" (Mọi giao dịch với nhà máy của Lợn đều dừng lại. Nhà máy bị mất tiền và Lợn mất việc).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "45",
@@ -527,7 +521,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit4_vol5_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Quản lý tham nhũng</h1>\n\n<p style=\"margin-bottom: 1rem;\">Ông Lợn là một <b>người quản lý</b> tại một nhà máy lớn sản xuất nhiều loại <b>hàng hóa</b>. Trong một cuộc họp tại <b>trụ sở chính</b> của công ty, các ông chủ của ông nói rằng họ muốn nhà máy kiếm được nhiều tiền hơn.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Nếu nhà máy kiếm được nhiều tiền hơn, anh cũng vậy,\" ông chủ của ông, ông Ngựa, nói với ông. Đó là một <b>sự khích lệ</b> tuyệt vời. Ông Lợn luôn muốn được <b>giàu có</b> như các ông chủ của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ông Lợn trở lại nhà máy và bắt đầu thực hiện các thay đổi. Tuy nhiên, hầu hết đều không mấy tốt đẹp và một số thì không <b>hợp pháp</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">Đầu tiên, ông sa thải tất cả nhân viên của mình. Sau đó, ông <b>tự động hóa</b> toàn bộ nhà máy. Giờ đây máy móc làm mọi thứ, và các loài động vật khác là ông Thỏ, ông Cừu và ông Chó không có việc làm. Tiếp theo, ông <b>hối lộ</b> một số thượng nghị sĩ <b>tham nhũng</b> để họ <b>lập pháp</b> những khoản <b>trợ cấp</b> đặc biệt cho nhà máy. Cuối cùng, thay vì trả tiền cho một công ty để <b>vứt bỏ</b> <b>rác thải</b> của nhà máy một cách hợp lý, ông đã <b>vi phạm</b> luật pháp bằng cách ném nó xuống sông để tiết kiệm tiền.</p>\n\n<p style=\"margin-bottom: 1rem;\">Lúc đầu, tất cả các thay đổi đối với <b>cơ sở hạ tầng</b> của nhà máy đã tạo ra nhiều <b>doanh thu</b> hơn. Nhưng chẳng bao lâu sau nhiều cửa hàng không thể bán hàng hóa của nhà máy với giá <b>bán lẻ</b> nữa. Có vẻ như máy móc không thể làm ra sản phẩm tốt như các công nhân. Khách hàng đã thất vọng với hàng hóa của nhà máy.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cũng có những vấn đề khác nữa. Các loài động vật đã nói với bạn bè và gia đình của họ ngừng mua hàng hóa của nhà máy. Các nhà chức trách phát hiện rác thải của nhà máy dưới sông, và khi họ <b>kiểm toán</b> công ty, họ phát hiện ra rằng Lợn đã <b>thao túng</b> luật pháp để lấy được nhiều tiền hơn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Tất cả các <b>giao dịch</b> với nhà máy của Lợn đều dừng lại. Nhà máy bị mất tiền, và Lợn mất việc. Ông nhận ra những sai lầm của mình quá muộn. Ông đã cố gắng trở nên giàu có bằng cách tiết kiệm tiền bằng mọi cách có thể, nhưng cách rẻ nhất không phải lúc nào cũng là tốt nhất.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 4: Volume 5",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

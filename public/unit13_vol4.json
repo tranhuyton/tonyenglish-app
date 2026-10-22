@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 13: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part_wordlist",
@@ -15,7 +8,7 @@
         {
           "id": "sec_2",
           "title": "Exercise 1",
-          "questionType": "Trắc nghiệm",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "1",
@@ -26,8 +19,8 @@
                 "having a routine",
                 "healthy"
               ],
-              "correctAnswer": "B",
-              "explanation": "'irritable' có nghĩa là dễ cáu kỉnh, nổi giận, tương ứng với 'to get angry easily'."
+              "explanation": "'irritable' có nghĩa là dễ cáu kỉnh, nổi giận, tương ứng với 'to get angry easily'.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +31,8 @@
                 "healthy",
                 "to attract"
               ],
-              "correctAnswer": "A",
-              "explanation": "'zoom' có nghĩa là phóng đi nhanh chóng, tương ứng với 'to move quickly'."
+              "explanation": "'zoom' có nghĩa là phóng đi nhanh chóng, tương ứng với 'to move quickly'.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +43,8 @@
                 "bad dream",
                 "pleasing"
               ],
-              "correctAnswer": "A",
-              "explanation": "'subconscious' có nghĩa là tiềm thức, không nhận thức được một cách rõ ràng, tương ứng với 'not aware'."
+              "explanation": "'subconscious' có nghĩa là tiềm thức, không nhận thức được một cách rõ ràng, tương ứng với 'not aware'.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +55,8 @@
                 "to exercise",
                 "to influence"
               ],
-              "correctAnswer": "A",
-              "explanation": "'charm' có nghĩa là làm say mê, quyến rũ, làm hài lòng ai đó, tương ứng với 'to please'."
+              "explanation": "'charm' có nghĩa là làm say mê, quyến rũ, làm hài lòng ai đó, tương ứng với 'to please'.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,94 +67,94 @@
                 "to have a routine",
                 "to attract"
               ],
-              "correctAnswer": "A",
-              "explanation": "'brew' có nghĩa là pha (trà, cà phê), tương ứng với 'to make coffee'."
+              "explanation": "'brew' có nghĩa là pha (trà, cà phê), tương ứng với 'to make coffee'.",
+              "correctAnswer": "A"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec_3",
           "title": "Exercise 2",
-          "questionType": "Điền từ",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the bracketed part.</p>",
           "questions": [
             {
               "id": "6",
               "content": "<p style=\"margin-bottom: 12px;\">Mary asked for the singer’s  [ 6 ]  (handwritten name).</p><p style=\"margin-bottom: 12px;\">He isn’t allowed to watch scary movies because they give him  [ 7 ]  (bad dreams).</p><p style=\"margin-bottom: 12px;\">Push everything to one side to  [ 8 ]  (make the most of) the space of the gymnasium.</p><p style=\"margin-bottom: 12px;\">He borrowed a  [ 9 ]  (truck-like vehicle) to help him move some of his furniture.</p><p style=\"margin-bottom: 12px;\">Ellen wanted to get to the gym and try a new  [ 10 ]  (exercise routine).</p><p style=\"margin-bottom: 12px;\">Harriet doesn’t like talking to Jesse when he’s  [ 11 ]  (easily annoyed).</p><p style=\"margin-bottom: 12px;\">The cars honked their  [ 12 ]  (devices for making noises) while they waited in traffic.</p><p style=\"margin-bottom: 12px;\">If you don’t start trying harder, you will  [ 13 ]  (move slowly far behind) the rest of us.</p><p style=\"margin-bottom: 12px;\">The sign  [ 14 ]  (makes aware) of bears in the area.</p><p style=\"margin-bottom: 12px;\">Mother cooks me a  [ 15 ]  (healthy) breakfast every morning.</p>",
               "options": [],
-              "correctAnswer": "autograph",
-              "explanation": "'handwritten name' (tên viết tay của người nổi tiếng) là autograph."
+              "explanation": "'handwritten name' (tên viết tay của người nổi tiếng) là autograph.",
+              "correctAnswer": "autograph"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "nightmares",
-              "explanation": "'bad dreams' (những giấc mơ tồi tệ, ác mộng) là nightmares."
+              "explanation": "'bad dreams' (những giấc mơ tồi tệ, ác mộng) là nightmares.",
+              "correctAnswer": "nightmares"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "maximize",
-              "explanation": "'make the most of' (tận dụng tối đa) là maximize."
+              "explanation": "'make the most of' (tận dụng tối đa) là maximize.",
+              "correctAnswer": "maximize"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "van",
-              "explanation": "'truck-like vehicle' (xe giống xe tải nhưng nhỏ hơn, xe tải nhỏ) là van."
+              "explanation": "'truck-like vehicle' (xe giống xe tải nhưng nhỏ hơn, xe tải nhỏ) là van.",
+              "correctAnswer": "van"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "workout",
-              "explanation": "'exercise routine' (thói quen tập luyện) là workout."
+              "explanation": "'exercise routine' (thói quen tập luyện) là workout.",
+              "correctAnswer": "workout"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "irritable",
-              "explanation": "'easily annoyed' (dễ bị làm phiền, dễ cáu kỉnh) là irritable."
+              "explanation": "'easily annoyed' (dễ bị làm phiền, dễ cáu kỉnh) là irritable.",
+              "correctAnswer": "irritable"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "horn",
-              "explanation": "'devices for making noises' (thiết bị tạo tiếng ồn, còi) là horn (hoặc horns)."
+              "explanation": "'devices for making noises' (thiết bị tạo tiếng ồn, còi) là horn (hoặc horns).",
+              "correctAnswer": "horn"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "lag",
-              "explanation": "'move slowly far behind' (di chuyển chậm và tụt lại xa phía sau) là lag."
+              "explanation": "'move slowly far behind' (di chuyển chậm và tụt lại xa phía sau) là lag.",
+              "correctAnswer": "lag"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "warns",
-              "explanation": "'makes aware' (làm cho nhận biết, cảnh báo) là warns."
+              "explanation": "'makes aware' (làm cho nhận biết, cảnh báo) là warns.",
+              "correctAnswer": "warns"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "nutritious",
-              "explanation": "'healthy' (tốt cho sức khỏe, bổ dưỡng) là nutritious."
+              "explanation": "'healthy' (tốt cho sức khỏe, bổ dưỡng) là nutritious.",
+              "correctAnswer": "nutritious"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the bracketed part.</p>"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec_4",
           "title": "Exercise 3",
-          "questionType": "Trắc nghiệm",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "16",
@@ -172,8 +165,8 @@
                 "Beef",
                 "Sugar"
               ],
-              "correctAnswer": "C",
-              "explanation": "Thịt bò (beef) là một nguồn cung cấp protein (chất đạm) tốt."
+              "explanation": "Thịt bò (beef) là một nguồn cung cấp protein (chất đạm) tốt.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -184,8 +177,8 @@
                 "A computer",
                 "Socks and shoes"
               ],
-              "correctAnswer": "B",
-              "explanation": "'Stuff' (đồ đạc, thứ) được mô tả tốt nhất là một bộ sưu tập các thứ không được gọi tên cụ thể (a collection of unnamed things)."
+              "explanation": "'Stuff' (đồ đạc, thứ) được mô tả tốt nhất là một bộ sưu tập các thứ không được gọi tên cụ thể (a collection of unnamed things).",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -196,8 +189,8 @@
                 "A candy bar",
                 "Icecream"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trong các món ăn vặt được liệt kê, một quả táo (an apple) là bổ dưỡng nhất (most nutritious)."
+              "explanation": "Trong các món ăn vặt được liệt kê, một quả táo (an apple) là bổ dưỡng nhất (most nutritious).",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -208,8 +201,8 @@
                 "Your hand",
                 "The water"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bạn thường đặt chữ ký (signature) của mình trên một bức thư діnh doanh (a business letter)."
+              "explanation": "Bạn thường đặt chữ ký (signature) của mình trên một bức thư діnh doanh (a business letter).",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -220,8 +213,8 @@
                 "wait for them",
                 "don't care about them"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nếu bạn tụt lại phía sau (lag behind) bạn bè, có nghĩa là bạn chậm hơn họ (are slower than them)."
+              "explanation": "Nếu bạn tụt lại phía sau (lag behind) bạn bè, có nghĩa là bạn chậm hơn họ (are slower than them).",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -232,8 +225,8 @@
                 "Their stuff",
                 "Their autograph"
               ],
-              "correctAnswer": "B",
-              "explanation": "Những điều đã xảy ra và sẽ xảy ra trong cuộc đời một người là định mệnh của họ (their destiny)."
+              "explanation": "Những điều đã xảy ra và sẽ xảy ra trong cuộc đời một người là định mệnh của họ (their destiny).",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -244,8 +237,8 @@
                 "A charm",
                 "A lag"
               ],
-              "correctAnswer": "A",
-              "explanation": "Loại xe tương tự như một chiếc xe tải nhỏ (small truck) là xe tải chở hàng nhỏ (a van)."
+              "explanation": "Loại xe tương tự như một chiếc xe tải nhỏ (small truck) là xe tải chở hàng nhỏ (a van).",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -256,8 +249,8 @@
                 "Protein",
                 "Nutritious"
               ],
-              "correctAnswer": "A",
-              "explanation": "Một giọt nước nhỏ được gọi là giọt (bead)."
+              "explanation": "Một giọt nước nhỏ được gọi là giọt (bead).",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -268,8 +261,8 @@
                 "To brew",
                 "To affect"
               ],
-              "correctAnswer": "D",
-              "explanation": "Có ảnh hưởng (influence) lên một cái gì đó có nghĩa là tác động lên nó (to affect)."
+              "explanation": "Có ảnh hưởng (influence) lên một cái gì đó có nghĩa là tác động lên nó (to affect).",
+              "correctAnswer": "D"
             },
             {
               "id": "25",
@@ -280,23 +273,24 @@
                 "Warn people",
                 "Zoom past people"
               ],
-              "correctAnswer": "C",
-              "explanation": "Báo cháy (fire alarms) có mục đích là cảnh báo mọi người (warn people)."
+              "explanation": "Báo cháy (fire alarms) có mục đích là cảnh báo mọi người (warn people).",
+              "correctAnswer": "C"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>"
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part_reading",
       "title": "Comprehensive Reading",
-      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Big Race</h1><div class=\"reading-text-container\"><p class=\"reading-paragraph\">Alex woke up scared because of a <b>nightmare</b>. In it, he was running a race. Just before he reached the finish line, he fell. Alex thought that it was a <b>subconscious</b> way that his brain was trying to <b>warn</b> him about something. He was going to run in a race that day. Did the dream mean he was going to lose? He became <b>irritable</b>.</p><p class=\"reading-paragraph\">\"Good morning,\" said Alex's mother. \"I brewed some coffee and made you a special breakfast.\" Alex didn't want it. It had too much sugar. He needed something <b>nutritious</b>. So he prepared a meal that contained a lot of <b>protein</b> to <b>maximize</b> his energy for the race. Then his father asked, \"Do you want help packing your <b>stuff</b>?\" \"No,\" replied Alex. He wanted to make sure that he had all of his equipment for the race.</p><p class=\"reading-paragraph\">Alex's family got in their <b>van</b> and drove to the track. When they arrived, a boy ran toward Alex. \"Can I have your <b>autograph</b>?\" asked the boy. Alex had many fans. He usually charmed everybody he spoke to. However, today Alex refused to give the boy his <b>signature</b>. He needed to think about his race.</p><p class=\"reading-paragraph\">He took his jump rope from his bag and started his usual <b>workout</b>. Maybe exercising would help him forget about the <b>nightmare</b>. \"The race is about to start,\" said the coach. Beads of sweat formed out of Alex's sweat glands. All he could think about was his terrible dream. He thought it might be his <b>destiny</b> to become a loser. While he was thinking, he didn't hear the <b>horn</b> that meant the race had started.</p><p class=\"reading-paragraph\">The runners zoomed toward the finish line. By the time Alex started, he lagged far behind everyone. He couldn't run fast enough to catch up to the others. He had lost the race! He shouldn't have let the <b>nightmare</b> <b>affect</b> him. He should have stayed focused on the race.</p></div>",
+      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">The Big Race</h1><div class=\"reading-text-container\"><p class=\"mb-4 reading-paragraph\">Alex woke up scared because of a <b>nightmare</b>. In it, he was running a race. Just before he reached the finish line, he fell. Alex thought that it was a <b>subconscious</b> way that his brain was trying to <b>warn</b> him about something. He was going to run in a race that day. Did the dream mean he was going to lose? He became <b>irritable</b>.</p><p class=\"mb-4 reading-paragraph\">\"Good morning,\" said Alex's mother. \"I brewed some coffee and made you a special breakfast.\" Alex didn't want it. It had too much sugar. He needed something <b>nutritious</b>. So he prepared a meal that contained a lot of <b>protein</b> to <b>maximize</b> his energy for the race. Then his father asked, \"Do you want help packing your <b>stuff</b>?\" \"No,\" replied Alex. He wanted to make sure that he had all of his equipment for the race.</p><p class=\"mb-4 reading-paragraph\">Alex's family got in their <b>van</b> and drove to the track. When they arrived, a boy ran toward Alex. \"Can I have your <b>autograph</b>?\" asked the boy. Alex had many fans. He usually charmed everybody he spoke to. However, today Alex refused to give the boy his <b>signature</b>. He needed to think about his race.</p><p class=\"mb-4 reading-paragraph\">He took his jump rope from his bag and started his usual <b>workout</b>. Maybe exercising would help him forget about the <b>nightmare</b>. \"The race is about to start,\" said the coach. Beads of sweat formed out of Alex's sweat glands. All he could think about was his terrible dream. He thought it might be his <b>destiny</b> to become a loser. While he was thinking, he didn't hear the <b>horn</b> that meant the race had started.</p><p class=\"mb-4 reading-paragraph\">The runners zoomed toward the finish line. By the time Alex started, he lagged far behind everyone. He couldn't run fast enough to catch up to the others. He had lost the race! He shouldn't have let the <b>nightmare</b> <b>affect</b> him. He should have stayed focused on the race.</p></div>",
+      "imageUrl": "/unit13_vol4_story.png",
       "sections": [
         {
           "id": "sec_5",
           "title": "Reading Comprehension - Part A",
-          "questionType": "TFNG",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "26",
@@ -305,8 +299,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Câu này sai nhé. Trong bài đọc, Alex đã mơ thấy một ác mộng rằng cậu ấy vấp ngã ngay trước khi chạm đến vạch đích. Câu văn chứng minh là: In it, he was running a race. Just before he reached the finish line, he fell."
+              "explanation": "Câu này sai nhé. Trong bài đọc, Alex đã mơ thấy một ác mộng rằng cậu ấy vấp ngã ngay trước khi chạm đến vạch đích. Câu văn chứng minh là: In it, he was running a race. Just before he reached the finish line, he fell.",
+              "correctAnswer": "False"
             },
             {
               "id": "27",
@@ -315,8 +309,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Câu này đúng. Giấc mơ khiến cậu bé cáu kỉnh và lo lắng mình sẽ thua cuộc. Bài đọc có ghi rõ: Did the dream mean he was going to lose? He became irritable."
+              "explanation": "Câu này đúng. Giấc mơ khiến cậu bé cáu kỉnh và lo lắng mình sẽ thua cuộc. Bài đọc có ghi rõ: Did the dream mean he was going to lose? He became irritable.",
+              "correctAnswer": "True"
             },
             {
               "id": "28",
@@ -325,8 +319,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "False",
-              "explanation": "Câu này sai. Alex không muốn ăn đồ ăn mẹ nấu vì nó có quá nhiều đường, cậu ấy cần thứ gì đó bổ dưỡng hơn chứa nhiều protein. Trích đoạn trong bài là: Alex didn't want it. It had too much sugar. He needed something nutritious."
+              "explanation": "Câu này sai. Alex không muốn ăn đồ ăn mẹ nấu vì nó có quá nhiều đường, cậu ấy cần thứ gì đó bổ dưỡng hơn chứa nhiều protein. Trích đoạn trong bài là: Alex didn't want it. It had too much sugar. He needed something nutritious.",
+              "correctAnswer": "False"
             },
             {
               "id": "29",
@@ -335,8 +329,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Câu này đúng. Cậu ấy hy vọng việc tập luyện sẽ giúp mình quên đi cơn ác mộng. Bằng chứng là: He took his jump rope from his bag and started his usual workout. Maybe exercising would help him forget about the nightmare."
+              "explanation": "Câu này đúng. Cậu ấy hy vọng việc tập luyện sẽ giúp mình quên đi cơn ác mộng. Bằng chứng là: He took his jump rope from his bag and started his usual workout. Maybe exercising would help him forget about the nightmare.",
+              "correctAnswer": "True"
             },
             {
               "id": "30",
@@ -345,8 +339,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Câu này hoàn toàn chính xác. Trong bài viết y hệt như vậy khi nhắc đến việc huấn luyện viên báo hiệu cuộc đua sắp bắt đầu: Beads of sweat formed out of Alex's sweat glands."
+              "explanation": "Câu này hoàn toàn chính xác. Trong bài viết y hệt như vậy khi nhắc đến việc huấn luyện viên báo hiệu cuộc đua sắp bắt đầu: Beads of sweat formed out of Alex's sweat glands.",
+              "correctAnswer": "True"
             },
             {
               "id": "31",
@@ -355,16 +349,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "True",
-              "explanation": "Câu này đúng. Các vận động viên khác phóng vút đi trong khi Alex bị tụt lại phía sau vì mải nghĩ về giấc mơ. Bài đọc viết là: The runners zoomed toward the finish line. By the time Alex started, he lagged far behind everyone."
+              "explanation": "Câu này đúng. Các vận động viên khác phóng vút đi trong khi Alex bị tụt lại phía sau vì mải nghĩ về giấc mơ. Bài đọc viết là: The runners zoomed toward the finish line. By the time Alex started, he lagged far behind everyone.",
+              "correctAnswer": "True"
             }
           ],
-          "content": ""
+          "questionType": "TFNG"
         },
         {
           "id": "sec_6",
           "title": "Reading Comprehension - Part B",
-          "questionType": "Trắc nghiệm",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "32",
@@ -375,8 +369,8 @@
                 "To maximize energy",
                 "To have nightmares"
               ],
-              "correctAnswer": "B",
-              "explanation": "Alex cứ mãi suy nghĩ về giấc mơ kinh khủng và cho rằng định mệnh của mình là trở thành một kẻ thua cuộc. Bằng chứng trong bài là: He thought it might be his destiny to become a loser. Do đó đáp án B là chính xác nhất."
+              "explanation": "Alex cứ mãi suy nghĩ về giấc mơ kinh khủng và cho rằng định mệnh của mình là trở thành một kẻ thua cuộc. Bằng chứng trong bài là: He thought it might be his destiny to become a loser. Do đó đáp án B là chính xác nhất.",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -387,8 +381,8 @@
                 "Pack his stuff",
                 "Brew some coffee"
               ],
-              "correctAnswer": "C",
-              "explanation": "Bố của Alex đã hỏi xem liệu cậu có muốn được giúp đóng gói đồ đạc hay không. Trích đoạn: Then his father asked, Do you want help packing your stuff? Vậy nên đáp án C là lựa chọn đúng."
+              "explanation": "Bố của Alex đã hỏi xem liệu cậu có muốn được giúp đóng gói đồ đạc hay không. Trích đoạn: Then his father asked, Do you want help packing your stuff? Vậy nên đáp án C là lựa chọn đúng.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -399,8 +393,8 @@
                 "His prize",
                 "His bag"
               ],
-              "correctAnswer": "B",
-              "explanation": "Khi đến đường đua, có một cậu bé đã chạy tới và xin chữ ký của Alex. Câu văn chứng minh là: When they arrived, a boy ran toward Alex. Can I have your autograph? asked the boy. Nên chọn đáp án B."
+              "explanation": "Khi đến đường đua, có một cậu bé đã chạy tới và xin chữ ký của Alex. Câu văn chứng minh là: When they arrived, a boy ran toward Alex. Can I have your autograph? asked the boy. Nên chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "35",
@@ -411,14 +405,14 @@
                 "The horn",
                 "His signature"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cậu ấy đã bị ám ảnh bởi cơn ác mộng khiến bản thân mất tập trung và thua cuộc đua. Tác giả kết luận: He shouldn't have let the nightmare affect him. Vì thế đáp án A là chính xác."
+              "explanation": "Cậu ấy đã bị ám ảnh bởi cơn ác mộng khiến bản thân mất tập trung và thua cuộc đua. Tác giả kết luận: He shouldn't have let the nightmare affect him. Vì thế đáp án A là chính xác.",
+              "correctAnswer": "A"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>"
+          "questionType": "Trắc nghiệm"
         }
       ],
-      "imageUrl": "/unit13_vol4_story.png"
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit13_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px; line-height: 1.2;\">Cuộc đua lớn</h1>\n\n<div class=\"reading-text-container\">\n<p class=\"reading-paragraph\">Alex thức dậy trong sợ hãi vì một <b>cơn ác mộng (nightmare)</b>. Trong giấc mơ, cậu đang chạy trong một cuộc đua. Ngay trước khi về đích, cậu đã bị ngã. Alex nghĩ rằng đó là một cách <b>tiềm thức (subconscious)</b> mà não bộ của cậu đang cố gắng <b>cảnh báo (warn)</b> cậu về một điều gì đó. Cậu sẽ chạy trong một cuộc đua vào ngày hôm đó. Liệu giấc mơ có nghĩa là cậu sẽ thua cuộc? Cậu trở nên <b>cáu kỉnh (irritable)</b>.</p>\n\n<p class=\"reading-paragraph\">\"Chào buổi sáng,\" mẹ của Alex nói. \"Mẹ đã pha một ít cà phê và làm cho con một bữa sáng đặc biệt.\" Alex không muốn ăn nó. Nó có quá nhiều đường. Cậu cần một thứ gì đó <b>bổ dưỡng (nutritious)</b>. Vì vậy, cậu đã chuẩn bị một bữa ăn chứa rất nhiều <b>protein</b> để <b>tối đa hóa (maximize)</b> năng lượng của mình cho cuộc đua. Sau đó, bố cậu hỏi, \"Con có muốn bố giúp đóng gói <b>đồ đạc (stuff)</b> của con không?\" \"Không ạ,\" Alex trả lời. Cậu muốn đảm bảo rằng mình có tất cả các trang bị cho cuộc đua.</p>\n\n<p class=\"reading-paragraph\">Gia đình Alex lên chiếc <b>xe tải (van)</b> của họ và lái đến đường đua. Khi họ đến nơi, một cậu bé chạy về phía Alex. \"Em có thể xin <b>chữ ký (autograph)</b> của anh được không?\" cậu bé hỏi. Alex có rất nhiều người hâm mộ. Cậu thường làm say lòng mọi người mà cậu nói chuyện cùng. Tuy nhiên, hôm nay Alex từ chối cho cậu bé <b>chữ ký (signature)</b> của mình. Cậu cần suy nghĩ về cuộc đua của mình.</p>\n\n<p class=\"reading-paragraph\">Cậu lấy dây nhảy từ trong túi ra và bắt đầu <b>buổi tập luyện (workout)</b> thường ngày của mình. Có lẽ việc tập thể dục sẽ giúp cậu quên đi <b>cơn ác mộng (nightmare)</b>. \"Cuộc đua sắp bắt đầu,\" huấn luyện viên nói. Những giọt mồ hôi túa ra từ tuyến mồ hôi của Alex. Tất cả những gì cậu có thể nghĩ đến là giấc mơ khủng khiếp của mình. Cậu nghĩ rằng <b>số phận (destiny)</b> của mình có thể là trở thành một kẻ thua cuộc. Trong lúc đang suy nghĩ, cậu đã không nghe thấy tiếng <b>còi (horn)</b> báo hiệu cuộc đua đã bắt đầu.</p>\n\n<p class=\"reading-paragraph\">Các vận động viên lao vun vút về phía vạch đích. Khi Alex bắt đầu, cậu đã tụt lại phía sau mọi người rất xa. Cậu không thể chạy đủ nhanh để bắt kịp những người khác. Cậu đã thua cuộc đua! Cậu không nên để <b>cơn ác mộng (nightmare)</b> <b>ảnh hưởng (affect)</b> đến mình. Đáng lẽ cậu nên tập trung vào cuộc đua.</p>\n</div>\n</div>"
     }
   ]
 }

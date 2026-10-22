@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 16: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. altogether / bruise / misfortune / negative</b><br/>Greg had the [ 2 ] of falling in a pool, though he didn’t know how to swim. The experience left him with [ 4 ] feelings about swimming pools. After one day, the [ 6 ] on her lip began to go away. In a week, it had disappeared [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>2. disobedient / per / pleaded / sake</b><br/>For the [ 10 ] of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices [ 12 ] person. A woman [ 14 ] with the child to behave in the store. The child, however, continued to be [ 16 ].</p><p style=\"margin-bottom: 12px;\"><b>3. glimpsed / hoop / source / stitched</b><br/>They walked past a large river, which the guide said was the [ 18 ] of a waterfall. They finally [ 20 ] the waterfall when they reached the bottom of the hill. The girl wanted to make her plastic [ 11 ] look pretty, so she [ 12 ] cloth around it.</p><p style=\"margin-bottom: 12px;\"><b>4. bound / custom / ripped / stern</b><br/>The family was [ 13 ] tightly. For example, on Saturdays, it was their [ 14 ] to go to the park together. The [ 15 ] teacher was angry to see the students passing notes. She took the note from the students and [ 16 ] it into pieces.</p><p style=\"margin-bottom: 12px;\"><b>5. foresee / scraped / thump / vehement</b><br/>The boy lost his balance and fell with a [ 17 ]. When he got up, he noticed that he’d [ 18 ] his elbow. The coach didn’t [ 19 ] the loss for his team. So, after the game, he was [ 20 ].</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. altogether / bruise / misfortune / negative</b><br/>Greg had the [ 1 ] of falling in a pool, though he didn’t know how to swim. The experience left him with [ 2 ] feelings about swimming pools. After one day, the [ 3 ] on her lip began to go away. In a week, it had disappeared [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. disobedient / per / pleaded / sake</b><br/>For the [ 5 ] of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices [ 6 ] person. A woman [ 7 ] with the child to behave in the store. The child, however, continued to be [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. glimpsed / hoop / source / stitched</b><br/>They walked past a large river, which the guide said was the [ 9 ] of a waterfall. They finally [ 10 ] the waterfall when they reached the bottom of the hill. The girl wanted to make her plastic [ 11 ] look pretty, so she [ 12 ] cloth around it.</p><p style=\"margin-bottom: 12px;\"><b>4. bound / custom / ripped / stern</b><br/>The family was [ 13 ] tightly. For example, on Saturdays, it was their [ 14 ] to go to the park together. The [ 15 ] teacher was angry to see the students passing notes. She took the note from the students and [ 16 ] it into pieces.</p><p style=\"margin-bottom: 12px;\"><b>5. foresee / scraped / thump / vehement</b><br/>The boy lost his balance and fell with a [ 17 ]. When he got up, he noticed that he’d [ 18 ] his elbow. The coach didn’t [ 19 ] the loss for his team. So, after the game, he was [ 20 ].</p>",
               "options": [],
-              "correctAnswer": "misfortune",
-              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
+              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó.",
+              "correctAnswer": "misfortune"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "negative",
-              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
+              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó.",
+              "correctAnswer": "negative"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "bruise",
-              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
+              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn).",
+              "correctAnswer": "bruise"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "altogether",
-              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
+              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn).",
+              "correctAnswer": "altogether"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "sake",
-              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
+              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người).",
+              "correctAnswer": "sake"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "per",
-              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
+              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người).",
+              "correctAnswer": "per"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "pleaded",
-              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
+              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời).",
+              "correctAnswer": "pleaded"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "disobedient",
-              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
+              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời).",
+              "correctAnswer": "disobedient"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "source",
-              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
+              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó.",
+              "correctAnswer": "source"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "glimpsed",
-              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
+              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó.",
+              "correctAnswer": "glimpsed"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "hoop",
-              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
+              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó.",
+              "correctAnswer": "hoop"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "stitched",
-              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
+              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó.",
+              "correctAnswer": "stitched"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "bound",
-              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
+              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau.",
+              "correctAnswer": "bound"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "custom",
-              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
+              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau.",
+              "correctAnswer": "custom"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "stern",
-              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
+              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy.",
+              "correctAnswer": "stern"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "ripped",
-              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
+              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy.",
+              "correctAnswer": "ripped"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "thump",
-              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
+              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay.",
+              "correctAnswer": "thump"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "scraped",
-              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
+              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay.",
+              "correctAnswer": "scraped"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "foresee",
-              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ)."
+              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ).",
+              "correctAnswer": "foresee"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "vehement",
-              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ)."
+              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ).",
+              "correctAnswer": "vehement"
             }
           ],
           "questionType": "Điền từ"
@@ -541,13 +534,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gwen’s New Friends</h1>        <p style=\"margin-bottom: 1rem;\">Gwen walked into the gym for her next class. Coach Peeves said, “Today, we’re playing basketball. The <b>custom</b> is to let you choose your own teams. However, we’re going to do things differently.”</p>    <p style=\"margin-bottom: 1rem;\">The coach assigned each girl to a team. There were six girls <b>per</b> team. Gwen <b>glimpsed</b> at her teammates. She didn’t know any of them. All of her friends were on the other teams. She couldn’t believe her <b>misfortune</b>.</p>    <p style=\"margin-bottom: 1rem;\">“I feel sick. May I go to the nurse?” asked Gwen.</p>    <p style=\"margin-bottom: 1rem;\">The coach could <b>foresee</b> Gwen’s excuses. It wasn’t the first time Gwen tried to leave class. With a <b>stern</b> voice, the coach said, “No.”</p>    <p style=\"margin-bottom: 1rem;\">Gwen was <b>vehement</b>. “I don’t know any of these girls! Let me play on another team. Please!” she <b>pleaded</b>.</p>    <p style=\"margin-bottom: 1rem;\">“Gwen, don’t be <b>disobedient</b>. I don’t want to hear any more <b>negative</b> comments from you.”</p>    <p style=\"margin-bottom: 1rem;\">Gwen had no choice. Then a girl smiled at her. “Hi, I’m Stephanie. I was in your English class last year,” she said. Gwen remembered her. “For the <b>sake</b> of the team, please try your best. I know you’re a good player,” said Stephanie.</p>    <p style=\"margin-bottom: 1rem;\">When the game started, Gwen played as best as she could. She took a long shot. The ball sailed through the air and went right through the <b>hoop</b>!</p>    <p style=\"margin-bottom: 1rem;\">“That was awesome!” said one of her teammates. Later, Gwen fell with a loud <b>thump</b>.</p>    <p style=\"margin-bottom: 1rem;\">“Are you OK?” asked her teammates. They were worried.</p>    <p style=\"margin-bottom: 1rem;\">She had <b>ripped</b> her jeans. She had <b>scraped</b> her knee and had a small <b>bruise</b>.</p>    <p style=\"margin-bottom: 1rem;\">Gwen told her teammates, “My knee is fine, and I can <b>stitch</b> my pants later. Let’s keep playing!”</p>    <p style=\"margin-bottom: 1rem;\">By the end of the game, Gwen forgot <b>altogether</b> that she hadn’t wanted to play, and her team won! The victory <b>bound</b> Gwen’s team together. She had made a lot of new friends, and they were a <b>source</b> of happiness for her for many years.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gwen’s New Friends</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Gwen walked into the gym for her next class. Coach Peeves said, “Today, we’re playing basketball. The <b>custom</b> is to let you choose your own teams. However, we’re going to do things differently.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The coach assigned each girl to a team. There were six girls <b>per</b> team. Gwen <b>glimpsed</b> at her teammates. She didn’t know any of them. All of her friends were on the other teams. She couldn’t believe her <b>misfortune</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“I feel sick. May I go to the nurse?” asked Gwen.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The coach could <b>foresee</b> Gwen’s excuses. It wasn’t the first time Gwen tried to leave class. With a <b>stern</b> voice, the coach said, “No.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Gwen was <b>vehement</b>. “I don’t know any of these girls! Let me play on another team. Please!” she <b>pleaded</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Gwen, don’t be <b>disobedient</b>. I don’t want to hear any more <b>negative</b> comments from you.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Gwen had no choice. Then a girl smiled at her. “Hi, I’m Stephanie. I was in your English class last year,” she said. Gwen remembered her. “For the <b>sake</b> of the team, please try your best. I know you’re a good player,” said Stephanie.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">When the game started, Gwen played as best as she could. She took a long shot. The ball sailed through the air and went right through the <b>hoop</b>!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“That was awesome!” said one of her teammates. Later, Gwen fell with a loud <b>thump</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Are you OK?” asked her teammates. They were worried.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">She had <b>ripped</b> her jeans. She had <b>scraped</b> her knee and had a small <b>bruise</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Gwen told her teammates, “My knee is fine, and I can <b>stitch</b> my pants later. Let’s keep playing!”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">By the end of the game, Gwen forgot <b>altogether</b> that she hadn’t wanted to play, and her team won! The victory <b>bound</b> Gwen’s team together. She had made a lot of new friends, and they were a <b>source</b> of happiness for her for many years.</p></div>",
       "imageUrl": "/unit16_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "41",
@@ -668,7 +661,15 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit16_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Những người bạn mới của Gwen</h1>\n\n<p style=\"margin-bottom: 1rem;\">Gwen bước vào phòng thể dục cho tiết học tiếp theo của cô. Huấn luyện viên Peeves nói, \"Hôm nay, chúng ta sẽ chơi bóng rổ. <b>Lệ thường</b> là để các em tự chọn đội của mình. Tuy nhiên, chúng ta sẽ làm mọi thứ khác đi.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Huấn luyện viên phân công mỗi cô gái vào một đội. Có sáu cô gái <b>mỗi</b> đội. Gwen <b>liếc nhìn</b> các đồng đội của mình. Cô không biết ai trong số họ cả. Tất cả bạn bè của cô đều ở các đội khác. Cô không thể tin được <b>sự không may</b> của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Em thấy không khỏe. Em có thể đến phòng y tế được không ạ?\" Gwen hỏi.</p>\n\n<p style=\"margin-bottom: 1rem;\">Huấn luyện viên có thể <b>lường trước</b> những lời viện cớ của Gwen. Đó không phải là lần đầu tiên Gwen cố gắng rời khỏi lớp. Với một giọng điệu <b>nghiêm khắc</b>, huấn luyện viên nói, \"Không.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Gwen trở nên <b>kịch liệt</b>. \"Em không biết ai trong số những bạn nữ này cả! Hãy cho em chơi ở một đội khác. Làm ơn đi ạ!\" cô <b>nài nỉ</b>.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Gwen, đừng <b>ngang bướng</b>. Cô không muốn nghe thêm bất kỳ bình luận <b>tiêu cực</b> nào từ em nữa.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Gwen không có sự lựa chọn nào. Sau đó một cô gái mỉm cười với cô. \"Chào, mình là Stephanie. Mình đã học cùng lớp tiếng Anh với bạn năm ngoái,\" cô nói. Gwen nhớ ra cô ấy. \"Vì <b>lợi ích</b> của đội, làm ơn hãy cố gắng hết sức nhé. Mình biết bạn là một người chơi giỏi,\" Stephanie nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Khi trận đấu bắt đầu, Gwen đã chơi tốt nhất có thể. Cô thực hiện một cú ném xa. Quả bóng bay vút qua không trung và chui lọt qua <b>vành rổ</b>!</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Thật tuyệt vời!\" một trong những đồng đội của cô nói. Sau đó, Gwen ngã xuống với một tiếng <b>bịch</b> lớn.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Bạn có sao không?\" các đồng đội của cô hỏi. Họ đã rất lo lắng.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô đã làm <b>rách</b> quần jeans của mình. Cô bị <b>trầy xước</b> đầu gối và có một vết <b>bầm tím</b> nhỏ.</p>\n\n<p style=\"margin-bottom: 1rem;\">Gwen nói với các đồng đội của mình, \"Đầu gối của mình ổn, và mình có thể <b>khâu</b> lại quần sau. Hãy tiếp tục chơi nào!\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Đến cuối trận đấu, Gwen <b>hoàn toàn</b> quên mất việc cô đã không muốn chơi, và đội của cô đã giành chiến thắng! Chiến thắng đã <b>gắn kết</b> đội của Gwen lại với nhau. Cô đã kết được nhiều bạn mới, và họ là <b>nguồn</b> hạnh phúc của cô trong nhiều năm.</p>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 16: Volume 4",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }

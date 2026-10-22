@@ -1,11 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 8: Volume 4",
-    "category": "exercise",
-    "timeLimit": 0,
-    "description": "4000 Essential English Words - Volume 4"
-  },
   "parts": [
     {
       "id": "part1",
@@ -19,143 +12,143 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. conduct / influenced / laws / replace</b><br/>Mr. Holloway was sent to [ 2 ] the old coach, who was known for his wild [ 4 ] during games. Decisions made in courts are often [ 6 ] by the personal views of the judge. In some cases, the decisions help change [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enclosed / gripped / snapped / whatsoever</b><br/>I [ 10 ] the pencil and squeezed it until it [ 12 ]. My father [ 14 ] a check in the letter he sent me. He always offered to help even if I didn't ask for any help [ 16 ].</p><p style=\"margin-bottom: 12px;\"><b>3. constantly / cracks / impending / tends</b><br/>The soldier dreaded the [ 18 ] battle. He [ 20 ] thought about what might happen to him. I saw several [ 11 ] in the ice. This [ 12 ] to happen when the weather becomes warmer.</p><p style=\"margin-bottom: 12px;\"><b>4. access / device / halted / mode</b><br/>Sheila took the [ 13 ] from her purse and pressed a couple of buttons. It took her awhile to figure out how to turn it to silent [ 14 ]. She ran from room to room quickly, but [ 15 ] suddenly. She couldn't have [ 16 ] to the room without a key.</p><p style=\"margin-bottom: 12px;\"><b>5. perspired / sly / valid / version</b><br/>The student had a [ 17 ] reason for leaving the classroom when his teacher was gone. He tried to explain his [ 18 ] of what happened while she was gone. The thief [ 19 ] while the police questioned him. They didn't feel sorry for the [ 20 ] criminal.</p>",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. conduct / influenced / laws / replace</b><br/>Mr. Holloway was sent to [ 1 ] the old coach, who was known for his wild [ 2 ] during games. Decisions made in courts are often [ 3 ] by the personal views of the judge. In some cases, the decisions help change [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enclosed / gripped / snapped / whatsoever</b> (Hint: I...) [ 5 ] the pencil and squeezed it until it [ 6 ]. My father [ 7 ] a check in the letter he sent me. He always offered to help even if I didn't ask for any help [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. constantly / cracks / impending / tends</b><br/>The soldier dreaded the [ 9 ] battle. He [ 10 ] thought about what might happen to him. I saw several [ 11 ] in the ice. This [ 12 ] to happen when the weather becomes warmer.</p><p style=\"margin-bottom: 12px;\"><b>4. access / device / halted / mode</b><br/>Sheila took the [ 13 ] from her purse and pressed a couple of buttons. It took her awhile to figure out how to turn it to silent [ 14 ]. She ran from room to room quickly, but [ 15 ] suddenly. She couldn't have [ 16 ] to the room without a key.</p><p style=\"margin-bottom: 12px;\"><b>5. perspired / sly / valid / version</b><br/>The student had a [ 17 ] reason for leaving the classroom when his teacher was gone. He tried to explain his [ 18 ] of what happened while she was gone. The thief [ 19 ] while the police questioned him. They didn't feel sorry for the [ 20 ] criminal.</p>",
               "options": [],
-              "correctAnswer": "replace",
-              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình."
+              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình.",
+              "correctAnswer": "replace"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "conduct",
-              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình."
+              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình.",
+              "correctAnswer": "conduct"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "influenced",
-              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật."
+              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật.",
+              "correctAnswer": "influenced"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "laws",
-              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật."
+              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật.",
+              "correctAnswer": "laws"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "gripped",
-              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy."
+              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy.",
+              "correctAnswer": "gripped"
             },
             {
               "id": "6",
               "content": "",
               "options": [],
-              "correctAnswer": "snapped",
-              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy."
+              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy.",
+              "correctAnswer": "snapped"
             },
             {
               "id": "7",
               "content": "",
               "options": [],
-              "correctAnswer": "enclosed",
-              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào."
+              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào.",
+              "correctAnswer": "enclosed"
             },
             {
               "id": "8",
               "content": "",
               "options": [],
-              "correctAnswer": "whatsoever",
-              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào."
+              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào.",
+              "correctAnswer": "whatsoever"
             },
             {
               "id": "9",
               "content": "",
               "options": [],
-              "correctAnswer": "impending",
-              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình."
+              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình.",
+              "correctAnswer": "impending"
             },
             {
               "id": "10",
               "content": "",
               "options": [],
-              "correctAnswer": "constantly",
-              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình."
+              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình.",
+              "correctAnswer": "constantly"
             },
             {
               "id": "11",
               "content": "",
               "options": [],
-              "correctAnswer": "cracks",
-              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn."
+              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn.",
+              "correctAnswer": "cracks"
             },
             {
               "id": "12",
               "content": "",
               "options": [],
-              "correctAnswer": "tends",
-              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn."
+              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn.",
+              "correctAnswer": "tends"
             },
             {
               "id": "13",
               "content": "",
               "options": [],
-              "correctAnswer": "device",
-              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng."
+              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng.",
+              "correctAnswer": "device"
             },
             {
               "id": "14",
               "content": "",
               "options": [],
-              "correctAnswer": "mode",
-              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng."
+              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng.",
+              "correctAnswer": "mode"
             },
             {
               "id": "15",
               "content": "",
               "options": [],
-              "correctAnswer": "halted",
-              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa."
+              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa.",
+              "correctAnswer": "halted"
             },
             {
               "id": "16",
               "content": "",
               "options": [],
-              "correctAnswer": "access",
-              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa."
+              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa.",
+              "correctAnswer": "access"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "correctAnswer": "valid",
-              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình."
+              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình.",
+              "correctAnswer": "valid"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "correctAnswer": "version",
-              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình."
+              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình.",
+              "correctAnswer": "version"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "correctAnswer": "perspired",
-              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo."
+              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo.",
+              "correctAnswer": "perspired"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "correctAnswer": "sly",
-              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo."
+              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo.",
+              "correctAnswer": "sly"
             }
           ],
           "questionType": "Điền từ"
@@ -170,15 +163,15 @@
               "content": "Scientists have a device that helps",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Các nhà khoa học có một thiết bị giúp họ biết một vật thể bao nhiêu tuổi.",
               "correctAnswer": "them tell how old an object is"
@@ -188,15 +181,15 @@
               "content": "The driver gripped the wheel",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Người lái xe nắm chặt vô lăng khi rẽ ở góc đường.",
               "correctAnswer": "as she turned around the corner"
@@ -206,15 +199,15 @@
               "content": "I always perspire more often",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Tôi luôn đổ mồ hôi nhiều hơn vào mùa hè.",
               "correctAnswer": "in the summer"
@@ -224,33 +217,33 @@
               "content": "The concert halted",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Buổi hòa nhạc dừng lại khi mất điện.",
-              "correctAnswer": "light bulb with a new one"
+              "correctAnswer": "when the electricity went out"
             },
             {
               "id": "25",
               "content": "The sly boy took a cookie while",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Cậu bé tinh ranh lấy chiếc bánh quy khi mẹ không để ý.",
               "correctAnswer": "his mother wasn't watching him"
@@ -260,33 +253,33 @@
               "content": "My father replaced the old",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Bố tôi thay bóng đèn cũ bằng một cái mới.",
-              "correctAnswer": "my brother in trouble"
+              "correctAnswer": "light bulb with a new one"
             },
             {
               "id": "27",
               "content": "He had a valid reason",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Cậu ấy có một lý do chính đáng để nghỉ học hôm nay.",
               "correctAnswer": "to miss school today"
@@ -296,33 +289,33 @@
               "content": "I snapped the toy",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Tôi bẻ gãy món đồ chơi bằng cách cầm nó quá chặt.",
-              "correctAnswer": "my brother in trouble"
+              "correctAnswer": "by holding it too tightly"
             },
             {
               "id": "29",
               "content": "The teacher tends to give the best grades to",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Giáo viên có xu hướng cho điểm cao nhất cho những học sinh làm hết bài tập về nhà.",
               "correctAnswer": "students who do all of their homework"
@@ -332,15 +325,15 @@
               "content": "I got no joy whatsoever from getting",
               "options": [
                 "as she turned around the corner",
+                "by holding it too tightly",
                 "his mother wasn't watching him",
                 "in the summer",
                 "light bulb with a new one",
                 "my brother in trouble",
-                "my brother in trouble",
-                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today"
+                "to miss school today",
+                "when the electricity went out"
               ],
               "explanation": "Tôi không cảm thấy vui chút nào khi khiến anh trai tôi gặp rắc rối.",
               "correctAnswer": "my brother in trouble"
@@ -357,14 +350,14 @@
               "id": "31",
               "content": "He didn't understand,",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
@@ -375,14 +368,14 @@
               "id": "32",
               "content": "He was told to behave,",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
@@ -393,14 +386,14 @@
               "id": "33",
               "content": "Joe was such a bad person",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
@@ -411,14 +404,14 @@
               "id": "34",
               "content": "To keep the jewels safe,",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
@@ -429,32 +422,32 @@
               "id": "35",
               "content": "Be careful",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
               "explanation": "Hãy cẩn thận vì anh ấy có thể ảnh hưởng người khác làm bất cứ điều gì.",
-              "correctAnswer": "because there were cracks in it"
+              "correctAnswer": "because he can influence people to do anything"
             },
             {
               "id": "36",
               "content": "Mark tried the code,",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
@@ -465,50 +458,50 @@
               "id": "37",
               "content": "She practices the violin during the day,",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
               "explanation": "Cô ấy tập violin vào ban ngày, nên tiếng nhạc liên tục sẽ không làm phiền hàng xóm.",
-              "correctAnswer": "so they told him a different version"
+              "correctAnswer": "so the constant music wouldn't annoy the neighbors"
             },
             {
               "id": "38",
               "content": "He studied hard",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
               "explanation": "Anh ấy học hành chăm chỉ vì bài kiểm tra sắp tới rất quan trọng.",
-              "correctAnswer": "but he wasn't given access to the room"
+              "correctAnswer": "because the impending test was so important"
             },
             {
               "id": "39",
               "content": "She turned her phone off,",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
@@ -519,14 +512,14 @@
               "id": "40",
               "content": "He replaced the glass",
               "options": [
+                "because he can influence people to do anything",
+                "because the impending test was so important",
                 "because there were cracks in it",
-                "because there were cracks in it",
-                "but he wasn't given access to the room",
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the constant music wouldn't annoy the neighbors",
                 "so the mode wouldn't disturb anyone",
-                "so they told him a different version",
                 "so they told him a different version",
                 "that he broke every law"
               ],
@@ -541,13 +534,13 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Janie and the Music Player</h1>        <p style=\"margin-bottom: 1rem;\">Janie had <b>constant</b> thoughts about getting a music player. One day, she was late to class. She hurried down the hall but <b>halted</b> when she saw a backpack on the floor. She looked inside and found nothing but some books. She reached inside the bag and felt a small object at the bottom. It was a music player <b>enclosed</b> in a black case! Janie <b>tended</b> to be honest, and she had no <b>valid</b> reason to take the <b>device</b>. However, her desire for the player <b>influenced</b> her decision. Janie was being <b>sly</b>. She put the <b>device</b> into her own backpack. When she arrived at class, she gave her teacher the bag. \"I found this,\" she said.</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson asked, \"Does this backpack belong to anyone?\" A girl named Linda claimed the bag. Linda looked inside and yelled, \"My music player is missing! Janie took it!\" Janie answered, \"I did not.\" Linda responded, \"You were the only one that had <b>access</b> to it! If your <b>version</b> of the story is true, you'll let Ms. Johnson check your bag.\" Janie started to <b>perspire</b> as she realized the <b>impending</b> trouble she was in. She <b>gripped</b> her bag tightly.</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson took the bag from Janie. Inside she found the player. \"Janie, I never expected this kind of <b>conduct</b> from you,\" she said. \"You've always been such a good student.\"</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson gave Linda the player. Linda said, \"Ms. Johnson, look!\" There was a <b>crack</b> along one side. She turned it to the \"on\" <b>mode</b>, but it wouldn't work. It must've <b>snapped</b> while Janie was holding onto the bag so tightly.</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson called Janie's parents. They were very upset. \"Stealing is illegal. You have no respect for the <b>law</b> <b>whatsoever</b>,\" they said. \"We bought you a music player, but we're giving it to Linda. It will <b>replace</b> the one you broke.\" In the end, Janie's bad behavior left her with nothing at all.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Janie and the Music Player</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Janie had <b>constant</b> thoughts about getting a music player. One day, she was late to class. She hurried down the hall but <b>halted</b> when she saw a backpack on the floor. She looked inside and found nothing but some books. She reached inside the bag and felt a small object at the bottom. It was a music player <b>enclosed</b> in a black case! Janie <b>tended</b> to be honest, and she had no <b>valid</b> reason to take the <b>device</b>. However, her desire for the player <b>influenced</b> her decision. Janie was being <b>sly</b>. She put the <b>device</b> into her own backpack. When she arrived at class, she gave her teacher the bag. \"I found this,\" she said.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Ms. Johnson asked, \"Does this backpack belong to anyone?\" A girl named Linda claimed the bag. Linda looked inside and yelled, \"My music player is missing! Janie took it!\" Janie answered, \"I did not.\" Linda responded, \"You were the only one that had <b>access</b> to it! If your <b>version</b> of the story is true, you'll let Ms. Johnson check your bag.\" Janie started to <b>perspire</b> as she realized the <b>impending</b> trouble she was in. She <b>gripped</b> her bag tightly.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Ms. Johnson took the bag from Janie. Inside she found the player. \"Janie, I never expected this kind of <b>conduct</b> from you,\" she said. \"You've always been such a good student.\"</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Ms. Johnson gave Linda the player. Linda said, \"Ms. Johnson, look!\" There was a <b>crack</b> along one side. She turned it to the \"on\" <b>mode</b>, but it wouldn't work. It must've <b>snapped</b> while Janie was holding onto the bag so tightly.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Ms. Johnson called Janie's parents. They were very upset. \"Stealing is illegal. You have no respect for the <b>law</b> <b>whatsoever</b>,\" they said. \"We bought you a music player, but we're giving it to Linda. It will <b>replace</b> the one you broke.\" In the end, Janie's bad behavior left her with nothing at all.</p></div>",
       "imageUrl": "/unit8_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Reading Comprehension Part A",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True or False</p>",
           "questions": [
             {
               "id": "41",
@@ -668,7 +661,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n\n<img src=\"/unit8_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Janie và Máy Nghe Nhạc</h1>\n\n<p style=\"margin-bottom: 1rem;\">Janie có những suy nghĩ <b>liên tục</b> về việc mua một chiếc máy nghe nhạc. Một ngày nọ, cô bé đến lớp muộn. Cô vội vã đi dọc theo hành lang nhưng <b>dừng lại</b> khi nhìn thấy một chiếc ba lô trên sàn nhà. Cô nhìn vào bên trong và chẳng tìm thấy gì ngoài vài cuốn sách. Cô thò tay vào trong túi và cảm thấy một vật nhỏ ở đáy. Đó là một chiếc máy nghe nhạc được <b>bao bọc</b> trong một chiếc ốp màu đen! Janie <b>có xu hướng</b> trung thực, và cô không có lý do <b>chính đáng</b> nào để lấy <b>thiết bị</b> này. Tuy nhiên, mong muốn có được chiếc máy nghe nhạc đã <b>ảnh hưởng</b> đến quyết định của cô. Janie đã trở nên <b>ranh mãnh</b>. Cô cất <b>thiết bị</b> vào ba lô của chính mình. Khi đến lớp, cô đưa chiếc ba lô cho giáo viên của mình. \"Em tìm thấy cái này,\" cô nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô Johnson hỏi, \"Cái ba lô này có phải của ai không?\" Một cô gái tên là Linda đã nhận chiếc ba lô. Linda nhìn vào bên trong và hét lên, \"Máy nghe nhạc của em bị mất rồi! Janie đã lấy nó!\" Janie trả lời, \"Mình không có lấy.\" Linda đáp lại, \"Cậu là người duy nhất đã <b>tiếp cận</b> nó! Nếu <b>phiên bản</b> câu chuyện của cậu là đúng, cậu sẽ để cô Johnson kiểm tra cặp của mình.\" Janie bắt đầu <b>toát mồ hôi</b> khi nhận ra rắc rối <b>sắp xảy ra</b> mà cô đang gặp phải. Cô <b>nắm chặt</b> chiếc cặp của mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô Johnson lấy chiếc cặp từ Janie. Bên trong, cô tìm thấy chiếc máy nghe nhạc. \"Janie, cô chưa bao giờ mong đợi <b>hành vi</b> này từ em,\" cô nói. \"Em luôn là một học sinh ngoan cơ mà.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô Johnson đưa cho Linda chiếc máy nghe nhạc. Linda nói, \"Cô Johnson, nhìn này!\" Có một <b>vết nứt</b> dọc theo một cạnh. Cô bật sang <b>chế độ</b> \"bật\", nhưng nó không hoạt động. Nó hẳn đã bị <b>gãy</b> khi Janie đang giữ chặt chiếc cặp như vậy.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô Johnson gọi cho bố mẹ của Janie. Họ rất buồn bã. \"Ăn cắp là bất hợp pháp. Con không tôn trọng <b>pháp luật</b> <b>bất cứ điều gì</b>,\" họ nói. \"Bố mẹ đã mua cho con một chiếc máy nghe nhạc, nhưng chúng ta sẽ tặng nó cho Linda. Nó sẽ <b>thay thế</b> cho cái mà con đã làm hỏng.\" Cuối cùng, hành vi tồi tệ của Janie khiến cô bé chẳng còn lại gì cả.</p>\n\n</div>\n</div>"
     }
   ]
 }

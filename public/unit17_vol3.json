@@ -75,236 +75,236 @@
         },
         {
           "id": "sec2_wordlist",
-          "title": "Part B: Write a word that is similar in meaning to the underlined part.",
-          "content": "",
+          "title": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Exercise 2: Write a word that is similar in meaning to the underlined part.</p>",
           "questions": [
             {
               "id": "6",
-              "content": "John was very *unhappy* when he lost his favorite book.",
+              "content": "<p class=\"mb-3\">1. John was very <u>unhappy</u> when he lost his favorite book. [ 6 ]</p><p class=\"mb-3\">2. Manny found a job with a local news <u>company that deals with other businesses</u>. [ 7 ]</p><p class=\"mb-3\">3. The river in front of her house is <u>not deep</u>. [ 8 ]</p><p class=\"mb-3\">4. I don’t like to <u>keep in one place</u> my dog; I want him to run around. [ 9 ]</p><p class=\"mb-3\">5. The house burned down, and there was only <u>grey powder</u> left. [ 10 ]</p><p class=\"mb-3\">6. She has to <u>control where to go</u> when she travels with her father. [ 11 ]</p><p class=\"mb-3\">7. My plan to become a farmer <u>started</u> when I was a child. [ 12 ]</p><p class=\"mb-3\">8. He has a <u>feeling of love</u> for his grandfather. [ 13 ]</p><p class=\"mb-3\">9. The people left the town when the ground started <u>shaking</u>. [ 14 ]</p><p class=\"mb-3\">10. I had a <u>feeling of sadness</u> for her when her dog died. [ 15 ]</p>",
               "options": [],
               "explanation": "unhappy = miserable",
               "correctAnswer": "miserable"
             },
             {
               "id": "7",
-              "content": "Manny found a job with a local news *company that deals with other businesses*.",
+              "content": "",
               "options": [],
               "explanation": "company that deals with other businesses = agency",
               "correctAnswer": "agency"
             },
             {
               "id": "8",
-              "content": "The river in front of her house is *not deep*.",
+              "content": "",
               "options": [],
               "explanation": "not deep = shallow",
               "correctAnswer": "shallow"
             },
             {
               "id": "9",
-              "content": "I don’t like to *keep in one place* my dog; I want him to run around.",
+              "content": "",
               "options": [],
               "explanation": "keep in one place = confine",
               "correctAnswer": "confine"
             },
             {
               "id": "10",
-              "content": "The house burned down, and there was only *grey powder* left.",
+              "content": "",
               "options": [],
               "explanation": "grey powder = ash",
               "correctAnswer": "ash"
             },
             {
               "id": "11",
-              "content": "She has to *control where to go* when she travels with her father.",
+              "content": "",
               "options": [],
               "explanation": "control where to go = navigate",
               "correctAnswer": "navigate"
             },
             {
               "id": "12",
-              "content": "My plan to become a farmer *started* when I was a child.",
+              "content": "",
               "options": [],
               "explanation": "started = originated",
               "correctAnswer": "originated"
             },
             {
               "id": "13",
-              "content": "He has a *feeling of love* for his grandfather.",
+              "content": "",
               "options": [],
               "explanation": "feeling of love = affection",
               "correctAnswer": "affection"
             },
             {
               "id": "14",
-              "content": "The people left the town when the ground started *shaking*.",
+              "content": "",
               "options": [],
               "explanation": "shaking = vibrating",
               "correctAnswer": "vibrating"
             },
             {
               "id": "15",
-              "content": "I had a *feeling of sadness* for her when her dog died.",
+              "content": "",
               "options": [],
               "explanation": "feeling of sadness = sympathy",
               "correctAnswer": "sympathy"
             }
           ],
-          "questionType": "Điền khuyết"
+          "questionType": "Điền từ"
         },
         {
-          "id": "sec3_wordlist",
-          "title": "Part C: Choose the word that is a better fit for each blank.",
-          "content": "",
+          "id": "sec3",
+          "title": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Exercise 3: Choose the word that is a better fit for each blank.</p>",
+          "questionType": "Điền từ",
           "questions": [
             {
               "id": "16",
-              "content": "originated / superstition\nThe ________ from Europe and was brought to North America.",
+              "content": "<p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">1. originated / superstition</p><p class=\"mb-3\">The [ 16 ] [ 17 ] from Europe and was brought to North America.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">2. agency / dismissed</p><p class=\"mb-3\">The [ 18 ] quickly [ 19 ] his idea as being too unrealistic to be of any use.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">3. slope / lava</p><p class=\"mb-3\">Their house is built on a [ 20 ]. There is great concern that [ 21 ] from a nearby volcano will destroy the house easily.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">4. vibrate / fate</p><p class=\"mb-3\">When he learned of his [ 22 ], he was frightened. It made his entire body [ 23 ] uncontrollably.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">5. sympathy / confine</p><p class=\"mb-3\">Please [ 24 ] your [ 25 ] for someone who really needs it.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">6. ash / erupted</p><p class=\"mb-3\">A gray cloud of [ 26 ] [ 27 ] from the tailpipe of the car that had not been started in three years.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">7. retrieve / miserable</p><p class=\"mb-3\">I felt [ 28 ] all evening. Perhaps I caught a virus when I had to [ 29 ] the missing sheep from the heavy rainstorm.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">8. wander / affection</p><p class=\"mb-3\">I have great [ 30 ] for those who do exciting things. When I was young, I would often [ 31 ] the countryside just for fun.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">9. remainder / shallow</p><p class=\"mb-3\">We sent the youngsters home while the [ 32 ] of the group crossed the [ 33 ] but fast moving stream.</p><p class=\"font-bold text-[15px] text-slate-700 mt-4 mb-1\">10. spanned / navigate</p><p class=\"mb-3\">It was a difficult trip, but we managed to [ 34 ] our way through the wilderness in a trip that [ 35 ] five days.</p>",
               "options": [],
-              "explanation": "superstition",
-              "correctAnswer": "superstition"
+              "correctAnswer": "superstition",
+              "explanation": "Đáp án đúng là 'superstition'."
             },
             {
               "id": "17",
-              "content": "1b. originated / superstition\nThe superstition ________ from Europe and was brought to North America.",
+              "content": "",
               "options": [],
-              "explanation": "originated",
-              "correctAnswer": "originated"
+              "correctAnswer": "originated",
+              "explanation": "Đáp án đúng là 'originated'."
             },
             {
               "id": "18",
-              "content": "agency / dismissed\nThe ________ quickly",
+              "content": "",
               "options": [],
-              "explanation": "agency",
-              "correctAnswer": "agency"
+              "correctAnswer": "agency",
+              "explanation": "Đáp án đúng là 'agency'."
             },
             {
               "id": "19",
-              "content": "2b. agency / dismissed\nThe agency quickly ________ his idea as being too unrealistic to be of any use.",
+              "content": "",
               "options": [],
-              "explanation": "dismissed",
-              "correctAnswer": "dismissed"
+              "correctAnswer": "dismissed",
+              "explanation": "Đáp án đúng là 'dismissed'."
             },
             {
               "id": "20",
-              "content": "slope / lava\nTheir house is built on a ________ .",
+              "content": "",
               "options": [],
-              "explanation": "slope",
-              "correctAnswer": "slope"
+              "correctAnswer": "slope",
+              "explanation": "Đáp án đúng là 'slope'."
             },
             {
               "id": "21",
-              "content": "3b. slope / lava\nThere is great concern that ________ from a nearby volcano will destroy the house easily.",
+              "content": "",
               "options": [],
-              "explanation": "lava",
-              "correctAnswer": "lava"
+              "correctAnswer": "lava",
+              "explanation": "Đáp án đúng là 'lava'."
             },
             {
               "id": "22",
-              "content": "vibrate / fate\nWhen he learned of his ________ , he was frightened.",
+              "content": "",
               "options": [],
-              "explanation": "fate",
-              "correctAnswer": "fate"
+              "correctAnswer": "fate",
+              "explanation": "Đáp án đúng là 'fate'."
             },
             {
               "id": "23",
-              "content": "4b. vibrate / fate\nIt made his entire body ________ uncontrollably.",
+              "content": "",
               "options": [],
-              "explanation": "vibrate",
-              "correctAnswer": "vibrate"
+              "correctAnswer": "vibrate / vibrated",
+              "explanation": "Đáp án đúng là 'vibrate / vibrated'."
             },
             {
               "id": "24",
-              "content": "sympathy / confine\nPlease ________ your",
+              "content": "",
               "options": [],
-              "explanation": "confine",
-              "correctAnswer": "confine"
+              "correctAnswer": "confine",
+              "explanation": "Đáp án đúng là 'confine'."
             },
             {
               "id": "25",
-              "content": "5b. sympathy / confine\nconfine your ________ for someone who really needs it.",
+              "content": "",
               "options": [],
-              "explanation": "sympathy",
-              "correctAnswer": "sympathy"
+              "correctAnswer": "sympathy",
+              "explanation": "Đáp án đúng là 'sympathy'."
             },
             {
               "id": "26",
-              "content": "ash / erupted\nA gray cloud of ________",
+              "content": "",
               "options": [],
-              "explanation": "ash",
-              "correctAnswer": "ash"
+              "correctAnswer": "ash",
+              "explanation": "Đáp án đúng là 'ash'."
             },
             {
               "id": "27",
-              "content": "6b. ash / erupted\ncloud of ash ________ from the tailpipe of the car that had not been started in three years.",
+              "content": "",
               "options": [],
-              "explanation": "erupted",
-              "correctAnswer": "erupted"
+              "correctAnswer": "erupted",
+              "explanation": "Đáp án đúng là 'erupted'."
             },
             {
               "id": "28",
-              "content": "retrieve / miserable\nI felt ________ all evening.",
+              "content": "",
               "options": [],
-              "explanation": "miserable",
-              "correctAnswer": "miserable"
+              "correctAnswer": "miserable",
+              "explanation": "Đáp án đúng là 'miserable'."
             },
             {
               "id": "29",
-              "content": "7b. retrieve / miserable\nPerhaps I caught a virus when I had to ________ the missing sheep from the heavy rainstorm.",
+              "content": "",
               "options": [],
-              "explanation": "retrieve",
-              "correctAnswer": "retrieve"
+              "correctAnswer": "retrieve",
+              "explanation": "Đáp án đúng là 'retrieve'."
             },
             {
               "id": "30",
-              "content": "wander / affection\nI have great ________ for those who do exciting things.",
+              "content": "",
               "options": [],
-              "explanation": "affection",
-              "correctAnswer": "affection"
+              "correctAnswer": "affection",
+              "explanation": "Đáp án đúng là 'affection'."
             },
             {
               "id": "31",
-              "content": "8b. wander / affection\nWhen I was young, I would often ________ the countryside just for fun.",
+              "content": "",
               "options": [],
-              "explanation": "wander",
-              "correctAnswer": "wander"
+              "correctAnswer": "wander",
+              "explanation": "Đáp án đúng là 'wander'."
             },
             {
               "id": "32",
-              "content": "remainder / shallow\nWe sent the youngsters home while the ________ of the group crossed the",
+              "content": "",
               "options": [],
-              "explanation": "remainder",
-              "correctAnswer": "remainder"
+              "correctAnswer": "remainder",
+              "explanation": "Đáp án đúng là 'remainder'."
             },
             {
               "id": "33",
-              "content": "9b. remainder / shallow\ncrossed the ________ but fast moving stream.",
+              "content": "",
               "options": [],
-              "explanation": "shallow",
-              "correctAnswer": "shallow"
+              "correctAnswer": "shallow",
+              "explanation": "Đáp án đúng là 'shallow'."
             },
             {
               "id": "34",
-              "content": "spanned / navigate\nIt was a difficult trip, but we managed to ________ our way through the wilderness",
+              "content": "",
               "options": [],
-              "explanation": "navigate",
-              "correctAnswer": "navigate"
+              "correctAnswer": "navigate",
+              "explanation": "Đáp án đúng là 'navigate'."
             },
             {
               "id": "35",
-              "content": "10b. spanned / navigate\nin a trip that ________ five days.",
+              "content": "",
               "options": [],
-              "explanation": "spanned",
-              "correctAnswer": "spanned"
+              "correctAnswer": "spanned",
+              "explanation": "Đáp án đúng là 'spanned'."
             }
-          ],
-          "questionType": "Điền khuyết"
+          ]
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Magic Cup</h1>        <p style=\"margin-bottom: 1rem;\">Paul and John were brothers. They fought all the time because they both wanted to be leaders of the <b>agency</b> they both worked at.</p>    <p style=\"margin-bottom: 1rem;\">There was a <b>superstition</b> in their town about a magic cup. People said the cup was in a volcano located far away. Anyone who <b>retrieved</b> the cup would have their wish come true. John and Paul both wanted to find it. Then they could become the leader.</p>    <p style=\"margin-bottom: 1rem;\">They both left to find the cup. Before their trip, their mother said they should work together. They <b>dismissed</b> that idea. Even though their trips <b>originated</b> from the same house, each wanted to travel alone.</p>    <p style=\"margin-bottom: 1rem;\">They were both <b>miserable</b> during the trip. They had to <b>navigate</b> small boats across <b>shallow</b> rivers and climb difficult <b>slopes</b>. Their journey <b>spanned</b> many days. When they finally got close to the volcano, the ground began to <b>vibrate</b> and the volcano <b>erupted</b>. <b>Ash</b> filled the sky and <b>lava</b> covered everything. John climbed to the top of a hill to keep from getting burned. A few moments later, his brother went up the same hill. They were <b>confined</b> to the hill until the lava cooled down.</p>    <p style=\"margin-bottom: 1rem;\">They talked about the things they had seen while <b>wandering</b> around the country. They felt more <b>sympathy</b> and <b>affection</b> for each other than ever before. They decided that <b>fate</b> had brought them together.</p>    <p style=\"margin-bottom: 1rem;\">The next day they left to finish the <b>remainder</b> of the trip together. Everything seemed much easier. When they finally found the cup, they learned that it didn’t make wishes come true. It was only an ordinary cup. But the trip to reach the cup taught them to work together and love each other.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Magic Cup</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Paul and John were brothers. They fought all the time because they both wanted to be leaders of the <b>agency</b> they both worked at.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There was a <b>superstition</b> in their town about a magic cup. People said the cup was in a volcano located far away. Anyone who <b>retrieved</b> the cup would have their wish come true. John and Paul both wanted to find it. Then they could become the leader.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They both left to find the cup. Before their trip, their mother said they should work together. They <b>dismissed</b> that idea. Even though their trips <b>originated</b> from the same house, each wanted to travel alone.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They were both <b>miserable</b> during the trip. They had to <b>navigate</b> small boats across <b>shallow</b> rivers and climb difficult <b>slopes</b>. Their journey <b>spanned</b> many days. When they finally got close to the volcano, the ground began to <b>vibrate</b> and the volcano <b>erupted</b>. <b>Ash</b> filled the sky and <b>lava</b> covered everything. John climbed to the top of a hill to keep from getting burned. A few moments later, his brother went up the same hill. They were <b>confined</b> to the hill until the lava cooled down.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">They talked about the things they had seen while <b>wandering</b> around the country. They felt more <b>sympathy</b> and <b>affection</b> for each other than ever before. They decided that <b>fate</b> had brought them together.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The next day they left to finish the <b>remainder</b> of the trip together. Everything seemed much easier. When they finally found the cup, they learned that it didn’t make wishes come true. It was only an ordinary cup. But the trip to reach the cup taught them to work together and love each other.</p></div>",
       "imageUrl": "/unit17_v3_story.png",
       "sections": [
         {
@@ -431,7 +431,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \">\n<img src=\"/unit17_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chiếc Cốc Ma Thuật</h1>\n\n<p style=\"margin-bottom: 1rem;\">Paul và John là anh em. Họ luôn đánh nhau vì cả hai đều muốn làm người lãnh đạo của <b>cơ quan</b> mà họ cùng làm việc.</p>\n\n<p style=\"margin-bottom: 1rem;\">Có một <b>sự mê tín</b> trong thị trấn của họ về một chiếc cốc ma thuật. Mọi người kể rằng chiếc cốc nằm trong một ngọn núi lửa ở rất xa. Bất cứ ai <b>lấy lại được</b> chiếc cốc sẽ được toại nguyện. Cả John và Paul đều muốn tìm thấy nó. Như vậy họ mới có thể trở thành người lãnh đạo.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cả hai cùng lên đường tìm chiếc cốc. Trước chuyến đi, mẹ của họ đã khuyên họ nên làm việc cùng nhau. Nhưng họ đã <b>gạt bỏ</b> ý tưởng đó. Mặc dù các chuyến đi của họ đều <b>bắt nguồn</b> từ cùng một ngôi nhà, nhưng mỗi người lại muốn đi du lịch một mình.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ đều <b>khốn khổ</b> trong suốt chuyến đi. Họ phải <b>điều hướng</b> những chiếc thuyền nhỏ băng qua những con sông <b>nông</b> và leo lên những <b>sườn dốc</b> khó khăn. Cuộc hành trình của họ <b>kéo dài</b> trong nhiều ngày. Khi họ cuối cùng cũng đến gần ngọn núi lửa, mặt đất bắt đầu <b>rung chuyển</b> và ngọn núi lửa <b>phun trào</b>. <b>Tro bụi</b> phủ kín bầu trời và <b>dung nham</b> bao trùm mọi thứ. John leo lên đỉnh một ngọn đồi để không bị bỏng. Vài phút sau, anh trai cậu cũng leo lên cùng ngọn đồi đó. Họ bị <b>giam cầm</b> trên ngọn đồi cho đến khi dung nham nguội hẳn.</p>\n\n<p style=\"margin-bottom: 1rem;\">Họ nói chuyện về những điều họ đã thấy trong khi <b>đi lang thang</b> khắp đất nước. Họ cảm thấy <b>sự đồng cảm</b> và <b>tình cảm</b> dành cho nhau nhiều hơn bao giờ hết. Họ quyết định rằng <b>định mệnh</b> đã đưa họ đến với nhau.</p>\n\n<p style=\"margin-bottom: 1rem;\">Ngày hôm sau, họ rời đi để cùng nhau hoàn thành <b>phần còn lại</b> của chuyến đi. Mọi thứ dường như trở nên dễ dàng hơn nhiều. Khi họ cuối cùng cũng tìm thấy chiếc cốc, họ nhận ra rằng nó không hề biến điều ước thành hiện thực. Nó chỉ là một chiếc cốc bình thường. Nhưng chuyến đi để chạm tới chiếc cốc đã dạy họ biết cách làm việc cùng nhau và yêu thương lẫn nhau.</p>\n</div>\n</div>"
     }
   ],
   "basicInfo": {

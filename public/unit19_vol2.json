@@ -139,8 +139,6 @@
             {
               "id": "11",
               "content": "We had a big [ 11 ] to welcome my grandmother home from the hospital.",
-              "explanation": "reception (tiệc tiếp đón) để chào đón bà.",
-              "correctAnswer": "reception",
               "options": [
                 "origin",
                 "begged",
@@ -152,13 +150,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "reception (tiệc tiếp đón) để chào đón bà.",
+              "correctAnswer": "reception"
             },
             {
               "id": "12",
               "content": "The man was a [ 12 ] for crossing the street without looking.",
-              "explanation": "fool (kẻ ngốc) vì băng qua đường không nhìn.",
-              "correctAnswer": "fool",
               "options": [
                 "origin",
                 "begged",
@@ -170,13 +168,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "fool (kẻ ngốc) vì băng qua đường không nhìn.",
+              "correctAnswer": "fool"
             },
             {
               "id": "13",
               "content": "A friend asked me to [ 13 ] the book she wrote because I am an artist.",
-              "explanation": "illustrate (minh họa) sách vì là họa sĩ.",
-              "correctAnswer": "illustrate",
               "options": [
                 "origin",
                 "begged",
@@ -188,13 +186,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "illustrate (minh họa) sách vì là họa sĩ.",
+              "correctAnswer": "illustrate"
             },
             {
               "id": "14",
               "content": "I sewed feathers on my [ 14 ] for the play.",
-              "explanation": "costume (trang phục) cho vở kịch.",
-              "correctAnswer": "costume",
               "options": [
                 "origin",
                 "begged",
@@ -206,13 +204,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "costume (trang phục) cho vở kịch.",
+              "correctAnswer": "costume"
             },
             {
               "id": "15",
               "content": "My teacher [ 15 ] my paper because I didn’t follow the directions.",
-              "explanation": "rejected (từ chối) bài tập vì không làm theo hướng dẫn.",
-              "correctAnswer": "rejected",
               "options": [
                 "origin",
                 "begged",
@@ -224,13 +222,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "rejected (từ chối) bài tập vì không làm theo hướng dẫn.",
+              "correctAnswer": "rejected"
             },
             {
               "id": "16",
               "content": "I like being alone in the forest because of the [ 16 ] that’s around me.",
-              "explanation": "silence (sự yên lặng) trong rừng.",
-              "correctAnswer": "silence",
               "options": [
                 "origin",
                 "begged",
@@ -242,13 +240,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "silence (sự yên lặng) trong rừng.",
+              "correctAnswer": "silence"
             },
             {
               "id": "17",
               "content": "The boy who stole the bread [ 17 ] me not to tell.",
-              "explanation": "begged (van xin) đừng kể ra.",
-              "correctAnswer": "begged",
               "options": [
                 "origin",
                 "begged",
@@ -260,13 +258,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "begged (van xin) đừng kể ra.",
+              "correctAnswer": "begged"
             },
             {
               "id": "18",
               "content": "Some fish swim up a [ 18 ] to lay their eggs.",
-              "explanation": "stream (suối).",
-              "correctAnswer": "stream",
               "options": [
                 "origin",
                 "begged",
@@ -278,13 +276,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "stream (suối).",
+              "correctAnswer": "stream"
             },
             {
               "id": "19",
               "content": "We learned about the [ 19 ] of the Statue of Liberty.",
-              "explanation": "origin (nguồn gốc) của tượng Nữ thần Tự do.",
-              "correctAnswer": "origin",
               "options": [
                 "origin",
                 "begged",
@@ -296,13 +294,13 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "origin (nguồn gốc) của tượng Nữ thần Tự do.",
+              "correctAnswer": "origin"
             },
             {
               "id": "20",
               "content": "My sister [ 20 ] anyone to come in her room without asking first.",
-              "explanation": "forbids (cấm) vào phòng không hỏi trước.",
-              "correctAnswer": "forbids",
               "options": [
                 "origin",
                 "begged",
@@ -314,7 +312,9 @@
                 "stream",
                 "rejected",
                 "reception"
-              ]
+              ],
+              "explanation": "forbids (cấm) vào phòng không hỏi trước.",
+              "correctAnswer": "forbids"
             }
           ],
           "questionType": "Kéo thả"
@@ -324,7 +324,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Mrs. May and the Green Girl</h1>        <p style=\"margin-bottom: 1rem;\">One morning, people from a small town found a little girl by a <b>stream</b>. She seemed to be wearing a green <b>costume</b>. As the people got closer, they saw that the girl’s skin was green!</p>    <p style=\"margin-bottom: 1rem;\">“Oh my!” The people <b>exclaimed</b>. “What if her <b>motive</b> for coming to our town is bad? What if she has a strange <b>origin</b>?”</p>    <p style=\"margin-bottom: 1rem;\">An old woman <b>kindly</b> went to her. “Look how scared she is. Please,” she <b>begged</b>. “Do not <b>reject</b> her. I will <b>adopt</b> her.”</p>    <p style=\"margin-bottom: 1rem;\">There was <b>silence</b> until the judge spoke. “I don’t know,” he said in a worried <b>tone</b>. “But we cannot <b>forbid</b> you. I <b>indeed</b> hope you’re not being a <b>fool</b>.”</p>    <p style=\"margin-bottom: 1rem;\">Mrs. May <b>extended</b> her hand to the girl. “Come with me. I won’t hurt you.”</p>    <p style=\"margin-bottom: 1rem;\">The girl spoke a language Mrs. May didn’t know. But she was able to <b>interpret</b> what the girl was trying to say. Sometimes the girl drew pictures to <b>illustrate</b> what she meant.</p>    <p style=\"margin-bottom: 1rem;\">The green girl was from a place far <b>beyond</b> the sun. There, people lived in <b>nests</b> built in trees. They only ate green leaves, which made their skin green.</p>    <p style=\"margin-bottom: 1rem;\">“Well, you can’t just eat leaves,” Mrs. May said. She fed the green girl home-cooked meals, and soon the girl wasn’t green anymore. The people had a huge <b>reception</b> to welcome her as a citizen of the town.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Mrs. May and the Green Girl</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">One morning, people from a small town found a little girl by a <b>stream</b>. She seemed to be wearing a green <b>costume</b>. As the people got closer, they saw that the girl’s skin was green!</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Oh my!” The people <b>exclaimed</b>. “What if her <b>motive</b> for coming to our town is bad? What if she has a strange <b>origin</b>?”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">An old woman <b>kindly</b> went to her. “Look how scared she is. Please,” she <b>begged</b>. “Do not <b>reject</b> her. I will <b>adopt</b> her.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There was <b>silence</b> until the judge spoke. “I don’t know,” he said in a worried <b>tone</b>. “But we cannot <b>forbid</b> you. I <b>indeed</b> hope you’re not being a <b>fool</b>.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Mrs. May <b>extended</b> her hand to the girl. “Come with me. I won’t hurt you.”</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The girl spoke a language Mrs. May didn’t know. But she was able to <b>interpret</b> what the girl was trying to say. Sometimes the girl drew pictures to <b>illustrate</b> what she meant.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">The green girl was from a place far <b>beyond</b> the sun. There, people lived in <b>nests</b> built in trees. They only ate green leaves, which made their skin green.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">“Well, you can’t just eat leaves,” Mrs. May said. She fed the green girl home-cooked meals, and soon the girl wasn’t green anymore. The people had a huge <b>reception</b> to welcome her as a citizen of the town.</p></div>",
       "imageUrl": "/unit19_story.png",
       "sections": [
         {
@@ -383,7 +383,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit19_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Bà May và cô bé da xanh</h1>\n\n<p style=\"margin-bottom: 1rem;\">Một buổi sáng, những người từ một thị trấn nhỏ tìm thấy một cô bé bên một <b>dòng suối</b>. Cô bé dường như đang mặc một bộ <b>trang phục</b> màu xanh lá cây. Khi mọi người tiến lại gần hơn, họ thấy rằng da của cô bé cũng màu xanh lá cây!</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Ôi trời!\" Mọi người <b>thốt lên</b>. \"Nhỡ đâu <b>động cơ</b> của cô bé khi đến thị trấn của chúng ta là xấu thì sao? Nhỡ đâu cô bé có <b>nguồn gốc</b> kỳ lạ thì sao?\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Một bà lão <b>tử tế</b> đi đến chỗ cô bé. \"Nhìn xem con bé đang sợ hãi thế nào kìa. Xin các người,\" bà <b>van nài</b>. \"Đừng <b>ruồng bỏ</b> con bé. Tôi sẽ <b>nhận nuôi</b> con bé.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Có một sự <b>im lặng</b> cho đến khi thẩm phán lên tiếng. \"Tôi không biết,\" ông nói với một <b>giọng điệu</b> lo lắng. \"Nhưng chúng tôi không thể <b>ngăn cấm</b> bà. <b>Thật sự</b> tôi hy vọng bà không hành động như một kẻ <b>ngốc</b>.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Bà May <b>chìa</b> tay mình về phía cô bé. \"Hãy đi với ta. Ta sẽ không làm hại cháu.\"</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô bé nói một ngôn ngữ mà bà May không biết. Nhưng bà có thể <b>hiểu</b> những gì cô bé đang cố gắng nói. Đôi khi cô bé vẽ những bức tranh để <b>minh họa</b> cho những gì mình muốn nói.</p>\n\n<p style=\"margin-bottom: 1rem;\">Cô bé da xanh đến từ một nơi nằm xa <b>bên ngoài</b> mặt trời. Ở đó, mọi người sống trong những chiếc <b>tổ</b> được xây trên cây. Họ chỉ ăn lá xanh, điều này khiến da của họ có màu xanh lá cây.</p>\n\n<p style=\"margin-bottom: 1rem;\">\"Chà, cháu không thể chỉ ăn lá cây được,\" bà May nói. Bà cho cô bé da xanh ăn những bữa ăn nấu tại nhà, và chẳng mấy chốc cô bé không còn màu xanh lá cây nữa. Người dân đã tổ chức một <b>buổi tiệc đón mừng</b> lớn để chào đón cô bé trở thành một công dân của thị trấn.</p>\n</div>"
     }
   ],
   "basicInfo": {

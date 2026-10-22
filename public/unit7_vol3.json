@@ -3,409 +3,462 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit7_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit7_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">anniversary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aenavarsari]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An anniversary is a day that celebrates something from the past.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My parents went out to eat for their wedding anniversary.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arithmetic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈrɪθmətɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Arithmetic is math.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I like to study arithmetic at school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ashamed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ajeimd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be ashamed is to feel upset because you did something wrong or bad.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was ashamed when he found out that I knew about his past.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">burst</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baxst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To burst is to suddenly break open or apart.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bomb burst over the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">carpenter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ka:rpantar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A carpenter is a person who builds things with wood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We hired a carpenter to make a cupboard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">couch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kautj]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A couch is a long, soft seat that many people can sit on.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Kim and Martin's new couch was very expensive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">drip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[drip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a liquid drips, just a little bit falls at a time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I heard water dripping from the faucet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elegant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eligant]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is elegant, it is very fancy and pleasing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In Japan, women wear elegant kimonos on special occasions.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fabric</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[faebrik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fabric is cloth used to make clothes, furniture, etc.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The towels were made from a soft fabric.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[koul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Coal is a hard black rock that you burn for heat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many power stations burn coal to produce energy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">highlands</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hailand]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The highlands are high areas of land, usually with mountains.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man had a small home in the highlands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ivory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aivari]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ivory is a white, hard substance that comes from elephants.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The elephant's long ivory tusks looked very impressive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mill is a building where flour is made.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The farmer took his wheat to the mill to make it into flour.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">needle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nf:di]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A needle is a small, sharp piece of metal that you use to make or fix clothes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I used a needle to fix the hole in my pants.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">polish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pdlij]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To polish something is to rub it in order to make it shiny.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mark spent all morning polishing his shoes for the wedding.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sew</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sew means to put pieces of cloth together using string.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I learned to sew when I was a little girl.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[Jed]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shed is a small building where you store things like tools.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We have a small shed in the backyard for storage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thread</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ered]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A thread is a thin piece of string.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have many different colors of thread at home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To trim something is to cut it a little bit.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had my hair trimmed this afternoon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">upwards</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[Apwardz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something goes upwards, it moves vertically higher.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The kite went upwards further and further.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit7_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit7_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abandon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbændən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To abandon something is to leave it forever or for a long time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The old room had been abandoned years before.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ambitious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æmbiʃəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is ambitious, they want to be rich or successful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Kendra had to be ambitious to get into medical school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bark</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɑ:rk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a dog barks, it makes a short, loud noise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dog barked loudly and frighteningly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bay is an area near the ocean where the land goes inward.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Golden Gate Bridge crosses San Francisco Bay.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brilliant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[briljənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is brilliant, they are very smart.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My younger sister is brilliant for someone her age.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your chin is the hard part at the bottom of your face.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Luke pointed to the hair on his chin.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">complaint</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmpleint]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A complaint is something you say to tell people that you don’t like something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom said she didn’t want to hear my brother’s complaints.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deaf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[def]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is deaf, they cannot hear.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Susan was born deaf.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enthusiastic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inθu:ziæstik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be enthusiastic about something is to be excited by or interested in it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man was enthusiastic about his job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">expedition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ekspədiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An expedition is a long trip, usually to a place very far away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They got into their spaceship to begin their expedition.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">horizon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[həraizn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The horizon is where the sky looks like it meets the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sun dipped below the horizon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loyal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔiəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be loyal to something or someone is to agree to always help them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The three friends are very loyal to each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mayor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[meiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The mayor is the person in charge of a city.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mayor of my hometown is quite a powerful speaker.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mutual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mju:tʃuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is mutual, it is felt in the same way by two or more people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Robert likes Sarah. The feeling is mutual.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overweight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərweit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is overweight, they are very fat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Roger eats too much, so now he’s overweight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refuge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[refju:dʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A refuge is a place where you go to be safe.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When it started to rain, she found refuge in the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">restore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ristɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To restore something is to put it back the way it was.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Victor restored the old car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rub</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rʌb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rub something is to push on it and move your hand back and forth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom’s feet were sore, so she rubbed them.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">senses</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sensiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your senses are how you see, taste, hear, feel and smell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It would be hard to live without your five senses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">veterinarian</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vetərəneəriən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A veterinarian is a doctor that takes care of animals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wanda became a veterinarian because she loves dogs.</div></div></div></div></div></div>",
       "sections": [
         {
           "id": "sec_wordlist_0",
-          "title": "Part A: Choose the word that is the better fit for each blank.",
+          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "Because it was their ______, my father bought my mother a gift. It was an ______ coat.",
+              "content": "a doctor for animals",
               "options": [
-                "anniversary / elegant",
-                "arithmetic / upwards",
-                "couch / ashamed",
-                "burst / dripped"
+                "ambitious",
+                "veterinarian",
+                "mayor",
+                "mutual"
               ],
-              "explanation": "anniversary (kỷ niệm) và elegant (thanh lịch) phù hợp với ngữ cảnh tặng quà kỷ niệm và chiếc áo khoác thanh lịch.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "veterinarian là bác sĩ thú y."
             },
             {
               "id": "2",
-              "content": "It takes a lot of ______ to design new airplanes. You have to know how to make them go ______.",
+              "content": "to leave something",
               "options": [
-                "anniversary / elegant",
-                "arithmetic / upwards",
-                "shed / trim",
-                "mill / threads"
+                "rub",
+                "bark",
+                "abandon",
+                "restore"
               ],
-              "explanation": "arithmetic (toán học) và upwards (hướng lên) phù hợp với việc thiết kế máy bay và làm cho nó bay lên.",
-              "correctAnswer": "B"
+              "correctAnswer": "C",
+              "explanation": "abandon có nghĩa là bỏ rơi, rời bỏ."
             },
             {
               "id": "3",
-              "content": "You should be ______ of yourself! You know you're not supposed to eat on the ______.",
+              "content": "very smart",
               "options": [
-                "ashamed / couch",
-                "couch / ashamed",
-                "anniversary / elegant",
-                "arithmetic / upwards"
+                "loyal",
+                "enthusiastic",
+                "deaf",
+                "brilliant"
               ],
-              "explanation": "ashamed (xấu hổ) và couch (ghế sô pha) phù hợp ngữ cảnh không được ăn trên ghế sô pha.",
-              "correctAnswer": "A"
+              "correctAnswer": "D",
+              "explanation": "brilliant có nghĩa là rất thông minh, xuất sắc."
             },
             {
               "id": "4",
-              "content": "When the wind blew, the door ______ open. And since it was raining, water ______ into the room.",
+              "content": "a safe place",
               "options": [
-                "burst / dripped",
-                "dripped / burst",
-                "sew / carpenter",
-                "polish / fabric"
+                "refuge",
+                "horizon",
+                "bay",
+                "expedition"
               ],
-              "explanation": "burst (bật tung) và dripped (nhỏ giọt) phù hợp: cửa bật tung và nước mưa nhỏ giọt vào phòng.",
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "refuge là nơi trú ẩn an toàn."
             },
             {
               "id": "5",
-              "content": "My brother is a ______, so he knows about construction. However, he doesn't know how to ______.",
+              "content": "the bottom part of a face",
               "options": [
-                "carpenter / sew",
-                "sew / carpenter",
-                "needle / ivory",
-                "coal / highlands"
+                "complaint",
+                "chin",
+                "senses",
+                "overweight"
               ],
-              "explanation": "carpenter (thợ mộc) phù hợp với xây dựng, còn sew (khâu vá) là việc anh ấy không biết làm.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "6",
-              "content": "I heard a news story about something in the ______. I guess they found ______ under the ground.",
-              "options": [
-                "highlands / coal",
-                "coal / highlands",
-                "mill / threads",
-                "shed / trim"
-              ],
-              "explanation": "highlands (vùng cao) và coal (than đá) dưới lòng đất.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "7",
-              "content": "Archeologist found ______ made from ______ in Africa.",
-              "options": [
-                "needles / ivory",
-                "ivory / needles",
-                "polish / fabric",
-                "fabric / polish"
-              ],
-              "explanation": "needles (kim) làm từ ivory (ngà voi).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "8",
-              "content": "People who work at the ______ do many things to stay safe. For example, they do not have ______ hanging from their clothing because they can get caught in the machinery.",
-              "options": [
-                "mill / threads",
-                "threads / mill",
-                "shed / trim",
-                "trim / shed"
-              ],
-              "explanation": "mill (nhà máy xay xát) và threads (sợi chỉ) lủng lẳng dễ bị kẹt vào máy.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "9",
-              "content": "Bruce worked hard to ______ the wood floors. Afterwards, he wiped the floor with a soft ______.",
-              "options": [
-                "polish / fabric",
-                "fabric / polish",
-                "burst / dripped",
-                "dripped / burst"
-              ],
-              "explanation": "polish (đánh bóng) sàn nhà và lau bằng fabric (vải) mềm.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "10",
-              "content": "On Saturday, my dad made me clean out the ______. I also had to ______ the bushes.",
-              "options": [
-                "shed / trim",
-                "trim / shed",
-                "carpenter / sew",
-                "sew / carpenter"
-              ],
-              "explanation": "shed (nhà kho) và trim (cắt tỉa) bụi cây.",
-              "correctAnswer": "A"
+              "correctAnswer": "B",
+              "explanation": "chin là cái cằm (phần dưới cùng của khuôn mặt)."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         },
         {
           "id": "sec_wordlist_1",
-          "title": "Part B: Write a word that is similar in meaning to the underlined part.",
+          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
+              "id": "6",
+              "content": "mutual",
+              "options": [
+                "fat",
+                "having the same relationship with each other",
+                "smart",
+                "hardworking"
+              ],
+              "correctAnswer": "B",
+              "explanation": "mutual có nghĩa là lẫn nhau, có cùng cảm xúc từ hai phía."
+            },
+            {
+              "id": "7",
+              "content": "complaint",
+              "options": [
+                "a trip",
+                "a statement of unhappiness",
+                "a safe place",
+                "where the land curves in"
+              ],
+              "correctAnswer": "B",
+              "explanation": "complaint là lời phàn nàn, khiếu nại."
+            },
+            {
+              "id": "8",
+              "content": "bark",
+              "options": [
+                "a part of the face",
+                "a doctor for animals",
+                "a sound made by a dog",
+                "the bottom of the sky"
+              ],
+              "correctAnswer": "C",
+              "explanation": "bark là tiếng chó sủa."
+            },
+            {
+              "id": "9",
+              "content": "enthusiastic",
+              "options": [
+                "unable to hear",
+                "to leave behind",
+                "to agree to do the job",
+                "wanting to do something very much"
+              ],
+              "correctAnswer": "D",
+              "explanation": "enthusiastic có nghĩa là nhiệt tình, hào hứng."
+            },
+            {
+              "id": "10",
+              "content": "mayor",
+              "options": [
+                "a town leader",
+                "to press back and forth",
+                "to put back",
+                "the ability to see and touch"
+              ],
+              "correctAnswer": "A",
+              "explanation": "mayor là thị trưởng (người đứng đầu thành phố/thị trấn)."
+            },
+            {
               "id": "11",
-              "content": "<p class=\"mb-4\">How good are you at <u>math</u>? [ 11 ]</p><p class=\"mb-4\">There were some <u>thin strings</u> hanging from my shirt. [ 12 ]</p><p class=\"mb-4\">I wanted to <u>get a little hair cut off</u> today, but I had no time to make it to the salon. [ 13 ]</p><p class=\"mb-4\">The <u>cloth</u> was dirty from being outside. [ 14 ]</p><p class=\"mb-4\">Smoke from the fire rose <u>high into the air</u>. [ 15 ]</p><p class=\"mb-4\">Sometimes the dog goes inside the <u>small building with tools</u> when it gets cold. [ 16 ]</p><p class=\"mb-4\">I live in the <u>mountainous area</u> of the country. [ 17 ]</p><p class=\"mb-4\">The old <u>place where they made flour</u> was interesting to visit. [ 18 ]</p><p class=\"mb-4\">I used to <u>put cloth together</u> with my grandmother. [ 19 ]</p><p class=\"mb-4\">The silver was <u>made to look shiny</u>. [ 20 ]</p>",
-              "options": [],
-              "explanation": "arithmetic có nghĩa là toán học, tương đồng với math.",
-              "correctAnswer": "ARITHMETIC"
+              "content": "rub",
+              "options": [
+                "to move your hand over",
+                "the leader of a town",
+                "to show displeasure",
+                "a small inlet of water"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rub có nghĩa là chà xát, xoa."
             },
             {
               "id": "12",
-              "content": "",
-              "options": [],
-              "explanation": "threads có nghĩa là những sợi chỉ, tương đồng với thin strings.",
-              "correctAnswer": "THREADS"
+              "content": "loyal",
+              "options": [
+                "to put back to the way before",
+                "weighing too much",
+                "not able to hear",
+                "to always help"
+              ],
+              "correctAnswer": "D",
+              "explanation": "loyal có nghĩa là trung thành."
             },
             {
               "id": "13",
-              "content": "",
-              "options": [],
-              "explanation": "trim có nghĩa là cắt tỉa, tương đồng với get a little hair cut off.",
-              "correctAnswer": "TRIM"
+              "content": "horizon",
+              "options": [
+                "very smart",
+                "to want to be successful",
+                "where the sky and earth meet",
+                "hard working"
+              ],
+              "correctAnswer": "C",
+              "explanation": "horizon là đường chân trời."
             },
             {
               "id": "14",
-              "content": "",
-              "options": [],
-              "explanation": "fabric có nghĩa là vải, tương đồng với cloth.",
-              "correctAnswer": "FABRIC"
+              "content": "restore",
+              "options": [
+                "to change to the way it used to be",
+                "to leave behind",
+                "to agree to do the job",
+                "unable to hear"
+              ],
+              "correctAnswer": "A",
+              "explanation": "restore có nghĩa là khôi phục lại như cũ."
             },
             {
               "id": "15",
-              "content": "",
-              "options": [],
-              "explanation": "upwards có nghĩa là hướng lên, tương đồng với high into the air.",
-              "correctAnswer": "UPWARDS"
-            },
-            {
-              "id": "16",
-              "content": "",
-              "options": [],
-              "explanation": "shed là nhà kho nhỏ, tương đồng với small building with tools.",
-              "correctAnswer": "SHED"
-            },
-            {
-              "id": "17",
-              "content": "",
-              "options": [],
-              "explanation": "highlands là vùng cao/miền núi, tương đồng với mountainous area.",
-              "correctAnswer": "HIGHLANDS"
-            },
-            {
-              "id": "18",
-              "content": "",
-              "options": [],
-              "explanation": "mill là xưởng xay xát, tương đồng với place where they made flour.",
-              "correctAnswer": "MILL"
-            },
-            {
-              "id": "19",
-              "content": "",
-              "options": [],
-              "explanation": "sew là khâu vá, tương đồng với put cloth together.",
-              "correctAnswer": "SEW"
-            },
-            {
-              "id": "20",
-              "content": "",
-              "options": [],
-              "explanation": "polished là đánh bóng, tương đồng với made to look shiny.",
-              "correctAnswer": "POLISHED"
+              "content": "senses",
+              "options": [
+                "having similar ideas",
+                "to press back and forth",
+                "how one sees, hears, and smells",
+                "a far-away journey"
+              ],
+              "correctAnswer": "C",
+              "explanation": "senses là các giác quan (thị giác, thính giác, khứu giác...)."
             }
-          ],
-          "questionType": "Điền từ"
+          ]
         },
         {
           "id": "sec_wordlist_2",
-          "title": "Part C: Choose the answer that best fits the question",
+          "title": "Exercise 2: Choose the answer that best fits the question.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "21",
-              "content": "What kind of material does a carpenter work with?",
+              "id": "16",
+              "content": "Where could you put a boat?",
               "options": [
-                "Plastic",
-                "Iron",
-                "Brick",
-                "Wood"
+                "On the horizon",
+                "In a refuge",
+                "In the bay",
+                "In an expedition"
               ],
-              "explanation": "Thợ mộc (carpenter) làm việc với gỗ (Wood).",
-              "correctAnswer": "D"
+              "correctAnswer": "C",
+              "explanation": "Bạn có thể đậu thuyền ở trong vịnh (In the bay)."
+            },
+            {
+              "id": "17",
+              "content": "What would happen if you ate too much?",
+              "options": [
+                "You might become overweight.",
+                "You would be brilliant.",
+                "You could become a veterinarian.",
+                "You might be loyal."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nếu ăn quá nhiều, bạn có thể bị thừa cân (overweight)."
+            },
+            {
+              "id": "18",
+              "content": "What helps you smell things?",
+              "options": [
+                "The mayor",
+                "Your complaints",
+                "Being deaf",
+                "Your senses"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Các giác quan (Your senses) giúp bạn ngửi thấy mọi thứ."
+            },
+            {
+              "id": "19",
+              "content": "Which of the following can you feel about a holiday?",
+              "options": [
+                "Mutual",
+                "Ambitious",
+                "Enthusiastic",
+                "Abandon"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Bạn có thể cảm thấy hào hứng (Enthusiastic) về một kỳ nghỉ."
+            },
+            {
+              "id": "20",
+              "content": "What do you do to improve an old house?",
+              "options": [
+                "Restore it",
+                "Bark at it",
+                "Rub it",
+                "Point your chin at it"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Để cải tạo một ngôi nhà cũ, bạn trùng tu/khôi phục nó (Restore it)."
+            },
+            {
+              "id": "21",
+              "content": "What does it mean to be deaf?",
+              "options": [
+                "You can’t smell.",
+                "You are dead.",
+                "You can’t hear.",
+                "You can’t feel."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Deaf (điếc) có nghĩa là bạn không thể nghe thấy (You can't hear)."
             },
             {
               "id": "22",
-              "content": "Which of these things could drip?",
+              "content": "Which of these people goes on expeditions as part of their job?",
               "options": [
-                "A dog",
-                "Water",
-                "A ball",
-                "Dirt"
+                "An airplane pilot",
+                "A school teacher",
+                "A police officer",
+                "An engineer"
               ],
-              "explanation": "Nước (Water) có thể nhỏ giọt (drip).",
-              "correctAnswer": "B"
+              "correctAnswer": "A",
+              "explanation": "Phi công (An airplane pilot) thực hiện những chuyến đi xa như một phần công việc."
             },
             {
               "id": "23",
-              "content": "What could you make with a needle?",
+              "content": "Which of the following words is most likely to be related to the horizon?",
               "options": [
-                "A shirt",
-                "A car",
-                "A computer",
-                "A chair"
+                "Computer",
+                "School",
+                "Newspaper",
+                "Sun"
               ],
-              "explanation": "Bạn có thể làm một chiếc áo sơ mi (A shirt) bằng kim (needle).",
-              "correctAnswer": "A"
+              "correctAnswer": "D",
+              "explanation": "Mặt trời (Sun) mọc và lặn ở đường chân trời (horizon)."
             },
             {
               "id": "24",
-              "content": "What does it mean if your water pipes burst?",
+              "content": "Which of the following means to be rich and successful?",
               "options": [
-                "They are new.",
-                "They've been cleaned.",
-                "They are frozen.",
-                "They've exploded."
+                "Mayor",
+                "Ambitious",
+                "Overweight",
+                "Loyal"
               ],
-              "explanation": "Burst nghĩa là vỡ tung, phát nổ (exploded).",
-              "correctAnswer": "D"
+              "correctAnswer": "B",
+              "explanation": "Ambitious (tham vọng) có nghĩa là mong muốn giàu có và thành công."
             },
             {
               "id": "25",
-              "content": "Which is the same color as ivory?",
+              "content": "Which of the following means having the same feelings as someone else?",
               "options": [
-                "A needle",
-                "A tooth",
-                "Coal",
-                "Wood"
+                "Ambitious",
+                "Enthusiastic",
+                "Overweight",
+                "Mutual"
               ],
-              "explanation": "Ngà voi (ivory) có màu trắng đục, giống như màu của răng (A tooth).",
-              "correctAnswer": "B"
+              "correctAnswer": "D",
+              "explanation": "Mutual có nghĩa là có cùng cảm xúc từ cả hai phía."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Anniversary Gift</h1>        <p style=\"margin-bottom: 1rem;\">Joe was a <strong>carpenter</strong>. He built houses in the <strong>highlands</strong>. Joe's wife Stella used a <strong>needle</strong> and <strong>thread</strong> to <strong>sew</strong> <strong>elegant</strong> clothing. She only used beautiful <strong>fabric</strong> to make clothes.</p>    <p style=\"margin-bottom: 1rem;\">Since they didn't have a lot of money, they lived in an old <strong>shed</strong>. Water dripped in when it rained. They had broken chairs instead of a <strong>couch</strong>. But they had <strong>coal</strong> for heat, and flour from the <strong>mill</strong> for bread. Together, they trimmed the bushes to make their house look nice. Joe and Stella were poor, but not <strong>ashamed</strong>. They were happy.</p>    <p style=\"margin-bottom: 1rem;\">Sometimes in the evening, they walked downtown. They looked in store windows and dreamed. Stella wanted a hairbrush with an <strong>ivory</strong> handle. She pulled her hair <strong>upwards</strong> every day because she didn't have a brush to make it nice. Joe wanted to fix his grandfather's watch.</p>    <p style=\"margin-bottom: 1rem;\">For their <strong>anniversary</strong>, Stella wanted to get Joe what he wanted. But then she did the <strong>arithmetic</strong>. It would take at least six months to save enough money. Then she had an idea. She cut off all of her hair and sold it.</p>    <p style=\"margin-bottom: 1rem;\">Meanwhile, Joe knew that he could never fix his watch. So he <strong>polished</strong> it and sold it. He made enough to buy the brush.</p>    <p style=\"margin-bottom: 1rem;\">On their <strong>anniversary</strong>, the door <strong>burst</strong> open. Joe was excited to give Stella his gift. But first, Stella gave him the money to fix the watch. When he saw his wife without any hair, he smiled. \"I sold my watch to buy you something,\" Joe said. He gave her the brush, and she laughed. They were both willing to give up something very special to make each other happy.</p></div>",
       "imageUrl": "/unit7_v3_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Patsy Ann</h1><p style=\"margin-bottom: 1rem;\">A long time ago in Alaska, a dog named Patsy Ann watched the <strong>horizon</strong>. Every day, she waited by the <strong>bay</strong> for ships returning from an <strong>expedition</strong>.</p><p style=\"margin-bottom: 1rem;\">Patsy Ann was a <strong>brilliant</strong> dog, and she was very unique. She was <strong>deaf</strong>. She couldn’t <strong>bark</strong>, either. But she used all of her other <strong>senses</strong> to know when a ship was near.</p><p style=\"margin-bottom: 1rem;\">Patsy Ann lived on the streets. Her owners did not want her because she could not hear. So they <strong>abandoned</strong> her. She found <strong>refuge</strong> in a fancy hotel. Guests <strong>rubbed</strong> her back and scratched her <strong>chin</strong>. Many people gave her food. She became quite <strong>overweight</strong>.</p><p style=\"margin-bottom: 1rem;\">She became very famous. Visitors to Alaska were <strong>enthusiastic</strong> about meeting her. They brought presents for her. They liked seeing her and the feeling was <strong>mutual</strong>. The <strong>mayor</strong> said Patsy Ann should be called the town’s greeter.</p><p style=\"margin-bottom: 1rem;\">The people in town loved Patsy Ann, too, even though she lived on the streets. They were willing to fight to keep her. A new law made all dogs wear a collar and get shots. The <strong>mayor</strong> received many <strong>complaints</strong>. People wanted Patsy Ann to be able to stay.</p><p style=\"margin-bottom: 1rem;\">One <strong>ambitious</strong> sailor got people to help. Together, they paid for Patsy Ann to go to the <strong>veterinarian</strong>. She got her shots and collar. She could stay.</p><p style=\"margin-bottom: 1rem;\">When Patsy Ann died, everyone missed the town’s <strong>loyal</strong> greeter. So the <strong>mayor</strong> hired someone to make a statue of Patsy Ann. He <strong>restored</strong> the town’s greeter. Now, she sits at the dock forever, waiting for ships to come home.</p></div>",
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<img src=\"/unit7_v3_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chú Chó Patsy Ann</h1>\n<p style=\"margin-bottom: 1rem;\">Cách đây rất lâu ở Alaska, có một chú chó tên là Patsy Ann thường ngắm nhìn <strong>đường chân trời</strong>. Mỗi ngày, nó đều đợi bên <strong>vịnh</strong> để đón những con tàu trở về sau một <strong>chuyến thám hiểm</strong>.</p>\n<p style=\"margin-bottom: 1rem;\">Patsy Ann là một chú chó <strong>thông minh</strong> và rất đặc biệt. Nó bị <strong>điếc</strong>. Nó cũng không thể <strong>sủa</strong>. Nhưng nó đã sử dụng tất cả các <strong>giác quan</strong> khác của mình để nhận biết khi nào có một con tàu đang đến gần.</p>\n<p style=\"margin-bottom: 1rem;\">Patsy Ann sống lang thang trên đường phố. Chủ của nó không muốn nuôi nó vì nó không nghe được. Vì vậy họ đã <strong>bỏ rơi</strong> nó. Nó tìm được <strong>nơi trú ẩn</strong> tại một khách sạn sang trọng. Khách nghỉ tại đây thường <strong>xoa</strong> lưng và gãi <strong>cằm</strong> cho nó. Nhiều người cho nó thức ăn, khiến nó trở nên khá <strong>thừa cân</strong>.</p>\n<p style=\"margin-bottom: 1rem;\">Nó trở nên rất nổi tiếng. Du khách đến Alaska đều <strong>hào hứng</strong> được gặp nó. Họ mang quà đến cho nó. Họ thích nhìn thấy nó và tình cảm đó là <strong>từ cả hai phía</strong>. Ngài <strong>thị trưởng</strong> tuyên bố Patsy Ann nên được gọi là người chào đón của thị trấn.</p>\n<p style=\"margin-bottom: 1rem;\">Người dân trong thị trấn cũng rất yêu quý Patsy Ann, dù nó sống trên đường phố. Họ sẵn sàng đấu tranh để giữ nó lại. Một đạo luật mới buộc tất cả chó phải đeo vòng cổ và tiêm phòng. Ngài <strong>thị trưởng</strong> đã nhận được rất nhiều <strong>lời phàn nàn</strong>. Mọi người đều muốn Patsy Ann được ở lại.</p>\n<p style=\"margin-bottom: 1rem;\">Một thủy thủ <strong>đầy nhiệt huyết</strong> đã kêu gọi mọi người giúp đỡ. Cùng nhau, họ quyên tiền đưa Patsy Ann đến gặp <strong>bác sĩ thú y</strong>. Nó đã được tiêm phòng và đeo vòng cổ. Nó đã có thể ở lại.</p>\n<p style=\"margin-bottom: 1rem;\">Khi Patsy Ann qua đời, mọi người đều nhớ người chào đón <strong>trung thành</strong> của thị trấn. Vì vậy, ngài <strong>thị trưởng</strong> đã thuê người tạc một bức tượng Patsy Ann. Ông đã <strong>khôi phục</strong> lại người chào đón của thị trấn. Giờ đây, nó ngồi ở bến cảng mãi mãi, chờ đợi những con tàu trở về nhà.</p></div>",
       "sections": [
         {
+          "id": "sec_reading_0",
           "title": "Part A: Mark each statement True or False.",
-          "content": "",
+          "content": "<p>True / False</p>",
           "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Stella and Joe were ashamed of themselves.",
+              "content": "Patsy Ann liked to watch the bay.",
               "options": [
                 "True",
                 "False"
               ],
-              "explanation": "Đáp án: False. Để trả lời câu này, em hãy nhìn vào đoạn 2 của bài đọc, câu cuối cùng có viết: 'Joe and Stella were poor, but not ashamed.' Nghĩa là Joe và Stella rất nghèo, nhưng họ không hề cảm thấy xấu hổ về điều đó. Vì vậy, nhận định trong câu hỏi là sai nhé.",
-              "correctAnswer": "False"
+              "correctAnswer": "True",
+              "explanation": "Trong bài viết: 'Every day, she waited by the bay for ships returning from an expedition.' -> Đúng (True)."
             },
             {
               "id": "27",
-              "content": "Joe was a carpenter.",
+              "content": "Patsy Ann was abandoned by an expedition to Alaska.",
               "options": [
                 "True",
                 "False"
               ],
-              "explanation": "Đáp án: True. Ngay ở câu đầu tiên của đoạn 1, tác giả đã viết rất rõ ràng: 'Joe was a carpenter.' Nghĩa là Joe là một thợ mộc. Nhận định này hoàn toàn chính xác.",
-              "correctAnswer": "True"
+              "correctAnswer": "False",
+              "explanation": "Chủ của Patsy Ann đã bỏ rơi nó vì nó không nghe được ('Her owners did not want her because she could not hear. So they abandoned her.') -> Sai (False)."
             },
             {
               "id": "28",
-              "content": "Stella and Joe were too poor to heat their shed with coal.",
+              "content": "Patsy Ann was a loyal greeter in the town.",
               "options": [
                 "True",
                 "False"
               ],
-              "explanation": "Đáp án: False. Câu hỏi nói rằng họ quá nghèo nên không thể sưởi ấm nhà kho bằng than. Tuy nhiên, ở đoạn 2 có câu: 'But they had coal for heat' (Nhưng họ có than để sưởi ấm). Do đó, thông tin trong câu hỏi là sai.",
-              "correctAnswer": "False"
+              "correctAnswer": "True",
+              "explanation": "Trong bài viết: 'When Patsy Ann died, everyone missed the town’s loyal greeter.' -> Đúng (True)."
             },
             {
               "id": "29",
-              "content": "Joe asked Stella to trim the bushes.",
+              "content": "The dog liked people and the feeling was mutual.",
               "options": [
                 "True",
                 "False"
               ],
-              "explanation": "Đáp án: False. Câu hỏi cho rằng Joe yêu cầu Stella cắt tỉa các bụi cây. Nhưng theo thông tin trong đoạn 2: 'Together, they trimmed the bushes to make their house look nice.' Nghĩa là cả hai người đã cùng nhau cắt tỉa bụi cây, chứ không phải Joe yêu cầu Stella làm một mình.",
-              "correctAnswer": "False"
+              "correctAnswer": "True",
+              "explanation": "Trong bài viết: 'They liked seeing her and the feeling was mutual.' -> Đúng (True)."
             },
             {
               "id": "30",
-              "content": "Stella used a needle and thread to sew elegant things with beautiful fabric.",
+              "content": "The law said that all dogs had to have a home to stay in town.",
               "options": [
                 "True",
                 "False"
               ],
-              "explanation": "Đáp án: True. Đoạn 1 có ghi rõ: 'Stella used a needle and thread to sew elegant clothing. She only used beautiful fabric.' Nghĩa là Stella dùng kim chỉ để may những bộ quần áo thanh lịch và cô ấy chỉ dùng những loại vải đẹp. Câu này hoàn toàn đúng.",
-              "correctAnswer": "True"
+              "correctAnswer": "False",
+              "explanation": "Đạo luật mới yêu cầu mọi chú chó phải đeo vòng cổ và tiêm phòng ('A new law made all dogs wear a collar and get shots.') -> Sai (False)."
             },
             {
               "id": "31",
-              "content": "Water dripped into their house.",
+              "content": "Patsy Ann barked at all of the ships coming in.",
               "options": [
                 "True",
                 "False"
               ],
-              "explanation": "Đáp án: True. Ở đoạn 2, tác giả có nhắc đến ngôi nhà của họ: 'Water dripped in when it rained.' Tức là nước mưa nhỏ giọt vào trong nhà mỗi khi trời mưa. Do vậy nhận định này là đúng.",
-              "correctAnswer": "True"
+              "correctAnswer": "False",
+              "explanation": "Trong bài viết: 'She couldn’t bark, either.' -> Sai (False)."
             }
           ]
         },
         {
+          "id": "sec_reading_1",
           "title": "Part B: Answer the questions.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
-              "content": "Where were the houses that Joe worked on?",
+              "content": "What could Patsy Ann NOT do?",
               "options": [
-                "Near the mill",
-                "In the shed",
-                "On an elegant street",
-                "In the highlands"
+                "Bark",
+                "Use any of her senses",
+                "Go to the veterinarian",
+                "Find refuge"
               ],
-              "explanation": "Đáp án: In the highlands. Trong đoạn 1, câu thứ hai có thông tin: 'He built houses in the highlands.' Nghĩa là Joe xây những ngôi nhà ở vùng cao.",
-              "correctAnswer": "D"
+              "correctAnswer": "A",
+              "explanation": "Đoạn 2 nói rõ: 'She was deaf. She couldn’t bark, either.'"
             },
             {
               "id": "33",
-              "content": "What did Joe do with his watch?",
+              "content": "What was the sailor who helped Patsy Ann?",
               "options": [
-                "Hit it with his hammer",
-                "Lifted it upward to see it",
-                "Left it in the shed",
-                "Polished it and sold it"
+                "Brilliant",
+                "Ambitious",
+                "Overweight",
+                "Enthusiastic"
               ],
-              "explanation": "Đáp án: Polished it and sold it. Câu hỏi hỏi Joe đã làm gì với chiếc đồng hồ của anh ấy. Trong đoạn 5, tác giả viết: 'So he polished it and sold it.' Joe đã đánh bóng chiếc đồng hồ và bán nó đi để lấy tiền mua quà cho Stella.",
-              "correctAnswer": "D"
+              "correctAnswer": "B",
+              "explanation": "Đoạn 6 nói: 'One ambitious sailor got people to help.'"
             },
             {
               "id": "34",
-              "content": "What did Stella make?",
+              "content": "Why did Patsy Ann go to the hotel?",
               "options": [
-                "Elegant clothing",
-                "Ivory hairbrushes",
-                "Couches",
-                "Anything for herself"
+                "To get a new collar",
+                "To wait for returning ships",
+                "To have her hearing restored",
+                "To get food"
               ],
-              "explanation": "Đáp án: Elegant clothing. Ở đoạn 1 có ghi: 'Stella used a needle and thread to sew elegant clothing.' Điều này cho biết Stella chuyên may những bộ trang phục thanh lịch.",
-              "correctAnswer": "A"
+              "correctAnswer": "D",
+              "explanation": "Tại khách sạn, khách cho nó rất nhiều đồ ăn và nơi trú ẩn ('She found refuge in a fancy hotel... Many people gave her food.')."
             },
             {
               "id": "35",
-              "content": "What did Stella do for Joe on their anniversary?",
+              "content": "Why was the dog abandoned?",
               "options": [
-                "Sold her hair",
-                "Combed her hair",
-                "Made him a shirt",
-                "Bought him a gold watch"
+                "Because she was overweight",
+                "Because the veterinarian didn’t like her",
+                "Because she was deaf",
+                "Because she was mean to them"
               ],
-              "explanation": "Đáp án: Sold her hair. Câu hỏi muốn biết Stella đã làm gì cho Joe vào ngày kỷ niệm. Cuối đoạn 4 có viết: 'She cut off all of her hair and sold it.' Stella đã cắt mái tóc của mình và bán đi để có tiền mua quà cho Joe.",
-              "correctAnswer": "A"
+              "correctAnswer": "C",
+              "explanation": "Đoạn 3: 'Her owners did not want her because she could not hear. So they abandoned her.'"
             }
           ]
         }

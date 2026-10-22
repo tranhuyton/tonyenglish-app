@@ -1,10 +1,4 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 9: Volume 6",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
@@ -443,12 +437,12 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dangerous Bites</h1>        <p style=\"margin-bottom: 1rem;\">There are many animals with dangerous bites in the world, but which one is the worst? Some would say that the <b>elusive</b> short-tailed mamushi has the worst bite. The snake only goes into homes to chase <b>pests</b> such as mice. Otherwise, it stays in the fields, where it's dangerous to people who <b>forage</b> for food there. If someone <b>stuns</b> it by accidentally stepping on it, it bites to protect itself. At first, the effects of the bite may seem <b>negligible</b> because it doesn't cause a lot of bleeding. However, after a few moments, the venom <b>induces</b> <b>paralysis</b> in the area where the individual was bitten. Furthermore, the venom can also <b>impede</b> <b>respiration</b>. If the person doesn't go to the doctor, they are <b>susceptible</b> to kidney <b>deterioration</b>.</p>    <p style=\"margin-bottom: 1rem;\">Others would argue that tigers have the worst bite. Mother tigers are <b>inseparable</b> from their babies and seem to be the gentlest creatures when they are around their young. However, if the babies are threatened, the mother tiger's <b>savage</b> nature <b>prevails</b>. With strong jaws and the ability to move quickly, the tiger can kill someone with one bite. That's because it always tries to bite an important <b>artery</b> when it attacks. If the <b>artery</b> is <b>ruptured</b>, the victim will bleed to death.</p>    <p style=\"margin-bottom: 1rem;\">In the <b>mainstream</b>, animal bites are seen as the most dangerous. But some scientists think this idea is <b>invalid</b>. In fact, the most dangerous bite might be the human bite. When scientists <b>magnified</b> the contents in human saliva, they found about three hundred different <b>microbes</b> in it. A human bite can be dangerous if the bacteria enters the body through a cut, which can make people very sick. Furthermore, most people don't realize how dangerous they are and don't visit the doctor right away.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dangerous Bites</h1>        <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">There are many animals with dangerous bites in the world, but which one is the worst? Some would say that the <b>elusive</b> short-tailed mamushi has the worst bite. The snake only goes into homes to chase <b>pests</b> such as mice. Otherwise, it stays in the fields, where it's dangerous to people who <b>forage</b> for food there. If someone <b>stuns</b> it by accidentally stepping on it, it bites to protect itself. At first, the effects of the bite may seem <b>negligible</b> because it doesn't cause a lot of bleeding. However, after a few moments, the venom <b>induces</b> <b>paralysis</b> in the area where the individual was bitten. Furthermore, the venom can also <b>impede</b> <b>respiration</b>. If the person doesn't go to the doctor, they are <b>susceptible</b> to kidney <b>deterioration</b>.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">Others would argue that tigers have the worst bite. Mother tigers are <b>inseparable</b> from their babies and seem to be the gentlest creatures when they are around their young. However, if the babies are threatened, the mother tiger's <b>savage</b> nature <b>prevails</b>. With strong jaws and the ability to move quickly, the tiger can kill someone with one bite. That's because it always tries to bite an important <b>artery</b> when it attacks. If the <b>artery</b> is <b>ruptured</b>, the victim will bleed to death.</p>    <p class=\"mb-4\" style=\"margin-bottom: 1rem;\">In the <b>mainstream</b>, animal bites are seen as the most dangerous. But some scientists think this idea is <b>invalid</b>. In fact, the most dangerous bite might be the human bite. When scientists <b>magnified</b> the contents in human saliva, they found about three hundred different <b>microbes</b> in it. A human bite can be dangerous if the bacteria enters the body through a cut, which can make people very sick. Furthermore, most people don't realize how dangerous they are and don't visit the doctor right away.</p></div>",
       "imageUrl": "/unit9_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement True or False.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
           "questions": [
             {
@@ -513,37 +507,37 @@
               "id": "41",
               "content": "What group of people is at risk for mamushi bites?",
               "options": [
-                "People who forage in fields for food",
                 "People who work in factories",
+                "People who forage in fields for food",
                 "People who live in houses",
                 "People who swim in rivers"
               ],
               "explanation": "Đáp án đúng là A. Ở đoạn đầu, bài viết cho biết nhóm người có nguy cơ cao bị rắn cắn là những người tìm kiếm thức ăn trên cánh đồng: \"...where it's dangerous to people who forage for food there\" (nơi nó nguy hiểm đối với những người tìm kiếm thức ăn ở đó).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "42",
               "content": "What are the effects of a mamushi bite?",
               "options": [
-                "It can impede respiration and induce paralysis",
                 "It causes minor bleeding",
                 "It has no long-term effects",
+                "It can impede respiration and induce paralysis",
                 "It makes people sleepy"
               ],
               "explanation": "Đáp án đúng là A. Theo đoạn một, nọc độc của rắn mamushi có thể gây tê liệt và cản trở hô hấp: \"...the venom induces paralysis... Furthermore, the venom can also impede respiration.\" (...nọc độc gây tê liệt... Hơn nữa, nọc độc cũng có thể làm cản trở hô hấp).",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             },
             {
               "id": "43",
               "content": "When does a tiger's savage nature prevail?",
               "options": [
-                "If her babies are threatened",
                 "When it is hungry",
                 "During the night",
-                "When it rains"
+                "When it rains",
+                "If her babies are threatened"
               ],
               "explanation": "Đáp án đúng là A. Ở đoạn hai có nêu rõ: \"However, if the babies are threatened, the mother tiger's savage nature prevails\" (Tuy nhiên, nếu hổ con bị đe dọa, bản chất hung dữ của hổ mẹ sẽ trỗi dậy).",
-              "correctAnswer": "A"
+              "correctAnswer": "D"
             },
             {
               "id": "44",
@@ -561,18 +555,26 @@
               "id": "45",
               "content": "Why do human bites often become infected?",
               "options": [
-                "People don't realize how dangerous they are",
                 "They are naturally dirty",
+                "People don't realize how dangerous they are",
                 "Human teeth are sharp",
                 "The wounds are very large"
               ],
               "explanation": "Đáp án đúng là A. Câu cuối của bài cho biết mọi người thường không nhận ra vết cắn của người lại có thể nguy hiểm như thế nên không đi khám ngay: \"Furthermore, most people don't realize how dangerous they are and don't visit the doctor right away.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "translation": "<div style=\"font-family: Arial, sans-serif; font-size: 16px; color: #1e293b; line-height: 1.9; margin: -24px; padding: 32px 24px; background-color: #f8fafc; border-radius: 12px; white-space: pre-wrap; text-align: justify;\">\n<div style=\"font-family: Arial, sans-serif; \"><img src=\"/unit9_vol6_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 24px; display: block;\" />\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Những Vết Cắn Nguy Hiểm</h1>\n\n<p style=\"margin-bottom: 1rem;\">Có rất nhiều động vật có vết cắn nguy hiểm trên thế giới, nhưng loài nào là tồi tệ nhất? Một số người có thể nói rằng loài rắn mamushi đuôi ngắn <b>hay lảng tránh</b> có vết cắn nguy hiểm nhất. Con rắn này chỉ đi vào các ngôi nhà để đuổi bắt <b>các loài gây hại</b> như chuột. Nếu không, nó sẽ ở lại các cánh đồng, nơi nó gây nguy hiểm cho những người tìm kiếm thức ăn ở đó. Nếu ai đó <b>làm choáng váng</b> nó do vô tình giẫm lên, nó sẽ cắn để tự vệ. Ban đầu, hậu quả của vết cắn có vẻ <b>không đáng kể</b> vì nó không gây chảy máu nhiều. Tuy nhiên, sau vài khoảnh khắc, nọc độc <b>gây ra</b> sự <b>tê liệt</b> ở vùng mà cá nhân đó bị cắn. Hơn nữa, nọc độc còn có thể <b>cản trở</b> <b>quá trình hô hấp</b>. Nếu người đó không đến bác sĩ, họ rất <b>dễ bị</b> <b>sự suy giảm</b> chức năng thận.</p>\n\n<p style=\"margin-bottom: 1rem;\">Những người khác có thể cho rằng loài hổ có vết cắn tồi tệ nhất. Những con hổ mẹ <b>không thể tách rời</b> với con của chúng và dường như là những sinh vật dịu dàng nhất khi chúng ở gần các con của mình. Tuy nhiên, nếu hổ con bị đe dọa, bản chất <b>hoang dã</b> của hổ mẹ sẽ <b>chiếm ưu thế</b>. Với hàm răng chắc khỏe và khả năng di chuyển nhanh chóng, hổ có thể giết chết ai đó chỉ bằng một vết cắn. Đó là vì nó luôn cố gắng cắn vào một <b>động mạch</b> quan trọng khi tấn công. Nếu <b>động mạch</b> bị <b>vỡ</b>, nạn nhân sẽ mất máu đến chết.</p>\n\n<p style=\"margin-bottom: 1rem;\">Trong <b>quan điểm chính thống</b>, vết cắn của động vật được xem là nguy hiểm nhất. Nhưng một số nhà khoa học cho rằng ý tưởng này <b>không có giá trị</b>. Trên thực tế, vết cắn nguy hiểm nhất có thể là vết cắn của con người. Khi các nhà khoa học <b>phóng to</b> những thứ có trong nước bọt của con người, họ đã tìm thấy khoảng ba trăm <b>vi khuẩn</b> khác nhau trong đó. Vết cắn của con người có thể gây nguy hiểm nếu vi khuẩn xâm nhập vào cơ thể qua một vết cắt, điều đó có thể làm người ta ốm rất nặng. Hơn nữa, hầu hết mọi người không nhận ra chúng nguy hiểm đến mức nào và không đi khám bác sĩ ngay lập tức.</p></div>\n</div>"
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 9: Volume 6",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
 }
