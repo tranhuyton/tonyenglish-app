@@ -315,10 +315,10 @@ export const Layout: React.FC<{
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
       {/* 1. TOP UTILITY BAR */}
       <div className="bg-[#0f172a] text-slate-300 border-b border-slate-800 text-[13px] sm:text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-3">
-          {/* Left info */}
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="hidden md:inline-flex items-center gap-1.5 text-slate-200 font-semibold">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2 flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+          {/* Left info (Desktop / Tablet) */}
+          <div className="hidden md:flex items-center gap-4 flex-wrap">
+            <span className="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
               <span className="text-[#2ab4e8]">📞</span> {phoneText}
             </span>
             <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
@@ -330,13 +330,13 @@ export const Layout: React.FC<{
           </div>
 
           {/* Right tools: Search/Dictionary + Course selector + Language */}
-          <div className="flex items-center gap-2.5 ml-auto">
+          <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-2.5 w-full md:w-auto ml-auto">
             {/* Smart Dictionary & Search Bar */}
-            <div className="relative flex items-center bg-slate-800/90 border border-slate-700 rounded-lg focus-within:border-[#2ab4e8] transition-colors">
+            <div className="relative flex-1 md:flex-initial flex items-center bg-slate-800/90 border border-slate-700 rounded-lg focus-within:border-[#2ab4e8] transition-colors min-w-0">
               <button
                 type="button"
                 onClick={() => setSearchDropdownOpen(!searchDropdownOpen)}
-                className="px-2.5 py-1.5 text-xs font-bold text-[#2ab4e8] border-r border-slate-700 hover:bg-slate-700/60 rounded-l-lg flex items-center gap-1 whitespace-nowrap"
+                className="px-2 sm:px-2.5 py-1.5 text-xs font-bold text-[#2ab4e8] border-r border-slate-700 hover:bg-slate-700/60 rounded-l-lg flex items-center gap-1 whitespace-nowrap shrink-0"
                 title="Chọn chế độ tra cứu"
               >
                 {searchMode === 'dic' ? '📖 Từ điển' : searchMode === 'web' ? '🔍 Tìm bài' : '🌐 Dịch'}
@@ -356,12 +356,12 @@ export const Layout: React.FC<{
                     ? t('TonyEnglish.vn search')
                     : t('Google translate')
                 }
-                className="bg-transparent text-white placeholder-slate-400 text-[13px] px-3 py-1.5 w-36 sm:w-48 focus:outline-none"
+                className="bg-transparent text-white placeholder-slate-400 text-[13px] px-2.5 sm:px-3 py-1.5 flex-1 md:w-48 min-w-0 focus:outline-none"
               />
               <button
                 type="button"
                 onClick={() => handleSearchSubmit()}
-                className="px-2.5 py-1.5 text-slate-300 hover:text-white hover:bg-[#0a5482] rounded-r-lg transition-colors"
+                className="px-2 sm:px-2.5 py-1.5 text-slate-300 hover:text-white hover:bg-[#0a5482] rounded-r-lg transition-colors shrink-0"
                 title="Tra cứu"
               >
                 🔍
@@ -466,20 +466,20 @@ export const Layout: React.FC<{
       </div>
 
       {/* 2. MAIN STICKY NAVBAR */}
-      <nav className="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <nav className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 h-15 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 hover:opacity-90 transition-opacity shrink-0">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity shrink-0">
             <img
               src="/logo-shield.png"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
               }}
               alt="TonyEnglish"
-              className="h-9 sm:h-11 w-auto object-contain"
+              className="h-8 sm:h-11 w-auto object-contain"
             />
             <div className="flex flex-col items-start leading-none">
-              <div className="font-black text-[20px] sm:text-[25px] tracking-tight">
+              <div className="font-black text-[18px] sm:text-[25px] tracking-tight">
                 <span className="text-[#2ab4e8]">TONY</span>
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
@@ -575,41 +575,44 @@ export const Layout: React.FC<{
           </div>
 
           {/* Right Action Buttons (Unified LMS) */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             {lmsRole ? (
               <>
                 {lmsRole === 'admin' && (
                   <button
                     type="button"
                     onClick={() => onNavigateLms?.('student-resume')}
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs sm:text-[14px] font-black uppercase tracking-wider px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[14px] font-black uppercase tracking-wider px-2.5 py-1.5 sm:px-4 sm:py-2.5 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap"
                   >
-                    <span className="md:hidden">
-                      🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
-                    </span>
-                    <span className="hidden md:inline">
-                      🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
-                    </span>
+                    🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
                   </button>
                 )}
                 <button
                   type="button"
                   onClick={() => (lmsRole === 'admin' ? onNavigateLms?.('admin') : onNavigateLms?.('student-resume'))}
-                  className="bg-gradient-to-r from-[#2ab4e8] to-[#0a5482] hover:opacity-95 text-white text-[13px] sm:text-[15px] font-black px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl transition shadow-md shadow-sky-500/20 active:scale-95 whitespace-nowrap"
+                  className="bg-gradient-to-r from-[#2ab4e8] to-[#0a5482] hover:opacity-95 text-white text-[11px] sm:text-[15px] font-black px-2.5 py-1.5 sm:px-5 sm:py-2.5 rounded-xl transition shadow-md shadow-sky-500/20 active:scale-95 whitespace-nowrap"
                 >
-                  {lmsRole === 'admin'
-                    ? `⚙️ ${lang === 'vi' ? 'Quản Trị' : 'Admin Setting'} ➜`
-                    : `🎓 ${lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'} ➜`}
+                  {lmsRole === 'admin' ? (
+                    <>
+                      ⚙️ {lang === 'vi' ? 'Quản Trị' : 'Admin Setting'}
+                      <span className="hidden sm:inline"> ➜</span>
+                    </>
+                  ) : (
+                    <>
+                      🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
+                      <span className="hidden sm:inline"> ➜</span>
+                    </>
+                  )}
                 </button>
               </>
             ) : user ? (
               <div className="flex items-center gap-2">
                 <Link
                   to="/user/profile"
-                  className="bg-slate-100 hover:bg-slate-200 text-[#0a5482] text-sm sm:text-[15px] font-bold px-3.5 py-2 rounded-xl transition flex items-center gap-2"
+                  className="bg-slate-100 hover:bg-slate-200 text-[#0a5482] text-xs sm:text-[15px] font-bold px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl transition flex items-center gap-1.5 sm:gap-2"
                 >
                   <span>👤</span>
-                  <span className="max-w-[120px] truncate">
+                  <span className="max-w-[90px] sm:max-w-[120px] truncate">
                     {user.user_fullname?.trim() ? user.user_fullname.trim().split(' ').slice(-1)[0] : user.user_name}
                   </span>
                 </Link>
@@ -621,7 +624,7 @@ export const Layout: React.FC<{
                   setForgotPasswordMode(false);
                   setLoginModalOpen(true);
                 }}
-                className="bg-[#0a5482] hover:bg-[#084266] text-white text-[13px] sm:text-[15px] font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl transition shadow-md shadow-blue-900/15 active:scale-95 whitespace-nowrap"
+                className="bg-[#0a5482] hover:bg-[#084266] text-white text-xs sm:text-[15px] font-bold px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-xl transition shadow-md shadow-blue-900/15 active:scale-95 whitespace-nowrap"
               >
                 {t('Login')}
               </button>
@@ -631,7 +634,7 @@ export const Layout: React.FC<{
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100"
+              className="lg:hidden p-1.5 sm:p-2 rounded-xl text-slate-600 hover:bg-slate-100"
               aria-label="Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -649,16 +652,35 @@ export const Layout: React.FC<{
         {mobileMenuOpen && (
           <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-3 space-y-1.5 shadow-lg">
             {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block px-4 py-2.5 rounded-xl text-base font-bold ${
-                  item.active ? 'bg-sky-50 text-[#0a5482]' : 'text-slate-700 hover:bg-slate-50'
-                }`}
-              >
-                {item.label}
-              </Link>
+              <React.Fragment key={item.to}>
+                <Link
+                  to={item.to}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block px-4 py-2.5 rounded-xl text-base font-bold ${
+                    item.active ? 'bg-sky-50 text-[#0a5482]' : 'text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+                {item.to === '/courses' && (
+                  <div className="pl-4 space-y-1">
+                    <Link
+                      to="/courses"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50"
+                    >
+                      🏢 {lang === 'vi' ? 'Các khóa học Offline' : 'Offline Courses'}
+                    </Link>
+                    <Link
+                      to="/courses/online"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block px-4 py-2 rounded-xl text-sm font-semibold text-amber-700 hover:bg-amber-50"
+                    >
+                      💻 {lang === 'vi' ? 'Các khóa học Online & Học thử' : 'Online Courses'}
+                    </Link>
+                  </div>
+                )}
+              </React.Fragment>
             ))}
             {user && (
               <>

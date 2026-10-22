@@ -21,6 +21,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
   const [allCategories, setAllCategories] = useState<any[]>([]);
   const [openParentId, setOpenParentId] = useState<number | null>(null);
+  const [mobileCateOpen, setMobileCateOpen] = useState(false);
 
   // List view state
   const [currentCategory, setCurrentCategory] = useState<any | null>(null);
@@ -221,9 +222,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
       {/* BREADCRUMB */}
-      <nav className="flex items-center gap-2 text-sm sm:text-[15px] font-semibold text-slate-500 mb-6 flex-wrap">
+      <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
         <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
           <span>🏠</span>
           <span>{t('Home')}</span>
@@ -245,20 +246,42 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
         )}
       </nav>
 
-      <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING LIBRARY MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white/80 rounded-2xl border border-slate-200/70 overflow-hidden sticky top-24">
-          <div className="bg-slate-100/80 px-4 py-3 border-b border-slate-200/70">
-            <h2 className="text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
-              <span className="opacity-80">📚</span>
-              <span>{t('Library')}</span>
+        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
+          <button
+            type="button"
+            onClick={() => setMobileCateOpen((prev) => !prev)}
+            className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
+          >
+            <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
+              <span className="opacity-80 shrink-0">📚</span>
+              <span className="shrink-0">{t('Library')}</span>
+              {currentCategory && (
+                <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
+                  • {cateDisplayName}
+                </span>
+              )}
             </h2>
-          </div>
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+              <span>
+                {mobileCateOpen
+                  ? lang === 'vi'
+                    ? 'Thu gọn'
+                    : 'Hide'
+                  : lang === 'vi'
+                  ? 'Danh mục'
+                  : 'Categories'}
+              </span>
+              <span>{mobileCateOpen ? '▲' : '▼'}</span>
+            </span>
+          </button>
 
-          <ul className="divide-y divide-slate-100 text-[14.5px] p-1.5">
+          <ul className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
             <li>
               <Link
                 to="/news"
+                onClick={() => setMobileCateOpen(false)}
                 className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
                   mode === 'list' && !slug
                     ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
@@ -283,7 +306,10 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                 <li key={parent.news_cc_id}>
                   <Link
                     to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
-                    onClick={() => setOpenParentId(parent.news_cc_id)}
+                    onClick={() => {
+                      setOpenParentId(parent.news_cc_id);
+                      if (subs.length === 0) setMobileCateOpen(false);
+                    }}
                     className={`px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between ${
                       isCurrentParent
                         ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
@@ -309,6 +335,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                           <li key={sub.news_cc_id}>
                             <Link
                               to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
+                              onClick={() => setMobileCateOpen(false)}
                               className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
                                 isActiveSub
                                   ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
@@ -329,6 +356,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             <li>
               <Link
                 to="/videos"
+                onClick={() => setMobileCateOpen(false)}
                 className="block px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 transition-colors"
               >
                 🎬 {t('Videos store')} →
@@ -339,23 +367,23 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
             {/* Section Header */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 sm:px-8 py-6 text-white flex items-center justify-between flex-wrap gap-4">
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4">
               <div>
-                <div className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
+                <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
                   TonyEnglish Learning Library
                 </div>
-                <h1 className="text-2xl sm:text-3xl font-black tracking-tight">{cateDisplayName}</h1>
+                <h1 className="text-xl sm:text-3xl font-black tracking-tight">{cateDisplayName}</h1>
               </div>
               {mode === 'list' && totalCount > 0 && (
-                <span className="bg-white/15 text-white text-sm font-bold px-4 py-1.5 rounded-full border border-white/20">
+                <span className="bg-white/15 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/20">
                   {totalCount} {lang === 'vi' ? 'bài học' : 'articles'}
                 </span>
               )}
             </div>
 
-            <div className="p-6 sm:p-8">
+            <div className="p-4 sm:p-8">
               {loading ? (
                 <div className="py-20 text-center text-slate-400 font-bold text-base">Đang tải dữ liệu...</div>
               ) : mode === 'list' ? (

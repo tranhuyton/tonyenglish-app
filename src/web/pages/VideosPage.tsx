@@ -16,6 +16,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
   const [showQuestion, setShowQuestion] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
   const [showSubtitles, setShowSubtitles] = useState(false);
+  const [mobileCateOpen, setMobileCateOpen] = useState(false);
 
   useEffect(() => {
     async function loadVideoCategories() {
@@ -128,9 +129,9 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
   }, [mode, currentVideo, mainHeading, activeCate]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
       {/* BREADCRUMB */}
-      <nav className="flex items-center gap-2 text-sm sm:text-[15px] font-semibold text-slate-500 mb-6 flex-wrap">
+      <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
         <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
           <span>🏠</span>
           <span>{t('Home')}</span>
@@ -159,20 +160,42 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
         )}
       </nav>
 
-      <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING VIDEO MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white/80 rounded-2xl border border-slate-200/70 overflow-hidden sticky top-24">
-          <div className="bg-slate-100/80 px-4 py-3 border-b border-slate-200/70">
-            <h2 className="text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
-              <span className="opacity-80">🎬</span>
-              <span>{t('Video Menu')}</span>
+        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
+          <button
+            type="button"
+            onClick={() => setMobileCateOpen((prev) => !prev)}
+            className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
+          >
+            <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
+              <span className="opacity-80 shrink-0">🎬</span>
+              <span className="shrink-0">{t('Video Menu')}</span>
+              {activeCate && (
+                <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
+                  • {mainHeading}
+                </span>
+              )}
             </h2>
-          </div>
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+              <span>
+                {mobileCateOpen
+                  ? lang === 'vi'
+                    ? 'Thu gọn'
+                    : 'Hide'
+                  : lang === 'vi'
+                  ? 'Danh mục'
+                  : 'Categories'}
+              </span>
+              <span>{mobileCateOpen ? '▲' : '▼'}</span>
+            </span>
+          </button>
 
-          <ul className="divide-y divide-slate-100 text-[14.5px] p-1.5">
+          <ul className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
             <li>
               <Link
                 to="/videos"
+                onClick={() => setMobileCateOpen(false)}
                 className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
                   !cateSlug
                     ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
@@ -190,6 +213,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                 <li key={vc.vc_id}>
                   <Link
                     to={`/videos/${(vc.vc_name_url || '').trim()}`}
+                    onClick={() => setMobileCateOpen(false)}
                     className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
                       isSelected
                         ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
@@ -206,16 +230,16 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 sm:px-8 py-6 text-white">
-              <div className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white">
+              <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
                 TonyEnglish Video Channel
               </div>
-              <h1 className="text-2xl sm:text-3xl font-black tracking-tight">{mainHeading}</h1>
+              <h1 className="text-xl sm:text-3xl font-black tracking-tight">{mainHeading}</h1>
             </div>
 
-            <div className="p-6 sm:p-8">
+            <div className="p-4 sm:p-8">
               {mode === 'cate' ? (
                 /* VIDEO CATEGORY GRID */
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

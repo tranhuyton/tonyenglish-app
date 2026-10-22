@@ -145,6 +145,7 @@ export const CoursesPage: React.FC<{ forcedMode?: 'online' | 'offline' }> = ({ f
   const [currentCourse, setCurrentCourse] = useState<any | null>(null);
   const [lectureCount, setLectureCount] = useState(0);
   const [openParentId, setOpenParentId] = useState<number | null>(null);
+  const [mobileCateOpen, setMobileCateOpen] = useState(false);
 
   // Offline Syllabus popup & Registration form state
   const [showSyllabusModal, setShowSyllabusModal] = useState(false);
@@ -441,9 +442,9 @@ export const CoursesPage: React.FC<{ forcedMode?: 'online' | 'offline' }> = ({ f
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
       {/* BREADCRUMB */}
-      <nav className="flex items-center gap-2 text-sm sm:text-[15px] font-semibold text-slate-500 mb-6 flex-wrap">
+      <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
         <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
           <span>🏠</span>
           <span>{t('Home')}</span>
@@ -458,170 +459,208 @@ export const CoursesPage: React.FC<{ forcedMode?: 'online' | 'offline' }> = ({ f
         </span>
       </nav>
 
-      <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING COURSES MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white/80 rounded-2xl border border-slate-200/70 overflow-hidden sticky top-24">
-          <div className="bg-slate-100/80 px-4 py-3 border-b border-slate-200/70">
-            <h2 className="text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
-              <span className="opacity-80">🎓</span>
-              <span>{t('Courses')}</span>
+        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
+          <button
+            type="button"
+            onClick={() => setMobileCateOpen((prev) => !prev)}
+            className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
+          >
+            <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
+              <span className="opacity-80 shrink-0">🎓</span>
+              <span className="shrink-0">{t('Courses')}</span>
+              <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
+                • {isOnlineView ? (lang === 'vi' ? 'Khóa Online' : 'Online') : courseTitle}
+              </span>
             </h2>
-          </div>
-
-          {/* GROUP 1: KHÓA HỌC OFFLINE */}
-          <div className="px-4 pt-3 pb-1.5 flex items-center gap-1.5">
-            <span className="text-xs opacity-75">🏢</span>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-              {lang === 'vi' ? 'Khóa học Offline' : 'Offline Courses'}
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+              <span>
+                {mobileCateOpen
+                  ? lang === 'vi'
+                    ? 'Thu gọn'
+                    : 'Hide'
+                  : lang === 'vi'
+                  ? 'Danh mục'
+                  : 'Categories'}
+              </span>
+              <span>{mobileCateOpen ? '▲' : '▼'}</span>
             </span>
-          </div>
+          </button>
 
-          <ul className="divide-y divide-slate-100 text-[14.5px] px-1.5 pb-1.5">
-            <li>
-              <Link
-                to="/courses"
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
-                  !isOnlineView && !currentCourse
-                    ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
-                    : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
-                }`}
-              >
-                {t('Study at TonyEnglish')}
-              </Link>
-            </li>
+          <div className={`${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
+            {/* GROUP 1: KHÓA HỌC OFFLINE */}
+            <div className="px-4 pt-3 pb-1.5 flex items-center gap-1.5">
+              <span className="text-xs opacity-75">🏢</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                {lang === 'vi' ? 'Khóa học Offline' : 'Offline Courses'}
+              </span>
+            </div>
 
-            {homeParents.map((parent) => {
-              const subs = subCategories(parent.cc_id);
-              const isOpen =
-                !isOnlineView &&
-                (openParentId === parent.cc_id ||
-                  (currentCourse &&
-                    (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id)));
-              const parentName = lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name;
-              const isCurrentParent = !isOnlineView && currentCourse && currentCourse.cc_id === parent.cc_id;
+            <ul className="divide-y divide-slate-100 text-[14.5px] px-1.5 pb-1.5">
+              <li>
+                <Link
+                  to="/courses"
+                  onClick={() => setMobileCateOpen(false)}
+                  className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                    !isOnlineView && !currentCourse
+                      ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                      : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                  }`}
+                >
+                  {t('Study at TonyEnglish')}
+                </Link>
+              </li>
 
-              return (
-                <li key={parent.cc_id}>
-                  <div className="flex items-center justify-between">
+              {homeParents.map((parent) => {
+                const subs = subCategories(parent.cc_id);
+                const isOpen =
+                  !isOnlineView &&
+                  (openParentId === parent.cc_id ||
+                    (currentCourse &&
+                      (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id)));
+                const parentName = lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name;
+                const isCurrentParent = !isOnlineView && currentCourse && currentCourse.cc_id === parent.cc_id;
+
+                return (
+                  <li key={parent.cc_id}>
+                    <div className="flex items-center justify-between">
+                      <Link
+                        to={`/courses/${(parent.cc_name_url || '').trim()}`}
+                        onClick={() => {
+                          setOpenParentId(parent.cc_id);
+                          if (subs.length === 0) setMobileCateOpen(false);
+                        }}
+                        className={`flex-1 px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between ${
+                          isCurrentParent
+                            ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                            : isOpen
+                            ? 'text-[#0a5482] font-semibold bg-slate-50/70'
+                            : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                        }`}
+                      >
+                        <span>{parentName}</span>
+                        {subs.length > 0 && (
+                          <span
+                            className={`text-xs transition-transform ${
+                              isOpen ? 'rotate-90 text-[#2ab4e8]' : 'text-slate-400'
+                            }`}
+                          >
+                            ▸
+                          </span>
+                        )}
+                      </Link>
+                    </div>
+
+                    {subs.length > 0 && isOpen && (
+                      <ul className="mt-0.5 mb-1 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
+                        {subs.map((sub) => {
+                          const subName = lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name;
+                          const isActiveSub = !isOnlineView && currentCourse && currentCourse.cc_id === sub.cc_id;
+                          return (
+                            <li key={sub.cc_id}>
+                              <Link
+                                to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                                onClick={() => setMobileCateOpen(false)}
+                                className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                                  isActiveSub
+                                    ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
+                                    : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
+                                }`}
+                              >
+                                {subName}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* GROUP 2: CÁC KHÓA HỌC ONLINE */}
+            <div className="px-4 pt-3 pb-1.5 border-t border-slate-200/70 flex items-center gap-1.5">
+              <span className="text-xs opacity-75">💻</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                {lang === 'vi' ? 'Khóa học Online & Học thử' : 'Online Courses'}
+              </span>
+            </div>
+
+            <ul className="divide-y divide-slate-100 text-[14.5px] px-1.5 pb-2">
+              <li>
+                <Link
+                  to="/courses/online"
+                  onClick={() => {
+                    setSelectedOnlineCat('all');
+                    setMobileCateOpen(false);
+                  }}
+                  className={`px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between ${
+                    isOnlineView
+                      ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                      : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                  }`}
+                >
+                  <span>{lang === 'vi' ? 'Các khóa học Online' : 'Online Courses'}</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                    Học thử
+                  </span>
+                </Link>
+
+                <ul className="mt-0.5 mb-1 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
+                  <li>
                     <Link
-                      to={`/courses/${(parent.cc_name_url || '').trim()}`}
-                      onClick={() => setOpenParentId(parent.cc_id)}
-                      className={`flex-1 px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between ${
-                        isCurrentParent
-                          ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
-                          : isOpen
-                          ? 'text-[#0a5482] font-semibold bg-slate-50/70'
-                          : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                      to="/courses/online?cat=all"
+                      onClick={() => {
+                        setSelectedOnlineCat('all');
+                        setMobileCateOpen(false);
+                      }}
+                      className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                        isOnlineView && selectedOnlineCat === 'all'
+                          ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
+                          : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
                       }`}
                     >
-                      <span>{parentName}</span>
-                      {subs.length > 0 && (
-                        <span
-                          className={`text-xs transition-transform ${
-                            isOpen ? 'rotate-90 text-[#2ab4e8]' : 'text-slate-400'
-                          }`}
-                        >
-                          ▸
-                        </span>
-                      )}
+                      Tất cả khóa học Online ({FEATURED_ONLINE_PACKAGES.length})
                     </Link>
-                  </div>
-
-                  {subs.length > 0 && isOpen && (
-                    <ul className="mt-0.5 mb-1 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
-                      {subs.map((sub) => {
-                        const subName = lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name;
-                        const isActiveSub = !isOnlineView && currentCourse && currentCourse.cc_id === sub.cc_id;
-                        return (
-                          <li key={sub.cc_id}>
-                            <Link
-                              to={`/courses/${(sub.cc_name_url || '').trim()}`}
-                              className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
-                                isActiveSub
-                                  ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
-                                  : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
-                              }`}
-                            >
-                              {subName}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-
-          {/* GROUP 2: CÁC KHÓA HỌC ONLINE */}
-          <div className="px-4 pt-3 pb-1.5 border-t border-slate-200/70 flex items-center gap-1.5">
-            <span className="text-xs opacity-75">💻</span>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-              {lang === 'vi' ? 'Khóa học Online & Học thử' : 'Online Courses'}
-            </span>
+                  </li>
+                  <li>
+                    <Link
+                      to="/courses/online?cat=english"
+                      onClick={() => {
+                        setSelectedOnlineCat('english');
+                        setMobileCateOpen(false);
+                      }}
+                      className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                        isOnlineView && selectedOnlineCat === 'english'
+                          ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
+                          : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
+                      }`}
+                    >
+                      IELTS &amp; Tiếng Anh Giao Tiếp
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/courses/online?cat=igcse"
+                      onClick={() => {
+                        setSelectedOnlineCat('igcse');
+                        setMobileCateOpen(false);
+                      }}
+                      className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                        isOnlineView && selectedOnlineCat === 'igcse'
+                          ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
+                          : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
+                      }`}
+                    >
+                      Quốc tế Cambridge IGCSE
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-
-          <ul className="divide-y divide-slate-100 text-[14.5px] px-1.5 pb-2">
-            <li>
-              <Link
-                to="/courses/online"
-                onClick={() => setSelectedOnlineCat('all')}
-                className={`px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between ${
-                  isOnlineView
-                    ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
-                    : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
-                }`}
-              >
-                <span>{lang === 'vi' ? 'Các khóa học Online' : 'Online Courses'}</span>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
-                  Học thử
-                </span>
-              </Link>
-
-              <ul className="mt-0.5 mb-1 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
-                <li>
-                  <Link
-                    to="/courses/online?cat=all"
-                    onClick={() => setSelectedOnlineCat('all')}
-                    className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
-                      isOnlineView && selectedOnlineCat === 'all'
-                        ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
-                        : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
-                    }`}
-                  >
-                    Tất cả khóa học Online ({FEATURED_ONLINE_PACKAGES.length})
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/courses/online?cat=english"
-                    onClick={() => setSelectedOnlineCat('english')}
-                    className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
-                      isOnlineView && selectedOnlineCat === 'english'
-                        ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
-                        : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
-                    }`}
-                  >
-                    IELTS &amp; Tiếng Anh Giao Tiếp
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/courses/online?cat=igcse"
-                    onClick={() => setSelectedOnlineCat('igcse')}
-                    className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
-                      isOnlineView && selectedOnlineCat === 'igcse'
-                        ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
-                        : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
-                    }`}
-                  >
-                    Quốc tế Cambridge IGCSE
-                  </Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
         </aside>
 
         {/* RIGHT MAIN CONTENT */}

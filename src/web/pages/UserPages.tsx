@@ -100,6 +100,7 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
   const [showDialog, setShowDialog] = useState(false);
   const [showVocab, setShowVocab] = useState(false);
   const [showQuiz, setShowQuiz] = useState(false);
+  const [mobileCateOpen, setMobileCateOpen] = useState(false);
 
   useEffect(() => {
     async function loadClassesAndLectures() {
@@ -260,16 +261,24 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
         </a>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
         {/* LEFT SIDEBAR */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white/80 rounded-2xl border border-slate-200/70 overflow-hidden sticky top-24">
-          <div className="bg-slate-100/80 px-4 py-3 border-b border-slate-200/70">
-            <h2 className="text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
-              <span className="opacity-80">📖</span>
-              <span>{isTrial ? 'Khóa học thử' : classTitle}</span>
+        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
+          <button
+            type="button"
+            onClick={() => setMobileCateOpen((prev) => !prev)}
+            className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
+          >
+            <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
+              <span className="opacity-80 shrink-0">📖</span>
+              <span className="truncate">{isTrial ? 'Khóa học thử' : classTitle}</span>
             </h2>
-          </div>
-          <ul className="divide-y divide-slate-100 text-[14.5px] p-1.5">
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+              <span>{mobileCateOpen ? 'Thu gọn' : 'Danh sách bài'}</span>
+              <span>{mobileCateOpen ? '▲' : '▼'}</span>
+            </span>
+          </button>
+          <ul className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
             {classes.map((cls) => {
               const isOpen = selectedClass && selectedClass.cl_id === cls.cl_id;
               const cName = lang === 'vi' ? cls.cl_name_vi || cls.cl_name : cls.cl_name;
@@ -299,7 +308,10 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
                         <li key={lec.lecture_id}>
                           <button
                             type="button"
-                            onClick={() => setCurrentLecture(lec)}
+                            onClick={() => {
+                              setCurrentLecture(lec);
+                              setMobileCateOpen(false);
+                            }}
                             className={`w-full text-left px-3 py-2 rounded-lg text-[13.5px] transition ${
                               currentLecture && currentLecture.lecture_id === lec.lecture_id
                                 ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
