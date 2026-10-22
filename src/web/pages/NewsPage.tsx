@@ -749,119 +749,151 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
                         {/* Interactive Vocabulary / Question / Answer / Conversation Dialog */}
                         {hasInteractiveBox && (
-                          <div className="space-y-4 pt-5 border-t border-slate-200">
-                            {vocabItems.length > 0 && (
-                              <div className="bg-slate-50/90 rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs">
+                          <div className="space-y-3 pt-5 border-t border-slate-100">
+                            <div className="flex flex-wrap items-center gap-2.5">
+                              {vocabItems.length > 0 && (
                                 <button
                                   type="button"
                                   onClick={() => setShowVocab(!showVocab)}
-                                  className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-sky-50/70 transition group"
+                                  className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-xl border text-[14.5px] font-semibold transition-all shadow-2xs group ${
+                                    showVocab
+                                      ? 'bg-[#0a5482] text-white border-[#0a5482]'
+                                      : 'bg-slate-50/90 hover:bg-sky-50/80 text-slate-700 hover:text-[#0a5482] border-slate-200/90 hover:border-sky-200'
+                                  }`}
                                 >
-                                  <div className="flex items-center gap-3 flex-wrap">
-                                    <span className="w-9 h-9 rounded-xl bg-[#0a5482] text-white flex items-center justify-center text-base shadow-2xs">
-                                      📖
-                                    </span>
-                                    <div>
-                                      <span className="font-extrabold text-[16px] sm:text-[17px] text-[#0a5482] group-hover:text-[#073d60]">
-                                        Vocabulary {lang === 'vi' ? '— Từ vựng trong bài' : ''}
-                                      </span>
-                                      <span className="ml-2.5 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-[#0a5482]">
-                                        {vocabItems.length} {lang === 'vi' ? 'từ & cụm từ' : 'items'}
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0a5482] bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 group-hover:border-sky-300 shadow-2xs">
-                                    <span>{showVocab ? (lang === 'vi' ? 'Thu gọn' : 'Hide') : lang === 'vi' ? 'Xem từ vựng' : 'Show'}</span>
-                                    <span>{showVocab ? '▲' : '▼'}</span>
+                                  <svg
+                                    className={`w-4 h-4 shrink-0 ${
+                                      showVocab ? 'text-sky-200' : 'text-[#0a5482]'
+                                    }`}
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={2}
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                    />
+                                  </svg>
+                                  <span>
+                                    Vocabulary {lang === 'vi' ? '— Từ vựng trong bài' : ''}
                                   </span>
+                                  <span
+                                    className={`px-2 py-0.5 rounded-md text-xs font-medium transition-colors ${
+                                      showVocab
+                                        ? 'bg-white/15 text-white'
+                                        : 'bg-white border border-slate-200/80 text-slate-500 group-hover:border-sky-200 group-hover:text-[#0a5482]'
+                                    }`}
+                                  >
+                                    {vocabItems.length} {lang === 'vi' ? 'từ' : 'items'}
+                                  </span>
+                                  <svg
+                                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                                      showVocab
+                                        ? 'rotate-180 text-sky-200'
+                                        : 'text-slate-400 group-hover:text-[#0a5482]'
+                                    }`}
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={2}
+                                  >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                                  </svg>
                                 </button>
+                              )}
 
-                                {showVocab && (
-                                  <div className="p-4 sm:p-5 bg-white border-t border-slate-200/80">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-                                      {vocabItems.map((item, idx) => (
-                                        <div
-                                          key={idx}
-                                          className="p-4 rounded-xl bg-slate-50/70 hover:bg-sky-50/40 border border-slate-200/70 transition flex items-start gap-3"
-                                        >
-                                          <span className="w-6 h-6 rounded-lg bg-[#0a5482]/10 text-[#0a5482] font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                                            {idx + 1}
-                                          </span>
-                                          <div className="min-w-0 flex-1">
-                                            <div className="font-extrabold text-[16px] text-[#0a5482] leading-snug">
-                                              {item.term}
-                                            </div>
-                                            <div className="text-[14.5px] sm:text-[15px] text-slate-600 leading-relaxed mt-1">
-                                              {item.definition}
-                                            </div>
-                                          </div>
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
-                            )}
-
-                            {article.news_question && article.news_question.trim() !== '' && (
-                              <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
+                              {article.news_question && article.news_question.trim() !== '' && (
                                 <button
                                   type="button"
                                   onClick={() => {
                                     setShowQuestion(!showQuestion);
                                     if (showQuestion) setShowAnswer(false);
                                   }}
-                                  className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
+                                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl border text-[14.5px] font-semibold transition-all shadow-2xs ${
+                                    showQuestion
+                                      ? 'bg-[#0a5482] text-white border-[#0a5482]'
+                                      : 'bg-slate-50/90 hover:bg-sky-50/80 text-slate-700 hover:text-[#0a5482] border-slate-200/90 hover:border-sky-200'
+                                  }`}
                                 >
                                   <span>❓ {t('View Question')}</span>
-                                  <span className="text-xs">{showQuestion ? '▲' : '▼'}</span>
+                                  <span className="text-xs opacity-75">{showQuestion ? '▲' : '▼'}</span>
                                 </button>
+                              )}
 
-                                {showQuestion && (
-                                  <div className="p-5 pt-3 bg-white border-t border-sky-100 space-y-4">
+                              {article.news_conversation && article.news_conversation.trim() !== '' && (
+                                <button
+                                  type="button"
+                                  onClick={() => setShowDialog(!showDialog)}
+                                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl border text-[14.5px] font-semibold transition-all shadow-2xs ${
+                                    showDialog
+                                      ? 'bg-[#0a5482] text-white border-[#0a5482]'
+                                      : 'bg-slate-50/90 hover:bg-sky-50/80 text-slate-700 hover:text-[#0a5482] border-slate-200/90 hover:border-sky-200'
+                                  }`}
+                                >
+                                  <span>💬 {t('View Conversation Dialog')}</span>
+                                  <span className="text-xs opacity-75">{showDialog ? '▲' : '▼'}</span>
+                                </button>
+                              )}
+                            </div>
+
+                            {vocabItems.length > 0 && showVocab && (
+                              <div className="p-4 sm:p-5 bg-slate-50/60 rounded-2xl border border-slate-200/80">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                  {vocabItems.map((item, idx) => (
                                     <div
-                                      className="legacy-prose"
-                                      dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_question) }}
-                                    />
-                                    {article.news_answer && article.news_answer.trim() !== '' && (
-                                      <div>
-                                        <button
-                                          type="button"
-                                          onClick={() => setShowAnswer(!showAnswer)}
-                                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-2 rounded-xl transition"
-                                        >
-                                          ✅ {t('View Answer')}
-                                        </button>
-                                        {showAnswer && (
-                                          <div
-                                            className="mt-3 p-4 bg-emerald-50 border border-emerald-200 rounded-xl legacy-prose"
-                                            dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_answer) }}
-                                          />
-                                        )}
+                                      key={idx}
+                                      className="p-3.5 rounded-xl bg-white hover:bg-sky-50/30 border border-slate-200/70 transition flex items-start gap-3 shadow-2xs"
+                                    >
+                                      <span className="w-5 h-5 rounded-md bg-slate-100 text-slate-500 font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">
+                                        {idx + 1}
+                                      </span>
+                                      <div className="min-w-0 flex-1">
+                                        <div className="font-bold text-[15.5px] text-[#0a5482] leading-snug">
+                                          {item.term}
+                                        </div>
+                                        <div className="text-[14.5px] text-slate-600 leading-relaxed mt-0.5">
+                                          {item.definition}
+                                        </div>
                                       </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                            {article.news_question && article.news_question.trim() !== '' && showQuestion && (
+                              <div className="p-5 bg-slate-50/60 rounded-2xl border border-slate-200/80 space-y-4">
+                                <div
+                                  className="legacy-prose"
+                                  dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_question) }}
+                                />
+                                {article.news_answer && article.news_answer.trim() !== '' && (
+                                  <div>
+                                    <button
+                                      type="button"
+                                      onClick={() => setShowAnswer(!showAnswer)}
+                                      className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2 rounded-xl transition"
+                                    >
+                                      ✅ {t('View Answer')}
+                                    </button>
+                                    {showAnswer && (
+                                      <div
+                                        className="mt-3 p-4 bg-emerald-50 border border-emerald-200 rounded-xl legacy-prose"
+                                        dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_answer) }}
+                                      />
                                     )}
                                   </div>
                                 )}
                               </div>
                             )}
 
-                            {article.news_conversation && article.news_conversation.trim() !== '' && (
-                              <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
-                                <button
-                                  type="button"
-                                  onClick={() => setShowDialog(!showDialog)}
-                                  className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
-                                >
-                                  <span>💬 {t('View Conversation Dialog')}</span>
-                                  <span className="text-xs">{showDialog ? '▲' : '▼'}</span>
-                                </button>
-                                {showDialog && (
-                                  <div
-                                    className="p-5 bg-white border-t border-sky-100 legacy-prose"
-                                    dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_conversation) }}
-                                  />
-                                )}
-                              </div>
+                            {article.news_conversation && article.news_conversation.trim() !== '' && showDialog && (
+                              <div
+                                className="p-5 bg-slate-50/60 rounded-2xl border border-slate-200/80 legacy-prose"
+                                dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_conversation) }}
+                              />
                             )}
                           </div>
                         )}
@@ -875,22 +907,54 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             </div>
           </div>
 
-          {/* SEPARATE AIRY BLOCK FOR RELATED POSTS */}
+          {/* SEPARATE CARD FOR RELATED POSTS */}
           {!loading && mode === 'detail' && article && relatedNews.length > 0 && (
-            <div className="bg-white/70 rounded-2xl border border-slate-200/60 px-6 py-5 sm:px-8 sm:py-6">
-              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-slate-400 mb-3.5 flex items-center gap-2">
-                <span className="opacity-70 text-sm">📌</span>
-                <span>{t('Related Post')}</span>
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
-                {relatedNews.map((rel) => (
+            <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xs p-6 sm:p-8">
+              <div className="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100">
+                <div className="flex items-center gap-3">
+                  <span className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-100 text-[#0a5482] flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                      />
+                    </svg>
+                  </span>
+                  <div>
+                    <h3 className="text-[17px] sm:text-[18.5px] font-extrabold text-slate-800 tracking-tight leading-snug">
+                      {lang === 'vi' ? 'Bài đọc liên quan' : t('Related Post')}
+                    </h3>
+                    <p className="text-xs sm:text-[13px] text-slate-400">
+                      {lang === 'vi' ? 'Các bài học khác trong cùng chuyên mục' : 'More articles in this category'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {relatedNews.map((rel, idx) => (
                   <Link
                     key={rel.news_id}
                     to={`/news/view/${(rel.news_title_url || '').trim()}`}
-                    className="group py-2 px-3 -mx-3 rounded-lg hover:bg-slate-100/70 text-[14px] sm:text-[14.5px] font-normal text-slate-500 hover:text-[#0a5482] transition-colors flex items-center gap-2.5"
+                    className="group flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl bg-slate-50/70 hover:bg-sky-50/70 border border-slate-200/70 hover:border-sky-200/90 transition-all"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-[#2ab4e8] shrink-0 transition-colors" />
-                    <span className="line-clamp-1">{rel.news_title}</span>
+                    <div className="flex items-center gap-3 min-w-0">
+                      <span className="w-6 h-6 rounded-lg bg-white border border-slate-200/80 text-slate-400 group-hover:text-[#0a5482] group-hover:border-sky-200 text-xs font-bold flex items-center justify-center shrink-0 transition-colors">
+                        {idx + 1}
+                      </span>
+                      <span className="text-[15.5px] sm:text-[16px] font-semibold text-slate-700 group-hover:text-[#0a5482] leading-snug line-clamp-1 transition-colors">
+                        {rel.news_title}
+                      </span>
+                    </div>
+                    <svg
+                      className="w-4 h-4 text-slate-300 group-hover:text-[#0a5482] group-hover:translate-x-0.5 transition-all shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 ))}
               </div>

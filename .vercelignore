@@ -20,6 +20,9 @@ unit*.json
 *.x32
 **/*.x32
 *.traineddata
+*.pdf
+**/*.pdf
+!public/Business Studies/**/*.pdf
 extract.py
 fix_*.js
 generate_*.js
