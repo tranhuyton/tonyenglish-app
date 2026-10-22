@@ -4238,19 +4238,19 @@ export default function LectureViewer({
     <div className="flex flex-col h-[100dvh] w-full bg-[#f8fafc] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
       <header 
-         className="h-[64px] backdrop-blur-md text-white flex items-center px-4 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-white/20 transition-all duration-300"
+         className="h-[64px] backdrop-blur-md text-white flex items-center px-3.5 sm:px-5 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-white/15 transition-all duration-300"
          style={{
-             background: lectureTheme?.titleBg || 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
-            color: lectureTheme?.titleText || '#ffffff'
+             background: lectureTheme?.titleBg || 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)',
+             color: lectureTheme?.titleText || '#ffffff'
          }}
       >
-         <div className="flex items-center gap-2 md:gap-3 min-w-0 flex-1">
+         <div className="flex items-center gap-2 md:gap-2.5 min-w-0 flex-1">
             <button 
                 onClick={onBack} 
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all shrink-0" 
+                className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
                 title="Quay lại Góc học viên"
             >
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
             </button>
             <button 
                 onClick={() => {
@@ -4266,19 +4266,21 @@ export default function LectureViewer({
                   window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
                   window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
                 }} 
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all shrink-0" 
+                className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
                 title="Về trang chủ TonyEnglish.vn"
             >
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-5 h-5">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                </svg>
             </button>
             <button 
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all shrink-0" 
-                title="Danh mục"
+                className={`w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border transition-all shrink-0 cursor-pointer ${
+                  isSidebarOpen ? 'bg-white/22 border-white/30' : 'bg-white/12 hover:bg-white/22 border-white/15'
+                }`}
+                title="Đóng/Mở mục lục bài giảng"
             >
-               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h7" /></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h7" /></svg>
             </button>
             
             {/* 🎓 THANH LỌC / CHUYỂN KHÓA HỌC */}
@@ -4286,36 +4288,36 @@ export default function LectureViewer({
                <button 
                   type="button"
                   onClick={() => setIsCourseDropdownOpen(!isCourseDropdownOpen)}
-                  className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 transition-all text-left shadow-sm hover:shadow-md hover:border-white/40 group max-w-[110px] xs:max-w-[150px] sm:max-w-[260px] md:max-w-[320px]"
+                  className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl bg-white/12 hover:bg-white/22 border border-white/20 transition-all text-left shadow-xs hover:border-white/35 group max-w-[125px] xs:max-w-[160px] sm:max-w-[270px] md:max-w-[330px] cursor-pointer"
                   title="Bấm để lọc / chuyển khóa học khác"
                >
                   <div className="flex flex-col min-w-0 flex-1">
                      <div className="flex items-center gap-1.5">
-                        <span className="text-[13px] sm:text-[15px] font-bold text-white truncate leading-tight tracking-tight">
+                        <span className="text-[13px] sm:text-[14.5px] font-black text-white truncate leading-tight tracking-tight">
                            {course?.title || 'Đang tải khóa học...'}
                         </span>
-                        <span className={`text-[10px] text-white/80 transition-transform duration-200 shrink-0 ${isCourseDropdownOpen ? 'rotate-180' : ''}`}>
+                        <span className={`text-[10px] text-[#2ab4e8] transition-transform duration-200 shrink-0 ${isCourseDropdownOpen ? 'rotate-180' : ''}`}>
                            ▼
                         </span>
                      </div>
                      <div className="hidden sm:flex items-center gap-2 mt-0.5">
-                        <div className="w-20 sm:w-24 h-1.5 bg-black/20 rounded-full overflow-hidden">
-                           <div className="h-full bg-emerald-400 rounded-full transition-all duration-300" style={{ width: `${courseProgress}%` }}></div>
+                        <div className="w-20 sm:w-24 h-1.5 bg-white/20 rounded-full overflow-hidden">
+                           <div className="h-full bg-gradient-to-r from-[#2ab4e8] to-emerald-400 rounded-full transition-all duration-300" style={{ width: `${courseProgress}%` }}></div>
                         </div>
-                        <span className="text-[10px] font-medium opacity-80">{courseProgress}%</span>
+                        <span className="text-[10px] font-bold text-sky-200">{courseProgress}%</span>
                      </div>
                   </div>
                </button>
 
                {/* DROPDOWN DANH SÁCH KHÓA HỌC */}
                {isCourseDropdownOpen && (
-                  <div className="fixed top-[68px] left-3 right-3 sm:left-auto sm:right-auto sm:absolute sm:top-full sm:left-0 sm:mt-2 w-auto sm:w-[320px] max-h-[420px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-slate-100 overflow-hidden z-[110] animate-in fade-in slide-in-from-top-2 duration-200 text-slate-800 flex flex-col">
+                  <div className="fixed top-[68px] left-3 right-3 sm:left-auto sm:right-auto sm:absolute sm:top-full sm:left-0 sm:mt-2 w-auto sm:w-[320px] max-h-[420px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-slate-200 overflow-hidden z-[110] animate-in fade-in slide-in-from-top-2 duration-200 text-slate-800 flex flex-col">
                      <div className="p-3 bg-slate-50 border-b border-slate-100">
                         <div className="flex items-center justify-between mb-2">
-                           <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                           <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
                               <span>📚</span> Chọn khóa học
                            </span>
-                           <span className="text-[11px] font-semibold text-[#0ea5e9] bg-[#0ea5e9]/10 px-2 py-0.5 rounded-full">
+                           <span className="text-[11px] font-extrabold text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2 py-0.5 rounded-full">
                               {availableCourses.length} khóa
                            </span>
                         </div>
@@ -4326,7 +4328,7 @@ export default function LectureViewer({
                                  placeholder="Tìm khóa học..."
                                  value={courseFilterQuery}
                                  onChange={(e) => setCourseFilterQuery(e.target.value)}
-                                 className="w-full px-3 py-1.5 pl-8 text-[13px] bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9]/20 text-slate-800 placeholder-slate-400"
+                                 className="w-full px-3 py-1.5 pl-8 text-[13px] bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-[#2ab4e8]/20 text-slate-800 placeholder-slate-400"
                                  onClick={(e) => e.stopPropagation()}
                                  autoFocus
                               />
@@ -4357,9 +4359,9 @@ export default function LectureViewer({
                                  <button
                                     key={c.id}
                                     onClick={() => handleSelectCourse(c.id)}
-                                    className={`w-full text-left px-3.5 py-2.5 rounded-xl text-[13px] font-medium transition-all flex items-center justify-between gap-3 group ${
+                                    className={`w-full text-left px-3.5 py-2.5 rounded-xl text-[13px] font-medium transition-all flex items-center justify-between gap-3 group cursor-pointer ${
                                        isSelected 
-                                          ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold border border-[#0ea5e9]/20' 
+                                          ? 'bg-sky-50 text-[#0a5482] font-bold border border-sky-200/80' 
                                           : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 border border-transparent'
                                     }`}
                                  >
@@ -4368,12 +4370,12 @@ export default function LectureViewer({
                                        <span className="truncate">{c.title}</span>
                                     </div>
                                     {isSelected ? (
-                                       <span className="text-[11px] font-bold bg-[#0ea5e9] text-white px-2 py-0.5 rounded-full shrink-0 shadow-sm">
+                                       <span className="text-[11px] font-bold bg-[#0a5482] text-white px-2 py-0.5 rounded-full shrink-0 shadow-xs">
                                           Đang học
                                        </span>
                                     ) : (
-                                       <span className="opacity-0 group-hover:opacity-100 text-[11px] text-[#0ea5e9] font-semibold shrink-0 transition-opacity">
-                                          Chọn ➜
+                                       <span className="opacity-0 group-hover:opacity-100 text-[11px] text-[#0a5482] font-bold shrink-0 transition-opacity">
+                                          Chọn →
                                        </span>
                                     )}
                                  </button>
@@ -4389,7 +4391,7 @@ export default function LectureViewer({
             <button
               type="button"
               onClick={() => setIsLectureThemeModalOpen(true)}
-              className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:scale-105 active:scale-95 shrink-0"
+              className="flex items-center justify-center w-9 h-9 rounded-xl transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs active:scale-95 shrink-0 cursor-pointer"
               title="Đổi màu nền bài giảng"
             >
               <span className="text-sm sm:text-base">🎨</span>
@@ -4399,9 +4401,9 @@ export default function LectureViewer({
 
 
          {/* 📖 THANH TRA TỪ ĐIỂN - CHÍNH GIỮA */}
-         <div className="hidden md:flex flex-1 justify-center mx-4 max-w-md relative" ref={dictRef}>
-           <div className="relative w-full max-w-[340px]">
-             <div onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="flex items-center bg-white/15 hover:bg-white/25 focus-within:bg-white/30 rounded-full border border-white/20 transition-all px-3 h-9 cursor-pointer" title="Mở Từ điển Anh-Việt / Việt-Anh">
+         <div className="hidden lg:flex flex-1 justify-center mx-3 max-w-sm relative" ref={dictRef}>
+           <div className="relative w-full max-w-[320px]">
+             <div onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="flex items-center bg-white/12 hover:bg-white/20 focus-within:bg-white/25 rounded-xl border border-white/20 transition-all px-3 h-9 cursor-pointer" title="Mở Từ điển Anh-Việt / Việt-Anh">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-white/70 shrink-0">
                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                </svg>
@@ -4597,10 +4599,10 @@ export default function LectureViewer({
                       sessionStorage.setItem('lms_portal_tab', 'calendar');
                       onBack();
                   }}
-                  className="hidden sm:flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                  className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:h-9 rounded-xl text-[12.5px] md:text-[13px] font-bold transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs cursor-pointer"
                   title="Đi đến Lịch báo bài của khóa học"
               >
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4 text-[#2ab4e8]"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
                  <span className="hidden sm:inline">Lịch báo bài</span>
               </button>
               <button
@@ -4610,10 +4612,10 @@ export default function LectureViewer({
                       sessionStorage.setItem('lms_portal_tab', 'board');
                       onBack();
                   }}
-                  className="hidden sm:flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                  className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:h-9 rounded-xl text-[12.5px] md:text-[13px] font-bold transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs cursor-pointer"
                   title="Đi đến Bảng công việc của khóa học"
               >
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4 text-[#2ab4e8]"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
                  <span className="hidden sm:inline">Bảng công việc</span>
               </button>
               <button
@@ -4624,10 +4626,10 @@ export default function LectureViewer({
                       sessionStorage.setItem('lms_portal_tab', 'library');
                       onBack();
                   }}
-                  className="hidden sm:flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                  className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:h-9 rounded-xl text-[12.5px] md:text-[13px] font-bold transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs cursor-pointer"
                   title="Đi đến kho đề của khóa học"
               >
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4 text-[#2ab4e8]"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                  <span className="hidden sm:inline">Kho đề</span>
               </button>
               {!(course?.title || '').toLowerCase().includes('ielts') && (
@@ -4637,7 +4639,7 @@ export default function LectureViewer({
                               onOpenAI('tutor'); 
                           }
                       }} 
-                      className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 md:px-4 md:h-10 rounded-full text-xs sm:text-[13px] md:text-[14px] font-semibold transition-all bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-amber-950 shadow-md border border-amber-300/50 hover:shadow-lg hover:-translate-y-0.5"
+                      className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 md:h-9 rounded-xl text-xs sm:text-[13px] font-extrabold transition-all bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-amber-950 shadow-sm border border-amber-300/60 cursor-pointer"
                   >
                      <span className="animate-bounce">✨</span> <span className="hidden xs:inline">Hỏi AI Tutor</span>
                   </button>
@@ -4646,35 +4648,36 @@ export default function LectureViewer({
                  <>
                  <button 
                      onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'speaking')} 
-                     className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all bg-gradient-to-br from-pink-400 to-rose-500 text-white shadow-md border border-white/20 hover:shadow-lg hover:scale-105 shrink-0"
+                     className="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-gradient-to-br from-pink-400 to-rose-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
                      title="Tutor Speaking"
                  >
-                     <span className="text-[10px] md:text-[11px] font-bold leading-tight">Spk</span>
+                     <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">Spk</span>
                  </button>
                  <button 
                      onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task1')} 
-                     className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-md border border-white/20 hover:shadow-lg hover:scale-105 shrink-0"
+                     className="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
                      title="Tutor Writing Task 1"
                  >
-                     <span className="text-[10px] md:text-[11px] font-bold leading-tight">WT1</span>
+                     <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">WT1</span>
                  </button>
                  <button 
                      onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task2')} 
-                     className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all bg-gradient-to-br from-violet-400 to-purple-500 text-white shadow-md border border-white/20 hover:shadow-lg hover:scale-105 shrink-0"
+                     className="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-gradient-to-br from-violet-400 to-purple-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
                      title="Tutor Writing Task 2"
                  >
-                     <span className="text-[10px] md:text-[11px] font-bold leading-tight">WT2</span>
+                     <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">WT2</span>
                  </button>
                  </>
              )}
              <button 
                  onClick={toggleFullScreen} 
-                 className="hidden md:flex w-10 h-10 rounded-full items-center justify-center bg-white/10 hover:bg-white/20 text-white transition-all"
+                 className="hidden md:flex w-9 h-9 rounded-xl items-center justify-center bg-white/12 hover:bg-white/22 border border-white/15 text-white transition-all cursor-pointer"
+                 title={isFullscreen ? "Thoát toàn màn hình" : "Toàn màn hình"}
              >
                 {isFullscreen ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
                 ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
                 )}
              </button>
           </div>
@@ -4689,13 +4692,19 @@ export default function LectureViewer({
              />
          )}
 
-         <aside className={`fixed md:relative inset-y-0 left-0 z-50 md:z-20 h-[100dvh] md:h-full bg-white border-r border-slate-200 flex flex-col shrink-0 transition-transform duration-300 ease-in-out shadow-[4px_0_24px_rgba(0,0,0,0.05)] md:shadow-none
+         <aside className={`fixed md:relative inset-y-0 left-0 z-50 md:z-20 h-[100dvh] md:h-full bg-white border-r border-slate-200/90 flex flex-col shrink-0 transition-transform duration-300 ease-in-out shadow-[4px_0_24px_rgba(0,0,0,0.05)] md:shadow-none
             ${isSidebarOpen && !isTeacherBoardOpen ? 'translate-x-0 w-[300px] md:w-[340px]' : '-translate-x-full w-[300px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
            
-           <div className="p-5 border-b border-slate-100 shrink-0 bg-slate-50/50">
+           <div className="p-4 sm:p-5 border-b border-slate-200/80 shrink-0 bg-slate-50/70">
               <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-bold text-slate-800 text-[16px]">Nội dung khóa học</h3>
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-1.5 h-5 bg-[#0a5482] rounded-full"></span>
+                    <div>
+                      <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block leading-none mb-0.5">
+                        TonyEnglish Curriculum
+                      </span>
+                      <h3 className="font-black text-slate-900 text-[15px] tracking-tight leading-tight">Nội dung khóa học</h3>
+                    </div>
                     {isTrialMode && (
                       <span className="bg-amber-100 text-amber-700 border border-amber-200 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
                         🎁 Học thử
@@ -4710,15 +4719,15 @@ export default function LectureViewer({
                       ✕
                   </button>
               </div>
-              <div className="flex flex-col gap-1.5">
-                  <div className="flex justify-between text-[12px] font-medium text-slate-500">
-                      <span>{isTrialMode ? 'Bài học thử được mở' : 'Tiến độ'}</span>
-                      <span className="text-[#0ea5e9]">
+              <div className="flex flex-col gap-1.5 bg-white border border-slate-200/80 rounded-xl p-2.5 shadow-2xs">
+                  <div className="flex justify-between text-[11.5px] font-bold text-slate-600">
+                      <span>{isTrialMode ? 'Bài học thử được mở' : 'Tiến độ hoàn thành'}</span>
+                      <span className="text-[#0a5482] font-black">
                         {isTrialMode ? `${trialUnlockedLectureIds.size} / ${lectures.length} bài` : `${completedLectures.size} / ${lectures.length} bài`}
                       </span>
                   </div>
-                  <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-[#0ea5e9] rounded-full transition-all duration-500" style={{ width: `${courseProgress}%` }}></div>
+                  <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-[#0a5482] to-[#2ab4e8] rounded-full transition-all duration-500" style={{ width: `${courseProgress}%` }}></div>
                   </div>
               </div>
            </div>
@@ -4811,13 +4820,13 @@ export default function LectureViewer({
                                    disabled={isLocked}
                                    onClick={() => { if (!isLocked) handleSelectLecture(lec.id); }} 
                                    title={isLocked ? 'Bài giảng này chỉ dành cho học viên chính thức' : lec.title}
-                                   className={`w-full text-left px-3 py-2.5 rounded-lg text-[13px] transition-all flex items-start gap-3 relative group ${
+                                   className={`w-full text-left px-3 py-2.5 rounded-xl text-[13px] transition-all flex items-start gap-3 relative group ${
                                      isLocked
                                        ? 'bg-slate-100/80 text-slate-400 cursor-not-allowed opacity-65 select-none'
                                        : isActive 
                                          ? (isReflexAi 
-                                             ? 'bg-gradient-to-r from-indigo-500/15 via-[#0ea5e9]/10 to-purple-500/10 text-indigo-900 border border-indigo-300 shadow-xs' 
-                                             : 'bg-[#0ea5e9]/10 text-[#0ea5e9]')
+                                             ? 'bg-gradient-to-r from-indigo-500/15 via-[#2ab4e8]/10 to-purple-500/10 text-indigo-900 border border-indigo-300 shadow-xs' 
+                                             : 'bg-sky-50 text-[#0a5482] border border-sky-200/80 shadow-2xs')
                                          : isReflexAi 
                                            ? 'text-indigo-950 bg-gradient-to-r from-indigo-50/60 to-violet-50/40 hover:from-indigo-100/70 hover:to-violet-100/60 border border-indigo-200/70' 
                                            : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
@@ -4833,11 +4842,11 @@ export default function LectureViewer({
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
                                         </div>
                                      ) : isActive ? (
-                                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${isReflexAi ? 'border-indigo-500 text-indigo-600 bg-indigo-50' : 'border-[#0ea5e9] text-[#0ea5e9]'}`}>
+                                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${isReflexAi ? 'border-indigo-500 text-indigo-600 bg-indigo-50' : 'border-[#0a5482] text-[#0a5482] bg-white'}`}>
                                             {isReflexAi ? (
                                                 <span className="text-[10px] leading-none">🤖</span>
                                             ) : (
-                                                <div className="w-2 h-2 rounded-full bg-[#0ea5e9]"></div>
+                                                <div className="w-2 h-2 rounded-full bg-[#2ab4e8]"></div>
                                             )}
                                         </div>
                                      ) : isReflexAi ? (
@@ -4845,11 +4854,11 @@ export default function LectureViewer({
                                             🤖
                                         </div>
                                      ) : (
-                                        <div className="w-5 h-5 rounded-full border-2 border-slate-300 group-hover:border-[#0ea5e9] transition-colors shrink-0"></div>
+                                        <div className="w-5 h-5 rounded-full border-2 border-slate-300 group-hover:border-[#0a5482] transition-colors shrink-0"></div>
                                      )}
                                  </div>
                                  <div className="flex-1 min-w-0 flex flex-col gap-1">
-                                    <span className={`leading-snug ${isLocked ? 'font-medium text-slate-400' : isActive ? 'font-semibold' : isReflexAi ? 'font-semibold text-indigo-950' : 'font-medium'}`}>
+                                    <span className={`leading-snug ${isLocked ? 'font-medium text-slate-400' : isActive ? 'font-bold text-[#0a5482]' : isReflexAi ? 'font-semibold text-indigo-950' : 'font-medium'}`}>
                                         {lec.title}
                                     </span>
                                     <div className="flex items-center gap-1.5 flex-wrap">
@@ -4893,13 +4902,13 @@ export default function LectureViewer({
                                              if (isLocked) return;
                                              if (isActive) { setIsTaskMenuOpen(!isTaskMenuOpen); } else { handleSelectLecture(lec.id); setTimeout(() => setIsTaskMenuOpen(true), 300); }
                                            }}
-                                           className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-medium transition-all ${
+                                           className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-semibold transition-all ${
                                              isLocked
                                                ? 'bg-slate-200/70 text-slate-400 cursor-not-allowed'
                                                : isLecCompleted
                                                  ? 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100 cursor-pointer'
                                                  : isActive
-                                                   ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] hover:bg-[#0ea5e9]/20 cursor-pointer'
+                                                   ? 'bg-[#0a5482]/10 text-[#0a5482] hover:bg-[#0a5482]/20 cursor-pointer'
                                                    : 'bg-slate-100 text-slate-500 hover:bg-slate-200 cursor-pointer'
                                            }`}
                                            title={isLocked ? 'Bài giảng bị khóa trong chế độ học thử' : 'Bấm để xem nhiệm vụ bài học'}
@@ -4942,11 +4951,11 @@ export default function LectureViewer({
                  }
              }}
          >
-             <div className={`min-h-full flex flex-col items-center ${isIframeOnly ? '' : 'py-6 md:py-12 px-0 sm:px-6 lg:px-8'}`}>
+             <div className={`min-h-full flex flex-col items-center ${isIframeOnly ? '' : 'py-5 md:py-10 px-0 sm:px-6 lg:px-8'}`}>
                 <div className={`w-full flex-none transition-all ${
                     isIframeOnly 
                     ? 'p-0 mb-0 max-w-none' 
-                    : `bg-white shadow-sm border border-slate-200 rounded-none sm:rounded-2xl p-5 sm:p-8 md:p-10 mb-8 min-h-[60vh] max-w-[1050px] ${isTeacherBoardOpen ? 'max-w-none' : ''}`
+                    : `bg-white shadow-xs border border-slate-200/90 rounded-none sm:rounded-3xl p-5 sm:p-8 md:p-11 mb-8 min-h-[60vh] max-w-[1060px] ${isTeacherBoardOpen ? 'max-w-none' : ''}`
                 }`}>
                   {!activeLectureId ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
@@ -4961,36 +4970,42 @@ export default function LectureViewer({
                     </div>
                   ) : !currentHtmlContent ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
-                       <span className="w-8 h-8 border-4 border-[#0ea5e9]/30 border-t-[#0ea5e9] rounded-full animate-spin mb-4"></span>
+                       <span className="w-8 h-8 border-4 border-[#0a5482]/25 border-t-[#0a5482] rounded-full animate-spin mb-4"></span>
                        <span className="font-medium">Đang tải nội dung...</span>
                     </div>
                   ) : (
                     <div className="animate-in fade-in duration-500">
-                       {activeLecture && (() => {
-                          const activeTitleLower = (activeLecture.title || '').toLowerCase();
-                          const isActiveReflexAi = activeTitleLower.includes('thực chiến') || (activeTitleLower.includes('luyện') && activeTitleLower.includes('ai'));
-                          const isDialoguePod = !!(activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId]);
-                          const hasActivePodcast = activeTitleLower.includes('podcast') || !!(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) || isDialoguePod || isActiveReflexAi;
-                          
-                          if (!isActiveReflexAi && !hasActivePodcast) return null;
-                          return (
-                            <div className="flex items-center gap-2 mb-4 flex-wrap">
-                              {hasActivePodcast && (
-                                <span className="text-xs px-2.5 py-1 rounded-md font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1.5 shadow-xs">
-                                  <svg className="w-3.5 h-3.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
-                                  <span>{isDialoguePod ? 'Podcast (2 chế độ: Shadowing & Phản xạ)' : `Podcast (${getPodcastCount(activeLecture, currentCourseId)} tập chuyên sâu)`}</span>
-                                </span>
-                              )}
-                              {isActiveReflexAi && (
-                                <span className="text-xs px-2.5 py-1 rounded-md font-semibold bg-gradient-to-r from-indigo-50 to-violet-50 text-indigo-700 border border-indigo-200 flex items-center gap-1.5 shadow-xs">
-                                  <span className="text-sm">🤖</span>
-                                  <span>Luyện phản xạ cùng Trợ lý AI</span>
-                                </span>
-                              )}
-                            </div>
-                          );
-                       })()}
-                       <h2 className="text-[26px] md:text-[36px] text-slate-900 font-extrabold mb-8 md:mb-12 pb-6 border-b border-slate-100 leading-tight tracking-tight">
+                       <div className="flex items-center gap-2 mb-3 flex-wrap">
+                         <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2.5 py-1 rounded-full">
+                           <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4e8]" />
+                           {currentCourseName || 'Bài Giảng Lý Thuyết'}
+                         </span>
+                         {activeLecture && (() => {
+                            const activeTitleLower = (activeLecture.title || '').toLowerCase();
+                            const isActiveReflexAi = activeTitleLower.includes('thực chiến') || (activeTitleLower.includes('luyện') && activeTitleLower.includes('ai'));
+                            const isDialoguePod = !!(activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId]);
+                            const hasActivePodcast = activeTitleLower.includes('podcast') || !!(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) || isDialoguePod || isActiveReflexAi;
+                            
+                            if (!isActiveReflexAi && !hasActivePodcast) return null;
+                            return (
+                              <>
+                                {hasActivePodcast && (
+                                  <span className="text-xs px-2.5 py-1 rounded-full font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                                    <svg className="w-3.5 h-3.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
+                                    <span>{isDialoguePod ? 'Podcast (2 chế độ: Shadowing & Phản xạ)' : `Podcast (${getPodcastCount(activeLecture, currentCourseId)} tập chuyên sâu)`}</span>
+                                  </span>
+                                )}
+                                {isActiveReflexAi && (
+                                  <span className="text-xs px-2.5 py-1 rounded-full font-semibold bg-gradient-to-r from-indigo-50 to-violet-50 text-indigo-700 border border-indigo-200 flex items-center gap-1.5 shadow-2xs">
+                                    <span className="text-sm">🤖</span>
+                                    <span>Luyện phản xạ cùng Trợ lý AI</span>
+                                  </span>
+                                )}
+                              </>
+                            );
+                         })()}
+                       </div>
+                       <h2 className="text-[24px] sm:text-[30px] md:text-[34px] text-slate-900 font-black mb-7 md:mb-10 pb-5 border-b border-slate-100 leading-tight tracking-tight">
                            {activeLecture?.title}
                        </h2>
                        {activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId] && totalPages > 1 && (
@@ -5000,7 +5015,7 @@ export default function LectureViewer({
                              onClick={() => { setCurrentPage(1); persistPage(1); }}
                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
                                currentPage === 1 
-                                 ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                 ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                              }`}
                            >
@@ -5057,7 +5072,7 @@ export default function LectureViewer({
                                onClick={() => { setCurrentPage(1); persistPage(1); }}
                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
                                  currentPage === 1 
-                                   ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                   ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                                }`}
                              >
@@ -5069,7 +5084,7 @@ export default function LectureViewer({
                                onClick={() => { setCurrentPage(2); persistPage(2); }}
                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
                                  currentPage === 2 
-                                   ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                   ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                                }`}
                              >
@@ -5084,7 +5099,7 @@ export default function LectureViewer({
                                      onClick={() => { setCurrentPage(3); persistPage(3); }}
                                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
                                        currentPage === 3 
-                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
                                          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                                      }`}
                                    >
@@ -5098,7 +5113,7 @@ export default function LectureViewer({
                                      onClick={() => { setCurrentPage(4); persistPage(4); }}
                                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
                                        currentPage === 4 
-                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
                                          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                                      }`}
                                    >
@@ -5115,7 +5130,7 @@ export default function LectureViewer({
                                      onClick={() => { setCurrentPage(3); persistPage(3); }}
                                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
                                        currentPage === 3 
-                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
                                          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                                      }`}
                                    >
@@ -5129,7 +5144,7 @@ export default function LectureViewer({
                                      onClick={() => { setCurrentPage(4); persistPage(4); }}
                                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
                                        currentPage === 4 
-                                         ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/20' 
+                                         ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
                                          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                                      }`}
                                    >
@@ -5215,22 +5230,22 @@ export default function LectureViewer({
                </div>
                
                 {activeLectureId && (
-                    <div className={`max-w-[1050px] w-full flex justify-between items-center px-2 sm:px-0 pb-20 sm:pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
+                    <div className={`max-w-[1060px] w-full flex justify-between items-center px-3 sm:px-0 pb-20 sm:pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
                        <button 
                            onClick={handlePrevPage} 
                            disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} 
-                           className="flex items-center gap-1.5 sm:gap-2 text-slate-500 font-semibold text-xs sm:text-[14px] hover:text-[#0ea5e9] hover:bg-white disabled:opacity-30 transition-all bg-transparent px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl disabled:hover:bg-transparent shrink-0"
+                           className="flex items-center gap-1.5 sm:gap-2 text-slate-600 font-bold text-xs sm:text-[14px] hover:text-[#0a5482] hover:bg-white hover:border-slate-300 border border-transparent disabled:opacity-30 transition-all bg-transparent px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl disabled:hover:bg-transparent shrink-0"
                        >
                           <span>←</span> <span className="hidden xs:inline">Bài trước</span><span className="xs:hidden">Trước</span>
                        </button>
                        
                        {totalPages > 1 && (
-                          <div className="flex gap-1.5 sm:gap-2 bg-white px-2 py-1.5 sm:py-2 rounded-xl shadow-sm border border-slate-200 overflow-x-auto max-w-[140px] xs:max-w-[200px] sm:max-w-none custom-scrollbar shrink">
+                          <div className="flex gap-1.5 sm:gap-2 bg-white px-2 py-1.5 sm:py-2 rounded-2xl shadow-xs border border-slate-200/90 overflow-x-auto max-w-[140px] xs:max-w-[200px] sm:max-w-none custom-scrollbar shrink">
                               {Array.from({ length: totalPages }).map((_, i) => (
                                   <button 
                                       key={i+1} 
                                       onClick={() => { setCurrentPage(i+1); persistPage(i+1); }} 
-                                      className={`w-8 h-8 sm:w-10 sm:h-10 shrink-0 rounded-lg flex items-center justify-center text-xs sm:text-[14px] font-bold transition-all ${currentPage === i+1 ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
+                                      className={`w-8 h-8 sm:w-10 sm:h-10 shrink-0 rounded-xl flex items-center justify-center text-xs sm:text-[14px] font-bold transition-all ${currentPage === i+1 ? 'bg-[#0a5482] text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
                                   >
                                       {i+1}
                                   </button>
@@ -5241,7 +5256,7 @@ export default function LectureViewer({
                        <button 
                            onClick={handleNextPage} 
                            disabled={isLastLectureAndPage} 
-                           className="flex items-center gap-1.5 sm:gap-2 text-white font-semibold text-xs sm:text-[14px] transition-all bg-[#0ea5e9] hover:bg-[#0284c7] disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed shadow-md shadow-blue-500/20 px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl shrink-0"
+                           className="flex items-center gap-1.5 sm:gap-2 text-white font-bold text-xs sm:text-[14px] transition-all bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed shadow-sm hover:shadow-md px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl shrink-0"
                        >
                           <span>{currentPage < pages.length ? 'Trang sau' : 'Bài tiếp'}</span> <span>→</span>
                        </button>

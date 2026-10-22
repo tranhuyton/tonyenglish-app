@@ -718,31 +718,36 @@ export default function TaskBoard({
         </div>
       )}
 
-      {/* UNIFIED HEADER BANNER - DARKER BLUE OR THEME TITLE BG */}
-      <div className="px-2.5 sm:px-3 pt-2 sm:pt-2.5 pb-1.5 sm:pb-2 shrink-0">
+      {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
+      <div className="px-3 sm:px-5 pt-2.5 sm:pt-3 pb-2 shrink-0">
         <div 
-          className="rounded-2xl p-3 sm:p-4 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-2.5 sm:gap-3 transition-all duration-300 relative"
+          className="rounded-2xl sm:rounded-3xl px-4 sm:px-6 py-3.5 sm:py-4 shadow-md text-white flex flex-col xl:flex-row justify-between items-start xl:items-center gap-3 transition-all duration-300 relative overflow-hidden border border-slate-800/20"
           style={{ background: boardTheme.titleBg }}
         >
-          <div className="flex items-center justify-between w-full md:w-auto gap-3">
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              <span className="text-2xl sm:text-3xl">📋</span>
-              <div>
-                <h1 className="text-base sm:text-xl md:text-2xl font-bold tracking-tight text-white">
-                  Bảng Công Việc{courseTitle ? ` - ${courseTitle}` : (currentBoard?.title ? ` - ${currentBoard.title}` : '')}
-                </h1>
-                <p className="text-white/85 text-[11px] sm:text-xs md:text-sm mt-0.5">
-                  Theo dõi tiến độ bài học và làm bài tập
-                </p>
+          {/* Decorative Ambient Glow */}
+          <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
+          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
+
+          <div className="relative z-10 flex items-center justify-between w-full xl:w-auto gap-3">
+            <div>
+              <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-xs border border-white/15 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                TonyEnglish Task Board • Bảng Công Việc
               </div>
+              <h1 className="text-base sm:text-xl md:text-2xl font-black tracking-tight text-white leading-tight">
+                Bảng Công Việc{courseTitle ? ` — ${courseTitle}` : (currentBoard?.title ? ` — ${currentBoard.title}` : '')}
+              </h1>
+              <p className="text-slate-200/85 text-[11px] sm:text-xs font-medium mt-0.5 hidden sm:block">
+                Quản lý lộ trình học tập theo chuyên đề, đánh dấu hoàn thành nhiệm vụ &amp; luyện tập đề thi.
+              </p>
             </div>
 
             {/* Mobile More Button in Top Header */}
-            <div className="sm:hidden relative">
+            <div className="sm:hidden relative shrink-0">
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="w-8 h-8 rounded-xl bg-white/20 hover:bg-white/30 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
+                className="w-8 h-8 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
                 title="Tùy chọn bảng công việc"
               >
                 ⋯
@@ -757,7 +762,7 @@ export default function TaskBoard({
                       onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
                       className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                     >
-                      <span className="text-base">🎨</span> Đổi màu nền bảng việc
+                      <span className="text-base">🎨</span> Đổi giao diện màu nền
                     </button>
                     {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
                       <button
@@ -781,7 +786,7 @@ export default function TaskBoard({
                       <button
                         type="button"
                         onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
-                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0ea5e9] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                       >
                         <span className="text-base">📚</span> Mở kho đề
                       </button>
@@ -792,15 +797,15 @@ export default function TaskBoard({
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full md:w-auto justify-between md:justify-end">
+          <div className="relative z-10 flex flex-wrap items-center gap-2 sm:gap-2.5 w-full xl:w-auto justify-between xl:justify-end">
             {/* Switch tabs if multiple boards exist */}
             {boardsData.length > 1 && (
-              <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm p-1 rounded-xl overflow-x-auto max-w-full custom-scrollbar">
+              <div className="flex items-center gap-1 bg-white/10 backdrop-blur-xs border border-white/15 p-1 rounded-xl overflow-x-auto max-w-full custom-scrollbar">
                 {boardsData.map((b, idx) => (
                   <button
                     key={b.title}
                     onClick={() => setActiveBoardIndex(idx)}
-                    className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-white text-slate-800 shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
+                    className={`px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
                   >
                     {b.title}
                   </button>
@@ -810,16 +815,24 @@ export default function TaskBoard({
 
             {/* Progress bar */}
             {currentBoard && currentBoard.totalItems > 0 && (
-              <div className="flex flex-col items-start sm:items-end">
-                <div className="text-xs sm:text-sm text-white/90 font-medium mb-1">
-                  Tiến độ: {currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)
+              <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-1.5 flex flex-col justify-center min-w-[165px]">
+                <div className="flex items-center justify-between text-[11.5px] text-white/95 font-bold mb-1 gap-2">
+                  <span>Tiến độ chung</span>
+                  <span className="text-[#2ab4e8] font-black">{currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)</span>
                 </div>
-                <div className="w-36 sm:w-40 h-2 bg-white/25 rounded-full overflow-hidden">
+                <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
                   <div 
-                    className="h-full bg-white rounded-full transition-all duration-500"
+                    className="h-full bg-gradient-to-r from-[#2ab4e8] to-emerald-400 rounded-full transition-all duration-500"
                     style={{ width: `${currentBoard.overallProgress}%` }}
                   />
                 </div>
+              </div>
+            )}
+
+            {/* Quick actions & Course switcher integrated in header on desktop */}
+            {bottomActions && (
+              <div className="hidden sm:block">
+                {bottomActions}
               </div>
             )}
 
@@ -828,10 +841,10 @@ export default function TaskBoard({
               <button
                 type="button"
                 onClick={() => handleResetColumnOrder(currentBoard.title)}
-                className="hidden sm:flex bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3 py-1.5 rounded-xl transition-all shadow-sm items-center gap-1.5 cursor-pointer shrink-0"
+                className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs font-bold px-3 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0"
                 title="Khôi phục thứ tự các cột ban đầu"
               >
-                <span>↺</span> <span>Đặt lại thứ tự cột</span>
+                <span>↺</span> <span className="hidden 2xl:inline">Đặt lại cột</span>
               </button>
             )}
 
@@ -839,10 +852,10 @@ export default function TaskBoard({
             <button
               type="button"
               onClick={() => setIsThemeModalOpen(true)}
-              className="hidden sm:flex bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3 py-1.5 rounded-xl transition-all shadow-sm items-center gap-1.5 cursor-pointer shrink-0"
-              title="Đổi màu nền bảng làm việc giống Trello"
+              className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs font-bold px-3 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0"
+              title="Đổi giao diện màu nền"
             >
-              <span>🎨</span> <span>Đổi màu nền</span>
+              <span>🎨</span> <span className="hidden 2xl:inline">Giao diện</span>
             </button>
           </div>
         </div>
@@ -858,7 +871,7 @@ export default function TaskBoard({
             <div 
               ref={boardScrollContainerRef}
               onScroll={handleBoardScroll}
-              className={`flex-1 min-h-0 h-full flex flex-row gap-3 sm:gap-4 overflow-x-auto overflow-y-hidden pb-4 sm:pb-[82px] pt-1 board-horizontal-scrollbar items-start w-full px-3.5 sm:px-4 snap-x snap-mandatory sm:snap-none ${
+              className={`flex-1 min-h-0 h-full flex flex-row gap-3.5 sm:gap-4 overflow-x-auto overflow-y-hidden pb-3 sm:pb-4 pt-1 board-horizontal-scrollbar items-start w-full px-3 sm:px-5 snap-x snap-mandatory sm:snap-none ${
                 boardTheme.isDark ? 'dark-theme' : ''
               }`}
               style={{
@@ -875,9 +888,9 @@ export default function TaskBoard({
                 });
                 const dbTheme = parseModuleTheme(matchingCol?.title || col.name);
                 const userColColor = customColColors[col.name];
-                const effectiveBg = userColColor?.bg || (dbTheme.hasColor ? dbTheme.bg : '#f1f2f4');
+                const effectiveBg = userColColor?.bg || (dbTheme.hasColor ? dbTheme.bg : '#f1f5f9');
                 const effectiveBorder = userColColor?.border || (dbTheme.hasColor ? dbTheme.border : '#cbd5e1');
-                const effectiveText = userColColor?.text || (dbTheme.hasColor ? dbTheme.text : '#1e293b');
+                const effectiveText = userColColor?.text || (dbTheme.hasColor ? dbTheme.text : '#0f172a');
                 const cleanColTitle = dbTheme.cleanTitle;
 
                 const isDragging = draggedColName === col.name;
@@ -927,11 +940,11 @@ export default function TaskBoard({
                       setDraggedColName(null);
                       setDragOverColName(null);
                     }}
-                    className={`board-column flex-none w-[86vw] max-w-[340px] sm:w-[280px] snap-center sm:snap-align-none rounded-[1.25rem] border p-2.5 sm:p-3 flex flex-col max-h-full min-h-0 transition-all duration-200 shadow-sm ${
+                    className={`board-column flex-none w-[86vw] max-w-[340px] sm:w-[295px] snap-center sm:snap-align-none rounded-2xl border p-2.5 sm:p-3 flex flex-col max-h-full min-h-0 transition-all duration-200 shadow-xs ${
                       isDragging 
-                        ? 'opacity-30 scale-95 border-dashed border-2 border-sky-400 bg-sky-50/50' 
+                        ? 'opacity-30 scale-95 border-dashed border-2 border-[#2ab4e8] bg-sky-50/50' 
                         : isDragOver
-                          ? 'ring-4 ring-sky-400/50 scale-[1.01] border-sky-400 shadow-xl'
+                          ? 'ring-4 ring-[#2ab4e8]/40 scale-[1.01] border-[#2ab4e8] shadow-xl'
                           : 'hover:shadow-md'
                     }`}
                     style={{
@@ -942,33 +955,31 @@ export default function TaskBoard({
                   >
                     {/* Column Header */}
                     <div 
-                      className="column-drag-handle flex justify-between items-center p-2.5 rounded-xl mb-2.5 shadow-xs transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
+                      className="column-drag-handle flex justify-between items-center p-2.5 rounded-xl mb-2.5 shadow-2xs transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
                       style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.65)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.85)',
                         borderColor: effectiveBorder,
                         borderWidth: '1px',
                         color: effectiveText
                       }}
                       title="Nhấp và kéo để đổi vị trí cột"
                     >
-                      <div className="flex items-center gap-1.5 min-w-0 flex-1">
-                        <span className="opacity-40 hover:opacity-80 transition-opacity shrink-0 text-sm leading-none select-none cursor-grab" title="Kéo thả cột">
-                          ⠿
-                        </span>
-                        <h2 className="font-bold text-[14px] truncate tracking-tight" title={cleanColTitle}>
+                      <div className="flex items-center gap-2 min-w-0 flex-1">
+                        <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: effectiveText, opacity: 0.65 }}></span>
+                        <h2 className="font-extrabold text-[13.5px] truncate tracking-tight" title={cleanColTitle}>
                           {cleanColTitle}
                         </h2>
                       </div>
                       <div className="flex items-center gap-1.5 shrink-0">
                         <span 
-                          className="text-[11px] font-bold px-2 py-0.5 rounded-lg border shadow-2xs"
+                          className="text-[11px] font-extrabold px-2 py-0.5 rounded-lg border shadow-2xs"
                           style={{
                             backgroundColor: 'white',
                             borderColor: effectiveBorder,
                             color: effectiveText
                           }}
                         >
-                          {col.cards.length} thẻ
+                          {col.cards.length} bài
                         </span>
                         <button
                           type="button"
@@ -978,7 +989,7 @@ export default function TaskBoard({
                           }}
                           className="w-6 h-6 rounded-lg bg-white hover:bg-slate-50 border flex items-center justify-center text-xs transition-all cursor-pointer shadow-2xs hover:scale-105"
                           style={{ borderColor: effectiveBorder }}
-                          title="Đổi màu nền cột này (Trello style)"
+                          title="Đổi màu nền cột này"
                         >
                           🎨
                         </button>
@@ -1017,18 +1028,18 @@ export default function TaskBoard({
                           <div 
                             key={card.title} 
                             onClick={() => setActiveModalCard({ card, colName: col.name, boardTitle: board.title })}
-                            className={`task-card-item bg-white rounded-xl border shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 p-3 cursor-pointer select-none group ${
+                            className={`task-card-item bg-white rounded-xl border shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 p-3.5 cursor-pointer select-none group ${
                               isCardAllDone 
                                 ? 'border-emerald-300 bg-gradient-to-br from-white to-emerald-50/40' 
-                                : 'border-slate-200/90 hover:border-sky-300'
+                                : 'border-slate-200/90 hover:border-[#2ab4e8]'
                             }`}
                           >
                             <div className="flex justify-between items-start gap-2 mb-2">
-                              <h3 className="font-bold text-slate-800 text-[13px] leading-snug group-hover:text-sky-600 transition-colors tracking-tight">
+                              <h3 className="font-bold text-slate-800 text-[13.5px] leading-snug group-hover:text-[#0a5482] transition-colors tracking-tight">
                                 {card.title}
                               </h3>
-                              <span className="text-slate-300 group-hover:text-sky-500 text-xs transition-colors shrink-0 mt-0.5">
-                                ➜
+                              <span className="text-slate-300 group-hover:text-[#2ab4e8] text-xs transition-colors shrink-0 mt-0.5">
+                                →
                               </span>
                             </div>
                             
@@ -1037,11 +1048,11 @@ export default function TaskBoard({
                               <div className="flex items-center gap-2 mb-2">
                                 <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                                   <div 
-                                    className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-emerald-500' : 'bg-gradient-to-r from-sky-400 to-sky-600'}`}
+                                    className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-emerald-500' : 'bg-gradient-to-r from-[#0a5482] to-[#2ab4e8]'}`}
                                     style={{ width: `${progressPct}%` }}
                                   />
                                 </div>
-                                <span className={`text-[11px] font-bold shrink-0 ${isCardAllDone ? 'text-emerald-600' : 'text-sky-600'}`}>
+                                <span className={`text-[11px] font-extrabold shrink-0 ${isCardAllDone ? 'text-emerald-600' : 'text-[#0a5482]'}`}>
                                   {progressPct}%
                                 </span>
                               </div>
@@ -1054,11 +1065,11 @@ export default function TaskBoard({
                                   className={`inline-flex items-center gap-1.5 text-[11px] transition-all select-none ${
                                     isManualDone 
                                       ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
-                                      : 'text-slate-600 font-medium hover:text-slate-900 px-1 py-0.5 rounded'
+                                      : 'text-slate-600 font-semibold hover:text-[#0a5482] bg-slate-50 border border-slate-200/80 px-2 py-0.5 rounded-md'
                                   }`}
                                   title={`Công việc: ${manualCompleted}/${manualTotal} đã hoàn thành`}
                                 >
-                                  <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                                  <svg className="w-3 h-3 shrink-0" viewBox="0 0 16 16" fill="currentColor">
                                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                                     <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
                                   </svg>
@@ -1071,11 +1082,11 @@ export default function TaskBoard({
                                   className={`inline-flex items-center gap-1.5 text-[11px] transition-all select-none ${
                                     isTestDone 
                                       ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
-                                      : 'text-slate-600 font-medium hover:text-slate-900 px-1 py-0.5 rounded'
+                                      : 'text-[#0a5482] font-semibold bg-sky-50/80 border border-sky-200/80 px-2 py-0.5 rounded-md'
                                   }`}
                                   title={`Bài tập: ${testCompleted}/${testTotal} đã làm`}
                                 >
-                                  <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                                  <svg className="w-3 h-3 shrink-0" viewBox="0 0 16 16" fill="currentColor">
                                     <path fillRule="evenodd" d="M4 1.5A1.5 1.5 0 002.5 3v10A1.5 1.5 0 004 14.5h8a1.5 1.5 0 001.5-1.5V5.414A1.5 1.5 0 0013.086 4.35l-2.436-2.436A1.5 1.5 0 009.586 1.5H4zm5 1.707L12.293 6H10a1 1 0 01-1-1V3.207zM5 8.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 8.5zm0 2.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 11z" clipRule="evenodd" />
                                   </svg>
                                   <span>{testCompleted}/{testTotal} bài tập</span>
@@ -1097,8 +1108,8 @@ export default function TaskBoard({
               })}
             </div>
 
-            {/* Trello-like Mobile Dots Carousel & Column Navigation */}
-            <div className="sm:hidden flex items-center justify-between px-5 py-2 shrink-0 z-20 bg-black/10 backdrop-blur-xs">
+            {/* Mobile Dots Carousel & Column Navigation */}
+            <div className="sm:hidden flex items-center justify-between px-5 py-2 shrink-0 z-20 bg-slate-900/80 backdrop-blur-xs">
               <button
                 type="button"
                 onClick={() => scrollToColumn(Math.max(0, activeMobileColIndex - 1))}
@@ -1117,7 +1128,7 @@ export default function TaskBoard({
                     onClick={() => scrollToColumn(i)}
                     className={`transition-all duration-300 rounded-full cursor-pointer shrink-0 ${
                       activeMobileColIndex === i 
-                        ? 'w-6 h-2 bg-white shadow-md' 
+                        ? 'w-6 h-2 bg-[#2ab4e8] shadow-md' 
                         : 'w-2 h-2 bg-white/40 hover:bg-white/70'
                     }`}
                     title={`Chuyển tới cột: ${parseModuleTheme(c.name).cleanTitle}`}
@@ -1135,15 +1146,6 @@ export default function TaskBoard({
                 ›
               </button>
             </div>
-
-            {/* Floating Bottom Controls centered above scrollbar on desktop */}
-            {bottomActions && (
-              <div className="hidden sm:flex absolute bottom-3 left-1/2 -translate-x-1/2 z-30 pointer-events-none w-full max-w-[95vw] px-2 justify-center">
-                <div className="pointer-events-auto">
-                  {bottomActions}
-                </div>
-              </div>
-            )}
           </div>
         );
       })()}

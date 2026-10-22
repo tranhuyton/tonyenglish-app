@@ -15,18 +15,26 @@ export interface BoardTheme {
 }
 
 export const DEFAULT_BOARD_THEME: BoardTheme = {
-  id: 'trello-ocean',
-  name: 'Xanh Trello (Mặc định)',
-  boardBg: '#0079bf',
-  titleBg: 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
+  id: 'tony-classic',
+  name: 'TonyEnglish Chuẩn (Mặc định)',
+  boardBg: '#f8fafc',
+  titleBg: 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)',
   titleText: '#ffffff',
-  isDark: true
+  isDark: false
 };
 
 export const BOARD_THEMES: BoardTheme[] = [
   {
-    id: 'trello-ocean',
-    name: 'Xanh Trello (Mặc định)',
+    id: 'tony-classic',
+    name: 'TonyEnglish Chuẩn (Mặc định)',
+    boardBg: '#f8fafc',
+    titleBg: 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)',
+    titleText: '#ffffff',
+    isDark: false
+  },
+  {
+    id: 'trello-ocean-custom',
+    name: 'Xanh Đại Dương (Trello)',
     boardBg: '#0079bf',
     titleBg: 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
     titleText: '#ffffff',
@@ -118,8 +126,8 @@ export function loadTheme(storageKey: string, fallbackKey?: string): BoardTheme 
     const parseOrMigrate = (raw: string | null): BoardTheme | null => {
       if (!raw) return null;
       const parsed = JSON.parse(raw);
-      // Auto-migrate legacy default 'light-blue' to new default 'trello-ocean'
-      if (parsed?.id === 'light-blue') {
+      // Auto-migrate legacy defaults ('light-blue', 'trello-ocean') to new default 'tony-classic'
+      if (parsed?.id === 'light-blue' || parsed?.id === 'trello-ocean') {
         return DEFAULT_BOARD_THEME;
       }
       return parsed;

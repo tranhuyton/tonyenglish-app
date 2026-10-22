@@ -396,11 +396,11 @@ export default function AssignmentCalendar({
 
   // Helper: get cell background based on status
   const getCellBg = (status: 'blue' | 'green' | 'red' | undefined, isSelected: boolean) => {
-    if (isSelected) return 'bg-[#0ea5e9] text-white shadow-md scale-105';
+    if (isSelected) return 'bg-[#0a5482] text-white shadow-md scale-105 ring-2 ring-[#2ab4e8]/50 font-black';
     if (!status) return '';
-    if (status === 'green') return 'bg-emerald-100 text-emerald-800 font-bold';
-    if (status === 'red') return 'bg-rose-100 text-rose-700 font-bold';
-    return 'bg-sky-100 text-sky-800 font-bold';
+    if (status === 'green') return 'bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold';
+    if (status === 'red') return 'bg-rose-50 text-rose-700 border border-rose-200 font-bold';
+    return 'bg-sky-50 text-[#0a5482] border border-sky-200 font-bold';
   };
 
   const headerActions = topActions || rightActions;
@@ -419,175 +419,195 @@ export default function AssignmentCalendar({
     ? Math.round((completedTotalCount / selectedTasks.length) * 100) 
     : 0;
 
+  const isCustomBg = calendarTheme.id !== 'tony-classic';
+
   return (
     <div 
-      className="w-full min-h-[500px] p-3 sm:p-4 md:p-5 text-slate-800 rounded-3xl relative"
-      style={{ backgroundColor: calendarTheme.boardBg }}
+      className={`w-full min-h-[500px] text-slate-800 relative transition-colors duration-300 ${
+        isCustomBg ? 'p-3 sm:p-4 md:p-5 rounded-3xl' : 'p-0'
+      }`}
+      style={isCustomBg ? { backgroundColor: calendarTheme.boardBg } : undefined}
     >
-      <div className="w-full space-y-4">
-        {headerActions && (
-          <div className="flex justify-end relative z-40 mb-2">
-            {headerActions}
-          </div>
-        )}
-
-        {/* UNIFIED BLUE HEADER BANNER */}
+      <div className="w-full space-y-5">
+        {/* TONYENGLISH.VN SYNCHRONIZED HERO BANNER */}
         <div 
-          className="rounded-2xl p-3.5 sm:p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 relative"
+          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 relative overflow-hidden border border-slate-800/20"
           style={{ background: calendarTheme.titleBg }}
         >
-          <div className="flex items-center justify-between w-full md:w-auto gap-3">
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              <span className="text-2xl sm:text-3xl">📅</span>
+          {/* Decorative Ambient Glow */}
+          <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
+
+          <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+            <div className="flex items-start justify-between w-full lg:w-auto gap-3">
               <div>
-                <h1 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
-                  Lịch Báo Bài{courseTitle ? ` - ${courseTitle}` : ''}
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  TonyEnglish Study Schedule • Lịch Báo Bài
+                </div>
+                <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
+                  Lịch Báo Bài{courseTitle ? ` — ${courseTitle}` : ''}
                 </h1>
-                <p className="text-white/80 text-[11px] sm:text-xs md:text-sm mt-0.5">
-                  Bấm vào ngày để xem và cập nhật tiến độ
+                <p className="text-slate-200/85 text-xs sm:text-sm mt-1 font-medium">
+                  Chọn ngày trên lịch để theo dõi tiến độ tự học và hoàn thành bài tập đúng hạn.
                 </p>
               </div>
+
+              {/* Mobile More Button in Top Header */}
+              <div className="sm:hidden relative shrink-0">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
+                  title="Tùy chọn khác"
+                >
+                  ⋯
+                </button>
+
+                {isMobileMenuOpen && (
+                  <>
+                    <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
+                    <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-200 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150 text-slate-800">
+                      <button
+                        type="button"
+                        onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
+                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                      >
+                        <span className="text-base">🎨</span> Đổi giao diện màu nền
+                      </button>
+                      {onOpenLecture && (
+                        <button
+                          type="button"
+                          onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
+                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                        >
+                          <span className="text-base">📖</span> Bài giảng lý thuyết
+                        </button>
+                      )}
+                      {onStartTest && (
+                        <button
+                          type="button"
+                          onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
+                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                        >
+                          <span className="text-base">📚</span> Mở kho đề
+                        </button>
+                      )}
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
 
-            {/* Mobile More Button in Top Header */}
-            <div className="sm:hidden relative">
-              <button
-                type="button"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="w-8 h-8 rounded-xl bg-white/20 hover:bg-white/30 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
-                title="Tùy chọn khác"
-              >
-                ⋯
-              </button>
-
-              {isMobileMenuOpen && (
-                <>
-                  <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
-                  <div className="absolute right-0 top-full mt-2 w-52 bg-white rounded-2xl shadow-2xl border border-slate-200 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150 text-slate-800">
-                    <button
-                      type="button"
-                      onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
-                      className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
-                    >
-                      <span className="text-base">🎨</span> Đổi màu nền lịch
-                    </button>
-                    {onOpenLecture && (
-                      <button
-                        type="button"
-                        onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
-                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
-                      >
-                        <span className="text-base">📖</span> Bài giảng lý thuyết
-                      </button>
-                    )}
-                    {onStartTest && (
-                      <button
-                        type="button"
-                        onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
-                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0ea5e9] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
-                      >
-                        <span className="text-base">📚</span> Mở kho đề
-                      </button>
-                    )}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto justify-between lg:justify-end">
+              {selectedTasks.length > 0 ? (
+                <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2 flex flex-col justify-center min-w-[200px]">
+                  <div className="flex items-center justify-between text-xs text-white/95 font-bold mb-1.5 gap-3">
+                    <span className="truncate">{rangeLabel}</span>
+                    <span className="text-[#2ab4e8] font-black shrink-0">{completedTotalCount}/{selectedTasks.length} ({progressPercent}%)</span>
                   </div>
-                </>
+                  <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-[#2ab4e8] to-emerald-400 rounded-full transition-all duration-500"
+                      style={{ width: `${progressPercent}%` }}
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2 text-xs text-slate-200 font-semibold self-start sm:self-auto">
+                  {calendarMode === 'day' && !selectedDate 
+                    ? '👈 Chọn một ngày trên lịch để xem công việc'
+                    : `${rangeLabel}: Chưa có nhiệm vụ được giao`
+                  }
+                </div>
               )}
+
+              <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0">
+                {/* MODE FILTER */}
+                <div className="flex bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl p-1 gap-0.5">
+                  {([
+                    { key: 'day' as const, label: 'Ngày' },
+                    { key: 'month' as const, label: 'Tháng' },
+                    { key: 'all' as const, label: 'Tất cả' },
+                  ]).map(m => (
+                    <button
+                      key={m.key}
+                      onClick={() => setCalendarMode(m.key)}
+                      className={`text-[12px] font-extrabold px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                        calendarMode === m.key
+                          ? 'bg-white text-[#0a5482] shadow-xs'
+                          : 'text-white/80 hover:bg-white/10 hover:text-white'
+                      }`}
+                    >
+                      {m.label}
+                    </button>
+                  ))}
+                </div>
+
+                {/* NÚT HÔM NAY */}
+                <button 
+                  onClick={goToday} 
+                  className="bg-[#2ab4e8] hover:bg-[#1fa0d4] active:scale-95 text-white text-xs sm:text-[13px] font-extrabold px-3.5 sm:px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                  title="Xem công việc hôm nay"
+                >
+                  <span>🎯</span> <span>Hôm nay</span>
+                </button>
+                
+                {/* NÚT ĐỔI MÀU NỀN (desktop only, mobile hides it into ⋯) */}
+                <button 
+                  onClick={() => setIsThemeModalOpen(true)} 
+                  className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0"
+                  title="Đổi giao diện màu nền"
+                >
+                  <span>🎨</span> <span className="hidden xl:inline">Giao diện</span>
+                </button>
+              </div>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center sm:items-end gap-2.5 sm:gap-4 w-full md:w-auto justify-between md:justify-end">
-            {selectedTasks.length > 0 ? (
-              <div className="flex flex-col items-start sm:items-end w-full sm:w-auto">
-                <div className="text-xs sm:text-sm text-white/90 font-medium mb-1">
-                  Tiến độ {rangeLabel}: {completedTotalCount}/{selectedTasks.length} ({progressPercent}%)
-                </div>
-                <div className="w-full sm:w-48 h-2 bg-white/20 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-white rounded-full transition-all duration-500"
-                    style={{ width: `${progressPercent}%` }}
-                  />
-                </div>
+          {headerActions && (
+            <div className="relative z-20 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80 hidden sm:inline">
+                Lối tắt học tập &amp; Bộ lọc khóa học:
+              </span>
+              <div className="w-full sm:w-auto flex justify-end">
+                {headerActions}
               </div>
-            ) : (
-              <div className="text-[11px] sm:text-xs text-white/80 font-medium self-start sm:self-auto">
-                {calendarMode === 'day' && !selectedDate 
-                  ? 'Bấm vào một ngày trên lịch để xem công việc'
-                  : `${rangeLabel}: Không có công việc & bài tập`
-                }
-              </div>
-            )}
-
-            <div className="flex items-center justify-between sm:justify-end w-full sm:w-auto gap-2 shrink-0">
-              {/* MODE FILTER */}
-              <div className="flex bg-white/15 rounded-xl p-0.5 gap-0.5">
-                {([
-                  { key: 'day' as const, label: 'Ngày' },
-                  { key: 'month' as const, label: 'Tháng' },
-                  { key: 'all' as const, label: 'Tất cả' },
-                ]).map(m => (
-                  <button
-                    key={m.key}
-                    onClick={() => setCalendarMode(m.key)}
-                    className={`text-[12px] font-bold px-2.5 sm:px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
-                      calendarMode === m.key
-                        ? 'bg-white text-[#0ea5e9] shadow-sm'
-                        : 'text-white/80 hover:bg-white/10 hover:text-white'
-                    }`}
-                  >
-                    {m.label}
-                  </button>
-                ))}
-              </div>
-
-              {/* NÚT HÔM NAY */}
-              <button 
-                onClick={goToday} 
-                className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
-                title="Xem công việc hôm nay"
-              >
-                <span>🎯</span> <span>Hôm nay</span>
-              </button>
-              
-              {/* NÚT ĐỔI MÀU NỀN (desktop only, mobile hides it into ⋯) */}
-              <button 
-                onClick={() => setIsThemeModalOpen(true)} 
-                className="hidden sm:flex bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm items-center gap-1.5 cursor-pointer shrink-0"
-                title="Đổi màu nền"
-              >
-                <span>🎨</span> <span>Đổi màu nền</span>
-              </button>
             </div>
-          </div>
+          )}
         </div>
 
         {/* 3-COLUMN CONTENT: CALENDAR (LEFT) & 2 COLUMNS (RIGHT: CỘT CÔNG VIỆC + CỘT BÀI TẬP) */}
-        <div className="flex flex-col xl:flex-row gap-4 items-start w-full">
+        <div className="flex flex-col xl:flex-row gap-5 items-start w-full">
           
           {/* ========== LEFT: CALENDAR ========== */}
-          <div className="w-full xl:w-[380px] 2xl:w-[410px] shrink-0">
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div className="w-full xl:w-[380px] 2xl:w-[400px] shrink-0">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xs border border-slate-200/90 overflow-hidden">
               {/* MONTH NAV */}
-              <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-100 bg-slate-50/70">
-                <button onClick={prevMonth} className="w-8 h-8 rounded-full hover:bg-white border border-transparent hover:border-slate-200 flex items-center justify-center text-slate-500 transition-all shadow-sm cursor-pointer">
+              <div className="flex items-center justify-between px-5 py-4 border-b border-slate-200/80 bg-slate-50/70">
+                <button onClick={prevMonth} className="w-8 h-8 rounded-xl bg-white hover:bg-sky-50 border border-slate-200/90 hover:border-[#2ab4e8] flex items-center justify-center text-[#0a5482] transition-all shadow-2xs cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
                 </button>
-                <h3 className="font-black text-slate-800 text-[15px] capitalize tracking-tight flex items-center gap-1.5">
-                  <span>🗓️</span> {monthLabel}
-                </h3>
-                <button onClick={nextMonth} className="w-8 h-8 rounded-full hover:bg-white border border-transparent hover:border-slate-200 flex items-center justify-center text-slate-500 transition-all shadow-sm cursor-pointer">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-5 bg-[#0a5482] rounded-full"></span>
+                  <h3 className="font-black text-slate-900 text-[15.5px] capitalize tracking-tight">
+                    {monthLabel}
+                  </h3>
+                </div>
+                <button onClick={nextMonth} className="w-8 h-8 rounded-xl bg-white hover:bg-sky-50 border border-slate-200/90 hover:border-[#2ab4e8] flex items-center justify-center text-[#0a5482] transition-all shadow-2xs cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
                 </button>
               </div>
 
               {/* WEEKDAY HEADERS */}
-              <div className="grid grid-cols-7 px-3 pt-3 pb-1">
+              <div className="grid grid-cols-7 px-3.5 pt-3.5 pb-1.5">
                 {WEEKDAYS.map(d => (
-                  <div key={d} className="text-center text-[11px] font-bold text-slate-400 uppercase">{d}</div>
+                  <div key={d} className="text-center text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">{d}</div>
                 ))}
               </div>
 
               {/* CALENDAR GRID */}
-              <div className="grid grid-cols-7 px-3 pb-3 gap-1">
+              <div className="grid grid-cols-7 px-3.5 pb-3.5 gap-1.5">
                 {calendarDays.map((day, i) => {
                   const status = dateStatusMap[day.date];
                   const hasTask = !!status;
@@ -599,11 +619,11 @@ export default function AssignmentCalendar({
                       key={i}
                       onClick={() => (hasTask || day.isCurrentMonth) ? setSelectedDate(isSelected ? null : day.date) : undefined}
                       className={`
-                        aspect-square rounded-xl flex items-center justify-center text-[13px] font-semibold transition-all
+                        aspect-square rounded-xl flex items-center justify-center text-[13px] font-bold transition-all
                         ${!day.isCurrentMonth ? 'text-slate-300' : 'text-slate-700'}
-                        ${day.isToday && !isSelected ? 'ring-2 ring-[#0ea5e9] ring-offset-1' : ''}
+                        ${day.isToday && !isSelected ? 'ring-2 ring-[#2ab4e8] ring-offset-1 text-[#0a5482] font-black' : ''}
                         ${cellBg}
-                        ${day.isCurrentMonth && !isSelected ? 'hover:bg-slate-100 cursor-pointer' : ''}
+                        ${day.isCurrentMonth && !isSelected ? 'hover:bg-sky-50 hover:text-[#0a5482] cursor-pointer' : ''}
                         ${!day.isCurrentMonth ? 'cursor-default' : ''}
                       `}
                     >
@@ -614,41 +634,42 @@ export default function AssignmentCalendar({
               </div>
 
               {/* LEGEND */}
-              <div className="flex items-center justify-center gap-4 px-4 py-3 bg-slate-50/50 border-t border-slate-100 text-[10px] text-slate-500 font-medium">
-                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-sky-100 border border-sky-300"></span> Chưa xong</span>
-                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-emerald-100 border border-emerald-300"></span> Hoàn thành</span>
-                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-rose-100 border border-rose-300"></span> Quá hạn</span>
+              <div className="flex items-center justify-center gap-4 px-4 py-3.5 bg-slate-50/80 border-t border-slate-200/80 text-[11px] text-slate-600 font-bold">
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-sky-100 border border-sky-300"></span> Đang giao</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-emerald-100 border border-emerald-300"></span> Hoàn thành</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-rose-100 border border-rose-300"></span> Quá hạn</span>
               </div>
             </div>
           </div>
 
           {/* ========== RIGHT: 2 COLUMNS (DANH SÁCH CÔNG VIỆC & DANH SÁCH BÀI TẬP) ========== */}
-          <div className="flex-1 min-w-0 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+          <div className="flex-1 min-w-0 w-full grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
             
             {/* ========== CỘT 1: CỘT CÔNG VIỆC (MANUAL TASKS) ========== */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-[560px]">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xs border border-slate-200/90 overflow-hidden flex flex-col h-[575px]">
               {/* Header Cột Công việc */}
-              <div className="px-4 py-3.5 border-b border-slate-100 bg-gradient-to-r from-blue-50/70 to-sky-50/50 flex items-center justify-between shrink-0">
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <div className="w-8 h-8 rounded-xl bg-sky-500 text-white flex items-center justify-center text-sm shadow-xs shrink-0">
+              <div className="px-5 py-4 border-b border-slate-200/80 bg-slate-50/70 flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-3 min-w-0">
+                  <span className="w-1.5 h-6 bg-[#0a5482] rounded-full shrink-0"></span>
+                  <div className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center text-base shadow-2xs shrink-0">
                     📋
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-black text-slate-800 text-[14.5px] leading-tight truncate">
+                    <h3 className="font-black text-slate-900 text-[15px] leading-tight truncate">
                       Danh sách Công Việc
                     </h3>
-                    <p className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">
-                      Nhiệm vụ tự học, chép bài, tài liệu
+                    <p className="text-[11.5px] text-slate-500 font-medium mt-0.5 truncate">
+                      Nhiệm vụ tự học, chép bài &amp; tài liệu
                     </p>
                   </div>
                 </div>
-                <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-sky-100 text-sky-800 shrink-0">
+                <span className="text-[11px] font-extrabold px-2.5 py-1 rounded-full bg-sky-50 text-[#0a5482] border border-sky-200/80 shrink-0">
                   {completedManualCount}/{selectedManualTasks.length} xong
                 </span>
               </div>
 
-              {/* Nội dung danh sách công việc (Scrollable giống Trello) */}
-              <div className="flex-1 overflow-y-auto custom-scrollbar p-3 sm:p-4 space-y-2.5 bg-slate-50/40">
+              {/* Nội dung danh sách công việc */}
+              <div className="flex-1 overflow-y-auto custom-scrollbar p-3.5 sm:p-4 space-y-3 bg-slate-50/40">
                 {calendarMode === 'day' && !selectedDate ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">👈</span>
@@ -658,16 +679,16 @@ export default function AssignmentCalendar({
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">📭</span>
                     <p className="text-xs font-bold text-slate-600 mb-0.5">Không có công việc nào</p>
-                    <p className="text-[11px] text-slate-400">{rangeLabel} không có nhiệm vụ chép bài nào</p>
+                    <p className="text-[11px] text-slate-400">{rangeLabel} không có nhiệm vụ tự học nào</p>
                   </div>
                 ) : (
                   selectedManualTasks.map(task => (
                     <div 
                       key={task.id} 
-                      className={`p-3.5 rounded-xl border transition-all ${
+                      className={`p-4 rounded-2xl border transition-all duration-200 ${
                         task._effectiveCompleted 
-                          ? 'bg-emerald-50/50 border-emerald-200 shadow-xs' 
-                          : 'bg-white border-slate-200 hover:border-sky-300 shadow-xs'
+                          ? 'bg-emerald-50/40 border-emerald-200/90 shadow-2xs' 
+                          : 'bg-white border-slate-200/90 hover:border-[#2ab4e8] hover:shadow-md shadow-2xs'
                       }`}
                     >
                       <div className="flex items-start gap-3">
@@ -679,7 +700,7 @@ export default function AssignmentCalendar({
                               ? 'bg-emerald-500 border-emerald-500 text-white' 
                               : task.student_completed 
                                 ? 'bg-amber-100 border-amber-400 text-amber-600' 
-                                : 'border-slate-300 hover:border-[#0ea5e9] bg-white text-transparent'
+                                : 'border-slate-300 hover:border-[#0a5482] bg-white text-transparent'
                           } ${isUpdating === task.id ? 'animate-pulse' : ''}`}
                           title={task.is_completed ? "Đã được giáo viên duyệt" : task.student_completed ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
                         >
@@ -687,7 +708,7 @@ export default function AssignmentCalendar({
                         </button>
 
                         <div className="flex-1 min-w-0">
-                          <p className={`text-[13.5px] font-bold leading-snug ${
+                          <p className={`text-[14px] font-bold leading-snug ${
                             task._effectiveCompleted ? 'text-slate-400 line-through' : 'text-slate-800'
                           }`}>
                             {task.title}
@@ -695,7 +716,7 @@ export default function AssignmentCalendar({
                           {(() => {
                             const displayDesc = getDisplayDescription(task.description);
                             return displayDesc ? (
-                              <p className="text-[11.5px] text-slate-500 mt-1 leading-relaxed">
+                              <p className="text-[12px] text-slate-500 mt-1 leading-relaxed">
                                 {displayDesc}
                               </p>
                             ) : null;
@@ -705,7 +726,7 @@ export default function AssignmentCalendar({
                           {task._effectiveDueDate && (
                             <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium mt-1.5">
                               <span className="text-slate-400">📅 Ngày giao:</span>
-                              <span className="font-semibold text-slate-700">
+                              <span className="font-bold text-slate-700">
                                 {formatDateVN(task._effectiveDueDate)}
                               </span>
                               {task._effectiveDueDate !== task.due_date && (
@@ -719,20 +740,20 @@ export default function AssignmentCalendar({
                           {(() => {
                             const lecMeta = parseLectureFromItem(task, task.card_title, effectiveLectures);
                             return (
-                              <div className="mt-2.5 flex items-center justify-between gap-2 flex-wrap">
+                              <div className="mt-3 flex items-center justify-between gap-2 flex-wrap">
                                 <div className="flex items-center gap-2 flex-wrap">
                                   {task.is_completed && (
-                                    <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
+                                    <span className="text-[10px] font-extrabold bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full">
                                       ✅ Đã duyệt
                                     </span>
                                   )}
                                   {task.student_completed && !task.is_completed && (
-                                    <span className="text-[10px] font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
+                                    <span className="text-[10px] font-extrabold bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full">
                                       ⏳ Chờ giáo viên duyệt
                                     </span>
                                   )}
                                   {!task.student_completed && !task.is_completed && (
-                                    <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">
+                                    <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2.5 py-0.5 rounded-full">
                                       Chưa hoàn thành
                                     </span>
                                   )}
@@ -744,11 +765,11 @@ export default function AssignmentCalendar({
                                       e.stopPropagation();
                                       onOpenLecture?.(lecMeta.courseId || undefined, lecMeta.lectureId || undefined);
                                     }}
-                                    className="text-[11px] font-bold px-3 py-1 rounded-xl bg-sky-50 text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white border border-sky-200 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer shadow-2xs active:scale-95 ml-auto"
+                                    className="text-[11px] font-extrabold px-3 py-1.5 rounded-xl bg-sky-50 text-[#0a5482] hover:bg-[#0a5482] hover:text-white border border-sky-200/90 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer shadow-2xs active:scale-95 ml-auto"
                                     title="Đi tới bài giảng này"
                                   >
                                     <span>📖</span>
-                                    <span>Đến bài giảng ➜</span>
+                                    <span>Đến bài giảng →</span>
                                   </button>
                                 )}
                               </div>
@@ -763,29 +784,30 @@ export default function AssignmentCalendar({
             </div>
 
             {/* ========== CỘT 2: CỘT BÀI TẬP (TEST / EXERCISE TASKS) ========== */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-[560px]">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xs border border-slate-200/90 overflow-hidden flex flex-col h-[575px]">
               {/* Header Cột Bài tập */}
-              <div className="px-4 py-3.5 border-b border-slate-100 bg-gradient-to-r from-teal-50/70 to-emerald-50/50 flex items-center justify-between shrink-0">
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <div className="w-8 h-8 rounded-xl bg-teal-600 text-white flex items-center justify-center text-sm shadow-xs shrink-0">
+              <div className="px-5 py-4 border-b border-slate-200/80 bg-slate-50/70 flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-3 min-w-0">
+                  <span className="w-1.5 h-6 bg-[#2ab4e8] rounded-full shrink-0"></span>
+                  <div className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center text-base shadow-2xs shrink-0">
                     📚
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-black text-slate-800 text-[14.5px] leading-tight truncate">
+                    <h3 className="font-black text-slate-900 text-[15px] leading-tight truncate">
                       Danh sách Bài Tập
                     </h3>
-                    <p className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">
-                      Bài tập trong kho (Cần đạt ≥ 50%)
+                    <p className="text-[11.5px] text-slate-500 font-medium mt-0.5 truncate">
+                      Bài tập trong kho đề (Cần đạt ≥ 50%)
                     </p>
                   </div>
                 </div>
-                <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-teal-100 text-teal-800 shrink-0">
+                <span className="text-[11px] font-extrabold px-2.5 py-1 rounded-full bg-sky-50 text-[#0a5482] border border-sky-200/80 shrink-0">
                   {completedTestCount}/{selectedTestTasks.length} xong
                 </span>
               </div>
 
-              {/* Nội dung danh sách bài tập (Scrollable giống Trello) */}
-              <div className="flex-1 overflow-y-auto custom-scrollbar p-3 sm:p-4 space-y-2.5 bg-slate-50/40">
+              {/* Nội dung danh sách bài tập */}
+              <div className="flex-1 overflow-y-auto custom-scrollbar p-3.5 sm:p-4 space-y-3 bg-slate-50/40">
                 {calendarMode === 'day' && !selectedDate ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">👈</span>
@@ -808,14 +830,14 @@ export default function AssignmentCalendar({
                     return (
                       <div 
                         key={task.id} 
-                        className={`p-3.5 rounded-xl border transition-all ${
+                        className={`p-4 rounded-2xl border transition-all duration-200 ${
                           isDone 
-                            ? 'bg-emerald-50/50 border-emerald-200 shadow-xs' 
-                            : 'bg-white border-slate-200 hover:border-teal-300 shadow-xs'
+                            ? 'bg-emerald-50/40 border-emerald-200/90 shadow-2xs' 
+                            : 'bg-white border-slate-200/90 hover:border-[#2ab4e8] hover:shadow-md shadow-2xs'
                         }`}
                       >
                         <div className="flex items-start gap-3">
-                          {/* Đèn trạng thái cho bài tập trong kho (Không cho tick thủ công) */}
+                          {/* Đèn trạng thái cho bài tập trong kho */}
                           <div 
                             className={`mt-0.5 w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 select-none text-[11px] ${
                               isDone 
@@ -828,13 +850,13 @@ export default function AssignmentCalendar({
                           </div>
 
                           <div className="flex-1 min-w-0">
-                            <p className={`text-[13.5px] font-bold leading-snug ${
+                            <p className={`text-[14px] font-bold leading-snug ${
                               isDone ? 'text-slate-400 line-through' : 'text-slate-800'
                             }`}>
                               {task.title}
                             </p>
                             {task.description && (
-                              <p className="text-[11.5px] text-slate-500 mt-1 leading-relaxed">
+                              <p className="text-[12px] text-slate-500 mt-1 leading-relaxed">
                                 {task.description}
                               </p>
                             )}
@@ -843,7 +865,7 @@ export default function AssignmentCalendar({
                             {task._effectiveDueDate && (
                               <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium mt-1.5">
                                 <span className="text-slate-400">📅 Ngày giao:</span>
-                                <span className="font-semibold text-slate-700">
+                                <span className="font-bold text-slate-700">
                                   {formatDateVN(task._effectiveDueDate)}
                                 </span>
                                 {task._effectiveDueDate !== task.due_date && (
@@ -855,29 +877,29 @@ export default function AssignmentCalendar({
                             )}
 
                             {/* Badge điểm thi & Nút hành động */}
-                            <div className="mt-2.5 flex items-center justify-between gap-2 flex-wrap">
+                            <div className="mt-3 flex items-center justify-between gap-2 flex-wrap">
                               <div>
                                 {isDone ? (
                                   <div className="flex items-center gap-1.5 flex-wrap">
-                                    <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">
+                                    <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-extrabold">
                                       ✓ Đã đạt
                                     </span>
                                     {testScore && (
                                       <span 
-                                        className="inline-flex items-center gap-1 text-[10.5px] px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 font-black border border-sky-200 shadow-xs"
+                                        className="inline-flex items-center gap-1 text-[10.5px] px-2.5 py-0.5 rounded-full bg-sky-50 text-[#0a5482] font-black border border-sky-200/90 shadow-2xs"
                                         title={`Điểm làm gần đây: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
                                       >
                                         🎯 {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
-                                        <span className="text-[9.5px] font-bold text-sky-600">({testScore.percent}%)</span>
+                                        <span className="text-[9.5px] font-bold text-[#2ab4e8]">({testScore.percent}%)</span>
                                       </span>
                                     )}
                                   </div>
                                 ) : testScore ? (
-                                  <span className="inline-flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold border border-rose-200">
+                                  <span className="inline-flex items-center gap-1 text-[10px] px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold border border-rose-200">
                                     ⚠️ Chưa đạt: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • Cần ≥ 50%
                                   </span>
                                 ) : (
-                                  <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 font-medium">
+                                  <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 font-semibold">
                                     Chưa làm (Cần đạt ≥ 50%)
                                   </span>
                                 )}
@@ -887,7 +909,7 @@ export default function AssignmentCalendar({
                               {isDone ? (
                                 <button 
                                   onClick={() => task.test_id && onStartTest?.(task.test_id)}
-                                  className="text-[11px] font-bold px-3 py-1 rounded-lg bg-emerald-100 hover:bg-emerald-200 text-emerald-800 transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
+                                  className="text-[11px] font-extrabold px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white border border-emerald-200 transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-2xs"
                                   title="Làm lại bài thi này"
                                 >
                                   <span>🔄</span> Làm lại
@@ -895,18 +917,18 @@ export default function AssignmentCalendar({
                               ) : testScore ? (
                                 <button 
                                   onClick={() => task.test_id && onStartTest?.(task.test_id)}
-                                  className="text-[11px] font-bold px-3 py-1 rounded-lg bg-amber-500 hover:bg-amber-600 text-white transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
+                                  className="text-[11px] font-extrabold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
                                   title="Làm lại để đạt điểm yêu cầu (≥ 50%)"
                                 >
-                                  Làm lại để đạt điểm ➜
+                                  Làm lại để đạt điểm →
                                 </button>
                               ) : (
                                 <button 
                                   onClick={() => task.test_id && onStartTest?.(task.test_id)}
-                                  className="text-[11px] font-bold px-3 py-1 rounded-lg bg-[#0ea5e9] hover:bg-[#0284c7] text-white transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
+                                  className="text-[11px] font-extrabold px-3.5 py-1.5 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
                                   title="Bắt đầu làm bài"
                                 >
-                                  Bắt đầu làm bài ➜
+                                  Bắt đầu làm bài →
                                 </button>
                               )}
                             </div>
