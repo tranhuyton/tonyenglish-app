@@ -148,6 +148,10 @@ export function getYoutubeEmbedUrl(url: string | null | undefined): string {
   const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
   const match = url.match(regExp);
   if (match && match[2].length === 11) {
+    const listMatch = url.match(/[?&]list=([a-zA-Z0-9_-]+)/);
+    if (listMatch && listMatch[1]) {
+      return `https://www.youtube.com/embed/${match[2]}?list=${listMatch[1]}`;
+    }
     return `https://www.youtube.com/embed/${match[2]}`;
   }
   return url;

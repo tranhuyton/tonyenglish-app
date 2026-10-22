@@ -407,6 +407,9 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                         <img
                           src={resolveUploadUrl(vd.video_thumb)}
                           alt={vd.video_desc}
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                          }}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
