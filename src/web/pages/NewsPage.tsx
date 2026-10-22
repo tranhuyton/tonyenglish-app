@@ -804,21 +804,21 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             )}
 
                             {article.news_question && article.news_question.trim() !== '' && (
-                              <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+                              <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
                                 <button
                                   type="button"
                                   onClick={() => {
                                     setShowQuestion(!showQuestion);
                                     if (showQuestion) setShowAnswer(false);
                                   }}
-                                  className="w-full px-5 py-4 flex items-center justify-between text-left font-black text-base text-[#0a5482] hover:bg-sky-50/60 transition"
+                                  className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
                                 >
                                   <span>❓ {t('View Question')}</span>
-                                  <span>{showQuestion ? '▲' : '▼'}</span>
+                                  <span className="text-xs">{showQuestion ? '▲' : '▼'}</span>
                                 </button>
 
                                 {showQuestion && (
-                                  <div className="p-5 pt-2 border-t border-slate-200 space-y-4">
+                                  <div className="p-5 pt-3 bg-white border-t border-sky-100 space-y-4">
                                     <div
                                       className="legacy-prose"
                                       dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_question) }}
@@ -846,18 +846,18 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             )}
 
                             {article.news_conversation && article.news_conversation.trim() !== '' && (
-                              <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+                              <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
                                 <button
                                   type="button"
                                   onClick={() => setShowDialog(!showDialog)}
-                                  className="w-full px-5 py-4 flex items-center justify-between text-left font-black text-base text-[#0a5482] hover:bg-sky-50/60 transition"
+                                  className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
                                 >
                                   <span>💬 {t('View Conversation Dialog')}</span>
-                                  <span>{showDialog ? '▲' : '▼'}</span>
+                                  <span className="text-xs">{showDialog ? '▲' : '▼'}</span>
                                 </button>
                                 {showDialog && (
                                   <div
-                                    className="p-5 border-t border-slate-200 legacy-prose"
+                                    className="p-5 bg-white border-t border-sky-100 legacy-prose"
                                     dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_conversation) }}
                                   />
                                 )}
@@ -868,31 +868,34 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                       </>
                     );
                   })()}
-
-                  {/* Related Posts */}
-                  {relatedNews.length > 0 && (
-                    <div className="pt-6 border-t border-slate-200">
-                      <h3 className="text-xl font-black text-slate-800 mb-4">📌 {t('Related Post')}</h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {relatedNews.map((rel) => (
-                          <Link
-                            key={rel.news_id}
-                            to={`/news/view/${(rel.news_title_url || '').trim()}`}
-                            className="p-3.5 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200/80 text-[15px] sm:text-base font-bold text-slate-700 hover:text-[#0a5482] transition flex items-start gap-2"
-                          >
-                            <span className="text-[#2ab4e8] mt-0.5">•</span>
-                            <span className="line-clamp-2">{rel.news_title}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               ) : (
                 <div className="py-16 text-center text-slate-500 font-bold text-base">{t('Not any news!!')}</div>
               )}
             </div>
           </div>
+
+          {/* SEPARATE AIRY BLOCK FOR RELATED POSTS */}
+          {!loading && mode === 'detail' && article && relatedNews.length > 0 && (
+            <div className="bg-white/70 rounded-2xl border border-slate-200/60 px-6 py-5 sm:px-8 sm:py-6">
+              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-slate-400 mb-3.5 flex items-center gap-2">
+                <span className="opacity-70 text-sm">📌</span>
+                <span>{t('Related Post')}</span>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
+                {relatedNews.map((rel) => (
+                  <Link
+                    key={rel.news_id}
+                    to={`/news/view/${(rel.news_title_url || '').trim()}`}
+                    className="group py-2 px-3 -mx-3 rounded-lg hover:bg-slate-100/70 text-[14px] sm:text-[14.5px] font-normal text-slate-500 hover:text-[#0a5482] transition-colors flex items-center gap-2.5"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-[#2ab4e8] shrink-0 transition-colors" />
+                    <span className="line-clamp-1">{rel.news_title}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

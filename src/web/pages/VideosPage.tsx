@@ -292,21 +292,21 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                       {/* Interactive Question / Answer / Subtitles */}
                       <div className="space-y-3">
                         {currentVideo.video_question && currentVideo.video_question.trim() !== '' && (
-                          <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+                          <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
                             <button
                               type="button"
                               onClick={() => {
                                 setShowQuestion(!showQuestion);
                                 if (showQuestion) setShowAnswer(false);
                               }}
-                              className="w-full px-5 py-4 flex items-center justify-between text-left font-black text-base text-[#0a5482] hover:bg-sky-50/60 transition"
+                              className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
                             >
                               <span>❓ {t('View Question')}</span>
-                              <span>{showQuestion ? '▲' : '▼'}</span>
+                              <span className="text-xs">{showQuestion ? '▲' : '▼'}</span>
                             </button>
 
                             {showQuestion && (
-                              <div className="p-5 pt-2 border-t border-slate-200 space-y-4">
+                              <div className="p-5 pt-3 bg-white border-t border-sky-100 space-y-4">
                                 <div
                                   className="legacy-prose"
                                   dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(currentVideo.video_question) }}
@@ -336,18 +336,18 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                         )}
 
                         {currentVideo.video_conversation && currentVideo.video_conversation.trim() !== '' && (
-                          <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+                          <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
                             <button
                               type="button"
                               onClick={() => setShowSubtitles(!showSubtitles)}
-                              className="w-full px-5 py-4 flex items-center justify-between text-left font-black text-base text-[#0a5482] hover:bg-sky-50/60 transition"
+                              className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
                             >
                               <span>💬 {t('Same video with subtitles')}</span>
-                              <span>{showSubtitles ? '▲' : '▼'}</span>
+                              <span className="text-xs">{showSubtitles ? '▲' : '▼'}</span>
                             </button>
                             {showSubtitles && (
                               <div
-                                className="p-5 border-t border-slate-200 legacy-prose"
+                                className="p-5 bg-white border-t border-sky-100 legacy-prose"
                                 dangerouslySetInnerHTML={{
                                   __html: fixLegacyHtmlContent(currentVideo.video_conversation),
                                 }}
@@ -358,46 +358,49 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                       </div>
                     </div>
                   )}
-
-                  {/* VIDEO LIST IN THIS CATEGORY */}
-                  {videosInCate.length > 1 && (
-                    <div className="pt-6 border-t border-slate-200">
-                      <h3 className="text-xl font-black text-slate-800 mb-4">🎞️ {t('Video List')}</h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {videosInCate
-                          .filter((vd) => !currentVideo || vd.video_id !== currentVideo.video_id)
-                          .map((vd) => (
-                            <Link
-                              key={vd.video_id}
-                              to={`/video/${cleanCateParam}/${(vd.video_url || '').trim()}`}
-                              className="group bg-slate-50 hover:bg-white rounded-2xl border border-slate-200/80 overflow-hidden hover:shadow-lg transition-all flex flex-col"
-                            >
-                              <div className="relative h-36 bg-slate-900 overflow-hidden">
-                                <img
-                                  src={resolveUploadUrl(vd.video_thumb)}
-                                  alt={vd.video_desc}
-                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
-                                  <span className="w-9 h-9 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-xs shadow-md">
-                                    ▶
-                                  </span>
-                                </div>
-                              </div>
-                              <div className="p-3.5">
-                                <h4 className="font-bold text-sm sm:text-[15px] text-slate-800 group-hover:text-[#0a5482] line-clamp-2">
-                                  {vd.video_desc}
-                                </h4>
-                              </div>
-                            </Link>
-                          ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               )}
             </div>
           </div>
+
+          {/* SEPARATE AIRY BLOCK FOR VIDEO LIST IN THIS CATEGORY */}
+          {mode !== 'cate' && videosInCate.length > 1 && (
+            <div className="bg-white/70 rounded-2xl border border-slate-200/60 px-6 py-5 sm:px-8 sm:py-6">
+              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
+                <span className="opacity-70 text-sm">🎞️</span>
+                <span>{t('Video List')}</span>
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {videosInCate
+                  .filter((vd) => !currentVideo || vd.video_id !== currentVideo.video_id)
+                  .map((vd) => (
+                    <Link
+                      key={vd.video_id}
+                      to={`/video/${cleanCateParam}/${(vd.video_url || '').trim()}`}
+                      className="group bg-white/80 hover:bg-white rounded-2xl border border-slate-200/60 overflow-hidden hover:shadow-md transition-all flex flex-col"
+                    >
+                      <div className="relative h-36 bg-slate-900 overflow-hidden">
+                        <img
+                          src={resolveUploadUrl(vd.video_thumb)}
+                          alt={vd.video_desc}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
+                          <span className="w-9 h-9 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-xs shadow-md">
+                            ▶
+                          </span>
+                        </div>
+                      </div>
+                      <div className="p-3.5">
+                        <h4 className="font-medium text-sm sm:text-[14.5px] text-slate-500 group-hover:text-[#0a5482] line-clamp-2 transition-colors">
+                          {vd.video_desc}
+                        </h4>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
