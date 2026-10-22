@@ -1,0 +1,115 @@
+/* 
+    Document   : menu
+    Created on : Apr 3, 2013, 12:05:02 PM
+    Author     : anh.nguyen
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.courses_menu >li>ul>li {
+    font-weight: normal;
+}
+.courses_menu >ul>li:hover{
+    background: #FFF !important;
+}
+.courses_menu >ul>li:hover a{
+   color: #21B4D6 !important;
+}
+
+.courses_menu >li>ul>li:hover{
+ 
+    background: #FFF;
+}
+.courses_menu >li>ul>li:hover a{
+       color: #21B4D6;
+}
+.courses_menu > li:hover > a,
+.courses_menu > li:target > a,
+.courses_menu > li > a.active {
+   
+    text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+
+    /*background: url(../img/active.png) repeat-x;*/
+  
+    
+} 
+.courses_menu a {
+    text-decoration: none;
+}
+.courses_menu > li:hover > a span,
+.courses_menu > li:target > a span,
+.courses_menu > li > a.active1 span {
+    color: #fdfdfd;
+    text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+    background: #3e5706;
+} 
+.courses_menu > li > a.active2 span {
+    color: #fdfdfd;
+    text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+    background: #3e5706;
+} 
+
+.courses_menu li.cHeading cHeading-yellow > a:before { background-position: 0px 0px; }
+.courses_menu li.cHeading cHeading-yellow:hover > a:before,
+.courses_menu li.cHeading cHeading-yellow:target > a:before,
+.courses_menu li.cHeading cHeading-yellow > a.active:before { background-position: 0px -24px; }
+
+.courses_menu li.cHeading cHeading-pink > a:before { background-position: 0px 0px; }
+.courses_menu li.cHeading cHeading-pink:hover > a:before,
+.courses_menu li.cHeading cHeading-pink:target > a:before,
+.courses_menu li.cHeading cHeading-pink > a.active:before { background-position: 0px -24px; }
+
+
+.courses_menu li > .sub-menu1 {
+    margin-left:-13px;
+    height:auto;
+    width:117.5%;
+    list-style:none;
+    
+}
+.courses_menu li:hover a {
+    text-decoration: none;
+}
+.courses_menu li a :hover > .sub-menu1 {
+    display: block;
+    
+} 
+ 
+
+
+.courses_menu li > .sub-menu2 {
+    margin-left: -13px;
+    height:auto;
+    width:117.5%;
+    list-style:none; 
+    
+}
+
+.courses_menu li:hover > .sub-menu2 {
+    display: block;
+}
+
+/* style table changepass
+********************/
+.adminlist{
+    margin-left: 22%;
+    width: 50%;
+    margin-top: 30px;
+    border-top: 3px solid #21B4D6;
+    border-right: 3px solid #21B4D6;
+    border-bottom: 3px solid #21B4D6;
+    border-left: 3px solid #21B4D6;
+    box-shadow: 0 0 5px 5px #CCCCCC;
+}
+.adminlist td {
+    color: #005683;
+}
+.adminlist th{
+    text-align: left;
+    background: #336699;
+    color: #FFF;
+    font-size: 17px;
+}

@@ -1,0 +1,92 @@
+
+.news_contetn{
+	margin:auto 0;
+	padding: 0;	
+	}
+.boxleft{
+	position:relative;
+	float:left;
+	width:300px;
+	height:300px;	
+	}
+.boxleft ul{
+	position:relative;
+	display:block;
+	list-style:none;
+	padding-bottom:5px;		
+	}
+.active{
+	background-color:#09C;
+	
+	}	
+.boxleft ul li {
+	display:block;
+	position:relative;
+	background:url(../img/message_li.png) no-repeat;
+	background-color:#333;
+	border-bottom:1px solid #FFF;
+	padding-bottom:6px;
+	height:29px;
+	
+	
+	}
+.boxleft ul li a {
+	display:block;
+	position:absolute;
+	top:-34px;
+	left:53px;
+	padding-top:30px;
+	
+	margin-left:40px;
+	
+	color:#CCC;
+	}
+.boxleft ul li:hover{
+	background-color:#09C:	
+	}	
+.boxright{
+	width:auto;
+	
+	
+	}
+.right_content{
+	height:149px;
+	border:1px solid #999;
+	width:741px;
+	margin-left:360px;
+	margin-bottom:20px;
+}
+.home_img{
+	float:left;
+	margin-top:5px;
+	margin-left:5px;
+	height:132px;
+	width:132px;
+	border:2px solid #CCC;
+	}
+.cont{
+	position:relative;
+	margin-left:160px;	
+	width:565px;
+	height:148px;
+	}
+.cont h3{
+	
+	margi-top:0px;
+	
+	color:#333;
+	font-size:15px;	
+	}
+.cont p{
+	width:auto;
+	height:auto;
+		
+	}
+.cont span{
+	position:absolute;
+	top:108px;
+	color:#999;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+	

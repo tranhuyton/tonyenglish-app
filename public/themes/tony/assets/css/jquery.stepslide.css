@@ -1,0 +1,52 @@
+/* 
+    Document   : jquery.stepslide
+    Created on : Apr 7, 2013, 9:05:14 PM
+    Author     : luubk
+    Description:
+        CSS for StepSlide
+*/
+.stepslide{
+    position: absolute;
+    width: 212px;
+    right: 0;
+}
+.stepslide a.control{
+    color: #fff;
+    background: #000;
+    width: 15px;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+.stepslide a[data=prev]{
+    float: left;    
+    border-right: 1px solid #ccc;
+}
+.stepslide a[data=next]{
+    float: right;    
+}
+.stepslide ul{ 
+    list-style: none;
+    display: block;
+    margin: 0;
+}
+.stepslide ul li{
+    list-style: none;
+    float: left;
+    width: 35px;
+    text-align: center;
+    background: #015684;
+    line-height: 35px;    
+    border-right: 1px solid #ccc;
+}
+
+.stepslide ul li:hover{
+    background: #20b5d6;
+}
+
+.stepslide ul li.active{
+    background: #20b5d6;
+}
+.stepslide ul li a{
+    color: #fff;
+}

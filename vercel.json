@@ -14,12 +14,8 @@
   ],
   "rewrites": [
     {
-      "source": "/uploads/flash/:path*",
-      "destination": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/tonyenglish_uploads/flash/:path*"
-    },
-    {
-      "source": "/uploads/:path*.mp3",
-      "destination": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/tonyenglish_uploads/:path*.mp3"
+      "source": "/uploads/:path*",
+      "destination": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/tonyenglish_uploads/:path*"
     },
     { "source": "/(.*)", "destination": "/index.html" }
   ]

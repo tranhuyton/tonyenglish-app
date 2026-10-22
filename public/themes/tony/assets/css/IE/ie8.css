@@ -1,0 +1,316 @@
+
+
+.main_navigator a{
+    text-decoration:underline !important;
+}
+input{
+    min-height: 13px !important;
+}
+#submit_course .span6left{
+    width: 100px !important;
+   
+}
+#span6boxleft{
+height:280px;
+}
+#login_box h3{
+    width:351px !important;
+    margin-left: -2px !important;
+}
+.file_link{
+    width:100px !important;
+}
+.loginCbox{
+   /*height:324px !important;*/
+}
+.contactCbox{
+   height:540px !important; 
+}
+#contact_right textarea{ 
+    width: 300px !important;
+}
+#contact_right input{ 
+    width: 300px !important;
+}
+.file_box input{
+    left: 0 !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 0 !important;
+    z-index: 2 !important;
+    /*z-index: 10 !important;*/
+}
+.Contact_contact_file{
+    width:  100%;
+}
+#contact_captcha_image{
+	width:61% !important;
+}
+
+#PassForm_verifyCode{
+    width: 61px !important;
+}
+
+.menuProfile{
+    position: relative;
+    height: 84px;
+    float:left;
+    width:100%;
+    
+   
+   
+}
+/*.menuProfile ul{
+    position: relative;
+    list-style: none; 
+    margin-left: 0px;
+    width:100%;
+   
+}
+.menuProfile ul a {
+    line-height: 32px;
+    border-bottom: 1px solid #FFF;
+    background: url('../img/message_li.png') no-repeat scroll left center #6D6E72 ;
+}
+.menuProfile.pro{
+    background: url('../img/message_li.png') no-repeat scroll left center #12B3E1  !important;
+}
+.menuProfile ul li
+{
+    color: #FFF;
+}
+.menuProfile ul a li{
+   
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    width:78%;
+    height:100%;
+}
+.menuProfile ul a:hover li{
+    text-decoration: none;
+}
+.menuProfile ul a:hover{
+    background: url('../img/message_li.png') no-repeat scroll left center #12B3E1 ;
+}*/
+.stepslide{
+    height: 50px;
+}
+.btn-inverse {
+    background: none repeat scroll 0 0 #195E87 !important;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    line-height: 20px;
+}
+a.btn{
+    border: 1px solid #CCC;
+}
+.btn:hover{
+    background: #12B3E1;
+}
+#btn{
+    color: #FFF;
+    font-weight: bold;
+    margin-left:20px;
+    border: none;
+    width: 200px;
+    line-height:  26px;
+    background: #195E87;
+}
+#edit{
+    background: #FFF !important;
+    /*color: #FFF;*/
+    font-weight: bold;
+    margin-left:20px;
+    border: none;
+    width: 200px;
+    line-height:  26px;
+}
+.span10 offset1{
+    width: auto;
+}
+.edit{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    line-height: 20px;
+    margin-left:0px !important;
+    border: 1px solid #CCC;
+}
+/* CSS for Profile
+********************************************/
+#editwork{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editwork:hover{
+    color:#000 !important;              
+}
+#editworkhide{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editworkhide:hover{
+    color:#000 !important;              
+}
+#editAbout{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editAbout:hover{
+    color:#000 !important;              
+}
+#editAbouthide{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editAbouthide:hover{
+    color:#000 !important;              
+}
+#editContact{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+   width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editContact:hover{
+    color:#000 !important;              
+}
+#editContacthide{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editContacthide:hover{
+    color:#000 !important;              
+}
+#editInfo{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editInfo:hover{
+    color:#000 !important;              
+}
+#editInfohide{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editInfohide:hover{
+    color:#000 !important;              
+}
+#editEducation{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editEducation:hover{
+    color:#000 !important;              
+}
+#editEducationhide{
+    background: none !important;
+    color: #000;
+    border:1px solid #CCC;
+    width:55px;
+    height: 24px;
+    float:right;
+    text-align: center;
+}
+#editEducationhide:hover{
+    color:#000 !important;              
+}
+/*CSS for Course
+*************************************/
+#joinnow{
+/*    border: 1px solid #CCC;*/
+    font-weight: bold;
+    background: #3C5D95;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+}
+#submit{
+/*    border: 1px solid #CCC;*/
+    font-weight: bold;
+    background: #3C5D95;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+}
+/* CSS for Lecture && Exercise
+*****************************************/
+.lecture_list ul a .active {
+    background:#20B5D6 ;
+}
+
+.lecture_list ul a li{
+    width:129px;
+    height: 30px;
+    background: #6D6E72;
+    border-top: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin: 0;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+.lecture_list ul {
+    height: 100%;
+}
+/* CSS for langue
+**********************************************/
+
+.vi{
+    margin-top:37px;
+    position:relative;
+    position:absolute;
+    left:0 !important;
+}
+.en{
+    margin-right:10px;
+    margin-top:37px;
+    position:relative;
+    position:absolute;
+    left:0px !important;
+}

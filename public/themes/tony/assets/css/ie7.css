@@ -1,0 +1,66 @@
+img{border:none;}
+.desc-slide{
+    wid\th:87.8%;
+}
+.right{
+    wid\th:44%;
+}
+.span3{
+    wid\th: 49%;
+}
+.box-search input{
+    border-radius:0;
+    height:25px;
+    padding-top:5px;
+}
+input{padding-top:5px;}
+.iconsearch{background:url(../img/icon/icon-search.png) 0px 7px no-repeat}
+
+#login{color: #fff}
+/*fix menu main*/
+.menumain{margin-bottom: 30px;}
+.menumain>ul>li{
+    float: left;
+}
+
+/*slidetop*/
+img{border:none;}
+.metadisc{
+    width: 99.9%;
+    height: 43px;
+    line-height: 2.5;
+    font-size: 16px;
+    border-right: 1px solid #185e87;
+    background: #343334;
+    color: #fff;
+    position: absolute;
+    top: 267px;
+    left: 0;
+}
+.slpage{padding-right: 120px;}
+/*seconmenu footer*/
+.secondmenu>ul>li:last-child{border-right: none;}
+.breadcrumb{margin-top: 10px;}
+.breadcrumb>ul>li{float: left;}
+/*menu_left*/
+
+.colleft{
+    width: 20.9%;
+}
+.centercontent{margin-bottom: 20px;}
+/*#news_list{width: 77% !important;}*/
+.row>h1{font-size: 24px;}
+/* CSS Night 1/8
+***************************************/
+
+.span4{margin-top: -94px;}
+.bgrcol{
+    height: auto;
+    background: url(../img/icon/bgrcol.png) repeat-x;
+    border: none;
+}
+.breadcrumb{font-size: 20px;}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    padding-top: 10px;
+}

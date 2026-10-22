@@ -1,0 +1,101 @@
+/*slidetop*/
+.slide-main{background:#2980b9;height:365px;}
+.slidetop{
+    background: #3498db;
+    height: 415px;
+    width: 99.9%;
+    overflow: hidden;
+    position: relative;
+	
+}
+.ulslidetop{
+    width: 100% !important;
+    position: static !important;
+    left: 0;
+    top: 0;
+}
+.ulli{width:100% !important;height: 100% !important;}
+.img{
+    background: #000;
+    height: 365px;
+}
+.img img{
+	width:100%;
+    /*width: 710px !important;*/
+    height: 415px;
+    overflow: hidden;
+}
+.content-slide{
+   color: #fff;
+   width: 33.42%;
+   height: 365px;
+   /*padding-left: 29px;*/
+    
+}
+.containerslide{width: 100%;}
+.content-slide p{padding-right:35px;padding-left:35px;font-size: 25px;}
+.desc-slide{
+    height: 50px;
+    width: 87.9%;
+    background: transparent url(../img/bg-carousel-caption.png) repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    color: #fff;
+    font-size: 16px;
+}
+.desc-slide-p{
+    padding: 13px;
+}
+.caption{
+    color:#fff;
+    font-size:16px;
+    position: absolute;
+    right: 15px;
+	bottom: 15px;
+    z-index: 9999;
+    
+}
+
+.slidorion-nav {
+    width: 10%;
+    height: 50px;
+    right: 0;
+    position: absolute;
+    background: url(../img/bg-carousel-caption.png) repeat-x;
+    float: left;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.slidorion-nav-left {
+    position: absolute;
+    width: 58px;
+    height: 100%;
+    background: url('../img/icon/btn-carousel-prev.png') 15px 10px no-repeat;
+    cursor: pointer;
+}
+
+.slidorion-nav-right {
+    position: absolute;
+	width: 58px;
+	height: 100%;
+	background: url('../img/icon/btn-carousel-next.png') 19px 10px no-repeat;
+	cursor: pointer;
+	right: 0;
+}
+.slidorion-nav-left:hover{
+     background: #000 url('../img/icon/btn-carousel-prev.png') 15px 10px no-repeat;
+}
+.slidorion-nav-right:hover{background: #000 url('../img/icon/btn-carousel-next.png') 19px 10px no-repeat;}
+.bottomslide{
+    background: red;
+    height: 43px;
+    width: 487px;
+    position: fixed;
+    top: 217px;
+    left: 272px;
+}
+
+
+

@@ -1,0 +1,34 @@
+/* Tiny Scrollbar */
+#scrollbar1 { width: 520px; margin: 0px 0 10px; }
+#scrollbar1 .viewport { width: 500px; height: 315px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; color:#fff; line-height:18px}
+#scrollbar1 .scrollbar{ 
+    width: 450px;
+    border: 1px solid #656565;
+    border-radius: 3px;
+    position: relative; 
+    background-position: 0 0; 
+    float: right; 
+    width: 15px; 
+}
+#scrollbar1 .track { 
+    height: 100%; 
+    width:13px; 
+    position: relative; 
+    padding: 0 1px; 
+}
+#scrollbar1 .thumb { 
+    background: #353535;
+    height: 20px; 
+    cursor: pointer; 
+    overflow: hidden; 
+    position: absolute; 
+    top: 0; 
+    left: 2px; 
+}
+#scrollbar1 .thumb .end { 
+    overflow: hidden; 
+    height: 5px; 
+    width: 11px; 
+}
+#scrollbar1 .disable { display: none; }
