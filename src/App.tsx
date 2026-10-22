@@ -35,6 +35,52 @@ const LoadingFallback = () => (
   </div>
 );
 
+const STUDENT_LMS_VIEWS = [
+  'portal',
+  'lecture',
+  'ielts-writing',
+  'ielts-speaking',
+  'computer',
+  'paper',
+  'mixed-paper',
+  'standard',
+  'standard-splitscreen',
+  'case-study',
+  'igcse',
+  'igcse-direct',
+  'siege-game',
+  'ninja-survival',
+  'vocab-racing',
+];
+
+const resolveStudentResumeView = () => {
+  try {
+    const activeLecCourseId =
+      sessionStorage.getItem('lms_active_course_id') ||
+      localStorage.getItem('lms_active_course_id');
+    const lastView =
+      sessionStorage.getItem('lms_last_student_view') ||
+      localStorage.getItem('lms_last_student_view');
+
+    if (activeLecCourseId && activeLecCourseId !== 'all' && (!lastView || lastView === 'lecture')) {
+      return 'lecture';
+    }
+    if (lastView === 'lecture') {
+      const fallbackCourseId =
+        activeLecCourseId ||
+        sessionStorage.getItem('portal_selected_course_id') ||
+        localStorage.getItem('portal_filter_course');
+      if (fallbackCourseId && fallbackCourseId !== 'all') {
+        return 'lecture';
+      }
+    }
+    if (lastView && STUDENT_LMS_VIEWS.includes(lastView)) {
+      return lastView;
+    }
+  } catch (e) {}
+  return 'portal';
+};
+
 export default function App() {
   const getInitialView = () => {
     const path = window.location.pathname.toLowerCase();
@@ -48,7 +94,7 @@ export default function App() {
       return 'home';
     }
     if (path === '/lms' || path === '/lms/' || path === '/portal' || path === '/portal/') {
-      return 'portal';
+      return resolveStudentResumeView();
     }
     if (path !== '/' && path !== '/vi' && path !== '/en' && path !== '/vi/' && path !== '/en/') {
       return 'home';
@@ -132,8 +178,21 @@ export default function App() {
            setLiveTutorState('FULLSCREEN');
          }
       } else if (view) {
-         setCurrentView(view);
-         try { sessionStorage.setItem('lms_current_view', view); } catch(err) {}
+         const resolved = view === 'student-resume' ? resolveStudentResumeView() : view;
+         if (resolved === 'lecture') {
+           try {
+             const cid = sessionStorage.getItem('lms_active_course_id') || localStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || localStorage.getItem('portal_filter_course');
+             if (cid && cid !== 'all') setActiveCourseId(cid);
+           } catch (err) {}
+         }
+         setCurrentView(resolved);
+         try {
+           sessionStorage.setItem('lms_current_view', resolved);
+           if (STUDENT_LMS_VIEWS.includes(resolved)) {
+             sessionStorage.setItem('lms_last_student_view', resolved);
+             localStorage.setItem('lms_last_student_view', resolved);
+           }
+         } catch(err) {}
       }
     };
     const handleChangeCourse = (e: any) => {
@@ -188,7 +247,13 @@ export default function App() {
 
   useEffect(() => {
     // 🚀 Xóa lựa chọn giọng khi chuyển trang → hỏi lại khi vào trang mới
-    try { sessionStorage.removeItem('tony_voice_examiner'); } catch(e) {}
+    try {
+      sessionStorage.removeItem('tony_voice_examiner');
+      if (STUDENT_LMS_VIEWS.includes(currentView)) {
+        sessionStorage.setItem('lms_last_student_view', currentView);
+        localStorage.setItem('lms_last_student_view', currentView);
+      }
+    } catch(e) {}
     if (currentView === 'admin' || currentView === 'admin-login') window.history.pushState(null, '', '/admin');
     else if (currentView === 'promo') {
       const p = window.location.pathname.toLowerCase();
@@ -297,14 +362,30 @@ export default function App() {
       }
       else if (event === 'SIGNED_OUT') {
         setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login' && prev !== 'promo') ? 'home' : prev); 
-        try { sessionStorage.removeItem('lms_current_view'); sessionStorage.removeItem('lms_current_test'); sessionStorage.removeItem('lms_active_course_id'); sessionStorage.removeItem('lms_return_view'); } catch(e) {}
+        try { sessionStorage.removeItem('lms_current_view'); sessionStorage.removeItem('lms_last_student_view'); localStorage.removeItem('lms_last_student_view'); sessionStorage.removeItem('lms_current_test'); sessionStorage.removeItem('lms_active_course_id'); localStorage.removeItem('lms_active_course_id'); sessionStorage.removeItem('lms_return_view'); } catch(e) {}
         stopGlobalTimer(); 
       }
     });
     return () => { subscription.unsubscribe(); stopGlobalTimer(); document.removeEventListener('visibilitychange', handleVisibility); };
   }, []); 
 
-  const handleNavigate = (view: string) => { setCurrentView(view); try { sessionStorage.setItem('lms_current_view', view); } catch(e) {} };
+  const handleNavigate = (view: string) => {
+    const resolved = view === 'student-resume' ? resolveStudentResumeView() : view;
+    if (resolved === 'lecture' && !activeCourseId) {
+      try {
+        const cid = sessionStorage.getItem('lms_active_course_id') || localStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || localStorage.getItem('portal_filter_course');
+        if (cid && cid !== 'all') setActiveCourseId(cid);
+      } catch (e) {}
+    }
+    setCurrentView(resolved);
+    try {
+      sessionStorage.setItem('lms_current_view', resolved);
+      if (STUDENT_LMS_VIEWS.includes(resolved)) {
+        sessionStorage.setItem('lms_last_student_view', resolved);
+        localStorage.setItem('lms_last_student_view', resolved);
+      }
+    } catch(e) {}
+  };
   const handleStartTest = (type: string, data: any) => {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
@@ -324,6 +405,7 @@ export default function App() {
     setActiveCourseId(courseId); 
     try { 
       sessionStorage.setItem('lms_active_course_id', courseId); 
+      localStorage.setItem('lms_active_course_id', courseId); 
       if (lectureId) {
         sessionStorage.setItem('tony_target_lecture_id', lectureId);
         window.dispatchEvent(new CustomEvent('tony-open-target-lecture', { detail: lectureId }));
@@ -372,11 +454,22 @@ export default function App() {
           
           {currentView === 'lecture' && (
             <LectureViewer 
-              courseId={activeCourseId || (typeof window !== 'undefined' ? (sessionStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || '') : '')} 
-              onBack={() => handleNavigate('portal')} 
+              courseId={activeCourseId || (typeof window !== 'undefined' ? (sessionStorage.getItem('lms_active_course_id') || localStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || '') : '')} 
+              onBack={() => {
+                try {
+                  sessionStorage.removeItem('lms_active_course_id');
+                  localStorage.removeItem('lms_active_course_id');
+                  sessionStorage.setItem('lms_last_student_view', 'portal');
+                  localStorage.setItem('lms_last_student_view', 'portal');
+                } catch(e) {}
+                handleNavigate('portal');
+              }} 
               onCourseChange={(newId: string) => {
                 setActiveCourseId(newId);
-                try { sessionStorage.setItem('lms_active_course_id', newId); } catch(e) {}
+                try {
+                  sessionStorage.setItem('lms_active_course_id', newId);
+                  localStorage.setItem('lms_active_course_id', newId);
+                } catch(e) {}
               }}
               onStartTest={handleStartTest}
               onOpenAI={(passedMode?: string, topic?: string, image?: string, task?: string) => { 

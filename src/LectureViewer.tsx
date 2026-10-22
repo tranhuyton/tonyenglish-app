@@ -3150,10 +3150,13 @@ export default function LectureViewer({
     }
   }, [activeLectureId, currentPage]);
 
-  // Helper: save page to localStorage (called from navigation handlers only)
+  // Helper: save page to localStorage & sessionStorage (called from navigation handlers only)
   const persistPage = (page: number) => {
-    if (activeLectureId && currentUser?.id) {
-      localStorage.setItem(`tony_last_page_${currentUser.id}_${activeLectureId}`, page.toString());
+    if (activeLectureId) {
+      try { sessionStorage.setItem(`tony_last_page_${activeLectureId}`, page.toString()); } catch(e) {}
+      if (currentUser?.id) {
+        localStorage.setItem(`tony_last_page_${currentUser.id}_${activeLectureId}`, page.toString());
+      }
     }
   };
 
@@ -3437,7 +3440,7 @@ export default function LectureViewer({
          if (targetLecId) {
            sessionStorage.removeItem('tony_target_lecture_id');
          }
-         const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${activeId}`);
+         const savedLectureId = sessionStorage.getItem(`tony_last_lec_${activeId}`) || localStorage.getItem(`tony_last_lec_${user?.id}_${activeId}`);
          const targetLecture = (targetLecId && selectableLectures.find(l => l.id === targetLecId)) || selectableLectures.find(l => l.id === savedLectureId) || selectableLectures[0];
          if (trialActive) {
              setExpandedModules(safeModData.map(m => m.id));
@@ -3467,7 +3470,7 @@ export default function LectureViewer({
     }
     const targetUserId = userIdOverride || currentUser?.id;
     // Read saved page BEFORE any state changes (persist effect would overwrite it)
-    const savedPageStr = localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`);
+    const savedPageStr = sessionStorage.getItem(`tony_last_page_${lectureId}`) || localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`);
     const savedPage = savedPageStr ? parseInt(savedPageStr) : 1;
     const targetPage = savedPage > 0 ? savedPage : 1;
     
@@ -3482,6 +3485,7 @@ export default function LectureViewer({
             setIsSidebarOpen(false);
         }
         
+        try { sessionStorage.setItem(`tony_last_lec_${currentCourseId}`, lectureId); } catch(e) {}
         if (targetUserId) {
             localStorage.setItem(`tony_last_lec_${targetUserId}_${currentCourseId}`, lectureId);
         }
@@ -4250,6 +4254,14 @@ export default function LectureViewer({
             </button>
             <button 
                 onClick={() => {
+                  try {
+                    sessionStorage.setItem('lms_last_student_view', 'lecture');
+                    localStorage.setItem('lms_last_student_view', 'lecture');
+                    if (currentCourseId) {
+                      sessionStorage.setItem('lms_active_course_id', currentCourseId);
+                      localStorage.setItem('lms_active_course_id', currentCourseId);
+                    }
+                  } catch (e) {}
                   window.history.pushState(null, '', '/');
                   window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
                   window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));

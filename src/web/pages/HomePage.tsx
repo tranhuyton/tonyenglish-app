@@ -434,7 +434,7 @@ export const HomePage: React.FC = () => {
                     onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
                     className="bg-white/15 hover:bg-white/25 text-white border border-white/25 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition active:scale-95 cursor-pointer"
                   >
-                    {lang === 'vi' ? '🎓 Vào Lớp Học LMS' : '🎓 Enter LMS Classroom'}
+                    {lang === 'vi' ? '🎓 Góc Học Viên' : '🎓 Student Portal'}
                   </button>
                 </div>
               </div>
@@ -452,7 +452,9 @@ export const HomePage: React.FC = () => {
               </div>
               <div>
                 <div className="font-black text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">{t('Courses')}</div>
-                <div className="text-xs sm:text-sm text-slate-500">Giao tiếp, TOEIC &amp; IELTS</div>
+                <div className="text-xs sm:text-sm text-slate-500">
+                  {lang === 'vi' ? 'Giao tiếp, TOEIC & IELTS' : 'Communication, TOEIC & IELTS'}
+                </div>
               </div>
             </Link>
 
@@ -465,7 +467,9 @@ export const HomePage: React.FC = () => {
               </div>
               <div>
                 <div className="font-black text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">{t('Library')}</div>
-                <div className="text-xs sm:text-sm text-slate-500">Luyện đọc, Nghe &amp; Từ vựng</div>
+                <div className="text-xs sm:text-sm text-slate-500">
+                  {lang === 'vi' ? 'Luyện đọc, Nghe & Từ vựng' : 'Reading, Listening & Vocab'}
+                </div>
               </div>
             </Link>
 
@@ -478,7 +482,9 @@ export const HomePage: React.FC = () => {
               </div>
               <div>
                 <div className="font-black text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">{t('Videos Store')}</div>
-                <div className="text-xs sm:text-sm text-slate-500">Học qua Video có phụ đề</div>
+                <div className="text-xs sm:text-sm text-slate-500">
+                  {lang === 'vi' ? 'Học qua Video có phụ đề' : 'Learn with subtitled videos'}
+                </div>
               </div>
             </Link>
 
@@ -492,10 +498,12 @@ export const HomePage: React.FC = () => {
               </div>
               <div>
                 <div className="font-black text-[15px] sm:text-base text-white flex items-center gap-1">
-                  <span>Phòng Học &amp; Thi AI</span>
+                  <span>{lang === 'vi' ? 'Góc Học Viên & Thi AI' : 'Student Portal'}</span>
                   <span className="text-[#2ab4e8]">➜</span>
                 </div>
-                <div className="text-xs sm:text-sm text-sky-200">Luyện đề &amp; Chấm chữa AI</div>
+                <div className="text-xs sm:text-sm text-sky-200">
+                  {lang === 'vi' ? 'Luyện đề & Chấm chữa AI' : 'AI Practice & Smart Grading'}
+                </div>
               </div>
             </button>
           </div>

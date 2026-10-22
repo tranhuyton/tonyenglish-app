@@ -102,14 +102,34 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [activeView, setActiveView] = useState<'dashboard'|'course'>(() => {
       return (sessionStorage.getItem('portal_active_view') as any) || 'dashboard';
   });
+
+  useEffect(() => {
+    sessionStorage.setItem('portal_active_view', activeView);
+  }, [activeView]);
   
   const [selectedCourseId, setSelectedCourseId] = useState<string | null>(() => {
       return sessionStorage.getItem('portal_selected_course_id') || null;
   });
+
+  useEffect(() => {
+    if (selectedCourseId) {
+      sessionStorage.setItem('portal_selected_course_id', selectedCourseId);
+    } else {
+      sessionStorage.removeItem('portal_selected_course_id');
+    }
+  }, [selectedCourseId]);
   
   const [currentFolderId, setCurrentFolderId] = useState<string | null>(() => {
       return sessionStorage.getItem('portal_current_folder_id') || null;
   });
+
+  useEffect(() => {
+    if (currentFolderId) {
+      sessionStorage.setItem('portal_current_folder_id', currentFolderId);
+    } else {
+      sessionStorage.removeItem('portal_current_folder_id');
+    }
+  }, [currentFolderId]);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -180,7 +200,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
 
-  const [analyticsView, setAnalyticsView] = useState<'scores'|'activity'>('scores');
+  const [analyticsView, setAnalyticsView] = useState<'scores'|'activity'>(() => {
+    const saved = sessionStorage.getItem('portal_analytics_view');
+    return (saved === 'scores' || saved === 'activity') ? saved : 'scores';
+  });
+  useEffect(() => {
+    sessionStorage.setItem('portal_analytics_view', analyticsView);
+  }, [analyticsView]);
   const [analyticsTheme, setAnalyticsTheme] = useState<BoardTheme>(() => loadTheme(`tony_analytics_theme_${currentUser?.id}`, 'tony_analytics_theme'));
   const [isAnalyticsThemeModalOpen, setIsAnalyticsThemeModalOpen] = useState(false);
   const [studentActivities, setStudentActivities] = useState<any[]>([]);

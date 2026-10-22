@@ -232,7 +232,10 @@ export const translations: Record<'vi' | 'en', Record<string, string>> = {
     'Learning Instruction': 'Hướng dẫn học',
     'Testimonials': 'Cảm nhận học viên'
   },
-  en: {}
+  en: {
+    'Videos Store': 'Videos',
+    'Videos store': 'Videos'
+  }
 };
 
 export function t(lang: 'vi' | 'en', key: string): string {

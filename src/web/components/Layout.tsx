@@ -73,10 +73,8 @@ export const Layout: React.FC<{
   // Listen to custom event 'tony-open-lms' from anywhere in Web Portal
   useEffect(() => {
     const handleOpenLms = () => {
-      if (lmsRole === 'admin') {
-        onNavigateLms?.('admin');
-      } else if (lmsRole === 'student') {
-        onNavigateLms?.('portal');
+      if (lmsRole === 'admin' || lmsRole === 'student') {
+        onNavigateLms?.('student-resume');
       } else {
         setLoginModalOpen(true);
       }
@@ -237,7 +235,7 @@ export const Layout: React.FC<{
           if (profile?.role === 'admin' || isAdmin) {
             onNavigateLms?.('admin');
           } else {
-            onNavigateLms?.('portal');
+            onNavigateLms?.('student-resume');
           }
           setLoginLoading(false);
           return;
@@ -583,19 +581,25 @@ export const Layout: React.FC<{
                 {lmsRole === 'admin' && (
                   <button
                     type="button"
-                    onClick={() => onNavigateLms?.('portal')}
+                    onClick={() => onNavigateLms?.('student-resume')}
                     className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs sm:text-[14px] font-black uppercase tracking-wider px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap"
                   >
-                    <span className="md:hidden">🎓 Thi thử</span>
-                    <span className="hidden md:inline">🎓 Góc Học Viên</span>
+                    <span className="md:hidden">
+                      🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
+                    </span>
+                    <span className="hidden md:inline">
+                      🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
+                    </span>
                   </button>
                 )}
                 <button
                   type="button"
-                  onClick={() => (lmsRole === 'admin' ? onNavigateLms?.('admin') : onNavigateLms?.('portal'))}
+                  onClick={() => (lmsRole === 'admin' ? onNavigateLms?.('admin') : onNavigateLms?.('student-resume'))}
                   className="bg-gradient-to-r from-[#2ab4e8] to-[#0a5482] hover:opacity-95 text-white text-[13px] sm:text-[15px] font-black px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl transition shadow-md shadow-sky-500/20 active:scale-95 whitespace-nowrap"
                 >
-                  {lmsRole === 'admin' ? '⚙️ Quản Trị ➜' : '🎓 Vào Lớp Học ➜'}
+                  {lmsRole === 'admin'
+                    ? `⚙️ ${lang === 'vi' ? 'Quản Trị' : 'Admin Setting'} ➜`
+                    : `🎓 ${lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'} ➜`}
                 </button>
               </>
             ) : user ? (
@@ -797,14 +801,14 @@ export const Layout: React.FC<{
                     onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
                     className="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 transition cursor-pointer"
                   >
-                    🎓 Phòng Học LMS
+                    🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
                   </button>
                   <button
                     type="button"
                     onClick={() => onNavigateLms?.(lmsRole === 'admin' ? 'admin' : 'admin-login')}
                     className="inline-flex items-center gap-1.5 bg-slate-800/70 hover:bg-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 transition cursor-pointer"
                   >
-                    ⚙️ Quản trị Admin
+                    ⚙️ {lang === 'vi' ? 'Quản Trị' : 'Admin Setting'}
                   </button>
                 </li>
               </ul>
