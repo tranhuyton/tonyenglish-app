@@ -1513,70 +1513,68 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   return (
-    <div className={`${activeTab === 'board' ? 'h-screen max-h-screen overflow-hidden' : 'min-h-[100dvh]'} bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 md:pb-0`}>
+    <div className="min-h-[100dvh] bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 md:pb-0">
       {/* 1. TOP UTILITY BAR (Đồng bộ với TonyEnglish.vn Layout) */}
-      {activeTab !== 'board' && (
-        <div className="bg-[#0f172a] text-slate-300 border-b border-slate-800 text-[12px] sm:text-[13px] shrink-0">
-          <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-2">
-            <div className="hidden md:flex items-center gap-4 flex-wrap">
-              <span className="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-                <span className="text-[#2ab4e8]">📞</span> 0982 042 882
-              </span>
-              <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
-                <span className="text-[#2ab4e8]">✉️</span> contact@tonyenglish.vn
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-0.5 rounded-full text-xs font-semibold border border-slate-700">
-                💡 Click đúp vào từ tiếng Anh bất kỳ để tra từ điển
-              </span>
-            </div>
+      <div className="bg-[#0f172a] text-slate-300 border-b border-slate-800 text-[12px] sm:text-[13px] shrink-0">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-2">
+          <div className="hidden md:flex items-center gap-4 flex-wrap">
+            <span className="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
+              <span className="text-[#2ab4e8]">📞</span> 0982 042 882
+            </span>
+            <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
+              <span className="text-[#2ab4e8]">✉️</span> contact@tonyenglish.vn
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-0.5 rounded-full text-xs font-semibold border border-slate-700">
+              💡 Click đúp vào từ tiếng Anh bất kỳ để tra từ điển
+            </span>
+          </div>
 
-            <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-3 w-full md:w-auto ml-auto">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    resetWorkspaceAndChat();
-                    onNavigate?.('home');
-                  }}
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
-                >
-                  <span>🏠</span>
-                  <span>Trang chủ</span>
-                </button>
-                <a
-                  href="/news"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    resetWorkspaceAndChat();
-                    window.history.pushState({}, '', '/news');
-                    onNavigate?.('home');
-                  }}
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
-                >
-                  <span>📚</span>
-                  <span>Thư viện bài đọc</span>
-                </a>
-                <a
-                  href="/videos"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    resetWorkspaceAndChat();
-                    window.history.pushState({}, '', '/videos');
-                    onNavigate?.('home');
-                  }}
-                  className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
-                >
-                  <span>🎬</span>
-                  <span>Kho Video</span>
-                </a>
-              </div>
-              <span className="inline-flex items-center gap-1.5 bg-[#0a5482]/80 text-sky-200 px-2.5 py-0.5 rounded-md text-[11px] font-bold border border-sky-700/50">
-                🎓 LMS Portal
-              </span>
+          <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-3 w-full md:w-auto ml-auto">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  resetWorkspaceAndChat();
+                  onNavigate?.('home');
+                }}
+                className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
+              >
+                <span>🏠</span>
+                <span>Trang chủ</span>
+              </button>
+              <a
+                href="/news"
+                onClick={(e) => {
+                  e.preventDefault();
+                  resetWorkspaceAndChat();
+                  window.history.pushState({}, '', '/news');
+                  onNavigate?.('home');
+                }}
+                className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
+              >
+                <span>📚</span>
+                <span>Thư viện bài đọc</span>
+              </a>
+              <a
+                href="/videos"
+                onClick={(e) => {
+                  e.preventDefault();
+                  resetWorkspaceAndChat();
+                  window.history.pushState({}, '', '/videos');
+                  onNavigate?.('home');
+                }}
+                className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
+              >
+                <span>🎬</span>
+                <span>Kho Video</span>
+              </a>
             </div>
+            <span className="inline-flex items-center gap-1.5 bg-[#0a5482]/80 text-sky-200 px-2.5 py-0.5 rounded-md text-[11px] font-bold border border-sky-700/50">
+              🎓 LMS Portal
+            </span>
           </div>
         </div>
-      )}
+      </div>
 
       {/* 2. MAIN STICKY NAVBAR (Đồng bộ 100% với TonyEnglish.vn) */}
       <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs shrink-0">
@@ -1771,11 +1769,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      <main className={`flex-1 w-full min-h-0 ${
-        activeTab === 'board' 
-          ? 'max-w-none p-0 overflow-hidden flex flex-col h-full' 
-          : 'max-w-7xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 overflow-y-auto custom-scrollbar flex flex-col'
-      }`} style={{ WebkitOverflowScrolling: 'touch' }}>
+      <main className="flex-1 w-full min-h-0 max-w-7xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 overflow-y-auto custom-scrollbar flex flex-col" style={{ WebkitOverflowScrolling: 'touch' }}>
         
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-500">
@@ -3281,82 +3275,80 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       </main>
 
       {/* UNIFIED COMPACT FOOTER (Đồng bộ với TonyEnglish.vn) */}
-      {activeTab !== 'board' && (
-        <footer className="bg-[#0f172a] text-slate-400 py-8 border-t border-slate-800 mt-12 shrink-0">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <img
-                src="/logo-shield.png"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
-                }}
-                alt="TonyEnglish"
-                className="h-7 w-auto object-contain"
-              />
-              <div>
-                <div className="font-black text-base tracking-tight text-white">
-                  <span className="text-[#2ab4e8]">TONY</span>ENGLISH <span className="text-xs font-semibold text-slate-400">• Student Portal</span>
-                </div>
-                <p className="text-xs text-slate-500">
-                  © 2013–2026 TonyEnglish.vn — Hệ sinh thái đào tạo Tiếng Anh &amp; Luyện thi thông minh tích hợp AI.
-                </p>
+      <footer className="bg-[#0f172a] text-slate-400 py-8 border-t border-slate-800 mt-12 shrink-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo-shield.png"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
+              }}
+              alt="TonyEnglish"
+              className="h-7 w-auto object-contain"
+            />
+            <div>
+              <div className="font-black text-base tracking-tight text-white">
+                <span className="text-[#2ab4e8]">TONY</span>ENGLISH <span className="text-xs font-semibold text-slate-400">• Student Portal</span>
               </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-400">
-              <button
-                type="button"
-                onClick={() => {
-                  resetWorkspaceAndChat();
-                  onNavigate?.('home');
-                }}
-                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
-              >
-                🏠 Trang chủ
-              </button>
-              <span>•</span>
-              <a
-                href="/courses"
-                onClick={(e) => {
-                  e.preventDefault();
-                  resetWorkspaceAndChat();
-                  window.history.pushState({}, '', '/courses');
-                  onNavigate?.('home');
-                }}
-                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
-              >
-                🎓 Các khóa học
-              </a>
-              <span>•</span>
-              <a
-                href="/news"
-                onClick={(e) => {
-                  e.preventDefault();
-                  resetWorkspaceAndChat();
-                  window.history.pushState({}, '', '/news');
-                  onNavigate?.('home');
-                }}
-                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
-              >
-                📚 Thư viện bài đọc
-              </a>
-              <span>•</span>
-              <a
-                href="/videos"
-                onClick={(e) => {
-                  e.preventDefault();
-                  resetWorkspaceAndChat();
-                  window.history.pushState({}, '', '/videos');
-                  onNavigate?.('home');
-                }}
-                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
-              >
-                🎬 Kho Video
-              </a>
+              <p className="text-xs text-slate-500">
+                © 2013–2026 TonyEnglish.vn — Hệ sinh thái đào tạo Tiếng Anh &amp; Luyện thi thông minh tích hợp AI.
+              </p>
             </div>
           </div>
-        </footer>
-      )}
+
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-400">
+            <button
+              type="button"
+              onClick={() => {
+                resetWorkspaceAndChat();
+                onNavigate?.('home');
+              }}
+              className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+            >
+              🏠 Trang chủ
+            </button>
+            <span>•</span>
+            <a
+              href="/courses"
+              onClick={(e) => {
+                e.preventDefault();
+                resetWorkspaceAndChat();
+                window.history.pushState({}, '', '/courses');
+                onNavigate?.('home');
+              }}
+              className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+            >
+              🎓 Các khóa học
+            </a>
+            <span>•</span>
+            <a
+              href="/news"
+              onClick={(e) => {
+                e.preventDefault();
+                resetWorkspaceAndChat();
+                window.history.pushState({}, '', '/news');
+                onNavigate?.('home');
+              }}
+              className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+            >
+              📚 Thư viện bài đọc
+            </a>
+            <span>•</span>
+            <a
+              href="/videos"
+              onClick={(e) => {
+                e.preventDefault();
+                resetWorkspaceAndChat();
+                window.history.pushState({}, '', '/videos');
+                onNavigate?.('home');
+              }}
+              className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+            >
+              🎬 Kho Video
+            </a>
+          </div>
+        </div>
+      </footer>
 
       {/* POPUP CHI TIẾT LỊCH SỬ */}
       {viewingHistoryDetail && (

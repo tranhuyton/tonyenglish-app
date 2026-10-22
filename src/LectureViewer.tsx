@@ -4978,7 +4978,7 @@ export default function LectureViewer({
                        <div className="flex items-center gap-2 mb-3 flex-wrap">
                          <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2.5 py-1 rounded-full">
                            <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4e8]" />
-                           {currentCourseName || 'Bài Giảng Lý Thuyết'}
+                           {course?.title || 'Bài Giảng Lý Thuyết'}
                          </span>
                          {activeLecture && (() => {
                             const activeTitleLower = (activeLecture.title || '').toLowerCase();

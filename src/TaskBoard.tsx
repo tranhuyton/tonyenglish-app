@@ -674,10 +674,10 @@ export default function TaskBoard({
   if (loading) {
     return (
       <div 
-        className="w-full flex-1 min-h-0 h-full flex items-center justify-center transition-colors duration-300"
-        style={{ backgroundColor: boardTheme.boardBg }}
+        className="w-full min-h-[450px] flex items-center justify-center transition-colors duration-300 rounded-3xl"
+        style={boardTheme.id !== 'tony-classic' ? { backgroundColor: boardTheme.boardBg } : undefined}
       >
-        <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#0ea5e9] border-t-transparent"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#0a5482] border-t-transparent"></div>
       </div>
     );
   }
@@ -685,8 +685,8 @@ export default function TaskBoard({
   if (boardsData.length === 0) {
     return (
       <div 
-        className="w-full flex-1 min-h-0 h-full flex flex-col p-4 transition-colors duration-300"
-        style={{ backgroundColor: boardTheme.boardBg }}
+        className="w-full min-h-[450px] flex flex-col p-4 transition-colors duration-300 rounded-3xl"
+        style={boardTheme.id !== 'tony-classic' ? { backgroundColor: boardTheme.boardBg } : undefined}
       >
         {headerActions && (
           <div className="flex justify-end relative z-40 mb-3 shrink-0">
@@ -694,7 +694,7 @@ export default function TaskBoard({
           </div>
         )}
         <div className="flex-1 flex flex-col items-center justify-center">
-          <div className="p-10 text-center bg-white rounded-[2rem] shadow-sm border border-slate-200 max-w-md">
+          <div className="p-10 text-center bg-white rounded-3xl shadow-xs border border-slate-200 max-w-md">
             <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
             <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">Chưa có bảng công việc nào</h3>
             <p className="text-[14px] text-slate-500 font-medium">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
@@ -708,36 +708,38 @@ export default function TaskBoard({
 
   return (
     <div 
-      className="w-full flex-1 min-h-0 h-full flex flex-col relative transition-colors duration-300"
-      style={{ backgroundColor: boardTheme.boardBg }}
+      className={`w-full flex-1 flex flex-col relative transition-colors duration-300 ${
+        boardTheme.id !== 'tony-classic' ? 'p-3 sm:p-5 rounded-3xl shadow-inner' : ''
+      }`}
+      style={boardTheme.id !== 'tony-classic' ? { backgroundColor: boardTheme.boardBg } : undefined}
     >
       {/* Top Actions Row */}
       {headerActions && (
-        <div className="flex justify-end relative z-40 mb-2 px-3 pt-2 shrink-0">
+        <div className="flex justify-end relative z-40 mb-3 shrink-0">
           {headerActions}
         </div>
       )}
 
       {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
-      <div className="px-3 sm:px-5 pt-2.5 sm:pt-3 pb-2 shrink-0">
+      <div className="mb-5 sm:mb-6 shrink-0">
         <div 
-          className="rounded-2xl sm:rounded-3xl px-4 sm:px-6 py-3.5 sm:py-4 shadow-md text-white flex flex-col xl:flex-row justify-between items-start xl:items-center gap-3 transition-all duration-300 relative overflow-hidden border border-slate-800/20"
+          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 transition-all duration-300 relative overflow-hidden border border-slate-800/20"
           style={{ background: boardTheme.titleBg }}
         >
           {/* Decorative Ambient Glow */}
-          <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
-          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
+          <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
 
           <div className="relative z-10 flex items-center justify-between w-full xl:w-auto gap-3">
             <div>
-              <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-xs border border-white/15 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 TonyEnglish Task Board • Bảng Công Việc
               </div>
-              <h1 className="text-base sm:text-xl md:text-2xl font-black tracking-tight text-white leading-tight">
+              <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
                 Bảng Công Việc{courseTitle ? ` — ${courseTitle}` : (currentBoard?.title ? ` — ${currentBoard.title}` : '')}
               </h1>
-              <p className="text-slate-200/85 text-[11px] sm:text-xs font-medium mt-0.5 hidden sm:block">
+              <p className="text-slate-200/85 text-xs sm:text-sm font-medium mt-1">
                 Quản lý lộ trình học tập theo chuyên đề, đánh dấu hoàn thành nhiệm vụ &amp; luyện tập đề thi.
               </p>
             </div>
@@ -841,7 +843,7 @@ export default function TaskBoard({
               <button
                 type="button"
                 onClick={() => handleResetColumnOrder(currentBoard.title)}
-                className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs font-bold px-3 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0"
+                className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
                 title="Khôi phục thứ tự các cột ban đầu"
               >
                 <span>↺</span> <span className="hidden 2xl:inline">Đặt lại cột</span>
@@ -852,7 +854,7 @@ export default function TaskBoard({
             <button
               type="button"
               onClick={() => setIsThemeModalOpen(true)}
-              className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs font-bold px-3 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0"
+              className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
               title="Đổi giao diện màu nền"
             >
               <span>🎨</span> <span className="hidden 2xl:inline">Giao diện</span>
@@ -866,12 +868,12 @@ export default function TaskBoard({
         if (!board) return null;
 
         return (
-          <div key={board.title} className="w-full flex-1 min-h-0 h-full flex flex-col relative overflow-hidden">
+          <div key={board.title} className="w-full flex flex-col relative overflow-hidden h-[calc(100vh-235px)] min-h-[540px] max-h-[760px]">
             {/* Board - Horizontal Scroll like Trello with smooth mobile snap */}
             <div 
               ref={boardScrollContainerRef}
               onScroll={handleBoardScroll}
-              className={`flex-1 min-h-0 h-full flex flex-row gap-3.5 sm:gap-4 overflow-x-auto overflow-y-hidden pb-3 sm:pb-4 pt-1 board-horizontal-scrollbar items-start w-full px-3 sm:px-5 snap-x snap-mandatory sm:snap-none ${
+              className={`flex-1 min-h-0 h-full flex flex-row gap-3.5 sm:gap-4 overflow-x-auto overflow-y-hidden pb-3 sm:pb-4 pt-1 board-horizontal-scrollbar items-start w-full px-0.5 snap-x snap-mandatory sm:snap-none ${
                 boardTheme.isDark ? 'dark-theme' : ''
               }`}
               style={{
