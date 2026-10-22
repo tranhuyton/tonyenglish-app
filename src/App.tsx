@@ -254,7 +254,17 @@ export default function App() {
         localStorage.setItem('lms_last_student_view', currentView);
       }
     } catch(e) {}
-    if (currentView === 'admin' || currentView === 'admin-login') window.history.pushState(null, '', '/admin');
+    if (currentView === 'admin' || currentView === 'admin-login') {
+      if (window.location.pathname.toLowerCase() !== '/admin') {
+        window.history.pushState(null, '', '/admin');
+      }
+    }
+    else if (STUDENT_LMS_VIEWS.includes(currentView)) {
+      const p = window.location.pathname.toLowerCase();
+      if (p !== '/portal' && p !== '/lms') {
+        window.history.pushState(null, '', '/portal');
+      }
+    }
     else if (currentView === 'promo') {
       const p = window.location.pathname.toLowerCase();
       if (!p.startsWith('/khoa-hoc') && !p.startsWith('/hoc-thu') && !p.startsWith('/dang-ky') && !p.startsWith('/promo')) {
@@ -263,11 +273,27 @@ export default function App() {
     }
     else if (currentView === 'home') {
       const p = window.location.pathname.toLowerCase();
-      if (p === '/admin' || p === '/admin/' || p.startsWith('/khoa-hoc') || p.startsWith('/hoc-thu') || p.startsWith('/dang-ky') || p.startsWith('/promo') || p === '/lms' || p === '/portal') {
+      if (p === '/admin' || p === '/admin/' || p.startsWith('/khoa-hoc') || p.startsWith('/hoc-thu') || p.startsWith('/dang-ky') || p.startsWith('/promo') || p === '/lms' || p === '/lms/' || p === '/portal' || p === '/portal/') {
         window.history.pushState(null, '', '/');
       }
     }
   }, [currentView]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const p = window.location.pathname.toLowerCase();
+      if (p === '/admin' || p === '/admin/' || p === '/admincp' || p === '/admincp/') {
+        setCurrentView(prev => (prev === 'admin' ? 'admin' : 'admin-login'));
+      } else if (p === '/portal' || p === '/portal/' || p === '/lms' || p === '/lms/') {
+        setCurrentView(prev => (STUDENT_LMS_VIEWS.includes(prev) ? prev : resolveStudentResumeView()));
+      } else {
+        setCurrentView('home');
+        try { sessionStorage.setItem('lms_current_view', 'home'); } catch (e) {}
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   useEffect(() => {
     const startGlobalTimer = () => {

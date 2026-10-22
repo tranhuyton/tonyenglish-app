@@ -1535,6 +1535,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 type="button"
                 onClick={() => {
                   resetWorkspaceAndChat();
+                  window.history.pushState({}, '', '/');
                   onNavigate?.('home');
                 }}
                 className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
@@ -1675,6 +1676,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               type="button"
               onClick={() => {
                 resetWorkspaceAndChat();
+                window.history.pushState({}, '', '/');
                 onNavigate?.('home');
               }}
               className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs sm:text-[13px] font-bold transition-all cursor-pointer shrink-0"
@@ -1707,6 +1709,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="absolute right-0 mt-2.5 w-60 bg-white rounded-2xl shadow-xl border border-slate-200/90 py-2 z-50 animate-in fade-in zoom-in-95 duration-200">
                   <button onClick={() => { 
                     resetWorkspaceAndChat(); 
+                    window.history.pushState({}, '', '/');
                     onNavigate?.('home');
                     setIsDropdownOpen(false); 
                   }} className="sm:hidden w-full text-left px-5 py-3 text-sm font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2 transition-colors border-b border-slate-100">
@@ -3301,6 +3304,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               type="button"
               onClick={() => {
                 resetWorkspaceAndChat();
+                window.history.pushState({}, '', '/');
                 onNavigate?.('home');
               }}
               className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
