@@ -1335,11 +1335,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
   
   if (hour >= 5 && hour < 12) {
-      bannerConfig = { greeting: 'Chào buổi sáng', gradient: 'from-[#0ea5e9] to-[#4f46e5]', icon: '🌅', subtitle: 'Bắt đầu ngày mới tràn đầy năng lượng! Một chút nỗ lực hôm nay sẽ mang lại kết quả lớn ngày mai.' };
+      bannerConfig = { greeting: 'Chào buổi sáng', gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', icon: '🌅', subtitle: 'Bắt đầu ngày mới tràn đầy năng lượng! Một chút nỗ lực hôm nay sẽ mang lại kết quả lớn ngày mai.' };
   } else if (hour >= 12 && hour < 18) {
-      bannerConfig = { greeting: 'Chào buổi chiều', gradient: 'from-[#0284c7] to-[#4338ca]', icon: '🌤️', subtitle: 'Tiếp tục hành trình chinh phục mục tiêu nào! Giữ vững sự tập trung nhé.' };
+      bannerConfig = { greeting: 'Chào buổi chiều', gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', icon: '🌤️', subtitle: 'Tiếp tục hành trình chinh phục mục tiêu nào! Giữ vững sự tập trung nhé.' };
   } else {
-      bannerConfig = { greeting: 'Chào buổi tối', gradient: 'from-[#1e1b4b] to-[#312e81]', icon: '🌙', subtitle: 'Thời gian tĩnh lặng tuyệt vời để tập trung ôn tập và nhìn lại những gì đã học.' };
+      bannerConfig = { greeting: 'Chào buổi tối', gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', icon: '🌙', subtitle: 'Thời gian tĩnh lặng tuyệt vời để tập trung ôn tập và nhìn lại những gì đã học.' };
   }
 
   const breadcrumbs = useMemo(() => {
@@ -1356,9 +1356,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     if (totalPages <= 1) return null;
     return (
       <div className="flex justify-center items-center gap-3 mt-8">
-        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:border-[#0ea5e9] hover:text-[#0ea5e9] hover:bg-sky-50 transition-colors disabled:opacity-40 disabled:hover:bg-white disabled:hover:border-slate-200 shadow-sm font-black">←</button>
-        <span className="text-[13px] font-semibold text-slate-600 bg-white px-5 py-2.5 rounded-full border border-slate-200 shadow-sm">Trang {currentPage} / {totalPages}</span>
-        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:border-[#0ea5e9] hover:text-[#0ea5e9] hover:bg-sky-50 transition-colors disabled:opacity-40 disabled:hover:bg-white disabled:hover:border-slate-200 shadow-sm font-black">→</button>
+        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-10 h-10 rounded-xl flex items-center justify-center bg-white border border-slate-200/90 text-slate-600 hover:border-[#0a5482] hover:text-[#0a5482] hover:bg-sky-50 transition-colors disabled:opacity-40 disabled:hover:bg-white disabled:hover:border-slate-200 shadow-2xs font-black cursor-pointer">←</button>
+        <span className="text-[13px] font-extrabold text-[#0a5482] bg-white px-5 py-2.5 rounded-xl border border-slate-200/90 shadow-2xs">Trang {currentPage} / {totalPages}</span>
+        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-10 h-10 rounded-xl flex items-center justify-center bg-white border border-slate-200/90 text-slate-600 hover:border-[#0a5482] hover:text-[#0a5482] hover:bg-sky-50 transition-colors disabled:opacity-40 disabled:hover:bg-white disabled:hover:border-slate-200 shadow-2xs font-black cursor-pointer">→</button>
       </div>
     );
   };
@@ -1369,7 +1369,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <button
           type="button"
           onClick={() => handleGoToLecture()}
-          className="bg-white/90 hover:bg-white text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200/90 hover:border-emerald-400 font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
           title="Mở bài giảng lý thuyết"
         >
           <span className="text-base">📖</span> <span className="truncate">Bài giảng</span>
@@ -1377,7 +1377,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <button
           type="button"
           onClick={() => handleGoToTestBank()}
-          className="bg-white/90 hover:bg-white text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200/90 hover:border-[#2ab4e8] font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
           title="Mở kho đề"
         >
           <span className="text-base">📚</span> <span>Kho đề</span>
@@ -1388,12 +1388,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       <div className="relative w-full sm:w-64 z-40">
         <div 
           onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-          className="w-full bg-white/90 hover:bg-white backdrop-blur border border-sky-200 rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] shadow-sm transition-all"
+          className="w-full bg-white hover:bg-sky-50/50 border border-slate-200/90 hover:border-[#2ab4e8] rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
         >
-          <span className="font-bold text-[13px] text-sky-800 truncate pr-2">
+          <span className="font-bold text-[13px] text-[#0a5482] truncate pr-2">
             {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
           </span>
-          <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+          <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
         </div>
         
         {filterCourseDropdownOpen && (
@@ -1406,7 +1406,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   setAnalyticsCourse('all');
                   setFilterCourseDropdownOpen(false);
                 }}
-                className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
               >
                 🌟 Tất cả khóa học
               </div>
@@ -1418,7 +1418,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     setAnalyticsCourse(course.id);
                     setFilterCourseDropdownOpen(false);
                   }}
-                  className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                  className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                 >
                   📖 {course.title}
                 </div>
@@ -1447,7 +1447,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <button
           type="button"
           onClick={() => handleGoToTestBank()}
-          className="bg-white hover:bg-sky-50 text-[#0ea5e9] hover:text-[#0284c7] border border-sky-300 hover:border-sky-400 font-bold text-xs sm:text-[13px] px-3.5 py-1.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer shrink-0 hover:scale-[1.02] active:scale-95"
+          className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200 hover:border-[#2ab4e8] font-bold text-xs sm:text-[13px] px-3.5 py-1.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer shrink-0 hover:scale-[1.02] active:scale-95"
           title="Mở kho đề"
         >
           <span className="text-base">📚</span> <span>Kho đề</span>
@@ -1459,15 +1459,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <div className="relative w-48 sm:w-60 z-50">
           <div 
             onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-            className="w-full bg-white hover:bg-sky-50/50 border border-sky-300 hover:border-[#0ea5e9] rounded-xl px-3 py-1.5 flex items-center justify-between cursor-pointer shadow-xs transition-all"
+            className="w-full bg-white hover:bg-sky-50/50 border border-sky-200 hover:border-[#2ab4e8] rounded-xl px-3 py-1.5 flex items-center justify-between cursor-pointer shadow-xs transition-all"
           >
             <div className="flex items-center gap-1.5 min-w-0 pr-2">
               <span className="text-slate-400 text-xs">🎓</span>
-              <span className="font-bold text-xs text-sky-900 truncate">
+              <span className="font-bold text-xs text-[#0a5482] truncate">
                 {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
               </span>
             </div>
-            <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▲</span>
+            <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▲</span>
           </div>
           
           {filterCourseDropdownOpen && (
@@ -1484,7 +1484,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       setSelectedCourseId(null);
                     }
                   }}
-                  className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                  className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                 >
                   🌟 Tất cả khóa học
                 </div>
@@ -1499,7 +1499,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         handleOpenCourse(course);
                       }
                     }}
-                    className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                    className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                   >
                     📖 {course.title}
                   </div>
@@ -1513,159 +1513,259 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   return (
-    <div className={`${activeTab === 'board' ? 'h-screen max-h-screen overflow-hidden' : 'min-h-[100dvh]'} bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 md:pb-0`}>
-      {/* HEADER: Glassmorphism */}
-      <header className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40 shadow-sm shrink-0">
-        <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-2.5 flex items-center justify-between gap-3 transition-all">
-          
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity shrink-0" onClick={() => {
-              resetWorkspaceAndChat(); 
-              onNavigate?.('home');
-          }}>
-            <div className="w-9 h-9 flex items-center justify-center overflow-hidden shrink-0">
-                <img src="/logo-shield.png" alt="Logo" className="w-auto h-full object-contain" />
+    <div className={`${activeTab === 'board' ? 'h-screen max-h-screen overflow-hidden' : 'min-h-[100dvh]'} bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 md:pb-0`}>
+      {/* 1. TOP UTILITY BAR (Đồng bộ với TonyEnglish.vn Layout) */}
+      {(activeTab === 'library' || activeTab === 'profile') && (
+        <div className="bg-[#0f172a] text-slate-300 border-b border-slate-800 text-[12px] sm:text-[13px] shrink-0">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-2">
+            <div className="hidden md:flex items-center gap-4 flex-wrap">
+              <span className="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
+                <span className="text-[#2ab4e8]">📞</span> 0982 042 882
+              </span>
+              <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
+                <span className="text-[#2ab4e8]">✉️</span> contact@tonyenglish.vn
+              </span>
+              <span className="inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-0.5 rounded-full text-xs font-semibold border border-slate-700">
+                💡 Click đúp vào từ tiếng Anh bất kỳ để tra từ điển
+              </span>
             </div>
-            <div className="flex flex-col items-start mt-0.5 hidden sm:block">
-              <h1 className="font-black text-[20px] text-[#0ea5e9] leading-none tracking-tight">TONY<span className="text-slate-800">ENGLISH</span></h1>
+
+            <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-3 w-full md:w-auto ml-auto">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    resetWorkspaceAndChat();
+                    onNavigate?.('home');
+                  }}
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
+                >
+                  <span>🏠</span>
+                  <span>Trang chủ</span>
+                </button>
+                <a
+                  href="/news"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    resetWorkspaceAndChat();
+                    window.history.pushState({}, '', '/news');
+                    onNavigate?.('home');
+                  }}
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
+                >
+                  <span>📚</span>
+                  <span>Thư viện bài đọc</span>
+                </a>
+                <a
+                  href="/videos"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    resetWorkspaceAndChat();
+                    window.history.pushState({}, '', '/videos');
+                    onNavigate?.('home');
+                  }}
+                  className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
+                >
+                  <span>🎬</span>
+                  <span>Kho Video</span>
+                </a>
+              </div>
+              <span className="inline-flex items-center gap-1.5 bg-[#0a5482]/80 text-sky-200 px-2.5 py-0.5 rounded-md text-[11px] font-bold border border-sky-700/50">
+                🎓 LMS Portal
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 2. MAIN STICKY NAVBAR (Đồng bộ 100% với TonyEnglish.vn) */}
+      <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs shrink-0">
+        <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 h-15 sm:h-20 flex items-center justify-between gap-2 sm:gap-4 transition-all">
+          
+          {/* Brand Logo */}
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:opacity-90 transition-opacity shrink-0" onClick={() => {
+              resetWorkspaceAndChat(); 
+              setActiveTab('library');
+              setActiveView('dashboard');
+              setSelectedCourseId(null);
+              setCurrentFolderId(null);
+          }}>
+            <img
+              src="/logo-shield.png"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
+              }}
+              alt="TonyEnglish"
+              className="h-8 sm:h-11 w-auto object-contain"
+            />
+            <div className="flex flex-col items-start leading-none">
+              <div className="font-black text-[18px] sm:text-[24px] tracking-tight">
+                <span className="text-[#2ab4e8]">TONY</span>
+                <span className="text-[#0a5482]">ENGLISH</span>
+              </div>
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 mt-0.5 hidden sm:block">
+                Student Learning Portal
+              </span>
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={() => {
-              resetWorkspaceAndChat();
-              onNavigate?.('home');
-            }}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-sky-50 text-slate-600 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs font-bold transition-all cursor-pointer shrink-0"
-            title="Quay ra Cổng thông tin, Thư viện bài đọc & Kho Video TonyEnglish.vn"
-          >
-            <span>🌐</span>
-            <span>Trang chủ &amp; Thư viện</span>
-          </button>
+          {/* Desktop Navigation Tabs (Synchronized with Layout.tsx navItems) */}
+          <div className="hidden md:flex items-center gap-1 lg:gap-1.5">
+            <button 
+              onClick={() => { 
+                resetWorkspaceAndChat(); 
+                setActiveTab('library'); 
+                setActiveView('dashboard'); 
+                setSelectedCourseId(null); 
+                setCurrentFolderId(null);
+              }} 
+              className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
+                activeTab === 'library'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
+                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+              }`}
+            >
+              <svg className={`w-4 h-4 ${activeTab === 'library' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              <span>Học tập &amp; Kho đề</span>
+            </button>
+            <button 
+              onClick={() => {
+                resetWorkspaceAndChat(); 
+                setActiveTab('calendar');
+              }} 
+              className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
+                activeTab === 'calendar'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
+                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+              }`}
+            >
+              <svg className={`w-4 h-4 ${activeTab === 'calendar' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+              <span>Lịch báo bài</span>
+            </button>
+            <button 
+              onClick={() => { resetWorkspaceAndChat(); setActiveTab('board'); }}
+              className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
+                activeTab === 'board'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
+                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+              }`}
+            >
+              <svg className={`w-4 h-4 ${activeTab === 'board' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+              <span>Bảng công việc</span>
+            </button>
+            <button 
+              onClick={() => {
+                resetWorkspaceAndChat(); 
+                setActiveTab('analytics');
+              }} 
+              className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
+                activeTab === 'analytics'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
+                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+              }`}
+            >
+              <svg className={`w-4 h-4 ${activeTab === 'analytics' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              <span>Báo cáo</span>
+            </button>
+          </div>
 
-
-
-          <div className="flex items-center gap-3 md:gap-5 ml-auto">
-            
-            {/* TABS CẢI TIẾN */}
-            <div className="hidden md:flex items-center bg-slate-100/80 rounded-full p-1 border border-slate-200/60 shadow-inner">
-              <button 
-                  onClick={() => { 
-                      resetWorkspaceAndChat(); 
-                      setActiveTab('library'); 
-                      setActiveView('dashboard'); 
-                      setSelectedCourseId(null); 
-                      setCurrentFolderId(null);
-                  }} 
-                  className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold text-[13px] transition-all duration-200 ${activeTab === 'library' ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
-              >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                  Học tập
-              </button>
-              <button 
-                  onClick={() => {
-                      resetWorkspaceAndChat(); 
-                      setActiveTab('calendar');
-                  }} 
-                  className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold text-[13px] transition-all duration-200 ${activeTab === 'calendar' ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
-              >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                  Lịch báo bài
-              </button>
-              <button 
-                onClick={() => { resetWorkspaceAndChat(); setActiveTab('board'); }}
-                className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold text-[13px] transition-all duration-200 ${activeTab === 'board' ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                </svg>
-                Bảng công việc
-              </button>
-              <button 
-                  onClick={() => {
-                      resetWorkspaceAndChat(); 
-                      setActiveTab('analytics');
-                  }} 
-                  className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold text-[13px] transition-all duration-200 ${activeTab === 'analytics' ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
-              >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                  Báo cáo
-              </button>
-            </div>
+          {/* Right Action Controls */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={() => {
+                resetWorkspaceAndChat();
+                onNavigate?.('home');
+              }}
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs sm:text-[13px] font-bold transition-all cursor-pointer shrink-0"
+              title="Quay ra Cổng thông tin, Thư viện bài đọc & Kho Video TonyEnglish.vn"
+            >
+              <span>🌐</span>
+              <span>Trang chủ &amp; Thư viện</span>
+            </button>
 
             <div className="hidden lg:flex items-center">
-               <button onClick={toggleFullScreen} className="w-9 h-9 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#0ea5e9] transition-colors">
-                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
-               </button>
+              <button onClick={toggleFullScreen} className="w-9 h-9 rounded-xl flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#0a5482] transition-colors cursor-pointer" title="Toàn màn hình">
+                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
+              </button>
             </div>
 
             <div className="relative" ref={dropdownRef}>
-               <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-3 bg-white pr-2 pl-4 py-1.5 rounded-full border border-slate-200 shadow-sm hover:border-[#0ea5e9] transition-colors focus:outline-none group">
-                 <div className="text-right hidden sm:block">
-                   <div className="font-black text-[13px] text-slate-800 group-hover:text-[#0ea5e9] transition-colors">{displayUserName}</div>
-                   <div className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">
-                       {userProfile?.role === 'admin' ? 'Quản trị' : 'Học viên'}
-                   </div>
-                 </div>
-                 <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 text-white flex items-center justify-center font-black shadow-inner text-[13px] border border-white/20">
-                     {displayUserInitial}
-                 </div>
-               </button>
-
-               {isDropdownOpen && (
-                  <div className="absolute right-0 mt-3 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in zoom-in-95 duration-200">
-                     <button onClick={() => { 
-                         resetWorkspaceAndChat(); 
-                         setActiveTab('library'); 
-                         setActiveView('dashboard'); 
-                         setSelectedCourseId(null); 
-                         setCurrentFolderId(null); 
-                         setIsDropdownOpen(false); 
-                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2 transition-colors">
-                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg> Học tập
-                     </button>
-                     <button onClick={() => { 
-                         resetWorkspaceAndChat(); 
-                         setActiveTab('calendar'); 
-                         setIsDropdownOpen(false); 
-                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2 transition-colors">
-                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg> Lịch báo bài
-                     </button>
-                     <button onClick={() => { 
-                         resetWorkspaceAndChat(); 
-                         setActiveTab('board'); 
-                         setIsDropdownOpen(false); 
-                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2 transition-colors">
-                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg> Bảng công việc
-                     </button>
-                     <button onClick={() => { 
-                         resetWorkspaceAndChat(); 
-                         setActiveTab('analytics'); 
-                         setIsDropdownOpen(false); 
-                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2 transition-colors">
-                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg> Báo cáo
-                     </button>
-                     <button onClick={() => { 
-                         resetWorkspaceAndChat(); 
-                         setActiveTab('profile'); 
-                         setIsDropdownOpen(false); 
-                     }} className="w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] transition-colors flex items-center gap-2 md:border-t-0 border-t border-slate-100">
-                         👤 Cấu hình tài khoản
-                     </button>
-                     {userProfile?.role === 'admin' && (
-                         <button onClick={() => {
-                             resetWorkspaceAndChat();
-                             if(onNavigate) onNavigate('admin');
-                         }} className="w-full text-left px-5 py-3 text-sm font-black text-purple-600 hover:bg-purple-50 transition-colors">
-                             ⚙️ Trang Quản Trị
-                         </button>
-                     )}
-                     <div className="h-px bg-slate-100 my-1"></div>
-                     <button onClick={handleLogout} className="w-full text-left px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50 transition-colors">
-                         🚪 Đăng xuất
-                     </button>
+              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2.5 bg-slate-50 hover:bg-sky-50/60 pr-2 pl-3.5 py-1.5 rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#2ab4e8] transition-all focus:outline-none group cursor-pointer">
+                <div className="text-right hidden sm:block">
+                  <div className="font-black text-[13px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-tight">{displayUserName}</div>
+                  <div className="text-[10px] font-bold text-[#2ab4e8] uppercase tracking-wider mt-0.5">
+                    {userProfile?.role === 'admin' ? 'Quản trị' : 'Học viên'}
                   </div>
-               )}
+                </div>
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-[#2ab4e8] to-[#0a5482] text-white flex items-center justify-center font-black shadow-xs text-[13px]">
+                  {displayUserInitial}
+                </div>
+              </button>
+
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2.5 w-60 bg-white rounded-2xl shadow-xl border border-slate-200/90 py-2 z-50 animate-in fade-in zoom-in-95 duration-200">
+                  <button onClick={() => { 
+                    resetWorkspaceAndChat(); 
+                    onNavigate?.('home');
+                    setIsDropdownOpen(false); 
+                  }} className="sm:hidden w-full text-left px-5 py-3 text-sm font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2 transition-colors border-b border-slate-100">
+                    <span>🌐</span> Trang chủ &amp; Thư viện
+                  </button>
+                  <button onClick={() => { 
+                    resetWorkspaceAndChat(); 
+                    setActiveTab('library'); 
+                    setActiveView('dashboard'); 
+                    setSelectedCourseId(null); 
+                    setCurrentFolderId(null); 
+                    setIsDropdownOpen(false); 
+                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg> Học tập &amp; Kho đề
+                  </button>
+                  <button onClick={() => { 
+                    resetWorkspaceAndChat(); 
+                    setActiveTab('calendar'); 
+                    setIsDropdownOpen(false); 
+                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg> Lịch báo bài
+                  </button>
+                  <button onClick={() => { 
+                    resetWorkspaceAndChat(); 
+                    setActiveTab('board'); 
+                    setIsDropdownOpen(false); 
+                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg> Bảng công việc
+                  </button>
+                  <button onClick={() => { 
+                    resetWorkspaceAndChat(); 
+                    setActiveTab('analytics'); 
+                    setIsDropdownOpen(false); 
+                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg> Báo cáo
+                  </button>
+                  <button onClick={() => { 
+                    resetWorkspaceAndChat(); 
+                    setActiveTab('profile'); 
+                    setIsDropdownOpen(false); 
+                  }} className="w-full text-left px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] transition-colors flex items-center gap-2 md:border-t-0 border-t border-slate-100 cursor-pointer">
+                    👤 Cấu hình tài khoản
+                  </button>
+                  {userProfile?.role === 'admin' && (
+                    <button onClick={() => {
+                      resetWorkspaceAndChat();
+                      if(onNavigate) onNavigate('admin');
+                    }} className="w-full text-left px-5 py-2.5 text-sm font-black text-[#0a5482] hover:bg-sky-50 transition-colors cursor-pointer">
+                      ⚙️ Trang Quản Trị
+                    </button>
+                  )}
+                  <div className="h-px bg-slate-100 my-1"></div>
+                  <button onClick={handleLogout} className="w-full text-left px-5 py-2.5 text-sm font-bold text-red-600 hover:bg-red-50 transition-colors cursor-pointer">
+                    🚪 Đăng xuất
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -1676,87 +1776,117 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           ? 'max-w-none p-0 overflow-hidden flex flex-col h-full' 
           : activeTab === 'calendar' || activeTab === 'analytics'
             ? 'max-w-none p-2.5 sm:p-3 md:p-4 overflow-y-auto custom-scrollbar flex flex-col'
-            : 'max-w-[1200px] mx-auto p-4 md:p-8 overflow-y-auto custom-scrollbar'
+            : 'max-w-7xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 overflow-y-auto custom-scrollbar'
       }`} style={{ WebkitOverflowScrolling: 'touch' }}>
         
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-500">
-            {/* 🚀 BANNner HIỆN ĐẠI (Gamified) */}
-            <div className={`relative bg-gradient-to-r ${bannerConfig.gradient} rounded-[2rem] p-8 md:p-12 mb-8 md:mb-12 overflow-hidden shadow-lg border border-white/10`}>
-              <div className="absolute inset-0 bg-[url('/chat-pattern.png')] bg-repeat bg-[length:300px] opacity-10 mix-blend-overlay"></div>
-              <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+            {/* 🚀 HERO BANNER ĐỒNG BỘ TONYENGLISH.VN */}
+            <div className={`relative bg-gradient-to-r ${bannerConfig.gradient} rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 overflow-hidden shadow-lg border border-slate-800/30`}>
+              <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
+              <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
               
-              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-                <div className="text-white flex-1 text-center md:text-left">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-3 md:mb-4 drop-shadow-md tracking-tight">
-                      {bannerConfig.greeting}, {displayUserName}! <span className="inline-block animate-bounce">{bannerConfig.icon}</span>
+              <div className="relative z-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6 lg:gap-10">
+                <div className="text-white flex-1">
+                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-3.5">
+                    <span>🎓</span>
+                    <span>TonyEnglish Student Portal • Góc Học Viên</span>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-2.5 tracking-tight leading-tight">
+                    {bannerConfig.greeting}, <span className="text-[#2ab4e8]">{displayUserName}</span>! <span>{bannerConfig.icon}</span>
                   </h2>
-                  <p className="text-white/80 text-[15px] md:text-[17px] font-medium leading-relaxed max-w-xl">
-                      {bannerConfig.subtitle}
+                  <p className="text-slate-200/90 text-sm sm:text-[15px] leading-relaxed max-w-2xl mb-6">
+                    {bannerConfig.subtitle}
                   </p>
+
+                  {/* Quick Stats Strip (Đồng bộ với HomePage.tsx) */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl">
+                    <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">Khóa đang học</div>
+                      <div className="text-lg sm:text-xl font-black text-white mt-0.5">{courses.length} <span className="text-xs font-semibold text-slate-300">khóa</span></div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">Bài hoàn thành</div>
+                      <div className="text-lg sm:text-xl font-black text-emerald-300 mt-0.5">{historyData.length} <span className="text-xs font-semibold text-slate-300">đề</span></div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">Giờ luyện tập</div>
+                      <div className="text-lg sm:text-xl font-black text-[#2ab4e8] mt-0.5">{analyticsTotalTimeHours}h</div>
+                    </div>
+                    <div
+                      onClick={() => setActiveTab('analytics')}
+                      className="bg-white/10 hover:bg-white/15 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5 cursor-pointer transition-colors"
+                      title="Xem báo cáo chi tiết"
+                    >
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-amber-300/90">Mục tiêu</div>
+                      <div className="text-lg sm:text-xl font-black text-amber-300 mt-0.5">{courseTargets.ielts || '6.5+'} <span className="text-xs font-normal text-white/70">↗</span></div>
+                    </div>
+                  </div>
                 </div>
 
                 {inProgressTest ? (
-                   <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl w-full md:w-80 shadow-2xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-1" onClick={() => handleStartTestClick(inProgressTest)}>
-                      <div className="flex items-center justify-between mb-4">
-                         <div className="flex items-center gap-2">
-                            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_8px_rgba(251,191,36,0.8)]"></span>
-                            <span className="text-[11px] font-black uppercase tracking-widest text-amber-300">Đang làm dở</span>
-                         </div>
-                         <span className="text-white/40 group-hover:text-white transition-colors">↗</span>
+                   <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-6 rounded-2xl w-full lg:w-80 shadow-xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-0.5 shrink-0 flex flex-col justify-between" onClick={() => handleStartTestClick(inProgressTest)}>
+                      <div>
+                        <div className="flex items-center justify-between mb-3">
+                           <div className="flex items-center gap-2 bg-amber-400/20 border border-amber-300/30 px-2.5 py-1 rounded-full">
+                              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                              <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300">Đang làm dở</span>
+                           </div>
+                           <span className="text-white/50 group-hover:text-white transition-colors">↗</span>
+                        </div>
+                        <h3 className="font-extrabold text-base sm:text-lg mb-4 line-clamp-2 leading-snug">{inProgressTest.title}</h3>
                       </div>
-                      <h3 className="font-bold text-lg md:text-xl mb-5 line-clamp-2 leading-tight">{inProgressTest.title}</h3>
-                      <button className="w-full bg-white text-[#0ea5e9] hover:bg-sky-50 font-black py-3 rounded-xl text-[13px] transition-colors uppercase tracking-wide shadow-md">
-                         Tiếp tục ngay
+                      <button className="w-full bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-4 rounded-xl text-[13px] transition-colors uppercase tracking-wider shadow-md cursor-pointer">
+                         Tiếp tục làm bài →
                       </button>
                    </div>
                 ) : courses.length > 0 && (
-                  <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl w-full md:w-80 shadow-2xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-1" onClick={() => {
-                      resetWorkspaceAndChat(); 
-                      if(onOpenLecture) onOpenLecture(courses[0].id);
-                  }}>
-                    <div className="flex items-center justify-between mb-4">
-                       <span className="text-[11px] font-black uppercase tracking-widest text-white/70 bg-white/10 px-3 py-1 rounded-full">Gợi ý học tập</span>
-                       <span className="text-white/40 group-hover:text-white transition-colors">↗</span>
+                  <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-6 rounded-2xl w-full lg:w-80 shadow-xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-0.5 shrink-0 flex flex-col justify-between" onClick={() => handleOpenCourse(courses[0])}>
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                         <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#2ab4e8] bg-white/10 border border-white/15 px-3 py-1 rounded-full">Lộ trình trọng tâm</span>
+                         <span className="text-white/50 group-hover:text-white transition-colors">↗</span>
+                      </div>
+                      <h3 className="font-extrabold text-base sm:text-lg mb-2 line-clamp-2 leading-snug">{courses[0].title}</h3>
+                      <p className="text-xs text-slate-300 mb-4">Truy cập hệ thống bài giảng lý thuyết &amp; kho đề luyện tập chuẩn quốc tế.</p>
                     </div>
-                    <h3 className="font-bold text-lg md:text-xl mb-5 line-clamp-2 leading-tight">{courses[0].title}</h3>
-                    <button className="w-full bg-[#0ea5e9] text-white hover:bg-[#0284c7] font-black py-3 rounded-xl text-[13px] transition-colors uppercase tracking-wide shadow-md">
-                       Vào học ngay
+                    <button className="w-full bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-4 rounded-xl text-[13px] transition-colors uppercase tracking-wider shadow-md cursor-pointer">
+                       Vào học ngay →
                     </button>
                   </div>
                 )}
               </div>
             </div>
 
-            {/* BẢNG CẢNH BÁO DEADLINE (To-do list gamified) */}
+            {/* BẢNG CẢNH BÁO DEADLINE (To-do list) */}
             {upcomingDeadlines.length > 0 && (
-                <div className="bg-white border border-rose-200 rounded-[2rem] p-6 md:p-8 mb-8 md:mb-12 shadow-[0_8px_30px_rgba(225,29,72,0.08)] flex flex-col md:flex-row items-start gap-6 animate-in slide-in-from-bottom-4 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-2 h-full bg-rose-500"></div>
-                    <div className="w-16 h-16 rounded-2xl bg-rose-50 flex items-center justify-center text-3xl shrink-0 shadow-inner">
+                <div className="bg-white border border-rose-200/90 rounded-2xl sm:rounded-3xl p-5 sm:p-7 mb-8 sm:mb-10 shadow-xs flex flex-col md:flex-row items-start gap-5 animate-in slide-in-from-bottom-4 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-rose-500"></div>
+                    <div className="w-14 h-14 rounded-2xl bg-rose-50 border border-rose-100 flex items-center justify-center text-2xl shrink-0">
                         ⏰
                     </div>
                     <div className="flex-1 min-w-0 w-full">
-                        <h3 className="font-black text-slate-800 text-[18px] md:text-xl mb-1 tracking-tight">Nhiệm vụ cần hoàn thành</h3>
+                        <h3 className="font-black text-slate-800 text-lg sm:text-xl mb-1 tracking-tight">Nhiệm vụ cần hoàn thành</h3>
                         <p className="text-slate-500 text-sm font-medium mb-4">Bạn có <span className="text-rose-600 font-bold">{upcomingDeadlines.length} bài tập</span> sắp đến hạn nộp.</p>
                         
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-2.5">
                             {upcomingDeadlines.slice(0, 3).map(t => {
                                 const dDate = new Date(t._deadlineStr);
                                 const isOverdue = dDate < new Date();
                                 return (
-                                    <div key={t.id} onClick={() => handleStartTestClick(t)} className="flex justify-between items-center bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-[#0ea5e9] cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                                    <div key={t.id} onClick={() => handleStartTestClick(t)} className="flex justify-between items-center bg-slate-50/80 hover:bg-sky-50/40 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 hover:border-[#2ab4e8] cursor-pointer transition-all group">
                                         <div className="flex items-center gap-3 min-w-0">
-                                            <div className="w-5 h-5 rounded-full border-2 border-slate-300 group-hover:border-[#0ea5e9] transition-colors shrink-0"></div>
-                                            <span className="font-semibold text-slate-700 text-[14px] md:text-[15px] truncate group-hover:text-[#0ea5e9] transition-colors">{t.title}</span>
+                                            <div className="w-4 h-4 rounded-full border-2 border-slate-300 group-hover:border-[#0a5482] transition-colors shrink-0"></div>
+                                            <span className="font-bold text-slate-700 text-[14px] sm:text-[15px] truncate group-hover:text-[#0a5482] transition-colors">{t.title}</span>
                                         </div>
-                                        <span className={`shrink-0 text-[11px] md:text-xs font-black px-3 py-1.5 rounded-lg whitespace-nowrap border ${isOverdue ? 'bg-rose-100 text-rose-700 border-rose-200' : 'bg-orange-50 text-orange-600 border-orange-200'}`}>
+                                        <span className={`shrink-0 text-[11px] font-black px-3 py-1 rounded-lg whitespace-nowrap border ${isOverdue ? 'bg-rose-100 text-rose-700 border-rose-200' : 'bg-amber-50 text-amber-700 border-amber-200'}`}>
                                             {isOverdue ? '⚠️ QUÁ HẠN' : '⏳ ' + formatDate(t._deadlineStr)}
                                         </span>
                                     </div>
                                 )
                             })}
                             {upcomingDeadlines.length > 3 && (
-                                <button className="text-[13px] font-bold text-slate-400 hover:text-[#0ea5e9] transition-colors self-start mt-1">
+                                <button onClick={() => setActiveTab('calendar')} className="text-[13px] font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors self-start mt-1 cursor-pointer">
                                     Xem thêm {upcomingDeadlines.length - 3} nhiệm vụ khác →
                                 </button>
                             )}
@@ -1765,36 +1895,45 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
             )}
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 px-2">
-                <h2 className="font-black text-2xl md:text-3xl text-slate-800 tracking-tight m-0">Khóa học của tôi</h2>
+            {/* SECTION HEADER: KHÓA HỌC CỦA TÔI (Đồng bộ với HomePage.tsx) */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+                <div className="flex items-center gap-3">
+                    <span className="w-1.5 h-7 bg-[#0a5482] rounded-full"></span>
+                    <div>
+                        <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block">
+                            Chương trình đào tạo &amp; Luyện đề
+                        </span>
+                        <h2 className="font-black text-xl sm:text-2xl md:text-3xl text-slate-900 tracking-tight m-0">Khóa học của tôi</h2>
+                    </div>
+                </div>
                 <div className="relative w-full sm:w-64 z-30">
                     <div 
                         onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] shadow-sm transition-all"
+                        className="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#2ab4e8] shadow-2xs transition-all"
                     >
-                        <span className="font-bold text-[13px] text-slate-700 truncate pr-2">
+                        <span className="font-bold text-[13px] text-[#0a5482] truncate pr-2">
                         {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
                         </span>
-                        <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                        <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
                     </div>
                     
                     {filterCourseDropdownOpen && (
                         <>
                         <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                        <div className="absolute top-full right-0 mt-2 w-full sm:w-64 max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar">
+                        <div className="absolute top-full right-0 mt-2 w-full sm:w-64 max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
                             <div 
                             onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
-                            className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            className={`px-4 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                             >
-                            Tất cả khóa học
+                            🌟 Tất cả khóa học
                             </div>
                             {courses.map(course => (
                             <div 
                                 key={course.id}
                                 onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
-                                className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                                className={`px-4 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                             >
-                                {course.title}
+                                📖 {course.title}
                             </div>
                             ))}
                         </div>
@@ -1806,7 +1945,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {isLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                  {[1,2].map(i => (
-                   <div key={i} className="bg-white rounded-2xl h-[280px] w-full border border-slate-200 p-6 animate-pulse flex flex-col justify-between">
+                   <div key={i} className="bg-white rounded-2xl sm:rounded-3xl h-[280px] w-full border border-slate-200/90 p-6 animate-pulse flex flex-col justify-between">
                       <div className="h-40 w-full bg-slate-100 rounded-xl mb-4"></div>
                       <div className="h-6 w-1/2 bg-slate-100 rounded-md"></div>
                       <div className="h-2 w-full bg-slate-100 rounded-full mt-auto"></div>
@@ -1814,8 +1953,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                  ))}
               </div>
             ) : courses.length === 0 ? (
-              <div className="bg-white border border-slate-200 rounded-2xl py-24 text-center shadow-sm mx-2 flex flex-col items-center">
-                <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔒</div>
+              <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl py-20 text-center shadow-xs flex flex-col items-center">
+                <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔒</div>
                 <h3 className="font-bold text-slate-700 text-xl mb-2">Bạn chưa tham gia khóa học nào</h3>
                 <p className="text-slate-500 font-medium max-w-sm">Vui lòng liên hệ trung tâm để được cấp quyền truy cập vào các bài giảng nhé!</p>
               </div>
@@ -1826,8 +1965,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                 if (filteredCourses.length === 0) {
                   return (
-                    <div className="bg-white border border-slate-200 rounded-2xl py-24 text-center shadow-sm mx-2 flex flex-col items-center">
-                      <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔍</div>
+                    <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl py-20 text-center shadow-xs flex flex-col items-center">
+                      <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔍</div>
                       <h3 className="font-bold text-slate-700 text-xl mb-2">Không tìm thấy khóa học</h3>
                       <p className="text-slate-500 font-medium max-w-sm">Không có khóa học nào khớp với lựa chọn của bạn.</p>
                     </div>
@@ -1845,43 +1984,46 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       const overallProgress = Math.round((testProgress + lecProgress) / 2);
 
                       return (
-                        <div key={course.id} className={`bg-white rounded-[2rem] border border-slate-200 overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 mx-2 md:mx-0 group flex ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
+                        <div key={course.id} className={`bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl hover:border-[#2ab4e8]/60 hover:-translate-y-1 transition-all duration-300 group flex ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
                           
                           {/* Image Top/Left Half */}
-                          <div className={`relative overflow-hidden bg-slate-100 cursor-pointer ${isSingle ? 'w-full md:w-[45%] h-[250px] md:h-auto min-h-[320px]' : 'w-full h-[180px] md:h-[220px]'}`} onClick={() => handleOpenCourse(course)}>
+                          <div className={`relative overflow-hidden bg-slate-900 cursor-pointer ${isSingle ? 'w-full md:w-[44%] h-[230px] md:h-auto min-h-[290px]' : 'w-full h-[190px] sm:h-[215px]'}`} onClick={() => handleOpenCourse(course)}>
                              <img src={cover.image} loading="lazy" alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                             <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/30 to-transparent"></div>
                              
-                             <div className={`absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest ${cover.color} shadow-sm`}>
+                             <div className="absolute top-4 left-4 bg-[#0a5482]/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border border-white/15 shadow-sm">
                                  {cover.badge}
                              </div>
-                             <h4 className={`absolute bottom-4 left-5 right-5 font-black ${isSingle ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} text-white leading-snug drop-shadow-md`}>
-                                 {course.title}
-                             </h4>
+                             <div className="absolute bottom-4 left-5 right-5">
+                               <span className="text-[11px] font-bold uppercase tracking-widest text-[#2ab4e8] block mb-0.5">TonyEnglish Official Course</span>
+                               <h4 className={`font-black ${isSingle ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} text-white leading-snug drop-shadow-sm`}>
+                                   {course.title}
+                               </h4>
+                             </div>
                           </div>
                           
                           {/* Content Bottom/Right Half */}
-                          <div className={`flex-1 flex flex-col justify-center bg-white ${isSingle ? 'p-6 md:p-10' : 'p-6 md:p-8'}`}>
+                          <div className={`flex-1 flex flex-col justify-center bg-white ${isSingle ? 'p-6 sm:p-8 md:p-10' : 'p-5 sm:p-7'}`}>
                             
                             {/* Overall Progress */}
-                            <div className="mb-6">
+                            <div className="mb-5">
                                 <div className="flex justify-between items-end mb-2">
-                                    <span className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ chung</span>
-                                    <span className="text-[18px] font-black text-[#0ea5e9]">{overallProgress}%</span>
+                                    <span className="text-[12px] font-extrabold text-slate-500 uppercase tracking-wider">Tiến độ hoàn thành khóa học</span>
+                                    <span className="text-[18px] font-black text-[#0a5482]">{overallProgress}%</span>
                                 </div>
-                                <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                                    <div className="h-full bg-gradient-to-r from-sky-400 to-[#0ea5e9] rounded-full transition-all duration-1000" style={{ width: `${overallProgress}%` }}></div>
+                                <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/60">
+                                    <div className="h-full bg-gradient-to-r from-[#0a5482] to-[#2ab4e8] rounded-full transition-all duration-1000" style={{ width: `${overallProgress}%` }}></div>
                                 </div>
                             </div>
 
                             {/* Detailed Stats */}
-                            <div className="flex items-center gap-4 md:gap-6 mb-8 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div className="flex items-center gap-4 sm:gap-6 mb-6 bg-slate-50/90 p-4 rounded-2xl border border-slate-200/70">
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider"><span className="text-emerald-500">📚</span> Lý thuyết</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📖</span> Bài giảng</span>
                                       <span className="font-black text-emerald-600 text-[12px]">{lecProgress}%</span>
                                   </div>
-                                  <div className="font-black text-slate-700 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-medium text-slate-400">bài</span></div>
+                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-semibold text-slate-400">bài học</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
                                       <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
                                   </div>
@@ -1889,26 +2031,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="w-px h-12 bg-slate-200"></div>
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider"><span className="text-blue-500">📝</span> Thực hành</span>
-                                      <span className="font-black text-blue-600 text-[12px]">{testProgress}%</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📝</span> Kho đề thi</span>
+                                      <span className="font-black text-[#0a5482] text-[12px]">{testProgress}%</span>
                                   </div>
-                                  <div className="font-black text-slate-700 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-medium text-slate-400">đề</span></div>
+                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-semibold text-slate-400">đề luyện</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                                      <div className="h-full bg-blue-500 rounded-full transition-all duration-1000" style={{ width: `${testProgress}%` }}></div>
+                                      <div className="h-full bg-[#2ab4e8] rounded-full transition-all duration-1000" style={{ width: `${testProgress}%` }}></div>
                                   </div>
                               </div>
                             </div>
                             
                             {/* Actions */}
-                            <div className={`flex gap-3 ${isSingle ? 'mt-4' : 'mt-auto'}`}>
+                            <div className={`flex flex-col sm:flex-row gap-3 ${isSingle ? 'mt-2' : 'mt-auto'}`}>
                                <button onClick={() => {
                                    resetWorkspaceAndChat(); 
                                    if(onOpenLecture) onOpenLecture(course.id);
-                               }} className="flex-1 bg-white border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 font-bold text-[13px] py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2 uppercase tracking-wide">
-                                   📖 Lý thuyết
+                               }} className="flex-1 bg-sky-50/80 hover:bg-sky-100 text-[#0a5482] border border-sky-200/90 font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
+                                   <span>📖</span> <span>Bài giảng lý thuyết</span>
                                </button>
-                               <button onClick={() => handleOpenCourse(course)} className="flex-[1.5] bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-bold text-[13px] py-3.5 rounded-xl transition-colors shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 uppercase tracking-wide">
-                                   🚀 Vào làm bài
+                               <button onClick={() => handleOpenCourse(course)} className="flex-[1.3] bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-md shadow-blue-900/15 flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
+                                   <span>🚀</span> <span>Vào kho đề &amp; Làm bài</span>
                                </button>
                             </div>
                           </div>
@@ -1922,101 +2064,170 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {/* 🚀 COURSE VIEW (Danh sách Folders & Tests) */}
+        {/* 🚀 COURSE VIEW (Danh sách Folders & Tests - Đồng bộ với Thư viện NewsPage.tsx) */}
         {activeTab === 'library' && activeView === 'course' && selectedCourse && (
           <div className="animate-in fade-in slide-in-from-right-8 duration-500">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 bg-white p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm mx-2 md:mx-0">
-                <div className="flex items-center gap-1.5 sm:gap-2 text-[13px] sm:text-[14px] font-semibold text-slate-500 overflow-x-auto whitespace-nowrap max-w-full pb-1 custom-scrollbar">
-                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); sessionStorage.removeItem('portal_current_folder_id'); }} className="hover:text-[#0ea5e9] transition-colors p-1 rounded-md hover:bg-sky-50 cursor-pointer">
-                        Khóa học
-                    </button>
-                    <span className="text-slate-300">/</span>
-                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); sessionStorage.removeItem('portal_current_folder_id'); }} className={`p-1 rounded-md hover:bg-sky-50 transition-colors cursor-pointer ${!currentFolderId ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
-                        {selectedCourse.title}
-                    </button>
-                    {breadcrumbs.map((b, i) => (
-                      <React.Fragment key={b.id}>
-                        <span className="text-slate-300">/</span>
-                        <button onClick={() => handleFolderClick(b.id)} className={`p-1 rounded-md hover:bg-sky-50 transition-colors cursor-pointer ${i === breadcrumbs.length - 1 ? 'text-[#0ea5e9] font-bold bg-sky-50' : 'hover:text-[#0ea5e9]'}`}>
-                            {b.title}
-                        </button>
-                      </React.Fragment>
-                    ))}
-                </div>
-                
-                {/* ACTION CONTROLS: COURSE FILTER DROPDOWN & MỞ BÀI GIẢNG */}
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full md:w-auto shrink-0">
-                  {/* DROPDOWN CHUYỂN KHÓA HỌC */}
-                  <div className="relative w-full sm:w-60 z-30">
-                    <div 
-                      onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-                      className="w-full bg-white hover:bg-sky-50/50 border border-sky-300 hover:border-[#0ea5e9] rounded-xl px-3.5 py-2 flex items-center justify-between cursor-pointer shadow-xs transition-all"
-                    >
-                      <div className="flex items-center gap-2 min-w-0 pr-1.5">
-                        <span className="text-slate-400 text-xs">🎓</span>
-                        <span className="font-bold text-xs text-sky-900 truncate">
-                          {selectedCourse ? selectedCourse.title : (filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học')}
-                        </span>
-                      </div>
-                      <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
-                    </div>
-                    
-                    {filterCourseDropdownOpen && (
-                      <>
-                        <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                        <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
-                          <div 
-                            onClick={() => {
-                              setFilterCourse('all');
-                              setAnalyticsCourse('all');
-                              setActiveView('dashboard');
-                              setSelectedCourseId(null);
-                              setFilterCourseDropdownOpen(false);
-                            }}
-                            className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' && !selectedCourse ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                          >
-                            🌟 Tất cả khóa học (Trang chủ)
-                          </div>
-                          {courses.map(course => (
-                            <div 
-                              key={course.id}
-                              onClick={() => {
-                                setFilterCourse(course.id);
-                                setAnalyticsCourse(course.id);
-                                setFilterCourseDropdownOpen(false);
-                                handleOpenCourse(course);
-                              }}
-                              className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(selectedCourse?.id) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                            >
-                              📖 {course.title}
-                            </div>
-                          ))}
-                        </div>
-                      </>
-                    )}
-                  </div>
-
-                  {/* NÚT MỞ BÀI GIẢNG LÝ THUYẾT */}
-                  <button 
-                    onClick={() => {
-                        resetWorkspaceAndChat(); 
-                        if(onOpenLecture && selectedCourse) onOpenLecture(selectedCourse.id);
-                    }} 
-                    className="w-full sm:w-auto bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-500 hover:text-white font-bold text-[13px] px-5 py-2 rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs uppercase tracking-wide shrink-0 cursor-pointer active:scale-95"
+            {/* BREADCRUMB BAR (Giống NewsPage.tsx) */}
+            <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[14px] font-semibold text-slate-500 mb-4 flex-wrap">
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveView('dashboard');
+                  setSelectedCourseId(null);
+                  sessionStorage.removeItem('portal_current_folder_id');
+                }}
+                className="hover:text-[#0a5482] flex items-center gap-1 cursor-pointer transition-colors"
+              >
+                <span>🎓</span>
+                <span>Góc học viên</span>
+              </button>
+              <span className="text-slate-300">/</span>
+              <button
+                type="button"
+                onClick={() => {
+                  setCurrentFolderId(null);
+                  setFolderPage(1);
+                  setTestPage(1);
+                  sessionStorage.removeItem('portal_current_folder_id');
+                }}
+                className={`cursor-pointer transition-colors ${
+                  !currentFolderId ? 'text-[#0a5482] font-bold' : 'hover:text-[#0a5482]'
+                }`}
+              >
+                {selectedCourse.title}
+              </button>
+              {breadcrumbs.map((b, i) => (
+                <React.Fragment key={b.id}>
+                  <span className="text-slate-300">/</span>
+                  <button
+                    type="button"
+                    onClick={() => handleFolderClick(b.id)}
+                    className={`cursor-pointer transition-colors ${
+                      i === breadcrumbs.length - 1 ? 'text-[#0a5482] font-bold' : 'hover:text-[#0a5482]'
+                    }`}
                   >
-                    <span>📖</span> <span>Mở Bài Giảng Lý Thuyết</span>
+                    {b.title}
                   </button>
+                </React.Fragment>
+              ))}
+            </nav>
+
+            {/* TONYENGLISH LIBRARY SECTION HEADER BANNER (Giống NewsPage.tsx) */}
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] rounded-2xl sm:rounded-3xl px-5 sm:px-8 py-5 sm:py-6 text-white mb-6 sm:mb-8 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+              <div className="min-w-0">
+                <div className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1 flex items-center gap-2">
+                  <span>📚 TonyEnglish Course &amp; Test Library</span>
+                  {(currentSubFolders.length > 0 || currentTests.length > 0) && (
+                    <span className="bg-white/15 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/20 normal-case tracking-normal">
+                      {currentSubFolders.length > 0 ? `${currentSubFolders.length} danh mục` : ''}
+                      {currentSubFolders.length > 0 && currentTests.length > 0 ? ' • ' : ''}
+                      {currentTests.length > 0 ? `${currentTests.length} bài tập` : ''}
+                    </span>
+                  )}
                 </div>
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight truncate">
+                  {breadcrumbs.length > 0 ? breadcrumbs[breadcrumbs.length - 1].title : selectedCourse.title}
+                </h1>
+              </div>
+
+              {/* ACTION CONTROLS: QUAY LẠI, CHUYỂN KHÓA HỌC & MỞ BÀI GIẢNG */}
+              <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (breadcrumbs.length > 1) {
+                      handleFolderClick(breadcrumbs[breadcrumbs.length - 2].id);
+                    } else if (breadcrumbs.length === 1) {
+                      setCurrentFolderId(null);
+                      setFolderPage(1);
+                      setTestPage(1);
+                      sessionStorage.removeItem('portal_current_folder_id');
+                    } else {
+                      setActiveView('dashboard');
+                      setSelectedCourseId(null);
+                      sessionStorage.removeItem('portal_current_folder_id');
+                    }
+                  }}
+                  className="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>←</span>
+                  <span>Quay lại</span>
+                </button>
+
+                {/* DROPDOWN CHUYỂN KHÓA HỌC */}
+                <div className="relative w-full sm:w-60 z-30">
+                  <div 
+                    onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+                    className="w-full bg-white hover:bg-sky-50 border border-white/20 rounded-xl px-3.5 py-2 flex items-center justify-between cursor-pointer shadow-xs transition-all"
+                  >
+                    <div className="flex items-center gap-2 min-w-0 pr-1.5">
+                      <span className="text-[#0a5482] text-xs">🎓</span>
+                      <span className="font-bold text-xs text-[#0a5482] truncate">
+                        {selectedCourse ? selectedCourse.title : 'Chọn khóa học'}
+                      </span>
+                    </div>
+                    <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                  </div>
+                  
+                  {filterCourseDropdownOpen && (
+                    <>
+                      <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+                      <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white text-slate-800 border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
+                        <div 
+                          onClick={() => {
+                            setFilterCourse('all');
+                            setAnalyticsCourse('all');
+                            setActiveView('dashboard');
+                            setSelectedCourseId(null);
+                            setFilterCourseDropdownOpen(false);
+                          }}
+                          className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' && !selectedCourse ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                        >
+                          🌟 Tất cả khóa học (Góc học viên)
+                        </div>
+                        {courses.map(course => (
+                          <div 
+                            key={course.id}
+                            onClick={() => {
+                              setFilterCourse(course.id);
+                              setAnalyticsCourse(course.id);
+                              setFilterCourseDropdownOpen(false);
+                              handleOpenCourse(course);
+                            }}
+                            className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(selectedCourse?.id) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                          >
+                            📖 {course.title}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                {/* NÚT MỞ BÀI GIẢNG LÝ THUYẾT */}
+                <button 
+                  onClick={() => {
+                    resetWorkspaceAndChat(); 
+                    if(onOpenLecture && selectedCourse) onOpenLecture(selectedCourse.id);
+                  }} 
+                  className="w-full sm:w-auto bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-extrabold text-xs sm:text-[13px] px-4 py-2 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider shrink-0 cursor-pointer active:scale-95"
+                >
+                  <span>📖</span> <span>Bài Giảng Lý Thuyết</span>
+                </button>
+              </div>
             </div>
 
-            <div className="space-y-8 md:space-y-12 px-2 md:px-0">
+            <div className="space-y-8 md:space-y-10">
               
               {/* Folders Grid */}
               {currentSubFolders.length > 0 && (
                 <div>
-                  <h3 className="font-black text-xl text-slate-800 mb-5 ml-1 tracking-tight flex items-center gap-2">
-                      <span className="text-amber-500">📁</span> Danh mục
-                  </h3>
+                  <div className="flex items-center gap-2.5 mb-5">
+                    <span className="w-1.5 h-6 bg-[#0a5482] rounded-full"></span>
+                    <h3 className="font-black text-lg sm:text-xl text-slate-900 tracking-tight m-0">
+                      Danh mục chuyên đề &amp; Bộ đề
+                    </h3>
+                  </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                     {paginatedFolders.map((subFolder, idx) => {
                       const childCount = allFolders.filter(f => f.parent_id === subFolder.id).length;
@@ -2042,30 +2253,29 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       }
 
                       return (
-                        <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer flex flex-col group relative">
-                          <div className={`h-[120px] relative overflow-hidden bg-slate-800`}>
-                            <img src={displayImage} style={{ filter: hueRotate }} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" alt="folder" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                            <div className={`absolute bottom-4 right-4 ${badgeText ? 'left-20' : 'left-5'}`}>
-                                <h3 className="text-[16px] font-black leading-snug line-clamp-2 w-full text-white drop-shadow-md">
+                        <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 hover:border-[#2ab4e8] transition-all duration-300 cursor-pointer flex flex-col group relative">
+                          <div className="h-[125px] relative overflow-hidden bg-slate-900">
+                            <img src={displayImage} style={{ filter: hueRotate }} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85" alt="folder" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent"></div>
+                            <div className={`absolute bottom-3.5 right-4 ${badgeText ? 'left-20' : 'left-4'}`}>
+                                <h3 className="text-[15.5px] font-black leading-snug line-clamp-2 w-full text-white drop-shadow-sm">
                                     {displayTitle}
                                 </h3>
                             </div>
                           </div>
 
                           {badgeText && (
-                              <div className="absolute top-[96px] left-5 bg-gradient-to-br from-white to-slate-50 text-[#0ea5e9] font-black text-[18px] w-12 h-12 rounded-xl flex items-center justify-center shadow border-2 border-white shrink-0 z-10 ring-1 ring-black/5">
+                              <div className="absolute top-[98px] left-4 bg-white text-[#0a5482] font-black text-[16px] w-12 h-12 rounded-xl flex items-center justify-center shadow-md border-2 border-white shrink-0 z-10 ring-1 ring-slate-200">
                                   {badgeText}
                               </div>
                           )}
 
-                          <div className="bg-white p-5 pt-4 flex flex-col relative flex-1">
-                            {!badgeText && <div className="-mt-1"></div>}
+                          <div className="bg-white p-4 flex flex-col relative flex-1">
                             <div className="flex justify-between items-center mt-auto">
-                              <span className="text-[11px] font-bold text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 uppercase tracking-widest">
+                              <span className="text-[11px] font-extrabold text-[#0a5482] bg-sky-50/90 px-3 py-1 rounded-lg border border-sky-100 uppercase tracking-wider">
                                   {childCount > 0 ? `${childCount} thư mục` : `${testCount} bài tập`}
                               </span>
-                              <span className="w-8 h-8 rounded-full bg-sky-50 text-[#0ea5e9] flex items-center justify-center group-hover:bg-[#0ea5e9] group-hover:text-white transition-colors">
+                              <span className="w-8 h-8 rounded-xl bg-slate-100 text-[#0a5482] flex items-center justify-center font-bold group-hover:bg-[#0a5482] group-hover:text-white transition-colors">
                                   →
                               </span>
                             </div>
@@ -2080,28 +2290,35 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
               {/* Tests Grid */}
               {currentTests.length > 0 && (
-                <div className="bg-white rounded-[2rem] border border-slate-200 overflow-hidden shadow-sm animate-in fade-in">
+                <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 overflow-hidden shadow-xs animate-in fade-in">
                   
                   {/* Test Filters */}
-                  <div className="bg-white px-5 md:px-8 py-5 border-b border-slate-100 flex flex-col lg:flex-row justify-between items-center gap-4">
-                    <div className="relative w-full lg:w-96">
-                      <input type="text" placeholder="Tìm kiếm bài tập..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 font-semibold text-[14px] outline-none focus:border-[#0ea5e9] focus:ring-4 focus:ring-[#0ea5e9]/10 transition-all shadow-sm" />
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">🔍</span>
+                  <div className="bg-white px-5 sm:px-7 py-4 sm:py-5 border-b border-slate-200/80 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-1.5 h-6 bg-[#2ab4e8] rounded-full"></span>
+                      <h3 className="font-black text-base sm:text-lg text-slate-900 tracking-tight m-0">
+                        Danh sách bài tập &amp; Đề luyện ({processedTests.length})
+                      </h3>
                     </div>
-                    <div className="flex gap-3 w-full lg:w-auto">
 
-                       <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="flex-1 lg:flex-none bg-white border border-slate-200 shadow-sm rounded-xl px-4 py-3 font-bold text-[13px] text-slate-600 outline-none cursor-pointer focus:border-[#0ea5e9] focus:ring-4 focus:ring-[#0ea5e9]/10">
-                         <option value="name-asc">A-Z</option>
-                         <option value="name-desc">Z-A</option>
-                         <option value="date-desc">Mới nhất</option>
-                         <option value="date-asc">Cũ nhất</option>
-                       </select>
+                    <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                      <div className="relative flex-1 sm:w-80">
+                        <input type="text" placeholder="Tìm kiếm bài tập..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/90 font-semibold text-[13.5px] outline-none focus:border-[#2ab4e8] focus:bg-white focus:ring-2 focus:ring-[#2ab4e8]/20 transition-all" />
+                        <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm">🔍</span>
+                      </div>
+
+                      <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="bg-slate-50 border border-slate-200/90 rounded-xl px-3.5 py-2.5 font-bold text-[13px] text-[#0a5482] outline-none cursor-pointer focus:border-[#2ab4e8]">
+                        <option value="name-asc">Sắp xếp: A → Z</option>
+                        <option value="name-desc">Sắp xếp: Z → A</option>
+                        <option value="date-desc">Mới nhất</option>
+                        <option value="date-asc">Cũ nhất</option>
+                      </select>
                     </div>
                   </div>
 
                   {/* Tests List */}
-                  <div className="p-5 md:p-8 bg-slate-50/50">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6">
+                  <div className="p-5 sm:p-7 bg-slate-50/60">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                       {paginatedTests.map(test => {
                         const inProgress = inProgressIds.has(String(test.id));
                         const isCompleted = completedTestIdsSet.has(String(test.id));
@@ -2119,51 +2336,66 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             deadlineLabel = `${dDate.getDate().toString().padStart(2, '0')}/${(dDate.getMonth() + 1).toString().padStart(2, '0')} ${dDate.getHours().toString().padStart(2, '0')}:${dDate.getMinutes().toString().padStart(2, '0')}`;
                         }
 
-                        let statusConfig = { badge: "Chưa làm", badgeClass: "text-slate-500 bg-slate-100", btnText: "Làm bài ngay", btnClass: "bg-white text-[#0ea5e9] border border-sky-200 hover:bg-[#0ea5e9] hover:text-white" };
+                        let statusConfig = {
+                          badge: "Chưa làm",
+                          badgeClass: "text-slate-600 bg-slate-100 border border-slate-200/80",
+                          btnText: "Làm bài ngay →",
+                          btnClass: "bg-sky-50/90 text-[#0a5482] border border-sky-200/90 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482]"
+                        };
                         
                         if (isCompleted) {
-                            statusConfig = { badge: "✓ Hoàn thành", badgeClass: "text-emerald-700 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-white text-emerald-600 border border-emerald-200 hover:bg-emerald-500 hover:text-white" };
+                            statusConfig = {
+                              badge: "✓ Hoàn thành",
+                              badgeClass: "text-emerald-700 bg-emerald-50 border border-emerald-200",
+                              btnText: "Làm lại đề →",
+                              btnClass: "bg-emerald-50 text-emerald-700 border border-emerald-200 group-hover:bg-emerald-600 group-hover:text-white"
+                            };
                         }
                         else if (inProgress) {
-                            statusConfig = { badge: "⏳ Đang làm dở", badgeClass: "text-amber-700 bg-amber-100", btnText: "Tiếp tục làm", btnClass: "bg-amber-500 text-white shadow-md shadow-amber-500/20 hover:bg-amber-600" };
+                            statusConfig = {
+                              badge: "⏳ Đang làm dở",
+                              badgeClass: "text-amber-700 bg-amber-50 border border-amber-200",
+                              btnText: "Tiếp tục làm →",
+                              btnClass: "bg-amber-500 text-white shadow-sm hover:bg-amber-600"
+                            };
                         }
                         else if (isOverdue) {
-                            statusConfig.btnText = "Nộp muộn";
-                            statusConfig.btnClass = "bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-600 hover:text-white";
+                            statusConfig.btnText = "Nộp muộn →";
+                            statusConfig.btnClass = "bg-rose-50 text-rose-600 border border-rose-200 group-hover:bg-rose-600 group-hover:text-white";
                         }
 
                         return (
-                          <div key={test.id} onClick={() => handleStartTestClick(test)} className={`bg-white border p-5 md:p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-between group relative overflow-hidden ${isCompleted ? 'border-emerald-200' : inProgress ? 'border-amber-300' : 'border-slate-200 hover:border-[#0ea5e9]'}`}>
+                          <div key={test.id} onClick={() => handleStartTestClick(test)} className={`bg-white border p-5 rounded-2xl shadow-2xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex flex-col justify-between group relative overflow-hidden ${isCompleted ? 'border-emerald-200/90' : inProgress ? 'border-amber-300' : 'border-slate-200/90 hover:border-[#2ab4e8]'}`}>
                             
                             <div>
-                              <div className="flex justify-between items-start mb-4">
-                                <div className={`w-12 h-12 rounded-xl ${skillConfig.bg} border ${skillConfig.border} flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform`}>
+                              <div className="flex justify-between items-start mb-3.5">
+                                <div className={`w-11 h-11 rounded-xl ${skillConfig.bg} border ${skillConfig.border} flex items-center justify-center text-xl group-hover:scale-105 transition-transform`}>
                                     {skillConfig.icon}
                                 </div>
-                                <span className={`text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-widest ${statusConfig.badgeClass}`}>
+                                <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider ${statusConfig.badgeClass}`}>
                                     {statusConfig.badge}
                                 </span>
                               </div>
                               
-                              <h3 className="font-bold text-slate-800 text-[16px] group-hover:text-[#0ea5e9] transition-colors mb-3 line-clamp-2 leading-snug h-12">
+                              <h3 className="font-extrabold text-slate-800 text-[15.5px] group-hover:text-[#0a5482] transition-colors mb-2.5 line-clamp-2 leading-snug min-h-[42px]">
                                   {test.title}
                               </h3>
                               
-                              <div className="flex flex-wrap items-center gap-2 mb-2">
+                              <div className="flex flex-wrap items-center gap-1.5 mb-2">
                                   {(test.content_json?.basicInfo?.guide_video_url || test.content_json?.guide_video_url) && (
-                                      <span className="text-[10px] px-2 py-0.5 rounded font-bold tracking-wider bg-red-50 text-red-600 border border-red-100 flex items-center gap-1 shadow-xs" title="Có video hướng dẫn & giải đề">
-                                          🎬 Video gợi ý
+                                      <span className="text-[10px] px-2 py-0.5 rounded-md font-bold tracking-wider bg-red-50 text-red-600 border border-red-100 flex items-center gap-1" title="Có video hướng dẫn & giải đề">
+                                          🎬 Video giải đề
                                       </span>
                                   )}
                                   {matchedClassId && !isCompleted && (
-                                      <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider ${isOverdue ? 'bg-rose-100 text-rose-600' : 'bg-orange-100 text-orange-600'}`}>
+                                      <span className={`text-[10px] px-2 py-0.5 rounded-md uppercase font-bold tracking-wider ${isOverdue ? 'bg-rose-100 text-rose-600' : 'bg-orange-100 text-orange-600'}`}>
                                           {isOverdue ? 'Quá hạn' : 'Hạn: ' + deadlineLabel}
                                       </span>
                                   )}
                               </div>
                             </div>
                             
-                            <button className={`mt-5 w-full font-bold text-[13px] uppercase tracking-wide py-3 rounded-xl transition-all duration-300 ${statusConfig.btnClass}`}>
+                            <button className={`mt-4 w-full font-extrabold text-[12.5px] uppercase tracking-wider py-2.5 rounded-xl transition-all duration-200 cursor-pointer ${statusConfig.btnClass}`}>
                                 {statusConfig.btnText}
                             </button>
                           </div>
@@ -2172,8 +2404,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     </div>
                     
                     {processedTests.length === 0 ? (
-                      <div className="text-center py-20 text-slate-400 font-medium flex flex-col items-center justify-center bg-white rounded-2xl border border-dashed border-slate-300">
-                        <svg className="w-12 h-12 mb-3 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                      <div className="text-center py-16 text-slate-400 font-medium flex flex-col items-center justify-center bg-white rounded-2xl border border-dashed border-slate-300">
+                        <svg className="w-10 h-10 mb-3 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                         Không tìm thấy bài học nào phù hợp.
                       </div>
                     ) : (
@@ -2184,12 +2416,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               )}
 
               {isLoading ? (
-                <div className="text-center py-24 bg-white rounded-2xl border border-slate-200 shadow-sm mx-2 md:mx-0 flex flex-col items-center justify-center">
-                   <div className="w-10 h-10 border-4 border-sky-200 border-t-[#0ea5e9] rounded-full animate-spin mb-4"></div>
+                <div className="text-center py-20 bg-white rounded-2xl border border-slate-200/90 shadow-xs flex flex-col items-center justify-center">
+                   <div className="w-10 h-10 border-4 border-sky-100 border-t-[#0a5482] rounded-full animate-spin mb-4"></div>
                    <span className="text-slate-500 font-medium text-sm">Đang tải danh mục và bài tập...</span>
                 </div>
               ) : currentSubFolders.length === 0 && currentTests.length === 0 && (
-                <div className="text-center py-24 bg-white rounded-2xl border border-slate-200 text-slate-400 font-medium text-base shadow-sm mx-2 md:mx-0 flex flex-col items-center justify-center">
+                <div className="text-center py-20 bg-white rounded-2xl border border-slate-200/90 text-slate-400 font-medium text-base shadow-xs flex flex-col items-center justify-center">
                    <div className="text-5xl mb-4 grayscale opacity-30">📭</div>
                    Thư mục này hiện đang trống.
                 </div>
@@ -2890,22 +3122,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             🚀 TRANG CẤU HÌNH TÀI KHOẢN (PROFILE)
             ===================================================================== */}
         {activeTab === 'profile' && (
-          <div className="max-w-2xl mx-auto mt-6 md:mt-10 mb-16 px-2 sm:px-0 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="max-w-2xl mx-auto mt-4 md:mt-6 mb-12 px-2 sm:px-0 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             
             {/* Header Thẻ Cá Nhân */}
-            <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 text-white flex items-center justify-center font-black text-3xl md:text-4xl shadow-lg border-4 border-white shrink-0">
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-800/40 shadow-md flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left text-white">
+              <div className="w-20 h-20 md:w-22 md:h-22 rounded-2xl bg-gradient-to-br from-[#2ab4e8] to-[#0a5482] text-white flex items-center justify-center font-black text-3xl md:text-4xl shadow-lg border-2 border-white/30 shrink-0">
                 {displayUserInitial}
               </div>
               <div className="flex-1">
-                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
-                  <h2 className="text-2xl md:text-3xl font-black text-slate-800 tracking-tight">{displayUserName}</h2>
-                  <span className="text-[#0ea5e9] font-bold text-[12px] bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100 uppercase tracking-widest">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 mb-1.5">
+                  <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight">{displayUserName}</h2>
+                  <span className="text-[#2ab4e8] font-extrabold text-[11px] bg-white/10 px-3 py-0.5 rounded-full border border-white/15 uppercase tracking-widest">
                     {userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên TonyEnglish'}
                   </span>
                 </div>
-                <p className="text-slate-500 text-[14px] flex items-center justify-center sm:justify-start gap-1.5 font-medium">
-                  <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <p className="text-slate-300 text-[14px] flex items-center justify-center sm:justify-start gap-1.5 font-medium">
+                  <svg className="w-4 h-4 text-[#2ab4e8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   {currentUser?.email || "Chưa có email"}
@@ -2914,9 +3146,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </div>
 
             {/* Khối 1: Thông tin học viên */}
-            <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+            <div className="bg-white p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-xs">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0ea5e9] flex items-center justify-center text-xl font-bold">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0a5482] flex items-center justify-center text-xl font-bold border border-sky-100">
                   👤
                 </div>
                 <div>
@@ -2945,7 +3177,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     type="text" 
                     value={newFullName} 
                     onChange={e => setNewFullName(e.target.value)} 
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px]" 
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-semibold text-slate-800 focus:border-[#2ab4e8] focus:bg-white focus:ring-4 focus:ring-[#2ab4e8]/10 outline-none transition-all text-[15px]" 
                     placeholder="Nhập họ và tên..." 
                   />
                 </div>
@@ -2978,7 +3210,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <button 
                     type="submit" 
                     disabled={isUpdatingProfile} 
-                    className="bg-[#0ea5e9] hover:bg-[#0284c7] disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2"
+                    className="bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md shadow-blue-900/15 hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer"
                   >
                     {isUpdatingProfile ? (
                       <>
@@ -2994,9 +3226,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </div>
 
             {/* Khối 2: Đổi mật khẩu tài khoản */}
-            <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+            <div className="bg-white p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-xs">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold border border-amber-100">
                   🔐
                 </div>
                 <div>
@@ -3030,7 +3262,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         setNewPassword(e.target.value);
                         setPasswordErrorMsg('');
                       }} 
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 pr-12 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px]" 
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 pr-12 font-semibold text-slate-800 focus:border-[#2ab4e8] focus:bg-white focus:ring-4 focus:ring-[#2ab4e8]/10 outline-none transition-all text-[15px]" 
                     />
                     <button 
                       type="button" 
@@ -3062,7 +3294,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         setConfirmPassword(e.target.value);
                         setPasswordErrorMsg('');
                       }} 
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 pr-12 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px]" 
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 pr-12 font-semibold text-slate-800 focus:border-[#2ab4e8] focus:bg-white focus:ring-4 focus:ring-[#2ab4e8]/10 outline-none transition-all text-[15px]" 
                     />
                     <button 
                       type="button" 
@@ -3093,7 +3325,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <button 
                     type="submit" 
                     disabled={isChangingPassword || !newPassword || newPassword.length < 6 || newPassword !== confirmPassword} 
-                    className="bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2"
+                    className="bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer"
                   >
                     {isChangingPassword ? (
                       <>
@@ -3113,29 +3345,107 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       </main>
 
+      {/* UNIFIED COMPACT FOOTER (Đồng bộ với TonyEnglish.vn) */}
+      {(activeTab === 'library' || activeTab === 'profile') && (
+        <footer className="bg-[#0f172a] text-slate-400 py-8 border-t border-slate-800 mt-12 shrink-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo-shield.png"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
+                }}
+                alt="TonyEnglish"
+                className="h-7 w-auto object-contain"
+              />
+              <div>
+                <div className="font-black text-base tracking-tight text-white">
+                  <span className="text-[#2ab4e8]">TONY</span>ENGLISH <span className="text-xs font-semibold text-slate-400">• Student Portal</span>
+                </div>
+                <p className="text-xs text-slate-500">
+                  © 2013–2026 TonyEnglish.vn — Hệ sinh thái đào tạo Tiếng Anh &amp; Luyện thi thông minh tích hợp AI.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-400">
+              <button
+                type="button"
+                onClick={() => {
+                  resetWorkspaceAndChat();
+                  onNavigate?.('home');
+                }}
+                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+              >
+                🏠 Trang chủ
+              </button>
+              <span>•</span>
+              <a
+                href="/courses"
+                onClick={(e) => {
+                  e.preventDefault();
+                  resetWorkspaceAndChat();
+                  window.history.pushState({}, '', '/courses');
+                  onNavigate?.('home');
+                }}
+                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+              >
+                🎓 Các khóa học
+              </a>
+              <span>•</span>
+              <a
+                href="/news"
+                onClick={(e) => {
+                  e.preventDefault();
+                  resetWorkspaceAndChat();
+                  window.history.pushState({}, '', '/news');
+                  onNavigate?.('home');
+                }}
+                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+              >
+                📚 Thư viện bài đọc
+              </a>
+              <span>•</span>
+              <a
+                href="/videos"
+                onClick={(e) => {
+                  e.preventDefault();
+                  resetWorkspaceAndChat();
+                  window.history.pushState({}, '', '/videos');
+                  onNavigate?.('home');
+                }}
+                className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
+              >
+                🎬 Kho Video
+              </a>
+            </div>
+          </div>
+        </footer>
+      )}
+
       {/* POPUP CHI TIẾT LỊCH SỬ */}
       {viewingHistoryDetail && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-in fade-in duration-200">
-          <div className="bg-white rounded-[2rem] w-full max-w-lg shadow-2xl overflow-hidden border border-slate-200 animate-in zoom-in-95">
-             <div className="bg-white px-8 py-6 border-b border-slate-100 flex justify-between items-center">
-                <h3 className="font-black text-slate-800 text-[14px] uppercase tracking-widest">Bảng Kết Quả</h3>
-                <button onClick={() => setViewingHistoryDetail(null)} className="text-slate-400 hover:text-rose-500 w-8 h-8 rounded-full hover:bg-rose-50 flex items-center justify-center transition-colors">
+          <div className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-slate-200 animate-in zoom-in-95">
+             <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-7 py-5 text-white flex justify-between items-center">
+                <h3 className="font-black text-[13px] uppercase tracking-widest text-[#2ab4e8]">Bảng Kết Quả Làm Bài</h3>
+                <button onClick={() => setViewingHistoryDetail(null)} className="text-white/70 hover:text-white w-8 h-8 rounded-full hover:bg-white/10 flex items-center justify-center transition-colors cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
              </div>
              
-             <div className="p-8 md:p-10">
-                <div className="text-center mb-8 border-b border-slate-100 pb-8">
-                   <h2 className="text-2xl font-black text-slate-800 mb-2 leading-tight">{viewingHistoryDetail.name}</h2>
-                   <p className="text-slate-500 font-medium text-[13px] mb-8">Nộp lúc: <span className="text-slate-700">{formatDate(viewingHistoryDetail.date)}</span></p>
+             <div className="p-7 md:p-9">
+                <div className="text-center mb-7 border-b border-slate-100 pb-7">
+                   <h2 className="text-xl sm:text-2xl font-black text-slate-800 mb-2 leading-tight">{viewingHistoryDetail.name}</h2>
+                   <p className="text-slate-500 font-medium text-[13px] mb-6">Nộp lúc: <span className="text-slate-700">{formatDate(viewingHistoryDetail.date)}</span></p>
                    
                    <div className="flex justify-center gap-4">
-                      <div className="bg-slate-50 border border-slate-200 px-6 py-5 rounded-2xl flex-1 shadow-sm">
-                         <p className="text-[11px] font-bold uppercase text-slate-500 tracking-widest mb-1.5">Thời gian</p>
+                      <div className="bg-slate-50 border border-slate-200 px-6 py-4 rounded-2xl flex-1 shadow-2xs">
+                         <p className="text-[11px] font-bold uppercase text-slate-500 tracking-widest mb-1">Thời gian</p>
                          <p className="text-2xl font-black text-slate-800">{viewingHistoryDetail.timeSpent} <span className="text-[13px] font-bold text-slate-500 uppercase">phút</span></p>
                       </div>
-                      <div className="bg-emerald-50 border border-emerald-200 px-6 py-5 rounded-2xl flex-1 shadow-sm">
-                         <p className="text-[11px] font-bold uppercase text-emerald-600 tracking-widest mb-1.5">Kết quả</p>
+                      <div className="bg-emerald-50 border border-emerald-200 px-6 py-4 rounded-2xl flex-1 shadow-2xs">
+                         <p className="text-[11px] font-bold uppercase text-emerald-600 tracking-widest mb-1">Kết quả</p>
                          <p className="text-2xl font-black text-emerald-600">
                            {viewingHistoryDetail.details?.bandScore ? `Band ${viewingHistoryDetail.details.bandScore}` : viewingHistoryDetail.scoreObj.display}
                          </p>
@@ -3150,7 +3460,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         if (!foundTest) foundTest = allTests.find(t => t.title.trim() === viewingHistoryDetail.name.trim());
                         
                         if (foundTest && onStartTest) {
-                            // Fetch the FULL test data from the database to guarantee content_json is present
                             const { data: fullTest } = await supabase.from('tests').select('*').eq('id', foundTest.id).single();
                             let testDataToUse = fullTest || foundTest;
                             
@@ -3185,11 +3494,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         } else {
                             alert("Đề thi này không còn tồn tại trên hệ thống.");
                         }
-                    }} className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl transition-colors uppercase tracking-widest text-[13px] shadow-md shadow-blue-500/20">
+                    }} className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-black py-3.5 rounded-xl transition-colors uppercase tracking-wider text-[13px] shadow-md shadow-blue-900/15 cursor-pointer">
                         Xem chi tiết chữa bài
                     </button>
                     
-                    <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-4 rounded-xl transition-colors uppercase tracking-widest text-[13px]">
+                    <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3.5 rounded-xl transition-colors uppercase tracking-wider text-[13px] cursor-pointer">
                        Làm lại bài này ngay
                     </button>
                 </div>
@@ -3201,54 +3510,55 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       {/* POPUP CHỌN CHẾ ĐỘ THI IELTS */}
       {showModeSelection && testToStart && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
-          <div className="bg-white w-full max-w-[480px] p-8 md:p-12 rounded-[2rem] shadow-2xl border border-slate-200 animate-in zoom-in-95">
+          <div className="bg-white w-full max-w-[480px] p-7 md:p-10 rounded-3xl shadow-2xl border border-slate-200 animate-in zoom-in-95">
             
-            <div className="mb-8 text-center">
-              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 border border-blue-100">
+            <div className="mb-7 text-center">
+              <div className="w-16 h-16 bg-sky-50 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 border border-sky-100">
                  🎓
               </div>
-              <h2 className="text-[22px] md:text-[24px] font-black text-slate-800 mb-2 leading-tight line-clamp-2" title={testToStart.title}>{testToStart.title}</h2>
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block mb-1">TonyEnglish IELTS Testing</span>
+              <h2 className="text-[20px] md:text-[22px] font-black text-slate-800 mb-2 leading-tight line-clamp-2" title={testToStart.title}>{testToStart.title}</h2>
               <p className="text-[14px] text-slate-500 font-medium">
                 Vui lòng chọn hình thức thi bạn muốn tham gia:
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3.5">
               <button 
                 onClick={() => handleConfirmMode('computer')}
-                className="w-full flex items-center p-5 bg-white border-2 border-slate-100 hover:border-[#0ea5e9] hover:shadow-md hover:-translate-y-1 rounded-2xl transition-all duration-300 text-left group cursor-pointer"
+                className="w-full flex items-center p-4.5 bg-white border-2 border-slate-200/80 hover:border-[#0a5482] hover:shadow-md hover:-translate-y-0.5 rounded-2xl transition-all duration-300 text-left group cursor-pointer"
               >
-                <div className="w-14 h-14 shrink-0 flex items-center justify-center bg-slate-50 text-slate-400 group-hover:bg-[#0ea5e9] group-hover:text-white rounded-xl mr-5 transition-colors duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-7 h-7">
+                <div className="w-13 h-13 shrink-0 flex items-center justify-center bg-sky-50 text-[#0a5482] group-hover:bg-[#0a5482] group-hover:text-white rounded-xl mr-4 transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-black text-slate-800 group-hover:text-[#0ea5e9] transition-colors">Thi trên máy tính</h3>
-                  <p className="text-[13px] text-slate-500 mt-1 font-medium">Giao diện chuẩn Computer-delivered</p>
+                  <h3 className="text-[15.5px] font-black text-slate-800 group-hover:text-[#0a5482] transition-colors">Thi trên máy tính (Computer-delivered)</h3>
+                  <p className="text-[12.5px] text-slate-500 mt-0.5 font-medium">Giao diện chia đôi màn hình, highlight &amp; chấm điểm tự động</p>
                 </div>
               </button>
 
               <button 
                 onClick={() => handleConfirmMode('paper')}
-                className="w-full flex items-center p-5 bg-white border-2 border-slate-100 hover:border-emerald-500 hover:shadow-md hover:-translate-y-1 rounded-2xl transition-all duration-300 text-left group cursor-pointer"
+                className="w-full flex items-center p-4.5 bg-white border-2 border-slate-200/80 hover:border-emerald-600 hover:shadow-md hover:-translate-y-0.5 rounded-2xl transition-all duration-300 text-left group cursor-pointer"
               >
-                <div className="w-14 h-14 shrink-0 flex items-center justify-center bg-slate-50 text-slate-400 group-hover:bg-emerald-500 group-hover:text-white rounded-xl mr-5 transition-colors duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-7 h-7">
+                <div className="w-13 h-13 shrink-0 flex items-center justify-center bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white rounded-xl mr-4 transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-black text-slate-800 group-hover:text-emerald-600 transition-colors">Thi trên giấy</h3>
-                  <p className="text-[13px] text-slate-500 mt-1 font-medium">Làm trên giấy, xem đề PDF & nghe Audio</p>
+                  <h3 className="text-[15.5px] font-black text-slate-800 group-hover:text-emerald-600 transition-colors">Thi trên giấy (Paper-based)</h3>
+                  <p className="text-[12.5px] text-slate-500 mt-0.5 font-medium">Làm trên giấy, xem đề PDF &amp; nghe Audio</p>
                 </div>
               </button>
             </div>
 
-            <div className="mt-8 pt-4 flex justify-center">
+            <div className="mt-6 pt-3 flex justify-center">
               <button 
                 onClick={() => setShowModeSelection(false)}
-                className="text-[13px] font-black text-slate-400 hover:text-slate-600 hover:bg-slate-100 uppercase tracking-widest transition-colors py-3 px-8 rounded-xl"
+                className="text-[13px] font-black text-slate-400 hover:text-slate-600 hover:bg-slate-100 uppercase tracking-widest transition-colors py-2.5 px-8 rounded-xl cursor-pointer"
               >
                 Hủy bỏ
               </button>
@@ -3275,11 +3585,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }}
           className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
             activeTab === 'library'
-              ? 'text-[#0ea5e9] font-bold scale-105'
+              ? 'text-[#0a5482] font-bold scale-105'
               : 'text-slate-400 hover:text-slate-600 font-medium'
           }`}
         >
-          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'library' ? 'bg-[#0ea5e9]/10' : ''}`}>
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'library' ? 'bg-sky-50 text-[#0a5482]' : ''}`}>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'library' ? 2.5 : 2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
@@ -3295,11 +3605,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }}
           className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
             activeTab === 'calendar'
-              ? 'text-[#0ea5e9] font-bold scale-105'
+              ? 'text-[#0a5482] font-bold scale-105'
               : 'text-slate-400 hover:text-slate-600 font-medium'
           }`}
         >
-          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'calendar' ? 'bg-[#0ea5e9]/10' : ''}`}>
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'calendar' ? 'bg-sky-50 text-[#0a5482]' : ''}`}>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'calendar' ? 2.5 : 2} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
             </svg>
@@ -3315,11 +3625,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }}
           className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
             activeTab === 'board'
-              ? 'text-[#0ea5e9] font-bold scale-105'
+              ? 'text-[#0a5482] font-bold scale-105'
               : 'text-slate-400 hover:text-slate-600 font-medium'
           }`}
         >
-          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'board' ? 'bg-[#0ea5e9]/10' : ''}`}>
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'board' ? 'bg-sky-50 text-[#0a5482]' : ''}`}>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'board' ? 2.5 : 2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
             </svg>
@@ -3335,11 +3645,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }}
           className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
             activeTab === 'analytics'
-              ? 'text-[#0ea5e9] font-bold scale-105'
+              ? 'text-[#0a5482] font-bold scale-105'
               : 'text-slate-400 hover:text-slate-600 font-medium'
           }`}
         >
-          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'analytics' ? 'bg-[#0ea5e9]/10' : ''}`}>
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'analytics' ? 'bg-sky-50 text-[#0a5482]' : ''}`}>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'analytics' ? 2.5 : 2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
