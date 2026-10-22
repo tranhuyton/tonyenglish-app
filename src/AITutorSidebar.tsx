@@ -146,30 +146,30 @@ export default function AITutorSidebar({
   const theme = useMemo(() => {
     if (mode === 'parent_mode') {
       return {
-        headerBg: 'from-[#f59e0b] to-[#ea580c]', 
+        headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
         title: 'Trợ lý Phụ huynh', 
-        subtitle: 'Báo cáo học tập AI', 
+        subtitle: 'TonyEnglish • Báo cáo AI', 
         icon: '👨‍👩‍👧‍👦',
-        userBg: 'bg-gradient-to-br from-[#f59e0b] to-[#ea580c]', 
-        aiBorder: 'border-orange-100', 
+        userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+        aiBorder: 'border-slate-200/90', 
         aiBg: 'bg-white',
-        btnColor: 'bg-[#f59e0b] hover:bg-[#ea580c]', 
-        focusRing: 'focus-within:border-[#f59e0b] focus-within:ring-4 focus-within:ring-[#f59e0b]/10', 
-        width: 'md:w-[450px]'
+        btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+        focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+        width: 'md:w-[440px]'
       };
     }
 
     if (mode === 'tutor') {
       return {
-        headerBg: 'from-[#0ea5e9] to-[#0284c7]',
+        headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
         title: 'Tony AI Tutor', 
         subtitle: 'Gia sư đồng hành 24/7', 
         icon: '🤖',
-        userBg: 'bg-gradient-to-br from-[#0ea5e9] to-[#0284c7]', 
-        aiBorder: 'border-slate-100', 
+        userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+        aiBorder: 'border-slate-200/90', 
         aiBg: 'bg-white',
-        btnColor: 'bg-[#0ea5e9] hover:bg-[#0284c7]', 
-        focusRing: 'focus-within:border-[#0ea5e9] focus-within:ring-4 focus-within:ring-[#0ea5e9]/10', 
+        btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+        focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
         width: 'md:w-[420px]'
       };
     }
@@ -177,107 +177,107 @@ export default function AITutorSidebar({
     switch (taskType) {
       case 'task1':
         return {
-          headerBg: 'from-[#10b981] to-[#0d9488]', 
-          title: `IELTS Assessor (TASK 1)`,
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
+          title: `IELTS Assessor (Task 1)`,
           subtitle: 'Chấm điểm & Sửa lỗi chuyên sâu', 
           icon: '📝',
-          userBg: 'bg-gradient-to-br from-[#10b981] to-[#0d9488]', 
-          aiBorder: 'border-emerald-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#10b981] hover:bg-[#059669]', 
-          focusRing: 'focus-within:border-[#10b981] focus-within:ring-4 focus-within:ring-[#10b981]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
       case 'task2':
         return {
-          headerBg: 'from-[#8b5cf6] to-[#6d28d9]', 
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: `IELTS Assessor (${taskType.toUpperCase()})`,
           subtitle: 'Chấm điểm & Sửa lỗi chuyên sâu', 
           icon: '🎓',
-          userBg: 'bg-gradient-to-br from-[#8b5cf6] to-[#6d28d9]', 
-          aiBorder: 'border-purple-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#8b5cf6] hover:bg-[#7c3aed]', 
-          focusRing: 'focus-within:border-[#8b5cf6] focus-within:ring-4 focus-within:ring-[#8b5cf6]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
       case 'math':
         return {
-          headerBg: 'from-[#10b981] to-[#059669]', 
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'Math AI Tutor',
           subtitle: 'Giải chi tiết từng bước lập luận', 
           icon: '📐',
-          userBg: 'bg-gradient-to-br from-[#10b981] to-[#059669]', 
-          aiBorder: 'border-emerald-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#10b981] hover:bg-[#059669]', 
-          focusRing: 'focus-within:border-[#10b981] focus-within:ring-4 focus-within:ring-[#10b981]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
       case 'Science':
         return {
-          headerBg: 'from-[#f97316] to-[#ea580c]', 
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'Science AI Tutor',
           subtitle: 'Phân tích hiện tượng & Thí nghiệm', 
           icon: '🧪',
-          userBg: 'bg-gradient-to-br from-[#f97316] to-[#ea580c]', 
-          aiBorder: 'border-orange-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#f97316] hover:bg-[#ea580c]', 
-          focusRing: 'focus-within:border-[#f97316] focus-within:ring-4 focus-within:ring-[#f97316]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
       case 'speaking':
         return {
-          headerBg: 'from-[#f43f5e] to-[#e11d48]', 
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'Speaking Assistant',
           subtitle: 'Lên ý tưởng & Bẻ lõi Part 2', 
           icon: '🎙️',
-          userBg: 'bg-gradient-to-br from-[#f43f5e] to-[#e11d48]', 
-          aiBorder: 'border-rose-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#f43f5e] hover:bg-[#e11d48]', 
-          focusRing: 'focus-within:border-[#f43f5e] focus-within:ring-4 focus-within:ring-[#f43f5e]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
       case 'ESL':
         return {
-          headerBg: 'from-[#0284c7] to-[#0369a1]', 
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'Cambridge IGCSE ESL',
           subtitle: 'Strict Cambridge Evaluation Protocol', 
           icon: '📝',
-          userBg: 'bg-gradient-to-br from-[#0284c7] to-[#0369a1]', 
-          aiBorder: 'border-sky-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#0284c7] hover:bg-[#0369a1]', 
-          focusRing: 'focus-within:border-[#0284c7] focus-within:ring-4 focus-within:ring-[#0284c7]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
       case 'reading':
         return {
-          headerBg: 'from-[#14b8a6] to-[#0d9488]', 
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'IELTS Reading Tutor',
           subtitle: 'Giải thích đáp án chi tiết', 
           icon: '📖',
-          userBg: 'bg-gradient-to-br from-[#14b8a6] to-[#0d9488]', 
-          aiBorder: 'border-teal-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#14b8a6] hover:bg-[#0d9488]', 
-          focusRing: 'focus-within:border-[#14b8a6] focus-within:ring-4 focus-within:ring-[#14b8a6]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
       default:
         return {
-          headerBg: 'from-[#64748b] to-[#475569]',
+          headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
           title: 'Tony AI Multi-Tutor', 
           subtitle: 'Hỗ trợ học tập chuyên sâu', 
           icon: '✨',
-          userBg: 'bg-gradient-to-br from-[#64748b] to-[#475569]', 
-          aiBorder: 'border-slate-100', 
+          userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
+          aiBorder: 'border-slate-200/90', 
           aiBg: 'bg-white',
-          btnColor: 'bg-[#64748b] hover:bg-[#475569]', 
-          focusRing: 'focus-within:border-[#64748b] focus-within:ring-4 focus-within:ring-[#64748b]/10', 
-          width: 'md:w-[500px]'
+          btnColor: 'bg-[#0a5482] hover:bg-[#084266]', 
+          focusRing: 'focus-within:border-[#2ab4e8] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#2ab4e8]/10', 
+          width: 'md:w-[480px]'
         };
     }
   }, [mode, taskType]);
@@ -723,14 +723,14 @@ export default function AITutorSidebar({
     formatted = formatted.replace(/^---$/gim, '<hr class="my-2.5 border-slate-200" />');
 
     // 4. Format gạch đầu dòng (* item hoặc - item)
-    formatted = formatted.replace(/^[*\-] (.*$)/gim, '<div class="flex items-start my-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 mr-2 shrink-0"></span><span>$1</span></div>');
+    formatted = formatted.replace(/^[*\-] (.*$)/gim, '<div class="flex items-start my-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-[#2ab4e8] mt-2 mr-2 shrink-0"></span><span>$1</span></div>');
 
     // 5. In đậm và in nghiêng
-    formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<b class="font-bold text-slate-800">$1</b>');
+    formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<b class="font-bold text-slate-900">$1</b>');
     formatted = formatted.replace(/(?<!\*)\*(?!\s)([^*]+?)(?<!\s)\*(?!\*)/g, '<i class="italic">$1</i>');
 
     // 6. Code inline
-    formatted = formatted.replace(/`([^`]+)`/g, '<span class="italic text-[#0ea5e9] font-medium px-1 bg-sky-50 rounded">$1</span>');
+    formatted = formatted.replace(/`([^`]+)`/g, '<span class="text-[#0a5482] font-semibold px-1.5 py-0.5 bg-sky-50 border border-sky-100 rounded-md">$1</span>');
 
     // 7. Dọn dẹp khoảng trống thừa trước khi xuống dòng
     formatted = formatted.replace(/(<\/h[1-3]>|<\/div>|<hr[^>]*>)\n+/gi, '$1');
@@ -747,8 +747,8 @@ export default function AITutorSidebar({
       return (
           <button 
               onClick={() => { setIsMinimized(false); }}
-              className={`fixed bottom-[90px] md:bottom-[120px] right-3 md:right-8 z-[100000] w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-tr ${theme.headerBg} text-white shadow-[0_8px_30px_rgba(0,0,0,0.25)] flex items-center justify-center text-xl md:text-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-in zoom-in group border-2 md:border-[3px] border-white/50 backdrop-blur-sm`}
-              title="Mở lại khung Chat AI"
+              className={`fixed bottom-[90px] md:bottom-[110px] right-3 md:right-7 z-[100000] w-13 h-13 md:w-15 md:h-15 rounded-2xl bg-gradient-to-br ${theme.headerBg} text-white shadow-[0_12px_32px_rgba(10,84,130,0.35)] flex items-center justify-center text-xl md:text-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-in zoom-in group border-2 border-[#2ab4e8]/60 backdrop-blur-sm cursor-pointer`}
+              title="Mở lại khung Chat Tony AI Tutor"
           >
               <span className="group-hover:hidden drop-shadow-md">
                   {theme.icon}
@@ -756,8 +756,8 @@ export default function AITutorSidebar({
               <span className="hidden group-hover:block drop-shadow-md">
                   💬
               </span>
-              <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-red-500 border-2 border-white rounded-full flex items-center justify-center">
-                  <span className="absolute w-full h-full bg-red-500 rounded-full animate-ping opacity-75"></span>
+              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-[#073b5c] rounded-full flex items-center justify-center">
+                  <span className="absolute w-full h-full bg-emerald-400 rounded-full animate-ping opacity-75"></span>
               </span>
           </button>
       );
@@ -779,57 +779,56 @@ export default function AITutorSidebar({
           className={
               `fixed top-0 md:top-[64px] bottom-0 right-0 w-full ` + 
               `${isExpanded ? 'md:w-[800px]' : theme.width} ` + 
-              `bg-[#f8fafc] shadow-[-10px_0_40px_rgba(0,0,0,0.1)] ` + 
-              `z-[100000] flex flex-col transition-all duration-400 ease-out border-l border-slate-200 ` + 
+              `bg-[#f8fafc] shadow-[-12px_0_40px_rgba(15,23,42,0.12)] ` + 
+              `z-[100000] flex flex-col transition-all duration-400 ease-out border-l border-slate-200/90 ` + 
               `${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`
           }
       >
         
-        {/* HEADER SECTION */}
+        {/* HEADER SECTION (Synchronized with TonyEnglish.vn Design System) */}
         <div 
             className={
-                `h-[68px] md:h-[72px] bg-gradient-to-r ${theme.headerBg} ` + 
-                `text-white flex items-center justify-between px-3 md:px-5 shrink-0 ` + 
-                `shadow-md z-20 relative overflow-hidden`
+                `bg-gradient-to-r ${theme.headerBg} ` + 
+                `text-white flex items-center justify-between px-3.5 md:px-4 py-3 shrink-0 ` + 
+                `shadow-md z-20 relative overflow-hidden border-b border-white/15`
             }
         >
-          <div className="absolute inset-0 bg-white/5 mix-blend-overlay pointer-events-none"></div>
+          <div className="absolute -top-12 -right-12 w-36 h-36 bg-[#2ab4e8]/20 blur-2xl rounded-full pointer-events-none"></div>
           
-          <div className="flex items-center gap-2 md:gap-3 relative z-10 flex-1 min-w-0">
-             <div className="w-10 h-10 md:w-11 md:h-11 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-lg md:text-xl shadow-inner border border-white/10 shrink-0">
+          <div className="flex items-center gap-2.5 relative z-10 flex-1 min-w-0">
+             <div className="w-9 h-9 md:w-10 md:h-10 bg-white/12 backdrop-blur-md rounded-xl flex items-center justify-center text-base md:text-lg border border-white/20 shadow-2xs shrink-0">
                  {theme.icon}
              </div>
              <div className="flex flex-col min-w-0">
-                 <h3 className="font-bold text-[14px] md:text-[16px] leading-tight tracking-wide truncate">
-                     {theme.title}
-                 </h3>
-                 <div className="flex items-center gap-1.5 mt-0.5">
-                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shrink-0"></span>
-                     <p className="text-[10px] md:text-[11px] text-white/90 font-medium uppercase tracking-wider truncate">
+                 <div className="flex items-center gap-1.5">
+                     <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse shrink-0"></span>
+                     <p className="text-[9.5px] md:text-[10px] text-[#2ab4e8] font-extrabold uppercase tracking-widest truncate">
                          {theme.subtitle}
                      </p>
                  </div>
+                 <h3 className="font-black text-[14px] md:text-[15.5px] leading-tight tracking-tight text-white truncate mt-0.5">
+                     {theme.title}
+                 </h3>
              </div>
           </div>
           
-          <div className="flex items-center gap-1.5 md:gap-2 relative z-10 shrink-0 pl-2">
+          <div className="flex items-center gap-1.5 relative z-10 shrink-0 pl-2">
              
              {mode !== 'parent_mode' && (
                  <button 
                      onClick={handleCallTutor}
-                     className="flex bg-white/10 hover:bg-white text-white hover:text-slate-900 border border-white/20 px-2 py-1.5 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[12px] font-bold transition-all items-center gap-1 shadow-sm active:scale-95"
-                     title="Vào lớp Học trực tiếp với Gia Sư AI"
+                     className="flex bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white border border-white/25 px-2.5 py-1.5 rounded-xl text-[11px] md:text-xs font-extrabold transition-all items-center gap-1 shadow-xs active:scale-95 cursor-pointer shrink-0"
+                     title="Vào lớp Học trực tiếp với Gia Sư AI trên Bảng Đen"
                  >
-                     <span className="animate-pulse">👨‍🏫</span>
-                     <span className="hidden sm:inline">Lên Bảng</span>
-                     <span className="sm:hidden">Lên Bảng</span>
+                     <span>👨‍🏫</span>
+                     <span>Lên Bảng</span>
                  </button>
              )}
 
              <button 
                  onClick={() => { setIsExpanded(!isExpanded); }} 
-                 className="hidden md:flex w-8 h-8 md:w-9 md:h-9 items-center justify-center rounded-full hover:bg-white/20 text-white transition-colors"
-                 title="Phóng to"
+                 className="hidden md:flex w-8 h-8 items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-all cursor-pointer"
+                 title={isExpanded ? "Thu gọn khung" : "Mở rộng khung"}
              >
                 {isExpanded ? (
                     <svg 
@@ -838,7 +837,7 @@ export default function AITutorSidebar({
                         viewBox="0 0 24 24" 
                         strokeWidth={2} 
                         stroke="currentColor" 
-                        className="w-4 h-4 md:w-5 md:h-5"
+                        className="w-4 h-4"
                     >
                         <path 
                             strokeLinecap="round" 
@@ -853,7 +852,7 @@ export default function AITutorSidebar({
                         viewBox="0 0 24 24" 
                         strokeWidth={2} 
                         stroke="currentColor" 
-                        className="w-4 h-4 md:w-5 md:h-5"
+                        className="w-4 h-4"
                     >
                         <path 
                             strokeLinecap="round" 
@@ -866,7 +865,7 @@ export default function AITutorSidebar({
              
              <button 
                  onClick={() => { setIsMinimized(true); }} 
-                 className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center rounded-full hover:bg-white/20 text-white transition-colors"
+                 className="w-8 h-8 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-all cursor-pointer"
                  title="Thu nhỏ Chat"
              >
                 <svg 
@@ -875,7 +874,7 @@ export default function AITutorSidebar({
                     viewBox="0 0 24 24" 
                     strokeWidth={2.5} 
                     stroke="currentColor" 
-                    className="w-4 h-4 md:w-5 md:h-5"
+                    className="w-4 h-4"
                 >
                     <path 
                         strokeLinecap="round" 
@@ -895,7 +894,7 @@ export default function AITutorSidebar({
                          setIsMinimized(true);
                      }
                  }} 
-                 className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center rounded-full hover:bg-red-500/80 transition-colors text-white text-lg font-bold ml-0.5"
+                 className="w-8 h-8 flex items-center justify-center rounded-xl bg-white/10 hover:bg-rose-500 border border-white/15 hover:border-rose-400 transition-all text-white cursor-pointer"
                  title="Đóng hẳn"
              >
                  <svg 
@@ -904,7 +903,7 @@ export default function AITutorSidebar({
                      viewBox="0 0 24 24" 
                      strokeWidth={2.5} 
                      stroke="currentColor" 
-                     className="w-4 h-4 md:w-5 md:h-5"
+                     className="w-4 h-4"
                  >
                      <path 
                          strokeLinecap="round" 
@@ -916,33 +915,35 @@ export default function AITutorSidebar({
           </div>
         </div>
 
+        {/* ACTIVE LESSON / TOPIC CONTEXT STRIP */}
+        {mode !== 'parent_mode' && (topicTitle || lectureTitle || courseTitle) && (
+          <div className="bg-white border-b border-slate-200/80 px-4 py-2 flex items-center gap-2 shrink-0 shadow-2xs">
+            <span className="w-1 h-3.5 rounded-full bg-[#2ab4e8] shrink-0"></span>
+            <span className="text-[10.5px] font-extrabold uppercase tracking-wider text-[#0a5482] shrink-0">
+              {mode === 'ielts' ? 'Đang luyện:' : 'Đang học:'}
+            </span>
+            <span className="text-xs font-semibold text-slate-600 truncate" title={topicTitle || lectureTitle || courseTitle}>
+              {topicTitle || lectureTitle || courseTitle}
+            </span>
+          </div>
+        )}
+
         {/* CHAT AREA SECTION */}
         <div 
-            className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6 custom-scrollbar bg-[url('/chat-pattern.png')] bg-repeat bg-[length:200px] bg-slate-50/90 bg-blend-overlay" 
+            className="flex-1 overflow-y-auto p-4 md:p-5 space-y-4 custom-scrollbar bg-[#f8fafc]" 
             style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {mode === 'ielts' && topicImage && (
-              <div className="mb-6 animate-in fade-in slide-in-from-top-2 flex justify-center">
-                  <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white p-2">
-                      <div className="text-[10px] font-bold text-slate-400 uppercase mb-2 px-1 tracking-widest flex items-center gap-1">
-                          <svg 
-                              xmlns="http://www.w3.org/2000/svg" 
-                              viewBox="0 0 20 20" 
-                              fill="currentColor" 
-                              className="w-3 h-3"
-                          >
-                              <path 
-                                  fillRule="evenodd" 
-                                  d="M1 5.25A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25v9.5A2.25 2.25 0 0116.75 17H3.25A2.25 2.25 0 011 14.75v-9.5zm1.5 5.81v3.69c0 .414.336.75.75.75h13.5a.75.75 0 00.75-.75v-2.69l-2.22-2.219a2.25 2.25 0 00-3.182 0l-1.44 1.439a2.25 2.25 0 01-3.182 0L5.06 7.29a2.25 2.25 0 00-3.182 0l-2.22 2.22zM3.25 4.5a.75.75 0 00-.75.75v.59l2.22-2.22a.75.75 0 011.06 0l1.44 1.44a.75.75 0 001.06 0l2.67-2.67a.75.75 0 011.06 0l2.22 2.22V5.25a.75.75 0 00-.75-.75H3.25z" 
-                                  clipRule="evenodd" 
-                              />
-                          </svg>
+              <div className="mb-4 animate-in fade-in slide-in-from-top-2 flex justify-center">
+                  <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs bg-white p-2.5">
+                      <div className="text-[10px] font-extrabold text-[#0a5482] uppercase mb-2 px-1 tracking-widest flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4e8]"></span>
                           Đề bài đính kèm
                       </div>
                       <img 
                           src={topicImage} 
                           alt="Task đề bài" 
-                          className="w-full h-auto object-contain max-h-[250px] rounded-lg bg-slate-50" 
+                          className="w-full h-auto object-contain max-h-[240px] rounded-xl bg-slate-50" 
                       />
                   </div>
               </div>
@@ -954,19 +955,19 @@ export default function AITutorSidebar({
                 className={`flex w-full ${msg.role === 'user' ? 'justify-end' : 'justify-start'} animate-in fade-in slide-in-from-bottom-2`}
             >
                {msg.role === 'ai' && (
-                   <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 mr-2 mt-1 shadow-sm text-xs md:text-sm">
+                   <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-white border border-sky-200/50 flex items-center justify-center shrink-0 mr-2.5 mt-0.5 shadow-xs text-xs md:text-sm">
                        {theme.icon}
                    </div>
                )}
                
                <div 
                    className={
-                       `max-w-[85%] p-3.5 md:p-4 text-[14px] md:text-[15px] leading-relaxed shadow-sm ` +
-                       `${msg.role === 'user' ? `${theme.userBg} text-white rounded-2xl rounded-tr-sm` : `${theme.aiBg} border ${theme.aiBorder} text-slate-700 rounded-2xl rounded-tl-sm`}`
+                       `max-w-[85%] p-3.5 md:p-4 text-[13.5px] md:text-[14.5px] leading-relaxed ` +
+                       `${msg.role === 'user' ? `${theme.userBg} text-white rounded-2xl rounded-tr-xs shadow-sm` : `${theme.aiBg} border ${theme.aiBorder} text-slate-700 rounded-2xl rounded-tl-xs shadow-xs`}`
                    }
                >
                   {msg.role === 'user' ? (
-                      <div className="whitespace-pre-wrap">
+                      <div className="whitespace-pre-wrap font-medium">
                           {msg.text}
                       </div>
                   ) : (
@@ -983,29 +984,29 @@ export default function AITutorSidebar({
           
           {isTyping && (
              <div className="flex justify-start w-full animate-in fade-in">
-                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 mr-2 mt-1 shadow-sm text-xs md:text-sm opacity-70">
+                 <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-white border border-sky-200/50 flex items-center justify-center shrink-0 mr-2.5 mt-0.5 shadow-xs text-xs md:text-sm opacity-80">
                      {theme.icon}
                  </div>
-                 <div className="bg-white border border-slate-100 px-4 py-3 rounded-2xl rounded-tl-sm flex items-center gap-1.5 shadow-sm">
-                     <span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce"></span>
-                     <span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce delay-100"></span>
-                     <span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce delay-200"></span>
+                 <div className="bg-white border border-slate-200/90 px-4 py-3 rounded-2xl rounded-tl-xs flex items-center gap-1.5 shadow-xs">
+                     <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce"></span>
+                     <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce delay-100"></span>
+                     <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce delay-200"></span>
                  </div>
              </div>
           )}
-          <div ref={messagesEndRef} className="h-4" />
+          <div ref={messagesEndRef} className="h-2" />
         </div>
 
         {/* INPUT AREA SECTION */}
-        <div className="p-3 md:p-4 bg-white border-t border-slate-200 shrink-0 z-10 pb-5 md:pb-4">
+        <div className="p-3 md:p-4 bg-white border-t border-slate-200/90 shrink-0 z-10 pb-4 md:pb-4">
           
-          {/* Gợi ý starter prompts */}
-          <div className="flex items-center gap-2 mb-3 overflow-x-auto custom-scrollbar pb-2 hide-scroll-bar">
+          {/* Gợi ý starter prompts (Wrap gọn gàng không bị cắt chữ) */}
+          <div className="flex flex-wrap items-center gap-1.5 mb-2.5">
              {dynamicPrompts.map((p, i) => (
                 <button 
                     key={i} 
                     onClick={() => { handleSuggestionClick(p); }} 
-                    className="shrink-0 bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900 text-[12px] md:text-[13px] font-semibold py-1.5 px-4 rounded-full hover:bg-slate-100 transition-colors shadow-sm whitespace-nowrap"
+                    className="bg-sky-50/80 hover:bg-[#0a5482] border border-sky-200/90 hover:border-[#0a5482] text-[#0a5482] hover:text-white text-[11.5px] md:text-[12px] font-bold py-1.5 px-3 rounded-xl transition-all shadow-2xs cursor-pointer"
                 >
                   {p}
                 </button>
@@ -1015,7 +1016,7 @@ export default function AITutorSidebar({
           {/* 🚀 THUMBNAIL ẢNH ĐÍNH KÈM */}
           {attachedImage && (
               <div className="mb-3 flex items-center animate-in slide-in-from-bottom-2">
-                  <div className="relative inline-block border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                  <div className="relative inline-block border border-slate-200 rounded-xl overflow-hidden shadow-xs">
                       <img 
                           src={attachedImage} 
                           alt="Ảnh đính kèm" 
@@ -1023,27 +1024,27 @@ export default function AITutorSidebar({
                       />
                       <button 
                           onClick={() => { setAttachedImage(null); }} 
-                          className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-md hover:bg-red-600 border border-white"
+                          className="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-md hover:bg-rose-600 border border-white cursor-pointer"
                           title="Xóa ảnh"
                       >
                           ✕
                       </button>
                   </div>
                   {mode === 'tutor' && (
-                      <span className="ml-3 text-[11px] font-bold text-sky-500 uppercase tracking-widest bg-sky-50 px-2 py-1 rounded-md animate-pulse">
+                      <span className="ml-3 text-[11px] font-extrabold text-[#0a5482] uppercase tracking-wider bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-lg animate-pulse">
                           ✨ AI Sẽ Lên Bảng Đen Để Giải Ảnh Này
                       </span>
                   )}
               </div>
           )}
           
-          <div className={`relative flex items-end bg-slate-50 border border-slate-200 rounded-2xl p-1.5 ${theme.focusRing} transition-all duration-200`}>
+          <div className={`relative flex items-end gap-1 bg-slate-50/90 border border-slate-200/90 rounded-2xl p-1.5 ${theme.focusRing} transition-all duration-200`}>
             
             {/* NÚT GHIM CHỌN FILE FILE INPUT */}
             {mode !== 'parent_mode' && (
                 <button 
                     onClick={() => { fileInputRef.current?.click(); }} 
-                    className="w-10 h-10 shrink-0 flex items-center justify-center text-slate-400 hover:text-[#0ea5e9] hover:bg-sky-50 rounded-xl transition-colors self-end mb-[2px]" 
+                    className="w-9 h-9 md:w-10 md:h-10 shrink-0 flex items-center justify-center text-slate-400 hover:text-[#0a5482] hover:bg-sky-50 rounded-xl transition-colors self-end mb-[1px] cursor-pointer" 
                     title="Đính kèm ảnh bài tập / Dán ảnh bằng Ctrl+V"
                 >
                     <svg 
@@ -1086,18 +1087,18 @@ export default function AITutorSidebar({
                 }} 
                 onPaste={handlePaste} 
                 placeholder={mode === 'parent_mode' ? "Hỏi AI về tình hình của bé..." : "Ctrl+V để dán ảnh hoặc gõ câu hỏi..."}
-                className="flex-1 min-h-[44px] max-h-[120px] bg-transparent text-[16px] md:text-[15px] text-slate-700 font-medium px-3 py-3 outline-none resize-none custom-scrollbar leading-relaxed" 
+                className="flex-1 min-h-[40px] max-h-[120px] bg-transparent text-[15px] md:text-[14.5px] text-slate-700 font-medium px-2 py-2 outline-none resize-none custom-scrollbar leading-relaxed" 
                 rows={1} 
             />
             
             <button 
                 onClick={() => { handleSendMessage(); }} 
                 disabled={(!input.trim() && !attachedImage) || isTyping} 
-                className={`absolute right-2 bottom-2 w-9 h-9 md:w-10 md:h-10 shrink-0 rounded-xl ${theme.btnColor} text-white flex items-center justify-center transition-all shadow-md disabled:opacity-50 disabled:shadow-none disabled:hover:scale-100 active:scale-95`}
+                className={`w-9 h-9 md:w-10 md:h-10 shrink-0 rounded-xl ${theme.btnColor} text-white flex items-center justify-center transition-all shadow-sm disabled:opacity-40 disabled:shadow-none active:scale-95 self-end mb-[1px] cursor-pointer`}
             >
                <svg 
                    xmlns="http://www.w3.org/2000/svg" 
-                   className="w-5 h-5 -translate-y-[1px] translate-x-[1px]" 
+                   className="w-4 h-4 md:w-5 md:h-5 -translate-y-[1px] translate-x-[1px]" 
                    viewBox="0 0 20 20" 
                    fill="currentColor"
                 >
@@ -1109,7 +1110,7 @@ export default function AITutorSidebar({
           </div>
           
           <div className="text-center mt-2">
-              <span className="text-[9px] md:text-[10px] text-slate-400 font-medium">
+              <span className="text-[10px] text-slate-400 font-medium">
                   Tony AI có thể mắc lỗi. Vui lòng kiểm tra lại thông tin.
               </span>
           </div>

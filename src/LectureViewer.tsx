@@ -4639,9 +4639,10 @@ export default function LectureViewer({
                               onOpenAI('tutor'); 
                           }
                       }} 
-                      className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 md:h-9 rounded-xl text-xs sm:text-[13px] font-extrabold transition-all bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-amber-950 shadow-sm border border-amber-300/60 cursor-pointer"
+                      className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 md:h-9 rounded-xl text-xs sm:text-[13px] font-extrabold transition-all bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white shadow-xs border border-white/25 cursor-pointer shrink-0"
+                      title="Mở trợ lý học tập Tony AI Tutor"
                   >
-                     <span className="animate-bounce">✨</span> <span className="hidden xs:inline">Hỏi AI Tutor</span>
+                     <span>🤖</span> <span className="hidden sm:inline">AI Tutor</span>
                   </button>
               )}
              {(course?.title || '').toLowerCase().includes('ielts') && (
