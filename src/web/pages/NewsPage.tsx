@@ -8,8 +8,343 @@ import {
   fixLegacyHtmlContent,
   extractArticleVocabulary,
   parseCambridgeBilingual,
+  parseArticleInteractiveQuiz,
+  ReadingQuizQuestion,
   updatePageSeo,
 } from '../lib/utils';
+import { IeltsSpeakingPodcast } from '../components/IeltsSpeakingPodcast';
+
+const ArticleInteractiveQuiz: React.FC<{
+  questions: ReadingQuizQuestion[];
+  articleId: number | string;
+  lang: string;
+  categoryId?: number;
+}> = ({ questions, articleId, lang, categoryId }) => {
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const quizTopRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setSelectedAnswers({});
+    setSubmitted(false);
+  }, [articleId]);
+
+  if (!questions || questions.length === 0) return null;
+
+  const answeredCount = Object.keys(selectedAnswers).length;
+  const correctCount = questions.reduce((acc, q) => {
+    const picked = (selectedAnswers[q.id] || '').toUpperCase();
+    return acc + (picked === (q.correctAnswer || '').toUpperCase() ? 1 : 0);
+  }, 0);
+  const scorePercent = Math.round((correctCount / questions.length) * 100);
+
+  const handleSelectOption = (qId: number, label: string) => {
+    if (submitted) return;
+    setSelectedAnswers((prev) => ({
+      ...prev,
+      [qId]: label,
+    }));
+  };
+
+  const handleSubmit = () => {
+    setSubmitted(true);
+    setTimeout(() => {
+      quizTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  };
+
+  const handleReset = () => {
+    setSelectedAnswers({});
+    setSubmitted(false);
+    setTimeout(() => {
+      quizTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  };
+
+  return (
+    <div
+      ref={quizTopRef}
+      className="mt-8 rounded-2xl sm:rounded-3xl border-2 border-sky-200/90 bg-gradient-to-b from-sky-50/40 via-white to-white overflow-hidden shadow-sm scroll-mt-24"
+    >
+      {/* Quiz Header */}
+      <div className="bg-gradient-to-r from-[#0a5482] to-[#0f2942] px-5 sm:px-7 py-4 sm:py-5 text-white flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <span className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center text-xl shrink-0">
+            📝
+          </span>
+          <div>
+            <h3 className="text-base sm:text-lg font-black tracking-tight leading-snug">
+              {[28, 31, 37].includes(Number(categoryId))
+                ? lang === 'vi'
+                  ? 'Bài tập Nghe – Đọc hiểu Hội thoại (Comprehension Quiz)'
+                  : 'Conversation Comprehension Quiz'
+                : lang === 'vi'
+                ? 'Bài tập Đọc hiểu (Reading Comprehension)'
+                : 'Reading Comprehension Quiz'}
+            </h3>
+            <p className="text-xs sm:text-[13px] text-sky-200/90 mt-0.5">
+              {lang === 'vi'
+                ? `Chọn đáp án đúng nhất cho ${questions.length} câu hỏi dưới đây rồi bấm Nộp bài để xem điểm và giải thích.`
+                : `Select the best answer for each of the ${questions.length} questions below and click Submit.`}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 ml-auto sm:ml-0">
+          <span className="px-3 py-1.5 rounded-full bg-white/15 border border-white/20 text-xs sm:text-sm font-extrabold">
+            {lang === 'vi'
+              ? `Đã chọn: ${answeredCount}/${questions.length} câu`
+              : `Answered: ${answeredCount}/${questions.length}`}
+          </span>
+        </div>
+      </div>
+
+      <div className="p-4 sm:p-7 space-y-5">
+        {/* Result Summary Banner after Submit */}
+        {submitted && (
+          <div
+            className={`p-4 sm:p-5 rounded-2xl border-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
+              scorePercent >= 80
+                ? 'bg-emerald-50/90 border-emerald-300 text-emerald-950'
+                : scorePercent >= 50
+                ? 'bg-amber-50/90 border-amber-300 text-amber-950'
+                : 'bg-rose-50/90 border-rose-300 text-rose-950'
+            }`}
+          >
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <span className="text-xl sm:text-2xl">
+                  {scorePercent >= 80 ? '🏆' : scorePercent >= 50 ? '🎯' : '💪'}
+                </span>
+                <span className="text-lg sm:text-xl font-black">
+                  {lang === 'vi'
+                    ? `Kết quả: ${correctCount}/${questions.length} câu đúng (${scorePercent}%)`
+                    : `Score: ${correctCount}/${questions.length} correct (${scorePercent}%)`}
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm opacity-90 font-medium">
+                {scorePercent === 100
+                  ? 'Xuất sắc! Bạn đã nắm vững toàn bộ nội dung bài đọc.'
+                  : scorePercent >= 80
+                  ? 'Rất tốt! Xem lại phần giải thích bên dưới cho các câu hỏi trong bài nhé.'
+                  : 'Hãy xem kỹ lời giải thích và dẫn chứng dưới mỗi câu hỏi để hiểu sâu bài đọc hơn nhé!'}
+              </p>
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {questions.map((q, idx) => {
+                  const picked = (selectedAnswers[q.id] || '').toUpperCase();
+                  const isRight = picked === (q.correctAnswer || '').toUpperCase();
+                  return (
+                    <span
+                      key={q.id}
+                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-extrabold border ${
+                        isRight
+                          ? 'bg-emerald-600 text-white border-emerald-600'
+                          : 'bg-rose-600 text-white border-rose-600'
+                      }`}
+                    >
+                      <span>Câu {idx + 1}:</span>
+                      <span>{isRight ? '✓ Đúng' : `✗ (${q.correctAnswer})`}</span>
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={handleReset}
+              className="px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-extrabold text-xs sm:text-sm shadow-2xs transition cursor-pointer shrink-0 self-start sm:self-center"
+            >
+              🔄 {lang === 'vi' ? 'Làm lại bài tập' : 'Retry Quiz'}
+            </button>
+          </div>
+        )}
+
+        {/* Questions List */}
+        <div className="space-y-4">
+          {questions.map((q, idx) => {
+            const picked = (selectedAnswers[q.id] || '').toUpperCase();
+            const correct = (q.correctAnswer || 'A').toUpperCase();
+            const isCorrect = submitted && picked === correct;
+            const isWrong = submitted && picked !== '' && picked !== correct;
+            const isUnanswered = submitted && picked === '';
+
+            return (
+              <div
+                key={q.id}
+                className={`rounded-2xl border p-4 sm:p-5 transition-all ${
+                  !submitted
+                    ? 'bg-white border-slate-200/90 hover:border-sky-200/90 shadow-2xs'
+                    : isCorrect
+                    ? 'bg-emerald-50/25 border-emerald-300/90'
+                    : 'bg-rose-50/20 border-rose-200/90'
+                }`}
+              >
+                {/* Question Stem */}
+                <div className="flex items-start justify-between gap-3 mb-3.5">
+                  <div className="flex items-start gap-2.5 min-w-0">
+                    <span
+                      className={`px-2.5 py-1 rounded-lg text-xs font-black shrink-0 mt-0.5 ${
+                        !submitted
+                          ? 'bg-[#0a5482] text-white'
+                          : isCorrect
+                          ? 'bg-emerald-600 text-white'
+                          : 'bg-rose-600 text-white'
+                      }`}
+                    >
+                      Câu {idx + 1}
+                    </span>
+                    <div className="text-[15.5px] sm:text-[16.5px] font-bold text-slate-800 leading-relaxed">
+                      {q.question}
+                    </div>
+                  </div>
+
+                  {submitted && (
+                    <span
+                      className={`px-2.5 py-1 rounded-lg text-xs font-extrabold shrink-0 ${
+                        isCorrect
+                          ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+                          : isWrong
+                          ? 'bg-rose-100 text-rose-800 border border-rose-200'
+                          : 'bg-amber-100 text-amber-800 border border-amber-200'
+                      }`}
+                    >
+                      {isCorrect ? '✓ Chính xác' : isWrong ? '✗ Chưa đúng' : '⚠ Chưa chọn'}
+                    </span>
+                  )}
+                </div>
+
+                {/* Options */}
+                <div className="grid grid-cols-1 gap-2.5">
+                  {q.options.map((opt) => {
+                    const optLabel = (opt.label || '').toUpperCase();
+                    const isSelected = picked === optLabel;
+                    const isOptCorrect = optLabel === correct;
+
+                    let cardStyle =
+                      'bg-slate-50/70 hover:bg-sky-50/60 border-slate-200/80 text-slate-700 hover:border-sky-300';
+                    let badgeStyle = 'bg-white border-slate-300 text-slate-600';
+
+                    if (!submitted) {
+                      if (isSelected) {
+                        cardStyle = 'bg-sky-50/90 border-[#0a5482] text-[#0a5482] ring-1 ring-[#0a5482]/20';
+                        badgeStyle = 'bg-[#0a5482] border-[#0a5482] text-white';
+                      }
+                    } else {
+                      if (isOptCorrect) {
+                        cardStyle = 'bg-emerald-50/90 border-emerald-500 text-emerald-950 font-semibold';
+                        badgeStyle = 'bg-emerald-600 border-emerald-600 text-white';
+                      } else if (isSelected && !isOptCorrect) {
+                        cardStyle = 'bg-rose-50/90 border-rose-400 text-rose-900 line-through opacity-90';
+                        badgeStyle = 'bg-rose-600 border-rose-600 text-white';
+                      } else {
+                        cardStyle = 'bg-slate-50/50 border-slate-200/60 text-slate-500 opacity-75';
+                        badgeStyle = 'bg-slate-100 border-slate-200 text-slate-400';
+                      }
+                    }
+
+                    return (
+                      <button
+                        key={optLabel}
+                        type="button"
+                        disabled={submitted}
+                        onClick={() => handleSelectOption(q.id, optLabel)}
+                        className={`w-full text-left px-3.5 sm:px-4 py-3 rounded-xl border transition-all flex items-start justify-between gap-3 ${
+                          submitted ? 'cursor-default' : 'cursor-pointer'
+                        } ${cardStyle}`}
+                      >
+                        <div className="flex items-start gap-3 min-w-0">
+                          <span
+                            className={`w-6 h-6 rounded-lg border text-xs font-black flex items-center justify-center shrink-0 mt-0.5 transition-colors ${badgeStyle}`}
+                          >
+                            {optLabel}
+                          </span>
+                          <span className="text-[15px] sm:text-[15.5px] leading-relaxed">{opt.text}</span>
+                        </div>
+
+                        {submitted && isOptCorrect && (
+                          <span className="text-xs font-extrabold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-md border border-emerald-200 shrink-0">
+                            ✓ Đáp án đúng
+                          </span>
+                        )}
+                        {submitted && isSelected && !isOptCorrect && (
+                          <span className="text-xs font-extrabold text-rose-700 bg-rose-100 px-2.5 py-0.5 rounded-md border border-rose-200 shrink-0">
+                            ✗ Bạn chọn
+                          </span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Explanation after Submit */}
+                {submitted && (
+                  <div className="mt-3.5 p-3.5 sm:p-4 rounded-xl bg-sky-50/80 border border-sky-200/80 text-[14.5px] sm:text-[15px] text-slate-700 leading-relaxed">
+                    <div className="font-extrabold text-[#0a5482] mb-1 flex items-center gap-1.5">
+                      <span>💡</span>
+                      <span>
+                        {lang === 'vi'
+                          ? `Giải thích đáp án (Đáp án đúng: ${correct})`
+                          : `Explanation (Correct Answer: ${correct})`}
+                      </span>
+                      {isUnanswered && (
+                        <span className="text-xs font-bold text-amber-700 ml-1">(Bạn chưa chọn câu này)</span>
+                      )}
+                    </div>
+                    <div>
+                      {q.explanation ||
+                        (lang === 'vi'
+                          ? `Đáp án đúng là ${correct} dựa theo thông tin được nêu trong bài đọc.`
+                          : `The correct answer is ${correct} based on the information in the passage.`)}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Submit / Retry Footer */}
+        <div className="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200/70">
+          {!submitted ? (
+            <>
+              <span className="text-xs sm:text-sm text-slate-500 font-medium">
+                {answeredCount < questions.length
+                  ? lang === 'vi'
+                    ? `Bạn đã chọn ${answeredCount}/${questions.length} câu hỏi.`
+                    : `You have answered ${answeredCount}/${questions.length} questions.`
+                  : lang === 'vi'
+                  ? 'Bạn đã hoàn thành tất cả các câu hỏi! Bấm Nộp bài để xem kết quả.'
+                  : 'All questions answered! Click Submit to see your results.'}
+              </span>
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="px-6 py-3 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white font-black text-sm sm:text-[15px] shadow-md shadow-sky-900/10 transition active:scale-95 cursor-pointer flex items-center gap-2"
+              >
+                <span>✅</span>
+                <span>{lang === 'vi' ? 'Nộp bài & Chấm điểm' : 'Submit Answers'}</span>
+              </button>
+            </>
+          ) : (
+            <div className="w-full flex items-center justify-between flex-wrap gap-3">
+              <span className="text-sm font-bold text-[#0a5482]">
+                🎯 {lang === 'vi' ? `Điểm số: ${correctCount}/${questions.length} (${scorePercent}%)` : `Score: ${correctCount}/${questions.length} (${scorePercent}%)`}
+              </span>
+              <button
+                type="button"
+                onClick={handleReset}
+                className="px-5 py-2.5 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white font-black text-sm shadow-sm transition cursor-pointer"
+              >
+                🔄 {lang === 'vi' ? 'Làm lại bài tập' : 'Try Again'}
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const SPEED_OPTIONS = [0.75, 1, 1.25, 1.5];
 
@@ -719,17 +1054,22 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               </div>
 
                               <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs sm:text-sm text-slate-400">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 flex-wrap">
                                   {item.news_byname && (
                                     <span>
                                       {t('By')} <strong className="text-[#0a5482]">{item.news_byname}</strong> •
                                     </span>
                                   )}
                                   <span>{formatDate(item.news_created_at, item.news_postday)}</span>
+                                  {[6, 28, 31, 37].includes(Number(item.news_cc_id)) && (
+                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-sky-50 text-[#0a5482] border border-sky-200/80 text-[11px] font-bold">
+                                      📝 {lang === 'vi' ? '5 câu trắc nghiệm' : '5 MCQ Questions'}
+                                    </span>
+                                  )}
                                 </div>
                                 <Link
                                   to={itemUrl}
-                                  className="font-extrabold text-[#0a5482] group-hover:text-[#2ab4e8] transition-colors"
+                                  className="font-extrabold text-[#0a5482] group-hover:text-[#2ab4e8] transition-colors shrink-0"
                                 >
                                   {lang === 'vi' ? 'Xem bài học →' : 'Read →'}
                                 </Link>
@@ -808,18 +1148,32 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         <span>📅 {formatDate(article.news_created_at, article.news_postday)}</span>
                       </div>
 
-                      {/* Bilingual Toggle Button (for non-Cambridge bilingual articles) */}
-                      {article.news_desc_vi &&
-                        article.news_desc_vi.trim() !== '' &&
-                        !(article.news_content || '').includes('cambridge-bilingual') && (
+                      {/* Bilingual Toggle Button & Quick Podcast Jump */}
+                      <div className="flex flex-wrap items-center gap-2">
+                        {[67, 68, 69].includes(Number(article.news_cc_id)) && (
                           <button
                             type="button"
-                            onClick={() => setShowViTranslation(!showViTranslation)}
-                            className="bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 font-black text-sm px-4 py-2 rounded-full transition shadow-2xs"
+                            onClick={() => {
+                              const el = document.getElementById('ielts-speaking-podcast-section');
+                              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }}
+                            className="bg-orange-50 hover:bg-[#ff6600] text-[#c2410c] hover:text-white border border-orange-200 font-black text-sm px-4 py-2 rounded-full transition shadow-2xs cursor-pointer"
                           >
-                            🌐 {showViTranslation ? 'Xem bản Tiếng Anh (ENG)' : 'Xem bản dịch Tiếng Việt (VIE)'}
+                            🎧 Luyện Podcast & Cụm từ da cam ↓
                           </button>
                         )}
+                        {article.news_desc_vi &&
+                          article.news_desc_vi.trim() !== '' &&
+                          !(article.news_content || '').includes('cambridge-bilingual') && (
+                            <button
+                              type="button"
+                              onClick={() => setShowViTranslation(!showViTranslation)}
+                              className="bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 font-black text-sm px-4 py-2 rounded-full transition shadow-2xs cursor-pointer"
+                            >
+                              🌐 {showViTranslation ? 'Xem bản Tiếng Anh (ENG)' : 'Xem bản dịch Tiếng Việt (VIE)'}
+                            </button>
+                          )}
+                      </div>
                     </div>
                   </div>
 
@@ -866,9 +1220,14 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     const parsedVi = showViTranslation ? extractArticleVocabulary(article.news_desc_vi) : null;
                     const displayBodyHtml = showViTranslation && parsedVi ? parsedVi.bodyHtml : parsedEn.bodyHtml;
                     const vocabItems = parsedEn.vocabItems;
+                    const interactiveQuiz = parseArticleInteractiveQuiz(article);
+                    const hasLegacyQuestion =
+                      interactiveQuiz.length === 0 &&
+                      article.news_question &&
+                      article.news_question.trim() !== '';
                     const hasInteractiveBox =
                       vocabItems.length > 0 ||
-                      (article.news_question && article.news_question.trim() !== '') ||
+                      hasLegacyQuestion ||
                       (article.news_conversation && article.news_conversation.trim() !== '');
 
                     return (
@@ -1046,12 +1405,39 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             </div>
                           </div>
                         ) : (
-                          <div
-                            className="legacy-prose text-justify pt-2"
-                            dangerouslySetInnerHTML={{
-                              __html: fixLegacyHtmlContent(displayBodyHtml),
-                            }}
-                          />
+                          <div className="space-y-5">
+                            <div
+                              className="legacy-prose text-justify pt-2"
+                              dangerouslySetInnerHTML={{
+                                __html: fixLegacyHtmlContent(displayBodyHtml),
+                              }}
+                            />
+
+                            {/* Bottom Bilingual Toggle Button (for easy language switching at the end of the article) */}
+                            {article.news_desc_vi &&
+                              article.news_desc_vi.trim() !== '' &&
+                              !(article.news_content || '').includes('cambridge-bilingual') && (
+                                <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                                  <span className="text-xs sm:text-sm text-slate-500 font-medium">
+                                    💡 Chuyển đổi nhanh giữa bản Tiếng Anh và nghĩa Tiếng Việt của các cụm từ màu da cam:
+                                  </span>
+                                  <button
+                                    type="button"
+                                    onClick={() => setShowViTranslation(!showViTranslation)}
+                                    className="bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 font-black text-sm px-5 py-2.5 rounded-full transition shadow-2xs cursor-pointer"
+                                  >
+                                    🌐 {showViTranslation ? 'Xem bản Tiếng Anh (ENG)' : 'Xem bản dịch Tiếng Việt (VIE)'}
+                                  </button>
+                                </div>
+                              )}
+                          </div>
+                        )}
+
+                        {/* IELTS Speaking Interactive Podcast & Orange Phrase Mastery Section */}
+                        {[67, 68, 69].includes(Number(article.news_cc_id)) && article.news_id && (
+                          <div id="ielts-speaking-podcast-section" className="pt-2">
+                            <IeltsSpeakingPodcast newsId={Number(article.news_id)} />
+                          </div>
                         )}
 
                         {/* Interactive Vocabulary / Question / Answer / Conversation Dialog */}
@@ -1111,7 +1497,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 </button>
                               )}
 
-                              {article.news_question && article.news_question.trim() !== '' && (
+                              {hasLegacyQuestion && (
                                 <button
                                   type="button"
                                   onClick={() => {
@@ -1170,7 +1556,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               </div>
                             )}
 
-                            {article.news_question && article.news_question.trim() !== '' && showQuestion && (
+                            {hasLegacyQuestion && showQuestion && (
                               <div className="p-5 bg-slate-50/60 rounded-2xl border border-slate-200/80 space-y-4">
                                 <div
                                   className="legacy-prose"
@@ -1203,6 +1589,15 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               />
                             )}
                           </div>
+                        )}
+
+                        {interactiveQuiz.length > 0 && (
+                          <ArticleInteractiveQuiz
+                            questions={interactiveQuiz}
+                            articleId={article.news_id || article.news_title_url}
+                            lang={lang}
+                            categoryId={Number(article.news_cc_id)}
+                          />
                         )}
                       </>
                     );
