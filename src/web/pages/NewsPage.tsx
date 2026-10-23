@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
@@ -10,6 +10,272 @@ import {
   parseCambridgeBilingual,
   updatePageSeo,
 } from '../lib/utils';
+
+const SPEED_OPTIONS = [0.75, 1, 1.25, 1.5];
+
+const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [playbackRate, setPlaybackRate] = useState(1);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isSticky, setIsSticky] = useState(true);
+
+  useEffect(() => {
+    setIsPlaying(false);
+    setCurrentTime(0);
+    setDuration(0);
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      audioRef.current.playbackRate = playbackRate;
+    }
+  }, [src]);
+
+  const formatTime = (sec: number) => {
+    if (!sec || !isFinite(sec) || sec < 0) return '00:00';
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  };
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
+      audio.play().catch(() => {});
+    } else {
+      audio.pause();
+    }
+  };
+
+  const skipSeconds = (delta: number) => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const maxDur = audio.duration && isFinite(audio.duration) ? audio.duration : duration || 0;
+    const next = Math.max(0, Math.min(audio.currentTime + delta, maxDur || audio.currentTime + delta));
+    audio.currentTime = next;
+    setCurrentTime(next);
+  };
+
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const audio = audioRef.current;
+    const nextTime = parseFloat(e.target.value);
+    setCurrentTime(nextTime);
+    if (audio) {
+      audio.currentTime = nextTime;
+    }
+  };
+
+  const handleRateChange = (rate: number) => {
+    setPlaybackRate(rate);
+    if (audioRef.current) {
+      audioRef.current.playbackRate = rate;
+    }
+  };
+
+  const toggleMute = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.muted = !isMuted;
+    setIsMuted(!isMuted);
+  };
+
+  const progressPercent = duration > 0 ? Math.min(100, Math.max(0, (currentTime / duration) * 100)) : 0;
+
+  return (
+    <div
+      className={`${
+        isSticky ? 'sticky top-[62px] sm:top-[84px] z-30' : ''
+      } bg-white/95 backdrop-blur-md border-2 border-sky-200/90 rounded-2xl p-3.5 sm:p-5 shadow-lg shadow-sky-900/5 transition-all`}
+    >
+      <audio
+        ref={audioRef}
+        src={src}
+        preload="metadata"
+        onTimeUpdate={() => {
+          if (audioRef.current) setCurrentTime(audioRef.current.currentTime);
+        }}
+        onLoadedMetadata={() => {
+          if (audioRef.current && isFinite(audioRef.current.duration)) {
+            setDuration(audioRef.current.duration);
+          }
+        }}
+        onDurationChange={() => {
+          if (audioRef.current && isFinite(audioRef.current.duration)) {
+            setDuration(audioRef.current.duration);
+          }
+        }}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onEnded={() => setIsPlaying(false)}
+      />
+
+      {/* Top row: Title + Skip/Play Controls + Speed/Pin */}
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-3.5">
+        {/* Left: Audio Badge */}
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          <span
+            className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-lg sm:text-xl shadow-xs transition-colors ${
+              isPlaying ? 'bg-[#2ab4e8] text-white animate-pulse' : 'bg-[#0a5482] text-white'
+            }`}
+          >
+            🎧
+          </span>
+          <div>
+            <div className="font-black text-sm sm:text-base text-[#0a5482] leading-tight flex items-center gap-2">
+              <span>Audio Luyện Nghe</span>
+              {isPlaying && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-[#0a5482]">
+                  ● Đang phát
+                </span>
+              )}
+            </div>
+            <div className="text-xs text-slate-500 hidden sm:block">
+              Kéo thanh trượt bên dưới hoặc bấm nút để tua nhanh và nghe cùng bài đọc
+            </div>
+          </div>
+        </div>
+
+        {/* Center: Play/Pause & Rewind/Forward Buttons */}
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <button
+            type="button"
+            onClick={() => skipSeconds(-10)}
+            className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer"
+            title="Tua lùi 10 giây"
+          >
+            ⏪ -10s
+          </button>
+          <button
+            type="button"
+            onClick={() => skipSeconds(-5)}
+            className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer hidden xs:inline-flex sm:inline-flex"
+            title="Tua lùi 5 giây"
+          >
+            -5s
+          </button>
+
+          <button
+            type="button"
+            onClick={togglePlay}
+            className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl font-black text-xs sm:text-sm text-white shadow-sm transition active:scale-95 flex items-center gap-1.5 cursor-pointer ${
+              isPlaying ? 'bg-amber-500 hover:bg-amber-600' : 'bg-[#0a5482] hover:bg-[#2ab4e8]'
+            }`}
+          >
+            <span>{isPlaying ? '⏸' : '▶'}</span>
+            <span>{isPlaying ? 'Tạm dừng' : 'Phát Audio'}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => skipSeconds(5)}
+            className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer hidden xs:inline-flex sm:inline-flex"
+            title="Tua tới 5 giây"
+          >
+            +5s
+          </button>
+          <button
+            type="button"
+            onClick={() => skipSeconds(10)}
+            className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer"
+            title="Tua tới 10 giây"
+          >
+            +10s ⏩
+          </button>
+        </div>
+
+        {/* Right: Speed selector, Mute & Sticky Pin Toggle */}
+        <div className="flex items-center gap-1.5 sm:gap-2 ml-auto sm:ml-0">
+          <div className="inline-flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200/80">
+            {SPEED_OPTIONS.map((rate) => (
+              <button
+                key={rate}
+                type="button"
+                onClick={() => handleRateChange(rate)}
+                className={`px-2 py-1 rounded-lg text-[11px] sm:text-xs font-extrabold transition cursor-pointer ${
+                  playbackRate === rate
+                    ? 'bg-[#0a5482] text-white shadow-2xs'
+                    : 'text-slate-600 hover:text-[#0a5482]'
+                }`}
+                title={`Tốc độ ${rate}x`}
+              >
+                {rate}x
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={toggleMute}
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-100 hover:bg-sky-50 border border-slate-200/80 text-slate-600 hover:text-[#0a5482] flex items-center justify-center text-sm transition cursor-pointer"
+            title={isMuted ? 'Bật tiếng' : 'Tắt tiếng'}
+          >
+            {isMuted ? '🔇' : '🔊'}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setIsSticky(!isSticky)}
+            className={`px-2.5 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
+              isSticky
+                ? 'bg-sky-50 border-sky-200 text-[#0a5482]'
+                : 'bg-slate-100 border-slate-200 text-slate-500 hover:text-slate-700'
+            }`}
+            title={isSticky ? 'Đang ghim chạy theo bài đọc (Bấm để bỏ ghim)' : 'Ghim thanh nghe chạy theo bài đọc'}
+          >
+            <span>📌</span>
+            <span className="hidden md:inline">{isSticky ? 'Tự cuộn' : 'Ghim'}</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Bottom row: Full-width Large Scrubber Bar */}
+      <div className="flex items-center gap-3 sm:gap-4 w-full bg-slate-50/90 border border-slate-200/80 rounded-xl px-3 sm:px-4 py-2.5">
+        <span className="text-xs sm:text-sm font-black font-mono text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs shrink-0 min-w-[54px] text-center">
+          {formatTime(currentTime)}
+        </span>
+
+        <div className="relative flex-1 h-7 flex items-center group">
+          {/* Track background */}
+          <div className="w-full h-3 sm:h-3.5 bg-slate-200 rounded-full overflow-hidden shadow-inner">
+            <div
+              className="h-full bg-gradient-to-r from-[#0a5482] to-[#2ab4e8] rounded-full transition-[width] duration-75"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+
+          {/* Visible draggable thumb */}
+          <div
+            className="
+              absolute w-5 h-5 sm:w-5.5 sm:h-5.5 bg-white border-[3px] border-[#0a5482]
+              rounded-full shadow-md pointer-events-none transform -translate-x-1/2
+              group-hover:scale-110 transition-transform
+            "
+            style={{ left: `${progressPercent}%` }}
+          />
+
+          {/* Full-width range input for smooth scrubbing */}
+          <input
+            type="range"
+            min={0}
+            max={duration > 0 ? duration : 100}
+            step={0.1}
+            value={currentTime}
+            onChange={handleSeek}
+            aria-label="Thanh tua thời gian audio"
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+          />
+        </div>
+
+        <span className="text-xs sm:text-sm font-black font-mono text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs shrink-0 min-w-[54px] text-center">
+          {formatTime(duration)}
+        </span>
+      </div>
+    </div>
+  );
+};
 
 export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   const { slug } = useParams<{ slug?: string }>();
@@ -369,9 +635,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
-          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm">
             {/* Section Header */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4">
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] rounded-t-2xl sm:rounded-t-3xl px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4">
               <div>
                 <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
                   TonyEnglish Learning Library
@@ -551,35 +817,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     </div>
                   </div>
 
-                  {/* Audio Player Box */}
+                  {/* Sticky Full-Width Audio Player Box */}
                   {article.news_audio_file && article.news_audio_file.trim() !== '' && (
-                    <div className="bg-gradient-to-r from-sky-50 to-slate-50 border border-sky-200/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                      <div className="flex items-center gap-3.5">
-                        <span className="w-11 h-11 rounded-xl bg-[#0a5482] text-white flex items-center justify-center text-xl shadow-xs">
-                          🎧
-                        </span>
-                        <div>
-                          <div className="font-black text-base text-[#0a5482]">Audio Luyện Nghe</div>
-                          <div className="text-sm text-slate-500">Bấm Play để vừa nghe vừa đọc bài</div>
-                        </div>
-                      </div>
-                      {!showAudioPlayer ? (
-                        <button
-                          type="button"
-                          onClick={() => setShowAudioPlayer(true)}
-                          className="bg-[#2ab4e8] hover:bg-[#0a5482] text-white font-black text-sm px-5 py-2.5 rounded-xl shadow-xs transition"
-                        >
-                          ▶ Nghe Audio (Listen)
-                        </button>
-                      ) : (
-                        <audio
-                          controls
-                          autoPlay
-                          src={resolveUploadUrl(article.news_audio_file, '')}
-                          className="w-full sm:w-80 h-10"
-                        />
-                      )}
-                    </div>
+                    <ArticleAudioPlayer
+                      key={article.news_id || article.news_audio_file}
+                      src={resolveUploadUrl(article.news_audio_file, '')}
+                    />
                   )}
 
                   {/* Lead / Intro */}
