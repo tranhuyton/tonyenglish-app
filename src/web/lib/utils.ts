@@ -242,8 +242,15 @@ export function parseCambridgeBilingual(html: string | null | undefined): Cambri
     const block = pm[2];
     const enMatch = block.match(/<p\s+class="cam-para-en">([\s\S]*?)<\/p>/i);
     const viMatch = block.match(/<p\s+class="cam-para-vi">([\s\S]*?)<\/p>/i);
-    const enParagraph = enMatch ? stripTags(enMatch[1]) : '';
-    const viParagraph = viMatch ? stripTags(viMatch[1]) : '';
+    const stripPreserveLines = (s: string) =>
+      s
+        .replace(/<br\s*\/?>/gi, '\n')
+        .split('\n')
+        .map((line) => stripTags(line))
+        .filter(Boolean)
+        .join('\n');
+    const enParagraph = enMatch ? stripPreserveLines(enMatch[1]) : '';
+    const viParagraph = viMatch ? stripPreserveLines(viMatch[1]) : '';
 
     const pairs: Array<{ en: string; vi: string }> = [];
     const pairRegex = /<div\s+class="cam-pair">\s*<span\s+class="cam-s-en">([\s\S]*?)<\/span>\s*<span\s+class="cam-s-vi">([\s\S]*?)<\/span>\s*<\/div>/gi;

@@ -346,9 +346,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           const childCates = allCategories.filter((c) => Number(c.news_cc_parent) === Number(targetCate.news_cc_id));
           const cateIds = childCates.length > 0 ? childCates.map((c) => c.news_cc_id) : [targetCate.news_cc_id];
 
-          const isCambridgeCate =
+          const isCambridgeReadingCate =
             Number(targetCate.news_cc_id) === 38 || Number(targetCate.news_cc_parent) === 38;
-          const curPageSize = isCambridgeCate ? 12 : pageSize;
+          const isCambridgeListeningCate =
+            Number(targetCate.news_cc_id) === 87 || Number(targetCate.news_cc_parent) === 87;
+          const isCambridgeCate = isCambridgeReadingCate || isCambridgeListeningCate;
+          const curPageSize = isCambridgeListeningCate ? 16 : isCambridgeReadingCate ? 12 : pageSize;
           const from = (pageParam - 1) * curPageSize;
           const to = from + curPageSize - 1;
 
@@ -435,7 +438,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             .neq('news_id', found.news_id)
             .order('news_rank', { ascending: true, nullsFirst: false })
             .order('news_id', { ascending: false })
-            .limit(11);
+            .limit(15);
           setRelatedNews(rel || []);
         }
       }
@@ -461,7 +464,10 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
   const effectivePageSize =
     currentCategory &&
-    (Number(currentCategory.news_cc_id) === 38 || Number(currentCategory.news_cc_parent) === 38)
+    (Number(currentCategory.news_cc_id) === 87 || Number(currentCategory.news_cc_parent) === 87)
+      ? 16
+      : currentCategory &&
+        (Number(currentCategory.news_cc_id) === 38 || Number(currentCategory.news_cc_parent) === 38)
       ? 12
       : pageSize;
   const totalPages = Math.max(1, Math.ceil(totalCount / effectivePageSize));
@@ -878,7 +884,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                   </div>
                                 )}
                                 <p className="text-xs sm:text-sm text-slate-500">
-                                  Chọn chế độ hiển thị bên phải để luyện đọc hiểu theo khổ hoặc đối chiếu từng câu
+                                  {article.news_audio_file && article.news_audio_file.trim() !== ''
+                                    ? 'Chọn chế độ hiển thị bên phải để vừa nghe Audio vừa luyện dịch theo khổ hoặc đối chiếu từng câu'
+                                    : 'Chọn chế độ hiển thị bên phải để luyện đọc hiểu theo khổ hoặc đối chiếu từng câu'}
                                 </p>
                               </div>
 
@@ -940,7 +948,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                             English Original
                                           </span>
                                         </div>
-                                        <p className="text-[16.5px] leading-[1.85] text-slate-800 text-justify font-normal">
+                                        <p className="text-[16.5px] leading-[1.85] text-slate-800 text-justify font-normal whitespace-pre-line">
                                           {para.enParagraph}
                                         </p>
                                       </div>
@@ -955,7 +963,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                             Bản dịch Tiếng Việt
                                           </span>
                                         </div>
-                                        <p className="text-[16px] leading-[1.85] text-slate-700 text-justify">
+                                        <p className="text-[16px] leading-[1.85] text-slate-700 text-justify whitespace-pre-line">
                                           {para.viParagraph}
                                         </p>
                                       </div>
@@ -1024,11 +1032,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                         {isRevealed ? `Ẩn dịch khổ ${badgeLabel} ▲` : `💡 Xem dịch khổ ${badgeLabel} ▼`}
                                       </button>
                                     </div>
-                                    <p className="text-[16.5px] leading-[1.85] text-slate-800 text-justify">
+                                    <p className="text-[16.5px] leading-[1.85] text-slate-800 text-justify whitespace-pre-line">
                                       {para.enParagraph}
                                     </p>
                                     {isRevealed && (
-                                      <div className="p-4 rounded-xl bg-sky-50/60 border-l-4 border-[#2ab4e8] text-[16px] leading-[1.8] text-slate-700 text-justify">
+                                      <div className="p-4 rounded-xl bg-sky-50/60 border-l-4 border-[#2ab4e8] text-[16px] leading-[1.8] text-slate-700 text-justify whitespace-pre-line">
                                         {para.viParagraph}
                                       </div>
                                     )}
