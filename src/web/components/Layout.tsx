@@ -170,10 +170,11 @@ export const Layout: React.FC<{
     if (e) e.preventDefault();
     const q = searchQuery.trim();
     if (searchMode === 'dic') {
+      const cleanWord = q.replace(/^[^a-zA-Z0-9À-ỹ]+|[^a-zA-Z0-9À-ỹ]+$/g, '').toLowerCase();
       setPopupModal({
-        title: q ? `${t('Look up dictionary')}: "${q}"` : t('Look up dictionary'),
-        url: q
-          ? `https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(q)}&dict=ev_ve&m=yes`
+        title: cleanWord ? `${t('Look up dictionary')}: "${cleanWord}"` : t('Look up dictionary'),
+        url: cleanWord
+          ? `https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(cleanWord)}&dict=ev_ve&m=yes`
           : `https://dic.tienganh123.com/v2/`,
       });
       return;
@@ -349,6 +350,9 @@ export const Layout: React.FC<{
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') handleSearchSubmit(e);
                 }}
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
                 placeholder={
                   searchMode === 'dic'
                     ? t('Look up dictionary')
@@ -1045,15 +1049,15 @@ export const Layout: React.FC<{
       {/* 6. DICTIONARY POPUP MODAL */}
       {popupModal && (
         <div
-          className="fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-4"
           onClick={() => setPopupModal(null)}
         >
           <div
-            className="bg-white rounded-3xl w-full max-w-4xl h-[640px] max-h-[90vh] shadow-2xl flex flex-col overflow-hidden"
+            className="bg-white rounded-3xl w-full max-w-4xl h-[640px] max-h-[88vh] shadow-2xl flex flex-col overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
+            <div className="px-4 sm:px-6 py-3 sm:py-4 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2.5">
+              <div className="flex items-center gap-2">
                 <img
                   src="/logo-shield.png"
                   onError={(e) => {
@@ -1062,15 +1066,66 @@ export const Layout: React.FC<{
                   alt="TonyEnglish"
                   className="h-6 w-auto"
                 />
-                <h3 className="font-black text-[#0a5482] text-base">{popupModal.title}</h3>
+                <h3 className="font-black text-[#0a5482] text-sm sm:text-base">{popupModal.title}</h3>
               </div>
-              <button
-                type="button"
-                onClick={() => setPopupModal(null)}
-                className="w-8 h-8 rounded-full bg-slate-200 hover:bg-rose-500 hover:text-white text-slate-600 font-bold flex items-center justify-center transition-colors"
-              >
-                ✕
-              </button>
+
+              <div className="flex items-center gap-2 ml-auto">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const cleanWord = searchQuery
+                      .trim()
+                      .replace(/^[^a-zA-Z0-9À-ỹ]+|[^a-zA-Z0-9À-ỹ]+$/g, '')
+                      .toLowerCase();
+                    if (cleanWord) {
+                      setPopupModal({
+                        title: `${t('Look up dictionary')}: "${cleanWord}"`,
+                        url: `https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(cleanWord)}&dict=ev_ve&m=yes`,
+                      });
+                    }
+                  }}
+                  className="flex items-center bg-white border border-slate-300 rounded-xl overflow-hidden focus-within:border-[#2ab4e8]"
+                >
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    spellCheck={false}
+                    placeholder={lang === 'vi' ? 'Nhập từ khác...' : 'Type another word...'}
+                    className="px-2.5 py-1 text-xs sm:text-sm text-slate-800 w-28 sm:w-40 focus:outline-none"
+                  />
+                  <button
+                    type="submit"
+                    className="px-2.5 py-1 bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-bold cursor-pointer"
+                  >
+                    Tra
+                  </button>
+                </form>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    setPopupModal({
+                      title: t('Look up dictionary'),
+                      url: 'https://dic.tienganh123.com/v2/',
+                    })
+                  }
+                  className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 text-xs font-bold cursor-pointer"
+                  title="Mở giao diện từ điển đầy đủ"
+                >
+                  📖 Khung đầy đủ
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setPopupModal(null)}
+                  className="w-8 h-8 rounded-full bg-slate-200 hover:bg-rose-500 hover:text-white text-slate-600 font-bold flex items-center justify-center transition-colors shrink-0 cursor-pointer"
+                >
+                  ✕
+                </button>
+              </div>
             </div>
             {popupModal.url && (
               <iframe
