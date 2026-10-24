@@ -13,8 +13,6 @@ output.txt
 unit*.json
 *.py
 *.log
-*.mp3
-**/*.mp3
 *.swf
 **/*.swf
 *.x32
