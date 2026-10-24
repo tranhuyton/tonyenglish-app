@@ -623,6 +623,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   const [allCategories, setAllCategories] = useState<any[]>([]);
   const [openParentId, setOpenParentId] = useState<number | null>(null);
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   // List view state
   const [currentCategory, setCurrentCategory] = useState<any | null>(null);
@@ -848,58 +849,104 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   return (
     <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
       {/* BREADCRUMB */}
-      <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
-        <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
-          <span>🏠</span>
-          <span>{t('Home')}</span>
-        </Link>
-        <span>/</span>
-        <Link to="/news" className="hover:text-[#0a5482]">
-          {t('Library')}
-        </Link>
-        {currentCategory && (
-          <>
-            <span>/</span>
-            <Link
-              to={`/news/category/${(currentCategory.news_cc_name_url || '').trim()}`}
-              className="text-[#0a5482] font-bold hover:underline"
+      <nav className="flex items-center justify-between gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+          {sidebarCollapsed && (
+            <button
+              type="button"
+              onClick={() => setSidebarCollapsed(false)}
+              className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 mr-1 rounded-xl bg-white hover:bg-sky-50 text-[#0a5482] font-bold text-xs border border-slate-200/90 shadow-2xs transition cursor-pointer"
+              title={lang === 'vi' ? 'Hiện lại thanh danh mục bên trái' : 'Show left categories sidebar'}
             >
-              {cateDisplayName}
-            </Link>
-          </>
-        )}
+              <span>📚</span>
+              <span>{lang === 'vi' ? 'Hiện danh mục ▸' : 'Show menu ▸'}</span>
+            </button>
+          )}
+          <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
+            <span>🏠</span>
+            <span>{t('Home')}</span>
+          </Link>
+          <span>/</span>
+          <Link to="/news" className="hover:text-[#0a5482]">
+            {t('Library')}
+          </Link>
+          {currentCategory && (
+            <>
+              <span>/</span>
+              <Link
+                to={`/news/category/${(currentCategory.news_cc_name_url || '').trim()}`}
+                className="text-[#0a5482] font-bold hover:underline"
+              >
+                {cateDisplayName}
+              </Link>
+            </>
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setSidebarCollapsed((prev) => !prev)}
+          className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-sky-50 text-slate-600 hover:text-[#0a5482] font-bold text-xs border border-slate-200/90 shadow-2xs transition cursor-pointer"
+        >
+          <span>{sidebarCollapsed ? '📚' : '⛶'}</span>
+          <span>
+            {sidebarCollapsed
+              ? lang === 'vi'
+                ? 'Hiện danh mục trái'
+                : 'Show sidebar'
+              : lang === 'vi'
+              ? 'Ẩn danh mục (Tập trung đọc)'
+              : 'Focus reading mode'}
+          </span>
+        </button>
       </nav>
 
-      <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-10 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING LIBRARY MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
-          <button
-            type="button"
-            onClick={() => setMobileCateOpen((prev) => !prev)}
-            className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
-          >
-            <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
-              <span className="opacity-80 shrink-0">📚</span>
-              <span className="shrink-0">{t('Library')}</span>
-              {currentCategory && (
-                <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
-                  • {cateDisplayName}
+        <aside
+          className={`w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24 transition-all ${
+            sidebarCollapsed ? 'lg:hidden' : ''
+          }`}
+        >
+          <div className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between">
+            <button
+              type="button"
+              onClick={() => setMobileCateOpen((prev) => !prev)}
+              className="flex-1 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left min-w-0"
+            >
+              <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
+                <span className="opacity-80 shrink-0">📚</span>
+                <span className="shrink-0">{t('Library')}</span>
+                {currentCategory && (
+                  <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
+                    • {cateDisplayName}
+                  </span>
+                )}
+              </h2>
+              <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+                <span>
+                  {mobileCateOpen
+                    ? lang === 'vi'
+                      ? 'Thu gọn'
+                      : 'Hide'
+                    : lang === 'vi'
+                    ? 'Danh mục'
+                    : 'Categories'}
                 </span>
-              )}
-            </h2>
-            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
-              <span>
-                {mobileCateOpen
-                  ? lang === 'vi'
-                    ? 'Thu gọn'
-                    : 'Hide'
-                  : lang === 'vi'
-                  ? 'Danh mục'
-                  : 'Categories'}
+                <span>{mobileCateOpen ? '▲' : '▼'}</span>
               </span>
-              <span>{mobileCateOpen ? '▲' : '▼'}</span>
-            </span>
-          </button>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setSidebarCollapsed(true)}
+              title={lang === 'vi' ? 'Ẩn thanh danh mục để mở rộng khung đọc' : 'Hide sidebar'}
+              className="hidden lg:inline-flex items-center gap-1 text-[11px] font-bold text-slate-500 hover:text-[#0a5482] bg-white hover:bg-sky-50 px-2 py-1 rounded-lg border border-slate-200/80 shadow-2xs transition cursor-pointer shrink-0 ml-2"
+            >
+              <span>◀</span>
+              <span>{lang === 'vi' ? 'Ẩn' : 'Hide'}</span>
+            </button>
+          </div>
 
           <ul
             className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${
