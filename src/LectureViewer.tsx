@@ -2997,6 +2997,14 @@ export default function LectureViewer({
            activeLecture?.course_id === 'f21fe521-aaf9-4917-8c2a-1931666237b5';
   }, [course, currentCourseId, courseId, activeLecture]);
 
+  const isOfficeEnglishCourse = useMemo(() => {
+    const courseTitle = course?.title?.toLowerCase() || '';
+    return courseTitle.includes('văn phòng') || 
+           currentCourseId === '179f939c-2bf9-459a-8a14-78a14d2933cd' ||
+           courseId === '179f939c-2bf9-459a-8a14-78a14d2933cd' ||
+           activeLecture?.course_id === '179f939c-2bf9-459a-8a14-78a14d2933cd';
+  }, [course, currentCourseId, courseId, activeLecture]);
+
   const currentHtmlContent = useMemo(() => { 
       const page = pages.find(p => p.page_number === currentPage); 
       return page ? page.content_html : ''; 
@@ -5065,6 +5073,50 @@ export default function LectureViewer({
                            </button>
                          </div>
                        )}
+                        {isOfficeEnglishCourse && totalPages > 1 && (
+                          <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                            <button
+                              type="button"
+                              onClick={() => { setCurrentPage(1); persistPage(1); }}
+                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border cursor-pointer ${
+                                currentPage === 1 
+                                  ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
+                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                              }`}
+                            >
+                              <span>🎧</span>
+                              <span>Luyện nghe &amp; Đọc hiểu (Trang 1)</span>
+                            </button>
+                            {totalPages >= 2 && (
+                              <button
+                                type="button"
+                                onClick={() => { setCurrentPage(2); persistPage(2); }}
+                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border cursor-pointer ${
+                                  currentPage === 2 
+                                    ? 'bg-emerald-600 text-white border-emerald-600 shadow-md shadow-emerald-600/20' 
+                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                }`}
+                              >
+                                <span>🔄</span>
+                                <span>Đối chiếu Song ngữ (Trang 2)</span>
+                              </button>
+                            )}
+                            {totalPages >= 3 && (
+                              <button
+                                type="button"
+                                onClick={() => { setCurrentPage(3); persistPage(3); }}
+                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border cursor-pointer ${
+                                  currentPage === 3 
+                                    ? 'bg-orange-600 text-white border-orange-600 shadow-md shadow-orange-600/20' 
+                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                }`}
+                              >
+                                <span>🧠</span>
+                                <span>Learn by Heart - Luyện trí nhớ (Trang 3)</span>
+                              </button>
+                            )}
+                          </div>
+                        )}
                         {/* Tab bar cho các bài giảng có audio và nhiều trang (Ví dụ Biology 0610, Economics 0455) */}
                          {!activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && (LECTURE_MANIFEST_MAP[activeLectureId] || isEconomicsCourse) && totalPages > 1 && (
                            <div className="flex items-center gap-2.5 mb-8 flex-wrap">
