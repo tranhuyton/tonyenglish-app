@@ -677,7 +677,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
         setCurrentCategory(targetCate || null);
 
         if (targetCate) {
-          setOpenParentId(targetCate.news_cc_parent === 0 ? targetCate.news_cc_id : targetCate.news_cc_parent);
+          setOpenParentId(
+            Number(targetCate.news_cc_parent) === 0
+              ? Number(targetCate.news_cc_id)
+              : Number(targetCate.news_cc_parent)
+          );
           const childCates = allCategories.filter((c) => Number(c.news_cc_parent) === Number(targetCate.news_cc_id));
           const cateIds = childCates.length > 0 ? childCates.map((c) => c.news_cc_id) : [targetCate.news_cc_id];
 
@@ -761,7 +765,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           const cate = allCategories.find((c) => Number(c.news_cc_id) === Number(found.news_cc_id));
           setCurrentCategory(cate || null);
           if (cate) {
-            setOpenParentId(cate.news_cc_parent === 0 ? cate.news_cc_id : cate.news_cc_parent);
+            setOpenParentId(
+              Number(cate.news_cc_parent) === 0 ? Number(cate.news_cc_id) : Number(cate.news_cc_parent)
+            );
           }
 
           const { data: rel } = await supabase
@@ -788,6 +794,15 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   );
   const getSubCategories = (parentId: number) =>
     allCategories.filter((c) => Number(c.news_cc_parent) === Number(parentId));
+
+  const activeParentCate = currentCategory
+    ? Number(currentCategory.news_cc_parent) === 0
+      ? currentCategory
+      : allCategories.find((c) => Number(c.news_cc_id) === Number(currentCategory.news_cc_parent)) || null
+    : null;
+  const activeParentSubs = activeParentCate ? getSubCategories(Number(activeParentCate.news_cc_id)) : [];
+  const isActiveParentCambridge =
+    activeParentCate && (Number(activeParentCate.news_cc_id) === 38 || Number(activeParentCate.news_cc_id) === 87);
 
   const cateDisplayName = currentCategory
     ? lang === 'vi'
@@ -886,11 +901,18 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             </span>
           </button>
 
-          <ul className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
+          <ul
+            className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${
+              mobileCateOpen ? 'block' : 'hidden'
+            } lg:block lg:max-h-[calc(100vh-8.5rem)] lg:overflow-y-auto overscroll-contain`}
+          >
             <li>
               <Link
                 to="/news"
-                onClick={() => setMobileCateOpen(false)}
+                onClick={() => {
+                  setOpenParentId(null);
+                  setMobileCateOpen(false);
+                }}
                 className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
                   mode === 'list' && !slug
                     ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
@@ -902,61 +924,130 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             </li>
 
             {parentCategories.map((parent) => {
-              const subs = getSubCategories(parent.news_cc_id);
-              const isOpen =
-                openParentId === parent.news_cc_id ||
-                (currentCategory &&
-                  (currentCategory.news_cc_id === parent.news_cc_id ||
-                    currentCategory.news_cc_parent === parent.news_cc_id));
+              const parentIdNum = Number(parent.news_cc_id);
+              const subs = getSubCategories(parentIdNum);
+              const isOpen = openParentId === parentIdNum;
               const pName = lang === 'vi' ? parent.news_cc_name_vi || parent.news_cc_name : parent.news_cc_name;
-              const isCurrentParent = currentCategory && currentCategory.news_cc_id === parent.news_cc_id;
+              const isCurrentParent =
+                currentCategory &&
+                (Number(currentCategory.news_cc_id) === parentIdNum ||
+                  Number(currentCategory.news_cc_parent) === parentIdNum);
+              const isCambridgeParent = parentIdNum === 38 || parentIdNum === 87;
 
               return (
                 <li key={parent.news_cc_id}>
-                  <Link
-                    to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
-                    onClick={() => {
-                      setOpenParentId(parent.news_cc_id);
-                      if (subs.length === 0) setMobileCateOpen(false);
-                    }}
-                    className={`px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between ${
-                      isCurrentParent
-                        ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
-                        : isOpen
-                        ? 'text-[#0a5482] font-semibold bg-slate-50/70'
-                        : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
-                    }`}
-                  >
-                    <span>{pName}</span>
-                    {subs.length > 0 && (
-                      <span className={`text-xs transition-transform ${isOpen ? 'rotate-90 text-[#2ab4e8]' : 'text-slate-400'}`}>
-                        ▸
-                      </span>
-                    )}
-                  </Link>
+                  <div className="flex items-center">
+                    <Link
+                      to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
+                      onClick={(e) => {
+                        if (subs.length > 0 && isOpen && isCurrentParent) {
+                          e.preventDefault();
+                          setOpenParentId(null);
+                          return;
+                        }
+                        setOpenParentId(subs.length > 0 ? parentIdNum : null);
+                        if (subs.length === 0) setMobileCateOpen(false);
+                      }}
+                      className={`flex-1 min-w-0 px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between gap-2 ${
+                        isCurrentParent
+                          ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                          : isOpen
+                          ? 'text-[#0a5482] font-semibold bg-slate-50/70'
+                          : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                      }`}
+                    >
+                      <span className="truncate">{pName}</span>
+                      {subs.length > 0 && (
+                        <button
+                          type="button"
+                          title={isOpen ? 'Thu gọn danh mục' : 'Mở rộng danh mục'}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setOpenParentId(isOpen ? null : parentIdNum);
+                          }}
+                          className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs transition-all shrink-0 hover:bg-sky-100/80 cursor-pointer ${
+                            isOpen ? 'rotate-90 text-[#0a5482] bg-sky-100/50 font-bold' : 'text-slate-400'
+                          }`}
+                        >
+                          ▸
+                        </button>
+                      )}
+                    </Link>
+                  </div>
 
                   {subs.length > 0 && isOpen && (
-                    <ul className="mt-0.5 mb-1 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
-                      {subs.map((sub) => {
-                        const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
-                        const isActiveSub = currentCategory && currentCategory.news_cc_id === sub.news_cc_id;
-                        return (
-                          <li key={sub.news_cc_id}>
-                            <Link
-                              to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
-                              onClick={() => setMobileCateOpen(false)}
-                              className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
-                                isActiveSub
-                                  ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
-                                  : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
-                              }`}
-                            >
-                              {sName}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                    isCambridgeParent ? (
+                      <div className="mt-1 mb-2 mx-1.5 p-2 bg-slate-50/90 rounded-xl border border-slate-200/70">
+                        <div className="flex items-center justify-between mb-1.5 px-1">
+                          <Link
+                            to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
+                            onClick={() => setMobileCateOpen(false)}
+                            className={`text-[11.5px] font-bold transition-colors ${
+                              currentCategory && Number(currentCategory.news_cc_id) === parentIdNum
+                                ? 'text-[#0a5482] underline'
+                                : 'text-slate-500 hover:text-[#0a5482]'
+                            }`}
+                          >
+                            📚 Tất cả ({subs.length} quyển)
+                          </Link>
+                          <button
+                            type="button"
+                            onClick={() => setOpenParentId(null)}
+                            className="text-[11px] font-semibold text-slate-400 hover:text-slate-600 cursor-pointer"
+                          >
+                            Thu gọn ▲
+                          </button>
+                        </div>
+                        <div className="grid grid-cols-3 gap-1.5">
+                          {subs.map((sub) => {
+                            const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
+                            const numMatch = String(sName).match(/(\d+)\s*$/);
+                            const shortLabel = numMatch ? `Cam ${numMatch[1].padStart(2, '0')}` : sName;
+                            const isActiveSub =
+                              currentCategory && Number(currentCategory.news_cc_id) === Number(sub.news_cc_id);
+                            return (
+                              <Link
+                                key={sub.news_cc_id}
+                                to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
+                                onClick={() => setMobileCateOpen(false)}
+                                title={sName}
+                                className={`px-2 py-1.5 rounded-lg text-[12.5px] text-center font-bold transition-all border ${
+                                  isActiveSub
+                                    ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
+                                    : 'bg-white text-slate-600 border-slate-200/80 hover:border-[#2ab4e8] hover:text-[#0a5482] hover:bg-sky-50/50'
+                                }`}
+                              >
+                                {shortLabel}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ) : (
+                      <ul className="mt-0.5 mb-1.5 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
+                        {subs.map((sub) => {
+                          const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
+                          const isActiveSub =
+                            currentCategory && Number(currentCategory.news_cc_id) === Number(sub.news_cc_id);
+                          return (
+                            <li key={sub.news_cc_id}>
+                              <Link
+                                to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
+                                onClick={() => setMobileCateOpen(false)}
+                                className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                                  isActiveSub
+                                    ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
+                                    : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
+                                }`}
+                              >
+                                {sName}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )
                   )}
                 </li>
               );
@@ -997,6 +1088,58 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                 <div className="py-20 text-center text-slate-400 font-bold text-base">Đang tải dữ liệu...</div>
               ) : mode === 'list' ? (
                 <>
+                  {/* Quick Subcategory Switcher Bar */}
+                  {activeParentCate && activeParentSubs.length > 0 && (
+                    <div className="mb-6 p-3.5 sm:p-4 bg-slate-50/90 border border-slate-200/80 rounded-2xl">
+                      <div className="flex items-center justify-between gap-2 mb-2.5">
+                        <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                          {isActiveParentCambridge
+                            ? lang === 'vi'
+                              ? 'Chọn nhanh bộ sách Cambridge (01 – 21):'
+                              : 'Quick select Cambridge book (01 – 21):'
+                            : lang === 'vi'
+                            ? 'Chuyên mục con:'
+                            : 'Subcategories:'}
+                        </span>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                        <Link
+                          to={`/news/category/${(activeParentCate.news_cc_name_url || '').trim()}`}
+                          className={`px-3 py-1.5 rounded-xl text-xs sm:text-[13px] font-bold transition-all border ${
+                            currentCategory &&
+                            Number(currentCategory.news_cc_id) === Number(activeParentCate.news_cc_id)
+                              ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
+                              : 'bg-white text-slate-600 border-slate-200/90 hover:border-[#2ab4e8] hover:text-[#0a5482]'
+                          }`}
+                        >
+                          {lang === 'vi' ? 'Tất cả' : 'All'}
+                        </Link>
+                        {activeParentSubs.map((sub) => {
+                          const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
+                          const numMatch = String(sName).match(/(\d+)\s*$/);
+                          const pillLabel =
+                            isActiveParentCambridge && numMatch ? `Cam ${numMatch[1].padStart(2, '0')}` : sName;
+                          const isActiveSub =
+                            currentCategory && Number(currentCategory.news_cc_id) === Number(sub.news_cc_id);
+                          return (
+                            <Link
+                              key={sub.news_cc_id}
+                              to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
+                              title={sName}
+                              className={`px-2.5 sm:px-3 py-1.5 rounded-xl text-xs sm:text-[13px] font-bold transition-all border ${
+                                isActiveSub
+                                  ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
+                                  : 'bg-white text-slate-600 border-slate-200/90 hover:border-[#2ab4e8] hover:text-[#0a5482] hover:bg-sky-50/50'
+                              }`}
+                            >
+                              {pillLabel}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
                   {/* Category Description */}
                   {currentCategory &&
                     (lang === 'vi' ? currentCategory.news_cc_desc_vi : currentCategory.news_cc_desc) && (
