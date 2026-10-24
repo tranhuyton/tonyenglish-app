@@ -401,6 +401,96 @@ export function fixLegacyHtmlContent(html: string | null | undefined): string {
     });
 }
 
+export interface ReadingQuizOption {
+  label: string;
+  text: string;
+}
+
+export interface ReadingQuizQuestion {
+  id: number;
+  question: string;
+  options: ReadingQuizOption[];
+  correctAnswer: string;
+  explanation?: string;
+}
+
+export function parseArticleInteractiveQuiz(article: any): ReadingQuizQuestion[] {
+  if (!article) return [];
+
+  // 1. Check structured JSON in news_quiz
+  if (typeof article.news_quiz === 'string' && article.news_quiz.trim().startsWith('[')) {
+    try {
+      const parsed = JSON.parse(article.news_quiz.trim());
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed.map((q: any, idx: number) => ({
+          id: Number(q.id) || idx + 1,
+          question: String(q.question || '').trim(),
+          options: Array.isArray(q.options)
+            ? q.options.map((opt: any, oIdx: number) =>
+                typeof opt === 'string'
+                  ? { label: String.fromCharCode(65 + oIdx), text: opt }
+                  : {
+                      label: String(opt.label || String.fromCharCode(65 + oIdx)).toUpperCase(),
+                      text: String(opt.text || '').trim(),
+                    }
+              )
+            : [],
+          correctAnswer: String(q.correctAnswer || 'A').trim().toUpperCase(),
+          explanation: q.explanation ? String(q.explanation).trim() : undefined,
+        }));
+      }
+    } catch {
+      // fall through to legacy parser
+    }
+  }
+
+  // 2. Fallback: parse legacy HTML <input type="radio"> questions in news_question + news_answer
+  const rawQ = String(article.news_question || '').trim();
+  const rawA = String(article.news_answer || '').trim();
+  if (!rawQ || !/<input\b[^>]*type=["']?radio["']?/i.test(rawQ)) {
+    return [];
+  }
+
+  const answerMap: Record<number, string> = {};
+  const ansPlain = stripTags(rawA);
+  const ansRegex = /(\d+)\s*[.:)]\s*([a-dA-D])\b/g;
+  let am: RegExpExecArray | null;
+  while ((am = ansRegex.exec(ansPlain)) !== null) {
+    answerMap[parseInt(am[1], 10)] = am[2].toUpperCase();
+  }
+
+  const questions: ReadingQuizQuestion[] = [];
+  const liRegex = /<li\b[^>]*>([\s\S]*?)<\/li>/gi;
+  let lm: RegExpExecArray | null;
+  let qIdx = 0;
+  while ((lm = liRegex.exec(rawQ)) !== null) {
+    qIdx++;
+    const block = lm[1];
+    const firstOptIdx = block.search(/(?:<p[^>]*>\s*(?:<span[^>]*>\s*)?)?[a-dA-D]\s*\.\s*<input\b/i);
+    if (firstOptIdx === -1) continue;
+    const stem = stripTags(block.slice(0, firstOptIdx));
+    const optsPart = block.slice(firstOptIdx);
+    const optRegex = /([a-dA-D])\s*\.\s*<input\b[^>]*>\s*([\s\S]*?)(?=(?:<br\s*\/?>|<\/p>|<p[^>]*>|\s*$|[a-dA-D]\s*\.\s*<input\b))/gi;
+    const options: ReadingQuizOption[] = [];
+    let om: RegExpExecArray | null;
+    while ((om = optRegex.exec(optsPart)) !== null) {
+      const label = om[1].toUpperCase();
+      const text = stripTags(om[2]);
+      if (text) options.push({ label, text });
+    }
+    if (stem && options.length >= 2) {
+      questions.push({
+        id: qIdx,
+        question: stem,
+        options,
+        correctAnswer: answerMap[qIdx] || 'A',
+      });
+    }
+  }
+
+  return questions;
+}
+
 export function updatePageSeo(title: string, description?: string) {
   if (typeof document === 'undefined') return;
   document.title = title ? `${title} | TonyEnglish` : 'TonyEnglish - Học tiếng Anh giao tiếp & TOEIC trực tuyến';

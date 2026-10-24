@@ -278,8 +278,8 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId }) => {
           synth.speak(utter);
         };
 
-        // Google Translate TTS stream URL (chunked to <=180 chars at word/clause boundaries)
-        const playViaGoogleTts = () => {
+        // Cloud TTS stream via /api/tts proxy (chunked to <=180 chars at word boundaries) with Web Speech fallback
+        const playViaCloudTts = () => {
           const tl = langCode === 'vi' ? 'vi' : 'en';
           const words = cleanText.split(' ');
           const chunks: string[] = [];
@@ -300,24 +300,36 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId }) => {
               resolve();
               return;
             }
-            const gUrl = `https://translate.googleapis.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${tl}&q=${encodeURIComponent(chunks[idx])}`;
+            const chunkText = chunks[idx];
             idx += 1;
+            const ttsUrl = `/api/tts?tl=${tl}&q=${encodeURIComponent(chunkText)}`;
             const audio = document.createElement('audio');
-            audio.setAttribute('referrerpolicy', 'no-referrer');
-            audio.src = gUrl;
+            audio.src = ttsUrl;
             audio.playbackRate = playbackRate;
             audioRef.current = audio;
-            audio.onended = () => playNextChunk();
-            audio.onerror = () => playViaWebSpeech();
-            audio.play().catch(() => playViaWebSpeech());
+            let chunkHandled = false;
+            const fallbackToSpeech = () => {
+              if (!chunkHandled) {
+                chunkHandled = true;
+                playViaWebSpeech();
+              }
+            };
+            audio.onended = () => {
+              if (!chunkHandled) {
+                chunkHandled = true;
+                playNextChunk();
+              }
+            };
+            audio.onerror = fallbackToSpeech;
+            audio.play().catch(fallbackToSpeech);
           };
           playNextChunk();
         };
 
         if (mp3Url) {
-          playViaAudioUrl(mp3Url, () => playViaWebSpeech(() => playViaGoogleTts()));
+          playViaAudioUrl(mp3Url, () => playViaCloudTts());
         } else {
-          playViaWebSpeech(() => playViaGoogleTts());
+          playViaCloudTts();
         }
       });
     },
