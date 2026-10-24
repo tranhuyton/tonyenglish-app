@@ -453,7 +453,7 @@ export const HomePage: React.FC = () => {
               <div>
                 <div className="font-black text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">{t('Courses')}</div>
                 <div className="text-xs sm:text-sm text-slate-500">
-                  {lang === 'vi' ? 'Giao tiếp, TOEIC & IELTS' : 'Communication, TOEIC & IELTS'}
+                  {lang === 'vi' ? 'Giao tiếp, IELTS & IGCSE' : 'Communication, IELTS & IGCSE'}
                 </div>
               </div>
             </Link>
