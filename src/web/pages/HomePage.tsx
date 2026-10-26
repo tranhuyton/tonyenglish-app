@@ -780,42 +780,89 @@ export const HomePage: React.FC = () => {
                 </Link>
               </div>
 
-              <div className="p-5 divide-y divide-slate-100">
-                {openingClasses.length > 0 ? (
-                  openingClasses.map((cl) => {
-                    const d = cl.ug_start_date ? new Date(cl.ug_start_date) : null;
-                    const dayStr = d && !isNaN(d.getTime()) ? String(d.getDate()).padStart(2, '0') : '15';
-                    const monthStr =
-                      d && !isNaN(d.getTime()) ? d.toLocaleDateString('en-US', { month: 'short' }) : 'Oct';
-                    const displayName =
-                      lang === 'vi'
-                        ? cl.ug_name_long_vi || cl.ug_name_vi || cl.ug_name
-                        : cl.ug_name_long || cl.ug_name || cl.ug_name_vi;
+              <div className="p-5 space-y-4">
+                <div className="bg-sky-50/90 border border-sky-200/80 rounded-xl p-3.5">
+                  <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#0a5482] mb-1">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                    <span>{lang === 'vi' ? 'Thông báo tuyển sinh' : 'Enrollment Notice'}</span>
+                  </div>
+                  <p className="text-sm sm:text-[15px] font-bold text-slate-800 leading-snug">
+                    {lang === 'vi'
+                      ? 'Liên tục tuyển sinh các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE.'
+                      : 'Continuous enrollment for 1-on-1 packages in English Communication, IELTS, and IGCSE.'}
+                  </p>
+                </div>
 
-                    return (
-                      <Link
-                        key={cl.ug_id}
-                        to={`/opening/${(cl.ug_name_url || '').trim()}`}
-                        className="py-3.5 first:pt-0 last:pb-0 flex items-center gap-4 group"
-                      >
-                        <div className="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-200 text-[#0a5482] flex flex-col items-center justify-center shrink-0 group-hover:bg-[#0a5482] group-hover:text-white transition-colors">
-                          <span className="text-lg font-black leading-none">{dayStr}</span>
-                          <span className="text-[11px] font-bold uppercase tracking-wider mt-0.5">{monthStr}</span>
-                        </div>
-                        <div className="min-w-0">
-                          <span className="text-xs font-bold uppercase tracking-wider text-[#2ab4e8] block">
-                            {t('Openning Class')}
-                          </span>
-                          <h4 className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2">
-                            {displayName}
-                          </h4>
-                        </div>
-                      </Link>
-                    );
-                  })
-                ) : (
-                  <p className="text-base text-slate-500 py-2">{t('There are no public courses.')}</p>
-                )}
+                <div className="divide-y divide-slate-100">
+                  <Link
+                    to="/courses/english-communication 1"
+                    className="py-3 first:pt-0 last:pb-0 flex items-center gap-3.5 group"
+                  >
+                    <div className="w-13 h-13 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex flex-col items-center justify-center shrink-0 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482] transition-colors">
+                      <span className="text-base font-black leading-none">1-1</span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">VIP</span>
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
+                        {lang === 'vi' ? 'Liên tục khai giảng' : 'Continuous Enrollment'}
+                      </span>
+                      <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
+                        {lang === 'vi' ? 'Giao tiếp Tiếng Anh (1 kèm 1)' : '1-on-1 English Communication'}
+                      </h4>
+                      <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                        {lang === 'vi'
+                          ? 'Phát âm chuẩn IPA, luyện phản xạ & tình huống thực tế'
+                          : 'IPA pronunciation, reflex & real-life communication'}
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/courses/ielts"
+                    className="py-3 first:pt-0 last:pb-0 flex items-center gap-3.5 group"
+                  >
+                    <div className="w-13 h-13 rounded-2xl bg-sky-50 border border-sky-200 text-[#0a5482] flex flex-col items-center justify-center shrink-0 group-hover:bg-[#0a5482] group-hover:text-white transition-colors">
+                      <span className="text-base font-black leading-none">1-1</span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">IELTS</span>
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
+                        {lang === 'vi' ? 'Liên tục khai giảng' : 'Continuous Enrollment'}
+                      </span>
+                      <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
+                        {lang === 'vi' ? 'Luyện thi IELTS (1 kèm 1)' : '1-on-1 IELTS Preparation'}
+                      </h4>
+                      <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                        {lang === 'vi'
+                          ? 'Lộ trình cá nhân hóa 4 kỹ năng cam kết đầu ra Band 6.5 - 8.0+'
+                          : 'Personalized 4-skill roadmap for Band 6.5 - 8.0+'}
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/courses/luyen-thi-igcse-alevel-cap-toc"
+                    className="py-3 first:pt-0 last:pb-0 flex items-center gap-3.5 group"
+                  >
+                    <div className="w-13 h-13 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex flex-col items-center justify-center shrink-0 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482] transition-colors">
+                      <span className="text-base font-black leading-none">1-1</span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">IGCSE</span>
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
+                        {lang === 'vi' ? 'Liên tục khai giảng' : 'Continuous Enrollment'}
+                      </span>
+                      <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
+                        {lang === 'vi' ? 'Chương trình Quốc tế IGCSE (1 kèm 1)' : '1-on-1 Cambridge IGCSE'}
+                      </h4>
+                      <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                        {lang === 'vi'
+                          ? 'Sciences, Maths, Economics, Business, Geography & ESL'
+                          : 'Sciences, Maths, Economics, Business, Geography & ESL'}
+                      </p>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
 

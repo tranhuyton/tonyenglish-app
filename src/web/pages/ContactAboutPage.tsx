@@ -271,18 +271,89 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   }}
                 />
               ) : mode === 'opening' ? (
-                <div
-                  className="legacy-prose"
-                  dangerouslySetInnerHTML={{
-                    __html: fixLegacyHtmlContent(
-                      currentOpening
-                        ? lang === 'vi'
-                          ? currentOpening.ug_content_vi || currentOpening.ug_content_en
-                          : currentOpening.ug_content_en || currentOpening.ug_content_vi
-                        : t('There are no public courses.')
-                    ),
-                  }}
-                />
+                <div className="space-y-6">
+                  <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5 sm:p-6">
+                    <div className="inline-flex items-center gap-2 bg-[#0a5482] text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+                      <span>📅</span>
+                      <span>{lang === 'vi' ? 'Lịch khai giảng & Tuyển sinh' : 'Enrollment Schedule'}</span>
+                    </div>
+                    <h2 className="text-xl sm:text-2xl font-black text-slate-800 mb-2">
+                      {lang === 'vi'
+                        ? 'Liên tục tuyển sinh các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE'
+                        : 'Continuous Enrollment for 1-on-1 Packages: English Communication, IELTS & IGCSE'}
+                    </h2>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                      {lang === 'vi'
+                        ? 'TonyEnglish liên tục khai giảng và nhận học viên các gói đào tạo 1 kèm 1 (One-on-One) cá nhân hóa theo trình độ, lịch học linh hoạt kết hợp hệ thống bài giảng tương tác & luyện đề AI 24/7:'
+                        : 'TonyEnglish continuously enrolls students for personalized 1-on-1 training packages with flexible schedules and 24/7 AI-powered LMS practice:'}
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
+                      <div>
+                        <span className="inline-block bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                          🎙️ GÓI HỌC 1 KÈM 1
+                        </span>
+                        <h3 className="text-lg font-black text-slate-800 mb-2">
+                          Giao tiếp Tiếng Anh &amp; Văn phòng
+                        </h3>
+                        <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                          Chuẩn hóa phát âm IPA, luyện phản xạ giao tiếp đời sống, tiếng Anh văn phòng công sở và viết Email chuyên nghiệp.
+                        </p>
+                      </div>
+                      <Link
+                        to="/courses/english-communication 1"
+                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                      >
+                        <span>Xem đề cương khóa học</span>
+                        <span>→</span>
+                      </Link>
+                    </div>
+
+                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
+                      <div>
+                        <span className="inline-block bg-sky-50 text-[#0a5482] border border-sky-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                          🏆 GÓI HỌC 1 KÈM 1
+                        </span>
+                        <h3 className="text-lg font-black text-slate-800 mb-2">
+                          Luyện thi IELTS 4 Kỹ Năng
+                        </h3>
+                        <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                          Lộ trình cá nhân hóa từ nền tảng đến Band 7.0+, kèm sát Speaking &amp; Writing 1-1 kết hợp phòng thi máy tính chuẩn IDP/BC.
+                        </p>
+                      </div>
+                      <Link
+                        to="/courses/ielts"
+                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                      >
+                        <span>Xem đề cương khóa học</span>
+                        <span>→</span>
+                      </Link>
+                    </div>
+
+                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
+                      <div>
+                        <span className="inline-block bg-amber-50 text-amber-800 border border-amber-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                          🌍 GÓI HỌC 1 KÈM 1
+                        </span>
+                        <h3 className="text-lg font-black text-slate-800 mb-2">
+                          Chương trình Quốc tế Cambridge IGCSE
+                        </h3>
+                        <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                          Kèm sát các môn Sciences (0654/0610/0620/0625), Maths (0580/0606), Economics (0455), Business (0450), Geography (0460) &amp; ESL (0510).
+                        </p>
+                      </div>
+                      <Link
+                        to="/courses/luyen-thi-igcse-alevel-cap-toc"
+                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                      >
+                        <span>Xem đề cương khóa học</span>
+                        <span>→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               ) : mode === 'sitemap' ? (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">

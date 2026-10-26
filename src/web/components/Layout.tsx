@@ -495,74 +495,19 @@ export const Layout: React.FC<{
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-1 xl:gap-2">
-            {navItems.map((item) => {
-              if (item.to === '/courses') {
-                return (
-                  <div key={item.to} className="relative group">
-                    <Link
-                      to="/courses"
-                      className={`px-4 py-2 rounded-xl text-[15px] xl:text-[16px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-1.5 ${
-                        item.active
-                          ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-100'
-                          : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50'
-                      }`}
-                    >
-                      <span>{item.label}</span>
-                      <span className="text-[11px] opacity-60 group-hover:rotate-180 transition-transform">▼</span>
-                    </Link>
-                    <div className="absolute left-0 top-full pt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
-                      <div className="bg-white rounded-2xl shadow-xl border border-slate-200/90 p-2.5 space-y-1">
-                        <Link
-                          to="/courses"
-                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-sky-50 transition-colors group/sub"
-                        >
-                          <span className="w-9 h-9 rounded-lg bg-blue-100 text-[#0a5482] flex items-center justify-center text-base shrink-0">
-                            🏢
-                          </span>
-                          <div>
-                            <div className="text-[14px] font-black text-slate-800 group-hover/sub:text-[#0a5482]">
-                              {lang === 'vi' ? 'Các khóa học Offline' : 'Offline Courses'}
-                            </div>
-                            <div className="text-xs text-slate-500 mt-0.5">
-                              {lang === 'vi' ? 'Học trực tiếp tại Trung tâm' : 'On-campus training'}
-                            </div>
-                          </div>
-                        </Link>
-                        <Link
-                          to="/courses/online"
-                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-amber-50 transition-colors group/sub"
-                        >
-                          <span className="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-base shrink-0">
-                            💻
-                          </span>
-                          <div>
-                            <div className="text-[14px] font-black text-slate-800 group-hover/sub:text-amber-700">
-                              {lang === 'vi' ? 'Các khóa học Online' : 'Online Courses'}
-                            </div>
-                            <div className="text-xs text-slate-500 mt-0.5">
-                              {lang === 'vi' ? 'Học & Luyện thi AI + Học thử' : 'Online packages & Free trial'}
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
-              return (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className={`px-4 py-2 rounded-xl text-[15px] xl:text-[16px] font-bold transition-all whitespace-nowrap ${
-                    item.active
-                      ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-100'
-                      : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={`px-4 py-2 rounded-xl text-[15px] xl:text-[16px] font-bold transition-all whitespace-nowrap ${
+                  item.active
+                    ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-100'
+                    : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
 
             {user && (
               <Link
@@ -656,35 +601,16 @@ export const Layout: React.FC<{
         {mobileMenuOpen && (
           <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-3 space-y-1.5 shadow-lg">
             {navItems.map((item) => (
-              <React.Fragment key={item.to}>
-                <Link
-                  to={item.to}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-2.5 rounded-xl text-base font-bold ${
-                    item.active ? 'bg-sky-50 text-[#0a5482]' : 'text-slate-700 hover:bg-slate-50'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-                {item.to === '/courses' && (
-                  <div className="pl-4 space-y-1">
-                    <Link
-                      to="/courses"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50"
-                    >
-                      🏢 {lang === 'vi' ? 'Các khóa học Offline' : 'Offline Courses'}
-                    </Link>
-                    <Link
-                      to="/courses/online"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block px-4 py-2 rounded-xl text-sm font-semibold text-amber-700 hover:bg-amber-50"
-                    >
-                      💻 {lang === 'vi' ? 'Các khóa học Online & Học thử' : 'Online Courses'}
-                    </Link>
-                  </div>
-                )}
-              </React.Fragment>
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block px-4 py-2.5 rounded-xl text-base font-bold ${
+                  item.active ? 'bg-sky-50 text-[#0a5482]' : 'text-slate-700 hover:bg-slate-50'
+                }`}
+              >
+                {item.label}
+              </Link>
             ))}
             {user && (
               <>

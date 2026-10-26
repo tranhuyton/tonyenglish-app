@@ -156,7 +156,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         });
         setOptions(map);
       }
-      if (courseRes.data) setFooterCourses(courseRes.data);
+      if (courseRes.data) {
+        setFooterCourses(
+          courseRes.data.filter(
+            (c: any) =>
+              Number(c.cc_id) !== 112 &&
+              (c.cc_name_url || '').trim().toLowerCase() !== 'grammar-and-vocabulary'
+          )
+        );
+      }
       if (newsCateRes.data) setFooterNewsCates(newsCateRes.data);
       if (aboutCateRes.data) setFooterAboutCates(aboutCateRes.data);
       if (aboutRes.data) setFooterAboutItems(aboutRes.data);
@@ -207,8 +215,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         .neq('cc_parent', 0)
         .order('cc_order', { ascending: true });
       if (allSubCourses && allSubCourses.length > 0) {
-        setUserCoursesList(allSubCourses);
-        if (!selectedCourseId) setSelectedCourseId(allSubCourses[0].cc_id);
+        const filteredSubs = allSubCourses.filter(
+          (c: any) =>
+            Number(c.cc_id) !== 112 &&
+            Number(c.cc_parent) !== 112 &&
+            (c.cc_name_url || '').trim().toLowerCase() !== 'grammar-and-vocabulary'
+        );
+        setUserCoursesList(filteredSubs);
+        if (!selectedCourseId && filteredSubs.length > 0) setSelectedCourseId(filteredSubs[0].cc_id);
       }
     }
     loadUserCourses();

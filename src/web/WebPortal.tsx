@@ -25,17 +25,17 @@ export default function WebPortal({
             <Route path="/" element={<HomePage />} />
             <Route path="/:lang" element={<HomePage />} />
 
-            {/* Courses (Offline & Online) */}
+            {/* Courses */}
             <Route path="/courses" element={<CoursesPage />} />
-            <Route path="/courses/online" element={<CoursesPage forcedMode="online" />} />
+            <Route path="/courses/online" element={<CoursesPage />} />
             <Route path="/courses/:slug" element={<CoursesPage />} />
             <Route path="/:lang/courses" element={<CoursesPage />} />
-            <Route path="/:lang/courses/online" element={<CoursesPage forcedMode="online" />} />
+            <Route path="/:lang/courses/online" element={<CoursesPage />} />
             <Route path="/:lang/courses/:slug" element={<CoursesPage />} />
-            <Route path="/khoa-hoc" element={<CoursesPage forcedMode="online" />} />
-            <Route path="/hoc-thu" element={<CoursesPage forcedMode="online" />} />
-            <Route path="/dang-ky" element={<CoursesPage forcedMode="online" />} />
-            <Route path="/promo" element={<CoursesPage forcedMode="online" />} />
+            <Route path="/khoa-hoc" element={<CoursesPage />} />
+            <Route path="/hoc-thu" element={<CoursesPage />} />
+            <Route path="/dang-ky" element={<CoursesPage />} />
+            <Route path="/promo" element={<CoursesPage />} />
 
             {/* Library / News */}
             <Route path="/news" element={<NewsPage mode="list" />} />
