@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
-import { encryptLegacyPass, fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
+import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
 
 interface SyllabusPackageItem {
   id: string;
@@ -17,12 +17,21 @@ interface SyllabusPackageItem {
   stats: string[];
   highlights: string[];
   lmsCourseTitles: string[];
-  moduleFilter?: (moduleTitle: string) => boolean;
 }
 
-const CONTACT_PHONE = '0935058688';
-const CONTACT_PHONE_DISPLAY = '0935 058 688';
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
+
+// Helper to strip [color:...] tags and optional leading numbers (e.g. "1. ")
+const cleanCurriculumTitle = (raw: string, stripLeadingNumber = false): string => {
+  let text = (raw || '')
+    .replace(/\s*\[color:[^\]]*\]/gi, '')
+    .replace(/\s*\[bg:[^\]]*\]/gi, '')
+    .trim();
+  if (stripLeadingNumber) {
+    text = text.replace(/^\d+[\.\)]\s*/, '').trim();
+  }
+  return text;
+};
 
 const COURSE_SYLLABUS_PACKAGES: SyllabusPackageItem[] = [
   {
@@ -167,7 +176,7 @@ const isHiddenCourseCategory = (c: any) => {
 
 export const CoursesPage: React.FC = () => {
   const { slug } = useParams<{ slug?: string }>();
-  const { lang, t, user, options } = useApp();
+  const { lang, t, options } = useApp();
 
   const [allCategories, setAllCategories] = useState<any[]>([]);
   const [currentCourse, setCurrentCourse] = useState<any | null>(null);
@@ -175,7 +184,7 @@ export const CoursesPage: React.FC = () => {
   const [openParentId, setOpenParentId] = useState<number | null>(null);
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
 
-  // LMS Curriculum data (for course syllabus display)
+  // LMS Curriculum data (for course syllabus modal)
   const [lmsCoursesWithModules, setLmsCoursesWithModules] = useState<
     Array<{
       id: string;
@@ -185,20 +194,8 @@ export const CoursesPage: React.FC = () => {
   >([]);
   const [expandedModuleIds, setExpandedModuleIds] = useState<Record<string, boolean>>({});
 
-  // Syllabus popup & Registration form state
+  // Syllabus popup modal state
   const [showSyllabusModal, setShowSyllabusModal] = useState(false);
-  const [showJoinForm, setShowJoinForm] = useState(false);
-
-  const [regName, setRegName] = useState('');
-  const [regBirthday, setRegBirthday] = useState('');
-  const [regGender, setRegGender] = useState('1');
-  const [regPhone, setRegPhone] = useState('');
-  const [regEmail, setRegEmail] = useState('');
-  const [regCity, setRegCity] = useState('');
-  const [regWork, setRegWork] = useState('');
-  const [regExtraCourses, setRegExtraCourses] = useState<number[]>([]);
-  const [regMessage, setRegMessage] = useState<{ text: string; isError: boolean } | null>(null);
-  const [regSubmitting, setRegSubmitting] = useState(false);
 
   useEffect(() => {
     async function loadCoursesAndCurriculum() {
@@ -220,12 +217,15 @@ export const CoursesPage: React.FC = () => {
           .order('order_index', { ascending: true }),
       ]);
 
-      // Build structured LMS curriculum tree (excluding Grammar and Vocabulary)
+      // Build structured LMS curriculum tree (excluding Grammar and Vocabulary, stripping [color:...] tags)
       if (lmsCourseRes.data && lmsModRes.data) {
         const lecsByMod: Record<string, Array<{ id: string; title: string }>> = {};
         (lmsLecRes.data || []).forEach((l: any) => {
           if (!lecsByMod[l.module_id]) lecsByMod[l.module_id] = [];
-          lecsByMod[l.module_id].push({ id: l.id, title: l.title });
+          lecsByMod[l.module_id].push({
+            id: l.id,
+            title: cleanCurriculumTitle(l.title, true),
+          });
         });
 
         const modsByCourse: Record<
@@ -236,7 +236,7 @@ export const CoursesPage: React.FC = () => {
           if (!modsByCourse[m.course_id]) modsByCourse[m.course_id] = [];
           modsByCourse[m.course_id].push({
             id: m.id,
-            title: m.title,
+            title: cleanCurriculumTitle(m.title, true),
             lectures: lecsByMod[m.id] || [],
           });
         });
@@ -245,7 +245,7 @@ export const CoursesPage: React.FC = () => {
           .filter((c: any) => (c.title || '').trim().toLowerCase() !== 'grammar and vocabulary')
           .map((c: any) => ({
             id: c.id,
-            title: c.title,
+            title: cleanCurriculumTitle(c.title, false),
             modules: modsByCourse[c.id] || [],
           }))
           .filter((c) => c.modules.length > 0);
@@ -283,8 +283,7 @@ export const CoursesPage: React.FC = () => {
       }
     }
     loadCoursesAndCurriculum();
-    setShowJoinForm(false);
-    setRegMessage(null);
+    setShowSyllabusModal(false);
   }, [slug]);
 
   const homeParents = allCategories.filter(
@@ -313,14 +312,12 @@ export const CoursesPage: React.FC = () => {
     if (cid === 111 || pid === 111) {
       const pkgs = COURSE_SYLLABUS_PACKAGES.filter((p) => p.category === 'comm');
       if (cid === 114) {
-        // Phát âm
         return {
           packages: pkgs,
           lmsCourses: lmsCoursesWithModules.filter((c) => c.title === 'Pronunciation'),
         };
       }
       if (cid === 115) {
-        // Luyện phản xạ
         return {
           packages: pkgs,
           lmsCourses: lmsCoursesWithModules
@@ -332,7 +329,6 @@ export const CoursesPage: React.FC = () => {
         };
       }
       if (cid === 116) {
-        // Tình huống giao tiếp
         return {
           packages: pkgs,
           lmsCourses: lmsCoursesWithModules
@@ -357,14 +353,12 @@ export const CoursesPage: React.FC = () => {
     if (cid === 129 || pid === 129) {
       const pkgs = COURSE_SYLLABUS_PACKAGES.filter((p) => p.category === 'office');
       if (cid === 123) {
-        // Tiếng Anh văn phòng
         return {
           packages: pkgs,
           lmsCourses: lmsCoursesWithModules.filter((c) => c.title === 'Tiếng Anh văn phòng'),
         };
       }
       if (cid === 124) {
-        // Học viết Email
         return {
           packages: pkgs,
           lmsCourses: lmsCoursesWithModules
@@ -377,7 +371,6 @@ export const CoursesPage: React.FC = () => {
         };
       }
       if (cid === 128) {
-        // Thành ngữ thông dụng
         return {
           packages: pkgs,
           lmsCourses: lmsCoursesWithModules
@@ -414,7 +407,6 @@ export const CoursesPage: React.FC = () => {
       };
     }
 
-    // Fallback (e.g. SAT 133)
     return {
       packages: [],
       lmsCourses: [],
@@ -432,106 +424,22 @@ export const CoursesPage: React.FC = () => {
     setExpandedModuleIds((prev) => ({ ...prev, [modId]: !prev[modId] }));
   };
 
-  const handleJoinSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setRegMessage(null);
-    if (!currentCourse) return;
-
-    if (user) {
-      setRegSubmitting(true);
-      const coursesToJoin = [currentCourse.cc_id, ...regExtraCourses];
-      for (const cid of coursesToJoin) {
-        await supabase.from('te_user_courses').insert({
-          user_id: user.user_id,
-          cc_id: cid,
-        });
-      }
-      setRegSubmitting(false);
-      setRegMessage({
-        text: `${t('Thank you')}! ${t('We will contact you soon about the Time-table and Avaibility of The course.')}`,
-        isError: false,
-      });
-      return;
-    }
-
-    if (!regName.trim() || !regEmail.trim() || !regPhone.trim() || !regCity.trim()) {
-      setRegMessage({
-        text: `${t('Please complete information on the items marked with')} (*) !`,
-        isError: true,
-      });
-      return;
-    }
-
-    setRegSubmitting(true);
-    const salt = String(Math.floor(Math.random() * 900) + 100);
-    const cleanUsername = regName.toLowerCase().replace(/[^a-z0-9]/g, '') + salt;
-    const now = Math.floor(Date.now() / 1000);
-
-    const { data: maxRow } = await supabase
-      .from('te_user')
-      .select('user_id')
-      .order('user_id', { ascending: false })
-      .limit(1);
-    const nextUserId = maxRow && maxRow.length > 0 ? Number(maxRow[0].user_id) + 1 : 1000;
-
-    const { error: uErr } = await supabase.from('te_user').insert({
-      user_id: nextUserId,
-      user_name: cleanUsername,
-      user_fullname: regName.trim(),
-      user_salt: salt,
-      user_pass: encryptLegacyPass(salt, '123456'),
-      user_created_at: now,
-      user_phone: regPhone.trim(),
-      user_email: regEmail.trim(),
-      user_address: regCity.trim(),
-      user_birthday: regBirthday.trim(),
-      user_gender: parseInt(regGender, 10),
-      user_job: regWork.trim(),
-      user_status: 1,
-      user_active: 1,
-      deleted: 0,
-    });
-
-    if (uErr) {
-      setRegSubmitting(false);
-      setRegMessage({ text: uErr.message, isError: true });
-      return;
-    }
-
-    const { data: maxUcRow } = await supabase
-      .from('te_user_courses')
-      .select('uc_id')
-      .order('uc_id', { ascending: false })
-      .limit(1);
-    let nextUcId = maxUcRow && maxUcRow.length > 0 ? Number(maxUcRow[0].uc_id) + 1 : 10000;
-
-    const coursesToJoin = Array.from(new Set([currentCourse.cc_id, ...regExtraCourses]));
-    for (const cid of coursesToJoin) {
-      await supabase.from('te_user_courses').insert({
-        uc_id: nextUcId++,
-        user_id: nextUserId,
-        cc_id: cid,
-      });
-    }
-
-    setRegSubmitting(false);
-    setRegMessage({
-      text: `${t('Thank you')}! ${t('We will contact you soon about the Time-table and Avaibility of The course.')}`,
-      isError: false,
-    });
-  };
-
   const courseTitle = currentCourse
     ? lang === 'vi'
       ? currentCourse.cc_name_vi || currentCourse.cc_name
       : currentCourse.cc_name
     : t('Study at TonyEnglish');
 
-  const courseDescHtml = currentCourse
+  const rawCourseDescHtml = currentCourse
     ? lang === 'vi'
       ? currentCourse.cc_desc_vi || currentCourse.cc_desc
       : currentCourse.cc_desc || currentCourse.cc_desc_vi
     : options['studyEnglish'] || '';
+
+  // Ensure any tuition fee text inside legacy HTML descriptions always displays "Liên hệ"
+  const courseDescHtml = rawCourseDescHtml
+    .replace(/25\s*triệu\s*\(1\s*kèm\s*1\)\s*hoặc\s*35\s*triệu\s*\(1\s*kèm\s*2\)/gi, 'Liên hệ')
+    .replace(/18\s*triệu\s*\/\s*gói/gi, 'Liên hệ');
 
   useEffect(() => {
     updatePageSeo(courseTitle, courseDescHtml);
@@ -539,19 +447,19 @@ export const CoursesPage: React.FC = () => {
 
   const childCoursesOfCurrent = currentCourse ? subCategories(currentCourse.cc_id) : [];
 
-  // Reusable renderer for the Syllabus Content (used both inline on the page and in the Syllabus Modal)
-  const renderSyllabusContent = (isModal = false) => {
+  // Renderer for Syllabus Modal Content
+  const renderSyllabusModalContent = () => {
     const { packages, lmsCourses } = matchedSyllabus;
 
     return (
       <div className="space-y-6">
         {/* 1. Package Overview & Highlights */}
         {packages.length > 0 && (
-          <div className={`grid grid-cols-1 ${packages.length > 1 && !isModal ? 'md:grid-cols-2' : ''} gap-5`}>
+          <div className="space-y-5">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className="bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden"
+                className="bg-white rounded-3xl border border-slate-200/90 shadow-xs flex flex-col overflow-hidden"
               >
                 <div className={`bg-gradient-to-br ${pkg.gradient} p-5 sm:p-6 text-white relative`}>
                   <div className="flex items-center justify-between gap-2 mb-2.5">
@@ -564,18 +472,23 @@ export const CoursesPage: React.FC = () => {
                   <p className="text-xs sm:text-sm text-white/90 font-medium leading-relaxed">{pkg.subtitle}</p>
                 </div>
 
-                <div className="bg-slate-50 px-5 py-3 border-b border-slate-100 flex flex-wrap gap-2">
-                  {pkg.stats.map((st, idx) => (
-                    <span
-                      key={idx}
-                      className={`text-xs font-bold px-2.5 py-1 rounded-lg border ${pkg.accentColor}`}
-                    >
-                      {st}
-                    </span>
-                  ))}
+                <div className="bg-slate-50 px-5 py-3 border-b border-slate-100 flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex flex-wrap gap-2">
+                    {pkg.stats.map((st, idx) => (
+                      <span
+                        key={idx}
+                        className={`text-xs font-bold px-2.5 py-1 rounded-lg border ${pkg.accentColor}`}
+                      >
+                        {st}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="text-xs font-black text-[#0a5482] bg-sky-50 border border-sky-200 px-3 py-1 rounded-lg">
+                    💳 Học phí: Liên hệ
+                  </span>
                 </div>
 
-                <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-6">
                   <ul className="space-y-2.5">
                     {pkg.highlights.map((item, i) => (
                       <li
@@ -587,26 +500,6 @@ export const CoursesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-
-                  {!currentCourse && (
-                    <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between gap-2">
-                      <Link
-                        to={`/courses/${pkg.courseSlug}`}
-                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
-                      >
-                        <span>Xem chi tiết &amp; Đề cương từng học phần</span>
-                        <span>→</span>
-                      </Link>
-                      <a
-                        href={CONTACT_ZALO_URL}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition"
-                      >
-                        💬 Tư vấn Zalo
-                      </a>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
@@ -614,7 +507,7 @@ export const CoursesPage: React.FC = () => {
         )}
 
         {/* 2. Detailed LMS Curriculum Modules & Lectures */}
-        {lmsCourses.length > 0 && currentCourse && (
+        {lmsCourses.length > 0 && (
           <div className="space-y-5">
             {lmsCourses.map((lmsCourse) => {
               const totalLecs = lmsCourse.modules.reduce((s, m) => s + m.lectures.length, 0);
@@ -886,11 +779,10 @@ export const CoursesPage: React.FC = () => {
                           <div className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">
                             {lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}
                           </div>
-                          {sub.cc_tuition && (
-                            <div className="text-sm text-slate-500 mt-0.5">
-                              {t('Tuition fee')}: <strong className="text-[#0a5482]">{sub.cc_tuition}</strong>
-                            </div>
-                          )}
+                          <div className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                            {t('Tuition fee')}:{' '}
+                            <strong className="text-[#0a5482]">{lang === 'vi' ? 'Liên hệ' : 'Contact us'}</strong>
+                          </div>
                         </div>
                         <span className="text-[#2ab4e8] font-black group-hover:translate-x-1 transition-transform">
                           →
@@ -931,7 +823,7 @@ export const CoursesPage: React.FC = () => {
                     <div>
                       <div className="text-xs font-bold text-slate-400 uppercase">{t('Tuition fee')}</div>
                       <div className="font-black text-[#0a5482] text-base">
-                        {currentCourse.cc_tuition || 'Học 1 kèm 1 / Liên hệ'}
+                        {lang === 'vi' ? 'Liên hệ' : 'Contact us'}
                       </div>
                     </div>
                   </div>
@@ -946,41 +838,9 @@ export const CoursesPage: React.FC = () => {
                 />
               )}
 
-              {/* INLINE COURSE SYLLABUS (FROM ONLINE PACKAGES & LMS MODULES) */}
-              <div className="pt-4 border-t border-slate-200/80 space-y-4">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <div>
-                    <h2 className="text-xl sm:text-2xl font-black text-[#0a5482] flex items-center gap-2">
-                      <span>📋</span>
-                      <span>
-                        {currentCourse
-                          ? `${t('Courses Syllabus')}: ${courseTitle}`
-                          : lang === 'vi'
-                          ? 'Đề Cương Các Khóa Học Đào Tạo Tại TonyEnglish'
-                          : 'Course Syllabuses at TonyEnglish'}
-                      </span>
-                    </h2>
-                    <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-                      Lộ trình học 1 kèm 1 kết hợp hệ thống bài giảng tương tác, Podcast &amp; luyện đề AI 24/7
-                    </p>
-                  </div>
-                </div>
-
-                {renderSyllabusContent(false)}
-              </div>
-
-              {/* Action Buttons for Course */}
+              {/* Action Buttons for Course (Only Syllabus Popup & Zalo Registration/Consultation) */}
               {currentCourse && (
                 <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setShowJoinForm(!showJoinForm)}
-                    className="bg-[#0a5482] hover:bg-[#084266] text-white font-black text-sm px-6 py-3 rounded-xl shadow-lg shadow-blue-900/15 transition active:scale-95 flex items-center gap-2 cursor-pointer"
-                  >
-                    <span>✍️</span>
-                    <span>{t('Join now')}</span>
-                  </button>
-
                   <button
                     type="button"
                     onClick={() => setShowSyllabusModal(true)}
@@ -997,153 +857,8 @@ export const CoursesPage: React.FC = () => {
                     className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
                   >
                     <span>💬</span>
-                    <span>Tư vấn Zalo: {CONTACT_PHONE_DISPLAY}</span>
+                    <span>{lang === 'vi' ? 'Đăng ký và Tư vấn Zalo' : 'Register & Consult via Zalo'}</span>
                   </a>
-                </div>
-              )}
-
-              {/* JOIN NOW REGISTRATION FORM */}
-              {showJoinForm && currentCourse && (
-                <div className="mt-6 bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200">
-                  <h2 className="text-xl font-black text-[#0a5482] mb-1">{t('Submission form')}</h2>
-                  <p className="text-xs text-slate-500 mb-6">
-                    {t('Please complete information on the items marked with')} (
-                    <span className="text-rose-500">*</span>)
-                  </p>
-
-                  {regMessage && (
-                    <div
-                      className={`p-4 mb-6 rounded-xl font-bold text-sm border ${
-                        regMessage.isError
-                          ? 'bg-rose-50 text-rose-700 border-rose-200'
-                          : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                      }`}
-                    >
-                      {regMessage.text}
-                    </div>
-                  )}
-
-                  <form onSubmit={handleJoinSubmit} className="space-y-4 max-w-2xl">
-                    {!user && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-xs font-bold text-slate-600 mb-1">
-                            {t('Full Name')} <span className="text-rose-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            required
-                            value={regName}
-                            onChange={(e) => setRegName(e.target.value)}
-                            className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-xs font-bold text-slate-600 mb-1">
-                            {t('Phone')} <span className="text-rose-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            required
-                            value={regPhone}
-                            onChange={(e) => setRegPhone(e.target.value)}
-                            className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-xs font-bold text-slate-600 mb-1">
-                            Email <span className="text-rose-500">*</span>
-                          </label>
-                          <input
-                            type="email"
-                            required
-                            value={regEmail}
-                            onChange={(e) => setRegEmail(e.target.value)}
-                            className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-xs font-bold text-slate-600 mb-1">
-                            {t('City')} <span className="text-rose-500">*</span>
-                          </label>
-                          <input
-                            type="text"
-                            required
-                            value={regCity}
-                            onChange={(e) => setRegCity(e.target.value)}
-                            className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-xs font-bold text-slate-600 mb-1">{t('Birthday')}</label>
-                          <input
-                            type="text"
-                            placeholder="DD/MM/YYYY"
-                            value={regBirthday}
-                            onChange={(e) => setRegBirthday(e.target.value)}
-                            className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-xs font-bold text-slate-600 mb-1">{t('Gender')}</label>
-                          <select
-                            value={regGender}
-                            onChange={(e) => setRegGender(e.target.value)}
-                            className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                          >
-                            <option value="1">{t('Male')}</option>
-                            <option value="0">{t('Female')}</option>
-                          </select>
-                        </div>
-
-                        <div className="sm:col-span-2">
-                          <label className="block text-xs font-bold text-slate-600 mb-1">{t('Work')}</label>
-                          <input
-                            type="text"
-                            value={regWork}
-                            onChange={(e) => setRegWork(e.target.value)}
-                            className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                          />
-                        </div>
-                      </div>
-                    )}
-
-                    <div>
-                      <label className="block text-xs font-bold text-slate-600 mb-1.5">
-                        {t('Additional Courses')} (Giữ Ctrl để chọn nhiều):
-                      </label>
-                      <select
-                        multiple
-                        value={regExtraCourses.map(String)}
-                        onChange={(e) => {
-                          const opts = Array.from(e.target.selectedOptions).map((o) => parseInt(o.value, 10));
-                          setRegExtraCourses(opts);
-                        }}
-                        className="w-full bg-white border border-slate-300 rounded-xl p-3 text-sm h-28 focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-                      >
-                        {allCategories
-                          .filter((c) => c.cc_parent !== 0 && c.cc_id !== currentCourse.cc_id && !isHiddenCourseCategory(c))
-                          .map((c) => (
-                            <option key={c.cc_id} value={c.cc_id}>
-                              {lang === 'vi' ? c.cc_name_vi || c.cc_name : c.cc_name}
-                            </option>
-                          ))}
-                      </select>
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={regSubmitting}
-                      className="bg-[#0a5482] hover:bg-[#084266] text-white font-black text-sm px-8 py-3 rounded-xl shadow-md transition cursor-pointer"
-                    >
-                      {regSubmitting ? 'Đang gửi...' : t('Submit')}
-                    </button>
-                  </form>
                 </div>
               )}
             </div>
@@ -1173,7 +888,27 @@ export const CoursesPage: React.FC = () => {
                 ✕
               </button>
             </div>
-            {renderSyllabusContent(true)}
+
+            {renderSyllabusModalContent()}
+
+            <div className="mt-6 pt-4 border-t border-slate-200 flex flex-wrap items-center justify-end gap-3">
+              <a
+                href={CONTACT_ZALO_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
+              >
+                <span>💬</span>
+                <span>{lang === 'vi' ? 'Đăng ký và Tư vấn Zalo' : 'Register & Consult via Zalo'}</span>
+              </a>
+              <button
+                type="button"
+                onClick={() => setShowSyllabusModal(false)}
+                className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm px-5 py-2.5 rounded-xl transition cursor-pointer"
+              >
+                {lang === 'vi' ? 'Đóng' : 'Close'}
+              </button>
+            </div>
           </div>
         </div>
       )}
