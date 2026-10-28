@@ -4,6 +4,7 @@ import AssignmentCalendar from './AssignmentCalendar';
 import TaskBoard from './TaskBoard';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
+import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 
 const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800', 
@@ -2212,7 +2213,30 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             </div>
 
-            <div className="space-y-8 md:space-y-10">
+            {/* 🤖 TRỢ LÝ DẪN ĐƯỜNG TỪNG BƯỚC (AI STUDY COACH) */}
+            {isCoachSupportedCourse(String(selectedCourse.id), selectedCourse.title) && (
+              <CourseStudyCoach
+                courseId={String(selectedCourse.id)}
+                courseTitle={selectedCourse.title}
+                studentName={displayUserName}
+                lectures={allLectures.filter(l => String(l.course_id) === String(selectedCourse.id))}
+                folders={courseFolders}
+                onOpenLecture={(cid, lid) => handleGoToLecture(cid, lid)}
+                onSelectFolder={(fid) => handleFolderClick(fid)}
+                onNavigate={onNavigate}
+                onOpenAIChat={(prompt) => {
+                  window.dispatchEvent(new CustomEvent('tony-open-ai-coach-chat', {
+                    detail: {
+                      courseId: String(selectedCourse.id),
+                      courseTitle: selectedCourse.title,
+                      prompt
+                    }
+                  }));
+                }}
+              />
+            )}
+
+            <div id="course-folders-section" className="space-y-8 md:space-y-10">
               
               {/* Folders Grid */}
               {currentSubFolders.length > 0 && (

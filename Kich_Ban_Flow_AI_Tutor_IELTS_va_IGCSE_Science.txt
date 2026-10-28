@@ -1,0 +1,253 @@
+================================================================================
+KỊCH BẢN FLOW THẦY TUTOR AI HƯỚNG DẪN HỌC TẬP TỪNG BƯỚC (STEP-BY-STEP STUDY COACH)
+Áp dụng thử nghiệm:
+  1. Khóa học: IELTS Premium
+  2. Khóa học: IGCSE Co-ordinated Sciences (0654)
+================================================================================
+
+MỤC TIÊU CỦA HỆ THỐNG:
+- Ngay sau khi học sinh đăng nhập và bấm vào khóa học (trên Góc Học Viên hoặc trong
+  trang Bài Giảng Lý Thuyết), "Thầy Tony AI Tutor" sẽ xuất hiện ở đầu trang để đóng
+  vai trò người thầy dẫn dắt trực tiếp.
+- Học sinh không bị "ngợp" trước hàng trăm bài giảng và đề thi, mà chỉ cần trả lời
+  câu hỏi của Thầy AI (bằng các nút bấm trực quan) -> Thầy AI sẽ giao việc từng bước
+  (Step 1 -> Step 2 -> Step 3 -> Step 4) kèm nút bấm mở thẳng tới bài học/bài tập đó.
+- Khi anh cần chỉnh sửa quy trình hoặc bổ sung từ file PDF của anh, chỉ cần sửa nội
+  dung các bước trong kịch bản này.
+
+================================================================================
+PHẦN 1: FLOW KỊCH BẢN KHÓA "IELTS PREMIUM"
+================================================================================
+
+[BƯỚC CHÀO MỪNG & HỎI MỤC TIÊU TRONG NGÀY]
+Lời thoại của Thầy Tony AI:
+  "Chào [Tên học viên]! Chào mừng em vào khóa học IELTS Premium.
+   Hôm nay em muốn tập trung rèn luyện kỹ năng nào? Hãy chọn 1 mục bên dưới để
+   thầy hướng dẫn chi tiết từng bước việc cần làm nhé!"
+
+Các nút lựa chọn (5 nhánh kỹ năng):
+  [1. 🎧 Kỹ năng Nghe (Listening)]
+  [2. 📖 Kỹ năng Đọc (Reading)]
+  [3. ✍️ Kỹ năng Viết (Writing Task 1 & Task 2)]
+  [4. 🎙️ Kỹ năng Nói (Speaking)]
+  [5. 📚 Từ vựng & Ý tưởng học thuật (Vocab & Ideas)]
+
+--------------------------------------------------------------------------------
+NHÁNH 1.1: KHI HỌC SINH CHỌN "🎧 KỸ NĂNG NGHE (LISTENING)"
+--------------------------------------------------------------------------------
+Lời thoại của Thầy Tony AI:
+  "Để tăng band điểm Listening nhanh và không bị mắc bẫy của người ra đề, hôm nay
+   em hãy thực hiện tuần tự 4 bước sau:"
+
+  * BƯỚC 1: Học chiến thuật & cách bắt bài người ra đề
+    - Việc cần làm: Mở bài giảng "Hướng dẫn và Phân tích Luyện Nghe" trong học phần
+      [Luyện thi Nghe]. Đọc kỹ cách phân tích từ khóa (keywords), dự đoán loại từ cần
+      điền và các bẫy đổi ý (distractors) thường gặp.
+    - Nút hành động: [📖 Mở bài giảng: Hướng dẫn & Phân tích Luyện Nghe]
+
+  * BƯỚC 2: Luyện thuần thục từng dạng câu hỏi (Listening Strategies)
+    - Việc cần làm: Nếu em còn yếu dạng bài nào, hãy vào bộ đề [Listening Strategies]
+      (gồm 6 Unit chuyên sâu: Unit 1 Letters & Numbers, Unit 2 Form/Table Completion,
+      Unit 3 Description & Location, Unit 4 Multiple Choice, Unit 5 Note Completion,
+      Unit 6 Summary) và hoàn thành 1-2 bài tập theo dạng đó.
+    - Nút hành động: [📂 Mở bộ đề: Listening Strategies (6 Units)]
+
+  * BƯỚC 3: Luyện đề thực chiến chuẩn phòng thi (Cambridge Test)
+    - Việc cần làm: Chọn 1 bài Listening trong bộ [Cambridge Test (Cam 01 - Cam 21)],
+      làm bài nghiêm túc trong 1 lần nghe duy nhất để rèn tâm lý phòng thi.
+    - Nút hành động: [📝 Mở kho đề: Cambridge Test (01 - 21)]
+
+  * BƯỚC 4: Chữa bài sâu & Nghe ngấm qua Audio Transcript
+    - Việc cần làm: Sau khi nộp bài, tuyệt đối không chỉ xem điểm! Em hãy bấm vào chế
+      độ "Chữa bài (Review)", đọc phần giải thích từng câu và đối chiếu với khung
+      "Audio Transcript" màu vàng bên trái. Ghi lại các cặp từ đồng nghĩa (paraphrase)
+      và nghe lại đoạn chứa đáp án bị sai.
+    - Nút hành động: [🤖 Hỏi Thầy AI giải thích câu sai]
+
+--------------------------------------------------------------------------------
+NHÁNH 1.2: KHI HỌC SINH CHỌN "📖 KỸ NĂNG ĐỌC (READING)"
+--------------------------------------------------------------------------------
+Lời thoại của Thầy Tony AI:
+  "Bí quyết đạt điểm cao IELTS Reading trong thời gian ngắn là nắm chắc từ vựng cốt lõi
+   và kỹ thuật định vị thông tin (Scanning/Skimming) mà không cần dịch từng chữ.
+   Hôm nay em hãy làm theo 4 bước sau:"
+
+  * BƯỚC 1: Nạp từ vựng học thuật qua ngữ cảnh (Academic Vocabulary)
+    - Việc cần làm: Vào học phần [Luyện thi Đọc] (Popular words, The Five Senses,
+      Academic sublist 1-10). Đọc bài khóa ngữ cảnh và làm bài tập củng cố từ vựng
+      ngay bên dưới bài giảng.
+    - Nút hành động: [📖 Mở bài giảng: Luyện thi Đọc & Academic Vocab]
+
+  * BƯỚC 2: Rèn kỹ thuật xử lý từng dạng câu hỏi (Reading Strategies)
+    - Việc cần làm: Vào thư mục [Reading Strategies] luyện tập theo đúng dạng câu hỏi
+      (Unit 1: Matching, Unit 2: Cloze, Unit 3: Multiple Choice, Unit 4: Summarizing,
+      Unit 5: Yes/No/Not Given, Unit 6: Scanning for Answers).
+    - Nút hành động: [📂 Mở bộ đề: Reading Strategies (6 Units)]
+
+  * BƯỚC 3: Nâng cấp tư duy đọc học thuật (Crash Course & Cram Course)
+    - Việc cần làm: Luyện các kỹ năng đọc chuyên sâu (Reference, Sentence Simplification,
+      Inference, Rhetorical Purpose...) trong bộ [Crash Course] và làm quen 8 chủ đề
+      học thuật lớn (History, Social Sciences, Natural Sciences...) trong [Cram Course].
+    - Nút hành động: [📂 Mở bộ đề: Crash Course] | [📂 Mở bộ đề: Cram Course]
+
+  * BƯỚC 4: Luyện đề Full Test trên máy tính & Phân tích trích dẫn
+    - Việc cần làm: Vào [Cambridge Test], chọn chế độ thi trên máy tính (Computer Test),
+      sử dụng công cụ Highlight và Note để gạch chân từ khóa. Sau khi nộp bài, đọc kỹ
+      phần giải thích trích dẫn vị trí thông tin của từng câu sai.
+    - Nút hành động: [📝 Mở kho đề: Cambridge Test (01 - 21)]
+
+--------------------------------------------------------------------------------
+NHÁNH 1.3: KHI HỌC SINH CHỌN "✍️ KỸ NĂNG VIẾT (WRITING TASK 1 & TASK 2)"
+--------------------------------------------------------------------------------
+Lời thoại của Thầy Tony AI:
+  "Với IELTS Writing, em không nên viết theo cảm tính mà phải nắm vững bộ khung cấu trúc
+   (Template/Formula) và kho ý tưởng (Ideas) trước khi đặt bút. Hôm nay em muốn luyện
+   Task 1 hay Task 2?"
+
+  [Nút chọn con: 📊 Luyện Writing Task 1]  |  [Nút chọn con: 📝 Luyện Writing Task 2]
+
+  >>> Nếu chọn [📊 Luyện Writing Task 1]:
+    - BƯỚC 1 (Học công thức phân tích biểu đồ): Mở học phần [Luyện thi Viết : Task 1],
+      xem bài giảng của dạng biểu đồ hôm nay học (1. Dynamic, 2. Static, 3. Mixed,
+      4. Process, 5. Maps Indoor/Outdoor, 6. Diagram) và bài "8. Hướng dẫn và Phân tích
+      Viết Task 1".
+      -> Nút: [📖 Mở bài giảng: Luyện thi Viết Task 1]
+    - BƯỚC 2 (Chọn đề & Nhờ AI phân tích dàn ý): Vào bài "7. Task 1 : Questions", chọn
+      1 đề biểu đồ và bấm nút nhờ Thầy AI hướng dẫn cách chia khổ (Overview + Body 1 + Body 2).
+      -> Nút: [📋 Mở danh sách đề: Task 1 Questions]
+    - BƯỚC 3 (Viết bài & Chấm chữa chi tiết bằng AI): Viết bài hoàn chỉnh trong 20 phút
+      và nộp vào Phòng Luyện Viết IELTS AI để được chấm điểm 4 tiêu chí và sửa lỗi câu từ.
+      -> Nút: [✍️ Vào Phòng Luyện & Chấm Writing AI]
+
+  >>> Nếu chọn [📝 Luyện Writing Task 2]:
+    - BƯỚC 1 (Nắm công thức 4 dạng bài luận): Mở học phần [Luyện thi Viết : Task 2]
+      để nắm vững cấu trúc lập luận của 4 dạng đề: Discussion, Argument, Opinion, Mixed.
+      -> Nút: [📖 Mở bài giảng: Luyện thi Viết Task 2]
+    - BƯỚC 2 (Nạp Ý tưởng & Từ vựng theo chủ đề): Mở học phần [Ideas P.I, P.II, P.III]
+      (24 chủ đề lớn từ Advertising, Cities, Crime đến Environment, Technology...) và
+      [Luyện thi Viết: Vocabulary] để lấy luận điểm (Pillars) và Collocations ăn điểm.
+      -> Nút: [💡 Mở kho Ý tưởng Task 2 (Ideas)] | [📚 Mở Từ vựng Writing]
+    - BƯỚC 3 (Thực hành viết & Chấm chữa 24/7 cùng Giám khảo AI): Chọn 1 đề trong bài
+      "Task 2 : Questions", bấm nút nhờ AI gợi ý dàn ý/từ vựng Band 8.0+, sau đó viết bài
+      và nộp vào Phòng Chấm Writing AI.
+      -> Nút: [📋 Mở đề Task 2 Questions] | [✍️ Vào Phòng Chấm Writing AI]
+
+--------------------------------------------------------------------------------
+NHÁNH 1.4: KHI HỌC SINH CHỌN "🎙️ KỸ NĂNG NÓI (SPEAKING)"
+--------------------------------------------------------------------------------
+Lời thoại của Thầy Tony AI:
+  "Với phương pháp Lego Speaking độc quyền tại TonyEnglish, em chỉ cần thuộc các khối
+   kịch bản (Main Blocks & Plugin Blocks) là có thể ghép nối trả lời trôi chảy hàng chục
+   đề Part 2 & Part 3 mà không sợ bí ý. Hãy làm theo 3 bước sau:"
+
+  * BƯỚC 1: Học thuộc các khối Lego (Main Blocks & Plugin Blocks)
+    - Việc cần làm: Mở học phần [Luyện thi Nói], ôn kỹ 6 Main Blocks (1. Person,
+      2. Place/Service, 3. Historical/Nature, 4. Object/Entity, 5. Action/Experience,
+      6. Relation/Ceremony), 3 Plugin Blocks (Food, Plant, Weather) và công thức trả lời
+      Part I & III ( bài 10. Part I & III : Formula).
+    - Nút hành động: [📖 Mở bài giảng: Luyện thi Nói (Lego Blocks)]
+
+  * BƯỚC 2: Lắp ghép kịch bản cho đề thi thực tế
+    - Việc cần làm: Mở bài "11. Speaking question" và "12. Hướng dẫn và Phân tích Luyện Nói",
+      chọn 1 chủ đề và bấm nút nhờ Thầy AI hướng dẫn cách ghép khối Lego + gợi ý từ vựng
+      Band 7.5+ cho đề đó.
+    - Nút hành động: [🎙️ Mở bộ câu hỏi Speaking & Phân tích]
+
+  * BƯỚC 3: Luyện phản xạ nói trực tiếp với Giám khảo AI
+    - Việc cần làm: Vào Phòng Thi Nói IELTS Speaking AI (hoặc bấm nút Luyện Nói Live AI
+      trong bài giảng) để thu âm trả lời trực tiếp và nhận đánh giá chi tiết về Phát âm,
+      Độ trôi chảy, Từ vựng và Ngữ pháp.
+    - Nút hành động: [🗣️ Vào Phòng Luyện Speaking AI]
+
+--------------------------------------------------------------------------------
+NHÁNH 1.5: KHI HỌC SINH CHỌN "📚 TỪ VỰNG & Ý TƯỞNG HỌC THUẬT (VOCAB & IDEAS)"
+--------------------------------------------------------------------------------
+  * BƯỚC 1: Học Từ vựng Đọc hiểu (Academic Sublists 1-10 & Popular Words) tại học phần
+    [Luyện thi Đọc] kết hợp làm bài tập & chơi Game từ vựng ghi nhớ sâu.
+    -> Nút: [📖 Mở Từ vựng Reading (Academic Sublist)]
+  * BƯỚC 2: Học Từ vựng theo 12 chủ đề Writing/Speaking trọng tâm (Government, Immigration,
+    Climate change, Employment, Education, Globalization...) tại [Luyện thi Viết: Vocabulary].
+    -> Nút: [📚 Mở Từ vựng Chủ điểm Writing/Speaking]
+  * BƯỚC 3: Đọc và ghi chép luận điểm hai chiều (Pros/Cons, Causes/Solutions) của 24 chủ đề
+    xã hội trong 3 học phần [Ideas P.I, P.II, P.III].
+    -> Nút: [💡 Mở kho Ý tưởng Học thuật (24 Chủ đề)]
+
+
+================================================================================
+PHẦN 2: FLOW KỊCH BẢN KHÓA "IGCSE CO-ORDINATED SCIENCES (0654)"
+================================================================================
+
+[BƯỚC CHÀO MỪNG & HỎI PHÂN MÔN / MỤC TIÊU TRONG NGÀY]
+Lời thoại của Thầy Tony AI:
+  "Chào [Tên học viên]! Chào mừng em vào khóa học Cambridge IGCSE Co-ordinated Sciences (0654).
+   Môn học gồm 3 phân môn Khoa học (Biology, Chemistry, Physics) và bộ đề Past Papers.
+   Hôm nay em muốn học phân môn nào hay luyện đề tổng hợp?"
+
+Các nút lựa chọn (4 nhánh):
+  [1. 🧬 Biology (Sinh học: Chuyên đề B1 – B19)]
+  [2. 🧪 Chemistry (Hóa học: Chuyên đề C1 – C12)]
+  [3. ⚡ Physics (Vật lý: Chuyên đề P1 – P6)]
+  [4. 📄 Luyện đề Past Papers tổng hợp (Paper 2, Paper 4, Paper 6)]
+
+--------------------------------------------------------------------------------
+NHÁNH 2.1 / 2.2 / 2.3: KHI HỌC SINH CHỌN PHÂN MÔN (BIOLOGY / CHEMISTRY / PHYSICS)
+--------------------------------------------------------------------------------
+(Hiển thị danh sách nhanh các chương B1-B19 / C1-C12 / P1-P6 để học sinh có thể bấm chọn
+chương đang học hôm nay, đồng thời hiển thị quy trình 4 bước chuẩn Cambridge của thầy Tony):
+
+Lời thoại của Thầy Tony AI:
+  "Để nắm chắc bản chất khoa học và đạt điểm A/A* kỳ thi IGCSE 0654 mà không bị 'học trước
+   quên sau', hôm nay khi học chuyên đề này em bắt buộc thực hiện đủ 4 bước sau:"
+
+  * BƯỚC 1: Học Bài giảng Lý thuyết Song ngữ & Tương tác Mô phỏng
+    - Việc cần làm: Mở bài giảng lý thuyết của chương đang học (Ví dụ: B1..B19 / C1..C12 / P1..P6).
+      + Đọc kỹ bản tiếng Anh để thuộc các thuật ngữ khoa học (Key Terms & Definitions).
+      + Bật bản đối chiếu Song ngữ Anh - Việt và nghe Audio giảng bài để hiểu sâu bản chất.
+      + Tương tác trực tiếp với các mô phỏng thí nghiệm / hình ảnh minh họa trong bài giảng.
+    - Nút hành động: [📖 Mở Bài Giảng Lý Thuyết (Biology / Chemistry / Physics)]
+      (Kèm danh sách bấm mở nhanh từng chương B1-B19 / C1-C12 / P1-P6)
+
+  * BƯỚC 2: Kiểm tra mức độ hiểu bài & Hỏi đáp cùng Thầy AI
+    - Việc cần làm: Tự tóm tắt lại các khái niệm cốt lõi, công thức hoặc phương trình phản ứng
+      của chương. Nếu có bất kỳ khái niệm hay hiện tượng khoa học nào chưa hiểu rõ, hãy bấm
+      nút hỏi Thầy AI để được giải thích cặn kẽ kèm ví dụ.
+    - Nút hành động: [🤖 Mở Khung Chat Hỏi Đáp Lý Thuyết Cùng Thầy AI]
+
+  * BƯỚC 3: Làm bài tập theo đúng Chuyên đề vừa học (Topic Papers)
+    - Việc cần làm: Ngay sau khi học xong lý thuyết chương nào, em chuyển sang thư mục
+      [Topic Papers] của đúng chương đó (Biology: Topic Papers / Chemistry: Topic Papers /
+      Physics: Topic Papers) để làm các đề trắc nghiệm (MCQ) và tự luận (Structured Questions)
+      nhằm khóa chặt kiến thức vừa học.
+    - Nút hành động: [📂 Mở kho đề Topic Papers của phân môn đang chọn]
+
+  * BƯỚC 4: Đối chiếu Cambridge Marking Scheme & Ghi chú từ khóa ăn điểm
+    - Việc cần làm: Sau khi nộp bài Topic Paper, xem kỹ phần chấm chữa của AI theo chuẩn
+      Marking Scheme của Cambridge. Lưu ý các từ khóa bắt buộc (underlined/bold keywords)
+      trong đáp án mẫu để không bị mất điểm đáng tiếc khi viết tự luận Paper 4.
+
+--------------------------------------------------------------------------------
+NHÁNH 2.4: KHI HỌC SINH CHỌN "📄 LUYỆN ĐỀ PAST PAPERS TỔNG HỢP (PAPER 2, 4, 6)"
+--------------------------------------------------------------------------------
+Lời thoại của Thầy Tony AI:
+  "Giai đoạn luyện đề Past Papers giúp em tổng hợp kiến thức cả 3 phân môn (Bio - Chem - Phys)
+   và rèn kỹ năng làm bài dưới áp lực thời gian. Em hãy thực hiện 3 bước sau:"
+
+  * BƯỚC 1: Nghe Podcast Ôn tập & Nắm chiến thuật từng Paper
+    - Việc cần làm: Vào học phần [0654 Past Papers], xem bài "1. Past Paper Practice" và
+      nghe "Podcast ôn tập" để nắm rõ cấu trúc & cách phân bổ thời gian cho:
+      + Paper 2: Multiple Choice (45 phút - 40 câu trắc nghiệm)
+      + Paper 4: Extended Theory (2 giờ - Tự luận chuyên sâu)
+      + Paper 6: Alternative to Practical (1 giờ 30 phút - Kỹ năng thí nghiệm, vẽ bảng/đồ thị)
+    - Nút hành động: [🎧 Mở Bài Giảng & Podcast Ôn Tập 0654 Past Papers]
+
+  * BƯỚC 2: Chọn đề trong kho Past Papers & Làm bài nghiêm túc
+    - Việc cần làm: Mở thư mục [Past Papers], chọn 1 mã đề (Paper 2, Paper 4 hoặc Paper 6)
+      và hoàn thành bài thi đúng thời gian quy định.
+    - Nút hành động: [📝 Mở kho đề: 0654 Past Papers]
+
+  * BƯỚC 3: Xem AI chấm điểm tự luận & Ôn lại các chương bị hổng kiến thức
+    - Việc cần làm: Sau khi nộp bài, xem điểm quy đổi theo thang điểm Cambridge (A*, A, B, C...).
+      Với những câu sai thuộc chương nào (ví dụ sai câu Điện phân thuộc C4 hoặc Di truyền thuộc B16),
+      hãy quay lại đúng chương đó ở Bước 1 & Bước 3 để ôn lại lý thuyết và làm thêm Topic Paper.
+    - Nút hành động: [🤖 Hỏi Thầy AI giải thích câu khó trong Past Paper]
+================================================================================

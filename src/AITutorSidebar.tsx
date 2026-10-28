@@ -76,10 +76,24 @@ export default function AITutorSidebar({
     const handleClearChat = () => {
         setMessages([]);
     };
+    const handleSendCoachPrompt = (e: any) => {
+        const promptText = e.detail?.prompt;
+        if (promptText && typeof promptText === 'string') {
+            setIsMinimized(false);
+            setInput(promptText);
+            setTimeout(() => {
+                if (textareaRef.current) {
+                    textareaRef.current.focus();
+                }
+            }, 150);
+        }
+    };
     window.addEventListener('tony-clear-chat', handleClearChat);
+    window.addEventListener('tony-send-ai-prompt', handleSendCoachPrompt);
     
     return () => {
         window.removeEventListener('tony-clear-chat', handleClearChat);
+        window.removeEventListener('tony-send-ai-prompt', handleSendCoachPrompt);
     };
   }, []);
 

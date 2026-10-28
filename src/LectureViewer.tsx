@@ -4,6 +4,7 @@ import { parseModuleTheme } from './moduleTheme';
 import { parseClassConfig } from './classConfigUtils';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import InteractiveLecturePlayer from './InteractiveLecturePlayer';
+import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -2914,6 +2915,7 @@ export default function LectureViewer({
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [isLectureThemeModalOpen, setIsLectureThemeModalOpen] = useState(false);
+  const [isStudyCoachModalOpen, setIsStudyCoachModalOpen] = useState(false);
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
@@ -4584,6 +4586,17 @@ export default function LectureViewer({
                       >
                         <span>📚</span> Kho đề bài tập
                       </button>
+                      {isCoachSupportedCourse(currentCourseId, course?.title) && (
+                        <button
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsStudyCoachModalOpen(true);
+                          }}
+                          className="w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2.5 transition-colors"
+                        >
+                          <span>🧭</span> Lộ trình học AI Tutor
+                        </button>
+                      )}
                       <div className="h-px bg-slate-100 my-1" />
                       <button
                         onClick={() => {
@@ -4600,6 +4613,16 @@ export default function LectureViewer({
               </div>
 
               {/* 🖥️ CÁC NÚT ĐIỀU HƯỚNG TRÊN MÀN HÌNH LỚN (>= sm) */}
+              {isCoachSupportedCourse(currentCourseId, course?.title) && (
+                  <button
+                      onClick={() => setIsStudyCoachModalOpen(true)}
+                      className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:h-9 rounded-xl text-[12.5px] md:text-[13px] font-extrabold transition-all bg-gradient-to-r from-amber-400/20 to-[#2ab4e8]/25 hover:from-amber-400/30 hover:to-[#2ab4e8]/35 text-amber-200 border border-amber-300/40 shadow-xs cursor-pointer"
+                      title="Mở Lộ trình hướng dẫn từng bước của Thầy Tony AI"
+                  >
+                     <span>🧭</span>
+                     <span className="hidden sm:inline">Lộ trình học</span>
+                  </button>
+              )}
               <button
                   onClick={() => {
                       localStorage.setItem('portal_filter_course', currentCourseId);
@@ -5629,6 +5652,61 @@ export default function LectureViewer({
             {currentLectureDoneCount}/{currentSafeTasks.length} việc
           </span>
         </button>
+      )}
+
+      {isStudyCoachModalOpen && isCoachSupportedCourse(currentCourseId, course?.title) && (
+        <div className="fixed inset-0 z-[100] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto animate-in fade-in duration-200">
+          <div className="w-full max-w-5xl max-h-[90vh] overflow-y-auto custom-scrollbar rounded-3xl relative">
+            <button
+              onClick={() => setIsStudyCoachModalOpen(false)}
+              className="sticky top-3 float-right mr-3 mt-3 z-30 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-red-600 text-white font-bold flex items-center justify-center shadow-lg border border-white/20 cursor-pointer transition-all"
+              title="Đóng lộ trình"
+            >
+              ✕
+            </button>
+            <CourseStudyCoach
+              courseId={currentCourseId}
+              courseTitle={course?.title || ''}
+              lectures={lectures}
+              onOpenLecture={(_cid, lid) => {
+                setIsStudyCoachModalOpen(false);
+                if (lid) {
+                  const found = lectures.find(l => String(l.id) === String(lid));
+                  if (found) {
+                    if (found.module_id) {
+                      setExpandedModules(prev => [...new Set([...prev, found.module_id])]);
+                    }
+                    handleSelectLecture(found.id, currentUser?.id);
+                  }
+                }
+              }}
+              onSelectFolder={(fid) => {
+                setIsStudyCoachModalOpen(false);
+                try {
+                  sessionStorage.setItem('portal_selected_course_id', currentCourseId);
+                  sessionStorage.setItem('portal_active_view', 'course');
+                  sessionStorage.setItem('portal_current_folder_id', fid);
+                  sessionStorage.setItem('lms_portal_tab', 'library');
+                } catch (e) {}
+                onBack();
+              }}
+              onNavigate={(view) => {
+                setIsStudyCoachModalOpen(false);
+                window.dispatchEvent(new CustomEvent('tony-navigate', { detail: view }));
+              }}
+              onOpenAIChat={(prompt) => {
+                setIsStudyCoachModalOpen(false);
+                window.dispatchEvent(new CustomEvent('tony-open-ai-coach-chat', {
+                  detail: {
+                    courseId: currentCourseId,
+                    courseTitle: course?.title || '',
+                    prompt
+                  }
+                }));
+              }}
+            />
+          </div>
+        </div>
       )}
 
       <BoardThemeModal

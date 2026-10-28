@@ -202,11 +202,25 @@ export default function App() {
         try { sessionStorage.setItem('lms_active_course_id', newCourseId); } catch(err) {}
       }
     };
+    const handleOpenAICoachChat = (e: any) => {
+      const { courseId, courseTitle, prompt } = e.detail || {};
+      if (courseId) setActiveCourseId(courseId);
+      if (courseTitle) setActiveCourseTitle(courseTitle);
+      setAiMode('tutor');
+      setIsAISidebarOpen(true);
+      if (prompt) {
+        setTimeout(() => {
+          window.dispatchEvent(new CustomEvent('tony-send-ai-prompt', { detail: { prompt } }));
+        }, 250);
+      }
+    };
     window.addEventListener('tony-navigate', handleCustomNavigate);
     window.addEventListener('tony-change-course', handleChangeCourse);
+    window.addEventListener('tony-open-ai-coach-chat', handleOpenAICoachChat);
     return () => {
       window.removeEventListener('tony-navigate', handleCustomNavigate);
       window.removeEventListener('tony-change-course', handleChangeCourse);
+      window.removeEventListener('tony-open-ai-coach-chat', handleOpenAICoachChat);
     };
   }, [liveTutorState]);
 
