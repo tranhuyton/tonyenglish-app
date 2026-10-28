@@ -1,11 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { supabase } from './supabase';
 
 export interface StudyCoachProps {
   courseId: string;
   courseTitle: string;
-  studentName: string;
-  lectures: any[];
-  folders: any[];
+  studentName?: string;
+  lectures?: any[];
+  folders?: any[];
   onOpenLecture: (courseId: string, lectureId?: string) => void;
   onSelectFolder: (folderId: string) => void;
   onNavigate?: (view: string) => void;
@@ -47,14 +48,49 @@ export const isCoachSupportedCourse = (courseId?: string | null, courseTitle?: s
 export default function CourseStudyCoach({
   courseId,
   courseTitle,
-  studentName,
-  lectures,
-  folders,
+  studentName = '',
+  lectures = [],
+  folders = [],
   onOpenLecture,
   onSelectFolder,
   onNavigate,
   onOpenAIChat,
 }: StudyCoachProps) {
+  const [fetchedFolders, setFetchedFolders] = useState<any[]>([]);
+  const [fetchedLectures, setFetchedLectures] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (!courseId) return;
+    if (!Array.isArray(folders) || folders.length === 0) {
+      supabase
+        .from('folders')
+        .select('id, title, parent_id, course_id')
+        .eq('course_id', courseId)
+        .then(({ data }) => {
+          if (data) setFetchedFolders(data);
+        });
+    }
+    if (!Array.isArray(lectures) || lectures.length === 0) {
+      supabase
+        .from('lectures')
+        .select('id, title, module_id, course_id, order_index')
+        .eq('course_id', courseId)
+        .eq('is_published', true)
+        .then(({ data }) => {
+          if (data) setFetchedLectures(data);
+        });
+    }
+  }, [courseId, folders?.length, lectures?.length]);
+
+  const effectiveFolders = useMemo(
+    () => (Array.isArray(folders) && folders.length > 0 ? folders : fetchedFolders),
+    [folders, fetchedFolders]
+  );
+
+  const effectiveLectures = useMemo(
+    () => (Array.isArray(lectures) && lectures.length > 0 ? lectures : fetchedLectures),
+    [lectures, fetchedLectures]
+  );
   const isIelts = useMemo(() => {
     const t = (courseTitle || '').toLowerCase();
     return courseId === '239a64f0-c106-40e5-a6e2-4e685a0d70fb' || t.includes('ielts');
@@ -111,23 +147,26 @@ export default function CourseStudyCoach({
 
   // Helpers to find specific lectures & folders dynamically
   const findLectureByKeyword = (keywords: string[]): any | null => {
+    const safeLectures = Array.isArray(effectiveLectures) ? effectiveLectures : [];
     for (const kw of keywords) {
       const lowerKw = kw.toLowerCase();
-      const found = lectures.find((l) => cleanTitle(l.title).toLowerCase().includes(lowerKw));
+      const found = safeLectures.find((l) => cleanTitle(l?.title || '').toLowerCase().includes(lowerKw));
       if (found) return found;
     }
     return null;
   };
 
   const findFolderByKeyword = (keywords: string[], parentId?: string | null): any | null => {
+    const safeFolders = Array.isArray(effectiveFolders) ? effectiveFolders : [];
     for (const kw of keywords) {
       const lowerKw = kw.toLowerCase();
-      const found = folders.find((f) => {
+      const found = safeFolders.find((f) => {
+        if (!f) return false;
         if (parentId !== undefined) {
           if (parentId === null && f.parent_id) return false;
           if (parentId && String(f.parent_id) !== String(parentId)) return false;
         }
-        return cleanTitle(f.title).toLowerCase().includes(lowerKw);
+        return cleanTitle(f.title || '').toLowerCase().includes(lowerKw);
       });
       if (found) return found;
     }
@@ -147,17 +186,18 @@ export default function CourseStudyCoach({
     const prefix =
       selectedScienceBranch === 'biology' ? 'B' : selectedScienceBranch === 'chemistry' ? 'C' : 'P';
     const regex = new RegExp(`^${prefix}\\d+\\s*:`, 'i');
+    const safeLectures = Array.isArray(effectiveLectures) ? effectiveLectures : [];
 
-    const matchedLectures = lectures
-      .filter((l) => regex.test(cleanTitle(l.title)))
+    const matchedLectures = safeLectures
+      .filter((l) => l && regex.test(cleanTitle(l.title || '')))
       .sort((a, b) => {
-        const numA = parseInt(cleanTitle(a.title).match(/\d+/)?.[0] || '0', 10);
-        const numB = parseInt(cleanTitle(b.title).match(/\d+/)?.[0] || '0', 10);
+        const numA = parseInt(cleanTitle(a.title || '').match(/\d+/)?.[0] || '0', 10);
+        const numB = parseInt(cleanTitle(b.title || '').match(/\d+/)?.[0] || '0', 10);
         return numA - numB;
       });
 
     return matchedLectures.map((l) => {
-      const t = cleanTitle(l.title);
+      const t = cleanTitle(l.title || '');
       const code = (t.match(/^([BCP]\d+)\s*:/i)?.[1] || '').toUpperCase();
       return {
         code,
@@ -165,7 +205,7 @@ export default function CourseStudyCoach({
         lectureId: l.id,
       };
     });
-  }, [isIgcse0654, selectedScienceBranch, lectures]);
+  }, [isIgcse0654, selectedScienceBranch, effectiveLectures]);
 
   useEffect(() => {
     if (scienceChapters.length > 0 && !scienceChapters.some((ch) => ch.code === selectedTopicCode)) {
@@ -211,10 +251,8 @@ export default function CourseStudyCoach({
               icon: '📂',
               variant: 'emerald',
               onClick: () => {
-                if (listenStratFolder) {
-                  onSelectFolder(listenStratFolder.id);
-                  scrollToFoldersArea();
-                }
+                onSelectFolder(listenStratFolder?.id || '');
+                scrollToFoldersArea();
               },
             },
           ],
@@ -230,10 +268,8 @@ export default function CourseStudyCoach({
               icon: '📝',
               variant: 'amber',
               onClick: () => {
-                if (camFolder) {
-                  onSelectFolder(camFolder.id);
-                  scrollToFoldersArea();
-                }
+                onSelectFolder(camFolder?.id || '');
+                scrollToFoldersArea();
               },
             },
           ],
@@ -291,10 +327,8 @@ export default function CourseStudyCoach({
               icon: '📂',
               variant: 'emerald',
               onClick: () => {
-                if (readStratFolder) {
-                  onSelectFolder(readStratFolder.id);
-                  scrollToFoldersArea();
-                }
+                onSelectFolder(readStratFolder?.id || '');
+                scrollToFoldersArea();
               },
             },
           ],
@@ -310,10 +344,8 @@ export default function CourseStudyCoach({
               icon: '🚀',
               variant: 'secondary',
               onClick: () => {
-                if (crashFolder) {
-                  onSelectFolder(crashFolder.id);
-                  scrollToFoldersArea();
-                }
+                onSelectFolder(crashFolder?.id || '');
+                scrollToFoldersArea();
               },
             },
             {
@@ -321,10 +353,8 @@ export default function CourseStudyCoach({
               icon: '📚',
               variant: 'secondary',
               onClick: () => {
-                if (cramFolder) {
-                  onSelectFolder(cramFolder.id);
-                  scrollToFoldersArea();
-                }
+                onSelectFolder(cramFolder?.id || '');
+                scrollToFoldersArea();
               },
             },
           ],
@@ -340,10 +370,8 @@ export default function CourseStudyCoach({
               icon: '📝',
               variant: 'amber',
               onClick: () => {
-                if (camFolder) {
-                  onSelectFolder(camFolder.id);
-                  scrollToFoldersArea();
-                }
+                onSelectFolder(camFolder?.id || '');
+                scrollToFoldersArea();
               },
             },
           ],
@@ -601,10 +629,8 @@ export default function CourseStudyCoach({
               icon: '📝',
               variant: 'emerald',
               onClick: () => {
-                if (pastPaperFolder) {
-                  onSelectFolder(pastPaperFolder.id);
-                  scrollToFoldersArea();
-                }
+                onSelectFolder(pastPaperFolder?.id || '');
+                scrollToFoldersArea();
               },
             },
           ],
@@ -710,10 +736,8 @@ export default function CourseStudyCoach({
             icon: '📂',
             variant: 'emerald',
             onClick: () => {
-              if (specificChapterFolder) {
-                onSelectFolder(specificChapterFolder.id);
-                scrollToFoldersArea();
-              }
+              onSelectFolder(specificChapterFolder?.id || '');
+              scrollToFoldersArea();
             },
           },
         ],

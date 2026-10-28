@@ -768,10 +768,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   };
 
   const handleFolderClick = (id: string) => { 
-      setCurrentFolderId(id); 
+      setCurrentFolderId(id || null); 
       setFolderPage(1); 
       setTestPage(1); 
-      sessionStorage.setItem('portal_current_folder_id', id);
+      if (id) sessionStorage.setItem('portal_current_folder_id', id);
+      else sessionStorage.removeItem('portal_current_folder_id');
   };
 
   const handleStartTestClick = async (test: any) => {
