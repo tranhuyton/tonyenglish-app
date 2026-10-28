@@ -180,6 +180,15 @@ export default function CourseStudyCoach({
     }, 100);
   };
 
+  const openLibraryCategory = (path: string) => {
+    window.history.pushState(null, '', path);
+    if (onNavigate) {
+      onNavigate('home');
+    } else {
+      window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
+    }
+  };
+
   // Extract IGCSE 0654 chapters for the selected science branch (B1..B19, C1..C12, P1..P6)
   const scienceChapters = useMemo(() => {
     if (!isIgcse0654 || !selectedScienceBranch || selectedScienceBranch === 'pastpapers') return [];
@@ -276,10 +285,17 @@ export default function CourseStudyCoach({
         },
         {
           stepNumber: 4,
-          title: 'Chữa bài sâu & Đối chiếu Audio Transcript màu vàng',
+          title: 'Chữa bài sâu & Đọc Bài Dịch Nghe Cambridge IELTS trong Thư viện (Bắt buộc)',
           description:
-            'Sau khi nộp bài, bấm vào chế độ "Chữa bài (Review)". Đọc kỹ lời giải thích từng câu và đối chiếu với khung Audio Transcript màu vàng bên trái. Ghi chép lại các cặp từ đồng nghĩa (paraphrase) xuất hiện trong bài.',
+            'Sau khi nộp bài, xem giải thích từng câu và đối chiếu Audio Transcript màu vàng. Tiếp theo, BẮT BUỘC mở mục "Bài dịch nghe Cambridge IELTS" trong Thư viện để đọc bản dịch song ngữ và học từ vựng của bài vừa làm (hệ thống tự động lưu vào Tiến độ học).',
+          tip: 'Mỗi bài dịch nghe bạn mở đọc trong Thư viện sẽ được tự động đánh dấu hoàn thành trong tab Tiến độ học IELTS Premium.',
           actions: [
+            {
+              label: '🎧 Mở Thư viện: Bài dịch nghe Cambridge (01 – 21)',
+              icon: '📚',
+              variant: 'emerald',
+              onClick: () => openLibraryCategory('/news/category/cambridge-ielts-listening-translation'),
+            },
             {
               label: 'Hỏi Thầy AI phương pháp cải thiện kỹ năng Nghe',
               icon: '🤖',
@@ -361,9 +377,10 @@ export default function CourseStudyCoach({
         },
         {
           stepNumber: 4,
-          title: 'Luyện đề Full Test trên máy tính & Phân tích trích dẫn',
+          title: 'Luyện đề Cambridge Test & Đọc Bài Dịch Đọc trong Thư viện (Bắt buộc)',
           description:
-            'Chọn đề Reading trong bộ Cambridge Test ở chế độ thi máy tính (Computer Test). Sử dụng tính năng Highlight và Note để gạch chân từ khóa. Sau khi nộp bài, đọc kỹ giải thích trích dẫn từng câu sai.',
+            'Làm đề Reading trong bộ Cambridge Test ở chế độ thi máy tính (Computer Test). Sau khi nộp bài và xem giải thích câu sai, BẮT BUỘC mở mục "Bài dịch đọc Cambridge IELTS" trong Thư viện để đọc bản dịch song ngữ và học từ vựng học thuật của Passage vừa làm.',
+          tip: 'Mỗi bài dịch đọc bạn mở xem trong Thư viện sẽ được tự động ghi nhận vào Tiến độ học IELTS Premium.',
           actions: [
             {
               label: 'Mở kho đề: Cambridge Test (Cam 01 – 21)',
@@ -373,6 +390,12 @@ export default function CourseStudyCoach({
                 onSelectFolder(camFolder?.id || '');
                 scrollToFoldersArea();
               },
+            },
+            {
+              label: '📖 Mở Thư viện: Bài dịch đọc Cambridge (01 – 21)',
+              icon: '📚',
+              variant: 'emerald',
+              onClick: () => openLibraryCategory('/news/category/cambridge-ielts-reading-translation'),
             },
           ],
         },

@@ -948,7 +948,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                       {studentActivities.map((act) => (
                          <div key={act.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#0a5482] text-white font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 text-[14px]">
-                               {act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : '📖'}
+                               {act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : act.action_type === 'read_library' ? '📚' : '📖'}
                             </div>
                             <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-[#2bd6eb] transition-colors">
                                <div className="flex justify-between items-start mb-2">
@@ -957,6 +957,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                                      {act.action_type === 'finish_test' && 'Nộp bài kiểm tra'}
                                      {act.action_type === 'call_tutor' && 'Hỏi đáp AI / Voice'}
                                      {act.action_type === 'finish_lecture' && 'Hoàn thành bài giảng'}
+                                     {act.action_type === 'read_library' && 'Đọc bài dịch / Thư viện'}
                                   </h4>
                                   <span className="text-[11px] font-bold text-slate-400 whitespace-nowrap ml-2 bg-slate-50 px-2 py-1 rounded border border-slate-100">{formatDate(act.created_at)}</span>
                                </div>
@@ -965,6 +966,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                                   {act.action_type === 'finish_test' && `Đã nộp bài: "${act.details?.test_title || 'IELTS'}" với số điểm: ${act.details?.score || 0}`}
                                   {act.action_type === 'call_tutor' && `Thời lượng đàm thoại / hỏi AI: ${act.details?.duration || 0} giây.`}
                                   {act.action_type === 'finish_lecture' && `Học xong bài giảng: "${act.details?.lecture_title || 'Lecture'}"`}
+                                  {act.action_type === 'read_library' && `Đã đọc bài: "${act.details?.article_title || 'Tài liệu'}" • Chuyên mục: ${act.details?.sub_category_name || act.details?.category_name || 'Thư viện'}`}
                                </p>
                             </div>
                          </div>

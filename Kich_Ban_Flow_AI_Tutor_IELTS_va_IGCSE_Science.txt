@@ -57,12 +57,9 @@ Lời thoại của Thầy Tony AI:
       làm bài nghiêm túc trong 1 lần nghe duy nhất để rèn tâm lý phòng thi.
     - Nút hành động: [📝 Mở kho đề: Cambridge Test (01 - 21)]
 
-  * BƯỚC 4: Chữa bài sâu & Nghe ngấm qua Audio Transcript
-    - Việc cần làm: Sau khi nộp bài, tuyệt đối không chỉ xem điểm! Em hãy bấm vào chế
-      độ "Chữa bài (Review)", đọc phần giải thích từng câu và đối chiếu với khung
-      "Audio Transcript" màu vàng bên trái. Ghi lại các cặp từ đồng nghĩa (paraphrase)
-      và nghe lại đoạn chứa đáp án bị sai.
-    - Nút hành động: [🤖 Hỏi Thầy AI giải thích câu sai]
+  * BƯỚC 4: Chữa bài sâu, Đối chiếu Audio Transcript & Đọc Bài Dịch Nghe Cambridge (Bắt buộc)
+    - Việc cần làm: Sau khi nộp bài, bấm vào chế độ "Chữa bài (Review)", đọc phần giải thích từng câu và đối chiếu với khung "Audio Transcript" màu vàng bên trái. Tiếp theo, BẮT BUỘC mở mục "Bài dịch nghe Cambridge IELTS (Cam 01 - 21)" trong Thư viện để đọc bản dịch song ngữ và học từ vựng của bài vừa làm (hệ thống tự động lưu vào Tiến độ học).
+    - Nút hành động: [🎧 Mở Thư viện: Bài dịch nghe Cambridge (01 - 21)] | [🤖 Hỏi Thầy AI giải thích câu sai]
 
 --------------------------------------------------------------------------------
 NHÁNH 1.2: KHI HỌC SINH CHỌN "📖 KỸ NĂNG ĐỌC (READING)"
@@ -90,11 +87,9 @@ Lời thoại của Thầy Tony AI:
       học thuật lớn (History, Social Sciences, Natural Sciences...) trong [Cram Course].
     - Nút hành động: [📂 Mở bộ đề: Crash Course] | [📂 Mở bộ đề: Cram Course]
 
-  * BƯỚC 4: Luyện đề Full Test trên máy tính & Phân tích trích dẫn
-    - Việc cần làm: Vào [Cambridge Test], chọn chế độ thi trên máy tính (Computer Test),
-      sử dụng công cụ Highlight và Note để gạch chân từ khóa. Sau khi nộp bài, đọc kỹ
-      phần giải thích trích dẫn vị trí thông tin của từng câu sai.
-    - Nút hành động: [📝 Mở kho đề: Cambridge Test (01 - 21)]
+  * BƯỚC 4: Luyện đề Cambridge Test & Đọc Bài Dịch Đọc trong Thư viện (Bắt buộc)
+    - Việc cần làm: Vào [Cambridge Test], chọn chế độ thi trên máy tính (Computer Test), sử dụng công cụ Highlight và Note để gạch chân từ khóa. Sau khi nộp bài và xem giải thích câu sai, BẮT BUỘC mở mục "Bài dịch đọc Cambridge IELTS (Cam 01 - 21)" trong Thư viện để đọc bản dịch song ngữ và học từ vựng học thuật của Passage vừa làm (hệ thống tự động lưu vào Tiến độ học).
+    - Nút hành động: [📝 Mở kho đề: Cambridge Test (01 - 21)] | [📖 Mở Thư viện: Bài dịch đọc Cambridge (01 - 21)]
 
 --------------------------------------------------------------------------------
 NHÁNH 1.3: KHI HỌC SINH CHỌN "✍️ KỸ NĂNG VIẾT (WRITING TASK 1 & TASK 2)"

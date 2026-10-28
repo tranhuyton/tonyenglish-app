@@ -1875,6 +1875,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                             {notif.action_type === 'finish_test' && ` vừa nộp bài: "${notif.details?.test_title}"`}
                                             {notif.action_type === 'call_tutor' && ` vừa gọi Gia Sư AI (${notif.details?.duration || 0} giây).`}
                                             {notif.action_type === 'finish_lecture' && ` vừa hoàn thành bài giảng: "${notif.details?.lecture_title}"`}
+                                            {notif.action_type === 'read_library' && ` vừa đọc tài liệu Thư viện: "${notif.details?.article_title}" (${notif.details?.category_name || 'Thư viện'})`}
                                         </p>
                                         <span className="text-[10px] text-slate-400 mt-1 block font-bold">{formatDateTime(notif.created_at)}</span>
                                     </div>

@@ -1323,9 +1323,75 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         return false;
       }
 
+      // 5. Đọc tài liệu Thư viện / Bài dịch đọc & nghe (read_library)
+      if (act.action_type === 'read_library') {
+        const selectedCourseObj = courses.find(c => String(c.id) === targetCourseIdStr);
+        const isSelectedIelts = selectedCourseObj ? ((selectedCourseObj.title || '').toLowerCase().includes('ielts') || selectedCourseObj.type === 'IELTS') : false;
+        const pCate = Number(details?.parent_category_id);
+        const libType = String(details?.library_type || '');
+        if (isSelectedIelts && ([38, 87, 56, 67, 51].includes(pCate) || libType.includes('cambridge') || libType.includes('ielts'))) {
+          return true;
+        }
+        return false;
+      }
+
       return false;
     });
   }, [studentActivities, filterCourse, analyticsCourse, allLectures, allTests, historyData, courses]);
+
+  // THỐNG KÊ TIẾN ĐỘ LÀM BÀI DỊCH ĐỌC & DỊCH NGHE CAMBRIDGE IELTS TRONG THƯ VIỆN
+  const ieltsLibraryStats = useMemo(() => {
+    const camReadingMap = new Map<number, { id: number; title: string; slug: string; subCate: string; date: string }>();
+    const camListeningMap = new Map<number, { id: number; title: string; slug: string; subCate: string; date: string }>();
+    const sampleMap = new Map<number, { id: number; title: string; slug: string; cate: string; date: string }>();
+
+    studentActivities.forEach((act) => {
+      if (act.action_type !== 'read_library') return;
+      let d = act.details;
+      if (typeof d === 'string') {
+        try { d = JSON.parse(d); } catch {}
+      }
+      const nid = Number(d?.news_id);
+      if (!nid) return;
+      const pCate = Number(d?.parent_category_id);
+      const libType = String(d?.library_type || '');
+      const item = {
+        id: nid,
+        title: d?.article_title || 'Bài học thư viện',
+        slug: d?.article_slug || '',
+        subCate: d?.sub_category_name || d?.category_name || '',
+        cate: d?.category_name || 'Thư viện',
+        date: act.created_at,
+      };
+
+      if (pCate === 38 || libType === 'cambridge_reading_translation') {
+        if (!camReadingMap.has(nid)) camReadingMap.set(nid, item);
+      } else if (pCate === 87 || libType === 'cambridge_listening_translation') {
+        if (!camListeningMap.has(nid)) camListeningMap.set(nid, item);
+      } else if (pCate === 56 || pCate === 67 || libType.includes('sample')) {
+        if (!sampleMap.has(nid)) sampleMap.set(nid, item);
+      }
+    });
+
+    return {
+      readingCount: camReadingMap.size,
+      readingTotal: 252,
+      readingPercent: Math.min(100, Math.round((camReadingMap.size / 252) * 100)),
+      recentReading: Array.from(camReadingMap.values()).slice(0, 3),
+      listeningCount: camListeningMap.size,
+      listeningTotal: 336,
+      listeningPercent: Math.min(100, Math.round((camListeningMap.size / 336) * 100)),
+      recentListening: Array.from(camListeningMap.values()).slice(0, 3),
+      sampleCount: sampleMap.size,
+    };
+  }, [studentActivities]);
+
+  const handleOpenLibraryPath = (path: string) => {
+    try {
+      window.history.pushState(null, '', path);
+    } catch {}
+    onNavigate?.('home');
+  };
 
   const totalActivityPages = Math.max(1, Math.ceil(filteredActivities.length / ACTIVITIES_PER_PAGE));
   const paginatedActivities = useMemo(() => filteredActivities.slice((activityPage - 1) * ACTIVITIES_PER_PAGE, activityPage * ACTIVITIES_PER_PAGE), [filteredActivities, activityPage]);
@@ -2610,10 +2676,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               {/* ========================================================= */}
               <div className="xl:col-span-7 space-y-5 md:space-y-6">
                 {analyticsTotalTestsDone === 0 ? (
-                  <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 py-20 text-center shadow-xs flex flex-col items-center justify-center p-6">
+                  <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 py-14 text-center shadow-xs flex flex-col items-center justify-center p-6">
                     <div className="text-5xl mb-4 opacity-40 grayscale block">📊</div>
-                    <h3 className="text-lg md:text-xl font-black text-slate-800 mb-2">Chưa có dữ liệu làm bài hợp lệ</h3>
-                    <p className="text-slate-500 font-medium text-[13px] md:text-[14px] max-w-md">Hệ thống chỉ tính những bài đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích của AI chính xác nhất.</p>
+                    <h3 className="text-lg md:text-xl font-black text-slate-800 mb-2">Chưa có dữ liệu làm bài kiểm tra hợp lệ</h3>
+                    <p className="text-slate-500 font-medium text-[13px] md:text-[14px] max-w-md">Hệ thống chỉ tính những bài kiểm tra đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích của AI chính xác nhất.</p>
                   </div>
                 ) : (
                   <>
@@ -2866,6 +2932,180 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     )}
                   </>
                 )}
+
+                {/* 📚 MỤC TIẾN ĐỘ YÊU CẦU BẮT BUỘC: BÀI DỊCH ĐỌC & BÀI DỊCH NGHE CAMBRIDGE IELTS (THƯ VIỆN) */}
+                {isIeltsCourseSelected && (
+                  <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-sky-200/90 shadow-xs overflow-hidden">
+                    <div className="bg-gradient-to-r from-[#073b5c] via-[#0a5482] to-[#0f172a] px-5 sm:px-6 py-4 text-white flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex items-center gap-3">
+                        <span className="w-10 h-10 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center text-xl shrink-0">
+                          📚
+                        </span>
+                        <div>
+                          <div className="text-[10px] font-extrabold uppercase tracking-widest text-amber-300">
+                            Nhiệm Vụ Bắt Buộc Trong Lộ Trình IELTS Premium
+                          </div>
+                          <h3 className="font-black text-base sm:text-lg text-white tracking-tight leading-snug">
+                            Tiến Độ Bài Dịch Đọc &amp; Bài Dịch Nghe Cambridge IELTS (Thư Viện)
+                          </h3>
+                        </div>
+                      </div>
+                      <span className="text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 rounded-full">
+                        ● Tự động Track Log khi đọc bài
+                      </span>
+                    </div>
+
+                    <div className="p-5 sm:p-6 space-y-5">
+                      <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/85 border border-amber-200/90 text-xs sm:text-[13px] text-amber-950 leading-relaxed flex items-start gap-2.5">
+                        <span className="text-base shrink-0 mt-0.5">💡</span>
+                        <div>
+                          <span className="font-extrabold">Yêu cầu từ Thầy Tony:</span> Sau khi làm mỗi đề Listening / Reading trong bộ{' '}
+                          <span className="font-bold">Cambridge IELTS 01 – 21</span>, học viên <span className="font-extrabold underline">bắt buộc</span> phải vào mục{' '}
+                          <span className="font-bold">Thư Viện</span> để hoàn thành <span className="font-bold">Bài dịch đọc</span> (đối chiếu song ngữ từng khổ/từng câu) và{' '}
+                          <span className="font-bold">Bài dịch nghe</span> (nghe lại Audio kết hợp soi bản dịch). Hệ thống tự động ghi nhận từng bài em đã đọc vào tiến độ dưới đây.
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                        {/* CARD 1: BÀI DỊCH ĐỌC CAMBRIDGE IELTS */}
+                        <div className="rounded-2xl border border-slate-200/90 bg-slate-50/60 p-4 sm:p-5 flex flex-col justify-between gap-4 hover:border-[#2ab4e8] transition-all">
+                          <div className="space-y-3">
+                            <div className="flex items-start justify-between gap-2">
+                              <div className="flex items-center gap-2.5">
+                                <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center text-lg font-bold shrink-0">
+                                  📖
+                                </span>
+                                <div>
+                                  <h4 className="font-black text-sm sm:text-[15px] text-slate-900 leading-tight">
+                                    Bài dịch đọc Cambridge IELTS
+                                  </h4>
+                                  <p className="text-[11.5px] text-slate-500 font-medium mt-0.5">
+                                    Trọn bộ Cam 01 – Cam 21 (252 bài đọc song ngữ)
+                                  </p>
+                                </div>
+                              </div>
+                              <span className="px-2.5 py-1 rounded-lg bg-[#0a5482] text-white font-black text-xs shrink-0">
+                                {ieltsLibraryStats.readingCount} / {ieltsLibraryStats.readingTotal} bài
+                              </span>
+                            </div>
+
+                            <div>
+                              <div className="flex justify-between text-[11px] font-bold text-slate-500 mb-1">
+                                <span>Tiến độ hoàn thành bài dịch đọc</span>
+                                <span className="text-[#0a5482] font-black">{ieltsLibraryStats.readingPercent}%</span>
+                              </div>
+                              <div className="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-gradient-to-r from-[#0a5482] to-[#2ab4e8] rounded-full transition-all duration-700"
+                                  style={{ width: `${Math.max(ieltsLibraryStats.readingCount > 0 ? 3 : 0, ieltsLibraryStats.readingPercent)}%` }}
+                                />
+                              </div>
+                            </div>
+
+                            {ieltsLibraryStats.recentReading.length > 0 ? (
+                              <div className="space-y-1.5 pt-1">
+                                <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                                  Bài dịch đọc gần nhất:
+                                </div>
+                                {ieltsLibraryStats.recentReading.map((item) => (
+                                  <div
+                                    key={item.id}
+                                    onClick={() => item.slug && handleOpenLibraryPath(`/news/view/${item.slug}`)}
+                                    className="px-3 py-1.5 rounded-xl bg-white border border-slate-200/80 hover:border-sky-300 text-xs flex items-center justify-between gap-2 cursor-pointer transition"
+                                  >
+                                    <span className="font-semibold text-slate-700 truncate">✓ {item.title}</span>
+                                    <span className="text-[10px] text-slate-400 shrink-0">{formatDate(item.date).split(' ')[0]}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <p className="text-xs text-slate-400 italic py-1">
+                                Chưa có bài dịch đọc nào được ghi nhận. Hãy bấm nút bên dưới để bắt đầu đọc dịch!
+                              </p>
+                            )}
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={() => handleOpenLibraryPath('/news/category/cambridge-ielts-reading-translation')}
+                            className="w-full py-2.5 px-4 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs sm:text-[13px] transition flex items-center justify-center gap-2 shadow-xs cursor-pointer active:scale-95"
+                          >
+                            <span>📖</span>
+                            <span>Mở Bài Dịch Đọc Cambridge (01 – 21) →</span>
+                          </button>
+                        </div>
+
+                        {/* CARD 2: BÀI DỊCH NGHE CAMBRIDGE IELTS */}
+                        <div className="rounded-2xl border border-slate-200/90 bg-slate-50/60 p-4 sm:p-5 flex flex-col justify-between gap-4 hover:border-emerald-400 transition-all">
+                          <div className="space-y-3">
+                            <div className="flex items-start justify-between gap-2">
+                              <div className="flex items-center gap-2.5">
+                                <span className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg font-bold shrink-0">
+                                  🎧
+                                </span>
+                                <div>
+                                  <h4 className="font-black text-sm sm:text-[15px] text-slate-900 leading-tight">
+                                    Bài dịch nghe Cambridge IELTS
+                                  </h4>
+                                  <p className="text-[11.5px] text-slate-500 font-medium mt-0.5">
+                                    Trọn bộ Cam 01 – Cam 21 (336 bài nghe + Audio)
+                                  </p>
+                                </div>
+                              </div>
+                              <span className="px-2.5 py-1 rounded-lg bg-emerald-600 text-white font-black text-xs shrink-0">
+                                {ieltsLibraryStats.listeningCount} / {ieltsLibraryStats.listeningTotal} bài
+                              </span>
+                            </div>
+
+                            <div>
+                              <div className="flex justify-between text-[11px] font-bold text-slate-500 mb-1">
+                                <span>Tiến độ hoàn thành bài dịch nghe</span>
+                                <span className="text-emerald-700 font-black">{ieltsLibraryStats.listeningPercent}%</span>
+                              </div>
+                              <div className="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-gradient-to-r from-emerald-600 to-teal-400 rounded-full transition-all duration-700"
+                                  style={{ width: `${Math.max(ieltsLibraryStats.listeningCount > 0 ? 3 : 0, ieltsLibraryStats.listeningPercent)}%` }}
+                                />
+                              </div>
+                            </div>
+
+                            {ieltsLibraryStats.recentListening.length > 0 ? (
+                              <div className="space-y-1.5 pt-1">
+                                <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+                                  Bài dịch nghe gần nhất:
+                                </div>
+                                {ieltsLibraryStats.recentListening.map((item) => (
+                                  <div
+                                    key={item.id}
+                                    onClick={() => item.slug && handleOpenLibraryPath(`/news/view/${item.slug}`)}
+                                    className="px-3 py-1.5 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-300 text-xs flex items-center justify-between gap-2 cursor-pointer transition"
+                                  >
+                                    <span className="font-semibold text-slate-700 truncate">✓ {item.title}</span>
+                                    <span className="text-[10px] text-slate-400 shrink-0">{formatDate(item.date).split(' ')[0]}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <p className="text-xs text-slate-400 italic py-1">
+                                Chưa có bài dịch nghe nào được ghi nhận. Hãy bấm nút bên dưới để bắt đầu nghe dịch!
+                              </p>
+                            )}
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={() => handleOpenLibraryPath('/news/category/cambridge-ielts-listening-translation')}
+                            className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-[13px] transition flex items-center justify-center gap-2 shadow-xs cursor-pointer active:scale-95"
+                          >
+                            <span>🎧</span>
+                            <span>Mở Bài Dịch Nghe Cambridge (01 – 21) →</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* ========================================================= */}
@@ -3026,6 +3266,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 title = 'HOÀN THÀNH BÀI GIẢNG';
                                 const lecName = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : 'Bài giảng');
                                 desc = `Đã học xong: "${lecName}"`;
+                              } else if (act.action_type === 'read_library') {
+                                icon = '📚';
+                                title =
+                                  details?.library_type === 'cambridge_reading_translation'
+                                    ? 'ĐỌC BÀI DỊCH ĐỌC CAMBRIDGE'
+                                    : details?.library_type === 'cambridge_listening_translation'
+                                    ? 'NGHE & DỊCH CAMBRIDGE LISTENING'
+                                    : 'ĐỌC TÀI LIỆU THƯ VIỆN';
+                                const artTitle = details?.article_title || details?.title || 'Tài liệu thư viện';
+                                const cateName = details?.sub_category_name || details?.category_name || '';
+                                desc = `Đã hoàn thành: "${artTitle}"${cateName ? ` • (${cateName})` : ''}`;
                               } else {
                                 icon = '📌';
                                 title = (act.action_type || 'HOẠT ĐỘNG').toUpperCase();

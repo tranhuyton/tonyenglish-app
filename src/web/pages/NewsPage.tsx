@@ -644,7 +644,154 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   const [revealedParas, setRevealedParas] = useState<Record<number, boolean>>({});
   const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
 
+  // 🚀 TRACK LOG HỌC VIÊN ĐỌC TÀI LIỆU THƯ VIỆN
+  const [authUserId, setAuthUserId] = useState<string | null>(null);
+  const [readNewsIds, setReadNewsIds] = useState<Set<number>>(new Set());
+  const [camReadingReadCount, setCamReadingReadCount] = useState<number>(0);
+  const [camListeningReadCount, setCamListeningReadCount] = useState<number>(0);
+  const [isCurrentArticleLogged, setIsCurrentArticleLogged] = useState<boolean>(false);
+
   const pageSize = 10;
+
+  useEffect(() => {
+    let mounted = true;
+    async function loadUserLibraryLogs() {
+      const { data: { session } } = await supabase.auth.getSession();
+      const uid = session?.user?.id || user?.id || null;
+      if (!mounted) return;
+      setAuthUserId(uid);
+      if (!uid) return;
+
+      const { data: logs } = await supabase
+        .from('activity_logs')
+        .select('details')
+        .eq('user_id', uid)
+        .eq('action_type', 'read_library');
+
+      if (!mounted || !logs) return;
+      const allIds = new Set<number>();
+      const camReadSet = new Set<number>();
+      const camListenSet = new Set<number>();
+
+      logs.forEach((row: any) => {
+        let d = row.details;
+        if (typeof d === 'string') {
+          try { d = JSON.parse(d); } catch {}
+        }
+        const nid = Number(d?.news_id);
+        if (nid > 0) {
+          allIds.add(nid);
+          const pCate = Number(d?.parent_category_id);
+          if (pCate === 38 || d?.library_type === 'cambridge_reading_translation') {
+            camReadSet.add(nid);
+          } else if (pCate === 87 || d?.library_type === 'cambridge_listening_translation') {
+            camListenSet.add(nid);
+          }
+        }
+      });
+
+      setReadNewsIds(allIds);
+      setCamReadingReadCount(camReadSet.size);
+      setCamListeningReadCount(camListenSet.size);
+    }
+    loadUserLibraryLogs();
+    return () => {
+      mounted = false;
+    };
+  }, [user?.id]);
+
+  const recordLibraryReadLog = async (targetArticle: any, forceManual?: boolean) => {
+    if (!targetArticle?.news_id) return;
+    const nid = Number(targetArticle.news_id);
+    const sessionKey = `tony_lib_read_${nid}`;
+    if (!forceManual && sessionStorage.getItem(sessionKey)) {
+      setIsCurrentArticleLogged(true);
+      return;
+    }
+
+    let uid = authUserId;
+    if (!uid) {
+      const { data: { session } } = await supabase.auth.getSession();
+      uid = session?.user?.id || null;
+      if (uid) setAuthUserId(uid);
+    }
+    if (!uid) return;
+
+    const cate = allCategories.find((c) => Number(c.news_cc_id) === Number(targetArticle.news_cc_id));
+    const parentCateId = cate
+      ? Number(cate.news_cc_parent) === 0
+        ? Number(cate.news_cc_id)
+        : Number(cate.news_cc_parent)
+      : Number(targetArticle.news_cc_id);
+    const parentCate = allCategories.find((c) => Number(c.news_cc_id) === parentCateId) || cate;
+
+    let libraryType = 'library_article';
+    if (parentCateId === 38 || parentCateId === 51) libraryType = 'cambridge_reading_translation';
+    else if (parentCateId === 87) libraryType = 'cambridge_listening_translation';
+    else if (parentCateId === 56) libraryType = 'ielts_writing_sample';
+    else if (parentCateId === 67) libraryType = 'ielts_speaking_sample';
+    else if (parentCateId === 79) libraryType = 'igcse_esl_reading';
+
+    const courseId = [38, 87, 56, 67, 51].includes(parentCateId)
+      ? '239a64f0-c106-40e5-a6e2-4e685a0d70fb' // IELTS Premium
+      : parentCateId === 79
+      ? '16967a7e-3b0d-4293-b7c1-f021a5c14445' // IGCSE ESL
+      : undefined;
+
+    try {
+      sessionStorage.setItem(sessionKey, '1');
+    } catch {}
+
+    setIsCurrentArticleLogged(true);
+    setReadNewsIds((prev) => {
+      const next = new Set(prev);
+      next.add(nid);
+      return next;
+    });
+    if (parentCateId === 38) {
+      setCamReadingReadCount((prev) => (readNewsIds.has(nid) ? prev : prev + 1));
+    } else if (parentCateId === 87) {
+      setCamListeningReadCount((prev) => (readNewsIds.has(nid) ? prev : prev + 1));
+    }
+
+    await supabase.from('activity_logs').insert([
+      {
+        user_id: uid,
+        action_type: 'read_library',
+        details: {
+          news_id: nid,
+          article_title: targetArticle.news_title,
+          article_slug: (targetArticle.news_title_url || '').trim(),
+          category_id: Number(targetArticle.news_cc_id),
+          parent_category_id: parentCateId,
+          category_name: parentCate?.news_cc_name_vi || cate?.news_cc_name_vi || 'Thư viện',
+          sub_category_name: cate?.news_cc_name_vi || '',
+          library_type: libraryType,
+          course_id: courseId,
+        },
+      },
+    ]);
+  };
+
+  // Tự động ghi nhận log khi học viên mở và đọc bài trong Thư viện sau 4 giây
+  useEffect(() => {
+    if (mode !== 'detail' || !article?.news_id) {
+      setIsCurrentArticleLogged(false);
+      return;
+    }
+    const nid = Number(article.news_id);
+    if (readNewsIds.has(nid) || sessionStorage.getItem(`tony_lib_read_${nid}`)) {
+      setIsCurrentArticleLogged(true);
+    } else {
+      setIsCurrentArticleLogged(false);
+    }
+
+    const timer = setTimeout(() => {
+      recordLibraryReadLog(article, false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [mode, article?.news_id, authUserId, allCategories.length]);
 
   useEffect(() => {
     async function loadCategories() {
@@ -1136,6 +1283,38 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
               ) : mode === 'list' ? (
                 <>
                   {/* Quick Subcategory Switcher Bar */}
+                  {authUserId && isActiveParentCambridge && activeParentCate && (
+                    <div className="mb-4 p-3.5 sm:p-4 bg-gradient-to-r from-emerald-50/90 via-sky-50/80 to-white border border-emerald-200/90 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                      <div className="flex items-center gap-3">
+                        <span className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-base font-bold shrink-0 shadow-2xs">
+                          📊
+                        </span>
+                        <div>
+                          <div className="text-xs sm:text-sm font-black text-slate-800">
+                            {Number(activeParentCate.news_cc_id) === 38
+                              ? `Tiến độ Bài dịch Đọc Cambridge IELTS của bạn: Đã hoàn thành ${camReadingReadCount} / 252 bài`
+                              : `Tiến độ Bài dịch Nghe Cambridge IELTS của bạn: Đã hoàn thành ${camListeningReadCount} / 336 bài`}
+                          </div>
+                          <div className="text-[11.5px] text-slate-500 font-medium">
+                            Mỗi bài bạn mở đọc/nghe dịch đều được tự động lưu vào Nhật ký &amp; Tiến độ học IELTS Premium.
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          try {
+                            sessionStorage.setItem('lms_portal_tab', 'analytics');
+                            sessionStorage.setItem('portal_filter_course', '239a64f0-c106-40e5-a6e2-4e685a0d70fb');
+                          } catch {}
+                          window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'portal' }));
+                        }}
+                        className="px-3.5 py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-extrabold shrink-0 transition cursor-pointer self-start sm:self-center"
+                      >
+                        📈 Xem Tiến Độ Học IELTS →
+                      </button>
+                    </div>
+                  )}
                   {activeParentCate && activeParentSubs.length > 0 && (
                     <div className="mb-6 p-3.5 sm:p-4 bg-slate-50/90 border border-slate-200/80 rounded-2xl">
                       <div className="flex items-center justify-between gap-2 mb-2.5">
@@ -1251,6 +1430,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                     </span>
                                   )}
                                   <span>{formatDate(item.news_created_at, item.news_postday)}</span>
+                                  { readNewsIds.has(Number(item.news_id)) && (
+                                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-extrabold">
+                                      ✅ {lang === 'vi' ? 'Đã đọc' : 'Completed'}
+                                    </span>
+                                  )}
                                   {[6, 28, 31, 37].includes(Number(item.news_cc_id)) && (
                                     <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-sky-50 text-[#0a5482] border border-sky-200/80 text-[11px] font-bold">
                                       📝 {lang === 'vi' ? '5 câu trắc nghiệm' : '5 MCQ Questions'}
@@ -1375,13 +1559,22 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     />
                   )}
 
-                  {/* Lead / Intro */}
-                  {article.news_desc && (
-                    <div
-                      className="p-5 bg-slate-50 rounded-2xl border-l-4 border-[#2ab4e8] italic font-medium text-slate-700 legacy-prose"
-                      dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_desc) }}
-                    />
-                  )}
+                  {/* Lead / Intro (only show if not already duplicated in article body) */}
+                  {article.news_desc &&
+                    (() => {
+                      const descPlain = stripTags(article.news_desc).toLowerCase();
+                      const bodyPlain = stripTags(article.news_content).toLowerCase();
+                      const titlePlain = stripTags(article.news_title).toLowerCase();
+                      if (!descPlain || descPlain === titlePlain) return false;
+                      const probe = descPlain.slice(0, Math.min(80, descPlain.length));
+                      if (probe.length >= 20 && bodyPlain.includes(probe)) return false;
+                      return true;
+                    })() && (
+                      <div
+                        className="p-5 bg-slate-50 rounded-2xl border-l-4 border-[#2ab4e8] italic font-medium text-slate-700 legacy-prose"
+                        dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(article.news_desc) }}
+                      />
+                    )}
 
                   {/* Featured Image if enabled - Display full uploaded image without cropping */}
                   {article.news_thumb && Number(article.news_status_avatar) === 1 && (
@@ -1597,7 +1790,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         ) : (
                           <div className="space-y-5">
                             <div
-                              className="legacy-prose text-justify pt-2"
+                              className="legacy-prose text-left sm:text-justify pt-2"
                               dangerouslySetInnerHTML={{
                                 __html: fixLegacyHtmlContent(displayBodyHtml),
                               }}
@@ -1788,6 +1981,50 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             lang={lang}
                             categoryId={Number(article.news_cc_id)}
                           />
+                        )}
+
+                        {/* 🚀 TRACK LOG STATUS BANNER IN ARTICLE DETAIL */}
+                        {authUserId && (
+                          <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50/90 via-sky-50/70 to-white border border-emerald-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div className="flex items-center gap-3">
+                              <span className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-base font-bold shrink-0">
+                                {isCurrentArticleLogged ? '✓' : '⏳'}
+                              </span>
+                              <div>
+                                <div className="text-xs sm:text-sm font-black text-emerald-950">
+                                  {isCurrentArticleLogged
+                                    ? 'Đã ghi nhận hoàn thành bài học này vào Nhật ký & Tiến độ học tập!'
+                                    : 'Đang ghi nhận bài đọc vào Tiến độ học tập của bạn...'}
+                                </div>
+                                <div className="text-[11.5px] text-slate-600">
+                                  Giáo viên và hệ thống AI Tutor đã cập nhật hoạt động đọc tài liệu Thư viện của bạn.
+                                </div>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-2 shrink-0">
+                              {!isCurrentArticleLogged && (
+                                <button
+                                  type="button"
+                                  onClick={() => recordLibraryReadLog(article, true)}
+                                  className="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold transition cursor-pointer"
+                                >
+                                  ✓ Đánh dấu Đã đọc ngay
+                                </button>
+                              )}
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  try {
+                                    sessionStorage.setItem('lms_portal_tab', 'analytics');
+                                  } catch {}
+                                  window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'portal' }));
+                                }}
+                                className="px-3.5 py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-extrabold transition cursor-pointer"
+                              >
+                                🎓 Về Góc Học Viên →
+                              </button>
+                            </div>
+                          </div>
                         )}
                       </>
                     );
