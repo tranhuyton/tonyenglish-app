@@ -363,6 +363,7 @@ export function resolveUploadUrl(path: string | null | undefined, fallback = '/u
 export function fixLegacyHtmlContent(html: string | null | undefined): string {
   if (!html) return '';
   return fixLegacyWordSpacing(html)
+    .replace(/&nbsp;|\u00a0/gi, ' ')
     .replace(/https?:\/\/(?:www\.)?tonyenglish\.vn\/uploads\//gi, '/uploads/')
     .replace(/https?:\/\/(?:www\.)?tonyenglish\.vn\/themes\/tony\/assets\//gi, '/themes/tony/assets/')
     // Remove legacy hardcoded font-family and line-height so content uses unified Inter font & readable spacing
@@ -398,7 +399,29 @@ export function fixLegacyHtmlContent(html: string | null | undefined): string {
         .replace(/\bface\s*=\s*["'][^"']*["']/gi, '')
         .replace(/\bsize\s*=\s*["']?[1-4]["']?/gi, '');
       return `<font${cleaned}>`;
-    });
+    })
+    // Strip hardcoded pixel width/height on <table>
+    .replace(/<table\b([^>]*)>/gi, (_m, attrs) => {
+      const cleaned = String(attrs)
+        .replace(/\b(?:width|height)\s*=\s*["'][^"']*["']/gi, '')
+        .replace(/(?:width|height)\s*:\s*\d+px\s*;?/gi, '');
+      return `<table${cleaned}>`;
+    })
+    // Strip leading/trailing <br> inside block/heading/inline tags
+    .replace(/(<(?:p|h[1-6]|li|blockquote|td|th|strong|em)\b[^>]*>)(?:\s|<br\s*\/?>)+/gi, '$1')
+    .replace(/(?:\s|<br\s*\/?>)+(<\/(?:p|h[1-6]|li|blockquote|td|th|strong|em)>)/gi, '$1')
+    // Split double <br><br> inside <p> into proper paragraph breaks
+    .replace(/<p\b([^>]*)>([\s\S]*?)<\/p>/gi, (_m, attrs, inner) => {
+      if (!/(?:<br\s*\/?>\s*){2,}/i.test(inner)) return `<p${attrs}>${inner}</p>`;
+      return inner
+        .split(/(?:<br\s*\/?>\s*){2,}/i)
+        .map((part: string) => part.trim())
+        .filter(Boolean)
+        .map((part: string) => `<p${attrs}>${part}</p>`)
+        .join('\n');
+    })
+    // Remove empty <p>, <div>, and heading tags
+    .replace(/<(?:p|div|h[1-6])\b[^>]*>(?:\s|<(?:em|strong|span|b|i)\b[^>]*>\s*<\/(?:em|strong|span|b|i)>|<br\s*\/?>)*<\/(?:p|div|h[1-6])>/gi, '');
 }
 
 export interface ReadingQuizOption {

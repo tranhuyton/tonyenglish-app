@@ -12,6 +12,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>TonyEnglish - Hệ sinh thái đào tạo &amp; Luyện thi thông minh</title>
+    <!-- Meta Pixel Code (TonyEnglish.vn Pixel: 1124721320167694 + Personal Pixel: 2104187747130873) -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1124721320167694');
+      fbq('init', '2104187747130873');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -40,6 +55,62 @@
       .legacy-prose p {
         margin-bottom: 0.85rem;
       }
+      .legacy-prose h1,
+      .legacy-prose h2,
+      .legacy-prose h3,
+      .legacy-prose h4,
+      .legacy-prose h5,
+      .legacy-prose h6 {
+        font-family: inherit !important;
+        color: #0f172a;
+        font-weight: 700;
+        line-height: 1.35;
+        text-align: left;
+        margin-top: 1.5rem;
+        margin-bottom: 0.65rem;
+      }
+      .legacy-prose h1 { font-size: 1.45rem; }
+      .legacy-prose h2 { font-size: 1.3rem; }
+      .legacy-prose h3 { font-size: 1.18rem; }
+      .legacy-prose h4,
+      .legacy-prose h5,
+      .legacy-prose h6 { font-size: 1.06rem; }
+      .legacy-prose > h1:first-child,
+      .legacy-prose > h2:first-child,
+      .legacy-prose > h3:first-child,
+      .legacy-prose > h4:first-child {
+        margin-top: 0.25rem;
+      }
+      .legacy-prose ul,
+      .legacy-prose ol {
+        margin: 0.65rem 0 1rem 0;
+        padding-left: 1.5rem;
+      }
+      .legacy-prose ul {
+        list-style-type: disc;
+      }
+      .legacy-prose ol {
+        list-style-type: decimal;
+      }
+      .legacy-prose li {
+        margin-bottom: 0.4rem;
+        text-align: left;
+      }
+      .legacy-prose li > p {
+        margin-bottom: 0.35rem;
+      }
+      .legacy-prose blockquote {
+        margin: 1rem 0;
+        padding: 0.85rem 1.15rem;
+        border-left: 4px solid #2ab4e8;
+        background-color: #f8fafc;
+        border-radius: 0 0.75rem 0.75rem 0;
+        color: #334155;
+        text-align: left;
+      }
+      .legacy-prose blockquote p:last-child {
+        margin-bottom: 0;
+      }
       .legacy-prose img {
         max-width: 100% !important;
         height: auto !important;
@@ -51,7 +122,24 @@
         width: 100% !important;
         overflow-x: auto;
         border-collapse: collapse;
-        margin: 1rem 0;
+        margin: 1.25rem 0;
+        text-align: left;
+      }
+      .legacy-prose th,
+      .legacy-prose td {
+        border: 1px solid #e2e8f0;
+        padding: 0.55rem 0.75rem;
+        vertical-align: top;
+        text-align: left;
+      }
+      .legacy-prose th {
+        background-color: #f1f5f9;
+        font-weight: 700;
+        color: #0f172a;
+      }
+      .legacy-prose td > p:last-child,
+      .legacy-prose th > p:last-child {
+        margin-bottom: 0;
       }
       .legacy-prose iframe,
       .legacy-prose embed,
@@ -71,6 +159,10 @@
     </style>
   </head>
   <body>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1124721320167694&amp;ev=PageView&amp;noscript=1" alt="" />
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2104187747130873&amp;ev=PageView&amp;noscript=1" alt="" />
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

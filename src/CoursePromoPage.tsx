@@ -24,6 +24,19 @@ const CONTACT_PHONE_DISPLAY = '0935 058 688';
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
 const CONTACT_EMAIL = 'tranhuyton@gmail.com';
 
+const trackMetaPixelEvent = (eventName: string, params?: Record<string, any>, isCustom = false) => {
+  try {
+    const w = window as any;
+    if (typeof w.fbq === 'function') {
+      w.fbq(isCustom ? 'trackCustom' : 'track', eventName, {
+        site_domain: 'tonyenglish.vn',
+        content_category: 'TonyEnglish_IELTS_IGCSE',
+        ...params,
+      });
+    }
+  } catch (e) {}
+};
+
 const FEATURED_PACKAGES: PackageCardItem[] = [
   {
     id: 'ielts-premium',
@@ -155,6 +168,9 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
       if (courseParam) {
         setSelectedCourseTitle(courseParam);
       }
+      trackMetaPixelEvent('ViewContent', {
+        content_name: courseParam || 'Trang Khóa Học IELTS & IGCSE',
+      });
     } catch (e) {}
   }, []);
 
@@ -174,6 +190,9 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
     if (courseName) {
       setSelectedCourseTitle(courseName);
     }
+    trackMetaPixelEvent('InitiateCheckout', {
+      content_name: courseName || selectedCourseTitle,
+    });
     setSubmittedSuccess(false);
     const el = document.getElementById('dang-ky-hoc-thu');
     if (el) {
@@ -233,6 +252,12 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
       }
 
       setSubmittedSuccess(true);
+      trackMetaPixelEvent('Lead', {
+        content_name: selectedCourseTitle,
+      });
+      trackMetaPixelEvent('TonyEnglish_Lead', {
+        course: selectedCourseTitle,
+      }, true);
       // Mở luôn trình gửi email mặc định với nội dung điền sẵn để đảm bảo 100% gửi tới anh
       window.location.href = buildMailtoUrl();
     } finally {
@@ -241,6 +266,13 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
   };
 
   const handleChatZaloWithContent = async () => {
+    trackMetaPixelEvent('Contact', {
+      content_name: selectedCourseTitle,
+      contact_method: 'Zalo',
+    });
+    trackMetaPixelEvent('TonyEnglish_ZaloContact', {
+      course: selectedCourseTitle,
+    }, true);
     const msg = buildRegistrationMessage();
     try {
       await navigator.clipboard.writeText(msg);
