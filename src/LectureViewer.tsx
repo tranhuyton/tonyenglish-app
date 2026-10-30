@@ -3767,6 +3767,25 @@ export default function LectureViewer({
     };
   }, [refreshScoresOnly]);
 
+  useEffect(() => {
+    const handleExternalSelectLecture = (e: any) => {
+      const targetId = e.detail?.lectureId;
+      if (!targetId) return;
+      setIsStudyCoachModalOpen(false);
+      const found = lectures.find(l => String(l.id) === String(targetId));
+      if (found) {
+        if (found.module_id) {
+          setExpandedModules(prev => [...new Set([...prev, found.module_id])]);
+        }
+        handleSelectLecture(found.id, currentUser?.id);
+      } else {
+        handleSelectLecture(targetId, currentUser?.id);
+      }
+    };
+    window.addEventListener('tony-select-lecture', handleExternalSelectLecture);
+    return () => window.removeEventListener('tony-select-lecture', handleExternalSelectLecture);
+  }, [lectures, currentUser?.id]);
+
   const toggleModule = (modId: string) => {
       setExpandedModules(prev => 
           prev.includes(modId) ? prev.filter(id => id !== modId) : [...prev, modId]
@@ -4617,10 +4636,10 @@ export default function LectureViewer({
                   <button
                       onClick={() => setIsStudyCoachModalOpen(true)}
                       className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:h-9 rounded-xl text-[12.5px] md:text-[13px] font-extrabold transition-all bg-gradient-to-r from-amber-400/20 to-[#2ab4e8]/25 hover:from-amber-400/30 hover:to-[#2ab4e8]/35 text-amber-200 border border-amber-300/40 shadow-xs cursor-pointer"
-                      title="Mở Lộ trình hướng dẫn từng bước của Thầy Tony AI"
+                      title="Mở Trợ lý Thầy Tony AI tự động phân tích điểm số & giao việc tiếp theo"
                   >
-                     <span>🧭</span>
-                     <span className="hidden sm:inline">Lộ trình học</span>
+                     <span>👨‍🏫</span>
+                     <span className="hidden sm:inline">Thầy Tony AI</span>
                   </button>
               )}
               <button

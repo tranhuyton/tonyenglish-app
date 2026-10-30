@@ -1,5 +1,11 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { supabase } from './supabase';
+import {
+  fetchGlobalStudentSnapshot,
+  parseTutorResponseWithActions,
+  executeTutorAction,
+  GlobalStudentSnapshot,
+} from './globalTutorContext';
 
 interface AITutorProps {
   isOpen: boolean;
@@ -33,9 +39,10 @@ const UNICODE_FORMAT_INSTRUCTION = `
 - Trình bày mạch lạc, phân tách rõ ràng bằng gạch đầu dòng, các tiêu đề dùng in đậm **...** để dễ đọc.`;
 
 const TUTOR_PROMPTS = [
+  "🧭 Tư vấn việc cần làm hôm nay",
+  "📊 Đánh giá điểm test & tiến độ của em",
   "Tóm tắt bài học", 
-  "Giải thích khái niệm khó", 
-  "Cho ví dụ minh họa"
+  "Giải thích khái niệm khó"
 ];
 
 export default function AITutorSidebar({ 
@@ -56,12 +63,21 @@ export default function AITutorSidebar({
   const [isTyping, setIsTyping] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
+  const [globalSnapshot, setGlobalSnapshot] = useState<GlobalStudentSnapshot | null>(null);
   
   const [attachedImage, setAttachedImage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (isOpen && mode === 'tutor') {
+      fetchGlobalStudentSnapshot(undefined, courseTitle).then((snap) => {
+        if (snap) setGlobalSnapshot(snap);
+      });
+    }
+  }, [isOpen, mode, courseTitle, lectureTitle]);
 
   useEffect(() => {
     const isBubbleShowing = isOpen && isMinimized;
@@ -550,8 +566,29 @@ export default function AITutorSidebar({
              };
          }
       } else {
-         const subjectRule = courseTitle ? `\n[KỶ LUẬT CHUYÊN MÔN]: Đây là lớp học môn: "${courseTitle}". Nếu câu hỏi không liên quan đến môn học này, bạn PHẢI TỪ CHỐI KHÉO LÉO.` : '';
-         const systemPrompt = `Bạn là gia sư AI tận tâm, chuyên nghiệp. Luôn xưng Thầy/Cô và gọi Em (TUYỆT ĐỐI CẤM xưng con). Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". ${subjectRule}\n${UNICODE_FORMAT_INSTRUCTION}\nHãy trả lời học sinh: "${userMsg}"`;
+         let snap = globalSnapshot;
+         if (!snap) {
+           snap = await fetchGlobalStudentSnapshot(undefined, courseTitle);
+           if (snap) setGlobalSnapshot(snap);
+         }
+         const globalBrainContext = snap?.promptContext || '';
+         const currentLessonBlock = lectureTitle
+           ? `\n[BÀI GIẢNG HỌC VIÊN ĐANG MỞ TRÊN MÀN HÌNH]: "${lectureTitle}"\nNội dung bài giảng hiện tại:\n"""\n${(contextText || '').slice(0, 16000)}\n"""\n`
+           : '';
+         const subjectRule = courseTitle ? `\n[KỶ LUẬT CHUYÊN MÔN]: Đây là khóa học "${courseTitle}".` : '';
+         const systemPrompt = `Bạn là "Thầy Tony AI" — người thầy chủ nhiệm kiêm gia sư trưởng trực tiếp dẫn dắt học viên tại TonyEnglish.vn. Luôn xưng "Thầy" và gọi học viên bằng tên hoặc "em" (TUYỆT ĐỐI CẤM xưng con).
+
+${globalBrainContext}
+${currentLessonBlock}
+${subjectRule}
+${UNICODE_FORMAT_INSTRUCTION}
+
+[NHIỆM VỤ CỦA THẦY TONY AI]:
+- Nếu học sinh hỏi về lộ trình học, việc cần làm hôm nay, hoặc đánh giá năng lực/điểm số: Hãy dựa TRỰC TIẾP vào "HỒ SƠ ĐẠI CỤC THỜI GIAN THỰC CỦA HỌC VIÊN" ở trên (nhắc rõ tên bài test gần nhất, điểm số, bài giảng đang làm dở trên Bảng công việc, tiến độ đọc Bài dịch Cambridge trong Thư viện) để tư vấn sống động, sát sườn từng bước tiếp theo.
+- BẮT BUỘC đính kèm từ 2 đến 4 mã nút bấm điều hướng theo đúng cú pháp [[ACTION:OPEN_LECTURE:...]], [[ACTION:OPEN_FOLDER:...]], [[ACTION:OPEN_LIBRARY:...]], [[ACTION:OPEN_AI_ROOM:...]], hoặc [[ACTION:OPEN_TAB:...]] để học sinh bấm 1 click là chuyển thẳng tới bài học/kho đề/thư viện đó.
+- Nếu học sinh hỏi kiến thức cụ thể của bài giảng đang mở ("${lectureTitle || ''}"): Hãy giải thích thật dễ hiểu, cặn kẽ và vẫn có thể gợi ý bước luyện tập tiếp theo.
+
+Câu hỏi của học sinh: "${userMsg}"`;
          
          payload = { 
              prompt: systemPrompt, 
@@ -984,14 +1021,34 @@ export default function AITutorSidebar({
                       <div className="whitespace-pre-wrap font-medium">
                           {msg.text}
                       </div>
-                  ) : (
-                      <div 
-                          className="prose prose-sm prose-slate max-w-none" 
-                          dangerouslySetInnerHTML={{ 
-                              __html: formatMarkdown(msg.text) 
-                          }} 
-                      />
-                  )}
+                  ) : (() => {
+                      const { cleanedText, actions } = parseTutorResponseWithActions(msg.text);
+                      return (
+                        <div>
+                          <div 
+                              className="prose prose-sm prose-slate max-w-none" 
+                              dangerouslySetInnerHTML={{ 
+                                  __html: formatMarkdown(cleanedText) 
+                              }} 
+                          />
+                          {actions.length > 0 && (
+                            <div className="mt-3 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+                              {actions.map((act, aIdx) => (
+                                <button
+                                  key={aIdx}
+                                  type="button"
+                                  onClick={() => executeTutorAction(act, globalSnapshot?.courseId)}
+                                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-[#0a5482] to-[#073b5c] hover:from-[#084266] hover:to-[#0a5482] text-white text-xs font-extrabold shadow-xs hover:shadow-md active:scale-95 transition-all cursor-pointer"
+                                >
+                                  <span>{act.label}</span>
+                                  <span>→</span>
+                                </button>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                  })()}
                </div>
             </div>
           ))}

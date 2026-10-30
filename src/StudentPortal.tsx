@@ -1393,6 +1393,33 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     onNavigate?.('home');
   };
 
+  useEffect(() => {
+    const handlePortalOpenFolder = (e: any) => {
+      const { courseId, folderId } = e.detail || {};
+      if (courseId) {
+        setSelectedCourseId(courseId);
+        setFilterCourse(courseId);
+      }
+      setActiveTab('library');
+      setActiveView('course');
+      if (folderId !== undefined) {
+        setCurrentFolderId(folderId || null);
+      }
+    };
+    const handlePortalSwitchTab = (e: any) => {
+      const targetTab = e.detail;
+      if (targetTab && ['library', 'board', 'calendar', 'analytics', 'profile'].includes(targetTab)) {
+        setActiveTab(targetTab as any);
+      }
+    };
+    window.addEventListener('tony-portal-open-folder', handlePortalOpenFolder);
+    window.addEventListener('tony-portal-switch-tab', handlePortalSwitchTab);
+    return () => {
+      window.removeEventListener('tony-portal-open-folder', handlePortalOpenFolder);
+      window.removeEventListener('tony-portal-switch-tab', handlePortalSwitchTab);
+    };
+  }, []);
+
   const totalActivityPages = Math.max(1, Math.ceil(filteredActivities.length / ACTIVITIES_PER_PAGE));
   const paginatedActivities = useMemo(() => filteredActivities.slice((activityPage - 1) * ACTIVITIES_PER_PAGE, activityPage * ACTIVITIES_PER_PAGE), [filteredActivities, activityPage]);
 
