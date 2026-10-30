@@ -110,6 +110,7 @@ export default function CourseStudyCoach({
 }: StudyCoachProps) {
   const [isWindowCollapsed, setIsWindowCollapsed] = useState(false);
   const [isStatsCollapsed, setIsStatsCollapsed] = useState(false);
+  const [isCourseDropdownOpen, setIsCourseDropdownOpen] = useState(false);
   const [snapshot, setSnapshot] = useState<GlobalStudentSnapshot | null>(null);
   const [isLoadingSnapshot, setIsLoadingSnapshot] = useState(true);
   const [isAiThinking, setIsAiThinking] = useState(false);
@@ -488,66 +489,86 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     <div
       className={`${
         onClose ? '' : 'mb-8'
-      } rounded-2xl sm:rounded-3xl border-2 border-[#2ab4e8]/45 bg-white shadow-lg overflow-hidden transition-all`}
+      } rounded-2xl sm:rounded-3xl border-2 border-[#2ab4e8]/45 bg-white shadow-lg transition-all`}
     >
       {/* TOP HEADER BAR OF AI STUDY COACH */}
-      <div className="bg-gradient-to-r from-[#072f49] via-[#0a5482] to-[#0f172a] px-4 sm:px-6 py-3 sm:py-3.5 text-white flex flex-wrap items-center justify-between gap-2.5">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-[#2ab4e8] to-sky-400 text-slate-950 flex items-center justify-center text-2xl shadow-md shrink-0">
+      <div
+        className={`bg-gradient-to-r from-[#072f49] via-[#0a5482] to-[#0f172a] px-4 sm:px-5 py-2.5 sm:py-3 text-white flex flex-wrap items-center justify-between gap-2.5 rounded-t-[14px] sm:rounded-t-[22px] ${
+          isWindowCollapsed ? 'rounded-b-[14px] sm:rounded-b-[22px]' : ''
+        }`}
+      >
+        <div className="flex items-center gap-2.5 min-w-0">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#2ab4e8] to-sky-400 text-slate-950 flex items-center justify-center text-xl shadow-md shrink-0">
             👨‍🏫
           </div>
-          <div className="min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                <span>Thầy Tony AI Chủ Nhiệm • Phân Tích Tiến Độ Tổng Thể</span>
-              </span>
-            </div>
-            <h2 className="text-base sm:text-xl font-black tracking-tight text-white mt-0.5 truncate">
-              Trợ Lý AI Dẫn Dắt Học Tập Theo Thời Gian Thực — {cleanTitle(courseTitle)}
-            </h2>
-          </div>
+          <span className="bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping shrink-0" />
+            <span className="truncate">Thầy Tony AI Chủ Nhiệm • Phân Tích Tiến Độ Tổng Thể</span>
+          </span>
         </div>
 
         <div className="flex items-center gap-2 shrink-0 flex-wrap">
-          {availableCourses && availableCourses.length > 1 && onSwitchCourse && (
-            <select
-              value={courseId}
-              onChange={(e) => onSwitchCourse(e.target.value)}
-              className="bg-white/15 hover:bg-white/25 text-white border border-white/25 text-xs font-extrabold px-2.5 py-2 rounded-xl transition cursor-pointer outline-none"
-              title="Đổi khóa học cần Thầy Tony AI tư vấn"
-            >
-              {availableCourses.map((c) => (
-                <option key={c.id} value={c.id} className="text-slate-900 font-bold">
-                  🎓 {cleanTitle(c.title)}
-                </option>
-              ))}
-            </select>
-          )}
+          {availableCourses && availableCourses.length > 1 && onSwitchCourse ? (
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setIsCourseDropdownOpen((prev) => !prev)}
+                className="bg-[#0f172a]/90 hover:bg-slate-900 text-sky-200 border border-sky-400/40 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-2 shadow-xs"
+                title="Đổi khóa học cần Thầy Tony AI tư vấn"
+              >
+                <span className="truncate max-w-[180px] sm:max-w-[240px]">🎓 {cleanTitle(courseTitle)}</span>
+                <span className="text-[10px] text-sky-300">{isCourseDropdownOpen ? '▲' : '▼'}</span>
+              </button>
 
-          <button
-            type="button"
-            onClick={handleRefreshDiagnosis}
-            disabled={isAiThinking || isLoadingSnapshot}
-            className="bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-400/30 text-xs font-extrabold px-3 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
-            title="Quét lại điểm số & tiến độ mới nhất để Thầy AI tư vấn lại"
-          >
-            <span className={isAiThinking || isLoadingSnapshot ? 'animate-spin' : ''}>🔄</span>
-            <span className="hidden sm:inline">Phân tích lại tiến độ</span>
-          </button>
+              {isCourseDropdownOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 z-40"
+                    onClick={() => setIsCourseDropdownOpen(false)}
+                  />
+                  <div className="absolute right-0 sm:left-0 top-full mt-1.5 w-64 bg-[#0f172a] border border-sky-400/40 rounded-xl shadow-2xl py-1.5 z-50 overflow-hidden">
+                    {availableCourses.map((c) => (
+                      <button
+                        key={c.id}
+                        type="button"
+                        onClick={() => {
+                          setIsCourseDropdownOpen(false);
+                          onSwitchCourse(c.id);
+                        }}
+                        className={`w-full text-left px-3.5 py-2 text-xs font-bold flex items-center justify-between gap-2 transition cursor-pointer ${
+                          c.id === courseId
+                            ? 'bg-[#0a5482] text-white'
+                            : 'text-slate-200 hover:bg-slate-800 hover:text-white'
+                        }`}
+                      >
+                        <span className="truncate">🎓 {cleanTitle(c.title)}</span>
+                        {c.id === courseId && (
+                          <span className="text-emerald-400 text-[11px] font-black shrink-0">✓</span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+          ) : (
+            <div className="bg-[#0f172a]/85 text-sky-200 border border-sky-400/35 text-xs font-extrabold px-3 py-1.5 rounded-xl flex items-center gap-1.5">
+              <span className="truncate max-w-[180px] sm:max-w-[240px]">🎓 {cleanTitle(courseTitle)}</span>
+            </div>
+          )}
 
           {!isWindowCollapsed && (
             <button
               type="button"
               onClick={() => setIsStatsCollapsed(!isStatsCollapsed)}
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-extrabold px-3 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-1.5"
               title={
                 isStatsCollapsed
-                  ? 'Mở lại 4 ô thống kê tiến độ phía trên'
-                  : 'Ẩn 4 ô thống kê phía trên để cửa sổ chat cao và rộng hơn'
+                  ? 'Mở lại bảng tóm tắt tiến độ phía trên'
+                  : 'Ẩn bảng tóm tắt tiến độ phía trên để cửa sổ chat cao hơn'
               }
             >
-              <span>{isStatsCollapsed ? 'Hiện 4 ô trên' : 'Ẩn 4 ô trên'}</span>
+              <span>{isStatsCollapsed ? 'Hiện tóm tắt' : 'Ẩn tóm tắt'}</span>
               <span>{isStatsCollapsed ? '▼' : '▲'}</span>
             </button>
           )}
@@ -556,7 +577,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             <button
               type="button"
               onClick={() => setIsWindowCollapsed(!isWindowCollapsed)}
-              className="bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-300/40 text-xs font-extrabold px-3.5 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+              className="bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-300/40 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-1.5"
               title={isWindowCollapsed ? 'Mở lại cửa sổ tư vấn Thầy Tony AI' : 'Thu gọn toàn bộ cửa sổ Thầy Tony AI'}
             >
               <span>{isWindowCollapsed ? 'Mở cửa sổ chat ▼' : 'Thu gọn cửa sổ ▲'}</span>
@@ -565,7 +586,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             <button
               type="button"
               onClick={onClose}
-              className="px-3 py-2 rounded-xl bg-rose-500/80 hover:bg-rose-600 text-white border border-rose-400/50 font-black text-xs flex items-center gap-1.5 transition cursor-pointer"
+              className="px-3 py-1.5 rounded-xl bg-rose-500/80 hover:bg-rose-600 text-white border border-rose-400/50 font-black text-xs flex items-center gap-1.5 transition cursor-pointer"
               title="Đóng cửa sổ Thầy Tony AI"
             >
               <span>✕</span>
@@ -576,7 +597,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       </div>
 
       {!isWindowCollapsed && (
-        <div className="p-3 sm:p-4 space-y-3.5 bg-gradient-to-b from-sky-50/50 to-white">
+        <div className="p-3 sm:p-4 space-y-3.5 bg-gradient-to-b from-sky-50/50 to-white rounded-b-[14px] sm:rounded-b-[22px]">
           {/* 1. REAL-TIME STUDENT X-RAY RADAR (4 THẺ DỮ LIỆU TỔNG THỂ THỰC TẾ) */}
           {!isStatsCollapsed && snapshot && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 animate-in fade-in duration-150">
@@ -763,31 +784,14 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               <div className="flex items-center gap-2 flex-wrap">
                 <button
                   type="button"
-                  onClick={() => setIsStatsCollapsed(!isStatsCollapsed)}
-                  className="text-[11px] font-extrabold text-[#0a5482] hover:bg-sky-100 bg-white border border-sky-200 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1"
-                  title="Ẩn/Hiện 4 ô thống kê phía trên"
+                  onClick={handleRefreshDiagnosis}
+                  disabled={isAiThinking || isLoadingSnapshot}
+                  className="text-[11px] font-extrabold text-emerald-800 hover:bg-emerald-100 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
+                  title="Quét lại điểm số & tiến độ mới nhất để Thầy AI tư vấn lại"
                 >
-                  <span>{isStatsCollapsed ? 'Hiện 4 ô trên ▼' : 'Ẩn 4 ô trên ▲'}</span>
+                  <span className={isAiThinking || isLoadingSnapshot ? 'animate-spin' : ''}>🔄</span>
+                  <span>Phân tích lại tiến độ</span>
                 </button>
-                {onClose ? (
-                  <button
-                    type="button"
-                    onClick={onClose}
-                    className="text-[11px] font-extrabold text-rose-700 hover:bg-rose-100 bg-rose-50 border border-rose-200 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1"
-                    title="Đóng cửa sổ chat"
-                  >
-                    <span>✕ Đóng</span>
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setIsWindowCollapsed(true)}
-                    className="text-[11px] font-extrabold text-slate-700 hover:bg-slate-200/70 bg-white border border-slate-300 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1"
-                    title="Thu gọn toàn bộ cửa sổ Thầy Tony AI"
-                  >
-                    <span>Thu gọn cửa sổ ▲</span>
-                  </button>
-                )}
               </div>
             </div>
 
