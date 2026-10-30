@@ -22,7 +22,7 @@ interface PackageCardItem {
 const CONTACT_PHONE = '0935058688';
 const CONTACT_PHONE_DISPLAY = '0935 058 688';
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
-const CONTACT_EMAIL = 'tranhuyton@gmail.com';
+const CONTACT_ADDRESS = 'Tòa R2B Royal City, 72A Nguyễn Trãi, Thanh Xuân, Hà Nội';
 
 const trackMetaPixelEvent = (eventName: string, params?: Record<string, any>, isCustom = false) => {
   try {
@@ -145,20 +145,11 @@ const FEATURED_PACKAGES: PackageCardItem[] = [
 export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
   const [dbCourses, setDbCourses] = useState<any[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<'all' | 'english' | 'igcse'>('all');
-
-  // Form state
-  const [fullName, setFullName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [studentEmail, setStudentEmail] = useState('');
   const [selectedCourseTitle, setSelectedCourseTitle] = useState('IELTS Premium Toàn Diện');
-  const [note, setNote] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submittedSuccess, setSubmittedSuccess] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
-  const [copiedZaloText, setCopiedZaloText] = useState(false);
 
   useEffect(() => {
-    document.title = 'Các Gói Khóa Học Online & Đăng Ký Học Thử | TonyEnglish';
+    document.title = 'Các Gói Khóa Học & Đăng Ký Học Thử | TonyEnglish Royal City';
     fetchPublicCourses();
 
     // Check if URL has ?course=...
@@ -186,100 +177,53 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
     }
   };
 
-  const scrollToRegister = (courseName?: string) => {
+  const scrollToContact = (courseName?: string) => {
     if (courseName) {
       setSelectedCourseTitle(courseName);
     }
     trackMetaPixelEvent('InitiateCheckout', {
       content_name: courseName || selectedCourseTitle,
     });
-    setSubmittedSuccess(false);
     const el = document.getElementById('dang-ky-hoc-thu');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
-  const buildRegistrationMessage = () => {
-    return [
-      `🎁 ĐĂNG KÝ HỌC THỬ & TƯ VẤN KHÓA HỌC - TONYENGLISH`,
-      `--------------------------------------------`,
-      `👤 Họ và tên: ${fullName.trim() || '(Chưa nhập)'}`,
-      `📞 Số điện thoại / Zalo: ${phone.trim() || '(Chưa nhập)'}`,
-      `✉️ Email nhận tài khoản học thử: ${studentEmail.trim() || '(Chưa nhập)'}`,
-      `📚 Gói khóa học quan tâm: ${selectedCourseTitle}`,
-      note.trim() ? `📝 Ghi chú / Trình độ hiện tại: ${note.trim()}` : '',
-      `--------------------------------------------`,
-      `🌐 Gửi từ trang đăng ký khóa học TonyEnglish`
-    ].filter(Boolean).join('\n');
-  };
-
-  const buildMailtoUrl = () => {
-    const subject = encodeURIComponent(`[TonyEnglish] Đăng ký học thử & Tư vấn: ${selectedCourseTitle} - ${fullName.trim() || phone.trim()}`);
-    const body = encodeURIComponent(buildRegistrationMessage());
-    return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-  };
-
-  const handleSubmitRegistration = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!fullName.trim() || !phone.trim()) {
-      alert('Vui lòng nhập Họ tên và Số điện thoại / Zalo để TonyEnglish liên hệ cấp tài khoản học thử nhé!');
-      return;
+  const handleZaloTrack = (courseName?: string) => {
+    const course = courseName || selectedCourseTitle;
+    if (courseName) {
+      setSelectedCourseTitle(courseName);
     }
-
-    setIsSubmitting(true);
-    try {
-      // 1. Gửi email tự động qua FormSubmit AJAX tới tranhuyton@gmail.com
-      try {
-        await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            _subject: `[TonyEnglish Ads] Đăng ký học thử: ${selectedCourseTitle} - ${fullName.trim()} (${phone.trim()})`,
-            Ho_va_ten: fullName.trim(),
-            So_dien_thoai_Zalo: phone.trim(),
-            Email_hoc_vien: studentEmail.trim() || 'Không điền',
-            Khoa_hoc_dang_ky: selectedCourseTitle,
-            Ghi_chu: note.trim() || 'Không có',
-            Nguon: window.location.href
-          })
-        });
-      } catch (ajaxErr) {
-        console.warn('FormSubmit AJAX fallback to mailto:', ajaxErr);
-      }
-
-      setSubmittedSuccess(true);
-      trackMetaPixelEvent('Lead', {
-        content_name: selectedCourseTitle,
-      });
-      trackMetaPixelEvent('TonyEnglish_Lead', {
-        course: selectedCourseTitle,
-      }, true);
-      // Mở luôn trình gửi email mặc định với nội dung điền sẵn để đảm bảo 100% gửi tới anh
-      window.location.href = buildMailtoUrl();
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChatZaloWithContent = async () => {
+    trackMetaPixelEvent('Lead', {
+      content_name: course,
+      contact_method: 'Zalo',
+    });
     trackMetaPixelEvent('Contact', {
-      content_name: selectedCourseTitle,
+      content_name: course,
       contact_method: 'Zalo',
     });
     trackMetaPixelEvent('TonyEnglish_ZaloContact', {
-      course: selectedCourseTitle,
+      course,
     }, true);
-    const msg = buildRegistrationMessage();
-    try {
-      await navigator.clipboard.writeText(msg);
-      setCopiedZaloText(true);
-      setTimeout(() => setCopiedZaloText(false), 4000);
-    } catch (e) {}
-    window.open(CONTACT_ZALO_URL, '_blank');
+  };
+
+  const handlePhoneTrack = (courseName?: string) => {
+    const course = courseName || selectedCourseTitle;
+    if (courseName) {
+      setSelectedCourseTitle(courseName);
+    }
+    trackMetaPixelEvent('Lead', {
+      content_name: course,
+      contact_method: 'Phone',
+    });
+    trackMetaPixelEvent('Contact', {
+      content_name: course,
+      contact_method: 'Phone',
+    });
+    trackMetaPixelEvent('TonyEnglish_PhoneCall', {
+      course,
+    }, true);
   };
 
   const handleCopyPromoLink = async () => {
@@ -305,14 +249,15 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
           <span className="inline-flex items-center gap-1.5 font-bold text-amber-300">
             <span>🎁</span> ĐẶC QUYỀN HỌC THỬ MIỄN PHÍ:
           </span>
-          <span>Trải nghiệm thực tế các học phần & bài giảng trên hệ thống trước khi đăng ký chính thức!</span>
+          <span>2 buổi học thử trực tiếp tại R2B Royal City & Cấp tài khoản trải nghiệm trên hệ thống!</span>
           <a
             href={CONTACT_ZALO_URL}
             target="_blank"
             rel="noreferrer"
+            onClick={() => handleZaloTrack('TopBar')}
             className="underline font-black text-cyan-200 hover:text-white transition"
           >
-            Zalo/Hotline: {CONTACT_PHONE_DISPLAY} ➜
+            Gọi / Zalo: {CONTACT_PHONE_DISPLAY} ➜
           </a>
         </div>
       </div>
@@ -332,16 +277,16 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest hidden sm:inline">
-                Online Academy & AI Testing
+                R2B Royal City & Online Academy
               </span>
             </div>
           </div>
 
           <div className="hidden lg:flex items-center gap-6 text-sm font-bold text-slate-600">
             <a href="#cac-goi-hoc" className="hover:text-[#0a5482] transition">Các gói khóa học</a>
-            <a href="#che-do-hoc-thu" className="hover:text-[#0a5482] transition">Trải nghiệm Học thử</a>
+            <a href="#che-do-hoc-thu" className="hover:text-[#0a5482] transition">Quy trình Học thử</a>
             <a href="#danh-sach-mon" className="hover:text-[#0a5482] transition">Danh mục môn học</a>
-            <a href="#dang-ky-hoc-thu" className="hover:text-[#0a5482] transition">Đăng ký & Liên hệ</a>
+            <a href="#dang-ky-hoc-thu" className="hover:text-[#0a5482] transition">Liên hệ Gọi / Zalo</a>
           </div>
 
           <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
@@ -354,21 +299,24 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
             </button>
 
             <a
+              href={`tel:${CONTACT_PHONE}`}
+              onClick={() => handlePhoneTrack('Navbar')}
+              className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-black px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition active:scale-95 whitespace-nowrap"
+            >
+              <span>📞</span>
+              <span>Gọi {CONTACT_PHONE_DISPLAY}</span>
+            </a>
+
+            <a
               href={CONTACT_ZALO_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-black px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl shadow-md shadow-blue-600/20 transition active:scale-95"
+              onClick={() => handleZaloTrack('Navbar')}
+              className="inline-flex items-center gap-1.5 bg-[#0068ff] hover:bg-[#0057d6] text-white text-xs sm:text-sm font-black px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl shadow-md shadow-blue-600/20 transition active:scale-95 whitespace-nowrap"
             >
               <span>💬</span>
-              <span>Zalo {CONTACT_PHONE_DISPLAY}</span>
+              <span>Zalo Tư Vấn</span>
             </a>
-
-            <button
-              onClick={() => scrollToRegister()}
-              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs sm:text-sm font-black px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-md shadow-orange-500/25 transition active:scale-95 whitespace-nowrap"
-            >
-              🎁 Đăng ký học thử
-            </button>
           </div>
         </div>
       </header>
@@ -384,44 +332,38 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
               <div className="lg:col-span-7 text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-cyan-200 font-black text-xs sm:text-sm px-4 py-1.5 rounded-full mb-6">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                  <span>HỆ THỐNG ĐÀO TẠO & LUYỆN THI QUỐC TẾ TÍCH HỢP AI 24/7</span>
+                  <span>LỚP HỌC TRỰC TIẾP TẠI R2B ROYAL CITY & HỆ THỐNG ONLINE AI 24/7</span>
                 </div>
 
                 <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-black tracking-tight leading-[1.15] mb-6">
-                  Đóng Gói Lộ Trình Học Thông Minh{' '}
+                  Lộ Trình Học Cá Nhân Hóa{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5ce1e6] via-[#2ab4e8] to-amber-300">
                     IELTS, Tiếng Anh & Cambridge IGCSE
                   </span>
                 </h1>
 
                 <p className="text-base sm:text-lg text-blue-100/90 font-medium leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
-                  Kết hợp hoàn hảo giữa <b>Bài giảng tương tác song ngữ</b>, <b>Podcast học thuật</b>, <b>Trợ lý AI chấm chữa Speaking/Writing 24/7</b> và <b>Kho 1.800+ đề thi chuẩn quốc tế</b>. Cho phép học viên <b>vào Lớp Học Thử miễn phí</b> để trải nghiệm thực tế trước khi đăng ký!
+                  Kết hợp hoàn hảo giữa <b>Lớp học trực tiếp nhóm nhỏ tại R2B Royal City</b> cùng <b>Bài giảng tương tác song ngữ</b>, <b>Podcast học thuật</b>, <b>Trợ lý AI chấm chữa 24/7</b> và <b>Kho 1.800+ đề thi chuẩn quốc tế</b>. Liên hệ trực tiếp qua <b>Điện thoại hoặc Zalo</b> để đặt lịch học thử miễn phí ngay hôm nay!
                 </p>
 
                 {/* CTA BUTTONS */}
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 mb-10">
-                  <button
-                    onClick={() => scrollToRegister()}
-                    className="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-slate-950 font-black text-base px-7 py-4 rounded-2xl shadow-xl shadow-orange-500/30 transition transform hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2"
-                  >
-                    <span>🎁 Đăng Ký Học Thử Miễn Phí</span>
-                    <span>➜</span>
-                  </button>
-
                   <a
                     href={CONTACT_ZALO_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-black text-base px-6 py-4 rounded-2xl shadow-xl shadow-blue-600/30 border border-white/20 transition transform hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2"
+                    onClick={() => handleZaloTrack('Hero Banner')}
+                    className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-black text-base px-7 py-4 rounded-2xl shadow-xl shadow-blue-600/35 border border-white/20 transition transform hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2"
                   >
-                    <span>💬 Nhắn Zalo: {CONTACT_PHONE_DISPLAY}</span>
+                    <span>💬 Nhắn Zalo Tư Vấn: {CONTACT_PHONE_DISPLAY}</span>
                   </a>
 
                   <a
                     href={`tel:${CONTACT_PHONE}`}
-                    className="bg-white/10 hover:bg-white/20 text-white font-bold text-base px-6 py-4 rounded-2xl border border-white/25 transition flex items-center justify-center gap-2"
+                    onClick={() => handlePhoneTrack('Hero Banner')}
+                    className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-black text-base px-7 py-4 rounded-2xl shadow-xl shadow-emerald-600/30 border border-white/20 transition transform hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2"
                   >
-                    <span>📞 Gọi: {CONTACT_PHONE_DISPLAY}</span>
+                    <span>📞 Gọi Trực Tiếp: {CONTACT_PHONE_DISPLAY}</span>
                   </a>
                 </div>
 
@@ -524,14 +466,17 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
 
                     <div className="mt-4 pt-4 border-t border-slate-200 flex items-center justify-between gap-2">
                       <div className="text-xs text-slate-600 font-medium">
-                        💡 Học thử thực tế ngay trên tài khoản riêng của bạn!
+                        💡 Nhắn Zalo hoặc gọi điện để nhận tài khoản học thử ngay!
                       </div>
-                      <button
-                        onClick={() => scrollToRegister()}
-                        className="bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-black px-3.5 py-2 rounded-xl transition shrink-0"
+                      <a
+                        href={CONTACT_ZALO_URL}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => handleZaloTrack('Hero Mockup Card')}
+                        className="bg-[#0068ff] hover:bg-[#0057d6] text-white text-xs font-black px-3.5 py-2 rounded-xl transition shrink-0"
                       >
-                        Nhận TK Học Thử ➜
-                      </button>
+                        💬 Zalo Nhận TK ➜
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -544,13 +489,13 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
         <section id="cac-goi-hoc" className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block bg-blue-100 text-[#0a5482] font-black text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-3">
-              CÁC GÓI HỌC ONLINE ĐÓNG GÓI TRỌN BỘ
+              CÁC GÓI HỌC TRỰC TIẾP & ONLINE TRỌN BỘ
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-800 tracking-tight mb-4">
-              Chọn Gói Học Phù Hợp & Đăng Ký Học Thử Ngay
+              Chọn Gói Học Phù Hợp & Liên Hệ Học Thử Ngay
             </h2>
             <p className="text-slate-600 font-medium text-base">
-              Tất cả các gói học đều được cấp tài khoản <b>Lớp Học Thử</b> để học viên xem toàn bộ lộ trình và học thử các bài giảng mẫu trước khi quyết định.
+              Phụ huynh và học viên chỉ cần <b>Gọi điện hoặc Nhắn Zalo {CONTACT_PHONE_DISPLAY}</b> để đặt lịch học thử trực tiếp tại <b>R2B Royal City</b> và nhận tài khoản <b>Lớp Học Thử</b> trên hệ thống.
             </p>
 
             {/* FILTER TABS */}
@@ -626,8 +571,8 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                   <div className="pt-5 border-t border-slate-100">
                     <div className="flex items-center justify-between mb-4 bg-amber-50/70 border border-amber-200/80 rounded-2xl px-4 py-3">
                       <div>
-                        <span className="text-[11px] font-bold text-slate-500 uppercase block">Học phí gói khóa học</span>
-                        <span className="text-lg font-black text-[#0a5482]">Liên hệ tư vấn</span>
+                        <span className="text-[11px] font-bold text-slate-500 uppercase block">Học phí & Lịch học</span>
+                        <span className="text-base font-black text-[#0a5482]">Gọi / Zalo: {CONTACT_PHONE_DISPLAY}</span>
                       </div>
                       <span className="bg-amber-100 text-amber-800 text-[11px] font-black px-2.5 py-1 rounded-full border border-amber-300">
                         🎁 Có Học Thử
@@ -635,19 +580,21 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                     </div>
 
                     <div className="grid grid-cols-2 gap-2.5">
-                      <button
-                        onClick={() => scrollToRegister(pkg.title)}
-                        className="bg-[#0a5482] hover:bg-[#084266] text-white font-black text-xs sm:text-sm py-3 px-3 rounded-xl shadow-md transition active:scale-95 flex items-center justify-center gap-1.5"
-                      >
-                        <span>🎁 Đăng ký học thử</span>
-                      </button>
                       <a
                         href={CONTACT_ZALO_URL}
                         target="_blank"
                         rel="noreferrer"
-                        className="bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm py-3 px-3 rounded-xl shadow-md transition active:scale-95 flex items-center justify-center gap-1.5"
+                        onClick={() => handleZaloTrack(pkg.title)}
+                        className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-black text-xs sm:text-sm py-3 px-3 rounded-xl shadow-md transition active:scale-95 flex items-center justify-center gap-1.5"
                       >
                         <span>💬 Nhắn Zalo</span>
+                      </a>
+                      <a
+                        href={`tel:${CONTACT_PHONE}`}
+                        onClick={() => handlePhoneTrack(pkg.title)}
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm py-3 px-3 rounded-xl shadow-md transition active:scale-95 flex items-center justify-center gap-1.5"
+                      >
+                        <span>📞 Gọi Tư Vấn</span>
                       </a>
                     </div>
                   </div>
@@ -665,10 +612,10 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                 TRẢI NGHIỆM TRƯỚC - ĐĂNG KÝ SAU
               </span>
               <h2 className="text-3xl font-black text-slate-800 mb-3">
-                Chế Độ "Lớp Học Thử" Của TonyEnglish Hoạt Động Thế Nào?
+                3 Bước Đơn Giản Để Bắt Đầu Học Thử Cùng Thầy Tony
               </h2>
               <p className="text-slate-600 font-medium">
-                Phụ huynh và học viên hoàn toàn yên tâm kiểm chứng chất lượng bài giảng, âm thanh Podcast và công nghệ AI trước khi đóng học phí.
+                Không cần điền form chờ đợi — Phụ huynh chỉ cần gọi điện hoặc nhắn Zalo để được tư vấn 1-1 và kích hoạt học thử ngay lập tức.
               </p>
             </div>
 
@@ -677,9 +624,9 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                 <div className="w-12 h-12 rounded-2xl bg-[#0a5482] text-white font-black text-xl flex items-center justify-center mb-5 shadow-md">
                   01
                 </div>
-                <h3 className="text-lg font-black text-slate-800 mb-2">Gửi Yêu Cầu Đăng Ký Học Thử</h3>
+                <h3 className="text-lg font-black text-slate-800 mb-2">Gọi Điện Hoặc Nhắn Zalo Trực Tiếp</h3>
                 <p className="text-sm text-slate-600 font-medium leading-relaxed">
-                  Điền thông tin vào form bên dưới để gửi Email trực tiếp cho thầy Tôn hoặc nhắn/gọi ngay qua <b>Zalo {CONTACT_PHONE_DISPLAY}</b> môn học bạn muốn trải nghiệm.
+                  Liên hệ trực tiếp thầy Tôn qua số <b>Hotline / Zalo {CONTACT_PHONE_DISPLAY}</b> để trao đổi nhanh về trình độ hiện tại, trường con đang theo học và mục tiêu điểm số.
                 </p>
               </div>
 
@@ -687,9 +634,9 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                 <div className="w-12 h-12 rounded-2xl bg-[#2ab4e8] text-white font-black text-xl flex items-center justify-center mb-5 shadow-md">
                   02
                 </div>
-                <h3 className="text-lg font-black text-slate-800 mb-2">Vào Lớp Học Thử Trên Hệ Thống</h3>
+                <h3 className="text-lg font-black text-slate-800 mb-2">Học Thử Tại Royal City & Cấp TK Online</h3>
                 <p className="text-sm text-slate-600 font-medium leading-relaxed">
-                  Bạn được cấp tài khoản vào <b>Lớp Học Thử</b>: nhìn thấy <b>100% danh mục học phần & bài giảng</b> của cả khóa học, và được mở khóa học thử một số học phần hoặc bài giảng tiêu biểu.
+                  Xếp lịch <b>02 buổi học thử & đánh giá năng lực miễn phí tại R2B Royal City</b>, đồng thời nhận ngay tài khoản <b>Lớp Học Thử</b> trên hệ thống chỉ trong 5 phút.
                 </p>
               </div>
 
@@ -697,9 +644,9 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                 <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-black text-xl flex items-center justify-center mb-5 shadow-md">
                   03
                 </div>
-                <h3 className="text-lg font-black text-slate-800 mb-2">Mở Khóa Toàn Bộ Khóa Học Chính Thức</h3>
+                <h3 className="text-lg font-black text-slate-800 mb-2">Mở Khóa Toàn Bộ Lộ Trình Chính Thức</h3>
                 <p className="text-sm text-slate-600 font-medium leading-relaxed">
-                  Sau khi học thử ưng ý, bạn liên hệ Zalo <b>{CONTACT_PHONE_DISPLAY}</b> để nhận tư vấn học phí ưu đãi và mở khóa toàn bộ các bài giảng màu xám còn lại cùng kho đề thi.
+                  Sau khi học thử ưng ý, học viên vào lộ trình chính thức và được mở khóa 100% bài giảng tương tác, kho 1.800+ đề Past Papers cùng AI Tutor chấm chữa 24/7.
                 </p>
               </div>
             </div>
@@ -722,6 +669,7 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                 href={CONTACT_ZALO_URL}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => handleZaloTrack('Course List Header')}
                 className="text-sm font-black text-[#0a5482] hover:underline flex items-center gap-1"
               >
                 <span>📞 Cần tư vấn chọn môn? Gọi/Zalo {CONTACT_PHONE_DISPLAY}</span>
@@ -761,16 +709,22 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                     </div>
 
                     <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
-                      <div>
-                        <span className="text-[10px] font-bold text-slate-400 uppercase block">Học phí</span>
-                        <span className="text-sm font-black text-[#0a5482]">Liên hệ</span>
-                      </div>
-                      <button
-                        onClick={() => scrollToRegister(course.title)}
-                        className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 font-black text-xs px-3 py-2 rounded-xl transition active:scale-95"
+                      <a
+                        href={`tel:${CONTACT_PHONE}`}
+                        onClick={() => handlePhoneTrack(course.title)}
+                        className="flex-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-black text-xs py-2 px-2.5 rounded-xl transition active:scale-95 text-center"
                       >
-                        🎁 Học thử ngay
-                      </button>
+                        📞 Gọi
+                      </a>
+                      <a
+                        href={CONTACT_ZALO_URL}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => handleZaloTrack(course.title)}
+                        className="flex-1 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 font-black text-xs py-2 px-2.5 rounded-xl transition active:scale-95 text-center"
+                      >
+                        💬 Zalo Học thử
+                      </a>
                     </div>
                   </div>
                 );
@@ -779,227 +733,130 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
           </section>
         )}
 
-        {/* SECTION: FORM ĐĂNG KÝ HỌC THỬ & LIÊN HỆ TRỰC TIẾP */}
+        {/* SECTION: LIÊN HỆ TRỰC TIẾP GỌI ĐIỆN HOẶC ZALO */}
         <section id="dang-ky-hoc-thu" className="py-16 md:py-24 bg-gradient-to-b from-slate-100 to-slate-200/70">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-              {/* LEFT COLUMN: DIRECT CONTACT INFO */}
-              <div className="lg:col-span-5 bg-gradient-to-br from-[#0a5482] via-[#083b5c] to-slate-900 text-white p-8 sm:p-10 flex flex-col justify-between">
+              {/* LEFT COLUMN: LỚP HỌC & QUYỀN LỢI */}
+              <div className="lg:col-span-6 bg-gradient-to-br from-[#0a5482] via-[#083b5c] to-slate-900 text-white p-8 sm:p-10 flex flex-col justify-between">
                 <div>
                   <span className="inline-block bg-amber-400 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider mb-4">
-                    HỖ TRỢ TƯ VẤN & CẤP TÀI KHOẢN NHANH
+                    LIÊN HỆ TRỰC TIẾP THẦY TRẦN HUY TÔN
                   </span>
                   <h2 className="text-2xl sm:text-3xl font-black leading-tight mb-4">
-                    Đăng Ký Học Thử & Nhận Báo Giá Khóa Học
+                    Tư Vấn Lộ Trình 1-1 & Đặt Lịch Học Thử Miễn Phí
                   </h2>
-                  <p className="text-blue-100/85 text-sm font-medium leading-relaxed mb-8">
-                    Anh/chị phụ huynh và các bạn học viên có thể điền form đăng ký bên cạnh để gửi Email trực tiếp, hoặc <b>nhắn tin / gọi điện ngay qua Zalo</b> để được kích hoạt Lớp Học Thử trong 5 phút!
+                  <p className="text-blue-100/90 text-sm sm:text-base font-medium leading-relaxed mb-6">
+                    Anh/chị phụ huynh và các bạn học viên vui lòng <b>Gọi điện trực tiếp</b> hoặc <b>Nhắn tin qua Zalo {CONTACT_PHONE_DISPLAY}</b> để được thầy Tôn tư vấn lộ trình phù hợp nhất và mở tài khoản học thử ngay trong 5 phút!
                   </p>
 
-                  <div className="space-y-4">
-                    {/* ZALO / PHONE CARD */}
-                    <a
-                      href={CONTACT_ZALO_URL}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-4 bg-white/10 hover:bg-white/15 border border-white/20 p-4 rounded-2xl transition group"
-                    >
-                      <div className="w-12 h-12 rounded-2xl bg-[#0068ff] flex items-center justify-center text-2xl shrink-0 shadow-lg">
-                        💬
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-xs font-bold text-cyan-300 uppercase tracking-wider">Nhắn tin Zalo trực tiếp</div>
-                        <div className="text-lg font-black text-white group-hover:text-amber-300 transition">
-                          {CONTACT_PHONE_DISPLAY}
-                        </div>
-                        <div className="text-xs text-blue-200">Bấm để mở Zalo chat ngay (Mr. Tôn)</div>
-                      </div>
-                    </a>
-
-                    {/* CALL CARD */}
-                    <a
-                      href={`tel:${CONTACT_PHONE}`}
-                      className="flex items-center gap-4 bg-white/10 hover:bg-white/15 border border-white/20 p-4 rounded-2xl transition group"
-                    >
-                      <div className="w-12 h-12 rounded-2xl bg-emerald-500 flex items-center justify-center text-2xl shrink-0 shadow-lg">
-                        📞
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-xs font-bold text-emerald-300 uppercase tracking-wider">Hotline tư vấn khóa học</div>
-                        <div className="text-lg font-black text-white group-hover:text-emerald-300 transition">
-                          {CONTACT_PHONE_DISPLAY}
-                        </div>
-                        <div className="text-xs text-blue-200">Hỗ trợ tư vấn lộ trình & báo giá chi tiết</div>
-                      </div>
-                    </a>
-
-                    {/* EMAIL CARD */}
-                    <a
-                      href={buildMailtoUrl()}
-                      className="flex items-center gap-4 bg-white/10 hover:bg-white/15 border border-white/20 p-4 rounded-2xl transition group"
-                    >
-                      <div className="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center text-2xl shrink-0 shadow-lg">
-                        ✉️
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-xs font-bold text-amber-300 uppercase tracking-wider">Email nhận đăng ký học thử</div>
-                        <div className="text-base font-black text-white truncate group-hover:text-amber-300 transition">
-                          {CONTACT_EMAIL}
-                        </div>
-                        <div className="text-xs text-blue-200">Gửi email yêu cầu mở tài khoản học thử</div>
-                      </div>
-                    </a>
+                  <div className="space-y-3.5 bg-white/10 border border-white/15 rounded-2xl p-5 mb-6">
+                    <div className="flex items-start gap-3">
+                      <span className="text-amber-300 text-lg shrink-0">🎁</span>
+                      <p className="text-xs sm:text-sm text-blue-50 font-medium leading-relaxed">
+                        <b>Miễn phí 02 buổi học thử & Test đầu vào</b> trực tiếp tại lớp học <b>Tòa R2B Royal City</b>.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-cyan-300 text-lg shrink-0">🔑</span>
+                      <p className="text-xs sm:text-sm text-blue-50 font-medium leading-relaxed">
+                        <b>Cấp ngay tài khoản Lớp Học Thử Online</b> trên hệ thống <span className="underline">tonyenglish.vn</span> để trải nghiệm bài giảng song ngữ, Podcast & AI Tutor 24/7.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-emerald-300 text-lg shrink-0">🎯</span>
+                      <p className="text-xs sm:text-sm text-blue-50 font-medium leading-relaxed">
+                        Chuyên sâu <b>IELTS 4 Kỹ năng</b> & <b>Cambridge IGCSE</b> (Maths, Co-ordinated Sciences, Biology, Chemistry, Physics, Economics, Business, ESL).
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/15 text-xs text-blue-200/80 space-y-1.5">
-                  <p>✔ Mở tài khoản học thử miễn phí các học phần / bài giảng mẫu</p>
-                  <p>✔ Học phí linh hoạt theo từng môn hoặc combo trọn gói: <b>Liên hệ</b></p>
-                  <p>✔ Học mọi lúc mọi nơi trên Máy tính, iPad và Điện thoại</p>
+                <div className="pt-5 border-t border-white/15 text-xs sm:text-sm text-blue-200 space-y-1.5">
+                  <div className="font-black text-amber-300 uppercase tracking-wider text-xs">📍 ĐỊA CHỈ LỚP HỌC TRỰC TIẾP:</div>
+                  <p className="font-bold text-white text-sm sm:text-base">{CONTACT_ADDRESS}</p>
+                  <p className="text-xs text-blue-200/80">Phù hợp cho học sinh khu vực Royal City, Thanh Xuân, Đống Đa, Cầu Giấy & các trường BVIS, Vinschool, Nguyễn Siêu, Olympia...</p>
                 </div>
               </div>
 
-              {/* RIGHT COLUMN: REGISTRATION FORM */}
-              <div className="lg:col-span-7 p-8 sm:p-10">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-black text-slate-800 mb-1">
-                    🎁 Form Đăng Ký Nhận Tài Khoản Học Thử
+              {/* RIGHT COLUMN: 2 NÚT HÀNH ĐỘNG LỚN (GỌI ĐIỆN & ZALO) */}
+              <div className="lg:col-span-6 p-8 sm:p-10 flex flex-col justify-center bg-slate-50/60">
+                <div className="mb-6 text-center lg:text-left">
+                  <span className="inline-block bg-emerald-100 text-emerald-800 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                    PHẢN HỒI NGAY LẬP TỨC
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-black text-slate-800 mb-2">
+                    Kết Nối Ngay Qua Điện Thoại Hoặc Zalo
                   </h3>
-                  <p className="text-sm text-slate-500 font-medium">
-                    Điền thông tin bên dưới rồi chọn <b>Gửi Email</b> hoặc <b>Nhắn qua Zalo {CONTACT_PHONE_DISPLAY}</b>.
+                  <p className="text-sm text-slate-600 font-medium">
+                    Chạm vào một trong hai nút bên dưới để gọi điện hoặc mở khung chat Zalo trực tiếp với <b>Thầy Trần Huy Tôn ({CONTACT_PHONE_DISPLAY})</b>:
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmitRegistration} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-black text-slate-600 uppercase tracking-wider mb-1.5">
-                        Họ và tên Học viên / Phụ huynh *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={fullName}
-                        onChange={(e) => setFullName(e.target.value)}
-                        placeholder="VD: Nguyễn Minh Anh"
-                        className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:ring-2 focus:ring-[#0a5482] bg-slate-50 focus:bg-white transition"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-black text-slate-600 uppercase tracking-wider mb-1.5">
-                        Số điện thoại / Zalo liên hệ *
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="VD: 0901234567"
-                        className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:ring-2 focus:ring-[#0a5482] bg-slate-50 focus:bg-white transition"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-black text-slate-600 uppercase tracking-wider mb-1.5">
-                        Email nhận tài khoản học thử
-                      </label>
-                      <input
-                        type="email"
-                        value={studentEmail}
-                        onChange={(e) => setStudentEmail(e.target.value)}
-                        placeholder="VD: hocvien@gmail.com"
-                        className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:ring-2 focus:ring-[#0a5482] bg-slate-50 focus:bg-white transition"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-black text-slate-600 uppercase tracking-wider mb-1.5">
-                        Khóa học muốn đăng ký học thử *
-                      </label>
-                      <select
-                        value={selectedCourseTitle}
-                        onChange={(e) => setSelectedCourseTitle(e.target.value)}
-                        className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-bold text-slate-800 outline-none focus:ring-2 focus:ring-[#0a5482] bg-slate-50 focus:bg-white transition"
-                      >
-                        <optgroup label="Các Gói Combo Nổi Bật">
-                          {FEATURED_PACKAGES.map(pkg => (
-                            <option key={pkg.id} value={pkg.title}>{pkg.title}</option>
-                          ))}
-                        </optgroup>
-                        {dbCourses.length > 0 && (
-                          <optgroup label="Từng Môn Học Cụ Thể">
-                            {dbCourses.map(c => (
-                              <option key={c.id} value={c.title}>{c.title}</option>
-                            ))}
-                          </optgroup>
-                        )}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-black text-slate-600 uppercase tracking-wider mb-1.5">
-                      Ghi chú thêm (Lớp đang học / Mục tiêu / Học phần muốn học thử)
-                    </label>
-                    <textarea
-                      rows={3}
-                      value={note}
-                      onChange={(e) => setNote(e.target.value)}
-                      placeholder="VD: Em đang học lớp 9 chương trình Cambridge, muốn đăng ký học thử môn IGCSE Economics & Science..."
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-medium outline-none focus:ring-2 focus:ring-[#0a5482] bg-slate-50 focus:bg-white transition resize-none"
-                    />
-                  </div>
-
-                  {submittedSuccess && (
-                    <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 text-emerald-900 text-xs sm:text-sm font-medium space-y-2 animate-in fade-in">
-                      <div className="font-black text-emerald-700 flex items-center gap-1.5">
-                        <span>✅</span>
-                        <span>Đã tạo yêu cầu đăng ký học thử thành công!</span>
+                <div className="space-y-4">
+                  {/* BIG ZALO BUTTON CARD */}
+                  <a
+                    href={CONTACT_ZALO_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => handleZaloTrack('Contact Section Big Card')}
+                    className="flex items-center justify-between gap-4 bg-[#0068ff] hover:bg-[#0057d6] text-white p-5 sm:p-6 rounded-3xl shadow-xl shadow-blue-600/25 transition transform hover:-translate-y-0.5 active:scale-95 group"
+                  >
+                    <div className="flex items-center gap-4 min-w-0">
+                      <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-3xl shrink-0 shadow-inner">
+                        💬
                       </div>
-                      <p>
-                        Hệ thống đã gửi thông tin tới email <b>{CONTACT_EMAIL}</b>. Để được cấp tài khoản học thử nhanh nhất ngay lập tức, bạn có thể bấm nút <b>Nhắn Zalo {CONTACT_PHONE_DISPLAY}</b> bên dưới nhé!
-                      </p>
+                      <div className="min-w-0">
+                        <div className="text-xs font-black text-cyan-200 uppercase tracking-wider mb-0.5">
+                          NHẮN TIN ZALO TRỰC TIẾP (24/7)
+                        </div>
+                        <div className="text-xl sm:text-2xl font-black tracking-tight truncate">
+                          Zalo: {CONTACT_PHONE_DISPLAY}
+                        </div>
+                        <div className="text-xs text-blue-100 font-medium mt-0.5">
+                          Bấm để mở Zalo nhận tư vấn & tài khoản học thử
+                        </div>
+                      </div>
                     </div>
-                  )}
+                    <span className="bg-white text-[#0068ff] font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl shrink-0 group-hover:bg-amber-300 group-hover:text-slate-950 transition">
+                      Mở Zalo ➜
+                    </span>
+                  </a>
 
-                  {copiedZaloText && (
-                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-blue-800 text-xs font-bold">
-                      📋 Đã tự động copy nội dung đăng ký! Bạn chỉ cần nhấn "Dán (Paste)" vào khung chat Zalo {CONTACT_PHONE_DISPLAY}.
+                  {/* BIG PHONE CALL BUTTON CARD */}
+                  <a
+                    href={`tel:${CONTACT_PHONE}`}
+                    onClick={() => handlePhoneTrack('Contact Section Big Card')}
+                    className="flex items-center justify-between gap-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white p-5 sm:p-6 rounded-3xl shadow-xl shadow-emerald-600/25 transition transform hover:-translate-y-0.5 active:scale-95 group"
+                  >
+                    <div className="flex items-center gap-4 min-w-0">
+                      <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-3xl shrink-0 shadow-inner">
+                        📞
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-xs font-black text-emerald-200 uppercase tracking-wider mb-0.5">
+                          GỌI ĐIỆN TRỰC TIẾP HOTLINE
+                        </div>
+                        <div className="text-xl sm:text-2xl font-black tracking-tight truncate">
+                          {CONTACT_PHONE_DISPLAY}
+                        </div>
+                        <div className="text-xs text-emerald-100 font-medium mt-0.5">
+                          Gặp trực tiếp thầy Trần Huy Tôn tư vấn lộ trình
+                        </div>
+                      </div>
                     </div>
-                  )}
+                    <span className="bg-white text-emerald-700 font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl shrink-0 group-hover:bg-amber-300 group-hover:text-slate-950 transition">
+                      Gọi ngay ➜
+                    </span>
+                  </a>
+                </div>
 
-                  <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="flex-1 bg-gradient-to-r from-[#0a5482] to-[#0e6ba8] hover:from-[#084266] hover:to-[#0a5482] text-white font-black text-sm py-4 px-5 rounded-2xl shadow-lg shadow-blue-900/20 transition active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2"
-                    >
-                      <span>✉️</span>
-                      <span>{isSubmitting ? 'Đang gửi Email...' : 'Gửi Email Đăng Ký Học Thử'}</span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={handleChatZaloWithContent}
-                      className="flex-1 bg-[#0068ff] hover:bg-[#0057d6] text-white font-black text-sm py-4 px-5 rounded-2xl shadow-lg shadow-blue-600/25 transition active:scale-95 flex items-center justify-center gap-2"
-                    >
-                      <span>💬</span>
-                      <span>Nhắn Zalo: {CONTACT_PHONE_DISPLAY}</span>
-                    </button>
-                  </div>
-
-                  <div className="text-center pt-1">
-                    <a
-                      href={`tel:${CONTACT_PHONE}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-black text-emerald-700 hover:text-emerald-800 hover:underline"
-                    >
-                      <span>📞 Hoặc gọi trực tiếp Hotline: {CONTACT_PHONE_DISPLAY} (Mr. Trần Huy Tôn)</span>
-                    </a>
-                  </div>
-                </form>
+                <div className="mt-6 bg-amber-50 border border-amber-200/90 rounded-2xl p-4 flex items-center gap-3 text-amber-900">
+                  <span className="text-2xl shrink-0">💡</span>
+                  <p className="text-xs sm:text-sm font-medium leading-relaxed">
+                    Phụ huynh chỉ cần nhắn tin Zalo cú pháp <b>"Học thử IELTS"</b> hoặc <b>"Học thử IGCSE"</b> tới số <b>{CONTACT_PHONE_DISPLAY}</b>, thầy Tôn sẽ phản hồi và hướng dẫn ngay lập tức!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1012,8 +869,8 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
           <div className="flex items-center gap-3">
             <img src="/logo-shield.png" alt="TonyEnglish" className="h-8 w-auto object-contain" />
             <div>
-              <div className="font-black text-lg tracking-tight text-white">TONYENGLISH ONLINE ACADEMY</div>
-              <div className="text-xs text-slate-400">Hotline / Zalo: {CONTACT_PHONE_DISPLAY} • Email: {CONTACT_EMAIL}</div>
+              <div className="font-black text-lg tracking-tight text-white">TONYENGLISH - R2B ROYAL CITY & ONLINE ACADEMY</div>
+              <div className="text-xs text-slate-400">Hotline / Zalo: {CONTACT_PHONE_DISPLAY} • Địa chỉ: {CONTACT_ADDRESS}</div>
             </div>
           </div>
           <div className="flex items-center gap-4 text-xs font-bold">
@@ -1021,42 +878,47 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
               Trang chủ hệ thống
             </button>
             <span>•</span>
-            <a href={CONTACT_ZALO_URL} target="_blank" rel="noreferrer" className="text-cyan-400 hover:text-cyan-300 transition">
+            <a
+              href={CONTACT_ZALO_URL}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => handleZaloTrack('Footer')}
+              className="text-cyan-400 hover:text-cyan-300 transition"
+            >
               Zalo {CONTACT_PHONE_DISPLAY}
             </a>
             <span>•</span>
-            <a href={`tel:${CONTACT_PHONE}`} className="text-emerald-400 hover:text-emerald-300 transition">
+            <a
+              href={`tel:${CONTACT_PHONE}`}
+              onClick={() => handlePhoneTrack('Footer')}
+              className="text-emerald-400 hover:text-emerald-300 transition"
+            >
               Gọi {CONTACT_PHONE_DISPLAY}
             </a>
           </div>
         </div>
       </footer>
 
-      {/* STICKY MOBILE BOTTOM BAR (CỰC KỲ HIỆU QUẢ CHO KHÁCH TỪ QUẢNG CÁO FACEBOOK TRÊN ĐIỆN THOẠI) */}
-      <div className="fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center gap-2 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+      {/* STICKY MOBILE BOTTOM BAR (CHỈ GỌI ĐIỆN & ZALO TRỰC TIẾP) */}
+      <div className="fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center gap-2.5 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
         <a
           href={`tel:${CONTACT_PHONE}`}
-          className="flex-1 bg-emerald-600 text-white font-black text-xs py-3 rounded-xl flex items-center justify-center gap-1 shadow-sm active:scale-95"
+          onClick={() => handlePhoneTrack('Mobile Sticky Bar')}
+          className="flex-1 bg-emerald-600 text-white font-black text-xs sm:text-sm py-3.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
         >
           <span>📞</span>
-          <span>Gọi {CONTACT_PHONE_DISPLAY}</span>
+          <span>Gọi: {CONTACT_PHONE_DISPLAY}</span>
         </a>
         <a
           href={CONTACT_ZALO_URL}
           target="_blank"
           rel="noreferrer"
-          className="flex-1 bg-[#0068ff] text-white font-black text-xs py-3 rounded-xl flex items-center justify-center gap-1 shadow-sm active:scale-95"
+          onClick={() => handleZaloTrack('Mobile Sticky Bar')}
+          className="flex-1 bg-[#0068ff] text-white font-black text-xs sm:text-sm py-3.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
         >
           <span>💬</span>
-          <span>Zalo Tư Vấn</span>
+          <span>Nhắn Zalo Tư Vấn</span>
         </a>
-        <button
-          onClick={() => scrollToRegister()}
-          className="flex-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black text-xs py-3 rounded-xl flex items-center justify-center gap-1 shadow-sm active:scale-95"
-        >
-          <span>🎁</span>
-          <span>Học Thử</span>
-        </button>
       </div>
     </div>
   );
