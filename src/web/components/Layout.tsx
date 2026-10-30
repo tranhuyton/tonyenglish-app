@@ -333,11 +333,11 @@ export const Layout: React.FC<{
           {/* Right tools: Search/Dictionary + Course selector + Language */}
           <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-2.5 w-full md:w-auto ml-auto">
             {/* Smart Dictionary & Search Bar */}
-            <div className="relative flex-1 md:flex-initial flex items-center bg-slate-800/90 border border-slate-700 rounded-lg focus-within:border-[#2ab4e8] transition-colors min-w-0">
+            <div className="relative flex-1 md:flex-initial flex items-center bg-slate-800/95 border border-sky-400/50 hover:border-[#2ab4e8] rounded-lg focus-within:border-[#2ab4e8] focus-within:ring-2 focus-within:ring-[#2ab4e8]/25 shadow-xs transition-all min-w-0">
               <button
                 type="button"
                 onClick={() => setSearchDropdownOpen(!searchDropdownOpen)}
-                className="px-2 sm:px-2.5 py-1.5 text-xs font-bold text-[#2ab4e8] border-r border-slate-700 hover:bg-slate-700/60 rounded-l-lg flex items-center gap-1 whitespace-nowrap shrink-0"
+                className="px-2 sm:px-2.5 py-1.5 text-xs font-bold text-[#2ab4e8] border-r border-slate-600/80 hover:bg-slate-700/60 rounded-l-lg flex items-center gap-1 whitespace-nowrap shrink-0"
                 title="Chọn chế độ tra cứu"
               >
                 {searchMode === 'dic' ? '📖 Từ điển' : searchMode === 'web' ? '🔍 Tìm bài' : '🌐 Dịch'}
@@ -975,24 +975,33 @@ export const Layout: React.FC<{
       {/* 6. DICTIONARY POPUP MODAL */}
       {popupModal && (
         <div
-          className="fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-4"
+          className="fixed inset-0 bg-slate-900/20 z-50 flex items-center justify-center p-3 sm:p-6"
           onClick={() => setPopupModal(null)}
         >
           <div
-            className="bg-white rounded-3xl w-full max-w-4xl h-[640px] max-h-[88vh] shadow-2xl flex flex-col overflow-hidden"
+            className="bg-white rounded-xl border-2 border-slate-300 w-full max-w-[920px] h-[82vh] max-h-[720px] shadow-2xl flex flex-col overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="px-4 sm:px-6 py-3 sm:py-4 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2.5">
-              <div className="flex items-center gap-2">
+            <div className="px-5 py-2.5 bg-white border-b border-slate-300 flex flex-wrap items-center justify-between gap-2.5 shrink-0">
+              <div className="flex items-center gap-2.5 min-w-0">
                 <img
-                  src="/logo-shield.png"
+                  src="/logo-text.png"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
+                    (e.currentTarget as HTMLImageElement).style.display = 'none';
+                  }}
+                  alt="TONYENGLISH"
+                  className="h-6 w-auto object-contain"
+                />
+                <img
+                  src="/logo-shield-old.png"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/logo-shield.png';
                   }}
                   alt="TonyEnglish"
-                  className="h-6 w-auto"
+                  className="h-6 w-auto object-contain"
                 />
-                <h3 className="font-black text-[#0a5482] text-sm sm:text-base">{popupModal.title}</h3>
+                <span className="hidden sm:inline-block text-slate-300 mx-0.5">|</span>
+                <h3 className="font-bold text-[#0a5482] text-xs sm:text-sm truncate">{popupModal.title}</h3>
               </div>
 
               <div className="flex items-center gap-2 ml-auto">
@@ -1010,7 +1019,7 @@ export const Layout: React.FC<{
                       });
                     }
                   }}
-                  className="flex items-center bg-white border border-slate-300 rounded-xl overflow-hidden focus-within:border-[#2ab4e8]"
+                  className="flex items-center bg-white border-2 border-[#0a5482]/35 rounded-xl overflow-hidden focus-within:border-[#2ab4e8] shadow-2xs"
                 >
                   <input
                     type="text"
@@ -1020,11 +1029,11 @@ export const Layout: React.FC<{
                     autoCorrect="off"
                     spellCheck={false}
                     placeholder={lang === 'vi' ? 'Nhập từ khác...' : 'Type another word...'}
-                    className="px-2.5 py-1 text-xs sm:text-sm text-slate-800 w-28 sm:w-40 focus:outline-none"
+                    className="px-2.5 py-1 text-xs sm:text-sm text-slate-800 w-28 sm:w-44 focus:outline-none"
                   />
                   <button
                     type="submit"
-                    className="px-2.5 py-1 bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-bold cursor-pointer"
+                    className="px-3 py-1 bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-bold cursor-pointer"
                   >
                     Tra
                   </button>
@@ -1038,7 +1047,7 @@ export const Layout: React.FC<{
                       url: 'https://dic.tienganh123.com/v2/',
                     })
                   }
-                  className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 text-xs font-bold cursor-pointer"
+                  className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-300 text-xs font-bold cursor-pointer"
                   title="Mở giao diện từ điển đầy đủ"
                 >
                   📖 Khung đầy đủ
@@ -1047,16 +1056,21 @@ export const Layout: React.FC<{
                 <button
                   type="button"
                   onClick={() => setPopupModal(null)}
-                  className="w-8 h-8 rounded-full bg-slate-200 hover:bg-rose-500 hover:text-white text-slate-600 font-bold flex items-center justify-center transition-colors shrink-0 cursor-pointer"
+                  className="p-1 hover:opacity-80 transition-opacity cursor-pointer shrink-0"
+                  title="Đóng (Esc)"
                 >
-                  ✕
+                  <img
+                    src="https://dic.tienganh123.com/image/close.gif"
+                    alt="Close"
+                    className="w-5 h-5 block"
+                  />
                 </button>
               </div>
             </div>
             {popupModal.url && (
               <iframe
                 src={popupModal.url}
-                className="w-full flex-1 border-0"
+                className="w-full flex-1 border-0 bg-white"
                 title={popupModal.title}
               />
             )}
@@ -1071,14 +1085,13 @@ export const Layout: React.FC<{
           style={{
             background: '#FFF',
             position: 'absolute',
-            border: '1px solid #cbd5e1',
-            borderRadius: '12px',
-            overflow: 'hidden',
+            border: '1px solid #CCC',
             left: `${quickDict.x}px`,
             top: `${quickDict.y}px`,
             width: '315px',
+            padding: '2px',
             zIndex: 999999,
-            boxShadow: '0 10px 30px rgba(15, 23, 42, 0.22)',
+            boxShadow: '0 6px 24px rgba(0,0,0,0.18)',
           }}
         >
           <div
@@ -1086,21 +1099,31 @@ export const Layout: React.FC<{
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              background: '#f8fafc',
-              padding: '6px 10px',
-              borderBottom: '1px solid #e2e8f0',
+              background: '#ffffff',
+              padding: '3px 4px 4px 6px',
+              borderBottom: '1px solid #CCC',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <div
+              onClick={() => {
+                setPopupModal({
+                  title: t('Look up dictionary'),
+                  url: 'https://dic.tienganh123.com/v2/',
+                });
+                setQuickDict(null);
+              }}
+              style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer' }}
+              title="Bấm để mở Từ điển lớn"
+            >
               <img
-                src="/themes/tony/assets/img/logo-text.png"
+                src="/logo-text.png"
                 alt="TONYENGLISH"
-                style={{ height: '18px', width: 'auto' }}
+                style={{ height: '20px', width: 'auto', objectFit: 'contain' }}
               />
               <img
-                src="/themes/tony/assets/img/logo khong chu.png"
+                src="/logo-shield-old.png"
                 alt="Shield"
-                style={{ height: '18px', width: 'auto' }}
+                style={{ height: '20px', width: 'auto', objectFit: 'contain' }}
               />
             </div>
             <button
@@ -1109,21 +1132,26 @@ export const Layout: React.FC<{
               style={{
                 border: 'none',
                 background: 'transparent',
-                padding: '2px 6px',
+                padding: 0,
                 cursor: 'pointer',
-                fontWeight: 'bold',
-                color: '#64748b',
+                display: 'flex',
+                alignItems: 'center',
               }}
+              title="Đóng (Esc)"
             >
-              ✕
+              <img
+                src="https://dic.tienganh123.com/image/close.gif"
+                alt="Close"
+                style={{ width: '16px', height: '16px', display: 'block' }}
+              />
             </button>
           </div>
-          <div>
+          <div style={{ background: '#fff', width: '100%', height: '205px' }}>
             <iframe
               src={`https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(quickDict.word)}&dict=ev_ve&m=yes`}
               style={{
                 width: '100%',
-                height: '210px',
+                height: '205px',
                 border: 0,
               }}
               title={`Quick Lookup: ${quickDict.word}`}

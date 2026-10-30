@@ -270,14 +270,14 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
       {standaloneOpen && (
         <div
           id="tony-standalone-dict-modal"
-          className="fixed inset-0 z-[99998] bg-slate-900/65 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150"
+          className="fixed inset-0 z-[99998] bg-slate-900/20 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150"
           onClick={() => setStandaloneOpen(false)}
         >
           <div
-            className="bg-white rounded-xl shadow-2xl border border-slate-300 w-full max-w-[920px] h-[82vh] max-h-[720px] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
+            className="bg-white rounded-xl shadow-2xl border-2 border-slate-300 w-full max-w-[920px] h-[82vh] max-h-[720px] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white border-b border-slate-200 px-5 py-2.5 flex items-center justify-between gap-4 shrink-0">
+            <div className="bg-white border-b border-slate-300 px-5 py-2.5 flex items-center justify-between gap-4 shrink-0">
               <div className="flex items-center gap-2.5 min-w-0">
                 <img
                   src="/logo-text.png"
