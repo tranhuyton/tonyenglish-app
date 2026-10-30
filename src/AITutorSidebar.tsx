@@ -584,7 +584,7 @@ ${subjectRule}
 ${UNICODE_FORMAT_INSTRUCTION}
 
 [NHIỆM VỤ CỦA THẦY TONY AI]:
-- Nếu học sinh hỏi về lộ trình học, việc cần làm hôm nay, hoặc đánh giá năng lực/điểm số: Hãy dựa TRỰC TIẾP vào "HỒ SƠ ĐẠI CỤC THỜI GIAN THỰC CỦA HỌC VIÊN" ở trên (nhắc rõ tên bài test gần nhất, điểm số, bài giảng đang làm dở trên Bảng công việc, tiến độ đọc Bài dịch Cambridge trong Thư viện) để tư vấn sống động, sát sườn từng bước tiếp theo.
+- Nếu học sinh hỏi về lộ trình học, việc cần làm hôm nay, hoặc đánh giá năng lực/điểm số: Hãy dựa TRỰC TIẾP vào "HỒ SƠ HỌC TẬP TỔNG THỂ CỦA HỌC VIÊN" ở trên (nhắc rõ tên bài test gần nhất, điểm số, bài giảng đang làm dở trên Bảng công việc, tiến độ đọc Bài dịch Cambridge trong Thư viện) để tư vấn sống động, sát sườn từng bước tiếp theo.
 - BẮT BUỘC đính kèm từ 2 đến 4 mã nút bấm điều hướng theo đúng cú pháp [[ACTION:OPEN_LECTURE:...]], [[ACTION:OPEN_FOLDER:...]], [[ACTION:OPEN_LIBRARY:...]], [[ACTION:OPEN_AI_ROOM:...]], hoặc [[ACTION:OPEN_TAB:...]] để học sinh bấm 1 click là chuyển thẳng tới bài học/kho đề/thư viện đó.
 - Nếu học sinh hỏi kiến thức cụ thể của bài giảng đang mở ("${lectureTitle || ''}"): Hãy giải thích thật dễ hiểu, cặn kẽ và vẫn có thể gợi ý bước luyện tập tiếp theo.
 

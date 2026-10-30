@@ -211,6 +211,35 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [analyticsTheme, setAnalyticsTheme] = useState<BoardTheme>(() => loadTheme(`tony_analytics_theme_${currentUser?.id}`, 'tony_analytics_theme'));
   const [isAnalyticsThemeModalOpen, setIsAnalyticsThemeModalOpen] = useState(false);
   const [studentActivities, setStudentActivities] = useState<any[]>([]);
+  const [isStudyCoachModalOpen, setIsStudyCoachModalOpen] = useState(false);
+  const [coachModalCourseId, setCoachModalCourseId] = useState<string>('');
+
+  const supportedCoachCourses = useMemo(() => {
+    const list = courses.filter((c) => isCoachSupportedCourse(String(c.id), c.title));
+    if (list.length > 0) return list;
+    return [
+      { id: '239a64f0-c106-40e5-a6e2-4e685a0d70fb', title: 'IELTS Premium' },
+      { id: 'a2a949c7-c23e-45a7-82fa-cdeda5cc32a7', title: 'IGCSE-Co-ordinated Science-0654' },
+    ];
+  }, [courses]);
+
+  const handleOpenStudyCoachModal = (targetCourseId?: string) => {
+    const candidateId =
+      targetCourseId ||
+      (selectedCourseId && isCoachSupportedCourse(selectedCourseId, courses.find((c) => String(c.id) === String(selectedCourseId))?.title)
+        ? selectedCourseId
+        : '') ||
+      (filterCourse !== 'all' && isCoachSupportedCourse(filterCourse, courses.find((c) => String(c.id) === String(filterCourse))?.title)
+        ? filterCourse
+        : '') ||
+      (analyticsCourse !== 'all' && isCoachSupportedCourse(analyticsCourse, courses.find((c) => String(c.id) === String(analyticsCourse))?.title)
+        ? analyticsCourse
+        : '') ||
+      String(supportedCoachCourses[0]?.id || '239a64f0-c106-40e5-a6e2-4e685a0d70fb');
+
+    setCoachModalCourseId(String(candidateId));
+    setIsStudyCoachModalOpen(true);
+  };
 
   // Reload theme when currentUser becomes available
   useEffect(() => {
@@ -1460,7 +1489,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const renderTopControls = (
     <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2 sm:gap-2.5 w-full sm:w-auto">
-      <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center">
+      <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center">
+        <button
+          type="button"
+          onClick={() => handleOpenStudyCoachModal()}
+          className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
+        >
+          <span className="text-base">👨‍🏫</span> <span className="truncate">Thầy Tony AI</span>
+        </button>
         <button
           type="button"
           onClick={() => handleGoToLecture()}
@@ -1528,6 +1565,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const renderBottomControls = (
     <div className="shrink-0 p-0 flex items-center justify-center relative z-30">
       <div className="bg-white border border-slate-200/90 shadow-xs rounded-xl px-2.5 py-1 flex flex-wrap items-center justify-center gap-2 transition-all">
+        {/* NÚT THẦY TONY AI */}
+        <button
+          type="button"
+          onClick={() => handleOpenStudyCoachModal()}
+          className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
+          title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
+        >
+          <span className="text-sm">👨‍🏫</span> <span>Thầy Tony AI</span>
+        </button>
+
         {/* NÚT BÀI GIẢNG */}
         <button
           type="button"
@@ -1705,6 +1752,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
           {/* Desktop Navigation Tabs (Synchronized with Layout.tsx navItems) */}
           <div className="hidden md:flex items-center gap-1 lg:gap-1.5">
+            <button
+              type="button"
+              onClick={() => handleOpenStudyCoachModal()}
+              className="px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-extrabold transition-all whitespace-nowrap inline-flex items-center gap-1.5 cursor-pointer bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 shadow-2xs"
+              title="Mở Trợ lý Thầy Tony AI phân tích tiến độ tổng thể & giao việc hôm nay"
+            >
+              <span>👨‍🏫</span>
+              <span>Thầy Tony AI</span>
+            </button>
             <button 
               onClick={() => { 
                 resetWorkspaceAndChat(); 
@@ -3803,6 +3859,56 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         </div>
       )}
+
+      {/* 👨‍🏫 GLOBAL THẦY TONY AI MODAL (ACCESSIBLE FROM ALL TABS IN STUDENT PORTAL) */}
+      {isStudyCoachModalOpen &&
+        (() => {
+          const activeCoachCourse =
+            supportedCoachCourses.find((c) => String(c.id) === String(coachModalCourseId)) ||
+            supportedCoachCourses[0];
+          if (!activeCoachCourse) return null;
+          const activeCid = String(activeCoachCourse.id);
+          return (
+            <div
+              className="fixed inset-0 z-[100] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-2.5 sm:p-5 animate-in fade-in duration-200"
+              onClick={() => setIsStudyCoachModalOpen(false)}
+            >
+              <div
+                className="w-full max-w-5xl rounded-3xl relative"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <CourseStudyCoach
+                  courseId={activeCid}
+                  courseTitle={activeCoachCourse.title}
+                  studentName={displayUserName}
+                  availableCourses={supportedCoachCourses.map((c) => ({
+                    id: String(c.id),
+                    title: c.title,
+                  }))}
+                  onSwitchCourse={(cid) => setCoachModalCourseId(cid)}
+                  onClose={() => setIsStudyCoachModalOpen(false)}
+                  lectures={allLectures.filter((l) => String(l.course_id) === activeCid)}
+                  folders={allFolders.filter((f) => String(f.course_id) === activeCid)}
+                  onOpenLecture={(cid, lid) => {
+                    setIsStudyCoachModalOpen(false);
+                    handleGoToLecture(cid, lid);
+                  }}
+                  onSelectFolder={(fid) => {
+                    setIsStudyCoachModalOpen(false);
+                    setActiveTab('library');
+                    setActiveView('course');
+                    setSelectedCourseId(activeCid);
+                    handleFolderClick(fid);
+                  }}
+                  onNavigate={(view) => {
+                    setIsStudyCoachModalOpen(false);
+                    onNavigate?.(view);
+                  }}
+                />
+              </div>
+            </div>
+          );
+        })()}
 
       {/* 📱 STICKY MOBILE BOTTOM NAVIGATION BAR */}
       <nav 

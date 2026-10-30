@@ -5674,19 +5674,19 @@ export default function LectureViewer({
       )}
 
       {isStudyCoachModalOpen && isCoachSupportedCourse(currentCourseId, course?.title) && (
-        <div className="fixed inset-0 z-[100] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto animate-in fade-in duration-200">
-          <div className="w-full max-w-5xl max-h-[90vh] overflow-y-auto custom-scrollbar rounded-3xl relative">
-            <button
-              onClick={() => setIsStudyCoachModalOpen(false)}
-              className="sticky top-3 float-right mr-3 mt-3 z-30 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-red-600 text-white font-bold flex items-center justify-center shadow-lg border border-white/20 cursor-pointer transition-all"
-              title="Đóng lộ trình"
-            >
-              ✕
-            </button>
+        <div
+          className="fixed inset-0 z-[100] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-2.5 sm:p-5 animate-in fade-in duration-200"
+          onClick={() => setIsStudyCoachModalOpen(false)}
+        >
+          <div
+            className="w-full max-w-5xl rounded-3xl relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             <CourseStudyCoach
               courseId={currentCourseId}
               courseTitle={course?.title || ''}
               lectures={lectures}
+              onClose={() => setIsStudyCoachModalOpen(false)}
               onOpenLecture={(_cid, lid) => {
                 setIsStudyCoachModalOpen(false);
                 if (lid) {

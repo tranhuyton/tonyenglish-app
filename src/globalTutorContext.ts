@@ -430,11 +430,13 @@ export async function fetchGlobalStudentSnapshot(
           const matchedLec = sortedLectures.find(
             (l) => cleanTitle(l.title || '').toLowerCase() === lTitle.toLowerCase()
           );
-          lastLecture = {
-            id: matchedLec?.id || d?.lecture_id,
-            title: lTitle,
-            timeLabel: formatShortDate(log.created_at),
-          };
+          if (matchedLec) {
+            lastLecture = {
+              id: matchedLec.id,
+              title: lTitle,
+              timeLabel: formatShortDate(log.created_at),
+            };
+          }
         }
       }
 
@@ -527,12 +529,12 @@ export async function fetchGlobalStudentSnapshot(
 
     const promptContext = `
 ====================================================================
-HỒ SƠ ĐẠI CỤC THỜI GIAN THỰC CỦA HỌC VIÊN (REAL-TIME STUDENT SNAPSHOT)
+HỒ SƠ HỌC TẬP TỔNG THỂ CỦA HỌC VIÊN (REAL-TIME STUDENT SNAPSHOT)
 ====================================================================
 - Tên học viên: ${studentName}
 - Khóa học đang mở: ${courseTitle}
 - Tiến độ Bảng công việc toàn khóa: Hoàn thành ${completedTasksCount}/${totalTasksCount} đầu việc (${taskPercent}%), xong trọn vẹn ${completedLecturesCount}/${sortedLectures.length} bài giảng.
-- Bài giảng vừa mở gần nhất: ${lastLecture ? `"${lastLecture.title}" (ngày ${lastLecture.timeLabel})` : 'Chưa ghi nhận'}
+- Bài giảng vừa mở gần nhất trong khóa này: ${lastLecture ? `"${lastLecture.title}" (ngày ${lastLecture.timeLabel})` : 'Chưa ghi nhận'}
 - Điểm trung bình theo kỹ năng: ${skillSummaryText}
 ${
   isIelts
@@ -555,7 +557,7 @@ ${nextUpText}
 ${pedagogyRules}
 
 ====================================================================
-BẢN ĐỒ ĐẠI CỤC CÁC HỌC LIỆU & CÔNG CỤ TRÊN WEBSITE (DÙNG ĐỂ TẠO NÚT BẤM)
+BẢN ĐỒ TỔNG THỂ CÁC HỌC LIỆU & CÔNG CỤ TRÊN WEBSITE (DÙNG ĐỂ TẠO NÚT BẤM)
 ====================================================================
 Khi tư vấn cho học sinh, BẮT BUỘC chèn trực tiếp các mã nút bấm hành động theo đúng cú pháp sau vào cuối mỗi bước hoặc cuối câu trả lời để học sinh bấm 1 click là nhảy thẳng tới nơi cần làm:
 
