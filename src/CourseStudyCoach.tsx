@@ -501,9 +501,11 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#2ab4e8] to-sky-400 text-slate-950 flex items-center justify-center text-xl shadow-md shrink-0">
             👨‍🏫
           </div>
-          <span className="bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1.5">
+          <span className="bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1.5 min-w-0">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping shrink-0" />
-            <span className="truncate">Thầy Tony AI Chủ Nhiệm • Phân Tích Tiến Độ Tổng Thể</span>
+            <span className="truncate">
+              Thầy Tony AI Chủ Nhiệm<span className="hidden sm:inline"> • Phân Tích Tiến Độ Tổng Thể</span>
+            </span>
           </span>
         </div>
 
@@ -600,7 +602,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         <div className="p-3 sm:p-4 space-y-3.5 bg-gradient-to-b from-sky-50/50 to-white rounded-b-[14px] sm:rounded-b-[22px]">
           {/* 1. REAL-TIME STUDENT X-RAY RADAR (4 THẺ DỮ LIỆU TỔNG THỂ THỰC TẾ) */}
           {!isStatsCollapsed && snapshot && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 animate-in fade-in duration-150">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 animate-in fade-in duration-150">
               {/* Card 1: Bảng công việc */}
               <div
                 onClick={() =>
@@ -610,7 +612,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
                 }
-                className="bg-white hover:bg-sky-50/60 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-sky-50/60 border border-slate-200/90 hover:border-[#2ab4e8] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">

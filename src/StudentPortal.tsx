@@ -197,7 +197,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     setActivityPage(1);
   }, [analyticsCourse]);
 
-  const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'ielts-standard' | 'standard'>('ielts');
+  const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'ielts-standard' | 'ielts-translation' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
 
@@ -1595,42 +1595,47 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   const renderBottomControls = (
-    <div className="shrink-0 p-0 flex items-center justify-center relative z-30">
-      <div className="bg-white border border-slate-200/90 shadow-xs rounded-xl px-2.5 py-1 flex flex-wrap items-center justify-center gap-2 transition-all">
-        {/* NÚT THẦY TONY AI */}
-        <button
-          type="button"
-          onClick={() => handleOpenStudyCoachModal()}
-          className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
-          title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
-        >
-          <span className="text-sm">👨‍🏫</span> <span>Thầy Tony AI</span>
-        </button>
+    <div className="shrink-0 p-0 flex items-center justify-center relative z-30 w-full sm:w-auto">
+      <div className="bg-white border border-slate-200/90 shadow-xs rounded-xl p-1.5 sm:px-2.5 sm:py-1 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 transition-all w-full sm:w-auto">
+        <div className="grid grid-cols-3 sm:flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto">
+          {/* NÚT THẦY TONY AI */}
+          <button
+            type="button"
+            onClick={() => handleOpenStudyCoachModal()}
+            className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
+            title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
+          >
+            <span className="text-sm">👨‍🏫</span> <span className="truncate">Thầy Tony AI</span>
+          </button>
 
-        {/* NÚT BÀI GIẢNG */}
-        <button
-          type="button"
-          onClick={() => handleGoToLecture()}
-          className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-xs px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
-          title="Mở bài giảng lý thuyết"
-        >
-          <span className="text-sm">📖</span> <span>Bài giảng lý thuyết</span>
-        </button>
+          {/* NÚT BÀI GIẢNG */}
+          <button
+            type="button"
+            onClick={() => handleGoToLecture()}
+            className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
+            title="Mở bài giảng lý thuyết"
+          >
+            <span className="text-sm">📖</span>
+            <span className="truncate">
+              Bài giảng<span className="hidden md:inline"> lý thuyết</span>
+            </span>
+          </button>
 
-        {/* NÚT KHO ĐỀ */}
-        <button
-          type="button"
-          onClick={() => handleGoToTestBank()}
-          className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200 hover:border-[#2ab4e8] font-bold text-xs px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
-          title="Mở kho đề"
-        >
-          <span className="text-sm">📚</span> <span>Kho đề</span>
-        </button>
+          {/* NÚT KHO ĐỀ */}
+          <button
+            type="button"
+            onClick={() => handleGoToTestBank()}
+            className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200 hover:border-[#2ab4e8] font-bold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
+            title="Mở kho đề"
+          >
+            <span className="text-sm">📚</span> <span className="truncate">Kho đề</span>
+          </button>
+        </div>
 
         <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
 
         {/* DROPDOWN CHỌN KHÓA HỌC */}
-        <div className="relative w-44 sm:w-56 z-50">
+        <div className="relative w-full sm:w-56 z-50">
           <div 
             onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
             className="w-full bg-white hover:bg-sky-50/50 border border-sky-200 hover:border-[#2ab4e8] rounded-lg px-2.5 py-1.5 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
@@ -1784,15 +1789,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
           {/* Desktop Navigation Tabs (Synchronized with Layout.tsx navItems) */}
           <div className="hidden md:flex items-center gap-1 lg:gap-1.5">
-            <button
-              type="button"
-              onClick={() => handleOpenStudyCoachModal()}
-              className="px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-extrabold transition-all whitespace-nowrap inline-flex items-center gap-1.5 cursor-pointer bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 shadow-2xs"
-              title="Mở Trợ lý Thầy Tony AI phân tích tiến độ tổng thể & giao việc hôm nay"
-            >
-              <span>👨‍🏫</span>
-              <span>Thầy Tony AI</span>
-            </button>
             <button 
               onClick={() => { 
                 resetWorkspaceAndChat(); 
@@ -2002,37 +1998,37 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </div>
                 </div>
 
-                {inProgressTest ? (
-                   <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-6 rounded-2xl w-full lg:w-80 shadow-xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-0.5 shrink-0 flex flex-col justify-between" onClick={() => handleStartTestClick(inProgressTest)}>
-                      <div>
-                        <div className="flex items-center justify-between mb-3">
-                           <div className="flex items-center gap-2 bg-amber-400/20 border border-amber-300/30 px-2.5 py-1 rounded-full">
-                              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                              <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300">Đang làm dở</span>
-                           </div>
-                           <span className="text-white/50 group-hover:text-white transition-colors">↗</span>
-                        </div>
-                        <h3 className="font-extrabold text-base sm:text-lg mb-4 line-clamp-2 leading-snug">{inProgressTest.title}</h3>
-                      </div>
-                      <button className="w-full bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-4 rounded-xl text-[13px] transition-colors uppercase tracking-wider shadow-md cursor-pointer">
-                         Tiếp tục làm bài →
-                      </button>
-                   </div>
-                ) : courses.length > 0 && (
-                  <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-6 rounded-2xl w-full lg:w-80 shadow-xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-0.5 shrink-0 flex flex-col justify-between" onClick={() => handleOpenCourse(courses[0])}>
-                    <div>
-                      <div className="flex items-center justify-between mb-3">
-                         <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#2ab4e8] bg-white/10 border border-white/15 px-3 py-1 rounded-full">Lộ trình trọng tâm</span>
-                         <span className="text-white/50 group-hover:text-white transition-colors">↗</span>
-                      </div>
-                      <h3 className="font-extrabold text-base sm:text-lg mb-2 line-clamp-2 leading-snug">{courses[0].title}</h3>
-                      <p className="text-xs text-slate-300 mb-4">Truy cập hệ thống bài giảng lý thuyết &amp; kho đề luyện tập chuẩn quốc tế.</p>
+                <div
+                  className="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-6 rounded-2xl w-full lg:w-80 shadow-xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-0.5 shrink-0 flex flex-col justify-between"
+                  onClick={() => handleOpenStudyCoachModal()}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/15 border border-amber-300/30 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                        <span>Lộ trình trọng tâm</span>
+                      </span>
+                      <span className="text-white/50 group-hover:text-white transition-colors">↗</span>
                     </div>
-                    <button className="w-full bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-4 rounded-xl text-[13px] transition-colors uppercase tracking-wider shadow-md cursor-pointer">
-                       Vào học ngay →
-                    </button>
+                    <h3 className="font-extrabold text-base sm:text-lg mb-2 leading-snug flex items-center gap-2">
+                      <span>👨‍🏫</span>
+                      <span>Thầy Tony AI Chủ Nhiệm</span>
+                    </h3>
+                    <p className="text-xs text-slate-200/90 mb-4 leading-relaxed">
+                      Tự động phân tích tiến độ tổng thể, điểm số &amp; chỉ định công việc cần làm ngay hôm nay.
+                    </p>
                   </div>
-                )}
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleOpenStudyCoachModal();
+                    }}
+                    className="w-full bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-4 rounded-xl text-[13px] transition-colors uppercase tracking-wider shadow-md cursor-pointer"
+                  >
+                    Tư vấn &amp; Giao việc ngay →
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -2682,7 +2678,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     completedTestIds={completedTestIdsSet}
                     courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
                     lectures={allLectures}
-                    rightActions={<div className="hidden sm:block">{renderBottomControls}</div>}
+                    rightActions={<div className="w-full sm:w-auto">{renderBottomControls}</div>}
                     onOpenLecture={handleGoToLecture}
                     onRefresh={async () => {
                       if (!currentUser) return;
@@ -2737,30 +2733,37 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     </p>
                   </div>
 
-                  {/* 3 NÚT FILTER: Luyện thi IELTS, Bài tập bổ trợ, Bài tập khóa khác */}
+                  {/* 3 NÚT FILTER: Luyện thi IELTS, Bài tập bổ trợ, Bài đọc dịch Cambridge */}
                   {isIeltsCourseSelected && (
                     <div className="flex flex-wrap bg-white/10 backdrop-blur-xs p-1 rounded-xl border border-white/15 gap-1 w-fit">
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts'); setHistoryPage(1); }}
-                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                        className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
                         <span>🎯</span> Luyện thi IELTS
                       </button>
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts-standard'); setHistoryPage(1); }}
-                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                        className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
                         <span>📝</span> Bài Tập Bổ Trợ
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => { setAnalyticsTestType('ielts-translation'); setAnalyticsView('activity'); setActivityPage(1); }}
+                        className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-translation' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                      >
+                        <span>📚</span> Bài Đọc Dịch Cambridge
                       </button>
                       {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
                         <button
                           type="button"
                           onClick={() => { setAnalyticsTestType('standard'); setHistoryPage(1); }}
-                          className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                          className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                         >
-                          <span>📚</span> Bài tập khóa khác
+                          <span>📖</span> Bài tập khóa khác
                         </button>
                       )}
                     </div>
@@ -2790,13 +2793,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               {/* CỘT TRÁI (XL:COL-SPAN-7): CÁC BIỂU ĐỒ VÀ PHÂN TÍCH        */}
               {/* ========================================================= */}
               <div className="xl:col-span-7 space-y-5 md:space-y-6">
-                {analyticsTotalTestsDone === 0 ? (
-                  <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 py-14 text-center shadow-xs flex flex-col items-center justify-center p-6">
-                    <div className="text-5xl mb-4 opacity-40 grayscale block">📊</div>
-                    <h3 className="text-lg md:text-xl font-black text-slate-800 mb-2">Chưa có dữ liệu làm bài kiểm tra hợp lệ</h3>
-                    <p className="text-slate-500 font-medium text-[13px] md:text-[14px] max-w-md">Hệ thống chỉ tính những bài kiểm tra đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích của AI chính xác nhất.</p>
-                  </div>
-                ) : (
+                {!(isIeltsCourseSelected && analyticsTestType === 'ielts-translation') && (
+                  analyticsTotalTestsDone === 0 ? (
+                    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 py-14 text-center shadow-xs flex flex-col items-center justify-center p-6">
+                      <div className="text-5xl mb-4 opacity-40 grayscale block">📊</div>
+                      <h3 className="text-lg md:text-xl font-black text-slate-800 mb-2">Chưa có dữ liệu làm bài kiểm tra hợp lệ</h3>
+                      <p className="text-slate-500 font-medium text-[13px] md:text-[14px] max-w-md">Hệ thống chỉ tính những bài kiểm tra đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích của AI chính xác nhất.</p>
+                    </div>
+                  ) : (
                   <>
                     {/* 5 THẺ KPI THỐNG KÊ */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-3 sm:gap-4">
@@ -3046,10 +3050,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       </div>
                     )}
                   </>
+                  )
                 )}
 
                 {/* 📚 MỤC TIẾN ĐỘ YÊU CẦU BẮT BUỘC: BÀI DỊCH ĐỌC & BÀI DỊCH NGHE CAMBRIDGE IELTS (THƯ VIỆN) */}
-                {isIeltsCourseSelected && (
+                {isIeltsCourseSelected && analyticsTestType === 'ielts-translation' && (
                   <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-sky-200/90 shadow-xs overflow-hidden">
                     <div className="bg-gradient-to-r from-[#073b5c] via-[#0a5482] to-[#0f172a] px-5 sm:px-6 py-4 text-white flex flex-wrap items-center justify-between gap-3">
                       <div className="flex items-center gap-3">
