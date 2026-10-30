@@ -346,23 +346,30 @@ export const HomePage: React.FC = () => {
       <section className="bg-gradient-to-b from-slate-100 to-slate-50 pt-6 pb-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {curAd ? (
-            <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-[#0f172a] grid grid-cols-1 lg:grid-cols-12 relative">
-              {/* Left Banner Image (7 cols) */}
-              <div className="lg:col-span-7 relative min-h-[260px] sm:min-h-[360px] bg-slate-900 overflow-hidden">
-                <Link
-                  to={
-                    curAd.link
-                      ? curAd.link.trim().replace(/^https?:\/\/(?:www\.)?tonyenglish\.vn(?:\/(?:vi|en))?/i, '') || '/courses'
-                      : '/courses'
-                  }
-                  className="block w-full h-full"
-                >
-                  <img
-                    src={resolveUploadUrl(curAd.image)}
-                    alt={curAd.title || 'TonyEnglish'}
-                    className="w-full h-full object-cover"
-                  />
-                </Link>
+            <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-[#0f172a] grid grid-cols-1 lg:grid-cols-12 lg:h-[380px] relative">
+              {/* Left Banner Image (7 cols) - Locked aspect ratio & absolute images to prevent height jumping */}
+              <div className="lg:col-span-7 relative aspect-[16/9] lg:aspect-auto lg:h-full bg-slate-900 overflow-hidden">
+                {ads.map((adItem, idx) => {
+                  const isActive = idx === bannerIdx;
+                  const targetLink = adItem.link
+                    ? adItem.link.trim().replace(/^https?:\/\/(?:www\.)?tonyenglish\.vn(?:\/(?:vi|en))?/i, '') || '/courses'
+                    : '/courses';
+                  return (
+                    <Link
+                      key={adItem.ad_id || idx}
+                      to={targetLink}
+                      className={`absolute inset-0 block w-full h-full transition-opacity duration-500 ${
+                        isActive ? 'opacity-100 z-[1]' : 'opacity-0 pointer-events-none z-0'
+                      }`}
+                    >
+                      <img
+                        src={resolveUploadUrl(adItem.image)}
+                        alt={adItem.title || 'TonyEnglish'}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </Link>
+                  );
+                })}
 
                 {/* Prev / Next Controls */}
                 {ads.length > 1 && (
@@ -370,7 +377,7 @@ export const HomePage: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setBannerIdx((prev) => (prev - 1 + ads.length) % ads.length)}
-                      className="w-9 h-9 rounded-full bg-slate-900/75 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition shadow-md backdrop-blur-xs"
+                      className="w-9 h-9 rounded-full bg-slate-900/75 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition shadow-md backdrop-blur-xs cursor-pointer"
                       title="Previous"
                     >
                       ‹
@@ -381,7 +388,7 @@ export const HomePage: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setBannerIdx((prev) => (prev + 1) % ads.length)}
-                      className="w-9 h-9 rounded-full bg-slate-900/75 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition shadow-md backdrop-blur-xs"
+                      className="w-9 h-9 rounded-full bg-slate-900/75 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition shadow-md backdrop-blur-xs cursor-pointer"
                       title="Next"
                     >
                       ›
@@ -390,39 +397,39 @@ export const HomePage: React.FC = () => {
                 )}
               </div>
 
-              {/* Right Content Panel (5 cols) */}
+              {/* Right Content Panel (5 cols) - Locked height so text differences never shift banner size */}
               <div
-                className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between text-white relative"
+                className="lg:col-span-5 p-6 sm:p-8 lg:p-10 min-h-[240px] lg:min-h-0 lg:h-full overflow-hidden flex flex-col justify-between text-white relative transition-colors duration-500"
                 style={{
                   background: `linear-gradient(145deg, ${(curAd.color || '#0a5482').trim()} 0%, #0f172a 100%)`,
                 }}
               >
-                <div className="space-y-4">
+                <div className="space-y-4 overflow-hidden">
                   <div className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-xs text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full border border-white/20">
                     <span>✨</span>
                     <span>TonyEnglish Highlights</span>
                   </div>
 
                   <div
-                    className="text-base sm:text-[17px] font-bold leading-relaxed text-white/95 legacy-prose [&_a]:text-sky-200 [&_p]:mb-2"
+                    className="text-base sm:text-[17px] font-bold leading-relaxed text-white/95 legacy-prose [&_a]:text-sky-200 [&_p]:mb-2 line-clamp-3"
                     dangerouslySetInnerHTML={{
                       __html: fixLegacyHtmlContent(
                         lang === 'vi' ? curAd.meta_vi || curAd.meta : curAd.meta || curAd.meta_vi
-                      ),
+                      ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
                     }}
                   />
 
                   <div
-                    className="text-xs sm:text-sm text-white/80 leading-relaxed pt-2 border-t border-white/15"
+                    className="text-xs sm:text-sm text-white/80 leading-relaxed pt-3 border-t border-white/15 line-clamp-2"
                     dangerouslySetInnerHTML={{
                       __html: fixLegacyHtmlContent(
                         lang === 'vi' ? curAd.desc_vi || curAd.desc : curAd.desc || curAd.desc_vi
-                      ),
+                      ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
                     }}
                   />
                 </div>
 
-                <div className="pt-6 mt-6 flex flex-wrap items-center gap-3">
+                <div className="pt-4 mt-4 flex flex-wrap items-center gap-3 shrink-0">
                   <Link
                     to="/courses"
                     className="bg-white text-[#0a5482] hover:bg-sky-50 font-black text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-lg transition active:scale-95"
