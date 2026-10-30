@@ -33,15 +33,7 @@ const cleanTitle = (raw: string) =>
 
 export const isCoachSupportedCourse = (courseId?: string | null, courseTitle?: string | null): boolean => {
   if (!courseId && !courseTitle) return false;
-  const id = String(courseId || '').toLowerCase();
-  const title = String(courseTitle || '').toLowerCase();
-  return (
-    id === '239a64f0-c106-40e5-a6e2-4e685a0d70fb' ||
-    id === 'a2a949c7-c23e-45a7-82fa-cdeda5cc32a7' ||
-    title.includes('ielts premium') ||
-    title.includes('co-ordinated') ||
-    title.includes('0654')
-  );
+  return String(courseId || '').toLowerCase() !== 'all';
 };
 
 const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -327,9 +319,9 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     }
   };
 
-  // Load real-time snapshot & initial proactive AI diagnosis
+      // Load real-time snapshot & initial proactive AI diagnosis
   useEffect(() => {
-    if (!courseId || (!isIelts && !isIgcse0654)) return;
+    if (!courseId || courseId === 'all') return;
     let isMounted = true;
 
     const initBrain = async () => {
@@ -356,7 +348,9 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       // Auto-trigger Thầy Tony AI's first live diagnosis!
       await askTonyAIBrain(
         snap,
-        'Hãy phân tích hồ sơ học tập hiện tại của em (điểm các bài test gần nhất, các bài đang làm dở trên Bảng công việc, tiến độ đọc bài dịch Thư viện) và chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay nhé!',
+        snap.isIelts
+          ? 'Hãy phân tích hồ sơ học tập hiện tại của em (điểm các bài test gần nhất, các bài đang làm dở trên Bảng công việc, tiến độ đọc bài dịch Thư viện) và chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay nhé!'
+          : `Hãy phân tích hồ sơ học tập hiện tại của em trong khóa ${cleanTitle(courseTitle)} (điểm các bài kiểm tra gần nhất và các bài giảng đang làm dở / kế tiếp trên Bảng công việc) rồi chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay nhé!`,
         true
       );
     };
@@ -365,7 +359,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     return () => {
       isMounted = false;
     };
-  }, [courseId, courseTitle, isIelts, isIgcse0654]);
+  }, [courseId, courseTitle]);
 
   const handleRefreshDiagnosis = async () => {
     setIsLoadingSnapshot(true);
@@ -410,7 +404,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     }, 120);
   };
 
-  if (!isIelts && !isIgcse0654) return null;
+  if (!courseId || courseId === 'all') return null;
 
   const quickPrompts = isIelts
     ? [
@@ -445,7 +439,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             'Hôm nay em muốn luyện Speaking. Thầy kiểm tra xem trong học phần Luyện thi Nói (Main Blocks / Plugin Blocks) em đã làm xong bài nào rồi và giao bài kế tiếp kèm phòng luyện Speaking AI cho em nhé!',
         },
       ]
-    : [
+    : isIgcse0654
+    ? [
         {
           icon: '🎯',
           label: 'Giao việc ưu tiên hôm nay',
@@ -475,6 +470,28 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           label: 'Tư vấn luyện Past Papers (Paper 2, 4, 6)',
           prompt:
             'Thầy tư vấn giúp em hôm nay nên luyện đề Past Paper nào (Paper 2 Multiple Choice, Paper 4 Extended hay Paper 6 Practical) dựa trên lực học hiện tại của em nhé!',
+        },
+      ]
+    : [
+        {
+          icon: '🎯',
+          label: 'Giao việc ưu tiên hôm nay',
+          prompt: `Dựa vào tiến độ học tập và điểm kiểm tra gần nhất của em trong khóa ${cleanTitle(courseTitle)}, hôm nay em nên ưu tiên học bài giảng nào và làm bài tập nào tiếp theo hả thầy?`,
+        },
+        {
+          icon: '📖',
+          label: 'Học tiếp bài giảng lý thuyết',
+          prompt: `Thầy kiểm tra trên Bảng công việc của khóa ${cleanTitle(courseTitle)} xem em đang làm dở hoặc cần học tiếp bài giảng lý thuyết nào rồi giao việc kèm nút mở bài cho em nhé!`,
+        },
+        {
+          icon: '📝',
+          label: 'Chọn đề luyện tập hôm nay',
+          prompt: `Thầy tư vấn và chọn giúp em thư mục đề luyện tập phù hợp nhất trong Kho đề của khóa ${cleanTitle(courseTitle)} để em làm bài hôm nay nhé!`,
+        },
+        {
+          icon: '📊',
+          label: 'Phân tích điểm yếu & Cách ôn tập',
+          prompt: `Thầy phân tích giúp em kết quả các bài kiểm tra gần đây trong khóa ${cleanTitle(courseTitle)} xem em đang yếu ở chuyên đề nào và cần ôn lại bài giảng nào nhé!`,
         },
       ];
 
@@ -528,7 +545,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     className="fixed inset-0 z-40"
                     onClick={() => setIsCourseDropdownOpen(false)}
                   />
-                  <div className="absolute right-0 sm:left-0 top-full mt-1.5 w-64 bg-[#0f172a] border border-sky-400/40 rounded-xl shadow-2xl py-1.5 z-50 overflow-hidden">
+                  <div className="absolute right-0 sm:left-0 top-full mt-1.5 w-64 max-h-72 overflow-y-auto custom-scrollbar bg-[#0f172a] border border-sky-400/40 rounded-xl shadow-2xl py-1.5 z-50">
                     {availableCourses.map((c) => (
                       <button
                         key={c.id}
@@ -756,8 +773,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
                       📊 Tổng số bài thi
                     </span>
-                    <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200">
-                      IGCSE 0654
+                    <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200 truncate max-w-[110px]">
+                      {isIgcse0654 ? 'IGCSE 0654' : 'Kho đề & Thi'}
                     </span>
                   </div>
                   <div className="mt-2">

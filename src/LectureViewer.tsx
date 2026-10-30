@@ -5685,6 +5685,11 @@ export default function LectureViewer({
             <CourseStudyCoach
               courseId={currentCourseId}
               courseTitle={course?.title || ''}
+              availableCourses={availableCourses.map((c: any) => ({
+                id: String(c.id),
+                title: c.title,
+              }))}
+              onSwitchCourse={(cid) => handleSelectCourse(cid)}
               lectures={lectures}
               onClose={() => setIsStudyCoachModalOpen(false)}
               onOpenLecture={(_cid, lid) => {

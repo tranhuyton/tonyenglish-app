@@ -133,7 +133,7 @@ export async function fetchGlobalStudentSnapshot(
         : Promise.resolve({ data: null }),
       resolvedCourseId && resolvedCourseId !== 'all'
         ? supabase
-            .from('modules')
+            .from('lecture_modules')
             .select('id, title, order_index')
             .eq('course_id', resolvedCourseId)
             .order('order_index')
@@ -155,8 +155,7 @@ export async function fetchGlobalStudentSnapshot(
       resolvedCourseId && resolvedCourseId !== 'all'
         ? supabase
             .from('tests')
-            .select('id, title, folder_id')
-            .eq('course_id', resolvedCourseId)
+            .select('id, title, folder_id, course_id')
         : Promise.resolve({ data: [] }),
       supabase
         .from('test_results')
@@ -228,7 +227,12 @@ export async function fetchGlobalStudentSnapshot(
       return false;
     };
 
-    const courseTests = (courseTestsRes.data || []) as any[];
+    const allTestsMeta = (courseTestsRes.data || []) as any[];
+    const courseTests = allTestsMeta.filter(
+      (t) =>
+        String(t.course_id) === String(resolvedCourseId) ||
+        (t.folder_id && folderMap.has(String(t.folder_id)))
+    );
     const courseTestIds = new Set<string>(courseTests.map((t) => String(t.id)));
     const courseTestTitles = new Set<string>(
       courseTests.map((t) => cleanTitle(t.title || '').toLowerCase()).filter(Boolean)
@@ -315,6 +319,10 @@ export async function fetchGlobalStudentSnapshot(
 
       const matchesCourseByIdOrTitle =
         (testId && courseTestIds.has(testId)) || (lowerTitle && courseTestTitles.has(lowerTitle));
+      const courseKeywords = lowerCourseTitle
+        .replace(/[^a-z0-9\u00C0-\u1EF9\s]/gi, ' ')
+        .split(/\s+/)
+        .filter((w) => w.length >= 4 && !['igcse', 'course', 'khóa', 'luyện', 'tiếng'].includes(w));
       const matchesCourseByKeyword = isIelts
         ? lowerTitle.includes('ielts') ||
           lowerTitle.includes('cambridge') ||
@@ -330,7 +338,7 @@ export async function fetchGlobalStudentSnapshot(
           lowerTitle.includes('chemistry') ||
           lowerTitle.includes('physics') ||
           /^([bcp]\d+)\b/i.test(rawTitle)
-        : true;
+        : courseTestIds.size === 0 && courseKeywords.some((kw) => lowerTitle.includes(kw));
 
       if (!matchesCourseByIdOrTitle && !matchesCourseByKeyword) return;
 
@@ -580,6 +588,9 @@ export async function fetchGlobalStudentSnapshot(
             .join(' | ')
         : 'Chưa đủ dữ liệu phân tích kỹ năng';
 
+    const moduleNamesList = modules.map((m) => cleanTitle(m.title)).filter(Boolean).join(', ');
+    const folderNamesList = rootFolders.map((f) => cleanTitle(f.title)).filter(Boolean).join(', ');
+
     const pedagogyRules = isIelts
       ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IELTS PREMIUM]:
 1. Thầy Tony luôn nhìn vào DỮ LIỆU THỰC TẾ của học sinh (bài đang làm dở trên Bảng công việc, điểm bài thi gần nhất, tiến độ đọc Bài dịch Cambridge trong Thư viện) để giao việc cụ thể ngay lập tức. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em", không lặp lại cả họ và tên đệm.
@@ -590,12 +601,20 @@ export async function fetchGlobalStudentSnapshot(
    - Nhắc học sinh chỉ tiêu bắt buộc của khóa IELTS Premium: Đọc hiểu 252 bài dịch đọc Cambridge và 336 bài dịch nghe Cambridge trong Thư viện.
 5. Với Kỹ năng Nói (Speaking): Học công thức Lego Blocks (6 Main Blocks + 3 Plugin Blocks) trong Bài giảng -> sau đó BẮT BUỘC vào Phòng luyện IELTS Speaking AI để ghi âm thực hành.
 6. Với Kỹ năng Viết (Writing): Học công thức phân tích biểu đồ (Task 1) hoặc 5 dạng luận + 24 chủ đề từ vựng (Task 2) -> sau đó vào Phòng chấm IELTS Writing AI để nộp bài.`
-      : `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IGCSE CO-ORDINATED SCIENCES 0654]:
+      : isIgcse0654
+      ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IGCSE CO-ORDINATED SCIENCES 0654]:
 1. Thầy Tony luôn kiểm tra xem học sinh đang học tới chương nào trong Biology (B1–B19), Chemistry (C1–C12), hay Physics (P1–P6) và điểm các bài Test/Past Paper gần nhất ra sao. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em".
 2. Quy trình chuẩn cho mỗi chuyên đề:
    - Bước 1: Mở Bài giảng lý thuyết của chương đó (nghe Audio song ngữ Anh-Việt của Thầy AI + xem Video bài giảng).
    - Bước 2: Hoàn thành các bài tập trắc nghiệm & tự luận ngắn ở cuối bài giảng để đạt 100% tiến độ chương.
-   - Bước 3: Luyện đề Past Paper trong Kho đề (Paper 2 Multiple Choice, Paper 4 Extended Theory, Paper 6 Alternative to Practical).`;
+   - Bước 3: Luyện đề Past Paper trong Kho đề (Paper 2 Multiple Choice, Paper 4 Extended Theory, Paper 6 Alternative to Practical).`
+      : `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA ${courseTitle.toUpperCase()}]:
+1. Thầy Tony luôn kiểm tra sát sao tiến độ thực tế của học sinh trong khóa "${courseTitle}" (các học phần: ${moduleNamesList || 'theo giáo trình'}, các bài giảng đang làm dở trên Bảng công việc, bài giảng kế tiếp và kết quả các bài kiểm tra gần nhất trong Kho đề: ${folderNamesList || 'Kho đề luyện tập'}). Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em", không lặp lại cả họ và tên đệm.
+2. Tất cả các bài tập và đề kiểm tra trong khóa này đều được chấm theo tỷ lệ phần trăm (%). Nếu điểm bài kiểm tra gần nhất dưới 65%, hãy chỉ rõ chuyên đề cần củng cố và yêu cầu học sinh xem lại bài giảng lý thuyết tương ứng.
+3. Quy trình học chuẩn cho mỗi bài / chuyên đề trong khóa "${courseTitle}":
+   - Bước 1: Mở Bài giảng lý thuyết (OPEN_LECTURE) của bài đang làm dở hoặc bài kế tiếp để nghe giảng (Audio song ngữ / Video bài giảng) và nắm chắc kiến thức trọng tâm.
+   - Bước 2: Hoàn thành đầy đủ các đầu việc & bài tập thực hành gắn liền với bài giảng đó trên Bảng công việc (OPEN_TAB:board) để đạt 100% tiến độ bài học.
+   - Bước 3: Vào Thư mục Kho đề luyện tập (OPEN_FOLDER) tương ứng với chuyên đề vừa học để làm bài kiểm tra / Past Papers củng cố điểm số.`;
 
     const promptContext = `
 ====================================================================
@@ -634,13 +653,15 @@ Khi tư vấn cho học sinh, BẮT BUỘC chèn trực tiếp các mã nút b�
 1. Mở trực tiếp 1 Bài giảng lý thuyết:
    Cú pháp: [[ACTION:OPEN_LECTURE:<ID_BÀI_GIẢNG>|📖 Mở bài: <Tên bài giảng>]]
    Danh sách ID bài giảng trong khóa:
-${courseLecturesCatalog}
+${courseLecturesCatalog || '- Chưa có danh sách bài giảng'}
 
 2. Mở trực tiếp 1 Thư mục Kho đề luyện tập:
    Cú pháp: [[ACTION:OPEN_FOLDER:<FOLDER_ID>|📂 Luyện đề: <Tên thư mục>]]
    Danh sách FOLDER_ID kho đề:
-${rootFoldersCatalog}
-
+${rootFoldersCatalog || '- Chưa có thư mục kho đề'}
+${
+  isIelts
+    ? `
 3. Mở trực tiếp Thư viện Bài dịch & Bài mẫu:
    - Bài dịch đọc Cambridge IELTS (01-21): [[ACTION:OPEN_LIBRARY:/news/category/cambridge-ielts-reading-translation|📚 Mở Thư viện: Bài dịch đọc Cambridge]]
    - Bài dịch nghe Cambridge IELTS (01-21): [[ACTION:OPEN_LIBRARY:/news/category/cambridge-ielts-listening-translation|🎧 Mở Thư viện: Bài dịch nghe Cambridge]]
@@ -650,7 +671,9 @@ ${rootFoldersCatalog}
 4. Mở Phòng Luyện & Chấm Điểm AI Thực Chiến:
    - Phòng luyện Speaking với Giám khảo AI: [[ACTION:OPEN_AI_ROOM:speaking|🎙️ Vào Phòng Luyện IELTS Speaking AI]]
    - Phòng chấm Writing Task 1 AI: [[ACTION:OPEN_AI_ROOM:task1|📊 Vào Phòng Chấm Writing Task 1 AI]]
-   - Phòng chấm Writing Task 2 AI: [[ACTION:OPEN_AI_ROOM:task2|✍️ Vào Phòng Chấm Writing Task 2 AI]]
+   - Phòng chấm Writing Task 2 AI: [[ACTION:OPEN_AI_ROOM:task2|✍️ Vào Phòng Chấm Writing Task 2 AI]]`
+    : ''
+}
 
 5. Mở Bảng công việc hoặc Báo cáo Tiến độ học:
    - Bảng công việc: [[ACTION:OPEN_TAB:board|📋 Mở Bảng Công Việc]]

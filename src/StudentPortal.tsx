@@ -2397,6 +2397,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 courseId={String(selectedCourse.id)}
                 courseTitle={selectedCourse.title}
                 studentName={displayUserName}
+                availableCourses={courses.map((c) => ({
+                  id: String(c.id),
+                  title: c.title,
+                }))}
+                onSwitchCourse={(cid) => {
+                  const found = courses.find((c) => String(c.id) === String(cid));
+                  if (found) {
+                    setFilterCourse(found.id);
+                    setAnalyticsCourse(found.id);
+                    handleOpenCourse(found);
+                  }
+                }}
                 lectures={allLectures.filter(l => String(l.course_id) === String(selectedCourse.id))}
                 folders={courseFolders}
                 onOpenLecture={(cid, lid) => handleGoToLecture(cid, lid)}
