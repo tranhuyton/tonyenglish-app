@@ -7,6 +7,7 @@ import {
   GlobalStudentSnapshot,
   TutorActionItem,
   clearGlobalTutorCache,
+  extractStudentFirstName,
 } from './globalTutorContext';
 
 export interface StudyCoachProps {
@@ -45,9 +46,19 @@ export const isCoachSupportedCourse = (courseId?: string | null, courseTitle?: s
 
 const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-const formatSimpleMarkdown = (text: string, studentName?: string) => {
+const formatSimpleMarkdown = (text: string, studentFirstName?: string, fullRawName?: string) => {
   if (!text) return '';
-  let formatted = text
+  let formatted = text;
+
+  const cleanFull = (fullRawName || '').trim();
+  const cleanFirst = (studentFirstName || '').trim();
+  // If AI ever writes the full name (e.g. "Trần Huy Tôn"), shorten it to the first name ("Tôn")
+  if (cleanFull && cleanFirst && cleanFull.length > cleanFirst.length && cleanFull.includes(' ')) {
+    const fullNameRegex = new RegExp(escapeRegExp(cleanFull), 'gi');
+    formatted = formatted.replace(fullNameRegex, cleanFirst);
+  }
+
+  formatted = formatted
     .replace(/^### (.*$)/gim, '<h4 class="font-black text-[#0a5482] text-[15px] mt-3 mb-1">$1</h4>')
     .replace(/^## (.*$)/gim, '<h3 class="font-black text-[#0a5482] text-[16px] mt-3.5 mb-1.5">$1</h3>')
     .replace(/^# (.*$)/gim, '<h2 class="font-black text-[#0a5482] text-[17px] mt-4 mb-2">$1</h2>')
@@ -65,13 +76,14 @@ const formatSimpleMarkdown = (text: string, studentName?: string) => {
     .replace(/(<\/h[2-4]>|<\/div>|<hr[^>]*>)\n+/gi, '$1')
     .replace(/\n/g, '<br/>');
 
-  const cleanName = (studentName || '').trim();
-  if (cleanName && cleanName.length >= 2 && cleanName.toLowerCase() !== 'em' && cleanName.toLowerCase() !== 'học viên') {
-    const fullRegex = new RegExp(`(${escapeRegExp(cleanName)})`, 'gi');
-    formatted = formatted.replace(
-      fullRegex,
-      '<span class="font-black text-[#d97706] bg-amber-50 px-1.5 py-0.5 rounded-md border border-amber-200/80">$1</span>'
-    );
+  if (
+    cleanFirst &&
+    cleanFirst.length >= 2 &&
+    cleanFirst.toLowerCase() !== 'em' &&
+    cleanFirst.toLowerCase() !== 'học viên'
+  ) {
+    const firstRegex = new RegExp(`(?<![\\p{L}])(${escapeRegExp(cleanFirst)})(?![\\p{L}])`, 'gu');
+    formatted = formatted.replace(firstRegex, '<b class="font-black text-slate-950">$1</b>');
   }
 
   return formatted;
@@ -96,6 +108,7 @@ export default function CourseStudyCoach({
   onSelectFolder,
   onNavigate,
 }: StudyCoachProps) {
+  const [isWindowCollapsed, setIsWindowCollapsed] = useState(false);
   const [isStatsCollapsed, setIsStatsCollapsed] = useState(false);
   const [snapshot, setSnapshot] = useState<GlobalStudentSnapshot | null>(null);
   const [isLoadingSnapshot, setIsLoadingSnapshot] = useState(true);
@@ -200,7 +213,7 @@ export default function CourseStudyCoach({
     );
   }, [courseId, courseTitle]);
 
-  const getCacheKey = (uid: string, cid: string) => `tony_ai_coach_chat_v3_${uid}_${cid}`;
+  const getCacheKey = (uid: string, cid: string) => `tony_ai_coach_chat_v4_${uid}_${cid}`;
 
   const askTonyAIBrain = async (
     snap: GlobalStudentSnapshot,
@@ -464,7 +477,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         },
       ];
 
-  const displayStudentName = snapshot?.studentName || studentName || 'em';
+  const displayStudentName = extractStudentFirstName(snapshot?.studentName || studentName);
   const latestTest = snapshot?.recentTests?.[0] || null;
   const activeWorkLecture =
     snapshot?.taskProgress?.inProgressLectures?.[0] ||
@@ -478,8 +491,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       } rounded-2xl sm:rounded-3xl border-2 border-[#2ab4e8]/45 bg-white shadow-lg overflow-hidden transition-all`}
     >
       {/* TOP HEADER BAR OF AI STUDY COACH */}
-      <div className="bg-gradient-to-r from-[#072f49] via-[#0a5482] to-[#0f172a] px-4 sm:px-6 py-3.5 sm:py-4 text-white flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-3.5 min-w-0">
+      <div className="bg-gradient-to-r from-[#072f49] via-[#0a5482] to-[#0f172a] px-4 sm:px-6 py-3 sm:py-3.5 text-white flex flex-wrap items-center justify-between gap-2.5">
+        <div className="flex items-center gap-3 min-w-0">
           <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-[#2ab4e8] to-sky-400 text-slate-950 flex items-center justify-center text-2xl shadow-md shrink-0">
             👨‍🏫
           </div>
@@ -523,176 +536,116 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             <span className="hidden sm:inline">Phân tích lại tiến độ</span>
           </button>
 
-          <button
-            type="button"
-            onClick={() => setIsStatsCollapsed(!isStatsCollapsed)}
-            className="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-extrabold px-3.5 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
-            title={
-              isStatsCollapsed
-                ? 'Mở lại 4 ô thống kê tiến độ phía trên'
-                : 'Thu gọn 4 ô thống kê phía trên để cửa sổ chat cao và rộng hơn'
-            }
-          >
-            <span>{isStatsCollapsed ? 'Hiện 4 ô trên' : 'Thu gọn 4 ô trên'}</span>
-            <span>{isStatsCollapsed ? '▼' : '▲'}</span>
-          </button>
+          {!isWindowCollapsed && (
+            <button
+              type="button"
+              onClick={() => setIsStatsCollapsed(!isStatsCollapsed)}
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-extrabold px-3 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+              title={
+                isStatsCollapsed
+                  ? 'Mở lại 4 ô thống kê tiến độ phía trên'
+                  : 'Ẩn 4 ô thống kê phía trên để cửa sổ chat cao và rộng hơn'
+              }
+            >
+              <span>{isStatsCollapsed ? 'Hiện 4 ô trên' : 'Ẩn 4 ô trên'}</span>
+              <span>{isStatsCollapsed ? '▼' : '▲'}</span>
+            </button>
+          )}
 
-          {onClose && (
+          {!onClose ? (
+            <button
+              type="button"
+              onClick={() => setIsWindowCollapsed(!isWindowCollapsed)}
+              className="bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-300/40 text-xs font-extrabold px-3.5 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+              title={isWindowCollapsed ? 'Mở lại cửa sổ tư vấn Thầy Tony AI' : 'Thu gọn toàn bộ cửa sổ Thầy Tony AI'}
+            >
+              <span>{isWindowCollapsed ? 'Mở cửa sổ chat ▼' : 'Thu gọn cửa sổ ▲'}</span>
+            </button>
+          ) : (
             <button
               type="button"
               onClick={onClose}
-              className="w-8 h-8 rounded-xl bg-white/10 hover:bg-rose-500 text-white border border-white/20 hover:border-rose-400 font-black text-sm flex items-center justify-center transition cursor-pointer"
+              className="px-3 py-2 rounded-xl bg-rose-500/80 hover:bg-rose-600 text-white border border-rose-400/50 font-black text-xs flex items-center gap-1.5 transition cursor-pointer"
               title="Đóng cửa sổ Thầy Tony AI"
             >
-              ✕
+              <span>✕</span>
+              <span className="hidden sm:inline">Đóng</span>
             </button>
           )}
         </div>
       </div>
 
-      <div className="p-3.5 sm:p-5 space-y-4 bg-gradient-to-b from-sky-50/50 to-white">
-        {/* 1. REAL-TIME STUDENT X-RAY RADAR (4 THẺ DỮ LIỆU TỔNG THỂ THỰC TẾ) */}
-        {!isStatsCollapsed && snapshot && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 animate-in fade-in duration-150">
-            {/* Card 1: Bảng công việc */}
-            <div
-              onClick={() =>
-                executeTutorAction(
-                  { type: 'OPEN_TAB', target: 'board', label: 'Bảng công việc' },
-                  courseId,
-                  { onOpenLecture, onSelectFolder, onNavigate }
-                )
-              }
-              className="bg-white hover:bg-sky-50/60 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                  📋 Bảng công việc
-                </span>
-                <span className="text-xs font-black text-[#0a5482] bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
-                  {snapshot.taskProgress.percent}%
-                </span>
-              </div>
-              <div className="mt-2">
-                <div className="text-base font-black text-slate-900">
-                  {snapshot.taskProgress.completedTasks} / {snapshot.taskProgress.totalTasks} việc
-                </div>
-                <div className="text-[11.5px] text-slate-500 font-semibold truncate mt-0.5">
-                  Xong trọn vẹn {snapshot.taskProgress.completedLecturesCount}/
-                  {snapshot.taskProgress.totalLecturesCount} bài giảng
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Bài đang học dở / kế tiếp */}
-            <div
-              onClick={() => {
-                if (activeWorkLecture) {
-                  executeTutorAction(
-                    {
-                      type: 'OPEN_LECTURE',
-                      target: activeWorkLecture.id,
-                      label: activeWorkLecture.title,
-                    },
-                    courseId,
-                    { onOpenLecture, onSelectFolder, onNavigate }
-                  );
-                }
-              }}
-              className="bg-white hover:bg-emerald-50/60 border border-slate-200/90 hover:border-emerald-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                  📖 Bài cần học ngay
-                </span>
-                <span className="text-[10.5px] font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                  {snapshot.taskProgress.inProgressLectures.length > 0 ? 'Đang làm dở' : 'Bài kế tiếp'}
-                </span>
-              </div>
-              <div className="mt-2">
-                <div className="text-sm font-black text-slate-900 truncate" title={activeWorkLecture?.title}>
-                  {activeWorkLecture ? activeWorkLecture.title : 'Đã hoàn thành hết bài'}
-                </div>
-                <div className="text-[11.5px] text-emerald-700 font-bold truncate mt-0.5">
-                  {activeWorkLecture ? `Bấm để mở ngay bài này →` : 'Tuyệt vời!'}
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Điểm Test gần nhất */}
-            <div
-              onClick={() =>
-                executeTutorAction(
-                  { type: 'OPEN_TAB', target: 'analytics', label: 'Tiến độ học' },
-                  courseId,
-                  { onOpenLecture, onSelectFolder, onNavigate }
-                )
-              }
-              className="bg-white hover:bg-amber-50/60 border border-slate-200/90 hover:border-amber-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                  🎯 Điểm Test gần nhất
-                </span>
-                {latestTest && (
-                  <span
-                    className={`text-[10.5px] font-black px-2 py-0.5 rounded-full border ${
-                      latestTest.isLow
-                        ? 'bg-amber-50 text-amber-800 border-amber-200'
-                        : 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    }`}
-                  >
-                    {latestTest.scoreLabel}
-                  </span>
-                )}
-              </div>
-              <div className="mt-2">
-                <div className="text-sm font-black text-slate-900 truncate" title={latestTest?.title}>
-                  {latestTest ? latestTest.title : 'Chưa có bài kiểm tra'}
-                </div>
-                <div className="text-[11.5px] text-slate-500 font-semibold truncate mt-0.5">
-                  {latestTest
-                    ? `Ngày ${latestTest.dateLabel} • Kỹ năng ${latestTest.skill}`
-                    : 'Hãy làm 1 đề để AI chẩn đoán lực học'}
-                </div>
-              </div>
-            </div>
-
-            {/* Card 4: Thư viện Bài dịch Cambridge (IELTS) hoặc Kỹ năng tổng hợp */}
-            {isIelts ? (
+      {!isWindowCollapsed && (
+        <div className="p-3 sm:p-4 space-y-3.5 bg-gradient-to-b from-sky-50/50 to-white">
+          {/* 1. REAL-TIME STUDENT X-RAY RADAR (4 THẺ DỮ LIỆU TỔNG THỂ THỰC TẾ) */}
+          {!isStatsCollapsed && snapshot && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 animate-in fade-in duration-150">
+              {/* Card 1: Bảng công việc */}
               <div
                 onClick={() =>
                   executeTutorAction(
-                    {
-                      type: 'OPEN_LIBRARY',
-                      target: '/news/category/cambridge-ielts-reading-translation',
-                      label: 'Thư viện Bài dịch',
-                    },
+                    { type: 'OPEN_TAB', target: 'board', label: 'Bảng công việc' },
                     courseId,
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
                 }
-                className="bg-white hover:bg-indigo-50/60 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-sky-50/60 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    📚 Thư viện Dịch Cam
+                    📋 Bảng công việc
                   </span>
-                  <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200">
-                    Bắt buộc
+                  <span className="text-xs font-black text-[#0a5482] bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
+                    {snapshot.taskProgress.percent}%
                   </span>
                 </div>
                 <div className="mt-2">
-                  <div className="text-sm font-black text-slate-900">
-                    Đọc: {snapshot.libraryProgress.camReadingCount}/252 • Nghe:{' '}
-                    {snapshot.libraryProgress.camListeningCount}/336
+                  <div className="text-base font-black text-slate-900">
+                    {snapshot.taskProgress.completedTasks} / {snapshot.taskProgress.totalTasks} việc
                   </div>
-                  <div className="text-[11.5px] text-indigo-700 font-bold truncate mt-0.5">
-                    Mở Thư viện Bài dịch Cambridge →
+                  <div className="text-[11.5px] text-slate-500 font-semibold truncate mt-0.5">
+                    Xong trọn vẹn {snapshot.taskProgress.completedLecturesCount}/
+                    {snapshot.taskProgress.totalLecturesCount} bài giảng
                   </div>
                 </div>
               </div>
-            ) : (
+
+              {/* Card 2: Bài đang học dở / kế tiếp */}
+              <div
+                onClick={() => {
+                  if (activeWorkLecture) {
+                    executeTutorAction(
+                      {
+                        type: 'OPEN_LECTURE',
+                        target: activeWorkLecture.id,
+                        label: activeWorkLecture.title,
+                      },
+                      courseId,
+                      { onOpenLecture, onSelectFolder, onNavigate }
+                    );
+                  }
+                }}
+                className="bg-white hover:bg-emerald-50/60 border border-slate-200/90 hover:border-emerald-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+                    📖 Bài cần học ngay
+                  </span>
+                  <span className="text-[10.5px] font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                    {snapshot.taskProgress.inProgressLectures.length > 0 ? 'Đang làm dở' : 'Bài kế tiếp'}
+                  </span>
+                </div>
+                <div className="mt-2">
+                  <div className="text-sm font-black text-slate-900 truncate" title={activeWorkLecture?.title}>
+                    {activeWorkLecture ? activeWorkLecture.title : 'Đã hoàn thành hết bài'}
+                  </div>
+                  <div className="text-[11.5px] text-emerald-700 font-bold truncate mt-0.5">
+                    {activeWorkLecture ? `Bấm để mở ngay bài này →` : 'Tuyệt vời!'}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Điểm Test gần nhất */}
               <div
                 onClick={() =>
                   executeTutorAction(
@@ -701,100 +654,197 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
                 }
-                className="bg-white hover:bg-indigo-50/60 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-amber-50/60 border border-slate-200/90 hover:border-amber-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    📊 Tổng số bài thi
+                    🎯 Điểm Test gần nhất
                   </span>
-                  <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200">
-                    IGCSE 0654
-                  </span>
+                  {latestTest && (
+                    <span
+                      className={`text-[10.5px] font-black px-2 py-0.5 rounded-full border ${
+                        latestTest.isLow
+                          ? 'bg-amber-50 text-amber-800 border-amber-200'
+                          : 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                      }`}
+                    >
+                      {latestTest.scoreLabel}
+                    </span>
+                  )}
                 </div>
                 <div className="mt-2">
-                  <div className="text-sm font-black text-slate-900">
-                    Đã làm {snapshot.recentTests.length} bài gần đây
+                  <div className="text-sm font-black text-slate-900 truncate" title={latestTest?.title}>
+                    {latestTest ? latestTest.title : 'Chưa có bài kiểm tra'}
                   </div>
-                  <div className="text-[11.5px] text-indigo-700 font-bold truncate mt-0.5">
-                    Xem chi tiết Báo cáo hiệu suất →
+                  <div className="text-[11.5px] text-slate-500 font-semibold truncate mt-0.5">
+                    {latestTest
+                      ? `Ngày ${latestTest.dateLabel} • Kỹ năng ${latestTest.skill}`
+                      : 'Hãy làm 1 đề để AI chẩn đoán lực học'}
                   </div>
                 </div>
               </div>
-            )}
-          </div>
-        )}
 
-        {/* 2. DYNAMIC AI CONVERSATION & ACTIONABLE ADVICE STREAM */}
-        <div className="bg-white rounded-2xl border border-sky-200/90 shadow-xs overflow-hidden">
-          <div className="bg-sky-50/80 border-b border-sky-100 px-4 py-2.5 flex items-center justify-between gap-2 flex-wrap">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs font-extrabold uppercase tracking-wider text-[#0a5482] flex items-center gap-1.5 flex-wrap">
-                <span>Nhận xét &amp; Chỉ định công việc trực tiếp từ Thầy Tony AI cho</span>
-                <span className="font-black text-[#d97706] bg-amber-100/90 border border-amber-300 px-2 py-0.5 rounded-lg shadow-2xs">
-                  {displayStudentName}
-                </span>
-              </span>
+              {/* Card 4: Thư viện Bài dịch Cambridge (IELTS) hoặc Kỹ năng tổng hợp */}
+              {isIelts ? (
+                <div
+                  onClick={() =>
+                    executeTutorAction(
+                      {
+                        type: 'OPEN_LIBRARY',
+                        target: '/news/category/cambridge-ielts-reading-translation',
+                        label: 'Thư viện Bài dịch',
+                      },
+                      courseId,
+                      { onOpenLecture, onSelectFolder, onNavigate }
+                    )
+                  }
+                  className="bg-white hover:bg-indigo-50/60 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+                      📚 Thư viện Dịch Cam
+                    </span>
+                    <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200">
+                      Bắt buộc
+                    </span>
+                  </div>
+                  <div className="mt-2">
+                    <div className="text-sm font-black text-slate-900">
+                      Đọc: {snapshot.libraryProgress.camReadingCount}/252 • Nghe:{' '}
+                      {snapshot.libraryProgress.camListeningCount}/336
+                    </div>
+                    <div className="text-[11.5px] text-indigo-700 font-bold truncate mt-0.5">
+                      Mở Thư viện Bài dịch Cambridge →
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  onClick={() =>
+                    executeTutorAction(
+                      { type: 'OPEN_TAB', target: 'analytics', label: 'Tiến độ học' },
+                      courseId,
+                      { onOpenLecture, onSelectFolder, onNavigate }
+                    )
+                  }
+                  className="bg-white hover:bg-indigo-50/60 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+                      📊 Tổng số bài thi
+                    </span>
+                    <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200">
+                      IGCSE 0654
+                    </span>
+                  </div>
+                  <div className="mt-2">
+                    <div className="text-sm font-black text-slate-900">
+                      Đã làm {snapshot.recentTests.length} bài gần đây
+                    </div>
+                    <div className="text-[11.5px] text-indigo-700 font-bold truncate mt-0.5">
+                      Xem chi tiết Báo cáo hiệu suất →
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            <span className="text-[11px] text-slate-500 font-semibold">
-              Bấm vào các nút màu bên dưới lời dặn của Thầy để mở thẳng bài cần làm
-            </span>
-          </div>
+          )}
 
-          <div
-            className={`p-4 sm:p-5 space-y-4 ${
-              isStatsCollapsed ? 'max-h-[62vh]' : 'max-h-[48vh]'
-            } overflow-y-auto custom-scrollbar transition-all`}
-          >
-            {isLoadingSnapshot && messages.length === 0 && (
-              <div className="flex items-center gap-3 py-6 justify-center text-slate-600 font-semibold text-sm">
-                <div className="w-5 h-5 border-2 border-[#0a5482]/30 border-t-[#0a5482] rounded-full animate-spin" />
-                <span>
-                  Thầy Tony AI đang đọc bảng điểm, các bài đang làm dở và nhật ký Thư viện của{' '}
-                  <span className="font-black text-[#d97706]">{displayStudentName}</span>...
+          {/* 2. DYNAMIC AI CONVERSATION & ACTIONABLE ADVICE STREAM */}
+          <div className="bg-white rounded-2xl border border-sky-200/90 shadow-xs overflow-hidden">
+            <div className="bg-sky-50/80 border-b border-sky-100 px-4 py-2.5 flex items-center justify-between gap-2 flex-wrap">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-xs font-extrabold uppercase tracking-wider text-[#0a5482] flex items-center gap-1.5 flex-wrap">
+                  <span>Nhận xét &amp; Chỉ định công việc trực tiếp từ Thầy Tony AI cho</span>
+                  <span className="font-black text-slate-950">{displayStudentName}</span>
                 </span>
               </div>
-            )}
-
-            {messages.map((msg, idx) => (
-              <div
-                key={idx}
-                className={`flex w-full ${
-                  msg.role === 'user' ? 'justify-end' : 'justify-start'
-                } animate-in fade-in duration-200`}
-              >
-                {msg.role === 'ai' && (
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-white flex items-center justify-center shrink-0 mr-3 mt-0.5 shadow-xs text-base">
-                    👨‍🏫
-                  </div>
-                )}
-
-                <div
-                  className={`max-w-[92%] sm:max-w-[88%] rounded-2xl p-4 text-[13.5px] sm:text-[14.5px] leading-relaxed ${
-                    msg.role === 'user'
-                      ? 'bg-[#0a5482] text-white rounded-tr-xs font-semibold shadow-xs'
-                      : 'bg-slate-50/90 border border-slate-200/90 text-slate-800 rounded-tl-xs shadow-2xs'
-                  }`}
+              <div className="flex items-center gap-2 flex-wrap">
+                <button
+                  type="button"
+                  onClick={() => setIsStatsCollapsed(!isStatsCollapsed)}
+                  className="text-[11px] font-extrabold text-[#0a5482] hover:bg-sky-100 bg-white border border-sky-200 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1"
+                  title="Ẩn/Hiện 4 ô thống kê phía trên"
                 >
-                  {msg.role === 'user' ? (
-                    <div className="space-y-2">
-                      {msg.imageUrl && (
-                        <img
-                          src={msg.imageUrl}
-                          alt="Ảnh bài tập đính kèm"
-                          className="max-h-48 w-auto rounded-xl border border-white/25 object-contain bg-white"
-                        />
-                      )}
-                      <div>{msg.text}</div>
+                  <span>{isStatsCollapsed ? 'Hiện 4 ô trên ▼' : 'Ẩn 4 ô trên ▲'}</span>
+                </button>
+                {onClose ? (
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="text-[11px] font-extrabold text-rose-700 hover:bg-rose-100 bg-rose-50 border border-rose-200 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1"
+                    title="Đóng cửa sổ chat"
+                  >
+                    <span>✕ Đóng</span>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setIsWindowCollapsed(true)}
+                    className="text-[11px] font-extrabold text-slate-700 hover:bg-slate-200/70 bg-white border border-slate-300 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1"
+                    title="Thu gọn toàn bộ cửa sổ Thầy Tony AI"
+                  >
+                    <span>Thu gọn cửa sổ ▲</span>
+                  </button>
+                )}
+              </div>
+            </div>
+
+            <div
+              className={`p-4 sm:p-5 space-y-4 ${
+                isStatsCollapsed ? 'max-h-[54vh]' : 'max-h-[42vh]'
+              } overflow-y-auto custom-scrollbar transition-all`}
+            >
+              {isLoadingSnapshot && messages.length === 0 && (
+                <div className="flex items-center gap-3 py-6 justify-center text-slate-600 font-semibold text-sm">
+                  <div className="w-5 h-5 border-2 border-[#0a5482]/30 border-t-[#0a5482] rounded-full animate-spin" />
+                  <span>
+                    Thầy Tony AI đang đọc bảng điểm, các bài đang làm dở và nhật ký Thư viện của{' '}
+                    <span className="font-black text-slate-950">{displayStudentName}</span>...
+                  </span>
+                </div>
+              )}
+
+              {messages.map((msg, idx) => (
+                <div
+                  key={idx}
+                  className={`flex w-full ${
+                    msg.role === 'user' ? 'justify-end' : 'justify-start'
+                  } animate-in fade-in duration-200`}
+                >
+                  {msg.role === 'ai' && (
+                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-white flex items-center justify-center shrink-0 mr-3 mt-0.5 shadow-xs text-base">
+                      👨‍🏫
                     </div>
-                  ) : (
-                    <div>
-                      <div
-                        className="prose prose-sm max-w-none text-slate-700 leading-relaxed"
-                        dangerouslySetInnerHTML={{
-                          __html: formatSimpleMarkdown(msg.text, displayStudentName),
-                        }}
-                      />
+                  )}
+
+                  <div
+                    className={`max-w-[92%] sm:max-w-[88%] rounded-2xl p-4 text-[13.5px] sm:text-[14.5px] leading-relaxed ${
+                      msg.role === 'user'
+                        ? 'bg-[#0a5482] text-white rounded-tr-xs font-semibold shadow-xs'
+                        : 'bg-slate-50/90 border border-slate-200/90 text-slate-800 rounded-tl-xs shadow-2xs'
+                    }`}
+                  >
+                    {msg.role === 'user' ? (
+                      <div className="space-y-2">
+                        {msg.imageUrl && (
+                          <img
+                            src={msg.imageUrl}
+                            alt="Ảnh bài tập đính kèm"
+                            className="max-h-48 w-auto rounded-xl border border-white/25 object-contain bg-white"
+                          />
+                        )}
+                        <div>{msg.text}</div>
+                      </div>
+                    ) : (
+                      <div>
+                        <div
+                          className="prose prose-sm max-w-none text-slate-700 leading-relaxed"
+                          dangerouslySetInnerHTML={{
+                            __html: formatSimpleMarkdown(msg.text, displayStudentName, studentName),
+                          }}
+                        />
 
                         {msg.actions && msg.actions.length > 0 && (
                           <div className="mt-4 pt-3.5 border-t border-slate-200/80">
@@ -853,7 +903,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce delay-200" />
                     <span className="ml-1 text-slate-600">
                       Thầy Tony AI đang suy nghĩ và chọn bài phù hợp nhất cho{' '}
-                      <span className="font-black text-[#d97706]">{displayStudentName}</span>...
+                      <span className="font-black text-slate-950">{displayStudentName}</span>...
                     </span>
                   </div>
                 </div>
@@ -964,6 +1014,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             </div>
           </div>
         </div>
-      </div>
+      )}
+    </div>
   );
 }

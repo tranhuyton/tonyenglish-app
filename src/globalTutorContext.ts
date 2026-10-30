@@ -66,6 +66,15 @@ const cleanTitle = (raw: string) =>
     .replace(/\s*\[bg:[^\]]*\]/gi, '')
     .trim();
 
+export const extractStudentFirstName = (rawName?: string | null): string => {
+  const cleaned = (rawName || '').trim();
+  if (!cleaned || cleaned.toLowerCase() === 'học viên' || cleaned.toLowerCase() === 'em') {
+    return 'em';
+  }
+  const parts = cleaned.split(/\s+/).filter(Boolean);
+  return parts[parts.length - 1] || cleaned;
+};
+
 const formatShortDate = (iso?: string) => {
   if (!iso) return '';
   try {
@@ -146,7 +155,7 @@ export async function fetchGlobalStudentSnapshot(
       resolvedCourseId && resolvedCourseId !== 'all'
         ? supabase
             .from('tests')
-            .select('id, title')
+            .select('id, title, folder_id')
             .eq('course_id', resolvedCourseId)
         : Promise.resolve({ data: [] }),
       supabase
@@ -171,11 +180,12 @@ export async function fetchGlobalStudentSnapshot(
         .limit(120),
     ]);
 
-    const studentName =
+    const rawFullName =
       profileRes.data?.full_name ||
       user.user_metadata?.full_name ||
       user.email?.split('@')[0] ||
       'Học viên';
+    const studentName = extractStudentFirstName(rawFullName);
 
     const courseTitle = cleanTitle(
       courseTitleInput || courseRes.data?.title || 'IELTS Premium'
@@ -196,21 +206,53 @@ export async function fetchGlobalStudentSnapshot(
     const lectures = (lecturesRes.data || []) as any[];
     const folders = (foldersRes.data || []) as any[];
     const rootFolders = folders.filter((f) => !f.parent_id);
+    const folderMap = new Map<string, { id: string; title: string; parent_id: string | null }>();
+    folders.forEach((f) =>
+      folderMap.set(String(f.id), {
+        id: String(f.id),
+        title: cleanTitle(f.title || ''),
+        parent_id: f.parent_id ? String(f.parent_id) : null,
+      })
+    );
+
+    const isFolderInsideCambridge = (folderId?: string | null): boolean => {
+      let curId = folderId ? String(folderId) : null;
+      let depth = 0;
+      while (curId && depth < 15) {
+        depth++;
+        const f = folderMap.get(curId);
+        if (!f) break;
+        if (f.title.toLowerCase().includes('cambridge')) return true;
+        curId = f.parent_id;
+      }
+      return false;
+    };
+
     const courseTests = (courseTestsRes.data || []) as any[];
     const courseTestIds = new Set<string>(courseTests.map((t) => String(t.id)));
     const courseTestTitles = new Set<string>(
       courseTests.map((t) => cleanTitle(t.title || '').toLowerCase()).filter(Boolean)
     );
+    const testFolderById = new Map<string, string>();
+    const testFolderByTitle = new Map<string, string>();
+    courseTests.forEach((t) => {
+      const tid = String(t.id);
+      const tTitle = cleanTitle(t.title || '').toLowerCase();
+      if (t.folder_id) {
+        testFolderById.set(tid, String(t.folder_id));
+        if (tTitle) testFolderByTitle.set(tTitle, String(t.folder_id));
+      }
+    });
 
     // 1. Parse Test Results & Build Score Map for Lecture Exercise Reconciliation
     const rawTestResults = (testResultsRes.data || []) as any[];
     const passedTestKeys = new Set<string>();
     const recentTests: GlobalStudentSnapshot['recentTests'] = [];
-    const skillBuckets: Record<string, number[]> = {
-      Listening: [],
-      Reading: [],
-      Writing: [],
-      Speaking: [],
+    const skillBuckets: Record<string, { bands: number[]; percents: number[] }> = {
+      Listening: { bands: [], percents: [] },
+      Reading: { bands: [], percents: [] },
+      Writing: { bands: [], percents: [] },
+      Speaking: { bands: [], percents: [] },
     };
 
     rawTestResults.forEach((r) => {
@@ -227,14 +269,22 @@ export async function fetchGlobalStudentSnapshot(
       const total = parseFloat(r.total_score != null ? r.total_score : 0);
       const bandScore = d?.bandScore != null ? parseFloat(d.bandScore) : null;
 
+      // Determine whether this test is inside the "Cambridge Test" folder tree (only Cambridge Test uses Band score; Crash Course, Cram Course, Strategies, Unit tests use %)
+      const matchedFolderId =
+        (testId && testFolderById.get(testId)) ||
+        (lowerTitle && testFolderByTitle.get(lowerTitle)) ||
+        null;
+      const isCambridgeTest =
+        isFolderInsideCambridge(matchedFolderId) || lowerTitle.includes('cambridge');
+
       let percent = 0;
       let isPassed = false;
       let scoreLabel = '';
       let isLow = false;
 
-      if (bandScore != null && !isNaN(bandScore) && bandScore > 0) {
-        scoreLabel = `Band ${bandScore.toFixed(1)}`;
-        percent = Math.round((bandScore / 9) * 100);
+      if (isIelts && isCambridgeTest && bandScore != null && !isNaN(bandScore) && bandScore > 0) {
+        scoreLabel = total > 0 ? `${score}/${total} (Band ${bandScore.toFixed(1)})` : `Band ${bandScore.toFixed(1)}`;
+        percent = total > 0 ? Math.round((score / total) * 100) : Math.round((bandScore / 9) * 100);
         isPassed = bandScore >= 4.0;
         isLow = bandScore < 6.0;
       } else if (total > 0) {
@@ -242,11 +292,16 @@ export async function fetchGlobalStudentSnapshot(
         scoreLabel = `${score}/${total} (${percent}%)`;
         isPassed = percent >= 50;
         isLow = percent < 65;
+      } else if (bandScore != null && !isNaN(bandScore) && bandScore > 0 && isCambridgeTest) {
+        scoreLabel = `Band ${bandScore.toFixed(1)}`;
+        percent = Math.round((bandScore / 9) * 100);
+        isPassed = bandScore >= 4.0;
+        isLow = bandScore < 6.0;
       } else {
-        scoreLabel = `${score.toFixed(1)} điểm`;
-        percent = score <= 9 ? Math.round((score / 9) * 100) : Math.round(score * 10);
-        isPassed = score >= 4.5;
-        isLow = score < 6.0;
+        percent = score <= 10 ? Math.round(score * 10) : Math.round(score);
+        scoreLabel = `${percent}%`;
+        isPassed = percent >= 50;
+        isLow = percent < 65;
       }
 
       if (isPassed) {
@@ -298,8 +353,11 @@ export async function fetchGlobalStudentSnapshot(
       }
 
       if (skillBuckets[skill]) {
-        const valForAvg = bandScore != null && !isNaN(bandScore) ? bandScore : percent;
-        skillBuckets[skill].push(valForAvg);
+        if (isIelts && isCambridgeTest && bandScore != null && !isNaN(bandScore) && bandScore > 0) {
+          skillBuckets[skill].bands.push(bandScore);
+        } else {
+          skillBuckets[skill].percents.push(percent);
+        }
       }
 
       if (recentTests.length < 8) {
@@ -315,12 +373,23 @@ export async function fetchGlobalStudentSnapshot(
     });
 
     const skillSummary: Record<string, { count: number; avgLabel: string }> = {};
-    Object.entries(skillBuckets).forEach(([sk, arr]) => {
-      if (arr.length > 0) {
-        const avg = arr.reduce((a, b) => a + b, 0) / arr.length;
+    Object.entries(skillBuckets).forEach(([sk, bucket]) => {
+      const totalCount = bucket.bands.length + bucket.percents.length;
+      if (totalCount > 0) {
+        const parts: string[] = [];
+        if (bucket.bands.length > 0) {
+          const avgBand = bucket.bands.reduce((a, b) => a + b, 0) / bucket.bands.length;
+          parts.push(`Cambridge Band ~${avgBand.toFixed(1)}`);
+        }
+        if (bucket.percents.length > 0) {
+          const avgPct = Math.round(
+            bucket.percents.reduce((a, b) => a + b, 0) / bucket.percents.length
+          );
+          parts.push(`Bài tập ${avgPct}%`);
+        }
         skillSummary[sk] = {
-          count: arr.length,
-          avgLabel: avg <= 9.0 ? `~${avg.toFixed(1)}` : `${Math.round(avg)}%`,
+          count: totalCount,
+          avgLabel: parts.join(', '),
         };
       }
     });
@@ -513,15 +582,16 @@ export async function fetchGlobalStudentSnapshot(
 
     const pedagogyRules = isIelts
       ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IELTS PREMIUM]:
-1. Thầy Tony luôn nhìn vào DỮ LIỆU THỰC TẾ của học sinh (bài đang làm dở trên Bảng công việc, điểm bài thi gần nhất, tiến độ đọc Bài dịch Cambridge trong Thư viện) để giao việc cụ thể ngay lập tức.
-2. Nếu học sinh có bài giảng đang làm dở (VD: 1/5 việc, 2/7 việc) hoặc vừa mới hoàn thành 1 bài (VD: xong "1. Main Block: Person"), hãy khen ngợi và chỉ định học tiếp bài kế tiếp ngay sau đó (VD: "2. Main Block: Place/Service" hoặc bài tiếp theo trong Task 1/Task 2).
-3. Với Kỹ năng Nghe (Listening) & Đọc (Reading):
-   - Nếu điểm test thấp (< 6.0 hoặc < 65%): Yêu cầu học lại bài giảng chiến thuật, luyện bộ đề Strategies (Listening Strategies / Reading Strategies / Crash Course), và BẮT BUỘC mở Thư viện đọc "Bài dịch đọc Cambridge IELTS" (/news/category/cambridge-ielts-reading-translation) hoặc "Bài dịch nghe Cambridge IELTS" (/news/category/cambridge-ielts-listening-translation).
+1. Thầy Tony luôn nhìn vào DỮ LIỆU THỰC TẾ của học sinh (bài đang làm dở trên Bảng công việc, điểm bài thi gần nhất, tiến độ đọc Bài dịch Cambridge trong Thư viện) để giao việc cụ thể ngay lập tức. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em", không lặp lại cả họ và tên đệm.
+2. QUY TẮC TÍNH ĐIỂM BẮT BUỘC: Trong khóa IELTS Premium, CHỈ DUY NHẤT các đề thi trong thư mục "Cambridge Test" mới được chấm theo thang điểm Band (VD: Band 6.5). Tất cả các thư mục khác (Crash Course, Cram Course, Reading Strategies, Listening Strategies, bài tập theo Unit...) đều chỉ chấm theo tỷ lệ phần trăm số câu đúng (%), TUYỆT ĐỐI KHÔNG gọi điểm của các bài luyện tập đó là Band.
+3. Nếu học sinh có bài giảng đang làm dở (VD: 1/5 việc, 2/7 việc) hoặc vừa mới hoàn thành 1 bài (VD: xong "1. Main Block: Person"), hãy khen ngợi và chỉ định học tiếp bài kế tiếp ngay sau đó (VD: "2. Main Block: Place/Service" hoặc bài tiếp theo trong Task 1/Task 2).
+4. Với Kỹ năng Nghe (Listening) & Đọc (Reading):
+   - Nếu điểm test thấp (< Band 6.0 đối với đề Cambridge, hoặc < 65% đối với các bài tập khác): Yêu cầu học lại bài giảng chiến thuật, luyện bộ đề Strategies (Listening Strategies / Reading Strategies / Crash Course), và BẮT BUỘC mở Thư viện đọc "Bài dịch đọc Cambridge IELTS" (/news/category/cambridge-ielts-reading-translation) hoặc "Bài dịch nghe Cambridge IELTS" (/news/category/cambridge-ielts-listening-translation).
    - Nhắc học sinh chỉ tiêu bắt buộc của khóa IELTS Premium: Đọc hiểu 252 bài dịch đọc Cambridge và 336 bài dịch nghe Cambridge trong Thư viện.
-4. Với Kỹ năng Nói (Speaking): Học công thức Lego Blocks (6 Main Blocks + 3 Plugin Blocks) trong Bài giảng -> sau đó BẮT BUỘC vào Phòng luyện IELTS Speaking AI để ghi âm thực hành.
-5. Với Kỹ năng Viết (Writing): Học công thức phân tích biểu đồ (Task 1) hoặc 5 dạng luận + 24 chủ đề từ vựng (Task 2) -> sau đó vào Phòng chấm IELTS Writing AI để nộp bài.`
+5. Với Kỹ năng Nói (Speaking): Học công thức Lego Blocks (6 Main Blocks + 3 Plugin Blocks) trong Bài giảng -> sau đó BẮT BUỘC vào Phòng luyện IELTS Speaking AI để ghi âm thực hành.
+6. Với Kỹ năng Viết (Writing): Học công thức phân tích biểu đồ (Task 1) hoặc 5 dạng luận + 24 chủ đề từ vựng (Task 2) -> sau đó vào Phòng chấm IELTS Writing AI để nộp bài.`
       : `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IGCSE CO-ORDINATED SCIENCES 0654]:
-1. Thầy Tony luôn kiểm tra xem học sinh đang học tới chương nào trong Biology (B1–B19), Chemistry (C1–C12), hay Physics (P1–P6) và điểm các bài Test/Past Paper gần nhất ra sao.
+1. Thầy Tony luôn kiểm tra xem học sinh đang học tới chương nào trong Biology (B1–B19), Chemistry (C1–C12), hay Physics (P1–P6) và điểm các bài Test/Past Paper gần nhất ra sao. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em".
 2. Quy trình chuẩn cho mỗi chuyên đề:
    - Bước 1: Mở Bài giảng lý thuyết của chương đó (nghe Audio song ngữ Anh-Việt của Thầy AI + xem Video bài giảng).
    - Bước 2: Hoàn thành các bài tập trắc nghiệm & tự luận ngắn ở cuối bài giảng để đạt 100% tiến độ chương.

@@ -1041,6 +1041,44 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         })();
   const isIeltsContext = isIeltsCourseSelected && analyticsTestType === 'ielts';
 
+  const isCambridgeHistoryItem = useMemo(() => {
+    const fMap = new Map<string, { title: string; parent_id: string | null }>();
+    allFolders.forEach((f: any) =>
+      fMap.set(String(f.id), {
+        title: String(f.title || '').toLowerCase(),
+        parent_id: f.parent_id ? String(f.parent_id) : null,
+      })
+    );
+    const tFolderById = new Map<string, string>();
+    const tFolderByTitle = new Map<string, string>();
+    allTests.forEach((t: any) => {
+      if (t.folder_id) {
+        tFolderById.set(String(t.id), String(t.folder_id));
+        if (t.title) tFolderByTitle.set(String(t.title).trim().toLowerCase(), String(t.folder_id));
+      }
+    });
+
+    const isFolderInsideCambridge = (fid?: string | null): boolean => {
+      let cur = fid ? String(fid) : null;
+      let depth = 0;
+      while (cur && depth < 15) {
+        depth++;
+        const f = fMap.get(cur);
+        if (!f) break;
+        if (f.title.includes('cambridge')) return true;
+        cur = f.parent_id;
+      }
+      return false;
+    };
+
+    return (h: any): boolean => {
+      const tId = h.testId ? String(h.testId) : '';
+      const tName = String(h.name || '').trim().toLowerCase();
+      const matchedFid = (tId && tFolderById.get(tId)) || (tName && tFolderByTitle.get(tName)) || null;
+      return isFolderInsideCambridge(matchedFid) || tName.includes('cambridge');
+    };
+  }, [allFolders, allTests]);
+
   // CHUẨN BỊ DỮ LIỆU BÁO CÁO TỪ HISTORY ĐÃ LỌC
   const processedHistory = useMemo(() => {
       return historyData.filter(h => analyticsCourse === 'all' || String(h.courseId) === String(analyticsCourse)).filter(h => {
@@ -1052,22 +1090,20 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
          
          const course = courses.find(c => String(c.id) === String(h.courseId));
          const isCourseIelts = course ? ((course.title||'').toLowerCase().includes('ielts') || course.type === 'IELTS') : false;
-         
-         const type = String(h.details?.test_type || h.name).toLowerCase();
-         const isIeltsTest = type.includes('ielts') || h.details?.bandScore !== undefined;
+         const isCamTest = isCambridgeHistoryItem(h);
          
          if (analyticsTestType === 'ielts') {
-            return isCourseIelts && isIeltsTest;
+            return isCourseIelts && isCamTest;
          }
          if (analyticsTestType === 'ielts-standard') {
-            return isCourseIelts && !isIeltsTest;
+            return isCourseIelts && !isCamTest;
          }
          if (analyticsTestType === 'standard') {
             return !isCourseIelts;
          }
          return true;
       }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  }, [historyData, analyticsCourse, analyticsCategory, allTests, isIeltsCourseSelected, analyticsTestType, courses]);
+  }, [historyData, analyticsCourse, analyticsCategory, allTests, isIeltsCourseSelected, analyticsTestType, courses, isCambridgeHistoryItem]);
 
   // TÍNH TOÁN DỮ LIỆU CHO 4 AREA CHART TỔNG QUAN THEO NGÀY
   const aggregatedByDate = useMemo(() => {
@@ -1085,11 +1121,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           entry.totalAttempts += 1;
           entry.timeSum += h.timeSpent;
           
-          const type = String(h.details?.test_type || h.name).toLowerCase();
-          const title = String(h.name).toLowerCase();
-          const isIelts = type.includes('ielts') || title.includes('ielts') || h.details?.bandScore !== undefined;
+          const isCamTest = isCambridgeHistoryItem(h);
           
-          if (isIelts) {
+          if (isCamTest) {
               const band = parseFloat(h.details?.bandScore);
               if (!isNaN(band) && band > 0) {
                   entry.bandSum += band;
@@ -1115,7 +1149,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               avgBand: entry.bandCount > 0 ? parseFloat((entry.bandSum / entry.bandCount).toFixed(1)) : null
           };
       }).slice(-14); 
-  }, [processedHistory]);
+  }, [processedHistory, isCambridgeHistoryItem]);
 
   const { analyticsTotalTestsDone, analyticsTotalTimeHours, avgScore, avgScoreRaw, avgIelts, avgIeltsRaw } = useMemo(() => {
       const total = processedHistory.length;
@@ -1125,11 +1159,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       let bandSum = 0, bandCount = 0;
 
       processedHistory.forEach(h => {
-          const type = String(h.details?.test_type || h.name).toLowerCase();
-          const title = String(h.name).toLowerCase();
-          const isIeltsTest = type.includes('ielts') || title.includes('ielts') || h.details?.bandScore !== undefined;
+          const isCamTest = isCambridgeHistoryItem(h);
           
-          if (isIeltsTest) {
+          if (isCamTest) {
               const band = parseFloat(h.details?.bandScore);
               if (!isNaN(band) && band > 0) {
                   bandSum += band;
@@ -1148,7 +1180,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       const ielts = bandCount > 0 ? rawIelts.toFixed(1) : '0.0';
       
       return { analyticsTotalTestsDone: total, analyticsTotalTimeHours: hours, avgScore: score, avgScoreRaw: rawStd, avgIelts: ielts, avgIeltsRaw: rawIelts };
-  }, [processedHistory, historyData]);
+  }, [processedHistory, historyData, isCambridgeHistoryItem]);
 
   // TÍNH TOÁN DỮ LIỆU CHO LINE CHART: 4 KỸ NĂNG IELTS
   const ieltsSkillChartData = useMemo(() => {
@@ -3250,7 +3282,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </tr>
                             ) : (
                               paginatedHistory.map(history => {
-                                const isHigh = history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0;
+                                const isCamTest = isCambridgeHistoryItem(history);
+                                const pctVal = history.scoreObj.total > 0 ? (history.scoreObj.value / history.scoreObj.total) * 100 : 0;
+                                const isHigh = isCamTest
+                                  ? parseFloat(history.details?.bandScore) >= 6.0
+                                  : pctVal >= 65;
                                 return (
                                   <tr key={history.id} className="hover:bg-sky-50/30 transition-colors group">
                                     <td className="px-4 sm:px-5 py-3.5">
@@ -3265,20 +3301,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                     <td className="px-3 sm:px-4 py-3.5 text-center shrink-0">
                                       <span className={`inline-flex items-center justify-center px-2.5 py-1 rounded-lg text-[12px] font-black border ${isHigh ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-sky-50/60 text-[#0a5482] border-sky-200/80'}`}>
                                         {(() => {
-                                          const isIelts = String(history.details?.test_type || history.name).toLowerCase().includes('ielts') || history.details?.bandScore !== undefined;
-                                          if (isIelts) {
+                                          if (isCamTest) {
                                             return `${history.scoreObj.value}/${history.scoreObj.total} • Band ${history.details?.bandScore || '0.0'}`;
-                                          } else {
-                                            const p = history.scoreObj.total > 0 ? (history.scoreObj.value / history.scoreObj.total) * 100 : 0;
-                                            let grade = 'U';
-                                            if (p >= 90) grade = 'A*';
-                                            else if (p >= 80) grade = 'A';
-                                            else if (p >= 70) grade = 'B';
-                                            else if (p >= 60) grade = 'C';
-                                            else if (p >= 50) grade = 'D';
-                                            else if (p >= 40) grade = 'E';
-                                            return `${Math.round(p)}% • ${grade}`;
                                           }
+                                          const cObj = courses.find(c => String(c.id) === String(history.courseId));
+                                          const isIeltsNonCam =
+                                            cObj &&
+                                            ((cObj.title || '').toLowerCase().includes('ielts') || cObj.type === 'IELTS');
+                                          if (isIeltsNonCam) {
+                                            return `${history.scoreObj.value}/${history.scoreObj.total} (${Math.round(pctVal)}%)`;
+                                          }
+                                          let grade = 'U';
+                                          if (pctVal >= 90) grade = 'A*';
+                                          else if (pctVal >= 80) grade = 'A';
+                                          else if (pctVal >= 70) grade = 'B';
+                                          else if (pctVal >= 60) grade = 'C';
+                                          else if (pctVal >= 50) grade = 'D';
+                                          else if (pctVal >= 40) grade = 'E';
+                                          return `${Math.round(pctVal)}% • ${grade}`;
                                         })()}
                                       </span>
                                     </td>
