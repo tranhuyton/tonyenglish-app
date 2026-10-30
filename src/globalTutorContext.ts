@@ -112,6 +112,7 @@ export async function fetchGlobalStudentSnapshot(
       modulesRes,
       lecturesRes,
       foldersRes,
+      courseTestsRes,
       testResultsRes,
       assignmentsRes,
       lectureProgRes,
@@ -142,12 +143,18 @@ export async function fetchGlobalStudentSnapshot(
             .select('id, title, parent_id')
             .eq('course_id', resolvedCourseId)
         : Promise.resolve({ data: [] }),
+      resolvedCourseId && resolvedCourseId !== 'all'
+        ? supabase
+            .from('tests')
+            .select('id, title')
+            .eq('course_id', resolvedCourseId)
+        : Promise.resolve({ data: [] }),
       supabase
         .from('test_results')
         .select('id, test_title, score, total_score, details, created_at')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false })
-        .limit(40),
+        .limit(80),
       supabase
         .from('assignments')
         .select('id, title, card_title, student_completed, is_completed, task_type, test_id')
@@ -189,6 +196,11 @@ export async function fetchGlobalStudentSnapshot(
     const lectures = (lecturesRes.data || []) as any[];
     const folders = (foldersRes.data || []) as any[];
     const rootFolders = folders.filter((f) => !f.parent_id);
+    const courseTests = (courseTestsRes.data || []) as any[];
+    const courseTestIds = new Set<string>(courseTests.map((t) => String(t.id)));
+    const courseTestTitles = new Set<string>(
+      courseTests.map((t) => cleanTitle(t.title || '').toLowerCase()).filter(Boolean)
+    );
 
     // 1. Parse Test Results & Build Score Map for Lecture Exercise Reconciliation
     const rawTestResults = (testResultsRes.data || []) as any[];
@@ -241,6 +253,31 @@ export async function fetchGlobalStudentSnapshot(
         if (testId) passedTestKeys.add(testId);
         if (lowerTitle) passedTestKeys.add(lowerTitle);
       }
+
+      // Check if this test belongs to the active course (and is not an abandoned 0-score click)
+      const isNonZeroSubmission = score > 0 || (bandScore != null && !isNaN(bandScore) && bandScore > 0);
+      if (!isNonZeroSubmission) return;
+
+      const matchesCourseByIdOrTitle =
+        (testId && courseTestIds.has(testId)) || (lowerTitle && courseTestTitles.has(lowerTitle));
+      const matchesCourseByKeyword = isIelts
+        ? lowerTitle.includes('ielts') ||
+          lowerTitle.includes('cambridge') ||
+          lowerTitle.includes('listening') ||
+          lowerTitle.includes('reading') ||
+          lowerTitle.includes('writing') ||
+          lowerTitle.includes('speaking') ||
+          bandScore != null
+        : isIgcse0654
+        ? lowerTitle.includes('0654') ||
+          lowerTitle.includes('science') ||
+          lowerTitle.includes('biology') ||
+          lowerTitle.includes('chemistry') ||
+          lowerTitle.includes('physics') ||
+          /^([bcp]\d+)\b/i.test(rawTitle)
+        : true;
+
+      if (!matchesCourseByIdOrTitle && !matchesCourseByKeyword) return;
 
       // Detect skill
       let skill = 'Tổng hợp';

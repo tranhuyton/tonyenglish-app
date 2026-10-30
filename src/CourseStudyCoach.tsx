@@ -65,6 +65,7 @@ const formatSimpleMarkdown = (text: string) => {
 interface CoachMessage {
   role: 'user' | 'ai';
   text: string;
+  imageUrl?: string;
   actions?: TutorActionItem[];
   timestamp?: string;
 }
@@ -83,7 +84,89 @@ export default function CourseStudyCoach({
   const [isAiThinking, setIsAiThinking] = useState(false);
   const [messages, setMessages] = useState<CoachMessage[]>([]);
   const [userInput, setUserInput] = useState('');
+  const [attachedImage, setAttachedImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const chatBottomRef = useRef<HTMLDivElement>(null);
+
+  const processImageFile = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const MAX_DIM = 900;
+        let width = img.width;
+        let height = img.height;
+        if (width > height) {
+          if (width > MAX_DIM) {
+            height *= MAX_DIM / width;
+            width = MAX_DIM;
+          }
+        } else {
+          if (height > MAX_DIM) {
+            width *= MAX_DIM / height;
+            height = MAX_DIM;
+          }
+        }
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, width, height);
+          ctx.drawImage(img, 0, 0, width, height);
+          setAttachedImage(canvas.toDataURL('image/jpeg', 0.72));
+        }
+      };
+      img.src = e.target?.result as string;
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      processImageFile(e.target.files[0]);
+      e.target.value = '';
+    }
+  };
+
+  const handlePaste = (e: React.ClipboardEvent) => {
+    const items = e.clipboardData?.items;
+    if (!items) return;
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].type.indexOf('image') !== -1) {
+        const file = items[i].getAsFile();
+        if (file) processImageFile(file);
+        e.preventDefault();
+        break;
+      }
+    }
+  };
+
+  const handleOpenImageOnBlackboard = () => {
+    if (!attachedImage) return;
+    const imgToSend = attachedImage;
+    const qText = userInput.trim() || 'Thầy giải chi tiết giúp em bài tập trong ảnh này với ạ.';
+    setAttachedImage(null);
+    setUserInput('');
+
+    sessionStorage.setItem('tony_live_mode', 'TUTOR');
+    window.dispatchEvent(new CustomEvent('tony-open-image-board', { detail: imgToSend }));
+    (window as any).tonyPendingImage = imgToSend;
+    window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+    setTimeout(() => {
+      window.dispatchEvent(
+        new CustomEvent('tony-force-start', {
+          detail: {
+            mode: 'vision_mode',
+            image: imgToSend,
+            query: qText,
+            courseTitle: cleanTitle(courseTitle || 'Tổng hợp'),
+          },
+        })
+      );
+    }, 600);
+  };
 
   const isIelts = useMemo(() => {
     const t = (courseTitle || '').toLowerCase();
@@ -99,25 +182,36 @@ export default function CourseStudyCoach({
     );
   }, [courseId, courseTitle]);
 
-  const getCacheKey = (uid: string, cid: string) => `tony_ai_coach_chat_v2_${uid}_${cid}`;
+  const getCacheKey = (uid: string, cid: string) => `tony_ai_coach_chat_v3_${uid}_${cid}`;
 
   const askTonyAIBrain = async (
     snap: GlobalStudentSnapshot,
     userQuestion: string,
-    isInitialAutoDiagnosis = false
+    isInitialAutoDiagnosis = false,
+    imageBase64?: string | null
   ) => {
     setIsAiThinking(true);
     try {
+      const imageInstruction = imageBase64
+        ? `\n[HỌC VIÊN ĐÃ ĐÍNH KÈM 1 HÌNH ẢNH BÀI TẬP / ĐỀ BÀI]:
+- Hãy quan sát thật kỹ hình ảnh đính kèm, đọc toàn bộ đề bài/câu hỏi/số liệu hoặc bài làm của học sinh trong ảnh.
+- Giải chi tiết từng bước, giải thích rõ bản chất kiến thức, từ khóa ăn điểm (Marking Scheme) hoặc sửa lỗi sai cho học sinh một cách dễ hiểu nhất.
+- Sau khi giải xong bài trong ảnh, hãy đối chiếu với Bản đồ khóa học ở trên để gợi ý bài giảng lý thuyết hoặc thư mục đề luyện tập liên quan kèm mã nút bấm [[ACTION:...]].\n`
+        : '';
+
       const systemPrompt = `Bạn là "Thầy Tony AI" — người thầy chủ nhiệm kiêm gia sư trưởng trực tiếp dẫn dắt học viên tại TonyEnglish.vn.
 Luôn xưng "Thầy" và gọi học viên bằng tên ("${snap.studentName}") hoặc "em". Giọng văn sống động, ấm áp, sát sao, đi thẳng vào dữ liệu thực tế của học viên (TUYỆT ĐỐI KHÔNG nói chung chung sáo rỗng, KHÔNG xưng con).
 
 ${snap.promptContext}
-
+${imageInstruction}
 [YÊU CẦU TRẢ LỜI]:
-1. Nhìn thẳng vào số liệu thực tế của ${snap.studentName} ở trên (điểm các bài test gần nhất, bài giảng đang làm dở trên Bảng công việc, bài giảng tiếp theo chưa học, và tiến độ đọc Bài dịch Cambridge trong Thư viện).
-2. Nhận xét ngắn gọn, sắc bén tình hình hiện tại của học sinh (2-3 câu).
-3. Giao ngay 3 công việc cụ thể, tuần tự cần làm ngay hôm nay (viết rõ tên bài giảng, tên bộ đề hoặc tên mục Thư viện).
-4. BẮT BUỘC chèn từ 2 đến 4 mã nút bấm hành động theo đúng cú pháp [[ACTION:OPEN_LECTURE:<ID>|<Nhãn nút>]], [[ACTION:OPEN_FOLDER:<ID>|<Nhãn nút>]], [[ACTION:OPEN_LIBRARY:<URL>|<Nhãn nút>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<Nhãn nút>]], hoặc [[ACTION:OPEN_TAB:<board|analytics>|<Nhãn nút>]] ở cuối câu trả lời để học sinh bấm 1 click là mở thẳng bài đó.
+1. ${
+        imageBase64
+          ? 'Ưu tiên giải quyết thật chi tiết, cặn kẽ bài tập/câu hỏi trong hình ảnh mà học viên vừa gửi lên.'
+          : `Nhìn thẳng vào số liệu thực tế của ${snap.studentName} ở trên (điểm các bài test gần nhất của khóa học này, bài giảng đang làm dở trên Bảng công việc, bài giảng tiếp theo chưa học, và tiến độ đọc Bài dịch Cambridge trong Thư viện).`
+      }
+2. Giao hoặc gợi ý các công việc cụ thể tiếp theo cần làm (viết rõ tên bài giảng, tên bộ đề hoặc tên mục Thư viện).
+3. BẮT BUỘC chèn từ 1 đến 4 mã nút bấm hành động theo đúng cú pháp [[ACTION:OPEN_LECTURE:<ID>|<Nhãn nút>]], [[ACTION:OPEN_FOLDER:<ID>|<Nhãn nút>]], [[ACTION:OPEN_LIBRARY:<URL>|<Nhãn nút>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<Nhãn nút>]], hoặc [[ACTION:OPEN_TAB:<board|analytics>|<Nhãn nút>]] ở cuối câu trả lời để học sinh bấm 1 click là mở thẳng bài đó.
 
 Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
@@ -125,6 +219,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         body: {
           prompt: systemPrompt,
           taskType: 'tutor',
+          imageUrl: imageBase64 || undefined,
+          imageUrls: imageBase64 ? [imageBase64] : undefined,
         },
       });
 
@@ -255,13 +351,20 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
   };
 
   const handleSendUserQuestion = async (customPrompt?: string) => {
-    const q = (customPrompt ?? userInput).trim();
-    if (!q || isAiThinking || !snapshot) return;
+    const rawQ = (customPrompt ?? userInput).trim();
+    const imgToSend = customPrompt ? null : attachedImage;
+    if ((!rawQ && !imgToSend) || isAiThinking || !snapshot) return;
 
-    if (!customPrompt) setUserInput('');
+    const q = rawQ || 'Thầy giải chi tiết giúp em bài tập trong hình ảnh này nhé!';
+
+    if (!customPrompt) {
+      setUserInput('');
+      setAttachedImage(null);
+    }
     const userMsg: CoachMessage = {
       role: 'user',
       text: q,
+      imageUrl: imgToSend || undefined,
       timestamp: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
     };
     setMessages((prev) => [...prev, userMsg]);
@@ -269,7 +372,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       chatBottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 80);
 
-    await askTonyAIBrain(snapshot, q, false);
+    await askTonyAIBrain(snapshot, q, false, imgToSend);
     setTimeout(() => {
       chatBottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 120);
@@ -614,7 +717,16 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     }`}
                   >
                     {msg.role === 'user' ? (
-                      <div>{msg.text}</div>
+                      <div className="space-y-2">
+                        {msg.imageUrl && (
+                          <img
+                            src={msg.imageUrl}
+                            alt="Ảnh bài tập đính kèm"
+                            className="max-h-48 w-auto rounded-xl border border-white/25 object-contain bg-white"
+                          />
+                        )}
+                        <div>{msg.text}</div>
+                      </div>
                     ) : (
                       <div>
                         <div
@@ -707,6 +819,42 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 ))}
               </div>
 
+              {attachedImage && (
+                <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-sky-200 rounded-xl p-2.5 animate-in fade-in duration-150">
+                  <div className="flex items-center gap-3">
+                    <div className="relative inline-block border border-slate-200 rounded-lg overflow-hidden shadow-2xs">
+                      <img
+                        src={attachedImage}
+                        alt="Ảnh bài tập đính kèm"
+                        className="h-14 w-auto object-cover bg-slate-50"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setAttachedImage(null)}
+                        className="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 hover:bg-rose-600 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow cursor-pointer"
+                        title="Xóa ảnh"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                    <div className="text-xs">
+                      <div className="font-extrabold text-[#0a5482]">📸 Đã đính kèm ảnh bài tập</div>
+                      <div className="text-slate-500 text-[11px]">
+                        Bấm <b>"Hỏi Thầy AI"</b> để giải ngay tại đây, hoặc đưa lên Bảng Đen để nghe giảng trực tiếp
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleOpenImageOnBlackboard}
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold px-3 py-2 rounded-xl shadow-2xs transition cursor-pointer flex items-center gap-1.5"
+                  >
+                    <span>👨‍🏫</span>
+                    <span>Đưa ảnh lên Bảng Đen giảng trực tiếp</span>
+                  </button>
+                </div>
+              )}
+
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -714,17 +862,36 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 }}
                 className="flex items-center gap-2"
               >
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={isAiThinking}
+                  className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-300 hover:border-[#2ab4e8] font-bold text-xs sm:text-sm px-3 py-2.5 rounded-xl shadow-2xs transition cursor-pointer shrink-0 flex items-center gap-1.5 disabled:opacity-40"
+                  title="Tải ảnh bài tập lên hoặc bấm Ctrl+V để dán ảnh chụp màn hình"
+                >
+                  <span>📷</span>
+                  <span className="hidden sm:inline">Tải ảnh</span>
+                </button>
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  className="hidden"
+                  accept="image/png, image/jpeg, image/jpg, image/webp"
+                  onChange={handleFileChange}
+                />
+
                 <input
                   type="text"
                   value={userInput}
                   onChange={(e) => setUserInput(e.target.value)}
+                  onPaste={handlePaste}
                   disabled={isAiThinking}
-                  placeholder={`Nhắn trực tiếp cho Thầy Tony AI (VD: "Thầy ơi hôm nay em có 45 phút thì nên học bài nào trước ạ?")...`}
+                  placeholder={`Nhắn hỏi Thầy hoặc Ctrl+V dán ảnh bài tập (VD: "Thầy giải giúp em câu này / hôm nay em nên học gì?")...`}
                   className="flex-1 bg-white border border-slate-300 focus:border-[#2ab4e8] rounded-xl px-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 outline-none shadow-2xs"
                 />
                 <button
                   type="submit"
-                  disabled={!userInput.trim() || isAiThinking}
+                  disabled={(!userInput.trim() && !attachedImage) || isAiThinking}
                   className="bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition cursor-pointer disabled:opacity-40 shrink-0 flex items-center gap-1.5"
                 >
                   <span>Hỏi Thầy AI</span>
