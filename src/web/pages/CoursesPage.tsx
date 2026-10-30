@@ -482,6 +482,125 @@ export const CoursesPage: React.FC = () => {
 
   const childCoursesOfCurrent = currentCourse ? subCategories(currentCourse.cc_id) : [];
 
+  const getCourseVisualConfig = (course: any | null) => {
+    const cid = course ? Number(course.cc_id) : 0;
+    const pid = course ? Number(course.cc_parent) : 0;
+
+    if (cid === 127 || pid === 127) {
+      return {
+        image: '/images/courses/course-ielts.jpg',
+        badge: lang === 'vi' ? '🏆 LUYỆN THI IELTS 4 KỸ NĂNG CẤP TỐC' : '🏆 INTENSIVE IELTS 4 SKILLS',
+        caption:
+          lang === 'vi'
+            ? 'Rèn tư duy logic giải đề sắc bén cùng Thầy Tony (Cựu DHS Anh Quốc) & Phòng thi máy tính chuẩn IDP/BC'
+            : 'Master IELTS 4 skills with British-trained mentorship & Computer-based Mock Tests',
+        highlights:
+          lang === 'vi'
+            ? [
+                '💻 Phòng thi thử chuẩn 100% IDP/BC',
+                '✍️ Chấm chữa chi tiết Writing & Speaking',
+                '🎁 Tặng 1 buổi Test & 2 buổi học thử',
+              ]
+            : ['💻 100% IDP/BC Mock Exam Lab', '✍️ Detailed Writing & Speaking Feedback', '🎁 Free Placement Test & 2 Trial Lessons'],
+      };
+    }
+
+    if (cid === 132 || pid === 132) {
+      return {
+        image: '/images/courses/course-igcse.jpg',
+        badge: lang === 'vi' ? '🌍 CHƯƠNG TRÌNH QUỐC TẾ CAMBRIDGE IGCSE & A-LEVEL' : '🌍 CAMBRIDGE IGCSE & A-LEVEL',
+        caption:
+          lang === 'vi'
+            ? 'Xây gốc thuật ngữ học thuật & Luyện 600+ đề Past Papers đạt điểm A/A* các môn Toán, Khoa học, Kinh tế, Kinh doanh, Địa lý, ESL'
+            : 'Build academic terminology & practice 600+ Past Papers to achieve A/A* grades',
+        highlights:
+          lang === 'vi'
+            ? [
+                '🧬 Bài giảng Song ngữ Anh - Việt & Mô phỏng',
+                '📊 Sciences, Maths, Economics, Business, ESL',
+                '📝 Chấm bài theo sát Marking Scheme Cambridge',
+              ]
+            : ['🧬 Bilingual Interactive Lectures', '📊 Sciences, Maths, Economics, Business, ESL', '📝 Cambridge Marking Scheme Grading'],
+      };
+    }
+
+    if (cid === 133 || pid === 133) {
+      return {
+        image: '/images/courses/course-sat.jpg',
+        badge: lang === 'vi' ? '🎯 LUYỆN THI DIGITAL SAT CẤP TỐC' : '🎯 DIGITAL SAT PREPARATION',
+        caption:
+          lang === 'vi'
+            ? 'Làm chủ tư duy Đọc hiểu học thuật (Reading & Writing) và Toán SAT (Math) theo cấu trúc Digital SAT mới nhất'
+            : 'Master Digital SAT Reading & Writing and Math with targeted strategies',
+        highlights:
+          lang === 'vi'
+            ? [
+                '📐 Chiến thuật giải nhanh SAT Math & Desmos',
+                '📖 Phân tích chuyên sâu Reading & Writing',
+                '🔥 Kho đề thực chiến bám sát College Board',
+              ]
+            : ['📐 Fast SAT Math & Desmos Strategies', '📖 Deep Reading & Writing Analysis', '🔥 Authentic College Board Practice'],
+      };
+    }
+
+    if (cid === 111 || pid === 111) {
+      return {
+        image: '/images/courses/course-comm-basic.jpg',
+        badge: lang === 'vi' ? '🎙️ GIAO TIẾP CĂN BẢN, PHÁT ÂM IPA & PHẢN XẠ' : '🎙️ BASIC COMMUNICATION & PRONUNCIATION',
+        caption:
+          lang === 'vi'
+            ? 'Chuẩn hóa phát âm Anh - Anh (British English), xóa bỏ nỗi sợ nói và hình thành phản xạ giao tiếp tự nhiên'
+            : 'Master British English pronunciation, build speaking confidence and natural reflexes',
+        highlights:
+          lang === 'vi'
+            ? [
+                '🗣️ Chuẩn hóa 44 âm IPA & Ngữ điệu tự nhiên',
+                '⚡ Phản xạ nghe - nói qua 28+ chủ đề thực tế',
+                '🎧 Podcast hội thoại song ngữ & Luyện nói AI',
+              ]
+            : ['🗣️ Standard 44 IPA Sounds & Intonation', '⚡ 28+ Real-life Speaking Topics', '🎧 Bilingual Podcasts & AI Speaking'],
+      };
+    }
+
+    if (cid === 129 || pid === 129) {
+      return {
+        image: '/images/courses/course-comm-advanced.jpg',
+        badge: lang === 'vi' ? '💼 GIAO TIẾP NÂNG CAO, VĂN PHÒNG & THƯƠNG MẠI' : '💼 ADVANCED & BUSINESS ENGLISH',
+        caption:
+          lang === 'vi'
+            ? 'Làm chủ tiếng Anh công sở, đàm phán kinh doanh, viết Email thương mại chuyên nghiệp và Thành ngữ bản xứ'
+            : 'Excel in corporate English, business negotiations, professional emails & idioms',
+        highlights:
+          lang === 'vi'
+            ? [
+                '🏢 13 Chuyên đề Tiếng Anh Văn phòng & Tài chính',
+                '✉️ Kỹ năng viết Email & Thư tín thương mại',
+                '💬 Phương pháp 3 Bước luyện trí nhớ độc quyền',
+              ]
+            : ['🏢 13 Corporate & Finance Topics', '✉️ Professional Business Email Writing', '💬 3-Step Memory Retention Method'],
+      };
+    }
+
+    return {
+      image: '/images/courses/course-overview.jpg',
+      badge: lang === 'vi' ? '🇬🇧 HỆ SINH THÁI ĐÀO TẠO ANH NGỮ & CAMBRIDGE QUỐC TẾ' : '🇬🇧 BRITISH & CAMBRIDGE EDUCATION ECOSYSTEM',
+      caption:
+        lang === 'vi'
+          ? 'Kết hợp hoàn hảo giữa Lớp học trực tiếp tại R2B Royal City cùng Hệ thống Bài giảng Song ngữ, Kho 1.800+ Đề thi & AI 24/7'
+          : 'Blending personalized 1-on-1 & small-group mentoring at Royal City with 24/7 AI-powered LMS',
+      highlights:
+        lang === 'vi'
+          ? [
+              '🎯 Lộ trình Cá nhân hóa 1-1 & Nhóm nhỏ',
+              '🎧 450+ Bài giảng Song ngữ & Podcast',
+              '🤖 Phòng thi chuẩn Quốc tế & AI Chấm chữa 24/7',
+            ]
+          : ['🎯 Personalized 1-on-1 & Small Group', '🎧 450+ Bilingual Lectures & Podcasts', '🤖 24/7 AI Grading & Exam Lab'],
+    };
+  };
+
+  const currentVisual = getCourseVisualConfig(currentCourse);
+
   // Renderer for Syllabus Modal Content
   const renderSyllabusModalContent = () => {
     const { packages, lmsCourses } = matchedSyllabus;
@@ -815,6 +934,37 @@ export const CoursesPage: React.FC = () => {
             </div>
 
             <div className="p-6 sm:p-8 space-y-6">
+              {/* VIVID COURSE HERO SHOWCASE BANNER */}
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/90 shadow-md group bg-slate-900">
+                <div className="aspect-[16/9] sm:aspect-[16/7] w-full overflow-hidden">
+                  <img
+                    src={currentVisual.image}
+                    alt={courseTitle}
+                    className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/45 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-7 text-white">
+                  <div className="mb-2">
+                    <span className="inline-block bg-amber-400 text-slate-950 font-black text-[10px] sm:text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
+                      {currentVisual.badge}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm md:text-base text-slate-100 font-semibold leading-snug max-w-3xl mb-3 drop-shadow-xs">
+                    {currentVisual.caption}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {currentVisual.highlights.map((item, idx) => (
+                      <span
+                        key={idx}
+                        className="text-[11px] sm:text-xs font-bold bg-white/15 backdrop-blur-md border border-white/25 text-white px-2.5 sm:px-3 py-1 rounded-lg"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               {/* Subcategory Quick Cards if parent category has children */}
               {childCoursesOfCurrent.length > 0 && (
                 <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
@@ -931,10 +1081,10 @@ export const CoursesPage: React.FC = () => {
                 </a>
               </div>
 
-              {/* BẢNG DANH MỤC CÁC KHÓA HỌC TẠI TONYENGLISH (HIỂN THỊ BÊN DƯỚI ĐỂ PHỤ HUYNH BẤM VÀO TỪNG KHÓA HỌC) */}
+              {/* BẢNG DANH MỤC CÁC KHÓA HỌC TẠI TONYENGLISH (KHỐI BẢNG LINK PHỄU CÓ ẢNH CÂN ĐỐI BÊN DƯỚI) */}
               {homeParents.length > 0 && (
                 <div className="pt-6 border-t border-slate-200">
-                  <div className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs">
+                  <div className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs">
                     <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-5 py-4 text-white flex flex-wrap items-center justify-between gap-2">
                       <div className="flex items-center gap-2.5">
                         <span className="text-xl">📚</span>
@@ -946,7 +1096,7 @@ export const CoursesPage: React.FC = () => {
                           </h2>
                           <p className="text-xs text-sky-200 font-medium">
                             {lang === 'vi'
-                              ? 'Bấm vào tên từng khóa học bên dưới để xem chi tiết chương trình và đề cương môn học'
+                              ? 'Bấm vào từng khóa học bên dưới để xem chi tiết chương trình và đề cương môn học'
                               : 'Click on any course below to view full details and syllabus'}
                           </p>
                         </div>
@@ -962,131 +1112,117 @@ export const CoursesPage: React.FC = () => {
                       </a>
                     </div>
 
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left border-collapse">
-                        <thead>
-                          <tr className="bg-slate-100 border-b border-slate-200 text-xs font-black uppercase tracking-wider text-slate-600">
-                            <th className="py-3.5 px-4 sm:px-5">
-                              {lang === 'vi' ? 'Khóa học / Chương trình đào tạo' : 'Course / Program'}
-                            </th>
-                            <th className="py-3.5 px-4 hidden md:table-cell">
-                              {lang === 'vi' ? 'Các chuyên đề / Môn học bao gồm' : 'Included Subjects / Modules'}
-                            </th>
-                            <th className="py-3.5 px-4 text-center hidden sm:table-cell">
-                              {lang === 'vi' ? 'Mã khóa' : 'Code'}
-                            </th>
-                            <th className="py-3.5 px-4 sm:px-5 text-right">
-                              {lang === 'vi' ? 'Chi tiết khóa học' : 'Details'}
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-200/80 bg-white text-sm">
-                          {homeParents.map((parent) => {
-                            const subs = subCategories(parent.cc_id);
-                            const parentName =
-                              lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name;
-                            const parentUrl = `/courses/${(parent.cc_name_url || '').trim()}`;
-                            const isActiveRow =
-                              currentCourse &&
-                              (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id);
+                    <div className="divide-y divide-slate-200/80 bg-white">
+                      {homeParents.map((parent) => {
+                        const subs = subCategories(parent.cc_id);
+                        const parentName =
+                          lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name;
+                        const parentUrl = `/courses/${(parent.cc_name_url || '').trim()}`;
+                        const isActiveRow =
+                          currentCourse &&
+                          (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id);
+                        const rowVisual = getCourseVisualConfig(parent);
 
-                            let defaultSubjectsText = '';
-                            if (Number(parent.cc_id) === 127) {
-                              defaultSubjectsText =
-                                lang === 'vi'
-                                  ? 'IELTS 4 Kỹ năng (Listening, Reading, Writing, Speaking) & Phòng thi máy tính chuẩn IDP/BC'
-                                  : 'IELTS 4 Skills (Listening, Reading, Writing, Speaking) & Computer-based Mock Tests';
-                            } else if (Number(parent.cc_id) === 132) {
-                              defaultSubjectsText =
-                                lang === 'vi'
-                                  ? 'Cambridge IGCSE & A-Level: Maths (0580/0606), Sciences (0654/0610/0620/0625), Economics (0455), Business (0450), Geography (0460), ESL (0510)'
-                                  : 'Cambridge IGCSE & A-Level: Maths, Co-ordinated Sciences, Biology, Chemistry, Physics, Economics, Business, Geography, ESL';
-                            } else if (Number(parent.cc_id) === 133) {
-                              defaultSubjectsText =
-                                lang === 'vi'
-                                  ? 'Digital SAT Reading & Writing, SAT Math chuyên sâu'
-                                  : 'Digital SAT Reading & Writing, SAT Math';
-                            }
+                        let defaultSubjectsText = '';
+                        if (Number(parent.cc_id) === 127) {
+                          defaultSubjectsText =
+                            lang === 'vi'
+                              ? 'IELTS 4 Kỹ năng (Listening, Reading, Writing, Speaking) & Phòng thi máy tính chuẩn IDP/BC'
+                              : 'IELTS 4 Skills (Listening, Reading, Writing, Speaking) & Computer-based Mock Tests';
+                        } else if (Number(parent.cc_id) === 132) {
+                          defaultSubjectsText =
+                            lang === 'vi'
+                              ? 'Cambridge IGCSE & A-Level: Maths (0580/0606), Sciences (0654/0610/0620/0625), Economics (0455), Business (0450), Geography (0460), ESL (0510)'
+                              : 'Cambridge IGCSE & A-Level: Maths, Co-ordinated Sciences, Biology, Chemistry, Physics, Economics, Business, Geography, ESL';
+                        } else if (Number(parent.cc_id) === 133) {
+                          defaultSubjectsText =
+                            lang === 'vi'
+                              ? 'Digital SAT Reading & Writing, SAT Math chuyên sâu theo cấu trúc mới nhất'
+                              : 'Digital SAT Reading & Writing, SAT Math';
+                        }
 
-                            return (
-                              <tr
-                                key={parent.cc_id}
-                                className={`hover:bg-sky-50/60 transition ${
-                                  isActiveRow ? 'bg-sky-50/40' : ''
-                                }`}
+                        return (
+                          <div
+                            key={parent.cc_id}
+                            className={`p-4 sm:p-5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 hover:bg-sky-50/50 transition group ${
+                              isActiveRow ? 'bg-sky-50/40' : ''
+                            }`}
+                          >
+                            {/* Left: Vivid Course Thumbnail + Title & Sub-courses */}
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 flex-1 min-w-0">
+                              <Link
+                                to={parentUrl}
+                                className="w-full sm:w-44 md:w-48 aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 shadow-2xs shrink-0 relative bg-slate-900 block"
                               >
-                                <td className="py-4 px-4 sm:px-5 align-top">
+                                <img
+                                  src={rowVisual.image}
+                                  alt={parentName}
+                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                                <span className="absolute top-2 left-2 bg-slate-950/80 backdrop-blur-xs text-amber-300 text-[10px] font-black px-2 py-0.5 rounded-md border border-white/15">
+                                  {parent.cc_code || 'TE'}
+                                </span>
+                              </Link>
+
+                              <div className="flex-1 min-w-0 space-y-2">
+                                <div className="flex flex-wrap items-center gap-2">
                                   <Link
                                     to={parentUrl}
-                                    className="font-black text-[15px] sm:text-base text-[#0a5482] hover:text-[#2ab4e8] flex items-center gap-2 transition"
+                                    className="font-black text-base sm:text-lg text-[#0a5482] hover:text-[#2ab4e8] transition leading-snug"
                                   >
-                                    <span>🎓</span>
-                                    <span>{parentName}</span>
+                                    {parentName}
                                   </Link>
-                                  {/* Mobile view of sub-courses or description */}
-                                  <div className="md:hidden mt-2 space-y-1.5">
-                                    {subs.length > 0 ? (
-                                      <div className="flex flex-wrap gap-1.5">
-                                        {subs.map((sub) => (
-                                          <Link
-                                            key={sub.cc_id}
-                                            to={`/courses/${(sub.cc_name_url || '').trim()}`}
-                                            className="inline-flex items-center gap-1 text-xs font-bold text-[#0a5482] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-2.5 py-1 rounded-lg"
-                                          >
-                                            <span>• {lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}</span>
-                                            <span>→</span>
-                                          </Link>
-                                        ))}
-                                      </div>
-                                    ) : (
-                                      defaultSubjectsText && (
-                                        <p className="text-xs text-slate-600 leading-relaxed">{defaultSubjectsText}</p>
-                                      )
-                                    )}
-                                  </div>
-                                </td>
-
-                                <td className="py-4 px-4 align-top hidden md:table-cell">
-                                  {subs.length > 0 ? (
-                                    <div className="flex flex-wrap gap-2">
-                                      {subs.map((sub) => (
-                                        <Link
-                                          key={sub.cc_id}
-                                          to={`/courses/${(sub.cc_name_url || '').trim()}`}
-                                          className="inline-flex items-center gap-1 text-xs font-bold text-[#0a5482] bg-slate-100 hover:bg-sky-100 border border-slate-200 hover:border-sky-300 px-3 py-1.5 rounded-xl transition"
-                                        >
-                                          <span>{lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}</span>
-                                          <span className="text-[#2ab4e8]">→</span>
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  ) : (
-                                    <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
-                                      {defaultSubjectsText}
-                                    </p>
+                                  {isActiveRow && (
+                                    <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase px-2 py-0.5 rounded-full border border-emerald-200">
+                                      {lang === 'vi' ? 'Đang xem' : 'Viewing'}
+                                    </span>
                                   )}
-                                </td>
+                                </div>
 
-                                <td className="py-4 px-4 align-top text-center hidden sm:table-cell">
-                                  <span className="inline-block bg-slate-100 text-slate-700 font-black text-xs px-2.5 py-1 rounded-lg border border-slate-200">
-                                    {parent.cc_code || 'TE'}
-                                  </span>
-                                </td>
+                                <p className="text-xs sm:text-[13.5px] text-slate-600 font-medium leading-relaxed">
+                                  {defaultSubjectsText || rowVisual.caption}
+                                </p>
 
-                                <td className="py-4 px-4 sm:px-5 align-top text-right whitespace-nowrap">
-                                  <Link
-                                    to={parentUrl}
-                                    className="inline-flex items-center gap-1.5 bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-3.5 py-2 rounded-xl shadow-2xs transition"
-                                  >
-                                    <span>{lang === 'vi' ? 'Xem khóa học' : 'View course'}</span>
-                                    <span>→</span>
-                                  </Link>
-                                </td>
-                              </tr>
-                            );
-                          })}
-                        </tbody>
-                      </table>
+                                {subs.length > 0 && (
+                                  <div className="flex flex-wrap gap-1.5 pt-0.5">
+                                    {subs.map((sub) => (
+                                      <Link
+                                        key={sub.cc_id}
+                                        to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                                        className="inline-flex items-center gap-1 text-xs font-bold text-[#0a5482] bg-slate-100 hover:bg-sky-100 border border-slate-200 hover:border-sky-300 px-2.5 py-1 rounded-lg transition"
+                                      >
+                                        <span>• {lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}</span>
+                                        <span className="text-[#2ab4e8]">→</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* Right: Direct Action Buttons */}
+                            <div className="flex sm:flex-col items-center sm:items-end justify-end gap-2 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">
+                              <Link
+                                to={parentUrl}
+                                className="flex-1 sm:flex-initial w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-2xs transition whitespace-nowrap"
+                              >
+                                <span>{lang === 'vi' ? 'Xem chi tiết' : 'View course'}</span>
+                                <span>→</span>
+                              </Link>
+                              <a
+                                href={CONTACT_ZALO_URL}
+                                target="_blank"
+                                rel="noreferrer"
+                                onClick={() => trackCourseConversion('Zalo', parentName)}
+                                className="flex-1 sm:flex-initial w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-sky-50 hover:bg-sky-100 text-[#0068ff] border border-sky-200 font-extrabold text-xs px-3.5 py-2 rounded-xl transition whitespace-nowrap"
+                              >
+                                <span>💬</span>
+                                <span>{lang === 'vi' ? 'Tư vấn Zalo' : 'Zalo Chat'}</span>
+                              </a>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
