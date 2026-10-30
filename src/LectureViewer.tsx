@@ -5692,8 +5692,17 @@ export default function LectureViewer({
               onSwitchCourse={(cid) => handleSelectCourse(cid)}
               lectures={lectures}
               onClose={() => setIsStudyCoachModalOpen(false)}
-              onOpenLecture={(_cid, lid) => {
+              onOpenLecture={(cid, lid) => {
                 setIsStudyCoachModalOpen(false);
+                if (cid && String(cid) !== String(currentCourseId)) {
+                  if (lid) {
+                    try {
+                      sessionStorage.setItem('tony_target_lecture_id', lid);
+                    } catch (e) {}
+                  }
+                  handleSelectCourse(cid);
+                  return;
+                }
                 if (lid) {
                   const found = lectures.find(l => String(l.id) === String(lid));
                   if (found) {
@@ -5704,10 +5713,12 @@ export default function LectureViewer({
                   }
                 }
               }}
-              onSelectFolder={(fid) => {
+              onSelectFolder={(fid, targetCid) => {
+                const targetCourse = targetCid || currentCourseId;
                 setIsStudyCoachModalOpen(false);
                 try {
-                  sessionStorage.setItem('portal_selected_course_id', currentCourseId);
+                  sessionStorage.setItem('portal_selected_course_id', targetCourse);
+                  localStorage.setItem('portal_filter_course', targetCourse);
                   sessionStorage.setItem('portal_active_view', 'course');
                   sessionStorage.setItem('portal_current_folder_id', fid);
                   sessionStorage.setItem('lms_portal_tab', 'library');

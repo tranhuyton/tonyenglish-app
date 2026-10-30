@@ -86,6 +86,10 @@ const formatShortDate = (iso?: string) => {
 };
 
 const snapshotMemoryCache = new Map<string, GlobalStudentSnapshot>();
+const lectureCourseMap = new Map<string, string>();
+const folderCourseMap = new Map<string, string>();
+
+export const GRAMMAR_VOCAB_COURSE_ID = '8c3bea0e-458c-4c18-ab60-44b432e71170';
 
 export function clearGlobalTutorCache() {
   snapshotMemoryCache.clear();
@@ -114,6 +118,11 @@ export async function fetchGlobalStudentSnapshot(
       return cached;
     }
 
+    const targetCourseIds =
+      resolvedCourseId && resolvedCourseId !== 'all'
+        ? Array.from(new Set([resolvedCourseId, GRAMMAR_VOCAB_COURSE_ID]))
+        : [];
+
     // Fetch student profile, course info, modules, lectures, folders, test results, assignments, lecture_progress, activity_logs in parallel
     const [
       profileRes,
@@ -131,28 +140,28 @@ export async function fetchGlobalStudentSnapshot(
       resolvedCourseId && resolvedCourseId !== 'all'
         ? supabase.from('courses').select('id, title, type').eq('id', resolvedCourseId).maybeSingle()
         : Promise.resolve({ data: null }),
-      resolvedCourseId && resolvedCourseId !== 'all'
+      targetCourseIds.length > 0
         ? supabase
             .from('lecture_modules')
-            .select('id, title, order_index')
-            .eq('course_id', resolvedCourseId)
+            .select('id, title, order_index, course_id')
+            .in('course_id', targetCourseIds)
             .order('order_index')
         : Promise.resolve({ data: [] }),
-      resolvedCourseId && resolvedCourseId !== 'all'
+      targetCourseIds.length > 0
         ? supabase
             .from('lectures')
-            .select('id, title, module_id, order_index, task_list')
-            .eq('course_id', resolvedCourseId)
+            .select('id, title, module_id, order_index, task_list, course_id')
+            .in('course_id', targetCourseIds)
             .eq('is_published', true)
             .order('order_index')
         : Promise.resolve({ data: [] }),
-      resolvedCourseId && resolvedCourseId !== 'all'
+      targetCourseIds.length > 0
         ? supabase
             .from('folders')
-            .select('id, title, parent_id')
-            .eq('course_id', resolvedCourseId)
+            .select('id, title, parent_id, course_id')
+            .in('course_id', targetCourseIds)
         : Promise.resolve({ data: [] }),
-      resolvedCourseId && resolvedCourseId !== 'all'
+      targetCourseIds.length > 0
         ? supabase
             .from('tests')
             .select('id, title, folder_id, course_id')
@@ -198,16 +207,40 @@ export async function fetchGlobalStudentSnapshot(
       lowerCourseTitle.includes('co-ordinated') ||
       lowerCourseTitle.includes('0654');
 
-    const modules = (modulesRes.data || []) as any[];
-    const moduleMap = new Map<string, string>();
-    modules.forEach((m) => moduleMap.set(String(m.id), cleanTitle(m.title || 'Học phần')));
+    const allFetchedModules = (modulesRes.data || []) as any[];
+    const allFetchedLectures = (lecturesRes.data || []) as any[];
+    const allFetchedFolders = (foldersRes.data || []) as any[];
 
-    const lectures = (lecturesRes.data || []) as any[];
-    const folders = (foldersRes.data || []) as any[];
+    allFetchedLectures.forEach((l) => {
+      if (l.id && l.course_id) lectureCourseMap.set(String(l.id), String(l.course_id));
+    });
+    allFetchedFolders.forEach((f) => {
+      if (f.id && f.course_id) folderCourseMap.set(String(f.id), String(f.course_id));
+    });
+
+    const modules = allFetchedModules.filter((m) => String(m.course_id) === String(resolvedCourseId));
+    const moduleMap = new Map<string, string>();
+    allFetchedModules.forEach((m) => moduleMap.set(String(m.id), cleanTitle(m.title || 'Học phần')));
+
+    const lectures = allFetchedLectures.filter((l) => String(l.course_id) === String(resolvedCourseId));
+    const folders = allFetchedFolders.filter((f) => String(f.course_id) === String(resolvedCourseId));
     const rootFolders = folders.filter((f) => !f.parent_id);
     const folderMap = new Map<string, { id: string; title: string; parent_id: string | null }>();
     folders.forEach((f) =>
       folderMap.set(String(f.id), {
+        id: String(f.id),
+        title: cleanTitle(f.title || ''),
+        parent_id: f.parent_id ? String(f.parent_id) : null,
+      })
+    );
+
+    // Companion "Grammar and Vocabulary" course data for IELTS Premium students
+    const gvModules = allFetchedModules.filter((m) => String(m.course_id) === GRAMMAR_VOCAB_COURSE_ID);
+    const gvLectures = allFetchedLectures.filter((l) => String(l.course_id) === GRAMMAR_VOCAB_COURSE_ID);
+    const gvFolders = allFetchedFolders.filter((f) => String(f.course_id) === GRAMMAR_VOCAB_COURSE_ID);
+    const gvFolderMap = new Map<string, { id: string; title: string; parent_id: string | null }>();
+    gvFolders.forEach((f) =>
+      gvFolderMap.set(String(f.id), {
         id: String(f.id),
         title: cleanTitle(f.title || ''),
         parent_id: f.parent_id ? String(f.parent_id) : null,
@@ -539,6 +572,105 @@ export async function fetchGlobalStudentSnapshot(
     const taskPercent =
       totalTasksCount > 0 ? Math.round((completedTasksCount / totalTasksCount) * 100) : 0;
 
+    // 3b. Build Companion "Grammar and Vocabulary" Progress & Catalog for IELTS Premium
+    let gvSummarySection = '';
+    let gvCatalogSection = '';
+    if (isIelts) {
+      const gvModOrderMap = new Map<string, number>();
+      gvModules.forEach((m, idx) => gvModOrderMap.set(String(m.id), m.order_index ?? idx));
+      const gvSortedLectures = [...gvLectures].sort((a, b) => {
+        const ma = gvModOrderMap.get(String(a.module_id)) ?? 999;
+        const mb = gvModOrderMap.get(String(b.module_id)) ?? 999;
+        if (ma !== mb) return ma - mb;
+        return (a.order_index ?? 0) - (b.order_index ?? 0);
+      });
+
+      let gvDoneLectures = 0;
+      const gvInProgOrNext: string[] = [];
+      gvSortedLectures.forEach((lec) => {
+        const lecId = String(lec.id);
+        const lecTitle = cleanTitle(lec.title || 'Bài giảng');
+        const modName = moduleMap.get(String(lec.module_id)) || 'Ngữ pháp';
+        const taskList = Array.isArray(lec.task_list) ? lec.task_list : [];
+        const total = taskList.length;
+        const doneSet = progMap.get(lecId) || new Set<string>();
+        const done = Math.min(doneSet.size, total);
+        if (total > 0 && done >= total) {
+          gvDoneLectures++;
+        } else if (gvInProgOrNext.length < 6) {
+          gvInProgOrNext.push(
+            `- [${modName}] "${lecTitle}" (${done > 0 ? `Đang học dở ${done}/${total}` : 'Chưa học'}) -> ID: ${lecId}`
+          );
+        }
+      });
+
+      const gvTests = allTestsMeta.filter(
+        (t) =>
+          String(t.course_id) === GRAMMAR_VOCAB_COURSE_ID ||
+          (t.folder_id && gvFolderMap.has(String(t.folder_id)))
+      );
+      const gvTestIds = new Set<string>(gvTests.map((t) => String(t.id)));
+      const gvTestTitles = new Set<string>(
+        gvTests.map((t) => cleanTitle(t.title || '').toLowerCase()).filter(Boolean)
+      );
+      const gvRecentTestLines: string[] = [];
+      rawTestResults.forEach((r) => {
+        if (gvRecentTestLines.length >= 4) return;
+        let d = r.details;
+        if (typeof d === 'string') {
+          try {
+            d = JSON.parse(d);
+          } catch {}
+        }
+        const tId = d?.test_id ? String(d.test_id) : '';
+        const tTitle = cleanTitle(r.test_title || d?.test_title || '');
+        const lowerT = tTitle.toLowerCase();
+        const score = parseFloat(r.score != null ? r.score : 0);
+        const total = parseFloat(r.total_score != null ? r.total_score : 0);
+        if (score <= 0) return;
+        if ((tId && gvTestIds.has(tId)) || (lowerT && gvTestTitles.has(lowerT))) {
+          const pct = total > 0 ? Math.round((score / total) * 100) : Math.round(score);
+          gvRecentTestLines.push(
+            `- [${formatShortDate(r.created_at)}] ${tTitle}: ${
+              total > 0 ? `${score}/${total} (${pct}%)` : `${pct}%`
+            }`
+          );
+        }
+      });
+
+      gvSummarySection = `
+[KHÓA HỌC BỔ TRỢ NỀN TẢNG ĐI KÈM: GRAMMAR AND VOCABULARY]:
+- Tiến độ bài giảng Ngữ pháp nền tảng: Hoàn thành ${gvDoneLectures}/${gvSortedLectures.length} bài giảng.
+- Các bài giảng Ngữ pháp đang học dở / kế tiếp nên giao thêm:
+${gvInProgOrNext.length > 0 ? gvInProgOrNext.join('\n') : '- Đã học xong các bài giảng ngữ pháp chính.'}
+- Bài tập Từ vựng & Ngữ pháp vừa làm gần đây:
+${gvRecentTestLines.length > 0 ? gvRecentTestLines.join('\n') : '- Chưa làm bài tập nào trong khóa Grammar and Vocabulary gần đây (Thầy cần chủ động sai học sinh vào làm thêm!).'}`;
+
+      const gvFoldersCatalog = gvFolders
+        .slice(0, 28)
+        .map((f) => {
+          const pTitle = f.parent_id ? gvFolderMap.get(String(f.parent_id))?.title : '';
+          const label = pTitle ? `${pTitle} > ${cleanTitle(f.title)}` : cleanTitle(f.title);
+          return `- Thư mục Grammar & Vocabulary "${label}" -> FOLDER_ID: ${f.id}`;
+        })
+        .join('\n');
+
+      const gvLecturesCatalog = gvSortedLectures
+        .slice(0, 20)
+        .map((l) => {
+          const modName = moduleMap.get(String(l.module_id)) || 'Grammar';
+          return `- [Grammar & Vocab - ${modName}] "${cleanTitle(l.title)}" -> ID: ${l.id}`;
+        })
+        .join('\n');
+
+      gvCatalogSection = `
+2b. Mở trực tiếp Bài tập & Bài giảng trong khóa bổ trợ "Grammar and Vocabulary" (Dùng để sai học sinh IELTS Premium cày thêm Từ vựng & Ngữ pháp):
+   - Khi giao bài tập Từ vựng / Ngữ pháp, dùng cú pháp: [[ACTION:OPEN_FOLDER:<FOLDER_ID>|📂 Bổ trợ Từ vựng/Ngữ pháp: <Tên thư mục>]]
+${gvFoldersCatalog}
+   - Khi giao bài giảng Ngữ pháp nền tảng, dùng cú pháp: [[ACTION:OPEN_LECTURE:<ID_BÀI_GIẢNG>|📖 Học Ngữ pháp: <Tên bài giảng>]]
+${gvLecturesCatalog}`;
+    }
+
     // 4. Build Compact Prompt Context (~1,000 tokens) for Gemini AI
     const courseLecturesCatalog = sortedLectures
       .slice(0, 45)
@@ -600,7 +732,8 @@ export async function fetchGlobalStudentSnapshot(
    - Nếu điểm test thấp (< Band 6.0 đối với đề Cambridge, hoặc < 65% đối với các bài tập khác): Yêu cầu học lại bài giảng chiến thuật, luyện bộ đề Strategies (Listening Strategies / Reading Strategies / Crash Course), và BẮT BUỘC mở Thư viện đọc "Bài dịch đọc Cambridge IELTS" (/news/category/cambridge-ielts-reading-translation) hoặc "Bài dịch nghe Cambridge IELTS" (/news/category/cambridge-ielts-listening-translation).
    - Nhắc học sinh chỉ tiêu bắt buộc của khóa IELTS Premium: Đọc hiểu 252 bài dịch đọc Cambridge và 336 bài dịch nghe Cambridge trong Thư viện.
 5. Với Kỹ năng Nói (Speaking): Học công thức Lego Blocks (6 Main Blocks + 3 Plugin Blocks) trong Bài giảng -> sau đó BẮT BUỘC vào Phòng luyện IELTS Speaking AI để ghi âm thực hành.
-6. Với Kỹ năng Viết (Writing): Học công thức phân tích biểu đồ (Task 1) hoặc 5 dạng luận + 24 chủ đề từ vựng (Task 2) -> sau đó vào Phòng chấm IELTS Writing AI để nộp bài.`
+6. Với Kỹ năng Viết (Writing): Học công thức phân tích biểu đồ (Task 1) hoặc 5 dạng luận + 24 chủ đề từ vựng (Task 2) -> sau đó vào Phòng chấm IELTS Writing AI để nộp bài.
+7. ĐẶC QUYỀN KHÓA IELTS PREMIUM — GIAO THÊM BÀI TẬP TRONG KHÓA "GRAMMAR AND VOCABULARY": Học sinh học khóa IELTS Premium luôn được Thầy Tony xếp học kèm khóa "Grammar and Vocabulary" để bồi đắp vốn từ vựng và nền tảng ngữ pháp. Vì vậy, khi tư vấn lộ trình học hôm nay hoặc khi thấy điểm Reading/Listening/Writing/Speaking của học sinh còn yếu, Thầy Tony AI BẮT BUỘC phải sai học sinh làm thêm bài tập trong khóa "Grammar and Vocabulary" (ví dụ: cày từ vựng trong "4000 English Words", "Vocabulary Organiser", "Expand Vocabulary Through Reading", hoặc làm bài tập ngữ pháp trong "Grammar" -> "I. Basic English Grammar exercises" / "II. English Tenses exercises" / "III. Advanced English Grammar exercises", hoặc học bài giảng Ngữ pháp tương ứng) và chèn sẵn nút bấm [[ACTION:OPEN_FOLDER:...]] hoặc [[ACTION:OPEN_LECTURE:...]] để học sinh bấm vào làm ngay!`
       : isIgcse0654
       ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IGCSE CO-ORDINATED SCIENCES 0654]:
 1. Thầy Tony luôn kiểm tra xem học sinh đang học tới chương nào trong Biology (B1–B19), Chemistry (C1–C12), hay Physics (P1–P6) và điểm các bài Test/Past Paper gần nhất ra sao. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em".
@@ -642,6 +775,7 @@ ${inProgressText}
 
 [CÁC BÀI GIẢNG TIẾP THEO CẦN HỌC TRONG TỪNG CHUYÊN ĐỀ]:
 ${nextUpText}
+${gvSummarySection}
 
 ${pedagogyRules}
 
@@ -659,6 +793,7 @@ ${courseLecturesCatalog || '- Chưa có danh sách bài giảng'}
    Cú pháp: [[ACTION:OPEN_FOLDER:<FOLDER_ID>|📂 Luyện đề: <Tên thư mục>]]
    Danh sách FOLDER_ID kho đề:
 ${rootFoldersCatalog || '- Chưa có thư mục kho đề'}
+${gvCatalogSection}
 ${
   isIelts
     ? `
@@ -752,7 +887,7 @@ export function executeTutorAction(
   courseId?: string,
   callbacks?: {
     onOpenLecture?: (courseId: string, lectureId?: string) => void;
-    onSelectFolder?: (folderId: string) => void;
+    onSelectFolder?: (folderId: string, targetCourseId?: string) => void;
     onNavigate?: (view: string) => void;
   }
 ) {
@@ -763,20 +898,22 @@ export function executeTutorAction(
     '239a64f0-c106-40e5-a6e2-4e685a0d70fb';
 
   if (action.type === 'OPEN_LECTURE') {
+    const resolvedLecCourseId = lectureCourseMap.get(action.target) || activeCourseId;
     try {
-      sessionStorage.setItem('lms_active_course_id', activeCourseId);
+      sessionStorage.setItem('lms_active_course_id', resolvedLecCourseId);
+      localStorage.setItem('lms_active_course_id', resolvedLecCourseId);
       sessionStorage.setItem('tony_target_lecture_id', action.target);
-      sessionStorage.setItem(`tony_last_lec_${activeCourseId}`, action.target);
+      sessionStorage.setItem(`tony_last_lec_${resolvedLecCourseId}`, action.target);
     } catch {}
 
     if (callbacks?.onOpenLecture) {
-      callbacks.onOpenLecture(activeCourseId, action.target);
+      callbacks.onOpenLecture(resolvedLecCourseId, action.target);
       return;
     }
 
     window.dispatchEvent(
       new CustomEvent('tony-select-lecture', {
-        detail: { courseId: activeCourseId, lectureId: action.target },
+        detail: { courseId: resolvedLecCourseId, lectureId: action.target },
       })
     );
     window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'lecture' }));
@@ -784,21 +921,23 @@ export function executeTutorAction(
   }
 
   if (action.type === 'OPEN_FOLDER') {
+    const resolvedFolderCourseId = folderCourseMap.get(action.target) || activeCourseId;
     try {
-      sessionStorage.setItem('portal_selected_course_id', activeCourseId);
+      sessionStorage.setItem('portal_selected_course_id', resolvedFolderCourseId);
+      localStorage.setItem('portal_filter_course', resolvedFolderCourseId);
       sessionStorage.setItem('portal_active_view', 'course');
       sessionStorage.setItem('portal_current_folder_id', action.target);
       sessionStorage.setItem('lms_portal_tab', 'library');
     } catch {}
 
     if (callbacks?.onSelectFolder) {
-      callbacks.onSelectFolder(action.target);
+      callbacks.onSelectFolder(action.target, resolvedFolderCourseId);
       return;
     }
 
     window.dispatchEvent(
       new CustomEvent('tony-portal-open-folder', {
-        detail: { courseId: activeCourseId, folderId: action.target },
+        detail: { courseId: resolvedFolderCourseId, folderId: action.target },
       })
     );
     window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'portal' }));

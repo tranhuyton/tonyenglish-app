@@ -226,7 +226,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleOpenStudyCoachModal = (targetCourseId?: string) => {
     const candidateId =
       targetCourseId ||
-      (selectedCourseId && isCoachSupportedCourse(selectedCourseId, courses.find((c) => String(c.id) === String(selectedCourseId))?.title)
+      (activeTab === 'library' && activeView === 'course' && selectedCourseId
         ? selectedCourseId
         : '') ||
       (filterCourse !== 'all' && isCoachSupportedCourse(filterCourse, courses.find((c) => String(c.id) === String(filterCourse))?.title)
@@ -234,6 +234,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         : '') ||
       (analyticsCourse !== 'all' && isCoachSupportedCourse(analyticsCourse, courses.find((c) => String(c.id) === String(analyticsCourse))?.title)
         ? analyticsCourse
+        : '') ||
+      (selectedCourseId && isCoachSupportedCourse(selectedCourseId, courses.find((c) => String(c.id) === String(selectedCourseId))?.title)
+        ? selectedCourseId
         : '') ||
       String(supportedCoachCourses[0]?.id || '239a64f0-c106-40e5-a6e2-4e685a0d70fb');
 
@@ -2304,7 +2307,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </h1>
               </div>
 
-              {/* ACTION CONTROLS: QUAY LẠI, CHUYỂN KHÓA HỌC & MỞ BÀI GIẢNG */}
+              {/* ACTION CONTROLS: QUAY LẠI, THẦY TONY AI, CHUYỂN KHÓA HỌC & MỞ BÀI GIẢNG */}
               <div className="flex flex-wrap items-center gap-2.5 shrink-0">
                 <button
                   type="button"
@@ -2326,6 +2329,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 >
                   <span>←</span>
                   <span>Quay lại</span>
+                </button>
+
+                {/* NÚT THẦY TONY AI (MỞ POPUP ĐỒNG NHẤT VỚI CÁC TAB KHÁC) */}
+                <button
+                  type="button"
+                  onClick={() => handleOpenStudyCoachModal(String(selectedCourse.id))}
+                  className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl shadow-xs transition-all flex items-center justify-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
+                  title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
+                >
+                  <span className="text-base">👨‍🏫</span>
+                  <span>Thầy Tony AI</span>
                 </button>
 
                 {/* DROPDOWN CHUYỂN KHÓA HỌC */}
@@ -2390,41 +2404,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </button>
               </div>
             </div>
-
-            {/* 🤖 TRỢ LÝ DẪN ĐƯỜNG TỪNG BƯỚC (AI STUDY COACH) */}
-            {isCoachSupportedCourse(String(selectedCourse.id), selectedCourse.title) && (
-              <CourseStudyCoach
-                courseId={String(selectedCourse.id)}
-                courseTitle={selectedCourse.title}
-                studentName={displayUserName}
-                availableCourses={courses.map((c) => ({
-                  id: String(c.id),
-                  title: c.title,
-                }))}
-                onSwitchCourse={(cid) => {
-                  const found = courses.find((c) => String(c.id) === String(cid));
-                  if (found) {
-                    setFilterCourse(found.id);
-                    setAnalyticsCourse(found.id);
-                    handleOpenCourse(found);
-                  }
-                }}
-                lectures={allLectures.filter(l => String(l.course_id) === String(selectedCourse.id))}
-                folders={courseFolders}
-                onOpenLecture={(cid, lid) => handleGoToLecture(cid, lid)}
-                onSelectFolder={(fid) => handleFolderClick(fid)}
-                onNavigate={onNavigate}
-                onOpenAIChat={(prompt) => {
-                  window.dispatchEvent(new CustomEvent('tony-open-ai-coach-chat', {
-                    detail: {
-                      courseId: String(selectedCourse.id),
-                      courseTitle: selectedCourse.title,
-                      prompt
-                    }
-                  }));
-                }}
-              />
-            )}
 
             <div id="course-folders-section" className="space-y-8 md:space-y-10">
               
@@ -3950,11 +3929,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     setIsStudyCoachModalOpen(false);
                     handleGoToLecture(cid, lid);
                   }}
-                  onSelectFolder={(fid) => {
+                  onSelectFolder={(fid, targetCid) => {
+                    const cid = targetCid || activeCid;
                     setIsStudyCoachModalOpen(false);
                     setActiveTab('library');
                     setActiveView('course');
-                    setSelectedCourseId(activeCid);
+                    setSelectedCourseId(cid);
+                    setFilterCourse(cid);
+                    setAnalyticsCourse(cid);
                     handleFolderClick(fid);
                   }}
                   onNavigate={(view) => {

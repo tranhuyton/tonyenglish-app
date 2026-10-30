@@ -20,7 +20,7 @@ export interface StudyCoachProps {
   onSwitchCourse?: (courseId: string) => void;
   onClose?: () => void;
   onOpenLecture: (courseId: string, lectureId?: string) => void;
-  onSelectFolder: (folderId: string) => void;
+  onSelectFolder: (folderId: string, targetCourseId?: string) => void;
   onNavigate?: (view: string) => void;
   onOpenAIChat?: (initialPrompt?: string) => void;
 }
@@ -206,7 +206,7 @@ export default function CourseStudyCoach({
     );
   }, [courseId, courseTitle]);
 
-  const getCacheKey = (uid: string, cid: string) => `tony_ai_coach_chat_v4_${uid}_${cid}`;
+  const getCacheKey = (uid: string, cid: string) => `tony_ai_coach_chat_v5_${uid}_${cid}`;
 
   const askTonyAIBrain = async (
     snap: GlobalStudentSnapshot,
@@ -349,7 +349,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       await askTonyAIBrain(
         snap,
         snap.isIelts
-          ? 'Hãy phân tích hồ sơ học tập hiện tại của em (điểm các bài test gần nhất, các bài đang làm dở trên Bảng công việc, tiến độ đọc bài dịch Thư viện) và chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay nhé!'
+          ? 'Hãy phân tích hồ sơ học tập hiện tại của em (điểm các bài test gần nhất, các bài đang làm dở trên Bảng công việc, tiến độ đọc bài dịch Thư viện và khóa bổ trợ Grammar and Vocabulary) rồi chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay (bao gồm cả việc làm thêm bài tập từ vựng/ngữ pháp trong khóa Grammar and Vocabulary) nhé!'
           : `Hãy phân tích hồ sơ học tập hiện tại của em trong khóa ${cleanTitle(courseTitle)} (điểm các bài kiểm tra gần nhất và các bài giảng đang làm dở / kế tiếp trên Bảng công việc) rồi chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay nhé!`,
         true
       );
@@ -371,7 +371,9 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
     await askTonyAIBrain(
       freshSnap,
-      'Em vừa cập nhật tiến độ học tập mới nhất. Thầy kiểm tra lại toàn bộ điểm số, Bảng công việc và Thư viện để giao việc tiếp theo cho em nhé!',
+      freshSnap.isIelts
+        ? 'Em vừa cập nhật tiến độ học tập mới nhất. Thầy kiểm tra lại toàn bộ điểm số, Bảng công việc, Thư viện và khóa bổ trợ Grammar and Vocabulary để giao việc tiếp theo cho em nhé!'
+        : 'Em vừa cập nhật tiến độ học tập mới nhất. Thầy kiểm tra lại toàn bộ điểm số, Bảng công việc và Thư viện để giao việc tiếp theo cho em nhé!',
       true
     );
   };
@@ -412,7 +414,13 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           icon: '🎯',
           label: 'Giao việc ưu tiên hôm nay',
           prompt:
-            'Dựa vào điểm test gần nhất và các bài đang làm dở trên Bảng công việc của em, hôm nay em nên ưu tiên làm 3 việc nào nhất hả thầy?',
+            'Dựa vào điểm test gần nhất, các bài đang làm dở trên Bảng công việc và khóa bổ trợ Grammar & Vocabulary của em, hôm nay em nên ưu tiên làm những việc nào nhất hả thầy?',
+        },
+        {
+          icon: '📚',
+          label: 'Bổ trợ Grammar & Vocabulary',
+          prompt:
+            'Thầy kiểm tra lực học hiện tại của em và sai em làm thêm các bài tập phù hợp trong khóa Grammar and Vocabulary (như 4000 English Words, Vocabulary Organiser, Expand Vocabulary Through Reading hoặc bài tập Grammar) kèm nút mở bài để em tăng cường từ vựng và ngữ pháp phục vụ IELTS nhé!',
         },
         {
           icon: '🎧',
@@ -424,7 +432,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           icon: '📖',
           label: 'Hôm nay em muốn cày Reading',
           prompt:
-            'Hôm nay em muốn tập trung luyện kỹ năng Reading. Thầy xem điểm Reading và tiến độ đọc Bài dịch đọc Cambridge của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
+            'Hôm nay em muốn tập trung luyện kỹ năng Reading. Thầy xem điểm Reading, tiến độ đọc Bài dịch đọc Cambridge và từ vựng của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
         },
         {
           icon: '✍️',
@@ -514,7 +522,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           isWindowCollapsed ? 'rounded-b-[14px] sm:rounded-b-[22px]' : ''
         }`}
       >
-        <div className="flex items-center gap-2.5 min-w-0">
+        <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 flex-wrap">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#2ab4e8] to-sky-400 text-slate-950 flex items-center justify-center text-xl shadow-md shrink-0">
             👨‍🏫
           </div>
@@ -524,58 +532,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               Thầy Tony AI Chủ Nhiệm<span className="hidden sm:inline"> • Phân Tích Tiến Độ Tổng Thể</span>
             </span>
           </span>
+          <span className="bg-[#0f172a]/85 text-sky-200 border border-sky-400/35 text-[11px] sm:text-xs font-extrabold px-2.5 py-1 rounded-xl flex items-center gap-1.5 max-w-[200px] sm:max-w-[260px] truncate">
+            <span className="truncate">🎓 {cleanTitle(courseTitle)}</span>
+          </span>
         </div>
 
         <div className="flex items-center gap-2 shrink-0 flex-wrap">
-          {availableCourses && availableCourses.length > 1 && onSwitchCourse ? (
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setIsCourseDropdownOpen((prev) => !prev)}
-                className="bg-[#0f172a]/90 hover:bg-slate-900 text-sky-200 border border-sky-400/40 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-2 shadow-xs"
-                title="Đổi khóa học cần Thầy Tony AI tư vấn"
-              >
-                <span className="truncate max-w-[180px] sm:max-w-[240px]">🎓 {cleanTitle(courseTitle)}</span>
-                <span className="text-[10px] text-sky-300">{isCourseDropdownOpen ? '▲' : '▼'}</span>
-              </button>
-
-              {isCourseDropdownOpen && (
-                <>
-                  <div
-                    className="fixed inset-0 z-40"
-                    onClick={() => setIsCourseDropdownOpen(false)}
-                  />
-                  <div className="absolute right-0 sm:left-0 top-full mt-1.5 w-64 max-h-72 overflow-y-auto custom-scrollbar bg-[#0f172a] border border-sky-400/40 rounded-xl shadow-2xl py-1.5 z-50">
-                    {availableCourses.map((c) => (
-                      <button
-                        key={c.id}
-                        type="button"
-                        onClick={() => {
-                          setIsCourseDropdownOpen(false);
-                          onSwitchCourse(c.id);
-                        }}
-                        className={`w-full text-left px-3.5 py-2 text-xs font-bold flex items-center justify-between gap-2 transition cursor-pointer ${
-                          c.id === courseId
-                            ? 'bg-[#0a5482] text-white'
-                            : 'text-slate-200 hover:bg-slate-800 hover:text-white'
-                        }`}
-                      >
-                        <span className="truncate">🎓 {cleanTitle(c.title)}</span>
-                        {c.id === courseId && (
-                          <span className="text-emerald-400 text-[11px] font-black shrink-0">✓</span>
-                        )}
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          ) : (
-            <div className="bg-[#0f172a]/85 text-sky-200 border border-sky-400/35 text-xs font-extrabold px-3 py-1.5 rounded-xl flex items-center gap-1.5">
-              <span className="truncate max-w-[180px] sm:max-w-[240px]">🎓 {cleanTitle(courseTitle)}</span>
-            </div>
-          )}
-
           {!isWindowCollapsed && (
             <button
               type="button"
