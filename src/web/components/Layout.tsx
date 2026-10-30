@@ -473,33 +473,33 @@ export const Layout: React.FC<{
       <nav className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 h-15 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition-opacity shrink-0">
+          <Link to="/" className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 hover:opacity-90 transition-opacity shrink-0">
             <img
               src="/logo-shield.png"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
               }}
               alt="TonyEnglish"
-              className="h-8 sm:h-11 w-auto object-contain"
+              className="h-8 sm:h-9 xl:h-11 w-auto object-contain"
             />
             <div className="flex flex-col items-start leading-none">
-              <div className="font-black text-[18px] sm:text-[25px] tracking-tight">
+              <div className="font-black text-[18px] sm:text-[21px] xl:text-[25px] tracking-tight">
                 <span className="text-[#2ab4e8]">TONY</span>
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mt-0.5 hidden sm:block">
+              <span className="text-[9px] xl:text-[11px] font-bold uppercase tracking-wider xl:tracking-widest text-slate-400 mt-0.5 hidden sm:block">
                 The future begins here
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
             {navItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className={`px-4 py-2 rounded-xl text-[15px] xl:text-[16px] font-bold transition-all whitespace-nowrap ${
+                className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-[13.5px] xl:text-[15px] font-bold transition-all whitespace-nowrap ${
                   item.active
                     ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-100'
                     : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50'
@@ -512,7 +512,7 @@ export const Layout: React.FC<{
             {user && (
               <Link
                 to="/user/lecture"
-                className={`px-4 py-2 rounded-xl text-[15px] xl:text-[16px] font-bold transition-all whitespace-nowrap ${
+                className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-[13.5px] xl:text-[15px] font-bold transition-all whitespace-nowrap ${
                   isLecture
                     ? 'bg-sky-50 text-[#0a5482] border border-sky-100'
                     : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50'
@@ -524,14 +524,14 @@ export const Layout: React.FC<{
           </div>
 
           {/* Right Action Buttons (Unified LMS) */}
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             {lmsRole ? (
               <>
                 {lmsRole === 'admin' && (
                   <button
                     type="button"
                     onClick={() => onNavigateLms?.('student-resume')}
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[14px] font-black uppercase tracking-wider px-2.5 py-1.5 sm:px-4 sm:py-2.5 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[13px] xl:text-[14px] font-black uppercase tracking-wider px-2.5 py-1.5 sm:px-3.5 sm:py-2 xl:px-4 xl:py-2.5 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap"
                   >
                     🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
                   </button>
@@ -539,17 +539,24 @@ export const Layout: React.FC<{
                 <button
                   type="button"
                   onClick={() => (lmsRole === 'admin' ? onNavigateLms?.('admin') : onNavigateLms?.('student-resume'))}
-                  className="bg-gradient-to-r from-[#2ab4e8] to-[#0a5482] hover:opacity-95 text-white text-[11px] sm:text-[15px] font-black px-2.5 py-1.5 sm:px-5 sm:py-2.5 rounded-xl transition shadow-md shadow-sky-500/20 active:scale-95 whitespace-nowrap"
+                  title={lmsRole === 'admin' ? (lang === 'vi' ? 'Quản Trị' : 'Admin Setting') : (lang === 'vi' ? 'Góc Học Viên' : 'Student Portal')}
+                  className={`bg-gradient-to-r from-[#2ab4e8] to-[#0a5482] hover:opacity-95 text-white font-black rounded-xl transition shadow-md shadow-sky-500/20 active:scale-95 whitespace-nowrap flex items-center justify-center ${
+                    lmsRole === 'admin'
+                      ? 'text-[14px] sm:text-[15px] px-2.5 py-1.5 sm:px-3 sm:py-2 2xl:px-4 2xl:py-2.5'
+                      : 'text-[11px] sm:text-[14px] px-2.5 py-1.5 sm:px-4 sm:py-2.5'
+                  }`}
                 >
                   {lmsRole === 'admin' ? (
                     <>
-                      ⚙️ {lang === 'vi' ? 'Quản Trị' : 'Admin Setting'}
-                      <span className="hidden sm:inline"> ➜</span>
+                      <span>⚙️</span>
+                      <span className="hidden 2xl:inline ml-1.5">
+                        {lang === 'vi' ? 'Quản Trị ➜' : 'Admin Setting ➜'}
+                      </span>
                     </>
                   ) : (
                     <>
                       🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
-                      <span className="hidden sm:inline"> ➜</span>
+                      <span className="hidden sm:inline ml-1">➜</span>
                     </>
                   )}
                 </button>
