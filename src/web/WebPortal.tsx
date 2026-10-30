@@ -33,6 +33,7 @@ export default function WebPortal({
             <Route path="/:lang/courses/online" element={<CoursesPage />} />
             <Route path="/:lang/courses/:slug" element={<CoursesPage />} />
             <Route path="/khoa-hoc" element={<CoursesPage />} />
+            <Route path="/khoa-hoc/:slug" element={<CoursesPage />} />
             <Route path="/hoc-thu" element={<CoursesPage />} />
             <Route path="/dang-ky" element={<CoursesPage />} />
             <Route path="/promo" element={<CoursesPage />} />

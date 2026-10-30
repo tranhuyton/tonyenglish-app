@@ -319,12 +319,20 @@ export const Layout: React.FC<{
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2 flex flex-wrap items-center justify-between gap-2 sm:gap-3">
           {/* Left info (Desktop / Tablet) */}
           <div className="hidden md:flex items-center gap-4 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
+            <a
+              href="tel:0935058688"
+              className="inline-flex items-center gap-1.5 text-slate-200 hover:text-[#2ab4e8] font-semibold transition"
+            >
               <span className="text-[#2ab4e8]">📞</span> {phoneText}
-            </span>
-            <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
-              <span className="text-[#2ab4e8]">✉️</span> {emailText}
-            </span>
+            </a>
+            <a
+              href="https://zalo.me/0935058688"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden lg:inline-flex items-center gap-1.5 text-cyan-300 hover:text-white font-semibold transition"
+            >
+              <span>💬</span> Zalo: 0935 058 688
+            </a>
             <span className="inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-1 rounded-full text-xs font-semibold border border-slate-700">
               💡 {lang === 'vi' ? 'Click đúp vào từ tiếng Anh bất kỳ để tra từ điển' : 'Double-click any English word to look up'}
             </span>
@@ -675,13 +683,20 @@ export const Layout: React.FC<{
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="text-[#2ab4e8]">📞</span>
-                  <span>
+                  <a href="tel:0935058688" className="hover:text-white transition">
                     {t('Contact')}: {phoneText}
-                  </span>
+                  </a>
                 </p>
                 <p className="flex items-center gap-2">
-                  <span className="text-[#2ab4e8]">✉️</span>
-                  <span>Email: {emailText}</span>
+                  <span className="text-[#2ab4e8]">💬</span>
+                  <a
+                    href="https://zalo.me/0935058688"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 font-semibold transition"
+                  >
+                    Zalo tư vấn: 0935 058 688
+                  </a>
                 </p>
               </div>
             </div>

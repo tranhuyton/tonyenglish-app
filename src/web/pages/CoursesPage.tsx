@@ -20,6 +20,26 @@ interface SyllabusPackageItem {
 }
 
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
+const CONTACT_PHONE = '0935058688';
+const CONTACT_PHONE_DISPLAY = '0935 058 688';
+
+const trackCourseConversion = (method: 'Zalo' | 'Phone', courseName: string) => {
+  try {
+    const w = window as any;
+    if (typeof w.fbq === 'function') {
+      w.fbq('track', 'Lead', {
+        site_domain: 'tonyenglish.vn',
+        content_name: courseName,
+        contact_method: method,
+      });
+      w.fbq('track', 'Contact', {
+        site_domain: 'tonyenglish.vn',
+        content_name: courseName,
+        contact_method: method,
+      });
+    }
+  } catch (e) {}
+};
 
 // Helper to strip [color:...] tags and optional leading numbers (e.g. "1. ")
 const cleanCurriculumTitle = (raw: string, stripLeadingNumber = false): string => {
@@ -257,8 +277,23 @@ export const CoursesPage: React.FC = () => {
         const visibleCategories = cateRes.data.filter((c: any) => !isHiddenCourseCategory(c));
         setAllCategories(visibleCategories);
 
-        if (slug && slug.toLowerCase() !== 'online') {
-          const cleanSlug = decodeURIComponent(slug)
+        let effectiveSlug = slug && slug.toLowerCase() !== 'online' ? slug : '';
+        if (!effectiveSlug) {
+          try {
+            const params = new URLSearchParams(window.location.search);
+            const courseQuery = (params.get('course') || '').toLowerCase();
+            if (courseQuery.includes('igcse') || courseQuery.includes('cambridge')) {
+              effectiveSlug = 'luyen-thi-igcse-alevel-cap-toc';
+            } else if (courseQuery.includes('ielts')) {
+              effectiveSlug = 'ielts';
+            } else if (courseQuery.includes('sat')) {
+              effectiveSlug = 'luyen-thi-sat-cap-toc';
+            }
+          } catch (e) {}
+        }
+
+        if (effectiveSlug) {
+          const cleanSlug = decodeURIComponent(effectiveSlug)
             .trim()
             .replace(/\.html$/i, '');
           const found = visibleCategories.find((c: any) => (c.cc_name_url || '').trim() === cleanSlug);
@@ -749,16 +784,34 @@ export const CoursesPage: React.FC = () => {
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-black tracking-tight">{courseTitle}</h1>
               </div>
-              {currentCourse && (
+              <div className="flex flex-wrap items-center gap-2">
                 <button
                   type="button"
                   onClick={() => setShowSyllabusModal(true)}
-                  className="bg-white/15 hover:bg-white/25 text-white border border-white/25 text-sm font-bold px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+                  className="bg-white/15 hover:bg-white/25 text-white border border-white/25 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
                 >
                   <span>📋</span>
                   <span>{t('Courses Syllabus')}</span>
                 </button>
-              )}
+                <a
+                  href={`tel:${CONTACT_PHONE}`}
+                  onClick={() => trackCourseConversion('Phone', courseTitle)}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-black px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-sm"
+                >
+                  <span>📞</span>
+                  <span>{CONTACT_PHONE_DISPLAY}</span>
+                </a>
+                <a
+                  href={CONTACT_ZALO_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackCourseConversion('Zalo', courseTitle)}
+                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white text-xs sm:text-sm font-black px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-sm"
+                >
+                  <span>💬</span>
+                  <span>Zalo Tư Vấn</span>
+                </a>
+              </div>
             </div>
 
             <div className="p-6 sm:p-8 space-y-6">
@@ -838,27 +891,204 @@ export const CoursesPage: React.FC = () => {
                 />
               )}
 
-              {/* Action Buttons for Course (Only Syllabus Popup & Zalo Registration/Consultation) */}
-              {currentCourse && (
-                <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setShowSyllabusModal(true)}
-                    className="bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 font-extrabold text-sm px-5 py-3 rounded-xl transition flex items-center gap-2 cursor-pointer"
-                  >
-                    <span>📋</span>
-                    <span>{t('Click here view to courses Syllabus')}</span>
-                  </button>
+              {/* Action Buttons for Course (Syllabus Popup, Direct Phone Call & Zalo Consultation) */}
+              <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setShowSyllabusModal(true)}
+                  className="bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 font-extrabold text-sm px-5 py-3 rounded-xl transition flex items-center gap-2 cursor-pointer"
+                >
+                  <span>📋</span>
+                  <span>{t('Click here view to courses Syllabus')}</span>
+                </button>
 
-                  <a
-                    href={CONTACT_ZALO_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
-                  >
-                    <span>💬</span>
-                    <span>{lang === 'vi' ? 'Đăng ký và Tư vấn Zalo' : 'Register & Consult via Zalo'}</span>
-                  </a>
+                <a
+                  href={`tel:${CONTACT_PHONE}`}
+                  onClick={() => trackCourseConversion('Phone', courseTitle)}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
+                >
+                  <span>📞</span>
+                  <span>
+                    {lang === 'vi'
+                      ? `Gọi trực tiếp: ${CONTACT_PHONE_DISPLAY}`
+                      : `Call directly: ${CONTACT_PHONE_DISPLAY}`}
+                  </span>
+                </a>
+
+                <a
+                  href={CONTACT_ZALO_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackCourseConversion('Zalo', courseTitle)}
+                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
+                >
+                  <span>💬</span>
+                  <span>
+                    {lang === 'vi'
+                      ? `Tư vấn & Học thử qua Zalo: ${CONTACT_PHONE_DISPLAY}`
+                      : `Consult via Zalo: ${CONTACT_PHONE_DISPLAY}`}
+                  </span>
+                </a>
+              </div>
+
+              {/* BẢNG DANH MỤC CÁC KHÓA HỌC TẠI TONYENGLISH (HIỂN THỊ BÊN DƯỚI ĐỂ PHỤ HUYNH BẤM VÀO TỪNG KHÓA HỌC) */}
+              {homeParents.length > 0 && (
+                <div className="pt-6 border-t border-slate-200">
+                  <div className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs">
+                    <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-5 py-4 text-white flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-xl">📚</span>
+                        <div>
+                          <h2 className="text-base sm:text-lg font-black tracking-tight">
+                            {lang === 'vi'
+                              ? 'Bảng Danh Mục Các Khóa Học Đào Tạo Tại TonyEnglish'
+                              : 'Directory of Training Courses at TonyEnglish'}
+                          </h2>
+                          <p className="text-xs text-sky-200 font-medium">
+                            {lang === 'vi'
+                              ? 'Bấm vào tên từng khóa học bên dưới để xem chi tiết chương trình và đề cương môn học'
+                              : 'Click on any course below to view full details and syllabus'}
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        href={CONTACT_ZALO_URL}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => trackCourseConversion('Zalo', 'Course Directory Table')}
+                        className="text-xs font-extrabold bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-2 rounded-xl transition shrink-0"
+                      >
+                        💬 Zalo Tư vấn: {CONTACT_PHONE_DISPLAY}
+                      </a>
+                    </div>
+
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left border-collapse">
+                        <thead>
+                          <tr className="bg-slate-100 border-b border-slate-200 text-xs font-black uppercase tracking-wider text-slate-600">
+                            <th className="py-3.5 px-4 sm:px-5">
+                              {lang === 'vi' ? 'Khóa học / Chương trình đào tạo' : 'Course / Program'}
+                            </th>
+                            <th className="py-3.5 px-4 hidden md:table-cell">
+                              {lang === 'vi' ? 'Các chuyên đề / Môn học bao gồm' : 'Included Subjects / Modules'}
+                            </th>
+                            <th className="py-3.5 px-4 text-center hidden sm:table-cell">
+                              {lang === 'vi' ? 'Mã khóa' : 'Code'}
+                            </th>
+                            <th className="py-3.5 px-4 sm:px-5 text-right">
+                              {lang === 'vi' ? 'Chi tiết khóa học' : 'Details'}
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-200/80 bg-white text-sm">
+                          {homeParents.map((parent) => {
+                            const subs = subCategories(parent.cc_id);
+                            const parentName =
+                              lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name;
+                            const parentUrl = `/courses/${(parent.cc_name_url || '').trim()}`;
+                            const isActiveRow =
+                              currentCourse &&
+                              (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id);
+
+                            let defaultSubjectsText = '';
+                            if (Number(parent.cc_id) === 127) {
+                              defaultSubjectsText =
+                                lang === 'vi'
+                                  ? 'IELTS 4 Kỹ năng (Listening, Reading, Writing, Speaking) & Phòng thi máy tính chuẩn IDP/BC'
+                                  : 'IELTS 4 Skills (Listening, Reading, Writing, Speaking) & Computer-based Mock Tests';
+                            } else if (Number(parent.cc_id) === 132) {
+                              defaultSubjectsText =
+                                lang === 'vi'
+                                  ? 'Cambridge IGCSE & A-Level: Maths (0580/0606), Sciences (0654/0610/0620/0625), Economics (0455), Business (0450), Geography (0460), ESL (0510)'
+                                  : 'Cambridge IGCSE & A-Level: Maths, Co-ordinated Sciences, Biology, Chemistry, Physics, Economics, Business, Geography, ESL';
+                            } else if (Number(parent.cc_id) === 133) {
+                              defaultSubjectsText =
+                                lang === 'vi'
+                                  ? 'Digital SAT Reading & Writing, SAT Math chuyên sâu'
+                                  : 'Digital SAT Reading & Writing, SAT Math';
+                            }
+
+                            return (
+                              <tr
+                                key={parent.cc_id}
+                                className={`hover:bg-sky-50/60 transition ${
+                                  isActiveRow ? 'bg-sky-50/40' : ''
+                                }`}
+                              >
+                                <td className="py-4 px-4 sm:px-5 align-top">
+                                  <Link
+                                    to={parentUrl}
+                                    className="font-black text-[15px] sm:text-base text-[#0a5482] hover:text-[#2ab4e8] flex items-center gap-2 transition"
+                                  >
+                                    <span>🎓</span>
+                                    <span>{parentName}</span>
+                                  </Link>
+                                  {/* Mobile view of sub-courses or description */}
+                                  <div className="md:hidden mt-2 space-y-1.5">
+                                    {subs.length > 0 ? (
+                                      <div className="flex flex-wrap gap-1.5">
+                                        {subs.map((sub) => (
+                                          <Link
+                                            key={sub.cc_id}
+                                            to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                                            className="inline-flex items-center gap-1 text-xs font-bold text-[#0a5482] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-2.5 py-1 rounded-lg"
+                                          >
+                                            <span>• {lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}</span>
+                                            <span>→</span>
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    ) : (
+                                      defaultSubjectsText && (
+                                        <p className="text-xs text-slate-600 leading-relaxed">{defaultSubjectsText}</p>
+                                      )
+                                    )}
+                                  </div>
+                                </td>
+
+                                <td className="py-4 px-4 align-top hidden md:table-cell">
+                                  {subs.length > 0 ? (
+                                    <div className="flex flex-wrap gap-2">
+                                      {subs.map((sub) => (
+                                        <Link
+                                          key={sub.cc_id}
+                                          to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                                          className="inline-flex items-center gap-1 text-xs font-bold text-[#0a5482] bg-slate-100 hover:bg-sky-100 border border-slate-200 hover:border-sky-300 px-3 py-1.5 rounded-xl transition"
+                                        >
+                                          <span>{lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}</span>
+                                          <span className="text-[#2ab4e8]">→</span>
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  ) : (
+                                    <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                                      {defaultSubjectsText}
+                                    </p>
+                                  )}
+                                </td>
+
+                                <td className="py-4 px-4 align-top text-center hidden sm:table-cell">
+                                  <span className="inline-block bg-slate-100 text-slate-700 font-black text-xs px-2.5 py-1 rounded-lg border border-slate-200">
+                                    {parent.cc_code || 'TE'}
+                                  </span>
+                                </td>
+
+                                <td className="py-4 px-4 sm:px-5 align-top text-right whitespace-nowrap">
+                                  <Link
+                                    to={parentUrl}
+                                    className="inline-flex items-center gap-1.5 bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-3.5 py-2 rounded-xl shadow-2xs transition"
+                                  >
+                                    <span>{lang === 'vi' ? 'Xem khóa học' : 'View course'}</span>
+                                    <span>→</span>
+                                  </Link>
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -867,7 +1097,7 @@ export const CoursesPage: React.FC = () => {
       </div>
 
       {/* SYLLABUS MODAL */}
-      {showSyllabusModal && currentCourse && (
+      {showSyllabusModal && (
         <div
           className="fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-50 flex items-center justify-center p-4"
           onClick={() => setShowSyllabusModal(false)}
@@ -893,13 +1123,22 @@ export const CoursesPage: React.FC = () => {
 
             <div className="mt-6 pt-4 border-t border-slate-200 flex flex-wrap items-center justify-end gap-3">
               <a
+                href={`tel:${CONTACT_PHONE}`}
+                onClick={() => trackCourseConversion('Phone', courseTitle)}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
+              >
+                <span>📞</span>
+                <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
+              </a>
+              <a
                 href={CONTACT_ZALO_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
+                onClick={() => trackCourseConversion('Zalo', courseTitle)}
+                className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
               >
                 <span>💬</span>
-                <span>{lang === 'vi' ? 'Đăng ký và Tư vấn Zalo' : 'Register & Consult via Zalo'}</span>
+                <span>{lang === 'vi' ? 'Tư vấn qua Zalo' : 'Consult via Zalo'}</span>
               </a>
               <button
                 type="button"
