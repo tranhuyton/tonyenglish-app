@@ -5,6 +5,7 @@ import TaskBoard from './TaskBoard';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
+import { parseClassConfig } from './classConfigUtils';
 
 const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800', 
@@ -148,6 +149,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [userProfile, setUserProfile] = useState<any>(null);
   const [userClassIds, setUserClassIds] = useState<string[]>([]);
   const [assignments, setAssignments] = useState<any[]>([]);
+  const [enrolledCourseIdsSet, setEnrolledCourseIdsSet] = useState<Set<string>>(new Set());
+  const [trialClassCourseIdsSet, setTrialClassCourseIdsSet] = useState<Set<string>>(new Set());
+  const [isOnlineStudentAccount, setIsOnlineStudentAccount] = useState<boolean>(false);
+  const [unlockModalCourse, setUnlockModalCourse] = useState<any | null>(null);
+  const [unlockPhone, setUnlockPhone] = useState<string>('');
+  const [isSendingUnlockReq, setIsSendingUnlockReq] = useState<boolean>(false);
+  const [unlockReqSuccess, setUnlockReqSuccess] = useState<boolean>(false);
   
   const [courseTargets, setCourseTargets] = useState<Record<string, string>>(() => {
       try {
@@ -408,28 +416,125 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         }
         console.log('[PORTAL INIT] profile:', !!profile, 'lp:', lp?.length, 'enrolls:', enrolls?.length, 'hData:', hData?.length, 'assigns:', assignData?.length);
 
-        setUserProfile(profile);
-        if (profile) {
-            if (!newFullName) setNewFullName(profile.full_name || '');
-            if (profile.avatar_url) {
-                try {
-                    const parsed = JSON.parse(profile.avatar_url);
-                    if (typeof parsed === 'object' && parsed !== null) {
-                        setCourseTargets(parsed);
-                        try { localStorage.setItem('tony_course_targets', JSON.stringify(parsed)); } catch(e) {}
-                    }
-                } catch(e) {
-                    // Legacy single-value format: treat as IELTS target
-                    const legacy = profile.avatar_url.toString();
-                    const migrated = { ielts: legacy };
-                    setCourseTargets(migrated);
-                    try { localStorage.setItem('tony_course_targets', JSON.stringify(migrated)); } catch(e2) {}
-                }
-            }
+        let resolvedProfile = profile;
+        const enrolledIds = (enrolls || []).map((e: any) => String(e.course_id));
+        const studentClassList = (cStudents || []).map((c: any) => String(c.class_id));
+
+        // Tự động tạo profile nếu đăng nhập qua Google OAuth lần đầu chưa có dòng trong bảng profiles
+        if (!resolvedProfile && user) {
+          const fallbackName =
+            user.user_metadata?.full_name ||
+            user.user_metadata?.name ||
+            user.email?.split('@')[0] ||
+            'Học viên Online';
+          const initialMeta = {
+            account_type: 'online',
+            provider: user.app_metadata?.provider || 'google',
+            google_avatar: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
+            ielts: '6.5',
+          };
+          const newProf = {
+            id: user.id,
+            email: user.email,
+            full_name: fallbackName,
+            role: 'student',
+            status: 'active',
+            avatar_url: JSON.stringify(initialMeta),
+          };
+          try {
+            await supabase.from('profiles').upsert(newProf);
+          } catch (e) {}
+          resolvedProfile = newProf;
         }
-        
+
+        let parsedAvatarObj: Record<string, any> = {};
+        if (resolvedProfile?.avatar_url) {
+          try {
+            const parsed = JSON.parse(resolvedProfile.avatar_url);
+            if (typeof parsed === 'object' && parsed !== null) {
+              parsedAvatarObj = parsed;
+            }
+          } catch (e) {
+            const rawStr = resolvedProfile.avatar_url.toString();
+            if (rawStr.startsWith('http')) {
+              parsedAvatarObj = {
+                account_type: 'online',
+                provider: 'google',
+                google_avatar: rawStr,
+                ielts: '6.5',
+              };
+            } else {
+              parsedAvatarObj = { ielts: rawStr };
+            }
+          }
+        }
+
+        const isOnlineUser =
+          !isUserAdmin &&
+          (parsedAvatarObj?.account_type === 'online' ||
+            user.user_metadata?.account_type === 'online' ||
+            (enrolledIds.length === 0 && studentClassList.length === 0));
+
+        setIsOnlineStudentAccount(isOnlineUser);
+
+        if (isOnlineUser && parsedAvatarObj.account_type !== 'online') {
+          parsedAvatarObj = {
+            ...parsedAvatarObj,
+            account_type: 'online',
+            provider: user.app_metadata?.provider || 'google',
+            google_avatar:
+              parsedAvatarObj.google_avatar ||
+              user.user_metadata?.avatar_url ||
+              user.user_metadata?.picture ||
+              '',
+          };
+          const jsonStr = JSON.stringify(parsedAvatarObj);
+          resolvedProfile = { ...resolvedProfile, avatar_url: jsonStr };
+          supabase
+            .from('profiles')
+            .update({ avatar_url: jsonStr })
+            .eq('id', user.id)
+            .then()
+            .catch(() => {});
+        }
+
+        setUserProfile(resolvedProfile);
+        if (resolvedProfile) {
+          if (!newFullName) setNewFullName(resolvedProfile.full_name || '');
+          if (resolvedProfile.phone && !unlockPhone) setUnlockPhone(resolvedProfile.phone);
+          if (Object.keys(parsedAvatarObj).length > 0) {
+            setCourseTargets(parsedAvatarObj);
+            try {
+              localStorage.setItem('tony_course_targets', JSON.stringify(parsedAvatarObj));
+            } catch (e) {}
+          }
+        }
+
         setLectureProgressData(lp || []);
-        if (cStudents) setUserClassIds(cStudents.map(c => c.class_id));
+        if (cStudents) setUserClassIds(cStudents.map((c: any) => c.class_id));
+        setEnrolledCourseIdsSet(new Set(enrolledIds));
+
+        // Kiểm tra nếu học viên thuộc lớp học thử [trial] của khóa học nào
+        const trialCourseSet = new Set<string>();
+        if (studentClassList.length > 0) {
+          const { data: clsRows } = await safeQuery('user_classes', () =>
+            supabase.from('classes').select('id, name, course_id').in('id', studentClassList)
+          );
+          if (clsRows) {
+            const byCourse: Record<string, any[]> = {};
+            clsRows.forEach((cls: any) => {
+              if (!cls.course_id) return;
+              if (!byCourse[cls.course_id]) byCourse[cls.course_id] = [];
+              byCourse[cls.course_id].push(cls);
+            });
+            Object.entries(byCourse).forEach(([cid, list]) => {
+              if (list.length > 0 && list.every((c: any) => parseClassConfig(c.name).isTrial)) {
+                trialCourseSet.add(String(cid));
+              }
+            });
+          }
+        }
+        setTrialClassCourseIdsSet(trialCourseSet);
 
         let finalAssignments = assignData || [];
         
@@ -475,7 +580,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
         setAssignments(finalAssignments);
 
-        const courseIds = enrolls?.map(e => e.course_id) || [];
+        // Nếu là học viên Online (hoặc chưa có khóa học offline nào), tự động lấy thêm toàn bộ danh sách khóa học IGCSE để hiển thị chế độ Học Thử / Làm Thử
+        let igcseCourseIds: string[] = [];
+        if (isOnlineUser || enrolledIds.length === 0) {
+          const { data: igcseData } = await safeQuery('igcse_courses', () =>
+            supabase.from('courses').select('id, title').ilike('title', '%igcse%')
+          );
+          if (igcseData) {
+            igcseCourseIds = igcseData.map((c: any) => String(c.id));
+          }
+        }
+
+        const courseIds = Array.from(new Set([...enrolledIds, ...igcseCourseIds]));
         
         let allF: any[] = [];
         let allL: any[] = [];
@@ -520,8 +636,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         setAllLectures(allL);
 
         if (courseIds.length > 0) {
+            const enrolledSetLocal = new Set(enrolledIds);
             const userCourses = (allC || []).filter(c => courseIds.includes(c.id));
-            setCourses(userCourses.sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
+            setCourses(userCourses.sort((a, b) => {
+                const aEnrolled = enrolledSetLocal.has(String(a.id)) && !trialCourseSet.has(String(a.id)) ? 0 : 1;
+                const bEnrolled = enrolledSetLocal.has(String(b.id)) && !trialCourseSet.has(String(b.id)) ? 0 : 1;
+                if (aEnrolled !== bEnrolled) return aEnrolled - bEnrolled;
+                return (a.order_index ?? 999) - (b.order_index ?? 999);
+            }));
 
             // PHASE 1: Set tests immediately with empty content_json for fast rendering
             const lightTests = (allT || []).map((t: any) => ({ ...t, content_json: {} }));
@@ -706,6 +828,64 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       if (currentUser?.id) {
           await supabase.from('profiles').update({ avatar_url: JSON.stringify(updated) }).eq('id', currentUser.id);
       }
+  };
+
+  const isCourseTrial = (courseId: string | number | null | undefined): boolean => {
+    if (!courseId) return false;
+    const isAdminUser = currentUser?.email?.toLowerCase().includes('admin') || userProfile?.role === 'admin';
+    if (isAdminUser) return false;
+    const cid = String(courseId);
+    if (trialClassCourseIdsSet.has(cid)) return true;
+    if (!enrolledCourseIdsSet.has(cid)) return true;
+    return false;
+  };
+
+  const handleRequestUnlockCourse = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!unlockModalCourse || !currentUser) return;
+    setIsSendingUnlockReq(true);
+    try {
+      const cleanPhone = unlockPhone.trim();
+      let currentMeta: Record<string, any> = { ...courseTargets };
+      const existingReqs: string[] = Array.isArray(currentMeta.requested_courses)
+        ? currentMeta.requested_courses
+        : [];
+      const courseTitle = unlockModalCourse.title || String(unlockModalCourse.id);
+      if (!existingReqs.includes(courseTitle)) {
+        existingReqs.push(courseTitle);
+      }
+      currentMeta = {
+        ...currentMeta,
+        account_type: 'online',
+        requested_courses: existingReqs,
+        last_requested_at: new Date().toISOString(),
+      };
+      setCourseTargets(currentMeta);
+      const updatePayload: any = {
+        avatar_url: JSON.stringify(currentMeta),
+      };
+      if (cleanPhone) {
+        updatePayload.phone = cleanPhone;
+      }
+      await supabase.from('profiles').update(updatePayload).eq('id', currentUser.id);
+      setUserProfile((prev: any) => (prev ? { ...prev, ...updatePayload } : prev));
+      await supabase.from('activity_logs').insert([
+        {
+          user_id: currentUser.id,
+          action_type: 'request_unlock_course',
+          details: {
+            course_id: unlockModalCourse.id,
+            course_title: unlockModalCourse.title,
+            phone: cleanPhone || userProfile?.phone || '',
+          },
+        },
+      ]);
+      setUnlockReqSuccess(true);
+    } catch (err) {
+      console.error('Error requesting course unlock:', err);
+    } finally {
+      setIsSendingUnlockReq(false);
+    }
   };
 
   // ====== MOTIVATIONAL COMMENT GENERATOR ======
@@ -2155,13 +2335,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {filteredCourses.map(course => {
                       const cover = getCourseCover(course);
                       const stats = courseStats[course.id] || { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
+                      const isTrial = isCourseTrial(course.id);
                       
                       const testProgress = stats.testCount > 0 ? Math.min(100, Math.round((stats.completedTestIds.size / stats.testCount) * 100)) : 0;
                       const lecProgress = stats.lecCount > 0 ? Math.min(100, Math.round((stats.completedLecIds.size / stats.lecCount) * 100)) : 0;
                       const overallProgress = Math.round((testProgress + lecProgress) / 2);
 
                       return (
-                        <div key={course.id} className={`bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl hover:border-[#2ab4e8]/60 hover:-translate-y-1 transition-all duration-300 group flex ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
+                        <div key={course.id} className={`bg-white rounded-2xl sm:rounded-3xl border overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex ${isTrial ? 'border-amber-300/90 hover:border-amber-400' : 'border-slate-200/90 hover:border-[#2ab4e8]/60'} ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
                           
                           {/* Image Top/Left Half */}
                           <div className={`relative overflow-hidden bg-slate-900 cursor-pointer ${isSingle ? 'w-full md:w-[44%] h-[230px] md:h-auto min-h-[290px]' : 'w-full h-[190px] sm:h-[215px]'}`} onClick={() => handleOpenCourse(course)}>
@@ -2171,6 +2352,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                              <div className="absolute top-4 left-4 bg-[#0a5482]/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border border-white/15 shadow-sm">
                                  {cover.badge}
                              </div>
+                             {isTrial && (
+                               <button
+                                 type="button"
+                                 onClick={(e) => {
+                                   e.stopPropagation();
+                                   setUnlockReqSuccess(false);
+                                   setUnlockModalCourse(course);
+                                 }}
+                                 className="absolute top-4 right-4 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-500 hover:to-yellow-500 text-slate-950 px-3 py-1 rounded-full text-[10.5px] font-black uppercase tracking-wider border border-yellow-200 shadow-md flex items-center gap-1 cursor-pointer"
+                                 title="Bấm để đăng ký mở khóa trọn bộ khóa học này"
+                               >
+                                 <span>🎁</span>
+                                 <span>Học thử • Mở khóa</span>
+                               </button>
+                             )}
                              <div className="absolute bottom-4 left-5 right-5">
                                <span className="text-[11px] font-bold uppercase tracking-widest text-[#2ab4e8] block mb-0.5">TonyEnglish Official Course</span>
                                <h4 className={`font-black ${isSingle ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} text-white leading-snug drop-shadow-sm`}>
@@ -2218,17 +2414,45 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </div>
                             </div>
                             
-                            {/* Actions */}
+                            {/* Actions (Nút Học thử / Làm thử vàng đè lên nút Lý thuyết & Kho đề khi ở chế độ Học thử) */}
                             <div className={`flex flex-col sm:flex-row gap-3 ${isSingle ? 'mt-2' : 'mt-auto'}`}>
-                               <button onClick={() => {
-                                   resetWorkspaceAndChat(); 
-                                   if(onOpenLecture) onOpenLecture(course.id);
-                               }} className="flex-1 bg-sky-50/80 hover:bg-sky-100 text-[#0a5482] border border-sky-200/90 font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
-                                   <span>📖</span> <span>Bài giảng lý thuyết</span>
-                               </button>
-                               <button onClick={() => handleOpenCourse(course)} className="flex-[1.3] bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-md shadow-blue-900/15 flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
-                                   <span>🚀</span> <span>Vào kho đề &amp; Làm bài</span>
-                               </button>
+                               <div className="relative flex-1">
+                                 <button onClick={() => {
+                                     resetWorkspaceAndChat(); 
+                                     if(onOpenLecture) onOpenLecture(course.id);
+                                 }} className="w-full bg-sky-50/80 hover:bg-sky-100 text-[#0a5482] border border-sky-200/90 font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
+                                     <span>📖</span> <span>Bài giảng lý thuyết</span>
+                                 </button>
+                                 {isTrial && (
+                                   <button
+                                     type="button"
+                                     onClick={() => {
+                                       resetWorkspaceAndChat();
+                                       if (onOpenLecture) onOpenLecture(course.id);
+                                     }}
+                                     className="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 border-2 border-amber-300 font-black text-[12.5px] py-3 px-3 rounded-xl shadow-md shadow-amber-500/25 flex items-center justify-center gap-1.5 uppercase tracking-wider cursor-pointer active:scale-95 transition-all z-10"
+                                     title="Bấm để Học thử Bài giảng lý thuyết"
+                                   >
+                                     <span>🎁</span> <span>Học thử Lý thuyết</span>
+                                   </button>
+                                 )}
+                               </div>
+
+                               <div className="relative flex-[1.3]">
+                                 <button onClick={() => handleOpenCourse(course)} className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-md shadow-blue-900/15 flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
+                                     <span>🚀</span> <span>Vào kho đề &amp; Làm bài</span>
+                                 </button>
+                                 {isTrial && (
+                                   <button
+                                     type="button"
+                                     onClick={() => handleOpenCourse(course)}
+                                     className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 border-2 border-yellow-300 font-black text-[12.5px] py-3 px-3 rounded-xl shadow-md shadow-amber-500/30 flex items-center justify-center gap-1.5 uppercase tracking-wider cursor-pointer active:scale-95 transition-all z-10"
+                                     title="Bấm để Làm thử Kho đề thi"
+                                   >
+                                     <span>⚡</span> <span>Làm thử Kho đề</span>
+                                   </button>
+                                 )}
+                               </div>
                             </div>
                           </div>
                         </div>
@@ -2405,6 +2629,40 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             </div>
 
+            {isCourseTrial(selectedCourse.id) && (
+              <div className="mb-6 bg-gradient-to-r from-amber-50 via-yellow-50/90 to-amber-50 border border-amber-300/90 rounded-2xl px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3.5 shadow-2xs">
+                <div className="flex items-start sm:items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center text-xl font-black shrink-0 shadow-xs">
+                    🎁
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-[11px] font-black uppercase tracking-wider bg-amber-200/80 text-amber-950 px-2 py-0.5 rounded-md">
+                        Chế độ Học Thử &amp; Làm Thử
+                      </span>
+                      <span className="text-xs font-extrabold text-slate-800">
+                        Khóa học: {selectedCourse.title}
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-600 font-medium mt-1">
+                      Các thư mục và đề đầu tiên đã được mở sáng miễn phí để bạn trải nghiệm. Các chuyên đề và đề còn lại có biểu tượng 🔒 dành cho học viên chính thức.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setUnlockReqSuccess(false);
+                    setUnlockModalCourse(selectedCourse);
+                  }}
+                  className="w-full sm:w-auto bg-gradient-to-r from-[#0a5482] to-[#0f172a] hover:from-[#084266] hover:to-slate-900 text-amber-300 font-black text-xs px-4 py-2.5 rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
+                >
+                  <span>🔓</span>
+                  <span>Mở khóa toàn bộ khóa học</span>
+                </button>
+              </div>
+            )}
+
             <div id="course-folders-section" className="space-y-8 md:space-y-10">
               
               {/* Folders Grid */}
@@ -2418,6 +2676,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                     {paginatedFolders.map((subFolder, idx) => {
+                      const isTrialCourseView = isCourseTrial(selectedCourse.id);
+                      const isFolderLocked =
+                        isTrialCourseView &&
+                        (currentSubFolders.length > 1 ? !(folderPage === 1 && idx < 2) : idx > 0);
                       const childCount = allFolders.filter(f => f.parent_id === subFolder.id).length;
                       const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
                       const parentFolder = subFolder.parent_id ? allFolders.find(f => f.id === subFolder.parent_id) : null;
@@ -2441,30 +2703,66 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       }
 
                       return (
-                        <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 hover:border-[#2ab4e8] transition-all duration-300 cursor-pointer flex flex-col group relative">
+                        <div
+                          key={subFolder.id}
+                          onClick={() => {
+                            if (isFolderLocked) {
+                              setUnlockReqSuccess(false);
+                              setUnlockModalCourse(selectedCourse);
+                              return;
+                            }
+                            handleFolderClick(subFolder.id);
+                          }}
+                          className={`rounded-2xl border overflow-hidden shadow-xs transition-all duration-300 cursor-pointer flex flex-col group relative ${
+                            isFolderLocked
+                              ? 'bg-slate-100 border-slate-200/90 grayscale opacity-65 hover:opacity-80'
+                              : 'bg-white border-slate-200/90 hover:shadow-xl hover:-translate-y-1 hover:border-[#2ab4e8]'
+                          }`}
+                        >
                           <div className="h-[125px] relative overflow-hidden bg-slate-900">
-                            <img src={displayImage} style={{ filter: hueRotate }} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85" alt="folder" />
+                            <img src={displayImage} style={{ filter: hueRotate }} loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ${isFolderLocked ? 'opacity-50' : 'group-hover:scale-105 opacity-85'}`} alt="folder" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent"></div>
+                            {isTrialCourseView && (
+                              <div className="absolute top-3 right-3 z-10">
+                                {isFolderLocked ? (
+                                  <span className="bg-slate-900/85 text-slate-200 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/20 flex items-center gap-1 shadow-sm">
+                                    <span>🔒</span> <span>Đã khóa</span>
+                                  </span>
+                                ) : (
+                                  <span className="bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-yellow-200 flex items-center gap-1 shadow-sm">
+                                    <span>🎁</span> <span>Mở làm thử</span>
+                                  </span>
+                                )}
+                              </div>
+                            )}
                             <div className={`absolute bottom-3.5 right-4 ${badgeText ? 'left-20' : 'left-4'}`}>
-                                <h3 className="text-[15.5px] font-black leading-snug line-clamp-2 w-full text-white drop-shadow-sm">
+                                <h3 className={`text-[15.5px] font-black leading-snug line-clamp-2 w-full drop-shadow-sm ${isFolderLocked ? 'text-slate-200' : 'text-white'}`}>
                                     {displayTitle}
                                 </h3>
                             </div>
                           </div>
 
                           {badgeText && (
-                              <div className="absolute top-[98px] left-4 bg-white text-[#0a5482] font-black text-[16px] w-12 h-12 rounded-xl flex items-center justify-center shadow-md border-2 border-white shrink-0 z-10 ring-1 ring-slate-200">
-                                  {badgeText}
+                              <div className={`absolute top-[98px] left-4 font-black text-[16px] w-12 h-12 rounded-xl flex items-center justify-center shadow-md border-2 border-white shrink-0 z-10 ring-1 ring-slate-200 ${isFolderLocked ? 'bg-slate-200 text-slate-500' : 'bg-white text-[#0a5482]'}`}>
+                                  {isFolderLocked ? '🔒' : badgeText}
                               </div>
                           )}
 
-                          <div className="bg-white p-4 flex flex-col relative flex-1">
+                          <div className={`${isFolderLocked ? 'bg-slate-100' : 'bg-white'} p-4 flex flex-col relative flex-1`}>
                             <div className="flex justify-between items-center mt-auto">
-                              <span className="text-[11px] font-extrabold text-[#0a5482] bg-sky-50/90 px-3 py-1 rounded-lg border border-sky-100 uppercase tracking-wider">
-                                  {childCount > 0 ? `${childCount} thư mục` : `${testCount} bài tập`}
+                              <span className={`text-[11px] font-extrabold px-3 py-1 rounded-lg border uppercase tracking-wider ${
+                                isFolderLocked
+                                  ? 'text-slate-500 bg-slate-200/80 border-slate-300'
+                                  : 'text-[#0a5482] bg-sky-50/90 border-sky-100'
+                              }`}>
+                                  {isFolderLocked ? '🔒 Khóa chính thức' : childCount > 0 ? `${childCount} thư mục` : `${testCount} bài tập`}
                               </span>
-                              <span className="w-8 h-8 rounded-xl bg-slate-100 text-[#0a5482] flex items-center justify-center font-bold group-hover:bg-[#0a5482] group-hover:text-white transition-colors">
-                                  →
+                              <span className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold transition-colors ${
+                                isFolderLocked
+                                  ? 'bg-slate-200 text-slate-500'
+                                  : 'bg-slate-100 text-[#0a5482] group-hover:bg-[#0a5482] group-hover:text-white'
+                              }`}>
+                                  {isFolderLocked ? '🔒' : '→'}
                               </span>
                             </div>
                           </div>
@@ -2507,9 +2805,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   {/* Tests List */}
                   <div className="p-5 sm:p-7 bg-slate-50/60">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                      {paginatedTests.map(test => {
-                        const inProgress = inProgressIds.has(String(test.id));
-                        const isCompleted = completedTestIdsSet.has(String(test.id));
+                      {paginatedTests.map((test, testIdx) => {
+                        const isTrialCourseView = isCourseTrial(selectedCourse.id);
+                        const isTestLocked = isTrialCourseView && !(testPage === 1 && testIdx < 2);
+                        const inProgress = !isTestLocked && inProgressIds.has(String(test.id));
+                        const isCompleted = !isTestLocked && completedTestIdsSet.has(String(test.id));
                         const skillConfig = getTestSkillConfig(test);
 
                         let isOverdue = false;
@@ -2517,7 +2817,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         const classDeadlines = test.content_json?.basicInfo?.classDeadlines || {};
                         const matchedClassId = userClassIds.find(id => classDeadlines[id]);
                         
-                        if (matchedClassId) {
+                        if (matchedClassId && !isTestLocked) {
                             const deadlineStr = classDeadlines[matchedClassId];
                             const dDate = new Date(deadlineStr);
                             isOverdue = dDate < new Date();
@@ -2525,13 +2825,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         }
 
                         let statusConfig = {
-                          badge: "Chưa làm",
-                          badgeClass: "text-slate-600 bg-slate-100 border border-slate-200/80",
-                          btnText: "Làm bài ngay →",
-                          btnClass: "bg-sky-50/90 text-[#0a5482] border border-sky-200/90 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482]"
+                          badge: isTrialCourseView ? "🎁 Đề làm thử" : "Chưa làm",
+                          badgeClass: isTrialCourseView
+                            ? "text-amber-900 bg-amber-100 border border-amber-300"
+                            : "text-slate-600 bg-slate-100 border border-slate-200/80",
+                          btnText: isTrialCourseView ? "⚡ Làm thử ngay →" : "Làm bài ngay →",
+                          btnClass: isTrialCourseView
+                            ? "bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 border border-amber-300 shadow-xs hover:from-amber-500 hover:to-yellow-500"
+                            : "bg-sky-50/90 text-[#0a5482] border border-sky-200/90 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482]"
                         };
                         
-                        if (isCompleted) {
+                        if (isTestLocked) {
+                            statusConfig = {
+                              badge: "🔒 Đã khóa",
+                              badgeClass: "text-slate-500 bg-slate-200 border border-slate-300",
+                              btnText: "🔒 Mở khóa đề thi →",
+                              btnClass: "bg-slate-200 text-slate-500 border border-slate-300 hover:bg-slate-300"
+                            };
+                        }
+                        else if (isCompleted) {
                             statusConfig = {
                               badge: "✓ Hoàn thành",
                               badgeClass: "text-emerald-700 bg-emerald-50 border border-emerald-200",
@@ -2553,29 +2865,50 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         }
 
                         return (
-                          <div key={test.id} onClick={() => handleStartTestClick(test)} className={`bg-white border p-5 rounded-2xl shadow-2xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex flex-col justify-between group relative overflow-hidden ${isCompleted ? 'border-emerald-200/90' : inProgress ? 'border-amber-300' : 'border-slate-200/90 hover:border-[#2ab4e8]'}`}>
+                          <div
+                            key={test.id}
+                            onClick={() => {
+                              if (isTestLocked) {
+                                setUnlockReqSuccess(false);
+                                setUnlockModalCourse(selectedCourse);
+                                return;
+                              }
+                              handleStartTestClick(test);
+                            }}
+                            className={`border p-5 rounded-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between group relative overflow-hidden ${
+                              isTestLocked
+                                ? 'bg-slate-100/90 border-slate-200/90 grayscale opacity-65 hover:opacity-80'
+                                : isCompleted
+                                  ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-emerald-200/90'
+                                  : inProgress
+                                    ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-amber-300'
+                                    : isTrialCourseView
+                                      ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-amber-300/90 hover:border-amber-400'
+                                      : 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-slate-200/90 hover:border-[#2ab4e8]'
+                            }`}
+                          >
                             
                             <div>
                               <div className="flex justify-between items-start mb-3.5">
-                                <div className={`w-11 h-11 rounded-xl ${skillConfig.bg} border ${skillConfig.border} flex items-center justify-center text-xl group-hover:scale-105 transition-transform`}>
-                                    {skillConfig.icon}
+                                <div className={`w-11 h-11 rounded-xl ${isTestLocked ? 'bg-slate-200 border-slate-300 text-slate-500' : `${skillConfig.bg} ${skillConfig.border}`} border flex items-center justify-center text-xl ${isTestLocked ? '' : 'group-hover:scale-105'} transition-transform`}>
+                                    {isTestLocked ? '🔒' : skillConfig.icon}
                                 </div>
                                 <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider ${statusConfig.badgeClass}`}>
                                     {statusConfig.badge}
                                 </span>
                               </div>
                               
-                              <h3 className="font-extrabold text-slate-800 text-[15.5px] group-hover:text-[#0a5482] transition-colors mb-2.5 line-clamp-2 leading-snug min-h-[42px]">
+                              <h3 className={`font-extrabold text-[15.5px] transition-colors mb-2.5 line-clamp-2 leading-snug min-h-[42px] ${isTestLocked ? 'text-slate-500' : 'text-slate-800 group-hover:text-[#0a5482]'}`}>
                                   {test.title}
                               </h3>
                               
                               <div className="flex flex-wrap items-center gap-1.5 mb-2">
                                   {(test.content_json?.basicInfo?.guide_video_url || test.content_json?.guide_video_url) && (
-                                      <span className="text-[10px] px-2 py-0.5 rounded-md font-bold tracking-wider bg-red-50 text-red-600 border border-red-100 flex items-center gap-1" title="Có video hướng dẫn & giải đề">
+                                      <span className={`text-[10px] px-2 py-0.5 rounded-md font-bold tracking-wider flex items-center gap-1 ${isTestLocked ? 'bg-slate-200 text-slate-500 border border-slate-300' : 'bg-red-50 text-red-600 border border-red-100'}`} title="Có video hướng dẫn & giải đề">
                                           🎬 Video giải đề
                                       </span>
                                   )}
-                                  {matchedClassId && !isCompleted && (
+                                  {matchedClassId && !isCompleted && !isTestLocked && (
                                       <span className={`text-[10px] px-2 py-0.5 rounded-md uppercase font-bold tracking-wider ${isOverdue ? 'bg-rose-100 text-rose-600' : 'bg-orange-100 text-orange-600'}`}>
                                           {isOverdue ? 'Quá hạn' : 'Hạn: ' + deadlineLabel}
                                       </span>
@@ -4038,6 +4371,112 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <span className="text-[10px] tracking-tight mt-0.5">Báo cáo</span>
         </button>
       </nav>
+
+      {/* MODAL ĐĂNG KÝ MỞ KHÓA KHÓA HỌC IGCSE ONLINE */}
+      {unlockModalCourse && (
+        <div
+          className="fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-[120] flex items-center justify-center p-4"
+          onClick={() => setUnlockModalCourse(null)}
+        >
+          <div
+            className="bg-white rounded-3xl w-full max-w-lg shadow-2xl border border-slate-200 overflow-hidden animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 sm:px-8 py-6 text-white relative">
+              <button
+                type="button"
+                onClick={() => setUnlockModalCourse(null)}
+                className="absolute top-4 right-5 text-white/70 hover:text-white text-2xl font-bold leading-none cursor-pointer"
+              >
+                &times;
+              </button>
+              <span className="inline-flex items-center gap-1.5 bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2">
+                <span>🔓</span> <span>Mở khóa trọn bộ khóa học Online</span>
+              </span>
+              <h3 className="text-xl sm:text-2xl font-black tracking-tight">
+                {unlockModalCourse.title}
+              </h3>
+              <p className="text-xs text-sky-200 font-medium mt-1">
+                Truy cập không giới hạn 100% Bài giảng lý thuyết, Kho đề Past Papers &amp; Trợ lý Thầy Tony AI
+              </p>
+            </div>
+
+            <div className="p-6 sm:p-8 space-y-5">
+              <div className="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 space-y-2">
+                <div className="text-xs font-black text-amber-900 uppercase tracking-wider">
+                  🌟 Quyền lợi Học viên Chính thức:
+                </div>
+                <ul className="text-xs sm:text-[13px] text-slate-700 font-medium space-y-1.5 list-none m-0 p-0">
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-black">✓</span>
+                    <span>Mở khóa toàn bộ các chuyên đề Bài giảng Lý thuyết, Video giải đề &amp; Podcast học thuật.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-black">✓</span>
+                    <span>Làm toàn bộ đề thi Past Papers &amp; Topic Questions có chấm điểm tự động và lời giải chi tiết.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-black">✓</span>
+                    <span>Trợ lý <b>Thầy Tony AI</b> kèm cặp 24/7, phân tích lỗ hổng kiến thức và giao lộ trình học hàng ngày.</span>
+                  </li>
+                </ul>
+              </div>
+
+              {unlockReqSuccess ? (
+                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 text-center space-y-2">
+                  <div className="text-3xl">🎉</div>
+                  <h4 className="font-black text-emerald-800 text-base">
+                    Đã gửi yêu cầu mở khóa thành công!
+                  </h4>
+                  <p className="text-xs text-emerald-700 font-medium leading-relaxed">
+                    Hệ thống đã ghi nhận yêu cầu mở khóa môn <b>{unlockModalCourse.title}</b> của bạn. Ban quản trị TonyEnglish sẽ liên hệ hoặc kích hoạt khóa học cho tài khoản <b>{currentUser?.email}</b> ngay!
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleRequestUnlockCourse} className="space-y-3.5">
+                  <div>
+                    <label className="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider block mb-1.5">
+                      Số điện thoại / Zalo liên hệ kích hoạt nhanh *
+                    </label>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="Nhập SĐT / Zalo của bạn (VD: 0987 654 321)"
+                      value={unlockPhone}
+                      onChange={(e) => setUnlockPhone(e.target.value)}
+                      className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-bold text-slate-800 outline-none focus:ring-2 focus:ring-[#2ab4e8]"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSendingUnlockReq}
+                    className="w-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-black py-3.5 rounded-xl shadow-md transition-all text-sm cursor-pointer active:scale-95"
+                  >
+                    {isSendingUnlockReq ? '⏳ ĐANG GỬI YÊU CẦU...' : '🚀 ĐĂNG KÝ MỞ KHÓA KHÓA HỌC NÀY'}
+                  </button>
+                </form>
+              )}
+
+              <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs">
+                <a
+                  href="https://zalo.me/0982042882"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto flex-1 bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 font-extrabold py-2.5 px-4 rounded-xl text-center transition-colors"
+                >
+                  💬 Chat Zalo tư vấn: 0982 042 882
+                </a>
+                <a
+                  href="tel:0982042882"
+                  className="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 px-4 rounded-xl text-center transition-colors"
+                >
+                  📞 Gọi Hotline
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -3239,19 +3239,31 @@ export default function LectureViewer({
     try {
       let targetCourses: any[] = [];
       if (userId) {
-        const { data: profile } = await supabase.from('profiles').select('role').eq('id', userId).single();
+        const { data: profile } = await supabase.from('profiles').select('role, avatar_url').eq('id', userId).single();
         if (profile?.role === 'admin') {
           const { data: allC } = await supabase.from('courses').select('id, title, order_index').order('order_index');
           targetCourses = allC || [];
         } else {
           const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
           const courseIds = enrolls?.map(e => e.course_id) || [];
-          if (courseIds.length > 0) {
+          let isOnlineAcc = false;
+          try {
+            if (profile?.avatar_url) {
+              const parsed = JSON.parse(profile.avatar_url);
+              if (parsed?.account_type === 'online') isOnlineAcc = true;
+            }
+          } catch (e) {
+            if (String(profile?.avatar_url || '').startsWith('http')) isOnlineAcc = true;
+          }
+          if (courseIds.length > 0 && !isOnlineAcc) {
             const { data: userC } = await supabase.from('courses').select('id, title, order_index').in('id', courseIds).order('order_index');
             targetCourses = userC || [];
           } else {
             const { data: allC } = await supabase.from('courses').select('id, title, order_index').order('order_index');
-            targetCourses = allC || [];
+            const igcseAndEnrolled = (allC || []).filter(
+              c => courseIds.includes(c.id) || (c.title || '').toLowerCase().includes('igcse')
+            );
+            targetCourses = igcseAndEnrolled.length > 0 ? igcseAndEnrolled : (allC || []);
           }
         }
       } else {
@@ -3348,37 +3360,51 @@ export default function LectureViewer({
 
       setLectures(validLectures);
 
-      // 🚀 KIỂM TRA LỚP HỌC THỬ (TRIAL CLASS) CỦA HỌC VIÊN TRONG KHÓA HỌC NÀY
+      // 🚀 KIỂM TRA CHẾ ĐỘ HỌC THỬ (TRIAL CLASS HOẶC HỌC VIÊN ONLINE CHƯA MỞ KHÓA)
       let trialActive = false;
       const unlockedSet = new Set<string>();
       const courseClasses = courseClassesData || [];
 
-      if (user && courseClasses.length > 0) {
-        const [{ data: profileData }, { data: userClassLinks }] = await Promise.all([
+      if (user) {
+        const [{ data: profileData }, { data: userClassLinks }, { data: enrollRow }] = await Promise.all([
           supabase.from('profiles').select('role').eq('id', user.id).single(),
-          supabase.from('class_students').select('class_id').eq('user_id', user.id)
+          supabase.from('class_students').select('class_id').eq('user_id', user.id),
+          supabase.from('enrollments').select('id').eq('user_id', user.id).eq('course_id', activeId).maybeSingle()
         ]);
         const isUserAdmin = user.email?.toLowerCase().includes('admin') || profileData?.role === 'admin';
-        if (!isUserAdmin && userClassLinks && userClassLinks.length > 0) {
-          const userClassIdSet = new Set(userClassLinks.map((x: any) => x.class_id));
+        if (!isUserAdmin) {
+          const userClassIdSet = new Set((userClassLinks || []).map((x: any) => x.class_id));
           const userCourseClasses = courseClasses.filter((c: any) => userClassIdSet.has(c.id));
-          // Nếu học viên thuộc lớp trong khóa này và TẤT CẢ các lớp đó đều là lớp học thử
-          if (userCourseClasses.length > 0 && userCourseClasses.every((c: any) => parseClassConfig(c.name).isTrial)) {
-            trialActive = true;
-            const trialClassIds = userCourseClasses.map((c: any) => c.id);
-            const { data: cmData } = await supabase.from('class_modules').select('module_id').in('class_id', trialClassIds);
-            const unlockedModIds = new Set((cmData || []).map((x: any) => x.module_id));
-            const unlockedDirectLecIds = new Set<string>();
-            userCourseClasses.forEach((c: any) => {
-              const cfg = parseClassConfig(c.name);
-              cfg.trialLectureIds.forEach(lid => unlockedDirectLecIds.add(lid));
-            });
+          const isInTrialClass =
+            userCourseClasses.length > 0 &&
+            userCourseClasses.every((c: any) => parseClassConfig(c.name).isTrial);
+          const isNotEnrolled = !enrollRow;
 
-            validLectures.forEach(lec => {
-              if (unlockedModIds.has(lec.module_id) || unlockedDirectLecIds.has(lec.id)) {
+          if (isInTrialClass || isNotEnrolled) {
+            trialActive = true;
+            if (isInTrialClass) {
+              const trialClassIds = userCourseClasses.map((c: any) => c.id);
+              const { data: cmData } = await supabase.from('class_modules').select('module_id').in('class_id', trialClassIds);
+              const unlockedModIds = new Set((cmData || []).map((x: any) => x.module_id));
+              const unlockedDirectLecIds = new Set<string>();
+              userCourseClasses.forEach((c: any) => {
+                const cfg = parseClassConfig(c.name);
+                cfg.trialLectureIds.forEach(lid => unlockedDirectLecIds.add(lid));
+              });
+
+              validLectures.forEach(lec => {
+                if (unlockedModIds.has(lec.module_id) || unlockedDirectLecIds.has(lec.id)) {
+                  unlockedSet.add(lec.id);
+                }
+              });
+            }
+
+            // Nếu chưa cấu hình bài giảng học thử riêng (hoặc học viên Online học thử), tự động mở sáng 2 bài giảng đầu tiên của chuyên đề đầu tiên
+            if (unlockedSet.size === 0 && validLectures.length > 0) {
+              validLectures.slice(0, Math.min(2, validLectures.length)).forEach(lec => {
                 unlockedSet.add(lec.id);
-              }
-            });
+              });
+            }
           }
         }
       }
@@ -4868,12 +4894,19 @@ export default function LectureViewer({
                              return (
                                <button 
                                    key={lec.id} 
-                                   disabled={isLocked}
-                                   onClick={() => { if (!isLocked) handleSelectLecture(lec.id); }} 
-                                   title={isLocked ? 'Bài giảng này chỉ dành cho học viên chính thức' : lec.title}
+                                   onClick={() => {
+                                     if (isLocked) {
+                                       alert(
+                                         `🔒 Bài giảng "${lec.title}" thuộc chương trình chính thức của khóa ${course?.title || 'IGCSE'}.\n\n💡 Bạn đang ở chế độ Học Thử miễn phí. Vui lòng liên hệ Zalo/Hotline TonyEnglish (0982 042 882) hoặc bấm "Mở khóa" ở Góc Học Viên để mở khóa 100% bài giảng và kho đề nhé!`
+                                       );
+                                       return;
+                                     }
+                                     handleSelectLecture(lec.id);
+                                   }} 
+                                   title={isLocked ? '🔒 Bài giảng dành cho học viên chính thức - Bấm để xem hướng dẫn mở khóa' : lec.title}
                                    className={`w-full text-left px-3 py-2.5 rounded-xl text-[13px] transition-all flex items-start gap-3 relative group ${
                                      isLocked
-                                       ? 'bg-slate-100/80 text-slate-400 cursor-not-allowed opacity-65 select-none'
+                                       ? 'bg-slate-100/80 text-slate-400 cursor-pointer opacity-65 hover:opacity-80 select-none'
                                        : isActive 
                                          ? (isReflexAi 
                                              ? 'bg-gradient-to-r from-indigo-500/15 via-[#2ab4e8]/10 to-purple-500/10 text-indigo-900 border border-indigo-300 shadow-xs' 

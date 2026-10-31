@@ -11,12 +11,14 @@ const authSupabase = createClient(
 
 let studentSearchTimer: any;
 
-export default function StudentManagement({ onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | 'assignments' | null, onAutoSelectDone?: () => void }) {
+export default function StudentManagement({ mode = 'offline', onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { mode?: 'offline' | 'online', onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | 'assignments' | null, onAutoSelectDone?: () => void }) {
   const [students, setStudents] = useState<any[]>([]);
+  const [allEnrollments, setAllEnrollments] = useState<any[]>([]);
   const [courses, setCourses] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const [statusFilter, setStatusFilter] = useState<'active' | 'inactive' | 'all'>('active');
+  const [statusFilter, setStatusFilter] = useState<'active' | 'requested' | 'inactive' | 'all'>('active');
+  const [togglingCourseId, setTogglingCourseId] = useState<string | null>(null);
   
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
@@ -89,8 +91,35 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   }, []);
 
   useEffect(() => {
+    setSelectedStudent(null);
+    setCurrentPage(1);
+    setStatusFilter('active');
+  }, [mode]);
+
+  useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery]);
+
+  const parseStudentMeta = (student: any): Record<string, any> => {
+    if (!student?.avatar_url) return {};
+    const raw = String(student.avatar_url).trim();
+    if (raw.startsWith('{')) {
+      try { return JSON.parse(raw); } catch { return {}; }
+    }
+    if (raw.startsWith('http')) {
+      return { account_type: 'online', provider: 'google', google_avatar: raw };
+    }
+    return {};
+  };
+
+  const isOnlineStudent = (student: any): boolean => {
+    if (!student || student.role === 'admin') return false;
+    const meta = parseStudentMeta(student);
+    if (meta.account_type === 'online') return true;
+    if (meta.account_type === 'offline') return false;
+    const hasAnyEnrollment = allEnrollments.some(e => e.user_id === student.id);
+    return !hasAnyEnrollment;
+  };
 
   // Auto-select student from notification click
   useEffect(() => {
@@ -110,9 +139,13 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const fetchStudents = async () => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase.from('profiles').select('*').order('created_at', { ascending: false });
+      const [{ data, error }, { data: enrollRows }] = await Promise.all([
+        supabase.from('profiles').select('*').order('created_at', { ascending: false }),
+        supabase.from('enrollments').select('user_id, course_id')
+      ]);
       if (error) throw error;
       setStudents(data || []);
+      setAllEnrollments(enrollRows || []);
     } catch (err: any) {
       console.error("Lỗi tải học viên:", err.message);
     } finally {
@@ -533,6 +566,11 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
             new_role: newUserRole,
             new_phone: phone 
         });
+        if (mode === 'online' && newUserRole === 'student') {
+          await supabase.from('profiles').update({
+            avatar_url: JSON.stringify({ account_type: 'online', provider: 'admin' })
+          }).eq('id', data.user.id);
+        }
       }
 
       alert(`✅ Đã tạo tài khoản ${newUserRole === 'admin' ? 'Quản trị viên' : 'Học viên'} thành công!`);
@@ -622,6 +660,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
       }
       
       setStudentEnrollments([data[0], ...studentEnrollments]);
+      setAllEnrollments(prev => [...prev, { user_id: selectedStudent.id, course_id: courseId }]);
       setShowAssignModal(false);
       setSelectedAssignCourseId('');
       setSelectedAssignClassId('');
@@ -668,8 +707,80 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
         }
       }
       setStudentEnrollments(studentEnrollments.filter(e => e.id !== enrollmentId));
+      if (targetEnroll && selectedStudent) {
+        setAllEnrollments(prev => prev.filter(e => !(e.user_id === selectedStudent.id && e.course_id === targetEnroll.course_id)));
+      }
     } catch (err: any) {
       alert("Lỗi khi xóa: " + err.message);
+    }
+  };
+
+  const handleQuickToggleIgcseCourse = async (course: any) => {
+    if (!selectedStudent || togglingCourseId) return;
+    setTogglingCourseId(course.id);
+    try {
+      const existing = studentEnrollments.find(e => e.course_id === course.id);
+      if (existing) {
+        await supabase.from('enrollments').delete().eq('id', existing.id);
+        const courseClassIds = allClasses.filter(c => c.course_id === course.id).map(c => c.id);
+        if (courseClassIds.length > 0) {
+          await supabase.from('class_students').delete().eq('user_id', selectedStudent.id).in('class_id', courseClassIds);
+          setStudentClassIds(prev => prev.filter(id => !courseClassIds.includes(id)));
+        }
+        setStudentEnrollments(prev => prev.filter(e => e.id !== existing.id));
+        setAllEnrollments(prev => prev.filter(e => !(e.user_id === selectedStudent.id && e.course_id === course.id)));
+        const meta = parseStudentMeta(selectedStudent);
+        if (meta.account_type !== 'online' && mode === 'online') {
+          const nextMeta = { ...meta, account_type: 'online' };
+          const nextAvatar = JSON.stringify(nextMeta);
+          await supabase.from('profiles').update({ avatar_url: nextAvatar }).eq('id', selectedStudent.id);
+          setSelectedStudent((prev: any) => prev ? { ...prev, avatar_url: nextAvatar } : prev);
+          setStudents(prev => prev.map(s => s.id === selectedStudent.id ? { ...s, avatar_url: nextAvatar } : s));
+        }
+      } else {
+        const { data, error } = await supabase.from('enrollments').insert([{
+          user_id: selectedStudent.id,
+          course_id: course.id,
+          status: 'active'
+        }]).select('*, courses(title, type)');
+        if (error) throw error;
+        if (data && data[0]) {
+          setStudentEnrollments(prev => [data[0], ...prev]);
+          setAllEnrollments(prev => [...prev, { user_id: selectedStudent.id, course_id: course.id }]);
+        }
+        const meta = parseStudentMeta(selectedStudent);
+        const reqList = Array.isArray(meta.requested_courses) ? meta.requested_courses.filter((t: string) => t !== course.title) : undefined;
+        const nextMeta = {
+          ...meta,
+          account_type: mode === 'online' ? 'online' : (meta.account_type || 'offline'),
+          ...(reqList !== undefined ? { requested_courses: reqList } : {})
+        };
+        const nextAvatar = JSON.stringify(nextMeta);
+        await supabase.from('profiles').update({ avatar_url: nextAvatar }).eq('id', selectedStudent.id);
+        setSelectedStudent((prev: any) => prev ? { ...prev, avatar_url: nextAvatar } : prev);
+        setStudents(prev => prev.map(s => s.id === selectedStudent.id ? { ...s, avatar_url: nextAvatar } : s));
+      }
+    } catch (err: any) {
+      alert('❌ Lỗi cập nhật khóa học IGCSE: ' + err.message);
+    } finally {
+      setTogglingCourseId(null);
+    }
+  };
+
+  const handleToggleAccountType = async (student: any, targetType: 'online' | 'offline') => {
+    const meta = parseStudentMeta(student);
+    const nextMeta = { ...meta, account_type: targetType };
+    const nextAvatar = JSON.stringify(nextMeta);
+    try {
+      const { error } = await supabase.from('profiles').update({ avatar_url: nextAvatar }).eq('id', student.id);
+      if (error) throw error;
+      setStudents(prev => prev.map(s => s.id === student.id ? { ...s, avatar_url: nextAvatar } : s));
+      if (selectedStudent?.id === student.id) {
+        setSelectedStudent({ ...selectedStudent, avatar_url: nextAvatar });
+      }
+      alert(`✅ Đã chuyển học viên sang danh sách ${targetType === 'online' ? 'Học viên Online (IGCSE)' : 'Học viên Offline'}!`);
+    } catch (err: any) {
+      alert('❌ Lỗi: ' + err.message);
     }
   };
 
@@ -755,10 +866,17 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     }
   };
 
-  const filteredStudents = students.filter(s => {
+  const igcseCourses = courses.filter(c => String(c.title || '').toLowerCase().includes('igcse'));
+  const modeStudents = students.filter(s => mode === 'online' ? isOnlineStudent(s) : !isOnlineStudent(s));
+
+  const filteredStudents = modeStudents.filter(s => {
     // Status filter
     if (statusFilter === 'active' && s.status === 'inactive') return false;
     if (statusFilter === 'inactive' && s.status !== 'inactive') return false;
+    if (statusFilter === 'requested') {
+      const meta = parseStudentMeta(s);
+      if (!Array.isArray(meta.requested_courses) || meta.requested_courses.length === 0) return false;
+    }
     
     // Search filter
     if (!searchQuery) return true;
@@ -791,8 +909,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
-              <span className={`absolute top-0 w-full py-1 text-[10px] font-black uppercase tracking-widest text-white ${selectedStudent.role === 'admin' ? 'bg-red-500' : 'bg-emerald-500'}`}>
-                {selectedStudent.role === 'admin' ? 'Quản trị viên' : 'Học viên'}
+              <span className={`absolute top-0 w-full py-1 text-[10px] font-black uppercase tracking-widest text-white ${selectedStudent.role === 'admin' ? 'bg-red-500' : isOnlineStudent(selectedStudent) ? 'bg-amber-500' : 'bg-emerald-500'}`}>
+                {selectedStudent.role === 'admin' ? 'Quản trị viên' : isOnlineStudent(selectedStudent) ? '🌐 Học viên Online (IGCSE)' : '👨‍🎓 Học viên Offline'}
               </span>
               <div className="w-20 h-20 rounded-full bg-[#0a5482] text-white flex items-center justify-center font-black text-3xl mb-4 shadow-inner mt-4">
                 {selectedStudent.full_name ? selectedStudent.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (selectedStudent.email ? selectedStudent.email.charAt(0).toUpperCase() : 'U')}
@@ -804,7 +922,16 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
               </h2>
               
               <p className="text-slate-500 font-medium text-[14px] mb-1">{selectedStudent.email}</p>
-              {selectedStudent.phone && <p className="text-slate-500 font-bold text-[13px] mb-4 bg-slate-50 px-3 py-1 rounded-full border border-slate-100">📞 {selectedStudent.phone}</p>}
+              {selectedStudent.phone && <p className="text-slate-500 font-bold text-[13px] mb-2 bg-slate-50 px-3 py-1 rounded-full border border-slate-100">📞 {selectedStudent.phone}</p>}
+              {selectedStudent.role !== 'admin' && (
+                <button
+                  type="button"
+                  onClick={() => handleToggleAccountType(selectedStudent, isOnlineStudent(selectedStudent) ? 'offline' : 'online')}
+                  className="mb-3 text-[11px] font-bold px-3 py-1 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-600 transition-colors"
+                >
+                  {isOnlineStudent(selectedStudent) ? '🔄 Chuyển sang Học viên Offline' : '🌐 Chuyển sang Học viên Online'}
+                </button>
+              )}
               
               <div className="w-full border-t border-slate-100 pt-4 flex justify-between text-[13px] mt-auto">
                 <span className="text-slate-500 font-medium">Ngày tham gia:</span>
@@ -841,9 +968,83 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                 <div className="py-20 text-center text-slate-400 font-bold">⏳ Đang tải dữ liệu...</div>
               ) : activeDetailTab === 'courses' ? (
                 <div>
+                  {(mode === 'online' || isOnlineStudent(selectedStudent)) && igcseCourses.length > 0 && (
+                    <div className="mb-8 bg-gradient-to-br from-amber-50/80 via-white to-sky-50/50 border-2 border-amber-200/80 rounded-2xl p-5 shadow-sm">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4 pb-3 border-b border-amber-200/60">
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <span className="bg-amber-500 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full">IGCSE ONLINE</span>
+                            <h3 className="font-black text-slate-800 text-[15px] uppercase tracking-tight">Bảng Mở Khóa Nhanh Các Khóa Học IGCSE Online</h3>
+                          </div>
+                          <p className="text-[12px] text-slate-500 font-medium mt-1">
+                            Mặc định học viên Online thấy tất cả các khóa IGCSE ở chế độ <b>🎁 Học thử / Làm thử</b> (chỉ mở các bài/folder đầu, khóa ổ khóa các bài còn lại). Bấm <b>Mở khóa 100%</b> khi học viên đã đóng học phí khóa đó.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
+                        {igcseCourses.map(igCourse => {
+                          const enrollRow = studentEnrollments.find(e => e.course_id === igCourse.id);
+                          const isUnlocked = Boolean(enrollRow);
+                          const studentMeta = parseStudentMeta(selectedStudent);
+                          const isRequested = Array.isArray(studentMeta.requested_courses) && studentMeta.requested_courses.includes(igCourse.title);
+                          const isBusy = togglingCourseId === igCourse.id;
+
+                          return (
+                            <div
+                              key={igCourse.id}
+                              className={`p-4 rounded-xl border transition-all flex flex-col justify-between gap-3 ${
+                                isUnlocked
+                                  ? 'bg-emerald-50/70 border-emerald-300 shadow-sm'
+                                  : isRequested
+                                  ? 'bg-rose-50/80 border-rose-300 ring-2 ring-rose-200 shadow-sm'
+                                  : 'bg-white border-slate-200 hover:border-amber-300'
+                              }`}
+                            >
+                              <div>
+                                <div className="flex items-center justify-between gap-2 mb-1.5 flex-wrap">
+                                  <span className={`text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full border ${
+                                    isUnlocked
+                                      ? 'bg-emerald-500 text-white border-emerald-600'
+                                      : 'bg-amber-100 text-amber-800 border-amber-300'
+                                  }`}>
+                                    {isUnlocked ? '✅ Đã mở khóa 100%' : '🎁 Đang Học thử (Khóa bài sau)'}
+                                  </span>
+                                  {isRequested && !isUnlocked && (
+                                    <span className="bg-rose-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full animate-pulse">
+                                      🔥 Khách yêu cầu mở
+                                    </span>
+                                  )}
+                                </div>
+                                <h4 className="font-black text-slate-800 text-[14px] leading-snug">{igCourse.title}</h4>
+                              </div>
+
+                              <button
+                                type="button"
+                                disabled={isBusy}
+                                onClick={() => handleQuickToggleIgcseCourse(igCourse)}
+                                className={`w-full py-2 px-3 rounded-lg font-black text-[11px] uppercase tracking-wider transition-all shadow-sm disabled:opacity-50 ${
+                                  isUnlocked
+                                    ? 'bg-white hover:bg-amber-50 text-slate-600 hover:text-amber-700 border border-slate-200 hover:border-amber-300'
+                                    : 'bg-gradient-to-r from-[#0a5482] to-[#0077b6] hover:from-[#084266] hover:to-[#0a5482] text-white'
+                                }`}
+                              >
+                                {isBusy
+                                  ? '⏳ Đang xử lý...'
+                                  : isUnlocked
+                                  ? '🔒 Chuyển về chế độ Học thử'
+                                  : '🔓 Mở khóa 100% khóa học này'}
+                              </button>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
                   <div className="flex justify-between items-center mb-6">
-                    <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest">Danh sách khóa học được phép truy cập</h3>
-                    <button onClick={() => { setSelectedAssignCourseId(''); setSelectedAssignClassId(''); setShowAssignModal(true); }} className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-sm transition">+ GÁN KHÓA HỌC</button>
+                    <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest">Danh sách khóa học đã kích hoạt chính thức</h3>
+                    <button onClick={() => { setSelectedAssignCourseId(''); setSelectedAssignClassId(''); setShowAssignModal(true); }} className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-sm transition">+ GÁN KHÓA HỌC KHÁC</button>
                   </div>
                   
                   {studentEnrollments.length === 0 ? (
@@ -948,7 +1149,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                       {studentActivities.map((act) => (
                          <div key={act.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                             <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#0a5482] text-white font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 text-[14px]">
-                               {act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : act.action_type === 'read_library' ? '📚' : '📖'}
+                               {act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : act.action_type === 'read_library' ? '📚' : act.action_type === 'request_unlock_course' ? '🔓' : '📖'}
                             </div>
                             <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-[#2bd6eb] transition-colors">
                                <div className="flex justify-between items-start mb-2">
@@ -958,6 +1159,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                                      {act.action_type === 'call_tutor' && 'Hỏi đáp AI / Voice'}
                                      {act.action_type === 'finish_lecture' && 'Hoàn thành bài giảng'}
                                      {act.action_type === 'read_library' && 'Đọc bài dịch / Thư viện'}
+                                     {act.action_type === 'request_unlock_course' && '🔥 Yêu cầu mở khóa khóa học IGCSE'}
                                   </h4>
                                   <span className="text-[11px] font-bold text-slate-400 whitespace-nowrap ml-2 bg-slate-50 px-2 py-1 rounded border border-slate-100">{formatDate(act.created_at)}</span>
                                </div>
@@ -967,6 +1169,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                                   {act.action_type === 'call_tutor' && `Thời lượng đàm thoại / hỏi AI: ${act.details?.duration || 0} giây.`}
                                   {act.action_type === 'finish_lecture' && `Học xong bài giảng: "${act.details?.lecture_title || 'Lecture'}"`}
                                   {act.action_type === 'read_library' && `Đã đọc bài: "${act.details?.article_title || 'Tài liệu'}" • Chuyên mục: ${act.details?.sub_category_name || act.details?.category_name || 'Thư viện'}`}
+                                  {act.action_type === 'request_unlock_course' && `Khách đăng ký mua / mở khóa: "${act.details?.course_title || 'Khóa học IGCSE'}" • SĐT/Zalo: ${act.details?.phone || selectedStudent.phone || '--'}`}
                                </p>
                             </div>
                          </div>
@@ -1574,17 +1777,31 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     <>
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in duration-300 flex flex-col h-[calc(100vh-120px)]">
         <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 shrink-0">
-          <div className="flex items-center gap-4">
-            <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
+          <div className="flex items-center gap-4 flex-wrap">
+            <div>
+              <h2 className="font-black text-xl text-[#0a5482] flex items-center gap-2">
+                {mode === 'online' ? '🌐 Quản lý Học viên Online (IGCSE)' : '👨‍🎓 Quản lý Học viên Offline'}
+              </h2>
+              {mode === 'online' && (
+                <p className="text-[12px] text-slate-500 font-medium mt-0.5">
+                  Khách tự đăng ký qua Google / Website để học thử IGCSE và mở khóa từng khóa học
+                </p>
+              )}
+            </div>
             <div className="flex bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
               <button onClick={() => { setStatusFilter('active'); setCurrentPage(1); }} className={`px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors ${statusFilter === 'active' ? 'bg-emerald-500 text-white' : 'text-slate-500 hover:bg-slate-50'}`}>
-                Đang học ({students.filter(s => s.status !== 'inactive').length})
+                Đang học ({modeStudents.filter(s => s.status !== 'inactive').length})
               </button>
+              {mode === 'online' && (
+                <button onClick={() => { setStatusFilter('requested'); setCurrentPage(1); }} className={`px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors border-l border-slate-200 ${statusFilter === 'requested' ? 'bg-rose-500 text-white' : 'text-rose-600 hover:bg-rose-50'}`}>
+                  🔥 Yêu cầu mở khóa ({modeStudents.filter(s => (parseStudentMeta(s).requested_courses?.length || 0) > 0).length})
+                </button>
+              )}
               <button onClick={() => { setStatusFilter('inactive'); setCurrentPage(1); }} className={`px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors border-l border-slate-200 ${statusFilter === 'inactive' ? 'bg-slate-500 text-white' : 'text-slate-500 hover:bg-slate-50'}`}>
-                Tạm dừng ({students.filter(s => s.status === 'inactive').length})
+                Tạm dừng ({modeStudents.filter(s => s.status === 'inactive').length})
               </button>
               <button onClick={() => { setStatusFilter('all'); setCurrentPage(1); }} className={`px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors border-l border-slate-200 ${statusFilter === 'all' ? 'bg-[#0a5482] text-white' : 'text-slate-500 hover:bg-slate-50'}`}>
-                Tất cả
+                Tất cả ({modeStudents.length})
               </button>
             </div>
           </div>
@@ -1652,7 +1869,39 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex flex-col gap-1">
-                            <span className={`px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider border w-fit ${student.role === 'admin' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-emerald-50 text-emerald-600 border-emerald-200'}`}>{student.role || 'Student'}</span>
+                            {mode === 'online' ? (
+                              <>
+                                {(() => {
+                                  const meta = parseStudentMeta(student);
+                                  const igcseIdSet = new Set(igcseCourses.map(c => c.id));
+                                  const unlockedIgcseCount = allEnrollments.filter(e => e.user_id === student.id && igcseIdSet.has(e.course_id)).length;
+                                  const reqCourses: string[] = Array.isArray(meta.requested_courses) ? meta.requested_courses : [];
+                                  return (
+                                    <div className="flex flex-wrap items-center gap-1">
+                                      <span className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-sky-50 text-sky-700 border border-sky-200 w-fit">
+                                        {meta.provider === 'google' ? '🌐 Google OAuth' : '🌐 Đăng ký Web'}
+                                      </span>
+                                      {unlockedIgcseCount > 0 ? (
+                                        <span className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200 w-fit">
+                                          ✅ Đã mở {unlockedIgcseCount} khóa IGCSE
+                                        </span>
+                                      ) : (
+                                        <span className="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200 w-fit">
+                                          🎁 Đang Học thử
+                                        </span>
+                                      )}
+                                      {reqCourses.map((rc, rIdx) => (
+                                        <span key={rIdx} className="px-2 py-0.5 rounded-md text-[10px] font-black bg-rose-50 text-rose-600 border border-rose-200 w-fit">
+                                          🔥 Cần mở: {rc}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  );
+                                })()}
+                              </>
+                            ) : (
+                              <span className={`px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider border w-fit ${student.role === 'admin' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-emerald-50 text-emerald-600 border-emerald-200'}`}>{student.role || 'Student'}</span>
+                            )}
                             {student.status === 'inactive' && <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-slate-100 text-slate-500 border border-slate-200 w-fit">⏸ Tạm dừng</span>}
                           </div>
                         </td>
@@ -1661,7 +1910,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                         </td>
                         <td className="px-6 py-4 text-right flex items-center justify-end gap-1.5">
                           <button onClick={() => handleSelectStudent(student)} className="text-[#0a5482] font-bold text-[12px] bg-white hover:bg-[#0a5482] hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-200 shadow-sm uppercase tracking-wider">
-                            Cấu hình & Tiến độ
+                            {mode === 'online' ? '🔓 Mở khóa IGCSE & Tiến độ' : 'Cấu hình & Tiến độ'}
                           </button>
                           
                           <button onClick={() => setEditingUser(student)} className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-colors border border-transparent hover:border-blue-200" title="Sửa thông tin">

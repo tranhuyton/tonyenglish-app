@@ -381,6 +381,13 @@ export default function App() {
       if (session?.user) { 
         const email = session.user.email?.toLowerCase() || '';
         const isAdmin = email.includes('admin');
+        try {
+          if (localStorage.getItem('tony_oauth_redirect_portal') === '1') {
+            localStorage.removeItem('tony_oauth_redirect_portal');
+            sessionStorage.setItem('lms_current_view', 'portal');
+            setCurrentView('portal');
+          }
+        } catch (e) {}
         if (isAdmin) {
           setCurrentView(prev => prev === 'admin-login' ? 'admin' : prev);
           startGlobalTimer();
@@ -396,6 +403,13 @@ export default function App() {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') { 
         startGlobalTimer(); 
+        try {
+          if (localStorage.getItem('tony_oauth_redirect_portal') === '1') {
+            localStorage.removeItem('tony_oauth_redirect_portal');
+            sessionStorage.setItem('lms_current_view', 'portal');
+            setCurrentView('portal');
+          }
+        } catch (e) {}
       }
       else if (event === 'PASSWORD_RECOVERY') {
         setShowResetPasswordModal(true);

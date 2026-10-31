@@ -1826,6 +1826,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
           <button onClick={() => {setActiveTab('assignments-mgmt'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'assignments-mgmt' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📝 Giao bài học viên</button>
           <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
+          <button onClick={() => {setActiveTab('online-students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'online-students' ? 'bg-amber-400/15 text-amber-300 border border-amber-400/30' : 'hover:bg-slate-800 hover:text-white'}`}>🌐 Học viên Online (IGCSE)</button>
           <div className="pt-4 mt-4 border-t border-slate-800">
             <p className="text-[10px] font-black uppercase text-[#2bd6eb] tracking-widest ml-3 mb-2">Cổng thông tin & Web</p>
             <button onClick={() => {setActiveTab('web-cms'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'web-cms' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>🌐 Quản trị Web (tonyenglish.vn)</button>
@@ -1841,7 +1842,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
              </button>
              <h1 className="text-[16px] md:text-xl font-black text-slate-800 uppercase tracking-tight truncate">
-               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : activeTab === 'documents' ? 'Tài Liệu Cloud' : activeTab === 'assignments-mgmt' ? 'Giao Bài Học Viên' : activeTab === 'web-cms' ? 'Quản Trị Website (tonyenglish.vn)' : 'Học viên'}
+               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : activeTab === 'documents' ? 'Tài Liệu Cloud' : activeTab === 'assignments-mgmt' ? 'Giao Bài Học Viên' : activeTab === 'web-cms' ? 'Quản Trị Website (tonyenglish.vn)' : activeTab === 'online-students' ? 'Quản Lý Học Viên Online (IGCSE)' : 'Học viên Offline'}
              </h1>
           </div>
           
@@ -1864,10 +1865,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                     <div key={notif.id} onClick={() => {
                                         setShowNotifications(false);
                                         // Determine which tab to auto-open based on action type
-                                        const targetTab = notif.action_type === 'finish_test' ? 'history' : 'activity';
+                                        const targetTab = notif.action_type === 'finish_test' ? 'history' : notif.action_type === 'request_unlock_course' ? 'courses' : 'activity';
                                         setNotifTargetUserId(notif.user_id);
                                         setNotifTargetTab(targetTab);
-                                        setActiveTab('students');
+                                        setActiveTab(notif.action_type === 'request_unlock_course' ? 'online-students' : 'students');
                                     }} className={`p-4 border-b border-slate-50 hover:bg-slate-100 transition-colors cursor-pointer ${!notif.is_read ? 'bg-blue-50/30' : ''}`}>
                                         <p className="text-[13px] text-slate-700 leading-snug">
                                             <span className="font-bold text-[#0a5482]">{notif.user?.full_name || notif.user?.email || 'Học viên'}</span>
@@ -1876,6 +1877,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                             {notif.action_type === 'call_tutor' && ` vừa gọi Gia Sư AI (${notif.details?.duration || 0} giây).`}
                                             {notif.action_type === 'finish_lecture' && ` vừa hoàn thành bài giảng: "${notif.details?.lecture_title}"`}
                                             {notif.action_type === 'read_library' && ` vừa đọc tài liệu Thư viện: "${notif.details?.article_title}" (${notif.details?.category_name || 'Thư viện'})`}
+                                            {notif.action_type === 'request_unlock_course' && ` 🔥 vừa yêu cầu mở khóa IGCSE: "${notif.details?.course_title}" (SĐT: ${notif.details?.phone || '--'})`}
                                         </p>
                                         <span className="text-[10px] text-slate-400 mt-1 block font-bold">{formatDateTime(notif.created_at)}</span>
                                     </div>
@@ -4030,7 +4032,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             </div>
           )}
 
-          {activeTab === 'students' && <StudentManagement onStartTest={onStartTest} autoSelectUserId={notifTargetUserId} autoTab={notifTargetTab as any} onAutoSelectDone={() => { setNotifTargetUserId(null); setNotifTargetTab(null); }} />}
+          {activeTab === 'students' && <StudentManagement mode="offline" onStartTest={onStartTest} autoSelectUserId={notifTargetUserId} autoTab={notifTargetTab as any} onAutoSelectDone={() => { setNotifTargetUserId(null); setNotifTargetTab(null); }} />}
+          {activeTab === 'online-students' && <StudentManagement mode="online" onStartTest={onStartTest} autoSelectUserId={notifTargetUserId} autoTab={notifTargetTab as any} onAutoSelectDone={() => { setNotifTargetUserId(null); setNotifTargetTab(null); }} />}
           {activeTab === 'web-cms' && <WebCmsManager />}
         </div>
 
