@@ -252,9 +252,12 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full">
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
-            {/* Compact Lightweight Header */}
-            <div className="bg-slate-50/80 border-b border-slate-200/80 px-6 sm:px-8 py-4">
-              <h1 className="text-lg sm:text-xl font-extrabold text-[#0a5482] tracking-tight">{pageHeading}</h1>
+            {/* Header (Unified with Library / NewsPage Header) */}
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white">
+              <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
+                TonyEnglish Center
+              </div>
+              <h1 className="text-xl sm:text-3xl font-black tracking-tight">{pageHeading}</h1>
             </div>
 
             <div className="p-4 sm:p-8">

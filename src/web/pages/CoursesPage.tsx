@@ -906,45 +906,28 @@ export const CoursesPage: React.FC = () => {
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">
-            {/* Compact & Lightweight Course Header (only shown when viewing a specific course) */}
-            {currentCourse && (
-              <div className="bg-slate-50/80 border-b border-slate-200/80 px-6 sm:px-8 py-4 flex flex-wrap items-center justify-between gap-3">
-                <h1 className="text-lg sm:text-xl font-extrabold text-[#0a5482] tracking-tight">
-                  {courseTitle}
-                </h1>
-                <div className="flex flex-wrap items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setShowSyllabusModal(true)}
-                    className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-200/90 text-xs font-bold px-3 py-1.5 rounded-lg transition cursor-pointer flex items-center gap-1.5 shadow-2xs"
-                  >
-                    <span>📋</span>
-                    <span>{t('Courses Syllabus')}</span>
-                  </button>
-                  <a
-                    href={`tel:${CONTACT_PHONE}`}
-                    onClick={() => trackCourseConversion('Phone', courseTitle)}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-2xs"
-                  >
-                    <span>📞</span>
-                    <span>{CONTACT_PHONE_DISPLAY}</span>
-                  </a>
-                  <a
-                    href={CONTACT_ZALO_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => trackCourseConversion('Zalo', courseTitle)}
-                    className="bg-[#0068ff] hover:bg-[#0057d6] text-white text-xs font-bold px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-2xs"
-                  >
-                    <span>💬</span>
-                    <span>Zalo Tư Vấn</span>
-                  </a>
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
+            {/* Section Header (Unified with Library / NewsPage Header) */}
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4">
+              <div>
+                <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
+                  TonyEnglish Training Programs
                 </div>
+                <h1 className="text-xl sm:text-3xl font-black tracking-tight">{courseTitle}</h1>
               </div>
-            )}
+              {currentCourse && (
+                <button
+                  type="button"
+                  onClick={() => setShowSyllabusModal(true)}
+                  className="bg-white/15 hover:bg-white/25 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/20 transition cursor-pointer flex items-center gap-1.5"
+                >
+                  <span>📋</span>
+                  <span>{t('Courses Syllabus')}</span>
+                </button>
+              )}
+            </div>
 
-            <div className="p-6 sm:p-8 space-y-6">
+            <div className="p-4 sm:p-8 space-y-6">
 
               {/* Subcategory Quick Cards if parent category has children */}
               {childCoursesOfCurrent.length > 0 && (
