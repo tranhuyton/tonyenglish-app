@@ -1019,23 +1019,6 @@ export const Layout: React.FC<{
                     >
                       {loginLoading ? '⏳ ĐANG XỬ LÝ...' : 'ĐĂNG NHẬP VÀO GÓC HỌC VIÊN ➜'}
                     </button>
-
-                    <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
-                      <Link
-                        to="/courses/online"
-                        onClick={() => setLoginModalOpen(false)}
-                        className="text-[#0a5482] hover:underline"
-                      >
-                        💻 Các khóa học Online &amp; Học thử
-                      </Link>
-                      <Link
-                        to="/courses"
-                        onClick={() => setLoginModalOpen(false)}
-                        className="text-slate-500 hover:text-[#0a5482] transition-colors"
-                      >
-                        Các khóa học Offline →
-                      </Link>
-                    </div>
                   </form>
                 ) : (
                   <form onSubmit={handleRegisterSubmit} className="p-8 space-y-4">
