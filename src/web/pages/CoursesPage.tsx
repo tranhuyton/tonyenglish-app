@@ -216,6 +216,7 @@ export const CoursesPage: React.FC = () => {
 
   // Syllabus popup modal state
   const [showSyllabusModal, setShowSyllabusModal] = useState(false);
+  const [showLegacyGallery, setShowLegacyGallery] = useState(false);
 
   useEffect(() => {
     async function loadCoursesAndCurriculum() {
@@ -472,9 +473,20 @@ export const CoursesPage: React.FC = () => {
     : options['studyEnglish'] || '';
 
   // Ensure any tuition fee text inside legacy HTML descriptions always displays "Liên hệ"
+  // and map any legacy 2017 screenshot URLs to the new 2026 web screenshots
   const courseDescHtml = rawCourseDescHtml
     .replace(/25\s*triệu\s*\(1\s*kèm\s*1\)\s*hoặc\s*35\s*triệu\s*\(1\s*kèm\s*2\)/gi, 'Liên hệ')
-    .replace(/18\s*triệu\s*\/\s*gói/gi, 'Liên hệ');
+    .replace(/18\s*triệu\s*\/\s*gói/gi, 'Liên hệ')
+    .replace(/https?:\/\/image\.ibb\.co\/e244MF\/2017_01_23_3\.png/g, '/images/web-2026/01_bai_giang_ngu_am_1.png')
+    .replace(/https?:\/\/image\.ibb\.co\/eXAdgF\/2017_01_23_1\.png/g, '/images/web-2026/02_bai_giang_ngu_am_2.png')
+    .replace(/https?:\/\/image\.ibb\.co\/nrCDFa\/2017_01_23_2\.png/g, '/images/web-2026/03_goc_hoc_vien_ai.png')
+    .replace(/https?:\/\/image\.ibb\.co\/eV611F\/2017_01_23_5\.png/g, '/images/web-2026/04_lich_bao_bai.png')
+    .replace(/https?:\/\/image\.ibb\.co\/kRtHQa\/2017_01_23_6\.png/g, '/images/web-2026/05_bai_giang_igcse_song_ngu.png')
+    .replace(/https?:\/\/image\.ibb\.co\/fASNrF\/2017_01_17_1\.png/g, '/images/web-2026/06_thu_vien_click_dup_tra_tu.png')
+    .replace(/https?:\/\/image\.ibb\.co\/gcTj5a\/2017_01_23_7\.png/g, '/images/web-2026/07_thu_vien_cambridge_song_ngu.png')
+    .replace(/https?:\/\/image\.ibb\.co\/mK97Qa\/2017_01_17_2\.png/g, '/images/web-2026/08_tu_dien_anh_viet.png')
+    .replace(/https?:\/\/image\.ibb\.co\/ktVE5a\/2017_01_17_3\.png/g, '/images/web-2026/09_tu_dien_viet_anh.png')
+    .replace(/https?:\/\/image\.ibb\.co\/nEwAdv\/2017_01_17_5\.png/g, '/images/web-2026/10_kho_video_phu_de.png');
 
   useEffect(() => {
     updatePageSeo(courseTitle, courseDescHtml);
@@ -1039,6 +1051,58 @@ export const CoursesPage: React.FC = () => {
                   className="legacy-prose text-justify"
                   dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
                 />
+              )}
+
+              {/* Keepsake Archive: Legacy 2013-2017 Web Interface Screenshots */}
+              {!currentCourse && (
+                <div className="rounded-2xl border border-amber-200/80 bg-amber-50/50 overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => setShowLegacyGallery((prev) => !prev)}
+                    className="w-full px-5 py-3.5 flex items-center justify-between gap-3 text-left hover:bg-amber-100/50 transition cursor-pointer"
+                  >
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <span className="text-lg shrink-0">🕰️</span>
+                      <div>
+                        <div className="font-extrabold text-xs sm:text-sm text-amber-950">
+                          Góc Kỷ Niệm: Giao diện TonyEnglish phiên bản đầu tiên (2013 – 2017)
+                        </div>
+                        <div className="text-[11px] text-amber-800/80 font-medium">
+                          Lưu trữ 10 hình ảnh chụp màn hình kỷ niệm của trang web TonyEnglish thế hệ cũ
+                        </div>
+                      </div>
+                    </div>
+                    <span className="px-3 py-1 rounded-lg bg-white border border-amber-200 text-amber-900 font-bold text-xs shrink-0 shadow-2xs">
+                      {showLegacyGallery ? 'Thu gọn ▲' : 'Xem ảnh kỷ niệm ▼'}
+                    </span>
+                  </button>
+
+                  {showLegacyGallery && (
+                    <div className="p-4 sm:p-6 border-t border-amber-200/70 bg-white space-y-5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {[
+                          { src: '/images/legacy-2017/01_2017_01_23_3_bai_giang_ngu_am_1.png', caption: '1. Giao diện Bài giảng Ngữ âm: Vị trí Cấu Âm (2017)' },
+                          { src: '/images/legacy-2017/02_2017_01_23_1_bai_giang_ngu_am_2.png', caption: '2. Giao diện Bài giảng Ngữ âm: Nguyên Âm Đơn (2017)' },
+                          { src: '/images/legacy-2017/03_2017_01_23_2_muc_tin_nhan.png', caption: '3. Giao diện mục Tin nhắn trao đổi với Thầy Tony (2017)' },
+                          { src: '/images/legacy-2017/04_2017_01_23_5_thong_bao_tin_nhan.png', caption: '4. Giao diện khi có thông báo tin nhắn mới (2017)' },
+                          { src: '/images/legacy-2017/05_2017_01_23_6_cau_hinh_tai_khoan.png', caption: '5. Giao diện Cấu hình tài khoản & Chọn khóa học (2017)' },
+                          { src: '/images/legacy-2017/06_2017_01_17_1_tra_tu_click_dup.png', caption: '6. Tính năng tra từ nhanh bằng Click đúp trong Thư viện (2017)' },
+                          { src: '/images/legacy-2017/07_2017_01_23_7_so_tay_ghi_chep.png', caption: '7. Tính năng Sổ tay ghi chép từ vựng cá nhân (2017)' },
+                          { src: '/images/legacy-2017/08_2017_01_17_2_tu_dien_anh_viet.png', caption: '8. Thanh tra từ điển từ Anh sang Việt (2017)' },
+                          { src: '/images/legacy-2017/09_2017_01_17_3_tu_dien_viet_anh.png', caption: '9. Thanh tra từ điển từ Việt sang Anh (2017)' },
+                          { src: '/images/legacy-2017/10_2017_01_17_5_tinh_nang_khac.png', caption: '10. Các tính năng Tìm kiếm, Nhận diện giọng nói & Dịch câu (2017)' },
+                        ].map((item) => (
+                          <div key={item.src} className="rounded-xl border border-slate-200 overflow-hidden bg-slate-50 shadow-2xs">
+                            <img src={item.src} alt={item.caption} className="w-full h-auto object-cover" loading="lazy" />
+                            <div className="px-3 py-2 text-center text-xs font-semibold text-slate-600 border-t border-slate-200/80">
+                              {item.caption}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               )}
 
               {/* Action Buttons for Course (Syllabus Popup, Direct Phone Call & Zalo Consultation) */}
