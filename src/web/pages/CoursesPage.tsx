@@ -820,12 +820,12 @@ export const CoursesPage: React.FC = () => {
           </button>
 
           <div className={`${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
-            <ul className="divide-y divide-slate-100 text-[14.5px] p-1.5">
-              <li>
+            <ul className="divide-y divide-slate-100 text-[14.5px] p-2 space-y-1">
+              <li className="py-0.5">
                 <Link
                   to="/courses"
                   onClick={() => setMobileCateOpen(false)}
-                  className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                  className={`block px-3.5 py-3 rounded-xl transition-colors ${
                     !currentCourse
                       ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
                       : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
@@ -845,7 +845,7 @@ export const CoursesPage: React.FC = () => {
                 const isCurrentParent = currentCourse && currentCourse.cc_id === parent.cc_id;
 
                 return (
-                  <li key={parent.cc_id}>
+                  <li key={parent.cc_id} className="py-0.5">
                     <div className="flex items-center justify-between">
                       <Link
                         to={`/courses/${(parent.cc_name_url || '').trim()}`}
@@ -853,7 +853,7 @@ export const CoursesPage: React.FC = () => {
                           setOpenParentId(parent.cc_id);
                           if (subs.length === 0) setMobileCateOpen(false);
                         }}
-                        className={`flex-1 px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between ${
+                        className={`flex-1 px-3.5 py-3 rounded-xl transition-colors flex items-center justify-between ${
                           isCurrentParent
                             ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
                             : isOpen
@@ -875,7 +875,7 @@ export const CoursesPage: React.FC = () => {
                     </div>
 
                     {subs.length > 0 && isOpen && (
-                      <ul className="mt-0.5 mb-1 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
+                      <ul className="mt-1 mb-1.5 ml-3 pl-2.5 border-l border-slate-200/80 space-y-1">
                         {subs.map((sub) => {
                           const subName = lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name;
                           const isActiveSub = currentCourse && currentCourse.cc_id === sub.cc_id;
@@ -884,7 +884,7 @@ export const CoursesPage: React.FC = () => {
                               <Link
                                 to={`/courses/${(sub.cc_name_url || '').trim()}`}
                                 onClick={() => setMobileCateOpen(false)}
-                                className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                                className={`block px-3 py-2.5 rounded-lg text-[13.5px] transition-all ${
                                   isActiveSub
                                     ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
                                     : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
@@ -1105,17 +1105,8 @@ export const CoursesPage: React.FC = () => {
                 </div>
               )}
 
-              {/* Action Buttons for Course (Syllabus Popup, Direct Phone Call & Zalo Consultation) */}
+              {/* Action Buttons for Course (Direct Phone Call & Zalo Consultation) */}
               <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-3">
-                <button
-                  type="button"
-                  onClick={() => setShowSyllabusModal(true)}
-                  className="bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 font-extrabold text-sm px-4 py-3 rounded-xl transition flex items-center gap-2 cursor-pointer"
-                >
-                  <span>📋</span>
-                  <span>{t('Click here view to courses Syllabus')}</span>
-                </button>
-
                 <a
                   href={`tel:${CONTACT_PHONE}`}
                   onClick={() => trackCourseConversion('Phone', courseTitle)}

@@ -52,7 +52,7 @@
         line-height: 1.75;
       }
       .legacy-prose p {
-        margin-bottom: 0.85rem;
+        margin-bottom: 1.05rem;
       }
       .legacy-prose h1,
       .legacy-prose h2,
@@ -61,24 +61,52 @@
       .legacy-prose h5,
       .legacy-prose h6 {
         font-family: inherit !important;
-        color: #0f172a;
-        font-weight: 700;
+        color: #0a5482;
+        font-weight: 800;
         line-height: 1.35;
         text-align: left;
-        margin-top: 1.5rem;
-        margin-bottom: 0.65rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
       }
-      .legacy-prose h1 { font-size: 1.45rem; }
-      .legacy-prose h2 { font-size: 1.3rem; }
-      .legacy-prose h3 { font-size: 1.18rem; }
+      .legacy-prose h1 { font-size: 1.5rem; }
+      .legacy-prose h2,
+      .legacy-prose .legacy-section-heading {
+        font-size: 1.4rem;
+        margin-top: 2.75rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #e2e8f0;
+        margin-bottom: 1.1rem;
+        color: #0a5482;
+        font-weight: 800;
+      }
+      .legacy-prose h2 span,
+      .legacy-prose .legacy-section-heading span {
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        color: inherit !important;
+      }
+      .legacy-prose h3 { font-size: 1.22rem; margin-top: 2rem; }
       .legacy-prose h4,
       .legacy-prose h5,
-      .legacy-prose h6 { font-size: 1.06rem; }
+      .legacy-prose h6 { font-size: 1.08rem; margin-top: 1.5rem; }
       .legacy-prose > h1:first-child,
       .legacy-prose > h2:first-child,
+      .legacy-prose > .legacy-section-heading:first-child,
       .legacy-prose > h3:first-child,
       .legacy-prose > h4:first-child {
         margin-top: 0.25rem;
+        padding-top: 0;
+        border-top: none;
+      }
+      .legacy-prose p:has(img) {
+        margin-top: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+      .legacy-prose p:has(img) + p[style*="text-align: center"] {
+        margin-top: 0.35rem;
+        margin-bottom: 2.25rem;
+        color: #475569;
+        font-size: 0.925rem;
       }
       .legacy-prose ul,
       .legacy-prose ol {

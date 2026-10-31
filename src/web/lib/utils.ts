@@ -420,6 +420,16 @@ export function fixLegacyHtmlContent(html: string | null | undefined): string {
         .map((part: string) => `<p${attrs}>${part}</p>`)
         .join('\n');
     })
+    // Convert legacy <p><span style="font-size: x-large;">Heading</span></p> into proper <h2> section headings
+    .replace(
+      /<p\b[^>]*>\s*(?:<(?:strong|b)\b[^>]*>\s*)?<span\b[^>]*font-size\s*:\s*(?:x-large|xx-large|large|(?:1[89]|[2-9]\d)px|(?:1[5-9]|[2-9]\d)pt)[^>]*>([\s\S]*?)<\/span>(?:\s*<\/(?:strong|b)>)?\s*<\/p>/gi,
+      (match, inner) => {
+        if (/<(?:img|iframe|video|table)\b/i.test(inner)) return match;
+        const text = inner.replace(/<[^>]+>/g, '').trim();
+        if (!text || text.length > 120) return match;
+        return `<h2 class="legacy-section-heading">${inner.trim()}</h2>`;
+      }
+    )
     // Remove empty <p>, <div>, and heading tags
     .replace(/<(?:p|div|h[1-6])\b[^>]*>(?:\s|<(?:em|strong|span|b|i)\b[^>]*>\s*<\/(?:em|strong|span|b|i)>|<br\s*\/?>)*<\/(?:p|div|h[1-6])>/gi, '');
 }
