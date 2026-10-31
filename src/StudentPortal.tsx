@@ -3041,62 +3041,57 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
               </div>
 
-              <div className="relative z-20 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4">
-                {/* CỘT 1 (BÊN TRÁI): TIÊU ĐỀ + 3 NÚT FILTER */}
-                <div className="flex flex-col gap-3">
-                  <div>
-                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                      TonyEnglish Performance Analytics • Báo Cáo Hiệu Suất
-                    </div>
-                    <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
-                      Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` — ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
-                    </h1>
-                    <p className="text-slate-200/85 text-xs sm:text-sm mt-1 font-medium">
-                      Phân tích kết quả luyện tập, biểu đồ 4 kỹ năng và nhật ký học tập chi tiết.
-                    </p>
+              <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+                {/* CỘT 1 (BÊN TRÁI): TIÊU ĐỀ */}
+                <div className="min-w-0 flex-1">
+                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5 whitespace-nowrap">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                    <span>TonyEnglish Performance Analytics • Báo Cáo Hiệu Suất</span>
                   </div>
+                  <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
+                    Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` — ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
+                  </h1>
+                  <p className="text-slate-200/85 text-xs sm:text-sm mt-1 font-medium">
+                    Phân tích kết quả luyện tập, biểu đồ 4 kỹ năng và nhật ký học tập chi tiết.
+                  </p>
+                </div>
 
-                  {/* 3 NÚT FILTER: Luyện thi IELTS, Bài tập bổ trợ, Bài đọc dịch Cambridge */}
+                {/* CỘT 2 (BÊN PHẢI DÒNG 1): CÁC NÚT CHUYỂN TAB CON + NÚT GIAO DIỆN */}
+                <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 w-full lg:w-auto justify-between lg:justify-end shrink-0">
                   {isIeltsCourseSelected && (
-                    <div className="flex flex-wrap bg-white/10 backdrop-blur-xs p-1 rounded-xl border border-white/15 gap-1 w-fit">
+                    <div className="flex flex-wrap items-center bg-white/10 backdrop-blur-xs p-1 rounded-xl border border-white/15 gap-1">
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts'); setHistoryPage(1); }}
-                        className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                        className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>🎯</span> Luyện thi IELTS
+                        <span>🎯</span> <span>Luyện thi IELTS</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts-standard'); setHistoryPage(1); }}
-                        className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                        className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>📝</span> Bài Tập Bổ Trợ
+                        <span>📝</span> <span>Bài Tập Bổ Trợ</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts-translation'); setAnalyticsView('activity'); setActivityPage(1); }}
-                        className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-translation' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                        className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts-translation' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>📚</span> Bài Đọc Dịch Cambridge
+                        <span>📚</span> <span>Bài Đọc Dịch Cambridge</span>
                       </button>
                       {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
                         <button
                           type="button"
                           onClick={() => { setAnalyticsTestType('standard'); setHistoryPage(1); }}
-                          className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg font-extrabold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
+                          className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                         >
-                          <span>📖</span> Bài tập khóa khác
+                          <span>📖</span> <span>Bài tập khóa khác</span>
                         </button>
                       )}
                     </div>
                   )}
-                </div>
-
-                {/* BÊN PHẢI BANNER: BỘ 3 NÚT (BÀI GIẢNG, KHO ĐỀ, CHỌN KHÓA HỌC) + NÚT ĐỔI MÀU NỀN */}
-                <div className="flex flex-wrap items-center gap-2.5 shrink-0 self-start xl:self-center">
-                  {renderBottomControls}
 
                   {/* NÚT ĐỔI MÀU NỀN */}
                   <button 
@@ -3105,8 +3100,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     className="bg-white/12 hover:bg-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20 h-[38px]"
                     title="Đổi giao diện màu nền"
                   >
-                    <span>🎨</span> <span className="hidden sm:inline">Giao diện</span>
+                    <span>🎨</span> <span className="hidden xl:inline">Giao diện</span>
                   </button>
+                </div>
+              </div>
+
+              {/* DÒNG 2: LỐI TẮT HỌC TẬP & BỘ LỌC KHÓA HỌC */}
+              <div className="relative z-30 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80 hidden sm:inline">
+                  Lối tắt học tập &amp; Bộ lọc khóa học:
+                </span>
+                <div className="w-full sm:w-auto flex justify-end ml-auto">
+                  {renderBottomControls}
                 </div>
               </div>
             </div>
@@ -3127,14 +3132,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   ) : (
                   <>
                     {/* 5 THẺ KPI THỐNG KÊ */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-3 sm:gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
                       {/* CARD 1: BÀI HOÀN THÀNH */}
-                      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-4 sm:p-5 flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all duration-300 group">
-                        <div className="flex justify-between items-center mb-3 relative z-10">
-                          <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-emerald-600 transition-colors">Đã làm</span></div>
-                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalTestsDone}</span>
+                      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-3.5 sm:p-4 flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all duration-300 group">
+                        <div className="relative z-10 mb-2">
+                          <div className="flex items-center gap-1.5 whitespace-nowrap">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-emerald-600 transition-colors">Đã làm</span>
+                          </div>
+                          <div className="font-black text-slate-800 text-2xl sm:text-[26px] leading-none mt-1.5">
+                            {analyticsTotalTestsDone}
+                          </div>
                         </div>
-                        <div className="h-16 w-full -mx-1 -mb-1">
+                        <div className="h-14 w-full -mx-1 -mb-1">
                           <ResponsiveContainer width="99%" height="100%">
                             <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
                               <defs>
@@ -3152,12 +3162,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       </div>
 
                       {/* CARD 2: LƯỢT LÀM */}
-                      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-4 sm:p-5 flex flex-col justify-between hover:border-[#2ab4e8] hover:shadow-md transition-all duration-300 group">
-                        <div className="flex justify-between items-center mb-3 relative z-10">
-                          <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-[#2ab4e8]"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-[#0a5482] transition-colors">Lượt làm</span></div>
-                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalTestsDone}</span>
+                      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-3.5 sm:p-4 flex flex-col justify-between hover:border-[#2ab4e8] hover:shadow-md transition-all duration-300 group">
+                        <div className="relative z-10 mb-2">
+                          <div className="flex items-center gap-1.5 whitespace-nowrap">
+                            <span className="w-2 h-2 rounded-full bg-[#2ab4e8] shrink-0"></span>
+                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-[#0a5482] transition-colors">Lượt làm</span>
+                          </div>
+                          <div className="font-black text-slate-800 text-2xl sm:text-[26px] leading-none mt-1.5">
+                            {analyticsTotalTestsDone}
+                          </div>
                         </div>
-                        <div className="h-16 w-full -mx-1 -mb-1">
+                        <div className="h-14 w-full -mx-1 -mb-1">
                           <ResponsiveContainer width="99%" height="100%">
                             <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
                               <defs>
@@ -3175,12 +3190,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       </div>
 
                       {/* CARD 3: THỜI GIAN HỌC */}
-                      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-4 sm:p-5 flex flex-col justify-between hover:border-orange-400 hover:shadow-md transition-all duration-300 group">
-                        <div className="flex justify-between items-center mb-3 relative z-10">
-                          <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-orange-400"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-orange-600 transition-colors">Giờ học</span></div>
-                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalTimeHours}h</span>
+                      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-3.5 sm:p-4 flex flex-col justify-between hover:border-orange-400 hover:shadow-md transition-all duration-300 group">
+                        <div className="relative z-10 mb-2">
+                          <div className="flex items-center gap-1.5 whitespace-nowrap">
+                            <span className="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>
+                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-orange-600 transition-colors">Giờ học</span>
+                          </div>
+                          <div className="font-black text-slate-800 text-2xl sm:text-[26px] leading-none mt-1.5">
+                            {analyticsTotalTimeHours}h
+                          </div>
                         </div>
-                        <div className="h-16 w-full -mx-1 -mb-1">
+                        <div className="h-14 w-full -mx-1 -mb-1">
                           <ResponsiveContainer width="99%" height="100%">
                             <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
                               <defs>
@@ -3198,36 +3218,36 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       </div>
 
                       {/* CARD 4: ĐIỂM TRUNG BÌNH */}
-                      <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] rounded-2xl border border-slate-800/40 shadow-xs p-4 sm:p-5 flex flex-col justify-between text-white relative overflow-hidden group hover:shadow-md transition-all">
+                      <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] rounded-2xl border border-slate-800/40 shadow-xs p-3.5 sm:p-4 flex flex-col justify-between text-white relative overflow-hidden group hover:shadow-md transition-all">
                         <div className="relative z-10">
-                          <span className="text-[10px] font-extrabold tracking-widest text-[#2ab4e8] uppercase block mb-1">
-                            {isIeltsContext ? 'IELTS AVERAGE' : 'ĐIỂM TRUNG BÌNH'}
+                          <span className="text-[10px] font-extrabold tracking-widest text-[#2ab4e8] uppercase block mb-1 whitespace-nowrap">
+                            {isIeltsContext ? 'IELTS AVERAGE' : 'ĐIỂM TB'}
                           </span>
                           {isIeltsContext ? (
-                            <div className="font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mt-1">
+                            <div className="font-black text-2xl sm:text-[26px] text-white tracking-tight leading-none mt-1.5">
                               {avgIelts}
                             </div>
                           ) : (
-                            <div className="mt-1">
-                              <span className="font-black text-2xl sm:text-3xl text-white tracking-tight leading-none">{avgScore}</span>
+                            <div className="mt-1.5">
+                              <span className="font-black text-2xl sm:text-[26px] text-white tracking-tight leading-none">{avgScore}</span>
                               {avgScoreRaw > 0 && (
-                                <span className={`block text-base font-black mt-0.5 ${GRADE_SCALE.find(g => avgScoreRaw >= g.min)?.color || 'text-slate-400'}`}>
+                                <span className={`block text-sm font-black mt-0.5 ${GRADE_SCALE.find(g => avgScoreRaw >= g.min)?.color || 'text-slate-400'}`}>
                                   {percentToGrade(avgScoreRaw)}
                                 </span>
                               )}
                             </div>
                           )}
-                          <span className="text-[11px] font-medium text-sky-200/75 mt-2 block">
-                            {isIeltsContext ? '(Dựa trên 4 bài gần nhất)' : '(Toàn bộ hệ thống)'}
+                          <span className="text-[10px] font-medium text-sky-200/75 mt-2 block leading-snug">
+                            {isIeltsContext ? '(Dựa trên 4 bài gần nhất)' : '(Toàn hệ thống)'}
                           </span>
                         </div>
                         <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-[#2ab4e8]/15 rounded-full blur-xl pointer-events-none"></div>
                       </div>
 
                       {/* CARD 5: MỤC TIÊU ĐIỂM */}
-                      <div className="bg-[#0f172a] rounded-2xl border border-amber-500/40 shadow-xs p-4 sm:p-5 flex flex-col justify-between text-white relative overflow-hidden group hover:border-amber-400 transition-all">
+                      <div className="bg-[#0f172a] rounded-2xl border border-amber-500/40 shadow-xs p-3.5 sm:p-4 flex flex-col justify-between text-white relative overflow-hidden group hover:border-amber-400 transition-all">
                         <div className="relative z-10 flex-1 flex flex-col justify-between">
-                          <span className="text-[10px] font-extrabold tracking-widest text-amber-400 uppercase block mb-1">
+                          <span className="text-[10px] font-extrabold tracking-widest text-amber-400 uppercase block mb-1 whitespace-nowrap">
                             MỤC TIÊU ĐIỂM
                           </span>
                           <div className="mt-1">
@@ -3237,7 +3257,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 value={getTargetForCourse(analyticsCourse, true) || ''} 
                                 onChange={(e) => handleUpdateTarget('ielts', e.target.value)}
                                 placeholder="N/A"
-                                className="font-black text-amber-400 text-2xl sm:text-3xl bg-transparent w-full outline-none cursor-pointer placeholder:text-amber-400/30 relative z-10"
+                                className="font-black text-amber-400 text-2xl sm:text-[26px] leading-none bg-transparent w-full outline-none cursor-pointer placeholder:text-amber-400/30 relative z-10"
                                 title="Click để sửa"
                               />
                             ) : analyticsCourse !== 'all' ? (
@@ -3246,7 +3266,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <select 
                                     value={getTargetForCourse(analyticsCourse, false) || ''} 
                                     onChange={(e) => handleUpdateTarget(analyticsCourse, e.target.value)}
-                                    className="font-black text-amber-400 text-2xl sm:text-3xl bg-transparent outline-none cursor-pointer appearance-none relative z-10 border-none pr-6"
+                                    className="font-black text-amber-400 text-2xl sm:text-[26px] leading-none bg-transparent outline-none cursor-pointer appearance-none relative z-10 border-none pr-6"
                                   >
                                     <option value="" className="bg-slate-800 text-slate-400 text-sm">--</option>
                                     <option value="A*" className="bg-slate-800 text-white text-sm">A*</option>
@@ -3261,7 +3281,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </div>
                             ) : (
                               <div className="relative z-10">
-                                <span className="font-black text-amber-400/30 text-2xl sm:text-3xl">--</span>
+                                <span className="font-black text-amber-400/30 text-2xl sm:text-[26px] leading-none">--</span>
                                 <p className="text-[10px] text-amber-200/40 mt-1">Chọn 1 khóa cụ thể</p>
                               </div>
                             )}

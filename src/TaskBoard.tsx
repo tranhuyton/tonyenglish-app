@@ -682,29 +682,9 @@ export default function TaskBoard({
     );
   }
 
-  if (boardsData.length === 0) {
-    return (
-      <div 
-        className="w-full min-h-[450px] flex flex-col p-4 transition-colors duration-300 rounded-3xl"
-        style={boardTheme.id !== 'tony-classic' ? { backgroundColor: boardTheme.boardBg } : undefined}
-      >
-        {headerActions && (
-          <div className="flex justify-end relative z-40 mb-3 shrink-0">
-            {headerActions}
-          </div>
-        )}
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <div className="p-10 text-center bg-white rounded-3xl shadow-xs border border-slate-200 max-w-md">
-            <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
-            <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">Chưa có bảng công việc nào</h3>
-            <p className="text-[14px] text-slate-500 font-medium">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   const currentBoard = boardsData[activeBoardIndex] || boardsData[0];
+  const rawSuffix = courseTitle || currentBoard?.title || '';
+  const cleanBannerSuffix = rawSuffix.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim();
 
   return (
     <div 
@@ -723,7 +703,7 @@ export default function TaskBoard({
       {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
       <div className="mb-5 sm:mb-6 shrink-0 relative z-30">
         <div 
-          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4 transition-all duration-300 relative border border-slate-800/20"
+          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all duration-300 relative border border-slate-800/20"
           style={{ background: boardTheme.titleBg }}
         >
           {/* Decorative Ambient Glow */}
@@ -732,142 +712,184 @@ export default function TaskBoard({
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
           </div>
 
-          <div className="relative z-20 flex items-center justify-between w-full xl:w-auto gap-3">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                TonyEnglish Task Board • Bảng Công Việc
+          <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+            <div className="flex items-start justify-between w-full lg:w-auto gap-3 min-w-0 flex-1">
+              <div className="min-w-0">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5 whitespace-nowrap">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                  <span>TonyEnglish Task Board • Bảng Công Việc</span>
+                </div>
+                <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
+                  Bảng Công Việc{cleanBannerSuffix ? ` — ${cleanBannerSuffix}` : ''}
+                </h1>
+                <p className="text-slate-200/85 text-xs sm:text-sm font-medium mt-1">
+                  Quản lý lộ trình học tập theo chuyên đề, đánh dấu hoàn thành nhiệm vụ &amp; luyện tập đề thi.
+                </p>
               </div>
-              <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
-                Bảng Công Việc{courseTitle ? ` — ${courseTitle}` : (currentBoard?.title ? ` — ${currentBoard.title}` : '')}
-              </h1>
-              <p className="text-slate-200/85 text-xs sm:text-sm font-medium mt-1">
-                Quản lý lộ trình học tập theo chuyên đề, đánh dấu hoàn thành nhiệm vụ &amp; luyện tập đề thi.
-              </p>
+
+              {/* Mobile More Button in Top Header */}
+              <div className="sm:hidden relative shrink-0">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="w-8 h-8 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
+                  title="Tùy chọn bảng công việc"
+                >
+                  ⋯
+                </button>
+
+                {isMobileMenuOpen && (
+                  <>
+                    <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
+                    <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-200 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150 text-slate-800">
+                      <button
+                        type="button"
+                        onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
+                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                      >
+                        <span className="text-base">🎨</span> Đổi giao diện màu nền
+                      </button>
+                      {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
+                        <button
+                          type="button"
+                          onClick={() => { handleResetColumnOrder(currentBoard.title); setIsMobileMenuOpen(false); }}
+                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 text-amber-600 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                        >
+                          <span className="text-base">↺</span> Đặt lại thứ tự cột
+                        </button>
+                      )}
+                      {onOpenLecture && (
+                        <button
+                          type="button"
+                          onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
+                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                        >
+                          <span className="text-base">📖</span> Bài giảng lý thuyết
+                        </button>
+                      )}
+                      {onStartTest && (
+                        <button
+                          type="button"
+                          onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
+                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                        >
+                          <span className="text-base">📚</span> Mở kho đề
+                        </button>
+                      )}
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
 
-            {/* Mobile More Button in Top Header */}
-            <div className="sm:hidden relative shrink-0">
+            <div className="relative z-30 flex flex-wrap items-center gap-2 sm:gap-2.5 w-full lg:w-auto justify-between lg:justify-end shrink-0">
+              {/* Switch boards if multiple boards exist */}
+              {boardsData.length > 1 && (
+                boardsData.length <= 2 ? (
+                  <div className="flex items-center gap-1 bg-white/10 backdrop-blur-xs border border-white/15 p-1 rounded-xl">
+                    {boardsData.map((b, idx) => {
+                      const shortName = b.title.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || b.title;
+                      return (
+                        <button
+                          key={b.title}
+                          type="button"
+                          onClick={() => setActiveBoardIndex(idx)}
+                          className={`px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
+                        >
+                          {shortName}
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="relative flex items-center bg-white/12 hover:bg-white/20 backdrop-blur-xs border border-white/20 rounded-xl px-3 h-[38px] transition-all">
+                    <span className="text-xs mr-1.5 shrink-0">📋</span>
+                    <select
+                      value={activeBoardIndex}
+                      onChange={(e) => setActiveBoardIndex(Number(e.target.value))}
+                      className="bg-transparent text-white font-extrabold text-xs sm:text-[13px] outline-none cursor-pointer pr-5 appearance-none max-w-[220px] sm:max-w-[260px] truncate"
+                      title="Chọn bảng công việc"
+                    >
+                      {boardsData.map((b, idx) => {
+                        const shortName = b.title.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || b.title;
+                        return (
+                          <option key={b.title} value={idx} className="bg-slate-900 text-white font-bold">
+                            📋 {shortName} ({b.totalCompleted}/{b.totalItems})
+                          </option>
+                        );
+                      })}
+                    </select>
+                    <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-white/80 pointer-events-none">▼</span>
+                  </div>
+                )
+              )}
+
+              {/* Progress bar */}
+              {currentBoard && currentBoard.totalItems > 0 && (
+                <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-1.5 flex flex-col justify-center min-w-[175px]">
+                  <div className="flex items-center justify-between text-[11.5px] text-white/95 font-bold mb-1 gap-2 whitespace-nowrap">
+                    <span>Tiến độ chung</span>
+                    <span className="text-[#2ab4e8] font-black">{currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-[#2ab4e8] to-emerald-400 rounded-full transition-all duration-500"
+                      style={{ width: `${currentBoard.overallProgress}%` }}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Reset column order button (desktop only) */}
+              {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => handleResetColumnOrder(currentBoard.title)}
+                  className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
+                  title="Khôi phục thứ tự các cột ban đầu"
+                >
+                  <span>↺</span> <span className="hidden xl:inline">Đặt lại cột</span>
+                </button>
+              )}
+
+              {/* Đổi màu nền bảng làm việc (desktop only) */}
               <button
                 type="button"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="w-8 h-8 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
-                title="Tùy chọn bảng công việc"
+                onClick={() => setIsThemeModalOpen(true)}
+                className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
+                title="Đổi giao diện màu nền"
               >
-                ⋯
+                <span>🎨</span> <span className="hidden xl:inline">Giao diện</span>
               </button>
-
-              {isMobileMenuOpen && (
-                <>
-                  <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
-                  <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-200 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150 text-slate-800">
-                    <button
-                      type="button"
-                      onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
-                      className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
-                    >
-                      <span className="text-base">🎨</span> Đổi giao diện màu nền
-                    </button>
-                    {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
-                      <button
-                        type="button"
-                        onClick={() => { handleResetColumnOrder(currentBoard.title); setIsMobileMenuOpen(false); }}
-                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 text-amber-600 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
-                      >
-                        <span className="text-base">↺</span> Đặt lại thứ tự cột
-                      </button>
-                    )}
-                    {onOpenLecture && (
-                      <button
-                        type="button"
-                        onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
-                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
-                      >
-                        <span className="text-base">📖</span> Bài giảng lý thuyết
-                      </button>
-                    )}
-                    {onStartTest && (
-                      <button
-                        type="button"
-                        onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
-                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
-                      >
-                        <span className="text-base">📚</span> Mở kho đề
-                      </button>
-                    )}
-                  </div>
-                </>
-              )}
             </div>
           </div>
 
-          <div className="relative z-30 flex flex-wrap items-center gap-2 sm:gap-2.5 w-full xl:w-auto justify-between xl:justify-end">
-            {/* Switch tabs if multiple boards exist */}
-            {boardsData.length > 1 && (
-              <div className="flex items-center gap-1 bg-white/10 backdrop-blur-xs border border-white/15 p-1 rounded-xl overflow-x-auto max-w-full custom-scrollbar">
-                {boardsData.map((b, idx) => (
-                  <button
-                    key={b.title}
-                    onClick={() => setActiveBoardIndex(idx)}
-                    className={`px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
-                  >
-                    {b.title}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {/* Progress bar */}
-            {currentBoard && currentBoard.totalItems > 0 && (
-              <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-1.5 flex flex-col justify-center min-w-[165px]">
-                <div className="flex items-center justify-between text-[11.5px] text-white/95 font-bold mb-1 gap-2">
-                  <span>Tiến độ chung</span>
-                  <span className="text-[#2ab4e8] font-black">{currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)</span>
-                </div>
-                <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-[#2ab4e8] to-emerald-400 rounded-full transition-all duration-500"
-                    style={{ width: `${currentBoard.overallProgress}%` }}
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* Quick actions & Course switcher integrated in header on desktop */}
-            {bottomActions && (
-              <div className="hidden sm:block">
+          {bottomActions && (
+            <div className="relative z-30 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80 hidden sm:inline">
+                Lối tắt học tập &amp; Bộ lọc khóa học:
+              </span>
+              <div className="w-full sm:w-auto flex justify-end ml-auto">
                 {bottomActions}
               </div>
-            )}
-
-            {/* Reset column order button (desktop only) */}
-            {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
-              <button
-                type="button"
-                onClick={() => handleResetColumnOrder(currentBoard.title)}
-                className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
-                title="Khôi phục thứ tự các cột ban đầu"
-              >
-                <span>↺</span> <span className="hidden 2xl:inline">Đặt lại cột</span>
-              </button>
-            )}
-
-            {/* Đổi màu nền bảng làm việc (desktop only) */}
-            <button
-              type="button"
-              onClick={() => setIsThemeModalOpen(true)}
-              className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
-              title="Đổi giao diện màu nền"
-            >
-              <span>🎨</span> <span className="hidden 2xl:inline">Giao diện</span>
-            </button>
-          </div>
+            </div>
+          )}
         </div>
       </div>
 
       {(() => {
         const board = boardsData[activeBoardIndex] || boardsData[0];
-        if (!board) return null;
+        if (!board) {
+          return (
+            <div className="flex-1 min-h-[340px] flex flex-col items-center justify-center py-8">
+              <div className="p-10 text-center bg-white rounded-3xl shadow-xs border border-slate-200 max-w-md">
+                <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
+                <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">Chưa có bảng công việc nào</h3>
+                <p className="text-[14px] text-slate-500 font-medium">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
+              </div>
+            </div>
+          );
+        }
 
         return (
           <div key={board.title} className="w-full flex flex-col relative overflow-hidden h-[calc(100vh-235px)] min-h-[540px] max-h-[760px]">
