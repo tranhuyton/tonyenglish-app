@@ -907,75 +907,44 @@ export const CoursesPage: React.FC = () => {
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
           <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">
-            {/* Course Header Banner */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 sm:px-8 py-6 text-white flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <div className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
-                  🎓 {lang === 'vi' ? 'Chương trình đào tạo tại TonyEnglish' : 'Training Programs at TonyEnglish'}
+            {/* Compact & Lightweight Course Header (only shown when viewing a specific course) */}
+            {currentCourse && (
+              <div className="bg-slate-50/80 border-b border-slate-200/80 px-6 sm:px-8 py-4 flex flex-wrap items-center justify-between gap-3">
+                <h1 className="text-lg sm:text-xl font-extrabold text-[#0a5482] tracking-tight">
+                  {courseTitle}
+                </h1>
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setShowSyllabusModal(true)}
+                    className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-200/90 text-xs font-bold px-3 py-1.5 rounded-lg transition cursor-pointer flex items-center gap-1.5 shadow-2xs"
+                  >
+                    <span>📋</span>
+                    <span>{t('Courses Syllabus')}</span>
+                  </button>
+                  <a
+                    href={`tel:${CONTACT_PHONE}`}
+                    onClick={() => trackCourseConversion('Phone', courseTitle)}
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-2xs"
+                  >
+                    <span>📞</span>
+                    <span>{CONTACT_PHONE_DISPLAY}</span>
+                  </a>
+                  <a
+                    href={CONTACT_ZALO_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => trackCourseConversion('Zalo', courseTitle)}
+                    className="bg-[#0068ff] hover:bg-[#0057d6] text-white text-xs font-bold px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow-2xs"
+                  >
+                    <span>💬</span>
+                    <span>Zalo Tư Vấn</span>
+                  </a>
                 </div>
-                <h1 className="text-2xl sm:text-3xl font-black tracking-tight">{courseTitle}</h1>
               </div>
-              <div className="flex flex-wrap items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setShowSyllabusModal(true)}
-                  className="bg-white/15 hover:bg-white/25 text-white border border-white/25 text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5"
-                >
-                  <span>📋</span>
-                  <span>{t('Courses Syllabus')}</span>
-                </button>
-                <a
-                  href={`tel:${CONTACT_PHONE}`}
-                  onClick={() => trackCourseConversion('Phone', courseTitle)}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-black px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-sm"
-                >
-                  <span>📞</span>
-                  <span>{CONTACT_PHONE_DISPLAY}</span>
-                </a>
-                <a
-                  href={CONTACT_ZALO_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => trackCourseConversion('Zalo', courseTitle)}
-                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white text-xs sm:text-sm font-black px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-sm"
-                >
-                  <span>💬</span>
-                  <span>Zalo Tư Vấn</span>
-                </a>
-              </div>
-            </div>
+            )}
 
             <div className="p-6 sm:p-8 space-y-6">
-              {/* VIVID COURSE HERO SHOWCASE BANNER */}
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/90 shadow-md group bg-slate-900">
-                <div className="aspect-[16/9] sm:aspect-[16/7] w-full overflow-hidden">
-                  <img
-                    src={currentVisual.image}
-                    alt={courseTitle}
-                    className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/45 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-7 text-white">
-                  <div className="mb-2">
-                    <span className="inline-block bg-amber-400 text-slate-950 font-black text-[10px] sm:text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
-                      {currentVisual.badge}
-                    </span>
-                  </div>
-                  <p className="text-xs sm:text-sm md:text-base text-slate-100 font-semibold leading-snug max-w-3xl mb-3 drop-shadow-xs">
-                    {currentVisual.caption}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                    {currentVisual.highlights.map((item, idx) => (
-                      <span
-                        key={idx}
-                        className="text-[11px] sm:text-xs font-bold bg-white/15 backdrop-blur-md border border-white/25 text-white px-2.5 sm:px-3 py-1 rounded-lg"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
 
               {/* Subcategory Quick Cards if parent category has children */}
               {childCoursesOfCurrent.length > 0 && (

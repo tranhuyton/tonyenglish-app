@@ -420,6 +420,31 @@ export function fixLegacyHtmlContent(html: string | null | undefined): string {
         .map((part: string) => `<p${attrs}>${part}</p>`)
         .join('\n');
     })
+    // Split <p> containing an <img> followed by <br> + caption into separate image and caption paragraphs
+    .replace(
+      /<p\b([^>]*)>\s*(?:<(?:span|em|i|strong|b)\b[^>]*>\s*)*(<img\b[^>]*>)\s*(?:<\/(?:span|em|i|strong|b)>\s*)*(?:<br\s*\/?>\s*)+([\s\S]*?)<\/p>/gi,
+      (_m, attrs, imgTag, rest) => {
+        const plainRest = rest.replace(/<[^>]+>/g, '').trim();
+        if (!plainRest) return `<p${attrs}>${imgTag}</p>`;
+        return `<p${attrs}>${imgTag}</p>\n<p class="legacy-img-caption"><em>${plainRest}</em></p>`;
+      }
+    )
+    // Normalize image caption paragraphs (e.g. "(Ảnh: ...)" or centered italic captions under screenshots)
+    .replace(/<p\b([^>]*)>([\s\S]*?)<\/p>/gi, (match, attrs, inner) => {
+      if (/<(?:img|iframe|video|table)\b/i.test(inner)) return match;
+      const plain = inner.replace(/<[^>]+>/g, '').trim();
+      if (!plain || plain.length > 240) return match;
+      const isParenPhotoCaption = /^\(?\s*Ảnh\s*[:\s]/i.test(plain);
+      const isCenteredItalic =
+        /text-align\s*:\s*center/i.test(attrs) && /<(?:em|i)\b/i.test(inner);
+      const isPureItalicCaption =
+        /^\s*(?:<span\b[^>]*>\s*)*<(?:em|i)\b[^>]*>[\s\S]*?<\/(?:em|i)>\s*(?:<\/span>\s*)*$/i.test(inner) &&
+        plain.length <= 200;
+      if (isParenPhotoCaption || isCenteredItalic || isPureItalicCaption) {
+        return `<p class="legacy-img-caption"><em>${plain}</em></p>`;
+      }
+      return match;
+    })
     // Convert legacy <p><span style="font-size: x-large;">Heading</span></p> into proper <h2> section headings
     .replace(
       /<p\b[^>]*>\s*(?:<(?:strong|b)\b[^>]*>\s*)?<span\b[^>]*font-size\s*:\s*(?:x-large|xx-large|large|(?:1[89]|[2-9]\d)px|(?:1[5-9]|[2-9]\d)pt)[^>]*>([\s\S]*?)<\/span>(?:\s*<\/(?:strong|b)>)?\s*<\/p>/gi,

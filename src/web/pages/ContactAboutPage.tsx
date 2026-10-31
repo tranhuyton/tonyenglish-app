@@ -163,18 +163,18 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
             </span>
           </button>
 
-          <ul className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
+          <ul className={`divide-y divide-slate-100 text-[14.5px] p-2 space-y-1 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
             {aboutList.map((ab) => {
               const title = lang === 'vi' ? ab.about_title_vi : ab.about_title_en;
               const urlSlug = lang === 'vi' ? ab.about_title_url_vi : ab.about_title_url_en;
               const isActive = mode === 'about' && currentAbout && currentAbout.about_id === ab.about_id;
 
               return (
-                <li key={ab.about_id}>
+                <li key={ab.about_id} className="py-0.5">
                   <Link
                     to={`/about/${(urlSlug || '').trim()}`}
                     onClick={() => setMobileCateOpen(false)}
-                    className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                    className={`block px-3.5 py-3 rounded-xl transition-colors ${
                       isActive
                         ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
                         : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
@@ -186,11 +186,11 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               );
             })}
 
-            <li>
+            <li className="py-0.5">
               <Link
                 to="/opening"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                className={`block px-3.5 py-3 rounded-xl transition-colors ${
                   mode === 'opening'
                     ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
@@ -199,13 +199,13 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                 📅 {t('Openning Class')}
               </Link>
               {mode === 'opening' && openingGroups.length > 0 && (
-                <ul className="mt-0.5 mb-1 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
+                <ul className="mt-1 mb-1.5 ml-3 pl-2.5 border-l border-slate-200/80 space-y-1">
                   {openingGroups.map((ug) => (
                     <li key={ug.ug_id}>
                       <Link
                         to={`/opening/${(ug.ug_name_url || '').trim()}`}
                         onClick={() => setMobileCateOpen(false)}
-                        className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                        className={`block px-3 py-2.5 rounded-lg text-[13.5px] transition-all ${
                           currentOpening && currentOpening.ug_id === ug.ug_id
                             ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
                             : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
@@ -219,11 +219,11 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               )}
             </li>
 
-            <li>
+            <li className="py-0.5">
               <Link
                 to="/sitemap"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                className={`block px-3.5 py-3 rounded-xl transition-colors ${
                   mode === 'sitemap'
                     ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
@@ -233,11 +233,11 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               </Link>
             </li>
 
-            <li>
+            <li className="py-0.5">
               <Link
                 to="/contact"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                className={`block px-3.5 py-3 rounded-xl transition-colors ${
                   mode === 'contact'
                     ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
@@ -252,12 +252,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full">
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white">
-              <div className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
-                TonyEnglish Center
-              </div>
-              <h1 className="text-xl sm:text-3xl font-black tracking-tight">{pageHeading}</h1>
+            {/* Compact Lightweight Header */}
+            <div className="bg-slate-50/80 border-b border-slate-200/80 px-6 sm:px-8 py-4">
+              <h1 className="text-lg sm:text-xl font-extrabold text-[#0a5482] tracking-tight">{pageHeading}</h1>
             </div>
 
             <div className="p-4 sm:p-8">
@@ -415,124 +412,141 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   </div>
                 </div>
               ) : (
-                /* DIRECT PHONE & ZALO CONTACT + MAP */
+                /* CLEAN CONTACT FORM + INFO & MAP */
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                  <div className="space-y-5">
-                    <div>
-                      <span className="inline-block bg-emerald-100 text-emerald-800 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider mb-2">
-                        {lang === 'vi' ? 'LIÊN HỆ TRỰC TIẾP 24/7' : 'DIRECT CONTACT 24/7'}
-                      </span>
-                      <h2 className="text-xl sm:text-2xl font-black text-[#0a5482] mb-1.5">
-                        {lang === 'vi'
-                          ? 'Gọi Điện Trực Tiếp Hoặc Nhắn Tin Qua Zalo'
-                          : 'Call Directly or Chat via Zalo'}
-                      </h2>
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {lang === 'vi'
-                          ? 'Để được tư vấn lộ trình học IELTS, Cambridge IGCSE, Giao tiếp tiếng Anh và đặt lịch học thử miễn phí nhanh nhất, quý phụ huynh và học viên vui lòng gọi điện hoặc nhắn Zalo trực tiếp cho thầy Trần Huy Tôn:'
-                          : 'For course consultation and trial scheduling, please call or message us directly via Zalo:'}
-                      </p>
-                    </div>
+                  <div>
+                    <h2 className="text-lg font-extrabold text-[#0a5482] mb-1.5">
+                      {lang === 'vi' ? 'Gửi lời nhắn cho TonyEnglish' : 'Send us a message'}
+                    </h2>
+                    <p className="text-sm text-slate-500 mb-5 leading-relaxed">
+                      {lang === 'vi'
+                        ? 'Vui lòng để lại thông tin và nội dung cần tư vấn, chúng tôi sẽ phản hồi trong thời gian sớm nhất.'
+                        : 'Please leave your details and message below, and we will get back to you shortly.'}
+                    </p>
 
-                    <div className="space-y-3.5">
-                      <a
-                        href="https://zalo.me/0935058688"
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={() => {
-                          try {
-                            const w = window as any;
-                            if (typeof w.fbq === 'function') {
-                              w.fbq('track', 'Lead', { content_name: 'Contact Page Zalo', contact_method: 'Zalo' });
-                              w.fbq('track', 'Contact', { content_name: 'Contact Page Zalo', contact_method: 'Zalo' });
-                            }
-                          } catch (e) {}
-                        }}
-                        className="flex items-center justify-between gap-4 bg-[#0068ff] hover:bg-[#0057d6] text-white p-5 rounded-2xl shadow-lg shadow-blue-600/20 transition transform hover:-translate-y-0.5 active:scale-95 group"
-                      >
-                        <div className="flex items-center gap-3.5 min-w-0">
-                          <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shrink-0">
-                            💬
-                          </div>
-                          <div className="min-w-0">
-                            <div className="text-xs font-black text-cyan-200 uppercase tracking-wider">
-                              {lang === 'vi' ? 'Nhắn tin Zalo trực tiếp' : 'Chat on Zalo'}
-                            </div>
-                            <div className="text-lg sm:text-xl font-black truncate">0935 058 688</div>
-                            <div className="text-xs text-blue-100">
-                              {lang === 'vi' ? 'Bấm để mở Zalo chat ngay (Mr. Trần Huy Tôn)' : 'Click to open Zalo chat'}
-                            </div>
-                          </div>
+                    {contactSubmitted ? (
+                      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-2">
+                        <div className="text-2xl">✅</div>
+                        <div className="font-extrabold text-emerald-800 text-base">
+                          {lang === 'vi' ? 'Đã gửi tin nhắn thành công!' : 'Message sent successfully!'}
                         </div>
-                        <span className="bg-white text-[#0068ff] font-black text-xs px-3.5 py-2 rounded-xl shrink-0 group-hover:bg-amber-300 group-hover:text-slate-950 transition">
-                          {lang === 'vi' ? 'Mở Zalo ➜' : 'Open Zalo ➜'}
-                        </span>
-                      </a>
-
-                      <a
-                        href="tel:0935058688"
-                        onClick={() => {
-                          try {
-                            const w = window as any;
-                            if (typeof w.fbq === 'function') {
-                              w.fbq('track', 'Lead', { content_name: 'Contact Page Phone', contact_method: 'Phone' });
-                              w.fbq('track', 'Contact', { content_name: 'Contact Page Phone', contact_method: 'Phone' });
-                            }
-                          } catch (e) {}
-                        }}
-                        className="flex items-center justify-between gap-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white p-5 rounded-2xl shadow-lg shadow-emerald-600/20 transition transform hover:-translate-y-0.5 active:scale-95 group"
-                      >
-                        <div className="flex items-center gap-3.5 min-w-0">
-                          <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shrink-0">
-                            📞
-                          </div>
-                          <div className="min-w-0">
-                            <div className="text-xs font-black text-emerald-200 uppercase tracking-wider">
-                              {lang === 'vi' ? 'Gọi điện trực tiếp Hotline' : 'Direct Hotline'}
-                            </div>
-                            <div className="text-lg sm:text-xl font-black truncate">0935 058 688</div>
-                            <div className="text-xs text-emerald-100">
-                              {lang === 'vi' ? 'Tư vấn lộ trình & đặt lịch học thử miễn phí' : 'Direct consultation & trial booking'}
-                            </div>
-                          </div>
-                        </div>
-                        <span className="bg-white text-emerald-700 font-black text-xs px-3.5 py-2 rounded-xl shrink-0 group-hover:bg-amber-300 group-hover:text-slate-950 transition">
-                          {lang === 'vi' ? 'Gọi ngay ➜' : 'Call now ➜'}
-                        </span>
-                      </a>
-                    </div>
-
-                    <div className="bg-sky-50 border border-sky-200/80 rounded-2xl p-4 text-xs sm:text-sm text-slate-700 space-y-1.5">
-                      <div className="font-black text-[#0a5482] uppercase tracking-wider text-xs">
-                        🎁 {lang === 'vi' ? 'Quyền lợi khi liên hệ trực tiếp:' : 'Benefits when contacting directly:'}
+                        <p className="text-sm text-emerald-700">
+                          {lang === 'vi'
+                            ? 'Cảm ơn bạn đã liên hệ với TonyEnglish. Chúng tôi sẽ phản hồi sớm nhất.'
+                            : 'Thank you for contacting TonyEnglish. We will respond shortly.'}
+                        </p>
                       </div>
-                      <p>✔ {lang === 'vi' ? 'Miễn phí 02 buổi học thử & Test đánh giá năng lực đầu vào trực tiếp.' : 'Free 2 trial lessons & placement assessment.'}</p>
-                      <p>✔ {lang === 'vi' ? 'Cấp ngay tài khoản Lớp Học Thử trên hệ thống TonyEnglish trong 5 phút.' : 'Instant Trial Account activation on TonyEnglish LMS.'}</p>
-                    </div>
+                    ) : (
+                      <form onSubmit={handleContactSubmit} className="space-y-4">
+                        {contactError && (
+                          <div className="bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold px-3.5 py-2.5 rounded-xl">
+                            {contactError}
+                          </div>
+                        )}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                          <div>
+                            <label className="block text-xs font-bold text-slate-600 mb-1.5">
+                              {lang === 'vi' ? 'Họ và tên *' : 'Full Name *'}
+                            </label>
+                            <input
+                              type="text"
+                              value={contactName}
+                              onChange={(e) => setContactName(e.target.value)}
+                              placeholder={lang === 'vi' ? 'Nhập họ và tên' : 'Your full name'}
+                              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs font-bold text-slate-600 mb-1.5">
+                              {lang === 'vi' ? 'Số điện thoại *' : 'Phone Number *'}
+                            </label>
+                            <input
+                              type="text"
+                              value={contactPhone}
+                              onChange={(e) => setContactPhone(e.target.value)}
+                              placeholder="09xx xxx xxx"
+                              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition"
+                            />
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold text-slate-600 mb-1.5">
+                            Email *
+                          </label>
+                          <input
+                            type="email"
+                            value={contactEmail}
+                            onChange={(e) => setContactEmail(e.target.value)}
+                            placeholder="email@example.com"
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold text-slate-600 mb-1.5">
+                            {lang === 'vi' ? 'Nội dung lời nhắn *' : 'Message *'}
+                          </label>
+                          <textarea
+                            rows={4}
+                            value={contactMessage}
+                            onChange={(e) => setContactMessage(e.target.value)}
+                            placeholder={
+                              lang === 'vi'
+                                ? 'Nhập câu hỏi hoặc khóa học bạn quan tâm...'
+                                : 'Enter your question or course of interest...'
+                            }
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition resize-none"
+                          />
+                        </div>
+
+                        <button
+                          type="submit"
+                          disabled={contactLoading}
+                          className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-sm px-6 py-2.5 rounded-xl transition cursor-pointer disabled:opacity-60"
+                        >
+                          {contactLoading
+                            ? lang === 'vi'
+                              ? 'Đang gửi...'
+                              : 'Sending...'
+                            : lang === 'vi'
+                            ? 'Gửi tin nhắn'
+                            : 'Send Message'}
+                        </button>
+                      </form>
+                    )}
                   </div>
 
                   <div className="space-y-4">
-                    <h2 className="text-xl font-black text-[#0a5482] mb-1">{t('Map')}</h2>
-                    <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 text-sm space-y-2">
+                    <h2 className="text-lg font-extrabold text-[#0a5482] mb-1">
+                      {lang === 'vi' ? 'Thông tin liên hệ & Bản đồ' : 'Contact Info & Map'}
+                    </h2>
+                    <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 text-sm space-y-2 text-slate-700">
                       <p>
-                        <strong className="text-slate-700">📍 {t('Address')}:</strong>{' '}
+                        <strong className="text-slate-800">📍 {t('Address')}:</strong>{' '}
                         {options['company_address']
                           ? options['company_address'].replace(/<[^>]*>?/gm, '').trim()
-                          : 'Tòa R2B Royal City, 72A Nguyễn Trãi, Thanh Xuân, Hà Nội'}
+                          : 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội'}
                       </p>
                       <p>
-                        <strong className="text-slate-700">📞 Hotline / Zalo:</strong>{' '}
-                        <a href="tel:0935058688" className="text-emerald-700 font-black hover:underline">
-                          0935 058 688
+                        <strong className="text-slate-800">📞 Điện thoại / Zalo:</strong>{' '}
+                        <a href="tel:0935058688" className="text-[#0a5482] font-bold hover:underline">
+                          +84 93 505 8688
                         </a>
                         {' • '}
                         <a
                           href="https://zalo.me/0935058688"
                           target="_blank"
                           rel="noreferrer"
-                          className="text-[#0068ff] font-black hover:underline"
+                          className="text-[#0068ff] font-bold hover:underline"
                         >
                           Chat Zalo
+                        </a>
+                      </p>
+                      <p>
+                        <strong className="text-slate-800">✉️ Email:</strong>{' '}
+                        <a href="mailto:tranhuyton@gmail.com" className="text-[#0a5482] hover:underline">
+                          tranhuyton@gmail.com
                         </a>
                       </p>
                     </div>
