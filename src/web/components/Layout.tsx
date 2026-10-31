@@ -912,7 +912,7 @@ export const Layout: React.FC<{
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h2 className="text-2xl font-black text-slate-800">
-                        {authTab === 'login' ? t('Sign in') : 'Đăng ký học thử Online'}
+                        {authTab === 'login' ? t('Sign in') : 'Đăng ký học thử IGCSE'}
                       </h2>
                       <p className="text-xs text-slate-500 mt-0.5">
                         {authTab === 'login'
@@ -957,7 +957,7 @@ export const Layout: React.FC<{
                           : 'text-slate-600 hover:text-slate-900'
                       }`}
                     >
-                      🎁 Đăng ký học thử
+                      🎁 Đăng ký học thử IGCSE
                     </button>
                   </div>
                 </div>
