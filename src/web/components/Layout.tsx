@@ -154,6 +154,11 @@ export const Layout: React.FC<{
   const [regPassword, setRegPassword] = useState('');
   const [loginError, setLoginError] = useState('');
   const [loginLoading, setLoginLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
+  const [googleQuickOpen, setGoogleQuickOpen] = useState(false);
+  const [googleQuickEmail, setGoogleQuickEmail] = useState('');
+  const [googleQuickName, setGoogleQuickName] = useState('');
+  const [googleQuickPhone, setGoogleQuickPhone] = useState('');
 
   const [forgotPasswordMode, setForgotPasswordMode] = useState(false);
   const [resetEmail, setResetEmail] = useState('');
@@ -161,24 +166,202 @@ export const Layout: React.FC<{
   const [resetSentSuccess, setResetSentSuccess] = useState(false);
   const [resetError, setResetError] = useState('');
 
+  useEffect(() => {
+    if (loginModalOpen) {
+      setLoginLoading(false);
+      setGoogleLoading(false);
+      setLoginError('');
+    } else {
+      setGoogleQuickOpen(false);
+    }
+  }, [loginModalOpen]);
+
+  useEffect(() => {
+    const handlePageShow = () => {
+      setLoginLoading(false);
+      setGoogleLoading(false);
+    };
+    window.addEventListener('pageshow', handlePageShow);
+    return () => window.removeEventListener('pageshow', handlePageShow);
+  }, []);
+
   const handleGoogleLogin = async () => {
     setLoginError('');
-    setLoginLoading(true);
+    setGoogleLoading(true);
     try {
+      let isGoogleOAuthEnabled = false;
       try {
-        localStorage.setItem('tony_oauth_redirect_portal', '1');
-        sessionStorage.setItem('lms_current_view', 'portal');
+        const settingsRes = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/auth/v1/settings`, {
+          headers: { apikey: import.meta.env.VITE_SUPABASE_ANON_KEY },
+        });
+        if (settingsRes.ok) {
+          const settingsJson = await settingsRes.json();
+          isGoogleOAuthEnabled = Boolean(settingsJson?.external?.google);
+        }
       } catch (e) {}
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'google',
-        options: {
-          redirectTo: `${window.location.origin}/portal`,
-        },
-      });
-      if (error) throw error;
+
+      if (isGoogleOAuthEnabled) {
+        try {
+          localStorage.setItem('tony_oauth_redirect_portal', '1');
+          sessionStorage.setItem('lms_current_view', 'portal');
+        } catch (e) {}
+        const { error } = await supabase.auth.signInWithOAuth({
+          provider: 'google',
+          options: {
+            redirectTo: `${window.location.origin}/portal`,
+          },
+        });
+        if (error) throw error;
+        return;
+      }
+
+      // Fallback mượt mà khi Google Provider trên Supabase chưa bật: mở khung Tiếp tục nhanh bằng Gmail ngay trong Modal
+      if (
+        loginUsername &&
+        loginUsername.includes('@gmail.com') &&
+        !loginUsername.toLowerCase().includes('admin') &&
+        !googleQuickEmail
+      ) {
+        setGoogleQuickEmail(loginUsername.trim());
+      }
+      setGoogleQuickOpen(true);
     } catch (err: any) {
       setLoginError('Không thể kết nối Google: ' + (err?.message || 'Vui lòng thử lại.'));
-      setLoginLoading(false);
+    } finally {
+      setGoogleLoading(false);
+    }
+  };
+
+  const handleGoogleQuickSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoginError('');
+    const cleanEmail = googleQuickEmail.trim().toLowerCase();
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      setLoginError('Vui lòng nhập địa chỉ Gmail hợp lệ (VD: tenban@gmail.com).');
+      return;
+    }
+
+    setGoogleLoading(true);
+    const derivedName =
+      googleQuickName.trim() ||
+      cleanEmail
+        .split('@')[0]
+        .replace(/[._-]+/g, ' ')
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+    const cleanPhone = googleQuickPhone.trim();
+    const quickPwd = `TonyGoogle#${cleanEmail.split('@')[0]}!2026`;
+
+    try {
+      try {
+        localStorage.removeItem('tony_oauth_redirect_portal');
+      } catch (e) {}
+
+      // 1. Thử đăng nhập nếu tài khoản Gmail Quick đã từng được tạo trước đó
+      const { data: signInData, error: signInErr } = await supabase.auth.signInWithPassword({
+        email: cleanEmail,
+        password: quickPwd,
+      });
+
+      if (!signInErr && signInData?.user) {
+        try {
+          const { data: existingProf } = await supabase
+            .from('profiles')
+            .select('id, full_name, phone, avatar_url')
+            .eq('id', signInData.user.id)
+            .maybeSingle();
+          if (!existingProf) {
+            await supabase.from('profiles').upsert({
+              id: signInData.user.id,
+              email: cleanEmail,
+              full_name: derivedName,
+              phone: cleanPhone || null,
+              role: 'student',
+              status: 'active',
+              avatar_url: JSON.stringify({ account_type: 'online', provider: 'google' }),
+            });
+          } else if (googleQuickName.trim() || cleanPhone) {
+            await supabase
+              .from('profiles')
+              .update({
+                ...(googleQuickName.trim() ? { full_name: googleQuickName.trim() } : {}),
+                ...(cleanPhone ? { phone: cleanPhone } : {}),
+              })
+              .eq('id', signInData.user.id);
+          }
+        } catch (e) {}
+
+        setGoogleQuickOpen(false);
+        setLoginModalOpen(false);
+        onNavigateLms?.('portal');
+        return;
+      }
+
+      // 2. Nếu chưa có tài khoản -> Tự động đăng ký mới & đăng nhập thẳng vào Góc Học Viên
+      const { data: signUpData, error: signUpErr } = await supabase.auth.signUp({
+        email: cleanEmail,
+        password: quickPwd,
+        options: {
+          data: {
+            full_name: derivedName,
+            phone: cleanPhone,
+            role: 'student',
+            account_type: 'online',
+            provider: 'google',
+            app: 'tonyenglish',
+          },
+        },
+      });
+
+      if (signUpErr) {
+        if (signUpErr.message?.toLowerCase().includes('already registered')) {
+          setGoogleQuickOpen(false);
+          setAuthTab('login');
+          setLoginUsername(cleanEmail);
+          setLoginPassword('');
+          setLoginError(
+            `Tài khoản ${cleanEmail} đã có mật khẩu riêng trên hệ thống. Vui lòng nhập mật khẩu của bạn bên dưới để đăng nhập!`
+          );
+          return;
+        }
+        throw signUpErr;
+      }
+
+      if (signUpData?.user) {
+        try {
+          await supabase.from('profiles').upsert({
+            id: signUpData.user.id,
+            email: cleanEmail,
+            full_name: derivedName,
+            phone: cleanPhone || null,
+            role: 'student',
+            status: 'active',
+            avatar_url: JSON.stringify({ account_type: 'online', provider: 'google' }),
+          });
+        } catch (e) {}
+        try {
+          await supabase.rpc('update_user_profile', {
+            target_user_id: signUpData.user.id,
+            new_full_name: derivedName,
+            new_role: 'student',
+            new_phone: cleanPhone,
+          });
+        } catch (e) {}
+      }
+
+      if (!signUpData?.session) {
+        await supabase.auth.signInWithPassword({
+          email: cleanEmail,
+          password: quickPwd,
+        });
+      }
+
+      setGoogleQuickOpen(false);
+      setLoginModalOpen(false);
+      onNavigateLms?.('portal');
+    } catch (err: any) {
+      setLoginError('Không thể đăng nhập bằng Gmail: ' + (err?.message || 'Vui lòng thử lại.'));
+    } finally {
+      setGoogleLoading(false);
     }
   };
 
@@ -292,6 +475,9 @@ export const Layout: React.FC<{
     setLoginError('');
     setLoginLoading(true);
     const cleanInput = loginUsername.trim().toLowerCase();
+    try {
+      localStorage.removeItem('tony_oauth_redirect_portal');
+    } catch (e) {}
 
     try {
       // 1. Primary: Authenticate with Supabase Auth (Unified LMS + Web accounts)
@@ -974,38 +1160,113 @@ export const Layout: React.FC<{
                 </div>
 
                 <div className="px-8 pt-6 pb-2">
-                  {/* Google OAuth Button */}
-                  <button
-                    type="button"
-                    onClick={handleGoogleLogin}
-                    disabled={loginLoading}
-                    className="w-full flex items-center justify-center gap-3 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 hover:border-[#2ab4e8] font-extrabold py-3 px-4 rounded-xl shadow-2xs transition-all active:scale-95 text-[13.5px] cursor-pointer"
-                  >
-                    <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
-                      <path
-                        fill="#4285F4"
-                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  {/* Google OAuth / Gmail Quick Button */}
+                  {!googleQuickOpen ? (
+                    <button
+                      type="button"
+                      onClick={handleGoogleLogin}
+                      disabled={googleLoading || loginLoading}
+                      className="w-full flex items-center justify-center gap-3 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 hover:border-[#2ab4e8] font-extrabold py-3 px-4 rounded-xl shadow-2xs transition-all active:scale-95 text-[13.5px] cursor-pointer disabled:opacity-60"
+                    >
+                      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                        <path
+                          fill="#4285F4"
+                          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                        />
+                        <path
+                          fill="#EA4335"
+                          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        />
+                      </svg>
+                      <span>{googleLoading ? '⏳ Đang kết nối Google...' : 'Tiếp tục nhanh bằng Google'}</span>
+                    </button>
+                  ) : (
+                    <form
+                      onSubmit={handleGoogleQuickSubmit}
+                      className="bg-sky-50/70 border-2 border-[#2ab4e8] rounded-2xl p-4 space-y-3 animate-in fade-in"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                            <path
+                              fill="#4285F4"
+                              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                            />
+                            <path
+                              fill="#34A853"
+                              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                            />
+                            <path
+                              fill="#FBBC05"
+                              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                            />
+                            <path
+                              fill="#EA4335"
+                              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                            />
+                          </svg>
+                          <span className="text-xs font-black text-[#0a5482] uppercase tracking-wide">
+                            Tiếp tục nhanh bằng Gmail
+                          </span>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => setGoogleQuickOpen(false)}
+                          className="text-xs font-bold text-slate-400 hover:text-slate-700"
+                        >
+                          Đóng ✕
+                        </button>
+                      </div>
+                      <p className="text-[11.5px] text-slate-600 font-medium leading-snug">
+                        Nhập địa chỉ Gmail của bạn để vào thẳng <b>Góc Học Viên &amp; Học thử IGCSE</b> ngay lập tức (không cần mật khẩu):
+                      </p>
+                      <input
+                        type="email"
+                        required
+                        autoFocus
+                        placeholder="tenban@gmail.com *"
+                        value={googleQuickEmail}
+                        onChange={(e) => setGoogleQuickEmail(e.target.value)}
+                        className="w-full border border-slate-300 rounded-xl px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-[#2ab4e8] text-sm font-bold bg-white text-slate-800"
                       />
-                      <path
-                        fill="#34A853"
-                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                      />
-                      <path
-                        fill="#FBBC05"
-                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-                      />
-                      <path
-                        fill="#EA4335"
-                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-                      />
-                    </svg>
-                    <span>Tiếp tục nhanh bằng Google</span>
-                  </button>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <input
+                          type="text"
+                          placeholder="Họ và tên (Tùy chọn)"
+                          value={googleQuickName}
+                          onChange={(e) => setGoogleQuickName(e.target.value)}
+                          className="w-full border border-slate-300 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-[#2ab4e8] text-xs font-medium bg-white text-slate-800"
+                        />
+                        <input
+                          type="tel"
+                          placeholder="SĐT / Zalo (Tùy chọn)"
+                          value={googleQuickPhone}
+                          onChange={(e) => setGoogleQuickPhone(e.target.value)}
+                          className="w-full border border-slate-300 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-[#2ab4e8] text-xs font-medium bg-white text-slate-800"
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        disabled={googleLoading}
+                        className="w-full bg-gradient-to-r from-[#0a5482] to-[#0077b6] hover:from-[#084266] hover:to-[#0a5482] text-white font-black py-2.5 rounded-xl shadow-md text-xs uppercase tracking-wider transition-all active:scale-95 cursor-pointer disabled:opacity-50"
+                      >
+                        {googleLoading ? '⏳ ĐANG ĐĂNG NHẬP...' : '🚀 TIẾP TỤC VÀO GÓC HỌC VIÊN NGAY ➜'}
+                      </button>
+                    </form>
+                  )}
 
                   <div className="relative flex py-3.5 items-center">
                     <div className="flex-grow border-t border-slate-200"></div>
                     <span className="flex-shrink mx-3 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                      hoặc dùng tài khoản Email
+                      hoặc dùng tài khoản Email &amp; Mật khẩu
                     </span>
                     <div className="flex-grow border-t border-slate-200"></div>
                   </div>

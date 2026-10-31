@@ -384,8 +384,10 @@ export default function App() {
         try {
           if (localStorage.getItem('tony_oauth_redirect_portal') === '1') {
             localStorage.removeItem('tony_oauth_redirect_portal');
-            sessionStorage.setItem('lms_current_view', 'portal');
-            setCurrentView('portal');
+            if (!isAdmin) {
+              sessionStorage.setItem('lms_current_view', 'portal');
+              setCurrentView('portal');
+            }
           }
         } catch (e) {}
         if (isAdmin) {
@@ -404,10 +406,13 @@ export default function App() {
       if (event === 'SIGNED_IN') { 
         startGlobalTimer(); 
         try {
+          const isAdmin = (session?.user?.email?.toLowerCase() || '').includes('admin');
           if (localStorage.getItem('tony_oauth_redirect_portal') === '1') {
             localStorage.removeItem('tony_oauth_redirect_portal');
-            sessionStorage.setItem('lms_current_view', 'portal');
-            setCurrentView('portal');
+            if (!isAdmin) {
+              sessionStorage.setItem('lms_current_view', 'portal');
+              setCurrentView('portal');
+            }
           }
         } catch (e) {}
       }
