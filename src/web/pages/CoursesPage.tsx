@@ -997,6 +997,66 @@ export const CoursesPage: React.FC = () => {
                 </div>
               )}
 
+              {/* Quick Above-the-Fold Conversion Bar (Direct Phone Call & Zalo right at top of article) */}
+              <div className="rounded-2xl bg-gradient-to-r from-sky-50 via-blue-50/70 to-emerald-50/60 border border-sky-200/90 p-4 sm:p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-3.5 shadow-2xs">
+                <div className="space-y-1">
+                  <div className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wide text-[#0a5482]">
+                    <span>🎁</span>
+                    <span>
+                      {lang === 'vi'
+                        ? 'Tư vấn lộ trình & Đăng ký Test / Học thử miễn phí (R2B Royal City & Online)'
+                        : 'Free Placement Test & Trial Lesson Consultation (R2B Royal City & Online)'}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium">
+                    {lang === 'vi'
+                      ? 'Liên hệ trực tiếp thầy Tony (Cựu DHS Anh Quốc) qua Điện thoại hoặc Zalo để xếp lịch kiểm tra đầu vào cho con ngay hôm nay:'
+                      : 'Contact Mr. Tony directly via Phone or Zalo to schedule a placement test and trial lesson:'}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+                  <a
+                    href={`tel:${CONTACT_PHONE}`}
+                    onClick={() => trackCourseConversion('Phone', courseTitle)}
+                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-4 py-3 rounded-xl shadow-sm transition whitespace-nowrap"
+                  >
+                    <span>📞</span>
+                    <span>
+                      {lang === 'vi'
+                        ? `Gọi: ${CONTACT_PHONE_DISPLAY}`
+                        : `Call: ${CONTACT_PHONE_DISPLAY}`}
+                    </span>
+                  </a>
+
+                  <a
+                    href={CONTACT_ZALO_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => trackCourseConversion('Zalo', courseTitle)}
+                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs sm:text-sm px-4 py-3 rounded-xl shadow-sm transition whitespace-nowrap"
+                  >
+                    <span>💬</span>
+                    <span>
+                      {lang === 'vi'
+                        ? `Nhắn Zalo: ${CONTACT_PHONE_DISPLAY}`
+                        : `Zalo: ${CONTACT_PHONE_DISPLAY}`}
+                    </span>
+                  </a>
+
+                  {currentCourse && (
+                    <button
+                      type="button"
+                      onClick={() => setShowSyllabusModal(true)}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white hover:bg-sky-50 text-[#0a5482] border border-sky-200 font-extrabold text-xs sm:text-sm px-3.5 py-3 rounded-xl transition cursor-pointer whitespace-nowrap"
+                    >
+                      <span>📋</span>
+                      <span>{lang === 'vi' ? 'Xem đề cương' : 'Syllabus'}</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+
               {/* Course Description HTML */}
               {courseDescHtml && (
                 <div
@@ -1273,6 +1333,28 @@ export const CoursesPage: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* MOBILE STICKY BOTTOM CALL & ZALO BAR (For 1-Tap Conversion while reading on mobile) */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-3 py-2.5 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] flex items-center gap-2.5">
+        <a
+          href={`tel:${CONTACT_PHONE}`}
+          onClick={() => trackCourseConversion('Phone', courseTitle)}
+          className="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-xs py-3 rounded-xl shadow-xs"
+        >
+          <span>📞</span>
+          <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
+        </a>
+        <a
+          href={CONTACT_ZALO_URL}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => trackCourseConversion('Zalo', courseTitle)}
+          className="flex-1 inline-flex items-center justify-center gap-1.5 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-xs py-3 rounded-xl shadow-xs"
+        >
+          <span>💬</span>
+          <span>{lang === 'vi' ? 'Chat Zalo Học Thử' : 'Zalo Consultation'}</span>
+        </a>
+      </div>
     </div>
   );
 };
