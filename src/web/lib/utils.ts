@@ -455,6 +455,14 @@ export function fixLegacyHtmlContent(html: string | null | undefined): string {
         return `<h2 class="legacy-section-heading">${inner.trim()}</h2>`;
       }
     )
+    // Catch any standalone <em>(Ảnh: ...)</em> even when not wrapped in <p> tags (e.g. inside <span> with <br>)
+    .replace(
+      /(?:<span\b[^>]*>\s*)*<(?:em|i)\b[^>]*>(\s*\(?\s*Ảnh\s*:[\s\S]*?)<\/(?:em|i)>\s*(?:<\/span>\s*)*/gi,
+      (_m, captionText) => {
+        const cleanCaption = captionText.replace(/<[^>]+>/g, '').trim();
+        return `<span class="legacy-img-caption"><em>${cleanCaption}</em></span>`;
+      }
+    )
     // Remove empty <p>, <div>, and heading tags
     .replace(/<(?:p|div|h[1-6])\b[^>]*>(?:\s|<(?:em|strong|span|b|i)\b[^>]*>\s*<\/(?:em|strong|span|b|i)>|<br\s*\/?>)*<\/(?:p|div|h[1-6])>/gi, '');
 }
