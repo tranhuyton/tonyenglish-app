@@ -79,7 +79,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       return null;
     }
   });
-  const [options, setOptions] = useState<Record<string, string>>({});
+  const [options, setOptions] = useState<Record<string, string>>({
+    company_address: 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội',
+    company_tel: '+84 93 505 8688',
+    company_phone: '0935 058 688',
+    company_email: 'tranhuyton@gmail.com',
+  });
   const [footerCourses, setFooterCourses] = useState<any[]>([]);
   const [footerNewsCates, setFooterNewsCates] = useState<any[]>([]);
   const [footerAboutCates, setFooterAboutCates] = useState<any[]>([]);
