@@ -397,9 +397,9 @@ export const Layout: React.FC<{
 
   const addressText = options['company_address']
     ? options['company_address'].replace(/<[^>]*>?/gm, '').trim()
-    : 'Số 10, ngõ 121 Thái Hà, Đống Đa, Hà Nội';
-  const phoneText = options['company_tel'] || options['company_phone'] || '0982 042 882';
-  const emailText = options['company_email'] || 'contact@tonyenglish.vn';
+    : 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội';
+  const phoneText = options['company_tel'] || options['company_phone'] || '0935 058 688';
+  const emailText = options['company_email'] || 'tranhuyton@gmail.com';
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">

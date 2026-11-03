@@ -4897,7 +4897,7 @@ export default function LectureViewer({
                                    onClick={() => {
                                      if (isLocked) {
                                        alert(
-                                         `🔒 Bài giảng "${lec.title}" thuộc chương trình chính thức của khóa ${course?.title || 'IGCSE'}.\n\n💡 Bạn đang ở chế độ Học Thử miễn phí. Vui lòng liên hệ Zalo/Hotline TonyEnglish (0982 042 882) hoặc bấm "Mở khóa" ở Góc Học Viên để mở khóa 100% bài giảng và kho đề nhé!`
+                                         `🔒 Bài giảng "${lec.title}" thuộc chương trình chính thức của khóa ${course?.title || 'IGCSE'}.\n\n💡 Bạn đang ở chế độ Học Thử miễn phí. Vui lòng liên hệ Zalo/Hotline TonyEnglish (0935 058 688) hoặc bấm "Mở khóa" ở Góc Học Viên để mở khóa 100% bài giảng và kho đề nhé!`
                                        );
                                        return;
                                      }

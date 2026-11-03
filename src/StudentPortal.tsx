@@ -1880,12 +1880,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       <div className="bg-[#0f172a] text-slate-300 border-b border-slate-800 text-[12px] sm:text-[13px] shrink-0">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-2">
           <div className="hidden md:flex items-center gap-4 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 text-slate-200 font-semibold">
-              <span className="text-[#2ab4e8]">📞</span> 0982 042 882
-            </span>
-            <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
-              <span className="text-[#2ab4e8]">✉️</span> contact@tonyenglish.vn
-            </span>
+            <a href="tel:0935058688" className="inline-flex items-center gap-1.5 text-slate-200 hover:text-[#2ab4e8] font-semibold transition">
+              <span className="text-[#2ab4e8]">📞</span> 0935 058 688
+            </a>
+            <a href="mailto:tranhuyton@gmail.com" className="hidden lg:inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition">
+              <span className="text-[#2ab4e8]">✉️</span> tranhuyton@gmail.com
+            </a>
             <span className="inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-0.5 rounded-full text-xs font-semibold border border-slate-700">
               💡 Click đúp vào từ tiếng Anh bất kỳ để tra từ điển
             </span>
@@ -4479,15 +4479,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
               <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs">
                 <a
-                  href="https://zalo.me/0982042882"
+                  href="https://zalo.me/0935058688"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto flex-1 bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 font-extrabold py-2.5 px-4 rounded-xl text-center transition-colors"
                 >
-                  💬 Chat Zalo tư vấn: 0982 042 882
+                  💬 Chat Zalo tư vấn: 0935 058 688
                 </a>
                 <a
-                  href="tel:0982042882"
+                  href="tel:0935058688"
                   className="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 px-4 rounded-xl text-center transition-colors"
                 >
                   📞 Gọi Hotline
