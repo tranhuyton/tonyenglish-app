@@ -559,8 +559,8 @@ export function parseArticleInteractiveQuiz(article: any): ReadingQuizQuestion[]
 
 export function updatePageSeo(title: string, description?: string) {
   if (typeof document === 'undefined') return;
-  document.title = title ? `${title} | TonyEnglish` : 'TonyEnglish - Học tiếng Anh giao tiếp & TOEIC trực tuyến';
-  const descText = description ? truncateWords(description, 160) : 'Trung tâm tiếng Anh TonyEnglish - Đào tạo tiếng Anh giao tiếp, luyện thi TOEIC, IELTS và thư viện bài đọc, video luyện nghe trực tuyến.';
+  document.title = title ? `${title} | TonyEnglish` : 'TonyEnglish - Đào tạo Tiếng Anh Giao Tiếp, IELTS & IGCSE';
+  const descText = description ? truncateWords(description, 160) : 'TonyEnglish - Hệ sinh thái đào tạo Tiếng Anh giao tiếp, luyện thi IELTS, IGCSE và thư viện bài đọc, video luyện nghe trực tuyến.';
   let metaDesc = document.querySelector('meta[name="description"]');
   if (!metaDesc) {
     metaDesc = document.createElement('meta');

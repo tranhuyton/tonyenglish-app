@@ -761,7 +761,7 @@ export const Layout: React.FC<{
                 </div>
               </Link>
               <p className="text-[15px] text-slate-300 leading-relaxed">
-                Hệ sinh thái đào tạo Tiếng Anh Giao Tiếp, TOEIC, IELTS &amp; Luyện thi thông minh tích hợp AI.
+                Hệ sinh thái đào tạo Tiếng Anh Giao Tiếp, IGCSE, IELTS &amp; Luyện thi thông minh tích hợp AI.
               </p>
               <div className="space-y-2 text-sm text-slate-300 pt-1">
                 <p className="flex items-start gap-2">
