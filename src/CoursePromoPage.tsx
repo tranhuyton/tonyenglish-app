@@ -195,10 +195,6 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
     if (courseName) {
       setSelectedCourseTitle(courseName);
     }
-    trackMetaPixelEvent('Lead', {
-      content_name: course,
-      contact_method: 'Zalo',
-    });
     trackMetaPixelEvent('Contact', {
       content_name: course,
       contact_method: 'Zalo',
@@ -213,10 +209,6 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
     if (courseName) {
       setSelectedCourseTitle(courseName);
     }
-    trackMetaPixelEvent('Lead', {
-      content_name: course,
-      contact_method: 'Phone',
-    });
     trackMetaPixelEvent('Contact', {
       content_name: course,
       contact_method: 'Phone',

@@ -23,15 +23,11 @@ const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
 const CONTACT_PHONE = '0935058688';
 const CONTACT_PHONE_DISPLAY = '0935 058 688';
 
+// Button tap fires Contact only (prevents premature Lead inflation from cancelled calls / blocked WebView popups)
 const trackCourseConversion = (method: 'Zalo' | 'Phone', courseName: string) => {
   try {
     const w = window as any;
     if (typeof w.fbq === 'function') {
-      w.fbq('track', 'Lead', {
-        site_domain: 'tonyenglish.vn',
-        content_name: courseName,
-        contact_method: method,
-      });
       w.fbq('track', 'Contact', {
         site_domain: 'tonyenglish.vn',
         content_name: courseName,
@@ -39,6 +35,32 @@ const trackCourseConversion = (method: 'Zalo' | 'Phone', courseName: string) => 
       });
     }
   } catch (e) {}
+};
+
+// Verified Lead fires ONLY when parent submits a real 10-digit Vietnamese phone number
+const trackVerifiedLead = (courseName: string) => {
+  try {
+    const w = window as any;
+    if (typeof w.fbq === 'function') {
+      w.fbq('track', 'Lead', {
+        site_domain: 'tonyenglish.vn',
+        content_name: courseName,
+        contact_method: 'CallbackForm',
+      });
+      w.fbq('track', 'CompleteRegistration', {
+        site_domain: 'tonyenglish.vn',
+        content_name: courseName,
+      });
+    }
+  } catch (e) {}
+};
+
+const normalizeVnPhone = (raw: string): string | null => {
+  const digits = (raw || '').replace(/[\s\.\-\(\)]/g, '').replace(/^\+84/, '0').replace(/^84(?=\d{9}$)/, '0');
+  if (/^0[35789]\d{8}$/.test(digits)) {
+    return digits;
+  }
+  return null;
 };
 
 // Helper to strip [color:...] tags and optional leading numbers (e.g. "1. ")
@@ -465,6 +487,115 @@ export const CoursesPage: React.FC = () => {
       ? currentCourse.cc_name_vi || currentCourse.cc_name
       : currentCourse.cc_name
     : t('Study at TonyEnglish');
+
+  // Quick Trial & Consultation Callback Form states (saves directly to te_contact & fires verified Pixel Lead)
+  const [leadName, setLeadName] = useState('');
+  const [leadPhone, setLeadPhone] = useState('');
+  const [leadNote, setLeadNote] = useState('');
+  const [leadSubmitting, setLeadSubmitting] = useState(false);
+  const [leadSubmittedPhone, setLeadSubmittedPhone] = useState('');
+  const [leadError, setLeadError] = useState('');
+  const [zaloFallbackHint, setZaloFallbackHint] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+
+  const handleCopyPhone = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_PHONE);
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 3000);
+    } catch (e) {}
+  };
+
+  const scrollToLeadBox = () => {
+    const el = document.getElementById('khung-dang-ky-tu-van');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    setTimeout(() => {
+      const input = document.getElementById('lead-phone-input') as HTMLInputElement | null;
+      if (input) input.focus();
+    }, 350);
+  };
+
+  const handleZaloClick = (e: React.MouseEvent<HTMLAnchorElement>, cTitle: string) => {
+    trackCourseConversion('Zalo', cTitle);
+    const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
+    const isMobileOrInApp = /FBAN|FBIOS|Instagram|TikTok|Line|iPhone|iPad|iPod|Android/i.test(ua);
+    if (isMobileOrInApp) {
+      e.preventDefault();
+      setZaloFallbackHint(true);
+      // Direct top-level navigation avoids Facebook WebView blocking target="_blank" Universal Links
+      window.location.assign(CONTACT_ZALO_URL);
+    }
+  };
+
+  const handleLeadSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLeadError('');
+    const validPhone = normalizeVnPhone(leadPhone);
+    if (!validPhone) {
+      setLeadError(
+        lang === 'vi'
+          ? 'Vui lòng nhập đúng Số điện thoại Việt Nam (10 chữ số, ví dụ: 0912345678).'
+          : 'Please enter a valid 10-digit Vietnam phone number.'
+      );
+      return;
+    }
+
+    setLeadSubmitting(true);
+    try {
+      const { data: maxRow } = await supabase
+        .from('te_contact')
+        .select('contact_id')
+        .order('contact_id', { ascending: false })
+        .limit(1);
+      const nextId = maxRow && maxRow.length > 0 ? Number(maxRow[0].contact_id) + 1 : Math.floor(Date.now() / 1000);
+      const displayName = leadName.trim() || 'Phụ huynh / Học viên';
+      const msgLines = [
+        `[ĐĂNG KÝ HỌC THỬ & TƯ VẤN]`,
+        `Khóa quan tâm: ${courseTitle}`,
+        `Họ tên: ${displayName}`,
+        `SĐT / Zalo: ${validPhone}`,
+        leadNote.trim() ? `Ghi chú: ${leadNote.trim()}` : '',
+        typeof window !== 'undefined' ? `Link: ${window.location.href}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n');
+
+      const { error } = await supabase.from('te_contact').insert({
+        contact_id: nextId,
+        contact_name: `[ADS] ${displayName} (${courseTitle})`,
+        contact_phone: validPhone,
+        contact_email: '',
+        contact_title: `Đăng ký học thử: ${courseTitle}`,
+        contact_message: msgLines,
+        contact_created_at: Math.floor(Date.now() / 1000),
+        contact_status: 1,
+        deleted: 0,
+      });
+
+      if (error) {
+        setLeadError(
+          lang === 'vi'
+            ? 'Kết nối tạm gián đoạn, vui lòng gọi trực tiếp 0935 058 688 giúp thầy nhé!'
+            : error.message
+        );
+      } else {
+        trackVerifiedLead(courseTitle);
+        setLeadSubmittedPhone(validPhone);
+        setLeadPhone('');
+        setLeadNote('');
+      }
+    } catch (err) {
+      setLeadError(
+        lang === 'vi'
+          ? 'Kết nối tạm gián đoạn, vui lòng gọi trực tiếp 0935 058 688 giúp thầy nhé!'
+          : 'Submission error, please call 0935 058 688.'
+      );
+    } finally {
+      setLeadSubmitting(false);
+    }
+  };
 
   const rawCourseDescHtml = currentCourse
     ? lang === 'vi'
@@ -997,64 +1128,154 @@ export const CoursesPage: React.FC = () => {
                 </div>
               )}
 
-              {/* Quick Above-the-Fold Conversion Bar (Direct Phone Call & Zalo right at top of article) */}
-              <div className="rounded-2xl bg-gradient-to-r from-sky-50 via-blue-50/70 to-emerald-50/60 border border-sky-200/90 p-4 sm:p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-3.5 shadow-2xs">
-                <div className="space-y-1">
-                  <div className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wide text-[#0a5482]">
-                    <span>🎁</span>
-                    <span>
+              {/* Quick Above-the-Fold Conversion & 10s Callback Registration Box */}
+              <div
+                id="khung-dang-ky-tu-van"
+                className="rounded-2xl bg-gradient-to-br from-sky-50 via-blue-50/80 to-emerald-50/60 border border-sky-200/90 p-4 sm:p-5 space-y-4 shadow-xs"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+                  <div className="space-y-1">
+                    <div className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-black uppercase tracking-wide text-[#0a5482]">
+                      <span>🎁</span>
+                      <span>
+                        {lang === 'vi'
+                          ? 'Đăng ký Test năng lực & Nhận 02 Buổi Học Thử Miễn Phí (R2B Royal City & Online)'
+                          : 'Free Placement Test & 2 Trial Lessons (R2B Royal City & Online)'}
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-600 font-medium">
                       {lang === 'vi'
-                        ? 'Tư vấn lộ trình & Đăng ký Test / Học thử miễn phí (R2B Royal City & Online)'
-                        : 'Free Placement Test & Trial Lesson Consultation (R2B Royal City & Online)'}
-                    </span>
+                        ? 'Để lại Số điện thoại Zalo bên dưới để thầy Tony (Cựu DHS Anh Quốc) trực tiếp liên hệ tư vấn lộ trình, hoặc bấm Gọi / Zalo ngay:'
+                        : 'Leave your phone/Zalo number below for direct consultation with Mr. Tony, or call/message right away:'}
+                    </p>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium">
-                    {lang === 'vi'
-                      ? 'Liên hệ trực tiếp thầy Tony (Cựu DHS Anh Quốc) qua Điện thoại hoặc Zalo để xếp lịch kiểm tra đầu vào cho con ngay hôm nay:'
-                      : 'Contact Mr. Tony directly via Phone or Zalo to schedule a placement test and trial lesson:'}
-                  </p>
+
+                  <div className="flex flex-wrap items-center gap-2 shrink-0">
+                    <a
+                      href={`tel:${CONTACT_PHONE}`}
+                      onClick={() => trackCourseConversion('Phone', courseTitle)}
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                    >
+                      <span>📞</span>
+                      <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
+                    </a>
+
+                    <a
+                      href={CONTACT_ZALO_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => handleZaloClick(e, courseTitle)}
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                    >
+                      <span>💬</span>
+                      <span>{lang === 'vi' ? `Zalo: ${CONTACT_PHONE_DISPLAY}` : `Zalo: ${CONTACT_PHONE_DISPLAY}`}</span>
+                    </a>
+
+                    {currentCourse && (
+                      <button
+                        type="button"
+                        onClick={() => setShowSyllabusModal(true)}
+                        className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white hover:bg-sky-50 text-[#0a5482] border border-sky-200 font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl transition cursor-pointer whitespace-nowrap"
+                      >
+                        <span>📋</span>
+                        <span>{lang === 'vi' ? 'Xem đề cương' : 'Syllabus'}</span>
+                      </button>
+                    )}
+                  </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-2.5 shrink-0">
-                  <a
-                    href={`tel:${CONTACT_PHONE}`}
-                    onClick={() => trackCourseConversion('Phone', courseTitle)}
-                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-4 py-3 rounded-xl shadow-sm transition whitespace-nowrap"
-                  >
-                    <span>📞</span>
+                {/* Fallback helper when Facebook/Instagram In-App Browser blocks jumping directly to Zalo app */}
+                {zaloFallbackHint && (
+                  <div className="rounded-xl bg-amber-50 border border-amber-200 px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs text-amber-950 font-semibold">
                     <span>
-                      {lang === 'vi'
-                        ? `Gọi: ${CONTACT_PHONE_DISPLAY}`
-                        : `Call: ${CONTACT_PHONE_DISPLAY}`}
+                      💡 Nếu trình duyệt Facebook chặn mở Zalo, anh/chị hãy <strong>điền SĐT vào ô bên dưới</strong> để thầy Tony kết bạn Zalo ngay, hoặc copy số Zalo của thầy:
                     </span>
-                  </a>
-
-                  <a
-                    href={CONTACT_ZALO_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => trackCourseConversion('Zalo', courseTitle)}
-                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs sm:text-sm px-4 py-3 rounded-xl shadow-sm transition whitespace-nowrap"
-                  >
-                    <span>💬</span>
-                    <span>
-                      {lang === 'vi'
-                        ? `Nhắn Zalo: ${CONTACT_PHONE_DISPLAY}`
-                        : `Zalo: ${CONTACT_PHONE_DISPLAY}`}
-                    </span>
-                  </a>
-
-                  {currentCourse && (
                     <button
                       type="button"
-                      onClick={() => setShowSyllabusModal(true)}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white hover:bg-sky-50 text-[#0a5482] border border-sky-200 font-extrabold text-xs sm:text-sm px-3.5 py-3 rounded-xl transition cursor-pointer whitespace-nowrap"
+                      onClick={handleCopyPhone}
+                      className="px-3 py-1.5 rounded-lg bg-white border border-amber-300 text-amber-900 font-extrabold hover:bg-amber-100 transition cursor-pointer shrink-0"
                     >
-                      <span>📋</span>
-                      <span>{lang === 'vi' ? 'Xem đề cương' : 'Syllabus'}</span>
+                      {copiedPhone ? '✅ Đã copy 0935058688' : '📋 Copy SĐT: 0935 058 688'}
                     </button>
-                  )}
-                </div>
+                  </div>
+                )}
+
+                {/* 10-Second Direct Callback Form */}
+                {leadSubmittedPhone ? (
+                  <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-3.5 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="text-xs sm:text-sm text-emerald-950 font-semibold leading-relaxed">
+                      ✅ <strong>Đăng ký thành công!</strong> Thầy Tony đã nhận được số{' '}
+                      <strong className="text-emerald-700">{leadSubmittedPhone}</strong> và sẽ liên hệ tư vấn lộ trình &amp; xếp lịch 02 buổi học thử miễn phí sớm nhất (Hotline/Zalo thầy: <strong>{CONTACT_PHONE_DISPLAY}</strong>).
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setLeadSubmittedPhone('')}
+                      className="text-xs font-bold text-emerald-800 bg-white border border-emerald-200 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition cursor-pointer shrink-0 self-start sm:self-center"
+                    >
+                      {lang === 'vi' ? 'Gửi thêm số khác' : 'Submit another'}
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleLeadSubmit} className="bg-white/95 rounded-xl border border-sky-200/80 p-3 sm:p-3.5 shadow-2xs space-y-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-12 gap-2.5">
+                      <input
+                        type="text"
+                        value={leadName}
+                        onChange={(e) => setLeadName(e.target.value)}
+                        placeholder={lang === 'vi' ? 'Tên Phụ huynh / Học sinh' : 'Parent / Student Name'}
+                        className="sm:col-span-3 w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-sky-100"
+                      />
+                      <input
+                        id="lead-phone-input"
+                        type="tel"
+                        inputMode="numeric"
+                        required
+                        value={leadPhone}
+                        onChange={(e) => setLeadPhone(e.target.value)}
+                        placeholder={lang === 'vi' ? 'Số điện thoại Zalo (Bắt buộc) *' : 'Phone / Zalo number *'}
+                        className="sm:col-span-4 w-full px-3.5 py-2.5 rounded-xl border border-sky-300 bg-sky-50/30 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-500 placeholder:font-semibold focus:outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-sky-200"
+                      />
+                      <input
+                        type="text"
+                        value={leadNote}
+                        onChange={(e) => setLeadNote(e.target.value)}
+                        placeholder={
+                          lang === 'vi'
+                            ? 'Lớp / Môn / Band mục tiêu (VD: Lớp 9 IGCSE, IELTS 7.0...)'
+                            : 'Grade / Subject / Target Score'
+                        }
+                        className="sm:col-span-5 w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-sky-100"
+                      />
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <span className="text-[11.5px] text-slate-500 font-medium">
+                        {leadError ? (
+                          <span className="text-rose-600 font-bold">⚠️ {leadError}</span>
+                        ) : lang === 'vi' ? (
+                          '🔒 Cam kết bảo mật thông tin • Thầy Tony trực tiếp tư vấn chuyên môn (không qua sale làm phiền).'
+                        ) : (
+                          '🔒 Direct consultation with Mr. Tony — strictly confidential.'
+                        )}
+                      </span>
+                      <button
+                        type="submit"
+                        disabled={leadSubmitting}
+                        className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#0a5482] to-[#0e6ba8] hover:from-[#084266] hover:to-[#0a5482] disabled:opacity-60 text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-sm transition cursor-pointer whitespace-nowrap"
+                      >
+                        <span>🎁</span>
+                        <span>
+                          {leadSubmitting
+                            ? lang === 'vi'
+                              ? 'Đang gửi...'
+                              : 'Submitting...'
+                            : lang === 'vi'
+                            ? 'Đăng ký Nhận Tư vấn & Học thử'
+                            : 'Register for Free Trial'}
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                )}
               </div>
 
               {/* Course Description HTML */}
@@ -1117,8 +1338,19 @@ export const CoursesPage: React.FC = () => {
                 </div>
               )}
 
-              {/* Action Buttons for Course (Direct Phone Call & Zalo Consultation) */}
+              {/* Action Buttons for Course (Direct Callback Form, Phone Call & Zalo Consultation) */}
               <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={scrollToLeadBox}
+                  className="bg-gradient-to-r from-[#0a5482] to-[#0e6ba8] hover:from-[#084266] hover:to-[#0a5482] text-white font-extrabold text-sm px-4 py-3 rounded-xl shadow-md transition flex items-center gap-2 cursor-pointer"
+                >
+                  <span>🎁</span>
+                  <span>
+                    {lang === 'vi' ? 'Điền SĐT Nhận 02 Buổi Học Thử' : 'Register for 2 Free Trial Lessons'}
+                  </span>
+                </button>
+
                 <a
                   href={`tel:${CONTACT_PHONE}`}
                   onClick={() => trackCourseConversion('Phone', courseTitle)}
@@ -1136,7 +1368,7 @@ export const CoursesPage: React.FC = () => {
                   href={CONTACT_ZALO_URL}
                   target="_blank"
                   rel="noreferrer"
-                  onClick={() => trackCourseConversion('Zalo', courseTitle)}
+                  onClick={(e) => handleZaloClick(e, courseTitle)}
                   className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-4 py-3 rounded-xl shadow-md transition flex items-center gap-2"
                 >
                   <span>💬</span>
@@ -1304,6 +1536,17 @@ export const CoursesPage: React.FC = () => {
             {renderSyllabusModalContent()}
 
             <div className="mt-6 pt-4 border-t border-slate-200 flex flex-wrap items-center justify-end gap-3">
+              <button
+                type="button"
+                onClick={() => {
+                  setShowSyllabusModal(false);
+                  setTimeout(() => scrollToLeadBox(), 100);
+                }}
+                className="bg-gradient-to-r from-[#0a5482] to-[#0e6ba8] hover:from-[#084266] hover:to-[#0a5482] text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2 cursor-pointer"
+              >
+                <span>🎁</span>
+                <span>{lang === 'vi' ? 'Điền SĐT Học thử' : 'Free Trial Form'}</span>
+              </button>
               <a
                 href={`tel:${CONTACT_PHONE}`}
                 onClick={() => trackCourseConversion('Phone', courseTitle)}
@@ -1316,7 +1559,7 @@ export const CoursesPage: React.FC = () => {
                 href={CONTACT_ZALO_URL}
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => trackCourseConversion('Zalo', courseTitle)}
+                onClick={(e) => handleZaloClick(e, courseTitle)}
                 className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
               >
                 <span>💬</span>
@@ -1334,25 +1577,33 @@ export const CoursesPage: React.FC = () => {
         </div>
       )}
 
-      {/* MOBILE STICKY BOTTOM CALL & ZALO BAR (For 1-Tap Conversion while reading on mobile) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-3 py-2.5 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] flex items-center gap-2.5">
+      {/* MOBILE STICKY BOTTOM BAR (1-Tap Callback Form, Phone Call & Zalo) */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-2.5 py-2 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] grid grid-cols-3 gap-2">
+        <button
+          type="button"
+          onClick={scrollToLeadBox}
+          className="inline-flex items-center justify-center gap-1 bg-[#0a5482] active:bg-[#084266] text-white font-extrabold text-[11.5px] py-2.5 px-2 rounded-xl shadow-xs cursor-pointer"
+        >
+          <span>🎁</span>
+          <span>{lang === 'vi' ? 'ĐK Học thử' : 'Free Trial'}</span>
+        </button>
         <a
           href={`tel:${CONTACT_PHONE}`}
           onClick={() => trackCourseConversion('Phone', courseTitle)}
-          className="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-xs py-3 rounded-xl shadow-xs"
+          className="inline-flex items-center justify-center gap-1 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-[11.5px] py-2.5 px-2 rounded-xl shadow-xs"
         >
           <span>📞</span>
-          <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
+          <span>{lang === 'vi' ? 'Gọi Thầy' : 'Call Now'}</span>
         </a>
         <a
           href={CONTACT_ZALO_URL}
           target="_blank"
           rel="noreferrer"
-          onClick={() => trackCourseConversion('Zalo', courseTitle)}
-          className="flex-1 inline-flex items-center justify-center gap-1.5 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-xs py-3 rounded-xl shadow-xs"
+          onClick={(e) => handleZaloClick(e, courseTitle)}
+          className="inline-flex items-center justify-center gap-1 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-[11.5px] py-2.5 px-2 rounded-xl shadow-xs"
         >
           <span>💬</span>
-          <span>{lang === 'vi' ? 'Chat Zalo Học Thử' : 'Zalo Consultation'}</span>
+          <span>{lang === 'vi' ? 'Chat Zalo' : 'Zalo Chat'}</span>
         </a>
       </div>
     </div>

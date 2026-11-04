@@ -19,7 +19,7 @@ const CMS_TABLES: TableConfig[] = [
   { key: 'te_course_category', label: 'Khóa học (tonyenglish.vn)', icon: '🎓', group: 'Khóa học & Tuyển sinh', pk: 'cc_id', titleCol: 'cc_name_vi', subCol: 'cc_code' },
   { key: 'te_user_group', label: 'Lịch khai giảng', icon: '📅', group: 'Khóa học & Tuyển sinh', pk: 'ug_id', titleCol: 'ug_name_vi', subCol: 'ug_Month' },
   { key: 'te_lecture', label: 'Bài giảng Web cũ', icon: '📖', group: 'Khóa học & Tuyển sinh', pk: 'lecture_id', titleCol: 'lecture_name', subCol: 'lecture_name_url' },
-  { key: 'te_contact', label: 'Khách đăng ký tư vấn', icon: '📩', group: 'Học viên & Cấu hình', pk: 'contact_id', titleCol: 'contact_name', subCol: 'contact_email' },
+  { key: 'te_contact', label: 'Khách đăng ký tư vấn', icon: '📩', group: 'Học viên & Cấu hình', pk: 'contact_id', titleCol: 'contact_name', subCol: 'contact_phone' },
   { key: 'te_user', label: 'Tài khoản Học viên Web', icon: '👨‍🎓', group: 'Học viên & Cấu hình', pk: 'user_id', titleCol: 'user_name', subCol: 'user_email' },
   { key: 'te_ads', label: 'Banner Slider Trang chủ', icon: '🖼️', group: 'Học viên & Cấu hình', pk: 'ad_id', titleCol: 'title', subCol: 'image' },
   { key: 'te_testimonial', label: 'Cảm nhận học viên', icon: '💬', group: 'Học viên & Cấu hình', pk: 'testimonial_id', titleCol: 'testimonial_title_vi', subCol: 'testimonial_position' },
