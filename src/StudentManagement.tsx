@@ -550,10 +550,11 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     const phone = formData.get('phone') as string;
     
     try {
+      const targetAccountType = mode === 'online' ? 'online' : 'offline';
       const { data, error } = await authSupabase.auth.signUp({
         email: email,
         password: password,
-        options: { data: { full_name: fullName, role: newUserRole, app: 'tonyenglish' } }
+        options: { data: { full_name: fullName, role: newUserRole, account_type: newUserRole === 'student' ? targetAccountType : undefined, app: 'tonyenglish' } }
       });
 
       if (error) throw error;
@@ -566,10 +567,24 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
             new_role: newUserRole,
             new_phone: phone 
         });
-        if (mode === 'online' && newUserRole === 'student') {
-          await supabase.from('profiles').update({
-            avatar_url: JSON.stringify({ account_type: 'online', provider: 'admin' })
-          }).eq('id', data.user.id);
+        if (newUserRole === 'student') {
+          const avatarJson = JSON.stringify({ account_type: targetAccountType, provider: 'admin' });
+          const { data: updatedProf } = await supabase
+            .from('profiles')
+            .update({ avatar_url: avatarJson })
+            .eq('id', data.user.id)
+            .select('id');
+
+          if ((!updatedProf || updatedProf.length === 0) && data.session) {
+            await authSupabase.auth.setSession({
+              access_token: data.session.access_token,
+              refresh_token: data.session.refresh_token
+            });
+            await authSupabase
+              .from('profiles')
+              .update({ avatar_url: avatarJson })
+              .eq('id', data.user.id);
+          }
         }
       }
 
@@ -1913,6 +1928,16 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
                             {mode === 'online' ? '🔓 Mở khóa IGCSE & Tiến độ' : 'Cấu hình & Tiến độ'}
                           </button>
                           
+                          {student.role !== 'admin' && (
+                            <button
+                              onClick={() => handleToggleAccountType(student, mode === 'online' ? 'offline' : 'online')}
+                              className="text-slate-600 hover:text-[#0a5482] hover:bg-slate-100 px-2.5 py-2 rounded-lg transition-colors border border-slate-200 text-[11px] font-bold whitespace-nowrap"
+                              title={mode === 'online' ? 'Chuyển về Quản lý học viên (Offline)' : 'Chuyển sang Học viên Online (IGCSE)'}
+                            >
+                              {mode === 'online' ? '👨‍🎓 Về Offline' : '🌐 Sang Online'}
+                            </button>
+                          )}
+
                           <button onClick={() => setEditingUser(student)} className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-colors border border-transparent hover:border-blue-200" title="Sửa thông tin">
                             ✏️
                           </button>

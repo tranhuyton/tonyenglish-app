@@ -153,6 +153,32 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   'd11f8920-fe86-4cd4-ad9a-e8b669bc687b': '/audio/lectures/science/p6/manifest.json', // P6: Space physics
 
   // =========================================================================
+  // CAMBRIDGE IGCSE CHEMISTRY (0620) BILINGUAL AUDIO LECTURES (TOPICS 1 - 12)
+  // =========================================================================
+  'b1dca40f-5860-5c18-ad99-6c90ef8c2e50': '/audio/lectures/science/c1/manifest.json', // Topic 1: States of matter
+  '98be89ab-7b9c-5ab0-a4f0-895e6d217990': '/audio/lectures/science/c2/manifest.json', // Topic 2: Atoms, elements and compounds
+  '9990ebf7-e6f6-540a-ab78-ae48eeea42ba': '/audio/lectures/science/c3/manifest.json', // Topic 3: Stoichiometry
+  'eb56f423-98b4-5f5c-a891-1691b4691433': '/audio/lectures/science/c4/manifest.json', // Topic 4: Electrochemistry
+  '4c428cf3-2e0c-5b53-a468-0fadb2bb2b7c': '/audio/lectures/science/c5/manifest.json', // Topic 5: Chemical energetics
+  '5b034453-aeea-5dc5-a643-26da8fada0bc': '/audio/lectures/science/c6/manifest.json', // Topic 6: Chemical reactions
+  '0437e039-b3c2-5779-a402-45907c082ac2': '/audio/lectures/science/c7/manifest.json', // Topic 7: Acids, bases and salts
+  '137cfd77-d86a-5927-a025-e406191e51fc': '/audio/lectures/science/c8/manifest.json', // Topic 8: The Periodic Table
+  '605ec1ff-ecf8-5cf5-aa6e-84dacd8f091f': '/audio/lectures/science/c9/manifest.json', // Topic 9: Metals
+  'a0959822-b499-501b-ad83-4ba423b031ff': '/audio/lectures/science/c10/manifest.json', // Topic 10: Chemistry of the environment
+  '3c425483-4d1a-5405-a1da-354e3598fe30': '/audio/lectures/science/c11/manifest.json', // Topic 11: Organic chemistry
+  '2d0a3d84-392a-522a-a3ca-7facf0b97f66': '/audio/lectures/science/c12/manifest.json', // Topic 12: Experimental techniques and chemical analysis
+
+  // =========================================================================
+  // CAMBRIDGE IGCSE PHYSICS (0625) BILINGUAL AUDIO LECTURES (TOPICS 1 - 6)
+  // =========================================================================
+  '63711578-24ee-530b-af00-95ffbab36daf': '/audio/lectures/science/p1/manifest.json', // Topic 1: Motion, forces and energy
+  '8074ead2-53cc-5ebd-ab32-c691b3e8aebf': '/audio/lectures/science/p2/manifest.json', // Topic 2: Thermal physics
+  '6df06f2c-3b0a-556f-a218-3e4d7a9417e0': '/audio/lectures/science/p3/manifest.json', // Topic 3: Waves
+  '75e29227-213b-5046-abfa-d0cddc677c7a': '/audio/lectures/science/p4/manifest.json', // Topic 4: Electricity and magnetism
+  '588803a0-fcc4-5582-a53d-1c1925e0e4cf': '/audio/lectures/science/p5/manifest.json', // Topic 5: Nuclear physics
+  '886cd267-2b7b-59a6-a9f2-3fdb24bf2d35': '/audio/lectures/science/p6/manifest.json', // Topic 6: Space physics
+
+  // =========================================================================
   // CAMBRIDGE IGCSE ECONOMICS (0455) BILINGUAL AUDIO LECTURES
   // =========================================================================
   // --- TOPIC 1: THE BASIC ECONOMIC PROBLEM ---
@@ -319,6 +345,32 @@ const LECTURE_VIDEO_MAP: Record<string, LectureVideoConfig> = {
   '2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69': 'llyYTGan-eQ', // P4: Electricity and magnetism
   'a6077865-db01-4785-9ec7-e8b0f531fcdc': 'DeZjM41nqmo', // P5: Nuclear physics
   'd11f8920-fe86-4cd4-ad9a-e8b669bc687b': 'Ec9yMahD5xA', // P6: Space physics
+
+  // ==========================================
+  // Cambridge IGCSE Chemistry 0620
+  // ==========================================
+  'b1dca40f-5860-5c18-ad99-6c90ef8c2e50': 'LxRkVccWZRA', // Topic 1: States of matter
+  '98be89ab-7b9c-5ab0-a4f0-895e6d217990': 'RIdAsC6D5mY', // Topic 2: Atoms, elements and compounds
+  '9990ebf7-e6f6-540a-ab78-ae48eeea42ba': '3Mh95hVf0-Y', // Topic 3: Stoichiometry
+  'eb56f423-98b4-5f5c-a891-1691b4691433': 'd-RgbhQC6P8', // Topic 4: Electrochemistry
+  '4c428cf3-2e0c-5b53-a468-0fadb2bb2b7c': 'd23r_Hv8uBc', // Topic 5: Chemical energetics
+  '5b034453-aeea-5dc5-a643-26da8fada0bc': 'ilGzTGcCth0', // Topic 6: Chemical reactions
+  '0437e039-b3c2-5779-a402-45907c082ac2': 'XBSyl4h8qC8', // Topic 7: Acids, bases and salts
+  '137cfd77-d86a-5927-a025-e406191e51fc': 'ixdo6J_GdVA', // Topic 8: The Periodic Table
+  '605ec1ff-ecf8-5cf5-aa6e-84dacd8f091f': 'sLJNWrawAjw', // Topic 9: Metals
+  'a0959822-b499-501b-ad83-4ba423b031ff': 'zR-JPRQh2S0', // Topic 10: Chemistry of the environment
+  '3c425483-4d1a-5405-a1da-354e3598fe30': 'ev99Cdk19Ns', // Topic 11: Organic chemistry
+  '2d0a3d84-392a-522a-a3ca-7facf0b97f66': 'FJd9E7AQ6yE', // Topic 12: Experimental techniques and chemical analysis
+
+  // ==========================================
+  // Cambridge IGCSE Physics 0625
+  // ==========================================
+  '63711578-24ee-530b-af00-95ffbab36daf': 'YwihvOJ1w7o', // Topic 1: Motion, forces and energy
+  '8074ead2-53cc-5ebd-ab32-c691b3e8aebf': 'pY_TRZC1JRw', // Topic 2: Thermal physics
+  '6df06f2c-3b0a-556f-a218-3e4d7a9417e0': 'P_uH3pzbH7c', // Topic 3: Waves
+  '75e29227-213b-5046-abfa-d0cddc677c7a': 'llyYTGan-eQ', // Topic 4: Electricity and magnetism
+  '588803a0-fcc4-5582-a53d-1c1925e0e4cf': 'DeZjM41nqmo', // Topic 5: Nuclear physics
+  '886cd267-2b7b-59a6-a9f2-3fdb24bf2d35': 'Ec9yMahD5xA', // Topic 6: Space physics
 
   // ==========================================
   // Cambridge IGCSE Biology 0610
@@ -513,6 +565,8 @@ const getYouTubeVideoId = (url: string): string | null => {
 const COURSE_PODCAST_COUNT: Record<string, number> = {
   'a68bae8c-a21c-4cb2-8cd7-6097de211060': 64, // Biology 0610
   'a2a949c7-c23e-45a7-82fa-cdeda5cc32a7': 35, // Co-ordinated Science 0654
+  '48a5aa17-4af9-45a1-b464-da736abc09e7': 14, // Chemistry 0620
+  '0eaf41b6-a7a0-40ad-b66c-099bfef51b07': 8,  // Physics 0625
   '9331cc50-d76b-4247-860e-25b2096e93cb': 35, // Geography 0460
   '564f9e56-b77c-43af-9299-23eb2e7dcb7e': 29, // Business Studies 0450
   'f21fe521-aaf9-4917-8c2a-1931666237b5': 39, // Economics 0455
@@ -3247,16 +3301,20 @@ export default function LectureViewer({
           const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
           const courseIds = enrolls?.map(e => e.course_id) || [];
           let isOnlineAcc = false;
+          let isExplicitOfflineAcc = false;
           try {
             if (profile?.avatar_url) {
               const parsed = JSON.parse(profile.avatar_url);
               if (parsed?.account_type === 'online') isOnlineAcc = true;
+              if (parsed?.account_type === 'offline') isExplicitOfflineAcc = true;
             }
           } catch (e) {
             if (String(profile?.avatar_url || '').startsWith('http')) isOnlineAcc = true;
           }
-          if (courseIds.length > 0 && !isOnlineAcc) {
-            const { data: userC } = await supabase.from('courses').select('id, title, order_index').in('id', courseIds).order('order_index');
+          if ((courseIds.length > 0 && !isOnlineAcc) || (courseIds.length === 0 && isExplicitOfflineAcc)) {
+            const { data: userC } = courseIds.length > 0
+              ? await supabase.from('courses').select('id, title, order_index').in('id', courseIds).order('order_index')
+              : { data: [] };
             targetCourses = userC || [];
           } else {
             const { data: allC } = await supabase.from('courses').select('id, title, order_index').order('order_index');

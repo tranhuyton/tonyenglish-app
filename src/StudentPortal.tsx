@@ -469,10 +469,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }
         }
 
+        const explicitAccountType =
+          parsedAvatarObj?.account_type || user.user_metadata?.account_type;
         const isOnlineUser =
           !isUserAdmin &&
-          (parsedAvatarObj?.account_type === 'online' ||
-            user.user_metadata?.account_type === 'online' ||
+          explicitAccountType !== 'offline' &&
+          (explicitAccountType === 'online' ||
             (enrolledIds.length === 0 && studentClassList.length === 0));
 
         setIsOnlineStudentAccount(isOnlineUser);
@@ -580,9 +582,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
         setAssignments(finalAssignments);
 
-        // Nếu là học viên Online (hoặc chưa có khóa học offline nào), tự động lấy thêm toàn bộ danh sách khóa học IGCSE để hiển thị chế độ Học Thử / Làm Thử
+        // Nếu là học viên Online, tự động lấy thêm toàn bộ danh sách khóa học IGCSE để hiển thị chế độ Học Thử / Làm Thử
         let igcseCourseIds: string[] = [];
-        if (isOnlineUser || enrolledIds.length === 0) {
+        if (isOnlineUser) {
           const { data: igcseData } = await safeQuery('igcse_courses', () =>
             supabase.from('courses').select('id, title').ilike('title', '%igcse%')
           );
