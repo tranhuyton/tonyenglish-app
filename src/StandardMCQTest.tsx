@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { supabase } from './supabase';
 import { CustomAudioPlayer } from './CustomAudioPlayer';
+import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
 import './tailwind.css';
 
 // =========================================================================================
@@ -51,34 +52,7 @@ const stripHtmlRegex = /[<][^>]*[>]/g;
 
 const cleanHtmlContent = (html: any) => {
   if (!html) return '';
-  let cleaned = String(html);
-  
-  // Xử lý riêng cho thẻ img: giữ nguyên style (width/height cần thiết cho hiển thị đúng kích thước)
-  // Xóa các thuộc tính border, border-radius, box-shadow khỏi style của img
-  cleaned = cleaned.replace(/<img\b([^>]*?)style\s*=\s*(['"])(.*?)\2([^>]*?)>/gi, 
-    (match, before, quote, styleContent, after) => {
-      let newStyle = styleContent
-          .replace(/(?:^|;)\s*(border|border-[^;]+|border-radius|box-shadow)\s*:[^;]+/gi, '')
-          .replace(/^;+|;+$/g, '')
-          .trim();
-      if (newStyle) {
-          return `<img${before}style=${quote}${newStyle}${quote}${after}>`;
-      }
-      return `<img${before}${after}>`;
-  });
-
-  // Loại bỏ các class bo viền và đổ bóng khỏi thẻ img
-  cleaned = cleaned.replace(/<img\b([^>]*?)class\s*=\s*(['"])(.*?)\2([^>]*?)>/gi,
-    (match, before, quote, classContent, after) => {
-      let newClass = classContent
-          .replace(/\b(border(-\w+)?|rounded(-\w+)?|shadow(-\w+)?)\b/g, '')
-          .replace(/\s+/g, ' ')
-          .trim();
-      if (newClass) {
-          return `<img${before}class=${quote}${newClass}${quote}${after}>`;
-      }
-      return `<img${before}${after}>`;
-  });
+  let cleaned = normalizeHtmlImages(String(html));
   
   // Xử lý cho các thẻ KHÔNG phải img: xóa width/height/overflow
   cleaned = cleaned.replace(/<([a-z][a-z0-9]*)\b([^>]*?)style\s*=\s*(['"])(.*?)\3([^>]*?)>/gi, 
@@ -115,73 +89,85 @@ const buildCheckboxCombos = (questions: any[]) => {
   const safeQuestions = Array.isArray(questions) ? questions : [];
 
   safeQuestions.forEach((q: any) => {
-    if (combos.length === 0) {
-      combos.push([q]); 
-      return;
-    }
-    
-    const prevQ = combos[combos.length - 1][0];
-    const contentEmpty = !isRealContent(q.content);
-    
-    const getOptStr = (qq: any) => {
-        const opts = qq.options || [];
-        return JSON.stringify(opts.map((o:any) => String(o).replace(stripHtmlRegex, '').trim()).filter(Boolean));
-    };
-
-    const currOpts = getOptStr(q);
-    const prevOpts = getOptStr(prevQ);
-    const hasSameOptions = currOpts === prevOpts && currOpts !== '[]';
-    const hasNoOptions = currOpts === '[]';
-    
-    const normalizeText = (text: string) => {
-        return String(text || '')
-            .replace(stripHtmlRegex, '')
-            .replace(/\(\d+\)|\[\d+\]|\d+\./g, '')
-            .trim()
-            .toLowerCase();
-    };
-
-    const currText = normalizeText(q.content);
-    const prevText = normalizeText(prevQ.content);
-    const hasSameContent = currText === prevText && currText !== '';
-
-    if (contentEmpty || hasSameOptions || hasNoOptions || hasSameContent) {
-        combos[combos.length - 1].push(q);
+    const rawText = String(q.content || '').replace(stripHtmlRegex, '').trim();
+    const hasRealContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
+    if (combos.length === 0 || hasRealContent) {
+      combos.push([q]);
     } else {
-        combos.push([q]); 
+      combos[combos.length - 1].push(q);
     }
   });
 
   return combos;
 };
 
+const isRomanNumeralOption = (opt: string) => {
+  const clean = String(opt || '').replace(stripHtmlRegex, '').trim();
+  return /^(?:\([ivxlcdm]+\)|[ivxlcdm]+[\.\):])\s+/i.test(clean) || /^\(?[ivxlcdm]+\)?$/i.test(clean);
+};
+
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
   
   const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
-  const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
+  const cFull = String(correctAns).trim().toUpperCase().replace(/\s+/g, ' ');
+  const cSplit = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' ')).filter(Boolean);
+  const cArr = [cFull, ...cSplit];
   
-  for (const c of cArr) {
-    if (u === c) return true;
-    
-    const uMatch = u.match(/^([A-Z])[\.\):]\s*(.*)$/);
+  const matchesSingle = (val: string, target: string) => {
+    if (val === target) return true;
+    const valNoDot = val.replace(/\.$/, '').trim();
+    const targetNoDot = target.replace(/\.$/, '').trim();
+    if (valNoDot && valNoDot === targetNoDot) return true;
+
+    const uMatch = val.match(/^([A-Z])[\.\):]\s*(.*)$/);
     if (uMatch) {
-      if (uMatch[1] === c) return true;
-      if (uMatch[2] === c) return true;
+      if (uMatch[1] === target) return true;
+      if (uMatch[2] === target || uMatch[2].replace(/\.$/, '').trim() === targetNoDot) return true;
     }
     
-    const cMatch = c.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    const cMatch = target.match(/^([A-Z])[\.\):]\s*(.*)$/);
     if (cMatch) {
-      if (u === cMatch[1]) return true;
-      if (u === cMatch[2]) return true;
+      if (val === cMatch[1]) return true;
+      if (val === cMatch[2] || valNoDot === cMatch[2].replace(/\.$/, '').trim()) return true;
     }
 
-    if (c.includes('(') && c.includes(')')) {
-      const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
-      const withParensContent = c.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
+    if (target.includes('(') && target.includes(')')) {
+      const withoutParens = target.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
+      const withParensContent = target.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
       
-      if (u === withoutParens || u === withParensContent) return true;
+      if (val === withoutParens || val === withParensContent) return true;
       if (uMatch && (uMatch[2] === withoutParens || uMatch[2] === withParensContent)) return true;
+    }
+    return false;
+  };
+
+  for (const c of cArr) {
+    if (matchesSingle(u, c)) return true;
+  }
+  if (cFull.includes(',')) {
+    const normalizeList = (s: string) =>
+      s.replace(/\bAND\b/gi, ',')
+       .split(',')
+       .map(x => x.trim().replace(/^[A-Z][\.\):]\s*/i, '').replace(/\.$/, '').trim().toUpperCase().replace(/\s+/g, ' '))
+       .filter(Boolean)
+       .sort()
+       .join('|');
+    if (normalizeList(u) === normalizeList(cFull)) return true;
+  }
+  if (cSplit.length > 1 && (u.includes(',') || u.includes(';') || /\bAND\b/i.test(u))) {
+    const uParts = u.replace(/\bAND\b/gi, ',').split(/[,;]/).map(x => x.trim()).filter(Boolean);
+    if (uParts.length >= 2) {
+      const matchedIndices = new Set<number>();
+      const allValid = uParts.every(part => {
+        const idx = cSplit.findIndex((cOpt, i) => !matchedIndices.has(i) && matchesSingle(part, cOpt));
+        if (idx !== -1) {
+          matchedIndices.add(idx);
+          return true;
+        }
+        return cSplit.some(cOpt => matchesSingle(part, cOpt));
+      });
+      if (allValid && matchedIndices.size >= 2) return true;
     }
   }
   return false;
@@ -192,11 +178,12 @@ const isOptionAnswerCorrect = (userAns: string, correctAns: string, options?: an
   if (!userAns || !correctAns || !Array.isArray(options) || options.length === 0) return false;
   const u = String(userAns).trim().toUpperCase();
   const c = String(correctAns).trim().toUpperCase();
+  const allRoman = options.every((o: any) => isRomanNumeralOption(String(o || '')));
   for (let i = 0; i < options.length; i++) {
     const val = String(options[i] || '').replace(stripHtmlRegex, '').trim().toUpperCase();
     const letter = String.fromCharCode(65 + i);
-    const uMatchesOpt = isAnswerCorrect(u, val) || isAnswerCorrect(u, letter);
-    const cMatchesOpt = isAnswerCorrect(c, val) || isAnswerCorrect(c, letter);
+    const uMatchesOpt = isAnswerCorrect(u, val) || (!allRoman && isAnswerCorrect(u, letter));
+    const cMatchesOpt = isAnswerCorrect(c, val) || (!allRoman && isAnswerCorrect(c, letter));
     if (uMatchesOpt && cMatchesOpt) return true;
   }
   return false;
@@ -335,6 +322,14 @@ export default function StandardMCQTest({
   const containerRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
   const leftPaneRef = useRef<HTMLDivElement>(null);
+  const [zoomImgSrc, setZoomImgSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      scanContainerMcqImages(containerRef.current);
+    }, 30);
+    return () => window.clearTimeout(timer);
+  }, [testStarted, isReviewMode, currentPartIndex, showTranslation, parts]);
 
 
   // Xử lý Fullscreen
@@ -535,7 +530,8 @@ const handleFinish = async () => {
              const uAns = String(currentAnswers[String(q.id)] || '').trim();
              const cAns = String(q.correctAnswer || '').trim();
              
-             let isCorrect = isOptionAnswerCorrect(uAns, cAns, q.options);
+             const effectiveOpts = (Array.isArray(q.options) && q.options.length > 0) ? q.options : (s?.questions?.[0]?.options || []);
+             let isCorrect = isOptionAnswerCorrect(uAns, cAns, effectiveOpts);
 
              if (isCorrect) { 
                  score++; 
@@ -934,7 +930,7 @@ const handleFinish = async () => {
           if (isReviewMode) {
             const qData = parts.flatMap((p: any) => Array.isArray(p?.sections) ? p.sections.flatMap((s: any) => s?.questions) : []).find((q: any) => String(q?.id) === String(qNum));
             const correctAns = String(qData?.correctAnswer || '');
-            const isCorrect = isAnswerCorrect(userAns, correctAns);
+            const isCorrect = isOptionAnswerCorrect(userAns, correctAns, qData?.options || sec?.questions?.[0]?.options);
 
             let displayUserAnsForReview = userAns;
             if (["Kéo thả", "Kéo thả vào Part", "Matching"].includes(sec.questionType)) {
@@ -945,7 +941,8 @@ const handleFinish = async () => {
                   if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
                 });
               });
-              if (userAns && /^[A-Z]$/i.test(userAns)) {
+              const allRoman = allOpts.length > 0 && allOpts.every(o => isRomanNumeralOption(o));
+              if (!allRoman && userAns && /^[A-Z]$/i.test(userAns)) {
                 const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
                 if (allOpts[oIdx]) displayUserAnsForReview = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
               } else if (userAns) {
@@ -976,8 +973,9 @@ const handleFinish = async () => {
                 if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
               });
             });
+            const allRoman = allOpts.length > 0 && allOpts.every(o => isRomanNumeralOption(o));
             let displayUserAns = userAns;
-            if (userAns && /^[A-Z]$/i.test(userAns)) {
+            if (!allRoman && userAns && /^[A-Z]$/i.test(userAns)) {
               const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
               if (allOpts[oIdx]) displayUserAns = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
             } else if (userAns) {
@@ -1084,6 +1082,12 @@ const handleFinish = async () => {
 
         const children = Array.from(el.childNodes).map((child, i) => renderNode(child, `${pathKey}-${i}`));
         const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
+
+        if (tagName === 'img' && props.className?.includes('mcq-cropped-img')) {
+          props.ref = (imgEl: HTMLImageElement | null) => {
+            if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) applySmartMcqImageSizing(imgEl);
+          };
+        }
 
         if (voidElements.includes(tagName)) {
           return React.createElement(tagName, props);
@@ -1337,7 +1341,25 @@ const handleFinish = async () => {
           </div>
         )}
 
-        <div className="flex-1 min-h-0 h-full flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
+        <div
+          className="flex-1 min-h-0 h-full flex overflow-hidden relative flex-col md:flex-row"
+          ref={containerRef}
+          onLoadCapture={(e) => {
+            const target = e.target as HTMLElement;
+            if (target?.tagName === 'IMG') {
+              applySmartMcqImageSizing(target as HTMLImageElement);
+            }
+          }}
+          onClick={(e) => {
+            if (showSettings) setShowSettings(false);
+            const target = e.target as HTMLElement;
+            if (target?.tagName === 'IMG' && !target.closest('label')) {
+              const imgEl = target as HTMLImageElement;
+              const src = imgEl.currentSrc || imgEl.src;
+              if (src) setZoomImgSrc(src);
+            }
+          }}
+        >
           
           {/* PANEL TRÁI (BÀI ĐỌC / TRANSCRIPT) */}
           {showLeftPane && (
@@ -1375,7 +1397,7 @@ const handleFinish = async () => {
                         
                         {part?.content && (
                           <div 
-                              className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm" 
+                              className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm part-passage-box html-content-renderer" 
                               dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
                           />
                         )}
@@ -1454,7 +1476,7 @@ const handleFinish = async () => {
               ref={rightPaneRef} 
               style={showLeftPane && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 8px)`, flex: 'none' } : { flex: 1 }}
           >
-             <div className={`p-4 sm:p-6 md:p-10 max-w-5xl w-full mx-auto pb-28 md:pb-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
+             <div className={`p-4 sm:p-6 md:p-10 max-w-6xl w-full mx-auto pb-28 md:pb-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                
                {/* HIỂN THỊ ĐIỂM Ở PANEL PHẢI khi không có panel trái hoặc bài Listening */}
                {isReviewMode && (isListening || !showLeftPane) && (
@@ -1477,7 +1499,7 @@ const handleFinish = async () => {
                            
                            {isListening && part?.content && (
                               <div 
-                                  className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-6 text-justify bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm" 
+                                  className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-6 text-justify bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm part-passage-box html-content-renderer" 
                                   dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
                               />
                            )}
@@ -1487,7 +1509,7 @@ const handleFinish = async () => {
                            )}
                            
                            {/* part.content is displayed in the left pane during review mode (or reading test) */}
-                           {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6" alt="Part Image" />}
+                           {part?.imageUrl && <img src={part.imageUrl} className="w-full max-w-full mb-6 cursor-zoom-in" alt="Part Image" />}
                        </div>
 
                        {isReviewMode && part?.translation && (part.translation.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim() !== '' || part.translation.includes('<img')) && (
@@ -1534,7 +1556,7 @@ const handleFinish = async () => {
                              {/* NỘI DUNG SECTION */}
                              <div className="mb-6">
                                 {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
-                                {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4" alt="Section Image" />}
+                                {sec?.imageUrl && <img src={sec.imageUrl} className="mcq-cropped-img mb-4" alt="Section Image" />}
                                 {sec?.content && !( ["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(sec?.questionType) && /\[\s*\d+\s*\]/.test(String(sec.content || '')) ) && (
                                     <div className="text-[15px] text-slate-600 leading-relaxed mb-6 format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
                                 )}
@@ -1660,10 +1682,11 @@ const handleFinish = async () => {
                                           const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
                                           
                                           return allOptions.map((opt: string, oIdx: number) => {
+                                            const isRomanOpt = isRomanNumeralOption(opt);
                                             const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                            const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                            const displayOpt = (/^[A-Z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
                                             const optLetter = String.fromCharCode(65 + oIdx);
-                                            const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
+                                            const isUsed = (!isRomanOpt && selectedInSec.includes(optLetter)) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
                                             
                                             return (
                                               <div
@@ -1767,9 +1790,9 @@ const handleFinish = async () => {
 
                                        <div className="flex gap-4 mb-2">
                                          <span className="font-bold text-slate-800 shrink-0 w-6 text-right pt-[2px]">{displayIdx}.</span>
-                                         <div className="flex-1">
-                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] my-8" alt="Question" />}
-                                           {cleanQText && <div className="text-[16px] text-slate-800 font-medium leading-relaxed whitespace-pre-wrap html-content-renderer mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
+                                         <div className="flex-1 min-w-0">
+                                           {cleanQText && <div className="text-[16px] text-slate-800 font-medium leading-relaxed whitespace-pre-wrap html-content-renderer mb-4 pr-10" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
+                                           {q.imageUrl && <img src={q.imageUrl} className="mcq-cropped-img my-5" alt="Question" />}
                                            
                                            <div className="flex flex-row flex-wrap gap-4">
                                              {q.options?.map((opt: string, i: number) => {
@@ -1865,10 +1888,10 @@ const handleFinish = async () => {
                                         </div>
                                      )}
 
-                                     <div className="flex gap-4 mb-5 pr-10 items-start">
-                                        <div className="flex-1 w-full">
-                                           {q.imageUrl && <img src={q.imageUrl} className={`my-8 ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
-                                           {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium whitespace-pre-wrap html-content-renderer mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
+                                     <div className="flex gap-4 mb-5 items-start">
+                                        <div className="flex-1 min-w-0 w-full">
+                                           {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium whitespace-pre-wrap html-content-renderer mb-5 [&>p:first-child]:pr-10" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
+                                           {q.imageUrl && <img src={q.imageUrl} className="mcq-cropped-img my-5" alt="Question Image" />}
                                         </div>
                                      </div>
                                      
@@ -2060,20 +2083,19 @@ const handleFinish = async () => {
                                
                                return (
                                  <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border-2 border-slate-200 mb-6">
-                                   {sec?.content && (
-                                     <div className="text-slate-600 text-[15px] leading-relaxed mb-6 html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
-                                   )}
                                    {/* Block questions with drop targets */}
                                    <div className="space-y-4">
                                      {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
                                        if (!q?.id) return null;
                                        const userAns = String(answers[String(q.id)] || '');
                                        const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
-                                       const isCorrect = isAnswerCorrect(userAns, correctAns);
+                                       const effectiveOpts = (Array.isArray(q.options) && q.options.length > 0) ? q.options : allOpts;
+                                       const isCorrect = isOptionAnswerCorrect(userAns, correctAns, effectiveOpts);
                                        const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                        
+                                       const allRoman = allOpts.length > 0 && allOpts.every(o => isRomanNumeralOption(o));
                                        let displayUserAns = userAns;
-                                       if (userAns && /^[A-Z]$/i.test(userAns)) {
+                                       if (!allRoman && userAns && /^[A-Z]$/i.test(userAns)) {
                                          const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
                                          if (allOpts[oIdx]) displayUserAns = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
                                        } else if (userAns) {
@@ -2150,10 +2172,11 @@ const handleFinish = async () => {
                                            const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
                                            
                                            return allOpts.map((opt: string, oIdx: number) => {
+                                             const isRomanOpt = isRomanNumeralOption(opt);
                                              const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                             const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                             const displayOpt = (/^[A-Z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
                                              const optLetter = String.fromCharCode(65 + oIdx);
-                                             const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
+                                             const isUsed = (!isRomanOpt && selectedInSec.includes(optLetter)) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
                                              
                                              return (
                                                <div
@@ -2186,8 +2209,9 @@ const handleFinish = async () => {
                                            const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
                                            const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
                                            return allOpts.map((opt: string, oIdx: number) => {
+                                             const isRomanOpt = isRomanNumeralOption(opt);
                                              const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                             const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                             const displayOpt = (/^[A-Z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
                                              return (
                                                <div
                                                  key={oIdx}
@@ -2229,13 +2253,17 @@ const handleFinish = async () => {
                                           const validOptions = combo[0]?.options?.filter((opt: any) => String(opt || '').trim() !== '') || [];
                                           
                                           let comboPoints = 0;
+                                          let hasWrong = false;
                                           userAnsArr.forEach((ans:string) => { 
                                               if (correctAnsComboSet.has(ans)) {
                                                   comboPoints++; 
+                                              } else {
+                                                  hasWrong = true;
                                               }
                                           });
-                                          const isPerfect = comboPoints === maxAllowed;
-                                          const isPartial = comboPoints > 0 && comboPoints < maxAllowed;
+                                          const targetCount = correctAnsComboSet.size || maxAllowed;
+                                          const isPerfect = comboPoints === targetCount && !hasWrong && targetCount > 0;
+                                          const isPartial = comboPoints > 0 && !isPerfect;
 
                                           let containerClass = "bg-white p-6 md:p-8 rounded-2xl shadow-sm border transition-colors relative group scroll-mt-20 mb-4 ";
                                           if (isReviewMode) {
@@ -2251,7 +2279,7 @@ const handleFinish = async () => {
                                                   let currentSelected = Array.from(new Set(comboIds.map(id => prev[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase()))));
                                                   
                                                   if (isChecked) {
-                                                      if (currentSelected.length >= maxAllowed) {
+                                                      if (comboIds.length > 1 && currentSelected.length >= maxAllowed) {
                                                           alert(`Lưu ý: Chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
                                                           return prev;
                                                       }
@@ -2263,9 +2291,13 @@ const handleFinish = async () => {
                                                   }
                                                   
                                                   const next = { ...prev };
-                                                  comboIds.forEach((id, idx) => { 
-                                                      next[id] = currentSelected[idx] || ''; 
-                                                  }); 
+                                                  if (comboIds.length === 1) {
+                                                      next[comboIds[0]] = currentSelected.join(', ');
+                                                  } else {
+                                                      comboIds.forEach((id, idx) => { 
+                                                          next[id] = currentSelected[idx] || ''; 
+                                                      }); 
+                                                  }
                                                   return next;
                                               });
                                           };
@@ -2296,18 +2328,21 @@ const handleFinish = async () => {
                                                   </div>
                                                )}
 
-                                               <div className="flex flex-col mb-4 pr-16">
-                                                 {!isCheckbox && (
-                                                     <div className="font-bold text-slate-700 text-[15px] mb-2">
+                                               <div className="flex flex-col mb-4">
+                                                 {(!isCheckbox || !qText) && (
+                                                     <div className="font-bold text-slate-700 text-[15px] mb-2 pr-16">
                                                          {displayIndexText}.
                                                      </div>
                                                  )}
                                                  
                                                  {qText && (
                                                      <div 
-                                                         className="text-[16px] font-medium leading-relaxed text-slate-800 mb-2 whitespace-pre-wrap" 
+                                                         className="text-[16px] font-medium leading-relaxed text-slate-800 mb-3 whitespace-pre-wrap html-content-renderer pr-16" 
                                                          dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} 
                                                      />
+                                                 )}
+                                                 {combo[0]?.imageUrl && (
+                                                     <img src={combo[0].imageUrl} className="mcq-cropped-img my-4" alt="Question Image" />
                                                  )}
                                                  
                                                  <div className={`flex flex-col gap-2.5 mt-2`}>
@@ -2411,7 +2446,8 @@ const handleFinish = async () => {
                                                     {displayIndex}
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                    <div className="text-slate-800 font-medium text-[16px] leading-[1.8] mb-4" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content || '') }} />
+                                                    <div className="text-slate-800 font-medium text-[16px] leading-[1.8] mb-4 html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content || '') }} />
+                                                    {q.imageUrl && <img src={q.imageUrl} className="mcq-cropped-img my-4" alt="Question Image" />}
                                                     
                                                     {isReviewMode ? (
                                                         <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
@@ -2501,12 +2537,16 @@ const handleFinish = async () => {
                               const comboIds = myCombo.map((q:any) => String(q.id));
                               const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
                               const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
-                              let pts = 0; 
-                              userAnsSet.forEach((v:string) => { 
-                                  if(correctAnsSet.has(v)) pts++; 
-                              });
-                              const idxInCombo = comboIds.indexOf(id);
-                              isCorrect = idxInCombo < pts;
+                              if (comboIds.length === 1) {
+                                  isCorrect = userAnsSet.size === correctAnsSet.size && correctAnsSet.size > 0 && [...userAnsSet].every((v:string) => correctAnsSet.has(v));
+                              } else {
+                                  let pts = 0; 
+                                  userAnsSet.forEach((v:string) => { 
+                                      if(correctAnsSet.has(v)) pts++; 
+                                  });
+                                  const idxInCombo = comboIds.indexOf(id);
+                                  isCorrect = idxInCombo < pts;
+                              }
                           }
                       } else {
                           let qCorrectAns = '';
@@ -2867,6 +2907,8 @@ const handleFinish = async () => {
           </div>
         </div>
       )}
+
+      <McqImageZoomModal src={zoomImgSrc} onClose={() => setZoomImgSrc(null)} />
 
     </React.Fragment>
   );

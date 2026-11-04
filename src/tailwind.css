@@ -158,16 +158,40 @@ table th {
   margin-bottom: 0;
 }
 
-/* Images inside content should display at a reasonable size without borders or rounded corners */
+/* Images inside test content: clear, readable sizing without unwanted borders */
 .html-content-renderer img {
   max-width: 100%;
-  min-width: 200px;
   height: auto !important;
-  display: block;
-  margin: 24px auto !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
+}
+
+.mcq-cropped-img {
+  display: block;
+  margin: 20px auto !important;
+  max-width: 100% !important;
+  width: min(100%, 760px);
+  min-width: min(100%, 320px);
+  height: auto !important;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+.mcq-cropped-img[data-inline-img="1"] {
+  display: inline-block;
+  margin: 4px 6px !important;
+  min-width: 0;
+  width: auto;
+}
+
+.part-passage-box img.mcq-cropped-img {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.mcq-zoomable-img {
+  cursor: zoom-in;
 }
 
 /* Ensure no borders or rounded corners on test images in standard test interfaces */
@@ -181,11 +205,3 @@ img[alt*="Fill Image"] {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
-
-/* When image has no explicit width/height or is very small, scale it up */
-.html-content-renderer img:not([width]),
-.html-content-renderer img[width="0"],
-.html-content-renderer img[width="1"] {
-  width: 80%;
-}
-

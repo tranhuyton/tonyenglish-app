@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
+import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
 import './tailwind.css';
 
 // --- CÁC HÀM LOGIC DÙNG CHUNG TỪ COMPUTER TEST ---
@@ -39,20 +40,42 @@ const buildCheckboxCombos = (questions: any[]) => {
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
   const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
-  const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
+  const cFull = String(correctAns).trim().toUpperCase().replace(/\s+/g, ' ');
+  const cArr = [cFull, ...String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '))];
   
   for (const c of cArr) {
     if (u === c) return true;
-    const uMatch = u.match(/^([A-Z])[\.\):]/);
-    if (uMatch && uMatch[1] === c) return true;
-    const cMatch = c.match(/^([A-Z])[\.\):]/);
-    if (cMatch && u === cMatch[1]) return true;
+    const uClean = u.replace(/\.$/, '').trim();
+    const cClean = c.replace(/\.$/, '').trim();
+    if (uClean === cClean) return true;
+
+    const uMatch = u.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    if (uMatch) {
+      if (uMatch[1] === c || uMatch[1] === cClean) return true;
+      if (uMatch[2] === c || uMatch[2].replace(/\.$/, '').trim() === cClean) return true;
+    }
+    const cMatch = c.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    if (cMatch) {
+      if (u === cMatch[1] || uClean === cMatch[1]) return true;
+      if (u === cMatch[2] || uClean === cMatch[2].replace(/\.$/, '').trim()) return true;
+    }
 
     if (c.includes('(') && c.includes(')')) {
       const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
       const withParensContent = c.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
       if (u === withoutParens || u === withParensContent) return true;
+      if (uMatch && (uMatch[2] === withoutParens || uMatch[2] === withParensContent)) return true;
     }
+  }
+  if (cFull.includes(',')) {
+    const normalizeList = (s: string) =>
+      s.replace(/\bAND\b/gi, ',')
+       .split(',')
+       .map(x => x.trim().replace(/^[A-Z][\.\):]\s*/i, '').replace(/\.$/, '').trim().toUpperCase().replace(/\s+/g, ' '))
+       .filter(Boolean)
+       .sort()
+       .join('|');
+    if (normalizeList(u) === normalizeList(cFull)) return true;
   }
   return false;
 };
@@ -79,12 +102,14 @@ const parseStyle = (styleStr: string) => {
 // TỰ ĐỘNG XÓA BỎ CÁC THUỘC TÍNH HEIGHT/OVERFLOW GÂY LỖI THANH CUỘN & BỌC BẢNG (TABLE WRAPPER)
 const cleanHtmlContent = (html: any) => {
   if (!html) return '';
-  let cleaned = String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
+  let cleaned = normalizeHtmlImages(String(html));
+  cleaned = cleaned.replace(/<([a-z][a-z0-9]*)\b([^>]*?)style\s*=\s*(['"])(.*?)\3([^>]*?)>/gi, (match, tagName, before, quote, styleContent, after) => {
+      if (tagName.toLowerCase() === 'img') return match;
       let newStyle = styleContent
           .replace(/(?:^|;)\s*(max-height|min-height|height|overflow|overflow-y|overflow-x)\s*:[^;]+/gi, '')
           .replace(/^;+|;+$/g, '')
           .trim();
-      return newStyle ? `style=${quote}${newStyle}${quote}` : '';
+      return newStyle ? `<${tagName}${before}style=${quote}${newStyle}${quote}${after}>` : `<${tagName}${before}${after}>`;
   });
   
   // NÂNG CẤP FIX CHỒNG BẢNG: Bọc <table> bằng div để có thể scroll ngang mà không phải biến table thành "display: block"
@@ -156,6 +181,14 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
   const [listeningWidth, setListeningWidth] = useState(850); 
   const containerRef = useRef<HTMLDivElement>(null);
   const leftPaneRef = useRef<HTMLDivElement>(null);
+  const [zoomImgSrc, setZoomImgSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      scanContainerMcqImages(containerRef.current);
+    }, 30);
+    return () => window.clearTimeout(timer);
+  }, [testStarted, isReviewMode, parts]);
   const isDragging = useRef(false);
   const listeningDragRef = useRef(false);
 
@@ -403,7 +436,7 @@ const handleFinish = async () => {
   // MAP DỮ LIỆU CÂU HỎI
   const { allQuestionIds, questionIndexMap, questionDataMap } = useMemo(() => {
     const ids: string[] = [];
-    const dataMap: Record<string, { qType: string, options: string[] }> = {};
+    const dataMap: Record<string, { qType: string, options: string[], isMultiDrop?: boolean }> = {};
     
     parts.forEach((p: any) => {
       if (Array.isArray(p?.sections)) {
@@ -413,7 +446,12 @@ const handleFinish = async () => {
                 const qIdStr = String(q.id);
                 if (q?.id && !ids.includes(qIdStr)) {
                   ids.push(qIdStr);
-                  dataMap[qIdStr] = { qType: s.questionType, options: q.options || [] };
+                  const ansStr = String(q.correctAnswer || '').trim();
+                  const opts = (q.options && q.options.length > 0) ? q.options : (s.questions?.[0]?.options || []);
+                  const isMultiDrop = ["Kéo thả", "Kéo thả vào Part", "Matching"].includes(s.questionType)
+                    && ansStr.includes(',')
+                    && !opts.some((o: any) => String(o).replace(stripHtmlRegex, '').trim().toUpperCase() === ansStr.toUpperCase());
+                  dataMap[qIdStr] = { qType: s.questionType, options: opts, isMultiDrop };
                 }
              });
           }
@@ -429,7 +467,12 @@ const handleFinish = async () => {
                  if (!ids.includes(num)) {
                     ids.push(num); 
                     const qInSec = (s.questions || []).find((qq:any) => String(qq.id) === num);
-                    dataMap[num] = { qType: s.questionType, options: qInSec?.options || s.questions?.[0]?.options || [] };
+                    const ansStr = String(qInSec?.correctAnswer || '').trim();
+                    const opts = qInSec?.options || s.questions?.[0]?.options || [];
+                    const isMultiDrop = ["Kéo thả", "Kéo thả vào Part", "Matching"].includes(s.questionType)
+                      && ansStr.includes(',')
+                      && !opts.some((o: any) => String(o).replace(stripHtmlRegex, '').trim().toUpperCase() === ansStr.toUpperCase());
+                    dataMap[num] = { qType: s.questionType, options: opts, isMultiDrop };
                  }
               });
             }
@@ -548,6 +591,12 @@ const handleFinish = async () => {
 
   const handleContentClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
+    if (target?.tagName === 'IMG' && !target.closest('label')) {
+        const imgEl = target as HTMLImageElement;
+        const src = imgEl.currentSrc || imgEl.src;
+        if (src) setZoomImgSrc(src);
+        return;
+    }
     if (target.tagName === 'SPAN' && target.dataset.noteId) { 
         const rect = target.getBoundingClientRect();
         setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 }); 
@@ -627,8 +676,24 @@ const handleFinish = async () => {
   const onDrop = (qId: string) => {
     stopAutoScroll();
     if (isReviewMode || !draggedOption) return;
-    handleAnswer(qId, draggedOption);
+    if (questionDataMap[String(qId)]?.isMultiDrop) {
+      const cleanDragged = draggedOption.replace(/^[A-Z][\.\):]\s*/i, '').trim();
+      const currentList = String(answers[String(qId)] || '').split(',').map(s => s.trim()).filter(Boolean);
+      if (!currentList.some(item => item.toUpperCase() === cleanDragged.toUpperCase())) {
+        currentList.push(cleanDragged);
+        handleAnswer(qId, currentList.join(', '));
+      }
+    } else {
+      handleAnswer(qId, draggedOption);
+    }
     setDraggedOption(null);
+  };
+
+  const removeMultiDragItem = (qId: string, idxToRemove: number) => {
+    if (isReviewMode) return;
+    const currentList = String(answers[String(qId)] || '').split(',').map(s => s.trim()).filter(Boolean);
+    currentList.splice(idxToRemove, 1);
+    handleAnswer(qId, currentList.join(', '));
   };
 
   const clearDragAnswer = (qId: string) => {
@@ -730,6 +795,28 @@ const handleFinish = async () => {
 
             // KÉO THẢ INLINE (Paper Style)
             if (["Kéo thả", "Kéo thả vào Part", "Matching"].includes(sec.questionType)) {
+                if (qInfo.isMultiDrop) {
+                    const items = userAns ? userAns.split(',').map(s => s.trim()).filter(Boolean) : [];
+                    return (
+                        <span 
+                          key={pathKey} 
+                          id={`q-${qNum}`} 
+                          onDragOver={(e) => e.preventDefault()} 
+                          onDrop={() => onDrop(qNum)} 
+                          onClick={(e) => { e.stopPropagation(); setActiveQuestionId(String(qNum)); }} 
+                          className={`inline-flex flex-wrap items-center gap-1.5 align-middle mx-1 min-w-[200px] min-h-[34px] py-1 px-2 border rounded transition-all cursor-pointer ${activeQuestionId === String(qNum) ? 'border-blue-600 bg-blue-50' : 'border-gray-400 bg-gray-50 hover:bg-gray-100'}`}
+                        >
+                            <span className="font-bold text-gray-700 text-[13px] mr-1">{displayIndex}.</span>
+                            {items.map((item, idx) => (
+                                <span key={idx} className="inline-flex items-center bg-blue-100 border border-blue-300 text-blue-800 text-[13px] font-bold px-2 py-0.5 rounded">
+                                    <span>{item}</span>
+                                    <button onClick={(e) => { e.stopPropagation(); removeMultiDragItem(qNum, idx); }} className="ml-1.5 hover:text-red-500 text-[12px] font-black">✕</button>
+                                </span>
+                            ))}
+                            <span className="text-gray-400 text-[12px] italic px-1">{items.length > 0 ? '+ Thả thêm' : 'Thả các từ vào đây'}</span>
+                        </span>
+                    );
+                }
                 const displayUserAns = userAns ? userAns.replace(/^[A-Z][\.\):]\s*/i, '') : '';
                 return (
                     <span 
@@ -833,6 +920,11 @@ const handleFinish = async () => {
 
         const children = Array.from(el.childNodes).map((child, i) => renderNode(child, `${pathKey}-${i}`));
         const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
+        if (tagName === 'img' && props.className?.includes('mcq-cropped-img')) {
+          props.ref = (imgEl: HTMLImageElement | null) => {
+            if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) applySmartMcqImageSizing(imgEl);
+          };
+        }
         if (voidElements.includes(tagName)) return React.createElement(tagName, props);
         return React.createElement(tagName, props, children.length > 0 ? children : null);
       }
@@ -1087,10 +1179,7 @@ const handleFinish = async () => {
           /* --- FIX IMAGE --- */
           .format-passage img, .html-content-renderer img {
               max-width: 100% !important; 
-              width: 80% !important;
               height: auto !important;
-              display: block !important;
-              margin: 1.5rem auto !important;
           }
       `}</style>
 
@@ -1192,7 +1281,17 @@ const handleFinish = async () => {
                  maxWidth: '100%' 
              }}>
           
-          <div className="flex-1 space-y-10 w-full min-w-0" onClick={handleContentClick} ref={containerRef as any}>
+          <div
+            className="flex-1 space-y-10 w-full min-w-0"
+            onClick={handleContentClick}
+            onLoadCapture={(e) => {
+              const target = e.target as HTMLElement;
+              if (target?.tagName === 'IMG') {
+                applySmartMcqImageSizing(target as HTMLImageElement);
+              }
+            }}
+            ref={containerRef as any}
+          >
             {parts.map((part: any, pIndex: number) => {
               const hasPassage = part.content && part.content.trim().length > 0;
               // Theo yêu cầu mới nhất của USER: "Không có chia màn hình, Giao diện nó giống hệt dạng PaperTest mà cho Listening ấy"
@@ -1223,7 +1322,7 @@ const handleFinish = async () => {
                       <>
                         <div className={`format-passage text-justify leading-[1.8] text-[16px] ${enableSplitPane ? 'pr-8' : 'pb-8'}`} style={{ width: enableSplitPane ? `${leftWidth}%` : '100%', flex: 'none' }} ref={leftPaneRef as any}>
                           {isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-2 rounded font-bold text-xs mb-4 border border-amber-300 inline-block font-sans shadow-sm">🎙️ TAPESCRIPT</div>}
-                          <div className="format-passage-content">
+                          <div className="format-passage-content part-passage-box html-content-renderer">
                              {renderHtmlWithHoles(part.content, {})}
                           </div>
                         </div>
@@ -1279,7 +1378,7 @@ const handleFinish = async () => {
                         const isInlineDragDrop = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(sec.questionType) && hasInlineBrackets;
                         const isBlockDragDrop = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(sec.questionType) && !hasInlineBrackets;
                         const secContentHasHoles = /\[\s*\d+\s*\]/.test(String(sec.content || ''));
-                        const shouldRenderGlobalSecContent = sec.content && !secContentHasHoles;
+                        const shouldRenderGlobalSecContent = (sec.content || sec.imageUrl) && !secContentHasHoles;
 
                         return (
                           <div key={sIndex} className="mb-10 font-sans">
@@ -1290,14 +1389,14 @@ const handleFinish = async () => {
                               </div>
                             )}
 
-                            {shouldRenderGlobalSecContent && (
+                            {(sec.imageUrl || shouldRenderGlobalSecContent) && (
                                <div className="mb-6 text-[15px] text-slate-800 bg-gray-50 p-4 rounded-lg border border-gray-200 format-passage html-content-renderer font-serif">
+                                 {sec.content && !secContentHasHoles && renderHtmlWithHoles(sec.content, {})}
                                  {sec.imageUrl && (
-                                    <div className="mb-4">
-                                       <img src={sec.imageUrl} alt="Section Illustration" className="mx-auto rounded border border-gray-200 max-h-[600px] object-contain shadow-sm" />
+                                    <div className={sec.content && !secContentHasHoles ? "mt-4" : ""}>
+                                       <img src={sec.imageUrl} alt="Section Illustration" className="mcq-cropped-img my-4 bg-white" />
                                     </div>
                                  )}
-                                 {renderHtmlWithHoles(sec.content, {})}
                                </div>
                             )}
 
@@ -1315,6 +1414,14 @@ const handleFinish = async () => {
                                           wordBankItems = partsArr[1].split(/(?:<br\s*\/?>\s*)+/).filter((x:string) => x.replace(stripHtmlRegex, '').trim() !== '');
                                           break;
                                       }
+                                  }
+                                  if (wordBankItems.length === 0 && (sec.questionType === "Điền từ" || sec.questionType === "Điền từ AI")) {
+                                      (sec.questions || []).forEach((q: any) => {
+                                          (q.options || []).forEach((o: any) => {
+                                              const clean = String(o).replace(stripHtmlRegex, '').trim();
+                                              if (clean && !wordBankItems.includes(clean)) wordBankItems.push(clean);
+                                          });
+                                      });
                                   }
 
                                   return (
@@ -1397,12 +1504,12 @@ const handleFinish = async () => {
                                             <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
                                             <div className="flex-1 min-w-0">
                                               {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
+                                              {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                               {q.imageUrl && (
                                                 <div className="mb-4">
-                                                   <img src={q.imageUrl} alt="Question Illustration" className="rounded border border-gray-200 max-h-[400px] object-contain shadow-sm" />
+                                                   <img src={q.imageUrl} alt="Question Illustration" className="mcq-cropped-img my-4" />
                                                 </div>
                                               )}
-                                              {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                               <div className={`flex flex-row flex-wrap gap-4`}>
                                                 {validOptions.map((opt: any, i: number) => {
                                                   const safeOpt = String(opt || '');
@@ -1472,12 +1579,12 @@ const handleFinish = async () => {
                                         <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
                                         <div className="flex-1 min-w-0">
                                           {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
+                                          {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                           {q.imageUrl && (
                                             <div className="mb-4">
-                                               <img src={q.imageUrl} alt="Question Illustration" className="rounded border border-gray-200 max-h-[400px] object-contain shadow-sm" />
+                                               <img src={q.imageUrl} alt="Question Illustration" className="mcq-cropped-img my-4" />
                                             </div>
                                           )}
-                                          {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                           
                                           {sec.questionType === "Đoạn văn" ? (
                                             <div className="mt-2">
@@ -1580,7 +1687,7 @@ const handleFinish = async () => {
                                                 <div className="flex flex-col flex-1 min-w-0">
                                                   {q.imageUrl && (
                                                      <div className="mb-4">
-                                                        <img src={q.imageUrl} alt="Question Illustration" className="rounded border border-gray-200 max-h-[400px] object-contain shadow-sm" />
+                                                        <img src={q.imageUrl} alt="Question Illustration" className="mcq-cropped-img my-4" />
                                                      </div>
                                                   )}
                                                   <div className="text-[15px] text-gray-800 leading-relaxed font-serif format-passage html-content-renderer flex-1 min-w-0 break-words [&>p]:!m-0 [&>p]:!inline">
@@ -1701,7 +1808,7 @@ const handleFinish = async () => {
                                                   <div className="flex flex-col flex-1 min-w-0">
                                                     {q.imageUrl && (
                                                        <div className="mb-4">
-                                                          <img src={q.imageUrl} alt="Question Illustration" className="rounded border border-gray-200 max-h-[400px] object-contain shadow-sm" />
+                                                          <img src={q.imageUrl} alt="Question Illustration" className="mcq-cropped-img my-4" />
                                                        </div>
                                                     )}
                                                     <div className="text-[15px] text-gray-800 leading-relaxed font-serif format-passage html-content-renderer flex-1 min-w-0 break-words [&>p]:!m-0 [&>p]:!inline">
@@ -1771,13 +1878,36 @@ const handleFinish = async () => {
                                             }
                                         });
                                         
-                                        const sectionQIds = (sec?.questions || []).map((q:any) => String(q.id));
-                                        const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
+                                        const sectionQs = Array.isArray(sec?.questions) ? sec.questions : [];
                                         
                                         return allOptions.map((opt: string, oIdx: number) => {
                                           const prefix = `${String.fromCharCode(65 + oIdx)}. `;
                                           const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
-                                          const isUsed = selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
+                                          const optUpper = opt.trim().toUpperCase();
+                                          const optNoPrefix = optUpper.replace(/^[A-Z][\.\):]\s*/i, '').trim();
+                                          const dispUpper = displayOpt.toUpperCase();
+
+                                          let maxNeeded = 0;
+                                          let usedCount = 0;
+                                          sectionQs.forEach((sq: any) => {
+                                            const sqId = String(sq.id);
+                                            const sqAns = String(sq.correctAnswer || '').trim().toUpperCase();
+                                            const sqMulti = questionDataMap[sqId]?.isMultiDrop;
+                                            if (sqMulti) {
+                                              const cItems = sqAns.split(',').map(s => s.trim().replace(/^[A-Z][\.\):]\s*/i, '').trim());
+                                              if (cItems.includes(optUpper) || cItems.includes(optNoPrefix)) maxNeeded++;
+                                              const uItems = String(answers[sqId] || '').split(',').map(s => s.trim().toUpperCase());
+                                              if (uItems.includes(optUpper) || uItems.includes(optNoPrefix) || uItems.includes(dispUpper)) usedCount++;
+                                            } else {
+                                              const cClean = sqAns.replace(/^[A-Z][\.\):]\s*/i, '').trim();
+                                              if (sqAns === optUpper || cClean === optNoPrefix) maxNeeded++;
+                                              const uVal = String(answers[sqId] || '').trim().toUpperCase();
+                                              const uClean = uVal.replace(/^[A-Z][\.\):]\s*/i, '').trim();
+                                              if (uVal && (uVal === dispUpper || uVal === optUpper || uClean === optNoPrefix)) usedCount++;
+                                            }
+                                          });
+                                          if (maxNeeded < 1) maxNeeded = 1;
+                                          const isUsed = usedCount >= maxNeeded;
                                           
                                           return (
                                             <div
@@ -2152,6 +2282,7 @@ const handleFinish = async () => {
           </button>
         </div>
       </footer>
+      <McqImageZoomModal src={zoomImgSrc} onClose={() => setZoomImgSrc(null)} />
     </div>
   );
 }
