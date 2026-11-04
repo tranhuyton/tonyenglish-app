@@ -1,7 +1,7 @@
 const https = require('https');
 
 const TARGET_ADMIN_EMAIL = 'tranhuyton@gmail.com';
-const RELAY_ENDPOINT = 'https://tuvithayton.vn/api/internal/tonyenglish-lead-email';
+const RELAY_ENDPOINT = 'https://www.tuvithayton.vn/api/internal/tonyenglish-lead-email';
 
 function readJsonBody(req) {
   return new Promise((resolve, reject) => {
