@@ -100,6 +100,23 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
       setContactError(error.message);
     } else {
       setContactSubmitted(true);
+      try {
+        fetch('/api/notify-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          keepalive: true,
+          body: JSON.stringify({
+            contactId: nextId,
+            name: contactName.trim(),
+            phone: contactPhone.trim(),
+            email: contactEmail.trim(),
+            course: 'Liên hệ từ trang Liên hệ',
+            note: contactMessage.trim(),
+            pageUrl: typeof window !== 'undefined' ? window.location.href : 'https://tonyenglish.vn/contact',
+            sourceType: 'ContactPage',
+          }),
+        }).catch(() => {});
+      } catch (_) {}
     }
   };
 

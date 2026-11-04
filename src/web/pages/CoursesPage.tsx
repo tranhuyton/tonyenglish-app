@@ -582,9 +582,27 @@ export const CoursesPage: React.FC = () => {
         );
       } else {
         trackVerifiedLead(courseTitle);
+        const noteSnapshot = leadNote.trim();
         setLeadSubmittedPhone(validPhone);
         setLeadPhone('');
         setLeadNote('');
+        // Fire instant email notification to tranhuyton@gmail.com in background
+        try {
+          fetch('/api/notify-lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            keepalive: true,
+            body: JSON.stringify({
+              contactId: nextId,
+              name: displayName,
+              phone: validPhone,
+              course: courseTitle,
+              note: noteSnapshot,
+              pageUrl: typeof window !== 'undefined' ? window.location.href : 'https://tonyenglish.vn/courses',
+              sourceType: 'CallbackForm',
+            }),
+          }).catch(() => {});
+        } catch (_) {}
       }
     } catch (err) {
       setLeadError(
