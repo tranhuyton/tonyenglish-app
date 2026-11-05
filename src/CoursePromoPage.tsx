@@ -269,7 +269,7 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest hidden sm:inline">
-                R2B Royal City & Online Academy
+                Gia sư 1-1 cùng Thầy Tony (R2B Royal City & Online)
               </span>
             </div>
           </div>
@@ -861,7 +861,7 @@ export default function CoursePromoPage({ onNavigate }: CoursePromoPageProps) {
           <div className="flex items-center gap-3">
             <img src="/logo-shield.png" alt="TonyEnglish" className="h-8 w-auto object-contain" />
             <div>
-              <div className="font-black text-lg tracking-tight text-white">TONYENGLISH - R2B ROYAL CITY & ONLINE ACADEMY</div>
+              <div className="font-black text-lg tracking-tight text-white">LỚP GIA SƯ THẦY TONY - R2B ROYAL CITY & ONLINE</div>
               <div className="text-xs text-slate-400">Hotline / Zalo: {CONTACT_PHONE_DISPLAY} • Địa chỉ: {CONTACT_ADDRESS}</div>
             </div>
           </div>

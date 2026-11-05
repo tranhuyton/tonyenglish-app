@@ -393,7 +393,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         const isUserAdmin = user.email?.toLowerCase().includes('admin') || profile?.role === 'admin';
         if (profile && !isUserAdmin && profile.status === 'inactive') {
             await supabase.auth.signOut();
-            alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+            alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
             if (onNavigate) onNavigate('home');
             setIsLoading(false);
             return;
@@ -2315,7 +2315,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl py-20 text-center shadow-xs flex flex-col items-center">
                 <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔒</div>
                 <h3 className="font-bold text-slate-700 text-xl mb-2">Bạn chưa tham gia khóa học nào</h3>
-                <p className="text-slate-500 font-medium max-w-sm">Vui lòng liên hệ trung tâm để được cấp quyền truy cập vào các bài giảng nhé!</p>
+                <p className="text-slate-500 font-medium max-w-sm">Vui lòng liên hệ Thầy Tony để được cấp quyền truy cập vào các bài giảng nhé!</p>
               </div>
             ) : (
               (() => {
@@ -4451,7 +4451,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     Đã gửi yêu cầu mở khóa thành công!
                   </h4>
                   <p className="text-xs text-emerald-700 font-medium leading-relaxed">
-                    Hệ thống đã ghi nhận yêu cầu mở khóa môn <b>{unlockModalCourse.title}</b> của bạn. Ban quản trị TonyEnglish sẽ liên hệ hoặc kích hoạt khóa học cho tài khoản <b>{currentUser?.email}</b> ngay!
+                    Hệ thống đã ghi nhận yêu cầu mở khóa môn <b>{unlockModalCourse.title}</b> của bạn. Thầy Tony sẽ liên hệ hoặc kích hoạt môn học cho tài khoản <b>{currentUser?.email}</b> ngay!
                   </p>
                 </div>
               ) : (

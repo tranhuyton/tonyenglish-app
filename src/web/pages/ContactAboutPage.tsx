@@ -126,11 +126,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
         ? currentAbout.about_title_vi
         : currentAbout.about_title_en
       : mode === 'opening'
-      ? currentOpening
-        ? lang === 'vi'
-          ? currentOpening.ug_name_vi || currentOpening.ug_name
-          : currentOpening.ug_name
-        : t('Openning Class')
+      ? t('Openning Class')
       : mode === 'sitemap'
       ? t('Site map')
       : t('Contact us');
@@ -215,25 +211,6 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               >
                 📅 {t('Openning Class')}
               </Link>
-              {mode === 'opening' && openingGroups.length > 0 && (
-                <ul className="mt-1 mb-1.5 ml-3 pl-2.5 border-l border-slate-200/80 space-y-1">
-                  {openingGroups.map((ug) => (
-                    <li key={ug.ug_id}>
-                      <Link
-                        to={`/opening/${(ug.ug_name_url || '').trim()}`}
-                        onClick={() => setMobileCateOpen(false)}
-                        className={`block px-3 py-2.5 rounded-lg text-[13.5px] transition-all ${
-                          currentOpening && currentOpening.ug_id === ug.ug_id
-                            ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
-                            : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
-                        }`}
-                      >
-                        {lang === 'vi' ? ug.ug_name_vi || ug.ug_name : ug.ug_name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
             </li>
 
             <li className="py-0.5">
@@ -272,7 +249,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
             {/* Header (Unified with Library / NewsPage Header) */}
             <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white">
               <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
-                TonyEnglish Center
+                {lang === 'vi' ? 'Lớp Gia Sư Cá Nhân Thầy Tony' : 'Private Tutoring with Mr. Tony'}
               </div>
               <h1 className="text-xl sm:text-3xl font-black tracking-tight">{pageHeading}</h1>
             </div>
@@ -292,17 +269,17 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5 sm:p-6">
                     <div className="inline-flex items-center gap-2 bg-[#0a5482] text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">
                       <span>📅</span>
-                      <span>{lang === 'vi' ? 'Lịch khai giảng & Tuyển sinh' : 'Enrollment Schedule'}</span>
+                      <span>{lang === 'vi' ? 'Nhận học viên Gia sư 1 kèm 1' : '1-on-1 Private Tutoring'}</span>
                     </div>
                     <h2 className="text-xl sm:text-2xl font-black text-slate-800 mb-2">
                       {lang === 'vi'
-                        ? 'Liên tục tuyển sinh các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE'
-                        : 'Continuous Enrollment for 1-on-1 Packages: English Communication, IELTS & IGCSE'}
+                        ? 'Liên tục tuyển sinh gia sư các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE'
+                        : 'Continuous 1-on-1 Private Tutoring Enrollment: English Communication, IELTS & IGCSE'}
                     </h2>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       {lang === 'vi'
-                        ? 'TonyEnglish liên tục khai giảng và nhận học viên các gói đào tạo 1 kèm 1 (One-on-One) cá nhân hóa theo trình độ, lịch học linh hoạt kết hợp hệ thống bài giảng tương tác & luyện đề AI 24/7:'
-                        : 'TonyEnglish continuously enrolls students for personalized 1-on-1 training packages with flexible schedules and 24/7 AI-powered LMS practice:'}
+                        ? 'Thầy Tony trực tiếp nhận kèm gia sư cá nhân 1 kèm 1 tại nhà riêng của Thầy (R2B 2219 Royal City) và Online, lộ trình cá nhân hóa theo trình độ, lịch học linh hoạt kết hợp nền tảng bài giảng tương tác & luyện đề AI 24/7:'
+                        : 'Mr. Tony provides personalized 1-on-1 private tutoring at his home (R2B 2219 Royal City) and Online with flexible schedules and 24/7 AI-powered self-study resources:'}
                     </p>
                   </div>
 
@@ -310,7 +287,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                     <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
                       <div>
                         <span className="inline-block bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-black px-3 py-1 rounded-full mb-3">
-                          🎙️ GÓI HỌC 1 KÈM 1
+                          🎙️ GIA SƯ GÓI HỌC 1 KÈM 1
                         </span>
                         <h3 className="text-lg font-black text-slate-800 mb-2">
                           Giao tiếp Tiếng Anh &amp; Văn phòng
@@ -331,7 +308,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                     <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
                       <div>
                         <span className="inline-block bg-sky-50 text-[#0a5482] border border-sky-200 text-xs font-black px-3 py-1 rounded-full mb-3">
-                          🏆 GÓI HỌC 1 KÈM 1
+                          🏆 GIA SƯ GÓI HỌC 1 KÈM 1
                         </span>
                         <h3 className="text-lg font-black text-slate-800 mb-2">
                           Luyện thi IELTS 4 Kỹ Năng
@@ -352,7 +329,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                     <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
                       <div>
                         <span className="inline-block bg-amber-50 text-amber-800 border border-amber-200 text-xs font-black px-3 py-1 rounded-full mb-3">
-                          🌍 GÓI HỌC 1 KÈM 1
+                          🌍 GIA SƯ GÓI HỌC 1 KÈM 1
                         </span>
                         <h3 className="text-lg font-black text-slate-800 mb-2">
                           Chương trình Quốc tế Cambridge IGCSE
@@ -436,12 +413,12 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                   <div>
                     <h2 className="text-lg font-extrabold text-[#0a5482] mb-1.5">
-                      {lang === 'vi' ? 'Gửi lời nhắn cho TonyEnglish' : 'Send us a message'}
+                      {lang === 'vi' ? 'Gửi lời nhắn cho Thầy Tony' : 'Send a message to Mr. Tony'}
                     </h2>
                     <p className="text-sm text-slate-500 mb-5 leading-relaxed">
                       {lang === 'vi'
-                        ? 'Vui lòng để lại thông tin và nội dung cần tư vấn, chúng tôi sẽ phản hồi trong thời gian sớm nhất.'
-                        : 'Please leave your details and message below, and we will get back to you shortly.'}
+                        ? 'Vui lòng để lại thông tin và nội dung cần trao đổi, Thầy Tony sẽ trực tiếp phản hồi trong thời gian sớm nhất.'
+                        : 'Please leave your details and message below, and Mr. Tony will respond directly as soon as possible.'}
                     </p>
 
                     {contactSubmitted ? (
@@ -452,8 +429,8 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                         </div>
                         <p className="text-sm text-emerald-700">
                           {lang === 'vi'
-                            ? 'Cảm ơn bạn đã liên hệ với TonyEnglish. Chúng tôi sẽ phản hồi sớm nhất.'
-                            : 'Thank you for contacting TonyEnglish. We will respond shortly.'}
+                            ? 'Cảm ơn bạn đã gửi lời nhắn. Thầy Tony sẽ trực tiếp phản hồi sớm nhất.'
+                            : 'Thank you for reaching out. Mr. Tony will respond shortly.'}
                         </p>
                       </div>
                     ) : (
@@ -543,7 +520,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                     </h2>
                     <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 text-sm space-y-2 text-slate-700">
                       <p>
-                        <strong className="text-slate-800">📍 {t('Address')}:</strong>{' '}
+                        <strong className="text-slate-800">
+                          📍 {lang === 'vi' ? 'Địa chỉ nhà riêng Thầy Tony' : "Mr. Tony's Home Address"}:
+                        </strong>{' '}
                         {options['company_address']
                           ? options['company_address'].replace(/<[^>]*>?/gm, '').trim()
                           : 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội'}

@@ -111,7 +111,7 @@ const COURSE_SYLLABUS_PACKAGES: SyllabusPackageItem[] = [
     highlights: [
       'Chuẩn hóa phát âm bảng IPA, trọng âm, ngữ điệu và nối âm tự nhiên như người bản xứ (Pronunciation Mastery)',
       'Luyện nghe - nói qua các tình huống giao tiếp đời sống, công việc và thảo luận chủ đề xã hội',
-      'Đàm thoại trực tiếp 1 kèm 1 cùng Giáo viên & AI Tutor thông minh, sửa lỗi phát âm & ngữ pháp tức thì',
+      'Đàm thoại trực tiếp 1 kèm 1 cùng Thầy Tony & AI Tutor thông minh, sửa lỗi phát âm & ngữ pháp tức thì',
       'Hệ thống Podcast hội thoại song ngữ giúp tắm ngôn ngữ và hình thành phản xạ tự nhiên',
     ],
     lmsCourseTitles: ['Pronunciation', 'Giao tiếp và phản xạ'],
@@ -744,19 +744,22 @@ export const CoursesPage: React.FC = () => {
 
     return {
       image: '/images/courses/course-overview.jpg',
-      badge: lang === 'vi' ? '🇬🇧 HỆ SINH THÁI ĐÀO TẠO ANH NGỮ & CAMBRIDGE QUỐC TẾ' : '🇬🇧 BRITISH & CAMBRIDGE EDUCATION ECOSYSTEM',
+      badge:
+        lang === 'vi'
+          ? '🇬🇧 LỚP GIA SƯ 1 KÈM 1 CÙNG THẦY TONY (ANH NGỮ & CAMBRIDGE)'
+          : '🇬🇧 1-ON-1 PRIVATE TUTORING WITH MR. TONY',
       caption:
         lang === 'vi'
-          ? 'Kết hợp hoàn hảo giữa Lớp học trực tiếp tại R2B Royal City cùng Hệ thống Bài giảng Song ngữ, Kho 1.800+ Đề thi & AI 24/7'
-          : 'Blending personalized 1-on-1 & small-group mentoring at Royal City with 24/7 AI-powered LMS',
+          ? 'Gia sư 1 kèm 1 trực tiếp tại nhà riêng của Thầy Tony (R2B Royal City) & Online, kết hợp Bài giảng Song ngữ, Kho 1.800+ Đề thi & AI 24/7'
+          : 'Personalized 1-on-1 private tutoring at Mr. Tony’s home (R2B Royal City) & Online with 24/7 AI-powered self-study resources',
       highlights:
         lang === 'vi'
           ? [
-              '🎯 Lộ trình Cá nhân hóa 1-1 & Nhóm nhỏ',
+              '🎯 Kèm gia sư cá nhân 1-1 cùng Thầy Tony',
               '🎧 450+ Bài giảng Song ngữ & Podcast',
               '🤖 Phòng thi chuẩn Quốc tế & AI Chấm chữa 24/7',
             ]
-          : ['🎯 Personalized 1-on-1 & Small Group', '🎧 450+ Bilingual Lectures & Podcasts', '🤖 24/7 AI Grading & Exam Lab'],
+          : ['🎯 1-on-1 Private Tutoring with Mr. Tony', '🎧 450+ Bilingual Lectures & Podcasts', '🤖 24/7 AI Grading & Exam Lab'],
     };
   };
 
@@ -1060,7 +1063,7 @@ export const CoursesPage: React.FC = () => {
             <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4">
               <div>
                 <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
-                  TonyEnglish Training Programs
+                  {lang === 'vi' ? 'Lớp Gia Sư 1 Kèm 1 Cùng Thầy Tony' : '1-on-1 Private Tutoring with Mr. Tony'}
                 </div>
                 <h1 className="text-xl sm:text-3xl font-black tracking-tight">{courseTitle}</h1>
               </div>
@@ -1097,7 +1100,7 @@ export const CoursesPage: React.FC = () => {
                           </div>
                           <div className="text-xs sm:text-sm text-slate-500 mt-0.5">
                             {t('Tuition fee')}:{' '}
-                            <strong className="text-[#0a5482]">{lang === 'vi' ? 'Liên hệ' : 'Contact us'}</strong>
+                            <strong className="text-[#0a5482]">{lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}</strong>
                           </div>
                         </div>
                         <span className="text-[#2ab4e8] font-black group-hover:translate-x-1 transition-transform">
@@ -1139,7 +1142,7 @@ export const CoursesPage: React.FC = () => {
                     <div>
                       <div className="text-xs font-bold text-slate-400 uppercase">{t('Tuition fee')}</div>
                       <div className="font-black text-[#0a5482] text-base">
-                        {lang === 'vi' ? 'Liên hệ' : 'Contact us'}
+                        {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
                       </div>
                     </div>
                   </div>
@@ -1407,13 +1410,13 @@ export const CoursesPage: React.FC = () => {
                       <div>
                         <h2 className="text-base sm:text-lg font-black tracking-tight">
                           {lang === 'vi'
-                            ? 'Bảng Danh Mục Các Khóa Học Đào Tạo Tại TonyEnglish'
-                            : 'Directory of Training Courses at TonyEnglish'}
+                            ? 'Danh Mục Các Gói Gia Sư 1 Kèm 1 Cùng Thầy Tony'
+                            : '1-on-1 Private Tutoring Packages with Mr. Tony'}
                         </h2>
                         <p className="text-xs text-sky-200 font-medium">
                           {lang === 'vi'
-                            ? 'Bấm vào từng khóa học bên dưới để xem chi tiết chương trình và đề cương môn học'
-                            : 'Click on any course below to view full details and syllabus'}
+                            ? 'Bấm vào từng gói học bên dưới để xem chi tiết nội dung ôn luyện và đề cương môn học'
+                            : 'Click on any tutoring package below to view full details and syllabus'}
                         </p>
                       </div>
                     </div>

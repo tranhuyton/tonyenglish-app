@@ -315,7 +315,7 @@ export const Layout: React.FC<{
           if (profile?.role !== 'admin' && !isAdmin && profile?.status === 'inactive') {
             await supabase.auth.signOut();
             setLoginError(
-              '⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG. Vui lòng liên hệ trung tâm để được kích hoạt lại!'
+              '⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG. Vui lòng liên hệ Thầy Tony để được kích hoạt lại!'
             );
             setLoginLoading(false);
             return;
@@ -761,7 +761,7 @@ export const Layout: React.FC<{
                 </div>
               </Link>
               <p className="text-[15px] text-slate-300 leading-relaxed">
-                Hệ sinh thái đào tạo Tiếng Anh Giao Tiếp, IGCSE, IELTS &amp; Luyện thi thông minh tích hợp AI.
+                Trang học liệu cá nhân &amp; Lớp gia sư 1 kèm 1 cùng Thầy Tony (Tiếng Anh Giao Tiếp, IELTS, Cambridge IGCSE) tại nhà riêng R2B Royal City &amp; Online.
               </p>
               <div className="space-y-2 text-sm text-slate-300 pt-1">
                 <p className="flex items-start gap-2">
@@ -1122,7 +1122,7 @@ export const Layout: React.FC<{
                     <div className="space-y-2">
                       <h3 className="text-lg font-black text-slate-800">Đã gửi Email khôi phục!</h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Chúng tôi đã gửi liên kết đặt lại mật khẩu tới{' '}
+                        Hệ thống đã gửi liên kết đặt lại mật khẩu tới{' '}
                         <span className="font-bold text-[#0a5482]">{resetEmail.trim()}</span>. Vui lòng kiểm tra hộp thư
                         đến (hoặc mục Spam/Quảng cáo).
                       </p>

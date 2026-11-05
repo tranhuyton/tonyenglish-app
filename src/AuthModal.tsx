@@ -44,7 +44,7 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
         // Chặn học viên bị tạm dừng đăng nhập
         if (profile?.role !== 'admin' && !isAdmin && profile?.status === 'inactive') {
           await supabase.auth.signOut();
-          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
           setLoading(false);
           return;
         }
@@ -138,7 +138,7 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
           {mode === 'login' ? (
             <>
               <p className="text-slate-500 text-[13px] font-medium mb-6">
-                Hệ thống chỉ dành cho học viên nội bộ. Nếu chưa có tài khoản, vui lòng liên hệ Admin để được cấp phát.
+                Khu vực dành riêng cho học viên gia sư của Thầy Tony. Nếu chưa có tài khoản, vui lòng liên hệ Thầy Tony để được cấp.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -215,7 +215,7 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
               ) : (
                 <form onSubmit={handleForgotPassword} className="space-y-5">
                   <p className="text-slate-600 text-[14px] leading-relaxed">
-                    Nhập email đã đăng ký của bạn. Chúng tôi sẽ gửi một liên kết an toàn qua email để bạn đặt lại mật khẩu mới.
+                    Nhập email đã đăng ký của bạn. Hệ thống sẽ gửi một liên kết an toàn qua email để bạn đặt lại mật khẩu mới.
                   </p>
 
                   {resetError && (

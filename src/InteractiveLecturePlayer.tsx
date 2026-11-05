@@ -423,7 +423,7 @@ export default function InteractiveLecturePlayer({
               />
               <div className="flex flex-col text-left leading-none">
                 <span className="text-[13px] font-black text-white tracking-wider group-hover:text-[#2bd6eb] transition-colors">
-                  TONYENGLISH TEST CENTRE
+                  LỚP HỌC THẦY TONY
                 </span>
                 <span className="text-[11px] font-bold text-sky-300 flex items-center gap-1">
                   tonyenglish.vn <ExternalLink className="w-2.5 h-2.5 opacity-70" />

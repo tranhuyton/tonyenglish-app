@@ -366,7 +366,7 @@ export default function App() {
         const profile = res?.data;
         if (profile?.role !== 'admin' && profile?.status === 'inactive') {
           await supabase.auth.signOut();
-          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
           setCurrentView('home');
           return false;
         }

@@ -131,7 +131,7 @@ module.exports = async (req, res) => {
         'POST',
         { Authorization: `Bearer ${process.env.RESEND_API_KEY}` },
         {
-          from: process.env.SMTP_FROM || 'TonyEnglish Tuyển Sinh <onboarding@resend.dev>',
+          from: process.env.SMTP_FROM || 'Lớp học Thầy Tony <onboarding@resend.dev>',
           to: [TARGET_ADMIN_EMAIL],
           subject,
           html: `<p><strong>Họ tên:</strong> ${name}</p><p><strong>SĐT / Zalo:</strong> ${phone}</p><p><strong>Khóa học:</strong> ${course}</p><p><strong>Ghi chú:</strong> ${note}</p><p><strong>Link:</strong> ${pageUrl}</p>`,

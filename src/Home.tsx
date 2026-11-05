@@ -67,7 +67,7 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
         // Chặn học viên bị tạm dừng đăng nhập
         if (profile?.role !== 'admin' && !isAdmin && profile?.status === 'inactive') {
           await supabase.auth.signOut();
-          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ trung tâm / quản trị viên để được hỗ trợ kích hoạt lại nhé!");
+          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
           setIsLoading(false);
           return;
         }
@@ -148,7 +148,7 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             <a href="https://tonyenglish.vn/vi/courses" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Các khóa học</a>
             <a href="https://tonyenglish.vn/vi/news" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Thư viện</a>
             <a href="https://tonyenglish.vn/vi/videos" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Kho Video</a>
-            <a href="https://tonyenglish.vn/vi/about-us" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Về chúng tôi</a>
+            <a href="https://tonyenglish.vn/vi/about-us" className="px-3.5 py-2 rounded-xl text-[13px] font-bold text-slate-600 hover:text-[#0a5482] hover:bg-white transition-all">Về Thầy Tony</a>
             <span className="px-3.5 py-2 rounded-xl text-[13px] font-black bg-[#0a5482] text-white shadow-sm">🎓 LMS Luyện Thi</span>
           </div>
 
@@ -245,7 +245,7 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-black text-slate-800 mb-4">Tại sao chọn hệ thống của chúng tôi?</h2>
+              <h2 className="text-3xl font-black text-slate-800 mb-4">Điểm nổi bật khi học kèm cùng Thầy Tony</h2>
               <div className="w-20 h-1.5 bg-[#2ab4e8] mx-auto rounded-full"></div>
             </div>
             
@@ -426,7 +426,7 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
                 ) : (
                   <form onSubmit={handleForgotPassword} className="space-y-5">
                     <p className="text-slate-600 text-[14px] leading-relaxed">
-                      Nhập email đã đăng ký của bạn. Chúng tôi sẽ gửi một liên kết an toàn qua email để bạn đặt lại mật khẩu mới.
+                      Nhập email đã đăng ký của bạn. Hệ thống sẽ gửi một liên kết an toàn qua email để bạn đặt lại mật khẩu mới.
                     </p>
 
                     {resetError && (

@@ -8,7 +8,10 @@ export const HomePage: React.FC = () => {
   const { lang, t } = useApp();
 
   useEffect(() => {
-    updatePageSeo('', 'Trung tâm tiếng Anh TonyEnglish - Học tiếng Anh giao tiếp, luyện thi TOEIC, IELTS trực tuyến.');
+    updatePageSeo(
+      '',
+      'TonyEnglish.vn - Trang học liệu cá nhân & Gia sư 1 kèm 1 cùng Thầy Tony (Tiếng Anh Giao tiếp, IELTS, Cambridge IGCSE tại nhà riêng R2B Royal City & Online).'
+    );
   }, []);
 
   const [ads, setAds] = useState<any[]>([]);
@@ -795,8 +798,8 @@ export const HomePage: React.FC = () => {
                   </div>
                   <p className="text-sm sm:text-[15px] font-bold text-slate-800 leading-snug">
                     {lang === 'vi'
-                      ? 'Liên tục tuyển sinh các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE.'
-                      : 'Continuous enrollment for 1-on-1 packages in English Communication, IELTS, and IGCSE.'}
+                      ? 'Liên tục tuyển sinh gia sư các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE.'
+                      : 'Continuous 1-on-1 private tutoring enrollment for English Communication, IELTS, and IGCSE.'}
                   </p>
                 </div>
 
@@ -811,7 +814,7 @@ export const HomePage: React.FC = () => {
                     </div>
                     <div className="min-w-0">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
-                        {lang === 'vi' ? 'Liên tục khai giảng' : 'Continuous Enrollment'}
+                        {lang === 'vi' ? 'Gia sư tại nhà Thầy & Online' : '1-on-1 Private Tutoring'}
                       </span>
                       <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
                         {lang === 'vi' ? 'Giao tiếp Tiếng Anh (1 kèm 1)' : '1-on-1 English Communication'}
@@ -834,7 +837,7 @@ export const HomePage: React.FC = () => {
                     </div>
                     <div className="min-w-0">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
-                        {lang === 'vi' ? 'Liên tục khai giảng' : 'Continuous Enrollment'}
+                        {lang === 'vi' ? 'Gia sư tại nhà Thầy & Online' : '1-on-1 Private Tutoring'}
                       </span>
                       <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
                         {lang === 'vi' ? 'Luyện thi IELTS (1 kèm 1)' : '1-on-1 IELTS Preparation'}
@@ -857,7 +860,7 @@ export const HomePage: React.FC = () => {
                     </div>
                     <div className="min-w-0">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
-                        {lang === 'vi' ? 'Liên tục khai giảng' : 'Continuous Enrollment'}
+                        {lang === 'vi' ? 'Gia sư tại nhà Thầy & Online' : '1-on-1 Private Tutoring'}
                       </span>
                       <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
                         {lang === 'vi' ? 'Chương trình Quốc tế IGCSE (1 kèm 1)' : '1-on-1 Cambridge IGCSE'}
