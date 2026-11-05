@@ -3,6 +3,10 @@ import { Link, useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
+import {
+  trackTonyContact,
+  trackTonyVerifiedCallbackLead,
+} from '../../lib/googleAnalytics';
 
 interface SyllabusPackageItem {
   id: string;
@@ -25,6 +29,7 @@ const CONTACT_PHONE_DISPLAY = '0935 058 688';
 
 // Button tap fires Contact only (prevents premature Lead inflation from cancelled calls / blocked WebView popups)
 const trackCourseConversion = (method: 'Zalo' | 'Phone', courseName: string) => {
+  trackTonyContact(method, courseName);
   try {
     const w = window as any;
     if (typeof w.fbq === 'function') {
@@ -39,6 +44,7 @@ const trackCourseConversion = (method: 'Zalo' | 'Phone', courseName: string) => 
 
 // Verified Lead fires ONLY when parent submits a real 10-digit Vietnamese phone number
 const trackVerifiedLead = (courseName: string) => {
+  trackTonyVerifiedCallbackLead(courseName);
   try {
     const w = window as any;
     if (typeof w.fbq === 'function') {

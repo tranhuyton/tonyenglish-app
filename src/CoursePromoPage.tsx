@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from './supabase';
+import {
+  trackTonyContact,
+  trackTonyGa4Event,
+  trackTonyViewCourse,
+} from './lib/googleAnalytics';
 
 interface CoursePromoPageProps {
   onNavigate: (view: string) => void;
@@ -25,6 +30,19 @@ const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
 const CONTACT_ADDRESS = 'Tòa R2B Royal City, 72A Nguyễn Trãi, Thanh Xuân, Hà Nội';
 
 const trackMetaPixelEvent = (eventName: string, params?: Record<string, any>, isCustom = false) => {
+  try {
+    if (eventName === 'ViewContent') {
+      trackTonyViewCourse(params?.content_name || 'Khoa Hoc TonyEnglish', params?.content_ids?.[0]);
+    } else if (eventName === 'InitiateCheckout') {
+      trackTonyGa4Event('begin_checkout', {
+        course_name: params?.content_name || 'Khoa Hoc TonyEnglish',
+      });
+    } else if (eventName === 'TonyEnglish_ZaloContact') {
+      trackTonyContact('Zalo', params?.content_name || 'CoursePromoPage');
+    } else if (eventName === 'TonyEnglish_PhoneCall') {
+      trackTonyContact('Phone', params?.content_name || 'CoursePromoPage');
+    }
+  } catch (e) {}
   try {
     const w = window as any;
     if (typeof w.fbq === 'function') {

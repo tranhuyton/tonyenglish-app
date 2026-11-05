@@ -230,6 +230,20 @@ export const Layout: React.FC<{
       }
 
       setLoginModalOpen(false);
+      try {
+        const w = window as any;
+        if (typeof w.gtag === 'function') {
+          w.gtag('event', 'sign_up', {
+            method: 'email',
+            has_phone: Boolean(cleanPhone),
+            signup_source: 'trial_modal',
+          });
+          w.gtag('event', 'generate_lead', {
+            lead_source: 'trial_modal',
+            has_phone: Boolean(cleanPhone),
+          });
+        }
+      } catch (e) {}
       onNavigateLms?.('portal');
     } catch (err: any) {
       if (err?.message?.includes('already registered')) {
