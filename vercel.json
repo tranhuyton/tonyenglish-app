@@ -5,6 +5,17 @@
       "has": [
         {
           "type": "host",
+          "value": "www.tonyenglish.vn"
+        }
+      ],
+      "destination": "https://tonyenglish.vn/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
           "value": "lms.tonyenglish.vn"
         }
       ],
