@@ -29,6 +29,18 @@
       "destination": "/api/:path*"
     },
     {
+      "source": "/uploads/FlashQuiz/:dir*/index.html",
+      "destination": "/api/flashquiz?dir=:dir*&file=index.html"
+    },
+    {
+      "source": "/uploads/FlashQuiz/:dir*/html5-unsupported.html",
+      "destination": "/api/flashquiz?dir=:dir*&file=html5-unsupported.html"
+    },
+    {
+      "source": "/uploads/FlashQuiz/:dir*/goodbye.html",
+      "destination": "/api/flashquiz?dir=:dir*&file=goodbye.html"
+    },
+    {
       "source": "/uploads/:path*",
       "destination": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/tonyenglish_uploads/:path*"
     },
