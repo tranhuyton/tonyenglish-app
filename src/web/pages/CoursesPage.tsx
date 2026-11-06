@@ -24,11 +24,18 @@ interface SyllabusPackageItem {
 }
 
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
+const CONTACT_MESSENGER_PAGE = 'TonyEnglish.vn';
 const CONTACT_PHONE = '0935058688';
 const CONTACT_PHONE_DISPLAY = '0935 058 688';
 
+const buildMessengerConsultUrl = (courseName: string) => {
+  const cleanTitle = (courseName || 'IELTS / IGCSE').trim();
+  const prefill = `Chào thầy Tony, chị muốn hỏi lộ trình, học phí & lịch học thử khóa ${cleanTitle} tại R2B Royal City cho con ạ.`;
+  return `https://m.me/${CONTACT_MESSENGER_PAGE}?text=${encodeURIComponent(prefill)}`;
+};
+
 // Button tap fires Contact only (prevents premature Lead inflation from cancelled calls / blocked WebView popups)
-const trackCourseConversion = (method: 'Zalo' | 'Phone', courseName: string) => {
+const trackCourseConversion = (method: 'Zalo' | 'Phone' | 'Messenger', courseName: string) => {
   trackTonyContact(method, courseName);
   try {
     const w = window as any;
@@ -532,6 +539,17 @@ export const CoursesPage: React.FC = () => {
       setZaloFallbackHint(true);
       // Direct top-level navigation avoids Facebook WebView blocking target="_blank" Universal Links
       window.location.assign(CONTACT_ZALO_URL);
+    }
+  };
+
+  const handleMessengerClick = (e: React.MouseEvent<HTMLAnchorElement>, cTitle: string) => {
+    trackCourseConversion('Messenger', cTitle);
+    const url = buildMessengerConsultUrl(cTitle);
+    const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
+    const isMobileOrInApp = /FBAN|FBIOS|Instagram|TikTok|Line|iPhone|iPad|iPod|Android/i.test(ua);
+    if (isMobileOrInApp) {
+      e.preventDefault();
+      window.location.assign(url);
     }
   };
 
@@ -1172,19 +1190,21 @@ export const CoursesPage: React.FC = () => {
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 font-medium">
                       {lang === 'vi'
-                        ? 'Để lại Số điện thoại Zalo bên dưới để thầy Tony (Cựu DHS Anh Quốc) trực tiếp liên hệ tư vấn lộ trình, hoặc bấm Gọi / Zalo ngay:'
-                        : 'Leave your phone/Zalo number below for direct consultation with Mr. Tony, or call/message right away:'}
+                        ? 'Nhắn nhanh qua Messenger Fanpage (có sẵn câu hỏi gợi ý 1 chạm), mở Zalo / Gọi điện, hoặc để lại SĐT bên dưới để thầy Tony trực tiếp tư vấn:'
+                        : 'Message via Messenger (1-tap prefilled prompt), Zalo, call directly, or leave your phone number below:'}
                     </p>
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2 shrink-0">
                     <a
-                      href={`tel:${CONTACT_PHONE}`}
-                      onClick={() => trackCourseConversion('Phone', courseTitle)}
-                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                      href={buildMessengerConsultUrl(courseTitle)}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => handleMessengerClick(e, courseTitle)}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#0084ff] to-[#6366f1] hover:from-[#0073e6] hover:to-[#4f46e5] text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
                     >
-                      <span>📞</span>
-                      <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
+                      <span>⚡</span>
+                      <span>{lang === 'vi' ? 'Hỏi nhanh qua Messenger' : 'Ask via Messenger'}</span>
                     </a>
 
                     <a
@@ -1196,6 +1216,15 @@ export const CoursesPage: React.FC = () => {
                     >
                       <span>💬</span>
                       <span>{lang === 'vi' ? `Zalo: ${CONTACT_PHONE_DISPLAY}` : `Zalo: ${CONTACT_PHONE_DISPLAY}`}</span>
+                    </a>
+
+                    <a
+                      href={`tel:${CONTACT_PHONE}`}
+                      onClick={() => trackCourseConversion('Phone', courseTitle)}
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                    >
+                      <span>📞</span>
+                      <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
                     </a>
 
                     {currentCourse && (
@@ -1389,6 +1418,17 @@ export const CoursesPage: React.FC = () => {
                       ? `Gọi trực tiếp: ${CONTACT_PHONE_DISPLAY}`
                       : `Call directly: ${CONTACT_PHONE_DISPLAY}`}
                   </span>
+                </a>
+
+                <a
+                  href={buildMessengerConsultUrl(courseTitle)}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => handleMessengerClick(e, courseTitle)}
+                  className="bg-gradient-to-r from-[#0084ff] to-[#6366f1] hover:from-[#0073e6] hover:to-[#4f46e5] text-white font-extrabold text-sm px-4 py-3 rounded-xl shadow-md transition flex items-center gap-2"
+                >
+                  <span>⚡</span>
+                  <span>{lang === 'vi' ? 'Hỏi nhanh qua Messenger' : 'Ask via Messenger'}</span>
                 </a>
 
                 <a
@@ -1604,33 +1644,43 @@ export const CoursesPage: React.FC = () => {
         </div>
       )}
 
-      {/* MOBILE STICKY BOTTOM BAR (1-Tap Callback Form, Phone Call & Zalo) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-2.5 py-2 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] grid grid-cols-3 gap-2">
+      {/* MOBILE STICKY BOTTOM BAR (1-Tap Messenger, Zalo, Phone Call & Callback Form) */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-2 py-2 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] grid grid-cols-4 gap-1.5">
         <button
           type="button"
           onClick={scrollToLeadBox}
-          className="inline-flex items-center justify-center gap-1 bg-[#0a5482] active:bg-[#084266] text-white font-extrabold text-[11.5px] py-2.5 px-2 rounded-xl shadow-xs cursor-pointer"
+          className="inline-flex items-center justify-center gap-1 bg-[#0a5482] active:bg-[#084266] text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs cursor-pointer whitespace-nowrap"
         >
           <span>🎁</span>
-          <span>{lang === 'vi' ? 'ĐK Học thử' : 'Free Trial'}</span>
+          <span>{lang === 'vi' ? 'Học thử' : 'Trial'}</span>
         </button>
         <a
-          href={`tel:${CONTACT_PHONE}`}
-          onClick={() => trackCourseConversion('Phone', courseTitle)}
-          className="inline-flex items-center justify-center gap-1 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-[11.5px] py-2.5 px-2 rounded-xl shadow-xs"
+          href={buildMessengerConsultUrl(courseTitle)}
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => handleMessengerClick(e, courseTitle)}
+          className="inline-flex items-center justify-center gap-1 bg-gradient-to-r from-[#0084ff] to-[#6366f1] text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs whitespace-nowrap"
         >
-          <span>📞</span>
-          <span>{lang === 'vi' ? 'Gọi Thầy' : 'Call Now'}</span>
+          <span>⚡</span>
+          <span>Messenger</span>
         </a>
         <a
           href={CONTACT_ZALO_URL}
           target="_blank"
           rel="noreferrer"
           onClick={(e) => handleZaloClick(e, courseTitle)}
-          className="inline-flex items-center justify-center gap-1 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-[11.5px] py-2.5 px-2 rounded-xl shadow-xs"
+          className="inline-flex items-center justify-center gap-1 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs whitespace-nowrap"
         >
           <span>💬</span>
-          <span>{lang === 'vi' ? 'Chat Zalo' : 'Zalo Chat'}</span>
+          <span>Zalo</span>
+        </a>
+        <a
+          href={`tel:${CONTACT_PHONE}`}
+          onClick={() => trackCourseConversion('Phone', courseTitle)}
+          className="inline-flex items-center justify-center gap-1 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs whitespace-nowrap"
+        >
+          <span>📞</span>
+          <span>{lang === 'vi' ? 'Gọi' : 'Call'}</span>
         </a>
       </div>
     </div>

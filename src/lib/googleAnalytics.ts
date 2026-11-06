@@ -40,7 +40,7 @@ export function trackTonyVerifiedCallbackLead(courseName: string) {
   });
 }
 
-export function trackTonyContact(method: 'Zalo' | 'Phone', courseOrLocation: string) {
+export function trackTonyContact(method: 'Zalo' | 'Phone' | 'Messenger', courseOrLocation: string) {
   trackTonyGa4Event('contact_zalo_phone', {
     contact_channel: method.toLowerCase(),
     course_or_location: courseOrLocation,
