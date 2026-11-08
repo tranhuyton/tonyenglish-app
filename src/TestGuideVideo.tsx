@@ -15,9 +15,10 @@ export function parseVideoSource(rawUrl: string | null | undefined): VideoSource
   // 1. YouTube
   const ytMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/i);
   if (ytMatch && ytMatch[1]) {
+    const originParam = typeof window !== 'undefined' ? `&origin=${encodeURIComponent(window.location.origin)}&widget_referrer=${encodeURIComponent(window.location.origin)}` : '';
     return {
       type: 'youtube',
-      embedUrl: `https://www.youtube-nocookie.com/embed/${ytMatch[1]}?autoplay=1&rel=0`,
+      embedUrl: `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&rel=0&enablejsapi=1${originParam}`,
       originalUrl: url
     };
   }
@@ -301,6 +302,7 @@ export function TestGuideVideoPlayer({
       <iframe
         src={sourceInfo.embedUrl}
         title="Video hướng dẫn & gợi ý"
+        referrerPolicy="strict-origin-when-cross-origin"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
         className="w-full h-full border-0"
@@ -599,7 +601,13 @@ export function TestGuideVideoEditModal({
                     {previewSource.type === 'direct' ? (
                       <video src={previewSource.embedUrl} controls className="w-full h-full object-contain" />
                     ) : (
-                      <iframe src={previewSource.embedUrl} className="w-full h-full border-0" title="Preview" />
+                      <iframe
+                        src={previewSource.embedUrl}
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        className="w-full h-full border-0"
+                        title="Preview"
+                      />
                     )}
                   </div>
                 </div>

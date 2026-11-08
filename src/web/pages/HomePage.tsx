@@ -963,6 +963,8 @@ export const HomePage: React.FC = () => {
                   src={getYoutubeEmbedUrl(popupVideo.video_link)}
                   title={popupVideo.video_desc}
                   frameBorder="0"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
               </div>

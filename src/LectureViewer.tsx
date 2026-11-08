@@ -3508,8 +3508,8 @@ export default function LectureViewer({
                      if (t.type === 'manual') {
                          const syncTitle = `${lec.title || ''} : ${t.text}`;
                          const isDone = completedAssignments.some((a: any) => 
-                             a.card_title === lec.title && 
-                             (a.title === syncTitle || a.title === t.text || a.title === `[Bài giảng] ${t.text}`)
+                             a.title === syncTitle ||
+                             (a.card_title === lec.title && (a.title === t.text || a.title === `[Bài giảng] ${t.text}`))
                          );
                          if (isDone) curTasks.add(t.id);
                      }
@@ -3792,7 +3792,11 @@ export default function LectureViewer({
         const { data: assignments } = await supabase.from('assignments').select('id, title, test_id, is_completed, student_completed, task_type, card_title, admin_approved').eq('user_id', currentUser.id);
         
         const matchedAssigns = assignments?.filter((a: any) => 
-          a.task_type === 'manual' && (!currentLec?.title || a.card_title === currentLec.title)
+          a.task_type === 'manual' && (
+            !currentLec?.title ||
+            a.card_title === currentLec.title ||
+            (typeof a.title === 'string' && a.title.startsWith(`${currentLec.title} : `))
+          )
         ) || [];
         setCurrentLectureAssignments(matchedAssigns);
 
@@ -3801,9 +3805,11 @@ export default function LectureViewer({
           if (t.type === 'manual') {
             const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
             const assign = assignments?.find((a: any) => 
-              a.task_type === 'manual' && 
-              (!currentLec?.title || a.card_title === currentLec.title) && (
-                a.title === syncTitle || a.title === t.text || a.title === `[Bài giảng] ${t.text}`
+              a.task_type === 'manual' && (
+                a.title === syncTitle ||
+                ((!currentLec?.title || a.card_title === currentLec.title) && (
+                  a.title === t.text || a.title === `[Bài giảng] ${t.text}`
+                ))
               )
             );
             if (initialCompletedTasks.includes(t.id) || assign?.student_completed) {
@@ -3909,20 +3915,32 @@ export default function LectureViewer({
              });
          });
 
-         // Đồng bộ với Assignment
+         // Đồng bộ với Assignment (hỗ trợ cả thẻ theo tên Bài giảng lẫn thẻ "Công việc Section/Topic")
          if (taskObj && taskObj.type === 'manual') {
              const syncTitle = `${activeLecture?.title || ''} : ${taskObj.text}`;
              const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
              if (!isNowCompleted) payload.admin_approved = false;
-             
-             let query = supabase.from('assignments')
+
+             const updatePromises: PromiseLike<any>[] = [
+               supabase.from('assignments')
                  .update(payload)
                  .eq('user_id', currentUser.id)
-                 .eq('task_type', 'manual');
+                 .eq('task_type', 'manual')
+                 .eq('title', syncTitle)
+             ];
+
              if (activeLecture?.title) {
-                 query = query.eq('card_title', activeLecture.title);
+               updatePromises.push(
+                 supabase.from('assignments')
+                   .update(payload)
+                   .eq('user_id', currentUser.id)
+                   .eq('task_type', 'manual')
+                   .eq('card_title', activeLecture.title)
+                   .in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text])
+               );
              }
-             query.in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text]).then(() => {
+
+             Promise.all(updatePromises).then(() => {
                  window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
              });
          }
@@ -4156,14 +4174,17 @@ export default function LectureViewer({
   };
 
   const getEmbedUrl = (url: string) => {
+    const originParam = typeof window !== 'undefined' ? `&origin=${encodeURIComponent(window.location.origin)}&widget_referrer=${encodeURIComponent(window.location.origin)}` : '';
     if (url.includes('youtube.com/playlist?list=')) {
-        return url.replace('playlist?list=', 'embed/videoseries?list=');
+        return url.replace('playlist?list=', 'embed/videoseries?list=') + originParam;
     }
     if (url.includes('youtube.com/watch?v=')) {
-        return url.replace('watch?v=', 'embed/');
+        const base = url.replace('watch?v=', 'embed/');
+        return base + (base.includes('?') ? '' : '?rel=0') + originParam;
     }
     if (url.includes('youtu.be/')) {
-        return url.replace('youtu.be/', 'youtube.com/embed/');
+        const base = url.replace('youtu.be/', 'youtube.com/embed/');
+        return base + (base.includes('?') ? '' : '?rel=0') + originParam;
     }
     return url;
   };
@@ -5356,13 +5377,25 @@ export default function LectureViewer({
                                  {activeLectureVideoSubTitle}
                                </span>
                              </div>
-                             <button 
-                               onClick={() => setIsVideoCollapsed(!isVideoCollapsed)}
-                               className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 transition-colors border border-slate-700/50 shrink-0 ml-2"
-                             >
-                               <span>{isVideoCollapsed ? 'Mở video' : 'Thu gọn'}</span>
-                               <span className="text-[10px]">{isVideoCollapsed ? '▼' : '▲'}</span>
-                             </button>
+                             <div className="flex items-center gap-2 shrink-0 ml-2">
+                               <a
+                                 href={`https://www.youtube.com/watch?v=${activeLectureVideoId}`}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-800/80 hover:bg-red-600/90 transition-colors border border-slate-700/50"
+                                 title="Mở video trực tiếp trên YouTube"
+                               >
+                                 <span>YouTube</span>
+                                 <span className="text-[10px]">↗</span>
+                               </a>
+                               <button 
+                                 onClick={() => setIsVideoCollapsed(!isVideoCollapsed)}
+                                 className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 transition-colors border border-slate-700/50"
+                               >
+                                 <span>{isVideoCollapsed ? 'Mở video' : 'Thu gọn'}</span>
+                                 <span className="text-[10px]">{isVideoCollapsed ? '▼' : '▲'}</span>
+                               </button>
+                             </div>
                            </div>
                            {currentVideoList.length > 1 && (
                              <div className="flex items-center gap-2 px-4 py-2 bg-slate-800/95 border-b border-slate-700/60 overflow-x-auto custom-scrollbar">
@@ -5386,9 +5419,10 @@ export default function LectureViewer({
                              <div className="w-full aspect-video bg-black relative">
                                <iframe
                                  key={activeLectureVideoId}
-                                 src={`https://www.youtube.com/embed/${activeLectureVideoId}?rel=0`}
+                                 src={`https://www.youtube.com/embed/${activeLectureVideoId}?rel=0&enablejsapi=1&origin=${typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : 'https%3A%2F%2Ftonyenglish.vn'}&widget_referrer=${typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : 'https%3A%2F%2Ftonyenglish.vn'}`}
                                  title={activeLectureVideoSubTitle || "Video bài giảng"}
                                  className="w-full h-full border-0"
+                                 referrerPolicy="strict-origin-when-cross-origin"
                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                  allowFullScreen
                                />
@@ -5557,6 +5591,8 @@ export default function LectureViewer({
                    <iframe 
                        src={getEmbedUrl(popupUrl)} 
                        className="absolute inset-0 w-full h-full border-0 z-10 shadow-2xl" 
+                       referrerPolicy="strict-origin-when-cross-origin"
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                        allowFullScreen
                    ></iframe>
                  </>

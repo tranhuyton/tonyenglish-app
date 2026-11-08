@@ -296,6 +296,8 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                             src={getYoutubeEmbedUrl(currentVideo.video_link)}
                             title={currentVideo.video_desc}
                             frameBorder="0"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
                           />
                         </div>
