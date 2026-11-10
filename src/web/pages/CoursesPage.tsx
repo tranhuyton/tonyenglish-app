@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
@@ -231,7 +231,19 @@ const isHiddenCourseCategory = (c: any) => {
 
 export const CoursesPage: React.FC = () => {
   const { slug } = useParams<{ slug?: string }>();
+  const location = useLocation();
+  const navigate = useNavigate();
   const { lang, t, options } = useApp();
+
+  const scrollToCourseTop = () => {
+    if (typeof window === 'undefined') return;
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
+  };
 
   const [allCategories, setAllCategories] = useState<any[]>([]);
   const [currentCourse, setCurrentCourse] = useState<any | null>(null);
@@ -253,6 +265,7 @@ export const CoursesPage: React.FC = () => {
   const [showSyllabusModal, setShowSyllabusModal] = useState(false);
   const [showLegacyGallery, setShowLegacyGallery] = useState(false);
 
+  // Load course categories & LMS curriculum once on mount so switching courses is instant
   useEffect(() => {
     async function loadCoursesAndCurriculum() {
       const [cateRes, lmsCourseRes, lmsModRes, lmsLecRes] = await Promise.all([
@@ -312,50 +325,60 @@ export const CoursesPage: React.FC = () => {
       if (cateRes.data) {
         const visibleCategories = cateRes.data.filter((c: any) => !isHiddenCourseCategory(c));
         setAllCategories(visibleCategories);
-
-        let effectiveSlug = slug && slug.toLowerCase() !== 'online' ? slug : '';
-        if (!effectiveSlug) {
-          try {
-            const params = new URLSearchParams(window.location.search);
-            const courseQuery = (params.get('course') || '').toLowerCase();
-            if (courseQuery.includes('igcse') || courseQuery.includes('cambridge')) {
-              effectiveSlug = 'luyen-thi-igcse-alevel-cap-toc';
-            } else if (courseQuery.includes('ielts')) {
-              effectiveSlug = 'ielts';
-            } else if (courseQuery.includes('sat')) {
-              effectiveSlug = 'luyen-thi-sat-cap-toc';
-            }
-          } catch (e) {}
-        }
-
-        if (effectiveSlug) {
-          const cleanSlug = decodeURIComponent(effectiveSlug)
-            .trim()
-            .replace(/\.html$/i, '');
-          const found = visibleCategories.find((c: any) => (c.cc_name_url || '').trim() === cleanSlug);
-          if (found) {
-            setCurrentCourse(found);
-            setOpenParentId(found.cc_parent === 0 ? found.cc_id : found.cc_parent);
-            const { count } = await supabase
-              .from('te_lecture')
-              .select('lecture_id', { count: 'exact', head: true })
-              .eq('deleted', 0)
-              .eq('lecture_status', 1)
-              .eq('cc_id', found.cc_id);
-            setLectureCount(count || 0);
-          } else {
-            setCurrentCourse(null);
-          }
-        } else {
-          setCurrentCourse(null);
-          const firstParent = visibleCategories.find((c: any) => c.cc_parent === 0 && c.cc_homedisplay === 1);
-          if (firstParent) setOpenParentId(firstParent.cc_id);
-        }
       }
     }
     loadCoursesAndCurriculum();
+  }, []);
+
+  // Jump to top immediately whenever user navigates to a different course slug
+  useEffect(() => {
     setShowSyllabusModal(false);
-  }, [slug]);
+    scrollToCourseTop();
+  }, [slug, location.pathname, location.search]);
+
+  // Resolve currentCourse synchronously from loaded categories whenever slug changes
+  useEffect(() => {
+    if (allCategories.length === 0) return;
+
+    let effectiveSlug = slug && slug.toLowerCase() !== 'online' ? slug : '';
+    if (!effectiveSlug) {
+      try {
+        const params = new URLSearchParams(location.search);
+        const courseQuery = (params.get('course') || '').toLowerCase();
+        if (courseQuery.includes('igcse') || courseQuery.includes('cambridge')) {
+          effectiveSlug = 'luyen-thi-igcse-alevel-cap-toc';
+        } else if (courseQuery.includes('ielts')) {
+          effectiveSlug = 'ielts';
+        } else if (courseQuery.includes('sat')) {
+          effectiveSlug = 'luyen-thi-sat-cap-toc';
+        }
+      } catch (e) {}
+    }
+
+    if (effectiveSlug) {
+      const cleanSlug = decodeURIComponent(effectiveSlug)
+        .trim()
+        .replace(/\.html$/i, '');
+      const found = allCategories.find((c: any) => (c.cc_name_url || '').trim() === cleanSlug);
+      if (found) {
+        setCurrentCourse(found);
+        setOpenParentId(found.cc_parent === 0 ? found.cc_id : found.cc_parent);
+        supabase
+          .from('te_lecture')
+          .select('lecture_id', { count: 'exact', head: true })
+          .eq('deleted', 0)
+          .eq('lecture_status', 1)
+          .eq('cc_id', found.cc_id)
+          .then(({ count }) => setLectureCount(count || 0));
+      } else {
+        setCurrentCourse(null);
+      }
+    } else {
+      setCurrentCourse(null);
+      const firstParent = allCategories.find((c: any) => c.cc_parent === 0 && c.cc_homedisplay === 1);
+      if (firstParent) setOpenParentId(firstParent.cc_id);
+    }
+  }, [slug, location.search, allCategories]);
 
   const homeParents = allCategories.filter(
     (c) => Number(c.cc_parent) === 0 && Number(c.cc_homedisplay) === 1 && !isHiddenCourseCategory(c)
@@ -575,8 +598,24 @@ export const CoursesPage: React.FC = () => {
     const href = (anchor.getAttribute('href') || '').trim();
     if (/zalo\.me/i.test(href)) {
       handleZaloClick(e, courseTitle);
-    } else if (/^tel:/i.test(href)) {
+      return;
+    }
+    if (/^tel:/i.test(href)) {
       trackCourseConversion('Phone', courseTitle);
+      return;
+    }
+    const internalMatch = href.match(/^(?:https?:\/\/(?:www\.)?tonyenglish\.vn)?(\/.*)$/i);
+    if (
+      internalMatch &&
+      !e.metaKey &&
+      !e.ctrlKey &&
+      !e.shiftKey &&
+      !e.altKey &&
+      anchor.getAttribute('target') !== '_blank'
+    ) {
+      e.preventDefault();
+      navigate(internalMatch[1]);
+      scrollToCourseTop();
     }
   };
 
@@ -685,7 +724,7 @@ export const CoursesPage: React.FC = () => {
 
   // Ensure any tuition fee text inside legacy HTML descriptions always displays "Liên hệ"
   // and map any legacy 2017 screenshot URLs to the new 2026 web screenshots
-  const courseDescHtml = rawCourseDescHtml
+  const baseCourseDescHtml = rawCourseDescHtml
     .replace(/25\s*triệu\s*\(1\s*kèm\s*1\)\s*hoặc\s*35\s*triệu\s*\(1\s*kèm\s*2\)/gi, 'Liên hệ')
     .replace(/18\s*triệu\s*\/\s*gói/gi, 'Liên hệ')
     .replace(/https?:\/\/image\.ibb\.co\/e244MF\/2017_01_23_3\.png/g, '/images/web-2026/01_bai_giang_ngu_am_1.png')
@@ -698,6 +737,19 @@ export const CoursesPage: React.FC = () => {
     .replace(/https?:\/\/image\.ibb\.co\/mK97Qa\/2017_01_17_2\.png/g, '/images/web-2026/08_tu_dien_anh_viet.png')
     .replace(/https?:\/\/image\.ibb\.co\/ktVE5a\/2017_01_17_3\.png/g, '/images/web-2026/09_tu_dien_viet_anh.png')
     .replace(/https?:\/\/image\.ibb\.co\/nEwAdv\/2017_01_17_5\.png/g, '/images/web-2026/10_kho_video_phu_de.png');
+
+  const courseDescHtml =
+    !currentCourse && !baseCourseDescHtml.includes('/courses/ielts')
+      ? baseCourseDescHtml
+          .replace(
+            /<strong>\s*Nghe\s*[–-]\s*Nói\s+phản\s+xạ\s*<\/strong>/gi,
+            '<a href="/courses/english-communication%201"><strong>Nghe – Nói phản xạ</strong></a>'
+          )
+          .replace(
+            /<strong>\s*IELTS,\s*Cambridge\s*IGCSE\s*\/\s*A-Level\s*và\s*Digital\s*SAT\s*<\/strong>/gi,
+            '<a href="/courses/ielts"><strong>IELTS</strong></a>, <a href="/courses/luyen-thi-igcse-alevel-cap-toc"><strong>Cambridge IGCSE / A-Level</strong></a> và <a href="/courses/luyen-thi-sat-cap-toc"><strong>Digital SAT</strong></a>'
+          )
+      : baseCourseDescHtml;
 
   useEffect(() => {
     updatePageSeo(courseTitle, courseDescHtml);
@@ -1038,7 +1090,10 @@ export const CoursesPage: React.FC = () => {
               <li className="py-0.5">
                 <Link
                   to="/courses"
-                  onClick={() => setMobileCateOpen(false)}
+                  onClick={() => {
+                    setMobileCateOpen(false);
+                    scrollToCourseTop();
+                  }}
                   className={`block px-3.5 py-3 rounded-xl transition-colors ${
                     !currentCourse
                       ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
@@ -1066,6 +1121,7 @@ export const CoursesPage: React.FC = () => {
                         onClick={() => {
                           setOpenParentId(parent.cc_id);
                           if (subs.length === 0) setMobileCateOpen(false);
+                          scrollToCourseTop();
                         }}
                         className={`flex-1 px-3.5 py-3 rounded-xl transition-colors flex items-center justify-between ${
                           isCurrentParent
@@ -1097,7 +1153,10 @@ export const CoursesPage: React.FC = () => {
                             <li key={sub.cc_id}>
                               <Link
                                 to={`/courses/${(sub.cc_name_url || '').trim()}`}
-                                onClick={() => setMobileCateOpen(false)}
+                                onClick={() => {
+                                  setMobileCateOpen(false);
+                                  scrollToCourseTop();
+                                }}
                                 className={`block px-3 py-2.5 rounded-lg text-[13.5px] transition-all ${
                                   isActiveSub
                                     ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
@@ -1144,6 +1203,7 @@ export const CoursesPage: React.FC = () => {
                       <Link
                         key={sub.cc_id}
                         to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                        onClick={scrollToCourseTop}
                         className="bg-white hover:bg-sky-50 border border-slate-200 rounded-xl p-4 flex items-center justify-between group transition shadow-2xs"
                       >
                         <div>
@@ -1403,6 +1463,7 @@ export const CoursesPage: React.FC = () => {
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 flex-1 min-w-0">
                               <Link
                                 to={parentUrl}
+                                onClick={scrollToCourseTop}
                                 className="w-full sm:w-44 md:w-48 aspect-[16/10] rounded-xl overflow-hidden border border-slate-200 shadow-2xs shrink-0 relative bg-slate-900 block"
                               >
                                 <img
@@ -1416,6 +1477,7 @@ export const CoursesPage: React.FC = () => {
                                 <div className="flex flex-wrap items-center gap-2">
                                   <Link
                                     to={parentUrl}
+                                    onClick={scrollToCourseTop}
                                     className="font-black text-base sm:text-lg text-[#0a5482] hover:text-[#2ab4e8] transition leading-snug"
                                   >
                                     {parentName}
@@ -1451,6 +1513,7 @@ export const CoursesPage: React.FC = () => {
                                       <Link
                                         key={sub.cc_id}
                                         to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                                        onClick={scrollToCourseTop}
                                         className="inline-flex items-center gap-1 text-xs font-bold text-[#0a5482] bg-slate-100 hover:bg-sky-100 border border-slate-200 hover:border-sky-300 px-2.5 py-1 rounded-lg transition"
                                       >
                                         <span>• {lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}</span>
@@ -1466,6 +1529,7 @@ export const CoursesPage: React.FC = () => {
                             <div className="flex items-center sm:items-end justify-end shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">
                               <Link
                                 to={parentUrl}
+                                onClick={scrollToCourseTop}
                                 className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-2xs transition whitespace-nowrap"
                               >
                                 <span>{lang === 'vi' ? 'Xem chi tiết' : 'View course'}</span>

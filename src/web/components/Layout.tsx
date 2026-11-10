@@ -27,6 +27,13 @@ export const Layout: React.FC<{
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Always jump to top of page when navigating between routes (especially on mobile)
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [location.pathname, location.search]);
+
   // LMS Supabase Auth State
   const [lmsRole, setLmsRole] = useState<'admin' | 'student' | null>(null);
 
