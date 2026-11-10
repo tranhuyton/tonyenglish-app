@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { supabase } from './supabase';
 import { CustomAudioPlayer } from './CustomAudioPlayer';
+import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
 import './tailwind.css';
 
@@ -315,6 +316,26 @@ export default function StandardMCQTest({
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [fontSize, setFontSize] = useState<'S' | 'M' | 'L'>('M');
+
+  // 🎬 Video hướng dẫn & gợi ý
+  const {
+    videoUrl: guideVideoUrl,
+    isOpen: isGuideVideoOpen,
+    setIsOpen: setIsGuideVideoOpen,
+    isTheaterOpen: isGuideVideoTheaterOpen,
+    setIsTheaterOpen: setIsGuideVideoTheaterOpen,
+    isEditModalOpen: isGuideVideoEditModalOpen,
+    setIsEditModalOpen: setIsGuideVideoEditModalOpen,
+    handleSaveVideo: handleSaveGuideVideo,
+  } = useTestGuideVideo(safeData, (newUrl) => {
+    safeData.guide_video_url = newUrl;
+    if (safeData.content_json) {
+      safeData.content_json.guide_video_url = newUrl;
+      if (safeData.content_json.basicInfo) {
+        safeData.content_json.basicInfo.guide_video_url = newUrl;
+      }
+    }
+  });
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
@@ -1478,6 +1499,46 @@ const handleFinish = async () => {
           >
              <div className={`p-4 sm:p-6 md:p-10 max-w-6xl w-full mx-auto pb-28 md:pb-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                
+               {/* 🎬 TOOLBAR KHU VỰC LÀM BÀI / VIDEO HƯỚNG DẪN */}
+               <div className="mb-6 flex items-center justify-between bg-white border border-slate-200 rounded-xl p-3 px-4 shadow-sm">
+                 <div className="flex items-center gap-2">
+                   <span className={`w-2.5 h-2.5 rounded-full ${isReviewMode ? 'bg-amber-500' : 'bg-emerald-500 animate-pulse'}`}></span>
+                   <span className="font-bold text-slate-700 text-[13px] uppercase tracking-wider">
+                     {isReviewMode ? 'Khu vực chữa bài & Xem lại' : 'Khu vực làm bài'}
+                   </span>
+                 </div>
+
+                 <TestGuideVideoButton
+                   videoUrl={guideVideoUrl}
+                   isOpen={isGuideVideoOpen}
+                   onToggleOpen={() => setIsGuideVideoOpen(!isGuideVideoOpen)}
+                   onOpenEditModal={() => setIsGuideVideoEditModalOpen(true)}
+                   isReviewMode={isReviewMode}
+                   buttonTheme="light"
+                 />
+               </div>
+
+               {/* 🎬 INLINE VIDEO PLAYER */}
+               <div className="mb-6">
+                 <TestGuideVideoPlayer
+                   videoUrl={guideVideoUrl}
+                   isOpen={isGuideVideoOpen}
+                   onClose={() => setIsGuideVideoOpen(false)}
+                   isTheaterOpen={isGuideVideoTheaterOpen}
+                   onToggleTheater={setIsGuideVideoTheaterOpen}
+                   testTitle={safeData?.title}
+                 />
+               </div>
+
+               {/* 🎬 MODAL CÀI ĐẶT VIDEO */}
+               <TestGuideVideoEditModal
+                 isOpen={isGuideVideoEditModalOpen}
+                 onClose={() => setIsGuideVideoEditModalOpen(false)}
+                 initialUrl={guideVideoUrl}
+                 onSave={handleSaveGuideVideo}
+                 testTitle={safeData?.title}
+               />
+
                {/* HIỂN THỊ ĐIỂM Ở PANEL PHẢI khi không có panel trái hoặc bài Listening */}
                {isReviewMode && (isListening || !showLeftPane) && (
                    <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
