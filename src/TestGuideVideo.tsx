@@ -291,7 +291,7 @@ export function TestGuideVideoPlayer({
           controls
           autoPlay
           playsInline
-          className={`w-full h-full object-contain ${isFullTheater ? 'max-h-[80vh]' : 'max-h-[380px]'}`}
+          className={`w-full h-full object-contain ${isFullTheater ? 'max-h-[82vh]' : ''}`}
         >
           Trình duyệt của bạn không hỗ trợ phát video này.
         </video>
@@ -343,7 +343,7 @@ export function TestGuideVideoPlayer({
             </div>
           </div>
 
-          <div className="relative w-full aspect-video bg-black flex items-center justify-center max-h-[380px]">
+          <div className="relative w-full aspect-video bg-black flex items-center justify-center">
             {renderPlayer(false)}
           </div>
         </div>
