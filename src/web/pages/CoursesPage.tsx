@@ -509,14 +509,38 @@ export const CoursesPage: React.FC = () => {
   const [leadSubmittedPhone, setLeadSubmittedPhone] = useState('');
   const [leadError, setLeadError] = useState('');
   const [zaloFallbackHint, setZaloFallbackHint] = useState(false);
+  const [showZaloModal, setShowZaloModal] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
 
-  const handleCopyPhone = async () => {
+  const copyPhoneToClipboard = () => {
+    let copied = false;
     try {
-      await navigator.clipboard.writeText(CONTACT_PHONE);
-      setCopiedPhone(true);
-      setTimeout(() => setCopiedPhone(false), 3000);
+      const ta = document.createElement('textarea');
+      ta.value = CONTACT_PHONE;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, CONTACT_PHONE.length);
+      copied = document.execCommand('copy');
+      document.body.removeChild(ta);
     } catch (e) {}
+    try {
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        navigator.clipboard.writeText(CONTACT_PHONE).catch(() => {});
+        copied = true;
+      }
+    } catch (e) {}
+    if (copied) {
+      setCopiedPhone(true);
+    }
+  };
+
+  const handleCopyPhone = () => {
+    copyPhoneToClipboard();
+    setCopiedPhone(true);
   };
 
   const scrollToLeadBox = () => {
@@ -530,15 +554,29 @@ export const CoursesPage: React.FC = () => {
     }, 350);
   };
 
-  const handleZaloClick = (e: React.MouseEvent<HTMLAnchorElement>, cTitle: string) => {
+  const handleZaloClick = (e: React.MouseEvent<HTMLElement>, cTitle: string) => {
     trackCourseConversion('Zalo', cTitle);
+    copyPhoneToClipboard();
+    setZaloFallbackHint(true);
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
-    const isMobileOrInApp = /FBAN|FBIOS|Instagram|TikTok|Line|iPhone|iPad|iPod|Android/i.test(ua);
+    const isMobileOrInApp = /FBAN|FBIOS|FB_IAB|Instagram|TikTok|Line|iPhone|iPad|iPod|Android/i.test(ua);
     if (isMobileOrInApp) {
+      // Prevent Facebook In-App Browser from stranding users on zalo.me's blank white screen
       e.preventDefault();
-      setZaloFallbackHint(true);
-      // Direct top-level navigation avoids Facebook WebView blocking target="_blank" Universal Links
-      window.location.assign(CONTACT_ZALO_URL);
+      setShowZaloModal(true);
+    } else {
+      setShowZaloModal(true);
+    }
+  };
+
+  const handleProseClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const anchor = (e.target as HTMLElement | null)?.closest('a');
+    if (!anchor) return;
+    const href = (anchor.getAttribute('href') || '').trim();
+    if (/zalo\.me/i.test(href)) {
+      handleZaloClick(e, courseTitle);
+    } else if (/^tel:/i.test(href)) {
+      trackCourseConversion('Phone', courseTitle);
     }
   };
 
@@ -1131,19 +1169,24 @@ export const CoursesPage: React.FC = () => {
                 id="khung-dang-ky-tu-van"
                 className="rounded-2xl bg-gradient-to-br from-sky-50 via-blue-50/80 to-emerald-50/60 border border-sky-200/90 p-4 sm:p-5 space-y-3 shadow-xs"
               >
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
-                  <div className="space-y-1">
-                    <div className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-black uppercase tracking-wide text-[#0a5482]">
-                      <span>🎁</span>
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3.5">
+                  <div className="space-y-1.5">
+                    <div className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-extrabold uppercase tracking-wide text-emerald-800 bg-emerald-100/80 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                      <span>🏠</span>
                       <span>
                         {lang === 'vi'
-                          ? 'Đăng ký Test năng lực & Nhận 02 Buổi Học Thử Miễn Phí (R2B Royal City & Online)'
-                          : 'Free Placement Test & 2 Trial Lessons (R2B Royal City & Online)'}
+                          ? 'Học tại căn hộ nhà riêng Thầy Tony (R2B 2219 Royal City) & Online'
+                          : 'At Mr. Tony’s Residence (R2B 2219 Royal City) & Online'}
                       </span>
+                    </div>
+                    <div className="text-sm sm:text-base font-black text-[#0a5482] leading-snug">
+                      {lang === 'vi'
+                        ? '🎁 Kiểm tra đầu vào & Học thử miễn phí 2–3 buổi — Con thấy thật sự hợp thầy, hợp phương pháp mới đăng ký!'
+                        : '🎁 Free Placement Test & 2–3 Trial Lessons — Only enroll if it truly fits your child!'}
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 font-medium">
                       {lang === 'vi'
-                        ? 'Quý phụ huynh vui lòng gọi trực tiếp hoặc nhắn Zalo để thầy Tony tư vấn lộ trình & xếp lịch học thử cho con:'
+                        ? 'Quý phụ huynh gọi trực tiếp hoặc bấm Zalo để thầy Tony tư vấn lộ trình & xếp lịch học thử cho con:'
                         : 'Please call directly or message via Zalo for personalized consultation with Mr. Tony:'}
                     </p>
                   </div>
@@ -1175,7 +1218,7 @@ export const CoursesPage: React.FC = () => {
                 {zaloFallbackHint && (
                   <div className="rounded-xl bg-amber-50 border border-amber-200 px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs text-amber-950 font-semibold">
                     <span>
-                      💡 Nếu trình duyệt Facebook chặn mở Zalo, anh/chị hãy bấm <strong>Copy số Zalo</strong> bên cạnh hoặc gọi trực tiếp cho thầy Tony nhé:
+                      ✅ Đã copy số Zalo <strong>0935 058 688</strong> — Nếu trình duyệt Facebook chặn chuyển app, anh/chị mở <strong>Zalo</strong> rồi dán số vào ô Tìm kiếm nhé:
                     </span>
                     <button
                       type="button"
@@ -1193,14 +1236,22 @@ export const CoursesPage: React.FC = () => {
                 <div className="space-y-4">
                   <div
                     className="legacy-prose text-justify"
+                    onClick={handleProseClick}
                     dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
                   />
-                  <div className="rounded-xl bg-sky-50/90 border border-sky-200 px-4 py-3 flex flex-wrap items-center justify-between gap-2">
-                    <div className="text-sm sm:text-base font-extrabold text-slate-800">
-                      💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
-                      <span className="text-[#0a5482] font-black">
-                        {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
-                      </span>
+                  <div className="rounded-xl bg-sky-50/90 border border-sky-200 px-4 py-3.5 flex flex-wrap items-center justify-between gap-2">
+                    <div className="space-y-0.5">
+                      <div className="text-sm sm:text-base font-extrabold text-slate-800">
+                        💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
+                        <span className="text-[#0a5482] font-black">
+                          {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
+                        </span>
+                      </div>
+                      <div className="text-xs sm:text-[13px] font-bold text-emerald-700">
+                        {lang === 'vi'
+                          ? '✨ Học thử miễn phí 2–3 buổi tại R2B Royal City — Thấy thật sự hợp thầy mới đăng ký'
+                          : '✨ 2–3 Free Trial Lessons at R2B Royal City before enrollment'}
+                      </div>
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-slate-600">
                       Hotline / Zalo Thầy Tony: <strong className="text-[#0a5482]">{CONTACT_PHONE_DISPLAY}</strong>
@@ -1380,11 +1431,18 @@ export const CoursesPage: React.FC = () => {
                                   {defaultSubjectsText || rowVisual.caption}
                                 </p>
 
-                                <div className="text-xs sm:text-sm font-bold text-slate-700">
-                                  💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
-                                  <strong className="text-[#0a5482]">
-                                    {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
-                                  </strong>
+                                <div className="text-xs sm:text-sm font-bold text-slate-700 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                                  <span>
+                                    💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
+                                    <strong className="text-[#0a5482]">
+                                      {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
+                                    </strong>
+                                  </span>
+                                  <span className="text-emerald-700 font-extrabold text-xs">
+                                    {lang === 'vi'
+                                      ? '• Học thử miễn phí 2–3 buổi thấy hợp mới đăng ký'
+                                      : '• 2–3 Free Trial Lessons'}
+                                  </span>
                                 </div>
 
                                 {subs.length > 0 && (
@@ -1447,6 +1505,90 @@ export const CoursesPage: React.FC = () => {
           <span>Zalo: {CONTACT_PHONE_DISPLAY}</span>
         </a>
       </div>
+
+      {/* ANTI-BLOCK ZALO CONNECT MODAL FOR FACEBOOK/INSTAGRAM IN-APP BROWSERS */}
+      {showZaloModal && (
+        <div
+          className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3.5"
+          onClick={() => setShowZaloModal(false)}
+        >
+          <div
+            className="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="bg-gradient-to-r from-[#0068ff] to-[#0a5482] px-5 py-4 text-white flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5">
+                <span className="text-xl">💬</span>
+                <div>
+                  <h3 className="font-black text-base sm:text-lg leading-tight">
+                    {lang === 'vi' ? 'Nhắn Zalo trực tiếp Thầy Tony' : 'Connect via Zalo with Mr. Tony'}
+                  </h3>
+                  <p className="text-[11px] sm:text-xs text-sky-100 font-medium">
+                    R2B 2219 Royal City • Học thử 2–3 buổi miễn phí
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowZaloModal(false)}
+                className="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 text-white font-black text-sm flex items-center justify-center cursor-pointer transition shrink-0"
+                aria-label="Đóng"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="p-5 space-y-4">
+              <div className="rounded-2xl bg-emerald-50 border border-emerald-200 p-3.5 flex items-center justify-between gap-2">
+                <div>
+                  <div className="text-[11px] font-extrabold uppercase tracking-wide text-emerald-700">
+                    {copiedPhone ? '✅ Đã tự động sao chép số Zalo' : 'Số điện thoại / Zalo Thầy Tony'}
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mt-0.5">
+                    {CONTACT_PHONE_DISPLAY}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleCopyPhone}
+                  className="px-3 py-2 rounded-xl bg-white border border-emerald-300 text-emerald-900 font-extrabold text-xs hover:bg-emerald-100 transition cursor-pointer shrink-0 shadow-2xs"
+                >
+                  {copiedPhone ? '✅ Đã copy' : '📋 Copy số'}
+                </button>
+              </div>
+
+              <div className="rounded-xl bg-amber-50/90 border border-amber-200/90 px-3.5 py-2.5 text-xs sm:text-[13px] text-amber-950 leading-relaxed font-medium">
+                💡 <strong>Mẹo mở nhanh từ Facebook:</strong> Hệ thống đã copy sẵn số <strong>0935058688</strong>. Nếu bấm nút bên dưới bị trình duyệt Facebook chặn, anh/chị chỉ cần mở app <strong>Zalo</strong> trên điện thoại → bấm ô <strong>Tìm kiếm</strong> → <strong>Dán (0935058688)</strong> là nhắn tin cho thầy được ngay ạ!
+              </div>
+
+              <div className="space-y-2.5 pt-0.5">
+                <a
+                  href={CONTACT_ZALO_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm py-3 px-4 rounded-xl shadow-md transition"
+                >
+                  <span>💬</span>
+                  <span>{lang === 'vi' ? 'Mở ứng dụng Zalo ngay' : 'Open Zalo App Now'}</span>
+                </a>
+
+                <a
+                  href={`tel:${CONTACT_PHONE}`}
+                  onClick={() => trackCourseConversion('Phone', courseTitle)}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm py-3 px-4 rounded-xl shadow-xs transition"
+                >
+                  <span>📞</span>
+                  <span>
+                    {lang === 'vi'
+                      ? `Hoặc Gọi trực tiếp: ${CONTACT_PHONE_DISPLAY}`
+                      : `Or Call Directly: ${CONTACT_PHONE_DISPLAY}`}
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
