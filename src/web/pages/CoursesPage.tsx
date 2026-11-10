@@ -974,7 +974,7 @@ export const CoursesPage: React.FC = () => {
         {/* Fallback legacy outline if any course has no matched package */}
         {packages.length === 0 && lmsCourses.length === 0 && currentCourse && (
           <div
-            className="legacy-prose"
+            className="legacy-prose course-tab-prose"
             dangerouslySetInnerHTML={{
               __html: fixLegacyHtmlContent(
                 currentCourse.cc_Outline ||
@@ -1233,9 +1233,9 @@ export const CoursesPage: React.FC = () => {
 
               {/* Course Description HTML */}
               {courseDescHtml && (
-                <div className="space-y-4">
+                <div className="pt-2 sm:pt-3 space-y-6">
                   <div
-                    className="legacy-prose text-justify"
+                    className="legacy-prose course-tab-prose text-left sm:text-justify"
                     onClick={handleProseClick}
                     dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
                   />

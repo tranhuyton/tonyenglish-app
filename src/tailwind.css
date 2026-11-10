@@ -205,3 +205,75 @@ img[alt*="Fill Image"] {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+
+/* Airy, easy-to-read line & section spacing for Course Tab content (/courses & /khoa-hoc) */
+.course-tab-prose {
+  line-height: 1.95 !important;
+  letter-spacing: 0.005em;
+}
+.course-tab-prose p,
+.course-tab-prose li,
+.course-tab-prose span,
+.course-tab-prose div {
+  line-height: 1.95 !important;
+}
+.course-tab-prose p {
+  margin-bottom: 1.85rem !important;
+}
+.course-tab-prose p:last-child {
+  margin-bottom: 0.5rem !important;
+}
+.course-tab-prose h2,
+.course-tab-prose .legacy-section-heading {
+  margin-top: 3.25rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  margin-bottom: 1.45rem !important;
+  line-height: 1.4 !important;
+}
+.course-tab-prose h3 {
+  margin-top: 2.85rem !important;
+  padding-top: 1.15rem !important;
+  border-top: 1px dashed #e2e8f0 !important;
+  margin-bottom: 1.35rem !important;
+  line-height: 1.42 !important;
+}
+.course-tab-prose h4,
+.course-tab-prose h5,
+.course-tab-prose h6 {
+  margin-top: 2.25rem !important;
+  margin-bottom: 1.1rem !important;
+  line-height: 1.45 !important;
+}
+.course-tab-prose > h1:first-child,
+.course-tab-prose > h2:first-child,
+.course-tab-prose > .legacy-section-heading:first-child,
+.course-tab-prose > h3:first-child,
+.course-tab-prose > h4:first-child {
+  margin-top: 0.35rem !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+.course-tab-prose ul,
+.course-tab-prose ol {
+  margin-top: 1.25rem !important;
+  margin-bottom: 2.35rem !important;
+  padding-left: 1.65rem !important;
+}
+.course-tab-prose li {
+  margin-bottom: 1.45rem !important;
+}
+.course-tab-prose li:last-child {
+  margin-bottom: 0 !important;
+}
+.course-tab-prose p:has(img) {
+  margin-top: 2.25rem !important;
+  margin-bottom: 0.55rem !important;
+}
+.course-tab-prose .legacy-img-caption,
+.course-tab-prose p.legacy-img-caption,
+.course-tab-prose p:has(img) + p[style*="text-align: center"] {
+  margin-top: 0.35rem !important;
+  margin-bottom: 2.85rem !important;
+  line-height: 1.55 !important;
+}
