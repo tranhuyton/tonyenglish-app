@@ -1091,16 +1091,6 @@ export const CoursesPage: React.FC = () => {
                 </div>
                 <h1 className="text-xl sm:text-3xl font-black tracking-tight">{courseTitle}</h1>
               </div>
-              {currentCourse && (
-                <button
-                  type="button"
-                  onClick={() => setShowSyllabusModal(true)}
-                  className="bg-white/15 hover:bg-white/25 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/20 transition cursor-pointer flex items-center gap-1.5"
-                >
-                  <span>📋</span>
-                  <span>{t('Courses Syllabus')}</span>
-                </button>
-              )}
             </div>
 
             <div className="p-4 sm:p-8 space-y-6">
@@ -1136,47 +1126,10 @@ export const CoursesPage: React.FC = () => {
                 </div>
               )}
 
-              {/* Course Metadata Info Cards (when viewing a specific leaf course) */}
-              {currentCourse && !hasSubCategories && (
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/70 flex items-center gap-3.5">
-                    <div className="w-11 h-11 rounded-xl bg-blue-100 text-[#0a5482] flex items-center justify-center text-xl font-black">
-                      🏷️
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-400 uppercase">{t('Course Code')}</div>
-                      <div className="font-black text-slate-800 text-base">{currentCourse.cc_code || 'TE-PRO'}</div>
-                    </div>
-                  </div>
-
-                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/70 flex items-center gap-3.5">
-                    <div className="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-black">
-                      📚
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-400 uppercase">{t('Number of Lecture')}</div>
-                      <div className="font-black text-slate-800 text-base">{displayLectureCount} bài giảng</div>
-                    </div>
-                  </div>
-
-                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/70 flex items-center gap-3.5">
-                    <div className="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-black">
-                      💳
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-400 uppercase">{t('Tuition fee')}</div>
-                      <div className="font-black text-[#0a5482] text-base">
-                        {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Quick Above-the-Fold Conversion & 10s Callback Registration Box */}
+              {/* Quick Above-the-Fold Direct Call & Zalo Box */}
               <div
                 id="khung-dang-ky-tu-van"
-                className="rounded-2xl bg-gradient-to-br from-sky-50 via-blue-50/80 to-emerald-50/60 border border-sky-200/90 p-4 sm:p-5 space-y-4 shadow-xs"
+                className="rounded-2xl bg-gradient-to-br from-sky-50 via-blue-50/80 to-emerald-50/60 border border-sky-200/90 p-4 sm:p-5 space-y-3 shadow-xs"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
                   <div className="space-y-1">
@@ -1190,21 +1143,19 @@ export const CoursesPage: React.FC = () => {
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 font-medium">
                       {lang === 'vi'
-                        ? 'Nhắn nhanh qua Messenger Fanpage (có sẵn câu hỏi gợi ý 1 chạm), mở Zalo / Gọi điện, hoặc để lại SĐT bên dưới để thầy Tony trực tiếp tư vấn:'
-                        : 'Message via Messenger (1-tap prefilled prompt), Zalo, call directly, or leave your phone number below:'}
+                        ? 'Quý phụ huynh vui lòng gọi trực tiếp hoặc nhắn Zalo để thầy Tony tư vấn lộ trình & xếp lịch học thử cho con:'
+                        : 'Please call directly or message via Zalo for personalized consultation with Mr. Tony:'}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-2 shrink-0">
+                  <div className="flex flex-wrap items-center gap-2.5 shrink-0">
                     <a
-                      href={buildMessengerConsultUrl(courseTitle)}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={(e) => handleMessengerClick(e, courseTitle)}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#0084ff] to-[#6366f1] hover:from-[#0073e6] hover:to-[#4f46e5] text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                      href={`tel:${CONTACT_PHONE}`}
+                      onClick={() => trackCourseConversion('Phone', courseTitle)}
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
                     >
-                      <span>⚡</span>
-                      <span>{lang === 'vi' ? 'Hỏi nhanh qua Messenger' : 'Ask via Messenger'}</span>
+                      <span>📞</span>
+                      <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
                     </a>
 
                     <a
@@ -1212,31 +1163,11 @@ export const CoursesPage: React.FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => handleZaloClick(e, courseTitle)}
-                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
                     >
                       <span>💬</span>
                       <span>{lang === 'vi' ? `Zalo: ${CONTACT_PHONE_DISPLAY}` : `Zalo: ${CONTACT_PHONE_DISPLAY}`}</span>
                     </a>
-
-                    <a
-                      href={`tel:${CONTACT_PHONE}`}
-                      onClick={() => trackCourseConversion('Phone', courseTitle)}
-                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
-                    >
-                      <span>📞</span>
-                      <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
-                    </a>
-
-                    {currentCourse && (
-                      <button
-                        type="button"
-                        onClick={() => setShowSyllabusModal(true)}
-                        className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white hover:bg-sky-50 text-[#0a5482] border border-sky-200 font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl transition cursor-pointer whitespace-nowrap"
-                      >
-                        <span>📋</span>
-                        <span>{lang === 'vi' ? 'Xem đề cương' : 'Syllabus'}</span>
-                      </button>
-                    )}
                   </div>
                 </div>
 
@@ -1244,7 +1175,7 @@ export const CoursesPage: React.FC = () => {
                 {zaloFallbackHint && (
                   <div className="rounded-xl bg-amber-50 border border-amber-200 px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs text-amber-950 font-semibold">
                     <span>
-                      💡 Nếu trình duyệt Facebook chặn mở Zalo, anh/chị hãy <strong>điền SĐT vào ô bên dưới</strong> để thầy Tony kết bạn Zalo ngay, hoặc copy số Zalo của thầy:
+                      💡 Nếu trình duyệt Facebook chặn mở Zalo, anh/chị hãy bấm <strong>Copy số Zalo</strong> bên cạnh hoặc gọi trực tiếp cho thầy Tony nhé:
                     </span>
                     <button
                       type="button"
@@ -1255,91 +1186,27 @@ export const CoursesPage: React.FC = () => {
                     </button>
                   </div>
                 )}
-
-                {/* 10-Second Direct Callback Form */}
-                {leadSubmittedPhone ? (
-                  <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-3.5 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <div className="text-xs sm:text-sm text-emerald-950 font-semibold leading-relaxed">
-                      ✅ <strong>Đăng ký thành công!</strong> Thầy Tony đã nhận được số{' '}
-                      <strong className="text-emerald-700">{leadSubmittedPhone}</strong> và sẽ liên hệ tư vấn lộ trình &amp; xếp lịch 02 buổi học thử miễn phí sớm nhất (Hotline/Zalo thầy: <strong>{CONTACT_PHONE_DISPLAY}</strong>).
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => setLeadSubmittedPhone('')}
-                      className="text-xs font-bold text-emerald-800 bg-white border border-emerald-200 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition cursor-pointer shrink-0 self-start sm:self-center"
-                    >
-                      {lang === 'vi' ? 'Gửi thêm số khác' : 'Submit another'}
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleLeadSubmit} className="bg-white/95 rounded-xl border border-sky-200/80 p-3 sm:p-3.5 shadow-2xs space-y-2.5">
-                    <div className="grid grid-cols-1 sm:grid-cols-12 gap-2.5">
-                      <input
-                        type="text"
-                        value={leadName}
-                        onChange={(e) => setLeadName(e.target.value)}
-                        placeholder={lang === 'vi' ? 'Tên Phụ huynh / Học sinh' : 'Parent / Student Name'}
-                        className="sm:col-span-3 w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-sky-100"
-                      />
-                      <input
-                        id="lead-phone-input"
-                        type="tel"
-                        inputMode="numeric"
-                        required
-                        value={leadPhone}
-                        onChange={(e) => setLeadPhone(e.target.value)}
-                        placeholder={lang === 'vi' ? 'Số điện thoại Zalo (Bắt buộc) *' : 'Phone / Zalo number *'}
-                        className="sm:col-span-4 w-full px-3.5 py-2.5 rounded-xl border border-sky-300 bg-sky-50/30 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-500 placeholder:font-semibold focus:outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-sky-200"
-                      />
-                      <input
-                        type="text"
-                        value={leadNote}
-                        onChange={(e) => setLeadNote(e.target.value)}
-                        placeholder={
-                          lang === 'vi'
-                            ? 'Lớp / Môn / Band mục tiêu (VD: Lớp 9 IGCSE, IELTS 7.0...)'
-                            : 'Grade / Subject / Target Score'
-                        }
-                        className="sm:col-span-5 w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-sky-100"
-                      />
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                      <span className="text-[11.5px] text-slate-500 font-medium">
-                        {leadError ? (
-                          <span className="text-rose-600 font-bold">⚠️ {leadError}</span>
-                        ) : lang === 'vi' ? (
-                          '🔒 Cam kết bảo mật thông tin • Thầy Tony trực tiếp tư vấn chuyên môn (không qua sale làm phiền).'
-                        ) : (
-                          '🔒 Direct consultation with Mr. Tony — strictly confidential.'
-                        )}
-                      </span>
-                      <button
-                        type="submit"
-                        disabled={leadSubmitting}
-                        className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#0a5482] to-[#0e6ba8] hover:from-[#084266] hover:to-[#0a5482] disabled:opacity-60 text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-sm transition cursor-pointer whitespace-nowrap"
-                      >
-                        <span>🎁</span>
-                        <span>
-                          {leadSubmitting
-                            ? lang === 'vi'
-                              ? 'Đang gửi...'
-                              : 'Submitting...'
-                            : lang === 'vi'
-                            ? 'Đăng ký Nhận Tư vấn & Học thử'
-                            : 'Register for Free Trial'}
-                        </span>
-                      </button>
-                    </div>
-                  </form>
-                )}
               </div>
 
               {/* Course Description HTML */}
               {courseDescHtml && (
-                <div
-                  className="legacy-prose text-justify"
-                  dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
-                />
+                <div className="space-y-4">
+                  <div
+                    className="legacy-prose text-justify"
+                    dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
+                  />
+                  <div className="rounded-xl bg-sky-50/90 border border-sky-200 px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                    <div className="text-sm sm:text-base font-extrabold text-slate-800">
+                      💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
+                      <span className="text-[#0a5482] font-black">
+                        {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
+                      </span>
+                    </div>
+                    <div className="text-xs sm:text-sm font-bold text-slate-600">
+                      Hotline / Zalo Thầy Tony: <strong className="text-[#0a5482]">{CONTACT_PHONE_DISPLAY}</strong>
+                    </div>
+                  </div>
+                </div>
               )}
 
               {/* Keepsake Archive: Legacy 2013-2017 Web Interface Screenshots */}
@@ -1394,23 +1261,12 @@ export const CoursesPage: React.FC = () => {
                 </div>
               )}
 
-              {/* Action Buttons for Course (Direct Callback Form, Phone Call & Zalo Consultation) */}
+              {/* Action Buttons for Course (Phone Call & Zalo Consultation) */}
               <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-3">
-                <button
-                  type="button"
-                  onClick={scrollToLeadBox}
-                  className="bg-gradient-to-r from-[#0a5482] to-[#0e6ba8] hover:from-[#084266] hover:to-[#0a5482] text-white font-extrabold text-sm px-4 py-3 rounded-xl shadow-md transition flex items-center gap-2 cursor-pointer"
-                >
-                  <span>🎁</span>
-                  <span>
-                    {lang === 'vi' ? 'Điền SĐT Nhận 02 Buổi Học Thử' : 'Register for 2 Free Trial Lessons'}
-                  </span>
-                </button>
-
                 <a
                   href={`tel:${CONTACT_PHONE}`}
                   onClick={() => trackCourseConversion('Phone', courseTitle)}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-4 py-3 rounded-xl shadow-md transition flex items-center gap-2"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
                 >
                   <span>📞</span>
                   <span>
@@ -1421,22 +1277,11 @@ export const CoursesPage: React.FC = () => {
                 </a>
 
                 <a
-                  href={buildMessengerConsultUrl(courseTitle)}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={(e) => handleMessengerClick(e, courseTitle)}
-                  className="bg-gradient-to-r from-[#0084ff] to-[#6366f1] hover:from-[#0073e6] hover:to-[#4f46e5] text-white font-extrabold text-sm px-4 py-3 rounded-xl shadow-md transition flex items-center gap-2"
-                >
-                  <span>⚡</span>
-                  <span>{lang === 'vi' ? 'Hỏi nhanh qua Messenger' : 'Ask via Messenger'}</span>
-                </a>
-
-                <a
                   href={CONTACT_ZALO_URL}
                   target="_blank"
                   rel="noreferrer"
                   onClick={(e) => handleZaloClick(e, courseTitle)}
-                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-4 py-3 rounded-xl shadow-md transition flex items-center gap-2"
+                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
                 >
                   <span>💬</span>
                   <span>
@@ -1461,8 +1306,8 @@ export const CoursesPage: React.FC = () => {
                         </h2>
                         <p className="text-xs text-sky-200 font-medium">
                           {lang === 'vi'
-                            ? 'Bấm vào từng gói học bên dưới để xem chi tiết nội dung ôn luyện và đề cương môn học'
-                            : 'Click on any tutoring package below to view full details and syllabus'}
+                            ? 'Bấm vào từng gói học bên dưới để xem chi tiết nội dung và lộ trình ôn luyện'
+                            : 'Click on any tutoring package below to view full details'}
                         </p>
                       </div>
                     </div>
@@ -1514,9 +1359,6 @@ export const CoursesPage: React.FC = () => {
                                   alt={parentName}
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
-                                <span className="absolute top-2 left-2 bg-slate-950/80 backdrop-blur-xs text-amber-300 text-[10px] font-black px-2 py-0.5 rounded-md border border-white/15">
-                                  {parent.cc_code || 'TE'}
-                                </span>
                               </Link>
 
                               <div className="flex-1 min-w-0 space-y-2">
@@ -1537,6 +1379,13 @@ export const CoursesPage: React.FC = () => {
                                 <p className="text-xs sm:text-[13.5px] text-slate-600 font-medium leading-relaxed">
                                   {defaultSubjectsText || rowVisual.caption}
                                 </p>
+
+                                <div className="text-xs sm:text-sm font-bold text-slate-700">
+                                  💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
+                                  <strong className="text-[#0a5482]">
+                                    {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
+                                  </strong>
+                                </div>
 
                                 {subs.length > 0 && (
                                   <div className="flex flex-wrap gap-1.5 pt-0.5">
@@ -1577,110 +1426,25 @@ export const CoursesPage: React.FC = () => {
         </div>
       </div>
 
-      {/* SYLLABUS MODAL */}
-      {showSyllabusModal && (
-        <div
-          className="fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-50 flex items-center justify-center p-4"
-          onClick={() => setShowSyllabusModal(false)}
-        >
-          <div
-            className="bg-white rounded-3xl w-full max-w-4xl max-h-[88vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between pb-4 mb-5 border-b border-slate-200">
-              <h2 className="text-xl font-black text-[#0a5482]">
-                📋 {t('Courses Syllabus')} — {courseTitle}
-              </h2>
-              <button
-                type="button"
-                onClick={() => setShowSyllabusModal(false)}
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-rose-500 hover:text-white text-slate-600 font-bold flex items-center justify-center transition-colors cursor-pointer"
-              >
-                ✕
-              </button>
-            </div>
-
-            {renderSyllabusModalContent()}
-
-            <div className="mt-6 pt-4 border-t border-slate-200 flex flex-wrap items-center justify-end gap-3">
-              <button
-                type="button"
-                onClick={() => {
-                  setShowSyllabusModal(false);
-                  setTimeout(() => scrollToLeadBox(), 100);
-                }}
-                className="bg-gradient-to-r from-[#0a5482] to-[#0e6ba8] hover:from-[#084266] hover:to-[#0a5482] text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2 cursor-pointer"
-              >
-                <span>🎁</span>
-                <span>{lang === 'vi' ? 'Điền SĐT Học thử' : 'Free Trial Form'}</span>
-              </button>
-              <a
-                href={`tel:${CONTACT_PHONE}`}
-                onClick={() => trackCourseConversion('Phone', courseTitle)}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
-              >
-                <span>📞</span>
-                <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
-              </a>
-              <a
-                href={CONTACT_ZALO_URL}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(e) => handleZaloClick(e, courseTitle)}
-                className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-md transition flex items-center gap-2"
-              >
-                <span>💬</span>
-                <span>{lang === 'vi' ? 'Tư vấn qua Zalo' : 'Consult via Zalo'}</span>
-              </a>
-              <button
-                type="button"
-                onClick={() => setShowSyllabusModal(false)}
-                className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm px-5 py-2.5 rounded-xl transition cursor-pointer"
-              >
-                {lang === 'vi' ? 'Đóng' : 'Close'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* MOBILE STICKY BOTTOM BAR (1-Tap Messenger, Zalo, Phone Call & Callback Form) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-2 py-2 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] grid grid-cols-4 gap-1.5">
-        <button
-          type="button"
-          onClick={scrollToLeadBox}
-          className="inline-flex items-center justify-center gap-1 bg-[#0a5482] active:bg-[#084266] text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs cursor-pointer whitespace-nowrap"
-        >
-          <span>🎁</span>
-          <span>{lang === 'vi' ? 'Học thử' : 'Trial'}</span>
-        </button>
+      {/* MOBILE STICKY BOTTOM BAR (1-Tap Phone Call & Zalo) */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-3 py-2 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] grid grid-cols-2 gap-2">
         <a
-          href={buildMessengerConsultUrl(courseTitle)}
-          target="_blank"
-          rel="noreferrer"
-          onClick={(e) => handleMessengerClick(e, courseTitle)}
-          className="inline-flex items-center justify-center gap-1 bg-gradient-to-r from-[#0084ff] to-[#6366f1] text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs whitespace-nowrap"
+          href={`tel:${CONTACT_PHONE}`}
+          onClick={() => trackCourseConversion('Phone', courseTitle)}
+          className="inline-flex items-center justify-center gap-1.5 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-xs whitespace-nowrap"
         >
-          <span>⚡</span>
-          <span>Messenger</span>
+          <span>📞</span>
+          <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
         </a>
         <a
           href={CONTACT_ZALO_URL}
           target="_blank"
           rel="noreferrer"
           onClick={(e) => handleZaloClick(e, courseTitle)}
-          className="inline-flex items-center justify-center gap-1 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs whitespace-nowrap"
+          className="inline-flex items-center justify-center gap-1.5 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-xs whitespace-nowrap"
         >
           <span>💬</span>
-          <span>Zalo</span>
-        </a>
-        <a
-          href={`tel:${CONTACT_PHONE}`}
-          onClick={() => trackCourseConversion('Phone', courseTitle)}
-          className="inline-flex items-center justify-center gap-1 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-[11px] py-2.5 px-1 rounded-xl shadow-xs whitespace-nowrap"
-        >
-          <span>📞</span>
-          <span>{lang === 'vi' ? 'Gọi' : 'Call'}</span>
+          <span>Zalo: {CONTACT_PHONE_DISPLAY}</span>
         </a>
       </div>
     </div>
