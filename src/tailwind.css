@@ -66,19 +66,23 @@ h4:not(.legacy-prose *):not(.jodit-wysiwyg *) {
   -webkit-line-clamp: unset;
 }
 
-/* Smooth Micro-Animations for Modals & Panels */
+/* Smooth Micro-Animations for Modals & Panels (preserves Tailwind --tw-translate-x/y) */
 @keyframes tonyEnter {
   from {
     opacity: var(--tw-enter-opacity, 0);
-    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale(var(--tw-enter-scale, 1));
+    transform: translate3d(
+      calc(var(--tw-translate-x, 0px) + var(--tw-enter-translate-x, 0px)),
+      calc(var(--tw-translate-y, 0px) + var(--tw-enter-translate-y, 0px)),
+      0
+    ) scale(var(--tw-enter-scale, 1));
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(var(--tw-translate-x, 0px), var(--tw-translate-y, 0px), 0) scale(var(--tw-scale-x, 1), var(--tw-scale-y, 1));
   }
 }
 .animate-in {
-  animation: tonyEnter 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: tonyEnter 220ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 .fade-in { --tw-enter-opacity: 0; }
 .zoom-in-95 { --tw-enter-scale: 0.96; }

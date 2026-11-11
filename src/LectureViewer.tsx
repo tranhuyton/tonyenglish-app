@@ -5891,15 +5891,16 @@ export default function LectureViewer({
 
       {/* 🎯 POPUP NHIỆM VỤ - KHI BẤM VÀO BADGE BÀI TẬP TRONG SIDEBAR */}
       {isTaskMenuOpen && safeLectureTasks.length > 0 && (
-        <>
-          {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[80] animate-in fade-in duration-200" 
-            onClick={() => setIsTaskMenuOpen(false)} 
-          />
-
+        <div
+          className="fixed inset-0 z-[90] flex items-center justify-center p-4 bg-slate-900/35 backdrop-blur-[2px] animate-in fade-in duration-200"
+          onClick={() => setIsTaskMenuOpen(false)}
+        >
           {/* Popup task list - centered */}
-          <div ref={taskMenuRef} className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-[420px] max-h-[75vh] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-slate-100 overflow-hidden z-[90] animate-in zoom-in-95 fade-in duration-200 flex flex-col">
+          <div
+            ref={taskMenuRef}
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-[420px] max-h-[80vh] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.22)] border border-slate-100 overflow-hidden animate-in zoom-in-95 fade-in duration-200 flex flex-col"
+          >
             {/* Header */}
             {(() => {
               const displayCompletedCount = safeLectureTasks.filter((t: any) => {
@@ -6047,7 +6048,7 @@ export default function LectureViewer({
                })}
             </div>
           </div>
-        </>
+        </div>
       )}
 
       {activeLectureId && currentSafeTasks.length > 0 && !isSidebarOpen && !isTaskMenuOpen && !isTeacherBoardOpen && (
