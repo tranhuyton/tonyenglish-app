@@ -481,20 +481,20 @@ export function TestGuideVideoPlayer({
     <>
       {/* INLINE COLLAPSIBLE PLAYER */}
       {isOpen && (
-        <div className="w-full bg-[#18181b] border-b border-slate-700 shadow-xl overflow-hidden shrink-0 animate-in slide-in-from-top-2 duration-200">
-          <div className="px-4 py-2 bg-[#27272a] border-b border-[#3f3f46] flex items-center justify-between text-white text-[12px]">
+        <div className="w-full max-w-[860px] mx-auto my-2.5 rounded-2xl bg-[#18181b] border border-slate-700/80 shadow-xl overflow-hidden shrink-0 animate-in slide-in-from-top-2 duration-200">
+          <div className="px-4 py-2.5 bg-[#27272a] border-b border-[#3f3f46] flex items-center justify-between text-white text-[12px]">
             <div className="flex items-center gap-2 font-bold truncate">
-              <span className="text-red-500 animate-pulse text-sm">▶</span>
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0" />
               <span className="truncate">{activeItem?.title || 'Video hướng dẫn & gợi ý giải bài'}</span>
-              <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 uppercase tracking-wider shrink-0">
-                {sourceInfo.type === 'youtube' ? 'YouTube' : sourceInfo.type === 'drive' ? 'Google Drive' : sourceInfo.type === 'direct' ? 'Tệp Video' : 'Embed'}
+              <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-sky-500/20 text-sky-300 border border-sky-400/30 uppercase tracking-wider shrink-0">
+                {sourceInfo.type === 'youtube' ? 'YouTube' : sourceInfo.type === 'drive' ? 'Google Drive' : sourceInfo.type === 'direct' ? 'Full HD 1080p' : 'Embed'}
               </span>
             </div>
             <div className="flex items-center gap-2 shrink-0">
               <button
                 type="button"
                 onClick={() => onToggleTheater(true)}
-                className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white rounded text-[11px] font-medium transition flex items-center gap-1"
+                className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white rounded-lg text-[11px] font-semibold transition flex items-center gap-1 cursor-pointer"
                 title="Mở toàn màn hình / Xem rộng"
               >
                 <span>⛶</span> Phóng to
@@ -502,7 +502,7 @@ export function TestGuideVideoPlayer({
               <button
                 type="button"
                 onClick={onClose}
-                className="px-2 py-1 text-slate-400 hover:text-red-400 hover:bg-white/10 rounded transition font-bold"
+                className="px-2.5 py-1 text-slate-400 hover:text-red-400 hover:bg-white/10 rounded-lg transition font-bold cursor-pointer"
                 title="Đóng video"
               >
                 ✕ Đóng
@@ -512,7 +512,7 @@ export function TestGuideVideoPlayer({
 
           {renderVideoTabs()}
 
-          <div className="relative w-full aspect-video bg-black flex items-center justify-center max-h-[460px]">
+          <div className="relative w-full aspect-video bg-black flex items-center justify-center">
             {renderPlayer(false)}
           </div>
         </div>

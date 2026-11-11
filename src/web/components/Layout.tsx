@@ -1,5 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import {
+  Phone,
+  MessageCircle,
+  Search,
+  BookOpen,
+  GraduationCap,
+  Settings,
+  User,
+  Sparkles,
+  Globe,
+  Video,
+  Calendar,
+  MapPin,
+  Gift,
+  Lock,
+  Mail,
+  ArrowRight,
+  ChevronDown,
+} from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { supabase } from '../../supabase';
 
@@ -79,10 +98,15 @@ export const Layout: React.FC<{
 
   // Listen to custom event 'tony-open-lms' from anywhere in Web Portal
   useEffect(() => {
-    const handleOpenLms = () => {
+    const handleOpenLms = (e: Event) => {
+      const customEvt = e as CustomEvent;
       if (lmsRole === 'admin' || lmsRole === 'student') {
         onNavigateLms?.('student-resume');
       } else {
+        if (customEvt?.detail === 'register' || customEvt?.detail?.tab === 'register') {
+          setAuthTab('register');
+        }
+        setForgotPasswordMode(false);
         setLoginModalOpen(true);
       }
     };
@@ -421,19 +445,31 @@ export const Layout: React.FC<{
     : 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội';
   const phoneText = options['company_tel'] || options['company_phone'] || '0935 058 688';
   const emailText = options['company_email'] || 'tranhuyton@gmail.com';
+  const lowerPath = location.pathname.toLowerCase();
+  const registerTrialTitle = lowerPath.includes('igcse')
+    ? 'Đăng ký học thử IGCSE'
+    : lowerPath.includes('ielts')
+    ? 'Đăng ký học thử IELTS'
+    : 'Đăng ký học thử miễn phí';
+  const registerTrialSub = lowerPath.includes('igcse')
+    ? 'Tạo tài khoản miễn phí để học thử Bài giảng & Kho đề IGCSE Online'
+    : lowerPath.includes('ielts')
+    ? 'Tạo tài khoản miễn phí để trải nghiệm Phòng thi IELTS & AI Chấm bài'
+    : 'Tạo tài khoản miễn phí để trải nghiệm Bài giảng, Kho đề & Phòng thi AI';
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
-      {/* 1. TOP UTILITY BAR */}
-      <div className="bg-[#0f172a] text-slate-300 border-b border-slate-800 text-[13px] sm:text-sm">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2 flex flex-wrap items-center justify-between gap-2 sm:gap-3">
-          {/* Left info (Desktop / Tablet) */}
-          <div className="hidden md:flex items-center gap-4 flex-wrap">
+      {/* 1. COMPACT DESKTOP TOP UTILITY BAR (Hidden on Mobile for Clean Above-the-Fold UX) */}
+      <div className="hidden md:block bg-[#0f172a] text-slate-300 border-b border-slate-800/90 text-[12.5px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-10 flex items-center justify-between gap-3">
+          {/* Left info */}
+          <div className="flex items-center gap-4">
             <a
               href="tel:0935058688"
               className="inline-flex items-center gap-1.5 text-slate-200 hover:text-[#2ab4e8] font-semibold transition"
             >
-              <span className="text-[#2ab4e8]">📞</span> {phoneText}
+              <Phone className="w-3.5 h-3.5 text-[#2ab4e8]" />
+              <span>{phoneText}</span>
             </a>
             <a
               href="https://zalo.me/0935058688"
@@ -441,25 +477,28 @@ export const Layout: React.FC<{
               rel="noreferrer"
               className="hidden lg:inline-flex items-center gap-1.5 text-cyan-300 hover:text-white font-semibold transition"
             >
-              <span>💬</span> Zalo: 0935 058 688
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>Zalo: 0935 058 688</span>
             </a>
-            <span className="inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-1 rounded-full text-xs font-semibold border border-slate-700">
-              💡 {lang === 'vi' ? 'Click đúp vào từ tiếng Anh bất kỳ để tra từ điển' : 'Double-click any English word to look up'}
+            <span className="hidden xl:inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-0.5 rounded-full text-[11.5px] font-semibold border border-slate-700/80">
+              <Sparkles className="w-3 h-3 text-[#2ab4e8]" />
+              <span>{lang === 'vi' ? 'Click đúp vào từ tiếng Anh bất kỳ để tra từ điển' : 'Double-click any English word to look up'}</span>
             </span>
           </div>
 
           {/* Right tools: Search/Dictionary + Course selector + Language */}
-          <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-2.5 w-full md:w-auto ml-auto">
+          <div className="flex items-center justify-end gap-2.5 ml-auto">
             {/* Smart Dictionary & Search Bar */}
-            <div className="relative flex-1 md:flex-initial flex items-center bg-slate-800/95 border border-sky-400/50 hover:border-[#2ab4e8] rounded-lg focus-within:border-[#2ab4e8] focus-within:ring-2 focus-within:ring-[#2ab4e8]/25 shadow-xs transition-all min-w-0">
+            <div className="relative flex items-center bg-slate-800/95 border border-slate-700 hover:border-[#2ab4e8]/70 rounded-lg focus-within:border-[#2ab4e8] focus-within:ring-2 focus-within:ring-[#2ab4e8]/20 transition-all">
               <button
                 type="button"
                 onClick={() => setSearchDropdownOpen(!searchDropdownOpen)}
-                className="px-2 sm:px-2.5 py-1.5 text-xs font-bold text-[#2ab4e8] border-r border-slate-600/80 hover:bg-slate-700/60 rounded-l-lg flex items-center gap-1 whitespace-nowrap shrink-0"
+                className="px-2.5 py-1 text-[11.5px] font-bold text-[#2ab4e8] border-r border-slate-700 hover:bg-slate-700/60 rounded-l-lg flex items-center gap-1 whitespace-nowrap shrink-0 cursor-pointer"
                 title="Chọn chế độ tra cứu"
               >
-                {searchMode === 'dic' ? '📖 Từ điển' : searchMode === 'web' ? '🔍 Tìm bài' : '🌐 Dịch'}
-                <span className="text-[10px] opacity-75">▼</span>
+                {searchMode === 'dic' ? <BookOpen className="w-3.5 h-3.5" /> : searchMode === 'web' ? <Search className="w-3.5 h-3.5" /> : <Globe className="w-3.5 h-3.5" />}
+                <span>{searchMode === 'dic' ? 'Từ điển' : searchMode === 'web' ? 'Tìm bài' : 'Dịch'}</span>
+                <ChevronDown className="w-3 h-3 opacity-75" />
               </button>
               <input
                 type="text"
@@ -478,19 +517,19 @@ export const Layout: React.FC<{
                     ? t('TonyEnglish.vn search')
                     : t('Google translate')
                 }
-                className="bg-transparent text-white placeholder-slate-400 text-[13px] px-2.5 sm:px-3 py-1.5 flex-1 md:w-48 min-w-0 focus:outline-none"
+                className="bg-transparent text-white placeholder-slate-400 text-[12.5px] px-2.5 py-1 w-44 lg:w-52 focus:outline-none"
               />
               <button
                 type="button"
                 onClick={() => handleSearchSubmit()}
-                className="px-2 sm:px-2.5 py-1.5 text-slate-300 hover:text-white hover:bg-[#0a5482] rounded-r-lg transition-colors shrink-0"
+                className="px-2.5 py-1 text-slate-300 hover:text-white hover:bg-[#0a5482] rounded-r-lg transition-colors shrink-0 cursor-pointer"
                 title="Tra cứu"
               >
-                🔍
+                <Search className="w-3.5 h-3.5" />
               </button>
 
               {searchDropdownOpen && (
-                <div className="absolute right-0 top-full mt-1.5 w-56 bg-white text-slate-800 rounded-xl shadow-xl border border-slate-200 py-1.5 z-50">
+                <div className="absolute right-0 top-full mt-1.5 w-56 bg-white text-slate-800 rounded-xl shadow-xl border border-slate-200 py-1.5 z-50 animate-in fade-in slide-in-from-top-2">
                   <button
                     type="button"
                     onClick={() => {
@@ -503,11 +542,11 @@ export const Layout: React.FC<{
                         });
                       }
                     }}
-                    className={`w-full text-left px-3.5 py-2.5 text-[13px] font-semibold flex items-center justify-between hover:bg-slate-50 ${
+                    className={`w-full text-left px-3.5 py-2.5 text-[13px] font-semibold flex items-center justify-between hover:bg-slate-50 cursor-pointer ${
                       searchMode === 'dic' ? 'text-[#0a5482] bg-sky-50/60' : 'text-slate-700'
                     }`}
                   >
-                    <span>📖 {t('Look up dictionary')}</span>
+                    <span className="inline-flex items-center gap-2"><BookOpen className="w-4 h-4 text-[#0a5482]" /> {t('Look up dictionary')}</span>
                     {searchMode === 'dic' && <span className="text-[#2ab4e8] font-black">✓</span>}
                   </button>
                   <button
@@ -516,11 +555,11 @@ export const Layout: React.FC<{
                       setSearchMode('web');
                       setSearchDropdownOpen(false);
                     }}
-                    className={`w-full text-left px-3.5 py-2.5 text-[13px] font-semibold flex items-center justify-between hover:bg-slate-50 ${
+                    className={`w-full text-left px-3.5 py-2.5 text-[13px] font-semibold flex items-center justify-between hover:bg-slate-50 cursor-pointer ${
                       searchMode === 'web' ? 'text-[#0a5482] bg-sky-50/60' : 'text-slate-700'
                     }`}
                   >
-                    <span>🔍 {t('TonyEnglish.vn search')}</span>
+                    <span className="inline-flex items-center gap-2"><Search className="w-4 h-4 text-[#0a5482]" /> {t('TonyEnglish.vn search')}</span>
                     {searchMode === 'web' && <span className="text-[#2ab4e8] font-black">✓</span>}
                   </button>
                   <button
@@ -530,11 +569,11 @@ export const Layout: React.FC<{
                       setSearchDropdownOpen(false);
                       window.open('https://translate.google.com/?hl=en&tab=wT#en/vi/', '_blank');
                     }}
-                    className={`w-full text-left px-3.5 py-2.5 text-[13px] font-semibold flex items-center justify-between hover:bg-slate-50 ${
+                    className={`w-full text-left px-3.5 py-2.5 text-[13px] font-semibold flex items-center justify-between hover:bg-slate-50 cursor-pointer ${
                       searchMode === 'trans' ? 'text-[#0a5482] bg-sky-50/60' : 'text-slate-700'
                     }`}
                   >
-                    <span>🌐 {t('Google translate')}</span>
+                    <span className="inline-flex items-center gap-2"><Globe className="w-4 h-4 text-[#0a5482]" /> {t('Google translate')}</span>
                     <span className="text-xs text-slate-400">↗</span>
                   </button>
                 </div>
@@ -552,7 +591,7 @@ export const Layout: React.FC<{
                     navigate('/user/lecture');
                   }
                 }}
-                className="bg-slate-800 text-sky-300 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs font-semibold focus:outline-none hidden sm:block"
+                className="bg-slate-800 text-sky-300 border border-slate-700 rounded-lg px-2.5 py-1 text-xs font-semibold focus:outline-none"
               >
                 {userCoursesList.map((cc: any) => (
                   <option key={cc.cc_id} value={cc.cc_id}>
@@ -567,7 +606,7 @@ export const Layout: React.FC<{
               <button
                 type="button"
                 onClick={() => setLang('vi')}
-                className={`px-2.5 py-1 rounded-md text-xs font-bold transition-all ${
+                className={`px-2 py-0.5 rounded-md text-[11px] font-bold transition-all cursor-pointer ${
                   lang === 'vi' ? 'bg-[#2ab4e8] text-white shadow-sm' : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -576,7 +615,7 @@ export const Layout: React.FC<{
               <button
                 type="button"
                 onClick={() => setLang('en')}
-                className={`px-2.5 py-1 rounded-md text-xs font-bold transition-all ${
+                className={`px-2 py-0.5 rounded-md text-[11px] font-bold transition-all cursor-pointer ${
                   lang === 'en' ? 'bg-[#2ab4e8] text-white shadow-sm' : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -587,9 +626,9 @@ export const Layout: React.FC<{
         </div>
       </div>
 
-      {/* 2. MAIN STICKY NAVBAR */}
-      <nav className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 h-15 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+      {/* 2. MAIN STICKY GLASSMORPHIC NAVBAR */}
+      <nav className="bg-white/90 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-40 shadow-2xs">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 h-16 sm:h-[74px] flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 hover:opacity-90 transition-opacity shrink-0">
             <img
@@ -598,29 +637,29 @@ export const Layout: React.FC<{
                 (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
               }}
               alt="TonyEnglish"
-              className="h-8 sm:h-9 xl:h-11 w-auto object-contain"
+              className="h-8 sm:h-9 xl:h-10 w-auto object-contain"
             />
             <div className="flex flex-col items-start leading-none">
-              <div className="font-black text-[18px] sm:text-[21px] xl:text-[25px] tracking-tight">
+              <div className="font-display font-black text-[18px] sm:text-[21px] xl:text-[24px] tracking-tight">
                 <span className="text-[#2ab4e8]">TONY</span>
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
-              <span className="text-[9px] xl:text-[11px] font-bold uppercase tracking-wider xl:tracking-widest text-slate-400 mt-0.5 hidden sm:block">
+              <span className="text-[9px] xl:text-[10.5px] font-bold uppercase tracking-wider xl:tracking-widest text-slate-400 mt-0.5 hidden sm:block">
                 The future begins here
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-[13.5px] xl:text-[15px] font-bold transition-all whitespace-nowrap ${
+                className={`px-3 xl:px-3.5 py-2 rounded-xl text-[13.5px] xl:text-[14.5px] font-bold transition-all whitespace-nowrap ${
                   item.active
-                    ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-100'
-                    : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50'
+                    ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/70'
+                    : 'text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
                 }`}
               >
                 {item.label}
@@ -630,13 +669,14 @@ export const Layout: React.FC<{
             {user && (
               <Link
                 to="/user/lecture"
-                className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-[13.5px] xl:text-[15px] font-bold transition-all whitespace-nowrap ${
+                className={`px-3 xl:px-3.5 py-2 rounded-xl text-[13.5px] xl:text-[14.5px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-1.5 ${
                   isLecture
-                    ? 'bg-sky-50 text-[#0a5482] border border-sky-100'
-                    : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50'
+                    ? 'bg-sky-50 text-[#0a5482] border border-sky-200/70'
+                    : 'text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
                 }`}
               >
-                📖 {t('Lectures')}
+                <BookOpen className="w-4 h-4 text-[#2ab4e8]" />
+                <span>{t('Lectures')}</span>
               </Link>
             )}
           </div>
@@ -649,32 +689,34 @@ export const Layout: React.FC<{
                   <button
                     type="button"
                     onClick={() => onNavigateLms?.('student-resume')}
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[13px] xl:text-[14px] font-black uppercase tracking-wider px-2.5 py-1.5 sm:px-3.5 sm:py-2 xl:px-4 xl:py-2.5 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[13px] font-extrabold px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap inline-flex items-center gap-1.5 cursor-pointer"
                   >
-                    🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
+                    <GraduationCap className="w-4 h-4" />
+                    <span>{lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}</span>
                   </button>
                 )}
                 <button
                   type="button"
                   onClick={() => (lmsRole === 'admin' ? onNavigateLms?.('admin') : onNavigateLms?.('student-resume'))}
                   title={lmsRole === 'admin' ? (lang === 'vi' ? 'Quản Trị' : 'Admin Setting') : (lang === 'vi' ? 'Góc Học Viên' : 'Student Portal')}
-                  className={`bg-gradient-to-r from-[#2ab4e8] to-[#0a5482] hover:opacity-95 text-white font-black rounded-xl transition shadow-md shadow-sky-500/20 active:scale-95 whitespace-nowrap flex items-center justify-center ${
+                  className={`bg-gradient-to-r from-[#0a5482] to-[#1e74a8] hover:from-[#084266] hover:to-[#0a5482] text-white font-extrabold rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap inline-flex items-center justify-center gap-1.5 cursor-pointer ${
                     lmsRole === 'admin'
-                      ? 'text-[14px] sm:text-[15px] px-2.5 py-1.5 sm:px-3 sm:py-2 2xl:px-4 2xl:py-2.5'
-                      : 'text-[11px] sm:text-[14px] px-2.5 py-1.5 sm:px-4 sm:py-2.5'
+                      ? 'text-[13px] sm:text-[14px] px-2.5 py-2 sm:px-3.5 sm:py-2.5'
+                      : 'text-[12px] sm:text-[13.5px] px-3 py-2 sm:px-4 sm:py-2.5'
                   }`}
                 >
                   {lmsRole === 'admin' ? (
                     <>
-                      <span>⚙️</span>
-                      <span className="hidden 2xl:inline ml-1.5">
-                        {lang === 'vi' ? 'Quản Trị ➜' : 'Admin Setting ➜'}
+                      <Settings className="w-4 h-4" />
+                      <span className="hidden 2xl:inline">
+                        {lang === 'vi' ? 'Quản Trị' : 'Admin'}
                       </span>
                     </>
                   ) : (
                     <>
-                      🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
-                      <span className="hidden sm:inline ml-1">➜</span>
+                      <GraduationCap className="w-4 h-4 text-[#2ab4e8]" />
+                      <span>{lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}</span>
+                      <ArrowRight className="w-3.5 h-3.5 hidden sm:inline" />
                     </>
                   )}
                 </button>
@@ -683,32 +725,47 @@ export const Layout: React.FC<{
               <div className="flex items-center gap-2">
                 <Link
                   to="/user/profile"
-                  className="bg-slate-100 hover:bg-slate-200 text-[#0a5482] text-xs sm:text-[15px] font-bold px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl transition flex items-center gap-1.5 sm:gap-2"
+                  className="bg-slate-100 hover:bg-slate-200 text-[#0a5482] text-xs sm:text-[14px] font-bold px-3 py-2 sm:px-3.5 rounded-xl transition flex items-center gap-1.5"
                 >
-                  <span>👤</span>
+                  <User className="w-4 h-4" />
                   <span className="max-w-[90px] sm:max-w-[120px] truncate">
                     {user.user_fullname?.trim() ? user.user_fullname.trim().split(' ').slice(-1)[0] : user.user_name}
                   </span>
                 </Link>
               </div>
             ) : (
-              <button
-                type="button"
-                onClick={() => {
-                  setForgotPasswordMode(false);
-                  setLoginModalOpen(true);
-                }}
-                className="bg-[#0a5482] hover:bg-[#084266] text-white text-xs sm:text-[15px] font-bold px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-xl transition shadow-md shadow-blue-900/15 active:scale-95 whitespace-nowrap"
-              >
-                {t('Login')}
-              </button>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setAuthTab('register');
+                    setForgotPasswordMode(false);
+                    setLoginModalOpen(true);
+                  }}
+                  className="hidden sm:inline-flex items-center gap-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/90 text-[13px] font-extrabold px-3.5 py-2 rounded-xl transition active:scale-95 whitespace-nowrap cursor-pointer"
+                >
+                  <Gift className="w-3.5 h-3.5 text-amber-600" />
+                  <span>{lang === 'vi' ? 'Học thử' : 'Free Trial'}</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setAuthTab('login');
+                    setForgotPasswordMode(false);
+                    setLoginModalOpen(true);
+                  }}
+                  className="bg-[#0a5482] hover:bg-[#084266] text-white text-xs sm:text-[14px] font-extrabold px-3.5 py-2 sm:px-4.5 sm:py-2.5 rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap cursor-pointer"
+                >
+                  {t('Login')}
+                </button>
+              </div>
             )}
 
             {/* Mobile Hamburger Button */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-1.5 sm:p-2 rounded-xl text-slate-600 hover:bg-slate-100"
+              className="lg:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 cursor-pointer"
               aria-label="Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -722,15 +779,51 @@ export const Layout: React.FC<{
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown Menu (Includes Compact Search + Language Switcher) */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-3 space-y-1.5 shadow-lg">
+          <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-3.5 space-y-2 shadow-xl animate-in fade-in slide-in-from-top-2">
+            {/* Mobile Quick Dictionary / Search */}
+            <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+              <div className="flex-1 flex items-center bg-slate-100 border border-slate-200 rounded-xl px-3 py-2 focus-within:border-[#2ab4e8] focus-within:bg-white">
+                <Search className="w-4 h-4 text-slate-400 shrink-0" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      handleSearchSubmit(e);
+                      setMobileMenuOpen(false);
+                    }
+                  }}
+                  placeholder={t('Look up dictionary')}
+                  className="bg-transparent text-slate-800 placeholder-slate-400 text-sm px-2.5 flex-1 min-w-0 focus:outline-none"
+                />
+              </div>
+              <div className="flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => setLang('vi')}
+                  className={`px-2 py-1 rounded-lg text-xs font-bold ${lang === 'vi' ? 'bg-[#0a5482] text-white' : 'text-slate-500'}`}
+                >
+                  VN
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLang('en')}
+                  className={`px-2 py-1 rounded-lg text-xs font-bold ${lang === 'en' ? 'bg-[#0a5482] text-white' : 'text-slate-500'}`}
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+
             {navItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-4 py-2.5 rounded-xl text-base font-bold ${
+                className={`block px-3.5 py-2.5 rounded-xl text-[15px] font-bold ${
                   item.active ? 'bg-sky-50 text-[#0a5482]' : 'text-slate-700 hover:bg-slate-50'
                 }`}
               >
@@ -742,19 +835,30 @@ export const Layout: React.FC<{
                 <Link
                   to="/user/lecture"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-2.5 rounded-xl text-base font-bold text-slate-700 hover:bg-slate-50"
+                  className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-[15px] font-bold text-slate-700 hover:bg-slate-50"
                 >
-                  📖 {t('Lectures')}
+                  <BookOpen className="w-4 h-4 text-[#0a5482]" />
+                  <span>{t('Lectures')}</span>
                 </Link>
                 <Link
                   to="/user/profile"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-2.5 rounded-xl text-base font-bold text-slate-700 hover:bg-slate-50"
+                  className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-[15px] font-bold text-slate-700 hover:bg-slate-50"
                 >
-                  👤 {t('Profile')}
+                  <User className="w-4 h-4 text-[#0a5482]" />
+                  <span>{t('Profile')}</span>
                 </Link>
               </>
             )}
+
+            <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500 px-1">
+              <a href="tel:0935058688" className="inline-flex items-center gap-1.5 text-[#0a5482] font-bold">
+                <Phone className="w-3.5 h-3.5" /> {phoneText}
+              </a>
+              <a href="https://zalo.me/0935058688" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sky-600 font-bold">
+                <MessageCircle className="w-3.5 h-3.5" /> Zalo tư vấn
+              </a>
+            </div>
           </div>
         )}
       </nav>
@@ -917,34 +1021,34 @@ export const Layout: React.FC<{
       {/* 5. UNIFIED LOGIN & FORGOT PASSWORD MODAL */}
       {loginModalOpen && (
         <div
-          className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in"
           onClick={() => {
             setLoginModalOpen(false);
             setForgotPasswordMode(false);
           }}
         >
           <div
-            className="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden"
+            className="bg-white rounded-3xl w-full max-w-md shadow-2xl border border-slate-200/80 overflow-hidden animate-in zoom-in-95"
             onClick={(e) => e.stopPropagation()}
           >
             {!forgotPasswordMode ? (
               <>
-                <div className="bg-slate-50 px-8 pt-6 pb-4 border-b border-slate-200">
+                <div className="bg-slate-50/90 px-7 sm:px-8 pt-6 pb-4 border-b border-slate-200/80">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <h2 className="text-2xl font-black text-slate-800">
-                        {authTab === 'login' ? t('Sign in') : 'Đăng ký học thử IGCSE'}
+                      <h2 className="text-xl sm:text-2xl font-black text-slate-800">
+                        {authTab === 'login' ? t('Sign in') : registerTrialTitle}
                       </h2>
-                      <p className="text-xs text-slate-500 mt-0.5">
+                      <p className="text-xs text-slate-500 mt-1 leading-relaxed">
                         {authTab === 'login'
-                          ? 'Đăng nhập vào Góc Học Viên & Luyện Thi TonyEnglish'
-                          : 'Tạo tài khoản miễn phí để học thử & làm đề IGCSE Online'}
+                          ? 'Đăng nhập vào Góc Học Viên & Hệ thống Luyện Thi TonyEnglish'
+                          : registerTrialSub}
                       </p>
                     </div>
                     <button
                       type="button"
                       onClick={() => setLoginModalOpen(false)}
-                      className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors leading-none"
+                      className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors leading-none cursor-pointer"
                     >
                       &times;
                     </button>
@@ -958,13 +1062,14 @@ export const Layout: React.FC<{
                         setAuthTab('login');
                         setLoginError('');
                       }}
-                      className={`py-2 rounded-lg text-xs font-extrabold transition-all cursor-pointer ${
+                      className={`py-2 px-2 rounded-lg text-xs font-extrabold transition-all inline-flex items-center justify-center gap-1.5 cursor-pointer ${
                         authTab === 'login'
                           ? 'bg-white text-[#0a5482] shadow-xs'
                           : 'text-slate-600 hover:text-slate-900'
                       }`}
                     >
-                      🔑 Đăng nhập
+                      <Lock className="w-3.5 h-3.5" />
+                      <span>Đăng nhập</span>
                     </button>
                     <button
                       type="button"
@@ -972,13 +1077,14 @@ export const Layout: React.FC<{
                         setAuthTab('register');
                         setLoginError('');
                       }}
-                      className={`py-2 rounded-lg text-xs font-extrabold transition-all cursor-pointer ${
+                      className={`py-2 px-2 rounded-lg text-xs font-extrabold transition-all inline-flex items-center justify-center gap-1.5 cursor-pointer ${
                         authTab === 'register'
                           ? 'bg-white text-[#0a5482] shadow-xs'
                           : 'text-slate-600 hover:text-slate-900'
                       }`}
                     >
-                      🎁 Đăng ký học thử IGCSE
+                      <Gift className="w-3.5 h-3.5 text-amber-600" />
+                      <span className="truncate">{registerTrialTitle}</span>
                     </button>
                   </div>
                 </div>

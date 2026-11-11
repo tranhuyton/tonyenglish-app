@@ -1,4 +1,17 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import {
+  BookOpen,
+  GraduationCap,
+  ArrowRight,
+  Play,
+  CheckCircle2,
+  Clock,
+  Sparkles,
+  Globe,
+  FolderOpen,
+  FileText,
+  Lock,
+} from 'lucide-react';
 import { supabase } from './supabase';
 import AssignmentCalendar from './AssignmentCalendar';
 import TaskBoard from './TaskBoard';
@@ -6,6 +19,15 @@ import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 import { parseClassConfig } from './classConfigUtils';
+
+const SUBFOLDER_PALETTES = [
+  { gradient: 'from-[#073b5c] via-[#0a5482] to-[#136f9f]', accent: 'text-sky-200', pill: 'bg-sky-50 text-[#0a5482] border-sky-200/80' },
+  { gradient: 'from-[#064e3b] via-[#047857] to-[#0d9488]', accent: 'text-emerald-200', pill: 'bg-emerald-50 text-emerald-700 border-emerald-200/80' },
+  { gradient: 'from-[#1e1b4b] via-[#3730a3] to-[#4f46e5]', accent: 'text-indigo-200', pill: 'bg-indigo-50 text-indigo-700 border-indigo-200/80' },
+  { gradient: 'from-[#451a03] via-[#92400e] to-[#b45309]', accent: 'text-amber-200', pill: 'bg-amber-50 text-amber-800 border-amber-200/80' },
+  { gradient: 'from-[#0f172a] via-[#1e3a5f] to-[#0284c7]', accent: 'text-cyan-200', pill: 'bg-sky-50 text-[#0a5482] border-sky-200/80' },
+  { gradient: 'from-[#3b0764] via-[#6b21a8] to-[#7e22ce]', accent: 'text-purple-200', pill: 'bg-purple-50 text-purple-700 border-purple-200/80' },
+];
 
 const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800', 
@@ -1672,6 +1694,83 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const inProgressTestId = Array.from(inProgressIds)[0];
   const inProgressTest = useMemo(() => allTests.find(t => String(t.id) === inProgressTestId), [allTests, inProgressTestId]);
 
+  // 🎯 Smart Target Display (Auto-adapts between IELTS 6.5+ and IGCSE A / A*)
+  const heroTargetInfo = useMemo(() => {
+    const activeCourses = filterCourse === 'all' ? courses : courses.filter(c => String(c.id) === String(filterCourse));
+    const hasIelts = activeCourses.some(c => /ielts/i.test(c.title || '') || c.type === 'IELTS');
+    if (hasIelts) {
+      return { label: 'Mục tiêu IELTS', value: courseTargets.ielts || '6.5+' };
+    }
+    const primaryCourse = activeCourses[0] || courses[0];
+    const hasIgcse = activeCourses.some(c => /igcse|0654|0620|0625|0610|0450|0455|0460|0580|0510/i.test(c.title || ''));
+    const savedGrade = primaryCourse ? courseTargets[String(primaryCourse.id)] : '';
+    if (savedGrade) {
+      return { label: hasIgcse ? 'Mục tiêu IGCSE' : 'Mục tiêu khóa', value: savedGrade };
+    }
+    return { label: hasIgcse ? 'Mục tiêu IGCSE' : 'Mục tiêu đầu ra', value: hasIgcse ? 'A / A*' : (courseTargets.ielts || '85%+') };
+  }, [courses, filterCourse, courseTargets]);
+
+  // ⚡ Quick-Resume ("Học tiếp 1 chạm") for Lecture & Practice Test
+  const resumeLectureInfo = useMemo(() => {
+    const candidateCourses = filterCourse === 'all' ? courses : courses.filter(c => String(c.id) === String(filterCourse));
+    // 1. Check last opened lecture in localStorage/sessionStorage
+    for (const c of candidateCourses) {
+      let lastId: string | null = null;
+      try {
+        if (currentUser?.id) {
+          lastId = localStorage.getItem(`tony_last_lec_${currentUser.id}_${c.id}`);
+        }
+        if (!lastId) {
+          lastId = sessionStorage.getItem(`tony_last_lec_${c.id}`);
+        }
+      } catch (e) {}
+      if (lastId) {
+        const found = allLectures.find((l: any) => String(l.id) === String(lastId) && String(l.course_id) === String(c.id));
+        if (found) {
+          return { lecture: found, course: c, isRecent: true };
+        }
+      }
+    }
+    // 2. Fallback: first uncompleted lecture in the first enrolled course that has lectures
+    for (const c of candidateCourses) {
+      const courseLecs = allLectures
+        .filter((l: any) => String(l.course_id) === String(c.id))
+        .sort((a: any, b: any) => (a.display_order || 0) - (b.display_order || 0));
+      if (courseLecs.length === 0) continue;
+      const doneSet = courseStats[c.id]?.completedLecIds || new Set();
+      const nextLec = courseLecs.find((l: any) => !doneSet.has(String(l.id))) || courseLecs[0];
+      return { lecture: nextLec, course: c, isRecent: false };
+    }
+    return null;
+  }, [courses, filterCourse, allLectures, currentUser?.id, courseStats]);
+
+  const resumeTestInfo = useMemo(() => {
+    const folderCourseLookup: Record<string, string> = {};
+    allFolders.forEach((f: any) => {
+      if (f.course_id) folderCourseLookup[String(f.id)] = String(f.course_id);
+    });
+    if (inProgressTest) {
+      const cid = (inProgressTest.folder_id && folderCourseLookup[String(inProgressTest.folder_id)]) || String(inProgressTest.course_id || '');
+      const courseObj = courses.find(c => String(c.id) === cid);
+      if (!isCourseTrial(cid)) {
+        return { test: inProgressTest, course: courseObj, isDraft: true };
+      }
+    }
+    const candidateCourses = filterCourse === 'all' ? courses : courses.filter(c => String(c.id) === String(filterCourse));
+    for (const c of candidateCourses) {
+      if (isCourseTrial(c.id)) continue;
+      const cTests = allTests.filter((t: any) => {
+        const tCid = (t.folder_id && folderCourseLookup[String(t.folder_id)]) || String(t.course_id || '');
+        return tCid === String(c.id);
+      });
+      const nextUnfinished = cTests.find((t: any) => !completedTestIdsSet.has(String(t.id)));
+      if (nextUnfinished) {
+        return { test: nextUnfinished, course: c, isDraft: false };
+      }
+    }
+    return null;
+  }, [inProgressTest, courses, filterCourse, allTests, allFolders, completedTestIdsSet]);
+
   const hour = new Date().getHours();
   let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
   
@@ -1878,75 +1977,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   return (
     <div className="min-h-[100dvh] bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 md:pb-0">
-      {/* 1. TOP UTILITY BAR (Đồng bộ với TonyEnglish.vn Layout) */}
-      <div className="bg-[#0f172a] text-slate-300 border-b border-slate-800 text-[12px] sm:text-[13px] shrink-0">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-2">
-          <div className="hidden md:flex items-center gap-4 flex-wrap">
-            <a href="tel:0935058688" className="inline-flex items-center gap-1.5 text-slate-200 hover:text-[#2ab4e8] font-semibold transition">
-              <span className="text-[#2ab4e8]">📞</span> 0935 058 688
-            </a>
-            <a href="mailto:tranhuyton@gmail.com" className="hidden lg:inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition">
-              <span className="text-[#2ab4e8]">✉️</span> tranhuyton@gmail.com
-            </a>
-            <span className="inline-flex items-center gap-1.5 bg-slate-800/90 text-sky-300 px-3 py-0.5 rounded-full text-xs font-semibold border border-slate-700">
-              💡 Click đúp vào từ tiếng Anh bất kỳ để tra từ điển
-            </span>
-          </div>
-
-          <div className="flex items-center justify-between md:justify-end gap-2 sm:gap-3 w-full md:w-auto ml-auto">
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  resetWorkspaceAndChat();
-                  window.history.pushState({}, '', '/');
-                  onNavigate?.('home');
-                }}
-                className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
-              >
-                <span>🏠</span>
-                <span>Trang chủ</span>
-              </button>
-              <a
-                href="/news"
-                onClick={(e) => {
-                  e.preventDefault();
-                  resetWorkspaceAndChat();
-                  window.history.pushState({}, '', '/news');
-                  onNavigate?.('home');
-                }}
-                className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
-              >
-                <span>📚</span>
-                <span>Thư viện bài đọc</span>
-              </a>
-              <a
-                href="/videos"
-                onClick={(e) => {
-                  e.preventDefault();
-                  resetWorkspaceAndChat();
-                  window.history.pushState({}, '', '/videos');
-                  onNavigate?.('home');
-                }}
-                className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-[#2ab4e8] px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition-colors cursor-pointer"
-              >
-                <span>🎬</span>
-                <span>Kho Video</span>
-              </a>
-            </div>
-            <span className="inline-flex items-center gap-1.5 bg-[#0a5482]/80 text-sky-200 px-2.5 py-0.5 rounded-md text-[11px] font-bold border border-sky-700/50">
-              🎓 LMS Portal
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* 2. MAIN STICKY NAVBAR (Đồng bộ 100% với TonyEnglish.vn) */}
-      <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs shrink-0">
-        <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 h-15 sm:h-20 flex items-center justify-between gap-2 sm:gap-4 transition-all">
+      {/* UNIFIED MODERN GLASSMORPHIC LMS HEADER (Single-Bar Clean App Workspace) */}
+      <header className="bg-white/90 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-40 shadow-2xs shrink-0">
+        <div className="max-w-7xl w-full mx-auto px-3.5 sm:px-6 h-16 sm:h-[72px] flex items-center justify-between gap-2 sm:gap-4 transition-all">
           
           {/* Brand Logo */}
-          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:opacity-90 transition-opacity shrink-0" onClick={() => {
+          <div className="flex items-center gap-2 sm:gap-2.5 cursor-pointer hover:opacity-90 transition-opacity shrink-0" onClick={() => {
               resetWorkspaceAndChat(); 
               setActiveTab('library');
               setActiveView('dashboard');
@@ -1959,14 +1995,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
               }}
               alt="TonyEnglish"
-              className="h-8 sm:h-11 w-auto object-contain"
+              className="h-8 sm:h-10 w-auto object-contain"
             />
             <div className="flex flex-col items-start leading-none">
-              <div className="font-black text-[18px] sm:text-[24px] tracking-tight">
+              <div className="font-display font-black text-[18px] sm:text-[22px] tracking-tight">
                 <span className="text-[#2ab4e8]">TONY</span>
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
-              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-400 mt-0.5 hidden sm:block">
+              <span className="text-[9.5px] sm:text-[10.5px] font-bold uppercase tracking-widest text-slate-400 mt-0.5 hidden sm:block">
                 Student Learning Portal
               </span>
             </div>
@@ -2043,11 +2079,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 window.history.pushState({}, '', '/');
                 onNavigate?.('home');
               }}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs sm:text-[13px] font-bold transition-all cursor-pointer shrink-0"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100/90 hover:bg-sky-50 text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs sm:text-[13px] font-bold transition-all cursor-pointer shrink-0"
               title="Quay ra Cổng thông tin, Thư viện bài đọc & Kho Video TonyEnglish.vn"
             >
-              <span>🌐</span>
-              <span>Trang chủ &amp; Thư viện</span>
+              <Globe className="w-3.5 h-3.5 text-[#2ab4e8]" />
+              <span>Trang chủ</span>
             </button>
 
             <div className="hidden lg:flex items-center">
@@ -2177,8 +2213,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       className="bg-white/10 hover:bg-white/15 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5 cursor-pointer transition-colors"
                       title="Xem báo cáo chi tiết"
                     >
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-amber-300/90">Mục tiêu</div>
-                      <div className="text-lg sm:text-xl font-black text-amber-300 mt-0.5">{courseTargets.ielts || '6.5+'} <span className="text-xs font-normal text-white/70">↗</span></div>
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-amber-300/90 truncate">{heroTargetInfo.label}</div>
+                      <div className="text-lg sm:text-xl font-black text-amber-300 mt-0.5">{heroTargetInfo.value} <span className="text-xs font-normal text-white/70">↗</span></div>
                     </div>
                   </div>
                 </div>
@@ -2216,6 +2252,89 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
               </div>
             </div>
+
+            {/* ⚡ TIẾP TỤC HỌC TẬP 1 CHẠM (QUICK-RESUME STRIP) */}
+            {(resumeLectureInfo || resumeTestInfo) && (
+              <div className="mb-8 sm:mb-10">
+                <div className="flex items-center gap-2 mb-3">
+                  <Sparkles className="w-4 h-4 text-[#0a5482]" />
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                    Học tiếp 1 chạm • Vào thẳng bài gần nhất
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {resumeLectureInfo && (
+                    <button
+                      type="button"
+                      onClick={() => handleGoToLecture(String(resumeLectureInfo.course.id), String(resumeLectureInfo.lecture.id))}
+                      className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-4 sm:p-5 shadow-2xs hover:shadow-soft transition-all flex items-center justify-between gap-4 text-left group cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3.5 min-w-0">
+                        <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                          <BookOpen className="w-5 h-5" />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-[10.5px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/70">
+                              {resumeLectureInfo.isRecent ? 'Đang học gần nhất' : 'Bài giảng gợi ý'}
+                            </span>
+                            <span className="text-[11px] font-semibold text-slate-400 truncate">
+                              {resumeLectureInfo.course.title}
+                            </span>
+                          </div>
+                          <h4 className="font-display font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] truncate">
+                            {resumeLectureInfo.lecture.title}
+                          </h4>
+                        </div>
+                      </div>
+                      <span className="w-9 h-9 rounded-xl bg-slate-100 group-hover:bg-[#0a5482] text-slate-600 group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
+                        <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </button>
+                  )}
+
+                  {resumeTestInfo && (
+                    <button
+                      type="button"
+                      onClick={() => handleStartTestClick(resumeTestInfo.test)}
+                      className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-4 sm:p-5 shadow-2xs hover:shadow-soft transition-all flex items-center justify-between gap-4 text-left group cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3.5 min-w-0">
+                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-colors border ${
+                          resumeTestInfo.isDraft
+                            ? 'bg-amber-50 border-amber-200 text-amber-600 group-hover:bg-amber-500 group-hover:text-white'
+                            : 'bg-sky-50 border-sky-200 text-[#0a5482] group-hover:bg-[#0a5482] group-hover:text-white'
+                        }`}>
+                          <Play className="w-5 h-5 fill-current" />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className={`text-[10.5px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md border ${
+                              resumeTestInfo.isDraft
+                                ? 'text-amber-800 bg-amber-50 border-amber-200'
+                                : 'text-[#0a5482] bg-sky-50 border-sky-200/80'
+                            }`}>
+                              {resumeTestInfo.isDraft ? 'Đề đang làm dở' : 'Luyện đề tiếp theo'}
+                            </span>
+                            {resumeTestInfo.course && (
+                              <span className="text-[11px] font-semibold text-slate-400 truncate">
+                                {resumeTestInfo.course.title}
+                              </span>
+                            )}
+                          </div>
+                          <h4 className="font-display font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] truncate">
+                            {resumeTestInfo.test.title}
+                          </h4>
+                        </div>
+                      </div>
+                      <span className="w-9 h-9 rounded-xl bg-slate-100 group-hover:bg-[#0a5482] text-slate-600 group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
+                        <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
 
             {/* BẢNG CẢNH BÁO DEADLINE (To-do list) */}
             {upcomingDeadlines.length > 0 && (
@@ -2341,7 +2460,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       
                       const testProgress = stats.testCount > 0 ? Math.min(100, Math.round((stats.completedTestIds.size / stats.testCount) * 100)) : 0;
                       const lecProgress = stats.lecCount > 0 ? Math.min(100, Math.round((stats.completedLecIds.size / stats.lecCount) * 100)) : 0;
-                      const overallProgress = Math.round((testProgress + lecProgress) / 2);
+                      const overallProgress =
+                        stats.testCount > 0 && stats.lecCount > 0
+                          ? Math.round((testProgress + lecProgress) / 2)
+                          : stats.testCount > 0
+                          ? testProgress
+                          : stats.lecCount > 0
+                          ? lecProgress
+                          : 0;
 
                       return (
                         <div key={course.id} className={`bg-white rounded-2xl sm:rounded-3xl border overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex ${isTrial ? 'border-amber-300/90 hover:border-amber-400' : 'border-slate-200/90 hover:border-[#2ab4e8]/60'} ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
@@ -2683,22 +2809,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         isTrialCourseView &&
                         (currentSubFolders.length > 1 ? !(folderPage === 1 && idx < 2) : idx > 0);
                       const childCount = allFolders.filter(f => f.parent_id === subFolder.id).length;
-                      const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
-                      const parentFolder = subFolder.parent_id ? allFolders.find(f => f.id === subFolder.parent_id) : null;
+                      const folderTests = allTests.filter(t => t.folder_id === subFolder.id);
+                      const testCount = folderTests.length;
+                      const completedInFolder = folderTests.filter(t => completedTestIdsSet.has(String(t.id))).length;
+                      const folderCompletionPct = testCount > 0 ? Math.round((completedInFolder / testCount) * 100) : 0;
                       const isTopLevel = !subFolder.parent_id || subFolder.parent_id === 'null' || subFolder.parent_id === '';
                       const defaultImage = FOLDER_IMAGES[idx % FOLDER_IMAGES.length];
-                      
-                      // Inherit parent image if no thumbnail, and apply hue-rotate if it's inherited (to avoid duplicates)
-                      const isInherited = !subFolder.thumbnail_url && parentFolder?.thumbnail_url;
-                      const displayImage = subFolder.thumbnail_url || (parentFolder ? parentFolder.thumbnail_url : null) || defaultImage;
-                      const hueRotate = (!isTopLevel && isInherited) ? `hue-rotate(${(idx * 65) % 360}deg)` : 'none';
+                      const hasCustomThumb = Boolean(subFolder.thumbnail_url && String(subFolder.thumbnail_url).trim() !== '');
+                      const displayImage = hasCustomThumb ? subFolder.thumbnail_url : defaultImage;
+                      const palette = SUBFOLDER_PALETTES[idx % SUBFOLDER_PALETTES.length];
                       
                       let badgeText = null;
                       let displayTitle = subFolder.title;
                       
                       if (!isTopLevel) {
-                          const prefixMatch = subFolder.title.match(/^([A-Z0-9]+)\s*:/i);
-                          if (prefixMatch && prefixMatch[1].length <= 4) {
+                          const prefixMatch = subFolder.title.match(/^([A-Z0-9.]+)\s*[:.-]\s*/i);
+                          if (prefixMatch && prefixMatch[1].length <= 5) {
                               badgeText = prefixMatch[1].toUpperCase();
                               displayTitle = subFolder.title.substring(prefixMatch[0].length).trim();
                           }
@@ -2718,17 +2844,31 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           className={`rounded-2xl border overflow-hidden shadow-xs transition-all duration-300 cursor-pointer flex flex-col group relative ${
                             isFolderLocked
                               ? 'bg-slate-100 border-slate-200/90 grayscale opacity-65 hover:opacity-80'
-                              : 'bg-white border-slate-200/90 hover:shadow-xl hover:-translate-y-1 hover:border-[#2ab4e8]'
+                              : 'bg-white border-slate-200/90 hover:shadow-soft hover:-translate-y-1 hover:border-[#2ab4e8]'
                           }`}
                         >
-                          <div className="h-[125px] relative overflow-hidden bg-slate-900">
-                            <img src={displayImage} style={{ filter: hueRotate }} loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ${isFolderLocked ? 'opacity-50' : 'group-hover:scale-105 opacity-85'}`} alt="folder" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent"></div>
+                          <div className={`h-[122px] relative overflow-hidden ${!isTopLevel && !hasCustomThumb ? `bg-gradient-to-br ${palette.gradient}` : 'bg-slate-900'}`}>
+                            {(isTopLevel || hasCustomThumb) ? (
+                              <>
+                                <img src={displayImage} loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ${isFolderLocked ? 'opacity-50' : 'group-hover:scale-105 opacity-85'}`} alt="folder" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent" />
+                              </>
+                            ) : (
+                              <>
+                                <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none" />
+                                <div className="absolute top-3 left-4 flex items-center gap-1.5">
+                                  <FolderOpen className={`w-4 h-4 ${palette.accent} opacity-90`} />
+                                  <span className={`text-[10.5px] font-extrabold uppercase tracking-wider ${palette.accent} opacity-90`}>
+                                    {badgeText ? `Topic ${badgeText}` : 'Chuyên đề'}
+                                  </span>
+                                </div>
+                              </>
+                            )}
                             {isTrialCourseView && (
                               <div className="absolute top-3 right-3 z-10">
                                 {isFolderLocked ? (
                                   <span className="bg-slate-900/85 text-slate-200 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/20 flex items-center gap-1 shadow-sm">
-                                    <span>🔒</span> <span>Đã khóa</span>
+                                    <Lock className="w-3 h-3" /> <span>Đã khóa</span>
                                   </span>
                                 ) : (
                                   <span className="bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-yellow-200 flex items-center gap-1 shadow-sm">
@@ -2737,34 +2877,51 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 )}
                               </div>
                             )}
-                            <div className={`absolute bottom-3.5 right-4 ${badgeText ? 'left-20' : 'left-4'}`}>
-                                <h3 className={`text-[15.5px] font-black leading-snug line-clamp-2 w-full drop-shadow-sm ${isFolderLocked ? 'text-slate-200' : 'text-white'}`}>
+                            <div className={`absolute bottom-3.5 right-4 ${badgeText ? 'left-[4.5rem]' : 'left-4'}`}>
+                                <h3 className={`text-[15px] font-display font-extrabold leading-snug line-clamp-2 w-full drop-shadow-sm ${isFolderLocked ? 'text-slate-200' : 'text-white'}`}>
                                     {displayTitle}
                                 </h3>
                             </div>
                           </div>
 
                           {badgeText && (
-                              <div className={`absolute top-[98px] left-4 font-black text-[16px] w-12 h-12 rounded-xl flex items-center justify-center shadow-md border-2 border-white shrink-0 z-10 ring-1 ring-slate-200 ${isFolderLocked ? 'bg-slate-200 text-slate-500' : 'bg-white text-[#0a5482]'}`}>
-                                  {isFolderLocked ? '🔒' : badgeText}
+                              <div className={`absolute top-[94px] left-4 font-display font-black text-[14px] w-11 h-11 rounded-xl flex items-center justify-center shadow-md border-2 border-white shrink-0 z-10 ring-1 ring-slate-200/80 ${isFolderLocked ? 'bg-slate-200 text-slate-500' : 'bg-white text-[#0a5482]'}`}>
+                                  {isFolderLocked ? <Lock className="w-4 h-4" /> : badgeText}
                               </div>
                           )}
 
-                          <div className={`${isFolderLocked ? 'bg-slate-100' : 'bg-white'} p-4 flex flex-col relative flex-1`}>
-                            <div className="flex justify-between items-center mt-auto">
-                              <span className={`text-[11px] font-extrabold px-3 py-1 rounded-lg border uppercase tracking-wider ${
+                          <div className={`${isFolderLocked ? 'bg-slate-100' : 'bg-white'} p-4 flex flex-col gap-2.5 relative flex-1`}>
+                            {!isFolderLocked && testCount > 0 && childCount === 0 && (
+                              <div className="space-y-1">
+                                <div className="flex items-center justify-between text-[11px] font-bold">
+                                  <span className="text-slate-400">Tiến độ luyện đề</span>
+                                  <span className={completedInFolder === testCount ? 'text-emerald-600 font-extrabold' : 'text-[#0a5482] font-extrabold'}>
+                                    {completedInFolder}/{testCount} đề
+                                  </span>
+                                </div>
+                                <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                  <div
+                                    className={`h-full rounded-full transition-all duration-500 ${completedInFolder === testCount ? 'bg-emerald-500' : 'bg-[#2ab4e8]'}`}
+                                    style={{ width: `${folderCompletionPct}%` }}
+                                  />
+                                </div>
+                              </div>
+                            )}
+
+                            <div className="flex justify-between items-center mt-auto pt-0.5">
+                              <span className={`text-[11px] font-extrabold px-2.5 py-1 rounded-lg border uppercase tracking-wider ${
                                 isFolderLocked
                                   ? 'text-slate-500 bg-slate-200/80 border-slate-300'
-                                  : 'text-[#0a5482] bg-sky-50/90 border-sky-100'
+                                  : palette.pill
                               }`}>
-                                  {isFolderLocked ? '🔒 Khóa chính thức' : childCount > 0 ? `${childCount} thư mục` : `${testCount} bài tập`}
+                                  {isFolderLocked ? 'Khóa chính thức' : childCount > 0 ? `${childCount} thư mục` : `${testCount} bài tập`}
                               </span>
                               <span className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold transition-colors ${
                                 isFolderLocked
                                   ? 'bg-slate-200 text-slate-500'
                                   : 'bg-slate-100 text-[#0a5482] group-hover:bg-[#0a5482] group-hover:text-white'
                               }`}>
-                                  {isFolderLocked ? '🔒' : '→'}
+                                  {isFolderLocked ? <Lock className="w-3.5 h-3.5" /> : <ArrowRight className="w-4 h-4" />}
                               </span>
                             </div>
                           </div>

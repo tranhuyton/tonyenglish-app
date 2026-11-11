@@ -1,5 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  GraduationCap,
+  Target,
+  BookOpen,
+  Video,
+  Bot,
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
+  Play,
+  Calendar,
+  MessageCircle,
+  Globe,
+  Layers,
+  Award,
+  MapPin,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { resolveUploadUrl, truncateWords, getYoutubeEmbedUrl, fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
@@ -257,7 +276,7 @@ export const HomePage: React.FC = () => {
   };
 
   // Render a focus section (5 = Reading Practice, 4 = Learning Through Conversation, 1 = Words In The news, 3 = Other)
-  const renderCategorySection = (focusType: number, sectionTitleKey: string, icon: string) => {
+  const renderCategorySection = (focusType: number, sectionTitleKey: string, icon: React.ReactNode) => {
     const matchedCates = newsCategories.filter(
       (nc) => Number(nc.news_cc_focus) === focusType && !!latestNewsByCate[nc.news_cc_id]
     );
@@ -344,179 +363,328 @@ export const HomePage: React.FC = () => {
   );
 
   return (
-    <div className="space-y-10 pb-6">
-      {/* 1. HERO BANNER SLIDER (.slide-main modernized) */}
-      <section className="bg-gradient-to-b from-slate-100 to-slate-50 pt-6 pb-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {curAd ? (
-            <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-[#0f172a] grid grid-cols-1 lg:grid-cols-12 lg:h-[380px] relative">
-              {/* Left Banner Image (7 cols) - Locked aspect ratio & absolute images to prevent height jumping */}
-              <div className="lg:col-span-7 relative aspect-[16/9] lg:aspect-auto lg:h-full bg-slate-900 overflow-hidden">
-                {ads.map((adItem, idx) => {
-                  const isActive = idx === bannerIdx;
-                  const targetLink = adItem.link
-                    ? adItem.link.trim().replace(/^https?:\/\/(?:www\.)?tonyenglish\.vn(?:\/(?:vi|en))?/i, '') || '/courses'
-                    : '/courses';
-                  return (
-                    <Link
-                      key={adItem.ad_id || idx}
-                      to={targetLink}
-                      className={`absolute inset-0 block w-full h-full transition-opacity duration-500 ${
-                        isActive ? 'opacity-100 z-[1]' : 'opacity-0 pointer-events-none z-0'
-                      }`}
-                    >
-                      <img
-                        src={resolveUploadUrl(adItem.image)}
-                        alt={adItem.title || 'TonyEnglish'}
-                        className="w-full h-full object-cover object-center"
-                      />
-                    </Link>
-                  );
-                })}
+    <div className="space-y-12 pb-8">
+      {/* 1. MODERN EDTECH FLAGSHIP HERO + DYNAMIC SHOWCASE */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#06283d] via-[#0a5482] to-[#0f172a] text-white pt-8 pb-10 sm:pt-12 sm:pb-14 border-b border-slate-800/60">
+        {/* Ambient Decorative Glows */}
+        <div className="absolute -top-32 -left-24 w-96 h-96 bg-[#2ab4e8]/20 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute -bottom-32 right-0 w-[28rem] h-[28rem] bg-amber-400/10 blur-3xl rounded-full pointer-events-none" />
 
-                {/* Prev / Next Controls */}
-                {ads.length > 1 && (
-                  <div className="absolute bottom-4 right-4 flex items-center gap-2 z-10">
-                    <button
-                      type="button"
-                      onClick={() => setBannerIdx((prev) => (prev - 1 + ads.length) % ads.length)}
-                      className="w-9 h-9 rounded-full bg-slate-900/75 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition shadow-md backdrop-blur-xs cursor-pointer"
-                      title="Previous"
-                    >
-                      ‹
-                    </button>
-                    <span className="bg-slate-900/75 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-xs">
-                      {bannerIdx + 1} / {ads.length}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => setBannerIdx((prev) => (prev + 1) % ads.length)}
-                      className="w-9 h-9 rounded-full bg-slate-900/75 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition shadow-md backdrop-blur-xs cursor-pointer"
-                      title="Next"
-                    >
-                      ›
-                    </button>
-                  </div>
-                )}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            {/* Left Value Proposition (7 cols) */}
+            <div className="lg:col-span-7 space-y-5">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-sky-200">
+                <MapPin className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+                <span>
+                  {lang === 'vi'
+                    ? 'Gia sư 1 kèm 1 & Nhóm nhỏ • R2B Royal City, Hà Nội & Online'
+                    : '1-on-1 & Small Group Tutoring • Royal City Hanoi & Online'}
+                </span>
               </div>
 
-              {/* Right Content Panel (5 cols) - Locked height so text differences never shift banner size */}
-              <div
-                className="lg:col-span-5 p-6 sm:p-8 lg:p-10 min-h-[240px] lg:min-h-0 lg:h-full overflow-hidden flex flex-col justify-between text-white relative transition-colors duration-500"
-                style={{
-                  background: `linear-gradient(145deg, ${(curAd.color || '#0a5482').trim()} 0%, #0f172a 100%)`,
-                }}
-              >
-                <div className="space-y-4 overflow-hidden">
-                  <div className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-xs text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full border border-white/20">
-                    <span>✨</span>
-                    <span>TonyEnglish Highlights</span>
-                  </div>
+              <h1 className="font-display font-black text-[28px] sm:text-[38px] xl:text-[44px] leading-[1.15] tracking-tight text-white">
+                {lang === 'vi' ? (
+                  <>
+                    Chinh phục <span className="text-[#2ab4e8]">IELTS</span>,{' '}
+                    <span className="text-amber-300">Cambridge IGCSE</span> &amp; Giao tiếp thực chiến cùng Thầy Tony
+                  </>
+                ) : (
+                  <>
+                    Master <span className="text-[#2ab4e8]">IELTS</span>,{' '}
+                    <span className="text-amber-300">Cambridge IGCSE</span> &amp; Real-World English with Teacher Tony
+                  </>
+                )}
+              </h1>
 
-                  <div
-                    className="text-base sm:text-[17px] font-bold leading-relaxed text-white/95 legacy-prose [&_a]:text-sky-200 [&_p]:mb-2 line-clamp-3"
-                    dangerouslySetInnerHTML={{
-                      __html: fixLegacyHtmlContent(
-                        lang === 'vi' ? curAd.meta_vi || curAd.meta : curAd.meta || curAd.meta_vi
-                      ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
-                    }}
-                  />
+              <p className="text-slate-200/90 text-[15px] sm:text-[16.5px] leading-relaxed max-w-2xl">
+                {lang === 'vi'
+                  ? 'Kết hợp sự kèm cặp sát sao từng buổi của Thầy Tony với Hệ sinh thái Phòng học thông minh: Bài giảng song ngữ bám sát Syllabus, Kho đề Past Papers kèm Video chữa bài Full HD & Phòng thi AI chấm chữa 24/7.'
+                  : 'Combining personalized 1-on-1 mentoring with an AI-powered Learning Portal: Bilingual syllabus lectures, Full HD past-paper video walkthroughs, and 24/7 AI exam grading.'}
+              </p>
 
-                  <div
-                    className="text-xs sm:text-sm text-white/80 leading-relaxed pt-3 border-t border-white/15 line-clamp-2"
-                    dangerouslySetInnerHTML={{
-                      __html: fixLegacyHtmlContent(
-                        lang === 'vi' ? curAd.desc_vi || curAd.desc : curAd.desc || curAd.desc_vi
-                      ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
-                    }}
-                  />
+              {/* Primary & Secondary CTAs */}
+              <div className="pt-1 flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
+                  className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-extrabold text-sm sm:text-[15px] px-5 sm:px-6 py-3.5 rounded-2xl shadow-lg transition-all active:scale-95 inline-flex items-center gap-2 cursor-pointer"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  <span>{lang === 'vi' ? 'Vào Học Thử & Làm Đề Ngay' : 'Start Free Trial Now'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+
+                <Link
+                  to="/courses"
+                  className="bg-white/12 hover:bg-white/22 text-white border border-white/25 font-bold text-sm sm:text-[15px] px-5 py-3.5 rounded-2xl backdrop-blur-xs transition-all active:scale-95 inline-flex items-center gap-2"
+                >
+                  <BookOpen className="w-4 h-4 text-[#2ab4e8]" />
+                  <span>{lang === 'vi' ? 'Các Khóa Học' : 'Explore Courses'}</span>
+                </Link>
+
+                <a
+                  href="https://zalo.me/0935058688"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs sm:text-sm font-bold text-sky-200 hover:text-white px-3 py-2 inline-flex items-center gap-1.5 transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#2ab4e8]" />
+                  <span>Zalo tư vấn: 0935 058 688</span>
+                </a>
+              </div>
+
+              {/* 4 Key Proof Metrics */}
+              <div className="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+                <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
+                  <div className="font-display font-black text-lg sm:text-xl text-white">2013–2026</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Kinh nghiệm giảng dạy</div>
                 </div>
-
-                <div className="pt-4 mt-4 flex flex-wrap items-center gap-3 shrink-0">
-                  <Link
-                    to="/courses"
-                    className="bg-white text-[#0a5482] hover:bg-sky-50 font-black text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-lg transition active:scale-95"
-                  >
-                    {lang === 'vi' ? 'Khám phá Khóa học ➜' : 'Explore Courses ➜'}
-                  </Link>
-                  <button
-                    type="button"
-                    onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
-                    className="bg-white/15 hover:bg-white/25 text-white border border-white/25 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition active:scale-95 cursor-pointer"
-                  >
-                    {lang === 'vi' ? '🎓 Góc Học Viên' : '🎓 Student Portal'}
-                  </button>
+                <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
+                  <div className="font-display font-black text-lg sm:text-xl text-[#2ab4e8]">6.5 – 8.0+</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Mục tiêu đầu ra IELTS</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
+                  <div className="font-display font-black text-lg sm:text-xl text-amber-300">A / A*</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Đầu ra Cambridge IGCSE</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
+                  <div className="font-display font-black text-lg sm:text-xl text-emerald-300">Full HD + AI</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Video giải đề &amp; Trợ lý 24/7</div>
                 </div>
               </div>
             </div>
-          ) : null}
 
-          {/* Quick Ecosystem Navigation Strip */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-6">
-            <Link
-              to="/courses"
-              className="bg-white hover:bg-sky-50/60 border border-slate-200/90 rounded-2xl p-4 flex items-center gap-3.5 shadow-2xs hover:shadow-md transition-all group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-blue-100 text-[#0a5482] flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
-                🎯
-              </div>
-              <div>
-                <div className="font-black text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">{t('Courses')}</div>
-                <div className="text-xs sm:text-sm text-slate-500">
-                  {lang === 'vi' ? 'Giao tiếp, IELTS & IGCSE' : 'Communication, IELTS & IGCSE'}
-                </div>
-              </div>
-            </Link>
+            {/* Right Showcase Frame (5 cols): Dynamic Banner Slider or Smart LMS Card */}
+            <div className="lg:col-span-5">
+              {curAd ? (
+                <div className="rounded-3xl overflow-hidden bg-slate-900/85 backdrop-blur-md border border-white/20 shadow-2xl flex flex-col">
+                  <div className="relative aspect-[16/9] bg-slate-950 overflow-hidden">
+                    {ads.map((adItem, idx) => {
+                      const isActive = idx === bannerIdx;
+                      const targetLink = adItem.link
+                        ? adItem.link.trim().replace(/^https?:\/\/(?:www\.)?tonyenglish\.vn(?:\/(?:vi|en))?/i, '') || '/courses'
+                        : '/courses';
+                      return (
+                        <Link
+                          key={adItem.ad_id || idx}
+                          to={targetLink}
+                          className={`absolute inset-0 block w-full h-full transition-opacity duration-500 ${
+                            isActive ? 'opacity-100 z-[1]' : 'opacity-0 pointer-events-none z-0'
+                          }`}
+                        >
+                          <img
+                            src={resolveUploadUrl(adItem.image)}
+                            alt={adItem.title || 'TonyEnglish'}
+                            className="w-full h-full object-cover object-center"
+                          />
+                        </Link>
+                      );
+                    })}
 
-            <Link
-              to="/news"
-              className="bg-white hover:bg-sky-50/60 border border-slate-200/90 rounded-2xl p-4 flex items-center gap-3.5 shadow-2xs hover:shadow-md transition-all group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
-                📚
-              </div>
-              <div>
-                <div className="font-black text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">{t('Library')}</div>
-                <div className="text-xs sm:text-sm text-slate-500">
-                  {lang === 'vi' ? 'Luyện đọc, Nghe & Từ vựng' : 'Reading, Listening & Vocab'}
-                </div>
-              </div>
-            </Link>
+                    {ads.length > 1 && (
+                      <div className="absolute bottom-3 right-3 flex items-center gap-1.5 z-10">
+                        <button
+                          type="button"
+                          onClick={() => setBannerIdx((prev) => (prev - 1 + ads.length) % ads.length)}
+                          className="w-8 h-8 rounded-full bg-slate-900/80 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition backdrop-blur-xs cursor-pointer"
+                          title="Previous"
+                        >
+                          <ChevronLeft className="w-4 h-4" />
+                        </button>
+                        <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full backdrop-blur-xs">
+                          {bannerIdx + 1} / {ads.length}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setBannerIdx((prev) => (prev + 1) % ads.length)}
+                          className="w-8 h-8 rounded-full bg-slate-900/80 hover:bg-[#2ab4e8] text-white flex items-center justify-center transition backdrop-blur-xs cursor-pointer"
+                          title="Next"
+                        >
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      </div>
+                    )}
+                  </div>
 
-            <Link
-              to="/videos"
-              className="bg-white hover:bg-sky-50/60 border border-slate-200/90 rounded-2xl p-4 flex items-center gap-3.5 shadow-2xs hover:shadow-md transition-all group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
-                🎬
-              </div>
-              <div>
-                <div className="font-black text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">{t('Videos Store')}</div>
-                <div className="text-xs sm:text-sm text-slate-500">
-                  {lang === 'vi' ? 'Học qua Video có phụ đề' : 'Learn with subtitled videos'}
-                </div>
-              </div>
-            </Link>
+                  <div className="p-5 sm:p-6 space-y-3 bg-gradient-to-b from-slate-900/95 to-[#0f172a]">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-[#2ab4e8] bg-sky-500/15 border border-sky-400/25 px-2.5 py-0.5 rounded-full">
+                        <Sparkles className="w-3 h-3" />
+                        <span>Tiêu điểm TonyEnglish</span>
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
+                        className="text-xs font-extrabold text-amber-300 hover:text-amber-200 inline-flex items-center gap-1 cursor-pointer"
+                      >
+                        <GraduationCap className="w-3.5 h-3.5" />
+                        <span>Mở Góc Học Viên →</span>
+                      </button>
+                    </div>
 
-            <button
-              type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
-              className="bg-gradient-to-br from-[#0a5482] to-[#0f172a] text-white rounded-2xl p-4 flex items-center gap-3.5 shadow-md hover:shadow-xl transition-all group text-left cursor-pointer"
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#2ab4e8] text-white flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
-                🤖
-              </div>
-              <div>
-                <div className="font-black text-[15px] sm:text-base text-white flex items-center gap-1">
-                  <span>{lang === 'vi' ? 'Góc Học Viên & Thi AI' : 'Student Portal'}</span>
-                  <span className="text-[#2ab4e8]">➜</span>
+                    <div
+                      className="text-[14.5px] sm:text-[15.5px] font-bold leading-relaxed text-white/95 legacy-prose [&_a]:text-sky-300 [&_p]:mb-1.5 line-clamp-2"
+                      dangerouslySetInnerHTML={{
+                        __html: fixLegacyHtmlContent(
+                          lang === 'vi' ? curAd.meta_vi || curAd.meta : curAd.meta || curAd.meta_vi
+                        ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
+                      }}
+                    />
+
+                    <div
+                      className="text-xs text-slate-300/85 leading-relaxed pt-2.5 border-t border-white/10 line-clamp-2"
+                      dangerouslySetInnerHTML={{
+                        __html: fixLegacyHtmlContent(
+                          lang === 'vi' ? curAd.desc_vi || curAd.desc : curAd.desc || curAd.desc_vi
+                        ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
+                      }}
+                    />
+                  </div>
                 </div>
-                <div className="text-xs sm:text-sm text-sky-200">
-                  {lang === 'vi' ? 'Luyện đề & Chấm chữa AI' : 'AI Practice & Smart Grading'}
+              ) : (
+                <div className="rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-7 shadow-2xl space-y-4">
+                  <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/15 border border-amber-300/30 px-3 py-1 rounded-full">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Trải nghiệm Hệ sinh thái LMS</span>
+                  </div>
+                  <h3 className="text-xl font-black text-white">Phòng Học &amp; Luyện Đề Thông Minh 24/7</h3>
+                  <ul className="space-y-2.5 text-sm text-slate-200">
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>Bài giảng IGCSE Song ngữ Anh – Việt bám sát Syllabus Cambridge</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>Kho đề Past Papers có Video hướng dẫn giải chi tiết từng câu (1080p)</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <span>Phòng thi IELTS Computer-delivered &amp; AI chấm Writing/Speaking tức thì</span>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-            </button>
+              )}
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* 1B. BENTO GRID: 4 TRỤ CỘT ĐÀO TẠO & HỆ SINH THÁI TONYENGLISH */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-4 sm:-mt-6 relative z-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <Link
+            to="/igcse"
+            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-xs hover:shadow-soft transition-all group flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3.5">
+                <div className="w-11 h-11 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-700 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <Award className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/70">
+                  Cambridge IGCSE
+                </span>
+              </div>
+              <h3 className="font-display font-extrabold text-[16.5px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+                {lang === 'vi' ? 'Hệ Quốc tế IGCSE (A/A*)' : 'Cambridge IGCSE Prep'}
+              </h3>
+              <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                {lang === 'vi'
+                  ? 'Sciences, Business, Economics, Geography, Maths & ESL — Lý thuyết song ngữ & Video giải Past Papers.'
+                  : 'Bilingual syllabus notes, topical quizzes & Full HD past paper walkthroughs.'}
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-extrabold text-[#0a5482]">
+              <span>{lang === 'vi' ? 'Xem các môn IGCSE' : 'Explore IGCSE'}</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          <Link
+            to="/courses/ielts"
+            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-xs hover:shadow-soft transition-all group flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3.5">
+                <div className="w-11 h-11 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <Target className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0a5482] bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200/70">
+                  Band 6.5 – 8.0+
+                </span>
+              </div>
+              <h3 className="font-display font-extrabold text-[16.5px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+                {lang === 'vi' ? 'Luyện thi IELTS 1 kèm 1' : '1-on-1 IELTS Coaching'}
+              </h3>
+              <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                {lang === 'vi'
+                  ? 'Lộ trình cá nhân hóa 4 kỹ năng, phòng thi máy tính chuẩn IDP/BC & AI chấm Writing/Speaking chi tiết.'
+                  : 'Personalized 4-skill roadmap with computer-delivered mock tests & AI grading.'}
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-extrabold text-[#0a5482]">
+              <span>{lang === 'vi' ? 'Lộ trình IELTS' : 'IELTS Roadmap'}</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          <Link
+            to="/courses"
+            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-xs hover:shadow-soft transition-all group flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3.5">
+                <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <MessageCircle className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/70">
+                  1-on-1 VIP
+                </span>
+              </div>
+              <h3 className="font-display font-extrabold text-[16.5px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+                {lang === 'vi' ? 'Giao tiếp & Phản xạ Công sở' : 'Executive Communication'}
+              </h3>
+              <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                {lang === 'vi'
+                  ? 'Chuẩn hóa phát âm IPA, Podcast Shadowing song ngữ & luyện hội thoại phản xạ thực tế cùng AI.'
+                  : 'IPA pronunciation mastery, bilingual shadowing podcasts & AI reflex speaking.'}
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-extrabold text-[#0a5482]">
+              <span>{lang === 'vi' ? 'Khám phá khóa học' : 'View Courses'}</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
+            className="bg-gradient-to-br from-[#0a5482] to-[#0f172a] text-white rounded-2xl p-5 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group text-left flex flex-col justify-between cursor-pointer border border-sky-400/20"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-3.5">
+                <div className="w-11 h-11 rounded-xl bg-[#2ab4e8] text-white flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+                  <Bot className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/15">
+                  Smart LMS
+                </span>
+              </div>
+              <h3 className="font-display font-extrabold text-[16.5px] text-white mb-1.5">
+                {lang === 'vi' ? 'Góc Học Viên & Phòng Thi AI' : 'Student Portal & AI Lab'}
+              </h3>
+              <p className="text-xs sm:text-[13px] text-sky-100/85 leading-relaxed">
+                {lang === 'vi'
+                  ? 'Lịch báo bài cá nhân, Bảng công việc hàng ngày, Kho đề Past Papers & Trợ lý Thầy Tony AI 24/7.'
+                  : 'Personal study calendar, daily taskboard, past papers & 24/7 AI Study Coach.'}
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/15 flex items-center justify-between text-xs font-extrabold text-[#2ab4e8]">
+              <span>{lang === 'vi' ? 'Truy cập Góc Học Viên' : 'Open Student Portal'}</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </button>
         </div>
       </section>
 
@@ -529,8 +697,8 @@ export const HomePage: React.FC = () => {
             <section className="space-y-5">
               <div className="flex items-center justify-between border-b border-slate-200 pb-3">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center text-lg shadow-2xs">
-                    🔥
+                  <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center shadow-2xs">
+                    <Sparkles className="w-4 h-4" />
                   </span>
                   <h2 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight">{t('Focus on')}</h2>
                 </div>
@@ -672,21 +840,21 @@ export const HomePage: React.FC = () => {
             </section>
 
             {/* SECTION 2: READING PRACTICE (focus = 5) */}
-            {renderCategorySection(5, 'Reading Practice', '📖')}
+            {renderCategorySection(5, 'Reading Practice', <BookOpen className="w-4 h-4" />)}
 
             {/* SECTION 3: LEARNING THROUGH CONVERSATION (focus = 4) */}
-            {renderCategorySection(4, 'Learning Through Conversation', '💬')}
+            {renderCategorySection(4, 'Learning Through Conversation', <MessageCircle className="w-4 h-4" />)}
 
             {/* SECTION 4: WORDS IN THE NEWS (focus = 1) */}
-            {renderCategorySection(1, 'Words In The news', '📰')}
+            {renderCategorySection(1, 'Words In The news', <Globe className="w-4 h-4" />)}
 
             {/* SECTION 5: VIDEOS STORE */}
             {featuredVideoParents.length > 0 && (
               <section className="space-y-5">
                 <div className="flex items-center justify-between border-b border-slate-200 pb-3">
                   <div className="flex items-center gap-2.5">
-                    <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-lg shadow-2xs">
-                      🎬
+                    <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-2xs">
+                      <Video className="w-4 h-4" />
                     </span>
                     <h2 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight">
                       {t('Videos store')}
@@ -773,7 +941,7 @@ export const HomePage: React.FC = () => {
             )}
 
             {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) */}
-            {renderCategorySection(3, 'Other learning materials', '🗂️')}
+            {renderCategorySection(3, 'Other learning materials', <Layers className="w-4 h-4" />)}
           </div>
 
           {/* RIGHT SIDEBAR (4 cols) */}
@@ -782,7 +950,7 @@ export const HomePage: React.FC = () => {
             <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
               <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 py-4 flex items-center justify-between">
                 <h3 className="text-white font-black text-base flex items-center gap-2">
-                  <span>📅</span>
+                  <Calendar className="w-4 h-4 text-[#2ab4e8]" />
                   <span>{t('Enrolment')}</span>
                 </h3>
                 <Link to="/opening" className="text-sm font-bold text-[#2ab4e8] hover:underline">
