@@ -1,0 +1,701 @@
+{
+  "lectureId": "b1dca40f-5860-5c18-ad99-6c90ef8c2e50",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 1: States of matter",
+  "totalDuration": 4245.33,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_wex": {
+      "start": 11,
+      "end": 12
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 12
+    },
+    "s02_int": {
+      "start": 14,
+      "end": 16
+    },
+    "s02_p1_sub01": {
+      "start": 24,
+      "end": 29
+    },
+    "s02_p2_sub01": {
+      "start": 24,
+      "end": 29
+    },
+    "s02_wex": {
+      "start": 30,
+      "end": 31
+    },
+    "s02_hdr": {
+      "start": 13,
+      "end": 31
+    },
+    "s03_int": {
+      "start": 33,
+      "end": 35
+    },
+    "s03_wex": {
+      "start": 40,
+      "end": 41
+    },
+    "s03_hdr": {
+      "start": 32,
+      "end": 41
+    },
+    "s04_int": {
+      "start": 43,
+      "end": 45
+    },
+    "s04_wex": {
+      "start": 53,
+      "end": 54
+    },
+    "s04_hdr": {
+      "start": 42,
+      "end": 54
+    },
+    "s05_hdr": {
+      "start": 55,
+      "end": 56
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 1: Các trạng thái của vật chất (States of Matter)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 1: States of Matter. Complete Master Lecture • 1.1 Solids, Liquids & Gases • Heating & Cooling Curves • Gas Volume Laws • 1.2 Diffusion & Molecular Mass ( M r).",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 1: Các trạng thái của vật chất. Bài giảng Song ngữ Toàn diện • 1.1 Rắn, Lỏng & Khí • Đồ thị Gia nhiệt & Làm lạnh • Thể tích Khí • 1.2 Khuếch tán & Phân tử khối ( M r).",
+      "duration": 43.55,
+      "startTime": 0.0,
+      "endTime": 43.55,
+      "audioUrl": "/audio/lectures/chemistry/1/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "1. Ba Trạng thái Vật chất & Thuyết Động học Hạt (Kinetic Particle Theory)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "Syllabus 1.1 🟦 CORE + 🟩 SUPPLEMENT 1. Solids, Liquids & Gases — Kinetic Particle Theory.",
+      "vi": "Syllabus 1.1 🟦 CORE + 🟩 SUPPLEMENT 1. Ba Trạng thái Vật chất & Thuyết Động học Hạt.",
+      "duration": 14.93,
+      "startTime": 43.55,
+      "endTime": 58.48,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture students in three school spaces! Solid = students sitting shoulder-to-shoulder in neat rows of bolted chairs — they can fidget on the spot ( vibrate about fixed positions ), but cannot swap seats. Liquid = break time in a packed corridor — students are still brushing shoulders ( closely packed, most touching ) with no neat rows ( random ), slowly weaving past one another ( slide past each other ). Gas = five students sprinting blindfolded across an empty football pitch — huge gaps ( far apart ), zooming rapidly in straight lines until bouncing off a wall or another runner!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng học sinh trong trường học! Solid (Chất rắn) = học sinh ngồi sát vai nhau trên những dãy ghế gắn chặt xuống sàn — chỉ có thể nhúc nhích tại ghế, không thể đổi chỗ. Liquid (Chất lỏng) = giờ ra chơi ở hành lang đông đúc — các bạn vẫn đứng sát chạm vai nhau, không còn hàng lối ( random ) nhưng lách và trượt qua nhau được. Gas (Chất khí) = 5 bạn bịt mắt chạy nước rút khắp sân bóng đá rộng mênh mông — đứng cực xa nhau ( far apart ), lao thẳng cực nhanh và nảy bật khi đụng tường!",
+      "duration": 75.24,
+      "startTime": 58.48,
+      "endTime": 133.72,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → The 3 Mandatory Pillars (🟦 Core 1.1): Every Cambridge particle structure question awards 1 mark each for (1) Separation ( touching / closely packed / far apart ), (2) Arrangement ( regular lattice / random ), and (3) Motion ( vibrate about fixed positions / slide past each other / move rapidly & randomly ). 2 → Why Properties Follow Structure: Touching particles with no empty gaps ⇒ fixed volume & incompressible (solids, liquids). Huge empty spaces ⇒ easily compressed & fills any container (gases). Particles able to move past neighbours ⇒ can flow (liquids, gases).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Bộ 3 Từ khóa Ăn điểm Tuyệt đối (🟦 Core 1.1): Mọi câu tự luận mô tả cấu trúc hạt đều chấm đúng 3 ý (mỗi ý 1 điểm): (1) Separation (khoảng cách: touching / closely packed / far apart ), (2) Arrangement (sắp xếp: regular lattice / random ), và (3) Motion (chuyển động: vibrate about fixed positions / slide past each other / move rapidly & randomly ). 2 → Suy ra Tính chất Vật lý: Hạt chạm khít không còn khe hở ⇒ fixed volume & incompressible (thể tích cố định, không nén được: rắn & lỏng). Khoảng trống mênh mông ⇒ easily compressed (dễ nén: khí). Hạt trượt khỏi vị trí ⇒ chảy được (fluid) .",
+      "duration": 94.88,
+      "startTime": 133.72,
+      "endTime": 228.6,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Drawing liquid particles floating apart! Over half of exam candidates draw liquid circles spaced out like a dense gas — scoring 0 marks ! In a liquid diagram, at least 75% of particles MUST touch a neighbour in a random cluster at the bottom. Also never write \"solid particles are completely still\" — they always vibrate about fixed positions !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Vẽ các hạt chất lỏng (Liquid) đứng rời rạc xa nhau! Hơn 50% học sinh vẽ các vòng tròn chất lỏng lơ lửng cách xa nhau như chất khí — bị trừ 0 điểm ngay lập tức ! Khi vẽ liquid , tối thiểu 75% số hạt PHẢI CHẠM NHAU (touching) và xếp lộn xộn không thành hàng. Đồng thời cấm viết \"hạt chất rắn đứng yên\" — phải viết vibrate about fixed positions !",
+      "duration": 54.46,
+      "startTime": 228.6,
+      "endTime": 283.06,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Kinetic Particle Theory",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "According to the Kinetic Particle Theory , all matter is composed of extremely small particles ( atoms, molecules, or ions ) that are in constant motion. The macroscopic physical properties of solids, liquids, and gases are governed by three microscopic factors: particle separation , particle arrangement , and particle motion (alongside the strength of intermolecular / inter-particle forces of attraction ).",
+      "vi": "Theo Kinetic Particle Theory (Thuyết Động học Phân tử/Hạt), mọi vật chất đều được cấu tạo từ những hạt vô cùng nhỏ bé ( atoms, molecules, or ions — nguyên tử, phân tử hoặc ion) luôn chuyển động không ngừng. Các tính chất vật lý của solids (chất rắn), liquids (chất lỏng) và gases (chất khí) được quyết định bởi 3 tiêu chí bắt buộc trong đề thi: particle separation (khoảng cách giữa các hạt), particle arrangement (cách sắp xếp hạt) và particle motion (chuyển động của hạt), đi kèm độ mạnh của forces of attraction (lực hút tương tác giữa các hạt).",
+      "duration": 67.16,
+      "startTime": 283.06,
+      "endTime": 350.22,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "✏️ Mẹo vẽ hình ăn trọn điểm (Paper 3 & Paper 4):",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🔬 Particle-Level Diagrams (Cambridge Drawing Standard) ✏️ Drawing Exam Tip (Paper 3 & Paper 4): When asked to draw particles in a liquid , at least 75% of the particles must touch their neighbours, with no regular rows ! Drawing liquid particles spaced far apart loses the mark.",
+      "vi": "🔬 Sơ đồ Hạt Chuẩn Đề Thi Cambridge (Particle Diagrams) ✏️ Mẹo vẽ hình ăn trọn điểm (Paper 3 & Paper 4): Khi đề bài yêu cầu vẽ mô hình hạt của liquid (chất lỏng), tối thiểu 75% số hạt phải Nếu vẽ các hạt chất lỏng đứng rời rạc xa nhau sẽ bị mất điểm ngay.",
+      "duration": 38.32,
+      "startTime": 350.22,
+      "endTime": 388.54,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🧊 Solid (Chất rắn)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🧊 Solid. Separation: Very close together; tightly packed and touching. Arrangement: Ordered, regular repeating 3D lattice pattern. Motion: Particles vibrate only about fixed positions ; they cannot move from place to place. Forces: Very strong forces of attraction hold particles rigidly together. Properties: Fixed shape, fixed volume, clear surface boundary, high density, cannot be compressed.",
+      "vi": "🧊 Solid (Chất rắn). Separation (Khoảng cách): Rất sát nhau, chạm khít vào nhau. Arrangement (Sắp xếp): Trật tự đều đặn theo mạng tinh thể tuần hoàn. Motion (Chuyển động): Chỉ vibrate about fixed positions (dao động quanh vị trí cố định), không thể rời chỗ. Forces (Lực hút): Rất mạnh. Properties (Tính chất): Hình dạng cố định ( fixed shape ), thể tích cố định ( fixed volume ), có mặt phân cách ( surface boundary ), khối lượng riêng cao, không thể nén (incompressible).",
+      "duration": 65.59,
+      "startTime": 388.54,
+      "endTime": 454.13,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "💧 Liquid (Chất lỏng)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "💧 Liquid. Separation: Closely packed; most particles are still touching with tiny gaps. Arrangement: Irregular / random arrangement (no fixed lattice). Motion: Move slowly; slide and roll past one another from place to place. Forces: Moderate attractive forces (weaker than in solids, strong enough to keep a surface boundary). Properties: Fixed volume, takes the shape of the container, moderate/high density, virtually incompressible.",
+      "vi": "💧 Liquid (Chất lỏng). Separation: Khá sát nhau, phần lớn các hạt vẫn chạm nhau. Arrangement: Sắp xếp lộn xộn, không theo trật tự. Motion: Di chuyển chậm; trượt và lăn qua nhau tự do. Forces: Lực hút trung bình (yếu hơn chất rắn nhưng đủ giữ surface boundary để không bay mất). Properties: Thể tích cố định ( fixed volume ), hình dạng theo bình chứa, thực tế không thể nén (virtually incompressible).",
+      "duration": 62.54,
+      "startTime": 454.13,
+      "endTime": 516.67,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "💨 Gas (Chất khí)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "💨 Gas. Separation: Very far apart with huge empty spaces between particles. Arrangement: Completely random arrangement; no surface boundary. Motion: Move rapidly and randomly in straight lines in all directions, colliding elastically. Forces: Extremely weak / negligible forces of attraction between particles. Properties: No fixed shape or volume (fills entire container), very low density, easily compressed.",
+      "vi": "💨 Gas (Chất khí). Separation: Rất xa nhau với khoảng không gian trống lớn. Arrangement: Hoàn toàn ngẫu nhiên ( completely random ); không có mặt phân cách. Motion: Chuyển động cực nhanh và hỗn loạn theo mọi hướng. Forces: Rất yếu / không đáng kể. Properties: Không có hình dạng và thể tích cố định (chiếm toàn bộ bình chứa), khối lượng riêng thấp, rất dễ bị nén (easily compressed).",
+      "duration": 59.5,
+      "startTime": 516.67,
+      "endTime": 576.17,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "fixed shape",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "Distinguishing Feature: Surface Boundary & Shape; Solid: Has surface boundary; fixed shape; Liquid: Has surface boundary; takes shape of container; Gas: No surface boundary; fills entire container. Distinguishing Feature: Volume; Solid: Fixed volume; Liquid: Fixed volume; Gas: Variable (expands or contracts to container). Distinguishing Feature: Compressibility; Solid: Cannot be compressed (no gaps); Liquid: Virtually incompressible (particles touching); Gas: Easily compressed (large empty spaces). Distinguishing Feature: Particle Kinetic Energy; Solid: Lowest (vibrational only); Liquid: Intermediate (translational + rotational); Gas: Highest (high-speed random motion). Distinguishing Feature: Ability to Flow (Fluidity); Solid: Does not flow; Liquid: Flows easily (particles slide past each other); Gas: Flows rapidly in all directions.",
+      "vi": "Đặc điểm (Property): Mặt phân cách & Hình dạng; Solid (Rắn): Có mặt thoáng; hình dạng cố định ( fixed shape ); Liquid (Lỏng): Có mặt thoáng; theo hình bình chứa; Gas (Khí): Không có mặt thoáng; lấp đầy bình chứa. Đặc điểm (Property): Thể tích (Volume); Solid (Rắn): Cố định ( fixed ); Liquid (Lỏng): Cố định ( fixed ); Gas (Khí): Thay đổi theo bình chứa ( variable ). Đặc điểm (Property): Độ chịu nén (Compressibility); Solid (Rắn): Không thể nén (không còn khe trống); Liquid (Lỏng): Thực tế không thể nén (hạt sát nhau); Gas (Khí): Rất dễ nén (khoảng trống lớn). Đặc điểm (Property): Động năng hạt (Kinetic Energy); Solid (Rắn): Thấp nhất (chỉ dao động tại chỗ); Liquid (Lỏng): Trung bình (trượt qua nhau); Gas (Khí): Cao nhất (bay cực nhanh mọi hướng). Đặc điểm (Property): Khả năng chảy (Fluidity); Solid (Rắn): Không chảy được; Liquid (Lỏng): Chảy dễ dàng; Gas (Khí): Lan truyền tự do mọi hướng.",
+      "duration": 135.62,
+      "startTime": 576.17,
+      "endTime": 711.79,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Bromine is a red-brown liquid at room temperature (25 °C). Which row correctly describes the arrangement, separation, and motion of bromine molecules at 25 °C? A. Regular arrangement • Closely packed • Vibrate about fixed positions B. Random arrangement • Far apart • Move rapidly in all directions C. Random arrangement • Closely packed (most touching) • Slide past one another D. Regular arrangement • Far apart • Slide past one another ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: At 25 °C bromine is a liquid : its molecules have a random (irregular) arrangement , remain closely packed with most molecules touching , and move slowly by sliding/rolling past one another → C is correct . Why distractors fail: A describes a solid; B describes a gas (bromine vapour above 59 °C); D is physically impossible (far-apart particles cannot maintain a regular lattice).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 Bromine is a red-brown liquid at room temperature (25 °C). Which row correctly describes the arrangement, separation, and motion of bromine molecules at 25 °C? (Bromine là chất lỏng màu nâu đỏ ở nhiệt độ phòng 25 °C. Hàng nào mô tả đúng cách sắp xếp, khoảng cách và chuyển động của các phân tử bromine ở 25 °C?) A. Regular (Trật tự) • Closely packed (Sát nhau) • Vibrate about fixed positions (Dao động tại chỗ) B. Random (Ngẫu nhiên) • Far apart (Rất xa nhau) • Move rapidly in all directions (Bay cực nhanh mọi hướng) C. Random (Ngẫu nhiên) • Closely packed, most touching (Sát nhau, đa số chạm nhau) • Slide past one another (Trượt qua nhau) D. Regular (Trật tự) • Far apart (Rất xa nhau) • Slide past one another (Trượt qua nhau) ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Ở 25 °C, bromine tồn tại ở thể liquid (lỏng) nên phân tử sắp xếp random (ngẫu nhiên), khoảng cách closely packed / most touching (sát nhau, phần lớn chạm nhau) và chuyển động slide past one another (trượt qua nhau) → Đáp án C đúng . Loại bẫy: A là chất rắn; B là chất khí (hơi bromine trên 59 °C); D vô lý về mặt vật lý.",
+      "duration": 169.59,
+      "startTime": 711.79,
+      "endTime": 881.38,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 3 / Paper 4 Structured [5 marks] A student seals the nozzle of two identical syringes: Syringe X contains 20 cm3of liquid water and Syringe Y contains 20 cm3of air. (a) Explain, using kinetic particle theory, why the plunger of Syringe Y can be pushed inwards easily whereas the plunger of Syringe X cannot move. [2] (b) Liquid water in Syringe X is cooled until it freezes completely into ice at 0 °C. Describe the changes in particle arrangement and particle motion . [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Compressibility comparison: • In air (gas, Syringe Y), particles are very far apart with large empty spaces between them, so pushing the plunger easily forces particles closer together [1m] .• In liquid water (Syringe X), particles are already closely packed and touching with virtually no empty space between them, so they cannot be pushed closer [1m] . (b) Freezing liquid water → solid ice: • Arrangement: Changes from a random / irregular arrangement in liquid water to an ordered, regular repeating lattice in solid ice [1m] .• Motion: Particles lose kinetic energy [1m] ; instead of sliding/rolling past one another , they can now only vibrate about fixed positions [1m] . 💡 Intuition Check: Notice how every mark maps directly to a syllabus keyword: \"far apart / empty spaces\" vs \"closely packed / touching\" for compressibility, and \"random → regular\" + \"sliding → vibrating about fixed positions\" for freezing!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 3 / Paper 4 [5 điểm] A student seals the nozzle of two identical syringes: Syringe X contains 20 cm3of liquid water and Syringe Y contains 20 cm3of air. (Một học sinh bịt kín đầu hai ống tiêm giống hệt nhau: Ống X chứa 20 cm3nước lỏng và Ống Y chứa 20 cm3không khí.) (a) Explain, using kinetic particle theory, why the plunger of Syringe Y can be pushed inwards easily whereas the plunger of Syringe X cannot move. (Giải thích theo thuyết động học hạt vì sao pít-tông ống Y ấn vào dễ dàng còn ống X không ấn được.) (b) Liquid water in Syringe X is cooled until it freezes completely into ice at 0 °C. Describe the changes in particle arrangement and particle motion . (Làm lạnh nước lỏng trong ống X đến khi đông đặc hoàn toàn thành nước đá ở 0 °C.",
+      "duration": 168.89,
+      "startTime": 881.38,
+      "endTime": 1050.27,
+      "audioUrl": "/audio/lectures/chemistry/1/s01_b11.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "2. Sự Chuyển pha (Changes of State), Đồ thị Gia nhiệt & Làm lạnh",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "Syllabus 1.1 🟦 CORE + 🟩 SUPPLEMENT 2. Changes of State, Heating Curves & Cooling Curves.",
+      "vi": "Syllabus 1.1 🟦 CORE + 🟩 SUPPLEMENT 2. Sự Chuyển pha, Đồ thị Gia nhiệt & Làm lạnh.",
+      "duration": 15.27,
+      "startTime": 1050.27,
+      "endTime": 1065.54,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of thermal energy (heat) as cash given to prisoners linked together by magnetic handcuffs ( intermolecular forces ). On the sloping parts of a heating curve, 100% of the cash makes the prisoners run/jiggle faster — so the speedometer ( temperature ) climbs. On the flat horizontal plateaus (melting & boiling), every penny of cash is spent snapping the magnetic handcuffs apart rather than making anyone faster — so the speedometer ( temperature ) stays completely flat until the very last handcuff breaks!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung nhiệt lượng cung cấp giống như \"tiền thưởng\" phát cho những người đang bị khóa tay với nhau bằng còng nam châm ( intermolecular forces — lực hút liên phân tử). Ở các đoạn dốc lên của đồ thị gia nhiệt, 100% tiền thưởng giúp họ chạy/rung nhanh hơn → đồng hồ đo tốc độ ( temperature ) tăng vọt. Nhưng tới đoạn nằm ngang (melting / boiling) , toàn bộ tiền thưởng phải dồn hết để bẻ gãy chiếc còng nam châm chứ không ai chạy nhanh thêm được → đồng hồ nhiệt độ đứng im phẳng lì cho tới khi chiếc còng cuối cùng bung ra!",
+      "duration": 70.59,
+      "startTime": 1065.54,
+      "endTime": 1136.13,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Number-Line State Finder (🟦 Core 1.1.3 & 1.1.5): Sketch Solid <─ [m.p.] ─> Liquid <─ [b.p.] ─> Gas . Below m.p. = solid; between m.p. and b.p. = liquid; above b.p. = gas. 2 → Boiling vs. Evaporation: Boiling = one fixed b.p. + throughout whole liquid (bubbles). Evaporation = any temperature below b.p. + at the surface only (fastest molecules escape). 3 → Plateau Logic (🟩 Supplement): During melting/boiling, absorbed thermal energy overcomes intermolecular forces of attraction → average kinetic energy stays constant → temperature stays constant. (During condensing/freezing, intermolecular forces form , releasing energy).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Trục số Xác định Trạng thái (🟦 Core 1.1.3 & 1.1.5): Luôn vẽ nhanh trục Solid <─ [m.p.] ─> Liquid <─ [b.p.] ─> Gas . Nhỏ hơn m.p. = Rắn; nằm giữa m.p. và b.p. = Lỏng; lớn hơn b.p. = Khí. 2 → Boiling vs. Evaporation: Boiling = tại đúng 1 nhiệt độ b.p. cố định + xảy ra khắp lòng chất lỏng (sủi bọt). Evaporation = mọi nhiệt độ dưới b.p. + chỉ ở bề mặt thoáng (hạt nhanh nhất thoát ra). 3 → Giải thích Đoạn Ngang Plateau (🟩 Supplement): Khi nóng chảy/sôi, nhiệt năng dùng để overcome intermolecular forces of attraction (thắng lực hút liên phân tử) → average kinetic energy không đổi → nhiệt độ không đổi.",
+      "duration": 105.43,
+      "startTime": 1136.13,
+      "endTime": 1241.56,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"covalent bonds break when water boils\"! Boiling H2O(l) → H2O(g) is a physical change : the strong covalent O–H bonds inside water molecules stay 100% intact! Always write \"intermolecular forces of attraction between molecules are overcome\" . Also watch negative temperatures: −100 °C is colder (lower) than −78 °C !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết sai \"covalent bonds break\" (đứt liên kết cộng hóa trị) khi đun sôi nước! Đun sôi H2O(l) → H2O(g) là physical change : liên kết cộng hóa trị O–H bên trong phân tử KHÔNG HỀ ĐỨT! Bắt buộc viết \"intermolecular forces between molecules are overcome\" . Và cực kỳ tỉnh táo với số âm: −100 °C lạnh hơn (thấp hơn) −78 °C !",
+      "duration": 62.49,
+      "startTime": 1241.56,
+      "endTime": 1304.05,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "physical changes",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Changes of state are physical changes : no new chemical substances are formed, chemical bonds within molecules remain intact, and the process is completely reversible by heating or cooling.",
+      "vi": "Sự chuyển đổi trạng thái là physical changes (biến đổi vật lý): không sinh ra chất hóa học mới, liên kết cộng hóa trị bên trong phân tử không hề đứt gãy, và quá trình có tính thuận nghịch hoàn toàn.",
+      "duration": 25.94,
+      "startTime": 1304.05,
+      "endTime": 1329.99,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "SOLID (Rắn), LIQUID (Lỏng), GAS (Khí), Melting (Nóng chảy), Freezing (Đông đặc),...",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "SOLID, LIQUID, GAS, Melting (+heat), Freezing (−heat), Boiling / Evaporating, Condensing (−heat), Sublimation: Solid → Gas directly (e.g. CO₂ dry ice, I₂), 🔴 Red arrows = Endothermic (thermal energy absorbed) | 🔵 Blue arrows = Exothermic (thermal energy released).",
+      "vi": "SOLID (Rắn), LIQUID (Lỏng), GAS (Khí), Melting (Nóng chảy), Freezing (Đông đặc), Boiling / Evaporating, Condensing (Ngưng tụ), Sublimation (Thăng hoa: đá khô CO₂, tinh thể I₂), 🔴 Mũi tên đỏ = Thu nhiệt (Endothermic) | 🔵 Mũi tên xanh = Tỏa nhiệt (Exothermic).",
+      "duration": 45.16,
+      "startTime": 1329.99,
+      "endTime": 1375.15,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🔥 Melting & Melting Point:",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🔥 Melting & Melting Point: Solid turns into liquid at a sharp, fixed temperature (for a pure substance). Particles gain kinetic energy to vibrate faster until they break free from fixed lattice positions.",
+      "vi": "🔥 Melting & Melting Point: Rắn chuyển sang lỏng tại nhiệt độ nóng chảy xác định (chất tinh khiết có sharp melting point ). Hạt nhận động năng, dao động mạnh dần đến khi thoát khỏi vị trí mạng tinh thể.",
+      "duration": 27.36,
+      "startTime": 1375.15,
+      "endTime": 1402.51,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🫧 Boiling & Boiling Point:",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🫧 Boiling & Boiling Point: Liquid rapidly turns into gas throughout the liquid at a fixed temperature where vapour pressure equals atmospheric pressure.",
+      "vi": "🫧 Boiling & Boiling Point: Lỏng hóa hơi mãnh liệt trong toàn bộ khối chất lỏng tại nhiệt độ sôi xác định (khi áp suất hơi bằng áp suất khí quyển).",
+      "duration": 18.41,
+      "startTime": 1402.51,
+      "endTime": 1420.92,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "❄️ Condensing (Ngưng tụ):",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "❄️ Condensing: Gas cools and turns into liquid. Particles lose kinetic energy, move more slowly, and attractive forces pull them close together.",
+      "vi": "❄️ Condensing (Ngưng tụ): Khí hạ nhiệt chuyển thành lỏng. Hạt mất động năng, chuyển động chậm lại và lực hút kéo các hạt lại sát nhau.",
+      "duration": 19.92,
+      "startTime": 1420.92,
+      "endTime": 1440.84,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧊 Freezing & Freezing Point:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "🧊 Freezing & Freezing Point: Liquid turns into solid. For any pure substance, freezing point = melting point (e.g. 0 °C for pure water).",
+      "vi": "🧊 Freezing & Freezing Point: Lỏng hóa rắn. Với mọi chất tinh khiết, freezing point = melting point (ví dụ: nước tinh khiết đông đặc và nóng chảy đều ở 0 °C).",
+      "duration": 24.01,
+      "startTime": 1440.84,
+      "endTime": 1464.85,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "boiling point",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "⚠️ High-Frequency Exam Distinction: Boiling vs. Evaporation Feature: Temperature; Boiling: Occurs only at one fixed boiling point (e.g. 100 °C for water at 1 atm).; Evaporation: Occurs at any temperature below the boiling point (e.g. rain puddles drying at 20 °C). Feature: Where it Occurs; Boiling: Throughout the entire liquid — bubbles of vapour form inside the liquid and rise.; Evaporation: Strictly at the surface of the liquid only (no bubbles formed). Feature: Particle Explanation; Boiling: Continuous external heating supplies energy so all particles eventually overcome intermolecular forces.; Evaporation: Only the fastest-moving particles at the surface have enough kinetic energy to escape attractive forces, lowering the average kinetic energy (causing evaporative cooling ).",
+      "vi": "🚨 Bẫy Đề Thi Kinh Điển: Phân biệt Boiling (Sự sôi) vs. Evaporation (Sự bay hơi) Tiêu chí: Nhiệt độ (Temperature); Boiling (Sự sôi): Chỉ xảy ra tại một boiling point cố định duy nhất (VD: 100 °C với nước).; Evaporation (Sự bay hơi): Xảy ra ở bất kỳ nhiệt độ nào thấp hơn nhiệt độ sôi (VD: vũng nước mưa tự khô ở 25 °C). Tiêu chí: Vị trí (Location); Boiling (Sự sôi): Xảy ra trong toàn bộ thể tích chất lỏng — tạo bọt khí (bubbles).; Evaporation (Sự bay hơi): Chỉ xảy ra duy nhất trên bề mặt thoáng , không có bọt khí. Tiêu chí: Giải thích theo Hạt; Boiling (Sự sôi): Cần nguồn nhiệt cấp liên tục để toàn bộ các hạt thắng được lực hút liên phân tử.; Evaporation (Sự bay hơi): Các hạt có động năng lớn nhất ở bề mặt bứt ra trước → động năng trung bình của chất lỏng còn lại giảm xuống (gây hiệu ứng làm mát cooling effect ).",
+      "duration": 117.14,
+      "startTime": 1464.85,
+      "endTime": 1581.99,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "📈 Heating Curve (Đồ thị Gia nhiệt)",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "📈 Heating Curve (Pure Substance)",
+      "vi": "📈 Heating Curve (Đồ thị Gia nhiệt)",
+      "duration": 5.98,
+      "startTime": 1581.99,
+      "endTime": 1587.97,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "📉 Cooling Curve (Đồ thị Làm lạnh)",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "📉 Cooling Curve (Pure Substance)",
+      "vi": "📉 Cooling Curve (Đồ thị Làm lạnh)",
+      "duration": 5.87,
+      "startTime": 1587.97,
+      "endTime": 1593.84,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "Tại sao nhiệt độ KHÔNG ĐỔI khi Nóng chảy & Sôi (đoạn ngang)?",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "Why is temperature constant during Melting & Boiling? All thermal energy absorbed is used to overcome / break intermolecular forces of attraction between particles rather than increasing the average kinetic energy of the particles.",
+      "vi": "Tại sao nhiệt độ KHÔNG ĐỔI khi Nóng chảy & Sôi (đoạn ngang)? Nhiệt năng hấp thụ được dùng toàn bộ để phá vỡ lực hút liên phân tử giữa các hạt, chứ không làm tăng average kinetic energy (động năng trung bình) của hạt.",
+      "duration": 29.26,
+      "startTime": 1593.84,
+      "endTime": 1623.1,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b13.mp3"
+    },
+    {
+      "id": "s02_b14",
+      "title": "Tại sao nhiệt độ KHÔNG ĐỔI khi Ngưng tụ & Đông đặc?",
+      "selector": "[data-lecture-section=\"s02_b14\"]",
+      "en": "Why is temperature constant during Condensing & Freezing? As particles move closer and intermolecular attractions form , energy is released to the surroundings, balancing heat loss so average kinetic energy (and temperature) stays constant.",
+      "vi": "Tại sao nhiệt độ KHÔNG ĐỔI khi Ngưng tụ & Đông đặc? Khi các hạt tiến lại gần và hình thành lực hút liên kết , quá trình này tỏa năng lượng bù lại phần nhiệt mất ra môi trường, giữ nhiệt độ không đổi.",
+      "duration": 27.9,
+      "startTime": 1623.1,
+      "endTime": 1651.0,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b14.mp3"
+    },
+    {
+      "id": "s02_b15",
+      "title": "💡 Dấu hiệu nhận biết Độ tinh khiết (Purity):",
+      "selector": "[data-lecture-section=\"s02_b15\"]",
+      "en": "💡 Purity Check on Curves: A pure substance has sharp, horizontal plateaus at exact melting and boiling points. An impure substance (mixture) melts and boils over a sloping temperature range (lower melting point, higher boiling point).",
+      "vi": "💡 Dấu hiệu nhận biết Độ tinh khiết (Purity): Pure substance (chất tinh khiết) có đoạn chuyển pha nằm ngang phẳng tuyệt đối. Ngược lại, mixture / impure substance (hỗn hợp/lẫn tạp chất) sẽ nóng chảy và sôi trên một khoảng nhiệt độ nghiêng dốc (nhiệt độ nóng chảy hạ thấp hơn, nhiệt độ sôi tăng cao hơn).",
+      "duration": 37.1,
+      "startTime": 1651.0,
+      "endTime": 1688.1,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b15.mp3"
+    },
+    {
+      "id": "s02_b16",
+      "title": "Đề bài:",
+      "selector": "[data-lecture-section=\"s02_b16\"]",
+      "en": "🧮 Worked Example 1 — Predicting Physical State (Watch Negative Signs!) Question: Compound X has a melting point of −30 °C and a boiling point of 85 °C . Deduce the physical state of Compound X at (a) 25 °C and (b) −45 °C . Explain your answer. [3 marks] . [ SOLID ] <──── −30 °C (m.p.) ────> [ LIQUID ] <──── 85 °C (b.p.) ────> [ GAS ] (a) At 25 °C → Liquid: Because 25 °C is above its melting point (−30 °C) and below its boiling point (85 °C). (b) At −45 °C → Solid: Careful with negative numbers! −45 °C is lower (colder) than −30 °C , so it has not yet reached its melting point.",
+      "vi": "🧮 Ví dụ Minh họa 1 — Xác định Trạng thái Vật lý (Cẩn thận Bẫy Số Âm!) Đề bài: Hợp chất X có melting point = −30 °C và boiling point = 85 °C . Xác định trạng thái vật lý của X ở (a) 25 °C và (b) −45 °C , kèm giải thích chuẩn Mark Scheme. [3 điểm] . [ SOLID (Rắn) ] <─── −30 °C (m.p.) ───> [ LIQUID (Lỏng) ] <─── 85 °C (b.p.) ───> [ GAS (Khí) ] (a) Tại 25 °C → Liquid (Chất lỏng): Vì 25 °C cao hơn nhiệt độ nóng chảy (−30 °C) nhưng thấp hơn nhiệt độ sôi (85 °C). (b) Tại −45 °C → Solid (Chất rắn): Cực kỳ cẩn thận với trục số âm! −45 °C thấp hơn (lạnh hơn) −30 °C nên chất X chưa đạt tới nhiệt độ nóng chảy.",
+      "duration": 122.78,
+      "startTime": 1688.1,
+      "endTime": 1810.88,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b16.mp3"
+    },
+    {
+      "id": "s02_b17",
+      "title": "liquid at 0 °C",
+      "selector": "[data-lecture-section=\"s02_b17\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • Paper 1 / Paper 2 Data-Table MCQ The melting points and boiling points of four pure substances, P, Q, R and S, are shown:• P: m.p. = −114 °C, b.p. = 78 °C | • Q: m.p. = −210 °C, b.p. = −196 °C• R: m.p. = 17 °C, b.p. = 118 °C | • S: m.p. = 801 °C, b.p. = 1413 °CWhich substance is a liquid at 0 °C and a gas at 100 °C ? A. Substance P B. Substance Q C. Substance R D. Substance S ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: To be a liquid at 0 °C , a substance must have m.p. < 0 °C and b.p. > 0 °C . To be a gas at 100 °C , it must have b.p. < 100 °C . Checking P (ethanol): m.p. (−114 °C) < 0 °C < b.p. (78 °C) → liquid at 0 °C; and 100 °C > 78 °C → gas at 100 °C! Why others fail: Q (N2) is already a gas at 0 °C (0 > −196); R (ethanoic acid) is a solid at 0 °C (0 < 17) and still liquid at 100 °C; S (NaCl) is solid at both temperatures.",
+      "vi": "BÀI MẪU 1 🟦 CORE / EXTENDED • Trắc nghiệm Bảng số liệu Paper 1 & 2 The melting points and boiling points of four pure substances, P, Q, R and S, are shown:• P: m.p. = −114 °C, b.p. = 78 °C | • Q: m.p. = −210 °C, b.p. = −196 °C• R: m.p. = 17 °C, b.p. = 118 °C | • S: m.p. = 801 °C, b.p. = 1413 °CWhich substance is a liquid at 0 °C and a gas at 100 °C ? (Cho nhiệt độ nóng chảy m.p. và nhiệt độ sôi b.p. của 4 chất tinh khiết P, Q, R, S như trên. Chất nào là chất lỏng ở 0 °C và là chất khí ở 100 °C?) A. Substance P (Chất P) B. Substance Q (Chất Q) C. Substance R (Chất R) D. Substance S (Chất S) ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Để là liquid ở 0 °C , chất đó phải thỏa mãn m.p. < 0 °C < b.p. Để là gas ở 100 °C , phải có b.p. < 100 °C . Kiểm tra chất P (ethanol): −114 °C < 0 °C < 78 °C (lỏng ở 0 °C) và 100 °C > 78 °C (khí ở 100 °C) → A đúng ! Loại bẫy: Q đã sôi thành khí từ −196 °C; R ở 0 °C vẫn là chất rắn (0 < 17) và ở 100 °C vẫn là lỏng (100 < 118); S là chất rắn ở cả hai nhiệt độ.",
+      "duration": 240.44,
+      "startTime": 1810.88,
+      "endTime": 2051.32,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b17.mp3"
+    },
+    {
+      "id": "s02_b18",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b18\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] A pure sample of gaseous octadecanoic acid is cooled steadily from 400 °C to 20 °C. Its boiling point is 361 °C and its melting point is 69 °C. (a) State the physical state(s) present in the sample (i) at 200 °C, and (ii) during the horizontal plateau at 69 °C. [2] (b) Explain, in terms of kinetic particle theory, why the temperature remains constant at 69 °C even though thermal energy is continuously lost to the surroundings. [2] (c) Describe how the cooling graph around 69 °C would look different if the sample were impure. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Identifying states from m.p. (69 °C) and b.p. (361 °C): • (i) At 200 °C (between 69 °C and 361 °C): liquid only [1m] .• (ii) On the 69 °C freezing plateau: a mixture of both liquid and solid [1m] . (b) Constant temperature during freezing: • As liquid particles slow down and lock into fixed lattice positions, intermolecular forces of attraction are formed between particles [1m] .• Forming these attractions releases thermal energy at the same rate as heat is lost to the surroundings, keeping average particle kinetic energy (and temperature) constant [1m] . (c) Effect of impurity: • Instead of a sharp horizontal plateau at 69 °C, it would freeze over a sloping range of lower temperatures (starting below 69 °C) [1m] . 💡 Intuition Check: Heating plateaus absorb energy to break intermolecular attractions; cooling plateaus release energy as intermolecular attractions form .",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] A pure sample of gaseous octadecanoic acid is cooled steadily from 400 °C to 20 °C. Its boiling point is 361 °C and its melting point is 69 °C. (Một mẫu hơi axit octadecanoic tinh khiết được làm lạnh đều từ 400 °C xuống 20 °C. Biết nhiệt độ sôi là 361 °C và nhiệt độ nóng chảy là 69 °C.) (a) State the physical state(s) present in the sample (i) at 200 °C, and (ii) during the horizontal plateau at 69 °C. (Nêu trạng thái vật lý có mặt ở (i) 200 °C và (ii) trên đoạn nằm ngang ở 69 °C.) Giải thích theo thuyết động học hạt vì sao nhiệt độ giữ không đổi ở 69 °C dù nhiệt vẫn tỏa ra môi trường. Đồ thị làm lạnh quanh mốc 69 °C sẽ thay đổi thế nào nếu mẫu bị lẫn tạp chất? ✍️ Lời giải chi tiết theo thang điểm: (a) Xác định trạng thái từ m.p. (69 °C) và b.p. (361 °C): • (i) Tại 200 °C (nằm giữa 69 °C và 361 °C): chỉ tồn tại thể liquid (lỏng) .• (ii) Trên đoạn nằm ngang 69 °C (đang đông đặc): tồn tại đồng thời cả liquid and solid (lỏng và rắn) .",
+      "duration": 216.95,
+      "startTime": 2051.32,
+      "endTime": 2268.27,
+      "audioUrl": "/audio/lectures/chemistry/1/s02_b18.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "3. Ảnh hưởng của Nhiệt độ (Temperature) & Áp suất (Pressure) lên Thể tích Khí",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "Syllabus 1.1.4 & 1.1.6 🟦 CORE + 🟩 SUPPLEMENT 3. Effects of Temperature & Pressure on Gas Volume.",
+      "vi": "Syllabus 1.1.4 & 1.1.6 🟦 CORE + 🟩 SUPPLEMENT 3. Ảnh hưởng của Nhiệt độ (Temperature) & Áp suất (Pressure) lên Thể tích Khí.",
+      "duration": 16.3,
+      "startTime": 2268.27,
+      "endTime": 2284.57,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine gas molecules as bumper cars zooming inside a ring with stretchy rubber walls! Gas pressure is simply the push from cars slamming into the walls.• Turn up the heat ( T ↑, constant P ): Every bumper car gets a turbo speed boost ( more kinetic energy ) — they slam the rubber walls harder and more often, pushing the arena wider ( volume increases ).• Squeeze the walls in ( P ↑, constant T ): Pushing harder from outside crowds the same cars into a tighter space ( closer together ) so they hit the walls more often to push back equally ( volume decreases ).",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng các phân tử khí như những chiếc xe điện đụng chạy trong sân chơi có hàng rào cao su co giãn! Gas pressure (Áp suất khí) chính là lực tông của xe đập vào hàng rào.• Đun nóng khí ( T ↑, giữ P không đổi): Mỗi xe được bơm tăng tốc ( tăng kinetic energy ), lao nhanh hơn, tông vào rào cao su dồn dập và mạnh hơn, đẩy hàng rào phình rộng ra ( thể tích V tăng ).• Ép mạnh từ bên ngoài ( P ↑, giữ T không đổi): Bạn đẩy ép rào cao su thu hẹp sân lại, dồn các xe sát nhau hơn ( tăng mật độ hạt ) để chúng tông vào rào dày đặc hơn nhằm cân bằng lại lực ép ( thể tích V giảm ).",
+      "duration": 81.17,
+      "startTime": 2284.57,
+      "endTime": 2365.74,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Direction Check (🟦 Core 1.1.4 & 1.1.6): Constant P : T ↑ ⇒ V ↑ (direct). Constant T : P ↑ ⇒ V ↓ (inverse). 2 → The 3-Link Supplement Chain (🟩 Supplement): Always write all three links:• Heating: (1) Particles gain kinetic energy & move faster → (2) Collide more frequently and with greater force with container walls → (3) Gas expands so volume increases (at constant P ) or pressure rises (in a fixed-volume tank).• Compressing: (1) Particles pushed closer together (more particles per unit volume, same speed) → (2) Collide more frequently with container walls → (3) Balances higher external pressure at a smaller volume.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Quy tắc Tỉ lệ (🟦 Core 1.1.4 & 1.1.6): Giữ P cố định: T ↑ ⇒ V ↑ . Giữ T cố định: P ↑ ⇒ V ↓ . 2 → Chuỗi 3 Mắt xích Ăn điểm Supplement (🟩 Supplement): Luôn viết đủ 3 ý:• Khi tăng T : (1) Hạt nhận nhiệt tăng kinetic energy & chuyển động nhanh hơn (move faster) → (2) Va (nếu pít-tông tự do) hoặc áp suất tăng (nếu bình thép kín).• Khi tăng P : (1) Hạt bị ép sát nhau hơn → (2) Tần suất va chạm lên thành bình tăng → (3) Thể tích giảm xuống.",
+      "duration": 86.5,
+      "startTime": 2365.74,
+      "endTime": 2452.24,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying \"particles collide with each other more\" to explain pressure! Collisions between gas particles in mid-air exert ZERO force on the syringe! You MUST write \"collide more frequently with the walls of the container\" . Also NEVER write that gas particles themselves expand when heated — individual atoms keep the exact same size!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết \"các hạt va chạm với nhau nhiều hơn\" để giải thích áp suất! Các hạt khí đụng nhau giữa không trung KHÔNG tạo ra áp suất lên bình chứa! Bắt buộc phải viết \"collide more frequently with the container walls\" (va chạm thường xuyên hơn vào thành bình) . Và tuyệt đối KHÔNG bao giờ nói \"hạt khí nở to ra\" khi đun nóng!",
+      "duration": 47.35,
+      "startTime": 2452.24,
+      "endTime": 2499.59,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "temperature",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Because gas particles are separated by large empty spaces, the volume of a fixed mass of gas responds dramatically to changes in temperature and pressure . Gas pressure itself is caused by gas particles colliding with the walls of their container, exerting a force per unit area.",
+      "vi": "Vì giữa các hạt khí có khoảng trống rất lớn, thể tích của một lượng khí xác định thay đổi mạnh khi biến đổi temperature (nhiệt độ) và pressure (áp suất). Bản chất của gas pressure (áp suất khí) là lực va đập của các hạt khí lên một đơn vị diện tích thành bình chứa.",
+      "duration": 35.45,
+      "startTime": 2499.59,
+      "endTime": 2535.04,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🌡️ Ảnh hưởng của Nhiệt độ (Áp suất P không đổi)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🌡️ Effect of Temperature (Constant P ). Temperature ↑ ⇒ Gas Volume ↑ ( V ∝ T ) Core: Increasing temperature increases the volume of a gas (at constant pressure). Supplement Kinetic Explanation: Gas particles absorb thermal energy and gain kinetic energy , so they move faster. Particles collide with the container walls more frequently and with greater force. In a flexible container (or movable piston), the gas expands so wall collisions return to external pressure → volume increases. .",
+      "vi": "🌡️ Ảnh hưởng của Nhiệt độ (Áp suất P không đổi). Nhiệt độ T ↑ ⇒ Thể tích khí V ↑ ( V ∝ T ) Core: Tăng nhiệt độ làm tăng thể tích chất khí (khi giữ áp suất không đổi). Supplement (Giải thích theo Thuyết Động học): Hạt khí nhận nhiệt và tăng kinetic energy (động năng) → chuyển động nhanh hơn (move faster). Các hạt va . Để duy trì áp suất không đổi (trong bình có pít-tông tự do), khí giãn nở ra → thể tích tăng lên. .",
+      "duration": 31.14,
+      "startTime": 2535.04,
+      "endTime": 2566.18,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🗜️ Ảnh hưởng của Áp suất (Nhiệt độ T không đổi)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🗜️ Effect of Pressure (Constant T ). Pressure ↑ ⇒ Gas Volume ↓ ( V ∝ 1 / P ) Core: Increasing external pressure decreases the volume of a gas (at constant temperature). Supplement Kinetic Explanation: Applying higher external pressure pushes gas particles closer together , reducing the empty space between them. Average particle speed stays unchanged (since T is constant), but there are more particles per unit volume. Particles hit a smaller wall area more frequently , balancing the higher external pressure at a smaller volume. .",
+      "vi": "🗜️ Ảnh hưởng của Áp suất (Nhiệt độ T không đổi). Áp suất P ↑ ⇒ Thể tích khí V ↓ ( V ∝ 1 / P ) Core: Tăng áp suất bên ngoài làm giảm thể tích chất khí (khi giữ nhiệt độ không đổi). Supplement (Giải thích theo Thuyết Động học): Tăng áp suất ép các hạt khí lại gần nhau hơn (closer together) , thu hẹp khoảng không gian trống giữa chúng. Vận tốc trung bình không đổi (vì T không đổi), nhưng mật độ hạt trên một đơn vị thể tích tăng lên. Tần suất va chạm lên thành bình cân bằng với áp suất ngoài lớn hơn ở mức thể tích nhỏ hơn. .",
+      "duration": 71.99,
+      "startTime": 2566.18,
+      "endTime": 2638.17,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Áp suất thấp → Thể tích lớn, Nén pít-tông (P ↑), Áp suất cao → Thể tích nhỏ, ⚠️ ...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Low Pressure → Large Volume, Compress (P ↑), High Pressure → Small Volume, ⚠️ Common Misconception, Particles themselves NEVER, expand or shrink! Only the, spaces between them change.",
+      "vi": "Áp suất thấp → Thể tích lớn, Nén pít-tông (P ↑), Áp suất cao → Thể tích nhỏ, ⚠️ Sai lầm cần tránh!, Bản thân các hạt KHÔNG BAO GIỜ, to ra hay co nhỏ lại! Chỉ có, khoảng cách giữa các hạt thay đổi.",
+      "duration": 29.11,
+      "startTime": 2638.17,
+      "endTime": 2667.28,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Extended MCQ A gas syringe with a free-moving, frictionless plunger contains 50 cm3of argon gas at 25 °C and 1 atm. The syringe is heated to 85 °C while external atmospheric pressure stays at 1 atm. Why does the volume of the gas increase? A. Individual argon atoms expand when they absorb thermal energy. B. Argon atoms move faster and hit the syringe walls more forcefully and more often, pushing the plunger out. C. Repulsive forces between argon atoms become stronger at higher temperatures. D. More argon atoms are produced inside the syringe as thermal energy increases. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Heating increases the average kinetic energy of argon atoms so they move faster , colliding with the inner walls and plunger more frequently and with greater force . Temporarily internal pressure exceeds 1 atm, pushing the plunger outwards until the larger volume restores wall collision rate back to 1 atm → B is correct . Traps: A (atoms never expand!), C (gas forces are negligible), D (mass/number of atoms is conserved in a sealed syringe).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Extended A gas syringe with a free-moving, frictionless plunger contains 50 cm3of argon gas at 25 °C and 1 atm. The syringe is heated to 85 °C while external atmospheric pressure stays at 1 atm. Why does the volume of the gas increase? (Một ống tiêm khí có pít-tông trơn tự do chứa 50 cm3khí argon ở 25 °C và 1 atm. Đun nóng ống tiêm lên 85 °C trong khi áp suất khí quyển bên ngoài giữ ở 1 atm. Vì sao thể tích khí tăng lên?) A. Bản thân từng nguyên tử argon phình to ra khi thu nhiệt. B. Nguyên tử argon bay nhanh hơn, đập vào thành ống và pít-tông mạnh hơn & thường xuyên hơn, đẩy pít-tông ra. C. Lực đẩy giữa các nguyên tử argon mạnh lên khi nhiệt độ cao. D. Sinh ra thêm nhiều nguyên tử argon hơn khi nhiệt năng tăng. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Khi đun nóng, các nguyên tử argon tăng average kinetic energy nên chuyển động nhanh hơn (move faster) , va đập vào mặt trong ống tiêm và pít-tông thường xuyên hơn và với lực mạnh hơn , đẩy pít-tông dịch ra ngoài làm thể tích tăng → B đúng . Loại bẫy: A sai nặng (nguyên tử không bao giờ nở to ra!); C và D sai bản chất vật lý.",
+      "duration": 170.77,
+      "startTime": 2667.28,
+      "endTime": 2838.05,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] A weather balloon containing a fixed mass of helium gas is released from sea level. As it rises high into the atmosphere, the external air pressure drops dramatically while temperature stays approximately constant. (a) State what happens to the volume of helium gas in the balloon as external pressure decreases. [1] (b) Before launch, spare helium was stored in a rigid, fixed-volume steel cylinder. Explain, using kinetic particle theory, why leaving the steel cylinder in hot sunlight causes the gas pressure inside to increase. [3] (c) State what happens to the size of an individual helium atom as the balloon expands. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Effect of decreasing external pressure (constant T ): • The volume of helium gas increases (the balloon expands) [1m] . (b) Heating gas in a rigid, fixed-volume cylinder: • Helium atoms absorb thermal energy, gain kinetic energy , and move faster [1m] .• Atoms collide with the inside walls of the steel cylinder more frequently [1m] .• Each collision also occurs with greater force (harder), exerting a larger total force per unit area → pressure increases [1m] . (c) Size of individual atoms: • Remains completely unchanged / stays the same (only the spaces between atoms increase) [1m] . 💡 Intuition Check: Memorise the golden pair of phrases for heating a gas: \"collide with the container walls MORE FREQUENTLY\" [1m] and \"with GREATER FORCE\" [1m]!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] A weather balloon containing a fixed mass of helium gas is released from sea level. As it rises high into the atmosphere, the external air pressure drops dramatically while temperature stays approximately constant. (Một khinh khí cầu thời tiết chứa lượng khí helium xác định được thả lên cao. Càng lên cao, áp suất không khí bên ngoài càng giảm mạnh trong khi nhiệt độ coi như không đổi.) (a) State what happens to the volume of helium gas in the balloon as external pressure decreases. (Nêu sự thay đổi thể tích khí helium khi áp suất ngoài giảm.) Trước khi bơm, khí helium dự phòng được nén trong bình thép cứng có thể tích cố định. Giải thích theo thuyết động học hạt vì sao phơi bình thép ngoài nắng nóng làm áp suất bên trong bình tăng cao. Kích thước của một nguyên tử helium riêng lẻ thay đổi thế nào khi khinh khí cầu phình to? ✍️ Lời giải chi tiết theo thang điểm: (a) Giảm áp suất ngoài (nhiệt độ không đổi): • Thể tích khí helium tăng lên .",
+      "duration": 170.55,
+      "startTime": 2838.05,
+      "endTime": 3008.6,
+      "audioUrl": "/audio/lectures/chemistry/1/s03_b09.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "4. Hiện tượng Khuếch tán (Diffusion) & Ảnh hưởng của Phân tử khối ( M r )",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "Syllabus 1.2 🟦 CORE + 🟩 SUPPLEMENT 4. Diffusion & Effect of Relative Molecular Mass ( M r).",
+      "vi": "Syllabus 1.2 🟦 CORE + 🟩 SUPPLEMENT 4. Hiện tượng Khuếch tán (Diffusion) & Ảnh hưởng của Phân tử khối ( M r).",
+      "duration": 17.88,
+      "startTime": 3008.6,
+      "endTime": 3026.48,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: 1. Perfume in a Classroom (Diffusion): Spray perfume at the front desk — scent molecules bounce randomly off air molecules in every direction, naturally spreading out from the crowded spray cloud ( higher concentration ) to the back row ( lower concentration ). 2. Sprinter vs. Sumo Wrestler (Effect of M r): Give a lightweight sprinter (NH3, M r= 17) and a heavy sumo wrestler (HCl, M r= 36.5) the exact same kinetic energy (same temperature). The lighter sprinter runs much faster and covers two-thirds of the corridor before bumping into the heavy wrestler!",
+      "vi": "🎯 Hình dung đời thường: 1. Xịt nước hoa đầu lớp (Diffusion): Xịt một tia nước hoa ở bàn giáo viên — các phân tử hương thơm va đập ngẫu nhiên vào phân tử không khí và tự động lan dần từ đám mây đậm đặc ( higher concentration ) xuống tận cuối lớp ( lower concentration ). 2. Vận động viên Chạy nước rút vs. Võ sĩ Sumo (Ảnh hưởng của M r): Ở cùng một nhiệt độ (cùng mức động năng), phân tử nhẹ như vận động viên điền kinh (NH3, M r= 17) phóng nhanh gấp bội so với phân tử nặng như võ sĩ Sumo (HCl, M r= 36.5) — nên chàng điền kinh chạy được 2/3 hành lang mới gặp võ sĩ Sumo!",
+      "duration": 86.1,
+      "startTime": 3026.48,
+      "endTime": 3112.58,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Core Diffusion Definition (🟦 Core 1.2.1): Net movement of particles from a region of higher concentration to a region of lower concentration down a concentration gradient due to random particle motion . 2 → Supplement M rRule (🟩 Supplement 1.2.2): Always execute 3 steps: (Step 1) Calculate exact M r for each gas → (Step 2) Smaller M r= lighter molecule = faster average speed (at the same T ) → (Step 3) Diffuses faster & travels further in the same time!",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Định nghĩa Chuẩn Core (🟦 Core 1.2.1): Diffusion là sự dịch chuyển tịnh của hạt từ vùng higher concentration đến vùng lower concentration do chuyển động ngẫu nhiên ( random movement ). Nhanh ở khí, chậm ở lỏng, không xảy ra ở rắn. 2 → Quy tắc 3 Bước So sánh Tốc độ theo M r(🟩 Supplement 1.2.2): (Bước 1) Tính đúng M r của từng khí → (Bước 2) M rnhỏ hơn = phân tử nhẹ hơn = bay nhanh hơn (cùng T ) → (Bước 3) Diffuse faster (đi được quãng đường xa hơn trong cùng thời gian)!",
+      "duration": 71.29,
+      "startTime": 3112.58,
+      "endTime": 3183.87,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Using atomic mass ( A r) instead of molecular mass ( M r) for diatomic gases! Candidates often write chlorine = 35.5 instead of Cl2= 71 , or nitrogen = 14 instead of N2= 28 ! Always write the full molecular formula first — and spot the classic Cambridge trick: N2(28), CO (28), and C2H4(28) all have identical M r= 28, so they diffuse at the exact same rate !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Lấy nhầm nguyên tử khối ( A r) thay vì phân tử khối ( M r) cho khí lưỡng nguyên tử! Rất nhiều bạn tính chlorine = 35.5 thay vì Cl2= 71 , hoặc nitrogen = 14 thay vì N2= 28 ! Hãy luôn viết công thức phân tử trước — và nhớ mẹo tủ của đề thi Cambridge: N2(28), CO (28) và C2H4(28) có cùng M r= 28 nên tốc độ khuếch tán bằng hệt nhau !",
+      "duration": 71.08,
+      "startTime": 3183.87,
+      "endTime": 3254.95,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "📖 Định nghĩa Thuộc lòng Chuẩn Cambridge (Official Definition):",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "📖 Official Cambridge Definition: Diffusion is the net movement of particles from a region of their higher concentration to a region of their lower concentration down a concentration gradient, as a result of their random movement (until evenly distributed).",
+      "vi": "📖 Định nghĩa Thuộc lòng Chuẩn Cambridge (Official Definition): Sự khuếch tán là sự dịch chuyển tịnh của các hạt từ vùng có nồng độ cao sang vùng có nồng độ thấp hơn xuôi theo gradient nồng độ, do chuyển động hỗn loạn ngẫu nhiên của chúng .",
+      "duration": 29.85,
+      "startTime": 3254.95,
+      "endTime": 3284.8,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🧊 Rắn (Solids) — Không khuếch tán:",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🧊 Solids — No Diffusion: Particles only vibrate about fixed positions and cannot move from place to place.",
+      "vi": "🧊 Rắn (Solids) — Không khuếch tán: Các hạt chỉ dao động quanh vị trí cố định, không thể di chuyển từ nơi này sang nơi khác.",
+      "duration": 15.93,
+      "startTime": 3284.8,
+      "endTime": 3300.73,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "💧 Lỏng (Liquids) — Khuếch tán chậm:",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "💧 Liquids — Slow Diffusion: Green nickel(II) sulfate or purple KMnO4 crystals in water take hours/days to form a uniform colour because particles move slowly and collide frequently with water molecules.",
+      "vi": "💧 Lỏng (Liquids) — Khuếch tán chậm: Tinh thể xanh lục nickel(II) sulfate hoặc tím KMnO4 đặt trong nước mất nhiều giờ/nhiều ngày để lan đều vì hạt lỏng di chuyển chậm và va chạm liên tục.",
+      "duration": 28.03,
+      "startTime": 3300.73,
+      "endTime": 3328.76,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "💨 Khí (Gases) — Khuếch tán rất nhanh:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "💨 Gases — Rapid Diffusion: Red-brown bromine vapour (Br2) spreads throughout an inverted gas jar of air within minutes because gas particles travel at high speeds across large spaces.",
+      "vi": "💨 Khí (Gases) — Khuếch tán rất nhanh: Hơi bromine (Br2) màu nâu đỏ lan kín bình khí chỉ trong vài phút vì các hạt khí bay với tốc độ cao qua khoảng trống lớn.",
+      "duration": 24.4,
+      "startTime": 3328.76,
+      "endTime": 3353.16,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "⚡ Hai Yếu tố Quyết định Tốc độ Khuếch tán Chất khí:",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "⚡ Two Key Factors Controlling Gas Diffusion Rate: 1. Temperature (Core): Higher temperature → particles have greater average kinetic energy and move faster → faster diffusion. 2. Relative Molecular Mass, M r(Supplement 1.2.2): At the same temperature, lighter gas molecules ( smaller M r ) move at higher average speeds and diffuse faster than heavier gas molecules ( larger M r ).",
+      "vi": "⚡ Hai Yếu tố Quyết định Tốc độ Khuếch tán Chất khí: 1. Temperature — Nhiệt độ (Core): Nhiệt độ càng cao → động năng trung bình của hạt càng lớn, di chuyển nhanh hơn → diffuse faster (khuếch tán nhanh hơn). 2. Relative Molecular Mass, M r— Phân tử khối (Supplement 1.2.2): Ở cùng một nhiệt độ, khí có phân tử khối nhỏ hơn có vận tốc trung bình lớn hơn nên khuếch tán nhanh hơn khí nặng ( higher M r ).",
+      "duration": 55.68,
+      "startTime": 3353.16,
+      "endTime": 3408.84,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "🔬 Thí nghiệm Ống Thủy tinh Kinh điển: Ammonia (NH 3 ) vs. Hydrogen Chloride (HCl)",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "🟩 SUPPLEMENT 1.2.2 🔬 Classic Investigation: Ammonia (NH3) vs. Hydrogen Chloride (HCl) Diffusion Tube. Balanced Equation with State Symbols: NH3(g) + HCl(g) → NH4Cl(s) (ammonium chloride = white solid) . 🏆 Model 3-Mark Exam Answer — Why does the white ring form closer to the HCl end? Calculate & compare M r: Ammonia, NH3, has a lower relative molecular mass ( M r= 14 + 3×1 = 17 ) than hydrogen chloride, HCl ( M r= 1 + 35.5 = 36.5 ). Link to speed & diffusion rate: Lighter NH3molecules move at a higher average speed and diffuse faster than heavier HCl molecules. Distance conclusion: Therefore, NH3travels a greater distance along the tube in the same time, so the gases meet and react closer to the hydrochloric acid end.",
+      "vi": "🟩 SUPPLEMENT 1.2.2 🔬 Thí nghiệm Ống Thủy tinh Kinh điển: Ammonia (NH3) vs. Hydrogen Chloride (HCl). Phương trình kèm State Symbols: NH3(g) + HCl(g) → NH4Cl(s) (ammonium chloride = chất rắn màu trắng) . 🏆 Cách lập luận ăn trọn 3 điểm Mark Scheme — Tại sao vòng trắng NH4Cl tạo thành gần đầu HCl hơn? Tính và so sánh M r: Phân tử ammonia, NH3 có phân tử khối nhỏ hơn ( M r= 14 + 3×1 = 17 ) so với hydrogen chloride, HCl ( M r= 1 + 35.5 = 36.5 ). Liên hệ vận tốc & tốc độ khuếch tán: Vì nhẹ hơn nên các phân tử NH3di chuyển với vận tốc trung bình cao hơn và khuếch tán nhanh hơn (diffuse faster) so với HCl. Kết luận quãng đường: Trong cùng một khoảng thời gian, NH3đi được quãng đường xa hơn dọc theo ống nên hai khí gặp nhau và phản ứng ở vị trí gần đầu bông tẩm HCl hơn.",
+      "duration": 132.88,
+      "startTime": 3408.84,
+      "endTime": 3541.72,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "Đề bài:",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "🧮 Worked Example 2 — Ranking Gases by Rate of Diffusion Question: Arrange the gases Cl2, CH4, N2, CO2, and He in order of decreasing rate of diffusion at 25 °C. ( A r: H = 1, He = 4, C = 12, N = 14, O = 16, Cl = 35.5). Step 1 — Calculate M r(or A rfor monatomic He): • He = 4 | CH4= 12 + 4(1) = 16 | N2= 2(14) = 28 | CO2= 12 + 2(16) = 44 | Cl2= 2(35.5) = 71 Step 2 — Smaller M rdiffuses faster: Fastest → He (4) > CH4(16) > N2(28) > CO2(44) > Cl2(71) ← Slowest Exam Note: Notice that CO ( M r= 12 + 16 = 28) and N2 ( M r= 28) diffuse at the exact same rate at the same temperature because they have identical M rvalues!",
+      "vi": "🧮 Ví dụ Minh họa 2 — Sắp xếp Tốc độ Khuếch tán của các Khí Đề bài: Sắp xếp các khí Cl2, CH4, N2, CO2và He theo chiều tốc độ khuếch tán giảm dần ở 25 °C. (Cho A r: H = 1, He = 4, C = 12, N = 14, O = 16, Cl = 35.5). Bước 1 — Tính M r(hoặc A rvới khí đơn nguyên tử He): • He = 4 | CH4= 12 + 4(1) = 16 | N2= 2(14) = 28 | CO2= 12 + 2(16) = 44 | Cl2= 2(35.5) = 71 Bước 2 — M rcàng nhỏ thì khuếch tán càng nhanh: Nhanh nhất → He (4) > CH4(16) > N2(28) > CO2(44) > Cl2(71) ← Chậm nhất Mẹo câu hỏi bẫy Paper 2: Hai khí CO ( M r= 12 + 16 = 28) và N2 ( M r= 28) có tốc độ khuếch tán bằng nhau ở cùng nhiệt độ vì có cùng giá trị M r= 28!",
+      "duration": 153.56,
+      "startTime": 3541.72,
+      "endTime": 3695.28,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b10.mp3"
+    },
+    {
+      "id": "s04_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Classic Trick MCQ Four gases — methane (CH4), nitrogen (N2), carbon monoxide (CO), and sulfur dioxide (SO2) — are at the same temperature and pressure. Which statement about their rates of diffusion is correct? ( A r: H = 1, C = 12, N = 14, O = 16, S = 32) A. SO₂ diffuses fastest because it has the largest relative molecular mass. B. N₂ diffuses faster than CO because nitrogen atoms are lighter than oxygen atoms. C. CH₄ diffuses fastest, while N₂ and CO diffuse at the exact same rate. D. CO diffuses faster than N₂ because CO contains only two atoms. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: First calculate every M r: CH4 = 12 + 4(1) = 16 ; N2 = 2 × 14 = 28 ; CO = 12 + 16 = 28 ; SO2 = 32 + 2(16) = 64 . Smaller M rdiffuses faster! Thus CH4(16) is fastest, and because N2(28) and CO (28) share the exact same M r, they diffuse at the same rate → C is correct .",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Bẫy Kinh Điển Paper 2 Four gases — methane (CH4), nitrogen (N2), carbon monoxide (CO), and sulfur dioxide (SO2) — are at the same temperature and pressure. Which statement about their rates of diffusion is correct? ( A r: H = 1, C = 12, N = 14, O = 16, S = 32) (Bốn chất khí CH4, N2, CO và SO2ở cùng nhiệt độ và áp suất. Phát biểu nào về tốc độ khuếch tán của chúng là đúng?) A. SO₂ khuếch tán nhanh nhất vì có phân tử khối lớn nhất. B. N₂ khuếch tán nhanh hơn CO vì nguyên tử N nhẹ hơn nguyên tử O. C. CH₄ khuếch tán nhanh nhất, còn N₂ và CO khuếch tán với tốc độ bằng nhau. D. CO khuếch tán nhanh hơn N₂ vì phân tử CO chỉ có 2 nguyên tử. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Bước 1 tính chính xác M rtừng khí: CH4 = 12 + 4(1) = 16 ; N2 = 2 × 14 = 28 ; CO = 12 + 16 = 28 ; SO2 = 32 + 2(16) = 64 . Phân tử có M rnhỏ nhất khuếch tán nhanh nhất → CH4(16) nhanh nhất . Đặc biệt N2(28) và CO (28) có cùng M rnên tốc độ khuếch tán bằng nhau → Đáp án C chuẩn xác !",
+      "duration": 192.69,
+      "startTime": 3695.28,
+      "endTime": 3887.97,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b11.mp3"
+    },
+    {
+      "id": "s04_b12",
+      "title": "CH 3 NH 2 (g)",
+      "selector": "[data-lecture-section=\"s04_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Unfamiliar Diffusion Tube [5 marks] Cotton wool soaked in aqueous methylamine (which releases methylamine gas, CH3NH2 ) is placed at end P of a 100 cm horizontal glass tube. At the exact same moment, cotton wool soaked in concentrated hydrobromic acid (which releases hydrogen bromide gas, HBr ) is placed at end Q . Where the two gases meet, a white ring of solid CH3NH3Br forms. ( A r: H = 1, C = 12, N = 14, Br = 80) (a) Calculate the relative molecular mass ( M r) of CH3NH2and of HBr. [2] (b) State whether the white ring forms closer to end P , at the 50 cm midpoint, or closer to end Q . Explain your answer. [2] (c) The experiment is repeated at 45 °C instead of 20 °C. State and explain how the time taken for the white ring to appear changes. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Relative molecular masses: • M r(CH3NH2) = 12 + (3 × 1) + 14 + (2 × 1) = 31 [1m] .• M r(HBr) = 1 + 80 = 81 [1m] . (b) Position of white ring: • Forms closer to end Q (the HBr end) [1m] .• Because CH3NH2molecules have a smaller M r(31 < 81), they move faster, diffuse faster than heavier HBr molecules, and travel further down the tube in the same time [1m] . (c) Effect of higher temperature (45 °C): • The white ring appears in less time (faster) because gas molecules have more kinetic energy, move faster, and diffuse more rapidly [1m] . 💡 Intuition Check: Cambridge loves swapping NH3/HCl for CH3NH2/HBr!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Ống Khuếch tán Biến tấu Paper 4 [5 điểm] Cotton wool soaked in aqueous methylamine (releases CH3NH2(g) ) is placed at end P of a 100 cm horizontal glass tube. Simultaneously, cotton wool soaked in concentrated hydrobromic acid (releases HBr(g) ) is placed at end Q . Where the two gases meet, a white ring of solid CH3NH3Br forms. ( A r: H = 1, C = 12, N = 14, Br = 80) (Đặt bông tẩm dung dịch methylamine — giải phóng khí CH3NH2— ở đầu P của ống thủy tinh nằm ngang dài 100 cm. Cùng lúc đó, đặt bông tẩm dung dịch axit HBr đặc — giải phóng khí HBr — ở đầu Q. Nơi hai khí gặp nhau xuất hiện vòng khói trắng CH3NH3Br.) (a) Calculate the relative molecular mass ( M r) of CH3NH2and of HBr. (Tính phân tử khối Mrcủa CH3NH2và HBr.) Vòng trắng tạo thành gần đầu P hơn, ngay vạch 50 cm, hay gần đầu Q hơn? Giải thích. Lặp lại thí nghiệm ở 45 °C thay vì 20 °C. Thời gian xuất hiện vòng trắng thay đổi thế nào? Giải thích. ✍️ Lời giải chi tiết theo thang điểm: (a) Tính phân tử khối M r: • M r(CH3NH2) = 12 + (3 × 1) + 14 + (2 × 1) = 31 .• M r(HBr) = 1 + 80 = 81 .",
+      "duration": 245.04,
+      "startTime": 3887.97,
+      "endTime": 4133.01,
+      "audioUrl": "/audio/lectures/chemistry/1/s04_b12.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "✅ Tổng kết Chuẩn Đầu Ra Syllabus 0620 — Chuyên đề 1",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "✅ Topic 1 Complete 0620 Syllabus Checklist.",
+      "vi": "✅ Tổng kết Chuẩn Đầu Ra Syllabus 0620 — Chuyên đề 1.",
+      "duration": 9.83,
+      "startTime": 4133.01,
+      "endTime": 4142.84,
+      "audioUrl": "/audio/lectures/chemistry/1/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🟦 Trọng tâm Core (Paper 1 & Paper 3):",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🟦 Core Mastery (Paper 1 & Paper 3): Distinguishing properties, separation, arrangement & motion of solids, liquids, gases. Melting, boiling, evaporating, freezing & condensing definitions. Qualitative effects of T and P on gas volume. Diffusion explained by random kinetic particle movement down a concentration gradient. 🟩 Supplement Mastery (Paper 2 & Paper 4): Interpreting heating & cooling curves: constant temperature during state changes as intermolecular forces break or form. Kinetic collision explanation of gas volume changes with temperature and pressure. Effect of relative molecular mass ( M r) on gas diffusion rate (NH3vs. HCl white ring).",
+      "vi": "🟦 Trọng tâm Core (Paper 1 & Paper 3): Phân biệt tính chất, separation, arrangement & motion của chất rắn, lỏng, khí. Nắm vững các quá trình melting, boiling, evaporating, freezing & condensing. Mô tả sự thay đổi thể tích khí khi tăng/giảm nhiệt độ và áp suất. Giải thích hiện tượng diffusion dựa trên chuyển động ngẫu nhiên của hạt. 🟩 Trọng tâm Supplement (Paper 2 & Paper 4): Phân tích heating & cooling curves : giải thích vì sao nhiệt độ không đổi khi chuyển pha (phá vỡ hoặc hình thành intermolecular forces ). Giải thích bằng tần suất & lực va chạm hạt cho bài toán thể tích khí theo T và P. Giải thích ảnh hưởng của relative molecular mass ( M r) lên tốc độ khuếch tán khí (thí nghiệm vòng trắng NH4Cl).",
+      "duration": 102.49,
+      "startTime": 4142.84,
+      "endTime": 4245.33,
+      "audioUrl": "/audio/lectures/chemistry/1/s05_b01.mp3"
+    }
+  ]
+}

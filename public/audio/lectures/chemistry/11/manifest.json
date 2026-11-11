@@ -1,0 +1,790 @@
+{
+  "lectureId": "3c425483-4d1a-5405-a1da-354e3598fe30",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 11: Organic chemistry",
+  "totalDuration": 6162.37,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 7,
+      "end": 7
+    },
+    "s01_p1_sub02": {
+      "start": 8,
+      "end": 8
+    },
+    "s01_p1_sub03": {
+      "start": 9,
+      "end": 13
+    },
+    "s01_p1_sub04": {
+      "start": 14,
+      "end": 16
+    },
+    "s01_p2_sub01": {
+      "start": 7,
+      "end": 7
+    },
+    "s01_p2_sub02": {
+      "start": 8,
+      "end": 8
+    },
+    "s01_p2_sub03": {
+      "start": 9,
+      "end": 13
+    },
+    "s01_p2_sub04": {
+      "start": 14,
+      "end": 16
+    },
+    "s01_wex": {
+      "start": 17,
+      "end": 18
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 18
+    },
+    "s02_int": {
+      "start": 20,
+      "end": 22
+    },
+    "s02_p1_sub01": {
+      "start": 24,
+      "end": 25
+    },
+    "s02_p1_sub02": {
+      "start": 26,
+      "end": 27
+    },
+    "s02_p2_sub01": {
+      "start": 24,
+      "end": 25
+    },
+    "s02_p2_sub02": {
+      "start": 26,
+      "end": 27
+    },
+    "s02_wex": {
+      "start": 28,
+      "end": 29
+    },
+    "s02_hdr": {
+      "start": 19,
+      "end": 29
+    },
+    "s03_int": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_p1_sub01": {
+      "start": 34,
+      "end": 37
+    },
+    "s03_p2_sub01": {
+      "start": 34,
+      "end": 37
+    },
+    "s03_wex": {
+      "start": 38,
+      "end": 39
+    },
+    "s03_hdr": {
+      "start": 30,
+      "end": 39
+    },
+    "s04_int": {
+      "start": 41,
+      "end": 43
+    },
+    "s04_p1_sub01": {
+      "start": 49,
+      "end": 52
+    },
+    "s04_p2_sub01": {
+      "start": 49,
+      "end": 52
+    },
+    "s04_wex": {
+      "start": 53,
+      "end": 54
+    },
+    "s04_hdr": {
+      "start": 40,
+      "end": 54
+    },
+    "s05_hdr": {
+      "start": 55,
+      "end": 59
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 11: Hóa học Hữu cơ (Organic Chemistry)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 11: Organic Chemistry. Formulae & Isomers • IUPAC Naming & Esters • Petroleum Fractions • Alkanes & Alkenes • Alcohols & Carboxylic Acids • Addition & Condensation Polymers.",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 11: Hóa học Hữu cơ (Organic Chemistry). Công thức & Đồng phân • Danh pháp IUPAC & Ester • Chưng cất Phân đoạn Dầu mỏ • Alkanes & Alkenes • Alcohols & Carboxylic Acids • Trùng hợp, Trùng ngưng (Nylon, PET) & Proteins.",
+      "duration": 48.91,
+      "startTime": 0.0,
+      "endTime": 48.91,
+      "audioUrl": "/audio/lectures/chemistry/11/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "🧪 1. CÔNG THỨC HỮU CƠ, DÃY ĐỒNG ĐẲNG & ĐỒNG PHÂN (11.1 & 11.2)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧪 1. FORMULAE, HOMOLOGOUS SERIES & ISOMERISM (11.1 & 11.2). EASY INTUITION & SYLLABUS MENTAL MODEL Carbon atoms have 4 outer-shell electrons and form four stable covalent bonds —bonding with other carbon atoms in chains, branches, or rings, as well as with H (1 bond), O (2 bonds), halogens (1 bond), and N (3 bonds). Organic compounds are grouped into families called homologous series.",
+      "vi": "🧪 1. CÔNG THỨC HỮU CƠ, DÃY ĐỒNG ĐẲNG & ĐỒNG PHÂN (11.1 & 11.2). EASY INTUITION & SYLLABUS MENTAL MODEL Nguyên tử carbon có 4 electron lớp ngoài cùng nên luôn tạo đúng 4 liên kết cộng hóa trị bền vững—kết hợp với nhau thành mạch thẳng, mạch nhánh hoặc vòng, cùng với H (1 liên kết), O (2 liên kết), halogen (1 liên kết) và N (3 liên kết). Các hợp chất hữu cơ được xếp thành các họ gọi là dãy đồng đẳng (homologous series).",
+      "duration": 58.77,
+      "startTime": 48.91,
+      "endTime": 107.68,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a homologous series like siblings wearing the same family badge : the carbon chain stem ( Meth-, Eth-, Prop-, But- = 1, 2, 3, 4 C) is simply how tall each sibling is — adding one –CH₂– step (+14 in M r) makes them heavier and raises their boiling point — while the functional group ( C=C , –O–H , –COOH , –COO– ) is the badge that dictates every chemical reaction they undergo!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung một dãy đồng đẳng (homologous series) giống như anh chị em ruột đeo chung một phù hiệu gia tộc : độ dài mạch carbon ( Meth-, Eth-, Prop-, But- = 1, 2, 3, 4 C) chỉ là chiều cao của từng người — cứ thêm 1 mắt –CH₂– (+14 đơn vị M r) thì phân tử nặng hơn và sôi ở nhiệt độ cao hơn — còn nhóm chức (functional group) ( C=C , –O–H , –COOH , –COO– ) chính là \"phù hiệu tính cách\" quyết định mọi phản ứng hóa học!",
+      "duration": 68.37,
+      "startTime": 107.68,
+      "endTime": 176.05,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Formulae & Saturation: Count 4 bonds per C, 2 per O, 1 per H in every displayed formula ; check whether all C–C bonds are single ( saturated ) or contain C=C ( unsaturated ). 🟩 Supplement 2 → Homologous Series & Structural Isomers: Quote the 5 characteristics (same functional group, same general formula, differ by –CH₂– , gradual trend in physical properties, similar chemical properties) and define structural isomers as compounds with the same molecular formula but different structural formulae (e.g. butane vs methylpropane ; but-1-ene vs but-2-ene ). 🟩 Supplement 3 → Ester Naming: Alcohol gives the first word ( -yl , attached to single-bonded –O– ); carboxylic acid gives the second word ( -oate , containing C=O ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Công thức & Độ bất bão hòa: Đếm chuẩn C = 4 gạch, O = 2 gạch, H = 1 gạch khi vẽ displayed formula ; kiểm tra mạch C toàn liên kết đơn ( saturated ) hay có liên kết đôi C=C ( unsaturated ). 🟩 Supplement 2 → Dãy đồng đẳng & Đồng phân cấu tạo: Thuộc 5 đặc điểm chung của homologous series và định nghĩa structural isomers là các chất có same molecular formula nhưng different structural formulae. 🟩 Supplement 3 → Gọi tên Ester: Nhánh từ alcohol đứng trước mang đuôi -yl (gắn vào nguyên tử –O– đơn); mạch từ carboxylic acid đứng sau mang đuôi -oate (chứa nhóm C=O ).",
+      "duration": 103.53,
+      "startTime": 176.05,
+      "endTime": 279.58,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: In a displayed formula of an alcohol or carboxylic acid, never write condensed –OH — you MUST draw the covalent bond line between O and H ( –O–H ), or Cambridge deducts 1 mark! Also remember to count the carbonyl carbon inside –COOH when naming carboxylic acids ( CH₃COOH has 2 carbons = ethanoic acid , NOT methanoic acid!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi vẽ displayed formula của alcohol hoặc carboxylic acid, tuyệt đối không viết gộp –OH — BẮT BUỘC phải vẽ rõ nét gạch nối giữa O và H ( –O–H ) nếu không sẽ mất điểm! Đồng thời nhớ đếm luôn nguyên tử C nằm trong nhóm –COOH khi gọi tên axit ( CH₃COOH có tổng 2 nguyên tử C = ethanoic acid , không phải methanoic acid!).",
+      "duration": 55.13,
+      "startTime": 279.58,
+      "endTime": 334.71,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "📌 Khái niệm Nền tảng (Core 11.1.3–11.1.6)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "📌 Core Terminology (11.1.3–11.1.6). Functional group: An atom or group of atoms that determines the chemical properties of a homologous series. Homologous series: A family of similar compounds with similar chemical properties due to the presence of the same functional group. Saturated compound: Has molecules in which all carbon–carbon bonds are single bonds (e.g. alkanes, alcohols). Unsaturated compound: Has molecules in which one or more carbon–carbon bonds are not single bonds (contain at least one C=C double or C≡C triple bond, e.g. alkenes).",
+      "vi": "📌 Khái niệm Nền tảng (Core 11.1.3–11.1.6). Nhóm chức (Functional group): Một nguyên tử hoặc nhóm nguyên tử quyết định tính chất hóa học (chemical properties) của một dãy đồng đẳng. Dãy đồng đẳng (Homologous series): Một họ các hợp chất tương tự có tính chất hóa học giống nhau do chứa cùng một functional group. Hợp chất no (Saturated compound): Phân tử trong đó tất cả các liên kết carbon–carbon đều là liên kết đơn (single bonds). Hợp chất không no (Unsaturated compound): Phân tử có một hoặc nhiều liên kết carbon–carbon không phải liên kết đơn (chứa liên kết đôi C=C hoặc liên kết ba, VD: alkenes ).",
+      "duration": 82.96,
+      "startTime": 334.71,
+      "endTime": 417.67,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "5 Đặc điểm Chung của Dãy Đồng Đẳng",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Supplement 11.1.9 5 Characteristics of a Homologous Series. Have the same functional group. Have the same general formula (e.g. CₙH₂ₙ₊₂ ). Differ from one member to the next by a –CH₂– unit (relative molecular mass, M r, increases by 14 each step). Display a gradual trend in physical properties (e.g. boiling point, melting point, and viscosity increase as chain length increases due to stronger intermolecular forces). Share similar chemical properties.",
+      "vi": "Supplement 11.1.9 5 Đặc điểm Chung của Dãy Đồng Đẳng. Có cùng nhóm chức. Có cùng công thức tổng quát (VD: CₙH₂ₙ₊₂ ). Hai chất kế tiếp nhau hơn kém nhau một nhóm –CH₂– unit (phân tử khối M rchênh lệch đúng 14 đơn vị). Có xu hướng biến đổi đều đặn về tính chất vật lý (nhiệt độ sôi, độ nhớt tăng dần khi mạch C dài ra do lực liên phân tử mạnh dần). Có tính chất hóa học tương tự nhau.",
+      "duration": 63.86,
+      "startTime": 417.67,
+      "endTime": 481.53,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Loại Công thức: Displayed Formula (Công thức khai triển); Định nghĩa Chuẩn IGCSE...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Formula Type: Displayed Formula (Exam Favourite!); Official IGCSE Definition: Shows all the atoms and all the covalent bonds in a molecule as lines (1 line = single bond, 2 lines = double bond). ⚠️ Exam Trap: In alcohols and carboxylic acids you MUST draw the bond between O and H ( –O–H ), never write condensed –OH !; Examples (Butane, Ethene, Ethanol, Methyl Ethanoate): Every C has 4 lines , every O has 2 lines , every H or halogen has 1 line (see SVG gallery below). Formula Type: Structural Formula (Supplement 11.1.7); Official IGCSE Definition: An unambiguous description of the way the atoms in a molecule are arranged , written carbon-by-carbon without drawing individual single bonds.; Examples (Butane, Ethene, Ethanol, Methyl Ethanoate): Butane: CH₃CH₂CH₂CH₃ Ethene: CH₂=CH₂ (show = clearly!) Ethanol: CH₃CH₂OH Methyl ethanoate: CH₃COOCH₃. Formula Type: Molecular Formula; Official IGCSE Definition: Shows the actual number of atoms of each element in one molecule of a compound.; Examples (Butane, Ethene, Ethanol, Methyl Ethanoate): Butane: C₄H₁₀ | Ethene: C₂H₄ Ethanol: C₂H₆O | Methyl ethanoate: C₃H₆O₂. Formula Type: Empirical Formula; Official IGCSE Definition: Shows the simplest whole-number ratio of atoms of each element present in a compound.; Examples (Butane, Ethene, Ethanol, Methyl Ethanoate): Butane (C₄H₁₀): C₂H₅ | All alkenes (CₙH₂ₙ): CH₂ Ethanoic acid (C₂H₄O₂): CH₂O.",
+      "vi": "Loại Công thức: Displayed Formula (Công thức khai triển); Định nghĩa Chuẩn IGCSE 0620: Biểu diễn tất cả các nguyên tử và tất cả các liên kết bằng các nét gạch. ⚠️ Bẫy mất điểm: Với alcohols và carboxylic acids , BẮT BUỘC phải vẽ rõ nét gạch giữa O và H ( –O–H ), viết tắt –OH sẽ bị trừ điểm!; Ví dụ Minh họa: Mỗi C đủ 4 gạch , mỗi O đủ 2 gạch , mỗi H hoặc Cl đủ 1 gạch (xem sơ đồ SVG bên dưới). Loại Công thức: Structural Formula (Công thức cấu tạo thu gọn — Supplement 11.1.7); Định nghĩa Chuẩn IGCSE 0620: Mô tả rõ ràng, không gây nhầm lẫn cách sắp xếp các nguyên tử theo từng mắt C mà không vẽ từng liên kết đơn.; Ví dụ Minh họa: Butane: CH₃CH₂CH₂CH₃ Ethene: CH₂=CH₂ (giữ dấu = !) Ethanol: CH₃CH₂OH Methyl ethanoate: CH₃COOCH₃. Loại Công thức: Molecular Formula (Công thức phân tử); Định nghĩa Chuẩn IGCSE 0620: Cho biết số lượng thực tế của mỗi loại nguyên tử trong 1 phân tử.; Ví dụ Minh họa: Butane: C₄H₁₀ | Ethene: C₂H₄ Ethanol: C₂H₆O | Methyl ethanoate: C₃H₆O₂. Loại Công thức: Empirical Formula (Công thức đơn giản nhất); Định nghĩa Chuẩn IGCSE 0620: Cho biết tỉ lệ số nguyên tối giản giữa các nguyên tố.; Ví dụ Minh họa: Butane (C₄H₁₀): C₂H₅ | Mọi alkene (CₙH₂ₙ): CH₂ Ethanoic acid (C₂H₄O₂): CH₂O.",
+      "duration": 231.38,
+      "startTime": 481.53,
+      "endTime": 712.91,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Dãy đồng đẳng (Series): Alkanes (No); General Formula: CₙH₂ₙ₊₂ (n ≥ 1); Function...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Homologous Series: Alkanes (Saturated); General Formula: CₙH₂ₙ₊₂ (n ≥ 1); Functional Group: Only single C–C & C–H bonds; Name Suffix: -ane; Representative C₂ / C₃ Examples: Methane ( CH₄ ), Ethane ( C₂H₆ ), Propane ( C₃H₈ ), Butane ( C₄H₁₀ ). Homologous Series: Alkenes (Unsaturated); General Formula: CₙH₂ₙ (n ≥ 2); Functional Group: C=C double bond; Name Suffix: -ene; Representative C₂ / C₃ Examples: Ethene ( C₂H₄ ), Propene ( C₃H₆ ), But-1-ene & But-2-ene ( C₄H₈ ). Homologous Series: Alcohols; General Formula: CₙH₂ₙ₊₁OH (n ≥ 1); Functional Group: Hydroxyl group –O–H; Name Suffix: -ol; Representative C₂ / C₃ Examples: Methanol ( CH₃OH ), Ethanol ( C₂H₅OH ), Propan-1-ol, Propan-2-ol. Homologous Series: Carboxylic Acids; General Formula: CₙH₂ₙ₊₁COOH (n ≥ 0*); Functional Group: Carboxyl group –COOH; Name Suffix: -oic acid; Representative C₂ / C₃ Examples: Methanoic acid ( HCOOH , n =0), Ethanoic acid ( CH₃COOH , n =1), Propanoic acid ( C₂H₅COOH ). Homologous Series: Esters Supplement; General Formula: CₙH₂ₙO₂ (n ≥ 2); Functional Group: Ester link –COO–; Name Suffix: alkyl..-oate; Representative C₂ / C₃ Examples: Methyl ethanoate ( CH₃COOCH₃ ), Ethyl ethanoate ( CH₃COOCH₂CH₃ ).",
+      "vi": "Dãy đồng đẳng (Series): Alkanes (No); General Formula: CₙH₂ₙ₊₂ (n ≥ 1); Functional Group: Chỉ có liên kết đơn C–C , C–H; Hậu tố (Suffix): -ane; Ví dụ Tiêu biểu: Methane ( CH₄ ), Ethane ( C₂H₆ ), Propane ( C₃H₈ ), Butane ( C₄H₁₀ ). Dãy đồng đẳng (Series): Alkenes (Không no); General Formula: CₙH₂ₙ (n ≥ 2); Functional Group: Liên kết đôi C=C; Hậu tố (Suffix): -ene; Ví dụ Tiêu biểu: Ethene ( C₂H₄ ), Propene ( C₃H₆ ), But-1-ene, But-2-ene ( C₄H₈ ). Dãy đồng đẳng (Series): Alcohols (Rượu/Ancol); General Formula: CₙH₂ₙ₊₁OH (n ≥ 1); Functional Group: Nhóm hydroxyl –O–H; Hậu tố (Suffix): -ol; Ví dụ Tiêu biểu: Methanol ( CH₃OH ), Ethanol ( C₂H₅OH ), Propan-1-ol, Propan-2-ol. Dãy đồng đẳng (Series): Carboxylic Acids; General Formula: CₙH₂ₙ₊₁COOH (n ≥ 0*); Functional Group: Nhóm carboxyl –COOH; Hậu tố (Suffix): -oic acid; Ví dụ Tiêu biểu: Methanoic acid ( HCOOH , n =0), Ethanoic acid ( CH₃COOH , n =1), Propanoic acid ( C₂H₅COOH ). Dãy đồng đẳng (Series): Esters Supplement; General Formula: CₙH₂ₙO₂ (n ≥ 2); Functional Group: Nhóm ester –COO–; Hậu tố (Suffix): alkyl..-oate; Ví dụ Tiêu biểu: Methyl ethanoate ( CH₃COOCH₃ ), Ethyl ethanoate.",
+      "duration": 267.56,
+      "startTime": 712.91,
+      "endTime": 980.47,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Tên gọi IUPAC của hợp chất hữu cơ gồm tiền tố gốc mạch chính (prefix) đếm tổng s...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "Every IUPAC organic name combines a stem prefix (counting the total carbon atoms in the longest continuous chain, including the –COOH carbon!) with a functional-group suffix :",
+      "vi": "Tên gọi IUPAC của hợp chất hữu cơ gồm tiền tố gốc mạch chính (prefix) đếm tổng số nguyên tử C trên mạch liên tục dài nhất (tính cả nguyên tử C trong nhóm –COOH !) ghép với hậu tố nhóm chức (suffix) :",
+      "duration": 28.05,
+      "startTime": 980.47,
+      "endTime": 1008.52,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "💡 Mẹo nhớ nhanh: \"Monkeys Eat Peanut Butter\" (1, 2, 3, 4 nguyên tử C)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "💡 Memory Aid: \"Monkeys Eat Peanut Butter\" (1, 2, 3, 4 Carbons)",
+      "vi": "💡 Mẹo nhớ nhanh: \"Monkeys Eat Peanut Butter\" (1, 2, 3, 4 nguyên tử C)",
+      "duration": 13.37,
+      "startTime": 1008.52,
+      "endTime": 1021.89,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "✏️ Bộ Mẫu Công thức Khai triển (Displayed Formulae — Vẽ Đầy Đủ Mọi Liên Kết!)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "✏️ Core 11.2.1 & Supplement 11.2.4 Displayed Formulae Reference Gallery (Showing ALL Bonds!).",
+      "vi": "✏️ Bộ Mẫu Công thức Khai triển (Displayed Formulae — Vẽ Đầy Đủ Mọi Liên Kết!).",
+      "duration": 11.04,
+      "startTime": 1021.89,
+      "endTime": 1032.93,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "Đánh Số Vị trí Nhóm Chức trên Mạch Thẳng C₃–C₄",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "Supplement 11.2.3 Position Numbers in Unbranched C₃–C₄ Chains. Number the carbon chain from the end that gives the functional group the smallest possible number :• Alkenes (C₄H₈): CH₃CH₂CH=CH₂ is but-1-ene (C=C starts at C1); CH₃CH=CHCH₃ is but-2-ene (C=C starts at C2).• Alcohols (C₃ & C₄): CH₃CH₂CH₂OH = propan-1-ol vs CH₃CH(OH)CH₃ = propan-2-ol ; CH₃CH₂CH₂CH₂OH = butan-1-ol vs CH₃CH₂CH(OH)CH₃ = butan-2-ol.",
+      "vi": "Supplement 11.2.3 Đánh Số Vị trí Nhóm Chức trên Mạch Thẳng C₃–C₄. Đánh số mạch C từ đầu nào cho vị trí nhóm chức mang chỉ số nhỏ nhất :• Alkenes (C₄H₈): CH₃CH₂CH=CH₂ là but-1-ene ; CH₃CH=CHCH₃ là but-2-ene .• Alcohols (C₃ & C₄): CH₃CH₂CH₂OH = propan-1-ol vs CH₃CH(OH)CH₃ = propan-2-ol ; CH₃CH₂CH₂CH₂OH = butan-1-ol vs CH₃CH₂CH(OH)CH₃ = butan-2-ol.",
+      "duration": 100.24,
+      "startTime": 1032.93,
+      "endTime": 1133.17,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "Quy tắc Vàng Gọi Tên Ester Mạch Thẳng (C₁–C₄)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "Supplement 11.2.4 Golden Rule for Naming Unbranched Esters (C₁–C₄). Esters are named [alkyl] [alkanoate] :• First word ( -yl ): comes from the alcohol (the carbon chain bonded to the single-bonded –O– atom).• Second word ( -oate ): comes from the carboxylic acid (the chain containing the C=O carbonyl carbon!).• Examples: propan-1-ol + methanoic acid ➔ propyl methanoate ( HCOOCH₂CH₂CH₃ ); methanol + butanoic acid ➔ methyl butanoate ( CH₃CH₂CH₂COOCH₃ ).",
+      "vi": "Supplement 11.2.4 Quy tắc Vàng Gọi Tên Ester Mạch Thẳng (C₁–C₄). Tên ester luôn theo cấu trúc [alkyl] [alkanoate] :• Từ thứ nhất (đuôi -yl ): lấy từ phần alcohol (nhánh gắn trực tiếp vào nguyên tử –O– liên kết đơn).• Từ thứ hai (đuôi -oate ): lấy từ phần carboxylic acid (mạch chứa nhóm C=O !).• Ví dụ: propan-1-ol + methanoic acid ➔ propyl methanoate; methanol + butanoic acid ➔ methyl butanoate.",
+      "duration": 75.46,
+      "startTime": 1133.17,
+      "endTime": 1208.63,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "Định nghĩa chuẩn Mark Scheme: Structural isomers là các hợp chất có cùng công th...",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "Official Definition: Structural isomers are compounds with the same molecular formula , but different structural formulae (different connectivity of atoms, giving slightly different physical properties such as lower boiling points for branched isomers).",
+      "vi": "Định nghĩa chuẩn Mark Scheme: Structural isomers là các hợp chất có cùng công thức phân tử nhưng khác công thức cấu tạo.",
+      "duration": 22.8,
+      "startTime": 1208.63,
+      "endTime": 1231.43,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "1. Đồng phân Mạch Carbon của C₄H₁₀ (Alkanes)",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "1. Chain Isomers of C₄H₁₀ (Alkanes). Butane (unbranched, 4C straight chain, b.p. −0.5 °C): CH₃CH₂CH₂CH₃ . Methylpropane / 2-methylpropane (branched, 3C longest chain with a –CH₃ branch on C2, b.p. −11.7 °C): CH₃CH(CH₃)CH₃ . ⚠️ Exam Trap: Bending the end of a 4-carbon chain at 90° does NOT make an isomer—check the longest continuous carbon chain!",
+      "vi": "1. Đồng phân Mạch Carbon của C₄H₁₀ (Alkanes). Butane (mạch thẳng 4C không phân nhánh, b.p. −0.5 °C): CH₃CH₂CH₂CH₃ . Methylpropane / 2-methylpropane (mạch chính 3C có nhánh –CH₃ ở C số 2, b.p. −11.7 °C): CH₃CH(CH₃)CH₃ . ⚠️ Bẫy đề thi: Bẻ gập đầu mạch thẳng 4C thành hình chữ L KHÔNG tạo ra đồng phân mới — luôn đếm mạch C liên tục dài nhất!",
+      "duration": 77.61,
+      "startTime": 1231.43,
+      "endTime": 1309.04,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b14.mp3"
+    },
+    {
+      "id": "s01_b15",
+      "title": "2. Đồng phân của C₄H₈ (Alkenes)",
+      "selector": "[data-lecture-section=\"s01_b15\"]",
+      "en": "2. Structural Isomers of C₄H₈ (Alkenes). But-1-ene (double bond between C1 and C2): CH₃CH₂CH=CH₂ . But-2-ene (double bond between C2 and C3): CH₃CH=CHCH₃ . Methylpropene / 2-methylpropene (branched): CH₂=C(CH₃)₂ .",
+      "vi": "2. Đồng phân của C₄H₈ (Alkenes). But-1-ene (liên kết đôi giữa C1 và C2): CH₃CH₂CH=CH₂ . But-2-ene (liên kết đôi giữa C2 và C3): CH₃CH=CHCH₃ . Methylpropene / 2-methylpropene (mạch nhánh): CH₂=C(CH₃)₂ .",
+      "duration": 55.39,
+      "startTime": 1309.04,
+      "endTime": 1364.43,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b15.mp3"
+    },
+    {
+      "id": "s01_b16",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b16\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Extended MCQ An organic compound has the structural formula CH₃CH₂COOCH₃ .What is the IUPAC name of this compound, and which compound is a structural isomer of it with the molecular formula C₄H₈O₂? A. Methyl propanoate | butanoic acid (CH₃CH₂CH₂COOH) B. Propyl methanoate | propanoic acid (CH₃CH₂COOH) C. Methyl propanoate | propan-1-ol (CH₃CH₂CH₂OH) D. Ethyl ethanoate | methyl ethanoate (CH₃COOCH₃) ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Step 1 (Name the ester): Split CH₃CH₂CO|OCH₃ at the C–O single bond. The carbonyl side CH₃CH₂CO– has 3 carbons (from propanoic acid ➔ propanoate ), and the oxygen-attached alkyl group –CH₃ has 1 carbon (from methanol ➔ methyl ). Name = methyl propanoate (eliminates B and D). Step 2 (Check molecular formula for isomer): CH₃CH₂COOCH₃ is C₄H₈O₂ . Butanoic acid ( CH₃CH₂CH₂COOH ) also has molecular formula C₄H₈O₂ with a different structural formula (eliminates C, which has only 1 O atom). Thus A is correct.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Extended An organic compound has the structural formula CH₃CH₂COOCH₃ . What is the IUPAC name of this compound, and which compound is a structural isomer of it with the molecular formula C₄H₈O₂? (Một hợp chất hữu cơ có công thức cấu tạo thu gọn CH₃CH₂COOCH₃ . Tên IUPAC của chất này là gì, và hợp chất nào là đồng phân cấu tạo của nó ứng với công thức phân tử C₄H₈O₂?) A. Methyl propanoate | butanoic acid (CH₃CH₂CH₂COOH) B. Propyl methanoate | propanoic acid (CH₃CH₂COOH) C. Methyl propanoate | propan-1-ol (CH₃CH₂CH₂OH) D. Ethyl ethanoate | methyl ethanoate (CH₃COOCH₃) ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Bước 1 (Gọi tên ester): Cắt phân tử tại liên kết đơn CH₃CH₂CO|OCH₃ . Phần chứa C=O là CH₃CH₂CO– có 3 nguyên tử C (từ propanoic acid ➔ propanoate ); nhánh gắn với –O– là –CH₃ có 1 C (từ methanol ➔ methyl ). Tên gọi là methyl propanoate (loại B và D). Bước 2 (Tìm đồng phân C₄H₈O₂): Butanoic acid có cùng công thức phân tử C₄H₈O₂ nhưng khác cấu tạo (loại C vì chỉ có 1 O). Vậy A đúng.",
+      "duration": 206.5,
+      "startTime": 1364.43,
+      "endTime": 1570.93,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b16.mp3"
+    },
+    {
+      "id": "s01_b17",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b17\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Compound P has the molecular formula C₄H₈ and decolourises aqueous bromine.(a) State the general formula and empirical formula of the homologous series to which P belongs. [2](b) Define the term structural isomers . [1](c) Write the structural formulae and IUPAC names of two unbranched structural isomers of C₄H₈. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) General formula: CₙH₂ₙ [1m] ; Empirical formula (simplest ratio of C₄H₈): CH₂ [1m] .• (b) Compounds with the same molecular formula but different structural formulae [1m] .• (c) CH₃CH₂CH=CH₂ ( but-1-ene ) [1m] and CH₃CH=CHCH₃ ( but-2-ene ) [1m] . 💡 Intuition Check: Every alkene ( C₂H₄ , C₃H₆ , C₄H₈ ) shares the exact same 1 : 2 carbon-to-hydrogen ratio, so all alkenes have the empirical formula CH₂ !",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] Compound P has the molecular formula C₄H₈ and decolourises aqueous bromine.(a) State the general formula and empirical formula of the homologous series to which P belongs. (b) Define the term structural isomers . (c) Write the structural formulae and IUPAC names of two unbranched structural isomers of C₄H₈. (Hợp chất P có công thức phân tử C₄H₈ và làm mất màu nước bromine. (a) Nêu công thức tổng quát và công thức đơn giản nhất của dãy đồng đẳng chứa P. (b) Định nghĩa structural isomers. (c) Viết công thức cấu tạo thu gọn và tên IUPAC của 2 đồng phân mạch thẳng của C₄H₈. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) General formula: CₙH₂ₙ ; Empirical formula (tỉ lệ tối giản của C₄H₈): CH₂ .• (b) Các hợp chất có cùng công thức phân tử nhưng khác công thức cấu tạo .• (c) CH₃CH₂CH=CH₂ ( but-1-ene ) và CH₃CH=CHCH₃ ( but-2-ene ) . 💡 Kiểm tra bản chất: Mọi alkene ( C₂H₄ , C₃H₆ , C₄H₈..) đều có tỉ lệ C : H là 1 : 2 , nên tất cả các alkenes đều có chung công thức đơn giản nhất (empirical formula) là CH₂ !",
+      "duration": 175.21,
+      "startTime": 1570.93,
+      "endTime": 1746.14,
+      "audioUrl": "/audio/lectures/chemistry/11/s01_b17.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⛽ 2. NHIÊN LIỆU HÓA THẠCH, DẦU MỎ, ALKANES & ALKENES (11.3 – 11.5)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⛽ 2. FUELS, PETROLEUM, ALKANES & ALKENES (11.3 – 11.5). EASY INTUITION & SYLLABUS MENTAL MODEL Fossil fuels are coal , natural gas (main constituent: methane, CH₄ ), and petroleum (crude oil). Hydrocarbons are compounds that contain hydrogen and carbon only , and petroleum is a mixture of hydrocarbons of varying chain lengths that must be separated before use.",
+      "vi": "⛽ 2. NHIÊN LIỆU HÓA THẠCH, DẦU MỎ, ALKANES & ALKENES (11.3 – 11.5). EASY INTUITION & SYLLABUS MENTAL MODEL Ba nguồn nhiên liệu hóa thạch (fossil fuels) là than đá (coal) , khí thiên nhiên (natural gas — thành phần chính là methane, CH₄) và dầu mỏ (petroleum) . Hydrocarbons là hợp chất chỉ chứa hydrogen và carbon , còn petroleum là một hỗn hợp các hydrocarbons cần được tách bằng chưng cất phân đoạn.",
+      "duration": 52.28,
+      "startTime": 1746.14,
+      "endTime": 1798.42,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine the fractionating column as a tall hotel elevator sorting hydrocarbon guests by chain length : crude oil enters the hot 400 °C ground floor as vapour — heavy, sticky long-chain guests ( bitumen ) have strong intermolecular attractions and condense right at the bottom, while tiny, light short-chain guests ( refinery gas ) ride all the way up to the cool 20 °C penthouse! Then cracking is like snapping an unpopular 12-stud LEGO bar into a high-demand 8-stud petrol piece plus a reactive double-bonded alkene connector.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng tháp chưng cất phân đoạn (fractionating column) như một thang máy khách sạn 8 tầng phân loại khách hydrocarbon theo độ dài mạch : dầu thô hóa hơi bước vào sảnh tầng trệt nóng 400 °C — các phân tử khổng lồ, đặc quánh ( bitumen ) hút nhau rất chặt nên ngưng tụ ngay ở đáy, còn các phân tử tí hon, nhẹ bay bổng ( refinery gas ) bay thẳng lên tầng thượng mát mẻ 20 °C! Sau đó cracking giống như bẻ thanh LEGO dài ế ẩm thành mảnh xăng 8C bán chạy cộng thêm mảnh nối đôi C=C (alkene) siêu hoạt động.",
+      "duration": 73.98,
+      "startTime": 1798.42,
+      "endTime": 1872.4,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Petroleum Fractions & Bottom-to-Top Trends: Going up the column: chain length decreases , boiling point decreases , volatility increases , and viscosity decreases . Memorise all 8 fractions in order ( R efinery gas, G asoline, N aphtha, K erosene, D iesel, F uel oil, L ubricating oil, B itumen). 🟦 Core 2 → Bromine Water Test & Cracking: Alkanes keep aqueous bromine orange-brown ; alkenes turn aqueous bromine from orange-brown to colourless . Cracking requires high temperature (~600 °C) + Al₂O₃/SiO₂ catalyst . 🟩 Supplement 3 → Substitution vs. Addition: Alkanes undergo photochemical substitution with Cl₂ in UV light (providing activation energy, 2 products: haloalkane + HCl); alkenes undergo addition across C=C forming only ONE product with Br₂ (no catalyst), H₂ (Ni catalyst), or steam (H₃PO₄, 300 °C, 6000 kPa).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → 8 Phân đoạn & Quy luật Đáy ➔ Đỉnh: Càng lên cao trên tháp: chiều dài mạch giảm , nhiệt độ sôi giảm , độ bay hơi tăng (higher volatility) và độ nhớt giảm (lower viscosity) . 🟦 Core 2 → Nước Bromine & Cracking: Alkanes giữ nguyên màu orange-brown ; alkenes làm mất màu nước bromine từ orange-brown to colourless . Cracking cần nhiệt độ cao (~600 °C) + xúc tác Al₂O₃/SiO₂ . 🟩 Supplement 3 → Thế (Substitution) vs. Cộng (Addition): Alkanes tham gia photochemical substitution với Cl₂ nhờ UV light cung cấp năng lượng hoạt hóa (sinh 2 sản phẩm); alkenes tham gia addition mở nối đôi C=C tạo DUY NHẤT 1 sản phẩm với Br₂ , H₂ (xúc tác Ni), hoặc steam (H₃PO₄, 300 °C, 6000 kPa).",
+      "duration": 134.13,
+      "startTime": 1872.4,
+      "endTime": 2006.53,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When describing the bromine water test with an alkene, ALWAYS write \"turns from orange-brown to colourless\" — NEVER write \"turns clear\"! (\"Clear\" means transparent/not cloudy; bromine water is already clear before the reaction!)",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi mô tả hiện tượng alkene làm mất màu nước bromine, BẮT BUỘC viết \"turns from orange-brown to colourless\" — TUYỆT ĐỐI KHÔNG viết \"turns clear\"! (\"Clear\" nghĩa là trong suốt không vẩn đục; nước bromine ban đầu vốn dĩ đã trong suốt rồi!)",
+      "duration": 34.37,
+      "startTime": 2006.53,
+      "endTime": 2040.9,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🗼 11.3 Tháp Chưng cất Phân đoạn Dầu mỏ Tương tác (Fractional Distillation of Petroleum)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🗼 11.3 Interactive Fractional Distillation of Petroleum. Crude oil is heated in a furnace (~400 °C) until vaporised and fed into the bottom of a fractionating column , which is hot at the bottom and cool at the top . Vapours rise and condense at trays matching their boiling points. SVG Fractionating Tower Dynamic Panel + Trends Summary 👆 Inspect All 8 Petroleum Fractions. Mnemonic from Top to Bottom: \"R eal G ood N urses K eep D oing F ine L ab B usiness \" (Refinery gas, Gasoline, Naphtha, Kerosene, Diesel oil, Fuel oil, Lubricating oil, Bitumen). 📈 Core 11.3.6 Trends: From BOTTOM ➔ TOP of Column. Decreasing chain length (smaller hydrocarbon molecules, fewer C atoms). Higher volatility (evaporate much more easily). Lower boiling points (weaker intermolecular forces between shorter chains). Lower viscosity (runnier / flow much more easily; less thick/syrupy). Hidden tooltip templates for 8 fractions",
+      "vi": "🗼 11.3 Tháp Chưng cất Phân đoạn Dầu mỏ Tương tác. Dầu thô được đun nóng (~400 °C) hóa hơi rồi dẫn vào đáy tháp phân đoạn (fractionating column) — nơi nóng ở đáy và lạnh dần lên đỉnh . Hơi hydrocarbon bay lên và ngưng tụ tại khay có nhiệt độ tương ứng với boiling point của chúng. 👆 Khám phá 8 Phân đoạn Dầu mỏ. Mẹo nhớ thứ tự từ Đỉnh xuống Đáy: \"R eal G ood N urses K eep D oing F ine L ab B usiness \". 📈 Quy luật Biến đổi từ ĐÁY ➔ ĐỈNH Tháp (Core 11.3.6). Chiều dài mạch carbon giảm dần . Độ bay hơi cao hơn (higher volatility) — dễ hóa hơi hơn. Nhiệt độ sôi thấp hơn do lực hút liên phân tử yếu hơn. Độ nhớt thấp hơn (lower viscosity) — loãng hơn, chảy dễ dàng hơn.",
+      "duration": 120.61,
+      "startTime": 2040.9,
+      "endTime": 2161.51,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔵 11.4 Alkanes (Saturated, CₙH₂ₙ₊₂)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔵 11.4 Alkanes (Saturated, CₙH₂ₙ₊₂). Contain single covalent bonds only . Alkanes are generally unreactive (strong non-polar C–C and C–H bonds), except for two key reaction types: 1. Combustion: – Complete (plentiful O₂): CH₄ + 2O₂ ➔ CO₂ + 2H₂O – Incomplete (limited O₂): forms toxic CO (or carbon soot C ) + H₂O , e.g. 2CH₄ + 3O₂ ➔ 2CO + 4H₂O. 2. Substitution by Chlorine Supplement 11.4.3–4 : In a substitution reaction , one atom (or group of atoms) is replaced by another atom (or group of atoms). This is a photochemical reaction where ultraviolet (UV) light provides the activation energy, E a : CH₄ + Cl₂ ➔ CH₃Cl (chloromethane) + HCl Monosubstitution of propane ( C₃H₈ + Cl₂ ) yields two structural isomers: 1-chloropropane ( CH₃CH₂CH₂Cl ) and 2-chloropropane ( CH₃CHClCH₃ ).",
+      "vi": "🔵 11.4 Alkanes (Saturated, CₙH₂ₙ₊₂). Chỉ chứa liên kết đơn cộng hóa trị nên nhìn chung trơ về mặt hóa học (generally unreactive) , ngoại trừ 2 phản ứng: 1. Phản ứng Cháy (Combustion): – Cháy hoàn toàn (dư O₂): CH₄ + 2O₂ ➔ CO₂ + 2H₂O – Cháy không hoàn toàn (thiếu O₂): sinh ra khí độc CO (hoặc muội than C ) + H₂O. 2. Phản ứng Thế với Chlorine — Substitution Supplement 11.4.3–4 : Trong substitution reaction , một nguyên tử (H) bị thay thế bởi nguyên tử khác (Cl). Đây là phản ứng quang hóa (photochemical reaction) , trong đó tia cực tím cung cấp năng lượng hoạt hóa E a : CH₄ + Cl₂ ➔ CH₃Cl (chloromethane) + HCl Lưu ý thế 1 lần (monosubstitution) với propane ( C₃H₈ + Cl₂ ) cho 2 đồng phân: 1-chloropropane ( CH₃CH₂CH₂Cl ) và 2-chloropropane ( CH₃CHClCH₃ ).",
+      "duration": 148.16,
+      "startTime": 2161.51,
+      "endTime": 2309.67,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🔴 11.5 Alkenes (Unsaturated, CₙH₂ₙ)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🔴 11.5 Alkenes (Unsaturated, CₙH₂ₙ). Contain a reactive C=C double covalent bond . Supplement 11.5.5–6 In an addition reaction, only ONE product is formed as the C=C bond opens into a single C–C bond: (a) + Bromine (Br₂ or Br₂(aq)) — Bromination: Room temp, no UV needed! Ethene + Br₂ ➔ 1,2-dibromoethane : CH₂=CH₂ + Br₂ ➔ CH₂BrCH₂Br (colourless). (b) + Hydrogen (H₂) — Hydrogenation: Conditions: nickel (Ni) catalyst (~150–300 °C). Converts alkene ➔ alkane (used to harden unsaturated vegetable oils into margarine): CH₂=CH₂ + H₂ ➔ CH₃CH₃ (ethane) . (c) + Steam (H₂O(g)) — Catalytic Hydration: Conditions: acid catalyst (phosphoric(V) acid, H₃PO₄) , 300 °C , 6000 kPa / 60 atm . Converts alkene ➔ alcohol: CH₂=CH₂ + H₂O(g) ➔ CH₃CH₂OH (ethanol) .",
+      "vi": "🔴 11.5 Alkenes (Unsaturated, CₙH₂ₙ). Chứa liên kết đôi C=C giàu electron. Supplement 11.5.5–6 Trong phản ứng cộng (addition reaction), chỉ tạo ra DUY NHẤT MỘT sản phẩm : (a) + Bromine (Br₂ hoặc Br₂(aq)): Xảy ra ngay ở nhiệt độ thường, không cần UV! Tạo 1,2-dibromoethane : CH₂=CH₂ + Br₂ ➔ CH₂BrCH₂Br (chất lỏng không màu). (b) + Hydrogen (H₂) — Hydrogenation: Điều kiện: xúc tác nickel (Ni catalyst) (~150–300 °C). Biến alkene ➔ alkane (dùng để chuyển dầu thực vật thành bơ thực vật margarine): CH₂=CH₂ + H₂ ➔ CH₃CH₃ (ethane) . (c) + Hơi nước (Steam, H₂O(g)) — Hydration: Điều kiện: xúc tác axit , 300 °C , 6000 kPa / 60 atm . Biến alkene ➔ alcohol: CH₂=CH₂ + H₂O(g) ➔ CH₃CH₂OH (ethanol) .",
+      "duration": 159.85,
+      "startTime": 2309.67,
+      "endTime": 2469.52,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🔥 Catalytic Cracking các Alkane Mạch Dài",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🔥 Catalytic Cracking of Long-Chain Alkanes. Thermal decomposition of large, less-useful saturated alkane molecules into smaller, high-value molecules: C₁₀H₂₂ (decane) ➔ C₈H₁₈ (octane) + C₂H₄ (ethene)C₁₂H₂₆ ➔ C₈H₁₈ + 2C₂H₄ | C₂H₆ ➔ C₂H₄ + H₂ Essential Conditions: High temperature (~600–700 °C) and a catalyst (powdered Al₂O₃ or SiO₂ / zeolites). Two Reasons for Cracking (Core 11.5.3): 1. Matches refinery supply with high consumer demand for shorter-chain fuels (petrol/gasoline).2. Produces reactive alkenes (to make polymers & ethanol) and hydrogen gas (fuel / ammonia manufacture).",
+      "vi": "🔥 Catalytic Cracking các Alkane Mạch Dài. Phân hủy nhiệt bẻ gãy phân tử alkane mạch dài ít giá trị thành alkane ngắn hơn và alkenes (hoặc alkene + H₂ ): C₁₀H₂₂ ➔ C₈H₁₈ + C₂H₄ | C₂H₆ ➔ C₂H₄ + H₂ Điều kiện bắt buộc: Nhiệt độ cao (high temperature , ~600 °C) và chất xúc tác (catalyst : bột Al₂O₃ hoặc SiO₂ ). 2 Lý do Công nghiệp phải Cracking (Core 11.5.3): 1. Đáp ứng nhu cầu tiêu thụ rất cao đối với phân đoạn mạch ngắn làm nhiên liệu xăng ( petrol ).2. Tạo ra các alkenes hoạt động mạnh (nguyên liệu tổng hợp nhựa polymers & ethanol) và khí hydrogen (H₂).",
+      "duration": 101.02,
+      "startTime": 2469.52,
+      "endTime": 2570.54,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🚨 Nhận biết Liên kết Đôi bằng Nước Bromine — Aqueous Bromine (11.5.4)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🚨 Test for Unsaturation: Aqueous Bromine (Core 11.5.4). Shake the unknown hydrocarbon with aqueous bromine (bromine water) : With Saturated Alkane: No reaction in the dark; solution remains orange-brown . With Unsaturated Alkene: Rapid addition across C=C ; aqueous bromine decolourises from orange-brown to colourless . ⚠️ Exam Trap: Always write \"colourless\" , NEVER write \"clear\" (bromine water is already clear/transparent, even though it is orange!).",
+      "vi": "🚨 Nhận biết Liên kết Đôi bằng Nước Bromine — Aqueous Bromine (11.5.4). Lắc mẫu thử với dung dịch aqueous bromine (bromine water) : Với Alkane (Saturated): Không phản ứng; dung dịch giữ nguyên màu cam nâu . Với Alkene (Unsaturated): Phản ứng cộng mở nối đôi C=C làm mất màu nước bromine từ cam nâu sang không màu . ⚠️ Bẫy từ vựng: Luôn viết \"colourless\" , TUYỆT ĐỐI KHÔNG viết \"clear\" (trong suốt)!",
+      "duration": 60.35,
+      "startTime": 2570.54,
+      "endTime": 2630.89,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Extended MCQ Ethane (C₂H₆) reacts with chlorine in the presence of ultraviolet light, whereas ethene (C₂H₄) reacts with bromine in the dark at room temperature.Which row correctly compares the reaction type and the number of products formed in each reaction? A. Ethane + Cl₂: Addition (1 product) | Ethene + Br₂: Substitution (2 products) B. Ethane + Cl₂: Substitution (2 products) | Ethene + Br₂: Addition (1 product) C. Ethane + Cl₂: Substitution (1 product) | Ethene + Br₂: Addition (2 products) D. Ethane + Cl₂: Cracking (2 products) | Ethene + Br₂: Polymerisation (1 product) ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Step 1 (Ethane + Cl₂): Saturated alkanes have no double bond to open, so one H atom is swapped for one Cl atom in a photochemical substitution reaction: C₂H₆ + Cl₂ ➔ C₂H₅Cl + HCl ( 2 products ). Step 2 (Ethene + Br₂): Unsaturated alkenes open their C=C bond in an addition reaction: C₂H₄ + Br₂ ➔ CH₂BrCH₂Br ( only 1 product ). Hence B is correct.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Extended Ethane (C₂H₆) reacts with chlorine in the presence of ultraviolet light, whereas ethene (C₂H₄) reacts with bromine in the dark at room temperature. Ethane C₂H₆ tác dụng với Cl₂ khi chiếu tia UV, còn ethene C₂H₄ tác dụng với Br₂ ngay trong bóng tối ở nhiệt độ phòng. Dòng nào so sánh đúng loại phản ứng và số lượng sản phẩm tạo thành? A. Ethane + Cl₂: Addition (1 sản phẩm) | Ethene + Br₂: Substitution (2 sản phẩm) B. Ethane + Cl₂: Substitution (2 sản phẩm) | Ethene + Br₂: Addition (1 sản phẩm) C. Ethane + Cl₂: Substitution (1 sản phẩm) | Ethene + Br₂: Addition (2 sản phẩm) D. Ethane + Cl₂: Cracking (2 sản phẩm) | Ethene + Br₂: Polymerisation (1 sản phẩm) ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Bước 1 (Ethane + Cl₂): Alkane no không có nối đôi để mở nên 1 nguyên tử H bị thay thế bởi 1 nguyên tử Cl trong phản ứng thế quang hóa ( substitution ): C₂H₆ + Cl₂ ➔ C₂H₅Cl + HCl (tạo 2 sản phẩm ). Bước 2 (Ethene + Br₂): Alkene mở liên kết đôi C=C trong phản ứng cộng ( addition ): C₂H₄ + Br₂ ➔ CH₂BrCH₂Br (chỉ tạo 1 sản phẩm duy nhất ). Vậy B đúng.",
+      "duration": 196.3,
+      "startTime": 2630.89,
+      "endTime": 2827.19,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Long-chain alkanes in the naphtha or gas oil fraction are converted into shorter molecules by catalytic cracking.(a) Write a balanced symbol equation for the cracking of one molecule of dodecane, C₁₂H₂₆ , to form one molecule of octane, C₈H₁₈ , and one other alkene product (two molecules of the same alkene). [1](b) Describe a chemical test, including the result with both octane and the alkene, to distinguish between them. [2](c) Propene (CH₃CH=CH₂) reacts with hydrogen gas, and propane (C₃H₈) reacts with chlorine gas. State the essential condition for each reaction and explain why propane + Cl₂ gives two organic isomers. [3] ✍️ Step-by-Step Mark Scheme Solution: • (a) Remaining atoms: 12 − 8 = 4 C and 26 − 18 = 8 H ➔ two molecules of C₂H₄: C₁₂H₂₆ ➔ C₈H₁₈ + 2C₂H₄ [1m] .• (b) Shake each with aqueous bromine : octane stays orange-brown (no change) [1m] , while ethene decolourises it from orange-brown to colourless [1m] .• (c) Propene + H₂ requires a nickel (Ni) catalyst (and heat) [1m] ; propane + Cl₂ requires ultraviolet (UV) light to provide activation energy [1m] . Chlorine can replace an H atom on either an end carbon (forming 1-chloropropane ) or the middle carbon (forming 2-chloropropane ) [1m] . 💡 Intuition Check: In every cracking equation, total C atoms and total H atoms must balance strictly on both sides — never invent oxygen or water!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Long-chain alkanes in petroleum fractions are converted into shorter molecules by catalytic cracking.(a) Write a balanced symbol equation for the cracking of one molecule of dodecane, C₁₂H₂₆ , to form one molecule of octane, C₈H₁₈ , and two molecules of the same alkene. (b) Describe a chemical test, including the result with both octane and the alkene, to distinguish between them. (c) Propene (CH₃CH=CH₂) reacts with hydrogen gas, and propane (C₃H₈) reacts with chlorine gas. State the essential condition for each reaction and explain why propane + Cl₂ gives two organic isomers. ((a) Viết phương trình cracking 1 phân tử C₁₂H₂₆ tạo 1 phân tử octane C₈H₁₈ và 2 phân tử của cùng một alkene. (b) Nêu phép thử hóa học phân biệt octane với alkene đó. (c) Nêu điều kiện cần cho phản ứng propene + H₂ và propane + Cl₂, giải thích vì sao propane + Cl₂ tạo 2 đồng phân. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Bảo toàn nguyên tử: còn lại 12 − 8 = 4 C và 26 − 18 = 8 H chia cho 2 phân tử ➔ C₁₂H₂₆ ➔ C₈H₁₈ + 2C₂H₄ .• (b) Lắc với aqueous bromine : octane giữ nguyên màu cam nâu , còn ethene làm mất màu từ cam nâu sang không màu .• (c) Propene + H₂ cần xúc tác nickel (Ni catalyst) (đun nóng) ; propane + Cl₂ cần tia cực tím cung cấp năng lượng hoạt hóa .",
+      "duration": 231.01,
+      "startTime": 2827.19,
+      "endTime": 3058.2,
+      "audioUrl": "/audio/lectures/chemistry/11/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🍷 3. ALCOHOLS, CARBOXYLIC ACIDS & ESTERS (11.6 & 11.7)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🍷 3. ALCOHOLS, CARBOXYLIC ACIDS & ESTERS (11.6 & 11.7). Introducing oxygen creates polar functional groups: alcohols ( –OH ) and carboxylic acids ( –COOH ), which react together via acid-catalysed condensation to form sweet-smelling esters ( –COO– ).",
+      "vi": "🍷 3. ALCOHOLS, CARBOXYLIC ACIDS & ESTERS (11.6 & 11.7). Sự xuất hiện của nguyên tố oxygen tạo nên các nhóm chức phân cực: alcohols ( –OH ) và carboxylic acids ( –COOH ), có khả năng ngưng tụ với nhau dưới xúc tác axit tạo thành esters ( –COO– ) có mùi thơm trái cây đặc trưng.",
+      "duration": 46.65,
+      "startTime": 3058.2,
+      "endTime": 3104.85,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of ethanol (C₂H₅OH) as organic chemistry's central crossroads station : you can arrive there via the \"eco-brewery route\" ( fermentation of renewable glucose by yeast at 25–35 °C without oxygen) or the \"express refinery route\" ( ethene + steam at 300 °C, 6000 kPa, H₃PO₄ catalyst). Leave ethanol open to air/oxidising agent and it sours into ethanoic acid (vinegar) ; warm that acid with an alcohol + conc. H₂SO₄ and they snap together (dropping a water molecule) into a sweet-smelling ester perfume!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi ethanol (C₂H₅OH) là \"ngã tư trung tâm\" của hóa hữu cơ: ta có thể điều chế nó theo \"lối ủ men sinh thái\" ( fermentation đường thực vật tái tạo nhờ men yeast ở 25–35 °C không có oxy) hoặc \"cao tốc hóa dầu\" ( ethene + steam ở 300 °C, 6000 kPa, xúc tác H₃PO₄). Để ethanol ngoài không khí hoặc đun với chất oxi hóa mạnh thì nó hóa chua thành ethanoic acid (giấm ăn) ; đem axit đó đun ấm với rượu + H₂SO₄ đặc thì hai phân tử khâu lại (tách H₂O) tạo thành ester thơm ngát mùi hoa quả!",
+      "duration": 84.22,
+      "startTime": 3104.85,
+      "endTime": 3189.07,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Ethanol Manufacture, Combustion & Uses (11.6): Compare fermentation ( C₆H₁₂O₆ ➔ 2C₂H₅OH + 2CO₂ ; 25–35 °C, yeast, absence of O₂ ; renewable, batch, dilute) vs steam hydration ( C₂H₄ + H₂O ➔ C₂H₅OH ; 300 °C, 6000 kPa / 60 atm, phosphoric(V) acid catalyst ; finite, continuous, pure); balance combustion ( C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ) and state uses ( solvent & fuel ). 🟦 Core & 🟩 Supplement 2 → Ethanoic Acid & Esters (11.7): Ethanoic acid is a weak acid (partially ionised) reacting with metals (➔ ethanoate + H₂), bases (➔ ethanoate + H₂O), and carbonates (➔ ethanoate + CO₂ + H₂O); formed from ethanol via acidified aqueous KMnO₄ (purple ➔ colourless) or bacterial oxidation ; reacts with alcohols + conc. H₂SO₄ catalyst to form esters + water .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Điều chế, Đốt cháy & Ứng dụng Ethanol (11.6): Thuộc bảng so sánh fermentation ( C₆H₁₂O₆ ➔ 2C₂H₅OH + 2CO₂ ; 25–35 °C, yeast, absence of O₂ ; tái tạo nhưng theo mẻ, loãng) vs cộng hơi nước vào ethene ( C₂H₄ + H₂O ➔ C₂H₅OH ; 300 °C, 6000 kPa / 60 atm, acid catalyst H₃PO₄ ; liên tục, tinh khiết nhưng dùng dầu mỏ hữu hạn); đốt cháy C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ; ứng dụng làm solvent và fuel . 🟦 Core & 🟩 Supplement 2 → Ethanoic Acid & Esters (11.7): Ethanoic acid là weak acid (phân li một phần) tác dụng với metals , bases , carbonates tạo muối ethanoate ; điều chế từ ethanol bằng acidified aqueous KMnO₄ (purple ➔ colourless) hoặc bacterial oxidation ; phản ứng với alcohol nhờ xúc tác H₂SO₄ đặc tạo ester + H₂O .",
+      "duration": 149.13,
+      "startTime": 3189.07,
+      "endTime": 3338.2,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two high-frequency exam traps: (1) When balancing ethanol combustion ( C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ), students forget the 1 oxygen atom already inside C₂H₅OH and write 3.5 O₂ by mistake! (2) Fermentation MUST be kept at 25–35 °C (above ~40 °C denatures yeast enzymes ) and anaerobic (oxygen oxidises ethanol into sour ethanoic acid).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai cái bẫy cực dễ sập: (1) Khi cân bằng phương trình đốt cháy ethanol ( C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ), học sinh rất hay quên 1 nguyên tử O có sẵn trong C₂H₅OH nên viết nhầm thành 3.5 O₂ ! (2) Lên men rượu BẮT BUỘC giữ ở 25–35 °C (trên 40 °C làm hỏng enzyme của nấm men) và vắng mặt O₂ (nếu lọt khí O₂ vào, rượu sẽ bị vi khuẩn oxi hóa thành giấm chua!).",
+      "duration": 68.07,
+      "startTime": 3338.2,
+      "endTime": 3406.27,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Tiêu chí: Phương trình; 🌾 Phương pháp A: Lên men Glucose (Fermentation): C₆H₁₂O₆...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Feature: Balanced Equation; 🌾 Method A: Fermentation of Aqueous Glucose: C₆H₁₂O₆(aq) ➔ 2C₂H₅OH(aq) + 2CO₂(g); ⚙️ Method B: Catalytic Addition of Steam to Ethene: C₂H₄(g) + H₂O(g) ➔ C₂H₅OH(g). Feature: Exact Conditions (Memorise!); 🌾 Method A: Fermentation of Aqueous Glucose: • Temperature: 25–35 °C (optimum for enzymes; too cold = slow, > 40 °C = enzymes denature) • Catalyst: Yeast (living fungus providing biological enzymes) • Atmosphere: Absence of oxygen (anaerobic — prevents oxidation of ethanol to ethanoic acid!); ⚙️ Method B: Catalytic Addition of Steam to Ethene: • Temperature: 300 °C • Pressure: 6000 kPa / 60 atm • Catalyst: Acid catalyst — immobilized phosphoric(V) acid (H₃PO₄). Feature: Raw Material; 🌾 Method A: Fermentation of Aqueous Glucose: Renewable plant carbohydrates (sugar cane, maize, sugar beet).; ⚙️ Method B: Catalytic Addition of Steam to Ethene: Non-renewable / finite (ethene obtained from cracking petroleum fractions). Feature: Advantages Supplement 11.6.4; 🌾 Method A: Fermentation of Aqueous Glucose: ✅ Uses renewable resources. ✅ Mild temperature (25–35 °C) and atmospheric pressure require low energy input and simple equipment.; ⚙️ Method B: Catalytic Addition of Steam to Ethene: ✅ Fast, continuous industrial process. ✅ Produces pure ethanol directly (no fractional distillation needed). ✅ 100% atom economy (only one product formed; no waste CO₂). Feature: Disadvantages Supplement 11.6.4; 🌾 Method A: Fermentation of Aqueous Glucose: ❌ Slow, batch process (must stop, empty, clean, and restart).",
+      "vi": "Tiêu chí: Phương trình; 🌾 Phương pháp A: Lên men Glucose (Fermentation): C₆H₁₂O₆(aq) ➔ 2C₂H₅OH(aq) + 2CO₂(g); ⚙️ Phương pháp B: Cộng Hơi nước vào Ethene (Catalytic Hydration): C₂H₄(g) + H₂O(g) ➔ C₂H₅OH(g). Tiêu chí: Điều kiện Chuẩn (Bắt buộc thuộc!); 🌾 Phương pháp A: Lên men Glucose (Fermentation): • Nhiệt độ: 25–35 °C (quá thấp phản ứng chậm; > 40 °C làm biến tính hỏng enzymes ) • Xúc tác sinh học: nấm men (yeast) • Môi trường: Vắng mặt oxygen (absence of oxygen / kỵ khí — ngăn ethanol bị oxi hóa thành ethanoic acid!); ⚙️ Phương pháp B: Cộng Hơi nước vào Ethene (Catalytic Hydration): • Nhiệt độ: 300 °C • Áp suất: 6000 kPa / 60 atm • Xúc tác: Xúc tác axit (acid catalyst — phosphoric(V) acid, H₃PO₄). Tiêu chí: Nguồn nguyên liệu; 🌾 Phương pháp A: Lên men Glucose (Fermentation): Tái tạo được (renewable) — mía đường, ngô, tinh bột thực vật.; ⚙️ Phương pháp B: Cộng Hơi nước vào Ethene (Catalytic Hydration): Không tái tạo / hữu hạn (non-renewable) — ethene lấy từ cracking dầu mỏ. Tiêu chí: Ưu điểm Supplement 11.6.4; 🌾 Phương pháp A: Lên men Glucose (Fermentation): ✅ Sử dụng nguồn nguyên liệu sinh khối tái tạo (renewable) . ✅ Nhiệt độ êm dịu (25–35 °C) và áp suất thường nên tiết kiệm chi phí năng lượng , thiết bị đơn giản.; ⚙️ Phương pháp B: Cộng Hơi nước vào Ethene (Catalytic Hydration): ✅ Quy trình liên tục, tốc độ rất nhanh . ✅ Thu được ethanol tinh khiết (pure ethanol) ngay lập tức. ✅ Hiệu suất nguyên tử 100% (không sinh sản phẩm phụ CO₂).",
+      "duration": 261.6,
+      "startTime": 3406.27,
+      "endTime": 3667.87,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🔥 11.6.2 Phản ứng Cháy của Ethanol (Combustion)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🔥 11.6.2 Combustion of Ethanol. Ethanol burns cleanly with a pale blue, non-smoky flame releasing substantial heat energy: C₂H₅OH(l) + 3O₂(g) ➔ 2CO₂(g) + 3H₂O(l) (Tip: remember ethanol already contains 1 O atom!). 🧴 11.6.3 Official Uses of Ethanol. (a) As a solvent: dissolves water-insoluble organic substances in perfumes, cosmetics, inks, glues, and food tinctures. (b) As a fuel: blended with petrol (bioethanol in cars) or burned in spirit lamps/camping stoves.",
+      "vi": "🔥 11.6.2 Phản ứng Cháy của Ethanol (Combustion). Ethanol cháy sạch với ngọn lửa xanh nhạt, không sinh khói đen, tỏa nhiều nhiệt: C₂H₅OH(l) + 3O₂(g) ➔ 2CO₂(g) + 3H₂O(l) (Mẹo cân bằng: nhớ đếm 1 nguyên tử O có sẵn trong ethanol!). 🧴 11.6.3 Ứng dụng của Ethanol. (a) Làm dung môi (as a solvent): pha chế nước hoa, mỹ phẩm, mực in, keo dán, hương liệu thực phẩm. (b) Làm nhiên liệu (as a fuel): pha xăng sinh học (bioethanol) cho ô tô hoặc dùng trong đèn cồn.",
+      "duration": 81.95,
+      "startTime": 3667.87,
+      "endTime": 3749.82,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🧪 11.7.1 Tính Axit của Ethanoic Acid (CH₃COOH)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🧪 11.7.1 Reactions of Ethanoic Acid (CH₃COOH). Ethanoic acid is a weak acid (partially ionised in water: CH₃COOH(aq) ⇌ CH₃COO⁻(aq) + H⁺(aq) , pH ~3–4) that forms salts called ethanoates (carrying the CH₃COO⁻ ion, charge −1): • (a) + Reactive Metals ➔ Salt + Hydrogen: 2CH₃COOH + Mg ➔ (CH₃COO)₂Mg + H₂ Salt name: magnesium ethanoate (notice brackets & subscript 2 for Mg²⁺!)• (b) + Bases (Alkalis / Metal Oxides) ➔ Salt + Water: CH₃COOH + NaOH ➔ CH₃COONa + H₂O ( sodium ethanoate ) 2CH₃COOH + CuO ➔ (CH₃COO)₂Cu + H₂O ( copper(II) ethanoate )• (c) + Carbonates ➔ Salt + Carbon Dioxide + Water: 2CH₃COOH + CaCO₃ ➔ (CH₃COO)₂Ca + CO₂ + H₂O ( calcium ethanoate ) 2CH₃COOH + Na₂CO₃ ➔ 2CH₃COONa + CO₂ + H₂O",
+      "vi": "🧪 11.7.1 Tính Axit của Ethanoic Acid (CH₃COOH). Ethanoic acid là một axit yếu (weak acid , phân li một phần: CH₃COOH(aq) ⇌ CH₃COO⁻(aq) + H⁺(aq) , pH ~3–4), tạo ra các muối ethanoate chứa ion CH₃COO⁻ (điện tích −1): • (a) + Kim loại đứng trước H (Metals) ➔ Muối + H₂: 2CH₃COOH + Mg ➔ (CH₃COO)₂Mg + H₂ Tên muối: magnesium ethanoate (nhớ đóng ngoặc chỉ số 2 với ion hóa trị II!)• (b) + Bazơ / Kiềm (Bases) ➔ Muối + H₂O: CH₃COOH + NaOH ➔ CH₃COONa + H₂O ( sodium ethanoate ) 2CH₃COOH + CuO ➔ (CH₃COO)₂Cu + H₂O ( copper(II) ethanoate )• (c) + Muối Carbonate (Carbonates) ➔ Muối + CO₂ + H₂O: 2CH₃COOH + CaCO₃ ➔ (CH₃COO)₂Ca + CO₂ + H₂O ( calcium ethanoate ) 2CH₃COOH + Na₂CO₃ ➔ 2CH₃COONa + CO₂ + H₂O",
+      "duration": 176.8,
+      "startTime": 3749.82,
+      "endTime": 3926.62,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "✨ Điều chế Ethanoic Acid & Phản ứng Ester hóa",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Supplement 11.7.2 & 11.7.3 ✨ Making Ethanoic Acid & Esters. 1. Formation of Ethanoic Acid by Oxidation of Ethanol: (a) Chemical Oxidation: Heat (reflux) ethanol with acidified aqueous potassium manganate(VII) ( KMnO₄ / H⁺ ). Observation: solution turns from purple to colourless . CH₃CH₂OH + 2[O] ➔ CH₃COOH + H₂O . (b) Bacterial Oxidation (Vinegar Production): Microbes in air oxidise ethanol using atmospheric oxygen: C₂H₅OH + O₂ ➔ CH₃COOH + H₂O (why wine left open turns sour!). 2. Esterification (Carboxylic Acid + Alcohol): Warm a carboxylic acid with an alcohol using an acid catalyst (concentrated H₂SO₄) to produce a volatile, fruity-smelling ester + water : CH₃COOH + CH₃CH₂OH ⇌ CH₃COOCH₂CH₃ + H₂O ethanoic acid + ethanol ⇌ ethyl ethanoate + water (conc. H₂SO₄, heat)",
+      "vi": "Supplement 11.7.2 & 11.7.3 ✨ Điều chế Ethanoic Acid & Phản ứng Ester hóa. 1. Oxi hóa Ethanol tạo Ethanoic Acid: (a) Oxi hóa Hóa học: Đun nóng ethanol với dung dịch potassium manganate(VII) đã axit hóa . Hiện tượng: dung dịch chuyển từ màu tím sang không màu . CH₃CH₂OH + 2[O] ➔ CH₃COOH + H₂O . (b) Oxi hóa nhờ Vi khuẩn (Bacterial oxidation — Sản xuất giấm ăn vinegar): Vi khuẩn trong không khí dùng O₂ oxi hóa rượu thành giấm: C₂H₅OH + O₂ ➔ CH₃COOH + H₂O. 2. Phản ứng Ester hóa (Esterification): Đun ấm carboxylic acid với alcohol có mặt xúc tác axit (acid catalyst — H₂SO₄ đặc) tạo ester thơm mùi hoa quả + nước: CH₃COOH + CH₃CH₂OH ⇌ CH₃COOCH₂CH₃ + H₂O ethanoic acid + ethanol ⇌ ethyl ethanoate + water (H₂SO₄ đặc, t°)",
+      "duration": 151.17,
+      "startTime": 3926.62,
+      "endTime": 4077.79,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Extended MCQ Ethanol can be manufactured either by fermentation of aqueous glucose or by the catalytic addition of steam to ethene.Which row correctly states an advantage of fermentation and an advantage of hydration of ethene ? A. Fermentation: Continuous process | Hydration of ethene: Uses renewable raw materials B. Fermentation: Produces pure 100% ethanol directly | Hydration of ethene: Uses room temperature and pressure C. Fermentation: Uses renewable plant carbohydrates | Hydration of ethene: Fast, continuous process with 100% atom economy D. Fermentation: Needs no catalyst | Hydration of ethene: Uses yeast enzymes at 300 °C ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Step 1 (Fermentation): Uses sugar/starch from crops — a renewable resource (and low energy at 25–35 °C), though it is a slow batch process yielding dilute aqueous ethanol (eliminates A, B, D). Step 2 (Hydration of ethene): C₂H₄ + H₂O ➔ C₂H₅OH is a fast, continuous process producing pure ethanol as the only product (100% atom economy) , though ethene comes from finite petroleum. Therefore C is correct.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Extended Ethanol can be manufactured either by fermentation of aqueous glucose or by the catalytic addition of steam to ethene. Which row correctly states an advantage of fermentation and an advantage of hydration of ethene ? (Ethanol có thể sản xuất bằng lên men dung dịch glucose hoặc cộng hơi nước xúc tác vào ethene. Dòng nào nêu đúng một ưu điểm của fermentation và một ưu điểm của hydration of ethene ?) A. Fermentation: Quy trình liên tục | Hydration: Dùng nguyên liệu tái tạo B. Fermentation: Thu ngay ethanol tinh khiết 100% | Hydration: Xảy ra ở nhiệt độ và áp suất phòng C. Fermentation: Dùng nguồn thực vật tái tạo (renewable) | Hydration: Quy trình liên tục, nhanh, hiệu suất nguyên tử 100% D. Fermentation: Không cần xúc tác | Hydration: Dùng enzyme nấm men ở 300 °C ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Bước 1 (Fermentation): Sử dụng đường từ mía/ngô là nguồn nguyên liệu tái tạo (renewable) ở nhiệt độ thấp 25–35 °C, dù là quy trình theo mẻ chậm và thu dung dịch loãng (loại A, B, D). Bước 2: C₂H₄ + H₂O ➔ C₂H₅OH là quy trình nhanh, liên tục (fast, continuous) cho ngay ethanol tinh khiết với duy nhất 1 sản phẩm (100% atom economy). Vậy C đúng.",
+      "duration": 182.0,
+      "startTime": 4077.79,
+      "endTime": 4259.79,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Aqueous ethanoic acid, CH₃COOH , is formed when ethanol is heated under reflux with acidified aqueous potassium manganate(VII).(a) State the colour change observed during this oxidation reaction. [1](b) Explain why ethanoic acid has a higher pH (around pH 4) than hydrochloric acid of the same concentration (pH 1), and write the symbol equation for ethanoic acid reacting with magnesium carbonate, MgCO₃ . [3](c) Ethanoic acid is warmed with butan-1-ol and a few drops of concentrated sulfuric acid. Name the organic product formed and state the role of concentrated sulfuric acid. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) Turns from purple to colourless [1m] .• (b) Ethanoic acid is a weak acid that partially dissociates / ionises in aqueous solution ( CH₃COOH ⇌ CH₃COO⁻ + H⁺ ), producing a lower concentration of H⁺(aq) ions than fully dissociated HCl [1m] .Equation: 2CH₃COOH + MgCO₃ ➔ (CH₃COO)₂Mg + CO₂ + H₂O (1m for correct salt formula (CH₃COO)₂Mg , 1m for balanced equation) [2m] .• (c) Organic product: butyl ethanoate [1m] ; role of conc. H₂SO₄: acid catalyst [1m] . 💡 Intuition Check: Remember the ion charges when writing ethanoate salts: ethanoate is CH₃COO⁻ (−1) , so with Group I ions ( Na⁺ ) it is CH₃COONa , whereas with Group II ions ( Mg²⁺ , Ca²⁺ ) you MUST use brackets: (CH₃COO)₂Mg !",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Aqueous ethanoic acid, CH₃COOH , is formed when ethanol is heated under reflux with acidified aqueous potassium manganate(VII).(a) State the colour change observed during this oxidation reaction. (b) Explain why ethanoic acid has a higher pH (around pH 4) than hydrochloric acid of the same concentration (pH 1), and write the symbol equation for ethanoic acid reacting with magnesium carbonate, MgCO₃ . (c) Ethanoic acid is warmed with butan-1-ol and a few drops of concentrated sulfuric acid. Name the organic product formed and state the role of concentrated sulfuric acid. ((a) Nêu hiện tượng đổi màu khi oxi hóa ethanol bằng KMnO₄/H⁺. (b) Giải thích vì sao ethanoic acid có pH cao hơn (~4) so với HCl cùng nồng độ (pH 1), và viết phương trình với MgCO₃. (c) Đun ấm ethanoic acid với butan-1-ol và vài giọt H₂SO₄ đặc: gọi tên sản phẩm hữu cơ và vai trò của H₂SO₄ đặc. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Đổi từ màu tím sang không màu .• (b) Ethanoic acid là axit yếu (weak acid) chỉ phân li một phần trong nước, tạo nồng độ H⁺ thấp hơn HCl .Phương trình: 2CH₃COOH + MgCO₃ ➔ (CH₃COO)₂Mg + CO₂ + H₂O (1m công thức muối (CH₃COO)₂Mg , 1m cân bằng chuẩn) .• (c) Sản phẩm hữu cơ: butyl ethanoate ; vai trò của H₂SO₄ đặc: chất xúc tác axit (acid catalyst) .",
+      "duration": 246.79,
+      "startTime": 4259.79,
+      "endTime": 4506.58,
+      "audioUrl": "/audio/lectures/chemistry/11/s03_b09.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🔗 4. POLYMERS: TRÙNG HỢP, TRÙNG NGƯNG & PROTEINS (11.8)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🔗 4. POLYMERS: ADDITION, CONDENSATION & PROTEINS (11.8). Polymers are large molecules built up from many smaller molecules called monomers . Synthetic plastics are made from polymers, while living organisms synthesise natural polymers such as proteins.",
+      "vi": "🔗 4. POLYMERS: TRÙNG HỢP, TRÙNG NGƯNG & PROTEINS (11.8). EASY INTUITION & SYLLABUS MENTAL MODEL Polymers là những đại phân tử có kích thước lớn được tạo thành từ rất nhiều phân tử nhỏ gọi là monomers liên kết với nhau. Chất dẻo ( plastics ) được chế tạo từ các polymers tổng hợp, trong khi cơ thể sống tổng hợp nên các polymers tự nhiên như proteins.",
+      "duration": 38.97,
+      "startTime": 4506.58,
+      "endTime": 4545.55,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture addition polymerisation like a line of dancers holding BOTH hands ( C=C ) with their partner : on cue, every pair drops one hand between them and reaches left and right to hold their neighbours' hands ( –C–C–C–C– ), linking thousands of dancers with nothing dropped on the floor (100% atom economy, 1 product!). In contrast, condensation polymerisation (making nylon, PET, or proteins ) is like clipping two-ended buckles together where every click ejects a tiny water molecule (H₂O) !",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung trùng hợp cộng (addition polymerisation) giống như hàng ngàn cặp nhảy đang nắm CẢ HAI TAY ( C=C ) : khi nhạc nổi lên, mỗi cặp buông một tay ở giữa và vươn sang hai bên nắm tay người hàng xóm ( –C–C–C–C– ), nối thành 1 dây dài bất tận mà không rơi rớt bất kỳ mảnh vụn nào (chỉ 1 sản phẩm duy nhất!). Ngược lại, trùng ngưng (condensation polymerisation) (tạo nylon, PET, proteins ) giống như bấm khóa dây đai hai đầu mà mỗi tiếng \"tách\" lại làm rụng ra 1 phân tử nước (H₂O) !",
+      "duration": 75.46,
+      "startTime": 4545.55,
+      "endTime": 4621.01,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Poly(ethene) & Plastic Disposal: Monomers join to form polymers; addition polymers are unreactive and non-biodegradable , causing 3 environmental problems: landfill accumulation , ocean accumulation , and toxic gases when burned (e.g. HCl from PVC, CO). 🟩 Supplement 2 → Addition Repeat Units: Always draw the alkene in an \"H-shape\" so each repeat unit has only 2 carbons in the horizontal chain , single C–C bond inside, and continuation bonds poking through [ ] . 🟩 Supplement 3 → Condensation Polymers: Know the 3 structures by linkage: Nylon = dicarboxylic acid + diamine ➔ alternating amide links ( –CONH– ) + H₂O; PET = dicarboxylic acid + diol ➔ ester links ( –COO– ) + H₂O (can be hydrolysed back to monomers and re-polymerised ); Proteins = natural polyamides made from amino acid monomers ( H₂N–CH(R)–COOH ) with directional –NH–■–CO– amide links.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Poly(ethene) & Rác thải nhựa: Monomers kết hợp tạo polymers; nhựa trùng hợp bền nên không phân hủy sinh học (non-biodegradable) , gây 3 hệ lụy: đầy bãi chôn lấp (landfill) , tích tụ ở đại dương (oceans) , và sinh khí độc khi đốt (như HCl từ PVC, CO). 🟩 Supplement 2 → Vẽ Repeat Unit trùng hợp: Luôn xếp alkene theo khung chữ H để trục ngang trong ngoặc [ ] chỉ có đúng 2 nguyên tử C , liên kết đơn ở giữa và 2 gạch nối xuyên qua ngoặc vuông . 🟩 Supplement 3 → Polymers trùng ngưng: Phân biệt 3 đại diện: Nylon = dicarboxylic acid + diamine ➔ liên kết amide ( –CONH– ) + H₂O; PET = dicarboxylic acid + diol ➔ liên kết ester ( –COO– ) + H₂O (có thể thủy phân về monomers rồi re-polymerised ); Proteins = polyamide tự nhiên từ các amino acids ( H₂N–CH(R)–COOH ) nối cùng chiều –NH–■–CO– .",
+      "duration": 139.91,
+      "startTime": 4621.01,
+      "endTime": 4760.92,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When asked to draw the repeat unit of poly(propene) or poly(but-1-ene) , NEVER put 3 or 4 carbons in a straight horizontal row –CH₂–CH₂–CH₂– ! Every addition polymer repeat unit has strictly 2 carbon atoms in the horizontal backbone , with any –CH₃ or –C₂H₅ group drawn vertically as a side branch!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi vẽ mắt xích (repeat unit) của poly(propene) hay poly(but-1-ene) , TUYỆT ĐỐI KHÔNG vẽ 3 hay 4 nguyên tử C nằm thẳng hàng ngang –CH₂–CH₂–CH₂– ! Mọi repeat unit của trùng hợp cộng chỉ có đúng 2 nguyên tử C trên trục chính , còn nhóm –CH₃ hay –C₂H₅ bắt buộc phải bẻ dọc làm nhánh!",
+      "duration": 54.27,
+      "startTime": 4760.92,
+      "endTime": 4815.19,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "➕ 11.8.2 & 11.8.6–7 Phản ứng Trùng hợp (Addition Polymerisation): Monomer ⇄ Repeat Unit",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "➕ 11.8.2 & 11.8.6–7 Addition Polymerisation: Monomers ⇄ Repeat Units. Under high pressure and a catalyst, thousands of unsaturated alkene monomers open their C=C double bonds and join end-to-end into a single saturated carbon chain with 100% atom economy (only ONE product formed). SVG: Ethene -> Poly(ethene) and Propene -> Poly(propene) 3-Step Exam Recipe for Any Addition Polymer (e.g. chloroethene ➔ PVC; tetrafluoroethene ➔ PTFE): 1. Redraw the alkene monomer in an \"H-shape\" around the C=C bond (so each repeat unit has exactly 2 carbon atoms in the horizontal backbone; put groups like –CH₃ , –Cl , or –C₆H₅ vertically above/below!).2. Change C=C into a single C–C bond and draw continuation bonds extending OUT through the square brackets .3. Reverse direction (Polymer ➔ Monomer): Isolate one 2-carbon repeat unit, delete the side continuation bonds & brackets, and restore the C=C double bond!",
+      "vi": "➕ 11.8.2 & 11.8.6–7 Phản ứng Trùng hợp (Addition Polymerisation): Monomer ⇄ Repeat Unit. Dưới áp suất cao và chất xúc tác, hàng ngàn phân tử alkene monomers mở liên kết đôi C=C nối tiếp nhau tạo thành chuỗi mạch đơn bão hòa khổng lồ với hiệu suất nguyên tử 100% (chỉ tạo DUY NHẤT 1 sản phẩm). Quy tắc 3 Bước Vẽ Mắt xích (Repeat Unit) Không Bao Giờ Sai: 1. Vẽ lại monomer alkene theo khung chữ H quanh trục C=C (mỗi repeat unit chỉ có đúng 2 nguyên tử C trên trục ngang ; mọi nhóm thế như –CH₃ , –Cl , –F phải bẻ thẳng đứng lên trên hoặc xuống dưới!).2. Đổi liên kết đôi C=C thành liên kết đơn C–C và vẽ 2 nét gạch nối tiếp xuyên hẳn ra ngoài dấu ngoặc vuông [ ] .3. Suy ngược từ Polymer về Monomer: Cắt lấy 1 mắt xích 2C, xóa ngoặc vuông cùng 2 gạch nối bên hông, rồi khôi phục lại liên kết đôi C=C !",
+      "duration": 133.64,
+      "startTime": 4815.19,
+      "endTime": 4948.83,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🌍 11.8.4–11.8.5 Xử lý Rác thải Nhựa & 3 Thách thức Môi trường",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🌍 11.8.4–11.8.5 Disposal of Plastics & Environmental Challenges. Because addition polymers have strong, non-polar covalent C–C bonds, plastics are chemically unreactive and non-biodegradable (microorganisms/decomposers cannot break them down). This causes three major environmental challenges :",
+      "vi": "🌍 11.8.4–11.8.5 Xử lý Rác thải Nhựa & 3 Thách thức Môi trường. Do mạch carbon chứa các liên kết C–C bền và trơ hóa học, plastics không tự phân hủy sinh học (non-biodegradable) bởi vi khuẩn trong tự nhiên, gây ra 3 vấn đề môi trường nghiêm trọng :",
+      "duration": 36.28,
+      "startTime": 4948.83,
+      "endTime": 4985.11,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "1. Chôn lấp (Landfill Sites)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "1. Disposal in Landfill Sites. Plastics do not rot/decompose, rapidly filling up scarce landfill space and persisting in soil for hundreds of years.",
+      "vi": "1. Chôn lấp (Landfill Sites). Nhựa không mục nát, làm đầy nhanh chóng các bãi rác và tồn lưu hàng thế kỷ trong đất.",
+      "duration": 20.12,
+      "startTime": 4985.11,
+      "endTime": 5005.23,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "2. Tích tụ ở Đại dương (Oceans)",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "2. Accumulation in Oceans. Floating plastic waste entangles fish, turtles, and seabirds, blocks digestive tracts when ingested, and fragments into microplastics.",
+      "vi": "2. Tích tụ ở Đại dương (Oceans). Làm mắc kẹt, gây tắc đường tiêu hóa khi sinh vật biển nuốt phải và phân rã thành hạt vi nhựa (microplastics).",
+      "duration": 23.95,
+      "startTime": 5005.23,
+      "endTime": 5029.18,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "3. Khí Độc khi Đốt (Toxic Gases)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "3. Toxic Gases from Burning. Incineration releases greenhouse gas CO₂ , toxic CO (incomplete combustion), and corrosive/toxic acidic gases such as hydrogen chloride ( HCl ) from PVC.",
+      "vi": "3. Khí Độc khi Đốt (Toxic Gases). Thiêu hủy nhựa sinh khí độc CO (cháy thiếu O₂), khí nhà kính CO₂ , và khí ăn mòn độc hại HCl (khi đốt nhựa PVC).",
+      "duration": 29.28,
+      "startTime": 5029.18,
+      "endTime": 5058.46,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "Đặc điểm So sánh: Loại Monomer; Trùng hợp (Addition Polymerisation): Phân tử khô...",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "Feature: Monomers Required; Addition Polymerisation: Unsaturated molecules containing a C=C double bond (usually one monomer type).; Condensation Polymerisation: Monomers with two reactive functional groups (one at each end, e.g. diol + dicarboxylic acid, diamine + dicarboxylic acid, or amino acids). Feature: Products Formed; Addition Polymerisation: Only ONE product (the polymer alone; 100% atom economy).; Condensation Polymerisation: TWO products: the polymer + a small molecule eliminated (usually water, H₂O ) per linkage formed. Feature: Polymer Backbone; Addition Polymerisation: Continuous chain of carbon atoms only ( –C–C–C–C– ); non-hydrolysable.; Condensation Polymerisation: Contains functional linkages ( amide –CONH– or ester –COO– ) that can be hydrolysed back to monomers.",
+      "vi": "Đặc điểm So sánh: Loại Monomer; Trùng hợp (Addition Polymerisation): Phân tử không no chứa liên kết đôi C=C .; Trùng ngưng (Condensation Polymerisation): Các monomers mang 2 nhóm chức ở hai đầu (VD: diol + dicarboxylic acid; diamine + dicarboxylic acid; hoặc amino acids). Đặc điểm So sánh: Sản phẩm Sinh ra; Trùng hợp (Addition Polymerisation): DUY NHẤT 1 sản phẩm (chỉ tạo polymer).; Trùng ngưng (Condensation Polymerisation): 2 sản phẩm: chuỗi polymer + giải phóng phân tử nhỏ (thường là nước, H₂O) ở mỗi liên kết. Đặc điểm So sánh: Liên kết Mạch chính; Trùng hợp (Addition Polymerisation): Mạch toàn nguyên tử carbon ( –C–C–C–C– ); không bị thủy phân.; Trùng ngưng (Condensation Polymerisation): Chứa liên kết chức amide ( –CONH– ) hoặc ester ( –COO– ) ; có thể thủy phân ngược về monomers.",
+      "duration": 129.27,
+      "startTime": 5058.46,
+      "endTime": 5187.73,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "📐 Sơ đồ Khối Chuẩn Cambridge 0620 (Thuộc Lòng Từng Nguyên Tử Trong Nhóm Liên Kết!)",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "📐 Official Cambridge 0620 Block Structures (Memorise Every Linkage Atom & Direction!).",
+      "vi": "📐 Sơ đồ Khối Chuẩn Cambridge 0620 (Thuộc Lòng Từng Nguyên Tử Trong Nhóm Liên Kết!).",
+      "duration": 13.5,
+      "startTime": 5187.73,
+      "endTime": 5201.23,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b10.mp3"
+    },
+    {
+      "id": "s04_b11",
+      "title": "♻️ Supplement 11.8.11: Tái chế Hóa học Nhựa PET",
+      "selector": "[data-lecture-section=\"s04_b11\"]",
+      "en": "♻️ Supplement 11.8.11: Chemical Recycling of PET. Unlike addition polymers, PET (a polyester; full name polyethylene terephthalate not required) can be converted back into monomers (by acid/alkaline hydrolysis of its ester links) and re-polymerised into virgin-grade polyester!",
+      "vi": "♻️ Supplement 11.8.11: Tái chế Hóa học Nhựa PET. Khác với nhựa trùng hợp, PET (một polyester ; không bắt buộc nhớ tên đầy đủ polyethylene terephthalate) có thể được chuyển hóa ngược trở lại thành các monomers ban đầu nhờ thủy phân liên kết ester, sau đó tái trùng ngưng (re-polymerised) thành nhựa mới!",
+      "duration": 39.26,
+      "startTime": 5201.23,
+      "endTime": 5240.49,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b11.mp3"
+    },
+    {
+      "id": "s04_b12",
+      "title": "🎯 Điểm Phân biệt Đạt A*: Khung mạch Nylon vs. Protein",
+      "selector": "[data-lecture-section=\"s04_b12\"]",
+      "en": "🎯 A* Distinction: Nylon vs. Protein Backbone. Both nylon and proteins contain amide linkages ( –CONH– ) . However, in nylon each monomer has two identical ends ( HOOC–■–COOH & H₂N–□–NH₂ ), whereas in proteins every amino acid monomer has both –NH₂ and –COOH , so every block points –NH–[block]–CO– in the same direction!",
+      "vi": "🎯 Điểm Phân biệt Đạt A*: Khung mạch Nylon vs. Protein. Cả nylon và proteins đều chứa liên kết amide ( –CONH– ) . Tuy nhiên ở nylon , hai loại monomer đối xứng ( HOOC–■–COOH và H₂N–□–NH₂ ) xếp xen kẽ làm chiều nhóm –CONH– đảo ngược qua lại; còn ở proteins , mỗi monomer amino acid có sẵn 1 đầu –NH₂ và 1 đầu –COOH nên mọi khối đều nối cùng chiều –NH–[khối]–CO– !",
+      "duration": 65.08,
+      "startTime": 5240.49,
+      "endTime": 5305.57,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b12.mp3"
+    },
+    {
+      "id": "s04_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Extended MCQ Which statement correctly compares nylon , PET , and poly(propene) ? A. Nylon and PET both contain ester linkages and form water as a by-product. B. Poly(propene) has three carbon atoms in the main chain of each repeat unit and is biodegradable. C. Nylon contains amide linkages just like proteins, whereas PET contains ester linkages and can be hydrolysed back to monomers. D. All three polymers are made by condensation polymerisation of unsaturated alkenes. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Step 1: Nylon and proteins are both polyamides containing amide linkages ( –CONH– ) , whereas PET is a polyester containing ester linkages ( –COO– ) that can be chemically hydrolysed back to its monomers and re-polymerised — making C completely correct. Why distractors fail: A wrongly gives nylon ester links. B puts 3 carbons in poly(propene)'s backbone (only 2 carbons are in the main chain; –CH₃ is a branch!) and calls it biodegradable. D confuses addition (poly(propene)) with condensation.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Extended Which statement correctly compares nylon , PET , and poly(propene) ? (Phát biểu nào sau đây so sánh đúng giữa nylon , PET và poly(propene) ?) A. Nylon và PET đều chứa liên kết ester và tách nước khi tạo thành. B. Poly(propene) có 3 nguyên tử C trên mạch chính của mỗi mắt xích và tự phân hủy sinh học. C. Nylon chứa liên kết amide giống như proteins, còn PET chứa liên kết ester và có thể thủy phân ngược về monomers. D. Cả ba polymers đều được điều chế bằng trùng ngưng các alkenes không no. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Bước 1: Nylon và proteins đều là polyamides chứa amide linkages ( –CONH– ) , còn PET là polyester chứa ester linkages ( –COO– ) có thể thủy phân tái chế hóa học về monomers — nên C hoàn toàn chính xác. Loại phương án nhiễu: A sai vì nylon chứa liên kết amide chứ không phải ester. B sai vì trục chính mỗi mắt xích poly(propene) chỉ có 2C ( –CH₃ là nhánh) và không phân hủy sinh học. D nhầm poly(propene) sang trùng ngưng.",
+      "duration": 157.4,
+      "startTime": 5305.57,
+      "endTime": 5462.97,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b13.mp3"
+    },
+    {
+      "id": "s04_b14",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s04_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Chloroethene, CH₂=CHCl , forms the addition polymer poly(chloroethene) (PVC), whereas a dicarboxylic acid ( HOOC–■–COOH ) and a diamine ( H₂N–□–NH₂ ) react to form nylon .(a) Describe the structural formula of one repeat unit of poly(chloroethene) and state one specific hazard of burning waste PVC. [2](b) State two differences between addition polymerisation and condensation polymerisation. [2](c) State the name of the linkage present in both nylon and natural proteins, and state one structural difference between the monomers used to make nylon and the monomers used to make proteins. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) Repeat unit has a 2-carbon single-bonded chain with continuation bonds extending through brackets: –[CH₂–CHCl]– [1m] . Burning PVC releases toxic/acidic hydrogen chloride gas (HCl) (or toxic CO) [1m] .• (b) Addition uses unsaturated C=C monomers and forms only one product (the polymer) [1m] , whereas condensation uses monomers with two functional groups and eliminates a small molecule such as water (H₂O) alongside the polymer [1m] .• (c) Linkage: amide linkage ( –CONH– ) [1m] . Nylon is made from two different monomers (a diamine with two –NH₂ groups + a dicarboxylic acid with two –COOH groups), whereas proteins are made from amino acid monomers that each contain both an –NH₂ group and a –COOH group on the same molecule [1m] .",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Chloroethene, CH₂=CHCl , forms the addition polymer poly(chloroethene) (PVC), whereas a dicarboxylic acid ( HOOC–■–COOH ) and a diamine ( H₂N–□–NH₂ ) react to form nylon .(a) Describe the structural formula of one repeat unit of poly(chloroethene) and state one specific hazard of burning waste PVC. (b) State two differences between addition polymerisation and condensation polymerisation. (c) State the name of the linkage present in both nylon and natural proteins, and state one structural difference between the monomers used to make nylon and the monomers used to make proteins. ((a) Viết cấu tạo 1 mắt xích của PVC và nêu 1 tác hại đặc trưng khi đốt rác PVC. (b) Nêu 2 điểm khác biệt giữa trùng hợp cộng và trùng ngưng. (c) Gọi tên liên kết chung trong nylon và protein, và nêu 1 điểm khác nhau về cấu tạo monomer của chúng. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Mắt xích có trục chính 2C liên kết đơn kèm gạch nối xuyên ngoặc vuông: –[CH₂–CHCl]– . Đốt PVC giải phóng khí độc/ăn mòn hydrogen chloride (HCl) (hoặc khí độc CO) .• (b) Addition dùng monomer có liên kết đôi C=C và chỉ tạo duy nhất 1 sản phẩm , còn condensation dùng monomers có 2 nhóm chức và giải phóng thêm phân tử nhỏ như nước (H₂O) .• (c) Tên liên kết: amide linkage ( –CONH– ) .",
+      "duration": 222.7,
+      "startTime": 5462.97,
+      "endTime": 5685.67,
+      "audioUrl": "/audio/lectures/chemistry/11/s04_b14.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "📝 PHÂN TÍCH CÂU HỎI MẪU ĐỀ THI IGCSE (Worked Exam Questions)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "📝 WORKED IGCSE EXAM QUESTIONS (0620).",
+      "vi": "📝 PHÂN TÍCH CÂU HỎI MẪU ĐỀ THI IGCSE.",
+      "duration": 9.5,
+      "startTime": 5685.67,
+      "endTime": 5695.17,
+      "audioUrl": "/audio/lectures/chemistry/11/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "Đề bài: Cracking 1 phân tử tetradecane (C₁₄H₃₀) thu được 1 phân tử octane (C₈H₁₈), 1 phân tử et",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "Worked Example 1 • Cracking & Structural Isomers (5 marks) Question: One molecule of tetradecane, C₁₄H₃₀, is cracked to form one molecule of octane, C₈H₁₈, one molecule of ethene, and one molecule of hydrocarbon X. (a) Deduce the molecular formula of X. (b) State the conditions needed for cracking. (c) Write the structural formulae and names of two unbranched isomers of X. Model Mark-Scheme Answers: • (a) Balance C and H atoms: C₁₄H₃₀ ➔ C₈H₁₈ + C₂H₄ + X .Carbons in X = 14 − 8 − 2 = 4 ; Hydrogens in X = 30 − 18 − 4 = 8 ➔ X = C₄H₈ .• (b) High temperature (~600 °C) and a catalyst (Al₂O₃ or SiO₂).• (c) but-1-ene ( CH₃CH₂CH=CH₂ ) and but-2-ene ( CH₃CH=CHCH₃ ).",
+      "vi": "Ví dụ 1 • Cracking & Đồng phân Cấu tạo (5 điểm) Đề bài: Cracking 1 phân tử tetradecane (C₁₄H₃₀) thu được 1 phân tử octane (C₈H₁₈), 1 phân tử ethene và 1 phân tử hydrocarbon X. (a) Xác định công thức phân tử của X. (b) Nêu điều kiện phản ứng cracking. (c) Viết công thức cấu tạo thu gọn và gọi tên 2 đồng phân mạch thẳng của X. Đáp án chuẩn Mark Scheme: • (a) Bảo toàn nguyên tử C và H: C₁₄H₃₀ ➔ C₈H₁₈ + C₂H₄ + X .Số C trong X = 14 − 8 − 2 = 4 ; Số H trong X = 30 − 18 − 4 = 8 ➔ X = C₄H₈ .• (b) Nhiệt độ cao (high temperature , ~600 °C) và chất xúc tác (catalyst : Al₂O₃ hoặc SiO₂).• (c) but-1-ene ( CH₃CH₂CH=CH₂ ) và but-2-ene ( CH₃CH=CHCH₃ ).",
+      "duration": 134.86,
+      "startTime": 5695.17,
+      "endTime": 5830.03,
+      "audioUrl": "/audio/lectures/chemistry/11/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "Đề bài: Đun nóng propan-1-ol với acidified aqueous potassium manganate(VII) tạo hợp chất Y. Đun",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "Worked Example 2 • Oxidation & Esterification Chain (5 marks) Question: Propan-1-ol is heated with acidified aqueous potassium manganate(VII) to form organic compound Y. Compound Y is then warmed with ethanol and concentrated H₂SO₄ to form sweet-smelling liquid Z. Name Y and Z, state the colour change in step 1, and write the structural formula of Z. Model Mark-Scheme Answers: • Step 1 (Oxidation): Propan-1-ol (3 carbons) is oxidised to Y = propanoic acid ( CH₃CH₂COOH ). Colour change: purple to colourless .• Step 2 (Esterification): Ethanol gives the ethyl prefix; propanoic acid gives the propanoate suffix ➔ Z = ethyl propanoate .• Structural formula of Z: CH₃CH₂COOCH₂CH₃ .",
+      "vi": "Ví dụ 2 • Chuỗi Oxi hóa Alcohol & Điều chế Ester (5 điểm) Đề bài: Đun nóng propan-1-ol với acidified aqueous potassium manganate(VII) tạo hợp chất Y. Đun ấm Y với ethanol có mặt H₂SO₄ đặc tạo chất lỏng mùi thơm Z. Gọi tên Y, Z, nêu sự đổi màu ở bước 1 và viết structural formula của Z. Đáp án chuẩn Mark Scheme: • Bước 1 (Oxidation): Propan-1-ol (3C) bị oxi hóa thành Y = propanoic acid ( CH₃CH₂COOH ). Đổi màu: tím sang không màu .• Bước 2 (Esterification): Ethanol cho gốc ethyl ; propanoic acid cho đuôi propanoate ➔ Z = ethyl propanoate .• Structural formula của Z: CH₃CH₂COOCH₂CH₃ .",
+      "duration": 115.79,
+      "startTime": 5830.03,
+      "endTime": 5945.82,
+      "audioUrl": "/audio/lectures/chemistry/11/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "Đề bài: Một polymer trùng hợp có mắt xích (repeat unit) là –[CH(CH₃)–CH(CH₃)]– . Xác định công ",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "Worked Example 3 • Deducing Monomer from Addition Polymer (4 marks) Question: An addition polymer has the repeat unit –[CH(CH₃)–CH(CH₃)]– . Deduce the structural formula and IUPAC name of the alkene monomer used to make this polymer, and state why the polymer has the same empirical formula as its monomer. Model Mark-Scheme Answers: • Remove continuation bonds and restore the C=C double bond between the two backbone carbons: CH₃CH=CHCH₃ ➔ IUPAC name: but-2-ene .• Because addition polymerisation forms only one product with no atoms lost or gained, the ratio of C : H atoms in the polymer ( CH₂ ) is identical to that in the alkene monomer ( C₄H₈ ➔ CH₂ ).",
+      "vi": "Ví dụ 3 • Suy ngược Monomer từ Mắt xích Trùng hợp (4 điểm) Đề bài: Một polymer trùng hợp có mắt xích (repeat unit) là –[CH(CH₃)–CH(CH₃)]– . Xác định công thức cấu tạo thu gọn, tên IUPAC của monomer ban đầu và giải thích vì sao polymer có cùng công thức đơn giản nhất (empirical formula) với monomer. Đáp án chuẩn Mark Scheme: • Bỏ hai gạch nối dài bên hông và khôi phục liên kết đôi C=C giữa hai nguyên tử C trục chính: CH₃CH=CHCH₃ ➔ Tên IUPAC: but-2-ene .• Do phản ứng trùng hợp chỉ tạo duy nhất 1 sản phẩm mà không tách bỏ nguyên tử nào nên tỉ lệ C : H trong polymer vẫn giữ nguyên là CH₂ giống hệt monomer.",
+      "duration": 102.61,
+      "startTime": 5945.82,
+      "endTime": 6048.43,
+      "audioUrl": "/audio/lectures/chemistry/11/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "Đề bài: Trình bày quy tắc suy ra cấu tạo các monomers từ mắt xích polymer trùng ngưng, và so sá",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "Worked Example 4 • Monomers from Condensation Hydrolysis (4 marks) Question: State how you can deduce the monomers of a condensation polymer from its repeat unit, and compare the hydrolysis products of PET vs. a natural protein. Model Mark-Scheme Answers: • Split every ester ( –CO|O– ) or amide ( –CO|NH– ) linkage and add back the elements of water: put –OH onto every carbonyl C=O (reforming –COOH ) and put –H onto every –O– or –NH– (reforming –OH or –NH₂ ).• Hydrolysing PET yields two monomers: a dicarboxylic acid and a diol .• Hydrolysing a protein yields a mixture of different amino acids ( H₂N–CH(R)–COOH ), which can be separated and identified by paper chromatography + locating agent!",
+      "vi": "Ví dụ 4 • Thủy phân Polymer Trùng ngưng tìm Monomers (4 điểm) Đề bài: Trình bày quy tắc suy ra cấu tạo các monomers từ mắt xích polymer trùng ngưng, và so sánh sản phẩm thủy phân của nhựa PET với protein tự nhiên. Đáp án chuẩn Mark Scheme: • Cắt đứt liên kết ester ( –CO|O– ) hoặc amide ( –CO|NH– ) và cộng trả lại phân tử H₂O : gắn –OH vào nhóm C=O (tái tạo –COOH ) và gắn –H vào –O– hoặc –NH– (tái tạo –OH hoặc –NH₂ ).• Thủy phân PET thu được 2 loại monomers: dicarboxylic acid và diol .• Thủy phân protein thu được hỗn hợp các amino acids ( H₂N–CH(R)–COOH ), có thể tách và nhận diện bằng sắc ký giấy kèm chất hiện màu ( locating agent )!",
+      "duration": 113.94,
+      "startTime": 6048.43,
+      "endTime": 6162.37,
+      "audioUrl": "/audio/lectures/chemistry/11/s05_b04.mp3"
+    }
+  ]
+}

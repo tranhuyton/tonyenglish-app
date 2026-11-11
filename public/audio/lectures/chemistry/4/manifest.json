@@ -1,0 +1,451 @@
+{
+  "lectureId": "eb56f423-98b4-5f5c-a891-1691b4691433",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 4: Electrochemistry",
+  "totalDuration": 3374.07,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_wex": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 11
+    },
+    "s02_int": {
+      "start": 13,
+      "end": 15
+    },
+    "s02_p1_sub01": {
+      "start": 17,
+      "end": 20
+    },
+    "s02_p2_sub01": {
+      "start": 17,
+      "end": 20
+    },
+    "s02_wex": {
+      "start": 21,
+      "end": 22
+    },
+    "s02_hdr": {
+      "start": 12,
+      "end": 22
+    },
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_p1_sub01": {
+      "start": 28,
+      "end": 32
+    },
+    "s03_p2_sub01": {
+      "start": 28,
+      "end": 32
+    },
+    "s03_wex": {
+      "start": 33,
+      "end": 34
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 34
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 4: Điện hóa học (Electrochemistry)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 4: Electrochemistry. Complete Master Lecture • 4.1 Electrolysis, Charge Transfer & Ionic Half-Equations • Molten PbBr2, Brine, Dilute H2SO4& CuSO4(aq) • Electroplating • 4.2 H2–O2Fuel Cells.",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 4: Điện hóa học (Electrochemistry). Bài giảng Song ngữ Toàn diện • 4.1 Điện phân, Chuyển dịch Điện tích & Bán phương trình Ion • PbBr2nóng chảy, Nước muối Brine, H2SO4loãng & CuSO4(aq) • Mạ điện • 4.2 Pin Nhiên liệu H2–O2.",
+      "duration": 56.16,
+      "startTime": 0.0,
+      "endTime": 56.16,
+      "audioUrl": "/audio/lectures/chemistry/4/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "⚡ 1. Bản chất Điện phân, Chuyển dịch Điện tích & Bán phương trình Ion",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "Syllabus 4.1.1, 4.1.2, 4.1.8 & 4.1.11 🟦 CORE + 🟩 SUPPLEMENT ⚡ 1. Fundamentals of Electrolysis, Charge Transfer & Half-Equations.",
+      "vi": "Syllabus 4.1.1, 4.1.2, 4.1.8 & 4.1.11 🟦 CORE + 🟩 SUPPLEMENT ⚡ 1. Bản chất Điện phân, Chuyển dịch Điện tích & Bán phương trình Ion.",
+      "duration": 16.45,
+      "startTime": 56.16,
+      "endTime": 72.61,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture an Olympic Swimming Pool Relay Race : the liquid in the pool is the electrolyte , the two touchpads in the water are the electrodes ( Anode + and Cathode − ), and the dry running track around the pool is the external metal wire . Ions are swimmers that stay strictly in the water, while electrons are runners that stay strictly on the dry wire track! Negative swimmers ( anions ) swim to the Anode (+) and hand off electron \"batons\", which then sprint through the wire to the Cathode (−) where positive swimmers ( cations ) catch them.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng bình điện phân giống như một Cuộc đua Tiếp sức ở Hồ bơi Olympic : nước trong hồ là chất điện ly (electrolyte) , hai vạch chạm thành hồ là hai điện cực ( Anode + và Cathode − ), còn đường chạy khô ráo trên bờ nối hai đầu hồ là dây dẫn kim loại mạch ngoài . Các ion là vận động viên bơi lội (chỉ ở dưới nước), còn electron là vận động viên chạy bộ (chỉ chạy trên dây kim loại khô ráo)! Ion âm ( anions ) bơi về Anode (+) để trao \"gậy tiếp sức\" electron ; electron lập tức chạy vọt qua dây dẫn sang Cathode (−) để trao cho các ion dương ( cations ) đang chờ sẵn!",
+      "duration": 77.55,
+      "startTime": 72.61,
+      "endTime": 150.16,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Free the Ions (🟦 Core 4.1.1): Solid ionic lattices cannot conduct because ions are locked in fixed positions; melting or dissolving creates mobile ions . 2. Locate & Predict (🟦 Core 4.1.2 & 4.1.4): Use PANIC ( Positive is Anode, Negative Is Cathode ). Positive cations/H+go to the cathode (−) to form metals or hydrogen ; negative anions go to the anode (+) to form non-metals (other than hydrogen) . 3. Half-Equations & Charge Loop (🟩 Supp. 4.1.8 & 4.1.11): Apply OIL RIG — anions lose electrons (oxidation) at the anode (e.g. 2Br−→ Br2+ 2e− ), and cations gain electrons (reduction) at the cathode (e.g. Pb2++ 2e−→ Pb ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Giải phóng Ion (🟦 Core 4.1.1): Tinh thể ion rắn KHÔNG dẫn điện vì các ion bị khóa cứng; phải đun nóng chảy ( molten ) hoặc hòa tan ( aqueous ) để tạo các mobile ions tự do di chuyển. 2. Định vị Điện cực & Sản phẩm (🟦 Core 4.1.2 & 4.1.4): Nhớ thần chú PANIC. Ion dương về Cathode (−) tạo metals hoặc hydrogen (H2) ; ion âm về Anode (+) tạo non-metals (phi kim khác H2) . 3. Bán phương trình & Vòng Điện tích (🟩 Supp. 4.1.8 & 4.1.11): Áp dụng OIL RIG — tại Anode (+) xảy ra oxidation (nhường e−), tại Cathode (−) xảy ra reduction (nhận e−).",
+      "duration": 95.81,
+      "startTime": 150.16,
+      "endTime": 245.97,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"electrons flow through the solution/electrolyte\" scores 0 marks immediately! Always separate the two regions clearly: electrons move through the external circuit (wires and electrodes) , whereas mobile ions move through the electrolyte . Also remember halogens, hydrogen, and oxygen leave as diatomic molecules ( Cl2, Br2, H2, O2 ).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết \"electrons di chuyển xuyên qua dung dịch/electrolyte\" sẽ bị gạch 0 điểm ngay lập tức! Phải tách bạch tuyệt đối: electrons chạy ở external circuit (dây dẫn ngoài) , còn trong electrolyte chỉ có mobile ions bơi lội. Đồng thời đừng quên các khí phi kim luôn ở dạng phân tử đôi ( Cl2, Br2, H2, O2 ).",
+      "duration": 54.5,
+      "startTime": 245.97,
+      "endTime": 300.47,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Định nghĩa Chuẩn (4.1.1):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Official Definition (4.1.1): Electrolysis is the decomposition of an ionic compound, when molten or in aqueous solution, by the passage of an electric current.",
+      "vi": "Định nghĩa Chuẩn (4.1.1): Electrolysis (điện phân) là sự phân hủy một hợp chất ion khi nóng chảy hoặc trong dung dịch nước dưới tác dụng của dòng điện.",
+      "duration": 19.35,
+      "startTime": 300.47,
+      "endTime": 319.82,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🧠 Thần chú PANIC: Positive is Anode (+), Negative Is Cathode (−)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🧠 Mnemonic — PANIC: Positive is Anode, Negative Is Cathode",
+      "vi": "🧠 Thần chú PANIC: Positive is Anode (+), Negative Is Cathode (−)",
+      "duration": 11.9,
+      "startTime": 319.82,
+      "endTime": 331.72,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Điện cực trơ (Inert Electrodes):",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Inert Electrodes: Made of carbon (graphite) or platinum (Pt) so they do not react with the electrolyte or products.",
+      "vi": "Điện cực trơ (Inert Electrodes): Làm bằng carbon (graphite) hoặc platinum (Pt) để không phản ứng với dung dịch hay sản phẩm.",
+      "duration": 18.56,
+      "startTime": 331.72,
+      "endTime": 350.28,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Bình Điện phân Tương tác & Vòng Khép kín Điện tích (4.1.2 & 4.1.8)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Interactive Electrolytic Cell & Charge Transfer (4.1.2 & 4.1.8). 🟩 Supplement 4.1.8 — Complete Charge Transfer Loop 👆. (a) External Circuit (Wires): Electrons (e−) flow from the Anode (+) → DC Power Supply → Cathode (−). (b) At the Electrodes: Anions lose e−(oxidation) at the anode; cations gain e−(reduction) at the cathode. (c) Inside the Electrolyte: Charge is carried ONLY by mobile ions (cations M+move to cathode; anions X−move to anode). Electrons NEVER swim through the solution!",
+      "vi": "Bình Điện phân Tương tác & Vòng Khép kín Điện tích (4.1.2 & 4.1.8). 🟩 Supplement 4.1.8 — Cơ chế Truyền tải Điện tích Khép kín 👆. (a) Mạch ngoài kim loại (External Circuit): Các hạt electrons (e−) chạy dọc dây dẫn từ Anode (+) → Nguồn điện → Cathode (−). (b) Tại bề mặt Điện cực: Anion nhường e−(oxidation) ở Anode; Cation nhận e−(reduction) ở Cathode. (c) Trong chất điện ly (Electrolyte): Dòng điện CHỈ do các mobile ions (ion tự do) đảm nhận (cation M+bơi về Cathode; anion X−bơi về Anode). Electron TUYỆT ĐỐI KHÔNG bơi trong dung dịch!",
+      "duration": 85.8,
+      "startTime": 350.28,
+      "endTime": 436.08,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🧠 Quy tắc OIL RIG & Bảng Tổng hợp Bán phương trình Ion (Ionic Half-Equations)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🟩 SUPPLEMENT 4.1.11 🧠 OIL RIG & Constructing Ionic Half-Equations. O xidation I s L oss of electrons ( at Anode + ) | R eduction I s G ain of electrons ( at Cathode − ). Core Rule (4.1.4): Metals or hydrogen are always formed at the cathode (−) ; non-metals (other than hydrogen) are formed at the anode (+). Cathode (−) Reduction Half-Equations (Gain e − ): Pb 2+ (l) + 2e − → Pb(l) (molten lead); Anode (+) Oxidation Half-Equations (Lose e − ): 2Br − (l) → Br 2 (g) + 2e − (diatomic Br 2 !). Cathode (−) Reduction Half-Equations (Gain e − ): 2H + (aq) + 2e − → H 2 (g) (aqueous acids/salts); Anode (+) Oxidation Half-Equations (Lose e − ): 2Cl − (aq) → Cl 2 (g) + 2e − (conc. chloride). Cathode (−) Reduction Half-Equations (Gain e − ): Cu 2+ (aq) + 2e − → Cu(s) (pink-brown copper); Anode (+) Oxidation Half-Equations (Lose e − ): 4OH − (aq) → O 2 (g) + 2H 2 O(l) + 4e − ⭐ Memorise! Cathode (−) Reduction Half-Equations (Gain e − ): Al 3+ (l) + 3e − → Al(l) | Ag + (aq) + e − → Ag(s); Anode (+) Oxidation Half-Equations (Lose e − ): 2O 2− (l) → O 2 (g) + 4e − | Cu(s) → Cu 2+ (aq) + 2e − (active Cu).",
+      "vi": "🟩 SUPPLEMENT 4.1.11 🧠 Quy tắc OIL RIG & Bảng Tổng hợp Bán phương trình Ion. O xidation I s L oss (Oxy hóa = Nhường e−tại Anode + ) | R eduction I s G ain (Khử = Nhận e−tại Cathode − ). Quy tắc Core (4.1.4): Kim loại hoặc khí Hydrogen luôn sinh ra ở Cathode (−) ; Phi kim (trừ hydrogen) luôn sinh ra ở Anode (+). Bán phương trình Khử tại Cathode (−) (Nhận e − ): Pb 2+ (l) + 2e − → Pb(l) (chì nóng chảy); Bán phương trình Oxy hóa tại Anode (+) (Nhường e − ): 2Br − (l) → Br 2 (g) + 2e − (phân tử Br 2 !). Bán phương trình Khử tại Cathode (−) (Nhận e − ): 2H + (aq) + 2e − → H 2 (g) (dung dịch nước); Bán phương trình Oxy hóa tại Anode (+) (Nhường e − ): 2Cl − (aq) → Cl 2 (g) + 2e − (muối Cl − đặc). Bán phương trình Khử tại Cathode (−) (Nhận e − ): Cu 2+ (aq) + 2e − → Cu(s) (đồng màu đỏ nâu); Bán phương trình Oxy hóa tại Anode (+) (Nhường e − ): 4OH − (aq) → O 2 (g) + 2H 2 O(l) + 4e − ⭐ Thuộc lòng! Bán phương trình Khử tại Cathode (−) (Nhận e − ): Al 3+ (l) + 3e − → Al(l) | Ag + (aq) + e − → Ag(s); Bán phương trình Oxy hóa tại Anode (+) (Nhường e − ): 2O 2− (l) → O 2 (g) + 4e − | Cu(s) → Cu 2+ (aq) + 2e − (cực Cu tan).",
+      "duration": 231.95,
+      "startTime": 436.08,
+      "endTime": 668.03,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which row correctly describes the particles that move in the external circuit, the particles that move in the electrolyte, and the type of reaction occurring at the anode during electrolysis? A. External circuit: ions | Electrolyte: electrons | Anode (+): reduction B. External circuit: electrons | Electrolyte: ions | Anode (+): oxidation C. External circuit: electrons | Electrolyte: electrons and ions | Anode (+): oxidation D. External circuit: electrons | Electrolyte: ions | Anode (+): reduction ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: In metal wires (the external circuit ), electric current is a flow of delocalised electrons from anode (+) to cathode (−). Inside the molten or aqueous electrolyte , ONLY mobile ions move (eliminating A and C — free electrons never travel through the electrolyte). At the positive anode (+) , negative anions lose electrons; by OIL RIG ( Oxidation Is Loss ), this is oxidation (eliminating D).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Which row correctly describes the particles that move in the external circuit, the particles that move in the electrolyte, and the type of reaction occurring at the anode during electrolysis? (Dòng nào mô tả đúng hạt mang điện di chuyển ở mạch ngoài, hạt di chuyển trong chất điện ly và loại phản ứng xảy ra tại cực dương Anode khi điện phân?) A. External circuit: ions | Electrolyte: electrons | Anode (+): reduction B. External circuit: electrons | Electrolyte: ions | Anode (+): oxidation C. External circuit: electrons | Electrolyte: electrons and ions | Anode (+): oxidation D. External circuit: electrons | Electrolyte: ions | Anode (+): reduction ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Trong dây kim loại mạch ngoài ( external circuit ), dòng điện là dòng dịch chuyển của các electrons từ Anode (+) sang Cathode (−). Bên trong chất điện ly ( electrolyte ), CHỈ có các mobile ions di chuyển (loại A và C vì electron không bao giờ bơi trong dung dịch!). Tại cực dương Anode (+) , các anion nhường electron; theo OIL RIG, đó là sự oxidation (loại D).",
+      "duration": 151.07,
+      "startTime": 668.03,
+      "endTime": 819.1,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Molten magnesium chloride, MgCl2(l), is electrolysed using inert graphite electrodes. (a) Explain why solid magnesium chloride does not conduct electricity, whereas molten magnesium chloride does. [2] (b) State why graphite is chosen for the electrodes. [1] (c) Construct balanced ionic half-equations for the reaction at the cathode (−) and at the anode (+) , and state which reaction is reduction. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) In solid MgCl2, the Mg2+and Cl−ions are held in fixed positions in a giant ionic lattice and cannot move [1m] . When molten, the lattice breaks down so the ions are mobile (free to move) and carry charge to the electrodes [1m] . (b) Graphite is a good conductor of electricity and is chemically inert (unreactive with molten Mg or Cl2gas) [1m] . (c) Cathode (−): Mg2+(l) + 2e−→ Mg(l) [1m] Anode (+): 2Cl−(l) → Cl2(g) + 2e− [1m] The cathode reaction is reduction because Mg2+ions gain electrons [1m] . 💡 Intuition Check: Notice how charges balance on both sides of every half-equation: (+2) + (−2) = 0 at the cathode, and 2(−1) = 0 + (−2) at the anode!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Molten magnesium chloride, MgCl2(l), is electrolysed using inert graphite electrodes. (Điện phân magnesium chloride nóng chảy, MgCl2(l), bằng điện cực than chì trơ.) (a) Explain why solid magnesium chloride does not conduct electricity, whereas molten magnesium chloride does. (Giải thích vì sao MgCl2rắn không dẫn điện nhưng khi nóng chảy lại dẫn điện.) (b) State why graphite is chosen for the electrodes. (Nêu lý do chọn than chì làm điện cực.) (c) Construct balanced ionic half-equations for the reaction at the cathode (−) and at the anode (+) , and state which reaction is reduction. (Viết bán phương trình ion tại cathode và anode, cho biết phản ứng nào là sự khử.) ✍️ Lời giải chi tiết theo thang điểm: (a) Ở trạng thái rắn, các ion Mg2+và Cl−bị giữ chặt tại vị trí cố định trong mạng tinh thể . Khi nóng chảy, mạng tinh thể bị phá vỡ giúp các ions become mobile (di chuyển tự do) mang điện tích về hai cực . (b) Graphite dẫn điện tốt (conducts electricity) và trơ về mặt hóa học . (c) Tại Cathode (−): Mg2+(l) + 2e−→ Mg(l) Tại Anode (+): 2Cl−(l) → Cl2(g) + 2e− Phản ứng tại cathode là sự khử ( reduction ) vì ion Mg2+ nhận thêm electron (gains electrons) . 💡 Kiểm tra bản chất: Luôn kiểm tra cân bằng điện tích hai vế của bán phương trình: ở cathode (+2) + (−2) = 0; ở anode 2(−1) = 0 + (−2)!",
+      "duration": 223.02,
+      "startTime": 819.1,
+      "endTime": 1042.12,
+      "audioUrl": "/audio/lectures/chemistry/4/s01_b10.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🔥 2. Điện phân Nóng chảy vs. Dung dịch & Toàn bộ Thí nghiệm Trọng tâm",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "Syllabus 4.1.3, 4.1.5, 4.1.9 & 4.1.10 🟦 CORE + 🟩 SUPPLEMENT 🔥 2. Molten vs. Aqueous Electrolysis & All Syllabus Case Studies.",
+      "vi": "Syllabus 4.1.3, 4.1.5, 4.1.9 & 4.1.10 🟦 CORE + 🟩 SUPPLEMENT 🔥 2. Điện phân Nóng chảy vs. Dung dịch & Toàn bộ Thí nghiệm Trọng tâm.",
+      "duration": 16.61,
+      "startTime": 1042.12,
+      "endTime": 1058.73,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of an aqueous electrolysis cell as a VIP Door Selection (\"The Lazier Ion Gets Served First!\") . In a molten binary salt (like melted PbBr2), there is no water — only Pb2+and Br−show up, so both react. Once you dissolve a salt in water (aqueous) , water sneaks two extra competitors into the tank: H+ and OH− ! Very reactive metal ions (Na+, Mg2+) love staying dissolved as ions, so the less reactive partner (H+or Cu2+) takes the electrons at the cathode instead!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung điện phân dung dịch giống như Xếp hàng qua Cửa VIP (\"Ai lười phản ứng hơn sẽ được nhận quà trước!\") . Khi điện phân nóng chảy (molten) như PbBr2(l), trong bình không có nước nên chỉ có đúng Pb2+và Br−, cả hai đều phản ứng trực tiếp. Nhưng khi pha vào nước (aqueous) , nước lập tức cử thêm hai \"đối thủ cạnh tranh\" vào bể là H+ và OH− ! Các ion kim loại mạnh (Na+, Mg2+) rất thích nằm yên dạng ion trong nước, nên nhường suất nhận electron ở Cathode cho kẻ kém hoạt động hơn (H+hoặc Cu2+)!",
+      "duration": 80.65,
+      "startTime": 1058.73,
+      "endTime": 1139.38,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Molten Binary Rule (🟦 Core 4.1.3a & 4.1.5): Only 2 ions exist → Cathode = Metal, Anode = Non-metal (e.g. molten PbBr2gives grey molten Pb + red-brown Br2 vapour). 2. Aqueous Selective Discharge (🟦 Core 4.1.3b,c & 🟩 Supp. 4.1.10): • Cathode (−): Compare M n +with H+— the less reactive element forms (NaCl(aq) → H2 ; CuSO4(aq) → Cu ).• Anode (+): Concentrated Cl−/Br−/I−→ halogen (Cl2/Br2/I2); dilute halide or SO42−/NO3−→ OH−discharges to give O2(g) . 3. Electrode Check (🟩 Supp. 4.1.9): In CuSO4(aq), inert carbon gives O2at the anode (blue fades), whereas an active copper anode dissolves ( Cu → Cu2++ 2e− , blue stays constant!).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Muối 2 nguyên tố Nóng chảy (🟦 Core 4.1.3a & 4.1.5): Chỉ có 2 ion → Cathode ra Kim loại, Anode ra Phi kim (VD: PbBr2nóng chảy ra chì Pb xám bạc + hơi Br2 nâu đỏ). 2. Quy tắc Chọn lọc Dung dịch Nước (🟦 Core 4.1.3b,c & 🟩 Supp. 4.1.10): • Cathode (−): So sánh M n +với H+— nguyên tố kém hoạt động hơn thoát ra (NaCl(aq) → H2 ; CuSO4(aq) → Cu ).• Anode (+): Halide đặc → ra halogen ; nhưng halide loãng (dilute) hoặc gốc SO42−/NO3−→ OH−phóng điện tạo khí O2(g) . 3. Bẫy Bản chất Điện cực (🟩 Supp. 4.1.9): Với CuSO4(aq), dùng cực trơ carbon sẽ sủi bọt O2và nhạt màu xanh ; dùng cực đồng hoạt động thì Anode Cu tự tan ( Cu → Cu2++ 2e− ) nên màu xanh giữ nguyên không đổi !",
+      "duration": 134.02,
+      "startTime": 1139.38,
+      "endTime": 1273.4,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"sodium metal forms at the cathode\" for aqueous NaCl(aq)! Sodium is far more reactive than hydrogen, so H2gas is always produced in water; Na metal only forms from molten NaCl(l). Also watch the word dilute vs. concentrated for aqueous halides in Extended papers: dilute NaCl(aq) produces O2 at the anode, NOT Cl2!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG bao giờ viết thu được kim loại Sodium (Na) khi điện phân dung dịch NaCl(aq)! Vì Na mạnh hơn H rất nhiều nên trong nước luôn sủi bọt khí H2 ở cathode; muốn điều chế Na bắt buộc phải điện phân NaCl nóng chảy . Ngoài ra chú ý chữ dilute vs. concentrated : NaCl(aq) loãng sinh ra khí O2 ở anode chứ không phải Cl2!",
+      "duration": 57.1,
+      "startTime": 1273.4,
+      "endTime": 1330.5,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "4.1.3(a) & 4.1.5 Hợp chất Hai nguyên tố Nóng chảy & Lead(II) Bromide (PbBr 2 )",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "4.1.3(a) & 4.1.5 Molten Binary Compounds & Molten Lead(II) Bromide (PbBr2). A molten binary ionic compound contains only two ions (no water present!), so predicting products is 100% direct: Cathode (−) = Pure Metal ; Anode (+) = Pure Non-Metal (e.g. molten NaCl → Na + Cl2 ; molten Al2O3→ Al + O2 ; molten KI → K + I2 ). 🔬 Classic Lab Experiment — Electrolysis of Molten Lead(II) Bromide, PbBr2(l) (Graphite Electrodes): Why heat strongly? Solid PbBr2does not conduct; heating melts the lattice so Pb2+and Br−ions become mobile (lamp lights up!). Perform in a fume cupboard because Br2vapour is toxic. At Cathode (−): Silvery-grey molten bead of lead metal collects at the bottom of the crucible → Pb2+(l) + 2e−→ Pb(l). At Anode (+): Bubbles of red-brown (orange-brown) bromine gas/vapour evolve → 2Br−(l) → Br2(g) + 2e−.",
+      "vi": "4.1.3(a) & 4.1.5 Hợp chất Hai nguyên tố Nóng chảy & Lead(II) Bromide (PbBr2). Một hợp chất ion 2 nguyên tố nóng chảy chỉ chứa đúng 2 loại ion (không có nước!), nên dự đoán sản phẩm cực dễ: Cathode (−) = Kim loại nguyên chất ; Anode (+) = Phi kim nguyên chất (VD: NaCl nóng chảy → Na + Cl2 ; Al2O3nóng chảy → Al + O2 ; KI nóng chảy → K + I2 ). 🔬 Thí nghiệm Kinh điển — Điện phân Chì(II) Bromide Nóng chảy, PbBr2(l) (Điện cực Graphite): Vì sao phải đun nóng mạnh? PbBr2rắn không dẫn điện; đun nóng chảy giúp giải phóng các ion Pb2+và Br−di động (bóng đèn bật sáng!). Làm trong tủ hút (fume cupboard) vì hơi Br2độc. Tại Cathode (−): Thu được giọt kim loại chì nóng chảy màu xám bạc dưới đáy chén nung → Pb2+(l) + 2e−→ Pb(l). Tại Anode (+): Sủi bọt khí/hơi bromine màu nâu đỏ → 2Br−(l) → Br2(g) + 2e−.",
+      "duration": 154.68,
+      "startTime": 1330.5,
+      "endTime": 1485.18,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔵 Tại Cathode (−): M n + cạnh tranh với H + (aq)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔵 At the Cathode (−): M n +vs. H+(aq). The LESS reactive species in the Reactivity Series is discharged:• Metal MORE reactive than H (K, Na, Ca, Mg, Al, Zn, Fe): H+wins → colourless H2(g) bubbles ( 2H++ 2e−→ H2 ).• Metal LESS reactive than H ( Cu2+, Ag+ ): Metal ion wins → solid metal coats cathode (e.g. pink-brown Cu or silvery Ag).",
+      "vi": "🔵 Tại Cathode (−): M n +cạnh tranh với H+(aq). Ion của nguyên tố KÉM hoạt động hơn trong Dãy hoạt động hóa học sẽ thắng:• Kim loại MẠNH hơn H: H+thắng → sủi bọt khí không màu H2(g) ( 2H++ 2e−→ H2 ).• Kim loại YẾU hơn H ( Cu2+, Ag+ ): Ion kim loại thắng → bám lớp kim loại (Cu đỏ nâu hoặc Ag trắng bạc).",
+      "duration": 63.59,
+      "startTime": 1485.18,
+      "endTime": 1548.77,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🔴 Tại Anode (+): Anion cạnh tranh với OH − (aq) (Supp. 4.1.10)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🔴 At the Anode (+): Anion vs. OH−(aq) (Supp. 4.1.10). • Concentrated Halide (Cl−, Br−, I−): Halide wins → halogen forms (green-yellow Cl2, orange-brown Br2, brown I2).• 🟩 Dilute Halide Solution: OH−wins → colourless O2(g) gas (halogen is NOT formed when very dilute!).• Sulfate (SO42−) or Nitrate (NO3−): NEVER discharge → OH−always wins → colourless O2(g) !",
+      "vi": "🔴 Tại Anode (+): Anion cạnh tranh với OH−(aq) (Supp. 4.1.10). • Dung dịch Halide ĐẶC: Halide thắng → sinh ra Halogen (khí vàng lục Cl2, nâu đỏ Br2, nâu I2).• 🟩 Dung dịch Halide LOÃNG (Dilute): OH−thắng → sủi bọt khí không màu O2(g) (không tạo halogen!).• Gốc Sulfate (SO42−) hoặc Nitrate (NO3−): KHÔNG BAO GIỜ phóng điện → OH−luôn thắng → khí O2(g) !",
+      "duration": 69.31,
+      "startTime": 1548.77,
+      "endTime": 1618.08,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Khí Hydrogen, H 2 (g)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "Electrolyte & Electrodes: Concentrated NaCl(aq) (Brine — Inert C/Pt); Cathode (−) Product & Observation: Hydrogen gas, H 2 (g) Colourless bubbles (squeaky pop).; Anode (+) Product & Observation: Chlorine gas, Cl 2 (g) Pale yellow-green gas (bleaches damp litmus).; Change in Remaining Solution: Na + and OH − remain → forms alkaline NaOH(aq) (pH rises to ~13–14). Electrolyte & Electrodes: 🟩 Dilute NaCl(aq) (Inert C/Pt — Supp. 4.1.10); Cathode (−) Product & Observation: Hydrogen gas, H 2 (g) Colourless bubbles.; Anode (+) Product & Observation: Oxygen gas, O 2 (g) Colourless bubbles (relights glowing splint).; Change in Remaining Solution: Only water is decomposed → NaCl(aq) becomes more concentrated. Electrolyte & Electrodes: Dilute H 2 SO 4 (aq) (Hofmann Voltameter — Pt); Cathode (−) Product & Observation: Hydrogen gas, H 2 (g) Colourless gas ( 2 volumes ).; Anode (+) Product & Observation: Oxygen gas, O 2 (g) Colourless gas ( 1 volume → 2:1 H 2 :O 2 ratio).; Change in Remaining Solution: Water is removed → H 2 SO 4 becomes more concentrated. Electrolyte & Electrodes: 🟩 CuSO 4 (aq) with INERT Carbon/Graphite; Cathode (−) Product & Observation: Copper metal, Cu(s) Pink-brown solid coats cathode: Cu 2+ + 2e − → Cu; Anode (+) Product & Observation: Oxygen gas, O 2 (g) Colourless bubbles: 4OH − → O 2 + 2H 2 O + 4e −; Change in Remaining Solution: Blue colour FADES as [Cu 2+ ] falls; H + & SO 4 2− form acidic H 2 SO 4 (aq).",
+      "vi": "Dung dịch & Điện cực: NaCl(aq) ĐẶC (Brine) (Điện cực trơ C/Pt); Sản phẩm & Hiện tượng Cathode (−): Khí Hydrogen, H 2 (g) Bọt khí không màu (nổ tiếng 'pop').; Sản phẩm & Hiện tượng Anode (+): Khí Chlorine, Cl 2 (g) Khí màu vàng lục nhạt (tẩy trắng quỳ ẩm).; Biến đổi Dung dịch Còn lại: Còn lại Na + và OH − → tạo kiềm NaOH(aq) (pH tăng lên ~13–14). Dung dịch & Điện cực: 🟩 NaCl(aq) LOÃNG (Điện cực trơ — Supp. 4.1.10); Sản phẩm & Hiện tượng Cathode (−): Khí Hydrogen, H 2 (g) Bọt khí không màu.; Sản phẩm & Hiện tượng Anode (+): Khí Oxygen, O 2 (g) Bọt khí không màu (bùng cháy tàn đóm).; Biến đổi Dung dịch Còn lại: Thực chất chỉ nước bị điện phân → dung dịch NaCl ngày càng đặc hơn. Dung dịch & Điện cực: H 2 SO 4 (aq) LOÃNG (Bình Hofmann — Cực Pt); Sản phẩm & Hiện tượng Cathode (−): Khí Hydrogen, H 2 (g) Khí không màu ( 2 phần thể tích ).; Sản phẩm & Hiện tượng Anode (+): Khí Oxygen, O 2 (g) Khí không màu ( 1 phần thể tích → tỉ lệ 2:1).; Biến đổi Dung dịch Còn lại: Nước cạn dần → nồng độ axit H 2 SO 4 tăng lên. Dung dịch & Điện cực: 🟩 CuSO 4 (aq) với Điện cực TRƠ Carbon; Sản phẩm & Hiện tượng Cathode (−): Kim loại Đồng, Cu(s) Lớp rắn màu hồng nâu (pink-brown): Cu 2+ + 2e − → Cu; Sản phẩm & Hiện tượng Anode (+): Khí Oxygen, O 2 (g) Sủi bọt khí không màu: 4OH − → O 2 + 2H 2 O + 4e −; Biến đổi Dung dịch Còn lại: Màu xanh lam NHẠT DẦN do mất Cu 2+ ; tạo axit H 2 SO 4 (aq).",
+      "duration": 260.57,
+      "startTime": 1618.08,
+      "endTime": 1878.65,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "H₂SO₄(aq) Loãng: Tỉ lệ Thể tích 2 H₂ : 1 O₂, 2 V H₂, Cathode (−), 1 V O₂, Anode ...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "Dilute H₂SO₄(aq): 2 Volumes H₂ : 1 Volume O₂, 2 vol H₂, Cathode (−), 1 vol O₂, Anode (+), 🟩 Refining Copper with Active Cu Electrodes, Anode sludge, Cu²⁺(aq) →, Blue colour UNCHANGED, Impure Cu (+), Pure Cu (−).",
+      "vi": "H₂SO₄(aq) Loãng: Tỉ lệ Thể tích 2 H₂ : 1 O₂, 2 V H₂, Cathode (−), 1 V O₂, Anode (+), 🟩 Tinh luyện Đồng (Điện cực Cu Hoạt động), Bùn Anode, Cu²⁺(aq) →, Màu xanh KHÔNG ĐỔI, Cu thô (+), Cu tinh khiết (−).",
+      "duration": 44.23,
+      "startTime": 1878.65,
+      "endTime": 1922.88,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "anode (+)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Concentrated aqueous sodium chloride and dilute aqueous sodium chloride are electrolysed separately using inert platinum electrodes. Which gases are produced at the anode (+) in each experiment? A. Concentrated NaCl(aq): chlorine | Dilute NaCl(aq): chlorine B. Concentrated NaCl(aq): chlorine | Dilute NaCl(aq): oxygen C. Concentrated NaCl(aq): hydrogen | Dilute NaCl(aq): oxygen D. Concentrated NaCl(aq): sodium | Dilute NaCl(aq): hydrogen ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: At the positive anode (+) , Cl−(aq) competes with OH−(aq) from water. In concentrated NaCl(aq), the high concentration of Cl−causes chloride ions to discharge as pale yellow-green chlorine gas (Cl2) . In dilute NaCl(aq) (Syllabus 4.1.10), OH−ions are preferentially oxidised ( 4OH−→ O2+ 2H2O + 4e− ) to release colourless oxygen gas (O2) . (C and D confuse anode products with cathode products.)",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Concentrated aqueous sodium chloride and dilute aqueous sodium chloride are electrolysed separately using inert platinum electrodes. Which gases are produced at the anode (+) in each experiment? (Điện phân riêng biệt dung dịch NaCl đặc và dung dịch NaCl loãng bằng điện cực trơ platinum. Khí nào thoát ra tại cực dương Anode (+) trong mỗi thí nghiệm?) A. Concentrated NaCl(aq): chlorine | Dilute NaCl(aq): chlorine B. Concentrated NaCl(aq): chlorine | Dilute NaCl(aq): oxygen C. Concentrated NaCl(aq): hydrogen | Dilute NaCl(aq): oxygen D. Concentrated NaCl(aq): sodium | Dilute NaCl(aq): hydrogen ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Tại Anode (+) , ion Cl−(aq) cạnh tranh với OH−(aq) của nước. Trong dung dịch NaCl đặc (concentrated) , mật độ Cl−áp đảo nên phóng điện tạo khí chlorine (Cl2) màu vàng lục. Ngược lại, trong dung dịch NaCl loãng (dilute) (Syllabus 4.1.10), ion OH−thắng thế ( 4OH−→ O2+ 2H2O + 4e− ) giải phóng khí oxygen (O2) không màu. (C và D nhầm sang sản phẩm bên cực âm cathode.)",
+      "duration": 177.39,
+      "startTime": 1922.88,
+      "endTime": 2100.27,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "carbon (graphite)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] A student electrolyses blue aqueous copper(II) sulfate, CuSO4(aq), in two separate experiments:• Experiment 1 uses inert carbon (graphite) electrodes.• Experiment 2 uses pure copper electrodes. (a) State what is observed at the cathode (−) and at the anode (+) in Experiment 1 . [2] (b) Explain why the blue colour of the solution fades in Experiment 1 , but remains unchanged in Experiment 2 . Include the anode half-equation for Experiment 2. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Cathode (−): A pink-brown (red-brown) solid layer of copper coats the electrode [1m] . Anode (+): Bubbles of colourless gas (effervescence of oxygen, O2) form [1m] . (b) In Experiment 1 , Cu2+(aq) ions (which give the blue colour) are removed at the cathode as Cu(s) and are not replaced, so the concentration of Cu2+ions decreases [1m] .In Experiment 2 , the copper anode dissolves via Cu(s) → Cu2+(aq) + 2e− [1m] , replenishing Cu2+(aq) ions at the exact same rate they are deposited at the cathode, so [Cu2+] stays constant [1m] . 💡 Intuition Check: Whenever the electrolyte colour comes from a transition metal ion like blue Cu²⁺(aq), ask: \"Are Cu²⁺ ions being replaced at the anode?\" Inert anode = NO (colour fades); copper anode = YES (colour stays constant)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] A student electrolyses blue aqueous copper(II) sulfate, CuSO4(aq), in two separate experiments: Một học sinh điện phân dung dịch CuSO4màu xanh lam trong 2 thí nghiệm: TN 1 dùng điện cực trơ than chì; TN 2 dùng điện cực bằng đồng nguyên chất. (a) State what is observed at the cathode (−) and at the anode (+) in Experiment 1 . (Nêu hiện tượng quan sát được ở cathode và anode trong TN 1.) (b) Explain why the blue colour of the solution fades in Experiment 1 , but remains unchanged in Experiment 2 . Giải thích vì sao màu xanh nhạt dần ở TN 1 nhưng giữ nguyên ở TN 2, kèm bán phương trình anode của TN 2. ✍️ Lời giải chi tiết theo thang điểm: (a) Cathode (−): Xuất hiện lớp kim loại màu hồng nâu / đỏ nâu bám lên điện cực . Anode (+): Sủi bọt khí không màu . (b) Ở TN 1 , các ion Cu2+(aq) tạo màu xanh bị khử dần thành Cu(s) bám vào cathode mà không được bù lại → nồng độ [Cu2+] giảm xuống làm nhạt màu .Ở TN 2 , cực dương bằng đồng tự tan ra theo bán phương trình Cu(s) → Cu2+(aq) + 2e− , bù đắp ion Cu2+(aq) đúng bằng tốc độ Cu2+bám vào cathode → nồng độ [Cu2+] không đổi nên màu xanh giữ nguyên . 💡 Kiểm tra bản chất: Mẹo nhớ nhanh: Màu xanh lam là màu của ion Cu²⁺(aq).",
+      "duration": 210.46,
+      "startTime": 2100.27,
+      "endTime": 2310.73,
+      "audioUrl": "/audio/lectures/chemistry/4/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🔋 3. Kỹ thuật Mạ điện (Electroplating) & Pin Nhiên liệu H 2 –O 2",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "Syllabus 4.1.6, 4.1.7 & 4.2 🟦 CORE + 🟩 SUPPLEMENT 🔋 3. Electroplating & Hydrogen–Oxygen Fuel Cells.",
+      "vi": "Syllabus 4.1.6, 4.1.7 & 4.2 🟦 CORE + 🟩 SUPPLEMENT 🔋 3. Kỹ thuật Mạ điện (Electroplating) & Pin Nhiên liệu H2–O2.",
+      "duration": 18.63,
+      "startTime": 2310.73,
+      "endTime": 2329.36,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Electroplating works like spray-painting with positively charged metal ions : hang the object (e.g. a spoon) at the negative cathode (−) so positive metal ions (Ag+) stick onto it, and hang a pure bar of the coating metal (Ag) at the positive anode (+) as a self-refilling supply! Meanwhile, a Hydrogen–Oxygen Fuel Cell is like a non-stop battery with a fuel tank : instead of burning fuel in a hot, noisy engine, H2and O2react across a membrane to push electrons directly through an electric motor — dripping pure water (H2O) from the exhaust!",
+      "vi": "🎯 Hình dung đời thường: Mạ điện (Electroplating) giống hệt như \"phun sơn bằng các hạt ion kim loại mang điện dương\" : bạn treo chiếc thìa cần mạ vào cực âm Cathode (−) để hút các ion bạc Ag+bám chặt lên mặt thìa, đồng thời treo một thanh bạc nguyên chất vào cực dương Anode (+) làm \"thỏi sơn tự tan bù đắp\"! Còn Pin Nhiên liệu H2–O2(Fuel Cell) giống như viên pin vĩnh cửu có bình tiếp nhiên liệu : thay vì đốt cháy nổ ầm ĩ gây nóng máy, H2và O2phản ứng êm ái qua màng điện ly để đẩy thẳng dòng electron chạy mô-tơ điện — ống xả chỉ nhỏ giọt ra nước tinh khiết (H2O) !",
+      "duration": 82.83,
+      "startTime": 2329.36,
+      "endTime": 2412.19,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Electroplating Rules (🟦 Core 4.1.6–7): Purpose = improve appearance + improve resistance to corrosion . Setup = Cathode (−) is the object to be plated; Anode (+) is the pure plating metal; Electrolyte is an aqueous soluble salt of the plating metal (e.g. AgNO3(aq)). 2. Fuel Cell Core (🟦 Core 4.2.1): Reacts hydrogen + oxygen to produce electricity with water as the ONLY chemical product ( 2H2+ O2→ 2H2O ). 3. Fuel Cell vs. Petrol Engine (🟩 Supp. 4.2.2): Weigh advantages (zero CO2/polluting exhaust at point of use, higher efficiency) against disadvantages (H2gas requires heavy high-pressure tanks, flammable/explosive leak hazard, few refuelling stations, H2mostly made from fossil methane).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Quy tắc Mạ điện (🟦 Core 4.1.6–7): Hai mục đích = tăng thẩm mỹ (improve appearance) + chống ăn mòn . Lắp đặt: Cathode (−) = vật cần mạ; Anode (+) = thanh kim loại mạ; Electrolyte = dung dịch muối tan của kim loại mạ (VD: AgNO3(aq)). 2. Trọng tâm Fuel Cell (🟦 Core 4.2.1): Dùng hydrogen + oxygen sinh ra điện năng với nước là sản phẩm hóa học DUY NHẤT ( 2H2+ O2→ 2H2O ). 3. So sánh với Động cơ Xăng (🟩 Supp. 4.2.2): Ưu điểm (không thải CO2/khí độc tại chỗ, hiệu suất cao hơn) đối lập với Nhược điểm (khí H2cần bình nén áp suất cao cồng kềnh, dễ cháy nổ, thiếu trạm sạc, nguồn H2hiện vẫn lấy từ khí đốt hóa thạch).",
+      "duration": 107.27,
+      "startTime": 2412.19,
+      "endTime": 2519.46,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Swapping the electrodes in electroplating ruins the experiment! If you attach the steel spoon to the positive anode (+), the steel spoon oxidises and dissolves into the solution instead of getting plated! Also never write vague phrases like \"fuel cells are eco-friendly\" — state specifically: \"only water is produced / no CO2emitted\" .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Mắc ngược cực khi mạ điện sẽ phá hỏng vật cần mạ! Nếu treo chiếc thìa thép vào cực dương Anode (+), chính chiếc thìa sẽ bị oxy hóa tan rữa vào dung dịch! Với câu hỏi Fuel Cell, cấm viết chung chung \"thân thiện môi trường\" (0 điểm) — phải nêu rõ \"water is the only product / no CO2emitted\" .",
+      "duration": 47.33,
+      "startTime": 2519.46,
+      "endTime": 2566.79,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🛡️ 4.1.6 & 4.1.7 Nguyên lý Mạ điện Kim loại (Electroplating)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🛡️ 4.1.6 & 4.1.7 Electroplating Metals. Two Syllabus Purposes (4.1.6): Metal objects are electroplated to (1) improve their appearance (shiny silver/gold/chromium finish) and (2) improve their resistance to corrosion (preventing iron/steel from rusting). 🔧 3 Mandatory Electroplating Setup Rules (e.g. Silver-Plating a Steel Spoon): Cathode (−): The object to be electroplated (clean, grease-free steel spoon, rotated slowly for an even coat) → Ag+(aq) + e−→ Ag(s). Anode (+): A bar of the pure plating metal (pure silver, Ag), which dissolves to replenish metal ions → Ag(s) → Ag+(aq) + e−. Electrolyte: An aqueous soluble salt of the plating metal (e.g. aqueous silver nitrate, AgNO3(aq) ).",
+      "vi": "🛡️ 4.1.6 & 4.1.7 Nguyên lý Mạ điện Kim loại (Electroplating). Hai Mục đích Chuẩn Đề thi (4.1.6): Đồ vật kim loại được mạ điện nhằm (1) tăng vẻ đẹp thẩm mỹ (improve appearance) và (2) chống ăn mòn / gỉ sét. 🔧 3 Quy tắc Lắp đặt Mạ điện Bắt buộc (VD: Mạ bạc một chiếc thìa thép): Cathode (−): Mắc vào vật cần mạ (chiếc thìa thép đã cạo sạch dầu mỡ và xoay đều để lớp mạ mịn) → Ag+(aq) + e−→ Ag(s). Anode (+): Thanh kim loại dùng để mạ tinh khiết (thanh bạc Ag), tan dần để bù ion → Ag(s) → Ag+(aq) + e−. Electrolyte: Dung dịch muối tan của kim loại mạ (VD: dung dịch silver nitrate, AgNO3(aq) ).",
+      "duration": 102.21,
+      "startTime": 2566.79,
+      "endTime": 2669.0,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Core 4.2.1:",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Core 4.2.1: A hydrogen–oxygen fuel cell uses hydrogen and oxygen to produce electricity directly from a chemical reaction, with water (H2O) as the ONLY chemical product :",
+      "vi": "Core 4.2.1: Hydrogen–oxygen fuel cell sử dụng trực tiếp phản ứng hóa học giữa hydrogen và oxygen để sản xuất điện năng , với nước (water, H2O) là sản phẩm hóa học DUY NHẤT :",
+      "duration": 25.77,
+      "startTime": 2669.0,
+      "endTime": 2694.77,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Phương trình Tổng quát: 2H2(g) + O2(g) → 2H2O(l) (+ Điện năng) Bán phương trình ...",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Overall Reaction: 2H2(g) + O2(g) → 2H2O(l) (+ Electrical Energy) Acidic membrane half-equations: Negative electrode (oxidation): 2H2→ 4H++ 4e− | Positive electrode (reduction): O2+ 4H++ 4e−→ 2H2O",
+      "vi": "Phương trình Tổng quát: 2H2(g) + O2(g) → 2H2O(l) (+ Điện năng) Bán phương trình màng axit: Cực âm (oxy hóa): 2H2→ 4H++ 4e− | Cực dương (khử): O2+ 4H++ 4e−→ 2H2O",
+      "duration": 45.86,
+      "startTime": 2694.77,
+      "endTime": 2740.63,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Cực âm (−), Cực dương (+), H⁺ →, Màng Điện ly, Nạp H₂ →, ← Nạp O₂, Xả H₂O 💧.",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Anode (−), Cathode (+), H⁺ →, Electrolyte Membrane, H₂ in →, ← O₂ in, H₂O out 💧.",
+      "vi": "Cực âm (−), Cực dương (+), H⁺ →, Màng Điện ly, Nạp H₂ →, ← Nạp O₂, Xả H₂O 💧.",
+      "duration": 18.94,
+      "startTime": 2740.63,
+      "endTime": 2759.57,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧪 Mẹo Paper 6 — Nhận biết Khí Điện cực:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "🧪 Paper 6 Quick Check — Testing Electrode Gases: Hydrogen (H2): Lighted splint → pops (squeaky pop). Oxygen (O2): Glowing splint → relights. Chlorine (Cl2): Damp litmus paper → bleaches white.",
+      "vi": "🧪 Mẹo Paper 6 — Nhận biết Khí Điện cực: Hydrogen (H2): Que đóm đang cháy → nổ tiếng 'pop' (squeaky pop). Oxygen (O2): Que đóm tàn đỏ → bùng cháy lại (relights). Chlorine (Cl2): Giấy quỳ ẩm → mất màu trắng (bleaches).",
+      "duration": 37.07,
+      "startTime": 2759.57,
+      "endTime": 2796.64,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "Không phát thải khí ô nhiễm khi vận hành:",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "✅ Advantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Zero polluting exhaust emissions at point of use: Produces only water — no CO 2 (greenhouse gas), no toxic CO, no NO x or unburnt hydrocarbons/soot.; ❌ Disadvantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Difficult & bulky storage: Hydrogen is a gas at r.t.p. (very low density by volume), requiring heavy high-pressure tanks or cryogenic cooling (whereas petrol is an easy-to-store liquid). ✅ Advantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Higher energy efficiency: Converts chemical energy directly into electrical energy (~60%), wasting far less thermal energy than internal combustion engines (~25%).; ❌ Disadvantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Flammability & explosion hazard: Hydrogen is extremely flammable with a wide explosive limit if a tank leaks in a collision. ✅ Advantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Renewable potential & quiet operation: Fewer moving parts (lower maintenance, quieter) and renewable if H 2 is made via solar/wind electrolysis of water.; ❌ Disadvantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Cost, infrastructure & H 2 sourcing: Very few H 2 refuelling stations, expensive platinum catalysts , and most H 2 today is still made from fossil fuels (steam reforming of methane, releasing CO 2 ).",
+      "vi": "✅ Ưu điểm Pin H 2 –O 2 (so với Động cơ Xăng): Không phát thải khí ô nhiễm khi vận hành: Sản phẩm duy nhất là nước (only water) — không thải CO 2 (nhà kính), CO độc, NO x hay muội than.; ❌ Nhược điểm Pin H 2 –O 2 (so với Động cơ Xăng): Khó lưu trữ & cồng kềnh: H 2 là chất khí ở r.t.p. (mật độ năng lượng theo thể tích thấp), đòi hỏi bình nén áp suất rất cao hoặc hóa lỏng lạnh sâu (trong khi xăng là chất lỏng dễ chứa). ✅ Ưu điểm Pin H 2 –O 2 (so với Động cơ Xăng): Hiệu suất năng lượng cao hơn (Higher efficiency): Chuyển hóa trực tiếp hóa năng thành điện năng (~60%), ít thất thoát nhiệt hơn động cơ đốt trong (~25%).; ❌ Nhược điểm Pin H 2 –O 2 (so với Động cơ Xăng): Nguy cơ cháy nổ cao: Khí H 2 cực kỳ dễ bắt lửa và gây nổ mạnh nếu rò rỉ khi va chạm giao thông. ✅ Ưu điểm Pin H 2 –O 2 (so với Động cơ Xăng): Tiềm năng tái tạo & êm ái: Ít bộ phận chuyển động (bền, êm) và hoàn toàn xanh nếu H 2 được điều chế từ điện phân nước bằng điện mặt trời/gió.; ❌ Nhược điểm Pin H 2 –O 2 (so với Động cơ Xăng): Chi phí, hạ tầng & nguồn H 2 : Rất ít trạm nạp H 2 (refuelling stations), xúc tác platinum đắt đỏ , và đa số H 2 hiện nay vẫn sản xuất từ nhiên liệu hóa thạch (reforming khí methane sinh ra CO 2 ).",
+      "duration": 194.61,
+      "startTime": 2796.64,
+      "endTime": 2991.25,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ A student wants to electroplate an iron key with a smooth layer of silver. Which combination of electrodes and aqueous electrolyte should be used? A. Anode (+): iron key | Cathode (−): pure silver rod | Electrolyte: aqueous silver nitrate B. Anode (+): pure silver rod | Cathode (−): iron key | Electrolyte: aqueous silver chloride C. Anode (+): pure silver rod | Cathode (−): iron key | Electrolyte: aqueous silver nitrate D. Anode (+): pure silver rod | Cathode (−): iron key | Electrolyte: aqueous iron(II) sulfate ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: To coat the iron key with silver, positive Ag+ions must be attracted to and reduced onto the key, so the iron key must be the negative cathode (−) and the pure silver rod must be the positive anode (+) (eliminating A). The electrolyte must be a soluble salt of the plating metal (silver): silver nitrate, AgNO3(aq) , is soluble, whereas silver chloride (AgCl) is an insoluble precipitate (eliminating B) and iron(II) sulfate contains Fe2+instead of Ag+(eliminating D).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & 2 A student wants to electroplate an iron key with a smooth layer of silver. Which combination of electrodes and aqueous electrolyte should be used? (Một học sinh muốn mạ một lớp bạc mịn lên chiếc chìa khóa sắt. Cần chọn bộ điện cực và dung dịch điện ly nào sau đây?) A. Anode (+): iron key | Cathode (−): pure silver rod | Electrolyte: aqueous silver nitrate B. Anode (+): pure silver rod | Cathode (−): iron key | Electrolyte: aqueous silver chloride C. Anode (+): pure silver rod | Cathode (−): iron key | Electrolyte: aqueous silver nitrate D. Anode (+): pure silver rod | Cathode (−): iron key | Electrolyte: aqueous iron(II) sulfate ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Để ion dương Ag+bơi tới bám lên chìa khóa, chìa khóa sắt phải mắc làm cực âm Cathode (−) và thanh bạc nguyên chất làm cực dương Anode (+) (loại A). Dung dịch điện ly phải là muối TAN chứa ion của kim loại mạ (Ag+): silver nitrate, AgNO3(aq) tan tốt trong nước, còn silver chloride (AgCl) là kết tủa không tan (loại B) và iron(II) sulfate không chứa ion Ag+(loại D).",
+      "duration": 168.32,
+      "startTime": 2991.25,
+      "endTime": 3159.57,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] City buses can be powered either by a hydrogen–oxygen fuel cell or by a gasoline (petrol) internal combustion engine. (a) Write the balanced symbol equation for the overall chemical reaction in a hydrogen–oxygen fuel cell and state why its exhaust does not contribute to global warming at the point of use. [2] (b) State two advantages (other than exhaust emissions) and two disadvantages of using hydrogen–oxygen fuel cells instead of petrol engines in vehicles. [4] ✍️ Step-by-Step Mark Scheme Solution: (a) 2H2(g) + O2(g) → 2H2O(l) [1m] . Water is the only chemical product , so no carbon dioxide (CO2) greenhouse gas is emitted at the exhaust [1m] . (b) Advantages (any two): Higher energy efficiency (less energy wasted as heat) / fewer moving parts so quieter and lower maintenance / hydrogen can be produced renewably by electrolysing water [2m] . Disadvantages (any two): Hydrogen is a gas at room temperature so requires heavy, bulky high-pressure storage tanks / high flammability and explosion risk on leakage / very few hydrogen refuelling stations / expensive platinum catalysts / most industrial H2is still made from fossil fuels (methane) [2m] . 💡 Intuition Check: In evaluation questions comparing fuel cells with petrol, always contrast GAS storage (H₂ needs heavy high-pressure tanks) with LIQUID storage (petrol is an easy-to-pump liquid) — examiners love this practical comparison!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] City buses can be powered either by a hydrogen–oxygen fuel cell or by a gasoline (petrol) internal combustion engine. (Xe buýt đô thị có thể chạy bằng pin nhiên liệu H2–O2hoặc động cơ đốt trong chạy xăng.) (a) Write the balanced symbol equation for the overall chemical reaction in a hydrogen–oxygen fuel cell and state why its exhaust does not contribute to global warming at the point of use. (Viết phương trình tổng quát trong pin nhiên liệu H2–O2và nêu lý do khí thải của nó không gây nóng lên toàn cầu tại nơi vận hành.) (b) State two advantages and two disadvantages of using hydrogen–oxygen fuel cells instead of petrol engines in vehicles. (Nêu 2 ưu điểm khác ngoài khí thải và 2 nhược điểm của pin nhiên liệu so với động cơ xăng.) ✍️ Lời giải chi tiết theo thang điểm: (a) Phương trình: 2H2(g) + O2(g) → 2H2O(l) . Vì nước là sản phẩm duy nhất nên không phát thải khí nhà kính CO2 ra môi trường khi xe chạy . (b) Ưu điểm (chọn 2): Hiệu suất chuyển hóa năng lượng cao hơn (ít tốn nhiệt vô ích) / ít chi tiết chuyển động nên êm ái, ít phải bảo dưỡng / H2có thể tái tạo từ điện phân nước . Nhược điểm (chọn 2): H2là chất khí ở nhiệt độ phòng nên rất khó lưu trữ, đòi hỏi bình nén áp suất cao nặng nề / cực kỳ dễ cháy nổ khi rò rỉ / thiếu hệ thống trạm bơm H2/ xúc tác Pt đắt tiền / phần lớn H2vẫn điều chế từ khí methane hóa thạch .",
+      "duration": 214.5,
+      "startTime": 3159.57,
+      "endTime": 3374.07,
+      "audioUrl": "/audio/lectures/chemistry/4/s03_b11.mp3"
+    }
+  ]
+}

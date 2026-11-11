@@ -1,0 +1,756 @@
+{
+  "lectureId": "5b034453-aeea-5dc5-a643-26da8fada0bc",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 6: Chemical reactions",
+  "totalDuration": 4391.72,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 6
+    },
+    "s01_p1_sub02": {
+      "start": 7,
+      "end": 11
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 6
+    },
+    "s01_p2_sub02": {
+      "start": 7,
+      "end": 11
+    },
+    "s01_wex": {
+      "start": 12,
+      "end": 13
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 13
+    },
+    "s02_int": {
+      "start": 15,
+      "end": 17
+    },
+    "s02_p1_sub01": {
+      "start": 21,
+      "end": 27
+    },
+    "s02_p2_sub01": {
+      "start": 21,
+      "end": 27
+    },
+    "s02_wex": {
+      "start": 28,
+      "end": 29
+    },
+    "s02_hdr": {
+      "start": 14,
+      "end": 29
+    },
+    "s03_int": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_p1_sub01": {
+      "start": 38,
+      "end": 38
+    },
+    "s03_p1_sub02": {
+      "start": 39,
+      "end": 40
+    },
+    "s03_p2_sub01": {
+      "start": 38,
+      "end": 38
+    },
+    "s03_p2_sub02": {
+      "start": 39,
+      "end": 40
+    },
+    "s03_wex": {
+      "start": 41,
+      "end": 42
+    },
+    "s03_hdr": {
+      "start": 30,
+      "end": 42
+    },
+    "s04_int": {
+      "start": 44,
+      "end": 46
+    },
+    "s04_p1_sub01": {
+      "start": 51,
+      "end": 53
+    },
+    "s04_p1_sub02": {
+      "start": 54,
+      "end": 55
+    },
+    "s04_p2_sub01": {
+      "start": 51,
+      "end": 53
+    },
+    "s04_p2_sub02": {
+      "start": 54,
+      "end": 55
+    },
+    "s04_wex": {
+      "start": 56,
+      "end": 57
+    },
+    "s04_hdr": {
+      "start": 43,
+      "end": 57
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 6: Phản ứng hóa học (Chemical Reactions)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 6: Chemical Reactions. Complete Master Lecture • 6.1 Physical & Chemical Changes, 6.2 Rate of Reaction & Collision Theory, 6.3 Reversible Reactions, Equilibrium, Haber & Contact Processes, 6.4 Redox.",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 6: Phản ứng hóa học (Chemical Reactions). Bài giảng Song ngữ Toàn diện • Biến đổi Vật lý & Hóa học, Tốc độ Phản ứng & Thuyết Va chạm, Cân bằng Động, Quy trình Haber & Contact, Phản ứng Oxi hóa – Khử.",
+      "duration": 44.68,
+      "startTime": 0.0,
+      "endTime": 44.68,
+      "audioUrl": "/audio/lectures/chemistry/6/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "🧪 1. BIẾN ĐỔI VẬT LÝ & BIẾN ĐỔI HÓA HỌC (PHYSICAL & CHEMICAL CHANGES)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧪 1. PHYSICAL & CHEMICAL CHANGES. Core 6.1",
+      "vi": "🧪 1. BIẾN ĐỔI VẬT LÝ & BIẾN ĐỔI HÓA HỌC. Core 6.1",
+      "duration": 10.23,
+      "startTime": 44.68,
+      "endTime": 54.91,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Compare Changing Your Coat with Baking a Cake ! Freezing liquid water into an ice cube or dissolving salt in water is like putting on a coat: it looks different, yet the molecules inside are 100% the same substance (H2O is still H2O) and you can easily undo it ( Physical Change ). Burning magnesium ribbon or baking raw batter into a cake breaks old chemical bonds and locks atoms into brand-new substances with completely new properties — you can never cool white MgO ash back into shiny magnesium metal ( Chemical Change )!",
+      "vi": "🎯 Hình dung đời thường: Hãy so sánh việc Mặc thêm Áo Khoác với việc Nướng Một Chiếc Bánh Ngọt ! Làm đông nước thành đá viên hay hòa tan muối vào nước giống như khoác thêm áo: vẻ ngoài thay đổi nhưng phân tử bên trong vẫn là chất cũ 100% (H2O vẫn là H2O) và dễ dàng hoàn nguyên ( Physical Change ). Ngược lại, đốt cháy dây magnesium hay nướng bột mì + trứng thành bánh sẽ bẻ gãy liên kết cũ để khóa nguyên tử thành chất hoàn toàn mới — bạn không bao giờ làm nguội tro trắng MgO để lấy lại thanh kim loại Mg sáng bóng được ( Chemical Change )!",
+      "duration": 73.17,
+      "startTime": 54.91,
+      "endTime": 128.08,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. The Golden Test (🟦 Core 1): Ask ONE question: \"Is a new chemical substance formed?\" • NO = Physical change (only arrangement/separation of particles changes; weak intermolecular forces overcome; easily reversible).• YES = Chemical change (chemical bonds break and new bonds form; new formulas/properties; difficult to reverse). 2. Spotting Chemical Reactions: Look for effervescence (fizzing without external boiling), precipitate formation, permanent colour change, or significant heat/light transfer.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Câu hỏi Vàng Phân loại (🟦 Core 1): Chỉ cần hỏi: \"Có tạo ra chất hóa học MỚI hay không?\" • KHÔNG = Physical change (chỉ đổi khoảng cách/sắp xếp hạt; thắng lực liên phân tử yếu; dễ đảo ngược).• CÓ = Chemical change (đứt liên kết cũ, tạo liên kết hóa học mới; sinh ra công thức mới; khó đảo ngược). 2. Bốn dấu hiệu nhận diện Phản ứng: Sủi bọt khí (không phải đun sôi), xuất hiện kết tủa, đổi màu bền vững, hoặc tỏa/thu nhiệt & phát sáng mạnh.",
+      "duration": 73.4,
+      "startTime": 128.08,
+      "endTime": 201.48,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Dissolving salt/sugar in water and boiling water into steam are PHYSICAL changes, NOT chemical reactions! Even though salt crystals \"disappear\" on dissolving and boiling water forms \"bubbles\", no new chemical substance is made — evaporating or condensing gives the exact original substance back!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hòa tan muối/đường vào nước (dissolving) và đun sôi nước thành hơi (boiling) đều là BIẾN ĐỔI VẬT LÝ, KHÔNG phải phản ứng hóa học! Dù tinh thể muối \"biến mất\" trong nước hay nước sôi \"sủi bọt\", không hề có chất mới nào sinh ra — chỉ cần cô cạn hoặc làm lạnh là thu lại nguyên vẹn chất ban đầu!",
+      "duration": 43.56,
+      "startTime": 201.48,
+      "endTime": 245.04,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "🧊 Biến đổi Vật lý (Physical Change)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🧊 Physical Change. A change in which NO new chemical substance is formed . Particles keep their exact chemical formula; only arrangement, separation, or physical state changes. Easily reversible by physical means (cooling, evaporation, filtration, distillation). Forces: Only weak intermolecular forces are overcome; covalent/ionic bonds stay intact. Examples: State changes (melting ice, boiling water), dissolving NaCl or sugar in water, fractional distillation, chromatography.",
+      "vi": "🧊 Biến đổi Vật lý (Physical Change). Là quá trình biến đổi mà KHÔNG tạo ra chất hóa học mới . Các phân tử giữ nguyên công thức hóa học, chỉ thay đổi trạng thái hoặc cách sắp xếp. Dễ đảo ngược (easily reversible) bằng phương pháp vật lý (làm lạnh, cô cạn, lọc, chưng cất). Lực tương tác: Chỉ thắng lực hút liên phân tử yếu ( intermolecular forces ); liên kết cộng hóa trị/ion bên trong không đổi. Ví dụ: Nóng chảy, sôi, hòa tan muối/đường vào nước ( dissolving ), chưng cất phân đoạn.",
+      "duration": 73.46,
+      "startTime": 245.04,
+      "endTime": 318.5,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🔥 Biến đổi Hóa học (Chemical Change)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🔥 Chemical Change (Reaction). A process in which ONE OR MORE NEW chemical substances are formed with completely different chemical and physical properties from the reactants. Difficult to reverse by simple physical methods. Bonds: Chemical bonds in reactants break and new chemical bonds form (atoms rearrange; total mass is conserved). Examples: Combustion, rusting of iron, neutralisation, electrolysis, thermal decomposition, polymerisation.",
+      "vi": "🔥 Biến đổi Hóa học (Chemical Change). Là quá trình phản ứng tạo ra một hoặc nhiều chất hóa học mới có tính chất khác hẳn chất đầu. Khó đảo ngược bằng phương pháp vật lý thông thường. Liên kết: Bẻ gãy liên kết hóa học cũ và tạo liên kết mới (nguyên tử tái sắp xếp; tổng khối lượng bảo toàn). Ví dụ: Sự cháy ( combustion ), gỉ sắt ( rusting ), trung hòa ( neutralisation ), điện phân, nhiệt phân.",
+      "duration": 59.48,
+      "startTime": 318.5,
+      "endTime": 377.98,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🎨 1. Đổi màu (Colour Change)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🎨 1. Permanent Colour Change. Green CuCO3turns black CuO on heating; purple acidified KMnO4turns colourless.",
+      "vi": "🎨 1. Đổi màu (Colour Change). Bột xanh lục CuCO3nung thành CuO đen; thuốc tím KMnO4mất màu.",
+      "duration": 19.55,
+      "startTime": 377.98,
+      "endTime": 397.53,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "💨 2. Sủi bọt khí (Effervescence)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "💨 2. Effervescence (Gas Bubbles). Fizzing without boiling shows a new gas forms (e.g. Mg + 2HCl → MgCl2+ H2↑).",
+      "vi": "💨 2. Sủi bọt khí (Effervescence). Sủi bọt khí mới mà không đun sôi.",
+      "duration": 18.0,
+      "startTime": 397.53,
+      "endTime": 415.53,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🧪 3. Tạo kết tủa (Precipitate)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🧪 3. Precipitate Formed. Insoluble solid forms from two clear solutions (AgNO3+ NaCl → white AgCl(s)↓).",
+      "vi": "🧪 3. Tạo kết tủa (Precipitate). Chất rắn không tan xuất hiện khi trộn 2 dung dịch trong suốt (AgCl kết tủa trắng).",
+      "duration": 20.76,
+      "startTime": 415.53,
+      "endTime": 436.29,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🌡️ 4. Biến thiên Nhiệt / Ánh sáng",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🌡️ 4. Temperature / Light Change. Exothermic heat/flame (burning Mg bright white light) or endothermic cooling.",
+      "vi": "🌡️ 4. Biến thiên Nhiệt / Ánh sáng. Tỏa nhiệt nóng lên, phát sáng chói (đốt Mg) hoặc thu nhiệt lạnh đi rõ rệt.",
+      "duration": 18.56,
+      "startTime": 436.29,
+      "endTime": 454.85,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "Interactive Particle-Level Model: Mô hình Hạt Phân tử",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "Interactive Particle-Level Model: Physical vs. Chemical Change. 👆 Hover to Compare Particle Behaviour. Notice that dissolving salt/sugar or boiling water are physical changes — no covalent or ionic compound identity is altered!",
+      "vi": "Interactive Particle-Level Model: Mô hình Hạt Phân tử. 👆 Lưu ý bẫy đề thi: Hòa tan muối/đường vào nước hoặc đun sôi nước ra hơi chỉ là Physical change , không tạo chất mới!",
+      "duration": 29.47,
+      "startTime": 454.85,
+      "endTime": 484.32,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "chemical changes",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ Four processes are listed below:1. Dissolving solid potassium nitrate in water (the beaker becomes cold)2. Rusting of an iron nail in damp air3. Fractional distillation of liquid air4. Thermal decomposition of calcium carbonateWhich processes are chemical changes ? A. 1 and 2 only B. 2 and 4 only C. 1, 2 and 4 only D. 3 and 4 only ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: A chemical change must form new chemical substances : rusting (2) converts iron + oxygen + water into hydrated iron(III) oxide, and thermal decomposition (4) breaks CaCO3into new compounds CaO and CO2. Trap alert on (1): even though dissolving KNO3cools the water, no new chemical compound is formed (evaporating the water recovers pure KNO3crystals!), so dissolving (1) and fractional distillation (3) are physical changes .",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & 2 Four processes are listed below: 1. Dissolving solid potassium nitrate in water | 2. Cho 4 quá trình: 1. Hòa tan KNO3rắn vào nước làm cốc lạnh đi | 2. Đinh sắt bị gỉ trong không khí ẩm | 3. Chưng cất phân đoạn không khí lỏng | 4. Nhiệt phân đá vôi CaCO3. Những quá trình nào là biến đổi hóa học? A. 1 and 2 only B. 2 and 4 only C. 1, 2 and 4 only D. 3 and 4 only ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Biến đổi hóa học (chemical change) bắt buộc phải tạo ra chất hóa học mới : sự gỉ sắt (2) biến Fe + O2+ H2O thành gỉ sắt Fe2O3• x H2O, còn nhiệt phân (4) tách CaCO3thành CaO và CO2mới. Cảnh giác bẫy (1): dù hòa tan KNO3làm cốc lạnh đi nhưng không tạo hợp chất mới (cô cạn nước lại thu được KNO3!), nên (1) và chưng cất (3) chỉ là biến đổi vật lý .",
+      "duration": 141.47,
+      "startTime": 484.32,
+      "endTime": 625.79,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "Demonstration X:",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 & 4 Structured [4 marks] Consider two classroom demonstrations:• Demonstration X: Solid iodine crystals are warmed gently in a sealed flask to form purple iodine vapour, which re-forms shiny crystals on the cool upper glass.• Demonstration Y: Green solid copper(II) carbonate is heated strongly in a test tube, leaving a black solid and releasing carbon dioxide gas. (a) Identify which demonstration shows a physical change and which shows a chemical change. [1] (b) State three differences between a physical change and a chemical change illustrated by Demonstrations X and Y. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Demonstration X = physical change ; Demonstration Y = chemical change [1m] . (b) 1. In a chemical change (Y), new chemical substances (CuO and CO2) are formed, whereas in a physical change (X) no new substance is formed (still I2molecules) [1m] . 2. Physical change (X) is easily reversible on cooling, whereas chemical change (Y) is difficult to reverse [1m] . 3. Chemical change (Y) breaks and forms strong chemical bonds , whereas physical change (X) only overcomes weak intermolecular forces [1m] . 💡 Intuition Check: Don't get fooled by purple vapour or temperature shifts alone — always check the chemical formula before and after! I₂(s) → I₂(g) keeps the same formula (physical); CuCO₃ → CuO + CO₂ makes brand-new formulas (chemical)!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 & 4 [4 điểm] Consider two classroom demonstrations:• Demonstration X: Solid iodine crystals are warmed gently in a sealed flask to form purple iodine vapour, which re-forms shiny crystals on the cool upper glass.• Demonstration Y: Green solid copper(II) carbonate is heated strongly, leaving a black solid and releasing carbon dioxide gas. (Xét 2 thí nghiệm: TN X đun nhẹ tinh thể iodine tạo hơi tím rồi ngưng tụ lại tinh thể trên thành bình lạnh; TN Y nung bột CuCO3xanh lục tạo chất rắn màu đen và khí CO2.) (a) Identify which demonstration shows a physical change and which shows a chemical change. (Xác định TN nào là biến đổi vật lý, TN nào là biến đổi hóa học.) (b) State three differences between a physical change and a chemical change illustrated here. (Nêu 3 điểm khác biệt giữa biến đổi vật lý và biến đổi hóa học.) ✍️ Lời giải chi tiết theo thang điểm: (a) TN X = biến đổi vật lý (physical change) ; TN Y = biến đổi hóa học (chemical change) . (b) 1. Biến đổi hóa học (Y) tạo ra chất mới , còn biến đổi vật lý (X) không tạo chất mới (vẫn là phân tử I2) . 2. Biến đổi vật lý (X) dễ dàng đảo ngược (easily reversible) khi làm nguội, còn biến đổi hóa học (Y) khó đảo ngược . 3. Biến đổi hóa học (Y) phá vỡ và hình thành liên kết hóa học (chemical bonds) , trong khi biến đổi vật lý (X) chỉ thắng lực hút liên phân tử yếu (intermolecular forces) .",
+      "duration": 216.55,
+      "startTime": 625.79,
+      "endTime": 842.34,
+      "audioUrl": "/audio/lectures/chemistry/6/s01_b12.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⏱️ 2. TỐC ĐỘ PHẢN ỨNG & THUYẾT VA CHẠM (RATE OF REACTION)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⏱️ 2. RATE OF REACTION & COLLISION THEORY. Core + Supplement 6.2",
+      "vi": "⏱️ 2. TỐC ĐỘ PHẢN ỨNG & THUYẾT VA CHẠM. Core + Supplement 6.2",
+      "duration": 14.02,
+      "startTime": 842.34,
+      "endTime": 856.36,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine Bumper Cars (Dodgems) in an Arena where a bell ONLY rings (\"a reaction happens\") if two cars crash hard enough (energy ≥ Ea )! How do you ring the bell more times per second (faster rate)?• Higher Concentration / Gas Pressure: Pack twice as many cars into the same arena ( more particles per unit volume ) → crashes happen more often per second!• Smaller Pieces (Powder): Break up a locked cluster so way more cars sit on the outside edge ( larger surface area )!• Higher Temperature: Floor the accelerator! Cars zoom faster AND a much bigger share smash hard enough (≥ Ea)!• Catalyst: Lower the bell's impact threshold ( lower Ea ) so gentler bumps count too!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng Sân Xe Điện Đụng (Bumper Cars) mà chuông thưởng CHỈ reo (\"phản ứng xảy ra\") khi hai xe tông vào nhau đủ mạnh (năng lượng ≥ Ea )! Làm sao để chuông reo nhiều lần hơn trong mỗi giây?• Tăng Nồng độ / Áp suất khí: Nhồi gấp đôi số xe vào cùng một sân → xe đụng nhau dày đặc hơn mỗi giây!• Nghiền nhỏ chất rắn (Powder): Tách khối xe bị khóa thành từng xe rời để lộ diện tích va chạm!• Tăng Nhiệt độ: Đạp lút ga! Xe vừa lao nhanh hơn, vừa có nhiều cú đâm vượt ngưỡng Eahơn!• Thêm Xúc tác (Catalyst): Hạ thấp độ cứng nút chuông ( lower Ea ) để cú va nhẹ cũng reo!",
+      "duration": 93.64,
+      "startTime": 856.36,
+      "endTime": 950.0,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Collision Theory Chain (🟩 Supplement): Always link 3 Mark Scheme phrases: (a) particles per unit volume / kinetic energy / lower Ea→ (b) proportion of particles with E ≥ Ea (for T & catalyst) → (c) higher frequency of successful collisions ! 2. Rate Graphs (🟦 Core): Steeper gradient = faster rate (steepest at t = 0 ); horizontal plateau = reaction finished (limiting reactant used up); plateau height depends ONLY on moles of limiting reactant! 3. Lab Methods (🟦 Core): Gas syringe (volume vs. time) or top-pan balance with cotton wool plug (mass loss vs. time).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Chuỗi 3 ý Thuyết Va chạm (🟩 Supplement): Luôn viết nối tiếp: (a) mật độ hạt / động năng / hạ thấp Ea→ (b) tỷ lệ hạt đạt E ≥ Ea tăng (với T & catalyst) → (c) tăng frequency of successful collisions (tần suất va chạm hiệu quả)! 2. Đồ thị Tốc độ (🟦 Core): Độ dốc (gradient) lớn = tốc độ nhanh (dốc nhất lúc t = 0 ); đoạn nằm ngang = chất giới hạn đã hết; độ cao vạch ngang CHỈ phụ thuộc vào số mol chất phản ứng hết trước! 3. Dụng cụ Thực nghiệm (🟦 Core): Ống tiêm khí (gas syringe) hoặc cân điện tử có nút bông gòn.",
+      "duration": 89.73,
+      "startTime": 950.0,
+      "endTime": 1039.73,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"there are more collisions\" WITHOUT \"frequency\" or \"per unit time\" loses marks in Paper 4! Examiners strictly require \"higher frequency of successful collisions\" (or \"more successful collisions per second\" ). Also remember: using powder, a catalyst, or higher temperature makes the graph steeper , NOT higher — final gas volume only changes if moles of limiting reactant change!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Chỉ viết \"có nhiều va chạm hơn (more collisions)\" mà THIẾU chữ \"frequency / per unit time\" sẽ mất điểm Paper 4! Bắt buộc viết \"higher frequency of successful collisions\" (nhiều va chạm hiệu quả hơn trong 1 giây). Đồng thời nhớ: nghiền bột mịn, tăng T hay thêm xúc tác chỉ làm đồ thị dốc đứng hơn chứ KHÔNG làm cao hơn — thể tích khí cuối cùng chỉ đổi khi số mol chất hết trước thay đổi!",
+      "duration": 56.67,
+      "startTime": 1039.73,
+      "endTime": 1096.4,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Tốc độ phản ứng (Rate of reaction) đo lượng chất tham gia mất đi hoặc lượng sản ...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "The rate of a chemical reaction measures how fast a reactant is used up or how fast a product is formed per unit of time: Rate = (Change in volume, mass, or concentration) ÷ Time (e.g. cm3/s or g/s).",
+      "vi": "Tốc độ phản ứng đo lượng chất tham gia mất đi hoặc lượng sản phẩm tạo thành trong một đơn vị thời gian: Rate = Δ(Thể tích khí / Khối lượng) ÷ Thời gian (đơn vị cm3/s hoặc g/s).",
+      "duration": 31.01,
+      "startTime": 1096.4,
+      "endTime": 1127.41,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "💥 Supplement 6.2.5: Thuyết Va Chạm (Collision Theory)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "💥 Supplement 6.2.5: Collision Theory. For a chemical reaction to occur, reacting particles must collide with each other , and a collision is only successful (effective) if the colliding particles possess kinetic energy greater than or equal to the activation energy (E ≥ Ea). 🔑 Golden Marking-Scheme Phrase: Rate of reaction is directly proportional to the frequency of successful collisions (number of successful collisions per unit time, NOT just “more collisions”!).",
+      "vi": "💥 Supplement 6.2.5: Thuyết Va Chạm (Collision Theory). Để phản ứng xảy ra, các hạt phải va hoặc bằng năng lượng hoạt hóa (E ≥ Ea). 🔑 Từ khóa ăn điểm tuyệt đối: Luôn phải viết frequency of successful collisions (tần suất va chạm hiệu quả trong 1 giây) — chỉ viết “more collisions” mà thiếu chữ “frequency / per unit time” sẽ mất điểm!",
+      "duration": 55.23,
+      "startTime": 1127.41,
+      "endTime": 1182.64,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Interactive Collision Model: Mật độ Hạt & Tần suất Va chạm",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Interactive Collision Model: Particle Density & Collision Frequency. Hover over the Low Concentration vs. High Concentration vessel: High Concentration / High Gas Pressure. There are more particles per unit volume , so particles are crowded closer together. Result: Higher frequency of collisions ⇒ faster rate of reaction!",
+      "vi": "Interactive Collision Model: Mật độ Hạt & Tần suất Va chạm. Nồng độ cao: High Concentration (Nồng độ / Áp suất cao). Có nhiều hạt hơn trong một đơn vị thể tích , khoảng cách giữa các hạt ngắn lại. Kết quả: Tăng tần suất va chạm ⇒ tốc độ phản ứng NHANH!",
+      "duration": 42.29,
+      "startTime": 1182.64,
+      "endTime": 1224.93,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "1. Nồng độ dung dịch (Concentration)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "1. Concentration of Solutions. Increasing concentration means more solute particles per unit volume ⇒ higher frequency of collisions ⇒ faster rate.",
+      "vi": "1. Nồng độ dung dịch (Concentration). Tăng nồng độ làm tăng số hạt trên một đơn vị thể tích ⇒ tăng collision frequency ⇒ tăng tốc độ.",
+      "duration": 21.67,
+      "startTime": 1224.93,
+      "endTime": 1246.6,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "2. Áp suất chất khí (Gas Pressure)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "2. Pressure of Gases. Increasing gas pressure compresses gas molecules into a smaller volume ⇒ more gas particles per unit volume ⇒ higher collision frequency ⇒ faster rate.",
+      "vi": "2. Áp suất chất khí (Gas Pressure). Nén khí tăng áp suất đẩy các phân tử khí sát nhau hơn ⇒ tăng số hạt khí trên một đơn vị thể tích ⇒ tăng collision frequency.",
+      "duration": 25.05,
+      "startTime": 1246.6,
+      "endTime": 1271.65,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "3. Diện tích bề mặt chất rắn (Surface Area)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "3. Surface Area of Solids. Crushing large lumps into fine powder increases total surface area ⇒ more solid particles exposed to collide ⇒ higher collision frequency ⇒ faster rate.",
+      "vi": "3. Diện tích bề mặt chất rắn (Surface Area). Nghiền đá cục thành bột mịn ( powder ) làm tăng diện tích tiếp xúc ⇒ nhiều hạt bề mặt lộ ra va chạm cùng lúc ⇒ tăng collision frequency.",
+      "duration": 27.57,
+      "startTime": 1271.65,
+      "endTime": 1299.22,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "4. Nhiệt độ (Temperature — Đủ 2 ý!)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "4. Temperature (2-Part Answer!). (1) Particles gain kinetic energy and move faster ⇒ collide more frequently.(2) Major effect: A much greater proportion of particles have energy ≥ Ea ⇒ more collisions are successful!",
+      "vi": "4. Nhiệt độ (Temperature — Đủ 2 ý!). (1) Hạt tăng kinetic energy , chuyển động nhanh hơn ⇒ va chạm dày hơn.(2) Ý chính: Tỷ lệ lớn hơn các hạt đạt năng lượng E ≥ Ea !",
+      "duration": 33.09,
+      "startTime": 1299.22,
+      "endTime": 1332.31,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "5. Chất xúc tác & Enzyme sinh học (Catalysts & Enzymes — 6.2.2, 6.2.7)",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "5. Catalysts & Biological Enzymes (6.2.2 & 6.2.7). A catalyst increases reaction rate and remains chemically unchanged at the end. It provides an alternative reaction pathway with a lower activation energy (Ea) , so a higher proportion of colliding particles have E ≥ Ea. Enzymes are protein molecules acting as biological catalysts ; above their optimum temperature, enzymes are denatured (active site shape destroyed) and rate drops to zero. Exam Trap: Catalysts do NOT increase equilibrium yield!",
+      "vi": "5. Chất xúc tác & Enzyme sinh học (Catalysts & Enzymes — 6.2.2, 6.2.7). Catalyst làm tăng tốc độ phản ứng nhưng không bị biến đổi hóa học (chemically unchanged) sau phản ứng. Xúc tác mở ra con đường thay thế có năng lượng hoạt hóa thấp hơn (lower Ea) , giúp nhiều hạt vượt qua Eahơn. Enzymes là phân tử protein đóng vai trò xúc tác sinh học (biological catalysts) ; nếu nhiệt độ vượt quá mức tối ưu, enzyme bị biến tính (denatured) . Bẫy đề thi: Xúc tác KHÔNG làm tăng hiệu suất (yield)!",
+      "duration": 69.65,
+      "startTime": 1332.31,
+      "endTime": 1401.96,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "🧪 Phương pháp Thực nghiệm & Đánh giá Sai số (6.2.3 & 6.2.8)",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "🧪 Practical Rate Methods & Evaluation (6.2.3 & 6.2.8). Method 1 — Gas Syringe (Volume of gas vs. time): Precise to 1 cm3; works for water-soluble gases (CO2, SO2). Limitation: Vigorous fizzing can blow the plunger out; slight gas loss while bung is inserted. Method 2 — Inverted Measuring Cylinder over Water: Simple apparatus. Limitation: Inaccurate for soluble gases like CO2or NH3which dissolve in the water! Method 3 — Mass Loss on Balance (Flask + Cotton Wool Plug): Cotton wool lets gas escape while trapping acid spray droplets! Evaluation: Accurate for heavy gases like CO2(Mr= 44) , but inaccurate for light H2(Mr= 2) because mass loss is too tiny to read precisely.",
+      "vi": "🧪 Phương pháp Thực nghiệm & Đánh giá Sai số (6.2.3 & 6.2.8). 1. Ống tiêm khí (Gas syringe — Đo thể tích khí): Chính xác tới 1 cm3, đo được cả khí tan trong nước (CO2, SO2). Nhược điểm: Phản ứng quá mạnh dễ đẩy văng pít-tông; thoát một ít khí lúc đậy nút. 2. Ống đong úp ngược trên chậu nước: Dễ lắp. Nhược điểm: Sai số lớn nếu thu khí tan trong nước như CO2hay NH3! 3. Cân độ giảm khối lượng (Balance + Bông gòn Cotton wool): Nút bông cho khí thoát ra nhưng chặn giọt axit bắn ra ngoài! Đánh giá: Tốt với khí nặng CO2(Mr= 44) , kém chính xác với khí quá nhẹ như H2(Mr= 2).",
+      "duration": 101.82,
+      "startTime": 1401.96,
+      "endTime": 1503.78,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "📉 Đọc Đồ thị Tốc độ Phản ứng (6.2.4)",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "📉 Interpreting Rate Graphs (6.2.4). Gradient = Rate: Steepest at t = 0 (highest reactant concentration); curves flatter as reactants are used up. Horizontal plateau (gradient = 0): Reaction has stopped because the limiting reactant is completely used up !",
+      "vi": "📉 Đọc Đồ thị Tốc độ Phản ứng (6.2.4). Độ dốc (Gradient) = Tốc độ: Dốc nhất ở t = 0 (nồng độ lớn nhất); thoai thoải dần khi chất đầu vơi đi. Đoạn nằm ngang (Plateau): Phản ứng DỪNG HẲN vì chất phản ứng giới hạn đã dùng hết !",
+      "duration": 36.05,
+      "startTime": 1503.78,
+      "endTime": 1539.83,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b13.mp3"
+    },
+    {
+      "id": "s02_b14",
+      "title": "powder",
+      "selector": "[data-lecture-section=\"s02_b14\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE + 🟩 SUPPLEMENT • Paper 2 MCQ In Experiment 1, excess calcium carbonate lumps react with 50 cm³ of 1.0 mol/dm³ hydrochloric acid at 25 °C, producing Curve X on a graph of gas volume against time. Experiment 2 is repeated at 25 °C using calcium carbonate powder (still in excess) and 25 cm³ of 1.0 mol/dm³ hydrochloric acid. How does the graph for Experiment 2 compare with Curve X? A. Steeper initial gradient and reaches the same final volume of gas. B. Steeper initial gradient and reaches half the final volume of gas. C. Less steep initial gradient and reaches half the final volume of gas. D. Same initial gradient and reaches half the final volume of gas. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: 1. Initial gradient (rate): Changing from lumps to powder increases the surface area of CaCO3(while initial HCl concentration is still 1.0 mol/dm3!), causing a higher collision frequency and a steeper initial gradient (eliminating C and D). 2. Final gas volume (plateau): Because CaCO3is in excess, HCl is the limiting reactant . Halving the volume of 1.0 mol/dm3HCl from 50 cm3to 25 cm3halves the moles of HCl, producing half the final volume of CO2gas (eliminating A).",
+      "vi": "BÀI MẪU 1 🟦 CORE + 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 In Experiment 1, excess calcium carbonate lumps react with 50 cm³ of 1.0 mol/dm³ hydrochloric acid at 25 °C, producing Curve X. Experiment 2 is repeated at 25 °C using calcium carbonate powder and 25 cm³ of 1.0 mol/dm³ hydrochloric acid. How does Experiment 2 compare with Curve X? (TN 1 cho đá vôi CaCO3dạng viên dư tác dụng với 50 cm³ HCl 1,0 mol/dm³ tạo đường cong X. TN 2 dùng bột CaCO3mịn (vẫn dư) với 25 cm³ HCl 1,0 mol/dm³ ở cùng 25 °C. Đồ thị TN 2 thay đổi thế nào so với đường X?) A. Steeper initial gradient and reaches the same final volume of gas. B. Steeper initial gradient and reaches half the final volume of gas. C. Less steep initial gradient and reaches half the final volume of gas. D. Same initial gradient and reaches half the final volume of gas. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: 1. Độ dốc ban đầu (tốc độ): Đổi từ viên sang bột mịn (powder) làm tăng diện tích bề mặt (surface area) trong khi nồng độ HCl vẫn là 1,0 mol/dm3→ tăng tần suất va chạm nên độ dốc ban đầu lớn hơn (steeper) (loại C, D). 2. Thể tích khí cuối cùng: Vì CaCO3dư nên HCl là chất giới hạn (limiting reactant) . Giảm một nửa thể tích HCl (50 cm3xuống 25 cm3) làm số mol HCl giảm một nửa → thể tích khí CO2thu được giảm một nửa (loại A).",
+      "duration": 223.73,
+      "startTime": 1539.83,
+      "endTime": 1763.56,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b14.mp3"
+    },
+    {
+      "id": "s02_b15",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b15\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] A student investigates the rate of reaction between excess marble chips (CaCO3) and dilute hydrochloric acid by placing the conical flask on an electronic balance with a loose cotton wool plug in the neck. (a) State two reasons why a loose cotton wool plug is placed in the neck of the flask. [2] (b) Use collision theory to explain why increasing the temperature from 20 °C to 40 °C greatly increases the rate of reaction. [3] (c) Explain why the rate of reaction decreases with time and eventually becomes zero. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Allows carbon dioxide gas to escape (so mass decreases) [1m] while preventing acid spray / liquid droplets from splashing out (which would cause false mass loss) [1m] . (b) At higher temperature, reacting particles gain kinetic energy and move faster , increasing collision frequency [1m] . More importantly, a much greater proportion of particles have energy greater than or equal to the activation energy (E ≥ Ea) [1m] , resulting in a higher frequency of successful collisions [1m] . (c) As hydrochloric acid reacts, its concentration decreases (fewer H+particles per unit volume) until the limiting reactant (HCl) is completely used up [1m] . 💡 Intuition Check: Memorise the 3-mark Temperature Mantra word-for-word: (1) higher kinetic energy / faster particles → (2) greater proportion of particles have E ≥ Eₐ → (3) higher frequency of successful collisions!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] A student investigates the rate of reaction between excess marble chips (CaCO3) and dilute hydrochloric acid by placing the conical flask on an electronic balance with a loose cotton wool plug in the neck. (Học sinh khảo sát tốc độ phản ứng giữa đá vôi CaCO3dư và dung dịch HCl loãng bằng cách đặt bình nón lên cân điện tử, miệng bình nhét nút bông gòn lỏng.) (a) State two reasons why a loose cotton wool plug is placed in the neck of the flask. (Nêu 2 vai trò của nút bông gòn ở cổ bình.) (b) Use collision theory to explain why increasing the temperature from 20 °C to 40 °C greatly increases the rate of reaction. (Dùng thuyết va chạm giải thích vì sao tăng nhiệt độ từ 20 °C lên 40 °C làm tăng mạnh tốc độ phản ứng.) (c) Explain why the rate of reaction decreases with time and eventually becomes zero. (Giải thích vì sao tốc độ giảm dần theo thời gian rồi bằng 0.) ✍️ Lời giải chi tiết theo thang điểm: (a) Cho phép khí CO2thoát ra tự do (để cân đo được độ giảm khối lượng) đồng thời ngăn các giọt dung dịch axit bắn ra ngoài gây sai số khối lượng . (b) Khi tăng nhiệt độ, các hạt nhận thêm động năng (kinetic energy) và chuyển động nhanh hơn . Quan trọng hơn, tỷ lệ lớn hơn các hạt có năng lượng đạt hoặc vượt năng lượng hoạt hóa , dẫn đến tăng tần suất va chạm hiệu quả .",
+      "duration": 207.55,
+      "startTime": 1763.56,
+      "endTime": 1971.11,
+      "audioUrl": "/audio/lectures/chemistry/6/s02_b15.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "⚖️ 3. PHẢN ỨNG THUẬN NGHỊCH, CÂN BẰNG ĐỘNG & QUY TRÌNH CÔNG NGHIỆP",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "⚖️ 3. REVERSIBLE REACTIONS, EQUILIBRIUM & INDUSTRIAL PROCESSES. Core + Supplement 6.3",
+      "vi": "⚖️ 3. PHẢN ỨNG THUẬN NGHỊCH, CÂN BẰNG ĐỘNG & QUY TRÌNH CÔNG NGHIỆP. Core + Supplement 6.3",
+      "duration": 16.17,
+      "startTime": 1971.11,
+      "endTime": 1987.28,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture Dynamic Equilibrium as Walking UP a Down-Escalator at the Exact Same Speed : to someone watching from the side, your height doesn't change at all ( concentrations stay constant ), even though both you and the stairs are moving non-stop ( forward rate = reverse rate )! And how do you predict shifts? Think of equilibrium as a Stubborn Contrarian that always opposes whatever you do: heat it up and it shifts in the endothermic (cooling) direction; squeeze it to high pressure and it escapes toward the side with fewer gas molecules !",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung Cân bằng Động (Dynamic Equilibrium) giống như bạn Đi Bộ LÊN trên một Chiếc Thang Cuốn đang chạy XUỐNG với cùng vận tốc : người đứng ngoài nhìn vào thấy vị trí của bạn đứng yên một chỗ ( nồng độ các chất giữ nguyên không đổi ), dù chân bạn và thang cuốn vẫn chạy liên tục không nghỉ ( tốc độ thuận = tốc độ nghịch )! Còn cách đoán chuyển dịch cân bằng? Hãy coi hệ cân bằng như một \"Đứa trẻ Bướng bỉnh\" luôn làm NGƯỢC LẠI tác động bên ngoài : đun nóng thì nó chạy sang chiều thu nhiệt (làm mát) ; ép áp suất cao thì nó co về vế có ít phân tử khí hơn !",
+      "duration": 72.07,
+      "startTime": 1987.28,
+      "endTime": 2059.35,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Reversible Water Tests (🟦 Core 6.3.1–2): Anhydrous CuSO4( white → blue ) and anhydrous CoCl2( blue → pink ) on adding water (exothermic forward, endothermic on heating). 2. Equilibrium Rules (🟩 Supp. 6.3.3–4): Closed system; rate of forward = rate of reverse ; concentrations remain constant . High T favours endothermic; high P favours fewer gas moles; catalyst gives NO shift in yield (reaches equilibrium faster). 3. Industrial Twins (🟩 Supp. 6.3.5–11): • Haber (NH3): N2+ 3H2⇌ 2NH3 (450 °C, 20 000 kPa / 200 atm, Fe catalyst; N2from air, H2from methane).• Contact (SO3): 2SO2+ O2⇌ 2SO3 (450 °C, 200 kPa / 2 atm, V2O5catalyst; SO2from burning sulfur / roasting sulfide ores).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Phép thử Nước Thuận nghịch (🟦 Core 6.3.1–2): Bột CuSO4khan ( trắng → xanh lam ) và giấy CoCl2khan ( xanh lam → hồng ) khi gặp nước. 2. Hai Điều kiện Cân bằng (🟩 Supp. 6.3.3–4): Hệ kín; forward rate = reverse rate ; concentrations remain constant . Tăng T dịch sang thu nhiệt; tăng P dịch sang ít mol khí hơn; xúc tác KHÔNG làm đổi hiệu suất . 3. Hai Quy trình Công nghiệp (🟩 Supp. 6.3.5–11): • Haber (NH3): N2+ 3H2⇌ 2NH3 (450 °C, 20 000 kPa / 200 atm, xúc tác Fe; N2từ không khí, H2từ khí methane).• Contact (SO3): 2SO2+ O2⇌ 2SO3 (450 °C, 200 kPa / 2 atm, xúc tác V2O5; SO2từ đốt lưu huỳnh hoặc nung quặng sunfua).",
+      "duration": 136.66,
+      "startTime": 2059.35,
+      "endTime": 2196.01,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"concentrations of reactants and products are equal at equilibrium\"! They are constant (unchanging) , NOT equal! Second classic trap: claiming an iron or V2O5 catalyst increases equilibrium yield — a catalyst speeds up forward and reverse reactions equally, so equilibrium yield is 0% changed !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm viết \"tại cân bằng, nồng độ chất đầu và sản phẩm bằng nhau (equal)\"! Nồng độ chỉ giữ nguyên không đổi (constant) chứ KHÔNG bằng nhau! Bẫy số 2: viết xúc tác Fe hay V2O5làm tăng hiệu suất cân bằng (yield) — sai hoàn toàn vì xúc tác chỉ giúp đạt cân bằng nhanh hơn!",
+      "duration": 46.49,
+      "startTime": 2196.01,
+      "endTime": 2242.5,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "💧 Muối Ngậm Nước (Hydrated) ⇌ Muối Khan (Anhydrous) (Core 6.3.1–2)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "💧 Reversible Hydrated ⇌ Anhydrous Salt Reactions (Core 6.3.1–2). Reversible reactions are shown by the symbol ⇌ . Heating drives off water of crystallisation ( endothermic dehydration ); adding water reverses the reaction and releases heat ( exothermic hydration ) — used as chemical tests for the presence of water !",
+      "vi": "💧 Muối Ngậm Nước (Hydrated) ⇌ Muối Khan (Anhydrous) (Core 6.3.1–2). Phản ứng thuận nghịch ký hiệu bằng mũi tên hai chiều ⇌ . Nung nóng làm bay hơi nước kết tinh ( thu nhiệt / endothermic ); nhỏ nước vào đảo ngược phản ứng và tỏa nhiệt ( exothermic ) — dùng làm phép thử hóa học nhận biết sự có mặt của nước !",
+      "duration": 47.98,
+      "startTime": 2242.5,
+      "endTime": 2290.48,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "1. Copper(II) Sulfate (Đồng(II) sunfat): CuSO₄•5H₂O(s) ⇌ CuSO₄(s) + 5H₂O(l) • Ng...",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "1. Copper(II) Sulfate: CuSO₄•5H₂O(s) ⇌ CuSO₄(s) + 5H₂O(l) • Hydrated = BLUE crystals ↔ Anhydrous = WHITE powder",
+      "vi": "1. Copper(II) Sulfate (Đồng(II) sunfat): CuSO₄•5H₂O(s) ⇌ CuSO₄(s) + 5H₂O(l) • Ngậm nước = Tinh thể XANH LAM (Blue) ↔ Khan = Bột TRẮNG (White)",
+      "duration": 38.32,
+      "startTime": 2290.48,
+      "endTime": 2328.8,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "2. Cobalt(II) Chloride (Coban(II) clorua): CoCl₂•6H₂O(s) ⇌ CoCl₂(s) + 6H₂O(l) • ...",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "2. Cobalt(II) Chloride: CoCl₂•6H₂O(s) ⇌ CoCl₂(s) + 6H₂O(l) • Hydrated = PINK solid/paper ↔ Anhydrous = BLUE solid/paper",
+      "vi": "2. Cobalt(II) Chloride (Coban(II) clorua): CoCl₂•6H₂O(s) ⇌ CoCl₂(s) + 6H₂O(l) • Ngậm nước = Màu HỒNG (Pink) ↔ Khan = Màu XANH LAM (Blue)",
+      "duration": 38.52,
+      "startTime": 2328.8,
+      "endTime": 2367.32,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "⚖️ Trạng thái Cân Bằng Động trong Hệ Kín (Dynamic Equilibrium — 6.3.3)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "⚖️ Dynamic Equilibrium in a Closed System (Supplement 6.3.3). A reversible reaction in a closed system (no substances can enter or escape) reaches dynamic equilibrium when: The rate of the forward reaction is equal to the rate of the reverse reaction (both continue continuously!). The concentrations of reactants and products are no longer changing (they remain constant — NOT necessarily equal!).",
+      "vi": "⚖️ Trạng thái Cân Bằng Động trong Hệ Kín (Dynamic Equilibrium — 6.3.3). Một phản ứng thuận nghịch diễn ra trong hệ kín (closed system) đạt cân bằng động (dynamic equilibrium) khi thỏa mãn ĐỒNG THỜI 2 điều kiện: Tốc độ phản ứng thuận bằng tốc độ phản ứng nghịch ( rate of forward reaction = rate of reverse reaction ). Nồng độ các chất phản ứng và sản phẩm giữ nguyên không đổi ( concentrations remain constant — LƯU Ý: không đổi chứ KHÔNG nhất thiết bằng nhau!).",
+      "duration": 55.77,
+      "startTime": 2367.32,
+      "endTime": 2423.09,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Yếu tố thay đổi: 🌡️ Temperature (Nhiệt độ); Khi TĂNG (Increase): Chuyển dịch the...",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Condition Changed: 🌡️ Temperature; Effect of INCREASING: Shifts in the ENDOTHERMIC (ΔH > 0) direction (absorbs excess heat).; Effect of DECREASING: Shifts in the EXOTHERMIC (ΔH < 0) direction (releases heat). Condition Changed: 🎈 Gas Pressure; Effect of INCREASING: Shifts toward the side with FEWER moles of gas molecules. (If equal gas moles on both sides → NO shift!); Effect of DECREASING: Shifts toward the side with MORE moles of gas molecules. Condition Changed: 🧪 Concentration; Effect of INCREASING: Increasing reactant concentration shifts equilibrium to the RIGHT (more product made).; Effect of DECREASING: Removing product as it forms shifts equilibrium to the RIGHT (increases yield). ⚡ Catalyst — NO EFFECT on position of equilibrium or yield! Increases forward and reverse reaction rates equally so equilibrium is reached faster.",
+      "vi": "Yếu tố thay đổi: 🌡️ Temperature (Nhiệt độ); Khi TĂNG (Increase): Chuyển dịch theo chiều THU NHIỆT (Endothermic, ΔH > 0) để hấp thụ bớt nhiệt.; Khi GIẢM (Decrease): Chuyển dịch theo chiều TỎA NHIỆT (Exothermic, ΔH < 0) để sinh thêm nhiệt. Yếu tố thay đổi: 🎈 Gas Pressure (Áp suất); Khi TĂNG (Increase): Dịch chuyển sang vế có ÍT số mol khí hơn . (Hai vế bằng mol khí → KHÔNG dịch chuyển!); Khi GIẢM (Decrease): Dịch chuyển sang vế có NHIỀU số mol khí hơn. Yếu tố thay đổi: 🧪 Concentration (Nồng độ); Khi TĂNG (Increase): Tăng nồng độ chất tham gia đẩy cân bằng sang PHẢI (tạo thêm sản phẩm).; Khi GIẢM (Decrease): Tách bớt sản phẩm ra khỏi hệ đẩy cân bằng sang PHẢI (tăng hiệu suất). ⚡ Catalyst (Xúc tác) — KHÔNG làm dịch chuyển vị trí cân bằng! Làm tăng tốc độ chiều thuận và chiều nghịch như nhau nên hệ đạt cân bằng nhanh hơn.",
+      "duration": 120.58,
+      "startTime": 2423.09,
+      "endTime": 2543.67,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "1. The Haber Process (Tổng hợp Ammonia NH3) N2(g) + 3H2(g) ⇌ 2NH3(g) (ΔH = −92 k...",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "1. The Haber Process (Manufacture of Ammonia) N2(g) + 3H2(g) ⇌ 2NH3(g) (ΔH = −92 kJ/mol) Raw Material Sources (6.3.6): • N2: Fractional distillation of liquid air .• H2: Reacting methane (natural gas) with steam. Typical Conditions (6.3.7 — Memorize!): 450 °C • 20 000 kPa (200 atm) • Iron (Fe) catalyst . Why Compromise Conditions? (6.3.11): • 450 °C: Forward reaction is exothermic, so low T gives higher yield, BUT rate would be too slow. 450 °C is a compromise temperature for fast rate + acceptable yield.• 200 atm: 4 mol gas → 2 mol gas, so high pressure increases BOTH yield and rate, but pressures >200 atm are too expensive (compressor energy/thick steel pipes) and pose explosion safety risks.",
+      "vi": "1. The Haber Process (Tổng hợp Ammonia NH3) N2(g) + 3H2(g) ⇌ 2NH3(g) (ΔH = −92 kJ/mol) Nguồn nguyên liệu (6.3.6): • N2: Chưng cất phân đoạn không khí lỏng ( air ).• H2: Từ khí methane (CH4, khí thiên nhiên) tác dụng với hơi nước. Điều kiện tiêu chuẩn (6.3.7 — Thuộc lòng!): 450 °C • 20 000 kPa (200 atm) • Xúc tác Sắt (Iron, Fe) . Giải thích điều kiện thỏa hiệp (Compromise — 6.3.11): • 450 °C: Chiều thuận tỏa nhiệt nên nhiệt độ thấp cho hiệu suất cao, NHƯNG tốc độ quá chậm. Chọn 450 °C để đạt tốc độ đủ nhanh và hiệu suất kinh tế.• 200 atm: 4 mol khí → 2 mol khí nên áp suất cao tăng cả hiệu suất lẫn tốc độ; không nén cao hơn 200 atm vì chi phí thành bình dày, tốn điện máy nén và nguy cơ nổ (safety).",
+      "duration": 138.4,
+      "startTime": 2543.67,
+      "endTime": 2682.07,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "2. The Contact Process (Sản xuất H2SO4— Giai đoạn 2) 2SO2(g) + O2(g) ⇌ 2SO3(g) (...",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "2. The Contact Process (Sulfuric Acid — Step 2) 2SO2(g) + O2(g) ⇌ 2SO3(g) (ΔH = −197 kJ/mol) Raw Material Sources (6.3.9): • SO2: Burning sulfur in air (S + O2→ SO2) OR roasting sulfide ores in air (e.g. zinc blende, 2ZnS + 3O2→ 2ZnO + 2SO2).• O2: From air. Typical Conditions (6.3.10 — Memorize!): 450 °C • 200 kPa (2 atm) • Vanadium(V) oxide (V2O5) catalyst . Why Only 2 atm (200 kPa)? (6.3.11): • 450 °C: Compromise between exothermic yield and fast rate (V2O5requires ~400 °C to work).• 2 atm: Although 3 mol gas → 2 mol gas favours high pressure, equilibrium conversion is already ~98% at 2 atm ! Higher pressures waste money and increase safety hazards for negligible extra yield.",
+      "vi": "2. The Contact Process (Sản xuất H2SO4— Giai đoạn 2) 2SO2(g) + O2(g) ⇌ 2SO3(g) (ΔH = −197 kJ/mol) Nguồn nguyên liệu (6.3.9): • SO2: Đốt lưu huỳnh (burning sulfur) trong không khí HOẶC nung quặng sunfua như quặng kẽm ZnS.• O2: Lấy từ không khí (air). Điều kiện tiêu chuẩn (6.3.10 — Thuộc lòng!): 450 °C • 200 kPa (2 atm) • Xúc tác Vanadium(V) oxide (V2O5) . Vì sao chỉ dùng 2 atm (200 kPa)? (6.3.11): • 450 °C: Nhiệt độ thỏa hiệp giữa hiệu suất tỏa nhiệt và tốc độ (xúc tác V2O5chỉ hoạt động tốt từ ~400 °C).• 2 atm: Dù 3 mol khí → 2 mol khí, nhưng ngay tại 2 atm hiệu suất tạo SO3đã đạt ~98% ! Tăng áp suất cao hơn gây tốn kém vô ích, chỉ cần 2 atm đủ đẩy luồng khí qua tháp.",
+      "duration": 152.23,
+      "startTime": 2682.07,
+      "endTime": 2834.3,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "equilibrium yield",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ In the Contact process, sulfur dioxide is converted into sulfur trioxide in a closed vessel: 2SO2(g) + O2(g) ⇌ 2SO3(g) ( ΔH = −197 kJ/mol )Which changes in conditions both increase the equilibrium yield of sulfur trioxide, SO3? A. Decreasing temperature and increasing pressure B. Increasing temperature and increasing pressure C. Decreasing temperature and adding a vanadium(V) oxide catalyst D. Increasing temperature and decreasing pressure ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: 1. Temperature: Because the forward reaction is exothermic ( ΔH = −197 kJ/mol ), decreasing the temperature shifts the position of equilibrium to the right (exothermic side) to release heat, increasing SO3yield (eliminating B and D). 2. Pressure vs. Catalyst: Left side has 2 + 1 = 3 moles of gas; right side has 2 moles of gas. Increasing pressure shifts equilibrium toward the side with fewer moles of gas (right, more SO3). Adding V2O5catalyst increases rate only and has no effect on equilibrium yield (eliminating C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 In the Contact process, sulfur dioxide is converted into sulfur trioxide in a closed vessel: 2SO2(g) + O2(g) ⇌ 2SO3(g) ( ΔH = −197 kJ/mol ). Trong quy trình Contact ở hệ kín như trên, cặp thay đổi điều kiện nào đều làm tăng hiệu suất cân bằng tạo SO3? A. Decreasing temperature and increasing pressure B. Increasing temperature and increasing pressure C. Decreasing temperature and adding a vanadium(V) oxide catalyst D. Increasing temperature and decreasing pressure ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: 1. Nhiệt độ: Chiều thuận tỏa nhiệt ( ΔH = −197 kJ/mol < 0 ), nên giảm nhiệt độ (decreasing temperature) làm cân bằng dịch chuyển sang phải (chiều tỏa nhiệt) giúp tăng hiệu suất SO3(loại B, D). 2. Áp suất vs. Xúc tác: Vế trái có 2 + 1 = 3 mol khí; vế phải chỉ có 2 mol khí → tăng áp suất (increasing pressure) đẩy cân bằng sang vế ít mol khí hơn (vế phải, tăng SO3). Xúc tác V2O5không làm thay đổi hiệu suất cân bằng (loại C).",
+      "duration": 175.18,
+      "startTime": 2834.3,
+      "endTime": 3009.48,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Ammonia is manufactured in the Haber process: N2(g) + 3H2(g) ⇌ 2NH3(g) (forward reaction is exothermic). Typical conditions are 450 °C, 20 000 kPa, and an iron catalyst. (a) State the industrial source of the nitrogen and the industrial source of the hydrogen. [2] (b) Explain, in terms of rate of reaction and position of equilibrium, why a compromise temperature of 450 °C is used rather than a very low temperature. [2] (c) Explain why a pressure higher than 20 000 kPa is not used industrially, even though it would increase both the rate and equilibrium yield of ammonia. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Nitrogen: fractional distillation of liquid air [1m] ; Hydrogen: reacting methane (natural gas) with steam [1m] . (b) Since the forward reaction is exothermic, a higher temperature shifts equilibrium to the left (decreasing yield), whereas a low temperature gives a high yield [1m] ; however, at a low temperature the rate of reaction is too slow , so 450 °C is a compromise giving an economically fast rate with an acceptable yield [1m] . (c) Pressures above 20 000 kPa are too expensive (high energy costs to run compressors and thick-walled steel vessels needed) [1m] and create serious safety / explosion hazards [1m] . 💡 Intuition Check: Every \"Why 450 °C?\" question in Haber or Contact follows the exact same 2-point balance: Low T = great exothermic yield but way too slow; 450 °C = fast enough rate + reasonable yield!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Ammonia is manufactured in the Haber process: N2(g) + 3H2(g) ⇌ 2NH3(g). Sản xuất ammonia theo quy trình Haber tỏa nhiệt ở 450 °C, 20 000 kPa và xúc tác sắt. (a) State the industrial source of the nitrogen and of the hydrogen. (Nêu nguồn nguyên liệu điều chế N2và H2.) (b) Explain, in terms of rate and equilibrium, why a compromise temperature of 450 °C is used. (Giải thích vì sao dùng nhiệt độ thỏa hiệp 450 °C.) (c) Explain why pressures much higher than 20 000 kPa are not used industrially. (Giải thích vì sao không nén áp suất cao hơn nhiều so với 20 000 kPa.) ✍️ Lời giải chi tiết theo thang điểm: (a) Nguồn N2: chưng cất phân đoạn không khí lỏng (air) ; Nguồn H2: từ khí methane (khí thiên nhiên) phản ứng với hơi nước . (b) Chiều thuận tỏa nhiệt nên nhiệt độ thấp cho hiệu suất NH3cao , nhưng ở nhiệt độ thấp tốc độ phản ứng quá chậm (rate too slow) ; do đó chọn 450 °C làm nhiệt độ thỏa hiệp để đạt tốc độ đủ nhanh với hiệu suất chấp nhận được . (c) Áp suất cao hơn 20 000 kPa quá tốn kém kinh tế (too expensive) do tốn điện chạy máy nén và phải xây bồn thép cực dày , đồng thời gây nguy cơ mất an toàn / cháy nổ (safety hazard) .",
+      "duration": 221.06,
+      "startTime": 3009.48,
+      "endTime": 3230.54,
+      "audioUrl": "/audio/lectures/chemistry/6/s03_b12.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🔄 4. PHẢN ỨNG OXI HÓA – KHỬ (REDOX REACTIONS)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🔄 4. REDOX REACTIONS (OXIDATION & REDUCTION). Core + Supplement 6.4",
+      "vi": "🔄 4. PHẢN ỨNG OXI HÓA – KHỬ (REDOX REACTIONS). Core + Supplement 6.4",
+      "duration": 15.07,
+      "startTime": 3230.54,
+      "endTime": 3245.61,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of Redox as a Two-Handed Pass of Electrons (\"OIL RIG\") plus the \"Travel Agent\" Rule ! One substance throws negative electrons away ( O xidation I s L oss → its oxidation number climbs UP) at the exact moment another substance catches them ( R eduction I s G ain → its oxidation number drops DOWN). Why does \"Oxidising Agent\" sound backwards? Just like a Travel Agent sends YOU on holiday while staying in the office , an oxidising agent oxidises the other reactant while being REDUCED itself !",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung phản ứng Redox như Màn Chuyền Bóng Electron (\"OIL RIG\") kết hợp quy tắc \"Đại Lý Du Lịch (Travel Agent)\" ! Một chất ném electron âm đi ( O xidation I s L oss → số oxi hóa TĂNG lên) đúng vào khoảnh khắc chất kia bắt lấy electron ( R eduction I s G ain → số oxi hóa GIẢM xuống). Vì sao tên gọi \"Oxidising Agent\" nghe ngược đời? Giống hệt nhân viên đại lý du lịch đưa BẠN đi nghỉ mát còn họ ngồi lại văn phòng , một oxidising agent giúp oxi hóa chất kia nhưng BẢN THÂN NÓ LẠI BỊ KHỬ !",
+      "duration": 72.77,
+      "startTime": 3245.61,
+      "endTime": 3318.38,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Three Definitions (🟦 Core & 🟩 Supp. 6.4.1–8): Oxidation = gain of O / loss of e− / increase in oxidation number ; Reduction = loss of O / gain of e− / decrease in oxidation number . 2. Four Oxidation Number Rules (🟩 Supp. 6.4.9): Element = 0; monatomic ion = charge; neutral compound sum = 0; polyatomic ion sum = ion charge. 3. Agents & Colour Tests (🟩 Supp. 6.4.10–13): Agents are ALWAYS left-hand reactants! Acidified KMnO4 (oxidising agent) turns purple → colourless with a reducing agent; aqueous KI (reducing agent) turns colourless → brown with an oxidising agent.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Ba Tầng Định nghĩa (🟦 Core & 🟩 Supp. 6.4.1–8): Oxidation = nhận O / mất e− / tăng số oxi hóa ; Reduction = mất O / nhận e− / giảm số oxi hóa . 2. Bốn Quy tắc Tính Số Oxi hóa (🟩 Supp. 6.4.9): Đơn chất = 0; ion đơn = điện tích; tổng trong phân tử = 0; tổng trong ion đa nguyên tử = điện tích ion. 3. Thuốc thử Đổi màu (🟩 Supp. 6.4.10–13): Acidified KMnO4 đổi từ tím → không màu khi gặp chất khử; dung dịch KI(aq) đổi từ không màu → nâu khi gặp chất oxi hóa.",
+      "duration": 86.09,
+      "startTime": 3318.38,
+      "endTime": 3404.47,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never pick a product on the right-hand side as the oxidising or reducing agent! Both the substance oxidised/reduced AND the oxidising/reducing agent MUST be reactants on the left-hand side of the equation! Also remember neutralisation and precipitation are not redox because zero oxidation numbers change.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG chọn một chất sản phẩm bên vế phải làm chất oxi hóa hay chất khử! Mọi oxidising agent và reducing agent BẮT BUỘC phải là chất tham gia nằm bên vế trái ! Ngoài ra nhớ các phản ứng trung hòa axit-bazơ hay tạo kết tủa không phải là redox .",
+      "duration": 41.56,
+      "startTime": 3404.47,
+      "endTime": 3446.03,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Phản ứng oxi hóa – khử (Redox reaction) là phản ứng trong đó sự oxi hóa (oxidati...",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "A redox reaction is a reaction in which oxidation and reduction take place simultaneously . Roman numerals in chemical names indicate the oxidation number of an element — e.g. iron( II ) = +2, iron( III ) = +3, copper( II ) oxide = +2, potassium manganate( VII ) = +7, vanadium( V ) oxide = +5.",
+      "vi": "Phản ứng oxi hóa – khử (Redox reaction) là phản ứng trong đó sự oxi hóa (oxidation) và sự khử (reduction) xảy ra đồng thời. Chữ số La Mã trong tên gọi biểu thị số oxi hóa (oxidation number) của nguyên tố: VD iron( II ) = +2, iron( III ) = +3, copper( II ) oxide = +2, potassium manganate( VII ) = +7, vanadium( V ) oxide = +5.",
+      "duration": 60.0,
+      "startTime": 3446.03,
+      "endTime": 3506.03,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🧠 Ba Định nghĩa Redox & Mẹo nhớ “OIL RIG”",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🧠 Three Ways to Define Redox + “OIL RIG”. O xidation I s L oss (of electrons) • R eduction I s G ain (of electrons). Definition Basis: 1. Oxygen (Core); 🔥 Oxidation: Gain of oxygen; 💧 Reduction: Loss of oxygen. Definition Basis: 2. Electrons (Supplement); 🔥 Oxidation: Loss of electrons (e − ); 💧 Reduction: Gain of electrons (e − ). Definition Basis: 3. Oxidation Number (Supplement); 🔥 Oxidation: Increase in oxidation number; 💧 Reduction: Decrease in oxidation number.",
+      "vi": "🧠 Ba Định nghĩa Redox & Mẹo nhớ “OIL RIG”. O xidation I s L oss (Mất e−) • R eduction I s G ain (Nhận e−). Cơ sở định nghĩa: 1. Theo Oxygen (Core); 🔥 Sự Oxi hóa (Oxidation): Nhận thêm oxygen ( Gain of O); 💧 Sự Khử (Reduction): Mất đi oxygen ( Loss of O). Cơ sở định nghĩa: 2. Theo Electron (Supplement); 🔥 Sự Oxi hóa (Oxidation): Nhường / Mất electron ( Loss of e − ); 💧 Sự Khử (Reduction): Nhận thêm electron ( Gain of e − ). Cơ sở định nghĩa: 3. Theo Số Oxi hóa (Supplement); 🔥 Sự Oxi hóa (Oxidation): Số oxi hóa TĂNG LÊN (Increase); 💧 Sự Khử (Reduction): Số oxi hóa GIẢM XUỐNG (Decrease).",
+      "duration": 94.96,
+      "startTime": 3506.03,
+      "endTime": 3600.99,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "📏 4 Quy tắc Tính Số Oxi Hóa (Supplement 6.4.9)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "📏 4 Rules for Oxidation Numbers (6.4.9). Uncombined element = 0 (e.g. Mg, H2, O2, Cl2= 0). Simple monatomic ion = ion charge (e.g. Fe3+= +3, Cl−= −1). Sum in a neutral compound = 0 (usually H = +1, O = −2, Group I = +1, Group II = +2). E.g. S in H2SO4: 2(+1) + S + 4(−2) = 0 ⇒ S = +6. Sum in a polyatomic ion = ion charge . E.g. Mn in MnO4−: Mn + 4(−2) = −1 ⇒ Mn = +7.",
+      "vi": "📏 4 Quy tắc Tính Số Oxi Hóa (Supplement 6.4.9). Đơn chất tự do = 0 (VD: Mg, H2, O2, Cl2đều bằng 0). Ion đơn nguyên tử = điện tích ion (VD: Fe3+= +3, Cl−= −1). Tổng số oxi hóa trong phân tử trung hòa = 0 (H = +1, O = −2, Nhóm I = +1, Nhóm II = +2). VD tính S trong H2SO4: 2(+1) + S + 4(−2) = 0 ⇒ S = +6. Tổng trong ion đa nguyên tử = điện tích ion . VD Mn trong MnO4−: Mn + 4(−2) = −1 ⇒ Mn = +7.",
+      "duration": 104.27,
+      "startTime": 3600.99,
+      "endTime": 3705.26,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🕵️ Chất Oxi hóa vs. Chất Khử (6.4.11–13)",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "🕵️ Oxidising vs. Reducing Agents (6.4.11–13). Oxidising agent: A substance that oxidises another substance and is itself reduced (gains e−/ oxidation number decreases). Reducing agent: A substance that reduces another substance and is itself oxidised (loses e−/ oxidation number increases).",
+      "vi": "🕵️ Chất Oxi hóa vs. Chất Khử (6.4.11–13). Oxidising agent (Chất oxi hóa): Đi oxi hóa chất khác và bản thân nó bị khử (itself reduced) — nhận e−, giảm số oxi hóa. Reducing agent (Chất khử): Đi khử chất khác và bản thân nó bị oxi hóa (itself oxidised) — nhường e−, tăng số oxi hóa.",
+      "duration": 44.1,
+      "startTime": 3705.26,
+      "endTime": 3749.36,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "Ví dụ A (Chuyển giao Oxi): Fe₂O₃ + 3CO → 2Fe + 3CO₂ • Fe2O3 mất oxi (Fe: +3 → 0)...",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "Example A (Oxygen Transfer): Fe₂O₃ + 3CO → 2Fe + 3CO₂ • Fe2O3 loses oxygen (Fe: +3 → 0) ⇒ reduced ⇒ Oxidising agent .• CO gains oxygen (C: +2 → +4) ⇒ oxidised ⇒ Reducing agent .",
+      "vi": "Ví dụ A (Chuyển giao Oxi): Fe₂O₃ + 3CO → 2Fe + 3CO₂ • Fe2O3 mất oxi (Fe: +3 → 0) ⇒ bị khử ⇒ là Oxidising agent .• CO nhận oxi (C: +2 → +4) ⇒ bị oxi hóa ⇒ là Reducing agent .",
+      "duration": 46.32,
+      "startTime": 3749.36,
+      "endTime": 3795.68,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "Ví dụ B (Chuyển giao Electron): Cl₂(aq) + 2I⁻(aq) → 2Cl⁻(aq) + I₂(aq) • Bán phản...",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "Example B (Electron Transfer): Cl₂(aq) + 2I⁻(aq) → 2Cl⁻(aq) + I₂(aq) • Oxidation half-eq: 2I⁻ → I₂ + 2e⁻ ( I− is the reducing agent ).• Reduction half-eq: Cl₂ + 2e⁻ → 2Cl⁻ ( Cl2 is the oxidising agent ).",
+      "vi": "Ví dụ B (Chuyển giao Electron): Cl₂(aq) + 2I⁻(aq) → 2Cl⁻(aq) + I₂(aq) • Bán phản ứng oxi hóa: 2I⁻ → I₂ + 2e⁻ ( I− là reducing agent ).• Bán phản ứng khử: Cl₂ + 2e⁻ → 2Cl⁻ ( Cl2 là oxidising agent ).",
+      "duration": 54.2,
+      "startTime": 3795.68,
+      "endTime": 3849.88,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "⚠️ Bẫy đề thi: Phản ứng trung hòa (H++ OH−→ H2O) và kết tủa (Ag++ Cl−→ AgCl) KHÔ...",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "⚠️ Exam Note: Neutralisation (H++ OH−→ H2O) and precipitation (Ag++ Cl−→ AgCl) are NOT redox reactions because no oxidation numbers change! Also, agents are ALWAYS reactants on the left-hand side!",
+      "vi": "⚠️ Bẫy đề thi: Phản ứng trung hòa (H++ OH−→ H2O) và kết tủa KHÔNG phải phản ứng redox vì không có số oxi hóa nào thay đổi! Chất oxi hóa và chất khử LUÔN nằm bên vế trái (chất tham gia)!",
+      "duration": 34.43,
+      "startTime": 3849.88,
+      "endTime": 3884.31,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b10.mp3"
+    },
+    {
+      "id": "s04_b11",
+      "title": "🟣 1. Acidified Aqueous Potassium Manganate(VII), KMnO4 Thuốc tím KMnO4axit hóa l...",
+      "selector": "[data-lecture-section=\"s04_b11\"]",
+      "en": "🟣 1. Acidified Aqueous Potassium Manganate(VII), KMnO4 KMnO4is a powerful oxidising agent used to test for a reducing agent (e.g. SO2, Fe2+, KI). Colour change: PURPLE ⟶ COLOURLESS Reason: Purple MnO4−(Mn = +7) is reduced to colourless Mn2+(Mn = +2).",
+      "vi": "🟣 1. Acidified Aqueous Potassium Manganate(VII), KMnO4 Thuốc tím KMnO4axit hóa là oxidising agent mạnh, dùng để nhận biết sự có mặt của một chất khử (reducing agent) (VD: SO2, Fe2+). Đổi màu: MÀU TÍM (Purple) ⟶ KHÔNG MÀU (Colourless) Giải thích: Ion tím MnO4−(Mn = +7) bị khử thành ion không màu Mn2+(+2).",
+      "duration": 55.95,
+      "startTime": 3884.31,
+      "endTime": 3940.26,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b11.mp3"
+    },
+    {
+      "id": "s04_b12",
+      "title": "🟤 2. Aqueous Potassium Iodide, KI(aq) Dung dịch KI là reducing agent , dùng để n...",
+      "selector": "[data-lecture-section=\"s04_b12\"]",
+      "en": "🟤 2. Aqueous Potassium Iodide, KI(aq) KI is a reducing agent used to test for an oxidising agent (e.g. Cl2, H2O2, Fe3+, KMnO4). Colour change: COLOURLESS ⟶ BROWN (turns blue-black with starch) Reason: Colourless I−ions (−1) are oxidised to brown dissolved I2(aq) (0): 2I⁻ → I₂ + 2e⁻ .",
+      "vi": "🟤 2. Aqueous Potassium Iodide, KI(aq) Dung dịch KI là reducing agent , dùng để nhận biết một chất oxi hóa (oxidising agent). Đổi màu: KHÔNG MÀU (Colourless) ⟶ MÀU NÂU (Brown) Giải thích: Ion I−(−1) không màu bị oxi hóa thành phân tử I2(aq) (0) màu nâu: 2I⁻ → I₂ + 2e⁻ .",
+      "duration": 56.76,
+      "startTime": 3940.26,
+      "endTime": 3997.02,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b12.mp3"
+    },
+    {
+      "id": "s04_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Chlorine gas is bubbled into colourless aqueous potassium iodide: Cl2(g) + 2KI(aq) → 2KCl(aq) + I2(aq) . Which row correctly identifies the colour change, the change in oxidation number of iodine, and the oxidising agent? A. Colourless to brown | −1 to 0 | Cl₂ B. Brown to colourless | 0 to −1 | KI C. Colourless to purple | −1 to +1 | Cl₂ D. Colourless to brown | −1 to 0 | I₂ ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Aqueous KI is colourless, and dissolved iodine molecules I2(aq) are brown , so the solution turns colourless to brown (eliminating B and C). In KI, iodide is the monatomic ion I−(oxidation number −1 ); in uncombined I2, the oxidation number is 0 (−1 → 0 = oxidation). The oxidising agent is the reactant that oxidises I−and is itself reduced: Cl2 (0 → −1) — never pick product I2(eliminating D)!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Chlorine gas is bubbled into colourless aqueous potassium iodide: Cl2(g) + 2KI(aq) → 2KCl(aq) + I2(aq) . Which row correctly identifies the colour change, the change in oxidation number of iodine, and the oxidising agent? (Sục khí chlorine vào dung dịch KI không màu theo phương trình trên. Dòng nào nêu đúng sự đổi màu, sự thay đổi số oxi hóa của iodine và chất đóng vai trò oxidising agent?) A. Colourless to brown | −1 to 0 | Cl₂ B. Brown to colourless | 0 to −1 | KI C. Colourless to purple | −1 to +1 | Cl₂ D. Colourless to brown | −1 to 0 | I₂ ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Dung dịch KI ban đầu không màu, phản ứng giải phóng phân tử I2(aq) tan trong nước có màu nâu (brown) → đổi từ colourless sang brown (loại B, C). Trong KI, ion I−có số oxi hóa −1 ; sang đơn chất I2bằng 0 (−1 → 0 là bị oxi hóa). Oxidising agent phải là chất tham gia bên vế trái nhận electron và tự bị khử: đó chính là Cl2 (0 → −1), cấm chọn sản phẩm I2(loại D)!",
+      "duration": 165.31,
+      "startTime": 3997.02,
+      "endTime": 4162.33,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b13.mp3"
+    },
+    {
+      "id": "s04_b14",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Sulfur dioxide gas, SO2, is bubbled through acidified aqueous potassium manganate(VII), KMnO4. The ionic equation is: 5SO2+ 2MnO4−+ 2H2O → 5SO42−+ 2Mn2++ 4H+ (a) State the colour change observed in the test tube. [1] (b) Calculate the oxidation number of sulfur in SO2 and in SO42− , and use these values to explain why SO2is acting as a reducing agent. [4] (c) Explain, using oxidation numbers, why MnO4−is reduced. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Changes from purple (pink) to colourless [1m] . (b) In SO2: S + 2(−2) = 0 ⇒ S = +4 [1m] .In SO42−: S + 4(−2) = −2 ⇒ S = +6 [1m] .Sulfur's oxidation number increases from +4 to +6 so SO2is oxidised [1m] ; because SO2reduces MnO4−while being oxidised itself, SO2is the reducing agent [1m] . (c) Manganese's oxidation number decreases from +7 (in MnO4−) to +2 (in Mn2+) [1m] . 💡 Intuition Check: Always write the \"+\" sign explicitly on positive oxidation numbers (+4, +6, +7) — writing bare \"4\" or \"6\" risks losing marks in Cambridge Paper 4!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Sulfur dioxide gas, SO2, is bubbled through acidified aqueous potassium manganate(VII), KMnO4: 5SO2+ 2MnO4−+ 2H2O → 5SO42−+ 2Mn2++ 4H+ (Sục khí SO2qua dung dịch thuốc tím KMnO4đã axit hóa.) (a) State the colour change observed in the test tube. (Nêu hiện tượng đổi màu quan sát được.) (b) Calculate the oxidation number of sulfur in SO2 and in SO42− , and explain why SO2is acting as a reducing agent. (Tính số oxi hóa của lưu huỳnh trong SO2và SO42−, từ đó giải thích vì sao SO2là chất khử.) (c) Explain, using oxidation numbers, why MnO4−is reduced. (Dùng số oxi hóa giải thích vì sao MnO4−bị khử.) ✍️ Lời giải chi tiết theo thang điểm: (a) Đổi từ màu tím sang không màu . (b) Trong SO2: S + 2(−2) = 0 ⇒ S = +4 .Trong SO42−: S + 4(−2) = −2 ⇒ S = +6 .Số oxi hóa của S tăng từ +4 lên +6 nên SO2bị oxi hóa (oxidised) ; vì SO2khử MnO4−và bản thân nó bị oxi hóa nên SO2là chất khử (reducing agent) . (c) Số oxi hóa của Mn giảm từ +7 (trong MnO4−) xuống +2 (trong Mn2+) . 💡 Kiểm tra bản chất: Luôn ghi rõ dấu cộng (+) trước số oxi hóa dương (+4, +6, +7) — viết số trơn \"4\" hoặc \"6\" rất dễ bị giám khảo trừ điểm!",
+      "duration": 229.39,
+      "startTime": 4162.33,
+      "endTime": 4391.72,
+      "audioUrl": "/audio/lectures/chemistry/6/s04_b14.mp3"
+    }
+  ]
+}

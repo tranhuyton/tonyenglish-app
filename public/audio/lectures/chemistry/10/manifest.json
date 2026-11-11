@@ -1,0 +1,664 @@
+{
+  "lectureId": "a0959822-b499-501b-ad83-4ba423b031ff",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 10: Chemistry of the environment",
+  "totalDuration": 4228.84,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_p1_sub02": {
+      "start": 8,
+      "end": 12
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_p2_sub02": {
+      "start": 8,
+      "end": 12
+    },
+    "s01_wex": {
+      "start": 13,
+      "end": 14
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 14
+    },
+    "s02_int": {
+      "start": 16,
+      "end": 18
+    },
+    "s02_p1_sub01": {
+      "start": 19,
+      "end": 23
+    },
+    "s02_p1_sub02": {
+      "start": 24,
+      "end": 27
+    },
+    "s02_p2_sub01": {
+      "start": 19,
+      "end": 23
+    },
+    "s02_p2_sub02": {
+      "start": 24,
+      "end": 27
+    },
+    "s02_wex": {
+      "start": 28,
+      "end": 29
+    },
+    "s02_hdr": {
+      "start": 15,
+      "end": 29
+    },
+    "s03_int": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_p1_sub01": {
+      "start": 35,
+      "end": 35
+    },
+    "s03_p1_sub02": {
+      "start": 36,
+      "end": 39
+    },
+    "s03_p2_sub01": {
+      "start": 35,
+      "end": 35
+    },
+    "s03_p2_sub02": {
+      "start": 36,
+      "end": 39
+    },
+    "s03_wex": {
+      "start": 40,
+      "end": 41
+    },
+    "s03_hdr": {
+      "start": 30,
+      "end": 41
+    },
+    "s04_hdr": {
+      "start": 42,
+      "end": 46
+    },
+    "s05_p1_sub01": {
+      "start": 49,
+      "end": 49
+    },
+    "s05_p2_sub01": {
+      "start": 49,
+      "end": 49
+    },
+    "s05_hdr": {
+      "start": 47,
+      "end": 49
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 10: Hóa học Môi trường (Chemistry of the Environment)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 10: Chemistry of the Environment. Water Tests & Domestic Treatment • Natural Water Impurities • NPK Fertilisers • Clean Dry Air • Atmospheric Pollutants, Greenhouse Effect & Catalytic Converters.",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 10: Hóa học Môi trường. Nhận biết & Xử lý Nước sinh hoạt • Tạp chất Nước tự nhiên • Phân bón NPK • Không khí sạch • 6 Chất Ô nhiễm, Hiệu ứng Nhà kính & Bộ Chuyển đổi Xúc tác.",
+      "duration": 42.6,
+      "startTime": 0.0,
+      "endTime": 42.6,
+      "audioUrl": "/audio/lectures/chemistry/10/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "💧 1. NƯỚC: NHẬN BIẾT, ĐỘ TINH KHIẾT & XỬ LÝ NƯỚC (Water — 10.1)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "💧 1. WATER: CHEMICAL TESTS, IMPURITIES & TREATMENT (10.1). Cambridge IGCSE examiners strictly distinguish between testing for the presence of water (chemical colour-change test), testing for the purity of water (physical melting/boiling point check), and making natural water potable (safe to drink).",
+      "vi": "💧 1. NƯỚC: NHẬN BIẾT, ĐỘ TINH KHIẾT & XỬ LÝ NƯỚC (Water — 10.1). Đề thi Cambridge 0620 phân biệt cực kỳ gắt gao giữa: thử sự có mặt của nước bằng thuốc thử hóa học, kiểm tra độ tinh khiết bằng hằng số vật lý, và xử lý nước tự nhiên thành nước uống an toàn ( potable water ).",
+      "duration": 41.37,
+      "startTime": 42.6,
+      "endTime": 83.97,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of Presence vs. Purity of Water like checking whether a drink contains water vs. proving it is 100% laboratory-grade H₂O (seawater and lemonade both contain water molecules, so both trigger chemical water indicators!). Meanwhile, Domestic Water Treatment works like a 3-checkpoint airport security line : Checkpoint 1 ( Sedimentation & Filtration ) screens out bulky mud, grit, and insoluble solids; Checkpoint 2 ( Activated Carbon ) acts like a charcoal air-purifier sponge that traps smelly organic molecules; Checkpoint 3 ( Chlorination ) is the disinfectant gate that kills invisible germs ( microbes ).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung sự khác biệt giữa Presence vs. Purity of Water giống như hỏi \"Trong ly có nước không?\" (nước biển hay nước chanh đều có phân tử H₂O nên đều làm đổi màu thuốc thử hóa học!) khác hẳn với kiểm tra \"Nước có tinh khiết 100% không?\" . Còn dây chuyền Xử lý nước sinh hoạt giống hệt 3 cổng an ninh sân bay : Cổng 1 ( Sedimentation & Filtration ) chặn bùn đất và hạt rắn không tan; Cổng 2 ( Carbon ) là lớp than hoạt tính hút sạch mùi hôi và vị lạ; Cổng 3 ( Chlorination ) là buồng khử trùng tiêu diệt vi khuẩn gây bệnh ( microbes ).",
+      "duration": 82.84,
+      "startTime": 83.97,
+      "endTime": 166.81,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Chemical Presence Test: Add anhydrous cobalt(II) chloride (turns blue ➔ pink ) or anhydrous copper(II) sulfate (turns white ➔ blue ). 🟦 Core 2 → Physical Purity Check & Lab Water: Pure water melts sharply at 0 °C and boils sharply at 100 °C ; always use distilled water in practical chemistry because it contains fewer chemical impurities than tap water. 🟦 Core 3 → Natural Water & Potable Treatment: Distinguish beneficial dissolved substances ( dissolved oxygen for aquatic respiration, essential metal mineral ions ) from harmful ones ( toxic heavy metal ions , plastics , sewage microbes causing disease, and nitrates/phosphates causing deoxygenation of water ), then treat domestic water via (1) sedimentation & filtration ➔ (2) carbon ➔ (3) chlorination .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Thử sự có mặt (Presence): Dùng anhydrous cobalt(II) chloride (đổi màu blue ➔ pink ) hoặc anhydrous copper(II) sulfate (đổi màu white ➔ blue ). 🟦 Core 2 → Thử độ tinh khiết (Purity) & Nước phòng thí nghiệm: Nước tinh khiết có melting point = 0 °C và boiling point = 100 °C ; luôn dùng distilled water trong thực hành hóa học vì nó contains fewer chemical impurities hơn nước máy. 🟦 Core 3 → Nước tự nhiên & Cấp nước sinh hoạt: Phân biệt chất có lợi ( dissolved oxygen cho thủy sinh, essential minerals ) với chất có hại ( toxic metal compounds , plastics , sewage microbes gây bệnh, nitrates & phosphates gây deoxygenation of water ); xử lý nước sinh hoạt qua 3 bước: (1) sedimentation & filtration ➔ (2) carbon ➔ (3) chlorination .",
+      "duration": 118.31,
+      "startTime": 166.81,
+      "endTime": 285.12,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never use anhydrous CuSO₄ or anhydrous CoCl₂ to prove water is pure (any aqueous solution turns anhydrous CuSO₄ blue!), and never write that chlorination makes tap water \"chemically pure\" — chlorine only kills harmful microbes while dissolved mineral ions remain.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không dùng anhydrous CuSO₄ hay CoCl₂ để chứng minh nước tinh khiết (nước muối hay axit loãng cũng làm CuSO₄ khan hóa xanh!), và không bao giờ viết chlorination làm nước \"tinh khiết (pure)\" — khí Cl₂ chỉ kills harmful microbes , còn các ion khoáng hòa tan vẫn còn nguyên trong nước máy.",
+      "duration": 44.18,
+      "startTime": 285.12,
+      "endTime": 329.3,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "🧪 Thử SỰ CÓ MẶT của nước (Presence of Water)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🧪 Chemical Tests for PRESENCE of Water. Proves water molecules are present (gives a positive result with pure water, tap water, seawater, and any aqueous solution): Anhydrous cobalt(II) chloride (CoCl₂): colour changes from blue ➔ pink ( CoCl₂ + 6H₂O ➔ CoCl₂·6H₂O ). Anhydrous copper(II) sulfate (CuSO₄): colour changes from white ➔ blue ( CuSO₄ + 5H₂O ➔ CuSO₄·5H₂O ).",
+      "vi": "🧪 Thử SỰ CÓ MẶT của nước. Dùng hóa chất khan. Hễ mẫu thử có chứa phân tử H₂O (dù là nước bẩn hay nước biển) đều đổi màu: Anhydrous cobalt(II) chloride (CoCl₂ khan): đổi từ xanh lam (blue) ➔ hồng (pink) ( CoCl₂ + 6H₂O ➔ CoCl₂·6H₂O ). Anhydrous copper(II) sulfate (CuSO₄ khan): đổi từ trắng (white) ➔ xanh lam (blue) ( CuSO₄ + 5H₂O ➔ CuSO₄·5H₂O ).",
+      "duration": 69.94,
+      "startTime": 329.3,
+      "endTime": 399.24,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🌡️ Thử ĐỘ TINH KHIẾT của nước (Purity of Water)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🌡️ Physical Test for PURITY of Water. Chemical reagents CANNOT prove water is 100% pure! You must measure sharp fixed physical constants at 1 atm: Melting point: Pure water melts sharply at exactly 0 °C. Boiling point: Pure water boils sharply at exactly 100 °C. Effect of impurities: Lower the m.p. (< 0 °C) and raise the b.p. (> 100 °C), causing melting/boiling over a range.",
+      "vi": "🌡️ Thử ĐỘ TINH KHIẾT của nước. Hóa chất KHÔNG THỂ chứng minh nước tinh khiết 100%! Bắt buộc đo nhiệt độ chuyển thể ở 1 atm: Điểm nóng chảy (Melting point): nóng chảy/đông đặc đúng ở 0 °C. Điểm sôi (Boiling point): sôi sắc nét đúng ở 100 °C. Nếu lẫn tạp chất: làm hạ điểm nóng chảy (< 0 °C) và tăng điểm sôi (> 100 °C).",
+      "duration": 62.27,
+      "startTime": 399.24,
+      "endTime": 461.51,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🔬 Tại sao trong Thí nghiệm Hóa học luôn dùng Nước cất (Distilled Water) thay vì ...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🔬 Why is Distilled Water used in Practical Chemistry instead of Tap Water? (10.1.3) Distilled water is used rather than tap water because it contains fewer chemical impurities (dissolved ions such as Cl⁻, SO₄²⁻, Ca²⁺ in tap water would interfere with experiments and produce false precipitates in chemical analysis).",
+      "vi": "🔬 Tại sao trong Thí nghiệm Hóa học luôn dùng Nước cất (Distilled Water) thay vì Nước máy (Tap Water)? (10.1.3) Ta dùng distilled water vì nó chứa ít tạp chất hóa học hơn . Nước máy chứa sẵn các ion hòa tan sẽ gây nhiễu phản ứng và tạo kết tủa giả khi phân tích định tính ion!",
+      "duration": 39.67,
+      "startTime": 461.51,
+      "endTime": 501.18,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Chất có trong Nước tự nhiên: (a) Oxy hòa tan ( Dissolved oxygen, O₂ ); Phân loại...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Substance in Natural Water: (a) Dissolved oxygen (O₂); Classification: ✅ Beneficial; Environmental / Biological Impact (0620 Syllabus): Essential for aerobic respiration of aquatic life (fish, invertebrates, aquatic plants). Substance in Natural Water: (b) Metal compounds (ions); Classification: ⚖️ Both; Environmental / Biological Impact (0620 Syllabus): Beneficial: Some metal compounds provide essential minerals for life (e.g. Ca²⁺ for bones/teeth, Mg²⁺, Fe²⁺). Harmful: Heavy metal compounds (e.g. lead Pb²⁺, mercury Hg²⁺, cadmium Cd²⁺) are toxic. Substance in Natural Water: (c) Plastics; Classification: ⚠️ Harmful; Environmental / Biological Impact (0620 Syllabus): Non-biodegradable polymers accumulate in rivers/oceans and harm aquatic life (ingestion, starvation, entanglement). Substance in Natural Water: (d) Sewage & (e) Harmful microbes; Classification: ⚠️ Harmful; Environmental / Biological Impact (0620 Syllabus): Untreated sewage contains harmful microbes (pathogenic bacteria and viruses) which cause diseases such as cholera and typhoid. Substance in Natural Water: (f) Nitrates (fertilisers) & (g) Phosphates (fertilisers & detergents); Classification: ⚠️ Harmful; Environmental / Biological Impact (0620 Syllabus): Excess nitrates and phosphates lead to deoxygenation of water and damage to aquatic life (rapid algal growth followed by bacterial decay depletes dissolved O₂).",
+      "vi": "Chất có trong Nước tự nhiên: (a) Oxy hòa tan ( Dissolved oxygen, O₂ ); Phân loại: ✅ Có lợi; Tác động Sinh thái & Sức khỏe (Syllabus 0620): Thiết yếu cho quá trình hô hấp hiếu khí của sinh vật thủy sinh (aquatic life) như cá, tôm. Chất có trong Nước tự nhiên: (b) Hợp chất kim loại ( Metal compounds ); Phân loại: ⚖️ Cả hai; Tác động Sinh thái & Sức khỏe (Syllabus 0620): Có lợi: Cung cấp khoáng chất thiết yếu cho sự sống như Ca²⁺ tạo xương/răng, Mg²⁺, Fe²⁺. Có hại: Một số kim loại nặng như chì (Pb²⁺), thủy ngân (Hg²⁺), cadmium (Cd²⁺) rất độc (toxic). Chất có trong Nước tự nhiên: (c) Rác thải nhựa ( Plastics ); Phân loại: ⚠️ Có hại; Tác động Sinh thái & Sức khỏe (Syllabus 0620): Không phân hủy sinh học, tích tụ gây tổn thương sinh vật thủy sinh do nuốt phải hoặc mắc kẹt. Chất có trong Nước tự nhiên: (d) Nước thải ( Sewage ) & (e) Vi sinh vật gây bệnh; Phân loại: ⚠️ Có hại; Tác động Sinh thái & Sức khỏe (Syllabus 0620): Sewage chứa các vi sinh vật có hại (harmful microbes) gây ra các dịch bệnh đường nước nguy hiểm (tả, thương hàn). Chất có trong Nước tự nhiên: (f) Nitrates (từ phân bón) & (g) Phosphates (phân bón & chất tẩy rửa); Phân loại: ⚠️ Có hại; Tác động Sinh thái & Sức khỏe (Syllabus 0620): Dẫn đến làm cạn kiệt oxy trong nước và hủy hoại sinh vật thủy sinh (hiện tượng tảo nở hoa / phú dưỡng).",
+      "duration": 218.95,
+      "startTime": 501.18,
+      "endTime": 720.13,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🚰 10.1.7 Quy trình Xử lý Nước Sinh hoạt (Domestic Water Supply — 3 Bước Chuẩn)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🚰 10.1.7 Treatment of the Domestic Water Supply (3 Essential Stages). Raw water from reservoirs or rivers undergoes three key stages to make it safe for domestic drinking:",
+      "vi": "🚰 10.1.7 Quy trình Xử lý Nước Sinh hoạt (Domestic Water Supply — 3 Bước Chuẩn). Nước thô từ sông, hồ chứa phải trải qua 3 công đoạn bắt buộc trước khi cấp đến vòi nước gia đình:",
+      "duration": 23.6,
+      "startTime": 720.13,
+      "endTime": 743.73,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "Bước 1: Sedimentation & Filtration Lắng đọng (Sedimentation) cho hạt bùn nặng ch...",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "Stage 1: Sedimentation & Filtration Sedimentation allows larger insoluble particles to settle to the bottom of tanks; filtration through sand and gravel beds removes remaining insoluble solids.",
+      "vi": "Bước 1: Sedimentation & Filtration Lắng đọng (Sedimentation) cho hạt bùn nặng chìm xuống đáy bể, kết hợp lọc qua cát sỏi (Filtration) để loại bỏ chất rắn không tan (remove solids).",
+      "duration": 26.77,
+      "startTime": 743.73,
+      "endTime": 770.5,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "Bước 2: Use of Carbon (Than hoạt tính) Cho nước đi qua lớp than hoạt tính ( carb...",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "Stage 2: Use of Carbon Water passes through beds of activated carbon (charcoal) to adsorb dissolved organic compounds and remove unpleasant tastes and odours.",
+      "vi": "Bước 2: Use of Carbon (Than hoạt tính) Cho nước đi qua lớp than hoạt tính ( carbon ) để hấp phụ tạp chất hữu cơ, khử mùi hôi và vị lạ.",
+      "duration": 21.3,
+      "startTime": 770.5,
+      "endTime": 791.8,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "Bước 3: Chlorination (Khử trùng Clo) Sục một lượng nhỏ khí chlorine (Cl₂) để tiê...",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "Stage 3: Chlorination Controlled small amounts of chlorine (Cl₂) are added to kill harmful microbes / bacteria . ( Exam Note: Never write that chlorine makes water \"pure\"!).",
+      "vi": "Bước 3: Chlorination (Khử trùng Clo) Sục một lượng nhỏ khí chlorine (Cl₂) để tiêu diệt vi khuẩn/vi sinh vật gây bệnh (kill microbes) . ( Chú ý: Không bao giờ viết clo làm nước \"pure\"!).",
+      "duration": 28.04,
+      "startTime": 791.8,
+      "endTime": 819.84,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ A sample of river water collected downstream from farmland turns white anhydrous copper(II) sulfate blue and boils over a range of 100.8 °C to 101.4 °C. During domestic water treatment, the water is passed through a bed of carbon.Which row correctly explains the boiling behaviour and states the role of the carbon bed? A. It boils above 100 °C because it contains dissolved impurities; carbon kills harmful bacteria. B. It boils above 100 °C because it contains dissolved impurities; carbon removes unpleasant tastes and odours. C. The blue colour proves the river water is pure; carbon removes insoluble sand particles. D. The boiling range proves no water is present; carbon neutralises dissolved nitrates. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Step 1 (Purity check): Pure water boils sharply at 100 °C ; boiling above 100 °C over a range proves the sample contains dissolved impurities (eliminating C and D). Step 2 (Role of carbon): In domestic water treatment, activated carbon adsorbs trace organic substances to remove tastes and odours , whereas chlorination kills bacteria/microbes (eliminating A). Therefore B is correct.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 A sample of river water collected downstream from farmland turns white anhydrous copper(II) sulfate blue and boils over a range of 100.8 °C to 101.4 °C. Một mẫu nước sông lấy gần vùng nông nghiệp làm CuSO₄ khan màu trắng hóa xanh và sôi trong khoảng 100.8 °C – 101.4 °C. Khi xử lý nước sinh hoạt, nước được dẫn qua cột than carbon. Dòng nào giải thích đúng hiện tượng sôi và vai trò của cột carbon? A. Sôi trên 100 °C do tạp chất hòa tan; carbon diệt vi khuẩn. B. Sôi trên 100 °C do tạp chất hòa tan; carbon khử mùi và vị lạ. C. Màu xanh chứng tỏ nước tinh khiết; carbon lọc cát không tan. D. Khoảng sôi chứng tỏ không có nước; carbon trung hòa nitrate. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Bước 1 (Kiểm tra độ tinh khiết): Nước tinh khiết sôi đúng ở 100 °C ; việc sôi trên 100 °C chứng tỏ mẫu nước chứa tạp chất hòa tan (dissolved impurities) (loại C và D).",
+      "duration": 165.43,
+      "startTime": 819.84,
+      "endTime": 985.27,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [5 marks] Water from a natural reservoir contains insoluble clay particles, dissolved oxygen, unpleasant-smelling organic compounds, nitrates washed off farmland, and pathogenic bacteria.(a) State why dissolved oxygen is beneficial in the reservoir, whereas excess nitrates are harmful. [2](b) Describe the three stages used at a waterworks to make this reservoir water safe for domestic drinking. [3] ✍️ Step-by-Step Mark Scheme Solution: • (a) Dissolved oxygen is essential for aerobic respiration to support aquatic life (e.g. fish) [1m] . Excess nitrates cause rapid algal growth and bacterial decay, leading to deoxygenation of water and damage to aquatic life [1m] .• (b) Stage 1: Sedimentation and filtration to remove insoluble clay/solid particles [1m] . Stage 2: Pass through carbon (charcoal) to remove unpleasant tastes and odours [1m] . Stage 3: Chlorination (add chlorine) to kill harmful microbes / bacteria [1m] . 💡 Intuition Check: Match every impurity to its exact treatment barrier: solids ➔ sedimentation & filtration , smells/tastes ➔ carbon , microbes ➔ chlorination . Dissolved mineral ions stay in tap water, which is why chemists switch to distilled water in the lab!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 / Paper 4 [5 điểm] Water from a natural reservoir contains insoluble clay particles, dissolved oxygen, unpleasant-smelling organic compounds, nitrates washed off farmland, and pathogenic bacteria.(a) State why dissolved oxygen is beneficial in the reservoir, whereas excess nitrates are harmful. (b) Describe the three stages used at a waterworks to make this reservoir water safe for domestic drinking. (Nước hồ chứa tự nhiên có bùn sét không tan, oxy hòa tan, hợp chất hữu cơ gây mùi, muối nitrate rửa trôi từ đồng ruộng và vi khuẩn gây bệnh. (a) Nêu lý do dissolved oxygen có lợi còn dư thừa nitrates lại có hại. (b) Mô tả 3 giai đoạn xử lý nước hồ thành nước sinh hoạt an toàn. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Dissolved oxygen cần thiết cho hô hấp hiếu khí để duy trì sinh vật thủy sinh (aquatic life) như cá . Dư thừa nitrates gây phú dưỡng làm cạn kiệt oxy trong nước và gây hại cho thủy sinh .• (b) Giai đoạn 1: Sedimentation and filtration (lắng và lọc qua cát sỏi) để loại bỏ chất rắn/bùn sét không tan . Giai đoạn 2: Dẫn qua carbon (than hoạt tính) để remove unpleasant tastes and odours (khử mùi và vị lạ) . Giai đoạn 3: Chlorination (sục khí chlorine) để kill harmful microbes / bacteria (tiêu diệt vi sinh vật gây bệnh) .",
+      "duration": 188.59,
+      "startTime": 985.27,
+      "endTime": 1173.86,
+      "audioUrl": "/audio/lectures/chemistry/10/s01_b13.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🌱 2. PHÂN BÓN HÓA HỌC NPK & CHỐNG RỈ SÉT MÔI TRƯỜNG (10.2)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🌱 2. NPK FERTILISERS & ENVIRONMENTAL CORROSION REVIEW (10.2). Intensive crop farming depletes mineral ions from soil. Synthetic fertilisers replenish soluble nitrogen, phosphorus, and potassium ions for healthy plant growth, while environmental chemistry also monitors material degradation (rusting).",
+      "vi": "🌱 2. PHÂN BÓN HÓA HỌC NPK & CHỐNG RỈ SÉT MÔI TRƯỜNG (10.2). Canh tác nông nghiệp liên tục làm đất bạc màu khoáng chất. Phân bón tổng hợp bổ sung các ion khoáng hòa tan giúp cây trồng tăng trưởng vượt trội.",
+      "duration": 35.98,
+      "startTime": 1173.86,
+      "endTime": 1209.84,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of NPK fertilisers like a 3-part sports nutrition meal for crops — \"Shoots, Roots & Fruits\" : N (Nitrogen) builds green leafy shoots , P (Phosphorus) anchors strong deep roots , and K (Potassium) boosts healthy flowers and fruits . Because plant roots can only drink dissolved ions through soil water (never raw N₂ gas from the air!), every synthetic fertiliser must be a water-soluble salt .",
+      "vi": "🎯 Hình dung đời thường: Hãy nhớ bộ 3 Phân bón NPK bằng khẩu hiệu cực vần \"Lá – Rễ – Quả\" : N (Nitrogen/Đạm) nuôi thân lá xanh mướt, P (Phosphorus/Lân) giúp bộ rễ bám sâu khỏe mạnh, còn K (Potassium/Kali) thúc đẩy ra hoa đậu quả . Vì rễ cây chỉ \"uống\" được các ion hòa tan trong nước (không thể hít khí N₂ trơ từ trời!), mọi loại phân hóa học đều phải là muối tan tốt trong nước .",
+      "duration": 60.13,
+      "startTime": 1209.84,
+      "endTime": 1269.97,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Official Fertiliser Salts: Memorise that ammonium salts and nitrates are soluble fertilisers — e.g. ammonium nitrate (NH₄NO₃) , ammonium sulfate ((NH₄)₂SO₄) , ammonium phosphate ((NH₄)₃PO₄) , and potassium nitrate (KNO₃) . 🟦 Core 2 → NPK Definition: State that NPK fertilisers provide the elements nitrogen (N) , phosphorus (P) , and potassium (K) for improved plant growth . 🟦 Core 3 → Acid–Base Soil Chemistry Link: Warming or mixing an ammonium salt with a base/alkali such as calcium hydroxide, Ca(OH)₂ (slaked lime) displaces ammonia gas (NH₃) , losing nitrogen from the soil.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Các muối phân bón chuẩn: Thuộc lòng nhóm ammonium salts và nitrates làm phân bón: ammonium nitrate (NH₄NO₃) , ammonium sulfate ((NH₄)₂SO₄) , ammonium phosphate ((NH₄)₃PO₄) và potassium nitrate (KNO₃) . 🟦 Core 2 → Định nghĩa NPK: Phân bón NPK cung cấp đủ 3 nguyên tố nitrogen (N) , phosphorus (P) và potassium (K) giúp cây trồng phát triển tốt hơn . 🟦 Core 3 → Phản ứng kỵ vôi kiềm: Trộn muối ammonium (NH₄⁺) với vôi tôi Ca(OH)₂ (bazơ) sẽ đẩy khí ammonia (NH₃) bay mất vào không khí, làm thất thoát đạm của đất.",
+      "duration": 103.44,
+      "startTime": 1269.97,
+      "endTime": 1373.41,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do not be fooled into thinking NH₄NO₃ supplies two different NPK elements just because nitrogen appears twice in its formula — it supplies Nitrogen (N) only ! To supply two different NPK elements from a single salt, pick potassium nitrate (KNO₃ ➔ K + N) or ammonium phosphate ((NH₄)₃PO₄ ➔ N + P) .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bị lừa rằng NH₄NO₃ cung cấp \"2 nguyên tố phân bón khác nhau\" chỉ vì chữ N xuất hiện 2 lần trong công thức — nó chỉ cung cấp duy nhất nguyên tố Nitrogen (N) ! Muốn 1 muối cung cấp cùng lúc 2 nguyên tố NPK khác nhau, phải chọn KNO₃ (K + N) hoặc (NH₄)₃PO₄ (N + P) .",
+      "duration": 52.24,
+      "startTime": 1373.41,
+      "endTime": 1425.65,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Cây trồng không thể hấp thụ trực tiếp khí N₂ trơ từ không khí. Do đó các muối am...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Plants cannot absorb unreactive N₂ gas directly from the air. Water-soluble ammonium salts and nitrates — such as ammonium nitrate (NH₄NO₃) , ammonium sulfate ((NH₄)₂SO₄) , ammonium phosphate ((NH₄)₃PO₄) , and potassium nitrate (KNO₃) — are used as fertilisers. NPK fertilisers provide the three essential elements Nitrogen (N) , Phosphorus (P) , and Potassium (K) for improved plant growth:",
+      "vi": "Cây trồng không thể hấp thụ trực tiếp khí N₂ trơ từ không khí. Do đó các muối ammonium (ammonium salts) và muối nitrate (nitrates) tan tốt trong nước — như NH₄NO₃ , (NH₄)₂SO₄ , (NH₄)₃PO₄ , và KNO₃ — được dùng làm phân bón. Phân bón NPK cung cấp đủ 3 nguyên tố thiết yếu Nitrogen (N) , Phosphorus (P) và Potassium (K) :",
+      "duration": 64.4,
+      "startTime": 1425.65,
+      "endTime": 1490.05,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🌿 N — Nitrogen (Đạm)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🌿 N — Nitrogen. Essential for making amino acids, proteins, and chlorophyll — promotes rapid, green leafy shoot growth.",
+      "vi": "🌿 N — Nitrogen (Đạm). Tổng hợp amino acids, protein và diệp lục (chlorophyll) — giúp cây đâm chồi và phát triển thân lá xanh tốt.",
+      "duration": 20.95,
+      "startTime": 1490.05,
+      "endTime": 1511.0,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🌱 P — Phosphorus (Lân)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🌱 P — Phosphorus. Essential for strong root development , ATP energy transfer, and healthy seedling establishment.",
+      "vi": "🌱 P — Phosphorus (Lân). Kích thích phát triển bộ rễ khỏe mạnh (healthy roots) , truyền năng lượng ATP và nảy mầm sớm.",
+      "duration": 18.47,
+      "startTime": 1511.0,
+      "endTime": 1529.47,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🌸 K — Potassium (Kali)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🌸 K — Potassium. Promotes flowering, fruit ripening , enzyme activation, and overall resistance to disease and frost.",
+      "vi": "🌸 K — Potassium (Kali). Thúc đẩy ra hoa, đậu quả , hoạt hóa enzyme và tăng sức đề kháng sâu bệnh.",
+      "duration": 18.56,
+      "startTime": 1529.47,
+      "endTime": 1548.03,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "💡 Lưu ý Hóa Nông nghiệp: Tuyệt đối KHÔNG bón vôi khử chua (CaO / Ca(OH)₂) cùng l...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "💡 Soil Chemistry Exam Tip: Farmers must NEVER add basic calcium oxide / slaked lime (Ca(OH)₂) to acidic soil at the same time as an ammonium fertiliser! Alkalis react with ammonium salts to displace ammonia gas (NH₃) into the air ( 2NH₄NO₃ + Ca(OH)₂ ➔ Ca(NO₃)₂ + 2H₂O + 2NH₃(g) ), wasting valuable nitrogen.",
+      "vi": "💡 Lưu ý Hóa Nông nghiệp: Tuyệt đối KHÔNG bón vôi khử chua (CaO / Ca(OH)₂) cùng lúc với phân đạm ammonium! Kiềm phản ứng với muối ammonium giải phóng khí ammonia (NH₃) bay mất vào không khí ( 2NH₄NO₃ + Ca(OH)₂ ➔ Ca(NO₃)₂ + 2H₂O + 2NH₃(g) ), làm thất thoát đạm.",
+      "duration": 55.51,
+      "startTime": 1548.03,
+      "endTime": 1603.54,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "Khí oxygen (O₂) và hơi ẩm/nước (H₂O) ngoài môi trường làm sắt và thép (iron & st...",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "Atmospheric oxygen (O₂) and water (H₂O) cause exposed iron and steel infrastructure to rust into hydrated iron(III) oxide (Fe₂O₃· x H₂O) (accelerated by acid rain SO₂/NOₓ and coastal sea spray):",
+      "vi": "Khí oxygen (O₂) và hơi ẩm/nước (H₂O) ngoài môi trường làm sắt và thép (iron & steel) bị rỉ sét thành hydrated iron(III) oxide (Fe₂O₃· x H₂O) (nhanh hơn nhiều khi gặp mưa axit hoặc hơi muối biển):",
+      "duration": 36.22,
+      "startTime": 1603.54,
+      "endTime": 1639.76,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "1. Barrier Methods (Rào cản): Sơn (paint), tra dầu mỡ (grease) hoặc bọc nhựa ngă...",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "1. Barrier Methods: Painting, greasing, or coating with plastic excludes O₂ and H₂O from the iron surface.",
+      "vi": "1. Barrier Methods (Rào cản): Sơn (paint), tra dầu mỡ (grease) hoặc bọc nhựa ngăn cách sắt với O₂ và H₂O.",
+      "duration": 19.11,
+      "startTime": 1639.76,
+      "endTime": 1658.87,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "2. Galvanising (Mạ kẽm): Phủ lớp zinc (Zn) lên thép — vừa ngăn cách vật lý vừa b...",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "2. Galvanising: Coating steel with zinc (Zn) provides both a physical barrier and sacrificial protection.",
+      "vi": "2. Galvanising (Mạ kẽm): Phủ lớp zinc (Zn) lên thép — vừa ngăn cách vật lý vừa bảo vệ hi sinh khi bị xước.",
+      "duration": 17.28,
+      "startTime": 1658.87,
+      "endTime": 1676.15,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "3. Sacrificial Protection: Kẽm/Magie mạnh hơn sắt nên nhường e⁻ trước ( Zn ➔ Zn²...",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "3. Sacrificial Protection: More reactive Zn or Mg loses electrons more readily than Fe ( Zn ➔ Zn²⁺ + 2e⁻ ).",
+      "vi": "3. Sacrificial Protection: Kẽm/Magie mạnh hơn sắt nên nhường e⁻ trước ( Zn ➔ Zn²⁺ + 2e⁻ ).",
+      "duration": 19.87,
+      "startTime": 1676.15,
+      "endTime": 1696.02,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ A farmer wants to make an aqueous NPK fertiliser containing all three essential fertiliser elements by dissolving just two compounds in distilled water.Which pair of compounds produces a complete NPK fertiliser? A. Ammonium nitrate (NH₄NO₃) and ammonium sulfate ((NH₄)₂SO₄) B. Ammonium phosphate ((NH₄)₃PO₄) and potassium nitrate (KNO₃) C. Potassium chloride (KCl) and calcium carbonate (CaCO₃) D. Ammonium nitrate (NH₄NO₃) and calcium hydroxide (Ca(OH)₂) ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Step 1 (Check N, P, K elements): An NPK fertiliser must supply soluble Nitrogen (N) , Phosphorus (P) , and Potassium (K) . Step 2 (Test each pair): Pair A provides only N (no P or K). Pair C lacks N and P (and CaCO₃ is insoluble!). Pair D lacks P and K (and alkali Ca(OH)₂ reacts with NH₄NO₃ to drive off NH₃ gas!).In B , (NH₄)₃PO₄ provides soluble N and P , while KNO₃ provides soluble K and N — giving all three NPK elements cleanly.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 A farmer wants to make an aqueous NPK fertiliser containing all three essential fertiliser elements by dissolving just two compounds in distilled water. Which pair of compounds produces a complete NPK fertiliser? (Một nông dân muốn pha dung dịch phân bón NPK chứa đủ cả 3 nguyên tố thiết yếu bằng cách hòa tan đúng hai hợp chất vào nước cất. Cặp chất nào tạo thành phân bón NPK hoàn chỉnh?) A. Ammonium nitrate (NH₄NO₃) & ammonium sulfate ((NH₄)₂SO₄) B. Ammonium phosphate ((NH₄)₃PO₄) & potassium nitrate (KNO₃) C. Potassium chloride (KCl) & calcium carbonate (CaCO₃) D. Ammonium nitrate (NH₄NO₃) & calcium hydroxide (Ca(OH)₂) ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Bước 1: Phân NPK hoàn chỉnh phải chứa cả 3 nguyên tố tan được: Nitrogen (N) , Phosphorus (P) và Potassium (K) . Bước 2: Cặp A chỉ có N (thiếu P, K). Cặp C thiếu N, P (hơn nữa đá vôi CaCO₃ không tan!). Cặp D thiếu P, K (và kiềm Ca(OH)₂ còn tác dụng với NH₄NO₃ làm bay hơi mất khí NH₃!).Ở đáp án B , (NH₄)₃PO₄ cung cấp N + P , còn KNO₃ cung cấp K + N — đủ trọn bộ N, P, K và đều tan hoàn toàn trong nước.",
+      "duration": 201.5,
+      "startTime": 1696.02,
+      "endTime": 1897.52,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b13.mp3"
+    },
+    {
+      "id": "s02_b14",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / EXTENDED • Paper 4 Structured [5 marks] Ammonium phosphate, (NH₄)₃PO₄ , is a water-soluble salt widely used in agricultural fertilisers.(a) State the names of the three essential elements present in a complete NPK fertiliser and identify which element is missing from (NH₄)₃PO₄. [2](b) Calculate the percentage by mass of nitrogen in (NH₄)₃PO₄ . [ A ᵣ: H = 1, N = 14, O = 16, P = 31] [2](c) Explain why a farmer should not treat acidic soil with slaked lime, Ca(OH)₂, at the same time as adding ammonium phosphate. [1] ✍️ Step-by-Step Mark Scheme Solution: • (a) The three NPK elements are nitrogen, phosphorus, and potassium [1m] ; the missing element in (NH₄)₃PO₄ is potassium (K) [1m] .• (b) M ᵣ of (NH₄)₃PO₄ = 3 × (14 + 4×1) + 31 + (4 × 16) = 54 + 31 + 64 = 149 [1m] .Mass of 3 N atoms = 3 × 14 = 42 ➔ % Nitrogen = (42 ÷ 149) × 100% = 28.2% (accept 28%) [1m] .• (c) Calcium hydroxide (an alkali/base) reacts with ammonium ions to form ammonia gas (NH₃) which escapes into the air, causing loss of nitrogen [1m] . 💡 Intuition Check: Watch the bracket subscript carefully: in (NH₄)₃PO₄ , the subscript 3 multiplies everything inside (NH₄) , so there are 3 N atoms (mass 42) and 12 H atoms (mass 12)!",
+      "vi": "BÀI MẪU 2 🟦 CORE / EXTENDED • Tự luận Paper 4 [5 điểm] Ammonium phosphate, (NH₄)₃PO₄ , is a water-soluble salt widely used in agricultural fertilisers.(a) State the names of the three essential elements present in a complete NPK fertiliser and identify which element is missing from (NH₄)₃PO₄. (b) Calculate the percentage by mass of nitrogen in (NH₄)₃PO₄ . [ A ᵣ: H = 1, N = 14, O = 16, P = 31] (c) Explain why a farmer should not treat acidic soil with slaked lime, Ca(OH)₂, at the same time as adding ammonium phosphate. ((a) Nêu tên 3 nguyên tố thiết yếu trong phân NPK và chỉ ra nguyên tố còn thiếu trong (NH₄)₃PO₄. (b) Tính % khối lượng của nitrogen trong (NH₄)₃PO₄. (c) Giải thích vì sao không được bón vôi tôi Ca(OH)₂ khử chua đất cùng lúc với phân ammonium phosphate. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Ba nguyên tố thiết yếu là nitrogen, phosphorus và potassium ; nguyên tố còn thiếu trong (NH₄)₃PO₄ là potassium (K) .• (b) M ᵣ của (NH₄)₃PO₄ = 3 × (14 + 4×1) + 31 + (4 × 16) = 54 + 31 + 64 = 149 .Khối lượng của 3 nguyên tử N = 3 × 14 = 42 ➔ % Nitrogen = (42 ÷ 149) × 100% = 28.2% (chấp nhận 28%) .• (c) Kiềm Ca(OH)₂ phản ứng với muối ammonium giải phóng khí ammonia (NH₃) bay ra ngoài không khí, gây thất thoát nguồn đạm nitrogen . 💡 Kiểm tra bản chất: Cẩn thận với chỉ số ngoài ngoặc đơn: trong (NH₄)₃PO₄ , số 3 nhân cho toàn bộ cụm (NH₄) nên có tới 3 nguyên tử N (khối lượng 42) và 12 nguyên tử H (khối lượng 12)!",
+      "duration": 267.71,
+      "startTime": 1897.52,
+      "endTime": 2165.23,
+      "audioUrl": "/audio/lectures/chemistry/10/s02_b14.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🌬️ 3. CHẤT LƯỢNG KHÔNG KHÍ, Ô NHIỄM & BIẾN ĐỔI KHÍ HẬU (Air Quality — 10.3)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🌬️ 3. AIR QUALITY, ATMOSPHERIC POLLUTANTS & CLIMATE (10.3). Clean, dry air is a mixture of gases dominated by nitrogen and oxygen. Human combustion of fossil fuels and intensive agriculture release six key pollutants that drive toxic smog, acid rain, and global climate change.",
+      "vi": "🌬️ 3. CHẤT LƯỢNG KHÔNG KHÍ, Ô NHIỄM & BIẾN ĐỔI KHÍ HẬU (Air Quality — 10.3). Không khí khô sạch là hỗn hợp các chất khí chủ yếu gồm nitơ và oxy. Việc đốt nhiên liệu hóa thạch và chăn nuôi công nghiệp phát thải 6 tác nhân ô nhiễm trọng điểm gây ngộ độc, mưa axit và nóng lên toàn cầu.",
+      "duration": 40.66,
+      "startTime": 2165.23,
+      "endTime": 2205.89,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture the Greenhouse Effect like a car parked in bright sunshine : incoming sunlight passes effortlessly through the glass windscreen and warms the seats, but when the warm seats radiate invisible thermal (infrared) energy outward, the \"blanket\" of CO₂ and CH₄ absorbs and re-emits that heat back downward so less escapes to space. Meanwhile, a car's catalytic converter works like a chemical peace-broker on a platinum honeycomb stage : toxic CO steals the oxygen atom from smog-forming NO , turning two dangerous enemies into CO₂ and harmless N₂ !",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng Hiệu ứng nhà kính (Greenhouse Effect) giống như chiếc ô tô đỗ dưới trời nắng gắt : ánh nắng chiếu xuyên qua kính xe làm nóng ghế da dễ dàng, nhưng khi ghế tỏa ngược bức xạ nhiệt hồng ngoại (thermal energy) ra ngoài thì lớp \"chăn khí\" CO₂ và CH₄ lại hấp thụ rồi phát xạ ngược trở xuống, giữ nhiệt lại trên Trái Đất. Còn bộ chuyển đổi xúc tác (catalytic converter) dưới gầm xe giống như \"người hòa giải\" trên sàn tổ ong phủ Platinum : ghép đôi khí độc CO với khí gây mưa axit NO để CO \"cướp\" oxy của NO, biến cả hai thành CO₂ và khí N₂ vô hại!",
+      "duration": 80.73,
+      "startTime": 2205.89,
+      "endTime": 2286.62,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Clean, Dry Air & 6 Pollutants: Memorise 78% N₂, 21% O₂, ~1% noble gases + CO₂ , and link every pollutant's exact source to its effect: CO₂ (complete combustion ➔ global warming/climate change), CO (incomplete combustion ➔ toxic), particulates (incomplete combustion ➔ respiratory problems & cancer), CH₄ (decaying vegetation & animal digestion ➔ global warming), NOₓ (car engines ➔ acid rain, photochemical smog, respiratory problems), SO₂ (burning sulfur-containing fossil fuels ➔ acid rain), plus photosynthesis ( carbon dioxide + water ➔ glucose + oxygen in chlorophyll + light). 🟩 Supplement 2 → Mechanisms & Equations: Greenhouse gases absorb, reflect and emit thermal energy , reducing thermal energy loss to space ; car engine high temperature makes air's N₂ + O₂ react, removed via 2CO + 2NO ➔ 2CO₂ + N₂ ; power stations remove SO₂ via low-sulfur fuels and flue gas desulfurisation with CaO ; photosynthesis symbol equation: 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Không khí khô sạch & 6 Khí ô nhiễm: Thuộc tỷ lệ 78% N₂, 21% O₂, ~1% noble gases + CO₂ , và nối chuẩn nguồn sinh ra ➔ tác hại: CO₂, CO, particulates, CH₄ (phân hủy thực vật & tiêu hóa gia súc ➔ global warming), NOₓ, SO₂ (đốt nhiên liệu hóa thạch lẫn lưu huỳnh ➔ acid rain); cùng photosynthesis ( carbon dioxide + water ➔ glucose + oxygen nhờ chlorophyll & ánh sáng). 🟩 Supplement 2 → Cơ chế & Phương trình: Khí nhà kính gây nóng lên nhờ absorption, reflection and emission of thermal energy , làm giảm thất thoát nhiệt ra vũ trụ ; nhiệt độ cao trong động cơ xe làm N₂ + O₂ không khí kết hợp, được xử lý qua 2CO + 2NO ➔ 2CO₂ + N₂ ; khử SO₂ nhà máy điện bằng low-sulfur fuels và flue gas desulfurisation with CaO ; quang hợp: 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ .",
+      "duration": 151.38,
+      "startTime": 2286.62,
+      "endTime": 2438.0,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic mark-losers: (1) Never say oxides of nitrogen come from \"nitrogen impurities in petrol\" — petrol is a hydrocarbon; N₂ and O₂ come from the air reacting at the high temperature inside the car engine! (2) Never claim a catalytic converter prevents global warming — it converts CO into CO₂ , which is still a greenhouse gas!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy mất điểm nhiều nhất mọi kỳ thi: (1) Tuyệt đối không viết NOₓ sinh ra từ \"nitơ có trong xăng\" — xăng là hydrocarbon không có N; N₂ và O₂ lấy từ không khí phản ứng ở nhiệt độ cực cao (high temperature) trong động cơ! (2) Không bao giờ nói catalytic converter chống được biến đổi khí hậu — vì đầu ra của nó vẫn thải ra khí nhà kính CO₂ !",
+      "duration": 53.46,
+      "startTime": 2438.0,
+      "endTime": 2491.46,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "📊 10.3.1 Thành phần Không khí Khô Sạch (Clean, Dry Air — Tương tác)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "📊 10.3.1 Composition of Clean, Dry Air (Interactive Bar). 78% N₂ 21% O₂ ~1% 👆 04%).",
+      "vi": "📊 10.3.1 Thành phần Không khí Khô Sạch (Clean, Dry Air — Tương tác). 78% N₂ 21% O₂ ~1% 👆 0.04%).",
+      "duration": 21.57,
+      "startTime": 2491.46,
+      "endTime": 2513.03,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Chất ô nhiễm: (a) Carbon dioxide (CO₂); 🏭 Nguồn phát thải (10.3.2): Đốt cháy hoà...",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Pollutant: (a) Carbon dioxide (CO₂); 🏭 Official Source (10.3.2): Complete combustion of carbon-containing fuels ( CH₄ + 2O₂ ➔ CO₂ + 2H₂O ).; ⚠️ Adverse Effect (10.3.3): Higher levels lead to increased global warming , which leads to climate change .; 🛡️ Reduction Strategy (10.3.4): Planting trees (photosynthesis), decreasing fossil fuel use, using hydrogen & renewable energy (wind, solar). Pollutant: (b) Carbon monoxide (CO); 🏭 Official Source (10.3.2): Incomplete combustion of carbon-containing fuels in a limited supply of oxygen.; ⚠️ Adverse Effect (10.3.3): Toxic gas (binds irreversibly to haemoglobin in blood, starving tissues of O₂).; 🛡️ Reduction Strategy (10.3.4): Catalytic converters in car exhausts (oxidises CO to CO₂); adequate air supply in heaters. Pollutant: (c) Particulates (soot, C); 🏭 Official Source (10.3.2): Incomplete combustion of carbon-containing fuels (especially diesel engines).; ⚠️ Adverse Effect (10.3.3): Increased risk of respiratory problems and cancer .; 🛡️ Reduction Strategy (10.3.4): Diesel particulate filters (DPFs) and cleaner fuel combustion / electric vehicles. Pollutant: (d) Methane (CH₄); 🏭 Official Source (10.3.2): Decomposition of vegetation (wetlands/landfills) and waste gases from digestion in animals (livestock).; ⚠️ Adverse Effect (10.3.3): Potent greenhouse gas — higher levels lead to increased global warming , leading to climate change .; 🛡️ Reduction Strategy (10.3.4): Reduction in livestock farming ; capturing methane from landfill sites as biogas fuel.",
+      "vi": "Chất ô nhiễm: (a) Carbon dioxide (CO₂); 🏭 Nguồn phát thải (10.3.2): Đốt cháy hoàn toàn (Complete combustion) nhiên liệu chứa carbon ( CH₄ + 2O₂ ➔ CO₂ + 2H₂O ).; ⚠️ Tác hại (Adverse Effect): Tăng hiệu ứng nóng lên toàn cầu (global warming) dẫn tới biến đổi khí hậu (climate change) .; 🛡️ Giải pháp Giảm thiểu (10.3.4): Trồng rừng (planting trees) , giảm nhiên liệu hóa thạch, tăng hydrogen & năng lượng tái tạo (wind, solar). Chất ô nhiễm: (b) Carbon monoxide (CO); 🏭 Nguồn phát thải (10.3.2): Đốt cháy không hoàn toàn (Incomplete combustion) nhiên liệu chứa carbon khi thiếu oxy.; ⚠️ Tác hại (Adverse Effect): Khí cực độc (Toxic gas) — gắn chặt vào hemoglobin ngăn máu vận chuyển oxy.; 🛡️ Giải pháp Giảm thiểu (10.3.4): Lắp catalytic converters ở ống xả xe hơi (oxi hóa CO thành CO₂); đảm bảo thông gió. Chất ô nhiễm: (c) Bụi mịn carbon ( Particulates ); 🏭 Nguồn phát thải (10.3.2): Đốt cháy không hoàn toàn (Incomplete combustion) nhiên liệu chứa carbon (nhất là động cơ diesel).; ⚠️ Tác hại (Adverse Effect): Tăng nguy cơ mắc bệnh đường hô hấp và ung thư .; 🛡️ Giải pháp Giảm thiểu (10.3.4): Bộ lọc muội hạt diesel, tối ưu buồng đốt và chuyển sang xe điện.",
+      "duration": 185.13,
+      "startTime": 2513.03,
+      "endTime": 2698.16,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "1. Cơ chế sinh NOₓ & Xử lý bằng Catalytic Converter",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "1. How NOₓ Forms & Catalytic Removal. Exam Trap: Petrol does NOT contain nitrogen! Instead, at the very high temperatures inside a car engine, nitrogen (N₂) and oxygen (O₂) from the air react together to form NO and NO₂.Exhaust gases pass through a honeycomb catalytic converter (platinum/rhodium catalyst), where CO is oxidised and NO is reduced: 2CO(g) + 2NO(g) ➔ 2CO₂(g) + N₂(g)",
+      "vi": "1. Cơ chế sinh NOₓ & Xử lý bằng Catalytic Converter. Bẫy đề thi: Trong xăng KHÔNG chứa nitơ! Chính nhiệt độ cực cao trong buồng đốt động cơ ô tô làm khí N₂ và O₂ từ không khí phản ứng tạo NO/NO₂.Ống xả gắn catalytic converter (phủ xúc tác Platinum/Rhodium) giúp oxi hóa CO và khử NO cùng lúc: 2CO(g) + 2NO(g) ➔ 2CO₂(g) + N₂(g)",
+      "duration": 65.79,
+      "startTime": 2698.16,
+      "endTime": 2763.95,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "2. Khử Lưu huỳnh Khí ống khói (Flue Gas Desulfurisation)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "2. Flue Gas Desulfurisation (FGD) with CaO. Coal-fired power stations remove acidic sulfur dioxide (SO₂) from waste chimney (\"flue\") gases before they reach the atmosphere by spraying them with basic calcium oxide (CaO, lime) (or slaked lime / CaCO₃ slurry), neutralising the acidic oxide: CaO(s) + SO₂(g) ➔ CaSO₃(s) (acid–base neutralisation)",
+      "vi": "2. Khử Lưu huỳnh Khí ống khói. Các nhà máy nhiệt điện đốt than loại bỏ khí axit sulfur dioxide (SO₂) khỏi khói thải trước khi xả ra trời bằng cách phun oxit bazơ calcium oxide (CaO — vôi sống) để trung hòa: CaO(s) + SO₂(g) ➔ CaSO₃(s) (trung hòa axit–bazơ)",
+      "duration": 54.12,
+      "startTime": 2763.95,
+      "endTime": 2818.07,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🌍 Cơ chế Vật lý của Hiệu ứng Nhà kính (Greenhouse Effect)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Supplement 10.3.7 🌍 Mechanism of the Greenhouse Effect. Electromagnetic radiation from the Sun passes through the atmosphere and warms the Earth's surface, which radiates thermal (infrared) energy back towards space. Greenhouse gases ( CO₂ and CH₄ ) cause global warming via the absorption, reflection, and emission of thermal energy in the atmosphere. This reduces thermal energy loss to space , raising average global temperatures (enhanced greenhouse effect ➔ climate change).",
+      "vi": "Supplement 10.3.7 🌍 Cơ chế Vật lý của Hiệu ứng Nhà kính (Greenhouse Effect). Bức xạ sóng ngắn từ Mặt Trời đi xuyên qua khí quyển làm ấm bề mặt Trái Đất; mặt đất phát xạ ngược lại năng lượng nhiệt hồng ngoại (thermal energy). Các khí nhà kính ( CO₂ và CH₄ ) gây nóng lên toàn cầu thông qua quá trình hấp thụ, phản xạ và phát xạ lại năng lượng nhiệt. Quá trình này làm giảm lượng nhiệt thất thoát ra ngoài vũ trụ , khiến nhiệt độ Trái Đất tăng lên.",
+      "duration": 61.83,
+      "startTime": 2818.07,
+      "endTime": 2879.9,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🌿 Quang hợp (Photosynthesis): Bể hấp thụ CO₂ Tự nhiên",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "Core + Supplement 10.3.9 🌿 Photosynthesis: Nature's Carbon Sink. Photosynthesis is the endothermic reaction between carbon dioxide and water to produce glucose and oxygen in the presence of chlorophyll (green pigment in chloroplasts that absorbs light) and using energy from light : Word Equation (Core 10.3.6): carbon dioxide + water ➔ glucose + oxygen Balanced Symbol Equation (Supplement 10.3.9): 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ Environmental Importance: Removes the greenhouse gas CO₂ from the atmosphere (which is why planting trees mitigates climate change) and regenerates O₂ needed for respiration.",
+      "vi": "Core + Supplement 10.3.9 🌿 Quang hợp (Photosynthesis): Bể hấp thụ CO₂ Tự nhiên. Photosynthesis là phản ứng thu nhiệt giữa carbon dioxide và nước tạo thành glucose và oxygen khi có mặt sắc tố diệp lục (chlorophyll) và sử dụng năng lượng từ ánh sáng : Phương trình chữ: carbon dioxide + water ➔ glucose + oxygen Phương trình Hóa học Cân bằng (Supplement 10.3.9): 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ Ý nghĩa Môi trường: Hấp thụ khí nhà kính CO₂ khỏi bầu khí quyển (lý giải tại sao trồng cây giúp giảm biến đổi khí hậu) và tái tạo O₂ cho hô hấp.",
+      "duration": 82.24,
+      "startTime": 2879.9,
+      "endTime": 2962.14,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Extended MCQ Which statement about atmospheric pollutants and their removal is correct ? A. Sulfur dioxide from car engines is removed in a catalytic converter by reacting with calcium oxide. B. Carbon monoxide and nitrogen monoxide react in a catalytic converter to form carbon dioxide and nitrogen. C. Methane causes acid rain by absorbing ultraviolet radiation directly from the Sun. D. Planting trees increases global warming because photosynthesis releases carbon dioxide. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Step 1: In a vehicle catalytic converter, toxic CO is oxidised and NO is reduced according to 2CO + 2NO ➔ 2CO₂ + N₂ — so B is completely accurate. Why distractors fail: A mixes up two processes (SO₂ comes mainly from sulfur-containing fossil fuels in power stations and is removed by flue gas desulfurisation with CaO, not car catalytic converters). C confuses methane (a greenhouse gas absorbing outgoing thermal energy) with acid rain/UV. D reverses photosynthesis, which absorbs CO₂ ( 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ ).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Extended Which statement about atmospheric pollutants and their removal is correct ? (Phát biểu nào sau đây về các chất ô nhiễm không khí và cách xử lý chúng là đúng ?) A. SO₂ từ động cơ xe được khử trong catalytic converter bằng CaO. B. CO và NO phản ứng trong catalytic converter tạo thành CO₂ và N₂. C. CH₄ gây mưa axit do hấp thụ tia tử ngoại từ Mặt Trời. D. Trồng cây làm tăng nóng lên toàn cầu vì quang hợp thải CO₂. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Bước 1: Trong bộ chuyển đổi xúc tác ô tô, khí độc CO bị oxi hóa và NO bị khử theo phương trình chuẩn 2CO + 2NO ➔ 2CO₂ + N₂ — nên B hoàn toàn chính xác. Loại các phương án nhiễu: A ghép râu ông nọ cắm cằm bà kia (khử bằng vôi sống CaO là flue gas desulfurisation ở ống khói nhà máy nhiệt điện đốt than). C sai hoàn toàn vì CH₄ là khí nhà kính hấp thụ bức xạ nhiệt (thermal energy) từ mặt đất, không gây mưa axit. D ngược bản chất vì quang hợp hấp thụ CO₂ ( 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ ).",
+      "duration": 165.66,
+      "startTime": 2962.14,
+      "endTime": 3127.8,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Burning coal in power stations and burning petrol in car engines both release gases that harm the environment.(a) Coal contains trace sulfur compounds. Name the pollutant gas formed when sulfur burns, state its main environmental effect, and name the solid base used in flue gas desulfurisation to remove it. [3](b) Describe how elevated levels of carbon dioxide and methane in the atmosphere cause global warming. [2](c) Write the balanced symbol equation for photosynthesis and state why planting trees helps reduce climate change. [1] ✍️ Step-by-Step Mark Scheme Solution: • (a) Pollutant: sulfur dioxide (SO₂) [1m] ; adverse effect: causes acid rain [1m] ; removed by reacting flue gases with calcium oxide (CaO) [1m] .• (b) Greenhouse gases (CO₂ and CH₄) absorb, reflect, and emit thermal energy radiated from the Earth's surface [1m] , which reduces thermal energy loss to space and raises global temperatures [1m] .• (c) 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ — growing trees remove greenhouse gas CO₂ from the atmosphere during photosynthesis [1m] . 💡 Intuition Check: Keep the two environmental crises strictly separate in your head: SO₂ & NOₓ ➔ Acid Rain (neutralised with basic CaO or reduced in catalytic converters), whereas CO₂ & CH₄ ➔ Enhanced Greenhouse Effect / Climate Change (tackled by renewables, hydrogen fuel, planting trees, and reducing livestock).",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Burning coal in power stations and burning petrol in car engines both release gases that harm the environment.(a) Coal contains trace sulfur compounds. Name the pollutant gas formed when sulfur burns, state its main environmental effect, and name the solid base used in flue gas desulfurisation to remove it. (b) Describe how elevated levels of carbon dioxide and methane in the atmosphere cause global warming. (c) Write the balanced symbol equation for photosynthesis and state why planting trees helps reduce climate change. ((a) Than đá chứa tạp chất lưu huỳnh. Gọi tên khí ô nhiễm sinh ra khi lưu huỳnh cháy, nêu tác hại chính và gọi tên bazơ rắn dùng để khử khí đó trong ống khói. (b) Mô tả cơ chế CO₂ và CH₄ gây nóng lên toàn cầu. (c) Viết phương trình hóa học cân bằng của quang hợp và giải thích vì sao trồng rừng giúp giảm biến đổi khí hậu. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Khí ô nhiễm: sulfur dioxide (SO₂) ; tác hại: gây mưa axit (acid rain) ; chất khử trong ống khói: calcium oxide (CaO) .• (b) Các khí nhà kính (CO₂ và CH₄) thực hiện hấp thụ, phản xạ và phát xạ năng lượng nhiệt tỏa ra từ mặt đất , làm giảm sự thất thoát nhiệt ra ngoài vũ trụ khiến Trái Đất ấm lên .• (c) 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ — cây xanh hấp thụ bớt khí nhà kính CO₂ khỏi khí quyển nhờ quang hợp .",
+      "duration": 211.06,
+      "startTime": 3127.8,
+      "endTime": 3338.86,
+      "audioUrl": "/audio/lectures/chemistry/10/s03_b11.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "📝 PHÂN TÍCH CÂU HỎI MẪU IGCSE (Worked Exam Questions)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "📝 WORKED IGCSE EXAM QUESTIONS (0620).",
+      "vi": "📝 PHÂN TÍCH CÂU HỎI MẪU IGCSE.",
+      "duration": 8.65,
+      "startTime": 3338.86,
+      "endTime": 3347.51,
+      "audioUrl": "/audio/lectures/chemistry/10/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "Đề bài: Tính phần trăm khối lượng của nguyên tố Nitrogen trong phân đạm ammonium nitrate (NH₄NO",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "Worked Example 1 • Fertiliser % Nitrogen Calculation Question: Calculate the percentage by mass of nitrogen in ammonium nitrate, NH₄NO₃, and compare it with ammonium sulfate, (NH₄)₂SO₄. (Aᵣ: H = 1, N = 14, O = 16, S = 32). Step-by-Step Solution: • For NH₄NO₃ (contains 2 N atoms per formula unit!): Mᵣ(NH₄NO₃) = 14 + (4 × 1) + 14 + (3 × 16) = 80 % Nitrogen = (28 ÷ 80) × 100% = 35.0% • For (NH₄)₂SO₄ (also contains 2 N atoms ): Mᵣ((NH₄)₂SO₄) = 2×(14 + 4) + 32 + 4×16 = 132 % Nitrogen = (28 ÷ 132) × 100% = 21.2% ➔ Ammonium nitrate delivers a much higher mass percentage of nitrogen!",
+      "vi": "Ví dụ 1 • Tính % Khối lượng Đạm Nitrogen trong Phân bón Đề bài: Tính phần trăm khối lượng của nguyên tố Nitrogen trong phân đạm ammonium nitrate (NH₄NO₃) và so sánh với ammonium sulfate ((NH₄)₂SO₄). (Aᵣ: H = 1, N = 14, O = 16, S = 32). Lời giải từng bước: • Với NH₄NO₃ (chú ý có 2 nguyên tử N trong 1 phân tử!): Mᵣ(NH₄NO₃) = 14 + (4 × 1) + 14 + (3 × 16) = 80 % Nitrogen = (28 ÷ 80) × 100% = 35.0% • Với (NH₄)₂SO₄ (cũng có 2 nguyên tử N ): Mᵣ((NH₄)₂SO₄) = 2×(14 + 4) + 32 + 4×16 = 132 % Nitrogen = (28 ÷ 132) × 100% = 21.2% ➔ Phân NH₄NO₃ giàu hàm lượng đạm hơn hẳn trên cùng một khối lượng!",
+      "duration": 150.05,
+      "startTime": 3347.51,
+      "endTime": 3497.56,
+      "audioUrl": "/audio/lectures/chemistry/10/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "Đề bài: Từ danh sách {H₂, O₂, N₂, CO, CO₂, SO₂, CH₄}, chọn khí: (a) cháy trong không khí chỉ tạ",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "Worked Example 2 • Matching Atmospheric Gases (6 marks) Question: From {H₂, O₂, N₂, CO, CO₂, SO₂, CH₄}, identify the gas that: (a) burns to form water only; (b) is a hydrocarbon; (c) is removed from power-station flue gas with CaO; (d) forms 78% of clean dry air. Model Mark-Scheme Answers: • (a) Hydrogen (H₂): Clean zero-carbon fuel ( 2H₂ + O₂ ➔ 2H₂O ).• (b) Methane (CH₄): Compound containing carbon and hydrogen only .• (c) Sulfur dioxide (SO₂): Acidic gas neutralised by basic calcium oxide in flue gas desulfurisation.• (d) Nitrogen (N₂): Makes up ~78% of clean, dry air.",
+      "vi": "Ví dụ 2 • Nhận diện các Chất Khí Khí quyển (Hodder Sample Q) Đề bài: Từ danh sách {H₂, O₂, N₂, CO, CO₂, SO₂, CH₄}, chọn khí: (a) cháy trong không khí chỉ tạo nước; (b) là một hydrocarbon; (c) được khử khỏi khói nhà máy điện bằng CaO; (d) chiếm 78% không khí khô sạch. Đáp án chuẩn Mark Scheme: • (a) Hydrogen (H₂): Nhiên liệu sạch không phát thải carbon ( 2H₂ + O₂ ➔ 2H₂O ).• (b) Methane (CH₄): Hợp chất chỉ chứa C và H ( hydrocarbon ).• (c) Sulfur dioxide (SO₂): Khí axit được trung hòa bởi vôi sống CaO.• (d) Nitrogen (N₂): Chiếm xấp xỉ 78% không khí khô, sạch.",
+      "duration": 111.19,
+      "startTime": 3497.56,
+      "endTime": 3608.75,
+      "audioUrl": "/audio/lectures/chemistry/10/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "Đề bài: Nhỏ một chất lỏng không màu vào bột anhydrous copper(II) sulfate màu trắng thấy chuyển ",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "Worked Example 3 • Presence vs. Purity of Water (5 marks) Question: A student adds a colourless liquid to white anhydrous copper(II) sulfate and observes a colour change to blue. (a) Explain why this does NOT prove the liquid is pure water. (b) Describe how to prove the liquid is pure water. (c) Explain why distilled water is used instead of tap water in chemical analysis. Model Mark-Scheme Answers: • (a) Anhydrous CuSO₄ (white ➔ blue) or anhydrous CoCl₂ (blue ➔ pink) only tests for the presence of water ; any aqueous solution (e.g. seawater, dilute acid, tap water) contains water molecules and gives a positive result.• (b) Measure its melting point and boiling point at standard atmospheric pressure: pure water melts sharply at 0 °C and boils sharply at 100 °C (impurities lower the melting point below 0 °C and raise the boiling point above 100 °C).• (c) Distilled water contains fewer chemical impurities (such as dissolved Cl⁻, Ca²⁺, or SO₄²⁻ ions present in tap water) that could form false precipitates or interfere with qualitative/quantitative experiments.",
+      "vi": "Ví dụ 3 • Phân biệt Nhận biết Sự Có Mặt vs. Kiểm tra Độ Tinh Khiết của Nước Đề bài: Nhỏ một chất lỏng không màu vào bột anhydrous copper(II) sulfate màu trắng thấy chuyển sang màu xanh lam. (a) Giải thích tại sao hiện tượng này KHÔNG chứng minh chất lỏng là nước tinh khiết (pure water). (b) Nêu cách chứng minh đó là nước tinh khiết. (c) Tại sao trong phòng thí nghiệm dùng nước cất (distilled water) thay vì nước máy (tap water)? Đáp án chuẩn Mark Scheme: • (a) Thuốc thử anhydrous copper(II) sulfate ( white ➔ blue ) hoặc anhydrous cobalt(II) chloride ( blue ➔ pink ) chỉ chứng minh sự có mặt của nước ; bất kỳ dung dịch nước nào (nước muối, nước máy, axit loãng) đều cho kết quả dương tính.• (b) Đo nhiệt độ nóng chảy (melting point) và nhiệt độ sôi (boiling point) ở áp suất chuẩn: nước tinh khiết nóng chảy đúng ở 0 °C và sôi đúng ở 100 °C .• (c) Distilled water chứa ít tạp chất hóa học hơn so với nước máy (vốn chứa các ion hòa tan như Cl⁻, Ca²⁺ có thể tạo kết tủa giả làm sai lệch phép phân tích).",
+      "duration": 156.17,
+      "startTime": 3608.75,
+      "endTime": 3764.92,
+      "audioUrl": "/audio/lectures/chemistry/10/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Đề bài: Xăng không chứa nguyên tố nitrogen nhưng khí thải ô tô lại chứa các oxide của nitrogen ",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Worked Example 4 • Supplement 10.3.8: Car Engines & Catalytic Converters (5 marks) Question: Petrol contains no nitrogen atoms, yet car exhaust gases contain oxides of nitrogen (NO and NO₂). (a) Explain how NO forms inside a petrol engine. (b) Write the balanced symbol equation for the removal of CO and NO in a catalytic converter and identify which gas is oxidised and which is reduced. Model Mark-Scheme Answers: • (a) Air drawn into the car engine contains both nitrogen (N₂) and oxygen (O₂) . Although N₂ is unreactive at room temperature due to its strong N≡N triple bond, the very high temperature (and pressure/spark) inside the internal combustion engine provides enough activation energy for N₂ and O₂ from the air to react: N₂(g) + O₂(g) ➔ 2NO(g) .• (b) Balanced equation: 2CO(g) + 2NO(g) ➔ 2CO₂(g) + N₂(g) (over Pt/Rh honeycomb catalyst).– CO is oxidised to CO₂ (gains oxygen).– NO is reduced to harmless N₂ (loses oxygen).",
+      "vi": "Ví dụ 4 • Supplement 10.3.8: Động cơ Ô tô & Bộ chuyển đổi xúc tác (Catalytic Converter) Đề bài: Xăng không chứa nguyên tố nitrogen nhưng khí thải ô tô lại chứa các oxide của nitrogen (NO, NO₂). (a) Giải thích cách NO hình thành trong động cơ. (b) Viết phương trình hóa học trong bộ catalytic converter và chỉ rõ chất bị oxi hóa, chất bị khử. Đáp án chuẩn Mark Scheme: • (a) Không khí hút vào buồng đốt chứa cả nitrogen (N₂) và oxygen (O₂) . Ở điều kiện thường N₂ rất trơ, nhưng nhiệt độ cực cao (high temperature) bên trong động cơ đốt trong cung cấp đủ năng lượng hoạt hóa để N₂ và O₂ phản ứng trực tiếp: N₂(g) + O₂(g) ➔ 2NO(g) .• (b) Phương trình: 2CO(g) + 2NO(g) ➔ 2CO₂(g) + N₂(g) (trên bề mặt xúc tác Pt/Rh).– CO bị oxi hóa (oxidised) thành CO₂ (nhận thêm oxygen).– NO bị khử (reduced) thành khí N₂ vô hại (nhường oxygen).",
+      "duration": 156.07,
+      "startTime": 3764.92,
+      "endTime": 3920.99,
+      "audioUrl": "/audio/lectures/chemistry/10/s04_b04.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🏭 Mô hình Tương tác: Bộ Chuyển đổi Xúc tác & Dây chuyền Xử lý Nước Sinh hoạt",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🏭 Interactive Visual Explorer: Catalytic Converter & Domestic Water Treatment. Hover or click each stage in the diagram below to review the exact chemical engineering principles tested in IGCSE Paper 2, Paper 4, and Paper 6.",
+      "vi": "🏭 Mô hình Tương tác: Bộ Chuyển đổi Xúc tác & Dây chuyền Xử lý Nước Sinh hoạt. r 4 và Paper 6.",
+      "duration": 23.98,
+      "startTime": 3920.99,
+      "endTime": 3944.97,
+      "audioUrl": "/audio/lectures/chemistry/10/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "👆 Bấm hoặc",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "👆 Inspect Any Process Block.",
+      "vi": "👆 Bấm hoặc Khám phá vai trò hóa học chính xác của từng công đoạn xử lý khí thải và xử lý nước sinh hoạt theo chuẩn đáp án Cambridge 0620.",
+      "duration": 12.26,
+      "startTime": 3944.97,
+      "endTime": 3957.23,
+      "audioUrl": "/audio/lectures/chemistry/10/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "Tiểu mục Syllabus: 10.1 Thử Nước & Độ tinh khiết; Phương trình / Thuốc thử Cốt l...",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "Syllabus Subtopic: 10.1 Water Tests; Must-Know Equation / Reagent: CoCl₂ + 6H₂O ⇌ CoCl₂·6H₂O CuSO₄ + 5H₂O ⇌ CuSO₄·5H₂O; Exact Mark-Scheme Wording: Anhydrous CoCl₂: blue ➔ pink ; Anhydrous CuSO₄: white ➔ blue . Purity: m.p. = 0 °C , b.p. = 100 °C. Syllabus Subtopic: 10.1 Natural Water; Must-Know Equation / Reagent: Beneficial vs Harmful dissolved species; Exact Mark-Scheme Wording: Beneficial: dissolved O₂ (aquatic life), essential mineral ions. Harmful: toxic metal ions, plastics, sewage microbes, nitrates & phosphates ( deoxygenation of water ). Syllabus Subtopic: 10.2 NPK Fertilisers; Must-Know Equation / Reagent: NH₄NO₃ , (NH₄)₂SO₄ , (NH₄)₃PO₄ , KNO₃; Exact Mark-Scheme Wording: Provide soluble nitrogen (N), phosphorus (P), and potassium (K) for improved plant growth. Syllabus Subtopic: 10.3 Clean Dry Air; Must-Know Equation / Reagent: 78% N₂, 21% O₂, ~1% noble gases (Ar) + CO₂ (~0.04%); Exact Mark-Scheme Wording: Always specify clean, dry air (excludes variable water vapour and pollutants). Syllabus Subtopic: 10.3 Climate & Acid Rain; Must-Know Equation / Reagent: 2CO + 2NO ➔ 2CO₂ + N₂ CaO + SO₂ ➔ CaSO₃ 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂; Exact Mark-Scheme Wording: CO₂ & CH₄ absorb, reflect & emit thermal energy, reducing thermal energy loss to space. Desulfurisation uses basic CaO ; vehicles use catalytic converters.",
+      "vi": "Tiểu mục Syllabus: 10.1 Thử Nước & Độ tinh khiết; Phương trình / Thuốc thử Cốt lõi: CoCl₂ + 6H₂O ⇌ CoCl₂·6H₂O CuSO₄ + 5H₂O ⇌ CuSO₄·5H₂O; Từ khóa Ăn điểm Mark Scheme: Anhydrous CoCl₂: blue ➔ pink ; Anhydrous CuSO₄: white ➔ blue . Tinh khiết: m.p. = 0 °C , b.p. = 100 °C. Tiểu mục Syllabus: 10.1 Nước Tự nhiên; Phương trình / Thuốc thử Cốt lõi: Tạp chất Có lợi vs Có hại; Từ khóa Ăn điểm Mark Scheme: Có lợi: dissolved O₂ (cho sinh vật thủy sinh), khoáng chất thiết yếu. Có hại: kim loại độc, nhựa, vi khuẩn từ sewage, nitrates & phosphates gây cạn kiệt oxy. Tiểu mục Syllabus: 10.2 Phân bón NPK; Phương trình / Thuốc thử Cốt lõi: NH₄NO₃ , (NH₄)₂SO₄ , (NH₄)₃PO₄ , KNO₃; Từ khóa Ăn điểm Mark Scheme: Cung cấp 3 nguyên tố thiết yếu nitrogen (N), phosphorus (P) và potassium (K) giúp cây tăng trưởng tốt hơn. Tiểu mục Syllabus: 10.3 Không khí Khô Sạch; Phương trình / Thuốc thử Cốt lõi: 78% N₂, 21% O₂, ~1% khí hiếm (Ar) + CO₂ (~0.04%); Từ khóa Ăn điểm Mark Scheme: Luôn nhấn mạnh điều kiện không khí khô, sạch. Tiểu mục Syllabus: 10.3 Khí hậu & Mưa axit; Phương trình / Thuốc thử Cốt lõi: 2CO + 2NO ➔ 2CO₂ + N₂ CaO + SO₂ ➔ CaSO₃ 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂; Từ khóa Ăn điểm Mark Scheme: CO₂ & CH₄ hấp thụ, phản xạ và phát xạ nhiệt, giảm thất thoát nhiệt ra vũ trụ. Khử SO₂ bằng calcium oxide (CaO).",
+      "duration": 271.61,
+      "startTime": 3957.23,
+      "endTime": 4228.84,
+      "audioUrl": "/audio/lectures/chemistry/10/s05_b02.mp3"
+    }
+  ]
+}

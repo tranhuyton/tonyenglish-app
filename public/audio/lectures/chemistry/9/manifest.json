@@ -1,0 +1,756 @@
+{
+  "lectureId": "605ec1ff-ecf8-5cf5-aa6e-84dacd8f091f",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 9: Metals",
+  "totalDuration": 5191.9,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 5
+    },
+    "s01_p1_sub02": {
+      "start": 6,
+      "end": 10
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 5
+    },
+    "s01_p2_sub02": {
+      "start": 6,
+      "end": 10
+    },
+    "s01_wex": {
+      "start": 11,
+      "end": 12
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 12
+    },
+    "s02_int": {
+      "start": 14,
+      "end": 16
+    },
+    "s02_wex": {
+      "start": 22,
+      "end": 23
+    },
+    "s02_hdr": {
+      "start": 13,
+      "end": 23
+    },
+    "s03_int": {
+      "start": 25,
+      "end": 27
+    },
+    "s03_p1_sub01": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_p1_sub02": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_p2_sub01": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_p2_sub02": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_wex": {
+      "start": 34,
+      "end": 35
+    },
+    "s03_hdr": {
+      "start": 24,
+      "end": 35
+    },
+    "s04_int": {
+      "start": 37,
+      "end": 39
+    },
+    "s04_p1_sub01": {
+      "start": 42,
+      "end": 43
+    },
+    "s04_p2_sub01": {
+      "start": 42,
+      "end": 43
+    },
+    "s04_wex": {
+      "start": 44,
+      "end": 45
+    },
+    "s04_hdr": {
+      "start": 36,
+      "end": 45
+    },
+    "s05_int": {
+      "start": 47,
+      "end": 49
+    },
+    "s05_wex": {
+      "start": 53,
+      "end": 54
+    },
+    "s05_hdr": {
+      "start": 46,
+      "end": 54
+    },
+    "s06_hdr": {
+      "start": 55,
+      "end": 57
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 9: Kim loại (Metals)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 9: Metals. Properties of Metals • Uses of Metals • Alloys & Lattice Structure • Reactivity Series • Corrosion & Sacrificial Protection • Extraction of Iron & Aluminium.",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 9: Kim loại (Metals). Tính chất Kim loại • Ứng dụng thực tế • Hợp kim & Mạng tinh thể • Dãy Hoạt động Hóa học • Ăn mòn & Bảo vệ Hi sinh • Lò cao Luyện Sắt & Điện phân Nhôm.",
+      "duration": 40.91,
+      "startTime": 0.0,
+      "endTime": 40.91,
+      "audioUrl": "/audio/lectures/chemistry/9/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "🛡️ 1. TÍNH CHẤT KIM LOẠI & HỢP KIM (Properties of Metals & Alloys — 9.1 & 9.3)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🛡️ 1. PROPERTIES OF METALS & ALLOYS (9.1 & 9.3). EASY INTUITION & SYLLABUS MENTAL MODEL Metals have giant metallic lattices consisting of regular layers of positive metal ions surrounded by a mobile \"sea\" of delocalised electrons. Comparing metals with non-metals and understanding how alloying modifies the metallic lattice is essential for IGCSE Chemistry (0620).",
+      "vi": "🛡️ 1. TÍNH CHẤT KIM LOẠI & HỢP KIM. EASY INTUITION & SYLLABUS MENTAL MODEL Kim loại có cấu trúc mạng tinh thể kim loại khổng lồ gồm các lớp đều đặn của các ion dương kim loại nằm trong một \"biển\" electron tự do linh động.",
+      "duration": 36.25,
+      "startTime": 40.91,
+      "endTime": 77.16,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine a pure metal as neatly stacked trays of identical marbles swimming in a mobile \"sea\" of delocalised electrons: push a tray sideways and the flat layers slide smoothly over one another (making pure metals soft, malleable , and ductile ), while free-moving electrons zip through carrying heat and electric current! Now mix in a few oversized bowling balls or tiny pebbles ( alloying — adding different-sized atoms like Zn in brass or Cr/Ni/C in stainless steel): the neat rows get jammed , so the layers can no longer slide over each other , making the alloy much harder and stronger !",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng kim loại nguyên chất (pure metal) như các khay bi ve tròn xoe cùng kích cỡ xếp chồng ngay ngắn trong một \"biển\" electron tự do: khi đẩy nhẹ, các lớp bi phẳng phiu trượt êm ru qua nhau (nên kim loại mềm, dễ dát mỏng malleable và kéo sợi ductile ), còn biển electron chạy vèo vèo dẫn điện và dẫn nhiệt! Giờ hãy trộn thêm vài quả bóng bowling khổng lồ hoặc viên sỏi nhỏ vào khay ( hợp kim / alloy — pha nguyên tử khác kích cỡ như Zn trong đồng thau hay Cr/Ni/C trong thép không gỉ): các hàng bi bị chèn lệch gồ ghề khiến các lớp không thể trượt qua nhau được nữa ⇒ hợp kim cứng và bền chắc vượt trội !",
+      "duration": 83.14,
+      "startTime": 77.16,
+      "endTime": 160.3,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Metals vs. Non-Metals (9.1.1–9.1.2): Metals have good thermal & electrical conductivity , are malleable & ductile , and usually have high m.p./b.p. ; chemically they react with dilute acids (→ salt + H2), cold water/steam , and oxygen (→ metal oxides). 2 → 🟦 Core Key Alloys (9.3.1–9.3.4): Alloy = mixture of a metal with other elements . Memorise brass (Cu + Zn) and stainless steel (Fe + Cr, Ni, C → cutlery: hardness & resistance to rusting ). 3 → 🟩 Supplement Lattice Explanation (9.3.5): Alloys contain different-sized atoms which distort the regular arrangement, so layers can no longer slide over each other .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Kim loại vs. Phi kim (9.1.1–9.1.2): Kim loại dẫn nhiệt & dẫn điện tốt , có tính dẻo malleable & ductile , thường có m.p./b.p. cao ; hóa học: phản ứng với axit loãng (→ muối + H2), nước lạnh/hơi nước , và oxygen (→ oxit kim loại). 2 → 🟦 Core Hợp kim Trọng tâm (9.3.1–9.3.4): Alloy = hỗn hợp của một kim loại với các nguyên tố khác . Nhớ brass (Cu + Zn) và stainless steel (Fe + Cr, Ni, C → dao kéo cutlery: cứng & chống rỉ sét ). 3 → 🟩 Supplement Giải thích theo Cấu trúc Hạt (9.3.5): Hợp kim chứa các nguyên tử có kích thước khác nhau làm xô lệch lớp mạng, khiến các lớp không thể trượt qua nhau .",
+      "duration": 97.84,
+      "startTime": 160.3,
+      "endTime": 258.14,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never call an alloy a compound — an alloy is strictly a mixture ! And never write that metals conduct electricity via \"free-moving ions\" — positive metal ions are fixed in layers; only mobile delocalised electrons move to carry charge!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bao giờ gọi hợp kim là hợp chất (compound) — hợp kim bắt buộc là hỗn hợp (mixture) ! Và khi giải thích kim loại dẫn điện, cấm viết \"do các ion tự do di chuyển\" — chỉ có các electron tự do linh động mới di chuyển mang điện tích!",
+      "duration": 35.85,
+      "startTime": 258.14,
+      "endTime": 293.99,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Tính chất (Property): Dẫn nhiệt ( Thermal conductivity ); ⚙️ Kim loại (Metals): ...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Physical Property: Thermal Conductivity; ⚙️ Metals: Good conductors of heat (delocalised electrons transfer kinetic energy rapidly through the lattice).; 🧪 Non-Metals: Poor thermal conductors (insulators; diamond is an exception). Physical Property: Electrical Conductivity; ⚙️ Metals: Good conductors when solid and liquid because delocalised electrons are mobile and carry charge.; 🧪 Non-Metals: Poor conductors / non-conductors ( Exception: Graphite conducts electricity due to mobile electrons). Physical Property: Malleability & Ductility; ⚙️ Metals: Malleable (can be hammered/bent into shapes) and Ductile (can be drawn into wires) because regular layers of ions slide over one another.; 🧪 Non-Metals: Brittle when solid — neither malleable nor ductile; shatter when hammered. Physical Property: Melting & Boiling Points; ⚙️ Metals: Usually high due to strong electrostatic attraction between positive ions and delocalised electrons ( Exceptions: Hg is liquid at r.t.p.; Group I metals have relatively low m.p.).; 🧪 Non-Metals: Usually low for simple molecular substances (weak intermolecular forces); very high for giant covalent structures (diamond, SiO₂). Physical Property: State, Density & Appearance; ⚙️ Metals: Solids at r.t.p. (except mercury), generally high density , shiny/lustrous when freshly cut, sonorous.; 🧪 Non-Metals: Solids, liquids (Br₂), or gases at r.t.p.; generally low density and dull appearance.",
+      "vi": "Tính chất (Property): Dẫn nhiệt ( Thermal conductivity ); ⚙️ Kim loại (Metals): Tốt (Good) — các delocalised electrons truyền động năng nhiệt nhanh chóng qua mạng tinh thể.; 🧪 Phi kim (Non-Metals): Kém (Poor) — chất cách nhiệt (ngoại trừ kim cương diamond ). Tính chất (Property): Dẫn điện ( Electrical conductivity ); ⚙️ Kim loại (Metals): Tốt (Good) ở cả thể rắn và lỏng vì có các mobile delocalised electrons di chuyển tự do mang điện tích.; 🧪 Phi kim (Non-Metals): Kém / Không dẫn điện (Poor) ( Ngoại lệ: Graphite — than chì dẫn điện tốt nhờ electron tự do). Tính chất (Property): Tính dẻo & Kéo sợi ( Malleability & Ductility ); ⚙️ Kim loại (Metals): Malleable (dễ dát mỏng/uốn hình) và Ductile (dễ kéo thành sợi dây) vì các lớp ion cùng cỡ dễ trượt qua nhau.; 🧪 Phi kim (Non-Metals): Giòn (Brittle) ở thể rắn — không dễ dát mỏng hay kéo sợi, dễ vỡ vụn khi đập búa. Tính chất (Property): Nhiệt độ nóng chảy & sôi; ⚙️ Kim loại (Metals): Thường cao (Usually high) do lực hút tĩnh điện mạnh giữa ion dương và biển electron ( Ngoại lệ: Thủy ngân Hg lỏng ở r.t.p.; kim loại Nhóm I có m.p. thấp).; 🧪 Phi kim (Non-Metals): Thường thấp (Low) với phân tử đơn giản (lực liên phân tử yếu); rất cao với mạng cộng hóa trị khổng lồ (diamond, SiO₂).",
+      "duration": 194.8,
+      "startTime": 293.99,
+      "endTime": 488.79,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "1. Tác dụng với Axit loãng (Dilute Acids)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "1. Reaction with Dilute Acids. Metals above hydrogen in the reactivity series react with dilute acids to form a salt and hydrogen gas (observed as effervescence / fizzing): Metal + Dilute Acid ➔ Salt + H₂(g)Mg(s) + 2HCl(aq) ➔ MgCl₂(aq) + H₂(g)",
+      "vi": "1. Tác dụng với Axit loãng (Dilute Acids). Kim loại đứng trước Hydrogen trong dãy hoạt động tác dụng với axit loãng sinh ra muối (salt) và khí hydrogen (sủi bọt khí — effervescence ): Metal + Dilute Acid ➔ Salt + H₂(g)Mg(s) + 2HCl(aq) ➔ MgCl₂(aq) + H₂(g)",
+      "duration": 49.44,
+      "startTime": 488.79,
+      "endTime": 538.23,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "2. Tác dụng với Nước lạnh & Hơi nước",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "2. Reaction with Cold Water & Steam. Very reactive metals (K, Na, Ca) react with cold water to form a metal hydroxide + H₂ . Moderately reactive metals (Mg, Zn, Fe) react with steam to form a metal oxide + H₂ : 2Na(s) + 2H₂O(l) ➔ 2NaOH(aq) + H₂(g)Mg(s) + H₂O(g) ➔ MgO(s) + H₂(g)",
+      "vi": "2. Tác dụng với Nước lạnh & Hơi nước. Kim loại rất mạnh (K, Na, Ca) phản ứng với cold water tạo metal hydroxide + H₂ . Kim loại trung bình (Mg, Zn, Fe) tác dụng với steam (hơi nước nóng) tạo metal oxide + H₂ : 2Na(s) + 2H₂O(l) ➔ 2NaOH(aq) + H₂(g)Mg(s) + H₂O(g) ➔ MgO(s) + H₂(g)",
+      "duration": 67.77,
+      "startTime": 538.23,
+      "endTime": 606.0,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "3. Tác dụng với Khí Oxy (Oxygen)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "3. Reaction with Oxygen. Most metals react with oxygen in air (when heated or at r.t.p.) to form metal oxides (which are basic or amphoteric). Unreactive gold and silver do not react: Metal + Oxygen ➔ Metal Oxide2Mg(s) + O₂(g) ➔ 2MgO(s)2Cu(s) + O₂(g) ➔ 2CuO(s) (black solid)",
+      "vi": "3. Tác dụng với Khí Oxy (Oxygen). Hầu hết kim loại phản ứng với oxygen tạo thành metal oxides (có tính bazơ hoặc lưỡng tính). Bạc (Ag) và vàng (Au) trơ không phản ứng: Metal + Oxygen ➔ Metal Oxide2Mg(s) + O₂(g) ➔ 2MgO(s)2Cu(s) + O₂(g) ➔ 2CuO(s) (chất rắn đen)",
+      "duration": 56.31,
+      "startTime": 606.0,
+      "endTime": 662.31,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🔬 9.3 Hợp kim (Alloys): Tại sao Hợp kim Cứng & Bền hơn Kim loại Nguyên chất?",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🔬 9.3 Alloys: Why Are Alloys Harder & Stronger Than Pure Metals? Core + Supplement An alloy is a mixture of a metal with other elements (either other metals or non-metals such as carbon). Because an alloy is a physical mixture rather than a chemical compound, its composition can be tailored to achieve desired properties. 👆 Pure Metal (Soft & Malleable). Alloy (Harder & Stronger). Alloy Structure (Supplement 9.3.5). An alloy contains atoms/ions of different sizes mixed into the host metal lattice. ➔ The different-sized atoms distort and disrupt the regular arrangement of layers, meaning the layers can no longer slide over each other easily when force is applied. Thus, alloys are harder and stronger !",
+      "vi": "🔬 9.3 Hợp kim (Alloys): Tại sao Hợp kim Cứng & Bền hơn Kim loại Nguyên chất? Core + Supplement Hợp kim ( Alloy ) là một hỗn hợp của một kim loại với các nguyên tố khác — có thể là kim loại khác hoặc phi kim như carbon. Lưu ý: Hợp kim là mixture chứ KHÔNG phải hợp chất hóa học! 👆 Pure Metal (Kim loại tinh khiết). Alloy (Hợp kim). Hợp kim — Alloy (Cứng & Bền hơn). Chứa các nguyên tử pha thêm có kích thước khác nhau xen vào mạng tinh thể. ➔ Các nguyên tử khác kích cỡ làm phá vỡ trật tự lớp đều đặn , khiến các lớp nguyên tử không thể trượt qua nhau ➔ Hợp kim cứng và chắc khỏe hơn hẳn!",
+      "duration": 89.6,
+      "startTime": 662.31,
+      "endTime": 751.91,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "Hợp kim (Alloy): Đồng thau ( Brass ); Thành phần nguyên tố (Mixture): Copper (Cu...",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "Alloy: Brass; Elements Present (Mixture): Copper (Cu) + Zinc (Zn); Key Properties: Harder than pure copper, golden appearance, does not corrode easily.; Major Uses (0620 Syllabus): Musical instruments, electrical plug pins, door handles, screws. Alloy: Stainless Steel; Elements Present (Mixture): Iron (Fe) + Chromium (Cr), Nickel (Ni) & Carbon (C); Key Properties: Very hard , high tensile strength, and resistant to rusting / corrosion.; Major Uses (0620 Syllabus): Cutlery , surgical instruments, kitchen sinks, chemical reaction vessels. Alloy: Mild Steel; Elements Present (Mixture): Iron (Fe) + Carbon (~0.25% C); Key Properties: Stronger & harder than pure iron yet still malleable (less brittle than cast iron; rusts if unprotected).; Major Uses (0620 Syllabus): Car bodies, bridges, structural girders, machinery.",
+      "vi": "Hợp kim (Alloy): Đồng thau ( Brass ); Thành phần nguyên tố (Mixture): Copper (Cu) + Zinc (Zn) (Đồng + Kẽm); Tính chất nổi bật: Cứng hơn đồng nguyên chất, ánh vàng đẹp, chống ăn mòn tốt.; Ứng dụng trọng tâm (0620): Nhạc cụ kèn đồng, chân phích cắm điện, tay nắm cửa, ốc vít. Hợp kim (Alloy): Thép không gỉ ( Stainless Steel ); Thành phần nguyên tố (Mixture): Iron (Fe) + Chromium (Cr), Nickel (Ni) & Carbon (C); Tính chất nổi bật: Rất cứng ( hard ), bền chắc và không bị rỉ sét .; Ứng dụng trọng tâm (0620): Dao kéo nhà bếp (Cutlery) , dụng cụ phẫu thuật y tế, bồn phản ứng hóa chất. Hợp kim (Alloy): Thép mềm ( Mild Steel ); Thành phần nguyên tố (Mixture): Iron (Fe) + Carbon (~0.25% C); Tính chất nổi bật: Cứng và khỏe hơn sắt nguyên chất nhưng vẫn dễ gia công (vẫn bị gỉ nếu không phủ bảo vệ).; Ứng dụng trọng tâm (0620): Khung vỏ xe ô tô ( car bodies ), dầm cầu, kết cấu xây dựng, máy móc.",
+      "duration": 140.66,
+      "startTime": 751.91,
+      "endTime": 892.57,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 CORE + SUPPLEMENT • Paper 2 MCQ Brass is an alloy of copper and zinc. Which statement correctly explains why brass is harder than pure copper and still conducts electricity? A. Copper and zinc form strong covalent bonds, and mobile Zn²⁺ ions carry electrical charge. B. Different-sized zinc atoms stop the layers sliding easily, while delocalised electrons remain mobile. C. Brass is an ionic compound with a giant lattice that prevents electrons from moving. D. Zinc atoms are the exact same size as copper atoms, packing closer to increase density. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Brass is a mixture (not an ionic or covalent compound, eliminating A and C) containing different-sized copper and zinc atoms (eliminating D). The different-sized zinc atoms disrupt the regular layers so the layers can no longer slide over each other easily (making brass harder), while the sea of mobile delocalised electrons is still present to conduct electricity ( B ).",
+      "vi": "BÀI MẪU 1 🟩 CORE + SUPPLEMENT • Trắc nghiệm Paper 2 Brass is an alloy of copper and zinc. Which statement correctly explains why brass is harder than pure copper and still conducts electricity? (Đồng thau — brass — là hợp kim của đồng và kẽm. Phát biểu nào giải thích đúng vì sao đồng thau cứng hơn đồng nguyên chất nhưng vẫn dẫn điện tốt?) A. Copper and zinc form strong covalent bonds, and mobile Zn²⁺ ions carry electrical charge. B. Different-sized zinc atoms stop the layers sliding easily, while delocalised electrons remain mobile. C. Brass is an ionic compound with a giant lattice that prevents electrons from moving. D. Zinc atoms are the exact same size as copper atoms, packing closer to increase density. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đồng thau là một hỗn hợp (mixture) chứ không phải hợp chất cộng hóa trị hay ion (loại A, C). Các nguyên tử kẽm có kích thước khác với nguyên tử đồng (loại D) làm phá vỡ trật tự lớp khiến các lớp không thể trượt qua nhau dễ dàng (nên cứng hơn), trong khi biển electron tự do (delocalised electrons) vẫn di chuyển linh hoạt giúp dẫn điện tốt (⇒ B đúng).",
+      "duration": 152.06,
+      "startTime": 892.57,
+      "endTime": 1044.63,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Stainless steel is an alloy used to make kitchen cutlery.(a) State what is meant by the term alloy , and name two elements other than iron present in stainless steel. [2](b) State two properties of stainless steel that make it suitable for cutlery. [1](c) Explain, in terms of its structure, why stainless steel is harder and stronger than pure iron. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) An alloy is a mixture of a metal with other elements [1m]. Elements in stainless steel (any two): chromium, nickel, carbon [1m]. (b) Hardness (stays sharp / does not bend) AND resistance to rusting / corrosion [1m for both]. (c) Stainless steel contains atoms of different sizes (which distort/disrupt the regular arrangement of iron layers) [1m], meaning the layers of atoms/ions can no longer slide over each other easily when a force is applied [1m]. 💡 Intuition Check: Every 2-mark \"Why is an alloy harder?\" question follows the exact same 2-step mark scheme: (1) different-sized atoms → (2) layers cannot slide over each other !",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Stainless steel is an alloy used to make kitchen cutlery.(a) State what is meant by the term alloy , and name two elements other than iron present in stainless steel. (b) State two properties of stainless steel that make it suitable for cutlery. (c) Explain, in terms of its structure, why stainless steel is harder and stronger than pure iron. (Dịch: (a) Nêu định nghĩa alloy và kể tên 2 nguyên tố ngoài sắt có trong thép không gỉ. (b) Nêu 2 tính chất giúp thép không gỉ phù hợp làm dao nĩa. (c) Giải thích theo cấu trúc vì sao thép không gỉ cứng và bền hơn sắt nguyên chất.) ✍️ Lời giải chi tiết theo thang điểm: (a) Alloy là hỗn hợp của một kim loại với các nguyên tố khác . Hai nguyên tố khác (chọn 2): chromium, nickel, carbon . (b) Độ cứng cao (hardness) VÀ khả năng chống rỉ sét . (c) Thép không gỉ chứa các nguyên tử có kích thước khác nhau làm biến dạng cấu trúc lớp đều đặn , khiến các lớp nguyên tử không thể trượt qua nhau khi chịu lực . 💡 Kiểm tra bản chất: Mọi câu 2 điểm hỏi \"Tại sao hợp kim cứng hơn?\" đều chấm đúng 2 cụm khóa: (1) different-sized atoms → (2) layers can no longer slide over each other !",
+      "duration": 165.34,
+      "startTime": 1044.63,
+      "endTime": 1209.97,
+      "audioUrl": "/audio/lectures/chemistry/9/s01_b11.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🛠️ 2. ỨNG DỤNG CỦA KIM LOẠI THEO TÍNH CHẤT (Uses of Metals — 9.2)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🛠️ 2. USES OF METALS IN TERMS OF PHYSICAL PROPERTIES (9.2). In exam questions, never write vague phrases like \"it is strong and cheap\". Always match each specific application directly to the exact physical or chemical property specified in the Cambridge 0620 mark scheme:",
+      "vi": "🛠️ 2. ỨNG DỤNG CỦA KIM LOẠI THEO TÍNH CHẤT. Trong đề thi Cambridge 0620, tuyệt đối tránh viết chung chung kiểu \"bền và rẻ\". Phải nêu chính xác từ khóa tính chất vật lý/hóa học khớp với từng ứng dụng trong đáp án chấm thi (Mark Scheme):",
+      "duration": 36.03,
+      "startTime": 1209.97,
+      "endTime": 1246.0,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of Section 9.2 as interviewing metals for four real-world engineering jobs :• Aircraft body: Steel is too heavy and wastes jet fuel → hire aluminium for its low density !• Overhead power cables strung high between pylons: Copper conducts better, but its high weight would make cables sag and pull pylons down → hire aluminium for low density + good electrical conductivity !• Food & drink cans: Acidic fizzy drinks would corrode iron → hire aluminium for resistance to corrosion !• Indoor house wiring (supported inside walls): Weight doesn’t matter → hire copper for good electrical conductivity + ductility !",
+      "vi": "🎯 Hình dung đời thường: Hãy coi Mục 9.2 như buổi tuyển dụng kim loại cho 4 công trình thực tế :• Vỏ máy bay (Aircraft): Thép quá nặng làm tốn xăng phản lực → chọn Nhôm (Al) vì có khối lượng riêng thấp (low density) !• Cáp điện cao thế trên cao (Overhead cables): Đồng dẫn điện tốt nhưng quá nặng sẽ làm võng đứt dây và sập cột điện → chọn Nhôm (Al) vì kết hợp hoàn hảo low density + good electrical conductivity !• Lon nước ngọt & hộp thực phẩm (Food containers): Chọn Nhôm (Al) nhờ chống ăn mòn tuyệt vời !• Dây điện âm tường trong nhà (Electrical wiring): Không lo sức nặng → chọn Đồng (Cu) vì dẫn điện siêu tốt + dễ kéo sợi mảnh (ductility) !",
+      "duration": 90.12,
+      "startTime": 1246.0,
+      "endTime": 1336.12,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Aluminium’s 3 Signature Uses (9.2.1a–c): (a) Aircraft → low density ; (b) Overhead electrical cables → low density AND good electrical conductivity ; (c) Food containers → resistance to corrosion . 2 → 🟦 Core Copper’s Signature Use (9.2.1d): Electrical wiring → good electrical conductivity AND ductility (drawn into thin flexible wires).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core 3 Ứng dụng Bắt buộc của Aluminium (9.2.1a–c): (a) Aircraft → low density ; (b) Overhead electrical cables → low density AND good electrical conductivity ; (c) Food containers → resistance to corrosion . 2 → 🟦 Core Ứng dụng Bắt buộc của Copper (9.2.1d): Electrical wiring → good electrical conductivity AND ductility .",
+      "duration": 63.3,
+      "startTime": 1336.12,
+      "endTime": 1399.42,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Examiners REJECT everyday words like \"aluminium is light\" or \"lightweight\" on their own — always write the exact scientific property \"low density\" ! Also avoid writing \"pure aluminium is very strong\" (pure Al is relatively soft; aircraft use Al alloys for strength).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Giám khảo Cambridge KHÔNG cho điểm từ đời thường như \"aluminium is light\" (nhôm nhẹ) — bắt buộc phải viết đúng thuật ngữ khoa học \"low density\" (khối lượng riêng thấp) ! Cũng đừng viết \"nhôm chống rỉ sét (rusting)\" — chỉ sắt/thép mới rust , còn nhôm phải ghi \"resistant to corrosion\" !",
+      "duration": 40.71,
+      "startTime": 1399.42,
+      "endTime": 1440.13,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🎯 4 Ứng dụng Bắt buộc trong Syllabus 9.2",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🎯 Official 0620 Property-to-Use Mapping",
+      "vi": "🎯 4 Ứng dụng Bắt buộc trong Syllabus 9.2",
+      "duration": 8.17,
+      "startTime": 1440.13,
+      "endTime": 1448.3,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "✈️ Nhôm — Chế tạo Máy bay (Aircraft)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "✈️ Aluminium — Aircraft. Used in the manufacture of aircraft bodies because of its low density (lightweight, reducing fuel consumption; alloyed for high strength).",
+      "vi": "✈️ Nhôm — Chế tạo Máy bay (Aircraft). Dùng làm thân vỏ máy bay nhờ khối lượng riêng thấp (low density) — giúp máy bay nhẹ, tiết kiệm nhiên liệu (thường dùng dạng hợp kim nhôm duralumin siêu bền).",
+      "duration": 24.83,
+      "startTime": 1448.3,
+      "endTime": 1473.13,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "⚡ Nhôm — Cáp điện trên cao (Overhead Cables)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "⚡ Aluminium — Overhead Cables. Used in overhead high-voltage power cables because of its low density (prevents cables sagging between pylons) AND good electrical conductivity.",
+      "vi": "⚡ Nhôm — Cáp điện trên cao (Overhead Cables). Dùng làm đường dây tải điện cao thế trên cao vì vừa có khối lượng riêng thấp (low density) (không làm võng dây/gãy cột) vừa dẫn điện tốt.",
+      "duration": 25.1,
+      "startTime": 1473.13,
+      "endTime": 1498.23,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🥫 Nhôm — Hộp đựng Thực phẩm (Food Containers)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🥫 Aluminium — Food Containers. Used for drink cans, foil wraps, and food containers because of its resistance to corrosion (protected by an unreactive, non-toxic Al₂O₃ oxide layer ).",
+      "vi": "🥫 Nhôm — Hộp đựng Thực phẩm (Food Containers). Dùng làm lon nước ngọt, màng bọc giấy bạc và khay thực phẩm nhờ khả năng chống ăn mòn tuyệt vời do có màng bảo vệ Al₂O₃ bền, không độc.",
+      "duration": 26.82,
+      "startTime": 1498.23,
+      "endTime": 1525.05,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🔌 Đồng — Dây điện dân dụng (Electrical Wiring)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🔌 Copper — Electrical Wiring. Used in domestic and industrial electrical wiring because of its good electrical conductivity and high ductility (easily drawn into thin, flexible wires).",
+      "vi": "🔌 Đồng — Dây điện dân dụng (Electrical Wiring). Dùng làm lõi dây dẫn điện trong nhà nhờ độ dẫn điện xuất sắc và tính dẻo kéo sợi cao (high ductility).",
+      "duration": 23.94,
+      "startTime": 1525.05,
+      "endTime": 1548.99,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Overhead high-voltage electricity cables are made from aluminium with a steel core rather than pure copper. Which pair of properties of aluminium best explains its use in overhead cables? A. High density and high melting point B. Low density and good electrical conductivity C. High hardness and poor thermal conductivity D. Low electrical conductivity and resistance to rusting ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Overhead cables suspended between tall pylons must carry high electric currents efficiently ( good electrical conductivity ) without sagging under their own weight ( low density ). Copper has a much higher density (8.96 g/cm3vs. 2.70 g/cm3for Al), making B the exact 0620 mark-scheme answer.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 Overhead high-voltage electricity cables are made from aluminium with a steel core rather than pure copper. Which pair of properties of aluminium best explains its use in overhead cables? (Đường dây tải điện cao thế trên cao làm bằng nhôm lõi thép thay vì đồng nguyên chất. Cặp tính chất nào của nhôm giải thích đúng nhất ứng dụng này?) A. High density and high melting point B. Low density and good electrical conductivity C. High hardness and poor thermal conductivity D. Low electrical conductivity and resistance to rusting ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Dây cáp treo lơ lửng giữa các cột điện cao thế vừa phải truyền tải dòng điện tốt, vừa phải nhẹ để không làm chùng võng dây ( low density — nhôm chỉ 2.70 g/cm3so với đồng 8.96 g/cm3) ⇒ chọn B .",
+      "duration": 118.28,
+      "startTime": 1548.99,
+      "endTime": 1667.27,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] Aluminium and copper are widely used metals.(a) State the property of aluminium that makes it suitable for:(i) manufacturing aircraft bodies [1](ii) making food containers and drink cans. [1](b) Explain why copper is used for electrical wiring inside buildings, giving two physical properties. [2] ✍️ Step-by-Step Mark Scheme Solution: (a)(i) Low density [1m]. (a)(ii) Resistance to corrosion (due to its protective oxide layer) [1m]. (b) 1. Good electrical conductivity [1m]; 2. Ductile / high ductility (can be drawn into wires without snapping) [1m]. 💡 Intuition Check: Never write \"rust-resistant\" for aluminium food containers — only iron and steel rust ! Always write \"resistant to corrosion\" for aluminium!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 / Paper 4 [4 marks] Aluminium and copper are widely used metals.(a) State the property of aluminium that makes it suitable for:(i) manufacturing aircraft bodies (ii) making food containers and drink cans. (b) Explain why copper is used for electrical wiring inside buildings, giving two physical properties. (Dịch: (a) Nêu tính chất của nhôm giúp nó phù hợp làm: (i) thân vỏ máy bay; (ii) hộp đựng thực phẩm. (b) Nêu 2 tính chất vật lý giải thích vì sao đồng dùng làm dây điện trong nhà.) ✍️ Lời giải chi tiết theo thang điểm: (a)(i) Khối lượng riêng thấp (low density) . (a)(ii) Khả năng chống ăn mòn . (b) 1. Dẫn điện tốt ; 2. Tính kéo sợi cao giúp kéo thành sợi dây mảnh, mềm dẻo . 💡 Kiểm tra bản chất: Luôn kiểm tra từ khóa ăn điểm: thay từ \"light\" bằng \"low density\" , và với nhôm luôn viết \"resistance to corrosion\" (không viết \"rusting\")!",
+      "duration": 134.14,
+      "startTime": 1667.27,
+      "endTime": 1801.41,
+      "audioUrl": "/audio/lectures/chemistry/9/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🔥 3. DÃY HOẠT ĐỘNG HÓA HỌC & PHẢN ỨNG THẾ (Reactivity Series — 9.4)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🔥 3. THE REACTIVITY SERIES & DISPLACEMENT REACTIONS (9.4). The reactivity series ranks metals from most reactive to least reactive according to their experimental reactions with cold water, steam, and dilute acid — and fundamentally reflects each metal's tendency to lose electrons and form positive ions (cations).",
+      "vi": "🔥 3. DÃY HOẠT ĐỘNG HÓA HỌC & PHẢN ỨNG THẾ (Reactivity Series — 9.4). Dãy hoạt động hóa học ( Reactivity Series ) sắp xếp kim loại theo thứ tự giảm dần mức độ hoạt động dựa trên phản ứng với nước lạnh, hơi nước, axit loãng — phản ánh trực tiếp xu hướng nhường electron tạo ion dương.",
+      "duration": 41.89,
+      "startTime": 1801.41,
+      "endTime": 1843.3,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of the Reactivity Series as an electron-giving championship ladder :• Top champions ( K, Na, Ca ) are so desperate to shed outer electrons and become positive ions ( Mⁿ⁺ ) that they react violently even with cold water !• Mid-table contenders ( Mg, Zn, Fe ) need hot steam or dilute HCl .• Bottom-ranked metals ( Cu, Ag, Au — below Hydrogen ) can’t even push H+out of acid!• Meanwhile, Aluminium is a top contender wearing an invisible, tough Al2O3raincoat that hides its true reactivity! In displacement , a higher metal hands its electrons to a lower metal’s ion and kicks it out of solution!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi Dãy Hoạt động Hóa học (Reactivity Series) như bảng xếp hạng các võ sĩ thích nhường electron tạo ion dương ( Mⁿ⁺ ) :• Hạng Siêu sao ( K, Na, Ca ) hăng hái nhường e−đến mức lao vào phản ứng ngay với nước lạnh (cold water) !• Hạng Trung ( Mg, Zn, Fe ) cần đun với hơi nước nóng (steam) hoặc axit HCl loãng .• Hạng Cuối bảng ( Cu, Ag, Au — đứng dưới Hydrogen ) yếu hơn H nên bỏ vào axit loãng nằm im!• Riêng Nhôm (Al) vốn là cao thủ hạng trên nhưng khoác sẵn chiếc áo mưa Al2O3vô hình cực bền nên trông có vẻ \"hiền lành\"! Trong phản ứng thế , võ sĩ hạng trên sẽ ép ion của võ sĩ hạng dưới nhận electron để đẩy ra khỏi dung dịch!",
+      "duration": 99.82,
+      "startTime": 1843.3,
+      "endTime": 1943.12,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Order & Benchmark Reactions (9.4.1–9.4.3): K > Na > Ca > Mg > Al > [C] > Zn > Fe > [H] > Cu > Ag > Au . Cold water (K, Na, Ca) → hydroxide + H2 ; Steam (Mg) → oxide (MgO) + H2 ; Dilute HCl (above H) → salt + H2 . 2 → 🟩 Supplement Tendency to Form Positive Ions (9.4.4): More reactive metal = greater tendency to lose electrons and form positive ions ⇒ displaces less reactive metal ions ( Mg²⁺, Zn²⁺, Fe²⁺, Cu²⁺, Ag⁺ ). 3 → 🟩 Supplement Aluminium’s Apparent Unreactivity (9.4.5): Coated in a thin, unreactive, impermeable aluminium oxide (Al2O3) layer .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Thứ tự & Phản ứng Chuẩn (9.4.1–9.4.3): K > Na > Ca > Mg > Al > [C] > Zn > Fe > [H] > Cu > Ag > Au (\"Khi Nào Cần May Áo [C] Giáp Sắt [H] Hỏi Cửa Hàng Á Âu\"). Nước lạnh (K, Na, Ca) → hydroxide + H2 ; Hơi nước nóng (Mg) → oxide (MgO) + H2 ; HCl loãng (trên H) → muối + H2 . 2 → 🟩 Supplement Xu hướng Tạo Ion Dương (9.4.4): Kim loại mạnh hơn có tendency to form positive ions lớn hơn ⇒ đẩy ion kim loại yếu hơn. 3 → 🟩 Supplement Tính Trơ Bề Kiến của Nhôm (9.4.5): Do có lớp màng bảo vệ aluminium oxide (Al2O3) mỏng, bền, không thấm nước.",
+      "duration": 114.72,
+      "startTime": 1943.12,
+      "endTime": 2057.84,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Watch the water vs. steam product trap! Calcium + cold water forms calcium HYDROXIDE ( Ca(OH)₂ + H₂ ), whereas magnesium + steam forms magnesium OXIDE ( MgO + H₂ — NOT Mg(OH)2)!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bẫy sản phẩm Nước lạnh vs. Hơi nước: Calcium + nước lạnh (l) tạo calcium HYDROXIDE ( Ca(OH)₂ + H₂ ), nhưng Magnesium + hơi nước nóng / steam (g) tạo bột trắng magnesium OXIDE ( MgO + H₂ — tuyệt đối không viết Mg(OH)2)!",
+      "duration": 42.05,
+      "startTime": 2057.84,
+      "endTime": 2099.89,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🧠 Thứ tự Chuẩn Syllabus 0620 & Mẹo Ghi nhớ (Mnemonic)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🧠 Official 0620 Reactivity Series Order & Mnemonic. Carbon (C) and Hydrogen (H) are non-metals included as crucial reference benchmarks for metal extraction and acid reactions: K > Na > Ca > Mg > Al > [C] > Zn > Fe > [H] > Cu > Ag > Au \"Please Send Cats, Monkeys And Cute Zebras Into Hot Countries Signed Gordon\" (Potassium > Sodium > Calcium > Magnesium > Aluminium > Carbon > Zinc > Iron > Hydrogen > Copper > Silver > Gold) .",
+      "vi": "🧠 Thứ tự Chuẩn Syllabus 0620 & Mẹo Ghi nhớ (Mnemonic). Hai phi kim Carbon (C) và Hydrogen (H) được đặt xen vào làm mốc so sánh để xác định phương pháp luyện kim và phản ứng với axit: K > Na > Ca > Mg > Al > [C] > Zn > Fe > [H] > Cu > Ag > Au 🇬🇧 \"Please Send Cats, Monkeys And Cute Zebras Into Hot Countries Signed Gordon\" 🇻🇳 Mẹo nhớ Tiếng Việt: \"Khi Nào Cần May Áo [C] Giáp Sắt [H] Hỏi Cửa Hàng Á Âu\" .",
+      "duration": 70.25,
+      "startTime": 2099.89,
+      "endTime": 2170.14,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Kim loại: Potassium (K) Sodium (Na); Với Nước lạnh (Cold Water) / Hơi nước (Stea...",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Metal: Potassium (K) Sodium (Na); Reaction with Cold Water / Steam: React very vigorously with cold water : 2K + 2H₂O ➔ 2KOH + H₂ (lilac flame, melts, floats) 2Na + 2H₂O ➔ 2NaOH + H₂ (melts into ball, rapid fizzing); Reaction with Dilute HCl: Explosively violent (too dangerous to perform in school labs).; Tendency to Form Ions: Highest tendency to lose electrons (K⁺, Na⁺). Metal: Calcium (Ca); Reaction with Cold Water / Steam: Reacts readily with cold water (sinks, steady stream of H₂ bubbles, slightly soluble white Ca(OH)₂ makes water cloudy): Ca + 2H₂O ➔ Ca(OH)₂ + H₂; Reaction with Dilute HCl: Very vigorous effervescence: Ca + 2HCl ➔ CaCl₂ + H₂; Tendency to Form Ions: Very high (Ca²⁺). Metal: Magnesium (Mg); Reaction with Cold Water / Steam: Very slow with cold water (few bubbles), but reacts vigorously with steam (bright white glow, white solid MgO): Mg(s) + H₂O(g) ➔ MgO(s) + H₂(g); Reaction with Dilute HCl: Rapid effervescence, test-tube gets hot: Mg + 2HCl ➔ MgCl₂ + H₂; Tendency to Form Ions: High (Mg²⁺). Metal: Aluminium (Al); Reaction with Cold Water / Steam: No reaction with cold water (protected by Al₂O₃ oxide layer ); powdered Al reacts with steam when heated.; Reaction with Dilute HCl: Slow at first (until Al₂O₃ layer dissolves), then rapid fizzing: 2Al + 6HCl ➔ 2AlCl₃ + 3H₂; Tendency to Form Ions: High (Al³⁺), masked by oxide coat.",
+      "vi": "Kim loại: Potassium (K) Sodium (Na); Với Nước lạnh (Cold Water) / Hơi nước (Steam): Phản ứng mãnh liệt với nước lạnh (cold water) : 2K + 2H₂O ➔ 2KOH + H₂ (nổi, nóng chảy, lửa tím lilac) 2Na + 2H₂O ➔ 2NaOH + H₂ (vo tròn chạy trên mặt nước); Với HCl loãng (Dilute HCl): Nổ cực mạnh (Explosive) — quá nguy hiểm để làm trong phòng thí nghiệm.; Xu hướng tạo Cation: Mạnh nhất (dễ nhường e⁻ nhất tạo K⁺, Na⁺). Kim loại: Calcium (Ca); Với Nước lạnh (Cold Water) / Hơi nước (Steam): Phản ứng nhanh với nước lạnh (chìm xuống đáy, sủi bọt H₂ đều, tạo dung dịch đục trắng Ca(OH)₂ ít tan): Ca + 2H₂O ➔ Ca(OH)₂ + H₂; Với HCl loãng (Dilute HCl): Sủi bọt rất mạnh: Ca + 2HCl ➔ CaCl₂ + H₂; Xu hướng tạo Cation: Rất cao (Ca²⁺). Kim loại: Magnesium (Mg); Với Nước lạnh (Cold Water) / Hơi nước (Steam): Rất chậm với nước lạnh, nhưng cháy sáng trắng mãnh liệt trong hơi nước (steam) tạo bột trắng MgO: Mg(s) + H₂O(g) ➔ MgO(s) + H₂(g); Với HCl loãng (Dilute HCl): Sủi bọt khí rất nhanh, ống nghiệm nóng lên: Mg + 2HCl ➔ MgCl₂ + H₂; Xu hướng tạo Cation: Cao (Mg²⁺). Kim loại: Aluminium (Al); Với Nước lạnh (Cold Water) / Hơi nước (Steam): Không phản ứng với nước lạnh do bị bao bọc bởi lớp màng oxit Al₂O₃ bền chắc.; Với HCl loãng (Dilute HCl): Ban đầu chậm (chờ axit hòa tan lớp Al₂O₃), sau đó sủi bọt mạnh: 2Al + 6HCl ➔ 2AlCl₃ + 3H₂; Xu hướng tạo Cation: Cao (Al³⁺), bị che bởi màng oxit.",
+      "duration": 252.44,
+      "startTime": 2170.14,
+      "endTime": 2422.58,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Tại sao Nhôm (Aluminium) Có vẻ Trơ dù Đứng rất cao trong Dãy Hoạt động?",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Supplement 9.4.5 Why Does Aluminium Appear Unreactive Despite Being High in the Series? Aluminium is high in the reactivity series (above carbon, zinc, and iron), yet aluminium saucepans, window frames, and foil do not react with water or corrode rapidly. This apparent unreactivity occurs because freshly exposed aluminium reacts instantaneously with oxygen in the air to form a thin, tough, unreactive, and impermeable layer of aluminium oxide (Al₂O₃) firmly bonded to the metal surface, shielding the underlying aluminium metal from water, air, and dilute acids.",
+      "vi": "Supplement 9.4.5 Tại sao Nhôm (Aluminium) Có vẻ Trơ dù Đứng rất cao trong Dãy Hoạt động? Mặc dù Aluminium đứng trên cả Carbon, Kẽm và Sắt, nhưng ngoài thực tế nhôm lại có vẻ trơ ( apparent unreactivity ), không bị nước hay không khí ăn mòn tiếp. Lý do: Ngay khi tiếp xúc không khí, bề mặt nhôm phản ứng tức thì với oxy tạo thành lớp màng mỏng, dai chắc, trơ và không thấm nước của aluminium oxide (Al₂O₃) bám chặt vào bề mặt, ngăn cách lõi nhôm nguyên chất bên trong khỏi nước và axit!",
+      "duration": 74.22,
+      "startTime": 2422.58,
+      "endTime": 2496.8,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Quy tắc Vàng: Kim loại HOẠT ĐỘNG MẠNH HƠN (có xu hướng tạo ion dương positive io...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Golden Rule: A more reactive metal (greater tendency to form positive ions) will displace a less reactive metal from an aqueous solution of its ions (e.g. Mg²⁺, Zn²⁺, Fe²⁺, Cu²⁺, Ag⁺) or from its solid oxide when heated.",
+      "vi": "Quy tắc Vàng: Kim loại HOẠT ĐỘNG MẠNH HƠN (có xu hướng tạo ion dương positive ions lớn hơn) sẽ đẩy (displace) kim loại yếu hơn ra khỏi dung dịch muối hoặc ra khỏi oxit rắn khi đun nóng.",
+      "duration": 31.98,
+      "startTime": 2496.8,
+      "endTime": 2528.78,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "✅ Ví dụ CÓ Phản ứng (Zn mạnh hơn Cu)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "✅ Reaction Occurs (Zn is above Cu). Zn(s) + CuSO₄(aq) ➔ ZnSO₄(aq) + Cu(s). Ionic: Zn(s) + Cu²⁺(aq) ➔ Zn²⁺(aq) + Cu(s). Observations: Grey zinc dissolves, pink-brown copper solid coats the metal, and the blue solution fades to colourless (as Cu²⁺ ions are removed). Zn is oxidised (loses 2e⁻); Cu²⁺ is reduced.",
+      "vi": "✅ Ví dụ CÓ Phản ứng (Zn mạnh hơn Cu). Zn(s) + CuSO₄(aq) ➔ ZnSO₄(aq) + Cu(s). Phương trình ion: Zn(s) + Cu²⁺(aq) ➔ Zn²⁺(aq) + Cu(s). Hiện tượng: Kẽm xám tan dần, kim loại đồng màu đỏ nâu bám lên bề mặt, và dung dịch xanh lam nhạt dần thành không màu . Zn nhường 2e⁻ (bị oxi hóa).",
+      "duration": 65.75,
+      "startTime": 2528.78,
+      "endTime": 2594.53,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🚨 BẪY ĐỀ THI: KHÔNG Phản ứng!",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🚨 Exam Trap: No Reaction! Cu(s) + ZnSO₄(aq) ➔ NO REACTION. Ag(s) + FeSO₄(aq) ➔ NO REACTION. Copper has a lower tendency to form positive ions than zinc, so it cannot donate electrons to Zn²⁺ ions. Always check the reactivity order before writing products!",
+      "vi": "🚨 BẪY ĐỀ THI: KHÔNG Phản ứng! Cu(s) + ZnSO₄(aq) ➔ NO REACTION. Ag(s) + FeSO₄(aq) ➔ NO REACTION. Đồng (Cu) có xu hướng tạo ion dương kém hơn kẽm (Zn) nên không thể nhường electron cho Zn²⁺. Luôn kiểm tra thứ tự trước khi viết sản phẩm!",
+      "duration": 48.08,
+      "startTime": 2594.53,
+      "endTime": 2642.61,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Clean strips of four metals are placed separately into aqueous iron(II) sulfate, FeSO4(aq). Which pair of metals will BOTH displace iron from the solution (assuming any surface oxide layer has been removed)? A. Copper and silver B. Copper and zinc C. Magnesium and zinc D. Silver and zinc ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: To displace Fe2+ions from FeSO4(aq), a metal must sit above iron in the reactivity series (have a greater tendency to form positive ions). Checking K > Na > Ca > Mg > Al > C > Zn > Fe > H > Cu > Ag > Au , both magnesium (Mg) and zinc (Zn) are above iron ( C ), whereas copper and silver sit below iron and give no reaction.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Clean strips of four metals are placed separately into aqueous iron(II) sulfate, FeSO4(aq). Which pair of metals will BOTH displace iron from the solution? (Nhúng các thanh kim loại sạch vào dung dịch FeSO4(aq). Cặp kim loại nào sau đây ĐỀU đẩy được sắt ra khỏi dung dịch?) A. Copper and silver B. Copper and zinc C. Magnesium and zinc D. Silver and zinc ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Muốn đẩy được ion Fe2+ra khỏi dung dịch FeSO4(aq), kim loại đó phải đứng trước Sắt (Fe) trong dãy hoạt động (có xu hướng tạo ion dương lớn hơn sắt). Tra dãy K > Na > Ca > Mg > Al > C > Zn > Fe > H > Cu > Ag > Au , cả magnesium (Mg) và zinc (Zn) đều đứng trên Fe (⇒ chọn C ), còn Cu và Ag đứng dưới Fe nên không phản ứng.",
+      "duration": 123.41,
+      "startTime": 2642.61,
+      "endTime": 2766.02,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Magnesium, aluminium, iron, and copper occupy different positions in the reactivity series.(a) Write the balanced symbol equation, including state symbols, for the reaction of heated magnesium with steam. [2](b) Excess grey magnesium powder is stirred into blue aqueous copper(II) sulfate, CuSO4(aq). State two observations and explain this reaction in terms of the tendency to form positive ions. [2](c) Aluminium is higher than iron in the reactivity series, yet aluminium window frames do not corrode rapidly in damp air. Explain why. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Mg(s) + H₂O(g) → MgO(s) + H₂(g) (correct formulas [1m]; all four state symbols correct, especially H₂O(g) [1m]) . (b) Observations: blue solution fades to colourless AND a pink-brown solid (copper) forms [1m]. Explanation: Magnesium has a greater tendency to form positive ions (Mg2+) than copper (loses electrons more easily), so it displaces Cu2+from solution [1m]. (c) Aluminium is covered by a thin, tough, unreactive / impermeable layer of aluminium oxide (Al2O3) that prevents air and water reaching the metal underneath [1m]. 💡 Intuition Check: Notice state symbol H₂O(g) for steam! Writing H₂O(l) in a steam reaction loses the state-symbol mark immediately!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Magnesium, aluminium, iron, and copper occupy different positions in the reactivity series.(a) Write the balanced symbol equation, including state symbols, for the reaction of heated magnesium with steam. (b) Excess grey magnesium powder is stirred into blue aqueous copper(II) sulfate, CuSO4(aq). State two observations and explain this reaction in terms of the tendency to form positive ions. (c) Aluminium is higher than iron in the reactivity series, yet aluminium window frames do not corrode rapidly in damp air. Explain why. (Dịch: (a) Viết PTHH kèm trạng thái khi đun Mg với hơi nước. (b) Khuấy bột Mg dư vào dung dịch CuSO4xanh lam: nêu 2 hiện tượng và giải thích theo xu hướng tạo ion dương. (c) Giải thích vì sao khung cửa nhôm không bị ăn mòn nhanh ngoài không khí ẩm.) ✍️ Lời giải chi tiết theo thang điểm: (a) Mg(s) + H₂O(g) → MgO(s) + H₂(g) (đúng công thức ; đúng cả 4 ký hiệu trạng thái, đặc biệt hơi nước là H₂O(g) ) . (b) Hiện tượng: dung dịch màu xanh lam nhạt dần thành không màu VÀ xuất hiện chất rắn màu đỏ nâu . Giải thích: Magnesium có xu hướng tạo ion dương (Mg2+) lớn hơn copper nên nhường electron và đẩy Cu2+ra khỏi dung dịch . (c) Bề mặt nhôm được bao phủ bởi lớp màng aluminium oxide (Al2O3) mỏng, trơ và không thấm ngăn cách nhôm bên trong với không khí và nước .",
+      "duration": 224.52,
+      "startTime": 2766.02,
+      "endTime": 2990.54,
+      "audioUrl": "/audio/lectures/chemistry/9/s03_b11.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🧱 4. SỰ ĂN MÒN KIM LOẠI, RỈ SÉT & BẢO VỆ HI SINH (Corrosion & Rusting — 9.5)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🧱 4. CORROSION OF METALS, RUSTING & SACRIFICIAL PROTECTION (9.5). Corrosion is the chemical attack on a metal's surface by oxygen, water, or environmental substances. Rusting is the specific term reserved exclusively for iron and steel when they react with both oxygen and water to form flaky orange-brown hydrated iron(III) oxide (Fe₂O₃· x H₂O).",
+      "vi": "🧱 4. SỰ ĂN MÒN KIM LOẠI, RỈ SÉT & BẢO VỆ HI SINH (Corrosion & Rusting — 9.5). Corrosion (ăn mòn) là quá trình kim loại bị tác nhân môi trường tấn công hóa học. Rusting (sự rỉ sét) là thuật ngữ CHỈ DÙNG RIÊNG CHO SẮT VÀ THÉP khi tiếp xúc đồng thời với cả Oxygen (O₂) VÀ Nước (H₂O) tạo lớp vảy xốp màu nâu cam hydrated iron(III) oxide (Fe₂O₃· x H₂O).",
+      "duration": 56.95,
+      "startTime": 2990.54,
+      "endTime": 3047.49,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of rusting as a two-key vault lock : BOTH oxygen (O2) AND water (H2O) must turn the lock together to rust iron into flaky orange-brown Fe₂O₃•xH₂O — take away either key and rusting stops dead! To protect steel:• Barrier Methods (paint, grease, plastic) work like a raincoat : great while intact, but a single scratch lets air and water attack the exposed iron.• Galvanising / Sacrificial Protection (Zn or Mg) hires a loyal bodyguard : because zinc is more reactive than iron , even if scratched, zinc jumps in front and loses electrons instead of iron ( Zn → Zn²⁺ + 2e⁻ )!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung sự rỉ sét (rusting) như ổ khóa hai chìa : phải có mặt ĐỒNG THỜI cả Oxygen (O2) LẪN Nước (H2O) cùng ối! Để bảo vệ thép:• Barrier Methods (sơn, dầu mỡ, bọc nhựa) giống như mặc áo mưa : kín thì khô, nhưng rách/trầy xước một vết là nước và không khí ùa vào làm rỉ ngay.• Galvanising / Sacrificial Protection (gắn Zn hoặc Mg) là thuê vệ sĩ cảm tử đỡ đạn : vì kẽm mạnh hơn sắt , kể cả khi lớp mạ trầy xước lộ sắt ra ngoài, kẽm vẫn xung phong nhường electron thế mạng cho sắt ( Zn → Zn²⁺ + 2e⁻ )!",
+      "duration": 90.77,
+      "startTime": 3047.49,
+      "endTime": 3138.26,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Rusting Conditions & Barrier Methods (9.5.1–9.5.3): Iron/steel rusts to form hydrated iron(III) oxide ONLY when both oxygen and water are present. Painting, greasing, and coating with plastic prevent rusting by excluding oxygen and water . 2 → 🟩 Supplement Galvanising & Sacrificial Protection (9.5.4–9.5.5): Zinc coating = barrier method + sacrificial protection . Zinc is more reactive than iron and loses electrons more readily than iron (corroding preferentially).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Điều kiện Rỉ sét & Rào cản (9.5.1–9.5.3): Sắt/thép rỉ tạo hydrated iron(III) oxide khi có cả oxygen và water . Painting, greasing, coating with plastic ngăn rỉ bằng cách cách ly O2và H2O . 2 → 🟩 Supplement Mạ Kẽm & Bảo vệ Hi sinh (9.5.4–9.5.5): Galvanising = barrier method + sacrificial protection . Giải thích: Zinc hoạt động mạnh hơn sắt nên nhường electron dễ hơn sắt .",
+      "duration": 65.77,
+      "startTime": 3138.26,
+      "endTime": 3204.03,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic traps: (1) Never say zinc, aluminium, or copper \"rusts\" — say zinc corrodes / oxidises , because rusting applies ONLY to iron and steel ! (2) In the boiled-water nail tube, boiling removes dissolved O2, and the layer of oil stops O2from the air dissolving back in!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi sai kinh điển: (1) Không bao giờ viết kẽm hay nhôm \"bị rỉ sét (rusts)\" — từ rusting CHỈ DÙNG CHO SẮT VÀ THÉP , còn kẽm bị ăn mòn thế mạng phải viết corrodes / oxidises ! (2) Trong ống nghiệm nước đun sôi, đun sôi giúp đuổi O2hòa tan, còn lớp dầu (oil layer) ở trên ngăn không cho O2không khí hòa tan ngược trở lại!",
+      "duration": 48.23,
+      "startTime": 3204.03,
+      "endTime": 3252.26,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "🧪 Thí nghiệm 3 Ống nghiệm Đinh sắt Kinh điển",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "🧪 Classic 3-Tube Investigation of Rusting Conditions. Note: Dissolved salt (NaCl) or acid rain acts as an electrolyte that accelerates rusting, though O₂ + H₂O are the two essential reactants.",
+      "vi": "🧪 Thí nghiệm 3 Ống nghiệm Đinh sắt Kinh điển. Lưu ý: Nước muối ( NaCl ) hoặc mưa axit đóng vai trò chất điện ly làm tăng tốc độ rỉ sét, nhưng O₂ + H₂O mới là 2 điều kiện bắt buộc.",
+      "duration": 29.68,
+      "startTime": 3252.26,
+      "endTime": 3281.94,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🛡️ Phương pháp Rào cản (Barrier Methods — 9.5.2 & 9.5.3)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🛡️ Barrier Methods (Core 9.5.2–9.5.3). Barrier methods prevent rusting by placing an impermeable surface coating over iron/steel to exclude oxygen and water : Painting: Used for bridges, ships' superstructures, gates, and car bodies. Greasing / Oiling: Used for moving machinery parts, tools, and bicycle chains (also lubricates). Coating with Plastic: Used for refrigerator wire racks, garden chairs, and outdoor cables. ⚠️ Limitation of Pure Barrier Coatings: As soon as paint, plastic, or tin-plating is scratched , the exposed iron comes into contact with oxygen and water and begins to rust underneath!",
+      "vi": "🛡️ Phương pháp Rào cản (Barrier Methods — 9.5.2 & 9.5.3). Ngăn rỉ sét bằng cách phủ lớp màng không thấm để ngăn cách sắt khỏi oxygen và nước : Sơn phủ (Painting): Dùng cho cầu thép, cổng sắt, vỏ xe hơi, boong tàu. Bôi dầu mỡ (Greasing / Oiling): Dùng cho xích xe đạp, bánh răng và chi tiết máy chuyển động. Bọc nhựa: Dùng cho giá để đồ tủ lạnh, dây cáp, ghế sân vườn. ⚠️ Nhược điểm: Ngay khi lớp sơn, nhựa hoặc lớp mạ thiếc (tin) bị trầy xước (scratched) , phần sắt lộ ra tiếp xúc với O₂ và H₂O sẽ lập tức bị rỉ sét!",
+      "duration": 80.69,
+      "startTime": 3281.94,
+      "endTime": 3362.63,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "1. Galvanising = Barrier + Sacrificial Protection",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "1. Galvanising = Barrier + Sacrificial. Galvanising coats iron or steel objects (buckets, roofing sheets, crash barriers) with a layer of zinc (Zn) . Unbroken zinc acts as a physical barrier excluding O₂ and H₂O — AND even if the zinc layer is scratched , the exposed iron still does not rust because zinc provides sacrificial protection !",
+      "vi": "1. Galvanising = Barrier + Sacrificial Protection. Galvanising là phủ một lớp Kẽm (Zinc, Zn) lên bề mặt sắt/thép (tôn lợp mái, xô chậu, lan can đường cao tốc). Khi lành lặn, lớp kẽm đóng vai trò barrier method . Đặc biệt, ngay cả khi lớp kẽm bị trầy xước (scratched) làm lộ sắt ra ngoài, sắt vẫn KHÔNG bị rỉ nhờ cơ chế sacrificial protection !",
+      "duration": 53.04,
+      "startTime": 3362.63,
+      "endTime": 3415.67,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "2. Giải thích 2 Ý Ăn Điểm Tuyệt đối theo Electron",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "2. Exact 2-Mark Exam Explanation. • Reactivity Series: Zinc (or magnesium blocks bolted to ship hulls / underground pipes) is more reactive than iron .• Electron Loss: Zinc has a greater tendency to form positive ions and loses electrons more readily than iron , oxidising preferentially in place of iron: Zn(s) ➔ Zn²⁺(aq) + 2e⁻ (Zinc corrodes instead of Fe)",
+      "vi": "2. Giải thích 2 Ý Ăn Điểm Tuyệt đối theo Electron. • Về Dãy hoạt động: Zinc (hoặc khối Magnesium gắn vào vỏ tàu biển) hoạt động mạnh hơn sắt .• Về Nhường Electron: Kẽm có xu hướng tạo ion dương lớn hơn và nhường electron dễ dàng hơn sắt nên bị oxi hóa thay cho sắt: Zn(s) ➔ Zn²⁺(aq) + 2e⁻ (Zn bị ăn mòn thế mạng cho Fe)",
+      "duration": 54.02,
+      "startTime": 3415.67,
+      "endTime": 3469.69,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Four clean iron nails are placed in open test-tubes completely covered with tap water:• Tube 1: plain iron nail• Tube 2: iron nail painted completely with intact waterproof paint• Tube 3: iron nail wrapped tightly with a strip of magnesium ribbon• Tube 4: iron nail wrapped tightly with a strip of copper foilIn which tubes will the iron nail rust after one week? A. Tubes 1 and 3 only B. Tubes 1 and 4 only C. Tubes 2 and 3 only D. Tubes 1, 3, and 4 only ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Open tap water contains both dissolved oxygen and water , so the unprotected nail in Tube 1 rusts . In Tube 2 , intact paint acts as a barrier excluding O2and H2O (no rust). In Tube 3 , magnesium is more reactive than iron , providing sacrificial protection by losing electrons in preference to iron (no rust). In Tube 4 , copper is less reactive than iron , so iron loses electrons preferentially and rusts even faster! Thus Tubes 1 and 4 rust ( B ).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Four clean iron nails are placed in open test-tubes completely covered with tap water:• Tube 1: plain iron nail | • Tube 2: iron nail painted completely with intact waterproof paint• Tube 3: iron nail wrapped tightly with magnesium ribbon | • Tube 4: iron nail wrapped tightly with copper foilIn which tubes will the iron nail rust after one week? (Bốn đinh sắt sạch đặt ngập trong nước máy để hở: Ống 1 đinh trần; Ống 2 sơn kín; Ống 3 quấn dải Mg; Ống 4 quấn lá Cu. Sau 1 tuần, đinh sắt ở ống nào bị rỉ?) A. Tubes 1 and 3 only B. Tubes 1 and 4 only C. Tubes 2 and 3 only D. Tubes 1, 3, and 4 only ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Nước máy để hở có đủ cả O2hòa tan và H2O nên đinh trần ở Ống 1 bị rỉ . Ống 2 có lớp sơn nguyên vẹn làm màng ngăn (barrier) nên không rỉ. Ống 3 quấn Magnesium mạnh hơn sắt nên Mg nhường electron bảo vệ hi sinh cho sắt (không rỉ). Ống 4 quấn Copper yếu hơn sắt nên sắt phải nhường electron và bị rỉ còn nhanh hơn! Vậy Ống 1 và Ống 4 bị rỉ (⇒ chọn B ).",
+      "duration": 159.15,
+      "startTime": 3469.69,
+      "endTime": 3628.84,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Steel roof sheets are often galvanised by coating them with a thin layer of zinc.(a) State the chemical name of rust and state the two substances required for steel to rust. [2](b) Explain why a galvanised steel roof sheet does not rust even when the zinc coating becomes deeply scratched, exposing the steel underneath to rain and air. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Chemical name: hydrated iron(III) oxide [1m]. Conditions: oxygen (air) AND water [1m for both]. (b) Zinc provides sacrificial protection [1m]: zinc is more reactive than iron (higher in the reactivity series) [1m], so zinc loses electrons more readily than iron ( Zn → Zn²⁺ + 2e⁻ ) and corrodes/oxidises instead of the iron [1m]. 💡 Intuition Check: Notice the 3 golden phrases for full marks on scratched galvanised iron: (1) sacrificial protection , (2) zinc is more reactive than iron , (3) zinc loses electrons in preference to iron !",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Steel roof sheets are often galvanised by coating them with a thin layer of zinc.(a) State the chemical name of rust and state the two substances required for steel to rust. (b) Explain why a galvanised steel roof sheet does not rust even when the zinc coating becomes deeply scratched, exposing the steel underneath to rain and air. (Dịch: Tôn thép lợp mái thường được mạ kẽm. (a) Nêu tên hóa học của gỉ sắt và 2 chất cần thiết để thép bị gỉ. (b) Giải thích vì sao tôn mạ kẽm bị trầy xước sâu làm lộ lõi thép ra mưa gió mà thép vẫn không bị gỉ.) ✍️ Lời giải chi tiết theo thang điểm: (a) Tên hóa học: hydrated iron(III) oxide . Hai chất cần thiết: oxygen (không khí) VÀ nước (water) . (b) Kẽm bảo vệ thép theo cơ chế bảo vệ hi sinh (sacrificial protection) : do zinc hoạt động mạnh hơn iron , nên zinc nhường electron dễ hơn iron và bị oxi hóa/ăn mòn thay cho sắt . 💡 Kiểm tra bản chất: Ghi nhớ bộ 3 cụm từ ăn trọn 3 điểm khi tôn mạ kẽm bị xước: (1) sacrificial protection , (2) zinc is more reactive than iron , (3) zinc loses electrons in preference to iron !",
+      "duration": 161.2,
+      "startTime": 3628.84,
+      "endTime": 3790.04,
+      "audioUrl": "/audio/lectures/chemistry/9/s04_b09.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🏭 5. LUYỆN KIM: LÒ CAO LUYỆN SẮT & ĐIỆN PHÂN NHÔM (Extraction of Metals — 9.6)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🏭 5. EXTRACTION OF METALS: BLAST FURNACE & ELECTROLYSIS (9.6). The ease of obtaining a metal from its ore is directly linked to its position in the reactivity series: the more reactive a metal, the more stable its compounds and the harder (and more energy-intensive) it is to extract.",
+      "vi": "🏭 5. LUYỆN KIM: LÒ CAO LUYỆN SẮT & ĐIỆN PHÂN NHÔM. Độ dễ dàng khi tách kim loại từ quặng ( ores ) phụ thuộc trực tiếp vào vị trí trong Reactivity Series : kim loại càng hoạt động mạnh thì hợp chất của nó càng bền vững và càng khó tách (tốn nhiều năng lượng hơn).",
+      "duration": 36.1,
+      "startTime": 3790.04,
+      "endTime": 3826.14,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Extracting a metal from its oxide ore is a tug-of-war for oxygen :• Below Carbon (Zn, Fe, Cu): Cheap carbon / carbon monoxide is strong enough to rip oxygen away from the ore inside a roaring Blast Furnace (plus limestone acts as the \"janitor\", turning sandy SiO₂ dirt into floating liquid slag!).• Above Carbon (K, Na, Ca, Mg, Al): Aluminium holds onto oxygen so tightly that carbon loses the tug-of-war! You must use brute-force electricity (electrolysis) — dissolving bauxite (Al2O3) in molten cryolite first so you don’t bankrupt the factory trying to melt it at 2050°C!",
+      "vi": "🎯 Hình dung đời thường: Tách kim loại khỏi quặng oxit thực chất là một cuộc kéo co giành nguyên tử Oxygen :• Kim loại đứng DƯỚI Carbon (Zn, Fe, Cu): Than cốc Carbon / khí CO rẻ tiền khỏe hơn nên giật tung Oxygen khỏi quặng sắt trong Lò cao (Blast Furnace) — còn đá vôi CaCO₃ đóng vai \"lao công\" dọn sạch cát bẩn SiO₂ thành xỉ lỏng nổi lên trên!• Kim loại đứng TRÊN Carbon: Nhôm ôm chặt Oxygen đến mức Carbon kéo không nổi! Bắt buộc phải dùng \"sức mạnh dòng điện\" điện phân nóng chảy (electrolysis) — nhớ hòa tan quặng bauxite (Al2O3) vào cryolite nóng chảy để hạ nhiệt độ từ 2050°C xuống ~950°C kẻo sập tiệm tiền điện!",
+      "duration": 94.88,
+      "startTime": 3826.14,
+      "endTime": 3921.02,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Reactivity vs. Extraction Method (9.6.1, 9.6.3): Above C → electrolysis (e.g. Al from bauxite ); Below C → reduction with C / CO (e.g. Fe from hematite ); Ag/Au → uncombined. 2 → 🟦/🟩 Blast Furnace 5 Reactions (9.6.2, 9.6.4): (a) C + O₂ → CO₂ (heat); (b) C + CO₂ → 2CO ; (c) Fe₂O₃ + 3CO → 2Fe + 3CO₂ (main reduction); (d) CaCO₃ → CaO + CO₂ ; (e) CaO + SiO₂ → CaSiO₃ (slag). 3 → 🟩 Supplement Hall–Héroult Aluminium Cell (9.6.5): Cryolite lowers melting point / operating temperature & improves conductivity; Cathode: Al³⁺ + 3e⁻ → Al ; Anode: 2O²⁻ → O₂ + 4e⁻ ; carbon anodes burn in O2 to form CO2so must be replaced.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Vị trí & Phương pháp Luyện kim (9.6.1, 9.6.3): Trên C → electrolysis (Al từ quặng bauxite ); Dưới C → khử bằng C / CO (Fe từ quặng hematite ); Ag/Au → tự do. 2 → 🟦/🟩 5 Phản ứng Lò Cao (9.6.2, 9.6.4): (a) C + O₂ → CO₂ (tỏa nhiệt); (b) C + CO₂ → 2CO ; (c) Fe₂O₃ + 3CO → 2Fe + 3CO₂ (khử quặng); (d) CaCO₃ → CaO + CO₂ ; (e) CaO + SiO₂ → CaSiO₃ (tạo xỉ slag). 3 → 🟩 Supplement Điện phân Nhôm (9.6.5): Cryolite hạ nhiệt độ vận hành & tăng độ dẫn điện; Cathode: Al³⁺ + 3e⁻ → Al ; Anode: 2O²⁻ → O₂ + 4e⁻ ; cực dương carbon bị cháy với O2 tạo CO2nên phải thay định kỳ.",
+      "duration": 124.75,
+      "startTime": 3921.02,
+      "endTime": 4045.77,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic Paper 4 traps: (1) Saying cryolite acts as a catalyst — WRONG! Cryolite is a solvent that lowers the operating temperature (from ~2050°C to ~950°C)! (2) Forgetting why limestone is added to the blast furnace — it removes acidic silicon(IV) oxide (sand) impurities as molten calcium silicate slag !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy kinh điển ở Paper 4: (1) Viết cryolite là chất xúc tác (catalyst) — SAI HOÀN TOÀN! Cryolite là dung môi giúp hạ nhiệt độ nóng chảy/vận hành và tăng độ dẫn điện! (2) Quên vai trò của đá vôi (limestone) trong lò cao — nó phân hủy ra CaO để khử tạp chất cát axit SiO2 thành xỉ lỏng slag (CaSiO3) !",
+      "duration": 54.73,
+      "startTime": 4045.77,
+      "endTime": 4100.5,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "Vị trí so với Carbon: Đứng TRÊN Carbon (K, Na, Ca, Mg, Al); Phương pháp chiết xu...",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "Position in Reactivity Series: Above Carbon (K, Na, Ca, Mg, Al); Extraction Method: Electrolysis of the molten compound (e.g. Al from molten Al₂O₃ in cryolite).; Chemical Reason: Compounds are extremely stable; carbon cannot reduce their oxides (and aqueous electrolysis yields H₂ at cathode). Very expensive due to high electricity demand. Position in Reactivity Series: Below Carbon (Zn, Fe, Cu); Extraction Method: Chemical reduction by heating with carbon (coke) or carbon monoxide (CO) .; Chemical Reason: Carbon is more reactive than these metals, so C or CO removes oxygen from the metal oxide ore. Much cheaper than electrolysis. Position in Reactivity Series: Very Unreactive (Ag, Au); Extraction Method: Found uncombined (native) as the free element in the Earth's crust.; Chemical Reason: Too unreactive to combine readily with oxygen or sulfur; physical separation suffices.",
+      "vi": "Vị trí so với Carbon: Đứng TRÊN Carbon; Phương pháp chiết xuất: Điện phân hợp chất nóng chảy .; Giải thích Hóa học: Oxit quá bền, Carbon không thể khử được (nếu điện phân dung dịch nước thì H₂ thoát ra ở cathode thay vì kim loại). Rất đắt đỏ do tốn điện năng. Vị trí so với Carbon: Đứng DƯỚI Carbon (Zn, Fe, Cu); Phương pháp chiết xuất: Khử bằng Carbon hoặc khí CO ở nhiệt độ cao .; Giải thích Hóa học: Carbon mạnh hơn các kim loại này nên chiếm lấy nguyên tử Oxygen từ oxit quặng. Chi phí rẻ hơn nhiều so với điện phân. Vị trí so với Carbon: Rất kém hoạt động (Ag, Au); Phương pháp chiết xuất: Tồn tại dạng tự do nguyên chất (uncombined / native) trong tự nhiên.; Giải thích Hóa học: Quá trơ nên không kết hợp với oxy tạo quặng oxit; chỉ cần đãi/tách vật lý.",
+      "duration": 124.8,
+      "startTime": 4100.5,
+      "endTime": 4225.3,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "🌋 Luyện Sắt từ Quặng Hematite trong Lò Cao (The Blast Furnace — 9.6.2 & 9.6.4)",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "🌋 Extraction of Iron from Hematite in the Blast Furnace (9.6.2 & 9.6.4). All 5 Equations Raw Materials Charged at Top: Hematite (iron ore containing iron(III) oxide, Fe₂O₃ , with sandy silicon(IV) oxide SiO₂ impurity), Coke (impure carbon, C ), and Limestone (calcium carbonate, CaCO₃ ). Blasts of hot air (O₂) are blown in near the bottom. SVG BLAST FURNACE DIAGRAM Molten slag is less dense than molten iron, so it floats on top and protects the iron from re-oxidation. 5 REQUIRED REACTIONS (a) Burning of carbon (coke) — exothermic, provides heat & CO₂: C(s) + O₂(g) ➔ CO₂(g) (b) Reduction of CO₂ by more coke to produce the main reducing agent (CO): C(s) + CO₂(g) ➔ 2CO(g) (c) Reduction of iron(III) oxide in hematite by carbon monoxide: Fe₂O₃(s) + 3CO(g) ➔ 2Fe(l) + 3CO₂(g) (d) Thermal decomposition of limestone (calcium carbonate) to calcium oxide: CaCO₃(s) ➔ CaO(s) + CO₂(g) (e) Formation of slag — basic CaO neutralises acidic silica impurity (SiO₂): CaO(s) + SiO₂(s) ➔ CaSiO₃(l) (molten calcium silicate slag)",
+      "vi": "🌋 Luyện Sắt từ Quặng Hematite trong Lò Cao. Đủ 5 Phương trình Nguyên liệu nạp từ đỉnh lò: Quặng sắt Hematite (chứa iron(III) oxide, Fe₂O₃ lẫn tạp chất cát silicon(IV) oxide, SiO₂ ), Than cốc Coke (C) và Đá vôi Limestone (CaCO₃) . Luồng không khí nóng (hot air, O₂) được thổi mạnh từ gần đáy lò lên. SVG BLAST FURNACE DIAGRAM Xỉ Slag (CaSiO₃) nhẹ hơn nên nổi lên trên lớp sắt nóng chảy, ngăn sắt mới sinh bị oxi hóa ngược trở lại. 5 REQUIRED REACTIONS (a) Đốt cháy than cốc (Coke) — tỏa nhiệt cực mạnh cung cấp nhiệt độ cao & tạo CO₂: C(s) + O₂(g) ➔ CO₂(g) (b) Khử CO₂ bằng than cốc tạo ra chất khử chính là khí Carbon Monoxide (CO): C(s) + CO₂(g) ➔ 2CO(g) (c) Khí CO khử quặng sắt(III) oxit (hematite) thành sắt nóng chảy: Fe₂O₃(s) + 3CO(g) ➔ 2Fe(l) + 3CO₂(g) (d) Nhiệt phân đá vôi tạo vôi sống CaO: CaCO₃(s) ➔ CaO(s) + CO₂(g) (e) Tạo xỉ lỏng — oxit bazơ CaO khử tạp chất cát axit SiO₂: CaO(s) + SiO₂(s) ➔ CaSiO₃(l) (calcium silicate — xỉ làm nền đường)",
+      "duration": 192.75,
+      "startTime": 4225.3,
+      "endTime": 4418.05,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "⚡ Tách Nhôm từ Quặng Bauxite bằng Điện phân Nóng chảy",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "Core 9.6.3 + Supplement 9.6.5 ⚡ Extraction of Aluminium from Bauxite by Electrolysis. The main ore of aluminium is bauxite , which is purified to yield pure aluminium oxide (Al₂O₃) . Because aluminium is more reactive than carbon, it must be extracted by electrolysis in a Hall–Héroult cell using inert carbon (graphite) electrodes. SVG HALL-HEROULT CELL (a) Role of Cryolite (Na₃AlF₆). Pure Al₂O₃ melts at over 2050°C. Dissolving Al₂O₃ in molten cryolite lowers the operating temperature to ~950°C (reducing energy costs dramatically) and increases electrical conductivity. (c) Ionic Half-Equations at the Electrodes. Cathode (−, Reduction): Al³⁺ + 3e⁻ ➔ Al(l)Anode (+, Oxidation): 2O²⁻ ➔ O₂(g) + 4e⁻ (b) Why Must the Carbon Anodes Be Regularly Replaced? At the high temperature inside the cell, the oxygen gas evolved at the positive electrodes reacts with the hot carbon anodes to form carbon dioxide gas ( C(s) + O₂(g) ➔ CO₂(g) ), so the anodes gradually burn away.",
+      "vi": "Core 9.6.3 + Supplement 9.6.5 ⚡ Tách Nhôm từ Quặng Bauxite bằng Điện phân Nóng chảy. Quặng chính của nhôm là bauxite , được tinh chế thành aluminium oxide (Al₂O₃) tinh khiết. Vì nhôm mạnh hơn carbon, ta bắt buộc phải dùng phương pháp điện phân (electrolysis) với các điện cực bằng than chì carbon (graphite) electrodes. SVG HALL-HEROULT CELL (a) Vai trò của Cryolite nóng chảy. Al₂O₃ tinh khiết nóng chảy ở tận ~2050°C. Hòa tan Al₂O₃ vào molten cryolite giúp hạ nhiệt độ vận hành xuống ~950°C tiết kiệm chi phí nhiệt năng khổng lồ và tăng độ dẫn điện (improves conductivity). (c) Bán phản ứng Ion ở hai Điện cực. Cathode (−, Khử / Reduction): Al³⁺ + 3e⁻ ➔ Al(l)Anode (+, Oxi hóa / Oxidation): 2O²⁻ ➔ O₂(g) + 4e⁻ (b) Tại sao phải Thay mới Cực dương Carbon Định kỳ? Ở nhiệt độ rất cao (~950°C), khí oxygen (O₂) thoát ra tại cực dương phản ứng ngay với điện cực carbon anodes tạo khí carbon dioxide ( C(s) + O₂(g) ➔ CO₂(g) ), làm các thanh anode bị cháy mòn dần!",
+      "duration": 165.3,
+      "startTime": 4418.05,
+      "endTime": 4583.35,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ In the industrial extraction of aluminium from purified bauxite, Al2O3is dissolved in molten cryolite and electrolysed using carbon electrodes. Which row correctly states a role of cryolite and why the positive electrodes must be replaced regularly? A. Acts as a catalyst to speed up electrolysis | Aluminium alloys with the positive electrodes B. Lowers the operating temperature of the cell | Oxygen formed at the anodes reacts with carbon to form CO₂ C. Reduces Al³⁺ ions chemically to molten aluminium | Fluorine gas corrodes the graphite lining D. Removes silicon(IV) oxide impurities as molten slag | Carbon dissolves in molten aluminium at the cathode ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Pure Al2O3has an extremely high melting point (~2050°C); dissolving it in molten cryolite lowers the operating temperature (~950°C) and increases conductivity (not a catalyst, eliminating A). At the positive carbon anodes, oxide ions are oxidised to oxygen gas ( 2O²⁻ → O₂ + 4e⁻ ), which reacts at high temperature with the carbon anodes to form CO2gas , burning them away ( B ).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 In the industrial extraction of aluminium from purified bauxite, Al2O3is dissolved in molten cryolite and electrolysed using carbon electrodes. Which row correctly states a role of cryolite and why the positive electrodes must be replaced regularly? (Trong công nghiệp tách nhôm từ bauxite tinh chế, Al2O3được hòa tan trong cryolite nóng chảy rồi điện phân với điện cực carbon. Phương án nào nêu đúng vai trò của cryolite và lý do phải thay cực dương định kỳ?) A. Acts as a catalyst to speed up electrolysis | Aluminium alloys with the positive electrodes B. Lowers the operating temperature of the cell | Oxygen formed at the anodes reacts with carbon to form CO₂ C. Reduces Al³⁺ ions chemically to molten aluminium | Fluorine gas corrodes the graphite lining D. Removes silicon(IV) oxide impurities as molten slag | Carbon dissolves in molten aluminium at the cathode ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Al2O3tinh khiết nóng chảy ở hơn 2050°C; hòa tan vào cryolite nóng chảy giúp hạ thấp nhiệt độ vận hành xuống ~950°C và tăng độ dẫn điện (không phải chất xúc tác, loại A). Tại cực dương (carbon anodes), khí oxygen (O2) sinh ra ở nhiệt độ cao tác dụng trực tiếp với thanh than chì tạo khí CO2 làm mòn điện cực (⇒ B đúng).",
+      "duration": 179.92,
+      "startTime": 4583.35,
+      "endTime": 4763.27,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Iron is extracted from hematite in a blast furnace, whereas aluminium is extracted from bauxite by electrolysis.(a) Explain why aluminium cannot be extracted by heating its oxide with carbon in a blast furnace. [1](b) Write balanced symbol equations for:(i) the reduction of iron(III) oxide by carbon monoxide in the blast furnace [1](ii) the reaction in which calcium oxide removes silicon(IV) oxide impurities to form slag. [1](c) Write the ionic half-equations for the reactions at the cathode and at the anode during the electrolysis of molten aluminium oxide dissolved in cryolite. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Aluminium is more reactive than carbon (sits above carbon in the reactivity series), so carbon cannot reduce aluminium oxide [1m]. (b)(i) Fe₂O₃ + 3CO → 2Fe + 3CO₂ [1m]. (b)(ii) CaO + SiO₂ → CaSiO₃ [1m]. (c) Cathode (−): Al³⁺ + 3e⁻ → Al [1m].Anode (+): 2O²⁻ → O₂ + 4e⁻ (correct species [1m] + correct balancing with 2O²⁻ and 4e⁻ [1m]). 💡 Intuition Check: Double-check your anode half-equation charges: two oxide ions 2O²⁻ carry a total charge of 4− , so they must release 4e⁻ on the right-hand side to form neutral O₂ !",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [6 marks] Iron is extracted from hematite in a blast furnace, whereas aluminium is extracted from bauxite by electrolysis.(a) Explain why aluminium cannot be extracted by heating its oxide with carbon in a blast furnace. (b) Write balanced symbol equations for:(i) the reduction of iron(III) oxide by carbon monoxide in the blast furnace (ii) the reaction in which calcium oxide removes silicon(IV) oxide impurities to form slag. (c) Write the ionic half-equations for the reactions at the cathode and at the anode during the electrolysis of molten aluminium oxide dissolved in cryolite. (Dịch: (a) Vì sao không thể luyện nhôm bằng carbon trong lò cao? (b) Viết PTHH: (i) CO khử Fe2O3; (ii) CaO khử tạp chất SiO2tạo xỉ. (c) Viết bán phản ứng ion tại cathode và anode khi điện phân Al2O3.) ✍️ Lời giải chi tiết theo thang điểm: (a) Vì aluminium hoạt động mạnh hơn carbon nên carbon không thể khử được aluminium oxide . (b)(i) Fe₂O₃ + 3CO → 2Fe + 3CO₂ . (b)(ii) CaO + SiO₂ → CaSiO₃ . (c) Cathode (−): Al³⁺ + 3e⁻ → Al .Anode (+): 2O²⁻ → O₂ + 4e⁻ (đúng công thức chất + cân bằng đúng hệ số 2O²⁻ và 4e⁻ ). 💡 Kiểm tra bản chất: Kiểm tra bảo toàn điện tích ở anode cực dễ: hai ion 2O²⁻ có tổng điện tích 4− nên vế phải bắt buộc nhường ra đúng 4e⁻ để tạo phân tử O₂ !",
+      "duration": 224.79,
+      "startTime": 4763.27,
+      "endTime": 4988.06,
+      "audioUrl": "/audio/lectures/chemistry/9/s05_b08.mp3"
+    },
+    {
+      "id": "s06_hdr",
+      "title": "📝 PHÂN TÍCH CÂU HỎI MẪU IGCSE (Worked Exam Questions)",
+      "selector": "[data-lecture-section=\"s06_hdr\"]",
+      "en": "📝 WORKED IGCSE EXAM QUESTIONS (0620).",
+      "vi": "📝 PHÂN TÍCH CÂU HỎI MẪU IGCSE.",
+      "duration": 8.65,
+      "startTime": 4988.06,
+      "endTime": 4996.71,
+      "audioUrl": "/audio/lectures/chemistry/9/s06_hdr.mp3"
+    },
+    {
+      "id": "s06_b01",
+      "title": "Đề bài: Cho hỗn hợp rắn gồm bột kẽm (zinc) và bột đồng (copper). Trình bày cách thu được mẫu đồ",
+      "selector": "[data-lecture-section=\"s06_b01\"]",
+      "en": "Worked Example 1 • Separating Metals (4 marks) Question: You are given a solid mixture of powdered zinc and powdered copper. Describe how to obtain a pure, dry sample of copper, stating all observations. Model Mark-Scheme Answer: 1. Add excess dilute hydrochloric acid (or dilute sulfuric acid) to the mixture and stir until fizzing stops.2. Observations: Zinc reacts and dissolves with effervescence (bubbles of H₂ gas), leaving behind the pink-brown copper solid (copper is below hydrogen so does not react).3. Filter the mixture to collect the unreacted copper powder as the residue .4. Wash the residue with distilled water and dry between filter papers (or in a warm oven).",
+      "vi": "Ví dụ 1 • Tách hỗn hợp Bột Kim loại (4 điểm) Đề bài: Cho hỗn hợp rắn gồm bột kẽm (zinc) và bột đồng (copper). Trình bày cách thu được mẫu đồng tinh khiết, khô và nêu đầy đủ hiện tượng. Lời giải chuẩn Mark Scheme: 1. Cho lượng dư axit HCl loãng vào hỗn hợp và khuấy đến khi ngừng sủi bọt.2. Hiện tượng: Bột kẽm tan hết và sủi bọt khí (effervescence) H₂; bột đồng màu đỏ nâu không phản ứng (do Cu đứng sau H).3. Lọc (Filter) hỗn hợp để thu lấy bột đồng không tan nằm lại trên giấy lọc ( residue ).4. Rửa sạch (Wash) phần bã rắn bằng distilled water rồi làm khô (dry) giữa hai tờ giấy lọc hoặc sấy nhẹ.",
+      "duration": 97.21,
+      "startTime": 4996.71,
+      "endTime": 5093.92,
+      "audioUrl": "/audio/lectures/chemistry/9/s06_b01.mp3"
+    },
+    {
+      "id": "s06_b02",
+      "title": "Đề bài: Thử 4 kim loại A, B, C, D với các dung dịch muối nitrate: B đẩy được A, C, D; C đẩy đượ",
+      "selector": "[data-lecture-section=\"s06_b02\"]",
+      "en": "Worked Example 2 • Deducing Reactivity Order (9.4.3) Question: Four metals A, B, C, D are tested with aqueous nitrates: B displaces A, C, and D; C displaces A and D; A displaces D only; D displaces none. Deduce the reactivity order (most reactive first). Model Mark-Scheme Reasoning: • Count how many aqueous ions each metal displaces:– Metal B : 3 reactions (displaces all others) ➔ Most reactive– Metal C : 2 reactions (displaces A²⁺ and D²⁺)– Metal A : 1 reaction (displaces D²⁺ only)– Metal D : 0 reactions ➔ Least reactive• Order of reactivity: B > C > A > D .",
+      "vi": "Ví dụ 2 • Xác định Thứ tự Hoạt động (9.4.3) Đề bài: Thử 4 kim loại A, B, C, D với các dung dịch muối nitrate: B đẩy được A, C, D; C đẩy được A và D; A chỉ đẩy được D; D không đẩy được kim loại nào. Sắp xếp theo chiều giảm dần độ hoạt động. Lập luận chuẩn Mark Scheme: • Đếm số phản ứng thế xảy ra với mỗi kim loại:– Kim loại B : 3 phản ứng (đẩy được tất cả) ➔ Mạnh nhất ( Most reactive )– Kim loại C : 2 phản ứng (đẩy được A²⁺ và D²⁺)– Kim loại A : 1 phản ứng (chỉ đẩy được D²⁺)– Kim loại D : 0 phản ứng ➔ Yếu nhất ( Least reactive )• Thứ tự hoạt động: B > C > A > D .",
+      "duration": 97.98,
+      "startTime": 5093.92,
+      "endTime": 5191.9,
+      "audioUrl": "/audio/lectures/chemistry/9/s06_b02.mp3"
+    }
+  ]
+}

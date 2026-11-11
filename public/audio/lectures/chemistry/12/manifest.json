@@ -1,0 +1,603 @@
+{
+  "lectureId": "2d0a3d84-392a-522a-a3ca-7facf0b97f66",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 12: Experimental techniques and chemical analysis",
+  "totalDuration": 4354.7,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 5
+    },
+    "s01_p1_sub02": {
+      "start": 6,
+      "end": 12
+    },
+    "s01_p1_sub03": {
+      "start": 13,
+      "end": 18
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 5
+    },
+    "s01_p2_sub02": {
+      "start": 6,
+      "end": 12
+    },
+    "s01_p2_sub03": {
+      "start": 13,
+      "end": 18
+    },
+    "s01_wex": {
+      "start": 19,
+      "end": 20
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 20
+    },
+    "s02_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s02_p1_sub01": {
+      "start": 26,
+      "end": 31
+    },
+    "s02_p2_sub01": {
+      "start": 26,
+      "end": 31
+    },
+    "s02_wex": {
+      "start": 32,
+      "end": 33
+    },
+    "s02_hdr": {
+      "start": 21,
+      "end": 33
+    },
+    "s03_int": {
+      "start": 35,
+      "end": 37
+    },
+    "s03_wex": {
+      "start": 40,
+      "end": 41
+    },
+    "s03_hdr": {
+      "start": 34,
+      "end": 41
+    },
+    "s04_hdr": {
+      "start": 42,
+      "end": 46
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 12: Kỹ thuật Thực nghiệm & Phân tích Hóa học",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 12: Experimental Techniques & Chemical Analysis. Experimental Design & Apparatus • Acid–Base Titrations • Paper Chromatography & Rf• Separation & Purity • Complete Qualitative Analysis (Gases, Anions, Cations & Flame Tests).",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 12: Kỹ thuật Thực nghiệm & Phân tích Hóa học. Dụng cụ Đo lường • Chuẩn độ Axit–Bazơ (Titrations) • Sắc ký Giấy & Hệ số Rf• Tách chất & Độ tinh khiết • Bảng Nhận biết Đầy đủ Khí, Anions, Cations & Thử Ngọn lửa.",
+      "duration": 49.13,
+      "startTime": 0.0,
+      "endTime": 49.13,
+      "audioUrl": "/audio/lectures/chemistry/12/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "⚗️ 1. THIẾT KẾ THÍ NGHIỆM, CHUẨN ĐỘ & TÁCH CHẤT (12.1 – 12.4)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "⚗️ 1. EXPERIMENTAL DESIGN, TITRATIONS & SEPARATION (12.1 – 12.4). Success in IGCSE Chemistry Paper 5/6 depends on selecting the right measuring apparatus for the required precision, executing accurate acid–base titrations, and purifying mixtures based on solubility and boiling points.",
+      "vi": "⚗️ 1. THIẾT KẾ THÍ NGHIỆM, CHUẨN ĐỘ & TÁCH CHẤT (12.1 – 12.4). Chìa khóa đạt điểm tuyệt đối bài thi thực hành Paper 5/6 của IGCSE Chemistry là chọn đúng dụng cụ đo theo độ chính xác yêu cầu, nắm vững thao tác chuẩn độ axit–bazơ và lựa chọn chuẩn xác phương pháp tinh chế hỗn hợp.",
+      "duration": 39.68,
+      "startTime": 49.13,
+      "endTime": 88.81,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of laboratory apparatus like kitchen tools vs surgical instruments: a measuring cylinder is a fast \"measuring jug\" for approximate volumes when a reagent is in excess; a volumetric pipette ( 25.0 cm³ ) is a precision stamp for one fixed volume; and a burette (reads to 0.05 cm³ , with 0.00 at the top !) is a fine-control tap for drop-by-drop titrations. For separation, every mixture has a physical \"Achilles' heel\": filtration acts like a pasta strainer for particle size (insoluble residue vs soluble filtrate ), crystallisation cools a hot saturated solution so pure crystals grow gently, simple/fractional distillation climb a boiling-point ladder , and paper chromatography runs a vertical race up filter paper where a pencil baseline (insoluble graphite!) stays put and Rf= distance travelled by spot ÷ distance travelled by solvent front is always < 1 .",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung dụng cụ phòng thí nghiệm giống như dụng cụ nhà bếp so với kim tiêm y tế: measuring cylinder (ống đong) như \"ca đong nước\" lấy nhanh thể tích gần đúng khi hóa chất dùng dư; volumetric pipette ( 25.0 cm³ ) là \"con dấu chuẩn\" đong đúng 1 thể tích cố định cực kỳ chính xác; còn burette (độ chia 0.05 cm³ , vạch 0.00 ở trên đỉnh !) là chiếc vòi nhỏ giọt siêu chuẩn cho acid–base titration . Với tách chất, mỗi kỹ thuật đánh vào đúng một \"gót chân Achilles\" vật lý: filtration là chiếc rây lọc kích thước hạt (bã không tan residue giữ trên giấy, dịch tan filtrate chảy qua); crystallisation làm nguội dung dịch bão hòa nóng ( saturated solution ) để tinh thể kết tinh đẹp mà không bị phân hủy nhiệt; simple/fractional distillation leo theo \"bậc thang nhiệt độ sôi\"; còn paper chromatography là cuộc đua leo giấy sắc ký từ pencil baseline (than chì không tan!) nơi hệ số Rf= quãng đường chất đi ÷ quãng đường dung môi đi luôn nhỏ hơn 1 ( < 1 ) .",
+      "duration": 138.78,
+      "startTime": 88.81,
+      "endTime": 227.59,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Precision Apparatus & Titration (12.1–12.2): Pipette fixed alkali into conical flask + 2–3 drops of a single sharp indicator ( thymolphthalein or methyl orange ) ➔ add acid from burette on a white tile until 1 drop gives a sharp end-point (repeat for concordant titres within 0.10 cm³ ). 2. Separation & Purity Check (12.4): Match technique to physical state (insoluble solid = filtration; soluble salt = crystallisation; solvent from solution = simple distillation; miscible liquids = fractional distillation). Pure substances have sharp, fixed m.p. & b.p. ; impurities lower m.p. and raise b.p. over a range. 3. Chromatography & Rf(12.3): Keep solvent below pencil baseline; spray colourless substances (amino acids/sugars) with a locating agent [Supplement]; calculate unitless Rf< 1 from baseline to spot centre [Supplement].",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Chọn Dụng cụ & Chuẩn độ (12.1–12.2): Dùng volumetric pipette hút kiềm vào conical flask + 2–3 giọt chỉ thị đơn ( thymolphthalein hoặc methyl orange ) ➔ nhỏ axit từ burette trên nền white tile tới end-point (lặp lại lấy các concordant titres chênh nhau ≤ 0.10 cm³ ). 2. Tách chất & Độ tinh khiết (12.4): Rắn không tan = filtration ; muối tan = crystallisation ; dung môi = simple distillation ; chất lỏng tan lẫn = fractional distillation . Chất tinh khiết có sharp, fixed m.p. & b.p. ; tạp chất làm hạ m.p. và tăng b.p. 3. Sắc ký Giấy & Hệ số Rf(12.3): Mức dung môi nằm dưới vạch bút chì; chất không màu (amino acids/đường) cần phun locating agent (chất hiện màu) [Supplement]; tính Rf< 1 (không có đơn vị) tính từ vạch bút chì tới tâm vết [Supplement].",
+      "duration": 129.04,
+      "startTime": 227.59,
+      "endTime": 356.63,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Three deadly Paper 6 mistakes: (1) Using Universal Indicator in a titration (gradual rainbow = NO sharp end-point!); (2) Measuring chromatography distances from the bottom edge of the paper instead of the pencil baseline (or flipping the fraction to get an impossible Rf> 1 ); (3) Saying \"boil to dryness\" to make hydrated crystals like CuSO₄·5H₂O — heating to dryness decomposes/dehydrates the salt; always heat only to the crystallisation point , then leave to cool !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Ba cái bẫy làm mất điểm oan nhất trong Paper 6: (1) Dùng Universal Indicator cho chuẩn độ (đổi màu cầu vồng từ từ ➔ KHÔNG có điểm kết thúc sắc nét!); (2) Đo khoảng cách tính Rf từ mép dưới tờ giấy thay vì từ vạch bút chì (pencil baseline) , hoặc lấy tử chia mẫu bị ngược ra Rf> 1 ; (3) Viết \"đun cạn khô\" khi điều chế tinh thể ngậm nước như CuSO₄·5H₂O — đun cạn sẽ làm mất nước kết tinh; bắt buộc chỉ đun tới crystallisation point rồi để nguội (cool) !",
+      "duration": 72.05,
+      "startTime": 356.63,
+      "endTime": 428.68,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Đại lượng: Thời gian (Time); Dụng cụ Chuẩn (Apparatus): Stop-watch (đồng hồ bấm ...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Quantity: Time; Official Apparatus: Stop-watch (digital); Typical Resolution / Use: Seconds (s) or minutes; reads to 0.01 s; Advantages & Disadvantages (Paper 6 Evaluation): Pro: High digital precision. Con: Limited by human reaction time (~0.2 s) when judging visual end-points. Quantity: Temperature; Official Apparatus: Thermometer (alcohol/digital); Typical Resolution / Use: Degrees Celsius (°C); reads to 0.5 °C or 0.1 °C; Advantages & Disadvantages (Paper 6 Evaluation): Pro: Digital probes log continuous changes. Con: Glass thermometers are fragile and have thermal lag; stir solution before reading! Quantity: Mass; Official Apparatus: Electronic Balance; Typical Resolution / Use: Grams (g); reads to 0.01 g (2 d.p.); Advantages & Disadvantages (Paper 6 Evaluation): Pro: Fast, easy to tare (zero) with container. Con: Draughts or spills on pan affect readings. Quantity: Liquid Volume (cm³ or dm³); Official Apparatus: Volumetric Pipette; Typical Resolution / Use: Single fixed accurate volume (e.g. 25.0 cm³ , ±0.06 cm³); Advantages & Disadvantages (Paper 6 Evaluation): Pro: Most accurate way to transfer a fixed aliquot. Con: Slow to fill with pipette filler; cannot measure variable volumes (e.g. 17.4 cm³). Burette — Variable accurate volume ( 0.00–50.00 cm³ , nearest 0.05 cm³ ) — Pro: Delivers any variable volume drop-by-drop via tap (ideal for titrations). Con: Scale reads top-down (0 at top!); must expel air bubble from jet below tap. Measuring Cylinder — Approximate volumes (e.g.",
+      "vi": "Đại lượng: Thời gian (Time); Dụng cụ Chuẩn (Apparatus): Stop-watch (đồng hồ bấm giờ); Độ chia / Công dụng: Giây (s) hoặc phút; đọc tới 0.01 s; Ưu điểm & Hạn chế (Paper 6 Evaluation): Ưu: Độ chia điện tử rất nhỏ. Nhược: Bị giới hạn bởi phản xạ bấm tay của người làm (~0.2 s). Đại lượng: Nhiệt độ (Temp); Dụng cụ Chuẩn (Apparatus): Thermometer (nhiệt kế); Độ chia / Công dụng: Độ C (°C); đọc tới 0.5 °C hoặc 0.1 °C; Ưu điểm & Hạn chế (Paper 6 Evaluation): Ưu: Đầu dò điện tử ghi liên tục. Nhược: Nhiệt kế thủy tinh dễ vỡ, có độ trễ nhiệt; cần khuấy đều trước khi đọc! Đại lượng: Khối lượng (Mass); Dụng cụ Chuẩn (Apparatus): Electronic Balance (cân điện tử); Độ chia / Công dụng: Gam (g); thường chính xác tới 0.01 g; Ưu điểm & Hạn chế (Paper 6 Evaluation): Ưu: Nhanh, có nút trừ bì (tare/zero) tiện lợi. Nhược: Nhạy với gió lùa hoặc hóa chất rơi vãi trên đĩa cân. Đại lượng: Thể tích Chất lỏng (Liquid Volume); Dụng cụ Chuẩn (Apparatus): Volumetric Pipette (pipet bầu); Độ chia / Công dụng: Đong 1 thể tích cố định cực chuẩn (VD: 25.0 cm³ ); Ưu điểm & Hạn chế (Paper 6 Evaluation): Ưu: Chính xác nhất khi lấy 1 thể tích cố định. Nhược: Thao tác hút lâu; không đong được các thể tích lẻ tùy ý (như 17.4 cm³). Burette (ống chuẩn độ) — Đong thể tích biến thiên chính xác ( 0.00–50.00 cm³ , tới 0.05 cm³ ) — Ưu: Nhỏ từng giọt qua khóa vòi cho chuẩn độ. Nhược: Vạch số 0 nằm ở trên đỉnh (đọc từ trên xuống!); phải xả hết bọt khí ở đầu nhọn dưới khóa.",
+      "duration": 265.97,
+      "startTime": 428.68,
+      "endTime": 694.65,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "(a) Dung môi (Solvent): Chất dùng để hòa tan chất tan ( substance that dissolves...",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "(a) Solvent: A substance that dissolves a solute (e.g. water, ethanol).",
+      "vi": "(a) Dung môi (Solvent): Chất dùng để hòa tan chất tan ( substance that dissolves a solute , VD: nước, ethanol).",
+      "duration": 15.35,
+      "startTime": 694.65,
+      "endTime": 710.0,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "(b) Chất tan (Solute): Chất bị hòa tan trong dung môi ( substance dissolved in a...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "(b) Solute: A substance that is dissolved in a solvent (e.g. solid NaCl).",
+      "vi": "(b) Chất tan (Solute): Chất bị hòa tan trong dung môi ( substance dissolved in a solvent , VD: muối ăn NaCl).",
+      "duration": 16.41,
+      "startTime": 710.0,
+      "endTime": 726.41,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "(c) Dung dịch (Solution): Hỗn hợp đồng nhất của một hay nhiều solutes tan trong ...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "(c) Solution: A mixture of one or more solutes dissolved in a solvent.",
+      "vi": "(c) Dung dịch (Solution): Hỗn hợp đồng nhất của một hay nhiều solutes tan trong một solvent .",
+      "duration": 13.19,
+      "startTime": 726.41,
+      "endTime": 739.6,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "(d) Dung dịch bão hòa (Saturated solution): Dung dịch chứa nồng độ tối đa của ch...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "(d) Saturated solution: A solution containing the maximum concentration of a solute dissolved in the solvent at a specified temperature .",
+      "vi": "(d) Dung dịch bão hòa (Saturated solution): Dung dịch chứa nồng độ tối đa của chất tan hòa tan được ở một nhiệt độ xác định .",
+      "duration": 17.78,
+      "startTime": 739.6,
+      "endTime": 757.38,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "(e) Phần bã / Chất rắn còn lại (Residue): Chất còn giữ lại sau khi bay hơi, chưn...",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "(e) Residue: A substance that remains behind after evaporation, distillation, filtration, or any similar process (e.g. sand on filter paper).",
+      "vi": "(e) Phần bã / Chất rắn còn lại (Residue): Chất còn giữ lại sau khi bay hơi, chưng cất hoặc lọc (VD: cát trên giấy lọc).",
+      "duration": 20.5,
+      "startTime": 757.38,
+      "endTime": 777.88,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "(f) Dịch lọc (Filtrate): Chất lỏng hoặc dung dịch đi xuyên qua phễu lọc ( passed...",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "(f) Filtrate: A liquid or solution that has passed through a filter.",
+      "vi": "(f) Dịch lọc (Filtrate): Chất lỏng hoặc dung dịch đi xuyên qua phễu lọc.",
+      "duration": 10.72,
+      "startTime": 777.88,
+      "endTime": 788.6,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "🎯 12.2 Chuẩn độ Axit–Bazơ (Acid–Base Titrations): Quy trình & Chất Chỉ thị",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "🎯 12.2 Acid–Base Titrations: Apparatus, Indicators & End-Point. SVG Titration Rig Step-by-step & Indicators Use a volumetric pipette (with safety filler) to transfer a fixed volume (e.g. 25.0 cm³ ) of alkali into a conical flask and add 2–3 drops of a suitable single indicator. Fill a clamped burette with acid, ensure the jet below the tap is full (no air bubble), and record the initial burette reading to 2 d.p. (bottom of meniscus at eye level). Place the conical flask on a white tile (to see the colour change clearly) and swirl continuously while running acid in; near the end-point , add acid drop-by-drop until one single drop produces a permanent sharp colour change. Record the final reading, calculate the titre ( final − initial ), and repeat until you obtain concordant titres (within 0.10 cm³ ). 🎨 Official 0620 Acid–Base Indicators (Memorise Colours!): • Thymolphthalein: Colourless in acid/neutral ➔ Blue in alkali.• Methyl orange: Red in acid ➔ Yellow in alkali (orange at exact end-point).• ⚠️ Exam Trap: NEVER use Universal Indicator! It is a mixture of dyes that changes gradually through many colours, giving NO sharp end-point.",
+      "vi": "🎯 12.2 Chuẩn độ Axit–Bazơ: Quy trình & Chất Chỉ thị. Dùng volumetric pipette hút chính xác 25.0 cm³ dung dịch kiềm cho vào bình nón (conical flask) , thêm vài giọt chất chỉ thị đơn (suitable indicator). Rót axit vào burette , xả bọt khí ở đầu vòi và ghi số đọc ban đầu tới 2 chữ số thập phân (ngang tầm mắt tại đáy vạch lõm meniscus ). Đặt bình nón lên tấm gạch trắng (white tile) để nhìn rõ sự đổi màu, vừa lắc tròn bình vừa nhỏ axit; khi gần điểm tương đương (end-point) , nhỏ từng giọt một (drop-by-drop) tới khi chỉ 1 giọt làm đổi màu dứt khoát. Lặp lại thí nghiệm cho tới khi thu được các kết quả concordant titres (chênh lệch không quá 0.10 cm³ ). 🎨 Hai Chất Chỉ thị Chuẩn của Syllabus 0620: • Thymolphthalein: Không màu (colourless) trong axit ➔ Xanh lam (blue) trong kiềm.• Methyl orange: Đỏ (red) trong axit ➔ Vàng (yellow) trong kiềm (cam tại điểm end-point).• ⚠️ Bẫy kinh điển: TUYỆT ĐỐI KHÔNG dùng Universal Indicator! Vì nó đổi màu từ từ qua dải cầu vồng, không có điểm kết thúc sắc nét.",
+      "duration": 162.15,
+      "startTime": 788.6,
+      "endTime": 950.75,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "1. Dung môi + Lọc (Filtration)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "1. Solvent + Filtration. Separates an insoluble solid from a liquid/solution (or separates two solids if only one dissolves in a suitable solvent , e.g. salt + sand in water). Insoluble residue stays on filter paper; soluble filtrate passes through.",
+      "vi": "1. Dung môi + Lọc (Filtration). Tách chất rắn không tan (insoluble solid) khỏi chất lỏng/dung dịch (hoặc dùng suitable solvent hòa tan chọn lọc 1 trong 2 chất rắn). Phần bã residue nằm lại trên giấy lọc; dịch lọc filtrate chảy xuống dưới.",
+      "duration": 37.16,
+      "startTime": 950.75,
+      "endTime": 987.91,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "2. Kết tinh (Crystallisation — 5 bước!)",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "2. Crystallisation (5 Marks!). Obtains a pure soluble solid (e.g. hydrated CuSO₄·5H₂O) from solution: (1) heat gently to evaporate solvent until crystallisation / saturation point ; (2) leave to cool (solubility drops); (3) filter crystals; (4) wash with a little cold distilled water ; (5) dry between filter papers.",
+      "vi": "2. Kết tinh (Crystallisation — 5 bước!). Thu hồi chất rắn hòa tan (soluble solid) dạng tinh thể từ dung dịch: (1) đun nhẹ cho bay hơi bớt dung môi tới điểm kết tinh / bão hòa (crystallisation point) ; (2) để nguội từ từ (cool) ; (3) lọc (filter) lấy tinh thể; (4) rửa bằng một ít nước cất lạnh ; (5) thấm khô giữa giấy lọc (filter papers).",
+      "duration": 54.9,
+      "startTime": 987.91,
+      "endTime": 1042.81,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "3. Chưng cất Đơn (Simple Distillation)",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "3. Simple Distillation. Obtains a pure volatile solvent from a solution (e.g. pure water from seawater). Solvent boils, vapour passes into a water-cooled condenser (cooling water in at bottom , out at top ) and condenses as pure distillate.",
+      "vi": "3. Chưng cất Đơn (Simple Distillation). Thu lấy dung môi tinh khiết (solvent) từ dung dịch (VD: chưng cất nước ngọt từ nước biển). Hơi dung môi đi qua ống sinh hàn (condenser — nước làm mát vào ở đầu dưới , ra ở đầu trên ) ngưng tụ thành chất lỏng tinh khiết.",
+      "duration": 38.05,
+      "startTime": 1042.81,
+      "endTime": 1080.86,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b14.mp3"
+    },
+    {
+      "id": "s01_b15",
+      "title": "4. Chưng cất Phân đoạn (Fractional Distillation)",
+      "selector": "[data-lecture-section=\"s01_b15\"]",
+      "en": "4. Fractional Distillation. Separates two or more miscible liquids with different boiling points (e.g. ethanol b.p. 78 °C + water b.p. 100 °C; liquid air; petroleum). Uses a fractionating column packed with glass beads so the lower-b.p. liquid distils over first.",
+      "vi": "4. Chưng cất Phân đoạn (Fractional Distillation). Tách hỗn hợp các chất lỏng tan lẫn vào nhau (miscible liquids) có nhiệt độ sôi khác nhau (VD: ethanol sôi ở 78 °C + nước sôi ở 100 °C). Nhờ cột phân đoạn (fractionating column) , chất có nhiệt độ sôi thấp hơn bay sang ngưng tụ trước.",
+      "duration": 44.29,
+      "startTime": 1080.86,
+      "endTime": 1125.15,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b15.mp3"
+    },
+    {
+      "id": "s01_b16",
+      "title": "🌡️ Core 12.4.3 Kiểm tra Độ Tinh khiết qua Nhiệt độ Nóng chảy & Nhiệt độ Sôi: • C...",
+      "selector": "[data-lecture-section=\"s01_b16\"]",
+      "en": "🌡️ Core 12.4.3 Assessing Purity via Melting & Boiling Points: • A pure substance has a sharp, fixed melting point and boiling point (matches data-book values, e.g. pure ice melts at exactly 0 °C).• An impure substance melts at a LOWER temperature (over a broad range) and boils at a HIGHER temperature (over a range).",
+      "vi": "🌡️ Core 12.4.3 Kiểm tra Độ Tinh khiết qua Nhiệt độ Nóng chảy & Nhiệt độ Sôi: • Chất tinh khiết (Pure substance): Nóng chảy và sôi ở một nhiệt độ xác định, sắc nét (sharp, fixed m.p. & b.p.) .• Chất lẫn tạp chất (Impure substance): Nhiệt độ nóng chảy HẠ THẤP xuống và kéo dài trên một khoảng nhiệt độ; nhiệt độ sôi TĂNG CAO lên và sôi trên một khoảng rộng!",
+      "duration": 46.74,
+      "startTime": 1125.15,
+      "endTime": 1171.89,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b16.mp3"
+    },
+    {
+      "id": "s01_b17",
+      "title": "🎨 12.3 Sắc ký Giấy Tương tác (Paper Chromatography), Chất Hiện màu & Hệ số R f",
+      "selector": "[data-lecture-section=\"s01_b17\"]",
+      "en": "🎨 12.3 Interactive Paper Chromatography, Locating Agents & Rf. Paper chromatography separates mixtures of soluble substances (dyes, food colourings, or colourless amino acids/sugars) based on their different solubilities in the mobile solvent vs. attraction to the chromatography paper. Hover or click the 4 parts of the chromatogram below to inspect Paper 6 exam traps! 👆 Hover Over Any Feature on the Chromatogram. Pure substance: Separates to give only ONE spot. Impure mixture: Separates into two or more vertical spots. Identifying unknowns: Spots that travel the same vertical distance (identical R fvalue in the same solvent) are the same substance. Insoluble component: Remains stationary right on the baseline. Hidden English Tooltip Panels",
+      "vi": "🎨 12.3 Sắc ký Giấy Tương tác (Paper Chromatography), Chất Hiện màu & Hệ số Rf. Paper chromatography tách hỗn hợp các chất tan dựa trên độ tan khác nhau trong dung môi di động và lực hấp phụ lên giấy sắc ký. 👆 Chất tinh khiết (Pure substance): Chỉ tách ra DUY NHẤT 1 vết màu (one spot). Hỗn hợp (Impure mixture): Tách thành từ 2 vết trở lên theo cột dọc. Định danh chất chưa biết: Hai vết đi lên cùng một độ cao (cùng giá trị R ftrong cùng dung môi) là cùng một chất. Chất không tan: Đứng yên ngay tại vạch xuất phát baseline.",
+      "duration": 92.04,
+      "startTime": 1171.89,
+      "endTime": 1263.93,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b17.mp3"
+    },
+    {
+      "id": "s01_b18",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b18\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ (Chromatography R fTrap) A student analyses a pure food dye Q by paper chromatography. The pencil baseline is drawn 1.5 cm above the bottom edge of the chromatography paper. At the end of the experiment, the solvent front is 9.5 cm above the bottom edge of the paper, and the centre of spot Q is 6.3 cm above the bottom edge of the paper. What is the R fvalue of dye Q ? A. 0.60 B. 0.66 C. 0.79 D. 1.67 ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Both distances MUST be measured starting from the pencil baseline ( 1.5 cm ), NOT from the bottom edge of the paper! Distance travelled by dye Q = 6.3 − 1.5 = 4.8 cm . Distance travelled by solvent front = 9.5 − 1.5 = 8.0 cm . Therefore, Rf= 4.8 ÷ 8.0 = 0.60 (no units). Why distractors fail: B (0.66) divides raw heights from the bottom of the paper ( 6.3 ÷ 9.5 ); C (0.79) forgets to subtract 1.5 cm from the numerator ( 6.3 ÷ 8.0 ); D (1.67) inverts the formula ( 8.0 ÷ 4.8 — impossible since Rf is always < 1 !).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 (Bẫy tính R ftừ mép giấy) A student analyses a pure food dye Q by paper chromatography. Một học sinh phân tích phẩm màu tinh khiết Q bằng sắc ký giấy. Vạch pencil baseline kẻ cách mép dưới tờ giấy 1.5 cm . Khi kết thúc, mức dung môi thấm cao nhất solvent front cách mép dưới 9.5 cm , và tâm vết Q cách mép dưới 6.3 cm . Giá trị Rfcủa Q là bao nhiêu? A. 0.60 B. 0.66 C. 0.79 D. 1.67 ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Cả hai quãng đường BẮT BUỘC phải đo tính từ vạch xuất phát bút chì (pencil baseline) ( 1.5 cm ), tuyệt đối KHÔNG tính từ mép dưới tờ giấy! Quãng đường phẩm màu Q đi được = 6.3 − 1.5 = 4.8 cm . Quãng đường dung môi đi được = 9.5 − 1.5 = 8.0 cm . Suy ra Rf= 4.8 ÷ 8.0 = 0.60 (không có đơn vị). Loại bẫy: B (0.66) chia trực tiếp độ cao tính từ mép giấy ( 6.3 ÷ 9.5 ); C (0.79) quên trừ 1.5 cm ở tử số; D (1.67) đảo ngược phân số (vô lý vì Rf luôn < 1 !).",
+      "duration": 183.04,
+      "startTime": 1263.93,
+      "endTime": 1446.97,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b18.mp3"
+    },
+    {
+      "id": "s01_b19",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b19\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / PAPER 4 & 6 • Titration & Fractional Distillation [6 marks] A student titrates 25.0 cm³ of aqueous sodium hydroxide, NaOH(aq) , in a conical flask with dilute sulfuric acid from a burette. Separately, the student separates a miscible mixture of ethanol (boiling point 78 °C ) and water (boiling point 100 °C ). (a) Name the piece of apparatus used to measure accurately 25.0 cm³ of NaOH(aq) , and state a suitable indicator together with its colour change when acid is added into the alkali to reach the end-point. [3] (b) Explain why Universal Indicator is NOT suitable for an acid–base titration. [1] (c) Name the separation technique used for the ethanol–water mixture and explain which liquid distils over first. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) Apparatus: volumetric pipette (do NOT accept measuring cylinder) [1m] . Indicator: thymolphthalein [1m] changing from blue to colourless at the end-point [1m] (OR methyl orange [1m] changing from yellow to orange/red [1m] ) .• (b) Universal Indicator is a mixture of dyes that changes gradually through many colours, so it does not give a single sharp colour change at the end-point [1m] .• (c) Technique: fractional distillation [1m] . Ethanol distils over first because it has the lower boiling point ( 78 °C < 100 °C ) [1m] .",
+      "vi": "BÀI MẪU 2 🟦 CORE / PAPER 4 & 6 • Chuẩn độ Axit–Bazơ & Chưng cất Phân đoạn [6 điểm] A student titrates 25.0 cm³ of NaOH(aq) in a conical flask with dilute sulfuric acid from a burette, and separately purifies a miscible liquid mixture of ethanol ( b.p. 78 °C ) and water ( b.p. 100 °C ). (a) Name the apparatus used to measure accurately 25.0 cm³ of NaOH(aq) , and state a suitable indicator with its colour change when acid is added into the alkali to reach the end-point. (b) Explain why Universal Indicator is NOT suitable for an acid–base titration. (c) Name the separation method for the ethanol–water mixture and state which liquid distils over first, giving a reason. (Học sinh chuẩn độ 25.0 cm³ dung dịch NaOH(aq) trong bình nón bằng axit H₂SO₄ loãng trên burette, và tách riêng hỗn hợp chất lỏng tan lẫn gồm ethanol (sôi ở 78 °C ) và nước (sôi ở 100 °C ): (a) Nêu tên dụng cụ đong chính xác 25.0 cm³ NaOH(aq) , tên chất chỉ thị phù hợp và sự đổi màu tại end-point; (b) Giải thích tại sao không dùng Universal Indicator; (c) Nêu phương pháp tách ethanol–nước và giải thích chất nào chưng cất sang trước.) ✍️ Lời giải chi tiết theo thang điểm: • (a) Dụng cụ: volumetric pipette (pipet bầu — không chấp nhận measuring cylinder ) .",
+      "duration": 213.19,
+      "startTime": 1446.97,
+      "endTime": 1660.16,
+      "audioUrl": "/audio/lectures/chemistry/12/s01_b19.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "💨 2. NHẬN BIẾT CÁC CHẤT KHÍ — ĐẦY ĐỦ 6 KHÍ CHUẨN SYLLABUS (12.5.3)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "💨 2. IDENTIFICATION OF GASES — ALL 6 OFFICIAL TESTS (12.5.3). Every gas test requires BOTH the exact reagent/apparatus AND the positive observation . Missing the word \"damp\" for litmus paper tests loses the test mark automatically!",
+      "vi": "💨 2. NHẬN BIẾT CÁC CHẤT KHÍ — ĐẦY ĐỦ 6 KHÍ CHUẨN SYLLABUS (12.5.3). Mỗi phép thử chất khí bắt buộc phải nêu đủ 2 ý: thuốc thử / thao tác (test) và hiện tượng dương tính (result) . Nếu thiếu chữ \"ẩm (damp)\" khi dùng giấy quỳ sẽ bị mất trắng điểm thuốc thử!",
+      "duration": 35.93,
+      "startTime": 1660.16,
+      "endTime": 1696.09,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think like a forensic detective interviewing 6 gas suspects by splitting them into 2 dry flame tests vs 4 wet chemical tests : (1) Dry Splint Tests: Hydrogen ( H₂ ) is an explosive fuel that ignites with a lighted splint to give a 'squeaky pop' , whereas oxygen ( O₂ ) feeds combustion so it relights a glowing splint . (2) Wet Chemical Tests: Carbon dioxide ( CO₂ ) precipitates white chalk ( CaCO₃ ) so limewater turns milky ; ammonia ( NH₃ ) is the only alkaline gas so damp red litmus turns blue ; chlorine ( Cl₂ ) is an oxidising bleach that bleaches damp litmus white ; and sulfur dioxide ( SO₂ ) is a reducing agent that turns acidified aqueous potassium manganate(VII) from purple to colourless .",
+      "vi": "🎯 Hình dung đời thường: Thay vì học vẹt rời rạc, hãy chia 6 chất khí của Syllabus 0620 thành 2 nhóm tính cách hóa học : (1) Nhóm thử bằng Que đóm Khô (Dry Splints): Hydrogen ( H₂ ) là khí nhiên liệu dễ nổ nên gặp que đóm đang cháy (lighted splint) sẽ nổ 'squeaky pop' ; còn oxygen ( O₂ ) duy trì sự cháy nên làm bùng cháy que đóm còn tàn đỏ . (2) Nhóm thử Ướt / Quỳ Ẩm: Carbon dioxide ( CO₂ ) kết tủa đá vôi làm limewater turns milky ; ammonia ( NH₃ ) là khí kiềm duy nhất làm damp red litmus turns blue ; chlorine ( Cl₂ ) có tính oxi hóa mạnh nên bleaches damp litmus paper ; và sulfur dioxide ( SO₂ ) là chất khử làm mất màu tím của acidified aqueous potassium manganate(VII).",
+      "duration": 108.87,
+      "startTime": 1696.09,
+      "endTime": 1804.96,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Every gas question carries 2 distinct marks: [1m] Exact Test Reagent/Condition + [1m] Positive Result .• Splint Pair: H₂ ➔ lighted (burning) splint + 'pops' | O₂ ➔ glowing splint + relights .• Moisture Rule: Covalent gas molecules ( NH₃ , Cl₂ ) cannot ionise on dry paper — they must dissolve in water on damp litmus paper to release OH⁻(aq) (turns blue) or chloric(I) acid HClO(aq) (bleaches white).• Redox Gas Test (12.5.3f): SO₂ reduces purple MnO₄⁻ ions to Mn²⁺ ions in acidified aqueous KMnO₄ ( purple ➔ colourless ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Cấu trúc chấm điểm bất di bất dịch (2 điểm/khí): Thuốc thử / Điều kiện chính xác + Hiện tượng dương tính .• Phân biệt 2 que đóm: H₂ ➔ lighted (burning) splint + 'pops' | O₂ ➔ glowing splint + relights .• Quy tắc chữ \"DAMP\" (Ẩm): Các phân tử khí cộng hóa trị ( NH₃ , Cl₂ ) bắt buộc phải tan vào màng nước trên giấy quỳ ẩm mới sinh ra ion OH⁻ (hóa xanh) hoặc HClO (tẩy trắng).• Phản ứng Oxi hóa–Khử (12.5.3f): Khí SO₂ khử ion tím MnO₄⁻ về Mn²⁺ không màu trong dung dịch acidified aqueous KMnO₄ ( purple ➔ colourless ).",
+      "duration": 95.18,
+      "startTime": 1804.96,
+      "endTime": 1900.14,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two instant mark-losers: (1) Swapping the splints — writing \"glowing splint pops in hydrogen\" scores zero (you MUST write lighted/burning splint for H₂ and glowing splint for O₂ !); (2) Omitting the word \"damp\" before red litmus paper (for NH₃ ) or litmus paper (for Cl₂ ) — examiners strictly penalise dry litmus!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi viết sai làm mất điểm tức thì: (1) Nhầm lẫn 2 loại que đóm — viết \"glowing splint\" cho khí H₂ bị 0 điểm ngay lập tức ( H₂ bắt buộc dùng lighted splint !); (2) Quên chữ \"damp\" (ẩm) trước red litmus paper (khi thử NH₃ ) hoặc litmus paper (khi thử Cl₂ )!",
+      "duration": 48.63,
+      "startTime": 1900.14,
+      "endTime": 1948.77,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🚨 BẪY MẤT ĐIỂM SỐ 1 TRONG PAPER 6: Tại sao bắt buộc viết \"DAMP Litmus Paper\"?",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🚨 CRITICAL PAPER 6 EXAM RULE: Why \"DAMP\" Litmus Paper? Gases such as ammonia (NH₃) and chlorine (Cl₂) must first dissolve in a thin film of water to form ions ( OH⁻ or acidic/bleaching HClO ) before they can change the colour of indicator paper. Always write \"damp red litmus paper\" or \"damp litmus paper\" — toxic gases ( Cl₂ , SO₂ , NH₃ ) should also be tested in a fume cupboard.",
+      "vi": "🚨 BẪY MẤT ĐIỂM SỐ 1 TRONG PAPER 6: Tại sao bắt buộc viết \"DAMP Litmus Paper\"? Các chất khí như ammonia (NH₃) và chlorine (Cl₂) không thể phản ứng với giấy khô; chúng phải hòa tan vào lớp nước mỏng trên giấy quỳ ẩm để tạo ion ( OH⁻ hoặc HClO tẩy màu) mới làm đổi màu giấy chỉ thị. Với khí độc, cần tiến hành trong tủ hút (fume cupboard).",
+      "duration": 58.65,
+      "startTime": 1948.77,
+      "endTime": 2007.42,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "1. Ammonia, NH₃",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "1. Ammonia, NH₃. Test: Hold damp red litmus paper at the mouth of the tube. Result: Turns blue (only common alkaline gas; pungent smell).",
+      "vi": "1. Ammonia, NH₃. Thuốc thử: Đưa giấy quỳ đỏ ẩm lại miệng ống. Hiện tượng: Chuyển sang màu xanh (turns blue) (khí duy nhất có tính kiềm, mùi khai).",
+      "duration": 26.0,
+      "startTime": 2007.42,
+      "endTime": 2033.42,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "2. Carbon Dioxide, CO₂",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "2. Carbon Dioxide, CO₂. Test: Bubble gas through limewater (aqueous calcium hydroxide, Ca(OH)₂ ). Result: Turns milky / cloudy white (white CaCO₃ ppt; dissolves in excess CO₂).",
+      "vi": "2. Carbon Dioxide, CO₂. Thuốc thử: Sục khí qua nước vôi trong (limewater , Ca(OH)₂(aq) ). Hiện tượng: Nước vôi bị vẩn đục trắng do kết tủa CaCO₃.",
+      "duration": 34.59,
+      "startTime": 2033.42,
+      "endTime": 2068.01,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "3. Chlorine, Cl₂",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "3. Chlorine, Cl₂. Test: Hold damp litmus paper in the gas (fume cupboard). Result: Bleaches damp litmus paper (turns white; blue litmus may turn red briefly first).",
+      "vi": "3. Chlorine, Cl₂. Thuốc thử: Đưa giấy quỳ ẩm vào luồng khí. Hiện tượng: Làm mất màu trắng giấy quỳ ẩm.",
+      "duration": 23.67,
+      "startTime": 2068.01,
+      "endTime": 2091.68,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "4. Hydrogen, H₂",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "4. Hydrogen, H₂. Test: Hold a lighted (burning) splint at the mouth of the tube. Result: Burns with a 'squeaky pop' sound ( 2H₂ + O₂ ➔ 2H₂O ).",
+      "vi": "4. Hydrogen, H₂. Thuốc thử: Đưa que đóm đang cháy (lighted splint) lại miệng ống. Hiện tượng: Nổ lốp bốp.",
+      "duration": 25.06,
+      "startTime": 2091.68,
+      "endTime": 2116.74,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "5. Oxygen, O₂",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "5. Oxygen, O₂. Test: Insert a glowing splint into the tube. Result: Relights the glowing splint.",
+      "vi": "5. Oxygen, O₂. Thuốc thử: Đưa que đóm còn tàn đỏ (glowing splint) vào ống. Hiện tượng: Que đóm bùng cháy sáng trở lại.",
+      "duration": 21.55,
+      "startTime": 2116.74,
+      "endTime": 2138.29,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "6. Sulfur Dioxide, SO₂",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "6. Sulfur Dioxide, SO₂. Test: Pass gas through (or touch filter paper soaked in) acidified aqueous potassium manganate(VII) . Result: Turns from purple to colourless (SO₂ is a reducing agent!).",
+      "vi": "6. Sulfur Dioxide, SO₂. Thuốc thử: Dẫn qua dung dịch acidified aqueous potassium manganate(VII) . Hiện tượng: Đổi màu từ tím sang không màu !",
+      "duration": 30.06,
+      "startTime": 2138.29,
+      "endTime": 2168.35,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ (Electrolysis Gas Identification) Concentrated aqueous sodium chloride is electrolysed using inert electrodes. Colourless gas X is collected at the cathode and gives a 'squeaky pop' with a lighted splint. Pale green gas Y is collected at the anode and bleaches damp litmus paper. What are gases X and Y ? A. X = oxygen, Y = chlorine B. X = hydrogen, Y = chlorine C. X = hydrogen, Y = sulfur dioxide D. X = ammonia, Y = oxygen ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: A 'squeaky pop' with a lighted splint uniquely identifies hydrogen ( H₂ ) formed at the cathode (eliminating A and D). Bleaching damp litmus paper white uniquely identifies chlorine ( Cl₂ ) formed at the anode (eliminating C — in IGCSE 0620, SO₂ is identified by turning acidified aqueous potassium manganate(VII) from purple to colourless, not by bleaching litmus).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & 2 (Nhận biết Khí Điện phân) Concentrated aqueous sodium chloride is electrolysed using inert electrodes. Điện phân dung dịch sodium chloride đặc bằng điện cực trơ. Khí X thu ở cathode gây tiếng nổ 'bụp' với que đóm đang cháy. Khí Y thu ở anode làm mất màu trắng giấy quỳ ẩm. Hai khí X và Y lần lượt là gì? A. X = oxygen, Y = chlorine B. X = hydrogen, Y = chlorine C. X = hydrogen, Y = sulfur dioxide D. X = ammonia, Y = oxygen ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Tiếng nổ 'squeaky pop' với lighted splint xác định khí X là hydrogen ( H₂ ) (loại A và D). Hiện tượng tẩy trắng giấy quỳ ẩm xác định khí Y là chlorine ( Cl₂ ) (loại C — trong IGCSE 0620, khí SO₂ được nhận biết bằng dung dịch acidified aqueous KMnO₄ đổi từ tím sang không màu).",
+      "duration": 138.21,
+      "startTime": 2168.35,
+      "endTime": 2306.56,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / PAPER 4 & 6 • Identifying Three Official Gases [6 marks] Three separate laboratory experiments produce gases G , H , and K :• Warming solid ammonium sulfate with NaOH(aq) releases gas G (ammonia, NH₃ ).• Adding dilute nitric acid to copper(II) carbonate releases gas H (carbon dioxide, CO₂ ).• Warming sodium sulfite with dilute hydrochloric acid releases gas K (sulfur dioxide, SO₂ ). (a) Describe the test and positive result for gas G ( NH₃ ). [2] (b) Describe the test and positive result for gas H ( CO₂ ). [2] (c) Describe the test and positive result for gas K ( SO₂ ). [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) Test: use damp red litmus paper [1m] ; Result: turns blue [1m] .• (b) Test: bubble through limewater [1m] ; Result: turns milky / cloudy white [1m] .• (c) Test: pass through acidified aqueous potassium manganate(VII) [1m] ; Result: colour changes from purple to colourless (do NOT write \"clear\") [1m] . 💡 Intuition Check: Always distinguish \"colourless\" (transparent with no colour, like water) from \"clear\" (not cloudy — copper(II) sulfate solution is clear blue!). In acidified KMnO₄ tests, only purple to colourless wins the mark.",
+      "vi": "BÀI MẪU 2 🟦 CORE / PAPER 4 & 6 • Nhận biết Ba Chất Khí Chuẩn 0620 [6 điểm] Three laboratory experiments release gases G (ammonia, NH₃ ), H, and K. (a) Describe the test and positive result for gas G ( NH₃ ). (b) Describe the test and positive result for gas H ( CO₂ ). (c) Describe the test and positive result for gas K ( SO₂ ). (Ba thí nghiệm giải phóng các khí G ( NH₃ ), H ( CO₂ ) và K ( SO₂ ). Hãy trình bày thuốc thử và hiện tượng dương tính để nhận biết từng khí.) ✍️ Lời giải chi tiết theo thang điểm: • (a) Thuốc thử: dùng giấy quỳ đỏ ẩm ; Hiện tượng: chuyển sang màu xanh (turns blue) .• (b) Thuốc thử: sục khí qua nước vôi trong (limewater) ; Hiện tượng: chuyển sang vẩn đục trắng (turns milky) .• (c) Thuốc thử: dẫn qua dung dịch acidified aqueous potassium manganate(VII) ; Hiện tượng: đổi màu từ tím sang không màu (purple to colourless — tuyệt đối KHÔNG viết \"clear\" !) . 💡 Kiểm tra bản chất: Trong tiếng Anh Hóa học, \"colourless\" là không màu (như nước lọc), còn \"clear\" chỉ có nghĩa là trong suốt không vẩn đục (dung dịch CuSO₄ màu xanh vẫn là \"clear\"!). Với KMnO₄ , bắt buộc viết purple to colourless .",
+      "duration": 191.75,
+      "startTime": 2306.56,
+      "endTime": 2498.31,
+      "audioUrl": "/audio/lectures/chemistry/12/s02_b12.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧪 3. PHÂN TÍCH ĐỊNH TÍNH CÁC ION: ANIONS, CATIONS & MÀU NGỌN LỬA",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧪 3. QUALITATIVE ANALYSIS OF IONS: ANIONS, CATIONS & FLAME TESTS. Qualitative salt analysis identifies BOTH the negative ion ( anion ) and the positive ion ( cation ) in an unknown compound. Note that while Paper 5 prints Qualitative Analysis Notes, Paper 2, Paper 4, and Paper 6 DO NOT —so every test and observation below must be committed to memory!",
+      "vi": "🧪 3. PHÂN TÍCH ĐỊNH TÍNH CÁC ION: ANIONS, CATIONS & MÀU NGỌN LỬA. Phân tích muối chưa biết yêu cầu xác định cả ion âm ( anion ) lẫn ion dương ( cation ). Lưu ý: Đề thi Paper 2, Paper 4 và Paper 6 KHÔNG in sẵn bảng nhận biết — học sinh bắt buộc phải học thuộc lòng toàn bộ các bảng dưới đây!",
+      "duration": 50.07,
+      "startTime": 2498.31,
+      "endTime": 2548.38,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Treat salt identification like checking a suspect's two fingerprints — one for the anion ( − ) and one for the cation ( + ) :• Why Acidify First with Dilute HNO₃ ? (The Impostor Bouncer!): Before adding AgNO₃(aq) or Ba(NO₃)₂(aq) , we add dilute nitric acid to destroy impostor carbonate ( CO₃²⁻ ) or sulfite ( SO₃²⁻ ) ions — otherwise they form false white precipitates ( Ag₂CO₃ or BaCO₃ )! Then halides follow a colour gradient down Group VII: Cl⁻ white ➔ Br⁻ cream ➔ I⁻ yellow .• Cation \"Dropwise vs Excess\" Handshake: Adding NaOH(aq) or NH₃(aq) dropwise forms metal hydroxide precipitates, while excess separates lookalikes! Among the 3 white precipitates ( Ca²⁺, Al³⁺, Zn²⁺ ): Ca²⁺ stays insoluble in excess NaOH ; amphoteric Al³⁺ & Zn²⁺ both dissolve in excess NaOH ; and in excess NH₃(aq) only Zn²⁺ dissolves (while Cu²⁺ dissolves in excess NH₃ to give a dark blue solution , and Cr³⁺ dissolves in excess NaOH to a green solution unlike insoluble Fe²⁺ !).",
+      "vi": "🎯 Hình dung đời thường: Phân tích một muối chưa biết giống như khớp hai dấu vân tay — một của anion ( − ) và một của cation ( + ) :• Tại sao phải axit hóa bằng HNO₃ loãng trước? (\"Vệ sĩ đuổi kẻ mạo danh\"!): Trước khi nhỏ AgNO₃(aq) hay Ba(NO₃)₂(aq) , ta nhỏ dilute nitric acid ( HNO₃ ) để phá hủy hết các ion carbonate ( CO₃²⁻ ) hoặc sulfite ( SO₃²⁻ ) lẫn vào — tránh tạo kết tủa trắng giả! Sau đó 3 ion halide lên màu theo thứ tự Nhóm VII: Cl⁻ trắng (white) ➔ Br⁻ kem (cream) ➔ I⁻ vàng (yellow) .• Cái bắt tay 2 bước \"Dropwise ➔ In Excess\" của Cation: Giữa 3 kết tủa trắng : Ca²⁺ không tan trong NaOH dư; hai hidroxit lưỡng tính của Al³⁺ & Zn²⁺ đều tan trong NaOH dư; sang NH₃(aq) dư thì chỉ Zn²⁺ tan (cùng với Cu²⁺ tan tạo dark blue solution ), còn Al³⁺ nằm im không tan! Với 2 kết tủa xanh lục, Cr³⁺ tan trong NaOH dư còn Fe²⁺ không tan!",
+      "duration": 164.72,
+      "startTime": 2548.38,
+      "endTime": 2713.1,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. 7 Anions (12.5.1): Acid ➔ CO₂ ( CO₃²⁻ ) | HNO₃ + AgNO₃ ➔ white/cream/yellow ( Cl⁻/Br⁻/I⁻ ) | HNO₃ + Ba(NO₃)₂ ➔ white ( SO₄²⁻ ) | NaOH + Al foil + warm ➔ NH₃ ( NO₃⁻ ) | acidified KMnO₄ purple ➔ colourless ( SO₃²⁻ ). 2. 8 Aqueous Cations (12.5.2): Coloured: Cu²⁺ (light blue; dark blue soln in excess NH₃ ), Fe²⁺ (green, insoluble), Cr³⁺ (green, soluble in excess NaOH ), Fe³⁺ (red-brown). White/Gas: Ca²⁺ , Al³⁺ , Zn²⁺ , NH₄⁺ (warm with NaOH ➔ NH₃ ). 3. 6 Flame Colours (12.5.4): Clean nichrome wire + conc. HCl ➔ Li⁺ red , Na⁺ yellow , K⁺ lilac , Ca²⁺ orange-red , Ba²⁺ light green , Cu²⁺ blue-green .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. 7 Anions (12.5.1): Axit loãng ➔ CO₂ ( CO₃²⁻ ) | HNO₃ + AgNO₃ ➔ white/cream/yellow ( Cl⁻/Br⁻/I⁻ ) | HNO₃ + Ba(NO₃)₂ ➔ white ( SO₄²⁻ ) | NaOH + Al foil + warm ➔ NH₃ ( NO₃⁻ ) | acidified KMnO₄ tím ➔ không màu ( SO₃²⁻ ). 2. 8 Cations Dung dịch (12.5.2): Màu: Cu²⁺ (light blue; dark blue soln trong NH₃ dư), Fe²⁺ (green, không tan), Cr³⁺ (green, tan trong NaOH dư), Fe³⁺ (red-brown). Trắng/Khí: Ca²⁺ , Al³⁺ , Zn²⁺ , NH₄⁺ (đun với NaOH ➔ NH₃ ). 3. 6 Màu Ngọn lửa (12.5.4): Li⁺ red , Na⁺ yellow , K⁺ lilac , Ca²⁺ orange-red , Ba²⁺ light green , Cu²⁺ blue-green .",
+      "duration": 138.1,
+      "startTime": 2713.1,
+      "endTime": 2851.2,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic exam traps: (1) Confusing NH₄⁺ (needs ONLY NaOH(aq) + warm to release NH₃ ) with NO₃⁻ (requires NaOH(aq) + aluminium foil + warm to reduce NO₃⁻ to NH₃ !). (2) Acidifying a halide test with HCl (adds Cl⁻ ➔ false white AgCl ppt!) or a sulfate test with H₂SO₄ (adds SO₄²⁻ ➔ false white BaSO₄ ppt!) — ALWAYS acidify with dilute nitric acid ( HNO₃ ) !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy cực độc phải cảnh giác: (1) Nhầm bài thử NH₄⁺ (chỉ cần NaOH(aq) + đun ấm là bay khí NH₃ ) với bài thử NO₃⁻ (bắt buộc phải có thêm lá nhôm — aluminium foil + NaOH(aq) + đun ấm để khử NO₃⁻ thành NH₃ !). (2) Dùng nhầm HCl khi thử halide (tự thêm Cl⁻ ➔ tủa trắng giả!) hoặc H₂SO₄ khi thử sulfate (tự thêm SO₄²⁻ ➔ tủa trắng giả!) — LUÔN LUÔN axit hóa bằng dilute nitric acid ( HNO₃ ) !",
+      "duration": 80.28,
+      "startTime": 2851.2,
+      "endTime": 2931.48,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "➖ 12.5.1 Nhận biết Đầy đủ 7 Anions (Ion Âm)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "➖ 12.5.1 Tests for Anions (All 7 Official Anions in Aqueous Solution). Anion: Carbonate, CO₃²⁻ (solid or aq); Exact Test Procedure & Reagents: Add dilute acid (e.g. dilute HCl or HNO₃), then test gas evolved with limewater .; Positive Result & Key Species: Effervescence (fizzing); gas produced ( CO₂ ) turns limewater milky. Anion: Chloride, Cl⁻; Exact Test Procedure & Reagents: Acidify with dilute nitric acid (HNO₃) , then add aqueous silver nitrate (AgNO₃) .; Positive Result & Key Species: White precipitate of silver chloride ( Ag⁺ + Cl⁻ ➔ AgCl(s) ). Anion: Bromide, Br⁻; Exact Test Procedure & Reagents: Acidify with dilute nitric acid (HNO₃) , then add aqueous silver nitrate (AgNO₃) .; Positive Result & Key Species: Cream precipitate of silver bromide ( Ag⁺ + Br⁻ ➔ AgBr(s) ). Anion: Iodide, I⁻; Exact Test Procedure & Reagents: Acidify with dilute nitric acid (HNO₃) , then add aqueous silver nitrate (AgNO₃) .; Positive Result & Key Species: Yellow precipitate of silver iodide ( Ag⁺ + I⁻ ➔ AgI(s) ). Anion: Nitrate, NO₃⁻; Exact Test Procedure & Reagents: Add aqueous sodium hydroxide (NaOH) , then aluminium foil , and warm gently ; test gas with damp red litmus.; Positive Result & Key Species: Ammonia gas ( NH₃ ) given off, which turns damp red litmus paper blue (NO₃⁻ reduced by Al). Anion: Sulfate, SO₄²⁻; Exact Test Procedure & Reagents: Acidify with dilute nitric acid (HNO₃) , then add aqueous barium nitrate, Ba(NO₃)₂ .; Positive Result & Key Species: White precipitate of barium sulfate ( Ba²⁺ + SO₄²⁻ ➔ BaSO₄(s) ).",
+      "vi": "➖ 12.5.1 Nhận biết Đầy đủ 7 Anions (Ion Âm). Ion Âm (Anion): Carbonate, CO₃²⁻; Quy trình & Thuốc thử Chuẩn: Thêm axit loãng (dilute acid) , dẫn khí sinh ra qua limewater .; Hiện tượng Dương tính (Observation): Sủi bọt khí (effervescence) ; khí CO₂ làm đục nước vôi trong. Ion Âm (Anion): Chloride, Cl⁻; Quy trình & Thuốc thử Chuẩn: Axit hóa bằng dilute nitric acid (HNO₃) , rồi nhỏ aqueous silver nitrate (AgNO₃) .; Hiện tượng Dương tính (Observation): Kết tủa trắng (white ppt) của AgCl. Ion Âm (Anion): Bromide, Br⁻; Quy trình & Thuốc thử Chuẩn: Axit hóa bằng dilute nitric acid (HNO₃) , rồi nhỏ aqueous silver nitrate (AgNO₃) .; Hiện tượng Dương tính (Observation): Kết tủa kem / trắng ngà (cream ppt) của AgBr. Ion Âm (Anion): Iodide, I⁻; Quy trình & Thuốc thử Chuẩn: Axit hóa bằng dilute nitric acid (HNO₃) , rồi nhỏ aqueous silver nitrate (AgNO₃) .; Hiện tượng Dương tính (Observation): Kết tủa vàng (yellow ppt) của AgI. Ion Âm (Anion): Nitrate, NO₃⁻; Quy trình & Thuốc thử Chuẩn: Thêm aqueous sodium hydroxide (NaOH) + lá nhôm (aluminium foil) rồi đun ấm nhẹ (warm) .; Hiện tượng Dương tính (Observation): Sinh khí ammonia ( NH₃ ) làm giấy quỳ đỏ ẩm hóa xanh. Ion Âm (Anion): Sulfate, SO₄²⁻; Quy trình & Thuốc thử Chuẩn: Axit hóa bằng dilute nitric acid (HNO₃) , rồi nhỏ aqueous barium nitrate, Ba(NO₃)₂ .; Hiện tượng Dương tính (Observation): Kết tủa trắng (white ppt) của BaSO₄.",
+      "duration": 262.38,
+      "startTime": 2931.48,
+      "endTime": 3193.86,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "➕ 12.5.2 Nhận biết Đầy đủ 8 Cations trong Dung dịch & 12.5.4 Thử Ngọn lửa (6 Ions)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "➕ 12.5.2 Tests for Aqueous Cations (8 Ions) & 12.5.4 Flame Tests (6 Ions). Test each aqueous cation in TWO separate portions: first add a few drops of reagent to form the metal hydroxide precipitate, then add in excess to check if the precipitate redissolves! COMPLETE 8 AQUEOUS CATIONS SIDE-BY-SIDE TABLE Aqueous Cation: Aluminium, Al³⁺; Effect of Aqueous Sodium Hydroxide, NaOH(aq) (Dropwise ➔ In Excess): White ppt , soluble in excess giving a colourless solution .; Effect of Aqueous Ammonia, NH₃(aq) (Dropwise ➔ In Excess): White ppt , insoluble in excess. Aqueous Cation: Ammonium, NH₄⁺; Effect of Aqueous Sodium Hydroxide, NaOH(aq) (Dropwise ➔ In Excess): No ppt; ammonia gas ( NH₃ ) produced on warming (turns damp red litmus blue).; Effect of Aqueous Ammonia, NH₃(aq) (Dropwise ➔ In Excess): — (No reaction). Aqueous Cation: Calcium, Ca²⁺; Effect of Aqueous Sodium Hydroxide, NaOH(aq) (Dropwise ➔ In Excess): White ppt , insoluble in excess .; Effect of Aqueous Ammonia, NH₃(aq) (Dropwise ➔ In Excess): No ppt or very slight white ppt. Aqueous Cation: Chromium(III), Cr³⁺; Effect of Aqueous Sodium Hydroxide, NaOH(aq) (Dropwise ➔ In Excess): Green ppt , soluble in excess giving a green solution .; Effect of Aqueous Ammonia, NH₃(aq) (Dropwise ➔ In Excess): Green (grey-green) ppt , insoluble in excess.",
+      "vi": "➕ 12.5.2 Nhận biết Đầy đủ 8 Cations trong Dung dịch & 12.5.4 Thử Ngọn lửa (6 Ions). Luôn ghi nhớ hiện tượng ở CẢ HAI GIAI ĐOẠN trên 2 ống nghiệm riêng: nhỏ từng giọt (dropwise) tạo kết tủa hydroxide, sau đó nhỏ đến dư (in excess) xem kết tủa có tan lại hay không! COMPLETE 8 AQUEOUS CATIONS TABLE Cation Dung dịch: Aluminium, Al³⁺; Tác dụng với NaOH(aq) (Vài giọt ➔ Nhỏ đến dư): Kết tủa trắng (white ppt) , tan trong kiềm dư tạo dung dịch không màu.; Tác dụng với NH₃(aq) (Vài giọt ➔ Nhỏ đến dư): Kết tủa trắng (white ppt) , KHÔNG tan trong dư. Cation Dung dịch: Ammonium, NH₄⁺; Tác dụng với NaOH(aq) (Vài giọt ➔ Nhỏ đến dư): Không kết tủa; sinh khí NH₃ khi đun ấm làm xanh quỳ đỏ ẩm.; Tác dụng với NH₃(aq) (Vài giọt ➔ Nhỏ đến dư): — (Không phản ứng). Cation Dung dịch: Calcium, Ca²⁺; Tác dụng với NaOH(aq) (Vài giọt ➔ Nhỏ đến dư): Kết tủa trắng (white ppt) , không tan trong dư .; Tác dụng với NH₃(aq) (Vài giọt ➔ Nhỏ đến dư): Không kết tủa (no ppt) hoặc vẩn đục trắng cực nhẹ. Cation Dung dịch: Chromium(III), Cr³⁺; Tác dụng với NaOH(aq) (Vài giọt ➔ Nhỏ đến dư): Kết tủa xanh lục (green ppt) , tan trong dư tạo dung dịch màu xanh lục .; Tác dụng với NH₃(aq) (Vài giọt ➔ Nhỏ đến dư): Kết tủa xanh xám/lục (green ppt) , không tan trong dư.",
+      "duration": 213.35,
+      "startTime": 3193.86,
+      "endTime": 3407.21,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 2 MCQ (Distinguishing White-Precipitate Cations) An aqueous solution of colourless salt Z is tested in three separate portions:• Portion 1 + aqueous NaOH: white precipitate forms, soluble in excess giving a colourless solution.• Portion 2 + aqueous NH₃: white precipitate forms, insoluble in excess .• Portion 3 + dilute HNO₃ then aqueous AgNO₃: cream precipitate forms.What is salt Z ? A. Aluminium bromide B. Aluminium chloride C. Zinc bromide D. Calcium bromide ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Portion 1 eliminates Ca²⁺ (D), because Ca(OH)₂ is insoluble in excess NaOH(aq) . Both Al³⁺ and Zn²⁺ dissolve in excess NaOH(aq) , so Portion 2 is the tie-breaker: in excess NH₃(aq) , Zn(OH)₂ dissolves whereas Al(OH)₃ stays insoluble — confirming aluminium ions ( Al³⁺ ) (eliminating C). Portion 3 gives a cream precipitate of silver bromide ( AgBr ), confirming bromide ions ( Br⁻ ) ( Cl⁻ in B would give a white precipitate). Thus Z is aluminium bromide, AlBr₃ .",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 2 (Phân biệt 3 Cation Kết tủa Trắng) An aqueous solution of colourless salt Z is tested in three separate portions:• Portion 1 + aqueous NaOH: white precipitate, soluble in excess giving a colourless solution.• Portion 2 + aqueous NH₃: white precipitate, insoluble in excess .• Portion 3 + dilute HNO₃ then aqueous AgNO₃: cream precipitate.What is salt Z ? (Dung dịch muối không màu Z được chia làm 3 phần: Phần 1 + NaOH(aq) cho kết tủa trắng tan trong dư; Phần 2 + NH₃(aq) cho kết tủa trắng KHÔNG tan trong dư; Phần 3 + HNO₃ loãng rồi thêm AgNO₃(aq) cho kết tủa kem. Muối Z là gì?) A. Aluminium bromide B. Aluminium chloride C. Zinc bromide D. Calcium bromide ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Phần 1 loại ngay Ca²⁺ (D) vì Ca(OH)₂ không tan trong NaOH dư. Cả Al³⁺ và Zn²⁺ đều tan trong NaOH dư, nên Phần 2 quyết định tất cả: trong NH₃(aq) dư, Zn(OH)₂ tan còn Al(OH)₃ không tan ➔ xác nhận ion aluminium ( Al³⁺ ) (loại C). Phần 3 tạo kết tủa kem ➔ xác nhận ion bromide ( Br⁻ ) (loại B vì Cl⁻ tạo tủa trắng). Vậy Z là aluminium bromide, AlBr₃ .",
+      "duration": 189.05,
+      "startTime": 3407.21,
+      "endTime": 3596.26,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / PAPER 4 & 6 • Two-Bottle Salt Investigation [6 marks] Two unlabelled solids P and Q are known to be potassium sulfate ( K₂SO₄ ) and copper(II) nitrate ( Cu(NO₃)₂ ) . (a) Describe how to carry out a flame test on solid P ( K₂SO₄ ) and state the flame colour observed. [2] (b) Explain why an aqueous solution of P is acidified with dilute nitric acid before adding aqueous barium nitrate, and state the positive observation for SO₄²⁻ . [2] (c) State the observations when aqueous ammonia, NH₃(aq) , is added dropwise and then in excess to aqueous Q ( Cu(NO₃)₂ ), AND name the reagents heated with Q to confirm NO₃⁻ ions. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) Dip a clean nichrome/platinum wire (cleaned with conc. HCl ) into solid P and hold in a hot/roaring blue Bunsen flame [1m] ; a lilac flame is seen [1m] .• (b) Dilute HNO₃ reacts with and removes any carbonate ( CO₃²⁻ ) or sulfite ( SO₃²⁻ ) ions that would otherwise form a false white precipitate with Ba²⁺ (without adding SO₄²⁻ ions) [1m] ; positive observation: white precipitate (of BaSO₄ ) [1m] .• (c) With NH₃(aq) : light blue precipitate dropwise, which dissolves in excess to form a dark blue solution [1m] . For NO₃⁻ : add aqueous sodium hydroxide ( NaOH ) and aluminium foil (then warm gently; ammonia gas turns damp red litmus blue) [1m] . 💡 Intuition Check: Remember that Paper 2, Paper 4, and Paper 6 do NOT provide the Qualitative Analysis Notes table (only Paper 5 Practical does!).",
+      "vi": "BÀI MẪU 2 🟦 CORE / PAPER 4 & 6 • Điều tra Hai Lọ Muối Mất Nhãn [6 điểm] Two unlabelled solids P and Q are known to be potassium sulfate ( K₂SO₄ ) and copper(II) nitrate ( Cu(NO₃)₂ ) . (a) Describe how to carry out a flame test on solid P ( K₂SO₄ ) and state the flame colour observed. (b) Explain why aqueous P is acidified with dilute nitric acid before adding aqueous barium nitrate, and state the positive observation for SO₄²⁻ . (c) State the observations when NH₃(aq) is added dropwise and then in excess to aqueous Q ( Cu(NO₃)₂ ), AND name the reagents warmed with Q to confirm NO₃⁻ . (Hai chất rắn mất nhãn P ( K₂SO₄ ) và Q ( Cu(NO₃)₂ ): (a) Mô tả cách thử màu ngọn lửa cho P và nêu màu quan sát được; (b) Giải thích vì sao phải axit hóa P bằng HNO₃ loãng trước khi thêm Ba(NO₃)₂(aq) và nêu hiện tượng của SO₄²⁻ ; (c) Nêu hiện tượng khi nhỏ NH₃(aq) từ từ đến dư vào Q , và nêu các hóa chất đun với Q để xác nhận NO₃⁻ .) ✍️ Lời giải chi tiết theo thang điểm: • (a) Nhúng dây nichrome/platinum sạch (đã rửa bằng HCl đặc) vào mẫu rắn P rồi đưa vào ngọn lửa xanh đèn Bunsen ; quan sát thấy ngọn lửa màu tím hoa cà (lilac) .• (b) HNO₃ loãng phản ứng và loại bỏ hoàn toàn các ion carbonate ( CO₃²⁻ ) hoặc sulfite ( SO₃²⁻ ) nếu có lẫn (tránh tạo kết tủa trắng giả với Ba²⁺ mà không làm lẫn thêm SO₄²⁻ ) ; hiện tượng dương tính: xuất hiện kết tủa trắng (white precipitate của BaSO₄ ) .• (c) Với NH₃(aq) : ban đầu tạo kết tủa xanh lam nhạt , sau đó tan trong.",
+      "duration": 254.93,
+      "startTime": 3596.26,
+      "endTime": 3851.19,
+      "audioUrl": "/audio/lectures/chemistry/12/s03_b07.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "📝 PHÂN TÍCH CÂU HỎI MẪU PAPER 6 & PAPER 4 (Worked Exam Questions)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "📝 WORKED IGCSE PAPER 6 & PAPER 4 QUESTIONS (0620).",
+      "vi": "📝 PHÂN TÍCH CÂU HỎI MẪU PAPER 6 & PAPER 4.",
+      "duration": 10.1,
+      "startTime": 3851.19,
+      "endTime": 3861.29,
+      "audioUrl": "/audio/lectures/chemistry/12/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "Đề bài: Hòa tan muối rắn W vào nước thu được dung dịch không màu. Nhỏ NaOH(aq) vào thấy xuất hi",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "Worked Example 1 • Deductive Unknown Salt Analysis (5 marks) Question: Solid W dissolves in water to form a colourless solution. Adding aqueous NaOH dropwise forms a white precipitate that dissolves in excess NaOH. Adding aqueous NH₃ dropwise also forms a white precipitate that dissolves in excess NH₃. Acidifying a third portion with dilute HNO₃ followed by AgNO₃(aq) gives a yellow precipitate. Identify the two ions in W and write its formula. Model Mark-Scheme Deduction: • White ppt soluble in BOTH excess NaOH(aq) AND excess NH₃(aq) ➔ zinc ion, Zn²⁺ .• Yellow ppt with acidified AgNO₃(aq) ➔ iodide ion, I⁻ (silver iodide, AgI).• Compound W is zinc iodide , formula ZnI₂ .",
+      "vi": "Ví dụ 1 • Biện luận Xác định Muối Chưa Biết (5 điểm) Đề bài: Hòa tan muối rắn W vào nước thu được dung dịch không màu. Nhỏ NaOH(aq) vào thấy xuất hiện kết tủa trắng, tan trong NaOH dư. Nhỏ NH₃(aq) vào phần thứ hai cũng thấy kết tủa trắng, tan trong NH₃ dư. Axit hóa phần thứ ba bằng HNO₃ loãng rồi nhỏ AgNO₃(aq) thấy kết tủa vàng. Xác định 2 ion trong W và viết công thức hóa học của W. Đáp án chuẩn Mark Scheme: • Kết tủa trắng tan trong CẢ NaOH(aq) dư LẪN NH₃(aq) dư ➔ ion zinc, Zn²⁺ .• Kết tủa vàng (yellow ppt) với HNO₃ loãng + AgNO₃(aq) ➔ ion iodide, I⁻ (tạo AgI).• Hợp chất W là zinc iodide , công thức ZnI₂ .",
+      "duration": 121.6,
+      "startTime": 3861.29,
+      "endTime": 3982.89,
+      "audioUrl": "/audio/lectures/chemistry/12/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "Đề bài: Đun ấm dung dịch X với NaOH(aq) dư thấy tạo kết tủa nâu đỏ và thoát ra khí mùi khai làm",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "Worked Example 2 • Double Salt / Ammonium & Iron(III) Test (5 marks) Question: Aqueous solution X is warmed with excess NaOH(aq). A red-brown precipitate forms and a pungent gas turns damp red litmus paper blue. Another portion of X is acidified with dilute HNO₃ and Ba(NO₃)₂(aq) is added, giving a white precipitate. Identify ALL THREE ions present in X. Model Mark-Scheme Deduction: • Red-brown ppt insoluble in excess NaOH ➔ iron(III) ion, Fe³⁺ .• Pungent alkaline gas ( NH₃ ) on warming with NaOH ➔ ammonium ion, NH₄⁺ .• White ppt with acidified Ba(NO₃)₂(aq) ➔ sulfate ion, SO₄²⁻ (X is ammonium iron(III) sulfate!).",
+      "vi": "Ví dụ 2 • Nhận biết Muối Kép Chứa 3 Ions (5 điểm) Đề bài: Đun ấm dung dịch X với NaOH(aq) dư thấy tạo kết tủa nâu đỏ và thoát ra khí mùi khai làm xanh giấy quỳ đỏ ẩm. Lấy phần khác của X axit hóa bằng HNO₃ loãng rồi thêm Ba(NO₃)₂(aq) thấy kết tủa trắng. Xác định CẢ 3 ion có trong X. Đáp án chuẩn Mark Scheme: • Kết tủa nâu đỏ (red-brown ppt) không tan trong NaOH dư ➔ ion iron(III), Fe³⁺ .• Khí kiềm mùi khai ( NH₃ ) thoát ra khi đun với NaOH ➔ ion ammonium, NH₄⁺ .• Kết tủa trắng với HNO₃ + Ba(NO₃)₂(aq) ➔ ion sulfate, SO₄²⁻ (X là muối phèn sắt ammonium iron(III) sulfate!).",
+      "duration": 113.06,
+      "startTime": 3982.89,
+      "endTime": 4095.95,
+      "audioUrl": "/audio/lectures/chemistry/12/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "Đề bài: Trình bày quy trình thí nghiệm để thu được tinh thể potassium nitrate khô, tinh khiết V",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "Worked Example 3 • Paper 6 Planning: Separating a Solid Mixture (6 marks) Question: Plan a laboratory procedure to obtain pure, dry crystals of potassium nitrate AND pure, dry solid barium sulfate from a solid mixture of potassium nitrate (soluble in water) and barium sulfate (insoluble in water). 6-Point Paper 6 Plan: 1. Add distilled water to the mixture in a beaker and stir/warm gently until all the potassium nitrate dissolves.2. Filter the mixture using a filter funnel and filter paper.3. Wash the insoluble barium sulfate residue on the filter paper several times with distilled water and dry in a warm oven (or between filter papers).4. Heat the potassium nitrate filtrate in an evaporating basin to evaporate water until the crystallisation (saturation) point is reached.5. Leave the hot saturated solution to cool slowly so crystals form, then filter off the crystals.6. Wash crystals with a tiny volume of cold distilled water and dry between sheets of filter paper .",
+      "vi": "Ví dụ 3 • Câu 6 Điểm Thiết kế Thí nghiệm Paper 6 (Planning) Đề bài: Trình bày quy trình thí nghiệm để thu được tinh thể potassium nitrate khô, tinh khiết VÀ bột barium sulfate khô, tinh khiết từ hỗn hợp rắn gồm potassium nitrate (tan trong nước) và barium sulfate (không tan trong nước). 6 Bước Ăn Trọn 6 Điểm Paper 6: 1. Cho nước cất (distilled water) vào hỗn hợp trong cốc thủy tinh, khuấy đều/đun ấm nhẹ cho potassium nitrate tan hết.2. Đem lọc (filter) hỗn hợp qua phễu và giấy lọc.3. Rửa phần bã residue (barium sulfate) trên giấy lọc vài lần bằng distilled water rồi sấy khô trong tủ ấm.4. Đun dịch lọc filtrate (potassium nitrate) trên bát sứ cho bay hơi bớt nước tới điểm kết tinh (crystallisation point) .5. Để nguội từ từ cho tinh thể tách ra rồi lọc thu lấy tinh thể.6. Rửa tinh thể bằng một ít nước cất lạnh và ép khô giữa hai tờ giấy lọc .",
+      "duration": 135.61,
+      "startTime": 4095.95,
+      "endTime": 4231.56,
+      "audioUrl": "/audio/lectures/chemistry/12/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Đề bài: Khi chuẩn độ 25.0 cm³ NaOH(aq) trong bình nón bằng HCl(aq) trên burette: (a) Phải tráng",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Worked Example 4 • Titration Rinsing & Technique Evaluation (4 marks) Question: In a titration where 25.0 cm³ of NaOH(aq) in a conical flask is titrated with HCl(aq) from a burette: (a) State what liquid should be used for the final rinse of (i) the burette and (ii) the conical flask. (b) Explain why rinsing the inside walls of the conical flask with distilled water during the titration does NOT change the titre volume. Model Mark-Scheme Answers: • (a)(i) Burette: Rinse with the HCl(aq) acid that will fill it (rinsing with water dilutes the acid and increases the titre!).• (a)(ii) Conical flask: Rinse with distilled water ONLY (rinsing with NaOH adds extra moles of alkali!).• (b) Adding distilled water to the conical flask washes splashed drops into the bulk mixture without changing the exact number of moles of NaOH originally pipetted into the flask!",
+      "vi": "Ví dụ 4 • Đánh giá Sai số Tráng rửa Dụng cụ Chuẩn độ (4 điểm) Đề bài: Khi chuẩn độ 25.0 cm³ NaOH(aq) trong bình nón bằng HCl(aq) trên burette: (a) Phải tráng lần cuối (i) burette và (ii) bình nón (conical flask) bằng chất lỏng nào? (b) Tại sao dùng bình tia nước cất xịt tráng thành trong của bình nón lúc đang chuẩn độ lại KHÔNG làm sai lệch thể tích HCl tiêu tốn? Đáp án chuẩn Mark Scheme: • (a)(i) Burette: Tráng bằng chính dung dịch axit HCl(aq) sắp rót vào (tráng bằng nước làm loãng axit!).• (a)(ii) Bình nón (Conical flask): CHỈ tráng bằng nước cất (tráng bằng NaOH sẽ làm dư số mol kiềm!).• (b) Thêm nước cất vào bình nón giúp rửa trôi các giọt bắn trên thành bình xuống đáy mà không làm thay đổi tổng số mol NaOH ban đầu đã hút chuẩn bằng pipette!",
+      "duration": 123.14,
+      "startTime": 4231.56,
+      "endTime": 4354.7,
+      "audioUrl": "/audio/lectures/chemistry/12/s04_b04.mp3"
+    }
+  ]
+}

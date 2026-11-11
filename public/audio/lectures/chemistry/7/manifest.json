@@ -1,0 +1,571 @@
+{
+  "lectureId": "0437e039-b3c2-5779-a402-45907c082ac2",
+  "courseTitle": "Cambridge IGCSE Chemistry (0620)",
+  "lectureTitle": "Topic 7: Acids, bases and salts",
+  "totalDuration": 3928.04,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_p1_sub02": {
+      "start": 8,
+      "end": 10
+    },
+    "s01_p1_sub03": {
+      "start": 11,
+      "end": 13
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_p2_sub02": {
+      "start": 8,
+      "end": 10
+    },
+    "s01_p2_sub03": {
+      "start": 11,
+      "end": 13
+    },
+    "s01_wex": {
+      "start": 14,
+      "end": 15
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 15
+    },
+    "s02_int": {
+      "start": 17,
+      "end": 19
+    },
+    "s02_p1_sub01": {
+      "start": 20,
+      "end": 23
+    },
+    "s02_p1_sub02": {
+      "start": 24,
+      "end": 28
+    },
+    "s02_p2_sub01": {
+      "start": 20,
+      "end": 23
+    },
+    "s02_p2_sub02": {
+      "start": 24,
+      "end": 28
+    },
+    "s02_wex": {
+      "start": 29,
+      "end": 30
+    },
+    "s02_hdr": {
+      "start": 16,
+      "end": 30
+    },
+    "s03_int": {
+      "start": 32,
+      "end": 34
+    },
+    "s03_p1_sub01": {
+      "start": 36,
+      "end": 40
+    },
+    "s03_p2_sub01": {
+      "start": 36,
+      "end": 40
+    },
+    "s03_wex": {
+      "start": 41,
+      "end": 42
+    },
+    "s03_hdr": {
+      "start": 31,
+      "end": 42
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 7: Axit, bazơ và muối (Acids, Bases and Salts)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Chemistry (0620) Topic 7: Acids, Bases and Salts. Complete Master Lecture • 7.1 Acids, Bases, Alkalis, Indicators & Strong/Weak Acids, 7.2 Acidic, Basic & Amphoteric Oxides, 7.3 Solubility Rules, Salt Preparation & Water of Crystallisation.",
+      "vi": "Cambridge IGCSE Chemistry (0620) • Song ngữ Chuyên đề 7: Axit, bazơ và muối. Bài giảng Song ngữ Toàn diện • Axit, Bazơ, Kiềm, Chất chỉ thị màu, Axit mạnh & yếu, Phân loại Oxit, Bảng độ tan SNAP & 3 Phương pháp Điều chế Muối.",
+      "duration": 46.21,
+      "startTime": 0.0,
+      "endTime": 46.21,
+      "audioUrl": "/audio/lectures/chemistry/7/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "🧪 1. AXIT, BAZƠ, KIỀM, CHẤT CHỈ THỊ & THANG pH",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧪 1. ACIDS, BASES, ALKALIS & THE pH SCALE. Core + Supplement 7.1",
+      "vi": "🧪 1. AXIT, BAZƠ, KIỀM, CHẤT CHỈ THỊ & THANG pH. Core + Supplement 7.1",
+      "duration": 16.43,
+      "startTime": 46.21,
+      "endTime": 62.64,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture an H+ion (proton) as a hot parcel in a game of pass-the-parcel: an acid throws the proton away ( proton donor ), while a base catches it ( proton acceptor ). Only bases that dissolve in water get into the VIP club called alkalis (releasing OH⁻(aq) ). Meanwhile, strong vs. weak acids work like stadium gates: a strong acid ( HCl ) flings open 100% of its gates so every molecule splits into ions ( → ), whereas a weak acid ( CH₃COOH in vinegar) cracks open only ~1% of its gates ( ⇌ )!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng hạt proton H+ như một \"quả bóng nóng\" trong trò chuyền bóng: Acid (Axit) là người ném bóng đi ( proton donor ), còn Base (Bazơ) là người bắt lấy bóng ( proton acceptor ). Trong gia đình Base, chỉ những ai tan được trong nước mới được cấp thẻ VIP gọi là Alkali (Kiềm) sinh ra OH⁻(aq) . Còn Strong acid vs. Weak acid giống như cổng sân vận động : Strong acid ( HCl ) mở toang 100% cánh cổng cho toàn bộ phân tử phân li thành ion ( → ), trong khi Weak acid ( CH₃COOH trong giấm ăn) chỉ hé mở ~1% số cổng ( ⇌ )!",
+      "duration": 87.45,
+      "startTime": 62.64,
+      "endTime": 150.09,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Ions & Neutralisation (7.1.3, 7.1.6, 7.1.8): Acids contain H+(aq) ; bases are metal oxides or hydroxides ; alkalis are soluble bases containing OH−(aq) . Universal net ionic equation: H⁺(aq) + OH⁻(aq) → H₂O(l) . 2 → 🟦 Core Indicators (7.1.2, 7.1.5, 7.1.7): Memorise litmus (red ↔ blue), thymolphthalein (colourless in acid/neutral → blue in alkali), methyl orange (red → yellow), and Universal Indicator (red pH 0–2 = highest [H⁺] → green pH 7 → violet pH 12–14). 3 → 🟩 Supplement Proton Transfer & Dissociation (7.1.9–12): Strong acid = completely dissociated in aqueous solution ( HCl(aq) → H⁺(aq) + Cl⁻(aq) ); weak acid = partially dissociated ( CH₃COOH(aq) ⇌ H⁺(aq) + CH₃COO⁻(aq) ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Ion & Trung hòa (7.1.3, 7.1.6, 7.1.8): Dung dịch axit chứa H+(aq) ; bases là oxit/hidroxit kim loại; alkalis là soluble bases chứa OH−(aq) . Phương trình ion trung hòa: H⁺(aq) + OH⁻(aq) → H₂O(l) . 2 → 🟦 Core Chất chỉ thị (7.1.2, 7.1.5, 7.1.7): Thuộc lòng litmus (red ↔ blue), thymolphthalein (colourless trong axit/trung tính → blue trong kiềm), methyl orange (red → yellow), và Universal Indicator (đỏ pH 0–2 nhiều [H⁺] nhất → xanh lá pH 7 → tím pH 12–14). 3 → 🟩 Supplement Proton & Độ phân li (7.1.9–12): Strong acid = completely dissociated ( HCl(aq) → H⁺(aq) + Cl⁻(aq) ); Weak acid = partially dissociated ( CH₃COOH(aq) ⇌ H⁺(aq) + CH₃COO⁻(aq) ).",
+      "duration": 136.67,
+      "startTime": 150.09,
+      "endTime": 286.76,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never confuse strong with concentrated ! Strength measures the percentage of molecules dissociated into ions , whereas concentration measures moles dissolved per dm3 . Also remember: in 0620, thymolphthalein turns blue in alkali (not pink) and stays colourless in acid!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bao giờ đánh đồng Strong (mạnh) với Concentrated (đặc) ! Strong/Weak chỉ tỷ lệ % phân tử phân li thành ion , còn Concentrated/Dilute chỉ lượng mol chất tan trong 1 dm3nước . Đặc biệt nhớ: ở 0620, thymolphthalein hóa xanh lam (blue) trong kiềm (chứ không phải màu hồng)!",
+      "duration": 47.15,
+      "startTime": 286.76,
+      "endTime": 333.91,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "🔴 Acids (Axit)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🔴 Acids. Aqueous solutions of acids contain hydrogen ions, H+(aq). Supplement Definition (7.1.9): Acids are proton (H+) donors . Common Lab Acids: Hydrochloric acid (HCl), Sulfuric acid (H2SO4), Nitric acid (HNO3), Ethanoic acid (CH3COOH).",
+      "vi": "🔴 Acids (Axit). Dung dịch nước của axit luôn chứa các ion hydrogen, H+(aq). Định nghĩa Supplement (7.1.9): Axit là chất nhường proton (proton donors) . Axit phổ biến: HCl (hydrochloric), H2SO4(sulfuric), HNO3(nitric), CH3COOH (ethanoic).",
+      "duration": 49.15,
+      "startTime": 333.91,
+      "endTime": 383.06,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🔵 Bases (Bazơ) & Alkalis (Kiềm)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🔵 Bases & Alkalis. Bases are oxides or hydroxides of metals (plus NH3). Alkalis are soluble bases whose aqueous solutions contain hydroxide ions, OH−(aq). Supplement Definition (7.1.9): Bases are proton (H+) acceptors . Insoluble bases: CuO, MgO, ZnO, Cu(OH)2. Alkalis: NaOH(aq), KOH(aq), Ca(OH)2(aq), NH3(aq).",
+      "vi": "🔵 Bases (Bazơ) & Alkalis (Kiềm). Bases là các oxit hoặc hidroxit của kim loại (cùng NH3). Alkalis là các bazơ tan trong nước (soluble bases) tạo ra ion OH−(aq). Định nghĩa Supplement (7.1.9): Bazơ là chất nhận proton (proton acceptors) . Bazơ không tan: CuO, MgO, Cu(OH)2. Kiềm (Alkalis): NaOH(aq), KOH(aq), Ca(OH)2(aq), NH3(aq).",
+      "duration": 73.78,
+      "startTime": 383.06,
+      "endTime": 456.84,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🚨 Bẫy Đề Thi — Phân biệt Base / Alkali & Phương trình Ion Trung hòa (7.1.8): • M...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🚨 Exam Trap — Base vs. Alkali & Neutralisation Ionic Equation (7.1.8): • All alkalis are bases, NOT all bases are alkalis! Copper(II) oxide (CuO) neutralises acid so it is a base, but it is insoluble in water so it is NOT an alkali.• When any aqueous acid reacts with any aqueous alkali, the universal net ionic equation for neutralisation is: H⁺(aq) + OH⁻(aq) ⟶ H₂O(l)",
+      "vi": "🚨 Bẫy Đề Thi — Phân biệt Base / Alkali & Phương trình Ion Trung hòa (7.1.8): • Mọi Alkali đều là Base, nhưng KHÔNG phải Base nào cũng là Alkali! CuO là bazơ nhưng không tan trong nước nên KHÔNG phải là kiềm.• Mọi phản ứng trung hòa (neutralisation) giữa axit và kiềm đều có chung phương trình ion rút gọn: H⁺(aq) + OH⁻(aq) ⟶ H₂O(l)",
+      "duration": 59.5,
+      "startTime": 456.84,
+      "endTime": 516.34,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Chất chỉ thị (Indicator): Litmus (Quỳ tím); Môi trường Axit (pH < 7): Đỏ (Red); ...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Indicator: Litmus; Colour in Acid (pH < 7): Red; Colour in Neutral (pH = 7): Purple; Colour in Alkali (pH > 7): Blue. Indicator: Thymolphthalein (0620 Key!); Colour in Acid (pH < 7): Colourless; Colour in Neutral (pH = 7): Colourless; Colour in Alkali (pH > 7): Blue. Indicator: Methyl Orange; Colour in Acid (pH < 7): Red; Colour in Neutral (pH = 7): Orange (end-point); Colour in Alkali (pH > 7): Yellow.",
+      "vi": "Chất chỉ thị (Indicator): Litmus (Quỳ tím); Môi trường Axit (pH < 7): Đỏ (Red); Trung tính (pH = 7): Tím (Purple); Môi trường Kiềm (pH > 7): Xanh lam (Blue). Chất chỉ thị (Indicator): Thymolphthalein (Mới 0620!); Môi trường Axit (pH < 7): Không màu (Colourless); Trung tính (pH = 7): Không màu (Colourless); Môi trường Kiềm (pH > 7): Xanh lam (Blue). Chất chỉ thị (Indicator): Methyl Orange (Da cam metyl); Môi trường Axit (pH < 7): Đỏ (Red); Trung tính (pH = 7): Cam (Orange); Môi trường Kiềm (pH > 7): Vàng (Yellow).",
+      "duration": 87.99,
+      "startTime": 516.34,
+      "endTime": 604.33,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "💡 Lưu ý đặc biệt Paper 6: Chương trình 0620 dùng thymolphthalein (không màu ↔ xa...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "💡 Paper 6 Titration Tip: Always use thymolphthalein (colourless ↔ blue) or methyl orange (red ↔ yellow) for acid-alkali titrations because they give a single sharp colour change at the end-point. Never use Universal Indicator in a titration because it changes colour gradually across many shades!",
+      "vi": "💡 Lưu ý đặc biệt Paper 6: Chương trình 0620 dùng thymolphthalein (không màu ↔ xanh lam, KHÔNG phải hồng!) và methyl orange (đỏ ↔ vàng) khi chuẩn độ ( titration ) vì đổi màu dứt khoát tại điểm tương đương. Không dùng Universal Indicator cho chuẩn độ!",
+      "duration": 40.33,
+      "startTime": 604.33,
+      "endTime": 644.66,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🌈 Interactive pH Scale & Universal Indicator (Chỉ thị Vạn năng — 7.1.7)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🌈 Interactive pH Scale & Universal Indicator (Core 7.1.7). Hover along the pH spectrum below to compare [H+] vs [OH−] concentration and Universal Indicator colours: 👆",
+      "vi": "🌈 Interactive pH Scale & Universal Indicator (Chỉ thị Vạn năng — 7.1.7). Lướt chuột dọc theo dải màu pH để so sánh nồng độ [H+], [OH−] và màu của giấy Universal Indicator: 👆",
+      "duration": 27.62,
+      "startTime": 644.66,
+      "endTime": 672.28,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "Strong Acid: Phân li Hoàn toàn (Completely dissociated)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "Strong Acid: Completely Dissociated. 100% of acid molecules ionise into H+(aq) ions in water ( one-way arrow → ): HCl(aq) ⟶ H+(aq) + Cl−(aq)",
+      "vi": "Strong Acid: Phân li Hoàn toàn (Completely dissociated). 100% phân tử axit phân li thành ion trong nước ( mũi tên 1 chiều → ): HCl(aq) ⟶ H+(aq) + Cl−(aq)",
+      "duration": 31.43,
+      "startTime": 672.28,
+      "endTime": 703.71,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "Weak Acid: Phân li Một phần (Partially dissociated)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "Weak Acid: Partially Dissociated. Only a tiny fraction (~1%) of molecules ionise in water ( reversible arrow ⇌ ): CH3COOH(aq) ⇌ H+(aq) + CH3COO−(aq)",
+      "vi": "Weak Acid: Phân li Một phần (Partially dissociated). Chỉ ~1% phân tử phân li thành ion trong nước ( mũi tên thuận nghịch ⇌ ): CH3COOH(aq) ⇌ H+(aq) + CH3COO−(aq)",
+      "duration": 41.08,
+      "startTime": 703.71,
+      "endTime": 744.79,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "So sánh thực nghiệm ở CÙNG NỒNG ĐỘ MOL (VD: 0.1 mol/dm3HCl vs. 0.1 mol/dm3CH3COO...",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "Experimental Comparison at Equal Concentration (e.g. 0.1 mol/dm3HCl vs. 0.1 mol/dm3CH3COOH): 1. pH: HCl has a lower pH (~1.0, red) than CH3COOH (~2.9, orange) because HCl has a much higher [H+].2. Electrical conductivity: HCl conducts electricity much better (brighter bulb) due to higher mobile ion concentration.3. Rate of reaction (with Mg or CaCO3): HCl fizzes much faster (higher [H+] ⇒ higher collision frequency), though equal volumes & concentrations eventually produce the SAME total volume of H2/CO2gas!",
+      "vi": "So sánh thực nghiệm ở CÙNG NỒNG ĐỘ MOL: 1. Độ pH: HCl có pH thấp hơn (~1.0, đỏ) còn CH3COOH có pH cao hơn (~2.9, cam) vì nồng độ [H+] của HCl lớn hơn nhiều.2. Độ dẫn điện (Conductivity): HCl dẫn điện mạnh hơn hẳn (đèn sáng hơn) nhờ mật độ ion tự do cao.3. Tốc độ phản ứng với Mg / CaCO3: HCl sủi bọt nhanh hơn nhiều; nhưng nếu lấy cùng thể tích và nồng độ tác dụng với Mg dư thì tổng thể tích khí H2thu được cuối cùng BẰNG NHAU!",
+      "duration": 92.77,
+      "startTime": 744.79,
+      "endTime": 837.56,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Beaker X contains 25 cm3of 0.10 mol/dm3hydrochloric acid, HCl(aq). Beaker Y contains 25 cm3of 0.10 mol/dm3ethanoic acid, CH3COOH(aq). Which statement comparing Beaker X and Beaker Y is correct? A. Thymolphthalein turns blue in Beaker X and stays colourless in Beaker Y. B. Beaker X has a higher pH and lower electrical conductivity than Beaker Y. C. Beaker X has a higher concentration of H⁺(aq) ions and reacts faster with magnesium ribbon. D. Excess magnesium produces twice the total volume of hydrogen gas in Beaker X than in Beaker Y. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: HCl is a strong acid (100% dissociated: HCl → H⁺ + Cl⁻ ) whereas CH3COOH is a weak acid (partially dissociated: CH₃COOH ⇌ H⁺ + CH₃COO⁻ ). At equal concentration (0.10 mol/dm3), Beaker X has a much higher [H+(aq)] , giving a lower pH (~1 vs ~3), higher electrical conductivity , and a faster rate of fizzing with Mg (so C is correct and B is reversed). A is wrong because thymolphthalein is colourless in all acidic solutions. D is wrong because both beakers contain the exact same total moles of monoprotic acid (0.0025 mol), so both eventually form the same total volume of H2.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Beaker X contains 25 cm3of 0.10 mol/dm3hydrochloric acid, HCl(aq). Beaker Y contains 25 cm3of 0.10 mol/dm3ethanoic acid, CH3COOH(aq). Which statement comparing Beaker X and Beaker Y is correct? (Cốc X chứa 25 cm3HCl 0.10 mol/dm3; Cốc Y chứa 25 cm3CH3COOH 0.10 mol/dm3. Phát biểu nào sau đây so sánh đúng X và Y?) A. Thymolphthalein turns blue in Beaker X and stays colourless in Beaker Y. B. Beaker X has a higher pH and lower electrical conductivity than Beaker Y. C. Beaker X has a higher concentration of H⁺(aq) ions and reacts faster with magnesium ribbon. D. Excess magnesium produces twice the total volume of hydrogen gas in Beaker X than in Beaker Y. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: HCl là strong acid (phân li 100%: HCl → H⁺ + Cl⁻ ) còn CH3COOH là weak acid (chỉ phân li một phần: CH₃COOH ⇌ H⁺ + CH₃COO⁻ ). Ở cùng nồng độ 0.10 mol/dm3, cốc X có nồng độ [H+(aq)] cao hơn hẳn ⇒ pH thấp hơn (~1 so với ~3), dẫn điện tốt hơn , và tốc độ sủi bọt với Mg nhanh hơn ( C đúng, B ngược). A sai vì trong môi trường axit, thymolphthalein đều không màu (colourless). D sai vì tổng số mol axit ban đầu bằng nhau (0.0025 mol) nên khi phản ứng hết với Mg dư sẽ sinh ra tổng thể tích khí H2bằng nhau.",
+      "duration": 237.42,
+      "startTime": 837.56,
+      "endTime": 1074.98,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟩 CORE + SUPPLEMENT • Paper 4 Structured [5 marks] Ethanoic acid, CH3COOH, is a weak acid, whereas hydrochloric acid, HCl, is a strong acid.(a) Define the term weak acid and write the symbol equation for the dissociation of aqueous ethanoic acid. [2](b) Aqueous ammonia is a weak alkali: NH₃(g) + H₂O(l) ⇌ NH₄⁺(aq) + OH⁻(aq) . Explain why ammonia is classified as a base in this forward reaction, and state the colour of methyl orange in aqueous ammonia. [2](c) Write the ionic equation, including state symbols, for the neutralisation reaction between any aqueous acid and any aqueous alkali. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) A weak acid is an acid that is only partially dissociated (or partially ionised) in aqueous solution [1m].Equation: CH₃COOH(aq) ⇌ H⁺(aq) + CH₃COO⁻(aq) (must show the reversible arrow ⇌ !) [1m]. (b) Ammonia (NH3) acts as a proton (H+) acceptor (it accepts an H+ion from H2O to form NH4+) [1m]. Methyl orange turns yellow in alkaline solution [1m]. (c) H⁺(aq) + OH⁻(aq) → H₂O(l) (correct species + all three state symbols) [1m]. 💡 Intuition Check: In Paper 4 dissociation equations, examiners check the arrow first: always draw a single arrow (→) for HCl and a reversible arrow (⇌) for CH3COOH!",
+      "vi": "BÀI MẪU 2 🟩 CORE + SUPPLEMENT • Tự luận Paper 4 [5 marks] Ethanoic acid, CH3COOH, is a weak acid, whereas hydrochloric acid, HCl, is a strong acid.(a) Define the term weak acid and write the symbol equation for the dissociation of aqueous ethanoic acid. (b) Aqueous ammonia is a weak alkali: NH₃(g) + H₂O(l) ⇌ NH₄⁺(aq) + OH⁻(aq) . Explain why ammonia is classified as a base in this forward reaction, and state the colour of methyl orange in aqueous ammonia. (c) Write the ionic equation, including state symbols, for the neutralisation reaction between any aqueous acid and any aqueous alkali. (Dịch: (a) Định nghĩa axit yếu và viết phương trình phân li của dung dịch CH3COOH. (b) Giải thích vì sao NH3đóng vai trò là base trong chiều thuận và nêu màu của methyl orange trong dung dịch NH3. (c) Viết phương trình ion kèm trạng thái của phản ứng trung hòa.) ✍️ Lời giải chi tiết theo thang điểm: (a) Weak acid là axit chỉ phân li một phần trong dung dịch nước .Phương trình: CH₃COOH(aq) ⇌ H⁺(aq) + CH₃COO⁻(aq) (bắt buộc phải viết mũi tên thuận nghịch ⇌ !) . (b) NH3là chất nhận proton / H+ion (proton acceptor) từ H2O để tạo thành NH4+ . Chỉ thị methyl orange chuyển sang màu vàng (yellow) trong kiềm . (c) H⁺(aq) + OH⁻(aq) → H₂O(l) (đúng công thức ion và đủ 3 ký hiệu trạng thái) .",
+      "duration": 244.27,
+      "startTime": 1074.98,
+      "endTime": 1319.25,
+      "audioUrl": "/audio/lectures/chemistry/7/s01_b14.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "💥 2. PHẢN ỨNG CỦA AXIT, BAZƠ & PHÂN LOẠI OXIT (OXIDES)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "💥 2. REACTIONS OF ACIDS, BASES & CLASSIFICATION OF OXIDES. Core + Supplement 7.1 & 7.2",
+      "vi": "💥 2. PHẢN ỨNG CỦA AXIT, BAZƠ & PHÂN LOẠI OXIT (OXIDES). Core + Supplement 7.1 & 7.2",
+      "duration": 19.39,
+      "startTime": 1319.25,
+      "endTime": 1338.64,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Every acid reaction swaps H⁺ for a metal ion to build a salt , and the partner’s \"surname\" reveals the bonus product: a bare reactive metal gives off H2gas (pop!), a metal oxide/hydroxide quietly forms water , and a carbonate fizzes out water + CO2gas . For oxides, look at the Periodic Table team: Metals = Basic oxides , Non-metals = Acidic oxides — except Al2O3and ZnO , the two \"double-agent\" amphoteric oxides that react with BOTH acids and alkalis!",
+      "vi": "🎯 Hình dung đời thường: Mọi phản ứng của axit đều thay H⁺ bằng ion kim loại để tạo muối (salt) , còn \"họ\" của chất tác dụng sẽ quyết định sản phẩm phụ: Kim loại đứng trước H giải phóng khí H2 (nổ tiếng pop ), Oxit/Hidroxit kim loại lặng lẽ tạo nước H2O (không sủi bọt!), còn Muối Carbonate sủi bọt khí CO2+ H2O (làm đục nước vôi trong). Với các Oxit, chỉ cần nhìn vị trí trên Bảng Tuần Hoàn: Kim loại = Basic oxide , Phi kim = Acidic oxide — trừ bộ đôi \"điệp viên hai mang\" Al2O3và ZnO (Amphoteric oxides) tác dụng ngon lành với CẢ axit lẫn kiềm!",
+      "duration": 79.34,
+      "startTime": 1338.64,
+      "endTime": 1417.98,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Acid & Base Reactions (7.1.1, 7.1.4): Acid + Metal → Salt + H2; Acid + Base → Salt + H2O; Acid + Carbonate → Salt + H2O + CO2; Base + Ammonium Salt → Salt + H2O + NH3(g) (damp red litmus → blue). 2 → 🟦 Core Acidic vs. Basic Oxides (7.2.1): Non-metal oxides ( SO2, CO2 ) are acidic ; metal oxides ( CuO, CaO ) are basic . 3 → 🟩 Supplement Amphoteric Oxides (7.2.2–7.2.3): Al2O3 and ZnO react with both acids and bases to produce a salt and water .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core 4 Phản ứng Cốt lõi (7.1.1, 7.1.4): Acid + Metal → Salt + H2; Acid + Base → Salt + H2O; Acid + Carbonate → Salt + H2O + CO2; Base + Ammonium Salt → Salt + H2O + NH3(g) (làm xanh quỳ đỏ ẩm). 2 → 🟦 Core Acidic vs. Basic Oxides (7.2.1): Oxit phi kim ( SO2, CO2 ) là acidic oxides ; oxit kim loại ( CuO, CaO ) là basic oxides . 3 → 🟩 Supplement Amphoteric Oxides (7.2.2–7.2.3): Al2O3 và ZnO phản ứng với cả axit và bazơ (kiềm) tạo muối và nước .",
+      "duration": 91.75,
+      "startTime": 1417.98,
+      "endTime": 1509.73,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Farmers must NEVER add calcium oxide / calcium hydroxide (lime) to neutralise acidic soil at the same time as an ammonium fertiliser (e.g. NH4NO3)! They react together on warming to release ammonia gas (NH3) into the air, losing vital nitrogen from the soil!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bẫy thực tế nông nghiệp kinh điển: Không bao giờ rắc vôi (CaO / Ca(OH)2) khử chua đất cùng lúc với phân đạm amoni (NH4NO3, (NH4)2SO4) ! Bazơ sẽ phản ứng đẩy bay mất khí ammonia (NH3) ra không khí làm cây trồng mất sạch nguồn đạm Nitrogen!",
+      "duration": 44.72,
+      "startTime": 1509.73,
+      "endTime": 1554.45,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "1. Acid + Metal (Kim loại) → Salt + Hydrogen (H2) Mg(s) + 2HCl(aq) → MgCl₂(aq) +...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "1. Acid + Reactive Metal → Salt + Hydrogen (H2) Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g) • Test for H2: Lighted splint gives a squeaky pop .• Trap: Cu, Ag, Au (below H in reactivity series) do NOT react with dilute acids!",
+      "vi": "1. Acid + Metal (Kim loại) → Salt + Hydrogen (H2) Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g) • Thử khí H2: Que đóm đang cháy nổ tiếng “squeaky pop” .• Bẫy: Cu, Ag, Au đứng sau H nên KHÔNG phản ứng với axit loãng!",
+      "duration": 50.56,
+      "startTime": 1554.45,
+      "endTime": 1605.01,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "2. Acid + Base / Alkali → Salt + Water (H2O) CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂...",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "2. Acid + Base / Alkali → Salt + Water (H2O) CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) • Black CuO solid dissolves to form a blue solution (no fizzing!).• With ammonia: NH₃ + HCl → NH₄Cl.",
+      "vi": "2. Acid + Base / Alkali → Salt + Water (H2O) CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) • Bột CuO đen tan dần tạo dung dịch màu xanh lam (không sủi bọt!).• Với NH3: NH₃ + HCl → NH₄Cl.",
+      "duration": 49.99,
+      "startTime": 1605.01,
+      "endTime": 1655.0,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "3. Acid + Carbonate → Salt + Water + CO2 CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l...",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "3. Acid + Metal Carbonate → Salt + Water + CO2 CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g) • Rapid effervescence.• Test for CO2: Turns limewater milky / cloudy white.",
+      "vi": "3. Acid + Carbonate → Salt + Water + CO2 CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g) • Sủi bọt khí mạnh.• Thử khí CO2: Làm đục nước vôi trong.",
+      "duration": 44.73,
+      "startTime": 1655.0,
+      "endTime": 1699.73,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "4. Base/Alkali + Ammonium Salt → Salt + Water + Ammonia (NH3) Ca(OH)₂ + 2NH₄Cl →...",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "4. Base/Alkali + Ammonium Salt → Salt + Water + Ammonia (NH3) Ca(OH)₂ + 2NH₄Cl → CaCl₂ + 2H₂O + 2NH₃(g) (on warming).• Test for NH3: Pungent gas turns damp red litmus paper blue !• Soil trap: Adding lime + NH4+fertiliser loses N as NH3gas!",
+      "vi": "4. Base/Alkali + Ammonium Salt → Salt + Water + Ammonia (NH3) Ca(OH)₂ + 2NH₄Cl → CaCl₂ + 2H₂O + 2NH₃(g) (đun ấm).• Thử khí NH3: Khí mùi khai làm giấy quỳ đỏ ẩm hóa xanh !",
+      "duration": 49.97,
+      "startTime": 1699.73,
+      "endTime": 1749.7,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "1. Basic Oxides (Oxit Bazơ — Kim loại)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "1. Basic Oxides (Metal Oxides). Formed by metals ; react with acids to form salt + water. Soluble ones dissolve in water to form alkalis. Examples: CuO , CaO , MgO , Na2O.",
+      "vi": "1. Basic Oxides (Oxit Bazơ — Kim loại). Oxit của kim loại ; tác dụng với axit tạo muối + nước. Ví dụ: CuO , CaO , MgO , Na2O.",
+      "duration": 32.06,
+      "startTime": 1749.7,
+      "endTime": 1781.76,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "2. Acidic Oxides (Oxit Axit — Phi kim)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "2. Acidic Oxides (Non-Metal Oxides). Formed by non-metals ; react with bases/alkalis to form salt + water (e.g. CO2+ 2NaOH → Na2CO3+ H2O). Examples: SO2 , CO2 , NO2 , SO3 , SiO2.",
+      "vi": "2. Acidic Oxides. Oxit của phi kim ; tác dụng với kiềm tạo muối + nước; tan trong nước tạo axit. Ví dụ: SO2 , CO2 , NO2 , SO3 , SiO2.",
+      "duration": 38.82,
+      "startTime": 1781.76,
+      "endTime": 1820.58,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "3. Amphoteric Oxides (Oxit Lưỡng tính — 7.2.2–3)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "3. Amphoteric Oxides (Supplement 7.2.2–3). React with BOTH acids AND bases (alkalis) to produce a salt and water ! Memorize Both: Al2O3 and ZnO !• With acid: ZnO + 2HCl → ZnCl₂ + H₂O • With alkali: ZnO + 2NaOH → Na₂ZnO₂ + H₂O ( or Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O ).",
+      "vi": "3. Amphoteric Oxides (Oxit Lưỡng tính — 7.2.2–3). Phản ứng với CẢ axit LẪN bazơ (kiềm) đều tạo muối và nước ! Thuộc lòng 2 chất: Al2O3 và ZnO !• Với axit: ZnO + 2HCl → ZnCl₂ + H₂O • Với kiềm: ZnO + 2NaOH → Na₂ZnO₂ + H₂O ( hoặc Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O ).",
+      "duration": 65.21,
+      "startTime": 1820.58,
+      "endTime": 1885.79,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "4. Neutral Oxides (Oxit Trung tính)",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "4. Neutral Oxides. Some non-metal monoxides react with neither acids nor bases (pH = 7). Examples: Carbon monoxide ( CO ), Nitric oxide ( NO ), Dinitrogen oxide ( N2O ), Water ( H2O ).",
+      "vi": "4. Neutral Oxides (Oxit Trung tính). Không phản ứng với cả axit lẫn bazơ (pH = 7). Ví dụ: Carbon monoxide ( CO ), Nitric oxide ( NO ), N2O , Nước ( H2O ).",
+      "duration": 34.67,
+      "startTime": 1885.79,
+      "endTime": 1920.46,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "🎯 Bài Toán Tách Chất Kinh Điển Paper 4 — Tách Basic Oxide khỏi Amphoteric Oxide",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "🎯 Paper 4 Worked Example — Separating Insoluble Basic vs. Amphoteric Oxides. Question: A solid mixture contains powdered copper(II) oxide (CuO) and zinc oxide (ZnO) . Both are insoluble in water and both dissolve in dilute acid. Describe how to obtain a pure dry sample of CuO from this mixture. [4 marks]. 1. Add excess warm aqueous sodium hydroxide, NaOH(aq) , and stir thoroughly.2. ZnO is amphoteric , so it reacts with NaOH(aq) and dissolves to form soluble sodium zincate ( ZnO(s) + 2NaOH(aq) → Na₂ZnO₂(aq) + H₂O(l) ), whereas CuO is a basic oxide so it does NOT react and remains an insoluble black solid.3. Filter the mixture; CuO stays on the filter paper as the residue .4. Wash the CuO residue with plenty of distilled water and dry between filter papers (or in a warm oven).",
+      "vi": "🎯 Bài Toán Tách Chất Kinh Điển Paper 4 — Tách Basic Oxide khỏi Amphoteric Oxide. Đề bài: Một hỗn hợp bột rắn gồm copper(II) oxide (CuO) và zinc oxide (ZnO) . Cả hai đều không tan trong nước nhưng đều tan trong axit. Hãy nêu cách thu được CuO tinh khiết, khô từ hỗn hợp. [4 marks]. 1. Cho dung dịch kiềm sodium hydroxide dư, NaOH(aq) ấm vào hỗn hợp và khuấy kỹ.2. ZnO là amphoteric oxide nên phản ứng với kiềm và tan hết tạo dung dịch sodium zincate ( ZnO(s) + 2NaOH(aq) → Na₂ZnO₂(aq) + H₂O(l) ), còn CuO là basic oxide không tác dụng với NaOH nên vẫn ở dạng rắn màu đen không tan.3. Lọc (Filter) hỗn hợp; giữ lại phần bã rắn ( residue ) chính là CuO trên giấy lọc.4. Rửa sạch (Wash) bã CuO bằng nước cất (distilled water) và làm khô giữa hai tờ giấy lọc .",
+      "duration": 136.27,
+      "startTime": 1920.46,
+      "endTime": 2056.73,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ An unknown white solid oxide X is insoluble in water. When added to dilute hydrochloric acid, X dissolves without fizzing to form a colourless solution. When added to warm aqueous sodium hydroxide, X also dissolves to form a colourless solution. What could X be? A. Calcium oxide, CaO B. Zinc carbonate, ZnCO₃ C. Aluminium oxide, Al₂O₃ D. Silicon(IV) oxide, SiO₂ ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Dissolving in both an acid (HCl) and an alkali (NaOH) without effervescence is the defining test of an amphoteric oxide ! Aluminium oxide (Al2O3) (and ZnO) are the two amphoteric oxides in 0620 ( C is correct). A (CaO) is a basic oxide so it does not react with NaOH. B (ZnCO3) is a carbonate (not an oxide) and would fizz CO2with HCl. D (SiO2) is an acidic oxide so it does not dissolve in dilute HCl.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 An unknown white solid oxide X is insoluble in water. When added to dilute hydrochloric acid, X dissolves without fizzing to form a colourless solution. When added to warm aqueous sodium hydroxide, X also dissolves to form a colourless solution. What could X be? (Một chất rắn màu trắng là oxit X không tan trong nước. Khi cho vào HCl loãng, X tan không sủi bọt tạo dung dịch không màu. Khi cho vào dung dịch NaOH ấm, X cũng tan hết tạo dung dịch không màu. X là chất nào?) A. Calcium oxide, CaO B. Zinc carbonate, ZnCO₃ C. Aluminium oxide, Al₂O₃ D. Silicon(IV) oxide, SiO₂ ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Vừa tan trong axit (HCl) vừa tan trong kiềm (NaOH) mà không sủi bọt chính là dấu hiệu nhận biết amphoteric oxide (oxit lưỡng tính) ! Hai oxit lưỡng tính chuẩn của 0620 là Al2O3 và ZnO ⇒ chọn C . A (CaO) là basic oxide nên không phản ứng với NaOH; B (ZnCO3) là muối carbonate (không phải oxit) và sẽ sủi bọt CO2với HCl; D (SiO2) là acidic oxide nên không tan trong HCl loãng.",
+      "duration": 166.89,
+      "startTime": 2056.73,
+      "endTime": 2223.62,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b13.mp3"
+    },
+    {
+      "id": "s02_b14",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟩 CORE + SUPPLEMENT • Paper 4 Structured [5 marks] Consider the following four oxides: CO2 , CuO , ZnO , and CaO .(a) Select from the list one acidic oxide and one amphoteric oxide, and state what is meant by the term amphoteric oxide . [2](b) Write a balanced symbol equation for the reaction of zinc oxide with dilute hydrochloric acid. [1](c) A farmer heats a mixture of calcium hydroxide, Ca(OH)2, with solid ammonium chloride, NH4Cl. Name the gas evolved, describe a chemical test for this gas, and explain why this reaction is a problem in agriculture. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Acidic oxide: CO2 ; Amphoteric oxide: ZnO [1m for both]. An amphoteric oxide is an oxide that reacts with both acids and bases (alkalis) to produce a salt and water [1m]. (b) ZnO + 2HCl → ZnCl₂ + H₂O [1m]. (c) Gas: Ammonia (NH3) ; Test: turns damp red litmus paper blue [1m]. Agricultural problem: adding lime (base) with ammonium fertilisers drives off nitrogen as NH3gas into the atmosphere, reducing soil fertility [1m]. 💡 Intuition Check: To score full marks on the definition of amphoteric oxide , don’t stop at \"reacts with acids and bases\" — always add \"to produce a salt and water\" !",
+      "vi": "BÀI MẪU 2 🟩 CORE + SUPPLEMENT • Tự luận Paper 4 [5 marks] Consider the following four oxides: CO2 , CuO , ZnO , and CaO .(a) Select from the list one acidic oxide and one amphoteric oxide, and state what is meant by the term amphoteric oxide . (b) Write a balanced symbol equation for the reaction of zinc oxide with dilute hydrochloric acid. (c) A farmer heats a mixture of calcium hydroxide, Ca(OH)2, with solid ammonium chloride, NH4Cl. Name the gas evolved, describe a chemical test for this gas, and explain why this reaction is a problem in agriculture. (Dịch: (a) Chọn 1 acidic oxide, 1 amphoteric oxide và định nghĩa amphoteric oxide. (b) Viết PTHH của ZnO với HCl loãng. (c) Đun Ca(OH)2với NH4Cl: nêu tên khí, cách thử khí và giải thích tác hại trong nông nghiệp.) ✍️ Lời giải chi tiết theo thang điểm: (a) Acidic oxide: CO2 ; Amphoteric oxide: ZnO . Định nghĩa: Oxit lưỡng tính là oxit phản ứng với cả axit và bazơ để tạo ra muối và nước . (b) ZnO + 2HCl → ZnCl₂ + H₂O . (c) Khí thoát ra: Ammonia (NH3) ; Cách thử: làm giấy quỳ đỏ ẩm hóa xanh . Tác hại: Bón vôi chung với phân đạm amoni làm thất thoát nguyên tố Nitrogen dưới dạng khí NH3bay đi mất . 💡 Kiểm tra bản chất: Khi định nghĩa amphoteric oxide bằng tiếng Anh, đừng chỉ viết \"reacts with acids and bases\" — phải có cụm đuôi ăn điểm \"to produce a salt and water\" !",
+      "duration": 218.41,
+      "startTime": 2223.62,
+      "endTime": 2442.03,
+      "audioUrl": "/audio/lectures/chemistry/7/s02_b14.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧂 3. QUY TẮC ĐỘ TAN SNAP, ĐIỀU CHẾ MUỐI & NƯỚC KẾT TINH",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧂 3. SOLUBILITY RULES, SALT PREPARATION & HYDRATED SALTS. Core + Supplement 7.3",
+      "vi": "🧂 3. QUY TẮC ĐỘ TAN SNAP, ĐIỀU CHẾ MUỐI & NƯỚC KẾT TINH. Core + Supplement 7.3",
+      "duration": 16.51,
+      "startTime": 2442.03,
+      "endTime": 2458.54,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Making a pure salt is just like picking the right kitchen method so no leftover ingredients spoil the dish :• Method 1 (Excess Insoluble Solid): Like steeping loose tea leaves — dump in excess solid (e.g. CuO) so 100% of the acid is used up, then simply filter off the leftover solid!• Method 2 (Titration): Mixing two clear liquids (acid + soluble alkali like NaOH) — if you pour in excess NaOH, you cannot filter out a dissolved liquid ! So find the exact volume with an indicator first, then repeat clean without indicator.• Method 3 (Precipitation): Mix two clear solutions whose ions lock together into an instant solid snowstorm (insoluble salt), then filter, wash, and dry !",
+      "vi": "🎯 Hình dung đời thường: Điều chế muối tinh khiết giống hệt như chọn cách nấu bếp sao cho lọc bỏ sạch nguyên liệu thừa :• PP 1 (Excess Insoluble Solid — Chất rắn không tan dư): Giống pha trà lá — cho dư chất rắn không tan (VD: bột CuO) để ép axit phản ứng hết 100%, rồi lấy phễu lọc bỏ bã rắn thừa cực dễ!• PP 2 (Titration — Chuẩn độ): Khi cả axit và kiềm (NaOH) đều là dung dịch trong suốt — nếu lỡ đổ dư NaOH thì không thể lọc tách chất lỏng tan được ! Nên phải chuẩn độ tìm đúng thể tích vừa đủ với chỉ thị trước, rồi làm lại lần 2 không cho chỉ thị.• PP 3 (Precipitation — Kết tủa): Trộn 2 dung dịch muối tan để muối không tan kết tủa trắng xóa ngay lập tức, rồi lọc → rửa nước cất → ép khô !",
+      "duration": 103.94,
+      "startTime": 2458.54,
+      "endTime": 2562.48,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Solubility Check (7.3.2): SNAP ( S odium, N itrates, A mmonium, P otassium) are 100% soluble; Chlorides soluble except AgCl, PbCl2 ; Sulfates soluble except BaSO4, CaSO4, PbSO4 ; Carbonates/Hydroxides insoluble except SNAP (+ Ca(OH)2partially). 2 → 🟦/🟩 2-Question Decision Tree (7.3.1, 7.3.4): Is the salt insoluble? → YES: Precipitation (🟩). If soluble, is it a Na+/K+/NH4+ salt? → YES: Titration (🟦); NO: Acid + Excess Metal / Insoluble Base / Insoluble Carbonate (🟦). 3 → 🟦/🟩 Hydrated Crystals (7.3.3, 7.3.5): Hydrated = chemically combined with water; Anhydrous = no water; Water of crystallisation = water molecules present in hydrated crystals ( CuSO₄•5H₂O , CoCl₂•6H₂O ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Quy tắc Độ tan SNAP (7.3.2): SNAP tan 100%; Chlorides tan trừ AgCl, PbCl2 ; Sulfates tan trừ BaSO4, CaSO4, PbSO4 ; Carbonates/Hydroxides không tan trừ SNAP (+ Ca(OH)2tan ít). 2 → 🟦/🟩 Cây Quyết định 2 Câu hỏi (7.3.1, 7.3.4): Muối cần điều chế có tan không? → KHÔNG: Kết tủa / Precipitation (🟩). Nếu TAN, có phải muối Na+/K+/NH4+ không? → CÓ: Chuẩn độ / Titration (🟦); KHÔNG: Axit + Chất rắn Không tan Dư (🟦). 3 → 🟦/🟩 Tinh thể Ngậm nước (7.3.3, 7.3.5): Hydrated = liên kết hóa học với nước; Anhydrous = không chứa nước; Water of crystallisation = các phân tử nước nằm trong tinh thể ngậm nước ( CuSO₄•5H₂O , CoCl₂•6H₂O ).",
+      "duration": 123.55,
+      "startTime": 2562.48,
+      "endTime": 2686.03,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic Paper 6 traps: (1) Never react copper metal + dilute H2SO4 to make CuSO4(Cu is below H in the reactivity series — NO reaction! Use CuO or CuCO3 ). (2) Never boil a salt solution to dryness when making hydrated crystals — heat only to the crystallisation point , otherwise the water of crystallisation is driven off!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi mất điểm nhiều nhất ở Paper 6: (1) Lấy kim loại đồng Cu + H2SO4loãng để điều chế CuSO4(Cu đứng sau H nên KHÔNG phản ứng! Phải dùng CuO hoặc CuCO3 ). (2) Đun cạn khô dung dịch thay vì đun đến crystallisation point — đun khô sẽ làm bay mất nước kết tinh biến tinh thể thành bột khan!",
+      "duration": 54.68,
+      "startTime": 2686.03,
+      "endTime": 2740.71,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🧠 Bước 1: Bảng Độ Tan Đầy Đủ & Quy tắc “SNAP” (Core 7.3.2)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🧠 Step 1: Complete 0620 Solubility Rules & “SNAP” Mnemonic (Core 7.3.2). S = Sodium (Na+) N = Nitrates (NO3−) A = Ammonium (NH4+) P = Potassium (K+) Salt / Compound Family: Sodium, Potassium, Ammonium; 💧 Soluble in Water: ALL are soluble; 🧱 Insoluble Exceptions: None. Salt / Compound Family: Nitrates (NO 3 − ); 💧 Soluble in Water: ALL are soluble; 🧱 Insoluble Exceptions: None. Salt / Compound Family: Chlorides (Cl − ); 💧 Soluble in Water: Most are soluble; 🧱 Insoluble Exceptions: Silver (AgCl) & Lead(II) (PbCl 2 ). Salt / Compound Family: Sulfates (SO 4 2− ); 💧 Soluble in Water: Most are soluble; 🧱 Insoluble Exceptions: Barium (BaSO 4 ), Calcium (CaSO 4 ) & Lead(II) (PbSO 4 ). Salt / Compound Family: Carbonates (CO 3 2− ); 💧 Soluble in Water: ONLY Na + , K + , NH 4 +; 🧱 Insoluble Exceptions: ALL others are insoluble (e.g. CaCO 3 , CuCO 3 ). Salt / Compound Family: Hydroxides (OH − ); 💧 Soluble in Water: Na + , K + , NH 4 + & Calcium (partially); 🧱 Insoluble Exceptions: ALL others are insoluble (e.g. Cu(OH) 2 , Fe(OH) 3 ).",
+      "vi": "🧠 Bước 1: Bảng Độ Tan Đầy Đủ & Quy tắc “SNAP” (Core 7.3.2). S = Sodium (Na+) N = Nitrates (NO3−) A = Ammonium (NH4+) P = Potassium (K+) Nhóm Hợp chất: Muối Na + , K + , NH 4 + & Nitrates; 💧 Tan trong nước (Soluble): TẤT CẢ đều tan 100%; 🧱 Không tan / Kết tủa (Insoluble): Không có ngoại lệ. Nhóm Hợp chất: Chlorides (Cl − ); 💧 Tan trong nước (Soluble): Hầu hết đều tan; 🧱 Không tan / Kết tủa (Insoluble): Trừ Bạc (AgCl) & Chì (PbCl 2 ). Nhóm Hợp chất: Sulfates (SO 4 2− ); 💧 Tan trong nước (Soluble): Hầu hết đều tan; 🧱 Không tan / Kết tủa (Insoluble): Trừ Bari (BaSO 4 ), Canxi (CaSO 4 ) & Chì (PbSO 4 ). Nhóm Hợp chất: Carbonates (CO 3 2− ); 💧 Tan trong nước (Soluble): CHỈ Na + , K + , NH 4 + tan; 🧱 Không tan / Kết tủa (Insoluble): Tất cả còn lại không tan (CaCO 3 , CuCO 3 ). Nhóm Hợp chất: Hydroxides (OH − ); 💧 Tan trong nước (Soluble): Na + , K + , NH 4 + & Calcium (tan ít); 🧱 Không tan / Kết tủa (Insoluble): Tất cả còn lại không tan (Cu(OH) 2 , Fe(OH) 3 ).",
+      "duration": 193.75,
+      "startTime": 2740.71,
+      "endTime": 2934.46,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "PP 1: Axit + Chất rắn Không tan Dư (Excess Solid)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Method 1: Acid + Excess Insoluble Solid. Target: Soluble non-SNAP salts (e.g. CuSO4 from CuO + H2SO4, or ZnCl2 from Zn + HCl). Warm dilute acid; add solid (metal / base / carbonate) in excess until solid stops disappearing (all acid used up). Filter off unreacted excess solid; keep the pure filtrate. Heat filtrate to evaporate water until crystallisation point (do NOT boil dry!). Cool slowly to crystallise, filter crystals, wash with minimal cold distilled water, and dry between filter papers.",
+      "vi": "PP 1: Axit + Chất rắn Không tan Dư (Excess Solid). Áp dụng: Muối tan KHÔNG thuộc nhóm Na/K/NH4+ (VD: CuSO4 từ CuO + H2SO4; ZnCl2 ). Đun ấm axit loãng; cho chất rắn dư (in excess) vào khuấy đến khi không tan thêm (đảm bảo hết sạch axit). Lọc (Filter) bỏ bã rắn dư, thu dịch lọc ( filtrate ) tinh khiết. Đun bay hơi dịch lọc đến điểm kết tinh (crystallisation point) — không đun cạn khô! Để nguội từ từ cho kết tinh, lọc lấy tinh thể, rửa ít nước cất lạnh và ép khô giữa hai tờ giấy lọc.",
+      "duration": 86.06,
+      "startTime": 2934.46,
+      "endTime": 3020.52,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "PP 2: Chuẩn độ (Titration — Axit + Kiềm)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Method 2: Titration (Acid + Alkali). Target: Soluble Na+, K+, NH4+ salts (e.g. NaCl from NaOH + HCl — excess solid cannot be filtered because NaOH is soluble!). Pipette 25.0 cm3alkali into flask + add thymolphthalein / methyl orange indicator. Add acid from a burette until sharp end-point colour change; record volume. Repeat with exact same volumes WITHOUT indicator (to get pure uncontaminated salt!). Heat to crystallisation point, cool, filter, and dry between filter papers.",
+      "vi": "PP 2: Chuẩn độ (Titration — Axit + Kiềm). Áp dụng: Muối tan của Na+, K+, NH4+ (VD: NaCl — không dùng chất rắn dư được vì kiềm tan hết không lọc bỏ được!). Dùng pipette lấy 25.0 cm3kiềm vào bình nón + vài giọt chỉ thị thymolphthalein / methyl orange. Nhỏ axit từ burette đến khi vừa đổi màu chuẩn; ghi lại thể tích axit. Làm lại lần 2 đúng thể tích đó KHÔNG cho chỉ thị để thu dung dịch muối không lẫn phẩm màu! Cô đến điểm kết tinh, làm nguội, lọc và ép khô bằng giấy lọc.",
+      "duration": 82.45,
+      "startTime": 3020.52,
+      "endTime": 3102.97,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "PP 3: Kết tủa (Precipitation — Supplement)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Method 3: Precipitation (Supplement). Target: Insoluble salts (e.g. AgCl, BaSO4, PbI2). Pick a soluble nitrate + soluble Na/K salt ! Mix two aqueous solutions (e.g. Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq) ; ionic: Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s) ). Filter mixture to trap insoluble salt residue on filter paper. Wash residue thoroughly with distilled water to remove soluble impurities. Dry pure solid between filter papers or in a warm oven.",
+      "vi": "PP 3: Kết tủa (Precipitation — Supplement). Áp dụng: Muối không tan. Mẹo chọn: Muối Nitrate + Muối Sodium/Potassium ! Trộn 2 dung dịch muối tan (VD: Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq) ; PT ion: Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s) ). Lọc (Filter) giữ phần kết tủa ( residue ) trên giấy lọc. Rửa kết tủa bằng nước cất để sạch ion tạp chất. Làm khô kết tủa giữa các tờ giấy lọc hoặc tủ sấy ấm.",
+      "duration": 94.13,
+      "startTime": 3102.97,
+      "endTime": 3197.1,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🔬 Mô Phỏng Chọn Phương Pháp Điều Chế Muối Paper 6 — Bấm hoặc Lướt Chuột!",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "🔬 Interactive Paper 6 Salt Synthesis Simulator — Click or Hover a Target Salt! Test the 0620 decision tree: Is the salt soluble? → If NO , use Precipitation . If YES , is it a Na+/ K+/ NH4+ salt? → If YES , use Titration ; if NO , use Acid + Excess Insoluble Solid. 💎 CuSO4•5H2O (Blue)🧪 NaNO3(SNAP)🧱 BaSO4(White ppt)✨ MgSO4•7H2O 💎 Target: Hydrated Copper(II) Sulfate (CuSO4•5H2O) — Soluble non-SNAP salt ⇒ Method 1 (Acid + Excess Insoluble Base/Carbonate) .• Why NOT Cu metal + dilute H2SO4? Copper is unreactive (below H in reactivity series), so Cu metal does NOT react with dilute acid! Use excess black CuO(s) or green CuCO3(s) instead.• Equation: CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) → Filter excess CuO, heat filtrate to crystallisation point, cool, filter crystals, dry between filter papers.",
+      "vi": "🔬 Mô Phỏng Chọn Phương Pháp Điều Chế Muối Paper 6 — Bấm hoặc Lướt Chuột! Sơ đồ tư duy 0620: Muối có tan không? → Nếu KHÔNG TAN , dùng Precipitation (Kết tủa) . Nếu TAN , có phải muối Na+/ K+/ NH4+ không? → Nếu CÓ , dùng Titration (Chuẩn độ) ; nếu KHÔNG , dùng Acid + Excess Insoluble Solid. 💎 CuSO4•5H2O (Xanh)🧪 NaNO3(SNAP)🧱 BaSO4(Tủa trắng)✨ MgSO4•7H2O 💎 Mục tiêu: Tinh thể Đồng(II) Sunfat (CuSO4•5H2O) — Muối tan ngoài nhóm SNAP ⇒ PP 1 .• Tại sao KHÔNG dùng kim loại Cu + H2SO4loãng? Đồng (Cu) đứng sau Hydro trong dãy hoạt động nên KHÔNG phản ứng với axit loãng! Bắt buộc dùng CuO(s) dư hoặc CuCO3(s) dư .• Phương trình: CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) → Lọc bỏ CuO dư, đun dịch lọc đến crystallisation point , để nguội kết tinh, lọc và ép khô bằng giấy lọc.",
+      "duration": 166.48,
+      "startTime": 3197.1,
+      "endTime": 3363.58,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "💎 Muối Ngậm Nước, Muối Khan & Nước Kết Tinh (7.3.3 & 7.3.5)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "💎 Hydrated Salts, Anhydrous Salts & Water of Crystallisation (7.3.3 & 7.3.5). Hydrated substance: A substance that is chemically combined with water (e.g. blue CuSO₄•5H₂O , pink CoCl₂•6H₂O ). Anhydrous substance: A substance containing no water (e.g. white CuSO₄ , blue CoCl₂ ). Water of crystallisation (Supplement 7.3.5): Defined as the water molecules present in hydrated crystals , shown after the dot ( • ) in formulas such as CuSO₄•5H₂O (5 moles of water per mole of CuSO4) and CoCl₂•6H₂O. Reversible Thermal Dehydration: Gentle heating drives off water of crystallisation (endothermic): CuSO₄•5H₂O(s) [blue] ⇌ CuSO₄(s) [white] + 5H₂O(l) . Adding water restores the colour and releases heat (exothermic)!",
+      "vi": "💎 Muối Ngậm Nước, Muối Khan & Nước Kết Tinh (7.3.3 & 7.3.5). Hydrated substance (Chất ngậm nước): Hợp chất hóa học có liên kết với các phân tử nước (VD: tinh thể xanh CuSO₄•5H₂O , hồng CoCl₂•6H₂O ). Anhydrous substance (Chất khan): Hợp chất không chứa nước (VD: bột trắng CuSO₄ , xanh CoCl₂ ). Water of crystallisation (Nước kết tinh — Supplement 7.3.5): Định nghĩa chuẩn là các phân tử nước hiện diện bên trong mạng tinh thể ngậm nước, biểu diễn sau dấu chấm tròn ( • ). Phản ứng Khử nước Thuận nghịch: Đun nóng làm bay hơi nước kết tinh (thu nhiệt / endothermic): CuSO₄•5H₂O(s) [xanh] ⇌ CuSO₄(s) [trắng] + 5H₂O(l) . Nhỏ nước vào bột trắng sẽ hóa xanh trở lại và tỏa nhiệt (exothermic)!",
+      "duration": 128.17,
+      "startTime": 3363.58,
+      "endTime": 3491.75,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which pair of reagents and experimental method is most suitable for preparing a pure, dry sample of solid lead(II) sulfate, PbSO4 ? A. Add excess lead(II) oxide to warm dilute sulfuric acid, filter, and crystallise the filtrate. B. Titrate aqueous lead(II) hydroxide with dilute sulfuric acid using thymolphthalein. C. Mix aqueous lead(II) nitrate and aqueous sodium sulfate, filter, wash the residue, and dry. D. Mix solid lead(II) carbonate with aqueous barium sulfate, filter, and evaporate the filtrate. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: By the 0620 solubility rules, sulfates are soluble except barium, calcium, and lead(II) — so PbSO4is an insoluble salt ! Insoluble salts must be prepared by precipitation using two soluble aqueous solutions : all nitrates are soluble ( Pb(NO₃)₂(aq) ) and all sodium salts are soluble ( Na₂SO₄(aq) ). Mixing them precipitates pure PbSO₄(s) , which is collected as the residue by filtration, washed with distilled water, and dried ( C ). In A , insoluble PbSO4coats solid PbO and stops the reaction!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Which pair of reagents and experimental method is most suitable for preparing a pure, dry sample of solid lead(II) sulfate, PbSO4 ? (Cặp hóa chất và phương pháp thực nghiệm nào phù hợp nhất để điều chế mẫu muối rắn tinh khiết, khô lead(II) sulfate, PbSO4 ?) A. Add excess lead(II) oxide to warm dilute sulfuric acid, filter, and crystallise the filtrate. B. Titrate aqueous lead(II) hydroxide with dilute sulfuric acid using thymolphthalein. C. Mix aqueous lead(II) nitrate and aqueous sodium sulfate, filter, wash the residue, and dry. D. Mix solid lead(II) carbonate with aqueous barium sulfate, filter, and evaporate the filtrate. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Theo quy tắc độ tan 0620, các muối sulfate đều tan ngoại trừ BaSO4, CaSO4và PbSO4 ⇒ PbSO4là muối KHÔNG TAN (insoluble salt) ! Muối không tan bắt buộc điều chế bằng phương pháp kết tủa (precipitation) từ 2 dung dịch muối tan : mọi muối nitrate đều tan ( Pb(NO₃)₂(aq) ) và mọi muối sodium đều tan ( Na₂SO₄(aq) ). Trộn lại tạo kết tủa PbSO₄(s) , lọc lấy bã (residue), rửa bằng nước cất và làm khô ( C ). Phương án A sai vì lớp kết tủa PbSO4sinh ra bọc kín bề mặt hạt PbO làm phản ứng ngừng lại ngay!",
+      "duration": 198.9,
+      "startTime": 3491.75,
+      "endTime": 3690.65,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 / Paper 6 [5 marks] A student wants to prepare pure, dry hydrated crystals of magnesium sulfate, MgSO4•7H2O , starting from dilute sulfuric acid and solid magnesium carbonate, MgCO3.(a) Describe how the student knows when excess magnesium carbonate has been added, and explain why an excess must be used. [2](b) Describe the remaining practical steps needed to obtain pure, dry crystals of MgSO4•7H2O from the reaction mixture. [2](c) State what is meant by the •7H₂O part of the formula MgSO4•7H2O. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Effervescence (fizzing) stops and unreacted white solid remains at the bottom of the beaker [1m]. Excess MgCO3ensures that all the sulfuric acid has completely reacted (so the salt solution is not contaminated with leftover acid) [1m]. (b) Filter the mixture to remove excess unreacted MgCO3; heat the filtrate gently to evaporate water until the crystallisation point is reached [1m]; leave to cool and crystallise , filter off the crystals, wash with a little cold distilled water, and dry between filter papers [1m]. (c) It represents the water of crystallisation — seven moles/molecules of water chemically combined within each formula unit of the hydrated crystal lattice [1m]. 💡 Intuition Check: Memorise the 4-verb mantra for soluble crystals after reaction: Filter (excess) → Heat (to crystallisation point) → Cool (slowly) → Dry (between filter papers) ; and the 3-verb mantra for precipitates: Filter → Wash (distilled water) → Dry !",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 / Paper 6 [5 marks] A student wants to prepare pure, dry hydrated crystals of magnesium sulfate, MgSO4•7H2O , starting from dilute sulfuric acid and solid magnesium carbonate, MgCO3.(a) Describe how the student knows when excess magnesium carbonate has been added, and explain why an excess must be used. (b) Describe the remaining practical steps needed to obtain pure, dry crystals of MgSO4•7H2O from the reaction mixture. (c) State what is meant by the •7H₂O part of the formula MgSO4•7H2O. (Dịch: Học sinh điều chế tinh thể MgSO4•7H2O từ H2SO4loãng và bột MgCO3rắn. (a) Làm sao biết MgCO3đã dư và vì sao phải dùng dư? (b) Nêu các bước tiếp theo để thu tinh thể khô, sạch. (c) Nêu ý nghĩa của phần •7H₂O .) ✍️ Lời giải chi tiết theo thang điểm: (a) Dấu hiệu nhận biết dư: Ngừng sủi bọt khí (fizzing stops) VÀ còn chất rắn không tan nằm dưới đáy cốc (solid remains) . Lý do dùng dư: Đảm bảo toàn bộ lượng axit H2SO4đã phản ứng hết để dung dịch muối không lẫn axit dư . (b) Lọc (Filter) bỏ MgCO3dư; đun nóng nhẹ dịch lọc cho bay hơi bớt nước đến điểm kết tinh (crystallisation point) ; để nguội kết tinh , lọc lấy tinh thể, rửa bằng một ít nước cất lạnh và ép khô giữa các tờ giấy lọc . (c) Biểu thị nước kết tinh — các phân tử nước liên kết hóa học bên trong mạng tinh thể ngậm nước .",
+      "duration": 237.39,
+      "startTime": 3690.65,
+      "endTime": 3928.04,
+      "audioUrl": "/audio/lectures/chemistry/7/s03_b11.mp3"
+    }
+  ]
+}
