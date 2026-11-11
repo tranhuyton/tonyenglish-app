@@ -1,143 +1,418 @@
 {
   "lectureId": "24f0deeb-3cd9-4b82-b253-5a070ca31275",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B17: Variation and selection",
-  "totalDuration": 360.5,
+  "totalDuration": 1937.16,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_variation_mutation": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-variation-mutation": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_continuous_discontinuous": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-continuous-discontinuous": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_adaptive_features": {
-      "start": 3,
       "end": 4
     },
-    "sec-adaptive-features": {
-      "start": 3,
-      "end": 4
+    "s01_grp06": {
+      "start": 7,
+      "end": 8
     },
-    "sec_xerophytes_hydrophytes": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-xerophytes-hydrophytes": {
-      "start": 4,
-      "end": 4
-    },
-    "sec_natural_selection": {
-      "start": 5,
-      "end": 6
-    },
-    "sec-natural-selection": {
-      "start": 5,
-      "end": 6
-    },
-    "sec_natural_selection_stages": {
+    "s01_p1_sub01": {
       "start": 6,
-      "end": 6
+      "end": 11
     },
-    "sec-natural-selection-stages": {
+    "s01_p2_sub01": {
       "start": 6,
-      "end": 6
+      "end": 8
+    },
+    "s01_p2_sub02": {
+      "start": 9,
+      "end": 11
+    },
+    "s01_wex": {
+      "start": 12,
+      "end": 13
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 13
+    },
+    "s02_int": {
+      "start": 15,
+      "end": 17
+    },
+    "s02_wex": {
+      "start": 20,
+      "end": 21
+    },
+    "s02_hdr": {
+      "start": 14,
+      "end": 21
+    },
+    "s03_int": {
+      "start": 23,
+      "end": 25
+    },
+    "s03_wex": {
+      "start": 30,
+      "end": 31
+    },
+    "s03_hdr": {
+      "start": 22,
+      "end": 31
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B17: Biến dị & Chọn lọc Tự nhiên",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B17: Variation and Selection. Differences between individuals of the same species drive biological evolution. In this topic, we analyze continuous versus discontinuous variation, adaptive features in xerophytes and hydrophytes, and natural selection.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B17: Biến dị và Chọn lọc. Sự sai khác giữa các cá thể cùng loài là động lực thúc đẩy tiến hóa sinh học. Trong chuyên đề này, chúng ta sẽ phân tích biến dị liên tục và không liên tục, cấu tạo thích nghi của cây sa mạc và cây dưới nước, cùng thuyết chọn lọc tự nhiên.",
-      "duration": 42.54,
+      "title": "B17: Variation & Selection (Biến dị & Chọn lọc)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B17 • Cambridge IGCSE Co-ordinated Sciences (0654) B17: Variation & Selection. Continuous vs discontinuous variation, mutation as the source of new alleles, natural selection, antibiotic-resistant bacteria, and selective breeding in crops & livestock.",
+      "vi": "Chuyên đề B17 • Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ B17: Variation & Selection (Biến dị & Chọn lọc). Biến dị liên tục vs gián đoạn, đột biến tạo allele mới, chọn lọc tự nhiên, sự hình thành vi khuẩn kháng kháng sinh và chọn lọc nhân tạo ở cây trồng & vật nuôi.",
+      "duration": 47.54,
       "startTime": 0.0,
-      "endTime": 42.54,
+      "endTime": 47.54,
       "audioUrl": "/audio/lectures/science/b17/intro.mp3"
     },
     {
-      "id": "sec_variation_mutation",
-      "title": "1. Các Loại Biến dị & Đột biến (Variation & Mutation Overview)",
-      "selector": "#sec-variation-mutation",
-      "en": "Section 1 contrasts types of variation: Variation is the differences between individuals of the same species. Mutation is a random change in the base sequence of DNA, producing new alleles. The rate of mutation increases with exposure to ionising radiation and mutagenic chemicals.",
-      "vi": "Mục một phân biệt các loại biến dị: Biến dị là sự sai khác giữa các cá thể cùng loài. Đột biến là sự biến đổi ngẫu nhiên trong trình tự nucleotide của DNA tạo ra alen mới. Tần số đột biến tăng vọt khi tiếp xúc với bức xạ ion hóa và hóa chất gây đột biến.",
-      "duration": 68.54,
-      "startTime": 42.54,
-      "endTime": 111.08,
-      "audioUrl": "/audio/lectures/science/b17/sec_variation_mutation.mp3"
+      "id": "s01_hdr",
+      "title": "🧬 1. Types of Variation (Biến dị Liên tục vs Gián đoạn) & Mutation (Đột biến)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧬 1. Types of Variation (Continuous vs Discontinuous) & Mutation.",
+      "vi": "🧬 1. Types of Variation (Biến dị Liên tục vs Gián đoạn) & Mutation (Đột biến).",
+      "duration": 13.52,
+      "startTime": 47.54,
+      "endTime": 61.06,
+      "audioUrl": "/audio/lectures/science/b17/s01_hdr.mp3"
     },
     {
-      "id": "sec_continuous_discontinuous",
-      "title": "📊 Continuous vs Discontinuous Variation (Biến dị Liên tục & Không liên tục)",
-      "selector": "#sec-continuous-discontinuous",
-      "en": "Continuous vs discontinuous variation: Continuous variation shows a smooth range of phenotypes without distinct categories, caused by multiple genes and environment (e.g. height, mass). Discontinuous variation produces clear-cut distinct categories with no intermediates, caused solely by genes (e.g. ABO blood groups).",
-      "vi": "Biến dị liên tục và không liên tục: Biến dị liên tục biểu hiện một dải liên tục không có ranh giới rõ rệt, do nhiều gen và môi trường chi phối (ví dụ chiều cao, cân nặng). Biến dị không liên tục tạo ra các nhóm riêng biệt không có dạng trung gian, hoàn toàn do gen quy định (ví dụ nhóm máu ABO).",
-      "duration": 39.26,
-      "startTime": 111.08,
-      "endTime": 150.34,
-      "audioUrl": "/audio/lectures/science/b17/sec_continuous_discontinuous.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Continuous variation works like a measuring tape (every millimetre of body length between shortest and tallest exists), whereas discontinuous variation works like blood-bank labels (you are strictly Group A, B, AB, or O with zero intermediates!). Meanwhile, mutation is the only factory that invents brand-new alleles.",
+      "vi": "🎯 Hình dung đời thường: Biến dị liên tục (Continuous) giống thước dây đo chiều cao (mọi giá trị milimet trung gian giữa thấp nhất và cao nhất đều tồn tại), còn biến dị gián đoạn (Discontinuous) giống nhãn túi máu (chỉ có A, B, AB hoặc O dứt khoát, không có trung gian!). Và đột biến (mutation) là nhà máy duy nhất chế tạo ra các allele mới.",
+      "duration": 48.34,
+      "startTime": 61.06,
+      "endTime": 109.4,
+      "audioUrl": "/audio/lectures/science/b17/s01_b01.mp3"
     },
     {
-      "id": "sec_adaptive_features",
-      "title": "2. Cấu tạo Thích nghi: Cây Sa mạc & Thủy sinh (Adaptive Features Overview)",
-      "selector": "#sec-adaptive-features",
-      "en": "Section 2 investigates structural adaptations: An adaptive feature is an inherited feature that helps an organism to survive and reproduce in its environment. We contrast xerophytes living in deserts with hydrophytes living in water.",
-      "vi": "Mục hai khảo sát các cấu tạo thích nghi: Cấu tạo thích nghi là đặc điểm di truyền giúp sinh vật sống sót và sinh sản trong môi trường sống của nó. Chúng ta so sánh cây chịu hạn sống ở sa mạc với cây thủy sinh sống trong nước.",
-      "duration": 63.23,
-      "startTime": 150.34,
-      "endTime": 213.57,
-      "audioUrl": "/audio/lectures/science/b17/sec_adaptive_features.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Define variation as differences between individuals of the same species . 2) Continuous = range between two extremes (e.g. body length ); Discontinuous = limited phenotypes with no intermediates (e.g. ABO blood groups ). 3) Define mutation as a genetic change and state it is how new alleles are formed .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Định nghĩa variation là sự khác biệt giữa các cá thể cùng một loài (same species) . 2) Continuous = dải liên tục giữa hai cực; Discontinuous = số kiểu hình giới hạn không có trung gian. 3) Định nghĩa mutation là biến đổi di truyền (genetic change) và là cách tạo ra allele mới .",
+      "duration": 49.01,
+      "startTime": 109.4,
+      "endTime": 158.41,
+      "audioUrl": "/audio/lectures/science/b17/s01_b02.mp3"
     },
     {
-      "id": "sec_xerophytes_hydrophytes",
-      "title": "🌵 Xerophytes vs Hydrophytes Adaptations (Thích nghi Cây Sa mạc & Thủy sinh)",
-      "selector": "#sec-xerophytes-hydrophytes",
-      "en": "Plant adaptations: Xerophytes conserve water using thick waxy cuticles, sunken stomata, rolled leaves, spines, and deep extensive roots. Hydrophytes thrive in water with large buoyant air spaces (aerenchyma), stomata on upper leaf surfaces, thin cuticles, and reduced roots.",
-      "vi": "Thích nghi ở thực vật: Cây sa mạc tiết kiệm nước nhờ lớp cutin dày, khí khổng thụt sâu trong hố, lá cuộn hoặc tiêu giảm thành gai và rễ cắm sâu. Cây thủy sinh thích nghi trong nước nhờ các khoang khí lớn giúp cây nổi, khí khổng ở mặt trên lá, lớp cutin mỏng và hệ rễ tiêu giảm.",
-      "duration": 36.59,
-      "startTime": 213.57,
-      "endTime": 250.16,
-      "audioUrl": "/audio/lectures/science/b17/sec_xerophytes_hydrophytes.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When asked for an example of discontinuous variation, NEVER give hair colour or eye colour (they have many intermediate shades)! Always give ABO blood groups .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi nêu ví dụ biến dị gián đoạn, ĐỪNG lấy màu tóc hay màu mắt (vì có nhiều sắc độ trung gian)! Luôn ghi nhóm máu ABO để chắc chắn ăn điểm.",
+      "duration": 25.41,
+      "startTime": 158.41,
+      "endTime": 183.82,
+      "audioUrl": "/audio/lectures/science/b17/s01_b03.mp3"
     },
     {
-      "id": "sec_natural_selection",
-      "title": "3. Chọn lọc Tự nhiên & Chọn giống Nhân tạo (Natural Selection Overview)",
-      "selector": "#sec-natural-selection",
-      "en": "Section 3 covers natural and artificial selection: Natural selection operates in nature to adapt populations to changing habitats. Selective breeding is artificial selection carried out by humans to produce economically desirable characteristics in livestock and crops over successive generations.",
-      "vi": "Mục ba trình bày chọn lọc tự nhiên và chọn giống nhân tạo: Chọn lọc tự nhiên diễn ra trong tự nhiên giúp quần thể thích nghi với môi trường sống. Chọn giống nhân tạo do con người chủ động tuyển chọn các tính trạng mong muốn qua nhiều thế hệ cây trồng và vật nuôi.",
-      "duration": 64.6,
-      "startTime": 250.16,
-      "endTime": 314.76,
-      "audioUrl": "/audio/lectures/science/b17/sec_natural_selection.mp3"
+      "id": "s01_b04",
+      "title": "Biến dị (Variation • Core B17.1.1):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Variation (Core • B17.1.1): Defined as the differences between individuals of the same species . Biologists classify phenotypic variation within a species into two major patterns:",
+      "vi": "Biến dị (Variation • Core B17.1.1): Được định nghĩa là những sự khác biệt giữa các cá thể thuộc cùng một loài. Biến dị kiểu hình được chia thành 2 nhóm chính:",
+      "duration": 26.99,
+      "startTime": 183.82,
+      "endTime": 210.81,
+      "audioUrl": "/audio/lectures/science/b17/s01_b04.mp3"
     },
     {
-      "id": "sec_natural_selection_stages",
-      "title": "🌿 5 Stages of Natural Selection (5 Giai đoạn Chọn lọc Tự nhiên)",
-      "selector": "#sec-natural-selection-stages",
-      "en": "The 5 stages of natural selection: 1. Overproduction of offspring. 2. Genetic variation among individuals. 3. Struggle for existence and competition for limited resources. 4. Survival of the fittest with advantageous alleles. 5. Inheritance: survivors reproduce and pass favourable alleles to the next generation.",
-      "vi": "Năm giai đoạn của chọn lọc tự nhiên: Một là sinh sản quá mức con non. Hai là biến dị di truyền giữa các cá thể. Ba là đấu tranh sinh tồn và cạnh tranh tài nguyên. Bốn là sống sót của các cá thể thích nghi nhất mang alen có lợi. Năm là di truyền: các cá thể sống sót sinh sản và truyền alen có lợi cho đời sau.",
-      "duration": 45.74,
-      "startTime": 314.76,
-      "endTime": 360.5,
-      "audioUrl": "/audio/lectures/science/b17/sec_natural_selection_stages.mp3"
+      "id": "s01_b05",
+      "title": "Continuous Variation (Biến dị Liên tục)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Continuous Variation. Results in a range of phenotypes between two extremes , with every intermediate measurement possible. Syllabus examples: Body length (height), body mass, hand span, leaf length. Underlying factors: Influenced by both genes and environmental factors (such as diet, water, sunlight). Graph presentation: Histogram with touching bars / smooth bell-shaped normal distribution curve.",
+      "vi": "Continuous Variation (Biến dị Liên tục). Tạo ra một dải kiểu hình liên tục nằm giữa hai giá trị cực đoan, có đầy đủ các mức trung gian. Ví dụ chuẩn Syllabus: Chiều dài cơ thể , cân nặng, sải bàn tay. Nguyên nhân: Do cả gen kết hợp với yếu tố môi trường (chế độ dinh dưỡng, ánh sáng). Đồ thị: Biểu đồ tần số nối liền tạo đường cong hình chuông chuẩn.",
+      "duration": 55.98,
+      "startTime": 210.81,
+      "endTime": 266.79,
+      "audioUrl": "/audio/lectures/science/b17/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Discontinuous Variation",
+      "selector": "[data-lecture-section=\"s01_b06\"], [data-lecture-section=\"s01_grp06\"]",
+      "en": "Discontinuous Variation. Results in a limited number of phenotypes with no intermediates (distinct, separate categories). Syllabus examples: ABO blood groups (A, B, AB, or O), biological sex, pea seed shape. Underlying factors: Controlled by genes alone; environment does not shift an individual between categories. Graph presentation: Bar chart with separate, non-touching bars.",
+      "vi": "Discontinuous Variation (Biến dị Gián đoạn). Tạo ra một số lượng giới hạn các kiểu hình tách biệt và không có dạng trung gian. Ví dụ chuẩn Syllabus: Nhóm máu ABO (A, B, AB hoặc O), giới tính sinh học, hình dạng hạt đậu.",
+      "duration": 47.94,
+      "startTime": 266.79,
+      "endTime": 314.73,
+      "audioUrl": "/audio/lectures/science/b17/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "📈 Graphing Variation & Syllabus Examples (Core • 18.1.2–18.1.5)",
+      "selector": "[data-lecture-section=\"s01_b07\"], [data-lecture-section=\"s01_grp06\"]",
+      "en": "📈 Graphing Variation & Syllabus Examples (Core • 18.1.2–18.1.5). Must-Know Syllabus Examples: Continuous variation includes body length and body mass (caused by both genes and the environment ). Discontinuous variation includes ABO blood groups , seed shape in peas (round vs wrinkled), and seed colour in peas (yellow vs green) — caused by genes only !",
+      "vi": "Nguyên nhân: Hoàn toàn do gen quy định; môi trường không thể làm đổi nhóm máu. Đồ thị: Biểu đồ cột có các cột tách rời nhau ( bar chart ).",
+      "duration": 34.33,
+      "startTime": 314.73,
+      "endTime": 349.06,
+      "audioUrl": "/audio/lectures/science/b17/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Continuous Variation (Đường cong hình chuông)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "Continuous Variation (Normal Bell Curve)",
+      "vi": "Continuous Variation (Đường cong hình chuông)",
+      "duration": 7.58,
+      "startTime": 349.06,
+      "endTime": 356.64,
+      "audioUrl": "/audio/lectures/science/b17/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "Discontinuous Variation (Biểu đồ cột rời rạc)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "Discontinuous Variation (Discrete Bar Chart)",
+      "vi": "Discontinuous Variation (Biểu đồ cột rời rạc)",
+      "duration": 8.37,
+      "startTime": 356.64,
+      "endTime": 365.01,
+      "audioUrl": "/audio/lectures/science/b17/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "⚠️ Đột biến (Mutation): Nguồn gốc tạo Allele Mới (Core • B17.1.4–B17.1.5)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "⚠️ Mutation: How New Alleles Are Formed (Core • B17.1.4–B17.1.5). Definition: A mutation is a genetic change. Evolutionary role: Mutation is the way in which new alleles are formed — without mutation, no new heritable traits could arise for selection to act upon! Outcomes: Mutations happen randomly; many have neutral or harmful effects, while rare mutations produce advantageous phenotypes (such as camouflage or antibiotic resistance).",
+      "vi": "⚠️ Đột biến (Mutation): Nguồn gốc tạo Allele Mới (Core • B17.1.4–B17.1.5). Định nghĩa chuẩn: Đột biến (Mutation) là một sự biến đổi di truyền (genetic change). Vai trò cốt lõi: Đột biến là con đường tạo ra các allele mới cung cấp nguyên liệu sơ cấp cho quá trình chọn lọc. Hệ quả: Đột biến xuất hiện ngẫu nhiên; đa số trung tính hoặc có hại, nhưng đôi khi tạo ra đặc tính có lợi giúp sinh vật sống sót vượt trội (như kháng kháng sinh).",
+      "duration": 70.06,
+      "startTime": 365.01,
+      "endTime": 435.07,
+      "audioUrl": "/audio/lectures/science/b17/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which statement correctly describes discontinuous variation within a species? A. It produces a continuous range of phenotypes between two extremes, such as body length. B. It produces a limited number of distinct phenotypes with no intermediates, such as ABO blood groups. C. It is caused only by differences in diet and climate during growth. D. It represents differences between organisms belonging to two different kingdoms. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Discontinuous variation results in a limited number of phenotypes with no intermediates , such as human ABO blood groups . Option A describes continuous variation; C describes purely environmental change; D confuses intraspecific variation with differences between kingdoms.",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE • Trắc nghiệm Paper 1/2 Which statement correctly describes discontinuous variation within a species? (Phát biểu nào mô tả đúng biến dị gián đoạn trong một loài?) A. It produces a continuous range of phenotypes between two extremes, such as body length. B. It produces a limited number of distinct phenotypes with no intermediates, such as ABO blood groups. C. It is caused only by differences in diet and climate during growth. D. It represents differences between organisms belonging to two different kingdoms. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Biến dị gián đoạn tạo ra một số lượng giới hạn các kiểu hình riêng biệt không có dạng trung gian , điển hình là nhóm máu ABO . Câu A là biến dị liên tục; C là thường biến do môi trường; D nhầm sang khác biệt giữa hai giới sinh vật.",
+      "duration": 116.74,
+      "startTime": 435.07,
+      "endTime": 551.81,
+      "audioUrl": "/audio/lectures/science/b17/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "[1]",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) Define the term variation . [1] (b) State one example of continuous variation in humans. [1] (c) Define the term mutation and state its role in producing genetic variation. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Differences between individuals of the same species [1m] .(b) Body length / height (or body mass) [1m] .(c) • Mutation is a genetic change [1m] ;• It is the way in which new alleles are formed [1m] . 💡 Intuition Check: Never omit \"of the same species\" when defining variation — comparing a cat with a dog is NOT biological variation in the syllabus sense!",
+      "vi": "BÀI MẪU 2 🟦 MỨC CORE • Tự luận Paper 3/4 [4 điểm] (a) Define the term variation . (Định nghĩa thuật ngữ biến dị.) (b) State one example of continuous variation in humans. (Nêu một ví dụ biến dị liên tục ở người.) (c) Define the term mutation and state its role in producing genetic variation. (Định nghĩa đột biến và nêu vai trò của nó trong việc tạo biến dị di truyền.) ✍️ Lời giải chi tiết theo thang điểm: (a) Sự khác biệt giữa các cá thể thuộc cùng một loài .(b) Chiều dài cơ thể / chiều cao hoặc cân nặng .(c) • Đột biến là một sự biến đổi di truyền (genetic change) ;• Là con đường tạo ra các allele mới . 💡 Kiểm tra bản chất: Đừng bao giờ quên cụm từ \"của cùng một loài\" khi định nghĩa variation!",
+      "duration": 104.43,
+      "startTime": 551.81,
+      "endTime": 656.24,
+      "audioUrl": "/audio/lectures/science/b17/s01_b12.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🌿 2. Natural Selection (Chọn lọc Tự nhiên) & Antibiotic-Resistant Bacteria",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🌿 2. Natural Selection & Antibiotic-Resistant Bacteria.",
+      "vi": "🌿 2. Natural Selection (Chọn lọc Tự nhiên) & Antibiotic-Resistant Bacteria.",
+      "duration": 11.89,
+      "startTime": 656.24,
+      "endTime": 668.13,
+      "audioUrl": "/audio/lectures/science/b17/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of an antibiotic as a fine sieve : 99.9% of susceptible bacteria fall right through and die, but the rare bacterium that ALREADY happened to carry a random resistance mutation stays on top, feasts on all the leftover nutrients, and multiplies into millions!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi thuốc kháng sinh như một chiếc sàng lọc : 99,9% vi khuẩn nhạy cảm bị tiêu diệt sạch, nhưng một vài vi khuẩn vốn ĐÃ TÌNH CỜ mang đột biến kháng thuốc từ trước sẽ sống sót, độc chiếm toàn bộ dinh dưỡng và nhân lên thành hàng triệu con!",
+      "duration": 36.66,
+      "startTime": 668.13,
+      "endTime": 704.79,
+      "audioUrl": "/audio/lectures/science/b17/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the 5-step mark scheme spine for ANY natural selection question (giraffes, beetles, or MRSA bacteria): 1) Genetic variation (from mutation) → 2) Many offspring produced → 3) Competition / struggle for survival (or antibiotic selection pressure) → 4) Better-adapted survive & reproduce → 5) Pass on their alleles to the next generation.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc khung 5 bước ăn trọn điểm cho MỌI câu hỏi chọn lọc tự nhiên: 1) Biến dị di truyền (do đột biến) → 2) Sinh ra nhiều con non → 3) Đấu tranh sinh tồn / cạnh tranh (hoặc áp lực kháng sinh) → 4) Cá thể thích nghi hơn sống sót & sinh sản → 5) Truyền các allele có lợi cho thế hệ sau.",
+      "duration": 49.67,
+      "startTime": 704.79,
+      "endTime": 754.46,
+      "audioUrl": "/audio/lectures/science/b17/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Always write \"pass on their alleles (or genes)\" at Step 5 — writing \"pass on their characteristics/adaptations\" often loses the final mark on Paper 4!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Ở bước 5 bắt buộc viết \"truyền các allele (hoặc gen) cho đời sau\" — nếu viết chung chung \"truyền tính trạng/đặc điểm\" rất dễ bị mất điểm trên Paper 4!",
+      "duration": 25.42,
+      "startTime": 754.46,
+      "endTime": 779.88,
+      "audioUrl": "/audio/lectures/science/b17/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🌿 5 Giai Đoạn Của Chọn Lọc Tự Nhiên (Core • B17.2.1 a–e)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🌿 The 5 Stages of Natural Selection (Core • B17.2.1 a–e). (a) Genetic variation within populations: Individuals of the same species possess different alleles (generated originally by random mutation), producing varied phenotypes. (b) Production of many offspring: Organisms produce far more offspring than the environment's finite resources can support. (c) Struggle for survival: Offspring face intense competition for resources (food, water, light, mates, territory) as well as predation and disease. (d) Greater chance of reproduction by better-adapted individuals: Individuals with phenotypes best suited to the environment are more likely to survive to reproductive age and breed. (e) Passing on alleles to the next generation: Surviving individuals pass their advantageous alleles to their offspring, increasing the frequency of those alleles over many generations.",
+      "vi": "🌿 5 Giai Đoạn Của Chọn Lọc Tự Nhiên (Core • B17.2.1 a–e). (a) Biến dị di truyền trong quần thể: Các cá thể cùng loài mang các allele khác nhau (sinh ra do đột biến ngẫu nhiên). (b) Sinh sản số lượng lớn con non: Số con sinh ra vượt quá khả năng cung cấp của môi trường. (c) Đấu tranh sinh tồn: Các cá thể phải cạnh tranh nguồn sống (competition for resources: thức ăn, nước, ánh sáng, lãnh thổ) và chống chọi kẻ săn mồi, bệnh tật. (d) Cá thể thích nghi hơn có cơ hội sinh sản cao hơn: Những cá thể mang đặc điểm thích nghi tốt hơn với môi trường sẽ sống sót và sinh sản nhiều hơn. (e) Truyền allele cho thế hệ tiếp theo: Cá thể sống sót truyền các allele có lợi cho đời con, làm tăng tần số allele đó qua nhiều thế hệ.",
+      "duration": 114.46,
+      "startTime": 779.88,
+      "endTime": 894.34,
+      "audioUrl": "/audio/lectures/science/b17/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🦠 Vi Khuẩn Kháng Kháng Sinh (MRSA) — Minh Chứng Của Chọn Lọc Tự Nhiên (Supplement • B17.2.4)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🦠 Antibiotic-Resistant Bacteria (e.g. MRSA) as Natural Selection in Action (Supplement • B17.2.4). Because bacteria divide every ~20 minutes, we can watch all 5 stages of natural selection unfold rapidly inside a patient or hospital ward: Step 1: Random mutation produces an allele for antibiotic resistance in one or a few bacteria in a population. Step 2: When exposed to the antibiotic (selective pressure), non-resistant bacteria die, whereas resistant bacteria survive with zero competition for space and nutrients. Step 3: Surviving resistant bacteria reproduce rapidly and pass on the resistance allele to their offspring, forming an antibiotic-resistant strain. Minimising resistance: Prescribe antibiotics only for bacterial infections (never viral infections like flu/colds) and always finish the full prescribed course so no partially resistant bacteria survive.",
+      "vi": "🦠 Vi Khuẩn Kháng Kháng Sinh (MRSA) — Minh Chứng Của Chọn Lọc Tự Nhiên (Supplement • B17.2.4). Vì vi khuẩn nhân đôi rất nhanh (mỗi ~20 phút), sự hình thành các chủng vi khuẩn kháng kháng sinh là ví dụ điển hình nhất của chọn lọc tự nhiên trong đề thi 0654: Bước 1: Đột biến ngẫu nhiên tạo ra allele kháng kháng sinh ở một vài tế bào vi khuẩn trong quần thể. Bước 2: Khi gặp thuốc kháng sinh (áp lực chọn lọc), vi khuẩn thường bị tiêu diệt, còn vi khuẩn kháng thuốc sống sót và không còn đối thủ cạnh tranh dinh dưỡng. Bước 3: Vi khuẩn kháng thuốc sinh sản nhanh chóng và truyền allele kháng thuốc cho thế hệ sau, tạo nên chủng kháng kháng sinh. Cách hạn chế kháng thuốc: Chỉ dùng kháng sinh cho bệnh nhiễm khuẩn (không dùng cho virus như cảm cúm) và uống đủ liều đơn bác sĩ kê.",
+      "duration": 116.33,
+      "startTime": 894.34,
+      "endTime": 1010.67,
+      "audioUrl": "/audio/lectures/science/b17/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A patient is treated with an antibiotic for a bacterial infection, but a strain of antibiotic-resistant bacteria develops. What was the original cause of the resistance allele in the bacteria? A. The patient stopped taking the antibiotic too early, causing DNA to mutate. B. A random mutation occurred in the bacterial DNA, forming a new resistance allele. C. The bacteria absorbed antibodies produced by the patient's white blood cells. D. The antibiotic digested the cell walls of resistant bacteria, making them stronger. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: New alleles (including antibiotic resistance alleles) arise ONLY by random mutation . Stopping antibiotics early allows already-resistant bacteria to survive and multiply (selection), but it does not cause the directed mutation itself (eliminating A).",
+      "vi": "BÀI MẪU 1 🟩 MỨC EXTENDED • Trắc nghiệm Paper 2 A patient is treated with an antibiotic for a bacterial infection, but a strain of antibiotic-resistant bacteria develops. What was the original cause of the resistance allele in the bacteria? (Một bệnh nhân dùng kháng sinh trị nhiễm khuẩn nhưng xuất hiện chủng vi khuẩn kháng kháng sinh. Nguyên nhân ban đầu tạo ra allele kháng thuốc ở vi khuẩn là gì?) A. The patient stopped taking the antibiotic too early, causing DNA to mutate. B. A random mutation occurred in the bacterial DNA, forming a new resistance allele. C. The bacteria absorbed antibodies produced by the patient's white blood cells. D. The antibiotic digested the cell walls of resistant bacteria, making them stronger. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mọi allele mới (bao gồm allele kháng kháng sinh) chỉ được tạo ra do đột biến ngẫu nhiên (random mutation) . Việc dừng thuốc sớm giúp vi khuẩn đã kháng thuốc sống sót nhân lên (chọn lọc), chứ không phải tác nhân sinh ra đột biến có hướng (loại A).",
+      "duration": 139.02,
+      "startTime": 1010.67,
+      "endTime": 1149.69,
+      "audioUrl": "/audio/lectures/science/b17/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "[5]",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Explain how a strain of antibiotic-resistant bacteria can develop by natural selection when antibiotics are overused in hospitals. [5] ✍️ Step-by-Step Mark Scheme Solution: • Within the bacterial population there is genetic variation caused by random mutation , giving a few bacteria an allele for antibiotic resistance [1m] ;• When the antibiotic is applied , it acts as a selection pressure that kills non-resistant (susceptible) bacteria [1m] ;• The antibiotic-resistant bacteria survive (facing less competition for resources) [1m] ;• Surviving resistant bacteria reproduce (divide rapidly) and pass on their resistance allele to their offspring [1m] ;• Over many generations, the resistant strain increases in frequency until most of the population is antibiotic-resistant [1m] . 💡 Intuition Check: Every antibiotic-resistance 5-marker maps 1-to-1 onto the 5 core stages of natural selection!",
+      "vi": "BÀI MẪU 2 🟩 MỨC EXTENDED • Tự luận Paper 4 [5 điểm] Explain how a strain of antibiotic-resistant bacteria can develop by natural selection when antibiotics are overused in hospitals. (Giải thích cách một chủng vi khuẩn kháng kháng sinh hình thành qua chọn lọc tự nhiên khi lạm dụng kháng sinh trong bệnh viện.) ✍️ Lời giải chi tiết theo thang điểm: • Trong quần thể vi khuẩn có sẵn biến dị di truyền do đột biến ngẫu nhiên (random mutation) tạo ra allele kháng kháng sinh ở một số vi khuẩn ;• Khi sử dụng kháng sinh , thuốc đóng vai trò áp lực chọn lọc tiêu diệt các vi khuẩn không kháng thuốc ;• Các vi khuẩn kháng kháng sinh sống sót (ít bị cạnh tranh nguồn dinh dưỡng hơn) ;• Vi khuẩn sống sót sinh sản / phân chia và truyền allele kháng thuốc cho thế hệ con ;• Qua nhiều thế hệ, tỉ lệ vi khuẩn kháng thuốc tăng dần tạo nên chủng kháng kháng sinh . 💡 Kiểm tra bản chất: Mọi bài tự luận 5 điểm về kháng kháng sinh đều khớp 1-1 với đúng 5 bước của chọn lọc tự nhiên!",
+      "duration": 132.87,
+      "startTime": 1149.69,
+      "endTime": 1282.56,
+      "audioUrl": "/audio/lectures/science/b17/s02_b07.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🌾 3. Selective Breeding (Chọn lọc Nhân tạo) ở Cây trồng & Vật nuôi",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🌾 3. Selective Breeding (Artificial Selection) in Crops & Livestock. Core • B17.2.2–B17.2.3",
+      "vi": "🌾 3. Selective Breeding (Chọn lọc Nhân tạo) ở Cây trồng & Vật nuôi. Core • B17.2.2–B17.2.3",
+      "duration": 23.69,
+      "startTime": 1282.56,
+      "endTime": 1306.25,
+      "audioUrl": "/audio/lectures/science/b17/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Selective breeding is like curating a sports team over generations: you pick the fastest runners in Generation 1, breed only them together, pick only the fastest pups in Generation 2, and repeat for 20 generations until the entire breed is lightning-fast!",
+      "vi": "🎯 Hình dung đời thường: Chọn lọc nhân tạo (Selective breeding) giống việc tuyển chọn đội tuyển qua nhiều thế hệ: ở thế hệ 1 bạn chọn những cá thể xuất sắc nhất cho lai với nhau, ở thế hệ 2 lại lọc ra các cá thể con ưu tú nhất cho lai tiếp, lặp lại liên tục 20 thế hệ cho đến khi toàn bộ đàn đều mang phẩm chất vượt trội!",
+      "duration": 38.5,
+      "startTime": 1306.25,
+      "endTime": 1344.75,
+      "audioUrl": "/audio/lectures/science/b17/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Every selective breeding answer needs 4 clear actions applied to the named organism in the question: 1) Humans select parents with the named desirable feature → 2) Cross / breed them together → 3) Select offspring showing the desirable feature → 4) Repeat over many generations .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Mọi câu trả lời về chọn lọc nhân tạo luôn gồm 4 bước gắn trực tiếp với tên loài trong đề bài: 1) Con người chọn bố mẹ có đặc tính mong muốn → 2) Cho lai (cross/breed) với nhau → 3) Chọn đời con biểu hiện rõ đặc tính đó → 4) Lặp lại qua nhiều thế hệ .",
+      "duration": 40.54,
+      "startTime": 1344.75,
+      "endTime": 1385.29,
+      "audioUrl": "/audio/lectures/science/b17/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do NOT give a generic answer! If the question asks about breeding frost-resistant tomatoes , you MUST name \"tomato plants that survive frost\" — generic answers without context lose marks!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: ĐỪNG viết công thức chung chung! Nếu đề hỏi về lúa mì kháng nấm và hạt to , bắt buộc phải nêu cụ thể tên tính trạng \"kháng nấm\" và \"hạt to\" trong từng bước chọn bố mẹ và chọn đời con!",
+      "duration": 30.08,
+      "startTime": 1385.29,
+      "endTime": 1415.37,
+      "audioUrl": "/audio/lectures/science/b17/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🔄 Quy Trình 4 Ý Chuẩn Thi Của Chọn Lọc Nhân Tạo (B17.2.2–B17.2.3)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🔄 The 4-Part Cambridge Selective Breeding Protocol (B17.2.2–B17.2.3). (a) Selection by humans: Humans inspect a population and select parent individuals showing the desirable features. (b) Crossing selected parents: Humans breed / cross-pollinate these chosen individuals together (preventing unwanted individuals from mating) to produce the next generation. (c) Selection of best offspring: From the offspring, humans select only those individuals showing the strongest expression of the desirable features. (d) Repetition over many generations: Those selected offspring are bred together again and again over many generations until all individuals reliably show the improved trait.",
+      "vi": "🔄 Quy Trình 4 Ý Chuẩn Thi Của Chọn Lọc Nhân Tạo (B17.2.2–B17.2.3). (a) Con người tuyển chọn bố mẹ: Con người chọn ra các cá thể mang đặc tính mong muốn (desirable features). (b) Cho lai tạo (Crossing): Cho các cá thể đã chọn giao phối / thụ phấn chéo với nhau để tạo thế hệ tiếp theo. (c) Chọn lọc đời con tốt nhất: Trong số con sinh ra, tiếp tục chọn những cá thể biểu hiện rõ nhất đặc tính mong muốn. (d) Lặp lại qua nhiều thế hệ: Tiếp tục cho các đời con tốt nhất lai với nhau lặp đi lặp lại qua nhiều thế hệ để hoàn thiện giống cây trồng hoặc vật nuôi.",
+      "duration": 79.81,
+      "startTime": 1415.37,
+      "endTime": 1495.18,
+      "audioUrl": "/audio/lectures/science/b17/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🌾 Cải thiện Cây trồng (Crop Plants)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🌾 Improving Crop Plants. Disease / pest resistance: Crossing high-yield wheat with wild fungus-resistant wheat to prevent crop loss. Higher grain/fruit yield & taste: Selecting maize cobs with the largest, sweetest kernels each harvest. Drought / frost / wind tolerance: Breeding short-stemmed (\"dwarf\") wheat and rice varieties that do not blow over in storms.",
+      "vi": "🌾 Cải thiện Cây trồng (Crop Plants). Kháng sâu bệnh / nấm: Lai giống lúa mì hạt to với giống lúa mì hoang dã kháng nấm gỉ sắt. Tăng năng suất & phẩm chất: Chọn giống ngô hạt mẩy, ngọt hơn hoặc cà chua quả to đồng đều. Chịu hạn / chống đổ ngã: Tạo giống lúa thân thấp cứng cáp không bị đổ rạp khi mưa bão.",
+      "duration": 47.26,
+      "startTime": 1495.18,
+      "endTime": 1542.44,
+      "audioUrl": "/audio/lectures/science/b17/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🐄 Cải thiện Vật nuôi (Domesticated Animals)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🐄 Improving Domesticated Animals. Dairy cattle: Breeding high-milk-yield cows with bulls bred from high-milk-yielding mothers. Beef cattle, pigs & poultry: Selecting fastest-growing animals with higher muscle-to-fat ratio or high egg-laying rates. Sheep & working dogs: Selecting sheep for thick, fine wool quality, or dogs for gentle temperament and herding skill.",
+      "vi": "🐄 Cải thiện Vật nuôi (Domesticated Animals). Bò sữa (Dairy cattle): Lai bò cái cho nhiều sữa với bò đực sinh ra từ bò mẹ cao sản. Bò thịt, lợn & gia cầm: Chọn cá thể lớn nhanh, tỉ lệ thịt nạc cao hoặc gà đẻ nhiều trứng. Cừu & chó nghiệp vụ: Chọn cừu cho lông dày mịn hoặc chó có tính cách hiền lành, dễ huấn luyện.",
+      "duration": 49.34,
+      "startTime": 1542.44,
+      "endTime": 1591.78,
+      "audioUrl": "/audio/lectures/science/b17/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Môi trường",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Comparison Point: Selective Agent; Natural Selection: Environment (predators, disease, antibiotics, food supply); Selective Breeding (Artificial Selection): Humans (farmers, plant & animal breeders). Comparison Point: Beneficiary of Trait; Natural Selection: Helps the organism survive & reproduce in its habitat; Selective Breeding (Artificial Selection): Useful or profitable to humans (may not aid wild survival). Comparison Point: Rate of Change; Natural Selection: Usually slower (except rapid microbial generations); Selective Breeding (Artificial Selection): Much faster because humans prevent non-selected individuals breeding.",
+      "vi": "Tiêu chí đối chiếu: Tác nhân chọn lọc; Natural Selection (Chọn lọc Tự nhiên): Môi trường (thú săn mồi, bệnh tật, thuốc kháng sinh, thức ăn); Selective Breeding (Chọn lọc Nhân tạo): Con người (nhà chọn giống, người nông dân). Tiêu chí đối chiếu: Mục đích tính trạng; Natural Selection (Chọn lọc Tự nhiên): Giúp sinh vật sống sót & sinh sản ngoài tự nhiên; Selective Breeding (Chọn lọc Nhân tạo): Phục vụ nhu cầu kinh tế / sử dụng của con người. Tiêu chí đối chiếu: Tốc độ biến đổi; Natural Selection (Chọn lọc Tự nhiên): Thường diễn ra chậm qua nhiều thế hệ tự nhiên; Selective Breeding (Chọn lọc Nhân tạo): Nhanh hơn nhiều do con người kiểm soát nghiêm ngặt phép lai.",
+      "duration": 91.64,
+      "startTime": 1591.78,
+      "endTime": 1683.42,
+      "audioUrl": "/audio/lectures/science/b17/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which feature is characteristic of selective breeding (artificial selection) rather than natural selection? A. Advantageous alleles are passed from parents to offspring. B. Genetic variation exists among individuals in the starting population. C. Humans choose which individuals reproduce based on traits desirable to humans. D. Predators and disease determine which individuals survive to breed. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Both natural and artificial selection rely on genetic variation (B) and inheritance of alleles (A). Predators and disease drive natural selection (D), whereas in selective breeding humans select parents with desirable features (C).",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE • Trắc nghiệm Paper 1/2 Which feature is characteristic of selective breeding (artificial selection) rather than natural selection? (Đặc điểm nào thuộc về chọn lọc nhân tạo thay vì chọn lọc tự nhiên?) A. Advantageous alleles are passed from parents to offspring. B. Genetic variation exists among individuals in the starting population. C. Humans choose which individuals reproduce based on traits desirable to humans. D. Predators and disease determine which individuals survive to breed. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Cả hai hình thức chọn lọc đều cần biến dị di truyền (B) và sự truyền allele cho đời con (A). Kẻ săn mồi và dịch bệnh là tác nhân chọn lọc tự nhiên (D), trong khi ở chọn lọc nhân tạo con người trực tiếp chọn lọc cá thể bố mẹ mang đặc tính mong muốn (C).",
+      "duration": 111.72,
+      "startTime": 1683.42,
+      "endTime": 1795.14,
+      "audioUrl": "/audio/lectures/science/b17/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Context Application [4 marks] Wheat crops can be damaged by a fungal rust disease. Some wild wheat plants are naturally resistant to the fungus, while commercial wheat plants produce large grains. Outline how a plant breeder could use selective breeding to produce wheat with both large grains and fungal resistance. [4] ✍️ Step-by-Step Mark Scheme Solution: • Select wild wheat plants that show resistance to the fungus and commercial wheat plants that produce large grains [1m] ;• Cross-pollinate / breed these selected parent plants together and grow the seeds produced [1m] ;• Expose/test the offspring and select the offspring plants that show BOTH fungal resistance and large grains [1m] ;• Cross these selected offspring together and repeat this process over many generations [1m] . 💡 Intuition Check: Select named parents [1m] + Cross them [1m] + Select best named offspring [1m] + Repeat over many generations [1m] = guaranteed 4/4!",
+      "vi": "BÀI MẪU 2 🟦 MỨC CORE • Vận dụng Thực tế Paper 3/4 [4 điểm] Wheat crops can be damaged by a fungal rust disease. Some wild wheat plants are naturally resistant to the fungus, while commercial wheat plants produce large grains. Outline how a plant breeder could use selective breeding to produce wheat with both large grains and fungal resistance. (Lúa mì có thể bị hại bởi nấm gỉ sắt. Lúa mì hoang dã kháng nấm tự nhiên, còn lúa mì thương phẩm cho hạt to. Trình bày cách nhà chọn giống tạo ra giống lúa mì vừa hạt to vừa kháng nấm.) ✍️ Lời giải chi tiết theo thang điểm: • Chọn lọc (Select) cây lúa mì hoang dã có khả năng kháng nấm và cây lúa mì thương phẩm cho hạt to làm bố mẹ ;• Thụ phấn chéo / cho lai hai cây bố mẹ này với nhau và gieo hạt thu được ;• Kiểm tra đời con và chọn ra những cây con vừa kháng nấm vừa cho hạt to ;• Cho các cây con được chọn lai tiếp với nhau và lặp lại quy trình này qua nhiều thế hệ . 💡 Kiểm tra bản chất: Công thức vàng 4/4 điểm: Chọn bố mẹ cụ thể + Cho lai + Chọn con cụ thể + Lặp lại qua nhiều thế hệ !",
+      "duration": 142.02,
+      "startTime": 1795.14,
+      "endTime": 1937.16,
+      "audioUrl": "/audio/lectures/science/b17/s03_b09.mp3"
     }
   ]
 }

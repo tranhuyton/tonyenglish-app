@@ -1,143 +1,492 @@
 {
   "lectureId": "298327a8-455a-44d5-9a4c-164e2653c456",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B19: Human influences on ecosystems",
-  "totalDuration": 323.85,
+  "totalDuration": 2298.36,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_agriculture": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-agriculture": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_monoculture_livestock": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-monoculture-livestock": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_deforestation": {
-      "start": 3,
       "end": 4
     },
-    "sec-deforestation": {
-      "start": 3,
-      "end": 4
+    "s01_p1_sub01": {
+      "start": 7,
+      "end": 9
     },
-    "sec_deforestation_effects": {
-      "start": 4,
-      "end": 4
+    "s01_p2_sub01": {
+      "start": 7,
+      "end": 9
     },
-    "sec-deforestation-effects": {
-      "start": 4,
-      "end": 4
+    "s01_wex": {
+      "start": 10,
+      "end": 11
     },
-    "sec_eutrophication": {
-      "start": 5,
-      "end": 5
+    "s01_hdr": {
+      "start": 1,
+      "end": 11
     },
-    "sec-eutrophication": {
-      "start": 5,
-      "end": 5
+    "s02_int": {
+      "start": 13,
+      "end": 15
     },
-    "sec_conservation": {
-      "start": 6,
-      "end": 6
+    "s02_wex": {
+      "start": 20,
+      "end": 21
     },
-    "sec-conservation": {
-      "start": 6,
-      "end": 6
+    "s02_hdr": {
+      "start": 12,
+      "end": 21
+    },
+    "s03_int": {
+      "start": 23,
+      "end": 25
+    },
+    "s03_p1_sub01": {
+      "start": 26,
+      "end": 31
+    },
+    "s03_p1_sub02": {
+      "start": 32,
+      "end": 35
+    },
+    "s03_p2_sub01": {
+      "start": 26,
+      "end": 31
+    },
+    "s03_p2_sub02": {
+      "start": 32,
+      "end": 35
+    },
+    "s03_wex": {
+      "start": 36,
+      "end": 37
+    },
+    "s03_hdr": {
+      "start": 22,
+      "end": 37
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B19: Tác động của Con người lên Hệ sinh thái",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B19: Human Influences on Ecosystems. Human activities exert immense pressures on global environments. In this topic, we study modern agriculture impacts, deforestation, eutrophication water pollution, and sustainable conservation strategies.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B19: Tác động của Con người lên Hệ sinh thái. Hoạt động của loài người đang gây áp lực to lớn lên môi trường toàn cầu. Trong chuyên đề này, chúng ta sẽ học về tác động của nông nghiệp hiện đại, nạn phá rừng, hiện tượng phú dưỡng nguồn nước và các chiến lược bảo tồn đa dạng sinh học.",
-      "duration": 40.17,
+      "title": "B19: Human Influences on Ecosystems (Tác động của Con người lên Hệ sinh thái)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) • Topic B19 B19: Human Influences on Ecosystems. B19.1 Ecosystems, Biodiversity, Reasons for Habitat Destruction & Deforestation • B19.2 Endangered Species & Conservation.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Topic B19 • Song ngữ Anh - Việt B19: Human Influences on Ecosystems (Tác động của Con người lên Hệ sinh thái). B19.1 Hệ sinh thái, Đa dạng Sinh học, Phá hủy Sinh cảnh & Phá rừng • B19.2 Loài Nguy cấp & Bảo tồn.",
+      "duration": 47.89,
       "startTime": 0.0,
-      "endTime": 40.17,
+      "endTime": 47.89,
       "audioUrl": "/audio/lectures/science/b19/intro.mp3"
     },
     {
-      "id": "sec_agriculture",
-      "title": "1. Nông nghiệp & Nguồn Cung Thực phẩm (Food Supply & Agriculture Overview)",
-      "selector": "#sec-agriculture",
-      "en": "Section 1 examines modern agricultural practices: Monocultures and intensive livestock farming increase production yields to meet human food demand, but create severe environmental challenges.",
-      "vi": "Mục một phân tích các hoạt động nông nghiệp hiện đại: Trồng độc canh và chăn nuôi gia súc tập trung giúp tăng năng suất để đáp ứng nhu cầu lương thực, nhưng tạo ra các thách thức môi trường nghiêm trọng.",
-      "duration": 45.66,
-      "startTime": 40.17,
-      "endTime": 85.83,
-      "audioUrl": "/audio/lectures/science/b19/sec_agriculture.mp3"
+      "id": "s01_hdr",
+      "title": "🌍 1. Ecosystems, Biodiversity & Reasons for Habitat Destruction (Hệ sinh thái, Đa dạng Sinh học",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🌍 1. Ecosystems, Biodiversity & Reasons for Habitat Destruction. Core B19.1.1–3",
+      "vi": "🌍 1. Hệ sinh thái, Đa dạng Sinh học & Phá hủy Sinh cảnh . Core B19.1.1–3",
+      "duration": 17.74,
+      "startTime": 47.89,
+      "endTime": 65.63,
+      "audioUrl": "/audio/lectures/science/b19/s01_hdr.mp3"
     },
     {
-      "id": "sec_monoculture_livestock",
-      "title": "🌾 Monocultures & Intensive Livestock (Độc canh & Chăn nuôi)",
-      "selector": "#sec-monoculture-livestock",
-      "en": "Modern agriculture trade-offs: Monocultures maximize crop yield efficiency but severely reduce biodiversity and cause pest outbreaks. Intensive livestock farming reduces kinetic energy loss to boost meat production but raises severe ethical concerns, antibiotic resistance risks, and methane emissions.",
-      "vi": "Mặt trái của nông nghiệp hiện đại: Trồng độc canh tối đa hóa năng suất nhưng làm suy giảm đa dạng sinh học và bùng phát sâu bệnh. Chăn nuôi gia súc tập trung giảm tiêu hao năng lượng vận động để tăng sản lượng thịt nhưng gây lo ngại về đạo đức, kháng kháng sinh và phát thải khí mê-tan.",
-      "duration": 35.06,
-      "startTime": 85.83,
-      "endTime": 120.89,
-      "audioUrl": "/audio/lectures/science/b19/sec_monoculture_livestock.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of biodiversity like the bolts holding an aeroplane wing together: if a habitat has 500 interacting species (high biodiversity) and loses one, alternative food-web pathways keep the ecosystem flying. If it has only 3 species, losing one collapses the whole system!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung đa dạng sinh học (biodiversity) giống như hàng trăm chiếc đinh tán giữ chặt cánh máy bay: nếu sinh cảnh có 500 loài tương tác (đa dạng cao) và mất đi 1 loài, các nhánh lưới thức ăn thay thế vẫn giữ hệ sinh thái ổn định. Ngược lại, nếu chỉ có 3 loài, mất 1 loài là cả hệ thống sụp đổ!",
+      "duration": 44.11,
+      "startTime": 65.63,
+      "endTime": 109.74,
+      "audioUrl": "/audio/lectures/science/b19/s01_b01.mp3"
     },
     {
-      "id": "sec_deforestation",
-      "title": "2. Phá hủy Môi trường sống & Nạn Phá rừng (Deforestation Overview)",
-      "selector": "#sec-deforestation",
-      "en": "Section 2 investigates deforestation: Clearing forests for agriculture, timber, and urban growth results in habitat destruction and species extinction, severe soil erosion, increased flooding, and higher atmospheric CO₂ levels exacerbating the enhanced greenhouse effect.",
-      "vi": "Mục hai nghiên cứu nạn phá rừng: Việc chặt phá rừng để lấy đất canh tác, khai thác gỗ và phát triển đô thị dẫn đến mất môi trường sống và tuyệt chủng loài, xói mòn đất nghiêm trọng, gia tăng lũ lụt và nâng cao nồng độ CO2 trong khí quyển thúc đẩy hiệu ứng nhà kính.",
-      "duration": 48.62,
-      "startTime": 120.89,
-      "endTime": 169.51,
-      "audioUrl": "/audio/lectures/science/b19/sec_deforestation.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: In 0654 B19.1, memorise two crisp definitions and three habitat-destruction drivers: (1) Ecosystem = community of organisms + their environment interacting together; (2) Biodiversity = number of different species that live in an area; (3) Habitat destruction causes: (a) more land for housing, crops & livestock; (b) extraction of natural resources (mining/logging); (c) freshwater & marine pollution.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Trong đề thi 0654 B19.1, hãy thuộc lòng 2 định nghĩa chuẩn từng chữ và 3 nhóm nguyên nhân phá hủy sinh cảnh: (1) Ecosystem = quần xã sinh vật + môi trường vô sinh (environment) tương tác cùng nhau; (2) Biodiversity = số lượng các loài khác nhau sống trong một khu vực; (3) Nguyên nhân phá hủy sinh cảnh: (a) mở rộng đất nhà ở, trồng trọt & chăn nuôi; (b) khai thác tài nguyên thiên nhiên (khai mỏ/lấy gỗ); (c) ô nhiễm nước ngọt & biển.",
+      "duration": 68.06,
+      "startTime": 109.74,
+      "endTime": 177.8,
+      "audioUrl": "/audio/lectures/science/b19/s01_b02.mp3"
     },
     {
-      "id": "sec_deforestation_effects",
-      "title": "🚜 Deforestation Environmental Damages (Hậu quả Nạn Phá rừng)",
-      "selector": "#sec-deforestation-effects",
-      "en": "Four severe impacts of deforestation: 1. Atmospheric CO₂ rise and enhanced greenhouse effect. 2. Severe topsoil erosion washed away by rain. 3. Increased downstream flooding due to loss of tree water uptake. 4. Irreversible habitat loss driving widespread species extinction.",
-      "vi": "Bốn tác động nghiêm trọng của nạn phá rừng: Một là tăng CO2 khí quyển thúc đẩy hiệu ứng nhà kính. Hai là xói mòn lớp đất màu mỡ do mưa trôi. Ba là gia tăng lũ lụt hạ lưu do mất thảm thực vật giữ nước. Bốn là mất môi trường sống dẫn đến tuyệt chủng loài không thể cứu vãn.",
-      "duration": 38.87,
-      "startTime": 169.51,
-      "endTime": 208.38,
-      "audioUrl": "/audio/lectures/science/b19/sec_deforestation_effects.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Defining biodiversity as \"the total number of organisms living in an area\"! Ten thousand wheat plants in one field is a huge number of organisms, yet its biodiversity is almost zero — you MUST write \"the number of DIFFERENT SPECIES that live in an area\" !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Định nghĩa sai biodiversity là \"tổng số lượng cá thể sinh vật sống trong một khu vực\"! Một cánh đồng 10,000 cây lúa mì có số lượng cá thể cực lớn nhưng đa dạng sinh học gần bằng không — BẮT BUỘC phải viết \"the number of DIFFERENT SPECIES that live in an area\" !",
+      "duration": 38.17,
+      "startTime": 177.8,
+      "endTime": 215.97,
+      "audioUrl": "/audio/lectures/science/b19/s01_b03.mp3"
     },
     {
-      "id": "sec_eutrophication",
-      "title": "3. Ô nhiễm Nước & Hiện tượng Phú dưỡng (Eutrophication Overview)",
-      "selector": "#sec-eutrophication",
-      "en": "Section 3 investigates eutrophication: Artificial nitrate fertilisers leach into waterways ➔ rapid growth of surface algae (algal bloom) blocks sunlight ➔ submerged aquatic plants die ➔ aerobic decomposer bacteria multiply and deplete dissolved oxygen ➔ aquatic animals suffocate and die.",
-      "vi": "Mục ba phân tích quá trình phú dưỡng: Phân bón nitrat rửa trôi vào sông hồ ➔ tảo nở hoa bao phủ mặt nước che khuất ánh sáng ➔ thực vật thủy sinh dưới đáy chết ➔ vi khuẩn phân hủy hiếu khí sinh sôi tiêu thụ cạn kiệt lượng oxy hòa tan ➔ cá và động vật thủy sinh bị ngạt thở chết hàng loạt.",
-      "duration": 69.35,
-      "startTime": 208.38,
-      "endTime": 277.73,
-      "audioUrl": "/audio/lectures/science/b19/sec_eutrophication.mp3"
+      "id": "s01_b04",
+      "title": "🏕️ Ecosystem Definition (Định nghĩa Hệ sinh thái — B19.1.1)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🏕️ Ecosystem Definition (B19.1.1). An ecosystem is a unit containing the community of organisms and their environment, interacting together . It integrates both biotic factors (producers, consumers, decomposers, competition, predation) and abiotic factors (light intensity, temperature, water availability, soil mineral ions, dissolved oxygen).",
+      "vi": "🏕️ Ecosystem Definition (Định nghĩa Hệ sinh thái — B19.1.1). An ecosystem (hệ sinh thái) is a unit containing the community of organisms and their environment, interacting together (một đơn vị bao gồm quần xã các sinh vật và môi trường sống vô sinh của chúng cùng tương tác qua lại với nhau) . Nó kết hợp cả nhân tố hữu sinh (biotic factors) như sinh vật sản xuất, tiêu thụ, phân giải, săn mồi, cạnh tranh VÀ nhân tố vô sinh (abiotic factors) như cường độ ánh sáng, nhiệt độ, nước, ion khoáng trong đất và oxy hòa tan.",
+      "duration": 66.59,
+      "startTime": 215.97,
+      "endTime": 282.56,
+      "audioUrl": "/audio/lectures/science/b19/s01_b04.mp3"
     },
     {
-      "id": "sec_conservation",
-      "title": "4. Bảo tồn Đa dạng Sinh học (Conservation of Biodiversity Overview)",
-      "selector": "#sec-conservation",
-      "en": "Section 4 covers conservation strategies: A species becomes endangered when its population falls so low that it is at risk of extinction. Conservation methods include establishing protected nature reserves, captive breeding programs, seed banks, reducing fossil fuel reliance, and international treaties.",
-      "vi": "Mục bốn trình bày các biện pháp bảo tồn: Một loài trở nên nguy cấp khi số lượng cá thể giảm xuống mức có nguy cơ tuyệt chủng. Các chiến lược bảo tồn bao gồm thành lập khu bảo tồn thiên nhiên, nhân giống nuôi nhốt, ngân hàng hạt giống, giảm phụ thuộc vào nhiên liệu hóa thạch và các công ước quốc tế.",
-      "duration": 46.12,
-      "startTime": 277.73,
-      "endTime": 323.85,
-      "audioUrl": "/audio/lectures/science/b19/sec_conservation.mp3"
+      "id": "s01_b05",
+      "title": "🦋 Biodiversity Definition (Định nghĩa Đa dạng sinh học — B19.1.2)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🦋 Biodiversity Definition (B19.1.2). Biodiversity is defined as the number of different species that live in an area (e.g. tropical rainforests and coral reefs have high biodiversity, whereas deserts and polar ice sheets have lower biodiversity). High biodiversity keeps complex food webs resilient against environmental change.",
+      "vi": "🦋 Biodiversity Definition (Định nghĩa Đa dạng sinh học — B19.1.2). Biodiversity (đa dạng sinh học) is defined as the number of different species that live in an area (số lượng các loài sinh vật khác nhau cùng sinh sống trong một khu vực xác định) . Ví dụ: rừng mưa nhiệt đới và rạn san hô có đa dạng sinh học rất cao, trong khi sa mạc và vùng băng cực có đa dạng sinh học thấp hơn. Đa dạng sinh học cao giúp lưới thức ăn (food webs) có sức chống chịu bền vững trước biến động môi trường.",
+      "duration": 57.59,
+      "startTime": 282.56,
+      "endTime": 340.15,
+      "audioUrl": "/audio/lectures/science/b19/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "(a) Land for Housing, Crops & Livestock (Đất Nhà ở, Trồng trọt & Chăn nuôi)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "(a) Land for Housing, Crops & Livestock. Rapid human population growth demands increased land area for urban housing, transport roads/airports, crop plant production (arable farmland), and livestock production (cattle grazing pastures), draining wetlands and clearing native forests.",
+      "vi": "Đất Nhà ở, Trồng trọt & Chăn nuôi . Sự gia tăng dân số nhanh chóng đòi hỏi mở rộng diện tích đất (increased area) cho khu đô thị/nhà ở (housing), đường giao thông, đất canh tác cây trồng và đồng cỏ chăn nuôi gia súc (livestock production) , dẫn đến san lấp đất ngập nước và chặt phá rừng tự nhiên.",
+      "duration": 41.98,
+      "startTime": 340.15,
+      "endTime": 382.13,
+      "audioUrl": "/audio/lectures/science/b19/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "(b) Extraction of Natural Resources (Khai thác Tài nguyên Thiên nhiên)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "(b) Extraction of Natural Resources. Open-cast mining (for coal, iron, copper, bauxite), stone quarrying, oil/gas drilling, and commercial timber logging strip vegetation and topsoil completely, destroying terrestrial and river habitats.",
+      "vi": "(b) Extraction of Natural Resources (Khai thác Tài nguyên Thiên nhiên). Khai mỏ lộ thiên (than đá, quặng sắt, đồng, bô-xít), khai thác đá, khoan dầu khí và khai thác gỗ thương mại bóc sạch thảm thực vật cùng lớp đất mặt màu mỡ, xóa sổ sinh cảnh trên cạn và ven sông.",
+      "duration": 37.46,
+      "startTime": 382.13,
+      "endTime": 419.59,
+      "audioUrl": "/audio/lectures/science/b19/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "(c) Freshwater & Marine Pollution (Ô nhiễm Nước ngọt & Biển)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "(c) Freshwater & Marine Pollution. Discharge of untreated sewage, fertiliser runoff, toxic factory heavy metals, crude oil spills, and non-biodegradable plastics degrades rivers, lakes, estuaries, coral reefs, and oceans (lowering water quality and dissolved oxygen; note: a detailed step-by-step account of eutrophication is not required in 0654 ).",
+      "vi": "(c) Freshwater & Marine Pollution (Ô nhiễm Nước ngọt & Biển). Xả nước thải sinh hoạt chưa xử lý (untreated sewage), phân bón rửa trôi, kim loại nặng từ nhà máy, tràn dầu thô và rác thải nhựa không phân hủy sinh học làm suy thoái sông hồ, cửa sông, rạn san hô và đại dương (lưu ý chuẩn 0654: không yêu cầu mô tả chi tiết từng bước của hiện tượng phú dưỡng — eutrophication).",
+      "duration": 54.24,
+      "startTime": 419.59,
+      "endTime": 473.83,
+      "audioUrl": "/audio/lectures/science/b19/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 & 2 MCQ Survey X counts 1,000 trees belonging to 2 species in a pine plantation. Survey Y counts 300 trees belonging to 45 different species in a natural woodland of the same size. Which statement is correct? A. Plantation X has higher biodiversity because it contains 700 more individual trees. B. Woodland Y has higher biodiversity because it contains a greater number of different species. C. Both habitats have identical biodiversity because both contain only trees. D. Neither X nor Y is an ecosystem because abiotic soil and climate factors are present. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Biodiversity is defined strictly as the number of different species living in an area (45 species in Y vs only 2 species in X), NOT the headcount of individual organisms (eliminating A and C). Option D is false because an ecosystem specifically requires both organisms and their abiotic environment interacting together.",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1 & 2 MCQ Survey X counts 1,000 trees belonging to 2 species in a pine plantation. Survey Y counts 300 trees belonging to 45 different species in a natural woodland of the same size. Which statement is correct? (Khảo sát X đếm được 1,000 cây thuộc 2 loài trong rừng thông trồng. Khảo sát Y đếm được 300 cây thuộc 45 loài khác nhau trong khu rừng tự nhiên cùng diện tích. Phát biểu nào đúng?) A. Rừng trồng X có đa dạng sinh học cao hơn vì nhiều hơn 700 cây cá thể. B. Rừng tự nhiên Y có đa dạng sinh học cao hơn vì chứa số lượng loài khác nhau lớn hơn. C. Cả hai sinh cảnh có đa dạng sinh học như nhau vì đều chỉ gồm cây thân gỗ. D. Cả X và Y đều không phải hệ sinh thái vì có mặt nhân tố đất và khí hậu vô sinh. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Biodiversity (đa dạng sinh học) được định nghĩa nghiêm ngặt là số lượng các loài khác nhau trong một khu vực (45 loài ở Y so với chỉ 2 loài ở X), KHÔNG phải tổng số cá thể đếm được (loại A và C). Đáp án D sai vì một hệ sinh thái (ecosystem) bắt buộc phải có cả quần xã sinh vật lẫn môi trường vô sinh tương tác với nhau.",
+      "duration": 158.58,
+      "startTime": 473.83,
+      "endTime": 632.41,
+      "audioUrl": "/audio/lectures/science/b19/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [5 marks] (a) Define the terms ecosystem and biodiversity . [2](b) State three distinct human activities that result in the destruction of natural habitats. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Ecosystem: A unit containing the community of organisms and their environment, interacting together [1m]. Biodiversity: The number of different species that live in an area [1m]. (b) 1. Clearing land to provide increased area for housing, crop plant production, or livestock grazing [1m].2. Extraction of natural resources such as mining, quarrying, or logging timber [1m].3. Freshwater and marine pollution from sewage, oil spills, chemical waste, or plastics [1m]. 💡 Intuition Check: Notice how part (b) maps 1-to-1 onto the three exact bullets (a), (b), and (c) of 0654 syllabus section B19.1.3!",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [5 marks] (a) Define the terms ecosystem and biodiversity . (b) State three distinct human activities that result in the destruction of natural habitats. ((a) Định nghĩa thuật ngữ hệ sinh thái và đa dạng sinh học. (b) Nêu ba hoạt động khác nhau của con người dẫn đến phá hủy sinh cảnh tự nhiên. ) ✍️ Lời giải chi tiết theo thang điểm: Đơn vị gồm quần xã sinh vật và môi trường của chúng tương tác với nhau . Số lượng các loài khác nhau sống trong một khu vực . (b) 1. Mở rộng diện tích đất cho nhà ở, trồng trọt hoặc chăn nuôi gia súc .2. Khai thác tài nguyên thiên nhiên như khai mỏ, khai đá, chặt gỗ .3. Ô nhiễm nước ngọt và biển do nước thải, tràn dầu, hóa chất, nhựa . 💡 Kiểm tra bản chất: Ý (b) khớp chính xác 1-1 với 3 gạch đầu dòng (a), (b), (c) trong đề cương 0654 mục B19.1.3!",
+      "duration": 141.42,
+      "startTime": 632.41,
+      "endTime": 773.83,
+      "audioUrl": "/audio/lectures/science/b19/s01_b10.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🚜 2. Deforestation: Environmental Causes & Consequences (Phá rừng: Nguyên nhân & Hệ lụy Môi trư",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🚜 2. Deforestation: Environmental Causes & Consequences.",
+      "vi": "🚜 2. Deforestation: Environmental Causes & Consequences (Phá rừng: Nguyên nhân & Hệ lụy Môi trường).",
+      "duration": 14.34,
+      "startTime": 773.83,
+      "endTime": 788.17,
+      "audioUrl": "/audio/lectures/science/b19/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Forest trees work as soil glue, flood brakes, and carbon sponges : roots glue thin topsoil to steep hillsides, leafy canopies brake falling rain and pump water back to the sky by transpiration, and wood stores tonnes of carbon. Remove the trees, and soil slides into rivers, rivers burst their banks, and stored carbon enters the atmosphere as CO₂ !",
+      "vi": "🎯 Hình dung đời thường: Cây rừng hoạt động đồng thời như keo dán đất, phanh hãm lũ và miếng bọt biển hút carbon : hệ rễ dán chặt lớp đất mặt mỏng vào sườn đồi dốc, tán lá hãm lực mưa rơi và bơm nước trả lại bầu trời qua thoát hơi nước, còn thân gỗ khóa hàng tấn carbon. Chặt hết cây đi, đất trượt xuống sông, sông tràn bờ gây lũ, và carbon bay lên trời thành khí CO₂ !",
+      "duration": 51.98,
+      "startTime": 788.17,
+      "endTime": 840.15,
+      "audioUrl": "/audio/lectures/science/b19/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Be ready for both Core ( State ) and Supplement ( Explain ) questions on all 5 deforestation consequences in B19.1.4–5: (1) Reducing biodiversity & (2) Extinction (loss of shelter/breeding sites/food webs); (3) Loss of soil (no canopy interception + no roots binding soil → rain erosion); (4) Flooding (less root absorption/transpiration + rapid runoff + river siltation); (5) Increased atmospheric CO₂ (burning/rotting releases CO₂ + less photosynthesis removes CO₂ ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Sẵn sàng cho cả câu hỏi Core ( State — Nêu tên ) và Supplement ( Explain — Giải thích ) về trọn bộ 5 hậu quả phá rừng trong B19.1.4–5: (1) Giảm đa dạng sinh học & (2) Tuyệt chủng (mất nơi trú ẩn/sinh sản/lưới thức ăn); (3) Xói mòn mất đất (mất tán lá chắn mưa + mất rễ giữ hạt đất); (4) Lũ lụt (giảm hút nước ở rễ/giảm thoát hơi nước + chảy tràn bề mặt nhanh + bùn bồi cạn lòng sông); (5) Tăng CO₂ khí quyển (đốt/phân hủy thải CO₂ + giảm quang hợp hấp thụ CO₂ ).",
+      "duration": 82.11,
+      "startTime": 840.15,
+      "endTime": 922.26,
+      "audioUrl": "/audio/lectures/science/b19/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying deforestation causes flooding because \"trees stop blocking river water\"! Flooding happens BEFORE water reaches the river: without canopy interception, root absorption, and transpiration, rainwater fails to infiltrate soil and runs rapidly over bare ground , carrying eroded silt that makes river channels shallower!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết rằng phá rừng gây lũ lụt vì \"thân cây không còn đứng cản dòng nước sông\"! Lũ lụt hình thành TRƯỚC khi nước chạm tới sông: mất tán lá cản mưa, mất rễ hút nước và giảm thoát hơi nước khiến nước mưa không thấm kịp vào đất mà chảy tràn ồ ạt trên mặt đất trơ trọi (surface runoff) , cuốn theo bùn đất làm nông lòng sông!",
+      "duration": 45.46,
+      "startTime": 922.26,
+      "endTime": 967.72,
+      "audioUrl": "/audio/lectures/science/b19/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🗺️ Mô hình Tương tác Hệ lụy Phá rừng (Core B19.1.4 & Supplement B19.1.5)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🗺️ Interactive Deforestation Impact Explorer (Core B19.1.4 & Supplement B19.1.5). 👆 Core candidates must state the 5 undesirable effects of deforestation; Supplement candidates must explain the full biological and physical mechanism behind each one (all 5 are detailed below!).",
+      "vi": "🗺️ Mô hình Tương tác Hệ lụy Phá rừng (Core B19.1.4 & Supplement B19.1.5). 👆 Học sinh hệ Core cần nêu tên (state) 5 tác hại của phá rừng; học sinh hệ Supplement cần giải thích (explain) trọn vẹn cơ chế sinh học - vật lý của cả 5 tác hại ngay bên dưới!",
+      "duration": 42.1,
+      "startTime": 967.72,
+      "endTime": 1009.82,
+      "audioUrl": "/audio/lectures/science/b19/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "1. Reducing Biodiversity (Giảm Đa dạng) & 2. Extinction (Tuyệt chủng)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "1. Reducing Biodiversity & 2. Extinction. Mechanism (Supplement): Forests provide multilayered habitats (canopy, trunks, leaf litter), nesting sites, and producer food sources for thousands of species. Clearing trees destroys shelter and breeding sites and collapses interconnected food webs, reducing the number of different species (biodiversity) and driving specialist organisms to complete extinction.",
+      "vi": "1. Reducing Biodiversity (Giảm Đa dạng) & 2. Extinction (Tuyệt chủng). Cơ chế Supplement: Rừng cung cấp sinh cảnh nhiều tầng (tán lá, thân cây, thảm mục), nơi làm tổ và nguồn thức ăn sản xuất (producers) cho hàng nghìn loài. Chặt phá rừng làm mất nơi trú ẩn, nơi sinh sản và đánh sập các lưới thức ăn liên kết chặt chẽ, làm giảm số lượng loài (biodiversity) và đẩy các loài chuyên biệt tới tuyệt chủng hoàn toàn (extinction).",
+      "duration": 61.78,
+      "startTime": 1009.82,
+      "endTime": 1071.6,
+      "audioUrl": "/audio/lectures/science/b19/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "3. Loss of Soil (Xói mòn đất) & 4. Flooding (Lũ lụt)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "3. Loss of Soil (Erosion) & 4. Flooding. Loss of soil: Without tree canopies to intercept heavy rain and without tree roots to bind soil particles together , fertile topsoil and mineral ions are washed away (erosion & leaching), leaving infertile ground. Flooding: Fewer roots absorb soil water and transpiration drops; rainwater runs rapidly off bare slopes instead of soaking in, while eroded silt raises riverbeds, causing rivers to overflow in severe floods.",
+      "vi": "3. Loss of Soil (Xói mòn đất) & 4. Flooding (Lũ lụt). Loss of soil: Mất tán lá che chắn lực đập mưa lớn VÀ mất hệ rễ cây giữ kết dính các hạt đất khiến lớp đất mặt màu mỡ và ion khoáng bị mưa cuốn trôi (erosion & leaching). Flooding: Ít rễ hút nước và giảm thoát hơi nước (transpiration); nước mưa không kịp thấm mà chảy tràn cực nhanh trên sườn đồi trơ trọi (surface runoff), kéo theo bùn đất bồi cạn đáy sông làm sông tràn bờ gây lũ lụt nghiêm trọng.",
+      "duration": 66.32,
+      "startTime": 1071.6,
+      "endTime": 1137.92,
+      "audioUrl": "/audio/lectures/science/b19/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "5. Increase of Carbon Dioxide in Atmosphere (Tăng CO₂ Khí quyển)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "5. Increase of Carbon Dioxide in Atmosphere. Twofold Mechanism (Supplement): (i) Felled trees are frequently burned ( combustion ) or left to decay ( respiration by decomposers ), releasing locked carbon into the air as CO₂ .(ii) Fewer living trees remain to remove CO₂ from the atmosphere via photosynthesis , intensifying global warming.",
+      "vi": "5. Increase of Carbon Dioxide in Atmosphere (Tăng CO₂ Khí quyển). Cơ chế Kép 2 Chiều (Supplement): (i) Gỗ rừng chặt hạ thường bị đốt cháy ( combustion ) hoặc để mục nát cho vi sinh vật phân giải hô hấp hiếu khí, giải phóng carbon tích trữ thành CO₂ .(ii) Số lượng cây xanh sống giảm mạnh làm giảm tốc độ hấp thụ CO₂ khỏi khí quyển qua quang hợp (photosynthesis) , làm trầm trọng hóa nóng lên toàn cầu.",
+      "duration": 56.81,
+      "startTime": 1137.92,
+      "endTime": 1194.73,
+      "audioUrl": "/audio/lectures/science/b19/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ Which two processes both contribute directly to the rise in atmospheric carbon dioxide concentration following slash-and-burn deforestation? A. Increased photosynthesis by tree stumps and decreased respiration by soil bacteria B. Combustion of felled timber and reduced removal of carbon dioxide by photosynthesis C. Increased transpiration from bare soil and fossilisation of wood ash D. Nitrogen fixation by tree roots and absorption of oxygen by rainwater ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Burning cut trees ( combustion , plus aerobic respiration by decomposers feeding on rotting wood) releases stored carbon as CO₂ , while removing living green canopies drastically reduces the rate at which atmospheric CO₂ is absorbed for photosynthesis . Options A, C, and D are incorrect.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ Which two processes both contribute directly to the rise in atmospheric carbon dioxide concentration following slash-and-burn deforestation? (Hai quá trình nào cùng đóng góp trực tiếp làm tăng nồng độ carbon dioxide khí quyển sau nạn chặt đốt phá rừng?) A. Tăng quang hợp ở gốc cây và giảm hô hấp ở vi khuẩn đất B. Sự đốt cháy gỗ chặt hạ và giảm hấp thụ CO₂ qua quang hợp C. Tăng thoát hơi nước từ đất trống và hóa thạch tro gỗ D. Cố định đạm ở rễ cây và hấp thụ oxy bởi nước mưa ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đốt cây rừng bị đốn hạ ( combustion , cộng với hô hấp hiếu khí của vi sinh vật phân giải gỗ mục) giải phóng carbon tích trữ thành khí CO₂ , đồng thời mất tán lá xanh làm giảm mạnh lượng CO₂ được lấy khỏi khí quyển qua quang hợp (photosynthesis) . Các phương án A, C, D sai.",
+      "duration": 121.02,
+      "startTime": 1194.73,
+      "endTime": 1315.75,
+      "audioUrl": "/audio/lectures/science/b19/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [5 marks] A steep forested valley is clear-felled for timber. Within two years, the valley floor suffers severe mudslides and river flooding during rainy seasons. Explain fully how deforestation caused:(a) loss of soil from the valley slopes [3](b) increased flooding in the valley floor. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Removal of the tree canopy exposes bare ground directly to the heavy impact of falling rain [1m]. Dead tree roots decay so there are no roots left to bind/anchor soil particles together [1m]; heavy rainwater washes the loose fertile topsoil down the steep slopes ( soil erosion ) [1m]. (b) Fewer trees absorb water from the soil (and transpiration decreases), so soil saturates quickly and rainwater flows rapidly over the surface ( surface runoff ) into the river [1m]; eroded soil/silt washes into the river and raises the riverbed, reducing channel capacity so water overflows [1m]. 💡 Intuition Check: Always link canopy -> rain impact, roots -> binding soil & absorbing water, and silt -> shallower riverbed!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [5 marks] A steep forested valley is clear-felled for timber. Within two years, the valley floor suffers severe mudslides and river flooding during rainy seasons. Explain fully how deforestation caused:(a) loss of soil from the valley slopes (b) increased flooding in the valley floor. (Một thung lũng rừng dốc bị chặt trắng để lấy gỗ. Trong vòng 2 năm, đáy thung lũng hứng chịu sạt lở bùn và lũ sông nghiêm trọng vào mùa mưa. Giải thích đầy đủ cách phá rừng gây ra: (a) xói mòn mất đất trên sườn dốc ; (b) gia tăng lũ lụt ở đáy thung lũng .) ✍️ Lời giải chi tiết theo thang điểm: (a) Mất tán rừng (tree canopy) làm mặt đất trống phơi trực tiếp dưới lực đập mạnh của mưa lớn . Rễ cây chết và mục nát nên không còn hệ rễ giữ kết dính các hạt đất với nhau ; nước mưa lớn cuốn trôi lớp đất mặt màu mỡ rời rạc xuống chân dốc ( soil erosion ) . (b) Ít cây hút nước từ đất hơn (và thoát hơi nước giảm), nên đất nhanh bão hòa và nước mưa chảy tràn cực nhanh trên bề mặt đổ dồn xuống sông ; đất bùn bị xói mòn trôi xuống bồi cao đáy sông (siltation), làm giảm dung tích lòng sông khiến nước tràn bờ gây lũ . 💡 Kiểm tra bản chất: Luôn móc xích chuẩn chuỗi nhân quả: mất tán lá -> mưa đập trực tiếp; mất rễ -> mất kết dính đất & giảm hút nước; bùn bồi lắng -> lòng sông nông hơn!",
+      "duration": 177.83,
+      "startTime": 1315.75,
+      "endTime": 1493.58,
+      "audioUrl": "/audio/lectures/science/b19/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🛡️ 3. Endangered Species & Conservation Programmes (Loài Nguy cấp & Chương trình Bảo tồn)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🛡️ 3. Endangered Species & Conservation Programmes.",
+      "vi": "🛡️ 3. Endangered Species & Conservation Programmes (Loài Nguy cấp & Chương trình Bảo tồn).",
+      "duration": 11.79,
+      "startTime": 1493.58,
+      "endTime": 1505.37,
+      "audioUrl": "/audio/lectures/science/b19/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of conservation as an emergency hospital for species on the brink: first stop the bleeding in the wild (protect habitats, ban hunting, educate locals), and if numbers are critically low, bring patients into intensive care (captive breeding in zoos and frozen seed banks ) until their home habitat is safe for release!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi công tác bảo tồn như một bệnh viện cấp cứu cho các loài bên bờ vực tuyệt chủng: trước hết phải cầm máu ngay ngoài tự nhiên (bảo vệ sinh cảnh, cấm săn trộm, giáo dục người dân), và nếu quân số đã tụt xuống mức nguy kịch thì đưa vào phòng hồi sức tích cực (nhân giống nuôi nhốt trong vườn thú và đông lạnh ở ngân hàng hạt giống — seed banks ) chờ ngày sinh cảnh an toàn để tái thả!",
+      "duration": 47.85,
+      "startTime": 1505.37,
+      "endTime": 1553.22,
+      "audioUrl": "/audio/lectures/science/b19/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the 6 extinction drivers (climate change, habitat destruction, hunting, overharvesting, pollution, introduced species) and the 4 conservation methods in B19.2.2: (a) monitoring and protecting species and habitats , (b) education , (c) captive breeding programmes , and (d) seed banks .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Ghi nhớ đủ 6 nguyên nhân gây tuyệt chủng và 4 phương pháp bảo tồn trong B19.2.2: (a) giám sát & bảo vệ loài cùng sinh cảnh , (b) giáo dục (education) , (c) chương trình nhân giống nuôi nhốt , và (d) ngân hàng hạt giống (seed banks) .",
+      "duration": 45.7,
+      "startTime": 1553.22,
+      "endTime": 1598.92,
+      "audioUrl": "/audio/lectures/science/b19/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Confusing introduced species with native predators, or forgetting why seed banks beat growing adult plants! Seed banks store thousands of dormant seeds in tiny sub-zero freezers cheaply for centuries, whereas growing full-sized trees requires vast land, labour, and risks disease or storms.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nhầm lẫn loài ngoại lai (introduced species) với thú săn mồi bản địa, hoặc quên lý do tại sao seed banks ưu việt hơn trồng cây trưởng thành! Ngân hàng hạt giống cất giữ hàng vạn hạt ngủ nghỉ trong tủ đông âm sâu với diện tích tí hon, chi phí rẻ suốt hàng trăm năm, trong khi trồng cây trưởng thành tốn diện tích khổng lồ, tốn công chăm sóc và dễ chết do dịch bệnh hay bão lũ.",
+      "duration": 48.02,
+      "startTime": 1598.92,
+      "endTime": 1646.94,
+      "audioUrl": "/audio/lectures/science/b19/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "1. Climate Change (Biến đổi khí hậu):",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "1. Climate Change: Rising temperatures, droughts, coral bleaching, and melting sea ice (e.g. polar bears losing hunting platforms) alter habitats faster than species can adapt or migrate.",
+      "vi": "1. Climate Change (Biến đổi khí hậu): Nhiệt độ tăng, hạn hán, tẩy trắng san hô và tan băng biển (VD: gấu Bắc Cực mất băng săn mồi) làm biến đổi sinh cảnh nhanh hơn tốc độ thích nghi hoặc di cư của loài.",
+      "duration": 29.65,
+      "startTime": 1646.94,
+      "endTime": 1676.59,
+      "audioUrl": "/audio/lectures/science/b19/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "2. Habitat Destruction (Phá hủy sinh cảnh):",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "2. Habitat Destruction: Deforestation, mining, wetland drainage, and urban sprawl remove shelter, nesting sites, and food sources (e.g. orangutans in Borneo).",
+      "vi": "2. Habitat Destruction (Phá hủy sinh cảnh): Phá rừng, khai mỏ, lấp đầm lầy và đô thị hóa xóa sổ nơi trú ẩn, nơi làm tổ và nguồn thức ăn tự nhiên (VD: đười ươi ở Borneo).",
+      "duration": 26.03,
+      "startTime": 1676.59,
+      "endTime": 1702.62,
+      "audioUrl": "/audio/lectures/science/b19/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "3. Hunting / Poaching (Săn bắn trái phép):",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "3. Hunting (Poaching): Unregulated hunting or illegal poaching for meat, fur, ivory, or horns (e.g. black rhinos, African elephants, tigers) kills breeding adults.",
+      "vi": "3. Hunting / Poaching (Săn bắn trái phép): Săn bắt không kiểm soát lấy thịt, lông, ngà voi hoặc sừng tê giác (VD: tê giác đen, voi châu Phi, hổ) giết chết các cá thể trưởng thành đang độ tuổi sinh sản.",
+      "duration": 29.41,
+      "startTime": 1702.62,
+      "endTime": 1732.03,
+      "audioUrl": "/audio/lectures/science/b19/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "4. Overharvesting (Khai thác quá mức):",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "4. Overharvesting: Removing wild fish, whales, medicinal plants, or hardwood trees faster than natural reproduction can replace them causes population collapse.",
+      "vi": "4. Overharvesting (Khai thác quá mức): Đánh bắt cá biển, cá voi, thu hái cây thuốc quý hoặc chặt gỗ quý nhanh hơn tốc độ sinh sản phục hồi tự nhiên làm quần thể sụp đổ.",
+      "duration": 24.3,
+      "startTime": 1732.03,
+      "endTime": 1756.33,
+      "audioUrl": "/audio/lectures/science/b19/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "5. Pollution (Ô nhiễm môi trường):",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "5. Pollution: Oil spills, toxic pesticides/heavy metals, plastics, untreated sewage, and greenhouse gases poison organisms or make water/land uninhabitable.",
+      "vi": "5. Pollution (Ô nhiễm môi trường): Tràn dầu, thuốc trừ sâu/kim loại nặng độc hại, rác thải nhựa, nước thải sinh hoạt và khí nhà kính đầu độc sinh vật hoặc hủy hoại môi trường sống.",
+      "duration": 25.32,
+      "startTime": 1756.33,
+      "endTime": 1781.65,
+      "audioUrl": "/audio/lectures/science/b19/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "6. Introduced Species (Loài ngoại lai xâm lấn):",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "6. Introduced Species: Foreign non-native species outcompete native species for food/space, introduce novel diseases, or prey heavily on native wildlife lacking defences (e.g. rats eating island bird eggs).",
+      "vi": "6. Introduced Species (Loài ngoại lai xâm lấn): Loài ngoại lai cạnh tranh thức ăn/nơi ở vượt trội so với loài bản địa, mang theo mầm bệnh mới, hoặc ăn thịt con non/trứng của loài bản địa vốn chưa có tập tính phòng vệ (VD: chuột ăn trứng chim trên đảo).",
+      "duration": 32.58,
+      "startTime": 1781.65,
+      "endTime": 1814.23,
+      "audioUrl": "/audio/lectures/science/b19/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "(a) Monitoring & Protecting Species and Habitats (Giám sát & Bảo vệ Loài và Sinh cảnh):",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "(a) Monitoring & Protecting Species and Habitats: Creating national parks, nature reserves, and marine sanctuaries; using GPS/radio collars, camera traps, and DNA sampling to track population numbers; enforcing anti-poaching patrols and international trade bans (e.g. CITES).",
+      "vi": "Giám sát & Bảo vệ Loài và Sinh cảnh : Thành lập vườn quốc gia (national parks), khu bảo tồn thiên nhiên và khu bảo tồn biển; dùng vòng cổ định vị GPS/radio, bẫy ảnh (camera traps) và xét nghiệm DNA để theo dõi kích thước quần thể; tuần tra chống săn trộm và thực thi công ước cấm buôn bán động vật hoang dã quốc tế (CITES).",
+      "duration": 43.71,
+      "startTime": 1814.23,
+      "endTime": 1857.94,
+      "audioUrl": "/audio/lectures/science/b19/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "(b) Education (Giáo dục cộng đồng):",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "(b) Education: Educating local communities and global consumers about the ecological importance of endangered species, reducing demand for illegal wildlife products (ivory, exotic pets), and providing sustainable ecotourism livelihoods.",
+      "vi": "(b) Education (Giáo dục cộng đồng): Giáo dục người dân địa phương và người tiêu dùng toàn cầu về vai trò sinh thái của loài nguy cấp, giảm nhu cầu tiêu thụ sản phẩm động vật hoang dã trái phép (ngà voi, sừng tê giác, thú cưng ngoại lai) và tạo sinh kế bền vững qua du lịch sinh thái (ecotourism).",
+      "duration": 36.21,
+      "startTime": 1857.94,
+      "endTime": 1894.15,
+      "audioUrl": "/audio/lectures/science/b19/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "(c) Captive Breeding Programmes (Chương trình Nhân giống Nuôi nhốt):",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "(c) Captive Breeding Programmes: Breeding endangered animals inside zoos and wildlife centres safe from predators, poachers, and food shortages (using genetic records to avoid inbreeding), with the goal of reintroducing healthy offspring into restored wild habitats.",
+      "vi": "(c) Captive Breeding Programmes (Chương trình Nhân giống Nuôi nhốt): Nhân giống động vật nguy cấp trong vườn thú và trung tâm cứu hộ an toàn khỏi kẻ săn mồi, thợ săn trộm và thiếu thức ăn (quản lý phả hệ di truyền để tránh giao phối cận huyết — inbreeding), nhằm mục tiêu tái thả (reintroduce) cá thể khỏe mạnh về sinh cảnh hoang dã đã phục hồi.",
+      "duration": 40.87,
+      "startTime": 1894.15,
+      "endTime": 1935.02,
+      "audioUrl": "/audio/lectures/science/b19/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "(d) Seed Banks (Ngân hàng Hạt giống):",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "(d) Seed Banks: Collecting, drying, and storing dormant seeds from endangered wild and crop plants at very low temperatures (around -20°C ). Millions of genetically diverse seeds can be stored cheaply in minimal space for centuries and germinated if wild plants go extinct.",
+      "vi": "(d) Seed Banks (Ngân hàng Hạt giống): Thu thập, sấy khô và bảo quản hạt giống ở trạng thái ngủ nghỉ (dormant) của các loài thực vật quý hiếm ở nhiệt độ rất thấp (khoảng -20°C ). Hàng triệu hạt giống đa dạng di truyền được lưu trữ chi phí thấp trong diện tích rất nhỏ suốt hàng thế kỷ và có thể gieo nảy mầm lại nếu quần thể ngoài tự nhiên bị tuyệt chủng.",
+      "duration": 43.02,
+      "startTime": 1935.02,
+      "endTime": 1978.04,
+      "audioUrl": "/audio/lectures/science/b19/s03_b13.mp3"
+    },
+    {
+      "id": "s03_b14",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b14\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 & 2 MCQ Flightless ground-nesting birds on a remote oceanic island became endangered shortly after ships accidentally brought rats ashore in the 19th century. Which factor was the primary cause of the birds becoming endangered? A. Seed banks removing native plant seeds from the island B. Captive breeding programmes increasing predation C. An introduced species preying on eggs and chicks and competing for food D. Decreased atmospheric carbon dioxide cooling the island ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Rats are a classic introduced (foreign/invasive) species on oceanic islands: ground-nesting flightless birds evolved without mammalian predators, so rats easily ate their eggs and chicks while having no natural predators of their own. A, B, and D are false.",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1 & 2 MCQ Flightless ground-nesting birds on a remote oceanic island became endangered shortly after ships accidentally brought rats ashore in the 19th century. Which factor was the primary cause of the birds becoming endangered? (Các loài chim không biết bay làm tổ trên mặt đất ở một hòn đảo xa bờ trở nên nguy cấp ngay sau khi tàu thuyền vô tình mang chuột lên đảo vào thế kỷ 19. Nhân tố nào là nguyên nhân chính khiến loài chim này bị đe dọa?) A. Ngân hàng hạt giống lấy mất hạt cây bản địa khỏi đảo B. Chương trình nhân giống nuôi nhốt làm tăng sự săn mồi C. Một loài ngoại lai xâm lấn ăn trứng/chim non và cạnh tranh thức ăn D. Giảm nồng độ CO₂ khí quyển làm lạnh hòn đảo ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Chuột là ví dụ kinh điển về loài ngoại lai xâm lấn (introduced species) trên các đảo đại dương: chim bản địa không biết bay tiến hóa trong môi trường không có thú săn mồi nên làm tổ ngay trên mặt đất, khiến chuột dễ dàng ăn sạch trứng và chim non trong khi chuột lại không có thiên địch tự nhiên trên đảo. A, B, D đều sai.",
+      "duration": 133.33,
+      "startTime": 1978.04,
+      "endTime": 2111.37,
+      "audioUrl": "/audio/lectures/science/b19/s03_b14.mp3"
+    },
+    {
+      "id": "s03_b15",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b15\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [5 marks] A rare species of wild orchid and a rare species of forest leopard are both classified as critically endangered due to illegal collection and forest clearance.(a) Describe how a seed bank can help conserve the endangered orchid species. [2](b) Describe three conservation methods that can be used to protect the endangered leopard species from extinction. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Orchid seeds are collected from different wild populations, dried, and stored dormant at low/freezing temperatures so they remain viable for many years [1m]; if the wild orchids become extinct, stored seeds can be germinated and replanted into protected habitats [1m]. (b) 1. Monitoring and protecting habitats/species: establish legally protected nature reserves/national parks with anti-poaching rangers and camera/collar tracking [1m].2. Captive breeding programmes: breed leopards safely in zoos (avoiding inbreeding) and reintroduce offspring into the wild [1m].3. Education: educate local communities about avoiding illegal hunting/habitat clearance and promote ecotourism [1m]. 💡 Intuition Check: In 0654 B19.2 questions, match plants to seed banks + protected reserves, and match animals to captive breeding + habitat protection + education!",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [5 marks] A rare species of wild orchid and a rare species of forest leopard are both classified as critically endangered due to illegal collection and forest clearance.(a) Describe how a seed bank can help conserve the endangered orchid species. (b) Describe three conservation methods that can be used to protect the endangered leopard species from extinction. (Một loài phong lan rừng quý hiếm và một loài báo rừng quý hiếm đều bị xếp vào nhóm cực kỳ nguy cấp do thu hái trộm và chặt phá rừng. (a) Mô tả cách ngân hàng hạt giống giúp bảo tồn loài lan nguy cấp. (b) Mô tả ba phương pháp bảo tồn giúp bảo vệ loài báo rừng khỏi tuyệt chủng. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Thu thập hạt phong lan từ nhiều quần thể hoang dã, làm khô và bảo quản ở trạng thái ngủ nghỉ trong nhiệt độ thấp/đông lạnh để giữ sức sống suốt nhiều năm ; nếu loài lan ngoài tự nhiên bị tuyệt chủng, hạt lưu trữ có thể được gieo nảy mầm và trồng phục hồi vào khu bảo tồn . (b) 1. Giám sát & bảo vệ sinh cảnh/loài : lập vườn quốc gia/khu bảo tồn có kiểm lâm chống săn trộm và gắn vòng cổ/bẫy ảnh theo dõi .2. Captive breeding programmes (Nhân giống nuôi nhốt): nhân giống báo an toàn trong vườn thú (kiểm soát phả hệ tránh cận huyết) rồi tái thả con non về tự nhiên .3.",
+      "duration": 186.99,
+      "startTime": 2111.37,
+      "endTime": 2298.36,
+      "audioUrl": "/audio/lectures/science/b19/s03_b15.mp3"
     }
   ]
 }

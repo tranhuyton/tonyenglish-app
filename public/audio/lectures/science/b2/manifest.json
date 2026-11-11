@@ -1,259 +1,565 @@
 {
   "lectureId": "7b3c2e0a-b0d5-4716-a574-6f1c5c379c7c",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B2: Cells and organisms",
-  "totalDuration": 713.63,
+  "totalDuration": 2732.85,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_cell_comparison": {
-      "start": 1,
-      "end": 1
-    },
-    "sec-cell-comparison": {
-      "start": 1,
-      "end": 1
-    },
-    "sec_organelles": {
+    "s01_int": {
       "start": 2,
-      "end": 10
+      "end": 4
     },
-    "sec-organelles": {
-      "start": 2,
-      "end": 10
+    "s01_wex": {
+      "start": 7,
+      "end": 8
     },
-    "sec_specialised_cells": {
-      "start": 11,
-      "end": 17
+    "s01_hdr": {
+      "start": 1,
+      "end": 8
     },
-    "sec-specialised-cells": {
-      "start": 11,
-      "end": 17
+    "s02_int": {
+      "start": 10,
+      "end": 12
     },
-    "sec_magnification": {
+    "s02_p1_sub01": {
+      "start": 14,
+      "end": 14
+    },
+    "s02_p2_sub01": {
+      "start": 14,
+      "end": 14
+    },
+    "s02_wex": {
+      "start": 15,
+      "end": 16
+    },
+    "s02_hdr": {
+      "start": 9,
+      "end": 16
+    },
+    "s03_int": {
       "start": 18,
-      "end": 18
+      "end": 20
     },
-    "sec-magnification": {
-      "start": 18,
-      "end": 18
+    "s03_wex": {
+      "start": 36,
+      "end": 37
+    },
+    "s03_hdr": {
+      "start": 17,
+      "end": 37
+    },
+    "s04_int": {
+      "start": 39,
+      "end": 41
+    },
+    "s04_wex": {
+      "start": 43,
+      "end": 44
+    },
+    "s04_hdr": {
+      "start": 38,
+      "end": 44
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B2: Tế bào học & Cấu trúc Sinh vật",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B2: Cells and organisms. The cell is the basic structural and functional unit of all living organisms. In this lesson, we compare animal, plant, and bacterial cells, explore cell organelles and their functions, investigate specialized cells and their adaptations, and master magnification formula calculations.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B2: Tế bào và Sinh vật sống. Tế bào là đơn vị cấu trúc và chức năng cơ bản của mọi sinh vật. Trong bài học này, chúng ta sẽ so sánh tế bào thực vật, động vật và vi khuẩn, khám phá cấu trúc các bào quan, tìm hiểu các tế bào chuyên biệt và công thức tính độ phóng đại qua kính hiển vi.",
-      "duration": 40.34,
+      "title": "Cells and Organisms (Tế bào và Sinh vật)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B2 • Cell Biology Cells and Organisms. Cambridge IGCSE Co-ordinated Sciences (0654 • Topic B2) • Cell Ultrastructure, Bacterial DNA, Specialised Cells, Levels of Organisation & Magnification.",
+      "vi": "Tế bào và Sinh vật . Cambridge IGCSE Co-ordinated Sciences (0654 • Chuyên đề B2) • Siêu cấu trúc Tế bào, Vi khuẩn, Tế bào Chuyên biệt, Cấp độ Tổ chức & Độ phóng đại.",
+      "duration": 36.02,
       "startTime": 0.0,
-      "endTime": 40.34,
+      "endTime": 36.02,
       "audioUrl": "/audio/lectures/science/b2/intro.mp3"
     },
     {
-      "id": "sec_cell_comparison",
-      "title": "1. So sánh Tế bào Thực vật, Động vật & Vi khuẩn",
-      "selector": "#sec-cell-comparison",
-      "en": "Section 1 contrasts cellular structures: Animal and plant cells are eukaryotic with a true nucleus containing linear DNA. Animal cells contain cell membranes, cytoplasm, nucleus, mitochondria, and ribosomes. Plant cells have all these plus three unique structures: a rigid cellulose cell wall, a large permanent central vacuole filled with cell sap, and chloroplasts for photosynthesis. Bacterial cells are prokaryotes: they lack a nucleus, having circular DNA loops and plasmids instead, and have a peptidoglycan cell wall.",
-      "vi": "Mục một so sánh cấu trúc tế bào: Tế bào thực vật và động vật là tế bào nhân thực có nhân hoàn chỉnh chứa DNA mạch thẳng. Tế bào động vật gồm màng sinh chất, tế bào chất, nhân, ti thể và ribosome. Tế bào thực vật có thêm 3 cấu trúc độc nhất: thành tế bào cellulose vững chắc, không bào trung tâm lớn chứa dịch bào và lục lạp để quang hợp. Tế bào vi khuẩn là tế bào nhân sơ: không có màng nhân, vật chất di truyền là phân tử DNA vòng và plasmid, cùng thành tế bào peptidoglycan.",
-      "duration": 60.62,
-      "startTime": 40.34,
-      "endTime": 100.96,
-      "audioUrl": "/audio/lectures/science/b2/sec_cell_comparison.mp3"
+      "id": "s01_hdr",
+      "title": "1. Comparison of Plant, Animal and Bacterial Cells (So sánh Tế bào Thực vật, Động vật & Vi khuẩ",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 1. Comparison of Plant, Animal and Bacterial Cells.",
+      "vi": "🟦 CORE 1. So sánh Tế bào Thực vật, Động vật & Vi khuẩn .",
+      "duration": 10.91,
+      "startTime": 36.02,
+      "endTime": 46.93,
+      "audioUrl": "/audio/lectures/science/b2/s01_hdr.mp3"
     },
     {
-      "id": "sec_organelles",
-      "title": "2. Bản đồ Bào quan Tương tác & Chức năng Bào quan",
-      "selector": "#sec-organelles",
-      "en": "Section 2 introduces the Interactive Cell Map. Cell organelles are specialized subcellular compartments that perform distinct metabolic jobs. Click or tap any organelle in the cell diagrams or the list below to hear its detailed structure, Cambridge exam keywords, and biological role.",
-      "vi": "Mục hai giới thiệu Bản đồ Bào quan Tương tác. Các bào quan là những cấu trúc dưới tế bào chuyên biệt thực hiện các chức năng chuyển hóa riêng biệt. Hãy nhấn hoặc rê chuột vào bất kỳ bào quan nào trên sơ đồ tế bào hoặc danh mục bên dưới để nghe bài giảng chi tiết, từ khóa thi cử Cambridge và vai trò sinh học của bào quan đó.",
-      "duration": 61.48,
-      "startTime": 100.96,
-      "endTime": 162.44,
-      "audioUrl": "/audio/lectures/science/b2/sec_organelles.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of the three cell types as three housing designs: Animal cells are soft flexible tents (membrane only, no wall); Plant cells are rigid solar-powered greenhouses (cellulose wall + pressurised central sap vacuole + chloroplasts in green parts); Bacterial cells are compact studio capsules with a peptidoglycan wall and free-floating DNA loops instead of an enclosed bedroom (nucleus)!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung 3 loại tế bào như 3 kiểu kiến trúc: Tế bào động vật như căn lều mềm dẻo (chỉ có màng tế bào, không có thành cứng); Tế bào thực vật như nhà kính dùng pin mặt trời (thành cellulose cứng + không bào trung tâm căng nước + lục lạp ở phần xanh); còn Tế bào vi khuẩn là căn phòng studio tối giản có thành peptidoglycan và vòng DNA trôi tự do thay vì phòng ngủ khép kín (không có màng nhân)!",
+      "duration": 54.53,
+      "startTime": 46.93,
+      "endTime": 101.46,
+      "audioUrl": "/audio/lectures/science/b2/s01_b01.mp3"
     },
     {
-      "id": "sec_nucleus",
-      "title": "🧬 Nucleus (Nhân tế bào)",
-      "selector": "#sec-nucleus",
-      "en": "The Nucleus is the control center of the cell. It contains genetic material in the form of DNA organized into chromosomes. The nucleus directs cell growth, regulates protein synthesis, and controls cell division. Key exam keyword: Contains genetic material DNA and controls all cell activities.",
-      "vi": "Nhân tế bào là trung tâm điều khiển của tế bào. Nhân chứa vật chất di truyền dưới dạng DNA được tổ chức thành các nhiễm sắc thể. Nhân điều khiển sự lớn lên của tế bào, điều hòa tổng hợp protein và điều khiển quá trình phân bào. Từ khóa thi Cambridge: Chứa vật chất di truyền DNA và kiểm soát mọi hoạt động của tế bào.",
-      "duration": 42.26,
-      "startTime": 162.44,
-      "endTime": 204.7,
-      "audioUrl": "/audio/lectures/science/b2/sec_nucleus.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the 4 universal structures shared by ALL animal, plant, and bacterial cells: cell membrane , cytoplasm , ribosomes , and DNA . Then split: Eukaryotes (plants & animals) have a nucleus and mitochondria ; Bacteria have circular DNA + plasmids and no nucleus/mitochondria . Plus: new cells arise ONLY by division of existing cells ( B2.1.5 ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nắm chắc 4 thành phần có ở CẢ 3 loại tế bào (động vật, thực vật, vi khuẩn): cell membrane , cytoplasm , ribosomes và DNA . Sau đó phân nhánh: Thực vật & Động vật có nhân chuẩn (nucleus) và ti thể (mitochondria) ; Vi khuẩn có DNA vòng (circular DNA) + plasmid và không có nhân/ti thể . Mọi tế bào mới đều sinh ra do phân chia tế bào có sẵn ( B2.1.5 ).",
+      "duration": 58.65,
+      "startTime": 101.46,
+      "endTime": 160.11,
+      "audioUrl": "/audio/lectures/science/b2/s01_b02.mp3"
     },
     {
-      "id": "sec_membrane",
-      "title": "🛡️ Cell Membrane (Màng tế bào)",
-      "selector": "#sec-membrane",
-      "en": "The Cell Membrane is a partially permeable lipid bilayer that surrounds the cytoplasm. It forms a selective barrier that regulates which substances enter and leave the cell by diffusion, osmosis, and active transport. Key exam keyword: Partially permeable barrier that controls substance entry and exit.",
-      "vi": "Màng tế bào là một màng có tính thấm chọn lọc bao bọc lấy tế bào chất. Màng kiểm soát chặt chẽ các chất đi vào và đi ra khỏi tế bào qua các cơ chế khuếch tán, thẩm thấu và vận chuyển chủ động. Từ khóa thi Cambridge: Màng thấm chọn lọc kiểm soát chất đi vào và ra khỏi tế bào.",
-      "duration": 36.81,
-      "startTime": 204.7,
-      "endTime": 241.51,
-      "audioUrl": "/audio/lectures/science/b2/sec_membrane.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do NOT assume every plant cell contains chloroplasts! Underground plant cells (such as root hair cells ) receive zero sunlight, so they have a cellulose cell wall and large permanent vacuole, but NO chloroplasts !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bẫy kinh điển: Đừng nghĩ mọi tế bào thực vật đều có lục lạp! Các tế bào ngầm dưới đất như tế bào lông hút không nhận ánh sáng nên vẫn có thành cellulose và không bào lớn nhưng KHÔNG có lục lạp (chloroplasts) !",
+      "duration": 32.29,
+      "startTime": 160.11,
+      "endTime": 192.4,
+      "audioUrl": "/audio/lectures/science/b2/s01_b03.mp3"
     },
     {
-      "id": "sec_cytoplasm",
-      "title": "💧 Cytoplasm (Tế bào chất)",
-      "selector": "#sec-cytoplasm",
-      "en": "Cytoplasm is a jelly-like aqueous fluid containing dissolved salts, sugars, amino acids, and suspended organelles. It is the vital site where most biochemical metabolic reactions and enzyme activities occur within the cell. Key exam keyword: Site of cellular chemical reactions and supports organelles.",
-      "vi": "Tế bào chất là chất dịch bán lỏng dạng thạch chứa nước, muối khoáng hòa tan, đường, axit amin và các bào quan lơ lửng. Đây là nơi diễn ra phần lớn các phản ứng hóa sinh và trao đổi chất của tế bào. Từ khóa thi Cambridge: Nơi diễn ra các phản ứng hóa học tế bào và nâng đỡ các bào quan.",
-      "duration": 39.14,
-      "startTime": 241.51,
-      "endTime": 280.65,
-      "audioUrl": "/audio/lectures/science/b2/sec_cytoplasm.mp3"
+      "id": "s01_b04",
+      "title": "Cell Structure (Cấu trúc): Cell Membrane (Màng tế bào); Animal Cell (Động vật): ...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Cell Structure: Cell Membrane; Animal Cell: ✔ Present; Plant Cell: ✔ Present; Bacterial Cell: ✔ Present. Cell Structure: Cytoplasm & Ribosomes; Animal Cell: ✔ Present; Plant Cell: ✔ Present; Bacterial Cell: ✔ Present. Cell Structure: True Nucleus & DNA; Animal Cell: ✔ Present (linear DNA); Plant Cell: ✔ Present (linear DNA); Bacterial Cell: ✖ Absent (Circular DNA loop + Plasmids). Cell Structure: Cell Wall; Animal Cell: ✖ Absent; Plant Cell: ✔ Present (Cellulose); Bacterial Cell: ✔ Present (Peptidoglycan). Cell Structure: Chloroplasts; Animal Cell: ✖ Absent; Plant Cell: ✔ Present in photosynthetic cells; Bacterial Cell: ✖ Absent. Cell Structure: Mitochondria; Animal Cell: ✔ Present; Plant Cell: ✔ Present; Bacterial Cell: ✖ Absent. Cell Structure: Vacuoles; Animal Cell: Small, temporary vesicles; Plant Cell: ✔ Large permanent central vacuole; Bacterial Cell: ✖ Absent.",
+      "vi": "Cell Structure (Cấu trúc): Cell Membrane (Màng tế bào); Animal Cell (Động vật): ✔ Present; Plant Cell (Thực vật): ✔ Present; Bacterial Cell (Vi khuẩn): ✔ Present. Cell Structure (Cấu trúc): Cytoplasm & Ribosomes (Tế bào chất & Ribosome); Animal Cell (Động vật): ✔ Present; Plant Cell (Thực vật): ✔ Present; Bacterial Cell (Vi khuẩn): ✔ Present. Cell Structure (Cấu trúc): True Nucleus & DNA (Nhân chuẩn & Hệ gen); Animal Cell (Động vật): ✔ Có nhân chuẩn (DNA mạch thẳng); Plant Cell (Thực vật): ✔ Present (linear DNA); Bacterial Cell (Vi khuẩn): ✖ Không có màng nhân (DNA vòng + Plasmid). Cell Structure (Cấu trúc): Cell Wall (Thành tế bào); Animal Cell (Động vật): ✖ Absent; Plant Cell (Thực vật): ✔ Có (bằng Cellulose); Bacterial Cell (Vi khuẩn): ✔ Có (bằng Peptidoglycan, không phải cellulose). Cell Structure (Cấu trúc): Chloroplasts (Lục lạp); Animal Cell (Động vật): ✖ Absent; Plant Cell (Thực vật): ✔ Có ở tế bào quang hợp màu xanh; Bacterial Cell (Vi khuẩn): ✖ Absent. Cell Structure (Cấu trúc): Mitochondria (Ti thể); Animal Cell (Động vật): ✔ Present; Plant Cell (Thực vật): ✔ Present; Bacterial Cell (Vi khuẩn): ✖ Absent. Cell Structure (Cấu trúc): Vacuoles (Không bào); Animal Cell (Động vật): Các túi nhỏ, tạm thời (vesicles); Plant Cell (Thực vật): ✔ Không bào trung tâm lớn, vĩnh viễn (chứa dịch bào); Bacterial Cell (Vi khuẩn): ✖ Absent.",
+      "duration": 179.69,
+      "startTime": 192.4,
+      "endTime": 372.09,
+      "audioUrl": "/audio/lectures/science/b2/s01_b04.mp3"
     },
     {
-      "id": "sec_mitochondria",
-      "title": "⚡ Mitochondria (Ti thể)",
-      "selector": "#sec-mitochondria",
-      "en": "Mitochondria are the powerhouses of eukaryotic cells. They are the primary site of aerobic cellular respiration, where glucose and oxygen react to release usable metabolic energy in the form of ATP. Crucial exam tip: Always state that mitochondria release energy, never say they produce or create energy.",
-      "vi": "Ti thể là nhà máy năng lượng của tế bào nhân thực. Đây là vị trí chính diễn ra quá trình hô hấp hiếu khí, nơi glucose và oxy phản ứng để giải phóng năng lượng ATP cho tế bào. Bẫy đề thi Cambridge: Luôn nói ti thể giải phóng năng lượng, tuyệt đối không được nói ti thể tạo ra năng lượng.",
-      "duration": 38.39,
-      "startTime": 280.65,
-      "endTime": 319.04,
-      "audioUrl": "/audio/lectures/science/b2/sec_mitochondria.mp3"
+      "id": "s01_b05",
+      "title": "🔄 Nguồn gốc Tế bào mới — Origin of New Cells (Syllabus B2.1.5 Core):",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🔄 Origin of New Cells (Syllabus B2.1.5 Core Rule): New cells are produced only by the division of existing cells (e.g. mitosis in eukaryotic animal and plant tissues, or binary fission in bacteria) — living cells never arise spontaneously from non-living matter.",
+      "vi": "🔄 Nguồn gốc Tế bào mới — Origin of New Cells (Syllabus B2.1.5 Core): Mọi tế bào mới chỉ được tạo ra nhờ sự phân chia của các tế bào có sẵn — tế bào sống không bao giờ tự sinh ra ngẫu nhiên từ vật chất vô sinh!",
+      "duration": 33.93,
+      "startTime": 372.09,
+      "endTime": 406.02,
+      "audioUrl": "/audio/lectures/science/b2/s01_b05.mp3"
     },
     {
-      "id": "sec_ribosomes",
-      "title": "🔬 Ribosomes (Ribosome)",
-      "selector": "#sec-ribosomes",
-      "en": "Ribosomes are tiny circular structures located throughout the cytoplasm or attached to the rough endoplasmic reticulum. They are responsible for protein synthesis, assembling amino acids into polypeptide chains according to genetic instructions.",
-      "vi": "Ribosome là các hạt siêu nhỏ phân bố rải rác trong tế bào chất hoặc gắn trên màng lưới nội chất hạt. Ribosome đảm nhận vai trò tổng hợp protein, liên kết các axit amin thành chuỗi polypeptide theo mã di truyền.",
-      "duration": 28.29,
-      "startTime": 319.04,
-      "endTime": 347.33,
-      "audioUrl": "/audio/lectures/science/b2/sec_ribosomes.mp3"
+      "id": "s01_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which row correctly identifies the structures present in a typical bacterial cell? A. Cell wall: Present | Mitochondria: Present | Plasmids: Absent B. Cell wall: Present | Nucleus: Absent | Ribosomes: Present C. Cell wall: Absent | Circular DNA: Present | Ribosomes: Present D. Chloroplasts: Present | Nucleus: Absent | Plasmids: Present ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: According to Syllabus B2.1.2 , a bacterial cell has a cell wall , cell membrane, cytoplasm, ribosomes , circular DNA , and plasmids , while lacking a membrane-bound nucleus , mitochondria, and chloroplasts.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which row correctly identifies the structures present in a typical bacterial cell? (Hàng nào xác định đúng các cấu trúc có mặt trong một tế bào vi khuẩn điển hình?) A. Cell wall: Present | Mitochondria: Present | Plasmids: Absent B. Cell wall: Present | Nucleus: Absent | Ribosomes: Present C. Cell wall: Absent | Circular DNA: Present | Ribosomes: Present D. Chloroplasts: Present | Nucleus: Absent | Plasmids: Present ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Theo chuẩn B2.1.2 , tế bào vi khuẩn có thành tế bào (cell wall) , màng tế bào, tế bào chất, ribosome , DNA vòng (circular DNA) và plasmid , nhưng không có nhân (nucleus) , không có ti thể (loại A) và không có lục lạp (loại D).",
+      "duration": 110.61,
+      "startTime": 406.02,
+      "endTime": 516.63,
+      "audioUrl": "/audio/lectures/science/b2/s01_b06.mp3"
     },
     {
-      "id": "sec_cellwall",
-      "title": "🧱 Cell Wall (Thành tế bào - Thực vật)",
-      "selector": "#sec-cellwall",
-      "en": "The Cell Wall is an outer non-living layer found outside the plant cell membrane, composed of rigid criss-crossing cellulose fibres. It is fully permeable, provides mechanical strength, and prevents the plant cell from bursting when water enters by osmosis.",
-      "vi": "Thành tế bào là lớp vỏ ngoài không sống bao bọc màng tế bào thực vật, cấu tạo từ các sợi cellulose cứng cáp. Thành có tính thấm hoàn toàn, cung cấp lực chống đỡ cơ học và giúp tế bào thực vật không bị vỡ khi hút no nước nhờ áp suất trương nước.",
-      "duration": 30.33,
-      "startTime": 347.33,
-      "endTime": 377.66,
-      "audioUrl": "/audio/lectures/science/b2/sec_cellwall.mp3"
+      "id": "s01_b07",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] (a) State two structural features found in a palisade mesophyll cell that are absent from an animal liver cell. [2] (b) State one similarity and one difference between the genetic material of a bacterial cell and an animal cell. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Any two from: cellulose cell wall / chloroplasts / large permanent vacuole [2m] . (b) Similarity: both contain DNA that codes for proteins [1m] . Difference: bacterial DNA is a circular loop floating free in the cytoplasm (plus plasmids) with no nucleus , whereas animal DNA is linear chromosomes enclosed inside a nucleus [1m] . 💡 Intuition Check: Always specify \"cellulose cell wall\" for plants because bacterial cells ALSO have a cell wall (made of peptidoglycan)!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] (a) State two structural features found in a palisade mesophyll cell that are absent from an animal liver cell. (Nêu hai cấu trúc có ở tế bào mô giậu của lá nhưng không có ở tế bào gan động vật.) (b) State one similarity and one difference between the genetic material of a bacterial cell and an animal cell. (Nêu một điểm giống và một điểm khác nhau về vật chất di truyền giữa tế bào vi khuẩn và tế bào động vật.) ✍️ Lời giải chi tiết theo thang điểm: (a) Chọn 2 trong 3: cellulose cell wall (thành tế bào bằng cellulose) / chloroplasts (lục lạp) / large permanent vacuole (không bào trung tâm lớn) . (b) Giống nhau: cả hai đều chứa phân tử DNA mang thông tin di truyền mã hóa protein . Khác nhau: vi khuẩn có vòng DNA (circular DNA) nằm tự do trong tế bào chất kèm các plasmid và không có màng nhân , trong khi DNA của động vật dạng thẳng nằm trong nhân (nucleus) . 💡 Kiểm tra bản chất: Khi nhắc đến thành tế bào thực vật, hãy ghi rõ \"cellulose cell wall\" để phân biệt với thành tế bào peptidoglycan của vi khuẩn!",
+      "duration": 138.41,
+      "startTime": 516.63,
+      "endTime": 655.04,
+      "audioUrl": "/audio/lectures/science/b2/s01_b07.mp3"
     },
     {
-      "id": "sec_chloroplast",
-      "title": "🍃 Chloroplast (Lục lạp - Thực vật)",
-      "selector": "#sec-chloroplast",
-      "en": "Chloroplasts are photosynthetic organelles present in green plant cells, containing chlorophyll pigments. Chlorophyll absorbs light energy and uses it to convert carbon dioxide and water into glucose and oxygen during photosynthesis.",
-      "vi": "Lục lạp là bào quan quang hợp có trong tế bào màu xanh của thực vật, chứa sắc tố diệp lục. Diệp lục hấp thu năng lượng ánh sáng mặt trời để chuyển hóa CO2 và nước thành glucose và oxy trong quá trình quang hợp.",
-      "duration": 27.88,
-      "startTime": 377.66,
-      "endTime": 405.54,
-      "audioUrl": "/audio/lectures/science/b2/sec_chloroplast.mp3"
+      "id": "s02_hdr",
+      "title": "2. Interactive Cell Map & Organelle Functions (Bản đồ Tế bào Tương tác & Chức năng Bào quan)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE 2. Interactive Cell Map & Organelle Functions.",
+      "vi": "🟦 CORE 2. Bản đồ Tế bào Tương tác & Chức năng Bào quan .",
+      "duration": 9.73,
+      "startTime": 655.04,
+      "endTime": 664.77,
+      "audioUrl": "/audio/lectures/science/b2/s02_hdr.mp3"
     },
     {
-      "id": "sec_vacuole",
-      "title": "💧 Permanent Vacuole (Không bào trung tâm - Thực vật)",
-      "selector": "#sec-vacuole",
-      "en": "The Permanent Vacuole is a large central organelle in plant cells filled with watery cell sap containing dissolved sugars and mineral salts. When full, it pushes outwards against the cell wall, maintaining turgor pressure and keeping plant tissues firm and upright.",
-      "vi": "Không bào trung tâm là một khoang lớn ở giữa tế bào thực vật chứa dịch bào gồm nước, đường và muối khoáng. Khi chứa đầy nước, không bào tạo lực đẩy lên thành tế bào giúp duy trì áp suất trương, giữ cho mô thực vật luôn căng cứng và đứng vững.",
-      "duration": 29.85,
-      "startTime": 405.54,
-      "endTime": 435.39,
-      "audioUrl": "/audio/lectures/science/b2/sec_vacuole.mp3"
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture a cell as an automated biochemical factory: the Cell Membrane is the security gate checking every molecule in/out, the Nucleus is the headquarters vault storing DNA master plans, Ribosomes are assembly-line robots building proteins, and Mitochondria are power turbines releasing usable energy from glucose!",
+      "vi": "🎯 Hình dung đời thường: Hãy xem tế bào như một nhà máy sinh hóa tự động: Màng tế bào (Cell membrane) là cổng an ninh kiểm tra từng phân tử ra vào, Nhân (Nucleus) là phòng Giám đốc giữ bản thiết kế gốc DNA, Ribosome là dàn máy in 3D lắp ráp protein, còn Ti thể (Mitochondria) là tổ máy phát điện đốt glucose để giải phóng năng lượng!",
+      "duration": 46.42,
+      "startTime": 664.77,
+      "endTime": 711.19,
+      "audioUrl": "/audio/lectures/science/b2/s02_b01.mp3"
     },
     {
-      "id": "sec_specialised_cells",
-      "title": "3. Tổng quan Tế bào Chuyên biệt",
-      "selector": "#sec-specialised-cells",
-      "en": "Section 3 explores Specialised Cells and their structural adaptations. As multicellular organisms develop, cells differentiate into specific structures to perform specialized physiological functions with high efficiency.",
-      "vi": "Mục ba nghiên cứu các Tế bào Chuyên biệt và đặc điểm thích nghi của chúng. Ở sinh vật đa bào, các tế bào biệt hóa thành những hình dạng và cấu trúc đặc thù để thực hiện các chức năng sinh lý chuyên biệt với hiệu suất cao nhất.",
-      "duration": 61.86,
-      "startTime": 435.39,
-      "endTime": 497.25,
-      "audioUrl": "/audio/lectures/science/b2/sec_specialised_cells.mp3"
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Match each organelle to its exact Cambridge Mark Scheme phrase ( B2.1.4 ):• Cell wall : structural support & prevents bursting.• Cell membrane : partially permeable ; controls entry and exit of substances.• Cytoplasm : jelly-like site of metabolic chemical reactions.• Mitochondria : site of aerobic respiration to release energy.• Ribosomes : site of protein synthesis .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc lòng từ khóa vàng Mark Scheme ( B2.1.4 ):• Cell wall : nâng đỡ cấu trúc & chống vỡ (thấm hoàn toàn).• Cell membrane : partially permeable (thấm chọn lọc) — kiểm soát chất ra vào.• Cytoplasm : nơi diễn ra phản ứng hóa học trao đổi chất.• Mitochondria : nơi aerobic respiration giải phóng năng lượng (release energy) .• Ribosomes : nơi protein synthesis (tổng hợp protein).",
+      "duration": 60.42,
+      "startTime": 711.19,
+      "endTime": 771.61,
+      "audioUrl": "/audio/lectures/science/b2/s02_b02.mp3"
     },
     {
-      "id": "sec_cell_ciliated",
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"mitochondria produce/make energy\" (energy cannot be created — write release energy by aerobic respiration !), and never confuse the cell wall (fully permeable) with the cell membrane (partially permeable)!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết \"mitochondria produce/create energy\" (năng lượng không tự sinh ra — bắt buộc viết release energy !), và không bao giờ nhầm vai trò kiểm soát chất ra vào của cell membrane sang cell wall !",
+      "duration": 32.41,
+      "startTime": 771.61,
+      "endTime": 804.02,
+      "audioUrl": "/audio/lectures/science/b2/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Interactive Cell Ultrastructure (Siêu cấu trúc Tế bào Tương tác)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Interactive Cell Ultrastructure. ANIMAL CELL SVG 🐾 Animal Cell. PLANT CELL SVG 🌿 Plant Cell. BACTERIAL CELL SVG (SYLLABUS B2.1.2 & B2.1.3) 🦠 Bacterial Cell (Prokaryote). MAIN INFO PANEL (DISPLAYS ACTIVE ORGANELLE DETAILS) Interactive Organelle Explorer 👆.",
+      "vi": "Interactive Cell Ultrastructure (Siêu cấu trúc Tế bào Tương tác). Rê chuột hoặc nhấn vào bất kỳ bào quan nào trên sơ đồ để xem định nghĩa Song ngữ và nghe giảng. ANIMAL CELL SVG 🐾 Animal Cell (Tế bào Động vật). PLANT CELL SVG 🌿 Plant Cell (Tế bào Thực vật). 🦠 Bacterial Cell (Tế bào Vi khuẩn). MAIN INFO PANEL Khám phá Bào quan Tương tác (Organelle Explorer) 👆. Rê chuột hoặc nhấn vào từng bào quan trên hình vẽ hoặc danh mục thẻ bên dưới để xem chức năng chuẩn Mark Scheme và nghe giảng.",
+      "duration": 60.98,
+      "startTime": 804.02,
+      "endTime": 865.0,
+      "audioUrl": "/audio/lectures/science/b2/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🧬 Nucleus (Genetic Control Centre)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "SUB-CARD: NUCLEUS 🧬 Nucleus (Genetic Control Centre). Contains genetic material (DNA) in chromosomes; controls cell growth, division and protein synthesis. 🔑 Keywords: Contains DNA, controls cell SUB-CARD: CELL MEMBRANE 🛡️ Cell Membrane (Selective Permeability). Partially permeable barrier regulating which substances enter and leave by diffusion, osmosis, active transport. 🔑 Keywords: Partially permeable, controls entry/exit SUB-CARD: CYTOPLASM 💧 Cytoplasm (Metabolic Reactions Site). Jelly-like fluid containing dissolved substances; the primary site of biochemical reactions and cellular metabolism. 🔑 Keywords: Site of chemical reactions SUB-CARD: MITOCHONDRIA ⚡ Mitochondria (Aerobic Respiration & ATP). Powerhouses of the cell; the site of aerobic cellular respiration where energy (ATP) is released. 🔑 Keywords: Aerobic respiration, releases energy SUB-CARD: RIBOSOMES 🔬 Ribosomes (Protein Synthesis). Tiny structures in cytoplasm synthesizing polypeptides and proteins by linking amino acids together. 🔑 Keywords: Protein synthesis from amino acids SUB-CARD: CELL WALL 🧱 Cell Wall (Plant Cells). Rigid outer layer composed of cellulose; provides mechanical strength and prevents osmotic bursting. 🔑 Keywords: Cellulose, support, prevents bursting SUB-CARD: CHLOROPLAST 🍃 Chloroplast (Plant Cells). Organelle containing chlorophyll pigments; absorbs light energy to drive glucose synthesis in photosynthesis. 🔑 Keywords: Chlorophyll, absorbs light, photosynthesis SUB-CARD: VACUOLE 💧 Permanent Vacuole (Plant Cells).",
+      "vi": "SUB-CARD: NUCLEUS 🧬 Nucleus. Contains genetic material (DNA) in chromosomes; controls cell activities. Chứa vật chất di truyền (DNA) trong nhiễm sắc thể; điều khiển mọi hoạt động sống, phân chia tế bào và tổng hợp protein. 🔑 Keywords: Contains DNA, controls cell SUB-CARD: CELL MEMBRANE 🛡️ Cell Membrane (Selective Permeability). Partially permeable barrier controlling entry and exit of substances. Màng thấm chọn lọc (bán thấm) kiểm soát sự ra vào của các chất qua khuếch tán, thẩm thấu và vận chuyển chủ động. 🔑 Keywords: Partially permeable, controls entry/exit SUB-CARD: CYTOPLASM 💧 Cytoplasm. Jelly-like fluid where metabolic chemical reactions take place. Chất dịch dạng keo chứa các chất hòa tan và bào quan; là nơi diễn ra hầu hết các phản ứng hóa sinh trao đổi chất. 🔑 Keywords: Site of chemical reactions SUB-CARD: MITOCHONDRIA ⚡ Mitochondria. Site of aerobic respiration where energy is released from glucose. \"Nhà máy năng lượng\" thực hiện hô hấp hiếu khí để giải phóng năng lượng (release energy) cho tế bào. 🔑 Keywords: Aerobic respiration, releases energy SUB-CARD: RIBOSOMES 🔬 Ribosomes (Protein Synthesis). Tiny structures carrying out protein synthesis from amino acids. Các hạt nhỏ li ti trong tế bào chất thực hiện tổng hợp protein (protein synthesis) từ các amino acid. 🔑 Keywords: Protein synthesis from amino acids SUB-CARD: CELL WALL 🧱 Cell Wall (Plant Cells). Rigid cellulose outer layer providing structural support; prevents bursting.",
+      "duration": 228.7,
+      "startTime": 865.0,
+      "endTime": 1093.7,
+      "audioUrl": "/audio/lectures/science/b2/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Muscle cells and sperm cells require large amounts of energy for movement. Which cell structure will be present in unusually high numbers in both of these cells? A. Chloroplasts B. Mitochondria C. Plasmids D. Permanent vacuoles ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Mitochondria are the site of aerobic respiration, which releases high quantities of energy (ATP) from glucose for muscle contraction and flagellum swimming.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 2 MCQ Muscle cells and sperm cells require large amounts of energy for movement. Which cell structure will be present in unusually high numbers in both of these cells? (Tế bào cơ và tinh trùng cần lượng lớn năng lượng để vận động. Cấu trúc nào có số lượng đặc biệt nhiều ở cả hai loại tế bào này?) A. Chloroplasts B. Mitochondria C. Plasmids D. Permanent vacuoles ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mitochondria (Ti thể) là nơi diễn ra hô hấp hiếu khí phân giải glucose nhằm giải phóng nhiều năng lượng (ATP) cung cấp cho sự co cơ và chuyển động quẫy đuôi của tinh trùng.",
+      "duration": 79.05,
+      "startTime": 1093.7,
+      "endTime": 1172.75,
+      "audioUrl": "/audio/lectures/science/b2/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] (a) Distinguish clearly between the function of the cell wall and the function of the cell membrane in a plant cell. [2] (b) State the exact function of ribosomes and chloroplasts . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The cell wall provides rigid structural support and prevents the plant cell from bursting when water enters by osmosis [1m] , whereas the cell membrane is partially permeable and controls which substances enter and leave the cell [1m] . (b) Ribosomes carry out protein synthesis (linking amino acids into proteins) [1m] ; chloroplasts contain chlorophyll to absorb light energy for photosynthesis [1m] . 💡 Intuition Check: Whenever a question asks how substances are controlled entering a plant cell, the answer is ALWAYS the cell membrane — never the cell wall!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] (a) Distinguish clearly between the function of the cell wall and the function of the cell membrane in a plant cell. (Phân biệt rõ chức năng của thành tế bào và màng tế bào ở tế bào thực vật.) (b) State the exact function of ribosomes and chloroplasts . (Nêu chính xác chức năng của ribosome và lục lạp.) ✍️ Lời giải chi tiết theo thang điểm: (a) Cell wall tạo khung cứng nâng đỡ (structural support) và ngăn tế bào bị vỡ khi nước đi vào qua thẩm thấu ; còn cell membrane có tính bán thấm (partially permeable), kiểm soát chọn lọc các chất đi vào và đi ra khỏi tế bào . (b) Ribosomes thực hiện tổng hợp protein (protein synthesis) từ các amino acid ; chloroplasts chứa diệp lục hấp thụ năng lượng ánh sáng cho quá trình quang hợp (photosynthesis) . 💡 Kiểm tra bản chất: Mọi câu hỏi về kiểm soát chất ra vào tế bào (kể cả tế bào thực vật) đều có đáp án là Cell Membrane!",
+      "duration": 125.45,
+      "startTime": 1172.75,
+      "endTime": 1298.2,
+      "audioUrl": "/audio/lectures/science/b2/s02_b07.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "3. Specialised Cells, Gametes & Levels of Organisation (Tế bào Chuyên biệt, Giao tử & Cấp độ Tổ",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟦 CORE 3. Specialised Cells, Gametes & Levels of Organisation.",
+      "vi": "🟦 CORE 3. Tế bào Chuyên biệt, Giao tử & Cấp độ Tổ chức .",
+      "duration": 11.08,
+      "startTime": 1298.2,
+      "endTime": 1309.28,
+      "audioUrl": "/audio/lectures/science/b2/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: A multicellular organism works like a modern city: specialised workers ( Cells : couriers like RBCs, cables like neurones, solar panels like palisade cells) group into specialist teams ( Tissues ), multiple teams run a building ( Organ like a leaf or heart), connected buildings form a utility grid ( Organ System ), and all grids together run the living Organism !",
+      "vi": "🎯 Hình dung đời thường: Cơ thể đa bào vận hành như một thành phố hiện đại: mỗi người thợ có dụng cụ riêng ( Cell : shipper hồng cầu, dây cáp thần kinh neurone, tấm pin mặt trời mô giậu), nhiều thợ cùng nghề lập thành đội chuyên môn ( Tissue — Mô ), nhiều đội phối hợp vận hành một tòa nhà ( Organ — Cơ quan như chiếc lá hay quả tim), nhiều tòa nhà tạo thành mạng lưới ( Organ System ) nuôi sống toàn bộ Organism !",
+      "duration": 53.67,
+      "startTime": 1309.28,
+      "endTime": 1362.95,
+      "audioUrl": "/audio/lectures/science/b2/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Pair every B2.1.6 cell adaptation with \"so that..\" : Ciliated (cilia sweep mucus), Root hair (extension increases surface area for water/ion uptake), Palisade (packed with chloroplasts for photosynthesis), Neurone (long insulated axon conducts impulses), RBC (biconcave + haemoglobin + no nucleus), Sperm & Egg (flagellum/mitochondria/acrosome vs cytoplasmic nutrient store + jelly coat).2. Master B2.1.7 : Cell → Tissue (similar cells, shared function) → Organ (several tissues) → Organ System → Organism .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Trả lời câu hỏi thích nghi ( B2.1.6 ) theo công thức Đặc điểm cấu tạo → Lợi ích chức năng cho đủ 6 nhóm: ciliated , root hair , palisade mesophyll , neurone , red blood cell , sperm & egg .2. Nhớ từ khóa phân biệt B2.1.7 : Tissue = nhóm tế bào tương đồng cùng làm 1 việc; Organ = tập hợp nhiều loại mô khác nhau cùng phối hợp.",
+      "duration": 70.7,
+      "startTime": 1362.95,
+      "endTime": 1433.65,
+      "audioUrl": "/audio/lectures/science/b2/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Exam classic: \"Is a plant leaf a tissue or an organ?\" A leaf is an ORGAN because it is made of several different tissues (upper/lower epidermis, palisade mesophyll, spongy mesophyll, xylem, and phloem) working together!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Câu hỏi bẫy hay gặp nhất: \"Lá cây (leaf) là mô hay cơ quan?\" — Lá cây là một CƠ QUAN (Organ) vì nó được cấu tạo từ nhiều loại mô khác nhau (biểu bì, mô giậu, mô xốp, mạch gỗ xylem, mạch rây phloem)!",
+      "duration": 35.4,
+      "startTime": 1433.65,
+      "endTime": 1469.05,
+      "audioUrl": "/audio/lectures/science/b2/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Tế bào biệt hóa (differentiate) để có cấu trúc phù hợp tối ưu với chức năng sinh...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Cells differentiate to perform specialized biological functions.",
+      "vi": "Tế bào biệt hóa (differentiate) để có cấu trúc phù hợp tối ưu với chức năng sinh học chuyên biệt. Nhấn vào từng thẻ để nghe giảng:",
+      "duration": 14.47,
+      "startTime": 1469.05,
+      "endTime": 1483.52,
+      "audioUrl": "/audio/lectures/science/b2/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
       "title": "🍃 Ciliated Cell (Tế bào biểu mô lông rung)",
-      "selector": "#sec-cell-ciliated",
-      "en": "Ciliated epithelial cells line the trachea and bronchi in the respiratory system. They possess hundreds of microscopic hair-like cilia that beat synchronously to sweep mucus containing trapped dust particles and pathogens upwards away from the lungs.",
-      "vi": "Tế bào biểu mô lông rung nằm lót trong khí quản và phế quản của đường hô hấp. Bề mặt tế bào có hàng trăm sợi lông mao nhỏ đập nhịp nhàng để quét dịch nhầy chứa bụi bẩn và vi khuẩn ngược lên trên ra khỏi phổi.",
-      "duration": 27.06,
-      "startTime": 497.25,
-      "endTime": 524.31,
-      "audioUrl": "/audio/lectures/science/b2/sec_cell_ciliated.mp3"
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🍃 Ciliated Cell. Location: Trachea & bronchi. Adaptation: Covered with microscopic hair-like cilia that beat rhythmically to sweep mucus containing trapped dust and microbes away from the lungs.",
+      "vi": "🍃 Ciliated Cell (Tế bào biểu mô lông rung). Location: Trachea & bronchi. Thích nghi (Adaptation): Có hàng nghìn lông rung ( cilia ) đập nhịp nhàng quét lớp dịch nhầy ( mucus ) giữ bụi và vi khuẩn từ khí quản/phế quản ngược lên họng.",
+      "duration": 32.82,
+      "startTime": 1483.52,
+      "endTime": 1516.34,
+      "audioUrl": "/audio/lectures/science/b2/s03_b05.mp3"
     },
     {
-      "id": "sec_cell_roothair",
+      "id": "s03_b06",
       "title": "🌱 Root Hair Cell (Tế bào lông hút ở rễ)",
-      "selector": "#sec-cell-roothair",
-      "en": "Root hair cells are located at the root epidermis of plants. They feature a long slender cytoplasmic projection that dramatically increases the surface area to volume ratio for rapid uptake of water by osmosis and mineral ions by active transport.",
-      "vi": "Tế bào lông hút nằm ở lớp biểu bì rễ cây. Tế bào có phần bào tương kéo dài thành sợi lông dài giúp tăng diện tích tiếp xúc với đất lên gấp nhiều lần, tối ưu hóa tốc độ hấp thụ nước bằng thẩm thấu và ion khoáng bằng vận chuyển chủ động.",
-      "duration": 29.32,
-      "startTime": 524.31,
-      "endTime": 553.63,
-      "audioUrl": "/audio/lectures/science/b2/sec_cell_roothair.mp3"
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🌱 Root Hair Cell. Location: Root epidermis. Adaptation: Long slender extension provides a huge surface-area-to-volume ratio for rapid absorption of water (osmosis) and mineral ions (active transport).",
+      "vi": "🌱 Root Hair Cell (Tế bào lông hút ở rễ). Location: Root epidermis. Thích nghi (Adaptation): Phần kéo dài mảnh làm tăng diện tích bề mặt (surface area) giúp tăng tốc độ hút nước (thẩm thấu) và ion khoáng (vận chuyển chủ động); không có lục lạp vì ở dưới đất.",
+      "duration": 36.06,
+      "startTime": 1516.34,
+      "endTime": 1552.4,
+      "audioUrl": "/audio/lectures/science/b2/s03_b06.mp3"
     },
     {
-      "id": "sec_cell_xylem",
-      "title": "🪵 Xylem Vessel (Mạch gỗ)",
-      "selector": "#sec-cell-xylem",
-      "en": "Xylem vessels are elongated, dead tubular cells with no end walls, forming a continuous hollow lumen. Their walls are heavily thickened and reinforced with waterproof lignin, allowing them to transport water and dissolved ions under extreme tension while providing mechanical support.",
-      "vi": "Mạch gỗ gồm các tế bào chết hình ống kéo dài, không có vách ngăn ngang, tạo thành một đường ống rỗng liên tục. Thành mạch được tẩm chất gỗ lignin không thấm nước dày chắc, giúp dẫn dòng nước và khoáng chất dưới lực căng thoát hơi nước và nâng đỡ thân cây.",
-      "duration": 32.06,
-      "startTime": 553.63,
-      "endTime": 585.69,
-      "audioUrl": "/audio/lectures/science/b2/sec_cell_xylem.mp3"
+      "id": "s03_b07",
+      "title": "🪵 Xylem Vessel (Mạch gỗ — Liên hệ Vận chuyển Thực vật)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "🪵 Xylem Vessel (Plant Transport Link). Location: Stems, roots, leaves. Adaptation: Dead hollow tubes with no end walls, reinforced with waterproof lignin; transports water/ions under tension and provides mechanical support.",
+      "vi": "🪵 Xylem Vessel (Mạch gỗ — Liên hệ Vận chuyển Thực vật). Location: Stems, roots, leaves. Thích nghi (Adaptation): Ống rỗng gồm các tế bào chết tiêu biến vách ngăn hai đầu, thành gia cố chất gỗ lignin không thấm nước giúp dẫn nước/khoáng liên tục và nâng đỡ thân cây.",
+      "duration": 38.04,
+      "startTime": 1552.4,
+      "endTime": 1590.44,
+      "audioUrl": "/audio/lectures/science/b2/s03_b07.mp3"
     },
     {
-      "id": "sec_cell_palisade",
-      "title": "☀️ Palisade Mesophyll Cell (Tế bào mô giậu)",
-      "selector": "#sec-cell-palisade",
-      "en": "Palisade mesophyll cells are located in the upper layer of leaves beneath the upper epidermis. They are tall, columnar cells tightly packed with numerous chloroplasts to absorb the maximum amount of light energy for photosynthesis.",
-      "vi": "Tế bào mô giậu nằm ở lớp trên của lá cây ngay dưới lớp biểu bì trên. Tế bào có hình trụ thuôn dài xếp khít nhau và chứa mật độ lục lạp dày đặc nhất, nhằm hấp thu tối đa lượng ánh sáng mặt trời cho quá trình quang hợp.",
-      "duration": 26.78,
-      "startTime": 585.69,
-      "endTime": 612.47,
-      "audioUrl": "/audio/lectures/science/b2/sec_cell_palisade.mp3"
+      "id": "s03_b08",
+      "title": "☀️ Palisade Mesophyll Cell (Tế bào mô giậu ở lá)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "☀️ Palisade Mesophyll Cell. Location: Upper layer of leaves. Adaptation: Columnar, vertically packed with abundant chloroplasts to capture maximum sunlight for photosynthesis.",
+      "vi": "☀️ Palisade Mesophyll Cell (Tế bào mô giậu ở lá). Location: Upper layer of leaves. Thích nghi (Adaptation): Hình trụ xếp sát nhau thẳng đứng ngay dưới biểu bì trên của lá, chứa rất nhiều lục lạp (chloroplasts) để hấp thụ tối đa ánh sáng cho quang hợp.",
+      "duration": 32.4,
+      "startTime": 1590.44,
+      "endTime": 1622.84,
+      "audioUrl": "/audio/lectures/science/b2/s03_b08.mp3"
     },
     {
-      "id": "sec_cell_rbc",
+      "id": "s03_b09",
       "title": "🩸 Red Blood Cell (Tế bào hồng cầu)",
-      "selector": "#sec-cell-rbc",
-      "en": "Red blood cells, or erythrocytes, are adapted for efficient oxygen transport. Their biconcave disc shape provides a large surface area for gas diffusion. Crucially, mature red blood cells have no nucleus, maximizing intracellular space to pack millions of hemoglobin molecules.",
-      "vi": "Tế bào hồng cầu chuyên trách vận chuyển oxy trong máu. Hình dạng đĩa lõm hai mặt giúp tăng diện tích bề mặt cho oxy khuếch tán. Đặc biệt, hồng cầu trưởng thành không có nhân để dành toàn bộ dung tích tế bào chứa hemoglobin gắn oxy.",
-      "duration": 34.07,
-      "startTime": 612.47,
-      "endTime": 646.54,
-      "audioUrl": "/audio/lectures/science/b2/sec_cell_rbc.mp3"
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🩸 Red Blood Cell (Erythrocyte). Location: Bloodstream. Adaptation: Biconcave disc shape increases surface area; contains haemoglobin; lacks a nucleus to maximize oxygen storage space.",
+      "vi": "🩸 Red Blood Cell (Tế bào hồng cầu). Location: Bloodstream. Thích nghi (Adaptation): Hình đĩa lõm hai mặt ( biconcave disc ) tăng tỷ lệ diện tích bề mặt giúp khuếch tán O₂ nhanh; chứa haemoglobin ; không có nhân (no nucleus) để dành tối đa không gian chứa haemoglobin.",
+      "duration": 36.36,
+      "startTime": 1622.84,
+      "endTime": 1659.2,
+      "audioUrl": "/audio/lectures/science/b2/s03_b09.mp3"
     },
     {
-      "id": "sec_cell_neurone",
-      "title": "⚡ Neurone (Tế bào thần kinh)",
-      "selector": "#sec-cell-neurone",
-      "en": "Neurones are adapted to transmit electrical nerve impulses across the body. They have a long cytoplasmic axon that transmits impulses over long distances, surrounded by an insulating fatty myelin sheath that speeds up electrical conduction.",
-      "vi": "Tế bào thần kinh được thích nghi để truyền các xung điện thần kinh khắp cơ thể. Tế bào có sợi trục dài dẫn truyền xung động đi xa, được bọc bởi bao myelin cách điện giúp tăng tốc độ truyền tín hiệu.",
-      "duration": 26.51,
-      "startTime": 646.54,
-      "endTime": 673.05,
-      "audioUrl": "/audio/lectures/science/b2/sec_cell_neurone.mp3"
+      "id": "s03_b10",
+      "title": "⚡ Neurone / Nerve Cell (Tế bào thần kinh)",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "⚡ Neurone (Nerve Cell). Location: Nervous system. Adaptation: Long axon carries electrical impulses over long distances; myelin sheath provides electrical insulation and speeds transmission.",
+      "vi": "⚡ Neurone / Nerve Cell (Tế bào thần kinh). Location: Nervous system. Thích nghi (Adaptation): Sợi trục ( axon ) rất dài dẫn truyền xung điện (electrical impulses) đi xa khắp cơ thể; bao myelin cách điện giúp tăng tốc độ truyền xung.",
+      "duration": 32.99,
+      "startTime": 1659.2,
+      "endTime": 1692.19,
+      "audioUrl": "/audio/lectures/science/b2/s03_b10.mp3"
     },
     {
-      "id": "sec_magnification",
-      "title": "4. Công thức Độ phóng đại (I = A × M)",
-      "selector": "#sec-magnification",
-      "en": "Section 4 covers microscopy calculations using the formula triangle I = A × M, where Image size equals Actual size multiplied by Magnification. Golden rules for Cambridge examinations: always measure the image with a ruler in millimetres, and remember that one millimetre equals one thousand micrometres. When calculating magnification, make sure Image and Actual sizes are converted to identical units.",
-      "vi": "Mục bốn hướng dẫn tính toán độ phóng đại qua tam giác công thức: I = A nhân M (Kích thước ảnh I bằng Kích thước thực tế A nhân Độ phóng đại M). Quy tắc sống còn trong bài thi Cambridge: Luôn đo ảnh bằng thước theo đơn vị milimét, và nhớ rằng 1 milimét bằng 1000 micromét. Khi tính độ phóng đại, phải quy đổi I và A về cùng một đơn vị đo.",
-      "duration": 40.58,
-      "startTime": 673.05,
-      "endTime": 713.63,
-      "audioUrl": "/audio/lectures/science/b2/sec_magnification.mp3"
+      "id": "s03_b11",
+      "title": "🏊 Sperm Cell (Tinh trùng — Giao tử đực)",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "🏊 Sperm Cell (Male Gamete). Function: Reproduction — swims to and fertilises the egg cell. Adaptations: Long flagellum (tail) for swimming; mid-piece packed with mitochondria to release energy for movement; acrosome tip with enzymes to digest the egg jelly coat; haploid nucleus.",
+      "vi": "🏊 Sperm Cell (Tinh trùng — Giao tử đực). Chức năng: Bơi đến thụ tinh cho tế bào trứng (Reproduction). Thích nghi (Adaptation): Đuôi dài ( flagellum ) giúp bơi; cổ chứa nhiều ti thể (mitochondria) giải phóng năng lượng cho vận động; túi acrosome ở đầu chứa enzyme phân giải lớp vỏ thạch của trứng; nhân đơn bội (haploid nucleus).",
+      "duration": 45.37,
+      "startTime": 1692.19,
+      "endTime": 1737.56,
+      "audioUrl": "/audio/lectures/science/b2/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "🥚 Egg Cell / Ovum (Tế bào trứng — Giao tử cái)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "🥚 Egg Cell / Ovum (Female Gamete). Function: Reproduction — fuses with sperm nucleus to form a zygote. Adaptations: Cytoplasm contains a rich energy & nutrient store for early embryo cell division; outer jelly coat changes after fertilisation to block entry of extra sperm; haploid nucleus.",
+      "vi": "🥚 Egg Cell / Ovum (Tế bào trứng — Giao tử cái). Chức năng: Kết hợp với nhân tinh trùng tạo hợp tử (Reproduction). Thích nghi (Adaptation): Tế bào chất giàu dự trữ năng lượng & dinh dưỡng (energy store) nuôi phôi giai đoạn đầu; lớp vỏ thạch (jelly coat) biến đổi cứng lại ngay sau khi thụ tinh để ngăn các tinh trùng khác xâm nhập.",
+      "duration": 46.05,
+      "startTime": 1737.56,
+      "endTime": 1783.61,
+      "audioUrl": "/audio/lectures/science/b2/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "🏗️ Các Cấp độ Tổ chức Cơ thể Đa bào — Levels of Organisation (B2.1.7 Core)",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "🏗️ Hierarchical Levels of Organisation (Syllabus B2.1.7 Core). In multicellular plants and animals, specialised cells are organised into increasingly complex functional levels:",
+      "vi": "🏗️ Các Cấp độ Tổ chức Cơ thể Đa bào — Levels of Organisation (B2.1.7 Core). Ở động vật và thực vật đa bào, các tế bào chuyên biệt phối hợp theo 5 cấp độ tăng dần:",
+      "duration": 25.15,
+      "startTime": 1783.61,
+      "endTime": 1808.76,
+      "audioUrl": "/audio/lectures/science/b2/s03_b13.mp3"
+    },
+    {
+      "id": "s03_b14",
+      "title": "1. Cell (Tế bào)",
+      "selector": "[data-lecture-section=\"s03_b14\"]",
+      "en": "1. Cell Basic structural and functional unit of a living organism. e.g. palisade cell, muscle cell, ciliated cell .",
+      "vi": "1. Cell (Tế bào) Đơn vị cấu trúc và chức năng cơ bản nhất của cơ thể sống. VD: palisade cell, muscle cell .",
+      "duration": 19.62,
+      "startTime": 1808.76,
+      "endTime": 1828.38,
+      "audioUrl": "/audio/lectures/science/b2/s03_b14.mp3"
+    },
+    {
+      "id": "s03_b15",
+      "title": "2. Tissue (Mô)",
+      "selector": "[data-lecture-section=\"s03_b15\"]",
+      "en": "2. Tissue A group of cells with similar structures , working together to perform a shared function . e.g. palisade mesophyll, muscular tissue, ciliated epithelium .",
+      "vi": "2. Tissue (Mô) Tập hợp các tế bào có cấu trúc giống nhau cùng thực hiện một chức năng chung . VD: mô giậu, mô cơ, mô biểu mô lông rung .",
+      "duration": 23.87,
+      "startTime": 1828.38,
+      "endTime": 1852.25,
+      "audioUrl": "/audio/lectures/science/b2/s03_b15.mp3"
+    },
+    {
+      "id": "s03_b16",
+      "title": "3. Organ (Cơ quan)",
+      "selector": "[data-lecture-section=\"s03_b16\"]",
+      "en": "3. Organ A structure made up of a group of tissues , working together to perform specific functions. e.g. plant leaf, root, heart, stomach, brain .",
+      "vi": "3. Organ (Cơ quan) Cấu trúc gồm nhiều loại mô khác nhau phối hợp thực hiện các chức năng xác định. VD: lá cây (leaf), rễ, tim, dạ dày .",
+      "duration": 24.29,
+      "startTime": 1852.25,
+      "endTime": 1876.54,
+      "audioUrl": "/audio/lectures/science/b2/s03_b16.mp3"
+    },
+    {
+      "id": "s03_b17",
+      "title": "4. Organ System (Hệ cơ quan)",
+      "selector": "[data-lecture-section=\"s03_b17\"]",
+      "en": "4. Organ System A group of organs with related functions , working together to perform body functions. e.g. digestive, circulatory, nervous, shoot system .",
+      "vi": "4. Organ System (Hệ cơ quan) Nhóm các cơ quan có chức năng liên quan cùng thực hiện hoạt động cơ thể. VD: hệ tiêu hóa, hệ tuần hoàn, hệ thần kinh .",
+      "duration": 24.24,
+      "startTime": 1876.54,
+      "endTime": 1900.78,
+      "audioUrl": "/audio/lectures/science/b2/s03_b17.mp3"
+    },
+    {
+      "id": "s03_b18",
+      "title": "5. Organism (Cơ thể)",
+      "selector": "[data-lecture-section=\"s03_b18\"]",
+      "en": "5. Organism A complete, self-sustaining individual living thing formed by coordinated organ systems. e.g. human, flowering bean plant .",
+      "vi": "5. Organism (Cơ thể) Cơ thể sinh vật sống hoàn chỉnh, độc lập tạo bởi sự phối hợp của các hệ cơ quan. VD: con người, cây đậu .",
+      "duration": 21.82,
+      "startTime": 1900.78,
+      "endTime": 1922.6,
+      "audioUrl": "/audio/lectures/science/b2/s03_b18.mp3"
+    },
+    {
+      "id": "s03_b19",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b19\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which statement correctly explains why a mammalian red blood cell has no nucleus, and identifies the level of organisation of whole blood? A. So it can squeeze through capillaries; blood is an organ B. To leave more room for haemoglobin to carry oxygen; blood is a tissue C. To prevent the cell from respiring oxygen; blood is an organ system D. To increase surface area for osmosis; blood is a single specialised cell ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Lacking a nucleus frees up internal cytoplasm volume to pack millions more haemoglobin molecules for oxygen transport. Blood consists of cells in plasma performing shared transport/defence functions, so it is classified as a tissue (while the heart and arteries are organs).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which statement correctly explains why a mammalian red blood cell has no nucleus, and identifies the level of organisation of whole blood? (Phát biểu nào giải thích đúng lý do hồng cầu thú không có nhân và xác định đúng cấp độ tổ chức của máu?) A. So it can squeeze through capillaries; blood is an organ B. To leave more room for haemoglobin to carry oxygen; blood is a tissue C. To prevent the cell from respiring oxygen; blood is an organ system D. To increase surface area for osmosis; blood is a single specialised cell ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Việc tiêu biến nhân (no nucleus) giúp hồng cầu tăng tối đa thể tích bên trong để chứa thêm hàng triệu phân tử haemoglobin vận chuyển oxy. Máu gồm các tế bào máu trong huyết tương cùng thực hiện chức năng vận chuyển/bảo vệ nên thuộc cấp độ mô (tissue) .",
+      "duration": 118.25,
+      "startTime": 1922.6,
+      "endTime": 2040.85,
+      "audioUrl": "/audio/lectures/science/b2/s03_b19.mp3"
+    },
+    {
+      "id": "s03_b20",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b20\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [5 marks] (a) Describe two ways in which a human sperm cell and one way in which an egg cell are adapted for fertilisation and early development. [3] (b) Define the term tissue and explain why the stomach is classified as an organ . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Sperm (any two): has a flagellum (tail) to swim to the egg / many mitochondria releasing energy for swimming / acrosome containing enzymes to digest the egg coat [2m] . Egg (any one): large energy store in cytoplasm for early embryo growth OR jelly coat that hardens after fertilisation to stop multiple sperm entering [1m] . (b) A tissue is a group of cells with similar structures working together to perform a shared function [1m] . The stomach is an organ because it consists of several different tissues (muscular, epithelial/glandular, nervous) working together to digest food [1m] . 💡 Intuition Check: For 0654 B2.1.6, make sure you know all six specialised cell groups including BOTH gametes (sperm and egg)!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3 / Paper 4 Structured [5 marks] (a) Describe two ways in which a human sperm cell and one way in which an egg cell are adapted for fertilisation and early development. (Mô tả hai đặc điểm thích nghi của tinh trùng và một đặc điểm thích nghi của tế bào trứng cho sự thụ tinh và phát triển phôi sớm.) (b) Define the term tissue and explain why the stomach is classified as an organ . (Định nghĩa thuật ngữ \"mô\" và giải thích tại sao dạ dày được xếp vào cấp độ \"cơ quan\".) ✍️ Lời giải chi tiết theo thang điểm: (a) Sperm cell (chọn 2): có đuôi dài (flagellum) để bơi tới trứng / có nhiều ti thể (mitochondria) giải phóng năng lượng cho bơi lội / có túi enzyme acrosome tiêu hủy vỏ thạch của trứng . Egg cell (chọn 1): tế bào chất chứa nguồn dự trữ năng lượng lớn (energy store) nuôi phôi sớm HOẶC có vỏ thạch (jelly coat) hóa cứng sau thụ tinh ngăn đa tinh trùng . (b) Tissue : một nhóm các tế bào có cấu trúc tương tự nhau cùng phối hợp thực hiện một chức năng chung . Dạ dày là organ vì được cấu tạo từ nhiều loại mô khác nhau (mô cơ co bóp, mô biểu mô tuyến tiết acid/enzyme, mô thần kinh) cùng tiêu hóa thức ăn . 💡 Kiểm tra bản chất: Trong đề 0654 B2.1.6, giao tử đực và cái nằm ngay trong phần Core — hãy nắm vững cả hai!",
+      "duration": 165.54,
+      "startTime": 2040.85,
+      "endTime": 2206.39,
+      "audioUrl": "/audio/lectures/science/b2/s03_b20.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "4. Specimen Calculations: Magnification Formula (Công thức Độ phóng đại I = A × M)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🟦 CORE 🟩 SUPPLEMENT 4. Specimen Calculations: The Magnification Formula (I = A × M).",
+      "vi": "🟦 CORE 🟩 SUPPLEMENT 4. Specimen Calculations: Magnification Formula (Công thức Độ phóng đại I = A × M).",
+      "duration": 11.56,
+      "startTime": 2206.39,
+      "endTime": 2217.95,
+      "audioUrl": "/audio/lectures/science/b2/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Magnification works just like map scale in reverse: if a tiny 8 μm cell is blown up onto an exam page so your ruler measures 40 mm , you must convert 40 mm into 40 000 μm first — otherwise dividing 40 by 8 pretends millimetres and micrometres are the same size!",
+      "vi": "🎯 Hình dung đời thường: Tính độ phóng đại giống hệt đọc tỉ lệ bản đồ ngược: nếu một tế bào thật chỉ rộng 8 μm được phóng to trên giấy thi thành 40 mm , bạn BẮT BUỘC phải đổi 40 mm = 40 000 μm trước khi chia — nếu lấy 40 ÷ 8 ngay tức là bạn đang coi milimét bằng micromét!",
+      "duration": 42.03,
+      "startTime": 2217.95,
+      "endTime": 2259.98,
+      "audioUrl": "/audio/lectures/science/b2/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Use the 3-step Cambridge Calculation Protocol ( B2.2.1–B2.2.3 ):1. Measure Image size I with a ruler in millimetres ( mm ) (never cm!).2. Match units (Supplement): 1 mm = 1000 μm ( mm → μm : × 1000 ; μm → mm : ÷ 1000 ).3. Calculate M = I ÷ A (write × prefix, no units ) or A = I ÷ M .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Quy trình 3 bước đạt trọn điểm bài toán phóng đại ( B2.2.1–B2.2.3 ):1. Dùng thước đo ảnh I bằng đơn vị milimét ( mm ) (không đo theo cm!).2. Đồng nhất đơn vị (Supplement): 1 mm = 1000 μm (đổi mm → μm thì nhân 1000 ; đổi μm → mm thì chia 1000 ).3. Áp dụng M = I ÷ A (ghi dấu × phía trước, không có đơn vị ) hoặc A = I ÷ M .",
+      "duration": 65.41,
+      "startTime": 2259.98,
+      "endTime": 2325.39,
+      "audioUrl": "/audio/lectures/science/b2/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never leave Magnification with units like \"mm\" or \"µm\" (magnification is a pure ratio written as × 500 ), and NEVER measure the diagram in centimetres unless you immediately multiply by 10 to get millimetres!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi mất trắng điểm tính toán: (1) ghi đơn vị \"mm\" hoặc \"µm\" vào sau độ phóng đại M ; (2) đo kích thước bằng cm hoặc quên nhân 1000 khi đổi từ mm sang μm !",
+      "duration": 32.11,
+      "startTime": 2325.39,
+      "endTime": 2357.5,
+      "audioUrl": "/audio/lectures/science/b2/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Quy tắc Vàng khi tính Độ phóng đại Cambridge (B2.2):",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "I = A × M Magnification = Image size ÷ Actual sizeActual size = Image size ÷ Magnification Golden Rules for Cambridge Calculations: Always measure the image size ( I ) in millimetres (mm) using a ruler. Unit Conversion (Supplement): 1 mm = 1000 µm.• To convert mm → µm: Multiply by 1000 .• To convert µm → mm: Divide by 1000. Ensure I and A have the same units before calculating M . Magnification has no units (e.g. × 400).",
+      "vi": "I = A × M Magnification = Image size ÷ Actual sizeActual size = Image size ÷ Magnification Quy tắc Vàng khi tính Độ phóng đại Cambridge (B2.2): Luôn đo kích thước ảnh ( I ) trên đề bài bằng đơn vị milimét (mm) (tuyệt đối không để cm!). Unit Conversion (Supplement): 1 mm = 1000 µm.• To convert mm → µm: Multiply by 1000 .• To convert µm → mm: Divide by 1000. Bắt buộc đưa I và A về cùng một đơn vị trước khi chia! Độ phóng đại M không có đơn vị và luôn viết dấu nhân phía trước (VD: × 400).",
+      "duration": 83.7,
+      "startTime": 2357.5,
+      "endTime": 2441.2,
+      "audioUrl": "/audio/lectures/science/b2/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A photomicrograph of a root hair cell has a magnification of × 250. The image width of the root hair on the diagram measures 15 mm. What is the actual width of the root hair in micrometres (µm)? A. 0.06 µm B. 6.0 µm C. 60 µm D. 3750 µm ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Step 1: Convert image width from mm to µm: I = 15 mm × 1000 = 15 000 μm .Step 2: Calculate actual width: A = I ÷ M = 15 000 μm ÷ 250 = 60 μm .(Option A forgot to convert mm to µm, getting 0.06 mm; Option D multiplied 15 × 250 !)",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A photomicrograph of a root hair cell has a magnification of × 250. The image width of the root hair on the diagram measures 15 mm. What is the actual width of the root hair in micrometres (µm)? (Ảnh chụp hiển vi của tế bào lông hút có độ phóng đại × 250. Chiều rộng ảnh đo được trên hình là 15 mm. Chiều rộng thực tế của lông hút theo µm là bao nhiêu?) A. 0.06 µm B. 6.0 µm C. 60 µm D. 3750 µm ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Bước 1: Đổi kích thước ảnh từ mm sang µm: I = 15 mm × 1000 = 15 000 μm .Bước 2: Tính kích thước thật: A = I ÷ M = 15 000 μm ÷ 250 = 60 μm .(Đáp án A quên nhân 1000 nên ra 0.06 mm; đáp án D nhân ngược 15 × 250 !)",
+      "duration": 129.38,
+      "startTime": 2441.2,
+      "endTime": 2570.58,
+      "audioUrl": "/audio/lectures/science/b2/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "72 mm",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 / Paper 6 Calculation [3 marks] A student draws a diagram of a palisade mesophyll cell. The length of the drawing is 72 mm . The actual length of the living cell is 0.09 mm ( 90 μm ). (a) Calculate the magnification of the student's drawing. [2] (b) A chloroplast inside the same cell has an actual length of 5 μm . Convert 5 μm into millimetres ( mm ). [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Using matching millimetre units: Magnification (M) = Image size (I) ÷ Actual size (A) = 72 mm ÷ 0.09 mm [1m] = × 800 (or 72 000 μm ÷ 90 μm = × 800 ) [1m] . (b) Divide micrometres by 1000: 5 ÷ 1000 = 0.005 mm [1m] . 💡 Intuition Check: Check whether your answer is realistic: plant cells are typically 40–100 µm long, animal cells 10–30 µm, and bacteria 1–5 µm!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 / Paper 6 Calculation [3 marks] A student draws a diagram of a palisade mesophyll cell. The length of the drawing is 72 mm . The actual length of the living cell is 0.09 mm ( 90 μm ). Tính độ phóng đại của hình vẽ. (b) A chloroplast inside the same cell has an actual length of 5 μm . Convert 5 μm into millimetres ( mm ). (Đổi chiều dài thực 5 µm của lục lạp sang đơn vị mm.) ✍️ Lời giải chi tiết theo thang điểm: (a) Cùng đơn vị mm: Magnification (M) = Image size (I) ÷ Actual size (A) = 72 mm ÷ 0.09 mm = × 800 (hoặc 72 000 μm ÷ 90 μm = × 800 , không ghi đơn vị) . (b) Chia số micromét cho 1000: 5 ÷ 1000 = 0.005 mm . 💡 Kiểm tra bản chất: Kiểm tra hợp lý sinh học: tế bào thực vật thường dài khoảng 40–100 µm, lục lạp khoảng 5 µm, hồng cầu khoảng 7.5 µm!",
+      "duration": 162.27,
+      "startTime": 2570.58,
+      "endTime": 2732.85,
+      "audioUrl": "/audio/lectures/science/b2/s04_b06.mp3"
     }
   ]
 }

@@ -1,200 +1,269 @@
 {
   "lectureId": "757409b3-5cec-4e1f-8877-18d81e440103",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B4: Biological molecules",
-  "totalDuration": 440.09,
+  "totalDuration": 1552.7,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_biomolecules": {
-      "start": 1,
-      "end": 4
-    },
-    "sec-biomolecules": {
-      "start": 1,
-      "end": 4
-    },
-    "sec_carbohydrates": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-carbohydrates": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_lipids": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-lipids": {
-      "start": 3,
-      "end": 3
-    },
-    "sec_proteins": {
-      "start": 4,
       "end": 4
     },
-    "sec-proteins": {
-      "start": 4,
-      "end": 4
+    "s01_wex": {
+      "start": 10,
+      "end": 11
     },
-    "sec_food_tests": {
-      "start": 5,
-      "end": 9
+    "s01_hdr": {
+      "start": 1,
+      "end": 11
     },
-    "sec-food-tests": {
-      "start": 5,
-      "end": 9
+    "s02_int": {
+      "start": 13,
+      "end": 15
     },
-    "sec_test_starch": {
-      "start": 6,
-      "end": 6
+    "s02_wex": {
+      "start": 19,
+      "end": 20
     },
-    "sec-test-starch": {
-      "start": 6,
-      "end": 6
-    },
-    "sec_test_sugar": {
-      "start": 7,
-      "end": 7
-    },
-    "sec-test-sugar": {
-      "start": 7,
-      "end": 7
-    },
-    "sec_test_protein": {
-      "start": 8,
-      "end": 8
-    },
-    "sec-test-protein": {
-      "start": 8,
-      "end": 8
-    },
-    "sec_test_lipid": {
-      "start": 9,
-      "end": 9
-    },
-    "sec-test-lipid": {
-      "start": 9,
-      "end": 9
+    "s02_hdr": {
+      "start": 12,
+      "end": 20
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B4: Các Phân tử Sinh học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B4: Biological Molecules. All living organisms are constructed from organic biomolecules: carbohydrates, lipids, proteins, and nucleic acids. In this lesson, we master their chemical composition, building blocks, and the qualitative food tests used to detect them.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B4: Các phân tử sinh học. Mọi sinh vật sống đều được cấu tạo từ các đại phân tử hữu cơ: carbohydrate, lipid, protein và acid nucleic. Trong bài học này, chúng ta sẽ nắm vững thành phần hóa học, đơn phân cấu tạo và các phản ứng thử nghiệm định tính phát hiện dinh dưỡng.",
-      "duration": 42.38,
+      "title": "Biological Molecules (Các đại phân tử sinh học)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B4 • Biochemistry (Core) Biological Molecules. Cambridge IGCSE Co-ordinated Sciences (0654) • Carbohydrates, Fats & Oils, Proteins & Qualitative Food Tests.",
+      "vi": "Topic B4 • Song Ngữ Anh - Việt (Core) Biological Molecules (Các đại phân tử sinh học). Cambridge IGCSE Co-ordinated Sciences (0654) • Carbohydrate, Chất béo & Dầu, Protein & 4 Phép thử Thực phẩm.",
+      "duration": 36.03,
       "startTime": 0.0,
-      "endTime": 42.38,
+      "endTime": 36.03,
       "audioUrl": "/audio/lectures/science/b4/intro.mp3"
     },
     {
-      "id": "sec_biomolecules",
-      "title": "1. Nguyên tố Hóa học & Đơn vị Cấu tạo (Biomolecules Overview)",
-      "selector": "#sec-biomolecules",
-      "en": "Section 1 examines the chemical elements and structural units of biomolecules. Carbohydrates and lipids contain Carbon, Hydrogen, and Oxygen. Proteins additionally contain Nitrogen and some Sulfur. DNA contains Carbon, Hydrogen, Oxygen, Nitrogen, and Phosphorus.",
-      "vi": "Mục một khảo sát các nguyên tố hóa học và đơn vị cấu tạo của các phân tử sinh học. Carbohydrate và lipid chứa Carbon, Hydro và Oxy. Protein có thêm Nitơ và một số chứa Lưu huỳnh. Phân tử DNA chứa Carbon, Hydro, Oxy, Nitơ và Photpho.",
-      "duration": 90.42,
-      "startTime": 42.38,
-      "endTime": 132.8,
-      "audioUrl": "/audio/lectures/science/b4/sec_biomolecules.mp3"
+      "id": "s01_hdr",
+      "title": "1. Nguyên tố Hóa học & Đơn vị Cấu tạo (B4.1.1 – B4.1.2)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 1. Chemical Elements & Building Blocks (B4.1.1 – B4.1.2).",
+      "vi": "🟦 CORE 1. Nguyên tố Hóa học & Đơn vị Cấu tạo (B4.1.1 – B4.1.2).",
+      "duration": 8.4,
+      "startTime": 36.03,
+      "endTime": 44.43,
+      "audioUrl": "/audio/lectures/science/b4/s01_hdr.mp3"
     },
     {
-      "id": "sec_carbohydrates",
-      "title": "🍞 Carbohydrates (Đường & Tinh bột)",
-      "selector": "#sec-carbohydrates",
-      "en": "Carbohydrates are composed of Carbon, Hydrogen, and Oxygen. Simple monomers like glucose are monosaccharides used immediately for respiration. Monomers bond together to form large insoluble storage polymers: starch in plants and glycogen in animals, or cellulose for plant cell walls.",
-      "vi": "Carbohydrate được cấu tạo từ Carbon, Hydro và Oxy. Các đơn phân đơn giản như glucose là monosaccharide được dùng ngay cho hô hấp tế bào. Các đơn phân liên kết lại tạo thành polymer dự trữ không tan: tinh bột ở thực vật và glycogen ở động vật, hoặc cellulose tạo thành tế bào thực vật.",
-      "duration": 38.54,
-      "startTime": 132.8,
-      "endTime": 171.34,
-      "audioUrl": "/audio/lectures/science/b4/sec_carbohydrates.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of biological molecules in 0654 as three modular building kits : repeating hexagonal bricks ( glucose ) build plant fuel stores ( starch ), animal fuel stores ( glycogen ), or rigid cell walls ( cellulose ). Fats and oils snap 3 fatty acids onto 1 glycerol backbone, while proteins string together chains of amino acids .",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung 3 nhóm chất sinh học trong môn 0654 như 3 bộ lắp ghép mô-đun : các viên gạch lục giác giống hệt nhau ( glucose ) ghép thành kho năng lượng của cây ( starch - tinh bột ), kho dự trữ ở gan và cơ động vật ( glycogen ), hoặc bức tường thành tế bào thực vật cứng cáp ( cellulose ). Trong khi đó, chất béo & dầu (fats & oils) gắn 3 đuôi axit béo (fatty acids) vào 1 trục glycerol , còn protein là chuỗi hạt gồm nhiều amino acids nối tiếp nhau.",
+      "duration": 59.93,
+      "startTime": 44.43,
+      "endTime": 104.36,
+      "audioUrl": "/audio/lectures/science/b4/s01_b01.mp3"
     },
     {
-      "id": "sec_lipids",
-      "title": "🥑 Fats & Oils / Lipids (Chất béo & Dầu)",
-      "selector": "#sec-lipids",
-      "en": "Lipids (fats and oils) are made of Carbon, Hydrogen, and Oxygen. Each lipid molecule is synthesised from one glycerol molecule chemically bonded to three fatty acid chains. Lipids provide high-density long-term energy storage, thermal insulation, and buoyancy.",
-      "vi": "Lipid (chất béo và dầu) cấu tạo từ Carbon, Hydro và Oxy. Mỗi phân tử chất béo được tổng hợp từ một phân tử glycerol liên kết hóa học với ba chuỗi acid béo. Chất béo giúp dự trữ năng lượng đậm đặc lâu dài, cách nhiệt giữ ấm cơ thể và tạo sức nổi.",
-      "duration": 36.02,
-      "startTime": 171.34,
-      "endTime": 207.36,
-      "audioUrl": "/audio/lectures/science/b4/sec_lipids.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Memorise chemical elements via CHO vs CHON : Carbohydrates & Fats/Oils contain C, H, O only; Proteins ALWAYS contain C, H, O, N (Nitrogen). 2) Match every large molecule in B4.1.2 to its exact smaller subunit: glucose → starch, glycogen, cellulose ; amino acids → proteins ; fatty acids + glycerol → fats & oils .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Mẹo nhớ nguyên tố CHO so với CHON : Carbohydrate và Chất béo chỉ chứa 3 nguyên tố C, H, O ; riêng Protein BẮT BUỘC có thêm Nitrogen (N) . 2) Khớp chính xác đơn phân với phân tử lớn theo chuẩn B4.1.2: glucose → starch, glycogen, cellulose ; amino acids → proteins ; fatty acids + glycerol → fats & oils .",
+      "duration": 60.4,
+      "startTime": 104.36,
+      "endTime": 164.76,
+      "audioUrl": "/audio/lectures/science/b4/s01_b02.mp3"
     },
     {
-      "id": "sec_proteins",
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never omit glycerol when asked what smaller molecules form fats and oils — writing \"fatty acids\" alone loses the mark! Also never confuse cellulose (structural cell wall) with starch (plant energy store).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không bỏ sót chữ glycerol khi đề hỏi đơn vị cấu tạo của chất béo và dầu (chỉ viết mỗi \"fatty acids\" sẽ mất điểm!). Đồng thời không được nhầm cellulose (cấu tạo thành tế bào) với starch (dự trữ năng lượng ở thực vật).",
+      "duration": 34.61,
+      "startTime": 164.76,
+      "endTime": 199.37,
+      "audioUrl": "/audio/lectures/science/b4/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Large molecules / Polymers",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Large biological molecules are built by joining smaller molecules together. For IGCSE 0654, focus strictly on these three groups, their chemical elements, and their subunits:",
+      "vi": "Các phân tử sinh học lớn được tạo thành bằng cách ghép các phân tử nhỏ lại với nhau. Trong chương trình Co-ordinated Sciences 0654 (mục B4.1 Core), đề thi tập trung xoáy sâu vào đúng 3 nhóm đại phân tử hữu cơ dưới đây (không thi cấu trúc DNA hay phép thử DCPIP như môn 0610 đơn lẻ). Bạn cần thuộc lòng chính xác từng nguyên tố hóa học và đơn vị cấu tạo cơ bản :",
+      "duration": 42.35,
+      "startTime": 199.37,
+      "endTime": 241.72,
+      "audioUrl": "/audio/lectures/science/b4/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "Starch",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Biological Molecule: 🍞 Carbohydrates; Chemical Elements (B4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Smaller Molecules (Subunits): Glucose; Large Molecules Formed (B4.1.2): Starch , Glycogen , Cellulose. Biological Molecule: 🥑 Fats & Oils; Chemical Elements (B4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Smaller Molecules (Subunits): Fatty acids + Glycerol; Large Molecules Formed (B4.1.2): Fats (solid) and Oils (liquid). Biological Molecule: 🥩 Proteins; Chemical Elements (B4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ), Nitrogen (N); Smaller Molecules (Subunits): Amino acids; Large Molecules Formed (B4.1.2): Proteins (e.g. enzymes, antibodies).",
+      "vi": "Nhóm phân tử: 🍞 Carbohydrates (Đường & Tinh bột); Nguyên tố hóa học (B4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Đơn vị nhỏ (Smaller molecules): Glucose (Đường đơn); Phân tử lớn tạo thành (B4.1.2): Starch (Tinh bột), Glycogen , Cellulose. Nhóm phân tử: 🥑 Fats & Oils (Chất béo & Dầu); Nguyên tố hóa học (B4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Đơn vị nhỏ (Smaller molecules): Fatty acids (Axit béo) + Glycerol; Phân tử lớn tạo thành (B4.1.2): Fats (Mỡ đặc) & Oils (Dầu lỏng). Nhóm phân tử: 🥩 Proteins (Chất đạm); Nguyên tố hóa học (B4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ), Nitrogen (N); Đơn vị nhỏ (Smaller molecules): Amino acids (Axit amin); Phân tử lớn tạo thành (B4.1.2): Proteins (vd: enzyme, kháng thể).",
+      "duration": 109.39,
+      "startTime": 241.72,
+      "endTime": 351.11,
+      "audioUrl": "/audio/lectures/science/b4/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🍞 Carbohydrates",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🍞 Carbohydrates. Elements: C, H, O Smaller Molecules: Glucose (simple sugar). ⬇️ Joins together to form ⬇️ Large Molecules: Starch, Glycogen, Cellulose. Polysaccharide: Starch; Key Function to Recall: Insoluble glucose storage in plants (stored as granules in chloroplasts, tubers, and seeds). Polysaccharide: Glycogen; Key Function to Recall: Insoluble glucose storage in animals (stored mainly in the liver and muscles ). Polysaccharide: Cellulose; Key Function to Recall: Forms strong fibres in plant cell walls , giving rigidity and structural support to stems, roots, and leaves.",
+      "vi": "Left Info 🍞 Carbohydrates. Nguyên tố: C, H, O Đơn vị nhỏ (Smaller molecules): Glucose (Đường đơn). ⬇️ Liên kết tạo thành ⬇️ Phân tử lớn (Large molecules): Starch, Glycogen, Cellulose. Right SVG + Polysaccharide Functions Table Đa phân (Polysaccharide): Starch (Tinh bột); Chức năng trọng tâm cần nhớ: Dạng dự trữ glucose không tan ở thực vật (tích trữ trong lục lạp, củ và hạt). Đa phân (Polysaccharide): Glycogen; Chức năng trọng tâm cần nhớ: Dạng dự trữ glucose dư thừa ở động vật (tập trung chủ yếu ở gan - liver và cơ - muscle ). Đa phân (Polysaccharide): Cellulose; Chức năng trọng tâm cần nhớ: Thành phần chính của thành tế bào thực vật , giúp rễ, thân, lá cứng cáp.",
+      "duration": 99.38,
+      "startTime": 351.11,
+      "endTime": 450.49,
+      "audioUrl": "/audio/lectures/science/b4/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "🥑 Fats & Oils (Lipids)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🥑 Fats & Oils (Lipids). Elements: C, H, O Smaller Molecules: Fatty acids + Glycerol. ⬇️ Joins together to form ⬇️ Large Molecules: Fats & Oils.",
+      "vi": "🥑 Fats & Oils (Lipids). Nguyên tố: C, H, O Đơn vị nhỏ (Smaller molecules): Fatty acids + Glycerol. ⬇️ Liên kết tạo thành ⬇️ Phân tử lớn (Large molecules): Fats (Mỡ) & Oils (Dầu).",
+      "duration": 30.98,
+      "startTime": 450.49,
+      "endTime": 481.47,
+      "audioUrl": "/audio/lectures/science/b4/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
       "title": "🥩 Proteins (Chất đạm)",
-      "selector": "#sec-proteins",
-      "en": "Proteins are composed of Carbon, Hydrogen, Oxygen, and Nitrogen, with some containing sulfur. They are polymers of 20 different amino acids joined by peptide bonds. The specific sequence of amino acids folds into a precise 3D shape, enabling proteins to function as enzymes, antibodies, hemoglobin, and keratin.",
-      "vi": "Protein được cấu tạo từ Carbon, Hydro, Oxy và Nitơ, một số chứa lưu huỳnh. Chúng là polymer của 20 loại amino acid khác nhau nối với nhau bằng liên kết peptide. Trình tự amino acid đặc thù sẽ cuộn gập thành hình thể không gian 3 chiều chuẩn xác, giúp protein hoạt động như enzyme, kháng thể, hemoglobin hay keratin.",
-      "duration": 44.1,
-      "startTime": 207.36,
-      "endTime": 251.46,
-      "audioUrl": "/audio/lectures/science/b4/sec_proteins.mp3"
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🥩 Proteins. Elements: C, H, O, NITROGEN (N) Smaller Molecules: Amino acids. ⬇️ Joins together to form ⬇️ Large Molecules: Proteins.",
+      "vi": "🥩 Proteins (Chất đạm). Nguyên tố: C, H, O, NITROGEN (N) Đơn vị nhỏ (Smaller molecules): Amino acids (Axit amin). ⬇️ Liên kết tạo thành ⬇️ Phân tử lớn (Large molecules): Proteins.",
+      "duration": 30.84,
+      "startTime": 481.47,
+      "endTime": 512.31,
+      "audioUrl": "/audio/lectures/science/b4/s01_b08.mp3"
     },
     {
-      "id": "sec_food_tests",
-      "title": "2. Thí nghiệm 4 Phép thử Thực phẩm (Qualitative Food Tests)",
-      "selector": "#sec-food-tests",
-      "en": "Section 2 presents qualitative food tests examined in Cambridge Paper 4 and Paper 6. Remember each specific reagent, temperature requirement, and diagnostic color change.",
-      "vi": "Mục hai trình bày các thí nghiệm định tính dinh dưỡng thường xuất hiện trong đề thi Paper 4 và Paper 6 của Cambridge. Hãy ghi nhớ thuốc thử, điều kiện nhiệt độ và màu sắc chỉ thị chuẩn xác của từng phép thử.",
-      "duration": 80.99,
-      "startTime": 251.46,
-      "endTime": 332.45,
-      "audioUrl": "/audio/lectures/science/b4/sec_food_tests.mp3"
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ Which statement about large biological molecules and their chemical elements is correct? A. Glycogen is synthesised from amino acids and contains carbon, hydrogen, oxygen, and nitrogen. B. Cellulose and starch are both synthesised from glucose and contain carbon, hydrogen, and oxygen only. C. Fats are synthesised from glucose and glycerol and contain carbon, hydrogen, and oxygen. D. Proteins are synthesised from fatty acids and contain carbon, hydrogen, oxygen, and nitrogen. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Starch , glycogen , and cellulose are all large carbohydrates made from glucose monomers containing only C, H, O (Option B). Glycogen is a carbohydrate, not a protein (eliminates A); fats are made from fatty acids and glycerol , not glucose (eliminates C); proteins are made from amino acids , not fatty acids (eliminates D).",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ Which statement about large biological molecules and their chemical elements is correct? (Phát biểu nào sau đây về các đại phân tử sinh học và thành phần nguyên tố hóa học của chúng là đúng?) A. Glycogen is synthesised from amino acids and contains carbon, hydrogen, oxygen, and nitrogen. B. Cellulose and starch are both synthesised from glucose and contain carbon, hydrogen, and oxygen only. C. Fats are synthesised from glucose and glycerol and contain carbon, hydrogen, and oxygen. D. Proteins are synthesised from fatty acids and contain carbon, hydrogen, oxygen, and nitrogen. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Cả starch (tinh bột) , glycogen và cellulose đều là đại phân tử carbohydrate được trùng hợp từ đơn phân glucose và chỉ chứa 3 nguyên tố C, H, O (Đáp án B). Câu A sai vì glycogen là carbohydrate (không chứa N hay amino acid); câu C sai vì chất béo tạo từ fatty acids + glycerol chứ không phải glucose; câu D sai vì đơn phân của protein là amino acids .",
+      "duration": 151.1,
+      "startTime": 512.31,
+      "endTime": 663.41,
+      "audioUrl": "/audio/lectures/science/b4/s01_b09.mp3"
     },
     {
-      "id": "sec_test_starch",
-      "title": "🍞 1. Iodine Test for Starch",
-      "selector": "#sec-test-starch",
-      "en": "Starch: Add drops of iodine solution directly at room temperature. Initial color is yellow-brown. A positive result turns blue-black.",
-      "vi": "Tinh bột: Nhỏ trực tiếp vài giọt dung dịch iod ở nhiệt độ phòng. Màu ban đầu là vàng nâu. Phản ứng dương tính sẽ chuyển thành màu xanh đen đặc trưng.",
-      "duration": 20.99,
-      "startTime": 332.45,
-      "endTime": 353.44,
-      "audioUrl": "/audio/lectures/science/b4/sec_test_starch.mp3"
+      "id": "s01_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] (a) Name the chemical element found in all proteins that is absent from carbohydrates and fats. [1](b) Complete the subunit pairs: (i) amino acids join to form ________; (ii) ________ and ________ join to form fats and oils; (iii) glucose units join in animal liver cells to form ________. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Nitrogen (accept N) [1m]. (b)(i) Proteins [1m]; (b)(ii) Fatty acids and glycerol (both required) [1m]; (b)(iii) Glycogen [1m]. 💡 Intuition Check: Check whether the organism is a plant (stores starch, builds cellulose walls) or an animal (stores glycogen in liver and muscle) before naming a glucose polymer!",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] (a) Name the chemical element found in all proteins that is absent from carbohydrates and fats. (b) Complete the subunit pairs: (i) amino acids join to form ________; (ii) ________ and ________ join to form fats and oils; (iii) glucose units join in animal liver cells to form ________. ((a) Nêu tên nguyên tố hóa học luôn có trong mọi protein nhưng không có ở carbohydrate và chất béo. (b) Điền từ thích hợp: (i) các amino acid liên kết tạo thành ________; (ii) ________ và ________ kết hợp tạo thành chất béo và dầu; (iii) các phân tử glucose liên kết trong tế bào gan động vật tạo thành ________. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Nitrogen (chấp nhận ký hiệu N) . (b)(i) Proteins (chất đạm) ; (b)(ii) Fatty acids (axit béo) và glycerol (bắt buộc nêu đủ cả hai) ; (b)(iii) Glycogen . 💡 Kiểm tra bản chất: Luôn gạch chân đối tượng sinh vật trong câu hỏi trước khi điền tên đa đường glucose: Thực vật dự trữ dưới dạng Starch (vách tế bào là Cellulose), còn Động vật dự trữ dưới dạng Glycogen ở gan và cơ!",
+      "duration": 187.87,
+      "startTime": 663.41,
+      "endTime": 851.28,
+      "audioUrl": "/audio/lectures/science/b4/s01_b10.mp3"
     },
     {
-      "id": "sec_test_sugar",
-      "title": "🍬 2. Benedict's Test for Reducing Sugars",
-      "selector": "#sec-test-sugar",
-      "en": "Reducing Sugars: Add Benedict's reagent and heat in a hot water bath at 80°C for 3 to 5 minutes. Initial color is blue. A positive result turns green, yellow, orange, and finally forms a brick-red precipitate.",
-      "vi": "Đường khử: Cho thuốc thử Benedict và đun cách thủy trong nồi nước nóng ở 80°C từ 3 đến 5 phút. Màu ban đầu là xanh lam. Khi có đường khử, dung dịch chuyển dần sang xanh lá, vàng, cam và kết tủa đỏ gạch.",
-      "duration": 31.58,
-      "startTime": 353.44,
-      "endTime": 385.02,
-      "audioUrl": "/audio/lectures/science/b4/sec_test_sugar.mp3"
+      "id": "s02_hdr",
+      "title": "2. Phòng Thí nghiệm 4 Phép thử Thực phẩm (B4.1.3)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE 2. Qualitative Food Tests Laboratory (B4.1.3).",
+      "vi": "🟦 CORE 2. Phòng Thí nghiệm 4 Phép thử Thực phẩm (B4.1.3).",
+      "duration": 8.42,
+      "startTime": 851.28,
+      "endTime": 859.7,
+      "audioUrl": "/audio/lectures/science/b4/s02_hdr.mp3"
     },
     {
-      "id": "sec_test_protein",
-      "title": "🥩 3. Biuret Test for Proteins",
-      "selector": "#sec-test-protein",
-      "en": "Proteins: Add Biuret reagent (potassium hydroxide followed by dilute copper sulfate) at room temperature. Initial color is pale blue. A positive result turns violet or purple.",
-      "vi": "Protein: Cho thuốc thử Biuret (dung dịch KOH và đồng sunfat loãng) ở nhiệt độ phòng. Màu ban đầu là xanh lam nhạt. Phản ứng dương tính sẽ chuyển sang màu tím hoặc tím hoa cà.",
-      "duration": 26.61,
-      "startTime": 385.02,
-      "endTime": 411.63,
-      "audioUrl": "/audio/lectures/science/b4/sec_test_protein.mp3"
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Treat the 4 food tests in B4.1.3 like a kitchen safety checklist: Benedict's test is the ONLY hot test (must heat in an ~80°C water bath to turn blue into brick-red!). Iodine, Biuret, and Ethanol Emulsion are all performed cold at room temperature.",
+      "vi": "🎯 Hình dung đời thường: Hãy coi 4 phép thử thực phẩm trong B4.1.3 giống như quy tắc bếp thí nghiệm: chỉ duy nhất phép thử Benedict cần đun nóng (đun cách thủy ~80°C để đổi màu xanh lam sang kết tủa đỏ gạch!). Ba phép thử Iodine, Biuret và Nhũ tương Ethanol đều tiến hành ở nhiệt độ phòng.",
+      "duration": 43.01,
+      "startTime": 859.7,
+      "endTime": 902.71,
+      "audioUrl": "/audio/lectures/science/b4/s02_b01.mp3"
     },
     {
-      "id": "sec_test_lipid",
-      "title": "🥑 4. Ethanol Emulsion Test for Fats & Oils",
-      "selector": "#sec-test-lipid",
-      "en": "Lipids: Dissolve sample in pure ethanol, shake well, then pour the liquid into cold water. Initial solution is clear and colourless. A positive result forms a cloudy white emulsion.",
-      "vi": "Lipid (Chất béo): Hòa tan mẫu thử vào cồn ethanol tinh khiết, lắc đều, sau đó rót dịch lọc vào nước lạnh. Dung dịch ban đầu trong suốt không màu. Khi có chất béo, hỗn hợp sẽ xuất hiện lớp nhũ tương màu trắng đục như sữa.",
-      "duration": 28.46,
-      "startTime": 411.63,
-      "endTime": 440.09,
-      "audioUrl": "/audio/lectures/science/b4/sec_test_lipid.mp3"
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: In Paper 6 practical questions, score full marks by stating 4 facts for every test: 1) Named reagent → 2) Heat in water bath (Benedict's) or dissolve in ethanol then pour into cold water (Lipids) → 3) Starting colour → 4) Positive colour ( blue-black , brick-red precipitate , purple/lilac , or cloudy white emulsion ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Khi gặp câu hỏi thực hành Paper 6, hãy viết đủ 4 mảnh ghép ăn điểm cho mỗi phép thử: 1) Tên thuốc thử → 2) Đun cách thủy (riêng Benedict) hoặc lắc tan trong ethanol trước rồi đổ sang nước lạnh (riêng Lipid) → 3) Màu gốc → 4) Màu dương tính chuẩn thuật ngữ tiếng Anh.",
+      "duration": 46.57,
+      "startTime": 902.71,
+      "endTime": 949.28,
+      "audioUrl": "/audio/lectures/science/b4/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two frequent exam traps: (1) Writing \"blue\" or \"black\" separately instead of blue-black for iodine + starch, and (2) adding water BEFORE ethanol in the emulsion test — fats do not dissolve in water, so you MUST dissolve the sample in ethanol first!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi sai kinh điển khiến học sinh mất điểm oan: (1) Viết \"blue\" hoặc \"black\" tách rời thay vì viết trọn cụm blue-black cho phép thử Iodine với tinh bột; và (2) đổ nước vào mẫu trước khi cho cồn ethanol trong phép thử chất béo (dầu mỡ không tan trong nước nên bắt buộc phải hòa tan trong ethanol trước!).",
+      "duration": 42.4,
+      "startTime": 949.28,
+      "endTime": 991.68,
+      "audioUrl": "/audio/lectures/science/b4/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "4 phép thử thực phẩm",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "IGCSE 0654 requires you to describe four food tests. Always state the reagent , whether heating is needed, the initial colour , and the positive colour change :",
+      "vi": "Syllabus 0654 yêu cầu nắm vững đúng 4 phép thử thực phẩm dưới đây (rất hay hỏi ở Paper 6). Khi viết quy trình thí nghiệm ở Paper 6, luôn trình bày rành mạch đủ 4 yếu tố chấm điểm: 1) Tên thuốc thử (Reagent) , 2) Điều kiện nhiệt độ / thứ tự pha trộn , 3) Màu ban đầu của thuốc thử và 4) Sự đổi màu khi dương tính (Positive result) :",
+      "duration": 38.77,
+      "startTime": 991.68,
+      "endTime": 1030.45,
+      "audioUrl": "/audio/lectures/science/b4/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "đun cách thủy (~80°C)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Food Molecule: 1. Starch; Test / Reagent: Iodine solution; Method & Temperature: Add drops directly at room temperature (no heat); Initial Colour: Yellow-brown; Positive Result: Blue-black. Food Molecule: 2. Reducing sugars; Test / Reagent: Benedict's solution; Method & Temperature: Add reagent and heat in a water bath (~80°C); Initial Colour: Blue; Positive Result: Green ➔ Yellow ➔ Orange ➔ Brick-red precipitate. Food Molecule: 3. Proteins; Test / Reagent: Biuret test; Method & Temperature: Add Biuret reagent and mix gently (no heat); Initial Colour: Blue; Positive Result: Purple / Violet (Lilac). Food Molecule: 4. Fats & Oils; Test / Reagent: Ethanol emulsion; Method & Temperature: Dissolve in ethanol (shake), then pour into cold water; Initial Colour: Clear / Colourless; Positive Result: Cloudy white emulsion.",
+      "vi": "Chất cần thử: 1. Starch (Tinh bột); Thuốc thử (Reagent): Iodine solution; Cách làm & Nhiệt độ: Nhỏ trực tiếp ở nhiệt độ phòng (không đun); Màu ban đầu: Yellow-brown (Vàng nâu); Kết quả dương tính: Blue-black (Xanh đen). Chất cần thử: 2. Reducing sugars (Đường khử); Thuốc thử (Reagent): Benedict's solution; Cách làm & Nhiệt độ: Thêm thuốc thử & đun cách thủy (~80°C); Màu ban đầu: Blue (Xanh lam); Kết quả dương tính: Green ➔ Yellow ➔ Orange ➔ Brick-red precipitate (Kết tủa đỏ gạch). Chất cần thử: 3. Proteins (Đạm); Thuốc thử (Reagent): Biuret test; Cách làm & Nhiệt độ: Thêm dung dịch Biuret, lắc nhẹ (không đun); Màu ban đầu: Blue (Xanh lam); Kết quả dương tính: Purple / Violet / Lilac (Màu tím). Chất cần thử: 4. Fats & Oils (Chất béo); Thuốc thử (Reagent): Ethanol emulsion; Cách làm & Nhiệt độ: Hòa tan trong ethanol (lắc mạnh), rồi đổ vào nước lạnh; Màu ban đầu: Clear / Colourless (Trong suốt); Kết quả dương tính: Cloudy white emulsion (Nhũ tương trắng đục).",
+      "duration": 141.36,
+      "startTime": 1030.45,
+      "endTime": 1171.81,
+      "audioUrl": "/audio/lectures/science/b4/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🍞 1. Iodine Solution Test — Thử Tinh bột (B4.1.3a)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🖱️ Hover or click a test to inspect & listen: 🍞 1. Iodine Test for Starch🍬 2. Benedict's Test for Reducing Sugars🥩 3. Biuret Test for Proteins🥑 4. Ethanol Emulsion Test for Fats & Oils 🍞 1. Iodine Solution Test for Starch (B4.1.3a). 🧪 Reagent: Iodine solution (initially yellow-brown). 🔥 Temperature: Room temperature — no heating required . Add a few drops directly onto the food sample. Positive Result (Starch Present): Yellow-brown ➔ Blue-black . ⚠️ Exam Tip: Always write \"blue-black\" in full. Writing \"blue\" or \"black\" alone scores 0 marks. Blue-black.",
+      "vi": "🖱️ Thử Tinh bột (Iodine Test)🍬 2. Thử Đường khử (Benedict's Test)🥩 3. Thử Protein (Biuret Test)🥑 4. Thử Chất béo (Ethanol Emulsion) Active Display Card (Default: 1. Starch) 🍞 1. Iodine Solution Test — Thử Tinh bột (B4.1.3a). 🧪 Thuốc thử (Reagent): Dung dịch Iodine solution (màu gốc vàng nâu). 🔥 Nhiệt độ (Heat): Thực hiện ở nhiệt độ phòng — KHÔNG cần đun nóng. Kết quả Dương tính (Positive Result): Yellow-brown (Vàng nâu) ➔ Blue-black (Xanh đen) . ⚠️ Lưu ý phòng thi: Bắt buộc viết đủ cụm \"blue-black\". Chỉ viết \"blue\" hoặc \"black\" riêng lẻ sẽ bị 0 điểm. Blue-black.",
+      "duration": 94.14,
+      "startTime": 1171.81,
+      "endTime": 1265.95,
+      "audioUrl": "/audio/lectures/science/b4/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 / Paper 6 MCQ A liquid food sample was tested using four separate procedures. The results were: iodine solution remained yellow-brown; Benedict's solution (heated) stayed blue; Biuret reagent turned purple; ethanol poured into water formed a cloudy white emulsion. Which nutrients were present in the food sample? A. Starch and reducing sugar only B. Reducing sugar and protein only C. Protein and fat/oil only D. Starch and fat/oil only ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Iodine stayed yellow-brown (no starch) and heated Benedict's stayed blue (no reducing sugar). Biuret turning from blue to purple confirms protein , and the ethanol test forming a cloudy white emulsion confirms fat/oil (Option C).",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1 / Paper 6 MCQ A liquid food sample was tested using four separate procedures. The results were: iodine solution remained yellow-brown; Benedict's solution (heated) stayed blue; Biuret reagent turned purple; ethanol poured into water formed a cloudy white emulsion. Which nutrients were present in the food sample? (Một mẫu thực phẩm lỏng được kiểm tra bằng 4 phép thử riêng biệt. Kết quả thu được: dung dịch iodine giữ nguyên màu vàng nâu; dung dịch Benedict sau khi đun giữ nguyên màu xanh lam; thuốc thử Biuret chuyển sang màu tím; dịch chiết ethanol đổ vào nước tạo nhũ tương trắng đục. Những chất dinh dưỡng nào có mặt trong mẫu?) A. Starch and reducing sugar only B. Reducing sugar and protein only C. Protein and fat/oil only D. Starch and fat/oil only ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Iodine giữ nguyên màu vàng nâu (không có tinh bột) và Benedict đun nóng vẫn giữ màu xanh lam (không có đường khử). Ngược lại, thuốc thử Biuret đổi từ xanh lam sang tím (purple) khẳng định có protein , còn phép thử ethanol đổ vào nước tạo nhũ tương trắng đục khẳng định có chất béo/dầu (fat/oil) — chọn đáp án C.",
+      "duration": 142.15,
+      "startTime": 1265.95,
+      "endTime": 1408.1,
+      "audioUrl": "/audio/lectures/science/b4/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "(a) Đường khử (Reducing sugars):",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 6 Practical [5 marks] A student wants to test crushed peanut seeds for (a) reducing sugars [3] and (b) fats and oils [2]. Describe the exact procedures and positive observations. ✍️ Step-by-Step Mark Scheme Solution: (a) Reducing sugars: Add water and an equal volume of Benedict's solution to the crushed sample [1m]; heat in a thermostatic water bath (~80°C) for 3–5 minutes [1m]; a colour change from blue to green/yellow/orange/ brick-red precipitate shows reducing sugar is present [1m]. (b) Fats and oils: Shake a fresh crushed sample vigorously with ethanol , then pour/decant the clear liquid into a tube of cold water [1m]; a cloudy white emulsion indicates fat/oil is present [1m]. 💡 Intuition Check: Always use a fresh portion of the food sample for each chemical test so reagents from one test never contaminate the colour of the next test.",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 6 Practical [5 marks] A student wants to test crushed peanut seeds for (a) reducing sugars and (b) fats and oils . Describe the exact procedures and positive observations. (Một học sinh muốn kiểm tra hạt lạc (đậu phộng) nghiền nhỏ để tìm (a) đường khử và (b) chất béo/dầu . Hãy mô tả chính xác quy trình tiến hành và hiện tượng dương tính.) ✍️ Lời giải chi tiết theo thang điểm: (a) Đường khử (Reducing sugars): Thêm nước và thể tích tương đương dung dịch Benedict's solution vào mẫu lạc nghiền ; đun nóng trong bể cách thủy nhiệt trong 3–5 phút ; dung dịch chuyển từ màu xanh lam (blue) sang xanh lục/vàng/cam/ kết tủa đỏ gạch chứng tỏ có đường khử . (b) Chất béo & dầu (Fats and oils): Lấy một phần mẫu lạc nghiền mới lắc mạnh với cồn ethanol để hòa tan chất béo, sau đó gạn dịch trong đổ sang ống nghiệm chứa nước lạnh (cold water) ; xuất hiện lớp nhũ tương trắng đục chứng tỏ có chất béo/dầu . 💡 Kiểm tra bản chất: Luôn chia mẫu thực phẩm ban đầu thành từng phần riêng biệt cho mỗi phép thử hóa học để thuốc thử của ống trước không làm nhiễu màu của ống sau.",
+      "duration": 144.6,
+      "startTime": 1408.1,
+      "endTime": 1552.7,
+      "audioUrl": "/audio/lectures/science/b4/s02_b08.mp3"
     }
   ]
 }

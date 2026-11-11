@@ -1,143 +1,462 @@
 {
   "lectureId": "2637d6ee-fd5f-48fc-aa7a-fc794fb3e561",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B13: Coordination and response",
-  "totalDuration": 359.72,
+  "totalDuration": 1942.55,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_nervous_reflex": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-nervous-reflex": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_reflex_arc_path": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-reflex-arc-path": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_endocrine_system": {
-      "start": 3,
       "end": 4
     },
-    "sec-endocrine-system": {
-      "start": 3,
-      "end": 4
+    "s01_wex": {
+      "start": 9,
+      "end": 10
     },
-    "sec_endocrine_glands": {
-      "start": 4,
-      "end": 4
+    "s01_hdr": {
+      "start": 1,
+      "end": 10
     },
-    "sec-endocrine-glands": {
-      "start": 4,
-      "end": 4
+    "s02_int": {
+      "start": 12,
+      "end": 14
     },
-    "sec_homeostasis": {
-      "start": 5,
-      "end": 6
+    "s02_p1_sub01": {
+      "start": 20,
+      "end": 20
     },
-    "sec-homeostasis": {
-      "start": 5,
-      "end": 6
+    "s02_p2_sub01": {
+      "start": 20,
+      "end": 20
     },
-    "sec_skin_thermo": {
-      "start": 6,
-      "end": 6
+    "s02_wex": {
+      "start": 21,
+      "end": 22
     },
-    "sec-skin-thermo": {
-      "start": 6,
-      "end": 6
+    "s02_hdr": {
+      "start": 11,
+      "end": 22
+    },
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_p1_sub01": {
+      "start": 29,
+      "end": 33
+    },
+    "s03_p2_sub01": {
+      "start": 29,
+      "end": 33
+    },
+    "s03_wex": {
+      "start": 34,
+      "end": 35
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 35
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B13: Điều hòa, Phản xạ & Cân bằng Nội môi",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B13: Coordination and Response. Organisms detect internal and external stimuli and execute coordinated responses via the nervous and endocrine systems, maintaining physiological homeostasis.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B13: Điều hòa, Phản xạ và Cân bằng Nội môi. Sinh vật nhận biết kích thích môi trường và thực hiện các đáp ứng phối hợp nhịp nhàng thông qua hệ thần kinh và hệ nội tiết để duy trì cân bằng nội môi.",
-      "duration": 43.02,
+      "title": "Topic B13: Coordination & Response (Điều hòa & Phản ứng)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B13 • Animal Physiology Coordination & Response. Cambridge IGCSE Co-ordinated Sciences (0654) • Reflex Arc, Endocrine Hormones, and Homeostatic Thermoregulation.",
+      "vi": "Topic B13: Coordination & Response (Điều hòa & Phản ứng). Cambridge IGCSE Co-ordinated Sciences (Biology 0654) • Hệ thần kinh và cung phản xạ, hệ nội tiết (hormone), và cơ chế điều hòa thân nhiệt của da.",
+      "duration": 36.9,
       "startTime": 0.0,
-      "endTime": 43.02,
+      "endTime": 36.9,
       "audioUrl": "/audio/lectures/science/b13/intro.mp3"
     },
     {
-      "id": "sec_nervous_reflex",
-      "title": "1. Hệ Thần kinh & Cung Phản xạ (Nervous System & Reflex Arc Overview)",
-      "selector": "#sec-nervous-reflex",
-      "en": "Section 1 examines the nervous system: The central nervous system consists of the brain and spinal cord. Reflex arcs provide rapid, involuntary, automatic protection against hazards.",
-      "vi": "Mục một khảo sát hệ thần kinh: Hệ thần kinh trung ương gồm não bộ và tủy sống. Cung phản xạ mang lại các phản ứng tự động, tức thì và không chủ ý để bảo vệ cơ thể khỏi nguy hiểm.",
-      "duration": 71.58,
-      "startTime": 43.02,
-      "endTime": 114.6,
-      "audioUrl": "/audio/lectures/science/b13/sec_nervous_reflex.mp3"
+      "id": "s01_hdr",
+      "title": "🧠 1. Nervous System & Reflex Arc (Hệ thần kinh & Cung phản xạ)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧠 1. Nervous System & Reflex Arc.",
+      "vi": "🧠 1. Nervous System & Reflex Arc (Hệ thần kinh & Cung phản xạ).",
+      "duration": 9.67,
+      "startTime": 36.9,
+      "endTime": 46.57,
+      "audioUrl": "/audio/lectures/science/b13/s01_hdr.mp3"
     },
     {
-      "id": "sec_reflex_arc_path",
-      "title": "⚡ Reflex Arc Pathway (Đường dẫn truyền Cung Phản xạ)",
-      "selector": "#sec-reflex-arc-path",
-      "en": "Reflex arc pathway: Stimulus detected by receptor ➔ Sensory neurone transmits electrical impulses to CNS ➔ Relay neurone in spinal cord grey matter ➔ Motor neurone conducts impulse to effector ➔ Effector (muscle contracts or gland secretes) carries out immediate response.",
-      "vi": "Đường dẫn truyền cung phản xạ: Kích thích được thụ thể phát hiện ➔ Nơ-ron cảm giác truyền xung điện về tủy sống ➔ Nơ-ron trung gian xử lý tại chất xám ➔ Nơ-ron vận động dẫn truyền xung đến cơ quan đáp ứng ➔ Cơ bắp co hoặc tuyến tiết dịch thực hiện phản xạ tức thì.",
-      "duration": 29.92,
-      "startTime": 114.6,
-      "endTime": 144.52,
-      "audioUrl": "/audio/lectures/science/b13/sec_reflex_arc_path.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a reflex arc as an emergency shortcut wire in a factory: when a heat sensor ( receptor ) detects fire, the alarm signal routes straight through the local junction box ( spinal cord relay neurone ) to trigger the water valve ( effector ) automatically — without waiting for headquarters (conscious brain) to hold a meeting!",
+      "vi": "🎯 Hình dung đời thường: Cung phản xạ (Reflex arc) giống như đường dây báo cháy khẩn cấp trong nhà máy: khi đầu báo nhiệt ( receptor ) phát hiện lửa, tín hiệu chạy thẳng qua tủ điện tủy sống ( relay neurone ) mở van phun nước ngay lập tức ( effector ) — không cần chờ ban giám đốc (ý thức não bộ) họp bàn!",
+      "duration": 42.67,
+      "startTime": 46.57,
+      "endTime": 89.24,
+      "audioUrl": "/audio/lectures/science/b13/s01_b01.mp3"
     },
     {
-      "id": "sec_endocrine_system",
-      "title": "2. Tuyến Nội tiết & Hormone (Endocrine System Overview)",
-      "selector": "#sec-endocrine-system",
-      "en": "Section 2 investigates hormones: A hormone is a chemical substance produced by an endocrine gland and carried by the blood, which alters the activity of one or more specific target organs.",
-      "vi": "Mục hai nghiên cứu hormone: Hormone là chất hóa học do tuyến nội tiết tiết ra và được máu vận chuyển đi khắp cơ thể, làm biến đổi hoạt động của một hoặc nhiều cơ quan đích xác định.",
-      "duration": 64.12,
-      "startTime": 144.52,
-      "endTime": 208.64,
-      "audioUrl": "/audio/lectures/science/b13/sec_endocrine_system.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) CNS = brain + spinal cord; PNS = nerves outside brain & spinal cord; electrical impulses travel along neurones to coordinate body functions.2) Reflex arc sequence: Receptor ➔ Sensory neurone ➔ Relay neurone (in CNS) ➔ Motor neurone ➔ Effector (muscle or gland) .3) Sense organs (Supplement): groups of receptor cells responding to specific stimuli ( light, sound, touch, temperature, chemicals ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) CNS = não + tủy sống; PNS = các dây thần kinh ngoài CNS; xung điện truyền dọc nơ-ron điều hòa hoạt động cơ thể.2) Chuỗi cung phản xạ: Receptor ➔ Sensory neurone ➔ Relay neurone (CNS) ➔ Motor neurone ➔ Effector (cơ hoặc tuyến) .3) Sense organs (Supplement): nhóm tế bào thụ cảm đáp ứng với kích thích đặc hiệu.",
+      "duration": 59.5,
+      "startTime": 89.24,
+      "endTime": 148.74,
+      "audioUrl": "/audio/lectures/science/b13/s01_b02.mp3"
     },
     {
-      "id": "sec_endocrine_glands",
-      "title": "🧪 Key Hormones: Adrenaline & Insulin (Adrenaline & Insulin)",
-      "selector": "#sec-endocrine-glands",
-      "en": "Key hormones: Adrenal glands secrete adrenaline in 'fight or flight' situations, accelerating heart rate, dilating pupils, and boosting blood glucose. The pancreas secretes insulin to lower blood glucose by converting it to glycogen, and glucagon to raise glucose levels.",
-      "vi": "Các hormone chính: Tuyến thượng thận tiết adrenaline trong tình huống khẩn cấp, làm tim đập nhanh, giãn đồng tử và tăng đường huyết. Tuyến tụy tiết insulin để hạ đường huyết chuyển thành glycogen dự trữ, và glucagon để nâng đường huyết khi đói.",
-      "duration": 32.99,
-      "startTime": 208.64,
-      "endTime": 241.63,
-      "audioUrl": "/audio/lectures/science/b13/sec_endocrine_glands.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: On neurone identification diagrams, students often swap sensory and motor neurones! Look for the cell body : a sensory neurone has a round cell body branching off the side midway along the fibre, whereas a motor neurone has a star-shaped cell body right at one end inside the CNS!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi nhìn hình vẽ 3 loại nơ-ron trong đề thi, hãy nhìn ngay vị trí thân tế bào (cell body) : Sensory neurone có thân tròn nhô ra ở nhánh giữa sợi; còn Motor neurone có thân hình sao nhiều tua nằm ngay ở một đầu trong tủy sống!",
+      "duration": 37.9,
+      "startTime": 148.74,
+      "endTime": 186.64,
+      "audioUrl": "/audio/lectures/science/b13/s01_b03.mp3"
     },
     {
-      "id": "sec_homeostasis",
-      "title": "3. Cân bằng Nội môi & Điều nhiệt Da (Homeostasis & Thermoregulation Overview)",
-      "selector": "#sec-homeostasis",
-      "en": "Section 3 investigates homeostasis: The maintenance of a constant internal environment, such as regulating core body temperature at 37°C and stabilizing blood glucose levels.",
-      "vi": "Mục ba nghiên cứu cân bằng nội môi: Là sự duy trì ổn định của môi trường bên trong cơ thể, ví dụ như điều hòa thân nhiệt ở 37°C và ổn định nồng độ glucose trong máu.",
-      "duration": 72.09,
-      "startTime": 241.63,
-      "endTime": 313.72,
-      "audioUrl": "/audio/lectures/science/b13/sec_homeostasis.mp3"
+      "id": "s01_b04",
+      "title": "Sơ đồ cung phản xạ tương tác:",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "The human nervous system consists of the Central Nervous System (CNS) (brain and spinal cord) and the Peripheral Nervous System (PNS) (cranial and spinal nerves). A reflex action is an automatic, rapid, and involuntary response to a stimulus designed to protect the body from damage. Interactive Reflex Arc Map:",
+      "vi": "Hệ thần kinh ở người bao gồm Hệ thần kinh trung ương (CNS) (não bộ và tủy sống) cùng Hệ thần kinh ngoại biên (PNS) (các dây thần kinh). Phản xạ (Reflex action) là phản ứng tự động, tức thời và vô thức đối với một kích thích nhằm bảo vệ cơ thể khỏi tổn thương. Sơ đồ cung phản xạ tương tác: Rê chuột vào từng loại nơ-ron để xem cấu trúc và chiều truyền xung thần kinh:",
+      "duration": 49.32,
+      "startTime": 186.64,
+      "endTime": 235.96,
+      "audioUrl": "/audio/lectures/science/b13/s01_b04.mp3"
     },
     {
-      "id": "sec_skin_thermo",
-      "title": "🌡️ Skin Thermoregulation Mechanics (Cơ chế Điều nhiệt của Da)",
-      "selector": "#sec-skin-thermo",
-      "en": "Skin temperature control: When hot, arterioles undergo vasodilation to increase blood flow to surface capillaries for heat radiation, sweat glands secrete sweat which evaporates to cool the skin, and hair muscles relax so hairs lie flat. When cold, vasoconstriction diverts blood away from the skin surface, shivering generates metabolic heat, and hair muscles contract causing hairs to stand erect trapping an insulating layer of warm air.",
-      "vi": "Cơ chế điều nhiệt của da: Khi trời nóng, tiểu động mạch giãn (vasodilation) tăng lưu lượng máu đến mao mạch dưới da để tỏa nhiệt, tuyến mồ hôi tiết mồ hôi bốc hơi làm mát da, lông nằm rạp. Khi trời lạnh, tiểu động mạch co (vasoconstriction) hạn chế mất nhiệt, run cơ sinh nhiệt, lông dựng đứng giữ lớp khí ấm cách nhiệt.",
-      "duration": 46.0,
-      "startTime": 313.72,
-      "endTime": 359.72,
-      "audioUrl": "/audio/lectures/science/b13/sec_skin_thermo.mp3"
+      "id": "s01_b05",
+      "title": "Interactive Reflex Arc & Neurones",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Interactive Reflex Arc & Neurones. A reflex action is a means of automatically and rapidly integrating and coordinating stimuli with the responses of effectors (muscles and glands). 🟣 Relay Neurone. Function: Located entirely within the CNS (grey matter of the spinal cord). Connects sensory neurones to motor neurones. Identification: Short neurone positioned completely inside the central grey matter of the spinal cord.",
+      "vi": "Interactive Reflex Arc & Neurones. Một phản xạ (Reflex action) là tự động, cực nhanh và mang tính bảo vệ cơ thể. 🟣 Relay Neurone (Nơ-ron trung gian). Chức năng: Kết nối Sensory neurone với Motor neurone trong tủy sống. Nhận diện trên hình: Đoạn nơ-ron ngắn nằm TRỌN VẸN BÊN TRONG chất xám (grey matter) của tủy sống (CNS).",
+      "duration": 55.69,
+      "startTime": 235.96,
+      "endTime": 291.65,
+      "audioUrl": "/audio/lectures/science/b13/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Trình tự các mắt xích trong Cung phản xạ (Reflex Arc): Kích thích (Stimulus) → T...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Sequence of the Reflex Arc: Stimulus → Receptor → Sensory Neurone → Relay Neurone (CNS) → Motor Neurone → Effector (Muscle/Gland) → Response.",
+      "vi": "Trình tự các mắt xích trong Cung phản xạ (Reflex Arc): Kích thích (Stimulus) → Thụ thể (Receptor) → Nơ-ron cảm giác (Sensory) → Nơ-ron trung gian (Relay — CNS) → Nơ-ron vận động (Motor) → Cơ quan đáp ứng (Effector: Cơ/Tuyến) → Phản ứng (Response).",
+      "duration": 31.37,
+      "startTime": 291.65,
+      "endTime": 323.02,
+      "audioUrl": "/audio/lectures/science/b13/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "👁️👂 Cơ quan Cảm giác & Kích thích đặc hiệu — Sense Organs (Supplement B13.1)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "👁️👂 Sense Organs & Specific Stimuli (Supplement B13.1). Sense organs are groups of receptor cells responding to specific stimuli : Light: Eye (retina receptors) Sound: Ear (sound receptors) Touch & Temperature: Skin Chemicals: Tongue & Nose",
+      "vi": "👁️👂 Cơ quan Cảm giác & Kích thích đặc hiệu — Sense Organs (Supplement B13.1). Cơ quan cảm giác (Sense organs) là nhóm các tế bào thụ cảm (receptor cells) đáp ứng với các kích thích đặc hiệu : Ánh sáng (Light): Mắt (Eye) Âm thanh (Sound): Tai (Ear) Chạm & Nhiệt độ: Da (Skin) Hóa chất (Chemicals): Lưỡi & Mũi",
+      "duration": 44.01,
+      "startTime": 323.02,
+      "endTime": 367.03,
+      "audioUrl": "/audio/lectures/science/b13/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ A person accidentally touches a sharp thorn and immediately pulls their hand away. What is the correct pathway of electrical impulses in this reflex arc? A. Effector ➔ Motor neurone ➔ Relay neurone ➔ Sensory neurone ➔ Receptor B. Receptor ➔ Sensory neurone ➔ Relay neurone ➔ Motor neurone ➔ Effector C. Receptor ➔ Motor neurone ➔ Relay neurone ➔ Sensory neurone ➔ Effector D. Sensory neurone ➔ Receptor ➔ Brain ➔ Effector ➔ Motor neurone ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Pain/touch receptors in the skin generate electrical impulses that travel along a sensory neurone into the spinal cord (CNS), pass across a relay neurone , and exit along a motor neurone to the arm muscle ( effector ), which contracts rapidly.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Exam Question: A person accidentally touches a sharp thorn and immediately pulls their hand away. What is the correct pathway of electrical impulses in this reflex arc? (Một người vô tình Con đường truyền xung điện đúng trong cung phản xạ này là gì?) A. Effector ➔ Motor neurone ➔ Relay neurone ➔ Sensory neurone ➔ Receptor B. Receptor ➔ Sensory neurone ➔ Relay neurone ➔ Motor neurone ➔ Effector C. Receptor ➔ Motor neurone ➔ Relay neurone ➔ Sensory neurone ➔ Effector D. Sensory neurone ➔ Receptor ➔ Brain ➔ Effector ➔ Motor neurone ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Thụ thể đau ở da ( Receptor ) phát xung điện truyền theo nơ-ron cảm giác ( Sensory neurone ) vào tủy sống, qua nơ-ron trung gian ( Relay neurone ), rồi theo nơ-ron vận động ( Motor neurone ) tới cơ tay ( Effector ) làm co cơ tức thì.",
+      "duration": 111.71,
+      "startTime": 367.03,
+      "endTime": 478.74,
+      "audioUrl": "/audio/lectures/science/b13/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe what is meant by a reflex action and state the two types of effectors in mammals. [2] (b) Define the term sense organ and state the specific stimuli detected by the tongue and the skin. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) A reflex action is a means of automatically and rapidly integrating and coordinating stimuli with the responses of effectors [1m]. The two types of effectors are muscles and glands [1m]. (b) A sense organ is a group of receptor cells responding to specific stimuli [1m]. Tongue detects chemicals ; skin detects touch and temperature [1m]. 💡 Intuition Check: Remember the acronym R-S-R-M-E (\"Real Scientists Read Many Exams\"): Receptor ➔ Sensory ➔ Relay ➔ Motor ➔ Effector!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe what is meant by a reflex action and state the two types of effectors. (Mô tả khái niệm phản xạ và nêu 2 loại cơ quan đáp ứng.) (b) Define sense organ and state the stimuli detected by the tongue and the skin. (Định nghĩa cơ quan cảm giác và nêu kích thích được phát hiện bởi lưỡi và da.) ✍️ Lời giải chi tiết theo thang điểm: Tự động và nhanh chóng tích hợp kích thích với đáp ứng của cơ và tuyến. (b) Groups of receptor cells responding to specific stimuli . Tongue detects chemicals ; skin detects touch and temperature . 💡 Kiểm tra bản chất: Mẹo nhớ thứ tự cung phản xạ R-S-R-M-E: Receptor ➔ Sensory ➔ Relay ➔ Motor ➔ Effector!",
+      "duration": 107.0,
+      "startTime": 478.74,
+      "endTime": 585.74,
+      "audioUrl": "/audio/lectures/science/b13/s01_b09.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🧪 2. Hormones & The Endocrine System (Hệ nội tiết)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🧪 2. Hormones & The Endocrine System.",
+      "vi": "🧪 2. Hormones & The Endocrine System (Hệ nội tiết).",
+      "duration": 8.32,
+      "startTime": 585.74,
+      "endTime": 594.06,
+      "audioUrl": "/audio/lectures/science/b13/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: A hormone is like a chemical text message sent in a bottle down a river ( bloodstream ): it floats past every house in town, yet only houses with a matching mailbox lock ( specific target organs ) pick up the message and change their activity!",
+      "vi": "🎯 Hình dung đời thường: Hormone giống như bức thư bỏ trong chai thả trôi trên dòng sông ( máu ): chiếc chai trôi qua mọi ngôi nhà dọc bờ sông, nhưng chỉ ngôi nhà có ổ khóa hòm thư trùng khớp ( cơ quan đích — target organ ) mới mở thư và thay đổi hoạt động!",
+      "duration": 32.45,
+      "startTime": 594.06,
+      "endTime": 626.51,
+      "audioUrl": "/audio/lectures/science/b13/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Hormone definition: chemical substance produced by a gland , carried by the blood , which alters the activity of one or more specific target organs .2) Know all 4 glands: Adrenal glands ➔ Adrenaline , Pancreas ➔ Insulin (Core) & Glucagon (Supplement) , Testes ➔ Testosterone , Ovaries ➔ Oestrogen .3) Adrenaline ('fight or flight'): increases breathing rate , heart rate , and pupil diameter .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Định nghĩa Hormone: chất hóa học tạo ra bởi tuyến (gland) , vận chuyển qua máu (blood) , làm thay đổi hoạt động của một hay nhiều cơ quan đích (target organs) .2) Bốn tuyến bắt buộc nhớ: Adrenal ➔ Adrenaline , Pancreas ➔ Insulin & Glucagon , Testes ➔ Testosterone , Ovaries ➔ Oestrogen .3) Adrenaline: tăng nhịp thở , tăng nhịp tim , mở rộng đường kính đồng tử .",
+      "duration": 58.99,
+      "startTime": 626.51,
+      "endTime": 685.5,
+      "audioUrl": "/audio/lectures/science/b13/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write that hormones travel \"along nerves\"! Hormones ALWAYS travel dissolved in blood (plasma) . Also do not confuse the adrenal glands (on top of kidneys) with the pancreas (below stomach).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không viết hormone truyền theo dây thần kinh! Hormone LUÔN được vận chuyển trong máu . Cũng đừng nhầm adrenal glands (tuyến thượng thận nằm trên thận) với pancreas (tuyến tụy).",
+      "duration": 30.68,
+      "startTime": 685.5,
+      "endTime": 716.18,
+      "audioUrl": "/audio/lectures/science/b13/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Định nghĩa chuẩn về Hormone: Chất hóa học được sản sinh bởi các tuyến nội tiết, ...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Official Definition of Hormone: A chemical substance, produced by an endocrine gland and carried by the blood, which alters the activity of one or more specific target organs.",
+      "vi": "Định nghĩa chuẩn về Hormone: Chất hóa học được sản sinh bởi các tuyến nội tiết, vận chuyển theo dòng máu và làm thay đổi hoạt động sinh lý của một hoặc nhiều cơ quan đích (target organs) chuyên biệt.",
+      "duration": 23.78,
+      "startTime": 716.18,
+      "endTime": 739.96,
+      "audioUrl": "/audio/lectures/science/b13/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Sơ đồ các tuyến nội tiết tương tác:",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Interactive Endocrine Glands:",
+      "vi": "Sơ đồ các tuyến nội tiết tương tác: Rê chuột hoặc",
+      "duration": 7.01,
+      "startTime": 739.96,
+      "endTime": 746.97,
+      "audioUrl": "/audio/lectures/science/b13/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Interactive Endocrine Glands",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Interactive Endocrine Glands. Pancreas. Endocrine gland regulating blood glucose concentration by secreting Insulin (Core) and Glucagon (Supplement). Homeostasis: Insulin lowers high blood glucose; glucagon raises low blood glucose by acting on the liver.",
+      "vi": "Interactive Endocrine Glands. Pancreas (Tuyến tụy). Tiết ra 2 hormone kiểm soát đường huyết: Insulin (Core) và Glucagon (Supplement). • Insulin: Hạ đường huyết khi đường máu cao.• Glucagon: Tăng đường huyết khi đường máu thấp.",
+      "duration": 37.61,
+      "startTime": 746.97,
+      "endTime": 784.58,
+      "audioUrl": "/audio/lectures/science/b13/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🔥 Adrenaline ('Fight or Flight' — B13.2.3)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🔥 Adrenaline ('Fight or Flight' — B13.2.3). Secreted by the adrenal glands in stressful or emergency situations. Three syllabus effects: Increased breathing rate (more O₂ intake). Increased heart rate (faster blood delivery to muscles). Increased pupil diameter (more light enters eyes).",
+      "vi": "🔥 Adrenaline. Tiết ra từ tuyến thượng thận (adrenal glands) khi khẩn cấp. Ba tác dụng chuẩn Syllabus: Tăng nhịp thở. Tăng nhịp tim. Tăng đường kính đồng tử.",
+      "duration": 35.7,
+      "startTime": 784.58,
+      "endTime": 820.28,
+      "audioUrl": "/audio/lectures/science/b13/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧬 4 Tuyến Nội tiết bắt buộc nhớ (B13.2.2 & B13.2.4)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🧬 Four Syllabus Endocrine Glands (B13.2.2 & B13.2.4). Adrenal glands (above kidneys) ➔ secrete adrenaline . Pancreas ➔ secretes insulin (Core) & glucagon (Supplement). Testes ➔ secrete testosterone . Ovaries ➔ secrete oestrogen .",
+      "vi": "🧬 4 Tuyến Nội tiết bắt buộc nhớ (B13.2.2 & B13.2.4). Adrenal glands (Tuyến thượng thận) ➔ adrenaline . Pancreas (Tuyến tụy) ➔ insulin (Core) & glucagon (Supplement). Testes (Tinh hoàn) ➔ testosterone . Ovaries (Buồng trứng) ➔ oestrogen .",
+      "duration": 44.09,
+      "startTime": 820.28,
+      "endTime": 864.37,
+      "audioUrl": "/audio/lectures/science/b13/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "Đặc điểm: Hình thức truyền tin; Hệ thần kinh (Nervous): Xung điện dọc theo sợi n...",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "Feature: Form of Message; Nervous System: Electrical impulses along neurones; Endocrine System: Chemical hormones in blood plasma. Feature: Speed of Transmission; Nervous System: Very rapid (milliseconds); Endocrine System: Slower (seconds to hours). Feature: Duration of Effect; Nervous System: Short-lived / instant; Endocrine System: Long-lasting. Feature: Target Specificity; Nervous System: Localized to individual muscles; Endocrine System: Widespread across multiple organs.",
+      "vi": "Đặc điểm: Hình thức truyền tin; Hệ thần kinh (Nervous): Xung điện dọc theo sợi nơ-ron; Hệ nội tiết (Endocrine): Chất hóa học (hormone) hòa tan trong máu. Đặc điểm: Tốc độ truyền tin; Hệ thần kinh (Nervous): Cực nhanh (tính bằng mili giây); Hệ nội tiết (Endocrine): Chậm hơn (vài giây đến nhiều giờ). Đặc điểm: Thời gian tác dụng; Hệ thần kinh (Nervous): Ngắn, diễn ra tức thời rồi kết thúc; Hệ nội tiết (Endocrine): Kéo dài trong thời gian lâu. Đặc điểm: Phạm vi tác động; Hệ thần kinh (Nervous): Cục bộ đến từng bó cơ xác định; Hệ nội tiết (Endocrine): Lan tỏa rộng khắp trên nhiều cơ quan.",
+      "duration": 80.19,
+      "startTime": 864.37,
+      "endTime": 944.56,
+      "audioUrl": "/audio/lectures/science/b13/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which row correctly matches an endocrine gland with a hormone it secretes and one effect of adrenaline during a \"fight or flight\" situation? A. Pancreas secretes adrenaline | Pupil diameter decreases B. Adrenal gland secretes insulin | Heart rate increases C. Pancreas secretes insulin | Breathing rate increases D. Ovaries secrete testosterone | Pupil diameter increases ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: The pancreas secretes insulin (and glucagon), and during \"fight or flight\" situations, adrenaline causes increased breathing rate , increased heart rate, and increased pupil diameter. A swaps pancreas/adrenal and reverses pupil change; B swaps adrenal/pancreas; D swaps ovaries/testes.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Exam Question: Which row correctly matches an endocrine gland with its hormone and one effect of adrenaline in \"fight or flight\" situations? (Dòng nào ghép đúng tuyến nội tiết với hormone của nó và một tác dụng của adrenaline khi khẩn cấp?) A. Tụy tiết adrenaline | Đồng tử thu nhỏ B. Thượng thận tiết insulin | Tim đập nhanh C. Tụy tiết insulin | Nhịp thở tăng D. Buồng trứng tiết testosterone | Đồng tử giãn ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Tuyến tụy (Pancreas) tiết insulin (và glucagon), còn trong tình huống \"fight or flight\", adrenaline làm tăng nhịp thở , tăng nhịp tim và mở rộng đồng tử.",
+      "duration": 96.49,
+      "startTime": 944.56,
+      "endTime": 1041.05,
+      "audioUrl": "/audio/lectures/science/b13/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦🟩 CORE & SUPPLEMENT • Paper 4 Structured [5 marks] (a) Define the term hormone . [3] (b) State two hormones secreted by the pancreas. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) A chemical substance produced by an (endocrine) gland [1m], carried by the blood [1m], which alters the activity of one or more specific target organs [1m]. (b) Insulin [1m] and glucagon [1m]. 💡 Intuition Check: Every 3-mark hormone definition awards 1 mark each for: (1) chemical substance made by a gland, (2) carried by blood, (3) alters activity of target organ(s).",
+      "vi": "BÀI MẪU 2 🟦🟩 CORE & SUPPLEMENT • Paper 4 Structured [5 marks] (a) Define the term hormone . (Định nghĩa thuật ngữ hormone.) (b) Name two hormones secreted by the pancreas. (Kể tên 2 hormone do tuyến tụy tiết ra.) ✍️ Lời giải chi tiết theo thang điểm: Chất hóa học do tuyến tiết ra , đi theo máu , làm thay đổi hoạt động cơ quan đích đặc hiệu . (b) Insulin and glucagon . 💡 Kiểm tra bản chất: Định nghĩa Hormone 3 điểm luôn chia đều cho 3 ý: (1) chemical substance made by a gland, (2) carried by blood, (3) alters activity of specific target organ(s).",
+      "duration": 89.1,
+      "startTime": 1041.05,
+      "endTime": 1130.15,
+      "audioUrl": "/audio/lectures/science/b13/s02_b11.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🌡️ 3. Homeostasis: Negative Feedback, Blood Glucose & Thermoregulation (Cân bằng nội môi)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🌡️ 3. Homeostasis: Negative Feedback, Blood Glucose & Thermoregulation.",
+      "vi": "🌡️ 3. Homeostasis: Negative Feedback, Blood Glucose & Thermoregulation (Cân bằng nội môi).",
+      "duration": 14.3,
+      "startTime": 1130.15,
+      "endTime": 1144.45,
+      "audioUrl": "/audio/lectures/science/b13/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Your hypothalamus (brain) and pancreas act like twin cruise-control computers keeping temperature at 37 °C and blood glucose steady at the set point : whenever levels drift up, brakes engage ( vasodilation + sweating or insulin ); whenever levels dip down, the accelerator engages ( vasoconstriction + shivering or glucagon ) — classic negative feedback !",
+      "vi": "🎯 Hình dung đời thường: Não bộ (hypothalamus) và tuyến tụy giống hai bộ điều khiển giữ tốc độ tự động (cruise control) khóa cứng nhiệt độ ở 37 °C và đường huyết ở điểm chuẩn (set point) : hễ vượt ngưỡng là đạp phanh ( giãn mạch + đổ mồ hôi hoặc tiết insulin ); hễ tụt ngưỡng là nhấn ga ( co mạch + run cơ hoặc tiết glucagon ) — chuẩn mực negative feedback !",
+      "duration": 50.32,
+      "startTime": 1144.45,
+      "endTime": 1194.77,
+      "audioUrl": "/audio/lectures/science/b13/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Negative feedback: detects deviation from a set point and triggers responses that reverse the change.2) Blood glucose (Liver + Pancreas): High ➔ insulin ➔ liver converts glucose to glycogen . Low ➔ glucagon ➔ liver converts glycogen to glucose .3) Thermoregulation: Brain coordinates skin insulation, sweating, shivering, and vasodilation / vasoconstriction of arterioles supplying skin surface capillaries.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Negative feedback: phát hiện sai lệch khỏi set point và kích hoạt đáp ứng đảo ngược sai lệch đó.2) Đường huyết (Gan + Tụy): Cao ➔ insulin ➔ gan đổi glucose thành glycogen . Thấp ➔ glucagon ➔ gan đổi glycogen thành glucose .3) Điều nhiệt: Não phối hợp cách nhiệt, mồ hôi, run cơ và vasodilation / vasoconstriction của tiểu động mạch (arterioles) nuôi mao mạch mặt da.",
+      "duration": 59.95,
+      "startTime": 1194.77,
+      "endTime": 1254.72,
+      "audioUrl": "/audio/lectures/science/b13/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two fatal exam mistakes: (1) Saying \"capillaries dilate/constrict or move up/down in the skin\" — WRONG! Only arterioles supplying skin surface capillaries dilate or constrict! (2) Confusing the spelling of glucagon (hormone) and glycogen (insoluble storage carbohydrate in the liver).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi mất điểm nặng nhất: (1) Viết \"mao mạch (capillaries) co giãn hoặc trồi lên sát da\" — SAI! Chỉ có tiểu động mạch (arterioles) mới co giãn! (2) Nhầm chính tả giữa glucagon (hormone của tụy) và glycogen (chất dự trữ ở gan).",
+      "duration": 43.06,
+      "startTime": 1254.72,
+      "endTime": 1297.78,
+      "audioUrl": "/audio/lectures/science/b13/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Homeostasis (Cân bằng nội môi): Sự duy trì môi trường bên trong cơ thể ổn định k...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Homeostasis: The maintenance of a constant internal environment in the body (such as blood glucose concentration and core body temperature around 37 °C).",
+      "vi": "Homeostasis (Cân bằng nội môi): Sự duy trì môi trường bên trong cơ thể ổn định không đổi, tiêu biểu là đường huyết và thân nhiệt (~37 °C).",
+      "duration": 22.11,
+      "startTime": 1297.78,
+      "endTime": 1319.89,
+      "audioUrl": "/audio/lectures/science/b13/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🔄 Cơ chế Điều hòa ngược âm tính — Negative Feedback & Set Point (Supplement B13.3)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🔄 Negative Feedback & Set Point (Supplement B13.3). Homeostatic control operates by negative feedback around a norm or set point : if an internal condition rises above or falls below the set point, receptors detect the change and trigger corrective physiological responses that oppose (reverse) the change , returning the internal environment back to the set point.",
+      "vi": "🔄 Cơ chế Điều hòa ngược âm tính — Negative Feedback & Set Point (Supplement B13.3). Cân bằng nội môi vận hành nhờ negative feedback xoay quanh một điểm chuẩn (set point) : khi chỉ số cơ thể tăng vọt hoặc tụt giảm khỏi set point, thụ thể phát hiện và kích hoạt phản ứng sinh lý ngược chiều với biến đổi đó để kéo môi trường trong quay về đúng điểm chuẩn.",
+      "duration": 48.41,
+      "startTime": 1319.89,
+      "endTime": 1368.3,
+      "audioUrl": "/audio/lectures/science/b13/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "⬇️ Khi Đường huyết TĂNG CAO trên Set Point (sau ăn):",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "⬇️ When Blood Glucose Rises Above Set Point (e.g. after a meal): Pancreas detects high glucose and secretes insulin into the blood. Insulin stimulates the liver to absorb glucose from blood and convert soluble glucose into insoluble glycogen for storage. Blood glucose concentration falls back to the normal set point.",
+      "vi": "⬇️ Khi Đường huyết TĂNG CAO trên Set Point (sau ăn): Tuyến tụy (Pancreas) tiết hormone insulin vào máu. Insulin kích thích gan (liver) hấp thu glucose và chuyển hóa thành glycogen không tan để dự trữ. Nồng độ glucose máu giảm trở về điểm chuẩn (set point).",
+      "duration": 40.85,
+      "startTime": 1368.3,
+      "endTime": 1409.15,
+      "audioUrl": "/audio/lectures/science/b13/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "⬆️ Khi Đường huyết GIẢM THẤP dưới Set Point (nhịn đói / vận động):",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "⬆️ When Blood Glucose Falls Below Set Point (e.g. exercise / fasting): Pancreas detects low glucose and secretes glucagon into the blood. Glucagon stimulates the liver to break down stored glycogen back into soluble glucose and release it into the blood. Blood glucose concentration rises back to the normal set point.",
+      "vi": "⬆️ Khi Đường huyết GIẢM THẤP dưới Set Point (nhịn đói / vận động): Tuyến tụy (Pancreas) tiết hormone glucagon vào máu. Glucagon kích thích gan (liver) phân giải glycogen dự trữ thành glucose hòa tan đưa lại vào máu. Nồng độ glucose máu tăng trở về điểm chuẩn (set point).",
+      "duration": 41.59,
+      "startTime": 1409.15,
+      "endTime": 1450.74,
+      "audioUrl": "/audio/lectures/science/b13/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Sơ đồ cấu trúc da & Cơ chế điều hòa thân nhiệt:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Interactive Skin Anatomy & Temperature Control: Hover over the skin components to examine their thermoregulatory responses:",
+      "vi": "Sơ đồ cấu trúc da & Cơ chế điều hòa thân nhiệt: Rê chuột vào các bộ phận của da để tìm hiểu phản xạ khi quá Nóng hoặc quá Lạnh:",
+      "duration": 17.1,
+      "startTime": 1450.74,
+      "endTime": 1467.84,
+      "audioUrl": "/audio/lectures/science/b13/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "Interactive Skin Map (Thermoregulation)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "Interactive Skin Map (Thermoregulation). Arterioles & Skin Surface Capillaries. Vasodilation (Too Hot): Arterioles supplying skin surface capillaries dilate (widen) , so more warm blood flows through surface capillaries and radiates heat out. Vasoconstriction (Too Cold): Arterioles constrict (narrow) , reducing blood flow to skin surface capillaries to conserve core heat.",
+      "vi": "Interactive Skin Map (Thermoregulation). Cấu tạo da rất hay xuất hiện trong bài thi Paper 2. Di chuột (hoặc chạm) vào các bộ phận của Da dưới đây để nhận diện và xem cơ chế giữ ấm/làm mát. Fatty Tissue (Mô mỡ dưới da). Lớp mô mỡ nằm sâu dưới hạ bì. Đóng vai trò là lớp cách nhiệt (insulation) hạn chế thất thoát nhiệt từ máu và nội tạng ra môi trường lạnh.",
+      "duration": 54.24,
+      "startTime": 1467.84,
+      "endTime": 1522.08,
+      "audioUrl": "/audio/lectures/science/b13/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "Vai trò của Não (Brain) — Trung khu điều nhiệt ở não bộ (hypothalamus) cảm nhận ...",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "Role of the Brain — Receptors in the brain (hypothalamus) detect blood temperature changes (and receive impulses from skin temperature receptors) and coordinate nerve impulses to effectors. Mechanism (B13.3.5): Sweating / Shivering; When Body is TOO HOT (> 37 °C): Sweating increases: water in sweat evaporates from skin surface, removing thermal energy to cool the body.; When Body is TOO COLD (< 37 °C): Shivering occurs: rapid involuntary skeletal muscle contractions increase respiration, releasing heat energy. Sweating stops. Mechanism (B13.3.5): Insulation (Fat & Hair); When Body is TOO HOT (> 37 °C): Hair erector muscles relax ; hairs lie flat so less insulating air is trapped.; When Body is TOO COLD (< 37 °C): Subcutaneous fatty tissue insulates; hair erector muscles contract , pulling hairs upright to trap an insulating layer of still air. Mechanism (B13.3.5): Skin Arterioles (Supplement); When Body is TOO HOT (> 37 °C): Vasodilation: arterioles supplying skin surface capillaries dilate ➔ more blood flows near surface ➔ more heat lost by radiation.; When Body is TOO COLD (< 37 °C): Vasoconstriction: arterioles supplying skin surface capillaries constrict ➔ less blood flows near surface ➔ heat loss minimised.",
+      "vi": "Vai trò của Não (Brain) — Trung khu điều nhiệt ở não bộ (hypothalamus) cảm nhận nhiệt độ máu (cùng tín hiệu từ thụ thể nhiệt ở da) và truyền xung thần kinh điều khiển các cơ quan đáp ứng. Cơ chế (B13.3.5): Mồ hôi / Run cơ; Khi cơ thể QUÁ NÓNG (> 37 °C): Tiết mồ hôi (Sweating): nước trong mồ hôi bay hơi (evaporates) hấp thụ nhiệt năng từ mặt da làm mát cơ thể.; Khi cơ thể QUÁ LẠNH (< 37 °C): Run cơ (Shivering): cơ xương co rút nhanh không chủ ý làm tăng hô hấp tế bào sinh nhiệt sưởi ấm. Ngừng tiết mồ hôi. Cơ chế (B13.3.5): Cách nhiệt (Insulation); Khi cơ thể QUÁ NÓNG (> 37 °C): Cơ dựng lông giãn ; lông nằm rạp xuống để nhiệt dễ thoát ra ngoài.; Khi cơ thể QUÁ LẠNH (< 37 °C): Mô mỡ (fatty tissue) cách nhiệt; cơ dựng lông co kéo lông dựng đứng giữ lớp không khí tĩnh cách nhiệt. Cơ chế (B13.3.5): Tiểu động mạch da (Supplement); Khi cơ thể QUÁ NÓNG (> 37 °C): Giãn mạch (Vasodilation): các tiểu động mạch (arterioles) cấp máu cho mao mạch sát da giãn rộng ➔ tăng máu sát da tỏa nhiệt.; Khi cơ thể QUÁ LẠNH (< 37 °C): Co mạch (Vasoconstriction): các tiểu động mạch (arterioles) co hẹp ➔ giảm máu tới mao mạch sát da để giữ nhiệt lõi.",
+      "duration": 174.87,
+      "startTime": 1522.08,
+      "endTime": 1696.95,
+      "audioUrl": "/audio/lectures/science/b13/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ After an athlete finishes a long race without eating, blood glucose concentration drops below the set point. How do the pancreas and liver respond? A. Pancreas secretes insulin; liver converts glucose into glycogen B. Pancreas secretes glucagon; liver converts glycogen into glucose C. Pancreas secretes adrenaline; liver excretes excess urea D. Pancreas secretes glucagon; liver converts glucose into glycogen ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: When blood glucose drops below the set point (\"all the glucose is gone \"), the pancreas secretes glucagon , which stimulates the liver to break down stored glycogen into soluble glucose and release it into the blood, returning glucose concentration to normal.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Exam Question: After a long race without eating, an athlete's blood glucose drops below the set point. How do the pancreas and liver respond? (Sau chặng đua dài không ăn, đường huyết vận động viên tụt xuống dưới điểm chuẩn. Tuyến tụy và gan phản ứng thế nào?) A. Tụy tiết insulin; gan đổi glucose thành glycogen B. Tụy tiết glucagon; gan phân giải glycogen thành glucose C. Tụy tiết adrenaline; gan thải urea D. Tụy tiết glucagon; gan đổi glucose thành glycogen ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mẹo nhớ cực nhạy: khi glucose trong máu cạn ➔ tụy tiết glucaGON kích thích gan phân giải glycogen dự trữ thành glucose đưa vào máu để kéo đường huyết tăng trở lại điểm chuẩn.",
+      "duration": 102.77,
+      "startTime": 1696.95,
+      "endTime": 1799.72,
+      "audioUrl": "/audio/lectures/science/b13/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "brain",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Explain how the brain, sweat glands, and blood vessels in the skin work together by negative feedback to return body temperature to the set point on a very hot day. [5] ✍️ Step-by-Step Mark Scheme Solution: 1. Receptors in the brain (hypothalamus) and skin detect blood/skin temperature rising above the set point and send nerve impulses to skin effectors [1m].2. Arterioles supplying skin surface capillaries dilate (vasodilation) [1m].3. More warm blood flows through surface capillaries, increasing thermal energy loss from skin by radiation [1m].4. Sweat glands secrete more sweat onto the skin surface, and water in sweat evaporates , absorbing heat energy to cool the body [1m].5. Body temperature falls back to the set point, switching off the cooling response ( negative feedback ) [1m]. 💡 Intuition Check: Always write \"vasodilation of ARTERIOLES supplying skin surface capillaries\" — that exact phrase is gold-standard Cambridge 0654 Mark Scheme wording!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Explain how the brain, sweat glands, and blood vessels in the skin work together by negative feedback to cool the body on a very hot day. (Giải thích cách não bộ, tuyến mồ hôi và mạch máu dưới da phối hợp theo cơ chế điều hòa ngược âm tính để làm mát cơ thể vào ngày nắng nóng.) ✍️ Lời giải chi tiết theo thang điểm: 1. Receptors in the brain (and skin) detect temperature rising above the set point and send impulses to effectors . (Não phát hiện nhiệt độ vượt điểm chuẩn và phát xung thần kinh.) 2. Tiểu động mạch nuôi mao mạch bề mặt da giãn rộng. 3. Nhiều máu nóng chảy sát da giúp tăng bức xạ nhiệt. 4. Nước trong mồ hôi bay hơi thu nhiệt làm mát da. 5. Body temperature returns to the set point, turning off the response ( negative feedback ) . 💡 Kiểm tra bản chất: Luôn viết trọn vẹn cụm từ chuẩn Mark Scheme 0654: \"vasodilation of ARTERIOLES supplying skin surface capillaries\"!",
+      "duration": 142.83,
+      "startTime": 1799.72,
+      "endTime": 1942.55,
+      "audioUrl": "/audio/lectures/science/b13/s03_b12.mp3"
     }
   ]
 }

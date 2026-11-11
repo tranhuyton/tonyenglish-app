@@ -1,181 +1,518 @@
 {
   "lectureId": "39003a2f-708e-47fe-b8ad-7aae073273a3",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
-  "lectureTitle": "B11: Gas exchange in humans",
-  "totalDuration": 429.24,
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+  "lectureTitle": "B11: Gas exchange and respiration",
+  "totalDuration": 2105.79,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_gas_exchange_surfaces": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-gas-exchange-surfaces": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_gas_adaptations": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-gas-adaptations": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_respiratory_system": {
-      "start": 3,
-      "end": 5
-    },
-    "sec-respiratory-system": {
-      "start": 3,
-      "end": 5
-    },
-    "sec_resp_trachea_cartilage": {
-      "start": 4,
       "end": 4
     },
-    "sec-resp-trachea-cartilage": {
-      "start": 4,
-      "end": 4
-    },
-    "sec_resp_goblet_cilia": {
-      "start": 5,
-      "end": 5
-    },
-    "sec-resp-goblet-cilia": {
-      "start": 5,
-      "end": 5
-    },
-    "sec_ventilation_mechanics": {
+    "s01_p1_sub01": {
       "start": 6,
-      "end": 8
+      "end": 10
     },
-    "sec-ventilation-mechanics": {
+    "s01_p2_sub01": {
       "start": 6,
-      "end": 8
+      "end": 10
     },
-    "sec_inhalation_exhalation": {
-      "start": 7,
-      "end": 7
+    "s01_wex": {
+      "start": 11,
+      "end": 12
     },
-    "sec-inhalation-exhalation": {
-      "start": 7,
-      "end": 7
+    "s01_hdr": {
+      "start": 1,
+      "end": 12
     },
-    "sec_inspired_expired": {
-      "start": 8,
-      "end": 8
+    "s02_int": {
+      "start": 14,
+      "end": 16
     },
-    "sec-inspired-expired": {
-      "start": 8,
-      "end": 8
+    "s02_wex": {
+      "start": 21,
+      "end": 22
+    },
+    "s02_hdr": {
+      "start": 13,
+      "end": 22
+    },
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_wex": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 30
+    },
+    "s04_int": {
+      "start": 32,
+      "end": 34
+    },
+    "s04_p1_sub01": {
+      "start": 35,
+      "end": 37
+    },
+    "s04_p2_sub01": {
+      "start": 35,
+      "end": 37
+    },
+    "s04_wex": {
+      "start": 38,
+      "end": 39
+    },
+    "s04_hdr": {
+      "start": 31,
+      "end": 39
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B11: Trao đổi Khí ở Người",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B11: Gas Exchange in Humans. Cellular respiration requires a continuous supply of oxygen and the removal of metabolic carbon dioxide. In this topic, we study gas exchange surfaces, respiratory anatomy, ventilation mechanics, and the effects of physical exercise.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B11: Trao đổi Khí ở Người. Hô hấp tế bào đòi hỏi nguồn cung cấp oxy liên tục và sự đào thải carbon dioxide chuyển hóa. Trong chuyên đề này, chúng ta sẽ học về bề mặt trao đổi khí, giải phẫu hệ hô hấp, cơ chế thông khí và tác động của hoạt động thể lực.",
-      "duration": 42.28,
+      "title": "B11: Gas Exchange in Humans (Trao đổi Khí ở Người)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) • Topic B11 B11: Gas Exchange in Humans. Alveolar Surface Features, Breathing System Anatomy, Ventilation Mechanics, Limewater Test & Physical Activity.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ B11: Gas Exchange in Humans (Trao đổi Khí ở Người). Đặc điểm Phế nang, Giải phẫu Hệ hô hấp, Cơ chế Thông khí, Thí nghiệm Nước vôi trong & Tập luyện Thể lực.",
+      "duration": 36.86,
       "startTime": 0.0,
-      "endTime": 42.28,
+      "endTime": 36.86,
       "audioUrl": "/audio/lectures/science/b11/intro.mp3"
     },
     {
-      "id": "sec_gas_exchange_surfaces",
-      "title": "1. Đặc điểm Bề mặt Trao đổi Khí (Gas Exchange Surfaces Overview)",
-      "selector": "#sec-gas-exchange-surfaces",
-      "en": "Section 1 examines gas exchange surfaces: In humans, gas exchange takes place across microscopic alveoli in the lungs. To maximize diffusion rate, gas exchange surfaces have five key adaptations.",
-      "vi": "Mục một khảo sát bề mặt trao đổi khí: Ở người, sự trao đổi khí diễn ra qua các phế nang vi thể trong phổi. Để tối đa hóa tốc độ khuếch tán, bề mặt trao đổi khí có 5 đặc điểm thích nghi cốt lõi.",
-      "duration": 58.55,
-      "startTime": 42.28,
-      "endTime": 100.83,
-      "audioUrl": "/audio/lectures/science/b11/sec_gas_exchange_surfaces.mp3"
+      "id": "s01_hdr",
+      "title": "🫁 1. Đặc điểm Bề mặt Trao đổi Khí (Features of Gas Exchange Surfaces)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟩 SUPPLEMENT (B11.1 #5) 🫁 1. Features of Gas Exchange Surfaces.",
+      "vi": "🟩 SUPPLEMENT (B11.1 #5) 🫁 1. Đặc điểm Bề mặt Trao đổi Khí.",
+      "duration": 13.79,
+      "startTime": 36.86,
+      "endTime": 50.65,
+      "audioUrl": "/audio/lectures/science/b11/s01_hdr.mp3"
     },
     {
-      "id": "sec_gas_adaptations",
-      "title": "🫁 Five Adaptations of Alveoli (Năm Thích nghi của Phế nang)",
-      "selector": "#sec-gas-adaptations",
-      "en": "Five alveolar adaptations: 1. Enormous surface area of ~70 m² provided by millions of alveoli. 2. Extremely thin diffusion barrier only one cell thick (under 1 µm). 3. Dense capillary network maintaining a steep concentration gradient. 4. Constant ventilation renewing fresh air. 5. Moist lining dissolving gases for rapid diffusion.",
-      "vi": "Năm đặc điểm thích nghi của phế nang: Một là diện tích bề mặt khổng lồ khoảng 70 mét vuông từ hàng triệu phế nang. Hai là màng khuếch tán cực mỏng chỉ dày một lớp tế bào. Ba là mạng lưới mao mạch dày đặc duy trì gradient nồng độ dốc. Bốn là cử động thông khí liên tục làm mới không khí. Năm là lớp dịch ẩm hòa tan khí để khuếch tán nhanh.",
-      "duration": 49.22,
-      "startTime": 100.83,
-      "endTime": 150.05,
-      "audioUrl": "/audio/lectures/science/b11/sec_gas_adaptations.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of alveoli as 300 million microscopic soap bubbles wrapped in capillary nets: huge total area (~70 m²), walls just one cell thick , non-stop blood flow, and fresh air pumped in and out every few seconds!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng phế nang như 300 triệu bong bóng xà phòng tí hon được bọc trong lưới mao mạch: diện tích trải ra rộng ~70 m², vách chỉ dày 1 lớp tế bào , máu chảy liên tục và gió tươi (thông khí) ra vào từng giây!",
+      "duration": 34.45,
+      "startTime": 50.65,
+      "endTime": 85.1,
+      "audioUrl": "/audio/lectures/science/b11/s01_b01.mp3"
     },
     {
-      "id": "sec_respiratory_system",
-      "title": "2. Cấu tạo Hệ Hô hấp & Bảo vệ Đường thở (Respiratory Anatomy Overview)",
-      "selector": "#sec-respiratory-system",
-      "en": "Section 2 investigates the anatomy of the respiratory tract: Trachea, bronchi, bronchioles, alveoli, lungs, ribs, intercostal muscles, and the diaphragm, protected by mucus and cilia.",
-      "vi": "Mục hai nghiên cứu giải phẫu đường hô hấp: Khí quản, phế quản, tiểu phế quản, phế nang, phổi, lồng xương sườn, cơ liên sườn và cơ hoành, được bảo vệ bởi chất nhầy và lông rung.",
-      "duration": 58.84,
-      "startTime": 150.05,
-      "endTime": 208.89,
-      "audioUrl": "/audio/lectures/science/b11/sec_respiratory_system.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: In 0654 Supplement B11.1 #5, memorize the exact 4-item list: 1) large surface area , 2) thin surface (short diffusion distance), 3) good blood supply , and 4) good ventilation with air (items 3 & 4 maintain a steep concentration gradient).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Trong đề 0654 Supplement B11.1 #5, thuộc lòng đúng 4 cụm từ khóa: 1) large surface area , 2) thin surface (quãng đường khuếch tán ngắn), 3) good blood supply , và 4) good ventilation with air (ý 3 & 4 giữ chênh lệch nồng độ dốc).",
+      "duration": 44.64,
+      "startTime": 85.1,
+      "endTime": 129.74,
+      "audioUrl": "/audio/lectures/science/b11/s01_b02.mp3"
     },
     {
-      "id": "sec_resp_trachea_cartilage",
-      "title": "🛡️ Trachea & Cartilage Rings (Khí quản & Vòng sụn chữ C)",
-      "selector": "#sec-resp-trachea-cartilage",
-      "en": "The trachea is reinforced with C-shaped rings of cartilage. Cartilage keeps the airway permanently open and prevents the trachea from collapsing inwards when pressure drops during inhalation.",
-      "vi": "Khí quản được gia cố bằng các vòng sụn hình chữ C. Sụn giữ cho đường thở luôn mở và ngăn không cho khí quản bị xẹp xuống khi áp suất giảm trong lúc hít vào.",
-      "duration": 20.61,
-      "startTime": 208.89,
-      "endTime": 229.5,
-      "audioUrl": "/audio/lectures/science/b11/sec_resp_trachea_cartilage.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say alveoli have \"thin cell walls\" (animals have NO cell walls!). Always write \"alveolar wall is one cell thick \" or \"thin surface for a short diffusion distance\".",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm viết \"alveoli have thin cell walls (thành tế bào mỏng)\" vì tế bào người KHÔNG có thành tế bào! Luôn viết \"alveolar wall is one cell thick \" hoặc \"thin surface giving a short diffusion distance\".",
+      "duration": 30.02,
+      "startTime": 129.74,
+      "endTime": 159.76,
+      "audioUrl": "/audio/lectures/science/b11/s01_b03.mp3"
     },
     {
-      "id": "sec_resp_goblet_cilia",
-      "title": "🧹 Goblet Cells & Cilia (Tế bào Hình đài & Biểu mô Lông rung)",
-      "selector": "#sec-resp-goblet-cilia",
-      "en": "Airway defense: Goblet cells secrete sticky mucus to trap inhaled dust, bacteria, and airborne pathogens. Ciliated epithelial cells beat rhythmically in synchronized waves to sweep the mucus up to the pharynx, where it is safely swallowed into stomach acid.",
-      "vi": "Hàng rào bảo vệ đường thở: Tế bào hình đài tiết chất nhầy dính giữ lại bụi bẩn, vi khuẩn và mầm bệnh từ không khí. Các tế bào biểu mô lông rung chuyển động nhịp nhàng quét lớp nhầy lên họng để nuốt xuống dạ dày tiêu diệt bằng acid.",
-      "duration": 30.11,
-      "startTime": 229.5,
-      "endTime": 259.61,
-      "audioUrl": "/audio/lectures/science/b11/sec_resp_goblet_cilia.mp3"
+      "id": "s01_b04",
+      "title": "khuếch tán (diffusion)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Gaseous exchange in humans occurs by diffusion across the walls of microscopic air sacs called alveoli in the lungs. Oxygen diffuses from alveolar air into pulmonary capillary blood, while carbon dioxide diffuses in the opposite direction to be exhaled.",
+      "vi": "Sự trao đổi khí ở người diễn ra bằng cơ chế khuếch tán (diffusion) qua vách các túi khí hiển vi gọi là phế nang (alveoli) trong phổi: khí O₂ khuếch tán từ lòng phế nang vào máu mao mạch, còn khí CO₂ khuếch tán ngược lại từ máu ra phế nang để thở ra ngoài.",
+      "duration": 35.44,
+      "startTime": 159.76,
+      "endTime": 195.2,
+      "audioUrl": "/audio/lectures/science/b11/s01_b04.mp3"
     },
     {
-      "id": "sec_ventilation_mechanics",
-      "title": "3. Cơ chế Thông khí & Khí Hít vào/Thở ra (Ventilation Mechanics Overview)",
-      "selector": "#sec-ventilation-mechanics",
-      "en": "Section 3 investigates breathing movements and gas composition: Muscle contractions alter thoracic volume, changing internal lung pressure to draw air in or expel it out.",
-      "vi": "Mục ba khảo sát cử động hô hấp và thành phần khí: Sự co giãn của các cơ làm thay đổi thể tích khoang ngực, biến đổi áp suất bên trong phổi để hút không khí vào hoặc đẩy ra ngoài.",
-      "duration": 79.67,
-      "startTime": 259.61,
-      "endTime": 339.28,
-      "audioUrl": "/audio/lectures/science/b11/sec_ventilation_mechanics.mp3"
+      "id": "s01_b05",
+      "title": "1. Large Surface Area (Diện tích lớn)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "1. Large Surface Area. Hundreds of millions of alveoli create a vast total surface area (~70 m²), allowing huge numbers of O₂ and CO₂ molecules to diffuse simultaneously.",
+      "vi": "1. Large Surface Area (Diện tích lớn). Hàng trăm triệu phế nang tạo tổng diện tích tiếp xúc khổng lồ (~70 m²), giúp lượng lớn O₂ và CO₂ khuếch tán cùng lúc.",
+      "duration": 27.63,
+      "startTime": 195.2,
+      "endTime": 222.83,
+      "audioUrl": "/audio/lectures/science/b11/s01_b05.mp3"
     },
     {
-      "id": "sec_inhalation_exhalation",
-      "title": "⚖️ Mechanics of Breathing (Cơ chế Hít vào & Thở ra)",
-      "selector": "#sec-inhalation-exhalation",
-      "en": "Breathing mechanics: During inhalation, external intercostal muscles contract, ribs move up and out, diaphragm contracts and flattens; thorax volume increases, pressure drops below atmospheric, drawing air in. During exhalation, external intercostals relax, ribs move down and in, diaphragm relaxes and curves up; thorax volume decreases, pressure rises, pushing air out.",
-      "vi": "Cơ chế hít thở: Khi hít vào, cơ liên sườn ngoài co kéo xương sườn nâng lên và nở ra, cơ hoành co phẳng xuống; thể tích khoang ngực tăng, áp suất giảm hút khí vào. Khi thở ra, cơ liên sườn ngoài giãn xương sườn hạ xuống, cơ hoành giãn cong lên hình vòm; thể tích khoang ngực giảm, áp suất tăng đẩy khí ra.",
-      "duration": 43.94,
-      "startTime": 339.28,
-      "endTime": 383.22,
-      "audioUrl": "/audio/lectures/science/b11/sec_inhalation_exhalation.mp3"
+      "id": "s01_b06",
+      "title": "2. Thin Surface (Bề mặt cực mỏng)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "2. Thin Surface. Both the alveolus wall and the capillary wall are only one cell thick (flattened epithelium), giving an ultra-short diffusion distance (<1 µm).",
+      "vi": "2. Thin Surface (Bề mặt cực mỏng). Cả vách phế nang và thành mao mạch đều chỉ dày 1 lớp tế bào , tạo quãng đường khuếch tán cực ngắn (<1 µm).",
+      "duration": 23.77,
+      "startTime": 222.83,
+      "endTime": 246.6,
+      "audioUrl": "/audio/lectures/science/b11/s01_b06.mp3"
     },
     {
-      "id": "sec_inspired_expired",
-      "title": "📊 Composition of Air & Exercise (Thành phần Khí & Thể dục)",
-      "selector": "#sec-inspired-expired",
-      "en": "Gas comparison: Inspired air contains 21% oxygen, 0.04% carbon dioxide, and variable water vapour. Expired air contains 16% oxygen, 4% carbon dioxide, and saturated water vapour. During exercise, muscle cells respire faster; the brain detects increased CO₂ in blood and stimulates faster, deeper breathing.",
-      "vi": "So sánh thành phần khí: Khí hít vào chứa 21% oxy, 0.04% CO2 và hơi nước thay đổi. Khí thở ra chứa 16% oxy, 4% CO2 và bão hòa hơi nước. Khi vận động thể thao, cơ bắp hô hấp mạnh hơn; não phát hiện CO2 tăng trong máu sẽ kích thích thở nhanh hơn và sâu hơn.",
-      "duration": 46.02,
-      "startTime": 383.22,
-      "endTime": 429.24,
-      "audioUrl": "/audio/lectures/science/b11/sec_inspired_expired.mp3"
+      "id": "s01_b07",
+      "title": "3. Good Blood Supply (Giàu mao mạch)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "3. Good Blood Supply. A dense network of associated capillaries continuously carries O₂ away and delivers CO₂, maintaining a steep concentration gradient.",
+      "vi": "3. Good Blood Supply (Giàu mao mạch). Mạng mao mạch bao quanh dày đặc liên tục mang O₂ đi và đưa CO₂ tới, duy trì chênh lệch nồng độ dốc.",
+      "duration": 23.15,
+      "startTime": 246.6,
+      "endTime": 269.75,
+      "audioUrl": "/audio/lectures/science/b11/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "4. Good Ventilation (Thông khí tốt)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "4. Good Ventilation with Air. Breathing constantly replaces stale alveolar air with fresh atmospheric air, keeping O₂ high and CO₂ low inside the alveoli.",
+      "vi": "4. Good Ventilation (Thông khí tốt). Cử động hít thở liên tục làm mới không khí trong phế nang, giữ nồng độ O₂ cao và CO₂ thấp.",
+      "duration": 22.06,
+      "startTime": 269.75,
+      "endTime": 291.81,
+      "audioUrl": "/audio/lectures/science/b11/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "💧 Bổ trợ bản chất — Lớp màng ẩm (Moist Lining):",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "💧 Supporting Context — Moist Internal Film: A thin film of moisture lines each alveolus so oxygen dissolves before diffusing across cell membranes (and evaporates into expired air!).",
+      "vi": "💧 Bổ trợ bản chất — Lớp màng ẩm (Moist Lining): Mặt trong phế nang phủ màng nước mỏng giúp O₂ hòa tan trước khi thấm qua màng tế bào (cũng là nguồn tạo hơi nước bão hòa trong khí thở ra!).",
+      "duration": 24.73,
+      "startTime": 291.81,
+      "endTime": 316.54,
+      "audioUrl": "/audio/lectures/science/b11/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Which feature of human alveoli directly maintains a steep concentration gradient for oxygen diffusion into the blood? A. Presence of C-shaped cartilage rings around each alveolus B. Good blood supply in capillaries and good ventilation with air C. Cilia beating inside the alveolar air sac D. Thick muscular walls around pulmonary capillaries ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct : continuous capillary blood flow carries oxygenated blood away while ventilation refreshes alveolar air with high O₂, preserving a steep concentration gradient. A, C, and D are anatomically false for alveoli.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Which feature of human alveoli directly maintains a steep concentration gradient for oxygen diffusion into the blood? (Đặc điểm nào của phế nang người trực tiếp duy trì độ dốc nồng độ lớn giúp oxy khuếch tán nhanh vào máu?) A. Presence of C-shaped cartilage rings around each alveolus B. Good blood supply in capillaries and good ventilation with air C. Cilia beating inside the alveolar air sac D. Thick muscular walls around pulmonary capillaries ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng : Dòng máu mao mạch liên tục mang O₂ đi kết hợp thông khí làm mới không khí phế nang giúp giữ nồng độ O₂ phế nang luôn cao hơn máu. A, C, D đều sai cấu tạo giải phẫu.",
+      "duration": 101.93,
+      "startTime": 316.54,
+      "endTime": 418.47,
+      "audioUrl": "/audio/lectures/science/b11/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "Four features:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] State four features of gas exchange surfaces in humans and explain how two of these features increase the rate of diffusion of oxygen into the blood. [4] ✍️ Step-by-Step Mark Scheme Solution: • Four features: Large surface area, thin surface, good blood supply, good ventilation with air [2m for all four; 1m for two/three].• Explanations (any two): Large surface area allows more O₂ molecules to diffuse across at the same time [1m]; thin surface (one cell thick) gives a short diffusion distance [1m] (or good blood supply / ventilation maintains a steep concentration gradient ). 💡 Intuition Check: Every Paper 4 answer on alveoli boils down to: Surface Area ↑, Diffusion Distance ↓, Concentration Gradient ↑!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] State four features of gas exchange surfaces in humans and explain how two of these features increase the rate of diffusion of oxygen into the blood. (Nêu 4 đặc điểm của bề mặt trao đổi khí ở người và giải thích cách 2 trong số đó làm tăng tốc độ khuếch tán oxy vào máu.) ✍️ Lời giải chi tiết theo thang điểm: • Four features: Large surface area, thin surface, good blood supply, good ventilation with air .• Explanations (chọn 2): Large surface area cho phép nhiều phân tử O₂ khuếch tán qua màng cùng lúc ; thin surface (dày 1 tế bào) tạo short diffusion distance (hoặc good blood supply / ventilation duy trì steep concentration gradient ). 💡 Kiểm tra bản chất: Mọi câu tự luận về phế nang đều xoay quanh 3 trụ cột vật lý: Diện tích ↑, Khoảng cách ↓, Độ dốc nồng độ ↑!",
+      "duration": 113.59,
+      "startTime": 418.47,
+      "endTime": 532.06,
+      "audioUrl": "/audio/lectures/science/b11/s01_b11.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🗺️ 2. Cấu tạo & Bảo vệ Hệ Hô hấp (Respiratory System Anatomy)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE (B11.1 #1) 🗺️ 2. Structure & Protection of the Breathing System.",
+      "vi": "🟦 CORE (B11.1 #1) 🗺️ 2. Cấu tạo & Bảo vệ Hệ Hô hấp.",
+      "duration": 13.45,
+      "startTime": 532.06,
+      "endTime": 545.51,
+      "audioUrl": "/audio/lectures/science/b11/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Follow an inhaled oxygen molecule like a commuter taking main highways into smaller streets: Nose/Mouth ➔ Larynx ➔ Trachea ➔ Bronchi ➔ Bronchioles ➔ Alveoli ➔ Capillary blood !",
+      "vi": "🎯 Hình dung đời thường: Hãy đi theo hành trình của một phân tử O₂ như đi từ quốc lộ lớn rẽ vào ngõ nhỏ: Mũi/Miệng ➔ Larynx (Thanh quản) ➔ Trachea (Khí quản) ➔ Bronchi (Phế quản) ➔ Bronchioles (Tiểu phế quản) ➔ Alveoli (Phế nang) ➔ Mao mạch máu !",
+      "duration": 30.75,
+      "startTime": 545.51,
+      "endTime": 576.26,
+      "audioUrl": "/audio/lectures/science/b11/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Core B11.1 #1 tests diagram identification of all 10 parts: lungs, diaphragm, ribs, intercostal muscles, larynx, trachea, bronchi, bronchioles, alveoli, and associated capillaries . Notice the size progression: 1 trachea → 2 bronchi → many narrow bronchioles → millions of terminal alveoli.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Core B11.1 #1 yêu cầu nhận diện trên hình vẽ đủ 10 bộ phận: lungs, diaphragm, ribs, intercostal muscles, larynx, trachea, bronchi, bronchioles, alveoli, associated capillaries . Chú ý độ phân nhánh nhỏ dần: 1 trachea → 2 bronchi → vô số bronchioles nhỏ → chùm túi alveoli.",
+      "duration": 53.84,
+      "startTime": 576.26,
+      "endTime": 630.1,
+      "audioUrl": "/audio/lectures/science/b11/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: On exam label lines, look closely at where the pointer ends: pointing to the ring-lined main tube = trachea ; one of the two main branches entering a lung = bronchus ; fine twig-like tubes inside the lung = bronchiole !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi điền tên vào đường chỉ (label line) trên đề thi: chỉ vào ống chính có vòng sụn là trachea ; 1 trong 2 nhánh lớn rẽ vào phổi là bronchus ; các nhánh nhỏ li ti như cành cây trong phổi là bronchiole !",
+      "duration": 33.37,
+      "startTime": 630.1,
+      "endTime": 663.47,
+      "audioUrl": "/audio/lectures/science/b11/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "10 cấu trúc",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "You must be able to identify all 10 structures in diagrams and images: lungs, diaphragm, ribs, intercostal muscles, larynx, trachea, bronchi, bronchioles, alveoli, and associated capillaries.",
+      "vi": "Học sinh cần nhận diện chính xác đủ 10 cấu trúc trên hình vẽ đề thi: lungs (phổi), diaphragm (cơ hoành), ribs (xương sườn), intercostal muscles (cơ liên sườn), larynx (thanh quản), trachea (khí quản), bronchi (phế quản), bronchioles (tiểu phế quản), alveoli (phế nang) và associated capillaries (mao mạch bao quanh).",
+      "duration": 40.6,
+      "startTime": 663.47,
+      "endTime": 704.07,
+      "audioUrl": "/audio/lectures/science/b11/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🗺️ Sơ đồ Giải phẫu Tương tác Hệ Hô hấp ( đủ 10 cấu trúc Syllabus )",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🗺️ Interactive Anatomy of the Human Breathing System (All 10 Syllabus Structures). Trachea, Bronchi & Bronchioles. Air travels along the exact pathway: Larynx ➔ Trachea ➔ Bronchi ➔ Bronchioles ➔ Alveoli. 🔑 Cartilage Function: C-shaped rings of cartilage support the trachea and prevent it from collapsing when air pressure drops during inhalation. Hidden Panels",
+      "vi": "🗺️ Sơ đồ Giải phẫu Tương tác Hệ Hô hấp ( đủ 10 cấu trúc Syllabus ). Trachea, Bronchi & Bronchioles (Đường dẫn khí). Không khí đi theo thứ tự: Larynx (Thanh quản) ➔ Trachea (Khí quản) ➔ Bronchi (Phế quản) ➔ Bronchioles (Tiểu phế quản) ➔ Alveoli (Phế nang). 🔑 Vòng sụn chữ C (Cartilage): Giữ khí quản luôn mở thông thoáng, ngăn xẹp ống thở khi áp suất giảm lúc hít vào. Hidden Panels",
+      "duration": 55.3,
+      "startTime": 704.07,
+      "endTime": 759.37,
+      "audioUrl": "/audio/lectures/science/b11/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🛡️ Khí quản, Phế quản & Vòng sụn chữ C",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🛡️ Trachea, Bronchi & Cartilage Rings. Air passes from the larynx down the trachea , divides into left and right bronchi , then branches into tiny bronchioles ending in alveoli . C-shaped rings of cartilage support the trachea wall and prevent it from collapsing when air pressure falls during inhalation.",
+      "vi": "🛡️ Khí quản, Phế quản & Vòng sụn chữ C. Không khí đi từ thanh quản (larynx) xuống khí quản (trachea) , tách thành 2 phế quản (bronchi) rồi chia nhỏ thành tiểu phế quản (bronchioles) dẫn tới phế nang (alveoli) . Thành khí quản có các vòng sụn (cartilage) giúp giữ ống thở luôn mở, chống xẹp khi áp suất giảm lúc hít vào.",
+      "duration": 44.3,
+      "startTime": 759.37,
+      "endTime": 803.67,
+      "audioUrl": "/audio/lectures/science/b11/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧹 Tế bào Hình đài (Goblet Cells) & Lông rung (Cilia)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🧹 Airway Defence: Mucus, Goblet Cells & Cilia. Linking directly to Topic B10 defences: goblet cells in the airway lining secrete sticky mucus that traps inhaled dust and pathogens, while microscopic hair-like cilia beat in waves to sweep mucus up to the throat to be swallowed and destroyed by stomach acid.",
+      "vi": "🧹 Tế bào Hình đài (Goblet Cells) & Lông rung (Cilia). Liên kết chặt với hàng rào phòng vệ B10: Goblet cells tiết ra chất nhầy dính ( mucus ) bẫy hạt bụi và vi khuẩn hít vào; sau đó các lông rung (cilia) đập nhịp nhàng quét lớp dịch nhầy ngược lên cổ họng để nuốt xuống dạ dày tiêu hủy bằng axit HCl.",
+      "duration": 43.49,
+      "startTime": 803.67,
+      "endTime": 847.16,
+      "audioUrl": "/audio/lectures/science/b11/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which sequence shows the correct order of structures through which air passes when a human breathes in? A. Larynx → Trachea → Bronchioles → Bronchi → Alveoli B. Trachea → Larynx → Bronchi → Bronchioles → Alveoli C. Larynx → Trachea → Bronchi → Bronchioles → Alveoli D. Larynx → Bronchi → Trachea → Alveoli → Bronchioles ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: C is correct : air enters the larynx at the top of the neck, travels down the trachea , splits into the left and right bronchi , branches into smaller bronchioles , and reaches the alveoli .",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Which sequence shows the correct order of structures through which air passes when a human breathes in? (Trình tự nào thể hiện đúng đường đi của không khí khi người hít vào?) A. Larynx → Trachea → Bronchioles → Bronchi → Alveoli B. Trachea → Larynx → Bronchi → Bronchioles → Alveoli C. Larynx → Trachea → Bronchi → Bronchioles → Alveoli D. Larynx → Bronchi → Trachea → Alveoli → Bronchioles ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Đáp án C đúng : Không khí đi qua thanh quản (larynx) ở đầu trên cổ, xuống khí quản (trachea) , tách sang 2 phế quản (bronchi) , rẽ vào các tiểu phế quản (bronchioles) và tận cùng ở phế nang (alveoli) .",
+      "duration": 98.05,
+      "startTime": 847.16,
+      "endTime": 945.21,
+      "audioUrl": "/audio/lectures/science/b11/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) Name the dome-shaped sheet of muscle located below the lungs AND the muscles found between the ribs. [2] (b) Describe how mucus helps protect the breathing system when dusty air is inhaled. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Below the lungs: diaphragm [1m]; between the ribs: intercostal muscles [1m]. (b) Sticky mucus traps inhaled dust particles and pathogens [1m] before they can reach the alveoli, and cilia sweep the mucus up to the throat to be swallowed [1m]. 💡 Intuition Check: Always check whether a pointer line touches a rib bone itself (rib) or the tissue between two rib bones (intercostal muscle)!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) Name the dome-shaped sheet of muscle located below the lungs AND the muscles found between the ribs. (b) Describe how mucus helps protect the breathing system when dusty air is inhaled. (Gọi tên tấm cơ hình vòm dưới phổi, cơ nằm giữa các xương sườn, và mô tả vai trò bảo vệ của chất nhầy mucus.) ✍️ Lời giải chi tiết theo thang điểm: (a) Dưới phổi: diaphragm (cơ hoành) ; giữa các xương sườn: intercostal muscles (cơ liên sườn) . (b) Chất nhầy mucus bẫy (traps) bụi bẩn và vi khuẩn hít vào , ngăn chúng lọt tới phế nang trước khi được lông rung quét lên họng nuốt xuống dạ dày . 💡 Kiểm tra bản chất: Quan sát thật kỹ đầu mũi tên trên đề thi:",
+      "duration": 93.98,
+      "startTime": 945.21,
+      "endTime": 1039.19,
+      "audioUrl": "/audio/lectures/science/b11/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🌬️ 3. Cơ chế Thông khí: Hít vào & Thở ra (Ventilation Mechanics)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟦 ANATOMICAL CONTEXT 🌬️ 3. Ventilation & Breathing Mechanics.",
+      "vi": "🟦 CƠ CHẾ SINH HỌC 🌬️ 3. Cơ chế Thông khí: Hít vào & Thở ra (Ventilation Mechanics).",
+      "duration": 13.16,
+      "startTime": 1039.19,
+      "endTime": 1052.35,
+      "audioUrl": "/audio/lectures/science/b11/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Breathing works by Boyle's Law (just like a bicycle pump in reverse): expanding the chest box ( volume ↑ ) drops air pressure ↓ inside the lungs so outside air flows in; shrinking the chest box ( volume ↓ ) squeezes air pressure ↑ so air flows out!",
+      "vi": "🎯 Hình dung đời thường: Cơ chế hít thở tuân theo đúng định luật Boyle của Vật lý: mở rộng hộp lồng ngực ( thể tích ↑ ) làm áp suất ↓ thấp hơn bên ngoài nên khí tự tràn vào; thu hẹp hộp lồng ngực ( thể tích ↓ ) ép áp suất ↑ đẩy khí ra ngoài!",
+      "duration": 32.43,
+      "startTime": 1052.35,
+      "endTime": 1084.78,
+      "audioUrl": "/audio/lectures/science/b11/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Keep the causal chain straight: Diaphragm contracts & flattens + ribs move up and out ➔ thorax volume increases ➔ lung pressure falls below atmospheric pressure ➔ air enters lungs . During exhalation, diaphragm relaxes upward + ribs move down and in ➔ volume decreases ➔ pressure rises ➔ air leaves.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Giữ vững trật tự nhân quả: Hít vào: cơ hoành co hạ phẳng + xương sườn nâng lên & ra ngoài ➔ thể tích ngực tăng ➔ áp suất phổi giảm dưới áp suất khí quyển ➔ khí tràn vào phổi . Thở ra: cơ hoành giãn vồng lên + sườn hạ xuống & vào trong ➔ thể tích giảm ➔ áp suất tăng ➔ khí thoát ra.",
+      "duration": 41.91,
+      "startTime": 1084.78,
+      "endTime": 1126.69,
+      "audioUrl": "/audio/lectures/science/b11/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"the diaphragm goes up when breathing in\"! At rest the diaphragm is curved upward like an umbrella; when it contracts during inhalation, it pulls downwards (flattens) to make more room in the chest!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng nhầm chiều di chuyển của cơ hoành! Lúc nghỉ cơ hoành cong vồng lên như chiếc ô; khi co lại (contracts) lúc hít vào, cơ hoành kéo phẳng xuống dưới để mở rộng khoang ngực!",
+      "duration": 29.7,
+      "startTime": 1126.69,
+      "endTime": 1156.39,
+      "audioUrl": "/audio/lectures/science/b11/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "xương sườn (ribs), cơ liên sườn (intercostal muscles) và cơ hoành (diaphragm)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Lungs contain elastic tissue rather than muscle; ventilation relies on the ribs, intercostal muscles, and diaphragm changing the volume and pressure inside the airtight thoracic cavity.",
+      "vi": "Phổi có mô đàn hồi nhưng không tự co giãn được; sự thông khí dựa vào phối hợp của xương sườn (ribs), cơ liên sườn (intercostal muscles) và cơ hoành (diaphragm) làm thay đổi thể tích và áp suất khoang ngực kín.",
+      "duration": 26.52,
+      "startTime": 1156.39,
+      "endTime": 1182.91,
+      "audioUrl": "/audio/lectures/science/b11/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "⚖️ So sánh Tương tác: Hít vào (Inhalation) vs Thở ra (Exhalation)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "⚖️ Interactive Comparison: Inhalation vs Exhalation. ⬇️ INHALATION (Breathing In)⬆️ EXHALATION (Breathing Out) .",
+      "vi": "⚖️ So sánh Tương tác: Hít vào (Inhalation) vs Thở ra (Exhalation). ⬇️ INHALATION (Hít vào)⬆️ EXHALATION (Thở ra) Rê chuột hoặc .",
+      "duration": 22.46,
+      "startTime": 1182.91,
+      "endTime": 1205.37,
+      "audioUrl": "/audio/lectures/science/b11/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟦/🟩 CORE-EXTENDED • Paper 1/2 MCQ What happens to the diaphragm, thorax volume, and pressure in the lungs when a person breathes in? A. Diaphragm flattens downwards | Thorax volume increases | Lung pressure decreases B. Diaphragm arches upwards | Thorax volume decreases | Lung pressure increases C. Diaphragm flattens downwards | Thorax volume decreases | Lung pressure increases D. Diaphragm arches upwards | Thorax volume increases | Lung pressure decreases ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: A is correct : contraction flattens the diaphragm downwards, increasing thoracic volume and lowering internal lung pressure below atmospheric pressure so air flows into the lungs.",
+      "vi": "BÀI MẪU 1 🟦/🟩 CORE-EXTENDED • Paper 1/2 MCQ What happens to the diaphragm, thorax volume, and pressure in the lungs when a person breathes in? (Chuyện gì xảy ra với cơ hoành, thể tích lồng ngực và áp suất trong phổi khi một người hít vào?) A. Diaphragm flattens downwards | Thorax volume increases | Lung pressure decreases B. Diaphragm arches upwards | Thorax volume decreases | Lung pressure increases C. Diaphragm flattens downwards | Thorax volume decreases | Lung pressure increases D. Diaphragm arches upwards | Thorax volume increases | Lung pressure decreases ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Đáp án A đúng : Cơ hoành co và hạ phẳng xuống dưới làm tăng thể tích khoang ngực, kéo áp suất trong phổi giảm xuống thấp hơn áp suất khí quyển nên không khí tràn vào phổi.",
+      "duration": 101.03,
+      "startTime": 1205.37,
+      "endTime": 1306.4,
+      "audioUrl": "/audio/lectures/science/b11/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟦/🟩 Paper 3/4 Structured [4 marks] A model chest uses a bell jar (ribcage), two balloons (lungs), and a rubber sheet stretched across the bottom (diaphragm). (a) Describe and explain what happens to the balloons when the rubber sheet is pulled downwards. [3] (b) State one limitation of this bell-jar model compared with a real human thorax. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) The balloons inflate / expand [1m] because pulling the rubber sheet down increases the volume inside the bell jar [1m], which decreases the air pressure inside the jar below atmospheric pressure, drawing air into the balloons [1m]. (b) The glass bell jar is rigid and cannot move up and out like real ribs and intercostal muscles [1m]. 💡 Intuition Check: The classic bell-jar lung model is a favourite IGCSE question—remember its #1 flaw is the rigid glass wall!",
+      "vi": "BÀI MẪU 2 🟦/🟩 Paper 3/4 Structured [4 marks] A model chest uses a bell jar (ribcage), two balloons (lungs), and a rubber sheet stretched across the bottom (diaphragm). Giải thích hiện tượng xảy ra với 2 quả bóng bay khi kéo màng cao su đáy bình chuông xuống dưới và nêu 1 hạn chế của mô hình. ✍️ Lời giải chi tiết theo thang điểm: (a) Hai quả bóng bay phồng lên (inflate) vì kéo màng cao su xuống làm tăng thể tích bên trong bình chuông , khiến áp suất khí giảm thấp hơn khí quyển nên không khí bị hút vào bóng . (b) Thành bình thủy tinh cứng không thể nâng lên và mở rộng ra ngoài như xương sườn và cơ liên sườn thật . 💡 Kiểm tra bản chất: Mô hình bình chuông thủy tinh là câu hỏi kinh điển—nhớ ngay nhược điểm số 1 là thành thủy tinh cứng không mô phỏng được cử động sườn!",
+      "duration": 111.97,
+      "startTime": 1306.4,
+      "endTime": 1418.37,
+      "audioUrl": "/audio/lectures/science/b11/s03_b07.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "📊 4. Khí Hít vào vs Thở ra, Nước vôi trong & Tập luyện Thể lực",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🟦 CORE & 🟩 SUPPLEMENT (B11.1 #2–#4, #6–#7) 📊 4. Inspired vs Expired Air, Limewater Test & Physical Activity.",
+      "vi": "🟦 CORE & 🟩 SUPPLEMENT (B11.1 #2–#4, #6–#7) 📊 4. Khí Hít vào vs Thở ra, Nước vôi trong & Tập luyện Thể lực.",
+      "duration": 25.11,
+      "startTime": 1418.37,
+      "endTime": 1443.48,
+      "audioUrl": "/audio/lectures/science/b11/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of your lungs as an engine exhaust check: air going in has 21% O₂ and 0.04% CO₂ ; air coming out still has plenty of oxygen left ( 16% O₂ —which is why mouth-to-mouth resuscitation works!) plus 100× more CO₂ (4%) that turns limewater milky in seconds.",
+      "vi": "🎯 Hình dung đời thường: Hãy kiểm tra \"khí thải\" từ phổi: khí hít vào chứa 21% O₂ và 0.04% CO₂ ; khí thở ra vẫn còn dư tới 16% O₂ (nhờ vậy hô hấp nhân tạo mới cứu được người!) nhưng chứa gấp 100 lần CO₂ (4%) làm nước vôi trong hóa đục trắng tức thì.",
+      "duration": 46.53,
+      "startTime": 1443.48,
+      "endTime": 1490.01,
+      "audioUrl": "/audio/lectures/science/b11/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Core: Compare O₂ (21% → 16%), CO₂ (0.04% → 4%), and water vapour (lower/variable → higher/saturated); describe the limewater test ; state exercise increases rate AND depth of breathing. 2) Supplement: Explain air composition changes via cell respiration & alveolar evaporation, and link exercise to increased blood CO₂ concentration detected by the brain ➔ increased rate and greater depth of breathing.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Core: So sánh O₂ (21% → 16%), CO₂ (0.04% → 4%) và hơi nước (thấp/thay đổi → bão hòa/cao hơn); mô tả thí nghiệm nước vôi trong ; nêu tập luyện làm tăng rate VÀ depth của nhịp thở. 2) Supplement: Giải thích sự thay đổi thành phần khí và chuỗi điều hòa vận động: increased CO₂ concentration in blood ➔ detected by the brain ➔ increased rate and greater depth of breathing .",
+      "duration": 69.85,
+      "startTime": 1490.01,
+      "endTime": 1559.86,
+      "audioUrl": "/audio/lectures/science/b11/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic traps in 0654: 1) Saying expired air has \"0% oxygen\" (it has ~16%!). 2) Saying the brain detects \"lack of oxygen\" during exercise—you MUST state increased carbon dioxide concentration in the blood, detected by the brain !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai cái bẫy mất điểm kinh điển ở 0654: 1) Tưởng khí thở ra có \"0% oxy\" (thực tế còn tới 16%!). 2) Viết não bộ phát hiện \"thiếu oxy\"—bắt buộc phải ghi đúng increased carbon dioxide concentration in the blood, detected by the brain !",
+      "duration": 42.12,
+      "startTime": 1559.86,
+      "endTime": 1601.98,
+      "audioUrl": "/audio/lectures/science/b11/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "hô hấp hiếu khí (aerobic respiration)",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Component: Oxygen (O₂); Inspired Air: 21%; Expired Air: 16%; Supplement Explanation: Absorbed into blood and used by body cells in aerobic respiration. Component: Carbon dioxide (CO₂); Inspired Air: 0.04%; Expired Air: 4%; Supplement Explanation: Produced by respiring cells, diffuses from blood into alveoli, and is excreted. Component: Water vapour; Inspired Air: Variable (lower); Expired Air: Saturated (higher); Supplement Explanation: Water evaporates from the warm, moist lining inside the alveoli. Component: Nitrogen (N₂); Inspired Air: 78%; Expired Air: 78%; Supplement Explanation: Inert in humans—neither used nor produced by respiring cells.",
+      "vi": "Thành phần (Gas): Oxygen (O₂); Inspired Air (Hít vào): 21%; Expired Air (Thở ra): 16%; Giải thích Supplement (Reason): Hấp thụ vào máu để cung cấp cho tế bào thực hiện hô hấp hiếu khí (aerobic respiration). Thành phần (Gas): Carbon dioxide (CO₂); Inspired Air (Hít vào): 0.04%; Expired Air (Thở ra): 4%; Giải thích Supplement (Reason): Sản phẩm thải của hô hấp tế bào khuếch tán từ máu vào phế nang để thải ra ngoài. Thành phần (Gas): Water vapour (Hơi nước); Inspired Air (Hít vào): Thay đổi / thấp hơn; Expired Air (Thở ra): Bão hòa / cao hơn; Giải thích Supplement (Reason): Nước bay hơi từ lớp màng ẩm ướt và ấm áp lót mặt trong các phế nang. Thành phần (Gas): Nitrogen (N₂); Inspired Air (Hít vào): 78%; Expired Air (Thở ra): 78%; Giải thích Supplement (Reason): Khí trơ sinh học—cơ thể người không tiêu thụ cũng không sinh ra N₂.",
+      "duration": 132.87,
+      "startTime": 1601.98,
+      "endTime": 1734.85,
+      "audioUrl": "/audio/lectures/science/b11/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "B. Thí nghiệm Nước vôi trong Kiểm chứng CO₂ (Limewater Test)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "B. Investigating Inspired vs Expired Air Using Limewater. Limewater (aqueous calcium hydroxide, Ca(OH)₂ ) tests for carbon dioxide by forming a milky white precipitate of calcium carbonate ( CaCO₃ ). When breathing gently in and out through the two-tube apparatus below, Tube B (expired air, 4% CO₂) turns cloudy/milky rapidly, whereas Tube A (inspired air, 0.04% CO₂) stays clear.",
+      "vi": "B. Thí nghiệm Nước vôi trong Kiểm chứng CO₂ (Limewater Test). Nước vôi trong (Limewater – dung dịch Ca(OH)₂ ) là thuốc thử chuẩn nhận biết khí CO₂ nhờ tạo kết tủa trắng CaCO₃ làm dung dịch hóa đục trắng như sữa (milky/cloudy) . Khi hít thở nhẹ qua bộ 2 ống nghiệm: Ống B (khí thở ra, 4% CO₂) hóa đục trắng rất nhanh, trong khi Ống A (khí hít vào, 0.04% CO₂) vẫn trong suốt.",
+      "duration": 66.3,
+      "startTime": 1734.85,
+      "endTime": 1801.15,
+      "audioUrl": "/audio/lectures/science/b11/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🏃 C. Tác động của Vận động Thể lực & Cơ chế Não bộ Điều hòa (Core #4 & Supplement #7)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🏃 C. Effect of Physical Activity & Brain Regulation (Core #4 & Supplement #7). Core Observation: Physical activity increases BOTH the rate of breathing (breaths per minute) and the depth of breathing (volume of each breath). Increased Blood CO₂ (Supplement): Contracting muscles respire faster to release more energy, releasing more CO₂ and causing an increased carbon dioxide concentration in the blood (lowering blood pH). Brain Detection & Response (Supplement): This rise in blood CO₂ is detected by the brain , which sends more frequent nerve impulses to the breathing muscles, producing an increased rate and greater depth of breathing to remove excess CO₂ and supply more O₂.",
+      "vi": "🏃 C. Tác động của Vận động Thể lực & Cơ chế Não bộ Điều hòa (Core #4 & Supplement #7). Hiện tượng Core: Khi vận động thể lực, cả tần số nhịp thở VÀ độ sâu của nhịp thở đều tăng mạnh. Tăng CO₂ máu (Supplement): Tế bào cơ co mạnh cần nhiều năng lượng nên tăng tốc hô hấp hiếu khí, xả nhiều CO₂ làm tăng nồng độ carbon dioxide trong máu và hạ nhẹ pH máu. Não bộ phát hiện & Đáp ứng (Supplement): Sự gia tăng nồng độ CO₂ trong máu được não bộ phát hiện ; não lập tức truyền xung thần kinh tới cơ hô hấp làm tăng tần số và độ sâu nhịp thở để đào thải nhanh CO₂ dư và nạp thêm O₂.",
+      "duration": 89.01,
+      "startTime": 1801.15,
+      "endTime": 1890.16,
+      "audioUrl": "/audio/lectures/science/b11/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ (0654) Compared with inspired air, expired air contains: A. More oxygen, less carbon dioxide, and less water vapour B. Less oxygen, more carbon dioxide, and more water vapour C. Zero oxygen, more carbon dioxide, and more nitrogen D. Less oxygen, less carbon dioxide, and saturated water vapour ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct : respiring cells use O₂ (21% → 16%) and produce CO₂ (0.04% → 4%), while moisture lining the alveoli evaporates so expired air contains more water vapour.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ (0654) Compared with inspired air, expired air contains: (So với không khí hít vào, không khí thở ra chứa:) A. More oxygen, less carbon dioxide, and less water vapour B. Less oxygen, more carbon dioxide, and more water vapour C. Zero oxygen, more carbon dioxide, and more nitrogen D. Less oxygen, less carbon dioxide, and saturated water vapour ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng : Tế bào cơ thể tiêu thụ O₂ cho hô hấp hiếu khí (21% → 16%) và thải ra CO₂ (0.04% → 4%), đồng thời nước từ màng ẩm phế nang bay hơi làm khí thở ra giàu hơi nước hơn.",
+      "duration": 103.49,
+      "startTime": 1890.16,
+      "endTime": 1993.65,
+      "audioUrl": "/audio/lectures/science/b11/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] A student runs vigorously on a treadmill for 5 minutes. (a) Describe two changes to the student's breathing pattern during the run compared with before the run. [2] (b) Explain how these changes in breathing are coordinated by the body during physical activity. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Increased rate of breathing (more breaths per minute) [1m] and increased depth of breathing (larger volume per breath) [1m]. (b) Contracting muscle cells respire faster, causing an increased carbon dioxide concentration in the blood [1m]. This increase is detected by the brain [1m], which sends nerve impulses to the breathing muscles to increase the rate and depth of breathing [1m]. 💡 Intuition Check: Check off all 3 Supplement keywords in part (b): (1) increased blood CO₂ concentration ➔ (2) detected by the brain ➔ (3) increased rate AND depth!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] A student runs vigorously on a treadmill for 5 minutes. (a) Describe two changes to the student's breathing pattern during the run compared with before the run. (b) Explain how these changes in breathing are coordinated by the body during physical activity. (Mô tả 2 thay đổi của nhịp thở khi chạy bộ và giải thích cơ chế cơ thể điều hòa sự thay đổi đó.) ✍️ Lời giải chi tiết theo thang điểm: (a) Tăng tần số nhịp thở (increased rate) và tăng độ sâu nhịp thở . (b) Cơ bắp vận động hô hấp mạnh làm tăng nồng độ CO₂ trong máu . Sự tăng này được não bộ phát hiện , phát xung thần kinh tới các cơ hô hấp làm tăng tần số và độ sâu nhịp thở . 💡 Kiểm tra bản chất: Kiểm tra đủ 3 chìa khóa Supplement trước khi nộp bài: (1) increased blood CO₂ ➔ (2) detected by brain ➔ (3) increased rate AND depth!",
+      "duration": 112.14,
+      "startTime": 1993.65,
+      "endTime": 2105.79,
+      "audioUrl": "/audio/lectures/science/b11/s04_b08.mp3"
     }
   ]
 }

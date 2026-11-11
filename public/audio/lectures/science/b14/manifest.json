@@ -1,124 +1,421 @@
 {
   "lectureId": "7ed510d0-acd2-4d0a-9079-1f1e4e4fc463",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B14: Drugs",
-  "totalDuration": 308.91,
+  "totalDuration": 2144.82,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_what_is_drug": {
-      "start": 1,
-      "end": 1
-    },
-    "sec-what-is-drug": {
-      "start": 1,
-      "end": 1
-    },
-    "sec_antibiotics": {
+    "s01_int": {
       "start": 2,
-      "end": 3
+      "end": 4
     },
-    "sec-antibiotics": {
-      "start": 2,
-      "end": 3
+    "s01_p1_sub01": {
+      "start": 8,
+      "end": 11
     },
-    "sec_antibiotics_target": {
-      "start": 3,
-      "end": 3
+    "s01_p2_sub01": {
+      "start": 8,
+      "end": 11
     },
-    "sec-antibiotics-target": {
-      "start": 3,
-      "end": 3
+    "s01_wex": {
+      "start": 12,
+      "end": 13
     },
-    "sec_mrsa_crisis": {
-      "start": 4,
-      "end": 5
+    "s01_hdr": {
+      "start": 1,
+      "end": 13
     },
-    "sec-mrsa-crisis": {
-      "start": 4,
-      "end": 5
+    "s02_int": {
+      "start": 15,
+      "end": 17
     },
-    "sec_resistance_selection": {
-      "start": 5,
-      "end": 5
+    "s02_wex": {
+      "start": 21,
+      "end": 22
     },
-    "sec-resistance-selection": {
-      "start": 5,
-      "end": 5
+    "s02_hdr": {
+      "start": 14,
+      "end": 22
+    },
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_wex": {
+      "start": 31,
+      "end": 32
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 32
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B14: Thuốc, Kháng sinh & Kháng thuốc",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B14: Drugs and Antibiotics. A drug is any substance taken into the body that modifies or affects chemical reactions. In this topic, we examine antibiotics, explain why they are ineffective against viruses, and analyze the development of antibiotic-resistant superbugs like MRSA.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B14: Thuốc, Kháng sinh và Kháng thuốc. Thuốc là bất kỳ chất nào đưa vào cơ thể làm thay đổi hoặc ảnh hưởng đến các phản ứng hóa sinh. Trong chuyên đề này, chúng ta sẽ tìm hiểu về kháng sinh, lý do kháng sinh vô dụng với virus và sự xuất hiện của siêu vi khuẩn kháng thuốc như MRSA.",
-      "duration": 43.41,
+      "title": "Topic B14: Drugs (Thuốc và Kháng sinh)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B14 • Pharmacology & Microbiology Drugs & Antibiotics. Cambridge IGCSE Co-ordinated Sciences (0654) • Definition of Drugs, Antibiotics vs Viruses, and MRSA Superbug.",
+      "vi": "Topic B14: Drugs (Thuốc và Kháng sinh). Cambridge IGCSE Co-ordinated Sciences (Biology 0654) • Định nghĩa về thuốc, cơ chế tác dụng của kháng sinh, lý do kháng sinh vô dụng với virus, và hiện tượng kháng thuốc (MRSA).",
+      "duration": 38.04,
       "startTime": 0.0,
-      "endTime": 43.41,
+      "endTime": 38.04,
       "audioUrl": "/audio/lectures/science/b14/intro.mp3"
     },
     {
-      "id": "sec_what_is_drug",
-      "title": "1. Khái niệm về Thuốc (What is a Drug? Overview)",
-      "selector": "#sec-what-is-drug",
-      "en": "Section 1 defines a drug: A drug is any substance taken into the body that modifies or affects chemical reactions in the body. Medicinal drugs treat symptoms or cure diseases; non-medicinal drugs alter mood or perception.",
-      "vi": "Mục một định nghĩa thuốc: Thuốc là bất kỳ chất nào đưa vào cơ thể làm biến đổi hoặc ảnh hưởng đến các phản ứng hóa học trong cơ thể. Thuốc y tế dùng để điều trị triệu chứng hoặc chữa bệnh; chất kích thích làm thay đổi tâm trạng hoặc tri giác.",
-      "duration": 50.75,
-      "startTime": 43.41,
-      "endTime": 94.16,
-      "audioUrl": "/audio/lectures/science/b14/sec_what_is_drug.mp3"
+      "id": "s01_hdr",
+      "title": "💊 1. Thuốc (Drug) là gì?",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "💊 1. What is a Drug?",
+      "vi": "💊 1. Thuốc (Drug) là gì?",
+      "duration": 5.48,
+      "startTime": 38.04,
+      "endTime": 43.52,
+      "audioUrl": "/audio/lectures/science/b14/s01_hdr.mp3"
     },
     {
-      "id": "sec_antibiotics",
-      "title": "2. Kháng sinh & Vì sao Vô dụng với Virus (Antibiotics Overview)",
-      "selector": "#sec-antibiotics",
-      "en": "Section 2 investigates antibiotics: Chemical substances produced by microorganisms (like Penicillium fungus) that kill or inhibit the growth of bacteria. Crucially, antibiotics are completely ineffective against viral diseases like influenza or HIV.",
-      "vi": "Mục hai nghiên cứu thuốc kháng sinh: Là các hợp chất hóa học do vi sinh vật (như nấm Penicillium) tiết ra để tiêu diệt hoặc ức chế vi khuẩn. Điểm cốt lõi: Kháng sinh hoàn toàn vô dụng trước các bệnh do virus như cúm hay HIV.",
-      "duration": 59.39,
-      "startTime": 94.16,
-      "endTime": 153.55,
-      "audioUrl": "/audio/lectures/science/b14/sec_antibiotics.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of your cells as tiny chemical factories running thousands of enzyme assembly lines per second. A drug is any external \"wrench or turbo-switch\" you swallow, inhale, or inject that reaches those assembly lines and modifies or affects the chemical reactions — whether it is penicillin saving your life or caffeine in morning coffee speeding up nerve synapses!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng mỗi tế bào trong cơ thể là một nhà máy hóa chất mini đang chạy hàng nghìn dây chuyền enzyme mỗi giây. Thuốc (Drug) là bất kỳ \"cờ-lê hay công tắc tăng tốc\" nào được đưa từ bên ngoài vào (uống, hít, tiêm) tới các dây chuyền đó và làm biến đổi phản ứng hóa học trong cơ thể — dù là penicillin cứu mạng hay caffeine trong ly cà phê sáng kích thích khe sinap thần kinh!",
+      "duration": 50.06,
+      "startTime": 43.52,
+      "endTime": 93.58,
+      "audioUrl": "/audio/lectures/science/b14/s01_b01.mp3"
     },
     {
-      "id": "sec_antibiotics_target",
-      "title": "🦠 Why Antibiotics Don't Affect Viruses (Kháng sinh & Virus)",
-      "selector": "#sec-antibiotics-target",
-      "en": "Mechanism: Antibiotics target bacterial cellular structures, such as disrupting bacterial peptidoglycan cell walls or inhibiting bacterial protein synthesis. Viruses have no cell walls, no cell membrane, and no independent metabolic machinery; they replicate exclusively inside host human cells, remaining invulnerable to antibiotics.",
-      "vi": "Cơ chế: Kháng sinh tấn công vào cấu trúc tế bào vi khuẩn, như phá hủy thành tế bào peptidoglycan hoặc ức chế tổng hợp protein vi khuẩn. Virus không có thành tế bào, không có màng sinh chất và không có bộ máy chuyển hóa độc lập; chúng nhân lên bên trong tế bào chủ nên kháng sinh không thể tác động.",
-      "duration": 40.41,
-      "startTime": 153.55,
-      "endTime": 193.96,
-      "audioUrl": "/audio/lectures/science/b14/sec_antibiotics_target.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the exact 2-mark Cambridge Core definition word-for-word:1) \"Any substance taken into the body\" (external intake, NOT internally secreted hormones).2) \"that modifies or affects chemical reactions in the body\" (metabolic/enzymatic/synaptic reactions).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc lòng từng chữ định nghĩa 2 điểm chuẩn Cambridge Core:1) \"Any substance taken into the body\" (chất đưa từ bên ngoài vào cơ thể, phân biệt với hormone tự tiết).2) \"that modifies or affects chemical reactions in the body\" (làm thay đổi các phản ứng hóa học / trao đổi chất bên trong cơ thể).",
+      "duration": 42.54,
+      "startTime": 93.58,
+      "endTime": 136.12,
+      "audioUrl": "/audio/lectures/science/b14/s01_b02.mp3"
     },
     {
-      "id": "sec_mrsa_crisis",
-      "title": "3. Kháng Kháng sinh & Siêu vi khuẩn MRSA (Antibiotic Resistance Overview)",
-      "selector": "#sec-mrsa-crisis",
-      "en": "Section 3 examines antibiotic resistance: Natural selection among bacteria leads to the survival and reproduction of mutant resistant strains when antibiotics are overused.",
-      "vi": "Mục ba phân tích hiện tượng kháng kháng sinh: Chọn lọc tự nhiên ở vi khuẩn dẫn đến sự sống sót và sinh sôi của các chủng đột biến kháng thuốc khi kháng sinh bị lạm dụng.",
-      "duration": 65.42,
-      "startTime": 193.96,
-      "endTime": 259.38,
-      "audioUrl": "/audio/lectures/science/b14/sec_mrsa_crisis.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic traps: (1) Defining a drug as \"a medicine used to cure disease\" — 0 marks! That excludes alcohol, nicotine, and caffeine. (2) Calling endogenous insulin or adrenaline produced by your own glands a drug (it is only a drug when injected externally!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy mất điểm kinh điển: (1) Định nghĩa drug là \"thuốc dùng để chữa bệnh\" — 0 điểm! Vì cách viết đó bỏ sót rượu bia (alcohol), thuốc lá (nicotine), caffeine. (2) Gọi hormone tự nhiên do tuyến nội tiết tiết ra là drug (chỉ khi tiêm từ ngoài vào mới gọi là drug!).",
+      "duration": 43.29,
+      "startTime": 136.12,
+      "endTime": 179.41,
+      "audioUrl": "/audio/lectures/science/b14/s01_b03.mp3"
     },
     {
-      "id": "sec_resistance_selection",
-      "title": "🧬 Natural Selection of Resistance (Chọn lọc Tự nhiên Kháng thuốc)",
-      "selector": "#sec-resistance-selection",
-      "en": "Mechanism of resistance: 1. Random mutation in bacterial DNA creates a gene conferring resistance. 2. When treated with antibiotic, non-resistant bacteria die, removing competition. 3. The mutant resistant bacterium survives and reproduces rapidly by binary fission. 4. All offspring inherit the resistance gene, forming an antibiotic-resistant strain like MRSA.",
-      "vi": "Cơ chế kháng thuốc: 1. Đột biến ngẫu nhiên trong DNA vi khuẩn tạo gen kháng thuốc. 2. Khi dùng kháng sinh, vi khuẩn không kháng bị tiêu diệt, làm mất sự cạnh tranh. 3. Vi khuẩn đột biến kháng thuốc sống sót và sinh sôi nhanh chóng qua phân đôi. 4. Toàn bộ thế hệ con cháu mang gen kháng thuốc, tạo nên chủng siêu vi khuẩn như MRSA.",
-      "duration": 49.53,
-      "startTime": 259.38,
-      "endTime": 308.91,
-      "audioUrl": "/audio/lectures/science/b14/sec_resistance_selection.mp3"
+      "id": "s01_b04",
+      "title": "Định nghĩa chuẩn Cambridge IGCSE:",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Cambridge IGCSE Official Definition: \"A drug is any substance taken into the body that modifies or affects chemical reactions in the body.\".",
+      "vi": "Định nghĩa chuẩn Cambridge IGCSE: \"Thuốc (Drug) là bất kỳ chất nào đưa vào cơ thể làm thay đổi hoặc ảnh hưởng đến các phản ứng hóa học trong cơ thể.\".",
+      "duration": 19.7,
+      "startTime": 179.41,
+      "endTime": 199.11,
+      "audioUrl": "/audio/lectures/science/b14/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "Thuốc chữa bệnh (Medicinal Drugs):",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Medicinal Drugs: Substances used to treat symptoms, cure diseases, or relieve pain (e.g. antibiotics like penicillin, pain relievers like paracetamol, anaesthetics).",
+      "vi": "Thuốc chữa bệnh (Medicinal Drugs): Các chất dùng để điều trị triệu chứng, chữa khỏi bệnh, hoặc giảm đau (ví dụ thuốc kháng sinh penicillin, thuốc giảm đau paracetamol, thuốc gây mê).",
+      "duration": 25.1,
+      "startTime": 199.11,
+      "endTime": 224.21,
+      "audioUrl": "/audio/lectures/science/b14/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Chất gây nghiện / Lạm dụng (Recreational Drugs):",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Recreational / Misused Drugs: Substances taken for pleasure or stimulation rather than medical reasons (e.g. alcohol, tobacco/nicotine, heroin). Highly prone to physical and psychological addiction.",
+      "vi": "Chất gây nghiện / Lạm dụng (Recreational Drugs): Các chất kích thích dùng cho mục đích giải trí thay vì y tế (ví dụ rượu bia, nicotine trong thuốc lá, heroin), rất dễ gây nghiện thể chất và tâm lý.",
+      "duration": 28.76,
+      "startTime": 224.21,
+      "endTime": 252.97,
+      "audioUrl": "/audio/lectures/science/b14/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "1. \"Any substance taken into the body\"",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "1. \"Any substance taken into the body\" Administered externally (swallowed, inhaled, injected, or absorbed through skin) — distinguishing drugs from endogenous hormones made inside glands.",
+      "vi": "1. \"Any substance taken into the body\" Đưa từ bên ngoài vào cơ thể (uống, tiêm, hít, thẩm thấu qua da) — phân biệt với hormone do chính tuyến nội tiết tự sản xuất.",
+      "duration": 24.58,
+      "startTime": 252.97,
+      "endTime": 277.55,
+      "audioUrl": "/audio/lectures/science/b14/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "2. \"Modifies or affects\"",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "2. \"Modifies or affects\" Speeds up, slows down, blocks, or alters normal physiological pathways inside tissues and organs.",
+      "vi": "2. \"Modifies or affects\" Làm tăng tốc, kìm hãm hoặc thay đổi tốc độ sinh lý bình thường của tế bào và mô.",
+      "duration": 17.57,
+      "startTime": 277.55,
+      "endTime": 295.12,
+      "audioUrl": "/audio/lectures/science/b14/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "3. \"Chemical reactions in the body\"",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "3. \"Chemical reactions in the body\" Targets metabolic enzyme reactions, cell membrane receptors, or neurotransmitter pathways at synapses.",
+      "vi": "3. \"Chemical reactions in the body\" Tác động trực tiếp lên các phản ứng trao đổi chất ( metabolism ), enzyme hoặc thụ thể màng tế bào thần kinh.",
+      "duration": 20.89,
+      "startTime": 295.12,
+      "endTime": 316.01,
+      "audioUrl": "/audio/lectures/science/b14/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "Nhóm chất (Category): Kháng sinh (Antibiotics); Ví dụ điển hình: Penicillin, Met...",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "Drug Category: Medicinal Antibiotics; Examples: Penicillin, Methicillin, Amoxicillin; How It Modifies Chemical Reactions in the Body: Inhibit bacterial enzymes that cross-link peptidoglycan cell walls or synthesise bacterial proteins during infection. Drug Category: Analgesics (Painkillers); Examples: Paracetamol, Ibuprofen, Aspirin; How It Modifies Chemical Reactions in the Body: Block enzyme pathways producing pain-signalling chemicals without killing pathogens directly. Drug Category: Everyday / Recreational Drugs; Examples: Caffeine, Alcohol, Nicotine; How It Modifies Chemical Reactions in the Body: Alter neurotransmitter binding/release at brain synapses and modify heart rate, reaction time, and liver metabolism.",
+      "vi": "Nhóm chất (Category): Kháng sinh (Antibiotics); Ví dụ điển hình: Penicillin, Methicillin, Amoxicillin; Cách làm biến đổi phản ứng hóa học trong cơ thể: Ức chế phản ứng enzyme tổng hợp vách tế bào peptidoglycan hoặc protein của vi khuẩn gây bệnh. Nhóm chất (Category): Thuốc điều trị triệu chứng; Ví dụ điển hình: Paracetamol, Ibuprofen, Thuốc tê; Cách làm biến đổi phản ứng hóa học trong cơ thể: Ức chế enzyme tạo chất trung gian gây đau/viêm hoặc chặn truyền tín hiệu đau về não. Nhóm chất (Category): Chất kích thích / Ức chế thần kinh; Ví dụ điển hình: Caffeine, Alcohol, Nicotine; Cách làm biến đổi phản ứng hóa học trong cơ thể: Biến đổi phản ứng dẫn truyền hóa học tại khe sinap thần kinh và tốc độ chuyển hóa ở gan/tim.",
+      "duration": 105.24,
+      "startTime": 316.01,
+      "endTime": 421.25,
+      "audioUrl": "/audio/lectures/science/b14/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which statement is the accurate biological definition of a drug? A. Any illegal chemical substance that causes addiction and damages the liver B. Any substance produced by an endocrine gland and carried in the blood to a target organ C. Any substance taken into the body that modifies or affects chemical reactions in the body D. Any chemical medicine prescribed by a doctor to kill pathogenic microorganisms ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: C is the exact Cambridge IGCSE definition covering both medicinal and non-medicinal drugs. A and D are far too narrow (excluding medicinal or non-medicinal drugs respectively), while B is the definition of a hormone , not a drug!",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Exam Question: Which statement is the accurate biological definition of a drug? (Phát biểu nào sau đây là định nghĩa sinh học chính xác về thuốc — drug?) A. Mọi hóa chất bất hợp pháp gây nghiện B. Chất do tuyến nội tiết tiết ra đi trong máu C. Bất kỳ chất nào đưa vào cơ thể làm biến đổi hoặc ảnh hưởng các phản ứng hóa học trong cơ thể D. Hóa chất bác sĩ kê đơn để diệt mầm bệnh ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: C là nguyên văn định nghĩa chuẩn Cambridge IGCSE bao quát cả thuốc điều trị y tế lẫn các chất kích thích/ức chế. Loại A và D vì phạm vi quá hẹp; loại B vì đó là định nghĩa của hormone !",
+      "duration": 95.98,
+      "startTime": 421.25,
+      "endTime": 517.23,
+      "audioUrl": "/audio/lectures/science/b14/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) Define the term drug . [2] (b) A student states: \"Coffee and cigarettes do not contain drugs because they are sold legally in supermarkets without a prescription.\" Explain biologically why the student is incorrect. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Any substance taken into the body [1m] that modifies or affects chemical reactions in the body [1m]. (b) Coffee contains caffeine and cigarettes contain nicotine (taken into the body) [1m]; both alter chemical / neurotransmitter / metabolic reactions in the nervous system and body, regardless of legal status [1m]. 💡 Intuition Check: In Biology, legality or medical benefit never defines a drug — ONLY whether an externally taken substance modifies chemical reactions in the body!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) Define the term drug . (Định nghĩa thuật ngữ thuốc — drug.) (b) A student states: \"Coffee and cigarettes do not contain drugs because they are sold legally in supermarkets.\" Explain biologically why this statement is wrong. (Một học sinh nói cà phê và thuốc lá không chứa drug vì được bán hợp pháp. Hãy giải thích về mặt sinh học vì sao học sinh đó sai.) ✍️ Lời giải chi tiết theo thang điểm: Bất kỳ chất nào đưa vào cơ thể làm thay đổi hoặc ảnh hưởng đến các phản ứng hóa học trong cơ thể . (b) Coffee contains caffeine and cigarettes contain nicotine taken into the body ; both modify chemical / synaptic / metabolic reactions in the nervous system and body regardless of legal status . 💡 Kiểm tra bản chất: Trong Sinh học, tính hợp pháp không quyết định một chất có phải là drug hay không — chỉ xét chất đó đưa từ ngoài vào có làm biến đổi phản ứng hóa học của cơ thể hay không!",
+      "duration": 124.77,
+      "startTime": 517.23,
+      "endTime": 642.0,
+      "audioUrl": "/audio/lectures/science/b14/s01_b12.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🦠 2. Kháng sinh & Lý do Vô dụng với Virus",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🦠 2. Antibiotics & Why They Don't Affect Viruses.",
+      "vi": "🦠 2. Kháng sinh & Lý do Vô dụng với Virus.",
+      "duration": 8.27,
+      "startTime": 642.0,
+      "endTime": 650.27,
+      "audioUrl": "/audio/lectures/science/b14/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine an antibiotic like penicillin as a specialised bulldozer designed exclusively to knock down peptidoglycan brick walls (bacterial cell walls) . Human cells have no brick walls (only flexible membranes), so our cells stay completely safe! Meanwhile, a virus has no cell wall, no cytoplasm, and no metabolic machinery of its own — it hides inside your own house like a ghost photocopy sheet, leaving the antibiotic bulldozer with nothing to hit!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung kháng sinh (như penicillin) là chiếc xe ủi chuyên dụng chỉ được lập trình để húc đổ tường gạch peptidoglycan (vách tế bào vi khuẩn) . Tế bào người không hề có tường gạch nên hoàn toàn bình an vô sự! Còn virus thì chẳng có tường gạch, chẳng có tế bào chất hay bộ máy trao đổi chất riêng — nó chui tọt vào bên trong ngôi nhà tế bào người như một tờ giấy photocopy ma, khiến chiếc xe ủi kháng sinh đứng ngoài hoàn toàn bất lực!",
+      "duration": 62.11,
+      "startTime": 650.27,
+      "endTime": 712.38,
+      "audioUrl": "/audio/lectures/science/b14/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Medicinal use: Antibiotics treat bacterial infections by killing bacteria (e.g. disrupting bacterial cell walls or bacterial protein synthesis/metabolism) without harming host human cells.2) Why ineffective against viruses: Viruses are non-cellular — they have no cell wall , no cell membrane/ribosomes, no independent metabolic pathways, and replicate inside host cells .3) On an agar plate, antibiotic resistance shows up as a reduced or 0 mm clear zone of inhibition .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Công dụng y tế: Kháng sinh điều trị nhiễm khuẩn (bacterial infections) bằng cách phá vách tế bào hoặc khóa quá trình trao đổi chất của vi khuẩn mà không hại tế bào người.2) Vì sao vô dụng với virus: Virus không có cấu tạo tế bào (non-cellular) — không có vách tế bào (no cell wall) , không có con đường trao đổi chất riêng và nhân lên bên trong tế bào vật chủ .3) Trên đĩa thạch, chủng kháng thuốc có vòng vô khuẩn = 0 mm .",
+      "duration": 69.26,
+      "startTime": 712.38,
+      "endTime": 781.64,
+      "audioUrl": "/audio/lectures/science/b14/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: NEVER write \"viruses are resistant/immune to antibiotics\"! Saying viruses \"became resistant\" implies antibiotics used to work on them. Instead write: antibiotics do not affect viruses because viruses have no cell walls and no cellular metabolic pathways of their own !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG viết \"virus kháng (resistant) lại kháng sinh\"! Nói virus \"kháng thuốc\" hàm ý trước đây thuốc từng diệt được virus. Phải viết chuẩn: kháng sinh không ảnh hưởng đến virus vì virus không có vách tế bào và không có bộ máy trao đổi chất tế bào riêng !",
+      "duration": 40.72,
+      "startTime": 781.64,
+      "endTime": 822.36,
+      "audioUrl": "/audio/lectures/science/b14/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Thí nghiệm tương tác: Kháng sinh đối với Vi khuẩn và Virus",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Antibiotics: Chemical compounds produced by microorganisms (or synthesized artificially) that kill bacteria or inhibit their growth without harming human host cells. Interactive Lab: Antibiotics vs Bacteria and Viruses.",
+      "vi": "Thuốc kháng sinh (Antibiotics): Hợp chất hóa học có khả năng tiêu diệt vi khuẩn hoặc ức chế sự nhân lên của chúng mà không làm tổn hại đến tế bào cơ thể người. Thí nghiệm tương tác: Kháng sinh đối với Vi khuẩn và Virus. Rê chuột vào các nút Vi khuẩn và Virus dưới đây để xem tại sao kháng sinh chỉ diệt được vi khuẩn nhưng bất lực trước virus:",
+      "duration": 39.02,
+      "startTime": 822.36,
+      "endTime": 861.38,
+      "audioUrl": "/audio/lectures/science/b14/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Tại sao Kháng sinh vô dụng với Virus?",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Why Antibiotics Do Not Affect Viruses. Hover over Bacteria (Left) and Virus (Right) to examine how antibiotics interact with them. Hover over Bacteria or Virus 👆. Antibiotics such as penicillin disrupt structures (peptidoglycan cell walls) and metabolic pathways unique to living prokaryotic bacteria.",
+      "vi": "Tại sao Kháng sinh vô dụng với Virus? Kháng sinh (Antibiotics) như Penicillin chỉ tấn công cấu trúc vách tế bào peptidoglycan và enzyme trao đổi chất đặc thù của tế bào sống vi khuẩn.",
+      "duration": 36.81,
+      "startTime": 861.38,
+      "endTime": 898.19,
+      "audioUrl": "/audio/lectures/science/b14/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "📊 Bảng Đối chiếu Cốt lõi: Vi khuẩn vs Virus vs Tế bào Người",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "📊 Core Structural Comparison: Bacteria vs Viruses vs Human Host Cells. Feature: Cellular Structure; Bacteria: Living prokaryotic cell (cytoplasm + membrane); Viruses: Non-cellular particle (protein coat + DNA/RNA only); Human Host Cells: Living eukaryotic cell. Feature: Cell Wall; Bacteria: Present — peptidoglycan cell wall (primary antibiotic target!); Viruses: Absent — NO cell wall; Human Host Cells: Absent — NO cell wall (unharmed by penicillin). Feature: Metabolism & Replication; Bacteria: Own metabolic enzymes & ribosomes; binary fission; Viruses: No own metabolism; hijacks inside of host human cells; Human Host Cells: Eukaryotic metabolic pathways. Feature: Effect of Antibiotics; Bacteria: KILLED or growth inhibited; Viruses: NO EFFECT AT ALL; Human Host Cells: Unharmed. Agar Petri Dish Zone of Inhibition Practical 🧪 Practical Exam Focus (Paper 5/6): Testing Antibiotic Effectiveness on Agar Plates. Principle: Each antibiotic diffuses outward from its filter-paper disc into the agar. Where bacteria are killed or prevented from dividing, a clear zone of inhibition forms around the disc. Disc A (Largest clear zone): Most effective antibiotic against this bacterial strain. Disc C (No clear zone — 0 mm): The bacteria are completely resistant to antibiotic C, showing how resistance reduces antibiotic effectiveness! Disc W (Sterile distilled water control): Confirms that the paper disc itself does not kill bacteria.",
+      "vi": "📊 Bảng Đối chiếu Cốt lõi: Vi khuẩn vs Virus vs Tế bào Người. Đặc điểm (Feature): Cấu tạo tế bào; Vi khuẩn (Bacteria): Tế bào sống nhân sơ (Prokaryotic cell); Virus (Viruses): KHÔNG phải tế bào (chỉ vỏ protein + DNA/RNA); Tế bào Người (Human Cells): Tế bào sống nhân thực (Eukaryotic cell). Đặc điểm (Feature): Vách tế bào (Cell wall); Vi khuẩn (Bacteria): Có vách peptidoglycan (đích đánh của kháng sinh!); Virus (Viruses): KHÔNG có vách tế bào; Tế bào Người (Human Cells): KHÔNG có vách tế bào (nên an toàn với penicillin). Đặc điểm (Feature): Trao đổi chất & Nhân lên; Vi khuẩn (Bacteria): Tự trao đổi chất & tự phân đôi độc lập; Virus (Viruses): Không có trao đổi chất riêng; ẩn nấp trong tế bào chủ; Tế bào Người (Human Cells): Trao đổi chất nhân thực riêng biệt. Đặc điểm (Feature): Tác dụng của Kháng sinh; Vi khuẩn (Bacteria): TIÊU DIỆT hoặc ức chế sinh trưởng; Virus (Viruses): HOÀN TOÀN KHÔNG BỊ ẢNH HƯỞNG; Tế bào Người (Human Cells): Không bị phá hủy. Agar Petri Dish Zone of Inhibition Practical 🧪 Thực hành Đề thi Paper 5/6: Thử nghiệm Đĩa thạch Kháng sinh đồ. Nguyên lý: Kháng sinh từ khoanh giấy thấm khuếch tán ra thạch xung quanh. Nơi nồng độ kháng sinh đủ diệt vi khuẩn sẽ xuất hiện vòng vô khuẩn trong suốt. Đĩa A (Vòng trong suốt lớn nhất): Kháng sinh hiệu quả nhất đối với chủng vi khuẩn này. Đĩa C (Không có vòng trong suốt — 0 mm): Chủng vi khuẩn này đã KHÁNG hoàn toàn (resistant) với kháng sinh C — làm giảm hiệu quả điều trị!",
+      "duration": 222.8,
+      "startTime": 898.19,
+      "endTime": 1120.99,
+      "audioUrl": "/audio/lectures/science/b14/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ A patient visits a clinic suffering from influenza (caused by a virus) and asks for antibiotics. Why does the doctor refuse to prescribe antibiotics? A. Influenza viruses quickly mutate to form peptidoglycan cell walls B. Antibiotics kill bacteria, but do not affect viruses because viruses lack cell walls and metabolic pathways C. Antibiotics stimulate viruses to reproduce faster by binary fission D. Antibiotics destroy white blood cells and antibodies needed to fight influenza ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Influenza is a viral infection . Antibiotics target bacterial structures such as peptidoglycan cell walls and 70S ribosomes/enzymes; since viruses are non-cellular particles lacking cell walls and their own metabolism (replicating inside host cells), antibiotics have zero effect on them.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Exam Question: A patient suffering from influenza asks for antibiotics. Bệnh nhân bị cúm do virus xin kê đơn kháng sinh. Vì sao bác sĩ từ chối kê kháng sinh? A. Virus cúm đột biến tạo vách peptidoglycan B. Kháng sinh diệt vi khuẩn nhưng không tác động lên virus vì virus không có vách tế bào và trao đổi chất riêng C. Kháng sinh làm virus nhân đôi nhanh hơn D. Antibiotics destroy human antibodies (Kháng sinh phá hủy kháng thể của người) ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Cúm (influenza) do virus gây ra. Kháng sinh chỉ tấn công cấu trúc của tế bào vi khuẩn (như vách tế bào peptidoglycan và enzyme/ribosome vi khuẩn); vì virus không có cấu trúc tế bào, không có vách tế bào và ký sinh nội bào nên kháng sinh hoàn toàn không có tác dụng.",
+      "duration": 118.61,
+      "startTime": 1120.99,
+      "endTime": 1239.6,
+      "audioUrl": "/audio/lectures/science/b14/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "P, Q, R",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦🟩 CORE & PRACTICAL • Paper 4 / Paper 6 Data Analysis [5 marks] Four filter-paper discs soaked in equal concentrations of antibiotics P, Q, R and sterile distilled water ( W ) were placed on an agar plate evenly spread with pathogenic bacteria isolated from a wound. After 24 hours at 37 °C, the diameters of the clear zones around the discs (disc diameter = 6 mm ) were:• Antibiotic P: 24 mm | Antibiotic Q: 13 mm | Antibiotic R: 6 mm | Water (W): 6 mm (a) State and explain which antibiotic should be prescribed to treat this patient's wound infection. [2] (b) Explain the result obtained for Antibiotic R and state the purpose of disc W . [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Antibiotic P [1m]; it produced the largest clear zone of inhibition (24 mm) , showing it killed / inhibited the growth of the greatest number of these bacteria (most effective) [1m]. (b) For R , no clear zone formed beyond the 6 mm disc because the bacteria are resistant to antibiotic R [1m], reducing its effectiveness to zero [1m]. Disc W acts as a control to show that the filter paper / water alone does not kill or inhibit bacteria [1m]. 💡 Intuition Check: Notice that a measured diameter of 6 mm equals the 6 mm paper disc itself — meaning a 0 mm clear zone around R (complete resistance)!",
+      "vi": "BÀI MẪU 2 🟦🟩 CORE & PRACTICAL • Paper 4 / Paper 6 Data Analysis [5 marks] Four 6 mm filter-paper discs soaked in antibiotics P, Q, R and sterile distilled water ( W ) were placed on an agar plate seeded with bacteria from an infected wound. After 24 hours, total clear-zone diameters were:• Antibiotic P: 24 mm | Antibiotic Q: 13 mm | Antibiotic R: 6 mm | Water (W): 6 mm (a) State and explain which antibiotic should be chosen to treat the wound. Chọn kháng sinh tối ưu để điều trị và giải thích kết quả ở đĩa R cùng vai trò của đĩa đối chứng W. ✍️ Lời giải chi tiết theo thang điểm: (a) Antibiotic P ; it produced the largest clear zone (24 mm) , meaning it killed / inhibited the most bacteria (most effective) . (Chọn P vì tạo vòng vô khuẩn lớn nhất 24 mm ➔ diệt khuẩn mạnh nhất.) (b) Around R , no clear zone formed beyond the 6 mm disc because the bacteria are resistant to antibiotic R , making R ineffective . Vi khuẩn đã kháng hoàn toàn R; W là mẫu đối chứng. 💡 Kiểm tra bản chất: Đường kính đo được 6 mm bằng đúng đường kính khoanh giấy 6 mm — tức bề rộng vùng sạch khuẩn bằng 0 mm (vi khuẩn kháng thuốc 100%)!",
+      "duration": 199.1,
+      "startTime": 1239.6,
+      "endTime": 1438.7,
+      "audioUrl": "/audio/lectures/science/b14/s02_b08.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧬 3. Kháng Kháng sinh & Thảm họa Siêu vi khuẩn MRSA",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧬 3. Antibiotic Resistance & The MRSA Crisis.",
+      "vi": "🧬 3. Kháng Kháng sinh & Thảm họa Siêu vi khuẩn MRSA.",
+      "duration": 10.22,
+      "startTime": 1438.7,
+      "endTime": 1448.92,
+      "audioUrl": "/audio/lectures/science/b14/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a lawn of 10 million weeds ( normal bacteria ) with 1 freak fireproof weed born by random chance ( random mutation ). Normally, the 10 million ordinary weeds crowd it out. Spraying a flamethrower ( antibiotic ) wipes out all 10 million competitors — handing the entire empty garden to that 1 fireproof survivor to multiply into millions of fireproof super-weeds ( MRSA )! Stopping the spray halfway is even worse: toughened survivors quickly take over!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng bãi cỏ có 10 triệu cây cỏ thường ( vi khuẩn nhạy cảm ) và tình cờ mọc ra 1 cây cỏ chống lửa do đột biến ngẫu nhiên (random mutation) . Bình thường 10 triệu cây kia chèn ép khiến nó chẳng lớn nổi. Khi phun súng lửa ( kháng sinh ), cả 10 triệu cây cỏ thường cháy sạch — dâng nguyên mảnh đất trống màu mỡ cho 1 cây chống lửa sống sót tự do sinh sôi thành cả rừng siêu cỏ chống lửa ( MRSA )! Bỏ dở thuốc giữa chừng càng tạo điều kiện cho đám sống sót bùng phát!",
+      "duration": 68.31,
+      "startTime": 1448.92,
+      "endTime": 1517.23,
+      "audioUrl": "/audio/lectures/science/b14/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Four-step Supplement Mark Scheme chain for MRSA / antibiotic resistance:1) Random mutation in bacterial DNA produces a new allele giving resistance.2) Exposure to the antibiotic acts as a selection pressure : non-resistant bacteria die, while resistant bacteria survive .3) Survivors reproduce rapidly (binary fission) without competition and pass the resistance allele to offspring.4) Limiting resistance: Use antibiotics only when essential (reduces selection pressure) and complete the full prescribed course (leaves zero bacterial survivors).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Chuỗi 4 bước Supplement Mark Scheme giải thích kháng kháng sinh (MRSA):1) Đột biến ngẫu nhiên (Random mutation) trong DNA tạo ra allele kháng thuốc ở một số ít vi khuẩn.2) Kháng sinh đóng vai trò áp lực chọn lọc (selection pressure) : diệt vi khuẩn thường, còn vi khuẩn kháng thuốc sống sót .3) Vi khuẩn sống sót nhân đôi nhanh và truyền allele kháng thuốc cho đời con.4) Hạn chế kháng thuốc: Chỉ dùng kháng sinh khi thật cần thiết để giảm áp lực chọn lọc, và uống hết liệu trình để tiêu diệt sạch vi khuẩn.",
+      "duration": 77.45,
+      "startTime": 1517.23,
+      "endTime": 1594.68,
+      "audioUrl": "/audio/lectures/science/b14/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: NEVER write \"bacteria mutate IN ORDER TO survive the antibiotic\" or \"the patient's body becomes resistant/immune to the antibiotic\"! (1) Mutations are random (not purposeful), and (2) it is the BACTERIA — never the human patient — that become resistant!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: CẤM TUYỆT ĐỐI hai câu viết sai bản chất tiến hóa: (1) \"Vi khuẩn tự đột biến ĐỂ chống lại kháng sinh\" (đột biến là ngẫu nhiên , không có mục đích!), và (2) \"Cơ thể bệnh nhân bị nhờn/kháng kháng sinh\" — VI KHUẨN mới kháng thuốc, không bao giờ là cơ thể người!",
+      "duration": 39.51,
+      "startTime": 1594.68,
+      "endTime": 1634.19,
+      "audioUrl": "/audio/lectures/science/b14/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Khi vi khuẩn tiếp xúc với kháng sinh, quá trình chọn lọc tự nhiên sẽ thúc đẩy sự...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "When bacteria are exposed to antibiotics, natural selection drives the emergence of antibiotic-resistant \"superbug\" strains such as MRSA (Methicillin-resistant Staphylococcus aureus ).",
+      "vi": "Khi vi khuẩn tiếp xúc với kháng sinh, quá trình chọn lọc tự nhiên sẽ thúc đẩy sự xuất hiện của các chủng siêu vi khuẩn kháng thuốc như MRSA (Tụ cầu vàng kháng Methicillin).",
+      "duration": 23.92,
+      "startTime": 1634.19,
+      "endTime": 1658.11,
+      "audioUrl": "/audio/lectures/science/b14/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Từng bước hình thành Siêu vi khuẩn kháng thuốc (Chọn lọc tự nhiên):",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Step-by-Step Mechanism of Resistance Development (Natural Selection): Random Mutation: In a huge population of bacteria, random genetic mutations occasionally give a few individual bacteria resistance alleles to an antibiotic. Selective Pressure (Antibiotic Application): When an antibiotic is taken, all susceptible non-resistant bacteria are killed. Survival of the Fittest: The resistant bacteria survive because the drug has no effect on them. Reproduction & Inheritance: With all competitor bacteria eliminated and abundant nutrients available, the resistant bacteria multiply rapidly, passing the resistance genes to their offspring. Superbug Population: Over time, the entire population consists of resistant bacteria, rendering the antibiotic completely ineffective.",
+      "vi": "Từng bước hình thành Siêu vi khuẩn kháng thuốc (Chọn lọc tự nhiên): Đột biến ngẫu nhiên (Mutation): Trong quần thể vi khuẩn khổng lồ, một vài cá thể ngẫu nhiên xuất hiện gen đột biến kháng được thuốc. Áp lực chọn lọc (Uống thuốc): Khi uống kháng sinh, toàn bộ các vi khuẩn nhạy cảm thông thường sẽ bị tiêu diệt sạch. Cá thể kháng thuốc sống sót: Con vi khuẩn mang gen kháng thuốc không bị hề hấn gì. Nhân đôi & Truyền gen: Không còn đối thủ cạnh tranh thức ăn, vi khuẩn kháng thuốc nhân đôi cực nhanh và truyền gen kháng thuốc cho đời sau. Quần thể siêu vi khuẩn: Cả quần thể mới đều kháng thuốc, khiến loại thuốc kháng sinh đó hoàn toàn mất tác dụng.",
+      "duration": 93.99,
+      "startTime": 1658.11,
+      "endTime": 1752.1,
+      "audioUrl": "/audio/lectures/science/b14/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🧬 Sơ đồ 4 Giai đoạn Chọn lọc Tự nhiên Hình thành Siêu vi khuẩn MRSA",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🧬 Four-Stage Natural Selection Timeline Producing Resistant Bacteria (MRSA). 🔑 Supplement Mechanism (15.1.5 / B14.1.5) — Why \"Using Antibiotics Only When Essential\" Limits MRSA: Every unnecessary exposure to an antibiotic acts as a selection pressure that kills normal competing bacteria and gives rare resistant mutants a massive survival advantage. By prescribing antibiotics only when essential (never for viral or trivial self-limiting infections) and ensuring patients complete the full prescribed course , bacteria are exposed to antibiotics far less frequently — reducing selection pressure so resistant strains like MRSA are much less likely to survive, reproduce, and spread!",
+      "vi": "🧬 Sơ đồ 4 Giai đoạn Chọn lọc Tự nhiên Hình thành Siêu vi khuẩn MRSA. 🔑 Giải thích chuẩn Supplement (15.1.5 / B14.1.5) — Vì sao \"Chỉ dùng kháng sinh khi thật cần thiết\" lại kìm hãm MRSA? Mỗi lần tiếp xúc với kháng sinh là một lần tạo ra áp lực chọn lọc (selection pressure) tiêu diệt các vi khuẩn thường cạnh tranh, dọn đường cho vi khuẩn đột biến kháng thuốc sống sót và nhân lên. Khi chỉ dùng kháng sinh khi thật sự cần thiết (tuyệt đối không dùng cho bệnh virus hoặc nhiễm nhẹ tự khỏi) và uống hết 100% đơn thuốc , vi khuẩn hiếm khi gặp áp lực chọn lọc và không còn cá thể sống sót sót lại để truyền gen kháng thuốc!",
+      "duration": 88.8,
+      "startTime": 1752.1,
+      "endTime": 1840.9,
+      "audioUrl": "/audio/lectures/science/b14/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🛡️ Nguyên tắc vàng hạn chế Siêu vi khuẩn kháng thuốc:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "🛡️ Guidelines to Prevent Antibiotic Resistance: Always complete the full prescribed course of antibiotics to ensure every single pathogen is eliminated. Never use antibiotics for viral infections (such as the common cold, sore throats, or influenza). Avoid unnecessary prophylactic use in farming and livestock animal feed.",
+      "vi": "🛡️ Nguyên tắc vàng hạn chế Siêu vi khuẩn kháng thuốc: Luôn uống hết liệu trình đơn thuốc kể cả khi đã thấy đỡ để tiêu diệt tận gốc 100% mầm mống vi khuẩn. Tuyệt đối không dùng kháng sinh chữa bệnh do virus (như cảm cúm, viêm họng do virus). Hạn chế lạm dụng kháng sinh trong chăn nuôi gia súc, gia cầm.",
+      "duration": 42.45,
+      "startTime": 1840.9,
+      "endTime": 1883.35,
+      "audioUrl": "/audio/lectures/science/b14/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which action by doctors and patients is MOST effective at limiting the development of antibiotic-resistant bacteria such as MRSA? A. Prescribing antibiotics immediately for every cough, cold, and sore throat B. Stopping the course of antibiotic tablets as soon as the patient feels better C. Using antibiotics only when essential for bacterial infections and completing the full prescribed course D. Sharing leftover antibiotics with family members who show similar symptoms ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Prescribing antibiotics only when essential avoids unnecessary selection pressure on bacterial populations, and completing the full course ensures every target bacterium is killed so none survive to reproduce resistant offspring. A , B , and D all accelerate resistance!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Exam Question: Which action is MOST effective at limiting the development of antibiotic-resistant bacteria such as MRSA? (Hành động nào hiệu quả NHẤT giúp hạn chế sự phát triển của vi khuẩn kháng kháng sinh như MRSA?) A. Kê kháng sinh cho mọi ca cảm cúm virus B. Ngưng uống ngay khi vừa đỡ triệu chứng C. Chỉ dùng kháng sinh khi thật sự cần thiết và uống hết toàn bộ đơn thuốc D. Chia sẻ thuốc kháng sinh thừa cho người thân ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Chỉ kê kháng sinh khi thật sự cần thiết giúp giảm áp lực chọn lọc tự nhiên lên quần thể vi khuẩn, kết hợp uống hết toàn bộ liệu trình để diệt tận gốc mầm bệnh không cho cá thể nào sống sót sinh sản.",
+      "duration": 104.6,
+      "startTime": 1883.35,
+      "endTime": 1987.95,
+      "audioUrl": "/audio/lectures/science/b14/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Extended [5 marks] MRSA is a strain of bacterium that is resistant to several antibiotics. (a) Explain, using the theory of natural selection, how a population of antibiotic-resistant bacteria such as MRSA develops. [3] (b) Explain how prescribing antibiotics only when essential helps limit the development of resistant bacteria. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) A random mutation (change in DNA/base sequence) gives some bacteria an allele for antibiotic resistance [1m]. When an antibiotic is used (selection pressure), susceptible bacteria are killed whereas resistant bacteria survive [1m]. Surviving resistant bacteria reproduce and pass on the allele for resistance to their offspring, increasing the frequency of resistant bacteria [1m]. (b) Bacteria are exposed to antibiotics less frequently, reducing selection pressure [1m], so rare resistant mutants gain no survival advantage over non-resistant bacteria and are less likely to multiply and spread [1m]. 💡 Intuition Check: Check your phrasing every time: \"Random mutation ➔ Antibiotic kills non-resistant / resistant survive ➔ Reproduce & pass on resistance allele ➔ Essential use reduces selection pressure\".",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Extended [5 marks] MRSA is a strain of bacterium resistant to several antibiotics. (a) Explain, using natural selection, how a population of resistant bacteria such as MRSA develops. (Vận dụng chọn lọc tự nhiên giải thích cách hình thành quần thể vi khuẩn kháng thuốc MRSA.) (b) Explain how using antibiotics only when essential limits the development of resistant bacteria. (Giải thích vì sao chỉ dùng kháng sinh khi thật cần thiết giúp hạn chế vi khuẩn kháng thuốc.) ✍️ Lời giải chi tiết theo thang điểm: (a) A random mutation in bacterial DNA produces an allele conferring antibiotic resistance . When exposed to the antibiotic (selection pressure), non-resistant bacteria die while resistant bacteria survive . Giảm tần suất tiếp xúc kháng sinh ➔ giảm áp lực chọn lọc ➔ chủng đột biến hiếm không có ưu thế sinh tồn để bùng phát . 💡 Kiểm tra bản chất: Khung 4 từ khóa vàng luôn đi liền nhau: Random mutation ➔ Antibiotic kills non-resistant / resistant survive ➔ Reproduce & pass on allele ➔ Essential use reduces selection pressure.",
+      "duration": 156.87,
+      "startTime": 1987.95,
+      "endTime": 2144.82,
+      "audioUrl": "/audio/lectures/science/b14/s03_b09.mp3"
     }
   ]
 }

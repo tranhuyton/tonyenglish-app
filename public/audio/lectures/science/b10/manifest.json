@@ -1,124 +1,551 @@
 {
   "lectureId": "04d34896-13fb-411b-9e13-2bc3f9725136",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B10: Diseases and immunity",
-  "totalDuration": 298.05,
+  "totalDuration": 2321.9,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_pathogens": {
-      "start": 1,
-      "end": 1
-    },
-    "sec-pathogens": {
-      "start": 1,
-      "end": 1
-    },
-    "sec_defences": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-defences": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_immune_response": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-immune-response": {
-      "start": 3,
-      "end": 3
-    },
-    "sec_disease_control": {
-      "start": 4,
       "end": 4
     },
-    "sec-disease-control": {
-      "start": 4,
-      "end": 4
+    "s01_p1_sub01": {
+      "start": 7,
+      "end": 8
     },
-    "sec_cholera": {
-      "start": 5,
-      "end": 5
+    "s01_p1_sub02": {
+      "start": 9,
+      "end": 10
     },
-    "sec-cholera": {
-      "start": 5,
-      "end": 5
+    "s01_p2_sub01": {
+      "start": 7,
+      "end": 8
+    },
+    "s01_p2_sub02": {
+      "start": 9,
+      "end": 10
+    },
+    "s01_wex": {
+      "start": 11,
+      "end": 12
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 12
+    },
+    "s02_int": {
+      "start": 14,
+      "end": 16
+    },
+    "s02_wex": {
+      "start": 20,
+      "end": 21
+    },
+    "s02_hdr": {
+      "start": 13,
+      "end": 21
+    },
+    "s03_int": {
+      "start": 23,
+      "end": 25
+    },
+    "s03_wex": {
+      "start": 30,
+      "end": 31
+    },
+    "s03_hdr": {
+      "start": 22,
+      "end": 31
+    },
+    "s04_int": {
+      "start": 33,
+      "end": 35
+    },
+    "s04_wex": {
+      "start": 41,
+      "end": 42
+    },
+    "s04_hdr": {
+      "start": 32,
+      "end": 42
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B10: Bệnh Truyền nhiễm & Miễn dịch",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B10: Diseases and Immunity. Pathogens are disease-causing microorganisms that invade host tissues. In this topic, we study pathogen transmission, the body's mechanical and chemical defences, active versus passive immunity, and the mechanism of cholera.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B10: Bệnh Truyền nhiễm và Miễn dịch. Mầm bệnh là các vi sinh vật gây bệnh xâm nhập vào mô vật chủ. Trong chuyên đề này, chúng ta sẽ học về các con đường lây truyền, hàng rào cơ học và hóa học bảo vệ cơ thể, miễn dịch chủ động và thụ động, cùng cơ chế bệnh dịch tả.",
-      "duration": 41.03,
+      "title": "B10: Diseases and Immunity (Bệnh tật và Hệ Miễn dịch)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B10 • Pathology & Immunology Diseases and Immunity. Cambridge IGCSE Co-ordinated Sciences (0654) • Pathogens, Virus Structure, Body Defences, Active Immunity & Vaccination.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ B10: Diseases and Immunity (Bệnh tật và Hệ Miễn dịch). Mầm bệnh, Cấu tạo Virus, Hàng rào Phòng vệ, Miễn dịch Chủ động, Vaccine & Vệ sinh Dịch tễ.",
+      "duration": 36.04,
       "startTime": 0.0,
-      "endTime": 41.03,
+      "endTime": 36.04,
       "audioUrl": "/audio/lectures/science/b10/intro.mp3"
     },
     {
-      "id": "sec_pathogens",
-      "title": "1. Mầm Bệnh & Bệnh Truyền nhiễm (Pathogens Overview)",
-      "selector": "#sec-pathogens",
-      "en": "Section 1 defines pathogens and transmissible diseases: A pathogen is a disease-causing organism. A transmissible disease is a disease in which the pathogen can be passed from one host to another, either by direct contact or indirectly via contaminated water, food, air droplets, or vectors.",
-      "vi": "Mục một định nghĩa mầm bệnh và bệnh truyền nhiễm: Mầm bệnh là sinh vật gây bệnh. Bệnh truyền nhiễm là bệnh mà trong đó mầm bệnh có thể lây từ vật chủ này sang vật chủ khác qua tiếp xúc trực tiếp hoặc gián tiếp qua nước, thức ăn ô nhiễm, giọt bắn không khí hoặc vật trung gian truyền bệnh.",
-      "duration": 67.48,
-      "startTime": 41.03,
-      "endTime": 108.51,
-      "audioUrl": "/audio/lectures/science/b10/sec_pathogens.mp3"
+      "id": "s01_hdr",
+      "title": "🦠 1. MẦM BỆNH, VIRUS & BỆNH TRUYỀN NHIỄM (PATHOGENS & VIRUSES)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 🦠 1. PATHOGENS AND TRANSMISSIBLE DISEASES.",
+      "vi": "🟦 CORE & 🟩 SUPPLEMENT 🦠 1. MẦM BỆNH, VIRUS & BỆNH TRUYỀN NHIỄM (PATHOGENS & VIRUSES).",
+      "duration": 13.36,
+      "startTime": 36.04,
+      "endTime": 49.4,
+      "audioUrl": "/audio/lectures/science/b10/s01_hdr.mp3"
     },
     {
-      "id": "sec_defences",
-      "title": "2. Hàng rào Phòng thủ của Cơ thể (Body Defences Overview)",
-      "selector": "#sec-defences",
-      "en": "Section 2 investigates the body's defence barriers: Mechanical barriers include unbroken skin and nasal hairs. Chemical barriers include sticky mucus trapping microbes and stomach hydrochloric acid destroying swallowed bacteria. Cellular defences include phagocytes engulfing pathogens and lymphocytes releasing specific antibodies.",
-      "vi": "Mục hai nghiên cứu các hàng rào phòng thủ: Hàng rào cơ học gồm da nguyên vẹn và lông mũi. Hàng rào hóa học gồm chất nhầy giữ mầm bệnh và acid clohydric dạ dày tiêu diệt vi khuẩn theo thức ăn. Hàng rào tế bào gồm đại thực bào nuốt mầm bệnh và tế bào lympho tiết kháng thể đặc hiệu.",
-      "duration": 38.85,
-      "startTime": 108.51,
-      "endTime": 147.36,
-      "audioUrl": "/audio/lectures/science/b10/sec_defences.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a virus as a USB flash drive ( genetic material ) inside a plastic casing ( protein coat ): on its own it cannot do anything, so it must plug into a living host cell to copy itself! Meanwhile, surface antigens act like unique barcodes, and antibodies are custom-shaped locks made by lymphocytes .",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng virus giống như một chiếc USB chứa mã độc ( vật chất di truyền - genetic material ) nằm gọn trong lớp vỏ nhựa ( vỏ protein - protein coat ): tự nó không có bộ máy sống, phải cắm nhờ vào tế bào chủ mới nhân bản được! Còn antigen là mã vạch riêng trên mầm bệnh, và antibody là chiếc khóa đặt riêng do bạch cầu lymphocyte chế tạo.",
+      "duration": 47.99,
+      "startTime": 49.4,
+      "endTime": 97.39,
+      "audioUrl": "/audio/lectures/science/b10/s01_b01.mp3"
     },
     {
-      "id": "sec_immune_response",
-      "title": "3. Miễn dịch Chủ động & Thụ động (Active & Passive Immunity Overview)",
-      "selector": "#sec-immune_response",
-      "en": "Section 3 compares active and passive immunity: Active immunity comes from pathogen infection or vaccination, producing long-lasting memory cells. Passive immunity is the short-term defence acquired from antibodies received from another individual, such as maternal antibodies via placenta or breast milk, leaving no memory cells.",
-      "vi": "Mục ba so sánh miễn dịch chủ động và thụ động: Miễn dịch chủ động có được do nhiễm mầm bệnh hoặc tiêm vắc xin, tạo ra tế bào ghi nhớ tồn tại lâu dài. Miễn dịch thụ động là sự bảo vệ ngắn hạn nhận được từ kháng thể của cơ thể khác, như kháng thể mẹ truyền qua nhau thai hoặc sữa mẹ, không để lại tế bào ghi nhớ.",
-      "duration": 72.88,
-      "startTime": 147.36,
-      "endTime": 220.24,
-      "audioUrl": "/audio/lectures/science/b10/sec_immune_response.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Core: Define pathogen and transmissible disease ; classify transmission into direct contact (blood, body fluids) and indirect (surfaces, food, animals, air). 2) Supplement: State virus features = protein coat + genetic material ; explain that specific antibodies (proteins) have complementary shapes to specific pathogen antigens .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Core: Định nghĩa pathogen và transmissible disease ; chia rõ lây truyền direct contact (máu, dịch cơ thể) và indirect (bề mặt bẩn, thức ăn, động vật, không khí). 2) Supplement: Cấu tạo virus = protein coat + genetic material ; kháng thể là protein có hình dạng tương thích (complementary shape) khớp với kháng nguyên đặc hiệu.",
+      "duration": 56.9,
+      "startTime": 97.39,
+      "endTime": 154.29,
+      "audioUrl": "/audio/lectures/science/b10/s01_b02.mp3"
     },
     {
-      "id": "sec_disease_control",
-      "title": "4. Kiểm soát Sự Lây lan của Bệnh (Controlling Disease Spread)",
-      "selector": "#sec-disease-control",
-      "en": "Section 4 covers disease control measures: Clean treated water supplies, hygienic food preparation, personal hygiene including handwashing, effective sewage sanitation, and widespread vaccination programs interrupt transmission chains.",
-      "vi": "Mục bốn trình bày các biện pháp kiểm soát dịch bệnh: Cung cấp nguồn nước sạch, chế biến thực phẩm hợp vệ sinh, rửa tay thường xuyên, xử lý nước thải và rác thải đúng cách, cùng chương trình tiêm chủng vắc xin diện rộng giúp cắt đứt chuỗi lây truyền.",
-      "duration": 28.02,
-      "startTime": 220.24,
-      "endTime": 248.26,
-      "audioUrl": "/audio/lectures/science/b10/sec_disease_control.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: In 0654 Supplement, never draw or list a cell wall, cell membrane, cytoplasm, or ribosomes for a virus—viruses ONLY consist of a protein coat and genetic material ! Also say antibody shape is complementary to the antigen, never \"identical\".",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Trong đề 0654 Supplement, tuyệt đối KHÔNG gán màng tế bào, thành tế bào, tế bào chất hay ribosome cho virus—virus CHỈ có protein coat và genetic material ! Đồng thời luôn viết kháng thể có hình dạng complementary (tương thích), cấm viết \"same shape\".",
+      "duration": 41.77,
+      "startTime": 154.29,
+      "endTime": 196.06,
+      "audioUrl": "/audio/lectures/science/b10/s01_b03.mp3"
     },
     {
-      "id": "sec_cholera",
-      "title": "5. Cơ chế Bệnh Tả & Liệu pháp Bù Nước (Cholera Mechanism & ORT)",
-      "selector": "#sec-cholera",
-      "en": "Section 5 details cholera: The bacterium Vibrio cholerae produces a toxin causing the intestinal lining to secrete chloride ions into the gut lumen. This osmotic gradient causes massive water loss by osmosis, leading to severe watery diarrhoea, dehydration, and circulatory shock. Treatment requires Oral Rehydration Therapy (ORT) containing water, glucose, and balanced electrolytes.",
-      "vi": "Mục năm phân tích bệnh dịch tả: Vi khuẩn Vibrio cholerae tiết độc tố kích thích niêm mạc ruột bài tiết ion clorua vào lòng ruột. Gradient thẩm thấu này hút một lượng nước khổng lồ ra ngoài gây tiêu chảy cấp dữ dội, mất nước và sốc tuần hoàn. Điều trị cứu sống người bệnh bằng liệu pháp bù nước đường uống (ORT) gồm nước, glucose và các muối điện giải cân bằng.",
-      "duration": 49.79,
-      "startTime": 248.26,
-      "endTime": 298.05,
-      "audioUrl": "/audio/lectures/science/b10/sec_cholera.mp3"
+      "id": "s01_b04",
+      "title": "🇬🇧 Pathogen:",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Pathogen: A disease-causing organism (such as bacteria, viruses, fungi, or protozoa). Transmissible disease: A disease in which the pathogen can be passed from one host to another.",
+      "vi": "🇬🇧 Pathogen: A disease-causing organism. 🇻🇳 Mầm bệnh: Là sinh vật gây bệnh (như vi khuẩn, virus, nấm hoặc nguyên sinh vật). 🇬🇧 Transmissible disease: A disease in which the pathogen can be passed from one host to another. 🇻🇳 Bệnh truyền nhiễm: Là căn bệnh mà mầm bệnh có thể lây truyền từ vật chủ này sang vật chủ khác.",
+      "duration": 36.73,
+      "startTime": 196.06,
+      "endTime": 232.79,
+      "audioUrl": "/audio/lectures/science/b10/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🔬 Đặc điểm Cấu tạo của Virus (Features of Viruses)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🟩 SUPPLEMENT (B10.1 #7) 🔬 Structure & Features of Viruses. Unlike bacteria, fungi, or protoctists, viruses are non-cellular particles (they have no cell membrane, no cytoplasm, no ribosomes, and no mitochondria). Cambridge 0654 requires two essential structural features: Protein coat (capsid): Protective outer shell built from repeating protein subunits carrying surface antigens. Genetic material: A core strand of nucleic acid (DNA or RNA) inside the protein coat that hijacks a host cell to replicate new viruses.",
+      "vi": "🟩 SUPPLEMENT (B10.1 #7) 🔬 Đặc điểm Cấu tạo của Virus. Khác với vi khuẩn hay nấm, virus có cấu tạo phi tế bào (không có màng tế bào, không có tế bào chất, không có ribosome). Syllabus 0654 giới hạn đúng 2 thành phần bắt buộc : Protein coat (Lớp vỏ protein / Capsid): Lớp vỏ bọc bảo vệ bên ngoài mang các kháng nguyên bề mặt. Genetic material (Vật chất di truyền): Lõi axit nucleic (DNA hoặc RNA) nằm bên trong vỏ protein, xâm nhập tế bào vật chủ để nhân bản virus mới.",
+      "duration": 77.57,
+      "startTime": 232.79,
+      "endTime": 310.36,
+      "audioUrl": "/audio/lectures/science/b10/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🤝 Direct Contact (Tiếp xúc trực tiếp)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🤝 Direct Contact. Through blood (e.g., sharing needles, blood transfusions). Through other body fluids (e.g., saliva, semen, vaginal secretions during sexual contact).",
+      "vi": "🤝 Direct Contact (Tiếp xúc trực tiếp). 🇬🇧 Blood & other body fluids: Sharing needles, blood transfusions, or exchange of body fluids during sexual contact. 🇻🇳 Qua máu & dịch cơ thể: Truyền máu, dùng chung kim tiêm hoặc tiếp xúc trực tiếp dịch tiết sinh dục, nước bọt.",
+      "duration": 34.59,
+      "startTime": 310.36,
+      "endTime": 344.95,
+      "audioUrl": "/audio/lectures/science/b10/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "🌬️ Indirect Transmission (Lây gián tiếp)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🌬️ Indirect Contact. From contaminated surfaces and unhygienic objects (door handles, utensils). From contaminated food and water supplies. From animals and insect vectors (e.g., mosquitoes transmitting malaria). Through the air via airborne droplets expelled when coughing or sneezing.",
+      "vi": "🌬️ Indirect Transmission (Lây gián tiếp). 🇬🇧 Contaminated surfaces, food, animals & air: Touching unclean objects, contaminated food/water, insect vectors, or airborne droplets. 🇻🇳 Bề mặt bẩn, thức ăn, động vật & không khí: Chạm tay nắm cửa bẩn, ăn uống nhiễm khuẩn, muỗi truyền bệnh hoặc hít giọt bắn khi ho/hắt hơi.",
+      "duration": 46.46,
+      "startTime": 344.95,
+      "endTime": 391.41,
+      "audioUrl": "/audio/lectures/science/b10/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "👾 Antigen (Kháng nguyên)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "👾 Antigen. Distinctive chemical markers (usually proteins) located on the outer surface of pathogens. When detected as \"foreign\" non-self molecules by the immune system, they stimulate lymphocytes to produce antibodies. Each pathogen species carries its own unique antigens with specific 3D shapes.",
+      "vi": "👾 Antigen (Kháng nguyên). 🇬🇧: Surface markers on pathogens; each pathogen has its own antigens with specific shapes. 🇻🇳: Dấu hiệu nhận diện trên bề mặt mầm bệnh; mỗi loài mầm bệnh mang kháng nguyên có hình dạng đặc trưng riêng (specific shapes). 🔑 Kích thích Lymphocyte tạo đáp ứng miễn dịch.",
+      "duration": 40.88,
+      "startTime": 391.41,
+      "endTime": 432.29,
+      "audioUrl": "/audio/lectures/science/b10/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🛡️ Antibody (Kháng thể)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🛡️ Antibody. Y-shaped proteins secreted by lymphocytes in response to specific antigens. They bind to antigens leading to direct destruction of pathogens or marking them for destruction by phagocytes. Antibodies have complementary shapes that fit specific antigens with high lock-and-key precision.",
+      "vi": "🛡️ Antibody (Kháng thể). 🇬🇧: Proteins secreted by lymphocytes with complementary shapes which fit specific antigens. 🇻🇳: Các phân tử protein hình chữ Y do Lymphocyte tiết ra, có hình dạng tương thích (complementary shapes) khớp khít với kháng nguyên đặc hiệu. 🔑 Tiêu diệt trực tiếp hoặc đánh dấu mầm bệnh cho Phagocyte!",
+      "duration": 41.68,
+      "startTime": 432.29,
+      "endTime": 473.97,
+      "audioUrl": "/audio/lectures/science/b10/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Which structures are present in ALL viruses according to the Cambridge IGCSE Co-ordinated Sciences syllabus? A. Cell wall, cytoplasm and circular DNA B. Protein coat and genetic material only C. Cell membrane, ribosomes and genetic material D. Protein coat, mitochondria and plasmids ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct because viruses are non-cellular particles composed strictly of a protein coat surrounding genetic material . A and D list bacterial/eukaryotic structures (cell wall, plasmids, mitochondria). C is wrong because viruses lack both a cell membrane and ribosomes.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Which structures are present in ALL viruses according to the Cambridge IGCSE Co-ordinated Sciences syllabus? (Những cấu trúc nào có mặt ở MỌI virus theo chương trình Cambridge IGCSE 0654?) A. Cell wall, cytoplasm and circular DNA B. Protein coat and genetic material only C. Cell membrane, ribosomes and genetic material D. Protein coat, mitochondria and plasmids ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng vì virus có cấu tạo phi tế bào, chỉ gồm lớp vỏ protein (protein coat) bao bọc vật chất di truyền (genetic material) . A, C, D sai vì thành tế bào, màng tế bào, tế bào chất, ribosome, ti thể và plasmid đều là cấu trúc của tế bào vi khuẩn hoặc sinh vật nhân thực.",
+      "duration": 110.55,
+      "startTime": 473.97,
+      "endTime": 584.52,
+      "audioUrl": "/audio/lectures/science/b10/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State the two structural features of a virus. [2] (b) State one direct method and one indirect method by which a viral pathogen can be transmitted from an infected host to an uninfected person. [2] (c) Explain why antibodies bind only to one specific type of virus. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) A protein coat [1m] and genetic material [1m]. (b) Direct: Contact with infected blood or body fluids [1m]. Indirect: Inhaling airborne droplets / touching contaminated surfaces / contaminated food or water / animal vectors [1m]. (c) Each virus has antigens with a specific shape , and only antibodies with a complementary shape can fit and bind to them [1m]. 💡 Intuition Check: Memorize \"protein coat + genetic material\" as a guaranteed 2-mark gift in 0654 Paper 4!",
+      "vi": "BÀI MẪU 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State the two structural features of a virus. (b) State one direct method and one indirect method by which a viral pathogen can be transmitted from an infected host to an uninfected person. (c) Explain why antibodies bind only to one specific type of virus. (Nêu 2 đặc điểm cấu tạo của virus; 1 đường lây trực tiếp và 1 gián tiếp; giải thích tính đặc hiệu của kháng thể.) ✍️ Lời giải chi tiết theo thang điểm: Vỏ protein và vật chất di truyền. (b) Direct: Contact with blood or body fluids . Indirect: Airborne droplets / contaminated surfaces / food or water / animal vectors . (c) Each virus carries antigens with a specific shape , so only antibodies with a complementary shape can fit and bind to them . 💡 Kiểm tra bản chất: Cụm từ \"protein coat + genetic material\" là 2 điểm chắc chắn trong tầm tay ở đề 0654 Paper 4!",
+      "duration": 118.11,
+      "startTime": 584.52,
+      "endTime": 702.63,
+      "audioUrl": "/audio/lectures/science/b10/s01_b11.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🛡️ 2. HÀNG RÀO PHÒNG THỦ CỦA CƠ THỂ (BODY'S DEFENCES)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE 🛡️ 2. BODY'S DEFENCE MECHANISMS.",
+      "vi": "🟦 CORE 🛡️ 2. HÀNG RÀO PHÒNG THỦ CỦA CƠ THỂ (BODY'S DEFENCES).",
+      "duration": 9.29,
+      "startTime": 702.63,
+      "endTime": 711.92,
+      "audioUrl": "/audio/lectures/science/b10/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Your body uses layered castle security: outer walls and filters ( skin and nose hairs ), chemical traps and acid baths ( mucus and stomach HCl ), and internal soldiers ( phagocytes that swallow invaders whole + lymphocytes that fire targeted protein antibodies).",
+      "vi": "🎯 Hình dung đời thường: Cơ thể phòng thủ theo 3 tuyến như pháo đài: tường chắn vật lý (da & lông mũi), bẫy keo và hào axit (chất nhầy mucus & axit HCl dạ dày), và đội vệ binh bạch cầu bên trong ( phagocytes nuốt chửng kẻ địch + lymphocytes bắn kháng thể protein khóa mục tiêu).",
+      "duration": 38.87,
+      "startTime": 711.92,
+      "endTime": 750.79,
+      "audioUrl": "/audio/lectures/science/b10/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Core limits external/chemical defences to skin, hairs in the nose, mucus, stomach acid, and white blood cells . In Supplement, link antibodies to white blood cells: antibodies bind to antigens, causing direct destruction of pathogens OR marking pathogens for destruction by phagocytes .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Core giới hạn đúng 5 hàng rào: skin, hairs in the nose, mucus, stomach acid, white blood cells . Ở mức Supplement, nhớ rõ 2 tác dụng khi kháng thể gắn vào kháng nguyên: tiêu diệt trực tiếp (direct destruction) mầm bệnh HOẶC đánh dấu mầm bệnh để đại thực bào tiêu diệt .",
+      "duration": 43.1,
+      "startTime": 750.79,
+      "endTime": 793.89,
+      "audioUrl": "/audio/lectures/science/b10/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do not mix up the two white blood cell jobs: phagocytes engulf and digest pathogens with enzymes, whereas lymphocytes produce antibodies!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bao giờ tráo vai trò 2 loại bạch cầu: phagocytes thực bào (bao vây và tiêu hóa mầm bệnh), còn lymphocytes tiết kháng thể protein!",
+      "duration": 22.87,
+      "startTime": 793.89,
+      "endTime": 816.76,
+      "audioUrl": "/audio/lectures/science/b10/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "skin, hairs in the nose, mucus, stomach acid, white blood cells",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "The human body has three lines of defence to protect against invading pathogens:",
+      "vi": "Syllabus 0654 giới hạn 5 hàng rào bảo vệ cơ thể chống lại sự xâm nhập của mầm bệnh:",
+      "duration": 12.33,
+      "startTime": 816.76,
+      "endTime": 829.09,
+      "audioUrl": "/audio/lectures/science/b10/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Phagocytes (Đại thực bào):",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Barrier Type: 1. Mechanical Barriers (Physical blocks preventing entry); Component: Skin; How it Works (Function): Tough, waterproof outer layer containing keratin covering the whole body; dead skin cells continuously flake off carrying microbes away; blood clots form scabs over cuts to seal wounds. Hairs in the nose — Trap airborne dust particles and pathogens, filtering inspired air before it enters the lungs. Barrier Type: 2. Chemical Barriers (Chemicals killing or trapping pathogens); Component: Mucus; How it Works (Function): Sticky fluid secreted by goblet cells along the respiratory tract; traps microbes and particles; cilia then sweep mucus upward away from lungs. Stomach acid (HCl) — Hydrochloric acid produces a very low pH (~2), destroying microorganisms present in swallowed food and drink. Barrier Type: 3. White Blood Cells (Internal cellular defence); Component: Phagocytes & Lymphocytes; How it Works (Function): Phagocytes: Engulf and digest pathogens by phagocytosis. Lymphocytes: Produce complementary antibodies and memory cells for targeted defence.",
+      "vi": "Loại hàng rào (Barrier): 1. Mechanical Barriers (Rào cản cơ học); Thành phần (Component): Skin (Da); Cơ chế bảo vệ (How it Works): Lớp biểu bì chứa keratin không thấm nước ngăn vi khuẩn xuyên qua; khi đứt tay, máu đông tạo vảy (scab) bịt kín vết thương. Hairs in the nose (Lông mũi) — Giữ lại hạt bụi lớn và vi sinh vật trong không khí hít vào trước khi đi sâu vào khí quản. Loại hàng rào (Barrier): 2. Chemical Barriers (Rào cản hóa học); Thành phần (Component): Mucus (Chất nhầy); Cơ chế bảo vệ (How it Works): Chất nhầy dính do tế bào hình đài tiết ra bẫy bụi và mầm bệnh trong đường thở; lông rung (cilia) quét chất nhầy lên họng để nuốt xuống dạ dày. Stomach acid (Axit HCl) — Axit clohydric tạo môi trường pH rất thấp (~2) tiêu diệt vi khuẩn lẫn trong thức ăn, nước uống và dịch nhầy nuốt xuống. Loại hàng rào (Barrier): 3. White Blood Cells (Tế bào bạch cầu); Thành phần (Component): Phagocytes & Lymphocytes; Cơ chế bảo vệ (How it Works): Phagocytes (Đại thực bào): Bao vây, nuốt và tiêu hóa mầm bệnh (phagocytosis). Lymphocytes: Tiết kháng thể protein tương thích và tạo tế bào nhớ (memory cells).",
+      "duration": 161.25,
+      "startTime": 829.09,
+      "endTime": 990.34,
+      "audioUrl": "/audio/lectures/science/b10/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Interactive Immune Response (Sơ đồ Tương tác Đáp ứng Miễn dịch)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Interactive Immune Response. Hover over each stage to see how white blood cells recognize, tag, and destroy pathogens. Interact with the diagram 👆. Hover over each stage to see how lymphocytes secrete specific antibodies that lock onto antigens, and how phagocytes engulf and digest marked pathogens.",
+      "vi": "Interactive Immune Response (Sơ đồ Tương tác Đáp ứng Miễn dịch). Rê chuột vào sơ đồ bên cạnh 👆. Xem cơ chế nhận diện kháng nguyên, tiết kháng thể tương thích của Lymphocyte và quá trình thực bào của Phagocyte.",
+      "duration": 36.64,
+      "startTime": 990.34,
+      "endTime": 1026.98,
+      "audioUrl": "/audio/lectures/science/b10/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ How do mucus and stomach acid work together to defend the body against inhaled pathogens? A. Stomach acid traps pathogens in the trachea and mucus digests them in the alveoli. B. Mucus traps inhaled pathogens in the airways, and after being swept to the throat and swallowed, stomach acid kills them. C. Mucus secretes antibodies in the nose and stomach acid produces memory cells. D. Both mucus and stomach acid act as mechanical barriers made of dead keratinized cells. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct : sticky mucus traps dust and pathogens in the airways; cilia sweep the mucus up to the throat where it is swallowed into the stomach, and hydrochloric acid (low pH ~2) destroys the trapped microbes. A, C, and D reverse locations or confuse chemical barriers with keratin/lymphocytes.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ How do mucus and stomach acid work together to defend the body against inhaled pathogens? (Chất nhầy mucus và axit dạ dày phối hợp bảo vệ cơ thể chống mầm bệnh hít vào như thế nào?) A. Stomach acid traps pathogens in the trachea and mucus digests them in the alveoli. B. Mucus traps inhaled pathogens in the airways, and after being swept to the throat and swallowed, stomach acid kills them. C. Mucus secretes antibodies in the nose and stomach acid produces memory cells. D. Both mucus and stomach acid act as mechanical barriers made of dead keratinized cells. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng : Mucus bẫy bụi và mầm bệnh trong đường dẫn khí, lông rung quét lớp nhầy lên họng để nuốt xuống dạ dày, nơi axit HCl (pH ~2) tiêu diệt vi khuẩn. A, C, D sai vị trí và bản chất sinh học.",
+      "duration": 128.17,
+      "startTime": 1026.98,
+      "endTime": 1155.15,
+      "audioUrl": "/audio/lectures/science/b10/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe how the skin acts as a barrier against pathogens, including when a small cut occurs. [2] (b) Describe two ways in which antibodies binding to antigens lead to the removal of bacteria in the blood. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Intact skin forms a tough, waterproof physical barrier preventing pathogen entry [1m]; if cut, blood clots to form a scab that seals the wound against microbes [1m]. (b) Binding of antibodies leads to direct destruction of the bacteria [1m] OR marks the pathogens for destruction (engulfing/phagocytosis) by phagocytes [1m]. 💡 Intuition Check: Notice the exact B10.1 #10 phrasing: \"direct destruction of pathogens or marking of pathogens for destruction by phagocytes\"!",
+      "vi": "BÀI MẪU 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe how the skin acts as a barrier against pathogens, including when a small cut occurs. (b) Describe two ways in which antibodies binding to antigens lead to the removal of bacteria in the blood. (Mô tả cách da bảo vệ cơ thể kể cả khi bị đứt tay nhẹ, và 2 cách kháng thể loại bỏ vi khuẩn trong máu.) ✍️ Lời giải chi tiết theo thang điểm: (a) Intact skin acts as a tough waterproof physical barrier blocking pathogen entry ; when cut, blood clots to form a scab that seals the wound . (b) Antibodies cause direct destruction of the bacteria OR mark the pathogens for destruction by phagocytes . 💡 Kiểm tra bản chất: Ghi nhớ nguyên văn cụm từ ăn điểm B10.1 #10: \"direct destruction of pathogens or marking of pathogens for destruction by phagocytes\"!",
+      "duration": 110.92,
+      "startTime": 1155.15,
+      "endTime": 1266.07,
+      "audioUrl": "/audio/lectures/science/b10/s02_b08.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "💉 3. MIỄN DỊCH CHỦ ĐỘNG & CƠ CHẾ VACCINE (ACTIVE IMMUNITY & VACCINATION)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟦 CORE & 🟩 SUPPLEMENT 💉 3. ACTIVE IMMUNITY AND VACCINATION.",
+      "vi": "🟦 CORE & 🟩 SUPPLEMENT 💉 3. MIỄN DỊCH CHỦ ĐỘNG & CƠ CHẾ VACCINE.",
+      "duration": 10.25,
+      "startTime": 1266.07,
+      "endTime": 1276.32,
+      "audioUrl": "/audio/lectures/science/b10/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: A vaccine is like giving your immune system a \"Wanted Poster\" (harmless pathogen antigens ) before the real criminal arrives. Your lymphocytes practice making the exact antibodies needed and keep memory cells on standby for years!",
+      "vi": "🎯 Hình dung đời thường: Tiêm vaccine giống như phát trước \"Lệnh truy nã kèm ảnh nhận dạng\" ( kháng nguyên/mầm bệnh đã làm yếu ) cho cảnh sát lymphocytes tập dượt: cơ thể chế sẵn kháng thể và lưu hồ sơ vào tế bào nhớ (memory cells) để hễ kẻ địch thật xuất hiện là tóm gọn ngay!",
+      "duration": 35.13,
+      "startTime": 1276.32,
+      "endTime": 1311.45,
+      "audioUrl": "/audio/lectures/science/b10/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Learn the 3-step 0654 vaccination chain word-for-word: 1) Weakened pathogens or their antigens are put into the body ➔ 2) Antigens stimulate an immune response by lymphocytes which produce antibodies ➔ 3) Memory cells are produced that give long-term immunity . Active immunity = antibody production in the body (after infection or vaccination).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc làu 3 bước vaccine chuẩn 0654: 1) Đưa weakened pathogens or their antigens vào cơ thể ➔ 2) Kháng nguyên kích thích lymphocytes sản xuất antibodies ➔ 3) Tạo ra memory cells mang lại long-term immunity . Miễn dịch chủ động (Active immunity) đạt được sau khi nhiễm bệnh hoặc nhờ tiêm chủng.",
+      "duration": 48.47,
+      "startTime": 1311.45,
+      "endTime": 1359.92,
+      "audioUrl": "/audio/lectures/science/b10/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"live strong pathogens\" or \"ready-made antibodies\" are injected in a vaccine! A vaccine puts weakened pathogens or their antigens into the body to trigger active immunity .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết \"tiêm kháng thể vào cơ thể\" khi giải thích vaccine! Vaccine đưa mầm bệnh suy yếu hoặc kháng nguyên vào để cơ thể TỰ sinh kháng thể và tế bào nhớ (miễn dịch chủ động).",
+      "duration": 28.84,
+      "startTime": 1359.92,
+      "endTime": 1388.76,
+      "audioUrl": "/audio/lectures/science/b10/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🛡️ Active Immunity (Miễn dịch chủ động)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🛡️ Active Immunity (Supplement). Official Definition: Defence against a pathogen by antibody production in the body. Two ways to gain active immunity: (1) Naturally after recovering from an infection by a pathogen , or (2) Artificially by vaccination. 🔑 Memory Cells: Lymphocytes produce long-lived memory cells that remain in the blood, giving long-term immunity. On re-exposure to the same pathogen, memory cells trigger a much faster and larger secondary antibody response , destroying the pathogen before symptoms develop.",
+      "vi": "🛡️ Active Immunity (Miễn dịch chủ động). 🇬🇧: Defence against a pathogen by antibody production in the body. 🇻🇳: Sự phòng vệ chống mầm bệnh nhờ cơ thể tự sản xuất kháng thể. 2 Con đường đạt được: (1) Sau khi nhiễm mầm bệnh tự nhiên (infection) , hoặc (2) Nhờ tiêm vaccine (vaccination). 🔑 Tế bào nhớ (Memory cells): Lưu thông lâu dài trong máu, mang lại miễn dịch dài hạn. Khi mầm bệnh thật tái xâm nhập, tế bào nhớ giúp tiết kháng thể nhanh và mạnh gấp bội , tiêu diệt mầm bệnh trước khi cơ thể kịp phát bệnh.",
+      "duration": 72.22,
+      "startTime": 1388.76,
+      "endTime": 1460.98,
+      "audioUrl": "/audio/lectures/science/b10/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "📊 Đáp ứng Sơ cấp vs Thứ cấp",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "📊 Primary vs Secondary Response.",
+      "vi": "📊 Đáp ứng Sơ cấp vs Thứ cấp.",
+      "duration": 5.86,
+      "startTime": 1460.98,
+      "endTime": 1466.84,
+      "audioUrl": "/audio/lectures/science/b10/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "💉 Quy trình Tiêm chủng 3 Bước Chuẩn Mark Scheme (Process of Vaccination)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "💉 Process of Vaccination (3 Essential Mark Scheme Steps). Vaccinations are available for some pathogens to help control the spread of transmissible diseases: Weakened pathogens or their antigens are put into the body (by injection or oral drops). The antigens stimulate an immune response by lymphocytes , which produce complementary antibodies. Memory cells are produced that remain in the blood and give long-term immunity.",
+      "vi": "💉 Quy trình Tiêm chủng 3 Bước Chuẩn Mark Scheme. Đưa mầm bệnh đã làm yếu hoặc kháng nguyên của chúng vào cơ thể. Kháng nguyên kích thích đáp ứng miễn dịch của bạch cầu lymphocytes sản xuất kháng thể (antibodies) tương thích. Tế bào nhớ (memory cells) được tạo ra, tồn tại lâu dài trong máu và mang lại miễn dịch dài hạn.",
+      "duration": 49.57,
+      "startTime": 1466.84,
+      "endTime": 1516.41,
+      "audioUrl": "/audio/lectures/science/b10/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🌍 Vai trò của Tiêm chủng trong Kiểm soát Dịch bệnh (Herd Immunity)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "🌍 Role of Vaccination in Controlling Disease Spread (Herd Immunity). When a large proportion of a population is vaccinated, most individuals are immune and cannot harbour or transmit the pathogen. This breaks transmission chains and provides herd immunity , protecting vulnerable unvaccinated individuals (such as newborns or immunocompromised patients) and preventing epidemics.",
+      "vi": "🌍 Vai trò của Tiêm chủng trong Kiểm soát Dịch bệnh (Herd Immunity). Khi tỷ lệ lớn dân số được tiêm vaccine, số người có thể mắc và phát tán mầm bệnh giảm xuống tối thiểu. Nhờ đó chuỗi lây truyền bị chặt đứt, tạo miễn dịch cộng đồng (herd immunity) bảo vệ cả những người chưa thể tiêm chủng.",
+      "duration": 44.07,
+      "startTime": 1516.41,
+      "endTime": 1560.48,
+      "audioUrl": "/audio/lectures/science/b10/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A child is vaccinated against measles and is exposed to live measles virus three years later without becoming ill. What explains this protection? A. Antibodies injected in the original vaccine remained unchanged in the blood for three years. B. Memory cells produced after vaccination rapidly stimulated production of measles-specific antibodies. C. Phagocytes remembered the shape of the measles virus and secreted hydrochloric acid. D. The vaccine thickened the child's skin so airborne viruses could not be inhaled. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct : vaccination stimulates lymphocytes to produce memory cells that persist long-term and trigger rapid, high-volume antibody synthesis upon secondary exposure. A is wrong because vaccines contain antigens/weakened pathogens (not antibodies), and protein antibodies do not persist unchanged for years. C and D are biologically false.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A child is vaccinated against measles and is exposed to live measles virus three years later without becoming ill. What explains this protection? (Một trẻ đã tiêm vaccine sởi và 3 năm sau tiếp xúc virus sởi sống nhưng không mắc bệnh. Điều gì giải thích sự bảo vệ này?) A. Antibodies injected in the original vaccine remained unchanged in the blood for three years. B. Memory cells produced after vaccination rapidly stimulated production of measles-specific antibodies. C. Phagocytes remembered the shape of the measles virus and secreted hydrochloric acid. D. The vaccine thickened the child's skin so airborne viruses could not be inhaled. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng : Sau khi tiêm chủng, bạch cầu lymphocyte tạo ra tế bào nhớ (memory cells) tồn tại nhiều năm, giúp sản xuất kháng thể đặc hiệu chống sởi cực nhanh và nhiều khi gặp lại virus thật. A sai vì vaccine chứa kháng nguyên chứ không tiêm kháng thể có sẵn. C và D sai bản chất sinh học.",
+      "duration": 142.24,
+      "startTime": 1560.48,
+      "endTime": 1702.72,
+      "audioUrl": "/audio/lectures/science/b10/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State two ways in which a person can gain active immunity against a pathogen. [2] (b) Explain how vaccination protects both the vaccinated individual and unvaccinated members of the community. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. After an infection by the pathogen [1m]; 2. By vaccination [1m]. (b) In the individual, antigens in the vaccine stimulate lymphocytes to produce antibodies and memory cells for long-term immunity [1m]. Across the community, when most people are immune, fewer hosts carry or pass on the pathogen [1m], creating herd immunity that protects unvaccinated people from exposure [1m]. 💡 Intuition Check: Active immunity ALWAYS means the person's own lymphocytes produced the antibodies + memory cells!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State two ways in which a person can gain active immunity against a pathogen. (b) Explain how vaccination protects both the vaccinated individual and unvaccinated members of the community. (Nêu 2 cách đạt miễn dịch chủ động và giải thích cách vaccine bảo vệ cả cá nhân lẫn cộng đồng.) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. After an infection by a pathogen ; 2. By vaccination . (Sau khi mắc bệnh tự nhiên hoặc nhờ tiêm vaccine.) (b) In the vaccinated person, antigens stimulate lymphocytes to make antibodies and memory cells for long-term immunity . In the community, when most people are vaccinated, very few hosts can be infected and pass on the pathogen , creating herd immunity that shields unvaccinated individuals . 💡 Kiểm tra bản chất: Cứ nhắc đến Active Immunity là phải gắn liền với: tự sản xuất kháng thể + có Memory Cells + bảo vệ dài hạn!",
+      "duration": 120.66,
+      "startTime": 1702.72,
+      "endTime": 1823.38,
+      "audioUrl": "/audio/lectures/science/b10/s03_b09.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🌍 4. KIỂM SOÁT SỰ LÂY LAN DỊCH BỆNH (CONTROLLING DISEASE SPREAD)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🟦 CORE 🌍 4. CONTROLLING THE SPREAD OF DISEASE.",
+      "vi": "🟦 CORE 🌍 4. KIỂM SOÁT SỰ LÂY LAN DỊCH BỆNH.",
+      "duration": 7.96,
+      "startTime": 1823.38,
+      "endTime": 1831.34,
+      "audioUrl": "/audio/lectures/science/b10/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of public health sanitation as five shields blocking indirect transmission: clean water protects your glass, food hygiene protects your plate, personal hygiene protects your hands and air, while waste disposal and sewage treatment clean the environment.",
+      "vi": "🎯 Hình dung đời thường: 5 biện pháp vệ sinh dịch tễ giống như 5 tấm khiên khóa chặt đường lây gián tiếp: clean water bảo vệ ly nước, food hygiene bảo vệ đĩa thức ăn, personal hygiene làm sạch đôi tay & hơi thở, còn waste disposal và sewage treatment làm sạch môi trường sống.",
+      "duration": 36.18,
+      "startTime": 1831.34,
+      "endTime": 1867.52,
+      "audioUrl": "/audio/lectures/science/b10/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Be ready to explain how each of the 5 Core measures stops pathogen transmission: clean water supply (chlorination/filtration kills water-borne pathogens), hygienic food preparation (cooking kills bacteria; refrigeration slows growth; avoiding cross-contamination), good personal hygiene (handwashing with soap; covering coughs), waste disposal (eliminates vector breeding sites), and sewage treatment (removes/kills pathogens in human faeces).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Khi đề yêu cầu Explain the importance , phải nêu rõ cơ chế diệt khuẩn/chặn lây nhiễm của từng mục: clean water supply (lọc + clo diệt mầm bệnh đường nước), hygienic food preparation (nấu chín diệt khuẩn, giữ lạnh làm chậm sinh sản, tránh nhiễm chéo), good personal hygiene (xà phòng rửa trôi khuẩn, che miệng chặn giọt bắn), waste disposal (xóa ổ sinh sản của ruồi/chuột), sewage treatment (diệt mầm bệnh trong phân thải).",
+      "duration": 63.11,
+      "startTime": 1867.52,
+      "endTime": 1930.63,
+      "audioUrl": "/audio/lectures/science/b10/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do not simply repeat the question (\"clean water is important so water is clean\" = 0 marks!). Always state that it kills/removes pathogens or prevents vectors breeding so pathogens cannot be transmitted to a new host.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng viết vòng vo kiểu \"cần nước sạch để người dân có nước sạch uống\" (0 điểm!). Luôn chốt bằng từ khóa sinh học: tiêu diệt/loại bỏ mầm bệnh hoặc ngăn vật trung gian sinh sản .",
+      "duration": 31.2,
+      "startTime": 1930.63,
+      "endTime": 1961.83,
+      "audioUrl": "/audio/lectures/science/b10/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Các biện pháp y tế công cộng và vệ sinh dịch tễ giúp cắt đứt vòng đời lây nhiễm ...",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Public health measures and sanitation are critical in interrupting the transmission cycles of pathogens:",
+      "vi": "Các biện pháp y tế công cộng và vệ sinh dịch tễ giúp cắt đứt vòng đời lây nhiễm của mầm bệnh:",
+      "duration": 12.69,
+      "startTime": 1961.83,
+      "endTime": 1974.52,
+      "audioUrl": "/audio/lectures/science/b10/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "💧 Clean Water Supply (Nguồn nước sạch)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "💧 Clean Water Supply. Water treatment (chlorination and filtration) prevents water-borne diseases like cholera and typhoid from contaminating drinking water.",
+      "vi": "💧 Clean Water Supply (Nguồn nước sạch). Lọc nước và khử trùng bằng clo (chlorination) tiêu diệt vi khuẩn lây qua đường nước uống (như tả, thương hàn) trước khi cấp đến hộ gia đình.",
+      "duration": 24.23,
+      "startTime": 1974.52,
+      "endTime": 1998.75,
+      "audioUrl": "/audio/lectures/science/b10/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🍳 Hygienic Food Preparation (Vệ sinh thực phẩm)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🍳 Hygienic Food Preparation. Thorough cooking, refrigeration below 5°C, washing hands, and separating raw and cooked foods prevent bacterial growth and cross-contamination (e.g., Salmonella ).",
+      "vi": "🍳 Hygienic Food Preparation (Vệ sinh thực phẩm). Nấu chín kỹ diệt khuẩn, bảo quản tủ lạnh (<5°C) làm chậm sinh sản của vi khuẩn, rửa tay và tách riêng thực phẩm sống – chín tránh lây nhiễm chéo ( Salmonella ).",
+      "duration": 30.99,
+      "startTime": 1998.75,
+      "endTime": 2029.74,
+      "audioUrl": "/audio/lectures/science/b10/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🧼 Good Personal Hygiene (Vệ sinh cá nhân)",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "🧼 Good Personal Hygiene. Regular hand washing with soap, covering coughs and sneezes with tissues, and bathing reduce microbial transfer from surfaces to respiratory or digestive tracts.",
+      "vi": "🧼 Good Personal Hygiene (Vệ sinh cá nhân). Rửa tay bằng xà phòng sau khi đi vệ sinh/trước khi ăn, tắm rửa sạch sẽ và dùng khăn giấy che miệng khi ho, hắt hơi để chặn giọt bắn chứa mầm bệnh.",
+      "duration": 26.47,
+      "startTime": 2029.74,
+      "endTime": 2056.21,
+      "audioUrl": "/audio/lectures/science/b10/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "🗑️ Waste Disposal & 🚽 Sewage Treatment",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "🗑️ Waste Disposal & 🚽 Sewage Treatment. Proper sealing of domestic rubbish prevents breeding of vectors (flies, rats). Sewage treatment removes human waste and kills pathogens before water is released into rivers or seas.",
+      "vi": "🗑️ Waste Disposal & 🚽 Sewage Treatment. Thu gom rác kín ngăn ruồi, chuột sinh sôi làm vật trung gian. Xử lý nước thải (sewage treatment) diệt sạch mầm bệnh trong phân người trước khi xả nước ra sông biển (không yêu cầu học các bước kỹ thuật của nhà máy xử lý nước thải).",
+      "duration": 33.68,
+      "startTime": 2056.21,
+      "endTime": 2089.89,
+      "audioUrl": "/audio/lectures/science/b10/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Why is proper sewage treatment essential in controlling the spread of transmissible diseases in cities? A. It adds extra mineral nitrates to drinking water to boost lymphocyte growth. B. It removes and destroys pathogens from human faeces so they do not contaminate water supplies. C. It increases the temperature of rivers so bacteria reproduce faster. D. It replaces the need for personal handwashing before preparing food. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct : human sewage contains dangerous gut pathogens; treating sewage destroys these microbes before water returns to rivers, preventing contamination of drinking water. A, C, and D are incorrect.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Why is proper sewage treatment essential in controlling the spread of transmissible diseases in cities? (Vì sao xử lý nước thải đúng quy chuẩn lại thiết yếu trong việc kiểm soát bệnh truyền nhiễm ở đô thị?) A. It adds extra mineral nitrates to drinking water to boost lymphocyte growth. B. It removes and destroys pathogens from human faeces so they do not contaminate water supplies. C. It increases the temperature of rivers so bacteria reproduce faster. D. It replaces the need for personal handwashing before preparing food. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng : Nước thải sinh hoạt chứa nhiều vi khuẩn gây bệnh đường ruột từ phân người; xử lý nước thải giúp tiêu diệt mầm bệnh trước khi trả nước ra sông hồ, bảo vệ nguồn nước uống. A, C, D đều sai.",
+      "duration": 112.54,
+      "startTime": 2089.89,
+      "endTime": 2202.43,
+      "audioUrl": "/audio/lectures/science/b10/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "hygienic food preparation",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] Explain the importance of hygienic food preparation and good personal hygiene in reducing the transmission of pathogens in a school canteen. [4] ✍️ Step-by-Step Mark Scheme Solution: • Hygienic food preparation: Cooking food thoroughly at high temperatures kills bacteria (denatures bacterial enzymes) [1m], and storing perishable food in a fridge / keeping raw meat separate from cooked food prevents bacterial multiplication and cross-contamination [1m].• Good personal hygiene: Washing hands with soap after using the toilet removes pathogens from skin so they are not transferred to food [1m], and covering coughs/sneezes traps airborne droplets [1m]. 💡 Intuition Check: Link every hygiene action to a clear biological outcome: kills pathogens, slows bacterial division, or blocks transfer via hands/droplets/vectors!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] Explain the importance of hygienic food preparation and good personal hygiene in reducing the transmission of pathogens in a school canteen. (Giải thích tầm quan trọng của vệ sinh chế biến thực phẩm và vệ sinh cá nhân trong việc giảm lây truyền mầm bệnh tại căng-tin trường học.) ✍️ Lời giải chi tiết theo thang điểm: • Hygienic food preparation: Cooking food thoroughly at high temperature kills bacteria ; refrigerating food slows bacterial reproduction and separating raw/cooked food prevents cross-contamination .• Good personal hygiene: Washing hands with soap removes pathogens from skin before touching food ; covering coughs/sneezes prevents spread via airborne droplets . 💡 Kiểm tra bản chất: Mỗi ý giải thích luôn gắn: Hành động vệ sinh ➔ Tác động lên mầm bệnh (diệt khuẩn / chặn nhân đôi / cắt đường truyền)!",
+      "duration": 119.47,
+      "startTime": 2202.43,
+      "endTime": 2321.9,
+      "audioUrl": "/audio/lectures/science/b10/s04_b10.mp3"
     }
   ]
 }

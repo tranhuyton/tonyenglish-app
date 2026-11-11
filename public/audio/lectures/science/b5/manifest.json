@@ -1,162 +1,369 @@
 {
   "lectureId": "8ab2afa2-59e3-4c56-8971-8d93dec5ad8e",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B5: Enzymes",
-  "totalDuration": 367.66,
+  "totalDuration": 1637.12,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_enzyme_nature": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-enzyme-nature": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_enzyme_properties": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-enzyme-properties": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_lock_and_key": {
-      "start": 3,
       "end": 4
     },
-    "sec-lock-and-key": {
-      "start": 3,
-      "end": 4
-    },
-    "sec_lock_key_mechanism": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-lock-key-mechanism": {
-      "start": 4,
-      "end": 4
-    },
-    "sec_temp_ph": {
-      "start": 5,
-      "end": 7
-    },
-    "sec-temp-ph": {
-      "start": 5,
-      "end": 7
-    },
-    "sec_temp_effect": {
-      "start": 6,
-      "end": 6
-    },
-    "sec-temp-effect": {
-      "start": 6,
-      "end": 6
-    },
-    "sec_ph_effect": {
+    "s01_wex": {
       "start": 7,
-      "end": 7
+      "end": 8
     },
-    "sec-ph-effect": {
-      "start": 7,
-      "end": 7
+    "s01_hdr": {
+      "start": 1,
+      "end": 8
+    },
+    "s02_int": {
+      "start": 10,
+      "end": 12
+    },
+    "s02_wex": {
+      "start": 14,
+      "end": 15
+    },
+    "s02_hdr": {
+      "start": 9,
+      "end": 15
+    },
+    "s03_int": {
+      "start": 17,
+      "end": 19
+    },
+    "s03_wex": {
+      "start": 27,
+      "end": 28
+    },
+    "s03_hdr": {
+      "start": 16,
+      "end": 28
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B5: Enzyme & Xúc tác Sinh học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B5: Enzymes. Enzymes are biological catalysts that accelerate every biochemical reaction in living cells without being consumed. In this topic, we study the lock and key model and examine the critical impacts of temperature and pH on enzyme activity.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B5: Enzyme và Xúc tác Sinh học. Enzyme là các chất xúc tác sinh học giúp đẩy nhanh mọi phản ứng hóa sinh trong tế bào sống mà không bị biến đổi hay tiêu hao. Trong chuyên đề này, chúng ta sẽ tìm hiểu mô hình ổ khóa và chìa khóa, cùng tác động then chốt của nhiệt độ và độ pH lên hoạt tính enzyme.",
-      "duration": 42.11,
+      "title": "Enzymes: Chất xúc tác Sinh học (Biological Catalysts)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B5 • Enzymology Enzymes: Biological Catalysts. Cambridge IGCSE Co-ordinated Sciences (0654) • Lock and Key Model, Temperature, pH & Denaturation.",
+      "vi": "Topic B5 • Song Ngữ Anh - Việt Enzymes: Chất xúc tác Sinh học (Biological Catalysts). Cambridge IGCSE Co-ordinated Sciences (0654) • Mô hình Ổ khóa - Chìa khóa, Nhiệt độ, Độ pH & Hiện tượng Biến tính.",
+      "duration": 35.13,
       "startTime": 0.0,
-      "endTime": 42.11,
+      "endTime": 35.13,
       "audioUrl": "/audio/lectures/science/b5/intro.mp3"
     },
     {
-      "id": "sec_enzyme_nature",
-      "title": "1. Bản chất & Đặc tính của Enzyme (Nature of Enzymes Overview)",
-      "selector": "#sec-enzyme-nature",
-      "en": "Section 1 defines catalysts and enzymes: A catalyst is a substance that increases the rate of a chemical reaction and is not changed by the reaction. Enzymes are proteins that are involved in all metabolic reactions, where they function as biological catalysts.",
-      "vi": "Mục một định nghĩa chất xúc tác và enzyme: Chất xúc tác là chất làm tăng tốc độ phản ứng hóa học và không bị thay đổi sau phản ứng. Enzyme là các protein tham gia vào mọi phản ứng trao đổi chất, đóng vai trò là chất xúc tác sinh học.",
-      "duration": 35.61,
-      "startTime": 42.11,
-      "endTime": 77.72,
-      "audioUrl": "/audio/lectures/science/b5/sec_enzyme_nature.mp3"
+      "id": "s01_hdr",
+      "title": "1. Bản chất & Đặc tính của Enzyme (Nature & Properties)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 1. Nature of Enzymes & Properties.",
+      "vi": "🟦 CORE B5.1.1 1. Bản chất & Đặc tính của Enzyme (Nature & Properties).",
+      "duration": 11.77,
+      "startTime": 35.13,
+      "endTime": 46.9,
+      "audioUrl": "/audio/lectures/science/b5/s01_hdr.mp3"
     },
     {
-      "id": "sec_enzyme_properties",
-      "title": "⭐ Key Properties of Enzymes (Đặc tính Trọng tâm)",
-      "selector": "#sec-enzyme-properties",
-      "en": "Key enzyme properties: All enzymes are proteins. They are highly specific, catalyzing only one particular reaction. They remain completely unchanged after the reaction and can be reused repeatedly. They work by lowering the activation energy needed for reactions to occur.",
-      "vi": "Các đặc tính cốt lõi của enzyme: Mọi enzyme đều có bản chất là protein. Chúng có tính đặc hiệu cao, chỉ xúc tác cho một phản ứng duy nhất. Chúng hoàn toàn không đổi sau phản ứng và có thể tái sử dụng nhiều lần. Chúng hoạt động bằng cách hạ thấp năng lượng hoạt hóa cần thiết cho phản ứng.",
-      "duration": 37.74,
-      "startTime": 77.72,
-      "endTime": 115.46,
-      "audioUrl": "/audio/lectures/science/b5/sec_enzyme_properties.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of an enzyme as a reusable assembly-line wrench inside a cell: made of folded protein , it speeds up vital metabolic reactions thousands of times per second while emerging completely unchanged ready for the next molecule.",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung enzyme giống như chiếc cờ-lê tự động siêu tốc trong nhà máy tế bào : được đúc từ chuỗi protein cuộn gập, nó giúp tăng tốc các phản ứng trao đổi chất lên hàng nghìn lần mỗi giây mà bản thân chiếc cờ-lê hoàn toàn không bị mài mòn hay biến đổi.",
+      "duration": 32.69,
+      "startTime": 46.9,
+      "endTime": 79.59,
+      "audioUrl": "/audio/lectures/science/b5/s01_b01.mp3"
     },
     {
-      "id": "sec_lock_and_key",
-      "title": "2. Cơ chế Hoạt động: Mô hình Ổ khóa và Chìa khóa (Lock & Key Overview)",
-      "selector": "#sec-lock-and-key",
-      "en": "Section 2 explains the Lock and Key hypothesis: The active site of an enzyme possesses a complementary 3D shape into which only a specific substrate molecule can fit, like a key into a lock.",
-      "vi": "Mục hai giải thích thuyết Ổ khóa và Chìa khóa: Trung tâm hoạt động của enzyme có cấu trúc không gian 3 chiều bổ sung chuẩn xác, chỉ cho phép phân tử cơ chất đặc hiệu khớp khít vào, tương tự như chiếc chìa khóa cắm vào đúng ổ khóa.",
-      "duration": 53.75,
-      "startTime": 115.46,
-      "endTime": 169.21,
-      "audioUrl": "/audio/lectures/science/b5/sec_lock_and_key.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: In 0654 Core (B5.1.1), state both halves of the definition: 1) Enzymes are proteins involved in all metabolic reactions ; 2) They function as biological catalysts (increasing reaction rate without being chemically changed or used up).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Trong chương trình 0654 Core (B5.1.1), luôn nêu trọn vẹn 2 vế định nghĩa: 1) Enzyme là các phân tử protein tham gia vào mọi phản ứng trao đổi chất (metabolic reactions) ; 2) Chúng hoạt động như chất xúc tác sinh học (biological catalysts) — làm tăng tốc độ phản ứng mà không bị thay đổi hay hao hụt.",
+      "duration": 41.66,
+      "startTime": 79.59,
+      "endTime": 121.25,
+      "audioUrl": "/audio/lectures/science/b5/s01_b02.mp3"
     },
     {
-      "id": "sec_lock_key_mechanism",
-      "title": "🔬 Three Stages of Lock & Key Mechanism (Ba Bước Phản ứng)",
-      "selector": "#sec-lock-key-mechanism",
-      "en": "Reaction stages: First, the substrate approaches the complementary active site. Second, the substrate binds to form a temporary enzyme-substrate complex where chemical bonds are broken or made. Third, the products leave the active site, leaving the enzyme completely unchanged and ready for the next substrate.",
-      "vi": "Ba giai đoạn phản ứng: Bước một, cơ chất tiến vào trung tâm hoạt động bổ sung. Bước hai, cơ chất liên kết tạo thành phức hệ enzyme-cơ chất tạm thời, nơi các liên kết hóa học được bẻ gãy hoặc tạo mới. Bước ba, sản phẩm rời khỏi trung tâm hoạt động, trả lại phân tử enzyme nguyên vẹn sẵn sàng đón cơ chất tiếp theo.",
-      "duration": 39.45,
-      "startTime": 169.21,
-      "endTime": 208.66,
-      "audioUrl": "/audio/lectures/science/b5/sec_lock_key_mechanism.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never describe enzymes as \"carbohydrates\" or \"living cells\", and never claim an enzyme gets \"used up\" during a reaction — catalysts remain unchanged!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không nhầm enzyme là \"carbohydrate\" hay \"tế bào sống\", và không bao giờ viết enzyme \"bị tiêu hao hết\" sau phản ứng!",
+      "duration": 23.27,
+      "startTime": 121.25,
+      "endTime": 144.52,
+      "audioUrl": "/audio/lectures/science/b5/s01_b03.mp3"
     },
     {
-      "id": "sec_temp_ph",
-      "title": "3. Ảnh hưởng của Nhiệt độ & Độ pH (Temperature & pH Overview)",
-      "selector": "#sec-temp-ph",
-      "en": "Section 3 investigates environmental impacts on enzyme kinetics: Temperature alters kinetic energy and causes thermal denaturation, while pH extremes disrupt ionic bonds maintaining the active site shape.",
-      "vi": "Mục ba nghiên cứu tác động của môi trường lên động học enzyme: Nhiệt độ làm thay đổi động năng phân tử và gây biến tính nhiệt, trong khi độ pH cực đoan làm phá vỡ các liên kết ion duy trì hình thể trung tâm hoạt động.",
-      "duration": 74.18,
-      "startTime": 208.66,
-      "endTime": 282.84,
-      "audioUrl": "/audio/lectures/science/b5/sec_temp_ph.mp3"
+      "id": "s01_b04",
+      "title": "protein",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Verbatim Cambridge Definition \"A catalyst is a substance that increases the rate of a chemical reaction and is not changed by the reaction.\". \"Enzymes are proteins that are involved in all metabolic reactions, where they function as biological catalysts.\".",
+      "vi": "Định nghĩa Nguyên văn Chuẩn Cambridge (B5.1.1) \"Enzymes are proteins that are involved in all metabolic reactions, where they function as biological catalysts.\". (Enzyme là các đại phân tử protein tham gia vào tất cả các phản ứng trao đổi chất trong tế bào, hoạt động như những chất xúc tác sinh học làm tăng tốc độ phản ứng mà bản thân không bị biến đổi sau phản ứng.).",
+      "duration": 40.01,
+      "startTime": 144.52,
+      "endTime": 184.53,
+      "audioUrl": "/audio/lectures/science/b5/s01_b04.mp3"
     },
     {
-      "id": "sec_temp_effect",
-      "title": "🔥 Temperature Effect & Denaturation (Nhiệt độ & Biến tính)",
-      "selector": "#sec-temp-effect",
-      "en": "Temperature effects: At low temperatures, molecules have low kinetic energy and collide infrequently. As temperature rises to the optimum around 37°C in humans, reaction rate reaches maximum. Above optimum, excessive thermal vibration breaks bonds holding the tertiary structure; the active site permanently changes shape and denatures, halting the reaction.",
-      "vi": "Tác động nhiệt độ: Ở nhiệt độ thấp, phân tử có động năng thấp nên ít va chạm. Khi nhiệt độ tăng đến mức tối ưu khoảng 37°C ở người, tốc độ phản ứng đạt cực đại. Vượt qua nhiệt độ tối ưu, các dao động nhiệt phá vỡ liên kết cấu trúc bậc 3; trung tâm hoạt động biến đổi vĩnh viễn hình dạng và enzyme bị biến tính, khiến phản ứng ngừng trệ.",
-      "duration": 44.94,
-      "startTime": 282.84,
-      "endTime": 327.78,
-      "audioUrl": "/audio/lectures/science/b5/sec_temp_effect.mp3"
+      "id": "s01_b05",
+      "title": "⭐ 4 Đặc tính Trọng tâm của Enzyme bắt buộc thuộc lòng",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "⭐ Core Enzyme Properties to Memorise. Proteins: All enzymes are proteins synthesised by ribosomes. Biological Catalysts: Speed up cellular metabolic reactions without being used up. Specificity: Each enzyme has an active site fitting only one specific substrate. Reusable: Enzymes remain completely unchanged at the end of the reaction.",
+      "vi": "⭐ 4 Đặc tính Trọng tâm của Enzyme bắt buộc thuộc lòng. Bản chất Protein (Proteins): Tất cả enzyme đều là protein được tổng hợp từ các amino acid tại ribosome. Xúc tác sinh học (Biological Catalysts): Tăng tốc độ các phản ứng trao đổi chất (cả phân giải lẫn tổng hợp) lên hàng triệu lần ở nhiệt độ cơ thể. Tính đặc hiệu cao (Specificity): Mỗi loại enzyme có rãnh active site chỉ khớp với duy nhất một loại cơ chất (substrate) nhất định. Không bị tiêu hao & Tái sử dụng (Reusable): Giữ nguyên vẹn cấu trúc khi phản ứng kết thúc nên chỉ cần lượng nhỏ enzyme đã xúc tác được lượng lớn cơ chất.",
+      "duration": 68.07,
+      "startTime": 184.53,
+      "endTime": 252.6,
+      "audioUrl": "/audio/lectures/science/b5/s01_b05.mp3"
     },
     {
-      "id": "sec_ph_effect",
-      "title": "🧪 Optimum pH in Human Digestion (Độ pH Tối ưu trong Tiêu hóa)",
-      "selector": "#sec-ph-effect",
-      "en": "pH effects: Each enzyme has an optimum pH. For example, stomach pepsin operates optimally in acidic conditions at pH 2, while intestinal amylase and lipase require alkaline conditions around pH 8. Deviations from optimum pH alter ionic charges and denature the active site.",
-      "vi": "Tác động độ pH: Mỗi enzyme có một mức pH tối ưu riêng. Ví dụ, pepsin dạ dày hoạt động tối ưu trong môi trường acid mạnh ở pH 2, trong khi amylase và lipase ruột non lại cần môi trường kiềm khoảng pH 8. Độ pH lệch xa mức tối ưu sẽ làm thay đổi điện tích và biến tính trung tâm hoạt động.",
-      "duration": 39.88,
-      "startTime": 327.78,
-      "endTime": 367.66,
-      "audioUrl": "/audio/lectures/science/b5/sec_ph_effect.mp3"
+      "id": "s01_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ Which statement correctly defines enzymes in living cells? A. Carbohydrates that slow down metabolic reactions and are broken down afterwards. B. Proteins involved in all metabolic reactions that function as biological catalysts. C. Fats that supply activation energy for cellular respiration. D. Living structures that digest toxins and die once the reaction finishes. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Syllabus B5.1.1 defines enzymes verbatim as proteins involved in all metabolic reactions , where they function as biological catalysts (increasing reaction rate while remaining unchanged — Option B).",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ Which statement correctly defines enzymes in living cells? (Phát biểu nào sau đây định nghĩa đúng về các enzyme trong tế bào sống?) A. Carbohydrates that slow down metabolic reactions and are broken down afterwards. B. Proteins involved in all metabolic reactions that function as biological catalysts. C. Fats that supply activation energy for cellular respiration. D. Living structures that digest toxins and die once the reaction finishes. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Theo đúng chuẩn Syllabus B5.1.1, mọi enzyme đều là phân tử protein tham gia vào tất cả các phản ứng trao đổi chất (metabolic reactions) với vai trò là chất xúc tác sinh học (biological catalysts) — giúp tăng tốc độ phản ứng và giữ nguyên vẹn sau phản ứng (Đáp án B).",
+      "duration": 111.6,
+      "startTime": 252.6,
+      "endTime": 364.2,
+      "audioUrl": "/audio/lectures/science/b5/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "protein",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [3 marks] State the type of biological molecule from which all enzymes are made, and explain why only a tiny mass of enzyme is needed to catalyse the breakdown of a large mass of substrate. [3] ✍️ Step-by-Step Mark Scheme Solution: 1. Enzymes are made of protein (chains of amino acids) [1m].2. They act as biological catalysts that increase reaction rate [1m].3. Each enzyme molecule remains unchanged at the end of the reaction and is reused repeatedly on many substrate molecules [1m]. 💡 Intuition Check: Because Biuret reagent tests for protein, ANY pure enzyme solution (amylase, pepsin, lipase, catalase) will give a positive purple/lilac Biuret test!",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [3 marks] State the type of biological molecule from which all enzymes are made, and explain why only a tiny mass of enzyme is needed to catalyse the breakdown of a large mass of substrate. (Nêu tên loại đại phân tử sinh học cấu tạo nên mọi enzyme, và giải thích vì sao chỉ cần một lượng rất nhỏ enzyme đã có thể xúc tác phân giải lượng lớn cơ chất. ) ✍️ Lời giải chi tiết theo thang điểm: 1. Mọi enzyme đều được cấu tạo từ protein (chuỗi các amino acid) .2. Chúng đóng vai trò là chất xúc tác sinh học (biological catalysts) làm tăng tốc độ phản ứng .3. Mỗi phân tử enzyme không bị biến đổi (remains unchanged) sau phản ứng nên được tái sử dụng (reused) liên tục cho hàng nghìn phân tử cơ chất tiếp theo . 💡 Kiểm tra bản chất: Liên hệ thông minh với Chuyên đề B4: Vì mọi enzyme đều là protein nên bất kỳ dung dịch enzyme tinh khiết nào khi thử bằng thuốc thử Biuret đều đổi từ xanh lam sang màu tím (purple/lilac)!",
+      "duration": 125.35,
+      "startTime": 364.2,
+      "endTime": 489.55,
+      "audioUrl": "/audio/lectures/science/b5/s01_b07.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "2. Cơ chế Hoạt động: Mô hình Ổ khóa & Chìa khóa (Lock and Key)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE 2. How Enzymes Work: The Lock and Key Hypothesis.",
+      "vi": "🟩 SUPPLEMENT B5.1.3–B5.1.4 2. Cơ chế Hoạt động: Mô hình Ổ khóa & Chìa khóa (Lock and Key).",
+      "duration": 16.59,
+      "startTime": 489.55,
+      "endTime": 506.14,
+      "audioUrl": "/audio/lectures/science/b5/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine a custom padlock (enzyme) and its single matching key (substrate) : the grooved keyhole is the active site . Only the substrate with a complementary shape fits in to form an enzyme-substrate complex before releasing the products .",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng một ổ khóa riêng biệt (enzyme) và chiếc chìa khóa duy nhất mở được nó (substrate) : rãnh khóa lõm vào là trung tâm hoạt động (active site) . Chỉ cơ chất có hình dạng bổ sung vừa khít (complementary shape) mới gắn vào tạo thành phức hợp enzyme-cơ chất rồi tách ra thành sản phẩm (products) .",
+      "duration": 39.65,
+      "startTime": 506.14,
+      "endTime": 545.79,
+      "audioUrl": "/audio/lectures/science/b5/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: For Supplement B5.1.3–B5.1.4, chain four exact terms in sequence: substrate collides with active site → complementary shape and fit gives enzyme specificity → temporary enzyme-substrate complex forms → products detach, leaving the enzyme unchanged.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Với phần Supplement B5.1.3–B5.1.4, luôn viết theo trật tự 4 mắt xích: cơ chất (substrate) va chạm trung tâm hoạt động (active site) → hình dạng bổ sung và độ khớp tạo tính đặc hiệu → tạo phức hợp enzyme-substrate complex → giải phóng sản phẩm (products) , enzyme giữ nguyên vẹn.",
+      "duration": 44.78,
+      "startTime": 545.79,
+      "endTime": 590.57,
+      "audioUrl": "/audio/lectures/science/b5/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write that the active site and substrate have the \"same shape\" ! Examiners reject \"same/similar shape\" — you MUST write complementary shape .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm tuyệt đối viết rằng active site và substrate có \"same shape\" (hình dạng giống nhau)! Giám khảo gạch điểm ngay cụm \"same/identical shape\" — bắt buộc viết complementary shape .",
+      "duration": 26.59,
+      "startTime": 590.57,
+      "endTime": 617.16,
+      "audioUrl": "/audio/lectures/science/b5/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🔬 PHÒNG LAB TƯƠNG TÁC: LOCK & KEY MECHANISM",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🔬 TONY ENGLISH LAB: LOCK & KEY. Hover or click through the 3 reaction stages on the diagram to inspect molecular interactions and key scoring terms. Interactive Lock & Key Explorer 👆.",
+      "vi": "🔬 PHÒNG LAB TƯƠNG TÁC: LOCK & KEY MECHANISM. Hãy tương tác với sơ đồ bên cạnh 👆. Approach , 2. ES-Complex , 3. Products ) để xem cơ chế \"Ổ khóa - Chìa khóa\" và bộ từ khóa chấm điểm chuẩn quốc tế.",
+      "duration": 29.58,
+      "startTime": 617.16,
+      "endTime": 646.74,
+      "audioUrl": "/audio/lectures/science/b5/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ Why can protease digest protein molecules into amino acids, whereas it has no effect on starch? A. Starch molecules cannot dissolve in water to collide with protease. B. Starch has the same shape as protease so the molecules repel each other. C. Only protein has a shape complementary to the active site of protease to form an enzyme-substrate complex. D. Protease only functions after all starch in the mixture has been used up. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Enzyme specificity (B5.1.4) depends on the complementary shape and fit between the enzyme's active site and its specific substrate. Starch is not complementary to protease's active site, so no enzyme-substrate complex can form (Option C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ Why can protease digest protein molecules into amino acids, whereas it has no effect on starch? (Vì sao enzyme protease có thể tiêu hóa các phân tử protein thành amino acid nhưng lại hoàn toàn không có tác dụng lên tinh bột?) A. Starch molecules cannot dissolve in water to collide with protease. B. Starch has the same shape as protease so the molecules repel each other. C. Only protein has a shape complementary to the active site of protease to form an enzyme-substrate complex. D. Protease only functions after all starch in the mixture has been used up. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Tính đặc hiệu của enzyme (B5.1.4) do hình dạng bổ sung vừa khít giữa active site của protease và cơ chất protein quy định. Phân tử tinh bột không khớp với active site của protease nên không thể tạo thành enzyme-substrate complex (Đáp án C).",
+      "duration": 119.47,
+      "startTime": 646.74,
+      "endTime": 766.21,
+      "audioUrl": "/audio/lectures/science/b5/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "cơ chất (substrate)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [4 marks] Explain, with reference to the active site and enzyme-substrate complex, how lipase catalyses the breakdown of fat molecules. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. Fat (lipid) is the substrate that collides with the active site of lipase [1m].2. Lipase's active site has a specific 3D shape complementary to the fat molecule so they fit together [1m].3. Binding forms a temporary enzyme-substrate complex [1m].4. Chemical bonds break to form products (fatty acids and glycerol) , which leave the active site while lipase stays unchanged [1m]. 💡 Intuition Check: Link Topic B4 and Topic B5 seamlessly: naming the exact products (fatty acids + glycerol for lipase; maltose for amylase; amino acids for protease) makes your Paper 4 answers rock-solid.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [4 marks] Explain, with reference to the active site and enzyme-substrate complex, how lipase catalyses the breakdown of fat molecules. (Hãy giải thích, có sử dụng thuật ngữ trung tâm hoạt động và phức hợp enzyme-cơ chất, cách enzyme lipase xúc tác phân giải phân tử chất béo. ) ✍️ Lời giải chi tiết theo thang điểm: 1. Phân tử chất béo đóng vai trò là cơ chất (substrate) chuyển động va 2. Active site của lipase có hình dạng không gian 3D bổ sung vừa khít (complementary) đặc hiệu với phân tử chất béo .3. Sự gắn kết tạo thành phức hợp enzyme-cơ chất tạm thời .4. Liên kết bị cắt tạo thành sản phẩm (products: fatty acids và glycerol) rời khỏi rãnh active site, còn lipase giữ nguyên vẹn . 💡 Kiểm tra bản chất: Kết hợp kiến thức B4 và B5: gọi tên chính xác sản phẩm (fatty acids + glycerol với lipase; maltose với amylase; amino acids với protease) giúp câu trả lời tự luận đạt độ chuẩn xác tuyệt đối.",
+      "duration": 137.22,
+      "startTime": 766.21,
+      "endTime": 903.43,
+      "audioUrl": "/audio/lectures/science/b5/s02_b06.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "3. Ảnh hưởng của Nhiệt độ & Độ pH lên Hoạt tính Enzyme",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟩 SUPPLEMENT 3. Effects of Temperature & pH on Enzyme Activity.",
+      "vi": "🟦 CORE B5.1.2 • 🟩 SUPP B5.1.5–B5.1.6 3. Ảnh hưởng của Nhiệt độ & Độ pH lên Hoạt tính Enzyme.",
+      "duration": 18.44,
+      "startTime": 903.43,
+      "endTime": 921.87,
+      "audioUrl": "/audio/lectures/science/b5/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of molecules as skaters on an ice rink : when cold, skaters glide slowly and rarely meet (low kinetic energy, NOT injured!). Warming to 37°C maximizes collisions, whereas overheating >50°C warps the active site irreversibly (denaturation) — just like extreme acid/alkali warps an enzyme far from its optimum pH.",
+      "vi": "🎯 Hình dung đời thường: Hãy ví các phân tử như vận động viên trượt băng : trời lạnh thì trượt chậm nên ít chạm mặt nhau (động năng thấp chứ KHÔNG chấn thương!). Ấm lên 37°C tốc độ va chạm đạt đỉnh, nhưng quá nóng >50°C sẽ làm biến dạng vĩnh viễn rãnh khóa active site (denaturation) — tương tự như axit/kiềm mạnh làm méo active site khi lệch khỏi pH tối ưu.",
+      "duration": 51.77,
+      "startTime": 921.87,
+      "endTime": 973.64,
+      "audioUrl": "/audio/lectures/science/b5/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Cover all 4 Supplement pillars (B5.1.5–B5.1.6): 1) Rising temp: higher kinetic energy → higher frequency of effective collisions . 2) Optimum temp/pH: fastest reaction rate. 3) Above optimum temp OR extreme pH: bonds break, altering active site shape and fit → denaturation . 4) Practical (B5.1.2): control pH when testing temperature (and vice versa)!",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nắm trọn 4 ý cốt lõi phần Supplement (B5.1.2, B5.1.5–B5.1.6): 1) Tăng nhiệt độ tới đỉnh: tăng kinetic energy (động năng) → tăng frequency of effective collisions (tần suất va chạm hiệu quả) . 2) Optimum temp/pH: tốc độ tối đa. 3) Quá nóng HOẶC lệch pH tối ưu: biến đổi shape and fit của active site → denaturation (biến tính) . 4) Thực hành: cố định pH khi đo nhiệt độ (và ngược lại)!",
+      "duration": 68.22,
+      "startTime": 973.64,
+      "endTime": 1041.86,
+      "audioUrl": "/audio/lectures/science/b5/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"enzymes are killed/die\" at high temperature or extreme pH, and never say enzymes denature at 0°C! Cold enzymes are merely slow/inactive; warming restores their rate.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không viết \"enzyme bị giết / chết (killed/dies)\" ở nhiệt độ cao hoặc pH khắc nghiệt, và không nói enzyme bị biến tính ở 0°C! Ở nhiệt độ lạnh enzyme chỉ hoạt động chậm lại chứ chưa hề biến tính.",
+      "duration": 33.11,
+      "startTime": 1041.86,
+      "endTime": 1074.97,
+      "audioUrl": "/audio/lectures/science/b5/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🔥 PHÒNG LAB TƯƠNG TÁC: ĐỘNG HỌC NHIỆT ĐỘ & BIẾN TÍNH",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🔥 TONY ENGLISH LAB: TEMPERATURE EFFECT. Explore the 3 temperature zones to observe how thermal denaturation alters active site geometry at the molecular level. Interactive Temperature Explorer 👆. Hover over the 3 thermal regimes (Low, Optimum, High) to understand kinetic energy, collision frequency, and active-site denaturation.",
+      "vi": "🔥 PHÒNG LAB TƯƠNG TÁC: ĐỘNG HỌC NHIỆT ĐỘ & BIẾN TÍNH. Hãy tương tác với sơ đồ nhiệt độ 👆. ính (Denaturation).",
+      "duration": 31.44,
+      "startTime": 1074.97,
+      "endTime": 1106.41,
+      "audioUrl": "/audio/lectures/science/b5/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🧪 Độ pH Tối ưu trong Hệ Tiêu hóa Người & Cơ chế Biến tính do pH (B5.1.6)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🧪 Optimum pH in the Human Body. Different enzymes have evolved different optimum pH values suited to their physiological environment:",
+      "vi": "🧪 Độ pH Tối ưu trong Hệ Tiêu hóa Người & Cơ chế Biến tính do pH (B5.1.6). Mỗi enzyme tiến hóa thích nghi với một mức pH tối ưu (optimum pH) riêng. Khi môi trường quá axit hoặc quá kiềm lệch xa ngưỡng tối ưu, hình dạng và độ khớp của active site bị biến đổi dẫn tới biến tính (denaturation) :",
+      "duration": 31.72,
+      "startTime": 1106.41,
+      "endTime": 1138.13,
+      "audioUrl": "/audio/lectures/science/b5/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Pepsin (Dạ dày - Stomach):",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Pepsin (Stomach): Optimum pH ~2.0 (highly acidic, maintained by HCl)",
+      "vi": "Pepsin (Dạ dày - Stomach): Optimum pH ≈ 2.0 (môi trường axit mạnh nhờ dịch vị HCl)",
+      "duration": 16.24,
+      "startTime": 1138.13,
+      "endTime": 1154.37,
+      "audioUrl": "/audio/lectures/science/b5/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Amylase (Nước bọt - Saliva):",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Amylase (Saliva): Optimum pH ~7.0 (neutral mouth environment)",
+      "vi": "Amylase (Nước bọt - Saliva): Optimum pH ≈ 7.0 (môi trường trung tính ở khoang miệng)",
+      "duration": 14.54,
+      "startTime": 1154.37,
+      "endTime": 1168.91,
+      "audioUrl": "/audio/lectures/science/b5/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Trypsin & Lipase (Tá tràng - Duodenum):",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Trypsin & Lipase (Duodenum): Optimum pH ~8.0 (alkaline, neutralised by bile)",
+      "vi": "Trypsin & Lipase (Tá tràng - Duodenum): Optimum pH ≈ 8.0 (môi trường kiềm nhẹ nhờ dịch mật trung hòa)",
+      "duration": 17.27,
+      "startTime": 1168.91,
+      "endTime": 1186.18,
+      "audioUrl": "/audio/lectures/science/b5/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🔬 Phương pháp Thực hành Khảo sát Nhiệt độ & pH (Syllabus B5.1.2)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🔬 Practical Investigation of Temperature & pH (Syllabus B5.1.2). Amylase + Starch (Spotting Tile): Equilibrate starch and amylase tubes separately in a water bath (or mix with a pH buffer), combine, and test drops with iodine every 30 s until iodine stays yellow-brown. Catalase + Hydrogen Peroxide: Measure volume of O₂ gas collected in a gas syringe in a fixed time across different temperatures or pH buffers (use boiled enzyme as a control).",
+      "vi": "🔬 Phương pháp Thực hành Khảo sát Nhiệt độ & pH (Syllabus B5.1.2). Thí nghiệm Amylase + Tinh bột (Khay sứ Spotting Tile): Ngâm riêng ống tinh bột và ống amylase trong bể cách thủy (hoặc pha dung dịch đệm pH buffer), trộn chung rồi cứ mỗi 30 giây lấy 1 giọt thử với iodine trên khay sứ đến khi iodine giữ nguyên màu vàng nâu (yellow-brown). Thí nghiệm Catalase + Hydrogen Peroxide (H₂O₂): Đo thể tích khí O₂ thu được bằng ống tiêm khí (gas syringe) trong thời gian cố định ở các mức nhiệt độ hoặc độ pH khác nhau (luôn kèm ống đối chứng dùng enzyme đã đun sôi).",
+      "duration": 74.42,
+      "startTime": 1186.18,
+      "endTime": 1260.6,
+      "audioUrl": "/audio/lectures/science/b5/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "⚠️ Cảnh báo Bẫy Điểm Thi Cambridge: Tuyệt đối KHÔNG viết \"Enzyme Chết\"!",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "⚠️ Critical Cambridge Vocabulary Trap: Never Say \"Enzyme Dies\"! Enzymes are protein molecules — they are NOT living organisms , so they CANNOT die or be killed . Always state that the enzyme is denatured because its active site has permanently changed shape so the substrate no longer fits.",
+      "vi": "⚠️ Cảnh báo Bẫy Điểm Thi Cambridge: Tuyệt đối KHÔNG viết \"Enzyme Chết\"! Enzyme là các phân tử protein vô sinh — KHÔNG phải sinh vật sống nên KHÔNG THỂ chết . Bắt buộc phải viết enzyme bị biến tính (denatured) do trung tâm hoạt động (active site) bị biến dạng vĩnh viễn khiến cơ chất không còn gắn khớp được nữa.",
+      "duration": 41.12,
+      "startTime": 1260.6,
+      "endTime": 1301.72,
+      "audioUrl": "/audio/lectures/science/b5/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ An enzyme from the human small intestine has an optimum temperature of 37°C and an optimum pH of 8.0. Why does its activity fall to zero at 65°C and also at pH 2.0? A. At 65°C kinetic energy is zero, and at pH 2.0 the enzyme freezes. B. Both 65°C and pH 2.0 kill the living enzyme cells permanently. C. Both 65°C and pH 2.0 denature the enzyme by changing the shape of its active site so the substrate no longer fits. D. At 65°C substrate molecules evaporate, and at pH 2.0 products block the active site. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Both high temperatures above optimum (B5.1.5) and extreme pH shifts away from optimum (B5.1.6) cause denaturation : intramolecular bonds break, changing the shape and fit of the active site so it is no longer complementary to the substrate (Option C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ An enzyme from the human small intestine has an optimum temperature of 37°C and an optimum pH of 8.0. Why does its activity fall to zero at 65°C and also at pH 2.0? (Một enzyme ở ruột non người có nhiệt độ tối ưu là 37°C và pH tối ưu là 8,0. Vì sao hoạt tính của nó giảm về 0 cả khi ở 65°C lẫn khi ở pH 2,0?) A. At 65°C kinetic energy is zero, and at pH 2.0 the enzyme freezes. B. Both 65°C and pH 2.0 kill the living enzyme cells permanently. C. Both 65°C and pH 2.0 denature the enzyme by changing the shape of its active site so the substrate no longer fits. D. At 65°C substrate molecules evaporate, and at pH 2.0 products block the active site. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Cả nhiệt độ quá cao vượt ngưỡng tối ưu (B5.1.5) lẫn độ pH quá axit lệch xa ngưỡng tối ưu (B5.1.6) đều gây biến tính (denaturation) : làm đứt liên kết nội phân tử, thay đổi hình dạng và độ khớp (shape and fit) của active site khiến cơ chất không thể gắn vào được nữa (Đáp án C).",
+      "duration": 162.68,
+      "startTime": 1301.72,
+      "endTime": 1464.4,
+      "audioUrl": "/audio/lectures/science/b5/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦/🟩 CORE & SUPPLEMENT • 0654 Paper 4 / Paper 6 [5 marks] A student investigates the effect of temperature (10°C to 60°C) on starch digestion by amylase using iodine solution on a spotting tile.(a) Explain why the time taken for the blue-black colour to disappear decreases from 10°C to 37°C. [3](b) State two variables the student must keep constant across all temperatures. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Increasing temperature gives amylase and starch molecules more kinetic energy so they move faster [1m]; this increases the frequency of effective collisions with the active site [1m], forming more enzyme-substrate complexes per second so starch breaks down faster [1m]. (b) Any two from: pH (using pH buffer solution) / concentration and volume of starch / concentration and volume of amylase [2m]. 💡 Intuition Check: Notice the inverse Paper 6 trap: shorter time for starch to disappear = FASTER rate of enzyme activity!",
+      "vi": "BÀI MẪU 2 🟦/🟩 CORE & SUPPLEMENT • 0654 Paper 4 / Paper 6 [5 marks] A student investigates the effect of temperature (10°C to 60°C) on starch digestion by amylase using iodine solution on a spotting tile.(a) Explain why the time taken for the blue-black colour to disappear decreases from 10°C to 37°C. (b) State two variables the student must keep constant across all temperatures. (Một học sinh khảo sát ảnh hưởng của nhiệt độ (10°C đến 60°C) lên sự tiêu hóa tinh bột của amylase bằng dung dịch iodine trên khay sứ. (a) Giải thích vì sao thời gian để màu xanh đen biến mất lại giảm dần khi tăng từ 10°C lên 37°C. (b) Nêu hai biến số học sinh phải giữ cố định ở mọi mức nhiệt độ. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Khi tăng nhiệt độ từ 10°C lên 37°C, các phân tử amylase và tinh bột có động năng lớn hơn nên chuyển động nhanh hơn ; làm tăng tần suất va chạm hiệu quả với active site , tạo nhiều phức hợp enzyme-cơ chất hơn trong mỗi giây nên tinh bột bị phân giải nhanh hơn (thời gian mất màu ngắn hơn) . (b) Nêu bất kỳ 2 yếu tố: độ pH (dùng dung dịch đệm pH buffer) / nồng độ và thể tích tinh bột / nồng độ và thể tích amylase . 💡 Kiểm tra bản chất: Cẩn thận bẫy tỉ lệ nghịch trong bảng số liệu Paper 6: Thời gian để tinh bột biến mất càng NGẮN nghĩa là tốc độ hoạt động của enzyme càng NHANH!",
+      "duration": 172.72,
+      "startTime": 1464.4,
+      "endTime": 1637.12,
+      "audioUrl": "/audio/lectures/science/b5/s03_b12.mp3"
     }
   ]
 }

@@ -1,276 +1,457 @@
 {
   "lectureId": "9a23109e-ad73-4fcf-a599-9605cc4906eb",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B3: Movement into and out of cells",
-  "totalDuration": 518.87,
+  "totalDuration": 1949.59,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_diffusion": {
-      "start": 1,
-      "end": 6
-    },
-    "sec-diffusion": {
-      "start": 1,
-      "end": 6
-    },
-    "sec_diff_temp": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-diff-temp": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_diff_sa": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-diff-sa": {
-      "start": 3,
-      "end": 3
-    },
-    "sec_diff_gradient": {
-      "start": 4,
       "end": 4
     },
-    "sec-diff-gradient": {
-      "start": 4,
-      "end": 4
+    "s01_wex": {
+      "start": 14,
+      "end": 15
     },
-    "sec_diff_dist": {
-      "start": 5,
-      "end": 5
+    "s01_hdr": {
+      "start": 1,
+      "end": 15
     },
-    "sec-diff-dist": {
-      "start": 5,
-      "end": 5
+    "s02_int": {
+      "start": 17,
+      "end": 19
     },
-    "sec_diff_importance": {
-      "start": 6,
-      "end": 6
+    "s02_wex": {
+      "start": 26,
+      "end": 27
     },
-    "sec-diff-importance": {
-      "start": 6,
-      "end": 6
+    "s02_hdr": {
+      "start": 16,
+      "end": 27
     },
-    "sec_osmosis": {
-      "start": 7,
-      "end": 10
+    "s03_int": {
+      "start": 29,
+      "end": 31
     },
-    "sec-osmosis": {
-      "start": 7,
-      "end": 10
+    "s03_wex": {
+      "start": 35,
+      "end": 36
     },
-    "sec_os_pure": {
-      "start": 8,
-      "end": 8
-    },
-    "sec-os-pure": {
-      "start": 8,
-      "end": 8
-    },
-    "sec_os_equal": {
-      "start": 9,
-      "end": 9
-    },
-    "sec-os-equal": {
-      "start": 9,
-      "end": 9
-    },
-    "sec_os_salt": {
-      "start": 10,
-      "end": 10
-    },
-    "sec-os-salt": {
-      "start": 10,
-      "end": 10
-    },
-    "sec_active_transport": {
-      "start": 11,
-      "end": 13
-    },
-    "sec-active-transport": {
-      "start": 11,
-      "end": 13
-    },
-    "sec_active_carrier": {
-      "start": 12,
-      "end": 12
-    },
-    "sec-active-carrier": {
-      "start": 12,
-      "end": 12
-    },
-    "sec_active_importance": {
-      "start": 13,
-      "end": 13
-    },
-    "sec-active-importance": {
-      "start": 13,
-      "end": 13
+    "s03_hdr": {
+      "start": 28,
+      "end": 36
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B3: Vận chuyển Chất qua Màng Tế bào",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B3: Movement into and out of cells. Living cells constantly exchange nutrients, gases, and wastes across plasma membranes. In this lesson, we master the principles of diffusion, investigate water potential and osmosis in plant and animal tissues, and examine active transport mechanisms.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B3: Vận chuyển các chất qua màng tế bào. Tế bào sống liên tục trao đổi chất dinh dưỡng, khí và chất thải qua màng sinh chất. Trong bài học này, chúng ta sẽ làm chủ hiện tượng khuếch tán, thế nước và thẩm thấu trong tế bào thực vật và động vật, cùng cơ chế vận chuyển chủ động.",
-      "duration": 39.9,
+      "title": "Movement Into and Out of Cells (Vận chuyển Chất qua Màng Tế bào)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B3 • Cell Transport Movement Into and Out of Cells. Cambridge IGCSE Co-ordinated Sciences (0654) • Diffusion, Osmosis & Active Transport.",
+      "vi": "Vận chuyển Chất qua Màng Tế bào . Cambridge IGCSE Co-ordinated Sciences (0654 • Chuyên đề B3) • Khuếch tán, Thẩm thấu, Thế nước & Vận chuyển Chủ động.",
+      "duration": 29.22,
       "startTime": 0.0,
-      "endTime": 39.9,
+      "endTime": 29.22,
       "audioUrl": "/audio/lectures/science/b3/intro.mp3"
     },
     {
-      "id": "sec_diffusion",
-      "title": "1. Khuyếch tán: Định nghĩa & Nguyên lý (Diffusion Overview)",
-      "selector": "#sec-diffusion",
-      "en": "Section 1 defines Diffusion: the net movement of particles from a region of higher concentration to a region of lower concentration down a concentration gradient, as a result of their random kinetic movement. Energy for diffusion comes from the kinetic energy of random movement of molecules, requiring no ATP.",
-      "vi": "Mục một định nghĩa Khuyếch tán: là sự chuyển động tịnh của các hạt từ nơi có nồng độ cao đến nơi có nồng độ thấp hơn xuôi theo chiều gradient nồng độ, bắt nguồn từ chuyển động nhiệt hỗn loạn của phân tử. Năng lượng cho khuếch tán đến từ động năng tự nhiên của các phân tử và không tiêu tốn ATP.",
-      "duration": 44.51,
-      "startTime": 39.9,
-      "endTime": 84.41,
-      "audioUrl": "/audio/lectures/science/b3/sec_diffusion.mp3"
+      "id": "s01_hdr",
+      "title": "1. Diffusion: Sự Khuếch tán & Các Yếu tố Ảnh hưởng",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 🟩 SUPPLEMENT 1. Diffusion: Definition, Importance & Influencing Factors.",
+      "vi": "🟦 CORE 🟩 SUPPLEMENT 1. Diffusion: Sự Khuếch tán & Các Yếu tố Ảnh hưởng.",
+      "duration": 12.4,
+      "startTime": 29.22,
+      "endTime": 41.62,
+      "audioUrl": "/audio/lectures/science/b3/s01_hdr.mp3"
     },
     {
-      "id": "sec_diff_temp",
-      "title": "🌡️ Temperature (Nhiệt độ)",
-      "selector": "#sec-diff-temp",
-      "en": "Temperature factor: At higher temperatures, particles gain more kinetic energy and move faster. This causes more frequent collisions and crossing of membranes, significantly increasing the rate of diffusion.",
-      "vi": "Yếu tố Nhiệt độ: Ở nhiệt độ cao hơn, các hạt thu nhận thêm động năng và chuyển động nhanh hơn. Điều này làm tăng tần suất va chạm và tốc độ di chuyển qua màng, giúp tốc độ khuếch tán tăng lên rõ rệt.",
-      "duration": 25.55,
-      "startTime": 84.41,
-      "endTime": 109.96,
-      "audioUrl": "/audio/lectures/science/b3/sec_diff_temp.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Open a bottle of peppermint oil in the front row of a lab: without any fan, random molecular collisions spread scent particles from where they are crowded ( higher concentration ) to where they are scarce ( lower concentration ) — completely free of cellular energy!",
+      "vi": "🎯 Hình dung đời thường: Mở một lọ tinh dầu bạc hà ở bàn đầu phòng thí nghiệm: không cần quạt thổi, sự va chạm nhiệt hỗn loạn sẽ tự động đưa các phân tử hương thơm lan từ nơi tập trung dày đặc ( nồng độ cao ) ra khắp phòng ( nồng độ thấp ) — hoàn toàn không tốn một giọt năng lượng tế bào nào!",
+      "duration": 35.42,
+      "startTime": 41.62,
+      "endTime": 77.04,
+      "audioUrl": "/audio/lectures/science/b3/s01_b01.mp3"
     },
     {
-      "id": "sec_diff_sa",
-      "title": "📐 Surface Area (Diện tích Bề mặt)",
-      "selector": "#sec-diff-sa",
-      "en": "Surface Area factor: A larger membrane surface area provides more space and pathways for solute particles to cross per unit of time, thereby increasing the rate of diffusion.",
-      "vi": "Yếu tố Diện tích bề mặt: Diện tích bề mặt màng càng lớn thì càng có nhiều khoảng không gian để các hạt đi qua trong mỗi đơn vị thời gian, từ đó làm tăng tốc độ khuếch tán.",
-      "duration": 20.68,
-      "startTime": 109.96,
-      "endTime": 130.64,
-      "audioUrl": "/audio/lectures/science/b3/sec_diff_sa.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Core ( B3.1.1–B3.1.3 ): Diffusion = net movement of particles from higher → lower concentration (down a concentration gradient) due to random movement across cell membranes (vital for O₂/CO₂ gas exchange & digested solutes).Supplement ( B3.1.4 ): Rate increases with ↑ surface area , ↑ temperature , ↑ concentration gradient , and ↓ diffusion distance .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Core ( B3.1.1–B3.1.3 ): Khuếch tán = net movement (dịch chuyển ròng) từ nồng độ cao → thấp (xuôi dốc nồng độ) nhờ random movement qua màng tế bào (trao đổi khí O₂/CO₂ và hấp thụ chất tan).Supplement ( B3.1.4 ): Tốc độ tăng khi ↑ diện tích bề mặt , ↑ nhiệt độ , ↑ độ dốc nồng độ và ↓ khoảng cách khuếch tán .",
+      "duration": 47.62,
+      "startTime": 77.04,
+      "endTime": 124.66,
+      "audioUrl": "/audio/lectures/science/b3/s01_b02.mp3"
     },
     {
-      "id": "sec_diff_gradient",
-      "title": "⚡ Concentration Gradient (Độ dốc Nồng độ)",
-      "selector": "#sec-diff-gradient",
-      "en": "Concentration Gradient factor: A steeper concentration gradient, meaning a greater difference in concentration between the two regions, accelerates net particle movement and increases the diffusion rate.",
-      "vi": "Yếu tố Độ dốc nồng độ: Gradient nồng độ càng dốc, nghĩa là sự chênh lệch nồng độ giữa hai vùng càng lớn, thì chuyển động tịnh của các phân tử càng diễn ra nhanh chóng, làm tăng tốc độ khuếch tán.",
-      "duration": 23.25,
-      "startTime": 130.64,
-      "endTime": 153.89,
-      "audioUrl": "/audio/lectures/science/b3/sec_diff_gradient.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"particles stop moving when concentrations become equal\"! At equilibrium, particles continue moving randomly in both directions at equal rates, so there is no net movement .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Không bao giờ viết \"các hạt ngừng chuyển động khi nồng độ hai bên bằng nhau\"! Ở trạng thái cân bằng, các hạt vẫn chuyển động ngẫu nhiên qua lại với tốc độ bằng nhau nên không còn dịch chuyển ròng .",
+      "duration": 28.79,
+      "startTime": 124.66,
+      "endTime": 153.45,
+      "audioUrl": "/audio/lectures/science/b3/s01_b03.mp3"
     },
     {
-      "id": "sec_diff_dist",
-      "title": "📏 Diffusion Distance (Khoảng cách Khuếch tán)",
-      "selector": "#sec-diff-dist",
-      "en": "Diffusion Distance factor: A shorter diffusion distance, such as across thin cell membranes or one-cell-thick capillary walls, allows particles to travel much faster, increasing the rate of diffusion.",
-      "vi": "Yếu tố Khoảng cách khuếch tán: Khoảng cách khuếch tán càng ngắn, ví dụ như qua màng tế bào mỏng hay thành mao mạch chỉ dày một lớp tế bào, thì các hạt di chuyển qua càng nhanh, làm tăng tốc độ khuếch tán.",
-      "duration": 23.34,
-      "startTime": 153.89,
-      "endTime": 177.23,
-      "audioUrl": "/audio/lectures/science/b3/sec_diff_dist.mp3"
+      "id": "s01_b04",
+      "title": "động năng tự nhiên (kinetic energy)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Verbatim Cambridge Definition \"Diffusion is the net movement of particles from a region of their higher concentration to a region of their lower concentration down a concentration gradient, as a result of their random movement.\". Energy for diffusion comes from the kinetic energy of random movement of molecules and ions (passive transport, requires no ATP).",
+      "vi": "Verbatim Cambridge Definition \"Diffusion is the net movement of particles from a region of their higher concentration to a region of their lower concentration down a concentration gradient, as a result of their random movement.\". Khuếch tán là sự dịch chuyển ròng của các hạt từ vùng nồng độ cao sang vùng nồng độ thấp do chuyển động ngẫu nhiên. Năng lượng khuếch tán đến từ động năng tự nhiên (kinetic energy) của phân tử/ion — vận chuyển thụ động, KHÔNG tốn năng lượng hô hấp.",
+      "duration": 54.58,
+      "startTime": 153.45,
+      "endTime": 208.03,
+      "audioUrl": "/audio/lectures/science/b3/s01_b04.mp3"
     },
     {
-      "id": "sec_diff_importance",
-      "title": "🌿 Biological Importance of Diffusion (Tầm quan trọng Sinh học)",
-      "selector": "#sec-diff-importance",
-      "en": "Diffusion is essential for living organisms: Oxygen diffuses into blood and carbon dioxide diffuses out in lungs alveoli. In plant leaves, carbon dioxide enters stomata for photosynthesis while oxygen exits. In the digestive system, digested glucose and amino acids diffuse across villi epithelium into blood capillaries.",
-      "vi": "Khuếch tán đóng vai trò sinh tử với sinh vật: Khí oxy khuếch tán vào máu và khí CO2 khuếch tán ra tại phế nang phổi. Ở lá cây, CO2 khuếch tán qua khí khổng để quang hợp trong khi oxy khuếch tán ra ngoài. Tại hệ tiêu hóa, glucose và amino acid đã tiêu hóa khuếch tán qua biểu mô lông ruột non vào mao mạch máu.",
-      "duration": 42.54,
-      "startTime": 177.23,
-      "endTime": 219.77,
-      "audioUrl": "/audio/lectures/science/b3/sec_diff_importance.mp3"
+      "id": "s01_b05",
+      "title": "🌡️ Temperature (Nhiệt độ — Supplement)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🌡️ Temperature. Higher temperature → particles gain kinetic energy → move faster → rate of diffusion increases.",
+      "vi": "🌡️ Temperature (Nhiệt độ — Supplement). Nhiệt độ tăng → các hạt có thêm động năng (kinetic energy) → chuyển động nhanh hơn → tốc độ khuếch tán tăng.",
+      "duration": 19.37,
+      "startTime": 208.03,
+      "endTime": 227.4,
+      "audioUrl": "/audio/lectures/science/b3/s01_b05.mp3"
     },
     {
-      "id": "sec_osmosis",
-      "title": "2. Thẩm thấu & Thế nước (Osmosis & Water Potential Overview)",
-      "selector": "#sec-osmosis",
-      "en": "Section 2 investigates Osmosis: the net movement of water molecules from a region of higher water potential to a region of lower water potential through a partially permeable membrane. Pure water has the highest water potential at zero kilopascals; adding solute particles lowers water potential to negative values.",
-      "vi": "Mục hai nghiên cứu hiện tượng Thẩm thấu: là sự chuyển động tịnh của các phân tử nước từ nơi có thế nước cao đến nơi có thế nước thấp hơn qua một màng thấm chọn lọc. Nước tinh khiết có thế nước cao nhất bằng 0 kPa; việc hòa tan thêm chất tan sẽ làm giảm thế nước xuống các giá trị âm.",
-      "duration": 60.62,
-      "startTime": 219.77,
-      "endTime": 280.39,
-      "audioUrl": "/audio/lectures/science/b3/sec_osmosis.mp3"
+      "id": "s01_b06",
+      "title": "📐 Surface Area (Diện tích bề mặt — Supplement)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "📐 Surface Area. Larger membrane surface area → more particles can cross per unit time → rate of diffusion increases.",
+      "vi": "📐 Surface Area (Diện tích bề mặt — Supplement). Diện tích bề mặt màng càng lớn → nhiều hạt đi qua cùng lúc hơn → tốc độ khuếch tán tăng.",
+      "duration": 19.5,
+      "startTime": 227.4,
+      "endTime": 246.9,
+      "audioUrl": "/audio/lectures/science/b3/s01_b06.mp3"
     },
     {
-      "id": "sec_os_pure",
-      "title": "🚰 Pure Water / Hypotonic Solution (Thế nước cao)",
-      "selector": "#sec-os-pure",
-      "en": "In pure water or dilute solution with high water potential: Water enters plant cells by osmosis. The vacuole swells and pushes cytoplasm against the rigid cell wall, creating turgor pressure; the cell becomes turgid, supporting plant stems. In contrast, animal red blood cells lack cell walls; excessive water entry causes them to swell and burst, known as cell lysis.",
-      "vi": "Trong nước tinh khiết hoặc dung dịch nhược trương có thế nước cao: Nước thẩm thấu đi vào tế bào thực vật. Không bào trương lên ép tế bào chất vào thành tế bào cứng cáp, tạo nên áp suất trương nước; tế bào trở nên trương chắc giúp nâng đỡ thân cây. Ngược lại, hồng cầu động vật không có thành tế bào nên khi nước tràn vào quá nhiều sẽ bị vỡ tung, gọi là tan tế bào.",
-      "duration": 45.9,
-      "startTime": 280.39,
-      "endTime": 326.29,
-      "audioUrl": "/audio/lectures/science/b3/sec_os_pure.mp3"
+      "id": "s01_b07",
+      "title": "⚡ Concentration Gradient (Độ dốc nồng độ — Supplement)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "⚡ Concentration Gradient. Steeper concentration gradient → greater difference in concentration → rate of diffusion increases.",
+      "vi": "⚡ Concentration Gradient (Độ dốc nồng độ — Supplement). Chênh lệch nồng độ hai bên càng lớn (steeper gradient) → tốc độ khuếch tán ròng càng nhanh.",
+      "duration": 20.43,
+      "startTime": 246.9,
+      "endTime": 267.33,
+      "audioUrl": "/audio/lectures/science/b3/s01_b07.mp3"
     },
     {
-      "id": "sec_os_equal",
-      "title": "⚖️ Equal Solution / Isotonic (Cân bằng Thế nước)",
-      "selector": "#sec-os-equal",
-      "en": "In an isotonic solution with identical water potential: Water molecules move into and out of the cell at equal rates, resulting in zero net osmosis. Plant and animal cells retain their normal shape and volume.",
-      "vi": "Trong dung dịch đẳng trương có thế nước bằng nhau: Các phân tử nước đi vào và đi ra khỏi tế bào với tốc độ ngang bằng nhau, dẫn đến không có sự chuyển động tịnh của nước. Tế bào thực vật và động vật duy trì nguyên vẹn hình dạng và thể tích bình thường.",
-      "duration": 28.19,
-      "startTime": 326.29,
-      "endTime": 354.48,
-      "audioUrl": "/audio/lectures/science/b3/sec_os_equal.mp3"
+      "id": "s01_b08",
+      "title": "📏 Diffusion Distance (Khoảng cách — Supplement)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "📏 Diffusion Distance. Thinner membrane (shorter distance) → particles travel faster → rate of diffusion increases.",
+      "vi": "📏 Diffusion Distance (Khoảng cách — Supplement). Màng trao đổi càng mỏng (quãng đường càng ngắn, VD: dày 1 lớp tế bào) → tốc độ khuếch tán tăng.",
+      "duration": 19.59,
+      "startTime": 267.33,
+      "endTime": 286.92,
+      "audioUrl": "/audio/lectures/science/b3/s01_b08.mp3"
     },
     {
-      "id": "sec_os_salt",
-      "title": "🧂 Concentrated Solution / Hypertonic (Thế nước thấp)",
-      "selector": "#sec-os-salt",
-      "en": "In concentrated salt or sugar solution with lower water potential: Water leaves cells by osmosis. In plant cells, the cytoplasm shrinks away from the cell wall, causing plasmolysis; the tissue becomes limp and flaccid, causing the plant to wilt. In animal red blood cells, water loss causes them to shrivel and crenate.",
-      "vi": "Trong dung dịch ưu trương đậm đặc muối hoặc đường có thế nước thấp: Nước thẩm thấu thoát ra ngoài tế bào. Ở tế bào thực vật, tế bào chất co cụm tách rời khỏi thành tế bào, gây hiện tượng co nguyên sinh; mô thực vật mất sức trương và cây bị héo. Ở tế bào hồng cầu động vật, sự mất nước làm tế bào co rúm lại và nhăn nheo.",
-      "duration": 41.08,
-      "startTime": 354.48,
-      "endTime": 395.56,
-      "audioUrl": "/audio/lectures/science/b3/sec_os_salt.mp3"
+      "id": "s01_b09",
+      "title": "🌿 Tầm quan trọng Sinh học của Khuếch tán — Importance of Diffusion (Core B3.1.3)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🌿 Importance of Diffusion in Living Organisms (Core & Supplement). Diffusion is vital for cellular survival because organisms rely on passive transport to obtain metabolic reactants and eliminate potentially toxic metabolic wastes without expending cellular energy:",
+      "vi": "🌿 Tầm quan trọng Sinh học của Khuếch tán — Importance of Diffusion (Core B3.1.3). Khuếch tán sống còn với mọi sinh vật vì giúp tế bào thu nhận chất phản ứng và thải bỏ chất độc trao đổi chất qua màng tế bào mà không tiêu tốn năng lượng:",
+      "duration": 32.26,
+      "startTime": 286.92,
+      "endTime": 319.18,
+      "audioUrl": "/audio/lectures/science/b3/s01_b09.mp3"
     },
     {
-      "id": "sec_active_transport",
-      "title": "3. Vận chuyển Chủ động (Active Transport Overview)",
-      "selector": "#sec-active-transport",
-      "en": "Section 3 covers Active Transport: the movement of particles through a cell membrane from a region of lower concentration to a region of higher concentration against a concentration gradient, using energy released from respiration.",
-      "vi": "Mục ba nghiên cứu Vận chuyển Chủ động: là quá trình vận chuyển các hạt qua màng tế bào từ nơi có nồng độ thấp đến nơi có nồng độ cao ngược chiều gradient nồng độ, đòi hỏi tiêu tốn năng lượng giải phóng từ quá trình hô hấp tế bào.",
-      "duration": 52.91,
-      "startTime": 395.56,
-      "endTime": 448.47,
-      "audioUrl": "/audio/lectures/science/b3/sec_active_transport.mp3"
+      "id": "s01_b10",
+      "title": "1. Trao đổi khí ở Động vật (Alveoli)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "1. Gas Exchange in Animals Oxygen (O₂) diffuses down its concentration gradient from alveoli air spaces into blood capillaries, while carbon dioxide (CO₂) diffuses from blood into alveoli to be exhaled.",
+      "vi": "1. Trao đổi khí ở Động vật (Alveoli) Khí O₂ khuếch tán xuôi dốc nồng độ từ phế nang vào mao mạch máu; ngược lại CO₂ khuếch tán từ máu ra phế nang để thở ra ngoài.",
+      "duration": 27.94,
+      "startTime": 319.18,
+      "endTime": 347.12,
+      "audioUrl": "/audio/lectures/science/b3/s01_b10.mp3"
     },
     {
-      "id": "sec_active_carrier",
-      "title": "⚡ Carrier Proteins & ATP Mechanism (Cơ chế Protein Vận chuyển)",
-      "selector": "#sec-active-carrier",
-      "en": "Mechanism: Active transport is carried out by specific carrier proteins embedded in the cell membrane. Solute particles bind to the carrier protein, which uses energy from ATP hydrolysis to change its conformational shape and release the particle on the other side of the membrane.",
-      "vi": "Cơ chế: Vận chuyển chủ động được thực hiện bởi các protein mang đặc hiệu gắn trên màng tế bào. Hạt chất tan gắn vào protein mang, protein này dùng năng lượng từ thủy phân ATP để thay đổi hình thể không gian và giải phóng hạt chất sang phía bên kia màng tế bào.",
-      "duration": 32.61,
-      "startTime": 448.47,
-      "endTime": 481.08,
-      "audioUrl": "/audio/lectures/science/b3/sec_active_carrier.mp3"
+      "id": "s01_b11",
+      "title": "2. Trao đổi khí ở Thực vật (Leaves)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "2. Gas Exchange in Plants Carbon dioxide (CO₂) diffuses through open stomata into spongy mesophyll air spaces for photosynthesis; oxygen (O₂) diffuses out as a metabolic byproduct.",
+      "vi": "2. Trao đổi khí ở Thực vật (Leaves) Khí CO₂ khuếch tán qua khí khổng (stomata) vào khoang khí mô xốp cho quang hợp; khí O₂ thoát ra ngoài.",
+      "duration": 25.29,
+      "startTime": 347.12,
+      "endTime": 372.41,
+      "audioUrl": "/audio/lectures/science/b3/s01_b11.mp3"
     },
     {
-      "id": "sec_active_importance",
-      "title": "🌱 Biological Importance of Active Transport (Ứng dụng Sinh học)",
-      "selector": "#sec-active-importance",
-      "en": "Biological importance: Root hair cells use active transport to absorb nitrate and mineral ions from soil even when concentrations in the soil solution are far lower than inside the root. In human intestines, epithelial cells actively absorb glucose into the blood even when intestinal lumen concentrations drop low.",
-      "vi": "Tầm quan trọng sinh học: Tế bào lông hút ở rễ dùng vận chuyển chủ động để hút ion nitrat và khoáng chất từ đất ngay cả khi nồng độ dinh dưỡng trong đất thấp hơn nhiều so với dịch bào bên trong rễ. Ở ruột non người, tế bào niêm mạc chủ động hấp thu glucose vào máu ngay cả khi nồng độ glucose trong lòng ruột đã giảm xuống rất thấp.",
-      "duration": 37.79,
-      "startTime": 481.08,
-      "endTime": 518.87,
-      "audioUrl": "/audio/lectures/science/b3/sec_active_importance.mp3"
+      "id": "s01_b12",
+      "title": "3. Hấp thụ Chất tan trong Tiêu hóa",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "3. Solute Absorption in Digestion Simple digested nutrient solutes (such as glucose and amino acids) diffuse through the epithelial lining of small intestinal villi into blood capillaries.",
+      "vi": "3. Hấp thụ Chất tan trong Tiêu hóa Các chất dinh dưỡng hòa tan sau tiêu hóa (như glucose, amino acid) khuếch tán qua biểu mô lông ruột non vào máu.",
+      "duration": 23.91,
+      "startTime": 372.41,
+      "endTime": 396.32,
+      "audioUrl": "/audio/lectures/science/b3/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Agar jelly cubes stained with indicator are placed in dilute acid that turns the indicator colourless as it diffuses in. Which combination will turn an agar cube completely colourless in the shortest time? A. Large cube (2 cm side) in cold acid (10 °C) of low concentration B. Small cube (0.5 cm side) in warm acid (35 °C) of high concentration C. Large cube (2 cm side) in warm acid (35 °C) of low concentration D. Small cube (0.5 cm side) in cold acid (10 °C) of low concentration ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: A small cube has a larger surface-area-to-volume ratio and shorter diffusion distance to its centre; higher temperature gives acid ions more kinetic energy ; and higher acid concentration creates a steeper concentration gradient ( B3.1.4 ).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Agar jelly cubes stained with indicator are placed in dilute acid that turns the indicator colourless as it diffuses in. Which combination will turn an agar cube completely colourless in the shortest time? (Các khối thạch agar nhuộm chất chỉ thị màu được ngâm vào dung dịch acid làm mất màu khi khuếch tán vào trong. Tổ hợp nào làm khối thạch mất màu hoàn toàn nhanh nhất?) A. Large cube (2 cm side) in cold acid (10 °C) of low concentration B. Small cube (0.5 cm side) in warm acid (35 °C) of high concentration C. Large cube (2 cm side) in warm acid (35 °C) of low concentration D. Small cube (0.5 cm side) in cold acid (10 °C) of low concentration ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Khối thạch nhỏ có tỉ lệ diện tích bề mặt/thể tích lớn và khoảng cách khuếch tán ngắn hơn vào tới tâm; nhiệt độ ấm giúp các ion acid có động năng lớn hơn ; nồng độ acid cao tạo độ dốc nồng độ dốc hơn ( B3.1.4 ).",
+      "duration": 140.68,
+      "startTime": 396.32,
+      "endTime": 537.0,
+      "audioUrl": "/audio/lectures/science/b3/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe what is meant by diffusion . [2] (b) Explain why carbon dioxide diffuses into a plant leaf faster on a warm, bright afternoon than on a cool, dim morning. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The net movement of particles from a region of their higher concentration to a region of their lower concentration (down a concentration gradient) [1m] , as a result of their random movement [1m] . (b) Bright light drives rapid photosynthesis, using up CO₂ inside the leaf and maintaining a steeper concentration gradient [1m] ; higher temperature increases the kinetic energy of CO₂ molecules so they move faster [1m] . 💡 Intuition Check: Always link temperature directly to \"kinetic energy of particles\" when explaining Supplement diffusion rate questions!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe what is meant by diffusion . (Mô tả khái niệm khuếch tán.) (b) Explain why carbon dioxide diffuses into a plant leaf faster on a warm, bright afternoon than on a cool, dim morning. (Giải thích tại sao CO₂ khuếch tán vào lá nhanh hơn vào buổi chiều ấm áp, nắng mạnh so với buổi sáng lạnh và ít nắng.) ✍️ Lời giải chi tiết theo thang điểm: (a) The net movement of particles from a region of their higher concentration to a region of their lower concentration , as a result of their random movement . (b) Ánh sáng mạnh thúc đẩy quang hợp tiêu thụ nhanh CO₂ bên trong lá nên duy trì độ dốc nồng độ lớn hơn ; nhiệt độ cao làm tăng động năng (kinetic energy) khiến phân tử CO₂ di chuyển nhanh hơn . 💡 Kiểm tra bản chất: Trong mọi câu giải thích ảnh hưởng của nhiệt độ lên khuếch tán (Supplement), từ khóa ăn điểm luôn là \"kinetic energy\"!",
+      "duration": 124.48,
+      "startTime": 537.0,
+      "endTime": 661.48,
+      "audioUrl": "/audio/lectures/science/b3/s01_b14.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "2. Osmosis, Water Potential & Interactive Lab (Thẩm thấu & Thế nước)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE 🟩 SUPPLEMENT 2. Osmosis, Water Potential & Interactive Lab.",
+      "vi": "🟦 CORE 🟩 SUPPLEMENT 2. Thẩm thấu & Thế nước .",
+      "duration": 9.63,
+      "startTime": 661.48,
+      "endTime": 671.11,
+      "audioUrl": "/audio/lectures/science/b3/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a partially permeable membrane as a security turnstile sized only for tiny water molecules: giant sugar/salt molecules cannot squeeze through, so free water molecules flow from the dilute side ( higher water potential ) to the crowded salty/sugary side ( lower water potential ).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung màng bán thấm như cổng kiểm soát chỉ vừa khít cho phân tử nước nhỏ xíu đi qua: các phân tử muối/đường to kềnh bị chặn lại, nên nước tự do chảy từ phía loãng ( thế nước cao — higher water potential ) sang phía đặc muối/đường ( thế nước thấp — lower water potential ).",
+      "duration": 40.5,
+      "startTime": 671.11,
+      "endTime": 711.61,
+      "audioUrl": "/audio/lectures/science/b3/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Core ( B3.2.1–B3.2.3 ): Water moves into/out of cells through the partially permeable cell membrane by osmosis, changing the mass/firmness of plant tissues.Supplement ( B3.2.4–B3.2.6 ): Net movement of water molecules from higher water potential (dilute) to lower water potential (concentrated) across a partially permeable membrane . Plant cell states: turgid (turgor pressure supports plant), flaccid (soft, wilting), plasmolysis (cytoplasm/membrane pulls away from wall).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Core ( B3.2.1–B3.2.3 ): Nước đi vào/ra tế bào qua màng bán thấm bằng thẩm thấu, làm thay đổi khối lượng/độ cứng mô thực vật.Supplement ( B3.2.4–B3.2.6 ): Dịch chuyển ròng của phân tử nước từ higher water potential (loãng) sang lower water potential (đặc) qua partially permeable membrane . Ba thuật ngữ tế bào thực vật cần thuộc: turgid (trương cứng nhờ turgor pressure), flaccid (mềm rũ), plasmolysis (co nguyên sinh — màng tách khỏi thành).",
+      "duration": 63.88,
+      "startTime": 711.61,
+      "endTime": 775.49,
+      "audioUrl": "/audio/lectures/science/b3/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Exam trap: Animal red blood cells burst in pure water because they have no cell wall, whereas plant cells become turgid and NEVER burst because their tough cellulose cell wall exerts opposing pressure!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bẫy kinh điển: Hồng cầu động vật sẽ vỡ tung (burst) trong nước cất vì không có thành tế bào, còn tế bào thực vật chỉ trương nước căng cứng (turgid) chứ KHÔNG BAO GIỜ vỡ nhờ thành cellulose (cell wall) bền chắc!",
+      "duration": 31.0,
+      "startTime": 775.49,
+      "endTime": 806.49,
+      "audioUrl": "/audio/lectures/science/b3/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Verbatim Cambridge Definition \"Osmosis is the net movement of water molecules fr...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Verbatim Cambridge Definition \"Osmosis is the net movement of water molecules from a region of higher water potential (dilute solution) to a region of lower water potential (concentrated solution), through a partially permeable membrane.\". Pure water has the highest possible water potential (0 kPa). Adding solute particles lowers water potential (makes it negative).",
+      "vi": "Verbatim Cambridge Definition \"Osmosis is the net movement of water molecules from a region of higher water potential (dilute solution) to a region of lower water potential (concentrated solution), through a partially permeable membrane.\". Thẩm thấu là sự dịch chuyển ròng của phân tử nước từ vùng thế nước cao (dung dịch loãng) sang vùng thế nước thấp (dung dịch đặc) qua màng bán thấm. Nước tinh khiết có thế nước cao nhất; càng pha nhiều chất tan thì thế nước càng giảm thấp.",
+      "duration": 58.84,
+      "startTime": 806.49,
+      "endTime": 865.33,
+      "audioUrl": "/audio/lectures/science/b3/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔬 PHÒNG THÍ NGHIỆM TƯƠNG TÁC: THẨM THẤU (OSMOSIS LAB)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔬 INTERACTIVE LABORATORY: OSMOSIS. Act as a scientist: 🚰 Pure Water (Higher Water Potential) ⚖️ Equal Solution (Same Water Potential) 🧂 Salt Solution (Lower Water Potential) 🧂 Lower Water Potential (Outside) ➔ Water moves OUT by Osmosis. Plant Cell: PLASMOLYSED Water is drawn out of the vacuole by osmosis. The cytoplasm pulls away from the cell wall (plasmolysis). The plant wilts. Animal Cell: SHRINK (Crenated) Water continuously leaves the cell down the water potential gradient, causing red blood cells to shrink, shrivel, and become crenated.",
+      "vi": "🔬 PHÒNG THÍ NGHIỆM TƯƠNG TÁC: THẨM THẤU (OSMOSIS LAB). Rê chuột hoặc . 🚰 Pure Water ⚖️ Equal Solution 🧂 Salt Solution 🧂 Lower Water Potential (Outside) ➔ Water moves OUT by Osmosis. Plant Cell: PLASMOLYSED Water is drawn out of the vacuole by osmosis. The cytoplasm pulls away from the cell wall (plasmolysis). The plant wilts. Animal Cell: SHRINK (Crenated) Water continuously leaves the cell down the water potential gradient, causing red blood cells to shrink, shrivel, and become crenated.",
+      "duration": 81.85,
+      "startTime": 865.33,
+      "endTime": 947.18,
+      "audioUrl": "/audio/lectures/science/b3/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🥔 Thực nghiệm Ngâm Mô Thực vật trong các Dung dịch Nồng độ khác nhau (B3.2.3 & B3.2.5)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🥔 Effects of Immersing Plant Tissues in Solutions (Core Investigation). When potato cylinders or plant strips are placed into sucrose or salt solutions of varying concentrations, osmosis alters their mass, length, and cellular firmness:",
+      "vi": "🥔 Thực nghiệm Ngâm Mô Thực vật trong các Dung dịch Nồng độ khác nhau (B3.2.3 & B3.2.5). Khi ngâm thỏi khoai tây hoặc dải mô thực vật vào dung dịch đường/muối ở các nồng độ khác nhau, sự thẩm thấu làm thay đổi khối lượng, chiều dài và độ cứng của mô:",
+      "duration": 34.49,
+      "startTime": 947.18,
+      "endTime": 981.67,
+      "audioUrl": "/audio/lectures/science/b3/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Thế nước (Water Potential):",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "Water Potential: Solution has higher water potential than cell cytoplasm. Net Movement: Water enters cell by osmosis down water potential gradient. Result: Vacuole swells, cytoplasm pushes against cell wall. Tissue gains mass, increases in length, and becomes crisp/firm (turgid).",
+      "vi": "Thế nước (Water Potential): Dung dịch ngoài có thế nước cao hơn dịch bào. Dịch chuyển ròng: Nước đi VÀO tế bào qua màng bán thấm bằng thẩm thấu (osmosis). Kết quả: Không bào phình to tạo áp suất trương (turgor pressure) ép lên thành tế bào. Thỏi khoai tăng khối lượng, dài ra và căng cứng (turgid).",
+      "duration": 45.16,
+      "startTime": 981.67,
+      "endTime": 1026.83,
+      "audioUrl": "/audio/lectures/science/b3/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "Thế nước (Water Potential):",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "Water Potential: External water potential equals internal cell sap water potential. Net Movement: Dynamic equilibrium; no net movement of water molecules. Result: No net change in mass or length; cells lack outward turgor pressure and become soft (flaccid).",
+      "vi": "Thế nước (Water Potential): Thế nước bên ngoài bằng với thế nước bên trong tế bào. Dịch chuyển ròng: Cân bằng động; lượng nước ra vào bằng nhau. Kết quả: Khối lượng và chiều dài không đổi; tế bào thực vật mất áp suất trương nên mềm (flaccid).",
+      "duration": 36.73,
+      "startTime": 1026.83,
+      "endTime": 1063.56,
+      "audioUrl": "/audio/lectures/science/b3/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "Thế nước (Water Potential):",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "Water Potential: Solution has lower water potential than cell cytoplasm. Net Movement: Water leaves cell by osmosis down water potential gradient. Result: Cytoplasm pulls away from cell wall (plasmolysis). Tissue loses mass, shrinks, and becomes soft/flaccid.",
+      "vi": "Thế nước (Water Potential): Dung dịch đặc có thế nước thấp hơn dịch bào. Dịch chuyển ròng: Nước đi RA khỏi tế bào bằng thẩm thấu xuôi dốc thế nước. Kết quả: Tế bào chất và màng bong khỏi thành (co nguyên sinh — plasmolysis). Mô giảm khối lượng, co ngắn và mềm nhũn.",
+      "duration": 40.96,
+      "startTime": 1063.56,
+      "endTime": 1104.52,
+      "audioUrl": "/audio/lectures/science/b3/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A strip of epidermis from a red onion scale leaf is mounted in concentrated salt solution and viewed under a light microscope after 10 minutes. What is observed? A. The cells swell and burst as water enters by osmosis B. The coloured vacuole swells and pushes tightly against the cell wall C. The vacuole shrinks and the cell membrane pulls away from the cell wall D. The cellulose cell wall dissolves, leaving a spherical protoplast ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Concentrated salt solution has a lower water potential than the onion cell sap. Water leaves the vacuole by osmosis through the partially permeable membrane; the vacuole shrinks and the cytoplasm/cell membrane pulls away from the rigid cell wall ( plasmolysis , B3.2.5 ).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A strip of epidermis from a red onion scale leaf is mounted in concentrated salt solution and viewed under a light microscope after 10 minutes. What is observed? (Một dải biểu bì vảy hành tím được ngâm trong dung dịch muối đậm đặc và quan sát dưới kính hiển vi sau 10 phút. Hiện tượng gì xảy ra?) A. The cells swell and burst as water enters by osmosis B. The coloured vacuole swells and pushes tightly against the cell wall C. The vacuole shrinks and the cell membrane pulls away from the cell wall D. The cellulose cell wall dissolves, leaving a spherical protoplast ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Dung dịch muối đặc bên ngoài có thế nước thấp hơn dịch bào hành tím. Nước thoát ra khỏi không bào bằng thẩm thấu qua màng bán thấm làm không bào co nhỏ và màng tế bào bong tách khỏi thành tế bào ( co nguyên sinh — plasmolysis , B3.2.5 ).",
+      "duration": 119.69,
+      "startTime": 1104.52,
+      "endTime": 1224.21,
+      "audioUrl": "/audio/lectures/science/b3/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Two identical potato strips are placed for 45 minutes: Strip X in pure distilled water, and Strip Y in concentrated sucrose solution.Explain, using the terms water potential , turgid , and plasmolysis , the difference in texture and length between Strip X and Strip Y after 45 minutes. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. Distilled water has a higher water potential than potato cell sap, so water enters Strip X cells by osmosis through the partially permeable cell membrane [1m] .2. Strip X vacuoles swell and press outwards on the cell walls (turgor pressure), making cells turgid so Strip X becomes longer and firm/rigid [1m] .3. Concentrated sucrose has a lower water potential than cell sap, so water leaves Strip Y cells by osmosis [1m] .4. Strip Y cells lose turgor (become flaccid) and undergo plasmolysis (cell membrane pulls away from cell wall), making Strip Y shorter and soft/flexible [1m] . 💡 Intuition Check: Notice how every mark comes from pairing physical tissue observations (longer/firm vs shorter/soft) with Supplement cellular terms (higher/lower water potential, turgid, plasmolysis)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Two identical potato strips are placed for 45 minutes: Strip X in pure distilled water, and Strip Y in concentrated sucrose solution.Explain, using the terms water potential , turgid , and plasmolysis , the difference in texture and length between Strip X and Strip Y after 45 minutes. (Hai thỏi khoai tây giống hệt nhau ngâm 45 phút: Thỏi X trong nước cất, Thỏi Y trong dung dịch sucrose đặc. Dùng các thuật ngữ water potential, turgid và plasmolysis để giải thích sự khác biệt về độ cứng và chiều dài giữa X và Y.) ✍️ Lời giải chi tiết theo thang điểm: 1. Nước cất có thế nước cao hơn dịch bào khoai tây nên nước thẩm thấu đi vào tế bào thỏi X qua màng bán thấm .2. Không bào phình to tạo áp suất trương (turgor pressure) làm tế bào trương cứng (turgid) , khiến thỏi X dài ra và cứng giòn .3. Dung dịch sucrose đặc có thế nước thấp hơn dịch bào nên nước thẩm thấu đi ra khỏi tế bào thỏi Y .4. Tế bào thỏi Y mất sức trương (flaccid) và bị co nguyên sinh (plasmolysis — màng tách khỏi thành tế bào), khiến thỏi Y ngắn lại và mềm nhũn . 💡 Kiểm tra bản chất: Kết hợp chặt hiện tượng vĩ mô (dài/cứng vs ngắn/mềm) với cơ chế vi mô chuẩn Supplement để lấy trọn 4/4 điểm!",
+      "duration": 157.3,
+      "startTime": 1224.21,
+      "endTime": 1381.51,
+      "audioUrl": "/audio/lectures/science/b3/s02_b11.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "3. Active Transport (Vận chuyển Chủ động)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟦 CORE 🟩 SUPPLEMENT 3. Active Transport: Mechanism & Biological Importance.",
+      "vi": "🟦 CORE 🟩 SUPPLEMENT 3. Active Transport (Vận chuyển Chủ động).",
+      "duration": 11.44,
+      "startTime": 1381.51,
+      "endTime": 1392.95,
+      "audioUrl": "/audio/lectures/science/b3/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Passive diffusion is rolling a boulder downhill; active transport is running a motorised conveyor belt uphill ! Membrane carrier proteins act as powered pumps using energy from respiration to haul precious mineral ions or glucose from where there is very little into a cell that already has plenty.",
+      "vi": "🎯 Hình dung đời thường: Khuếch tán thụ động giống lăn đá xuống dốc; còn vận chuyển chủ động (active transport) là bật băng chuyền có động cơ điện để kéo hàng ngược lên dốc ! Các protein vận chuyển trên màng dùng năng lượng từ hô hấp tế bào để gom từng ion khoáng quý giá từ đất loãng vào rễ.",
+      "duration": 38.28,
+      "startTime": 1392.95,
+      "endTime": 1431.23,
+      "audioUrl": "/audio/lectures/science/b3/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Core ( B3.3.1 ): Movement of particles through a cell membrane from lower concentration to higher concentration (against a concentration gradient) , using energy from respiration .Supplement ( B3.3.2 ): Vital for moving ions/molecules across membranes against gradients — notably mineral ion uptake (nitrates, magnesium) by root hair cells from dilute soil water.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Core ( B3.3.1 ): Vận chuyển hạt qua màng tế bào (cell membrane) từ vùng nồng độ thấp sang vùng nồng độ cao , sử dụng năng lượng từ hô hấp .Supplement ( B3.3.2 ): Tầm quan trọng trong vận chuyển phân tử/ion qua màng — đặc biệt là lông hút ở rễ cây hấp thụ ion khoáng (nitrat, magie) từ nước đất loãng.",
+      "duration": 46.36,
+      "startTime": 1431.23,
+      "endTime": 1477.59,
+      "audioUrl": "/audio/lectures/science/b3/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students often confuse how water vs mineral ions enter a root hair cell! Water enters by osmosis (passive, down water potential gradient); mineral ions enter by active transport (active, against concentration gradient, requiring respiration energy).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng nhầm cách rễ cây hút nước và hút khoáng! Nước đi vào lông hút bằng thẩm thấu (osmosis — thụ động) ; còn ion khoáng đi vào lông hút bằng vận chuyển chủ động (active transport — cần năng lượng hô hấp) !",
+      "duration": 36.7,
+      "startTime": 1477.59,
+      "endTime": 1514.29,
+      "audioUrl": "/audio/lectures/science/b3/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "protein vận chuyển (carrier proteins)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Verbatim Cambridge Definition \"Active transport is the movement of particles through a cell membrane from a region of lower concentration to a region of higher concentration (against a concentration gradient), using energy from respiration.\". Requires specialized carrier proteins embedded in the cell membrane that change shape using ATP energy from cellular respiration.",
+      "vi": "Verbatim Cambridge Definition \"Active transport is the movement of particles through a cell membrane from a region of lower concentration to a region of higher concentration, using energy from respiration.\". Vận chuyển chủ động đưa các hạt qua màng tế bào từ vùng nồng độ thấp sang vùng nồng độ cao (ngược dốc nồng độ) nhờ năng lượng từ hô hấp. Quá trình này cần các protein vận chuyển (carrier proteins) trên màng tế bào.",
+      "duration": 51.94,
+      "startTime": 1514.29,
+      "endTime": 1566.23,
+      "audioUrl": "/audio/lectures/science/b3/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "⚡ Cơ chế Protein Vận chuyển & Hô hấp (Carrier Proteins)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "⚡ Carrier Proteins & Respiration Mechanism. Specific ions or molecules bind to carrier proteins spanning the cell membrane on the low-concentration side. Energy released from aerobic respiration (in abundant mitochondria) changes the shape of the carrier protein. The ion/molecule is pumped across the membrane to the high-concentration side against the concentration gradient.",
+      "vi": "⚡ Cơ chế Protein Vận chuyển & Hô hấp (Carrier Proteins). Ion hoặc phân tử gắn đặc hiệu vào protein vận chuyển (carrier protein) nằm xuyên màng ở phía nồng độ thấp. Năng lượng giải phóng từ hô hấp hiếu khí (ở ti thể) làm biến đổi hình dạng của carrier protein. Ion/phân tử được bơm xuyên qua màng sang phía có nồng độ cao hơn (ngược dốc nồng độ).",
+      "duration": 50.37,
+      "startTime": 1566.23,
+      "endTime": 1616.6,
+      "audioUrl": "/audio/lectures/science/b3/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🌱 Tầm quan trọng Sinh học của Active Transport (B3.3.2)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🌱 Biological Importance of Active Transport (B3.3.2). Ion Uptake by Root Hairs: Root hair cells absorb essential mineral ions (e.g. nitrate NO₃⁻ for amino acids, magnesium Mg²⁺ for chlorophyll) from dilute soil water against the concentration gradient. Small Intestine Villi: Epithelial cells actively absorb glucose and amino acids from the gut lumen into blood capillaries when lumen concentrations fall below blood levels.",
+      "vi": "🌱 Tầm quan trọng Sinh học của Active Transport (B3.3.2). Lông hút rễ cây: Hấp thụ các ion khoáng thiết yếu (nitrat NO₃⁻ tạo amino acid, magie Mg²⁺ tạo diệp lục) từ dung dịch đất rất loãng ngược dốc nồng độ. Lông ruột non ở người: Tế bào biểu mô lông ruột bơm triệt để glucose và amino acid từ lòng ruột vào máu ngay cả khi nồng độ trong ruột thấp hơn máu.",
+      "duration": 55.56,
+      "startTime": 1616.6,
+      "endTime": 1672.16,
+      "audioUrl": "/audio/lectures/science/b3/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE + 🟩 SUPPLEMENT • Paper 1 / Paper 2 MCQ Which row correctly compares diffusion, osmosis, and active transport across a living cell membrane? A. Diffusion: against gradient | Osmosis: uses respiration energy | Active transport: down gradient B. Diffusion: down gradient, no respiration energy | Osmosis: water only, down water potential gradient | Active transport: against gradient, uses respiration energy C. Diffusion: water only | Osmosis: against water potential gradient | Active transport: no membrane needed D. Diffusion: uses carrier proteins & ATP | Osmosis: any solute | Active transport: down gradient ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Diffusion moves particles down a concentration gradient passively; osmosis moves water molecules down a water potential gradient across a partially permeable membrane passively; active transport moves particles against a concentration gradient using energy from respiration.",
+      "vi": "BÀI MẪU 1 🟦 CORE + 🟩 SUPPLEMENT • Paper 1 / Paper 2 MCQ Which row correctly compares diffusion, osmosis, and active transport across a living cell membrane? (Hàng nào so sánh đúng sự khuếch tán, thẩm thấu và vận chuyển chủ động qua màng tế bào sống?) A. Diffusion: against gradient | Osmosis: uses respiration energy | Active transport: down gradient B. Diffusion: down gradient, no respiration energy | Osmosis: water only, down water potential gradient | Active transport: against gradient, uses respiration energy C. Diffusion: water only | Osmosis: against water potential gradient | Active transport: no membrane needed D. Diffusion: uses carrier proteins & ATP | Osmosis: any solute | Active transport: down gradient ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Diffusion đưa các hạt xuôi dốc nồng độ không tốn năng lượng hô hấp; osmosis chỉ vận chuyển phân tử nước xuôi dốc thế nước qua màng bán thấm; active transport bơm hạt ngược dốc nồng độ nhờ năng lượng giải phóng từ hô hấp.",
+      "duration": 143.8,
+      "startTime": 1672.16,
+      "endTime": 1815.96,
+      "audioUrl": "/audio/lectures/science/b3/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Root hair cells contain many mitochondria. Explain why root hair cells need large numbers of mitochondria to absorb nitrate ions from soil water, and state what plant cells make using nitrate ions. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. Nitrate ion concentration is usually lower in soil water than inside the root hair cell [1m] .2. Therefore, nitrate ions must be absorbed against a concentration gradient by active transport across the cell membrane [1m] .3. Many mitochondria carry out aerobic respiration to release energy required for active transport [1m] .4. Nitrate ions are used by the plant to make amino acids and proteins for growth [1m] . 💡 Intuition Check: Spotting \"many mitochondria\" in any exam cell (root hair cell, villus epithelial cell, kidney tubule cell, sperm cell) is an instant clue that energy from aerobic respiration is powering movement or active transport!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Root hair cells contain many mitochondria. Explain why root hair cells need large numbers of mitochondria to absorb nitrate ions from soil water, and state what plant cells make using nitrate ions. (Tế bào lông hút chứa rất nhiều ti thể. Giải thích tại sao chúng cần nhiều ti thể để hấp thụ ion nitrat từ đất, và nêu chất mà cây tổng hợp từ ion nitrat.) ✍️ Lời giải chi tiết theo thang điểm: 1. Nồng độ ion nitrat trong nước đất thường thấp hơn bên trong tế bào lông hút .2. Vì vậy ion nitrat phải được hấp thụ ngược chiều dốc nồng độ bằng vận chuyển chủ động (active transport) qua màng tế bào .3. Nhiều ti thể thực hiện hô hấp hiếu khí để giải phóng năng lượng (release energy) cung cấp cho vận chuyển chủ động .4. Cây dùng ion nitrat để tổng hợp amino acid và protein phục vụ sinh trưởng (growth) . 💡 Kiểm tra bản chất: Hễ đề bài nhắc một tế bào có \"rất nhiều ti thể (many mitochondria)\" — hãy liên hệ ngay tới hô hấp hiếu khí giải phóng năng lượng cho vận chuyển chủ động hoặc co cơ/bơi!",
+      "duration": 133.63,
+      "startTime": 1815.96,
+      "endTime": 1949.59,
+      "audioUrl": "/audio/lectures/science/b3/s03_b08.mp3"
     }
   ]
 }

@@ -1,143 +1,454 @@
 {
   "lectureId": "d48c8f84-ba93-49d4-bf61-c7890bd6d2ce",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B16: Inheritance",
-  "totalDuration": 393.4,
+  "totalDuration": 1942.7,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_genetic_code": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-genetic-code": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_mitosis_meiosis": {
+    "s01_int": {
       "start": 2,
-      "end": 2
-    },
-    "sec-mitosis-meiosis": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_monohybrid_inheritance": {
-      "start": 3,
       "end": 4
     },
-    "sec-monohybrid-inheritance": {
-      "start": 3,
-      "end": 4
+    "s01_wex": {
+      "start": 12,
+      "end": 13
     },
-    "sec_punnett_summary": {
-      "start": 4,
-      "end": 4
+    "s01_hdr": {
+      "start": 1,
+      "end": 13
     },
-    "sec-punnett-summary": {
-      "start": 4,
-      "end": 4
+    "s02_int": {
+      "start": 15,
+      "end": 17
     },
-    "sec_pedigree-sex": {
-      "start": 5,
-      "end": 6
+    "s02_p1_sub01": {
+      "start": 21,
+      "end": 23
     },
-    "sec-pedigree-sex": {
-      "start": 5,
-      "end": 6
+    "s02_p2_sub01": {
+      "start": 21,
+      "end": 23
     },
-    "sec_sex_determination": {
-      "start": 6,
-      "end": 6
+    "s02_wex": {
+      "start": 24,
+      "end": 25
     },
-    "sec-sex-determination": {
-      "start": 6,
-      "end": 6
+    "s02_hdr": {
+      "start": 14,
+      "end": 25
+    },
+    "s03_int": {
+      "start": 27,
+      "end": 29
+    },
+    "s03_wex": {
+      "start": 34,
+      "end": 35
+    },
+    "s03_hdr": {
+      "start": 26,
+      "end": 35
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B16: Di truyền học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B16: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this topic, we study chromosomes, genes, monohybrid crosses using Punnett squares, and sex determination.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B16: Di truyền học. Di truyền là sự truyền đạt thông tin di truyền từ thế hệ này sang thế hệ khác. Trong chuyên đề này, chúng ta sẽ học về nhiễm sắc thể, gen, phép lai một cặp tính trạng qua khung Punnett và cơ chế xác định giới tính.",
-      "duration": 42.69,
+      "title": "Topic B16: Inheritance (Di truyền học)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B16 • Genetics Inheritance. Cambridge IGCSE Co-ordinated Sciences (0654) • Chromosomes, genes, monohybrid crosses, Punnett squares, pedigree charts, and sex determination.",
+      "vi": "Topic B16: Inheritance (Di truyền học). Cambridge IGCSE Co-ordinated Sciences (Biology 0654) • Nhiễm sắc thể, gen và alen, lai một cặp tính trạng, bảng Punnett, sơ đồ phả hệ và cơ chế xác định giới tính.",
+      "duration": 37.96,
       "startTime": 0.0,
-      "endTime": 42.69,
+      "endTime": 37.96,
       "audioUrl": "/audio/lectures/science/b16/intro.mp3"
     },
     {
-      "id": "sec_genetic_code",
-      "title": "1. Nhiễm sắc thể, Gen & Alen (Genetic Code Overview)",
-      "selector": "#sec-genetic-code",
-      "en": "Section 1 defines key genetic concepts: A chromosome is a thread-like structure of DNA carrying genetic information in the form of genes. A gene is a length of DNA that codes for a specific protein. An allele is an alternative form of a gene.",
-      "vi": "Mục một định nghĩa các khái niệm di truyền cốt lõi: Nhiễm sắc thể là cấu trúc dạng sợi chứa phân tử DNA mang thông tin di truyền dưới dạng các gen. Gen là một đoạn phân tử DNA mã hóa cho một loại protein xác định. Alen là các trạng thái biểu hiện khác nhau của cùng một gen.",
-      "duration": 84.83,
-      "startTime": 42.69,
-      "endTime": 127.52,
-      "audioUrl": "/audio/lectures/science/b16/sec_genetic_code.mp3"
+      "id": "s01_hdr",
+      "title": "🧬 1. Cấu trúc Di truyền: Nhiễm sắc thể, Gen & Alen",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧬 1. The Genetic Code: Chromosomes, Genes & Alleles.",
+      "vi": "🧬 1. Cấu trúc Di truyền: Nhiễm sắc thể, Gen & Alen.",
+      "duration": 10.65,
+      "startTime": 37.96,
+      "endTime": 48.61,
+      "audioUrl": "/audio/lectures/science/b16/s01_hdr.mp3"
     },
     {
-      "id": "sec_mitosis_meiosis",
-      "title": "➗ Mitosis vs Meiosis (Nguyên phân & Giảm phân)",
-      "selector": "#sec-mitosis-meiosis",
-      "en": "Mitosis versus meiosis: Mitosis is nuclear division giving rise to genetically identical diploid cells with 46 chromosomes for growth, tissue repair, and asexual reproduction. Meiosis is reduction division halving chromosome number to produce four genetically different haploid gametes with 23 chromosomes for sexual reproduction.",
-      "vi": "So sánh nguyên phân và giảm phân: Nguyên phân là phân chia tế bào tạo ra các tế bào lưỡng bội giống hệt nhau về di truyền với 46 nhiễm sắc thể để sinh trưởng, tái tạo mô và sinh sản vô tính. Giảm phân là phân chia giảm nhiễm làm giảm một nửa số lượng nhiễm sắc thể để tạo ra bốn giao tử đơn bội khác nhau về di truyền với 23 nhiễm sắc thể cho sinh sản hữu tính.",
-      "duration": 41.73,
-      "startTime": 127.52,
-      "endTime": 169.25,
-      "audioUrl": "/audio/lectures/science/b16/sec_mitosis_meiosis.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a chromosome as a volume of an encyclopaedia made of DNA , a gene as one recipe page coding for a specific protein, and an allele as a flavour version of that recipe (e.g. tall vs short). Mitosis photocopies the full 23-pair encyclopaedia ( 2n → 2n ) for body growth, whereas meiosis deals a single 23-book set ( 2n → n ) into each gamete.",
+      "vi": "🎯 Hình dung đời thường: Hãy coi mỗi nhiễm sắc thể (chromosome) như một tập từ điển bằng DNA, mỗi gen (gene) là một trang công thức mã hóa 1 protein cụ thể, và mỗi alen (allele) là một phiên bản của trang đó (VD: cao vs thấp). Nguyên phân (Mitosis) photocopy trọn bộ 23 cặp từ điển ( 2n → 2n ) cho cơ thể lớn lên, còn giảm phân (Meiosis) chia một bộ đơn 23 cuốn ( 2n → n ) vào từng giao tử.",
+      "duration": 63.05,
+      "startTime": 48.61,
+      "endTime": 111.66,
+      "audioUrl": "/audio/lectures/science/b16/s01_b01.mp3"
     },
     {
-      "id": "sec_monohybrid_inheritance",
-      "title": "2. Di truyền Đơn tính & Khung Punnett (Monohybrid Crosses Overview)",
-      "selector": "#sec-monohybrid-inheritance",
-      "en": "Section 2 investigates monohybrid inheritance: Homozygous individuals have two identical alleles for a particular gene (BB or bb). Heterozygous individuals have two different alleles (Bb). A dominant allele is expressed in both homozygotes and heterozygotes. A recessive allele is only expressed when homozygous recessive.",
-      "vi": "Mục hai nghiên cứu di truyền đơn tính: Cá thể đồng hợp mang hai alen giống hệt nhau của cùng một gen (BB hoặc bb). Cá thể dị hợp mang hai alen khác nhau (Bb). Alen trội được biểu hiện ra kiểu hình ở cả trạng thái đồng hợp trội và dị hợp. Alen lặn chỉ được biểu hiện khi ở trạng thái đồng hợp lặn.",
-      "duration": 78.88,
-      "startTime": 169.25,
-      "endTime": 248.13,
-      "audioUrl": "/audio/lectures/science/b16/sec_monohybrid_inheritance.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Diploid body cells have two sets of chromosomes ( 2n = 46 = 23 pairs); haploid gametes have a single set ( n = 23 ). 2) Before mitosis, exact chromosome replication occurs; during mitosis, copies separate to maintain 2n . 3) Meiosis is a reduction division producing genetically different haploid gametes .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Tế bào cơ thể lưỡng bội chứa 2 bộ NST ( 2n = 46 = 23 cặp); giao tử đơn bội chứa 1 bộ đơn ( n = 23 ). 2) Trước nguyên phân xảy ra nhân đôi chính xác NST ; trong nguyên phân các bản sao tách nhau ra duy trì 2n . 3) Giảm phân là phân bào giảm nhiễm tạo các giao tử đơn bội khác nhau về di truyền .",
+      "duration": 56.43,
+      "startTime": 111.66,
+      "endTime": 168.09,
+      "audioUrl": "/audio/lectures/science/b16/s01_b02.mp3"
     },
     {
-      "id": "sec_punnett_summary",
-      "title": "📊 Punnett Summary: 3:1 Ratio (Tỷ lệ Kiểu hình 3:1)",
-      "selector": "#sec-punnett-summary",
-      "en": "Summary of heterozygous monohybrid cross: Crossing two heterozygous tall parents (Tt × Tt) produces a genotypic ratio of 1 TT : 2 Tt : 1 tt, yielding a classic phenotypic ratio of 3 tall plants to 1 short plant (75% tall, 25% short).",
-      "vi": "Tổng kết phép lai phân tích một cặp tính trạng: Lai hai cá thể bố mẹ dị hợp thân cao (Tt × Tt) cho tỷ lệ kiểu gen 1 TT : 2 Tt : 1 tt, dẫn đến tỷ lệ kiểu hình kinh điển là 3 thân cao : 1 thân lùn (75% cao, 25% lùn).",
-      "duration": 37.43,
-      "startTime": 248.13,
-      "endTime": 285.56,
-      "audioUrl": "/audio/lectures/science/b16/sec_punnett_summary.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Write \"repair of damaged tissues \" and \"replacement of cells\" for the role of mitosis — Cambridge examiners reject \"repair of damaged cells\"!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi nêu vai trò nguyên phân, bắt buộc viết \"sửa chữa mô bị tổn thương\" — giám khảo Cambridge gạch điểm nếu viết \"repair of damaged cells\"!",
+      "duration": 21.92,
+      "startTime": 168.09,
+      "endTime": 190.01,
+      "audioUrl": "/audio/lectures/science/b16/s01_b03.mp3"
     },
     {
-      "id": "sec_pedigree-sex",
-      "title": "3. Phả hệ & Xác định Giới tính (Pedigree Charts & Sex Determination Overview)",
-      "selector": "#sec-pedigree-sex",
-      "en": "Section 3 covers sex determination and pedigree charts: Pedigree charts track phenotypes across generations to deduce genotypes. Squares represent males, circles represent females, and shading indicates individuals affected by the genetic trait.",
-      "vi": "Mục ba trình bày sơ đồ phả hệ và cơ chế xác định giới tính: Sơ đồ phả hệ theo dõi kiểu hình qua các thế hệ để suy luận kiểu gen. Hình vuông biểu thị nam, hình tròn biểu thị nữ và hình tô đậm biểu thị cá thể mang tính trạng bệnh.",
-      "duration": 66.47,
-      "startTime": 285.56,
-      "endTime": 352.03,
-      "audioUrl": "/audio/lectures/science/b16/sec_pedigree-sex.mp3"
+      "id": "s01_b04",
+      "title": "Nhiễm sắc thể (Chromosome)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Chromosome. A thread-like structure of DNA, carrying genetic information in the form of genes.",
+      "vi": "Nhiễm sắc thể (Chromosome). Cấu trúc dạng sợi cấu tạo từ DNA, mang thông tin di truyền dưới dạng các gen.",
+      "duration": 16.47,
+      "startTime": 190.01,
+      "endTime": 206.48,
+      "audioUrl": "/audio/lectures/science/b16/s01_b04.mp3"
     },
     {
-      "id": "sec_sex_determination",
-      "title": "👦👧 Sex Determination in Humans (Xác định Giới tính 50:50)",
-      "selector": "#sec-sex-determination",
-      "en": "Sex determination in humans: The 23rd chromosome pair determines biological sex. Females are homogametic XX; males are heterogametic XY. Crossing XX and XY always results in a 1:1 ratio, meaning a 50% chance of a boy and 50% chance of a girl at each fertilisation.",
-      "vi": "Cơ chế xác định giới tính ở người: Cặp nhiễm sắc thể số 23 quyết định giới tính sinh học. Nữ giới mang cặp đồng giao tử XX; nam giới mang cặp dị giao tử XY. Phép lai XX và XY luôn cho tỷ lệ 1:1, nghĩa là xác suất 50% sinh con trai và 50% sinh con gái trong mỗi lần thụ tinh.",
-      "duration": 41.37,
-      "startTime": 352.03,
-      "endTime": 393.4,
-      "audioUrl": "/audio/lectures/science/b16/sec_sex_determination.mp3"
+      "id": "s01_b05",
+      "title": "Gen (Gene)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Gene. A length of DNA that codes for a specific protein (determining particular traits).",
+      "vi": "Gen (Gene). Một đoạn phân tử DNA mang mã di truyền mã hóa cho một loại protein cụ thể.",
+      "duration": 14.84,
+      "startTime": 206.48,
+      "endTime": 221.32,
+      "audioUrl": "/audio/lectures/science/b16/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Alen (Allele)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Allele. An alternative form of a gene (e.g. allele T for tall vs allele t for short).",
+      "vi": "Alen (Allele). Các trạng thái biểu hiện khác nhau của cùng một gen (ví dụ alen T quy định thân cao, t thân lùn).",
+      "duration": 16.2,
+      "startTime": 221.32,
+      "endTime": 237.52,
+      "audioUrl": "/audio/lectures/science/b16/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "➗ Phân bào & Bộ nhiễm sắc thể:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "➗ Cell Division & Chromosome Numbers: Haploid nucleus ( n ): Contains a single set of unpaired chromosomes (e.g. human gametes: n = 23). Diploid nucleus (2 n ): Contains two sets of chromosomes, one from each parent (e.g. human body cells: 2 n = 46).",
+      "vi": "➗ Phân bào & Bộ nhiễm sắc thể: Đơn bội ( n ): Chứa một bộ nhiễm sắc thể đơn chiếc không ghép đôi (giao tử ở người: n = 23). Lưỡng bội (2 n ): Chứa hai bộ nhiễm sắc thể tương đồng, một từ bố và một từ mẹ (tế bào sinh dưỡng ở người: 2 n = 46).",
+      "duration": 41.49,
+      "startTime": 237.52,
+      "endTime": 279.01,
+      "audioUrl": "/audio/lectures/science/b16/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Nguyên phân (Mitosis 2 n → 2 n ): Phân chia nhân tạo ra 2 tế bào con giống hệt n...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "Mitosis (2 n → 2 n ): Nuclear division giving rise to genetically identical cells for growth, repair of tissues, and asexual reproduction.",
+      "vi": "Nguyên phân (Mitosis 2 n → 2 n ): Phân chia nhân tạo ra 2 tế bào con giống hệt nhau về mặt di truyền phục vụ tăng trưởng và tái tạo mô.",
+      "duration": 21.26,
+      "startTime": 279.01,
+      "endTime": 300.27,
+      "audioUrl": "/audio/lectures/science/b16/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "Giảm phân (Meiosis 2 n → n ): Phân bào giảm nhiễm giảm một nửa số lượng nhiễm sắ...",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "Meiosis (2 n → n ): Reduction division halving chromosome number to produce genetically different haploid gametes for sexual reproduction.",
+      "vi": "Giảm phân (Meiosis 2 n → n ): Phân bào giảm nhiễm giảm một nửa số lượng nhiễm sắc thể để tạo các giao tử đơn bội mang biến dị phong phú cho sinh sản hữu tính.",
+      "duration": 20.85,
+      "startTime": 300.27,
+      "endTime": 321.12,
+      "audioUrl": "/audio/lectures/science/b16/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "📊 Bảng So Sánh Toàn Diện: Nguyên Phân (Mitosis) vs Giảm Phân (Meiosis) (Supplement • B16.2.1–B1",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "📊 Full Comparison: Mitosis vs Meiosis (Supplement • B16.2.1–B16.2.6). Key Mitosis Mechanism (B16.2.3–4): Immediately before mitosis , exact replication of chromosomes occurs. During mitosis , the copies of chromosomes separate , maintaining the diploid chromosome number ( 2n = 46 = 23 pairs in humans) in each daughter cell. Feature: Chromosome Number; Mitosis (Nuclear Division): Maintained: diploid → diploid ( 2n → 2n ; 46 → 46); Meiosis (Reduction Division): Halved: diploid → haploid ( 2n → n ; 46 → 23). Feature: Daughter Cells; Mitosis (Nuclear Division): Produces genetically identical cells; Meiosis (Reduction Division): Produces genetically different haploid cells. Feature: Biological Roles; Mitosis (Nuclear Division): Growth, repair of damaged tissues, replacement of cells, and asexual reproduction; Meiosis (Reduction Division): Production of gametes (sperm & egg cells; pollen & ovules).",
+      "vi": "📊 Bảng So Sánh Toàn Diện: Nguyên Phân (Mitosis) vs Giảm Phân (Meiosis) (Supplement • B16.2.1–B16.2.6). Cơ chế NST trong Nguyên phân (B16.2.3–4): Ngay trước nguyên phân , xảy ra sự nhân đôi chính xác các nhiễm sắc thể . Trong quá trình nguyên phân , các bản sao của nhiễm sắc thể tách nhau ra (copies separate) , giữ nguyên bộ NST lưỡng bội ( 2n = 46 = 23 cặp ở người) cho mỗi tế bào con. Tiêu chí: Bộ nhiễm sắc thể; Mitosis (Nguyên phân): Giữ nguyên: lưỡng bội → lưỡng bội ( 2n → 2n ; 46 → 46); Meiosis (Giảm phân — Phân bào giảm nhiễm): Giảm một nửa: lưỡng bội → đơn bội ( 2n → n ; 46 → 23). Tiêu chí: Đặc điểm tế bào con; Mitosis (Nguyên phân): Tạo các tế bào giống hệt nhau về mặt di truyền; Meiosis (Giảm phân — Phân bào giảm nhiễm): Tạo các giao tử đơn bội khác nhau về mặt di truyền. Tiêu chí: Vai trò sinh học; Mitosis (Nguyên phân): Tăng trưởng (growth), sửa chữa mô tổn thương, thay thế tế bào và sinh sản vô tính; Meiosis (Giảm phân — Phân bào giảm nhiễm): Sản sinh giao tử (gametes: tinh trùng, trứng, hạt phấn, noãn).",
+      "duration": 164.98,
+      "startTime": 321.12,
+      "endTime": 486.1,
+      "audioUrl": "/audio/lectures/science/b16/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A diploid body cell of a fruit fly contains 8 chromosomes. Which row correctly describes the cells produced by meiosis in this fruit fly? A. 4 chromosomes, genetically identical B. 4 chromosomes, genetically different C. 8 chromosomes, genetically identical D. 8 chromosomes, genetically different ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Meiosis is a reduction division that halves the diploid chromosome number from 2n = 8 to haploid n = 4 (eliminating C and D). Unlike mitosis, meiosis produces genetically different gametes (eliminating A).",
+      "vi": "BÀI MẪU 1 🟩 MỨC EXTENDED • Trắc nghiệm Paper 2 A diploid body cell of a fruit fly contains 8 chromosomes. Which row correctly describes the cells produced by meiosis in this fruit fly? (Tế bào cơ thể lưỡng bội của ruồi giấm chứa 8 nhiễm sắc thể. Dòng nào mô tả đúng các tế bào tạo ra qua giảm phân ở loài này?) A. 4 chromosomes, genetically identical B. 4 chromosomes, genetically different C. 8 chromosomes, genetically identical D. 8 chromosomes, genetically different ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Giảm phân (meiosis) là phân bào giảm nhiễm làm giảm một nửa số NST từ 2n = 8 xuống đơn bội n = 4 → loại C và D. Khác với nguyên phân, giảm phân tạo ra các giao tử khác nhau về mặt di truyền (genetically different) → loại A.",
+      "duration": 104.12,
+      "startTime": 486.1,
+      "endTime": 590.22,
+      "audioUrl": "/audio/lectures/science/b16/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "[2]",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Define the terms gene and allele . [2] (b) State what happens to chromosomes before and during mitosis so that daughter cells remain diploid. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) • Gene: A length of DNA that codes for a protein [1m] ;• Allele: An alternative form of a gene [1m] .(b) • Before mitosis: exact replication of chromosomes occurs [1m] ;• During mitosis: the copies of chromosomes separate , maintaining the chromosome number in each daughter cell [1m] . 💡 Intuition Check: Always write \"codes for a protein\" (not \"codes for a characteristic\") when defining a gene!",
+      "vi": "BÀI MẪU 2 🟩 MỨC EXTENDED • Tự luận Paper 4 [4 điểm] (a) Define the terms gene and allele . (Định nghĩa thuật ngữ gen và alen.) (b) State what happens to chromosomes before and during mitosis so that daughter cells remain diploid. (Nêu diễn biến của nhiễm sắc thể trước và trong nguyên phân để tế bào con giữ nguyên bộ lưỡng bội.) ✍️ Lời giải chi tiết theo thang điểm: (a) • Gene: Một đoạn DNA mã hóa cho một protein ;• Allele: Một dạng biến thể khác của một gen .(b) • Trước nguyên phân: xảy ra nhân đôi chính xác các nhiễm sắc thể ;• Trong nguyên phân: các bản sao của nhiễm sắc thể tách nhau ra, duy trì nguyên vẹn số lượng NST ở mỗi tế bào con . 💡 Kiểm tra bản chất: Khi định nghĩa Gene luôn viết chuẩn \"codes for a protein\" để ăn trọn điểm tuyệt đối!",
+      "duration": 105.09,
+      "startTime": 590.22,
+      "endTime": 695.31,
+      "audioUrl": "/audio/lectures/science/b16/s01_b12.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🧮 2. Monohybrid Inheritance & Khung Punnett",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🧮 2. Monohybrid Inheritance & Punnett Square.",
+      "vi": "🧮 2. Monohybrid Inheritance & Khung Punnett.",
+      "duration": 8.24,
+      "startTime": 695.31,
+      "endTime": 703.55,
+      "audioUrl": "/audio/lectures/science/b16/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: A dominant allele ( T ) acts like a black marker pen while a recessive allele ( t ) acts like a yellow highlighter : whenever both are on the same spot ( Tt ), you only see the dominant trait! You only see the recessive trait when zero dominant alleles are present ( tt ).",
+      "vi": "🎯 Hình dung đời thường: Allele trội ( T ) giống nét bút dạ đen đậm còn allele lặn ( t ) giống bút nhớ màu vàng nhạt : khi tô chồng lên nhau ( Tt ), mắt thường chỉ nhìn thấy tính trạng trội! Kiểu hình lặn chỉ lộ diện khi hoàn toàn không có allele trội nào ( tt ).",
+      "duration": 38.91,
+      "startTime": 703.55,
+      "endTime": 742.46,
+      "audioUrl": "/audio/lectures/science/b16/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Write genotype using allele letters ( TT, Tt, tt ) and phenotype using observable words ( Tall, Short ). 2) Two core Punnett ratios cover every 0654 exam cross: Tt × Tt → 3 : 1 and Tt × tt → 1 : 1 . 3) Two identical homozygous individuals ( TT × TT or tt × tt ) are pure-breeding ; heterozygotes ( Tt ) are not pure-breeding .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Viết kiểu gen (genotype) bằng cặp chữ cái ( TT, Tt, tt ) và viết kiểu hình (phenotype) bằng từ mô tả tính trạng ( Tall, Short ). 2) Nắm chắc 2 tỉ lệ vàng của 0654: Tt × Tt → 3 : 1 và Tt × tt → 1 : 1 . 3) Hai cá thể đồng hợp giống nhau ( TT × TT hoặc tt × tt ) cho dòng thuần chủng (pure-breeding) ; dị hợp ( Tt ) không thuần chủng .",
+      "duration": 69.25,
+      "startTime": 742.46,
+      "endTime": 811.71,
+      "audioUrl": "/audio/lectures/science/b16/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do NOT write allele letters when asked for a phenotypic ratio ! Write 3 tall : 1 short (observable features), NOT 3 T_ : 1 tt .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi đề hỏi tỉ lệ kiểu hình (phenotypic ratio) , TUYỆT ĐỐI KHÔNG ghi ký hiệu chữ cái allele! Phải ghi rõ tên tính trạng: 3 cao : 1 thấp ( 3 tall : 1 short ).",
+      "duration": 27.91,
+      "startTime": 811.71,
+      "endTime": 839.62,
+      "audioUrl": "/audio/lectures/science/b16/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Bảng lai Punnett tương tác:",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "A monohybrid cross examines the inheritance of a single gene with two contrasting alleles (e.g. Heterozygous tall parents: Tt × Tt ). Interactive Punnett Square: Hover over each offspring square to reveal its genotype and phenotype:",
+      "vi": "Phép lai một cặp tính trạng (Monohybrid cross) theo dõi sự di truyền của 1 gen duy nhất (ví dụ bố mẹ đều mang kiểu gen dị hợp tử: Tt × Tt ). Bảng lai Punnett tương tác: Rê chuột vào từng ô vuông để xem kiểu gen và kiểu hình của đời con:",
+      "duration": 34.41,
+      "startTime": 839.62,
+      "endTime": 874.03,
+      "audioUrl": "/audio/lectures/science/b16/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Interactive Punnett Square (Bảng lai)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Interactive Punnett Square (Tt × Tt). Cross between two heterozygous tall pea plants ( Tt × Tt ). Hover over any of the 4 offspring cells 👆. Key: T = Dominant allele for Tall stem; t = Recessive allele for Short stem.Crossing Tt × Tt yields the classic 3 Tall : 1 Short (75% : 25%) phenotypic ratio.",
+      "vi": "Interactive Punnett Square (Bảng lai). Lai hai cây đậu Dị hợp tử. Giả sử: T = Gen trội thân cao (Tall). t = Gen lặn thân lùn (Short).Khi lai 2 cây Tt x Tt, ta luôn thu được tỷ lệ thần thánh: 3 Tall : 1 Short (75% : 25%).",
+      "duration": 48.37,
+      "startTime": 874.03,
+      "endTime": 922.4,
+      "audioUrl": "/audio/lectures/science/b16/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Tổng kết tỉ lệ đời con của phép lai Tt × Tt : Tỉ lệ Kiểu gen: 1 TT : 2 Tt : 1 tt...",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Summary of Tt × Tt Cross Results: Genotypic Ratio: 1 TT : 2 Tt : 1 tt (25% homozygous dominant, 50% heterozygous, 25% homozygous recessive) Phenotypic Ratio: 3 Tall : 1 Short (75% tall, 25% short).",
+      "vi": "Tổng kết tỉ lệ đời con của phép lai Tt × Tt : Tỉ lệ Kiểu gen: 1 TT : 2 Tt : 1 tt (25% đồng hợp trội, 50% dị hợp, 25% đồng hợp lặn) Tỉ lệ Kiểu hình: 3 Cao : 1 Lùn (75% thân cao, 25% thân lùn).",
+      "duration": 43.75,
+      "startTime": 922.4,
+      "endTime": 966.15,
+      "audioUrl": "/audio/lectures/science/b16/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Inheritance (Sự di truyền):",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "• Inheritance: Transmission of genetic information from generation to generation.• Genotype: Genetic make-up of an organism in terms of the alleles present ( TT, Tt, tt ).• Phenotype: Observable features of an organism (e.g. Tall or Short).",
+      "vi": "• Inheritance (Sự di truyền): Sự truyền đạt thông tin di truyền từ thế hệ này sang thế hệ khác.• Genotype (Kiểu gen): Tổ hợp di truyền của cơ thể xét theo các allele có mặt ( TT, Tt, tt ).• Phenotype (Kiểu hình): Các đặc điểm quan sát được của cơ thể (VD: Cao hoặc Thấp).",
+      "duration": 40.14,
+      "startTime": 966.15,
+      "endTime": 1006.29,
+      "audioUrl": "/audio/lectures/science/b16/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "Homozygous (Đồng hợp):",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "• Homozygous: Two identical alleles ( TT or tt ) → pure-breeding when bred together.• Heterozygous: Two different alleles ( Tt ) → not pure-breeding .• Dominant vs Recessive: Dominant expressed whenever present; recessive expressed only when no dominant allele is present ( tt ).",
+      "vi": "• Homozygous (Đồng hợp): Hai allele giống hệt nhau ( TT hoặc tt ) → cho dòng thuần chủng (pure-breeding) .• Heterozygous (Dị hợp): Hai allele khác nhau ( Tt ) → không thuần chủng .• Dominant vs Recessive: Allele trội biểu hiện ngay khi có mặt; allele lặn chỉ biểu hiện khi vắng mặt allele trội ( tt ).",
+      "duration": 42.1,
+      "startTime": 1006.29,
+      "endTime": 1048.39,
+      "audioUrl": "/audio/lectures/science/b16/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "📐 Tỉ lệ Chuẩn số 2 — Phép lai 1 : 1 ( Tt × tt ):",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "📐 Second Core Ratio — The 1 : 1 Cross ( Tt × tt ): Crossing a heterozygous individual ( Tt , gametes T and t ) with a homozygous recessive individual ( tt , gametes t ) produces offspring genotypes 1 Tt : 1 tt and a 1 Tall : 1 Short (50% : 50%) phenotypic ratio!",
+      "vi": "📐 Tỉ lệ Chuẩn số 2 — Phép lai 1 : 1 ( Tt × tt ): Khi lai cá thể dị hợp tử ( Tt , tạo giao tử T và t ) với cá thể đồng hợp lặn ( tt , tạo giao tử t ), đời con thu được kiểu gen 1 Tt : 1 tt và tỉ lệ kiểu hình 1 Thân cao : 1 Thân thấp (50% : 50%) !",
+      "duration": 46.76,
+      "startTime": 1048.39,
+      "endTime": 1095.15,
+      "audioUrl": "/audio/lectures/science/b16/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ In mice, black fur ( B ) is dominant to white fur ( b ). Two black mice mate and produce a litter containing 6 black mice and 2 white mice. Which statement about the parents is correct? A. Both parents are pure-breeding. B. Both parents are heterozygous (Bb). C. One parent is BB and the other is Bb. D. One parent is Bb and the other is bb. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Both parents have black fur, so neither parent can be bb (eliminating D). Producing white offspring ( bb ) means both parents must pass on a recessive b allele (eliminating A and C, which have no b in BB ). Thus both parents are heterozygous Bb (giving a 6:2 = 3:1 ratio).",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE • Trắc nghiệm Paper 1/2 In mice, black fur ( B ) is dominant to white fur ( b ). Ở chuột, lông đen B trội so với lông trắng b . Hai con chuột lông đen giao phối sinh ra lứa con gồm 6 chuột đen và 2 chuột trắng. Phát biểu nào về bố mẹ là đúng? A. Both parents are pure-breeding. B. Both parents are heterozygous (Bb). C. One parent is BB and the other is Bb. D. One parent is Bb and the other is bb. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Cả bố và mẹ đều có lông đen nên không con nào có kiểu gen bb → loại D. Sinh được chuột con lông trắng ( bb ) chứng tỏ cả bố lẫn mẹ đều phải truyền 1 allele lặn b cho con → loại A và C. Vậy cả bố và mẹ đều dị hợp Bb (tỉ lệ 6:2 = 3:1 ).",
+      "duration": 116.82,
+      "startTime": 1095.15,
+      "endTime": 1211.97,
+      "audioUrl": "/audio/lectures/science/b16/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Genetic Diagram [4 marks] In pea plants, purple flower colour ( G ) is dominant to white flower colour ( g ). A heterozygous purple-flowered plant is crossed with a white-flowered plant. Complete the genetic diagram to find the phenotypic ratio of the offspring. [4] ✍️ Step-by-Step Mark Scheme Solution: • Parental genotypes: Gg × gg [1m] ;• Gametes: G, g and g (or g, g ) [1m] ;• Offspring genotypes (Punnett square): Gg, gg (or Gg, Gg, gg, gg ) [1m] ;• Offspring phenotypes & ratio: 1 purple-flowered : 1 white-flowered (or 50% purple : 50% white) [1m] . 💡 Intuition Check: Always match genotypes directly to phenotypes on the final line to earn the fourth mark!",
+      "vi": "BÀI MẪU 2 🟦 MỨC CORE • Sơ đồ lai Paper 3/4 [4 điểm] In pea plants, purple flower colour ( G ) is dominant to white flower colour ( g ). Ở đậu Hà Lan, hoa tím G trội so với hoa trắng g . Cho cây hoa tím dị hợp lai với cây hoa trắng. Viết sơ đồ lai xác định tỉ lệ kiểu hình đời con. ✍️ Lời giải chi tiết theo thang điểm: • Kiểu gen bố mẹ (Parental genotypes): Gg × gg ;• Giao tử (Gametes): G, g và g (hoặc g, g ) ;• Kiểu gen đời con (Offspring genotypes): Gg, gg (hoặc Gg, Gg, gg, gg ) ;• Kiểu hình & tỉ lệ: 1 hoa tím : 1 hoa trắng ( 1 purple-flowered : 1 white-flowered hoặc 50% : 50%) . 💡 Kiểm tra bản chất: Luôn ghi rõ tên kiểu hình tương ứng với từng kiểu gen ở dòng cuối để ăn trọn điểm thứ 4!",
+      "duration": 123.88,
+      "startTime": 1211.97,
+      "endTime": 1335.85,
+      "audioUrl": "/audio/lectures/science/b16/s02_b11.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🌳 3. Sơ đồ Phả hệ & Cơ chế Xác định Giới tính",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🌳 3. Pedigree Charts & Sex Determination.",
+      "vi": "🌳 3. Sơ đồ Phả hệ & Cơ chế Xác định Giới tính.",
+      "duration": 8.28,
+      "startTime": 1335.85,
+      "endTime": 1344.13,
+      "audioUrl": "/audio/lectures/science/b16/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Reading a pedigree chart is detective work: look for a \"surprise child\" whose phenotype differs from BOTH parents! Meanwhile, human sex determination is an unbiased coin flip controlled by the sperm cell: eggs always bring X , while sperm bring X or Y in exact 50:50 numbers.",
+      "vi": "🎯 Hình dung đời thường: Đọc sơ đồ phả hệ (pedigree) giống như làm thám tử: hãy tìm ngay \"đứa con bất ngờ\" có kiểu hình khác cả bố lẫn mẹ! Còn xác định giới tính ở người giống trò tung đồng xu công bằng do tinh trùng quyết định: trứng luôn mang X , còn tinh trùng mang X hoặc Y đúng tỉ lệ 50:50.",
+      "duration": 42.27,
+      "startTime": 1344.13,
+      "endTime": 1386.4,
+      "audioUrl": "/audio/lectures/science/b16/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) In pedigrees, squares = males , circles = females , and shaded = affected . 2) Unaffected parents → affected child proves the disorder is recessive and both parents are heterozygous ( Aa ) . 3) For sex inheritance, always show parental genotypes XX × XY , gametes X and X, Y , and offspring 1 XX : 1 XY (50% chance at every birth).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Quy ước phả hệ: ô vuông = nam , hình tròn = nữ , tô đậm = mắc tính trạng/bệnh . 2) Bố mẹ bình thường sinh con bị bệnh → chứng minh bệnh do allele lặn và cả hai bố mẹ đều dị hợp ( Aa ) . 3) Di truyền giới tính luôn viết XX × XY , giao tử X và X, Y , đời con 1 XX : 1 XY (xác suất 50% ở mỗi lần sinh).",
+      "duration": 61.04,
+      "startTime": 1386.4,
+      "endTime": 1447.44,
+      "audioUrl": "/audio/lectures/science/b16/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Previous births NEVER change future probabilities! Even after four daughters in a row, the probability the fifth baby is a girl is still exactly 50% (1:1) .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Các lần sinh trước KHÔNG BAO GIỜ ảnh hưởng tới lần sinh sau! Dù gia đình đã có 4 cô con gái, xác suất lần thứ 5 sinh con gái vẫn chính xác là 50% (1:1) .",
+      "duration": 28.3,
+      "startTime": 1447.44,
+      "endTime": 1475.74,
+      "audioUrl": "/audio/lectures/science/b16/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Sơ đồ phả hệ tương tác: Rê chuột vào các thành viên trong gia đình để suy luận k...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Interactive Pedigree Chart: Hover over individuals in this family tree to deduce their genotypes:",
+      "vi": "Sơ đồ phả hệ tương tác: Rê chuột vào các thành viên trong gia đình để suy luận kiểu gen:",
+      "duration": 13.43,
+      "startTime": 1475.74,
+      "endTime": 1489.17,
+      "audioUrl": "/audio/lectures/science/b16/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Interactive Pedigree Map (Sơ đồ phả hệ)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Interactive Pedigree Chart (Family Tree). Shaded symbols indicate affected individuals. Hover over each family member to deduce their exact genotype. Hover over any family member 👆. Standard Key: Square: Male. Circle: Female. Shaded symbol: Affected individual.",
+      "vi": "Interactive Pedigree Map (Sơ đồ phả hệ). Màu đen biểu thị người mang bệnh (Affected). Quy ước chung: Hình vuông (Square): Male (Nam). Hình tròn (Circle): Female (Nữ). Tô màu đậm (Shaded): Người mang bệnh (Affected).",
+      "duration": 41.16,
+      "startTime": 1489.17,
+      "endTime": 1530.33,
+      "audioUrl": "/audio/lectures/science/b16/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "👦👧 Cơ chế Xác định Giới tính ở Người (Tỉ lệ 50:50)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "👦👧 Sex Determination in Humans (50% Probability). Human body cells contain 23 pairs of chromosomes. Pair 23 consists of the sex chromosomes : Females possess two X chromosomes: XX (eggs carry only X). Males possess one X and one Y chromosome: XY (sperm carry either X or Y in equal 50:50 proportions). Cross XX × XY gives a 1:1 ratio (50% chance boy XY , 50% chance girl XX ) at every fertilisation event.",
+      "vi": "👦👧 Cơ chế Xác định Giới tính ở Người (Tỉ lệ 50:50). Tế bào người có 23 cặp nhiễm sắc thể, trong đó cặp số 23 là nhiễm sắc thể giới tính : Nữ giới mang hai nhiễm sắc thể X: XX (trứng chỉ mang X). Nam giới mang một nhiễm sắc thể X và một Y: XY (tinh trùng mang X hoặc Y với tỉ lệ ngang nhau 50:50). Phép lai XX × XY luôn cho tỉ lệ 1:1 (50% cơ hội sinh con trai XY và 50% cơ hội sinh con gái XX ) ở mỗi lần sinh nở.",
+      "duration": 74.18,
+      "startTime": 1530.33,
+      "endTime": 1604.51,
+      "audioUrl": "/audio/lectures/science/b16/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🔍 3 Bước Giải Nhanh Sơ Đồ Phả Hệ & Bảng Punnett XX × XY (Core • B16.1.4 & B16.3.10)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "🔍 Step-by-Step Pedigree Deduction & XX × XY Punnett Grid (Core • B16.1.4 & B16.3.10). 3-Step Pedigree Checklist: 1. Spot two unaffected parents who have an affected child → condition MUST be recessive ( a ) , and both parents MUST be heterozygous ( Aa ) .2. Every affected individual in a recessive pedigree is aa .3. An unaffected parent of an aa child, or any unaffected child of an aa parent, MUST be Aa ! Gametes — X (sperm) — Y (sperm). X (egg) — XX (Female) — XY (Male). X (egg) — XX (Female) — XY (Male). Result: 2 XX : 2 XY = 1 : 1 (50% female, 50% male)",
+      "vi": "🔍 3 Bước Giải Nhanh Sơ Đồ Phả Hệ & Bảng Punnett XX × XY (Core • B16.1.4 & B16.3.10). Quy tắc 3 bước đọc Phả hệ: 1. Tìm cặp bố mẹ bình thường nhưng sinh ra con mắc bệnh → bệnh BẮT BUỘC do allele lặn ( a ) , và cả bố lẫn mẹ đều dị hợp ( Aa ) .2. Mọi cá thể mắc bệnh lặn trên phả hệ đều có kiểu gen aa .3. Bố/mẹ bình thường sinh con aa , hoặc con bình thường của bố/mẹ aa , chắc chắn mang kiểu gen Aa ! Giao tử — X (tinh trùng) — Y (tinh trùng). X (trứng) — XX (Con gái) — XY (Con trai). X (trứng) — XX (Con gái) — XY (Con trai). Kết quả: 2 XX : 2 XY = 1 : 1 (50% nữ, 50% nam)",
+      "duration": 113.76,
+      "startTime": 1604.51,
+      "endTime": 1718.27,
+      "audioUrl": "/audio/lectures/science/b16/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which combination of sex chromosomes in an egg cell and a sperm cell produces a male baby? A. Egg with X and sperm with X B. Egg with X and sperm with Y C. Egg with Y and sperm with X D. Egg with XY and sperm with XX ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Females have genotype XX , so haploid egg cells ONLY ever contain a single X chromosome (eliminating C and D). Males are XY , so a male baby inherits X from the mother's egg and Y from the father's sperm.",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE • Trắc nghiệm Paper 1/2 Which combination of sex chromosomes in an egg cell and a sperm cell produces a male baby? (Tổ hợp nhiễm sắc thể giới tính nào trong tế bào trứng và tinh trùng tạo thành bé trai?) A. Egg with X and sperm with X B. Egg with X and sperm with Y C. Egg with Y and sperm with X D. Egg with XY and sperm with XX ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Nữ giới có kiểu gen XX nên tế bào trứng đơn bội CHỈ chứa 1 nhiễm sắc thể X → loại C và D. Bé trai có kiểu gen XY nên nhận NST X từ trứng của mẹ và NST Y từ tinh trùng của bố.",
+      "duration": 81.32,
+      "startTime": 1718.27,
+      "endTime": 1799.59,
+      "audioUrl": "/audio/lectures/science/b16/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "[2]",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Pedigree Analysis [4 marks] In a family pedigree for albinism, two parents without albinism have three children: an affected daughter, an unaffected son, and an affected son. Using A for normal pigment and a for albinism:(a) Explain how the pedigree shows that albinism is caused by a recessive allele. [2] (b) State the genotypes of the father and the affected daughter. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) • Both parents do not have albinism (unaffected), yet they have children with albinism [1m] ;• Therefore the allele for albinism must be masked in the parents, meaning both parents carry a hidden recessive allele (are heterozygous Aa ) [1m] .(b) • Father: Aa [1m] ;• Affected daughter: aa [1m] . 💡 Intuition Check: Quote the evidence from the diagram (\"unaffected parents have an affected child\") AND explain the hidden allele in heterozygotes for both marks!",
+      "vi": "BÀI MẪU 2 🟦 MỨC CORE • Phân tích Phả hệ Paper 3/4 [4 điểm] In a family pedigree for albinism, two parents without albinism have three children: an affected daughter, an unaffected son, and an affected son. Using A for normal pigment and a for albinism:(a) Explain how the pedigree shows that albinism is caused by a recessive allele. (b) State the genotypes of the father and the affected daughter. ((a) Giải thích vì sao phả hệ chứng tỏ bệnh bạch tạng do allele lặn gây ra. (b) Nêu kiểu gen của người bố và cô con gái mắc bệnh.) ✍️ Lời giải chi tiết theo thang điểm: (a) • Cả hai bố mẹ đều không bị bạch tạng (unaffected) nhưng sinh ra con mắc bạch tạng (affected) ;• Suy ra allele gây bạch tạng bị che khuất ở bố mẹ (bố mẹ đều mang allele lặn ẩn trong kiểu gen dị hợp Aa ) .(b) • Người bố (Father): Aa ;• Con gái mắc bệnh (Affected daughter): aa . 💡 Kiểm tra bản chất: Câu giải thích 2 điểm luôn cần đủ: (1) Bằng chứng từ phả hệ + (2) Lập luận allele lặn bị che lấp ở bố mẹ dị hợp!",
+      "duration": 143.11,
+      "startTime": 1799.59,
+      "endTime": 1942.7,
+      "audioUrl": "/audio/lectures/science/b16/s03_b09.mp3"
     }
   ]
 }

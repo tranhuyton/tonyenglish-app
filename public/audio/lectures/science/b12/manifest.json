@@ -1,162 +1,540 @@
 {
   "lectureId": "58e65add-a67a-4b90-8b84-52de1a2840be",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B12: Respiration",
-  "totalDuration": 371.44,
+  "totalDuration": 2323.03,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_bioenergetics": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-bioenergetics": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_respiration_def": {
+    "s01_int": {
       "start": 2,
-      "end": 2
+      "end": 4
     },
-    "sec-respiration-def": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_aerobic_respiration": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-aerobic-respiration": {
-      "start": 3,
-      "end": 3
-    },
-    "sec_anaerobic_respiration": {
-      "start": 4,
-      "end": 7
-    },
-    "sec-anaerobic-respiration": {
-      "start": 4,
-      "end": 7
-    },
-    "sec_anaerobic_muscles": {
-      "start": 5,
-      "end": 5
-    },
-    "sec-anaerobic-muscles": {
-      "start": 5,
-      "end": 5
-    },
-    "sec_anaerobic_yeast": {
-      "start": 6,
-      "end": 6
-    },
-    "sec-anaerobic-yeast": {
-      "start": 6,
-      "end": 6
-    },
-    "sec_oxygen_debt": {
+    "s01_p1_sub01": {
       "start": 7,
-      "end": 7
+      "end": 13
     },
-    "sec-oxygen-debt": {
+    "s01_p2_sub01": {
       "start": 7,
-      "end": 7
+      "end": 13
+    },
+    "s01_wex": {
+      "start": 14,
+      "end": 15
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 15
+    },
+    "s02_int": {
+      "start": 17,
+      "end": 19
+    },
+    "s02_wex": {
+      "start": 23,
+      "end": 24
+    },
+    "s02_hdr": {
+      "start": 16,
+      "end": 24
+    },
+    "s03_int": {
+      "start": 26,
+      "end": 28
+    },
+    "s03_p1_sub01": {
+      "start": 30,
+      "end": 30
+    },
+    "s03_p2_sub01": {
+      "start": 30,
+      "end": 30
+    },
+    "s03_wex": {
+      "start": 31,
+      "end": 32
+    },
+    "s03_hdr": {
+      "start": 25,
+      "end": 32
+    },
+    "s04_int": {
+      "start": 34,
+      "end": 36
+    },
+    "s04_wex": {
+      "start": 40,
+      "end": 41
+    },
+    "s04_hdr": {
+      "start": 33,
+      "end": 41
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B12: Hô hấp Tế bào & Năng lượng Sinh học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B12: Respiration and Bioenergetics. Respiration is the fundamental biochemical process releasing usable ATP energy in all living cells. In this topic, we contrast aerobic and anaerobic respiration and examine oxygen debt.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B12: Hô hấp Tế bào và Năng lượng Sinh học. Hô hấp là chuỗi phản ứng sinh hóa cốt lõi giải phóng năng lượng ATP trong mọi tế bào sống. Trong chuyên đề này, chúng ta sẽ so sánh hô hấp hiếu khí, kỵ khí và hiện tượng nợ oxy.",
-      "duration": 45.4,
+      "title": "Chuyên đề B12: Hô hấp Tế bào (Respiration)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) • Topic B12 B12: Respiration. Uses of Energy, Aerobic Respiration, Anaerobic Respiration in Muscles & Removal of Oxygen Debt.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ Chuyên đề B12: Hô hấp Tế bào (Respiration). Vai trò của Năng lượng, Hô hấp Hiếu khí, Hô hấp Kỵ khí ở Cơ bắp & Cơ chế Trả Nợ Oxy tại Gan.",
+      "duration": 35.45,
       "startTime": 0.0,
-      "endTime": 45.4,
+      "endTime": 35.45,
       "audioUrl": "/audio/lectures/science/b12/intro.mp3"
     },
     {
-      "id": "sec_bioenergetics",
-      "title": "1. Hô hấp Tế bào & Ứng dụng Năng lượng (Bioenergetics Overview)",
-      "selector": "#sec-bioenergetics",
-      "en": "Section 1 defines respiration: The chemical reactions in cells that break down nutrient molecules and release energy for metabolism.",
-      "vi": "Mục một định nghĩa hô hấp tế bào: Là chuỗi phản ứng hóa học trong tế bào phân giải phân tử dinh dưỡng để giải phóng năng lượng cho các hoạt động trao đổi chất.",
-      "duration": 53.99,
-      "startTime": 45.4,
-      "endTime": 99.39,
-      "audioUrl": "/audio/lectures/science/b12/sec_bioenergetics.mp3"
+      "id": "s01_hdr",
+      "title": "⚡ 1. Năng lượng Sinh học & Vai trò của Năng lượng (Bioenergetics)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "⚡ 1. Cellular Bioenergetics & Uses of Energy.",
+      "vi": "⚡ 1. Năng lượng Sinh học & Vai trò của Năng lượng (Bioenergetics).",
+      "duration": 9.73,
+      "startTime": 35.45,
+      "endTime": 45.18,
+      "audioUrl": "/audio/lectures/science/b12/s01_hdr.mp3"
     },
     {
-      "id": "sec_respiration_def",
-      "title": "🔋 Seven Vital Uses of ATP Energy (Bảy Ứng dụng của Năng lượng)",
-      "selector": "#sec-respiration-def",
-      "en": "Uses of released energy: 1. Muscle contraction. 2. Protein synthesis. 3. Cell division for growth. 4. Active transport of ions. 5. Growth and repair of tissues. 6. Transmission of nerve impulses. 7. Maintenance of a constant body temperature in mammals.",
-      "vi": "Bảy ứng dụng của năng lượng giải phóng: 1. Co cơ vận động. 2. Tổng hợp protein. 3. Phân chia tế bào lớn lên. 4. Vận chuyển chủ động qua màng. 5. Tăng trưởng và phục hồi mô. 6. Dẫn truyền xung thần kinh. 7. Duy trì thân nhiệt ổn định ở động vật có vú.",
-      "duration": 45.14,
-      "startTime": 99.39,
-      "endTime": 144.53,
-      "audioUrl": "/audio/lectures/science/b12/sec_respiration_def.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture glucose as chemical fuel locked in a vault, and cellular respiration as the power plant inside every living cell that unlocks usable energy to run your body's essential appliances — contracting muscles, building proteins, dividing cells, growing tissues, firing nerve signals, and keeping your core at 37°C. Breathing is only the air-ventilation fan!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung glucose là nhiên liệu khóa trong két sắt, còn hô hấp tế bào (cellular respiration) là trạm phát điện nằm trong mọi tế bào sống để mở khóa nguồn năng lượng nuôi 6 hoạt động sống cốt lõi (co cơ, tổng hợp protein, phân bào, sinh trưởng, truyền xung thần kinh và sưởi ấm cơ thể ở 37°C). Hít thở (breathing) chỉ là chiếc quạt thông gió đưa oxy vào mà thôi!",
+      "duration": 54.76,
+      "startTime": 45.18,
+      "endTime": 99.94,
+      "audioUrl": "/audio/lectures/science/b12/s01_b01.mp3"
     },
     {
-      "id": "sec_aerobic_respiration",
-      "title": "2. Hô hấp Hiếu khí & Phương trình Hóa học (Aerobic Respiration Overview)",
-      "selector": "#sec-aerobic-respiration",
-      "en": "Section 2 investigates aerobic respiration: The chemical reactions in cells that use oxygen to break down nutrient molecules to release energy. Word equation: glucose plus oxygen yields carbon dioxide plus water. Balanced chemical equation: C₆H₁₂O₆ + 6O₂ produces 6CO₂ + 6H₂O, releasing large amounts of ATP.",
-      "vi": "Mục hai phân tích hô hấp hiếu khí: Là phản ứng hóa học trong tế bào sử dụng oxy để phân giải chất dinh dưỡng giải phóng năng lượng. Phương trình chữ: glucose cộng oxy tạo ra carbon dioxide cộng nước. Phương trình hóa học: C6H12O6 cộng 6O2 tạo ra 6CO2 cộng 6H2O, giải phóng lượng lớn ATP.",
-      "duration": 50.34,
-      "startTime": 144.53,
-      "endTime": 194.87,
-      "audioUrl": "/audio/lectures/science/b12/sec_aerobic_respiration.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: For 0654 B12.1 Core #1 , learn the 6 named uses of energy: muscle contraction , protein synthesis , cell division , growth , passage of nerve impulses , and maintenance of a constant body temperature .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Chuẩn 0654 B12.1 Core #1 , thuộc lòng 6 mục đích sử dụng năng lượng: muscle contraction (co cơ), protein synthesis (tổng hợp protein), cell division (phân bào), growth (sinh trưởng), passage of nerve impulses (xung thần kinh), và maintenance of a constant body temperature (duy trì thân nhiệt ổn định).",
+      "duration": 43.24,
+      "startTime": 99.94,
+      "endTime": 143.18,
+      "audioUrl": "/audio/lectures/science/b12/s01_b02.mp3"
     },
     {
-      "id": "sec_anaerobic_respiration",
-      "title": "3. Hô hấp Kỵ khí, Lên men & Nợ Oxy (Anaerobic Respiration Overview)",
-      "selector": "#sec-anaerobic-respiration",
-      "en": "Section 3 investigates anaerobic respiration: The chemical reactions in cells that break down nutrient molecules to release energy without using oxygen, yielding much less energy per glucose molecule.",
-      "vi": "Mục ba nghiên cứu hô hấp kỵ khí: Là phản ứng hóa học phân giải chất dinh dưỡng giải phóng năng lượng mà không dùng oxy, tạo ra ít năng lượng hơn nhiều trên mỗi phân tử glucose.",
-      "duration": 72.74,
-      "startTime": 194.87,
-      "endTime": 267.61,
-      "audioUrl": "/audio/lectures/science/b12/sec_anaerobic_respiration.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: NEVER write \"respiration produces / creates / makes energy\"! Cambridge 0654 Mark Schemes strictly reject \"produces energy\" — always write \"releases energy\" from nutrient molecules!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG viết \"respiration produces / creates / makes energy\" (tạo ra năng lượng)! Thang điểm Cambridge 0654 gạch bỏ từ \"produces energy\" — bắt buộc viết \"releases energy\" (giải phóng năng lượng từ phân tử dinh dưỡng)!",
+      "duration": 34.18,
+      "startTime": 143.18,
+      "endTime": 177.36,
+      "audioUrl": "/audio/lectures/science/b12/s01_b03.mp3"
     },
     {
-      "id": "sec_anaerobic_muscles",
-      "title": "🏃 Anaerobic Respiration in Muscles (Hô hấp Kỵ khí ở Cơ bắp)",
-      "selector": "#sec-anaerobic-muscles",
-      "en": "In human muscle cells during vigorous exercise: When oxygen supply cannot meet muscle demands, glucose is broken down anaerobically into lactic acid. Word equation: glucose yields lactic acid. Lactic acid accumulation causes muscle fatigue and cramps.",
-      "vi": "Ở cơ bắp người khi vận động gắng sức: Khi lượng oxy hít vào không đủ đáp ứng, glucose bị phân giải kỵ khí thành acid lactic. Phương trình chữ: glucose tạo ra acid lactic. Sự tích tụ acid lactic làm mỏi cơ và chuột rút.",
-      "duration": 33.4,
-      "startTime": 267.61,
-      "endTime": 301.01,
-      "audioUrl": "/audio/lectures/science/b12/sec_anaerobic_muscles.mp3"
+      "id": "s01_b04",
+      "title": "🇬🇧 EN:",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Respiration vs Breathing: Don't Mix Them Up! Breathing (ventilation) is merely the mechanical movement of air into and out of the lungs. Cellular respiration is a set of enzyme-controlled chemical reactions inside all living cells (cytoplasm and mitochondria) that break down nutrient molecules (mainly glucose) to release energy for metabolism. Every living plant and animal cell respires continuously 24 hours a day.",
+      "vi": "Phân biệt cốt lõi: Hô hấp tế bào (Respiration) KHÁC với Hít thở (Breathing)! 🇬🇧 EN: Breathing (ventilation) is the physical movement of air in and out of the lungs, whereas cellular respiration is a series of enzyme-controlled chemical reactions inside all living cells that break down nutrient molecules to release energy. 🇻🇳 VI: Hít thở (thông khí) chỉ là chuyển động cơ học đưa khí ra vào phổi; còn hô hấp tế bào là chuỗi các phản ứng hóa học do enzyme xúc tác diễn ra suốt 24/24 giờ bên trong mọi tế bào sống (tế bào chất và ti thể) của cả thực vật lẫn động vật nhằm phân giải phân tử dinh dưỡng (chủ yếu là glucose) để giải phóng năng lượng (release energy).",
+      "duration": 78.19,
+      "startTime": 177.36,
+      "endTime": 255.55,
+      "audioUrl": "/audio/lectures/science/b12/s01_b04.mp3"
     },
     {
-      "id": "sec_anaerobic_yeast",
-      "title": "🍞 Anaerobic Respiration in Yeast (Lên men Rượu ở Nấm men)",
-      "selector": "#sec-anaerobic-yeast",
-      "en": "In yeast (fermentation): Glucose is broken down into alcohol (ethanol) and carbon dioxide. Word equation: glucose yields alcohol plus carbon dioxide. Equation: C₆H₁₂O₆ yields 2C₂H₅OH + 2CO₂. Used commercially in breadmaking (CO₂ causes dough to rise) and brewing alcohol.",
-      "vi": "Ở nấm men (lên men rượu): Glucose bị phân giải thành cồn ethanol và carbon dioxide. Phương trình: C6H12O6 tạo ra 2 C2H5OH cộng 2 CO2. Ứng dụng trong làm bánh mì (khí CO2 làm nở bột) và sản xuất bia rượu.",
-      "duration": 39.74,
-      "startTime": 301.01,
-      "endTime": 340.75,
-      "audioUrl": "/audio/lectures/science/b12/sec_anaerobic_yeast.mp3"
+      "id": "s01_b05",
+      "title": "Sơ đồ Tư duy: Ti thể (Mitochondrion) & Các Mục đích Sử dụng Năng lượng Năng lượn...",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Visual Model: Mitochondrion Energy Hub & Vital Uses of Released Energy Chemical potential energy in glucose is RELEASED (never \"created\" or \"produced\") to power metabolism",
+      "vi": "Sơ đồ Tư duy: Ti thể (Mitochondrion) & Các Mục đích Sử dụng Năng lượng Năng lượng hóa học trong Glucose được giải phóng (KHÔNG phải tự sinh ra) để cung cấp cho mọi hoạt động sống",
+      "duration": 24.03,
+      "startTime": 255.55,
+      "endTime": 279.58,
+      "audioUrl": "/audio/lectures/science/b12/s01_b05.mp3"
     },
     {
-      "id": "sec_oxygen_debt",
-      "title": "🩸 Oxygen Debt (Hiện tượng Nợ Oxy)",
-      "selector": "#sec-oxygen-debt",
-      "en": "Oxygen debt: After vigorous sprinting, deep breathing continues to repay the oxygen debt. Blood transports accumulated lactic acid from muscles to the liver, where extra oxygen is consumed to oxidise lactic acid aerobically into carbon dioxide and water.",
-      "vi": "Nợ oxy: Sau khi chạy nước rút, ta tiếp tục thở gấp để trả nợ oxy. Máu vận chuyển acid lactic tích tụ từ cơ bắp về gan, nơi oxy bổ sung được dùng để oxy hóa hiếu khí acid lactic thành CO2 và nước.",
-      "duration": 30.69,
-      "startTime": 340.75,
-      "endTime": 371.44,
-      "audioUrl": "/audio/lectures/science/b12/sec_oxygen_debt.mp3"
+      "id": "s01_b06",
+      "title": "1. Muscle contraction (Co cơ):",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "1. Muscle contraction: Powers skeletal movement, peristalsis in the digestive tract, and cardiac muscle pumping blood.",
+      "vi": "1. Muscle contraction (Co cơ): Giúp cơ xương vận động di chuyển, cơ tim bơm máu và nhu động ống tiêu hóa.",
+      "duration": 17.55,
+      "startTime": 279.58,
+      "endTime": 297.13,
+      "audioUrl": "/audio/lectures/science/b12/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "2. Protein synthesis (Tổng hợp protein):",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "2. Protein synthesis: Joining amino acids into polypeptide chains on ribosomes to make enzymes, hormones, and antibodies.",
+      "vi": "2. Protein synthesis (Tổng hợp protein): Liên kết các amino acid tại ribosome tạo thành enzyme, hormone, kháng thể và protein cấu trúc.",
+      "duration": 21.18,
+      "startTime": 297.13,
+      "endTime": 318.31,
+      "audioUrl": "/audio/lectures/science/b12/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "3. Cell division (Phân bào):",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "3. Cell division: Replicating DNA and moving chromosomes during mitosis to produce genetically identical cells for repair.",
+      "vi": "3. Cell division (Phân bào): Nhân đôi ADN và phân chia nhiễm sắc thể trong nguyên phân (mitosis) để tạo tế bào mới hàn gắn mô tổn thương.",
+      "duration": 20.07,
+      "startTime": 318.31,
+      "endTime": 338.38,
+      "audioUrl": "/audio/lectures/science/b12/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "4. Growth (Sinh trưởng):",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "4. Growth: Permanent increase in size and dry mass by building new cells and structural macromolecules.",
+      "vi": "4. Growth (Sinh trưởng): Tăng vĩnh viễn kích thước và khối lượng khô của cơ thể thông qua việc xây dựng tế bào mới.",
+      "duration": 15.79,
+      "startTime": 338.38,
+      "endTime": 354.17,
+      "audioUrl": "/audio/lectures/science/b12/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "5. Passage of nerve impulses (Xung thần kinh):",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "5. Passage of nerve impulses: Maintaining electrical potential differences across neurone membranes for rapid signalling.",
+      "vi": "5. Passage of nerve impulses (Xung thần kinh): Duy trì điện thế màng nơ-ron và truyền tín hiệu điện thần kinh tốc độ cao.",
+      "duration": 17.12,
+      "startTime": 354.17,
+      "endTime": 371.29,
+      "audioUrl": "/audio/lectures/science/b12/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "6. Maintenance of a constant body temperature (Duy trì thân nhiệt):",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "6. Maintenance of a constant body temperature: Releasing thermal energy to keep mammals and birds at ~37°C optimum enzyme temperature.",
+      "vi": "6. Maintenance of a constant body temperature (Duy trì thân nhiệt): Tỏa nhiệt giữ cơ thể thú và chim ổn định ở ~37°C giúp enzyme hoạt động tối ưu.",
+      "duration": 22.09,
+      "startTime": 371.29,
+      "endTime": 393.38,
+      "audioUrl": "/audio/lectures/science/b12/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "vận chuyển chủ động (active transport)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "Cross-topic link (Topic B3): Cells also use respiratory energy for active transport of ions and molecules across cell membranes against a concentration gradient (e.g. mineral ion uptake in root hair cells).",
+      "vi": "Liên hệ chuyên đề B3: Tế bào còn dùng năng lượng hô hấp cho vận chuyển chủ động (active transport) bơm các ion khoáng và glucose ngược chiều gradien nồng độ qua màng tế bào.",
+      "duration": 25.82,
+      "startTime": 393.38,
+      "endTime": 419.2,
+      "audioUrl": "/audio/lectures/science/b12/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "Which statement about cellular respiration in living organisms is correct?",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ (0654) Which statement about cellular respiration in living organisms is correct? A. It occurs only in animal lung cells during inhalation. B. It creates new energy from water and carbon dioxide. C. It is a chemical reaction in all living cells that breaks down nutrient molecules to release energy. D. It occurs in plants only at night when there is no sunlight. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Respiration takes place continuously (day and night) in all living cells of both plants and animals, breaking down nutrient molecules (such as glucose) to release energy . Option A confuses respiration with breathing; B violates energy conservation.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ (0654) Which statement about cellular respiration in living organisms is correct? (Phát biểu nào sau đây về quá trình hô hấp tế bào ở sinh vật sống là đúng?) A. It occurs only in animal lung cells during inhalation. B. It creates new energy from water and carbon dioxide. C. It is a chemical reaction in all living cells that breaks down nutrient molecules to release energy. D. It occurs in plants only at night when there is no sunlight. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Hô hấp tế bào diễn ra liên tục cả ngày lẫn đêm trong mọi tế bào sống của cả thực vật và động vật, phân giải phân tử dinh dưỡng để giải phóng năng lượng (release energy) (C). Đáp án A nhầm với thông khí ở phổi; B sai định luật bảo toàn năng lượng.",
+      "duration": 109.99,
+      "startTime": 419.2,
+      "endTime": 529.19,
+      "audioUrl": "/audio/lectures/science/b12/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "(a) State three uses of energy released by respiration in the human body. [3]",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) State three uses of energy released by respiration in the human body. [3](b) Explain why birds and mammals need a higher rate of respiration in cold weather than reptiles of the same mass. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Any three from: muscle contraction / protein synthesis / cell division / growth / passage of nerve impulses [3m] . (b) Birds and mammals use thermal energy released from respiration for the maintenance of a constant body temperature when heat loss to cold surroundings increases [1m] . 💡 Intuition Check: In winter you feel hungrier because your cells respire more glucose just to keep core body temperature steady at 37°C!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) State three uses of energy released by respiration in the human body. (Nêu 3 mục đích sử dụng năng lượng giải phóng từ hô hấp trong cơ thể người.) (b) Explain why birds and mammals need a higher rate of respiration in cold weather than reptiles of the same mass. (Giải thích tại sao chim và thú cần tốc độ hô hấp tế bào cao hơn bò sát cùng khối lượng khi trời lạnh.) ✍️ Lời giải chi tiết theo thang điểm: Chim và thú cần nhiệt lượng từ hô hấp để duy trì thân nhiệt ổn định ~37°C khi trời lạnh . 💡 Kiểm tra bản chất: Vào mùa đông cơ thể nhanh đói hơn vì tế bào phải đốt nhiều glucose hơn qua hô hấp để bù lại lượng nhiệt thất thoát ra môi trường lạnh!",
+      "duration": 97.77,
+      "startTime": 529.19,
+      "endTime": 626.96,
+      "audioUrl": "/audio/lectures/science/b12/s01_b14.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🌿 2. Hô hấp Hiếu khí (Aerobic Respiration)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🌿 2. Aerobic Respiration: Word & Balanced Equations.",
+      "vi": "🌿 2. Hô hấp Hiếu khí (Aerobic Respiration).",
+      "duration": 9.23,
+      "startTime": 626.96,
+      "endTime": 636.19,
+      "audioUrl": "/audio/lectures/science/b12/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Aerobic respiration is like a clean jet engine supplied with plenty of oxygen : every single carbon in glucose is completely oxidised to CO₂ and H₂O inside the mitochondria , releasing maximum energy per fuel molecule.",
+      "vi": "🎯 Hình dung đời thường: Hô hấp hiếu khí (Aerobic respiration) giống như động cơ phản lực được cấp đầy đủ oxy : từng nguyên tử cacbon của glucose đều bị oxy hóa hoàn toàn thành CO₂ và H₂O bên trong ti thể (mitochondria) , giải phóng lượng năng lượng tối đa.",
+      "duration": 34.82,
+      "startTime": 636.19,
+      "endTime": 671.01,
+      "audioUrl": "/audio/lectures/science/b12/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: B12.1 Core #2 & #3: Uses oxygen; word equation glucose + oxygen ➔ carbon dioxide + water . B12.1 Supplement #4: Balanced symbol equation C₆H₁₂O₆ + 6O₂ ➔ 6CO₂ + 6H₂O (remember the 1 : 6 : 6 : 6 coefficients!).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: B12.1 Core #2 & #3: Có dùng oxy; phương trình chữ glucose + oxygen ➔ carbon dioxide + water . B12.1 Supplement #4: Phương trình hóa học cân bằng C₆H₁₂O₆ + 6O₂ ➔ 6CO₂ + 6H₂O (nhớ bộ hệ số vàng 1 : 6 : 6 : 6 !).",
+      "duration": 50.12,
+      "startTime": 671.01,
+      "endTime": 721.13,
+      "audioUrl": "/audio/lectures/science/b12/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never include + energy inside the balanced symbol equation (energy has no chemical symbol!), and double-check that glucose is C₆H₁₂O₆ (not C₆H₁₂O or C₁₂H₂₂O₁₁ ) with 6O₂ , 6CO₂ , and 6H₂O !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không viết thêm + energy vào trong phương trình hóa học ký hiệu vì năng lượng không có công thức hóa học! Kiểm tra kỹ công thức glucose là C₆H₁₂O₆ đi kèm hệ số 6O₂ , 6CO₂ , 6H₂O .",
+      "duration": 37.62,
+      "startTime": 721.13,
+      "endTime": 758.75,
+      "audioUrl": "/audio/lectures/science/b12/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🇬🇧 Official 0654 Definition (B12.1 Core #2):",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Official 0654 Definition (B12.1 Core #2): Aerobic respiration is the chemical reactions in cells that use oxygen to break down nutrient molecules to release energy . It occurs primarily inside the mitochondria and achieves complete oxidation of glucose, releasing a large amount of energy per glucose molecule. 🟦 WORD EQUATION (B12.1 CORE #3): glucose + oxygen ➔ carbon dioxide + water 🟩 BALANCED SYMBOL EQUATION (B12.1 SUPPLEMENT #4): C₆H₁₂O₆ + 6O₂ ➔ 6CO₂ + 6H₂O Stoichiometry Check: 1 mol of glucose ( C₆H₁₂O₆ ) reacts with 6 mol of oxygen gas ( 6O₂ ) to yield 6 mol of carbon dioxide ( 6CO₂ ) and 6 mol of water ( 6H₂O ) — conserving 6 C , 12 H , and 18 O atoms on both sides.",
+      "vi": "🇬🇧 Official 0654 Definition (B12.1 Core #2): The chemical reactions in cells that use oxygen to break down nutrient molecules to release energy. 🇻🇳 Định nghĩa chuẩn: Các phản ứng hóa học trong tế bào có sử dụng khí oxy (oxygen) để phân giải hoàn toàn các phân tử dinh dưỡng (glucose) tại ti thể (mitochondria) , giải phóng một lượng năng lượng rất lớn. 🟦 PHƯƠNG TRÌNH CHỮ / WORD EQUATION (B12.1 CORE #3): glucose + oxygen ➔ carbon dioxide + water (Đường glucose + Khí oxy ➔ Khí carbon dioxide + Nước) 🟩 PHƯƠNG TRÌNH KÝ HIỆU CÂN BẰNG / BALANCED SYMBOL EQUATION (B12.1 SUPPLEMENT #4): C₆H₁₂O₆ + 6O₂ ➔ 6CO₂ + 6H₂O Kiểm tra hệ số cân bằng (1 : 6 : 6 : 6): 1 phân tử glucose ( C₆H₁₂O₆ ) tác dụng với 6O₂ tạo ra 6CO₂ và 6H₂O — bảo toàn chính xác 6 C , 12 H và 18 O ở cả hai vế.",
+      "duration": 127.2,
+      "startTime": 758.75,
+      "endTime": 885.95,
+      "audioUrl": "/audio/lectures/science/b12/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔬 Sự Thích nghi của Ti thể (Mitochondria)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔬 Mitochondria & Cell Adaptation. Highly active cells — such as cardiac muscle cells, skeletal muscle fibres, sperm cells, and ciliated epithelial cells — contain a high density of mitochondria to sustain rapid aerobic ATP release.",
+      "vi": "🔬 Sự Thích nghi của Ti thể (Mitochondria). Các tế bào hoạt động mạnh như tế bào cơ tim, sợi cơ xương, tinh trùng, tế bào gan đều sở hữu mật độ ti thể dày đặc để đáp ứng nhu cầu giải phóng năng lượng hiếu khí liên tục.",
+      "duration": 32.75,
+      "startTime": 885.95,
+      "endTime": 918.7,
+      "audioUrl": "/audio/lectures/science/b12/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧪 Liên hệ Trao đổi Khí (Chuyên đề B11)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🧪 Gas Exchange Link (Topic B11). Aerobic respiration explains why expired air contains less oxygen (~16% vs 21%), more carbon dioxide (~4% vs 0.04%, turning limewater cloudy ), and is warmer and saturated with water vapour!",
+      "vi": "🧪 Liên hệ Trao đổi Khí (Chuyên đề B11). Chính quá trình hô hấp hiếu khí giải thích vì sao không khí thở ra có ít O₂ hơn (~16% so với 21%), nhiều CO₂ hơn (~4% so với 0.04%, làm đục nước vôi trong — limewater cloudy ), ấm hơn và bão hòa hơi nước!",
+      "duration": 44.45,
+      "startTime": 918.7,
+      "endTime": 963.15,
+      "audioUrl": "/audio/lectures/science/b12/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Which equation is the correctly balanced symbol equation for aerobic respiration?",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Which equation is the correctly balanced symbol equation for aerobic respiration? A. C₆H₁₂O₆ + O₂ ➔ CO₂ + H₂O B. 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ C. C₆H₁₂O₆ + 6O₂ ➔ 6CO₂ + 6H₂O D. C₆H₁₂O₆ + 6CO₂ ➔ 6O₂ + 6H₂O ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Option C has the exact reactants ( glucose + oxygen ), exact products ( carbon dioxide + water ), and balanced atoms on both sides ( 6 C, 12 H, 18 O ). Option A is unbalanced; Option B is photosynthesis in reverse!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Which equation is the correctly balanced symbol equation for aerobic respiration? (Phương trình nào dưới đây là phương trình ký hiệu hóa học cân bằng đúng của hô hấp hiếu khí?) A. C₆H₁₂O₆ + O₂ ➔ CO₂ + H₂O B. 6CO₂ + 6H₂O ➔ C₆H₁₂O₆ + 6O₂ C. C₆H₁₂O₆ + 6O₂ ➔ 6CO₂ + 6H₂O D. C₆H₁₂O₆ + 6CO₂ ➔ 6O₂ + 6H₂O ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Đáp án C có đúng chất tham gia ( glucose + oxygen ), đúng sản phẩm và bảo toàn nguyên tử cả hai vế ( 6 C, 12 H, 18 O ). Đáp án A chưa cân bằng; B là phương trình quang hợp!",
+      "duration": 113.02,
+      "startTime": 963.15,
+      "endTime": 1076.17,
+      "audioUrl": "/audio/lectures/science/b12/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "(a) Define aerobic respiration. [2]",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦/🟩 CORE & SUPPLEMENT • Paper 4 Structured [4 marks] (a) Define aerobic respiration . [2](b) Germinating pea seeds are placed in a sealed flask containing clear limewater in a side tube. State and explain the colour change observed in the limewater after 2 hours. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The chemical reactions in cells that use oxygen to break down nutrient molecules [1m] to release energy [1m] . (b) Limewater turns from colourless/clear to cloudy / milky white [1m] because germinating seeds carry out aerobic respiration and release carbon dioxide gas [1m] . 💡 Intuition Check: Notice the two half-marks of the Cambridge definition: (1) chemical reactions in cells using oxygen to break down nutrient molecules + (2) to release energy!",
+      "vi": "BÀI MẪU 2 🟦/🟩 CORE & SUPPLEMENT • Paper 4 Structured [4 marks] (a) Define aerobic respiration. (Phát biểu định nghĩa hô hấp hiếu khí.) (b) Germinating pea seeds are placed in a sealed flask with clear limewater in a side tube. Đặt hạt đậu đang nảy mầm vào bình kín nối với ống đựng nước vôi trong. Nêu và giải thích sự đổi màu của nước vôi trong sau 2 giờ. ✍️ Lời giải chi tiết theo thang điểm: Các phản ứng hóa học trong tế bào sử dụng oxy phân giải chất dinh dưỡng để giải phóng năng lượng . Nước vôi trong hóa đục trắng sữa do hạt nảy mầm hô hấp thải khí CO₂ . 💡 Kiểm tra bản chất: Định nghĩa 2 điểm của Cambridge luôn chia làm 2 vế rõ rệt: (1) phản ứng hóa học trong tế bào dùng oxy phân giải chất dinh dưỡng + (2) giải phóng năng lượng (release energy)!",
+      "duration": 111.92,
+      "startTime": 1076.17,
+      "endTime": 1188.09,
+      "audioUrl": "/audio/lectures/science/b12/s02_b08.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🔥 3. Hô hấp Kỵ khí ở Cơ bắp (Anaerobic Respiration in Muscles)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🔥 3. Anaerobic Respiration in Vigorous Muscles.",
+      "vi": "🔥 3. Hô hấp Kỵ khí ở Cơ bắp.",
+      "duration": 7.55,
+      "startTime": 1188.09,
+      "endTime": 1195.64,
+      "audioUrl": "/audio/lectures/science/b12/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: During an all-out sprint, your muscles demand energy faster than your blood can deliver oxygen. Anaerobic respiration acts like an instant backup generator in the cytoplasm — splitting glucose into lactic acid without oxygen, releasing a small burst of emergency energy.",
+      "vi": "🎯 Hình dung đời thường: Khi chạy nước rút hết tốc lực, cơ bắp đòi hỏi năng lượng nhanh hơn tốc độ máu bơm oxy tới. Hô hấp kỵ khí đóng vai trò máy phát điện dự phòng khẩn cấp ngay tại tế bào chất — bẻ gãy glucose thành lactic acid không cần oxy để cấp bù năng lượng tức thì.",
+      "duration": 37.12,
+      "startTime": 1195.64,
+      "endTime": 1232.76,
+      "audioUrl": "/audio/lectures/science/b12/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: B12.1 Core #6 & #7: Anaerobic respiration releases much less energy per glucose molecule than aerobic respiration; in vigorous muscles: glucose ➔ lactic acid . B12.1 Supplement #5: Chemical reactions in cells breaking down nutrient molecules to release energy without using oxygen .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: B12.1 Core #6 & #7: Giải phóng ít năng lượng hơn rất nhiều trên mỗi phân tử glucose ; phương trình chữ ở cơ: glucose ➔ lactic acid . B12.1 Supplement #5: Phản ứng hóa học trong tế bào phân giải chất dinh dưỡng giải phóng năng lượng không sử dụng oxy .",
+      "duration": 45.23,
+      "startTime": 1232.76,
+      "endTime": 1277.99,
+      "audioUrl": "/audio/lectures/science/b12/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do NOT write + carbon dioxide or + water in the muscle anaerobic word equation! In human muscles, glucose ➔ lactic acid has lactic acid as the ONLY chemical product !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: KHÔNG bao giờ viết thêm + carbon dioxide hay + water vào phương trình kỵ khí ở cơ người! Trong tế bào cơ người, glucose ➔ lactic acid chỉ có DUY NHẤT một sản phẩm là lactic acid !",
+      "duration": 29.08,
+      "startTime": 1277.99,
+      "endTime": 1307.07,
+      "audioUrl": "/audio/lectures/science/b12/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🇬🇧 Official 0654 Definition (B12.1 Supplement #5):",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Official 0654 Definition (B12.1 Supplement #5): Anaerobic respiration is the chemical reactions in cells that break down nutrient molecules to release energy without using oxygen. Energy Yield Rule (B12.1 Core #6): Anaerobic respiration releases much less energy per glucose molecule than aerobic respiration because glucose is only partially (incompletely) broken down in the cytoplasm — most chemical energy remains locked inside the bonds of lactic acid. 🏃 Anaerobic Respiration in Muscles During Vigorous Exercise B12.1 CORE #7 . 🟦 WORD EQUATION IN MUSCLES: glucose ➔ lactic acid During sprinting or heavy exercise, muscles contract so rapidly that the circulatory and respiratory systems cannot deliver oxygen fast enough to meet total energy demand via aerobic respiration alone. Anaerobic respiration supplements ATP supply rapidly without oxygen, producing lactic acid only (zero carbon dioxide gas is formed!).",
+      "vi": "🇬🇧 Official 0654 Definition (B12.1 Supplement #5): The chemical reactions in cells that break down nutrient molecules to release energy without using oxygen. 🇻🇳 Định nghĩa & Hiệu suất năng lượng (B12.1 Core #6): Hô hấp kỵ khí phân giải phân tử dinh dưỡng tại tế bào chất (cytoplasm) mà không sử dụng oxy , do đó giải phóng ít năng lượng hơn rất nhiều trên mỗi phân tử glucose so với hô hấp hiếu khí vì glucose chỉ bị bẻ gãy một phần — phần lớn năng lượng hóa học vẫn bị khóa trong phân tử lactic acid. 🏃 Hô hấp Kỵ khí ở Cơ khi Vận động Cường độ Cao B12.1 CORE #7 . 🟦 PHƯƠNG TRÌNH CHỮ Ở CƠ BẮP (WORD EQUATION): glucose ➔ lactic acid Khi chạy nước rút hoặc lao động gắng sức (vigorous exercise), tim và phổi không thể cung cấp oxy đủ nhanh cho cơ bắp. Tế bào cơ chuyển sang hô hấp kỵ khí để bù đắp năng lượng tức thời, tạo ra duy nhất lactic acid (axit lactic) và không sinh ra bất kỳ chất khí CO₂ nào !",
+      "duration": 131.02,
+      "startTime": 1307.07,
+      "endTime": 1438.09,
+      "audioUrl": "/audio/lectures/science/b12/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Tiêu chí (Feature): Cần sử dụng Oxy ( O₂ )?; Hô hấp Hiếu khí (Aerobic): Có (Uses...",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Feature: Oxygen required?; Aerobic Respiration: Yes (uses O₂ ); Anaerobic Respiration (Muscles): No (without using O₂ ). Feature: Breakdown of glucose; Aerobic Respiration: Complete breakdown; Anaerobic Respiration (Muscles): Incomplete / partial breakdown. Feature: Chemical products; Aerobic Respiration: Carbon dioxide + water; Anaerobic Respiration (Muscles): Lactic acid only (no CO₂ ). Feature: Location in cell; Aerobic Respiration: Mitochondria (and cytoplasm); Anaerobic Respiration (Muscles): Cytoplasm only. Feature: Energy released per glucose; Aerobic Respiration: Large amount; Anaerobic Respiration (Muscles): Much less energy.",
+      "vi": "Tiêu chí (Feature): Cần sử dụng Oxy ( O₂ )?; Hô hấp Hiếu khí (Aerobic): Có (Uses oxygen); Hô hấp Kỵ khí ở Cơ (Muscles): Không. Tiêu chí (Feature): Mức độ phân giải Glucose; Hô hấp Hiếu khí (Aerobic): Phân giải hoàn toàn (Complete); Hô hấp Kỵ khí ở Cơ (Muscles): Phân giải một phần (Incomplete). Tiêu chí (Feature): Sản phẩm hóa học; Hô hấp Hiếu khí (Aerobic): Carbon dioxide ( CO₂ ) + Nước ( H₂O ); Hô hấp Kỵ khí ở Cơ (Muscles): Chỉ Lactic acid (không có CO₂ !). Tiêu chí (Feature): Vị trí trong tế bào; Hô hấp Hiếu khí (Aerobic): Ti thể (Mitochondria); Hô hấp Kỵ khí ở Cơ (Muscles): Tế bào chất (Cytoplasm). Tiêu chí (Feature): Năng lượng / 1 phân tử Glucose; Hô hấp Hiếu khí (Aerobic): Rất lớn (Large amount); Hô hấp Kỵ khí ở Cơ (Muscles): Ít hơn rất nhiều (Much less).",
+      "duration": 115.81,
+      "startTime": 1438.09,
+      "endTime": 1553.9,
+      "audioUrl": "/audio/lectures/science/b12/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Compared with aerobic respiration, how much energy is released per glucose molecule during anae",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ (0654) Compared with aerobic respiration, how much energy is released per glucose molecule during anaerobic respiration in human muscle cells, and what is the chemical product? A. Much more energy | lactic acid and water B. Much less energy | lactic acid only C. Much less energy | lactic acid and carbon dioxide D. The same amount of energy | carbon dioxide and water ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Because glucose is only incompletely broken down without oxygen, anaerobic respiration releases much less energy per glucose molecule and produces lactic acid only in human muscles (B).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ (0654) Compared with aerobic respiration, how much energy is released per glucose molecule during anaerobic respiration in human muscle cells, and what is the chemical product? (So với hô hấp hiếu khí, lượng năng lượng giải phóng trên mỗi phân tử glucose khi hô hấp kỵ khí ở tế bào cơ người là bao nhiêu, và sản phẩm hóa học là gì?) A. Much more energy | lactic acid and water B. Much less energy | lactic acid only C. Much less energy | lactic acid and carbon dioxide D. The same amount of energy | carbon dioxide and water ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Vì glucose chỉ bị phân giải một phần khi thiếu oxy nên hô hấp kỵ khí giải phóng ít năng lượng hơn rất nhiều và ở cơ người chỉ tạo ra duy nhất lactic acid (B).",
+      "duration": 105.82,
+      "startTime": 1553.9,
+      "endTime": 1659.72,
+      "audioUrl": "/audio/lectures/science/b12/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "A sprinter runs a 100 m race in 10.5 seconds. (a) State the word equation for anaerobic respira",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A sprinter runs a 100 m race in 10.5 seconds.(a) State the word equation for anaerobic respiration in the sprinter's leg muscles. [1](b) Explain why the sprinter's muscles use anaerobic respiration during the race, and explain why this pathway cannot sustain running for 5000 m. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) glucose ➔ lactic acid [1m] . (b) During vigorous sprinting, oxygen cannot be supplied to the muscles fast enough to meet total energy demand aerobically [1m] . However, anaerobic respiration releases much less energy per glucose molecule [1m] and causes toxic lactic acid to build up in muscles and blood (lowering pH / causing muscle fatigue) [1m] . 💡 Intuition Check: Anaerobic respiration is fast for a 10-second sprint, but inefficient and acidic — long-distance 5000 m running relies predominantly on aerobic respiration!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A sprinter runs a 100 m race in 10.5 seconds.(a) State the word equation for anaerobic respiration in the sprinter's leg muscles. (b) Explain why the sprinter's muscles use anaerobic respiration during the race, and why this pathway cannot sustain a 5000 m race. ((a) Viết phương trình chữ của hô hấp kỵ khí ở cơ chân vận động viên. (b) Giải thích vì sao cơ phải dùng hô hấp kỵ khí khi chạy 100 m, và vì sao con đường này không thể duy trì cho cự ly 5000 m.) ✍️ Lời giải chi tiết theo thang điểm: (a) glucose ➔ lactic acid . Oxy không kịp cung cấp đủ cho nhu cầu năng lượng tăng vọt . tích tụ lactic acid gây hạ pH và mỏi cơ . 💡 Kiểm tra bản chất: Hô hấp kỵ khí cực nhanh cho 10 giây bứt tốc, nhưng hiệu suất thấp và gây mỏi cơ — chạy bền 5000 m bắt buộc phải dựa chủ yếu vào hô hấp hiếu khí!",
+      "duration": 129.77,
+      "startTime": 1659.72,
+      "endTime": 1789.49,
+      "audioUrl": "/audio/lectures/science/b12/s03_b07.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🩸 4. Hiện tượng Nợ Oxy & Cơ chế Hồi phục tại Gan B12.1 SUPPLEMENT",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🩸 4. Oxygen Debt & Recovery in the Liver B12.1 SUPPLEMENT .",
+      "vi": "🩸 4. Hiện tượng Nợ Oxy & Cơ chế Hồi phục tại Gan B12.1 SUPPLEMENT .",
+      "duration": 11.72,
+      "startTime": 1789.49,
+      "endTime": 1801.21,
+      "audioUrl": "/audio/lectures/science/b12/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Oxygen debt is the biological \"overdraft\" left over after vigorous exercise: lactic acid has piled up in your muscles and blood, so even while standing still at the finish line, your heart keeps racing to courier lactic acid to the liver and your lungs keep heaving deeply to supply the oxygen needed to burn it away!",
+      "vi": "🎯 Hình dung đời thường: Nợ oxy (Oxygen debt) giống như khoản \"thấu chi tín dụng\" để lại sau khi vận động mạnh: axit lactic đã chất đống trong cơ và máu, nên dù bạn đã đứng yên ở vạch đích, tim vẫn phải đập gấp để chở axit lactic về Gan (Liver) và phổi vẫn phải thở sâu dồn dập để lấy thêm oxy đốt sạch đống nợ đó!",
+      "duration": 42.65,
+      "startTime": 1801.21,
+      "endTime": 1843.86,
+      "audioUrl": "/audio/lectures/science/b12/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: B12.1 Supplement #8 & #9 — memorise all 3 recovery bullet points verbatim:(a) continuation of fast heart rate to transport lactic acid in blood from muscles to the liver ;(b) continuation of deeper and faster breathing to supply oxygen ;(c) aerobic respiration of lactic acid in the liver .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: B12.1 Supplement #8 & #9 — thuộc trọn 3 ý trả nợ oxy:(a) continuation of fast heart rate (tiếp tục nhịp tim nhanh) để chở lactic acid trong máu từ cơ về gan ;(b) continuation of deeper and faster breathing (tiếp tục thở sâu và nhanh hơn) để cấp oxy ;(c) aerobic respiration of lactic acid in the liver (hô hấp hiếu khí phân giải lactic acid tại gan).",
+      "duration": 57.36,
+      "startTime": 1843.86,
+      "endTime": 1901.22,
+      "audioUrl": "/audio/lectures/science/b12/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say lactic acid is broken down \"in the muscles\" or \"breathed out at the lungs\"! In 0654 Paper 4, specifying the LIVER as the organ where lactic acid undergoes aerobic respiration is mandatory for full marks!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không viết lactic acid được phân hủy ngay \"trong cơ bắp\" hoặc \"thở ra ngoài qua phổi\"! Đề thi 0654 Paper 4 bắt buộc phải chỉ đích danh cơ quan GAN (LIVER) là nơi diễn ra hô hấp hiếu khí (aerobic respiration) của lactic acid!",
+      "duration": 37.09,
+      "startTime": 1901.22,
+      "endTime": 1938.31,
+      "audioUrl": "/audio/lectures/science/b12/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Nguyên nhân Gây Nợ Oxy (B12.1 Supplement #8):",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "What Causes an Oxygen Debt? (B12.1 Supplement #8): During vigorous exercise, lactic acid builds up in the muscles and blood , lowering tissue pH, reducing enzyme efficiency, and causing muscle fatigue. This creates an oxygen debt — the extra oxygen the body must absorb after exercise finishes to oxidise and remove the accumulated lactic acid.",
+      "vi": "Nguyên nhân Gây Nợ Oxy (B12.1 Supplement #8): Khi vận động mạnh, lactic acid tích tụ trong cơ bắp và máu , làm hạ pH mô cơ, ức chế enzyme và gây mỏi cơ / chuột rút. Sự tích tụ này tạo ra một khoản nợ oxy (oxygen debt) — lượng oxy bổ sung mà cơ thể bắt buộc phải hít vào sau khi ngừng tập để phân giải hoàn toàn lượng lactic acid tồn đọng.",
+      "duration": 49.81,
+      "startTime": 1938.31,
+      "endTime": 1988.12,
+      "audioUrl": "/audio/lectures/science/b12/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "Sơ đồ Chuẩn Mark Scheme: 3 Bước Trả Nợ Oxy (Removal of Oxygen Debt) Sau Khi Tập ...",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "Mark Scheme Flow Diagram: How Oxygen Debt is Removed After Vigorous Exercise",
+      "vi": "Sơ đồ Chuẩn Mark Scheme: 3 Bước Trả Nợ Oxy Sau Khi Tập Nặng",
+      "duration": 11.05,
+      "startTime": 1988.12,
+      "endTime": 1999.17,
+      "audioUrl": "/audio/lectures/science/b12/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "Ba Bước Trả Nợ Oxy Chuẩn Mark Scheme Sau Khi Ngừng Tập (B12.1 Supplement #9)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "Three Mark Scheme Steps: Removal of Oxygen Debt After Exercise (B12.1 Supplement #9). (a) Continuation of fast heart rate: Heart rate remains elevated after exercise stops to pump blood rapidly and transport lactic acid in the blood from the muscles to the liver. (b) Continuation of deeper and faster breathing: Both rate and depth of breathing stay high for several minutes to supply extra oxygen for the aerobic respiration of lactic acid. (c) Aerobic respiration of lactic acid in the liver: Inside the liver , cells use the extra oxygen to aerobically respire lactic acid into harmless carbon dioxide and water, returning blood pH to normal.",
+      "vi": "Ba Bước Trả Nợ Oxy Chuẩn Mark Scheme Sau Khi Ngừng Tập (B12.1 Supplement #9). (a) Continuation of fast heart rate (Duy trì nhịp tim đập nhanh): Nhịp tim vẫn giữ ở mức cao sau khi dừng vận động để bơm máu vận chuyển lactic acid từ cơ bắp về gan. Duy trì nhịp thở sâu và nhanh hơn : Tần số và độ sâu nhịp thở vẫn duy trì cao trong nhiều phút để cung cấp lượng oxy bổ sung cho quá trình hô hấp hiếu khí phân giải lactic acid. (c) Aerobic respiration of lactic acid in the liver (Hô hấp hiếu khí lactic acid tại Gan): Bên trong tế bào gan (liver) , lượng oxy mới nạp được dùng để hô hấp hiếu khí phân giải lactic acid thành khí CO₂ và nước H₂O vô hại, đưa pH máu trở lại bình thường.",
+      "duration": 93.61,
+      "startTime": 1999.17,
+      "endTime": 2092.78,
+      "audioUrl": "/audio/lectures/science/b12/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "Why does a person's heart rate remain high for several minutes after stopping vigorous exercise",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Why does a person's heart rate remain high for several minutes after stopping vigorous exercise? A. To transport carbon dioxide from the lungs to the muscles B. To transport lactic acid in the blood from the muscles to the liver C. To pump lactic acid from the liver to the kidneys for excretion D. To supply anaerobic enzymes from the brain to the muscles ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Directly from B12.1 Supplement #9(a) : continuation of a fast heart rate rapidly circulates blood to transport lactic acid from the muscles to the liver (and also delivers extra oxygen to the liver).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Why does a person's heart rate remain high for several minutes after stopping vigorous exercise? (Tại sao nhịp tim của một người vẫn duy trì ở mức cao trong vài phút sau khi đã ngừng vận động mạnh?) A. To transport carbon dioxide from the lungs to the muscles B. To transport lactic acid in the blood from the muscles to the liver C. To pump lactic acid from the liver to the kidneys for excretion D. To supply anaerobic enzymes from the brain to the muscles ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Theo đúng chuẩn B12.1 Supplement #9(a) : nhịp tim tiếp tục đập nhanh giúp tuần hoàn máu vận chuyển nhanh chóng lactic acid từ cơ bắp về gan để xử lý.",
+      "duration": 98.12,
+      "startTime": 2092.78,
+      "endTime": 2190.9,
+      "audioUrl": "/audio/lectures/science/b12/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "A cyclist pedals vigorously up a steep hill for 2 minutes and then stops to rest. At rest after",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A cyclist pedals vigorously up a steep hill for 2 minutes and then stops to rest. At rest after cycling, her breathing remains deeper and faster than normal and her pulse rate remains elevated.Explain how these two responses remove the oxygen debt built up during the climb. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. During the vigorous climb, lactic acid built up in the muscles and blood causing an oxygen debt [1m] .2. Continuation of fast heart rate transports lactic acid in the blood from the muscles to the liver [1m] .3. Continuation of deeper and faster breathing supplies extra oxygen to the blood [1m] .4. This oxygen is used for the aerobic respiration of lactic acid in the liver (forming carbon dioxide and water) [1m] . 💡 Intuition Check: Notice the teamwork of three organs: Muscles (make lactic acid) ➔ Heart/Blood (transports it) + Lungs (supply extra O₂) ➔ Liver (aerobically respires lactic acid)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A cyclist pedals vigorously up a steep hill for 2 minutes and then stops to rest. At rest after cycling, her breathing remains deeper and faster than normal and her pulse rate remains elevated. Explain how these two responses remove the oxygen debt. (Một vận động viên đạp xe leo dốc gắt trong 2 phút rồi dừng nghỉ. Khi đang nghỉ, nhịp thở vẫn sâu và nhanh hơn bình thường, mạch đập vẫn cao. Giải thích cách hai phản ứng này xóa bỏ khoản nợ oxy.) ✍️ Lời giải chi tiết theo thang điểm: 1. Lactic acid tích tụ trong cơ và máu gây nợ oxy .2. Tim tiếp tục đập nhanh chở lactic acid trong máu từ cơ về gan .3. Thở sâu và nhanh hơn cung cấp thêm oxy vào máu .4. Oxy dùng để hô hấp hiếu khí phân giải lactic acid tại gan . 💡 Kiểm tra bản chất: Hãy nhớ sự phối hợp nhịp nhàng của 3 cơ quan: Cơ bắp (tạo lactic acid) ➔ Tim/Máu (vận chuyển) + Phổi (nạp bù O₂) ➔ Gan (hô hấp hiếu khí xóa sạch lactic acid)!",
+      "duration": 132.13,
+      "startTime": 2190.9,
+      "endTime": 2323.03,
+      "audioUrl": "/audio/lectures/science/b12/s04_b08.mp3"
     }
   ]
 }

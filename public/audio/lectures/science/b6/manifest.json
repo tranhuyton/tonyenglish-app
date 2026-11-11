@@ -1,276 +1,462 @@
 {
   "lectureId": "1d6a6b7b-ae57-404f-9ad1-58b11219b4d1",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
-  "lectureTitle": "B6: Plant nutrition",
-  "totalDuration": 576.39,
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+  "lectureTitle": "B6: Plant Nutrition",
+  "totalDuration": 2349.02,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_photosynthesis": {
-      "start": 1,
-      "end": 1
-    },
-    "sec-photosynthesis": {
-      "start": 1,
-      "end": 1
-    },
-    "sec_glucose_minerals": {
+    "s01_int": {
       "start": 2,
       "end": 4
     },
-    "sec-glucose-minerals": {
-      "start": 2,
-      "end": 4
-    },
-    "sec_glucose_uses": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-glucose-uses": {
-      "start": 3,
-      "end": 3
-    },
-    "sec_minerals": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-minerals": {
-      "start": 4,
-      "end": 4
-    },
-    "sec_leaf_anatomy": {
-      "start": 5,
-      "end": 10
-    },
-    "sec-leaf-anatomy": {
-      "start": 5,
-      "end": 10
-    },
-    "sec_leaf_cuticle": {
-      "start": 6,
-      "end": 6
-    },
-    "sec-leaf-cuticle": {
-      "start": 6,
-      "end": 6
-    },
-    "sec_leaf_palisade": {
-      "start": 7,
-      "end": 7
-    },
-    "sec-leaf-palisade": {
-      "start": 7,
-      "end": 7
-    },
-    "sec_leaf_spongy": {
-      "start": 8,
-      "end": 8
-    },
-    "sec-leaf-spongy": {
-      "start": 8,
-      "end": 8
-    },
-    "sec_leaf_vein": {
+    "s01_wex": {
       "start": 9,
-      "end": 9
-    },
-    "sec-leaf-vein": {
-      "start": 9,
-      "end": 9
-    },
-    "sec_leaf_stomata": {
-      "start": 10,
       "end": 10
     },
-    "sec-leaf-stomata": {
-      "start": 10,
+    "s01_hdr": {
+      "start": 1,
       "end": 10
     },
-    "sec_limiting_factors": {
-      "start": 11,
-      "end": 13
-    },
-    "sec-limiting-factors": {
-      "start": 11,
-      "end": 13
-    },
-    "sec_limiting_detail": {
+    "s02_int": {
       "start": 12,
-      "end": 12
+      "end": 14
     },
-    "sec-limiting-detail": {
-      "start": 12,
-      "end": 12
+    "s02_wex": {
+      "start": 17,
+      "end": 18
     },
-    "sec_hydrogencarbonate": {
-      "start": 13,
-      "end": 13
+    "s02_hdr": {
+      "start": 11,
+      "end": 18
     },
-    "sec-hydrogencarbonate": {
-      "start": 13,
-      "end": 13
+    "s03_int": {
+      "start": 20,
+      "end": 22
+    },
+    "s03_grp04": {
+      "start": 23,
+      "end": 25
+    },
+    "s03_wex": {
+      "start": 26,
+      "end": 27
+    },
+    "s03_hdr": {
+      "start": 19,
+      "end": 27
+    },
+    "s04_int": {
+      "start": 29,
+      "end": 31
+    },
+    "s04_wex": {
+      "start": 34,
+      "end": 35
+    },
+    "s04_hdr": {
+      "start": 28,
+      "end": 35
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B6: Quang hợp & Dinh dưỡng Thực vật",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B6: Plant Nutrition. Plants are autotrophic organisms that manufacture their own food through photosynthesis. In this topic, we master the photosynthetic equations, the fate of synthesized glucose, essential mineral ions, leaf anatomy adaptations, and limiting factors.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B6: Dinh dưỡng Thực vật và Quang hợp. Thực vật là sinh vật tự dưỡng, tự tổng hợp thức ăn qua quang hợp. Trong chuyên đề này, chúng ta sẽ làm chủ phương trình quang hợp, số phận của phân tử glucose, ion khoáng thiết yếu, cấu trúc thích nghi của lá cây và các yếu tố giới hạn.",
-      "duration": 44.39,
+      "title": "B6: Plant Nutrition (Dinh dưỡng Thực vật & Quang hợp)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B6 • Plant Biology Plant Nutrition & Photosynthesis. Cambridge IGCSE Co-ordinated Sciences (0654) • Autotrophic Synthesis, Leaf Anatomy & Factors.",
+      "vi": "Topic B6 • Sinh học Thực vật (Song ngữ) B6: Plant Nutrition (Dinh dưỡng Thực vật & Quang hợp). Cambridge IGCSE Co-ordinated Sciences (0654) • Phương trình Quang hợp, Muối khoáng, Giải phẫu Lá & Trao đổi Khí.",
+      "duration": 35.03,
       "startTime": 0.0,
-      "endTime": 44.39,
+      "endTime": 35.03,
       "audioUrl": "/audio/lectures/science/b6/intro.mp3"
     },
     {
-      "id": "sec_photosynthesis",
-      "title": "1. Quá trình & Phương trình Quang hợp (Photosynthesis Overview)",
-      "selector": "#sec-photosynthesis",
-      "en": "Section 1 defines photosynthesis: the process by which plants synthesise carbohydrates from raw materials (carbon dioxide and water) using light energy. Word equation: carbon dioxide plus water in the presence of light and chlorophyll produces glucose plus oxygen. Balanced chemical equation: 6CO₂ + 6H₂O yields C₆H₁₂O₆ + 6O₂.",
-      "vi": "Mục một định nghĩa quang hợp: là quá trình thực vật tổng hợp carbohydrate từ nguyên liệu vô cơ (carbon dioxide và nước) bằng năng lượng ánh sáng. Phương trình chữ: carbon dioxide cộng nước, với ánh sáng và diệp lục, tạo ra glucose cộng oxy. Phương trình hóa học cân bằng: 6CO2 cộng 6H2O tạo ra C6H12O6 cộng 6O2.",
-      "duration": 51.98,
-      "startTime": 44.39,
-      "endTime": 96.37,
-      "audioUrl": "/audio/lectures/science/b6/sec_photosynthesis.mp3"
+      "id": "s01_hdr",
+      "title": "1. Quá trình Quang hợp, Phương trình & Thí nghiệm Tinh bột (Photosynthesis & Controls)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 🟩 SUPPLEMENT 1. The Photosynthesis Process & Equations.",
+      "vi": "🟦 CORE 🟩 SUPPLEMENT 1. Quá trình Quang hợp, Phương trình & Thí nghiệm Tinh bột (Photosynthesis & Controls).",
+      "duration": 13.49,
+      "startTime": 35.03,
+      "endTime": 48.52,
+      "audioUrl": "/audio/lectures/science/b6/s01_hdr.mp3"
     },
     {
-      "id": "sec_glucose_minerals",
-      "title": "2. Sử dụng Glucose & Khoáng chất Thiết yếu (Glucose & Minerals Overview)",
-      "selector": "#sec-glucose-minerals",
-      "en": "Section 2 covers the utilisation of glucose and essential plant minerals: Glucose is converted into storage starch, structural cellulose, sucrose for phloem transport, or oxidised in respiration. Plants absorb nitrate ions for amino acid synthesis and magnesium ions to build chlorophyll.",
-      "vi": "Mục hai phân tích việc sử dụng glucose và các khoáng chất thiết yếu: Glucose được chuyển hóa thành tinh bột dự trữ, cellulose tạo thành tế bào, sucrose vận chuyển trong mạch rây hoặc oxy hóa trong hô hấp. Cây hấp thu ion nitrat để tổng hợp amino acid và ion magie để tạo diệp lục.",
-      "duration": 70.43,
-      "startTime": 96.37,
-      "endTime": 166.8,
-      "audioUrl": "/audio/lectures/science/b6/sec_glucose_minerals.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a green leaf cell as a solar-powered carbohydrate kitchen : green chlorophyll inside chloroplasts captures sunlight and locks that energy into the chemical bonds of glucose made from CO₂ and H₂O — and wiping old starch away in the dark ( de-starching ) lets iodine prove fresh photosynthesis occurred!",
+      "vi": "🎯 Hình dung đời thường: Hãy ví mỗi tế bào thịt lá xanh như một căn bếp tổng hợp đường chạy bằng điện mặt trời : sắc tố diệp lục (chlorophyll) trong lục lạp thu ánh sáng rồi khóa nguồn năng lượng đó vào liên kết hóa học của glucose nấu từ CO₂ và H₂O — còn việc ủ tối 24–48h ( khử tinh bột - de-starching ) giúp xóa sạch dấu vết cũ để màu xanh đen với iodine chứng minh đợt quang hợp mới!",
+      "duration": 49.3,
+      "startTime": 48.52,
+      "endTime": 97.82,
+      "audioUrl": "/audio/lectures/science/b6/s01_b01.mp3"
     },
     {
-      "id": "sec_glucose_uses",
-      "title": "🍬 Fate of Glucose in Plants (Số phận Phân tử Glucose)",
-      "selector": "#sec-glucose-uses",
-      "en": "Uses of glucose: Starch is an insoluble storage polymer stored in chloroplasts and tubers without exerting osmotic effects. Cellulose builds cell walls. Respiration breaks down glucose to release energy. Sucrose is the transport carbohydrate translocated in phloem sieve tubes. Nectar attracts pollinators.",
-      "vi": "Số phận của glucose: Tinh bột là polymer dự trữ không tan trong lục lạp và củ rễ, không gây áp suất thẩm thấu. Cellulose xây dựng thành tế bào. Hô hấp tế bào phân giải glucose để giải phóng ATP. Sucrose là dạng đường vận chuyển trong mạch rây. Mật hoa thu hút côn trùng thụ phấn.",
-      "duration": 43.02,
-      "startTime": 166.8,
-      "endTime": 209.82,
-      "audioUrl": "/audio/lectures/science/b6/sec_glucose_uses.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Connect Core (B6.1.1–B6.1.4) & Supplement (B6.1.5–B6.1.6): Word equation: carbon dioxide + water → glucose + oxygen (light & chlorophyll). Symbol equation: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ . Chlorophyll transfers light energy into chemical energy . Controls (B6.1.4): variegated leaf (chlorophyll), foil mask (light), soda lime/KOH (CO₂), tested via boiling water → hot ethanol in water bath → warm water → iodine (blue-black).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Liên kết chặt chẽ Core (B6.1.1–B6.1.4) & Supplement (B6.1.5–B6.1.6): Phương trình chữ: carbon dioxide + water → glucose + oxygen (ánh sáng & diệp lục). Phương trình ký hiệu: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ . Diệp lục chuyển hóa quang năng thành hóa năng . Thí nghiệm đối chứng (B6.1.4): lá đốm (diệp lục), băng giấy đen/giấy bạc (ánh sáng), KOH/vôi xút (hút CO₂), kiểm tra qua 4 bước nước sôi → cồn nóng cách thủy → nước ấm → iodine.",
+      "duration": 74.72,
+      "startTime": 97.82,
+      "endTime": 172.54,
+      "audioUrl": "/audio/lectures/science/b6/s01_b02.mp3"
     },
     {
-      "id": "sec_minerals",
-      "title": "🌾 Essential Mineral Ions (Ion Khoáng Thiết yếu)",
-      "selector": "#sec-minerals",
-      "en": "Essential mineral ions: Nitrate ions supply nitrogen to build amino acids and proteins; deficiency causes stunted growth and yellow older leaves. Magnesium ions are the central atom in chlorophyll; deficiency causes chlorosis, resulting in yellow leaves with green veins.",
-      "vi": "Ion khoáng thiết yếu: Ion nitrat cung cấp nguyên tố nitơ để tổng hợp amino acid và protein; thiếu nitrat cây bị còi cọc và vàng lá già. Ion magie là nguyên tử trung tâm của phân tử diệp lục; thiếu magie cây bị bệnh úa vàng (chlorosis) làm lá mất màu xanh.",
-      "duration": 35.37,
-      "startTime": 209.82,
-      "endTime": 245.19,
-      "audioUrl": "/audio/lectures/science/b6/sec_minerals.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never heat ethanol over a naked Bunsen flame (ethanol is highly flammable — use a hot water bath!), and never say chlorophyll \"makes energy\" (it transfers light energy into chemical energy ).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm đun ống cồn ethanol trực tiếp trên ngọn lửa đèn cồn (ethanol cực dễ cháy — bắt buộc đun cách thủy trong cốc nước nóng!), và không bao giờ viết diệp lục \"tạo ra năng lượng\" (chỉ chuyển hóa năng lượng ánh sáng thành năng lượng hóa học ).",
+      "duration": 31.51,
+      "startTime": 172.54,
+      "endTime": 204.05,
+      "audioUrl": "/audio/lectures/science/b6/s01_b03.mp3"
     },
     {
-      "id": "sec_leaf_anatomy",
-      "title": "3. Cấu tạo Giải phẫu Lá cây (Leaf Anatomy Overview)",
-      "selector": "#sec-leaf-anatomy",
-      "en": "Section 3 examines dicotyledonous leaf adaptations: The broad, thin blade maximizes sunlight capture and shortens gas diffusion pathways.",
-      "vi": "Mục ba khảo sát giải phẫu thích nghi của lá cây hai lá mầm: Phiến lá rộng và mỏng giúp hấp thu tối đa ánh sáng mặt trời và rút ngắn quãng đường khuếch tán khí.",
-      "duration": 65.42,
-      "startTime": 245.19,
-      "endTime": 310.61,
-      "audioUrl": "/audio/lectures/science/b6/sec_leaf_anatomy.mp3"
+      "id": "s01_b04",
+      "title": "Quang hợp - Photosynthesis (B6.1.1):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Photosynthesis is the process by which plants synthesise carbohydrates from raw materials (carbon dioxide and water) using light energy.",
+      "vi": "Quang hợp - Photosynthesis (B6.1.1): Quá trình thực vật tổng hợp carbohydrate từ các nguyên liệu thô ( carbon dioxide và nước ) nhờ sử dụng năng lượng ánh sáng . Sắc tố xanh diệp lục (chlorophyll) nằm trong lục lạp (chloroplasts - B6.1.3).",
+      "duration": 27.0,
+      "startTime": 204.05,
+      "endTime": 231.05,
+      "audioUrl": "/audio/lectures/science/b6/s01_b04.mp3"
     },
     {
-      "id": "sec_leaf_cuticle",
-      "title": "💧 Cuticle & Upper Epidermis (Lớp Cutin & Biểu bì Trên)",
-      "selector": "#sec-leaf-cuticle",
-      "en": "The waxy cuticle is a waterproof transparent layer that prevents water loss by evaporation. The upper epidermis consists of transparent cells without chloroplasts, letting light penetrate into the palisade layer below.",
-      "vi": "Lớp cutin sáp không thấm nước giúp ngăn ngừa mất nước do bốc hơi. Biểu bì trên gồm một lớp tế bào trong suốt không chứa lục lạp, cho phép ánh sáng chiếu xuyên qua thẳng xuống tầng mô giậu bên dưới.",
-      "duration": 25.38,
-      "startTime": 310.61,
-      "endTime": 335.99,
-      "audioUrl": "/audio/lectures/science/b6/sec_leaf_cuticle.mp3"
+      "id": "s01_b05",
+      "title": "ánh sáng (light)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🟦 Core Word Equation carbon dioxide + water → glucose + oxygen. Condition: In the presence of light and chlorophyll.",
+      "vi": "🟦 Core • Phương trình Chữ (Word Equation - B6.1.2) carbon dioxide + water → glucose + oxygen. Điều kiện bắt buộc: Có mặt ánh sáng (light) và diệp lục (chlorophyll).",
+      "duration": 24.1,
+      "startTime": 231.05,
+      "endTime": 255.15,
+      "audioUrl": "/audio/lectures/science/b6/s01_b05.mp3"
     },
     {
-      "id": "sec_leaf_palisade",
-      "title": "☀️ Palisade Mesophyll (Mô giậu Quang hợp)",
-      "selector": "#sec-leaf-palisade",
-      "en": "Palisade mesophyll consists of tall, vertically packed columnar cells containing the highest concentration of chloroplasts. Positioned at the top of the leaf, it is the primary site of photosynthesis.",
-      "vi": "Mô giậu gồm các tế bào hình cột xếp khít thẳng đứng chứa mật độ lục lạp cao nhất lá cây. Nằm ngay sát mặt trên của lá, đây là nơi diễn ra phần lớn quá trình quang hợp.",
-      "duration": 23.39,
-      "startTime": 335.99,
-      "endTime": 359.38,
-      "audioUrl": "/audio/lectures/science/b6/sec_leaf_palisade.mp3"
+      "id": "s01_b06",
+      "title": "Chuyển hóa năng lượng:",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🟩 Supplement Balanced Chemical Equation 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. Energy Transfer: Chlorophyll transfers energy from light into chemical energy in carbohydrate molecules.",
+      "vi": "🟩 Supplement • Phương trình Hóa học Cân bằng (B6.1.5 – B6.1.6) 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ . Chuyển hóa năng lượng: Diệp lục chuyển hóa năng lượng ánh sáng thành năng lượng hóa học tích trữ trong phân tử carbohydrate.",
+      "duration": 32.53,
+      "startTime": 255.15,
+      "endTime": 287.68,
+      "audioUrl": "/audio/lectures/science/b6/s01_b06.mp3"
     },
     {
-      "id": "sec_leaf_spongy",
-      "title": "💨 Spongy Mesophyll (Mô xốp Khí khổng)",
-      "selector": "#sec-leaf-spongy",
-      "en": "Spongy mesophyll features loosely arranged rounded cells with large intercellular air spaces. These air spaces allow rapid diffusion of carbon dioxide and oxygen between stomata and photosynthetic cells.",
-      "vi": "Mô xốp gồm các tế bào tròn xếp lỏng lẻo tạo nên nhiều khoảng gian bào lớn. Các khoang khí này cho phép khí CO2 và O2 khuếch tán nhanh chóng giữa khí khổng và các tế bào quang hợp.",
-      "duration": 24.86,
-      "startTime": 359.38,
-      "endTime": 384.24,
-      "audioUrl": "/audio/lectures/science/b6/sec_leaf_spongy.mp3"
+      "id": "s01_b07",
+      "title": "Khử tinh bột (De-starching):",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🟦 Core Practicals • Investigating the Need for Chlorophyll, Light & CO₂ (B6.1.4) 1. De-starching: Place the potted plant in a dark cupboard for 24–48 h first so pre-existing leaf starch is used up. 2. 4-Step Iodine Starch Test: Boil leaf in water (kills cells & breaks membranes) → heat in ethanol in a hot water bath with no naked flame (removes green chlorophyll safely) → dip in warm water (softens leaf) → add iodine solution (turns blue-black where starch was made; stays yellow-brown if absent). 3. Experimental Controls: Use a variegated leaf (green vs white areas) for chlorophyll; clip black paper / aluminium foil over part of a leaf for light; enclose a leaf with soda lime / potassium hydroxide (KOH) to absorb CO₂ vs a control leaf with air/ NaHCO₃.",
+      "vi": "🟦 Core Practicals • Khảo sát Vai trò của Diệp lục, Ánh sáng & CO₂ (B6.1.4) • Khử tinh bột (De-starching): Ủ cây trong buồng tối 24–48 giờ trước thí nghiệm để dùng hết tinh bột cũ.• Quy trình 4 bước thử tinh bột: Đun lá trong nước sôi (giết tế bào, phá màng) → đun trong cồn ethanol nóng bằng bể cách thủy không dùng lửa trần (tẩy sạch màu xanh diệp lục an toàn) → nhúng nước ấm (làm mềm lá) → nhỏ dung dịch iodine (hóa xanh đen / blue-black nếu có tinh bột; giữ màu vàng nâu / yellow-brown nếu không có).• 3 Thí nghiệm đối chứng: Dùng lá đốm (variegated leaf) kiểm tra diệp lục; kẹp băng giấy đen / giấy bạc che một phần lá kiểm tra ánh sáng; bọc lá trong túi chứa vôi xút (soda lime) / KOH hấp thụ hết CO₂ so với lá đối chứng đủ CO₂.",
+      "duration": 112.14,
+      "startTime": 287.68,
+      "endTime": 399.82,
+      "audioUrl": "/audio/lectures/science/b6/s01_b07.mp3"
     },
     {
-      "id": "sec_leaf_vein",
-      "title": "🌿 Vascular Bundle (Bó Mạch: Gỗ & Rây)",
-      "selector": "#sec-leaf-vein",
-      "en": "The vascular bundle contains xylem vessels delivering water and mineral ions from roots to mesophyll cells, and phloem sieve tubes translocating sucrose and amino acids away from the leaf to growing sinks.",
-      "vi": "Bó mạch dẫn gồm mạch gỗ (xylem) vận chuyển nước và ion khoáng từ rễ lên mô lá, và mạch rây (phloem) vận chuyển đường sucrose và amino acid từ lá đến các cơ quan dự trữ và sinh trưởng.",
-      "duration": 24.86,
-      "startTime": 384.24,
-      "endTime": 409.1,
-      "audioUrl": "/audio/lectures/science/b6/sec_leaf_vein.mp3"
+      "id": "s01_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ A destarched variegated leaf has a strip of black paper clipped across both green and white regions and is left in bright light for 6 hours. After boiling in water and hot ethanol, iodine solution is added. Which region turns blue-black? A. Uncovered white region only B. Covered green region only C. Uncovered green region only D. Both uncovered green and uncovered white regions ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Photosynthesis requires BOTH light and chlorophyll (plus CO₂ and water). Only the uncovered green region has chlorophyll and receives light to synthesise glucose and store starch, turning iodine blue-black (Option C).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 2 MCQ A destarched variegated leaf has a strip of black paper clipped across both green and white regions and is left in bright light for 6 hours. After boiling in water and hot ethanol, iodine solution is added. Which region turns blue-black? (Một chiếc lá đốm đã khử tinh bột được kẹp một dải giấy đen vắt ngang cả vùng xanh lẫn vùng trắng rồi phơi sáng mạnh 6 giờ. Sau khi đun nước sôi, tẩy màu bằng ethanol nóng và nhỏ dung dịch iodine, vùng nào chuyển màu xanh đen?) A. Uncovered white region only B. Covered green region only C. Uncovered green region only D. Both uncovered green and uncovered white regions ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Quang hợp đòi hỏi ĐỒNG THỜI cả ánh sáng lẫn diệp lục (cùng CO₂ và nước). Chỉ duy nhất vùng lá xanh không bị che vừa có diệp lục vừa nhận được ánh sáng để tạo glucose và tích lũy tinh bột làm iodine hóa xanh đen (Đáp án C).",
+      "duration": 115.77,
+      "startTime": 399.82,
+      "endTime": 515.59,
+      "audioUrl": "/audio/lectures/science/b6/s01_b08.mp3"
     },
     {
-      "id": "sec_leaf_stomata",
-      "title": "🚪 Stomata & Guard Cells (Khí khổng & Tế bào Khí khổng)",
-      "selector": "#sec-leaf-stomata",
-      "en": "Stomata are microscopic pores mainly on the lower epidermis, bordered by paired guard cells. Guard cells swell with water to open stomata for gas exchange and shrink to close them, preventing excessive transpiration.",
-      "vi": "Khí khổng là các lỗ hiển vi tập trung ở biểu bì dưới, được đóng mở bởi cặp tế bào hình hạt đậu. Tế bào hạt đậu trương nước làm mở khí khổng để trao đổi khí và xẹp lại khi mất nước để hạn chế thoát hơi nước.",
-      "duration": 26.61,
-      "startTime": 409.1,
-      "endTime": 435.71,
-      "audioUrl": "/audio/lectures/science/b6/sec_leaf_stomata.mp3"
+      "id": "s01_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State the balanced symbol equation for photosynthesis. [2](b) State the energy transfer carried out by chlorophyll during photosynthesis. [1](c) In a leaf starch test, explain why the leaf is boiled in ethanol and state one safety precaution. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (correct chemical formulae [1m]; balanced with 6, 6, 1, 6 [1m]). (b) Transfers energy from light into energy in chemicals (for carbohydrate synthesis) [1m]. (c) Dissolves/removes green chlorophyll so the iodine colour change is clearly visible [1m]; heat ethanol in a hot water bath with no naked flame because ethanol is flammable [1m]. 💡 Intuition Check: Check both halves of your symbol equation (6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂) and remember: hot ethanol strips green pigment safely inside a water bath.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State the balanced symbol equation for photosynthesis. (b) State the energy transfer carried out by chlorophyll during photosynthesis. (c) In a leaf starch test, explain why the leaf is boiled in ethanol and state one safety precaution. ((a) Viết phương trình hóa học cân bằng của quang hợp. (b) Nêu sự chuyển hóa năng lượng do diệp lục thực hiện. (c) Trong phép thử tinh bột ở lá, giải thích vì sao phải đun lá trong ethanol và nêu một quy tắc an toàn. ) ✍️ Lời giải chi tiết theo thang điểm: (a) 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (đúng công thức hóa học ; cân bằng đúng hệ số 6, 6, 1, 6 ). (b) Chuyển hóa năng lượng từ ánh sáng thành năng lượng hóa học để tổng hợp carbohydrate . (c) Hòa tan/tẩy sạch diệp lục (chlorophyll) màu xanh để nhìn rõ màu của iodine ; bắt buộc đun ống ethanol trong bể cách thủy nước nóng, tắt mọi ngọn lửa trần vì ethanol rất dễ cháy . 💡 Kiểm tra bản chất: Luôn kiểm tra hệ số cân bằng \"6-6-1-6\" và nhớ nguyên tắc an toàn phòng thí nghiệm: đun ethanol cách thủy để tẩy sạch màu xanh diệp lục.",
+      "duration": 160.61,
+      "startTime": 515.59,
+      "endTime": 676.2,
+      "audioUrl": "/audio/lectures/science/b6/s01_b09.mp3"
     },
     {
-      "id": "sec_limiting_factors",
-      "title": "4. Yếu tố Giới hạn & Chất Chỉ thị (Limiting Factors Overview)",
-      "selector": "#sec-limiting-factors",
-      "en": "Section 4 investigates environmental factors that limit the rate of photosynthesis: light intensity, carbon dioxide concentration, and temperature, alongside hydrogencarbonate indicator experiments.",
-      "vi": "Mục bốn phân tích các yếu tố môi trường giới hạn tốc độ quang hợp: cường độ ánh sáng, nồng độ CO2 và nhiệt độ, cùng thí nghiệm chất chỉ thị hydrogencarbonate.",
-      "duration": 62.27,
-      "startTime": 435.71,
-      "endTime": 497.98,
-      "audioUrl": "/audio/lectures/science/b6/sec_limiting_factors.mp3"
+      "id": "s02_hdr",
+      "title": "2. Số phận của Glucose & Khoáng chất Thiết yếu (Glucose Uses & Minerals)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟩 SUPPLEMENT 2. Fate of Glucose & Essential Plant Minerals.",
+      "vi": "🟩 SUPPLEMENT 2. Số phận của Glucose & Khoáng chất Thiết yếu.",
+      "duration": 10.33,
+      "startTime": 676.2,
+      "endTime": 686.53,
+      "audioUrl": "/audio/lectures/science/b6/s02_hdr.mp3"
     },
     {
-      "id": "sec_limiting_detail",
-      "title": "☀️ Limiting Factors (Các Yếu tố Giới hạn)",
-      "selector": "#sec-limiting-detail",
-      "en": "A limiting factor is something present in the environment in such short supply that it restricts life processes. Increasing light intensity or carbon dioxide concentration increases photosynthetic rate until another factor becomes limiting. Temperature increases rate up to the optimum before enzymes denature.",
-      "vi": "Yếu tố giới hạn là yếu tố có nồng độ thấp nhất trong môi trường gây kìm hãm tốc độ phản ứng. Tăng cường độ ánh sáng hoặc nồng độ CO2 sẽ làm tăng tốc độ quang hợp cho đến khi một yếu tố khác trở thành yếu tố giới hạn. Nhiệt độ làm tăng tốc độ cho tới nhiệt độ tối ưu trước khi enzyme bị biến tính.",
-      "duration": 37.38,
-      "startTime": 497.98,
-      "endTime": 535.36,
-      "audioUrl": "/audio/lectures/science/b6/sec_limiting_detail.mp3"
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of newly made glucose as freshly minted cash : spend some right away in mitochondria ( respiration ), lock surplus in an osmotic-safe vault (insoluble starch ), wire cash through phloem pipes (soluble sucrose ), build walls ( cellulose ), or offer sweet rewards to pollinators ( nectar ) — while adding soil NO₃⁻ for proteins and Mg²⁺ for chlorophyll!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi phân tử glucose vừa ra lò như tiền mặt mới in : tiêu ngay một phần ở ti thể ( hô hấp - respiration ), cất phần dư vào két sắt an toàn không gây hút nước ( tinh bột - starch không tan), chuyển khoản đi xa qua mạch rây (đường sucrose ), xây tường rào ( cellulose ), hoặc làm quà ngọt mời côn trùng thụ phấn ( mật hoa - nectar ) — đồng thời bổ sung NO₃⁻ tạo đạm và Mg²⁺ tạo diệp lục!",
+      "duration": 54.75,
+      "startTime": 686.53,
+      "endTime": 741.28,
+      "audioUrl": "/audio/lectures/science/b6/s02_b01.mp3"
     },
     {
-      "id": "sec_hydrogencarbonate",
-      "title": "🧪 Hydrogencarbonate Indicator (Chỉ thị Hydrogencarbonate)",
-      "selector": "#sec-hydrogencarbonate",
-      "en": "Hydrogencarbonate indicator detects carbon dioxide levels: In bright light, photosynthesis exceeds respiration, consuming CO2 and turning the indicator purple. In darkness, only respiration occurs, producing CO2 and turning the indicator yellow. In dim light at compensation point, rates are equal and the indicator remains red.",
-      "vi": "Chỉ thị hydrogencarbonate phát hiện nồng độ CO2: Khi có ánh sáng mạnh, quang hợp mạnh hơn hô hấp làm giảm CO2, dung dịch hóa tím. Trong bóng tối, chỉ có hô hấp sinh ra CO2, dung dịch hóa vàng. Trong ánh sáng yếu tại điểm bù, tốc độ bằng nhau nên dung dịch giữ màu đỏ.",
-      "duration": 41.03,
-      "startTime": 535.36,
-      "endTime": 576.39,
-      "audioUrl": "/audio/lectures/science/b6/sec_hydrogencarbonate.mp3"
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Master all 5 carbohydrate uses (B6.1.7a–e: starch store, cellulose cell walls, glucose in respiration, sucrose in phloem, nectar for insect pollination) plus the 2 mineral ions (B6.1.8: nitrate ions → making amino acids & proteins; magnesium ions → making chlorophyll ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc đủ 5 vai trò carbohydrate (B6.1.7a–e: dự trữ starch , xây vách cellulose , cung cấp năng lượng qua respiration , vận chuyển dạng sucrose trong phloem, tạo nectar thu hút côn trùng thụ phấn) cùng 2 ion khoáng (B6.1.8: nitrate ions → tạo amino acids ; magnesium ions → tạo chlorophyll ).",
+      "duration": 53.84,
+      "startTime": 741.28,
+      "endTime": 795.12,
+      "audioUrl": "/audio/lectures/science/b6/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do NOT confuse transport sugar with storage sugar: plants transport sucrose in the phloem and store insoluble starch in cells — never the reverse!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không nhầm đường vận chuyển với chất dự trữ: cây vận chuyển sucrose hòa tan trong mạch rây (phloem) và dự trữ tinh bột (starch) không tan trong tế bào!",
+      "duration": 25.23,
+      "startTime": 795.12,
+      "endTime": 820.35,
+      "audioUrl": "/audio/lectures/science/b6/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🍬 5 Hướng Sử dụng Carbohydrate (B6.1.7a–e)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🍬 Fate of Glucose: Storage, Structure & Transport (B6.1.7). Starch: Insoluble polymeric store of energy in chloroplasts and storage organs. Exerts no osmotic effect on cells. Cellulose: Structural polymer used to build robust cell walls. Respiration: Oxidised in mitochondria to yield ATP. Sucrose: Transport carbohydrate in phloem sieve tubes. Nectar: Sugary solution to attract pollinating insects.",
+      "vi": "🍬 5 Hướng Sử dụng Carbohydrate (B6.1.7a–e). Tinh bột (Starch): Kho dự trữ năng lượng không tan ở lục lạp, củ, hạt — không gây hiệu ứng thẩm thấu lên tế bào. Cellulose: Trùng hợp thành sợi bền chắc xây dựng thành tế bào (cell walls). Hô hấp (Respiration): Phân giải glucose giải phóng năng lượng cho các hoạt động sống của cây. Sucrose: Đường hòa tan dùng để vận chuyển trong mạch rây. Mật hoa (Nectar): Dịch đường ngọt ở hoa giúp thu hút côn trùng thụ phấn.",
+      "duration": 67.9,
+      "startTime": 820.35,
+      "endTime": 888.25,
+      "audioUrl": "/audio/lectures/science/b6/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🌾 Các Ion Khoáng Thiết yếu (B6.1.8a–b)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🌾 Essential Mineral Ions. Mineral Ion: Nitrate ions (NO₃⁻); Biological Function: Supplies nitrogen to synthesize amino acids and proteins for growth; Deficiency Symptoms: Stunted growth; yellow older leaves. Mineral Ion: Magnesium ions (Mg²⁺); Biological Function: Central constituent atom in chlorophyll; Deficiency Symptoms: Chlorosis (yellow leaves with green veins).",
+      "vi": "🌾 Các Ion Khoáng Thiết yếu (B6.1.8a–b). Ion khoáng: Ion Nitrat ( NO₃⁻ ); Chức năng sinh học: Cung cấp Nitơ tổng hợp amino acids và protein cho sinh trưởng; Triệu chứng thiếu hụt: Cây còi cọc (stunted growth) , vàng lá già. Ion khoáng: Ion Magie ( Mg²⁺ ); Chức năng sinh học: Nguyên tử trung tâm để tổng hợp diệp lục (chlorophyll); Triệu chứng thiếu hụt: Vàng lá gân xanh (chlorosis) , giảm quang hợp.",
+      "duration": 63.0,
+      "startTime": 888.25,
+      "endTime": 951.25,
+      "audioUrl": "/audio/lectures/science/b6/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which pair correctly states the form in which carbohydrate is transported in the phloem and the mineral ion needed to make amino acids? A. Phloem carbohydrate: Starch | Mineral ion for amino acids: Magnesium B. Phloem carbohydrate: Sucrose | Mineral ion for amino acids: Nitrate C. Phloem carbohydrate: Glucose | Mineral ion for amino acids: Magnesium D. Phloem carbohydrate: Cellulose | Mineral ion for amino acids: Nitrate ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Carbohydrates are translocated through phloem sieve tubes as soluble sucrose , and nitrate ions (NO₃⁻) provide nitrogen to combine with carbohydrate skeletons to make amino acids (Option B).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Which pair correctly states the form in which carbohydrate is transported in the phloem and the mineral ion needed to make amino acids? (Cặp nào nêu đúng dạng carbohydrate được vận chuyển trong mạch rây và loại ion khoáng cần thiết để tổng hợp amino acid?) A. Phloem carbohydrate: Starch | Mineral ion for amino acids: Magnesium B. Phloem carbohydrate: Sucrose | Mineral ion for amino acids: Nitrate C. Phloem carbohydrate: Glucose | Mineral ion for amino acids: Magnesium D. Phloem carbohydrate: Cellulose | Mineral ion for amino acids: Nitrate ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Carbohydrate được vận chuyển trong ống rây (phloem) dưới dạng đường hòa tan sucrose , còn ion nitrat (NO₃⁻) cung cấp nguyên tố Nitơ kết hợp với sản phẩm quang hợp để tổng hợp amino acids (Đáp án B).",
+      "duration": 117.51,
+      "startTime": 951.25,
+      "endTime": 1068.76,
+      "audioUrl": "/audio/lectures/science/b6/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) State two different structural or reproductive uses of carbohydrates made in photosynthesis, other than starch storage and respiration. [2](b) Explain why a plant grown in soil deficient in magnesium ions grows slowly. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Any two from: cellulose to build cell walls [1m] / sucrose for transport in the phloem [1m] / nectar to attract insects for pollination [1m] (max 2). (b) Magnesium ions are required to make chlorophyll [1m]; without sufficient chlorophyll (leaves turn yellow/chlorosis), less light energy is absorbed so the rate of photosynthesis (and carbohydrate production for growth) decreases [1m]. 💡 Intuition Check: Keep all 5 uses of photosynthetic carbohydrate at your fingertips with the acronym S-C-R-S-N: Starch, Cellulose, Respiration, Sucrose, Nectar.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) State two different structural or reproductive uses of carbohydrates made in photosynthesis, other than starch storage and respiration. (b) Explain why a plant grown in soil deficient in magnesium ions grows slowly. ((a) Nêu 2 vai trò cấu trúc hoặc sinh sản/vận chuyển của carbohydrate tạo ra từ quang hợp, ngoài dự trữ tinh bột và hô hấp. (b) Giải thích vì sao cây trồng trên đất thiếu ion magie lại sinh trưởng chậm. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Nêu bất kỳ 2 ý trong: tạo cellulose xây dựng thành tế bào / tạo sucrose vận chuyển trong mạch rây / tạo mật hoa (nectar) thu hút côn trùng thụ phấn (tối đa 2 điểm). (b) Ion magie cần thiết để tổng hợp diệp lục (chlorophyll) ; thiếu magie khiến lá bị vàng (chlorosis), hấp thụ ít năng lượng ánh sáng hơn làm giảm tốc độ quang hợp nên tạo ít đường cho sinh trưởng . 💡 Kiểm tra bản chất: Ghi nhớ nhanh 5 hướng đi của glucose bằng quy tắc viết tắt S-C-R-S-N: Starch, Cellulose, Respiration, Sucrose, Nectar.",
+      "duration": 141.9,
+      "startTime": 1068.76,
+      "endTime": 1210.66,
+      "audioUrl": "/audio/lectures/science/b6/s02_b07.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "3. Cấu tạo Giải phẫu Lá Hai lá mầm & Thích nghi Quang hợp (Leaf Structure)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟦 CORE 🟩 SUPPLEMENT 3. Dicotyledonous Leaf Anatomy & Interactive Map.",
+      "vi": "🟦 CORE 🟩 SUPPLEMENT 3. Cấu tạo Giải phẫu Lá Hai lá mầm & Thích nghi Quang hợp (Leaf Structure).",
+      "duration": 13.22,
+      "startTime": 1210.66,
+      "endTime": 1223.88,
+      "audioUrl": "/audio/lectures/science/b6/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: A dicot leaf works like an ultra-thin solar panel with built-in air conditioning : wide and flat to catch every sunbeam, thin so CO₂ arrives in split seconds, glazed on top by a clear waterproof cuticle + chloroplast-free upper epidermis , packed with vertical palisade solar cells, and ventilated from below via stomata & spongy air spaces .",
+      "vi": "🎯 Hình dung đời thường: Lá cây hai lá mầm vận hành như một tấm pin mặt trời siêu mỏng tích hợp thông gió tự nhiên : trải rộng để hứng nắng tối đa, mỏng dẹt để CO₂ khuếch tán tới đích trong tích tắc, phủ kính chống thấm trong suốt phía trên ( lớp cutin + biểu bì trên không có lục lạp ), xếp dọc dàn cột thu sáng mô giậu , và mở cửa gió khí khổng + khoang khí mô xốp ở mặt dưới.",
+      "duration": 49.21,
+      "startTime": 1223.88,
+      "endTime": 1273.09,
+      "audioUrl": "/audio/lectures/science/b6/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Link structure to function (B6.2.1–B6.2.3): Large surface area traps more light; thin leaf gives a short diffusion distance for CO₂ ; cuticle prevents evaporation; upper epidermis is transparent (no chloroplasts); palisade mesophyll has tightly packed chloroplasts near the top; spongy mesophyll air spaces + stomata speed gas diffusion; xylem brings water & phloem carries sucrose.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Gắn chặt cấu tạo với chức năng thích nghi (B6.2.1–B6.2.3): Diện tích bề mặt lớn hứng tối đa ánh sáng; lá mỏng rút ngắn quãng đường khuếch tán CO₂ ; cutin chống bay hơi nước; biểu bì trên trong suốt (0 lục lạp); mô giậu tập trung nhiều lục lạp nhất ở sát mặt trên; khoang khí mô xốp + khí khổng trao đổi khí nhanh; mạch gỗ cấp nước & mạch rây chuyển sucrose đi.",
+      "duration": 51.97,
+      "startTime": 1273.09,
+      "endTime": 1325.06,
+      "audioUrl": "/audio/lectures/science/b6/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never label chloroplasts inside upper epidermal cells ! Upper epidermal cells lack chloroplasts completely so sunlight passes unimpeded to the palisade mesophyll.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm gắn nhãn lục lạp (chloroplasts) vào tế bào biểu bì trên (upper epidermis) ! Biểu bì trên hoàn toàn không có lục lạp để ánh sáng truyền thẳng xuống lớp mô giậu.",
+      "duration": 27.06,
+      "startTime": 1325.06,
+      "endTime": 1352.12,
+      "audioUrl": "/audio/lectures/science/b6/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "📐 Diện tích Bề mặt Lớn (Large Surface Area - B6.2.1)",
+      "selector": "[data-lecture-section=\"s03_b04\"], [data-lecture-section=\"s03_grp04\"]",
+      "en": "📐 Large Surface Area (B6.2.1 Core) Broad, flat leaf blade exposes the maximum surface area to capture sunlight and absorb carbon dioxide. 📏 Thin Leaf Blade (B6.2.1 Core) Gives a very short diffusion distance for CO₂ to reach mesophyll cells and lets light penetrate right through.",
+      "vi": "📐 Diện tích Bề mặt Lớn Phiến lá rộng, dẹt giúp phơi mở diện tích lớn nhất để hứng ánh sáng mặt trời và khuếch tán khí CO₂.",
+      "duration": 25.0,
+      "startTime": 1352.12,
+      "endTime": 1377.12,
+      "audioUrl": "/audio/lectures/science/b6/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "📏 Phiến lá Rất Mỏng (Thinness - B6.2.1)",
+      "selector": "[data-lecture-section=\"s03_b05\"], [data-lecture-section=\"s03_grp04\"]",
+      "en": "🗺️ INTERACTIVE LEAF ANATOMY MAP. 1. Waxy Cuticle. A thin non-cellular waterproof waxy layer covering the external leaf epidermis to prevent excessive water loss by evaporation. 🔑 Adaptation: Waterproof to reduce water loss by evaporation, but transparent to let light pass through to the palisade layer.",
+      "vi": "📏 Phiến lá Rất Mỏng (Thinness - B6.2.1) Tạo quãng đường khuếch tán ngắn cho CO₂ đi tới các tế bào thịt lá và cho ánh sáng xuyên sâu.",
+      "duration": 31.75,
+      "startTime": 1377.12,
+      "endTime": 1408.87,
+      "audioUrl": "/audio/lectures/science/b6/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🗺️ BẢN ĐỒ TƯƠNG TÁC GIẢI PHẪU LÁ (INTERACTIVE LEAF MAP - B6.2.2 – B6.2.3)",
+      "selector": "[data-lecture-section=\"s03_b06\"], [data-lecture-section=\"s03_grp04\"]",
+      "en": "LEAF TISSUE SUB-CARDS 💧 Cuticle & Epidermis. Waterproof waxy layer prevents water loss; transparent epidermis lets light enter. ☀️ Palisade Mesophyll. Columnar cells tightly packed with chloroplasts; primary site of photosynthesis. 💨 Spongy Mesophyll. Loose rounded cells with air spaces for rapid CO₂ and O₂ diffusion. 🌿 Vascular Bundle. Xylem delivers water/minerals; Phloem translocates sucrose and amino acids. 🚪 Stomata & Guard Cells. Pores on lower surface open for gas exchange and close to limit water loss.",
+      "vi": "🗺️ BẢN ĐỒ TƯƠNG TÁC GIẢI PHẪU LÁ. 1. Lớp Sáp Cutin (Waxy Cuticle). Lớp sáp chống thấm mỏng phủ ngoài biểu bì lá nhằm ngăn ngừa mất nước quá mức do bay hơi. 🔑 Thích nghi: Không thấm nước giúp giảm thoát hơi nước , đồng thời trong suốt cho ánh sáng xuyên xuống mô giậu. 💧 Cutin & Biểu bì. Lớp cutin chống mất nước; biểu bì trên trong suốt, không có lục lạp giúp ánh sáng đi qua tối đa. ☀️ Mô giậu (Palisade). Tế bào hình trụ xếp dọc dày đặc lục lạp sát mặt trên; nơi quang hợp mạnh nhất. 💨 Mô xốp (Spongy). Tế bào tròn xếp thưa tạo nhiều khoang khí (air spaces) cho CO₂ và O₂ khuếch tán nhanh. 🌿 Bó mạch (Vascular Bundle). Mạch gỗ (Xylem) dẫn nước & khoáng vào lá; mạch rây (Phloem) vận chuyển sucrose đi. 🚪 Khí khổng & Guard Cells. Lỗ khí ở biểu bì dưới được đóng mở bởi cặp tế bào khí khổng để trao đổi khí và giữ nước.",
+      "duration": 103.37,
+      "startTime": 1408.87,
+      "endTime": 1512.24,
+      "audioUrl": "/audio/lectures/science/b6/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ How does the thinness of most dicotyledonous leaves adapt them for efficient photosynthesis? A. It prevents water vapour from diffusing out through open stomata. B. It provides a short diffusion distance for carbon dioxide to reach mesophyll cells and lets light penetrate. C. It allows upper epidermal cells to store large amounts of insoluble starch. D. It prevents xylem vessels from transporting mineral ions into the leaf. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: A thin leaf ensures a very short diffusion pathway for carbon dioxide entering through stomata to reach all palisade and spongy mesophyll cells, while allowing light to penetrate to photosynthetic tissues (Option B).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 2 MCQ How does the thinness of most dicotyledonous leaves adapt them for efficient photosynthesis? (Đặc điểm phiến lá mỏng ở phần lớn thực vật hai lá mầm giúp chúng thích nghi hiệu quả với quá trình quang hợp như thế nào?) A. It prevents water vapour from diffusing out through open stomata. B. It provides a short diffusion distance for carbon dioxide to reach mesophyll cells and lets light penetrate. C. It allows upper epidermal cells to store large amounts of insoluble starch. D. It prevents xylem vessels from transporting mineral ions into the leaf. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Phiến lá mỏng (thin) tạo ra quãng đường khuếch tán ngắn cho khí carbon dioxide đi từ khí khổng tới mọi tế bào thịt lá, đồng thời cho phép ánh sáng xuyên sâu tới các lớp lục lạp (Đáp án B).",
+      "duration": 110.68,
+      "startTime": 1512.24,
+      "endTime": 1622.92,
+      "audioUrl": "/audio/lectures/science/b6/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Explain how (a) palisade mesophyll cells [2] and (b) vascular bundles [2] adapt a leaf for photosynthesis. ✍️ Step-by-Step Mark Scheme Solution: (a) Palisade cells are tall/columnar and tightly packed near the upper surface of the leaf [1m] and contain many chloroplasts to absorb maximum light energy [1m]. (b) Xylem transports water (a raw material for photosynthesis) and mineral ions (e.g. Mg²⁺ ) into the leaf [1m]; phloem transports soluble sucrose made from photosynthetic glucose away to other parts of the plant [1m]. 💡 Intuition Check: When asked how vascular bundles adapt a leaf for photosynthesis, always split your answer into Xylem (water supply in) + Phloem (sucrose removal out).",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Explain how (a) palisade mesophyll cells and (b) vascular bundles adapt a leaf for photosynthesis. (Giải thích cách (a) tế bào mô giậu và (b) bó mạch dẫn giúp lá thích nghi với chức năng quang hợp.) ✍️ Lời giải chi tiết theo thang điểm: (a) Tế bào mô giậu có dạng hình trụ dài xếp khít nhau sát mặt trên của lá và chứa rất nhiều lục lạp (many chloroplasts) để hấp thụ tối đa năng lượng ánh sáng . (b) Mạch gỗ (Xylem) dẫn nước (nguyên liệu của quang hợp) và ion khoáng (như Mg²⁺ ) vào lá ; mạch rây (Phloem) vận chuyển đường sucrose hòa tan tạo từ sản phẩm quang hợp rời lá tới nuôi các bộ phận khác . 💡 Kiểm tra bản chất: Khi đề hỏi vai trò bó mạch (vascular bundle) đối với quang hợp, luôn tách rõ 2 ý: Xylem (cấp nước đầu vào) + Phloem (chuyển đường sucrose đầu ra).",
+      "duration": 120.79,
+      "startTime": 1622.92,
+      "endTime": 1743.71,
+      "audioUrl": "/audio/lectures/science/b6/s03_b08.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "4. Yếu tố Môi trường & Chỉ thị Hydrogencarbonate (Rate Factors & Gas Exchange)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🟩 SUPPLEMENT 4. Environmental Factors & Hydrogencarbonate Indicator.",
+      "vi": "🟩 SUPPLEMENT 4. Yếu tố Môi trường & Chỉ thị Hydrogencarbonate.",
+      "duration": 11.31,
+      "startTime": 1743.71,
+      "endTime": 1755.02,
+      "audioUrl": "/audio/lectures/science/b6/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of photosynthesis rate like driving a car controlled by fuel pedals (light & CO₂ ) and an engine temperature gauge : pressing light or CO₂ boosts speed until another supply caps it, whereas overheating past ~40°C warps the engine's protein catalysts ( enzyme denaturation )! Meanwhile, hydrogencarbonate indicator acts as a live CO₂ scoreboard: Purple = low CO₂ (bright light), Red = atmospheric balance, Yellow = high CO₂ (dark).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung tốc độ quang hợp như chiếc xe chạy bằng hai bàn đạp nguyên liệu/năng lượng (ánh sáng & CO₂ ) và đồng hồ nhiệt độ động cơ : tăng ánh sáng hoặc CO₂ làm tốc độ tăng dần đến ngưỡng bão hòa, còn đun quá nóng trên ~40°C sẽ làm hỏng bộ xúc tác protein ( biến tính enzyme - denaturation )! Với chất chỉ thị hydrogencarbonate , hãy nhớ bảng màu CO₂ : Tím = ít CO₂ (ngoài sáng), Đỏ = cân bằng khí quyển, Vàng = nhiều CO₂ (trong tối).",
+      "duration": 70.32,
+      "startTime": 1755.02,
+      "endTime": 1825.34,
+      "audioUrl": "/audio/lectures/science/b6/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Cover both B6.1.9 & B6.1.10: Light intensity & CO₂ concentration: increasing either increases photosynthesis rate until a plateau is reached. Temperature: rate rises with kinetic energy to an optimum (~30°C), then drops sharply to zero as enzymes denature. Hydrogencarbonate indicator: bright light → net CO₂ uptake → purple ; dark → respiration only releases CO₂ → yellow .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nắm trọn cả B6.1.9 & B6.1.10: Cường độ ánh sáng & nồng độ CO₂: tăng làm tốc độ quang hợp tăng tỉ lệ thuận cho tới khi đi ngang (plateau). Nhiệt độ: tăng động năng làm tốc độ đạt đỉnh tối ưu (~30°C), quá ngưỡng nóng enzyme biến tính làm tốc độ tụt về 0. Chỉ thị hydrogencarbonate: sáng mạnh → hấp thụ ròng CO₂ → hóa tím (purple) ; trong tối → chỉ còn hô hấp thải CO₂ → hóa vàng (yellow) .",
+      "duration": 69.82,
+      "startTime": 1825.34,
+      "endTime": 1895.16,
+      "audioUrl": "/audio/lectures/science/b6/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Remember that plants respire 24 hours a day (both in light and dark)! In bright light, hydrogencarbonate turns purple NOT because respiration stops, but because the rate of photosynthesis is greater than the rate of respiration .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hãy nhớ thực vật hô hấp suốt 24/24 giờ cả ngày lẫn đêm ! Ngoài nắng gắt, dung dịch chỉ thị hóa tím KHÔNG phải vì cây ngừng hô hấp, mà vì tốc độ quang hợp lớn hơn tốc độ hô hấp nên lượng CO₂ hút vào nhiều hơn lượng thải ra.",
+      "duration": 34.8,
+      "startTime": 1895.16,
+      "endTime": 1929.96,
+      "audioUrl": "/audio/lectures/science/b6/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "☀️ Ảnh hưởng của Ánh sáng, CO₂ & Nhiệt độ (B6.1.9)",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "☀️ Limiting Factors. • Light Intensity (B6.1.9): Increasing light supplies more energy to chlorophyll, increasing photosynthesis rate until the curve levels off (plateaus).• CO₂ Concentration (B6.1.9): Increasing CO₂ provides more raw material, increasing rate proportionally until light or temperature caps the rate.• Temperature (B6.1.9): Higher temperature boosts kinetic energy & collisions up to the optimum (~25–35°C); above optimum, photosynthetic enzymes denature so rate falls sharply to zero.",
+      "vi": "☀️ Ảnh hưởng của Ánh sáng, CO₂ & Nhiệt độ (B6.1.9). • Cường độ ánh sáng (Light intensity): Tăng ánh sáng cung cấp thêm năng lượng cho diệp lục, làm tốc độ quang hợp tăng tỉ lệ thuận cho đến khi đạt đoạn nằm ngang (bão hòa).• Nồng độ CO₂: Tăng nồng độ CO₂ bổ sung nguyên liệu đầu vào, làm tăng tốc độ quang hợp cho tới khi ánh sáng hoặc nhiệt độ kìm hãm.• Nhiệt độ (Temperature): Tăng nhiệt độ làm tăng động năng và va chạm hiệu quả đến mức tối ưu (~25–35°C); quá ngưỡng tối ưu, các enzyme quang hợp bị biến tính (denature) khiến tốc độ tụt nhanh về 0.",
+      "duration": 77.28,
+      "startTime": 1929.96,
+      "endTime": 2007.24,
+      "audioUrl": "/audio/lectures/science/b6/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🧪 Chỉ thị Hydrogencarbonate ở Cây Thủy sinh (B6.1.10)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🧪 Hydrogencarbonate Indicator. • Bright Light: Photosynthesis rate > Respiration rate → net CO₂ absorbed (alkaline) → turns Purple .• Darkness (Foil-wrapped): Photosynthesis stops while respiration continues → net CO₂ released (acidic) → turns Yellow .• Dim Light / No-Plant Control: Atmospheric CO₂ equilibrium (~0.04%) → stays Red / Orange.",
+      "vi": "🧪 Chỉ thị Hydrogencarbonate ở Cây Thủy sinh (B6.1.10). • Ngoài sáng mạnh (Bright Light): Quang hợp > Hô hấp → hấp thụ ròng CO₂ (môi trường bớt axit/kiềm nhẹ) → đổi sang màu Tím (Purple) .• Trong tối (Darkness): Ngừng quang hợp, cây chỉ hô hấp → thải ròng CO₂ tạo axit carbonic → đổi sang màu Vàng (Yellow) .• Ánh sáng mờ (Điểm bù) / Ống đối chứng không cây: Nồng độ CO₂ cân bằng khí quyển (~0,04%) → giữ màu Đỏ cam (Red).",
+      "duration": 61.93,
+      "startTime": 2007.24,
+      "endTime": 2069.17,
+      "audioUrl": "/audio/lectures/science/b6/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A leafy shoot of an aquatic plant is sealed in a boiling tube with red hydrogencarbonate indicator and placed in complete darkness for 3 hours. What colour does the indicator become and why? A. Purple, because photosynthesis absorbs carbon dioxide in the dark B. Yellow, because photosynthesis stops while respiration continues and releases carbon dioxide C. Red, because neither photosynthesis nor respiration occurs in darkness D. Blue-black, because stored starch diffuses out of the aquatic leaves ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: In complete darkness, photosynthesis stops (no light energy), while aerobic respiration continues , releasing carbon dioxide into the water. Higher dissolved CO₂ makes the solution more acidic, turning hydrogencarbonate indicator yellow (Option B).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A leafy shoot of an aquatic plant is sealed in a boiling tube with red hydrogencarbonate indicator and placed in complete darkness for 3 hours. What colour does the indicator become and why? (Một cành rong thủy sinh nhiều lá được đậy kín trong ống nghiệm chứa chỉ thị hydrogencarbonate màu đỏ rồi đặt trong bóng tối hoàn toàn suốt 3 giờ. Chất chỉ thị chuyển sang màu gì và vì sao?) A. Purple, because photosynthesis absorbs carbon dioxide in the dark B. Yellow, because photosynthesis stops while respiration continues and releases carbon dioxide C. Red, because neither photosynthesis nor respiration occurs in darkness D. Blue-black, because stored starch diffuses out of the aquatic leaves ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Trong bóng tối hoàn toàn, quang hợp dừng hẳn (do không có ánh sáng), trong khi hô hấp hiếu khí vẫn tiếp diễn và thải khí CO₂ vào nước làm tăng tính axit, khiến chất chỉ thị hydrogencarbonate đổi sang màu vàng (yellow) (Đáp án B).",
+      "duration": 129.8,
+      "startTime": 2069.17,
+      "endTime": 2198.97,
+      "audioUrl": "/audio/lectures/science/b6/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "(a) Từ 10°C lên 30°C:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Data & Explanation [4 marks] Describe and explain the effect on the rate of photosynthesis of an aquatic plant in excess carbon dioxide and bright light when water temperature is increased:(a) from 10°C to 30°C [2](b) from 35°C to 50°C [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 10°C to 30°C: The rate of photosynthesis increases [1m] because enzyme and substrate molecules gain more kinetic energy , increasing the frequency of effective collisions [1m]. (b) 35°C to 50°C: The rate of photosynthesis decreases rapidly to zero [1m] because high temperatures denature photosynthetic enzymes (their active sites change shape and no longer fit substrates) [1m]. 💡 Intuition Check: Photosynthesis is an enzyme-catalysed pathway, so temperature curves in Topic B6 use the exact same kinetic-energy & denaturation mark points learned in Topic B5!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Data & Explanation [4 marks] Describe and explain the effect on the rate of photosynthesis of an aquatic plant in excess carbon dioxide and bright light when water temperature is increased:(a) from 10°C to 30°C (b) from 35°C to 50°C (Mô tả và giải thích sự thay đổi tốc độ quang hợp của cây thủy sinh trong điều kiện dư CO₂ và chiếu sáng mạnh khi tăng nhiệt độ nước: (a) từ 10°C lên 30°C ; (b) từ 35°C lên 50°C .) ✍️ Lời giải chi tiết theo thang điểm: (a) Từ 10°C lên 30°C: Tốc độ quang hợp tăng lên vì các phân tử enzyme và cơ chất có động năng lớn hơn , làm tăng tần suất va chạm hiệu quả . (b) Từ 35°C lên 50°C: Tốc độ quang hợp giảm mạnh về 0 vì nhiệt độ quá cao làm biến tính các enzyme quang hợp (denatures enzymes) khiến trung tâm hoạt động mất hình dạng bổ sung với cơ chất . 💡 Kiểm tra bản chất: Quang hợp là chuỗi phản ứng do enzyme điều khiển, nên mọi câu hỏi giải thích nhiệt độ ở Chuyên đề B6 đều ăn điểm bằng đúng bộ từ khóa động năng & biến tính của Chuyên đề B5!",
+      "duration": 150.05,
+      "startTime": 2198.97,
+      "endTime": 2349.02,
+      "audioUrl": "/audio/lectures/science/b6/s04_b07.mp3"
     }
   ]
 }

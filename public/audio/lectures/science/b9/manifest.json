@@ -1,200 +1,695 @@
 {
   "lectureId": "a79dd569-671f-4559-84a3-eee1e6018172",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B9: Transport in animals",
-  "totalDuration": 502.77,
+  "totalDuration": 3084.83,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_circulation_system": {
-      "start": 1,
-      "end": 1
-    },
-    "sec-circulation-system": {
-      "start": 1,
-      "end": 1
-    },
-    "sec_heart_anatomy": {
+    "s01_int": {
       "start": 2,
       "end": 4
     },
-    "sec-heart-anatomy": {
-      "start": 2,
-      "end": 4
-    },
-    "sec_heart_structure": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-heart-structure": {
-      "start": 3,
-      "end": 3
-    },
-    "sec_heart_bloodflow": {
-      "start": 4,
-      "end": 4
-    },
-    "sec-heart-bloodflow": {
-      "start": 4,
-      "end": 4
-    },
-    "sec_chd": {
-      "start": 5,
-      "end": 6
-    },
-    "sec-chd": {
-      "start": 5,
-      "end": 6
-    },
-    "sec_chd_causes": {
-      "start": 6,
-      "end": 6
-    },
-    "sec-chd-causes": {
-      "start": 6,
-      "end": 6
-    },
-    "sec_vessels_blood": {
-      "start": 7,
-      "end": 9
-    },
-    "sec-vessels_blood": {
-      "start": 7,
-      "end": 9
-    },
-    "sec_vessels_types": {
+    "s01_wex": {
       "start": 8,
-      "end": 8
-    },
-    "sec-vessels-types": {
-      "start": 8,
-      "end": 8
-    },
-    "sec_blood_components": {
-      "start": 9,
       "end": 9
     },
-    "sec-blood-components": {
-      "start": 9,
+    "s01_hdr": {
+      "start": 1,
       "end": 9
+    },
+    "s02_int": {
+      "start": 11,
+      "end": 13
+    },
+    "s02_p1_sub01": {
+      "start": 17,
+      "end": 18
+    },
+    "s02_p2_sub01": {
+      "start": 17,
+      "end": 18
+    },
+    "s02_wex": {
+      "start": 19,
+      "end": 20
+    },
+    "s02_hdr": {
+      "start": 10,
+      "end": 20
+    },
+    "s03_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s03_wex": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_hdr": {
+      "start": 21,
+      "end": 30
+    },
+    "s04_int": {
+      "start": 32,
+      "end": 34
+    },
+    "s04_p1_sub01": {
+      "start": 39,
+      "end": 39
+    },
+    "s04_p2_sub01": {
+      "start": 39,
+      "end": 39
+    },
+    "s04_wex": {
+      "start": 40,
+      "end": 41
+    },
+    "s04_hdr": {
+      "start": 31,
+      "end": 41
+    },
+    "s05_int": {
+      "start": 43,
+      "end": 45
+    },
+    "s05_wex": {
+      "start": 53,
+      "end": 54
+    },
+    "s05_hdr": {
+      "start": 42,
+      "end": 54
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B9: Hệ Tuần hoàn & Máu ở Động vật",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B9: Transport in Animals. Mammals require a double circulatory system comprising a four-chambered heart, specialized blood vessels, and blood components to distribute oxygen and nutrients while removing metabolic wastes.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B9: Hệ Tuần hoàn và Máu ở Động vật. Động vật có vú cần hệ tuần hoàn kép với trái tim bốn ngăn, hệ mạch chuyên hóa và các thành phần máu để phân phối oxy và dưỡng chất đồng thời thu gom chất thải chuyển hóa.",
-      "duration": 48.45,
+      "title": "Transport in Animals (Hệ Tuần hoàn & Máu ở Động vật)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B9 • Animal Transport Transport in Animals & Blood Circulation. Cambridge IGCSE Co-ordinated Sciences (0654) • Heart Anatomy, Blood Vessels & Blood Composition.",
+      "vi": "Chuyên đề B9 • Song ngữ 0654 Transport in Animals (Hệ Tuần hoàn & Máu ở Động vật). Cambridge IGCSE Co-ordinated Sciences (0654) • Tuần hoàn Kép, Cấu tạo Tim, Bệnh Mạch vành, Mạch máu & Thành phần Máu.",
+      "duration": 35.74,
       "startTime": 0.0,
-      "endTime": 48.45,
+      "endTime": 35.74,
       "audioUrl": "/audio/lectures/science/b9/intro.mp3"
     },
     {
-      "id": "sec_circulation_system",
-      "title": "1. Hệ Tuần hoàn Kép (Circulatory Systems Overview)",
-      "selector": "#sec-circulation-system",
-      "en": "Section 1 introduces circulatory systems: Mammals have a double circulation where blood passes through the heart twice during one complete circuit: the pulmonary circulation to the lungs and the systemic circulation to body tissues. Double circulation maintains high arterial pressure for active endothermic lifestyles.",
-      "vi": "Mục một giới thiệu hệ tuần hoàn: Động vật có vú có hệ tuần hoàn kép, trong đó máu đi qua tim hai lần trong một vòng tuần hoàn hoàn chỉnh: vòng tuần hoàn phổi và vòng tuần hoàn hệ thống đến các cơ quan. Tuần hoàn kép duy trì áp lực máu cao đáp ứng lối sống hoạt động nhiều.",
-      "duration": 60.78,
-      "startTime": 48.45,
-      "endTime": 109.23,
-      "audioUrl": "/audio/lectures/science/b9/sec_circulation_system.mp3"
+      "id": "s01_hdr",
+      "title": "🩸 1. CIRCULATORY SYSTEMS (Hệ Tuần hoàn Đơn & Kép)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 🩸 1. CIRCULATORY SYSTEMS (PUMP, VESSELS & VALVES).",
+      "vi": "🟦 CORE & 🟩 SUPP 🩸 1. CIRCULATORY SYSTEMS (Hệ Tuần hoàn Đơn & Kép).",
+      "duration": 12.83,
+      "startTime": 35.74,
+      "endTime": 48.57,
+      "audioUrl": "/audio/lectures/science/b9/s01_hdr.mp3"
     },
     {
-      "id": "sec_heart_anatomy",
-      "title": "2. Cấu tạo & Hoạt động của Tim (Mammalian Heart Structure Overview)",
-      "selector": "#sec-heart-anatomy",
-      "en": "Section 2 investigates the mammalian heart: Four chambers (right and left atria, right and left ventricles), separated by the muscular septum to prevent mixing of oxygenated and deoxygenated blood.",
-      "vi": "Mục hai khảo sát trái tim thú: Gồm bốn ngăn (tâm nhĩ phải và trái, tâm thất phải và trái), được ngăn cách bởi vách liên thất cơ bắp giúp ngăn ngừa sự pha trộn giữa máu giàu oxy và máu nghèo oxy.",
-      "duration": 70.19,
-      "startTime": 109.23,
-      "endTime": 179.42,
-      "audioUrl": "/audio/lectures/science/b9/sec_heart_anatomy.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a fish’s single circulation like a delivery van that loses nearly all its speed squeezing through a narrow tollbooth (gill capillaries) and then crawls slowly around the country! A mammal’s double circulation brings oxygenated blood from the lungs back to the heart for a second powerful pump , sending it to body muscles at high pressure!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng tuần hoàn đơn (single circulation) ở cá giống như chiếc xe giao hàng lách qua trạm thu phí siêu hẹp (mao mạch mang cá) bị mất gần hết tốc độ rồi cứ thế bò chậm rãi đi khắp cơ thể! Còn tuần hoàn kép (double circulation) ở thú đưa máu giàu oxy từ phổi quay lại tim để bơm tăng áp lần thứ hai , phóng đi nuôi toàn thân với áp suất cao!",
+      "duration": 47.92,
+      "startTime": 48.57,
+      "endTime": 96.49,
+      "audioUrl": "/audio/lectures/science/b9/s01_b01.mp3"
     },
     {
-      "id": "sec_heart_structure",
-      "title": "❤️ Heart Chambers & Valves (Các Ngăn Tim & Van Tim)",
-      "selector": "#sec-heart-structure",
-      "en": "Heart chambers and valves: Atria receive blood and pump it into ventricles. The left ventricle has a much thicker muscular wall than the right because it must pump blood at high pressure throughout the entire body. Atrioventricular and semilunar valves prevent backflow of blood.",
-      "vi": "Các ngăn và van tim: Tâm nhĩ nhận máu và đẩy xuống tâm thất. Tâm thất trái có thành cơ dày hơn hẳn tâm thất phải vì phải co bóp tống máu với áp lực cao đi khắp toàn bộ cơ thể. Các van nhĩ thất và van bán nguyệt ngăn dòng máu chảy ngược.",
-      "duration": 32.06,
-      "startTime": 179.42,
-      "endTime": 211.48,
-      "audioUrl": "/audio/lectures/science/b9/sec_heart_structure.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Core B9.1.1: Circulatory system = blood vessels + a pump (heart) + valves ensuring one-way flow of blood . 2) Supplement B9.1.2–4: Fish = single (through heart once per complete circuit: heart → gills → body → heart). Mammal = double (through heart twice per complete circuit: keeps oxygenated & deoxygenated blood separate, pumps systemic blood at higher pressure for fast O₂ delivery while keeping pulmonary pressure low).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Core B9.1.1: Hệ tuần hoàn gồm hệ mạch máu (blood vessels) + máy bơm (pump/heart) + các van (valves) đảm bảo máu chảy một chiều (one-way flow) . 2) Supplement B9.1.2–4: Cá = đơn (qua tim 1 lần/vòng: tim → mang → cơ thể → tim). Thú = kép (qua tim 2 lần/vòng: tách biệt hoàn toàn máu giàu/nghèo O₂, tạo áp suất cao cho vòng cơ thể để cấp O₂ nhanh và giữ áp suất thấp ở vòng phổi).",
+      "duration": 73.32,
+      "startTime": 96.49,
+      "endTime": 169.81,
+      "audioUrl": "/audio/lectures/science/b9/s01_b02.mp3"
     },
     {
-      "id": "sec_heart_bloodflow",
-      "title": "🩸 Pathway of Blood Flow (Hành trình Dòng máu qua Tim)",
-      "selector": "#sec-heart-bloodflow",
-      "en": "Pathway of blood: Deoxygenated blood returns via the vena cava to the right atrium, passes to the right ventricle, and is pumped via pulmonary arteries to the lungs. Oxygenated blood returns via pulmonary veins to the left atrium, passes to the left ventricle, and is pumped out through the aorta to the body.",
-      "vi": "Hành trình máu: Máu nghèo oxy về tĩnh mạch chủ vào tâm nhĩ phải, xuống tâm thất phải rồi được bơm qua động mạch phổi lên phổi. Máu giàu oxy trở về theo tĩnh mạch phổi vào tâm nhĩ trái, xuống tâm thất trái rồi được tống qua động mạch chủ đi khắp cơ thể.",
-      "duration": 34.55,
-      "startTime": 211.48,
-      "endTime": 246.03,
-      "audioUrl": "/audio/lectures/science/b9/sec_heart_bloodflow.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Don’t define double circulation as \"having two sides of the heart\" — Cambridge Mark Schemes require stating that blood passes through the heart twice for one complete circuit of the body !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng định nghĩa tuần hoàn kép là \"tim có 2 nửa\" — đáp án chấm điểm B9.1.3 bắt buộc nêu rõ máu đi qua tim 2 lần trong một vòng tuần hoàn hoàn chỉnh !",
+      "duration": 25.02,
+      "startTime": 169.81,
+      "endTime": 194.83,
+      "audioUrl": "/audio/lectures/science/b9/s01_b03.mp3"
     },
     {
-      "id": "sec_chd",
-      "title": "3. Bệnh Mạch Vành (Coronary Heart Disease Overview)",
-      "selector": "#sec-chd",
-      "en": "Section 3 examines Coronary Heart Disease: Blockage of coronary arteries supplying oxygen to heart muscle cells, leading to angina or myocardial infarction.",
-      "vi": "Mục ba nghiên cứu Bệnh động mạch vành: Sự tắc nghẽn các nhánh động mạch vành nuôi dưỡng cơ tim do mảng xơ vữa, dẫn đến thiếu oxy gây cơn đau thắt ngực hoặc nhồi máu cơ tim.",
-      "duration": 66.62,
-      "startTime": 246.03,
-      "endTime": 312.65,
-      "audioUrl": "/audio/lectures/science/b9/sec_chd.mp3"
+      "id": "s01_b04",
+      "title": "Hệ tuần hoàn là một hệ thống mạch máu, kết hợp với một \"máy bơm\" (Tim) và các va...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "The circulatory system is a closed network of blood vessels equipped with a muscular pump (the heart) and valves that ensure a continuous one-way flow of blood throughout the organism.",
+      "vi": "Hệ tuần hoàn là một hệ thống mạch máu, kết hợp với một \"máy bơm\" (Tim) và các van để đảm bảo máu chảy theo một chiều duy nhất (one-way flow).",
+      "duration": 20.46,
+      "startTime": 194.83,
+      "endTime": 215.29,
+      "audioUrl": "/audio/lectures/science/b9/s01_b04.mp3"
     },
     {
-      "id": "sec_chd_causes",
-      "title": "🍔 CHD Risk Factors & Prevention (Nguyên nhân & Phòng ngừa)",
-      "selector": "#sec-chd-causes",
-      "en": "CHD risk factors include high saturated fat diet, smoking, chronic stress, lack of exercise, and genetic predisposition. Preventive measures include regular aerobic exercise, a diet rich in unsaturated fats, and stopping smoking.",
-      "vi": "Các yếu tố nguy cơ của bệnh mạch vành gồm: ăn nhiều chất béo bão hòa, hút thuốc lá, căng thẳng kéo dài, ít vận động và di truyền. Biện pháp phòng tránh gồm tập thể dục đều đặn, ăn nhiều chất béo không bão hòa và cai thuốc lá.",
-      "duration": 31.26,
-      "startTime": 312.65,
-      "endTime": 343.91,
-      "audioUrl": "/audio/lectures/science/b9/sec_chd_causes.mp3"
+      "id": "s01_b05",
+      "title": "🐟 Single Circulation (Cá)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🐟 Single Circulation (Fish). Blood passes through the heart ONCE for each complete circuit of the body. Fish heart has two chambers : one atrium and one ventricle. Pathway: Deoxygenated blood from body ➔ Atrium ➔ Ventricle ➔ Pumped to Gill Capillaries (oxygenated) ➔ Systemic Tissues (delivers O₂) ➔ Veins return to heart. Major Limitation: Blood pressure drops drastically as blood squeezes through narrow gill capillaries. Blood travels to the rest of the body at very low pressure, resulting in slow oxygen delivery.",
+      "vi": "🐟 Single Circulation (Cá). Máu chỉ đi qua tim MỘT LẦN trong một vòng tuần hoàn cơ thể. Tim cá chỉ có 2 buồng : 1 Tâm nhĩ (Atrium) & 1 Tâm thất (Ventricle). Máu nghèo Oxy (Deoxygenated) từ cơ thể về Tâm nhĩ ➔ Tâm thất ➔ Bơm lên Mang cá (Gills). Tại mao mạch mang, máu nhận Oxy và nhả CO₂. Sau đó máu mang Oxy chạy thẳng đến các cơ quan khác rồi mới vòng về tim.",
+      "duration": 64.97,
+      "startTime": 215.29,
+      "endTime": 280.26,
+      "audioUrl": "/audio/lectures/science/b9/s01_b05.mp3"
     },
     {
-      "id": "sec_vessels_blood",
-      "title": "4. Mạch Máu & Thành phần Máu (Blood Vessels & Blood Overview)",
-      "selector": "#sec-vessels_blood",
-      "en": "Section 4 covers blood vessels and blood components: Arteries carry blood away from the heart under high pressure; veins return blood under low pressure; capillaries exchange nutrients and wastes with tissue fluid.",
-      "vi": "Mục bốn phân tích mạch máu và thành phần máu: Động mạch dẫn máu rời khỏi tim dưới áp lực cao; tĩnh mạch dẫn máu về tim dưới áp lực thấp; mao mạch trao đổi dưỡng chất và chất thải với dịch mô.",
-      "duration": 85.5,
-      "startTime": 343.91,
-      "endTime": 429.41,
-      "audioUrl": "/audio/lectures/science/b9/sec_vessels_blood.mp3"
+      "id": "s01_b06",
+      "title": "🦅 Double Circulation (Động vật có vú & Chim)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🦅 Double Circulation (Mammals & Birds). Blood passes through the heart TWICE for each complete circuit of the body (pulmonary circuit + systemic circuit). 🌟 Key Advantages of Double Circulation (Supplement B9.1.4): Complete Separation: The septum keeps oxygenated and deoxygenated blood fully separate. Respiring tissues receive blood with maximum oxygen saturation. Differential High Pressure: Blood returning from lungs is pumped out to systemic tissues under much higher pressure than in pulmonary circulation, circulating oxygen and nutrients rapidly throughout large bodies. Sustains High Metabolic Rate: Rapid delivery of glucose and oxygen meets the high metabolic and thermoregulatory demands of warm-blooded endotherms.",
+      "vi": "🦅 Double Circulation (Động vật có vú & Chim). Máu đi qua tim HAI LẦN trong một vòng tuần hoàn kín. 🌟 Advantages (Ưu điểm vượt trội): Separation: Ngăn cách hoàn toàn máu giàu Oxy và nghèo Oxy ➔ Tế bào nhận được lượng Oxy tối đa không bị pha loãng. High Pressure: Tim có thể bơm máu đi khắp cơ thể (Systemic circuit) với áp lực cao hơn , giúp máu luân chuyển nhanh chóng. Quick Supply: Cung cấp Oxy nhanh hơn để đáp ứng nhu cầu trao đổi chất (Metabolic rate) rất cao của động vật hằng nhiệt.",
+      "duration": 82.84,
+      "startTime": 280.26,
+      "endTime": 363.1,
+      "audioUrl": "/audio/lectures/science/b9/s01_b06.mp3"
     },
     {
-      "id": "sec_vessels_types",
-      "title": "🧪 Arteries, Veins & Capillaries (So sánh Ba Loại Mạch Máu)",
-      "selector": "#sec-vessels_types",
-      "en": "Vessel comparison: Arteries have thick muscular elastic walls and narrow lumens to withstand high pressure. Veins have thinner walls, wide lumens, and semilunar valves to ensure one-way flow. Capillaries are microscopic, one-cell-thick vessels allowing rapid diffusion.",
-      "vi": "So sánh mạch máu: Động mạch có thành cơ dày đàn hồi và lòng hẹp để chịu áp lực cao. Tĩnh mạch có thành mỏng hơn, lòng rộng và có van bán nguyệt đảm bảo dòng máu chảy một chiều. Mao mạch có kích thước vi thể với thành mỏng chỉ một lớp tế bào giúp khuếch tán nhanh chóng.",
-      "duration": 34.58,
-      "startTime": 429.41,
-      "endTime": 463.99,
-      "audioUrl": "/audio/lectures/science/b9/sec_vessels_types.mp3"
+      "id": "s01_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which row correctly compares the single circulation of a fish with the double circulation of a mammal? A. Fish: blood passes through heart twice per circuit | Mammal: blood passes through heart once per circuit B. Fish: blood reaches body tissues at high pressure | Mammal: blood reaches body tissues at low pressure C. Fish: blood passes from gills directly to body organs | Mammal: blood returns from lungs to the heart before going to body organs D. Fish: oxygenated and deoxygenated blood mix in the heart | Mammal: blood does not pass through capillaries in the lungs ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: In a fish’s single circulation, blood flows from the heart → gill capillaries → directly to body tissues at reduced pressure. In a mammal’s double circulation, oxygenated blood returns from the lungs to the left atrium and ventricle to be re-pressurised before travelling to body organs (C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Which row correctly compares the single circulation of a fish with the double circulation of a mammal? (Hàng nào so sánh đúng tuần hoàn đơn của cá với tuần hoàn kép của động vật có vú?) A. Fish: blood passes through heart twice per circuit | Mammal: blood passes through heart once per circuit B. Fish: blood reaches body tissues at high pressure | Mammal: blood reaches body tissues at low pressure C. Fish: blood passes from gills directly to body organs | Mammal: blood returns from lungs to the heart before going to body organs D. Fish: oxygenated and deoxygenated blood mix in the heart | Mammal: blood does not pass through capillaries in the lungs ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Ở tuần hoàn đơn của cá, máu từ tim → mao mạch mang → đi thẳng tới các cơ quan với áp suất thấp. Ở tuần hoàn kép của thú, máu giàu oxy từ phổi quay về tâm nhĩ/tâm thất trái để bơm tăng áp trước khi đi nuôi cơ thể (C).",
+      "duration": 130.86,
+      "startTime": 363.1,
+      "endTime": 493.96,
+      "audioUrl": "/audio/lectures/science/b9/s01_b07.mp3"
     },
     {
-      "id": "sec_blood_components",
-      "title": "🔬 Blood Composition & Clotting (Thành phần Máu & Cơ chế Đông máu)",
-      "selector": "#sec-blood-components",
-      "en": "Blood composition: Red blood cells contain haemoglobin for oxygen transport. White blood cells defend against pathogens: phagocytes engulf pathogens, lymphocytes produce antibodies. Platelets release clotting factors converting soluble fibrinogen into an insoluble fibrin mesh, trapping blood cells to form a scab.",
-      "vi": "Thành phần máu: Hồng cầu chứa hemoglobin để chở oxy. Bạch cầu bảo vệ cơ thể: thực bào nuốt mầm bệnh, tế bào lympho tiết kháng thể. Tiểu cầu kích hoạt đông máu chuyển fibrinogen hòa tan thành mạng lưới sợi fibrin không tan, giam giữ tế bào máu tạo thành vảy cầm máu.",
-      "duration": 38.78,
-      "startTime": 463.99,
-      "endTime": 502.77,
-      "audioUrl": "/audio/lectures/science/b9/sec_blood_components.mp3"
+      "id": "s01_b08",
+      "title": "two",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe the circulatory system in terms of its three main structural features and state the function of valves. [2](b) Explain two advantages of a double circulation in mammals. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) A system of blood vessels with a pump (the heart) and valves [1m]; valves ensure one-way flow of blood / prevent backflow [1m]. (b) 1. Prevents mixing of oxygenated and deoxygenated blood so tissues receive fully oxygenated blood [1m].2. Allows blood to be pumped to body tissues at higher pressure (for rapid O₂/glucose delivery to support high metabolic rate) while pumping to lungs at lower pressure (preventing capillary damage) [1m]. 💡 Intuition Check: Memorise the Core B9.1.1 definition word-for-word: \"a system of blood vessels with a pump and valves to ensure one-way flow of blood\".",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe the circulatory system in terms of its three main structural features and state the function of valves. (b) Explain two advantages of a double circulation in mammals. ((a) Mô tả hệ tuần hoàn dựa trên 3 thành phần cấu trúc chính và nêu chức năng của van. (b) Giải thích 2 ưu điểm của tuần hoàn kép ở thú. ) ✍️ Lời giải chi tiết theo thang điểm: đảm bảo máu chảy một chiều . (b) 1. ngăn pha trộn máu giàu và nghèo oxy .2. Blood is pumped to body tissues at higher pressure for rapid delivery of O₂/glucose to sustain a high metabolic rate . 💡 Kiểm tra bản chất: Thuộc lòng câu định nghĩa chuẩn Core B9.1.1: \"a system of blood vessels with a pump and valves to ensure one-way flow of blood\".",
+      "duration": 122.31,
+      "startTime": 493.96,
+      "endTime": 616.27,
+      "audioUrl": "/audio/lectures/science/b9/s01_b08.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "❤️ 2. STRUCTURE & FUNCTION OF THE HEART (Cấu tạo & Hoạt động Tim)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE ❤️ 2. MAMMALIAN HEART STRUCTURE & FUNCTION.",
+      "vi": "🟦 CORE & 🟩 SUPP ❤️ 2. STRUCTURE & FUNCTION OF THE HEART (Cấu tạo & Hoạt động Tim).",
+      "duration": 7.17,
+      "startTime": 616.27,
+      "endTime": 623.44,
+      "audioUrl": "/audio/lectures/science/b9/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Use two instant rules on every 0654 heart diagram: 1) Patient Mirror Rule — left of diagram = RIGHT side of heart (deoxygenated → lungs); right of diagram = LEFT side of heart (oxygenated → body). 2) Squeeze-and-Snap — when ventricles contract, pressure slams the upper one-way valves shut (\"lub\") and pushes the artery exit valves open!",
+      "vi": "🎯 Hình dung đời thường: Hai quy tắc giải nhanh mọi sơ đồ Tim 0654: 1) Quy tắc Soi gương Bệnh nhân — bên trái hình vẽ là NỬA TIM PHẢI (máu nghèo O₂ lên phổi), bên phải hình vẽ là NỬA TIM TRÁI (máu giàu O₂ đi nuôi cơ thể). 2) Bóp Thất - Đóng Nhĩ — khi tâm thất co mạnh, áp suất đóng sập van một chiều thông với tâm nhĩ (tiếng \"lub\") và đẩy mở van ra động mạch!",
+      "duration": 53.67,
+      "startTime": 623.44,
+      "endTime": 677.11,
+      "audioUrl": "/audio/lectures/science/b9/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Core B9.2.1–3: Identify muscular wall, septum, left/right ventricles, left/right atria, one-way valves, coronary arteries ; arteries carry blood away from heart, veins return blood to heart; monitor heart via ECG, pulse rate, sounds of valves closing . 2) Supplement B9.2.7–8: Atria contract → push blood into ventricles; ventricles contract → shut inlet valves & open outlet valves; exercise increases aerobic respiration in muscles → faster heart rate delivers more O₂ & glucose and removes CO₂ .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Core B9.2.1–3: Nhận diện thành cơ (muscular wall), vách ngăn (septum), tâm thất trái/phải, tâm nhĩ trái/phải, van một chiều, động mạch vành (coronary arteries) ; theo dõi tim bằng ECG, nhịp mạch (pulse rate), nghe tiếng van tim đóng . 2) Supplement B9.2.7–8: Nhĩ co đẩy máu xuống thất → thất co đóng van nhĩ-thất & mở van ra động mạch; tập thể dục tăng hô hấp hiếu khí (aerobic respiration) → tim đập nhanh để cấp thêm O₂ + glucose và thải CO₂ .",
+      "duration": 84.38,
+      "startTime": 677.11,
+      "endTime": 761.49,
+      "audioUrl": "/audio/lectures/science/b9/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say \"muscles need to make more energy\" during exercise! Energy cannot be created — write that muscles have a higher rate of aerobic respiration to release energy, requiring faster delivery of oxygen and glucose .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết \"cơ bắp tạo ra nhiều năng lượng\" hay \"tiếng tim do cơ tim đập\"! Phải viết cơ bắp giải phóng nhiều năng lượng qua hô hấp hiếu khí (aerobic respiration) , còn tiếng tim phát ra do các van một chiều đóng lại (valves closing) .",
+      "duration": 34.56,
+      "startTime": 761.49,
+      "endTime": 796.05,
+      "audioUrl": "/audio/lectures/science/b9/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Interactive Heart Map (Các Ngăn Tim, Vách Ngăn, Van Một Chiều & Động Mạch Vành)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Interactive Heart Anatomy (Chambers, Septum, One-Way Valves & Coronary Arteries). Interact with the Heart Diagram 👆. Crucial Rule: Anatomical diagrams show the heart as if facing a patient: the RIGHT side of the heart is on the LEFT of the drawing , and the LEFT side is on the RIGHT.",
+      "vi": "Interactive Heart Map (Các Ngăn Tim, Vách Ngăn, Van Một Chiều & Động Mạch Vành). Di chuột (hoặc chạm) vào các bộ phận của Tim để xem tên và chức năng. Hãy tương tác với sơ đồ Tim 👆. Lưu ý: Bên TRÁI của tim trên bản vẽ thực chất là bên PHẢI của cơ thể (và ngược lại).",
+      "duration": 39.09,
+      "startTime": 796.05,
+      "endTime": 835.14,
+      "audioUrl": "/audio/lectures/science/b9/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "⚡ Độ dày Thành Cơ & Động mạch vành (B9.2.1–2)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "⚡ Relative Muscular Wall Thickness. Ventricles vs Atria: Ventricles have much thicker muscular walls than atria because atria only pump blood down into ventricles, while ventricles must pump blood out into systemic or pulmonary arteries. Left Ventricle vs Right Ventricle: LV wall is ~3x thicker than RV wall. LV pumps blood against high resistance all around the entire body, whereas RV only pumps to the lungs at low pressure.",
+      "vi": "⚡ Độ dày Thành Cơ & Động mạch vành (B9.2.1–2). Tâm thất vs Tâm nhĩ: Thành cơ tâm thất dày hơn tâm nhĩ vì tâm nhĩ chỉ đẩy máu xuống tâm thất, còn tâm thất phải bơm máu đi xa vào các động mạch. Tâm thất trái vs Tâm thất phải: Thành cơ Left Ventricle dày gấp ~3 lần Right Ventricle để tạo áp suất cao bơm máu đi khắp cơ thể; bên phải chỉ bơm quãng ngắn lên phổi. Coronary arteries (Động mạch vành): Nhánh mạch chạy bao quanh mặt ngoài thành cơ tim để cấp oxy & glucose nuôi chính cơ tim.",
+      "duration": 64.19,
+      "startTime": 835.14,
+      "endTime": 899.33,
+      "audioUrl": "/audio/lectures/science/b9/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🔄 Co bóp Cơ tim & Van Một Chiều (B9.2.7)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🔄 Contraction & One-Way Valves (B9.2.7). Relaxation (Filling): Heart muscle relaxes; blood returns from veins into the left and right atria. One-way exit valves at the bases of the arteries close to stop backflow. Atrial Contraction: Muscles of the atria contract, forcing blood through open one-way valves down into the ventricles. Ventricular Contraction: Thick ventricular muscles contract powerfully, snapping the one-way valves between atria and ventricles shut (preventing backflow into atria and creating the valve-closing heart sound) while forcing the exit one-way valves open to pump blood into the pulmonary artery and aorta.",
+      "vi": "🔄 Co bóp Cơ tim & Van Một Chiều (B9.2.7). Giãn nghỉ (Relaxation): Cơ tim giãn ra, máu từ tĩnh mạch chảy về hai tâm nhĩ; van một chiều ở gốc động mạch đóng lại ngăn máu dội ngược. Tâm nhĩ co (Atrial Contraction): Cơ tâm nhĩ co bóp đẩy máu qua van một chiều mở xuống hai tâm thất. Tâm thất co (Ventricular Contraction): Cơ tâm thất co mạnh làm áp suất tăng vọt, đóng sập van một chiều giữa nhĩ và thất (chống trào ngược và phát ra tiếng tim đóng van) đồng thời đẩy mở van đầu ra để tống máu vào động mạch phổi và động mạch chủ.",
+      "duration": 77.72,
+      "startTime": 899.33,
+      "endTime": 977.05,
+      "audioUrl": "/audio/lectures/science/b9/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "3 Phương pháp Theo dõi Tim (Core B9.2.3): ECG (Electrocardiogram - Điện tâm đồ):...",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "Monitoring Techniques (Syllabus 9.2): ECG (Electrocardiogram): Records electrical impulses across heart muscle. Pulse Rate: Palpated at superficial arteries (wrist / neck) to count bpm. Listening to Valve Sounds: A stethoscope detects the \"lub-dub\" heart sounds made by one-way valves closing (B9.2.3).",
+      "vi": "3 Phương pháp Theo dõi Tim (Core B9.2.3): ECG (Electrocardiogram - Điện tâm đồ): Ghi lại hoạt động điện của tim. Pulse Rate (Nhịp mạch): Bắt mạch ở cổ tay / cổ để đếm nhịp đập mỗi phút. Sounds of Valves Closing: Nghe âm thanh đóng các van tim (\"lub-dub\") bằng ống nghe.",
+      "duration": 43.41,
+      "startTime": 977.05,
+      "endTime": 1020.46,
+      "audioUrl": "/audio/lectures/science/b9/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "Giải thích Tăng Nhịp tim khi Vận động (Supplement B9.2.8): Khi vận động thể chất...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "Response to Physical Activity: During exercise, contracting muscles require more ATP, increasing the rate of aerobic respiration . Heart rate and stroke volume increase to pump more oxygen and glucose to active muscle tissues and remove carbon dioxide and lactic acid more rapidly.",
+      "vi": "Giải thích Tăng Nhịp tim khi Vận động (Supplement B9.2.8): Khi vận động thể chất, cơ bắp co mạnh cần nhiều năng lượng giải phóng từ hô hấp hiếu khí (aerobic respiration) . Nhịp tim tăng giúp bơm máu nhanh hơn để cung cấp thêm oxy (oxygen) và glucose cho tế bào cơ, đồng thời đào thải nhanh khí CO₂.",
+      "duration": 41.66,
+      "startTime": 1020.46,
+      "endTime": 1062.12,
+      "audioUrl": "/audio/lectures/science/b9/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which three methods can all be used to monitor the activity of the mammalian heart? A. ECG, pulse rate, and listening to the sounds of valves closing B. ECG, measuring blood glucose concentration, and counting breaths per minute C. Listening to muscles contracting, measuring body temperature, and pulse rate D. Counting red blood cells, ECG, and measuring urea in urine ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Syllabus B9.2.3 states that heart activity is monitored by ECG (electrocardiogram) , pulse rate , and listening to the sounds of valves closing (not muscle contraction sounds!) (A).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Which three methods can all be used to monitor the activity of the mammalian heart? (Ba phương pháp nào sau đây đều được dùng để theo dõi hoạt động của tim động vật có vú?) A. ECG, pulse rate, and listening to the sounds of valves closing B. ECG, measuring blood glucose concentration, and counting breaths per minute C. Listening to muscles contracting, measuring body temperature, and pulse rate D. Counting red blood cells, ECG, and measuring urea in urine ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Theo chuẩn B9.2.3, hoạt động của tim được theo dõi bằng 3 cách: điện tâm đồ (ECG) , nhịp mạch (pulse rate) và nghe âm thanh đóng van tim — không phải nghe tiếng cơ co (A).",
+      "duration": 101.37,
+      "startTime": 1062.12,
+      "endTime": 1163.49,
+      "audioUrl": "/audio/lectures/science/b9/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "atria",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Describe how contraction of the atria and ventricles and the action of valves pump blood through the heart. [2](b) Explain why physical activity causes a student’s heart rate to increase. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Muscles of the atria contract first to push blood through open one-way valves into the ventricles [1m]; muscles of the ventricles then contract , closing the valves between atria and ventricles (preventing backflow) and forcing open the one-way valves into the arteries [1m]. (b) Active muscles contract more and require more energy from aerobic respiration [1m]; higher heart rate pumps blood faster to supply more oxygen and glucose to muscle cells [1m] and remove carbon dioxide more rapidly [1m]. 💡 Intuition Check: Heart sounds (\"lub-dub\") come from ONE-WAY VALVES CLOSING, never from cardiac muscle hitting the chest!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Describe how contraction of the atria and ventricles and the action of valves pump blood through the heart. (b) Explain why physical activity causes a student’s heart rate to increase. ((a) Mô tả sự co cơ tâm nhĩ, tâm thất và hoạt động của các van giúp bơm máu qua tim. (b) Giải thích tại sao vận động thể chất làm nhịp tim tăng. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Muscles of the atria contract to push blood through open one-way valves into the ventricles ; muscles of the ventricles then contract , forcing the valves between atria and ventricles closed (preventing backflow) and pushing open the valves into the arteries . (b) Active muscles contract more and need more energy from aerobic respiration ; increased heart rate pumps blood faster to deliver more oxygen and glucose to muscles and remove carbon dioxide faster . 💡 Kiểm tra bản chất: Nhớ kỹ: Âm thanh \"lub-dub\" khi nghe ống nghe là tiếng ĐÓNG VAN MỘT CHIỀU!",
+      "duration": 136.84,
+      "startTime": 1163.49,
+      "endTime": 1300.33,
+      "audioUrl": "/audio/lectures/science/b9/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🍔 3. CORONARY HEART DISEASE (Bệnh Mạch vành)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟦 CORE 🍔 3. CORONARY HEART DISEASE (CHD).",
+      "vi": "🟦 CORE 🍔 3. CORONARY HEART DISEASE (Bệnh Mạch vành).",
+      "duration": 9.38,
+      "startTime": 1300.33,
+      "endTime": 1309.71,
+      "audioUrl": "/audio/lectures/science/b9/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: The heart pumps blood for the whole body, yet its own thick muscular wall relies on narrow fuel pipes on its outside called coronary arteries ! If cholesterol plaque and a blood clot block a coronary artery, cardiac muscle cells downstream run out of oxygen and glucose and stop contracting.",
+      "vi": "🎯 Hình dung đời thường: Trái tim bơm máu nuôi cả cơ thể nhưng thành cơ dày của chính nó lại phải nhận oxy qua hệ ống dẫn riêng bám bên ngoài gọi là động mạch vành (coronary arteries) ! Khi mảng bám mỡ cholesterol và cục máu đông làm tắc ống dẫn này, vùng cơ tim phía sau bị ngạt oxy/glucose và ngừng co bóp.",
+      "duration": 39.62,
+      "startTime": 1309.71,
+      "endTime": 1349.33,
+      "audioUrl": "/audio/lectures/science/b9/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Scope B9.2.5–6: 1) CHD = blockage of coronary arteries supplying heart muscle. 2) Know all 7 syllabus risk factors: diet (high saturated fat/salt), lack of exercise, stress, smoking, genetic predisposition, age, and sex . 3) Discuss prevention: balanced diet low in saturated fat + regular exercise.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Trọng tâm B9.2.5–6: 1) CHD = sự tắc nghẽn động mạch vành . 2) Đủ 7 yếu tố nguy cơ: chế độ ăn (diet), ít vận động, căng thẳng (stress), hút thuốc (smoking), di truyền (genetic predisposition), tuổi (age), giới tính (sex) . 3) Phòng ngừa bằng chế độ ăn giảm mỡ bão hòa + tập thể dục đều đặn.",
+      "duration": 58.51,
+      "startTime": 1349.33,
+      "endTime": 1407.84,
+      "audioUrl": "/audio/lectures/science/b9/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When asked what is blocked in CHD, writing \"an artery in the heart\" or \"the aorta\" loses the mark — always name the coronary arteries !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi đề hỏi mạch máu nào bị tắc trong bệnh CHD, viết \"động mạch chủ (aorta)\" hoặc \"mạch máu trong tim\" sẽ mất điểm — bắt buộc ghi chính xác coronary arteries (động mạch vành) !",
+      "duration": 26.79,
+      "startTime": 1407.84,
+      "endTime": 1434.63,
+      "audioUrl": "/audio/lectures/science/b9/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Cơ tim cũng cần ăn! Nó được nuôi dưỡng bởi các Coronary arteries (Động mạch vành...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "The heart muscle (myocardium) cannot absorb nutrients directly from the blood inside its chambers. It is nourished by the coronary arteries branching from the aorta. Blockage of these vessels leads to coronary heart disease.",
+      "vi": "Cơ tim cũng cần ăn! Nó được nuôi dưỡng bởi các Coronary arteries (Động mạch vành) chạy ngay trên bề mặt tim. Nếu mạch vành bị tắc nghẽn, cơ tim sẽ chết vì đói Oxy (Heart Attack).",
+      "duration": 29.32,
+      "startTime": 1434.63,
+      "endTime": 1463.95,
+      "audioUrl": "/audio/lectures/science/b9/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🍔 TONY ENGLISH LAB: CORONARY HEART DISEASE",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Stages of Coronary Artery Occlusion. Hover over the 3 stages to observe how fatty deposits restrict arterial lumen and induce thrombosis. Explore the Stages Above 👆. Hover over each stage to understand plaque development, lumen narrowing, angina, and acute myocardial infarction.",
+      "vi": "🍔 TONY ENGLISH LAB: CORONARY HEART DISEASE. Hãy tương tác với sơ đồ bên cạnh 👆.",
+      "duration": 26.54,
+      "startTime": 1463.95,
+      "endTime": 1490.49,
+      "audioUrl": "/audio/lectures/science/b9/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "⚠️ Causes (Tiến trình gây bệnh)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "⚠️ Pathological Progression of CHD. Atherosclerosis: Cholesterol and lipid deposition narrows the lumen of coronary arteries. Angina: Partial occlusion limits oxygen delivery, causing chest pain upon exertion. Thrombosis: Platelet aggregation on rough atheroma forms an occlusive blood clot. Cardiac Infarction: Downstream myocardial necrosis leading to heart attack.",
+      "vi": "⚠️ Causes (Tiến trình gây bệnh). Atherosclerosis: Cholesterol dính vào thành động mạch, làm hẹp lòng mạch. Angina: Tắc nghẽn một phần gây đau thắt ngực khi vận động mạnh. Thrombosis: Thành mạch sần sùi làm máu đông lại thành cục nghẽn hoàn toàn. Cardiac Arrest: Cơ tim không nhận được Oxy, chết và ngừng đập.",
+      "duration": 50.29,
+      "startTime": 1490.49,
+      "endTime": 1540.78,
+      "audioUrl": "/audio/lectures/science/b9/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🍔 Yếu tố Nguy cơ & Phòng ngừa (B9.2.5–6)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "🍔 Risk Factors & Prevention (Core B9.2.5–6). Diet: High saturated animal fat and high salt intake elevate cholesterol and blood pressure. Lifestyle: Smoking (carbon monoxide reduces O₂ carrying capacity, nicotine increases heart rate/BP), physical inactivity, obesity, and stress. Non-modifiable: Genetic inheritance, aging, and male sex. Prevention: Consuming a balanced diet low in saturated fats and engaging in regular aerobic exercise to strengthen the heart and lower resting blood pressure.",
+      "vi": "🍔 Yếu tố Nguy cơ & Phòng ngừa (B9.2.5–6). Diet (Chế độ ăn): Ăn nhiều chất béo bão hòa và muối làm tăng mảng bám và huyết áp. Lifestyle (Lối sống): Hút thuốc lá (smoking), ít vận động và căng thẳng kéo dài (stress). Không thể thay đổi: Khuynh hướng di truyền (genetic predisposition), tuổi tác (age) và giới tính (sex). Phòng ngừa (Prevention — B9.2.6): Ăn uống cân bằng giảm mỡ bão hòa kết hợp tập thể dục đều đặn giúp giảm cholesterol, hạ huyết áp và tăng sức bền cơ tim.",
+      "duration": 74.82,
+      "startTime": 1540.78,
+      "endTime": 1615.6,
+      "audioUrl": "/audio/lectures/science/b9/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Coronary heart disease develops when a blood vessel supplying the heart muscle becomes blocked. Which blood vessel is blocked? A. Aorta B. Coronary artery C. Pulmonary artery D. Vena cava ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: The coronary arteries branch off the aorta to supply cardiac muscle tissue directly with oxygenated blood and glucose; blockage of these vessels causes coronary heart disease (B).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Coronary heart disease develops when a blood vessel supplying the heart muscle becomes blocked. Which blood vessel is blocked? (Bệnh mạch vành phát triển khi mạch máu nuôi khối cơ tim bị tắc nghẽn. Đó là mạch máu nào?) A. Aorta B. Coronary artery C. Pulmonary artery D. Vena cava ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Động mạch vành (Coronary artery) tách ra từ gốc động mạch chủ để cấp máu giàu oxy và glucose trực tiếp cho cơ tim; tắc nghẽn mạch này gây bệnh mạch vành (B).",
+      "duration": 72.92,
+      "startTime": 1615.6,
+      "endTime": 1688.52,
+      "audioUrl": "/audio/lectures/science/b9/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "four",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) State four risk factors for coronary heart disease other than diet and lack of exercise. [2](b) Discuss how diet and regular exercise help reduce the risk of coronary heart disease. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Any four from: stress, smoking, genetic predisposition, age, sex (4 correct = [2m]; 2–3 correct = [1m]). (b) Diet: Eating less saturated fat / cholesterol reduces fatty deposits building up in coronary arteries (and avoids obesity) [1m]. Exercise: Regular physical activity strengthens heart muscle, lowers blood pressure / cholesterol levels, and maintains healthy body mass [1m]. 💡 Intuition Check: Memorise all 7 B9.2.5 risk factors in two groups: 4 modifiable (diet, lack of exercise, stress, smoking) + 3 non-modifiable (genetic predisposition, age, sex).",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) State four risk factors for coronary heart disease other than diet and lack of exercise. (b) Discuss how diet and regular exercise help reduce the risk of coronary heart disease. ((a) Nêu 4 yếu tố nguy cơ gây bệnh mạch vành ngoài chế độ ăn và ít vận động. (b) Thảo luận cách chế độ ăn và tập thể dục đều đặn giúp giảm nguy cơ CHD. ) ✍️ Lời giải chi tiết theo thang điểm: đúng 4 ý = ; đúng 2–3 ý = . (b) Diet: Eating less saturated fat / cholesterol prevents fatty deposits building up in coronary arteries . Exercise: Regular exercise strengthens heart muscle, lowers blood pressure / cholesterol, and maintains healthy weight . 💡 Kiểm tra bản chất: Chia 7 yếu tố nguy cơ B9.2.5 thành 2 nhóm để nhớ siêu tốc: 4 yếu tố lối sống + 3 yếu tố bẩm sinh/sinh học.",
+      "duration": 133.17,
+      "startTime": 1688.52,
+      "endTime": 1821.69,
+      "audioUrl": "/audio/lectures/science/b9/s03_b09.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🧪 4. BLOOD VESSELS (Động mạch, Tĩnh mạch & Mao mạch)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🟦 CORE 🧪 4. BLOOD VESSELS (ARTERIES, VEINS, CAPILLARIES).",
+      "vi": "🟦 CORE & 🟩 SUPP 🧪 4. BLOOD VESSELS (Động mạch, Tĩnh mạch & Mao mạch).",
+      "duration": 12.21,
+      "startTime": 1821.69,
+      "endTime": 1833.9,
+      "audioUrl": "/audio/lectures/science/b9/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Every blood vessel’s shape matches its blood pressure: Arteries are thick-walled elastic fire hoses handling high-pressure surges from the ventricles; Capillaries are microscopic one-cell-thick exchange tunnels; Veins are wide, low-resistance return pipes with one-way valves stopping low-pressure blood from falling back!",
+      "vi": "🎯 Hình dung đời thường: Mỗi loại mạch máu được thiết kế khớp hoàn hảo với áp suất dòng máu: Động mạch (Arteries) là vòi cứu hỏa thành cơ đàn hồi dày chịu áp lực phun cao từ tâm thất; Mao mạch (Capillaries) là ống trao đổi siêu mỏng dày đúng 1 tế bào; Tĩnh mạch (Veins) là đường ống về tim lòng rộng, áp suất thấp nên có van một chiều (valves) chống chảy ngược!",
+      "duration": 45.24,
+      "startTime": 1833.9,
+      "endTime": 1879.14,
+      "audioUrl": "/audio/lectures/science/b9/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Core B9.3.1–2 & B9.3.5: Compare wall thickness, lumen diameter, and valves across arteries, veins, and capillaries; identify the 4 main vessels of the heart and lungs ( vena cava, aorta, pulmonary artery, pulmonary vein ). 2) Supplement B9.3.3–4: Link artery thick muscular/elastic wall to high pressure , vein thin wall/wide lumen/valves to low pressure , and capillary one-cell-thick wall to short diffusion distance.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Core B9.3.1–2 & B9.3.5: So sánh độ dày thành mạch, đường kính lòng mạch (lumen) và van; gọi tên chuẩn 4 mạch máu chính của Tim và Phổi. 2) Supplement B9.3.3–4: Liên hệ thành dày đàn hồi của động mạch với áp suất cao , lòng rộng + van của tĩnh mạch với áp suất thấp , và thành dày 1 tế bào của mao mạch với khoảng cách khuếch tán ngắn.",
+      "duration": 65.78,
+      "startTime": 1879.14,
+      "endTime": 1944.92,
+      "audioUrl": "/audio/lectures/science/b9/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Remember the pulmonary swap! Arteries = Away from heart , Veins = Into heart — so the pulmonary artery carries deoxygenated blood to the lungs, whereas the pulmonary vein carries oxygenated blood back to the left atrium!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cẩn thận cú đảo chiều ở Phổi! Arteries = Ra khỏi tim , Veins = Về tim — vì vậy pulmonary artery chở máu nghèo oxy từ tâm thất phải lên phổi, còn pulmonary vein chở máu giàu oxy từ phổi về tâm nhĩ trái!",
+      "duration": 34.91,
+      "startTime": 1944.92,
+      "endTime": 1979.83,
+      "audioUrl": "/audio/lectures/science/b9/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "🔍 So sánh Cấu tạo & Thích nghi Áp suất: Arteries vs Veins vs Capillaries (B9.3.1...",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "🔍 Comparing Arteries, Veins & Capillaries (Core B9.3.1–2 & Supplement B9.3.3–4)",
+      "vi": "🔍 So sánh Cấu tạo & Thích nghi Áp suất: Arteries vs Veins vs Capillaries (B9.3.1–4)",
+      "duration": 15.38,
+      "startTime": 1979.83,
+      "endTime": 1995.21,
+      "audioUrl": "/audio/lectures/science/b9/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🔴 Arteries (Động mạch)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🔴 Arteries. Carry blood AWAY from the heart under very high, pulsating pressure. Thick muscular & elastic walls: Smooths out pressure surges and withstands high pressure without rupturing. Narrow lumen: Maintains elevated hydrostatic blood pressure. No valves along their length (high pressure keeps blood moving forward; one-way valves sit only at the heart exits).",
+      "vi": "🔴 Arteries (Động mạch). Mang máu ĐI KHỎI TIM . Chịu áp lực cực lớn. Thick muscular & elastic walls: Vách cơ dày và đàn hồi để giãn nở & chịu áp lực. Narrow lumen: Lòng mạch hẹp giúp duy trì áp lực cao.",
+      "duration": 41.13,
+      "startTime": 1995.21,
+      "endTime": 2036.34,
+      "audioUrl": "/audio/lectures/science/b9/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🔵 Veins (Tĩnh mạch)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🔵 Veins. Carry blood TOWARDS the heart under very low pressure. Thin walls, Wide lumen: Minimises resistance to slow-flowing, low-pressure blood. One-way VALVES present: Prevent backflow of low-pressure blood returning against gravity.",
+      "vi": "🔵 Veins (Tĩnh mạch). Mang máu VỀ TIM . Áp lực rất thấp. Thin walls, Wide lumen: Lòng mạch rộng rãi để máu dễ chảy rề rề về tim. Valves (Van): BẮT BUỘC CÓ VAN để chống máu chảy ngược do trọng lực.",
+      "duration": 32.76,
+      "startTime": 2036.34,
+      "endTime": 2069.1,
+      "audioUrl": "/audio/lectures/science/b9/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🕸️ Capillaries (Mao mạch)",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "🕸️ Capillaries. Link arteries to veins; site of exchange of oxygen, glucose, and waste products between blood and body cells (B9.3.2). One cell thick: Walls formed of a single layer of endothelial cells ➔ Minimal diffusion distance. Very narrow lumen: RBCs pass in single file, maximising contact surface and diffusion time.",
+      "vi": "🕸️ Capillaries (Mao mạch). Cầu nối giữa Động và Tĩnh mạch. Nơi diễn ra sự trao đổi chất với tế bào. One cell thick: Vách mỏng 1 lớp tế bào ➔ Khoảng cách khuếch tán cực ngắn. Chảy rất chậm để có thời gian trao đổi chất.",
+      "duration": 38.12,
+      "startTime": 2069.1,
+      "endTime": 2107.22,
+      "audioUrl": "/audio/lectures/science/b9/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "Organ (Cơ quan): Heart (Tim); Mạch đưa máu VÀO cơ quan (To Organ): Vena Cava (tĩ...",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "Organ: Heart; Vessel Carrying Blood TO Organ: Vena Cava (deoxygenated from body into RA) & Pulmonary Vein (oxygenated from lungs into LA) ( Coronary arteries supply oxygen & glucose to heart muscle wall); Vessel Carrying Blood AWAY FROM Organ: Aorta (oxygenated from LV to body) & Pulmonary Artery (deoxygenated from RV to lungs). Organ: Lungs; Vessel Carrying Blood TO Organ: Pulmonary Artery (carries deoxygenated blood from RV); Vessel Carrying Blood AWAY FROM Organ: Pulmonary Vein (carries oxygenated blood to LA).",
+      "vi": "Organ (Cơ quan): Heart (Tim); Mạch đưa máu VÀO cơ quan (To Organ): Vena Cava (tĩnh mạch chủ: máu nghèo O₂ từ cơ thể vào tâm nhĩ phải) & Pulmonary Vein (tĩnh mạch phổi: máu giàu O₂ vào tâm nhĩ trái) ( Coronary arteries cấp máu giàu O₂ nuôi thành cơ tim); Mạch đưa máu RA KHỎI cơ quan: Aorta (động mạch chủ: máu giàu O₂ từ tâm thất trái đi nuôi cơ thể) & Pulmonary Artery (động mạch phổi: máu nghèo O₂ lên phổi). Organ (Cơ quan): Lungs (Phổi); Mạch đưa máu VÀO cơ quan (To Organ): Pulmonary Artery (động mạch phổi: mang máu nghèo O₂ từ tâm thất phải); Mạch đưa máu RA KHỎI cơ quan: Pulmonary Vein (tĩnh mạch phổi: mang máu giàu O₂ đỏ tươi về tâm nhĩ trái).",
+      "duration": 90.19,
+      "startTime": 2107.22,
+      "endTime": 2197.41,
+      "audioUrl": "/audio/lectures/science/b9/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which blood vessel carries oxygenated blood from the lungs directly into the left atrium of the heart? A. Aorta B. Pulmonary artery C. Pulmonary vein D. Vena cava ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Pulmonary refers to the lungs, and veins carry blood towards the heart. Therefore, the pulmonary vein carries freshly oxygenated blood from the lungs into the left atrium (C).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Which blood vessel carries oxygenated blood from the lungs directly into the left atrium of the heart? (Mạch máu nào mang máu giàu oxy từ phổi đổ trực tiếp vào tâm nhĩ trái của tim?) A. Aorta B. Pulmonary artery C. Pulmonary vein D. Vena cava ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Pulmonary chỉ phổi, còn vein (tĩnh mạch) là mạch mang máu chảy VỀ tim. Do đó tĩnh mạch phổi (pulmonary vein) mang máu giàu oxy từ phổi đổ vào tâm nhĩ trái (C).",
+      "duration": 70.5,
+      "startTime": 2197.41,
+      "endTime": 2267.91,
+      "audioUrl": "/audio/lectures/science/b9/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "vein",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Explain how the structure of a vein is adapted to transport blood at low pressure back to the heart. [2](b) Explain how the structure of a capillary is related to its function of exchanging substances with tissues. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Has a wide lumen that offers low resistance to blood flow [1m] and contains valves that prevent backflow of low-pressure blood [1m] (thin wall suffices because pressure is low). (b) Capillary wall is one cell thick , giving a very short diffusion distance for rapid exchange of oxygen, glucose, and carbon dioxide between blood and cells [2m: 1m structure + 1m short diffusion distance]. 💡 Intuition Check: In 0654 B9.3.5, focus 100% on the 4 main vessels of the Heart & Lungs: Vena Cava, Pulmonary Artery, Pulmonary Vein, and Aorta!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Explain how the structure of a vein is adapted to transport blood at low pressure back to the heart. (b) Explain how the structure of a capillary is related to its function of exchanging substances with tissues. ((a) Giải thích cấu tạo tĩnh mạch thích nghi đưa máu áp suất thấp về tim. (b) Giải thích cấu tạo mao mạch phù hợp với chức năng trao đổi chất với mô. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Has a wide lumen offering minimal resistance to blood flow and valves that prevent backflow of low-pressure blood . (b) Capillary wall is one cell thick , providing a very short diffusion distance for rapid exchange of O₂, nutrients, and CO₂ with cells . 💡 Kiểm tra bản chất: Trong giới hạn 0654 B9.3.5, chỉ cần nắm vững 4 mạch máu lớn của Tim & Phổi: Vena Cava, Pulmonary Artery, Pulmonary Vein và Aorta!",
+      "duration": 130.74,
+      "startTime": 2267.91,
+      "endTime": 2398.65,
+      "audioUrl": "/audio/lectures/science/b9/s04_b10.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🩸 5. BLOOD COMPOSITION & CLOTTING (Thành phần Máu & Đông máu)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🟦 CORE 🩸 5. BLOOD COMPOSITION & CLOTTING MECHANISM.",
+      "vi": "🟦 CORE & 🟩 SUPP 🩸 5. BLOOD COMPOSITION & CLOTTING (Thành phần Máu & Đông máu).",
+      "duration": 7.49,
+      "startTime": 2398.65,
+      "endTime": 2406.14,
+      "audioUrl": "/audio/lectures/science/b9/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture blood as a 4-part life-support team in liquid plasma : red blood cells are nucleus-free oxygen taxis filled with haemoglobin ; phagocytes are Pac-Man cells engulfing germs; lymphocytes are precision factories making antibodies ; and platelets seal cuts to stop bleeding and keep germs out!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung máu gồm 4 lực lượng phối hợp trong dòng huyết tương (plasma) : hồng cầu (RBCs) là xe chở oxy không có nhân chứa đầy haemoglobin ; đại thực bào (phagocytes) là chiến binh nuốt chửng vi khuẩn; tế bào lympho (lymphocytes) là nhà máy chế tạo kháng thể (antibodies) ; và tiểu cầu (platelets) là đội vá vết thương chống mất máu và chặn vi khuẩn!",
+      "duration": 47.85,
+      "startTime": 2406.14,
+      "endTime": 2453.99,
+      "audioUrl": "/audio/lectures/science/b9/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Core B9.4.1–3: List RBCs, WBCs, platelets, plasma ; RBCs transport O₂ via haemoglobin ; WBCs do phagocytosis & antibody production; platelets cause clotting ( cascade details not required in 0654 ); plasma transports blood cells, ions, nutrients, urea, hormones, CO₂. 2) Supplement B9.4.4–6: Distinguish phagocytes (lobed nucleus → engulf pathogens) vs lymphocytes (large round nucleus → antibody production); state two clotting roles: preventing blood loss and preventing entry of pathogens .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Core B9.4.1–3: 4 thành phần RBCs, WBCs, platelets, plasma ; hồng cầu chở O₂ nhờ haemoglobin ; tiểu cầu giúp đông máu ( 0654 không yêu cầu cơ chế chi tiết ); huyết tương chở tế bào máu, ion, chất dinh dưỡng, urea, hormone, CO₂. 2) Supplement B9.4.4–6: Phân biệt trên ảnh hiển vi phagocytes (nhân chia thùy → thực bào) vs lymphocytes (nhân tròn to → tạo kháng thể); 2 vai trò đông máu: ngăn mất máu & ngăn mầm bệnh xâm nhập .",
+      "duration": 88.5,
+      "startTime": 2453.99,
+      "endTime": 2542.49,
+      "audioUrl": "/audio/lectures/science/b9/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: On photomicrographs, don’t confuse WBCs with RBCs: RBCs are smaller, far more numerous, and have a pale centre with no nucleus ; phagocytes have a multi-lobed nucleus; lymphocytes have one large dark round nucleus!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi nhận diện trên ảnh chụp hiển vi (photomicrographs): Hồng cầu nhỏ, số lượng áp đảo và không có nhân ; Phagocyte có nhân chia nhiều thùy (lobed nucleus); Lymphocyte có 1 nhân tròn sẫm chiếm gần trọn tế bào!",
+      "duration": 35.07,
+      "startTime": 2542.49,
+      "endTime": 2577.56,
+      "audioUrl": "/audio/lectures/science/b9/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "💧 Plasma (Huyết tương)",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "💧 Plasma. Pale yellow liquid (55% of blood). Transports blood cells, ions, nutrients (glucose, amino acids), urea, hormones, and carbon dioxide (Core B9.4.3d).",
+      "vi": "💧 Plasma (Huyết tương). Phần dịch lỏng màu vàng nhạt (~55% máu). Vận chuyển các tế bào máu (blood cells), ion khoáng (ions), chất dinh dưỡng hòa tan, urea, hormone và khí CO₂ (Core B9.4.3d).",
+      "duration": 35.47,
+      "startTime": 2577.56,
+      "endTime": 2613.03,
+      "audioUrl": "/audio/lectures/science/b9/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "🔴 Red Blood Cells (Hồng cầu)",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "🔴 Red Blood Cells (Erythrocytes). Specialised for oxygen transport. Biconcave disc shape increases surface area to volume ratio. Contains haemoglobin (iron-rich protein). NO nucleus to maximise room for haemoglobin packaging.",
+      "vi": "🔴 Red Blood Cells (Hồng cầu). Vận chuyển Oxy. Chứa Haemoglobin (có hạt Sắt). Hình đĩa lõm hai mặt (Biconcave) tăng Sxq. KHÔNG CÓ NHÂN để chứa thêm nhiều Oxy.",
+      "duration": 32.19,
+      "startTime": 2613.03,
+      "endTime": 2645.22,
+      "audioUrl": "/audio/lectures/science/b9/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "🧱 Platelets (Tiểu cầu)",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "🧱 Platelets (Thrombocytes). Cell fragments vital for blood clotting. They release clotting factors to prevent blood loss and prevent pathogen entry through skin breaks.",
+      "vi": "🧱 Platelets (Tiểu cầu). Mảnh vỡ tế bào. Tham gia vào quá trình Blood Clotting (Đông máu) để ngăn mất máu và chặn mầm bệnh xâm nhập.",
+      "duration": 21.51,
+      "startTime": 2645.22,
+      "endTime": 2666.73,
+      "audioUrl": "/audio/lectures/science/b9/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "🛡️ White Blood Cells (Bạch cầu bảo vệ cơ thể)",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "🛡️ White Blood Cells (Leukocytes: Defense Against Disease). Unlike erythrocytes, white blood cells possess a nucleus and lack haemoglobin. There are two primary types:",
+      "vi": "🛡️ White Blood Cells (Bạch cầu bảo vệ cơ thể). Khác với hồng cầu, bạch cầu CÓ NHÂN và không chứa Haemoglobin. Có 2 loại chuyên biệt làm nhiệm vụ khác nhau:",
+      "duration": 24.19,
+      "startTime": 2666.73,
+      "endTime": 2690.92,
+      "audioUrl": "/audio/lectures/science/b9/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "🦠 Phagocytes (Đại thực bào)",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "🦠 Phagocytes. Phagocytosis: Engulf and digest foreign pathogens using digestive enzymes. Characteristic lobed nucleus; non-specific immune response.",
+      "vi": "🦠 Phagocytes (Đại thực bào). Phagocytosis: Nuốt chửng và tiêu hóa mầm bệnh bằng enzyme. Phản ứng chung chung cho mọi loại mầm bệnh (Non-specific).",
+      "duration": 23.43,
+      "startTime": 2690.92,
+      "endTime": 2714.35,
+      "audioUrl": "/audio/lectures/science/b9/s05_b08.mp3"
+    },
+    {
+      "id": "s05_b09",
+      "title": "💉 Lymphocytes (Tế bào Lympho)",
+      "selector": "[data-lecture-section=\"s05_b09\"]",
+      "en": "💉 Lymphocytes. Produce specific antibodies tailored against specific antigens on pathogens. Large spherical nucleus; can agglutinate pathogens, neutralise toxins, and provide long-term immunity.",
+      "vi": "💉 Lymphocytes (Tế bào Lympho). Sản xuất Antibodies (Kháng thể) đặc hiệu cho từng loại virus/vi khuẩn. Làm mầm bệnh dính lại (agglutinate), phá vỡ màng tế bào, hoặc trung hòa độc tố (neutralise toxins).",
+      "duration": 30.93,
+      "startTime": 2714.35,
+      "endTime": 2745.28,
+      "audioUrl": "/audio/lectures/science/b9/s05_b09.mp3"
+    },
+    {
+      "id": "s05_b10",
+      "title": "🩸 Đông máu: Tiểu cầu & Hai Vai trò Bảo vệ (0654 Core B9.4.3c & Supplement B9.4.6)",
+      "selector": "[data-lecture-section=\"s05_b10\"]",
+      "en": "🩸 Blood Clotting: Platelets & Protective Roles (0654 Core B9.4.3c & Supplement B9.4.6). In IGCSE Co-ordinated Sciences ( 0654 ), biochemical cascade details are not required . Focus on the component involved and the two exam-tested protective functions of clotting when a blood vessel is cut: Component responsible (Core B9.4.3c): Platelets (tiny cell fragments in blood) gather at damaged vessel walls to trigger blood clotting , trapping red blood cells to seal the wound with a scab. Protective Role 1 (Supplement B9.4.6): Prevents excessive blood loss from damaged blood vessels so blood pressure and oxygen transport are maintained. Protective Role 2 (Supplement B9.4.6): Prevents the entry of pathogens (bacteria and viruses) into the bloodstream through breaks in the skin.",
+      "vi": "🩸 Đông máu: Tiểu cầu & Hai Vai trò Bảo vệ (0654 Core B9.4.3c & Supplement B9.4.6). Trong chương trình Co-ordinated Sciences ( 0654 ), thí sinh không cần học chuỗi phản ứng enzyme đông máu, mà tập trung nắm chắc thành phần tham gia và 2 vai trò sinh học cốt lõi : Thành phần thực hiện (Core B9.4.3c): Tiểu cầu (Platelets) tập trung tại vết rách mạch máu để kích hoạt quá trình đông máu (blood clotting) , tạo vảy (scab) bịt kín vết thương. Vai trò bảo vệ 1 (Supplement B9.4.6): Ngăn ngừa mất máu khỏi mạch máu bị tổn thương. Vai trò bảo vệ 2 (Supplement B9.4.6): Ngăn chặn mầm bệnh xâm nhập qua vết rách trên da vào máu.",
+      "duration": 111.38,
+      "startTime": 2745.28,
+      "endTime": 2856.66,
+      "audioUrl": "/audio/lectures/science/b9/s05_b10.mp3"
+    },
+    {
+      "id": "s05_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which row correctly matches a component of mammalian blood with its specific function? A. Lymphocyte — engulfs bacteria by phagocytosis B. Phagocyte — produces specific antibodies C. Plasma — transports urea, hormones, ions, and carbon dioxide D. Platelets — transport oxygen bound to haemoglobin ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Plasma is the liquid part of blood that transports blood cells, ions, dissolved nutrients, urea, hormones, and carbon dioxide (C). Lymphocytes produce antibodies (not A), phagocytes engulf pathogens (not B), and red blood cells transport oxygen using haemoglobin (not D).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Which row correctly matches a component of mammalian blood with its specific function? (Hàng nào ghép đúng thành phần máu của động vật có vú với chức năng đặc trưng của nó?) A. Lymphocyte — engulfs bacteria by phagocytosis B. Phagocyte — produces specific antibodies C. Plasma — transports urea, hormones, ions, and carbon dioxide D. Platelets — transport oxygen bound to haemoglobin ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Huyết tương (Plasma) vận chuyển tế bào máu, ion, chất dinh dưỡng hòa tan, urea, hormone và CO₂ (C). Lymphocyte tạo kháng thể (loại A), phagocyte thực bào mầm bệnh (loại B), còn hồng cầu mới chở oxy nhờ haemoglobin (loại D).",
+      "duration": 105.25,
+      "startTime": 2856.66,
+      "endTime": 2961.91,
+      "audioUrl": "/audio/lectures/science/b9/s05_b11.mp3"
+    },
+    {
+      "id": "s05_b12",
+      "title": "phagocytes",
+      "selector": "[data-lecture-section=\"s05_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) State the specific functions of phagocytes and lymphocytes in defending the body against infection. [2](b) Name the component of blood involved in clotting and state two roles of blood clotting. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Phagocytes: engulf (and digest) pathogens by phagocytosis [1m]. Lymphocytes: antibody production [1m]. (b) Component: platelets [1m for component + both roles, or 1m platelets & 1m roles: prevents blood loss AND prevents entry of pathogens through cuts in the skin] [2m]. 💡 Intuition Check: In 0654 B9.4.6, any question on the role of blood clotting wants two crisp phrases: (1) prevents blood loss, (2) prevents entry of pathogens!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) State the specific functions of phagocytes and lymphocytes in defending the body against infection. (b) Name the component of blood involved in clotting and state two roles of blood clotting. ((a) Nêu chức năng chuyên biệt của đại thực bào và tế bào lympho. (b) Gọi tên thành phần máu tham gia đông máu và nêu 2 vai trò của đông máu. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Phagocytes: engulf pathogens by phagocytosis (thực bào mầm bệnh) . Lymphocytes: antibody production (sản xuất kháng thể) . (b) Component: platelets (tiểu cầu); Roles: prevents blood loss (ngăn mất máu) AND prevents entry of pathogens (ngăn mầm bệnh xâm nhập) . 💡 Kiểm tra bản chất: Ghi nhớ 2 cụm từ ăn trọn điểm B9.4.6 cho vai trò của đông máu: (1) preventing blood loss, (2) preventing the entry of pathogens!",
+      "duration": 122.92,
+      "startTime": 2961.91,
+      "endTime": 3084.83,
+      "audioUrl": "/audio/lectures/science/b9/s05_b12.mp3"
     }
   ]
 }

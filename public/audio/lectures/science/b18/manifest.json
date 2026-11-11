@@ -1,124 +1,498 @@
 {
   "lectureId": "cbeb6b74-e9c2-4a91-b39f-decb63e72ec0",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B18: Organisms and their environment",
-  "totalDuration": 286.05,
+  "totalDuration": 2297.87,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_ecological_definitions": {
-      "start": 1,
-      "end": 1
-    },
-    "sec-ecological-definitions": {
-      "start": 1,
-      "end": 1
-    },
-    "sec_food_chains_energy": {
+    "s01_int": {
       "start": 2,
-      "end": 3
+      "end": 4
     },
-    "sec-food-chains-energy": {
-      "start": 2,
-      "end": 3
+    "s01_wex": {
+      "start": 11,
+      "end": 12
     },
-    "sec_energy_loss_rule": {
-      "start": 3,
-      "end": 3
+    "s01_hdr": {
+      "start": 1,
+      "end": 12
     },
-    "sec-energy-loss-rule": {
-      "start": 3,
-      "end": 3
+    "s02_int": {
+      "start": 14,
+      "end": 16
     },
-    "sec_carbon_cycle": {
-      "start": 4,
-      "end": 5
+    "s02_wex": {
+      "start": 25,
+      "end": 26
     },
-    "sec-carbon-cycle": {
-      "start": 4,
-      "end": 5
+    "s02_hdr": {
+      "start": 13,
+      "end": 26
     },
-    "sec_carbon_processes": {
-      "start": 5,
-      "end": 5
+    "s03_int": {
+      "start": 28,
+      "end": 30
     },
-    "sec-carbon-processes": {
-      "start": 5,
-      "end": 5
+    "s03_p1_sub01": {
+      "start": 32,
+      "end": 37
+    },
+    "s03_p2_sub01": {
+      "start": 32,
+      "end": 37
+    },
+    "s03_wex": {
+      "start": 38,
+      "end": 39
+    },
+    "s03_hdr": {
+      "start": 27,
+      "end": 39
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B18: Sinh vật & Môi trường",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B18: Organisms and their Environment. Ecology examines the complex interrelationships between organisms and their physical habitats. In this topic, we study ecological definitions, food chains, energy losses, and the global carbon cycle.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B18: Sinh vật và Môi trường. Sinh thái học nghiên cứu mối quan hệ tương hỗ phức tạp giữa các sinh vật và môi trường sống của chúng. Trong chuyên đề này, chúng ta sẽ học về các thuật ngữ sinh thái, chuỗi thức ăn, sự thất thoát năng lượng và chu trình carbon toàn cầu.",
-      "duration": 39.18,
+      "title": "B18: Organisms & Environment (Sinh vật và Môi trường)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) • Topic B18 B18: Organisms and Their Environment. B18.1 Energy Flow • B18.2 Food Chains, Food Webs, Trophic Levels & Human Impacts • B18.3 The Carbon Cycle.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ B18: Organisms & Environment (Sinh vật và Môi trường). B18.1 Dòng năng lượng • B18.2 Chuỗi & Lưới thức ăn, Bậc dinh dưỡng, Tác động con người • B18.3 Chu trình Carbon.",
+      "duration": 46.28,
       "startTime": 0.0,
-      "endTime": 39.18,
+      "endTime": 46.28,
       "audioUrl": "/audio/lectures/science/b18/intro.mp3"
     },
     {
-      "id": "sec_ecological_definitions",
-      "title": "1. Các Khái niệm Sinh thái Cốt lõi (Ecological Definitions Overview)",
-      "selector": "#sec-ecological-definitions",
-      "en": "Section 1 defines fundamental ecological terms: A population is a group of organisms of one species living in the same area at the same time. A community is all the populations of different species in an ecosystem. An ecosystem is a unit containing a community of organisms and their non-living environment interacting together.",
-      "vi": "Mục một định nghĩa các thuật ngữ sinh thái cơ bản: Quần thể là tập hợp các cá thể cùng một loài sống trong cùng một khu vực tại cùng một thời điểm. Quần xã là tập hợp tất cả các quần thể thuộc các loài khác nhau cùng sinh sống. Hệ sinh thái là một thể thống nhất bao gồm quần xã sinh vật và môi trường vô sinh tác động qua lại lẫn nhau.",
-      "duration": 47.61,
-      "startTime": 39.18,
-      "endTime": 86.79,
-      "audioUrl": "/audio/lectures/science/b18/sec_ecological_definitions.mp3"
+      "id": "s01_hdr",
+      "title": "🌍 1. Ecological Definitions & Trophic Levels (Thuật ngữ Sinh thái & Bậc Dinh dưỡng)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🌍 1. Ecological Definitions, Feeding Roles & Trophic Levels.",
+      "vi": "🌍 1. Ecological Definitions & Trophic Levels (Thuật ngữ Sinh thái & Bậc Dinh dưỡng).",
+      "duration": 12.23,
+      "startTime": 46.28,
+      "endTime": 58.51,
+      "audioUrl": "/audio/lectures/science/b18/s01_hdr.mp3"
     },
     {
-      "id": "sec_food_chains_energy",
-      "title": "2. Chuỗi Thức ăn & Dòng Năng lượng (Food Chains & Energy Flow Overview)",
-      "selector": "#sec-food-chains-energy",
-      "en": "Section 2 investigates food chains and energy flow: The Sun is the principal source of energy input to biological systems. Energy flows unidirectionally through trophic levels: producer ➔ primary consumer ➔ secondary consumer ➔ tertiary consumer.",
-      "vi": "Mục hai nghiên cứu chuỗi thức ăn và dòng năng lượng: Mặt trời là nguồn cung cấp năng lượng chủ yếu cho sinh giới. Năng lượng truyền một chiều qua các bậc dinh dưỡng: sinh vật sản xuất ➔ sinh vật tiêu thụ bậc một ➔ bậc hai ➔ bậc ba.",
-      "duration": 64.62,
-      "startTime": 86.79,
-      "endTime": 151.41,
-      "audioUrl": "/audio/lectures/science/b18/sec_food_chains_energy.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a food chain like a relay race of solar energy: Producers are the solar panels charging the baton with chemical energy, Consumers pass the baton along from herbivore to carnivore, and Decomposers are the cleanup crew recycling the raw materials when organisms die.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng chuỗi thức ăn như cuộc chạy tiếp sức năng lượng Mặt Trời: Producer (Sinh vật sản xuất) là tấm pin mặt trời sạc đầy hóa năng vào cây gậy tiếp sức, các Consumer (Sinh vật tiêu thụ) chuyền gậy từ động vật ăn cỏ sang ăn thịt, còn Decomposer (Sinh vật phân giải) là đội tái chế thu hồi vật liệu thô khi sinh vật chết đi.",
+      "duration": 42.56,
+      "startTime": 58.51,
+      "endTime": 101.07,
+      "audioUrl": "/audio/lectures/science/b18/s01_b01.mp3"
     },
     {
-      "id": "sec_energy_loss_rule",
-      "title": "📉 The 10% Energy Loss Rule (Quy tắc Thất thoát Năng lượng 90%)",
-      "selector": "#sec-energy-loss-rule",
-      "en": "The 10% rule in food chains: Only approximately 10% of energy is transferred from one trophic level to the next. Roughly 90% of energy is lost at each step due to metabolic heat during respiration, uneaten body parts, and energy lost in excretion and egestion.",
-      "vi": "Quy tắc 10% trong chuỗi thức ăn: Chỉ có khoảng 10% năng lượng được truyền từ bậc dinh dưỡng này sang bậc kế tiếp. Khoảng 90% năng lượng bị thất thoát ở mỗi mắt xích do nhiệt chuyển hóa khi hô hấp, các bộ phận không ăn được và chất bài tiết, phân.",
-      "duration": 32.32,
-      "startTime": 151.41,
-      "endTime": 183.73,
-      "audioUrl": "/audio/lectures/science/b18/sec_energy_loss_rule.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: In 0654 B18.2, keep two numbering scales crystal clear: Trophic Level starts at 1 for the Producer, whereas Consumer rank starts at Primary for the herbivore at Trophic Level 2! Thus: Level 1 = Producer → Level 2 = Primary consumer → Level 3 = Secondary consumer → Level 4 = Tertiary consumer → Level 5 = Quaternary consumer .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Trong 0654 B18.2, tuyệt đối không nhầm 2 thang đánh số: Trophic Level (Bậc dinh dưỡng) đếm từ 1 tại Producer, còn Consumer rank đếm từ Primary tại con ăn cỏ ở Bậc 2! Do đó: Level 1 = Producer → Level 2 = Primary consumer → Level 3 = Secondary consumer → Level 4 = Tertiary consumer → Level 5 = Quaternary consumer .",
+      "duration": 60.83,
+      "startTime": 101.07,
+      "endTime": 161.9,
+      "audioUrl": "/audio/lectures/science/b18/s01_b02.mp3"
     },
     {
-      "id": "sec_carbon_cycle",
-      "title": "3. Chu trình Carbon Toàn cầu (The Global Carbon Cycle Overview)",
-      "selector": "#sec-carbon-cycle",
-      "en": "Section 3 covers the carbon cycle: Photosynthesis is the only biological process that removes carbon dioxide from the atmosphere. Respiration by plants, animals, and decomposers, alongside the combustion of fossil fuels, returns carbon dioxide back into the atmosphere.",
-      "vi": "Mục ba phân tích chu trình carbon toàn cầu: Quang hợp là quá trình sinh học duy nhất giúp hấp thụ khí CO2 ra khỏi khí quyển. Hô hấp ở thực vật, động vật và vi sinh vật phân giải, cùng hoạt động đốt cháy nhiên liệu hóa thạch, sẽ giải phóng CO2 trả lại vào khí quyển.",
-      "duration": 57.38,
-      "startTime": 183.73,
-      "endTime": 241.11,
-      "audioUrl": "/audio/lectures/science/b18/sec_carbon_cycle.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Drawing food chain arrows backwards (pointing from predator to prey)! In every Cambridge exam, an arrow A → B strictly means \"chemical energy is transferred from A to B\" (A is eaten by B).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Vẽ ngược chiều mũi tên chuỗi thức ăn (từ thú ăn thịt chỉ vào con mồi)! Trong đề thi Cambridge, mũi tên A → B luôn có nghĩa duy nhất là \"hóa năng truyền từ A sang B\" (A làm thức ăn cho B).",
+      "duration": 32.24,
+      "startTime": 161.9,
+      "endTime": 194.14,
+      "audioUrl": "/audio/lectures/science/b18/s01_b03.mp3"
     },
     {
-      "id": "sec_carbon_processes",
-      "title": "♻️ 4 Key Carbon Cycle Processes (4 Quá trình Chu trình Carbon)",
-      "selector": "#sec-carbon-processes",
-      "en": "Four processes driving the global carbon cycle: 1. Photosynthesis removes carbon dioxide from the atmosphere. 2. Respiration by all living organisms releases carbon dioxide. 3. Decomposition breaks down organic matter releasing carbon dioxide. 4. Combustion of fossil fuels burns coal, oil, and gas releasing immense volumes of carbon dioxide.",
-      "vi": "Bốn quá trình thúc đẩy chu trình carbon toàn cầu: Một là quang hợp hấp thụ CO2 từ khí quyển. Hai là hô hấp của các sinh vật sống giải phóng CO2. Ba là phân hủy xác sinh vật giải phóng CO2. Bốn là đốt cháy nhiên liệu hóa thạch than đá, dầu mỏ và khí đốt thải ra lượng lớn khí CO2.",
-      "duration": 44.94,
-      "startTime": 241.11,
-      "endTime": 286.05,
-      "audioUrl": "/audio/lectures/science/b18/sec_carbon_processes.mp3"
+      "id": "s01_b04",
+      "title": "🌱 Producer — Sinh vật sản xuất (B18.2.4):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🌱 Producer (Core B18.2.4): An organism that makes its own organic nutrients , usually using energy from sunlight, through photosynthesis (e.g. grass, oak trees, algae, marine phytoplankton).",
+      "vi": "🌱 Producer — Sinh vật sản xuất (B18.2.4): Sinh vật tự tổng hợp chất dinh dưỡng hữu cơ, thường nhờ quang năng Mặt Trời qua photosynthesis (quang hợp) (cỏ, cây xanh, tảo, thực vật phù du).",
+      "duration": 27.48,
+      "startTime": 194.14,
+      "endTime": 221.62,
+      "audioUrl": "/audio/lectures/science/b18/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🦊 Consumer — Sinh vật tiêu thụ (B18.2.5–6):",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🦊 Consumer (Core B18.2.5–6): An organism that gets its energy by feeding on other organisms . Classed as primary , secondary , tertiary , and (in Supplement) quaternary consumers according to their position in a food chain.",
+      "vi": "🦊 Consumer — Sinh vật tiêu thụ (B18.2.5–6): Sinh vật lấy năng lượng bằng cách ăn các sinh vật khác . Phân hạng theo vị trí ăn gồm: primary (bậc 1), secondary (bậc 2), tertiary (bậc 3), và (ở Supplement) quaternary consumer (bậc 4).",
+      "duration": 35.16,
+      "startTime": 221.62,
+      "endTime": 256.78,
+      "audioUrl": "/audio/lectures/science/b18/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🐇 Herbivore & 🦅 Carnivore (B18.2.7–8):",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🐇 Herbivore & 🦅 Carnivore (B18.2.7–8): Herbivore: An animal that gets its energy by eating plants (primary consumer). Carnivore: An animal that gets its energy by eating other animals (secondary, tertiary, or quaternary consumer).",
+      "vi": "🐇 Herbivore & 🦅 Carnivore (B18.2.7–8): Herbivore (Động vật ăn cỏ): Động vật lấy năng lượng bằng cách ăn thực vật . Carnivore (Động vật ăn thịt): Động vật lấy năng lượng bằng cách ăn động vật khác.",
+      "duration": 27.74,
+      "startTime": 256.78,
+      "endTime": 284.52,
+      "audioUrl": "/audio/lectures/science/b18/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "🍄 Decomposer — Sinh vật phân giải (B18.2.9):",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🍄 Decomposer (Core B18.2.9): An organism (such as bacteria and fungi ) that gets its energy from dead or waste organic material (dead bodies, fallen leaves, faeces, urea), returning mineral ions to the soil.",
+      "vi": "🍄 Decomposer — Sinh vật phân giải (B18.2.9): Sinh vật (như bacteria & fungi ) lấy năng lượng từ xác chết hoặc chất thải hữu cơ , giúp trả lại ion khoáng cho đất.",
+      "duration": 26.98,
+      "startTime": 284.52,
+      "endTime": 311.5,
+      "audioUrl": "/audio/lectures/science/b18/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "📊 Trophic Level — Bậc dinh dưỡng (Supplement):",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "📊 Trophic Level (Supplement B18.2.11–12): The position of an organism in a food chain and food web : Level 1 = Producers; Level 2 = Primary consumers; Level 3 = Secondary consumers; Level 4 = Tertiary consumers; Level 5 = Quaternary consumers.",
+      "vi": "📊 Trophic Level — Bậc dinh dưỡng (Supplement): Vị trí của sinh vật trong chuỗi/lưới thức ăn : Bậc 1 = Producers; Bậc 2 = Primary consumers; Bậc 3 = Secondary consumers; Bậc 4 = Tertiary consumers; Bậc 5 = Quaternary consumers.",
+      "duration": 39.52,
+      "startTime": 311.5,
+      "endTime": 351.02,
+      "audioUrl": "/audio/lectures/science/b18/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🏕️ Population, Community & Ecosystem:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🏕️ Habitat, Population, Community & Ecosystem: Population: one species in the same area at the same time. Community: all populations of different species. Ecosystem: community of organisms + their physical environment interacting together.",
+      "vi": "🏕️ Population, Community & Ecosystem: Population (Quần thể): cùng 1 loài, cùng nơi, cùng lúc. Community (Quần xã): mọi quần thể các loài khác nhau. Ecosystem (Hệ sinh thái): quần xã sinh vật + môi trường vô sinh tương tác qua lại.",
+      "duration": 38.48,
+      "startTime": 351.02,
+      "endTime": 389.5,
+      "audioUrl": "/audio/lectures/science/b18/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "shrew",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / SUPPLEMENT • 0654 Paper 1 & 2 MCQ Consider the woodland food chain: Oak leaves → Caterpillar → Shrew → Owl → Fox . Which row correctly identifies the shrew and the fox ? A. Shrew = primary consumer (trophic level 2); Fox = tertiary consumer (trophic level 4) B. Shrew = secondary consumer (trophic level 3); Fox = quaternary consumer (trophic level 5) C. Shrew = secondary consumer (trophic level 2); Fox = quaternary consumer (trophic level 4) D. Shrew = herbivore (trophic level 3); Fox = decomposer (trophic level 5) ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Count step-by-step from the producer: Oak leaves = Producer (Trophic Level 1); Caterpillar = Primary consumer / herbivore (Level 2); Shrew = Secondary consumer (Trophic Level 3) ; Owl = Tertiary consumer (Level 4); Fox = Quaternary consumer (Trophic Level 5) . Option A shifts everything by one level; C mismatches trophic level and consumer rank; D misidentifies carnivores.",
+      "vi": "BÀI MẪU 1 🟦 CORE / SUPPLEMENT • Trắc nghiệm 0654 Paper 1 & 2 Consider the woodland food chain: Oak leaves → Caterpillar → Shrew → Owl → Fox . Which row correctly identifies the shrew and the fox ? (Xét chuỗi thức ăn rừng gỗ: Lá sồi → Sâu bướm → Chuột chù → Cú mèo → Cáo. Dòng nào xác định đúng chuột chù và cáo?) A. Shrew = primary consumer (trophic level 2); Fox = tertiary consumer (trophic level 4) B. Shrew = secondary consumer (trophic level 3); Fox = quaternary consumer (trophic level 5) C. Shrew = secondary consumer (trophic level 2); Fox = quaternary consumer (trophic level 4) D. Shrew = herbivore (trophic level 3); Fox = decomposer (trophic level 5) ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đếm lần lượt từ Producer: Oak leaves = Producer (Trophic Level 1); Caterpillar = Primary consumer (Level 2); Shrew = Secondary consumer (Trophic Level 3) ; Owl = Tertiary consumer (Level 4); Fox = Quaternary consumer (Trophic Level 5) . Câu A đếm thiếu Producer; câu C lệch bậc; câu D sai vai trò ăn thịt.",
+      "duration": 168.48,
+      "startTime": 389.5,
+      "endTime": 557.98,
+      "audioUrl": "/audio/lectures/science/b18/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] (a) State what is meant by a producer and a decomposer . [2](b) Explain why fungi growing on a rotting log are classified as decomposers rather than producers, even though they grow anchored to wood like plants. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) A producer is an organism that makes its own organic nutrients using light energy via photosynthesis [1m]. A decomposer is an organism that gets its energy from dead or waste organic material [1m]. (b) Fungi have no chlorophyll / chloroplasts so they cannot photosynthesise [1m]; instead they secrete enzymes to digest the dead organic wood externally and absorb the soluble organic nutrients for energy [1m]. 💡 Intuition Check: Never classify an organism as a producer just because it is stationary — only organisms synthesising organic molecules (via photosynthesis) are producers!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận 0654 Paper 3 / Paper 4 [4 marks] (a) State what is meant by a producer and a decomposer . (b) Explain why fungi growing on a rotting log are classified as decomposers rather than producers, even though they grow anchored to wood like plants. ((a) Nêu định nghĩa sinh vật sản xuất và sinh vật phân giải. (b) Giải thích vì sao nấm mọc cố định trên thân gỗ mục được xếp là sinh vật phân giải chứ không phải sinh vật sản xuất. ) ✍️ Lời giải chi tiết theo thang điểm: tự tổng hợp chất hữu cơ nhờ ánh sáng qua quang hợp . lấy năng lượng từ xác chết hoặc chất thải hữu cơ . nấm không có diệp lục nên không quang hợp được ; they digest dead organic wood externally and absorb nutrients for energy . 💡 Kiểm tra bản chất: Đừng bao giờ xếp một sinh vật làm Producer chỉ vì nó \"mọc đứng yên một chỗ\" — chỉ sinh vật tự tổng hợp chất hữu cơ (nhờ quang hợp) mới là Producer!",
+      "duration": 128.61,
+      "startTime": 557.98,
+      "endTime": 686.59,
+      "audioUrl": "/audio/lectures/science/b18/s01_b11.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⛓️ 2. Energy Flow, Food Webs & Efficiency (Dòng Năng lượng, Lưới Thức ăn & Quy tắc 10%)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⛓️ 2. Energy Flow, Food Webs, Human Impacts & Efficiency.",
+      "vi": "⛓️ 2. Dòng Năng lượng, Lưới Thức ăn & Quy tắc 10% .",
+      "duration": 10.18,
+      "startTime": 686.59,
+      "endTime": 696.77,
+      "audioUrl": "/audio/lectures/science/b18/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine charging your phone through four wireless adapters chained in a row where each adapter wastes 90% of the electricity as heat : 100 W → 10 W → 1 W → 0.1 W → 0.01 W . By the fifth adapter, the screen cannot even turn on! Eating wheat or soya directly plugs humans into adapter #1 instead of wasting 90% of the harvest warming up cattle.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng sạc điện thoại nối tiếp qua 4 bộ sạc không dây mà mỗi bộ làm hao phí 90% điện thành nhiệt : 100 W → 10 W → 1 W → 0.1 W → 0.01 W . Đến bộ thứ 5 thì màn hình không thể sáng nổi! Con người ăn lúa mì, đậu nành trực tiếp giống như cắm sạc thẳng ở bộ số 1 thay vì đốt mất 90% mùa màng để sưởi ấm đàn bò.",
+      "duration": 56.82,
+      "startTime": 696.77,
+      "endTime": 753.59,
+      "audioUrl": "/audio/lectures/science/b18/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Master three linked B18.2 skills: (1) Predict food web knock-on effects when humans overharvest a species or introduce an invasive predator/competitor; (2) List at least three reasons why energy transfer is inefficient ( respiratory heat, movement, uneaten bones/roots, undigested faeces/egestion, excreted urea/urine ); (3) Use that ~90% loss per step to explain BOTH why chains have fewer than 5 trophic levels AND why eating crop plants directly is more energy efficient than eating livestock.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nắm chắc 3 kỹ năng B18.2: (1) Dự đoán hiệu ứng dây chuyền trên lưới thức ăn khi con người đánh bắt quá mức (overharvesting) hoặc du nhập loài ngoại lai (foreign species); (2) Nêu ít nhất 3 nguyên nhân thất thoát năng lượng ( nhiệt hô hấp, vận động, xương/rễ không ăn được, phân thải/egestion, nước tiểu/excretion ); (3) Từ mức mất ~90% mỗi bậc, giải thích vì sao chuỗi thức ăn có ít hơn 5 bậc VÀ vì sao ăn cây trồng trực tiếp hiệu quả hơn ăn thịt gia súc .",
+      "duration": 74.19,
+      "startTime": 753.59,
+      "endTime": 827.78,
+      "audioUrl": "/audio/lectures/science/b18/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying \"energy is destroyed\" or \"faeces is excreted\"! Energy is never destroyed — it is transferred to the environment as heat . And undigested food in faeces is egested , whereas metabolic waste (urea in urine) is excreted .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết \"năng lượng bị tiêu hủy\" hoặc \"phân được bài tiết (excreted)\"! Năng lượng không tự mất đi mà chuyển thành nhiệt (heat) ra môi trường. Chất bã qua phân bắt buộc dùng từ egestion , còn ure trong nước tiểu mới là excretion .",
+      "duration": 37.13,
+      "startTime": 827.78,
+      "endTime": 864.91,
+      "audioUrl": "/audio/lectures/science/b18/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "☀️ B18.1 Nguồn Năng lượng Khởi đầu & Dòng Truyền Một chiều",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "☀️ B18.1 Energy Input & One-Way Energy Flow. The Sun is the principal source of energy input to biological systems. Light energy from the Sun is trapped by chlorophyll in producers during photosynthesis and converted into chemical energy stored in organic nutrients (glucose, starch, fats, proteins). Food chain: Shows the transfer of energy from one organism to the next , always beginning with a producer. Each arrow ( → ) means \"transfers chemical energy to\" (NOT \"eats\"!). Eventual fate of energy: Living organisms respire chemical energy to power life processes, transferring energy to the surrounding environment as heat . Energy flow is therefore non-cyclical (one-way).",
+      "vi": "☀️ B18.1 Nguồn Năng lượng Khởi đầu & Dòng Truyền Một chiều. Mặt Trời (The Sun) là nguồn năng lượng đầu vào chủ yếu cho mọi hệ thống sống. Quang năng (Light energy) từ Mặt Trời được diệp lục ở Producer hấp thụ khi quang hợp và biến đổi thành hóa năng (chemical energy) lưu trữ trong chất hữu cơ (glucose, tinh bột, lipid, protein). Chuỗi thức ăn (Food chain): Biểu diễn sự truyền năng lượng từ sinh vật này sang sinh vật tiếp theo , luôn mở đầu bằng một Producer. Dấu mũi tên ( → ) mang nghĩa \"truyền hóa năng cho\" (KHÔNG vẽ ngược từ thú ăn thịt sang con mồi!). Đích cuối của năng lượng: Sinh vật hô hấp giải phóng năng lượng và tỏa ra môi trường xung quanh dưới dạng nhiệt (heat) . Vì vậy năng lượng truyền theo một chiều duy nhất, không tuần hoàn.",
+      "duration": 98.97,
+      "startTime": 864.91,
+      "endTime": 963.88,
+      "audioUrl": "/audio/lectures/science/b18/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🕸️ Chuỗi Thức ăn 5 Bậc Dinh dưỡng (Tới Quaternary Consumer) & Sự Hao hụt 90%",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🕸️ 5-Trophic-Level Food Chain (Including Quaternary Consumer) & Web Connections.",
+      "vi": "🕸️ Chuỗi Thức ăn 5 Bậc Dinh dưỡng (Tới Quaternary Consumer) & Sự Hao hụt 90%.",
+      "duration": 13.47,
+      "startTime": 963.88,
+      "endTime": 977.35,
+      "audioUrl": "/audio/lectures/science/b18/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🕸️ Lưới thức ăn — Food Webs (B18.2.3)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🕸️ Interpreting Food Webs (B18.2.3). A food web is a network of interconnected food chains . Most organisms feed on more than one prey species and have multiple predators. If one prey population falls, predators switch more heavily to alternative prey, causing knock-on increases and decreases throughout the web.",
+      "vi": "🕸️ Lưới thức ăn — Food Webs (B18.2.3). Food web (Lưới thức ăn) là mạng lưới các chuỗi thức ăn liên kết đan xen nhau . Hầu hết sinh vật ăn nhiều loại con mồi và bị nhiều loài săn bắt; khi một mắt xích biến động sẽ kéo theo hiệu ứng dây chuyền toàn lưới.",
+      "duration": 37.27,
+      "startTime": 977.35,
+      "endTime": 1014.62,
+      "audioUrl": "/audio/lectures/science/b18/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🎣 Khai thác quá mức — Overharvesting (B18.2.10)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🎣 Human Overharvesting (B18.2.10). Overharvesting food species (e.g. intense commercial fishing of herring/cod) removes individuals faster than they reproduce. Predators feeding on that fish starve or switch to other prey, while the fish's own prey (zooplankton) surge in population due to reduced predation.",
+      "vi": "🎣 Khai thác quá mức — Overharvesting (B18.2.10). Đánh bắt quá mức loài thức ăn (VD: cá trích, cá tuyết) nhanh hơn tốc độ sinh sản làm thú ăn thịt phía trên thiếu mồi suy giảm, đồng thời khiến con mồi bên dưới (động vật phù du) bùng nổ số lượng do mất thiên địch.",
+      "duration": 38.63,
+      "startTime": 1014.62,
+      "endTime": 1053.25,
+      "audioUrl": "/audio/lectures/science/b18/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🐍 Loài ngoại lai — Foreign Species (B18.2.10)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🐍 Introducing Foreign Species (B18.2.10). Introducing non-native (alien) species into a habitat destabilises food webs because the foreign species usually lacks natural predators or local pathogens, allowing it to multiply uncontrollably, outcompete native species for food/shelter, or prey native species to extinction.",
+      "vi": "🐍 Loài ngoại lai — Foreign Species (B18.2.10). Đưa loài ngoại lai vào sinh cảnh mới làm rối loạn lưới thức ăn vì chúng thường không có thiên địch tự nhiên kiểm soát, sinh sôi ồ ạt, cạnh tranh thức ăn hoặc săn bắt tiêu diệt loài bản địa.",
+      "duration": 35.45,
+      "startTime": 1053.25,
+      "endTime": 1088.7,
+      "audioUrl": "/audio/lectures/science/b18/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "📉 Supplement (B18.2.13–15): Quy tắc Thất thoát 90% Năng lượng & Hiệu quả Ăn Cây trồng vs. Chăn ",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "📉 Supplement (B18.2.13–15): Energy Transfer Inefficiency & Crop vs. Livestock Efficiency. Transfer of energy from one trophic level to the next is inefficient (~10% transferred, ~90% lost) because: Respiration & Heat Loss: Large amounts of glucose are respired for muscle movement, active transport, and maintaining constant body temperature, releasing unrecoverable heat to the environment. Uneaten Biomass: Roots, woody stems, bones, teeth, fur, and feathers are not eaten by the predator. Indigestible Matter (Egestion): Cellulose and tough fibres cannot be digested and absorbed, so chemical energy is lost in faeces. Excretory Waste (Excretion): Metabolic waste products such as urea in urine carry away chemical energy.",
+      "vi": "📉 Supplement (B18.2.13–15): Quy tắc Thất thoát 90% Năng lượng & Hiệu quả Ăn Cây trồng vs. Chăn nuôi. Sự truyền năng lượng giữa các bậc dinh dưỡng kém hiệu quả (chỉ ~10% truyền tiếp, ~90% thất thoát) vì: Hô hấp tỏa nhiệt (Respiration & Heat): Phần lớn glucose bị oxy hóa để co cơ vận động, vận chuyển tích cực và duy trì thân nhiệt, giải phóng nhiệt lượng ra môi trường. Các phần không bị ăn (Uneaten parts): Rễ cây, thân gỗ, xương, răng, lông, vỏ cứng không được vật ăn thịt nuốt vào. Thức ăn khó tiêu — Thải phân (Egestion): Chất xơ cellulose không tiêu hóa hấp thụ được bị thải ra qua phân (faeces). Chất thải bài tiết (Excretion): Hóa năng thất thoát qua ure trong nước tiểu (urine).",
+      "duration": 100.94,
+      "startTime": 1088.7,
+      "endTime": 1189.64,
+      "audioUrl": "/audio/lectures/science/b18/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "Tại sao chuỗi thức ăn thường ít hơn 5 bậc dinh dưỡng (fewer than 5 trophic levels):",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "Why food chains usually have fewer than 5 trophic levels: Because ~90% of energy is lost at every transfer, after 4 or 5 trophic levels there is insufficient chemical energy remaining to support a viable breeding population of higher predators.",
+      "vi": "Tại sao chuỗi thức ăn thường ít hơn 5 bậc dinh dưỡng: Do mất ~90% năng lượng sau mỗi mắt xích, đến bậc thứ 4–5 lượng hóa năng còn lại quá nhỏ bé , không đủ nuôi sống một quần thể săn mồi bậc cao hơn.",
+      "duration": 31.12,
+      "startTime": 1189.64,
+      "endTime": 1220.76,
+      "audioUrl": "/audio/lectures/science/b18/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "Ăn thực vật nông nghiệp (Crop plants) vs. Ăn thịt gia súc (Livestock):",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "Crop Plants vs. Livestock Efficiency: It is far more energy-efficient for humans to eat crop plants directly ( Crops → Humans , 1 transfer) than to eat livestock fed on crops ( Crops → Cattle → Humans , 2 transfers), because eliminating the livestock trophic level avoids losing ~90% of crop energy to animal respiration, movement, faeces, and urine.",
+      "vi": "Ăn thực vật nông nghiệp (Crop plants) vs. Ăn thịt gia súc (Livestock): Con người ăn trực tiếp cây trồng ( Cây trồng → Người , 1 bước truyền) tiết kiệm năng lượng gấp ~10 lần so với cho gia súc ăn hạt rồi mới ăn thịt ( Cây trồng → Gia súc → Người , 2 bước truyền), vì cắt bỏ được ~90% hao phí do hô hấp, vận động và chất thải của gia súc!",
+      "duration": 49.68,
+      "startTime": 1220.76,
+      "endTime": 1270.44,
+      "audioUrl": "/audio/lectures/science/b18/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ Why is it more energy efficient for humans to obtain protein by eating soya beans rather than by eating beef from cattle fed on soya beans? A. Soya bean plants do not carry out cellular respiration, so they lose no heat energy. B. Cattle convert light energy directly into chemical energy less efficiently than humans. C. Fewer trophic levels are involved, avoiding huge energy losses from cattle respiration, movement, and faeces. D. Decomposers return 90% of cattle energy directly back into soya bean roots. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Eating soya directly has a shorter food chain ( Soya → Human , 2 trophic levels) compared with Soya → Cattle → Human (3 trophic levels). Removing the cattle step avoids losing ~90% of crop chemical energy to cattle respiration/heat, muscle movement, faeces (egestion), and urine (excretion). A is false (plants respire 24/7); B is false (cattle cannot photosynthesise); D is false (energy does not cycle back to plants).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm 0654 Paper 2 Why is it more energy efficient for humans to obtain protein by eating soya beans rather than by eating beef from cattle fed on soya beans? (Vì sao con người thu nhận protein bằng cách ăn trực tiếp đậu nành lại hiệu quả năng lượng hơn ăn thịt bò được nuôi bằng đậu nành?) A. Soya bean plants do not carry out cellular respiration, so they lose no heat energy. B. Cattle convert light energy directly into chemical energy less efficiently than humans. C. Fewer trophic levels are involved, avoiding huge energy losses from cattle respiration, movement, and faeces. D. Decomposers return 90% of cattle energy directly back into soya bean roots. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Ăn đậu nành trực tiếp tạo chuỗi thức ăn ngắn hơn ( Đậu nành → Người , 2 bậc) so với Đậu nành → Bò → Người (3 bậc). Nhờ bỏ qua mắt xích bò, ta tránh được ~90% năng lượng bị hao hụt qua hô hấp tỏa nhiệt, vận động, phân (egestion) và nước tiểu (excretion) của bò. A sai (cây vẫn hô hấp 24/7); B sai (bò không quang hợp); D sai (năng lượng không quay vòng lại rễ cây).",
+      "duration": 163.59,
+      "startTime": 1270.44,
+      "endTime": 1434.03,
+      "audioUrl": "/audio/lectures/science/b18/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [5 marks] In a coastal ecosystem, kelp (seaweed) is eaten by sea urchins, sea urchins are eaten by sea otters, and killer whales occasionally prey on sea otters.(a) Humans heavily overharvested sea otters for fur. Predict and explain the effect on the sea urchin population and the kelp forest. [3](b) Explain why very few marine food chains extend beyond five trophic levels. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) With fewer sea otters, predation on sea urchins decreases , so the sea urchin population increases rapidly [1m]. The larger sea urchin population grazes/eats kelp much faster than it can regrow [1m], causing the kelp population to decline / collapse (destroying habitat for other species) [1m]. (b) Only ~10% of energy is transferred at each trophic level because ~90% is lost as heat in respiration, movement, uneaten parts, and faeces/urine [1m]; therefore, by the 5th trophic level, too little energy remains to support a viable population at a higher level [1m]. 💡 Intuition Check: When interpreting food webs, always trace BOTH directions from the affected species: what happens to its prey below, and what happens to its predators above!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận 0654 Paper 4 [5 marks] In a coastal ecosystem, kelp (seaweed) is eaten by sea urchins, sea urchins are eaten by sea otters, and killer whales occasionally prey on sea otters.(a) Humans heavily overharvested sea otters for fur. Predict and explain the effect on the sea urchin population and the kelp forest. (b) Explain why very few marine food chains extend beyond five trophic levels. (Ở hệ sinh thái ven biển: Tảo bẹ kelp → Nhím biển → Rái cá biển → Cá voi sát thủ. (a) Con người săn bắt quá mức rái cá biển lấy lông. Dự đoán và giải thích tác động lên quần thể nhím biển và rừng tảo bẹ. (b) Giải thích vì sao rất ít chuỗi thức ăn vượt quá 5 bậc dinh dưỡng. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Số lượng rái cá giảm làm giảm áp lực săn mồi lên nhím biển , khiến quần thể nhím biển tăng mạnh . Đàn nhím biển đông đúc ăn phá tảo bẹ nhanh hơn tốc độ mọc lại , dẫn đến rừng tảo bẹ suy giảm nghiêm trọng / biến mất . (b) Chỉ ~10% năng lượng truyền sang bậc kế tiếp vì ~90% thất thoát dưới dạng nhiệt hô hấp, vận động, bộ phận không ăn được và phân/nước tiểu ; do đó sau bậc thứ 5, năng lượng còn lại quá ít để nuôi sống thêm một quần thể săn mồi bậc cao hơn . 💡 Kiểm tra bản chất: Khi phân tích lưới thức ăn, luôn xét cả hai hướng từ loài bị tác động: chuyện gì xảy ra với con mồi phía dưới nó, và chuyện gì xảy ra với vật ăn thịt phía trên nó!",
+      "duration": 191.48,
+      "startTime": 1434.03,
+      "endTime": 1625.51,
+      "audioUrl": "/audio/lectures/science/b18/s02_b13.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "♻️ 3. The Carbon Cycle (Chu trình Tuần hoàn Carbon Toàn cầu — Core B18.3)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "♻️ 3. The Carbon Cycle (Core B18.3).",
+      "vi": "♻️ 3. The Carbon Cycle (Chu trình Tuần hoàn Carbon Toàn cầu — Core B18.3).",
+      "duration": 12.33,
+      "startTime": 1625.51,
+      "endTime": 1637.84,
+      "audioUrl": "/audio/lectures/science/b18/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture atmospheric CO₂ as a giant shared bank account: ONLY ONE deposit-taker withdraws CO₂ out of the sky (Photosynthesis), while THREE major spenders pump CO₂ back into the sky (Respiration by plants/animals, Decomposition by microbes, and Combustion of fossil fuels)!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi lượng CO₂ trong bầu khí quyển như một tài khoản ngân hàng chung: CHỈ CÓ ĐÚNG 1 NGƯỜI RÚT CO₂ KHỎI BẦU TRỜI là Quang hợp (Photosynthesis), trong khi có tới 3 NGUỒN BƠM CO₂ TRỞ LẠI BẦU TRỜI là Hô hấp (cây + động vật), Phân hủy (vi khuẩn/nấm) và Đốt cháy nhiên liệu hóa thạch!",
+      "duration": 42.66,
+      "startTime": 1637.84,
+      "endTime": 1680.5,
+      "audioUrl": "/audio/lectures/science/b18/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Check off all 6 B18.3 processes whenever drawing or describing the carbon cycle: (1) Photosynthesis ( CO₂ in air → carbon compounds in plants); (2) Feeding (plant carbon → animal carbon); (3) Respiration (plants & animals → CO₂ ); (4) Decomposition (dead organic matter/waste broken down by fungi & bacteria respiring CO₂ ); (5) Formation of fossil fuels (incomplete decay without oxygen over millions of years); (6) Combustion (burning fossil fuels/wood → CO₂ ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Kiểm tra đủ 6 quá trình B18.3 mỗi khi vẽ hoặc mô tả chu trình Carbon: (1) Photosynthesis ( CO₂ khí quyển → chất hữu cơ thực vật); (2) Feeding (carbon thực vật → carbon động vật); (3) Respiration (thực vật & động vật → CO₂ ); (4) Decomposition (nấm & vi khuẩn phân giải xác chết và hô hấp thải CO₂ ); (5) Formation of fossil fuels (phân hủy không hoàn toàn trong điều kiện yếm khí hàng triệu năm); (6) Combustion (đốt nhiên liệu hóa thạch/gỗ → CO₂ ).",
+      "duration": 77.58,
+      "startTime": 1680.5,
+      "endTime": 1758.08,
+      "audioUrl": "/audio/lectures/science/b18/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Forgetting that plants also respire (releasing CO₂ continuously day and night), or claiming that \"fossil fuels decompose to release CO₂ \" — fossil fuels release CO₂ by combustion (burning) , precisely because they were formed when decomposition was prevented !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Quên rằng thực vật cũng hô hấp thải CO₂ suốt ngày đêm , hoặc viết nhầm \"nhiên liệu hóa thạch bị phân hủy tạo CO₂ \" — thực tế nhiên liệu hóa thạch hình thành chính nhờ không bị phân hủy , và chỉ giải phóng CO₂ khi bị đốt cháy (combustion) !",
+      "duration": 37.3,
+      "startTime": 1758.08,
+      "endTime": 1795.38,
+      "audioUrl": "/audio/lectures/science/b18/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "tuần hoàn khép kín liên tục",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Unlike energy (which flows one-way), carbon atoms are continuously recycled between atmospheric carbon dioxide ( CO₂ ), living organisms, dead organic matter, and fossil fuels through six syllabus-mandated processes :",
+      "vi": "Trái ngược với dòng năng lượng một chiều, các nguyên tử carbon tuần hoàn khép kín liên tục giữa khí CO₂ khí quyển, cơ thể sinh vật sống, xác hữu cơ và nhiên liệu hóa thạch qua 6 quá trình bắt buộc của Syllabus 0654 :",
+      "duration": 31.3,
+      "startTime": 1795.38,
+      "endTime": 1826.68,
+      "audioUrl": "/audio/lectures/science/b18/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "1. Photosynthesis — Quang hợp (Hút CO₂)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "1. Photosynthesis (Removes CO₂). The only natural biological process removing CO₂ from air: green plants/algae use light energy & chlorophyll to fix CO₂ into glucose ( 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ ).",
+      "vi": "1. Photosynthesis — Quang hợp (Hút CO₂). Quá trình sinh học duy nhất rút CO₂ khỏi không khí : cây xanh và tảo dùng ánh sáng & diệp lục tổng hợp glucose ( 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ ).",
+      "duration": 39.47,
+      "startTime": 1826.68,
+      "endTime": 1866.15,
+      "audioUrl": "/audio/lectures/science/b18/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "2. Respiration — Hô hấp (Nhả CO₂)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "2. Respiration (Releases CO₂). All living organisms — plants (day & night!), animals, and decomposers — oxidise glucose to release energy, returning CO₂ to the air ( C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O ).",
+      "vi": "2. Respiration — Hô hấp (Nhả CO₂). Mọi sinh vật sống — cả thực vật (ngày & đêm!), động vật và vi sinh vật — oxy hóa glucose tạo năng lượng, thải CO₂ ra khí quyển ( C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O ).",
+      "duration": 40.66,
+      "startTime": 1866.15,
+      "endTime": 1906.81,
+      "audioUrl": "/audio/lectures/science/b18/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "3. Feeding — Ăn uống (Truyền Carbon)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "3. Feeding (Transfers Carbon). Herbivores eat plants and carnivores eat herbivores, digesting and assimilating organic carbon compounds (carbohydrates, fats, proteins) into animal biomass along food chains.",
+      "vi": "3. Feeding — Ăn uống (Truyền Carbon). Động vật ăn cỏ và ăn thịt tiêu hóa, hấp thụ hợp chất carbon hữu cơ (tinh bột, lipid, protein) từ thức ăn để xây dựng sinh khối cơ thể.",
+      "duration": 30.43,
+      "startTime": 1906.81,
+      "endTime": 1937.24,
+      "audioUrl": "/audio/lectures/science/b18/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "4. Decomposition — Phân hủy (Nhả CO₂)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "4. Decomposition (Releases CO₂). Decomposers (fungi and bacteria) secrete enzymes onto dead plants, dead animals, faeces, and urine, absorbing digested carbon molecules and respiring them back into atmospheric CO₂.",
+      "vi": "4. Decomposition — Phân hủy (Nhả CO₂). Sinh vật phân giải (nấm, vi khuẩn) tiết enzyme tiêu hóa xác thực vật, động vật chết và chất thải, rồi hô hấp giải phóng CO₂ trở lại không khí.",
+      "duration": 33.72,
+      "startTime": 1937.24,
+      "endTime": 1970.96,
+      "audioUrl": "/audio/lectures/science/b18/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "5. Formation of Fossil Fuels — Hóa thạch",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "5. Formation of Fossil Fuels. When dead organisms are buried under mud/sediment in anaerobic (oxygen-free) conditions, decomposers cannot break them down completely; heat and pressure over millions of years form coal, oil, and natural gas.",
+      "vi": "5. Formation of Fossil Fuels — Hóa thạch. Khi xác sinh vật bị chôn vùi dưới bùn trầm tích thiếu oxy (yếm khí) không thể phân hủy hết, nhiệt độ và áp suất cao qua hàng triệu năm biến chúng thành than đá, dầu mỏ, khí đốt.",
+      "duration": 33.78,
+      "startTime": 1970.96,
+      "endTime": 2004.74,
+      "audioUrl": "/audio/lectures/science/b18/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "6. Combustion — Đốt cháy (Nhả CO₂)",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "6. Combustion (Releases CO₂). Burning fossil fuels (coal, oil, natural gas) or wood in oxygen rapidly releases ancient locked carbon back into the atmosphere as CO₂ , upsetting the natural carbon balance.",
+      "vi": "6. Combustion — Đốt cháy (Nhả CO₂). Đốt nhiên liệu hóa thạch (than, dầu, khí tự nhiên) hoặc gỗ củi trong oxy giải phóng lượng lớn carbon cổ đại trở lại bầu khí quyển dưới dạng khí CO₂.",
+      "duration": 31.29,
+      "startTime": 2004.74,
+      "endTime": 2036.03,
+      "audioUrl": "/audio/lectures/science/b18/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "only",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 & 2 MCQ Which list contains only processes that release carbon dioxide directly into the atmosphere in the carbon cycle? A. Combustion, photosynthesis, and animal respiration B. Plant respiration, animal respiration, decomposition, and combustion C. Feeding, fossilisation, and decomposition D. Photosynthesis, feeding, and fossilisation ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Plant respiration , animal respiration , microbial respiration during decomposition , and combustion of wood/fossil fuels all oxidise carbon compounds and release CO₂ gas into the air. Photosynthesis removes CO₂ (eliminating A and D), while feeding and fossilisation transfer/store solid or liquid carbon compounds without releasing CO₂ (eliminating C and D).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm 0654 Paper 1 & 2 Which list contains only processes that release carbon dioxide directly into the atmosphere in the carbon cycle? (Danh sách nào CHỈ gồm các quá trình giải phóng trực tiếp khí carbon dioxide vào bầu khí quyển trong chu trình carbon?) A. Combustion, photosynthesis, and animal respiration B. Plant respiration, animal respiration, decomposition, and combustion C. Feeding, fossilisation, and decomposition D. Photosynthesis, feeding, and fossilisation ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Hô hấp thực vật , hô hấp động vật , hô hấp của vi sinh vật khi phân hủy (decomposition) và sự đốt cháy (combustion) đều oxy hóa hợp chất carbon và nhả khí CO₂ ra không khí. Quang hợp rút CO₂ (loại A, D); ăn uống và hóa thạch chỉ chuyển/tích trữ carbon rắn-lỏng chứ không nhả CO₂ (loại C, D).",
+      "duration": 125.18,
+      "startTime": 2036.03,
+      "endTime": 2161.21,
+      "audioUrl": "/audio/lectures/science/b18/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "quang hợp (photosynthesis)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] Trace the pathway of a carbon atom from carbon dioxide gas in the atmosphere until it is locked inside a seam of coal underground, naming each carbon-cycle process involved. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. Carbon dioxide is absorbed from the atmosphere by a green plant leaf and converted into glucose/starch/cellulose during photosynthesis [1m].2. When the plant dies in a swamp/bog, anaerobic / acidic conditions prevent complete decomposition by bacteria and fungi [1m + 1m].3. Over millions of years, burial under sediment layers with high pressure and heat compresses the dead plant remains into coal ( formation of fossil fuels / fossilisation ) [1m]. 💡 Intuition Check: Fossil fuels represent ancient sunlight and ancient atmospheric carbon locked away because decomposers lacked oxygen to respire the dead biomass!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận 0654 Paper 3 / Paper 4 [4 marks] Trace the pathway of a carbon atom from carbon dioxide gas in the atmosphere until it is locked inside a seam of coal underground, naming each carbon-cycle process involved. (Mô tả đường đi của một nguyên tử carbon từ khí CO₂ trong khí quyển cho tới khi nằm trong vỉa than đá dưới lòng đất, nêu rõ tên từng quá trình trong chu trình carbon. ) ✍️ Lời giải chi tiết theo thang điểm: 1. Lá cây xanh hấp thụ khí CO₂ từ khí quyển và chuyển hóa thành glucose/tinh bột/cellulose nhờ quá trình quang hợp (photosynthesis) .2. Khi cây chết trong đầm lầy ngập nước, điều kiện kỵ khí (thiếu oxy) / axit ngăn cản sự phân hủy hoàn toàn (incomplete decomposition) của vi khuẩn và nấm [1m + 1m].3. Trải qua hàng triệu năm bị chôn vùi dưới áp suất và nhiệt độ cao, xác thực vật hóa thành than đá . 💡 Kiểm tra bản chất: Than đá và dầu mỏ chính là năng lượng ánh sáng cổ đại và lượng carbon khí quyển cổ đại bị \"khóa chặt\" dưới lòng đất do vi sinh vật phân giải thiếu oxy!",
+      "duration": 136.66,
+      "startTime": 2161.21,
+      "endTime": 2297.87,
+      "audioUrl": "/audio/lectures/science/b18/s03_b12.mp3"
     }
   ]
 }

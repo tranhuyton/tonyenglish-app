@@ -1,163 +1,368 @@
 {
   "lectureId": "1231b474-8a99-4330-b45d-fdda19a802fe",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B1: Characteristics of living organisms",
-  "totalDuration": 547.47,
+  "totalDuration": 1746.49,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+    "s01_int": {
+      "start": 2,
+      "end": 4
     },
-    "sec_mrsgren": {
+    "s01_wex": {
+      "start": 14,
+      "end": 15
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 8
+      "end": 15
     },
-    "sec-mrsgren": {
-      "start": 1,
-      "end": 8
+    "s02_int": {
+      "start": 17,
+      "end": 19
     },
-    "sec_excretion_warning": {
-      "start": 9,
-      "end": 9
+    "s02_wex": {
+      "start": 28,
+      "end": 29
     },
-    "sec-excretion-warning": {
-      "start": 9,
-      "end": 9
-    },
-    "sec_five_kingdoms": {
-      "start": 10,
-      "end": 10
-    },
-    "sec-five-kingdoms": {
-      "start": 10,
-      "end": 10
+    "s02_hdr": {
+      "start": 16,
+      "end": 29
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B1: Đặc điểm Sinh vật sống & Phân loại học",
-      "selector": "#sec-header",
-      "en": "Welcome to Cambridge IGCSE Co-ordinated Sciences Biology, Topic B1: Characteristics of living organisms. In this foundational topic, we study the seven characteristics shared by all living things, captured in the mnemonic MRS GREN, and examine the classification of living organisms into the Five Kingdoms.",
-      "vi": "Chào mừng các bạn đến với môn Sinh học Cambridge IGCSE, Chuyên đề B1: Đặc điểm của sinh vật sống và Phân loại học. Trong bài học nền tảng này, chúng ta sẽ khám phá 7 đặc tính phổ quát của sự sống qua quy tắc MRS GREN và hệ thống phân loại Năm Giới sinh vật.",
-      "duration": 44.1,
+      "title": "Characteristics of Living Organisms (Đặc điểm của Sinh vật sống)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B1 • Core Biology Characteristics of Living Organisms. Cambridge IGCSE Co-ordinated Sciences (0654) • Syllabus B1.1: The Seven Fundamental Life Processes & Metabolic Distinctions.",
+      "vi": "Chuyên đề B1 • Sinh học Core • Song Ngữ Anh - Việt Characteristics of Living Organisms (Đặc điểm của Sinh vật sống). Cambridge IGCSE Co-ordinated Sciences (0654) • Syllabus B1.1: 7 Quá trình Sống cơ bản & Phân biệt Thuật ngữ Trọng tâm.",
+      "duration": 39.06,
       "startTime": 0.0,
-      "endTime": 44.1,
+      "endTime": 39.06,
       "audioUrl": "/audio/lectures/science/b1/intro.mp3"
     },
     {
-      "id": "sec_mrsgren",
-      "title": "1. Bảy Đặc tính của Sự sống (Quy tắc MRS GREN)",
-      "selector": "#sec-mrsgren",
-      "en": "Section 1 introduces the seven fundamental life processes shared by all living organisms. Remember them using the acronym MRS GREN: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, and Nutrition. Cambridge examinations require precise, verbatim definitions for each of these processes.",
-      "vi": "Mục một giới thiệu 7 đặc tính sống cơ bản của mọi sinh vật, được ghi nhớ qua cụm từ viết tắt MRS GREN: Vận động, Hô hấp tế bào, Cảm ứng, Tăng trưởng, Sinh sản, Bài tiết và Dinh dưỡng. Đề thi Cambridge yêu cầu học sinh phải nắm vững định nghĩa chuẩn xác từng từ cho mỗi quá trình.",
-      "duration": 100.26,
-      "startTime": 44.1,
-      "endTime": 144.36,
-      "audioUrl": "/audio/lectures/science/b1/sec_mrsgren.mp3"
+      "id": "s01_hdr",
+      "title": "1. The Seven Characteristics of Living Organisms (7 Đặc tính Cốt lõi của Sự sống — MRS GREN)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 1. The Seven Characteristics of Living Organisms (MRS GREN).",
+      "vi": "🟦 CORE 1. 7 Đặc tính Cốt lõi của Sự sống — MRS GREN .",
+      "duration": 12.54,
+      "startTime": 39.06,
+      "endTime": 51.6,
+      "audioUrl": "/audio/lectures/science/b1/s01_hdr.mp3"
     },
     {
-      "id": "sec_movement",
-      "title": "🏃 Movement (Vận động)",
-      "selector": "#sec-movement",
-      "en": "Movement is defined as an action by an organism or part of an organism causing a change of position or place. Animals move their entire bodies by locomotion, such as walking, running, flying, or swimming. In contrast, most plants are anchored, but move parts of their structure slowly in response to environmental stimuli, such as shoots bending towards light.",
-      "vi": "Vận động được định nghĩa là hành động của một sinh vật hoặc một phần cơ thể sinh vật làm thay đổi vị trí hoặc chỗ ở. Động vật có thể di chuyển toàn bộ cơ thể bằng cách vận động như đi bộ, chạy, bay hoặc bơi. Ngược lại, thực vật thường cố định nhưng vẫn vận động chậm các bộ phận để đáp ứng các kích thích từ môi trường, ví dụ như ngọn cây uốn cong về phía có ánh sáng.",
-      "duration": 43.07,
-      "startTime": 144.36,
-      "endTime": 187.43,
-      "audioUrl": "/audio/lectures/science/b1/sec_movement.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Why is a roaring campfire NOT a living organism even though it moves, consumes wood (\"nutrition\"), releases heat (\"respiration\"), and gives off smoke (\"excretion\")? Because a fire has no cells, cannot detect stimuli to regulate its internal environment, and cannot permanently increase its cellular dry mass ! Every living organism carries out all seven MRS GREN processes.",
+      "vi": "🎯 Hình dung đời thường: Tại sao một ngọn lửa trại rực cháy KHÔNG phải là sinh vật sống dù nó cũng chuyển động, \"ăn\" củi ( nutrition ), tỏa năng lượng ( respiration ) và nhả khói ( excretion )? Vì ngọn lửa không có tế bào, không cảm nhận kích thích để ổn định nội môi và không thể tăng khối lượng khô (dry mass) nhờ phân bào! Chỉ thực thể có đủ cả 7 đặc tính MRS GREN mới là sinh vật sống.",
+      "duration": 54.39,
+      "startTime": 51.6,
+      "endTime": 105.99,
+      "audioUrl": "/audio/lectures/science/b1/s01_b01.mp3"
     },
     {
-      "id": "sec_respiration",
-      "title": "💨 Respiration (Hô hấp tế bào)",
-      "selector": "#sec-respiration",
-      "en": "Respiration is defined as the chemical reactions in cells that break down nutrient molecules and release energy for metabolism. Crucially for Cambridge exams, remember that cellular respiration is a biochemical reaction occurring in all living cells twenty-four hours a day, and is completely different from breathing or ventilation.",
-      "vi": "Hô hấp tế bào được định nghĩa là chuỗi phản ứng hóa học diễn ra trong tế bào giúp phân giải các phân tử dinh dưỡng để giải phóng năng lượng cho quá trình chuyển hóa. Điểm trọng tâm thi cử Cambridge: Hô hấp tế bào là phản ứng hóa sinh diễn ra liên tục 24/7 ở mọi tế bào sống, và khác biệt hoàn toàn với quá trình hít thở thông khí của phổi.",
-      "duration": 38.66,
-      "startTime": 187.43,
-      "endTime": 226.09,
-      "audioUrl": "/audio/lectures/science/b1/sec_respiration.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: In 0654 Paper 1/2/3/4, definitions in B1.1 are marked strictly word-for-word: link Movement to organism or part of an organism ; Respiration to chemical reactions in cells + release energy for metabolism ; Sensitivity to internal or external environment ; and Growth to permanent increase in size and dry mass .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Đề thi 0654 chấm định nghĩa B1.1 sát từng từ khóa: gắn Movement với organism or part of an organism ; gắn Respiration với chemical reactions in cells + release energy for metabolism ; gắn Sensitivity với internal or external environment ; và gắn Growth với permanent increase in size and dry mass .",
+      "duration": 49.74,
+      "startTime": 105.99,
+      "endTime": 155.73,
+      "audioUrl": "/audio/lectures/science/b1/s01_b02.mp3"
     },
     {
-      "id": "sec_sensitivity",
-      "title": "👀 Sensitivity (Cảm ứng)",
-      "selector": "#sec-sensitivity",
-      "en": "Sensitivity is defined as the ability to detect and respond to changes in the internal or external environment. Sense organs contain receptor cells that detect environmental stimuli such as light, temperature, sound, and chemicals, while effectors such as muscles and glands carry out appropriate responses.",
-      "vi": "Cảm ứng là khả năng nhận biết và phản ứng trước những thay đổi từ môi trường bên trong hoặc bên ngoài cơ thể. Các cơ quan cảm giác chứa tế bào thụ thể để phát hiện kích thích như ánh sáng, nhiệt độ, âm thanh và hóa chất, trong khi các cơ quan phản ứng như cơ bắp và tuyến sẽ thực hiện các đáp ứng tương ứng.",
-      "duration": 35.78,
-      "startTime": 226.09,
-      "endTime": 261.87,
-      "audioUrl": "/audio/lectures/science/b1/sec_sensitivity.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students frequently forget that plants show Movement and Sensitivity too! When a sunflower shoot bends towards sunlight, detecting light is sensitivity and bending the stem (part of an organism changing position) is movement .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng quên thực vật cũng có đủ Movement và Sensitivity ! Khi ngọn cây hướng dương uốn cong về phía mặt trời: việc phát hiện ánh sáng là Sensitivity , còn việc thân cây đổi tư thế (một bộ phận thay đổi vị trí) chính là Movement .",
+      "duration": 34.58,
+      "startTime": 155.73,
+      "endTime": 190.31,
+      "audioUrl": "/audio/lectures/science/b1/s01_b03.mp3"
     },
     {
-      "id": "sec_growth",
-      "title": "🌱 Growth (Sinh trưởng & Tăng trưởng)",
-      "selector": "#sec-growth",
-      "en": "Growth is defined as a permanent increase in size and dry mass. Organisms grow through cell division via mitosis, followed by cell enlargement and differentiation. In Cambridge examinations, dry mass specifically means the mass of an organism after all water has been removed by gentle drying.",
-      "vi": "Sinh trưởng được định nghĩa là sự gia tăng vĩnh viễn về kích thước và khối lượng khô. Sinh vật lớn lên nhờ sự phân chia tế bào qua quá trình nguyên phân, sau đó tế bào dài ra và biệt hóa. Trong các kỳ thi Cambridge, khối lượng khô chỉ khối lượng của sinh vật sau khi đã loại bỏ hoàn toàn lượng nước qua quá trình sấy.",
-      "duration": 37.96,
-      "startTime": 261.87,
-      "endTime": 299.83,
-      "audioUrl": "/audio/lectures/science/b1/sec_growth.mp3"
+      "id": "s01_b04",
+      "title": "MRS GREN",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "All living organisms share seven fundamental life processes. You can easily remember them using the mnemonic MRS GREN .",
+      "vi": "Mọi sinh vật sống đều thực hiện chung 7 quá trình sống nền tảng, ghi nhớ dễ dàng qua quy tắc viết tắt MRS GREN . Giữ nguyên định nghĩa tiếng Anh chuẩn Mark Scheme và",
+      "duration": 21.03,
+      "startTime": 190.31,
+      "endTime": 211.34,
+      "audioUrl": "/audio/lectures/science/b1/s01_b04.mp3"
     },
     {
-      "id": "sec_reproduction",
-      "title": "👶 Reproduction (Sinh sản)",
-      "selector": "#sec-reproduction",
-      "en": "Reproduction is defined as the processes that make more of the same kind of organism. Asexual reproduction involves only one parent and produces genetically identical offspring or clones. Sexual reproduction involves two parents and the fusion of haploid gamete nuclei to produce genetically varied offspring.",
-      "vi": "Sinh sản được định nghĩa là các quá trình tạo ra nhiều cá thể mới cùng loài. Sinh sản vô tính chỉ cần một cá thể bố mẹ, tạo ra các cá thể con giống hệt nhau về mặt di truyền hay dòng vô tính. Sinh sản hữu tính cần hai cá thể bố mẹ và sự dung hợp của các nhân giao tử đơn bội để tạo ra thế hệ con có sự đa dạng di truyền.",
-      "duration": 39.16,
-      "startTime": 299.83,
-      "endTime": 338.99,
-      "audioUrl": "/audio/lectures/science/b1/sec_reproduction.mp3"
+      "id": "s01_b05",
+      "title": "🏃 Movement (Vận động — M)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🏃 Movement (M). Syllabus B1.1(a) \"An action by an organism or part of an organism causing a change of position or place.\". • Animals: Move entire bodies using locomotion (walking, swimming, flying).• Plants: Move parts slowly in response to stimuli (tropisms, e.g. shoots bending toward light).",
+      "vi": "🏃 Movement (Vận động — M). Syllabus B1.1(a) \"An action by an organism or part of an organism causing a change of position or place.\". (Hành động của sinh vật hoặc một bộ phận của sinh vật gây ra sự thay đổi vị trí hoặc tư thế.) • Động vật: Di chuyển toàn bộ cơ thể (đi, bơi, bay).• Thực vật: Chuyển động từng bộ phận chậm theo kích thích (hướng sáng của ngọn, hướng trọng lực của rễ).",
+      "duration": 52.99,
+      "startTime": 211.34,
+      "endTime": 264.33,
+      "audioUrl": "/audio/lectures/science/b1/s01_b05.mp3"
     },
     {
-      "id": "sec_excretion",
-      "title": "🚽 Excretion (Bài tiết)",
-      "selector": "#sec-excretion",
-      "en": "Excretion is defined as the removal of the waste products of metabolism and substances in excess of requirements. Key examples include carbon dioxide excreted by the lungs, and urea and excess mineral salts filtered and excreted by the kidneys.",
-      "vi": "Bài tiết được định nghĩa là quá trình đào thải các chất thải độc hại sinh ra từ quá trình trao đổi chất và các chất dư thừa so với nhu cầu của cơ thể. Các ví dụ điển hình bao gồm khí carbon dioxide được đào thải qua phổi, cùng với urê và các muối khoáng dư thừa được lọc và bài tiết qua thận.",
-      "duration": 32.39,
-      "startTime": 338.99,
-      "endTime": 371.38,
-      "audioUrl": "/audio/lectures/science/b1/sec_excretion.mp3"
+      "id": "s01_b06",
+      "title": "💨 Respiration (Hô hấp tế bào — R)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "💨 Respiration (R). Syllabus B1.1(b) \"The chemical reactions in cells that break down nutrient molecules and release energy for metabolism.\". • Key Note: Respiration is a cellular chemical process, NOT the same as breathing/ventilation. Occurs in both plants and animals 24/7.",
+      "vi": "💨 Respiration (Hô hấp tế bào — R). Syllabus B1.1(b) \"The chemical reactions in cells that break down nutrient molecules and release energy for metabolism.\". (Các phản ứng hóa học trong tế bào phân giải các phân tử dinh dưỡng và giải phóng năng lượng cho trao đổi chất.) • Lưu ý sống còn: Là phản ứng hóa học nội bào diễn ra 24/7 ở cả cây và động vật, KHÔNG đồng nghĩa với động tác hít thở (breathing)!",
+      "duration": 51.52,
+      "startTime": 264.33,
+      "endTime": 315.85,
+      "audioUrl": "/audio/lectures/science/b1/s01_b06.mp3"
     },
     {
-      "id": "sec_nutrition",
-      "title": "🍽️ Nutrition (Dinh dưỡng)",
-      "selector": "#sec-nutrition",
-      "en": "Nutrition is defined as the taking in of materials for energy, growth, and development. Plants are autotrophic organisms that synthesise their own organic nutrients through photosynthesis using light, carbon dioxide, and water. Animals are heterotrophic and must ingest pre-formed organic compounds by eating other living organisms.",
-      "vi": "Dinh dưỡng được định nghĩa là việc thu nhận các chất vật chất để cung cấp năng lượng, phục vụ cho sự sinh trưởng và phát triển. Thực vật là sinh vật tự dưỡng, tự tổng hợp chất hữu cơ qua quang hợp từ ánh sáng, CO2 và nước. Động vật là sinh vật dị dưỡng, phải thu nhận dinh dưỡng bằng cách tiêu thụ các sinh vật khác.",
-      "duration": 40.29,
-      "startTime": 371.38,
-      "endTime": 411.67,
-      "audioUrl": "/audio/lectures/science/b1/sec_nutrition.mp3"
+      "id": "s01_b07",
+      "title": "👀 Sensitivity (Cảm ứng — S)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "👀 Sensitivity (S). Syllabus B1.1(c) \"The ability to detect and respond to changes in the internal or external environment.\". • Receptors: Sense organs detect stimuli (light, sound, chemicals, touch). Effectors (muscles, glands) carry out responses.",
+      "vi": "👀 Sensitivity (Cảm ứng — S). Syllabus B1.1(c) \"The ability to detect and respond to changes in the internal or external environment.\". (Khả năng phát hiện và phản ứng lại các thay đổi của môi trường bên trong hoặc bên ngoài cơ thể.) • Cơ chế: Thụ thể/giác quan nhận kích thích (ánh sáng, nhiệt, đường huyết..); cơ quan đáp ứng (cơ, tuyến) thực hiện phản hồi.",
+      "duration": 51.24,
+      "startTime": 315.85,
+      "endTime": 367.09,
+      "audioUrl": "/audio/lectures/science/b1/s01_b07.mp3"
     },
     {
-      "id": "sec_excretion_warning",
-      "title": "⚠️ Cảnh báo Đề thi: Excretion vs. Egestion",
-      "selector": "#sec-excretion-warning",
-      "en": "Cambridge Exam Warning: Never confuse excretion with egestion! Excretion is the removal of metabolic waste products created inside cells, such as urea in urine and carbon dioxide from respiration. In contrast, egestion is passing out undigested food as faeces through the anus, material that was never absorbed into body cells or involved in metabolism.",
-      "vi": "Cảnh báo đề thi Cambridge: Tuyệt đối không được nhầm lẫn giữa Bài tiết (Excretion) và Tống phân (Egestion)! Bài tiết là việc đào thải các chất cặn bã sinh ra bên trong tế bào như urê trong nước tiểu và CO2 từ hô hấp. Ngược lại, tống phân chỉ là sự thải thức ăn không tiêu hóa được dưới dạng phân qua hậu môn, chất này chưa từng được hấp thu vào tế bào hay tham gia chuyển hóa.",
-      "duration": 46.86,
-      "startTime": 411.67,
-      "endTime": 458.53,
-      "audioUrl": "/audio/lectures/science/b1/sec_excretion_warning.mp3"
+      "id": "s01_b08",
+      "title": "🌱 Growth (Sinh trưởng — G)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🌱 Growth (G). Syllabus B1.1(d) \"A permanent increase in size and dry mass.\". • Mechanism: Accomplished through cell division (mitosis) and cell enlargement. \"Dry mass\" refers to mass after removing all water.",
+      "vi": "🌱 Growth (Sinh trưởng — G). Syllabus B1.1(d) \"A permanent increase in size and dry mass.\". (Sự gia tăng vĩnh viễn về kích thước và khối lượng khô.) • Cơ chế: Nhờ phân bào nguyên phân (tăng số lượng tế bào) và lớn lên của tế bào. \"Dry mass\" là khối lượng chất hữu cơ sau khi sấy bay hơi hết nước.",
+      "duration": 41.88,
+      "startTime": 367.09,
+      "endTime": 408.97,
+      "audioUrl": "/audio/lectures/science/b1/s01_b08.mp3"
     },
     {
-      "id": "sec_five_kingdoms",
-      "title": "2. Phân loại Sinh vật sống: Năm Giới Sinh học",
-      "selector": "#sec-five-kingdoms",
-      "en": "Section 2 covers biological classification into the Five Kingdoms: Animals are multicellular heterotrophs lacking cell walls. Plants are multicellular autotrophs with cellulose walls and chloroplasts. Fungi have chitin cell walls and feed saprotrophically via hyphae. Protoctists are mostly unicellular eukaryotes. Prokaryotes, including bacteria, are unicellular organisms without a true nucleus, possessing circular DNA loops and plasmids.",
-      "vi": "Mục hai nghiên cứu phân loại sinh giới thành Năm Giới: Giới Động vật gồm sinh vật đa bào dị dưỡng không có thành tế bào. Giới Thực vật là sinh vật đa bào tự dưỡng có thành cellulose và lục lạp. Giới Nấm có thành chitin và dinh dưỡng hoại sinh qua hệ sợi. Giới Nguyên sinh gồm các sinh vật nhân thực đơn bào. Giới Khởi sinh như vi khuẩn là sinh vật đơn bào không có màng nhân thật, mang phân tử DNA vòng trần và plasmid.",
-      "duration": 88.94,
-      "startTime": 458.53,
-      "endTime": 547.47,
-      "audioUrl": "/audio/lectures/science/b1/sec_five_kingdoms.mp3"
+      "id": "s01_b09",
+      "title": "👶 Reproduction (Sinh sản — R)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "👶 Reproduction (R). Syllabus B1.1(e) \"The processes that make more of the same kind of organism.\". • Asexual: 1 parent, clones (identical).• Sexual: 2 parents, fusion of haploid gamete nuclei to create genetic variation.",
+      "vi": "👶 Reproduction (Sinh sản — R). Syllabus B1.1(e) \"The processes that make more of the same kind of organism.\". (Các quá trình tạo ra thêm nhiều cá thể mới cùng loại sinh vật.) • Vô tính (Asexual): 1 cơ thể mẹ tạo các bản sao giống hệt.• Hữu tính (Sexual): Dung hợp giao tử tạo biến dị di truyền.",
+      "duration": 43.98,
+      "startTime": 408.97,
+      "endTime": 452.95,
+      "audioUrl": "/audio/lectures/science/b1/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "🚽 Excretion (Bài tiết — E)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "🚽 Excretion (E). Syllabus B1.1(f) \"The removal of the waste products of metabolism and substances in excess of requirements.\". • Examples: Carbon dioxide from lungs, urea and excess salts from kidneys.",
+      "vi": "🚽 Excretion (Bài tiết — E). Syllabus B1.1(f) \"The removal of the waste products of metabolism and substances in excess of requirements.\". (Sự đào thải các sản phẩm thải của quá trình trao đổi chất và các chất dư thừa vượt quá nhu cầu cơ thể.) • Ví dụ chuẩn: Khí CO₂ qua phổi; urê, nước thừa và ion muối dư qua thận.",
+      "duration": 42.12,
+      "startTime": 452.95,
+      "endTime": 495.07,
+      "audioUrl": "/audio/lectures/science/b1/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "🍽️ Nutrition (Dinh dưỡng — N)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "🍽️ Nutrition (N). Syllabus B1.1(g) \"The taking in of materials for energy, growth and development.\". • Autotrophic (Plants): Synthesise organic compounds via photosynthesis using light, CO₂, and water.• Heterotrophic (Animals): Ingest organic compounds by eating other organisms.",
+      "vi": "🍽️ Nutrition (Dinh dưỡng — N). Syllabus B1.1(g) \"The taking in of materials for energy, growth and development.\". (Sự thu nhận vật chất để cung cấp năng lượng, sinh trưởng và phát triển.) • Tự dưỡng (Thực vật): Lấy chất vô cơ ( CO₂ , H₂O , khoáng) để quang hợp tạo chất hữu cơ.• Dị dưỡng (Động vật): Ăn các hợp chất hữu cơ có sẵn từ sinh vật khác.",
+      "duration": 52.23,
+      "startTime": 495.07,
+      "endTime": 547.3,
+      "audioUrl": "/audio/lectures/science/b1/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "🔬 Sơ đồ Tư duy: Mối liên hệ giữa 7 Đặc tính MRS GREN trong Cơ thể sống",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "🔬 Visual Map: How the 7 Characteristics Connect Inside an Organism. Syllabus B1.1 Core Map",
+      "vi": "🔬 Sơ đồ Tư duy: Mối liên hệ giữa 7 Đặc tính MRS GREN trong Cơ thể sống. Bản đồ B1.1 Core",
+      "duration": 17.27,
+      "startTime": 547.3,
+      "endTime": 564.57,
+      "audioUrl": "/audio/lectures/science/b1/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ When blood glucose concentration rises after a meal, cells in the human pancreas detect this internal change and secrete insulin so liver cells absorb glucose. Which characteristic of living organisms is shown when pancreas cells detect the change in blood glucose? A. Excretion B. Nutrition C. Respiration D. Sensitivity ✅ Correct Answer: D 🧠 Step-by-Step Reasoning: Syllabus B1.1(c) defines sensitivity as the ability to detect and respond to changes in the internal or external environment. Detecting a rise in blood glucose inside the bloodstream is a classic example of internal sensitivity!",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ When blood glucose concentration rises after a meal, cells in the human pancreas detect this internal change and secrete insulin so liver cells absorb glucose. Which characteristic of living organisms is shown when pancreas cells detect the change in blood glucose? (Khi nồng độ đường huyết tăng sau bữa ăn, các tế bào tuyến tụy phát hiện sự thay đổi bên trong này và tiết insulin giúp gan hấp thụ glucose. Đặc tính sống nào được thể hiện khi tế bào tụy phát hiện thay đổi đường huyết?) A. Excretion (Bài tiết) B. Nutrition (Dinh dưỡng) C. Respiration (Hô hấp tế bào) D. Sensitivity (Cảm ứng) ✅ Đáp án đúng: D 🧠 Giải thích & Cách loại bẫy: Mục B1.1(c) định nghĩa Sensitivity (cảm ứng) là khả năng phát hiện và phản ứng lại các thay đổi của môi trường bên trong (internal) hoặc bên ngoài cơ thể. Việc tế bào tuyến tụy phát hiện biến đổi nồng độ đường trong máu là ví dụ kinh điển của cảm ứng nội môi!",
+      "duration": 118.42,
+      "startTime": 564.57,
+      "endTime": 682.99,
+      "audioUrl": "/audio/lectures/science/b1/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] (a) Define respiration . [2] (b) State which characteristic of living organisms is described by:(i) a Venus flytrap snapping its leaves shut when an insect touches its sensory hairs; [1] (ii) a bacterium dividing into two genetically identical daughter bacteria. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) The chemical reactions in cells that break down nutrient molecules [1m] and release energy for metabolism [1m] . (b)(i) Sensitivity (detecting touch stimulus) OR Movement (part of an organism changing position) [1m] . (b)(ii) Reproduction (making more of the same kind of organism) [1m] . 💡 Intuition Check: Notice how B1.1(c) explicitly includes \"internal or external environment\" — homeostasis sensors inside your body count as Sensitivity just as much as eyes and ears!",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] (a) Define respiration . (Định nghĩa hô hấp tế bào — respiration.) (b) State which characteristic of living organisms is described by:(i) a Venus flytrap snapping its leaves shut when an insect touches its sensory hairs; (Cây bắt ruồi khép lá lại khi côn trùng ) (ii) a bacterium dividing into two genetically identical daughter bacteria. (Một vi khuẩn phân đôi tạo thành hai vi khuẩn con giống hệt nhau.) ✍️ Lời giải chi tiết theo thang điểm: Các phản ứng hóa học trong tế bào phân giải phân tử dinh dưỡng và giải phóng năng lượng cho trao đổi chất . (b)(i) Sensitivity (phát hiện kích thích chạm) HOẶC Movement (bộ phận lá thay đổi vị trí) . (b)(ii) Reproduction (tạo ra thêm cá thể mới cùng loài) . 💡 Kiểm tra bản chất: Chú ý cụm từ \"internal or external environment\" trong định nghĩa Sensitivity — mọi thụ thể cảm nhận nhiệt độ máu, pH máu hay đường huyết bên trong cơ thể đều là Sensitivity!",
+      "duration": 140.79,
+      "startTime": 682.99,
+      "endTime": 823.78,
+      "audioUrl": "/audio/lectures/science/b1/s01_b14.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "2. Key Metabolic Definitions & Classic Exam Distinctions (Phân biệt Thuật ngữ Trao đổi chất & B",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE • B1.1 2. Key Metabolic Definitions & Classic Exam Distinctions.",
+      "vi": "🟦 CORE • B1.1 2. Phân biệt Thuật ngữ Trao đổi chất & Bẫy Đề thi Kinh điển .",
+      "duration": 15.26,
+      "startTime": 823.78,
+      "endTime": 839.04,
+      "audioUrl": "/audio/lectures/science/b1/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture your body as a busy restaurant kitchen: groceries brought in through the front door = Nutrition ; food scraps that never entered the cooking pots and go straight out the back chute = Egestion (faeces); smoke and chemical by-products created inside the cooking stoves and vented out the chimney = Excretion ( CO₂ and urea)!",
+      "vi": "🎯 Hình dung đời thường: Hãy ví cơ thể như một căn bếp nhà hàng: nguyên liệu mua vào cửa trước = Nutrition ; vỏ rau củ không nấu được đổ thẳng ra thùng rác sau bếp = Egestion (thải phân — chưa từng vào nồi nấu); còn khói và phụ phẩm hóa học sinh ra ngay trong nồi nấu được hút qua ống khói = Excretion (bài tiết CO₂ và urê sinh ra từ tế bào)!",
+      "duration": 46.26,
+      "startTime": 839.04,
+      "endTime": 885.3,
+      "audioUrl": "/audio/lectures/science/b1/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Master the 4 classic exam contrasts: (1) Excretion (metabolic waste made in cells: CO₂ , urea, excess water/ions) vs Egestion (undigested faeces); (2) Respiration (cellular chemical energy release) vs Breathing (ventilation); (3) Dry mass (true organic growth) vs fresh mass (water fluctuation); (4) Part-of-organism movement in plants vs whole-body locomotion in animals.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nắm chắc 4 cặp đối lập hay ra thi nhất của B1.1: (1) Excretion (chất thải nội bào: CO₂ , urê, nước/muối dư) vs Egestion (phân không tiêu hóa); (2) Respiration (phản ứng hóa học giải phóng năng lượng) vs Breathing (thông khí cơ học); (3) Dry mass (khối lượng khô bền vững) vs khối lượng tươi (dao động theo nước); (4) Movement bộ phận ở cây vs di chuyển toàn thân ở động vật.",
+      "duration": 65.11,
+      "startTime": 885.3,
+      "endTime": 950.41,
+      "audioUrl": "/audio/lectures/science/b1/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: If a question asks \"Name two waste products excreted by humans\", NEVER write \"faeces\" or \"sweat/urine\" as the chemical substance — name the actual metabolic molecules: carbon dioxide and urea (plus excess water/ions)!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nếu đề bài hỏi \"Name two waste products excreted by humans\", TUYỆT ĐỐI KHÔNG viết \"faeces\" (phân), cũng hạn chế chỉ ghi chung chung \"urine/sweat\" — hãy ghi đích danh phân tử chất thải trao đổi chất: carbon dioxide ( CO₂ ) và urea (urê) !",
+      "duration": 36.7,
+      "startTime": 950.41,
+      "endTime": 987.11,
+      "audioUrl": "/audio/lectures/science/b1/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Cambridge IGCSE Co-ordinated Sciences (0654)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "In Cambridge IGCSE Co-ordinated Sciences (0654), examiners test Syllabus B1.1 by checking whether you can distinguish true cellular life processes from everyday look-alike processes:",
+      "vi": "Trong chương trình Cambridge IGCSE Co-ordinated Sciences (0654) , chuyên đề B1 tập trung hoàn toàn vào B1.1 (MRS GREN) — không hỏi phân loại 5 Giới, nhưng kiểm tra cực sâu khả năng phân biệt bản chất sinh hóa nội bào với các hiện tượng bề ngoài dễ nhầm lẫn:",
+      "duration": 33.88,
+      "startTime": 987.11,
+      "endTime": 1020.99,
+      "audioUrl": "/audio/lectures/science/b1/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "⚠️ Cặp phân biệt 1: Excretion (Bài tiết) vs. Egestion (Thải phân) & Hệ cơ quan Bài tiết",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "⚠️ Distinction 1: Excretion vs. Egestion (& Human Excretory Organs). Students frequently confuse excretion with egestion . Always check whether the substance was made by chemical reactions inside cells:",
+      "vi": "⚠️ Cặp phân biệt 1: Excretion (Bài tiết) vs. Egestion (Thải phân) & Hệ cơ quan Bài tiết. Đây là bẫy mất điểm số 1 trong Paper 1, 2, 3 và 4. Hãy luôn đặt câu hỏi: \"Chất này có được sinh ra từ phản ứng hóa học BÊN TRONG tế bào hay không?\" .",
+      "duration": 34.43,
+      "startTime": 1020.99,
+      "endTime": 1055.42,
+      "audioUrl": "/audio/lectures/science/b1/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "✅ Excretion (Bài tiết — Thuộc MRS GREN):",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "✅ Excretion (Part of MRS GREN): Removal of waste products of metabolism made inside cells and substances in excess of requirements .• Lungs: excrete carbon dioxide ( CO₂ ) and water vapour from respiration.• Kidneys: excrete urea , excess water, and excess mineral ions in urine.• Skin: excretes excess water, salts, and trace urea in sweat.",
+      "vi": "✅ Excretion (Bài tiết — Thuộc MRS GREN): Đào thải sản phẩm thải của trao đổi chất sinh ra bên trong tế bào và các chất dư thừa.• Phổi (Lungs): bài tiết khí CO₂ và hơi nước từ hô hấp tế bào.• Thận (Kidneys): bài tiết urê (urea) , nước thừa và muối khoáng dư trong nước tiểu.• Da (Skin): bài tiết nước, muối khoáng và một lượng nhỏ urê qua mồ hôi.",
+      "duration": 55.23,
+      "startTime": 1055.42,
+      "endTime": 1110.65,
+      "audioUrl": "/audio/lectures/science/b1/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "❌ Egestion (Thải phân — KHÔNG phải Bài tiết):",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "❌ Egestion (NOT Excretion): Passing out of undigested or unabsorbed food (such as cellulose dietary fibre and bacteria) as faeces from the alimentary canal via the anus. Because cellulose never crossed the gut wall into cells or entered metabolic pathways, its removal is egestion , not excretion.",
+      "vi": "❌ Egestion (Thải phân — KHÔNG phải Bài tiết): Tống xuất thức ăn không tiêu hóa hoặc không hấp thụ được (như chất xơ cellulose) ra khỏi ống tiêu hóa qua hậu môn dưới dạng phân (faeces) . Vì chất xơ chỉ đi xuyên qua lòng ruột, chưa từng đi vào bên trong tế bào hay tham gia phản ứng trao đổi chất , nên đó là egestion chứ không phải excretion!",
+      "duration": 42.65,
+      "startTime": 1110.65,
+      "endTime": 1153.3,
+      "audioUrl": "/audio/lectures/science/b1/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "💨 Cặp phân biệt 2: Respiration vs. Breathing",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "💨 Distinction 2: Respiration vs. Breathing. • Cellular Respiration (B1.1b): Chemical reactions inside every living cell (animals, plants, bacteria) breaking down nutrient molecules (e.g. glucose) to release energy for metabolism 24 hours a day.• Breathing (Ventilation): Muscular movement of air into and out of lungs to maintain gas concentration gradients. Plants respire continuously without \"breathing\"!",
+      "vi": "💨 Cặp phân biệt 2: Respiration vs. Breathing. • Hô hấp tế bào (Respiration — B1.1b): Chuỗi phản ứng hóa học bên trong mọi tế bào sống (động vật, thực vật, vi khuẩn) phân giải glucose để giải phóng năng lượng (release energy) cho trao đổi chất suốt 24/24 giờ.• Hít thở (Breathing / Ventilation): Hoạt động cơ học co giãn lồng ngực đưa không khí ra vào phổi. Thực vật không có phổi để \"breathing\" nhưng vẫn hô hấp tế bào liên tục ngày và đêm!",
+      "duration": 64.4,
+      "startTime": 1153.3,
+      "endTime": 1217.7,
+      "audioUrl": "/audio/lectures/science/b1/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🌱 Cặp phân biệt 3: Khối lượng khô (Dry Mass) vs. Hút nước",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "🌱 Distinction 3: Dry Mass Growth vs. Water Uptake. • Biological Growth (B1.1d): A permanent increase in size and dry mass caused by cell division (new cells) and assimilation of organic biomass.• Why \"Dry Mass\"? Drinking a litre of water or soaking a seed increases fresh mass temporarily by osmosis without building new protoplasm. Dry mass (measured after gentle heating to constant mass to remove all water) measures true organic tissue growth.",
+      "vi": "🌱 Cặp phân biệt 3: Khối lượng khô (Dry Mass) vs. Hút nước. • Sinh trưởng chuẩn (Growth — B1.1d): Sự gia tăng vĩnh viễn về kích thước và khối lượng khô nhờ phân chia tế bào và tổng hợp chất hữu cơ mới.• Vì sao dùng Dry Mass? Khi uống 1 lít nước hoặc ngâm hạt đậu vào nước, khối lượng tươi tăng vọt tạm thời do thẩm thấu chứ chưa tạo thêm nguyên sinh chất. Sấy mẫu ở ~80 °C đến khối lượng không đổi giúp đo chính xác khối lượng khô hữu cơ thực sự!",
+      "duration": 65.59,
+      "startTime": 1217.7,
+      "endTime": 1283.29,
+      "audioUrl": "/audio/lectures/science/b1/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "🌿 Cặp phân biệt 4: Vận động & Dinh dưỡng ở Cây vs. Động vật",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "🌿 Distinction 4: Plant vs. Animal Movement & Nutrition. • Movement (B1.1a): Animals move their whole body (locomotion); plants move parts of their organism (shoots growing towards light, roots growing towards gravity, leaves opening/closing).• Nutrition (B1.1g): Green plants take in simple inorganic materials ( CO₂ , water, mineral ions) for photosynthesis; animals take in complex organic compounds (carbohydrates, proteins, lipids).",
+      "vi": "🌿 Cặp phân biệt 4: Vận động & Dinh dưỡng ở Cây vs. Động vật. • Vận động (Movement — B1.1a): Động vật di chuyển cả cơ thể; thực vật cố định rễ nhưng vẫn vận động một bộ phận cơ thể như ngọn uốn về phía sáng, cánh hoa đóng mở.• Dinh dưỡng (Nutrition — B1.1g): Cây xanh hấp thụ nguyên liệu vô cơ đơn giản ( CO₂ , nước, ion khoáng) để quang hợp; động vật ăn các chất hữu cơ phức tạp.",
+      "duration": 64.37,
+      "startTime": 1283.29,
+      "endTime": 1347.66,
+      "audioUrl": "/audio/lectures/science/b1/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "or part of an organism",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "Syllabus Term: Movement; Mandatory Mark Scheme Keywords: Action by organism or part of an organism causing change of position or place; Common Student Error (0 Marks): Saying \"walking from place to place\" (excludes plants!). Syllabus Term: Respiration; Mandatory Mark Scheme Keywords: Chemical reactions in cells breaking down nutrients to release energy for metabolism; Common Student Error (0 Marks): Saying \"breathing in O₂\" or \"producing/making energy\". Syllabus Term: Growth; Mandatory Mark Scheme Keywords: Permanent increase in size and dry mass; Common Student Error (0 Marks): Omitting \"permanent\" or omitting \"dry mass\". Syllabus Term: Excretion; Mandatory Mark Scheme Keywords: Removal of waste products of metabolism and substances in excess; Common Student Error (0 Marks): Giving faeces / undigested food (egestion) as an example.",
+      "vi": "Thuật ngữ B1.1: Movement (Vận động); Từ khóa Tiếng Anh Bắt buộc (Mark Scheme): Action by an organism or part of an organism causing change of position or place; Lỗi sai Mất điểm Kinh điển (0 điểm): Chỉ viết \"di chuyển từ nơi này sang nơi khác\" (bỏ sót thực vật!). Thuật ngữ B1.1: Respiration (Hô hấp TB); Từ khóa Tiếng Anh Bắt buộc (Mark Scheme): Chemical reactions in cells breaking down nutrients to release energy for metabolism; Lỗi sai Mất điểm Kinh điển (0 điểm): Viết \"breathing O₂\" (hít thở) hoặc \"produce/make energy\" (tạo ra năng lượng). Thuật ngữ B1.1: Growth (Sinh trưởng); Từ khóa Tiếng Anh Bắt buộc (Mark Scheme): Permanent increase in size and dry mass; Lỗi sai Mất điểm Kinh điển (0 điểm): Thiếu chữ \"permanent\" (vĩnh viễn) hoặc thiếu \"dry mass\" (khối lượng khô). Thuật ngữ B1.1: Excretion (Bài tiết); Từ khóa Tiếng Anh Bắt buộc (Mark Scheme): Removal of waste products of metabolism and substances in excess; Lỗi sai Mất điểm Kinh điển (0 điểm): Lấy phân / thức ăn thừa (faeces — egestion) làm ví dụ bài tiết.",
+      "duration": 137.64,
+      "startTime": 1347.66,
+      "endTime": 1485.3,
+      "audioUrl": "/audio/lectures/science/b1/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ Which row correctly identifies an excretory product, the metabolic process that produces it inside cells, and the organ that removes it from the human body? A. Undigested cellulose | Digestion | Rectum and anus B. Carbon dioxide | Respiration | Lungs C. Oxygen | Breathing | Kidneys D. Glucose | Nutrition | Skin ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Carbon dioxide is a metabolic waste product formed inside cells by chemical reactions during respiration and removed from the blood via the lungs . Option A describes egestion (cellulose is never metabolised inside human cells); Option C confuses breathing with metabolism; Option D names a useful nutrient (glucose is reabsorbed, not excreted by healthy kidneys or skin).",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1 / Paper 2 MCQ Which row correctly identifies an excretory product, the metabolic process that produces it inside cells, and the organ that removes it from the human body? (Hàng nào xác định đúng sản phẩm bài tiết, quá trình trao đổi chất tạo ra nó bên trong tế bào, và cơ quan đào thải nó khỏi cơ thể người?) A. Undigested cellulose | Digestion | Rectum and anus B. Carbon dioxide | Respiration | Lungs C. Oxygen | Breathing | Kidneys D. Glucose | Nutrition | Skin ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Carbon dioxide ( CO₂ ) là sản phẩm thải của trao đổi chất sinh ra bên trong tế bào qua phản ứng hô hấp tế bào (respiration) và được đào thải qua phổi (lungs) . Đáp án A là thải phân (egestion — cellulose không bị phân giải trong tế bào người); C nhầm lẫn hít thở với trao đổi chất; D sai vì glucose là chất dinh dưỡng được thận tái hấp thu chứ không bài tiết.",
+      "duration": 122.75,
+      "startTime": 1485.3,
+      "endTime": 1608.05,
+      "audioUrl": "/audio/lectures/science/b1/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] A student investigates the growth of 100 pea seedlings over 14 days by drying samples of 10 seedlings in an oven at 80 °C until their mass stops changing. (a) Explain why measuring dry mass gives a more valid measurement of biological growth than measuring fresh mass. [2] (b) Explain why a plant continues to carry out respiration at night when photosynthesis stops. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Fresh mass fluctuates temporarily depending on how much water the seedlings have absorbed or lost by transpiration/osmosis [1m] ; dry mass measures only the permanent increase in organic cellular material (protoplasm, cellulose, proteins) [1m] . (b) Living plant cells require a continuous supply of energy for metabolism (such as active transport of mineral ions, protein synthesis, and cell division) 24 hours a day [1m] , which is released by breaking down glucose in cellular respiration [1m] . 💡 Intuition Check: Heating seedlings at ~80 °C evaporates water without burning organic carbon compounds, isolating true \"permanent increase in dry mass\"!",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3 / Paper 4 Structured [4 marks] A student investigates the growth of 100 pea seedlings over 14 days by drying samples of 10 seedlings in an oven at 80 °C until their mass stops changing. (a) Explain why measuring dry mass gives a more valid measurement of biological growth than measuring fresh mass. (Giải thích vì sao đo khối lượng khô phản ánh chính xác sự sinh trưởng hơn khối lượng tươi.) (b) Explain why a plant continues to carry out respiration at night when photosynthesis stops. (Giải thích vì sao cây vẫn tiếp tục hô hấp tế bào vào ban đêm khi ngừng quang hợp.) ✍️ Lời giải chi tiết theo thang điểm: (a) Fresh mass varies temporarily with the volume of water absorbed or lost by osmosis/transpiration ; dry mass measures only the permanent increase in organic biomass / cell materials . (Khối lượng tươi biến động tạm thời theo lượng nước hút/mất ; khối lượng khô đo chính xác phần chất hữu cơ tế bào tăng thêm vĩnh viễn .) (b) Living plant cells continuously need energy for metabolism at all times , which is released by breaking down glucose in cellular respiration .",
+      "duration": 138.44,
+      "startTime": 1608.05,
+      "endTime": 1746.49,
+      "audioUrl": "/audio/lectures/science/b1/s02_b13.mp3"
     }
   ]
 }

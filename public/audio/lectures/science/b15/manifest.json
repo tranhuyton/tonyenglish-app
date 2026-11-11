@@ -1,181 +1,591 @@
 {
   "lectureId": "deb8222d-2b75-42a3-b454-9601fbfa1bd2",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "B15: Reproduction",
-  "totalDuration": 476.77,
+  "totalDuration": 3507.89,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_reproduction_modes": {
-      "start": 1,
-      "end": 3
-    },
-    "sec-reproduction-modes": {
-      "start": 1,
-      "end": 3
-    },
-    "sec_asexual_repro": {
+    "s01_int": {
       "start": 2,
-      "end": 2
+      "end": 4
     },
-    "sec-asexual-repro": {
-      "start": 2,
-      "end": 2
-    },
-    "sec_sexual_repro": {
-      "start": 3,
-      "end": 3
-    },
-    "sec-sexual-repro": {
-      "start": 3,
-      "end": 3
-    },
-    "sec_flowering_plants": {
-      "start": 4,
-      "end": 5
-    },
-    "sec-flowering-plants": {
-      "start": 4,
-      "end": 5
-    },
-    "sec_pollination_modes": {
-      "start": 5,
-      "end": 5
-    },
-    "sec-pollination-modes": {
-      "start": 5,
-      "end": 5
-    },
-    "sec_human_reproduction": {
-      "start": 6,
-      "end": 7
-    },
-    "sec-human-reproduction": {
-      "start": 6,
-      "end": 7
-    },
-    "sec_menstrual_cycle": {
-      "start": 7,
-      "end": 7
-    },
-    "sec-menstrual-cycle": {
-      "start": 7,
-      "end": 7
-    },
-    "sec_stis_hiv": {
+    "s01_wex": {
       "start": 8,
-      "end": 8
+      "end": 9
     },
-    "sec-stis-hiv": {
-      "start": 8,
-      "end": 8
+    "s01_hdr": {
+      "start": 1,
+      "end": 9
+    },
+    "s02_int": {
+      "start": 11,
+      "end": 13
+    },
+    "s02_p2_sub01": {
+      "start": 16,
+      "end": 18
+    },
+    "s02_wex": {
+      "start": 19,
+      "end": 20
+    },
+    "s02_hdr": {
+      "start": 10,
+      "end": 20
+    },
+    "s03_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s03_p1_sub01": {
+      "start": 27,
+      "end": 35
+    },
+    "s03_p2_sub01": {
+      "start": 27,
+      "end": 35
+    },
+    "s03_wex": {
+      "start": 36,
+      "end": 37
+    },
+    "s03_hdr": {
+      "start": 21,
+      "end": 37
+    },
+    "s04_int": {
+      "start": 39,
+      "end": 41
+    },
+    "s04_wex": {
+      "start": 45,
+      "end": 46
+    },
+    "s04_hdr": {
+      "start": 38,
+      "end": 46
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề B15: Sinh sản ở Sinh vật",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic B15: Reproduction. Reproduction is the fundamental life process ensuring species continuation. In this topic, we study asexual versus sexual reproduction, flowering plant anatomy, human reproductive systems, the menstrual cycle, and sexually transmitted infections.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề B15: Sinh sản ở Sinh vật. Sinh sản là đặc tính sống cốt lõi đảm bảo sự duy trì nòi giống. Trong chuyên đề này, chúng ta sẽ học về sinh sản vô tính và hữu tính, cấu tạo hoa, hệ sinh dục người, chu kỳ kinh nguyệt và các bệnh lây truyền qua đường tình dục.",
-      "duration": 43.34,
+      "title": "Topic B15: Reproduction (Sinh sản)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Topic B15 • Reproductive Biology Reproduction. Cambridge IGCSE Co-ordinated Sciences (0654) • Asexual vs sexual reproduction, floral anatomy, insect vs wind pollination, human reproductive anatomy, menstrual cycle, and STIs.",
+      "vi": "Topic B15: Reproduction (Sinh sản). Cambridge IGCSE Co-ordinated Sciences (Biology 0654) • Sinh sản vô tính & hữu tính, giải phẫu hoa, thụ phấn côn trùng vs gió, hệ sinh dục người, chu kỳ kinh nguyệt và bệnh lây qua đường tình dục (HIV).",
+      "duration": 43.47,
       "startTime": 0.0,
-      "endTime": 43.34,
+      "endTime": 43.47,
       "audioUrl": "/audio/lectures/science/b15/intro.mp3"
     },
     {
-      "id": "sec_reproduction_modes",
-      "title": "1. Sinh sản Vô tính & Hữu tính (Reproduction Modes Overview)",
-      "selector": "#sec-reproduction-modes",
-      "en": "Section 1 contrasts asexual and sexual reproduction: Asexual reproduction produces genetically identical clones from one parent via mitosis. Sexual reproduction involves the fusion of haploid gamete nuclei to produce genetically varied offspring.",
-      "vi": "Mục một so sánh sinh sản vô tính và hữu tính: Sinh sản vô tính tạo ra các cá thể con giống hệt nhau về di truyền từ một cá thể mẹ qua nguyên phân. Sinh sản hữu tính là sự kết hợp giữa hai nhân giao tử đơn bội để tạo ra thế hệ con mang biến dị di truyền.",
-      "duration": 52.48,
-      "startTime": 43.34,
-      "endTime": 95.82,
-      "audioUrl": "/audio/lectures/science/b15/sec_reproduction_modes.mp3"
+      "id": "s01_hdr",
+      "title": "🔄 1. Asexual & Sexual Reproduction (Sinh sản Vô tính & Hữu tính)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🔄 1. Asexual & Sexual Reproduction.",
+      "vi": "🔄 1. Asexual & Sexual Reproduction (Sinh sản Vô tính & Hữu tính).",
+      "duration": 10.15,
+      "startTime": 43.47,
+      "endTime": 53.62,
+      "audioUrl": "/audio/lectures/science/b15/s01_hdr.mp3"
     },
     {
-      "id": "sec_asexual_repro",
-      "title": "🌱 Asexual Reproduction (Sinh sản Vô tính)",
-      "selector": "#sec-asexual-repro",
-      "en": "Asexual reproduction: Requires only one parent. All offspring are clones. Advantage: Extremely rapid population growth to colonize favourable habitats without needing to find a mate. Disadvantage: Zero genetic diversity; all individuals are equally susceptible to disease or environmental changes.",
-      "vi": "Sinh sản vô tính: Chỉ cần một cá thể bố mẹ. Toàn bộ con non là dòng vô tính. Ưu điểm: Tăng nhanh số lượng cá thể để chiếm lĩnh môi trường sống thuận lợi mà không cần tìm bạn tình. Nhược điểm: Không có sự đa dạng di truyền; mọi cá thể đều dễ bị tiêu diệt cùng lúc khi gặp dịch bệnh hoặc môi trường biến đổi.",
-      "duration": 41.75,
-      "startTime": 95.82,
-      "endTime": 137.57,
-      "audioUrl": "/audio/lectures/science/b15/sec_asexual_repro.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of asexual reproduction as hitting \"Copy & Paste\" from a single parent: fast, effortless, and identical — great in an unchanging habitat, fatal if one new disease strikes every clone! Sexual reproduction is like combining half a recipe from each parent (haploid n + haploid n = diploid 2n ) so every offspring in the wild is a unique variation.",
+      "vi": "🎯 Hình dung đời thường: Hãy ví sinh sản vô tính (asexual) như lệnh \"Copy & Paste\" từ một cơ thể mẹ: cực nhanh, không cần tìm bạn tình — rất lợi ở môi trường ổn định nhưng nếu có dịch bệnh mới thì cả quần thể bản sao cùng gục ngã! Còn sinh sản hữu tính (sexual) kết hợp một nửa bộ bài từ bố và mẹ ( n + n = 2n ) tạo biến dị phong phú giúp quần thể hoang dã thích nghi tiến hóa.",
+      "duration": 54.28,
+      "startTime": 53.62,
+      "endTime": 107.9,
+      "audioUrl": "/audio/lectures/science/b15/s01_b01.mp3"
     },
     {
-      "id": "sec_sexual_repro",
-      "title": "👶 Sexual Reproduction (Sinh sản Hữu tính)",
-      "selector": "#sec-sexual-repro",
-      "en": "Sexual reproduction: Involves two parents and the fusion of haploid gamete nuclei (sperm/pollen and egg) to form a diploid zygote. Advantage: High genetic variation among offspring, providing adaptability to changing environments and diseases. Disadvantage: Requires finding a mate and expends substantial energy.",
-      "vi": "Sinh sản hữu tính: Cần hai cá thể bố mẹ và sự kết hợp giữa các nhân giao tử đơn bội (tinh trùng/hạt phấn và trứng) tạo thành hợp tử lưỡng bội. Ưu điểm: Tạo ra sự đa dạng di truyền cao, giúp loài thích nghi với sự thay đổi của môi trường và dịch bệnh. Nhược điểm: Phải tìm bạn đời và tiêu tốn nhiều thời gian, năng lượng.",
-      "duration": 42.14,
-      "startTime": 137.57,
-      "endTime": 179.71,
-      "audioUrl": "/audio/lectures/science/b15/sec_sexual_repro.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Asexual = genetically identical offspring from one parent . 2) Sexual = fusion of the nuclei of two haploid gametes to form a diploid zygote , producing genetically different offspring . 3) Memorise the exact 0654 species definition: a group of organisms that can reproduce to produce fertile offspring .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Asexual = tạo genetically identical offspring from one parent . 2) Sexual = fusion of the nuclei of two haploid gametes tạo diploid zygote , sinh đời con genetically different . 3) Thuộc chuẩn định nghĩa species (loài) của 0654: nhóm sinh vật giao phối sinh ra fertile offspring (đời con hữu thụ) .",
+      "duration": 53.41,
+      "startTime": 107.9,
+      "endTime": 161.31,
+      "audioUrl": "/audio/lectures/science/b15/s01_b02.mp3"
     },
     {
-      "id": "sec_flowering_plants",
-      "title": "2. Sinh sản ở Cây có Hoa (Flowering Plants Overview)",
-      "selector": "#sec-flowering-plants",
-      "en": "Section 2 investigates flower anatomy: Sepals protect unopened flower buds; colorful petals attract insect pollinators; male stamens consist of anthers producing pollen and filaments; female carpels consist of stigmas, styles, and ovaries containing ovules.",
-      "vi": "Mục hai khảo sát cấu tạo của hoa: Đài hoa bảo vệ nụ hoa; cánh hoa sặc sỡ thu hút côn trùng thụ phấn; nhị đực gồm bao phấn sản xuất hạt phấn và chỉ nhị; nhụy cái gồm đầu nhụy, vòi nhụy và bầu nhụy chứa noãn.",
-      "duration": 61.98,
-      "startTime": 179.71,
-      "endTime": 241.69,
-      "audioUrl": "/audio/lectures/science/b15/sec_flowering_plants.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic 0654 Mark Scheme deductions: forgetting the word nuclei in sexual reproduction (\"fusion of the nuclei of two gametes\") and forgetting the word fertile when defining a species (\"produce fertile offspring\")!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai từ khóa \"vàng\" cấm bỏ sót trong 0654: chữ nuclei khi định nghĩa sinh sản hữu tính/thụ tinh và chữ fertile khi định nghĩa loài!",
+      "duration": 28.13,
+      "startTime": 161.31,
+      "endTime": 189.44,
+      "audioUrl": "/audio/lectures/science/b15/s01_b03.mp3"
     },
     {
-      "id": "sec_pollination_modes",
-      "title": "🐝 Insect vs Wind Pollination (Thụ phấn nhờ Côn trùng & Gió)",
-      "selector": "#sec-pollination-modes",
-      "en": "Pollination adaptations: Insect-pollinated flowers have large colourful petals, sweet scent, nectar, and sticky spiky pollen. Wind-pollinated flowers have small dull green petals, no nectar, feathery stigmas hanging outside the flower, and produce huge quantities of light smooth pollen.",
-      "vi": "Thích nghi thụ phấn: Hoa thụ phấn nhờ côn trùng có cánh hoa lớn sặc sỡ, hương thơm ngọt, mật hoa và hạt phấn có gai dính. Hoa thụ phấn nhờ gió có cánh hoa nhỏ màu xanh lục nhạt, không có mật, đầu nhụy hình lông chim thò ra ngoài và tạo ra lượng lớn hạt phấn nhẹ, nhẵn.",
-      "duration": 35.25,
-      "startTime": 241.69,
-      "endTime": 276.94,
-      "audioUrl": "/audio/lectures/science/b15/sec_pollination_modes.mp3"
+      "id": "s01_b04",
+      "title": "Sinh sản Vô tính (Asexual Reproduction)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🌱 Asexual Reproduction. A process resulting in the production of genetically identical offspring from one parent (clones) via mitosis. Advantages: Only one parent needed; rapid population growth to colonize habitats. Disadvantages: Zero genetic variation; all individuals equally vulnerable to disease or environmental changes.",
+      "vi": "Sinh sản Vô tính (Asexual Reproduction). Quá trình tạo ra thế hệ con giống hệt về mặt di truyền từ một cơ thể mẹ duy nhất (nhân bản vô tính) qua nguyên phân. Ưu điểm: Chỉ cần 1 cá thể; nhân đàn cực nhanh để chiếm lĩnh môi trường. Nhược điểm: Không có biến dị di truyền; tất cả dễ bị tuyệt diệt cùng lúc khi môi trường thay đổi hoặc dịch bệnh.",
+      "duration": 49.17,
+      "startTime": 189.44,
+      "endTime": 238.61,
+      "audioUrl": "/audio/lectures/science/b15/s01_b04.mp3"
     },
     {
-      "id": "sec_human_reproduction",
-      "title": "3. Sinh sản ở Người & Chu kỳ Kinh nguyệt (Human Reproduction Overview)",
-      "selector": "#sec-human-reproduction",
-      "en": "Section 3 investigates human reproduction: Male testes produce sperm; female ovaries produce ova. Fertilization takes place in the oviduct. The menstrual cycle is controlled by pituitary and ovarian hormones.",
-      "vi": "Mục ba nghiên cứu sinh sản ở người: Tinh hoàn nam sản sinh tinh trùng; buồng trứng nữ sản sinh trứng. Sự thụ tinh diễn ra ở ống dẫn trứng. Chu kỳ kinh nguyệt được điều hòa nhịp nhàng bởi các hormone tuyến yên và buồng trứng.",
-      "duration": 86.01,
-      "startTime": 276.94,
-      "endTime": 362.95,
-      "audioUrl": "/audio/lectures/science/b15/sec_human_reproduction.mp3"
+      "id": "s01_b05",
+      "title": "Sinh sản Hữu tính (Sexual Reproduction)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "👶 Sexual Reproduction. A process involving the fusion of the nuclei of two haploid gametes ( n + n ) to form a diploid zygote (2 n ) producing genetically dissimilar offspring. Advantages: High genetic variation allows adaptation to changing environments and disease survival. Disadvantages: Requires two parents and finding a mate; slower process.",
+      "vi": "Sinh sản Hữu tính (Sexual Reproduction). Quá trình có sự hợp nhất nhân của hai giao tử đơn bội ( n + n ) tạo thành hợp tử lưỡng bội (2 n ), sinh ra đời con mang biến dị di truyền. Ưu điểm: Tạo ra biến dị phong phú, tăng khả năng thích nghi và sống sót trước dịch bệnh. Nhược điểm: Cần 2 cá thể và phải tìm bạn tình; tốc độ sinh sôi chậm hơn.",
+      "duration": 51.85,
+      "startTime": 238.61,
+      "endTime": 290.46,
+      "audioUrl": "/audio/lectures/science/b15/s01_b05.mp3"
     },
     {
-      "id": "sec_menstrual_cycle",
-      "title": "📅 The Menstrual Cycle (Chu kỳ Kinh nguyệt 28 Ngày)",
-      "selector": "#sec-menstrual-cycle",
-      "en": "The menstrual cycle lasts approximately 28 days: Days 1 to 5: Menstruation occurs as the uterus lining breaks down and sheds. Days 6 to 13: Oestrogen causes the uterus lining to thicken and repair. Day 14: Ovulation occurs as an egg is released from an ovary follicle into the oviduct. Days 15 to 28: Progesterone maintains the thick spongy uterus lining ready for embryo implantation.",
-      "vi": "Chu kỳ kinh nguyệt kéo dài khoảng 28 ngày: Ngày 1 đến 5: Hành kinh do niêm mạc tử cung thoái hóa và bong tróc. Ngày 6 đến 13: Oestrogen kích thích niêm mạc tử cung dày lên và tái tạo. Ngày 14: Rụng trứng từ nang buồng trứng vào ống dẫn trứng. Ngày 15 đến 28: Progesterone duy trì niêm mạc tử cung dày xốp sẵn sàng đón phôi làm tổ.",
-      "duration": 51.28,
-      "startTime": 362.95,
-      "endTime": 414.23,
-      "audioUrl": "/audio/lectures/science/b15/sec_menstrual_cycle.mp3"
+      "id": "s01_b06",
+      "title": "🔬 Định nghĩa Loài Sinh học (Species) & Ví dụ Sinh sản Vô tính (B15.1.2 & B15.2.2)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🔬 Biological Definition of a Species & Asexual Examples (B15.1.2 & B15.2.2). • Species (Core B15.2.2): A group of organisms that can reproduce to produce fertile offspring . (For example, a horse and a donkey belong to different species because their hybrid offspring — a mule — is infertile/sterile.). • Recognising Asexual Reproduction in Diagrams (B15.1.2): Bacterial binary fission , yeast budding , potato stem tubers sprouting genetically identical shoots, and strawberry runners rooting from horizontal stems.",
+      "vi": "🔬 Định nghĩa Loài Sinh học (Species) & Ví dụ Sinh sản Vô tính (B15.1.2 & B15.2.2). • Species / Loài (Core B15.2.2): Là một nhóm sinh vật có thể giao phối với nhau để sinh ra đời con hữu thụ / có khả năng sinh sản (fertile offspring) . (Ví dụ: ngựa và lừa thuộc 2 loài khác nhau vì con la mule sinh ra bị vô sinh.). • Nhận diện Sinh sản Vô tính trên hình vẽ (B15.1.2): Phân đôi ở vi khuẩn ( binary fission ), nảy chồi ở nấm men ( yeast budding ), củ khoai tây nảy mầm ( stem tubers ) và thân bò dâu tây ( runners ).",
+      "duration": 79.96,
+      "startTime": 290.46,
+      "endTime": 370.42,
+      "audioUrl": "/audio/lectures/science/b15/s01_b06.mp3"
     },
     {
-      "id": "sec_stis_hiv",
-      "title": "4. Bệnh Lây qua Đường Tình dục & HIV (STIs & HIV Overview)",
-      "selector": "#sec-stis-hiv",
-      "en": "Section 4 covers sexually transmitted infections: An STI is an infection that is transmitted through body fluids during sexual contact. Human Immunodeficiency Virus (HIV) destroys white blood cells called lymphocytes, severely reducing antibody production and leading to Acquired Immune Deficiency Syndrome (AIDS).",
-      "vi": "Mục bốn phân tích các bệnh lây qua đường tình dục (STI): Là các bệnh truyền nhiễm lây lan qua dịch cơ thể khi quan hệ tình dục. Virus HIV tấn công và phá hủy các tế bào bạch cầu lympho, làm suy giảm nghiêm trọng khả năng tiết kháng thể và dẫn đến Hội chứng suy giảm miễn dịch mắc phải (AIDS).",
-      "duration": 62.54,
-      "startTime": 414.23,
-      "endTime": 476.77,
-      "audioUrl": "/audio/lectures/science/b15/sec_stis_hiv.mp3"
+      "id": "s01_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE & SUPPLEMENT • 0654 Paper 1/2 MCQ A tiger and a lion can breed in captivity to produce an offspring called a liger, which cannot produce functional gametes of its own. Why are tigers and lions classified as different species? A. They reproduce sexually rather than asexually. B. Their gametes contain diploid nuclei instead of haploid nuclei. C. They cannot reproduce together to produce fertile offspring. D. Their offspring show zero genetic variation. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: By definition (B15.2.2), members of the same species must be able to reproduce to produce fertile offspring . Because the liger is sterile/infertile, lions and tigers belong to separate species. A and D are false (both reproduce sexually with variation); B is false because gametes are haploid ( n ).",
+      "vi": "BÀI MẪU 1 🟦 CORE & SUPPLEMENT • 0654 Paper 1/2 MCQ A tiger and a lion can breed in captivity to produce an offspring called a liger, which cannot produce functional gametes of its own. Why are tigers and lions classified as different species? (Hổ và sư tử nuôi nhốt có thể giao phối sinh ra con lai liger, nhưng liger không tạo được giao tử hữu thụ. Vì sao hổ và sư tử được xếp vào hai loài khác nhau?) A. They reproduce sexually rather than asexually. B. Their gametes contain diploid nuclei instead of haploid nuclei. C. They cannot reproduce together to produce fertile offspring. D. Their offspring show zero genetic variation. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Theo chuẩn B15.2.2, các cá thể cùng một loài (species) phải giao phối sinh ra được đời con hữu thụ (fertile offspring) . Con lai liger bị vô sinh nên hổ và sư tử thuộc hai loài riêng biệt. Loại A, D vì cả hai đều sinh sản hữu tính có biến dị; loại B vì giao tử luôn đơn bội ( n ).",
+      "duration": 137.53,
+      "startTime": 370.42,
+      "endTime": 507.95,
+      "audioUrl": "/audio/lectures/science/b15/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [5 marks] (a) State the term used to describe the chromosome set in: (i) a gamete nucleus, and (ii) a zygote nucleus. [2] (b) Discuss one advantage of asexual reproduction and two advantages of sexual reproduction to a population of a species living in the wild. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) (i) Gamete nucleus: haploid [1m]; (ii) Zygote nucleus: diploid [1m]. (b) Asexual advantage: Only one parent is required (no need to find a mate), allowing rapid population growth in favourable conditions [1m]. Sexual advantages: Produces genetic variation among offspring [1m], enabling the wild population to adapt to environmental changes / survive new diseases by natural selection [1m]. 💡 Intuition Check: Notice how 0654 focuses specifically on populations IN THE WILD: asexual wins on speed without a mate, while sexual wins on genetic variation for survival!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [5 marks] (a) State the term used to describe the chromosome set in: (i) a gamete nucleus, and (ii) a zygote nucleus. (b) Discuss one advantage of asexual reproduction and two advantages of sexual reproduction to a population of a species living in the wild. ((a) Nêu thuật ngữ chỉ bộ NST trong: (i) nhân giao tử, (ii) nhân hợp tử. (b) Thảo luận 1 ưu điểm của sinh sản vô tính và 2 ưu điểm của sinh sản hữu tính đối với quần thể hoang dã.) ✍️ Lời giải chi tiết theo thang điểm: (a) (i) Nhân giao tử: haploid (đơn bội) ; (ii) Nhân hợp tử: diploid (lưỡng bội) . (b) Ưu điểm vô tính: Chỉ cần 1 cá thể mẹ (không cần tìm bạn tình), giúp tăng nhanh kích thước quần thể khi điều kiện thuận lợi . Ưu điểm hữu tính: Tạo ra biến dị di truyền (genetic variation) , giúp quần thể hoang dã thích nghi với biến đổi môi trường / chống chịu dịch bệnh mới qua chọn lọc tự nhiên . 💡 Kiểm tra bản chất: Lưu ý: đề 0654 hỏi cụ thể cho quần thể HOANG DÃ (in the wild) — vô tính thắng về tốc độ không cần bạn tình, còn hữu tính thắng về biến dị giúp sinh tồn!",
+      "duration": 157.1,
+      "startTime": 507.95,
+      "endTime": 665.05,
+      "audioUrl": "/audio/lectures/science/b15/s01_b08.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🌺 2. Sexual Reproduction in Plants (Sinh sản ở Thực vật có hoa)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🌺 2. Sexual Reproduction in Flowering Plants.",
+      "vi": "🌺 2. Sexual Reproduction in Plants (Sinh sản ở Thực vật có hoa).",
+      "duration": 10.23,
+      "startTime": 665.05,
+      "endTime": 675.28,
+      "audioUrl": "/audio/lectures/science/b15/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Compare flower designs by asking \"Who is delivering the mail?\" An insect-pollinated flower advertises with bright scented petals and sweet nectar, hiding sticky pollen inside where bees brush past. A wind-pollinated flower saves energy on petals and nectar, dangling loose anthers outside to scatter clouds of tiny smooth pollen into the wind toward feathery net-like stigmas!",
+      "vi": "🎯 Hình dung đời thường: Hãy hỏi \"Ai là người đưa thư phấn hoa?\" Hoa thụ phấn nhờ côn trùng mở \"tiệm mật\" với cánh hoa sặc sỡ thơm ngát và giấu nhị/nhụy dính bên trong để ong quệt qua. Hoa thụ phấn nhờ gió tiết kiệm tối đa: cánh nhỏ xỉn màu, không mật, treo bao phấn lủng lẳng ngoài gió tung hàng triệu hạt phấn trơn nhẹ về phía đầu nhụy xòe như lông chim!",
+      "duration": 49.52,
+      "startTime": 675.28,
+      "endTime": 724.8,
+      "audioUrl": "/audio/lectures/science/b15/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Know every floral structure: sepal (protects bud), petal (attracts insects), stamen = anther + filament (male), carpel = stigma + style + ovary/ovules (female). 2) Contrast insect vs wind adaptations (anthers, stigmas, petals, pollen). 3) Seed germination needs WOW : W ater, O xygen, and a suitable temperature ( W armth).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Nắm chắc vai trò từng bộ phận hoa: sepal (bảo vệ nụ), petal (thu hút côn trùng), stamen = anther + filament (nhị đực), carpel = stigma + style + ovary/ovules (nhụy cái). 2) Đối chiếu cấu tạo hoa côn trùng vs hoa gió. 3) Hạt nảy mầm cần đủ 3 yếu tố WOW : W ater, O xygen, W armth (nhiệt độ ấm phù hợp).",
+      "duration": 63.05,
+      "startTime": 724.8,
+      "endTime": 787.85,
+      "audioUrl": "/audio/lectures/science/b15/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say pollination IS fertilisation! Pollination only delivers pollen grains to the stigma; fertilisation happens later when a pollen nucleus fuses with a nucleus in an ovule . Also remember: seeds do NOT need light to germinate!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng đánh đồng thụ phấn (pollination) với thụ tinh (fertilisation) ! Thụ phấn mới chỉ là hạt phấn đáp lên đầu nhụy; thụ tinh là khi nhân hạt phấn dung hợp với nhân trong noãn . Và nhớ: hạt nảy mầm KHÔNG cần ánh sáng!",
+      "duration": 36.49,
+      "startTime": 787.85,
+      "endTime": 824.34,
+      "audioUrl": "/audio/lectures/science/b15/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Sơ đồ giải phẫu hoa tương tác: Rê chuột vào các bộ phận của hoa để tìm hiểu chức...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Interactive Flower Anatomy: Hover over floral components to examine their reproductive functions:",
+      "vi": "Sơ đồ giải phẫu hoa tương tác: Rê chuột vào các bộ phận của hoa để tìm hiểu chức năng sinh sản:",
+      "duration": 13.72,
+      "startTime": 824.34,
+      "endTime": 838.06,
+      "audioUrl": "/audio/lectures/science/b15/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Interactive Flower Anatomy",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Interactive Flower Anatomy. Petal. Brightly coloured, scented modified leaves, often with nectar guides. Function: Attracts insect pollinators (e.g. bees, butterflies) for pollination.",
+      "vi": "Interactive Flower Anatomy. Di chuột (hoặc chạm) vào các bộ phận của Hoa trên sơ đồ để xem tên gọi và chức năng. Petal (Cánh hoa). Thường có màu sắc sặc sỡ và có mùi thơm. Function: Ở những cây thụ phấn nhờ côn trùng, cánh hoa dùng để thu hút côn trùng (attract insects) đến hút mật.",
+      "duration": 37.58,
+      "startTime": 838.06,
+      "endTime": 875.64,
+      "audioUrl": "/audio/lectures/science/b15/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Bộ phận hoa: Cánh hoa (Petals); Thụ phấn nhờ Côn trùng: To, màu sắc sặc sỡ, có m...",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🐝 Comparison: Insect-Pollinated vs Wind-Pollinated Flowers. Floral Part: Petals; Insect-Pollinated: Large, brightly coloured, scented; Wind-Pollinated: Small, dull green/brown, no scent. Floral Part: Nectar / Nectaries; Insect-Pollinated: Present (sweet nectar reward); Wind-Pollinated: Absent. Floral Part: Pollen Grains; Insect-Pollinated: Sticky or spiky to hook onto insects; Wind-Pollinated: Lightweight, smooth, produced in massive quantities. Floral Part: Stigmas & Stamens; Insect-Pollinated: Held enclosed within petals; Wind-Pollinated: Hang loosely outside the flower; feathery stigmas.",
+      "vi": "Bộ phận hoa: Cánh hoa (Petals); Thụ phấn nhờ Côn trùng: To, màu sắc sặc sỡ, có mùi thơm; Thụ phấn nhờ Gió: Nhỏ, màu xanh/nâu nhạt, không thơm. Bộ phận hoa: Tuyến mật hoa; Thụ phấn nhờ Côn trùng: Có mật ngọt để thưởng cho côn trùng; Thụ phấn nhờ Gió: Không có. Bộ phận hoa: Hạt phấn (Pollen); Thụ phấn nhờ Côn trùng: Nặng, dính hoặc có gai bám vào côn trùng; Thụ phấn nhờ Gió: Nhẹ, nhẵn, sản xuất với số lượng khổng lồ. Bộ phận hoa: Đầu nhụy & Nhị hoa; Thụ phấn nhờ Côn trùng: Nằm giấu kín bên trong cánh hoa; Thụ phấn nhờ Gió: Treo lủng lẳng bên ngoài; đầu nhụy có lông vũ đón gió.",
+      "duration": 93.55,
+      "startTime": 875.64,
+      "endTime": 969.19,
+      "audioUrl": "/audio/lectures/science/b15/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🌱 3 Điều kiện môi trường để Hạt nảy mầm (\"WOW\"):",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🌱 Environmental Conditions for Seed Germination (\"WOW\"): 1. Water: Activates digestive enzymes to break down food stores in cotyledons. 2. Oxygen: Needed for aerobic respiration to release ATP energy for growth. 3. Warmth: Provides optimal temperature for enzyme activity (seeds do not need light to germinate).",
+      "vi": "🌱 3 Điều kiện môi trường để Hạt nảy mầm (\"WOW\"): 1. Water (Nước): Kích hoạt các enzyme tiêu hóa phân giải chất dinh dưỡng dự trữ trong lá mầm. 2. Oxygen (Oxy): Cần cho hô hấp hiếu khí để tạo năng lượng ATP cho mầm lớn lên. 3. Warmth (Nhiệt độ ấm phù hợp): Giúp enzyme hoạt động ở tốc độ tối ưu (hạt không cần ánh sáng để nảy mầm).",
+      "duration": 50.68,
+      "startTime": 969.19,
+      "endTime": 1019.87,
+      "audioUrl": "/audio/lectures/science/b15/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🐝 Phân biệt Pollination (Thụ phấn) vs Fertilisation (Thụ tinh) (B15.3.3 & B15.3.4)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🐝 Pollination vs Fertilisation in Flowering Plants (B15.3.3 & B15.3.4). • Pollination: The transfer of pollen grains from an anther to a stigma (carried by insects or wind). • Fertilisation: Occurs inside the ovary when a pollen nucleus fuses with a nucleus in an ovule to form a diploid zygote (the fertilised ovule develops into a seed, while the ovary wall forms the fruit).",
+      "vi": "🐝 Phân biệt Pollination (Thụ phấn) vs Fertilisation (Thụ tinh) (B15.3.3 & B15.3.4). • Pollination (Thụ phấn): Sự chuyển hạt phấn (pollen grains) từ bao phấn (anther) sang đầu nhụy (stigma) nhờ côn trùng hoặc gió. • Fertilisation (Thụ tinh): Xảy ra bên trong bầu nhụy khi nhân hạt phấn (pollen nucleus) dung hợp với nhân trong noãn (ovule) tạo hợp tử lưỡng bội (sau đó noãn phát triển thành hạt, bầu nhụy thành quả).",
+      "duration": 63.23,
+      "startTime": 1019.87,
+      "endTime": 1083.1,
+      "audioUrl": "/audio/lectures/science/b15/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ A student examines a wild grass flower and observes long filaments hanging outside tiny green bracts and large feathery stigmas. What type of pollen grains would this flower produce? A. Small numbers of large, spiky pollen grains B. Large numbers of small, smooth, lightweight pollen grains C. Sticky pollen grains coated in sugary nectar D. Diploid pollen grains that swim through rainwater ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Exposed dangling anthers and feathery stigmas are classic adaptations of a wind-pollinated flower , which produces huge quantities of tiny, smooth, lightweight pollen grains easily carried by air currents. A and C describe insect-pollinated flowers; D is incorrect because pollen carries haploid nuclei and travels by air.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ A student examines a wild grass flower and observes long filaments hanging outside tiny green bracts and large feathery stigmas. What type of pollen grains would this flower produce? (Một học sinh quan sát hoa cỏ dại thấy chỉ nhị dài treo bên ngoài các lá bắc xanh nhỏ và đầu nhụy lớn dạng lông chim. Hoa này tạo ra loại hạt phấn nào?) A. Small numbers of large, spiky pollen grains B. Large numbers of small, smooth, lightweight pollen grains C. Sticky pollen grains coated in sugary nectar D. Diploid pollen grains that swim through rainwater ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Nhị treo lộ ra ngoài và đầu nhụy lông chim là dấu hiệu đặc trưng của hoa thụ phấn nhờ gió (wind-pollinated) , sản sinh số lượng khổng lồ hạt phấn nhỏ, trơn nhẵn và nhẹ để bay xa trong gió. Loại A, C (hoa côn trùng) và D (hạt phấn mang nhân đơn bội, bay theo gió).",
+      "duration": 121.09,
+      "startTime": 1083.1,
+      "endTime": 1204.19,
+      "audioUrl": "/audio/lectures/science/b15/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3/4/6 Investigation [5 marks] A student investigates germination using two dishes of 50 Cress seeds at 22°C. Dish X has wet cotton wool exposed to air. Dish Y has cotton wool soaked in cooled boiled water covered with a layer of oil. (a) Predict and explain the difference in germination between Dish X and Dish Y. [3] (b) Explain why water and a suitable temperature (22°C) are also required for germination. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Seeds in Dish X germinate whereas seeds in Dish Y do not germinate [1m]; boiling removes dissolved oxygen from the water and the oil layer prevents oxygen diffusing in from the air [1m], so seeds in Dish Y cannot carry out aerobic respiration to release energy for growth [1m]. (b) Water swells the seed and activates enzymes to digest stored food [1m]; a suitable temperature provides kinetic energy for optimum enzyme activity [1m]. 💡 Intuition Check: Every seed germination experiment tests one missing letter of WOW: dry wool = no Water; boiled water + oil = no Oxygen; fridge (4°C) = no Warmth!",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3/4/6 Investigation [5 marks] A student investigates germination using two dishes of 50 Cress seeds at 22°C. Dish X has wet cotton wool exposed to air. Dish Y has cotton wool soaked in cooled boiled water covered with a layer of oil. (a) Predict and explain the difference in germination between Dish X and Dish Y. (b) Explain why water and a suitable temperature (22°C) are also required for germination. (Thí nghiệm gieo 50 hạt cải ở 22°C: Đĩa X bông ẩm ngoài không khí; Đĩa Y bông thấm nước đun sôi để nguội phủ lớp dầu. (a) Dự đoán và giải thích kết quả. (b) Giải thích vai trò của nước và nhiệt độ phù hợp.) ✍️ Lời giải chi tiết theo thang điểm: (a) Hạt ở Đĩa X nảy mầm còn Đĩa Y không nảy mầm ; đun sôi đã đuổi hết oxygen hòa tan và lớp dầu ngăn oxygen không khí khuếch tán vào , khiến hạt ở Đĩa Y không thể hô hấp hiếu khí (aerobic respiration) tạo năng lượng tăng trưởng . (b) Nước (Water) làm trương hạt và hoạt hóa enzyme phân giải chất dự trữ ; nhiệt độ phù hợp cung cấp động năng giúp enzyme hoạt động tối ưu . 💡 Kiểm tra bản chất: Mọi bài thí nghiệm nảy mầm đều bóc tách từng chữ trong quy tắc WOW: bông khô = thiếu Water; nước đun sôi phủ dầu = thiếu Oxygen; tủ lạnh 4°C = thiếu Warmth!",
+      "duration": 182.09,
+      "startTime": 1204.19,
+      "endTime": 1386.28,
+      "audioUrl": "/audio/lectures/science/b15/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧑‍⚕️ 3. Human Reproduction & Menstrual Cycle (Sinh sản ở người & Chu kỳ kinh nguyệt)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧑‍⚕️ 3. Human Reproduction & Menstrual Cycle.",
+      "vi": "🧑‍⚕️ 3. Human Reproduction & Menstrual Cycle (Sinh sản ở người & Chu kỳ kinh nguyệt).",
+      "duration": 11.22,
+      "startTime": 1386.28,
+      "endTime": 1397.5,
+      "audioUrl": "/audio/lectures/science/b15/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Trace human reproduction like a relay map: Sperm are built cool (~35°C) in the testes inside the scrotum , fuelled by prostate fluid, and swim with mitochondria-powered tails and enzyme-tipped noses ( acrosomes ) up into the oviduct to meet the giant nutrient-packed egg cell . Meanwhile, every ~28 days, the uterus lining sheds (Days 1–5), rebuilds (Days 6–13), awaits Day-14 ovulation , and stays thick and spongy (Days 15–28) in case an embryo arrives!",
+      "vi": "🎯 Hình dung đời thường: Hãy theo dõi bản đồ hành trình giao tử: Tinh trùng được sản xuất ở nhiệt độ mát (~35°C) tại testes trong túi scrotum , nạp dịch nuôi từ prostate gland , rồi dùng đuôi flagellum + năng lượng từ mitochondria + mũi khoan enzyme acrosome bơi lên oviduct gặp tế bào trứng giàu dinh dưỡng. Song song đó, mỗi ~28 ngày, niêm mạc tử cung trải qua 4 nhịp: bong tróc (Ngày 1–5) -> xây dày lại (Ngày 6–13) -> đón trứng rụng Ngày 14 -> duy trì đệm xốp chờ phôi (Ngày 15–28)!",
+      "duration": 79.97,
+      "startTime": 1397.5,
+      "endTime": 1477.47,
+      "audioUrl": "/audio/lectures/science/b15/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Identify & state functions of all 6 male parts and 5 female parts. 2) Explain sperm adaptations ( flagellum, mitochondria, enzymes in acrosome ) vs egg adaptations ( energy stores, jelly coat changing at fertilisation ) and compare size, structure, motility, numbers. 3) State puberty roles of testosterone & oestrogen , and describe ovary + uterus lining changes across the 28-day menstrual cycle (detailed hormone curves are NOT required in 0654!).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Nhận diện & nêu chức năng 6 bộ phận nam, 5 bộ phận nữ. 2) Giải thích thích nghi tinh trùng vs trứng & so sánh 4 tiêu chí. 3) Nêu vai trò testosterone & oestrogen tuổi dậy thì, và mô tả diễn biến tại buồng trứng + niêm mạc tử cung trong chu kỳ 28 ngày (0654 không yêu cầu thuộc đồ thị FSH/LH/progesterone!).",
+      "duration": 65.91,
+      "startTime": 1477.47,
+      "endTime": 1543.38,
+      "audioUrl": "/audio/lectures/science/b15/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Watch two high-frequency 0654 traps: (1) Saying fertilisation happens in the uterus — WRONG, fertilisation happens in the oviduct ! (2) Confusing the sperm duct (carries sperm only) with the urethra (carries both semen and urine at separate times).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai cái bẫy kinh điển của 0654: (1) Viết thụ tinh xảy ra ở tử cung — SAI, thụ tinh xảy ra tại oviduct (ống dẫn trứng) ! (2) Nhầm sperm duct (chỉ dẫn tinh trùng) với urethra (ống chung dẫn tinh dịch và nước tiểu ở hai thời điểm khác nhau).",
+      "duration": 41.21,
+      "startTime": 1543.38,
+      "endTime": 1584.59,
+      "audioUrl": "/audio/lectures/science/b15/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "♂️ Interactive Map: Cơ quan Sinh dục Nam (Male Reproductive System)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "♂️ Interactive Map: Male Reproductive System. 6 Interactive Organ Selector Pills 1. Testes2. Scrotum3. Sperm Ducts4. Prostate Gland5. Urethra6. Penis Active Male Organ Spotlight BELOW the Map 🔵 1. Testes (singular: Testis) — The Sperm & Hormone Factory. 📍 Position on Diagram Pair of oval organs suspended inside the scrotum below the penis. ⚙️ Syllabus Function 1) Produce male gametes (sperm cells) .2) Secrete the male sex hormone testosterone (controls male puberty traits). 💡 Memory Hook / Exam Tip T estes = T estosterone + millions of sperm daily. Watch singular ( testis ) vs plural ( testes )! Sperm Pathway Mnemonic + Complete 6-Part Quick Reference 🧭 Sperm Journey Order: 1. Testes (made) ➔ 3. Sperm Duct (carried up) ➔ 4. Prostate Gland (fluid added = semen) ➔ 5. Urethra (exit tube inside 6. Penis ) 1. Testes: Produce sperm (haploid gametes) and secrete testosterone. 2. Scrotum: Sac of skin holding testes outside body at cooler ~35°C for sperm production. 3. Sperm Ducts: Muscular tubes carrying sperm from testes to the urethra. 4. Prostate Gland: Secretes nutritive fluid for sperm to swim in, forming semen . 5. Urethra: Tube running down penis carrying semen (or urine at separate times) out. 6. Penis: Becomes firm to pass into vagina and deposit semen near cervix during intercourse.",
+      "vi": "♂️ Interactive Map: Cơ quan Sinh dục Nam. anh. 6 Nút chọn bộ phận Nam 1. Testes (Tinh hoàn)2. Scrotum (Bìu)3. Sperm Ducts (Ống dẫn tinh)4. Prostate (Tiền liệt)5. Urethra (Niệu đạo)6. Penis (Dương vật) Khung diễn giải chi tiết bên dưới sơ đồ Nam 🔵 1. Testes (Tinh hoàn — số ít: Testis). 📍 Vị trí nhận diện trên hình Cặp cơ quan hình bầu dục nằm gọn bên trong túi bìu (scrotum) ở hai bên phía dưới ổ bụng. ⚙️ Chức năng chuẩn IGCSE 1) Sản xuất giao tử đực là tinh trùng (sperm) .2) Tiết hormone sinh dục nam testosterone (phát triển đặc tính dậy thì nam). 💡 Mẹo nhớ & Bẫy đề thi Nhớ cặp chữ T : T estes = T estosterone + Tinh trùng. Câu hỏi 2 điểm luôn cần nêu đủ cả hai ý này! Đường đi của tinh trùng + Bảng tóm tắt 6 bộ phận 🧭 Hành trình của Tinh trùng: 1. Testes (sản xuất) ➔ 3. Sperm Duct (dẫn vòng lên) ➔ 4. Prostate Gland (hòa dịch nuôi = tinh dịch) ➔ 5. Urethra (ống thoát giữa 6. Penis ) 1. Testes (Tinh hoàn): Sản xuất tinh trùng (sperm) và tiết hormone testosterone. 2. Scrotum (Bìu): Túi da giữ tinh hoàn bên ngoài ổ bụng ở nhiệt độ mát hơn (~35°C) tối ưu tạo tinh trùng. 3. Sperm Ducts (Ống dẫn tinh): Đôi ống cơ dẫn tinh trùng từ tinh hoàn lên niệu đạo. 4. Prostate Gland (Tuyến tiền liệt): Tiết dịch dinh dưỡng kiềm nuôi tinh trùng bơi, tạo thành tinh dịch (semen). 5. Urethra (Niệu đạo): Ống chạy dọc giữa dương vật dẫn tinh dịch (hoặc nước tiểu ở thời điểm khác) ra ngoài. 6. Penis (Dương vật): Chứa mô cương giúp đưa vào âm đạo và phóng tinh dịch gần cổ tử cung.",
+      "duration": 236.62,
+      "startTime": 1584.59,
+      "endTime": 1821.21,
+      "audioUrl": "/audio/lectures/science/b15/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "♀️ Interactive Map: Cơ quan Sinh dục Nữ (Female Reproductive System)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "♀️ Interactive Map: Female Reproductive System. 5 Interactive Organ Selector Pills 1. Ovaries2. Oviducts3. Uterus4. Cervix5. Vagina Active Female Organ Spotlight BELOW the Map 🟡 1. Ovaries — Egg Release & Female Hormone Glands. 📍 Position on Diagram Two oval organs on the left and right of the uterus, just underneath the fringed funnels of the oviducts. ⚙️ Syllabus Function 1) Contain follicles that mature and release one egg cell (ovum) every ~28 days.2) Secrete female sex hormones ( oestrogen ). 💡 Memory Hook / Exam Tip Ovaries are the female equivalent of testes: both make haploid gametes + sex hormones ! Egg & Sperm Pathway Mnemonic + Complete 5-Part Quick Reference 🧭 Key Locations to Memorise: Egg released from 1. Ovary ➔ Fertilised by sperm inside 2. Oviduct ➔ Embryo implants into 3. Uterus ➔ Baby born through 4. Cervix & 5. Vagina 1. Ovaries: Release mature egg cells (ovulation) and secrete oestrogen. 2. Oviducts: Ciliated tubes carrying egg to uterus; site of fertilisation . 3. Uterus: Muscular organ with spongy blood-rich lining where embryo implants & fetus grows. 4. Cervix: Ring of muscle at the narrow neck of the uterus opening into the vagina. 5. Vagina: Muscular tube that receives the penis during intercourse and forms the birth canal.",
+      "vi": "♀️ Interactive Map: Cơ quan Sinh dục Nữ. 5 Nút chọn bộ phận Nữ 1. Ovaries (Buồng trứng)2. Oviducts (Ống dẫn trứng)3. Uterus (Tử cung)4. Cervix (Cổ tử cung)5. Vagina (Âm đạo) Khung diễn giải chi tiết bên dưới sơ đồ Nữ 🟡 1. Ovaries (Buồng trứng) — Nơi rụng trứng & tiết Hormone nữ. 📍 Vị trí nhận diện trên hình Hai cơ quan hình bầu dục nằm đối xứng hai bên tử cung, ngay dưới phễu tua của ống dẫn trứng. ⚙️ Chức năng chuẩn IGCSE 1) Chứa các nang trứng và phóng thích 1 trứng chín mỗi ~28 ngày.2) Tiết hormone sinh dục nữ ( oestrogen ). 💡 Mẹo nhớ & Bẫy đề thi Buồng trứng tương đương với tinh hoàn ở nam: đều vừa tạo giao tử đơn bội (n) vừa tiết hormone sinh dục ! Lộ trình Trứng & Phôi + Bảng tóm tắt 5 bộ phận 🧭 Lộ trình cần thuộc lòng: Trứng rụng từ 1. Ovary ➔ Gặp tinh trùng thụ tinh tại 2. Oviduct ➔ Phôi làm tổ tại 3. Uterus ➔ Em bé chào đời qua 4. Cervix & 5. Vagina 1. Ovaries (Buồng trứng): Rụng 1 trứng chín mỗi tháng và tiết oestrogen. 2. Oviducts (Ống dẫn trứng / Vòi Fallop): Có lông rung (cilia) quét trứng về tử cung; là nơi thụ tinh xảy ra . 3. Uterus (Tử cung): Cơ quan cơ dày có niêm mạc xốp giàu mạch máu nơi phôi làm tổ và thai phát triển. 4. Cervix (Cổ tử cung): Vòng cơ thắt khỏe ở đáy tử cung giữ thai và giãn mở khi sinh. 5. Vagina (Âm đạo): Ống cơ đàn hồi tiếp nhận dương vật khi giao hợp và là đường sinh em bé.",
+      "duration": 211.58,
+      "startTime": 1821.21,
+      "endTime": 2032.79,
+      "audioUrl": "/audio/lectures/science/b15/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🔬 Định nghĩa Sự Thụ tinh (Fertilisation — Core): Thụ tinh là sự dung hợp nhân củ...",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🔬 Definition of Fertilisation (Core): Fertilisation is the fusion of the nuclei from a male gamete (sperm) and a female gamete (egg cell) inside the oviduct . Because gamete nuclei are haploid ( n ) , their fusion forms a single diploid zygote (2 n ) , which divides by mitosis into an embryo that implants in the uterus lining.",
+      "vi": "🔬 Định nghĩa Sự Thụ tinh (Fertilisation — Core): Thụ tinh là sự dung hợp nhân của giao tử đực (tinh trùng / sperm) và nhân của giao tử cái (tế bào trứng / egg cell) diễn ra tại ống dẫn trứng (oviduct) . Hai nhân đơn bội ( n + n ) kết hợp tạo thành một hợp tử lưỡng bội (diploid zygote, 2 n ) , sau đó nguyên phân tạo thành phôi (embryo) đi xuống bám vào niêm mạc tử cung.",
+      "duration": 50.55,
+      "startTime": 2032.79,
+      "endTime": 2083.34,
+      "audioUrl": "/audio/lectures/science/b15/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🏊 Thích nghi của Tinh trùng (Sperm)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Supplement • B15.4.6 🏊 Sperm Cell (Male Gamete) Adaptations. Flagellum (tail): Beats side-to-side to swim actively through the cervix and uterus into the oviduct. Many Mitochondria: Packed in the midpiece to carry out aerobic respiration, releasing ATP energy for swimming. Enzymes in the Acrosome: Tip of the head contains digestive enzymes that break down the egg's jelly coat so the sperm nucleus can enter.",
+      "vi": "Supplement • B15.4.6 🏊 Thích nghi của Tinh trùng (Sperm). Đuôi bơi (Flagellum): Quẫy sóng giúp tinh trùng bơi chủ động qua cổ tử cung, tử cung lên tới ống dẫn trứng. Nhiều Ti thể (Mitochondria): Tập trung dày ở phần cổ/đoạn giữa để hô hấp hiếu khí tạo nhiều năng lượng ATP cho đuôi bơi. Enzyme trong Thể đỉnh (Acrosome): Túi ở chóp đầu chứa các enzyme tiêu hóa phá hủy đường xuyên qua lớp vỏ thạch của trứng.",
+      "duration": 62.07,
+      "startTime": 2083.34,
+      "endTime": 2145.41,
+      "audioUrl": "/audio/lectures/science/b15/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🥚 Thích nghi của Tế bào Trứng (Egg Cell)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Supplement • B15.4.7 🥚 Egg Cell / Ovum (Female Gamete) Adaptations. Energy Stores: Large cytoplasm rich in lipid and protein nutrients to provide energy for early cell divisions (mitosis) of the zygote after fertilisation. Jelly Coat: Protective outer layer that changes (hardens) immediately at fertilisation after one sperm enters, blocking any additional sperm from entering.",
+      "vi": "Supplement • B15.4.7 🥚 Thích nghi của Tế bào Trứng (Egg Cell). Dự trữ năng lượng lớn (Energy stores): Tế bào chất giàu lipid và protein cung cấp năng lượng nuôi hợp tử phân chia những ngày đầu trước khi làm tổ. Vỏ thạch (Jelly coat): Lớp vỏ bảo vệ bên ngoài sẽ biến đổi (cứng lại) ngay sau khi thụ tinh bởi 1 tinh trùng đầu tiên, ngăn chặn mọi tinh trùng khác xâm nhập thêm.",
+      "duration": 56.14,
+      "startTime": 2145.41,
+      "endTime": 2201.55,
+      "audioUrl": "/audio/lectures/science/b15/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "📊 Bảng so sánh Giao tử Đực vs Giao tử Cái (Supplement • B15.4.8)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "📊 Supplement Comparison: Male vs Female Gametes (B15.4.8)",
+      "vi": "📊 Bảng so sánh Giao tử Đực vs Giao tử Cái (Supplement • B15.4.8)",
+      "duration": 11.89,
+      "startTime": 2201.55,
+      "endTime": 2213.44,
+      "audioUrl": "/audio/lectures/science/b15/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "Tiêu chí: 1. Kích thước (Size); Tinh trùng (Sperm — Giao tử đực): Rất nhỏ (dài ~...",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "Feature: 1. Size; Sperm (Male Gamete): Very small (~0.05 mm long; smallest human cell by volume); Egg Cell / Ovum (Female Gamete): Much larger (~0.12 mm diameter; large cytoplasm). Feature: 2. Structure; Sperm (Male Gamete): Streamlined head (haploid nucleus + acrosome ), midpiece packed with mitochondria , long flagellum ; minimal cytoplasm; Egg Cell / Ovum (Female Gamete): Spherical cell with haploid nucleus, large cytoplasm full of energy stores , surrounded by a jelly coat (no flagellum). Feature: 3. Motility; Sperm (Male Gamete): Motile — swims actively by beating its flagellum; Egg Cell / Ovum (Female Gamete): Non-motile — cannot move itself; swept along oviduct by cilia & muscle waves. Feature: 4. Numbers; Sperm (Male Gamete): Produced continuously in huge numbers (hundreds of millions per ejaculation); Egg Cell / Ovum (Female Gamete): Released in very small numbers (typically one mature egg every ~28 days).",
+      "vi": "Tiêu chí: 1. Kích thước (Size); Tinh trùng (Sperm — Giao tử đực): Rất nhỏ (dài ~0.05 mm; thể tích tế bào nhỏ nhất cơ thể); Tế bào Trứng (Egg Cell — Giao tử cái): Lớn hơn rất nhiều (đường kính ~0.12 mm; chứa nhiều tế bào chất). Tiêu chí: 2. Cấu trúc (Structure); Tinh trùng (Sperm — Giao tử đực): Đầu thuôn (nhân đơn bội + acrosome ), đoạn giữa nhiều mitochondria , có đuôi dài flagellum ; rất ít tế bào chất; Tế bào Trứng (Egg Cell — Giao tử cái): Hình cầu, nhân đơn bội, tế bào chất lớn giàu dự trữ năng lượng , bọc ngoài bởi vỏ thạch (jelly coat) , không có đuôi. Tiêu chí: 3. Khả năng di chuyển (Motility); Tinh trùng (Sperm — Giao tử đực): Tự bơi chủ động (Motile) nhờ quẫy đuôi flagellum; Tế bào Trứng (Egg Cell — Giao tử cái): Không tự bơi (Non-motile) — được lông rung (cilia) và cơ ống dẫn trứng đẩy đi. Tiêu chí: 4. Số lượng (Numbers); Tinh trùng (Sperm — Giao tử đực): Sản xuất liên tục với số lượng khổng lồ (hàng trăm triệu tinh trùng mỗi lần phóng tinh); Tế bào Trứng (Egg Cell — Giao tử cái): Giải phóng với số lượng rất ít (thường chỉ 1 trứng chín mỗi chu kỳ ~28 ngày).",
+      "duration": 158.36,
+      "startTime": 2213.44,
+      "endTime": 2371.8,
+      "audioUrl": "/audio/lectures/science/b15/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "🧬 Tuổi Dậy thì & Đặc tính Sinh dục Phụ Thứ cấp (B15.4.4)",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "🧬 Puberty & Secondary Sexual Characteristics (B15.4.4). During puberty , sex hormones secreted into the bloodstream stimulate the development and regulation of secondary sexual characteristics:",
+      "vi": "🧬 Tuổi Dậy thì & Đặc tính Sinh dục Phụ Thứ cấp (B15.4.4). Ở tuổi dậy thì (puberty) , hai hormone sinh dục chính được tiết vào máu để phát triển và duy trì các đặc tính sinh dục phụ thứ cấp:",
+      "duration": 24.3,
+      "startTime": 2371.8,
+      "endTime": 2396.1,
+      "audioUrl": "/audio/lectures/science/b15/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "♂️ Testosterone (Do Tinh hoàn / Testes tiết)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "♂️ Testosterone (Produced in Testes). Stimulates sperm production in the testes. Voice deepens (larynx enlarges) and facial, chest, underarm & pubic hair grow. Broadening of shoulders, increased skeletal muscle mass & growth of penis/testes.",
+      "vi": "♂️ Testosterone (Do Tinh hoàn / Testes tiết). Kích thích tinh hoàn bắt đầu sản xuất tinh trùng. Vỡ giọng (giọng trầm xuống), mọc râu và lông nách, lông mu. Vai mở rộng, khối cơ bắp phát triển mạnh, cơ quan sinh dục nam lớn lên.",
+      "duration": 36.37,
+      "startTime": 2396.1,
+      "endTime": 2432.47,
+      "audioUrl": "/audio/lectures/science/b15/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "♀️ Oestrogen (Do Buồng trứng / Ovaries tiết)",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "♀️ Oestrogen (Produced in Ovaries). Starts the menstrual cycle and monthly maturation/release of eggs. Stimulates breast development and growth of pubic & underarm hair. Widening of the hips/pelvis (adapting the body for future childbirth).",
+      "vi": "♀️ Oestrogen (Do Buồng trứng / Ovaries tiết). Khởi động chu kỳ kinh nguyệt và sự chín, rụng trứng hằng tháng. Phát triển tuyến vú (ngực), mọc lông nách và lông mu. Khung xương chậu / hông mở rộng (thích nghi cho việc mang thai và sinh nở).",
+      "duration": 35.2,
+      "startTime": 2432.47,
+      "endTime": 2467.67,
+      "audioUrl": "/audio/lectures/science/b15/s03_b13.mp3"
+    },
+    {
+      "id": "s03_b14",
+      "title": "📅 Bản đồ Tương tác Chu kỳ Kinh nguyệt 28 Ngày: Buồng trứng & Niêm mạc Tử cung",
+      "selector": "[data-lecture-section=\"s03_b14\"]",
+      "en": "📅 Interactive 28-Day Menstrual Cycle: Ovary & Uterus Lining. Full-Width Synchronized 2-Track SVG Chart (Option A: Ovary + Uterus Lining, no 4-hormone clutter) 4 Phase Selector Buttons 🩸 Days 1–5: Menstruation🌸 Days 6–13: Lining Repair🥚 Day 14: Ovulation🛡️ Days 15–28: Maintenance Full-Width Detail Panel Below 🩸 Days 1–5: Menstruation (Period). Phase 1 of 4 🥚 1. Changes in the Ovary A new follicle containing an immature egg cell begins to grow and develop inside one of the ovaries. 🌸 2. Changes in the Uterus Lining Because no fertilised egg implanted in the previous cycle, the thick spongy uterus lining breaks down and is shed with blood through the vagina. 🎯 3. Key Exam Point Day 1 of menstrual bleeding marks the start of a new ~28-day cycle , clearing old tissue before rebuilding a fresh lining. Hidden Templates for 4 Phases (EN) 📌 IGCSE 0654 Syllabus Scope (B15.4.5): Focus on describing the changes in the ovaries (follicle growth & Day 14 ovulation) and the lining of the uterus (shedding, repair/thickening, maintenance) — detailed hormone curves (FSH, LH, progesterone) are not required in 0654 exams.",
+      "vi": "📅 Bản đồ Tương tác Chu kỳ Kinh nguyệt 28 Ngày: Buồng trứng & Niêm mạc Tử cung. ries) và lớp niêm mạc tử cung (uterus lining) : Biểu đồ SVG 2 tầng trải rộng (Phương án A: Buồng trứng + Độ dày Niêm mạc Tử cung) 4 Nút chọn giai đoạn 🩸 Ngày 1–5: Hành kinh🌸 Ngày 6–13: Tái tạo niêm mạc🥚 Ngày 14: Rụng trứng🛡️ Ngày 15–28: Duy trì niêm mạc Khung diễn giải chi tiết bên dưới 🩸 Ngày 1–5: Menstruation (Hành kinh). Giai đoạn 1 / 4 🥚 1. Diễn biến tại Buồng trứng Một nang trứng mới (follicle) chứa tế bào trứng bên trong bắt đầu lớn lên và phát triển trong buồng trứng. 🌸 2. Diễn biến Niêm mạc Tử cung Do trứng của chu kỳ trước không thụ tinh, lớp niêm mạc tử cung dày xốp bị phá vỡ, bong tróc và thoát ra ngoài âm đạo kèm máu kinh. 🎯 3. Điểm nhớ Đề thi Ngày đầu tiên thấy máu kinh được tính là Ngày 1 mở đầu cho chu kỳ ~28 ngày mới. Hidden Templates cho 4 giai đoạn (VI) 📌 Lưu ý giới hạn Syllabus 0654 (B15.4.5): Đề thi Co-ordinated Sciences 0654 chỉ yêu cầu mô tả diễn biến tại buồng trứng (nang trứng chín & rụng trứng Ngày 14) và niêm mạc tử cung (bong tróc, dày lại, duy trì) — không yêu cầu học thuộc đồ thị nồng độ 4 hormone như môn 0610.",
+      "duration": 170.63,
+      "startTime": 2467.67,
+      "endTime": 2638.3,
+      "audioUrl": "/audio/lectures/science/b15/s03_b14.mp3"
+    },
+    {
+      "id": "s03_b15",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b15\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1/2 MCQ In a typical 28-day human menstrual cycle starting with menstruation on Day 1, what occurs at around Day 14 in the ovaries and in the lining of the uterus? A. Ovary: a mature egg is released (ovulation); Uterus lining: thick and spongy B. Ovary: follicle breaks down; Uterus lining: sheds with blood through the vagina C. Ovary: fertilisation occurs; Uterus lining: completely thin and absent D. Ovary: oestrogen stops being produced permanently; Uterus lining: repairs from zero ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Around Day 14 , ovulation releases a mature egg cell from a follicle in the ovary into the oviduct, while the uterus lining has already been repaired (Days 6–13) so it is thick, vascular, and ready for a potential embryo. B describes Days 1–5; C is wrong because fertilisation occurs in the oviduct, not the ovary.",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1/2 MCQ In a typical 28-day human menstrual cycle starting with menstruation on Day 1, what occurs at around Day 14 in the ovaries and in the lining of the uterus? (Trong chu kỳ kinh nguyệt 28 ngày tiêu chuẩn bắt đầu hành kinh từ Ngày 1, sự kiện nào diễn ra quanh Ngày 14 tại buồng trứng và lớp niêm mạc tử cung?) A. Ovary: a mature egg is released (ovulation); Uterus lining: thick and spongy B. Ovary: follicle breaks down; Uterus lining: sheds with blood through the vagina C. Ovary: fertilisation occurs; Uterus lining: completely thin and absent D. Ovary: oestrogen stops being produced permanently; Uterus lining: repairs from zero ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Quanh Ngày 14 , nang trứng chín vỡ ra phóng thích trứng vào ống dẫn trứng ( ovulation — rụng trứng ), đồng thời lớp niêm mạc tử cung đã được tái tạo dày lên từ Ngày 6–13 nên dày, xốp, giàu mạch máu sẵn sàng đón phôi. Loại B (Ngày 1–5) và C (thụ tinh xảy ra ở oviduct chứ không phải ở ovary).",
+      "duration": 146.53,
+      "startTime": 2638.3,
+      "endTime": 2784.83,
+      "audioUrl": "/audio/lectures/science/b15/s03_b15.mp3"
+    },
+    {
+      "id": "s03_b16",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b16\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [5 marks] (a) Explain how two structural features of a human sperm cell adapt it for fertilisation. [2] (b) Explain one adaptive feature of a human egg cell that acts at fertilisation and one that acts after fertilisation. [2] (c) State one secondary sexual characteristic stimulated by testosterone during puberty. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Any two from: flagellum beats to enable active swimming to the egg in the oviduct; numerous mitochondria carry out aerobic respiration to release energy for swimming; enzymes in the acrosome digest a pathway through the jelly coat of the egg [2m]. (b) At fertilisation: jelly coat changes/hardens immediately after one sperm enters to prevent additional sperm entering [1m]. After fertilisation: energy stores in the large cytoplasm supply nutrients/energy for early mitotic divisions of the zygote/embryo [1m]. (c) Deepening of voice / growth of facial or pubic hair / broadening of shoulders / increased muscle development [1m]. 💡 Intuition Check: Notice how every gamete feature links structure -> function: Flagellum = movement, Mitochondria = respiration energy, Acrosome = enzymes, Jelly coat = block extra sperm, Cytoplasm stores = early embryo fuel!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • 0654 Paper 4 Structured [5 marks] (a) Explain how two structural features of a human sperm cell adapt it for fertilisation. (b) Explain one adaptive feature of a human egg cell that acts at fertilisation and one that acts after fertilisation. (c) State one secondary sexual characteristic stimulated by testosterone during puberty. ((a) Giải thích 2 đặc điểm cấu tạo giúp tinh trùng thích nghi với thụ tinh. (b) Giải thích 1 đặc điểm thích nghi của trứng hoạt động NGAY LÚC thụ tinh và 1 đặc điểm hoạt động SAU thụ tinh. (c) Nêu 1 đặc tính sinh dục phụ thứ cấp do testosterone kích thích.) ✍️ Lời giải chi tiết theo thang điểm: (a) Chọn 2 trong 3: đuôi bơi (flagellum) quẫy giúp bơi chủ động tới trứng trong ống dẫn trứng; nhiều ti thể (mitochondria) hô hấp hiếu khí giải phóng năng lượng cho sự bơi; enzyme trong thể đỉnh (acrosome) tiêu hóa xuyên qua vỏ thạch của trứng . (b) Ngay lúc thụ tinh: vỏ thạch (jelly coat) biến đổi cứng lại ngay sau khi 1 tinh trùng xâm nhập để chặn các tinh trùng khác . Sau thụ tinh: dự trữ năng lượng (energy stores) trong tế bào chất cung cấp dinh dưỡng cho hợp tử nguyên phân giai đoạn đầu . (c) Vỡ giọng trầm / mọc râu, lông mu / mở rộng vai / tăng khối cơ bắp . 💡 Kiểm tra bản chất: Luôn ghép cặp Cấu trúc -> Chức năng khi trả lời câu Supplement về giao tử: Flagellum = bơi, Mitochondria = năng lượng hô hấp, Acrosome = enzyme mở đường, Jelly coat = khóa cửa chống đa tinh, Energy stores = nuôi phôi sớm!",
+      "duration": 202.72,
+      "startTime": 2784.83,
+      "endTime": 2987.55,
+      "audioUrl": "/audio/lectures/science/b15/s03_b16.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🦠 4. Bệnh lây truyền qua đường tình dục (STIs) & HIV",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🦠 4. Sexually Transmitted Infections (STIs) & HIV.",
+      "vi": "🦠 4. Bệnh lây truyền qua đường tình dục (STIs) & HIV.",
+      "duration": 11.07,
+      "startTime": 2987.55,
+      "endTime": 2998.62,
+      "audioUrl": "/audio/lectures/science/b15/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of lymphocytes as the body's intelligence officers that manufacture targeted missiles ( antibodies ) against germs. HIV is a stealth virus transmitted via body fluids/blood that destroys those lymphocytes — when immune defences collapse ( AIDS ), ordinary infections become life-threatening.",
+      "vi": "🎯 Hình dung đời thường: Hãy ví tế bào lymphocytes như lực lượng chỉ huy sản xuất tên lửa định vị ( antibodies / kháng thể ) bảo vệ cơ thể. HIV là virus tàng hình lây qua dịch sinh dục và máu, đánh thẳng vào sở chỉ huy đó — khi hệ miễn dịch sụp đổ ( AIDS ), các vi trùng thông thường cũng trở nên cực kỳ nguy hiểm.",
+      "duration": 41.19,
+      "startTime": 2998.62,
+      "endTime": 3039.81,
+      "audioUrl": "/audio/lectures/science/b15/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Define STI = an infection transmitted through sexual contact. 2) State HIV is a pathogen causing an STI that may lead to AIDS . 3) List HIV transmission routes (unprotected sex, shared needles, contaminated blood transfusions, mother-to-child) and control methods (condoms, sterile needles, blood screening, testing/education).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Định nghĩa STI = bệnh nhiễm trùng lây qua tiếp xúc tình dục (sexual contact). 2) Nêu HIV là mầm bệnh gây STI và có thể dẫn đến AIDS . 3) Liệt kê đường lây truyền HIV (quan hệ không bảo vệ, dùng chung kim tiêm, truyền máu nhiễm bệnh, mẹ truyền sang con) và cách kiểm soát (bao cao su, kim tiêm sạch, sàng lọc máu, xét nghiệm/giáo dục).",
+      "duration": 57.64,
+      "startTime": 3039.81,
+      "endTime": 3097.45,
+      "audioUrl": "/audio/lectures/science/b15/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Oral contraceptive pills prevent ovulation, NOT fluid contact — so pills offer zero protection against HIV or other STIs! Always state a mechanical barrier (condom/femidom) when asked how to prevent STI transmission during sexual intercourse.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viên uống tránh thai chỉ ngăn rụng trứng chứ KHÔNG ngăn tiếp xúc dịch cơ thể — vì vậy thuốc tránh thai không bảo vệ khỏi HIV hay STI! Khi đề hỏi biện pháp phòng STI khi quan hệ, bắt buộc nêu màng chắn cơ học .",
+      "duration": 35.33,
+      "startTime": 3097.45,
+      "endTime": 3132.78,
+      "audioUrl": "/audio/lectures/science/b15/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Định nghĩa STI & Virus gây suy giảm miễn dịch ở người (HIV):",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Sexually Transmitted Infections & Human Immunodeficiency Virus (HIV): A sexually transmitted infection (STI) is an infection transmitted through sexual contact. HIV is a viral pathogen that causes an STI and may lead to AIDS (Acquired Immunodeficiency Syndrome) by infecting and destroying lymphocytes, severely reducing antibody production.",
+      "vi": "Định nghĩa STI & Virus gây suy giảm miễn dịch ở người (HIV): Bệnh lây truyền qua đường tình dục (STI) là bệnh nhiễm trùng lây truyền qua quan hệ tình dục. HIV là mầm bệnh virus gây STI và có thể dẫn tới hội chứng AIDS do tấn công phá hủy tế bào bạch cầu lympho, làm suy kiệt khả năng tạo kháng thể.",
+      "duration": 44.41,
+      "startTime": 3132.78,
+      "endTime": 3177.19,
+      "audioUrl": "/audio/lectures/science/b15/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "⚠️ Đường lây truyền HIV Quan hệ tình dục không an toàn với người nhiễm bệnh. Dùn...",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "⚠️ Methods of HIV Transmission Unprotected sexual contact with an infected person. Sharing contaminated needles / syringes. Unscreened blood transfusions; mother-to-child across placenta or via breast milk.",
+      "vi": "⚠️ Đường lây truyền HIV Quan hệ tình dục không an toàn với người nhiễm bệnh. Dùng chung bơm kim tiêm dính máu nhiễm virus. Truyền máu chưa sàng lọc; mẹ truyền sang con qua nhau thai hoặc sữa mẹ.",
+      "duration": 27.72,
+      "startTime": 3177.19,
+      "endTime": 3204.91,
+      "audioUrl": "/audio/lectures/science/b15/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🛡️ Biện pháp kiểm soát lây lan STI Sử dụng biện pháp ngăn cách cơ học ( bao cao ...",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🛡️ Controlling the Spread of STIs Using barrier contraception ( condoms ) during sexual contact. Using sterile single-use needles and screening all donated blood. STI testing, contact tracing, education, and antiretroviral treatment.",
+      "vi": "🛡️ Biện pháp kiểm soát lây lan STI Sử dụng biện pháp ngăn cách cơ học khi quan hệ. Chỉ dùng kim tiêm vô trùng một lần và xét nghiệm sàng lọc máu hiến tặng. Tầm soát xét nghiệm sớm, giáo dục sức khỏe và điều trị thuốc kháng virus ARV.",
+      "duration": 34.95,
+      "startTime": 3204.91,
+      "endTime": 3239.86,
+      "audioUrl": "/audio/lectures/science/b15/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 1/2 MCQ Which pair of measures will both directly reduce the transmission of HIV within a population? A. Taking oral contraceptive pills and prescribing antibiotics B. Using condoms during sexual intercourse and screening all blood before transfusion C. Vaccinating newborns with antibiotics and boiling drinking water D. Isolating patients from mosquito bites and pasteurising milk ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Condoms act as a physical barrier preventing exchange of infected reproductive fluids during sexual contact, and blood screening prevents infected blood transfusions. A fails because contraceptive pills do not block viruses and antibiotics only work on bacteria; C and D target waterborne/vector-borne diseases, not HIV.",
+      "vi": "BÀI MẪU 1 🟦 CORE • 0654 Paper 1/2 MCQ Which pair of measures will both directly reduce the transmission of HIV within a population? (Cặp biện pháp nào dưới đây đều trực tiếp làm giảm sự lây truyền virus HIV trong cộng đồng?) A. Taking oral contraceptive pills and prescribing antibiotics B. Using condoms during sexual intercourse and screening all blood before transfusion C. Vaccinating newborns with antibiotics and boiling drinking water D. Isolating patients from mosquito bites and pasteurising milk ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Bao cao su (condoms) là màng chắn cơ học ngăn trao đổi dịch tiết mang virus khi giao hợp, còn sàng lọc máu (blood screening) ngăn truyền nhầm máu nhiễm HIV. Loại A (thuốc tránh thai không chặn virus, kháng sinh chỉ diệt vi khuẩn); loại C, D vì HIV không lây qua nước uống hay muỗi đốt.",
+      "duration": 117.45,
+      "startTime": 3239.86,
+      "endTime": 3357.31,
+      "audioUrl": "/audio/lectures/science/b15/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • 0654 Paper 3/4 Structured [4 marks] (a) Define the term sexually transmitted infection (STI) and name the condition that HIV infection may lead to. [2] (b) Describe two ways HIV can spread without sexual contact and state how each route can be controlled. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) An infection that is transmitted through sexual contact [1m]; HIV infection may lead to AIDS (Acquired Immunodeficiency Syndrome) [1m]. (b) Route 1: Sharing contaminated needles -> controlled by using sterile single-use syringes / needle-exchange schemes [1m]. Route 2: Unscreened blood transfusion (or mother-to-child across placenta/breast milk) -> controlled by screening donated blood for HIV (or antiretroviral drugs / avoiding breastfeeding) [1m]. 💡 Intuition Check: HIV cannot spread via air, water, insects, or casual touch — every exam answer must involve direct exchange of blood, semen/vaginal fluid, placental transfer, or breast milk.",
+      "vi": "BÀI MẪU 2 🟦 CORE • 0654 Paper 3/4 Structured [4 marks] (a) Define the term sexually transmitted infection (STI) and name the condition that HIV infection may lead to. (b) Describe two ways HIV can spread without sexual contact and state how each route can be controlled. ((a) Định nghĩa thuật ngữ STI và nêu tên hội chứng mà nhiễm HIV có thể dẫn tới. (b) Mô tả 2 đường lây HIV không qua quan hệ tình dục và cách kiểm soát từng đường.) ✍️ Lời giải chi tiết theo thang điểm: (a) Bệnh nhiễm trùng lây truyền qua quan hệ tình dục ; nhiễm HIV có thể dẫn tới hội chứng AIDS . (b) Đường 1: Dùng chung bơm kim tiêm nhiễm máu -> kiểm soát bằng sử dụng kim tiêm vô trùng một lần . Đường 2: Truyền máu chưa kiểm tra (hoặc mẹ truyền sang con qua nhau thai/sữa mẹ) -> kiểm soát bằng xét nghiệm sàng lọc máu hiến tặng (hoặc điều trị thuốc kháng virus ARV) . 💡 Kiểm tra bản chất: Nhớ kỹ: HIV tuyệt đối không lây qua không khí, nước uống, muỗi đốt hay bắt tay thông thường — chỉ lây qua dịch sinh dục, máu, nhau thai và sữa mẹ!",
+      "duration": 150.58,
+      "startTime": 3357.31,
+      "endTime": 3507.89,
+      "audioUrl": "/audio/lectures/science/b15/s04_b08.mp3"
     }
   ]
 }
