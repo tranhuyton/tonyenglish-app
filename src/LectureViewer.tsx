@@ -1533,7 +1533,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
      <html lang="vi">
      <head>
        <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
        <style>
          :root {
@@ -1688,21 +1688,59 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              margin-bottom: 1.5rem; 
              font-size: 0.9rem;
          }
-          @media (max-width: 640px) {
-              body { font-size: 15px; }
-              h1 { font-size: 1.4rem; }
-              h2 { font-size: 1.25rem; }
-              h3 { font-size: 1.1rem; }
-              table th, table td { 
-                  padding: 0.5rem 0.65rem !important; 
-                  font-size: 13.5px; 
-              }
-              pre { padding: 0.75rem; font-size: 0.8rem; }
-          }
-          
           #content-wrapper { display: flow-root; width: 100%; padding: 24px 14px 2rem 14px; box-sizing: border-box; }
           .audi { display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
           #lib_content { width: 100% !important; max-width: 960px !important; margin: 0 auto !important; box-sizing: border-box !important; }
+          @media (max-width: 640px) {
+              body { font-size: 15px; line-height: 1.62; }
+              h1 { font-size: 1.25rem !important; line-height: 1.3 !important; }
+              h2 { font-size: 1.12rem !important; line-height: 1.32 !important; }
+              h3 { font-size: 1.02rem !important; line-height: 1.35 !important; }
+              p { margin-bottom: 0.85rem; }
+              #content-wrapper { padding: 4px 1px 1.25rem 1px !important; }
+              #lib_content {
+                  padding-left: 0 !important;
+                  padding-right: 0 !important;
+                  margin-left: 0 !important;
+                  margin-right: 0 !important;
+                  max-width: 100% !important;
+              }
+              blockquote {
+                  padding: 7px 7px !important;
+                  margin: 0.75rem 0 !important;
+                  border-left-width: 2.5px !important;
+                  border-radius: 0 6px 6px 0 !important;
+              }
+              .dialogue-practice-box {
+                  padding: 8px 6px !important;
+                  margin: 0.75rem 0 !important;
+                  border-radius: 8px !important;
+              }
+              .sentence-audio-card {
+                  padding: 7px 7px !important;
+                  margin-left: 0 !important;
+                  margin-right: 0 !important;
+              }
+              .vi {
+                  font-size: 14px;
+                  padding-left: 6px !important;
+                  border-left-width: 2px !important;
+                  margin-bottom: 10px;
+              }
+              ul, ol { padding-left: 1.05rem !important; }
+              ul.vi, ol.vi, .vi ul, .vi ol { padding-left: 1.05rem !important; }
+              table th, table td { 
+                  padding: 0.35rem 0.45rem !important; 
+                  font-size: 13px; 
+              }
+              pre { padding: 0.5rem; font-size: 0.78rem; border-radius: 8px; }
+              .active-lecture-highlight::before {
+                  font-size: 10px !important;
+                  padding: 2px 7px !important;
+                  top: -10px !important;
+                  right: 6px !important;
+              }
+          }
           .audiolink a, [data-word] {
               cursor: pointer !important;
               transition: all 0.2s ease !important;
@@ -2172,13 +2210,191 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
            });
          }
 
-         if (document.readyState === 'loading') {
-             document.addEventListener('DOMContentLoaded', enhanceSentenceCards);
-         } else {
-             enhanceSentenceCards();
+         function compactMobileBoxes() {
+           var wrapper = document.getElementById('content-wrapper');
+           if (!wrapper) return;
+           var isMobile = window.innerWidth <= 640;
+
+           if (!isMobile) {
+             var touched = wrapper.querySelectorAll('[data-orig-style]');
+             for (var r = 0; r < touched.length; r++) {
+               var orig = touched[r].getAttribute('data-orig-style');
+               if (orig === '') touched[r].removeAttribute('style');
+               else touched[r].setAttribute('style', orig);
+               touched[r].removeAttribute('data-orig-style');
+             }
+             if (typeof reportHeight === 'function') reportHeight();
+             return;
+           }
+
+           function rememberStyle(el) {
+             if (!el.hasAttribute('data-orig-style')) {
+               el.setAttribute('data-orig-style', el.getAttribute('style') || '');
+             }
+           }
+
+           // 1. Gọn hóa huy hiệu "🎧 Nghe..." góc trên phải & giải phóng chiều ngang cho H1/H2/H3
+           var allEls = wrapper.querySelectorAll('div, span, h1, h2, h3, h4');
+           for (var i = 0; i < allEls.length; i++) {
+             var el = allEls[i];
+             if (el.style && el.style.position === 'absolute' && el.style.right && el.style.top) {
+               var txt = (el.textContent || '').trim();
+               if (txt.length > 0 && txt.length < 45) {
+                 rememberStyle(el);
+                 var nextSib = el.nextElementSibling;
+                 var canShareBadgeRow = false;
+                 if (nextSib && window.getComputedStyle(nextSib).display === 'flex' && nextSib.children.length === 2) {
+                   var c0 = nextSib.children[0];
+                   var c1 = nextSib.children[1];
+                   var hasH = /^H[1-4]$/.test(c0.tagName) || /^H[1-4]$/.test(c1.tagName);
+                   var badgeChild = /^H[1-4]$/.test(c0.tagName) ? c1 : c0;
+                   if (hasH && !/^H[1-4]$/.test(badgeChild.tagName) && (badgeChild.textContent || '').trim().length <= 22) {
+                     canShareBadgeRow = true;
+                   }
+                 }
+                 if (canShareBadgeRow) {
+                   el.style.top = '7px';
+                   el.style.right = '6px';
+                   el.style.padding = '2px 7px';
+                   el.style.fontSize = '10.5px';
+                   // Đẩy huy hiệu phụ sang trái hàng 1, tiêu đề xuống hàng 2 rộng 100%
+                   for (var k = 0; k < nextSib.children.length; k++) {
+                     var ch = nextSib.children[k];
+                     rememberStyle(ch);
+                     if (/^H[1-4]$/.test(ch.tagName)) {
+                       ch.style.order = '2';
+                     } else {
+                       ch.style.order = '1';
+                     }
+                   }
+                 } else {
+                   el.style.position = 'static';
+                   el.style.display = 'flex';
+                   el.style.width = 'fit-content';
+                   el.style.margin = '0 0 4px auto';
+                   el.style.padding = '2px 7px';
+                   el.style.fontSize = '10.5px';
+                 }
+               }
+             }
+             var pr = parseFloat(el.style && el.style.paddingRight ? el.style.paddingRight : '0');
+             if (pr >= 45) {
+               rememberStyle(el);
+               el.style.paddingRight = '0px';
+             }
+           }
+
+           // 2. Cho phép hàng tiêu đề (chứa badge CORE/SUPPLEMENT + H2/H3) xuống dòng rộng 100%, và gộp lưới 2 cột chật hẹp
+           var flexCandidates = wrapper.querySelectorAll('div, header');
+           for (var f = 0; f < flexCandidates.length; f++) {
+             var fEl = flexCandidates[f];
+             var fComp = window.getComputedStyle(fEl);
+             if (fComp.display === 'flex' && fEl.children.length > 1) {
+               var heading = null;
+               for (var c = 0; c < fEl.children.length; c++) {
+                 var cTag = fEl.children[c].tagName;
+                 if (cTag === 'H1' || cTag === 'H2' || cTag === 'H3' || cTag === 'H4') {
+                   heading = fEl.children[c];
+                   break;
+                 }
+               }
+               if (heading) {
+                 rememberStyle(fEl);
+                 fEl.style.flexWrap = 'wrap';
+                 fEl.style.gap = '6px';
+                 fEl.style.paddingRight = '0px';
+                 rememberStyle(heading);
+                 heading.style.flex = '1 1 100%';
+                 heading.style.minWidth = '100%';
+                 heading.style.marginTop = '2px';
+               }
+             } else if (fComp.display === 'grid') {
+               var gtc = (fEl.style && fEl.style.gridTemplateColumns) || '';
+               if ((gtc.indexOf('1fr 1fr') !== -1 || gtc.indexOf('repeat(') !== -1 || gtc.indexOf('minmax(') !== -1) && (fEl.textContent || '').trim().length > 90) {
+                 rememberStyle(fEl);
+                 fEl.style.gridTemplateColumns = '1fr';
+                 fEl.style.gap = '8px';
+               }
+             }
+           }
+
+           // 3. Thu gọn tối đa viền và khoảng đệm của các khung bọc lồng nhau trên điện thoại
+           function isFramedBox(node) {
+             if (!node || node === wrapper || node.nodeType !== 1) return false;
+             var cs = window.getComputedStyle(node);
+             var bg = cs.backgroundColor || '';
+             var bgImg = cs.backgroundImage || '';
+             var hasBg = (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') || (bgImg && bgImg !== 'none');
+             var bw = (parseFloat(cs.borderTopWidth) || 0) + (parseFloat(cs.borderRightWidth) || 0) + (parseFloat(cs.borderBottomWidth) || 0) + (parseFloat(cs.borderLeftWidth) || 0);
+             return hasBg || bw > 0;
+           }
+
+           var boxes = wrapper.querySelectorAll('div, section, article, aside, blockquote');
+           for (var b = 0; b < boxes.length; b++) {
+             var box = boxes[b];
+             if (box.classList.contains('audi') || box.classList.contains('card-actions') || box.classList.contains('turn-spk-btn')) continue;
+             var cs = window.getComputedStyle(box);
+             if (cs.display === 'none' || cs.display === 'inline' || cs.display === 'inline-block' || cs.display === 'inline-flex') continue;
+             if (cs.position === 'absolute' || cs.position === 'fixed') continue;
+             if (box.offsetWidth > 0 && box.offsetWidth < 140) continue;
+             if (cs.borderRadius === '50%' || parseFloat(cs.borderRadius) >= 999) continue;
+
+             var inlineStyle = box.getAttribute('style') || '';
+             var isAspectBox = (box.style.height === '0px' || box.style.height === '0' || /padding-bottom\s*:\s*[\d.]+%/i.test(inlineStyle));
+             if (isAspectBox) continue;
+
+             if (!isFramedBox(box)) {
+               if ((parseFloat(cs.paddingLeft) || 0) > 0 || (parseFloat(cs.paddingRight) || 0) > 0 || (parseFloat(cs.marginLeft) || 0) > 0 || (parseFloat(cs.marginRight) || 0) > 0) {
+                 rememberStyle(box);
+                 box.style.paddingLeft = '0px';
+                 box.style.paddingRight = '0px';
+                 box.style.marginLeft = '0px';
+                 box.style.marginRight = '0px';
+                 box.style.maxWidth = '100%';
+               }
+               continue;
+             }
+
+             var depth = 0;
+             var p = box.parentElement;
+             while (p && p !== wrapper) {
+               if (isFramedBox(p)) depth++;
+               p = p.parentElement;
+             }
+
+             var targetPadX = depth === 0 ? 6 : (depth === 1 ? 5 : 4);
+             var targetPadY = depth === 0 ? 9 : (depth === 1 ? 7 : 6);
+             var targetRadius = depth === 0 ? 8 : (depth === 1 ? 6 : 5);
+             var targetBorderLeft = depth === 0 ? 3 : (depth === 1 ? 2.5 : 2);
+
+             rememberStyle(box);
+             if ((parseFloat(cs.paddingLeft) || 0) > targetPadX) box.style.paddingLeft = targetPadX + 'px';
+             if ((parseFloat(cs.paddingRight) || 0) > targetPadX) box.style.paddingRight = targetPadX + 'px';
+             if (!/%/.test(box.style.paddingTop || '') && (parseFloat(cs.paddingTop) || 0) > targetPadY + 2) box.style.paddingTop = targetPadY + 'px';
+             if (!/%/.test(box.style.paddingBottom || '') && (parseFloat(cs.paddingBottom) || 0) > targetPadY + 2) box.style.paddingBottom = targetPadY + 'px';
+             if ((parseFloat(cs.marginLeft) || 0) > 0) box.style.marginLeft = '0px';
+             if ((parseFloat(cs.marginRight) || 0) > 0) box.style.marginRight = '0px';
+             if ((parseFloat(cs.marginBottom) || 0) > 16) box.style.marginBottom = '14px';
+             if ((parseFloat(cs.borderRadius) || 0) > targetRadius) box.style.borderRadius = targetRadius + 'px';
+             if ((parseFloat(cs.borderLeftWidth) || 0) > targetBorderLeft) box.style.borderLeftWidth = targetBorderLeft + 'px';
+           }
+
+           if (typeof reportHeight === 'function') reportHeight();
          }
-         setTimeout(enhanceSentenceCards, 200);
-         setTimeout(enhanceSentenceCards, 1000);
+
+         function runInitialEnhancements() {
+           enhanceSentenceCards();
+           compactMobileBoxes();
+         }
+
+         if (document.readyState === 'loading') {
+             document.addEventListener('DOMContentLoaded', runInitialEnhancements);
+         } else {
+             runInitialEnhancements();
+         }
+         setTimeout(runInitialEnhancements, 200);
+         setTimeout(runInitialEnhancements, 1000);
+         window.addEventListener('resize', compactMobileBoxes);
 
             var activeDialoguePlayer = null;
 
@@ -5132,11 +5348,11 @@ export default function LectureViewer({
                  }
              }}
          >
-             <div className={`min-h-full flex flex-col items-center ${isIframeOnly ? '' : 'py-5 md:py-10 px-0 sm:px-6 lg:px-8'}`}>
+             <div className={`min-h-full flex flex-col items-center ${isIframeOnly ? '' : 'py-2 sm:py-6 md:py-10 px-0 sm:px-6 lg:px-8'}`}>
                 <div className={`w-full flex-none transition-all ${
                     isIframeOnly 
                     ? 'p-0 mb-0 max-w-none' 
-                    : `bg-white shadow-xs border border-slate-200/90 rounded-none sm:rounded-3xl p-5 sm:p-8 md:p-11 mb-8 min-h-[60vh] max-w-[1060px] ${isTeacherBoardOpen ? 'max-w-none' : ''}`
+                    : `bg-white shadow-xs border-y sm:border border-slate-200/90 rounded-none sm:rounded-3xl px-1 py-3.5 sm:p-8 md:p-11 mb-6 sm:mb-8 min-h-[60vh] max-w-[1060px] ${isTeacherBoardOpen ? 'max-w-none' : ''}`
                 }`}>
                   {!activeLectureId ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
@@ -5156,7 +5372,7 @@ export default function LectureViewer({
                     </div>
                   ) : (
                     <div className="animate-in fade-in duration-500">
-                       <div className="flex items-center gap-2 mb-3 flex-wrap">
+                       <div className="flex items-center gap-2 mb-2.5 sm:mb-3 flex-wrap px-2.5 sm:px-0">
                          <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2.5 py-1 rounded-full">
                            <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4e8]" />
                            {course?.title || 'Bài Giảng Lý Thuyết'}
@@ -5186,11 +5402,11 @@ export default function LectureViewer({
                             );
                          })()}
                        </div>
-                       <h2 className="text-[24px] sm:text-[30px] md:text-[34px] text-slate-900 font-black mb-7 md:mb-10 pb-5 border-b border-slate-100 leading-tight tracking-tight">
+                       <h2 className="text-[21px] sm:text-[30px] md:text-[34px] text-slate-900 font-black mb-4 sm:mb-7 md:mb-10 pb-3.5 sm:pb-5 border-b border-slate-100 leading-tight tracking-tight px-2.5 sm:px-0">
                            {activeLecture?.title}
                        </h2>
                        {activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId] && totalPages > 1 && (
-                         <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                         <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
                            <button
                              type="button"
                              onClick={() => { setCurrentPage(1); persistPage(1); }}
@@ -5218,7 +5434,7 @@ export default function LectureViewer({
                          </div>
                        )}
                        {(activeLecture?.title?.toLowerCase().includes('podcast') || (activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId])) && totalPages > 1 && (
-                         <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                         <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
                            <button
                              type="button"
                              onClick={() => { setCurrentPage(1); persistPage(1); }}
@@ -5246,7 +5462,7 @@ export default function LectureViewer({
                          </div>
                        )}
                         {isOfficeEnglishCourse && totalPages > 1 && (
-                          <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                          <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
                             <button
                               type="button"
                               onClick={() => { setCurrentPage(1); persistPage(1); }}
@@ -5291,7 +5507,7 @@ export default function LectureViewer({
                         )}
                         {/* Tab bar cho các bài giảng có audio và nhiều trang (Ví dụ Biology 0610, Economics 0455) */}
                          {!activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && (LECTURE_MANIFEST_MAP[activeLectureId] || isEconomicsCourse) && totalPages > 1 && (
-                           <div className="flex items-center gap-2.5 mb-8 flex-wrap">
+                           <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
                              <button
                                type="button"
                                onClick={() => { setCurrentPage(1); persistPage(1); }}
@@ -5410,7 +5626,7 @@ export default function LectureViewer({
                            </div>
                          )}
                         {activeLectureVideoId && (currentPage === 1 || (currentPage === 2 && !(activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId]))) && (
-                         <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
+                         <div className="mb-5 sm:mb-8 mx-1 sm:mx-0 rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
                            <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-slate-700/60">
                              <div className="flex items-center gap-2.5 min-w-0">
                                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white text-xs font-bold shadow-sm tracking-wide shrink-0">

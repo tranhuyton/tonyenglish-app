@@ -1396,7 +1396,7 @@ const handleFinish = async () => {
                   onMouseUp={handleTextSelection}
                   style={{ width: window.innerWidth > 768 ? `calc(${leftWidth}% - 8px)` : '100%' }}
               >
-                <div className={`p-6 md:p-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
+                <div className={`p-2.5 sm:p-6 md:p-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                   {isReviewMode && (
                     <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
                        <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
@@ -1424,7 +1424,7 @@ const handleFinish = async () => {
                         
                         {part?.content && (
                           <div 
-                              className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm part-passage-box html-content-renderer" 
+                              className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-3 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm part-passage-box html-content-renderer" 
                               dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
                           />
                         )}
@@ -1503,7 +1503,7 @@ const handleFinish = async () => {
               ref={rightPaneRef} 
               style={showLeftPane && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 8px)`, flex: 'none' } : { flex: 1 }}
           >
-             <div className={`p-4 sm:p-6 md:p-10 max-w-6xl w-full mx-auto pb-28 md:pb-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
+             <div className={`p-2 sm:p-6 md:p-10 max-w-6xl w-full mx-auto pb-28 md:pb-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                
                {/* 🎬 TOOLBAR KHU VỰC LÀM BÀI / VIDEO HƯỚNG DẪN */}
                <div className="mb-6 flex items-center justify-between bg-white border border-slate-200 rounded-xl p-3 px-4 shadow-sm">
@@ -1571,7 +1571,7 @@ const handleFinish = async () => {
                            
                            {isListening && part?.content && (
                               <div 
-                                  className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-6 text-justify bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm part-passage-box html-content-renderer" 
+                                  className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-6 text-justify bg-slate-50 p-3 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm part-passage-box html-content-renderer" 
                                   dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
                               />
                            )}
@@ -1694,7 +1694,7 @@ const handleFinish = async () => {
                                if ((sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") && !hasInlineBrackets) return null;
                                
                                return (
-                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
+                                <div className="bg-white p-3 sm:p-8 rounded-xl sm:rounded-2xl shadow-sm border border-slate-200 mb-6">
                                   {sec?.imageUrl && !isListening && (
                                       <img src={sec.imageUrl} className="max-w-full mb-6" alt="Fill Image" />
                                   )}
@@ -1843,7 +1843,7 @@ const handleFinish = async () => {
                                      <div 
                                          key={q.id} 
                                          id={`q-${q.id}`} 
-                                         className={`bg-white p-6 rounded-2xl shadow-sm border transition-all mb-6 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#0ea5e9]/50'}`}
+                                         className={`bg-white p-3 sm:p-6 rounded-xl sm:rounded-2xl shadow-sm border transition-all mb-4 sm:mb-6 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#0ea5e9]/50'}`}
                                      >
                                         {!isReviewMode && (
                                           <button 
@@ -1943,7 +1943,7 @@ const handleFinish = async () => {
                                   <div 
                                       key={q.id} 
                                       id={`q-${q.id}`} 
-                                      className={`bg-white p-6 md:p-8 rounded-2xl border shadow-sm relative group scroll-mt-20 transition-colors mb-6 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'hover:border-[#0ea5e9]/50 border-slate-200'}`}
+                                      className={`bg-white p-3 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border shadow-sm relative group scroll-mt-20 transition-colors mb-4 sm:mb-6 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'hover:border-[#0ea5e9]/50 border-slate-200'}`}
                                   >
                                      {!isReviewMode && (
                                         <button 
@@ -1967,7 +1967,7 @@ const handleFinish = async () => {
                                         </div>
                                      </div>
                                      
-                                     <div className="flex flex-col gap-2 pl-10">
+                                     <div className="flex flex-col gap-2 pl-0 sm:pl-10">
                                         {q.options?.map((opt: any, i: number) => {
                                            const cleanOpt = getCleanOptionText(opt, i);
                                            const val = String.fromCharCode(65+i);
@@ -2027,7 +2027,7 @@ const handleFinish = async () => {
                                      </div>
 
                                      {isReviewMode && q.explanation && (
-                                        <div className="mt-8 pt-5 border-t border-slate-200 ml-10">
+                                        <div className="mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-slate-200 ml-0 sm:ml-10">
                                            <p className="text-[12px] font-black text-amber-600 uppercase tracking-widest mb-2">💡 Giải thích đáp án:</p>
                                            <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap border-l-[3px] border-slate-300 pl-3 mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(String(q.explanation)) }} />
                                            
@@ -2059,7 +2059,7 @@ const handleFinish = async () => {
 
                              {/* DẠNG BÀI DROPLIST KHỐI (chỉ khi KHÔNG CÓ [num] inline) */}
                              {sec?.questionType === "Droplist" && !/\[\s*\d+\s*\]/.test(String(sec.content || '') + ' ' + String(sec.questions?.[0]?.content || '')) && (
-                                <div className="space-y-4 bg-white p-6 md:p-8 border border-slate-200 rounded-2xl shadow-sm mb-6">
+                                <div className="space-y-3 sm:space-y-4 bg-white p-2.5 sm:p-6 md:p-8 border border-slate-200 rounded-xl sm:rounded-2xl shadow-sm mb-6">
                                   {sec.questions?.map((q: any) => {
                                       if (!q?.id) return null;
                                       const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
@@ -2154,7 +2154,7 @@ const handleFinish = async () => {
                                });
                                
                                return (
-                                 <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border-2 border-slate-200 mb-6">
+                                 <div className="bg-white p-2.5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-sm border sm:border-2 border-slate-200 mb-6">
                                    {/* Block questions with drop targets */}
                                    <div className="space-y-4">
                                      {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
@@ -2337,7 +2337,7 @@ const handleFinish = async () => {
                                           const isPerfect = comboPoints === targetCount && !hasWrong && targetCount > 0;
                                           const isPartial = comboPoints > 0 && !isPerfect;
 
-                                          let containerClass = "bg-white p-6 md:p-8 rounded-2xl shadow-sm border transition-colors relative group scroll-mt-20 mb-4 ";
+                                          let containerClass = "bg-white p-3 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-sm border transition-colors relative group scroll-mt-20 mb-4 ";
                                           if (isReviewMode) {
                                               if (isPerfect) containerClass += "border-emerald-300 bg-emerald-50/30";
                                               else if (isPartial) containerClass += "border-amber-300 bg-amber-50/30";
@@ -2512,7 +2512,7 @@ const handleFinish = async () => {
                                       const displayIndex = questionIndexMap[qNum] || qNum;
                                       
                                       return (
-                                        <div key={q.id} id={`q-${qNum}`} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 hover:border-[#0ea5e9]/40 transition-colors relative group scroll-mt-20 mb-4">
+                                        <div key={q.id} id={`q-${qNum}`} className="bg-white p-3 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-sm border border-slate-200 hover:border-[#0ea5e9]/40 transition-colors relative group scroll-mt-20 mb-4">
                                             <div className="flex gap-4">
                                                 <div className="shrink-0 w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-[14px]">
                                                     {displayIndex}
