@@ -355,7 +355,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
   const [duration, setDuration] = useState(0);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
-  const [isSticky, setIsSticky] = useState(true);
+  const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     setIsPlaying(false);
@@ -555,13 +555,17 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             onClick={() => setIsSticky(!isSticky)}
             className={`px-2.5 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
               isSticky
-                ? 'bg-sky-50 border-sky-200 text-[#0a5482]'
-                : 'bg-slate-100 border-slate-200 text-slate-500 hover:text-slate-700'
+                ? 'bg-sky-50 border-sky-300 text-[#0a5482]'
+                : 'bg-slate-100 border-slate-200 text-slate-600 hover:bg-sky-50/70 hover:text-[#0a5482]'
             }`}
-            title={isSticky ? 'Đang ghim chạy theo bài đọc (Bấm để bỏ ghim)' : 'Ghim thanh nghe chạy theo bài đọc'}
+            title={
+              isSticky
+                ? 'Đang bật Tự cuộn theo trang đọc (Bấm để quay về Ghim cố định ở đầu bài)'
+                : 'Đang Ghim cố định ở đầu bài viết (Bấm để bật chế độ Tự cuộn theo trang)'
+            }
           >
             <span>📌</span>
-            <span className="hidden md:inline">{isSticky ? 'Tự cuộn' : 'Ghim'}</span>
+            <span>{isSticky ? 'Tự cuộn' : 'Ghim'}</span>
           </button>
         </div>
       </div>
@@ -845,7 +849,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           let query = supabase
             .from('te_news')
             .select(
-              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,news_rank,public',
+              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,news_rank,public,news_quiz',
               { count: 'exact' }
             )
             .eq('deleted', 0)
@@ -870,7 +874,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           let query = supabase
             .from('te_news')
             .select(
-              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,public',
+              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,public,news_quiz',
               { count: 'exact' }
             )
             .eq('deleted', 0)
@@ -1435,11 +1439,15 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                       ✅ {lang === 'vi' ? 'Đã đọc' : 'Completed'}
                                     </span>
                                   )}
-                                  {[6, 28, 31, 37].includes(Number(item.news_cc_id)) && (
-                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-sky-50 text-[#0a5482] border border-sky-200/80 text-[11px] font-bold">
-                                      📝 {lang === 'vi' ? '5 câu trắc nghiệm' : '5 MCQ Questions'}
-                                    </span>
-                                  )}
+                                  {(() => {
+                                    const quizCount = parseArticleInteractiveQuiz(item).length;
+                                    if (quizCount <= 0) return null;
+                                    return (
+                                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-sky-50 text-[#0a5482] border border-sky-200/80 text-[11px] font-bold">
+                                        📝 {lang === 'vi' ? `${quizCount} câu trắc nghiệm` : `${quizCount} MCQ Questions`}
+                                      </span>
+                                    );
+                                  })()}
                                 </div>
                                 <Link
                                   to={itemUrl}
