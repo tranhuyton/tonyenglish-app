@@ -1862,7 +1862,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                     
                                     return allOptions.map((opt: string, oIdx: number) => {
                                       const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                      const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                      const displayOpt = /^[A-Za-z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                       
                                       const optLetter = String.fromCharCode(65 + oIdx);
                                       const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
@@ -1907,7 +1907,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                     });
                                     return allOptions.map((opt: string, oIdx: number) => {
                                       const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                      const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                      const displayOpt = /^[A-Za-z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                       return (
                                         <div
                                           key={oIdx}

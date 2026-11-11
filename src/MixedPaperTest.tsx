@@ -50,10 +50,11 @@ const isAnswerCorrect = (userAns: string, correctAns: string) => {
     const cClean = c.replace(/\.$/, '').trim();
     if (uClean === cClean) return true;
 
-    const uMatch = u.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    const uMatch = u.match(/^(?:[A-Z][\.\):]\s*)+(.+)$/);
     if (uMatch) {
-      if (uMatch[1] === c || uMatch[1] === cClean) return true;
-      if (uMatch[2] === c || uMatch[2].replace(/\.$/, '').trim() === cClean) return true;
+      const firstLetter = u.match(/^([A-Z])[\.\):]/)?.[1];
+      if (firstLetter && (firstLetter === c || firstLetter === cClean)) return true;
+      if (uMatch[1] === c || uMatch[1].replace(/\.$/, '').trim() === cClean) return true;
     }
     const cMatch = c.match(/^([A-Z])[\.\):]\s*(.*)$/);
     if (cMatch) {
@@ -65,7 +66,7 @@ const isAnswerCorrect = (userAns: string, correctAns: string) => {
       const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
       const withParensContent = c.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
       if (u === withoutParens || u === withParensContent) return true;
-      if (uMatch && (uMatch[2] === withoutParens || uMatch[2] === withParensContent)) return true;
+      if (uMatch && (uMatch[1] === withoutParens || uMatch[1] === withParensContent)) return true;
     }
   }
   if (cFull.includes(',')) {
@@ -1958,8 +1959,8 @@ const handleFinish = async () => {
                                         const sectionQs = Array.isArray(sec?.questions) ? sec.questions : [];
                                         
                                         return allOptions.map((opt: string, oIdx: number) => {
-                                          const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                          const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                          const prefix = allOptions.length <= 26 ? `${String.fromCharCode(65 + oIdx)}. ` : '';
+                                          const displayOpt = /^[A-Za-z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                           const optUpper = opt.trim().toUpperCase();
                                           const optNoPrefix = optUpper.replace(/^[A-Z][\.\):]\s*/i, '').trim();
                                           const dispUpper = displayOpt.toUpperCase();
@@ -2025,8 +2026,8 @@ const handleFinish = async () => {
                                           }
                                         });
                                         return allOptions.map((opt: string, oIdx: number) => {
-                                          const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                          const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                          const prefix = allOptions.length <= 26 ? `${String.fromCharCode(65 + oIdx)}. ` : '';
+                                          const displayOpt = /^[A-Za-z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                           return (
                                             <div
                                               key={oIdx}

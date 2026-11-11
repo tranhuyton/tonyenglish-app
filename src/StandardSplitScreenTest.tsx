@@ -1723,7 +1723,7 @@ const handleFinish = async () => {
                                           return allOptions.map((opt: string, oIdx: number) => {
                                             const isRomanOpt = isRomanNumeralOption(opt);
                                             const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                            const displayOpt = (/^[A-Z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
+                                            const displayOpt = (/^[A-Za-z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
                                             const optLetter = String.fromCharCode(65 + oIdx);
                                             const isUsed = (!isRomanOpt && selectedInSec.includes(optLetter)) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
                                             
@@ -2222,7 +2222,7 @@ const handleFinish = async () => {
                                            return allOpts.map((opt: string, oIdx: number) => {
                                              const isRomanOpt = isRomanNumeralOption(opt);
                                              const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                             const displayOpt = (/^[A-Z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
+                                             const displayOpt = (/^[A-Za-z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
                                              const optLetter = String.fromCharCode(65 + oIdx);
                                              const isUsed = (!isRomanOpt && selectedInSec.includes(optLetter)) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
                                              
@@ -2257,7 +2257,7 @@ const handleFinish = async () => {
                                            return allOpts.map((opt: string, oIdx: number) => {
                                              const isRomanOpt = isRomanNumeralOption(opt);
                                              const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                             const displayOpt = (/^[A-Z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
+                                             const displayOpt = (/^[A-Za-z][\.\):]\s/.test(opt) || isRomanOpt) ? opt : prefix + opt;
                                              return (
                                                <div
                                                  key={oIdx}
