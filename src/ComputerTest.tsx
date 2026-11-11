@@ -960,10 +960,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       <option value="">-- Chọn --</option>
                       {validOptions.map((opt:string, oIdx:number) => {
                          const val = opt.replace(stripHtmlRegex, '').trim();
-                         const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                         // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
                          return (
                            <option key={oIdx} value={val}>
-                             {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                             {val}
                            </option>
                          );
                       })}
@@ -1676,10 +1676,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                    <option value="">---</option>
                                                    {validOptions.map((opt: string, oIdx: number) => {
                                                       const val = opt.replace(stripHtmlRegex, '').trim();
-                                                      const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                                                      // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
                                                       return (
                                                         <option key={oIdx} value={val}>
-                                                          {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                                                          {val}
                                                         </option>
                                                       );
                                                    })}

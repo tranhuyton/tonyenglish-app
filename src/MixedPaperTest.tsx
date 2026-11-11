@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
+import { gradeAIQuestions, AIGradeResult } from './utils/aiGrader';
 import './tailwind.css';
 
 // --- CÁC HÀM LOGIC DÙNG CHUNG TỪ COMPUTER TEST ---
@@ -154,6 +155,10 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
       total: parseInt(safeTestData?.past_total || 0), 
       band: safeTestData?.past_band || "0.0" 
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [aiFeedback, setAiFeedback] = useState<AIGradeResult | null>(() => (
+    safeTestData?.past_ai_feedback || safeTestData?.details?.aiFeedback || null
+  ));
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
@@ -297,8 +302,10 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
 // NỘP BÀI VÀ TÍNH ĐIỂM
 const handleFinish = async () => {
   if (!isReviewMode) {
+    if (isSubmitting) return;
     if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
     isFinishingRef.current = true;
+    setIsSubmitting(true);
     // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
     const currentAnswers = answersRef.current;
     if (safeTestData?.id) {
@@ -309,6 +316,7 @@ const handleFinish = async () => {
     let score = 0; 
     let total = 0;
     let questionTypeStats: Record<string, { correct: number, total: number }> = {};
+    const aiQuestions: any[] = [];
 
     parts.forEach((p: any) => {
       if (!Array.isArray(p.sections)) return;
@@ -317,7 +325,12 @@ const handleFinish = async () => {
         if (!questionTypeStats[qType]) questionTypeStats[qType] = { correct: 0, total: 0 };
         if (!Array.isArray(s.questions)) return;
 
-        if (qType === 'Checkbox') {
+        if (qType === 'Điền từ AI' || qType === 'Đoạn văn') {
+          s.questions.forEach((q: any) => {
+            if (!q?.id) return;
+            aiQuestions.push({ ...q, qType });
+          });
+        } else if (qType === 'Checkbox') {
           const combos = buildCheckboxCombos(s.questions);
           combos.forEach(combo => {
             const comboIds = combo.map((q: any) => String(q.id));
@@ -355,6 +368,66 @@ const handleFinish = async () => {
       });
     });
 
+    let aiGradeResult: AIGradeResult | null = null;
+    if (aiQuestions.length > 0) {
+      aiGradeResult = await gradeAIQuestions(aiQuestions, currentAnswers);
+      if (aiGradeResult && Array.isArray(aiGradeResult.details)) {
+        // Đảm bảo đáp án khớp chính xác 100% đáp án mẫu luôn đạt điểm tối đa ở dạng Điền từ AI
+        let recomputedStudentScore = 0;
+        let recomputedMaxScore = 0;
+        aiQuestions.forEach((aq: any) => {
+          const qIdStr = String(aq.id);
+          const qt = aq.qType || 'Điền từ AI';
+          const defaultMax = qt === 'Đoạn văn' ? 10 : 1;
+          let d = aiGradeResult!.details.find((x: any) => String(x.question_id) === qIdStr);
+          const uAns = String(currentAnswers[qIdStr] || '');
+          const cAns = String(aq.correctAnswer || '');
+          const exactMatch = qt === 'Điền từ AI' && cAns.trim() !== '' && isAnswerCorrect(uAns, cAns);
+
+          if (!d) {
+            d = {
+              question_id: qIdStr,
+              student_score: exactMatch ? 1 : 0,
+              max_score: defaultMax,
+              examiner_comment: exactMatch ? 'Câu trả lời chính xác theo đáp án mẫu.' : 'Chưa có câu trả lời hợp lệ.'
+            };
+            aiGradeResult!.details.push(d);
+          } else if (exactMatch && Number(d.student_score || 0) < Number(d.max_score || 1)) {
+            d.student_score = Number(d.max_score || 1);
+          }
+
+          const sPts = Number(d.student_score || 0);
+          const mPts = Number(d.max_score || defaultMax);
+          recomputedStudentScore += sPts;
+          recomputedMaxScore += mPts;
+          if (!questionTypeStats[qt]) questionTypeStats[qt] = { correct: 0, total: 0 };
+          questionTypeStats[qt].correct += sPts;
+          questionTypeStats[qt].total += mPts;
+        });
+        aiGradeResult.total_student_score = recomputedStudentScore;
+        aiGradeResult.total_max_score = recomputedMaxScore;
+        setAiFeedback(aiGradeResult);
+        score += recomputedStudentScore;
+        total += recomputedMaxScore;
+      } else {
+        // Fallback an toàn nếu kết nối AI tạm thời gián đoạn
+        aiQuestions.forEach((aq: any) => {
+          const qt = aq.qType || 'Khác';
+          if (!questionTypeStats[qt]) questionTypeStats[qt] = { correct: 0, total: 0 };
+          if (qt === 'Điền từ AI') {
+            total++;
+            questionTypeStats[qt].total++;
+            const uAns = String(currentAnswers[String(aq.id)] || '');
+            const cAns = String(aq.correctAnswer || '');
+            if (isAnswerCorrect(uAns, cAns) && cAns.trim() !== '') {
+              score++;
+              questionTypeStats[qt].correct++;
+            }
+          }
+        });
+      }
+    }
+
     let band = "0.0";
     if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5";
     else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
@@ -367,6 +440,7 @@ const handleFinish = async () => {
     
     setScoreResult({ score, total, band }); 
     setIsReviewMode(true); 
+    setIsSubmitting(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     try {
@@ -382,7 +456,7 @@ const handleFinish = async () => {
           total_score: total, 
           time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
           // 🚀 LƯU TRỮ TOÀN BỘ PHÂN TÍCH DẠNG BÀI VÀO DETAILS
-          details: { test_id: safeTestData?.id, bandScore: band, userAnswers: currentAnswers, type_stats: questionTypeStats }
+          details: { test_id: safeTestData?.id, bandScore: band, userAnswers: currentAnswers, type_stats: questionTypeStats, aiFeedback: aiGradeResult }
         }]);
 
         // Auto-complete test-type assignments (Chỉ hoàn thành nếu đạt từ 50% điểm hoặc IELTS Band >= 4.0)
@@ -427,6 +501,7 @@ const handleFinish = async () => {
       if (safeTestData?.id) localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
       setAnswers({}); 
       setReviewFlags({});
+      setAiFeedback(null);
       setIsReviewMode(false); 
       setTestStarted(false); 
       setTimeLeft(parseInitialTime(basicInfo.timeLimit)); 
@@ -777,14 +852,15 @@ const handleFinish = async () => {
             if (isReviewMode) {
               const qData = parts.flatMap((p: any) => Array.isArray(p?.sections) ? p.sections.flatMap((s: any) => s?.questions) : []).find((q: any) => String(q?.id) === String(qNum));
               const correctAns = String(qData?.correctAnswer || '');
-              const isCorrect = isAnswerCorrect(userAns, correctAns);
+              const aiDetail = qInfo.qType === 'Điền từ AI' ? aiFeedback?.details?.find((d: any) => String(d.question_id) === String(qNum)) : null;
+              const isCorrect = aiDetail ? Number(aiDetail.student_score || 0) > 0 : isAnswerCorrect(userAns, correctAns);
 
               return (
                 <span key={pathKey} className="relative inline-flex flex-col items-center mx-1 align-baseline -translate-y-1">
                   <span className={`px-2.5 py-0.5 text-[14px] font-bold text-slate-800 rounded shadow-sm border ${isCorrect ? 'bg-emerald-100 border-emerald-300' : 'bg-red-100 border-red-300'}`}>
                     {displayIndex}. {userAns || '(trống)'}
                   </span>
-                  {!isCorrect && (
+                  {!isCorrect && correctAns && (
                     <span className="absolute top-full mt-1 text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded text-center whitespace-nowrap z-10 shadow-md">
                       ĐA: {correctAns}
                     </span>
@@ -855,10 +931,10 @@ const handleFinish = async () => {
                       <option value="">-- Chọn --</option>
                       {validOptions.map((opt:string, oIdx:number) => {
                          const val = opt.replace(stripHtmlRegex, '').trim();
-                         const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                         // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
                          return (
                            <option key={oIdx} value={val}>
-                             {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                             {val}
                            </option>
                          );
                       })}
@@ -1463,6 +1539,19 @@ const handleFinish = async () => {
                                                           </div>
                                                           <div className="text-[15px] text-gray-700 italic font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                           
+                                                          {sec.questionType === "Điền từ AI" && aiFeedback?.details?.find((d: any) => String(d.question_id) === String(q.id)) && (() => {
+                                                            const aiItem = aiFeedback.details.find((d: any) => String(d.question_id) === String(q.id));
+                                                            return (
+                                                              <div className="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200">
+                                                                <div className="flex items-center justify-between mb-2">
+                                                                  <span className="font-bold text-[14px] text-blue-800">🤖 AI Chấm Điểm</span>
+                                                                  <span className="font-bold text-[14px] text-blue-800">{aiItem?.student_score} / {aiItem?.max_score} điểm</span>
+                                                                </div>
+                                                                <p className="text-[14px] text-slate-700 italic">{aiItem?.examiner_comment}</p>
+                                                              </div>
+                                                            );
+                                                          })()}
+                                                          
                                                           <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-100">
                                                               <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-blue-600">
                                                                  💬 Chat với AI
@@ -1586,20 +1675,9 @@ const handleFinish = async () => {
                                             </div>
                                           )}
                                           
-                                          {sec.questionType === "Đoạn văn" ? (
-                                            <div className="mt-2">
-                                              <textarea
-                                                value={userAns}
-                                                onChange={(e) => handleAnswer(String(q.id), e.target.value)}
-                                                disabled={isReviewMode}
-                                                placeholder="Nhập câu trả lời của bạn vào đây..."
-                                                className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-y min-h-[150px] font-sans ${isReviewMode ? 'bg-gray-50' : 'bg-white'}`}
-                                              />
-                                            </div>
-                                          ) : (
-                                            <div className={`flex flex-col gap-2`}>
-                                              {validOptions.map((opt: any, i: number) => {
-                                                const safeOpt = String(opt || '');
+                                          <div className={`flex flex-col gap-2`}>
+                                            {validOptions.map((opt: any, i: number) => {
+                                              const safeOpt = String(opt || '');
                                               const optionValue = String.fromCharCode(65+i); 
                                               const isSelected = userAns === optionValue; 
                                               const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
@@ -1642,7 +1720,6 @@ const handleFinish = async () => {
                                             );
                                           })}
                                           </div>
-                                          )}
                                           
                                           {isReviewMode && (
                                             <div className="mt-6 pt-4 border-t border-gray-200 font-sans">
@@ -1712,10 +1789,10 @@ const handleFinish = async () => {
                                                         <option value="">---</option>
                                                        {validOptions.map((opt: string, oIdx: number) => {
                                                           const val = opt.replace(stripHtmlRegex, '').trim();
-                                                          const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                                                          // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
                                                           return (
                                                             <option key={oIdx} value={val}>
-                                                              {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                                                              {val}
                                                             </option>
                                                           );
                                                        })}
@@ -2144,6 +2221,67 @@ const handleFinish = async () => {
                                </div>
                             )}
 
+                            {/* DẠNG ĐOẠN VĂN (CHẤM BẰNG AI) */}
+                            {sec.questionType === "Đoạn văn" && (
+                              <div className="space-y-6">
+                                {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
+                                  if (!q?.id) return null;
+                                  const qIdStr = String(q.id);
+                                  const displayIndex = questionIndexMap[qIdStr] || q.id;
+                                  const userAns = String(answers[qIdStr] || '');
+                                  const aiItem = aiFeedback?.details?.find((d: any) => String(d.question_id) === qIdStr);
+
+                                  return (
+                                    <div key={q.id} id={`q-${qIdStr}`} onClick={() => setActiveQuestionId(qIdStr)} className={`p-6 rounded-xl border shadow-sm transition-all ${isReviewMode ? 'border-gray-200 bg-white' : (activeQuestionId === qIdStr ? 'border-blue-400 bg-blue-50/30' : 'border-gray-200 bg-white hover:border-gray-300')}`}>
+                                      <div className="flex gap-4 mb-4">
+                                        <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
+                                        <div className="flex-1 min-w-0">
+                                          {q.imageUrl && (
+                                            <div className="mb-4">
+                                              <img src={q.imageUrl} alt="Question Illustration" className="mcq-cropped-img my-4" />
+                                            </div>
+                                          )}
+                                          {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
+                                          <div className="mt-2">
+                                            <textarea
+                                              value={userAns}
+                                              onChange={(e) => handleAnswer(qIdStr, e.target.value)}
+                                              disabled={isReviewMode}
+                                              placeholder="Nhập câu trả lời của bạn vào đây..."
+                                              className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-y min-h-[150px] font-sans ${isReviewMode ? 'bg-gray-50' : 'bg-white'}`}
+                                            />
+                                            {isReviewMode && aiItem && (
+                                              <div className="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200">
+                                                <div className="flex items-center justify-between mb-2">
+                                                  <span className="font-bold text-[14px] text-blue-800">🤖 AI Chấm Điểm</span>
+                                                  <span className="font-bold text-[14px] text-blue-800">{aiItem.student_score} / {aiItem.max_score} điểm</span>
+                                                </div>
+                                                <p className="text-[14px] text-slate-700 italic">{aiItem.examiner_comment}</p>
+                                              </div>
+                                            )}
+                                            {isReviewMode && (
+                                              <div className="mt-4 pt-4 border-t border-gray-200 font-sans">
+                                                {q.explanation && (
+                                                  <>
+                                                    <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Gợi ý / Đáp án mẫu:</p>
+                                                    <div className="text-[14px] text-gray-700 italic font-serif format-passage html-content-renderer mb-3">{renderHtmlWithHoles(q.explanation, {})}</div>
+                                                  </>
+                                                )}
+                                                <div className="flex items-center gap-2">
+                                                  <button onClick={(e) => { e.stopPropagation(); askAIToExplain(qIdStr, q.content, q.explanation || 'Câu hỏi tự luận viết đoạn văn.'); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">💬 Chat với AI</button>
+                                                  <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">📞 Gọi Gia sư</button>
+                                                </div>
+                                              </div>
+                                            )}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            )}
+
                           </div>
                         )
                       })}
@@ -2259,7 +2397,12 @@ const handleFinish = async () => {
                        if (q) qCorrectAns = String(q.correctAnswer || '');
                     });
                  });
-                 const isCorrect = isAnswerCorrect(answers[id], qCorrectAns) && qCorrectAns !== '';
+                 const aiItem = (qType === 'Điền từ AI' || qType === 'Đoạn văn')
+                   ? aiFeedback?.details?.find((d: any) => String(d.question_id) === String(id))
+                   : null;
+                 const isCorrect = aiItem
+                   ? Number(aiItem.student_score || 0) > 0
+                   : (isAnswerCorrect(answers[id], qCorrectAns) && qCorrectAns !== '');
                  btnClass += isCorrect ? 'bg-emerald-100 border border-emerald-400 text-emerald-800' : 'bg-red-100 border border-red-400 text-red-800';
               }
             } else { 
@@ -2277,8 +2420,8 @@ const handleFinish = async () => {
         </div>
 
         <div className="ml-4 shrink-0 flex items-center gap-3 border-l border-gray-300 pl-4">
-          <button onClick={handleFinish} className={`font-bold text-sm px-8 py-2.5 rounded shadow-md transition ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
-            {isReviewMode ? 'Thoát' : 'Nộp Bài'}
+          <button onClick={handleFinish} disabled={isSubmitting} className={`font-bold text-sm px-8 py-2.5 rounded shadow-md transition disabled:opacity-60 disabled:cursor-wait ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
+            {isSubmitting ? '🤖 AI đang chấm...' : (isReviewMode ? 'Thoát' : 'Nộp Bài')}
           </button>
         </div>
       </footer>

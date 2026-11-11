@@ -317,8 +317,11 @@ export default function StandardMCQTest({
   const [showSettings, setShowSettings] = useState(false);
   const [fontSize, setFontSize] = useState<'S' | 'M' | 'L'>('M');
 
-  // 🎬 Video hướng dẫn & gợi ý
+  // 🎬 Video hướng dẫn & gợi ý (Hỗ trợ nhiều video)
   const {
+    videos: guideVideos,
+    activeVideoIndex: activeGuideVideoIndex,
+    setActiveVideoIndex: setActiveGuideVideoIndex,
     videoUrl: guideVideoUrl,
     isOpen: isGuideVideoOpen,
     setIsOpen: setIsGuideVideoOpen,
@@ -326,13 +329,16 @@ export default function StandardMCQTest({
     setIsTheaterOpen: setIsGuideVideoTheaterOpen,
     isEditModalOpen: isGuideVideoEditModalOpen,
     setIsEditModalOpen: setIsGuideVideoEditModalOpen,
-    handleSaveVideo: handleSaveGuideVideo,
-  } = useTestGuideVideo(safeData, (newUrl) => {
+    handleSaveVideos: handleSaveGuideVideos,
+  } = useTestGuideVideo(safeData, (newUrl, newVideos) => {
     safeData.guide_video_url = newUrl;
+    safeData.guide_videos = newVideos;
     if (safeData.content_json) {
       safeData.content_json.guide_video_url = newUrl;
+      safeData.content_json.guide_videos = newVideos;
       if (safeData.content_json.basicInfo) {
         safeData.content_json.basicInfo.guide_video_url = newUrl;
+        safeData.content_json.basicInfo.guide_videos = newVideos;
       }
     }
   });
@@ -1046,10 +1052,10 @@ const handleFinish = async () => {
                   <option value="">-- Chọn --</option>
                   {validOptions.map((opt: string, oIdx: number) => {
                     const val = opt.replace(stripHtmlRegex, '').trim();
-                    const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                    // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
                     return (
                       <option key={oIdx} value={val}>
-                        {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                        {val}
                       </option>
                     );
                   })}
@@ -1510,6 +1516,7 @@ const handleFinish = async () => {
 
                  <TestGuideVideoButton
                    videoUrl={guideVideoUrl}
+                   videos={guideVideos}
                    isOpen={isGuideVideoOpen}
                    onToggleOpen={() => setIsGuideVideoOpen(!isGuideVideoOpen)}
                    onOpenEditModal={() => setIsGuideVideoEditModalOpen(true)}
@@ -1522,6 +1529,9 @@ const handleFinish = async () => {
                <div className="mb-6">
                  <TestGuideVideoPlayer
                    videoUrl={guideVideoUrl}
+                   videos={guideVideos}
+                   activeVideoIndex={activeGuideVideoIndex}
+                   onSelectVideo={setActiveGuideVideoIndex}
                    isOpen={isGuideVideoOpen}
                    onClose={() => setIsGuideVideoOpen(false)}
                    isTheaterOpen={isGuideVideoTheaterOpen}
@@ -1535,7 +1545,8 @@ const handleFinish = async () => {
                  isOpen={isGuideVideoEditModalOpen}
                  onClose={() => setIsGuideVideoEditModalOpen(false)}
                  initialUrl={guideVideoUrl}
-                 onSave={handleSaveGuideVideo}
+                 initialVideos={guideVideos}
+                 onSaveVideos={handleSaveGuideVideos}
                  testTitle={safeData?.title}
                />
 

@@ -155,28 +155,28 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   // =========================================================================
   // CAMBRIDGE IGCSE CHEMISTRY (0620) BILINGUAL AUDIO LECTURES (TOPICS 1 - 12)
   // =========================================================================
-  'b1dca40f-5860-5c18-ad99-6c90ef8c2e50': '/audio/lectures/science/c1/manifest.json', // Topic 1: States of matter
-  '98be89ab-7b9c-5ab0-a4f0-895e6d217990': '/audio/lectures/science/c2/manifest.json', // Topic 2: Atoms, elements and compounds
-  '9990ebf7-e6f6-540a-ab78-ae48eeea42ba': '/audio/lectures/science/c3/manifest.json', // Topic 3: Stoichiometry
-  'eb56f423-98b4-5f5c-a891-1691b4691433': '/audio/lectures/science/c4/manifest.json', // Topic 4: Electrochemistry
-  '4c428cf3-2e0c-5b53-a468-0fadb2bb2b7c': '/audio/lectures/science/c5/manifest.json', // Topic 5: Chemical energetics
-  '5b034453-aeea-5dc5-a643-26da8fada0bc': '/audio/lectures/science/c6/manifest.json', // Topic 6: Chemical reactions
-  '0437e039-b3c2-5779-a402-45907c082ac2': '/audio/lectures/science/c7/manifest.json', // Topic 7: Acids, bases and salts
-  '137cfd77-d86a-5927-a025-e406191e51fc': '/audio/lectures/science/c8/manifest.json', // Topic 8: The Periodic Table
-  '605ec1ff-ecf8-5cf5-aa6e-84dacd8f091f': '/audio/lectures/science/c9/manifest.json', // Topic 9: Metals
-  'a0959822-b499-501b-ad83-4ba423b031ff': '/audio/lectures/science/c10/manifest.json', // Topic 10: Chemistry of the environment
-  '3c425483-4d1a-5405-a1da-354e3598fe30': '/audio/lectures/science/c11/manifest.json', // Topic 11: Organic chemistry
-  '2d0a3d84-392a-522a-a3ca-7facf0b97f66': '/audio/lectures/science/c12/manifest.json', // Topic 12: Experimental techniques and chemical analysis
+  'b1dca40f-5860-5c18-ad99-6c90ef8c2e50': '/audio/lectures/chemistry/1/manifest.json', // Topic 1: States of matter
+  '98be89ab-7b9c-5ab0-a4f0-895e6d217990': '/audio/lectures/chemistry/2/manifest.json', // Topic 2: Atoms, elements and compounds
+  '9990ebf7-e6f6-540a-ab78-ae48eeea42ba': '/audio/lectures/chemistry/3/manifest.json', // Topic 3: Stoichiometry
+  'eb56f423-98b4-5f5c-a891-1691b4691433': '/audio/lectures/chemistry/4/manifest.json', // Topic 4: Electrochemistry
+  '4c428cf3-2e0c-5b53-a468-0fadb2bb2b7c': '/audio/lectures/chemistry/5/manifest.json', // Topic 5: Chemical energetics
+  '5b034453-aeea-5dc5-a643-26da8fada0bc': '/audio/lectures/chemistry/6/manifest.json', // Topic 6: Chemical reactions
+  '0437e039-b3c2-5779-a402-45907c082ac2': '/audio/lectures/chemistry/7/manifest.json', // Topic 7: Acids, bases and salts
+  '137cfd77-d86a-5927-a025-e406191e51fc': '/audio/lectures/chemistry/8/manifest.json', // Topic 8: The Periodic Table
+  '605ec1ff-ecf8-5cf5-aa6e-84dacd8f091f': '/audio/lectures/chemistry/9/manifest.json', // Topic 9: Metals
+  'a0959822-b499-501b-ad83-4ba423b031ff': '/audio/lectures/chemistry/10/manifest.json', // Topic 10: Chemistry of the environment
+  '3c425483-4d1a-5405-a1da-354e3598fe30': '/audio/lectures/chemistry/11/manifest.json', // Topic 11: Organic chemistry
+  '2d0a3d84-392a-522a-a3ca-7facf0b97f66': '/audio/lectures/chemistry/12/manifest.json', // Topic 12: Experimental techniques and chemical analysis
 
   // =========================================================================
   // CAMBRIDGE IGCSE PHYSICS (0625) BILINGUAL AUDIO LECTURES (TOPICS 1 - 6)
   // =========================================================================
-  '63711578-24ee-530b-af00-95ffbab36daf': '/audio/lectures/science/p1/manifest.json', // Topic 1: Motion, forces and energy
-  '8074ead2-53cc-5ebd-ab32-c691b3e8aebf': '/audio/lectures/science/p2/manifest.json', // Topic 2: Thermal physics
-  '6df06f2c-3b0a-556f-a218-3e4d7a9417e0': '/audio/lectures/science/p3/manifest.json', // Topic 3: Waves
-  '75e29227-213b-5046-abfa-d0cddc677c7a': '/audio/lectures/science/p4/manifest.json', // Topic 4: Electricity and magnetism
-  '588803a0-fcc4-5582-a53d-1c1925e0e4cf': '/audio/lectures/science/p5/manifest.json', // Topic 5: Nuclear physics
-  '886cd267-2b7b-59a6-a9f2-3fdb24bf2d35': '/audio/lectures/science/p6/manifest.json', // Topic 6: Space physics
+  '63711578-24ee-530b-af00-95ffbab36daf': '/audio/lectures/physics/1/manifest.json', // Topic 1: Motion, forces and energy
+  '8074ead2-53cc-5ebd-ab32-c691b3e8aebf': '/audio/lectures/physics/2/manifest.json', // Topic 2: Thermal physics
+  '6df06f2c-3b0a-556f-a218-3e4d7a9417e0': '/audio/lectures/physics/3/manifest.json', // Topic 3: Waves
+  '75e29227-213b-5046-abfa-d0cddc677c7a': '/audio/lectures/physics/4/manifest.json', // Topic 4: Electricity and magnetism
+  '588803a0-fcc4-5582-a53d-1c1925e0e4cf': '/audio/lectures/physics/5/manifest.json', // Topic 5: Nuclear physics
+  '886cd267-2b7b-59a6-a9f2-3fdb24bf2d35': '/audio/lectures/physics/6/manifest.json', // Topic 6: Space physics
 
   // =========================================================================
   // CAMBRIDGE IGCSE ECONOMICS (0455) BILINGUAL AUDIO LECTURES
@@ -1743,7 +1743,8 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
           .active-lecture-highlight.lecture-interactive-card > div[style*="pointer-events: none"] {
               opacity: 0 !important;
           }
-          .active-lecture-highlight.lecture-interactive-card::before {
+          .active-lecture-highlight.lecture-interactive-card[style*="overflow: hidden"]::before,
+          .active-lecture-highlight.lecture-interactive-card[style*="overflow:hidden"]::before {
               top: 12px;
               right: 14px;
               font-size: 12px;
@@ -2883,11 +2884,17 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              }
           });
 
-          // Click vào thẻ trên bài giảng để nghe giảng riêng thẻ đó
+          // Click vào thẻ trên bài giảng để nghe giảng riêng thẻ đó (bỏ qua nút bấm/tương tác nội bộ trong thẻ)
           document.addEventListener('click', function(e) {
+             if (!e.target || typeof e.target.closest !== 'function') return;
              var sec = e.target.closest('[data-lecture-section]');
-             if (sec) {
-                var sid = sec.getAttribute('data-lecture-section');
+             if (!sec) return;
+             var interactiveCtrl = e.target.closest('a, button, input, select, textarea, summary, label, [onclick]');
+             if (interactiveCtrl && interactiveCtrl !== sec && sec.contains(interactiveCtrl) && !interactiveCtrl.hasAttribute('data-lecture-section')) {
+                return;
+             }
+             var sid = sec.getAttribute('data-lecture-section');
+             if (sid) {
                 window.parent.postMessage({ type: 'LECTURE_PLAY_SECTION', sectionId: sid }, '*');
              }
           });
@@ -3051,6 +3058,14 @@ export default function LectureViewer({
            currentCourseId === 'f21fe521-aaf9-4917-8c2a-1931666237b5' ||
            courseId === 'f21fe521-aaf9-4917-8c2a-1931666237b5' ||
            activeLecture?.course_id === 'f21fe521-aaf9-4917-8c2a-1931666237b5';
+  }, [course, currentCourseId, courseId, activeLecture]);
+
+  const isGeographyCourse = useMemo(() => {
+    const courseTitle = course?.title?.toLowerCase() || '';
+    return courseTitle.includes('geography') ||
+           currentCourseId === '9331cc50-d76b-4247-860e-25b2096e93cb' ||
+           courseId === '9331cc50-d76b-4247-860e-25b2096e93cb' ||
+           activeLecture?.course_id === '9331cc50-d76b-4247-860e-25b2096e93cb';
   }, [course, currentCourseId, courseId, activeLecture]);
 
   const isOfficeEnglishCourse = useMemo(() => {
@@ -5355,8 +5370,36 @@ export default function LectureViewer({
                                          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                                      }`}
                                    >
-                                     <span>📄</span>
-                                     <span>Trang 4</span>
+                                     <span>{isGeographyCourse ? '🗺️' : '📄'}</span>
+                                     <span>{isGeographyCourse ? 'Tóm tắt Logic (Trang 4)' : 'Trang 4'}</span>
+                                   </button>
+                                 )}
+                                 {totalPages >= 5 && (
+                                   <button
+                                     type="button"
+                                     onClick={() => { setCurrentPage(5); persistPage(5); }}
+                                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                       currentPage === 5 
+                                         ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
+                                         : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                     }`}
+                                   >
+                                     <span>{isGeographyCourse ? '✏️' : '📄'}</span>
+                                     <span>{isGeographyCourse ? 'Practice Activities (Trang 5)' : 'Trang 5'}</span>
+                                   </button>
+                                 )}
+                                 {totalPages >= 6 && (
+                                   <button
+                                     type="button"
+                                     onClick={() => { setCurrentPage(6); persistPage(6); }}
+                                     className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                       currentPage === 6 
+                                         ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20' 
+                                         : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                     }`}
+                                   >
+                                     <span>{isGeographyCourse ? '📘' : '📄'}</span>
+                                     <span>{isGeographyCourse ? 'Textbook Tasks (Trang 6)' : 'Trang 6'}</span>
                                    </button>
                                  )}
                                </>

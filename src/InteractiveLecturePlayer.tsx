@@ -256,16 +256,18 @@ export default function InteractiveLecturePlayer({
   const jumpToSection = useCallback((secId: string) => {
     if (!manifest) return;
     const cleanId = secId.replace('#', '');
-    const idx = manifest.segments.findIndex(s => 
-      s.id === cleanId || 
-      s.selector === `#${cleanId}` ||
-      s.selector.includes(cleanId)
-    );
-    if (idx === -1) return;
-
     const ranges = manifest.majorSections || MAJOR_SECTION_RANGES;
     const range = ranges[cleanId];
     const isMajor = !!range;
+
+    const idx = isMajor
+      ? range.start
+      : manifest.segments.findIndex(s => 
+          s.id === cleanId || 
+          s.selector === `#${cleanId}` ||
+          s.selector.includes(cleanId)
+        );
+    if (idx === -1 || idx >= manifest.segments.length) return;
 
     const curIdx = currentSegmentIndexRef.current;
     const isCurrentlyPlaying = isPlayingRef.current;

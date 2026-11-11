@@ -2905,9 +2905,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </h3>
                               
                               <div className="flex flex-wrap items-center gap-1.5 mb-2">
-                                  {(test.content_json?.basicInfo?.guide_video_url || test.content_json?.guide_video_url) && (
+                                  {(test.content_json?.guide_videos?.length > 0 || test.content_json?.basicInfo?.guide_video_url || test.content_json?.guide_video_url) && (
                                       <span className={`text-[10px] px-2 py-0.5 rounded-md font-bold tracking-wider flex items-center gap-1 ${isTestLocked ? 'bg-slate-200 text-slate-500 border border-slate-300' : 'bg-red-50 text-red-600 border border-red-100'}`} title="Có video hướng dẫn & giải đề">
-                                          🎬 Video giải đề
+                                          🎬 Video giải đề{test.content_json?.guide_videos?.length > 1 ? ` (${test.content_json.guide_videos.length})` : ''}
                                       </span>
                                   )}
                                   {matchedClassId && !isCompleted && !isTestLocked && (
@@ -2960,6 +2960,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <div className="w-full flex-1 min-h-0 h-full flex flex-col animate-in fade-in duration-500 relative">
             <TaskBoard 
               userId={currentUser.id} 
+              isAdmin={currentUser.role === 'admin'}
               filterCourseId={filterCourse}
               courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
               bottomActions={renderBottomControls}

@@ -2,7 +2,7 @@
   "lectureId": "757409b3-5cec-4e1f-8877-18d81e440103",
   "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
   "lectureTitle": "B4: Biological molecules",
-  "totalDuration": 527.96,
+  "totalDuration": 440.09,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -14,11 +14,11 @@
     },
     "sec_biomolecules": {
       "start": 1,
-      "end": 6
+      "end": 4
     },
     "sec-biomolecules": {
       "start": 1,
-      "end": 6
+      "end": 4
     },
     "sec_carbohydrates": {
       "start": 2,
@@ -44,69 +44,45 @@
       "start": 4,
       "end": 4
     },
-    "sec_dna": {
-      "start": 5,
-      "end": 5
-    },
-    "sec-dna": {
-      "start": 5,
-      "end": 5
-    },
-    "sec_water": {
-      "start": 6,
-      "end": 6
-    },
-    "sec-water": {
-      "start": 6,
-      "end": 6
-    },
     "sec_food_tests": {
-      "start": 7,
-      "end": 12
+      "start": 5,
+      "end": 9
     },
     "sec-food-tests": {
-      "start": 7,
-      "end": 12
-    },
-    "sec_test_sugar": {
-      "start": 8,
-      "end": 8
-    },
-    "sec-test-sugar": {
-      "start": 8,
-      "end": 8
+      "start": 5,
+      "end": 9
     },
     "sec_test_starch": {
-      "start": 9,
-      "end": 9
+      "start": 6,
+      "end": 6
     },
     "sec-test-starch": {
+      "start": 6,
+      "end": 6
+    },
+    "sec_test_sugar": {
+      "start": 7,
+      "end": 7
+    },
+    "sec-test-sugar": {
+      "start": 7,
+      "end": 7
+    },
+    "sec_test_protein": {
+      "start": 8,
+      "end": 8
+    },
+    "sec-test-protein": {
+      "start": 8,
+      "end": 8
+    },
+    "sec_test_lipid": {
       "start": 9,
       "end": 9
     },
-    "sec_test_protein": {
-      "start": 10,
-      "end": 10
-    },
-    "sec-test-protein": {
-      "start": 10,
-      "end": 10
-    },
-    "sec_test_lipid": {
-      "start": 11,
-      "end": 11
-    },
     "sec-test-lipid": {
-      "start": 11,
-      "end": 11
-    },
-    "sec_test_vitc": {
-      "start": 12,
-      "end": 12
-    },
-    "sec-test-vitc": {
-      "start": 12,
-      "end": 12
+      "start": 9,
+      "end": 9
     }
   },
   "segments": [
@@ -123,7 +99,7 @@
     },
     {
       "id": "sec_biomolecules",
-      "title": "1. Cấu trúc Hóa học của các Phân tử Sinh học (Biomolecules Overview)",
+      "title": "1. Nguyên tố Hóa học & Đơn vị Cấu tạo (Biomolecules Overview)",
       "selector": "#sec-biomolecules",
       "en": "Section 1 examines the chemical elements and structural units of biomolecules. Carbohydrates and lipids contain Carbon, Hydrogen, and Oxygen. Proteins additionally contain Nitrogen and some Sulfur. DNA contains Carbon, Hydrogen, Oxygen, Nitrogen, and Phosphorus.",
       "vi": "Mục một khảo sát các nguyên tố hóa học và đơn vị cấu tạo của các phân tử sinh học. Carbohydrate và lipid chứa Carbon, Hydro và Oxy. Protein có thêm Nitơ và một số chứa Lưu huỳnh. Phân tử DNA chứa Carbon, Hydro, Oxy, Nitơ và Photpho.",
@@ -145,7 +121,7 @@
     },
     {
       "id": "sec_lipids",
-      "title": "🥑 Fats & Oils / Lipids (Chất béo)",
+      "title": "🥑 Fats & Oils / Lipids (Chất béo & Dầu)",
       "selector": "#sec-lipids",
       "en": "Lipids (fats and oils) are made of Carbon, Hydrogen, and Oxygen. Each lipid molecule is synthesised from one glycerol molecule chemically bonded to three fatty acid chains. Lipids provide high-density long-term energy storage, thermal insulation, and buoyancy.",
       "vi": "Lipid (chất béo và dầu) cấu tạo từ Carbon, Hydro và Oxy. Mỗi phân tử chất béo được tổng hợp từ một phân tử glycerol liên kết hóa học với ba chuỗi acid béo. Chất béo giúp dự trữ năng lượng đậm đặc lâu dài, cách nhiệt giữ ấm cơ thể và tạo sức nổi.",
@@ -166,92 +142,59 @@
       "audioUrl": "/audio/lectures/science/b4/sec_proteins.mp3"
     },
     {
-      "id": "sec_dna",
-      "title": "🧬 DNA Structure (Cấu trúc DNA)",
-      "selector": "#sec-dna",
-      "en": "DNA consists of two polynucleotide strands coiled into a double helix. The strands are cross-linked by complementary base pairs: Adenine always pairs with Thymine (A with T), and Cytosine always pairs with Guanine (C with G).",
-      "vi": "Cấu trúc DNA gồm hai chuỗi polynucleotide cuộn xoắn thành chuỗi xoắn kép đều đặn. Hai chuỗi được liên kết bắt chéo bởi các cặp bazơ bổ sung: Adenine luôn liên kết với Thymine (A với T), và Cytosine luôn liên kết với Guanine (C với G).",
-      "duration": 31.77,
-      "startTime": 251.46,
-      "endTime": 283.23,
-      "audioUrl": "/audio/lectures/science/b4/sec_dna.mp3"
-    },
-    {
-      "id": "sec_water",
-      "title": "💧 Role of Water (Dung môi Sinh học)",
-      "selector": "#sec-water",
-      "en": "Water acts as a vital universal biological solvent. It dissolves metabolic waste products like urea for excretion in urine, and transports nutrients, mineral ions, and hormones through blood plasma and plant vascular bundles.",
-      "vi": "Nước đóng vai trò là dung môi sinh học phổ quát tối quan trọng. Nước hòa tan các chất cặn bã chuyển hóa như urê để bài tiết qua nước tiểu, đồng thời vận chuyển chất dinh dưỡng, ion khoáng và hormone qua huyết tương máu và bó mạch thực vật.",
-      "duration": 28.94,
-      "startTime": 283.23,
-      "endTime": 312.17,
-      "audioUrl": "/audio/lectures/science/b4/sec_water.mp3"
-    },
-    {
       "id": "sec_food_tests",
-      "title": "2. Thí nghiệm Định tính Thực phẩm (Qualitative Food Tests Overview)",
+      "title": "2. Thí nghiệm 4 Phép thử Thực phẩm (Qualitative Food Tests)",
       "selector": "#sec-food-tests",
       "en": "Section 2 presents qualitative food tests examined in Cambridge Paper 4 and Paper 6. Remember each specific reagent, temperature requirement, and diagnostic color change.",
       "vi": "Mục hai trình bày các thí nghiệm định tính dinh dưỡng thường xuất hiện trong đề thi Paper 4 và Paper 6 của Cambridge. Hãy ghi nhớ thuốc thử, điều kiện nhiệt độ và màu sắc chỉ thị chuẩn xác của từng phép thử.",
       "duration": 80.99,
-      "startTime": 312.17,
-      "endTime": 393.16,
+      "startTime": 251.46,
+      "endTime": 332.45,
       "audioUrl": "/audio/lectures/science/b4/sec_food_tests.mp3"
     },
     {
-      "id": "sec_test_sugar",
-      "title": "🍬 Benedict's Test for Reducing Sugars",
-      "selector": "#sec-test-sugar",
-      "en": "Reducing Sugars: Add Benedict's reagent and heat in a hot water bath at 80°C for 3 to 5 minutes. Initial color is blue. A positive result turns green, yellow, orange, and finally forms a brick-red precipitate.",
-      "vi": "Đường khử: Cho thuốc thử Benedict và đun cách thủy trong nồi nước nóng ở 80°C từ 3 đến 5 phút. Màu ban đầu là xanh lam. Khi có đường khử, dung dịch chuyển dần sang xanh lá, vàng, cam và kết tủa đỏ gạch.",
-      "duration": 31.58,
-      "startTime": 393.16,
-      "endTime": 424.74,
-      "audioUrl": "/audio/lectures/science/b4/sec_test_sugar.mp3"
-    },
-    {
       "id": "sec_test_starch",
-      "title": "🍞 Iodine Test for Starch",
+      "title": "🍞 1. Iodine Test for Starch",
       "selector": "#sec-test-starch",
       "en": "Starch: Add drops of iodine solution directly at room temperature. Initial color is yellow-brown. A positive result turns blue-black.",
       "vi": "Tinh bột: Nhỏ trực tiếp vài giọt dung dịch iod ở nhiệt độ phòng. Màu ban đầu là vàng nâu. Phản ứng dương tính sẽ chuyển thành màu xanh đen đặc trưng.",
       "duration": 20.99,
-      "startTime": 424.74,
-      "endTime": 445.73,
+      "startTime": 332.45,
+      "endTime": 353.44,
       "audioUrl": "/audio/lectures/science/b4/sec_test_starch.mp3"
     },
     {
+      "id": "sec_test_sugar",
+      "title": "🍬 2. Benedict's Test for Reducing Sugars",
+      "selector": "#sec-test-sugar",
+      "en": "Reducing Sugars: Add Benedict's reagent and heat in a hot water bath at 80°C for 3 to 5 minutes. Initial color is blue. A positive result turns green, yellow, orange, and finally forms a brick-red precipitate.",
+      "vi": "Đường khử: Cho thuốc thử Benedict và đun cách thủy trong nồi nước nóng ở 80°C từ 3 đến 5 phút. Màu ban đầu là xanh lam. Khi có đường khử, dung dịch chuyển dần sang xanh lá, vàng, cam và kết tủa đỏ gạch.",
+      "duration": 31.58,
+      "startTime": 353.44,
+      "endTime": 385.02,
+      "audioUrl": "/audio/lectures/science/b4/sec_test_sugar.mp3"
+    },
+    {
       "id": "sec_test_protein",
-      "title": "🥩 Biuret Test for Proteins",
+      "title": "🥩 3. Biuret Test for Proteins",
       "selector": "#sec-test-protein",
       "en": "Proteins: Add Biuret reagent (potassium hydroxide followed by dilute copper sulfate) at room temperature. Initial color is pale blue. A positive result turns violet or purple.",
       "vi": "Protein: Cho thuốc thử Biuret (dung dịch KOH và đồng sunfat loãng) ở nhiệt độ phòng. Màu ban đầu là xanh lam nhạt. Phản ứng dương tính sẽ chuyển sang màu tím hoặc tím hoa cà.",
       "duration": 26.61,
-      "startTime": 445.73,
-      "endTime": 472.34,
+      "startTime": 385.02,
+      "endTime": 411.63,
       "audioUrl": "/audio/lectures/science/b4/sec_test_protein.mp3"
     },
     {
       "id": "sec_test_lipid",
-      "title": "🥑 Ethanol Emulsion Test for Lipids",
+      "title": "🥑 4. Ethanol Emulsion Test for Fats & Oils",
       "selector": "#sec-test-lipid",
       "en": "Lipids: Dissolve sample in pure ethanol, shake well, then pour the liquid into cold water. Initial solution is clear and colourless. A positive result forms a cloudy white emulsion.",
       "vi": "Lipid (Chất béo): Hòa tan mẫu thử vào cồn ethanol tinh khiết, lắc đều, sau đó rót dịch lọc vào nước lạnh. Dung dịch ban đầu trong suốt không màu. Khi có chất béo, hỗn hợp sẽ xuất hiện lớp nhũ tương màu trắng đục như sữa.",
       "duration": 28.46,
-      "startTime": 472.34,
-      "endTime": 500.8,
+      "startTime": 411.63,
+      "endTime": 440.09,
       "audioUrl": "/audio/lectures/science/b4/sec_test_lipid.mp3"
-    },
-    {
-      "id": "sec_test_vitc",
-      "title": "🍋 DCPIP Test for Vitamin C",
-      "selector": "#sec-test-vitc",
-      "en": "Vitamin C: Add sample drop by drop to blue DCPIP solution. Initial color is dark blue. A positive result rapidly decolourises the DCPIP solution, turning it completely colourless.",
-      "vi": "Vitamin C: Nhỏ từng giọt dịch mẫu vào dung dịch DCPIP màu xanh lam. Khi có vitamin C, dung dịch DCPIP bị mất màu nhanh chóng và trở nên trong suốt không màu.",
-      "duration": 27.16,
-      "startTime": 500.8,
-      "endTime": 527.96,
-      "audioUrl": "/audio/lectures/science/b4/sec_test_vitc.mp3"
     }
   ]
 }

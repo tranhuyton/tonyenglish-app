@@ -54,8 +54,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   const [drawText, setDrawText] = useState('');
   const [textPos, setTextPos] = useState<{x:number,y:number}|null>(null);
 
-  // 🎬 Video hướng dẫn & gợi ý
+  // 🎬 Video hướng dẫn & gợi ý (Hỗ trợ nhiều video)
   const {
+    videos: guideVideos,
+    activeVideoIndex: activeGuideVideoIndex,
+    setActiveVideoIndex: setActiveGuideVideoIndex,
     videoUrl: guideVideoUrl,
     isOpen: isGuideVideoOpen,
     setIsOpen: setIsGuideVideoOpen,
@@ -63,17 +66,20 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     setIsTheaterOpen: setIsGuideVideoTheaterOpen,
     isEditModalOpen: isGuideVideoEditModalOpen,
     setIsEditModalOpen: setIsGuideVideoEditModalOpen,
-    handleSaveVideo: handleSaveGuideVideo,
-  } = useTestGuideVideo(testData, (newUrl) => {
+    handleSaveVideos: handleSaveGuideVideos,
+  } = useTestGuideVideo(testData, (newUrl, newVideos) => {
     setTestData((prev: any) => ({
       ...prev,
       guide_video_url: newUrl,
+      guide_videos: newVideos,
       content_json: {
         ...(prev?.content_json || {}),
         guide_video_url: newUrl,
+        guide_videos: newVideos,
         basicInfo: {
           ...(prev?.content_json?.basicInfo || {}),
           guide_video_url: newUrl,
+          guide_videos: newVideos,
         }
       }
     }));
@@ -790,6 +796,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             {/* 🎬 NÚT BẬT / THÊM VIDEO HƯỚNG DẪN */}
             <TestGuideVideoButton
               videoUrl={guideVideoUrl}
+              videos={guideVideos}
               isOpen={isGuideVideoOpen}
               onToggleOpen={() => setIsGuideVideoOpen(!isGuideVideoOpen)}
               onOpenEditModal={() => setIsGuideVideoEditModalOpen(true)}
@@ -801,6 +808,9 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           {/* 🎬 INLINE VIDEO PLAYER (Right below header, stays visible while scrolling) */}
           <TestGuideVideoPlayer
             videoUrl={guideVideoUrl}
+            videos={guideVideos}
+            activeVideoIndex={activeGuideVideoIndex}
+            onSelectVideo={setActiveGuideVideoIndex}
             isOpen={isGuideVideoOpen}
             onClose={() => setIsGuideVideoOpen(false)}
             isTheaterOpen={isGuideVideoTheaterOpen}
@@ -813,7 +823,8 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             isOpen={isGuideVideoEditModalOpen}
             onClose={() => setIsGuideVideoEditModalOpen(false)}
             initialUrl={guideVideoUrl}
-            onSave={handleSaveGuideVideo}
+            initialVideos={guideVideos}
+            onSaveVideos={handleSaveGuideVideos}
             testTitle={testData?.title}
           />
 

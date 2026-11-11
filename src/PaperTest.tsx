@@ -43,10 +43,10 @@ const isAnswerCorrect = (userAns: string, correctAns: string) => {
   
   for (const c of cArr) {
     if (u === c) return true;
-    const uMatch = u.match(/^([A-Z])[\.\):]/);
-    if (uMatch && uMatch[1] === c) return true;
-    const cMatch = c.match(/^([A-Z])[\.\):]/);
-    if (cMatch && u === cMatch[1]) return true;
+    const uMatch = u.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    if (uMatch && (uMatch[1] === c || uMatch[2] === c)) return true;
+    const cMatch = c.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    if (cMatch && (u === cMatch[1] || u === cMatch[2])) return true;
 
     if (c.includes('(') && c.includes(')')) {
       const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
@@ -772,10 +772,10 @@ const handleFinish = async () => {
                       <option value="">-- Chọn --</option>
                       {validOptions.map((opt:string, oIdx:number) => {
                          const val = opt.replace(stripHtmlRegex, '').trim();
-                         const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                         // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
                          return (
                            <option key={oIdx} value={val}>
-                             {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                             {val}
                            </option>
                          );
                       })}
@@ -1575,10 +1575,10 @@ const handleFinish = async () => {
                                                         <option value="">---</option>
                                                        {validOptions.map((opt: string, oIdx: number) => {
                                                           const val = opt.replace(stripHtmlRegex, '').trim();
-                                                          const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                                                          // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
                                                           return (
                                                             <option key={oIdx} value={val}>
-                                                              {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                                                              {val}
                                                             </option>
                                                           );
                                                        })}

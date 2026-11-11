@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
+import { GuideVideoListField } from './TestGuideVideo';
 import * as XLSX from 'xlsx';
 import JoditEditor from 'jodit-react';
 import { setupListIndent } from './utils/joditFix';
@@ -1079,17 +1080,22 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                 </div>
 
                 <div className="mt-4">
-                  <label className="text-[12px] font-bold text-slate-600 block mb-1">🎬 Video hướng dẫn & gợi ý (URL YouTube, Google Drive, MP4)</label>
-                  <input 
-                    type="text" 
-                    value={testData.basicInfo.guide_video_url || ''} 
-                    onChange={e => setTestData({
-                      ...testData, 
-                      guide_video_url: e.target.value,
-                      basicInfo: { ...testData.basicInfo, guide_video_url: e.target.value }
-                    })} 
-                    placeholder="Dán link YouTube, Google Drive hoặc link video hướng dẫn..." 
-                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]" 
+                  <GuideVideoListField
+                    videos={testData.guide_videos || testData.basicInfo.guide_videos}
+                    legacyUrl={testData.basicInfo.guide_video_url}
+                    onChange={(primaryUrl, nextVideos) => {
+                      const cleanVideos = nextVideos.filter(v => v.url.trim() !== '');
+                      setTestData({
+                        ...testData,
+                        guide_video_url: primaryUrl,
+                        guide_videos: cleanVideos,
+                        basicInfo: {
+                          ...testData.basicInfo,
+                          guide_video_url: primaryUrl,
+                          guide_videos: cleanVideos,
+                        }
+                      });
+                    }}
                   />
                 </div>
               </div>

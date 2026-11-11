@@ -10,6 +10,7 @@ import BatchImportModal from './BatchImportModal';
 import BatchImportJsonModal from './BatchImportJsonModal';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorSelector, ModuleColorModal } from './moduleTheme';
 import { parseLectureFromItem, formatLectureTaskDescription } from './lectureTaskUtils';
+import { syncCourseBoardWithLectures, syncBoardTemplateToSingleUser } from './boardLectureSync';
 import { parseClassConfig, formatClassConfig } from './classConfigUtils';
 import './tailwind.css';
 
@@ -351,9 +352,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [boardCourseLectures, setBoardCourseLectures] = useState<any[]>([]);
   const [boardCourseModules, setBoardCourseModules] = useState<any[]>([]);
   const [boardManualTaskTab, setBoardManualTaskTab] = useState<'template' | 'lecture'>('template');
-  const [boardSelectedLectureTasks, setBoardSelectedLectureTasks] = useState<Map<string, { lectureId: string; lectureTitle: string; taskId: string; taskText: string }>>(new Map());
+  const [boardSelectedLectureTasks, setBoardSelectedLectureTasks] = useState<Map<string, { lectureId: string; lectureTitle: string; taskId: string; taskText: string; testId?: string | null }>>(new Map());
   const [boardLectureSearch, setBoardLectureSearch] = useState<string>('');
   const [expandedBoardLectureIds, setExpandedBoardLectureIds] = useState<Set<string>>(new Set());
+  const [isSyncingBoardFromLectures, setIsSyncingBoardFromLectures] = useState<boolean>(false);
 
   useEffect(() => {
     if (!boardCourseId) {
@@ -367,7 +369,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           .select('id, title, course_id, module_id, task_list, order_index')
           .eq('course_id', boardCourseId)
           .order('order_index', { ascending: true }),
-        supabase.from('modules')
+        supabase.from('lecture_modules')
           .select('id, title, course_id, order_index')
           .eq('course_id', boardCourseId)
           .order('order_index', { ascending: true })
@@ -2505,7 +2507,41 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     }} className="px-4 py-2 rounded-xl font-bold text-[13px] border border-dashed border-slate-300 text-slate-500 hover:bg-slate-50">+ Tạo Board mới</button>
                   </div>
                   {activeBoardTemplateId && (
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <button
+                        disabled={isSyncingBoardFromLectures}
+                        onClick={async () => {
+                          if (!boardCourseId || !activeBoardTemplateId || isSyncingBoardFromLectures) return;
+                          setIsSyncingBoardFromLectures(true);
+                          try {
+                            const res = await syncCourseBoardWithLectures(boardCourseId, activeBoardTemplateId);
+                            const cardIds = boardCards.map(c => c.id);
+                            if (cardIds.length > 0) {
+                              const { data: items } = await supabase
+                                .from('board_card_items')
+                                .select('*')
+                                .in('card_id', cardIds)
+                                .order('order_index');
+                              setBoardCardItems(items || []);
+                            }
+                            alert(
+                              `Đã đồng bộ công việc từ bài giảng thành công!\n` +
+                              `• Bảng mẫu: +${res.addedBoardItems} mục mới (${res.updatedBoardItems} mục cập nhật thứ tự/liên kết)\n` +
+                              `• Lịch báo bài mẫu: +${res.addedDayPlanTasks} mục mới\n` +
+                              `• Học sinh được giao (${res.syncedUsersCount} tài khoản): +${res.addedUserAssignments} mục mới`
+                            );
+                          } catch (err: any) {
+                            console.error(err);
+                            alert('Lỗi đồng bộ: ' + (err?.message || 'Vui lòng thử lại.'));
+                          } finally {
+                            setIsSyncingBoardFromLectures(false);
+                          }
+                        }}
+                        className="px-3 py-1.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 font-bold text-xs transition-all cursor-pointer disabled:opacity-50"
+                        title="Cập nhật toàn bộ việc chép bài & bài tập/quizzes từ các bài giảng vào Bảng giao bài, Lịch báo bài và Học sinh đã giao"
+                      >
+                        {isSyncingBoardFromLectures ? '⏳ Đang đồng bộ...' : '🔄 Đồng bộ từ Bài giảng & Học sinh'}
+                      </button>
                       <button onClick={async () => {
                         const bt = boardTemplates.find(b => b.id === activeBoardTemplateId);
                         const newTitle = prompt('Đổi tên board:', bt?.title);
@@ -3082,7 +3118,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                                 lectureId: lec.id,
                                                 lectureTitle: lec.title,
                                                 taskId: t.id || `task_${idx}`,
-                                                taskText: (t.text || t.title || '').trim()
+                                                taskText: (t.text || t.title || '').trim(),
+                                                testId: t.test_id || null
                                               });
                                             });
                                           }
@@ -3126,7 +3163,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                                 lectureId: lec.id,
                                                 lectureTitle: lec.title,
                                                 taskId: task.id || `task_${tIdx}`,
-                                                taskText: taskText
+                                                taskText: taskText,
+                                                testId: task.test_id || null
                                               });
                                             } else {
                                               nextMap.delete(taskKey);
@@ -3160,18 +3198,23 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             onClick={async () => {
                               const cardItems = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor);
                               let nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
-                              const newTasks = Array.from(boardSelectedLectureTasks.values()).map(item => ({
-                                card_id: boardManualTaskPickerFor,
-                                task_type: 'manual',
-                                title: item.taskText,
-                                description: formatLectureTaskDescription({
-                                  lectureId: item.lectureId,
-                                  lectureTitle: item.lectureTitle,
-                                  courseId: boardCourseId,
-                                  taskId: item.taskId
-                                }),
-                                order_index: nextOrder++,
-                              }));
+                              const newTasks = Array.from(boardSelectedLectureTasks.values()).map(item => {
+                                const isExercise = Boolean(item.testId);
+                                const cleanTestTitle = item.taskText.replace(/^Làm bài tập:\s*/i, '').trim();
+                                return {
+                                  card_id: boardManualTaskPickerFor,
+                                  task_type: isExercise ? 'test' : 'manual',
+                                  test_id: isExercise ? item.testId : null,
+                                  title: isExercise ? cleanTestTitle : item.taskText,
+                                  description: isExercise ? '' : formatLectureTaskDescription({
+                                    lectureId: item.lectureId,
+                                    lectureTitle: item.lectureTitle,
+                                    courseId: boardCourseId,
+                                    taskId: item.taskId
+                                  }),
+                                  order_index: nextOrder++,
+                                };
+                              });
                               const { data, error } = await supabase.from('board_card_items').insert(newTasks).select();
                               if (error) {
                                 alert('Lỗi: ' + error.message);
@@ -3990,9 +4033,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5">
                                <div className="font-bold text-[#0a5482] text-[13px] md:text-[15px] flex items-center gap-2">
                                   {test.title}
-                                  {(test.content_json?.guide_video_url || test.content_json?.basicInfo?.guide_video_url) && (
+                                  {(test.content_json?.guide_videos?.length > 0 || test.content_json?.guide_video_url || test.content_json?.basicInfo?.guide_video_url) && (
                                     <span className="text-[10px] px-1.5 py-0.5 rounded font-bold bg-red-50 text-red-600 border border-red-100 flex items-center gap-1 shrink-0" title="Có video hướng dẫn & gợi ý">
-                                      🎬 Video
+                                      🎬 {test.content_json?.guide_videos?.length > 1 ? `${test.content_json.guide_videos.length} Video` : 'Video'}
                                     </span>
                                   )}
                                </div>
@@ -4886,35 +4929,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       </div>
                       <div className="flex gap-2">
                         <button onClick={async () => {
-                          const selectedTemplate = detailBoardTemplates.find(b => b.id === detailSelectedBoardId);
-                          // Delete old assignments for this board
-                          await supabase.from('assignments').delete().match({ user_id: detailAssignStudent.id, board_template_id: detailSelectedBoardId });
-                          // Re-insert from current template
-                          const inserts: any[] = [];
-                          for (const col of detailBoardColumns) {
-                            const colCards = detailBoardCards.filter(c => c.column_id === col.id);
-                            for (const card of colCards) {
-                              const cardItems = detailBoardItems.filter(i => i.card_id === card.id);
-                              for (const item of cardItems) {
-                                inserts.push({
-                                  user_id: detailAssignStudent.id,
-                                  title: item.title,
-                                  description: item.description || '',
-                                  task_type: item.task_type,
-                                  test_id: item.test_id || null,
-                                  category: col.title,
-                                  card_title: card.title,
-                                  card_order: card.order_index || 0,
-                                  order_index: item.order_index || 0,
-                                  due_date: null,
-                                  board_template_id: detailSelectedBoardId,
-                                  board_template_title: selectedTemplate?.title || 'Board'
-                                });
-                              }
-                            }
-                          }
-                          if (inserts.length > 0) await supabase.from('assignments').insert(inserts);
-                          alert(`Đã cập nhật ${inserts.length} mục việc!`);
+                          const syncRes = await syncBoardTemplateToSingleUser(detailSelectedBoardId, detailAssignStudent.id);
+                          alert(`Đã cập nhật Board an toàn (giữ nguyên tiến độ đã làm): +${syncRes.added} mục mới, ${syncRes.updated} mục cập nhật (Tổng ${syncRes.total} mục)!`);
                           const { data: eb } = await supabase.from('assignments').select('board_template_id, board_template_title').eq('user_id', detailAssignStudent.id).not('board_template_id', 'is', null);
                           setDetailExistingBoards(eb || []);
                         }} className="px-3 py-1.5 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-lg font-bold text-[12px]">🔄 Cập nhật Board</button>

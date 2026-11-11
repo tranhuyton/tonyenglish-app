@@ -2,12 +2,14 @@ import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { supabase } from './supabase';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorModal } from './moduleTheme';
 import { parseLectureFromItem } from './lectureTaskUtils';
+import { syncCourseBoardWithLectures } from './boardLectureSync';
 
 interface Assignment {
   id: string;
   category: string;
   card_title: string;
   card_order: number;
+  order_index?: number;
   title: string;
   description?: string;
   student_completed: boolean;
@@ -132,6 +134,7 @@ export const COLUMN_COLOR_PRESETS: ColumnColorPreset[] = [
 
 export default function TaskBoard({ 
   userId, 
+  isAdmin = false,
   filterCourseId = 'all', 
   topActions,
   bottomActions,
@@ -142,6 +145,7 @@ export default function TaskBoard({
   onStartTest 
 }: { 
   userId: string; 
+  isAdmin?: boolean;
   filterCourseId?: string; 
   topActions?: React.ReactNode;
   bottomActions?: React.ReactNode;
@@ -152,6 +156,7 @@ export default function TaskBoard({
   onStartTest?: (testId: string) => void 
 }) {
   const headerActions = topActions || filterElement;
+  const [isSyncingLectures, setIsSyncingLectures] = useState(false);
   const [internalLectures, setInternalLectures] = useState<any[]>([]);
   useEffect(() => {
     if (!lectures || lectures.length === 0) {
@@ -453,68 +458,92 @@ export default function TaskBoard({
       }
       await query;
 
-      // Sync with lecture_progress
+      // Sync with lecture_progress (supports both lecture-named cards and "Công việc Section/Topic" cards)
       try {
         const cardTitle = task.card_title;
-        if (cardTitle) {
-          const { data: lec } = await supabase
+        const lecMeta = parseLectureFromItem(task, cardTitle, effectiveLectures);
+        const prefixTitle = task.title.includes(' : ') ? task.title.split(' : ')[0].trim() : null;
+
+        let lec: any = null;
+        if (lecMeta.lectureId) {
+          const { data } = await supabase
+            .from('lectures')
+            .select('id, title, task_list')
+            .eq('id', lecMeta.lectureId)
+            .maybeSingle();
+          lec = data;
+        }
+        if (!lec && cardTitle) {
+          const { data } = await supabase
             .from('lectures')
             .select('id, title, task_list')
             .eq('title', cardTitle)
             .maybeSingle();
+          lec = data;
+        }
+        if (!lec && prefixTitle) {
+          const { data } = await supabase
+            .from('lectures')
+            .select('id, title, task_list')
+            .eq('title', prefixTitle)
+            .maybeSingle();
+          lec = data;
+        }
 
-          if (lec && Array.isArray(lec.task_list)) {
-            const taskObj = lec.task_list.find((t: any) => 
-              t.text === task.title || 
-              `${cardTitle} : ${t.text}` === task.title || 
+        if (lec && Array.isArray(lec.task_list)) {
+          const taskObj =
+            (lecMeta.taskId ? lec.task_list.find((t: any) => t.id === lecMeta.taskId) : null) ||
+            lec.task_list.find((t: any) =>
+              t.text === task.title ||
+              `${lec.title} : ${t.text}` === task.title ||
+              (cardTitle ? `${cardTitle} : ${t.text}` === task.title : false) ||
               `[Bài giảng] ${t.text}` === task.title ||
-              task.title.endsWith(t.text)
+              task.title.endsWith(` : ${t.text}`)
             );
 
-            if (taskObj) {
-              const { data: progList } = await supabase
-                .from('lecture_progress')
-                .select('id, completed_tasks')
-                .eq('user_id', userId)
-                .eq('lecture_id', lec.id);
+          if (taskObj) {
+            const { data: progList } = await supabase
+              .from('lecture_progress')
+              .select('id, completed_tasks')
+              .eq('user_id', userId)
+              .eq('lecture_id', lec.id);
 
-              let currentCompleted: string[] = [];
-              let progId: string | null = null;
-              if (progList && progList.length > 0) {
-                progId = progList[0].id;
-                currentCompleted = progList[0].completed_tasks || [];
-              }
-
-              let nextCompleted: string[];
-              if (newStatus) {
-                nextCompleted = currentCompleted.includes(taskObj.id) 
-                  ? currentCompleted 
-                  : [...currentCompleted, taskObj.id];
-              } else {
-                nextCompleted = currentCompleted.filter(id => id !== taskObj.id);
-              }
-
-              const isLecDone = lec.task_list.length > 0 && nextCompleted.length === lec.task_list.length;
-
-              if (progId) {
-                await supabase
-                  .from('lecture_progress')
-                  .update({ completed_tasks: nextCompleted, is_completed: isLecDone })
-                  .eq('id', progId);
-              } else {
-                await supabase
-                  .from('lecture_progress')
-                  .insert({
-                    user_id: userId,
-                    lecture_id: lec.id,
-                    completed_tasks: nextCompleted,
-                    is_completed: isLecDone
-                  });
-              }
-
-              // Dispatch event to notify LectureViewer or any other open components
-              window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
+            let currentCompleted: string[] = [];
+            let progId: string | null = null;
+            if (progList && progList.length > 0) {
+              progId = progList[0].id;
+              currentCompleted = progList[0].completed_tasks || [];
             }
+
+            let nextCompleted: string[];
+            if (newStatus) {
+              nextCompleted = currentCompleted.includes(taskObj.id)
+                ? currentCompleted
+                : [...currentCompleted, taskObj.id];
+            } else {
+              nextCompleted = currentCompleted.filter(id => id !== taskObj.id);
+            }
+
+            const isLecDone = lec.task_list.length > 0 && nextCompleted.length === lec.task_list.length;
+
+            if (progId) {
+              await supabase
+                .from('lecture_progress')
+                .update({ completed_tasks: nextCompleted, is_completed: isLecDone })
+                .eq('id', progId);
+            } else {
+              await supabase
+                .from('lecture_progress')
+                .insert({
+                  user_id: userId,
+                  lecture_id: lec.id,
+                  completed_tasks: nextCompleted,
+                  is_completed: isLecDone
+                });
+            }
+
+            // Dispatch event to notify LectureViewer or any other open components
+            window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
           }
         }
       } catch (syncErr) {
@@ -683,6 +712,53 @@ export default function TaskBoard({
   }
 
   const currentBoard = boardsData[activeBoardIndex] || boardsData[0];
+  const activeBoardTemplate = currentBoard
+    ? boardTemplates.find(t => t.title === currentBoard.title)
+    : (filterCourseId && filterCourseId !== 'all' ? boardTemplates.find(t => String(t.course_id) === String(filterCourseId)) : null);
+  const activeBoardCourseId = activeBoardTemplate?.course_id || (filterCourseId && filterCourseId !== 'all' ? filterCourseId : null);
+
+  const missingLectureTaskCount = (() => {
+    if (!isAdmin || !activeBoardCourseId) return 0;
+    const courseLecs = effectiveLectures.filter(l => String(l.course_id) === String(activeBoardCourseId));
+    if (courseLecs.length === 0) return 0;
+    const boardAssigns = currentBoard ? assignments.filter(a => a.board_template_title === currentBoard.title) : [];
+    const existingTestIds = new Set(boardAssigns.map(a => String(a.test_id || '')).filter(Boolean));
+    const seenLecTestIds = new Set<string>();
+    let missing = 0;
+    for (const lec of courseLecs) {
+      for (const t of Array.isArray(lec.task_list) ? lec.task_list : []) {
+        if (t.test_id) {
+          const tid = String(t.test_id);
+          if (!seenLecTestIds.has(tid)) {
+            seenLecTestIds.add(tid);
+            if (!existingTestIds.has(tid)) missing++;
+          }
+        }
+      }
+    }
+    return missing;
+  })();
+
+  const handleAdminSyncLectures = async () => {
+    if (!activeBoardCourseId || isSyncingLectures) return;
+    setIsSyncingLectures(true);
+    try {
+      const res = await syncCourseBoardWithLectures(String(activeBoardCourseId), activeBoardTemplate?.id);
+      await fetchAssignments();
+      alert(
+        `Đã đồng bộ thành công công việc từ bài giảng!\n` +
+        `• Bảng mẫu: +${res.addedBoardItems} mục mới (${res.updatedBoardItems} mục cập nhật thứ tự/liên kết)\n` +
+        `• Lịch báo bài mẫu: +${res.addedDayPlanTasks} mục mới\n` +
+        `• Học sinh được giao (${res.syncedUsersCount} tài khoản): +${res.addedUserAssignments} mục mới`
+      );
+    } catch (err: any) {
+      console.error('[TaskBoard] Sync error:', err);
+      alert('Lỗi khi đồng bộ từ bài giảng: ' + (err?.message || 'Vui lòng thử lại.'));
+    } finally {
+      setIsSyncingLectures(false);
+    }
+  };
+
   const rawSuffix = courseTitle || currentBoard?.title || '';
   const cleanBannerSuffix = rawSuffix.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim();
 
@@ -749,6 +825,21 @@ export default function TaskBoard({
                       >
                         <span className="text-base">🎨</span> Đổi giao diện màu nền
                       </button>
+                      {isAdmin && activeBoardCourseId && (
+                        <button
+                          type="button"
+                          disabled={isSyncingLectures}
+                          onClick={() => { setIsMobileMenuOpen(false); handleAdminSyncLectures(); }}
+                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-amber-50 text-amber-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer disabled:opacity-50"
+                        >
+                          <span className="text-base">🔄</span>
+                          <span>
+                            {missingLectureTaskCount > 0
+                              ? `Đồng bộ bài giảng (+${missingLectureTaskCount})`
+                              : 'Đồng bộ bài giảng'}
+                          </span>
+                        </button>
+                      )}
                       {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
                         <button
                           type="button"
@@ -849,6 +940,30 @@ export default function TaskBoard({
                   title="Khôi phục thứ tự các cột ban đầu"
                 >
                   <span>↺</span> <span className="hidden xl:inline">Đặt lại cột</span>
+                </button>
+              )}
+
+              {/* Admin sync lecture tasks to board button */}
+              {isAdmin && activeBoardCourseId && (
+                <button
+                  type="button"
+                  disabled={isSyncingLectures}
+                  onClick={handleAdminSyncLectures}
+                  className={`hidden sm:flex border active:scale-95 text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px] disabled:opacity-60 ${
+                    missingLectureTaskCount > 0
+                      ? 'bg-amber-400 hover:bg-amber-300 border-amber-300 text-slate-900 font-extrabold'
+                      : 'bg-white/12 hover:bg-white/20 border-white/20 text-white'
+                  }`}
+                  title="Đồng bộ đầy đủ công việc & bài tập quizzes từ bài giảng vào Bảng giao bài và cập nhật cho học sinh"
+                >
+                  <span className={isSyncingLectures ? 'animate-spin' : ''}>🔄</span>
+                  <span>
+                    {isSyncingLectures
+                      ? 'Đang đồng bộ...'
+                      : missingLectureTaskCount > 0
+                        ? `Đồng bộ bài giảng (+${missingLectureTaskCount})`
+                        : 'Đồng bộ bài giảng'}
+                  </span>
                 </button>
               )}
 

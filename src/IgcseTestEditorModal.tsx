@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
+import { GuideVideoListField, GuideVideoItem, extractGuideVideos } from './TestGuideVideo';
 
 interface IgcseTestEditorProps {
     isOpen: boolean;
@@ -24,6 +25,7 @@ export default function IgcseTestEditorModal({
     const [category, setCategory] = useState('test');
     const [pdfUrl, setPdfUrl] = useState('');
     const [guideVideoUrl, setGuideVideoUrl] = useState('');
+    const [guideVideos, setGuideVideos] = useState<GuideVideoItem[]>([]);
     
     const [questions, setQuestions] = useState<any[]>([]);
     const [isSaving, setIsSaving] = useState(false);
@@ -114,6 +116,7 @@ export default function IgcseTestEditorModal({
                 setCategory(data.content_json?.basicInfo?.category || 'test');
                 setPdfUrl(data.insert_pdf_url || '');
                 setGuideVideoUrl(data.guide_video_url || data.content_json?.guide_video_url || data.content_json?.basicInfo?.guide_video_url || data.json_config?.guide_video_url || '');
+                setGuideVideos(extractGuideVideos(data));
                 
                 const loadedCourseId = data.course_id || data.content_json?.basicInfo?.courseId || 'all';
                 setSelectedCourseId(loadedCourseId);
@@ -188,7 +191,9 @@ export default function IgcseTestEditorModal({
                 alert("⚠️ Có ID câu hỏi bị trùng! Kiểm tra lại."); setIsSaving(false); return;
             }
 
-            const jsonConfig = { timeLimit: timeLimit, guide_video_url: guideVideoUrl.trim() || null, questions: finalQuestions };
+            const cleanGuideVideos = guideVideos.filter(v => v.url.trim() !== '');
+            const primaryGuideUrl = cleanGuideVideos[0]?.url?.trim() || guideVideoUrl.trim() || null;
+            const jsonConfig = { timeLimit: timeLimit, guide_video_url: primaryGuideUrl, guide_videos: cleanGuideVideos, questions: finalQuestions };
             const contentJson = {
                 basicInfo: {
                     title,
@@ -197,9 +202,11 @@ export default function IgcseTestEditorModal({
                     courseId: selectedCourseId || 'all',
                     insert_pdf_url: pdfUrl || '',
                     category: category,
-                    guide_video_url: guideVideoUrl.trim() || null,
+                    guide_video_url: primaryGuideUrl,
+                    guide_videos: cleanGuideVideos,
                 },
-                guide_video_url: guideVideoUrl.trim() || null,
+                guide_video_url: primaryGuideUrl,
+                guide_videos: cleanGuideVideos,
                 questions: finalQuestions,
             };
             const assignedCourseId = selectedCourseId && selectedCourseId !== 'all' ? selectedCourseId : null;
@@ -287,13 +294,13 @@ export default function IgcseTestEditorModal({
                                 </select>
                             </div>
                             <div className="col-span-1 md:col-span-2">
-                                <label className="block text-sm font-bold text-slate-700 mb-1.5">🎬 Video hướng dẫn & gợi ý cách giải (URL YouTube / Google Drive / MP4)</label>
-                                <input 
-                                    type="text" 
-                                    value={guideVideoUrl} 
-                                    onChange={(e) => setGuideVideoUrl(e.target.value)} 
-                                    placeholder="Dán link YouTube, Google Drive hoặc link video hướng dẫn..." 
-                                    className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9] text-sm"
+                                <GuideVideoListField
+                                    videos={guideVideos}
+                                    legacyUrl={guideVideoUrl}
+                                    onChange={(primaryUrl, nextVideos) => {
+                                        setGuideVideoUrl(primaryUrl);
+                                        setGuideVideos(nextVideos);
+                                    }}
                                 />
                             </div>
                             <div className="col-span-1 md:col-span-2">

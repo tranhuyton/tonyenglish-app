@@ -334,7 +334,8 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
               test_id: item.test_id,
               category: col.title,
               card_title: card.title,
-              card_order: card.order_index,
+              card_order: card.order_index || 0,
+              order_index: item.order_index || 0,
               due_date: null,
               board_template_id: bTpl?.id || null,
               board_template_title: bTpl?.title || null

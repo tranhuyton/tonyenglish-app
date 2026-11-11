@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { resolveUploadUrl, getYoutubeEmbedUrl, fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
+import { VideoInteractiveQuiz, parseVideoQuizData } from '../components/VideoInteractiveQuiz';
 
 export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
   const { cateSlug, videoSlug } = useParams<{ cateSlug?: string; videoSlug?: string }>();
@@ -315,52 +316,8 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                         )}
                       </div>
 
-                      {/* Interactive Question / Answer / Subtitles */}
-                      <div className="space-y-3">
-                        {currentVideo.video_question && currentVideo.video_question.trim() !== '' && (
-                          <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
-                            <button
-                              type="button"
-                              onClick={() => {
-                                setShowQuestion(!showQuestion);
-                                if (showQuestion) setShowAnswer(false);
-                              }}
-                              className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
-                            >
-                              <span>❓ {t('View Question')}</span>
-                              <span className="text-xs">{showQuestion ? '▲' : '▼'}</span>
-                            </button>
-
-                            {showQuestion && (
-                              <div className="p-5 pt-3 bg-white border-t border-sky-100 space-y-4">
-                                <div
-                                  className="legacy-prose"
-                                  dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(currentVideo.video_question) }}
-                                />
-                                {currentVideo.video_answer && currentVideo.video_answer.trim() !== '' && (
-                                  <div>
-                                    <button
-                                      type="button"
-                                      onClick={() => setShowAnswer(!showAnswer)}
-                                      className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-2 rounded-xl transition"
-                                    >
-                                      ✅ {t('View Answer')}
-                                    </button>
-                                    {showAnswer && (
-                                      <div
-                                        className="mt-3 p-4 bg-emerald-50 border border-emerald-200 rounded-xl legacy-prose"
-                                        dangerouslySetInnerHTML={{
-                                          __html: fixLegacyHtmlContent(currentVideo.video_answer),
-                                        }}
-                                      />
-                                    )}
-                                  </div>
-                                )}
-                              </div>
-                            )}
-                          </div>
-                        )}
-
+                      {/* Subtitles & Interactive Quiz / Legacy Question */}
+                      <div className="space-y-5">
                         {currentVideo.video_conversation && currentVideo.video_conversation.trim() !== '' && (
                           <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
                             <button
@@ -381,6 +338,71 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                             )}
                           </div>
                         )}
+
+                        {(() => {
+                          const quizQuestions = parseVideoQuizData(currentVideo.video_question);
+                          if (quizQuestions) {
+                            return (
+                              <VideoInteractiveQuiz
+                                key={currentVideo.video_id}
+                                videoId={currentVideo.video_id}
+                                videoTitle={currentVideo.video_desc}
+                                questions={quizQuestions}
+                                lang={lang}
+                              />
+                            );
+                          }
+
+                          if (currentVideo.video_question && currentVideo.video_question.trim() !== '') {
+                            return (
+                              <div className="bg-sky-50/40 rounded-2xl border border-sky-200/80 overflow-hidden">
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setShowQuestion(!showQuestion);
+                                    if (showQuestion) setShowAnswer(false);
+                                  }}
+                                  className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
+                                >
+                                  <span>❓ {t('View Question')}</span>
+                                  <span className="text-xs">{showQuestion ? '▲' : '▼'}</span>
+                                </button>
+
+                                {showQuestion && (
+                                  <div className="p-5 pt-3 bg-white border-t border-sky-100 space-y-4">
+                                    <div
+                                      className="legacy-prose"
+                                      dangerouslySetInnerHTML={{
+                                        __html: fixLegacyHtmlContent(currentVideo.video_question),
+                                      }}
+                                    />
+                                    {currentVideo.video_answer && currentVideo.video_answer.trim() !== '' && (
+                                      <div>
+                                        <button
+                                          type="button"
+                                          onClick={() => setShowAnswer(!showAnswer)}
+                                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-2 rounded-xl transition"
+                                        >
+                                          ✅ {t('View Answer')}
+                                        </button>
+                                        {showAnswer && (
+                                          <div
+                                            className="mt-3 p-4 bg-emerald-50 border border-emerald-200 rounded-xl legacy-prose"
+                                            dangerouslySetInnerHTML={{
+                                              __html: fixLegacyHtmlContent(currentVideo.video_answer),
+                                            }}
+                                          />
+                                        )}
+                                      </div>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          }
+
+                          return null;
+                        })()}
                       </div>
                     </div>
                   )}
@@ -399,34 +421,42 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {videosInCate
                   .filter((vd) => !currentVideo || vd.video_id !== currentVideo.video_id)
-                  .map((vd) => (
-                    <Link
-                      key={vd.video_id}
-                      to={`/video/${cleanCateParam}/${(vd.video_url || '').trim()}`}
-                      className="group bg-white/80 hover:bg-white rounded-2xl border border-slate-200/60 overflow-hidden hover:shadow-md transition-all flex flex-col"
-                    >
-                      <div className="relative h-36 bg-slate-900 overflow-hidden">
-                        <img
-                          src={resolveUploadUrl(vd.video_thumb)}
-                          alt={vd.video_desc}
-                          onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                          }}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
-                          <span className="w-9 h-9 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-xs shadow-md">
-                            ▶
-                          </span>
+                  .map((vd) => {
+                    const vdQuiz = parseVideoQuizData(vd.video_question);
+                    return (
+                      <Link
+                        key={vd.video_id}
+                        to={`/video/${cleanCateParam}/${(vd.video_url || '').trim()}`}
+                        className="group bg-white/80 hover:bg-white rounded-2xl border border-slate-200/60 overflow-hidden hover:shadow-md transition-all flex flex-col"
+                      >
+                        <div className="relative h-36 bg-slate-900 overflow-hidden">
+                          <img
+                            src={resolveUploadUrl(vd.video_thumb)}
+                            alt={vd.video_desc}
+                            onError={(e) => {
+                              (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                            }}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
+                            <span className="w-9 h-9 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-xs shadow-md">
+                              ▶
+                            </span>
+                          </div>
+                          {vdQuiz && (
+                            <span className="absolute bottom-2 right-2 bg-[#0a5482]/90 text-white text-[10.5px] font-extrabold px-2 py-0.5 rounded-md shadow-sm">
+                              📝 {vdQuiz.length} {lang === 'vi' ? 'câu Quiz' : 'Qs'}
+                            </span>
+                          )}
                         </div>
-                      </div>
-                      <div className="p-3.5">
-                        <h4 className="font-medium text-sm sm:text-[14.5px] text-slate-500 group-hover:text-[#0a5482] line-clamp-2 transition-colors">
-                          {vd.video_desc}
-                        </h4>
-                      </div>
-                    </Link>
-                  ))}
+                        <div className="p-3.5">
+                          <h4 className="font-medium text-sm sm:text-[14.5px] text-slate-500 group-hover:text-[#0a5482] line-clamp-2 transition-colors">
+                            {vd.video_desc}
+                          </h4>
+                        </div>
+                      </Link>
+                    );
+                  })}
               </div>
             </div>
           )}
