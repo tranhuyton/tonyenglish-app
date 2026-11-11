@@ -127,7 +127,7 @@ const COURSE_SYLLABUS_PACKAGES: SyllabusPackageItem[] = [
       'Đàm thoại trực tiếp 1 kèm 1 cùng Thầy Tony & AI Tutor thông minh, sửa lỗi phát âm & ngữ pháp tức thì',
       'Hệ thống Podcast hội thoại song ngữ giúp tắm ngôn ngữ và hình thành phản xạ tự nhiên',
     ],
-    lmsCourseTitles: ['Pronunciation', 'Giao tiếp và phản xạ'],
+    lmsCourseTitles: ['Phát Âm', 'Pronunciation', 'Giao tiếp và phản xạ'],
   },
   {
     id: 'office-english',
@@ -408,7 +408,7 @@ export const CoursesPage: React.FC = () => {
       if (cid === 114) {
         return {
           packages: pkgs,
-          lmsCourses: lmsCoursesWithModules.filter((c) => c.title === 'Pronunciation'),
+          lmsCourses: lmsCoursesWithModules.filter((c) => c.title === 'Phát Âm' || c.title === 'Pronunciation'),
         };
       }
       if (cid === 115) {
@@ -436,7 +436,7 @@ export const CoursesPage: React.FC = () => {
       return {
         packages: pkgs,
         lmsCourses: lmsCoursesWithModules
-          .filter((c) => c.title === 'Pronunciation' || c.title === 'Giao tiếp và phản xạ')
+          .filter((c) => c.title === 'Phát Âm' || c.title === 'Pronunciation' || c.title === 'Giao tiếp và phản xạ')
           .map((c) =>
             c.title === 'Giao tiếp và phản xạ' ? { ...c, modules: c.modules.filter((_, idx) => idx < 11) } : c
           ),

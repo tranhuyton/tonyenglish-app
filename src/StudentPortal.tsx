@@ -586,7 +586,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         let igcseCourseIds: string[] = [];
         if (isOnlineUser) {
           const { data: igcseData } = await safeQuery('igcse_courses', () =>
-            supabase.from('courses').select('id, title').ilike('title', '%igcse%')
+            supabase.from('courses').select('id, title, order_index').ilike('title', '%igcse%').order('order_index', { ascending: true })
           );
           if (igcseData) {
             igcseCourseIds = igcseData.map((c: any) => String(c.id));
@@ -626,7 +626,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 fetchAllPages((from, to) => supabase.from('folders').select('id, title, course_id, display_order, thumbnail_url, parent_id').in('course_id', courseIds).order('id').range(from, to)),
                 fetchAllPages((from, to) => supabase.from('lectures').select('id, title, course_id, module_id, task_list, order_index, is_published').eq('is_published', true).in('course_id', courseIds).order('id').range(from, to)),
                 fetchAllPages((from, to) => supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.join(',')}),course_id.is.null`).order('id').range(from, to)),
-                supabase.from('courses').select('*').in('id', courseIds).limit(100)
+                supabase.from('courses').select('*').in('id', courseIds).order('order_index', { ascending: true }).limit(100)
             ]);
             allF = fData || [];
             allL = lData || [];

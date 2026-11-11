@@ -154,7 +154,7 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
   };
 
   const fetchCourses = async () => {
-    const { data } = await supabase.from('courses').select('id, title, type').order('created_at', { ascending: false });
+    const { data } = await supabase.from('courses').select('id, title, type, order_index').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setCourses(data || []);
   };
 
@@ -174,7 +174,7 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
     const courseIds = enrolls?.map(e => e.course_id) || [];
     if (courseIds.length === 0) { setStudentCourses([]); return; }
-    const { data: coursesData } = await supabase.from('courses').select('id, title, type').in('id', courseIds);
+    const { data: coursesData } = await supabase.from('courses').select('id, title, type, order_index').in('id', courseIds).order('order_index', { ascending: true });
     setStudentCourses(coursesData || []);
     
     // Fetch folders per course to bypass Supabase server-side max_rows=1000
