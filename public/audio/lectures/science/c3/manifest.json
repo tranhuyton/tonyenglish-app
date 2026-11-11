@@ -1,155 +1,439 @@
 {
   "lectureId": "f0988036-6fd0-4768-993d-a5ea5fe4eb0b",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "C3: Stoichiometry",
-  "totalDuration": 406.52,
+  "totalDuration": 3066.94,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề C3",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_formulas_equations": {
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 9
+    },
+    "s01_p1_sub02": {
+      "start": 10,
+      "end": 20
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 9
+    },
+    "s01_p2_sub02": {
+      "start": 10,
+      "end": 20
+    },
+    "s01_wex": {
+      "start": 21,
+      "end": 22
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 3,
-      "title": "1. Công thức & Phương trình",
-      "selector": "#sec-formulas-equations"
+      "end": 22
     },
-    "sec_mole_concept": {
-      "start": 4,
-      "end": 7,
-      "title": "2. Khái niệm Mol & Tam giác Tính toán",
-      "selector": "#sec-mole-concept"
+    "s02_int": {
+      "start": 24,
+      "end": 26
     },
-    "sec_empirical_yield": {
-      "start": 8,
-      "end": 10,
-      "title": "3. Công thức Thực nghiệm & Hiệu suất",
-      "selector": "#sec-empirical-yield"
+    "s02_wex": {
+      "start": 33,
+      "end": 34
+    },
+    "s02_hdr": {
+      "start": 23,
+      "end": 34
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề C3: Hóa học Định lượng & Khái niệm Mol",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic C3: Stoichiometry. Chemical reactions obey the law of conservation of mass. In this lesson, we master chemical formulas and state symbols, navigate mole calculations involving mass, gas volume, and solutions, and determine empirical formulas and reaction yields.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C3: Hóa học Định lượng và Khái niệm Mol. Phản ứng hóa học tuân theo định luật bảo toàn khối lượng. Trong bài học này, chúng ta sẽ làm chủ công thức hóa học, ký hiệu trạng thái, các tam giác tính toán số mol theo khối lượng, thể tích khí và dung dịch, cùng công thức đơn giản nhất và hiệu suất phản ứng.",
-      "duration": 42.23,
+      "title": "C3: Hóa học lượng pháp (Stoichiometry)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) C3: Stoichiometry. Complete Master Lecture (0654) • C3.1 Formulas, Word & Ionic Equations • C3.2 Relative Masses ( A r& M r) • C3.3 The Mole, Avogadro Constant, g/dm³ Concentration, Gas Volumes & Limiting Reactants.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ C3: Hóa học lượng pháp (Stoichiometry). Bài giảng Song ngữ Toàn diện (0654) • C3.1 Công thức, Phương trình Chữ & Ion • C3.2 A r& M r• C3.3 Mol, Hằng số Avogadro, Nồng độ g/dm³, Thể tích Khí r.t.p. & Chất giới hạn.",
+      "duration": 60.43,
       "startTime": 0.0,
-      "endTime": 42.23,
+      "endTime": 60.43,
       "audioUrl": "/audio/lectures/science/c3/intro.mp3"
     },
     {
-      "id": "sec_formulas_equations",
-      "title": "1. Công thức & Phương trình Hóa học (Formulas & Equations Overview)",
-      "selector": "#sec-formulas-equations",
-      "en": "Section 1 establishes chemical language: Relative atomic mass Ar from the periodic table, calculating relative molecular mass Mr, and writing balanced equations with state symbols.",
-      "vi": "Mục một thiết lập ngôn ngữ hóa học: Khối lượng nguyên tử tương đối Ar từ bảng tuần hoàn, tính khối lượng phân tử Mr, và viết phương trình hóa học cân bằng kèm ký hiệu trạng thái.",
-      "duration": 65.82,
-      "startTime": 42.23,
-      "endTime": 108.05,
-      "audioUrl": "/audio/lectures/science/c3/sec_formulas_equations.mp3"
+      "id": "s01_hdr",
+      "title": "⚖️ 1. Công thức Hóa học, Khối lượng Tương đối & Phương trình Phản ứng",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "Syllabus C3.1 & C3.2 🟦 CORE + 🟩 SUPPLEMENT ⚖️ 1. Chemical Formulae, Relative Masses & Equations.",
+      "vi": "Syllabus C3.1 & C3.2 🟦 CORE + 🟩 SUPPLEMENT ⚖️ 1. Công thức Hóa học, Khối lượng Tương đối & Phương trình Phản ứng.",
+      "duration": 19.36,
+      "startTime": 60.43,
+      "endTime": 79.79,
+      "audioUrl": "/audio/lectures/science/c3/s01_hdr.mp3"
     },
     {
-      "id": "sec_atomic_mass",
-      "title": "📌 Relative Atomic & Molecular Masses (Ar & Mr)",
-      "selector": "#sec-atomic-mass",
-      "en": "Relative atomic mass Ar is the average mass of naturally occurring atoms of an element compared to 1/12th of Carbon-12. Relative molecular mass Mr is the sum of relative atomic masses in a molecule.",
-      "vi": "Khối lượng nguyên tử tương đối Ar là khối lượng trung bình của các nguyên tử nguyên tố so với một phần 12 khối lượng nguyên tử Carbon 12. Khối lượng phân tử tương đối Mr bằng tổng các Ar của mọi nguyên tử có trong công thức.",
-      "duration": 26.18,
-      "startTime": 108.05,
-      "endTime": 134.23,
-      "audioUrl": "/audio/lectures/science/c3/sec_atomic_mass.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: 1. Balancing a Charge Seesaw (Ionic Formulae): Positive ions ( cations ) and negative ions ( anions ) must balance on a seesaw so total charge = 0 . When Al3+ (+3) pairs with SO42− (−2), you need two +3 ions (+6) and three −2 groups (−6) → Al2(SO4)3 ! Whenever you take 2 or more of a \"combo-meal\" compound ion (OH−, NO3−, SO42−, CO32−, NH4+), wrap the whole group inside brackets ( ) ! 2. Cropping Photobombers Out of a Photo (Ionic Equations): Spectator ions stay dissolved as unchanged (aq) ions before AND after the reaction. Cross them out to zoom in on the real chemical change — forming a solid precipitate (s) , liquid water (l) , or gas bubbles (g) !",
+      "vi": "🎯 Hình dung đời thường: 1. Cân Bằng Bập Bênh Điện Tích (Lập Công thức Ion): Ion dương ( cations ) và ion âm ( anions ) phải ngồi lên bập bênh sao cho tổng điện tích = 0 . Khi Al3+ (+3) ghép với SO42− (−2), cần 2 ion +3 (+6) và 3 nhóm −2 (−6) → Al2(SO4)3 ! Cứ hễ lấy từ 2 nhóm \"combo đa nguyên tử\" trở lên thì BẮT BUỘC bọc trong dấu ngoặc đơn ( ) ! 2. Cắt \"Khán Giả Đứng Xem\" Khỏi Khung Hình (Ionic Equations): Các spectator ions bơi tự do dạng (aq) y hệt nhau cả trước và sau phản ứng — hãy gạch bỏ chúng để thấy rõ bản chất tạo thành kết tủa rắn (s) , nước lỏng (l) , hoặc bọt khí (g) !",
+      "duration": 114.49,
+      "startTime": 79.79,
+      "endTime": 194.28,
+      "audioUrl": "/audio/lectures/science/c3/s01_b01.mp3"
     },
     {
-      "id": "sec_state_symbols",
-      "title": "📌 State Symbols & Balancing (Ký hiệu Trạng thái & Cân bằng)",
-      "selector": "#sec-state-symbols",
-      "en": "State symbols indicate physical states: solid (s), liquid (l), gas (g), and aqueous solution (aq). Pure water is liquid, while dissolved acids, alkalis, and salts are aqueous.",
-      "vi": "Ký hiệu trạng thái thể hiện pha vật lý: rắn (s), lỏng (l), khí (g) và dung dịch trong nước (aq). Nước cất là chất lỏng (l), trong khi axit, kiềm và muối tan trong nước phải mang ký hiệu (aq).",
-      "duration": 30.4,
-      "startTime": 134.23,
-      "endTime": 164.63,
-      "audioUrl": "/audio/lectures/science/c3/sec_state_symbols.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Formulae & Equations (C3.1): Molecular formula = actual number and type of atoms in one molecule. Construct clear word equations (Reactants → Products) and balance symbol equations using front coefficients only — never alter subscripts! 2 → A r, M r& Simple Proportions (🟦 Core C3.2): Sum all A rvalues (multiply everything inside brackets; a dot in hydrated salts like CuSO4·5H2O means ADD 5 × 18 !). Scale simple reacting masses directly by proportion without needing moles. 3 → Ionic Equations (🟩 Supp. C3.1.7): Split ONLY soluble (aq) ionic substances into ions (keep (s) , (l) , (g) intact) → cancel spectator ions → check atom AND charge balance!",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Công thức & Phương trình (C3.1): Molecular formula = số lượng thực tế của mỗi nguyên tố trong 1 phân tử. Viết chuẩn word equations (Chất tham gia → Sản phẩm) và cân bằng bằng hệ số (coefficients) phía trước — cấm sửa chỉ số chân! 2 → A r, M r& Tỉ lệ Khối lượng Đơn giản (🟦 Core C3.2): Cộng tổng các A r(nhân phân phối ngoài ngoặc; dấu chấm trong muối ngậm nước CuSO4·5H2O nghĩa là CỘNG thêm 5 × 18 !). Bài Core 3.2.3 nhân/chia tỉ lệ thuận trực tiếp không cần qua mol. 3 → Phương trình Ion Rút gọn (🟩 Supp. C3.1.7): Chỉ tách các chất điện li tan (aq) thành ion (giữ nguyên (s) , (l) , (g) ) → khử spectator ions → kiểm tra bảo toàn nguyên tố & điện tích!",
+      "duration": 112.24,
+      "startTime": 194.28,
+      "endTime": 306.52,
+      "audioUrl": "/audio/lectures/science/c3/s01_b02.mp3"
     },
     {
-      "id": "sec_mole_concept",
-      "title": "2. Khái niệm Mol & Tam giác Tính toán (The Mole Concept Overview)",
-      "selector": "#sec-mole-concept",
-      "en": "Section 2 introduces The Mole: one mole contains 6.02 times 10 to the 23rd power particles, Avogadro's constant. It bridges atomic particles with macroscopic grams.",
-      "vi": "Mục hai giới thiệu Khái niệm Mol: một mol chứa 6.02 nhân 10 mũ 23 hạt, gọi là hằng số Avogadro. Mol là cầu nối chuyển đổi giữa số hạt vi mô và khối lượng gam vĩ mô.",
-      "duration": 66.23,
-      "startTime": 164.63,
-      "endTime": 230.86,
-      "audioUrl": "/audio/lectures/science/c3/sec_mole_concept.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic mark-killers: (1) Forgetting brackets on polyatomic ions — writing CaOH2 instead of Ca(OH)2 , or multiplying instead of adding water of crystallisation in CuSO4·5H2O (160 + 90 = 250 , NOT 160 × 90!). (2) Splitting an insoluble precipitate like AgCl(s) or covalent H2O(l) into ions in an ionic equation!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy mất điểm kinh điển: (1) Quên dấu ngoặc đơn cho ion đa nguyên tử — viết CaOH2 thay vì Ca(OH)2 , hoặc lấy 160 × 90 thay vì 160 + 90 = 250 cho CuSO4·5H2O ! (2) Tách nhầm kết tủa không tan như AgCl(s) hay nước H2O(l) thành ion!",
+      "duration": 59.98,
+      "startTime": 306.52,
+      "endTime": 366.5,
+      "audioUrl": "/audio/lectures/science/c3/s01_b03.mp3"
     },
     {
-      "id": "sec_mole_mass",
-      "title": "📐 Mole & Mass: n = m / Mr (Mol & Khối lượng)",
-      "selector": "#sec-mole-mass",
-      "en": "The Mass triangle: Moles n equals mass in grams divided by relative molecular mass Mr. Mass equals moles times Mr.",
-      "vi": "Tam giác khối lượng: Số mol n bằng khối lượng m tính bằng gam chia cho khối lượng mol Mr. Ngược lại, khối lượng m bằng số mol nhân Mr.",
-      "duration": 17.68,
-      "startTime": 230.86,
-      "endTime": 248.54,
-      "audioUrl": "/audio/lectures/science/c3/sec_mole_mass.mp3"
+      "id": "s01_b04",
+      "title": "🟦 Core C3.1.2 — Molecular Formula (Công thức Phân tử):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🟦 Core C3.1.2 — Molecular Formula: The actual number and type of different atoms in one molecule of a covalent compound (e.g. glucose = C6H12O6 ; ethene = C2H4 ; hydrogen peroxide = H2O2 ). Remember the 7 diatomic elements: H2, N2, O2, F2, Cl2, Br2, I2.",
+      "vi": "🟦 Core C3.1.2 — Molecular Formula (Công thức Phân tử): Cho biết số lượng thực tế và loại nguyên tử có trong một phân tử (VD: glucose = C6H12O6 ; ethene = C2H4 ; H2O2). Ghi nhớ 7 đơn chất lưỡng nguyên tử: H2, N2, O2, F2, Cl2, Br2, I2.",
+      "duration": 53.79,
+      "startTime": 366.5,
+      "endTime": 420.29,
+      "audioUrl": "/audio/lectures/science/c3/s01_b04.mp3"
     },
     {
-      "id": "sec_mole_gas",
-      "title": "📐 Mole & Gas Volume: V = n × 24 dm³ (Thể tích Khí rtp)",
-      "selector": "#sec-mole-gas",
-      "en": "The Gas Volume triangle: One mole of any gas occupies 24 cubic decimetres at room temperature and pressure. Moles equals volume in dm³ divided by 24.",
-      "vi": "Tam giác thể tích khí: Một mol của bất kỳ chất khí nào đều chiếm 24 đềximét khối ở điều kiện phòng. Số mol bằng thể tích khí tính theo dm³ chia cho 24.",
-      "duration": 22.96,
-      "startTime": 248.54,
-      "endTime": 271.5,
-      "audioUrl": "/audio/lectures/science/c3/sec_mole_gas.mp3"
+      "id": "s01_b05",
+      "title": "🟦 Core C3.1.4 & C3.1.5 — Word & Symbol Equations (Phương trình Chữ & Ký hiệu):",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🟦 Core C3.1.4 & C3.1.5 — Word & Symbol Equations: Word equations show reactants forming products in names (e.g. magnesium + oxygen → magnesium oxide ), while balanced symbol equations show exact atom conservation and state symbols: 2Mg(s) + O2(g) → 2MgO(s).",
+      "vi": "🟦 Core C3.1.4 & C3.1.5 — Word & Symbol Equations (Phương trình Chữ & Ký hiệu): Word equations biểu diễn tên tiếng Anh chất tham gia → sản phẩm, còn symbol equations cân bằng số nguyên tử kèm ký hiệu trạng thái: 2Mg(s) + O2(g) → 2MgO(s).",
+      "duration": 46.64,
+      "startTime": 420.29,
+      "endTime": 466.93,
+      "audioUrl": "/audio/lectures/science/c3/s01_b05.mp3"
     },
     {
-      "id": "sec_mole_conc",
-      "title": "📐 Mole & Solution Concentration: c = n / V (Nồng độ Dung dịch)",
-      "selector": "#sec-mole-conc",
-      "en": "The Solution triangle: Concentration c in mol per dm³ equals moles divided by solution volume in dm³. Volume in cm³ must always be divided by 1000 to convert to dm³.",
-      "vi": "Tam giác nồng độ dung dịch: Nồng độ c tính bằng mol trên dm³ bằng số mol chia cho thể tích dung dịch tính bằng dm³. Nếu thể tích cho bằng cm³, bắt buộc phải chia cho 1000 để đổi ra dm³.",
-      "duration": 27.14,
-      "startTime": 271.5,
-      "endTime": 298.64,
-      "audioUrl": "/audio/lectures/science/c3/sec_mole_conc.mp3"
+      "id": "s01_b06",
+      "title": "Đếm Nguyên tử từ Mô hình Phân tử (Ball-and-Stick), Đếm hạt: 2 C, 6 H, 1 O → C₂H₆...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Deducing Molecular Formula from Ball-and-Stick Model, Count atoms: 2 C, 6 H, 1 O → C₂H₆O (or C₂H₅OH), 🟩 Deducing Ionic Formula from Ion Ratio, Ca²⁺, F⁻, → CaF₂, 4 Ca²⁺ : 8 F⁻ in unit cell → simplest ratio 1 : 2 → CaF₂.",
+      "vi": "Đếm Nguyên tử từ Mô hình Phân tử, Đếm hạt: 2 C, 6 H, 1 O → C₂H₆O (hoặc C₂H₅OH), 🟩 Suy luận Công thức Ion từ Tỉ lệ Hạt, Ca²⁺, F⁻, → CaF₂, 4 Ca²⁺ : 8 F⁻ trong ô mạng → rút gọn 1 : 2 → CaF₂.",
+      "duration": 47.04,
+      "startTime": 466.93,
+      "endTime": 513.97,
+      "audioUrl": "/audio/lectures/science/c3/s01_b06.mp3"
     },
     {
-      "id": "sec_empirical_yield",
-      "title": "3. Công thức Thực nghiệm & Hiệu suất (Empirical Formula & Yield Overview)",
-      "selector": "#sec-empirical-yield",
-      "en": "Section 3 covers empirical formula determination and calculating percentage yield and percentage purity in industrial and laboratory syntheses.",
-      "vi": "Mục ba phân tích cách tìm công thức thực nghiệm đơn giản nhất cùng tính toán hiệu suất phản ứng và độ tinh khiết trong thực nghiệm.",
-      "duration": 61.34,
-      "startTime": 298.64,
-      "endTime": 359.98,
-      "audioUrl": "/audio/lectures/science/c3/sec_empirical_yield.mp3"
+      "id": "s01_b07",
+      "title": "Bảng Điện tích Ion Bắt buộc & Quy tắc Chéo Điện tích (Tổng Điện tích = 0)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🟩 SUPPLEMENT C3.1.6 Essential IGCSE Ion Charges & The Criss-Cross Rule (Net Charge = 0). Magnitude: 1+ / 1−; Positive Ions (Cations): Group I (Li + , Na + , K + ), H + , Ag + , Cu + , NH 4 + (ammonium); Negative Ions (Anions — Memorise Compound Ions!): Group VII (F − , Cl − , Br − , I − ), OH − (hydroxide), NO 3 − (nitrate), HCO 3 − (hydrogencarbonate). Magnitude: 2+ / 2−; Positive Ions (Cations): Group II (Mg 2+ , Ca 2+ , Ba 2+ ), Zn 2+ , Cu 2+ , Fe 2+ , Pb 2+; Negative Ions (Anions — Memorise Compound Ions!): Group VI (O 2− , S 2− ), CO 3 2− (carbonate), SO 4 2− (sulfate), SO 3 2− (sulfite). Magnitude: 3+ / 3−; Positive Ions (Cations): Al 3+ , Fe 3+ , Cr 3+; Negative Ions (Anions — Memorise Compound Ions!): Group V (N 3− , P 3− ), PO 4 3− (phosphate). 🔧 Brackets Rule for Compound Ions: Always enclose a polyatomic ion in brackets when you need 2 or more of it!• Aluminium sulfate: Al3++ SO42−→ Al2(SO4)3 | • Calcium hydroxide: Ca2++ OH−→ Ca(OH)2 | • Ammonium carbonate: NH4++ CO32−→ (NH4)2CO3",
+      "vi": "🟩 SUPPLEMENT C3.1.6 Bảng Điện tích Ion Bắt buộc & Quy tắc Chéo Điện tích (Tổng Điện tích = 0). Độ lớn: 1+ / 1−; Ion Dương (Cations): Nhóm I (Li + , Na + , K + ), H + , Ag + , Cu + , NH 4 + (ammonium); Ion Âm (Anions — Thuộc lòng Ion Đa nguyên tử!): Nhóm VII (F − , Cl − , Br − , I − ), OH − (hydroxide), NO 3 − (nitrate), HCO 3 − (hydrogencarbonate). Độ lớn: 2+ / 2−; Ion Dương (Cations): Nhóm II, Zn 2+ , Cu 2+ , Fe 2+ , Pb 2+; Ion Âm (Anions — Thuộc lòng Ion Đa nguyên tử!): Nhóm VI (O 2− , S 2− ), CO 3 2− (carbonate), SO 4 2− (sulfate), SO 3 2− (sulfite). Độ lớn: 3+ / 3−; Ion Dương (Cations): Al 3+ , Fe 3+ , Cr 3+; Ion Âm (Anions — Thuộc lòng Ion Đa nguyên tử!): Nhóm V (N 3− , P 3− ), PO 4 3− (phosphate). 🔧 Quy tắc Ngoặc đơn cho Ion Đa nguyên tử (Compound Ions): Bắt buộc đặt nhóm ion trong ngoặc đơn ( ) khi chỉ số ≥ 2!• Aluminium sulfate: Al3++ SO42−→ Al2(SO4)3 | • Calcium hydroxide: Ca2++ OH−→ Ca(OH)2 | • Ammonium carbonate: NH4++ CO32−→ (NH4)2CO3",
+      "duration": 226.6,
+      "startTime": 513.97,
+      "endTime": 740.57,
+      "audioUrl": "/audio/lectures/science/c3/s01_b07.mp3"
     },
     {
-      "id": "sec_empirical_formula",
-      "title": "🧪 Empirical vs Molecular Formula (Công thức Thực nghiệm)",
-      "selector": "#sec-empirical-formula",
-      "en": "Empirical formula gives the simplest whole number ratio of atoms of each element in a compound, calculated by dividing mass or percentage by Ar and simplifying ratios.",
-      "vi": "Công thức thực nghiệm biểu thị tỷ lệ số nguyên tử nguyên giản nhất của các nguyên tố trong hợp chất, tính bằng cách lấy khối lượng hoặc phần trăm chia cho Ar rồi rút gọn tỷ lệ về các số nguyên nhỏ nhất.",
-      "duration": 21.06,
-      "startTime": 359.98,
-      "endTime": 381.04,
-      "audioUrl": "/audio/lectures/science/c3/sec_empirical_formula.mp3"
+      "id": "s01_b08",
+      "title": "📌 C3.2 Khối lượng Tương đối ( A r & M r ) & Tỉ lệ Đơn giản",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "📌 C3.2 Relative Masses ( A r& M r) & Simple Proportions. Relative Atomic Mass ( A r): Average mass of the isotopes of an element compared to 1/12th of the mass of an atom of12C. Relative Molecular / Formula Mass ( M r): Sum of all A rvalues in a molecule or ionic formula unit:• Mg(NO3)2: 24 + 2 × [14 + (3 × 16)] = 24 + 124 = 148 • CuSO4·5H2O: 64 + 32 + 64 + (5 × 18) = 250 (dot means ADD 5 waters!). Core C3.2.3 — Reacting Masses by Simple Proportion (No Moles): In CaCO3→ CaO + CO2, M rvalues show 100 g CaCO3→ 56 g CaO + 44 g CO2 . Therefore, heating 25 g CaCO3 (÷ 4) produces 56 ÷ 4 = 14 g CaO !",
+      "vi": "📌 C3.2 Khối lượng Tương đối ( A r& M r) & Tỉ lệ Đơn giản. Relative Atomic Mass ( A r): Khối lượng trung bình của các đồng vị nguyên tố so với 1/12 khối lượng của một nguyên tử12C. Relative Molecular / Formula Mass ( M r): Tổng tất cả giá trị A rtrong công thức phân tử hoặc hợp chất ion:• Mg(NO3)2: 24 + 2 × [14 + (3 × 16)] = 24 + 124 = 148 • CuSO4·5H2O: 64 + 32 + 64 + (5 × 18) = 250 (dấu chấm là CỘNG thêm 5 phân tử nước!). Core C3.2.3 — Tính Khối lượng theo Tỉ lệ Thuận (Không dùng Mol): Trong CaCO3→ CaO + CO2, tỉ lệ M rcho biết 100 g CaCO3→ 56 g CaO + 44 g CO2 . Vậy nung 25 g CaCO3 (chia 4) sẽ thu được 56 ÷ 4 = 14 g CaO !",
+      "duration": 145.74,
+      "startTime": 740.57,
+      "endTime": 886.31,
+      "audioUrl": "/audio/lectures/science/c3/s01_b08.mp3"
     },
     {
-      "id": "sec_yield_purity",
-      "title": "⚖️ Percentage Yield & Purity (Hiệu suất & Độ tinh khiết)",
-      "selector": "#sec-yield-purity",
-      "en": "Percentage yield equals actual mass obtained divided by theoretical maximum mass times 100 percent. Percentage purity equals mass of pure substance divided by total mass of sample times 100 percent.",
-      "vi": "Hiệu suất phản ứng bằng khối lượng thực tế thu được chia cho khối lượng lý thuyết tối đa nhân 100 phần trăm. Độ tinh khiết bằng khối lượng chất tinh khiết chia cho khối lượng toàn bộ mẫu nhân 100 phần trăm.",
-      "duration": 25.48,
-      "startTime": 381.04,
-      "endTime": 406.52,
-      "audioUrl": "/audio/lectures/science/c3/sec_yield_purity.mp3"
+      "id": "s01_b09",
+      "title": "(s) Rắn (Solid):",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "(s) Solid: metals, precipitates (AgCl, BaSO4, CaCO3)",
+      "vi": "(s) Rắn (Solid): kim loại, kết tủa",
+      "duration": 12.86,
+      "startTime": 886.31,
+      "endTime": 899.17,
+      "audioUrl": "/audio/lectures/science/c3/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "(l) Lỏng (Liquid):",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "(l) Liquid: pure water H2O(l) , Br2(l), Hg(l), molten salts",
+      "vi": "(l) Lỏng (Liquid): nước tinh khiết H2O(l) , Br2(l), Hg(l), muối nóng chảy",
+      "duration": 18.16,
+      "startTime": 899.17,
+      "endTime": 917.33,
+      "audioUrl": "/audio/lectures/science/c3/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "(g) Khí (Gas):",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "(g) Gas: H2, O2, CO2, NH3, Cl2, steam H2O(g)",
+      "vi": "(g) Khí (Gas): H2, O2, CO2, NH3, Cl2, hơi nước H2O(g)",
+      "duration": 20.3,
+      "startTime": 917.33,
+      "endTime": 937.63,
+      "audioUrl": "/audio/lectures/science/c3/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "(aq) Dung dịch:",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "(aq) Aqueous: dissolved acids, alkalis & soluble salts",
+      "vi": "(aq) Dung dịch: axit, kiềm & muối hòa tan trong nước",
+      "duration": 10.54,
+      "startTime": 937.63,
+      "endTime": 948.17,
+      "audioUrl": "/audio/lectures/science/c3/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "Nguyên tắc Vàng khi cân bằng:",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "Balancing Golden Rule: Adjust stoichiometric coefficients in front of formulae — NEVER alter subscripts (changing H2O to H2O2changes the substance!).",
+      "vi": "Nguyên tắc Vàng khi cân bằng: Chỉ đặt hệ số (coefficients) đằng trước công thức — TUYỆT ĐỐI KHÔNG sửa chỉ số chân (sửa H2O thành H2O2làm biến đổi chất!).",
+      "duration": 22.71,
+      "startTime": 948.17,
+      "endTime": 970.88,
+      "audioUrl": "/audio/lectures/science/c3/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "⚡ Kỹ thuật Viết Phương trình Ion Rút gọn (Ionic Equations)",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "⚡ Constructing Ionic Equations (Cancelling Spectator Ions)",
+      "vi": "⚡ Kỹ thuật Viết Phương trình Ion Rút gọn (Ionic Equations)",
+      "duration": 9.2,
+      "startTime": 970.88,
+      "endTime": 980.08,
+      "audioUrl": "/audio/lectures/science/c3/s01_b14.mp3"
+    },
+    {
+      "id": "s01_b15",
+      "title": "Quy trình 4 bước:",
+      "selector": "[data-lecture-section=\"s01_b15\"]",
+      "en": "4-Step Method: (1) Write the balanced symbol equation with state symbols → (2) Split ONLY soluble (aq) ionic substances into free ions (keep (s) , (l) , and (g) intact!) → (3) Cancel identical spectator ions appearing on both sides → (4) Check atom & charge balance!",
+      "vi": "Quy trình 4 bước: (1) Viết phương trình phân tử cân bằng kèm trạng thái → (2) Chỉ tách các chất điện li mạnh tan (aq) thành ion tự do (giữ nguyên (s) , (l) , (g) !) → (3) Triệt tiêu các spectator ions (ion khán giả xuất hiện giống hệt ở cả 2 vế) → (4) Kiểm tra bảo toàn nguyên tố & điện tích!",
+      "duration": 43.95,
+      "startTime": 980.08,
+      "endTime": 1024.03,
+      "audioUrl": "/audio/lectures/science/c3/s01_b15.mp3"
+    },
+    {
+      "id": "s01_b16",
+      "title": "1. Trung hòa Axit – Kiềm (Neutralisation):",
+      "selector": "[data-lecture-section=\"s01_b16\"]",
+      "en": "1. Acid–Alkali Neutralisation: HCl(aq) + NaOH(aq) → NaCl(aq) + H2O(l) Cancel Na+& Cl−: H+(aq) + OH−(aq) → H2O(l)",
+      "vi": "1. Trung hòa Axit – Kiềm (Neutralisation): HCl(aq) + NaOH(aq) → NaCl(aq) + H2O(l) Khử Na+& Cl−: H+(aq) + OH−(aq) → H2O(l)",
+      "duration": 39.12,
+      "startTime": 1024.03,
+      "endTime": 1063.15,
+      "audioUrl": "/audio/lectures/science/c3/s01_b16.mp3"
+    },
+    {
+      "id": "s01_b17",
+      "title": "2. Phản ứng Tạo Kết tủa (Precipitation):",
+      "selector": "[data-lecture-section=\"s01_b17\"]",
+      "en": "2. Precipitation Reactions: AgNO3(aq) + NaCl(aq) → AgCl(s) + NaNO3(aq) Net ionic: Ag+(aq) + Cl−(aq) → AgCl(s) Sulfate test: Ba2+(aq) + SO42−(aq) → BaSO4(s)",
+      "vi": "2. Phản ứng Tạo Kết tủa (Precipitation): AgNO3(aq) + NaCl(aq) → AgCl(s) + NaNO3(aq) Ion rút gọn: Ag+(aq) + Cl−(aq) → AgCl(s) Nhận biết Sulfate: Ba2+(aq) + SO42−(aq) → BaSO4(s)",
+      "duration": 52.46,
+      "startTime": 1063.15,
+      "endTime": 1115.61,
+      "audioUrl": "/audio/lectures/science/c3/s01_b17.mp3"
+    },
+    {
+      "id": "s01_b18",
+      "title": "3. Phản ứng Thế Kim loại & Halogen:",
+      "selector": "[data-lecture-section=\"s01_b18\"]",
+      "en": "3. Metal & Halogen Displacement: Zn(s) + CuSO4(aq) → ZnSO4(aq) + Cu(s) Net ionic: Zn(s) + Cu2+(aq) → Zn2+(aq) + Cu(s)",
+      "vi": "3. Phản ứng Thế Kim loại & Halogen: Zn(s) + CuSO4(aq) → ZnSO4(aq) + Cu(s) Ion rút gọn: Zn(s) + Cu2+(aq) → Zn2+(aq) + Cu(s)",
+      "duration": 36.1,
+      "startTime": 1115.61,
+      "endTime": 1151.71,
+      "audioUrl": "/audio/lectures/science/c3/s01_b18.mp3"
+    },
+    {
+      "id": "s01_b19",
+      "title": "4. Axit + Muối Carbonate:",
+      "selector": "[data-lecture-section=\"s01_b19\"]",
+      "en": "4. Acid + Carbonate: 2HCl(aq) + Na2CO3(aq) → 2NaCl(aq) + H2O(l) + CO2(g) Net ionic: 2H+(aq) + CO32−(aq) → H2O(l) + CO2(g)",
+      "vi": "4. Axit + Muối Carbonate: 2HCl(aq) + Na2CO3(aq) → 2NaCl(aq) + H2O(l) + CO2(g) Ion rút gọn: 2H+(aq) + CO32−(aq) → H2O(l) + CO2(g)",
+      "duration": 47.7,
+      "startTime": 1151.71,
+      "endTime": 1199.41,
+      "audioUrl": "/audio/lectures/science/c3/s01_b19.mp3"
+    },
+    {
+      "id": "s01_b20",
+      "title": "Fe 3+",
+      "selector": "[data-lecture-section=\"s01_b20\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Ionic Formula & Atom-Counting MCQ Iron(III) sulfate is an ionic compound containing Fe3+ ions and SO42− ions. What is the correct formula of iron(III) sulfate, and what is the total number of oxygen atoms in one formula unit? A. FeSO₄ — 4 oxygen atoms B. Fe₂(SO₄)₃ — 12 oxygen atoms C. Fe₃(SO₄)₂ — 8 oxygen atoms D. Fe₂SO₄₃ — 43 oxygen atoms ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Balance total positive and negative charges to zero: LCM of 3+ and 2− is 6, so we need two Fe3+ (2 × +3 = +6) and three SO42− (3 × −2 = −6). Because SO42−is a compound ion and we need 3 of them, brackets are mandatory: Fe2(SO4)3 (eliminates A, C, and unbracketed D). Multiplying the subscript outside the bracket gives 3 × 4 = 12 oxygen atoms → B is correct !",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Công thức Ion & Đếm Nguyên tử Paper 2 Iron(III) sulfate is an ionic compound containing Fe3+ ions and SO42− ions. What is the correct formula of iron(III) sulfate, and what is the total number of oxygen atoms in one formula unit? (Iron(III) sulfate chứa ion Fe3+và SO42−. Công thức hóa học đúng và tổng số nguyên tử oxygen trong một đơn vị công thức là bao nhiêu?) A. FeSO₄ — 4 nguyên tử oxygen B. Fe₂(SO₄)₃ — 12 nguyên tử oxygen C. Fe₃(SO₄)₂ — 8 nguyên tử oxygen D. Fe₂SO₄₃ — 43 nguyên tử oxygen ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Cân bằng tổng điện tích bằng 0: Bội chung nhỏ nhất của 3+ và 2− là 6 → cần 2 ion Fe3+ (+6) và 3 nhóm SO42− (−6). Vì lấy 3 nhóm đa nguyên tử SO42−nên bắt buộc đóng ngoặc đơn: Fe2(SO4)3 (loại A, C và D). Nhân chỉ số ngoài ngoặc: 3 × 4 = 12 nguyên tử O → B đúng !",
+      "duration": 164.82,
+      "startTime": 1199.41,
+      "endTime": 1364.23,
+      "audioUrl": "/audio/lectures/science/c3/s01_b20.mp3"
+    },
+    {
+      "id": "s01_b21",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b21\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Equations & Proportions [8 marks] When aqueous barium chloride reacts with aqueous sodium sulfate, a white precipitate of barium sulfate forms alongside aqueous sodium chloride. (a) Write the word equation and the balanced symbol equation, including state symbols , for this reaction. [3] (b) Write the ionic equation , including state symbols, for this precipitation reaction. [2] (c) Calculate the relative formula mass ( M r) of hydrated barium chloride, BaCl2·2H2O , and use simple proportions to calculate the mass of BaSO4( M r= 233) formed from 24.4 g of BaCl2·2H2O. ( A r: H = 1, O = 16, Cl = 35.5, Ba = 137) [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Word & balanced symbol equations: • Word equation: barium chloride + sodium sulfate → barium sulfate + sodium chloride [1m] .• Balanced symbol equation: BaCl2(aq) + Na2SO4(aq) → BaSO4(s) + 2NaCl(aq) (correct formulae & balancing [1m] ; all 4 state symbols correct [1m] ). (b) Net ionic equation: • Split (aq) electrolytes and cancel spectator ions (2Na+and 2Cl−): Ba2+(aq) + SO42−(aq) → BaSO4(s) (correct species & charges [1m] ; state symbols [1m] ). (c) M r& simple reacting mass proportion: • M r(BaCl2·2H2O) = 137 + 2(35.5) + 2 × [2(1) + 16] = 208 + 36 = 244 [1m] .• From 1 : 1 Ba ratio, 244 g of BaCl2·2H2O produces 233 g of BaSO4 [1m] .• Scaling by ÷ 10: 24.4 g produces 233 ÷ 10 = 23.3 g of BaSO4 [1m] .",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Phương trình & Tỉ lệ Khối lượng Paper 4 [8 điểm] When aqueous barium chloride reacts with aqueous sodium sulfate, a white precipitate of barium sulfate forms alongside aqueous sodium chloride. (Khi dung dịch barium chloride tác dụng với dung dịch sodium sulfate, xuất hiện kết tủa trắng barium sulfate và dung dịch sodium chloride.) (a) Write the word equation and the balanced symbol equation, including state symbols , for this reaction. (Viết phương trình chữ và phương trình ký hiệu cân bằng kèm trạng thái.) Viết phương trình ion rút gọn kèm trạng thái. (c) Calculate the relative formula mass ( M r) of hydrated barium chloride, BaCl2·2H2O , and use simple proportions to calculate the mass of BaSO4( M r= 233) formed from 24.4 g of BaCl2·2H2O. ( A r: H = 1, O = 16, Cl = 35.5, Ba = 137) (Tính Mrcủa BaCl2·2H2O và tính khối lượng BaSO4tạo thành từ 24.4 g BaCl2·2H2O theo tỉ lệ đơn giản.) ✍️ Lời giải chi tiết theo thang điểm: (a) Phương trình chữ & phương trình hóa học cân bằng: • Word equation: barium chloride + sodium sulfate → barium sulfate + sodium chloride .• Balanced symbol equation: BaCl2(aq) + Na2SO4(aq) → BaSO4(s) + 2NaCl(aq) (đúng công thức & hệ số cân bằng ; đủ 4 ký hiệu trạng thái ).",
+      "duration": 268.0,
+      "startTime": 1364.23,
+      "endTime": 1632.23,
+      "audioUrl": "/audio/lectures/science/c3/s01_b21.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🧮 2. Khái niệm Mol, Hằng số Avogadro, Nồng độ g/dm³ & Thể tích Khí r.t.p.",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "Syllabus C3.3.1 – C3.3.5 🟦 CORE + 🟩 SUPPLEMENT 🧮 2. The Mole, Avogadro Constant, Mass Concentration & Gas Volumes.",
+      "vi": "Syllabus C3.3.1 – C3.3.5 🟦 CORE + 🟩 SUPPLEMENT 🧮 2. Khái niệm Mol, Hằng số Avogadro, Nồng độ g/dm³ & Thể tích Khí r.t.p.",
+      "duration": 27.33,
+      "startTime": 1632.23,
+      "endTime": 1659.56,
+      "audioUrl": "/audio/lectures/science/c3/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: 1. The Chemist's Giant Dozen (The Mole): When you buy \"1 dozen eggs\", you get 12 eggs whether they are tiny quail eggs (small M r) or giant ostrich eggs (large M r). Because atoms are tiny, chemists count in \"Moles\" — 1 mole = a box of 6.02 × 1023particles ! Chemical equations ONLY speak in boxes (moles), never directly in grams — so every calculation crosses the 3-Step Mole Bridge : Given Unit → Moles → Mole Ratio → Target Unit ! 2. Making Burgers (Limiting Reactant): If each burger needs 2Al + 6HCl (ratio 1 : 3) and you run out of HCl first, burger production stops immediately! The reactant that runs out first is the limiting reactant — it alone decides how much product forms!",
+      "vi": "🎯 Hình dung đời thường: 1. \"Một Tá Khổng Lồ\" Của Nhà Hóa Học (The Mole): Khi mua \"1 tá trứng\", bạn luôn có 12 quả dù là trứng cút nhẹ hay trứng đà điểu nặng. Nguyên tử quá bé nên nhà hóa học đếm theo \"Mol\" — 1 mol = một thùng chứa đúng 6.02 × 1023hạt ! Phương trình hóa học CHỈ nói chuyện bằng số thùng (mol) chứ không nói bằng gam — nên mọi bài toán đều đi qua Cầu nối 3 Bước : Đổi sang Mol → Tỉ lệ Mol phương trình → Đổi ra đơn vị đề hỏi ! 2. Làm Bánh Burger (Limiting Reactant — Chất Giới hạn): Nếu công thức cần 2Al + 6HCl (tỉ lệ 1 : 3) mà kho hết HCl trước, dây chuyền dừng ngay lập tức! Chất nào hết trước là limiting reactant — chỉ được dùng số mol của nó để tính sản phẩm!",
+      "duration": 107.16,
+      "startTime": 1659.56,
+      "endTime": 1766.72,
+      "audioUrl": "/audio/lectures/science/c3/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Unit Rule & g/dm3Concentration (🟦 Core C3.3.1): Always convert cm3÷ 1000 = dm3 FIRST! Mass concentration: c (g/dm3) = mass of solute (g) ÷ volume of solution (dm3) . 2 → Three Mole Gateways (🟩 Supp. C3.3.2–4): Particles: N = n × 6.02 × 1023 . Mass: n = m ÷ M (and unknown molar mass M = m ÷ n ). Any gas at r.t.p.: V (dm3) = n × 24 (or V (cm3) = n × 24 000 ). 3 → Limiting Reactant Test (🟩 Supp. C3.3.5): When quantities of TWO reactants are given, divide each reactant's moles by its balanced coefficient ( n ÷ coeff ). Whichever gives the smaller value is the limiting reactant — use ONLY its moles for Step 2!",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Quy tắc Đổi Đơn vị & Nồng độ g/dm3(🟦 Core C3.3.1): Luôn đổi cm3÷ 1000 = dm3 ĐẦU TIÊN! Nồng độ khối lượng: c (g/dm3) = khối lượng chất tan (g) ÷ thể tích dung dịch (dm3) . 2 → Ba Cửa Ngõ Tính Mol (🟩 Supp. C3.3.2–4): Số hạt: N = n × 6.02 × 1023 . Khối lượng: n = m ÷ M (và tìm phân tử khối M = m ÷ n ). Mọi chất khí ở r.t.p.: V (dm3) = n × 24 (hoặc V (cm3) = n × 24 000 ). 3 → Tìm Chất Giới hạn (🟩 Supp. C3.3.5): Khi đề cho lượng của CẢ HAI chất tham gia, lấy n ÷ hệ số cân bằng cho từng chất — bên nào nhỏ hơn thì chất đó là limiting reactant !",
+      "duration": 135.27,
+      "startTime": 1766.72,
+      "endTime": 1901.99,
+      "audioUrl": "/audio/lectures/science/c3/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Forgetting to convert cm3to dm3(off by 1000×!) or using the EXCESS reactant! Before touching your calculator, circle every cm3 in the question and divide by 1000 (e.g. 250 cm3= 0.250 dm3 ; 600 cm3= 0.600 dm3 ). And remember diatomic gases: M rof H2= 2, O2= 32, N2= 28, Cl2= 71!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Quên chia cm3cho 1000 (sai lệch gấp 1000 lần!) hoặc lấy nhầm số mol chất dư để tính sản phẩm! Hễ thấy cm3 là khoanh tròn chia 1000 ngay (VD: 250 cm3= 0.250 dm3 ; 600 cm3= 0.600 dm3 ). Và nhớ nhân đôi A rcho khí lưỡng nguyên tử: H2= 2, O2= 32, N2= 28, Cl2= 71!",
+      "duration": 71.57,
+      "startTime": 1901.99,
+      "endTime": 1973.56,
+      "audioUrl": "/audio/lectures/science/c3/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🟩 Supplement C3.3.2:",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🟩 Supplement C3.3.2: The mole (mol) is the SI unit of amount of substance . One mole of any substance contains exactly 6.02 × 1023particles (atoms, molecules, or ions) — known as the Avogadro constant ( N A) : Number of particles = n × 6.02 × 1023 . ⚠️ Ion-Counting Trap: 1 mol of MgCl2contains 3 mol of total ions (1 mol Mg2++ 2 mol Cl−) = 3 × 6.02 × 1023= 1.806 × 1024ions !",
+      "vi": "🟩 Supplement C3.3.2: Mole (mol) là đơn vị đo lượng chất . Một mol của bất kỳ chất nào đều chứa đúng 6.02 × 1023hạt vi mô (atoms, molecules hoặc ions) — gọi là hằng số Avogadro (Avogadro constant) : Số hạt = n × 6.02 × 1023 . ⚠️ Bẫy đếm tổng số Ion: 1 mol MgCl2phân ly tạo 3 mol ion tất cả = 3 × 6.02 × 1023= 1.806 × 1024ions !",
+      "duration": 80.47,
+      "startTime": 1973.56,
+      "endTime": 2054.03,
+      "audioUrl": "/audio/lectures/science/c3/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Trung tâm Tam giác Công thức Tương tác (Interactive Formula Hub)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Interactive Stoichiometry Formula Hub. Triangle 1: Mass 1. Mass & Moles. Triangle 2: Gas Volume 2. Gas Volume (r.t.p.). Triangle 3: Solution Concentration 3. Conc. (g/dm³). 1. Mass & Molar Mass Relationship (C3.3.3). m = Mass in grams (g) (if given kg, multiply by 1000; if tonnes, × 106). n = Amount of substance in mol. M = Molar mass in g/mol (numerically equal to A ror M r). n = m ÷ Mm = n × MM = m ÷ n",
+      "vi": "Trung tâm Tam giác Công thức Tương tác. 1. Khối lượng & Mol. 2. Thể tích Khí (r.t.p.). 3. Nồng độ (g/dm³). 1. Quan hệ Khối lượng & Khối lượng Mol — Mass & Molar Mass (C3.3.3). m = Khối lượng (Mass) tính bằng gam (g) (nếu đề cho kg thì nhân 1000; tấn thì × 106). n = Số mol tính bằng mol. M = Khối lượng mol (Molar mass) tính bằng g/mol (bằng trị số của A rhoặc M r). n = m ÷ Mm = n × MM = m ÷ n",
+      "duration": 89.28,
+      "startTime": 2054.03,
+      "endTime": 2143.31,
+      "audioUrl": "/audio/lectures/science/c3/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🚨 Bẫy Đổi Đơn vị Bắt buộc trước khi Bấm Máy:",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🚨 Mandatory Unit Conversions Before Calculating: V (dm³) = V (cm³) ÷ 1000 (e.g. 25.0 cm3= 0.0250 dm3 ) | 1 dm³ = 1000 cm³ (24 dm³ = 24 000 cm³ at r.t.p.)",
+      "vi": "🚨 Bẫy Đổi Đơn vị Bắt buộc trước khi Bấm Máy: V (dm³) = V (cm³) ÷ 1000 (VD: 25.0 cm3= 0.0250 dm3 ) | 1 dm³ = 1000 cm³ (24 dm³ = 24 000 cm³ ở r.t.p.)",
+      "duration": 50.16,
+      "startTime": 2143.31,
+      "endTime": 2193.47,
+      "audioUrl": "/audio/lectures/science/c3/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧭 Sơ đồ Cầu nối 3 Bước Giải Mọi Bài toán Stoichiometry (Paper 4)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🧭 The Universal 3-Step Stoichiometry Bridge (Works for EVERY Paper 4 Calculation!)",
+      "vi": "🧭 Sơ đồ Cầu nối 3 Bước Giải Mọi Bài toán Stoichiometry (Paper 4)",
+      "duration": 12.07,
+      "startTime": 2193.47,
+      "endTime": 2205.54,
+      "audioUrl": "/audio/lectures/science/c3/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "Chất Giới hạn (Limiting Reactant) vs. Chất Dư",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🟩 SUPPLEMENT C3.3.5 Limiting Reactant vs. Excess Problem: 4.8 g of Mg ( A r= 24) reacts with a solution containing 10.95 g of HCl ( M r= 36.5). Find the volume of H2gas at r.t.p. Equation: Mg(s) + 2HCl(aq) → MgCl2(aq) + H2(g) . n (Mg) = 4.8 ÷ 24 = 0.20 mol ; n (HCl) = 10.95 ÷ 36.5 = 0.30 mol. Check 1 : 2 ratio: 0.20 mol Mg requires 2 × 0.20 = 0.40 mol HCl , but we only have 0.30 mol HCl! → HCl is the limiting reactant (Mg is in excess). Use limiting reactant: n (H2) = ½ × n (HCl) = 0.30 ÷ 2 = 0.15 mol. V (H2) = 0.15 × 24 = 3.6 dm3 ( 3600 cm3 ) at r.t.p.",
+      "vi": "🟩 SUPPLEMENT C3.3.5 Chất Giới hạn (Limiting Reactant) vs. Chất Dư Đề bài: Cho 4.8 g Mg ( A r= 24) tác dụng với dung dịch chứa 10.95 g HCl ( M r= 36.5). Tính thể tích khí H2ở r.t.p. Phương trình: Mg(s) + 2HCl(aq) → MgCl2(aq) + H2(g) . n (Mg) = 4.8 ÷ 24 = 0.20 mol ; n (HCl) = 10.95 ÷ 36.5 = 0.30 mol. Xét tỉ lệ 1 : 2: 0.20 mol Mg cần tới 2 × 0.20 = 0.40 mol HCl , nhưng chỉ có 0.30 mol HCl! → HCl hết trước (limiting reactant) , Mg còn dư. Tính theo chất hết (HCl): n (H2) = ½ × n (HCl) = 0.30 ÷ 2 = 0.15 mol. V (H2) = 0.15 × 24 = 3.6 dm3 ( 3600 cm3 ) ở r.t.p.",
+      "duration": 164.36,
+      "startTime": 2205.54,
+      "endTime": 2369.9,
+      "audioUrl": "/audio/lectures/science/c3/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "Thể tích Khí (cm 3 ↔ dm 3 ) & Nồng độ g/dm 3",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "🟦 C3.3.1 + 🟩 C3.3.4–5 Gas Volume (cm3↔ dm3) & g/dm3Conc. Problem: Excess CaCO3reacts with 200 cm3of HCl(aq) to form 480 cm3 of CO2(g) at r.t.p. Find the mass of CaCl2( M r= 111) formed and its concentration in g/dm3. Equation: CaCO3(s) + 2HCl(aq) → CaCl2(aq) + H2O(l) + CO2(g) . Convert gas volume: 480 cm3÷ 1000 = 0.480 dm3 → n (CO2) = 0.480 ÷ 24 = 0.0200 mol. Mole ratio (1 : 1): n (CaCl2) = 0.0200 mol. Mass m (CaCl2) = 0.0200 × 111 = 2.22 g. Concentration in g/dm3= 2.22 g ÷ (200 ÷ 1000 dm3) = 11.1 g/dm3.",
+      "vi": "🟦 C3.3.1 + 🟩 C3.3.4–5 Thể tích Khí (cm3↔ dm3) & Nồng độ g/dm3 Đề bài: Cho CaCO3dư vào 200 cm3dung dịch HCl thu được 480 cm3 khí CO2ở r.t.p. Tính khối lượng CaCl2( M r= 111) tạo thành và nồng độ theo g/dm3. Phương trình: CaCO3(s) + 2HCl(aq) → CaCl2(aq) + H2O(l) + CO2(g) . Đổi thể tích khí: 480 cm3÷ 1000 = 0.480 dm3 → n (CO2) = 0.480 ÷ 24 = 0.0200 mol. Tỉ lệ mol (1 : 1): n (CaCl2) = 0.0200 mol. Khối lượng m (CaCl2) = 0.0200 × 111 = 2.22 g. Nồng độ g/dm3= 2.22 g ÷ (200 ÷ 1000 dm3) = 11.1 g/dm3.",
+      "duration": 171.5,
+      "startTime": 2369.9,
+      "endTime": 2541.4,
+      "audioUrl": "/audio/lectures/science/c3/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "600 cm 3",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Gas Volume & Unknown Mr MCQ At room temperature and pressure (r.t.p.), 600 cm3 of a pure gas X has a mass of 1.10 g . What could gas X be? ( A r: H = 1, C = 12, N = 14, O = 16, S = 32; molar gas volume = 24 dm3at r.t.p.) A. Methane, CH₄ B. Carbon monoxide, CO C. Carbon dioxide, CO₂ D. Sulfur dioxide, SO₂ ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Step 1 — Convert cm3to dm3: V = 600 ÷ 1000 = 0.600 dm3 . Step 2 — Find moles of gas at r.t.p.: n = V ÷ 24 = 0.600 ÷ 24 = 0.0250 mol . Step 3 — Find molar mass (C3.3.3c/d): M = m ÷ n = 1.10 ÷ 0.0250 = 44 g/mol . Checking M r: CH4= 16, CO = 28, CO2= 12 + 32 = 44 , SO2= 64 → C is correct !",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Thể tích Khí & Tìm Mr Bí ẩn Paper 2 At room temperature and pressure (r.t.p.), 600 cm3 of a pure gas X has a mass of 1.10 g . What could gas X be? ( A r: H = 1, C = 12, N = 14, O = 16, S = 32; molar gas volume = 24 dm3at r.t.p.) (Ở điều kiện phòng r.t.p., 600 cm3một chất khí tinh khiết X nặng 1.10 g. Khí X có thể là chất nào?) A. Methane, CH₄ B. Carbon monoxide, CO C. Carbon dioxide, CO₂ D. Sulfur dioxide, SO₂ ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Bước 1 — Đổi cm3ra dm3: V = 600 ÷ 1000 = 0.600 dm3 . Bước 2 — Tính số mol khí ở r.t.p.: n = 0.600 ÷ 24 = 0.0250 mol . Bước 3 — Tìm khối lượng mol (C3.3.3c/d): M = m ÷ n = 1.10 ÷ 0.0250 = 44 g/mol . Kiểm tra M r: CH4= 16, CO = 28, CO2= 12 + 32 = 44 , SO2= 64 → C đúng !",
+      "duration": 194.09,
+      "startTime": 2541.4,
+      "endTime": 2735.49,
+      "audioUrl": "/audio/lectures/science/c3/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "2.70 g",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Reacting Masses, Limiting Reactant & Gas Volume [8 marks] Aluminium reacts with dilute hydrochloric acid according to the balanced equation: 2Al(s) + 6HCl(aq) → 2AlCl3(aq) + 3H2(g) A student adds 2.70 g of aluminium foil ( A r= 27) to 250 cm3 of hydrochloric acid solution containing 9.125 g of dissolved HCl ( M r= 36.5). (a) Calculate the concentration of the initial hydrochloric acid solution in g/dm3 . [2] (b) Calculate the initial moles of Al and HCl, and show clearly which substance is the limiting reactant . [3] (c) Calculate the volume of hydrogen gas, H2, produced at r.t.p. Give your answer in cm3 . [2] (d) Calculate the number of H2molecules produced. (Avogadro constant = 6.02 × 1023mol−1) [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Mass concentration in g/dm3(C3.3.1): • Convert volume: V = 250 ÷ 1000 = 0.250 dm3 [1m] .• Concentration c = 9.125 g ÷ 0.250 dm3= 36.5 g/dm3 [1m] . (b) Moles & Limiting Reactant deduction (C3.3.3 & C3.3.5): • n (Al) = 2.70 ÷ 27 = 0.100 mol ; n (HCl) = 9.125 ÷ 36.5 = 0.250 mol [2m] .• Equation ratio is 2 Al : 6 HCl ( 1 : 3 ), so 0.100 mol Al requires 3 × 0.100 = 0.300 mol HCl , which is more than the 0.250 mol HCl available → HCl is the limiting reactant (Al is in excess) [1m] . (c) Volume of H2gas at r.t.p. (C3.3.4 & C3.3.5): • Use limiting HCl (6 HCl : 3 H2= 2 : 1 ratio): n (H2) = 0.250 ÷ 2 = 0.125 mol [1m] .• V (H2) = 0.125 × 24 = 3.00 dm3= 3.00 × 1000 = 3000 cm3 [1m] .",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Khối lượng, Chất Giới hạn & Khí r.t.p. Paper 4 [8 điểm] Aluminium reacts with dilute hydrochloric acid according to the balanced equation: 2Al(s) + 6HCl(aq) → 2AlCl3(aq) + 3H2(g) A student adds 2.70 g of aluminium foil ( A r= 27) to 250 cm3 of hydrochloric acid solution containing 9.125 g of dissolved HCl ( M r= 36.5). (Học sinh cho 2.70 g lá nhôm vào 250 cm3dung dịch HCl có chứa 9.125 g HCl hòa tan.) (a) Calculate the concentration of the initial hydrochloric acid solution in g/dm3 . (Tính nồng độ dung dịch HCl ban đầu theo g/dm3.) Tính số mol Al, HCl ban đầu và lập luận chỉ rõ chất nào là chất giới hạn. Tính thể tích khí H2thoát ra ở r.t.p. theo cm3. (d) Calculate the number of H2molecules produced. ( N A= 6.02 × 1023mol−1) (Tính số phân tử H2sinh ra.) ✍️ Lời giải chi tiết theo thang điểm: (a) Nồng độ khối lượng theo g/dm3(C3.3.1): • Đổi thể tích: V = 250 ÷ 1000 = 0.250 dm3 .• Nồng độ c = 9.125 g ÷ 0.250 dm3= 36.5 g/dm3 . (b) Số mol & Xác định Limiting Reactant (C3.3.3 & C3.3.5): • n (Al) = 2.70 ÷ 27 = 0.100 mol ; n (HCl) = 9.125 ÷ 36.5 = 0.250 mol .• Tỉ lệ phương trình là 2 Al : 6 HCl ( 1 : 3 ), nên 0.100 mol Al cần tới 3 × 0.100 = 0.300 mol HCl (> 0.250 mol HCl hiện có) → HCl là chất giới hạn (limiting reactant) , Al còn dư .",
+      "duration": 331.45,
+      "startTime": 2735.49,
+      "endTime": 3066.94,
+      "audioUrl": "/audio/lectures/science/c3/s02_b11.mp3"
     }
   ]
 }

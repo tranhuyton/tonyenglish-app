@@ -1,144 +1,440 @@
 {
   "lectureId": "4732621b-f827-4b12-934b-3b53e694cc2a",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "C4: Electrochemistry",
-  "totalDuration": 420.09,
+  "totalDuration": 3266.72,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề C4",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_electrolysis_basics": {
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_wex": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 3,
-      "title": "1. Cơ chế & Cấu tạo Bình điện phân",
-      "selector": "#sec-electrolysis-basics"
+      "end": 11
     },
-    "sec_molten_aqueous": {
-      "start": 4,
-      "end": 6,
-      "title": "2. Điện phân Nóng chảy vs Dung dịch",
-      "selector": "#sec-molten-aqueous"
+    "s02_int": {
+      "start": 13,
+      "end": 15
     },
-    "sec_electroplating_cells": {
-      "start": 7,
-      "end": 9,
-      "title": "3. Mạ điện & Pin Nhiên liệu",
-      "selector": "#sec-electroplating-cells"
+    "s02_p1_sub01": {
+      "start": 17,
+      "end": 20
+    },
+    "s02_p2_sub01": {
+      "start": 17,
+      "end": 20
+    },
+    "s02_wex": {
+      "start": 21,
+      "end": 22
+    },
+    "s02_hdr": {
+      "start": 12,
+      "end": 22
+    },
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_p1_sub01": {
+      "start": 27,
+      "end": 31
+    },
+    "s03_p2_sub01": {
+      "start": 27,
+      "end": 31
+    },
+    "s03_wex": {
+      "start": 32,
+      "end": 33
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 33
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề C4: Điện hóa học & Điện phân",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic C4: Electrochemistry. Electricity can drive non-spontaneous chemical reactions. In this lesson, we study the fundamental components of electrolysis cells, explore molten versus aqueous electrolysis and discharge rules, and investigate electroplating and hydrogen-oxygen fuel cells.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C4: Điện hóa học và Quá trình Điện phân. Dòng điện có thể thúc đẩy các phản ứng hóa học không tự phát. Trong bài học này, chúng ta sẽ tìm hiểu cấu tạo bình điện phân, so sánh điện phân nóng chảy và dung dịch, cùng các ứng dụng mạ điện và pin nhiên liệu hydro-oxy.",
-      "duration": 43.77,
+      "title": "Chuyên đề C4: Điện hóa học (Electrochemistry)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) C4: Electrochemistry. Complete Master Lecture • C4.1 Electrolysis, Charge Transfer & Cathode Half-Equations • Molten PbBr2, Brine, Dilute H2SO4& CuSO4(aq) • C4.2 H2–O2Fuel Cells.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ Chuyên đề C4: Điện hóa học (Electrochemistry). Bài giảng Song ngữ Toàn diện • C4.1 Điện phân, Chuyển dịch Điện tích & Bán phương trình Cathode • PbBr2nóng chảy, Nước muối Brine, H2SO4loãng & CuSO4(aq) • C4.2 Pin Nhiên liệu H2–O2.",
+      "duration": 57.54,
       "startTime": 0.0,
-      "endTime": 43.77,
+      "endTime": 57.54,
       "audioUrl": "/audio/lectures/science/c4/intro.mp3"
     },
     {
-      "id": "sec_electrolysis_basics",
-      "title": "1. Cơ chế Điện phân & Cấu tạo Bình điện phân (Basics of Electrolysis Overview)",
-      "selector": "#sec-electrolysis-basics",
-      "en": "Section 1 defines Electrolysis: the breakdown of an ionic compound, molten or in aqueous solution, by the passage of electricity.",
-      "vi": "Mục một định nghĩa Quá trình Điện phân: là sự phân hủy một hợp chất ion ở trạng thái nóng chảy hoặc trong dung dịch nước dưới tác dụng của dòng điện một chiều.",
-      "duration": 83.49,
-      "startTime": 43.77,
-      "endTime": 127.26,
-      "audioUrl": "/audio/lectures/science/c4/sec_electrolysis_basics.mp3"
+      "id": "s01_hdr",
+      "title": "⚡ 1. Bản chất Điện phân, Chuyển dịch Điện tích & Bán phương trình Ion",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "Syllabus C4.1 (Core 1–2 & Supplement 4, 6, 8) 🟦 CORE + 🟩 SUPPLEMENT ⚡ 1. Fundamentals of Electrolysis, Charge Transfer & Half-Equations.",
+      "vi": "Syllabus C4.1 (Core 1–2 & Supplement 4, 6, 8) 🟦 CORE + 🟩 SUPPLEMENT ⚡ 1. Bản chất Điện phân, Chuyển dịch Điện tích & Bán phương trình Ion.",
+      "duration": 25.62,
+      "startTime": 57.54,
+      "endTime": 83.16,
+      "audioUrl": "/audio/lectures/science/c4/s01_hdr.mp3"
     },
     {
-      "id": "sec_cell_components",
-      "title": "⚡ Electrolysis Cell Anatomy: Anode & Cathode (Cấu tạo Bình điện phân)",
-      "selector": "#sec-cell-components",
-      "en": "An electrolysis cell comprises a power supply, electrolyte containing mobile ions, and two electrodes: Positive Anode attracts negative anions, while Negative Cathode attracts positive cations.",
-      "vi": "Cấu tạo bình điện phân gồm nguồn điện một chiều, chất điện ly chứa các ion chuyển động tự do và hai điện cực: Anode cực dương hút anion âm, còn Cathode cực âm hút cation dương.",
-      "duration": 23.37,
-      "startTime": 127.26,
-      "endTime": 150.63,
-      "audioUrl": "/audio/lectures/science/c4/sec_cell_components.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture an Olympic Swimming Pool Relay Race : the liquid in the pool is the electrolyte , the two touchpads in the water are the electrodes ( Anode + and Cathode − ), and the dry running track around the pool is the external metal wire . Ions are swimmers that stay strictly in the water, while electrons are runners that stay strictly on the dry wire track! Negative swimmers ( anions ) swim to the Anode (+) and hand off electron \"batons\", which sprint through the wire to the Cathode (−) where positive swimmers ( cations ) catch them.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng bình điện phân giống như một Cuộc đua Tiếp sức ở Hồ bơi Olympic : nước trong hồ là chất điện ly (electrolyte) , hai vạch chạm thành hồ là hai điện cực ( Anode + và Cathode − ), còn đường chạy khô ráo trên bờ nối hai đầu hồ là dây dẫn kim loại mạch ngoài . Các ion là vận động viên bơi lội (chỉ ở dưới nước), còn electron là vận động viên chạy bộ (chỉ chạy trên dây kim loại)! Ion âm ( anions ) bơi về Anode (+) để trao \"gậy\" electron ; electron chạy vọt qua dây dẫn sang Cathode (−) trao cho ion dương ( cations )!",
+      "duration": 74.03,
+      "startTime": 83.16,
+      "endTime": 157.19,
+      "audioUrl": "/audio/lectures/science/c4/s01_b01.mp3"
     },
     {
-      "id": "sec_oil_rig",
-      "title": "🧠 OIL RIG & Redox at Electrodes (Oxy hóa - Khử tại Điện cực)",
-      "selector": "#sec-oil-rig",
-      "en": "Remember OIL RIG: Oxidation Is Loss of electrons, which occurs at the positive Anode. Reduction Is Gain of electrons, which occurs at the negative Cathode.",
-      "vi": "Mẹo nhớ kinh điển OIL RIG: Quá trình Oxy hóa là sự Mất electron xảy ra tại cực dương Anode. Quá trình Khử là sự Nhận electron xảy ra tại cực âm Cathode.",
-      "duration": 22.31,
-      "startTime": 150.63,
-      "endTime": 172.94,
-      "audioUrl": "/audio/lectures/science/c4/sec_oil_rig.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Free the Ions (🟦 Core C4.1.1–2): Solid ionic compounds do not conduct because ions are locked in a lattice; melting or dissolving releases mobile ions . Remember PANIC : Positive is Anode, Negative Is Cathode . 2. Charge Transfer & Products (🟩 Supp. C4.1.4 & C4.1.6): Electrons flow in the external circuit; ions move in the electrolyte. Cations go to the cathode (−) to form metals or hydrogen ; anions go to the anode (+) to form non-metals (other than hydrogen) . 3. Cathode Half-Equations (🟩 Supp. C4.1.8): Cations gain electrons (reduction — RIG) at the cathode, e.g. Pb2++ 2e−→ Pb , Cu2++ 2e−→ Cu , and 2H++ 2e−→ H2 .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Giải phóng Ion (🟦 Core C4.1.1–2): Hợp chất ion rắn không dẫn điện vì các ion bị khóa cố định; khi nóng chảy ( molten ) hoặc hòa tan ( aqueous ), các mobile ions được giải phóng. Nhớ PANIC : Positive is Anode (+), Negative Is Cathode (−) . 2. Chuyển dịch Điện tích & Sản phẩm (🟩 Supp. C4.1.4 & C4.1.6): Electrons chạy ở dây dẫn ngoài; ions bơi trong chất điện ly. Cation về Cathode (−) tạo metals hoặc hydrogen ; anion về Anode (+) tạo non-metals (phi kim khác H2) . 3. Bán phương trình Cathode (🟩 Supp. C4.1.8): Tại Cathode (−), cation nhận electron (reduction — RIG) : Pb2++ 2e−→ Pb , Cu2++ 2e−→ Cu , 2H++ 2e−→ H2 .",
+      "duration": 126.34,
+      "startTime": 157.19,
+      "endTime": 283.53,
+      "audioUrl": "/audio/lectures/science/c4/s01_b02.mp3"
     },
     {
-      "id": "sec_molten_aqueous",
-      "title": "2. Điện phân Nóng chảy vs Dung dịch (Molten vs Aqueous Electrolysis Overview)",
-      "selector": "#sec-molten-aqueous",
-      "en": "Section 2 compares molten and aqueous electrolysis: In aqueous solutions, water partially dissociates into H+ and OH- ions, competing with solute ions at both electrodes.",
-      "vi": "Mục hai so sánh điện phân nóng chảy và dung dịch: Trong dung dịch, nước phân ly một phần ra ion H+ và OH-, tạo ra sự cạnh tranh phóng điện tại cả hai điện cực.",
-      "duration": 82.53,
-      "startTime": 172.94,
-      "endTime": 255.47,
-      "audioUrl": "/audio/lectures/science/c4/sec_molten_aqueous.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"electrons move through the electrolyte/solution\" scores 0 marks immediately! Always distinguish the two paths: electrons travel in the external circuit (wires/electrodes) , while mobile ions travel in the electrolyte .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết \"electrons bơi qua dung dịch/electrolyte\" sẽ bị 0 điểm ngay lập tức! Phải tách rõ: electrons chỉ chạy trong external circuit (dây dẫn kim loại) , còn trong electrolyte chỉ có mobile ions di chuyển.",
+      "duration": 34.13,
+      "startTime": 283.53,
+      "endTime": 317.66,
+      "audioUrl": "/audio/lectures/science/c4/s01_b03.mp3"
     },
     {
-      "id": "sec_molten_lead_bromide",
-      "title": "🔥 Molten Lead(II) Bromide Electrolysis (Điện phân PbBr₂ Nóng chảy)",
-      "selector": "#sec-molten-lead-bromide",
-      "en": "During electrolysis of molten lead(II) bromide: Lead ions gain electrons at the cathode to form silvery molten lead metal. Bromide ions lose electrons at the anode to produce reddish-brown bromine gas.",
-      "vi": "Khi điện phân chì hai bromua nóng chảy: Ion chì Pb2+ nhận electron tại cathode tạo thành kim loại chì lỏng màu bạc. Ion bromua Br- mất electron tại anode sinh ra khí brom màu nâu đỏ.",
-      "duration": 27.66,
-      "startTime": 255.47,
-      "endTime": 283.13,
-      "audioUrl": "/audio/lectures/science/c4/sec_molten_lead_bromide.mp3"
+      "id": "s01_b04",
+      "title": "Định nghĩa Chuẩn (C4.1.1):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Official Definition (C4.1.1): Electrolysis is the decomposition of an ionic compound, when molten or in aqueous solution, by the passage of an electric current.",
+      "vi": "Định nghĩa Chuẩn (C4.1.1): Electrolysis (điện phân) là sự phân hủy một hợp chất ion khi nóng chảy hoặc trong dung dịch nước dưới tác dụng của dòng điện.",
+      "duration": 19.35,
+      "startTime": 317.66,
+      "endTime": 337.01,
+      "audioUrl": "/audio/lectures/science/c4/s01_b04.mp3"
     },
     {
-      "id": "sec_aqueous_discharge",
-      "title": "📜 Aqueous Discharge Rules (Quy tắc Phóng điện Dung dịch)",
-      "selector": "#sec-aqueous-discharge",
-      "en": "Discharge rules: At the cathode, hydrogen gas is discharged unless the metal is less reactive than hydrogen, such as copper. At the anode, halide ions produce halogen gas if concentrated; otherwise, hydroxide ions produce oxygen gas.",
-      "vi": "Quy tắc phóng điện: Tại cathode, khí hydrogen thoát ra trừ khi kim loại kém hoạt động hơn hydro như đồng hay bạc. Tại anode, ion halide phóng điện tạo halogen nếu đậm đặc; nếu không, ion hydroxide OH- sẽ phóng điện tạo khí oxygen.",
-      "duration": 32.44,
-      "startTime": 283.13,
-      "endTime": 315.57,
-      "audioUrl": "/audio/lectures/science/c4/sec_aqueous_discharge.mp3"
+      "id": "s01_b05",
+      "title": "🧠 Thần chú PANIC: Positive is Anode (+), Negative Is Cathode (−)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🧠 Mnemonic — PANIC: Positive is Anode, Negative Is Cathode",
+      "vi": "🧠 Thần chú PANIC: Positive is Anode (+), Negative Is Cathode (−)",
+      "duration": 11.9,
+      "startTime": 337.01,
+      "endTime": 348.91,
+      "audioUrl": "/audio/lectures/science/c4/s01_b05.mp3"
     },
     {
-      "id": "sec_electroplating_cells",
-      "title": "3. Mạ điện & Pin Nhiên liệu (Electroplating & Fuel Cells Overview)",
-      "selector": "#sec-electroplating-cells",
-      "en": "Section 3 examines industrial electrochemical applications: Electroplating metals for corrosion resistance and aesthetics, and clean hydrogen-oxygen fuel cells.",
-      "vi": "Mục ba nghiên cứu các ứng dụng công nghiệp: Kỹ thuật mạ điện kim loại chống ăn mòn và tăng tính thẩm mỹ, cùng pin nhiên liệu hydro-oxy sạch.",
-      "duration": 62.73,
-      "startTime": 315.57,
-      "endTime": 378.3,
-      "audioUrl": "/audio/lectures/science/c4/sec_electroplating_cells.mp3"
+      "id": "s01_b06",
+      "title": "Điện cực trơ (Inert Electrodes):",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Inert Electrodes: Made of carbon (graphite) or platinum (Pt) so they do not react with the electrolyte or products.",
+      "vi": "Điện cực trơ (Inert Electrodes): Làm bằng carbon (graphite) hoặc platinum (Pt) để không phản ứng với dung dịch hay sản phẩm.",
+      "duration": 18.56,
+      "startTime": 348.91,
+      "endTime": 367.47,
+      "audioUrl": "/audio/lectures/science/c4/s01_b06.mp3"
     },
     {
-      "id": "sec_electroplating",
-      "title": "🛡️ Electroplating Principles (Nguyên lý Mạ điện)",
-      "selector": "#sec-electroplating",
-      "en": "To electroplate an object: Connect the object to the negative cathode, use the pure plating metal as the positive anode, and use an electrolyte containing soluble ions of the plating metal.",
-      "vi": "Để mạ điện một vật: Nối vật cần mạ vào cực âm cathode, dùng miếng kim loại mạ tinh khiết làm cực dương anode và dùng dung dịch muối tan của kim loại mạ làm chất điện ly.",
-      "duration": 20.99,
-      "startTime": 378.3,
-      "endTime": 399.29,
-      "audioUrl": "/audio/lectures/science/c4/sec_electroplating.mp3"
+      "id": "s01_b07",
+      "title": "Bình Điện phân Tương tác & Vòng Khép kín Điện tích (C4.1.2 & C4.1.4)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Interactive Electrolytic Cell & Charge Transfer (C4.1.2 & C4.1.4). 🟩 Supplement C4.1.4 — Complete Charge Transfer Loop 👆. (a) External Circuit (Wires): Electrons (e−) flow from the Anode (+) → DC Power Supply → Cathode (−). (b) At the Electrodes: Anions lose e−(oxidation) at the anode; cations gain e−(reduction) at the cathode. (c) Inside the Electrolyte: Charge is carried ONLY by mobile ions (cations M+move to cathode; anions X−move to anode). Electrons NEVER swim through the solution!",
+      "vi": "Bình Điện phân Tương tác & Vòng Khép kín Điện tích (C4.1.2 & C4.1.4). 🟩 Supplement C4.1.4 — Cơ chế Truyền tải Điện tích Khép kín 👆. (a) Mạch ngoài kim loại (External Circuit): Các hạt electrons (e−) chạy dọc dây dẫn từ Anode (+) → Nguồn điện → Cathode (−). (b) Tại bề mặt Điện cực: Anion nhường e−(oxidation) ở Anode; Cation nhận e−(reduction) ở Cathode. (c) Trong chất điện ly (Electrolyte): Dòng điện CHỈ do các mobile ions (ion tự do) đảm nhận (cation M+bơi về Cathode; anion X−bơi về Anode). Electron TUYỆT ĐỐI KHÔNG bơi trong dung dịch!",
+      "duration": 95.88,
+      "startTime": 367.47,
+      "endTime": 463.35,
+      "audioUrl": "/audio/lectures/science/c4/s01_b07.mp3"
     },
     {
-      "id": "sec_fuel_cells",
-      "title": "💧 Hydrogen-Oxygen Fuel Cell (Pin Nhiên liệu Hydro-Oxy)",
-      "selector": "#sec-fuel-cells",
-      "en": "The hydrogen-oxygen fuel cell combines hydrogen and oxygen to produce electricity with water as the only byproduct, offering zero greenhouse gas emissions and high efficiency.",
-      "vi": "Pin nhiên liệu hydro-oxy kết hợp khí hydro và oxy để tạo ra dòng điện với chất thải duy nhất là nước tinh khiết, mang lại hiệu suất cao và không phát thải khí nhà kính.",
-      "duration": 20.8,
-      "startTime": 399.29,
-      "endTime": 420.09,
-      "audioUrl": "/audio/lectures/science/c4/sec_fuel_cells.mp3"
+      "id": "s01_b08",
+      "title": "🧠 Quy tắc OIL RIG & Bán phương trình Khử tại Cathode (Cathode Half-Equations)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🟩 SUPPLEMENT C4.1.8 🧠 OIL RIG & Constructing Cathode Ionic Half-Equations. O xidation I s L oss of electrons ( at Anode + ) | R eduction I s G ain of electrons ( at Cathode − ). Supplement Rule (C4.1.6): Metals or hydrogen are always formed at the cathode (−) ; non-metals (other than hydrogen) are formed at the anode (+). Cathode (−) Reduction Half-Equations (Gain e − ): Pb 2+ (l) + 2e − → Pb(l) (molten lead); Anode (+) Electron Loss Reference (C4.1.4b — Oxidation): 2Br − (l) → Br 2 (g) + 2e − (diatomic Br 2 !). Cathode (−) Reduction Half-Equations (Gain e − ): 2H + (aq) + 2e − → H 2 (g) (aqueous acids/salts); Anode (+) Electron Loss Reference (C4.1.4b — Oxidation): 2Cl − (aq) → Cl 2 (g) + 2e − (conc. chloride). Cathode (−) Reduction Half-Equations (Gain e − ): Cu 2+ (aq) + 2e − → Cu(s) (pink-brown copper); Anode (+) Electron Loss Reference (C4.1.4b — Oxidation): 4OH − (aq) → O 2 (g) + 2H 2 O(l) + 4e − ⭐ Memorise! Cathode (−) Reduction Half-Equations (Gain e − ): Al 3+ (l) + 3e − → Al(l) | Ag + (aq) + e − → Ag(s); Anode (+) Electron Loss Reference (C4.1.4b — Oxidation): 2O 2− (l) → O 2 (g) + 4e − | Cu(s) → Cu 2+ (aq) + 2e − (active Cu).",
+      "vi": "🟩 SUPPLEMENT C4.1.8 🧠 Quy tắc OIL RIG & Bán phương trình Khử tại Cathode. O xidation I s L oss (Oxy hóa = Nhường e−tại Anode + ) | R eduction I s G ain (Khử = Nhận e−tại Cathode − ). Quy tắc Supplement (C4.1.6): Kim loại hoặc khí Hydrogen luôn sinh ra ở Cathode (−) ; Phi kim (trừ hydrogen) luôn sinh ra ở Anode (+). Bán phương trình Khử tại Cathode (−) (Nhận e − ): Pb 2+ (l) + 2e − → Pb(l) (chì nóng chảy); Tham khảo Quá trình Nhường e − tại Anode (+) (C4.1.4b — Oxidation): 2Br − (l) → Br 2 (g) + 2e − (phân tử Br 2 !). Bán phương trình Khử tại Cathode (−) (Nhận e − ): 2H + (aq) + 2e − → H 2 (g) (dung dịch nước); Tham khảo Quá trình Nhường e − tại Anode (+) (C4.1.4b — Oxidation): 2Cl − (aq) → Cl 2 (g) + 2e − (muối Cl − đặc). Bán phương trình Khử tại Cathode (−) (Nhận e − ): Cu 2+ (aq) + 2e − → Cu(s) (đồng màu đỏ nâu); Tham khảo Quá trình Nhường e − tại Anode (+) (C4.1.4b — Oxidation): 4OH − (aq) → O 2 (g) + 2H 2 O(l) + 4e − ⭐ Thuộc lòng! Bán phương trình Khử tại Cathode (−) (Nhận e − ): Al 3+ (l) + 3e − → Al(l) | Ag + (aq) + e − → Ag(s); Tham khảo Quá trình Nhường e − tại Anode (+) (C4.1.4b — Oxidation): 2O 2− (l) → O 2 (g) + 4e − | Cu(s) → Cu 2+ (aq) + 2e − (cực Cu tan).",
+      "duration": 247.92,
+      "startTime": 463.35,
+      "endTime": 711.27,
+      "audioUrl": "/audio/lectures/science/c4/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which row correctly identifies the electrode where reduction occurs, the particles carrying charge in the electrolyte, and the general products formed at the cathode during electrolysis? A. Reduction at: Anode (+) | Charge carriers in electrolyte: electrons | Cathode products: non-metals B. Reduction at: Cathode (−) | Charge carriers in electrolyte: mobile ions | Cathode products: metals or hydrogen C. Reduction at: Cathode (−) | Charge carriers in electrolyte: electrons | Cathode products: metals or hydrogen D. Reduction at: Anode (+) | Charge carriers in electrolyte: mobile ions | Cathode products: metals or oxygen ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: By PANIC and OIL RIG , positive cations migrate to the negative cathode (−) where they gain electrons (reduction) (eliminating A and D). Inside the liquid/aqueous electrolyte , charge is carried ONLY by mobile ions — never free electrons (eliminating C). Discharging positive metal ions or H+ions at the cathode always yields metals or hydrogen gas (H2) .",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Which row correctly identifies the electrode where reduction occurs, the particles carrying charge in the electrolyte, and the general products formed at the cathode during electrolysis? (Dòng nào xác định đúng điện cực xảy ra sự khử, hạt mang điện trong chất điện ly và sản phẩm chung sinh ra tại cathode?) A. Reduction at: Anode (+) | Charge carriers in electrolyte: electrons | Cathode products: non-metals B. Reduction at: Cathode (−) | Charge carriers in electrolyte: mobile ions | Cathode products: metals or hydrogen C. Reduction at: Cathode (−) | Charge carriers in electrolyte: electrons | Cathode products: metals or hydrogen D. Reduction at: Anode (+) | Charge carriers in electrolyte: mobile ions | Cathode products: metals or oxygen ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Theo PANIC và OIL RIG , các cation dương bơi về cực âm Cathode (−) để nhận electron (reduction) (loại A và D). Trong chất điện ly lỏng/dung dịch, điện tích CHỈ do mobile ions mang đi — không có electron tự do (loại C). Sản phẩm tại cathode luôn là kim loại (metals) hoặc khí hydrogen (H2) .",
+      "duration": 159.56,
+      "startTime": 711.27,
+      "endTime": 870.83,
+      "audioUrl": "/audio/lectures/science/c4/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Molten zinc bromide, ZnBr2(l), is electrolysed using inert carbon (graphite) electrodes. (a) Explain why solid zinc bromide does not conduct electricity, whereas molten zinc bromide does. [2] (b) Name the product formed at the positive anode (+) and state whether ions lose or gain electrons there. [2] (c) Construct the balanced ionic half-equation for the reduction reaction at the negative cathode (−). [1] ✍️ Step-by-Step Mark Scheme Solution: (a) In solid ZnBr2, the Zn2+and Br−ions are held in fixed positions in the lattice and cannot move [1m] . When melted, the ions become mobile (free to move) and carry charge to the electrodes [1m] . (b) Bromine (Br2vapour/gas) is formed at the anode [1m] ; bromide ions (Br−) lose electrons (oxidation) [1m] . (c) Zn2++ 2e−→ Zn [1m] . 💡 Intuition Check: For any cathode reduction half-equation (C4.1.8), just match the number of electrons gained to the positive charge on the cation: +1 needs 1e⁻ (remember 2H⁺ + 2e⁻ → H₂), +2 needs 2e⁻, and +3 needs 3e⁻!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] Molten zinc bromide, ZnBr2(l), is electrolysed using inert carbon (graphite) electrodes. (Điện phân zinc bromide nóng chảy, ZnBr2(l), bằng điện cực trơ carbon.) (a) Explain why solid zinc bromide does not conduct electricity, whereas molten zinc bromide does. (Giải thích vì sao ZnBr2rắn không dẫn điện còn nóng chảy thì dẫn điện.) (b) Name the product formed at the positive anode (+) and state whether ions lose or gain electrons there. (Gọi tên sản phẩm tại anode (+) và nêu ion nhường hay nhận electron tại đó.) (c) Construct the balanced ionic half-equation for the reduction reaction at the negative cathode (−). (Viết bán phương trình khử tại cathode −.) ✍️ Lời giải chi tiết theo thang điểm: (a) Trong ZnBr2rắn, các ion Zn2+và Br−bị khóa ở vị trí cố định . Khi nóng chảy, các ions become mobile (di chuyển tự do) để dẫn điện . (b) Tạo ra hơi/khí bromine (Br2) tại anode ; các ion Br− nhường/mất electron (lose electrons) . (c) Zn2++ 2e−→ Zn . 💡 Kiểm tra bản chất: Mẹo viết bán phương trình Cathode (C4.1.8): Điện tích dương của cation là bao nhiêu thì cộng đúng bấy nhiêu electron e⁻ để triệt tiêu về kim loại trung hòa (riêng H⁺ nhớ nhân đôi: 2H⁺ + 2e⁻ → H₂)!",
+      "duration": 196.17,
+      "startTime": 870.83,
+      "endTime": 1067.0,
+      "audioUrl": "/audio/lectures/science/c4/s01_b10.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🔥 2. Điện phân Nóng chảy vs. Dung dịch & Toàn bộ Thí nghiệm Trọng tâm",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "Syllabus C4.1 (Core 3 & Supplement 5, 7) 🟦 CORE + 🟩 SUPPLEMENT 🔥 2. Molten vs. Aqueous Electrolysis & All Syllabus Case Studies.",
+      "vi": "Syllabus C4.1 (Core 3 & Supplement 5, 7) 🟦 CORE + 🟩 SUPPLEMENT 🔥 2. Điện phân Nóng chảy vs. Dung dịch & Toàn bộ Thí nghiệm Trọng tâm.",
+      "duration": 23.56,
+      "startTime": 1067.0,
+      "endTime": 1090.56,
+      "audioUrl": "/audio/lectures/science/c4/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of electrolysis as a VIP Door Selection (\"The Less Reactive Ion Wins!\") . In a molten binary compound (like melted PbBr2), there is NO water — only two ions exist, so you get pure metal + pure non-metal every time. Once dissolved in water (aqueous) , water adds H+ and OH− into the mix! Very reactive metal ions like Na+prefer staying dissolved, so H+ takes the electrons at the cathode to bubble off H2gas — whereas less reactive Cu2+ beats H+to coat the cathode with pink-brown copper!",
+      "vi": "🎯 Hình dung đời thường: Hãy xem bình điện phân như Cửa Chọn lọc VIP (\"Ai Kém Hoạt động hơn sẽ Ra trước!\") . Với muối 2 nguyên tố nóng chảy như PbBr2(l), không hề có nước nên chỉ có 2 ion duy nhất → chắc chắn thu được Kim loại + Phi kim. Nhưng khi hòa vào nước (aqueous) , nước thả thêm H+ và OH− vào cạnh tranh! Ion kim loại mạnh như Na+rất \"bền\" trong nước nên nhường cho H+ nhận electron sủi bọt khí H2; ngược lại Cu2+ yếu hơn H nên thắng H+để tạo lớp đồng đỏ nâu!",
+      "duration": 74.86,
+      "startTime": 1090.56,
+      "endTime": 1165.42,
+      "audioUrl": "/audio/lectures/science/c4/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Molten Binary Compounds (🟦 Core C4.1.3a & 🟩 Supp. C4.1.7): Molten PbBr2→ silvery-grey molten lead (Pb) at cathode (−) and red-brown bromine (Br2) gas at anode (+). 2. Core Aqueous Electrolytes (🟦 Core C4.1.3b,c): • Concentrated NaCl(aq): Cathode = colourless H2(g) ; Anode = pale yellow-green Cl2(g) (leaves NaOH(aq)).• Dilute H2SO4(aq): Cathode = H2(g) (2 volumes); Anode = colourless O2(g) (1 volume). 3. Aqueous CuSO4Comparison (🟩 Supp. C4.1.5): With inert carbon/graphite electrodes → Cu at cathode + O2gas at anode ( blue colour fades ). With copper electrodes → impure Cu anode dissolves while pure Cu deposits on cathode ( blue colour stays constant !).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Hợp chất Nóng chảy (🟦 Core C4.1.3a & 🟩 Supp. C4.1.7): PbBr2nóng chảy → chì lỏng xám bạc Pb ở cathode (−) và hơi Br2 nâu đỏ ở anode (+). 2. Ba Dung dịch Trọng tâm Core (🟦 Core C4.1.3b,c): • NaCl(aq) đặc: Cathode sủi bọt H2(g) ; Anode thoát khí vàng lục Cl2(g) (dung dịch còn NaOH kiềm).• H2SO4(aq) loãng: Cathode ra H2(g) (2 thể tích); Anode ra O2(g) (1 thể tích). 3. So sánh Điện cực trong CuSO4(aq) (🟩 Supp. C4.1.5): Dùng cực trơ carbon → Cu bám cathode + sủi bọt O2ở anode ( màu xanh nhạt dần ). Dùng cực đồng (copper electrodes) → Anode Cu tan dần bù lại Cu2+bám vào cathode ( màu xanh giữ nguyên không đổi !).",
+      "duration": 134.48,
+      "startTime": 1165.42,
+      "endTime": 1299.9,
+      "audioUrl": "/audio/lectures/science/c4/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never predict sodium metal (Na) at the cathode when electrolysing concentrated aqueous NaCl! Because sodium is much more reactive than hydrogen, H+ions discharge instead to form hydrogen gas (H2) . Sodium metal is only formed when NaCl is molten (no water present).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm viết sinh ra kim loại Sodium (Na) khi điện phân dung dịch NaCl(aq) đặc! Vì Na hoạt động mạnh hơn H nên trong nước H+luôn phóng điện tạo khí H2 ; kim loại Na chỉ sinh ra khi điện phân NaCl nóng chảy (không có nước).",
+      "duration": 42.92,
+      "startTime": 1299.9,
+      "endTime": 1342.82,
+      "audioUrl": "/audio/lectures/science/c4/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "C4.1.3(a) & C4.1.7 Hợp chất Hai nguyên tố Nóng chảy & Lead(II) Bromide (PbBr 2 )",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "C4.1.3(a) & C4.1.7 Molten Binary Compounds & Molten Lead(II) Bromide (PbBr2). A molten binary ionic compound contains only two ions (no water present!), so predicting products is 100% direct: Cathode (−) = Pure Metal ; Anode (+) = Pure Non-Metal (e.g. molten NaCl → Na + Cl2 ; molten Al2O3→ Al + O2 ; molten KI → K + I2 ). 🔬 Classic Lab Experiment — Electrolysis of Molten Lead(II) Bromide, PbBr2(l) (Graphite Electrodes): Why heat strongly? Solid PbBr2does not conduct; heating melts the lattice so Pb2+and Br−ions become mobile (lamp lights up!). Perform in a fume cupboard because Br2vapour is toxic. At Cathode (−): Silvery-grey molten bead of lead metal collects at the bottom of the crucible → Pb2+(l) + 2e−→ Pb(l). At Anode (+): Bubbles of red-brown (orange-brown) bromine gas/vapour evolve → 2Br−(l) → Br2(g) + 2e−.",
+      "vi": "C4.1.3(a) & C4.1.7 Hợp chất Hai nguyên tố Nóng chảy & Lead(II) Bromide (PbBr2). Một hợp chất ion 2 nguyên tố nóng chảy chỉ chứa đúng 2 loại ion (không có nước!), nên dự đoán sản phẩm cực dễ: Cathode (−) = Kim loại nguyên chất ; Anode (+) = Phi kim nguyên chất (VD: NaCl nóng chảy → Na + Cl2 ; Al2O3nóng chảy → Al + O2 ; KI nóng chảy → K + I2 ). 🔬 Thí nghiệm Kinh điển — Điện phân Chì(II) Bromide Nóng chảy, PbBr2(l) (Điện cực Graphite): Vì sao phải đun nóng mạnh? PbBr2rắn không dẫn điện; đun nóng chảy giúp giải phóng các ion Pb2+và Br−di động (bóng đèn bật sáng!). Làm trong tủ hút (fume cupboard) vì hơi Br2độc. Tại Cathode (−): Thu được giọt kim loại chì nóng chảy màu xám bạc dưới đáy chén nung → Pb2+(l) + 2e−→ Pb(l). Tại Anode (+): Sủi bọt khí/hơi bromine màu nâu đỏ → 2Br−(l) → Br2(g) + 2e−.",
+      "duration": 160.63,
+      "startTime": 1342.82,
+      "endTime": 1503.45,
+      "audioUrl": "/audio/lectures/science/c4/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔵 Tại Cathode (−): M n + cạnh tranh với H + (aq)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔵 At the Cathode (−): M n +vs. H+(aq). The LESS reactive species in the Reactivity Series is discharged:• Metal MORE reactive than H (K, Na, Ca, Mg, Al, Zn, Fe): H+wins → colourless H2(g) bubbles ( 2H++ 2e−→ H2 ).• Metal LESS reactive than H ( Cu2+, Ag+ ): Metal ion wins → solid metal coats cathode (e.g. pink-brown Cu or silvery Ag).",
+      "vi": "🔵 Tại Cathode (−): M n +cạnh tranh với H+(aq). Ion của nguyên tố KÉM hoạt động hơn trong Dãy hoạt động hóa học sẽ thắng:• Kim loại MẠNH hơn H: H+thắng → sủi bọt khí không màu H2(g) ( 2H++ 2e−→ H2 ).• Kim loại YẾU hơn H ( Cu2+, Ag+ ): Ion kim loại thắng → bám lớp kim loại (Cu đỏ nâu hoặc Ag trắng bạc).",
+      "duration": 63.59,
+      "startTime": 1503.45,
+      "endTime": 1567.04,
+      "audioUrl": "/audio/lectures/science/c4/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🔴 Tại Anode (+): Điện cực Trơ vs. Điện cực Đồng (C4.1.3 & C4.1.5)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🔴 At the Anode (+): Inert vs. Active Electrodes (C4.1.3 & C4.1.5). • Concentrated Chloride (NaCl(aq) Brine): Cl−discharges → pale yellow-green chlorine gas, Cl2(g) .• Sulfate Solutions (Dilute H2SO4or CuSO4with inert C/Pt): SO42−never discharges → OH−forms colourless oxygen gas, O2(g) .• 🟩 CuSO4(aq) with Copper Electrodes: The copper anode itself dissolves into Cu2+(aq) ions (no gas bubbles!).",
+      "vi": "🔴 Tại Anode (+): Điện cực Trơ vs. Điện cực Đồng (C4.1.3 & C4.1.5). • Dung dịch NaCl(aq) ĐẶC (Brine): Ion Cl−phóng điện → sinh ra khí Chlorine, Cl2(g) màu vàng lục nhạt.• Dung dịch gốc Sulfate (H2SO4loãng hoặc CuSO4với cực trơ C/Pt): SO42−không phóng điện → OH−tạo bọt khí Oxygen, O2(g) .• 🟩 CuSO4(aq) dùng Điện cực ĐỒNG: Cực dương bằng đồng tự tan thành ion Cu2+(aq) (không sủi bọt khí!).",
+      "duration": 82.76,
+      "startTime": 1567.04,
+      "endTime": 1649.8,
+      "audioUrl": "/audio/lectures/science/c4/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Khí Hydrogen, H 2 (g)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "Electrolyte & Electrodes: Concentrated NaCl(aq) (Brine — Inert C/Pt); Cathode (−) Product & Observation: Hydrogen gas, H 2 (g) Colourless bubbles (squeaky pop).; Anode (+) Product & Observation: Chlorine gas, Cl 2 (g) Pale yellow-green gas (bleaches damp litmus).; Change in Remaining Solution: Na + and OH − remain → forms alkaline NaOH(aq) (pH rises to ~13–14). Electrolyte & Electrodes: Dilute H 2 SO 4 (aq) (Hofmann Voltameter — Pt); Cathode (−) Product & Observation: Hydrogen gas, H 2 (g) Colourless gas ( 2 volumes ).; Anode (+) Product & Observation: Oxygen gas, O 2 (g) Colourless gas ( 1 volume → 2:1 H 2 :O 2 ratio).; Change in Remaining Solution: Water is removed → H 2 SO 4 becomes more concentrated. Electrolyte & Electrodes: 🟩 CuSO 4 (aq) with INERT Carbon/Graphite; Cathode (−) Product & Observation: Copper metal, Cu(s) Pink-brown solid coats cathode: Cu 2+ + 2e − → Cu; Anode (+) Product & Observation: Oxygen gas, O 2 (g) Colourless bubbles: 4OH − → O 2 + 2H 2 O + 4e −; Change in Remaining Solution: Blue colour FADES as [Cu 2+ ] falls; H + & SO 4 2− form acidic H 2 SO 4 (aq). Electrolyte & Electrodes: 🟩 CuSO 4 (aq) with ACTIVE Copper Electrodes; Cathode (−) Product & Observation: Pure Copper, Cu(s) Cathode gains mass (thick pink-brown coat): Cu 2+ (aq) + 2e − → Cu(s); Anode (+) Product & Observation: Copper anode dissolves! Anode loses mass (no gas!): Cu(s) → Cu 2+ (aq) + 2e −; Change in Remaining Solution: Blue colour stays CONSTANT! [Cu 2+ ] is replenished as fast as it is removed (used to refine impure Cu).",
+      "vi": "Dung dịch & Điện cực: NaCl(aq) ĐẶC (Brine) (Điện cực trơ C/Pt); Sản phẩm & Hiện tượng Cathode (−): Khí Hydrogen, H 2 (g) Bọt khí không màu (nổ tiếng 'pop').; Sản phẩm & Hiện tượng Anode (+): Khí Chlorine, Cl 2 (g) Khí màu vàng lục nhạt (tẩy trắng quỳ ẩm).; Biến đổi Dung dịch Còn lại: Còn lại Na + và OH − → tạo kiềm NaOH(aq) (pH tăng lên ~13–14). Dung dịch & Điện cực: H 2 SO 4 (aq) LOÃNG (Bình Hofmann — Cực Pt); Sản phẩm & Hiện tượng Cathode (−): Khí Hydrogen, H 2 (g) Khí không màu ( 2 phần thể tích ).; Sản phẩm & Hiện tượng Anode (+): Khí Oxygen, O 2 (g) Khí không màu ( 1 phần thể tích → tỉ lệ 2:1).; Biến đổi Dung dịch Còn lại: Nước cạn dần → nồng độ axit H 2 SO 4 tăng lên. Dung dịch & Điện cực: 🟩 CuSO 4 (aq) với Điện cực TRƠ Carbon; Sản phẩm & Hiện tượng Cathode (−): Kim loại Đồng, Cu(s) Lớp rắn màu hồng nâu (pink-brown): Cu 2+ + 2e − → Cu; Sản phẩm & Hiện tượng Anode (+): Khí Oxygen, O 2 (g) Sủi bọt khí không màu: 4OH − → O 2 + 2H 2 O + 4e −; Biến đổi Dung dịch Còn lại: Màu xanh lam NHẠT DẦN do mất Cu 2+ ; tạo axit H 2 SO 4 (aq). Dung dịch & Điện cực: 🟩 CuSO 4 (aq) với Điện cực ĐỒNG Hoạt động; Sản phẩm & Hiện tượng Cathode (−): Đồng tinh khiết, Cu(s) Cathode tăng khối lượng : Cu 2+ (aq) + 2e − → Cu(s); Sản phẩm & Hiện tượng Anode (+): Cực dương Cu tan dần! Anode giảm khối lượng (không sủi khí!): Cu(s) → Cu 2+ (aq) + 2e −; Biến đổi Dung dịch Còn lại: Màu xanh lam GIỮ NGUYÊN! Tốc độ Cu 2+ tan ra ở Anode bằng đúng tốc độ bám vào Cathode (dùng tinh luyện Cu).",
+      "duration": 278.99,
+      "startTime": 1649.8,
+      "endTime": 1928.79,
+      "audioUrl": "/audio/lectures/science/c4/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "H₂SO₄(aq) Loãng: Tỉ lệ Thể tích 2 H₂ : 1 O₂, 2 V H₂, Cathode (−), 1 V O₂, Anode ...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "Dilute H₂SO₄(aq): 2 Volumes H₂ : 1 Volume O₂, 2 vol H₂, Cathode (−), 1 vol O₂, Anode (+), 🟩 Refining Copper with Active Cu Electrodes, Anode sludge, Cu²⁺(aq) →, Blue colour UNCHANGED, Impure Cu (+), Pure Cu (−).",
+      "vi": "H₂SO₄(aq) Loãng: Tỉ lệ Thể tích 2 H₂ : 1 O₂, 2 V H₂, Cathode (−), 1 V O₂, Anode (+), 🟩 Tinh luyện Đồng (Điện cực Cu Hoạt động), Bùn Anode, Cu²⁺(aq) →, Màu xanh KHÔNG ĐỔI, Cu thô (+), Cu tinh khiết (−).",
+      "duration": 44.23,
+      "startTime": 1928.79,
+      "endTime": 1973.02,
+      "audioUrl": "/audio/lectures/science/c4/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ Which row correctly identifies the products formed at the cathode (−) and anode (+) during the electrolysis of molten lead(II) bromide and concentrated aqueous sodium chloride using inert graphite electrodes? A. Molten PbBr₂: lead (−), bromine (+) | Conc. NaCl(aq): sodium (−), chlorine (+) B. Molten PbBr₂: bromine (−), lead (+) | Conc. NaCl(aq): hydrogen (−), chlorine (+) C. Molten PbBr₂: lead (−), bromine (+) | Conc. NaCl(aq): hydrogen (−), chlorine (+) D. Molten PbBr₂: lead (−), bromine (+) | Conc. NaCl(aq): hydrogen (−), oxygen (+) ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: In molten PbBr2 , Pb2+migrates to the cathode (−) to form molten lead , and Br−migrates to the anode (+) to form red-brown bromine gas (eliminating B). In concentrated aqueous NaCl , water provides H+which is less reactive than Na+, so hydrogen gas forms at the cathode (−) (eliminating A), while concentrated Cl−forms chlorine gas at the anode (+) (eliminating D).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & 2 Which row correctly identifies the products formed at the cathode (−) and anode (+) during the electrolysis of molten lead(II) bromide and concentrated aqueous sodium chloride using inert graphite electrodes? (Dòng nào xác định đúng sản phẩm tại cathode (−) và anode (+) khi điện phân chì(II) bromide nóng chảy và dung dịch sodium chloride đặc bằng điện cực than chì trơ?) A. Molten PbBr₂: lead (−), bromine (+) | Conc. NaCl(aq): sodium (−), chlorine (+) B. Molten PbBr₂: bromine (−), lead (+) | Conc. NaCl(aq): hydrogen (−), chlorine (+) C. Molten PbBr₂: lead (−), bromine (+) | Conc. NaCl(aq): hydrogen (−), chlorine (+) D. Molten PbBr₂: lead (−), bromine (+) | Conc. NaCl(aq): hydrogen (−), oxygen (+) ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Trong PbBr2nóng chảy , Pb2+về cathode (−) tạo kim loại lead (chì) và Br−về anode (+) tạo hơi bromine (loại B). Trong dung dịch NaCl đặc , nước cung cấp H+kém hoạt động hơn Na+nên khí hydrogen thoát ra ở cathode (−) (loại A), còn Cl−đặc phóng điện tạo khí chlorine ở anode (+) (loại D).",
+      "duration": 191.9,
+      "startTime": 1973.02,
+      "endTime": 2164.92,
+      "audioUrl": "/audio/lectures/science/c4/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "carbon (graphite)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Aqueous copper(II) sulfate, CuSO4(aq), is electrolysed in two separate cells:• Cell A uses inert carbon (graphite) electrodes.• Cell B uses copper electrodes. (a) Describe the observations at the cathode (−) and at the anode (+) in Cell A . [2] (b) State what happens to the mass of the copper anode in Cell B , and explain why the blue colour of the electrolyte fades in Cell A but remains constant in Cell B . [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Cathode (−): A pink-brown (red-brown) solid deposit of copper forms [1m] . Anode (+): Bubbles of colourless gas (oxygen, O2) are evolved [1m] . (b) In Cell B , the copper anode decreases in mass (dissolves) into the solution as Cu2+(aq) ions [1m] .In Cell A , Cu2+ions are removed at the cathode without being replaced so [Cu2+] falls (blue fades) [1m] , whereas in Cell B Cu2+ions enter solution from the anode at the same rate they plate onto the cathode, keeping [Cu2+] constant [1m] . 💡 Intuition Check: Check the electrode material FIRST whenever you see CuSO₄(aq): Carbon/Graphite = bubbles of O₂ + blue fades; Copper = anode shrinks + no gas + blue colour stays constant!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] Aqueous copper(II) sulfate, CuSO4(aq), is electrolysed in two separate cells: Cell A uses inert carbon (graphite) electrodes; Cell B uses copper electrodes. (Điện phân dung dịch CuSO4trong hai bình riêng: Bình A dùng điện cực trơ than chì; Bình B dùng điện cực bằng đồng.) (a) Describe the observations at the cathode (−) and at the anode (+) in Cell A . (Mô tả hiện tượng tại cathode và anode ở Bình A.) (b) State what happens to the mass of the copper anode in Cell B , and explain why the blue colour of the electrolyte fades in Cell A but remains constant in Cell B . (Nêu sự thay đổi khối lượng anode đồng ở Bình B, giải thích vì sao màu xanh nhạt dần ở Bình A nhưng giữ nguyên ở Bình B.) ✍️ Lời giải chi tiết theo thang điểm: (a) Cathode (−): Xuất hiện lớp kim loại màu hồng nâu / đỏ nâu bám lên cực . Anode (+): Sủi bọt khí không màu . (b) Ở Bình B , khối lượng cực dương anode đồng giảm dần do tan thành ion Cu2+ .Ở Bình A , ion Cu2+bị lấy đi ở cathode mà không được bù lại nên nồng độ [Cu2+] giảm (nhạt màu) ; còn ở Bình B tốc độ anode Cu tan tạo Cu2+đúng bằng tốc độ Cu2+bám vào cathode nên [Cu2+] giữ nguyên không đổi . 💡 Kiểm tra bản chất: Gặp bài CuSO₄(aq), việc đầu tiên là đọc kỹ tên điện cực: Carbon/Graphite = sủi khí O₂ + nhạt màu xanh; Copper = anode mòn dần + không sủi khí + màu xanh giữ nguyên!",
+      "duration": 206.76,
+      "startTime": 2164.92,
+      "endTime": 2371.68,
+      "audioUrl": "/audio/lectures/science/c4/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🔋 3. Pin Nhiên liệu Hydrogen–Oxygen (H 2 –O 2 Fuel Cells)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "Syllabus C4.2 (Core 1 & Supplement 2) 🟦 CORE + 🟩 SUPPLEMENT 🔋 3. Hydrogen–Oxygen Fuel Cells.",
+      "vi": "Syllabus C4.2 (Core 1 & Supplement 2) 🟦 CORE + 🟩 SUPPLEMENT 🔋 3. Pin Nhiên liệu Hydrogen–Oxygen (H2–O2Fuel Cells).",
+      "duration": 21.83,
+      "startTime": 2371.68,
+      "endTime": 2393.51,
+      "audioUrl": "/audio/lectures/science/c4/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a Hydrogen–Oxygen Fuel Cell vs. a Petrol Engine as a Direct Electric Escalator vs. a Noisy Steam Cannon ! A petrol engine burns liquid fuel in fiery explosions, losing most energy as waste heat and belching CO2, CO, and NO x out the tailpipe. A fuel cell reacts H2and O2quietly across electrodes to push electrons straight through an electric motor — dripping pure water (H2O) as its only chemical exhaust! The catch? Packing light H2gas into a car is like stuffing balloons into a suitcase: you need heavy, high-pressure tanks!",
+      "vi": "🎯 Hình dung đời thường: Hãy so sánh Pin Nhiên liệu H2–O2 với Động cơ Xăng như Thang cuốn Điện Êm ái vs. Đại bác Đốt lửa Ồn ào ! Động cơ xăng đốt nhiên liệu nổ lốp bốp, thất thoát phần lớn năng lượng thành nhiệt nóng và xả khói CO2, CO, NO x . Ngược lại, Fuel Cell cho H2và O2phản ứng hóa học trực tiếp tạo ra dòng điện chạy mô-tơ — ống xả chỉ nhỏ ra nước tinh khiết (H2O) ! Điểm khó duy nhất? Nhét khí H2siêu nhẹ vào xe giống như nhét hàng trăm quả bóng bay vào cốp xe — bắt buộc phải dùng bình nén áp suất cực cao!",
+      "duration": 78.89,
+      "startTime": 2393.51,
+      "endTime": 2472.4,
+      "audioUrl": "/audio/lectures/science/c4/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Fuel Cell Reaction (🟦 Core C4.2.1): Uses hydrogen + oxygen to generate electricity with water (H2O) as the ONLY chemical product ( 2H2(g) + O2(g) → 2H2O(l) ). 2. Advantages vs. Petrol (🟩 Supp. C4.2.2): Zero polluting exhaust gases (no CO2greenhouse gas or toxic CO) at point of use; higher energy efficiency (less wasted thermal energy); fewer moving parts (quieter). 3. Disadvantages vs. Petrol (🟩 Supp. C4.2.2): H2is a gas at room temperature → difficult to store (needs heavy high-pressure tanks ); highly flammable/explosive if leaked; very few refuelling stations; H2manufacture often uses fossil fuels or expensive electricity.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Phản ứng Cốt lõi (🟦 Core C4.2.1): Dùng hydrogen + oxygen tạo ra điện năng (electricity) với nước (water, H2O) là sản phẩm hóa học DUY NHẤT ( 2H2(g) + O2(g) → 2H2O(l) ). 2. Ưu điểm so với Động cơ Xăng (🟩 Supp. C4.2.2): Không phát thải khí nhà kính CO2hay khí độc CO/NO x tại nơi xe chạy; hiệu suất chuyển hóa năng lượng cao hơn (ít mất nhiệt); vận hành êm. 3. Nhược điểm so với Động cơ Xăng (🟩 Supp. C4.2.2): H2là chất khí ở nhiệt độ phòng nên rất khó chứa, cần bình nén áp suất cao nặng nề; dễ cháy nổ khi rò rỉ; rất ít trạm nạp H2; sản xuất H2vẫn tốn điện hoặc dùng khí đốt hóa thạch.",
+      "duration": 114.29,
+      "startTime": 2472.4,
+      "endTime": 2586.69,
+      "audioUrl": "/audio/lectures/science/c4/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Vague answers like \"fuel cells don't pollute\" or \"hydrogen is bad\" score 0 marks! Always give the exact chemical comparison: \"produces only water / no CO2emitted at exhaust\" for the advantage, and \"hydrogen is a gas requiring high-pressure tanks (whereas petrol is an easily stored liquid)\" for the disadvantage.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Trả lời chung chung kiểu \"pin nhiên liệu tốt cho môi trường\" sẽ nhận 0 điểm! Bắt buộc phải nêu chính xác: ưu điểm là \"chỉ tạo ra nước / không thải khí nhà kính CO2\" , nhược điểm là \"H2là chất khí nên phải nén trong bình áp suất cao (trong khi xăng là chất lỏng dễ chứa)\" .",
+      "duration": 43.17,
+      "startTime": 2586.69,
+      "endTime": 2629.86,
+      "audioUrl": "/audio/lectures/science/c4/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Core C4.2.1:",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Core C4.2.1: A hydrogen–oxygen fuel cell uses hydrogen and oxygen to produce electricity directly from a chemical reaction, with water (H2O) as the ONLY chemical product :",
+      "vi": "Core C4.2.1: Hydrogen–oxygen fuel cell sử dụng trực tiếp phản ứng hóa học giữa hydrogen và oxygen để sản xuất điện năng , với nước (water, H2O) là sản phẩm hóa học DUY NHẤT :",
+      "duration": 28.73,
+      "startTime": 2629.86,
+      "endTime": 2658.59,
+      "audioUrl": "/audio/lectures/science/c4/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Phương trình Tổng quát: 2H2(g) + O2(g) → 2H2O(l) (+ Điện năng)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Overall Reaction: 2H2(g) + O2(g) → 2H2O(l) (+ Electrical Energy)",
+      "vi": "Phương trình Tổng quát: 2H2(g) + O2(g) → 2H2O(l) (+ Điện năng)",
+      "duration": 18.99,
+      "startTime": 2658.59,
+      "endTime": 2677.58,
+      "audioUrl": "/audio/lectures/science/c4/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Cực âm (−), Cực dương (+), H⁺ →, Màng Điện ly, Nạp H₂ →, ← Nạp O₂, Xả H₂O 💧.",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Anode (−), Cathode (+), H⁺ →, Electrolyte Membrane, H₂ in →, ← O₂ in, H₂O out 💧.",
+      "vi": "Cực âm (−), Cực dương (+), H⁺ →, Màng Điện ly, Nạp H₂ →, ← Nạp O₂, Xả H₂O 💧.",
+      "duration": 18.94,
+      "startTime": 2677.58,
+      "endTime": 2696.52,
+      "audioUrl": "/audio/lectures/science/c4/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🧪 Mẹo Paper 6 — Nhận biết Khí Điện cực:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "🧪 Paper 6 Quick Check — Testing Electrode Gases: Hydrogen (H2): Lighted splint → pops (squeaky pop). Oxygen (O2): Glowing splint → relights. Chlorine (Cl2): Damp litmus paper → bleaches white.",
+      "vi": "🧪 Mẹo Paper 6 — Nhận biết Khí Điện cực: Hydrogen (H2): Que đóm đang cháy → nổ tiếng 'pop' (squeaky pop). Oxygen (O2): Que đóm tàn đỏ → bùng cháy lại (relights). Chlorine (Cl2): Giấy quỳ ẩm → mất màu trắng (bleaches).",
+      "duration": 37.07,
+      "startTime": 2696.52,
+      "endTime": 2733.59,
+      "audioUrl": "/audio/lectures/science/c4/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Không phát thải khí ô nhiễm khi vận hành:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "✅ Advantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Zero polluting exhaust emissions at point of use: Produces only water — no CO 2 (greenhouse gas), no toxic CO, no NO x or unburnt hydrocarbons/soot.; ❌ Disadvantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Difficult & bulky storage: Hydrogen is a gas at r.t.p. (very low density by volume), requiring heavy high-pressure tanks or cryogenic cooling (whereas petrol is an easy-to-store liquid). ✅ Advantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Higher energy efficiency: Converts chemical energy directly into electrical energy (~60%), wasting far less thermal energy than internal combustion engines (~25%).; ❌ Disadvantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Flammability & explosion hazard: Hydrogen is extremely flammable with a wide explosive limit if a tank leaks in a collision. ✅ Advantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Renewable potential & quiet operation: Fewer moving parts (lower maintenance, quieter) and renewable if H 2 is made via solar/wind electrolysis of water.; ❌ Disadvantages of H 2 –O 2 Fuel Cells (vs. Petrol Engines): Cost, infrastructure & H 2 sourcing: Very few H 2 refuelling stations, expensive platinum catalysts , and most H 2 today is still made from fossil fuels (steam reforming of methane, releasing CO 2 ).",
+      "vi": "✅ Ưu điểm Pin H 2 –O 2 (so với Động cơ Xăng): Không phát thải khí ô nhiễm khi vận hành: Sản phẩm duy nhất là nước (only water) — không thải CO 2 (nhà kính), CO độc, NO x hay muội than.; ❌ Nhược điểm Pin H 2 –O 2 (so với Động cơ Xăng): Khó lưu trữ & cồng kềnh: H 2 là chất khí ở r.t.p. (mật độ năng lượng theo thể tích thấp), đòi hỏi bình nén áp suất rất cao hoặc hóa lỏng lạnh sâu (trong khi xăng là chất lỏng dễ chứa). ✅ Ưu điểm Pin H 2 –O 2 (so với Động cơ Xăng): Hiệu suất năng lượng cao hơn (Higher efficiency): Chuyển hóa trực tiếp hóa năng thành điện năng (~60%), ít thất thoát nhiệt hơn động cơ đốt trong (~25%).; ❌ Nhược điểm Pin H 2 –O 2 (so với Động cơ Xăng): Nguy cơ cháy nổ cao: Khí H 2 cực kỳ dễ bắt lửa và gây nổ mạnh nếu rò rỉ khi va chạm giao thông. ✅ Ưu điểm Pin H 2 –O 2 (so với Động cơ Xăng): Tiềm năng tái tạo & êm ái: Ít bộ phận chuyển động (bền, êm) và hoàn toàn xanh nếu H 2 được điều chế từ điện phân nước bằng điện mặt trời/gió.; ❌ Nhược điểm Pin H 2 –O 2 (so với Động cơ Xăng): Chi phí, hạ tầng & nguồn H 2 : Rất ít trạm nạp H 2 (refuelling stations), xúc tác platinum đắt đỏ , và đa số H 2 hiện nay vẫn sản xuất từ nhiên liệu hóa thạch (reforming khí methane sinh ra CO 2 ).",
+      "duration": 194.61,
+      "startTime": 2733.59,
+      "endTime": 2928.2,
+      "audioUrl": "/audio/lectures/science/c4/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE + 🟩 SUPPLEMENT • Paper 1 & 2 MCQ Which statement correctly compares a hydrogen–oxygen fuel cell vehicle with a gasoline (petrol) engine vehicle? A. The fuel cell produces carbon dioxide and water, whereas petrol produces carbon monoxide only. B. Hydrogen is easier to store at room temperature than liquid petrol because hydrogen has a low density. C. The fuel cell produces water as its only chemical product, but hydrogen must be stored under high pressure. D. The fuel cell burns hydrogen in air to heat water into steam that turns a turbine. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: A hydrogen–oxygen fuel cell converts chemical energy directly into electrical energy via 2H2+ O2→ 2H2O (eliminating D), producing water as the only chemical product (eliminating A). Because hydrogen is a gas at room temperature, it is harder to store compactly than liquid petrol and requires heavy high-pressure storage tanks (eliminating B, confirming C).",
+      "vi": "BÀI MẪU 1 🟦 CORE + 🟩 SUPPLEMENT • Trắc nghiệm Paper 1 & 2 Which statement correctly compares a hydrogen–oxygen fuel cell vehicle with a gasoline (petrol) engine vehicle? (Phát biểu nào so sánh đúng xe chạy pin nhiên liệu H2–O2với xe chạy động cơ xăng?) A. The fuel cell produces carbon dioxide and water, whereas petrol produces carbon monoxide only. B. Hydrogen is easier to store at room temperature than liquid petrol because hydrogen has a low density. C. The fuel cell produces water as its only chemical product, but hydrogen must be stored under high pressure. D. The fuel cell burns hydrogen in air to heat water into steam that turns a turbine. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Pin nhiên liệu H2–O2chuyển hóa trực tiếp hóa năng thành điện năng theo 2H2+ O2→ 2H2O (loại D), tạo ra nước là sản phẩm hóa học duy nhất (loại A). Vì hydrogen là chất khí ở nhiệt độ phòng nên khó lưu trữ hơn xăng lỏng rất nhiều và bắt buộc phải chứa trong bình nén áp suất cao (high pressure) (loại B, chọn C).",
+      "duration": 149.89,
+      "startTime": 2928.2,
+      "endTime": 3078.09,
+      "audioUrl": "/audio/lectures/science/c4/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Many car manufacturers are developing vehicles powered by hydrogen–oxygen fuel cells as an alternative to gasoline (petrol) engines. (a) Name the two reactants used in a hydrogen–oxygen fuel cell and identify the only chemical product formed. [2] (b) State one environmental advantage and two practical disadvantages of using hydrogen–oxygen fuel cells instead of petrol engines in cars. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Reactants: hydrogen and oxygen [1m] . Only chemical product: water (H2O) [1m] . (b) Environmental advantage: Zero CO2(greenhouse gas) or toxic CO/NO x pollutants emitted from the vehicle exhaust [1m] . Practical disadvantages (any two): Hydrogen is a gas at room temperature so requires heavy/bulky high-pressure tanks to store / high risk of fire or explosion if a tank leaks / lack of hydrogen refuelling infrastructure / expensive fuel cell catalysts [2m] . 💡 Intuition Check: Memorise the 1-sentence core fact (H₂ + O₂ → electricity + ONLY water) plus 2 pros and 2 cons versus liquid petrol — that covers 100% of C4.2!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] Many car manufacturers are developing vehicles powered by hydrogen–oxygen fuel cells as an alternative to gasoline (petrol) engines. (Nhiều hãng xe đang phát triển ô tô chạy pin nhiên liệu H2–O2thay thế động cơ xăng.) (a) Name the two reactants used in a hydrogen–oxygen fuel cell and identify the only chemical product formed. (Kể tên 2 chất phản ứng nạp vào pin và sản phẩm hóa học duy nhất tạo thành.) (b) State one environmental advantage and two practical disadvantages of using hydrogen–oxygen fuel cells instead of petrol engines in cars. (Nêu 1 ưu điểm môi trường và 2 nhược điểm thực tế của pin nhiên liệu so với động cơ xăng.) ✍️ Lời giải chi tiết theo thang điểm: (a) Chất phản ứng: hydrogen và oxygen . Sản phẩm duy nhất: nước (water, H2O) . (b) Ưu điểm môi trường: Không thải khí nhà kính CO2hay khí độc CO/NO x ra ống xả khi xe chạy . Nhược điểm thực tế (chọn 2): H2là chất khí ở nhiệt độ phòng nên cần bình nén áp suất cao nặng và cồng kềnh / nguy cơ cháy nổ cao khi rò rỉ / thiếu trạm tiếp nhiên liệu H2/ chi phí sản xuất pin & xúc tác đắt . 💡 Kiểm tra bản chất: Chỉ cần nắm chắc 1 câu định nghĩa (H₂ + O₂ → điện năng + DUY NHẤT nước) và cặp đối lập Khí H₂ (khó nén, dễ nổ, thiếu trạm sạc) vs Xăng lỏng là ăn trọn điểm C4.2!",
+      "duration": 188.63,
+      "startTime": 3078.09,
+      "endTime": 3266.72,
+      "audioUrl": "/audio/lectures/science/c4/s03_b10.mp3"
     }
   ]
 }

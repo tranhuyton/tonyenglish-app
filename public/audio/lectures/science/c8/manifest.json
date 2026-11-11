@@ -1,133 +1,448 @@
 {
   "lectureId": "856f20da-80e8-4c6a-9cd1-dbe8a1f40828",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "C8: Periodic table",
-  "totalDuration": 362.0,
+  "totalDuration": 3270.74,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề C8",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_arrangement_elements": {
-      "start": 1,
-      "end": 2,
-      "title": "1. Chu kỳ & Phân nhóm",
-      "selector": "#sec-arrangement-elements"
+    "s01_int": {
+      "start": 2,
+      "end": 4
     },
-    "sec_group_trends": {
-      "start": 3,
-      "end": 5,
-      "title": "2. Kim loại Kiềm vs Halogen",
-      "selector": "#sec-group-trends"
-    },
-    "sec_transition_noblegases": {
+    "s01_p1_sub01": {
       "start": 6,
-      "end": 8,
-      "title": "3. Kim loại Chuyển tiếp & Khí hiếm",
-      "selector": "#sec-transition-noblegases"
+      "end": 9
+    },
+    "s01_p2_sub01": {
+      "start": 6,
+      "end": 9
+    },
+    "s01_wex": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 11
+    },
+    "s02_int": {
+      "start": 13,
+      "end": 15
+    },
+    "s02_p1_sub01": {
+      "start": 20,
+      "end": 22
+    },
+    "s02_p2_sub01": {
+      "start": 20,
+      "end": 22
+    },
+    "s02_wex": {
+      "start": 23,
+      "end": 24
+    },
+    "s02_hdr": {
+      "start": 12,
+      "end": 24
+    },
+    "s03_int": {
+      "start": 26,
+      "end": 28
+    },
+    "s03_p1_sub01": {
+      "start": 31,
+      "end": 31
+    },
+    "s03_p2_sub01": {
+      "start": 31,
+      "end": 31
+    },
+    "s03_wex": {
+      "start": 32,
+      "end": 33
+    },
+    "s03_hdr": {
+      "start": 25,
+      "end": 33
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề C8: Bảng Tuần hoàn các Nguyên tố Hóa học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic C8: The Periodic Table. The periodic table is a master map of chemical elements organized by atomic structure. In this lesson, we study periods and groups, contrast Group 1 alkali metals with Group 7 halogens, and investigate transition elements and noble gases.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C8: Bảng Tuần hoàn các Nguyên tố Hóa học. Bảng tuần hoàn là bản đồ nguyên tố sắp xếp theo cấu tạo nguyên tử. Trong bài học này, chúng ta sẽ tìm hiểu chu kỳ và nhóm, so sánh kim loại kiềm Nhóm 1 và halogen Nhóm 7, cùng các kim loại chuyển tiếp và khí hiếm.",
-      "duration": 41.9,
+      "title": "C8: Bảng tuần hoàn các nguyên tố hóa học (Periodic table)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) C8: Periodic table. Complete Master Lecture (0654) • C8.1 Arrangement of Elements, C8.2 Group I Alkali Metals, C8.3 Group VII Halogens & Displacement, C8.4 Transition Elements, C8.5 Noble Gases.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ C8: Bảng tuần hoàn các nguyên tố hóa học (Periodic table). Bài giảng Song ngữ Toàn diện • Chu kỳ & Phân nhóm, Kim loại Kiềm Nhóm I, Phi kim Halogen Nhóm VII & Phản ứng Thế, Kim loại Chuyển tiếp & Khí Hiếm Nhóm VIII.",
+      "duration": 49.02,
       "startTime": 0.0,
-      "endTime": 41.9,
+      "endTime": 49.02,
       "audioUrl": "/audio/lectures/science/c8/intro.mp3"
     },
     {
-      "id": "sec_arrangement_elements",
-      "title": "1. Cấu trúc Bảng Tuần hoàn: Chu kỳ & Phân nhóm (Arrangement Overview)",
-      "selector": "#sec-arrangement-elements",
-      "en": "Section 1 explains table layout: Elements are arranged in order of increasing proton number. Horizontal rows are Periods, and vertical columns are Groups.",
-      "vi": "Mục một giải thích cách bố trí bảng tuần hoàn: Các nguyên tố sắp xếp theo thứ tự số proton tăng dần. Các hàng ngang là Chu kỳ, và các cột dọc là Nhóm.",
-      "duration": 57.26,
-      "startTime": 41.9,
-      "endTime": 99.16,
-      "audioUrl": "/audio/lectures/science/c8/sec_arrangement_elements.mp3"
+      "id": "s01_hdr",
+      "title": "🗺️ 1. CẤU TRÚC BẢNG TUẦN HOÀN: CHU KỲ & NHÓM (ARRANGEMENT OF ELEMENTS)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🗺️ 1. ARRANGEMENT OF ELEMENTS IN THE PERIODIC TABLE. Core + Supplement C8.1",
+      "vi": "🗺️ 1. CẤU TRÚC BẢNG TUẦN HOÀN: CHU KỲ & NHÓM. Core + Supplement C8.1",
+      "duration": 14.07,
+      "startTime": 49.02,
+      "endTime": 63.09,
+      "audioUrl": "/audio/lectures/science/c8/s01_hdr.mp3"
     },
     {
-      "id": "sec_periods_groups",
-      "title": "🗺️ Periods & Groups (Chu kỳ & Phân nhóm)",
-      "selector": "#sec-periods-groups",
-      "en": "The period number indicates the number of occupied electron shells. The group number indicates the number of valence electrons in the outer energy shell, explaining why elements in the same group share similar chemical properties.",
-      "vi": "Số thứ tự chu kỳ cho biết số lớp electron của nguyên tử. Số thứ tự của nhóm cho biết số electron ở lớp vỏ ngoài cùng, giải thích vì sao các nguyên tố trong cùng một nhóm lại có tính chất hóa học rất tương đồng nhau.",
-      "duration": 26.39,
-      "startTime": 99.16,
-      "endTime": 125.55,
-      "audioUrl": "/audio/lectures/science/c8/sec_periods_groups.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture the Periodic Table as a 7-storey chemical apartment building where tenants fill rooms strictly in order of proton number (Z = 1, 2, 3..) :• Period (Row) = Floor Number = number of occupied electron shells (Period 3 = 3 shells).• Group (Column) = Room Column = number of outer-shell electrons (Group VII = 7 outer electrons).Walking left → right across a floor, elements change from metals to non-metals ; going up/down one column , every element has the same number of outer-shell electrons , so they react like chemical siblings!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung Bảng Tuần Hoàn như một chung cư Hóa học 7 tầng , nơi các nguyên tố xếp phòng theo đúng số proton tăng dần (Z = 1, 2, 3..) :• Period (Chu kỳ — Hàng ngang) = Số Tầng = số lớp vỏ electron của nguyên tử (Chu kỳ 3 = 3 lớp vỏ).• Group (Nhóm — Cột dọc) = Cột Phòng = số electron lớp ngoài cùng (Nhóm VII = 7e−ngoài cùng).Đi ngang Trái → Phải trên một tầng, nguyên tố chuyển từ kim loại (metals) sang phi kim (non-metals) ; đi dọc Lên/Xuống cùng một cột , các nguyên tố có cùng số electron lớp ngoài cùng nên tính chất hóa học giống nhau như anh em một nhà!",
+      "duration": 85.29,
+      "startTime": 63.09,
+      "endTime": 148.38,
+      "audioUrl": "/audio/lectures/science/c8/s01_b01.mp3"
     },
     {
-      "id": "sec_group_trends",
-      "title": "2. Kim loại Kiềm Nhóm I vs Halogen Nhóm VII (Group Trends Overview)",
-      "selector": "#sec-group-trends",
-      "en": "Section 2 contrasts Group 1 alkali metals and Group 7 halogens, demonstrating opposite reactivity trends down each group.",
-      "vi": "Mục hai đối chiếu kim loại kiềm Nhóm 1 và halogen Nhóm 7, làm rõ quy luật biến đổi độ hoạt động hóa học ngược chiều nhau khi đi từ trên xuống dưới trong nhóm.",
-      "duration": 71.97,
-      "startTime": 125.55,
-      "endTime": 197.52,
-      "audioUrl": "/audio/lectures/science/c8/sec_group_trends.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Arrangement (C8.1.1): Elements are arranged in periods and groups in order of increasing proton number / atomic number . 2 → 🟦 Core Period Trend & Group Similarity (C8.1.2, C8.1.3): Across a period (left → right), elements change from metallic to non-metallic character . Elements in the same group have similar chemical properties because they have the same number of electrons in their outer shell . 3 → 🟩 Supplement Group Trends (C8.1.4): Identify clear physical and chemical trends down a group when given data about the elements.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Cách Sắp xếp (C8.1.1): Sắp xếp thành các periods và groups theo thứ tự tăng dần số proton / số hiệu nguyên tử . 2 → 🟦 Core Chu kỳ & Cùng Nhóm (C8.1.2, C8.1.3): Đi ngang qua chu kỳ chuyển từ metallic sang non-metallic character . Cùng nhóm có tính chất hóa học tương tự vì có cùng số electron lớp ngoài cùng . 3 → 🟩 Supplement Quy luật Nhóm (C8.1.4): Nhận diện xu hướng biến đổi tính chất trong nhóm từ bảng dữ liệu cho trước.",
+      "duration": 71.37,
+      "startTime": 148.38,
+      "endTime": 219.75,
+      "audioUrl": "/audio/lectures/science/c8/s01_b02.mp3"
     },
     {
-      "id": "sec_group1_metals",
-      "title": "🔵 Group I: Alkali Metals (Kim loại Kiềm)",
-      "selector": "#sec-group1-metals",
-      "en": "Group 1 metals are soft, have low densities, and low melting points. Reactivity increases down the group from lithium to potassium and caesium as the single outer electron is further from the nucleus and more easily lost.",
-      "vi": "Kim loại Nhóm 1 rất mềm, khối lượng riêng thấp và nhiệt độ nóng chảy thấp. Độ hoạt động hóa học tăng dần từ trên xuống dưới từ liti đến kali và xesi do electron lớp ngoài cùng càng xa hạt nhân nên càng dễ bị mất đi.",
-      "duration": 27.71,
-      "startTime": 197.52,
-      "endTime": 225.23,
-      "audioUrl": "/audio/lectures/science/c8/sec_group1_metals.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never state that elements are ordered by mass number or relative atomic mass — always write proton number / atomic number ! Also remember Helium (configuration: 2) belongs in Group VIII (not Group II) because its single shell is completely full!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bao giờ viết bảng tuần hoàn xếp theo số khối (mass number) — bắt buộc ghi proton number / atomic number ! Và nhớ Helium (cấu hình: 2) thuộc Group VIII (không phải Group II) vì lớp vỏ thứ nhất chứa 2e−là đã bão hòa!",
+      "duration": 38.16,
+      "startTime": 219.75,
+      "endTime": 257.91,
+      "audioUrl": "/audio/lectures/science/c8/s01_b03.mp3"
     },
     {
-      "id": "sec_group7_halogens",
-      "title": "🟣 Group VII: Halogens (Phi kim Halogen)",
-      "selector": "#sec-group7-halogens",
-      "en": "Group 7 halogens exist as diatomic molecules. Going down the group, colours darken from yellow fluorine to black solid iodine, and melting points increase. Reactivity decreases down the group because incoming electrons are attracted less strongly by the nucleus.",
-      "vi": "Halogen Nhóm 7 tồn tại dưới dạng phân tử hai nguyên tử. Đi từ trên xuống, màu sắc đậm dần từ flo vàng đến iot đen và nhiệt độ nóng chảy tăng lên. Tuy nhiên, độ hoạt động hóa học lại giảm dần do lực hút electron của hạt nhân yếu đi.",
-      "duration": 33.69,
-      "startTime": 225.23,
-      "endTime": 258.92,
-      "audioUrl": "/audio/lectures/science/c8/sec_group7_halogens.mp3"
+      "id": "s01_b04",
+      "title": "Bảng tuần hoàn hiện đại sắp xếp tất cả 118 nguyên tố theo thứ tự tăng dần của số...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "The modern Periodic Table arranges all 118 known elements in order of increasing proton number (atomic number, Z) — NOT relative atomic mass ! Placing elements strictly by proton number resolves mass-pair reversals (such as Argon, Z = 18, Ar= 40 coming before Potassium, Z = 19, Ar= 39 ) so potassium sits properly in Group I with the other alkali metals.",
+      "vi": "Bảng tuần hoàn hiện đại sắp xếp tất cả 118 nguyên tố theo thứ tự tăng dần của số hiệu nguyên tử / số proton — chứ KHÔNG xếp theo nguyên tử khối ! Nhờ đó giải quyết triệt để các cặp đảo ngược khối lượng như Argon (Z = 18, Ar= 40) đứng trước Potassium (Z = 19, Ar= 39) , giúp K nằm đúng ở Nhóm I cùng các kim loại kiềm.",
+      "duration": 52.97,
+      "startTime": 257.91,
+      "endTime": 310.88,
+      "audioUrl": "/audio/lectures/science/c8/s01_b04.mp3"
     },
     {
-      "id": "sec_transition_noblegases",
-      "title": "3. Kim loại Chuyển tiếp & Khí hiếm (Transition & Noble Gases Overview)",
-      "selector": "#sec-transition-noblegases",
-      "en": "Section 3 examines transition metals in the central block and noble gases in Group 8 or zero.",
-      "vi": "Mục ba khảo sát các kim loại chuyển tiếp ở khối trung tâm và các khí hiếm ở Nhóm 8 hoặc nhóm 0.",
-      "duration": 58.14,
-      "startTime": 258.92,
-      "endTime": 317.06,
-      "audioUrl": "/audio/lectures/science/c8/sec_transition_noblegases.mp3"
+      "id": "s01_b05",
+      "title": "➡️ Periods (7 Chu kỳ ngang)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "➡️ Periods (Rows 1 to 7). Period number = Number of occupied electron shells in an atom. Example: Period 3 elements ( Na, Mg, Al, Si, P, S, Cl, Ar ) all have 3 occupied electron shells (from 2,8,1 to 2,8,8 ). Trend across a period (Left → Right, Core C8.1.2): Elements change progressively from metallic character (left) → metalloid (zigzag line, e.g. B, Si, Ge) → non-metallic character (right). Correspondingly, their oxides change from basic (Na2O, MgO) → amphoteric (Al2O3) → acidic (SiO2, P4O10, SO2).",
+      "vi": "➡️ Periods (7 Chu kỳ ngang). Số thứ tự Chu kỳ = Số lớp vỏ electron của nguyên tử. Ví dụ: Mọi nguyên tố Chu kỳ 3 đều có 3 lớp vỏ electron (từ 2,8,1 đến 2,8,8 ). Biến đổi ngang chu kỳ (Trái → Phải, Core C8.1.2): Chuyển dần từ tính kim loại (metallic character) bên trái → á kim (metalloid) dọc đường bậc thang (B, Si, Ge) → tính phi kim bên phải. Đồng thời, bản chất oxit chuyển từ basic oxide (Na2O, MgO) → amphoteric oxide (Al2O3) → acidic oxide (SiO2, P4O10, SO2).",
+      "duration": 94.95,
+      "startTime": 310.88,
+      "endTime": 405.83,
+      "audioUrl": "/audio/lectures/science/c8/s01_b05.mp3"
     },
     {
-      "id": "sec_transition_elements",
-      "title": "🛡️ Transition Elements (Kim loại Chuyển tiếp)",
-      "selector": "#sec-transition-elements",
-      "en": "Transition elements are hard, dense metals with high melting points. They form colored compounds, exhibit variable oxidation states, and act as valuable industrial catalysts.",
-      "vi": "Kim loại chuyển tiếp là các kim loại cứng, khối lượng riêng lớn và có nhiệt độ nóng chảy cao. Chúng tạo ra các hợp chất có màu sắc rực rỡ, có nhiều trạng thái oxy hóa khác nhau và thường đóng vai trò làm chất xúc tác công nghiệp quan trọng.",
-      "duration": 25.72,
-      "startTime": 317.06,
-      "endTime": 342.78,
-      "audioUrl": "/audio/lectures/science/c8/sec_transition_elements.mp3"
+      "id": "s01_b06",
+      "title": "⬇️ Groups (Các Nhóm cột dọc I – VIII)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "⬇️ Groups (Columns I to VIII). Group number = Number of outer-shell (valence) electrons (except Helium in Group VIII, which has a full first shell of 2e−). Similar chemical properties (Core C8.1.3): Elements in the same group react in a very similar way because their atoms have the same number of electrons in their outer shell. Identifying group trends (Supplement C8.1.4): Given information about elements in a group, you can identify clear physical and chemical trends down the group!",
+      "vi": "⬇️ Groups (Các Nhóm cột dọc I – VIII). Số thứ tự Nhóm = Số electron lớp ngoài cùng (ngoại trừ Helium ở Nhóm VIII có 2e−bão hòa lớp thứ nhất). Tính chất hóa học tương tự (Core C8.1.3): Các nguyên tố cùng nhóm phản ứng giống nhau vì nguyên tử của chúng có cùng số electron ở lớp ngoài cùng. Nhận diện quy luật nhóm (Supplement C8.1.4): Dựa trên dữ liệu cho trước về các nguyên tố trong cùng một nhóm, xác định chính xác xu hướng biến đổi tính chất!",
+      "duration": 66.6,
+      "startTime": 405.83,
+      "endTime": 472.43,
+      "audioUrl": "/audio/lectures/science/c8/s01_b06.mp3"
     },
     {
-      "id": "sec_noble_gases",
-      "title": "🎈 Group VIII / 0: Noble Gases (Khí Hiếm)",
-      "selector": "#sec-noble-gases",
-      "en": "Noble gases are monatomic unreactive gases with complete outer electron shells, used in advertising signs and inert atmospheric shielding.",
-      "vi": "Khí hiếm là các khí đơn nguyên tử trơ về mặt hóa học do có lớp vỏ electron ngoài cùng bão hòa bền vững, được ứng dụng làm đèn quảng cáo neon và tạo môi trường khí bảo vệ trơ.",
-      "duration": 19.22,
-      "startTime": 342.78,
-      "endTime": 362.0,
-      "audioUrl": "/audio/lectures/science/c8/sec_noble_gases.mp3"
+      "id": "s01_b07",
+      "title": "💡 Vì sao Hydrogen (H, cấu hình: 1 ) đứng riêng lẻ trên đỉnh bảng tuần hoàn? Hydr...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "💡 Why does Hydrogen (H, configuration: 1 ) sit alone at the top? Hydrogen has 1 outer electron like Group I (forming H+ ions in acids), yet it is a diatomic non-metal gas ( H2 ) that needs just 1 more electron to fill its 1s shell like Group VII (forming hydride ions, H− )! Therefore it sits separately above the table.",
+      "vi": "💡 Vì sao Hydrogen (H, cấu hình: 1 ) đứng riêng lẻ trên đỉnh bảng tuần hoàn? Hydrogen có 1e−ngoài cùng giống Nhóm I (tạo ion H+ trong axit), nhưng lại là chất khí phi kim phân tử đôi ( H2 ) chỉ thiếu 1e−để đầy vỏ như Nhóm VII (có thể tạo ion hydride H− )! Vì thế H được đặt ở vị trí độc lập.",
+      "duration": 49.61,
+      "startTime": 472.43,
+      "endTime": 522.04,
+      "audioUrl": "/audio/lectures/science/c8/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🔬 Khám Phá Tương Tác Chu Kỳ 3 (Period 3 Explorer) — Từ Kim loại sang Phi kim",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🔬 Interactive Period 3 Explorer — Metallic to Non-Metallic Transition. 11 • Grp I Na 12 • Grp II Mg 13 • Grp III Al 14 • Grp IV Si 15 • Grp V P 16 • Grp VI S 17 • Grp VII Cl 18 • Grp VIII Ar Sodium (11Na) • Electronic Configuration: 2,8,1 (3 shells = Period 3; 1 outer e−= Group I).• Character: Soft reactive Metal (good electrical conductor) • Ion: Na⁺ • Oxide: Basic oxide ( Na₂O dissolves in water to give strong alkali NaOH, pH 14).",
+      "vi": "🔬 Khám Phá Tương Tác Chu Kỳ 3 (Period 3 Explorer) — Từ Kim loại sang Phi kim. Bấm hoặc 11 • Grp I Na 12 • Grp II Mg 13 • Grp III Al 14 • Grp IV Si 15 • Grp V P 16 • Grp VI S 17 • Grp VII Cl 18 • Grp VIII Ar Sodium (11Na) • Cấu hình e−: 2,8,1 (3 lớp = Period 3; 1e−ngoài cùng = Group I).• Bản chất: Kim loại (Metal) mềm, hoạt động mạnh • Ion: Na⁺ (+1) • Oxit: Basic oxide ( Na₂O tan trong nước tạo kiềm mạnh NaOH, pH 14).",
+      "duration": 103.82,
+      "startTime": 522.04,
+      "endTime": 625.86,
+      "audioUrl": "/audio/lectures/science/c8/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Element Q has the electronic configuration 2,8,6 . Which statement about element Q is correct? A. It is a metallic element in Period 6 and Group III. B. It is a non-metallic element in Period 3 and has similar chemical properties to oxygen (2,6). C. It is in Period 3 and has similar chemical properties to argon (2,8,8). D. It is placed before phosphorus (proton number 15) in the Periodic Table. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Configuration 2,8,6 has 3 occupied shells (⇒ Period 3 ) and 6 outer-shell electrons (⇒ Group VI , on the right-hand non-metallic side of the Periodic Table). Because oxygen ( 2,6 ) also has 6 outer-shell electrons , oxygen and Q (sulfur, Z = 16) belong to Group VI and share similar chemical properties ( B is correct). Since Z = 16, Q comes after phosphorus (Z = 15), eliminating D.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 Element Q has the electronic configuration 2,8,6 . Which statement about element Q is correct? (Nguyên tố Q có cấu hình electron 2,8,6 . Phát biểu nào sau đây về nguyên tố Q là đúng?) A. It is a metallic element in Period 6 and Group III. B. It is a non-metallic element in Period 3 and has similar chemical properties to oxygen (2,6). C. It is in Period 3 and has similar chemical properties to argon (2,8,8). D. It is placed before phosphorus (proton number 15) in the Periodic Table. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Cấu hình 2,8,6 có 3 lớp electron (⇒ Period 3 ) và 6 electron lớp ngoài cùng (⇒ Group VI , nằm bên phải nên là phi kim / non-metal ). Vì oxygen ( 2,6 ) cũng có 6 electron lớp ngoài cùng nên Q (sulfur, Z = 16) có tính chất hóa học tương tự oxygen (⇒ B đúng). Vì Z = 16 > 15 nên Q đứng sau phosphorus (loại D).",
+      "duration": 154.86,
+      "startTime": 625.86,
+      "endTime": 780.72,
+      "audioUrl": "/audio/lectures/science/c8/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Look at the electronic configurations of three elements: Mg ( 2,8,2 ), S ( 2,8,6 ), and Ca ( 2,8,8,2 ).(a) State how elements are ordered in the Periodic Table and explain why Mg and S are in the same period. [2](b) Describe the change in metallic/non-metallic character across Period 3 from Mg to S, and explain why Mg and Ca have similar chemical properties. [2](c) Group II densities (in g/cm3) are: Be = 1.85, Mg = 1.74, Ca = 1.55, Sr = 2.64, Ba = 3.62, Ra = 5.50. Describe the general trend in density from Ca down to Ra. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Ordered by increasing proton number / atomic number [1m]. Mg and S both have 3 occupied electron shells [1m]. (b) Across Period 3 from Mg to S, character changes from metallic (Mg) to non-metallic (S) [1m]. Mg and Ca react similarly because both have 2 electrons in their outer shell [1m]. (c) Density increases down the group from Ca to Ra [1m]. 💡 Intuition Check: Count how many shells are occupied for the Period , and look at the outer-shell electron count to explain same-group chemical similarity !",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Look at the electronic configurations of three elements: Mg ( 2,8,2 ), S ( 2,8,6 ), and Ca ( 2,8,8,2 ).(a) State how elements are ordered in the Periodic Table and explain why Mg and S are in the same period. (b) Describe the change in metallic/non-metallic character across Period 3 from Mg to S, and explain why Mg and Ca have similar chemical properties. (c) Group II densities (in g/cm3) are: Be = 1.85, Mg = 1.74, Ca = 1.55, Sr = 2.64, Ba = 3.62, Ra = 5.50. Describe the general trend in density from Ca down to Ra. (Dịch: (a) Nêu nguyên tắc sắp xếp bảng tuần hoàn và giải thích vì sao Mg, S cùng chu kỳ. (b) Nêu sự biến đổi tính kim loại/phi kim từ Mg sang S và vì sao Mg, Ca có tính chất giống nhau. (c) Nhận xét xu hướng khối lượng riêng từ Ca xuống Ra.) ✍️ Lời giải chi tiết theo thang điểm: (a) Sắp xếp theo chiều tăng dần số proton / số hiệu nguyên tử . Mg và S cùng thuộc Period 3 vì đều có 3 lớp vỏ electron . (b) Từ Mg sang S chuyển dần từ tính kim loại sang tính phi kim . Mg và Ca phản ứng tương tự nhau vì đều có 2 electron ở lớp ngoài cùng . (c) Khối lượng riêng tăng dần khi đi xuống nhóm từ Ca đến Ra . 💡 Kiểm tra bản chất: Đếm số lớp electron để tìm Period , và nhìn số electron lớp ngoài cùng để giải thích tính chất hóa học tương tự trong cùng Group !",
+      "duration": 217.64,
+      "startTime": 780.72,
+      "endTime": 998.36,
+      "audioUrl": "/audio/lectures/science/c8/s01_b10.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⚔️ 2. KIM LOẠI KIỀM NHÓM I VS. PHI KIM HALOGEN NHÓM VII",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⚔️ 2. GROUP I ALKALI METALS VS. GROUP VII HALOGENS. Core + Supplement C8.2 & C8.3",
+      "vi": "⚔️ 2. KIM LOẠI KIỀM NHÓM I VS. PHI KIM HALOGEN NHÓM VII. Core + Supplement C8.2 & C8.3",
+      "duration": 19.56,
+      "startTime": 998.36,
+      "endTime": 1017.92,
+      "audioUrl": "/audio/lectures/science/c8/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of the positive nucleus as a magnet and each inner electron shell as a thick winter coat :• Group I Alkali Metals (Li → Na → K) want to LOSE 1 outer e−: More coats down the group = outer electron is further from the magnet = lost more easily ⇒ MORE reactive with water down Group I! • Group VII Halogens (Cl2→ Br2→ I2) want to GAIN 1 extra e−: More coats down the group = weaker pull on an incoming electron = harder to attract ⇒ LESS reactive down Group VII! In displacement , a higher-up halogen ( Cl₂ ) snatches electrons straight from a lower halide ion ( Br⁻ or I⁻ )!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi hạt nhân dương như thỏi nam châm và mỗi lớp vỏ electron bên trong như một chiếc áo bông dày :• Group I Kim loại Kiềm (Li → Na → K) muốn NHƯỜNG 1e−ngoài cùng: Càng xuống dưới càng nhiều áo bông → electron ngoài cùng càng xa nam châm → càng dễ văng ra ⇒ ĐỘ HOẠT ĐỘNG VỚI NƯỚC TĂNG DẦN! • Group VII Phi kim Halogen (Cl2→ Br2→ I2) muốn NHẬN THÊM 1e−: Càng xuống dưới càng nhiều áo bông → lực hút của nam châm lên electron bên ngoài càng yếu → càng khó hút thêm e−⇒ ĐỘ HOẠT ĐỘNG GIẢM DẦN! Trong phản ứng thế (displacement) , halogen đứng trên ( Cl₂ ) mạnh hơn sẽ giật electron của ion halide đứng dưới ( Br⁻ , I⁻ )!",
+      "duration": 94.82,
+      "startTime": 1017.92,
+      "endTime": 1112.74,
+      "audioUrl": "/audio/lectures/science/c8/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦/🟩 Group I Alkali Metals (C8.2.1–C8.2.2): Soft metals; down the group: melting point decreases , density increases , reactivity with water increases ; predict Rb/Cs properties (🟩). 2 → 🟦 Core Group VII Halogens (C8.3.1–C8.3.2): Diatomic non-metals ( X₂ ); r.t.p. appearances: Cl2= pale yellow-green gas , Br2= red-brown liquid , I2= grey-black solid ; down the group: density increases , reactivity decreases . 3 → 🟩 Supplement Displacement & Predictions (C8.3.3–C8.3.4): More reactive halogen displaces less reactive halide ions ( Cl₂ > Br₂ > I₂ ); predict F2/At2properties.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦/🟩 Kim loại Kiềm Nhóm I (C8.2.1–C8.2.2): Kim loại mềm; đi từ trên xuống: melting point giảm , density tăng , reactivity với nước tăng dần ; dự đoán Rb/Cs (🟩). 2 → 🟦 Core Halogen Nhóm VII (C8.3.1–C8.3.2): Phi kim phân tử đôi ( X₂ ); ở r.t.p.: Cl2= khí vàng lục nhạt , Br2= lỏng nâu đỏ , I2= rắn xám đen ; xuống dưới: density tăng , reactivity giảm . 3 → 🟩 Supplement Phản ứng Thế & Dự đoán (C8.3.3–C8.3.4): Halogen mạnh đẩy ion halide yếu hơn ( Cl₂ > Br₂ > I₂ ); dự đoán tính chất F2/At2.",
+      "duration": 90.89,
+      "startTime": 1112.74,
+      "endTime": 1203.63,
+      "audioUrl": "/audio/lectures/science/c8/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When asked for observations of Li/Na/K with water, write only what you see ( floats, fizzes, melts into a ball, lilac flame for K ) — never write \"hydrogen gas is formed\" ! And remember Group I and Group VII reactivity trends go in opposite directions !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi đề hỏi Observations (Hiện tượng quan sát) với nước, chỉ viết những gì mắt thấy ( floats, fizzes, melts into a ball, lilac flame với K ) — cấm ghi tên sản phẩm \"hydrogen gas\" ! Và luôn nhớ chiều hoạt động Nhóm I (tăng) và Nhóm VII (giảm) NGƯỢC CHIỀU NHAU !",
+      "duration": 41.04,
+      "startTime": 1203.63,
+      "endTime": 1244.67,
+      "audioUrl": "/audio/lectures/science/c8/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Group I (Alkali Metals) và Group VII (Halogens) là hai họ nguyên tố trọng tâm bậ...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Group I (extreme left reactive metals) and Group VII (reactive diatomic non-metals) are the two most heavily examined families in IGCSE Co-ordinated Sciences (0654) — and their chemical reactivity trends go in completely opposite directions down the group !",
+      "vi": "Group I (Alkali Metals) và Group VII (Halogens) là hai họ nguyên tố trọng tâm bậc nhất của đề thi 0654 — đặc biệt, xu hướng độ hoạt động hóa học (reactivity) của chúng biến đổi hoàn toàn NGƯỢC CHIỀU NHAU khi đi từ trên xuống dưới !",
+      "duration": 35.97,
+      "startTime": 1244.67,
+      "endTime": 1280.64,
+      "audioUrl": "/audio/lectures/science/c8/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔵 C8.2 Group I: Alkali Metals (Kim loại Kiềm)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔵 C8.2 Group I: Alkali Metals. Li (2,1) → Na (2,8,1) → K (2,8,8,1) → predict Rb, Cs, Fr . Physical Properties & General Trends Down Group I (Core C8.2.1): Relatively soft metals: Easily cut with a scalpel/knife, exposing a shiny silvery surface that tarnishes rapidly in air (stored under oil !). Decreasing melting point down the group: Li (181°C) > Na (98°C) > K (63°C) > Rb (39°C) > Cs (28°C). Increasing density down the group: Li (0.53), Na (0.97), K (0.86 g/cm3— all three float on water !) → Rb (1.53), Cs (1.88 g/cm3— sink!). Increasing reactivity with water down the group: Li < Na < K < Rb < Cs! Reaction with Cold Water → Metal Hydroxide (Alkali, pH 13–14) + H2(g): 2Na(s) + 2H2O(l) ⟶ 2NaOH(aq) + H2(g) • Lithium (Li): Floats, fizzes steadily, moves slowly across surface, disappears.• Sodium (Na): Floats, melts into a silvery ball , fizzes rapidly, darts across surface (sometimes yellow flame).• Potassium (K): Floats, melts, darts violently, H2ignites immediately with a lilac flame !• Prediction for Rubidium / Caesium (Supplement C8.2.2): Sink, react explosively on contact with water, shattering the trough!",
+      "vi": "🔵 C8.2 Group I: Alkali Metals (Kim loại Kiềm). Li (2,1) → Na (2,8,1) → K (2,8,8,1) → dự đoán Rb, Cs, Fr . Tính chất & Quy luật đi từ trên xuống Nhóm I (Core C8.2.1): Kim loại rất mềm (soft metals): Cắt dễ dàng bằng dao, mặt cắt ánh bạc bị xỉn mờ rất nhanh trong không khí nên phải ngâm bảo quản trong dầu hỏa (oil). Nhiệt độ nóng chảy GIẢM DẦN: Li (181°C) > Na (98°C) > K (63°C) > Rb (39°C) > Cs (28°C). Khối lượng riêng TĂNG DẦN (increasing density): Li (0.53), Na (0.97), K (0.86 g/cm3— cả ba nổi trên mặt nước !) → Rb, Cs chìm trong nước. Độ hoạt động TĂNG DẦN (increasing reactivity): Li < Na < K < Rb < Cs! Tác dụng Nước lạnh → Dung dịch Kiềm (Alkali, pH 13–14) + Khí H2(g): 2Na(s) + 2H2O(l) ⟶ 2NaOH(aq) + H2(g) • Lithium (Li): Nổi (floats), sủi bọt đều (fizzes steadily), chạy chậm rồi tan dần.• Sodium (Na): Nổi, nóng chảy thành viên bi tròn ánh bạc , sủi bọt mạnh, chạy vèo trên mặt nước.• Potassium (K): Nổi, chảy lỏng, lao cực nhanh và tự bốc cháy với ngọn lửa màu tím hoa cà (lilac flame) !• Dự đoán Rb & Cs (Supplement C8.2.2): Chìm và nổ tung tức khắc (explode violently) ngay khi chạm nước!",
+      "duration": 231.17,
+      "startTime": 1280.64,
+      "endTime": 1511.81,
+      "audioUrl": "/audio/lectures/science/c8/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🟣 C8.3 Group VII: Halogens (Phi kim Halogen)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🟣 C8.3 Group VII: Halogens. Toxic diatomic non-metals (X2) : F2 → Cl2 → Br2 → I2 → At2 . Official r.t.p. Appearance (Core C8.3.2) & Predictions (Supplement C8.3.4): Fluorine (F2— predicted): Pale yellow gas (most reactive!). Chlorine (Cl2): Pale yellow-green gas. Bromine (Br2): Red-brown liquid (readily forms orange-brown vapour). Iodine (I2): Grey-black solid (sublimes on gentle heating to purple vapour). Astatine (At2— predicted): Black solid , highest density, least reactive. General Trends Down Group VII (Core C8.3.1): Increasing density and increasing melting/boiling points (gas → liquid → solid as intermolecular forces strengthen). Darkening colour down the group. Decreasing reactivity down the group: F2> Cl2> Br2> I2> At2! Halogen Displacement Rule (Supplement C8.3.3): A more reactive halogen displaces a less reactive halide ion from its aqueous salt solution: Cl2(aq) + 2KI(aq) ⟶ 2KCl(aq) + I2(aq)",
+      "vi": "🟣 C8.3 Group VII: Halogens. Phi kim độc phân tử 2 nguyên tử : F2 → Cl2 → Br2 → I2 → At2 . Trạng thái & Màu sắc ở điều kiện thường r.t.p. (Core C8.3.2 & Supplement C8.3.4): Fluorine (F2— dự đoán): Khí màu vàng nhạt ( pale yellow gas , mạnh nhất!). Chlorine (Cl2): Khí màu vàng lục nhạt. Bromine (Br2): Chất lỏng nâu đỏ dễ bay hơi. Iodine (I2): Chất rắn xám đen — đun nhẹ thăng hoa thành hơi màu tím (purple vapour). Astatine (At2— dự đoán): Chất rắn màu đen (black solid) , kém hoạt động nhất. Quy luật biến đổi đi từ trên xuống Nhóm VII (Core C8.3.1): Khối lượng riêng TĂNG DẦN (increasing density) và nhiệt độ nóng chảy/sôi tăng dần (khí → lỏng → rắn); màu sắc ĐẬM DẦN. Độ hoạt động GIẢM DẦN (decreasing reactivity): F2> Cl2> Br2> I2> At2! Quy tắc Phản ứng Thế Halogen (Displacement — Supplement C8.3.3): Halogen mạnh hơn sẽ đẩy ion halide yếu hơn ra khỏi dung dịch muối: Cl2(aq) + 2KI(aq) ⟶ 2KCl(aq) + I2(aq)",
+      "duration": 178.2,
+      "startTime": 1511.81,
+      "endTime": 1690.01,
+      "audioUrl": "/audio/lectures/science/c8/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧪 Mô Phỏng Phòng Thí Nghiệm Phản Ứng Thế Halogen (Displacement Simulator — Supplement C8.3.3)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🧪 Interactive Halogen Displacement Lab Simulator (Supplement C8.3.3). 🟠 Cl2(aq) + KBr(aq)🟤 Cl2(aq) + KI(aq)🟤 Br2(aq) + KI(aq)❌ I2(aq) + KCl / KBr ✅ Displacement Occurs: Chlorine + Potassium Bromide (Cl2is more reactive than Br2).• Observation: Colourless KBr solution turns yellow-orange due to displaced aqueous Br2(aq) .• Equations: Cl₂(aq) + 2KBr(aq) → 2KCl(aq) + Br₂(aq) | Ionic: Cl₂(aq) + 2Br⁻(aq) → 2Cl⁻(aq) + Br₂(aq) (Cl2gains e−= reduced; Br−loses e−= oxidised).",
+      "vi": "🧪 Mô Phỏng Phòng Thí Nghiệm Phản Ứng Thế Halogen. Bấm hoặc 🟠 Cl2(aq) + KBr(aq)🟤 Cl2(aq) + KI(aq)🟤 Br2(aq) + KI(aq)❌ I2(aq) + KCl / KBr ✅ Có Phản ứng Thế: Chlorine + Potassium Bromide (Cl2hoạt động mạnh hơn Br2).• Hiện tượng: Dung dịch KBr không màu chuyển sang màu vàng cam (yellow-orange) do Br2(aq) sinh ra.• Phương trình: Cl₂(aq) + 2KBr(aq) → 2KCl(aq) + Br₂(aq) | PT Ion: Cl₂(aq) + 2Br⁻(aq) → 2Cl⁻(aq) + Br₂(aq) (Cl2nhận e−bị khử; Br−nhường e−bị oxi hóa).",
+      "duration": 115.55,
+      "startTime": 1690.01,
+      "endTime": 1805.56,
+      "audioUrl": "/audio/lectures/science/c8/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🔴 Vì sao Group I càng xuống dưới càng MẠNH (Muốn MẤT 1e−): Đi từ trên xuống, số ...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🔴 Why Group I Reactivity INCREASES Down the Group: Group I atoms react by losing 1 outer electron . Going down the group, atoms have more electron shells ⇒ the outer electron is further from the positive nucleus and more shielded ⇒ weaker electrostatic attraction ⇒ outer electron is lost more easily !",
+      "vi": "🔴 Vì sao Group I càng xuống dưới càng MẠNH (Muốn MẤT 1e−): Đi từ trên xuống, số lớp electron tăng lên ⇒ electron ngoài cùng nằm càng xa hạt nhân mang điện dương và bị che chắn nhiều ⇒ lực hút tĩnh điện yếu đi ⇒ electron dễ bị tách ra hơn ⇒ phản ứng mạnh hơn!",
+      "duration": 38.2,
+      "startTime": 1805.56,
+      "endTime": 1843.76,
+      "audioUrl": "/audio/lectures/science/c8/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🔵 Vì sao Group VII càng xuống dưới càng YẾU (Muốn NHẬN 1e−): Đi từ trên xuống, b...",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "🔵 Why Group VII Reactivity DECREASES Down the Group: Group VII atoms react by gaining 1 outer electron . Going down the group, atoms have more electron shells ⇒ the outer shell is further from the positive nucleus ⇒ weaker electrostatic pull on an incoming electron ⇒ harder to attract an extra electron !",
+      "vi": "🔵 Vì sao Group VII càng xuống dưới càng YẾU (Muốn NHẬN 1e−): Đi từ trên xuống, bán kính nguyên tử lớn dần (nhiều lớp vỏ hơn) ⇒ lớp vỏ ngoài cùng xa hạt nhân hơn ⇒ lực hút của hạt nhân lên electron bên ngoài yếu đi ⇒ khó thu hút thêm 1 electron hơn ⇒ phản ứng kém hơn!",
+      "duration": 39.4,
+      "startTime": 1843.76,
+      "endTime": 1883.16,
+      "audioUrl": "/audio/lectures/science/c8/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "⚠️ Bẫy Chết Người câu hỏi “Observations” (Li/Na/K + Nước): Chỉ ghi những gì mắt ...",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "⚠️ Exam Trap on “Observations” (Li/Na/K + Water): If asked “State two observations” , write what you see/hear : “fizzes / effervescence, floats, moves on surface, melts into a ball, lilac flame (for K), solid disappears” . NEVER write “hydrogen gas is produced” or “NaOH is formed” — naming products scores 0 marks for an observation!",
+      "vi": "⚠️ Bẫy Chết Người câu hỏi “Observations” (Li/Na/K + Nước): Chỉ ghi những gì mắt thấy / tai nghe: “fizzes / effervescence (sủi bọt), floats (nổi), moves on surface, melts into a ball (Na/K), lilac flame (K)” . TUYỆT ĐỐI KHÔNG ghi “hydrogen gas is given off” hay “NaOH forms” — nêu tên chất bị 0 điểm cho câu hỏi quan sát!",
+      "duration": 50.45,
+      "startTime": 1883.16,
+      "endTime": 1933.61,
+      "audioUrl": "/audio/lectures/science/c8/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Astatine, At, lies below iodine in Group VII. Which row correctly predicts the state and colour of astatine at r.t.p., and whether a reaction occurs when aqueous chlorine is added to aqueous potassium astatide? A. Pale yellow gas | No reaction B. Black solid | Chlorine displaces astatine C. Black solid | No reaction D. Red-brown liquid | Chlorine displaces potassium ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Down Group VII ( Cl₂ gas → Br₂ liquid → I₂ grey-black solid), melting/boiling points rise and colour darkens, so astatine is a black solid at r.t.p. Because reactivity decreases down Group VII , chlorine is much more reactive than astatine and displaces astatine from aqueous potassium astatide ( B ).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Astatine, At, lies below iodine in Group VII. Which row correctly predicts the state and colour of astatine at r.t.p., and whether a reaction occurs when aqueous chlorine is added to aqueous potassium astatide? (Astatine, At, nằm dưới iodine ở Nhóm VII. Phương án nào dự đoán đúng trạng thái, màu sắc của astatine ở r.t.p. và hiện tượng khi cho dung dịch chlorine vào dung dịch potassium astatide?) A. Pale yellow gas | No reaction B. Black solid | Chlorine displaces astatine C. Black solid | No reaction D. Red-brown liquid | Chlorine displaces potassium ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đi xuống Nhóm VII ( Cl₂ khí → Br₂ lỏng → I₂ rắn xám đen), nhiệt độ nóng chảy tăng và màu sẫm dần nên astatine là chất rắn màu đen (black solid) ở r.t.p. Vì độ hoạt động giảm dần khi đi xuống Nhóm VII , chlorine hoạt động mạnh hơn nhiều so với astatine nên đẩy được astatine (displaces astatine) ra khỏi dung dịch muối (⇒ B đúng).",
+      "duration": 133.58,
+      "startTime": 1933.61,
+      "endTime": 2067.19,
+      "audioUrl": "/audio/lectures/science/c8/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Rubidium, Rb, lies below potassium in Group I. Bromine, Br2, lies between chlorine and iodine in Group VII.(a) Potassium melts at 63°C and reacts vigorously with cold water. Predict how the melting point of rubidium and its reactivity with water compare with potassium. [2](b) State the physical state and colour of bromine at room temperature and pressure (r.t.p.). [1](c) Aqueous bromine is added to aqueous potassium iodide, KI(aq). Describe what is observed, write the symbol equation, and explain why a reaction takes place. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Rubidium has a lower melting point than 63°C (actual: 39°C) [1m] and reacts even more violently / explosively with water than potassium [1m]. (b) Red-brown liquid [1m]. (c) Solution turns brown (due to iodine formed); Br₂ + 2KI → 2KBr + I₂ [1m]; reaction occurs because bromine is more reactive than iodine so it displaces iodide ions [1m]. 💡 Intuition Check: Memorise the exact 3 syllabus r.t.p. halogen phrases word-for-word: pale yellow-green gas (Cl2) , red-brown liquid (Br2) , and grey-black solid (I2) !",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Rubidium, Rb, lies below potassium in Group I. Bromine, Br2, lies between chlorine and iodine in Group VII.(a) Potassium melts at 63°C and reacts vigorously with cold water. Predict how the melting point of rubidium and its reactivity with water compare with potassium. (b) State the physical state and colour of bromine at room temperature and pressure (r.t.p.). (c) Aqueous bromine is added to aqueous potassium iodide, KI(aq). Describe what is observed, write the symbol equation, and explain why a reaction takes place. (Dịch: (a) Dự đoán nhiệt độ nóng chảy và mức độ phản ứng với nước của rubidium so với potassium. (b) Nêu trạng thái và màu sắc của bromine ở r.t.p. (c) Nhỏ Br2(aq) vào KI(aq): nêu hiện tượng, PTHH và giải thích.) ✍️ Lời giải chi tiết theo thang điểm: (a) Rubidium có nhiệt độ nóng chảy thấp hơn 63°C và phản ứng với nước mãnh liệt / nổ mạnh hơn so với potassium . (b) Chất lỏng màu nâu đỏ . (c) Dung dịch chuyển sang màu nâu (turns brown) ; Br₂ + 2KI → 2KBr + I₂ ; phản ứng xảy ra vì bromine hoạt động mạnh hơn iodine nên đẩy được ion iodide . 💡 Kiểm tra bản chất: Thuộc lòng từng chữ 3 cụm màu chuẩn r.t.p. của Nhóm VII: pale yellow-green gas (Cl2) , red-brown liquid (Br2) , và grey-black solid (I2) !",
+      "duration": 208.48,
+      "startTime": 2067.19,
+      "endTime": 2275.67,
+      "audioUrl": "/audio/lectures/science/c8/s02_b12.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🏗️ 3. KIM LOẠI CHUYỂN TIẾP (TRANSITION ELEMENTS) & KHÍ HIẾM NHÓM VIII",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🏗️ 3. TRANSITION ELEMENTS & GROUP VIII NOBLE GASES. Core Only C8.4 & C8.5",
+      "vi": "🏗️ 3. KIM LOẠI CHUYỂN TIẾP (TRANSITION ELEMENTS) & KHÍ HIẾM NHÓM VIII. Core Only C8.4 & C8.5",
+      "duration": 18.11,
+      "startTime": 2275.67,
+      "endTime": 2293.78,
+      "audioUrl": "/audio/lectures/science/c8/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Contrast the Periodic Table’s two specialist blocks:• Transition Elements (Fe, Cu, Ni, Cr) are heavy-duty industrial builders : dense, high-melting metals whose compounds glow with rich colours (blue CuSO4, purple KMnO4) and whose surfaces speed up industrial reactions as catalysts !• Group VIII Noble Gases (He, Ne, Ar) are peaceful solo hermits : because their outer electron shells are already 100% full , they refuse to lose, gain, or share electrons — drifting around alone as single monatomic atoms ( He, Ne, Ar )!",
+      "vi": "🎯 Hình dung đời thường: Hãy đối chiếu hai nhóm nguyên tố đối lập thú vị nhất Bảng Tuần Hoàn:• Transition Elements (Kim loại Chuyển tiếp — Fe, Cu, Ni, Cr) là những chiến binh công nghiệp hạng nặng : khối lượng riêng lớn, chịu nhiệt cực cao, tạo ra các hợp chất rực rỡ sắc màu ( coloured compounds như CuSO4xanh lam) và làm chất xúc tác (catalysts) tăng tốc sản xuất công nghiệp!• Group VIII Noble Gases (Khí Hiếm — He, Ne, Ar) là những ẩn sĩ viên mãn : lớp vỏ electron ngoài cùng đã bão hòa 100% nên không thèm nhường, nhận hay góp chung electron — tồn tại độc lập dạng khí đơn nguyên tử (monatomic) ( He, Ne, Ar )!",
+      "duration": 89.71,
+      "startTime": 2293.78,
+      "endTime": 2383.49,
+      "audioUrl": "/audio/lectures/science/c8/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Transition Elements (C8.4.1): Metals with (a) high densities , (b) high melting points , (c) coloured compounds , and (d) frequent use as catalysts both as elements (Fe, Ni) and in compounds (V2O5, MnO2). 2 → 🟦 Core Group VIII Noble Gases (C8.5.1): Unreactive, monatomic gases because their atoms already have a full outer electron shell ( 2 for He; 2,8 for Ne; 2,8,8 for Ar).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core 4 Đặc trưng Transition Elements (C8.4.1): Kim loại có (a) high densities (khối lượng riêng cao), (b) high melting points (nhiệt độ nóng chảy cao), (c) tạo coloured compounds (hợp chất có màu), và (d) thường làm catalysts (chất xúc tác) ở dạng đơn chất hoặc hợp chất. 2 → 🟦 Core Khí Hiếm Nhóm VIII (C8.5.1): Là các khí đơn nguyên tử, trơ về mặt hóa học vì nguyên tử đã có lớp vỏ electron ngoài cùng bão hòa .",
+      "duration": 65.07,
+      "startTime": 2383.49,
+      "endTime": 2448.56,
+      "audioUrl": "/audio/lectures/science/c8/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write noble gas formulas as He₂ or Ar₂ — they are monatomic ! And explain their unreactivity using \"full outer electron shell\" rather than \"8 outer electrons\" so Helium (which is full with 2 electrons) is included accurately!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm viết công thức khí hiếm dạng He₂ hay Ar₂ — chúng là monatomic ! Khi giải thích tính trơ, hãy dùng cụm từ \"full outer electron shell\" (lớp vỏ ngoài cùng bão hòa) thay vì \"8 electron ngoài cùng\" để bao hàm chính xác cả Helium (bão hòa với 2e−)!",
+      "duration": 38.94,
+      "startTime": 2448.56,
+      "endTime": 2487.5,
+      "audioUrl": "/audio/lectures/science/c8/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🛡️ C8.4 Transition Elements (Kim loại Chuyển tiếp)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🛡️ C8.4 Transition Elements. Located in the central block between Group II and Group III (e.g. Fe, Cu, Ni, V, Cr, Mn, Co, Zn* ). Characteristic properties: Physical (Core C8.4.1a,b): High densities (Fe = 7.9, Cu = 8.9 g/cm3), high melting points (Fe = 1538°C, Cu = 1085°C, W = 3422°C), hard, strong, malleable, good conductors. Coloured compounds (Core C8.4.1c): Unlike Group I white solids/colourless solutions, transition metal ions have distinctive colours: Cu2+ (blue), Fe2+ (pale green), Fe3+ (red-brown/yellow), MnO4− (purple), Cr2O72− (orange). Catalysts (Core C8.4.1d): Act as catalysts both as elements ( Fe in Haber process; Ni in alkene hydrogenation; Pt/Rh in catalytic converters) and in compounds ( V2O5 in Contact process; MnO2 decomposing H2O2).",
+      "vi": "🛡️ C8.4 Transition Elements (Kim loại Chuyển tiếp). Khối kim loại trung tâm nằm giữa Group II và Group III. 4 đặc trưng cốt lõi chuẩn C8.4.1: Vật lý (Core C8.4.1a,b): Khối lượng riêng lớn (high densities) (Fe = 7.9, Cu = 8.9 g/cm3), nhiệt độ nóng chảy rất cao (Fe = 1538°C, Cu = 1085°C), cứng, bền chắc. Hợp chất có màu: Khác với muối trắng Nhóm I, hợp chất chuyển tiếp có màu đặc trưng: Cu2+, Fe2+ (xanh lục nhạt / pale green), Fe3+ (nâu đỏ / red-brown), MnO4− (tím / purple). Chất xúc tác (catalysts — Core C8.4.1d): Làm xúc tác ở cả dạng đơn chất ( Fe trong Haber process; Ni cộng H2vào alkene) lẫn hợp chất ( V2O5 trong Contact process; MnO2 phân hủy H2O2).",
+      "duration": 152.18,
+      "startTime": 2487.5,
+      "endTime": 2639.68,
+      "audioUrl": "/audio/lectures/science/c8/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🎈 C8.5 Group VIII: Noble Gases (Khí Hiếm)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🎈 C8.5 Group VIII: Noble Gases. Helium (He), Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe) — colourless, odourless gases on the far right of the Periodic Table: Monatomic gases (Core C8.5.1): Exist as single unbonded atoms ( He , Ne , Ar — NEVER diatomic like O2or Cl2!). Chemically unreactive (inert): Their atoms already possess a full outer electron shell ( 2 for He; 2,8 for Ne; 2,8,8 for Ar), so they do not easily lose, gain, or share electrons. Key Practical Uses: • Helium (He): Filling weather balloons & airships — very low density AND non-flammable (unlike explosive H2!).• Argon (Ar): Providing an inert atmosphere in filament lamps (stops hot tungsten burning in O2) and arc welding.• Neon (Ne): Red-orange glowing advertising signs.",
+      "vi": "🎈 C8.5 Group VIII: Noble Gases (Khí Hiếm). Helium (He), Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe) — các chất khí không màu, không mùi ở cột ngoài cùng bên phải: Khí đơn nguyên tử: Tồn tại dưới dạng từng nguyên tử độc lập ( He , Ne , Ar — TUYỆT ĐỐI không ghép đôi như O2hay Cl2!). Trơ về mặt hóa học (unreactive): Nguyên tử đã có lớp vỏ electron ngoài cùng bão hòa bền vững ( 2 với He; 2,8 với Ne; 2,8,8 với Ar), nên không nhường, nhận hay góp chung electron. Ứng dụng thực tiễn trọng tâm: • Helium (He): Bơm khinh khí cầu & bóng bay — nhẹ hơn không khí (low density) VÀ không cháy nổ (non-flammable) (an toàn hơn hẳn H2!).• Argon (Ar): Bơm vào bóng đèn sợi đốt & hàn hồ quang tạo môi trường khí trơ (inert atmosphere) ngăn dây tóc tungsten cháy với O2.• Neon (Ne): Đèn hiệu quảng cáo phát sáng đỏ cam.",
+      "duration": 127.57,
+      "startTime": 2639.68,
+      "endTime": 2767.25,
+      "audioUrl": "/audio/lectures/science/c8/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Tiêu chí so sánh: Nhiệt độ nóng chảy (m.p.); Kim loại Kiềm Nhóm I (Li, Na, K): T...",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Property: Melting Point; Group I Alkali Metals (Li, Na, K): Low (e.g. Na = 98°C, K = 63°C); Transition Elements (Fe, Cu, Ni, Cr): High (e.g. Fe = 1538°C, Cu = 1085°C). Property: Density & Hardness; Group I Alkali Metals (Li, Na, K): Low density (< 1 g/cm 3 , float on H 2 O); soft (cut with knife); Transition Elements (Fe, Cu, Ni, Cr): High density (> 7 g/cm 3 , sink); hard & strong. Property: Reactivity with Water / Air; Group I Alkali Metals (Li, Na, K): Very vigorous with cold water; tarnish rapidly in air; Transition Elements (Fe, Cu, Ni, Cr): Slow or no reaction with cold water (e.g. Fe rusts slowly; Cu does not react). Property: Colour of Compounds; Group I Alkali Metals (Li, Na, K): White solids → colourless aqueous solutions; Transition Elements (Fe, Cu, Ni, Cr): Coloured solids & solutions (blue Cu 2+ , green Fe 2+ , brown Fe 3+ ). Property: Catalytic Activity; Group I Alkali Metals (Li, Na, K): Do NOT act as catalysts; Transition Elements (Fe, Cu, Ni, Cr): Often act as catalysts both as elements (Fe, Ni) and in compounds (V 2 O 5 , MnO 2 ).",
+      "vi": "Tiêu chí so sánh: Nhiệt độ nóng chảy (m.p.); Kim loại Kiềm Nhóm I (Li, Na, K): Thấp (VD: Na = 98°C, K = 63°C); Kim loại Chuyển tiếp: Rất cao (VD: Fe = 1538°C, Cu = 1085°C). Tiêu chí so sánh: Khối lượng riêng & Độ cứng; Kim loại Kiềm Nhóm I (Li, Na, K): Nhẹ (< 1 g/cm 3 , nổi trên nước); rất mềm (cắt bằng dao); Kim loại Chuyển tiếp: Nặng (> 7 g/cm 3 , chìm); cứng & bền chắc. Tiêu chí so sánh: Phản ứng với Nước lạnh; Kim loại Kiềm Nhóm I (Li, Na, K): Phản ứng mãnh liệt giải phóng khí H 2 + kiềm; Kim loại Chuyển tiếp: Rất chậm hoặc không phản ứng (Fe gỉ chậm; Cu không tác dụng). Tiêu chí so sánh: Màu sắc Hợp chất; Kim loại Kiềm Nhóm I (Li, Na, K): Tinh thể trắng → dung dịch không màu (colourless); Kim loại Chuyển tiếp: Hợp chất & dung dịch có màu (xanh Cu 2+ , lục Fe 2+ , nâu Fe 3+ ). Tiêu chí so sánh: Hoạt tính Xúc tác (Catalysts); Kim loại Kiềm Nhóm I (Li, Na, K): Không làm chất xúc tác; Kim loại Chuyển tiếp: Thường làm chất xúc tác ở dạng đơn chất (Fe, Ni) và hợp chất (V 2 O 5 , MnO 2 ).",
+      "duration": 203.97,
+      "startTime": 2767.25,
+      "endTime": 2971.22,
+      "audioUrl": "/audio/lectures/science/c8/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Element M is a metal with a melting point of 1085°C and a density of 8.96 g/cm3. It forms a blue soluble sulfate salt. In which part of the Periodic Table is element M found? A. Group I B. Group VII C. Group VIII D. Transition elements ✅ Correct Answer: D 🧠 Step-by-Step Reasoning: Having a high melting point (1085°C), a high density (8.96 g/cm3), and forming a coloured compound (blue sulfate, CuSO4) are three classic Core C8.4.1 properties of transition elements ( D ). Group I metals have low melting points (< 200°C), low densities (< 1 g/cm3), and form white/colourless salts.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 Element M is a metal with a melting point of 1085°C and a density of 8.96 g/cm3. It forms a blue soluble sulfate salt. In which part of the Periodic Table is element M found? (Nguyên tố M là kim loại nóng chảy ở 1085°C, khối lượng riêng 8.96 g/cm3và tạo muối sulfate tan có màu xanh lam. M nằm ở đâu trong Bảng Tuần Hoàn?) A. Group I B. Group VII C. Group VIII D. Transition elements ✅ Đáp án đúng: D 🧠 Giải thích & Cách loại bẫy: Có nhiệt độ nóng chảy cao (1085°C), khối lượng riêng lớn (8.96 g/cm3) và tạo hợp chất có màu (muối xanh lam CuSO4) là 3 dấu hiệu kinh điển của transition elements (kim loại chuyển tiếp) trong mục C8.4.1 (⇒ chọn D ). Kim loại Nhóm I nóng chảy thấp (< 200°C), nhẹ (< 1 g/cm3) và tạo muối trắng.",
+      "duration": 134.39,
+      "startTime": 2971.22,
+      "endTime": 3105.61,
+      "audioUrl": "/audio/lectures/science/c8/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [5 marks] Nickel is a transition element used in the manufacture of margarine, and neon is a Group VIII noble gas used in advertising signs.(a) State three characteristic properties of transition elements such as nickel that distinguish them from Group I metals like sodium. [3](b) Explain, in terms of its electronic configuration ( 2,8 ), why neon is unreactive and exists as monatomic particles. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Any three from: Nickel has a high density [1m], a high melting point [1m], forms coloured compounds [1m], and acts as a catalyst (as an element or in compounds). (b) Neon ( 2,8 ) has a full outer shell of electrons [1m], so its atoms do not easily lose, gain, or share electrons with other atoms (hence remaining unbonded single atoms) [1m]. 💡 Intuition Check: Memorise the 4-point C8.4 checklist with \" HD-CC \": H igh melting point, D ense (high density), C oloured compounds, C atalysts!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 / Paper 4 [5 marks] Nickel is a transition element used in the manufacture of margarine, and neon is a Group VIII noble gas used in advertising signs.(a) State three characteristic properties of transition elements such as nickel that distinguish them from Group I metals like sodium. (b) Explain, in terms of its electronic configuration ( 2,8 ), why neon is unreactive and exists as monatomic particles. (Dịch: (a) Nêu 3 tính chất đặc trưng của kim loại chuyển tiếp như nickel giúp phân biệt với kim loại Nhóm I như sodium. (b) Dựa vào cấu hình electron ( 2,8 ), giải thích vì sao neon trơ và tồn tại dạng đơn nguyên tử.) ✍️ Lời giải chi tiết theo thang điểm: (a) Nêu 3 trong 4 ý chuẩn C8.4.1: Nickel có khối lượng riêng cao (high density) , nhiệt độ nóng chảy cao , tạo hợp chất có màu (coloured compounds) , và đóng vai trò chất xúc tác . (b) Nguyên tử neon ( 2,8 ) đã có lớp vỏ electron ngoài cùng bão hòa , nên không dễ nhường, nhận hay góp chung electron với nguyên tử khác . 💡 Kiểm tra bản chất: Mẹo nhớ đủ 4 đặc trưng C8.4 bằng \" HD-CC \": H igh melting point, D ense (high density), C oloured compounds, C atalysts!",
+      "duration": 165.13,
+      "startTime": 3105.61,
+      "endTime": 3270.74,
+      "audioUrl": "/audio/lectures/science/c8/s03_b08.mp3"
     }
   ]
 }

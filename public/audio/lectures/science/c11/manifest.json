@@ -1,122 +1,719 @@
 {
   "lectureId": "69b82c81-05a0-40a8-816f-c21a882cef54",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "C11: Organic chemistry",
-  "totalDuration": 388.75,
+  "totalDuration": 5123.1,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề C11",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_homologous_series": {
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 7,
+      "end": 7
+    },
+    "s01_p1_sub02": {
+      "start": 8,
+      "end": 8
+    },
+    "s01_p1_sub03": {
+      "start": 9,
+      "end": 13
+    },
+    "s01_p1_sub04": {
+      "start": 14,
+      "end": 15
+    },
+    "s01_p2_sub01": {
+      "start": 7,
+      "end": 7
+    },
+    "s01_p2_sub02": {
+      "start": 8,
+      "end": 8
+    },
+    "s01_p2_sub03": {
+      "start": 9,
+      "end": 13
+    },
+    "s01_p2_sub04": {
+      "start": 14,
+      "end": 15
+    },
+    "s01_wex": {
+      "start": 16,
+      "end": 17
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 2,
-      "title": "1. Dãy Đồng đẳng & Danh pháp",
-      "selector": "#sec-homologous-series"
+      "end": 17
     },
-    "sec_hydrocarbons_alkanes_alkenes": {
-      "start": 3,
-      "end": 5,
-      "title": "2. Ankan, Anken & Cracking",
-      "selector": "#sec-hydrocarbons-alkanes-alkenes"
+    "s02_int": {
+      "start": 19,
+      "end": 21
     },
-    "sec_polymers": {
-      "start": 6,
-      "end": 7,
-      "title": "3. Phản ứng Trùng hợp Polymer",
-      "selector": "#sec-polymers"
+    "s02_p1_sub01": {
+      "start": 23,
+      "end": 24
+    },
+    "s02_p1_sub02": {
+      "start": 25,
+      "end": 26
+    },
+    "s02_p2_sub01": {
+      "start": 23,
+      "end": 24
+    },
+    "s02_p2_sub02": {
+      "start": 25,
+      "end": 26
+    },
+    "s02_wex": {
+      "start": 27,
+      "end": 28
+    },
+    "s02_hdr": {
+      "start": 18,
+      "end": 28
+    },
+    "s03_int": {
+      "start": 30,
+      "end": 32
+    },
+    "s03_wex": {
+      "start": 40,
+      "end": 41
+    },
+    "s03_hdr": {
+      "start": 29,
+      "end": 41
+    },
+    "s04_int": {
+      "start": 43,
+      "end": 45
+    },
+    "s04_wex": {
+      "start": 48,
+      "end": 49
+    },
+    "s04_hdr": {
+      "start": 42,
+      "end": 49
+    },
+    "s05_hdr": {
+      "start": 50,
+      "end": 54
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề C11: Hóa học Hữu cơ & Polymer",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic C11: Organic Chemistry. Carbon's ability to form four stable covalent bonds creates an extraordinary variety of molecules. In this lesson, we study homologous series and IUPAC naming, explore alkanes, alkenes, cracking, and addition polymerisation.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C11: Hóa học Hữu cơ và Hợp chất Polymer. Khả năng tạo 4 liên kết cộng hóa trị bền vững của carbon tạo nên muôn vàn hợp chất hữu cơ. Trong bài học này, chúng ta sẽ khảo sát dãy đồng đẳng và danh pháp quốc tế, làm chủ ankan, anken, phản ứng bẻ gãy mạch cracking và phản ứng trùng hợp tạo chất dẻo.",
-      "duration": 45.16,
+      "title": "C11: Hóa học Hữu cơ (Organic chemistry)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) C11: Organic chemistry. Formulas & Terminology • Naming C₁–C₄ Alkanes, Alkenes & Ethanol • Petroleum Fractions • Cracking & Addition Reactions • Ethanol • Addition Polymers & Nylon.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ C11: Hóa học Hữu cơ (Organic chemistry). Công thức & Thuật ngữ • Danh pháp Alkanes, Alkenes (C₁–C₄) & Ethanol • Chưng cất Phân đoạn Dầu mỏ • Cracking & Phản ứng Cộng • Ethanol • Trùng hợp Cộng & Nylon.",
+      "duration": 49.26,
       "startTime": 0.0,
-      "endTime": 45.16,
+      "endTime": 49.26,
       "audioUrl": "/audio/lectures/science/c11/intro.mp3"
     },
     {
-      "id": "sec_homologous_series",
-      "title": "1. Dãy Đồng đẳng & Danh pháp Hóa học Hữu cơ (Homologous Series Overview)",
-      "selector": "#sec-homologous-series",
-      "en": "Section 1 defines a Homologous Series: a family of organic compounds with the same functional group, same general formula, similar chemical properties, and a graduation in physical properties.",
-      "vi": "Mục một định nghĩa Dãy Đồng đẳng: là tập hợp các hợp chất hữu cơ có cùng nhóm chức, cùng công thức phân tử chung, tính chất hóa học tương tự nhau và tính chất vật lý biến đổi có quy luật.",
-      "duration": 65.22,
-      "startTime": 45.16,
-      "endTime": 110.38,
-      "audioUrl": "/audio/lectures/science/c11/sec_homologous_series.mp3"
+      "id": "s01_hdr",
+      "title": "🧪 1. CÔNG THỨC HỮU CƠ, DÃY ĐỒNG ĐẲNG & DANH PHÁP (C11.1 & C11.2)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧪 1. FORMULAS, HOMOLOGOUS SERIES & NAMING (C11.1 & C11.2). EASY INTUITION & SYLLABUS MENTAL MODEL Carbon atoms have 4 outer-shell electrons and form four stable covalent bonds —bonding with other carbon atoms in chains, branches, or rings, as well as with H (1 bond), O (2 bonds), halogens (1 bond), and N (3 bonds). Organic compounds are grouped into families called homologous series.",
+      "vi": "🧪 1. CÔNG THỨC HỮU CƠ, DÃY ĐỒNG ĐẲNG & DANH PHÁP (C11.1 & C11.2). EASY INTUITION & SYLLABUS MENTAL MODEL Nguyên tử carbon có 4 electron lớp ngoài cùng nên luôn tạo đúng 4 liên kết cộng hóa trị bền vững—kết hợp với nhau thành mạch thẳng, mạch nhánh hoặc vòng, cùng với H (1 liên kết), O (2 liên kết), halogen (1 liên kết) và N (3 liên kết). Các hợp chất hữu cơ được xếp thành các họ gọi là dãy đồng đẳng (homologous series).",
+      "duration": 59.39,
+      "startTime": 49.26,
+      "endTime": 108.65,
+      "audioUrl": "/audio/lectures/science/c11/s01_hdr.mp3"
     },
     {
-      "id": "sec_naming_prefixes",
-      "title": "🔢 Naming Prefixes: Meth, Eth, Prop, But (Tiền tố Danh pháp Carbon)",
-      "selector": "#sec-naming-prefixes",
-      "en": "Carbon chain prefixes in Cambridge IGCSE: Meth- for one carbon, Eth- for two carbons, Prop- for three carbons, and But- for four carbons. The suffix indicates family: -ane for alkanes and -ene for alkenes.",
-      "vi": "Tiền tố chỉ mạch carbon trong IGCSE: Meth- cho 1 carbon, Eth- cho 2 carbon, Prop- cho 3 carbon, và But- cho 4 carbon. Hậu tố chỉ họ chất: -ane cho ankan và -ene cho anken.",
-      "duration": 29.22,
-      "startTime": 110.38,
-      "endTime": 139.6,
-      "audioUrl": "/audio/lectures/science/c11/sec_naming_prefixes.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a homologous series like siblings wearing the same family badge : the carbon stem prefix ( Meth-, Eth-, Prop-, But- = 1, 2, 3, 4 C) simply tells you how tall each sibling is — adding one –CH₂– unit makes the molecule heavier and raises its boiling point — while the name ending ( -ane, -ene, -ol ) reveals the family badge that governs its chemical behaviour!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung một dãy đồng đẳng (homologous series) giống như anh chị em ruột đeo chung một phù hiệu gia tộc : tiền tố mạch carbon ( Meth-, Eth-, Prop-, But- = 1, 2, 3, 4 C) cho biết chiều cao của từng người — cứ thêm 1 mắt –CH₂– thì phân tử nặng hơn và sôi ở nhiệt độ cao hơn — còn đuôi tên gọi chính là phù hiệu cho biết họ hợp chất và tính chất hóa học đặc trưng!",
+      "duration": 56.5,
+      "startTime": 108.65,
+      "endTime": 165.15,
+      "audioUrl": "/audio/lectures/science/c11/s01_b01.mp3"
     },
     {
-      "id": "sec_hydrocarbons_alkanes_alkenes",
-      "title": "2. Hydrocacbon: Ankan vs Anken & Cracking (Hydrocarbons Overview)",
-      "selector": "#sec-hydrocarbons-alkanes-alkenes",
-      "en": "Section 2 explores hydrocarbons containing only carbon and hydrogen, contrasting saturated alkanes with unsaturated alkenes.",
-      "vi": "Mục hai tìm hiểu về hydrocacbon chỉ chứa carbon và hydro, đối chiếu ankan no với anken không no.",
-      "duration": 88.77,
-      "startTime": 139.6,
-      "endTime": 228.37,
-      "audioUrl": "/audio/lectures/science/c11/sec_hydrocarbons_alkanes_alkenes.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Displayed Formulas & Saturation (C11.1.1–C11.1.4): Draw every atom and every covalent bond ( C = 4 bonds, O = 2 bonds, H = 1 bond ); saturated compounds have all single C–C bonds , while unsaturated compounds have one or more C=C double bonds . 🟦 Core 2 → Core Naming & Compound Families (C11.2.1–C11.2.2): Name and draw methane, ethane, ethene, and ethanol , and identify compound families from -ane (alkane), -ene (alkene), or -ol (alcohol). 🟩 Supplement 3 → Series Characteristics & C₁–C₄ Chains (C11.1.5 & C11.2.3): Members of a homologous series share the same general formula and show a trend in physical properties ; name and draw unbranched C₁–C₄ alkanes and alkenes including but-1-ene ( CH₃CH₂CH=CH₂ ) and but-2-ene ( CH₃CH=CHCH₃ ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Công thức Khai triển & Độ Bão hòa (C11.1.1–C11.1.4): Vẽ đủ mọi nguyên tử và mọi liên kết ( C = 4 gạch, O = 2 gạch, H = 1 gạch ); hợp chất no (saturated) chỉ có liên kết đơn C–C , còn không no (unsaturated) có ít nhất một liên kết đôi C=C . 🟦 Core 2 → Gọi tên & Nhận diện Họ chất (C11.2.1–C11.2.2): Gọi tên và vẽ displayed formula của methane, ethane, ethene, ethanol ; nhận diện họ chất qua đuôi -ane (alkane), -ene (alkene), -ol (alcohol). 🟩 Supplement 3 → Đặc điểm Dãy đồng đẳng & Mạch C₁–C₄ (C11.1.5 & C11.2.3): Các chất cùng dãy có cùng công thức tổng quát và xu hướng biến đổi tính chất vật lý ; gọi tên và vẽ alkanes, alkenes mạch thẳng tới 4C gồm but-1-ene ( CH₃CH₂CH=CH₂ ) và but-2-ene ( CH₃CH=CHCH₃ ).",
+      "duration": 130.84,
+      "startTime": 165.15,
+      "endTime": 295.99,
+      "audioUrl": "/audio/lectures/science/c11/s01_b02.mp3"
     },
     {
-      "id": "sec_alkanes_alkenes_diff",
-      "title": "⛽ Saturated Alkanes vs Unsaturated Alkenes (Ankan No vs Anken Không No)",
-      "selector": "#sec-alkanes-alkenes-diff",
-      "en": "Alkanes have general formula CnH2n+2 with only single C-C bonds, making them saturated and relatively unreactive except for combustion. Alkenes have general formula CnH2n containing a C=C double bond, making them unsaturated and reactive.",
-      "vi": "Ankan có công thức chung CnH2n+2 chỉ chứa các liên kết đơn C-C nên là hydrocacbon no, khá trơ về mặt hóa học ngoại trừ phản ứng cháy. Anken có công thức CnH2n chứa liên kết đôi C=C nên là hydrocacbon không no và hoạt động hóa học hơn.",
-      "duration": 34.38,
-      "startTime": 228.37,
-      "endTime": 262.75,
-      "audioUrl": "/audio/lectures/science/c11/sec_alkanes_alkenes_diff.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When asked for the displayed formula of ethanol , never write condensed –OH ! You MUST draw the covalent bond line between oxygen and hydrogen ( –O–H ) so that every atom and every bond is shown.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi đề yêu cầu vẽ displayed formula của ethanol , tuyệt đối không viết gộp –OH ! BẮT BUỘC phải vẽ rõ nét gạch liên kết giữa O và H ( –O–H ) để biểu diễn đầy đủ mọi liên kết.",
+      "duration": 31.16,
+      "startTime": 295.99,
+      "endTime": 327.15,
+      "audioUrl": "/audio/lectures/science/c11/s01_b03.mp3"
     },
     {
-      "id": "sec_cracking_bromine",
-      "title": "⚡ Cracking & The Bromine Water Test (Cracking & Thuốc thử Brom)",
-      "selector": "#sec-cracking-bromine",
-      "en": "Cracking breaks long-chain alkanes into smaller, more useful short-chain alkanes and alkenes using high temperature and a catalyst. Alkenes are identified using aqueous bromine: orange-brown bromine water is rapidly decolourised to colourless by alkenes, whereas alkanes show no reaction without UV light.",
-      "vi": "Phản ứng cracking bẻ gãy các phân tử ankan mạch dài thành ankan mạch ngắn có giá trị cao hơn cùng các anken nhờ nhiệt độ cao và xúc tác. Nhận biết anken bằng nước brom: dung dịch brom màu nâu cam bị mất màu nhanh chóng khi tác dụng với anken, trong khi ankan không phản ứng trong bóng tối.",
-      "duration": 36.93,
-      "startTime": 262.75,
-      "endTime": 299.68,
-      "audioUrl": "/audio/lectures/science/c11/sec_cracking_bromine.mp3"
+      "id": "s01_b04",
+      "title": "📌 Khái niệm Nền tảng (Core C11.1.1–C11.1.4)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "📌 Core Terminology (C11.1.1–C11.1.4). Displayed formula: Shows all the atoms and all the covalent bonds in a molecule as lines. Saturated compound: Has molecules in which all carbon–carbon bonds are single bonds (e.g. alkanes, ethanol). Unsaturated compound: Has molecules in which one or more carbon–carbon bonds are not single bonds (contain at least one C=C double bond, e.g. alkenes). Homologous series: A family of similar compounds with similar chemical properties.",
+      "vi": "📌 Khái niệm Nền tảng (Core C11.1.1–C11.1.4). Công thức khai triển (Displayed formula): Biểu diễn tất cả các nguyên tử và tất cả các liên kết bằng các nét gạch. Hợp chất no (Saturated compound): Phân tử trong đó tất cả các liên kết carbon–carbon đều là liên kết đơn (single bonds). Hợp chất không no (Unsaturated compound): Phân tử có một hoặc nhiều liên kết carbon–carbon không phải liên kết đơn (chứa liên kết đôi C=C , VD: alkenes ). Dãy đồng đẳng (Homologous series): Một họ các hợp chất tương tự có tính chất hóa học giống nhau.",
+      "duration": 77.62,
+      "startTime": 327.15,
+      "endTime": 404.77,
+      "audioUrl": "/audio/lectures/science/c11/s01_b04.mp3"
     },
     {
-      "id": "sec_polymers",
-      "title": "3. Phản ứng Trùng hợp & Chất dẻo Polymer (Polymers Overview)",
-      "selector": "#sec-polymers",
-      "en": "Section 3 investigates Polymers: large macromolecules formed from small repeating units called monomers.",
-      "vi": "Mục ba khảo sát Chất dẻo Polymer: là các đại phân tử khổng lồ được tạo nên từ sự liên kết của hàng ngàn đơn vị nhỏ lặp đi lặp lại gọi là monome.",
-      "duration": 55.07,
-      "startTime": 299.68,
-      "endTime": 354.75,
-      "audioUrl": "/audio/lectures/science/c11/sec_polymers.mp3"
+      "id": "s01_b05",
+      "title": "Đặc điểm Chung của Dãy Đồng Đẳng",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Supplement C11.1.5 Characteristics of a Homologous Series. (a) Same general formula: Every member fits the same algebraic formula (e.g. CₙH₂ₙ₊₂ for alkanes, CₙH₂ₙ for alkenes, CₙH₂ₙ₊₁OH for alcohols), differing from the next member by a –CH₂– unit. (b) Trend in physical properties: Shows a gradual change as chain length increases (e.g. boiling point and viscosity increase as molecules grow larger and intermolecular attractions strengthen). Similar chemical properties: Members share the same functional group and undergo the same types of reactions.",
+      "vi": "Supplement C11.1.5 Đặc điểm Chung của Dãy Đồng Đẳng. (a) Có cùng công thức tổng quát: Mọi chất trong dãy tuân theo cùng một công thức đại số, hơn kém nhau từng mắt –CH₂–. (b) Có xu hướng biến đổi tính chất vật lý: Nhiệt độ sôi và độ nhớt tăng dần đều khi mạch carbon dài ra do lực hút liên phân tử mạnh dần. Có tính chất hóa học tương tự nhau: Cùng tham gia các phản ứng đặc trưng của họ hợp chất đó.",
+      "duration": 71.7,
+      "startTime": 404.77,
+      "endTime": 476.47,
+      "audioUrl": "/audio/lectures/science/c11/s01_b05.mp3"
     },
     {
-      "id": "sec_addition_polymers",
-      "title": "🔗 Addition Polymerisation: Poly(ethene) (Trùng hợp Cộng)",
-      "selector": "#sec-addition-polymers",
-      "en": "In addition polymerisation, alkene double bonds break open, linking thousands of monomer units into a single long polymer chain without forming any byproduct. For example, ethene monomers polymerise to form poly(ethene), widely used for plastic bags and containers.",
-      "vi": "Trong phản ứng trùng hợp cộng, liên kết đôi của các phân tử anken mở ra để liên kết hàng ngàn phân tử monome lại thành một mạch polymer dài duy nhất mà không sinh ra sản phẩm phụ. Ví dụ các monome etilen trùng hợp tạo thành polyetilen, ứng dụng rộng rãi làm túi ni lông và chai nhựa.",
-      "duration": 34.0,
-      "startTime": 354.75,
-      "endTime": 388.75,
-      "audioUrl": "/audio/lectures/science/c11/sec_addition_polymers.mp3"
+      "id": "s01_b06",
+      "title": "Loại Công thức: Displayed Formula (Công thức khai triển — Core C11.1.1); Định ng...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Formula Type: Displayed Formula (Core C11.1.1); Official IGCSE 0654 Meaning: Shows all the atoms and all the covalent bonds in a molecule as lines (1 line = single bond, 2 lines = double bond). ⚠️ Exam Trap: In ethanol you MUST draw the covalent bond between O and H ( –O–H ), never write condensed –OH !; Examples (Methane, Butane, Ethene, Ethanol): Every C has 4 lines , every O has 2 lines , and every H has 1 line (see SVG gallery below). Formula Type: Structural Formula (Supplement C11.2.3); Official IGCSE 0654 Meaning: Shows unambiguously how the atoms are arranged carbon-by-carbon along the chain without drawing every single bond.; Examples (Methane, Butane, Ethene, Ethanol): Butane: CH₃CH₂CH₂CH₃ Ethene: CH₂=CH₂ (show = clearly!) But-1-ene: CH₃CH₂CH=CH₂ | But-2-ene: CH₃CH=CHCH₃. Formula Type: Molecular Formula; Official IGCSE 0654 Meaning: Shows the actual number of atoms of each element in one molecule of a compound.; Examples (Methane, Butane, Ethene, Ethanol): Methane: CH₄ | Butane: C₄H₁₀ Ethene: C₂H₄ | Ethanol: C₂H₆O (or C₂H₅OH ). Formula Type: General Formula (Supplement C11.1.5); Official IGCSE 0654 Meaning: Algebraic formula shared by all members of the same homologous series (where n = number of carbon atoms).; Examples (Methane, Butane, Ethene, Ethanol): Alkanes: CₙH₂ₙ₊₂ | Alkenes: CₙH₂ₙ Alcohols: CₙH₂ₙ₊₁OH.",
+      "vi": "Loại Công thức: Displayed Formula (Công thức khai triển — Core C11.1.1); Định nghĩa Chuẩn IGCSE 0654: Biểu diễn tất cả các nguyên tử và tất cả các liên kết bằng nét gạch. ⚠️ Bẫy mất điểm: Khi vẽ ethanol , BẮT BUỘC phải vẽ rõ nét gạch giữa O và H ( –O–H ), không được viết gộp –OH !; Ví dụ Minh họa: Mỗi nguyên tử C đủ 4 gạch , mỗi O đủ 2 gạch , mỗi H đủ 1 gạch (xem bộ mẫu SVG bên dưới). Loại Công thức: Structural Formula (Công thức thu gọn — Supplement C11.2.3); Định nghĩa Chuẩn IGCSE 0654: Mô tả rõ ràng thứ tự sắp xếp các nguyên tử theo từng mắt carbon mà không vẽ từng liên kết đơn.; Ví dụ Minh họa: Butane: CH₃CH₂CH₂CH₃ Ethene: CH₂=CH₂ (giữ rõ dấu = !) But-1-ene: CH₃CH₂CH=CH₂ | But-2-ene: CH₃CH=CHCH₃. Loại Công thức: Molecular Formula (Công thức phân tử); Định nghĩa Chuẩn IGCSE 0654: Cho biết tổng số nguyên tử thực tế của mỗi nguyên tố trong 1 phân tử hợp chất.; Ví dụ Minh họa: Methane: CH₄ | Butane: C₄H₁₀ Ethene: C₂H₄ | Ethanol: C₂H₆O (hoặc C₂H₅OH ). Loại Công thức: General Formula (Công thức tổng quát — Supplement C11.1.5); Định nghĩa Chuẩn IGCSE 0654: Công thức đại số chung cho mọi thành viên trong cùng một homologous series .; Ví dụ Minh họa: Alkanes: CₙH₂ₙ₊₂ | Alkenes: CₙH₂ₙ Alcohols: CₙH₂ₙ₊₁OH.",
+      "duration": 243.36,
+      "startTime": 476.47,
+      "endTime": 719.83,
+      "audioUrl": "/audio/lectures/science/c11/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Dãy đồng đẳng (Series): Alkanes (No); General Formula: CₙH₂ₙ₊₂ (n ≥ 1); Đặc điểm...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Homologous Series: Alkanes (Saturated); General Formula: CₙH₂ₙ₊₂ (n ≥ 1); Key Bonding / Group: Only single C–C & C–H bonds; Name Suffix: -ane; C₁–C₄ Syllabus Examples: Methane ( CH₄ ), Ethane ( C₂H₆ ), Propane ( C₃H₈ ), Butane ( C₄H₁₀ ). Homologous Series: Alkenes (Unsaturated); General Formula: CₙH₂ₙ (n ≥ 2); Key Bonding / Group: C=C double bond; Name Suffix: -ene; C₁–C₄ Syllabus Examples: Ethene ( C₂H₄ ), Propene ( C₃H₆ ), But-1-ene & But-2-ene ( C₄H₈ ). Homologous Series: Alcohols; General Formula: CₙH₂ₙ₊₁OH (n ≥ 1); Key Bonding / Group: Hydroxyl group –O–H; Name Suffix: -ol; C₁–C₄ Syllabus Examples: Ethanol ( C₂H₅OH / CH₃CH₂OH ).",
+      "vi": "Dãy đồng đẳng (Series): Alkanes (No); General Formula: CₙH₂ₙ₊₂ (n ≥ 1); Đặc điểm Liên kết / Nhóm: Chỉ có liên kết đơn C–C , C–H; Hậu tố (Suffix): -ane; Ví dụ Trọng tâm C₁–C₄: Methane ( CH₄ ), Ethane ( C₂H₆ ), Propane ( C₃H₈ ), Butane ( C₄H₁₀ ). Dãy đồng đẳng (Series): Alkenes (Không no); General Formula: CₙH₂ₙ (n ≥ 2); Đặc điểm Liên kết / Nhóm: Liên kết đôi C=C; Hậu tố (Suffix): -ene; Ví dụ Trọng tâm C₁–C₄: Ethene ( C₂H₄ ), Propene ( C₃H₆ ), But-1-ene, But-2-ene ( C₄H₈ ). Dãy đồng đẳng (Series): Alcohols (Rượu/Ancol); General Formula: CₙH₂ₙ₊₁OH (n ≥ 1); Đặc điểm Liên kết / Nhóm: Nhóm hydroxyl –O–H; Hậu tố (Suffix): -ol; Ví dụ Trọng tâm C₁–C₄: Ethanol.",
+      "duration": 149.93,
+      "startTime": 719.83,
+      "endTime": 869.76,
+      "audioUrl": "/audio/lectures/science/c11/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Tên gọi hợp chất hữu cơ gồm tiền tố đếm số nguyên tử carbon (prefix) ghép với hậ...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "Every organic name combines a carbon chain prefix (counting how many carbon atoms are in the unbranched chain) with a compound-type ending ( -ane = alkane, -ene = alkene, -ol = alcohol):",
+      "vi": "Tên gọi hợp chất hữu cơ gồm tiền tố đếm số nguyên tử carbon (prefix) ghép với hậu tố họ chất (suffix) ( -ane = alkane, -ene = alkene, -ol = alcohol):",
+      "duration": 25.39,
+      "startTime": 869.76,
+      "endTime": 895.15,
+      "audioUrl": "/audio/lectures/science/c11/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "💡 Mẹo nhớ nhanh: \"Monkeys Eat Peanut Butter\" (1, 2, 3, 4 nguyên tử C)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "💡 Memory Aid: \"Monkeys Eat Peanut Butter\" (1, 2, 3, 4 Carbons)",
+      "vi": "💡 Mẹo nhớ nhanh: \"Monkeys Eat Peanut Butter\" (1, 2, 3, 4 nguyên tử C)",
+      "duration": 13.37,
+      "startTime": 895.15,
+      "endTime": 908.52,
+      "audioUrl": "/audio/lectures/science/c11/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "✏️ Bộ 4 Công thức Khai triển Trọng tâm Core C11.2.1: Methane, Ethane, Ethene & Ethanol",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "✏️ Core C11.2.1 Displayed Formulas Gallery: Methane, Ethane, Ethene & Ethanol (Show ALL Bonds!).",
+      "vi": "✏️ Bộ 4 Công thức Khai triển Trọng tâm Core C11.2.1: Methane, Ethane, Ethene & Ethanol.",
+      "duration": 16.88,
+      "startTime": 908.52,
+      "endTime": 925.4,
+      "audioUrl": "/audio/lectures/science/c11/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "Alkanes Mạch Thẳng không phân nhánh (C₁ đến C₄)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "Supplement C11.2.3(a) Unbranched Alkanes (C₁ to C₄). All carbon–carbon bonds are single covalent bonds ( CₙH₂ₙ₊₂ ):• Methane (1 C): CH₄ • Ethane (2 C): CH₃CH₃ • Propane (3 C): CH₃CH₂CH₃ • Butane (4 C): CH₃CH₂CH₂CH₃ .",
+      "vi": "Supplement C11.2.3(a) Alkanes Mạch Thẳng không phân nhánh (C₁ đến C₄). Tất cả liên kết carbon–carbon đều là liên kết đơn ( CₙH₂ₙ₊₂ ):• Methane (1 C): CH₄ • Ethane (2 C): CH₃CH₃ • Propane (3 C): CH₃CH₂CH₃ • Butane (4 C): CH₃CH₂CH₂CH₃ .",
+      "duration": 63.29,
+      "startTime": 925.4,
+      "endTime": 988.69,
+      "audioUrl": "/audio/lectures/science/c11/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "Alkenes Mạch Thẳng đến C₄ (But-1-ene vs. But-2-ene)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "Supplement C11.2.3(b) Unbranched Alkenes up to C₄ (But-1-ene vs. But-2-ene). Number the chain from the end closest to the C=C double bond:• Ethene (2 C): CH₂=CH₂ | Propene (3 C): CH₃CH=CH₂ • But-1-ene (4 C): CH₃CH₂CH=CH₂ (double bond between C1 and C2)• But-2-ene (4 C): CH₃CH=CHCH₃ (double bond between C2 and C3; cis/trans not required ).",
+      "vi": "Supplement C11.2.3(b) Alkenes Mạch Thẳng đến C₄. Đánh số mạch C từ đầu gần liên kết đôi C=C nhất để chỉ số vị trí nhỏ nhất:• Ethene (2 C): CH₂=CH₂ | Propene (3 C): CH₃CH=CH₂ • But-1-ene (4 C): CH₃CH₂CH=CH₂ (nối đôi ở C1–C2)• But-2-ene (4 C): CH₃CH=CHCH₃ (nối đôi ở C2–C3; không xét đồng phân cis/trans ).",
+      "duration": 83.06,
+      "startTime": 988.69,
+      "endTime": 1071.75,
+      "audioUrl": "/audio/lectures/science/c11/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "1. Đọc Công thức Phân tử suy ra Họ Hợp chất",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "1. Spotting Compound Family from Molecular Formula. H count = 2C + 2 (e.g. C₃H₈ , C₄H₁₀ ) ➔ Alkane (saturated, -ane ). H count = 2C (e.g. C₂H₄ , C₃H₆ , C₄H₈ ) ➔ Alkene (unsaturated, -ene ). Contains 1 O atom with CₙH₂ₙ₊₂O / CₙH₂ₙ₊₁OH (e.g. C₂H₆O or C₂H₅OH ) ➔ Alcohol ( -ol ).",
+      "vi": "1. Đọc Công thức Phân tử suy ra Họ Hợp chất. Số H = 2C + 2 (VD: C₃H₈ , C₄H₁₀ ) ➔ Alkane (no, đuôi -ane ). Số H = 2C (VD: C₂H₄ , C₃H₆ , C₄H₈ ) ➔ Alkene (không no, đuôi -ene ). Chứa 1 nguyên tử O dạng CₙH₂ₙ₊₂O / CₙH₂ₙ₊₁OH ➔ Alcohol (đuôi -ol ).",
+      "duration": 64.51,
+      "startTime": 1071.75,
+      "endTime": 1136.26,
+      "audioUrl": "/audio/lectures/science/c11/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "2. Vì sao KHÔNG tồn tại \"But-3-ene\"?",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "2. Why \"But-3-ene\" Does NOT Exist! Drawing CH₂=CHCH₂CH₃ and CH₃CH₂CH=CH₂ gives the exact same molecule (but-1-ene) flipped end-to-end! Always count from the end nearest the double bond so the position number is as small as possible ( but-1-ene vs but-2-ene ).",
+      "vi": "2. Vì sao KHÔNG tồn tại \"But-3-ene\"? Viết CH₂=CHCH₂CH₃ hay CH₃CH₂CH=CH₂ thực chất chỉ là cùng một phân tử but-1-ene xoay ngược 180°! Ta luôn đếm số từ đầu gần nối đôi nhất nên chỉ có 2 alkene mạch thẳng 4C là but-1-ene và but-2-ene.",
+      "duration": 48.2,
+      "startTime": 1136.26,
+      "endTime": 1184.46,
+      "audioUrl": "/audio/lectures/science/c11/s01_b14.mp3"
+    },
+    {
+      "id": "s01_b15",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b15\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / 🟩 SUPPLEMENT • Paper 1 & Paper 2 MCQ (0654) Which row correctly identifies the homologous series, saturation, and general formula of but-2-ene ( CH₃CH=CHCH₃ )? A. Alkane | Saturated | CₙH₂ₙ₊₂ B. Alkene | Unsaturated | CₙH₂ₙ C. Alcohol | Unsaturated | CₙH₂ₙ₊₁OH D. Alkene | Saturated | CₙH₂ₙ ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Step 1 (Name suffix & bonding): The suffix -ene and the C=C bond show that but-2-ene is an alkene (eliminates A and C). Step 2 (Saturation & general formula): Because one carbon–carbon bond is a double bond (not all C–C bonds are single), it is unsaturated with general formula CₙH₂ₙ (for n = 4, C₄H₈; eliminates D). Hence B is correct.",
+      "vi": "BÀI MẪU 1 🟦 CORE / 🟩 SUPPLEMENT • Trắc nghiệm Paper 1 & Paper 2 (0654) Which row correctly identifies the homologous series, saturation, and general formula of but-2-ene ( CH₃CH=CHCH₃ )? (Dòng nào xác định đúng dãy đồng đẳng, độ bão hòa và công thức tổng quát của but-2-ene CH₃CH=CHCH₃ ?) A. Alkane | Saturated (No) | CₙH₂ₙ₊₂ B. Alkene | Unsaturated (Không no) | CₙH₂ₙ C. Alcohol | Unsaturated (Không no) | CₙH₂ₙ₊₁OH D. Alkene | Saturated (No) | CₙH₂ₙ ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Bước 1 (Hậu tố & liên kết): Hậu tố -ene và liên kết đôi C=C khẳng định but-2-ene thuộc họ alkene (loại A và C). Bước 2 (Độ bão hòa & công thức chung): Do có liên kết đôi C=C nên phân tử không no (unsaturated) và tuân theo công thức tổng quát CₙH₂ₙ (với n = 4 là C₄H₈; loại D). Vậy B đúng.",
+      "duration": 134.11,
+      "startTime": 1184.46,
+      "endTime": 1318.57,
+      "audioUrl": "/audio/lectures/science/c11/s01_b15.mp3"
+    },
+    {
+      "id": "s01_b16",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b16\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Alkanes and alkenes are two homologous series of hydrocarbons.(a) State two general characteristics of a homologous series. [2](b) Describe how the displayed formula of ethanol differs from that of ethane . [1](c) Write the structural formulas of the two unbranched alkenes containing four carbon atoms per molecule, and state their chemical names. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) Members have the same general formula [1m] and display a trend in physical properties (e.g. boiling point increases with chain length; also accept similar chemical properties) [1m] .• (b) Ethanol has one H atom replaced by an –O–H hydroxyl group (showing both C–O and O–H single bonds), whereas ethane has only C–C and C–H bonds [1m] .• (c) CH₃CH₂CH=CH₂ ( but-1-ene ) [1m] and CH₃CH=CHCH₃ ( but-2-ene ) [1m] . 💡 Intuition Check: For 4-carbon unbranched alkenes ( C₄H₈ ), placing the double bond at either end ( C=C–C–C or C–C–C=C ) gives the same molecule (but-1-ene) rotated 180° — moving the double bond to the middle gives but-2-ene ( C–C=C–C ) !",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] Alkanes and alkenes are two homologous series of hydrocarbons.(a) State two general characteristics of a homologous series. (b) Describe how the displayed formula of ethanol differs from that of ethane . (c) Write the structural formulas of the two unbranched alkenes containing four carbon atoms per molecule, and state their chemical names. ((a) Nêu 2 đặc điểm chung của một dãy đồng đẳng. (b) Mô tả sự khác biệt giữa displayed formula của ethanol so với ethane. (c) Viết công thức cấu tạo thu gọn và tên gọi của 2 alkenes mạch thẳng có 4 nguyên tử C. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Có cùng công thức tổng quát và có xu hướng biến đổi tính chất vật lý (cũng chấp nhận: tính chất hóa học tương tự nhau) .• (b) Ethanol có 1 nguyên tử H được thay bằng nhóm –O–H (vẽ rõ cả liên kết đơn C–O và O–H), trong khi ethane chỉ có liên kết C–C và C–H .• (c) CH₃CH₂CH=CH₂ ( but-1-ene ) và CH₃CH=CHCH₃ ( but-2-ene ) . 💡 Kiểm tra bản chất: Với alkene mạch thẳng 4C ( C₄H₈ ), đặt nối đôi ở đầu trái ( C=C–C–C ) hay đầu phải ( C–C–C=C ) đều chỉ là cùng một chất (but-1-ene) lật ngược 180° — dời nối đôi vào giữa mới tạo thành but-2-ene ( C–C=C–C ) !",
+      "duration": 200.41,
+      "startTime": 1318.57,
+      "endTime": 1518.98,
+      "audioUrl": "/audio/lectures/science/c11/s01_b16.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⛽ 2. NHIÊN LIỆU HÓA THẠCH, DẦU MỎ, ALKANES & ALKENES (C11.3 – C11.5)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⛽ 2. FUELS, PETROLEUM, ALKANES & ALKENES (C11.3 – C11.5). EASY INTUITION & SYLLABUS MENTAL MODEL Fossil fuels are coal , natural gas (main constituent: methane, CH₄ ), and petroleum (crude oil). Hydrocarbons are compounds that contain hydrogen and carbon only , and petroleum is a mixture of hydrocarbons of varying chain lengths that must be separated before use.",
+      "vi": "⛽ 2. NHIÊN LIỆU HÓA THẠCH, DẦU MỎ, ALKANES & ALKENES (C11.3 – C11.5). EASY INTUITION & SYLLABUS MENTAL MODEL Ba nguồn nhiên liệu hóa thạch (fossil fuels) là than đá (coal) , khí thiên nhiên (natural gas — thành phần chính là methane, CH₄) và dầu mỏ (petroleum) . Hydrocarbons là hợp chất chỉ chứa hydrogen và carbon , còn petroleum là một hỗn hợp các hydrocarbons cần được tách bằng chưng cất phân đoạn.",
+      "duration": 52.28,
+      "startTime": 1518.98,
+      "endTime": 1571.26,
+      "audioUrl": "/audio/lectures/science/c11/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine the fractionating column as a tall hotel elevator sorting hydrocarbon guests by chain length : hot vaporised petroleum enters at the bottom (~400 °C) — long, heavy chains ( bitumen ) have strong intermolecular forces and condense right at the hot bottom, while tiny short chains ( refinery gas ) rise all the way to the cool top! Then cracking works like snapping a long, low-demand alkane bar into shorter chains plus reactive alkenes and hydrogen .",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng tháp chưng cất phân đoạn (fractionating column) như thang máy khách sạn phân loại khách hydrocarbon theo độ dài mạch : dầu thô hóa hơi đi vào đáy tháp nóng (~400 °C) — các chuỗi dài nặng nề ( bitumen ) hút nhau mạnh nên ngưng tụ ngay ở đáy, còn các chuỗi ngắn nhẹ nhàng ( refinery gas ) bay thẳng lên đỉnh tháp mát mẻ! Sau đó cracking giống như bẻ thanh alkane dài thành mạch ngắn hơn kèm các phân tử alkenes hoạt động mạnh và khí hydrogen (H₂) .",
+      "duration": 66.04,
+      "startTime": 1571.26,
+      "endTime": 1637.3,
+      "audioUrl": "/audio/lectures/science/c11/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Fossil Fuels & 5 Petroleum Fractions (C11.3.1–C11.3.6): Fossil fuels = coal, natural gas (mainly methane), and petroleum (a mixture of hydrocarbons — compounds of hydrogen and carbon only ). Separated by fractional distillation into refinery gas (heating/cooking), gasoline/petrol (cars), naphtha (chemical feedstock), diesel oil/gas oil (diesel engines), and bitumen (making roads). 🟩 Supplement 2 → Column Trends (C11.3.7): From bottom ➔ top of the column: decreasing chain length and lower boiling points . 🟦 Core & 🟩 Supplement 3 → Alkanes vs. Alkenes (C11.4 & C11.5): Alkanes are generally unreactive except combustion ; aqueous bromine stays orange-brown with saturated alkanes but turns colourless with unsaturated alkenes; cracking makes alkenes + H₂, and alkenes undergo addition with bromine , hydrogen (Ni catalyst), and steam (acid catalyst).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Nhiên liệu Hóa thạch & 5 Phân đoạn Dầu mỏ (C11.3.1–C11.3.6): Fossil fuels gồm coal, natural gas (chủ yếu là methane) và petroleum (hỗn hợp các hydrocarbons — hợp chất chỉ chứa H và C ). Tách bằng fractional distillation thành 5 phân đoạn chuẩn 0654: refinery gas (đun nấu/sưởi), gasoline/petrol (ô tô), naphtha (nguyên liệu hóa chất), diesel oil/gas oil (động cơ diesel), bitumen (làm đường). 🟩 Supplement 2 → Quy luật Đáy ➔ Đỉnh Tháp (C11.3.7): Đi từ đáy lên đỉnh tháp: chiều dài mạch giảm và nhiệt độ sôi giảm . 🟦 Core & 🟩 Supplement 3 → Alkanes vs. Alkenes (C11.4 & C11.5): Alkanes trơ hóa học ngoại trừ phản ứng cháy ; nước bromine giữ màu cam nâu với alkane nhưng mất màu (colourless) với alkene; cracking tạo alkenes + H₂, và alkenes tham gia phản ứng cộng (addition) với bromine , hydrogen (xúc tác Ni) và steam (xúc tác axit).",
+      "duration": 133.01,
+      "startTime": 1637.3,
+      "endTime": 1770.31,
+      "audioUrl": "/audio/lectures/science/c11/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When describing the aqueous bromine test for an unsaturated hydrocarbon, ALWAYS write \"turns from orange-brown to colourless\" — NEVER write \"turns clear\"! (\"Clear\" means transparent; aqueous bromine is already clear before you add the alkene!)",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi mô tả phép thử nước bromine với alkene không no, LUÔN LUÔN viết \"turns from orange-brown to colourless\" — TUYỆT ĐỐI KHÔNG viết \"turns clear\" (vì dung dịch bromine ban đầu vốn đã trong suốt rồi)!",
+      "duration": 32.87,
+      "startTime": 1770.31,
+      "endTime": 1803.18,
+      "audioUrl": "/audio/lectures/science/c11/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🗼 C11.3 Tháp Chưng cất Phân đoạn Dầu mỏ Tương tác (Fractional Distillation of Petroleum)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🗼 C11.3 Interactive Fractional Distillation of Petroleum. Petroleum is heated in a furnace (~400 °C) until vaporised and passed into a fractionating column that is hot at the bottom and cool at the top . Hydrocarbon vapours rise and condense at trays matching their boiling points. SVG Fractionating Tower (5 Official 0654 Fractions) Dynamic Panel + Supplement C11.3.7 Trends 👆 Inspect the 5 Key 0654 Petroleum Fractions. Core C11.3.6 fractions from Top ➔ Bottom: Refinery gas , Gasoline / petrol , Naphtha , Diesel oil / gas oil , and Bitumen. 📈 Supplement C11.3.7 Trends: From BOTTOM ➔ TOP of Column. (a) Decreasing chain length: Hydrocarbon molecules contain fewer carbon atoms higher up the column. (b) Lower boiling points: Shorter chains have weaker intermolecular forces, so they stay as vapours until reaching cooler upper trays. Hidden tooltip templates for 5 fractions",
+      "vi": "🗼 C11.3 Tháp Chưng cất Phân đoạn Dầu mỏ Tương tác. Dầu mỏ (petroleum) được đun nóng (~400 °C) hóa hơi rồi dẫn vào đáy tháp phân đoạn (fractionating column) — nơi nóng ở đáy và mát dần lên đỉnh . Hơi hydrocarbon bay lên và ngưng tụ tại khay có nhiệt độ ứng với boiling point của chúng. 👆 Khám phá 5 Phân đoạn Dầu mỏ Trọng tâm 0654. 5 phân đoạn chuẩn Core C11.3.6 từ Đỉnh xuống Đáy: Refinery gas , Gasoline / petrol , Naphtha , Diesel oil / gas oil và Bitumen. 📈 Quy luật từ ĐÁY ➔ ĐỈNH Tháp (Supplement C11.3.7). (a) Chiều dài mạch carbon giảm dần: Phân tử nhỏ hơn, ít nguyên tử C hơn khi lên cao. (b) Nhiệt độ sôi thấp hơn: Mạch ngắn có lực hút liên phân tử yếu hơn nên bay lên tới các khay mát ở phía trên mới ngưng tụ.",
+      "duration": 127.58,
+      "startTime": 1803.18,
+      "endTime": 1930.76,
+      "audioUrl": "/audio/lectures/science/c11/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔵 C11.4 Alkanes (Saturated, CₙH₂ₙ₊₂)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔵 C11.4 Alkanes (Saturated, CₙH₂ₙ₊₂). Contain single covalent C–C and C–H bonds only . Because these single bonds are strong and non-polar, alkanes are generally unreactive, except in terms of combustion : Complete Combustion (plentiful O₂): Burns exothermically to form carbon dioxide and water : CH₄(g) + 2O₂(g) ➔ CO₂(g) + 2H₂O(g) C₃H₈(g) + 5O₂(g) ➔ 3CO₂(g) + 4H₂O(g) . Incomplete Combustion (limited O₂): Produces toxic carbon monoxide ( CO ) (or carbon soot C ) + water. Chemical Inertness: Alkanes do not react with acids, alkalis, or aqueous bromine (stays orange-brown).",
+      "vi": "🔵 C11.4 Alkanes (Saturated, CₙH₂ₙ₊₂). Chỉ chứa liên kết đơn C–C và C–H bền vững, không phân cực nên nhìn chung trơ về mặt hóa học, ngoại trừ phản ứng cháy : Cháy hoàn toàn (Complete combustion — dư O₂): Tỏa nhiều nhiệt, tạo carbon dioxide và nước : CH₄(g) + 2O₂(g) ➔ CO₂(g) + 2H₂O(g) C₃H₈(g) + 5O₂(g) ➔ 3CO₂(g) + 4H₂O(g) . Cháy không hoàn toàn (thiếu O₂): Sinh ra khí độc carbon monoxide ( CO ) (hoặc muội than C ) + nước. Tính trơ hóa học: Không tác dụng với dung dịch axit, kiềm hay nước bromine (giữ nguyên màu cam nâu).",
+      "duration": 111.1,
+      "startTime": 1930.76,
+      "endTime": 2041.86,
+      "audioUrl": "/audio/lectures/science/c11/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🔴 C11.5 Alkenes (Unsaturated, CₙH₂ₙ)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🔴 C11.5 Alkenes (Unsaturated, CₙH₂ₙ). Contain a reactive C=C double bond . Supplement C11.5 Alkenes undergo addition reactions in which the C=C double bond opens to form only ONE saturated product : (a) + Bromine (Br₂ or Br₂(aq)) — Bromination: Room temperature, no catalyst needed! Ethene + Br₂ ➔ 1,2-dibromoethane : CH₂=CH₂ + Br₂ ➔ CH₂BrCH₂Br (colourless). (b) + Hydrogen (H₂) — Hydrogenation: Conditions: nickel (Ni) catalyst and heat. Converts an alkene into an alkane : CH₂=CH₂ + H₂ ➔ CH₃CH₃ (ethane) . (c) + Steam (H₂O(g)) — Catalytic Hydration: Conditions: acid catalyst (e.g. phosphoric(V) acid), high temperature (~300 °C) and high pressure. Converts an alkene into an alcohol : CH₂=CH₂ + H₂O(g) ➔ CH₃CH₂OH (ethanol) .",
+      "vi": "🔴 C11.5 Alkenes (Unsaturated, CₙH₂ₙ). Chứa liên kết đôi C=C giàu electron. Supplement C11.5 Tham gia phản ứng cộng (addition reactions) mở nối đôi C=C tạo DUY NHẤT MỘT sản phẩm no : (a) + Bromine (Br₂ hoặc Br₂(aq)): Xảy ra ngay ở nhiệt độ phòng, không cần xúc tác! Tạo 1,2-dibromoethane : CH₂=CH₂ + Br₂ ➔ CH₂BrCH₂Br (không màu). (b) + Hydrogen (H₂) — Hydrogenation: Điều kiện: xúc tác nickel (Ni catalyst) và đun nóng. Biến alkene ➔ alkane : CH₂=CH₂ + H₂ ➔ CH₃CH₃ (ethane) . (c) + Hơi nước (Steam, H₂O(g)) — Hydration: Điều kiện: xúc tác axit (acid catalyst) , nhiệt độ cao (~300 °C) và áp suất cao. Biến alkene ➔ alcohol : CH₂=CH₂ + H₂O(g) ➔ CH₃CH₂OH (ethanol) .",
+      "duration": 154.21,
+      "startTime": 2041.86,
+      "endTime": 2196.07,
+      "audioUrl": "/audio/lectures/science/c11/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🔥 Điều chế Alkenes & Hydrogen bằng Cracking (Supplement C11.5)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🔥 Manufacture of Alkenes & Hydrogen by Cracking (Supplement C11.5). Thermal decomposition of larger, less-useful saturated alkane molecules into smaller alkanes, alkenes , and/or hydrogen gas : C₁₀H₂₂ (decane) ➔ C₈H₁₈ (octane) + C₂H₄ (ethene)C₈H₁₈ ➔ 2C₄H₈ + H₂ | C₂H₆ ➔ C₂H₄ + H₂ Conditions: High temperature (~600 °C) and a catalyst (Al₂O₃ or SiO₂). Why Crack? Converts surplus long-chain fractions into high-demand shorter fuels (petrol), reactive alkenes (for polymers & ethanol), and hydrogen.",
+      "vi": "🔥 Điều chế Alkenes & Hydrogen bằng Cracking (Supplement C11.5). Phân hủy nhiệt bẻ gãy các phân tử alkane mạch lớn thành alkane ngắn hơn, các alkenes và/hoặc khí hydrogen (H₂) : C₁₀H₂₂ ➔ C₈H₁₈ + C₂H₄ | C₈H₁₈ ➔ 2C₄H₈ + H₂ | C₂H₆ ➔ C₂H₄ + H₂ Điều kiện: Nhiệt độ cao (high temperature , ~600 °C) và chất xúc tác (catalyst : Al₂O₃ hoặc SiO₂). Ý nghĩa: Chuyển phân đoạn dầu nặng thành nhiên liệu mạch ngắn nhu cầu cao (xăng), đồng thời sản xuất alkenes (tổng hợp polymers, ethanol) và hydrogen.",
+      "duration": 94.44,
+      "startTime": 2196.07,
+      "endTime": 2290.51,
+      "audioUrl": "/audio/lectures/science/c11/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🚨 Phân biệt No / Không No bằng Nước Bromine — Aqueous Bromine (Core C11.5)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🚨 Test for Unsaturation: Aqueous Bromine (Core C11.5). Shake the hydrocarbon with aqueous bromine (bromine water) : With Saturated Hydrocarbon (Alkane): No reaction; solution remains orange-brown . With Unsaturated Hydrocarbon (Alkene): Rapid addition across C=C ; aqueous bromine decolourises from orange-brown to colourless . ⚠️ Exam Trap: Always write \"colourless\" , NEVER write \"clear\"!",
+      "vi": "🚨 Phân biệt No / Không No bằng Nước Bromine — Aqueous Bromine (Core C11.5). Lắc mẫu thử hydrocarbon với aqueous bromine (nước bromine) : Với Hydrocarbon No (Alkane): Không phản ứng; dung dịch giữ nguyên màu cam nâu . Với Hydrocarbon Không No (Alkene): Phản ứng cộng mở nối đôi C=C làm mất màu từ cam nâu sang không màu . ⚠️ Bẫy từ vựng: Luôn viết \"colourless\" , TUYỆT ĐỐI KHÔNG viết \"clear\" (trong suốt)!",
+      "duration": 61.15,
+      "startTime": 2290.51,
+      "endTime": 2351.66,
+      "audioUrl": "/audio/lectures/science/c11/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / 🟩 SUPPLEMENT • Paper 2 MCQ (0654) Petroleum is separated into useful fractions in a fractionating column.How do the molecular chain length and boiling point of the gasoline (petrol) fraction compare with those of the diesel oil fraction? A. Gasoline has a shorter chain length and a lower boiling point than diesel oil. B. Gasoline has a shorter chain length and a higher boiling point than diesel oil. C. Gasoline has a longer chain length and a lower boiling point than diesel oil. D. Gasoline has a longer chain length and a higher boiling point than diesel oil. ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Step 1 (Position in column): Gasoline exits higher up near the cool top of the fractionating column than diesel oil. Step 2 (Apply C11.3.7 trend): Moving from bottom to top of the column, fractions have decreasing chain length and lower boiling points (weaker intermolecular attraction between smaller molecules). Therefore A is correct.",
+      "vi": "BÀI MẪU 1 🟦 CORE / 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 (0654) Petroleum is separated into useful fractions in a fractionating column. How do the molecular chain length and boiling point of the gasoline (petrol) fraction compare with those of the diesel oil fraction? (Dầu mỏ được tách thành các phân đoạn trong tháp chưng cất. Chiều dài mạch phân tử và nhiệt độ sôi của phân đoạn xăng (gasoline/petrol) so với dầu diesel (diesel oil) như thế nào?) A. Gasoline có mạch carbon ngắn hơn và nhiệt độ sôi thấp hơn diesel oil. B. Gasoline có mạch carbon ngắn hơn và nhiệt độ sôi cao hơn diesel oil. C. Gasoline có mạch carbon dài hơn và nhiệt độ sôi thấp hơn diesel oil. D. Gasoline có mạch carbon dài hơn và nhiệt độ sôi cao hơn diesel oil. ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Bước 1 (Vị trí trên tháp): Phân đoạn gasoline ngưng tụ ở khay cao hơn (gần đỉnh mát của tháp hơn) so với diesel oil. Bước 2 (Áp dụng quy luật C11.3.7): Từ đáy lên đỉnh tháp, các phân đoạn có chiều dài mạch giảm dần và nhiệt độ sôi thấp hơn . Vậy A đúng.",
+      "duration": 143.62,
+      "startTime": 2351.66,
+      "endTime": 2495.28,
+      "audioUrl": "/audio/lectures/science/c11/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Large alkane molecules in petroleum fractions are cracked using a high temperature and a catalyst to manufacture alkenes and hydrogen.(a) Complete the two balanced symbol equations below for cracking reactions:(i) C₁₀H₂₂ ➔ C₈H₁₈ +...... [1](ii) C₈H₁₈ ➔ 2C₄H₈ +...... [1](b) Describe the test using aqueous bromine to distinguish between octane (C₈H₁₈) and the product formed in (a)(i), giving the observation for both compounds. [2](c) Ethene (C₂H₄) undergoes addition reactions with (i) hydrogen and (ii) steam . Write the balanced symbol equation and name the organic product for each reaction. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a)(i) Balance C (10 − 8 = 2) and H (22 − 18 = 4): C₂H₄ (ethene) [1m] .• (a)(ii) Balance C (8 − 2×4 = 0) and H (18 − 2×8 = 2): H₂ (hydrogen) [1m] .• (b) Shake each with aqueous bromine : octane (saturated) stays orange-brown (no change) [1m] , whereas ethene (unsaturated) decolourises it from orange-brown to colourless [1m] .• (c)(i) C₂H₄ + H₂ ➔ C₂H₆ ( ethane ) [1m] ; (c)(ii) C₂H₄ + H₂O ➔ C₂H₅OH ( ethanol ) [1m] . 💡 Intuition Check: In every cracking equation, total carbon atoms and total hydrogen atoms must balance strictly on both sides — cracking breaks C–C and C–H bonds without adding oxygen!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Large alkane molecules in petroleum fractions are cracked using a high temperature and a catalyst to manufacture alkenes and hydrogen.(a) Complete the two balanced symbol equations below for cracking reactions:(i) C₁₀H₂₂ ➔ C₈H₁₈ +...... (ii) C₈H₁₈ ➔ 2C₄H₈ +...... (b) Describe the test using aqueous bromine to distinguish between octane (C₈H₁₈) and the product formed in (a)(i), giving the observation for both compounds. (c) Ethene (C₂H₄) undergoes addition reactions with (i) hydrogen and (ii) steam . Write the balanced symbol equation and name the organic product for each reaction. ((a) Hoàn thành 2 phương trình cracking. (b) Nêu cách dùng nước bromine phân biệt octane C₈H₁₈ và sản phẩm ở (a)(i). (c) Viết phương trình cộng của ethene với H₂ và với hơi nước, gọi tên sản phẩm. ) ✍️ Lời giải chi tiết theo thang điểm: • (a)(i) Bảo toàn C (10 − 8 = 2) và H (22 − 18 = 4): C₂H₄ (ethene) .• (a)(ii) Bảo toàn C (8 − 2×4 = 0) và H (18 − 2×8 = 2): H₂ (hydrogen) .• (b) Lắc từng mẫu với aqueous bromine : octane (no) giữ nguyên màu cam nâu , còn ethene (không no) làm mất màu từ cam nâu sang không màu .• (c)(i) C₂H₄ + H₂ ➔ C₂H₆ ( ethane ) ; (c)(ii) C₂H₄ + H₂O ➔ C₂H₅OH ( ethanol ) .",
+      "duration": 237.36,
+      "startTime": 2495.28,
+      "endTime": 2732.64,
+      "audioUrl": "/audio/lectures/science/c11/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🍷 3. ALCOHOLS: CẤU TẠO, PHẢN ỨNG CHÁY & ỨNG DỤNG CỦA ETHANOL (C11.6)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🍷 3. ALCOHOLS: ETHANOL STRUCTURE, COMBUSTION & USES (C11.6). Alcohols form a homologous series ( CₙH₂ₙ₊₁OH , name ending -ol ) containing the polar hydroxyl group ( –O–H ). In IGCSE Co-ordinated Sciences (0654), focus on ethanol ( C₂H₅OH ) : its displayed formula, synthesis from ethene + steam, complete combustion, and key uses.",
+      "vi": "🍷 3. ALCOHOLS: CẤU TẠO, PHẢN ỨNG CHÁY & ỨNG DỤNG CỦA ETHANOL (C11.6). Alcohols là dãy đồng đẳng ( CₙH₂ₙ₊₁OH , hậu tố -ol ) mang nhóm chức phân cực hydroxyl ( –O–H ). Trong chương trình IGCSE Co-ordinated Sciences (0654), trọng tâm xoay quanh ethanol ( C₂H₅OH ) : công thức khai triển, điều chế từ ethene + hơi nước, phản ứng cháy hoàn toàn và hai ứng dụng thiết yếu.",
+      "duration": 60.14,
+      "startTime": 2732.64,
+      "endTime": 2792.78,
+      "audioUrl": "/audio/lectures/science/c11/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of ethanol (C₂H₅OH) as a \"dual-passport molecule\" : its non-polar two-carbon hydrocarbon tail ( CH₃CH₂– ) mixes happily with oils and fragrances, while its polar hydroxyl group ( –O–H ) mixes completely with water — making ethanol a superstar solvent in perfumes and inks, as well as a clean, soot-free liquid fuel !",
+      "vi": "🎯 Hình dung đời thường: Hãy coi ethanol (C₂H₅OH) như một \"phân tử mang hai hộ chiếu\" : đuôi hydrocarbon 2 carbon không phân cực ( CH₃CH₂– ) hòa tan tốt tinh dầu và hương liệu hữu cơ, còn đầu hydroxyl phân cực ( –O–H ) lại tan vô hạn trong nước — nhờ đó ethanol vừa là dung môi (solvent) vạn năng trong nước hoa, mực in, vừa là nhiên liệu (fuel) lỏng cháy sạch không khói!",
+      "duration": 56.15,
+      "startTime": 2792.78,
+      "endTime": 2848.93,
+      "audioUrl": "/audio/lectures/science/c11/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Identifying & Drawing Ethanol (C11.2.1–C11.2.2): Name ending in -ol identifies an alcohol ; ethanol has molecular formula C₂H₆O ( C₂H₅OH ), structural formula CH₃CH₂OH , and 8 single covalent bonds in its displayed formula. 🟦 Core 2 → Complete Combustion & Uses (C11.6): Ethanol burns completely in plentiful oxygen to form carbon dioxide and water ( C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ); state its two official uses as a solvent and as a fuel . 🟩 Supplement 3 → Manufacture from Ethene + Steam (C11.5 Link): Catalytic addition of steam to ethene ( C₂H₄ + H₂O ➔ C₂H₅OH , acid catalyst, high temperature & pressure) converts an unsaturated alkene into ethanol.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Nhận diện & Vẽ Cấu tạo Ethanol (C11.2.1–C11.2.2): Đuôi tên gọi -ol chỉ họ alcohol ; ethanol có công thức phân tử C₂H₆O ( C₂H₅OH ), công thức thu gọn CH₃CH₂OH và đủ 8 liên kết đơn trong displayed formula. 🟦 Core 2 → Phản ứng Cháy Hoàn toàn & Ứng dụng (C11.6): Đốt cháy hoàn toàn ethanol trong oxy dư tạo carbon dioxide và nước ( C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ); ghi nhớ 2 ứng dụng chuẩn là làm dung môi (solvent) và nhiên liệu (fuel) . 🟩 Supplement 3 → Điều chế từ Ethene + Hơi nước (Liên hệ C11.5): Cộng xúc tác hơi nước (steam) vào ethene ( C₂H₄ + H₂O ➔ C₂H₅OH , xúc tác axit, nhiệt độ & áp suất cao) biến alkene thành ethanol.",
+      "duration": 112.28,
+      "startTime": 2848.93,
+      "endTime": 2961.21,
+      "audioUrl": "/audio/lectures/science/c11/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When balancing the complete combustion of ethanol ( C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ), count the product oxygens first ( 2×2 + 3×1 = 7 O atoms ), then subtract the 1 oxygen atom already inside C₂H₅OH — leaving 6 O atoms = 3O₂ (NOT 3.5O₂ )!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi cân bằng phương trình đốt cháy hoàn toàn ethanol ( C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O ), hãy đếm tổng O bên phải trước ( 2×2 + 3×1 = 7 nguyên tử O ), rồi trừ đi 1 nguyên tử O có sẵn trong C₂H₅OH — chỉ còn cần 6 nguyên tử O = 3O₂ (ĐỪNG viết nhầm thành 3.5O₂ )!",
+      "duration": 53.08,
+      "startTime": 2961.21,
+      "endTime": 3014.29,
+      "audioUrl": "/audio/lectures/science/c11/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🔥 Core C11.6: Phản ứng Cháy Hoàn toàn của Ethanol (Complete Combustion)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🔥 Core C11.6: Complete Combustion of Ethanol. In a plentiful supply of oxygen (air), liquid ethanol burns cleanly with a pale-blue, non-smoky flame, releasing heat energy and forming carbon dioxide and water only :",
+      "vi": "🔥 Core C11.6: Phản ứng Cháy Hoàn toàn của Ethanol (Complete Combustion). Khi đốt trong lượng dư khí oxygen (không khí), ethanol lỏng cháy sạch với ngọn lửa xanh nhạt không khói, tỏa nhiều nhiệt và chỉ tạo thành carbon dioxide và nước :",
+      "duration": 33.85,
+      "startTime": 3014.29,
+      "endTime": 3048.14,
+      "audioUrl": "/audio/lectures/science/c11/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "ethanol + oxygen ➔ carbon dioxide + water C₂H₅OH(l) + 3O₂(g) ➔ 2CO₂(g) + 3H₂O(l)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "ethanol + oxygen ➔ carbon dioxide + water C₂H₅OH(l) + 3O₂(g) ➔ 2CO₂(g) + 3H₂O(l)",
+      "vi": "ethanol + oxygen ➔ carbon dioxide + water C₂H₅OH(l) + 3O₂(g) ➔ 2CO₂(g) + 3H₂O(l)",
+      "duration": 25.52,
+      "startTime": 3048.14,
+      "endTime": 3073.66,
+      "audioUrl": "/audio/lectures/science/c11/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "1. Cân bằng Carbon (C): Có 2 nguyên tử C trong C₂H₅OH ➔ đặt hệ số 2CO₂ bên phải.",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "1. Balance Carbon (C): 2 C atoms in C₂H₅OH ➔ write 2CO₂ on the right.",
+      "vi": "1. Cân bằng Carbon (C): Có 2 nguyên tử C trong C₂H₅OH ➔ đặt hệ số 2CO₂ bên phải.",
+      "duration": 16.95,
+      "startTime": 3073.66,
+      "endTime": 3090.61,
+      "audioUrl": "/audio/lectures/science/c11/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "2. Cân bằng Hydrogen (H): Tổng 5 + 1 = 6 nguyên tử H trong C₂H₅OH ➔ đặt hệ số 3H...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "2. Balance Hydrogen (H): 5 + 1 = 6 H atoms in C₂H₅OH ➔ write 3H₂O on the right.",
+      "vi": "2. Cân bằng Hydrogen (H): Tổng 5 + 1 = 6 nguyên tử H trong C₂H₅OH ➔ đặt hệ số 3H₂O bên phải.",
+      "duration": 19.25,
+      "startTime": 3090.61,
+      "endTime": 3109.86,
+      "audioUrl": "/audio/lectures/science/c11/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "3. Cân bằng Oxygen (O) Cực Cẩn Thận! Vế phải có 4 + 3 = 7 O . Trừ đi 1 O có sẵn ...",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "3. Balance Oxygen (O) Carefully! Right side = 4 + 3 = 7 O . Subtract 1 O inside C₂H₅OH = 6 O needed = 3O₂ !",
+      "vi": "3. Cân bằng Oxygen (O) Cực Cẩn Thận! Vế phải có 4 + 3 = 7 O . Trừ đi 1 O có sẵn trong C₂H₅OH còn 6 O = 3O₂ !",
+      "duration": 27.65,
+      "startTime": 3109.86,
+      "endTime": 3137.51,
+      "audioUrl": "/audio/lectures/science/c11/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🧴 Core C11.6: Hai Ứng dụng Chuẩn của Ethanol",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🧴 Core C11.6: Official Uses of Ethanol. 1. As a solvent: Ethanol mixes readily with both water and water-insoluble organic oils, making it ideal for perfumes, cosmetics, deodorants, printing inks, glues, and food flavourings (evaporates quickly after application). 2. As a fuel: Burns cleanly without soot and releases high energy per gram — used in spirit burners / camping stoves and blended with petrol for road vehicles ( bioethanol ).",
+      "vi": "🧴 Core C11.6: Hai Ứng dụng Chuẩn của Ethanol. 1. Làm dung môi (As a solvent): Ethanol hòa tan được cả nước lẫn nhiều hợp chất hữu cơ không tan trong nước, lại bay hơi nhanh nên rất lý tưởng cho nước hoa (perfumes), mỹ phẩm, lăn khử mùi, mực in, keo dán và hương liệu thực phẩm. 2. Làm nhiên liệu (As a fuel): Cháy sạch không sinh muội than, tỏa nhiệt lớn — dùng trong đèn cồn phòng thí nghiệm, bếp dã ngoại và pha trộn với xăng chạy ô tô ( bioethanol ).",
+      "duration": 66.77,
+      "startTime": 3137.51,
+      "endTime": 3204.28,
+      "audioUrl": "/audio/lectures/science/c11/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🔗 Tổng kết Liên môn C11.2, C11.5 & C11.6 về Ethanol",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "🔗 Connecting C11.2, C11.5 & C11.6: Ethanol Fact File. Formulas (C11.2.1): Molecular = C₂H₆O ; Structural = CH₃CH₂OH ; Displayed = show all five C–H bonds, one C–C bond, one C–O bond, and one O–H bond. Industrial Synthesis (Supplement C11.5): Catalytic addition of steam to ethene in the presence of an acid catalyst: CH₂=CH₂(g) + H₂O(g) ➔ CH₃CH₂OH(g) . Saturation Check: Ethanol is saturated (all carbon–carbon bonds are single bonds), so it does not decolourise aqueous bromine.",
+      "vi": "🔗 Tổng kết Liên môn C11.2, C11.5 & C11.6 về Ethanol. Bộ công thức (C11.2.1): Phân tử = C₂H₆O ; Thu gọn = CH₃CH₂OH ; Khai triển = vẽ đủ 5 liên kết C–H , 1 liên kết C–C , 1 liên kết C–O và 1 liên kết O–H. Tổng hợp Công nghiệp (Supplement C11.5): Phản ứng cộng xúc tác hơi nước (steam) vào ethene có mặt xúc tác axit: CH₂=CH₂(g) + H₂O(g) ➔ CH₃CH₂OH(g) . Độ bão hòa: Ethanol là hợp chất no (saturated) vì chỉ có liên kết đơn C–C, nên không làm mất màu nước bromine.",
+      "duration": 99.78,
+      "startTime": 3204.28,
+      "endTime": 3304.06,
+      "audioUrl": "/audio/lectures/science/c11/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & Paper 2 MCQ (0654) One mole of ethanol, C₂H₅OH , undergoes complete combustion in excess oxygen.How many moles of oxygen molecules ( O₂ ) react, and what are two major uses of ethanol? A. 2 moles of O₂ | making roads and diesel fuel B. 3 moles of O₂ | as a solvent and as a fuel C. 3.5 moles of O₂ | as a solvent and as a fuel D. 3 moles of O₂ | testing for unsaturation and lubricating engines ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Step 1 (Balance combustion): C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O . Two carbons give 2CO₂ (4 O) and six hydrogens give 3H₂O (3 O), totalling 7 O atoms on the right. Since C₂H₅OH already supplies 1 O atom, 6 more O atoms = 3 moles of O₂ are needed (eliminates A and C). Step 2 (Official C11.6 uses): Ethanol is used as a solvent (perfumes, inks, glues) and as a fuel (eliminates D). Thus B is correct.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & Paper 2 (0654) One mole of ethanol, C₂H₅OH , undergoes complete combustion in excess oxygen. How many moles of oxygen molecules ( O₂ ) react, and what are two major uses of ethanol? (Đốt cháy hoàn toàn 1 mol ethanol C₂H₅OH trong lượng dư khí oxygen. Cần bao nhiêu mol phân tử O₂ phản ứng, và hai ứng dụng chính của ethanol là gì?) A. 2 mol O₂ | rải mặt đường và chạy động cơ diesel B. 3 mol O₂ | làm dung môi (solvent) và làm nhiên liệu (fuel) C. 3.5 mol O₂ | làm dung môi (solvent) và làm nhiên liệu (fuel) D. 3 mol O₂ | thử độ bất bão hòa và bôi trơn máy móc ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Bước 1 (Cân bằng phản ứng cháy): C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O . Vế phải có 2×2 + 3×1 = 7 nguyên tử O; trừ 1 O có sẵn trong C₂H₅OH còn 6 nguyên tử O = 3 mol O₂ (loại A và C). Bước 2 (Ứng dụng chuẩn C11.6): Ethanol dùng làm dung môi (solvent) và nhiên liệu (fuel) (loại D). Vậy B đúng.",
+      "duration": 163.29,
+      "startTime": 3304.06,
+      "endTime": 3467.35,
+      "audioUrl": "/audio/lectures/science/c11/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Ethanol ( C₂H₅OH ) can be manufactured in industry by reacting an unsaturated hydrocarbon X with steam in the presence of an acid catalyst.(a) Name hydrocarbon X and write the balanced symbol equation for its reaction with steam to form ethanol. [2](b) Write the balanced symbol equation for the complete combustion of ethanol. [2](c) State two uses of ethanol. [1] ✍️ Step-by-Step Mark Scheme Solution: • (a) Hydrocarbon X = ethene [1m] ; equation: C₂H₄ + H₂O ➔ C₂H₅OH [1m] .• (b) C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O (1m for correct formulas CO₂ and H₂O ; 1m for correct balancing with 3O₂ ) [2m] .• (c) Used as a solvent and as a fuel (both needed for 1m) [1m] . 💡 Intuition Check: Notice how C11.5 and C11.6 connect seamlessly: petroleum ➔ cracking ➔ ethene (+ steam) ➔ ethanol (+ 3O₂) ➔ 2CO₂ + 3H₂O !",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] Ethanol ( C₂H₅OH ) can be manufactured in industry by reacting an unsaturated hydrocarbon X with steam in the presence of an acid catalyst.(a) Name hydrocarbon X and write the balanced symbol equation for its reaction with steam to form ethanol. (b) Write the balanced symbol equation for the complete combustion of ethanol. (c) State two uses of ethanol. (Ethanol được tổng hợp công nghiệp bằng cách cho hydrocarbon không no X tác dụng với hơi nước có xúc tác axit. (a) Gọi tên X và viết phương trình phản ứng. (b) Viết phương trình đốt cháy hoàn toàn ethanol. (c) Nêu 2 ứng dụng của ethanol. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Hydrocarbon X = ethene ; phương trình: C₂H₄ + H₂O ➔ C₂H₅OH .• (b) C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O (1m đúng công thức sản phẩm CO₂ và H₂O ; 1m cân bằng chuẩn hệ số 3O₂ ) .• (c) Dùng làm dung môi (as a solvent) và làm nhiên liệu (as a fuel) (đủ 2 ý đạt 1m) . 💡 Kiểm tra bản chất: Chuỗi liên kết vàng nối liền C11.3 ➔ C11.5 ➔ C11.6: dầu mỏ ➔ cracking ➔ ethene (+ hơi nước) ➔ ethanol (+ 3O₂) ➔ 2CO₂ + 3H₂O !",
+      "duration": 175.35,
+      "startTime": 3467.35,
+      "endTime": 3642.7,
+      "audioUrl": "/audio/lectures/science/c11/s03_b12.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🔗 4. POLYMERS: TRÙNG HỢP CỘNG & SỢI NYLON (C11.7)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🔗 4. POLYMERS: ADDITION POLYMERISATION & NYLON (C11.7). EASY INTUITION & SYLLABUS MENTAL MODEL Polymers are large molecules built up from many smaller molecules called monomers . Synthetic polymers are made either by addition polymerisation (such as poly(ethene) ) or by condensation polymerisation (such as nylon , a polyamide).",
+      "vi": "🔗 4. POLYMERS: TRÙNG HỢP CỘNG & SỢI NYLON (C11.7). EASY INTUITION & SYLLABUS MENTAL MODEL Polymers là những phân tử lớn được xây dựng từ rất nhiều phân tử nhỏ gọi là monomers . Các polymers được tổng hợp theo hai cơ chế chính: trùng hợp cộng (addition polymerisation , như poly(ethene)) và trùng ngưng (condensation polymerisation , tiêu biểu là sợi nylon — một polyamide).",
+      "duration": 45.51,
+      "startTime": 3642.7,
+      "endTime": 3688.21,
+      "audioUrl": "/audio/lectures/science/c11/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture addition polymerisation like a line of dancers holding BOTH hands ( C=C ) with their partner : on cue, every pair drops one hand between them and reaches sideways to hold their neighbours' hands ( –C–C–C–C– ), forming one giant chain with nothing dropped on the floor (only 1 product!). In contrast, condensation polymerisation to make nylon is like clipping alternating two-ended buckles together where every click ejects a tiny water molecule (H₂O) !",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung trùng hợp cộng (addition polymerisation) giống như hàng ngàn cặp nhảy đang nắm CẢ HAI TAY ( C=C ) : khi nhạc nổi lên, mỗi cặp buông một tay ở giữa rồi vươn sang hai bên nắm tay người hàng xóm ( –C–C–C–C– ), tạo thành 1 chuỗi dài duy nhất mà không rơi rớt mảnh vụn nào ! Ngược lại, trùng ngưng (condensation polymerisation) tạo sợi nylon giống như bấm nối các móc khóa hai đầu xen kẽ nhau mà mỗi tiếng \"tách\" lại giải phóng 1 phân tử nước (H₂O) !",
+      "duration": 68.37,
+      "startTime": 3688.21,
+      "endTime": 3756.58,
+      "audioUrl": "/audio/lectures/science/c11/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 🟦 Core 1 → Polymers & Poly(ethene) (C11.7 Core): Polymers are large molecules built up from many smaller molecules called monomers ; thousands of unsaturated ethene molecules open their C=C double bonds to form poly(ethene) . 🟩 Supplement 2 → Repeat Units & Addition vs. Condensation (C11.7 Supplement): Draw addition repeat units in an \"H-shape\" with 2 carbons in the horizontal chain and continuation bonds extending through [ ] . Addition forms only one product from C=C monomers; condensation joins monomers with two functional groups and eliminates a small molecule (H₂O) . 🟩 Supplement 3 → Nylon Structure (C11.7 Supplement): Nylon is a synthetic polyamide made from a dicarboxylic acid ( HOOC–■–COOH ) and a diamine ( H₂N–□–NH₂ ), linked by alternating amide linkages ( –CONH– ) .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 🟦 Core 1 → Khái niệm Polymer & Poly(ethene) (C11.7 Core): Polymers là các phân tử lớn được xây dựng từ rất nhiều phân tử nhỏ gọi là monomers ; hàng ngàn phân tử ethene mở nối đôi C=C tạo poly(ethene) . 🟩 Supplement 2 → Mắt xích (Repeat Units) & Trùng hợp vs. Trùng ngưng (C11.7 Supplement): Vẽ mắt xích trùng hợp theo khung chữ H với đúng 2 nguyên tử C trên trục ngang và gạch nối xuyên qua ngoặc vuông [ ] . Addition chỉ tạo 1 sản phẩm duy nhất từ monomer C=C ; condensation nối các monomers có 2 nhóm chức và tách ra phân tử nhỏ (H₂O) . 🟩 Supplement 3 → Cấu trúc Nylon (C11.7 Supplement): Nylon là một polyamide tổng hợp tạo từ dicarboxylic acid ( HOOC–■–COOH ) và diamine ( H₂N–□–NH₂ ), nối với nhau qua các liên kết amide ( –CONH– ) .",
+      "duration": 113.99,
+      "startTime": 3756.58,
+      "endTime": 3870.57,
+      "audioUrl": "/audio/lectures/science/c11/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When drawing the repeat unit of poly(propene) from CH₂=CHCH₃ , NEVER draw 3 carbons in a horizontal row ( –CH₂–CH₂–CH₂– )! Every addition polymer repeat unit has strictly 2 carbon atoms in the horizontal main chain , with –CH₃ drawn vertically as a side branch!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi vẽ mắt xích (repeat unit) của poly(propene) từ CH₂=CHCH₃ , TUYỆT ĐỐI KHÔNG xếp 3 nguyên tử C nằm ngang! Trục ngang của mọi mắt xích trùng hợp chỉ có đúng 2 nguyên tử C , còn nhóm –CH₃ bắt buộc phải vẽ bẻ dọc làm nhánh!",
+      "duration": 45.96,
+      "startTime": 3870.57,
+      "endTime": 3916.53,
+      "audioUrl": "/audio/lectures/science/c11/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "➕ C11.7 Trùng hợp Cộng (Addition Polymerisation): Poly(ethene) & Mắt xích Repeat Unit",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "➕ C11.7 Addition Polymerisation: Poly(ethene) & Repeat Units. Under high pressure and a catalyst, thousands of unsaturated alkene monomers open their C=C double bonds and link end-to-end into one saturated carbon chain with only ONE product formed. SVG: Ethene -> Poly(ethene) and Propene -> Poly(propene) 3-Step Recipe for Addition Polymer Repeat Units (Supplement C11.7): 1. Draw the alkene monomer in an \"H-shape\" around C=C so there are strictly 2 carbon atoms in the horizontal chain (any side groups like –CH₃ or –Cl go vertically above/below).2. Replace C=C with a single C–C bond and draw continuation bonds extending OUT through the square brackets [ ] .3. Reverse (Polymer ➔ Monomer): Take one 2-carbon repeat unit, remove side continuation bonds and brackets, and put back the C=C double bond!",
+      "vi": "➕ C11.7 Trùng hợp Cộng (Addition Polymerisation): Poly(ethene) & Mắt xích Repeat Unit. Dưới áp suất cao và chất xúc tác, hàng ngàn phân tử alkene monomers mở liên kết đôi C=C nối đuôi nhau thành một chuỗi mạch đơn bão hòa khổng lồ ( chỉ tạo DUY NHẤT 1 sản phẩm ). Quy tắc 3 Bước Xác định Mắt xích: 1. Vẽ lại monomer alkene theo khung chữ H quanh trục C=C sao cho trục ngang chỉ có đúng 2 nguyên tử C (mọi nhóm thế như –CH₃ , –Cl phải bẻ thẳng đứng làm nhánh!).2. Đổi liên kết đôi C=C thành liên kết đơn C–C và vẽ 2 gạch nối kéo dài xuyên qua dấu ngoặc vuông [ ] .3. Suy ngược từ Polymer về Monomer: Tách lấy 1 mắt xích 2C, bỏ ngoặc vuông và 2 gạch bên hông, rồi khôi phục lại liên kết đôi C=C !",
+      "duration": 118.77,
+      "startTime": 3916.53,
+      "endTime": 4035.3,
+      "audioUrl": "/audio/lectures/science/c11/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🧬 So sánh Trùng hợp vs. Trùng ngưng & Cấu trúc của Nylon (Polyamide)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "Supplement C11.7 🧬 Addition vs. Condensation Polymerisation & The Structure of Nylon. Comparison Table: Addition vs Condensation Feature: Monomers Used; Addition Polymerisation: Unsaturated molecules containing a C=C double bond (usually a single monomer type, e.g. ethene).; Condensation Polymerisation: Monomers with two reactive functional groups (one at each end, e.g. a dicarboxylic acid + a diamine to make nylon). Feature: Products Formed; Addition Polymerisation: Only ONE product (the polymer alone; no atoms lost).; Condensation Polymerisation: TWO products: the polymer + a small molecule eliminated (usually water, H₂O ) each time a linkage forms. Feature: Polymer Main Chain; Addition Polymerisation: Continuous chain of carbon atoms only ( –C–C–C–C– ).; Condensation Polymerisation: Alternating monomer blocks joined by functional groups such as amide linkages ( –CONH– ) in nylon. OFFICIAL 0654 BLOCK DIAGRAM SVG: NYLON (A POLYAMIDE) 📐 Official Cambridge 0654 Structure of Nylon — A Synthetic Polyamide. 🎯 How to Draw Nylon & Identify One Repeat Unit in Exams: • Remove –OH from each –COOH end of the dicarboxylic acid and –H from each –NH₂ end of the diamine to form eliminated water ( H₂O ) .• Join every remaining C=O carbon directly to an N–H nitrogen to create the amide linkage ( –CONH– ) .• One repeat unit of nylon contains one dicarboxylic acid block + one diamine block: –[CO–■–CO–NH–□–NH]– (with continuation bonds at both ends!).",
+      "vi": "Supplement C11.7 🧬 So sánh Trùng hợp vs. Trùng ngưng & Cấu trúc của Nylon (Polyamide). Comparison Table Đặc điểm So sánh: Loại Monomer; Trùng hợp Cộng (Addition Polymerisation): Phân tử không no chứa liên kết đôi C=C (thường từ 1 loại monomer như ethene).; Trùng ngưng (Condensation Polymerisation): Các monomers mang 2 nhóm chức hoạt động ở hai đầu (VD: dicarboxylic acid + diamine để tổng hợp nylon). Đặc điểm So sánh: Sản phẩm Sinh ra; Trùng hợp Cộng (Addition Polymerisation): DUY NHẤT 1 sản phẩm (chỉ tạo chuỗi polymer, không mất nguyên tử nào).; Trùng ngưng (Condensation Polymerisation): 2 sản phẩm: chuỗi polymer + giải phóng phân tử nhỏ (thường là nước, H₂O) ở mỗi mối nối. Đặc điểm So sánh: Cấu trúc Mạch chính; Trùng hợp Cộng (Addition Polymerisation): Mạch liên tục toàn nguyên tử carbon ( –C–C–C–C– ).; Trùng ngưng (Condensation Polymerisation): Các khối monomer nối với nhau qua nhóm chức như liên kết amide ( –CONH– ) trong sợi nylon. OFFICIAL 0654 BLOCK DIAGRAM SVG: NYLON 📐 Sơ đồ Khối Chuẩn Cambridge 0654 của Nylon — Polyamide Tổng hợp. 🎯 Bí quyết Vẽ Sơ đồ Nylon & Xác định Mắt xích (Repeat Unit) đạt Điểm Tuyệt đối: • Tách nhóm –OH khỏi mỗi đầu –COOH của dicarboxylic acid và tách –H khỏi mỗi đầu –NH₂ của diamine để ghép thành phân tử nước ( H₂O ) .• Nối trực tiếp nguyên tử carbon của C=O vào nguyên tử nitrogen của N–H tạo thành liên kết amide ( –CONH– ) .• Một mắt xích (repeat unit) của nylon gồm 1 khối dicarboxylic acid ghép với 1 khối diamine: –[CO–■–CO–NH–□–NH]– (có nét gạch nối tiếp ở hai đầu!).",
+      "duration": 245.35,
+      "startTime": 4035.3,
+      "endTime": 4280.65,
+      "audioUrl": "/audio/lectures/science/c11/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Extended MCQ (0654) Which row correctly compares the formation and structure of poly(ethene) and nylon ? A. Poly(ethene): Addition, 1 product only, C–C main chain | Nylon: Condensation, H₂O eliminated, amide (–CONH–) linkages B. Poly(ethene): Condensation, H₂O eliminated, C=C main chain | Nylon: Addition, 1 product only, amide (–CONH–) linkages C. Poly(ethene): Addition, H₂O eliminated, C–C main chain | Nylon: Condensation, 1 product only, C–C main chain D. Poly(ethene): Addition, 1 product only, C=C double bonds remain | Nylon: Condensation, H₂ eliminated, amide linkages ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Step 1 (Poly(ethene)): Made by addition polymerisation of ethene; the C=C bond opens into single C–C bonds forming only one product with no small molecule lost (eliminates B, C, D). Step 2 (Nylon): Made by condensation polymerisation , eliminating water (H₂O) as each amide linkage ( –CONH– ) forms. Thus A is correct.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Extended (0654) Which row correctly compares the formation and structure of poly(ethene) and nylon ? (Dòng nào so sánh đúng phương pháp điều chế và cấu trúc của poly(ethene) và nylon ?) A. Poly(ethene): Trùng hợp cộng, chỉ 1 sản phẩm, mạch C–C | Nylon: Trùng ngưng, tách H₂O, liên kết amide (–CONH–) B. Poly(ethene): Trùng ngưng, tách H₂O, mạch C=C | Nylon: Trùng hợp cộng, chỉ 1 sản phẩm, liên kết amide C. Poly(ethene): Trùng hợp cộng, tách H₂O, mạch C–C | Nylon: Trùng ngưng, chỉ 1 sản phẩm, mạch toàn C–C D. Poly(ethene): Trùng hợp cộng, còn nguyên liên kết đôi C=C | Nylon: Trùng ngưng, tách khí H₂, liên kết amide ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Bước 1 (Poly(ethene)): Tạo thành nhờ addition polymerisation của ethene; liên kết C=C mở thành liên kết đơn C–C , tạo duy nhất 1 sản phẩm không tách phân tử nhỏ (loại B, C, D). Bước 2 (Nylon): Tạo thành nhờ condensation polymerisation , mỗi mối nối hình thành một liên kết amide ( –CONH– ) đồng thời giải phóng phân tử nước (H₂O) . Vậy A đúng.",
+      "duration": 178.11,
+      "startTime": 4280.65,
+      "endTime": 4458.76,
+      "audioUrl": "/audio/lectures/science/c11/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Polymers are manufactured either by addition polymerisation or by condensation polymerisation.(a) Define the term polymer and write the structural formula of one repeat unit of the addition polymer formed from propene, CH₂=CHCH₃ . [2](b) State two differences between addition polymerisation and condensation polymerisation. [2](c) Nylon is a polyamide formed by condensation polymerisation between HOOC–■–COOH and H₂N–□–NH₂ . Name the small molecule eliminated during this reaction, and state the atoms and bonds present in the amide linkage joining the monomer blocks. [2] ✍️ Step-by-Step Mark Scheme Solution: • (a) Large molecules built up from many smaller molecules called monomers [1m] ; repeat unit of poly(propene): –[CH₂–CH(CH₃)]– (2 carbons in backbone, single C–C bond, continuation bonds through brackets, CH₃ as branch) [1m] .• (b) Addition uses monomers with a C=C double bond and forms only one product [1m] , whereas condensation uses monomers with two reactive functional groups and eliminates a small molecule (such as water) alongside the polymer [1m] .• (c) Small molecule eliminated: water ( H₂O ) [1m] ; amide linkage contains a carbonyl group C=O single-bonded to an N–H group ( –C(=O)–NH– ) [1m] . 💡 Intuition Check: To form each amide link ( –CONH– ) in nylon, slice –OH off the dicarboxylic acid end ( –COOH ) and –H off the diamine end ( –NH₂ ) — they combine into H₂O while C bonds directly to N !",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Polymers are manufactured either by addition polymerisation or by condensation polymerisation.(a) Define the term polymer and write the structural formula of one repeat unit of the addition polymer formed from propene, CH₂=CHCH₃ . (b) State two differences between addition polymerisation and condensation polymerisation. (c) Nylon is a polyamide formed by condensation polymerisation between HOOC–■–COOH and H₂N–□–NH₂ . Name the small molecule eliminated during this reaction, and state the atoms and bonds present in the amide linkage joining the monomer blocks. ((a) Định nghĩa polymer và viết cấu tạo 1 mắt xích của polymer tạo từ propene CH₂=CHCH₃. (b) Nêu 2 điểm khác biệt giữa trùng hợp cộng và trùng ngưng. (c) Với nylon tạo từ HOOC–■–COOH và H₂N–□–NH₂: gọi tên phân tử nhỏ tách ra và mô tả các nguyên tử/liên kết trong nhóm amide linkage. ) ✍️ Lời giải chi tiết theo thang điểm: • (a) Các đại phân tử lớn được tạo thành từ rất nhiều phân tử nhỏ gọi là monomers ; mắt xích của poly(propene): –[CH₂–CH(CH₃)]– (trục chính 2C liên kết đơn, gạch nối xuyên ngoặc vuông, CH₃ làm nhánh) .• (b) Addition dùng monomer có liên kết đôi C=C và chỉ tạo duy nhất 1 sản phẩm , còn condensation dùng monomers mang 2 nhóm chức và tách ra thêm một phân tử nhỏ (như H₂O) .• (c) Phân tử nhỏ tách ra: nước (water, H₂O ) ; nhóm amide linkage gồm nhóm carbonyl C=O liên kết đơn với nhóm N–H ( –C(=O)–NH– ) .",
+      "duration": 244.31,
+      "startTime": 4458.76,
+      "endTime": 4703.07,
+      "audioUrl": "/audio/lectures/science/c11/s04_b07.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "📝 PHÂN TÍCH CÂU HỎI MẪU ĐỀ THI IGCSE (0654 — Worked Exam Questions)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "📝 WORKED IGCSE EXAM QUESTIONS (0654).",
+      "vi": "📝 PHÂN TÍCH CÂU HỎI MẪU ĐỀ THI IGCSE.",
+      "duration": 9.52,
+      "startTime": 4703.07,
+      "endTime": 4712.59,
+      "audioUrl": "/audio/lectures/science/c11/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "Đề bài: Cracking 1 phân tử tetradecane (C₁₄H₃₀) thu được 1 phân tử octane (C₈H₁₈), 1 phân tử et",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "Worked Example 1 • Cracking & Unbranched C₄H₈ Alkenes (5 marks) Question: One molecule of tetradecane, C₁₄H₃₀, is cracked to form one molecule of octane, C₈H₁₈, one molecule of ethene, and one molecule of hydrocarbon X. (a) Deduce the molecular formula of X. (b) State the conditions needed for cracking. (c) Write the structural formulas and names of two unbranched alkenes with formula X. Model Mark-Scheme Answers: • (a) Balance C and H atoms: C₁₄H₃₀ ➔ C₈H₁₈ + C₂H₄ + X .Carbons in X = 14 − 8 − 2 = 4 ; Hydrogens in X = 30 − 18 − 4 = 8 ➔ X = C₄H₈ .• (b) High temperature (~600 °C) and a catalyst (Al₂O₃ or SiO₂).• (c) but-1-ene ( CH₃CH₂CH=CH₂ ) and but-2-ene ( CH₃CH=CHCH₃ ).",
+      "vi": "Ví dụ 1 • Cracking & Alkenes Mạch Thẳng C₄H₈ (5 điểm) Đề bài: Cracking 1 phân tử tetradecane (C₁₄H₃₀) thu được 1 phân tử octane (C₈H₁₈), 1 phân tử ethene và 1 phân tử hydrocarbon X. (a) Xác định công thức phân tử của X. (b) Nêu điều kiện phản ứng cracking. (c) Viết công thức cấu tạo thu gọn và gọi tên 2 alkenes mạch thẳng có công thức X. Đáp án chuẩn Mark Scheme: • (a) Bảo toàn nguyên tử C và H: C₁₄H₃₀ ➔ C₈H₁₈ + C₂H₄ + X .Số C trong X = 14 − 8 − 2 = 4 ; Số H trong X = 30 − 18 − 4 = 8 ➔ X = C₄H₈ .• (b) Nhiệt độ cao (high temperature , ~600 °C) và chất xúc tác (catalyst : Al₂O₃ hoặc SiO₂).• (c) but-1-ene ( CH₃CH₂CH=CH₂ ) và but-2-ene ( CH₃CH=CHCH₃ ).",
+      "duration": 138.81,
+      "startTime": 4712.59,
+      "endTime": 4851.4,
+      "audioUrl": "/audio/lectures/science/c11/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "Đề bài: Cho ethene tác dụng với hơi nước (steam) có mặt xúc tác axit thu được hợp chất Z. (a) G",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "Worked Example 2 • Steam Hydration & Ethanol Combustion (5 marks) Question: Ethene reacts with steam in the presence of an acid catalyst to produce compound Z. (a) Name compound Z and state the homologous series to which it belongs. (b) Write the balanced symbol equation for the complete combustion of Z. (c) State two uses of Z. Model Mark-Scheme Answers: • (a) Z = ethanol ( C₂H₅OH ); belongs to the alcohols .• (b) C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O .• (c) Used as a solvent (e.g. perfumes, inks) and as a fuel .",
+      "vi": "Ví dụ 2 • Cộng Hơi nước & Đốt cháy Ethanol (5 điểm) Đề bài: Cho ethene tác dụng với hơi nước (steam) có mặt xúc tác axit thu được hợp chất Z. (a) Gọi tên Z và nêu dãy đồng đẳng của Z. (b) Viết phương trình hóa học đốt cháy hoàn toàn Z. (c) Nêu 2 ứng dụng thực tế của Z. Đáp án chuẩn Mark Scheme: • (a) Z = ethanol ( C₂H₅OH ); thuộc dãy đồng đẳng alcohols .• (b) C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O .• (c) Dùng làm dung môi (as a solvent) và làm nhiên liệu (as a fuel) .",
+      "duration": 84.72,
+      "startTime": 4851.4,
+      "endTime": 4936.12,
+      "audioUrl": "/audio/lectures/science/c11/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "Đề bài: Một polymer trùng hợp có mắt xích (repeat unit) là –[CH(CH₃)–CH(CH₃)]– . Xác định công ",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "Worked Example 3 • Deducing Monomer from Addition Polymer (4 marks) Question: An addition polymer has the repeat unit –[CH(CH₃)–CH(CH₃)]– . Deduce the structural formula and chemical name of the alkene monomer used to make this polymer, and explain why no other product is formed during polymerisation. Model Mark-Scheme Answers: • Remove continuation bonds and restore the C=C double bond between the two backbone carbons: CH₃CH=CHCH₃ ➔ Name: but-2-ene .• In addition polymerisation , the C=C double bonds simply open and link monomers together, so only one product (the polymer) is formed with no atoms eliminated.",
+      "vi": "Ví dụ 3 • Suy ngược Monomer từ Mắt xích Trùng hợp (4 điểm) Đề bài: Một polymer trùng hợp có mắt xích (repeat unit) là –[CH(CH₃)–CH(CH₃)]– . Xác định công thức cấu tạo thu gọn, tên hóa học của alkene monomer ban đầu và giải thích vì sao phản ứng không sinh thêm sản phẩm phụ. Đáp án chuẩn Mark Scheme: • Xóa hai gạch nối dài bên hông và khôi phục liên kết đôi C=C giữa hai nguyên tử C trục chính: CH₃CH=CHCH₃ ➔ Tên gọi: but-2-ene .• Trong addition polymerisation , liên kết đôi C=C mở ra nối trực tiếp các monomers lại với nhau nên chỉ tạo duy nhất 1 sản phẩm , không tách bỏ phân tử nhỏ nào.",
+      "duration": 95.22,
+      "startTime": 4936.12,
+      "endTime": 5031.34,
+      "audioUrl": "/audio/lectures/science/c11/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "Đề bài: Sợi nylon được tạo thành khi cho monomer A ( HOOC–■–COOH ) phản ứng với monomer B ( H₂N",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "Worked Example 4 • Condensation Polymerisation of Nylon (4 marks) Question: Nylon is formed when monomer A ( HOOC–■–COOH ) reacts with monomer B ( H₂N–□–NH₂ ). Name the type of polymerisation, name the linkage formed in nylon, state the formula of the small molecule eliminated, and write the repeat unit using the block symbols. Model Mark-Scheme Answers: • Type of polymerisation: condensation polymerisation .• Linkage formed: amide linkage ( –CONH– ); small molecule eliminated: H₂O (water).• Repeat unit: –[CO–■–CO–NH–□–NH]– .",
+      "vi": "Ví dụ 4 • Phản ứng Trùng ngưng Tổng hợp Nylon (4 điểm) Đề bài: Sợi nylon được tạo thành khi cho monomer A ( HOOC–■–COOH ) phản ứng với monomer B ( H₂N–□–NH₂ ). Gọi tên loại phản ứng polymer hóa, tên liên kết tạo thành trong nylon, công thức phân tử nhỏ tách ra và biểu diễn 1 mắt xích (repeat unit) của nylon. Đáp án chuẩn Mark Scheme: • Loại phản ứng: trùng ngưng (condensation polymerisation) .• Liên kết tạo thành: amide linkage ( –CONH– ); phân tử nhỏ tách ra: H₂O (nước).• Một mắt xích (repeat unit): –[CO–■–CO–NH–□–NH]– .",
+      "duration": 91.76,
+      "startTime": 5031.34,
+      "endTime": 5123.1,
+      "audioUrl": "/audio/lectures/science/c11/s05_b04.mp3"
     }
   ]
 }

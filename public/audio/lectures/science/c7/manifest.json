@@ -1,133 +1,519 @@
 {
   "lectureId": "2c83104c-9413-4ee1-bdf3-2c0da8fd96a6",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "C7: Acids bases and salts",
-  "totalDuration": 432.82,
+  "totalDuration": 3296.32,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề C7",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_acids_bases": {
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_p1_sub02": {
+      "start": 8,
+      "end": 10
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_p2_sub02": {
+      "start": 8,
+      "end": 10
+    },
+    "s01_wex": {
+      "start": 11,
+      "end": 12
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 3,
-      "title": "1. Axit, Bazơ & Thang đo pH",
-      "selector": "#sec-acids-bases"
+      "end": 12
     },
-    "sec_acid_reactions": {
-      "start": 4,
-      "end": 5,
-      "title": "2. Ba Phản ứng Đặc trưng của Axit",
-      "selector": "#sec-acid-reactions"
+    "s02_int": {
+      "start": 14,
+      "end": 16
     },
-    "sec_salt_preparation": {
-      "start": 6,
-      "end": 8,
-      "title": "3. Kỹ thuật Điều chế Muối",
-      "selector": "#sec-salt-preparation"
+    "s02_p1_sub01": {
+      "start": 17,
+      "end": 19
+    },
+    "s02_p1_sub02": {
+      "start": 20,
+      "end": 24
+    },
+    "s02_p2_sub01": {
+      "start": 17,
+      "end": 19
+    },
+    "s02_p2_sub02": {
+      "start": 20,
+      "end": 24
+    },
+    "s02_wex": {
+      "start": 25,
+      "end": 26
+    },
+    "s02_hdr": {
+      "start": 13,
+      "end": 26
+    },
+    "s03_int": {
+      "start": 28,
+      "end": 30
+    },
+    "s03_p1_sub01": {
+      "start": 32,
+      "end": 36
+    },
+    "s03_p2_sub01": {
+      "start": 32,
+      "end": 36
+    },
+    "s03_wex": {
+      "start": 37,
+      "end": 38
+    },
+    "s03_hdr": {
+      "start": 27,
+      "end": 38
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề C7: Axit, Bazơ & Phương pháp Điều chế Muối",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic C7: Acids, Bases and Salts. In this lesson, we study the chemical characteristics of acids and alkalis, master the pH scale and indicators, analyze the three core acid reactions, and master laboratory salt preparation techniques including titration and precipitation.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C7: Axit, Bazơ và Muối. Trong bài học này, chúng ta sẽ khảo sát đặc tính hóa học của axit và kiềm, làm chủ thang đo pH và chất chỉ thị màu, phân tích ba phản ứng đặc trưng của axit, cùng các phương pháp điều chế muối trong phòng thí nghiệm như chuẩn độ và kết tủa.",
-      "duration": 44.9,
+      "title": "C7: Axit, bazơ và muối (Acids, bases and salts)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) C7: Acids, bases and salts. Complete Master Lecture (0654) • C7.1 Acids, Bases, Alkalis, Indicators & Neutralisation, C7.2 Acidic, Basic & Amphoteric Oxides, C7.3 Salt Preparation & Hydrated Substances.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ C7: Axit, bazơ và muối. Bài giảng Song ngữ Chuẩn 0654 • C7.1 Axit, Bazơ, Kiềm & Chất chỉ thị màu, C7.2 Oxit Axit/Bazơ/Lưỡng tính, C7.3 Điều chế Muối & Chất Ngậm nước.",
+      "duration": 50.91,
       "startTime": 0.0,
-      "endTime": 44.9,
+      "endTime": 50.91,
       "audioUrl": "/audio/lectures/science/c7/intro.mp3"
     },
     {
-      "id": "sec_acids_bases",
-      "title": "1. Axit, Bazơ, Kiềm & Thang đo pH (Acids, Bases & pH Overview)",
-      "selector": "#sec-acids-bases",
-      "en": "Section 1 defines acids and bases: An acid is a proton donor producing hydrogen ions H+ in water. A base is a proton acceptor; a soluble base is called an alkali, producing hydroxide ions OH- in water.",
-      "vi": "Mục một định nghĩa axit và bazơ: Axit là chất nhường proton tạo ra ion H+ trong nước. Bazơ là chất nhận proton; bazơ tan trong nước được gọi là Kiềm (Alkali), tạo ra ion OH- trong dung dịch.",
-      "duration": 82.29,
-      "startTime": 44.9,
-      "endTime": 127.19,
-      "audioUrl": "/audio/lectures/science/c7/sec_acids_bases.mp3"
+      "id": "s01_hdr",
+      "title": "🧪 1. AXIT, BAZƠ, KIỀM, CHẤT CHỈ THỊ & THANG pH",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧪 1. ACIDS, BASES, ALKALIS & THE pH SCALE. Core Only C7.1",
+      "vi": "🧪 1. AXIT, BAZƠ, KIỀM, CHẤT CHỈ THỊ & THANG pH. Core Only C7.1",
+      "duration": 15.96,
+      "startTime": 50.91,
+      "endTime": 66.87,
+      "audioUrl": "/audio/lectures/science/c7/s01_hdr.mp3"
     },
     {
-      "id": "sec_acids_bases_def",
-      "title": "🔴 Acids vs Bases vs Alkalis (Axit vs Bazơ vs Kiềm)",
-      "selector": "#sec-acids-bases-def",
-      "en": "Critical distinction: All alkalis are bases, but not all bases are alkalis. Common bases include copper(II) oxide and iron(III) hydroxide which are insoluble in water, whereas sodium hydroxide is an alkali.",
-      "vi": "Phân biệt then chốt: Mọi chất kiềm đều là bazơ, nhưng không phải mọi bazơ đều là kiềm. Các bazơ không tan trong nước như đồng hai oxit CuO hay sắt ba hidroxit không phải là kiềm, trong khi natri hidroxit tan tốt trong nước là kiềm.",
-      "duration": 30.81,
-      "startTime": 127.19,
-      "endTime": 158.0,
-      "audioUrl": "/audio/lectures/science/c7/sec_acids_bases_def.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of Bases as a big family of acid-neutralising metal oxides and hydroxides ( CuO, MgO, NaOH ). Only the family members that dissolve in water get VIP wristbands as Alkalis ( NaOH(aq), KOH(aq) ). Meanwhile, indicators work like chemical traffic lights : litmus and methyl orange tell you simply which side of neutral you are on, whereas Universal Indicator acts like a full rainbow speedometer (pH 0–14) showing how strongly acidic or alkaline a solution is!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung Bases (Bazơ) như một đại gia đình gồm các oxit và hidroxit kim loại chuyên khử axit. Chỉ những thành viên nào tan được trong nước mới có vé VIP mang tên Alkalis (Kiềm) ( NaOH(aq), KOH(aq) ). Trong khi đó, các chất chỉ thị giống như đèn tín hiệu hóa học : litmus và methyl orange chỉ báo bạn đang đứng ở phe axit hay kiềm, còn Universal Indicator là cả một đồng hồ cầu vồng (pH 0–14) đo chính xác độ mạnh yếu của axit và kiềm!",
+      "duration": 72.39,
+      "startTime": 66.87,
+      "endTime": 139.26,
+      "audioUrl": "/audio/lectures/science/c7/s01_b01.mp3"
     },
     {
-      "id": "sec_ph_scale",
-      "title": "🌈 The pH Scale & Indicators (Thang đo pH & Chỉ thị)",
-      "selector": "#sec-ph-scale",
-      "en": "The pH scale ranges from 0 to 14: pH less than 7 indicates acidic solutions, pH 7 is neutral, and pH greater than 7 indicates alkaline solutions. Litmus turns red in acid and blue in alkali. Universal indicator gives a full colour spectrum from red to purple.",
-      "vi": "Thang đo pH chạy từ 0 đến 14: pH nhỏ hơn 7 là môi trường axit, pH bằng 7 là trung tính, và pH lớn hơn 7 là môi trường kiềm. Quỳ tím chuyển đỏ trong axit và chuyển xanh trong kiềm. Chỉ thị vạn năng đổi màu liên tục từ đỏ qua xanh lá đến tím.",
-      "duration": 37.67,
-      "startTime": 158.0,
-      "endTime": 195.67,
-      "audioUrl": "/audio/lectures/science/c7/sec_ph_scale.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Bases, Alkalis & Neutralisation (C7.1.3, C7.1.7): Bases are oxides or hydroxides of metals ; alkalis are soluble bases . Neutralisation between an acid and an alkali produces a salt and water . 2 → 🟦 Core Single Indicators (C7.1.2, C7.1.5): Litmus is red in acid and blue in alkali; methyl orange is red in acid and yellow in alkali. 3 → 🟦 Core Universal Indicator & pH (C7.1.6): Compares relative acidity, neutrality, and alkalinity — pH < 7 acidic (red = strongly acidic, orange/yellow = weakly acidic), pH = 7 neutral (green), pH > 7 alkaline (blue = weakly alkaline, purple = strongly alkaline).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Bazơ, Kiềm & Trung hòa (C7.1.3, C7.1.7): Bases là oxit hoặc hidroxit kim loại ; alkalis là bazơ tan (soluble bases) . Phản ứng trung hòa giữa axit và kiềm tạo muối và nước . 2 → 🟦 Core Hai Chỉ thị Đơn (C7.1.2, C7.1.5): Litmus hóa đỏ (red) trong axit và xanh lam (blue) trong kiềm; methyl orange hóa đỏ (red) trong axit và vàng (yellow) trong kiềm. 3 → 🟦 Core Chỉ thị Vạn năng & pH (C7.1.6): So sánh độ axit/kiềm tương đối — pH < 7 axit (đỏ = mạnh, cam/vàng = yếu), pH = 7 trung tính (xanh lá / green), pH > 7 kiềm (xanh lam = yếu, tím / purple = mạnh).",
+      "duration": 111.17,
+      "startTime": 139.26,
+      "endTime": 250.43,
+      "audioUrl": "/audio/lectures/science/c7/s01_b02.mp3"
     },
     {
-      "id": "sec_acid_reactions",
-      "title": "2. Ba Phản ứng Đặc trưng của Axit (Characteristic Reactions of Acids Overview)",
-      "selector": "#sec-acid-reactions",
-      "en": "Section 2 details the three essential reactions of dilute acids in Cambridge IGCSE: reacting with metals, metal oxides and hydroxides, and metal carbonates.",
-      "vi": "Mục hai chi tiết hóa ba phản ứng nền tảng của dung dịch axit loãng: tác dụng với kim loại, tác dụng với bazơ hoặc oxit bazơ, và tác dụng với muối cacbonat.",
-      "duration": 57.06,
-      "startTime": 195.67,
-      "endTime": 252.73,
-      "audioUrl": "/audio/lectures/science/c7/sec_acid_reactions.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never claim that \"all bases turn red litmus paper blue\" ! An insoluble base like black copper(II) oxide (CuO) does not dissolve in water, so it has no effect on damp litmus — yet it is still a base because it reacts with dilute acid to form a salt and water!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG nói \"mọi bazơ đều làm quỳ đỏ hóa xanh\" ! Các bazơ không tan như bột đen copper(II) oxide (CuO) không tan ra trong nước nên không làm đổi màu giấy quỳ — nhưng nó vẫn là base vì tác dụng với axit tạo muối và nước!",
+      "duration": 38.54,
+      "startTime": 250.43,
+      "endTime": 288.97,
+      "audioUrl": "/audio/lectures/science/c7/s01_b03.mp3"
     },
     {
-      "id": "sec_three_acid_reactions",
-      "title": "💥 3 Acid Reactions: Metal, Base & Carbonate (3 Dạng Phản ứng)",
-      "selector": "#sec-three-acid-reactions",
-      "en": "Reaction 1: Acid plus Metal yields Salt plus Hydrogen gas. Reaction 2: Acid plus Base yields Salt plus Water in neutralisation. Reaction 3: Acid plus Metal Carbonate yields Salt plus Water plus Carbon Dioxide gas, turning limewater cloudy.",
-      "vi": "Phản ứng 1: Axit tác dụng với Kim loại tạo Muối và khí Hydro sủi bọt. Phản ứng 2: Axit tác dụng với Bazơ tạo Muối và Nước gọi là phản ứng trung hòa. Phản ứng 3: Axit tác dụng với Muối Cacbonat tạo Muối, Nước và khí Carbon dioxide làm đục nước vôi trong.",
-      "duration": 36.83,
-      "startTime": 252.73,
-      "endTime": 289.56,
-      "audioUrl": "/audio/lectures/science/c7/sec_three_acid_reactions.mp3"
+      "id": "s01_b04",
+      "title": "🔴 Acids (Axit)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🔴 Acids. Aqueous solutions of acids contain hydrogen ions, H+(aq). Key C7.1 Property: Acids have pH < 7 and react with metals, bases, and carbonates to form salts . Common Lab Acids: Hydrochloric acid (HCl), Sulfuric acid (H2SO4), Nitric acid (HNO3), Ethanoic acid (CH3COOH).",
+      "vi": "🔴 Acids (Axit). Dung dịch nước của axit luôn chứa các ion hydrogen, H+(aq). Đặc trưng C7.1: Dung dịch axit có pH < 7 và tác dụng với kim loại, bazơ, muối carbonate để tạo muối (salts) . Axit phổ biến: HCl (hydrochloric), H2SO4(sulfuric), HNO3(nitric), CH3COOH (ethanoic).",
+      "duration": 57.21,
+      "startTime": 288.97,
+      "endTime": 346.18,
+      "audioUrl": "/audio/lectures/science/c7/s01_b04.mp3"
     },
     {
-      "id": "sec_salt_preparation",
-      "title": "3. Kỹ thuật Điều chế Muối (Salt Preparation Methods Overview)",
-      "selector": "#sec-salt-preparation",
-      "en": "Section 3 covers preparation of soluble and insoluble salts in the laboratory, guided by solubility rules.",
-      "vi": "Mục ba hướng dẫn các phương pháp điều chế muối tan và muối không tan trong phòng thí nghiệm dựa trên quy tắc độ tan.",
-      "duration": 74.39,
-      "startTime": 289.56,
-      "endTime": 363.95,
-      "audioUrl": "/audio/lectures/science/c7/sec_salt_preparation.mp3"
+      "id": "s01_b05",
+      "title": "🔵 Bases (Bazơ) & Alkalis (Kiềm)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🔵 Bases & Alkalis. Bases are oxides or hydroxides of metals (plus NH3). Alkalis are soluble bases whose aqueous solutions contain hydroxide ions, OH−(aq). Key C7.1 Definition: Bases are oxides or hydroxides of metals ; alkalis are soluble bases (pH > 7). Insoluble bases: CuO, MgO, ZnO, Cu(OH)2. Alkalis: NaOH(aq), KOH(aq), Ca(OH)2(aq), NH3(aq).",
+      "vi": "🔵 Bases (Bazơ) & Alkalis (Kiềm). Bases là các oxit hoặc hidroxit của kim loại (cùng NH3). Alkalis là các bazơ tan trong nước (soluble bases) tạo ra ion OH−(aq). Định nghĩa chuẩn C7.1: Bases là oxit hoặc hidroxit kim loại ; Alkalis là bazơ tan . Bazơ không tan: CuO, MgO, Cu(OH)2. Kiềm (Alkalis): NaOH(aq), KOH(aq), Ca(OH)2(aq), NH3(aq).",
+      "duration": 79.99,
+      "startTime": 346.18,
+      "endTime": 426.17,
+      "audioUrl": "/audio/lectures/science/c7/s01_b05.mp3"
     },
     {
-      "id": "sec_solubility_rules",
-      "title": "🧠 SNAP Solubility Rule (Quy tắc Độ tan SNAP)",
-      "selector": "#sec-solubility-rules",
-      "en": "Remember SNAP rule: All Sodium, Nitrate, Ammonium, and Potassium salts are completely soluble in water. All sulfates are soluble except barium, lead, and calcium. All chlorides are soluble except silver and lead.",
-      "vi": "Mẹo nhớ SNAP: Tất cả các muối của Sodium, Nitrate, Ammonium và Potassium đều tan hoàn toàn trong nước. Hầu hết các muối sunfat đều tan trừ bari, chì và canxi. Hầu hết các muối clorua đều tan trừ bạc và chì.",
-      "duration": 33.14,
-      "startTime": 363.95,
-      "endTime": 397.09,
-      "audioUrl": "/audio/lectures/science/c7/sec_solubility_rules.mp3"
+      "id": "s01_b06",
+      "title": "🚨 Bẫy Đề Thi — Phân biệt Base / Alkali & Phản ứng Trung hòa (C7.1.3 & C7.1.7): •...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🚨 Exam Trap — Base vs. Alkali & Neutralisation Reaction (C7.1.3 & C7.1.7): • All alkalis are bases, NOT all bases are alkalis! Copper(II) oxide (CuO) neutralises acid so it is a base, but it is insoluble in water so it is NOT an alkali.• In neutralisation , an acid reacts with an alkali to produce a salt and water : Acid + Alkali ⟶ Salt + Water",
+      "vi": "🚨 Bẫy Đề Thi — Phân biệt Base / Alkali & Phản ứng Trung hòa (C7.1.3 & C7.1.7): • Mọi Alkali đều là Base, nhưng KHÔNG phải Base nào cũng là Alkali! CuO là bazơ nhưng không tan trong nước nên KHÔNG phải là kiềm.• Phản ứng trung hòa (neutralisation) giữa axit và kiềm luôn tạo ra muối và nước : Acid + Alkali ⟶ Salt + Water",
+      "duration": 58.5,
+      "startTime": 426.17,
+      "endTime": 484.67,
+      "audioUrl": "/audio/lectures/science/c7/s01_b06.mp3"
     },
     {
-      "id": "sec_salt_methods",
-      "title": "🧂 3 Salt Methods: Titration, Excess Solid & Precipitation (3 Phương pháp)",
-      "selector": "#sec-salt-methods",
-      "en": "Method 1: Titration is used for soluble salts prepared from acid plus soluble alkali. Method 2: Excess insoluble solid added to acid, filtered, then crystallised. Method 3: Precipitation mixes two soluble solutions to produce an insoluble salt precipitate.",
-      "vi": "Phương pháp 1: Chuẩn độ dùng cho muối tan tạo từ axit và kiềm tan. Phương pháp 2: Cho dư chất rắn không tan vào axit, lọc bỏ phần dư rồi kết tinh dịch lọc. Phương pháp 3: Kết tủa trộn hai dung dịch muối tan vào nhau để thu được muối kết tủa không tan.",
-      "duration": 35.73,
-      "startTime": 397.09,
-      "endTime": 432.82,
-      "audioUrl": "/audio/lectures/science/c7/sec_salt_methods.mp3"
+      "id": "s01_b07",
+      "title": "Chất chỉ thị (Indicator): Litmus (Quỳ tím); Môi trường Axit (pH < 7): Đỏ (Red); ...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Indicator: Litmus; Colour in Acid (pH < 7): Red; Colour in Neutral (pH = 7): Purple; Colour in Alkali (pH > 7): Blue. Indicator: Methyl Orange; Colour in Acid (pH < 7): Red; Colour in Neutral (pH = 7): Orange (end-point); Colour in Alkali (pH > 7): Yellow.",
+      "vi": "Chất chỉ thị (Indicator): Litmus (Quỳ tím); Môi trường Axit (pH < 7): Đỏ (Red); Trung tính (pH = 7): Tím (Purple); Môi trường Kiềm (pH > 7): Xanh lam (Blue). Chất chỉ thị (Indicator): Methyl Orange (Da cam metyl); Môi trường Axit (pH < 7): Đỏ (Red); Trung tính (pH = 7): Cam (Orange); Môi trường Kiềm (pH > 7): Vàng (Yellow).",
+      "duration": 55.42,
+      "startTime": 484.67,
+      "endTime": 540.09,
+      "audioUrl": "/audio/lectures/science/c7/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "💡 Lưu ý thực hành Paper 6: Khi chuẩn độ ( titration ) trong môn 0654, luôn dùng ...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "💡 Paper 6 Titration Tip: Always use a single sharp-change indicator such as methyl orange (red ↔ yellow) or litmus for acid-alkali titrations. Never use Universal Indicator in a titration because it changes colour gradually across a continuous rainbow of shades!",
+      "vi": "💡 Lưu ý thực hành Paper 6: Khi chuẩn độ ( titration ) trong môn 0654, luôn dùng chất chỉ thị đổi màu dứt khoát như methyl orange (đỏ ↔ vàng) hoặc litmus . Tuyệt đối KHÔNG dùng Universal Indicator vì nó đổi màu từ từ qua nhiều sắc thái!",
+      "duration": 37.05,
+      "startTime": 540.09,
+      "endTime": 577.14,
+      "audioUrl": "/audio/lectures/science/c7/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🌈 Interactive pH Scale & Universal Indicator (Chỉ thị Vạn năng — C7.1.6)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🌈 Interactive pH Scale & Universal Indicator (Core C7.1.6). Hover along the pH spectrum below to compare relative acidity, neutrality, and relative alkalinity using Universal Indicator colours: 👆",
+      "vi": "🌈 Interactive pH Scale & Universal Indicator (Chỉ thị Vạn năng — C7.1.6). Lướt chuột dọc theo dải màu pH để so sánh nồng độ [H+], [OH−] và màu của giấy Universal Indicator: 👆",
+      "duration": 31.37,
+      "startTime": 577.14,
+      "endTime": 608.51,
+      "audioUrl": "/audio/lectures/science/c7/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Three colourless aqueous solutions P , Q , and R have pH values of 2 , 7 , and 12 respectively. Which row correctly gives the colour of methyl orange in P and the colour of Universal Indicator in Q and R ? A. Methyl orange in P: Red | Universal Indicator in Q: Green | Universal Indicator in R: Purple B. Methyl orange in P: Yellow | Universal Indicator in Q: Green | Universal Indicator in R: Blue C. Methyl orange in P: Red | Universal Indicator in Q: Colourless | Universal Indicator in R: Red D. Methyl orange in P: Orange | Universal Indicator in Q: Purple | Universal Indicator in R: Green ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Solution P (pH 2) is strongly acidic, so methyl orange turns red (eliminating B and D). Solution Q (pH 7) is neutral, where Universal Indicator is green (eliminating C). Solution R (pH 12) is strongly alkaline, turning Universal Indicator purple/violet . Thus A is completely correct!",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 Three colourless aqueous solutions P , Q , and R have pH values of 2 , 7 , and 12 respectively. Which row correctly gives the colour of methyl orange in P and the colour of Universal Indicator in Q and R ? (Ba dung dịch không màu P , Q , R có pH lần lượt là 2 , 7 và 12 . Phương án nào nêu đúng màu của methyl orange trong P và màu của Universal Indicator trong Q và R?) A. Methyl orange in P: Red | Universal Indicator in Q: Green | Universal Indicator in R: Purple B. Methyl orange in P: Yellow | Universal Indicator in Q: Green | Universal Indicator in R: Blue C. Methyl orange in P: Red | Universal Indicator in Q: Colourless | Universal Indicator in R: Red D. Methyl orange in P: Orange | Universal Indicator in Q: Purple | Universal Indicator in R: Green ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Dung dịch P (pH 2) có tính axit mạnh nên methyl orange có màu đỏ (red) (loại B, D). Dung dịch Q (pH 7) trung tính làm Universal Indicator có màu xanh lá (green) (loại C). Dung dịch R (pH 12) là kiềm mạnh làm Universal Indicator hóa tím (purple) ⇒ chọn A !",
+      "duration": 175.89,
+      "startTime": 608.51,
+      "endTime": 784.4,
+      "audioUrl": "/audio/lectures/science/c7/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [5 marks] A student tests solid copper(II) oxide, CuO, and aqueous sodium hydroxide, NaOH(aq).(a) Explain why both substances are classified as bases , but only sodium hydroxide is classified as an alkali . [2](b) State the colour change seen when excess dilute hydrochloric acid is added to aqueous sodium hydroxide containing a few drops of litmus indicator. [1](c) Name the type of chemical reaction in (b) and write the word equation for this reaction. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Both are metal oxides or metal hydroxides (which react with acids to form a salt and water) [1m], whereas an alkali is a soluble base — NaOH dissolves in water, while CuO is insoluble in water [1m]. (b) Changes from blue (in alkali) to red (in excess acid) [1m]. (c) Reaction type: neutralisation [1m]. Word equation: hydrochloric acid + sodium hydroxide → sodium chloride + water [1m]. 💡 Intuition Check: Remember the golden Venn diagram: Alkalis (soluble in water) sit inside the bigger circle of Bases (metal oxides and hydroxides)!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 / Paper 4 [5 marks] A student tests solid copper(II) oxide, CuO, and aqueous sodium hydroxide, NaOH(aq).(a) Explain why both substances are classified as bases , but only sodium hydroxide is classified as an alkali . (b) State the colour change seen when excess dilute hydrochloric acid is added to aqueous sodium hydroxide containing a few drops of litmus indicator. (c) Name the type of chemical reaction in (b) and write the word equation for this reaction. (Dịch: (a) Giải thích vì sao cả CuO và NaOH đều là base nhưng chỉ NaOH là alkali. (b) Nêu sự đổi màu khi nhỏ dư HCl loãng vào dung dịch NaOH có sẵn quỳ tím. (c) Nêu tên loại phản ứng ở (b) và viết phương trình chữ.) ✍️ Lời giải chi tiết theo thang điểm: (a) Cả hai đều là oxit hoặc hidroxit của kim loại , nhưng alkali là bazơ tan trong nước (soluble base) — NaOH tan trong nước còn CuO không tan . (b) Đổi từ màu xanh lam (blue) sang đỏ (red) khi axit dư . (c) Tên phản ứng: trung hòa (neutralisation) . Phương trình chữ: hydrochloric acid + sodium hydroxide → sodium chloride + water . 💡 Kiểm tra bản chất: Hãy nhớ biểu đồ tập hợp: Alkalis (bazơ tan) là tập con nằm gọn bên trong vòng tròn lớn Bases (oxit và hidroxit kim loại)!",
+      "duration": 191.73,
+      "startTime": 784.4,
+      "endTime": 976.13,
+      "audioUrl": "/audio/lectures/science/c7/s01_b11.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "💥 2. PHẢN ỨNG CỦA AXIT, BAZƠ & PHÂN LOẠI OXIT (OXIDES)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "💥 2. REACTIONS OF ACIDS, BASES & CLASSIFICATION OF OXIDES. Core C7.1 + Core & Supplement C7.2",
+      "vi": "💥 2. PHẢN ỨNG CỦA AXIT, BAZƠ & PHÂN LOẠI OXIT (OXIDES). Core C7.1 + Core & Supplement C7.2",
+      "duration": 21.2,
+      "startTime": 976.13,
+      "endTime": 997.33,
+      "audioUrl": "/audio/lectures/science/c7/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Every acid reaction swaps hydrogen for a metal to build a salt , and the reactant’s \"surname\" reveals the extra product: a bare reactive metal fizzes H2gas (squeaky pop), a metal oxide/hydroxide (base) quietly produces water (no bubbles!), and a carbonate fizzes out water + CO2gas (turns limewater milky). For oxides, check the Periodic Table side: Metals = Basic oxides , Non-metals = Acidic oxides — except Al2O3and ZnO , the two \"double-agent\" amphoteric oxides that react with BOTH acids and bases!",
+      "vi": "🎯 Hình dung đời thường: Mọi phản ứng của axit đều gắn kim loại vào gốc axit tạo muối (salt) , còn \"họ\" của chất phản ứng quyết định sản phẩm đi kèm: Kim loại hoạt động sủi bọt khí H2 (nổ tiếng pop ), Oxit/Hidroxit kim loại (Base) êm ả tạo nước H2O (không sủi bọt!), còn Muối Carbonate sủi bọt khí CO2+ H2O (làm đục nước vôi trong). Với Oxit, nhìn ngay Bảng Tuần Hoàn: Kim loại = Basic oxide , Phi kim = Acidic oxide — trừ cặp đôi \"điệp viên hai mang\" Al2O3và ZnO (Amphoteric oxides) phản ứng được với CẢ axit lẫn bazơ!",
+      "duration": 81.31,
+      "startTime": 997.33,
+      "endTime": 1078.64,
+      "audioUrl": "/audio/lectures/science/c7/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core 3 Characteristic Acid Reactions (C7.1.1, C7.1.4): (a) Acid + Metal → Salt + H2; (b) Acid + Base → Salt + H2O; (c) Acid + Carbonate → Salt + H2O + CO2. 2 → 🟦 Core Acidic vs. Basic Oxides (C7.2.1): Non-metallic oxides ( SO2, CO2 ) are acidic ; metallic oxides ( CuO, CaO ) are basic . 3 → 🟩 Supplement Amphoteric Oxides (C7.2.2–C7.2.3): Al2O3 and ZnO react with both acids and bases to produce a salt and water .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core 3 Phản ứng Đặc trưng của Axit (C7.1.1, C7.1.4): (a) Acid + Metal → Salt + H2; (b) Acid + Base → Salt + H2O; (c) Acid + Carbonate → Salt + H2O + CO2. 2 → 🟦 Core Acidic vs. Basic Oxides (C7.2.1): Oxit phi kim ( SO2, CO2 ) là acidic oxides ; oxit kim loại ( CuO, CaO ) là basic oxides . 3 → 🟩 Supplement Amphoteric Oxides (C7.2.2–C7.2.3): Al2O3 và ZnO tác dụng với cả axit và bazơ tạo muối và nước .",
+      "duration": 88.38,
+      "startTime": 1078.64,
+      "endTime": 1167.02,
+      "audioUrl": "/audio/lectures/science/c7/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do not assume every solid fizzes in acid! When a metal oxide (like CuO or ZnO) dissolves in dilute acid, there is NO effervescence because only salt + water form — fizzing with dilute acid means either a reactive metal (H2) or a carbonate (CO2) !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng tưởng chất rắn nào tan trong axit cũng sủi bọt khí! Khi một oxit kim loại (như CuO hoặc ZnO) tan trong axit loãng sẽ KHÔNG sủi bọt vì chỉ sinh ra muối + nước — hễ thấy sủi bọt với axit loãng thì phải là kim loại đứng trước H (khí H2) hoặc muối carbonate (khí CO2) !",
+      "duration": 43.9,
+      "startTime": 1167.02,
+      "endTime": 1210.92,
+      "audioUrl": "/audio/lectures/science/c7/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "1. Acid + Metal (Kim loại) → Salt + Hydrogen (H2) Mg(s) + 2HCl(aq) → MgCl₂(aq) +...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "1. Acid + Reactive Metal → Salt + Hydrogen (H2) Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g) • Test for H2: Lighted splint gives a squeaky pop .• Trap: Cu, Ag, Au (below H in reactivity series) do NOT react with dilute acids!",
+      "vi": "1. Acid + Metal (Kim loại) → Salt + Hydrogen (H2) Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g) • Thử khí H2: Que đóm đang cháy nổ tiếng “squeaky pop” .• Bẫy: Cu, Ag, Au đứng sau H nên KHÔNG phản ứng với axit loãng!",
+      "duration": 50.56,
+      "startTime": 1210.92,
+      "endTime": 1261.48,
+      "audioUrl": "/audio/lectures/science/c7/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "2. Acid + Base / Alkali → Salt + Water (H2O) CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂...",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "2. Acid + Base / Alkali → Salt + Water (H2O) CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) • Black CuO solid dissolves to form a blue solution (no fizzing!).• With ammonia: NH₃ + HCl → NH₄Cl.",
+      "vi": "2. Acid + Base / Alkali → Salt + Water (H2O) CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) • Bột CuO đen tan dần tạo dung dịch màu xanh lam (không sủi bọt!).• Với NH3: NH₃ + HCl → NH₄Cl.",
+      "duration": 49.99,
+      "startTime": 1261.48,
+      "endTime": 1311.47,
+      "audioUrl": "/audio/lectures/science/c7/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "3. Acid + Carbonate → Salt + Water + CO2 CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l...",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "3. Acid + Metal Carbonate → Salt + Water + CO2 CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g) • Rapid effervescence.• Test for CO2: Turns limewater milky / cloudy white.",
+      "vi": "3. Acid + Carbonate → Salt + Water + CO2 CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g) • Sủi bọt khí mạnh.• Thử khí CO2: Làm đục nước vôi trong.",
+      "duration": 44.73,
+      "startTime": 1311.47,
+      "endTime": 1356.2,
+      "audioUrl": "/audio/lectures/science/c7/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "1. Basic Oxides (Oxit Bazơ — Kim loại)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "1. Basic Oxides (Metal Oxides). Formed by metals ; react with acids to form salt + water. Soluble ones dissolve in water to form alkalis. Examples: CuO , CaO , MgO , Na2O.",
+      "vi": "1. Basic Oxides (Oxit Bazơ — Kim loại). Oxit của kim loại ; tác dụng với axit tạo muối + nước. Ví dụ: CuO , CaO , MgO , Na2O.",
+      "duration": 32.06,
+      "startTime": 1356.2,
+      "endTime": 1388.26,
+      "audioUrl": "/audio/lectures/science/c7/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "2. Acidic Oxides (Oxit Axit — Phi kim)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "2. Acidic Oxides (Non-Metal Oxides). Formed by non-metals ; react with bases/alkalis to form salt + water (e.g. CO2+ 2NaOH → Na2CO3+ H2O). Examples: SO2 , CO2 , NO2 , SO3 , SiO2.",
+      "vi": "2. Acidic Oxides. Oxit của phi kim ; tác dụng với kiềm tạo muối + nước; tan trong nước tạo axit. Ví dụ: SO2 , CO2 , NO2 , SO3 , SiO2.",
+      "duration": 38.82,
+      "startTime": 1388.26,
+      "endTime": 1427.08,
+      "audioUrl": "/audio/lectures/science/c7/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "3. Amphoteric Oxides (Oxit Lưỡng tính — Supplement C7.2.2–3)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "3. Amphoteric Oxides (Supplement C7.2.2–3). React with BOTH acids AND bases (alkalis) to produce a salt and water ! Memorize Both: Al2O3 and ZnO !• With acid: ZnO + 2HCl → ZnCl₂ + H₂O • With alkali: ZnO + 2NaOH → Na₂ZnO₂ + H₂O ( or Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O ).",
+      "vi": "3. Amphoteric Oxides (Oxit Lưỡng tính — Supplement C7.2.2–3). Phản ứng với CẢ axit LẪN bazơ (kiềm) đều tạo muối và nước ! Thuộc lòng 2 chất: Al2O3 và ZnO !• Với axit: ZnO + 2HCl → ZnCl₂ + H₂O • Với kiềm: ZnO + 2NaOH → Na₂ZnO₂ + H₂O ( hoặc Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O ).",
+      "duration": 71.36,
+      "startTime": 1427.08,
+      "endTime": 1498.44,
+      "audioUrl": "/audio/lectures/science/c7/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "4. Neutral Oxides (Oxit Trung tính)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "4. Neutral Oxides. Some non-metal monoxides react with neither acids nor bases (pH = 7). Examples: Carbon monoxide ( CO ), Nitric oxide ( NO ), Dinitrogen oxide ( N2O ), Water ( H2O ).",
+      "vi": "4. Neutral Oxides (Oxit Trung tính). Không phản ứng với cả axit lẫn bazơ (pH = 7). Ví dụ: Carbon monoxide ( CO ), Nitric oxide ( NO ), N2O , Nước ( H2O ).",
+      "duration": 34.67,
+      "startTime": 1498.44,
+      "endTime": 1533.11,
+      "audioUrl": "/audio/lectures/science/c7/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "🎯 Bài Toán Tách Chất Kinh Điển Paper 4 — Tách Basic Oxide khỏi Amphoteric Oxide",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "🎯 Paper 4 Worked Example — Separating Insoluble Basic vs. Amphoteric Oxides. Question: A solid mixture contains powdered copper(II) oxide (CuO) and zinc oxide (ZnO) . Both are insoluble in water and both dissolve in dilute acid. Describe how to obtain a pure dry sample of CuO from this mixture. [4 marks]. 1. Add excess warm aqueous sodium hydroxide, NaOH(aq) , and stir thoroughly.2. ZnO is amphoteric , so it reacts with NaOH(aq) and dissolves to form soluble sodium zincate ( ZnO(s) + 2NaOH(aq) → Na₂ZnO₂(aq) + H₂O(l) ), whereas CuO is a basic oxide so it does NOT react and remains an insoluble black solid.3. Filter the mixture; CuO stays on the filter paper as the residue .4. Wash the CuO residue with plenty of distilled water and dry between filter papers (or in a warm oven).",
+      "vi": "🎯 Bài Toán Tách Chất Kinh Điển Paper 4 — Tách Basic Oxide khỏi Amphoteric Oxide. Đề bài: Một hỗn hợp bột rắn gồm copper(II) oxide (CuO) và zinc oxide (ZnO) . Cả hai đều không tan trong nước nhưng đều tan trong axit. Hãy nêu cách thu được CuO tinh khiết, khô từ hỗn hợp. [4 marks]. 1. Cho dung dịch kiềm sodium hydroxide dư, NaOH(aq) ấm vào hỗn hợp và khuấy kỹ.2. ZnO là amphoteric oxide nên phản ứng với kiềm và tan hết tạo dung dịch sodium zincate ( ZnO(s) + 2NaOH(aq) → Na₂ZnO₂(aq) + H₂O(l) ), còn CuO là basic oxide không tác dụng với NaOH nên vẫn ở dạng rắn màu đen không tan.3. Lọc (Filter) hỗn hợp; giữ lại phần bã rắn ( residue ) chính là CuO trên giấy lọc.4. Rửa sạch (Wash) bã CuO bằng nước cất (distilled water) và làm khô giữa hai tờ giấy lọc .",
+      "duration": 136.27,
+      "startTime": 1533.11,
+      "endTime": 1669.38,
+      "audioUrl": "/audio/lectures/science/c7/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Solid oxide X is insoluble in water. It reacts with dilute nitric acid to form a salt and water, and it also reacts with aqueous sodium hydroxide to form a salt and water. What could X be? A. Calcium oxide, CaO B. Copper(II) oxide, CuO C. Sulfur dioxide, SO₂ D. Zinc oxide, ZnO ✅ Correct Answer: D 🧠 Step-by-Step Reasoning: An oxide that reacts with both an acid and a base/alkali to produce a salt and water is an amphoteric oxide . The two amphoteric oxides required in 0654 (C7.2.3) are aluminium oxide (Al2O3) and zinc oxide (ZnO) , making D correct. CaO and CuO are basic oxides (react with acids only), whereas SO2 is an acidic gas (reacts with bases/alkalis).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Solid oxide X is insoluble in water. It reacts with dilute nitric acid to form a salt and water, and it also reacts with aqueous sodium hydroxide to form a salt and water. What could X be? (Oxit rắn X không tan trong nước. Nó phản ứng với axit nitric loãng tạo muối và nước, đồng thời cũng phản ứng với dung dịch sodium hydroxide tạo muối và nước. X có thể là chất nào?) A. Calcium oxide, CaO B. Copper(II) oxide, CuO C. Sulfur dioxide, SO₂ D. Zinc oxide, ZnO ✅ Đáp án đúng: D 🧠 Giải thích & Cách loại bẫy: Oxit vừa phản ứng với axit vừa phản ứng với bazơ/kiềm tạo muối và nước chính là amphoteric oxide (oxit lưỡng tính) . Hai oxit lưỡng tính bắt buộc thuộc lòng trong C7.2.3 là Al2O3 và ZnO ⇒ chọn D . CaO và CuO là basic oxides (chỉ phản ứng với axit), còn SO2 là acidic oxide.",
+      "duration": 128.57,
+      "startTime": 1669.38,
+      "endTime": 1797.95,
+      "audioUrl": "/audio/lectures/science/c7/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟩 CORE + SUPPLEMENT • Paper 4 Structured [5 marks] Look at this list of oxides: CO2 , CaO , Al2O3 , and SO2 .(a) Identify from the list one basic oxide and explain how its classification relates to the Periodic Table position of calcium. [2](b) Identify the amphoteric oxide from the list and define the term amphoteric oxide . [2](c) Dilute hydrochloric acid is added to solid calcium carbonate, CaCO3. State what is observed and describe the chemical test for the gas produced. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Basic oxide: CaO [1m]; calcium is a metal (on the left side of the Periodic Table), and metals generally form basic oxides [1m]. (b) Amphoteric oxide: Al2O3 [1m]; an oxide that reacts with both acids and bases to produce a salt and water [1m]. (c) Rapid fizzing / effervescence (and solid dissolves); bubble the gas through limewater , which turns milky / cloudy white (confirming CO2) [1m]. 💡 Intuition Check: Link oxide character straight to metallic/non-metallic character: Metals → Basic ( CaO, CuO ), Non-metals → Acidic ( CO₂, SO₂ ), and the borderline duo ** Al₂O₃ & ZnO → Amphoteric**!",
+      "vi": "BÀI MẪU 2 🟩 CORE + SUPPLEMENT • Tự luận Paper 4 [5 marks] Look at this list of oxides: CO2 , CaO , Al2O3 , and SO2 .(a) Identify from the list one basic oxide and explain how its classification relates to the Periodic Table position of calcium. (b) Identify the amphoteric oxide from the list and define the term amphoteric oxide . (c) Dilute hydrochloric acid is added to solid calcium carbonate, CaCO3. State what is observed and describe the chemical test for the gas produced. (Dịch: Cho các oxit CO2, CaO, Al2O3, SO2. (a) Chọn 1 basic oxide và giải thích theo vị trí của calcium. (b) Chọn amphoteric oxide và nêu định nghĩa. (c) Nhỏ HCl loãng vào CaCO3: nêu hiện tượng và cách nhận biết khí thoát ra.) ✍️ Lời giải chi tiết theo thang điểm: (a) Basic oxide: CaO ; vì calcium là kim loại (metal) nằm bên trái Bảng Tuần Hoàn nên tạo oxit bazơ . (b) Amphoteric oxide: Al2O3 ; là oxit phản ứng với cả axit và bazơ để tạo ra muối và nước . (c) Hiện tượng: Sủi bọt khí mạnh (effervescence) và chất rắn tan dần; dẫn khí qua nước vôi trong (limewater) thấy hóa đục trắng (turns milky) . 💡 Kiểm tra bản chất: Gắn chặt bản chất oxit với tính kim loại/phi kim: Kim loại → Basic ( CaO, CuO ), Phi kim → Acidic ( CO₂, SO₂ ), còn cặp đôi ranh giới ** Al₂O₃ & ZnO → Amphoteric**!",
+      "duration": 208.98,
+      "startTime": 1797.95,
+      "endTime": 2006.93,
+      "audioUrl": "/audio/lectures/science/c7/s02_b13.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧂 3. PHƯƠNG PHÁP ĐIỀU CHẾ MUỐI & CHẤT NGẬM NƯỚC",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧂 3. PREPARATION OF SALTS & HYDRATED SUBSTANCES. Core + Supplement C7.3",
+      "vi": "🧂 3. PHƯƠNG PHÁP ĐIỀU CHẾ MUỐI & CHẤT NGẬM NƯỚC. Core + Supplement C7.3",
+      "duration": 14.46,
+      "startTime": 2006.93,
+      "endTime": 2021.39,
+      "audioUrl": "/audio/lectures/science/c7/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Salt preparation is just choosing the right kitchen cleanup so no unreacted ingredients contaminate your salt :• Excess Solid Method: Like brewing loose-leaf tea — stir in excess insoluble solid (metal, base, or carbonate) until all acid is used up, then filter off the leftover solid!• Titration: Mixing two clear liquids (acid + soluble alkali) — you cannot filter out excess dissolved alkali, so measure the exact neutralisation volume with a burette + methyl orange first, then repeat without indicator!• Precipitation: Mix two aqueous salt solutions so the insoluble salt crashes out as a solid precipitate, then filter, wash with distilled water, and dry !",
+      "vi": "🎯 Hình dung đời thường: Điều chế muối tinh khiết thực chất là nghệ thuật tách bỏ nguyên liệu thừa để muối không bị bẩn :• PP 1 (Chất rắn không tan dư): Giống hãm trà lá — cho dư chất rắn không tan (kim loại, bazơ hoặc carbonate) để dùng hết sạch axit, sau đó chỉ cần lọc bỏ phần bã rắn thừa!• PP 2 (Chuẩn độ Titration): Axit + Kiềm đều là dung dịch trong suốt — không thể lọc bỏ kiềm dư được, nên phải dùng burette + methyl orange tìm đúng thể tích trung hòa rồi làm lại lần 2 không chỉ thị!• PP 3 (Kết tủa Precipitation): Đổ 2 dung dịch muối tan vào nhau để muối không tan kết tủa lắng xuống ngay, rồi lọc → rửa nước cất → ép khô !",
+      "duration": 91.41,
+      "startTime": 2021.39,
+      "endTime": 2112.8,
+      "audioUrl": "/audio/lectures/science/c7/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → 🟦 Core Soluble Salts by Excess Solid (C7.3.1b–d): Warm acid + excess metal / insoluble base / insoluble carbonate → filter excess solid → heat filtrate to crystallisation point , cool, filter & dry. 2 → 🟦 Core Titration (C7.3.1a) & Hydrated/Anhydrous (C7.3.2): Acid + soluble alkali by titration. Hydrated = chemically combined with water; Anhydrous = containing no water. 3 → 🟩 Supplement Precipitation (C7.3.3): Mix two aqueous solutions (given in the question — memorising solubility rules is not required!) → filter residue → wash with distilled water → dry between filter papers.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → 🟦 Core Muối Tan từ Chất Rắn Dư (C7.3.1b–d): Axit ấm + lượng dư (excess) kim loại / bazơ không tan / carbonate không tan → lọc (filter) bỏ chất rắn dư → cô dịch lọc đến crystallisation point , để nguội, lọc & ép khô. 2 → 🟦 Core Chuẩn độ (C7.3.1a) & Hydrated/Anhydrous (C7.3.2): Axit + kiềm tan (alkali) bằng chuẩn độ. Hydrated = liên kết hóa học với nước; Anhydrous = không chứa nước. 3 → 🟩 Supplement Kết tủa (C7.3.3): Trộn 2 dung dịch muối tan (đề 0654 cho sẵn, không cần thuộc bảng độ tan!) → lọc kết tủa → rửa bằng nước cất → làm khô giữa giấy lọc.",
+      "duration": 98.11,
+      "startTime": 2112.8,
+      "endTime": 2210.91,
+      "audioUrl": "/audio/lectures/science/c7/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never try to prepare copper(II) sulfate from copper metal + dilute sulfuric acid (copper is unreactive with dilute acids — use insoluble copper(II) oxide or copper(II) carbonate instead!), and never boil a filtrate dry if you want hydrated crystals!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không lấy kim loại đồng Cu + H2SO4loãng để điều chế CuSO4(Cu đứng sau H không tác dụng với axit loãng — bắt buộc dùng CuO hoặc CuCO3 !), và không đun cạn khô dung dịch nếu muốn thu tinh thể ngậm nước!",
+      "duration": 38.59,
+      "startTime": 2210.91,
+      "endTime": 2249.5,
+      "audioUrl": "/audio/lectures/science/c7/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🧠 Bước 1: Cách Chọn Đúng Phương Pháp Điều Chế Muối 0654 (C7.3.1 & C7.3.3)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🧠 Step 1: How to Choose the Right Salt Method in 0654 (C7.3.1 & C7.3.3). 📌 Official 0654 Syllabus Note: Memorising the general solubility table is NOT required in Co-ordinated Sciences (0654) — exam questions tell you (or show via state symbols (aq) vs (s) ) whether a salt or reactant is soluble or insoluble! Just match the reactants to the right method: Target Salt Type: Soluble salt (from solid); Starting Reactants: Dilute acid + excess metal / excess insoluble base / excess insoluble carbonate; 0654 Lab Method: Method 1: Excess Solid + Filter + Crystallise (Core C7.3.1b–d). Target Salt Type: Soluble salt (from alkali); Starting Reactants: Dilute acid + soluble alkali (e.g. NaOH(aq), KOH(aq), NH 3 (aq)); 0654 Lab Method: Method 2: Acid–Alkali Titration + Crystallise (Core C7.3.1a). Target Salt Type: Insoluble salt (precipitate); Starting Reactants: Two soluble aqueous solutions mixed together; 0654 Lab Method: Method 3: Precipitation + Filter + Wash + Dry (Supplement C7.3.3).",
+      "vi": "🧠 Bước 1: Cách Chọn Đúng Phương Pháp Điều Chế Muối 0654 (C7.3.1 & C7.3.3). 📌 Điểm lợi thế của Syllabus 0654: Học sinh 0654 KHÔNG bắt buộc học thuộc lòng bảng độ tan — đề thi sẽ cho biết sẵn chất nào tan (aq) hay không tan (s) ! Chỉ cần ghép đúng 1 trong 3 phương pháp sau: Loại Muối Cần Điều Chế: Muối tan (từ chất rắn); Hóa Chất Đầu Vào: Axit loãng + kim loại dư / bazơ không tan dư / carbonate không tan dư; Phương Pháp Chuẩn 0654: PP 1: Chất rắn dư + Lọc + Kết tinh (Core C7.3.1b–d). Loại Muối Cần Điều Chế: Muối tan (từ kiềm); Hóa Chất Đầu Vào: Axit loãng + dung dịch kiềm tan (alkali) (VD: NaOH(aq), KOH(aq)); Phương Pháp Chuẩn 0654: PP 2: Chuẩn độ Titration + Kết tinh (Core C7.3.1a). Loại Muối Cần Điều Chế: Muối không tan (kết tủa); Hóa Chất Đầu Vào: Trộn hai dung dịch muối tan (aq) với nhau; Phương Pháp Chuẩn 0654: PP 3: Kết tủa Precipitation + Lọc + Rửa + Khô (Supplement C7.3.3).",
+      "duration": 172.35,
+      "startTime": 2249.5,
+      "endTime": 2421.85,
+      "audioUrl": "/audio/lectures/science/c7/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "PP 1: Axit + Chất rắn Không tan Dư (Excess Solid)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Method 1: Acid + Excess Insoluble Solid. Target: Soluble salt from insoluble solids (e.g. CuSO4 from CuO + H2SO4, or ZnCl2 from Zn + HCl). Warm dilute acid; add solid (metal / base / carbonate) in excess until solid stops disappearing (all acid used up). Filter off unreacted excess solid; keep the pure filtrate. Heat filtrate to evaporate water until crystallisation point (do NOT boil dry!). Cool slowly to crystallise, filter crystals, wash with minimal cold distilled water, and dry between filter papers.",
+      "vi": "PP 1: Axit + Chất rắn Không tan Dư (Excess Solid). Áp dụng: Muối tan KHÔNG thuộc nhóm Na/K/NH4+ (VD: CuSO4 từ CuO + H2SO4; ZnCl2 ). Đun ấm axit loãng; cho chất rắn dư (in excess) vào khuấy đến khi không tan thêm (đảm bảo hết sạch axit). Lọc (Filter) bỏ bã rắn dư, thu dịch lọc ( filtrate ) tinh khiết. Đun bay hơi dịch lọc đến điểm kết tinh (crystallisation point) — không đun cạn khô! Để nguội từ từ cho kết tinh, lọc lấy tinh thể, rửa ít nước cất lạnh và ép khô giữa hai tờ giấy lọc.",
+      "duration": 86.54,
+      "startTime": 2421.85,
+      "endTime": 2508.39,
+      "audioUrl": "/audio/lectures/science/c7/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "PP 2: Chuẩn độ (Titration — Axit + Kiềm)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Method 2: Titration (Acid + Alkali). Target: Soluble Na+, K+, NH4+ salts (e.g. NaCl from NaOH + HCl — excess solid cannot be filtered because NaOH is soluble!). Pipette 25.0 cm3alkali into flask + add methyl orange (or litmus) indicator. Add acid from a burette until sharp end-point colour change; record volume. Repeat with exact same volumes WITHOUT indicator (to get pure uncontaminated salt!). Heat to crystallisation point, cool, filter, and dry between filter papers.",
+      "vi": "PP 2: Chuẩn độ (Titration — Axit + Kiềm). Áp dụng: Muối tan của Na+, K+, NH4+ (VD: NaCl — không dùng chất rắn dư được vì kiềm tan hết không lọc bỏ được!). Dùng pipette lấy 25.0 cm3kiềm vào bình nón + vài giọt chỉ thị methyl orange (hoặc litmus). Nhỏ axit từ burette đến khi vừa đổi màu chuẩn; ghi lại thể tích axit. Làm lại lần 2 đúng thể tích đó KHÔNG cho chỉ thị để thu dung dịch muối không lẫn phẩm màu! Cô đến điểm kết tinh, làm nguội, lọc và ép khô bằng giấy lọc.",
+      "duration": 82.42,
+      "startTime": 2508.39,
+      "endTime": 2590.81,
+      "audioUrl": "/audio/lectures/science/c7/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "PP 3: Kết tủa (Precipitation — Supplement)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Method 3: Precipitation (Supplement). Target: Insoluble salts (e.g. AgCl, BaSO4, PbI2). Pick a soluble nitrate + soluble Na/K salt ! Mix two aqueous solutions (e.g. Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq) ; ionic: Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s) ). Filter mixture to trap insoluble salt residue on filter paper. Wash residue thoroughly with distilled water to remove soluble impurities. Dry pure solid between filter papers or in a warm oven.",
+      "vi": "PP 3: Kết tủa (Precipitation — Supplement). Áp dụng: Muối không tan. Mẹo chọn: Muối Nitrate + Muối Sodium/Potassium ! Trộn 2 dung dịch muối tan (VD: Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq) ; PT ion: Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s) ). Lọc (Filter) giữ phần kết tủa ( residue ) trên giấy lọc. Rửa kết tủa bằng nước cất để sạch ion tạp chất. Làm khô kết tủa giữa các tờ giấy lọc hoặc tủ sấy ấm.",
+      "duration": 94.13,
+      "startTime": 2590.81,
+      "endTime": 2684.94,
+      "audioUrl": "/audio/lectures/science/c7/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🔬 Mô Phỏng Chọn Phương Pháp Điều Chế Muối Paper 6 — Bấm hoặc Lướt Chuột!",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "🔬 Interactive Paper 6 Salt Synthesis Simulator — Click or Hover a Target Salt! Test the 0654 decision tree: Is the salt soluble? → If NO , use Precipitation . If YES , is it a Na+/ K+/ NH4+ salt? → If YES , use Titration ; if NO , use Acid + Excess Insoluble Solid. 💎 CuSO4•5H2O (Blue)🧪 NaNO3(Titration)🧱 BaSO4(White ppt)✨ MgSO4•7H2O 💎 Target: Hydrated Copper(II) Sulfate (CuSO4•5H2O) — Soluble salt from insoluble solid ⇒ Method 1 (Acid + Excess Insoluble Base/Carbonate) .• Why NOT Cu metal + dilute H2SO4? Copper is unreactive (below H in reactivity series), so Cu metal does NOT react with dilute acid! Use excess black CuO(s) or green CuCO3(s) instead.• Equation: CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) → Filter excess CuO, heat filtrate to crystallisation point, cool, filter crystals, dry between filter papers.",
+      "vi": "🔬 Mô Phỏng Chọn Phương Pháp Điều Chế Muối Paper 6 — Bấm hoặc Lướt Chuột! Sơ đồ tư duy 0654: Muối có tan không? → Nếu KHÔNG TAN , dùng Precipitation (Kết tủa) . Nếu TAN , có phải muối Na+/ K+/ NH4+ không? → Nếu CÓ , dùng Titration (Chuẩn độ) ; nếu KHÔNG , dùng Acid + Excess Insoluble Solid. 💎 CuSO4•5H2O (Xanh)🧪 NaNO3(Titration)🧱 BaSO4(Tủa trắng)✨ MgSO4•7H2O 💎 Mục tiêu: Tinh thể Đồng(II) Sunfat (CuSO4•5H2O) — Muối tan đi từ chất rắn không tan ⇒ PP 1 .• Tại sao KHÔNG dùng kim loại Cu + H2SO4loãng? Đồng (Cu) đứng sau Hydro trong dãy hoạt động nên KHÔNG phản ứng với axit loãng! Bắt buộc dùng CuO(s) dư hoặc CuCO3(s) dư .• Phương trình: CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l) → Lọc bỏ CuO dư, đun dịch lọc đến crystallisation point , để nguội kết tinh, lọc và ép khô bằng giấy lọc.",
+      "duration": 168.03,
+      "startTime": 2684.94,
+      "endTime": 2852.97,
+      "audioUrl": "/audio/lectures/science/c7/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "💎 Chất Ngậm Nước (Hydrated) vs. Chất Khan (Anhydrous) — Core C7.3.2",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "💎 Hydrated vs. Anhydrous Substances (Core C7.3.2). Hydrated substance: A substance that is chemically combined with water (for example, blue hydrated copper(II) sulfate crystals, CuSO₄•5H₂O ). Anhydrous substance: A substance containing no water (for example, white anhydrous copper(II) sulfate powder, CuSO₄ ). Lab Consequence: When crystallising a soluble salt, heat only to the crystallisation point and cool slowly to obtain hydrated crystals — heating strongly to dryness drives off all combined water to leave an anhydrous powder!",
+      "vi": "💎 Chất Ngậm Nước (Hydrated) vs. Chất Khan (Anhydrous) — Core C7.3.2. Hydrated substance (Chất ngậm nước): Là chất có liên kết hóa học với nước — ví dụ tinh thể đồng(II) sunfat ngậm nước màu xanh lam CuSO₄•5H₂O. Anhydrous substance (Chất khan): Là chất không chứa nước — ví dụ bột trắng CuSO₄ khan. Ứng dụng khi kết tinh muối: Chỉ đun dung dịch muối đến điểm kết tinh (crystallisation point) rồi để nguội từ từ để thu tinh thể ngậm nước; nếu đun cạn khô sẽ làm bay hơi mất toàn bộ nước tạo thành bột khan!",
+      "duration": 83.34,
+      "startTime": 2852.97,
+      "endTime": 2936.31,
+      "audioUrl": "/audio/lectures/science/c7/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ A student wants to prepare crystals of soluble copper(II) sulfate by reacting a substance with warm dilute sulfuric acid. Which substance will NOT react with dilute sulfuric acid to form copper(II) sulfate? A. Copper metal, Cu(s) B. Copper(II) carbonate, CuCO₃(s) C. Copper(II) hydroxide, Cu(OH)₂(s) D. Copper(II) oxide, CuO(s) ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Copper metal (Cu) lies below hydrogen in the reactivity series, so it does not react with dilute sulfuric acid ( A is the correct choice). Insoluble bases ( CuO and Cu(OH)2 ) and the insoluble carbonate ( CuCO3 ) all react readily with warm dilute sulfuric acid to form blue aqueous copper(II) sulfate!",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 A student wants to prepare crystals of soluble copper(II) sulfate by reacting a substance with warm dilute sulfuric acid. Which substance will NOT react with dilute sulfuric acid to form copper(II) sulfate? (Một học sinh muốn điều chế tinh thể muối tan copper(II) sulfate bằng cách cho hóa chất tác dụng với H2SO4loãng ấm. Chất nào sau đây sẽ KHÔNG phản ứng với H2SO4loãng?) A. Copper metal, Cu(s) B. Copper(II) carbonate, CuCO₃(s) C. Copper(II) hydroxide, Cu(OH)₂(s) D. Copper(II) oxide, CuO(s) ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Kim loại đồng (Cu) đứng dưới Hydrogen trong dãy hoạt động hóa học nên không phản ứng với axit H2SO4loãng (⇒ chọn A ). Ngược lại, các bazơ không tan ( CuO, Cu(OH)2 ) và muối carbonate không tan ( CuCO3 ) đều phản ứng dễ dàng với H2SO4loãng ấm tạo dung dịch CuSO4màu xanh lam!",
+      "duration": 140.92,
+      "startTime": 2936.31,
+      "endTime": 3077.23,
+      "audioUrl": "/audio/lectures/science/c7/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Insoluble silver chloride, AgCl(s), is formed as a white precipitate when aqueous silver nitrate, AgNO3(aq), is mixed with aqueous sodium chloride, NaCl(aq).(a) Describe the practical steps required to separate and purify a dry sample of solid silver chloride from the reaction mixture. [3](b) Soluble magnesium sulfate crystals can be made by adding excess insoluble magnesium oxide powder to warm dilute sulfuric acid. Explain why excess magnesium oxide is added. [1](c) Define the term hydrated substance . [1] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Filter the mixture to collect the silver chloride precipitate as the residue on the filter paper [1m].2. Wash the residue thoroughly with distilled water (to remove soluble sodium nitrate / unreacted ions) [1m].3. Dry the solid between filter papers (or in a warm oven) [1m]. (b) To ensure that all the sulfuric acid has reacted / is neutralised so no acid contaminates the filtrate [1m]. (c) A substance that is chemically combined with water [1m]. 💡 Intuition Check: Notice how 0654 precipitation questions give you the two starting aqueous solutions — your job is to nail the 3-step purification sequence: Filter → Wash with distilled water → Dry !",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Insoluble silver chloride, AgCl(s), is formed as a white precipitate when aqueous silver nitrate, AgNO3(aq), is mixed with aqueous sodium chloride, NaCl(aq).(a) Describe the practical steps required to separate and purify a dry sample of solid silver chloride from the reaction mixture. (b) Soluble magnesium sulfate crystals can be made by adding excess insoluble magnesium oxide powder to warm dilute sulfuric acid. Explain why excess magnesium oxide is added. (c) Define the term hydrated substance . (Dịch: Kết tủa trắng AgCl(s) tạo thành khi trộn dung dịch AgNO3(aq) với NaCl(aq). (a) Nêu các bước tách và làm sạch để thu AgCl rắn khô. (b) Giải thích vì sao phải cho bột MgO dư khi điều chế MgSO4từ H2SO4loãng. (c) Định nghĩa hydrated substance.) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Lọc (Filter) hỗn hợp để giữ kết tủa silver chloride lại trên giấy lọc (residue) .2. Rửa kỹ (Wash) kết tủa bằng nước cất (distilled water) để loại bỏ dung dịch muối tan bám dính .3. Làm khô (Dry) chất rắn giữa hai tờ giấy lọc hoặc trong tủ sấy ấm . (b) Nhằm đảm bảo toàn bộ axit H2SO4đã phản ứng hết , tránh làm bẩn dịch lọc . (c) Là chất có liên kết hóa học với nước . 💡 Kiểm tra bản chất: Đề 0654 thường cho sẵn tên 2 dung dịch tạo kết tủa — nhiệm vụ của bạn là ghi trọn 3 từ khóa vàng: Filter → Wash with distilled water → Dry between filter papers !",
+      "duration": 219.09,
+      "startTime": 3077.23,
+      "endTime": 3296.32,
+      "audioUrl": "/audio/lectures/science/c7/s03_b11.mp3"
     }
   ]
 }

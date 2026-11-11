@@ -1,183 +1,499 @@
 {
   "lectureId": "ee4f94c2-382b-4dbb-aaf8-981e7b0d7223",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "C2: Atoms elements and compounds",
-  "totalDuration": 498.05,
+  "totalDuration": 3847.91,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề C2",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_periodic_table": {
+    "s01_hdr": {
       "start": 1,
-      "end": 1,
-      "title": "Bảng tuần hoàn 20 Nguyên tố",
-      "selector": "#sec-periodic-table"
+      "end": 5
     },
-    "sec_atomic_structure": {
-      "start": 2,
-      "end": 5,
-      "title": "1. Cấu tạo Nguyên tử & Đồng vị",
-      "selector": "#sec-atomic-structure"
+    "s02_int": {
+      "start": 7,
+      "end": 9
     },
-    "sec_elements_compounds": {
+    "s02_wex": {
+      "start": 13,
+      "end": 14
+    },
+    "s02_hdr": {
       "start": 6,
-      "end": 9,
-      "title": "2. Đơn chất, Hợp chất & Liên kết",
-      "selector": "#sec-elements-compounds"
+      "end": 14
     },
-    "sec_lattices_macromolecules": {
-      "start": 10,
-      "end": 12,
-      "title": "3. Mạng Tinh thể & Đại phân tử",
-      "selector": "#sec-lattices-macromolecules"
+    "s03_int": {
+      "start": 16,
+      "end": 18
+    },
+    "s03_p1_sub01": {
+      "start": 19,
+      "end": 21
+    },
+    "s03_p1_sub02": {
+      "start": 22,
+      "end": 27
+    },
+    "s03_p2_sub01": {
+      "start": 19,
+      "end": 21
+    },
+    "s03_p2_sub02": {
+      "start": 22,
+      "end": 27
+    },
+    "s03_wex": {
+      "start": 28,
+      "end": 29
+    },
+    "s03_hdr": {
+      "start": 15,
+      "end": 29
+    },
+    "s04_int": {
+      "start": 31,
+      "end": 33
+    },
+    "s04_wex": {
+      "start": 37,
+      "end": 38
+    },
+    "s04_hdr": {
+      "start": 30,
+      "end": 38
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề C2: Nguyên tử, Nguyên tố & Hợp chất",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic C2: Atoms, elements and compounds. Matter is constructed from atomic building blocks. In this comprehensive lesson, we decode subatomic particles and isotopes, explore the periodic table, distinguish elements, compounds, and mixtures, examine ionic and covalent bonding, and analyze giant covalent lattices and metallic structures.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C2: Nguyên tử, Nguyên tố và Hợp chất. Vật chất được cấu tạo từ các nguyên tử. Trong bài học này, chúng ta sẽ khảo sát hạt hạ nguyên tử và đồng vị, bảng tuần hoàn, phân biệt đơn chất, hợp chất và hỗn hợp, làm chủ liên kết ion và cộng hóa trị, cùng cấu trúc mạng tinh thể khổng lồ và kim loại.",
-      "duration": 43.31,
+      "title": "C2: Nguyên tử, nguyên tố và hợp chất (Atoms, Elements & Compounds)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) C2: Atoms, Elements and Compounds. Complete Master Lecture (0654) • C2.1 Elements, Compounds & Mixtures • C2.2 Atomic Structure • C2.3 Isotopes • C2.4 Ionic • C2.5 Simple Covalent • C2.6 Giant Covalent • C2.7 Metallic Bonding.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ C2: Nguyên tử, nguyên tố và hợp chất. Bài giảng Song ngữ Toàn diện (0654) • C2.1 Nguyên tố, Hợp chất & Hỗn hợp • C2.2 Cấu tạo Nguyên tử • C2.3 Đồng vị • C2.4 Ion • C2.5 Cộng hóa trị • C2.6 Mạng khổng lồ • C2.7 Liên kết Kim loại.",
+      "duration": 66.63,
       "startTime": 0.0,
-      "endTime": 43.31,
+      "endTime": 66.63,
       "audioUrl": "/audio/lectures/science/c2/intro.mp3"
     },
     {
-      "id": "sec_periodic_table",
-      "title": "🌐 IGCSE Periodic Table Hub (Bảng tuần hoàn 20 Nguyên tố)",
-      "selector": "#sec-periodic-table",
-      "en": "The Periodic Table arranges elements by increasing proton number. For Cambridge IGCSE, mastering the first 20 elements from Hydrogen to Calcium is essential, including their electron configurations and group properties.",
-      "vi": "Bảng tuần hoàn sắp xếp các nguyên tố theo số proton tăng dần. Với chương trình IGCSE, nắm vững 20 nguyên tố đầu tiên từ Hydrogen đến Calcium là bắt buộc, bao gồm cấu hình electron và tính chất của các nhóm.",
-      "duration": 28.24,
-      "startTime": 43.31,
-      "endTime": 71.55,
-      "audioUrl": "/audio/lectures/science/c2/sec_periodic_table.mp3"
+      "id": "s01_hdr",
+      "title": "🌐 Bảng Tuần hoàn Tương tác IGCSE (20 Nguyên tố đầu: Z = 1 đến 20)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "Syllabus C2.2.5 & C2.2.6 🌐 Interactive IGCSE Periodic Table (First 20 Elements: Z = 1 to 20). For Cambridge IGCSE Co-ordinated Sciences (0654), you must deduce the electronic configuration of elements from Hydrogen ( Z = 1) to Calcium ( Z = 20) .",
+      "vi": "Syllabus C2.2.5 & C2.2.6 🌐 Bảng Tuần hoàn Tương tác IGCSE (20 Nguyên tố đầu: Z = 1 đến 20). Trong chương trình Cambridge IGCSE Co-ordinated Sciences (0654), học sinh bắt buộc phải suy luận được electronic configuration (cấu hình electron) của nguyên tử từ Hydrogen ( Z = 1) đến Calcium ( Z = 20) .",
+      "duration": 53.05,
+      "startTime": 66.63,
+      "endTime": 119.68,
+      "audioUrl": "/audio/lectures/science/c2/s01_hdr.mp3"
     },
     {
-      "id": "sec_atomic_structure",
-      "title": "1. Cấu tạo Nguyên tử & Đồng vị (Atomic Structure & Isotopes Overview)",
-      "selector": "#sec-atomic-structure",
-      "en": "Section 1 details atomic architecture: An atom consists of a tiny dense nucleus containing protons and neutrons, surrounded by electrons in electron shells.",
-      "vi": "Mục một chi tiết hóa cấu tạo nguyên tử: Nguyên tử gồm hạt nhân trung tâm đặc chứa proton và neutron, được bao quanh bởi các electron chuyển động trên các lớp vỏ.",
-      "duration": 65.61,
-      "startTime": 71.55,
-      "endTime": 137.16,
-      "audioUrl": "/audio/lectures/science/c2/sec_atomic_structure.mp3"
+      "id": "s01_b01",
+      "title": "Chlorine (Cl)",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "Chlorine (Cl). Group VII — Halogen (Isotopes ³⁵Cl & ³⁷Cl). Proton No. (Z): 17 Relative Mass (Aᵣ): 35.5 Configuration: 2,8,7 I II III IV V VI VII VIII 1 H 1 2 He 2 3 Li 2,1 4 Be 2,2 5 B 2,3 6 C 2,4 7 N 2,5 8 O 2,6 9 F 2,7 10 Ne 2,8 11 Na 2,8,1 12 Mg 2,8,2 13 Al 2,8,3 14 Si 2,8,4 15 P 2,8,5 16 S 2,8,6 17 Cl 2,8,7 18 Ar 2,8,8 19 K 2,8,8,1 20 Ca 2,8,8,2",
+      "vi": "Chlorine (Cl). Nhóm VII — Halogen (Đồng vị ³⁵Cl 75% & ³⁷Cl 25%, tạo Cl⁻: 2,8,8). Số Proton (Z): 17 Nguyên tử khối (Aᵣ): 35.5 Cấu hình Electron: 2,8,7 I II III IV V VI VII VIII 1 H 1 2 He 2 3 Li 2,1 4 Be 2,2 5 B 2,3 6 C 2,4 7 N 2,5 8 O 2,6 9 F 2,7 10 Ne 2,8 11 Na 2,8,1 12 Mg 2,8,2 13 Al 2,8,3 14 Si 2,8,4 15 P 2,8,5 16 S 2,8,6 17 Cl 2,8,7 18 Ar 2,8,8 19 K 2,8,8,1 20 Ca 2,8,8,2",
+      "duration": 104.56,
+      "startTime": 119.68,
+      "endTime": 224.24,
+      "audioUrl": "/audio/lectures/science/c2/s01_b01.mp3"
     },
     {
-      "id": "sec_subatomic_particles",
-      "title": "⚛️ Subatomic Particles (Hạt Hạ nguyên tử)",
-      "selector": "#sec-subatomic-particles",
-      "en": "Subatomic particle properties: Protons carry relative charge plus one and mass one. Neutrons carry zero charge and mass one. Electrons carry relative charge minus one and negligible mass of 1 over 1840.",
-      "vi": "Tính chất hạt hạ nguyên tử: Proton mang điện tích cộng một, khối lượng tương đối bằng một. Neutron không mang điện, khối lượng bằng một. Electron mang điện tích trừ một, khối lượng không đáng kể xấp xỉ một phần 1840.",
-      "duration": 30.42,
-      "startTime": 137.16,
-      "endTime": 167.58,
-      "audioUrl": "/audio/lectures/science/c2/sec_subatomic_particles.mp3"
+      "id": "s01_b02",
+      "title": "Quy tắc (a) — Khí hiếm Nhóm VIII (Noble Gases):",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "Rule (a) — Group VIII Noble Gases: Have a full outer electron shell (He = 2; Ne = 2,8; Ar = 2,8,8), making them chemically stable and unreactive (monatomic gases).",
+      "vi": "Quy tắc (a) — Khí hiếm Nhóm VIII (Noble Gases): Có lớp vỏ ngoài cùng bão hòa ( full outer electron shell : He = 2; Ne = 2,8; Ar = 2,8,8), cực kỳ bền vững và trơ hóa học ( unreactive ).",
+      "duration": 31.6,
+      "startTime": 224.24,
+      "endTime": 255.84,
+      "audioUrl": "/audio/lectures/science/c2/s01_b02.mp3"
     },
     {
-      "id": "sec_calculating_particles",
-      "title": "🧮 Calculating Particles & Notation (Tính toán Hạt & Ký hiệu)",
-      "selector": "#sec-calculating-particles",
-      "en": "Atomic notation: Proton number Z equals the number of protons and electrons in a neutral atom. Nucleon number A is the total number of protons plus neutrons. Neutrons equal A minus Z.",
-      "vi": "Ký hiệu nguyên tử: Số hiệu nguyên tử Z bằng số proton và bằng số electron trong nguyên tử trung hòa. Số khối A là tổng số proton và neutron. Do đó, số neutron bằng A trừ Z.",
-      "duration": 27.93,
-      "startTime": 167.58,
-      "endTime": 195.51,
-      "audioUrl": "/audio/lectures/science/c2/sec_calculating_particles.mp3"
+      "id": "s01_b03",
+      "title": "Quy tắc (b) — Số thứ tự Nhóm (Group I–VII):",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "Rule (b) — Group Number (I to VII): Equals the number of outer-shell electrons (e.g. Al is 2,8, 3 → Group III; Cl is 2,8, 7 → Group VII).",
+      "vi": "Quy tắc (b) — Số thứ tự Nhóm (Group I–VII): Luôn bằng số electron lớp ngoài cùng (VD: Al có 2,8, 3 → Nhóm III; Cl có 2,8, 7 → Nhóm VII).",
+      "duration": 26.96,
+      "startTime": 255.84,
+      "endTime": 282.8,
+      "audioUrl": "/audio/lectures/science/c2/s01_b03.mp3"
     },
     {
-      "id": "sec_isotopes",
-      "title": "⚖️ Isotopes (Đồng vị)",
-      "selector": "#sec-isotopes",
-      "en": "Isotopes are atoms of the same element having the same number of protons but different numbers of neutrons. They exhibit identical chemical properties because they have the same outer shell electron configuration.",
-      "vi": "Đồng vị là các nguyên tử của cùng một nguyên tố có cùng số proton nhưng khác nhau về số neutron. Chúng có tính chất hóa học giống hệt nhau vì có cùng cấu hình electron lớp ngoài cùng.",
-      "duration": 23.56,
-      "startTime": 195.51,
-      "endTime": 219.07,
-      "audioUrl": "/audio/lectures/science/c2/sec_isotopes.mp3"
+      "id": "s01_b04",
+      "title": "Quy tắc (c) — Số thứ tự Chu kỳ (Period):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Rule (c) — Period Number: Equals the number of occupied electron shells (e.g. Ca is 2,8,8,2 → 4 occupied shells → Period 4).",
+      "vi": "Quy tắc (c) — Số thứ tự Chu kỳ (Period): Luôn bằng số lớp vỏ electron có chứa e⁻ (VD: Ca có 2,8,8,2 → 4 lớp → Chu kỳ 4).",
+      "duration": 24.28,
+      "startTime": 282.8,
+      "endTime": 307.08,
+      "audioUrl": "/audio/lectures/science/c2/s01_b04.mp3"
     },
     {
-      "id": "sec_elements_compounds",
-      "title": "2. Đơn chất, Hợp chất & Liên kết (Elements, Compounds & Bonding Overview)",
-      "selector": "#sec-elements-compounds",
-      "en": "Section 2 explores substances and chemical bonding: Distinguishing pure elements, chemically bonded compounds, and physical mixtures.",
-      "vi": "Mục hai tìm hiểu về các chất và liên kết hóa học: Phân biệt đơn chất tinh khiết, hợp chất liên kết hóa học và hỗn hợp vật lý.",
-      "duration": 68.06,
-      "startTime": 219.07,
-      "endTime": 287.13,
-      "audioUrl": "/audio/lectures/science/c2/sec_elements_compounds.mp3"
+      "id": "s02_hdr",
+      "title": "⚛️ 1. Cấu tạo Nguyên tử, Hạt Hạ nguyên tử & Đồng vị (Atomic Structure & Isotopes)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "Syllabus C2.2 & C2.3 🟦 CORE + 🟩 SUPPLEMENT ⚛️ 1. Atomic Structure, Subatomic Particles & Isotopes.",
+      "vi": "Syllabus C2.2 & C2.3 🟦 CORE + 🟩 SUPPLEMENT ⚛️ 1. Cấu tạo Nguyên tử, Hạt Hạ nguyên tử & Đồng vị.",
+      "duration": 19.44,
+      "startTime": 307.08,
+      "endTime": 326.52,
+      "audioUrl": "/audio/lectures/science/c2/s02_hdr.mp3"
     },
     {
-      "id": "sec_elem_comp_mix",
-      "title": "🥗 Element, Compound & Mixture (Đơn chất, Hợp chất, Hỗn hợp)",
-      "selector": "#sec-elem-comp-mix",
-      "en": "An element contains only one type of atom. A compound contains two or more different elements chemically combined in fixed ratios. A mixture contains two or more substances physically mixed without chemical bonds and can be separated by physical methods.",
-      "vi": "Đơn chất chỉ chứa một loại nguyên tử. Hợp chất chứa từ hai nguyên tố khác nhau trở lên liên kết hóa học theo tỷ lệ cố định. Hỗn hợp chứa nhiều chất trộn lẫn vật lý không có liên kết hóa học và có thể tách rời bằng các phương pháp cơ học.",
-      "duration": 30.78,
-      "startTime": 287.13,
-      "endTime": 317.91,
-      "audioUrl": "/audio/lectures/science/c2/sec_elem_comp_mix.mp3"
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: 1. The Football Stadium Atom: Imagine blowing an atom up to the size of a giant football stadium! The central nucleus is a tiny, ultra-heavy marble sitting on the centre spot — packed with protons (+1) and neutrons (0) , holding virtually 100% of the atom's mass . Meanwhile, electrons (−1) are nearly weightless gnats (mass = 1/1840) buzzing around tiered spectator rows ( electron shells: max 2, 8, 8 for Z ≤ 20). 2. Isotopes = Identical Twin Cars with Extra Sandbags in the Boot: Two isotopes of an element have the exact same engine and outer controls ( same protons & same outer-shell electrons ), so they react identically in chemical reactions — even though one weighs slightly more due to extra neutral neutrons in its nucleus!",
+      "vi": "🎯 Hình dung đời thường: 1. Nguyên tử như Sân vận động Bóng đá Khổng lồ: Nếu phóng to nguyên tử bằng cả một sân vận động, thì hạt nhân (nucleus) chỉ nhỏ như một viên bi sắt cực nặng đặt ngay chấm giao bóng giữa sân — gom gọn protons (+1) và neutrons (0) , chiếm gần như 100% khối lượng nguyên tử . Còn các electrons (−1) nhẹ bẫng (khối lượng 1/1840) bay vù vù trên các tầng khán đài ( electron shells: tối đa 2, 8, 8 với Z ≤ 20). 2. Đồng vị (Isotopes) = Hai Chiếc Xe Sinh Đôi Chở Thêm Bao Cát Ở Cốp Sau: Hai đồng vị có cùng động cơ và vô-lăng ( cùng số proton & cùng số electron lớp ngoài cùng ) nên chạy và phản ứng hóa học y hệt nhau , chỉ khác nhẹ cân nặng do cốp xe có số bao cát trung hòa ( neutrons ) khác nhau!",
+      "duration": 114.19,
+      "startTime": 326.52,
+      "endTime": 440.71,
+      "audioUrl": "/audio/lectures/science/c2/s02_b01.mp3"
     },
     {
-      "id": "sec_ionic_bonding",
-      "title": "⚡ Ionic Bonding (Liên kết Ion)",
-      "selector": "#sec-ionic-bonding",
-      "en": "Ionic bonding occurs between metals and non-metals via electron transfer. Metals lose electrons to form positive cations, while non-metals gain electrons to form negative anions, creating strong electrostatic attraction.",
-      "vi": "Liên kết ion xảy ra giữa kim loại và phi kim thông qua sự nhường nhận electron. Kim loại nhường electron tạo cation dương, phi kim nhận electron tạo anion âm, hút nhau bằng lực hút tĩnh điện rất mạnh.",
-      "duration": 27.78,
-      "startTime": 317.91,
-      "endTime": 345.69,
-      "audioUrl": "/audio/lectures/science/c2/sec_ionic_bonding.mp3"
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Subatomic Particle Math (🟦 Core C2.2 & C2.3.2): Protons = Z (uniquely defines the element — NEVER changes in chemical reactions!). Neutrons = A − Z . For a neutral atom, Electrons = Z ; for ions, remember electrons are negative: cations (+) lost electrons ( e⁻ = Z − charge ) and anions (−) gained electrons ( e⁻ = Z + |charge| ). 2 → Periodic Table Address Rules (🟦 Core C2.2.5–6): Fill shells 2, 8, 8, 2 up to Ca ( Z = 20). Outer-shell electrons = Group number (Group VIII = full outer shell); Occupied shells = Period number . 3 → Isotopes (🟦 Core C2.3.1 / 🟩 Supp. C2.3.3): Different atoms of the same element with the same number of protons and different numbers of neutrons . They share the same chemical properties because they have the same number of electrons and same electronic configuration .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Công thức Đếm Hạt (🟦 Core C2.2 & C2.3.2): Số Proton = Z (quyết định tên nguyên tố — KHÔNG BAO GIỜ đổi trong phản ứng hóa học!). Số Neutron = A − Z . Với nguyên tử trung hòa: e⁻ = Z ; với ion, nhớ kỹ electron mang điện ÂM: cation (+) là đã nhường bớt e⁻ ( e⁻ = Z − điện tích ), còn anion (−) là đã nhận thêm e⁻ ( e⁻ = Z + |điện tích| ). 2 → Quy tắc Địa chỉ Bảng Tuần Hoàn (🟦 Core C2.2.5–6): Điền electron theo lớp 2, 8, 8, 2 tới Ca ( Z = 20). Số e⁻ lớp ngoài cùng = Số thứ tự Group (Group VIII bão hòa lớp ngoài cùng); Số lớp electron có chứa e⁻ = Số thứ tự Period . 3 → Đồng vị (🟦 Core C2.3.1 / 🟩 Supp. C2.3.3): Cùng số protons nhưng khác số neutrons . Có same chemical properties vì có same number of electrons và same electronic configuration .",
+      "duration": 142.15,
+      "startTime": 440.71,
+      "endTime": 582.86,
+      "audioUrl": "/audio/lectures/science/c2/s02_b02.mp3"
     },
     {
-      "id": "sec_covalent_bonding",
-      "title": "🤝 Covalent Bonding (Liên kết Cộng hóa trị)",
-      "selector": "#sec-covalent-bonding",
-      "en": "Covalent bonding occurs between non-metal atoms via sharing pairs of electrons to achieve stable noble gas electron configurations.",
-      "vi": "Liên kết cộng hóa trị hình thành giữa các nguyên tử phi kim thông qua việc dùng chung các cặp electron để đạt cấu hình electron bền vững của khí hiếm.",
-      "duration": 16.74,
-      "startTime": 345.69,
-      "endTime": 362.43,
-      "audioUrl": "/audio/lectures/science/c2/sec_covalent_bonding.mp3"
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Adding electrons to positive ions instead of subtracting! Students see Mg2+ ( Z = 12) and mistakenly write 14 electrons. Because each electron carries a −1 charge , a 2+ charge means the atom LOST 2 negative electrons → 12 − 2 = 10 e⁻ (configuration 2,8 )! Also remember 11H is the ONLY atom in the Periodic Table with 0 neutrons (1 − 1 = 0).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cộng nhầm electron cho ion dương! Rất nhiều bạn thấy Mg2+ ( Z = 12) liền lấy 12 + 2 = 14 e⁻! Vì mỗi electron mang điện tích −1 , mang điện 2+ nghĩa là nguyên tử đã MẤT ĐI 2 electron âm → 12 − 2 = 10 e⁻ (cấu hình 2,8 )! Và nhớ 11H là nguyên tử DUY NHẤT có 0 neutron (1 − 1 = 0).",
+      "duration": 62.45,
+      "startTime": 582.86,
+      "endTime": 645.31,
+      "audioUrl": "/audio/lectures/science/c2/s02_b03.mp3"
     },
     {
-      "id": "sec_lattices_macromolecules",
-      "title": "3. Cấu trúc Mạng Tinh thể & Đại phân tử (Lattices & Macromolecules Overview)",
-      "selector": "#sec-lattices-macromolecules",
-      "en": "Section 3 investigates giant structures: Metallic bonding and giant covalent macromolecules including diamond, graphite, and silicon dioxide.",
-      "vi": "Mục ba nghiên cứu cấu trúc mạng tinh thể khổng lồ: Liên kết kim loại và các đại phân tử cộng hóa trị như kim cương, than chì và silic đioxit.",
-      "duration": 74.15,
-      "startTime": 362.43,
-      "endTime": 436.58,
-      "audioUrl": "/audio/lectures/science/c2/sec_lattices_macromolecules.mp3"
+      "id": "s02_b04",
+      "title": "Mô hình Nguyên tử Tương tác (Interactive Atom Explorer)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Interactive Atom Explorer. Atomic Architecture (Carbon-12: 2,4) 👆. An atom consists of a tiny, positively charged central nucleus containing protons and neutrons , surrounded by negatively charged electrons arranged in electron shells (capacity: 1st shell = max 2, 2nd = max 8, 3rd = 8 for IGCSE Z ≤ 20). SUBATOMIC PARTICLES TABLE Subatomic Particle: Proton (p); Relative Charge: +1; Relative Mass: 1; Location in Atom: Inside the central nucleus. Subatomic Particle: Neutron (n); Relative Charge: 0 (neutral); Relative Mass: 1; Location in Atom: Inside the central nucleus. Subatomic Particle: Electron (e⁻); Relative Charge: −1; Relative Mass: 1 / 1840 (negligible); Location in Atom: Orbiting nucleus in electron shells.",
+      "vi": "Mô hình Nguyên tử Tương tác. Cấu trúc Nguyên tử (Carbon-12: 2,4) 👆. Mỗi nguyên tử gồm một central nucleus (hạt nhân ở tâm mang điện dương) chứa protons và neutrons , được bao quanh bởi các electrons mang điện âm chuyển động trên các electron shells (sức chứa tối đa với Z ≤ 20: lớp 1 = 2e⁻, lớp 2 = 8e⁻, lớp 3 = 8e⁻). Hạt hạ nguyên tử (Particle): Proton (p); Điện tích tương đối (Relative Charge): +1; Khối lượng tương đối (Relative Mass): 1; Vị trí trong nguyên tử (Location): Trong hạt nhân trung tâm. Hạt hạ nguyên tử (Particle): Neutron (n); Điện tích tương đối (Relative Charge): 0 (không mang điện); Khối lượng tương đối (Relative Mass): 1; Vị trí trong nguyên tử (Location): Trong hạt nhân trung tâm. Hạt hạ nguyên tử (Particle): Electron (e⁻); Điện tích tương đối (Relative Charge): −1; Khối lượng tương đối (Relative Mass): 1 / 1840 (không đáng kể — negligible); Vị trí trong nguyên tử (Location): Quay trên các lớp vỏ.",
+      "duration": 141.48,
+      "startTime": 645.31,
+      "endTime": 786.79,
+      "audioUrl": "/audio/lectures/science/c2/s02_b04.mp3"
     },
     {
-      "id": "sec_metallic_bonding",
-      "title": "🛡️ Metallic Bonding (Liên kết Kim loại)",
-      "selector": "#sec-metallic-bonding",
-      "en": "Metallic bonding is an electrostatic attraction between a regular lattice of positive metal ions and a sea of delocalised electrons, explaining high electrical conductivity and malleability.",
-      "vi": "Liên kết kim loại là lực hút tĩnh điện giữa mạng tinh thể ion dương kim loại và biển electron tự do di chuyển hỗn loạn, giải thích tính dẫn điện tốt và tính dễ dát mỏng của kim loại.",
-      "duration": 21.57,
-      "startTime": 436.58,
-      "endTime": 458.15,
-      "audioUrl": "/audio/lectures/science/c2/sec_metallic_bonding.mp3"
+      "id": "s02_b05",
+      "title": "🧮 Ký hiệu Nguyên tử & Ion: A Z X q",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🧮 Nuclide & Ion Notation: A Z X q . Proton / Atomic Number ( Z ): Number of protons in the nucleus. Mass / Nucleon Number ( A ): Total number of protons + neutrons in the nucleus → Neutrons = A − Z . (Note:11H is the only atom with 0 neutrons !). Ions (Watch the Charge!): Protons NEVER change in chemical reactions!• 2713Al3+: 13 p, 14 n, 10 e⁻ (lost 3e⁻ → config 2,8 )• 3517Cl−: 17 p, 18 n, 18 e⁻ (gained 1e⁻ → config 2,8,8 ).",
+      "vi": "🧮 Ký hiệu Nguyên tử & Ion: A Z X q . Proton / Atomic Number ( Z ): Số hạt proton trong hạt nhân. Mass / Nucleon Number ( A ): Tổng số hạt proton + neutron trong hạt nhân → Số Neutron = A − Z . (Lưu ý:11H là nguyên tử duy nhất có 0 neutron !). Cách tính hạt trong Ion (Cẩn thận dấu điện tích!): Số proton KHÔNG BAO GIỜ đổi trong phản ứng hóa học!• 2713Al3+: 13 p, 14 n, 10 e⁻ (mất 3e⁻ → cấu hình 2,8 )• 3517Cl−: 17 p, 18 n, 18 e⁻ (nhận 1e⁻ → cấu hình 2,8,8 ).",
+      "duration": 94.26,
+      "startTime": 786.79,
+      "endTime": 881.05,
+      "audioUrl": "/audio/lectures/science/c2/s02_b05.mp3"
     },
     {
-      "id": "sec_giant_covalent",
-      "title": "💎 Giant Covalent: Diamond vs Graphite vs SiO₂ (Đại phân tử Khổng lồ)",
-      "selector": "#sec-giant-covalent",
-      "en": "In Diamond, each carbon atom forms 4 strong covalent bonds in a tetrahedral lattice, making it extremely hard. In Graphite, each carbon bonds to 3 others in layers with delocalised electrons, making it soft, slippery, and electrically conductive. Silicon dioxide has a similar rigid tetrahedral structure to diamond.",
-      "vi": "Trong Kim cương, mỗi nguyên tử carbon tạo 4 liên kết cộng hóa trị tứ diện rất cứng. Trong Than chì, mỗi carbon chỉ liên kết với 3 carbon khác tạo thành các lớp trượt với electron tự do, giúp than chì mềm và dẫn điện tốt. Silic đioxit có mạng tinh thể tứ diện tương tự như kim cương.",
-      "duration": 39.9,
-      "startTime": 458.15,
-      "endTime": 498.05,
-      "audioUrl": "/audio/lectures/science/c2/sec_giant_covalent.mp3"
+      "id": "s02_b06",
+      "title": "⚖️ Đồng vị (Isotopes) & Tính chất Hóa học (C2.3)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "⚖️ Isotopes & Chemical Properties (C2.3). Definition: Isotopes are different atoms of the same element that have the same number of protons but different numbers of neutrons (e.g.126C and146C;3517Cl and3717Cl). 🟩 Supplement C2.3.3 — Why identical chemical properties? Isotopes of an element have the same chemical properties because they have the same number of electrons and therefore the same electronic configuration (same outer-shell electrons). Physical properties (mass, density, diffusion rate) differ slightly.",
+      "vi": "⚖️ Đồng vị (Isotopes) & Tính chất Hóa học (C2.3). Định nghĩa chuẩn (C2.3.1): Isotopes (đồng vị) là những nguyên tử khác nhau của cùng một nguyên tố (same element) , có cùng số proton nhưng khác nhau về số neutron (VD:126C và146C;3517Cl và3717Cl). 🟩 Supplement C2.3.3 — Vì sao đồng vị có cùng tính chất hóa học? Các đồng vị của cùng một nguyên tố có same chemical properties (tính chất hóa học giống hệt nhau) vì chúng có same number of electrons và do đó có same electronic configuration (cùng số electron lớp ngoài cùng). Tính chất vật lý (khối lượng, khối lượng riêng, tốc độ khuếch tán) khác nhau nhẹ.",
+      "duration": 87.34,
+      "startTime": 881.05,
+      "endTime": 968.39,
+      "audioUrl": "/audio/lectures/science/c2/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "phosphide ion, 31 15 P 3−",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • Paper 1 & 2 Nuclide & Ion MCQ Which row correctly gives the numbers of protons, neutrons, and electrons in a phosphide ion,3115P3− ? A. 15 protons, 16 neutrons, 12 electrons B. 15 protons, 16 neutrons, 18 electrons C. 16 protons, 15 neutrons, 18 electrons D. 31 protons, 15 neutrons, 18 electrons ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Read directly from3115P3−: (1) Bottom number Z = 15 protons (eliminates C and D). (2) Neutrons = A − Z = 31 − 15 = 16 neutrons . (3) The 3− charge means the neutral phosphorus atom (15 e⁻) has gained 3 negatively charged electrons to complete its outer shell (2,8,8): 15 + 3 = 18 electrons → B is correct . Distractor A is the classic sign-flip trap (subtracting 3 instead of adding 3)!",
+      "vi": "BÀI MẪU 1 🟦 CORE / EXTENDED • Trắc nghiệm Ký hiệu Nguyên tử & Ion Paper 1 & 2 Which row correctly gives the numbers of protons, neutrons, and electrons in a phosphide ion,3115P3− ? (Hàng nào nêu đúng số hạt proton, neutron và electron trong một ion phosphide3115P3−?) A. 15 protons, 16 neutrons, 12 electrons B. 15 protons, 16 neutrons, 18 electrons C. 16 protons, 15 neutrons, 18 electrons D. 31 protons, 15 neutrons, 18 electrons ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đọc trực tiếp từ ký hiệu3115P3−: (1) Chỉ số dưới Z = 15 protons (loại ngay C và D). (2) Số neutrons = A − Z = 31 − 15 = 16 neutrons . (3) Điện tích 3− chứng tỏ nguyên tử P trung hòa (15 e⁻) đã nhận thêm 3 electron mang điện âm để đạt cấu hình bền 2,8,8: 15 + 3 = 18 electrons → B đúng ! Bẫy A là lỗi kinh điển lấy 15 − 3 = 12.",
+      "duration": 150.5,
+      "startTime": 968.39,
+      "endTime": 1118.89,
+      "audioUrl": "/audio/lectures/science/c2/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "24 12 Mg",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [7 marks] Magnesium has two common isotopes, 2412Mg and 2612Mg . When magnesium reacts with nitrogen, it forms magnesium ions ( 2412Mg2+ ) and nitride ions ( 147N3− ). (a) State the number of protons, neutrons, and electrons in a 2412Mg2+ ion and write its electronic configuration. [3] (b) Use the electronic configuration of a neutral magnesium atom (2,8,2) to explain why magnesium is placed in Group II and Period 3 of the Periodic Table. [2] (c) Explain why2412Mg and2612Mg have the same chemical properties . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Subatomic particles & configuration of2412Mg2+: • Protons = 12 ; Neutrons = 24 − 12 = 12 [1m] .• Electrons = 12 − 2 (lost 2e⁻ for 2+ charge) = 10 electrons [1m] .• Electronic configuration of Mg2+= 2,8 [1m] . (b) Periodic Table position of Mg (2,8,2): • Group II: It has 2 electrons in its outer shell [1m] .• Period 3: It has 3 occupied electron shells [1m] . (c) Identical chemical properties of isotopes (C2.3.3): • Both isotopes have the same number of electrons (12) [1m] and therefore the same electronic configuration (2,8,2) / same number of outer-shell electrons [1m] . 💡 Intuition Check: Notice that24Mg2+(12 p, 10 e⁻) and14N3−(7 p, 10 e⁻) BOTH end up with the noble-gas configuration 2,8 (isoelectronic with Neon) — that stability is the driving force behind ion formation!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [7 điểm] Magnesium has two common isotopes, 2412Mg and 2612Mg . When magnesium reacts with nitrogen, it forms magnesium ions ( 2412Mg2+ ) and nitride ions ( 147N3− ). (Magnesium có hai đồng vị phổ biến là2412Mg và2612Mg. Khi phản ứng với nitrogen, nó tạo ion2412Mg2+và ion nitride147N3−.) (a) State the number of protons, neutrons, and electrons in a 2412Mg2+ ion and write its electronic configuration. (Nêu số hạt p, n, e⁻ của ion2412Mg2+và viết cấu hình electron của nó.) (b) Use the electronic configuration of a neutral magnesium atom (2,8,2) to explain why magnesium is placed in Group II and Period 3 . (Dựa vào cấu hình 2,8,2 giải thích vì sao Mg thuộc Nhóm II, Chu kỳ 3.) Giải thích vì sao hai đồng vị có cùng tính chất hóa học. ✍️ Lời giải chi tiết theo thang điểm: (a) Đếm hạt & cấu hình của2412Mg2+: • Protons = 12 ; Neutrons = 24 − 12 = 12 .• Electrons = 12 − 2 (mất 2e⁻ tạo điện tích 2+) = 10 electrons .• Cấu hình electron (electronic configuration) của Mg2+= 2,8 . (b) Vị trí trong Bảng Tuần Hoàn của Mg (2,8,2): • Group II: Vì có 2 outer-shell electrons (2 electron lớp ngoài cùng) .• Period 3: Vì có 3 occupied electron shells (3 lớp electron có chứa e⁻) .",
+      "duration": 255.08,
+      "startTime": 1118.89,
+      "endTime": 1373.97,
+      "audioUrl": "/audio/lectures/science/c2/s02_b08.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧪 2. Nguyên tố, Hợp chất, Hỗn hợp & Liên kết Hóa học",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "Syllabus C2.1, C2.4 & C2.5 🟦 CORE + 🟩 SUPPLEMENT 🧪 2. Elements, Compounds, Mixtures & Chemical Bonding.",
+      "vi": "Syllabus C2.1, C2.4 & C2.5 🟦 CORE + 🟩 SUPPLEMENT 🧪 2. Nguyên tố, Hợp chất, Hỗn hợp & Liên kết Hóa học.",
+      "duration": 21.99,
+      "startTime": 1373.97,
+      "endTime": 1395.96,
+      "audioUrl": "/audio/lectures/science/c2/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: 1. Lego Bricks (Element vs. Compound vs. Mixture): An Element is a box of only red bricks (one type of atom). A Compound is red + blue bricks clicked tightly together in exact 1:2 units (fixed formula, new properties). A Mixture is loose red and blue bricks tossed into a bowl in any ratio (easily separated by hand = physical methods). 2. Bank Transfer vs. Tug-of-War Holding Hands: • Ionic Bonding (Metal + Non-metal) = Permanent Bank Transfer: The metal hands its outer electron(s) permanently to the non-metal. Opposite charges (+ and −) then lock together in a 3D crystal.• Covalent Bonding (Non-metal + Non-metal) = Holding Hands: Neither atom gives up electrons, so they share pairs of electrons . Inside each molecule, the covalent \"stitches\" are super strong — but separate molecules only cling together via weak \"Velcro\" ( weak intermolecular forces )!",
+      "vi": "🎯 Hình dung đời thường: 1. Gạch Lego: Element là hộp chỉ toàn gạch đỏ (1 loại nguyên tử). Compound là gạch đỏ và xanh khớp chặt vào nhau theo đúng cụm tỉ lệ 1:2 cố định (có công thức riêng, tính chất mới hẳn). Mixture là gạch đỏ và xanh đổ lẫn lộn vào rổ theo tỉ lệ tùy ý (nhặt tách ra dễ dàng bằng phương pháp vật lý). 2. Chuyển Khoản Ngân Hàng vs. Nắm Tay Góp Vốn: • Ionic Bonding (Kim loại + Phi kim) = Chuyển khoản đứt đoạn: Kim loại tặng hẳn electron ngoài cùng cho phi kim → tạo ion + và − hút chặt nhau thành tinh thể 3D.• Covalent Bonding = Nắm tay dùng chung: Không ai chịu nhường ai nên hai phi kim góp chung cặp electron . Bên trong phân tử là \"đường chỉ khâu\" cộng hóa trị siêu bền, nhưng giữa phân tử này với phân tử kia chỉ dính nhau bằng \"miếng nhám Velcro\" rất yếu!",
+      "duration": 119.46,
+      "startTime": 1395.96,
+      "endTime": 1515.42,
+      "audioUrl": "/audio/lectures/science/c2/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Ionic Bonding (C2.4): Metal loses e⁻ → cation (+) ; non-metal gains e⁻ → anion (−) . Strong electrostatic attraction in a giant ionic lattice → high m.p./b.p. , generally soluble in water , and conducts electricity ONLY when molten or aqueous because ions are mobile (solid = fixed ions). 2 → Simple Covalent Bonding (C2.5): Non-metals share electron pairs to achieve noble-gas configurations (quick rule: bonds formed = 8 − Group number , so C makes 4, N makes 3, O makes 2, Cl/H makes 1). 3 → Why Simple Molecules Boil Easily & Don't Conduct (🟩 Supp.): Low m.p./b.p. because very little energy is needed to overcome weak intermolecular forces between molecules. Poor conductors because molecules are neutral with no mobile ions or delocalised electrons .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Liên kết Ion (C2.4): Kim loại nhường e⁻ → cation (+) ; phi kim nhận e⁻ → anion (−) . Lực hút tĩnh điện mạnh trong giant ionic lattice → m.p./b.p. cao , thường tan trong nước , và CHỈ dẫn điện khi nóng chảy (molten) hoặc dung dịch (aqueous) nhờ có mobile ions (khi rắn = ion bị khóa cố định). 2 → Liên kết Cộng hóa trị Phân tử (C2.5): Phi kim góp chung cặp e⁻ đạt cấu hình khí hiếm (mẹo đếm nhanh: Số liên kết cần tạo = 8 − Số Nhóm → C tạo 4, N tạo 3, O tạo 2, Cl/H tạo 1). 3 → Giải thích Tính chất Phân tử Đơn giản (🟩 Supp.): Nhiệt độ nóng chảy/sôi thấp vì chỉ cần ít nhiệt năng để thắng weak intermolecular forces giữa các phân tử; không dẫn điện vì phân tử trung hòa, no mobile ions or delocalised electrons .",
+      "duration": 121.82,
+      "startTime": 1515.42,
+      "endTime": 1637.24,
+      "audioUrl": "/audio/lectures/science/c2/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two deadly mark-killers in Paper 2 & Paper 4: 1️⃣ Never write \"covalent bonds break when methane or CO2boils\" — strong covalent bonds do NOT break ; only weak intermolecular forces are overcome!2️⃣ Never write \"molten NaCl conducts electricity because of free electrons\" — 0 marks! Ionic electrolytes conduct via mobile ions ; only metals and graphite use delocalised electrons .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi mất sạch điểm tự luận kinh điển nhất: 1️⃣ Tuyệt đối KHÔNG viết \"đun sôi CH4hay CO2làm đứt liên kết cộng hóa trị\" — chỉ có weak intermolecular forces bị vượt qua!2️⃣ Tuyệt đối KHÔNG viết \"NaCl nóng chảy dẫn điện nhờ electron tự do\" — 0 điểm ngay lập tức! Hợp chất ion dẫn điện bằng mobile ions ; chỉ kim loại và than chì mới dẫn điện bằng delocalised electrons .",
+      "duration": 57.71,
+      "startTime": 1637.24,
+      "endTime": 1694.95,
+      "audioUrl": "/audio/lectures/science/c2/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🟡 Element (Đơn chất / Nguyên tố)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🟡 Element. A pure substance containing only one type of atom that cannot be split into simpler substances by chemical methods (e.g. Fe, Ag, S, O2). Divided into metals (shiny, malleable, ductile, high density/m.p., good conductors; Hg is liquid) and non-metals (dull, brittle if solid, insulators except graphite; Br2is liquid).",
+      "vi": "🟡 Element (Đơn chất / Nguyên tố). Chất tinh khiết chỉ chứa duy nhất một loại nguyên tử , không thể phân tách bằng phản ứng hóa học. Chia làm metals (dẫn điện tốt, dẻo dễ dát mỏng malleable , kéo sợi ductile ; trừ Hg lỏng) và non-metals (giòn, cách điện trừ than chì; Br2lỏng).",
+      "duration": 48.52,
+      "startTime": 1694.95,
+      "endTime": 1743.47,
+      "audioUrl": "/audio/lectures/science/c2/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🔗 Compound (Hợp chất)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🔗 Compound. A pure substance formed when two or more different elements are chemically combined in fixed proportions (e.g. H2O, NaCl, Al2O3). Has a chemical formula, sharp m.p./b.p., properties completely different from its elements, and requires chemical reactions/electrolysis to separate.",
+      "vi": "🔗 Compound (Hợp chất). Chất tinh khiết tạo thành khi hai hay nhiều nguyên tố khác nhau liên kết hóa học theo tỉ lệ cố định. Có công thức hóa học riêng, nhiệt độ nóng chảy xác định (sharp m.p.), tính chất khác hẳn nguyên tố gốc.",
+      "duration": 39.05,
+      "startTime": 1743.47,
+      "endTime": 1782.52,
+      "audioUrl": "/audio/lectures/science/c2/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🥗 Mixture (Hỗn hợp)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🥗 Mixture. Two or more elements/compounds mixed together in variable proportions without chemical bonds (e.g. air, seawater, NaOH(aq), bronze alloy, bauxite ore, natural gas). No chemical formula, melts over a range, retains individual properties, separated by physical methods (filtration, distillation).",
+      "vi": "🥗 Mixture (Hỗn hợp). Hai hay nhiều chất trộn lẫn theo tỉ lệ bất kỳ, KHÔNG có liên kết hóa học (VD: không khí, nước biển, dung dịch NaOH(aq), hợp kim đồng điếu bronze, quặng bauxite). Nóng chảy trên một khoảng nhiệt độ; tách dễ dàng bằng phương pháp vật lý (lọc, chưng cất).",
+      "duration": 44.86,
+      "startTime": 1782.52,
+      "endTime": 1827.38,
+      "audioUrl": "/audio/lectures/science/c2/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Nguyên tử Kim loại nhường electron",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Metal atoms lose outer electrons to form positive ions ( cations , e.g. Na+, Mg2+, Al3+), while non-metal atoms gain electrons to form negative ions ( anions , e.g. Cl−, O2−), achieving full noble-gas outer shells. An ionic bond is a strong electrostatic attraction between oppositely charged ions.",
+      "vi": "Nguyên tử Kim loại nhường electron lớp ngoài cùng tạo ion dương, còn nguyên tử Phi kim nhận electron tạo ion âm ( anions : Cl−, O2−) để đạt cấu hình bền của khí hiếm. Ionic bond (liên kết ion) là lực hút tĩnh điện mạnh giữa các ion trái dấu.",
+      "duration": 43.53,
+      "startTime": 1827.38,
+      "endTime": 1870.91,
+      "audioUrl": "/audio/lectures/science/c2/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Nhóm I + VII: Sodium Chloride (NaCl), Na, Na⁺ (2,8), Cl, Cl⁻ (2,8,8), Supplement...",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Group I + VII: Sodium Chloride (NaCl), Na, Na⁺ (2,8), Cl, Cl⁻ (2,8,8), Supplement: Magnesium Oxide (MgO), Mg, 2+, Mg²⁺ (2,8), 2−, O²⁻ (2,8) [MgCl₂ = Mg²⁺ + 2Cl⁻], Giant Ionic Lattice.",
+      "vi": "Nhóm I + VII: Sodium Chloride (NaCl), Na, Na⁺ (2,8), Cl, Cl⁻ (2,8,8), Supplement: Magnesium Oxide (MgO), Mg, 2+, Mg²⁺ (2,8), 2−, O²⁻ (2,8) [MgCl₂ = Mg²⁺ + 2Cl⁻], Giant Ionic Lattice.",
+      "duration": 54.81,
+      "startTime": 1870.91,
+      "endTime": 1925.72,
+      "audioUrl": "/audio/lectures/science/c2/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🔥 Nhiệt độ Nóng chảy & Sôi Cao (Supplement C2.4.6a):",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🔥 High Melting & Boiling Points (Supplement C2.4.6a): Ionic compounds form a giant ionic lattice (a regular 3D arrangement of alternating positive and negative ions). Huge thermal energy is needed to overcome the strong electrostatic attractions between oppositely charged ions (MgO > NaCl because Mg2+/O2−have higher ionic charges).",
+      "vi": "🔥 Nhiệt độ Nóng chảy & Sôi Cao (Supplement C2.4.6a): Hợp chất ion tạo mạng tinh thể giant ionic lattice (sắp xếp 3D tuần hoàn xen kẽ giữa ion dương và ion âm). Cần năng lượng nhiệt cực lớn để thắng được strong electrostatic attractions giữa các ion trái dấu (MgO > NaCl vì điện tích Mg2+/O2−lớn hơn).",
+      "duration": 50.36,
+      "startTime": 1925.72,
+      "endTime": 1976.08,
+      "audioUrl": "/audio/lectures/science/c2/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "💡 Tính Dẫn điện (Supplement C2.4.6b):",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "💡 Electrical Conductivity (Supplement C2.4.6b): • Solid → Poor / Non-conductor: Ions are held in fixed lattice positions and cannot move.• Molten or Aqueous → Good conductor: The lattice breaks down so ions are mobile (free to move) and carry charge! ( Never say electrons move in ionic electrolytes! )",
+      "vi": "💡 Tính Dẫn điện (Supplement C2.4.6b): • Rắn (Solid) → KHÔNG dẫn điện: Các ion bị khóa chặt tại vị trí nút mạng ( fixed positions ), không thể di chuyển.• Nóng chảy (Molten) hoặc Dung dịch (Aqueous) → Dẫn điện TỐT: Mạng tinh thể vỡ ra giải phóng mobile ions (các ion tự do di chuyển) mang điện tích! ( Tuyệt đối không viết electron chạy trong dung dịch! )",
+      "duration": 50.1,
+      "startTime": 1976.08,
+      "endTime": 2026.18,
+      "audioUrl": "/audio/lectures/science/c2/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "💧 Độ tan trong Nước (Core C2.4.4c):",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "💧 Water Solubility (Core C2.4.4c): Ionic compounds are generally soluble in water (water molecules attract and pull ions away from the crystal lattice into aqueous solution), but insoluble in organic solvents.",
+      "vi": "💧 Độ tan trong Nước (Core C2.4.4c): Hợp chất ion thường tan tốt trong nước do phân tử nước tách các ion khỏi mạng tinh thể tạo dung dịch điện li, nhưng không tan trong dung môi hữu cơ.",
+      "duration": 28.59,
+      "startTime": 2026.18,
+      "endTime": 2054.77,
+      "audioUrl": "/audio/lectures/science/c2/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "🤝 C2.5 Phân tử Đơn giản & Liên kết Cộng hóa trị (Covalent Bonds)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "C2.5 CORE + SUPPLEMENT 🤝 C2.5 Simple Molecules & Covalent Bonds. A covalent bond is formed when a pair of electrons is shared between two non-metal atoms, giving each atom a full noble gas electronic configuration . One shared pair = single bond (—); two shared pairs = double bond (=); three shared pairs = triple bond (≡). REQUIRED CORE + SUPPLEMENT MOLECULES REFERENCE GRID Tier: 🟦 Core; Molecule: H 2 , Cl 2 , HCl; Displayed Bonds: H—H | Cl—Cl | H—Cl; Outer-Shell Dot-and-Cross Check (Bonding vs. Lone Pairs): 1 shared pair (2e⁻); each Cl atom also keeps 3 lone pairs (6 non-bonding e⁻). Tier: 🟦 Core; Molecule: H 2 O, NH 3 , CH 4; Displayed Bonds: H—O—H | NH 3 | CH 4; Outer-Shell Dot-and-Cross Check (Bonding vs. Lone Pairs): H 2 O: 2 shared pairs + 2 lone pairs on O . NH 3 : 3 shared pairs + 1 lone pair on N . CH 4 : 4 shared pairs, 0 lone pairs. Tier: 🟩 Supp.; Molecule: O 2 , CO 2 , N 2; Displayed Bonds: O=O | O=C=O | N≡N; Outer-Shell Dot-and-Cross Check (Bonding vs. Lone Pairs): O 2 : 2 shared pairs (4e⁻) + 2 lone pairs/O. CO 2 : two double bonds (4e⁻ each) + 2 lone pairs/O. N 2 : 3 shared pairs (6e⁻) + 1 lone pair/N. Tier: 🟩 Supp.; Molecule: C 2 H 4 , CH 3 OH; Displayed Bonds: H 2 C=CH 2 | H 3 C—O—H; Outer-Shell Dot-and-Cross Check (Bonding vs. Lone Pairs): Ethene (C 2 H 4 ): C=C double bond (4e⁻) + four C—H single bonds. Methanol (CH 3 OH): three C—H, one C—O, one O—H + 2 lone pairs on O.",
+      "vi": "C2.5 CORE + SUPPLEMENT 🤝 C2.5 Phân tử Đơn giản & Liên kết Cộng hóa trị (Covalent Bonds). Covalent bond (liên kết cộng hóa trị) hình thành khi hai nguyên tử phi kim góp chung cặp electron để đạt cấu hình bền của khí hiếm. 1 cặp chung = liên kết đơn (—); 2 cặp chung = liên kết đôi (=); 3 cặp chung = liên kết ba (≡). Hệ: 🟦 Core; Phân tử Bắt buộc: H 2 , Cl 2 , HCl; Công thức Cấu tạo: H—H | Cl—Cl | H—Cl; Kiểm tra Sơ đồ Dot-and-Cross (Cặp chung vs. Cặp tự do): 1 cặp e⁻ chung (2e⁻); mỗi nguyên tử Cl còn giữ 3 cặp e⁻ tự do (6 non-bonding e⁻). Hệ: 🟦 Core; Phân tử Bắt buộc: H 2 O, NH 3 , CH 4; Công thức Cấu tạo: H—O—H | NH 3 | CH 4; Kiểm tra Sơ đồ Dot-and-Cross (Cặp chung vs. Cặp tự do): H 2 O: 2 cặp chung + 2 cặp tự do trên O . NH 3 : 3 cặp chung + 1 cặp tự do trên N . CH 4 : 4 cặp chung, 0 cặp tự do. Hệ: 🟩 Supp.; Phân tử Bắt buộc: O 2 , CO 2 , N 2; Công thức Cấu tạo: O=O | O=C=O | N≡N; Kiểm tra Sơ đồ Dot-and-Cross (Cặp chung vs. Cặp tự do): O 2 : 2 cặp chung (4e⁻) + 2 cặp tự do/O. CO 2 : hai liên kết đôi (mỗi vùng giao 4e⁻) + 2 cặp tự do/O. N 2 : 3 cặp chung (6e⁻) + 1 cặp tự do/N. Hệ: 🟩 Supp.; Phân tử Bắt buộc: C 2 H 4 , CH 3 OH; Công thức Cấu tạo: H 2 C=CH 2 | H 3 C—O—H; Kiểm tra Sơ đồ Dot-and-Cross (Cặp chung vs. Cặp tự do): Ethene (C 2 H 4 ): liên kết đôi C=C (4e⁻) + bốn liên kết đơn C—H. Methanol (CH 3 OH): ba C—H, một C—O, một O—H + 2 cặp tự do trên O.",
+      "duration": 282.94,
+      "startTime": 2054.77,
+      "endTime": 2337.71,
+      "audioUrl": "/audio/lectures/science/c2/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "CO 2",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Covalent Dot-and-Cross MCQ In one molecule of carbon dioxide, CO2 (O=C=O), what is the total number of outer-shell electrons involved in bonding and the total number of non-bonding outer-shell electrons (lone-pair electrons) ? A. 4 bonding electrons and 4 non-bonding electrons B. 4 bonding electrons and 8 non-bonding electrons C. 8 bonding electrons and 8 non-bonding electrons D. 8 bonding electrons and 4 non-bonding electrons ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Count outer electrons first: Carbon (Group IV) brings 4 , and two Oxygen atoms (Group VI) bring 2 × 6 = 12 → total = 16 outer-shell electrons (immediately eliminates A, B, and D because 8 + 8 = 16!). Checking the bonds: O=C=O has two double bonds = 4 shared pairs = 8 bonding electrons . Each oxygen atom still holds 2 lone pairs (4 non-bonding e⁻ × 2 O atoms = 8 non-bonding electrons ) → C is correct !",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Đếm Electron Dot-and-Cross Paper 2 In one molecule of carbon dioxide, CO2 (O=C=O), what is the total number of outer-shell electrons involved in bonding and the total number of non-bonding outer-shell electrons ? (Trong một phân tử CO2, tổng số electron lớp ngoài cùng tham gia liên kết và tổng số electron lớp ngoài cùng không liên kết [cặp tự do] lần lượt là bao nhiêu?) A. 4 bonding electrons & 4 non-bonding electrons B. 4 bonding electrons & 8 non-bonding electrons C. 8 bonding electrons & 8 non-bonding electrons D. 8 bonding electrons & 4 non-bonding electrons ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Kiểm tra tổng electron lớp ngoài cùng trước: C (Nhóm IV) có 4e⁻ , hai nguyên tử O (Nhóm VI) có 2 × 6 = 12e⁻ → tổng cộng 16 electron lớp ngoài cùng (loại ngay A, B, D vì chỉ có C có tổng 8 + 8 = 16!). Xét chi tiết O=C=O: hai liên kết đôi = 4 cặp dùng chung = 8 bonding electrons ; mỗi nguyên tử O còn giữ 2 cặp tự do (4e⁻ × 2 nguyên tử O = 8 non-bonding electrons ) → C đúng !",
+      "duration": 156.96,
+      "startTime": 2337.71,
+      "endTime": 2494.67,
+      "audioUrl": "/audio/lectures/science/c2/s03_b13.mp3"
+    },
+    {
+      "id": "s03_b14",
+      "title": "MgCl 2",
+      "selector": "[data-lecture-section=\"s03_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured Comparison [8 marks] Magnesium chloride ( MgCl2 , melting point 714 °C) and ammonia ( NH3 , boiling point −33 °C) have very different structures and properties. ( Z : H = 1, N = 7, Mg = 12, Cl = 17) (a) Describe, in terms of electron transfer, how magnesium atoms and chlorine atoms form ions in MgCl2, stating the electronic configuration of both ions formed. [3] (b) State the number of shared pairs of electrons and the number of lone pairs on the nitrogen atom in one molecule of NH3. [1] (c) Explain, in terms of structure and bonding, why MgCl2has a much higher melting point than NH3. [2] (d) Explain why solid MgCl2does not conduct electricity, whereas aqueous MgCl2is a good conductor. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Electron transfer in MgCl2: • One magnesium atom (2,8,2) loses 2 outer electrons to form an Mg2+ion [1m] .• Two chlorine atoms (2,8,7) each gain 1 electron to form two Cl−ions [1m] .• Electronic configurations: Mg2+is 2,8 and Cl−is 2,8,8 [1m] . (b) Ammonia (NH3) outer shell: • Nitrogen (Group V, 5 outer e⁻) forms 3 shared pairs (bonding pairs) with 3 H atoms and retains 1 lone pair [1m] . (c) Melting point comparison: • MgCl2has a giant ionic lattice with strong electrostatic attractions between oppositely charged ions , requiring large amounts of thermal energy to overcome [1m] .• NH3has a simple molecular structure with weak intermolecular forces between molecules, requiring very little energy to overcome [1m] .",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận So sánh Toàn diện Paper 4 [8 điểm] Magnesium chloride ( MgCl2 , m.p. 714 °C) and ammonia ( NH3 , b.p. −33 °C) have very different structures and properties. ( Z : H = 1, N = 7, Mg = 12, Cl = 17) (Magnesium chloride MgCl2có t° nóng chảy 714 °C và ammonia NH3có t° sôi −33 °C mang cấu trúc và tính chất rất khác nhau.) (a) Describe, in terms of electron transfer, how magnesium atoms and chlorine atoms form ions in MgCl2, stating the electronic configuration of both ions. (Mô tả sự nhường-nhận electron khi tạo MgCl2và nêu cấu hình e⁻ của hai ion.) Nêu số cặp e⁻ dùng chung và số cặp e⁻ tự do trên nguyên tử N trong NH3. Giải thích vì sao MgCl2có nhiệt độ nóng chảy cao hơn hẳn NH3. Giải thích vì sao MgCl2rắn không dẫn điện nhưng dung dịch MgCl2dẫn điện tốt. ✍️ Lời giải chi tiết theo thang điểm: (a) Sự chuyển electron tạo MgCl2: • Một nguyên tử Mg (2,8,2) nhường 2 electron lớp ngoài cùng (loses 2 electrons) tạo ion Mg2+ .• Hai nguyên tử Cl (2,8,7), mỗi nguyên tử nhận 1 electron tạo hai ion Cl− .• Cấu hình electron: Mg2+là 2,8 và Cl−là 2,8,8 . (b) Phân tử NH3: • Nguyên tử N (Nhóm V, 5e⁻ ngoài cùng) có 3 cặp dùng chung (3 shared pairs) với 3 H và còn 1 cặp tự do (1 lone pair) .",
+      "duration": 254.0,
+      "startTime": 2494.67,
+      "endTime": 2748.67,
+      "audioUrl": "/audio/lectures/science/c2/s03_b14.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "💎 3. Mạng Tinh thể Cộng hóa trị Khổng lồ & Liên kết Kim loại",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "Syllabus C2.6 & C2.7 🟦 CORE + 🟩 SUPPLEMENT 💎 3. Giant Covalent Structures & Metallic Bonding.",
+      "vi": "Syllabus C2.6 & C2.7 🟦 CORE + 🟩 SUPPLEMENT 💎 3. Mạng Tinh thể Cộng hóa trị Khổng lồ & Liên kết Kim loại.",
+      "duration": 19.07,
+      "startTime": 2748.67,
+      "endTime": 2767.74,
+      "audioUrl": "/audio/lectures/science/c2/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Three Giant Architectures You Can Picture Instantly: 1️⃣ Diamond = 3D Steel Jungle-Gym Scaffolding: Every atom is covalently locked to 4 neighbours in a rigid 3D cage → ultra-hard, super-high m.p., zero loose electrons (insulator).2️⃣ Graphite = Stack of Playing Cards with Tiny Ball-Bearings Between Sheets: Each card is super tough inside (strong 3-bond hexagons → very high m.p.), but the cards slide effortlessly over each other ( soft lubricant ) while 1 spare electron per carbon rolls freely along the sheets ( conducts electricity → electrodes )!3️⃣ Metals = Ordered Positive Buoys in a Sea of Mobile Electrons: Hit a metal with a hammer and a row of + ions simply glides to the next slot while the fluid electron \"sea\" keeps gluing them together — so metals bend (malleable) instead of shattering!",
+      "vi": "🎯 Hình dung đời thường: Ba Kiến Trúc Khổng Lồ Nhìn Là Nhớ Ngay: 1️⃣ Diamond = Giàn Giáo Thép 3D Khóa Chặt Mọi Hướng: Mỗi nguyên tử C khóa cứng với 4 nguyên tử lân cận tạo khung tứ diện 3D bất khả xâm phạm → siêu cứng, t° nóng chảy cực cao, không còn electron rảnh (cách điện).2️⃣ Graphite (Than chì) = Xếp Bài Tây Có Bi Lăn Dẫn Điện Giữa Các Lá: Từng lá bài rất bền (lục giác 3 liên kết → t° nóng chảy vẫn cực cao), nhưng các lá bài trượt êm ru lên nhau ( mềm trơn làm chất bôi trơn lubricant ) và electron thứ 4 dư ra chạy tự do dọc các lớp ( dẫn điện làm điện cực electrode )!3️⃣ Kim loại (Metals) = Dàn Phao Dương Nổi Trong \"Biển\" Electron Tự Do: Dùng búa đập vào kim loại, hàng phao + chỉ trượt sang nấc kế tiếp trong khi \"nước biển\" electron lập tức ùa theo hút giữ chặt chúng ở vị trí mới — nhờ vậy kim loại dẻo (malleable) chứ không vỡ vụn!",
+      "duration": 117.23,
+      "startTime": 2767.74,
+      "endTime": 2884.97,
+      "audioUrl": "/audio/lectures/science/c2/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1 → Diamond vs. Graphite (C2.6): Diamond = each C bonded to 4 C (tetrahedral) → hard ( cutting tools ), non-conductor (all 4 outer e⁻ bonded). Graphite = each C bonded to 3 C in hexagonal layers → weak forces between layers allow sliding ( lubricant ) + 1 delocalised electron per C moves freely ( electrode ). 2 → Metallic Bonding (🟩 Supp. C2.7): Electrostatic attraction between positive metal ions in a giant metallic lattice and a ‘sea’ of delocalised electrons . Mobile delocalised e⁻ → good conductor ; layers of positive ions slide over each other without breaking metallic bonds → malleable .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1 → Diamond vs. Graphite (C2.6): Diamond = mỗi C tạo 4 liên kết cộng hóa trị (tứ diện) → siêu cứng ( cutting tools ), không dẫn điện. Graphite = mỗi C tạo 3 liên kết trong lớp lục giác + lực hút yếu giữa các lớp nên trượt dễ ( lubricant ) + 1 delocalised electron / C di chuyển tự do ( electrode ). 2 → Liên kết Kim loại (🟩 Supp. C2.7): Electrostatic attraction between positive ions in a giant metallic lattice and a ‘sea’ of delocalised electrons . Có mobile delocalised e⁻ → dẫn điện tốt ; layers of positive ions slide over each other → dẻo (malleable) .",
+      "duration": 92.17,
+      "startTime": 2884.97,
+      "endTime": 2977.14,
+      "audioUrl": "/audio/lectures/science/c2/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"graphite has a low melting point because of weak forces between layers\"! Sliding layers makes graphite soft and slippery — NOT low-melting! To melt graphite (>3600 °C), you still must break many strong covalent bonds within the layers . Also, in metallic bonding, ALWAYS say \"layers of positive ions slide\" — never write \"delocalised ions\" or \"positive nuclei\"!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết sai \"graphite có nhiệt độ nóng chảy thấp vì lực giữa các lớp yếu\"! Lực liên lớp yếu chỉ làm than chì mềm trơn (soft/slippery) — còn muốn nấu chảy than chì (>3600 °C) vẫn phải bẻ gãy vô số liên kết cộng hóa trị mạnh trong từng lớp ! Và ở kim loại, BẮT BUỘC viết \"layers of positive ions slide\" (tuyệt đối không viết \"delocalised ions\")!",
+      "duration": 57.42,
+      "startTime": 2977.14,
+      "endTime": 3034.56,
+      "audioUrl": "/audio/lectures/science/c2/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "C2.6 Mạng Cộng hóa trị Khổng lồ (Giant Covalent): Diamond & Graphite",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "C2.6 Giant Covalent Structures: Diamond & Graphite. SVG COMPARISON OF DIAMOND, GRAPHITE & SiO2 Feature: Bonding & Geometry; Diamond (C): Each C covalently bonded to 4 C atoms in a rigid 3D tetrahedral lattice.; Graphite (C): Each C bonded to 3 C atoms in flat hexagonal layers ; weak intermolecular forces between layers. Feature: Hardness & m.p.; Diamond (C): Extremely hard; very high m.p. (many strong covalent bonds to break).; Graphite (C): Soft & slippery (layers slide easily); very high m.p. (strong covalent bonds within layers). Feature: Electrical Conductivity; Diamond (C): Non-conductor (all 4 outer e⁻ used in bonding; no mobile electrons).; Graphite (C): Good conductor! 1 outer electron per C is delocalised & mobile between layers. Feature: Syllabus Uses; Diamond (C): Cutting tools & rock drills (extreme hardness).; Graphite (C): Lubricant (sliding layers) & electrodes (conducts electricity + inert + high m.p.).",
+      "vi": "C2.6 Mạng Cộng hóa trị Khổng lồ (Giant Covalent): Diamond & Graphite. Đặc điểm: Liên kết & Hình học; Diamond (Kim cương — C): Mỗi C liên kết cộng hóa trị với 4 nguyên tử C theo cấu trúc 3D tetrahedral (tứ diện) cứng vững.; Graphite (Than chì — C): Mỗi C liên kết với 3 nguyên tử C tạo từng lớp lục giác phẳng (layers) ; lực hút giữa các lớp yếu. Đặc điểm: Độ cứng & t° nóng chảy; Diamond (Kim cương — C): Cực kỳ cứng (very hard); nhiệt độ nóng chảy cực cao (cần bẻ gãy vô số liên kết cộng hóa trị mạnh).; Graphite (Than chì — C): Mềm & trơn (soft & slippery) vì các lớp trượt lên nhau dễ dàng; t° nóng chảy vẫn rất cao. Đặc điểm: Tính dẫn điện; Diamond (Kim cương — C): Không dẫn điện (cả 4 e⁻ ngoài cùng đều dùng tạo liên kết; không có e⁻ tự do).; Graphite (Than chì — C): Dẫn điện TỐT! Mỗi C còn dư 1 delocalised electron di chuyển tự do dọc các lớp. Đặc điểm: Ứng dụng Đề thi; Diamond (Kim cương — C): Cutting tools (dao cắt kính, mũi khoan đá) nhờ độ cứng siêu việt.; Graphite (Than chì — C): Lubricant (chất bôi trơn do lớp trượt) & Electrodes (điện cực dẫn điện, trơ, chịu nhiệt).",
+      "duration": 166.22,
+      "startTime": 3034.56,
+      "endTime": 3200.78,
+      "audioUrl": "/audio/lectures/science/c2/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🛡️ C2.7 Liên kết Kim loại (Metallic Bonding) & Tính chất Kim loại",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🟩 SUPPLEMENT C2.7 🛡️ C2.7 Metallic Bonding & Properties of Metals. Official Definition (C2.7.1): Metallic bonding is the electrostatic attraction between the positive ions in a giant metallic lattice and a ‘sea’ of delocalised electrons. (a) Good Electrical Conductivity: The delocalised electrons are mobile (free to move) throughout the metallic lattice and carry charge when a voltage is applied (both solid and molten!). (b) Malleability (C2.7.2b): Metal cations are arranged in regular layers. When hammered, layers of positive ions slide over each other without breaking the metallic bond because the mobile sea of delocalised electrons continues to attract the ions in their new positions.",
+      "vi": "🟩 SUPPLEMENT C2.7 🛡️ C2.7 Liên kết Kim loại (Metallic Bonding) & Tính chất Kim loại. Định nghĩa Chuẩn (C2.7.1): Metallic bonding là lực hút tĩnh điện giữa các ion dương kim loại trong mạng tinh thể khổng lồ và ‘biển’ electron tự do. (a) Tính dẫn điện tốt: Các delocalised electrons chuyển động tự do (mobile) khắp mạng tinh thể và mang dòng điện khi đặt hiệu điện thế (cả ở trạng thái rắn và nóng chảy). (b) Tính dẻo (Malleability — C2.7.2b): Các ion dương xếp thành từng lớp đều đặn. Khi tác dụng lực búa, các lớp ion dương trượt lên nhau mà không làm gãy liên kết vì biển electron tự do vẫn hút giữ chặt các ion ở vị trí mới.",
+      "duration": 93.33,
+      "startTime": 3200.78,
+      "endTime": 3294.11,
+      "audioUrl": "/audio/lectures/science/c2/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🎯 Bảng Chẩn đoán Nhanh Đề thi: Nhận diện Loại Cấu trúc từ Dữ liệu Thực nghiệm Lo...",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🎯 Rapid Exam Diagnostic: Identifying Structure Type from Experimental Data Structure Type: Simple Molecular (CO 2 , H 2 O, S 8 ); Melting & Boiling Points: Low (often gas/liquid/volatile solid); Conducts when SOLID?: No; Conducts when MOLTEN / (aq)?: No (unless reacts with water, e.g. HCl). Structure Type: Giant Ionic Lattice (NaCl, MgO); Melting & Boiling Points: High (typically > 600 °C); Conducts when SOLID?: No (fixed ions); Conducts when MOLTEN / (aq)?: YES (mobile ions!). Structure Type: Giant Covalent (Diamond, Graphite); Melting & Boiling Points: Very High (> 1600 °C); Conducts when SOLID?: No ( except Graphite = YES! ); Conducts when MOLTEN / (aq)?: No. Structure Type: Giant Metallic (Cu, Fe, Na); Melting & Boiling Points: Usually High (except Group I & Hg); Conducts when SOLID?: YES (delocalised e⁻); Conducts when MOLTEN / (aq)?: YES (delocalised e⁻).",
+      "vi": "🎯 Bảng Chẩn đoán Nhanh Đề thi: Nhận diện Loại Cấu trúc từ Dữ liệu Thực nghiệm Loại Cấu trúc: Phân tử Đơn giản (CO 2 , H 2 O, S 8 ); Nhiệt độ Nóng chảy & Sôi: Thấp (thường là khí/lỏng/rắn dễ bay hơi); Dẫn điện khi RẮN?: Không; Dẫn điện khi NÓNG CHẢY / (aq)?: Không (trừ chất tác dụng với nước như HCl). Loại Cấu trúc: Mạng Ion Khổng lồ (NaCl, MgO); Nhiệt độ Nóng chảy & Sôi: Cao (thường > 600 °C); Dẫn điện khi RẮN?: Không (ion cố định); Dẫn điện khi NÓNG CHẢY / (aq)?: CÓ (mobile ions!). Loại Cấu trúc: Mạng Cộng hóa trị Khổng lồ (Diamond, Graphite); Nhiệt độ Nóng chảy & Sôi: Rất cao (> 1600 °C); Dẫn điện khi RẮN?: Không ( trừ Graphite = CÓ! ); Dẫn điện khi NÓNG CHẢY / (aq)?: Không. Loại Cấu trúc: Mạng Kim loại Khổng lồ (Cu, Fe, Na); Nhiệt độ Nóng chảy & Sôi: Thường cao (trừ Nhóm I & Hg); Dẫn điện khi RẮN?: CÓ (delocalised e⁻); Dẫn điện khi NÓNG CHẢY / (aq)?: CÓ (delocalised e⁻).",
+      "duration": 151.86,
+      "startTime": 3294.11,
+      "endTime": 3445.97,
+      "audioUrl": "/audio/lectures/science/c2/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 Structure Detective MCQ The table shows experimental properties of four pure substances, W, X, Y, and Z:• W: m.p. = 3550 °C | Conducts when solid = No | Conducts when molten = No• X: m.p. = 801 °C | Conducts when solid = No | Conducts when molten = Yes• Y: m.p. = 1085 °C | Conducts when solid = Yes | Conducts when molten = Yes• Z: m.p. = −78 °C | Conducts when solid = No | Conducts when molten = NoWhich row correctly identifies W, X, Y, and Z? A. W = Diamond, X = Sodium chloride, Y = Copper, Z = Carbon dioxide B. W = Graphite, X = Copper, Y = Sodium chloride, Z = Carbon dioxide C. W = Diamond, X = Carbon dioxide, Y = Copper, Z = Sodium chloride D. W = Sodium chloride, X = Diamond, Y = Graphite, Z = Carbon dioxide ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Use the 3-step Structure Detective key: (1) Y conducts when both solid AND molten with a high m.p. → giant metallic (Copper) . (2) X has a high m.p. and conducts ONLY when molten → giant ionic lattice (Sodium chloride) . (3) W has an extremely high m.p. and never conducts → giant covalent (Diamond) (eliminates Graphite in B because graphite conducts when solid!). (4) Z has a very low m.p. and never conducts → simple molecular (Carbon dioxide) → A is correct !",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Nhận diện Cấu trúc Paper 2 The table shows experimental properties of four pure substances, W, X, Y, and Z:• W: m.p. = 3550 °C | Dẫn điện khi rắn = Không | Dẫn điện khi nóng chảy = Không• X: m.p. = 801 °C | Dẫn điện khi rắn = Không | Dẫn điện khi nóng chảy = Có• Y: m.p. = 1085 °C | Dẫn điện khi rắn = Có | Dẫn điện khi nóng chảy = Có• Z: m.p. = −78 °C | Dẫn điện khi rắn = Không | Dẫn điện khi nóng chảy = KhôngWhich row correctly identifies W, X, Y, and Z? (Hàng nào xác định đúng các chất W, X, Y, Z?) A. W = Diamond, X = Sodium chloride, Y = Copper, Z = Carbon dioxide B. W = Graphite, X = Copper, Y = Sodium chloride, Z = Carbon dioxide C. W = Diamond, X = Carbon dioxide, Y = Copper, Z = Sodium chloride D. W = Sodium chloride, X = Diamond, Y = Graphite, Z = Carbon dioxide ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Áp dụng chìa khóa Chẩn đoán Cấu trúc: (1) Y dẫn điện cả khi rắn LẪN nóng chảy → mạng kim loại (Copper) . (2) X nóng chảy cao (801 °C), CHỈ dẫn điện khi nóng chảy → mạng ion (Sodium chloride) . (3) W nóng chảy cực cao (3550 °C) và không bao giờ dẫn điện → mạng cộng hóa trị khổng lồ (Diamond) (loại B vì Graphite dẫn điện khi rắn!). (4) Z nóng chảy rất thấp và không dẫn điện → phân tử đơn giản (Carbon dioxide) → A đúng !",
+      "duration": 243.45,
+      "startTime": 3445.97,
+      "endTime": 3689.42,
+      "audioUrl": "/audio/lectures/science/c2/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Giant Structures & Bonding [9 marks] Diamond and graphite are giant covalent forms of carbon, whereas copper is a metallic element. (a) Explain, in terms of structure and bonding, why diamond is used in cutting tools whereas graphite is used as a lubricant. [3] (b) Explain why graphite conducts electricity when solid, whereas diamond does not. [2] (c) Describe the bonding in copper and explain why copper is both a good conductor of electricity and malleable. [4] ✍️ Step-by-Step Mark Scheme Solution: (a) Diamond (cutting tools) vs. Graphite (lubricant): • In diamond, each carbon atom forms 4 strong covalent bonds in a rigid 3D tetrahedral lattice, making it extremely hard for cutting [1m] .• Graphite consists of flat hexagonal layers of carbon atoms with weak forces of attraction between the layers [1m] , allowing the layers to slide easily over each other (soft/slippery) [1m] . (b) Electrical conductivity of Graphite vs. Diamond: • In graphite, each carbon atom only bonds to 3 others, leaving 1 delocalised electron per carbon atom that is mobile and carries charge [1m] .• In diamond, all 4 outer-shell electrons are fixed in covalent bonds, so there are no delocalised / mobile electrons [1m] .",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Mạng Khổng lồ & Kim loại Paper 4 [9 điểm] Diamond and graphite are giant covalent forms of carbon, whereas copper is a metallic element. (Kim cương và than chì là các dạng mạng cộng hóa trị khổng lồ của carbon, còn đồng là nguyên tố kim loại.) (a) Explain, in terms of structure and bonding, why diamond is used in cutting tools whereas graphite is used as a lubricant. (Giải thích vì sao kim cương dùng làm mũi cắt còn than chì dùng làm chất bôi trơn.) Giải thích vì sao than chì rắn dẫn điện còn kim cương thì không. Mô tả liên kết kim loại trong đồng và giải thích tính dẫn điện tốt + tính dẻo của đồng. ✍️ Lời giải chi tiết theo thang điểm: (a) Diamond (cutting tools) vs. Graphite (lubricant): • Trong diamond, mỗi nguyên tử C tạo 4 liên kết cộng hóa trị mạnh trong mạng tứ diện 3D cứng vững nên cực kỳ cứng .• Graphite gồm các lớp phẳng (layers) nguyên tử C với lực hút yếu giữa các lớp nên các lớp dễ trượt lên nhau tạo độ trơn . (b) Tính dẫn điện của Graphite vs.",
+      "duration": 158.49,
+      "startTime": 3689.42,
+      "endTime": 3847.91,
+      "audioUrl": "/audio/lectures/science/c2/s04_b08.mp3"
     }
   ]
 }

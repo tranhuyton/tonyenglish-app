@@ -1,100 +1,913 @@
 {
   "lectureId": "2a155fd4-9bd1-4136-b7b7-3ce55d6fbb69",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P4: Electricity and magnetism",
-  "totalDuration": 354.16,
+  "totalDuration": 6476.55,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề P4",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_electrical_quantities": {
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_wex": {
+      "start": 9,
+      "end": 10
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 2,
-      "title": "1. Đại lượng Điện & Định luật Ohm",
-      "selector": "#sec-electrical-quantities"
+      "end": 10
     },
-    "sec_electric_circuits": {
-      "start": 3,
-      "end": 4,
-      "title": "2. Mạch Điện & Mạch Phân áp",
-      "selector": "#sec-electric-circuits"
+    "s02_int": {
+      "start": 12,
+      "end": 14
     },
-    "sec_electromagnetic_effects": {
-      "start": 5,
-      "end": 5,
-      "title": "3. Tác dụng Điện từ & Biến áp",
-      "selector": "#sec-electromagnetic-effects"
+    "s02_p1_sub01": {
+      "start": 17,
+      "end": 22
+    },
+    "s02_p2_sub01": {
+      "start": 17,
+      "end": 22
+    },
+    "s02_wex": {
+      "start": 23,
+      "end": 24
+    },
+    "s02_hdr": {
+      "start": 11,
+      "end": 24
+    },
+    "s03_int": {
+      "start": 26,
+      "end": 28
+    },
+    "s03_wex": {
+      "start": 33,
+      "end": 34
+    },
+    "s03_hdr": {
+      "start": 25,
+      "end": 34
+    },
+    "s04_int": {
+      "start": 36,
+      "end": 38
+    },
+    "s04_wex": {
+      "start": 43,
+      "end": 44
+    },
+    "s04_hdr": {
+      "start": 35,
+      "end": 44
+    },
+    "s05_int": {
+      "start": 46,
+      "end": 48
+    },
+    "s05_wex": {
+      "start": 56,
+      "end": 57
+    },
+    "s05_hdr": {
+      "start": 45,
+      "end": 57
+    },
+    "s06_int": {
+      "start": 59,
+      "end": 61
+    },
+    "s06_p1_sub01": {
+      "start": 64,
+      "end": 67
+    },
+    "s06_p1_sub02": {
+      "start": 68,
+      "end": 70
+    },
+    "s06_p2_sub01": {
+      "start": 64,
+      "end": 67
+    },
+    "s06_p2_sub02": {
+      "start": 68,
+      "end": 70
+    },
+    "s06_wex": {
+      "start": 71,
+      "end": 72
+    },
+    "s06_hdr": {
+      "start": 58,
+      "end": 72
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề P4: Điện học & Từ học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic P4: Electricity and Magnetism. In this lesson, we study electric charge, current, electromotive force, Ohm's law, series and parallel circuits, potential dividers, electrical safety, electromagnetic induction, electric motors, and transformers.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P4: Điện học và Từ học. Trong bài học này, chúng ta sẽ khảo sát điện tích, dòng điện, suất điện động, định luật Ohm, mạch điện nối tiếp và song song, mạch phân áp, an toàn điện, hiện tượng cảm ứng điện từ, động cơ điện và máy biến áp.",
-      "duration": 47.39,
+      "title": "Chuyên đề P4: Điện học và Từ học (P4: Electricity and magnetism)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) P4: Electricity and magnetism. PP4.1 Simple Phenomena of Magnetism • P4.2 Electrical Quantities • P4.3 Electrical Circuits • P4.4 Electrical Safety • P4.5 Electromagnetic Effects (Supplement).",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ Chuyên đề P4: Điện học và Từ học. P4.1 Hiện tượng từ học cơ bản • P4.2 Các đại lượng điện • P4.3 Mạch điện • P4.4 An toàn điện • P4.5 Tác dụng điện từ (Supplement).",
+      "duration": 48.45,
       "startTime": 0.0,
-      "endTime": 47.39,
+      "endTime": 48.45,
       "audioUrl": "/audio/lectures/science/p4/intro.mp3"
     },
     {
-      "id": "sec_electrical_quantities",
-      "title": "1. Đại lượng Điện & Định luật Ohm (Electrical Quantities Overview)",
-      "selector": "#sec-electrical-quantities",
-      "en": "Section 1 defines current as rate of charge flow: Q equals I times t. Potential difference V is energy per unit charge (V = W / Q). Ohm's law states V equals I times R for an ohmic conductor at constant temperature.",
-      "vi": "Mục một định nghĩa cường độ dòng điện là tốc độ dòng điện tích dịch chuyển: Q bằng I nhân t. Hiệu điện thế V là năng lượng trên một đơn vị điện tích (V = W / Q). Định luật Ohm khẳng định V bằng I nhân R đối với dây dẫn kim loại ở nhiệt độ không đổi.",
-      "duration": 79.31,
-      "startTime": 47.39,
-      "endTime": 126.7,
-      "audioUrl": "/audio/lectures/science/p4/sec_electrical_quantities.mp3"
+      "id": "s01_hdr",
+      "title": "🧲 P4.1 Hiện tượng Từ học Cơ bản (Simple Phenomena of Magnetism)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧲 4.1 Simple Phenomena of Magnetism.",
+      "vi": "🧲 P4.1 Hiện tượng Từ học Cơ bản.",
+      "duration": 6.74,
+      "startTime": 48.45,
+      "endTime": 55.19,
+      "audioUrl": "/audio/lectures/science/p4/s01_hdr.mp3"
     },
     {
-      "id": "sec_resistance_factors",
-      "title": "📏 Resistance & Wire Dimensions (Điện trở & Dây dẫn)",
-      "selector": "#sec-resistance-factors",
-      "en": "Resistance of a metallic wire is directly proportional to its length and inversely proportional to its cross-sectional area. Doubling wire length doubles resistance; doubling wire diameter quadruples cross-sectional area, reducing resistance to one quarter.",
-      "vi": "Điện trở của một đoạn dây kim loại tỉ lệ thuận với chiều dài và tỉ lệ nghịch với tiết diện dây. Chiều dài dây tăng gấp đôi thì điện trở tăng gấp đôi; đường kính dây tăng gấp đôi thì tiết diện tăng gấp bốn, làm điện trở giảm đi bốn lần.",
-      "duration": 30.06,
-      "startTime": 126.7,
-      "endTime": 156.76,
-      "audioUrl": "/audio/lectures/science/p4/sec_resistance_factors.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of magnetic materials as having two opposite \"memory personalities\": Soft iron is a \"sticky-note magnet\" — it magnetises strongly right away, and the instant you switch the current off it forgets completely and drops its load (used in electromagnets and transformers). Hard steel is a \"permanent-marker magnet\" — harder to magnetise, but once magnetised it keeps its poles permanently (used in compasses and motors).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung 2 kiểu \"trí nhớ từ tính\" trái ngược nhau: Sắt non (soft iron) giống như \"giấy nhớ Post-it\" — vừa bật điện là nhiễm từ cực mạnh, nhưng hễ tắt điện là mất sạch từ tính ngay lập tức để nhả sắt vụn rơi xuống (dùng làm lõi nam châm điện, máy biến áp). Còn Thép cứng (steel) giống như \"bút lông dầu xóa không trôi\" — giữ từ tính vĩnh viễn làm nam châm vĩnh cửu (la bàn, động cơ).",
+      "duration": 56.08,
+      "startTime": 55.19,
+      "endTime": 111.27,
+      "audioUrl": "/audio/lectures/science/p4/s01_b01.mp3"
     },
     {
-      "id": "sec_electric_circuits",
-      "title": "2. Mạch Điện Nối tiếp, Song song & Mạch Phân áp (Circuits Overview)",
-      "selector": "#sec-electric-circuits",
-      "en": "Section 2 explores circuit laws: In series, current is identical everywhere and total resistance equals R1 plus R2. In parallel, voltage is identical across branches and combined resistance is smaller than any individual branch.",
-      "vi": "Mục hai khám phá quy luật mạch điện: Trong mạch nối tiếp, cường độ dòng điện như nhau tại mọi điểm và điện trở tương đương bằng tổng R1 cộng R2. Trong mạch song song, hiệu điện thế như nhau ở mọi nhánh và điện trở tương đương luôn nhỏ hơn điện trở của từng nhánh con.",
-      "duration": 83.46,
-      "startTime": 156.76,
-      "endTime": 240.22,
-      "audioUrl": "/audio/lectures/science/p4/sec_electric_circuits.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Poles, Materials & Electromagnets (🟦 Core): Like poles repel ( N–N, S–S ); unlike poles attract ( N–S ). Magnetic materials ( iron, steel, cobalt, nickel ) are attracted even when unmagnetised; non-magnetic materials (copper, aluminium, plastic) are never attracted. Unlike a permanent magnet (always ON), an electromagnet uses a current-carrying coil + soft-iron core so it can be switched ON/OFF and varied in strength. 2. Magnetic Fields & Induced Magnetism (🟩 Supplement): A magnetic field is a region in which a magnetic pole experiences a force ; its direction at a point is the direction of the force on the N pole (N → S). Bringing a magnet near unmagnetised iron induces the opposite pole at the nearest end .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Cực từ, Vật liệu & Nam châm điện (🟦 Core): Cực cùng tên đẩy nhau; khác tên hút nhau. Vật liệu từ bị hút kể cả khi chưa nhiễm từ; đồng, nhôm, nhựa là phi từ. Khác với permanent magnet (luôn bật), electromagnet có thể bật/tắt và thay đổi độ mạnh. 2. Từ trường & Nhiễm từ cảm ứng (🟩 Supplement): Magnetic field là vùng mà một magnetic pole experiences a force ; chiều từ trường là chiều lực tác dụng lên cực Bắc (N pole) . Đưa nam châm lại gần sắt non chưa nhiễm từ sẽ cảm ứng ra cực trái dấu ở đầu gần nhất .",
+      "duration": 95.41,
+      "startTime": 111.27,
+      "endTime": 206.68,
+      "audioUrl": "/audio/lectures/science/p4/s01_b02.mp3"
     },
     {
-      "id": "sec_potential_dividers",
-      "title": "💡 Potential Dividers & Sensors (Mạch Phân áp & Cảm biến LDR, Thermistor)",
-      "selector": "#sec-potential-dividers",
-      "en": "A potential divider uses two resistors in series to divide voltage. In light dependent resistors (LDR), light increases conductivity, dropping resistance. In negative temperature coefficient thermistors, higher temperature drops resistance.",
-      "vi": "Mạch phân áp gồm hai điện trở mắc nối tiếp để chia hiệu điện thế nguồn. Với quang điện trở LDR, khi có ánh sáng chiếu vào, điện trở giảm mạnh. Với nhiệt điện trở thermistor, khi nhiệt độ tăng cao, điện trở của nó giảm xuống.",
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say \"bar X attracts a magnet, so bar X must be a magnet\"! Unmagnetised iron is attracted to both poles by induced magnetism. Repulsion is the ONLY sure test that proves an unknown bar is already magnetised.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bao giờ kết luận \"thanh X hút nam châm nên X là nam châm\"! Sắt chưa nhiễm từ bị hút bởi CẢ hai cực N và S. Chỉ có lực đẩy (repulsion) mới chứng minh chắc chắn vật đó đã là nam châm!",
+      "duration": 34.77,
+      "startTime": 206.68,
+      "endTime": 241.45,
+      "audioUrl": "/audio/lectures/science/p4/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Cực từ & Vật liệu Từ (Magnetic Poles & Materials)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Magnetic Poles & Materials. Every magnet has a north pole (N pole) and a south pole (S pole) . A freely suspended magnet aligns so its N pole points towards Earth's geographic north. Pole Law: Like poles repel (N–N, S–S) and opposite (unlike) poles attract (N–S). Magnetic materials: Attracted by a magnet even when unmagnetised , and can be magnetised — iron, steel, cobalt, nickel (ferrous metals & alloys). Non-magnetic materials: Never attracted to magnets and cannot be magnetised — copper, aluminium, brass, wood, plastic, glass . (Exam check: repulsion is the ONLY sure test that an unknown rod is already a magnet, because an unmagnetised iron bar is attracted to BOTH poles!) . Permanent Magnet vs Electromagnet: A permanent magnet (hard steel) produces an always-on magnetic field (compasses, motors, door catches), whereas an electromagnet (current-carrying coil around a soft-iron core) can be switched ON/OFF and have its strength varied (scrapyard cranes, electric bells, relays).",
+      "vi": "Cực từ & Vật liệu Từ. Mọi nam châm đều có 2 cực: cực Bắc và cực Nam . Treo tự do thanh nam châm thì cực N luôn chỉ về hướng Bắc địa lý. Quy luật tương tác: Các cực cùng tên đẩy nhau; các cực khác tên hút nhau. Vật liệu từ (Magnetic materials): Bị nam châm hút ngay cả khi chưa nhiễm từ ( unmagnetised ) và có thể từ hóa được — gồm iron (sắt), steel (thép), cobalt, nickel. Vật liệu phi từ: Không bị hút và không thể từ hóa — copper (đồng), aluminium (nhôm), brass (đồng thau), nhựa, gỗ, thủy tinh . (Mẹo thi: Lực đẩy repulsion là dấu hiệu DUY NHẤT chứng minh một thanh kim loại đã là nam châm!) . Nam châm vĩnh cửu vs Nam châm điện: Permanent magnet (thép cứng) luôn có từ trường cố định, còn electromagnet (cuộn dây có lõi sắt non) có thể bật/tắt và điều chỉnh độ mạnh nhờ thay đổi dòng điện hoặc số vòng dây.",
+      "duration": 139.71,
+      "startTime": 241.45,
+      "endTime": 381.16,
+      "audioUrl": "/audio/lectures/science/p4/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "Sự Nhiễm từ Cảm ứng (Induced Magnetism)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Induced Magnetism. When an unmagnetised magnetic material (e.g. an iron nail or steel paperclip) touches or enters the magnetic field of a permanent magnet, it becomes magnetised itself — this is induced magnetism. Polarity rule: The end nearest the permanent magnet always acquires the opposite pole (e.g. near an N pole , the induced near end becomes an S pole and the far end becomes an N pole ), causing attraction ! Removing a chain of soft-iron nails makes the chain collapse immediately; a chain of steel paperclips stays magnetised.",
+      "vi": "Sự Nhiễm từ Cảm ứng (Induced Magnetism). Khi đưa một vật liệu từ chưa nhiễm từ (đinh sắt hoặc kẹp giấy thép) lại gần hoặc . Quy tắc cực cảm ứng: Đầu nằm gần nam châm vĩnh cửu luôn xuất hiện cực trái dấu (opposite pole) (ví dụ gần cực N sẽ cảm ứng cực S ở đầu gần và cực N ở đầu xa) nên luôn bị hút (attracted) ! Khi lấy nam châm ra, chuỗi đinh sắt non (soft iron) rụng rời ngay lập tức, còn chuỗi kẹp giấy thép (steel) vẫn hút dính nhau.",
+      "duration": 68.55,
+      "startTime": 381.16,
+      "endTime": 449.71,
+      "audioUrl": "/audio/lectures/science/p4/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Vật liệu (Material): Sắt non (Soft Iron) Soft magnetic material; Đặc tính từ hóa...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Material Type: Soft Iron (Soft magnetic material); Magnetic Properties: Easy to magnetise strongly, and loses its magnetism immediately when the magnetising field/current is switched off.; Magnet Classification: Temporary Magnet; Key Cambridge 0654 Applications: Cores of electromagnets (scrapyard cranes, electric bells), magnetic relays , and transformer cores (must reverse magnetism 50 times/s!). Material Type: Hard Steel (Hard magnetic material); Magnetic Properties: Harder to magnetise , but retains its magnetism permanently once magnetised.; Magnet Classification: Permanent Magnet; Key Cambridge 0654 Applications: Plotting compasses , moving-coil loudspeakers , d.c. motors , generators, magnetic door catches.",
+      "vi": "Vật liệu (Material): Sắt non (Soft Iron) Soft magnetic material; Đặc tính từ hóa (Magnetic Properties): Rất dễ nhiễm từ mạnh và mất từ tính ngay lập tức khi ngắt dòng điện hoặc lấy nguồn từ ra.; Phân loại nam châm: Nam châm tạm thời (Temporary Magnet); Ứng dụng trọng tâm chuẩn 0654: Lõi nam châm điện (electromagnets) (cần cẩu phế liệu, chuông điện), rơ-le từ (relays) và lõi máy biến áp (transformer cores). Vật liệu (Material): Thép cứng (Hard Steel) Hard magnetic material; Đặc tính từ hóa (Magnetic Properties): Khó nhiễm từ hơn sắt non, nhưng giữ từ tính bền vững lâu dài .; Phân loại nam châm: Nam châm vĩnh cửu (Permanent Magnet); Ứng dụng trọng tâm chuẩn 0654: Kim la bàn (compasses) , loa điện động (loudspeakers) , động cơ d.c. (d.c. motors) , máy phát điện, chốt cửa tủ lạnh.",
+      "duration": 114.69,
+      "startTime": 449.71,
+      "endTime": 564.4,
+      "audioUrl": "/audio/lectures/science/p4/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Từ trường & Cách vẽ Đường sức từ (Plotting Field Lines)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Magnetic Field Rules & Plotting Experiments. Definition: A magnetic field is a region in which a magnetic pole experiences a force . Magnetic forces arise from interactions between magnetic fields (Supplement). Field Direction: Defined at any point as the direction of the force on the N pole of a magnet placed at that point (hence arrows always point from N to S outside the magnet). Field Strength (Supplement): Represented by the spacing of magnetic field lines — lines are closest together at the poles where the field is strongest. Plotting with a Compass: Place bar magnet on paper; set a small plotting compass near the N pole; mark pencil dots at both ends of the needle; move compass so its tail sits on the previous tip dot; repeat to S pole and join dots into a smooth curve with an N → S arrow. Plotting with Iron Filings: Place stiff white card flat over the magnet, sprinkle fine iron filings thinly from above, and tap the card gently so filings align into field patterns (use a compass afterward to find arrow direction).",
+      "vi": "Từ trường & Cách vẽ Đường sức từ. Định nghĩa: Từ trường (magnetic field) là vùng không gian mà tại đó một cực từ chịu tác dụng của lực từ . Lực từ sinh ra do sự tương tác giữa các từ trường (Supplement). Chiều từ trường: Là chiều của lực từ tác dụng lên cực Bắc đặt tại điểm đó ⇒ đường sức từ luôn hướng ra N, vào S ở bên ngoài nam châm và không bao giờ cắt nhau. Độ mạnh từ trường (Supplement): Biểu diễn qua khoảng cách giữa các đường sức — đường sức càng dày đặc (ở 2 đầu cực) thì từ trường càng mạnh. Thí nghiệm dùng La bàn (Plotting Compass): Đặt nam châm lên giấy, đặt la bàn nhỏ sát cực N, chấm bút chì tại đầu kim la bàn, dời đuôi kim tới dấu chấm vừa vẽ rồi lặp lại đến cực S; nối các điểm thành đường cong mượt có mũi tên N → S. Thí nghiệm dùng Mạt sắt (Iron Filings): Đặt tấm bìa cứng phẳng lên trên nam châm, rắc mỏng mạt sắt rồi gõ nhẹ tấm bìa (tap gently) để mạt sắt xếp theo hình dạng đường sức; dùng thêm la bàn để xác định chiều mũi tên.",
+      "duration": 137.33,
+      "startTime": 564.4,
+      "endTime": 701.73,
+      "audioUrl": "/audio/lectures/science/p4/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ Three metal bars P , Q , and R look identical. Both ends of bar P attract the N pole of a compass needle. One end of bar Q repels the N pole of the compass needle. Neither end of bar R affects the compass needle. What are bars P , Q , and R made of? A. P = copper, Q = magnetised steel, R = unmagnetised soft iron B. P = unmagnetised soft iron, Q = magnetised steel, R = copper C. P = magnetised steel, Q = unmagnetised soft iron, R = aluminium D. P = unmagnetised soft iron, Q = copper, R = magnetised steel ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Bar P attracts the compass N pole at both ends → unmagnetised magnetic material (soft iron). Bar Q repels the compass N pole at one end — only like poles repel, proving Q is a permanent magnet (magnetised steel). Bar R has zero magnetic effect → non-magnetic material (copper).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & 2 Three metal bars P , Q , and R look identical. Both ends of bar P attract the N pole of a compass needle. One end of bar Q repels the N pole of the compass needle. Neither end of bar R affects the compass needle. What are bars P , Q , and R made of? (Ba thanh kim loại P, Q, R giống hệt nhau. Cả hai đầu thanh P hút cực N kim la bàn; một đầu thanh Q đẩy cực N kim la bàn; thanh R không làm lệch kim la bàn. Hỏi P, Q, R làm bằng gì?) A. P = copper, Q = magnetised steel, R = unmagnetised soft iron B. P = unmagnetised soft iron, Q = magnetised steel, R = copper C. P = magnetised steel, Q = unmagnetised soft iron, R = aluminium D. P = unmagnetised soft iron, Q = copper, R = magnetised steel ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Thanh P hút cực N ở cả 2 đầu → vật liệu từ chưa nhiễm từ . Thanh Q đẩy (repels) cực N → chắc chắn là nam châm vĩnh cửu (magnetised steel) . Thanh R không có tác dụng từ → kim loại phi từ (copper) .",
+      "duration": 163.61,
+      "startTime": 701.73,
+      "endTime": 865.34,
+      "audioUrl": "/audio/lectures/science/p4/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 3 & 4 Structured [5 marks] A scrapyard crane uses an electromagnet rather than a permanent magnet to lift and move scrap iron. (a) State two ways in which an electromagnet differs from a permanent magnet, and name the best material for the electromagnet core. [3] (b) When switched on, the bottom of the electromagnet is an N pole . Explain, in terms of induced magnetism, why an unmagnetised piece of iron below it is attracted upwards. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. An electromagnet can be switched ON and OFF (and its magnetic field strength can be changed by varying the current), whereas a permanent magnet's field is always on [1m] + [1m].2. Best core material: soft iron (temporary magnetic material) [1m]. (b) The electromagnet causes induced magnetism in the iron, inducing an S pole at the top end nearest the electromagnet's N pole [1m]. Because opposite poles attract , an upward magnetic force pulls the iron towards the crane [1m]. 💡 Intuition Check: Soft iron + electric current = controllable temporary magnetism: switch ON to pick up tonnes of steel, switch OFF to drop it cleanly!",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Tự luận Paper 3 & 4 [5 điểm] A scrapyard crane uses an electromagnet rather than a permanent magnet to lift and move scrap iron. (a) State two ways in which an electromagnet differs from a permanent magnet, and name the best material for the electromagnet core. (b) When switched on, the bottom of the electromagnet is an N pole . Explain, in terms of induced magnetism, why an unmagnetised piece of iron below it is attracted upwards. (Cần cẩu bãi phế liệu dùng nam châm điện thay vì nam châm vĩnh cửu. (a) Nêu 2 điểm khác biệt của nam châm điện so với nam châm vĩnh cửu và gọi tên vật liệu làm lõi tốt nhất. (b) Khi bật điện, đầu dưới nam châm điện là cực N; giải thích bằng nhiễm từ cảm ứng tại sao miếng sắt bên dưới bị hút lên.) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Nam châm điện có thể bật và tắt từ tính và thay đổi được độ mạnh từ trường (bằng cách chỉnh dòng điện), trong khi nam châm vĩnh cửu luôn có từ tính cố định .2. Vật liệu làm lõi: soft iron (sắt non) . (b) Nam châm điện gây ra nhiễm từ cảm ứng (induced magnetism) trên miếng sắt, tạo thành cực S cảm ứng ở đầu trên (gần cực N nhất) . Vì hai cực khác tên hút nhau nên miếng sắt bị hút lên . 💡 Kiểm tra bản chất: Lõi sắt non + dòng điện = nam châm bật/tắt tùy ý: đóng điện để nhấc hàng tấn sắt, ngắt điện là thả rơi ngay!",
+      "duration": 184.24,
+      "startTime": 865.34,
+      "endTime": 1049.58,
+      "audioUrl": "/audio/lectures/science/p4/s01_b09.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⚡ P4.2 Các Đại lượng Điện: Điện tích, Điện trường, Dòng điện & Điện áp",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⚡ P4.2 Electrical Quantities: Charge, Electric Fields, Current & Voltage.",
+      "vi": "⚡ P4.2 Các Đại lượng Điện: Điện tích, Điện trường, Dòng điện & Điện áp.",
+      "duration": 12.74,
+      "startTime": 1049.58,
+      "endTime": 1062.32,
+      "audioUrl": "/audio/lectures/science/p4/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture a closed water-park loop: the pump pressure pushing water around the entire circuit is the source's voltage / e.m.f. (the cause of current); the drops across two waterwheels in a single loop share that total pump height ( Vsource= V₁ + V₂ ); and the number of water buckets passing a point every second is the current ( I = Q / t ) .",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung hệ thống ống nước tuần hoàn: áp lực máy bơm đẩy nước chạy quanh mạch chính là điện áp nguồn (source voltage / e.m.f.) — nguyên nhân sinh ra dòng điện; độ sụt áp qua các guồng nước mắc nối tiếp cộng lại đúng bằng áp lực nguồn ( Vsource= V₁ + V₂ ); còn lượng nước chảy qua mỗi giây là dòng điện ( I = Q / t ) .",
+      "duration": 47.87,
+      "startTime": 1062.32,
+      "endTime": 1110.19,
+      "audioUrl": "/audio/lectures/science/p4/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Friction Charging & Fields (🟦 Core / 🟩 Supplement): Charging solids by friction transfers negative electrons ONLY . Charge is measured in coulombs (C) . An electric field is a region where an electric charge experiences a force; its direction is the direction of the force on a positive (+q) charge . 2. Current in Metals (🟦 Core / 🟩 Supplement): Conduction in metals is the movement of delocalised (mobile) electrons from − to + , opposite to conventional current (+ to −) . Equation: I = Q / t . 3. Voltage, e.m.f. & p.d. (🟦 Core / 🟩 Supplement): Source voltage causes current and is shared in series. e.m.f. = electrical work done by a source moving a unit charge around a complete circuit (V); p.d. = work done by a unit charge passing between two points (V).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Nhiễm điện & Điện trường (🟦 Core / 🟩 Supplement): Cọ xát chất rắn CHỈ truyền electron mang điện âm . Điện tích đo bằng coulomb (C) . Chiều electric field là chiều lực điện tác dụng lên điện tích dương (+q) . 2. Dòng điện trong kim loại (🟦 Core / 🟩 Supplement): Kim loại dẫn điện nhờ các delocalised (mobile) electrons chạy từ − sang + , ngược chiều conventional current (+ sang −) . Công thức: I = Q / t . 3. Điện áp, e.m.f. & p.d. (🟦 Core / 🟩 Supplement): Điện áp nguồn tạo ra dòng điện và chia sẻ giữa các linh kiện mắc nối tiếp. e.m.f. = công điện của nguồn đưa 1 đơn vị điện tích đi hết mạch kín (V); p.d. = công của 1 đơn vị điện tích đi qua giữa hai điểm (V).",
+      "duration": 117.65,
+      "startTime": 1110.19,
+      "endTime": 1227.84,
+      "audioUrl": "/audio/lectures/science/p4/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say \"positive protons move\" during charging by friction — protons stay locked in the nucleus; a positive rod lost electrons ! Also always convert minutes into seconds before using Q = I × t .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không viết \"proton di chuyển\" khi giải thích nhiễm điện do cọ xát — vật tích điện dương là do mất bớt electron ! Và luôn đổi phút sang giây (seconds) khi tính Q = I × t .",
       "duration": 32.25,
-      "startTime": 240.22,
-      "endTime": 272.47,
-      "audioUrl": "/audio/lectures/science/p4/sec_potential_dividers.mp3"
+      "startTime": 1227.84,
+      "endTime": 1260.09,
+      "audioUrl": "/audio/lectures/science/p4/s02_b03.mp3"
     },
     {
-      "id": "sec_electromagnetic_effects",
-      "title": "3. Tác dụng Điện từ: Cảm ứng, Động cơ & Biến áp (EM Effects Overview)",
-      "selector": "#sec-electromagnetic-effects",
-      "en": "Section 3 covers electromagnetic effects: A moving conductor cutting magnetic field lines induces an e.m.f. The motor effect uses Fleming's left-hand rule. Transformers change alternating voltages via ratio Vp over Vs equals Np over Ns.",
-      "vi": "Mục ba nghiên cứu tác dụng điện từ: Dây dẫn chuyển động cắt các đường sức từ sẽ sinh ra suất điện động cảm ứng. Lực từ tác dụng lên dòng điện tuân theo quy tắc bàn tay trái Fleming. Máy biến áp biến đổi điện áp xoay chiều dựa trên tỉ số điện áp bằng tỉ số số vòng dây.",
-      "duration": 81.69,
-      "startTime": 272.47,
-      "endTime": 354.16,
-      "audioUrl": "/audio/lectures/science/p4/sec_electromagnetic_effects.mp3"
+      "id": "s02_b04",
+      "title": "P4.2.1 Nhiễm điện do Cọ xát (Charging by Friction)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "P4.2.1 Electrostatic Charging by Friction. Two types of charge: positive (+) and negative (−) , measured in coulombs (C) (Supplement) . Like charges repel; opposite charges attract. CRUCIAL EXAM RULE: Charging solids by friction involves ONLY the transfer of negative electrons ! Protons are locked inside the atomic nucleus and NEVER move. Gaining electrons ⇒ becomes negatively charged (e.g. polythene rod rubbed with dry cloth). Losing electrons ⇒ leaves excess protons ⇒ becomes positively charged (e.g. cellulose acetate / Perspex rod). Detection: Attracting tiny uncharged paper pieces by electrostatic induction, or deflecting a gold-leaf electroscope / suspended charged rod on an insulating thread.",
+      "vi": "P4.2.1 Nhiễm điện do Cọ xát. Có 2 loại điện tích: dương (+) và âm (−) , đơn vị là coulomb (C) (Supplement) . Điện tích cùng dấu đẩy nhau ( repel ), trái dấu hút nhau ( attract ). QUY TẮC SỐNG CÒN TRONG PHÒNG THI: Sự nhiễm điện do cọ xát của chất rắn CHỈ liên quan đến sự dịch chuyển của các electron mang điện âm ! Hạt proton nằm chặt trong hạt nhân và TUYỆT ĐỐI KHÔNG di chuyển. Vật nhận thêm electron (gains electrons) ⇒ nhiễm điện âm (−) (VD: thanh nhựa polythene cọ với vải khô). Vật mất bớt electron (loses electrons) ⇒ dư proton ⇒ nhiễm điện dương (+) (VD: thanh nhựa acetate / Perspex).",
+      "duration": 100.5,
+      "startTime": 1260.09,
+      "endTime": 1360.59,
+      "audioUrl": "/audio/lectures/science/p4/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Chất Dẫn điện vs Chất Cách điện (Conductors vs Insulators)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Conductors vs Insulators (Electron Model). Electrical Conductors: Contain delocalised (free) electrons loosely held to atoms that drift freely between metal ions when a p.d. is applied. Examples: all metals (copper, silver, aluminium, iron) and graphite (carbon). Electrical Insulators: Electrons are tightly bound to their atoms and cannot move freely. Examples: plastics (polythene, PVC), rubber, glass, dry wood, air. Testing Experiment: Connect a cell, lamp (or ammeter), and crocodile clips in series; insert test sample between clips — lamp lights / ammeter reads current for a conductor , zero reading for an insulator.",
+      "vi": "Chất Dẫn điện vs Chất Cách điện. Chất dẫn điện (Electrical Conductors): Có các electron tự do chuyển động tự do giữa các ion kim loại khi có hiệu điện thế. Ví dụ: mọi kim loại (đồng, bạc, nhôm, sắt) và than chì (graphite). Chất cách điện (Electrical Insulators): Các electron bị giữ chặt vào nguyên tử (tightly bound) , không thể di chuyển tự do. Ví dụ: nhựa (polythene, PVC), cao su, thủy tinh, gỗ khô. Thí nghiệm phân biệt: Mắc nối tiếp nguồn điện, bóng đèn/ampe kế và 2 kẹp cá sấu; kẹp vật mẫu vào giữa — đèn sáng là conductor , đèn tắt là insulator.",
+      "duration": 93.37,
+      "startTime": 1360.59,
+      "endTime": 1453.96,
+      "audioUrl": "/audio/lectures/science/p4/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "• Định nghĩa: Điện trường (electric field) là vùng không gian mà tại đó một điện...",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "• Definition: An electric field is a region in which an electric charge experiences a force .• Direction Rule: The direction of an electric field at any point is the direction of the force on a POSITIVE (+q) charge placed at that point (away from + , towards − ). Closer lines = stronger electric field.",
+      "vi": "• Định nghĩa: Điện trường (electric field) là vùng không gian mà tại đó một điện tích chịu tác dụng của lực điện .• Chiều điện trường: Là chiều của lực điện tác dụng lên một điện tích DƯƠNG đặt tại điểm đó (hướng ra xa + , đi vào − ).",
+      "duration": 36.97,
+      "startTime": 1453.96,
+      "endTime": 1490.93,
+      "audioUrl": "/audio/lectures/science/p4/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "(a) Điện tích điểm (+Q / Point Charge) Đường thẳng tỏa xuyên tâm (radial) hướng ...",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "(a) Around a Point Charge (+Q) Radial straight lines pointing outwards from +Q (inwards if −Q).",
+      "vi": "(a) Điện tích điểm (+Q / Point Charge) Đường thẳng tỏa xuyên tâm (radial) hướng ra khỏi +Q (hướng vào nếu −Q).",
+      "duration": 17.83,
+      "startTime": 1490.93,
+      "endTime": 1508.76,
+      "audioUrl": "/audio/lectures/science/p4/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "(b) Quả cầu dẫn tích điện (Conducting Sphere) Điện tích nằm trên bề mặt; đường s...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "(b) Charged Conducting Sphere Charges sit on surface; lines meet surface at 90° (radial outside, zero inside).",
+      "vi": "(b) Quả cầu dẫn tích điện (Conducting Sphere) Điện tích nằm trên bề mặt; đường sức vuông góc 90° với mặt cầu (bên trong E = 0).",
+      "duration": 19.88,
+      "startTime": 1508.76,
+      "endTime": 1528.64,
+      "audioUrl": "/audio/lectures/science/p4/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "(c) Hai bản phẳng song song (Parallel Plates) Điện trường đều (uniform field): s...",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "(c) Parallel Oppositely Charged Plates Uniform field: parallel, straight, evenly spaced lines from + to − .",
+      "vi": "(c) Hai bản phẳng song song (Parallel Plates) Điện trường đều (uniform field): song song, cách đều nhau từ bản + sang − .",
+      "duration": 18.45,
+      "startTime": 1528.64,
+      "endTime": 1547.09,
+      "audioUrl": "/audio/lectures/science/p4/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "P4.2.2 Dòng điện (Current I), Ampe kế & d.c. vs a.c.",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "P4.2.2 Electric Current (I), Ammeters & DC vs AC. I = Q / t ⇔ Q = I × t (1 A = 1 C/s) Definition: Charge passing a point per unit time. Conventional Current vs Electrons: Conventional current flows from positive (+) to negative (−) ; free electrons actually flow in the opposite direction, from negative (−) to positive (+) ! Ammeter: Connected in series (negligible resistance). Start on largest range (e.g. 0–10 A), then select smallest suitable range (e.g. 0–100 mA for 0.02 A) for highest precision. d.c. vs a.c.: Direct current (cells/batteries) flows in one direction only ; alternating current (mains, e.g. 50 Hz) reverses direction repeatedly.",
+      "vi": "P4.2.2 Dòng điện (Current I), Ampe kế & d.c. vs a.c. I = Q / t ⇔ Q = I × t (1 A = 1 C/s) Định nghĩa: Điện lượng dịch chuyển qua một điểm trong một đơn vị thời gian. Chiều dòng điện quy ước (Conventional current): Đi từ dương (+) sang âm (−) ; ngược lại, dòng electron tự do (free electrons) chạy từ âm (−) sang dương (+) ! Ammeter (Ampe kế): Mắc nối tiếp (in series) ; chọn thang đo lớn trước (0–10 A) rồi hạ xuống thang nhỏ phù hợp (VD: 0–100 mA) để đọc chính xác nhất. d.c. vs a.c.: Dòng một chiều ( direct current , pin/ắc quy) chỉ chảy theo 1 chiều; dòng xoay chiều ( alternating current , điện lưới) đảo chiều liên tục theo tần số f (Hz).",
+      "duration": 117.59,
+      "startTime": 1547.09,
+      "endTime": 1664.68,
+      "audioUrl": "/audio/lectures/science/p4/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "P4.2.3 Điện áp Nguồn, Suất điện động (e.m.f.) & Hiệu điện thế (p.d.)",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "P4.2.3 Source Voltage, e.m.f. & Potential Difference (p.d.). Source Voltage causes Current | Vsource= V₁ + V₂ (in series) Core: The voltage of the source is the cause of current in a circuit, and is shared between components in a series circuit. e.m.f. (Supplement): The electrical work done by a source in moving a unit charge around a complete circuit , measured in volts (V). p.d. (Supplement): The work done by a unit charge passing between two points in a circuit, measured in volts (V). Voltmeter (Analogue & Digital): Connected in parallel across the component (very high resistance), choosing a suitable scale/range (e.g. 0–5 V or 0–20 V). Both e.m.f. and p.d. are measured in volts (V).",
+      "vi": "P4.2.3 Điện áp Nguồn, Suất điện động (e.m.f.) & Hiệu điện thế (p.d.). Điện áp nguồn sinh ra dòng điện | Vnguồn= V₁ + V₂ (mạch nối tiếp) Core: Điện áp nguồn là nguyên nhân tạo ra dòng điện và được chia sẻ giữa các linh kiện mắc nối tiếp. Suất điện động — e.m.f. (Supplement): Công điện mà nguồn điện (source) thực hiện để đưa một đơn vị điện tích đi hết một vòng mạch kín , đơn vị volts (V). Hiệu điện thế — p.d. (Supplement): Công thực hiện bởi một đơn vị điện tích đi qua giữa hai điểm trong mạch, đơn vị volts (V). Voltmeter (Vôn kế kim & hiện số — Analogue & Digital): Luôn mắc song song (in parallel) với linh kiện cần đo và chọn thang đo phù hợp; đơn vị của cả e.m.f. và p.d. là vôn (volts, V).",
+      "duration": 111.43,
+      "startTime": 1664.68,
+      "endTime": 1776.11,
+      "audioUrl": "/audio/lectures/science/p4/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A polythene rod is rubbed with a dry woollen cloth and becomes negatively charged. An electron is then placed between two parallel horizontal metal plates where the top plate is positively charged (+) and the bottom plate is negatively charged (−). Which row correctly describes how the rod became charged and the direction of the electric field and force on the electron? A. Rod gained electrons | Electric field: downwards | Force on electron: upwards B. Rod gained electrons | Electric field: upwards | Force on electron: downwards C. Rod lost protons | Electric field: downwards | Force on electron: upwards D. Rod lost electrons | Electric field: downwards | Force on electron: downwards ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: 1) Friction transfers electrons only : gaining electrons makes the polythene rod negative.2) Electric field direction = force on a positive charge → from top (+) to bottom (−) = downwards .3) A negative electron experiences a force opposite to the field (towards the positive top plate) = upwards .",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 A polythene rod is rubbed with a dry woollen cloth and becomes negatively charged. An electron is then placed between two parallel horizontal metal plates where the top plate is positively charged (+) and the bottom plate is negatively charged (−). Which row correctly describes how the rod became charged and the direction of the electric field and force on the electron? (Thanh polythene cọ với khăn len khô trở nên tích điện âm. Đặt một electron giữa hai bản kim loại nằm ngang có bản trên dương (+) và bản dưới âm (−). Dòng nào mô tả đúng sự nhiễm điện của thanh, chiều điện trường và lực lên electron?) A. Rod gained electrons | Electric field: downwards | Force on electron: upwards B. Rod gained electrons | Electric field: upwards | Force on electron: downwards C. Rod lost protons | Electric field: downwards | Force on electron: upwards D. Rod lost electrons | Electric field: downwards | Force on electron: downwards ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Thanh tích điện âm do nhận thêm electron (gained electrons) . Chiều điện trường hướng từ (+) sang (−) tức xuống dưới (downwards) ; electron mang điện âm nên chịu lực điện ngược chiều điện trường hướng lên trên (upwards) !",
+      "duration": 160.22,
+      "startTime": 1776.11,
+      "endTime": 1936.33,
+      "audioUrl": "/audio/lectures/science/p4/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] A 9.0 V battery is connected in series with a lamp and a resistor. A voltmeter across the lamp reads 5.5 V , and an ammeter in the circuit reads 0.25 A . (a) Calculate the potential difference across the resistor, and state how the voltmeter must be connected to measure it. [2] (b) Calculate the total charge passing through the ammeter in 4.0 minutes . [3] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Source voltage is shared in series: Vresistor = 9.0 V − 5.5 V = 3.5 V [1m].2. Connect the voltmeter in parallel across the resistor [1m]. (b) 1. Convert time to seconds: t = 4.0 × 60 = 240 s [1m].2. Formula & substitution: Q = I × t = 0.25 A × 240 s [1m] = 60 C [1m]. 💡 Intuition Check: Ammeters have tiny resistance and go IN the loop (series) to count coulombs/s; voltmeters have huge resistance and clip ACROSS two points (parallel) to measure voltage drop!",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Tự luận Paper 4 [5 điểm] A 9.0 V battery is connected in series with a lamp and a resistor. A voltmeter across the lamp reads 5.5 V , and an ammeter in the circuit reads 0.25 A . (a) Calculate the potential difference across the resistor, and state how the voltmeter must be connected to measure it. (b) Calculate the total charge passing through the ammeter in 4.0 minutes . (Pin 9.0 V mắc nối tiếp với bóng đèn và một điện trở. Vôn kế hai đầu bóng đèn chỉ 5.5 V, ampe kế chỉ 0.25 A. (a) Tính hiệu điện thế hai đầu điện trở và nêu cách mắc vôn kế. (b) Tính tổng điện lượng qua ampe kế trong 4.0 phút.) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Điện áp nguồn chia sẻ trong mạch nối tiếp: Vresistor = 9.0 V − 5.5 V = 3.5 V .2. Vôn kế phải mắc song song (in parallel) với điện trở . (b) 1. Đổi thời gian ra giây: t = 4.0 × 60 = 240 s .2. Áp dụng Q = I × t = 0.25 A × 240 s = 60 C . 💡 Kiểm tra bản chất: Ampe kế luôn mắc nối tiếp (in series) để đếm dòng chảy; vôn kế luôn mắc song song (in parallel) kẹp hai đầu linh kiện để đo độ sụt điện áp!",
+      "duration": 184.63,
+      "startTime": 1936.33,
+      "endTime": 2120.96,
+      "audioUrl": "/audio/lectures/science/p4/s02_b13.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "📏 P4.2.4–P4.2.5 Điện trở Dây dẫn, Đồ thị I–V Điện trở không đổi & Tiền điện (kWh)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "📏 P4.2.4–P4.2.5 Resistance, Wire Dimensions, Constant-R I–V Graph & Power.",
+      "vi": "📏 P4.2.4–P4.2.5 Điện trở Dây dẫn, Đồ thị I–V Điện trở không đổi & Tiền điện (kWh).",
+      "duration": 18.99,
+      "startTime": 2120.96,
+      "endTime": 2139.95,
+      "audioUrl": "/audio/lectures/science/p4/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine commuters squeezing through a corridor: a twice-as-long corridor ( 2L ) doubles the struggle ( 2R ), while a twice-as-wide doorway area ( 2A ) halves the struggle ( R/2 ). And for household bills, Watts (W) is how fast your tap pours energy, whereas kilowatt-hours (kWh) is the total buckets of energy collected on your electricity meter!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung dòng electron chui qua một hành lang hẹp: hành lang dài gấp đôi ( 2L ) làm nỗi vất vả tăng gấp đôi ( 2R ), còn cửa hành lang rộng gấp đôi diện tích ( 2A ) giúp giảm một nửa cản trở ( R/2 ). Khi tính tiền điện gia đình: Watt (W) là tốc độ vòi nước chảy mạnh hay yếu, còn kilowatt-hour (kWh) là tổng số xô điện năng mà đồng hồ điện lực đếm được để thu tiền!",
+      "duration": 57.23,
+      "startTime": 2139.95,
+      "endTime": 2197.18,
+      "audioUrl": "/audio/lectures/science/p4/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Resistance & Wire Geometry (🟦 Core / 🟩 Supplement): R = V / I (Ω). For a metal wire at constant temperature, R ∝ L and R ∝ 1 / A . Since circular area A = πd²/4 , doubling wire diameter 2d quadruples area 4A and divides resistance by 4 ! 2. Three I–V Graphs (🟩 Supplement): Ohmic resistor = straight line through origin (constant R ); Filament lamp = flattening S-curve (hotter ions vibrate more → R increases); Diode = zero current in reverse bias, steep rise above ~0.6 V in forward bias. 3. Power, Energy & kWh Billing (🟦 Core): P = IV (W), E = IVt (J, with t in seconds). For utility bills: Energy (kWh) = Power (kW) × Time (hours) .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Điện trở & Kích thước dây (🟦 Core / 🟩 Supplement): R = V / I (Ω). Với dây kim loại đẳng nhiệt: R ∝ L và R ∝ 1 / A . Vì tiết diện tròn A = πd²/4 , nếu đường kính tăng gấp đôi ( 2d ) thì tiết diện tăng 4 lần (4A) và điện trở giảm đi 4 lần (R/4) ! 2. Ba đồ thị I–V (🟩 Supplement): Điện trở thuần ( constant resistance ) = đường thẳng qua gốc (0,0); Đèn dây tóc ( filament lamp ) = cong chữ S thoải dần do dây nóng lên làm R tăng; Đi-ốt ( diode ) = chặn dòng ngược, chỉ dẫn mạnh theo chiều thuận trên ~0.6 V. 3. Công suất & Hóa đơn kWh (🟦 Core): P = IV (W), E = IVt (J, t tính bằng giây). Tính tiền điện: Energy (kWh) = Power (kW) × Time (hours) .",
+      "duration": 125.52,
+      "startTime": 2197.18,
+      "endTime": 2322.7,
+      "audioUrl": "/audio/lectures/science/p4/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two huge unit traps: (1) In E = IVt (Joules), time MUST be in seconds , whereas in kWh = kW × h , power MUST be divided by 1000 into kilowatts and time MUST be in hours ! (2) Doubling wire diameter divides resistance by 4 (not 2!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai cái bẫy làm mất điểm nhiều nhất: (1) Dùng E = IVt (ra Joule) thì t tính bằng giây , nhưng tính số điện kWh = kW × h thì BẮT BUỘC chia công suất cho 1000 ra kW và đổi thời gian ra giờ (hours) ! (2) Gấp đôi đường kính dây (diameter) làm giảm điện trở 4 lần chứ không phải 2 lần!",
+      "duration": 46.8,
+      "startTime": 2322.7,
+      "endTime": 2369.5,
+      "audioUrl": "/audio/lectures/science/p4/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "⚡ Electricity Formula Triangles (Tam giác Công thức Điện)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "⚡ Electricity Formula Triangles (Hover or Click to Inspect). Ohm's Law Ohm's Law. Power Electrical Power. Panel Hover over formula triangles 👆. Determining Resistance Experiment: Connect an ammeter in series with the unknown wire/resistor, a voltmeter in parallel across it, and a variable resistor (or variable power supply) to record multiple ( V , I ) pairs and compute R = V / I.",
+      "vi": "⚡ Electricity Formula Triangles (Tam giác Công thức Điện). Ohm's Law. Electrical Power. Thí nghiệm xác định Điện trở (Resistance Experiment): Mắc ammeter nối tiếp với điện trở cần đo, voltmeter song song hai đầu nó, dùng biến trở ( variable resistor ) thay đổi dòng để ghi nhiều cặp ( V , I ) rồi tính trung bình R = V / I.",
+      "duration": 54.37,
+      "startTime": 2369.5,
+      "endTime": 2423.87,
+      "audioUrl": "/audio/lectures/science/p4/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🚨 Tỉ lệ Điện trở Dây dẫn & Bẫy Đường kính Dây (Diameter Trap)!",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🚨 Quantitative Wire Resistance Proportions & The Diameter Trap! SUPPLEMENT P4.2.4 • Length ( L ): Resistance is directly proportional to length ( R ∝ L ). Doubling length 2L ⇒ doubles R (2R) .• Cross-Sectional Area ( A ): Resistance is inversely proportional to cross-sectional area ( R ∝ 1 / A ). Doubling area 2A ⇒ halves R (R / 2) .• Combined Ratio: R₂ / R₁ = (L₂ / L₁) × (A₁ / A₂) . ⚠️ CAMBRIDGE DIAMETER EXAM TRAP: A circular wire has cross-sectional area A = πr² = πd² / 4 , so A ∝ d² !⇒ Doubling the diameter (2d) makes the area 4 times larger (4A) , which divides resistance by 4 ( Rnew= R / 4 )! Worked Check: Wire X has R = 12 Ω. Wire Y of the same metal has 3× the length and 2× the diameter : RY= 12 × 3 ÷ (2²) = 36 ÷ 4 = 9.0 Ω !",
+      "vi": "🚨 Tỉ lệ Điện trở Dây dẫn & Bẫy Đường kính Dây (Diameter Trap)! SUPPLEMENT P4.2.4 • Chiều dài (Length L ): Điện trở tỉ lệ thuận với chiều dài ( R ∝ L ). Tăng gấp đôi 2L ⇒ điện trở tăng gấp đôi (2R) .• Tiết diện ngang: Điện trở tỉ lệ nghịch với tiết diện ( R ∝ 1 / A ). Tăng gấp đôi tiết diện 2A ⇒ điện trở giảm một nửa (R / 2) .• Công thức tỉ số gộp: R₂ / R₁ = (L₂ / L₁) × (A₁ / A₂) . ⚠️ BẪY ĐỀ THI CAMBRIDGE VỀ ĐƯỜNG KÍNH (DIAMETER d ): Dây tròn có tiết diện A = πr² = πd² / 4 nên A ∝ d² !⇒ Khi đường kính tăng gấp đôi (2d) , tiết diện tăng gấp 4 lần (4A) , làm điện trở giảm đi 4 lần (Rmới= R / 4) ! Ví dụ mẫu: Dây X có R = 12 Ω. Dây Y cùng kim loại có chiều dài 3L và đường kính 2d : RY= 12 × 3 ÷ (2²) = 36 ÷ 4 = 9.0 Ω !",
+      "duration": 145.77,
+      "startTime": 2423.87,
+      "endTime": 2569.64,
+      "audioUrl": "/audio/lectures/science/p4/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "📈 Đồ thị Đặc tuyến I–V của Điện trở Không đổi (Constant-Resistance Resistor — Supplement P4.2.4",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "📈 Current–Voltage (I–V) Graph of a Constant-Resistance Resistor (Supplement P4.2.4). SUPPLEMENT P4.2.4.3 • Sketch Shape: A straight line passing directly through the origin (0, 0) .• Explanation: At constant temperature, the current I through an ohmic resistor is directly proportional to the potential difference V across it (doubling V doubles I ), so the ratio R = V / I remains constant in both forward and reverse directions.",
+      "vi": "📈 Đồ thị Đặc tuyến I–V của Điện trở Không đổi. SUPPLEMENT P4.2.4.3 • Dạng đồ thị: Một đường thẳng đi qua gốc tọa độ .• Giải thích chuẩn thi: Khi nhiệt độ không đổi, cường độ dòng điện I chạy qua điện trở tỉ lệ thuận (directly proportional) với hiệu điện thế V hai đầu nó, nên tỉ số R = V / I luôn là hằng số theo cả hai chiều dòng điện.",
+      "duration": 56.01,
+      "startTime": 2569.64,
+      "endTime": 2625.65,
+      "audioUrl": "/audio/lectures/science/p4/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "💰 P4.2.5 Tính Tiền Điện Gia Đình: Đơn vị Kilowatt-giờ (kWh)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "💰 P4.2.5 Paying for Household Electricity: The Kilowatt-Hour (kWh). • Definition: 1 kilowatt-hour (1 kWh) is the electrical energy transferred by a 1 kW appliance operating for 1 hour .• Conversion to Joules: 1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J .• Billing Equations: Energy (kWh) = Power (kW) × Time (hours) | Total Cost = kWh × Price per kWh 📝 Worked Exam Examples: 1) A 2400 W heater runs for 30 minutes (0.5 h) where 1 kWh costs $0.25 :→ P = 2.4 kW; Energy = 2.4 × 0.5 = 1.2 kWh ; Cost = 1.2 × $0.25 = $0.30 . 2) Travel kettle rated 800 W at 230 V : I = 800/230 = 3.48 A , element R = 230/3.48 = 66.1 Ω . Used in a 110 V country: I new= 110/66.1 = 1.66 A , P new= 110 × 1.66 = 183 W (takes ~4.4× longer to boil water!).",
+      "vi": "💰 P4.2.5 Tính Tiền Điện Gia Đình: Đơn vị Kilowatt-giờ (kWh). • Định nghĩa: 1 kilowatt-hour (1 kWh) là điện năng tiêu thụ bởi một thiết bị có công suất 1 kW hoạt động trong 1 giờ .• Đổi sang Joule: 1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J .• Công thức tính hóa đơn tiền điện: Điện năng (kWh) = P (kW) × t (giờ) | Chi phí = Số kWh × Đơn giá/kWh 📝 Bài tập Mẫu chuẩn Hodder IGCSE: 1) Máy sưởi 2400 W bật trong 30 phút (0.5 h), giá điện $0.25 / kWh :→ Đổi P = 2.4 kW; Điện năng = 2.4 × 0.5 = 1.2 kWh ; Tiền điện = 1.2 × $0.25 = $0.30 . 2) Ấm đun du lịch 800 W – 230 V : I = 800/230 = 3.48 A , R = 230/3.48 = 66.1 Ω . Mang sang quốc gia dùng điện 110 V : I mới= 110/66.1 = 1.66 A , P mới= 110 × 1.66 = 183 W (nước cực lâu sôi!).",
+      "duration": 185.95,
+      "startTime": 2625.65,
+      "endTime": 2811.6,
+      "audioUrl": "/audio/lectures/science/p4/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A nichrome wire of length L and diameter d has a resistance of 16 Ω . A second wire made of the same nichrome alloy at the same temperature has length 2 L and diameter 2 d . What is the resistance of the second wire? A. 4.0 Ω B. 8.0 Ω C. 16 Ω D. 32 Ω ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Step 1 (Length effect): Doubling length from L to 2 L multiplies resistance by 2 → 16 × 2 = 32 Ω.Step 2 (Diameter/Area effect): Doubling diameter from d to 2 d increases cross-sectional area by 2² = 4 times (4 A ). Since R ∝ 1/A , divide by 4 → 32 ÷ 4 = 8.0 Ω ! Option C (16 Ω) is the classic trap when students divide by 2 instead of 2².",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 A nichrome wire of length L and diameter d has a resistance of 16 Ω . A second wire made of the same nichrome alloy at the same temperature has length 2 L and diameter 2 d . What is the resistance of the second wire? (Một sợi dây nichrome chiều dài L, đường kính d có điện trở 16 Ω. Sợi dây thứ hai cùng làm bằng hợp kim nichrome ở cùng nhiệt độ có chiều dài 2L và đường kính 2d. Điện trở của dây thứ hai bằng bao nhiêu?) A. 4.0 Ω B. 8.0 Ω C. 16 Ω D. 32 Ω ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: • Bước 1 (Chiều dài): Tăng chiều dài từ L lên 2 L làm điện trở nhân 2 → 16 × 2 = 32 Ω.• Bước 2 (Đường kính → Tiết diện): Đường kính tăng gấp đôi (2 d ) làm tiết diện ngang A = πd²/4 tăng gấp 2² = 4 lần ! Vì R ∝ 1/A nên chia 4: 32 ÷ 4 = 8.0 Ω . Đáp án C (16 Ω) là bẫy kinh điển khi quên bình phương đường kính!",
+      "duration": 137.66,
+      "startTime": 2811.6,
+      "endTime": 2949.26,
+      "audioUrl": "/audio/lectures/science/p4/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 4 Calculation [6 marks] An electric clothes dryer is rated at 2760 W when connected to a 230 V mains supply. (a) Calculate the current in the heating element during normal operation, and hence calculate its resistance. [3] (b) The dryer is switched on for 45 minutes . Electricity costs $0.20 per kWh . Calculate the electrical energy used in kWh and the cost of running the dryer. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Current: I = P / V = 2760 W / 230 V = 12.0 A [1m].2. Resistance: R = V / I = 230 V / 12.0 A [1m] = 19.2 Ω (19.17 Ω) [1m]. (b) 1. Convert to kW and hours: P = 2760 / 1000 = 2.76 kW ; t = 45 / 60 = 0.75 h [1m].2. Energy in kWh: E = 2.76 kW × 0.75 h = 2.07 kWh [1m].3. Cost = 2.07 kWh × $0.20 = $0.41 ($0.414) [1m]. 💡 Intuition Check: Notice how 45 minutes is 0.75 hours (NOT 0.45 hours!) and 2760 W is 2.76 kW. Always convert W → kW and minutes → hours before multiplying for kWh!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Tính toán Paper 4 [6 điểm] An electric clothes dryer is rated at 2760 W when connected to a 230 V mains supply. (a) Calculate the current in the heating element during normal operation, and hence calculate its resistance. (b) The dryer is switched on for 45 minutes . Electricity costs $0.20 per kWh . Calculate the electrical energy used in kWh and the cost of running the dryer. (Máy sấy quần áo có thông số định mức 2760 W – 230 V. (a) Tính dòng điện chạy qua dây đốt nóng và điện trở của nó. (b) Bật máy sấy trong 45 phút với giá điện $0.20/kWh. Tính điện năng tiêu thụ theo kWh và số tiền điện phải trả.) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Cường độ dòng điện: I = P / V = 2760 W / 230 V = 12.0 A .2. Điện trở dây đốt: R = V / I = 230 V / 12.0 A = 19.2 Ω (19.17 Ω) . (b) 1. Đổi sang kW và giờ: P = 2760 / 1000 = 2.76 kW ; t = 45 / 60 = 0.75 h .2. Điện năng tiêu thụ: E = 2.76 kW × 0.75 h = 2.07 kWh .3. Tiền điện = 2.07 kWh × $0.20 = $0.41 ($0.414) . 💡 Kiểm tra bản chất: Cẩn thận khi đổi phút sang giờ: 45 phút = 45/60 = 0.75 giờ (chứ không phải 0.45 giờ!), và 2760 W = 2.76 kW!",
+      "duration": 247.5,
+      "startTime": 2949.26,
+      "endTime": 3196.76,
+      "audioUrl": "/audio/lectures/science/p4/s03_b09.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🔌 P4.3 Mạch Điện: Bảng Ký hiệu chuẩn 0654 & Mạch Nối tiếp vs Song song",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🔌 P4.3 Electrical Circuits: 0654 Circuit Symbols & Series vs Parallel Laws.",
+      "vi": "🔌 P4.3 Mạch Điện: Bảng Ký hiệu chuẩn 0654 & Mạch Nối tiếp vs Song song.",
+      "duration": 14.8,
+      "startTime": 3196.76,
+      "endTime": 3211.56,
+      "audioUrl": "/audio/lectures/science/p4/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a Series Circuit as a single-lane tunnel : every car (charge) must pass through every tollbooth one after another, so traffic flow ( current I ) is identical everywhere and queues add up ( Rtotal= R₁ + R₂ ). A Parallel Circuit is like opening multiple supermarket checkout lanes side-by-side: shoppers split across lanes ( Isource= I₁ + I₂ ), every shopper experiences the same full drop from entrance to exit ( Vsupply= V₁ = V₂ ), and opening an extra lane ALWAYS makes total traffic flow easier ( Rtotaldecreases! ).",
+      "vi": "🎯 Hình dung đời thường: Hãy coi Mạch nối tiếp (Series) như đường hầm 1 làn duy nhất : mọi chiếc xe (điện tích) bắt buộc nối đuôi nhau đi qua từng trạm thu phí nên lưu lượng xe ( current I ) bằng nhau ở mọi điểm và sự tắc nghẽn cộng dồn ( Rtotal= R₁ + R₂ ). Còn Mạch song song (Parallel) giống như mở nhiều quầy thu ngân siêu thị cạnh nhau: dòng khách tách ra ở ngã rẽ ( Isource= I₁ + I₂ ), mỗi quầy đều nối trực tiếp từ lối vào ra lối thoát ( Vsupply= V₁ = V₂ ), và mở thêm quầy thu ngân LUÔN làm dòng khách thoát nhanh hơn ( Rtotalgiảm xuống! ).",
+      "duration": 77.97,
+      "startTime": 3211.56,
+      "endTime": 3289.53,
+      "audioUrl": "/audio/lectures/science/p4/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Series Laws (🟦 Core / 🟩 Supplement): Same current everywhere ( I₁ = I₂ ); supply p.d. is shared ( Vtotal= V₁ + V₂ ); cell e.m.f.s add up when facing the same way; Rtotal= R₁ + R₂ . 2. Parallel Laws (🟦 Core / 🟩 Supplement): Same p.d. across every branch ( V₁ = V₂ = Vsupply ); currents split and recombine at junctions ( ΣIin= ΣIout , conserved charge); 1/Rtotal= 1/R₁ + 1/R₂ (combined resistance is ALWAYS less than the smallest branch resistor). 3. Parallel Lighting Advantages (🟦 Core): Full supply p.d. across each lamp, independent switching, and one blown bulb never breaks the other branches.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Định luật Mạch Nối tiếp (🟦 Core / 🟩 Supplement): Dòng điện như nhau ( I₁ = I₂ ); điện áp nguồn chia sẻ ( Vtotal= V₁ + V₂ ); các pin mắc nối tiếp cùng chiều thì cộng e.m.f.; Rtotal= R₁ + R₂ . 2. Định luật Mạch Song song (🟦 Core / 🟩 Supplement): Điện áp bằng nhau trên mọi nhánh ( V₁ = V₂ = Vsupply ); tổng dòng vào nút bằng tổng dòng ra khỏi nút ( ΣIin= ΣIout ); 1/Rtotal= 1/R₁ + 1/R₂ (luôn nhỏ hơn điện trở nhánh bé nhất!). 3. Ưu điểm mắc đèn song song trong nhà (🟦 Core): Mỗi đèn nhận đủ điện áp nguồn (sáng tối đa), bật/tắt riêng từng bóng, một bóng cháy các bóng khác vẫn sáng.",
+      "duration": 104.07,
+      "startTime": 3289.53,
+      "endTime": 3393.6,
+      "audioUrl": "/audio/lectures/science/p4/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When solving 1/Rtotal= 1/R₁ + 1/R₂ , many students write the fraction 1/Rtotal as their final answer and forget to FLIP IT (take the reciprocal) ! Quick sanity check: your final RtotalMUST be smaller than the smallest individual resistor .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi bấm máy tính 1/Rtotal= 1/R₁ + 1/R₂ , rất nhiều học sinh ra phân số 1/Rtotal rồi ghi luôn vào ô đáp án mà QUÊN NGHỊCH ĐẢO LẠI ! Hãy luôn tự kiểm tra: Rtotalsong song BẮT BUỘC phải nhỏ hơn điện trở thành phần nhỏ nhất .",
+      "duration": 38.85,
+      "startTime": 3393.6,
+      "endTime": 3432.45,
+      "audioUrl": "/audio/lectures/science/p4/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "📋 P4.3.1 Bảng Ký hiệu Sơ đồ Mạch điện chuẩn Cambridge 0654 (Circuit Symbols)",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "📋 P4.3.1 Official Cambridge 0654 Circuit Symbols Reference Card. Cell (long thin = +, short thick = −) Battery of Cells d.c. (+/-) & a.c. (~) Power Supplies Switch (Open & Closed) Fixed Resistor & Heater Variable Resistor (varies circuit I ) Lamp & Fuse (wire through box) Ammeter (A), Voltmeter (V) & Motor (M) Generator (G) & LED (Supplement)",
+      "vi": "📋 P4.3.1 Bảng Ký hiệu Sơ đồ Mạch điện chuẩn Cambridge 0654 (Circuit Symbols). Cell (Pin đơn) (dài mảnh = +, ngắn dày = −) Battery of Cells (Bộ nguồn pin) d.c. (+/-) & a.c. (~) Power Supplies Switch (Công tắc Mở & Đóng) Fixed Resistor & Heater (Bộ sưởi) Variable Resistor (Biến trở) Lamp (Đèn) & Fuse (Cầu chì) Ammeter (A), Voltmeter (V) & Motor (M) Generator (G) & LED (Supplement)",
+      "duration": 71.0,
+      "startTime": 3432.45,
+      "endTime": 3503.45,
+      "audioUrl": "/audio/lectures/science/p4/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "💡 Circuit Analyzer: Mạch Nối tiếp (Series) vs Mạch Song song (Parallel)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "💡 Interactive Circuit Analyzer: Series vs Parallel Circuits. Series Diagram Series Circuit. Parallel Diagram Parallel Circuit. Panel Hover over circuit diagrams 👆. Compare how Current, Voltage, Combined e.m.f., and Resistance behave in Series vs Parallel configurations.",
+      "vi": "💡 Circuit Analyzer: Mạch Nối tiếp (Series) vs Mạch Song song (Parallel). Series Circuit (Nối tiếp). Parallel Circuit (Song song). So sánh Cường độ dòng điện ( I ), Hiệu điện thế ( V ), Suất điện động bộ nguồn và Điện trở tổng ( R ).",
+      "duration": 40.64,
+      "startTime": 3503.45,
+      "endTime": 3544.09,
+      "audioUrl": "/audio/lectures/science/p4/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🏠 Tại sao Đèn Chiếu sáng Gia đình luôn mắc Song song (Parallel)? 1. Mỗi đèn đều ...",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🏠 Why Household Lamps are Connected in Parallel: 1. Every lamp receives the full mains supply voltage (e.g. 230 V), so all lamps shine at full normal brightness.2. Each lamp can be switched on and off independently .3. If one lamp filament blows/fails, the remaining branches stay complete and other lamps continue working .",
+      "vi": "🏠 Tại sao Đèn Chiếu sáng Gia đình luôn mắc Song song (Parallel)? 1. Mỗi đèn đều nhận trọn hiệu điện thế nguồn (mains p.d. ~230 V) nên sáng bình thường hết công suất.2. Có thể bật/tắt độc lập từng bóng đèn bằng công tắc riêng.3. Nếu một bóng đèn bị đứt tóc/cháy, các nhánh còn lại vẫn kín mạch và các đèn khác vẫn sáng bình thường .",
+      "duration": 49.6,
+      "startTime": 3544.09,
+      "endTime": 3593.69,
+      "audioUrl": "/audio/lectures/science/p4/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "📝 Ví dụ Tính Mạch Song song: Hai điện trở 6.0 Ω và 12 Ω mắc song song vào nguồn ...",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "📝 Worked Parallel Calculation: A 6.0 Ω and a 12 Ω resistor are connected in parallel across a 12 V battery:• 1/Rtotal= 1/6 + 1/12 = 3/12 ⇒ Rtotal= 4.0 Ω (< 6.0 Ω ✓).• Branch currents: I₁ = 12/6 = 2.0 A , I₂ = 12/12 = 1.0 A ⇒ Source current I = 2.0 + 1.0 = 3.0 A (= 12 V / 4.0 Ω ✓).",
+      "vi": "📝 Ví dụ Tính Mạch Song song: Hai điện trở 6.0 Ω và 12 Ω mắc song song vào nguồn 12 V :• 1/Rtotal= 1/6 + 1/12 = 3/12 ⇒ Rtotal= 4.0 Ω (nhỏ hơn 6.0 Ω ✓).• Dòng từng nhánh: I₁ = 12/6 = 2.0 A , I₂ = 12/12 = 1.0 A ⇒ Dòng tổng từ nguồn I = 2.0 + 1.0 = 3.0 A (= 12 V / 4.0 Ω ✓).",
+      "duration": 68.97,
+      "startTime": 3593.69,
+      "endTime": 3662.66,
+      "audioUrl": "/audio/lectures/science/p4/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / 🟩 SUPPLEMENT • Paper 2 MCQ Two identical lamps L₁ and L₂ are connected in parallel across a 6.0 V battery. Switch S is initially closed so both lamps are lit, and an ammeter in the main battery branch reads 0.80 A . Switch S in the branch of lamp L₂ is now opened. How do the brightness of L₁ and the ammeter reading change? A. Brightness of L₁ increases | Ammeter reading stays 0.80 A B. Brightness of L₁ stays the same | Ammeter reading decreases to 0.40 A C. Brightness of L₁ decreases | Ammeter reading decreases to 0.40 A D. Brightness of L₁ stays the same | Ammeter reading increases to 1.60 A ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: In parallel, each branch gets the full 6.0 V battery p.d. Opening switch S turns off L₂ , while L₁ still gets 6.0 V and draws 0.40 A → brightness of L₁ stays the same ! Main source current drops from 0.40 + 0.40 = 0.80 A to 0.40 A .",
+      "vi": "BÀI MẪU 1 🟦 CORE / 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Two identical lamps L₁ and L₂ are connected in parallel across a 6.0 V battery. Switch S is initially closed so both lamps are lit, and an ammeter in the main battery branch reads 0.80 A . Switch S in the branch of lamp L₂ is now opened. How do the brightness of L₁ and the ammeter reading change? (Hai đèn giống hệt nhau L₁, L₂ mắc song song vào pin 6.0 V. Ban đầu khóa S đóng, ampe kế nhánh chính chỉ 0.80 A. Mở khóa S ở nhánh L₂ thì độ sáng đèn L₁ và số chỉ ampe kế đổi thế nào?) A. Brightness of L₁ increases | Ammeter reading stays 0.80 A B. Brightness of L₁ stays the same | Ammeter reading decreases to 0.40 A C. Brightness of L₁ decreases | Ammeter reading decreases to 0.40 A D. Brightness of L₁ stays the same | Ammeter reading increases to 1.60 A ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mắc song song nên nhánh L₁ vẫn nhận đủ 6.0 V và dòng 0.40 A → độ sáng L₁ không đổi . Nhánh L₂ ngắt (0 A) nên dòng tổng qua ampe kế giảm từ 0.80 A xuống 0.40 A .",
+      "duration": 171.05,
+      "startTime": 3662.66,
+      "endTime": 3833.71,
+      "audioUrl": "/audio/lectures/science/p4/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Calculation [6 marks] A 6.0 V power supply is connected in series with a fixed 2.0 Ω resistor and a parallel combination consisting of a 3.0 Ω resistor and a 6.0 Ω resistor. (a) State one advantage of connecting household lamps in parallel rather than in series. [1] (b) Calculate the combined resistance of the 3.0 Ω and 6.0 Ω parallel resistors, and hence find the total circuit resistance. [3] (c) Calculate the current from the 6.0 V supply and the potential difference across the parallel combination. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Any one from: each lamp gets full supply voltage / lamps can be switched ON and OFF independently / if one lamp fails, the others remain lit [1m]. (b) 1. Parallel pair: 1/ Rp = 1/3.0 + 1/6.0 = 3/6 = 1/2 ⇒ Rp = 2.0 Ω [2m] (< 3.0 Ω ✓) .2. Total series resistance: Rtotal = 2.0 Ω + 2.0 Ω = 4.0 Ω [1m]. (c) 1. Supply current: I = V / Rtotal = 6.0 V / 4.0 Ω = 1.5 A [1m].2. p.d. across parallel pair: Vp = 6.0 V − (1.5 A × 2.0 Ω) = 3.0 V (or 1.5 A × 2.0 Ω = 3.0 V) [1m]. 💡 Intuition Check: Always verify your parallel resistance: 2.0 Ω is smaller than both 3.0 Ω and 6.0 Ω, confirming you remembered to flip 1/Rp!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Tính toán Paper 4 [6 điểm] A 6.0 V power supply is connected in series with a fixed 2.0 Ω resistor and a parallel combination consisting of a 3.0 Ω resistor and a 6.0 Ω resistor. (a) State one advantage of connecting household lamps in parallel rather than in series. (b) Calculate the combined resistance of the 3.0 Ω and 6.0 Ω parallel resistors, and hence find the total circuit resistance. (c) Calculate the current from the 6.0 V supply and the potential difference across the parallel combination. (Nguồn 6.0 V mắc nối tiếp với điện trở 2.0 Ω và cụm song song gồm 3.0 Ω và 6.0 Ω. (a) Nêu 1 ưu điểm khi mắc đèn gia đình song song. (b) Tính điện trở cụm song song và điện trở toàn mạch. (c) Tính dòng từ nguồn và hiệu điện thế hai đầu cụm song song.) ✍️ Lời giải chi tiết theo thang điểm: (a) Một trong các ý: mỗi đèn nhận đủ điện áp nguồn / bật tắt độc lập từng đèn / một đèn hỏng các đèn khác vẫn sáng . (b) 1. Cụm song song: 1/ Rp = 1/3.0 + 1/6.0 = 3/6 = 1/2 ⇒ Rp = 2.0 Ω .2. Điện trở toàn mạch: Rtotal = 2.0 Ω + 2.0 Ω = 4.0 Ω . (c) 1. Dòng điện nguồn: I = V / Rtotal = 6.0 V / 4.0 Ω = 1.5 A .2. Hiệu điện thế cụm song song: Vp= I × Rp = 1.5 A × 2.0 Ω = 3.0 V . 💡 Kiểm tra bản chất: Luôn kiểm tra nhanh: R song song (2.0 Ω) nhỏ hơn cả 3.0 Ω và 6.0 Ω — chắc chắn đã nghịch đảo đúng!",
+      "duration": 247.74,
+      "startTime": 3833.71,
+      "endTime": 4081.45,
+      "audioUrl": "/audio/lectures/science/p4/s04_b09.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🛡️ P4.4 An toàn Điện Gia dụng: Tác dụng Nhiệt, Cầu chì & Tiếp đất (Electrical Safety)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🛡️ P4.4 Electrical Safety: Heating Effect of Current, Mains Hazards, Fuses & Earthing.",
+      "vi": "🛡️ P4.4 An toàn Điện Gia dụng: Tác dụng Nhiệt, Cầu chì & Tiếp đất (Electrical Safety).",
+      "duration": 14.21,
+      "startTime": 4081.45,
+      "endTime": 4095.66,
+      "audioUrl": "/audio/lectures/science/p4/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a Fuse as a \"sacrificial circuit bodyguard\" standing guard on the Live (230 V) bridge , and the Earth wire as an \"emergency escape chute\" bolted to a metal kettle's shell. If a loose Live wire touches the metal shell, electricity floods down the low-resistance Earth chute, causing a massive current surge that makes the fuse bodyguard melt and blow up the bridge — cutting power before anyone touches the kettle!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi Cầu chì (Fuse) như một \"vệ sĩ cảm tử\" đứng gác ngay trên cây cầu dây Nóng (Live wire ~230 V) , còn dây Tiếp đất (Earth wire) là \"ống trượt thoát hiểm điện trở cực nhỏ\" gắn chặt vào vỏ kim loại của ấm đun nước. Nếu dây Live bị tróc vỏ cây cầu Live — ngắt sạch nguồn điện trước khi tay bạn kịp chạm vào ấm!",
+      "duration": 51.99,
+      "startTime": 4095.66,
+      "endTime": 4147.65,
+      "audioUrl": "/audio/lectures/science/p4/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Four Mains Hazards (🟦 Core): Damaged insulation (shock/short-circuit), overheating cables ( I²R fire), damp conditions (water lowers skin resistance → electrocution), and overloading sockets (excess parallel current). 2. Live-Wire Rule & Fuse Selection (🟦 Core): Switches, fuses, and trip switches MUST be wired in the Live wire so the appliance is isolated from high potential (~230 V) when off/blown. Choose fuse rating just above normal current I = P / V (from 3 A, 5 A, 13 A). 3. Earthing vs Double Insulation ▣ (🟦 Core): Metal casings must be earthed ; non-conducting plastic casings are double-insulated (need no earth wire, though a fuse still protects the circuit wiring from fire).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Bốn mối nguy điện lưới (🟦 Core): Hỏng cách điện ( damaged insulation ), cáp quá nhiệt ( overheating cables ), ẩm ướt ( damp conditions làm giảm mạnh điện trở người), và quá tải ổ cắm ( overloading sockets ). 2. Quy tắc dây Live & Chọn cầu chì (🟦 Core): Mọi công tắc, cầu chì và aptomat ( trip switch ) BẮT BUỘC mắc trên dây Live để cô lập hoàn toàn thiết bị khỏi điện áp cao khi tắt. Chọn định mức cầu chì cao hơn một chút (just above) dòng bình thường I = P / V . 3. Nối đất vs Cách điện kép ▣ (🟦 Core): Vỏ kim loại bắt buộc nối dây Earth ; vỏ nhựa không dẫn điện thuộc loại double-insulated (không cần dây Earth, nhưng vẫn phải có cầu chì để bảo vệ dây cáp và mạch khỏi cháy nổ).",
+      "duration": 104.36,
+      "startTime": 4147.65,
+      "endTime": 4252.01,
+      "audioUrl": "/audio/lectures/science/p4/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Putting a switch or fuse in the Neutral wire is a deadly mistake! Even if the neutral wire breaks and current stops flowing, the appliance stays connected to the 230 V Live wire — touching a faulty part completes a circuit straight through your body to Earth!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Mắc nhầm công tắc hoặc cầu chì trên dây Nguội (Neutral wire) là cái bẫy chết người! Dù cầu chì ở dây Neutral có đứt làm đèn tắt, toàn bộ ruột máy vẫn nối thông với dây Live 230 V — ai chạm tay vào chỗ rò điện sẽ biến cơ thể mình thành đường dẫn điện thẳng xuống đất!",
+      "duration": 39.0,
+      "startTime": 4252.01,
+      "endTime": 4291.01,
+      "audioUrl": "/audio/lectures/science/p4/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "1. Hỏng vỏ cách điện (Damaged insulation): Làm lộ lõi đồng dây nóng →",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "1. Damaged Insulation: Exposes live copper conductors → touching live wire causes lethal electric shock ; live touching neutral causes a short-circuit spark & fire .",
+      "vi": "1. Hỏng vỏ cách điện (Damaged insulation): Làm lộ lõi đồng dây nóng →",
+      "duration": 17.41,
+      "startTime": 4291.01,
+      "endTime": 4308.42,
+      "audioUrl": "/audio/lectures/science/p4/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "2. Cáp quá nhiệt (Overheating cables): Dòng điện quá lớn qua dây dẫn tiết diện n...",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "2. Overheating Cables: Excessive current through thin wires generates intense I²R heating → melts PVC insulation and ignites electrical fires .",
+      "vi": "2. Cáp quá nhiệt (Overheating cables): Dòng điện quá lớn qua dây dẫn tiết diện nhỏ sinh nhiệt mạnh ( I²R ), làm chảy nhựa và gây hỏa hoạn .",
+      "duration": 21.41,
+      "startTime": 4308.42,
+      "endTime": 4329.83,
+      "audioUrl": "/audio/lectures/science/p4/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "3. Môi trường ẩm ướt (Damp conditions): Nước chứa tạp chất làm giảm mạnh điện tr...",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "3. Damp Conditions: Impure water contains dissolved ions that drastically lower human skin/path resistance to earth → severe electrocution hazard!",
+      "vi": "3. Môi trường ẩm ướt (Damp conditions): Nước chứa tạp chất làm giảm mạnh điện trở da người xuống đất → dòng giật tăng vọt gây tử vong!",
+      "duration": 19.88,
+      "startTime": 4329.83,
+      "endTime": 4349.71,
+      "audioUrl": "/audio/lectures/science/p4/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "4. Quá tải ổ cắm (Overloading sockets/plugs): Cắm nhiều thiết bị công suất lớn v...",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "4. Overloading Sockets / Plugs: Plugging many high-power appliances into one multi-socket adapter draws huge total parallel current ( Itotal= I₁ + I₂ +.. ) → overheating & fire.",
+      "vi": "4. Quá tải ổ cắm: Cắm nhiều thiết bị công suất lớn vào chung 1 ổ nối dài làm dòng tổng ( I₁ + I₂ +.. ) vượt ngưỡng an toàn.",
+      "duration": 24.34,
+      "startTime": 4349.71,
+      "endTime": 4374.05,
+      "audioUrl": "/audio/lectures/science/p4/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "Dây điện lưới (Wire): Dây Nóng (Live / Line Wire); Màu vỏ chuẩn: Nâu (Brown); Đi...",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "Mains Wire: Live (Line) Wire; Insulation Colour: Brown; Potential w.r.t. Earth: ~230 V a.c. (110–240 V); Function & Safety Rules: Delivers alternating potential from supply. ALL switches, fuses, and trip switches MUST be wired in the LIVE wire so the appliance is completely isolated from high voltage when off! Mains Wire: Neutral Wire; Insulation Colour: Blue; Potential w.r.t. Earth: ~0 V; Function & Safety Rules: Completes the circuit back to the substation transformer at ~0 V. (If a switch were mistakenly placed in neutral, a switched-off appliance would STILL be live at 230 V!). Mains Wire: Earth Wire; Insulation Colour: Green / Yellow stripes; Potential w.r.t. Earth: 0 V; Function & Safety Rules: Safety wire bolted to metal outer casing ; carries 0 A normally , providing a very low-resistance path to ground only during a fault.",
+      "vi": "Dây điện lưới (Wire): Dây Nóng; Màu vỏ chuẩn: Nâu (Brown); Điện thế so với đất: ~230 V a.c.; Chức năng & Quy tắc An toàn bắt buộc: Mang điện áp cao từ nguồn. MỌI công tắc (switches), cầu chì (fuses) và aptomat (trip switches) BẮT BUỘC lắp trên dây LIVE để ngắt hoàn toàn điện áp cao khỏi thiết bị! Dây điện lưới (Wire): Dây Nguội / Trung tính (Neutral); Màu vỏ chuẩn: Xanh dương (Blue); Điện thế so với đất: ~0 V; Chức năng & Quy tắc An toàn bắt buộc: Khép kín mạch điện về trạm biến áp ở ~0 V. (Nếu lắp nhầm công tắc ở dây Neutral, thiết bị dù tắt vẫn mang điện 230 V cực kỳ nguy hiểm!). Dây điện lưới (Wire): Dây Tiếp đất (Earth Wire); Màu vỏ chuẩn: Sọc Xanh lá / Vàng; Điện thế so với đất: 0 V; Chức năng & Quy tắc An toàn bắt buộc: Nối chặt vào vỏ kim loại ; bình thường không có dòng điện, chỉ dẫn dòng sự cố xuống đất khi rò điện.",
+      "duration": 133.87,
+      "startTime": 4374.05,
+      "endTime": 4507.92,
+      "audioUrl": "/audio/lectures/science/p4/s05_b08.mp3"
+    },
+    {
+      "id": "s05_b09",
+      "title": "🔥 Cách chọn Định mức Cầu chì (Fuse Rating) & Aptomat: • Cầu chì (Fuse): Sợi dây ...",
+      "selector": "[data-lecture-section=\"s05_b09\"]",
+      "en": "🔥 Choosing Fuse Ratings & Trip Switches: • Fuse: Thin wire in the live line that melts and breaks the circuit when current exceeds its rating. Standard plug fuses: 3 A, 5 A, 13 A .• Rule: Calculate normal current I = P / V , then choose the fuse rated just above normal operating current! Example: 2000 W kettle on 230 V ⇒ I = 2000 / 230 = 8.7 A ⇒ choose a 13 A fuse (3 A or 5 A would blow immediately during normal use!).• Trip Switch (Circuit Breaker): Electromagnetic switch that springs open rapidly on overcurrent and is easily reset by pressing a button (no wire replacement).",
+      "vi": "🔥 Cách chọn Định mức Cầu chì (Fuse Rating) & Aptomat: • Cầu chì (Fuse): Sợi dây mảnh trên dây Live tự nóng chảy và đứt khi dòng vượt định mức. Các cỡ chuẩn: 3 A, 5 A, 13 A .• Quy tắc chọn: Tính dòng bình thường I = P / V , rồi chọn cầu chì có định mức cao hơn một chút (just above) dòng làm việc! Ví dụ: Ấm 2000 W ở 230 V ⇒ I = 2000 / 230 = 8.7 A ⇒ chọn cầu chì 13 A .• Aptomat: Công tắc điện từ tự nhảy ngắt mạch cực nhanh khi quá dòng và bật lại dễ dàng bằng nút gạt.",
+      "duration": 88.39,
+      "startTime": 4507.92,
+      "endTime": 4596.31,
+      "audioUrl": "/audio/lectures/science/p4/s05_b09.mp3"
+    },
+    {
+      "id": "s05_b10",
+      "title": "⚡ Nối đất Vỏ Kim loại vs Cách điện Kép (Double Insulation ▣): • Cơ chế Nối đất +...",
+      "selector": "[data-lecture-section=\"s05_b10\"]",
+      "en": "⚡ Earthing Metal Cases vs Double Insulation (▣): • Earthing + Fuse Action (3-mark sequence): If a loose live wire touches a metal casing , a huge fault current surges along the low-resistance earth wire → current exceeds fuse rating → fuse melts and disconnects the live supply , preventing electrocution.• Double Insulation (▣ concentric squares): Outer casing is made of non-conducting plastic (insulator), so a user can never touch a live part → no earth wire is needed . However, a fuse is STILL fitted in the live wire to protect the circuit and cabling from overheating/fire if an internal short-circuit occurs!",
+      "vi": "⚡ Nối đất Vỏ Kim loại vs Cách điện Kép (Double Insulation ▣): • Cơ chế Nối đất + Cầu chì (3 ý ăn trọn điểm): Nếu dây Live tuột cô lập hoàn toàn thiết bị.• Cách điện kép (Double Insulation ▣): Vỏ ngoài làm bằng nhựa cách điện nên người dùng không thể chạm phần mang điện → không cần dây Earth . Tuy nhiên VẪN PHẢI có cầu chì trên dây Live để bảo vệ dây dẫn và mạch bên trong khỏi cháy nổ khi quá dòng!",
+      "duration": 65.16,
+      "startTime": 4596.31,
+      "endTime": 4661.47,
+      "audioUrl": "/audio/lectures/science/p4/s05_b10.mp3"
+    },
+    {
+      "id": "s05_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 2 MCQ A mains hairdryer has a non-conducting plastic outer casing marked with the double-insulation symbol (▣). It is rated at 1150 W, 230 V . Fuses of ratings 3 A, 5 A, 10 A, and 13 A are available. Which statement about its wiring and fuse choice is correct? A. It needs an earth wire and a 5 A fuse in the live wire. B. It needs no earth wire and a 5 A fuse in the neutral wire. C. It needs no earth wire and a 10 A fuse in the live wire. D. It needs an earth wire and a 10 A fuse in the live wire. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: 1) Because the hairdryer is double-insulated (plastic outer casing), a user cannot touch a live metal casing → no earth wire is needed (eliminates A and D).2) Normal current I = P / V = 1150 W / 230 V = 5.0 A . A 5 A fuse runs right at its melting limit and would nuisance-blow on switch-on surges! You must pick a fuse rated just above 5.0 A → 10 A , wired in the live wire (eliminates B).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 2 A mains hairdryer has a non-conducting plastic outer casing marked with the double-insulation symbol (▣). Một máy sấy tóc dùng điện lưới có vỏ ngoài bằng nhựa cách điện mang ký hiệu cách điện kép ▣, thông số 1150 W – 230 V. Có sẵn các cầu chì 3 A, 5 A, 10 A và 13 A. Phát biểu nào đúng về cách đấu dây và chọn cầu chì? A. It needs an earth wire and a 5 A fuse in the live wire. B. It needs no earth wire and a 5 A fuse in the neutral wire. C. It needs no earth wire and a 10 A fuse in the live wire. D. It needs an earth wire and a 10 A fuse in the live wire. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: 1) Vỏ nhựa có ký hiệu double insulation (▣) nghĩa là người dùng không thể chạm phải vỏ kim loại mang điện → không cần dây tiếp đất (no earth wire) (loại A, D).2) Dòng điện hoạt động bình thường: I = P / V = 1150 / 230 = 5.0 A . Nếu lắp cầu chì đúng bằng 5 A thì cầu chì sẽ đứt ngay khi vừa bật máy! Phải chọn mức cao hơn một chút (just above 5.0 A) → cầu chì 10 A mắc trên dây nóng (live wire) !",
+      "duration": 166.4,
+      "startTime": 4661.47,
+      "endTime": 4827.87,
+      "audioUrl": "/audio/lectures/science/p4/s05_b11.mp3"
+    },
+    {
+      "id": "s05_b12",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s05_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 4 Structured [5 marks] A washing machine has a metal outer case and is connected to the 230 V mains using a three-core cable (live, neutral, and earth). (a) Explain why the power switch and fuse must be connected in the live wire rather than the neutral wire. [2] (b) Inside the washing machine, the insulation on the live wire frays and the bare copper touches the metal outer case. Explain step-by-step how the earth wire and fuse together protect the user. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) The live wire is at high alternating potential (~230 V) [1m]. Placing the switch/fuse in the live wire ensures that when opened or blown, the appliance is completely disconnected/isolated from the high voltage (if placed in neutral, the appliance would remain live at 230 V and could still cause electric shock) [1m]. (b) 1. A very large fault current flows from the live wire through the metal case and down the low-resistance earth wire to ground [1m].2. This large current exceeds the rating of the fuse in the live wire, causing the fuse wire to overheat, melt, and break the circuit [1m].3. This disconnects the metal case from the live supply (keeping the case safe at 0 V so the user does not receive an electric shock) [1m]. 💡 Intuition Check: Memorise that exact 3-step chain for Paper 4: Low-resistance Earth path → Huge surge current → Fuse melts & isolates Live supply!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 4 [5 điểm] A washing machine has a metal outer case and is connected to the 230 V mains using a three-core cable. (a) Explain why the power switch and fuse must be connected in the live wire rather than the neutral wire. (b) Inside the washing machine, the insulation on the live wire frays and the bare copper touches the metal outer case. Explain step-by-step how the earth wire and fuse together protect the user. (Máy giặt có vỏ ngoài bằng kim loại nối với điện lưới 230 V qua cáp 3 lõi. (a) Giải thích tại sao công tắc và cầu chì bắt buộc lắp trên dây Live thay vì dây Neutral. (b) Dây Live bên trong bị sờn vỏ ) ✍️ Lời giải chi tiết theo thang điểm: (a) Dây Live mang điện thế cao (~230 V) . Lắp công tắc và cầu chì trên dây Live đảm bảo khi tắt hoặc đứt cầu chì, máy giặt được ngắt/cô lập hoàn toàn khỏi điện áp cao (nếu lắp ở dây Neutral, máy vẫn ngầm mang điện 230 V gây giật) . (b) 1. Một dòng điện sự cố cực lớn phóng từ dây Live qua vỏ kim loại theo dây Earth có điện trở rất nhỏ xuống đất .2. Dòng điện vượt quá định mức làm dây cầu chì trên dây Live nóng chảy và đứt mạch .3. Nguồn điện Live bị ngắt khỏi vỏ kim loại, giữ vỏ máy an toàn không gây điện giật cho người chạm vào . 💡 Kiểm tra bản chất: Thuộc lòng bộ 3 từ khóa vàng cho mọi đề Paper 4: Dây Earth điện trở thấp → Dòng sự cố cực lớn → Cầu chì nóng chảy ngắt mạch Live!",
+      "duration": 204.31,
+      "startTime": 4827.87,
+      "endTime": 5032.18,
+      "audioUrl": "/audio/lectures/science/p4/s05_b12.mp3"
+    },
+    {
+      "id": "s06_hdr",
+      "title": "⚡ P4.5 Tác dụng Điện từ: Cảm ứng, Máy phát a.c., Động cơ d.c. & Máy biến áp (Supplement)",
+      "selector": "[data-lecture-section=\"s06_hdr\"]",
+      "en": "⚡ P4.5 Electromagnetic Effects: Induction, Generators, Motors & Transformers (Supplement).",
+      "vi": "⚡ P4.5 Tác dụng Điện từ: Cảm ứng, Máy phát a.c., Động cơ d.c. & Máy biến áp (Supplement).",
+      "duration": 17.64,
+      "startTime": 5032.18,
+      "endTime": 5049.82,
+      "audioUrl": "/audio/lectures/science/p4/s06_hdr.mp3"
+    },
+    {
+      "id": "s06_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s06_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of magnetic field lines as invisible blades of grass : swinging a wire across the grass chops blades and induces voltage ( Electromagnetic Induction ), whereas sliding parallel between blades chops nothing ( 0 V )! In a d.c. Motor , use Fleming's Left-Hand Rule to find which way the current-carrying wire gets kicked, and remember the split-ring commutator flips coil current every half-turn so the motor spins continuously. For power lines, stepping voltage UP shrinks current I so cables lose tiny I²R heat!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi đường sức từ như đám cỏ vô hình : vung dây dẫn cắt ngang đám cỏ sẽ gặt ra điện áp cảm ứng ( Electromagnetic Induction ), còn trượt song song giữa các ngọn cỏ thì chẳng cắt được cọng nào ( 0 V )! Với Động cơ d.c. , dùng Bàn tay trái Fleming để tìm chiều lực đẩy dây dẫn, và nhớ cổ góp bán khuyên đảo chiều dòng mỗi nửa vòng giúp mô-tơ quay liên tục. Với truyền tải điện cao thế, nâng áp V để ép dòng I nhỏ xíu, triệt tiêu hao phí nhiệt P = I²R !",
+      "duration": 69.37,
+      "startTime": 5049.82,
+      "endTime": 5119.19,
+      "audioUrl": "/audio/lectures/science/p4/s06_b01.mp3"
+    },
+    {
+      "id": "s06_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s06_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Induction & a.c. Generator (🟩 Supplement): Cutting magnetic field lines or changing flux linking a coil induces an e.m.f. (increased by faster motion, stronger magnet, more turns). An a.c. generator uses slip rings & brushes : peak e.m.f. occurs when the coil is HORIZONTAL ; zero e.m.f. when VERTICAL . 2. Magnetic Fields, Motor Force & d.c. Motor (🟩 Supplement): Concentric circles around a straight wire; bar-magnet-like field around a solenoid. Fleming's LHR ( Thumb = Force, First = Field N→S, Second = Current +→− ). A split-ring commutator reverses coil current every 180°. 3. Transformers & High-Voltage Grid (🟩 Supplement): Soft-iron core + a.c. input: Vp/ Vs= Np/ Ns and IpVp= IsVs . Stepping up V lowers I , slashing wasted cable heat P = I²R .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Cảm ứng & Máy phát a.c. (🟩 Supplement): Dây cắt đường sức hoặc từ trường qua cuộn dây biến thiên sinh ra induced e.m.f. (tăng khi di chuyển nhanh hơn, nam châm mạnh hơn, nhiều vòng dây hơn). Máy phát a.c. dùng slip rings & brushes : e.m.f. CỰC ĐẠI khi khung NẰM NGANG và BẰNG 0 khi THẲNG ĐỨNG . 2. Từ trường dòng điện, Lực từ & Động cơ d.c. (🟩 Supplement): Dây thẳng tạo vòng tròn đồng tâm; ống dây solenoid giống thanh nam châm. Bàn tay trái Fleming ( Cái = Force, Trỏ = Field N→S, Giữa = Current +→− ). Split-ring commutator đảo dòng mỗi 180°. 3. Máy biến áp & Lưới điện (🟩 Supplement): Lõi sắt non + điện xoay chiều a.c.: Vp/ Vs= Np/ Ns và IpVp= IsVs . Truyền tải cao thế giảm I nên giảm mạnh hao phí P = I²R .",
+      "duration": 132.82,
+      "startTime": 5119.19,
+      "endTime": 5252.01,
+      "audioUrl": "/audio/lectures/science/p4/s06_b02.mp3"
+    },
+    {
+      "id": "s06_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s06_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two high-frequency exam traps: (1) Thinking an a.c. generator gives peak e.m.f. when the coil is vertical — NO! At the vertical position the coil sides move parallel to field lines ( 0 V ); peak e.m.f. occurs when the coil is horizontal ! (2) Confusing slip rings (a.c. generator) with a split-ring commutator (d.c. motor)!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy cực hay gặp trong đề 0654: (1) Nhầm tưởng khung máy phát thẳng đứng cho e.m.f. cực đại — thực tế khi thẳng đứng (vertical) cạnh khung trượt song song đường sức nên e.m.f. = 0 V ; khi nằm ngang (horizontal) mới đạt cực đại! (2) Nhầm lẫn slip rings (máy phát a.c.) với split-ring commutator (động cơ d.c.)!",
+      "duration": 56.5,
+      "startTime": 5252.01,
+      "endTime": 5308.51,
+      "audioUrl": "/audio/lectures/science/p4/s06_b03.mp3"
+    },
+    {
+      "id": "s06_b04",
+      "title": "🧲 P4.5.1 Phòng Thí nghiệm Cảm ứng Điện từ (Electromagnetic Induction — Supplement)",
+      "selector": "[data-lecture-section=\"s06_b04\"]",
+      "en": "🧲 P4.5.1 Interactive Electromagnetic Induction Lab (Supplement). An e.m.f. is induced whenever a conductor cuts magnetic field lines OR when the magnetic field linking a coil changes . Hover/click below to explore how moving a magnet induces an e.m.f.! ➡️ Push Magnet IN⬅️ Pull Magnet OUT 3 Factors Increasing Induced e.m.f.: (1) Moving the wire/magnet faster , (2) Using a stronger magnet , (3) Increasing the number of turns on the coil. Direction & Zero-e.m.f. Check: Reversing the direction of motion OR reversing the magnet poles reverses the induced e.m.f.; holding the magnet stationary cuts zero field lines ( 0 V ).",
+      "vi": "🧲 P4.5.1 Phòng Thí nghiệm Cảm ứng Điện từ. Suất điện động cảm ứng ( induced e.m.f. ) xuất hiện khi dây dẫn cắt các đường sức từ HOẶC khi từ trường xuyên qua cuộn dây biến thiên. ➡️ Đẩy nam châm VÀO⬅️ Kéo nam châm RA 3 Yếu tố làm tăng độ lớn e.m.f. cảm ứng: (1) Di chuyển dây/nam châm nhanh hơn (faster) , (2) Dùng nam châm mạnh hơn (stronger magnet) , (3) Tăng số vòng dây (more turns) . Đảo chiều & Đứng yên: Đảo chiều di chuyển HOẶC đảo cực nam châm sẽ làm đảo dấu e.m.f. cảm ứng; giữ nam châm đứng yên thì không cắt đường sức nào ( 0 V ).",
+      "duration": 89.26,
+      "startTime": 5308.51,
+      "endTime": 5397.77,
+      "audioUrl": "/audio/lectures/science/p4/s06_b04.mp3"
+    },
+    {
+      "id": "s06_b05",
+      "title": "🔄 P4.5.2 Máy Phát điện Xoay chiều (a.c. Generator), Vành khuyên & Đồ thị e.m.f.",
+      "selector": "[data-lecture-section=\"s06_b05\"]",
+      "en": "🔄 P4.5.2 The Simple A.C. Generator, Slip Rings & e.m.f.–Time Graph. SUPPLEMENT • Construction: A rectangular coil rotates inside a magnetic field (or a permanent magnet rotates near a stationary coil). Each end of the rotating coil connects permanently to its own metal slip ring pressing against stationary carbon brushes — maintaining continuous electrical contact without twisting the external wires.• Why Output is Alternating (a.c.): Every half-turn (180°) , each side of the coil reverses its direction of motion through the field (up ↔ down), reversing the induced e.m.f. and current.• CRITICAL EXAM GRAPH POSITIONS: 1. Peak / Trough (Maximum |e.m.f.|): Coil is HORIZONTAL (parallel to field lines) — coil sides move perpendicularly across field lines, cutting flux at the maximum rate !2. Zero e.m.f. (0 V): Coil is VERTICAL (perpendicular to field lines) — coil sides momentarily move parallel to field lines, cutting zero field lines!• Doubling rotation speed doubles peak e.m.f. AND halves the period (doubles frequency)!",
+      "vi": "🔄 P4.5.2 Máy Phát điện Xoay chiều (a.c. Generator), Vành khuyên & Đồ thị e.m.f. SUPPLEMENT • Cấu tạo: Khung dây quay đều trong từ trường; 2 đầu dây nối cố định với 2 vành khuyên trơn (slip rings) tì lên chổi than (carbon brushes) giúp dẫn điện ra mạch ngoài liên tục mà không bị xoắn đứt dây.• Tại sao tạo ra dòng a.c.? Cứ sau nửa vòng quay (180°) , mỗi cạnh khung dây đổi chiều chuyển động lên/xuống qua từ trường, làm suất điện động đảo dấu.• VỊ TRÍ KHUNG DÂY TRÊN ĐỒ THỊ (BẮT BUỘC THUỘC LÒNG): 1. Đỉnh / Đáy (Peak / Trough — e.m.f. cực đại): Mặt phẳng khung dây nằm NGANG (HORIZONTAL) — hai cạnh cắt vuông góc đường sức từ với tốc độ lớn nhất!2. Điểm 0 V (Zero e.m.f.): Mặt phẳng khung dây THẲNG ĐỨNG (VERTICAL) — hai cạnh chuyển động song song với đường sức nên không cắt đường sức nào!• Quay nhanh gấp đôi: Biên độ cực đại tăng gấp đôi (2× peak) VÀ tần số tăng gấp đôi (chu kỳ giảm một nửa)!",
+      "duration": 149.22,
+      "startTime": 5397.77,
+      "endTime": 5546.99,
+      "audioUrl": "/audio/lectures/science/p4/s06_b05.mp3"
+    },
+    {
+      "id": "s06_b06",
+      "title": "1. Dây dẫn Thẳng dài (Straight Wire)",
+      "selector": "[data-lecture-section=\"s06_b06\"]",
+      "en": "1. Current in a Straight Wire. Concentric circles perpendicular to wire. Right-Hand Grip Rule: Thumb points along current I ; curled fingers show field direction. Supplement: Field is strongest closest to wire (circles closest together); reversing I reverses field arrows; larger I strengthens field.",
+      "vi": "1. Dây dẫn Thẳng dài (Straight Wire). Đường sức là các đường tròn đồng tâm (concentric circles) . Quy tắc Nắm tay phải: Ngón cái chỉ chiều I , các ngón kia khum theo chiều từ trường. Supplement: Càng gần dây từ trường càng mạnh (vòng tròn sít nhau); đảo chiều I làm đảo chiều từ trường.",
+      "duration": 43.44,
+      "startTime": 5546.99,
+      "endTime": 5590.43,
+      "audioUrl": "/audio/lectures/science/p4/s06_b06.mp3"
+    },
+    {
+      "id": "s06_b07",
+      "title": "2. Ống dây Hình trụ (Solenoid)",
+      "selector": "[data-lecture-section=\"s06_b07\"]",
+      "en": "2. Current in a Solenoid (Long Coil). Inside solenoid: Field is strong, uniform, and parallel to the axis. Outside: Identical to a bar magnet ! Grip coil with right-hand fingers following current → thumb points to N pole . Inserting a soft-iron core greatly strengthens it into an electromagnet.",
+      "vi": "2. Ống dây Hình trụ (Solenoid). Trong lòng ống dây: Từ trường mạnh và đều . Bên ngoài: Giống hệt thanh nam châm thẳng ! Nắm tay phải theo chiều dòng điện qua các vòng dây → ngón cái chỉ về cực Bắc (N pole) . Đặt lõi sắt non vào tạo thành nam châm điện cực mạnh.",
+      "duration": 42.38,
+      "startTime": 5590.43,
+      "endTime": 5632.81,
+      "audioUrl": "/audio/lectures/science/p4/s06_b07.mp3"
+    },
+    {
+      "id": "s06_b08",
+      "title": "🖐️ P4.5.4 Lực từ lên Dây dẫn mang Dòng điện (Bàn tay Trái Fleming)",
+      "selector": "[data-lecture-section=\"s06_b08\"]",
+      "en": "🖐️ P4.5.4 Force on a Current-Carrying Conductor (Fleming's LHR). • Thumb: Force / Motion ( F )• First Finger: Magnetic Field ( N → S )• Second Finger: Conventional Current ( + → − ) Reversing EITHER current OR field reverses force F; reversing BOTH keeps F in the same direction!",
+      "vi": "🖐️ P4.5.4 Lực từ lên Dây dẫn mang Dòng điện (Bàn tay Trái Fleming). • Ngón cái (Thumb): Chiều Lực từ ( Force / Motion F )• Ngón trỏ (First finger): Chiều Từ trường ( Field: N → S )• Ngón giữa (Second finger): Chiều Dòng quy ước ( Current: + → − )",
+      "duration": 44.9,
+      "startTime": 5632.81,
+      "endTime": 5677.71,
+      "audioUrl": "/audio/lectures/science/p4/s06_b08.mp3"
+    },
+    {
+      "id": "s06_b09",
+      "title": "⚙️ P4.5.5 Động cơ Điện d.c. & Cổ góp Bán khuyên (Split-Ring Commutator)",
+      "selector": "[data-lecture-section=\"s06_b09\"]",
+      "en": "⚙️ P4.5.5 The D.C. Motor & Split-Ring Commutator. • Opposite currents in the two sides produce an upward force on one side and downward force on the other ⇒ turning effect (torque) .• 3 Ways to Increase Turning Effect: (1) More turns on coil, (2) Larger current, (3) Stronger magnetic field.• Split-Ring Commutator & Brushes (Supplement): Reverses the direction of current in the coil every half-turn (180°, when coil is vertical) so that the force on whichever side enters a pole's region always pushes in the same rotational direction (continuous clockwise/anticlockwise spin)!",
+      "vi": "⚙️ P4.5.5 Động cơ Điện d.c. & Cổ góp Bán khuyên. • Dòng điện chạy ngược chiều ở hai cạnh khung dây tạo cặp lực ngược chiều (1 cạnh đẩy lên, 1 cạnh kéo xuống) sinh ra tác dụng làm quay (turning effect) .• 3 cách tăng mô-men quay: Tăng số vòng dây ( turns ), tăng cường độ dòng ( current ), tăng độ mạnh từ trường ( field strength ).• Cổ góp bán khuyên: Cứ mỗi nửa vòng quay (180°, khi khung thẳng đứng) , cổ góp đổi tiếp xúc qua chổi than làm đảo chiều dòng điện trong khung , nhờ đó khung tiếp tục quay liên tục theo một chiều duy nhất !",
+      "duration": 79.34,
+      "startTime": 5677.71,
+      "endTime": 5757.05,
+      "audioUrl": "/audio/lectures/science/p4/s06_b09.mp3"
+    },
+    {
+      "id": "s06_b10",
+      "title": "Nguyên lý Hoạt động (Principle of Operation — Supplement): 1. Điện áp xoay chiều...",
+      "selector": "[data-lecture-section=\"s06_b10\"]",
+      "en": "Principle of Operation (Supplement): 1. An alternating voltage (a.c.) applied to the primary coil drives an alternating current.2. This produces a continually changing (alternating) magnetic field inside the laminated soft-iron core .3. The iron core guides this changing magnetic flux through the secondary coil ; cutting/changing flux linkage induces an alternating e.m.f. across the secondary coil! ⚠️ Why d.c. FAILS: Direct current creates a constant, unchanging magnetic field , so zero flux change occurs after switching on ⇒ 0 V induced in secondary!",
+      "vi": "Nguyên lý Hoạt động: 1. Điện áp xoay chiều (a.c.) đặt vào cuộn sơ cấp ( primary coil ) tạo dòng điện xoay chiều.2. Sinh ra từ trường biến thiên liên tục trong lõi sắt non .3. Lõi sắt dẫn từ thông biến thiên xuyên qua cuộn thứ cấp ( secondary coil ), cảm ứng ra suất điện động xoay chiều (a.c. e.m.f.) ở đầu ra! ⚠️ Tại sao nguồn 1 chiều d.c. KHÔNG hoạt động? Vì d.c. tạo từ trường không đổi (constant field) , không có biến thiên từ thông nên Vs= 0 V !",
+      "duration": 77.46,
+      "startTime": 5757.05,
+      "endTime": 5834.51,
+      "audioUrl": "/audio/lectures/science/p4/s06_b10.mp3"
+    },
+    {
+      "id": "s06_b11",
+      "title": "Công thức Máy Biến áp & Hiệu suất 100%: Vp/ Vs= Np/ Ns| IpVp= IsVs(Hiệu suất 100...",
+      "selector": "[data-lecture-section=\"s06_b11\"]",
+      "en": "Transformer Equations & 100% Efficiency: Vp/ Vs= Np/ Ns| IpVp= IsVs(100% efficient) • Step-up: Ns> Np⇒ Vs> Vp (and Is< Ip ).• Step-down: Ns< Np⇒ Vs< Vp (and Is> Ip ). Worked Example: Primary has Np = 5500 turns on Vp = 110 V a.c.; secondary has Ns = 500 turns delivering Is = 2.2 A:→ Vs = 110 × (500 / 5500) = 10 V a.c. ; Ip = (2.2 × 10) / 110 = 0.20 A .",
+      "vi": "Công thức Máy Biến áp & Hiệu suất 100%: Vp/ Vs= Np/ Ns| IpVp= IsVs(Hiệu suất 100%) • Tăng áp (Step-up): Ns> Np⇒ Vs> Vp (và Is< Ip ).• Hạ áp (Step-down): Ns< Np⇒ Vs< Vp (và Is> Ip ). Ví dụ mẫu: Cuộn sơ cấp Np = 5500 vòng nối nguồn Vp = 110 V a.c.; cuộn thứ cấp Ns = 500 vòng cấp dòng Is = 2.2 A:→ Vs = 110 × (500 / 5500) = 10 V a.c. ; Ip = (2.2 × 10) / 110 = 0.20 A .",
+      "duration": 97.41,
+      "startTime": 5834.51,
+      "endTime": 5931.92,
+      "audioUrl": "/audio/lectures/science/p4/s06_b11.mp3"
+    },
+    {
+      "id": "s06_b12",
+      "title": "Tại sao phải Truyền tải Điện ở Điện áp Rất Cao? • Nhà máy dùng step-up transform...",
+      "selector": "[data-lecture-section=\"s06_b12\"]",
+      "en": "Why Step Up Voltage in the National Grid? • Power stations step voltage UP to ~400 kV for overhead pylons, then step DOWN to ~230 V for homes.• For fixed transmitted power ( P = IV ), increasing V by 10× reduces cable current I by 10× .• Heating power lost in cables of resistance R is Ploss= I²R ⇒ cutting I by 10× slashes wasted heat loss by 10² = 100× !• 2 Key Advantages: (1) Far less energy wasted as heat (higher efficiency), (2) Lower current allows thinner, lighter, cheaper cables & pylons.",
+      "vi": "Tại sao phải Truyền tải Điện ở Điện áp Rất Cao? • Nhà máy dùng step-up transformer nâng áp lên hàng trăm kV trên đường dây, sau đó dùng step-down transformer hạ xuống ~230 V trước khi vào khu dân cư.• Với công suất truyền không đổi ( P = IV ), tăng điện áp V lên 10 lần sẽ giảm dòng điện I trên dây đi 10 lần .• Công suất hao phí tỏa nhiệt trên dây là Ploss= I²R ⇒ dòng I giảm 10 lần giúp giảm hao phí nhiệt tới 10² = 100 lần !• 2 Lợi ích vàng: (1) Giảm tối đa hao phí nhiệt năng, (2) Dòng điện nhỏ cho phép dùng dây cáp mảnh hơn, nhẹ hơn và rẻ hơn .",
+      "duration": 84.98,
+      "startTime": 5931.92,
+      "endTime": 6016.9,
+      "audioUrl": "/audio/lectures/science/p4/s06_b12.mp3"
+    },
+    {
+      "id": "s06_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s06_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A straight horizontal wire carries a conventional electric current from left to right inside a uniform magnetic field directed into the page . Meanwhile, the rotating coil of a simple a.c. generator passes through the horizontal position between horizontal N and S poles. What is the direction of the magnetic force on the wire, and what is the generator's induced e.m.f. at this instant? A. Force on wire: upwards | Generator e.m.f.: maximum B. Force on wire: downwards | Generator e.m.f.: maximum C. Force on wire: upwards | Generator e.m.f.: zero D. Force on wire: downwards | Generator e.m.f.: zero ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: 1) Wire force (Fleming's Left-Hand Rule): Point First finger into the page (Field N→S) and Second finger from left to right (Conventional Current) → your Thumb points UPWARDS ! (Eliminates B and D).2) a.c. generator coil: When the coil is horizontal , its sides move perpendicularly across the horizontal magnetic field lines, cutting field lines at the maximum rate → maximum induced e.m.f. ! (Eliminates C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 A straight horizontal wire carries a conventional electric current from left to right inside a uniform magnetic field directed into the page . Meanwhile, the rotating coil of a simple a.c. generator passes through the horizontal position between horizontal N and S poles. What is the direction of the magnetic force on the wire, and what is the generator's induced e.m.f. at this instant? (Một dây dẫn thẳng nằm ngang mang dòng điện quy ước từ trái sang phải đặt trong từ trường đều hướng vuông góc vào mặt giấy. Cùng lúc, khung dây máy phát a.c. đi qua vị trí nằm ngang giữa hai cực từ N–S nằm ngang. Hướng lực từ lên dây dẫn và suất điện động máy phát lúc này là gì?) A. Force on wire: upwards | Generator e.m.f.: maximum B. Force on wire: downwards | Generator e.m.f.: maximum C. Force on wire: upwards | Generator e.m.f.: zero D. Force on wire: downwards | Generator e.m.f.: zero ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: 1) Lực từ lên dây (Bàn tay trái Fleming): Ngón trỏ đâm vào trang giấy (Field), ngón giữa chỉ từ trái sang phải (Current) → Ngón cái hướng thẳng LÊN TRÊN (upwards) !2) Khung máy phát a.c.: Khi khung nằm ngang (horizontal) , hai cạnh cắt vuông góc đường sức từ nhanh nhất ⇒ e.m.f. cực đại (maximum) ! Chọn A .",
+      "duration": 182.72,
+      "startTime": 6016.9,
+      "endTime": 6199.62,
+      "audioUrl": "/audio/lectures/science/p4/s06_b13.mp3"
+    },
+    {
+      "id": "s06_b14",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s06_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Calculation & Explanation [6 marks] A power station generates 50 MW (5.0 × 107W) of electrical power at 25 kV a.c. A 100%-efficient step-up transformer with 4000 turns on its primary coil steps the voltage up to 400 kV before feeding overhead transmission cables of total resistance 4.0 Ω . (a) Calculate the number of turns on the secondary coil of the transformer. [2] (b) Calculate the current in the 400 kV transmission cables, and hence calculate the power lost as heat in the cables. [3] (c) State why a transformer requires an alternating current (a.c.) rather than direct current (d.c.). [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Using Vp/ Vs= Np/ Ns : Ns = 4000 × (400 kV / 25 kV) [1m] = 64 000 turns [1m]. (b) 1. For 100% efficiency ( IpVp= IsVs= P ):Cable current I = P / V = (5.0 × 107W) / (4.0 × 105V) = 125 A [1m].2. Power loss in cables: P = I²R [1m] = (125)² × 4.0 = 62 500 W (62.5 kW) [1m]. (c) Alternating current creates a continually changing magnetic field in the soft-iron core to induce an e.m.f. in the secondary coil (d.c. produces an unchanging field so zero e.m.f. is induced) [1m]. 💡 Intuition Check: Stepping voltage up 16× shrinks cable current 16× and slashes wasted cable heating I²R by 16² = 256 times!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Tính toán Paper 4 [6 điểm] A power station generates 50 MW (5.0 × 107W) of electrical power at 25 kV a.c. A 100%-efficient step-up transformer with 4000 turns on its primary coil steps the voltage up to 400 kV before feeding overhead transmission cables of total resistance 4.0 Ω . (a) Calculate the number of turns on the secondary coil of the transformer. (b) Calculate the current in the 400 kV transmission cables, and hence calculate the power lost as heat in the cables. (c) State why a transformer requires an alternating current (a.c.) rather than direct current (d.c.). (Nhà máy phát 50 MW ở 25 kV a.c. qua máy biến áp tăng áp hiệu suất 100% có Np= 4000 vòng nâng lên 400 kV truyền trên dây có R = 4.0 Ω. (a) Tính Ns. (b) Tính dòng trên cáp 400 kV và hao phí nhiệt trên cáp. (c) Giải thích tại sao máy biến áp cần dòng xoay chiều a.c.) ✍️ Lời giải chi tiết theo thang điểm: (a) Áp dụng Vp/ Vs= Np/ Ns : Ns = 4000 × (400 kV / 25 kV) = 64 000 vòng (turns) . (b) 1. Hiệu suất 100% ( IpVp= IsVs= P ):Dòng trên cáp: I = P / V = (5.0 × 107) / (4.0 × 105) = 125 A .2. Hao phí nhiệt trên dây: P = I²R = (125)² × 4.0 = 62 500 W (62.5 kW) . (c) Dòng a.c. tạo ra từ trường biến thiên liên tục trong lõi sắt non để cảm ứng ra e.m.f. ở cuộn thứ cấp (d.c. tạo từ trường không đổi nên không có cảm ứng) . 💡 Kiểm tra bản chất: Nâng điện áp 16 lần làm giảm dòng 16 lần và giảm hao phí nhiệt I²R tới 16² = 256 lần!",
+      "duration": 276.93,
+      "startTime": 6199.62,
+      "endTime": 6476.55,
+      "audioUrl": "/audio/lectures/science/p4/s06_b14.mp3"
     }
   ]
 }

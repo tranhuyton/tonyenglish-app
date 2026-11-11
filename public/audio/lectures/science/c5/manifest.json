@@ -1,133 +1,478 @@
 {
   "lectureId": "71545c83-4d45-4201-978c-aa58d01b57e5",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "C5: Chemical energetics",
-  "totalDuration": 369.61,
+  "totalDuration": 3017.38,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề C5",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_exo_endo": {
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 9,
+      "end": 9
+    },
+    "s01_p1_sub02": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_p2_sub01": {
+      "start": 9,
+      "end": 9
+    },
+    "s01_p2_sub02": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_wex": {
+      "start": 12,
+      "end": 13
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 3,
-      "title": "1. Phản ứng Tỏa nhiệt & Thu nhiệt",
-      "selector": "#sec-exo-endo"
+      "end": 13
     },
-    "sec_reaction_profiles": {
-      "start": 4,
-      "end": 5,
-      "title": "2. Giản đồ Năng lượng & Ea",
-      "selector": "#sec-reaction-profiles"
+    "s02_int": {
+      "start": 15,
+      "end": 17
     },
-    "sec_bond_energies": {
-      "start": 6,
-      "end": 8,
-      "title": "3. Năng lượng Liên kết & Tính ΔH",
-      "selector": "#sec-bond-energies"
+    "s02_wex": {
+      "start": 22,
+      "end": 23
+    },
+    "s02_hdr": {
+      "start": 14,
+      "end": 23
+    },
+    "s03_int": {
+      "start": 25,
+      "end": 27
+    },
+    "s03_p1_sub01": {
+      "start": 29,
+      "end": 31
+    },
+    "s03_p1_sub02": {
+      "start": 32,
+      "end": 33
+    },
+    "s03_p2_sub01": {
+      "start": 29,
+      "end": 31
+    },
+    "s03_p2_sub02": {
+      "start": 32,
+      "end": 33
+    },
+    "s03_wex": {
+      "start": 34,
+      "end": 35
+    },
+    "s03_hdr": {
+      "start": 24,
+      "end": 35
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề C5: Nhiệt Hóa học & Năng lượng Liên kết",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic C5: Chemical Energetics. Chemical reactions involve energy transfers between the reacting system and surroundings. In this topic, we investigate exothermic and endothermic reactions, interpret reaction energy profiles and activation energy, and calculate overall enthalpy changes from bond energies.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề C5: Nhiệt Hóa học và Năng lượng Liên kết. Phản ứng hóa học luôn đi kèm sự truyền năng lượng giữa hệ phản ứng và môi trường xung quanh. Trong bài học này, chúng ta sẽ khảo sát phản ứng tỏa nhiệt và thu nhiệt, đọc hiểu giản đồ năng lượng phản ứng cùng năng lượng hoạt hóa, và tính toán biến thiên enthalpy từ năng lượng liên kết.",
-      "duration": 40.38,
+      "title": "Chuyên đề C5: Năng lượng hóa học (Chemical Energetics)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) C5: Chemical Energetics. Complete Master Lecture • C5.1 Exothermic & Endothermic Reactions, Enthalpy Change (ΔH), Activation Energy (Ea), Reaction Pathway Diagrams & Bond Breaking / Making.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ Chuyên đề C5: Năng lượng hóa học (Chemical Energetics). Bài giảng Song ngữ Toàn diện • C5.1 Phản ứng Tỏa nhiệt & Thu nhiệt, Biến thiên Enthalpy (ΔH), Năng lượng Hoạt hóa (Ea) & Phá vỡ / Hình thành Liên kết.",
+      "duration": 46.56,
       "startTime": 0.0,
-      "endTime": 40.38,
+      "endTime": 46.56,
       "audioUrl": "/audio/lectures/science/c5/intro.mp3"
     },
     {
-      "id": "sec_exo_endo",
-      "title": "1. Phản ứng Tỏa nhiệt & Thu nhiệt (Exothermic vs Endothermic Overview)",
-      "selector": "#sec-exo-endo",
-      "en": "Section 1 compares Exothermic and Endothermic reactions: In an exothermic reaction, thermal energy is transferred to the surroundings, causing temperature to rise. In an endothermic reaction, thermal energy is absorbed from the surroundings, causing temperature to fall.",
-      "vi": "Mục một so sánh Phản ứng Tỏa nhiệt và Thu nhiệt: Trong phản ứng tỏa nhiệt, nhiệt năng được giải phóng ra môi trường làm nhiệt độ xung quanh tăng lên. Trong phản ứng thu nhiệt, nhiệt năng bị hấp thụ từ môi trường khiến nhiệt độ xung quanh hạ xuống.",
-      "duration": 58.07,
-      "startTime": 40.38,
-      "endTime": 98.45,
-      "audioUrl": "/audio/lectures/science/c5/sec_exo_endo.mp3"
+      "id": "s01_hdr",
+      "title": "🔥 1. PHẢN ỨNG TỎA NHIỆT & THU NHIỆT (EXOTHERMIC & ENDOTHERMIC)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🔥 1. EXOTHERMIC & ENDOTHERMIC REACTIONS. Core + Supplement C5.1",
+      "vi": "🔥 1. PHẢN ỨNG TỎA NHIỆT & THU NHIỆT (EXOTHERMIC & ENDOTHERMIC). Core + Supplement C5.1",
+      "duration": 15.47,
+      "startTime": 46.56,
+      "endTime": 62.03,
+      "audioUrl": "/audio/lectures/science/c5/s01_hdr.mp3"
     },
     {
-      "id": "sec_exothermic",
-      "title": "🔥 Exothermic Reactions (Phản ứng Tỏa nhiệt)",
-      "selector": "#sec-exothermic",
-      "en": "Exothermic reactions have negative enthalpy change Delta H. Products have lower chemical energy than reactants because energy is released as heat. Examples include combustion of fuels, neutralisation, and respiration.",
-      "vi": "Phản ứng tỏa nhiệt có biến thiên enthalpy Delta H mang giá trị âm. Các chất sản phẩm có năng lượng hóa học thấp hơn chất phản ứng vì năng lượng đã giải phóng ra ngoài dưới dạng nhiệt. Ví dụ gồm sự đốt cháy nhiên liệu, phản ứng trung hòa axit-bazơ và quá trình hô hấp.",
-      "duration": 30.71,
-      "startTime": 98.45,
-      "endTime": 129.16,
-      "audioUrl": "/audio/lectures/science/c5/sec_exothermic.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine the chemical bonds (the system) are your wallet , and the water + thermometer (the surroundings) are your friend sitting beside you :• Exothermic (\"EXit\"): You hand cash OUT of your wallet to your friend → your wallet balance drops ( ΔH is negative, − ), while your friend gets richer ( surroundings temperature RISES 🔥).• Endothermic (\"ENter\"): You take cash IN from your friend into your wallet → your wallet balance grows ( ΔH is positive, + ), while your friend has less ( surroundings temperature FALLS ❄️).",
+      "vi": "🎯 Hình dung đời thường: Hãy coi hệ liên kết hóa học (the system) là ví tiền của bạn , còn nước dung dịch + nhiệt kế (the surroundings) là người bạn ngồi cạnh :• Exothermic (\"EXit\" — Tỏa nhiệt): Bạn rút tiền trong ví ĐƯA RA cho bạn mình → ví của bạn vơi đi ( ΔH mang dấu âm, − ), còn bạn mình giàu thêm ( nhiệt độ môi trường TĂNG LÊN 🔥).• Endothermic (\"ENter\" — Thu nhiệt): Bạn HÚT TIỀN từ người bên cạnh cất vào ví → ví của bạn đầy lên ( ΔH mang dấu dương, + ), còn người bên cạnh bị nghèo đi ( nhiệt độ môi trường GIẢM XUỐNG ❄️).",
+      "duration": 72.92,
+      "startTime": 62.03,
+      "endTime": 134.95,
+      "audioUrl": "/audio/lectures/science/c5/s01_b01.mp3"
     },
     {
-      "id": "sec_endothermic",
-      "title": "❄️ Endothermic Reactions (Phản ứng Thu nhiệt)",
-      "selector": "#sec-endothermic",
-      "en": "Endothermic reactions have positive enthalpy change Delta H. Products have higher chemical energy than reactants. Examples include photosynthesis, thermal decomposition of calcium carbonate, and sherbet reactions.",
-      "vi": "Phản ứng thu nhiệt có biến thiên enthalpy Delta H mang giá trị dương. Các chất sản phẩm có mức năng lượng hóa học cao hơn chất ban đầu. Các ví dụ điển hình bao gồm quá trình quang hợp, phản ứng nhiệt phân đá vôi canxi cacbonat và phản ứng tạo bọt sủi.",
-      "duration": 30.09,
-      "startTime": 129.16,
-      "endTime": 159.25,
-      "audioUrl": "/audio/lectures/science/c5/sec_endothermic.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Direction of Thermal Energy (🟦 Core 1–2): Exothermic transfers thermal energy to the surroundings (⇒ temperature of surroundings increases ). Endothermic takes in thermal energy from the surroundings (⇒ temperature of surroundings decreases ). 2. Enthalpy Sign (🟩 Supplement 4): Thermal energy transfer is called enthalpy change (ΔH) : negative (ΔH < 0) for exothermic; positive (ΔH > 0) for endothermic. 3. Practical Calorimetry: Polystyrene cups insulate against heat loss/gain; always compare ΔT = Tfinal− Tinitial !",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Chiều truyền Nhiệt năng (🟦 Core 1–2): Exothermic truyền nhiệt năng ra môi trường làm nhiệt độ môi trường tăng lên . Endothermic thu nhiệt năng từ môi trường làm nhiệt độ môi trường giảm xuống . 2. Dấu của ΔH (🟩 Supplement 4): Nhiệt trao đổi gọi là enthalpy change (ΔH) : mang dấu âm (ΔH < 0) khi tỏa nhiệt và dấu dương (ΔH > 0) khi thu nhiệt. 3. Thực hành Nhiệt lượng kế: Dùng cốc xốp (polystyrene cup) cách nhiệt và luôn so sánh độ chênh lệch ΔT = Tcuối− Tđầu !",
+      "duration": 87.46,
+      "startTime": 134.95,
+      "endTime": 222.41,
+      "audioUrl": "/audio/lectures/science/c5/s01_b02.mp3"
     },
     {
-      "id": "sec_reaction_profiles",
-      "title": "2. Giản đồ Năng lượng Phản ứng (Reaction Energy Profiles Overview)",
-      "selector": "#sec-reaction-profiles",
-      "en": "Section 2 illustrates Reaction Profiles: showing the relative enthalpy levels of reactants and products against progress of reaction.",
-      "vi": "Mục hai minh họa Giản đồ Năng lượng Phản ứng: thể hiện mức enthalpy tương đối của các chất phản ứng và sản phẩm theo tiến trình phản ứng.",
-      "duration": 60.9,
-      "startTime": 159.25,
-      "endTime": 220.15,
-      "audioUrl": "/audio/lectures/science/c5/sec_reaction_profiles.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never think \"endothermic absorbs heat so the thermometer goes UP\"! That is 100% backwards! Because the thermometer sits in the surroundings (the water) , an endothermic reaction steals thermal energy out of the water , causing the thermometer reading to DROP !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG nhầm \"thu nhiệt là hút thêm nhiệt nên nhiệt kế tăng lên\"! Ngược hoàn toàn! Nhiệt kế nằm ở môi trường nước bên ngoài : khi phản ứng thu nhiệt hút cạn nhiệt của nước, nước bị lạnh đi nên cột nhiệt kế bắt buộc phải TỤT XUỐNG !",
+      "duration": 37.16,
+      "startTime": 222.41,
+      "endTime": 259.57,
+      "audioUrl": "/audio/lectures/science/c5/s01_b03.mp3"
     },
     {
-      "id": "sec_energy_profiles",
-      "title": "📈 Energy Profiles & Activation Energy (Giản đồ Năng lượng & Ea)",
-      "selector": "#sec-energy-profiles",
-      "en": "Activation energy Ea is the minimum energy that colliding particles must possess to react, shown as an arrow from reactant energy level to the peak of the curve. Enthalpy change Delta H is the vertical distance between reactants and products.",
-      "vi": "Năng lượng hoạt hóa Ea là năng lượng tối thiểu mà các hạt va chạm phải có để phản ứng xảy ra, biểu diễn bằng mũi tên từ mức năng lượng chất phản ứng lên đến đỉnh đường cong. Biến thiên enthalpy Delta H là khoảng cách thẳng đứng giữa mức năng lượng chất phản ứng và chất sản phẩm.",
-      "duration": 30.66,
-      "startTime": 220.15,
-      "endTime": 250.81,
-      "audioUrl": "/audio/lectures/science/c5/sec_energy_profiles.mp3"
+      "id": "s01_b04",
+      "title": "Mọi phản ứng hóa học đều đi kèm sự trao đổi nhiệt năng (thermal energy) giữa hệ ...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Every chemical reaction involves a transfer of thermal energy between the reacting system (the chemical bonds in reactants and products) and the surroundings (the solvent water, reaction vessel, thermometer bulb, and surrounding air). Because energy cannot be created or destroyed (Law of Conservation of Energy), any chemical energy lost by the system becomes thermal energy gained by the surroundings, and vice versa.",
+      "vi": "Mọi phản ứng hóa học đều đi kèm sự trao đổi nhiệt năng (thermal energy) giữa hệ hóa học (chemical system) — tức năng lượng dự trữ trong liên kết của chất tham gia và sản phẩm — với môi trường xung quanh (surroundings) bao gồm nước dung môi, thành cốc thí nghiệm, bầu nhiệt kế và không khí. Theo Định luật Bảo toàn Năng lượng , năng lượng hóa học giảm đi bao nhiêu thì nhiệt năng truyền ra môi trường bấy nhiêu và ngược lại.",
+      "duration": 52.42,
+      "startTime": 259.57,
+      "endTime": 311.99,
+      "audioUrl": "/audio/lectures/science/c5/s01_b04.mp3"
     },
     {
-      "id": "sec_bond_energies",
-      "title": "3. Năng lượng Liên kết & Tính toán Enthalpy (Bond Energies Overview)",
-      "selector": "#sec-bond-energies",
-      "en": "Section 3 explains chemical bond energetics: Chemical reactions proceed by breaking reactant bonds and forming new product bonds.",
-      "vi": "Mục ba giải thích năng lượng liên kết hóa học: Phản ứng hóa học diễn ra qua hai giai đoạn bẻ gãy liên kết ở chất phản ứng và hình thành các liên kết mới ở chất sản phẩm.",
-      "duration": 59.06,
-      "startTime": 250.81,
-      "endTime": 309.87,
-      "audioUrl": "/audio/lectures/science/c5/sec_bond_energies.mp3"
+      "id": "s01_b05",
+      "title": "🧭 Tư duy Cốt lõi: Hệ phản ứng (System) vs. Môi trường (Surroundings) Nhiệt kế cắ...",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🧭 Crucial Concept: Chemical System vs. Surroundings A thermometer placed in a beaker does NOT directly measure stored chemical bond energy — it measures the temperature of the surroundings (the aqueous solution). When thermal energy leaves the chemical system and enters the water, the thermometer reading rises (exothermic). When the chemical system pulls thermal energy out of the water, the thermometer reading falls (endothermic).",
+      "vi": "🧭 Tư duy Cốt lõi: Hệ phản ứng (System) vs. Môi trường (Surroundings) Nhiệt kế cắm trong cốc phản ứng KHÔNG đo trực tiếp năng lượng bên trong liên kết hóa học, mà đo nhiệt độ của môi trường xung quanh — chính là phần nước dung dịch! Khi hệ hóa học giải phóng nhiệt năng ra nước, nhiệt kế tăng lên ( exothermic ). Khi hệ hóa học hút nhiệt năng từ nước vào để bẻ liên kết, nước bị mất nhiệt nên nhiệt kế hạ xuống ( endothermic ).",
+      "duration": 55.3,
+      "startTime": 311.99,
+      "endTime": 367.29,
+      "audioUrl": "/audio/lectures/science/c5/s01_b05.mp3"
     },
     {
-      "id": "sec_mex_bendo",
-      "title": "🧠 Rule: BENDO - MEX (Bẻ gãy Thu nhiệt - Tạo thành Tỏa nhiệt)",
-      "selector": "#sec-mex-bendo",
-      "en": "Remember the IGCSE rule BENDO - MEX: Breaking bonds is Endothermic, requiring energy input. Making bonds is Exothermic, releasing energy output.",
-      "vi": "Mẹo nhớ kinh điển BENDO - MEX: Bẻ gãy liên kết là quá trình Thu nhiệt (BENDO - Breaking is Endothermic) cần cung cấp năng lượng. Tạo thành liên kết mới là quá trình Tỏa nhiệt (MEX - Making is Exothermic) giải phóng năng lượng ra ngoài.",
-      "duration": 29.68,
-      "startTime": 309.87,
-      "endTime": 339.55,
-      "audioUrl": "/audio/lectures/science/c5/sec_mex_bendo.mp3"
+      "id": "s01_b06",
+      "title": "🔥 Exothermic (Phản ứng Tỏa nhiệt)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🔥 Exothermic Reactions. Official Syllabus Definition: An exothermic reaction transfers thermal energy to the surroundings , leading to an increase in the temperature of the surroundings. Thermometer observation: Temperature of the reaction mixture / surroundings RISES (container feels hot). Energy levels: Products have less chemical energy than reactants because energy was lost to the surroundings. Enthalpy change (ΔH) [Supplement]: NEGATIVE ( ΔH < 0 ) , e.g. −890 kJ/mol. Must-Know Cambridge Examples: Combustion of fuels: CH4(g) + 2O2(g) → CO2(g) + 2H2O(l). Neutralisation: HCl(aq) + NaOH(aq) → NaCl(aq) + H2O(l). Metal + Acid / Displacement: Mg(s) + 2HCl(aq) → MgCl2(aq) + H2(g). Respiration in cells: C6H12O6+ 6O2→ 6CO2+ 6H2O. Hydration: Adding water to white anhydrous CuSO4(s) → blue CuSO4•5H2O(s).",
+      "vi": "🔥 Exothermic (Phản ứng Tỏa nhiệt). Định nghĩa chuẩn Syllabus: Phản ứng exothermic truyền nhiệt năng ra môi trường xung quanh , làm tăng nhiệt độ của môi trường. Hiện tượng nhiệt kế: Nhiệt độ dung dịch / môi trường TĂNG LÊN (temperature increases) , cốc ấm/nóng lên. Mức năng lượng: Sản phẩm ( products ) có mức năng lượng hóa học thấp hơn chất tham gia ( reactants ). Biến thiên Enthalpy (ΔH) [Supplement]: Mang dấu ÂM ( ΔH < 0, negative ) , ví dụ −890 kJ/mol. Các ví dụ kinh điển trong đề thi 0654: Sự đốt cháy nhiên liệu (Combustion): CH4(g) + 2O2(g) → CO2(g) + 2H2O(l). Phản ứng trung hòa (Neutralisation): HCl(aq) + NaOH(aq) → NaCl(aq) + H2O(l). Kim loại + Axit / Phản ứng thế: Mg(s) + 2HCl(aq) → MgCl2(aq) + H2(g). Hô hấp tế bào (Respiration): C6H12O6+ 6O2→ 6CO2+ 6H2O. Hydrat hóa: Nhỏ nước vào bột trắng CuSO4khan → tinh thể xanh CuSO4•5H2O.",
+      "duration": 179.45,
+      "startTime": 367.29,
+      "endTime": 546.74,
+      "audioUrl": "/audio/lectures/science/c5/s01_b06.mp3"
     },
     {
-      "id": "sec_calc_enthalpy",
-      "title": "🧮 Calculating Overall Enthalpy Change (Tính toán ΔH)",
-      "selector": "#sec-calc-enthalpy",
-      "en": "Overall enthalpy change Delta H equals the sum of energy required to break all reactant bonds minus the sum of energy released when all product bonds form. If bond making releases more energy than bond breaking requires, the reaction is exothermic.",
-      "vi": "Biến thiên enthalpy tổng thể Delta H bằng tổng năng lượng cần để phá vỡ các liên kết ban đầu trừ đi tổng năng lượng giải phóng khi hình thành các liên kết mới. Nếu năng lượng tỏa ra khi tạo liên kết lớn hơn năng lượng cần để bẻ gãy liên kết, phản ứng là tỏa nhiệt.",
-      "duration": 30.06,
-      "startTime": 339.55,
-      "endTime": 369.61,
-      "audioUrl": "/audio/lectures/science/c5/sec_calc_enthalpy.mp3"
+      "id": "s01_b07",
+      "title": "❄️ Endothermic (Phản ứng Thu nhiệt)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "❄️ Endothermic Reactions. Official Syllabus Definition: An endothermic reaction takes in thermal energy from the surroundings , leading to a decrease in the temperature of the surroundings. Thermometer observation: Temperature of the reaction mixture / surroundings FALLS (container feels cold unless continuously heated). Energy levels: Products have more chemical energy than reactants because thermal energy was absorbed and stored. Enthalpy change (ΔH) [Supplement]: POSITIVE ( ΔH > 0 ) , e.g. +178 kJ/mol. Must-Know Cambridge Examples: Thermal decomposition: CaCO3(s) → CaO(s) + CO2(g). Photosynthesis: 6CO2+ 6H2O → C6H12O6+ 6O2(absorbs light energy). Citric acid + sodium hydrogencarbonate (sherbet / cold reaction). Dissolving ammonium salts (e.g. NH4NO3in instant sports cold packs). Dehydration: Heating blue CuSO4•5H2O(s) → white CuSO4(s) + 5H2O(g).",
+      "vi": "❄️ Endothermic (Phản ứng Thu nhiệt). Định nghĩa chuẩn Syllabus: Phản ứng endothermic thu nhận nhiệt năng từ môi trường xung quanh , làm giảm nhiệt độ của môi trường. Hiện tượng nhiệt kế: Nhiệt độ dung dịch / môi trường GIẢM XUỐNG (temperature decreases) , cốc lạnh đi. Mức năng lượng: Sản phẩm ( products ) có mức năng lượng hóa học cao hơn chất tham gia ( reactants ). Biến thiên Enthalpy (ΔH) [Supplement]: Mang dấu DƯƠNG ( ΔH > 0, positive ) , ví dụ +178 kJ/mol. Các ví dụ kinh điển trong đề thi 0654: Nhiệt phân (Thermal decomposition): CaCO3(s) → CaO(s) + CO2(g). Quang hợp (Photosynthesis): 6CO2+ 6H2O → C6H12O6+ 6O2(hấp thụ ánh sáng). Citric acid + sodium hydrogencarbonate (phản ứng kẹo sủi làm mát). Hòa tan muối amoni (VD: NH4NO3trong túi chườm lạnh thể thao). Khử nước (Dehydration): Nung tinh thể xanh CuSO4•5H2O → bột trắng CuSO4+ 5H2O.",
+      "duration": 159.42,
+      "startTime": 546.74,
+      "endTime": 706.16,
+      "audioUrl": "/audio/lectures/science/c5/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Tiêu chí (Feature): Chiều truyền nhiệt năng; 🔥 Exothermic (Tỏa nhiệt): Truyền RA...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "Feature: Direction of Thermal Energy; 🔥 Exothermic Reaction: Transferred OUT TO the surroundings; ❄️ Endothermic Reaction: Taken IN FROM the surroundings. Feature: Temperature of Surroundings; 🔥 Exothermic Reaction: Increases (ΔT > 0, thermometer rises); ❄️ Endothermic Reaction: Decreases (ΔT < 0, thermometer falls). Feature: Product vs. Reactant Energy; 🔥 Exothermic Reaction: Products have lower energy than reactants; ❄️ Endothermic Reaction: Products have higher energy than reactants. Feature: Sign of Enthalpy Change (ΔH); 🔥 Exothermic Reaction: Negative (−); ❄️ Endothermic Reaction: Positive (+). Feature: Bond Energetics (Supplement); 🔥 Exothermic Reaction: Energy released making bonds > energy used breaking bonds; ❄️ Endothermic Reaction: Energy used breaking bonds > energy released making bonds.",
+      "vi": "Tiêu chí (Feature): Chiều truyền nhiệt năng; 🔥 Exothermic (Tỏa nhiệt): Truyền RA NGOÀI môi trường ( to surroundings ); ❄️ Endothermic (Thu nhiệt): Thu VÀO TRONG từ môi trường ( from surroundings ). Tiêu chí (Feature): Nhiệt độ môi trường; 🔥 Exothermic (Tỏa nhiệt): Tăng lên (ΔT > 0, nhiệt kế dâng cao); ❄️ Endothermic (Thu nhiệt): Giảm xuống (ΔT < 0, nhiệt kế tụt xuống). Tiêu chí (Feature): Năng lượng Sản phẩm vs Chất đầu; 🔥 Exothermic (Tỏa nhiệt): Products thấp hơn Reactants; ❄️ Endothermic (Thu nhiệt): Products cao hơn Reactants. Tiêu chí (Feature): Dấu của ΔH (Enthalpy change); 🔥 Exothermic (Tỏa nhiệt): Âm (− / Negative); ❄️ Endothermic (Thu nhiệt): Dương (+ / Positive). Tiêu chí (Feature): So sánh Năng lượng liên kết; 🔥 Exothermic (Tỏa nhiệt): Năng lượng tỏa ra khi tạo liên kết > năng lượng bẻ liên kết; ❄️ Endothermic (Thu nhiệt): Năng lượng bẻ liên kết > năng lượng tỏa ra khi tạo liên kết.",
+      "duration": 131.25,
+      "startTime": 706.16,
+      "endTime": 837.41,
+      "audioUrl": "/audio/lectures/science/c5/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "1. Thí nghiệm Cốc xốp (Polystyrene Cup)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "1. Solution Calorimetry (Polystyrene Cup). Use an expanded polystyrene cup instead of a glass beaker because polystyrene is a good thermal insulator (minimises heat loss/gain with room air). Stand the cup inside a glass beaker so it cannot tip over. Fit a plastic lid with a hole for the thermometer to prevent heat loss by evaporation and convection.",
+      "vi": "1. Thí nghiệm Cốc xốp (Polystyrene Cup). Dùng cốc nhựa xốp (polystyrene cup) thay vì cốc thủy tinh vì xốp là chất cách nhiệt tốt (thermal insulator) , giảm thất thoát nhiệt ra không khí. Đặt cốc xốp bên trong cốc thủy tinh (glass beaker) để giữ vững, tránh đổ ngã khi khuấy. Đậy nắp nhựa (lid) có lỗ cắm nhiệt kế để chống mất nhiệt do bay hơi.",
+      "duration": 49.2,
+      "startTime": 837.41,
+      "endTime": 886.61,
+      "audioUrl": "/audio/lectures/science/c5/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "2. Bẫy bài tập So sánh Nhiên liệu (Spirit Burner)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "2. Comparing Fuels (Spirit Burner + Copper Can). Four fuels were burned under identical volumes of water. Look carefully at ΔT = Tfinal− Tinitial , NOT just Tfinal! Fuel — T initial (°C) — T final (°C) — ΔT (°C). Ethanol — 24 — 40 — +16. Propanol — 24 — 42 — +18. Paraffin — 22 — 33 — +11. Petroleum spirit — 20 — 40 — +20 (Max!). Exam Trap: Propanol reached 42°C, yet petroleum spirit transferred the most energy because its temperature rise (ΔT = +20°C) was greatest!",
+      "vi": "2. Bẫy bài tập So sánh Nhiên liệu (Spirit Burner). Khi đốt 4 nhiên liệu dưới cùng một lượng nước, phải tính độ tăng nhiệt độ ΔT = Tfinal− Tinitial chứ không nhìn Tfinal! Nhiên liệu — T đầu (°C) — T cuối (°C) — ΔT (°C). Ethanol — 24 — 40 — +16. Propanol — 24 — 42 — +18. Paraffin — 22 — 33 — +11. Petroleum spirit — 20 — 40 — +20 (Lớn nhất!). Bẫy đề thi: Dù Propanol đạt 42°C cao nhất, nhưng Petroleum spirit mới tỏa nhiều nhiệt nhất vì ΔT = +20°C lớn nhất!",
+      "duration": 105.24,
+      "startTime": 886.61,
+      "endTime": 991.85,
+      "audioUrl": "/audio/lectures/science/c5/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE + 🟩 SUPPLEMENT • Paper 1 & 2 MCQ Solid ammonium nitrate is dissolved in water in an insulated polystyrene cup. The temperature of the solution changes from 22.5 °C to 15.0 °C. Which row correctly describes this process? A. Type: endothermic | Thermal energy transfer: from the surroundings | Sign of ΔH: positive (+) B. Type: endothermic | Thermal energy transfer: to the surroundings | Sign of ΔH: negative (−) C. Type: exothermic | Thermal energy transfer: from the surroundings | Sign of ΔH: positive (+) D. Type: exothermic | Thermal energy transfer: to the surroundings | Sign of ΔH: negative (−) ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: The thermometer measures the temperature of the aqueous surroundings , which fell by 7.5 °C (22.5 °C → 15.0 °C). A decrease in temperature of the surroundings means the dissolving system took in thermal energy from the surroundings — the exact definition of an endothermic process (eliminating B, C, and D). Because the chemical system gained energy, the enthalpy change ΔH is positive (+) .",
+      "vi": "BÀI MẪU 1 🟦 CORE + 🟩 SUPPLEMENT • Trắc nghiệm Paper 1 & 2 Solid ammonium nitrate is dissolved in water in an insulated polystyrene cup. The temperature of the solution changes from 22.5 °C to 15.0 °C. Which row correctly describes this process? (Hòa tan muối ammonium nitrate rắn vào nước trong cốc xốp cách nhiệt, nhiệt độ dung dịch thay đổi từ 22,5 °C xuống 15,0 °C. Dòng nào mô tả đúng quá trình này?) A. Type: endothermic | Thermal energy transfer: from the surroundings | Sign of ΔH: positive (+) B. Type: endothermic | Thermal energy transfer: to the surroundings | Sign of ΔH: negative (−) C. Type: exothermic | Thermal energy transfer: from the surroundings | Sign of ΔH: positive (+) D. Type: exothermic | Thermal energy transfer: to the surroundings | Sign of ΔH: negative (−) ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Nhiệt kế đo nhiệt độ của dung dịch nước ( surroundings ) và thấy giảm 7,5 °C (từ 22,5 °C xuống 15,0 °C). Nhiệt độ môi trường giảm chứng tỏ hệ đã thu nhận nhiệt năng từ môi trường → đây là quá trình endothermic (loại B, C, D). Do hệ hấp thụ thêm năng lượng nên biến thiên enthalpy ΔH mang dấu dương (+) .",
+      "duration": 182.8,
+      "startTime": 991.85,
+      "endTime": 1174.65,
+      "audioUrl": "/audio/lectures/science/c5/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE + 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] A student adds excess magnesium powder to 25.0 cm3of dilute hydrochloric acid in a polystyrene cup fitted with a lid. The temperature rises from 21.0 °C to 43.5 °C. (a) Calculate the temperature change and explain, in terms of thermal energy transfer, how this shows the reaction is exothermic. [2] (b) State the sign of ΔH for this reaction and compare the stored chemical energy of the products with that of the reactants. [2] (c) Explain why a polystyrene cup with a lid gives a more accurate result than an open glass beaker. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Temperature rise ΔT = 43.5 − 21.0 = +22.5 °C [1m] . The reaction is exothermic because thermal energy is transferred to the surroundings , increasing the temperature of the solution [1m] . (b) ΔH is negative (−) [1m] . The products have less (lower) chemical energy than the reactants [1m] . (c) Polystyrene is a good thermal insulator (reduces heat loss through the walls compared to glass) [1m] , and the lid reduces heat loss by evaporation/convection to the surrounding air [1m] . 💡 Intuition Check: Thermometer goes UP (+22.5 °C) ⇔ Surroundings gained heat ⇔ System lost energy ⇔ Exothermic (ΔH is negative)!",
+      "vi": "BÀI MẪU 2 🟦 CORE + 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] A student adds excess magnesium powder to 25.0 cm3of dilute hydrochloric acid in a polystyrene cup fitted with a lid. The temperature rises from 21.0 °C to 43.5 °C. (Cho bột Mg dư vào 25,0 cm3dung dịch HCl loãng trong cốc xốp có đậy nắp. Nhiệt độ tăng từ 21,0 °C lên 43,5 °C.) (a) Calculate the temperature change and explain, in terms of thermal energy transfer, how this shows the reaction is exothermic. (Tính độ biến thiên nhiệt độ và giải thích theo sự truyền nhiệt vì sao đây là phản ứng tỏa nhiệt.) (b) State the sign of ΔH for this reaction and compare the stored chemical energy of the products with that of the reactants. (Nêu dấu của ΔH và so sánh năng lượng dự trữ của sản phẩm so với chất tham gia.) (c) Explain why a polystyrene cup with a lid gives a more accurate result than an open glass beaker. (Giải thích vì sao cốc xốp có nắp cho kết quả chính xác hơn cốc thủy tinh hở.) ✍️ Lời giải chi tiết theo thang điểm: (a) Độ tăng nhiệt độ: ΔT = 43,5 − 21,0 = +22,5 °C . Đây là phản ứng tỏa nhiệt (exothermic) vì nhiệt năng được truyền ra môi trường xung quanh làm dung dịch nóng lên . (b) ΔH mang dấu âm (negative, −) . Sản phẩm (products) có mức năng lượng hóa học thấp hơn chất tham gia (reactants) .",
+      "duration": 211.5,
+      "startTime": 1174.65,
+      "endTime": 1386.15,
+      "audioUrl": "/audio/lectures/science/c5/s01_b12.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "📈 2. GIẢN ĐỒ NĂNG LƯỢNG & NĂNG LƯỢNG HOẠT HÓA (E a )",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "📈 2. REACTION PATHWAY DIAGRAMS & ACTIVATION ENERGY. Core C5.1.3 • Supplement C5.1.4–6",
+      "vi": "📈 2. GIẢN ĐỒ NĂNG LƯỢNG & NĂNG LƯỢNG HOẠT HÓA (Ea). Core C5.1.3 • Supplement C5.1.4–6",
+      "duration": 21.96,
+      "startTime": 1386.15,
+      "endTime": 1408.11,
+      "audioUrl": "/audio/lectures/science/c5/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture Pushing a Heavy Boulder Over a Mountain Ridge ! Even when the valley on the far side is much lower than your starting ledge (an exothermic drop), the boulder will NOT roll by itself until you first push it UP to the crest of the ridge ! That uphill climb from the starting ledge to the peak is the Activation Energy (Ea) (like striking a spark to ignite gas). Adding a catalyst blasts a lower tunnel through the ridge (smaller Ea), while your starting ledge and destination valley stay at the exact same heights ( ΔH unchanged )!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung việc Đẩy Tảng Đá Qua Đỉnh Đồi ! Dù thung lũng bên kia thấp hơn chỗ bạn đứng rất nhiều (phản ứng exothermic ), tảng đá cũng KHÔNG tự lăn nếu bạn chưa tốn sức đẩy nó VƯỢT LÊN ĐỈNH ĐỒI trước! Đoạn dốc từ vạch xuất phát lên đỉnh đồi chính là Năng lượng hoạt hóa (giống như tia lửa mồi bật bếp ga). Thêm chất xúc tác (catalyst) giống như đào một đường hầm thấp hơn xuyên qua đồi (giảm Ea), còn độ cao vạch xuất phát và đích đến hoàn toàn giữ nguyên ( ΔH không đổi )!",
+      "duration": 69.88,
+      "startTime": 1408.11,
+      "endTime": 1477.99,
+      "audioUrl": "/audio/lectures/science/c5/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Read the Shelves (🟦 Core 3): Products lower than Reactants = Exothermic ; Products higher than Reactants = Endothermic . 2. Exact Definitions (🟩 Supp. 4–5): Activation energy (Ea) = the minimum energy that colliding particles must have to react . 3. Arrow Drawing Rules (🟩 Supp. 6): • Ea: Single-headed arrow pointing UP (↑) from the Reactants line to the top peak .• ΔH: Single-headed arrow from the Reactants line to the Products line ( ↓ down for exothermic; ↑ up for endothermic).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Nhìn Bậc thang Năng lượng (🟦 Core 3): Products thấp hơn Reactants = Exothermic ; Products cao hơn Reactants = Endothermic . 2. Định nghĩa Chuẩn (🟩 Supp. 4–5): Activation energy (Ea) = năng lượng tối thiểu mà các hạt va chạm phải có để phản ứng xảy ra . 3. Quy tắc Vẽ Mũi tên (🟩 Supp. 6): • Ea: Mũi tên 1 đầu CHỈ LÊN (↑) từ vạch Reactants chạm đỉnh cao nhất (Peak).• ΔH: Mũi tên 1 đầu từ vạch Reactants tới vạch Products ( ↓ chỉ xuống nếu tỏa nhiệt; ↑ chỉ lên nếu thu nhiệt).",
+      "duration": 79.81,
+      "startTime": 1477.99,
+      "endTime": 1557.8,
+      "audioUrl": "/audio/lectures/science/c5/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Drawing double-headed arrows (↕) for Eaor ΔH loses marks! Every arrow on a Cambridge pathway diagram must be single-headed starting strictly at the horizontal Reactants energy level (never from the bottom x-axis!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Vẽ mũi tên 2 đầu (↕) cho Eahoặc ΔH sẽ bị trừ điểm ngay! Cả hai mũi tên Eavà ΔH đều phải là mũi tên 1 đầu và BẮT BUỘC xuất phát đúng từ vạch ngang của Reactants (không bao giờ kẻ từ trục hoành dưới đáy!).",
+      "duration": 35.52,
+      "startTime": 1557.8,
+      "endTime": 1593.32,
+      "audioUrl": "/audio/lectures/science/c5/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Activation Energy, E a (Năng lượng hoạt hóa)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🔑 Supplement Definition (C5.1.5) Activation Energy (Ea). Activation energy, Ea , is defined as the minimum energy that colliding particles must have to react . Even highly exothermic reactions (like burning methane) do not start at room temperature without a spark to supply Ea!",
+      "vi": "🔑 Định nghĩa Thuộc lòng (Supplement C5.1.5) Activation Energy, Ea(Năng lượng hoạt hóa). Activation energy (Ea) là năng lượng tối thiểu mà các hạt va chạm phải có để phản ứng xảy ra.",
+      "duration": 34.84,
+      "startTime": 1593.32,
+      "endTime": 1628.16,
+      "audioUrl": "/audio/lectures/science/c5/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Enthalpy Change, ΔH (Biến thiên Enthalpy)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔑 Supplement Definition (C5.1.4) Enthalpy Change (ΔH). The transfer of thermal energy during a reaction is called the enthalpy change, ΔH , of the reaction (measured in kJ/mol). ΔH is negative for exothermic reactions and positive for endothermic reactions.",
+      "vi": "🔑 Định nghĩa Thuộc lòng (Supplement C5.1.4) Enthalpy Change, ΔH (Biến thiên Enthalpy). Sự trao đổi nhiệt năng trong phản ứng được gọi là enthalpy change (ΔH) (đơn vị kJ/mol). ΔH âm (−) với phản ứng exothermic và ΔH dương (+) với phản ứng endothermic.",
+      "duration": 46.19,
+      "startTime": 1628.16,
+      "endTime": 1674.35,
+      "audioUrl": "/audio/lectures/science/c5/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Interactive Energy Diagrams: Giản đồ Tiến trình Phản ứng",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Interactive Reaction Pathway Diagrams (with Catalyst Pathway). EXOTHERMIC SVG 🔥 Exothermic Pathway (ΔH < 0). ENDOTHERMIC SVG ❄️ Endothermic Pathway (ΔH > 0). 👆 Inspect the exact arrow direction rules required to earn full marks when drawing reaction pathway diagrams in Paper 4.",
+      "vi": "Interactive Energy Diagrams: Giản đồ Tiến trình Phản ứng. EXOTHERMIC SVG 🔥 Exothermic Profile (ΔH < 0). ENDOTHERMIC SVG ❄️ Endothermic Profile (ΔH > 0). 👆 Xem chi tiết quy tắc vẽ hướng mũi tên chuẩn đáp án chấm thi Paper 4 của Cambridge.",
+      "duration": 46.69,
+      "startTime": 1674.35,
+      "endTime": 1721.04,
+      "audioUrl": "/audio/lectures/science/c5/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🚨 BẪY MẤT ĐIỂM PAPER 4: 4 Thành phần bắt buộc khi vẽ Giản đồ (C5.1.6)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🚨 EXAMINER CHECKLIST: 4 Essential Labels (Syllabus C5.1.6). When Cambridge asks you to draw and label a reaction pathway diagram, check all four items before moving on: Reactants & Products: Write the actual chemical formulas (e.g. CH₄ + 2O₂ on the left line and CO₂ + 2H₂O on the right line) if equations are given! Activation energy (Ea): Single-headed arrow pointing UP from the reactant line to the exact peak of the curve (no gaps!). Overall energy / enthalpy change (ΔH): Single-headed arrow from the reactant line to the product line (pointing down for exothermic, up for endothermic). Never draw double-headed arrows (↔) — examiners deduct marks! Energy hump: Even exothermic reactions MUST rise up over an activation energy hump before dropping down to the product plateau.",
+      "vi": "🚨 BẪY MẤT ĐIỂM PAPER 4: 4 Thành phần bắt buộc khi vẽ Giản đồ (C5.1.6). Reactants & Products: Nếu đề đã cho phương trình cụ thể, hãy viết thẳng công thức (VD: CH₄ + 2O₂ bên trái và CO₂ + 2H₂O bên phải) lên hai vạch ngang! Activation energy (Ea): Mũi tên 1 đầu hướng LÊN nối sát từ vạch Reactants đến đỉnh cao nhất của đường cong (không để hở khoảng trắng!). Enthalpy change (ΔH): Mũi tên 1 đầu đi từ vạch Reactants đến vạch Products (chỉ xuống cho tỏa nhiệt, chỉ lên cho thu nhiệt). CẤM vẽ mũi tên hai đầu (↔) ! Đỉnh vượt rào (Energy hump): Kể cả phản ứng tỏa nhiệt mạnh cũng BẮT BUỘC phải vòng lên tạo đỉnh Eatrước khi hạ xuống mức Products.",
+      "duration": 107.16,
+      "startTime": 1721.04,
+      "endTime": 1828.2,
+      "audioUrl": "/audio/lectures/science/c5/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ For the reversible decomposition N2O4(g) → 2NO2(g) , the enthalpy change is ΔH = +57 kJ/mol and the activation energy is Ea= +85 kJ/mol . Which statement about its reaction pathway diagram is correct? A. The products line is 57 kJ/mol below the reactants line, and the peak is 85 kJ/mol above the reactants line. B. The products line is 57 kJ/mol above the reactants line, and the peak is 85 kJ/mol above the reactants line. C. The products line is 57 kJ/mol above the reactants line, and the peak is 85 kJ/mol above the products line. D. Adding a catalyst lowers both the 85 kJ/mol peak and the +57 kJ/mol gap between reactants and products. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Because ΔH = +57 kJ/mol is positive , the reaction is endothermic , so the products plateau lies 57 kJ/mol ABOVE the reactants plateau (eliminating A). By definition, activation energy (Ea) is always measured from the reactants level up to the peak of the curve (eliminating C). A catalyst lowers Ea(the peak) without changing the reactant or product energy levels, so ΔH stays +57 kJ/mol (eliminating D).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 For the decomposition N2O4(g) → 2NO2(g) , the enthalpy change is ΔH = +57 kJ/mol and the activation energy is Ea= +85 kJ/mol . Which statement about its reaction pathway diagram is correct? (Cho phản ứng phân hủy N2O4(g) → 2NO2(g) có ΔH = +57 kJ/mol và Ea= +85 kJ/mol. Phát biểu nào về giản đồ năng lượng của phản ứng này là đúng?) A. The products line is 57 kJ/mol below the reactants line, and the peak is 85 kJ/mol above the reactants line. B. The products line is 57 kJ/mol above the reactants line, and the peak is 85 kJ/mol above the reactants line. C. The products line is 57 kJ/mol above the reactants line, and the peak is 85 kJ/mol above the products line. D. Adding a catalyst lowers both the 85 kJ/mol peak and the +57 kJ/mol gap between reactants and products. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Vì ΔH = +57 kJ/mol mang dấu dương (+) nên phản ứng thu nhiệt ( endothermic ) → vạch products nằm CAO HƠN vạch reactants 57 kJ/mol (loại A). Theo định nghĩa, Ea luôn tính từ vạch reactants lên tới đỉnh đường cong (loại C). Thêm xúc tác chỉ hạ thấp đỉnh Eachứ không làm thay đổi mức năng lượng đầu/cuối nên ΔH vẫn là +57 kJ/mol (loại D).",
+      "duration": 214.82,
+      "startTime": 1828.2,
+      "endTime": 2043.02,
+      "audioUrl": "/audio/lectures/science/c5/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Nitrogen reacts with oxygen in hot car engines according to the equation: N2(g) + O2(g) → 2NO(g) , with ΔH = +180 kJ/mol . (a) Define the term activation energy, Ea . [1] (b) Describe clearly how to draw and label a reaction pathway diagram for this reaction, specifying the relative heights of reactants and products and the exact start and end points of the single-headed arrows for Ea and ΔH . [3] (c) State the effect, if any, of adding a catalyst on the value of Ea and on the value of ΔH . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The minimum energy that colliding particles must have to react [1m] . (b) Draw the horizontal N2+ O2 (reactants) line on the left, rising over an energy hump to a horizontal 2NO (products) line drawn higher than the reactants line [1m] .• Label Ea with a single-headed upward arrow starting on the reactants line and ending at the top peak of the hump [1m] .• Label ΔH with a single-headed upward arrow starting on the reactants line and ending at the products line [1m] . (c) A catalyst decreases (lowers) Ea [1m] , and has no effect on ΔH (remains +180 kJ/mol) [1m] . 💡 Intuition Check: Notice the golden rule: BOTH arrows (Eₐ and ΔH) ALWAYS start on the Reactants line! Eₐ points to the Peak; ΔH points to the Products!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 điểm] Nitrogen reacts with oxygen in hot car engines: N2(g) + O2(g) → 2NO(g) , ΔH = +180 kJ/mol . (Khí nitrogen phản ứng với oxygen trong động cơ nóng: N2(g) + O2(g) → 2NO(g), ΔH = +180 kJ/mol.) (a) Define the term activation energy, Ea . (Định nghĩa năng lượng hoạt hóa Ea.) (b) Describe clearly how to draw and label a reaction pathway diagram for this reaction. (Mô tả cách vẽ và chú thích giản đồ tiến trình phản ứng gồm chất đầu, sản phẩm, mũi tên Eavà ΔH.) (c) State the effect of adding a catalyst on Ea and on ΔH . (Nêu ảnh hưởng của chất xúc tác lên giá trị Eavà ΔH.) ✍️ Lời giải chi tiết theo thang điểm: (a) Năng lượng tối thiểu mà các hạt va chạm phải có để phản ứng xảy ra . (b) Vẽ vạch ngang N2+ O2 (reactants) bên trái, vòng lên qua đỉnh đồi rồi hạ xuống vạch ngang 2NO (products) nằm cao hơn vạch reactants .• Ký hiệu Ea bằng mũi tên 1 đầu hướng lên nối sát từ vạch reactants tới đỉnh cao nhất của đường cong .• Ký hiệu ΔH bằng mũi tên 1 đầu hướng lên nối từ vạch reactants tới vạch products . (c) Chất xúc tác làm giảm Ea(decreases Ea) , và không làm thay đổi ΔH . 💡 Kiểm tra bản chất: Quy tắc bất biến khi vẽ giản đồ: CẢ HAI mũi tên Eₐ và ΔH đều xuất phát từ vạch Reactants! Eₐ chỉ lên Đỉnh đồi; ΔH chỉ thẳng tới vạch Products!",
+      "duration": 226.47,
+      "startTime": 2043.02,
+      "endTime": 2269.49,
+      "audioUrl": "/audio/lectures/science/c5/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🔗 3. PHÁ VỠ & HÌNH THÀNH LIÊN KẾT HÓA HỌC (BENDO – MEX)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🔗 3. BOND BREAKING & BOND MAKING (BENDO – MEX). Supplement C5.1.7",
+      "vi": "🔗 3. PHÁ VỠ & HÌNH THÀNH LIÊN KẾT HÓA HỌC (BENDO – MEX). Supplement C5.1.7",
+      "duration": 17.86,
+      "startTime": 2269.49,
+      "endTime": 2287.35,
+      "audioUrl": "/audio/lectures/science/c5/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine Two Strong Fridge Magnets stuck tightly together! To pull them apart, your muscles MUST put energy IN ( Bond Breaking = Endothermic ❄️). When you release two magnets near each other, they slam together with a sharp clack! and release energy OUT to the room ( Bond Making = Exothermic 🔥). Every chemical reaction first pulls reactant atoms apart (the uphill climb on a pathway diagram) and then snaps them into new product bonds (the downhill drop)!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng Hai Thỏi Nam Châm Tủ Lạnh Hút Chặt Vào Nhau ! Muốn kéo rời chúng ra, cơ tay bạn BẮT BUỘC phải truyền năng lượng vào ( Bond Breaking = Endothermic / Thu nhiệt ❄️). Ngược lại, khi đưa hai nam châm lại gần, chúng tự lao sập vào nhau kêu \"cạch!\" và tỏa năng lượng ra ngoài ( Bond Making = Exothermic / Tỏa nhiệt 🔥). Mọi phản ứng đều phải kéo rời nguyên tử cũ trước (leo lên đỉnh Ea) rồi mới ghép thành liên kết mới (trượt xuống mức Products)!",
+      "duration": 64.17,
+      "startTime": 2287.35,
+      "endTime": 2351.52,
+      "audioUrl": "/audio/lectures/science/c5/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Memorise BENDO – MEX (🟩 Supplement C5.1.7): • B ond B reaking is always an ENDO thermic process (takes in thermal energy).• B ond M aking is always an EX othermic process (transfers thermal energy out). 2. Connect to Overall ΔH: If forming new product bonds releases more energy than breaking reactant bonds absorbs ⇒ overall exothermic (ΔH < 0) . If breaking reactant bonds absorbs more energy than forming product bonds releases ⇒ overall endothermic (ΔH > 0) .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Thuộc lòng Quy tắc BENDO – MEX (🟩 Supplement C5.1.7): • B reaking bonds (Phá vỡ liên kết) luôn là quá trình ENDO thermic (thu nhiệt).• M aking bonds (Hình thành liên kết) luôn là quá trình EX othermic (tỏa nhiệt). 2. Liên hệ với Dấu của ΔH: Nếu năng lượng tỏa ra khi tạo liên kết mới lớn hơn năng lượng thu vào để bẻ liên kết cũ ⇒ phản ứng exothermic (ΔH < 0) ; ngược lại nếu bẻ liên kết tốn nhiều hơn năng lượng tạo liên kết ⇒ phản ứng endothermic (ΔH > 0) .",
+      "duration": 83.18,
+      "startTime": 2351.52,
+      "endTime": 2434.7,
+      "audioUrl": "/audio/lectures/science/c5/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"breaking chemical bonds releases energy\"! That is the #1 misconception in science exams. Breaking ANY chemical bond ALWAYS absorbs energy (endothermic); energy is ONLY released when new bonds are formed !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết \"bẻ gãy liên kết giải phóng năng lượng\"! Đây là ngộ nhận phổ biến nhất trong phòng thi. Bẻ gãy bất kỳ liên kết nào cũng LUÔN hấp thụ năng lượng (endothermic) ; năng lượng chỉ tỏa ra khi các liên kết mới được hình thành !",
+      "duration": 35.44,
+      "startTime": 2434.7,
+      "endTime": 2470.14,
+      "audioUrl": "/audio/lectures/science/c5/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Ở cấp độ phân tử, mọi phản ứng hóa học gồm hai giai đoạn: (1) Bẻ gãy toàn bộ liê...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "At the molecular level, every chemical reaction occurs in two conceptual stages: first, existing covalent bonds in the reactants are broken apart into separate atoms; second, those atoms rearrange to form new chemical bonds in the products . Comparing the energy absorbed during bond breaking with the energy released during bond making explains why reactions are overall exothermic or endothermic.",
+      "vi": "Ở cấp độ phân tử, mọi phản ứng hóa học gồm hai giai đoạn: (1) Bẻ gãy toàn bộ liên kết cũ trong chất tham gia (reactants) và (2) Hình thành các liên kết mới trong sản phẩm (products) . So sánh năng lượng thu vào khi bẻ gãy liên kết cũ với năng lượng tỏa ra khi hình thành liên kết mới giúp giải thích trọn vẹn bản chất tỏa nhiệt hay thu nhiệt của phản ứng.",
+      "duration": 48.15,
+      "startTime": 2470.14,
+      "endTime": 2518.29,
+      "audioUrl": "/audio/lectures/science/c5/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "❄️ BENDO: Breaking is Endothermic",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "❄️ BENDO: Breaking is Endothermic. B reaking chemical bonds is always an ENDO thermic process ( +ΔH ). Thermal energy must be taken in to overcome the electrostatic attraction holding bonded atoms together.",
+      "vi": "❄️ BENDO: Breaking is Endothermic. Bẻ gãy liên kết (Bond breaking) luôn là quá trình THU NHIỆT (endothermic, +) — bắt buộc phải cung cấp năng lượng vào để thắng lực hút tĩnh điện giữa các nguyên tử.",
+      "duration": 30.75,
+      "startTime": 2518.29,
+      "endTime": 2549.04,
+      "audioUrl": "/audio/lectures/science/c5/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🔥 MEX: Making is Exothermic",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🔥 MEX: Making is Exothermic. M aking new chemical bonds is always an EX othermic process ( −ΔH ). Thermal energy is released to the surroundings when atoms snap into stable new bonds.",
+      "vi": "🔥 MEX: Making is Exothermic. Hình thành liên kết (Bond making) luôn là quá trình TỎA NHIỆT (exothermic, −) — luôn giải phóng năng lượng ra ngoài khi các nguyên tử gắn kết bền vững.",
+      "duration": 29.03,
+      "startTime": 2549.04,
+      "endTime": 2578.07,
+      "audioUrl": "/audio/lectures/science/c5/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Mẫu câu giải thích ăn trọn 3 điểm tự luận: • Phản ứng là exothermic khi năng lượ...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "3-Mark Exam Explanation Template: • A reaction is overall exothermic if more energy is released when forming new bonds in the products than is taken in to break the bonds in the reactants .• A reaction is overall endothermic if more energy is taken in to break the bonds in the reactants than is released when forming new bonds in the products .",
+      "vi": "Mẫu câu giải thích ăn trọn 3 điểm tự luận: • Phản ứng là exothermic khi năng lượng tỏa ra lúc tạo liên kết mới lớn hơn năng lượng thu vào để bẻ gãy liên kết cũ.• Phản ứng là endothermic khi năng lượng thu vào để bẻ gãy liên kết cũ lớn hơn năng lượng tỏa ra lúc tạo liên kết mới .",
+      "duration": 39.12,
+      "startTime": 2578.07,
+      "endTime": 2617.19,
+      "audioUrl": "/audio/lectures/science/c5/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "⬆️ Giai đoạn 1 — Nhánh đi lên Đỉnh E a (Endothermic):",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "⬆️ Stage 1 — Uphill Climb (Endothermic): Reactant molecules absorb energy (at least Ea ) to break existing chemical bonds into separate atoms (e.g. breaking H–H and O=O ).",
+      "vi": "⬆️ Giai đoạn 1 — Nhánh đi lên Đỉnh Ea(Endothermic): Phân tử chất đầu thu năng lượng để phá vỡ các liên kết cũ (bond breaking) tách thành nguyên tử tự do (VD: bẻ gãy H–H và O=O ).",
+      "duration": 28.86,
+      "startTime": 2617.19,
+      "endTime": 2646.05,
+      "audioUrl": "/audio/lectures/science/c5/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "⬇️ Giai đoạn 2 — Nhánh trượt xuống Products (Exothermic):",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "⬇️ Stage 2 — Downhill Drop (Exothermic): Atoms rearrange and make new chemical bonds in the products (e.g. forming O–H bonds in 2H2O ), transferring thermal energy out to the surroundings.",
+      "vi": "⬇️ Giai đoạn 2 — Nhánh trượt xuống Products (Exothermic): Các nguyên tử ghép lại hình thành liên kết mới (bond making) trong sản phẩm (VD: tạo liên kết O–H trong 2H2O ), giải phóng nhiệt ra môi trường.",
+      "duration": 29.57,
+      "startTime": 2646.05,
+      "endTime": 2675.62,
+      "audioUrl": "/audio/lectures/science/c5/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which statement about bond breaking and bond making during a chemical reaction is correct? A. Bond breaking is exothermic and bond making is endothermic. B. Both bond breaking and bond making are exothermic processes. C. Bond breaking is endothermic and bond making is exothermic. D. Bond breaking only happens in endothermic reactions, and bond making only happens in exothermic reactions. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Remember BENDO – MEX : energy must always be supplied to overcome electrostatic attractions between bonded atoms, so bond breaking is endothermic ; conversely, forming stable new chemical bonds releases thermal energy, so bond making is exothermic (eliminating A and B). Note why D is a classic trap: every chemical reaction involves BOTH breaking reactant bonds and forming product bonds!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Which statement about bond breaking and bond making during a chemical reaction is correct? (Phát biểu nào về quá trình phá vỡ liên kết và hình thành liên kết trong một phản ứng hóa học là đúng?) A. Bond breaking is exothermic and bond making is endothermic. B. Both bond breaking and bond making are exothermic processes. C. Bond breaking is endothermic and bond making is exothermic. D. Bond breaking only happens in endothermic reactions, and bond making only happens in exothermic reactions. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Áp dụng thần chú BENDO – MEX : luôn phải cung cấp năng lượng để thắng lực hút giữa các nguyên tử nên bond breaking là endothermic (thu nhiệt) ; ngược lại khi tạo liên kết bền mới sẽ giải phóng nhiệt năng nên bond making là exothermic (tỏa nhiệt) (loại A và B). Lưu ý bẫy D: mọi phản ứng hóa học đều gồm CẢ hai bước bẻ liên kết cũ và tạo liên kết mới!",
+      "duration": 129.24,
+      "startTime": 2675.62,
+      "endTime": 2804.86,
+      "audioUrl": "/audio/lectures/science/c5/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] When hydrogen gas burns in oxygen to form steam, 2H2(g) + O2(g) → 2H2O(g) , the overall enthalpy change ΔH is negative. (a) State whether breaking the covalent bonds in H2and O2is an exothermic or endothermic process. [1] (b) State whether forming the O–H covalent bonds in H2O is an exothermic or endothermic process. [1] (c) Use your answers to (a) and (b) to explain why the overall enthalpy change ΔH for this reaction is negative. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Endothermic (thermal energy is taken in to break H–H and O=O bonds) [1m] . (b) Exothermic (thermal energy is released when O–H bonds form) [1m] . (c) Both processes happen, and more energy is released when forming the new O–H bonds in water [1m] than is taken in to break the H–H and O=O bonds in the reactants [1m] , so net thermal energy is transferred to the surroundings (ΔH < 0). 💡 Intuition Check: Every chemical reaction has BOTH an endothermic step (breaking old bonds) and an exothermic step (making new bonds) — whichever step is bigger decides the overall sign of ΔH!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [4 điểm] When hydrogen gas burns in oxygen to form steam, 2H2(g) + O2(g) → 2H2O(g) , the overall enthalpy change ΔH is negative. (Khi đốt cháy khí hydrogen trong oxygen tạo hơi nước, biến thiên enthalpy tổng quát ΔH mang dấu âm.) (a) State whether breaking the covalent bonds in H2and O2is an exothermic or endothermic process. (Cho biết quá trình bẻ gãy liên kết cộng hóa trị trong H2và O2là tỏa nhiệt hay thu nhiệt.) (b) State whether forming the O–H covalent bonds in H2O is an exothermic or endothermic process. (Cho biết quá trình hình thành liên kết O–H trong H2O là tỏa nhiệt hay thu nhiệt.) (c) Use your answers to (a) and (b) to explain why the overall enthalpy change ΔH for this reaction is negative. (Từ câu a và b, giải thích vì sao ΔH tổng quát của phản ứng mang dấu âm.) ✍️ Lời giải chi tiết theo thang điểm: (a) Endothermic (Thu nhiệt) — cần thu nhận năng lượng để phá vỡ liên kết H–H và O=O . (b) Exothermic (Tỏa nhiệt) — giải phóng năng lượng khi tạo liên kết O–H . (c) Vì năng lượng tỏa ra khi hình thành các liên kết O–H mới trong nước lớn hơn năng lượng thu vào để phá vỡ các liên kết H–H và O=O ở chất tham gia , nên tổng thể phản ứng giải phóng nhiệt ra môi trường (ΔH < 0). 💡 Kiểm tra bản chất: Mọi phản ứng hóa học đều có CẢ bước thu nhiệt (bẻ liên kết cũ) lẫn bước tỏa nhiệt (tạo liên kết mới) — bên nào lớn hơn sẽ quyết định phản ứng chung là thu nhiệt hay tỏa nhiệt!",
+      "duration": 212.52,
+      "startTime": 2804.86,
+      "endTime": 3017.38,
+      "audioUrl": "/audio/lectures/science/c5/s03_b11.mp3"
     }
   ]
 }

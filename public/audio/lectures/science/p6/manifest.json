@@ -1,78 +1,418 @@
 {
   "lectureId": "d11f8920-fe86-4cd4-ad9a-e8b669bc687b",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P6: Space physics",
-  "totalDuration": 304.58,
+  "totalDuration": 3062.47,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề P6",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_earth_solar_system": {
-      "start": 1,
-      "end": 1,
-      "title": "1. Trái Đất & Hệ Mặt Trời",
-      "selector": "#sec-earth-solar-system"
-    },
-    "sec_orbital_motion": {
+    "s01_int": {
       "start": 2,
-      "end": 2,
-      "title": "2. Tốc độ Quỹ đạo & Trọng lực",
-      "selector": "#sec-orbital-motion"
+      "end": 4
     },
-    "sec_stars_universe": {
-      "start": 3,
-      "end": 3,
-      "title": "3. Ngôi sao & Vũ trụ Giãn nở",
-      "selector": "#sec-stars-universe"
+    "s01_p1_sub01": {
+      "start": 7,
+      "end": 8
+    },
+    "s01_p2_sub01": {
+      "start": 7,
+      "end": 8
+    },
+    "s01_wex": {
+      "start": 9,
+      "end": 10
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 10
+    },
+    "s02_int": {
+      "start": 12,
+      "end": 14
+    },
+    "s02_wex": {
+      "start": 19,
+      "end": 20
+    },
+    "s02_hdr": {
+      "start": 11,
+      "end": 20
+    },
+    "s03_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s03_p1_sub01": {
+      "start": 27,
+      "end": 29
+    },
+    "s03_p2_sub01": {
+      "start": 27,
+      "end": 29
+    },
+    "s03_wex": {
+      "start": 30,
+      "end": 31
+    },
+    "s03_hdr": {
+      "start": 21,
+      "end": 31
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề P6: Vật lý Không gian & Vũ trụ",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic P6: Space Physics. In this lesson, we study the Earth, Moon, and Solar System, orbital motion and gravitational force, the lifecycle of stars, nuclear fusion, galaxies, and the expanding universe.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P6: Vật lý Không gian và Vũ trụ. Trong bài học này, chúng ta sẽ học về Trái Đất, Mặt Trăng và Hệ Mặt Trời, chuyển động quỹ đạo và lực hấp dẫn, vòng đời của các ngôi sao, phản ứng nhiệt hạch hạt nhân, thiên hà và sự giãn nở của vũ trụ.",
-      "duration": 52.46,
+      "title": "Chuyên đề P6: Vật lý Không gian và Vũ trụ (P6: Space physics)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) P6: Space physics. P6.1 The Solar System (The Sun, 8 Named Planets in Order, Minor Planets & Moons, Orbital Speed v = 2πr/T , Distance vs Solar Gravity & Speed) • P6.2 Stars and the Universe (The Sun, Light-Years & Light-Travel Time, H → He Fusion, 3-Branch Stellar Life Cycle, Milky Way 100,000 ly & Big Bang Theory 13.8 Billion Years) — Complete Core & Supplement Lecture for IGCSE 0654.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ Chuyên đề P6: Vật lý Không gian và Vũ trụ (P6: Space physics). P6.1 Hệ Mặt Trời ( The Solar System : Mặt Trời, 8 hành tinh theo thứ tự, hành tinh lùn & mặt trăng, tốc độ quỹ đạo v = 2πr/T , khoảng cách vs lực hấp dẫn & tốc độ) • P6.2 Các Ngôi sao và Vũ trụ ( Stars & Universe : Mặt Trời, năm ánh sáng, nhiệt hạch H → He, 3 nhánh vòng đời sao, Ngân Hà 100.000 ly & Thuyết Big Bang 13,8 tỷ năm) — Trọn bộ Core & Supplement chuẩn 0654.",
+      "duration": 84.13,
       "startTime": 0.0,
-      "endTime": 52.46,
+      "endTime": 84.13,
       "audioUrl": "/audio/lectures/science/p6/intro.mp3"
     },
     {
-      "id": "sec_earth_solar_system",
-      "title": "1. Trái Đất & Hệ Mặt Trời (Earth & Solar System Overview)",
-      "selector": "#sec-earth-solar-system",
-      "en": "Section 1 reviews planetary motions: Earth rotates on its tilted axis every 24 hours producing day and night, and orbits the Sun every 365 days creating seasons. The Solar System consists of the Sun, eight planets, dwarf planets, asteroids, and comets.",
-      "vi": "Mục một tổng kết chuyển động của các thiên thể: Trái Đất tự quay quanh trục nghiêng mỗi 24 giờ tạo nên ngày và đêm, và quay quanh Mặt Trời mỗi 365 ngày tạo nên bốn mùa. Hệ Mặt Trời bao gồm Mặt Trời, tám hành tinh, các hành tinh lùn, tiểu hành tinh và sao chổi.",
-      "duration": 85.14,
-      "startTime": 52.46,
-      "endTime": 137.6,
-      "audioUrl": "/audio/lectures/science/p6/sec_earth_solar_system.mp3"
+      "id": "s01_hdr",
+      "title": "🪐 P6.1 Hệ Mặt Trời (The Solar System) — Mặt Trời, 8 Hành tinh, Hành tinh lùn & Mặt trăng",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🪐 P6.1 The Solar System — The Sun, Eight Planets in Order, Minor Planets & Moons.",
+      "vi": "🪐 P6.1 Hệ Mặt Trời — Mặt Trời, 8 Hành tinh, Hành tinh lùn & Mặt trăng.",
+      "duration": 13.42,
+      "startTime": 84.13,
+      "endTime": 97.55,
+      "audioUrl": "/audio/lectures/science/p6/s01_hdr.mp3"
     },
     {
-      "id": "sec_orbital_motion",
-      "title": "2. Tốc độ Quỹ đạo & Lực Hấp dẫn (Orbital Speed & Gravity Overview)",
-      "selector": "#sec-orbital-motion",
-      "en": "Section 2 calculates orbital speed v equals 2 pi r divided by orbital period T. Gravitational force provides the centripetal force keeping planets in elliptical orbits. Planets closer to the Sun experience stronger gravity and travel at higher orbital speeds.",
-      "vi": "Mục hai tính tốc độ quỹ đạo v bằng 2 pi r chia chu kỳ quỹ đạo T. Lực hấp dẫn đóng vai trò lực hướng tâm giữ các hành tinh chuyển động trên quỹ đạo elip. Các hành tinh càng gần Mặt Trời chịu lực hút hấp dẫn càng mạnh nên chuyển động với tốc độ quỹ đạo càng lớn.",
-      "duration": 67.94,
-      "startTime": 137.6,
-      "endTime": 205.54,
-      "audioUrl": "/audio/lectures/science/p6/sec_orbital_motion.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture the Solar System as a giant cosmic stadium roundabout ruled by one heavyweight champion in the centre — the Sun (>99.8% of all mass!) — with eight planetary lanes arranged in strict order outward: M y V ery E ducated M other J ust S erved U s N oodles ( Mercury, Venus, Earth, Mars • [Asteroid Belt] • Jupiter, Saturn, Uranus, Neptune ). Sharing the Sun's highway are minor planets (asteroids + dwarf planets like Pluto ), while moons act like loyal escorts orbiting individual planets!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung Hệ Mặt Trời như một bùng binh vũ trụ khổng lồ do một nhà vô địch hạng siêu nặng đứng giữa điều khiển — Mặt Trời (The Sun, chiếm >99,8% khối lượng) — với 8 làn chạy hành tinh xếp theo đúng thứ tự từ trong ra ngoài: M y V ery E ducated M other J ust S erved U s N oodles. Cùng quay quanh Mặt Trời còn có các hành tinh nhỏ (minor planets) gồm tiểu hành tinh và hành tinh lùn như Pluto , trong khi các mặt trăng (moons) là vệ tinh trung thành quay quanh từng hành tinh!",
+      "duration": 75.41,
+      "startTime": 97.55,
+      "endTime": 172.96,
+      "audioUrl": "/audio/lectures/science/p6/s01_b01.mp3"
     },
     {
-      "id": "sec_stars_universe",
-      "title": "3. Các Ngôi sao & Sự Nở của Vũ trụ (Stars & The Universe Overview)",
-      "selector": "#sec-stars-universe",
-      "en": "Section 3 investigates stars: Nuclear fusion of hydrogen into helium powers stars during the stable main sequence. The Sun will eventually expand into a red giant and collapse into a white dwarf. Redshift of light from distant galaxies proves the universe is expanding from the Big Bang.",
-      "vi": "Mục ba nghiên cứu các ngôi sao: Phản ứng nhiệt hạch tổng hợp hydro thành heli giải phóng năng lượng khổng lồ duy trì sự ổn định của ngôi sao trong giai đoạn dãy chính. Mặt Trời sau này sẽ nở thành sao khổng lồ đỏ rồi co lại thành sao lùn trắng. Hiện tượng dịch chuyển đỏ của ánh sáng từ các thiên hà xa xôi chứng minh vũ trụ đang không ngừng giãn nở từ vụ nổ lớn Big Bang.",
-      "duration": 99.04,
-      "startTime": 205.54,
-      "endTime": 304.58,
-      "audioUrl": "/audio/lectures/science/p6/sec_stars_universe.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Four Solar System Components (🟦 Core P6.1.1): (a) One star, the Sun ; (b) eight named planets in exact order from the Sun; (c) minor planets orbiting the Sun — including dwarf planets (e.g. Pluto) and asteroids in the asteroid belt (between Mars and Jupiter); (d) moons that orbit planets. 2. Distance Trends Across the 8 Planets (🟩 Supplement P6.1.3): Moving outward from Mercury to Neptune, distance from the Sun increases ⇒ the Sun's gravitational field strength decreases , orbital speed decreases , and orbital period T increases .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Bốn Thành phần Hệ Mặt Trời (🟦 Core P6.1.1): (a) Một ngôi sao duy nhất là Mặt Trời (the Sun) ; (b) 8 hành tinh theo đúng thứ tự từ Mặt Trời; (c) minor planets quay quanh Mặt Trời — gồm hành tinh lùn (dwarf planets như Pluto) và tiểu hành tinh trong vành đai (asteroid belt giữa Mars & Jupiter); (d) moons quay quanh các hành tinh. 2. Quy luật Khoảng cách (🟩 Supplement P6.1.3): Càng đi ra xa Mặt Trời (từ Mercury tới Neptune), cường độ trường hấp dẫn của Mặt Trời giảm , tốc độ quỹ đạo giảm và chu kỳ T tăng .",
+      "duration": 83.48,
+      "startTime": 172.96,
+      "endTime": 256.44,
+      "audioUrl": "/audio/lectures/science/p6/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic Paper 1/2 traps: (1) Swapping the order of Saturn, Uranus, and Neptune (remember S–U–N spells SUN at the outer edge: Saturn → Uranus → Neptune!). (2) Saying moons or Pluto orbit the wrong body — Pluto (a dwarf planet) and asteroids orbit the SUN , whereas moons orbit PLANETS !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy trắc nghiệm kinh điển: (1) Nhầm thứ tự 3 hành tinh ngoài cùng Saturn, Uranus, Neptune (mẹo nhớ: 3 chữ cái đầu S–U–N ghép thành chữ SUN !). (2) Nhầm vật thể trung tâm: Pluto (hành tinh lùn) và tiểu hành tinh quay quanh MẶT TRỜI , còn mặt trăng (moons) quay quanh HÀNH TINH !",
+      "duration": 48.36,
+      "startTime": 256.44,
+      "endTime": 304.8,
+      "audioUrl": "/audio/lectures/science/p6/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "🪐 Khám phá Tương tác Hệ Mặt Trời (Mặt Trời, 8 Hành tinh, Hành tinh lùn & Mặt trăng)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🪐 Interactive Solar System Explorer (Sun, 8 Planets, Minor Planets & Moons). 1.1). ☀️ The Sun🌍 Planets 1–4☄️ Minor Planets🪐 Planets 5–8 & Moons Hover or click objects / buttons 👆. Explore the 1 star (Sun), the 8 named planets in order from the Sun, minor planets (dwarf planets & asteroids), and moons orbiting planets.",
+      "vi": "🪐 Khám phá Tương tác Hệ Mặt Trời (Mặt Trời, 8 Hành tinh, Hành tinh lùn & Mặt trăng). Core P6.1.1). ☀️ Mặt Trời🌍 Hành tinh 1–4☄️ Hành tinh nhỏ🪐 Hành tinh 5–8 & Moon Khám phá 1 ngôi sao duy nhất (Mặt Trời), 8 hành tinh theo thứ tự chuẩn, các hành tinh nhỏ (Pluto & tiểu hành tinh) và các mặt trăng quay quanh hành tinh.",
+      "duration": 48.44,
+      "startTime": 304.8,
+      "endTime": 353.24,
+      "audioUrl": "/audio/lectures/science/p6/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "Thành phần Đầy đủ của Hệ Mặt Trời & Mẹo Nhớ Thứ tự 8 Hành tinh",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "CORE P6.1.1 Complete Syllabus Inventory & Planet Order Mnemonic. (a) One Star: The Sun (closest star to Earth; centre of the Solar System). (b) Eight Named Planets in Exact Order from the Sun: Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune (Mnemonic: M y V ery E ducated M other J ust S erved U s N oodles ). (c) Minor Planets (orbit the Sun): Includes dwarf planets such as Pluto , and rocky asteroids in the asteroid belt between Mars and Jupiter. (d) Moons: Natural satellites that orbit the planets (not the Sun directly).",
+      "vi": "CORE P6.1.1 Thành phần Đầy đủ của Hệ Mặt Trời & Mẹo Nhớ Thứ tự 8 Hành tinh. (a) Một ngôi sao (One star): Mặt Trời (The Sun) — ngôi sao gần Trái Đất nhất. (b) Tám hành tinh theo đúng thứ tự từ Mặt Trời: Mercury → Venus → Earth → Mars → Jupiter → Saturn → Uranus → Neptune (Mẹo nhớ: M y V ery E ducated M other J ust S erved U s N oodles ). (c) Các hành tinh nhỏ (Minor planets — quay quanh Mặt Trời): Gồm hành tinh lùn (dwarf planets) như Pluto , và các tiểu hành tinh (asteroids) thuộc vành đai tiểu hành tinh (asteroid belt) giữa Mars & Jupiter. (d) Mặt trăng (Moons): Các vệ tinh tự nhiên quay quanh hành tinh.",
+      "duration": 94.28,
+      "startTime": 353.24,
+      "endTime": 447.52,
+      "audioUrl": "/audio/lectures/science/p6/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Hành tinh (Planet): 1. Mercury (Sao Thủy); Cách Mặt Trời (10 6 km): 57,9; Chu kỳ...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Planet: 1. Mercury; Dist. from Sun (10 6 km): 57.9; Orbital Period T: 88 d; Mean Temp (°C): 167; Density (kg/m 3 ): 5430; Diameter (10 3 km): 4.9; Mass (10 24 kg): 0.33; Surface g (N/kg): 3.7. Planet: 2. Venus ⚠️; Dist. from Sun (10 6 km): 108.2; Orbital Period T: 225 d; Mean Temp (°C): +464 (CO 2 !); Density (kg/m 3 ): 5240; Diameter (10 3 km): 12.1; Mass (10 24 kg): 4.87; Surface g (N/kg): 8.9. Planet: 3. Earth; Dist. from Sun (10 6 km): 149.6; Orbital Period T: 365 d (1 yr); Mean Temp (°C): 15; Density (kg/m 3 ): 5510; Diameter (10 3 km): 12.8; Mass (10 24 kg): 5.97; Surface g (N/kg): 9.8. Planet: 4. Mars; Dist. from Sun (10 6 km): 227.9; Orbital Period T: 687 d; Mean Temp (°C): −65; Density (kg/m 3 ): 3930; Diameter (10 3 km): 6.8; Mass (10 24 kg): 0.64; Surface g (N/kg): 3.7. Planet: 5. Jupiter; Dist. from Sun (10 6 km): 778.6; Orbital Period T: 11.9 yr; Mean Temp (°C): −110; Density (kg/m 3 ): 1330; Diameter (10 3 km): 143.0; Mass (10 24 kg): 1898; Surface g (N/kg): 23.1. Planet: 6. Saturn; Dist. from Sun (10 6 km): 1433.5; Orbital Period T: 29.5 yr; Mean Temp (°C): −140; Density (kg/m 3 ): 687; Diameter (10 3 km): 120.5; Mass (10 24 kg): 568; Surface g (N/kg): 9.0. Planet: 7. Uranus; Dist. from Sun (10 6 km): 2872.5; Orbital Period T: 84.0 yr; Mean Temp (°C): −195; Density (kg/m 3 ): 1270; Diameter (10 3 km): 51.1; Mass (10 24 kg): 86.8; Surface g (N/kg): 8.7. Planet: 8. Neptune; Dist.",
+      "vi": "Hành tinh (Planet): 1. Mercury (Sao Thủy); Cách Mặt Trời (10 6 km): 57,9; Chu kỳ T: 88 ngày; Nhiệt độ (°C): 167; Khối lượng riêng (kg/m 3 ): 5430; Đường kính (10 3 km): 4,9; Khối lượng (10 24 kg): 0,33; g bề mặt (N/kg): 3,7. Hành tinh (Planet): 2. Venus (Sao Kim) ⚠️; Cách Mặt Trời (10 6 km): 108,2; Chu kỳ T: 225 ngày; Nhiệt độ (°C): +464 (CO 2 !); Khối lượng riêng (kg/m 3 ): 5240; Đường kính (10 3 km): 12,1; Khối lượng (10 24 kg): 4,87; g bề mặt (N/kg): 8,9. Hành tinh (Planet): 3. Earth (Trái Đất); Cách Mặt Trời (10 6 km): 149,6; Chu kỳ T: 365 ngày; Nhiệt độ (°C): 15; Khối lượng riêng (kg/m 3 ): 5510; Đường kính (10 3 km): 12,8; Khối lượng (10 24 kg): 5,97; g bề mặt (N/kg): 9,8. Hành tinh (Planet): 4. Mars (Sao Hỏa); Cách Mặt Trời (10 6 km): 227,9; Chu kỳ T: 687 ngày; Nhiệt độ (°C): −65; Khối lượng riêng (kg/m 3 ): 3930; Đường kính (10 3 km): 6,8; Khối lượng (10 24 kg): 0,64; g bề mặt (N/kg): 3,7. Hành tinh (Planet): 5. Jupiter (Sao Mộc); Cách Mặt Trời (10 6 km): 778,6; Chu kỳ T: 11,9 năm; Nhiệt độ (°C): −110; Khối lượng riêng (kg/m 3 ): 1330; Đường kính (10 3 km): 143,0; Khối lượng (10 24 kg): 1898; g bề mặt (N/kg): 23,1. Hành tinh (Planet): 6. Saturn (Sao Thổ); Cách Mặt Trời (10 6 km): 1433,5; Chu kỳ T: 29,5 năm; Nhiệt độ (°C): −140; Khối lượng riêng (kg/m 3 ): 687; Đường kính (10 3 km): 120,5; Khối lượng (10 24 kg): 568; g bề mặt (N/kg): 9,0. Hành tinh (Planet): 7.",
+      "duration": 226.05,
+      "startTime": 447.52,
+      "endTime": 673.57,
+      "audioUrl": "/audio/lectures/science/p6/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "📌 Quy luật Dữ liệu P6.1 Cần Nhớ: (1) Thứ tự chuẩn từ Mặt Trời: Mercury, Venus, E...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "📌 Key P6.1 Data Trends: (1) Exact Order from the Sun: Mercury, Venus, Earth, Mars, [Asteroid Belt] , Jupiter, Saturn, Uranus, Neptune. (2) Distance ↑ ⇒ Period T ↑ & Speed v ↓: As distance from the Sun increases (57.9 → 4495.1 million km), the Sun's gravitational field weakens so orbital speed decreases and orbital period increases (88 days → 164.8 years)!",
+      "vi": "📌 Quy luật Dữ liệu P6.1 Cần Nhớ: (1) Thứ tự chuẩn từ Mặt Trời: Mercury, Venus, Earth, Mars, [Vành đai tiểu hành tinh] , Jupiter, Saturn, Uranus, Neptune. (2) Khoảng cách tăng ⇒ Chu kỳ T tăng & Tốc độ v giảm: Càng xa Mặt Trời (57,9 → 4495,1 triệu km), trường hấp dẫn của Mặt Trời càng yếu nên tốc độ quỹ đạo giảm và chu kỳ tăng vọt (88 ngày → 164,8 năm)!",
+      "duration": 66.61,
+      "startTime": 673.57,
+      "endTime": 740.18,
+      "audioUrl": "/audio/lectures/science/p6/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which statement about objects in our Solar System is correct? A. The asteroid belt lies between Earth and Mars, and Pluto is a moon orbiting Neptune B. The correct order of the four outer planets from the Sun is Jupiter, Uranus, Saturn, Neptune C. Pluto is a dwarf planet that orbits the Sun, and asteroids in the asteroid belt also orbit the Sun D. The Solar System contains several stars, eight planets, and moons that orbit the Sun directly ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Minor planets — including dwarf planets such as Pluto and asteroids in the asteroid belt (located between Mars and Jupiter , eliminating A) — all orbit the Sun . The outer four planets in order from the Sun are Jupiter, Saturn, Uranus, Neptune (eliminating B), and the Solar System contains only one star (the Sun) while moons orbit planets (eliminating D).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which statement about objects in our Solar System is correct? (Phát biểu nào sau đây về các thiên thể trong Hệ Mặt Trời là đúng?) A. The asteroid belt lies between Earth and Mars, and Pluto is a moon orbiting Neptune B. The correct order of the four outer planets from the Sun is Jupiter, Uranus, Saturn, Neptune C. Pluto is a dwarf planet that orbits the Sun, and asteroids in the asteroid belt also orbit the Sun D. The Solar System contains several stars, eight planets, and moons that orbit the Sun directly ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Các hành tinh nhỏ (minor planets) — bao gồm hành tinh lùn như Pluto và các tiểu hành tinh trong vành đai (asteroid belt nằm giữa Mars và Jupiter , loại A) — đều quay quanh Mặt Trời . Thứ tự 4 hành tinh ngoài là Jupiter, Saturn, Uranus, Neptune (loại B), và Hệ Mặt Trời chỉ có 1 ngôi sao duy nhất là Mặt Trời còn mặt trăng quay quanh hành tinh (loại D).",
+      "duration": 132.28,
+      "startTime": 740.18,
+      "endTime": 872.46,
+      "audioUrl": "/audio/lectures/science/p6/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 3 / Paper 4 Structured [5 marks] The Solar System consists of one central star surrounded by many orbiting bodies. (a) Name the central star of the Solar System and list the first five planets in order of increasing distance from it. [2] (b) State the name of the region of minor planets located between the fourth and fifth planets, and name one dwarf planet in the Solar System. [2] (c) State how the orbital speed of Neptune compares with the orbital speed of Venus. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Central star: The Sun [1m]. First five planets in order: Mercury, Venus, Earth, Mars, Jupiter [1m]. (b) Region between Mars (4th) and Jupiter (5th): the asteroid belt [1m]. Dwarf planet: Pluto (or Ceres / Eris) [1m]. (c) Neptune's orbital speed is much smaller / slower than Venus's (because Neptune is much further from the Sun) [1m]. 💡 Intuition Check: Check the outer three planets anytime you feel unsure: S aturn → U ranus → N eptune spells S-U-N !",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 3 / Paper 4 Tự luận [5 điểm] The Solar System consists of one central star surrounded by many orbiting bodies. (a) Name the central star and list the first five planets in order from it. (Gọi tên ngôi sao trung tâm và liệt kê 5 hành tinh đầu tiên theo thứ tự từ trong ra ngoài.) Nêu tên vùng hành tinh nhỏ nằm giữa hành tinh thứ 4 và thứ 5, và kể tên 1 hành tinh lùn. So sánh tốc độ quỹ đạo của Neptune với Venus. ✍️ Lời giải chi tiết theo thang điểm: (a) Ngôi sao trung tâm: Mặt Trời (The Sun) . Năm hành tinh đầu tiên: Mercury, Venus, Earth, Mars, Jupiter . (b) Vùng giữa Mars và Jupiter: vành đai tiểu hành tinh (asteroid belt) . Hành tinh lùn: Pluto (hoặc Ceres) . (c) Tốc độ quỹ đạo của Neptune nhỏ hơn / chậm hơn nhiều so với Venus (do ở xa Mặt Trời hơn) . 💡 Kiểm tra bản chất: Mẹo nhớ nhanh 3 hành tinh ngoài cùng không bao giờ nhầm: S aturn → U ranus → N eptune ghép đúng chữ S-U-N !",
+      "duration": 149.95,
+      "startTime": 872.46,
+      "endTime": 1022.41,
+      "audioUrl": "/audio/lectures/science/p6/s01_b09.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🚀 P6.1–P6.2.1 Tốc độ Quỹ đạo ( v = 2πr/T ), Lực Hấp dẫn Mặt Trời & Thời gian Ánh sáng truyền",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🚀 P6.1–P6.2.1 Orbital Speed ( v = 2πr/T ), Solar Gravity & Light-Travel Time.",
+      "vi": "🚀 P6.1–P6.2.1 Tốc độ Quỹ đạo ( v = 2πr/T ), Lực Hấp dẫn Mặt Trời & Thời gian Ánh sáng truyền.",
+      "duration": 19.54,
+      "startTime": 1022.41,
+      "endTime": 1041.95,
+      "audioUrl": "/audio/lectures/science/p6/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine a runner jogging around a circular athletics track of radius r : one complete lap is the circle's circumference 2π r , and if one lap takes period T , average speed is simply distance ÷ time = 2π r / T ! What stops a planet from flying off in a straight line into deep space? An invisible gravitational bungee cord anchored to the Sun (which holds >99.8% of the Solar System's mass). The further out a planet's lane, the weaker that gravitational pull becomes and the slower the planet moves!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng một vận động viên chạy bộ quanh đường đua tròn bán kính r : chạy trọn 1 vòng là đi hết chu vi 2π r trong thời gian một chu kỳ T , nên tốc độ quỹ đạo đơn giản là quãng đường ÷ thời gian = 2π r / T ! Thứ giữ các hành tinh không văng thẳng ra vũ trụ chính là \"sợi dây thun hấp dẫn vô hình\" nối với Mặt Trời (chiếm >99,8% khối lượng). Làn chạy càng ở xa Mặt Trời, lực kéo hấp dẫn càng yếu đi và hành tinh chạy càng chậm!",
+      "duration": 70.5,
+      "startTime": 1041.95,
+      "endTime": 1112.45,
+      "audioUrl": "/audio/lectures/science/p6/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Orbital Speed Equation (🟩 Supplement P6.1.2): v = 2π r / T , where r is orbital radius and T is orbital period (convert days/years → seconds and km → metres for m/s!). 2. Solar Mass, Gravity & Distance (🟩 Supplement P6.1.3 & P6.2.1.3–4): The Sun contains most of the mass of the Solar System , so its gravitational attraction keeps planets in orbit. As distance from the Sun increases, both the Sun's gravitational field strength AND planetary orbital speed v decrease . 3. Light-Travel Time (🟩 Supplement P6.2.1.2): Use t = d / c with speed of light c = 3.0 × 108m/s .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Công thức Tốc độ Quỹ đạo (🟩 Supplement P6.1.2): v = 2π r / T , với r là bán kính quỹ đạo và T là chu kỳ quỹ đạo (nhớ đổi ngày/năm → giây và km → mét khi tính ra m/s!). 2. Khối lượng Mặt Trời & Lực Hấp dẫn (🟩 Supplement P6.1.3 & P6.2.1.3–4): Mặt Trời chứa phần lớn khối lượng Hệ Mặt Trời nên lực hút hấp dẫn (gravitational attraction) giữ các hành tinh quay quanh nó. Khoảng cách tăng ⇒ trường hấp dẫn Mặt Trời giảm VÀ tốc độ quỹ đạo v giảm . 3. Thời gian Ánh sáng Truyền (🟩 Supplement P6.2.1.2): Dùng t = d / c với c = 3,0 × 108m/s .",
+      "duration": 101.41,
+      "startTime": 1112.45,
+      "endTime": 1213.86,
+      "audioUrl": "/audio/lectures/science/p6/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never plug T = 365 days straight into v = 2π r / T without converting time to seconds (365 × 24 × 3600 s) if the answer requires m/s ! Also, never confuse a planet's orbital speed (~3 × 104m/s) with the speed of light ( 3.0 × 108m/s ) when calculating how long sunlight takes to reach a planet!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bao giờ thay trực tiếp T = 225 ngày vào v = 2π r / T mà quên đổi sang giây (× 24 × 3600) khi đề yêu cầu đơn vị m/s ! Đồng thời không nhầm tốc độ hành tinh (~3 × 104m/s) với tốc độ ánh sáng ( 3,0 × 108m/s )!",
+      "duration": 57.43,
+      "startTime": 1213.86,
+      "endTime": 1271.29,
+      "audioUrl": "/audio/lectures/science/p6/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Công thức Tốc độ Quỹ đạo Trung bình (Average Orbital Speed)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "SUPPLEMENT P6.1.2 Average Orbital Speed Equation. v = 2π r T v : Average orbital speed (m/s or km/s). r : Average radius of the orbit (m or km; circumference = 2π r ). T : Orbital period — time for 1 complete orbit (convert days/years → seconds for m/s!).",
+      "vi": "SUPPLEMENT P6.1.2 Công thức Tốc độ Quỹ đạo Trung bình. v = 2π r T v : Tốc độ quỹ đạo trung bình ( Average orbital speed , m/s hoặc km/s). r : Bán kính quỹ đạo trung bình ( Average orbital radius ; chu vi quỹ đạo = 2π r ). T : Chu kỳ quỹ đạo ( Orbital period — bắt buộc đổi ngày/năm → giây khi tính ra m/s!).",
+      "duration": 56.38,
+      "startTime": 1271.29,
+      "endTime": 1327.67,
+      "audioUrl": "/audio/lectures/science/p6/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🧮 Bài toán Mẫu: Tốc độ Quỹ đạo & Thời gian Ánh sáng Truyền",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🧮 Worked Examples: Orbital Speed & Light-Travel Time. 1. Earth's Orbital Speed ( r = 1.50 × 1011m, T = 365.25 days): • Convert T = 365.25 × 24 × 3600 = 3.156 × 107s .• v = 2π(1.50 × 1011) / (3.156 × 107) = 2.99 × 104m/s (≈ 30 km/s) ! 2. Light-Travel Time (Supplement P6.2.1.2, c = 3.0 × 108m/s): • Sun → Earth: t = d/c = (1.5 × 1011) / (3.0 × 108) = 500 s (8 min 20 s) .• Sun → Neptune (4.5 × 1012m): t = 15,000 s = 250 min (4.17 h) !",
+      "vi": "🧮 Bài toán Mẫu: Tốc độ Quỹ đạo & Thời gian Ánh sáng Truyền. 1. Tốc độ Quỹ đạo Trái Đất ( r = 1,50 × 1011m, T = 365,25 ngày): • Đổi T = 365,25 × 24 × 3600 = 3,156 × 107s .• v = 2π(1,50 × 1011) / (3,156 × 107) = 2,99 × 104m/s (≈ 30 km/s) ! 2. Thời gian ánh sáng truyền đi (Supplement P6.2.1.2, c = 3,0 × 108m/s): • Mặt Trời → Trái Đất: t = d/c = (1,5 × 1011) / (3,0 × 108) = 500 s (8 phút 20 s) .• Mặt Trời → Neptune (4,5 × 1012m): t = 15.000 s = 250 phút (4,17 giờ) !",
+      "duration": 140.96,
+      "startTime": 1327.67,
+      "endTime": 1468.63,
+      "audioUrl": "/audio/lectures/science/p6/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧲 P6.1.3 & P6.2.1 Khối lượng Mặt Trời, Lực Hấp dẫn & Tốc độ Quỹ đạo",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🧲 P6.1.3 & P6.2.1 Solar Mass, Gravitational Attraction & Orbital Speed. Why planets orbit the Sun (Supplement P6.2.1.3): The Sun contains most of the mass of the Solar System (>99.8%). Centripetal force in orbit (Supplement P6.2.1.4): The force that keeps an object in orbit around the Sun is due to the gravitational attraction of the Sun. Distance vs Solar Field & Orbital Speed (Supplement P6.1.3): As the distance from the Sun increases, the strength of the Sun's gravitational field decreases AND the orbital speeds of the planets decrease.",
+      "vi": "🧲 P6.1.3 & P6.2.1 Khối lượng Mặt Trời, Lực Hấp dẫn & Tốc độ Quỹ đạo. Tại sao các hành tinh quay quanh Mặt Trời (Supplement P6.2.1.3)? Mặt Trời chứa phần lớn khối lượng của Hệ Mặt Trời. Lực giữ trên quỹ đạo (Supplement P6.2.1.4): Lực giữ một thiên thể chuyển động trên quỹ đạo quanh Mặt Trời là lực hút hấp dẫn (gravitational attraction) của Mặt Trời. Khoảng cách tăng → Trường hấp dẫn & Tốc độ giảm (Supplement P6.1.3): Khi khoảng cách tới Mặt Trời tăng, cường độ trường hấp dẫn của Mặt Trời giảm VÀ tốc độ quỹ đạo v của các hành tinh giảm.",
+      "duration": 81.91,
+      "startTime": 1468.63,
+      "endTime": 1550.54,
+      "audioUrl": "/audio/lectures/science/p6/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Ảnh hưởng của Khoảng cách tới Trường Hấp dẫn Mặt Trời & Tốc độ Quỹ đạo",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "SUPPLEMENT P6.1.3 & P6.2.1 How Distance from the Sun Controls Solar Gravity & Planetary Orbital Speed. 1. Why Planets Orbit the Sun (P6.2.1.3–4): The Sun contains most of the mass of the Solar System , so its gravitational attraction pulls planets inward onto curved orbits. 2. Distance vs Field Strength & Speed (P6.1.3): • As distance r from the Sun increases, the strength of the Sun's gravitational field decreases .• Because the inward gravitational pull is weaker, the orbital speed v of planets decreases (and since they also travel a much larger circumference 2π r at slower speed, their orbital period T increases dramatically!).",
+      "vi": "SUPPLEMENT P6.1.3 & P6.2.1 Ảnh hưởng của Khoảng cách tới Trường Hấp dẫn Mặt Trời & Tốc độ Quỹ đạo. 1. Vì sao các hành tinh quay quanh Mặt Trời (P6.2.1.3–4)? Mặt Trời chứa phần lớn khối lượng của Hệ Mặt Trời , nên lực hút hấp dẫn (gravitational attraction) của nó giữ các hành tinh chuyển động trên quỹ đạo. 2. Khoảng cách tăng → Lực hấp dẫn & Tốc độ giảm (P6.1.3): • Khi khoảng cách r tới Mặt Trời tăng lên, cường độ trường hấp dẫn của Mặt Trời giảm xuống .• Lực hút hướng tâm yếu hơn khiến tốc độ quỹ đạo v của hành tinh giảm (đồng thời chu vi 2π r lớn hơn làm chu kỳ T dài hơn rất nhiều!).",
+      "duration": 86.83,
+      "startTime": 1550.54,
+      "endTime": 1637.37,
+      "audioUrl": "/audio/lectures/science/p6/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Saturn orbits the Sun at a much greater distance than Venus. Which row correctly compares the strength of the Sun's gravitational field at Saturn, Saturn's orbital speed, and the force keeping Saturn in orbit? A. Sun's gravitational field at Saturn: weaker | Saturn's orbital speed: slower | Force: gravitational attraction of the Sun B. Sun's gravitational field at Saturn: weaker | Saturn's orbital speed: faster | Force: magnetic field of the Sun C. Sun's gravitational field at Saturn: stronger | Saturn's orbital speed: slower | Force: gravitational attraction of the Sun D. Sun's gravitational field at Saturn: stronger | Saturn's orbital speed: faster | Force: air resistance in space ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: 1) As distance from the Sun increases, the strength of the Sun's gravitational field decreases (eliminating C and D).2) Because the inward gravitational pull is weaker further out, Saturn's orbital speed is slower than Venus's (eliminating B).3) The centripetal force keeping every planet in orbit around the Sun is the gravitational attraction of the Sun .",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Saturn orbits the Sun at a much greater distance than Venus. Which row correctly compares the Sun's gravitational field strength at Saturn, Saturn's orbital speed, and the force keeping Saturn in orbit? (Sao Thổ quay quanh Mặt Trời ở khoảng cách lớn hơn nhiều so với Sao Kim. Dòng nào so sánh đúng cường độ trường hấp dẫn của Mặt Trời tại Sao Thổ, tốc độ quỹ đạo và lực giữ Sao Thổ trên quỹ đạo?) A. Sun's gravitational field at Saturn: weaker | Saturn's orbital speed: slower | Force: gravitational attraction of the Sun B. Sun's gravitational field at Saturn: weaker | Saturn's orbital speed: faster | Force: magnetic field of the Sun C. Sun's gravitational field at Saturn: stronger | Saturn's orbital speed: slower | Force: gravitational attraction of the Sun D. Sun's gravitational field at Saturn: stronger | Saturn's orbital speed: faster | Force: air resistance in space ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: 1) Càng xa Mặt Trời, cường độ trường hấp dẫn của Mặt Trời càng yếu (weaker) (loại C, D).2) Do lực hút hấp dẫn yếu hơn ở xa, tốc độ quỹ đạo của Sao Thổ chậm hơn (slower) Sao Kim (loại B).3) Lực giữ các hành tinh trên quỹ đạo là lực hút hấp dẫn của Mặt Trời (gravitational attraction) .",
+      "duration": 170.69,
+      "startTime": 1637.37,
+      "endTime": 1808.06,
+      "audioUrl": "/audio/lectures/science/p6/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Calculation [6 marks] Venus orbits the Sun at an average radius of 1.08 × 1011m with an orbital period of 225 Earth days . The speed of light in space is 3.0 × 108m/s . (a) Explain why Venus orbits the Sun rather than the Sun orbiting Venus. [2] (b) Calculate the time taken (in seconds) for light to travel from the Sun to Venus. [2] (c) Calculate the orbital speed of Venus in m/s . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The Sun contains most of the mass of the Solar System (>99.8%) [1m], exerting a strong gravitational attraction on Venus that keeps it in orbit [1m]. (b) Using t = d / c [1m]: t = (1.08 × 1011m) ÷ (3.0 × 108m/s) = 360 s (6.0 minutes) [1m]. (c) 1. Convert period T to seconds: T = 225 × 24 × 3600 = 1.944 × 107s [1m].2. v = 2πr / T = (2 × π × 1.08 × 1011) ÷ (1.944 × 107) = 3.49 × 104m/s (35,000 m/s) [1m]. 💡 Intuition Check: Reality check! Earth takes 500 s for sunlight and orbits at ~30,000 m/s. Since Venus is closer to the Sun than Earth, shorter light time (360 s < 500 s) AND faster orbital speed (34,900 m/s > 30,000 m/s) both make complete physical sense!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Tính toán [6 điểm] Venus orbits the Sun at an average radius of 1.08 × 1011m with an orbital period of 225 Earth days . ( c = 3.0 × 108m/s ). Giải thích vì sao Sao Kim quay quanh Mặt Trời. (b) Calculate the time taken (in seconds) for light from the Sun to reach Venus. (Tính thời gian ánh sáng truyền từ Mặt Trời tới Sao Kim theo giây.) Tính tốc độ quỹ đạo của Sao Kim theo m/s. ✍️ Lời giải chi tiết theo thang điểm: (a) Mặt Trời chứa phần lớn khối lượng của Hệ Mặt Trời , tạo ra lực hút hấp dẫn (gravitational attraction) giữ Sao Kim trên quỹ đạo . (b) Áp dụng t = d / c : t = (1,08 × 1011) ÷ (3,0 × 108) = 360 s (6,0 phút) . (c) 1. Đổi chu kỳ sang giây: T = 225 × 24 × 3600 = 1,944 × 107s .2. v = 2πr / T = (2 × π × 1,08 × 1011) ÷ (1,944 × 107) = 3,49 × 104m/s (35.000 m/s) . 💡 Kiểm tra bản chất: Kiểm tra trực giác: Trái Đất mất 500 s đón nắng và chạy ~30.000 m/s. Vì Sao Kim gần Mặt Trời hơn Trái Đất nên thời gian nắng truyền ngắn hơn (360 s) VÀ tốc độ quỹ đạo nhanh hơn (34.900 m/s) là chuẩn xác 100%!",
+      "duration": 241.93,
+      "startTime": 1808.06,
+      "endTime": 2049.99,
+      "audioUrl": "/audio/lectures/science/p6/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "✨ P6.2 Các Ngôi sao và Vũ trụ — Mặt Trời, Vòng đời Sao, Dải Ngân Hà & Thuyết Big Bang",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "✨ P6.2 Stars and the Universe — The Sun, Stellar Life Cycles, Milky Way & The Big Bang Theory.",
+      "vi": "✨ P6.2 Các Ngôi sao và Vũ trụ — Mặt Trời, Vòng đời Sao, Dải Ngân Hà & Thuyết Big Bang.",
+      "duration": 15.39,
+      "startTime": 2049.99,
+      "endTime": 2065.38,
+      "audioUrl": "/audio/lectures/science/p6/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of stars as hydrogen-fusion power stations born inside giant clouds of gas and dust ( nebulae → protostars ), whose \"retirement plan\" depends strictly on their birth mass: small-mass stars (like our Sun) puff up gently into a Red Giant and leave behind a glowing White Dwarf + Planetary Nebula , whereas large-mass and very-large-mass stars swell into a Red Supergiant and detonate in a titanic Supernova — leaving a dense Neutron Star (large mass) or a gravity-trapping Black Hole (very large mass) while scattering dust to build new stars and planets ! Zooming out, our Sun is just one star in the 100,000-light-year Milky Way , inside a 13.8-billion-year-old Universe still expanding from a single ultra-hot, ultra-dense point ( Big Bang ).",
+      "vi": "🎯 Hình dung đời thường: Hãy coi các ngôi sao như những lò phản ứng nhiệt hạch Hydrogen sinh ra từ đám mây bụi khí ( nebula → protostar ), mà \"kịch bản nghỉ hưu\" phụ thuộc hoàn toàn vào khối lượng ban đầu: sao khối lượng nhỏ (small mass như Mặt Trời) phồng thành Red Giant rồi để lại White Dwarf + Planetary Nebula ; còn sao khối lượng lớn (large mass) và rất lớn phồng thành Red Supergiant rồi nổ tung thành Supernova — để lại Neutron Star (khối lượng lớn) hoặc Black Hole (khối lượng rất lớn) đồng thời gieo mầm bụi khí cho thế hệ sao và hành tinh mới ! Nhìn rộng ra, Mặt Trời nằm trong Dải Ngân Hà rộng 100.000 năm ánh sáng , thuộc một Vũ trụ 13,8 tỷ năm tuổi vẫn đang giãn nở từ một điểm cực nóng và siêu đặc ( Big Bang ).",
+      "duration": 102.42,
+      "startTime": 2065.38,
+      "endTime": 2167.8,
+      "audioUrl": "/audio/lectures/science/p6/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. The Sun & Fusion (🟦 Core / 🟩 Supplement P6.2.1): Closest star to Earth; medium size; mostly hydrogen & helium ; radiates infrared, visible light, and ultraviolet ; powered by nuclear fusion of hydrogen into helium . 2. Three Stellar Mass Branches (🟩 Supplement P6.2.2): Interstellar cloud → Protostar → Stable star, then:• Small mass: Red giant → White dwarf + Planetary nebula .• Large mass: Red supergiant → Supernova → Neutron star .• Very large mass: Red supergiant → Supernova → Black hole . 3. Milky Way & Big Bang Theory (🟦 Core / 🟩 Supplement P6.2.3): Galaxies hold many billions of stars ; Milky Way diameter ≈ 100,000 light-years . Big Bang Theory : Universe expanded from a single point of high density and temperature , is still expanding , and is ~13.8 billion years old .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Mặt Trời & Nhiệt hạch (🟦 Core / 🟩 Supplement P6.2.1): Ngôi sao gần Trái Đất nhất; cỡ trung bình; chủ yếu hydrogen & helium ; bức xạ infrared, visible, ultraviolet ; năng lượng từ nuclear fusion of hydrogen into helium . 2. Ba Nhánh Vòng đời Sao (🟩 Supplement P6.2.2): Đám mây liên sao → Protostar → Sao ổn định, sau đó:• Small mass: Red giant → White dwarf + Planetary nebula .• Large mass: Red supergiant → Supernova → Neutron star .• Very large mass: Red supergiant → Supernova → Black hole . 3. Ngân Hà & Thuyết Big Bang (🟦 Core / 🟩 Supplement P6.2.3): Thiên hà chứa hàng tỷ ngôi sao ; đường kính Ngân Hà ≈ 100.000 light-years . Big Bang Theory : Vũ trụ giãn nở từ một điểm có mật độ và nhiệt độ cực cao , hiện vẫn đang giãn nở , và có tuổi khoảng 13,8 tỷ năm .",
+      "duration": 131.55,
+      "startTime": 2167.8,
+      "endTime": 2299.35,
+      "audioUrl": "/audio/lectures/science/p6/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Three favourite 0654 exam traps: (1) Calling a light-year a unit of time — it is the distance light travels in one year! (2) Mixing up large mass (→ neutron star) vs very large mass (→ black hole) ! (3) Confusing the diameter of the Milky Way ( 100,000 light-years ) with the age of the Universe ( 13.8 billion years )!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Ba bẫy mất điểm hệ 0654: (1) Nhầm năm ánh sáng (light-year) là thời gian — đó là đơn vị KHOẢNG CÁCH ! (2) Nhầm tàn dư của large mass (→ neutron star) với very large mass (→ black hole) ! (3) Nhầm đường kính Dải Ngân Hà ( 100.000 năm ánh sáng ) với tuổi Vũ trụ ( 13,8 tỷ năm )!",
+      "duration": 53.89,
+      "startTime": 2299.35,
+      "endTime": 2353.24,
+      "audioUrl": "/audio/lectures/science/p6/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "☀️ P6.2.1 Mặt Trời là một Ngôi sao (The Sun as a Star)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "☀️ P6.2.1 The Sun as a Star (Core + Supplement). Closest Star & Composition: The Sun is the closest star to the Earth (Core P6.2.1.1a); it is a medium-sized star consisting mostly of hydrogen and helium (Supplement P6.2.1.5). Radiated Spectrum: Radiates most of its energy in the infrared (IR), visible light, and ultraviolet (UV) regions of the electromagnetic spectrum. Supplement Energy Source: Stable stars are powered by nuclear reactions in their hot, dense core involving the fusion of hydrogen into helium (411H →42He + energy).",
+      "vi": "☀️ P6.2.1 Mặt Trời là một Ngôi sao. Ngôi sao gần nhất & Thành phần: Mặt Trời là ngôi sao gần Trái Đất nhất ; thuộc nhóm sao cỡ trung bình (medium size) cấu tạo chủ yếu từ hydrogen và helium. Phổ bức xạ: Phát ra phần lớn năng lượng ở vùng tia hồng ngoại (infrared), ánh sáng nhìn thấy (visible light) và tia tử ngoại (ultraviolet). Supplement Nguồn năng lượng: Các ngôi sao ổn định được cung cấp năng lượng bởi phản ứng nhiệt hạch tổng hợp hydrogen thành helium trong lõi cực nóng và đặc.",
+      "duration": 76.2,
+      "startTime": 2353.24,
+      "endTime": 2429.44,
+      "audioUrl": "/audio/lectures/science/p6/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🌌 P6.2.1 & P6.2.3 Năm Ánh sáng (Light-Years) & Dải Ngân Hà",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🌌 P6.2.1 & P6.2.3 Light-Years & The Milky Way Galaxy. Galaxies: Vast gravitationally bound systems each containing many billions of stars. The Milky Way: Spiral galaxy (~ 100,000 light-years across) containing our Sun; all other stars in the Milky Way are much further from Earth than the Sun (nearest star Proxima Centauri ≈ 4.2 light-years away!). Light-Year (Unit of DISTANCE — Core P6.2.1.1b): Astronomical distances between stars and galaxies are measured in light-years — the distance travelled in space by light in one year.",
+      "vi": "🌌 P6.2.1 & P6.2.3 Năm Ánh sáng (Light-Years) & Dải Ngân Hà. Thiên hà (Galaxies): Hệ thống khổng lồ liên kết hấp dẫn gồm hàng tỷ ngôi sao. Dải Ngân Hà (The Milky Way): Thiên hà xoắn ốc đường kính ~ 100.000 năm ánh sáng chứa Mặt Trời; các ngôi sao khác trong Ngân Hà đều ở xa Trái Đất hơn Mặt Trời rất nhiều lần (ngôi sao gần nhất Proxima Centauri cách ~4,2 năm ánh sáng!). Năm ánh sáng (Light-year — ĐƠN VỊ KHOẢNG CÁCH, Core P6.2.1.1b): Khoảng cách thiên văn giữa các ngôi sao và thiên hà được đo bằng năm ánh sáng (light-years) — quãng đường ánh sáng đi được trong 1 năm.",
+      "duration": 87.23,
+      "startTime": 2429.44,
+      "endTime": 2516.67,
+      "audioUrl": "/audio/lectures/science/p6/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Giai đoạn 1–3 (Mọi ngôi sao — Cân bằng Thủy tĩnh): • 1. Đám mây liên sao (Inters...",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Stages 1–3 (All Stars — Hydrostatic Equilibrium): • 1. Interstellar Cloud (Nebula) → 2. Protostar: Gravity pulls H2gas and dust together; GPE converts to internal thermal energy until core reaches ~107K.• 3. Stable Star (Main Sequence): Hydrogen fuses into helium. Stability lasts billions of years because inward gravitational attraction is balanced by outward thermal/radiation pressure from the hot core!",
+      "vi": "Giai đoạn 1–3 (Mọi ngôi sao — Cân bằng Thủy tĩnh): • 1. Đám mây liên sao (Interstellar cloud) → 2. Tiền sao (Protostar): Lực hấp dẫn kéo khí H2và bụi co lại; GPE chuyển thành nội năng làm nhiệt độ lõi tăng vọt.• 3. Sao ổn định: Nhiệt hạch H → He khởi phát. Sao giữ kích thước ổn định vì lực hút hấp dẫn hướng vào tâm cân bằng chính xác với áp suất nhiệt/bức xạ đẩy ra ngoài !",
+      "duration": 58.81,
+      "startTime": 2516.67,
+      "endTime": 2575.48,
+      "audioUrl": "/audio/lectures/science/p6/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "3 Nhánh Tiến hóa theo Khối lượng (Supplement P6.2.2.2–3): • (a) Khối lượng nhỏ (...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "3 Branches by Stellar Mass (Supplement P6.2.2.2–3): • (a) Small mass (e.g. Sun): Red giant → White dwarf + Planetary nebula .• (b) Large mass: Red supergiant → Supernova → Neutron star .• (c) Very large mass: Red supergiant → Supernova → Black hole .• The nebula from a supernova may collapse to form new stars with orbiting planets !",
+      "vi": "3 Nhánh Tiến hóa theo Khối lượng (Supplement P6.2.2.2–3): • (a) Khối lượng nhỏ (Small mass, cỡ Mặt Trời): Red giant → White dwarf + Planetary nebula .• (b) Khối lượng lớn (Large mass): Red supergiant → Supernova → Neutron star .• (c) Khối lượng rất lớn: Red supergiant → Supernova → Black hole .• Đám tinh vân từ vụ nổ supernova có thể hình thành các ngôi sao mới cùng các hành tinh quay quanh !",
+      "duration": 57.41,
+      "startTime": 2575.48,
+      "endTime": 2632.89,
+      "audioUrl": "/audio/lectures/science/p6/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🔭 P6.2.3 Các Thiên hà, Dải Ngân Hà (100.000 Năm Ánh sáng) & Thuyết Vụ Nổ Lớn (Big Bang)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "CORE & SUPPLEMENT P6.2.3 🔭 P6.2.3 Galaxies, The Milky Way (100,000 Light-Years) & The Big Bang Theory. 1. Galaxies & The Milky Way (Core P6.2.3.1–2): • Galaxies are each made up of many billions of stars .• Our Sun is one star in the Milky Way galaxy (other stars in the Milky Way are much further from Earth than the Sun).• The Milky Way is one of many billions of galaxies in the Universe, and its diameter is approximately 100,000 light-years . 2. The Big Bang Theory — 3 Syllabus Statements (Supplement P6.2.3.3): • (a) The Universe expanded from a single point of high density and high temperature .• (b) The Universe is still expanding .• (c) The Universe is approximately 13.8 billion years old .",
+      "vi": "CORE & SUPPLEMENT P6.2.3 🔭 P6.2.3 Các Thiên hà, Dải Ngân Hà (100.000 Năm Ánh sáng) & Thuyết Vụ Nổ Lớn (Big Bang). 1. Thiên hà & Dải Ngân Hà (Core P6.2.3.1–2): • Mỗi thiên hà (galaxy) chứa hàng tỷ ngôi sao .• Mặt Trời là một ngôi sao thuộc Dải Ngân Hà (Milky Way) ; các ngôi sao khác đều ở xa Trái Đất hơn Mặt Trời rất nhiều.• Dải Ngân Hà là một trong hàng tỷ thiên hà của Vũ trụ và có đường kính xấp xỉ 100.000 năm ánh sáng (100,000 light-years) . 2. Thuyết Vụ Nổ Lớn: • (a) Vũ trụ đã giãn nở từ một điểm duy nhất có mật độ và nhiệt độ cực cao .• (b) Vũ trụ hiện nay vẫn đang giãn nở (still expanding) .• (c) Tuổi của Vũ trụ vào khoảng 13,8 tỷ năm .",
+      "duration": 105.56,
+      "startTime": 2632.89,
+      "endTime": 2738.45,
+      "audioUrl": "/audio/lectures/science/p6/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ In the life cycle of stars, which row correctly shows the final stage formed by a small-mass star, a large-mass star, and a very-large-mass star after hydrogen fuel in the core runs out? A. Small mass: white dwarf + planetary nebula | Large mass: neutron star | Very large mass: black hole B. Small mass: neutron star | Large mass: white dwarf | Very large mass: black hole C. Small mass: white dwarf + planetary nebula | Large mass: black hole | Very large mass: neutron star D. Small mass: black hole | Large mass: planetary nebula | Very large mass: white dwarf ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: According to IGCSE 0654 P6.2.2: (a) a small-mass star expands into a red giant and forms a white dwarf + planetary nebula ; (b) a large-mass star expands into a red supergiant, explodes as a supernova, and leaves a neutron star ; (c) a very-large-mass star expands into a red supergiant, explodes as a supernova, and collapses into a black hole .",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ In the life cycle of stars, which row correctly shows the final stage formed by a small-mass star, a large-mass star, and a very-large-mass star after core hydrogen runs out? (Trong vòng đời của sao, dòng nào nêu đúng giai đoạn cuối của sao khối lượng nhỏ, sao khối lượng lớn và sao khối lượng rất lớn sau khi cạn hydrogen ở lõi?) A. Small mass: white dwarf + planetary nebula | Large mass: neutron star | Very large mass: black hole B. Small mass: neutron star | Large mass: white dwarf | Very large mass: black hole C. Small mass: white dwarf + planetary nebula | Large mass: black hole | Very large mass: neutron star D. Small mass: black hole | Large mass: planetary nebula | Very large mass: white dwarf ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Theo đúng Syllabus IGCSE 0654 P6.2.2: (a) sao khối lượng nhỏ (small mass) → red giant → white dwarf + planetary nebula ; (b) sao khối lượng lớn (large mass) → red supergiant → supernova → neutron star ; (c) sao khối lượng rất lớn → red supergiant → supernova → black hole .",
+      "duration": 153.96,
+      "startTime": 2738.45,
+      "endTime": 2892.41,
+      "audioUrl": "/audio/lectures/science/p6/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Our Sun is one of many billions of stars in the Milky Way galaxy. (a) State the two main elements in the Sun, the nuclear reaction that powers it, and the three main regions of the electromagnetic spectrum it radiates. [3] (b) State the approximate diameter of the Milky Way galaxy in light-years. [1] (c) State three key features of the Universe according to the Big Bang Theory . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Elements: hydrogen and helium [1m]. Powered by: nuclear fusion of hydrogen into helium [1m]. Radiates mostly: infrared, visible light, and ultraviolet [1m]. (b) Approximately 100,000 light-years [1m]. (c) (Any two/three for 2 marks): (1) The Universe expanded from a single point of high density and high temperature ; (2) the Universe is still expanding today; (3) the Universe is approximately 13.8 billion years old [2m]. 💡 Intuition Check: Lock these two numbers into memory before walking into Paper 2/4: Milky Way diameter = 100,000 light-years ; Age of the Universe = 13.8 billion years !",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Tự luận [6 điểm] Our Sun is one of many billions of stars in the Milky Way galaxy. (a) State the two main elements in the Sun, the nuclear reaction that powers it, and the three main EM regions it radiates. (Nêu 2 nguyên tố chính của Mặt Trời, phản ứng hạt nhân tạo năng lượng và 3 vùng phổ điện từ phát ra.) Nêu đường kính Dải Ngân Hà theo năm ánh sáng. Nêu 3 nội dung cốt lõi của Thuyết Vụ Nổ Lớn. ✍️ Lời giải chi tiết theo thang điểm: (a) Hai nguyên tố: hydrogen và helium . Phản ứng: nhiệt hạch tổng hợp hydrogen thành helium . Ba vùng bức xạ chính: hồng ngoại (infrared), ánh sáng nhìn thấy (visible light) và tử ngoại (ultraviolet) . (b) Xấp xỉ 100.000 năm ánh sáng (100,000 light-years) . (c) Ba ý cốt lõi Big Bang: (1) Vũ trụ giãn nở ra từ một điểm duy nhất có mật độ và nhiệt độ rất cao ; (2) Vũ trụ hiện vẫn đang tiếp tục giãn nở (still expanding) ; (3) Vũ trụ khoảng 13,8 tỷ năm tuổi . 💡 Kiểm tra bản chất: Khóa chặt 2 con số bắt buộc thuộc lòng của P6.2.3: Đường kính Ngân Hà = 100.000 năm ánh sáng ; Tuổi Vũ trụ = 13,8 tỷ năm !",
+      "duration": 170.06,
+      "startTime": 2892.41,
+      "endTime": 3062.47,
+      "audioUrl": "/audio/lectures/science/p6/s03_b10.mp3"
     }
   ]
 }

@@ -1,229 +1,1044 @@
 {
   "lectureId": "690ff013-5d01-4c1e-8546-25b3cd056e64",
-  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences",
+  "courseTitle": "Cambridge IGCSE Co-ordinated Sciences (0654)",
   "lectureTitle": "P1: Motion, forces & energy",
-  "totalDuration": 769.01,
+  "totalDuration": 7822.48,
   "majorSections": {
     "intro": {
       "start": 0,
-      "end": 0,
-      "title": "Giới thiệu Chuyên đề P1",
-      "selector": "#sec-header"
+      "end": 0
     },
-    "sec_quantities": {
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_p2_sub01": {
+      "start": 5,
+      "end": 7
+    },
+    "s01_wex": {
+      "start": 8,
+      "end": 9
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 3,
-      "title": "1. Đại lượng Vật lý & Đo lường",
-      "selector": "#sec-quantities"
+      "end": 9
     },
-    "sec_kinematics": {
-      "start": 4,
-      "end": 6,
-      "title": "2. Đồ thị Động học & Chuyển động",
-      "selector": "#sec-kinematics"
-    },
-    "sec_density": {
-      "start": 7,
-      "end": 8,
-      "title": "3. Khối lượng, Trọng lượng & Khối lượng Riêng",
-      "selector": "#sec-density"
-    },
-    "sec_forces": {
-      "start": 9,
-      "end": 10,
-      "title": "4. Lực, Momen & Áp suất",
-      "selector": "#sec-forces"
-    },
-    "sec_energy_stores": {
+    "s02_int": {
       "start": 11,
-      "end": 11,
-      "title": "5. Kho Năng lượng & Đường truyền",
-      "selector": "#sec-energy-stores"
+      "end": 13
     },
-    "sec_ke_gpe": {
-      "start": 12,
-      "end": 12,
-      "title": "6. Động năng & Thế năng",
-      "selector": "#sec-ke-gpe"
+    "s02_wex": {
+      "start": 21,
+      "end": 22
     },
-    "sec_work_power": {
-      "start": 13,
-      "end": 13,
-      "title": "7. Công, Công suất & Hiệu suất",
-      "selector": "#sec-work-power"
+    "s02_hdr": {
+      "start": 10,
+      "end": 22
     },
-    "sec_energy_resources": {
-      "start": 14,
-      "end": 14,
-      "title": "8. So sánh Nguồn Năng lượng",
-      "selector": "#sec-energy-resources"
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_p1_sub01": {
+      "start": 27,
+      "end": 29
+    },
+    "s03_p1_sub02": {
+      "start": 30,
+      "end": 30
+    },
+    "s03_p2_sub01": {
+      "start": 27,
+      "end": 29
+    },
+    "s03_p2_sub02": {
+      "start": 30,
+      "end": 30
+    },
+    "s03_wex": {
+      "start": 31,
+      "end": 32
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 32
+    },
+    "s04_int": {
+      "start": 34,
+      "end": 36
+    },
+    "s04_p1_sub01": {
+      "start": 39,
+      "end": 41
+    },
+    "s04_p2_sub01": {
+      "start": 39,
+      "end": 41
+    },
+    "s04_wex": {
+      "start": 42,
+      "end": 43
+    },
+    "s04_hdr": {
+      "start": 33,
+      "end": 43
+    },
+    "s05_int": {
+      "start": 45,
+      "end": 47
+    },
+    "s05_wex": {
+      "start": 52,
+      "end": 53
+    },
+    "s05_hdr": {
+      "start": 44,
+      "end": 53
+    },
+    "s06_int": {
+      "start": 55,
+      "end": 57
+    },
+    "s06_wex": {
+      "start": 62,
+      "end": 63
+    },
+    "s06_hdr": {
+      "start": 54,
+      "end": 63
+    },
+    "s07_int": {
+      "start": 65,
+      "end": 67
+    },
+    "s07_wex": {
+      "start": 71,
+      "end": 72
+    },
+    "s07_hdr": {
+      "start": 64,
+      "end": 72
+    },
+    "s08_int": {
+      "start": 74,
+      "end": 76
+    },
+    "s08_wex": {
+      "start": 80,
+      "end": 81
+    },
+    "s08_hdr": {
+      "start": 73,
+      "end": 81
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Chuyên đề P1: Chuyển động, Lực & Năng lượng",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic P1: Motion, Forces and Energy. Classical mechanics describes how physical quantities are measured, how objects accelerate and collide, how forces cause extension and turning effects, and how energy is stored, transferred, and conserved throughout the universe.",
-      "vi": "Chào mừng các bạn đến với Chuyên đề P1: Chuyển động, Lực và Năng lượng. Cơ học cổ điển nghiên cứu các phép đo đại lượng vật lý, quy luật chuyển động và va chạm, tác dụng làm biến dạng và quay của lực, cùng các dạng dự trữ, truyền tải và bảo toàn năng lượng trong tự nhiên.",
-      "duration": 48.95,
+      "title": "P1: Chuyển động, Lực & Năng lượng (Motion, forces & energy)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Co-ordinated Sciences (0654) P1: Motion, forces & energy. P1.1 Measurement & Vectors • P1.2 Motion • P1.3 Mass & Weight • P1.4 Density • P1.5 Forces, Moments & Centre of Gravity • P1.6 Energy, Work & Power • P1.7 Pressure.",
+      "vi": "Cambridge IGCSE Co-ordinated Sciences (0654) • Song ngữ P1: Chuyển động, Lực & Năng lượng. P1.1 Đo lường & Vecto • P1.2 Động học • P1.3 Khối lượng & Trọng lượng • P1.4 Khối lượng riêng • P1.5 Lực, Momen & Trọng tâm • P1.6 Năng lượng, Công & Công suất • P1.7 Áp suất.",
+      "duration": 58.08,
       "startTime": 0.0,
-      "endTime": 48.95,
+      "endTime": 58.08,
       "audioUrl": "/audio/lectures/science/p1/intro.mp3"
     },
     {
-      "id": "sec_quantities",
-      "title": "1. Đại lượng Vật lý & Kỹ thuật Đo lường (Physical Quantities Overview)",
-      "selector": "#sec-quantities",
-      "en": "Section 1 covers physical measurement: Using rulers, measuring cylinders, and stopwatches accurately while avoiding parallax error. It also contrasts scalar quantities having magnitude only with vector quantities having both magnitude and direction.",
-      "vi": "Mục một bao gồm kỹ thuật đo lường vật lý: Sử dụng thước thẳng, ống đong và đồng hồ bấm giây chính xác, tránh lỗi thị sai. Đồng thời phân biệt đại lượng vô hướng chỉ có độ lớn với đại lượng vecto có cả độ lớn và hướng.",
-      "duration": 75.14,
-      "startTime": 48.95,
-      "endTime": 124.09,
-      "audioUrl": "/audio/lectures/science/p1/sec_quantities.mp3"
+      "id": "s01_hdr",
+      "title": "📏 1. Đại lượng Vật lý & Kỹ thuật Đo lường (Physical Quantities & Measurement — P1.1)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "📏 1. Physical Quantities & Measurement Techniques (P1.1).",
+      "vi": "📏 1. Đại lượng Vật lý & Kỹ thuật Đo lường.",
+      "duration": 7.55,
+      "startTime": 58.08,
+      "endTime": 65.63,
+      "audioUrl": "/audio/lectures/science/p1/s01_hdr.mp3"
     },
     {
-      "id": "sec_measuring_instruments",
-      "title": "📏 Measuring Instruments & Multiples (Dụng cụ Đo & Đo Bội số)",
-      "selector": "#sec-measuring-instruments",
-      "en": "To measure tiny quantities accurately, measure a large multiple and divide. For example, measure the thickness of 500 sheets of paper and divide by 500, or time 20 pendulum oscillations and divide by 20 to reduce reaction time error.",
-      "vi": "Để đo các đại lượng rất nhỏ một cách chính xác, hãy đo một tập hợp nhiều lần rồi chia đều. Ví dụ đo độ dày của 500 trang giấy rồi chia cho 500, hoặc bấm thời gian 20 dao động con lắc rồi chia cho 20 để giảm thiểu sai số thời gian phản ứng.",
-      "duration": 30.66,
-      "startTime": 124.09,
-      "endTime": 154.75,
-      "audioUrl": "/audio/lectures/science/p1/sec_measuring_instruments.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Measuring the thickness of a single sheet of paper with a millimetre ruler or timing a single pendulum swing by hand is like weighing one grain of rice on bathroom scales — human reaction time (~0.25 s) or 1 mm scale divisions swamp the reading! Grouping 20 complete swings or 25 turns of wire magnifies what you measure while keeping instrument error unchanged, slashing uncertainty by 20× or 25×. And think of a scalar as a price tag ( size only: 50 ) versus a vector as a GPS instruction ( size + direction: 50 m due North ).",
+      "vi": "🎯 Hình dung đời thường: Dùng thước kẻ mm đo 1 tờ giấy mỏng hay bấm giây bằng tay cho 1 lần lắc con lắc cũng giống như cân 1 hạt gạo trên chiếc cân sức khỏe — phản xạ tay người (~0.25 s) hay vạch chia 1 mm sẽ nuốt chửng kết quả! Khi gom 20 dao động (complete oscillations) hoặc 25 vòng dây sát nhau rồi chia đều, sai số dụng cụ giữ nguyên nhưng đại lượng đo lớn gấp 20–25 lần, giúp sai số tỉ đối giảm đi 20–25 lần! Còn để nhớ scalar vs vector : hãy coi scalar như nhãn giá tiền ( chỉ có con số: 50 ), còn vector như chỉ dẫn GPS ( cả độ lớn lẫn hướng: 50 m về hướng Bắc ).",
+      "duration": 86.93,
+      "startTime": 65.63,
+      "endTime": 152.56,
+      "audioUrl": "/audio/lectures/science/p1/s01_b01.mp3"
     },
     {
-      "id": "sec_scalars_vectors",
-      "title": "🧭 Scalars vs Vectors (Vô hướng vs Vecto)",
-      "selector": "#sec-scalars-vectors",
-      "en": "Scalars have magnitude only: distance, speed, time, mass, energy, and temperature. Vectors have both magnitude and direction: force, weight, velocity, acceleration, and gravitational field strength.",
-      "vi": "Đại lượng vô hướng chỉ có độ lớn: quãng đường, tốc độ, thời gian, khối lượng, năng lượng và nhiệt độ. Đại lượng vecto có cả độ lớn và phương chiều: lực, trọng lượng, vận tốc, gia tốc và cường độ trọng trường.",
-      "duration": 30.21,
-      "startTime": 154.75,
-      "endTime": 184.96,
-      "audioUrl": "/audio/lectures/science/p1/sec_scalars_vectors.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Core P1.1 Precision: Read rulers at 90° to eliminate parallax error ; read measuring cylinders horizontally at the bottom of the meniscus ; use measuring multiples ( T = tN/ N with a fiducial marker at the centre of swing). 2. Supplement P1.1 Vectors vs Scalars: Memorise all 6 scalars ( distance, speed, time, mass, energy, temperature ) and all 5 official P1.1 vectors ( force, weight, velocity, acceleration, gravitational field strength ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Đo lường Core P1.1: Đặt mắt vuông góc 90° tránh parallax error (lỗi thị sai); đọc ống đong tại bottom of the meniscus (đáy mặt khum lõm); áp dụng measuring multiples ( T = tN/ N kèm fiducial marker tại vị trí cân bằng). 2. Supplement P1.1: Thuộc lòng 6 đại lượng vô hướng (scalars) và 5 đại lượng vecto chuẩn P1.1.",
+      "duration": 68.57,
+      "startTime": 152.56,
+      "endTime": 221.13,
+      "audioUrl": "/audio/lectures/science/p1/s01_b02.mp3"
     },
     {
-      "id": "sec_kinematics",
-      "title": "2. Đồ thị Động học & Chuyển động (Motion & Kinematics Graphs Overview)",
-      "selector": "#sec-kinematics",
-      "en": "Section 2 investigates speed, velocity, and acceleration. On a distance-time graph, gradient represents speed. On a speed-time graph, gradient represents acceleration, and the area under the graph equals distance travelled.",
-      "vi": "Mục hai nghiên cứu tốc độ, vận tốc và gia tốc. Trên đồ thị quãng đường - thời gian, độ dốc biểu diễn tốc độ. Trên đồ thị tốc độ - thời gian, độ dốc biểu diễn gia tốc và diện tích hình phẳng dưới đồ thị biểu diễn quãng đường đi được.",
-      "duration": 68.22,
-      "startTime": 184.96,
-      "endTime": 253.18,
-      "audioUrl": "/audio/lectures/science/p1/sec_kinematics.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying “1” at the instant you start the stopwatch! Always count “0” at release ( t = 0) and count “1” only after a full return trip (A → O → B → O → A) . Timing A → B measures only half a period ( T / 2) !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đếm “1” ngay khoảnh khắc bấm đồng hồ chạy! Bắt buộc đếm “0” lúc thả ( t = 0) và chỉ đếm “1” sau khi quả nặng đi trọn vòng khứ hồi ( A → O → B → O → A ). Nếu chỉ đo từ biên A sang biên B là mới được nửa chu kỳ ( T / 2) !",
+      "duration": 42.01,
+      "startTime": 221.13,
+      "endTime": 263.14,
+      "audioUrl": "/audio/lectures/science/p1/s01_b03.mp3"
     },
     {
-      "id": "sec_kinematics_graphs",
-      "title": "📈 Graph Interpretation & Area Under Curve (Phân tích Đồ thị)",
-      "selector": "#sec-kinematics-graphs",
-      "en": "Key rules for speed-time graphs: A horizontal line indicates constant speed with zero acceleration. A constant upward slope indicates uniform acceleration. The area under the line, calculated by summing triangles and rectangles, gives total distance travelled.",
-      "vi": "Quy tắc vàng cho đồ thị tốc độ - thời gian: Đường nằm ngang biểu thị tốc độ không đổi với gia tốc bằng 0. Đoạn thẳng dốc lên biểu thị gia tốc không đổi. Diện tích bên dưới đồ thị, tính bằng tổng diện tích các hình tam giác và hình chữ nhật, chính là tổng quãng đường di chuyển.",
-      "duration": 34.74,
-      "startTime": 253.18,
-      "endTime": 287.92,
-      "audioUrl": "/audio/lectures/science/p1/sec_kinematics_graphs.mp3"
+      "id": "s01_b04",
+      "title": "Đo Chiều dài, Thể tích & Thời gian",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Measuring Length, Volume & Time. Rulers & Metre Rules: Smallest division = 1 mm (0.1 cm) . Keep your line of sight perpendicular (90°) to the scale and place the scale directly against the object to eliminate parallax error. Measuring Cylinders: Place on a flat horizontal bench and read horizontally at eye level from the bottom of the meniscus for water (or top of the convex meniscus for mercury). Note: 1 mL = 1 cm³ and 1 m³ = 106cm³. Clocks & Digital Timers: Measure short and long time intervals in seconds (s). Human manual reaction time (~0.2–0.3 s) introduces random error ; use light gates for fast falls. Random vs Systematic Error: Random errors vary unpredictably (reduced by repeating and averaging). Systematic errors shift all readings by a fixed amount, such as a zero error on a ruler with a worn end or an uncalibrated newton meter.",
+      "vi": "Đo Chiều dài, Thể tích & Thời gian. Thước thẳng: Độ chia nhỏ nhất = 1 mm (0.1 cm) . Phải đặt vạch chia áp sát vật và hướng nhìn vuông góc (perpendicular, 90°) với vạch đọc để triệt tiêu lỗi thị sai (parallax error). Ống đong (Measuring Cylinders): Đặt trên mặt bàn phẳng nằm ngang, đọc ngang tầm mắt tại đáy mặt khum lõm đối với nước (hoặc đỉnh mặt khum lồi đối với thủy ngân). Lưu ý: 1 mL = 1 cm³ và 1 m³ = 106cm³. Đồng hồ & Bấm giây điện tử: Đo khoảng thời gian theo giây (s). Phản xạ bấm tay (~0.2–0.3 s) gây sai số ngẫu nhiên (random error) ; dùng cổng quang ( light gates ) cho vật rơi nhanh. Random Error vs Systematic Error: Sai số ngẫu nhiên dao động quanh giá trị thực (giảm bằng cách đo lặp lại và lấy trung bình). Sai số hệ thống (systematic error) làm lệch mọi phép đo một lượng cố định, ví dụ sai số điểm không (zero error) khi đầu thước bị mòn hoặc lực kế chưa chỉnh về 0.",
+      "duration": 142.77,
+      "startTime": 263.14,
+      "endTime": 405.91,
+      "audioUrl": "/audio/lectures/science/p1/s01_b04.mp3"
     },
     {
-      "id": "sec_free_fall",
-      "title": "🪂 Free Fall & Terminal Velocity (Rơi Tự do & Tốc độ Giới hạn)",
-      "selector": "#sec-free-fall",
-      "en": "In a vacuum, all falling objects accelerate downwards at 9.8 meters per second squared due to gravity. In air, air resistance opposes weight. As speed increases, drag increases until upward drag equals downward weight, resulting in zero net force and constant terminal velocity.",
-      "vi": "Trong chân không, mọi vật rơi tự do đều tăng tốc xuống dưới với gia tốc 9.8 mét trên giây bình phương do trọng lực. Trong không khí, lực cản không khí cản trở chuyển động. Khi tốc độ tăng, lực cản tăng theo cho đến khi lực cản hướng lên cân bằng với trọng lượng hướng xuống, hợp lực bằng 0 và vật đạt tốc độ giới hạn không đổi.",
-      "duration": 38.61,
-      "startTime": 287.92,
-      "endTime": 326.53,
-      "audioUrl": "/audio/lectures/science/p1/sec_free_fall.mp3"
+      "id": "s01_b05",
+      "title": "Kỹ thuật Đo Bội số (Measuring Multiples — Trọng tâm Paper 6)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Technique: Measuring Multiples (Paper 6 Favourite). When a single distance or time interval is too small to measure accurately, measure N identical multiples and divide by N to reduce percentage uncertainty: Small Distance (Paper / Wire Diameter): Measure the total thickness of 500 sheets of paper (e.g. 50 mm), then divide by 500 ⇒ 0.10 mm per sheet. Wrap thin wire closely in 20 turns around a pencil, measure coil width, and divide by 20. Pendulum Period ( T ): One complete oscillation is A → O → B → O → A . Place a fiducial marker at the equilibrium centre (O) where the bob moves fastest, time 20 complete swings ( t 20) , and calculate T = t 20/ 20 . Repeat 3 times and average.",
+      "vi": "Kỹ thuật Đo Bội số (Measuring Multiples — Trọng tâm Paper 6). Khi khoảng cách hoặc thời gian của 1 đơn vị quá nhỏ, hãy đo N phần tử giống hệt nhau rồi chia cho N để giảm sai số tỉ đối: Đo độ dày tờ giấy / đường kính dây mảnh: Đo tổng bề dày của xấp 500 tờ giấy (ví dụ 50 mm), sau đó chia cho 500 ⇒ 0.10 mm mỗi tờ. Với dây đồng mảnh: quấn sát nhau 20 vòng quanh bút chì, đo chiều dài cuộn dây rồi chia cho 20. Chu kỳ con lắc đơn (Pendulum Period T ): Một dao động toàn phần ( complete oscillation ) là A → O → B → O → A . Đặt vạch chuẩn (fiducial marker) tại vị trí cân bằng giữa (O) nơi quả nặng đi nhanh nhất, bấm thời gian 20 chu kỳ liên tiếp ( t 20) rồi tính T = t 20/ 20 .",
+      "duration": 110.69,
+      "startTime": 405.91,
+      "endTime": 516.6,
+      "audioUrl": "/audio/lectures/science/p1/s01_b05.mp3"
     },
     {
-      "id": "sec_density",
-      "title": "3. Khối lượng, Trọng lượng & Khối lượng Riêng (Mass, Weight & Density Overview)",
-      "selector": "#sec-density",
-      "en": "Section 3 defines mass as the measure of matter in a body, and weight as the gravitational force acting on that mass: Weight equals mass times gravitational field strength g.",
-      "vi": "Mục ba định nghĩa khối lượng là lượng vật chất tạo nên vật thể, và trọng lượng là lực hấp dẫn tác dụng lên khối lượng đó: Trọng lượng bằng khối lượng nhân cường độ trọng trường g.",
-      "duration": 68.42,
-      "startTime": 326.53,
-      "endTime": 394.95,
-      "audioUrl": "/audio/lectures/science/p1/sec_density.mp3"
+      "id": "s01_b06",
+      "title": "Đại lượng Vô hướng (Scalars) vs Vecto (Vectors — Danh sách Chuẩn P1.1)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Supplement P1.1 Scalars vs Vectors (Official P1.1 Classification). A scalar quantity has magnitude (size) only . A vector quantity has both magnitude and direction . Every quantity listed below is explicitly required by the 0654 P1.1 syllabus: Quantity Type: Scalars (6); Definition: Magnitude (size) only; Official 0654 P1.1 Required Examples (Memorise All!): Distance, Speed, Time, Mass, Energy, Temperature. Quantity Type: Vectors (5); Definition: Magnitude AND direction; Official 0654 P1.1 Required Examples (Memorise All!): Force, Weight, Velocity, Acceleration, Gravitational field strength.",
+      "vi": "Supplement P1.1 Đại lượng Vô hướng (Scalars) vs Vecto (Vectors — Danh sách Chuẩn P1.1). Đại lượng vô hướng (Scalar quantity) chỉ có độ lớn (magnitude only) . Đại lượng vecto (Vector quantity) có cả độ lớn và phương chiều . Cần thuộc lòng toàn bộ danh mục chuẩn 0654 P1.1 sau: Phân loại: Scalars — Vô hướng (6); Định nghĩa chuẩn Cambridge: Chỉ có độ lớn ( Magnitude only ); Danh sách Bắt buộc Thuộc lòng trong Syllabus 0654 P1.1: Distance (quãng đường), Speed (tốc độ), Time (thời gian), Mass (khối lượng), Energy (năng lượng), Temperature (nhiệt độ). Phân loại: Vectors — Vecto (5); Định nghĩa chuẩn Cambridge: Độ lớn VÀ hướng ( Magnitude & direction ); Danh sách Bắt buộc Thuộc lòng trong Syllabus 0654 P1.1: Force (lực), Weight (trọng lượng), Velocity (vận tốc), Acceleration (gia tốc), Gravitational field strength (cường độ trọng trường).",
+      "duration": 125.18,
+      "startTime": 516.6,
+      "endTime": 641.78,
+      "audioUrl": "/audio/lectures/science/p1/s01_b06.mp3"
     },
     {
-      "id": "sec_density_calc",
-      "title": "⚖️ Density Determination (Xác định Khối lượng Riêng)",
-      "selector": "#sec-density-calc",
-      "en": "Density rho equals mass divided by volume. For irregular solid objects, volume is determined using the displacement method in a measuring cylinder containing water.",
-      "vi": "Khối lượng riêng rho bằng khối lượng chia thể tích. Đối với vật thể rắn có hình dạng bất kỳ, thể tích được đo bằng phương pháp choán chỗ chất lỏng trong ống đong chứa nước.",
-      "duration": 21.3,
-      "startTime": 394.95,
-      "endTime": 416.25,
-      "audioUrl": "/audio/lectures/science/p1/sec_density_calc.mp3"
+      "id": "s01_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 / 🟩 CORE & EXTENDED • 0654 Paper 2 MCQ Which row correctly classifies all four physical quantities into scalars and vectors ? A. Scalars: mass, weight | Vectors: speed, acceleration B. Scalars: mass, energy | Vectors: weight, gravitational field strength C. Scalars: distance, velocity | Vectors: force, temperature D. Scalars: speed, acceleration | Vectors: weight, time ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Mass (kg) and energy (J) have magnitude only, so both are scalars . Weight (gravitational force in N) and gravitational field strength g (N/kg, directed towards the planet's centre) have both magnitude and direction, so both are vectors . Option A wrongly lists weight as a scalar and speed as a vector; Option C swaps velocity (vector) and temperature (scalar); Option D misclassifies acceleration (vector) and time (scalar).",
+      "vi": "BÀI MẪU 1 🟦 / 🟩 CORE & EXTENDED • Trắc nghiệm 0654 Paper 2 Which row correctly classifies all four physical quantities into scalars and vectors ? (Dòng nào phân loại chính xác cả bốn đại lượng vật lý vào nhóm vô hướng (scalars) và vecto (vectors) ?) A. Scalars: mass, weight | Vectors: speed, acceleration B. Scalars: mass, energy | Vectors: weight, gravitational field strength C. Scalars: distance, velocity | Vectors: force, temperature D. Scalars: speed, acceleration | Vectors: weight, time ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mass (khối lượng, kg) và energy (năng lượng, J) chỉ có độ lớn nên đều là scalars . Weight (trọng lượng — lực hấp dẫn, N) và gravitational field strength g (cường độ trọng trường, N/kg hướng về tâm hành tinh) có cả độ lớn lẫn phương chiều nên đều là vectors . Đáp án A sai vì xếp weight vào scalar và speed vào vector; C nhầm velocity (vector) với temperature (scalar); D nhầm acceleration (vector) với time (scalar).",
+      "duration": 145.91,
+      "startTime": 641.78,
+      "endTime": 787.69,
+      "audioUrl": "/audio/lectures/science/p1/s01_b07.mp3"
     },
     {
-      "id": "sec_forces",
-      "title": "4. Lực, Định luật Hooke, Momen & Áp suất (Forces, Moments & Pressure Overview)",
-      "selector": "#sec-forces",
-      "en": "Section 4 examines forces: Resultant force equals mass times acceleration (F = ma). Hooke's law states that force is directly proportional to extension up to the limit of proportionality (F = kx).",
-      "vi": "Mục bốn phân tích các loại lực: Hợp lực bằng khối lượng nhân gia tốc theo định luật hai Newton (F = ma). Định luật Hooke khẳng định lực kéo tỉ lệ thuận với độ dãn của lò xo cho đến giới hạn đàn hồi (F = kx).",
-      "duration": 70.89,
-      "startTime": 416.25,
-      "endTime": 487.14,
-      "audioUrl": "/audio/lectures/science/p1/sec_forces.mp3"
+      "id": "s01_b08",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / PRACTICAL • 0654 Paper 4 & 6 Structured [4 marks] A student determines the diameter of thin copper wire and the period of a simple pendulum. (a) The student wraps the copper wire closely with no gaps for 25 complete turns around a wooden rod. The ends of the coil align with the 2.4 cm and 5.9 cm marks on a millimetre ruler. Calculate the average diameter of the wire in mm . [2] (b) Next, the student records the time for 20 complete oscillations of a pendulum three times: 28.2 s , 28.6 s , and 28.4 s . Calculate the mean period T of one oscillation and explain why a fiducial marker is placed at the centre of the swing. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Total width of 25-turn coil = 5.9 cm − 2.4 cm = 3.5 cm = 35 mm [1m].Diameter of 1 wire = 35 mm ÷ 25 = 1.4 mm [1m]. (b) Mean time for 20 swings t 20= (28.2 + 28.6 + 28.4) ÷ 3 = 28.4 s ⇒ Period T = 28.4 ÷ 20 = 1.42 s [1m].A fiducial marker is placed at the equilibrium centre because the bob moves fastest there, giving the sharpest instant of passing and minimising human reaction-time uncertainty [1m]. 💡 Intuition Check: Subtracting ruler readings (5.9 − 2.4 = 3.5 cm) avoids dead-space zero errors at the end of the ruler, and dividing a 28.4 s reading by 20 shrinks a ±0.2 s reaction-time error down to just ±0.01 s per swing!",
+      "vi": "BÀI MẪU 2 🟦 CORE / PRACTICAL • Tự luận 0654 Paper 4 & 6 [4 marks] A student determines the diameter of thin copper wire and the period of a simple pendulum. (a) The student wraps the copper wire closely for 25 complete turns around a wooden rod between the 2.4 cm and 5.9 cm marks on a millimetre ruler. Calculate the average diameter of the wire in mm . (b) Next, the student records the time for 20 complete oscillations three times: 28.2 s , 28.6 s , and 28.4 s . Calculate the mean period T and explain why a fiducial marker is placed at the centre of the swing. (Một học sinh quấn sát 25 vòng dây đồng từ vạch 2.4 cm đến 5.9 cm trên thước mm, sau đó đo 3 lần thời gian của 20 dao động toàn phần: 28.2 s, 28.6 s, 28.4 s. (a) Tính đường kính dây theo mm. (b) Tính chu kỳ trung bình T và giải thích vì sao đặt vạch chuẩn ở vị trí cân bằng giữa.) ✍️ Lời giải chi tiết theo thang điểm: (a) Tổng bề rộng cuộn 25 vòng = 5.9 cm − 2.4 cm = 3.5 cm = 35 mm .Đường kính 1 sợi dây d = 35 mm ÷ 25 = 1.4 mm . (b) Thời gian trung bình của 20 dao động: t 20= (28.2 + 28.6 + 28.4) ÷ 3 = 28.4 s ⇒ Chu kỳ T = 28.4 ÷ 20 = 1.42 s .Đặt fiducial marker tại tâm cân bằng vì quả nặng đi qua đó với tốc độ lớn nhất (moves fastest) , giúp xác định thời điểm đi qua rõ nét nhất và giảm sai số thời gian phản xạ .",
+      "duration": 247.5,
+      "startTime": 787.69,
+      "endTime": 1035.19,
+      "audioUrl": "/audio/lectures/science/p1/s01_b08.mp3"
     },
     {
-      "id": "sec_moments_pressure",
-      "title": "⚙️ Moments & Pressure (Momen Lực & Áp suất)",
-      "selector": "#sec-moments-pressure",
-      "en": "The moment of a force equals force times perpendicular distance to pivot. For equilibrium, clockwise moments equal anticlockwise moments. Pressure equals force divided by contact area.",
-      "vi": "Momen của lực bằng lực nhân khoảng cách vuông góc từ giá của lực đến trục quay. Ở trạng thái cân bằng, tổng momen quay theo chiều kim đồng hồ bằng tổng momen quay ngược chiều. Áp suất bằng áp lực chia cho diện tích tiếp xúc.",
-      "duration": 27.23,
-      "startTime": 487.14,
-      "endTime": 514.37,
-      "audioUrl": "/audio/lectures/science/p1/sec_moments_pressure.mp3"
+      "id": "s02_hdr",
+      "title": "📈 2. Động học, Đồ thị Chuyển động & Rơi Tự do (Motion — P1.2)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "📈 2. Motion, Kinematics Graphs & Free Fall (P1.2).",
+      "vi": "📈 2. Động học, Đồ thị Chuyển động & Rơi Tự do (Motion — P1.2).",
+      "duration": 11.27,
+      "startTime": 1035.19,
+      "endTime": 1046.46,
+      "audioUrl": "/audio/lectures/science/p1/s02_hdr.mp3"
     },
     {
-      "id": "sec_energy_stores",
-      "title": "5. Các Dạng Năng lượng & Đường truyền (Energy Stores & Pathways Overview)",
-      "selector": "#sec-energy-stores",
-      "en": "Section 5 details eight energy stores: kinetic, gravitational, chemical, elastic, nuclear, electrostatic, magnetic, and thermal. Energy is transferred between stores via mechanical work, electrical work, heating, and radiation.",
-      "vi": "Mục năm phân loại tám kho dự trữ năng lượng: động năng, thế năng trọng trường, hóa năng, thế năng đàn hồi, năng lượng hạt nhân, tĩnh điện, từ trường và nhiệt năng. Năng lượng luân chuyển qua bốn con đường: công cơ học, công điện, truyền nhiệt và bức xạ.",
-      "duration": 60.38,
-      "startTime": 514.37,
-      "endTime": 574.75,
-      "audioUrl": "/audio/lectures/science/p1/sec_energy_stores.mp3"
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a Distance–Time ( s–t ) graph as your GPS map pin (how far from home you are), whereas a Speed–Time ( v–t ) graph is a video of your car's speedometer needle . A flat horizontal line on the map pin means you are parked ( v = 0), whereas a flat horizontal speedometer needle at 20 m/s means you are cruising steadily on the highway ( a = 0, covering 20 m every second!).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung đồ thị Distance–Time ( s–t ) giống như chấm định vị trên bản đồ (bạn đang cách nhà bao xa), còn đồ thị Speed–Time ( v–t ) là video quay kim đồng hồ tốc độ (speedometer) trên xe. Nếu chấm bản đồ nằm ngang ở mức 500 m tức là xe đang đỗ ( v = 0); nhưng nếu kim công-tơ-mét giữ ngang ở 20 m/s tức là xe đang lướt đều trên cao tốc ( a = 0, cứ mỗi giây tiến thêm 20 m!).",
+      "duration": 62.35,
+      "startTime": 1046.46,
+      "endTime": 1108.81,
+      "audioUrl": "/audio/lectures/science/p1/s02_b01.mp3"
     },
     {
-      "id": "sec_ke_gpe",
-      "title": "6. Động năng & Thế năng Trọng trường (Kinetic & Gravitational Energy)",
-      "selector": "#sec-ke-gpe",
-      "en": "Section 6 calculates mechanical energy: Kinetic energy equals half mass times velocity squared. Gravitational potential energy equals mass times g times change in height.",
-      "vi": "Mục sáu tính toán cơ năng: Động năng bằng một nửa khối lượng nhân bình phương vận tốc. Thế năng trọng trường bằng khối lượng nhân g nhân độ cao thay đổi.",
-      "duration": 66.95,
-      "startTime": 574.75,
-      "endTime": 641.7,
-      "audioUrl": "/audio/lectures/science/p1/sec_ke_gpe.mp3"
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Two Master Graph Rules (P1.2): (1) Gradient = Rate of change of Y-axis — gradient of s–t gives speed ( Δs/Δt ); gradient of v–t gives acceleration ( Δv/Δt ), so a curving v–t graph whose slope flattens means decreasing acceleration . (2) Area under a v–t graph = Total distance travelled (slice into triangles ½ bh and rectangles bh ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Hai Quy tắc Vàng giải Đồ thị (P1.2): (1) Hệ số góc (Gradient) = Tốc độ biến thiên trục tung — độ dốc của s–t là speed ( Δs/Δt ); độ dốc của v–t là acceleration ( Δv/Δt ), nên đường cong v–t thoải dần có nghĩa gia tốc giảm dần (decreasing acceleration) . (2) Diện tích dưới đồ thị v–t = Tổng quãng đường đi được .",
+      "duration": 62.5,
+      "startTime": 1108.81,
+      "endTime": 1171.31,
+      "audioUrl": "/audio/lectures/science/p1/s02_b02.mp3"
     },
     {
-      "id": "sec_work_power",
-      "title": "7. Công, Công suất & Hiệu suất (Work, Power & Efficiency Overview)",
-      "selector": "#sec-work-power",
-      "en": "Section 7 establishes: Work done equals force times distance in the direction of force. Power is the rate of transferring energy or doing work. Efficiency equals useful energy output divided by total energy input, expressed as a percentage.",
-      "vi": "Mục bảy thiết lập: Công cơ học bằng lực nhân quãng đường dịch chuyển theo phương của lực. Công suất là tốc độ thực hiện công hay tốc độ tiêu thụ năng lượng. Hiệu suất bằng năng lượng có ích sinh ra chia cho tổng năng lượng đầu vào, tính theo phần trăm.",
-      "duration": 58.89,
-      "startTime": 641.7,
-      "endTime": 700.59,
-      "audioUrl": "/audio/lectures/science/p1/sec_work_power.mp3"
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Finding average speed by averaging two speeds (v1+ v2) / 2 when the time intervals differ, OR forgetting to convert minutes/km into seconds (s) and metres (m) before computing gradient or area!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tính average speed bằng trung bình cộng (v1+ v2) / 2 khi thời gian các chặng khác nhau, HOẶC quên đổi phút/giờ/km sang đơn vị chuẩn SI ( giây s và mét m ) trước khi tính độ dốc và diện tích!",
+      "duration": 33.91,
+      "startTime": 1171.31,
+      "endTime": 1205.22,
+      "audioUrl": "/audio/lectures/science/p1/s02_b03.mp3"
     },
     {
-      "id": "sec_energy_resources",
-      "title": "8. Nguồn Năng lượng Tái tạo & Không tái tạo (Energy Resources Overview)",
-      "selector": "#sec-energy-resources",
-      "en": "Section 8 compares energy sources: Fossil fuels and nuclear are non-renewable reliable sources with high environmental impact. Solar, wind, hydroelectric, and tidal are clean renewable sources derived mostly from the Sun's radiation.",
-      "vi": "Mục tám so sánh các nguồn năng lượng: Nhiên liệu hóa thạch và hạt nhân là nguồn không tái tạo có độ ổn định cao nhưng tác động đến môi trường. Năng lượng mặt trời, gió, thủy điện và thủy triều là các nguồn năng lượng tái tạo sạch mà phần lớn có nguồn gốc từ bức xạ của Mặt Trời.",
-      "duration": 68.42,
-      "startTime": 700.59,
-      "endTime": 769.01,
-      "audioUrl": "/audio/lectures/science/p1/sec_energy_resources.mp3"
+      "id": "s02_b04",
+      "title": "Speed & Velocity v = s / t Velocity = tốc độ theo một hướng xác định (m/s)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Speed & Velocity v = s / t Velocity = speed in a given direction (m/s)",
+      "vi": "Speed & Velocity v = s / t Velocity = tốc độ theo một hướng xác định (m/s)",
+      "duration": 15.11,
+      "startTime": 1205.22,
+      "endTime": 1220.33,
+      "audioUrl": "/audio/lectures/science/p1/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Average Speed (Tốc độ TB) vavg= Total s / Total t Tổng quãng đường ÷ Tổng thời g...",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Average Speed vavg= Total s / Total t Total distance travelled ÷ total time taken",
+      "vi": "Average Speed (Tốc độ TB) vavg= Total s / Total t Tổng quãng đường ÷ Tổng thời gian",
+      "duration": 15.21,
+      "startTime": 1220.33,
+      "endTime": 1235.54,
+      "audioUrl": "/audio/lectures/science/p1/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Acceleration (Supplement) a = Δv / Δt = (v − u) / t Deceleration = gia tốc âm (g...",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Acceleration (Supplement) a = Δv / Δt = (v − u) / t Deceleration = negative acceleration (m/s²)",
+      "vi": "Acceleration (Supplement) a = Δv / Δt = (v − u) / t Deceleration = gia tốc âm (giảm tốc, m/s²)",
+      "duration": 23.7,
+      "startTime": 1235.54,
+      "endTime": 1259.24,
+      "audioUrl": "/audio/lectures/science/p1/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Gia tốc Rơi tự do g ≈ 9.8 m/s² Không đổi gần bề mặt Trái Đất (bỏ qua cản)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "Free Fall Constant g ≈ 9.8 m/s² Constant near Earth's surface (no drag)",
+      "vi": "Gia tốc Rơi tự do g ≈ 9.8 m/s² Không đổi gần bề mặt Trái Đất (bỏ qua cản)",
+      "duration": 15.17,
+      "startTime": 1259.24,
+      "endTime": 1274.41,
+      "audioUrl": "/audio/lectures/science/p1/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🚨 BẪY ĐỀ THI CAMBRIDGE: Luôn kiểm tra tên Trục Tung trước tiên!",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🚨 CAMBRIDGE EXAM PITFALL: Always Check the Vertical Axis Label First! A horizontal flat line on a Distance–Time graph means the object is at rest / stationary ( v = 0) . On a Speed–Time graph, a horizontal flat line means the object is moving at constant speed with zero acceleration ( a = 0) ! Also check data tables: equal distance increments every second = constant speed; increasing increments every second = accelerating.",
+      "vi": "🚨 BẪY ĐỀ THI CAMBRIDGE: Luôn kiểm tra tên Trục Tung trước tiên! Đường thẳng nằm ngang trên đồ thị Distance–Time có nghĩa vật đang đứng yên (at rest / stationary, v = 0) . Nhưng đường thẳng nằm ngang trên đồ thị Speed–Time lại có nghĩa vật đang chuyển động với tốc độ không đổi (constant speed, gia tốc a = 0) ! Khi đọc bảng số liệu: quãng đường tăng đều mỗi giây = tốc độ không đổi; độ tăng quãng đường lớn dần mỗi giây = vật đang tăng tốc.",
+      "duration": 62.58,
+      "startTime": 1274.41,
+      "endTime": 1336.99,
+      "audioUrl": "/audio/lectures/science/p1/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🔍 Interactive Graph Analyzer (Trạm Phân tích Đồ thị Động học)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "🔍 Interactive Graph Analyzer. Distance-Time Graph Distance – Time Graph. Speed-Time Graph Speed – Time Graph. Info Panel Hover over line segments 👆. Explore how gradient and area represent speed, acceleration, and distance travelled in Cambridge 0654 exams. Hidden text blocksGraph Comparison Table including Supplement Curved Graphs Graph Feature: Gradient (Slope); Distance – Time Graph ( s–t ): Speed ( v = Δ s / Δ t ); Speed – Time Graph ( v–t ): Acceleration ( a = Δ v / Δ t ). Graph Feature: Horizontal Flat Line; Distance – Time Graph ( s–t ): At rest / Stationary ( v = 0); Speed – Time Graph ( v–t ): Constant speed ( a = 0). Graph Feature: Straight Sloping Line; Distance – Time Graph ( s–t ): Constant non-zero speed; Speed – Time Graph ( v–t ): Constant acceleration (up) or constant deceleration (down). Graph Feature: Curved Line (Supplement); Distance – Time Graph ( s–t ): Steepening curve = accelerating; flattening curve = decelerating; Speed – Time Graph ( v–t ): Changing (non-uniform) acceleration : flattening slope = decreasing acceleration. Graph Feature: Area Under Graph; Distance – Time Graph ( s–t ): No physical meaning; Speed – Time Graph ( v–t ): Total Distance Travelled (sum of triangles & rectangles). Worked Example: Speed-Time Graph & Split Lap Worked Example (Multi-Stage Speed–Time Graph): A car accelerates uniformly from rest to 16 m/s in 10 s , travels at 16 m/s for 20 s , then decelerates uniformly to rest in 8 s .• Acceleration in first 10 s: a = (16 − 0) / 10 = 1.6 m/s² .",
+      "vi": "🔍 Interactive Graph Analyzer (Trạm Phân tích Đồ thị Động học). area). Distance-Time Graph Distance – Time Graph. Speed-Time Graph Speed – Time Graph. Info Panel Khám phá cách đọc hệ số góc ( gradient ) và diện tích dưới đường biểu diễn trong đề thi 0654. Hidden text blocksGraph Comparison Table Đặc trưng Đồ thị: Hệ số góc (Gradient); Đồ thị Quãng đường – Thời gian ( s–t ): Tốc độ — Speed ( v = Δ s / Δ t ); Đồ thị Tốc độ – Thời gian ( v–t ): Gia tốc — Acceleration ( a = Δ v / Δ t ). Đặc trưng Đồ thị: Đường nằm ngang; Đồ thị Quãng đường – Thời gian ( s–t ): Đứng yên ( At rest / Stationary , v = 0); Đồ thị Tốc độ – Thời gian ( v–t ): Tốc độ không đổi ( Constant speed , a = 0). Đặc trưng Đồ thị: Đường thẳng xiên; Đồ thị Quãng đường – Thời gian ( s–t ): Chuyển động với tốc độ không đổi; Đồ thị Tốc độ – Thời gian ( v–t ): Gia tốc đều. Đặc trưng Đồ thị: Đường cong (Supplement); Đồ thị Quãng đường – Thời gian ( s–t ): Cong dốc lên = tăng tốc; cong thoải dần = giảm tốc; Đồ thị Tốc độ – Thời gian ( v–t ): Gia tốc biến đổi (Changing acceleration) : độ dốc giảm dần = decreasing acceleration. Đặc trưng Đồ thị: Diện tích dưới đồ thị; Đồ thị Quãng đường – Thời gian ( s–t ): Không mang ý nghĩa vật lý; Đồ thị Tốc độ – Thời gian ( v–t ): Tổng Quãng đường đi được.",
+      "duration": 232.46,
+      "startTime": 1336.99,
+      "endTime": 1569.45,
+      "audioUrl": "/audio/lectures/science/p1/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "🪂 Rơi Tự do trong Chân không vs Sức cản Không khí/Chất lỏng & Vận tốc Giới hạn (Terminal Veloci",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "Core & Supplement P1.2 🪂 Free Fall in Vacuum vs Air/Liquid Resistance & Skydiver Terminal Velocity. Without air resistance (in a vacuum): All objects near Earth's surface fall with the same constant acceleration of free fall g ≈ 9.8 m/s² regardless of mass (a feather and a lead hammer hit the ground together; v–t graph is a straight line of gradient 9.8 m/s²). With air or liquid resistance (drag): Drag increases rapidly as speed increases, opposing weight W and causing decreasing acceleration until terminal velocity is reached: Stage 1 — Instant of Jump ( v = 0): Air resistance R = 0. Downward weight W acts alone ⇒ resultant force = W , initial acceleration = 9.8 m/s² . Stage 2 — Accelerating ( W > R ): As speed rises, drag R increases. Resultant force ( W − R ) decreases, so acceleration decreases (slope flattens) while speed still increases! Stage 3 — Terminal Velocity 1 ( W = R ): Upward drag equals downward weight. Resultant force = 0 N , a = 0 m/s² ; skydiver falls at steady high speed (~55 m/s). Stage 4 — Parachute Opens ( R ≫ W ): Huge surface area makes upward drag much larger than weight ⇒ upward resultant force causes rapid deceleration (still falling downwards!) until drag drops to equal W at a safe lower terminal velocity (~5 m/s) .",
+      "vi": "Core & Supplement P1.2 🪂 Rơi Tự do trong Chân không vs Sức cản Không khí/Chất lỏng & Vận tốc Giới hạn (Terminal Velocity). Trong chân không (không có sức cản không khí): Mọi vật gần mặt đất đều rơi với cùng gia tốc rơi tự do không đổi g ≈ 9.8 m/s² bất kể khối lượng (chiếc lông vũ và búa chì chạm đất cùng lúc). Trong không khí hoặc chất lỏng (có lực cản — air/liquid resistance): Lực cản R tăng nhanh khi tốc độ tăng, ngược chiều trọng lượng W , làm gia tốc giảm dần (decreasing acceleration) cho tới khi đạt vận tốc giới hạn (terminal velocity) : Giai đoạn 1 — Vừa rời máy bay ( v = 0): Lực cản R = 0. Chỉ có trọng lượng W hướng xuống ⇒ hợp lực = W , gia tốc ban đầu = 9.8 m/s² . Giai đoạn 2 — Tăng tốc chậm dần ( W > R ): Tốc độ tăng làm lực cản R tăng. Hợp lực ( W − R ) giảm nên gia tốc giảm dần dù tốc độ vẫn tăng! Giai đoạn 3 — Vận tốc giới hạn 1 ( W = R ): Lực cản hướng lên bằng trọng lượng hướng xuống ⇒ Resultant force = 0 N , a = 0 , rơi đều (~55 m/s). Giai đoạn 4 — Bung dù ( R ≫ W ): Diện tích dù lớn làm lực cản vượt xa W ⇒ hợp lực hướng lên gây giảm tốc mạnh (vẫn đang rơi xuống!) tới terminal velocity mới thấp & an toàn (~5 m/s) .",
+      "duration": 201.22,
+      "startTime": 1569.45,
+      "endTime": 1770.67,
+      "audioUrl": "/audio/lectures/science/p1/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ An object starts from rest at t = 0. Its speed–time graph is a curve that rises upwards from the origin, with its gradient gradually becoming less steep over time. Which statement correctly describes the motion? A. Its speed is decreasing and its acceleration is decreasing. B. Its speed is increasing with decreasing acceleration. C. It is slowing down towards a stationary rest position. D. Its speed is constant and its acceleration is increasing. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Read the Y-axis value and the slope separately! Because the curve continues to rise higher on the speed axis , the object's speed is still increasing (ruling out A, C, and D). Because the gradient of a speed–time graph equals acceleration and the slope is becoming flatter (less steep), the acceleration is decreasing (classic motion of an object accelerating against increasing air resistance).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm 0654 Paper 2 An object starts from rest at t = 0. Its speed–time graph is a curve that rises upwards from the origin, with its gradient gradually becoming less steep over time. Which statement correctly describes the motion? (Một vật xuất phát từ trạng thái nghỉ tại t = 0. Đồ thị tốc độ – thời gian là đường cong đi lên từ gốc tọa độ nhưng độ dốc giảm dần theo thời gian. Phát biểu nào mô tả đúng chuyển động?) A. Its speed is decreasing and its acceleration is decreasing. B. Its speed is increasing with decreasing acceleration. C. It is slowing down towards a stationary rest position. D. Its speed is constant and its acceleration is increasing. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Phải tách riêng giá trị trục tung và độ dốc! Vì đường biểu diễn vẫn đi lên cao dần trên trục Speed nên tốc độ vật vẫn đang tăng — loại ngay A, C, D. Vì gradient của đồ thị speed–time là gia tốc (acceleration) mà đường cong ngày càng thoải (ít dốc hơn), nên gia tốc đang giảm dần (decreasing acceleration) .",
+      "duration": 145.77,
+      "startTime": 1770.67,
+      "endTime": 1916.44,
+      "audioUrl": "/audio/lectures/science/p1/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Calculation [5 marks] A commuter train starts from rest at a station and accelerates uniformly to 24 m/s in 15 s . It travels at a constant speed of 24 m/s for 45 s , and then brakes uniformly for the next 10 s until its speed drops to 8.0 m/s . (a) Calculate the acceleration of the train during the first 15 s. [2] (b) Calculate the deceleration of the train during the final 10 s. [1] (c) Calculate the total distance travelled by the train during the entire 70 s journey. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) a = ( v − u ) / t = (24 − 0) / 15 [1m] = 1.6 m/s² [1m]. (b) Change in velocity = 8.0 − 24 = −16 m/s ⇒ a = −16 / 10 = −1.6 m/s², so deceleration = 1.6 m/s² [1m]. (c) Total distance = Area under v–t graph across all 3 stages:• Stage 1 (triangle, 0–15 s): ½ × 15 × 24 = 180 m .• Stage 2 (rectangle, 15–60 s, Δ t = 45 s): 45 × 24 = 1080 m .• Stage 3 (trapezium, 60–70 s, speeds 24 → 8.0 m/s): ½ × (24 + 8.0) × 10 = 160 m [1m for method/areas].• Total distance = 180 + 1080 + 160 = 1420 m [1m]. 💡 Intuition Check: Watch Stage 3 carefully: the train slows to 8.0 m/s rather than 0 m/s, so the area under the last 10 s is a trapezium (or an 8.0 × 10 = 80 m rectangle plus a ½ × 10 × 16 = 80 m triangle = 160 m), NOT just a single triangle down to the time axis!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Tính toán 0654 Paper 4 [5 marks] A commuter train starts from rest at a station and accelerates uniformly to 24 m/s in 15 s . It travels at a constant speed of 24 m/s for 45 s , and then brakes uniformly for the next 10 s until its speed drops to 8.0 m/s . (a) Calculate the acceleration of the train during the first 15 s. (b) Calculate the deceleration of the train during the final 10 s. (c) Calculate the total distance travelled by the train during the entire 70 s journey. (Đoàn tàu rời ga từ trạng thái nghỉ, tăng tốc đều lên 24 m/s trong 15 s, chạy đều ở 24 m/s trong 45 s, rồi phanh đều trong 10 s tiếp theo làm tốc độ giảm còn 8.0 m/s. Tính: (a) gia tốc 15 s đầu, (b) độ giảm tốc 10 s cuối, (c) tổng quãng đường đi trong 70 s.) ✍️ Lời giải chi tiết theo thang điểm: (a) Gia tốc 15 s đầu: a = ( v − u ) / t = (24 − 0) / 15 = 1.6 m/s² . (b) Độ biến thiên vận tốc = 8.0 − 24 = −16 m/s ⇒ a = −16 / 10 = −1.6 m/s², vậy độ giảm tốc ( deceleration ) = 1.6 m/s² . (c) Tổng quãng đường = Tổng diện tích dưới đồ thị v–t qua 3 giai đoạn:• Giai đoạn 1 (tam giác, 0–15 s): ½ × 15 × 24 = 180 m .• Giai đoạn 2 (hình chữ nhật, Δ t = 45 s): 45 × 24 = 1080 m .• Giai đoạn 3 (hình thang từ 24 m/s xuống 8.0 m/s trong 10 s): ½ × (24 + 8.0) × 10 = 160 m [1m phương pháp/diện tích].• Tổng quãng đường = 180 + 1080 + 160 = 1420 m . 💡 Kiểm tra bản chất: Cực kỳ tỉnh táo ở 10 s cuối: tàu chỉ giảm tốc xuống 8.0 m/s chứ CHƯA dừng hẳn về 0!",
+      "duration": 303.47,
+      "startTime": 1916.44,
+      "endTime": 2219.91,
+      "audioUrl": "/audio/lectures/science/p1/s02_b12.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "⚖️ 3. Khối lượng, Trọng lượng & Khối lượng riêng (Mass, Weight & Density — P1.3 & P1.4)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "⚖️ 3. Mass, Weight & Density (P1.3 & P1.4).",
+      "vi": "⚖️ 3. Khối lượng, Trọng lượng & Khối lượng riêng.",
+      "duration": 10.03,
+      "startTime": 2219.91,
+      "endTime": 2229.94,
+      "audioUrl": "/audio/lectures/science/p1/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Mass (kg) counts how many “LEGO bricks of matter” build an object — fly to Mars and every brick is still there! Weight (N) is how hard a planet's gravitational field pulls downwards on those bricks ( W = mg ). Density (ρ = m/V) measures how tightly packed a suitcase is: an iron bolt and a cork of identical size have the same volume V , so the loosely packed cork floats on water (ρ < 1.0 g/cm³) while the iron bolt sinks.",
+      "vi": "🎯 Hình dung đời thường: Mass (khối lượng, kg) đếm số “viên gạch vật chất” tạo nên cơ thể bạn — dù bay lên Sao Hỏa thì số viên gạch đó vẫn giữ nguyên! Weight (trọng lượng, N) là lực hút của hành tinh kéo các viên gạch đó xuống dưới ( W = mg ). Còn Density (ρ = m/V) đo độ “nhồi chặt” trong một chiếc vali: khúc bần và con ốc sắt cùng thể tích V nhưng bần thưa nhẹ hơn nước (ρ < 1.0 g/cm³) nên nổi, còn sắt đặc nặng hơn nên chìm.",
+      "duration": 69.73,
+      "startTime": 2229.94,
+      "endTime": 2299.67,
+      "audioUrl": "/audio/lectures/science/p1/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Unit Discipline (P1.3 & P1.4): Pair kg with m³ (⇒ kg/m³) OR g with cm³ (⇒ g/cm³) ; convert via 1 g/cm³ = 1000 kg/m³ . Always convert grams → kilograms (÷ 1000) before using W = mg ! For irregular sinking solids, weigh dry mass m first, then find displaced water volume V = V2− V1 .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Kỷ luật Đơn vị (P1.3 & P1.4): Ghép đồng bộ kg với m³ (⇒ kg/m³) HOẶC g với cm³ (⇒ g/cm³) ; quy đổi nhanh 1 g/cm³ = 1000 kg/m³ . Phải đổi gam → kilogam (÷ 1000) trước khi nhân W = mg ! Khi đo vật rắn bất kỳ bằng phương pháp dâng nước ( displacement ), luôn cân khối lượng khô m TRƯỚC khi nhúng vào nước.",
+      "duration": 72.19,
+      "startTime": 2299.67,
+      "endTime": 2371.86,
+      "audioUrl": "/audio/lectures/science/p1/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Submerging the stone in water before measuring its mass on the balance (clinging water droplets make mass m and calculated density artificially too high!), OR writing 1 m³ = 100 cm³ instead of 1 m³ = 106cm³ !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nhúng viên đá vào ống đong đo thể tích trước rồi mới đem lên cân điện tử (nước bám ướt làm khối lượng m và khối lượng riêng tính ra bị cao giả tạo!), HOẶC đổi nhầm 1 m³ = 100 cm³ thay vì 1 m³ = 106cm³ !",
+      "duration": 39.21,
+      "startTime": 2371.86,
+      "endTime": 2411.07,
+      "audioUrl": "/audio/lectures/science/p1/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "KHỐI LƯỢNG RIÊNG — DENSITY (ρ = m / V)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "DENSITY (ρ = m / V). ρ = m / V Definition: Mass per unit volume ( kg/m³ or g/cm³ ). Unit Conversion: 1.0 g/cm³ = 1000 kg/m³ (pure water). Floating & Sinking Rule (P1.4.3): An object floats if ρobject< ρliquid and sinks if ρobject> ρliquid.",
+      "vi": "KHỐI LƯỢNG RIÊNG — DENSITY (ρ = m / V). ρ = m / V Định nghĩa: Khối lượng trên một đơn vị thể tích ( mass per unit volume , kg/m³ hoặc g/cm³ ). Đổi đơn vị: Nước tinh khiết 1.0 g/cm³ = 1000 kg/m³. Quy tắc Nổi & Chìm (P1.4.3): Vật nổi nếu ρvật< ρchất lỏng và chìm nếu ρvật> ρchất lỏng.",
+      "duration": 56.95,
+      "startTime": 2411.07,
+      "endTime": 2468.02,
+      "audioUrl": "/audio/lectures/science/p1/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "CƯỜNG ĐỘ TRỌNG TRƯỜNG (g = W / m)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "GRAVITATIONAL FIELD STRENGTH (g = W / m). W = m × g Definition of g : Force per unit mass ( N/kg ), equivalent to acceleration of free fall (9.8 m/s²). Earth: g ≈ 9.8 N/kg ; Moon: g ≈ 1.6 N/kg. A beam balance compares unknown weights (and therefore masses).",
+      "vi": "CƯỜNG ĐỘ TRỌNG TRƯỜNG (g = W / m). W = m × g Định nghĩa g : Lực hấp dẫn tác dụng lên một đơn vị khối lượng, tương đương gia tốc rơi tự do (9.8 m/s²). Trái Đất: g ≈ 9.8 N/kg ; Mặt Trăng: g ≈ 1.6 N/kg. Cân đòn (Beam balance) so sánh trọng lượng (và suy ra khối lượng).",
+      "duration": 56.45,
+      "startTime": 2468.02,
+      "endTime": 2524.47,
+      "audioUrl": "/audio/lectures/science/p1/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🧪 Ba Phương pháp Thực hành Xác định Khối lượng riêng (P1.4.2):",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🧪 Three Required Practical Methods for Determining Density (P1.4.2): Regularly Shaped Solid: Measure mass m on an electronic balance; measure dimensions ( l, w, h or diameter) with a ruler/calliper to compute V ; calculate ρ = m / V. Liquid: Weigh an empty dry measuring cylinder ( m 1), pour in liquid and record volume V , weigh again ( m 2). Liquid mass m = m 2− m 1 ⇒ ρ = ( m 2− m 1) / V . (Example: 465 g − 185 g = 280 g for 400 cm³ ⇒ ρ = 0.70 g/cm³). Irregular Sinking Solid (Displacement): Measure dry mass m first! Record initial water volume V 1in a measuring cylinder, gently lower the solid on a thin thread until fully submerged, read new volume V 2. Volume V = V 2− V 1 ⇒ ρ = m / ( V 2− V 1). Core P1.4.3 (Floating vs Sinking Data): Compare object density directly against the liquid density — in pure water (1.00 g/cm³) , pine wood (0.65 g/cm³) floats while granite stone (2.60 g/cm³) sinks to the bottom.",
+      "vi": "🧪 Ba Phương pháp Thực hành Xác định Khối lượng riêng (P1.4.2): Vật rắn hình dạng đều (Regular Solid): Cân khối lượng m bằng cân điện tử ( electronic balance ); đo kích thước ( l, w, h hoặc đường kính) để tính V ; áp dụng ρ = m / V. Chất lỏng (Liquid): Cân ống đong khô rỗng ( m 1), rót chất lỏng vào đọc thể tích V rồi cân lại ( m 2). Khối lượng chất lỏng m = m 2− m 1 ⇒ ρ = ( m 2− m 1) / V. Vật rắn không đều chìm trong nước (Displacement Method): Phải cân khối lượng khô m trước! Đọc thể tích nước ban đầu V 1, buộc chỉ mảnh thả nhẹ vật ngập hoàn toàn, đọc thể tích mới V 2. Ta có V = V 2− V 1 ⇒ ρ = m / ( V 2− V 1). Core P1.4.3 (Xét vật Nổi hay Chìm): So sánh trực tiếp khối lượng riêng của vật với chất lỏng — trong nước tinh khiết (1.00 g/cm³) , gỗ thông (0.65 g/cm³) nổi trên mặt nước còn đá hoa cương (2.60 g/cm³) chìm xuống đáy.",
+      "duration": 161.87,
+      "startTime": 2524.47,
+      "endTime": 2686.34,
+      "audioUrl": "/audio/lectures/science/p1/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Tiêu chí: Định nghĩa Syllabus; Mass — Khối lượng ( m ): Số đo lượng chất trong v...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Feature: Syllabus Definition; Mass ( m ): Measure of the quantity of matter in an object at rest relative to the observer; Weight ( W ): Gravitational force acting on an object that has mass (effect of a gravitational field on a mass). Feature: SI Unit & Type; Mass ( m ): Kilogram (kg) — Scalar (magnitude only); Weight ( W ): Newton (N) — Vector (directed towards centre of gravity). Feature: Effect of Location; Mass ( m ): Constant everywhere in the universe; Weight ( W ): Varies with gravitational field strength g ( W = mg ).",
+      "vi": "Tiêu chí: Định nghĩa Syllabus; Mass — Khối lượng ( m ): Số đo lượng chất trong vật thể đứng yên so với người quan sát; Weight — Trọng lượng ( W ): Lực hấp dẫn tác dụng lên vật có khối lượng. Tiêu chí: Đơn vị SI & Bản chất; Mass — Khối lượng ( m ): Kilogram (kg) — Scalar (vô hướng); Weight — Trọng lượng ( W ): Newton (N) — Vector (hướng về tâm hấp dẫn). Tiêu chí: Phụ thuộc Vị trí; Mass — Khối lượng ( m ): Không đổi ở mọi nơi trong vũ trụ; Weight — Trọng lượng ( W ): Thay đổi theo cường độ trọng trường g ( W = mg ).",
+      "duration": 80.32,
+      "startTime": 2686.34,
+      "endTime": 2766.66,
+      "audioUrl": "/audio/lectures/science/p1/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • 0654 Paper 2 MCQ A space probe carries a solid aluminium block of mass 2.0 kg and density 2700 kg/m³ from Earth ( g = 9.8 N/kg) to the surface of Mars ( g = 3.7 N/kg). Assuming temperature changes are negligible, how do its mass , weight , and density on Mars compare with those on Earth? A. Mass: smaller | Weight: smaller | Density: unchanged B. Mass: unchanged | Weight: smaller | Density: smaller C. Mass: unchanged | Weight: smaller | Density: unchanged D. Mass: unchanged | Weight: larger | Density: unchanged ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Mass (2.0 kg) is the quantity of matter in the block, which is independent of location. Volume V is also unchanged, so density (ρ = m / V = 2700 kg/m³) remains completely unchanged! Only weight ( W = mg ) decreases from 2.0 × 9.8 = 19.6 N on Earth to 2.0 × 3.7 = 7.4 N on Mars because Mars has a weaker gravitational field strength.",
+      "vi": "BÀI MẪU 1 🟦 CORE / EXTENDED • Trắc nghiệm 0654 Paper 2 A space probe carries a solid aluminium block of mass 2.0 kg and density 2700 kg/m³ from Earth ( g = 9.8 N/kg) to the surface of Mars ( g = 3.7 N/kg). How do its mass , weight , and density on Mars compare with those on Earth? (Tàu thăm dò mang khối nhôm đặc 2.0 kg có khối lượng riêng 2700 kg/m³ từ Trái Đất (g = 9.8 N/kg) lên bề mặt Sao Hỏa (g = 3.7 N/kg). Khối lượng, trọng lượng và khối lượng riêng của khối nhôm trên Sao Hỏa thay đổi thế nào?) A. Mass: smaller | Weight: smaller | Density: unchanged B. Mass: unchanged | Weight: smaller | Density: smaller C. Mass: unchanged | Weight: smaller | Density: unchanged D. Mass: unchanged | Weight: larger | Density: unchanged ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Mass (2.0 kg) là lượng chất cấu tạo nên vật nên không đổi (unchanged) ở mọi nơi. Thể tích V của khối nhôm cũng không đổi nên density (ρ = m / V = 2700 kg/m³) hoàn toàn không đổi ! Chỉ có weight ( W = mg ) giảm từ 19.6 N trên Trái Đất xuống 7.4 N trên Sao Hỏa do cường độ trọng trường g nhỏ hơn.",
+      "duration": 182.9,
+      "startTime": 2766.66,
+      "endTime": 2949.56,
+      "audioUrl": "/audio/lectures/science/p1/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE & PRACTICAL • 0654 Paper 4 Structured [5 marks] A geologist tests an irregularly shaped quartz pebble. On an electronic balance, the dry pebble has a mass of 117 g . A measuring cylinder initially contains 42 cm³ of water. When the pebble is lowered gently on a thin thread until fully submerged, the water level reads 87 cm³ . (a) Calculate the weight of the pebble on Earth ( g = 9.8 N/kg). [2] (b) Calculate the density of the pebble in g/cm³ and in kg/m³ . [2] (c) Liquid mercury has a density of 13.6 g/cm³ . State and explain whether the quartz pebble floats or sinks in mercury. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Convert mass to kg: m = 117 ÷ 1000 = 0.117 kg [1m].Weight W = mg = 0.117 × 9.8 = 1.15 N (1.147 N) [1m]. (b) Volume of pebble V = 87 − 42 = 45 cm³ .Density ρ = m / V = 117 g ÷ 45 cm³ = 2.6 g/cm³ [1m] = 2.6 × 1000 = 2600 kg/m³ [1m]. (c) The pebble floats in mercury because its density (2.6 g/cm³) is less than the density of liquid mercury (13.6 g/cm³) [1m]. 💡 Intuition Check: Even a solid rock floats effortlessly if placed in a denser liquid like mercury! And always double-check mass units: using 117 × 9.8 without dividing by 1000 would claim a tiny pebble weighs 1147 N (as heavy as an adult motorcycle!).",
+      "vi": "BÀI MẪU 2 🟦 CORE & PRACTICAL • Tự luận 0654 Paper 4 [5 marks] A geologist tests an irregularly shaped quartz pebble. On an electronic balance, the dry pebble has a mass of 117 g . A measuring cylinder initially contains 42 cm³ of water; when the pebble is submerged on a thin thread, the reading rises to 87 cm³ . (a) Calculate the weight of the pebble on Earth ( g = 9.8 N/kg). (b) Calculate the density of the pebble in g/cm³ and in kg/m³ . (c) Liquid mercury has a density of 13.6 g/cm³ . State and explain whether the pebble floats or sinks in mercury. (Viên sỏi thạch anh khô có khối lượng 117 g. Thả ngập vào ống đong chứa 42 cm³ nước thì mực nước dâng lên 87 cm³. (a) Tính trọng lượng viên sỏi trên Trái Đất. (b) Tính khối lượng riêng theo g/cm³ và kg/m³. (c) Thủy ngân lỏng có ρ = 13.6 g/cm³; viên sỏi nổi hay chìm trong thủy ngân?) ✍️ Lời giải chi tiết theo thang điểm: (a) Đổi khối lượng sang kg: m = 117 ÷ 1000 = 0.117 kg .Trọng lượng W = mg = 0.117 × 9.8 = 1.15 N (1.147 N) . (b) Thể tích viên sỏi V = 87 − 42 = 45 cm³ .Khối lượng riêng ρ = m / V = 117 g ÷ 45 cm³ = 2.6 g/cm³ = 2.6 × 1000 = 2600 kg/m³ . (c) Viên sỏi nổi (floats) trên mặt thủy ngân vì khối lượng riêng của nó (2.6 g/cm³) nhỏ hơn khối lượng riêng của thủy ngân lỏng (13.6 g/cm³) . 💡 Kiểm tra bản chất: Ngay cả một viên đá cứng cũng nổi bồng bềnh nếu thả vào chất lỏng đặc hơn nó như thủy ngân!",
+      "duration": 283.32,
+      "startTime": 2949.56,
+      "endTime": 3232.88,
+      "audioUrl": "/audio/lectures/science/p1/s03_b09.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "⚙️ 4. Lực, Định luật Hooke, Momen, Trọng tâm & Áp suất (Forces, Moments & Pressure — P1.5 & P1.",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "⚙️ 4. Forces, Hooke's Law, Moments, Centre of Gravity & Pressure (P1.5 & P1.7).",
+      "vi": "⚙️ 4. Lực, Định luật Hooke, Momen, Trọng tâm & Áp suất.",
+      "duration": 13.85,
+      "startTime": 3232.88,
+      "endTime": 3246.73,
+      "audioUrl": "/audio/lectures/science/p1/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Four everyday actions unlock all of P1.5 & P1.7 : Stretching a gym band? Hooke's law ( F = kx ) up to the limit of proportionality. Pushing a supermarket trolley? Newton's 2nd law ( Fres= ma ) using resultant force (push minus friction). Opening a heavy door near the handle instead of the hinges? Moments ( M = F × d⊥ ) multiply turning effect. Walking across soft snow in wide snowshoes vs narrow heels? Pressure ( p = F / A ) spreads force over a large area so you don't sink!",
+      "vi": "🎯 Hình dung đời thường: Bốn thao tác đời thường mở khóa trọn bộ P1.5 & P1.7 : Kéo dãn dây lò xo tập gym? Định luật Hooke ( F = kx ) trước điểm limit of proportionality . Đẩy xe hàng siêu thị? Định luật 2 Newton ( Fres= ma ) tính theo hợp lực (lực đẩy trừ ma sát). Mở cánh cửa nặng ở tay nắm xa bản lề? Momen lực ( M = F × d⊥ ) khuếch đại tác dụng quay. Đi giày trượt tuyết bản rộng thay vì giày gót nhọn? Áp suất ( p = F / A ) dàn đều lực lên diện tích lớn để không bị lún!",
+      "duration": 81.37,
+      "startTime": 3246.73,
+      "endTime": 3328.1,
+      "audioUrl": "/audio/lectures/science/p1/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Effects of Forces (P1.5.1): Zero resultant force ⇒ rest OR constant speed in a straight line ; non-zero resultant force ⇒ a = F / m . Always use extension x = l − l0 in k = F / x . 2. Moments & CoG (P1.5.2–P1.5.3): Complete equilibrium requires no resultant force AND clockwise moment = anticlockwise moment ( F1d1= F2d2 ); lower CoG + wider base boosts stability. 3. Solid Pressure (P1.7): p = F / A in Pascals (1 Pa = 1 N/m²).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Lực & Biến dạng (P1.5.1): Hợp lực = 0 ⇒ đứng yên HOẶC chuyển động thẳng đều ; hợp lực ≠ 0 ⇒ a = F / m . Luôn tính độ dãn x = l − l0 . 2. Momen & Trọng tâm (P1.5.2–P1.5.3): Cân bằng đòi hỏi không có hợp lực VÀ clockwise moment = anticlockwise moment ( F1d1= F2d2 ); hạ thấp centre of gravity (CoG) và mở rộng chân đế giúp tăng độ vững. 3. Áp suất P1.7: p = F / A (1 Pa = 1 N/m²).",
+      "duration": 78.17,
+      "startTime": 3328.1,
+      "endTime": 3406.27,
+      "audioUrl": "/audio/lectures/science/p1/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Using total stretched length l instead of extension x = l − l0 in Hooke's law, OR measuring distance from the end of the beam instead of the perpendicular distance from the pivot in M = F × d !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Thay tổng chiều dài l thay vì độ dãn x = l − l0 vào công thức Hooke, HOẶC lấy khoảng cách tính từ mép đầu thanh thay vì khoảng cách vuông góc tới trục quay (pivot) trong công thức M = F × d !",
+      "duration": 31.41,
+      "startTime": 3406.27,
+      "endTime": 3437.68,
+      "audioUrl": "/audio/lectures/science/p1/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "P1.5.1 Biến dạng Đàn hồi, Đồ thị Lực – Độ dãn & Định luật Hooke ( k = F / x )",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "P1.5.1 Deformation, Load–Extension Graphs & Hooke's Law ( k = F / x ). Forces can change the size and shape of an object. Extension = stretched length − unstretched (original) length. Supplement: The spring constant k is defined as force per unit extension : k = F / x (or F = kx , units N/m, N/cm or N/mm). Experimental Procedure: Clamp a spring vertically next to a clamped millimetre ruler with a horizontal pointer attached to the bottom coil. Measure original length l 0at zero load, add slotted 1.0 N weights one by one, record new length l at eye level, and compute x = l − l 0. Linear Region (Origin to Red Dot): Straight line through the origin ⇒ load F is directly proportional to extension x (doubling force doubles extension). Limit of Proportionality (Supplement): The exact point where the load–extension graph stops being a straight line and begins to curve (non-linear). (Note: knowledge of the elastic limit is NOT required in 0654).",
+      "vi": "P1.5.1 Biến dạng Đàn hồi, Đồ thị Lực – Độ dãn & Định luật Hooke ( k = F / x ). Lực có thể làm thay đổi kích thước và hình dạng của vật. Độ dãn (Extension x ) = chiều dài lúc dãn − chiều dài tự nhiên ban đầu ( original length ). Supplement: Độ cứng lò xo (Spring constant k ) là lực trên một đơn vị độ dãn: k = F / x hay F = kx (đơn vị N/m, N/cm hoặc N/mm). Quy trình thí nghiệm: Treo lò xo thẳng đứng cạnh thước chia mm cố định, gắn kim chỉ ngang ở vòng xoắn dưới cùng. Đo chiều dài ban đầu l 0khi chưa treo vật, treo lần lượt từng quả nặng 1.0 N, đọc chiều dài mới l ngang tầm mắt và tính x = l − l 0. Đoạn thẳng tuyến tính (từ gốc O tới chấm đỏ): Lực F tỉ lệ thuận hoàn toàn với độ dãn x (tăng gấp đôi lực thì độ dãn tăng gấp đôi). Giới hạn tỉ lệ — Limit of Proportionality (Supplement): Điểm tại đó đồ thị ngừng thẳng và bắt đầu uốn cong (không còn tuân theo F = kx ).",
+      "duration": 144.81,
+      "startTime": 3437.68,
+      "endTime": 3582.49,
+      "audioUrl": "/audio/lectures/science/p1/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🚀 Hợp lực (Resultant Force), Ma sát & Định luật Newton ( F = ma )",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🚀 Resultant Force, Friction & Newton's Laws ( F = ma ). Collinear Forces: Add forces acting in the same direction; subtract forces acting in opposite directions to find the resultant force. Newton's 1st Law: An object remains at rest or continues moving in a straight line at constant speed unless acted on by a resultant force. Newton's 2nd Law (Supplement): A resultant force changes velocity (speed and/or direction): F = ma , where F and a act in the exact same direction. Friction & Drag: Solid friction acts between two surfaces impeding motion and producing heating . Drag opposes objects moving through liquids or gases (air resistance). Lift Worked Example: Lift + passengers weigh 5000 N downwards; cable tension pulls upwards with 4000 N . Mass m = 5000 / 9.8 = 510.2 kg. Resultant force = 5000 − 4000 = 1000 N downwards ⇒ a = F / m = 1000 / 510.2 = 1.96 m/s² downwards .",
+      "vi": "🚀 Hợp lực (Resultant Force), Ma sát & Định luật Newton ( F = ma ). Lực cùng phương (Collinear Forces): Cùng chiều thì cộng độ lớn; ngược chiều thì trừ độ lớn để tìm hợp lực (resultant force). Định luật 1 Newton: Vật giữ nguyên trạng thái đứng yên hoặc chuyển động thẳng đều nếu hợp lực bằng 0. Định luật 2 Newton (Supplement): Hợp lực làm biến đổi vận tốc (tốc độ hoặc hướng): F = ma , trong đó F và a luôn cùng phương, cùng chiều. Ma sát & Lực cản (Friction & Drag): Ma sát trượt (solid friction) cản trở hai bề mặt trượt lên nhau và tỏa nhiệt ( heating ). Lực cản (drag) cản trở vật chuyển động trong chất lỏng hoặc chất khí. Ví dụ Thang máy: Thang máy nặng 5000 N hướng xuống; lực căng cáp kéo lên 4000 N . Khối lượng m = 5000 / 9.8 = 510.2 kg. Hợp lực = 5000 − 4000 = 1000 N hướng xuống ⇒ a = 1000 / 510.2 = 1.96 m/s² hướng xuống .",
+      "duration": 146.08,
+      "startTime": 3582.49,
+      "endTime": 3728.57,
+      "audioUrl": "/audio/lectures/science/p1/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "⚖️ P1.5.2 Tác dụng làm quay của Lực (Moments)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "⚖️ P1.5.2 Turning Effect of Forces (Moments). Moment = Force × Perpendicular Distance from Pivot ( M = F × d ⊥) SI Unit: Newton metre ( N m ). Long spanners & door handles placed far from hinges maximise d ⊥. Two Conditions for Complete Equilibrium: (1) No resultant force (Σ F up= Σ F down) AND (2) No resultant moment. Principle of Moments: For an object in equilibrium, Total Clockwise Moments = Total Anticlockwise Moments about any pivot. Supplement P1.5.2 Beam Balancing Example: On a balanced uniform beam pivoted at its centre, a 24 N weight hangs 0.50 m to the left of the pivot. Where must a 30 N weight hang on the right to balance the beam?Anticlockwise moment = 24 × 0.50 = 12 N m . Set Clockwise moment = 30 × d = 12 ⇒ d = 0.40 m to the right of the pivot (upward pivot force = 24 + 30 = 54 N).",
+      "vi": "⚖️ P1.5.2 Tác dụng làm quay của Lực (Moments). Moment = Force × Perpendicular Distance from Pivot ( M = F × d ⊥) Đơn vị SI: Newton mét ( N m ). Cờ-lê cán dài hay tay nắm cửa đặt xa bản lề giúp tăng d ⊥. Hai điều kiện cân bằng hoàn toàn (Equilibrium): (1) Không có hợp lực (Σ F = 0) VÀ (2) Không có momen hợp lực. Quy tắc Momen: Tổng momen cùng chiều kim đồng hồ ( Clockwise ) = Tổng momen ngược chiều kim đồng hồ ( Anticlockwise ). Ví dụ Cân bằng Dầm (Supplement P1.5.2 — Mỗi bên 1 lực): Thanh đồng chất cân bằng quanh trục ở chính giữa; bên trái treo vật 24 N cách trục 0.50 m . Hỏi vật 30 N bên phải phải treo cách trục bao xa để thanh cân bằng?Momen ngược chiều kim đồng hồ = 24 × 0.50 = 12 N m . Cho momen cùng chiều = 30 × d = 12 ⇒ d = 0.40 m (phản lực tại trục = 24 + 30 = 54 N).",
+      "duration": 145.56,
+      "startTime": 3728.57,
+      "endTime": 3874.13,
+      "audioUrl": "/audio/lectures/science/p1/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🎯 P1.5.3 Trọng tâm (Centre of Gravity) & Độ vững vàng (Stability)",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "🎯 P1.5.3 Centre of Gravity & Stability. Centre of Gravity (CoG): The single point through which the entire weight of an object appears to act (for a uniform regularly shaped object, the CoG lies at its exact geometrical centre). Irregular Lamina Experiment: 1. Punch 3 small holes near the edge of the flat card.2. Suspend freely from a pin with a plumb line hanging in front; mark the vertical line.3. Repeat from a 2nd hole (and 3rd to check) — the intersection is the CoG! Toppling & Stability: An object topples when tilted so far that the vertical line of action of weight from its CoG falls outside its base (creating an overturning moment). Increase stability by: (1) lowering the CoG (heavy base) and (2) widening the base area (racing cars, laboratory stands).",
+      "vi": "🎯 P1.5.3 Trọng tâm & Độ vững vàng (Stability). Trọng tâm: Điểm duy nhất mà toàn bộ trọng lượng của vật coi như đặt vào đó (với vật đồng chất hình dạng đối xứng đều, CoG nằm ngay tại tâm hình học của vật). Thí nghiệm Tấm phẳng bất kỳ (Plane Lamina): 1. Đục 3 lỗ nhỏ gần mép bìa cứng.2. Treo tự do lên đinh ghim cùng dây dọi (plumb line) phía trước; kẻ đường thẳng đứng.3. Treo sang lỗ thứ 2 (lỗ 3 để kiểm tra) — giao điểm chính là CoG! Lật đổ & Độ vững vàng: Vật bị lật khi nghiêng quá mức làm giá thẳng đứng của trọng lực từ CoG rơi ra ngoài chân đế . Tăng độ ổn định bằng cách: (1) hạ thấp trọng tâm (lower CoG) và (2) mở rộng diện tích chân đế (wider base) .",
+      "duration": 106.82,
+      "startTime": 3874.13,
+      "endTime": 3980.95,
+      "audioUrl": "/audio/lectures/science/p1/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "🔨 P1.7 Áp suất (Pressure p = F / A ) & Ứng dụng Thực tế",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "🔨 P1.7 Pressure ( p = F / A ) & Everyday Contact Area. Core P1.7 Equation: Pressure = Force ÷ Area ( p = F / A ) • Unit: Pascal (1 Pa = 1 N/m²) • Small Contact Area ⇒ High Pressure: Sharp kitchen knives, sewing needles, nails, and drawing-pin points concentrate a modest force onto a tiny area so they penetrate surfaces easily.• Large Contact Area ⇒ Low Pressure: Wide snowshoes, tractor caterpillar tracks, camel feet, and broad concrete foundations spread weight over a large area to prevent sinking. Worked Example: A rectangular concrete block weighing 600 N has faces of area 0.25 m² (lying flat) and 0.05 m² (standing upright). Minimum pressure = 600 / 0.25 = 2400 Pa ; maximum pressure = 600 / 0.05 = 12,000 Pa .",
+      "vi": "🔨 P1.7 Áp suất (Pressure p = F / A ) & Ứng dụng Thực tế. Công thức Core P1.7: Pressure = Force ÷ Area ( p = F / A ) • Đơn vị: Pascal (1 Pa = 1 N/m²) • Diện tích tiếp xúc nhỏ ⇒ Áp suất lớn (High Pressure): Lưỡi dao sắc, mũi kim khâu, mũi đinh ghim dồn lực lên diện tích rất nhỏ giúp xuyên qua bề mặt dễ dàng.• Diện tích tiếp xúc lớn ⇒ Áp suất nhỏ (Low Pressure): Giày đi tuyết bản rộng ( snowshoes ), bánh xích xe ủi, móng nhà bê tông dàn trải trọng lượng lên diện tích lớn để chống lún. Ví dụ mẫu: Khối bê tông nặng 600 N có mặt đáy rộng 0.25 m² (đặt nằm) và mặt bên 0.05 m² (đặt dựng đứng). Áp suất nhỏ nhất = 600 / 0.25 = 2400 Pa ; áp suất lớn nhất = 600 / 0.05 = 12,000 Pa .",
+      "duration": 133.6,
+      "startTime": 3980.95,
+      "endTime": 4114.55,
+      "audioUrl": "/audio/lectures/science/p1/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ A vertical steel spring has an unstretched original length of 12.0 cm . When a load of 4.0 N is hung from it, the total length of the spring becomes 18.0 cm . Assuming the limit of proportionality is not exceeded, what is the total length of the spring when the load is increased to 10.0 N ? A. 27.0 cm B. 15.0 cm C. 30.0 cm D. 45.0 cm ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: First find the extension x 1 (never scale total length!): x 1= 18.0 − 12.0 = 6.0 cm for 4.0 N, giving spring constant k = 4.0 / 6.0 N/cm (1.5 cm per N). At F 2= 10.0 N, extension x 2= 10.0 × 1.5 = 15.0 cm (Option B stops here and forgets original length!). Adding unstretched length gives total length l 2= 12.0 + 15.0 = 27.0 cm . Option D (45.0 cm) falls into the classic trap of multiplying 18.0 cm × (10 / 4).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm 0654 Paper 2 A vertical steel spring has an unstretched original length of 12.0 cm . When a load of 4.0 N is hung from it, its total length becomes 18.0 cm . Assuming the limit of proportionality is not exceeded, what is the total length of the spring when the load is increased to 10.0 N ? (Một lò xo có chiều dài tự nhiên 12.0 cm. Khi treo vật 4.0 N, tổng chiều dài lò xo là 18.0 cm. Giả sử chưa vượt quá giới hạn tỉ lệ, tổng chiều dài lò xo khi treo tải 10.0 N là bao nhiêu?) A. 27.0 cm B. 15.0 cm C. 30.0 cm D. 45.0 cm ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Bước 1 bắt buộc phải tìm độ dãn (extension x 1) chứ tuyệt đối không lấy tổng chiều dài nhân chéo: x 1= 18.0 − 12.0 = 6.0 cm ứng với 4.0 N (tức mỗi 1 N dãn 1.5 cm). Khi treo F 2= 10.0 N, độ dãn mới là x 2= 10.0 × 1.5 = 15.0 cm (Đáp án B dừng ở đây nên quên cộng chiều dài gốc!). Tổng chiều dài lúc đó là l 2= 12.0 + 15.0 = 27.0 cm .",
+      "duration": 188.5,
+      "startTime": 4114.55,
+      "endTime": 4303.05,
+      "audioUrl": "/audio/lectures/science/p1/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Calculation [6 marks] In a warehouse, a worker pushes a 120 kg crate along a flat horizontal floor with a forward force of 390 N against a constant frictional force of 150 N . (a) Calculate the horizontal resultant force acting on the crate and its acceleration. [2] (b) When brought to rest, the 120 kg crate sits on the floor with a rectangular base contact area of 0.40 m² . Calculate the pressure exerted by the crate on the floor ( g = 9.8 N/kg). [2] (c) To slide a roller underneath, the worker uses a rigid iron crowbar pivoted 0.15 m from the edge of the crate (where an upward force of 1176 N is needed). Calculate the downward effort force F applied perpendicularly at the handle 0.90 m on the other side of the pivot to just lift the edge. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Resultant force F res= 390 − 150 = 240 N (forward) [1m].Acceleration a = F res/ m = 240 ÷ 120 = 2.0 m/s² [1m]. (b) Normal force = Weight of crate W = mg = 120 × 9.8 = 1176 N [1m].Pressure p = F / A = 1176 ÷ 0.40 = 2940 Pa (or N/m²) [1m]. (c) By the Principle of Moments about the pivot (Clockwise moment = Anticlockwise moment): F × 0.90 = 1176 × 0.15 = 176.4 N m [1m] ⇒ F = 176.4 ÷ 0.90 = 196 N [1m]. 💡 Intuition Check: Notice the lever advantage in part (c): because the handle is 6× further from the pivot than the crate (0.90 m ÷ 0.15 m = 6), the worker needs only 1/6 of the crate's weight (1176 ÷ 6 = 196 N) to lift it!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Tính toán 0654 Paper 4 [6 marks] In a warehouse, a worker pushes a 120 kg crate along a flat horizontal floor with a forward force of 390 N against a constant frictional force of 150 N . (a) Calculate the horizontal resultant force acting on the crate and its acceleration. (b) When at rest, the 120 kg crate sits on the floor with a base contact area of 0.40 m² . Calculate the pressure exerted by the crate on the floor ( g = 9.8 N/kg). (c) The worker uses a rigid crowbar pivoted 0.15 m from the crate edge. Calculate the downward effort force F applied perpendicularly at the handle 0.90 m on the other side of the pivot to just balance the moment. (Công nhân đẩy kiện hàng 120 kg trên sàn ngang với lực đẩy 390 N thắng lực ma sát 150 N. (a) Tính hợp lực ngang và gia tốc. (b) Khi đứng yên trên diện tích đáy 0.40 m², tính áp suất kiện hàng lên sàn. (c) Dùng xà beng có điểm tựa cách mép thùng 0.15 m (cần lực nâng 1176 N); tính lực ấn F vuông góc ở tay cầm cách điểm tựa 0.90 m phía bên kia.) ✍️ Lời giải chi tiết theo thang điểm: (a) Hợp lực ngang ( resultant force ) F res= 390 − 150 = 240 N (về phía trước) .Gia tốc a = F res/ m = 240 ÷ 120 = 2.0 m/s² . (b) Áp lực lên sàn bằng trọng lượng kiện hàng: W = mg = 120 × 9.8 = 1176 N .Áp suất p = F / A = 1176 ÷ 0.40 = 2940 Pa (N/m²) .",
+      "duration": 287.1,
+      "startTime": 4303.05,
+      "endTime": 4590.15,
+      "audioUrl": "/audio/lectures/science/p1/s04_b10.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🔋 5. Kho Dự trữ Năng lượng, Con đường Truyền tải & Giản đồ Dòng (P1.6.1)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🔋 5. Energy Stores, Transfer Pathways & Flow Diagrams (P1.6.1).",
+      "vi": "🔋 5. Kho Dự trữ Năng lượng, Con đường Truyền tải & Giản đồ Dòng (P1.6.1).",
+      "duration": 10.62,
+      "startTime": 4590.15,
+      "endTime": 4600.77,
+      "audioUrl": "/audio/lectures/science/p1/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture the 7 Energy Stores as bank accounts ( chemical, kinetic, gravitational potential, elastic, internal/thermal, nuclear, electrostatic ) and the 4 Transfer Pathways as the payment methods moving money between accounts ( mechanical work, electrical work, heating, waves ). Total money is strictly conserved, even though friction and resistance charge a “heat tax” that ends up dissipated in the internal (thermal) store of the surroundings!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng 7 Kho Năng lượng (Energy Stores) như 7 tài khoản ngân hàng, còn 4 Con đường Truyền (Transfer Pathways) là phương thức chuyển khoản giữa các tài khoản đó. Tổng số tiền luôn bảo toàn tuyệt đối, dù mọi giao dịch thực tế đều mất một khoản “phí nhiệt” phát tán ( dissipated ) ra internal (thermal) store của môi trường!",
+      "duration": 54.11,
+      "startTime": 4600.77,
+      "endTime": 4654.88,
+      "audioUrl": "/audio/lectures/science/p1/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Store → Pathway → Store (P1.6.1): Always name stores at the start and end of an event, and pathways on the connecting arrows. On any energy flow / Sankey diagram , total input arrow width must equal useful output width plus all wasted branch widths.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Store → Pathway → Store (P1.6.1): Luôn gọi tên stores ở trạng thái đầu/cuối và gọi tên pathways trên mũi tên chuyển tiếp. Trên giản đồ dòng năng lượng / Sankey diagram , tổng bề rộng mũi tên đầu vào luôn bằng bề rộng nhánh có ích cộng tất cả các nhánh hao phí.",
+      "duration": 37.91,
+      "startTime": 4654.88,
+      "endTime": 4692.79,
+      "audioUrl": "/audio/lectures/science/p1/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing “electrical store” , “light store” , or “sound store” ! Electricity, electromagnetic waves (light/IR), mechanical work, and sound are transfer pathways , NOT stores — a battery holds a chemical store , and sound eventually warms the internal (thermal) store of air.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết nhầm “electrical store” hay “sound/light store” ! Dòng điện, ánh sáng, sóng âm và công cơ học là con đường truyền (pathways) chứ KHÔNG PHẢI kho dự trữ — pin lưu trữ chemical store , còn âm thanh cuối cùng làm nóng internal (thermal) store của không khí.",
+      "duration": 43.18,
+      "startTime": 4692.79,
+      "endTime": 4735.97,
+      "audioUrl": "/audio/lectures/science/p1/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "Nguyên lý Bảo toàn Năng lượng (Principle of Conservation of Energy)",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "Principle of Conservation of Energy. Energy cannot be created or destroyed ; it can only be transferred from one store to another. In any closed system, total energy input strictly equals useful energy output plus wasted energy dissipated (usually into the internal/thermal store of the surroundings).",
+      "vi": "Nguyên lý Bảo toàn Năng lượng. Năng lượng không tự sinh ra cũng không tự mất đi ; nó chỉ truyền từ kho dự trữ ( store ) này sang kho khác. Tổng năng lượng đầu vào luôn bằng năng lượng có ích cộng năng lượng hao phí phát tán ( dissipated ) ra kho nội năng/nhiệt năng của môi trường.",
+      "duration": 37.74,
+      "startTime": 4735.97,
+      "endTime": 4773.71,
+      "audioUrl": "/audio/lectures/science/p1/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "📦 7 Kho Năng lượng Chuẩn 0654 (Energy Stores)",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "📦 Official 0654 Energy Stores (7). Kinetic: Stored in moving objects ( E k= ½ mv ²). Gravitational potential: Objects raised in a gravitational field (Δ E p= mg Δ h ). Chemical: Stored in food, fossil fuels, biofuels, and batteries. Elastic (strain): Stored in stretched, squashed, or twisted elastic solids. Nuclear: Stored in atomic nuclei (released via fission or fusion). Electrostatic: Stored between interacting electric charges. Internal (thermal): Total kinetic and potential energy of particles in an object.",
+      "vi": "📦 7 Kho Năng lượng Chuẩn 0654 (Energy Stores). Kinetic (Động năng): Vật đang chuyển động ( E k= ½ mv ²). Gravitational potential (Thế năng trọng trường): Vật ở độ cao trong trọng trường (Δ E p= mg Δ h ). Chemical (Hóa năng): Thức ăn, nhiên liệu hóa thạch, sinh khối, pin/ắc-quy. Elastic / Strain (Thế năng đàn hồi): Lò xo/dây cao su bị kéo dãn hoặc nén. Nuclear (Năng lượng hạt nhân): Dự trữ trong hạt nhân nguyên tử (phân hạch/nhiệt hạch). Electrostatic (Tĩnh điện): Tương tác giữa các điện tích. Internal / Thermal (Nội năng / Nhiệt năng): Tổng động năng và thế năng vi mô của các hạt.",
+      "duration": 94.73,
+      "startTime": 4773.71,
+      "endTime": 4868.44,
+      "audioUrl": "/audio/lectures/science/p1/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "🛤️ 4 Con đường Truyền Năng lượng (Transfer Pathways)",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "🛤️ Energy Transfer Pathways (4). Mechanical work done (by forces): Force moving an object through a distance ( W = Fd ). Electrical work done (by currents): Charge flowing due to a potential difference ( E = IVt ). Heating: Conduction or convection driven by a temperature difference. Waves (Radiation & Sound): Electromagnetic waves (light, IR) or mechanical sound/water waves. Multi-Stage Example (Hydroelectric Dam): Gravitational potential store (water) → mechanical work → Kinetic store (water & turbine) → electrical work (generator) + dissipated thermal store of surroundings.",
+      "vi": "🛤️ 4 Con đường Truyền Năng lượng (Transfer Pathways). Mechanical work done (Công cơ học): Do lực tác dụng làm vật dịch chuyển ( W = Fd ). Electrical work done (Công dòng điện): Do dòng điện chạy qua hiệu điện thế ( E = IVt ). Heating (Truyền nhiệt): Dẫn nhiệt hoặc đối lưu do chênh lệch nhiệt độ. Waves (Sóng điện từ & Sóng âm): Bức xạ ánh sáng, hồng ngoại hoặc sóng âm. Chuỗi biến đổi (Đập thủy điện): Kho gravitational potential của nước → mechanical work → kho kinetic (nước & tuabin) → electrical work (máy phát) + nhiệt hao phí ra môi trường.",
+      "duration": 84.91,
+      "startTime": 4868.44,
+      "endTime": 4953.35,
+      "audioUrl": "/audio/lectures/science/p1/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "📊 Giản đồ Dòng Năng lượng (Flow / Sankey Diagrams)",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "Supplement P1.6.1 📊 Interpreting Energy Flow Diagrams (Sankey Style). In a Sankey diagram , the width (thickness) of each arrow is drawn strictly to scale to represent the amount of energy (J) or power (W). Useful output continues straight horizontally; wasted energy branches off downwards or upwards.• Rule: Input width = sum of all output widths ( 100 J = 75 J + 25 J ⇒ Efficiency = 75%).",
+      "vi": "Supplement P1.6.1 📊 Giản đồ Dòng Năng lượng. Trong giản đồ Sankey , bề rộng (width) của mỗi mũi tên tỉ lệ thuận chính xác với lượng năng lượng (J) hoặc công suất (W). Nhánh đi thẳng nằm ngang là năng lượng có ích ( useful output ); nhánh rẽ xuống dưới là năng lượng hao phí ( wasted output ).• Quy tắc: Bề rộng đầu vào = tổng bề rộng các nhánh đầu ra ( 100 J = 75 J + 25 J ⇒ Hiệu suất = 75%).",
+      "duration": 66.14,
+      "startTime": 4953.35,
+      "endTime": 5019.49,
+      "audioUrl": "/audio/lectures/science/p1/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 2 MCQ A battery-powered quadcopter drone accelerates vertically upwards from the ground. Which row correctly identifies the initial energy store in the battery, the pathway to the motors, and the two useful energy stores that increase as the drone climbs faster? A. Electrostatic store → heating → kinetic + elastic stores B. Chemical store → electrical work → gravitational potential + kinetic stores C. Electrical store → mechanical work → gravitational potential + sound stores D. Chemical store → waves → internal (thermal) + kinetic stores ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: A battery stores energy in its chemical store (never “electrical store”, which eliminates C). Electric current transfers energy to the rotor motors via electrical work done . Because the drone gains both height AND speed, energy is usefully stored in both its gravitational potential store and its kinetic store (while thermal and sound transfers are wasted).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm 0654 Paper 2 A battery-powered quadcopter drone accelerates vertically upwards from the ground. Which row correctly identifies the initial energy store in the battery, the pathway to the motors, and the two useful energy stores that increase as the drone climbs faster? (Flycam chạy pin tăng tốc bay thẳng đứng lên cao. Dòng nào nêu đúng kho năng lượng ban đầu trong pin, con đường truyền tới mô-tơ và hai kho năng lượng có ích đang tăng lên?) A. Electrostatic store → heating → kinetic + elastic stores B. Chemical store → electrical work → gravitational potential + kinetic stores C. Electrical store → mechanical work → gravitational potential + sound stores D. Chemical store → waves → internal (thermal) + kinetic stores ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Pin dự trữ năng lượng dưới dạng chemical store (loại C vì không tồn tại “electrical store” hay “sound store”). Dòng điện truyền năng lượng tới mô-tơ qua electrical work done . Vì flycam vừa lên cao hơn vừa bay nhanh hơn nên hai kho có ích cùng tăng là gravitational potential store và kinetic store .",
+      "duration": 147.82,
+      "startTime": 5019.49,
+      "endTime": 5167.31,
+      "audioUrl": "/audio/lectures/science/p1/s05_b08.mp3"
+    },
+    {
+      "id": "s05_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s05_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Energy Flow Diagram [4 marks] An energy flow (Sankey) diagram drawn on grid paper represents an electric water pump. Each 1 small grid square of arrow width represents 40 J of energy. The input arrow is 15 squares wide. Two wasted branches split off: 4 squares to heating of the motor coils and 2 squares to sound waves; the remaining horizontal arrow represents useful gravitational potential energy gained by the water. (a) State the principle of conservation of energy. [1] (b) Calculate the total electrical energy input and the useful gravitational potential energy gained by the water. [2] (c) State the final energy store into which the wasted sound waves eventually dissipate. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Energy cannot be created or destroyed; it can only be transferred from one store to another, so total energy in a closed system remains constant [1m]. (b) Total input energy = 15 squares × 40 J = 600 J [1m].Useful output width = 15 − (4 + 2) = 9 squares ⇒ Useful GPE = 9 × 40 J = 360 J (or 600 − 240 = 360 J) [1m]. (c) The internal (thermal) store of the surrounding air and walls [1m]. 💡 Intuition Check: Check the widths: 9 useful squares + 4 thermal squares + 2 sound squares = 15 input squares (360 J + 160 J + 80 J = 600 J, giving 60% efficiency). Conservation of energy is guaranteed visually by arrow thickness!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Giản đồ Năng lượng 0654 Paper 4 [4 marks] An energy flow (Sankey) diagram on grid paper represents an electric water pump. Each 1 small grid square of arrow width represents 40 J . The input arrow is 15 squares wide. Two wasted branches split off: 4 squares to heating of the motor and 2 squares to sound waves; the remaining horizontal arrow represents useful GPE gained by the water. (a) State the principle of conservation of energy. (b) Calculate the total electrical energy input and the useful gravitational potential energy gained by the water. (c) State the final energy store into which the wasted sound waves eventually dissipate. (Giản đồ năng lượng của máy bơm điện có tỉ lệ 1 ô lưới = 40 J. Đầu vào rộng 15 ô; hai nhánh hao phí gồm 4 ô nhiệt và 2 ô sóng âm; nhánh ngang còn lại là GPE có ích của nước. (a) Phát biểu định luật bảo toàn năng lượng. (b) Tính điện năng đầu vào và GPE có ích. (c) Sóng âm hao phí cuối cùng phát tán vào kho năng lượng nào?) ✍️ Lời giải chi tiết theo thang điểm: (a) Năng lượng không tự sinh ra hoặc mất đi mà chỉ truyền từ kho này sang kho khác; tổng năng lượng trong hệ kín luôn không đổi . (b) Tổng điện năng đầu vào = 15 ô × 40 J = 600 J .Bề rộng nhánh có ích = 15 − (4 + 2) = 9 ô ⇒ GPE có ích = 9 × 40 J = 360 J (hoặc 600 − 240 = 360 J) . (c) Kho nội năng / nhiệt năng của không khí và môi trường xung quanh .",
+      "duration": 230.54,
+      "startTime": 5167.31,
+      "endTime": 5397.85,
+      "audioUrl": "/audio/lectures/science/p1/s05_b09.mp3"
+    },
+    {
+      "id": "s06_hdr",
+      "title": "🎢 6. Tính toán Động năng & Thế năng Trọng trường (KE & GPE — P1.6.1 & P1.6.2)",
+      "selector": "[data-lecture-section=\"s06_hdr\"]",
+      "en": "🎢 6. Kinetic & Gravitational Potential Energy Calculations (P1.6.1 & P1.6.2).",
+      "vi": "🎢 6. Tính toán Động năng & Thế năng Trọng trường (KE & GPE — P1.6.1 & P1.6.2).",
+      "duration": 18.6,
+      "startTime": 5397.85,
+      "endTime": 5416.45,
+      "audioUrl": "/audio/lectures/science/p1/s06_hdr.mp3"
+    },
+    {
+      "id": "s06_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s06_b01\"]",
+      "en": "🎯 Real-Life Analogy: Swinging a pendulum or dropping a stone is like pouring water back and forth between two jugs: the Height Jug (Δ E p= mgΔh ) and the Speed Jug ( E k= ½ mv ²) . At the top peak, the Speed Jug is empty ( v = 0); at the bottom, every joule of lost GPE has poured into KE (minus any drops splashed out as friction heat)!",
+      "vi": "🎯 Hình dung đời thường: Quả lắc đung đưa hay viên đá rơi tự do giống hệt việc rót nước qua lại giữa hai chiếc bình: Bình Độ Cao (Δ E p= mgΔh ) và Bình Tốc Độ ( E k= ½ mv ²) . Ở đỉnh cao nhất, Bình Tốc Độ cạn sạch ( v = 0); khi chạm đáy, toàn bộ GPE mất đi đã trút sang KE (trừ phần văng ra ngoài thành nhiệt do ma sát)!",
+      "duration": 52.85,
+      "startTime": 5416.45,
+      "endTime": 5469.3,
+      "audioUrl": "/audio/lectures/science/p1/s06_b01.mp3"
+    },
+    {
+      "id": "s06_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s06_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Ideal Drop Shortcut (P1.6.2): Setting ½ mv ² = mgΔh cancels mass m on both sides to give v = √(2 gΔh ) . When drag/friction is present, use the full conservation budget: GPE lost = KE gained + Work done against friction (thermal dissipated) .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Công thức Chuyển hóa Nhanh (P1.6.2): Khi bỏ qua lực cản, đặt ½ mv ² = mgΔh sẽ triệt tiêu m hai vế, cho ngay v = √(2 gΔh ) . Khi có ma sát/lực cản không khí: Độ giảm GPE = Độ tăng KE + Công thắng ma sát (nhiệt hao phí) .",
+      "duration": 45.0,
+      "startTime": 5469.3,
+      "endTime": 5514.3,
+      "audioUrl": "/audio/lectures/science/p1/s06_b02.mp3"
+    },
+    {
+      "id": "s06_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s06_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Squaring (½mv) ² instead of squaring ONLY speed v in E k= ½ m ( v ²), forgetting to take the square root (√) at the end when solving for v , OR substituting ramp length instead of vertical height Δ h !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bình phương cả cụm (½mv) ² thay vì chỉ bình phương tốc độ v trong E k= ½ m ( v ²), quên bấm căn bậc hai (√) ở bước cuối khi tìm v , HOẶC thay chiều dài dốc nghiêng thay vì độ cao thẳng đứng Δ h !",
+      "duration": 38.43,
+      "startTime": 5514.3,
+      "endTime": 5552.73,
+      "audioUrl": "/audio/lectures/science/p1/s06_b03.mp3"
+    },
+    {
+      "id": "s06_b04",
+      "title": "🎢 Interactive Pendulum (Bảo toàn Cơ năng trên Con lắc Đơn)",
+      "selector": "[data-lecture-section=\"s06_b04\"]",
+      "en": "🎢 Interactive Pendulum (Mechanical Energy Conservation). Hover over positions A, B, and C on the pendulum to examine the continuous interconversion of GPE and KE. Hover over positions A, B, or C 👆. Discover how energy exchanges between Gravitational Potential Energy and Kinetic Energy while total energy remains conserved.",
+      "vi": "🎢 Interactive Pendulum (Bảo toàn Cơ năng trên Con lắc Đơn). Xem sự trao đổi giữa Thế năng trọng trường ( GPE ) và Động năng ( KE ) khi cơ năng được bảo toàn.",
+      "duration": 35.14,
+      "startTime": 5552.73,
+      "endTime": 5587.87,
+      "audioUrl": "/audio/lectures/science/p1/s06_b04.mp3"
+    },
+    {
+      "id": "s06_b05",
+      "title": "Supplement: Thế năng Trọng trường (GPE)",
+      "selector": "[data-lecture-section=\"s06_b05\"]",
+      "en": "Supplement: Gravitational Potential Energy. Δ E p= m × g × Δ h m : Mass (kg) • g : 9.8 N/kg • Δ h : Vertical height change (m). Depends ONLY on vertical height change, never on slope length!",
+      "vi": "Supplement: Thế năng Trọng trường (GPE). Δ E p= m × g × Δ h m : Khối lượng (kg) • g : 9.8 N/kg • Δ h : Độ biến thiên chiều cao thẳng đứng (m). Chỉ phụ thuộc vào độ cao thẳng đứng, KHÔNG phụ thuộc chiều dài mặt phẳng nghiêng!",
+      "duration": 46.49,
+      "startTime": 5587.87,
+      "endTime": 5634.36,
+      "audioUrl": "/audio/lectures/science/p1/s06_b05.mp3"
+    },
+    {
+      "id": "s06_b06",
+      "title": "Supplement: Động năng (Kinetic Energy)",
+      "selector": "[data-lecture-section=\"s06_b06\"]",
+      "en": "Supplement: Kinetic Energy. E k= ½ × m × v ² m : Mass (kg) • v : Speed (m/s). Rearranged: v = √(2 E k/ m ). Exam Trap: Only v is squared! Doubling speed quadruples (×4) kinetic energy and braking distance.",
+      "vi": "Supplement: Động năng (Kinetic Energy). E k= ½ × m × v ² m : Khối lượng (kg) • v : Tốc độ (m/s). Rút gọn: v = √(2 E k/ m ). Bẫy đề thi: Chỉ bình phương v ! Tăng gấp đôi tốc độ làm động năng và quãng đường phanh tăng gấp 4 lần (×4).",
+      "duration": 49.86,
+      "startTime": 5634.36,
+      "endTime": 5684.22,
+      "audioUrl": "/audio/lectures/science/p1/s06_b06.mp3"
+    },
+    {
+      "id": "s06_b07",
+      "title": "Ví dụ Tàu lượn Siêu tốc có Ma sát: Toa tàu 400 kg thả từ đỉnh dốc cao 15 m ( u =...",
+      "selector": "[data-lecture-section=\"s06_b07\"]",
+      "en": "Worked Example (Multi-Stage Rollercoaster with Friction): A 400 kg carriage starts from rest at the top of a 15 m track and reaches the bottom at 14 m/s . Calculate (a) GPE lost, (b) KE gained, and (c) thermal energy dissipated against friction ( g = 9.8 N/kg):• (a) Δ E p= mg Δ h = 400 × 9.8 × 15 = 58,800 J . • (b) E k= ½ mv ² = 0.5 × 400 × 14² = 39,200 J . • (c) Work done against friction = 58,800 − 39,200 = 19,600 J .",
+      "vi": "Ví dụ Tàu lượn Siêu tốc có Ma sát: Toa tàu 400 kg thả từ đỉnh dốc cao 15 m ( u = 0), xuống chân dốc đạt 14 m/s . Tính (a) GPE giảm, (b) KE tăng và (c) nhiệt năng tỏa ra do ma sát ( g = 9.8 N/kg):• (a) Δ E p= 400 × 9.8 × 15 = 58,800 J . • (b) E k= 0.5 × 400 × 14² = 39,200 J . • (c) Công thắng ma sát = 58,800 − 39,200 = 19,600 J .",
+      "duration": 97.45,
+      "startTime": 5684.22,
+      "endTime": 5781.67,
+      "audioUrl": "/audio/lectures/science/p1/s06_b07.mp3"
+    },
+    {
+      "id": "s06_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s06_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • 0654 Paper 2 MCQ Car X has mass m , travels at speed v , and has kinetic energy E . Car Y has mass 2 m and travels at speed 2 v . What is the kinetic energy of Car Y in terms of E ? A. 2E B. 4E C. 6E D. 8E ✅ Correct Answer: D 🧠 Step-by-Step Reasoning: Substitute 2 m and 2 v carefully into E k= ½ mv ²: E Y= ½(2 m )(2 v )² = ½ × 2 m × 4 v ² = 8 × (½ mv ²) = 8 E . Doubling mass contributes a factor of ×2, while doubling speed contributes a factor of 2² = ×4; together 2 × 4 = 8!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm 0654 Paper 2 Car X has mass m , travels at speed v , and has kinetic energy E . Car Y has mass 2 m and travels at speed 2 v . What is the kinetic energy of Car Y in terms of E ? (Xe X có khối lượng m, chạy với tốc độ v, có động năng E. Xe Y có khối lượng 2m và chạy với tốc độ 2v . Động năng của xe Y theo E là bao nhiêu?) A. 2E B. 4E C. 6E D. 8E ✅ Đáp án đúng: D 🧠 Giải thích & Cách loại bẫy: Thay cẩn thận 2 m và (2 v )² vào E k= ½ mv ²: E Y= ½(2 m )(2 v )² = ½ × 2 m × 4 v ² = 8 × (½ mv ²) = 8 E . Khối lượng gấp đôi làm tăng ×2, tốc độ gấp đôi làm tăng 2² = ×4; gộp lại là 2 × 4 = 8 lần !",
+      "duration": 119.35,
+      "startTime": 5781.67,
+      "endTime": 5901.02,
+      "audioUrl": "/audio/lectures/science/p1/s06_b08.mp3"
+    },
+    {
+      "id": "s06_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s06_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Calculation [5 marks] A volleyball of mass 0.50 kg is dropped from rest from a spectator balcony 7.2 m vertically above a sports hall floor ( g = 9.8 N/kg). (a) Calculate the loss in gravitational potential energy of the ball as it falls to the floor. [2] (b) Assuming air resistance is negligible, calculate the speed of the ball just before it hits the floor. [2] (c) After bouncing on the floor, the ball rises to a maximum vertical height of only 4.5 m . Explain why it does not return to 7.2 m. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Δ E p= mgΔh = 0.50 × 9.8 × 7.2 [1m] = 35.28 J ≈ 35.3 J [1m]. (b) Gain in KE = Loss in GPE ⇒ ½ mv ² = 35.28 ⇒ 0.5 × 0.50 × v ² = 35.28 [1m]. v ² = 35.28 ÷ 0.25 = 141.12 ⇒ v = √141.12 = 11.9 m/s (11.88 m/s) [1m]. (c) During deformation on impact with the floor, some mechanical energy (13.2 J) is transferred to the internal (thermal) store of the ball, floor and air, and carried away by sound waves [1m]. 💡 Intuition Check: Notice v = √(2 gΔh ) = √(2 × 9.8 × 7.2) = √141.12 = 11.9 m/s gives the exact same answer in one step! Had you forgotten the square root and written 141 m/s (~500 km/h!), a quick reality check immediately catches the slip.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Tính toán 0654 Paper 4 [5 marks] A volleyball of mass 0.50 kg is dropped from rest from a balcony 7.2 m vertically above a sports hall floor ( g = 9.8 N/kg). (a) Calculate the loss in gravitational potential energy of the ball as it falls to the floor. (b) Assuming air resistance is negligible, calculate the speed of the ball just before it hits the floor. (c) After bouncing, the ball rises to a maximum vertical height of only 4.5 m . Explain why it does not return to 7.2 m. (Quả bóng chuyền 0.50 kg được thả rơi tự do từ ban công cao 7.2 m xuống sàn nhà thi đấu (g = 9.8 N/kg). (a) Tính độ giảm thế năng trọng trường. (b) Bỏ qua sức cản không khí, tính tốc độ bóng ngay trước khi chạm sàn. (c) Sau khi nảy lên, bóng chỉ đạt độ cao 4.5 m; giải thích tại sao.) ✍️ Lời giải chi tiết theo thang điểm: (a) Độ giảm GPE: Δ E p= mgΔh = 0.50 × 9.8 × 7.2 = 35.28 J ≈ 35.3 J . (b) Bảo toàn cơ năng (Độ tăng KE = Độ giảm GPE): ½ mv ² = 35.28 ⇒ 0.5 × 0.50 × v ² = 35.28 . v ² = 35.28 ÷ 0.25 = 141.12 ⇒ v = √141.12 = 11.9 m/s (11.88 m/s) . (c) Khi bóng biến dạng va chạm với sàn, một phần cơ năng (13.2 J) đã chuyển hóa sang internal (thermal) store của bóng, mặt sàn và không khí, đồng thời truyền đi qua sóng âm (sound waves) . 💡 Kiểm tra bản chất: Dùng công thức rút gọn v = √(2 gΔh ) = √(2 × 9.8 × 7.2) = √141.12 = 11.9 m/s cũng cho đáp số khớp tuyệt đối! Nếu quên khai căn mà ghi 141 m/s (~500 km/h!), hãy kiểm tra thực tế để phát hiện ngay.",
+      "duration": 288.29,
+      "startTime": 5901.02,
+      "endTime": 6189.31,
+      "audioUrl": "/audio/lectures/science/p1/s06_b09.mp3"
+    },
+    {
+      "id": "s07_hdr",
+      "title": "🧮 7. Công Cơ học, Công suất & Hiệu suất (Work, Power & Efficiency — P1.6.2–P1.6.4)",
+      "selector": "[data-lecture-section=\"s07_hdr\"]",
+      "en": "🧮 7. Work Done, Power & Efficiency (P1.6.2 – P1.6.4).",
+      "vi": "🧮 7. Công Cơ học, Công suất & Hiệu suất.",
+      "duration": 7.52,
+      "startTime": 6189.31,
+      "endTime": 6196.83,
+      "audioUrl": "/audio/lectures/science/p1/s07_hdr.mp3"
+    },
+    {
+      "id": "s07_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s07_b01\"]",
+      "en": "🎯 Real-Life Analogy: Hauling 10 heavy boxes up to a 3rd-floor flat takes the exact same Work Done ( W = Fd , Joules) whether you take 2 minutes or 2 hours. Power ( P = W / t , Watts) measures how fast your engine delivers those joules (1 W = 1 J every second), and Efficiency (%) measures what percentage of the fuel or electricity you paid for did the actual lifting instead of warming up the motor!",
+      "vi": "🎯 Hình dung đời thường: Bê 10 thùng sách nặng lên tầng 3 tốn đúng bấy nhiêu Công cơ học (Work Done W = Fd , Joule) dù bạn đi thong thả mất 15 phút hay chạy vội trong 1 phút. Công suất (Power P = W / t , Watt) đo tốc độ sinh công nhanh hay chậm (1 W = 1 J mỗi giây), còn Hiệu suất (Efficiency %) đo tỉ lệ phần trăm điện/xăng bạn trả tiền thực sự biến thành công có ích thay vì tỏa nhiệt vô ích!",
+      "duration": 60.24,
+      "startTime": 6196.83,
+      "endTime": 6257.07,
+      "audioUrl": "/audio/lectures/science/p1/s07_b01.mp3"
+    },
+    {
+      "id": "s07_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s07_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Three Unit & Direction Checks (P1.6.2–P1.6.4): (1) In W = Fd , d must be measured in the direction of force F . (2) Convert kW → W (×1000) and minutes → seconds (×60) before using P = W / t . (3) Efficiency = (Useful / Total) × 100% works identically for Joules or Watts and is always < 100% .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Ba Chốt Kiểm tra Đơn vị & Phương (P1.6.2–P1.6.4): (1) Trong W = Fd , quãng đường d bắt buộc tính cùng phương với lực F . (2) Đổi kW → W (×1000) và phút → giây (×60) trước khi chia P = W / t . (3) Efficiency = (Useful / Total) × 100% áp dụng như nhau cho năng lượng (J) và công suất (W), luôn nhỏ hơn 100% .",
+      "duration": 62.14,
+      "startTime": 6257.07,
+      "endTime": 6319.21,
+      "audioUrl": "/audio/lectures/science/p1/s07_b02.mp3"
+    },
+    {
+      "id": "s07_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s07_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Getting an efficiency above 100% by dividing Total ÷ Useful, OR thinking a weightlifter does mechanical work while holding a heavy barbell stationary overhead ( d = 0 ⇒ W = 0 J , even though their muscles feel tired!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tính ra hiệu suất lớn hơn 100% do lật ngược phân số (lấy Total chia Useful), HOẶC tưởng rằng vận động viên giữ tạ nặng đứng yên trên cao có sinh công cơ học (vì d = 0 nên W = 0 J dù cơ bắp rất mỏi!).",
+      "duration": 36.07,
+      "startTime": 6319.21,
+      "endTime": 6355.28,
+      "audioUrl": "/audio/lectures/science/p1/s07_b03.mp3"
+    },
+    {
+      "id": "s07_b04",
+      "title": "📐 Formula Triangles Hub: Công, Công suất & Hiệu suất",
+      "selector": "[data-lecture-section=\"s07_b04\"]",
+      "en": "📐 Formula Triangles Hub: Work, Power & Efficiency. Work Done. Power. Efficiency %. ⚡ Useful / Total Hover over formula cards 👆. Inspect equations, units, and core definitions for Work, Power, and Supplement Efficiency.",
+      "vi": "📐 Formula Triangles Hub: Công, Công suất & Hiệu suất. Work Done. Power. Efficiency %. ⚡ Useful / Total Tra cứu nhanh công thức, đơn vị chuẩn SI cho Công ( Work ), Công suất ( Power ) và Hiệu suất ( Efficiency ).",
+      "duration": 36.36,
+      "startTime": 6355.28,
+      "endTime": 6391.64,
+      "audioUrl": "/audio/lectures/science/p1/s07_b04.mp3"
+    },
+    {
+      "id": "s07_b05",
+      "title": "🚨 BẪY ĐỀ THI: Đi bộ vs Chạy lên Cầu thang",
+      "selector": "[data-lecture-section=\"s07_b05\"]",
+      "en": "🚨 CAMBRIDGE EXAM PITFALL: Walking vs Running Up Stairs. A 50 kg student walks up stairs in 10 s , then runs up the exact same stairs in 4 s :• Work Done: IDENTICAL in both cases ( W = mg Δ h ; weight and vertical height are unchanged).• Useful Power Output: 2.5× GREATER when running ( P = W / t ; smaller time t gives greater power!).",
+      "vi": "🚨 BẪY ĐỀ THI: Đi bộ vs Chạy lên Cầu thang. Học sinh 50 kg đi bộ lên cầu thang hết 10 s , sau đó chạy lên đúng cầu thang đó hết 4 s :• Công thực hiện (Work Done): BẰNG NHAU ( W = mg Δ h không đổi).• Công suất có ích (Power): Chạy có công suất LỚN GẤP 2.5 LẦN vì thời gian t nhỏ hơn!",
+      "duration": 53.5,
+      "startTime": 6391.64,
+      "endTime": 6445.14,
+      "audioUrl": "/audio/lectures/science/p1/s07_b05.mp3"
+    },
+    {
+      "id": "s07_b06",
+      "title": "🏗️ Ví dụ Cần cẩu Điện: Công suất & Hiệu suất",
+      "selector": "[data-lecture-section=\"s07_b06\"]",
+      "en": "🏗️ Worked Example: Electric Crane Power & Efficiency. An electric crane with motor input power 2.0 kW (2000 W) lifts a 1000 N load vertically through 12 m in 10 s :• Useful work done = Fd = 1000 × 12 = 12,000 J .• Useful power output = 12,000 / 10 = 1200 W .• Efficiency = (1200 / 2000) × 100% = 60% (800 W wasted as heat/sound).",
+      "vi": "🏗️ Ví dụ Cần cẩu Điện: Công suất & Hiệu suất. Động cơ cẩu có công suất điện đầu vào 2.0 kW (2000 W) nâng vật nặng 1000 N lên cao 12 m trong 10 s :• Công có ích = 1000 × 12 = 12,000 J ⇒ Công suất có ích = 12,000 / 10 = 1200 W .• Hiệu suất = (1200 / 2000) × 100% = 60% (hao phí 800 W thành nhiệt và âm thanh).",
+      "duration": 68.27,
+      "startTime": 6445.14,
+      "endTime": 6513.41,
+      "audioUrl": "/audio/lectures/science/p1/s07_b06.mp3"
+    },
+    {
+      "id": "s07_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s07_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • 0654 Paper 2 MCQ An athlete lifts a 600 N barbell vertically upwards through 1.5 m in 2.0 s , and then holds it completely stationary overhead for 4.0 s . What is the useful power developed during the 2.0 s lift, and how much mechanical work is done on the barbell during the 4.0 s stationary hold? A. Power during lift = 450 W | Work during hold = 0 J B. Power during lift = 450 W | Work during hold = 900 J C. Power during lift = 150 W | Work during hold = 0 J D. Power during lift = 900 W | Work during hold = 2400 J ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: During the 2.0 s lift, work done W = Fd = 600 × 1.5 = 900 J , so power P = W / t = 900 / 2.0 = 450 W (Option C wrongly divides by total time 2.0 + 4.0 = 6.0 s). During the 4.0 s stationary hold, distance moved d = 0 m, so mechanical work done W = 600 × 0 = 0 J !",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm 0654 Paper 2 An athlete lifts a 600 N barbell vertically upwards through 1.5 m in 2.0 s , and then holds it completely stationary overhead for 4.0 s . What is the useful power developed during the 2.0 s lift, and how much mechanical work is done on the barbell during the 4.0 s stationary hold? (Vận động viên nâng tạ 600 N thẳng đứng lên cao 1.5 m trong 2.0 s, sau đó giữ tạ đứng yên trên đầu trong 4.0 s. Công suất có ích trong 2.0 s nâng tạ và công cơ học thực hiện lên tạ trong 4.0 s giữ yên là bao nhiêu?) A. Power during lift = 450 W | Work during hold = 0 J B. Power during lift = 450 W | Work during hold = 900 J C. Power during lift = 150 W | Work during hold = 0 J D. Power during lift = 900 W | Work during hold = 2400 J ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Trong 2.0 s nâng tạ: công thực hiện W = Fd = 600 × 1.5 = 900 J ⇒ công suất P = W / t = 900 / 2.0 = 450 W (Đáp án C chia nhầm cho tổng thời gian 6.0 s). Trong 4.0 s giữ tạ đứng yên: quãng đường dịch chuyển d = 0 m nên công cơ học thực hiện lên tạ là W = 600 × 0 = 0 J !",
+      "duration": 186.02,
+      "startTime": 6513.41,
+      "endTime": 6699.43,
+      "audioUrl": "/audio/lectures/science/p1/s07_b07.mp3"
+    },
+    {
+      "id": "s07_b08",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s07_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • 0654 Paper 4 Calculation [5 marks] An electric water pump operates at an electrical input power of 0.80 kW . In 2.5 minutes , it raises 450 kg of water vertically through a height of 16 m from a deep well ( g = 9.8 N/kg). (a) Calculate the useful work done in lifting the water. [2] (b) Calculate the useful power output of the pump in W . [2] (c) Calculate the percentage efficiency of the water pump. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Useful work done W = Δ E p= mgΔh = 450 × 9.8 × 16 [1m] = 70,560 J ≈ 71,000 J [1m]. (b) Convert time to seconds: t = 2.5 × 60 = 150 s [1m].Useful power output P out= W / t = 70,560 ÷ 150 = 470.4 W ≈ 470 W [1m]. (c) Convert input power: P in= 0.80 kW = 800 W.Efficiency = (470.4 ÷ 800) × 100% = 58.8% ≈ 59% [1m]. 💡 Intuition Check: Always do the \"< 100% sanity check\": 470.4 W useful output is less than 800 W electrical input (58.8%), leaving ~330 W dissipated as heat and sound. Forgetting to convert 2.5 min → 150 s would give 28,224 W (> 3500% efficiency!), immediately signalling a unit error.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Tính toán 0654 Paper 4 [5 marks] An electric water pump operates at an electrical input power of 0.80 kW . In 2.5 minutes , it raises 450 kg of water vertically through a height of 16 m from a deep well ( g = 9.8 N/kg). (a) Calculate the useful work done in lifting the water. (b) Calculate the useful power output of the pump in W . (c) Calculate the percentage efficiency of the water pump. (Máy bơm nước chạy điện có công suất đầu vào 0.80 kW. Trong 2.5 phút, máy bơm hút 450 kg nước lên cao 16 m (g = 9.8 N/kg). Tính: (a) công có ích nâng nước, (b) công suất đầu ra có ích theo W, (c) hiệu suất phần trăm của máy bơm.) ✍️ Lời giải chi tiết theo thang điểm: (a) Công có ích nâng nước: W = Δ E p= mgΔh = 450 × 9.8 × 16 = 70,560 J ≈ 71,000 J . (b) Đổi thời gian sang giây: t = 2.5 × 60 = 150 s .Công suất có ích đầu ra: P out= W / t = 70,560 ÷ 150 = 470.4 W ≈ 470 W . (c) Đổi công suất điện đầu vào: P in= 0.80 kW = 800 W.Hiệu suất Efficiency = (470.4 ÷ 800) × 100% = 58.8% ≈ 59% . 💡 Kiểm tra bản chất: Luôn kiểm tra hợp lý: công suất có ích 470.4 W nhỏ hơn công suất đầu vào 800 W (hiệu suất 58.8% < 100%, ~330 W tỏa nhiệt/âm thanh). Nếu quên đổi 2.5 phút = 150 s, bạn sẽ ra 28,224 W (> 3500%!) — phát hiện lỗi đơn vị ngay lập tức!",
+      "duration": 268.89,
+      "startTime": 6699.43,
+      "endTime": 6968.32,
+      "audioUrl": "/audio/lectures/science/p1/s07_b08.mp3"
+    },
+    {
+      "id": "s08_hdr",
+      "title": "🌍 8. Các Nguồn Năng lượng, Phát điện & Nhiệt hạch Mặt Trời (Energy Resources — P1.6.3)",
+      "selector": "[data-lecture-section=\"s08_hdr\"]",
+      "en": "🌍 8. Energy Resources, Power Generation & Nuclear Processes (P1.6.3).",
+      "vi": "🌍 8. Các Nguồn Năng lượng, Phát điện & Nhiệt hạch Mặt Trời (Energy Resources — P1.6.3).",
+      "duration": 13.72,
+      "startTime": 6968.32,
+      "endTime": 6982.04,
+      "audioUrl": "/audio/lectures/science/p1/s08_hdr.mp3"
+    },
+    {
+      "id": "s08_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s08_b01\"]",
+      "en": "🎯 Real-Life Analogy: Nearly every thermal power station on Earth is just a giant kettle → pinwheel → bicycle dynamo ( boiler → steam → turbine → generator ); they only differ in how they boil the water (burning fossil/biofuels, splitting uranium nuclei, or pumping water down to hot underground rocks). Hydro, tidal, wave, and wind spin turbines directly without a boiler, while solar cells have zero moving parts!",
+      "vi": "🎯 Hình dung đời thường: Hầu hết các nhà máy nhiệt điện trên thế giới thực chất chỉ là tổ hợp ấm đun nước khổng lồ → chong chóng → đinamô xe đạp; chúng chỉ khác nhau ở cách đun sôi nước (đốt than/sinh khối, phân hạch hạt nhân Uranium, hay đá nóng địa nhiệt). Thủy điện, thủy triều, sóng và gió làm quay tuabin trực tiếp không cần lò hơi, còn pin mặt trời (solar cells) biến ánh sáng thẳng thành điện không cần bộ phận quay!",
+      "duration": 58.12,
+      "startTime": 6982.04,
+      "endTime": 7040.16,
+      "audioUrl": "/audio/lectures/science/p1/s08_b01.mp3"
+    },
+    {
+      "id": "s08_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s08_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Three P1.6.3 Exam Pillars: (1) Distinguish renewable (replenished naturally) vs reliable (available 24/7 on demand). (2) Memorise the 3 non-solar exceptions : Geothermal , Nuclear , and Tidal . (3) Contrast nuclear fusion in the Sun (joining hydrogen nuclei) with nuclear fission in nuclear reactors (splitting heavy uranium nuclei).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Ba Trụ cột Ăn điểm P1.6.3: (1) Phân biệt rõ renewable (tái tạo, không cạn kiệt) với reliable (ổn định 24/7 theo nhu cầu). (2) Thuộc lòng 3 ngoại lệ KHÔNG bắt nguồn từ Mặt Trời : Geothermal , Nuclear , Tidal . (3) Đối chiếu nuclear fusion (nhiệt hạch tổng hợp Hydro trên Mặt Trời) với nuclear fission (phân hạch Uranium trong lò phản ứng điện hạt nhân).",
+      "duration": 60.25,
+      "startTime": 7040.16,
+      "endTime": 7100.41,
+      "audioUrl": "/audio/lectures/science/p1/s08_b02.mp3"
+    },
+    {
+      "id": "s08_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s08_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Mixing up Solar Cells (light → electricity directly) with Solar Panels (infrared radiation → hot water in pipes), OR claiming wind and solar are “reliable” simply because they are renewable (they are renewable , yet intermittent/unreliable without storage!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nhầm lẫn giữa Solar Cells (pin quang điện: ánh sáng → điện trực tiếp) với Solar Panels (tấm thu nhiệt hồng ngoại đun nước nóng), HOẶC kết luận điện gió/mặt trời là “reliable” chỉ vì chúng là nguồn tái tạo (chúng renewable nhưng không ổn định — intermittent/unreliable vào ban đêm hoặc ngày lặng gió!).",
+      "duration": 41.91,
+      "startTime": 7100.41,
+      "endTime": 7142.32,
+      "audioUrl": "/audio/lectures/science/p1/s08_b03.mp3"
+    },
+    {
+      "id": "s08_b04",
+      "title": "Nguồn tái tạo (renewable) được tự nhiên bổ sung liên tục và không cạn kiệt; nguồ...",
+      "selector": "[data-lecture-section=\"s08_b04\"]",
+      "en": "Renewable resources are replenished naturally and cannot be used up; non-renewable resources have finite reserves and cannot be replaced once consumed. In thermal power stations (fossil fuels, biofuels, nuclear, geothermal), heat turns water into high-pressure steam in a boiler , which spins a turbine coupled to an electrical generator.",
+      "vi": "Nguồn tái tạo (renewable) được tự nhiên bổ sung liên tục và không cạn kiệt; nguồn không tái tạo (non-renewable) có trữ lượng hữu hạn. Trong nhà máy nhiệt điện, nhiệt năng đun sôi nước trong lò hơi (boiler) tạo hơi nước áp suất cao làm quay tuabin (turbine) nối với máy phát điện (generator).",
+      "duration": 42.89,
+      "startTime": 7142.32,
+      "endTime": 7185.21,
+      "audioUrl": "/audio/lectures/science/p1/s08_b04.mp3"
+    },
+    {
+      "id": "s08_b05",
+      "title": "Nguồn năng lượng: Fossil Fuels (Than, Dầu, Khí); Cơ chế thu điện / nhiệt: Đốt hó...",
+      "selector": "[data-lecture-section=\"s08_b05\"]",
+      "en": "Resource: Fossil Fuels (Coal, Oil, Gas); How Power/Energy is Obtained: Chemical store burnt → boiler steam → turbine → generator; Type & Scale: Non-renewable • Large scale; Reliability & Availability: Very reliable on demand; finite reserves; Environmental Impact: Emits CO 2 (global warming) & SO 2 (acid rain). Resource: Biofuels / Biomass; How Power/Energy is Obtained: Chemical store in plant/animal matter burnt → boiler → turbine → generator; Type & Scale: Renewable • Small/Medium; Reliability & Availability: Reliable; widely available where crops grow; Environmental Impact: Theoretically carbon-neutral (plants absorb CO 2 while growing), but uses farmland/forests. Resource: Nuclear Fuel (Uranium); How Power/Energy is Obtained: Nuclear fission heats coolant → boiler steam → turbine → generator; Type & Scale: Non-renewable • Large scale; Reliability & Availability: Very reliable continuous base-load output; Environmental Impact: Zero greenhouse gases; produces long-lived radioactive waste; high decommissioning cost. Resource: Hydroelectric Dams; How Power/Energy is Obtained: GPE of elevated reservoir water → KE spins water turbines → generator; Type & Scale: Renewable • Medium/Large; Reliability & Availability: Reliable, rapid start-up; requires mountainous valleys; Environmental Impact: No operational CO 2 ; flooding valleys destroys habitats & displaces communities.",
+      "vi": "Nguồn năng lượng: Fossil Fuels (Than, Dầu, Khí); Cơ chế thu điện / nhiệt: Đốt hóa năng → lò hơi → tuabin → máy phát; Loại & Quy mô: Không tái tạo • Lớn; Độ ổn định (Reliability): Rất ổn định theo nhu cầu; trữ lượng hữu hạn; Tác động Môi trường: Thải CO 2 (nóng lên toàn cầu) & SO 2 (mưa axit). Nguồn năng lượng: Biofuels (Nhiên liệu sinh học); Cơ chế thu điện / nhiệt: Đốt sinh khối thực vật/động vật → lò hơi → tuabin; Loại & Quy mô: Tái tạo • Nhỏ/Vừa; Độ ổn định (Reliability): Ổn định; sẵn có vùng nông nghiệp; Tác động Môi trường: Trung hòa carbon lý thuyết nhưng tốn đất trồng trọt. Nguồn năng lượng: Nuclear Fuel (Uranium); Cơ chế thu điện / nhiệt: Phân hạch hạt nhân (Nuclear fission) → hơi nước → tuabin; Loại & Quy mô: Không tái tạo • Lớn; Độ ổn định (Reliability): Rất ổn định 24/7, mật độ năng lượng cực cao; Tác động Môi trường: Không thải khí nhà kính; chất thải phóng xạ tồn tại lâu. Nguồn năng lượng: Hydroelectric (Thủy điện); Cơ chế thu điện / nhiệt: GPE hồ nước trên cao → KE quay tuabin nước → máy phát; Loại & Quy mô: Tái tạo • Vừa/Lớn; Độ ổn định (Reliability): Ổn định, khởi động nhanh; cần địa hình đồi núi; Tác động Môi trường: Không thải CO 2 khi vận hành; ngập lụt thung lũng, mất môi trường sống. Nguồn năng lượng: Tidal (Thủy triều); Cơ chế thu điện / nhiệt: Đập giữ nước triều lên rồi xả qua tuabin → máy phát; Loại & Quy mô: Tái tạo • Nhỏ/Vừa; Độ ổn định (Reliability): Dự báo chính xác 2 lần/ngày; ít cửa sông phù hợp; Tác động Môi trường: Ảnh hưởng hệ sinh thái cửa sông & tàu thuyền.",
+      "duration": 230.21,
+      "startTime": 7185.21,
+      "endTime": 7415.42,
+      "audioUrl": "/audio/lectures/science/p1/s08_b05.mp3"
+    },
+    {
+      "id": "s08_b06",
+      "title": "☀️ Supplement P1.6.3 — Nguồn gốc Bức xạ Mặt Trời, Nhiệt hạch (Fusion) & Phân hạc...",
+      "selector": "[data-lecture-section=\"s08_b06\"]",
+      "en": "☀️ Supplement P1.6.3 — Origin of Energy, Solar Fusion & Reactor Fission: • Solar Radiation Origin: Radiation from the Sun is the main source of energy for ALL our energy resources EXCEPT three : Geothermal (radioactive decay inside Earth), Nuclear (uranium nuclei), and Tidal (gravitational pull of the Moon and Sun).• Fusion in the Sun vs Fission in Reactors: Energy is released inside the Sun by nuclear fusion (joining light hydrogen nuclei to form helium at extreme temperature and pressure), whereas energy is released in nuclear power reactors on Earth by nuclear fission (splitting heavy uranium nuclei).",
+      "vi": "☀️ Supplement P1.6.3 — Nguồn gốc Bức xạ Mặt Trời, Nhiệt hạch (Fusion) & Phân hạch (Fission): • Nguồn gốc từ Mặt Trời: Bức xạ Mặt Trời là nguồn gốc chính của TẤT CẢ các nguồn năng lượng NGOẠI TRỪ 3 nguồn : Geothermal (phân rã phóng xạ trong lòng Đất), Nuclear (hạt nhân Uranium) và Tidal (lực hấp dẫn của Mặt Trăng và Mặt Trời).• Nhiệt hạch trên Mặt Trời vs Phân hạch trong Lò phản ứng: Mặt Trời giải phóng năng lượng nhờ phản ứng nhiệt hạch (nuclear fusion) — tổng hợp các hạt nhân Hydro nhẹ thành Heli; trong khi các nhà máy điện hạt nhân trên Trái Đất giải phóng năng lượng nhờ phản ứng phân hạch (nuclear fission) — phân tách hạt nhân Uranium nặng.",
+      "duration": 85.22,
+      "startTime": 7415.42,
+      "endTime": 7500.64,
+      "audioUrl": "/audio/lectures/science/p1/s08_b06.mp3"
+    },
+    {
+      "id": "s08_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s08_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 / 🟩 CORE & EXTENDED • 0654 Paper 2 MCQ Which energy resource is renewable , provides reliable continuous 24-hour power in suitable regions, and does NOT originate from radiation from the Sun? A. Nuclear fuel (uranium) B. Geothermal energy C. Biofuels D. Wind turbines ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Geothermal energy comes from radioactive decay deep inside Earth's crust (one of the three non-solar resources alongside nuclear and tidal), is naturally replenished ( renewable ), and operates 24/7 regardless of weather ( reliable ) in volcanic/tectonic regions. Nuclear fuel (A) is non-solar and reliable, but non-renewable ; Biofuels (C) and Wind (D) both originate from the Sun.",
+      "vi": "BÀI MẪU 1 🟦 / 🟩 CORE & EXTENDED • Trắc nghiệm 0654 Paper 2 Which energy resource is renewable , provides reliable continuous 24-hour power in suitable regions, and does NOT originate from radiation from the Sun? (Nguồn năng lượng nào vừa tái tạo được (renewable) , vừa phát điện ổn định liên tục 24/24 ở vùng phù hợp, và KHÔNG bắt nguồn từ bức xạ Mặt Trời?) A. Nuclear fuel (uranium) B. Geothermal energy C. Biofuels D. Wind turbines ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Geothermal energy (địa nhiệt) bắt nguồn từ phân rã phóng xạ trong lòng Trái Đất (1 trong 3 ngoại lệ không từ Mặt Trời cùng với Nuclear và Tidal), tự bổ sung liên tục ( renewable ) và chạy 24/7 không phụ thuộc thời tiết ( reliable ) tại các vùng kiến tạo/núi lửa. Nuclear (A) không tái tạo; Biofuels (C) và Wind (D) đều có nguồn gốc từ Mặt Trời.",
+      "duration": 120.23,
+      "startTime": 7500.64,
+      "endTime": 7620.87,
+      "audioUrl": "/audio/lectures/science/p1/s08_b07.mp3"
+    },
+    {
+      "id": "s08_b08",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s08_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 / 🟩 CORE & SUPPLEMENT • 0654 Paper 4 Structured [5 marks] An island nation plans to phase out its coal-fired power station using rooftop solar cells , wind turbines , and either a hydroelectric dam or a nuclear power station . (a) State the useful energy transfer in a solar cell and explain why solar cells and wind turbines alone cannot provide a reliable continuous electricity supply. [2] (b) Distinguish between the nuclear reaction that releases energy in the Sun and the nuclear reaction used in a nuclear power station . [2] (c) State one major environmental advantage and one major environmental disadvantage of building a hydroelectric dam compared with burning coal. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Solar cells transfer light radiation directly into electrical power (electrical work) without a boiler or turbine [1m]. Solar output drops to zero at night (and falls in cloudy weather) while wind output drops on calm days, making them intermittent/unreliable [1m]. (b) The Sun releases energy by nuclear fusion (joining light hydrogen nuclei to form helium) [1m], whereas a nuclear power station releases energy by nuclear fission (splitting heavy uranium nuclei) [1m]. (c) Advantage: Emits no greenhouse gases (CO2) or SO2 during operation; Disadvantage: Flooding valleys destroys wildlife habitats and displaces local communities (both needed for [1m]).",
+      "vi": "BÀI MẪU 2 🟦 / 🟩 CORE & SUPPLEMENT • Tự luận 0654 Paper 4 [5 marks] An island nation plans to phase out its coal-fired power station using rooftop solar cells , wind turbines , and either a hydroelectric dam or a nuclear power station . (a) State the useful energy transfer in a solar cell and explain why solar cells and wind turbines alone cannot provide a reliable continuous electricity supply. (b) Distinguish between the nuclear reaction that releases energy in the Sun and the nuclear reaction used in a nuclear power station . (c) State one major environmental advantage and one major environmental disadvantage of building a hydroelectric dam compared with burning coal. (Một đảo quốc dự định thay nhà máy nhiệt điện than bằng pin mặt trời áp mái, điện gió kết hợp đập thủy điện hoặc điện hạt nhân. (a) Nêu sự chuyển hóa năng lượng trong solar cell và giải thích vì sao chỉ dùng điện mặt trời + gió không đảm bảo cấp điện liên tục. (b) Phân biệt phản ứng hạt nhân trên Mặt Trời và trong nhà máy điện hạt nhân. (c) Nêu 1 ưu điểm và 1 nhược điểm môi trường lớn của đập thủy điện so với đốt than.) ✍️ Lời giải chi tiết theo thang điểm: (a) Solar cells chuyển hóa trực tiếp bức xạ ánh sáng (light radiation) thành điện năng (electrical power) không cần lò hơi hay tuabin . Ban đêm pin mặt trời có công suất bằng 0 (và giảm mạnh khi nhiều mây), còn điện gió ngừng phát khi lặng gió nên nguồn cung thất thường ( unreliable/intermittent ) .",
+      "duration": 201.61,
+      "startTime": 7620.87,
+      "endTime": 7822.48,
+      "audioUrl": "/audio/lectures/science/p1/s08_b08.mp3"
     }
   ]
 }
