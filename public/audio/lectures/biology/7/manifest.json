@@ -2,208 +2,1012 @@
   "lectureId": "85f36013-879b-49a8-a531-69c245a9630e",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 7: Human nutrition",
-  "totalDuration": 529.78,
+  "totalDuration": 3805.57,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+    "s01_int": {
+      "start": 2,
+      "end": 4
     },
-    "sec_balanced_diet": {
-      "start": 1,
-      "end": 5
-    },
-    "sec-balanced-diet": {
-      "start": 1,
-      "end": 5
-    },
-    "sec_digestive_processes": {
-      "start": 6,
-      "end": 6
-    },
-    "sec-digestive-processes": {
-      "start": 6,
-      "end": 6
-    },
-    "sec_teeth": {
-      "start": 7,
-      "end": 9
-    },
-    "sec-teeth": {
-      "start": 7,
-      "end": 9
-    },
-    "sec_digestive_organs": {
+    "s01_grp09": {
       "start": 10,
-      "end": 10
-    },
-    "sec-digestive-organs": {
-      "start": 10,
-      "end": 10
-    },
-    "sec_chemical_digestion": {
-      "start": 11,
-      "end": 11
-    },
-    "sec-chemical-digestion": {
-      "start": 11,
-      "end": 11
-    },
-    "sec_absorption_villi": {
-      "start": 12,
       "end": 12
     },
-    "sec-absorption-villi": {
-      "start": 12,
+    "s01_p1_sub01": {
+      "start": 10,
       "end": 12
+    },
+    "s01_p1_sub02": {
+      "start": 13,
+      "end": 14
+    },
+    "s01_p2_sub01": {
+      "start": 10,
+      "end": 12
+    },
+    "s01_p2_sub02": {
+      "start": 13,
+      "end": 14
+    },
+    "s01_wex": {
+      "start": 15,
+      "end": 16
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 16
+    },
+    "s02_int": {
+      "start": 18,
+      "end": 20
+    },
+    "s02_grp04": {
+      "start": 21,
+      "end": 22
+    },
+    "s02_wex": {
+      "start": 27,
+      "end": 28
+    },
+    "s02_hdr": {
+      "start": 17,
+      "end": 28
+    },
+    "s03_int": {
+      "start": 30,
+      "end": 32
+    },
+    "s03_grp04": {
+      "start": 33,
+      "end": 36
+    },
+    "s03_p1_sub01": {
+      "start": 40,
+      "end": 47
+    },
+    "s03_p2_sub01": {
+      "start": 40,
+      "end": 47
+    },
+    "s03_wex": {
+      "start": 48,
+      "end": 49
+    },
+    "s03_hdr": {
+      "start": 29,
+      "end": 49
+    },
+    "s04_int": {
+      "start": 51,
+      "end": 53
+    },
+    "s04_wex": {
+      "start": 55,
+      "end": 56
+    },
+    "s04_hdr": {
+      "start": 50,
+      "end": 56
+    },
+    "s05_int": {
+      "start": 58,
+      "end": 60
+    },
+    "s05_wex": {
+      "start": 67,
+      "end": 68
+    },
+    "s05_hdr": {
+      "start": 57,
+      "end": 68
+    },
+    "s06_int": {
+      "start": 70,
+      "end": 72
+    },
+    "s06_wex": {
+      "start": 79,
+      "end": 80
+    },
+    "s06_hdr": {
+      "start": 69,
+      "end": 80
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 7: Dinh dưỡng ở Người & Hệ Tiêu hóa",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 7: Human Nutrition. Heterotrophic human nutrition involves ingesting organic macromolecules, mechanically and chemically breaking them down, absorbing nutrients into blood, assimilating them into tissues, and egesting undigested wastes. In this lesson, we study balanced diets, malnutrition diseases, dental anatomy, alimentary canal organs, digestive enzymes, and villi absorption adaptations.",
-      "vi": "Chào mừng các bạn đến với Bài 7: Dinh dưỡng ở Người & Hệ Tiêu hóa. Dinh dưỡng dị dưỡng ở người bao gồm việc lấy thức ăn, biến đổi cơ học và hóa học, hấp thụ chất dinh dưỡng vào máu, đồng hóa vào mô và thải bỏ chất cặn bã. Trong bài học này, chúng ta sẽ học về chế độ ăn cân bằng, bệnh suy dinh dưỡng, giải phẫu răng, các cơ quan tiêu hóa, enzyme tiêu hóa và cấu tạo lông ruột thích nghi cho hấp thụ.",
-      "duration": 39.28,
+      "title": "Chuyên đề 7: Dinh dưỡng ở Người & Hệ Tiêu hóa",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 7: Human Nutrition. Balanced Diet, Malnutrition, Teeth, Alimentary Canal, Chemical Digestion & Villi Absorption.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Chuyên đề 7: Dinh dưỡng ở Người & Hệ Tiêu hóa. Chế độ ăn cân bằng, Bệnh suy dinh dưỡng, Răng, Ống tiêu hóa, Enzyme & Hấp thụ lông ruột.",
+      "duration": 31.36,
       "startTime": 0.0,
-      "endTime": 39.28,
+      "endTime": 31.36,
       "audioUrl": "/audio/lectures/biology/7/intro.mp3"
     },
     {
-      "id": "sec_balanced_diet",
-      "title": "1. Chế độ Ăn Cân bằng & 7 Nhóm Dinh dưỡng",
-      "selector": "#sec-balanced-diet",
-      "en": "Section 1: A balanced diet contains all seven essential dietary components in correct proportions: carbohydrates, fats, proteins, vitamins, minerals, water, and dietary fibre.",
-      "vi": "Mục 1: Chế độ ăn cân bằng chứa đầy đủ 7 nhóm dưỡng chất thiết yếu theo tỷ lệ cân đối: carbohydrate, chất béo, protein, vitamin, khoáng chất, nước và chất xơ.",
-      "duration": 44.39,
-      "startTime": 39.28,
-      "endTime": 83.67,
-      "audioUrl": "/audio/lectures/biology/7/sec_balanced_diet.mp3"
+      "id": "s01_hdr",
+      "title": "🥩 1. NUTRIENTS & A BALANCED DIET",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🥩 1. NUTRIENTS & A BALANCED DIET.",
+      "vi": "🥩 1. NUTRIENTS & A BALANCED DIET.",
+      "duration": 8.58,
+      "startTime": 31.36,
+      "endTime": 39.94,
+      "audioUrl": "/audio/lectures/biology/7/s01_hdr.mp3"
     },
     {
-      "id": "card_diet_carbs_fats_protein",
-      "title": "🍞 Carbohydrates, Chất béo & Protein",
-      "selector": "#card-diet-carbs-fats-protein",
-      "en": "Macronutrients: Carbohydrates supply fast cellular energy. Lipids provide high-density long-term energy storage and insulation. Proteins provide amino acid building blocks for cellular growth and tissue repair.",
-      "vi": "Đại dưỡng chất: Carbohydrate cung cấp năng lượng nhanh cho hoạt động tế bào. Lipid dự trữ năng lượng dài hạn đậm đặc và cách nhiệt. Protein cung cấp các axit amin làm vật liệu kiến tạo để sinh trưởng tế bào và phục hồi mô tổn thương.",
-      "duration": 29.97,
-      "startTime": 83.67,
-      "endTime": 113.64,
-      "audioUrl": "/audio/lectures/biology/7/card_diet_carbs_fats_protein.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of your body as a self-repairing hybrid car : carbohydrates are quick-burn petrol in the tank, fats/oils are reserve battery packs + cushioned insulation, proteins are steel bricks rebuilding the engine, vitamins & minerals are precision spark plugs, fibre sweeps the exhaust pipe via peristalsis, and water is the coolant/solvent carrying everything.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng cơ thể bạn như một chiếc xe hybrid tự sửa chữa : Carbohydrate là xăng đốt nhanh tạo năng lượng tức thì, Fats/Oils là bình ắc-quy dự trữ lâu dài kiêm lớp đệm giữ nhiệt, Protein là gạch thép xây mới tế bào & đúc enzyme/kháng thể, Vitamin & Khoáng chất là bugi đánh lửa, Chất xơ (Fibre) là chổi quét kích thích nhu động ruột, còn Nước là dung môi vận chuyển mọi chất.",
+      "duration": 51.61,
+      "startTime": 39.94,
+      "endTime": 91.55,
+      "audioUrl": "/audio/lectures/biology/7/s01_b01.mp3"
     },
     {
-      "id": "card_diet_water_fibre",
-      "title": "💧 Nước & 🥬 Chất xơ (Roughage)",
-      "selector": "#card-diet-water-fibre",
-      "en": "Water and Dietary Fibre: Water provides the aqueous solvent for metabolic reactions and circulatory transport. Insoluble cellulose fibre provides bulk for intestinal muscles to push against during peristalsis, preventing constipation and bowel disorders.",
-      "vi": "Nước và Chất xơ: Nước tạo môi trường dung môi cho các phản ứng sinh hóa và vận chuyển tuần hoàn. Chất xơ cellulose không tan tạo khối bã để cơ thành ruột co bóp trong nhu động ruột (peristalsis), phòng chống táo bón và các bệnh lý đường ruột.",
-      "duration": 31.29,
-      "startTime": 113.64,
-      "endTime": 144.93,
-      "audioUrl": "/audio/lectures/biology/7/card_diet_water_fibre.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Define a balanced diet as containing all 7 nutrient groups in the correct proportions for energy, growth, and health. 2) Link key deficiencies strictly: lack of Vitamin C → scurvy (bleeding gums, poor wound healing); lack of Vitamin D or calcium → rickets (soft, bowed bones); lack of iron → anaemia (reduced haemoglobin, less O₂ transport, fatigue).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Định nghĩa chế độ ăn cân bằng (balanced diet) : cung cấp đủ cả 7 nhóm chất theo đúng tỷ lệ (correct proportions) . 2) Học thuộc bộ ba bệnh thiếu hụt cốt lõi: thiếu Vitamin C → Scurvy (chảy máu lợi, lâu lành vết thương); thiếu Vitamin D hoặc Calcium → Rickets (còi xương, xương mềm cong); thiếu Iron (Sắt) → Anaemia (giảm haemoglobin, thiếu oxy, mệt mỏi).",
+      "duration": 59.04,
+      "startTime": 91.55,
+      "endTime": 150.59,
+      "audioUrl": "/audio/lectures/biology/7/s01_b02.mp3"
     },
     {
-      "id": "card_vitamins_minerals",
-      "title": "💊 Vitamin & Khoáng chất Thiết yếu",
-      "selector": "#card-vitamins-minerals",
-      "en": "Micronutrients: Vitamin C forms collagen protein; deficiency causes scurvy with bleeding gums. Vitamin D and Calcium strengthen bones and teeth; deficiency causes rickets. Iron synthesizes haemoglobin; deficiency causes anaemia.",
-      "vi": "Vi chất dinh dưỡng: Vitamin C giúp tổng hợp collagen; thiếu hụt gây bệnh scorbut chảy máu chân răng. Vitamin D và Canxi làm xương và răng chắc khỏe; thiếu hụt gây bệnh còi xương (rickets). Sắt tổng hợp huyết sắc tố hemoglobin; thiếu sắt gây bệnh thiếu máu (anaemia).",
-      "duration": 36.04,
-      "startTime": 144.93,
-      "endTime": 180.97,
-      "audioUrl": "/audio/lectures/biology/7/card_vitamins_minerals.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write that dietary fibre (cellulose) is digested or absorbed for energy! Humans lack cellulase enzyme — fibre stays undigested in the lumen to provide bulk for intestinal muscles to push against during peristalsis .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết chất xơ được tiêu hóa hay cung cấp năng lượng! Cơ thể người không có enzyme cellulase — chất xơ giữ nguyên khối lượng ( adds bulk ) để cơ thành ruột có điểm tựa đẩy thức ăn đi nhờ nhu động ruột (peristalsis) .",
+      "duration": 33.98,
+      "startTime": 150.59,
+      "endTime": 184.57,
+      "audioUrl": "/audio/lectures/biology/7/s01_b03.mp3"
     },
     {
-      "id": "card_malnutrition",
-      "title": "⚠️ Suy dinh dưỡng Nặng: Kwashiorkor & Marasmus",
-      "selector": "#card-malnutrition",
-      "en": "Severe Malnutrition: Kwashiorkor is caused by severe protein deficiency, characterized by fluid accumulation in abdominal tissues causing oedema. Marasmus is caused by total calorie starvation, characterized by extreme muscle and fat wasting.",
-      "vi": "Suy dinh dưỡng thể nặng: Kwashiorkor do thiếu hụt protein trầm trọng, biểu hiện đặc trưng là ứ dịch gây phù thũng bụng (oedema). Marasmus do thiếu hụt toàn bộ năng lượng calo, biểu hiện là teo cơ và mất hoàn toàn mô mỡ dưới da.",
-      "duration": 31.46,
-      "startTime": 180.97,
-      "endTime": 212.43,
-      "audioUrl": "/audio/lectures/biology/7/card_malnutrition.mp3"
+      "id": "s01_b04",
+      "title": "Một chế độ ăn cân bằng (Balanced Diet) yêu cầu cung cấp đủ 7 nhóm chất thiết yếu...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "A balanced diet supplies all 7 essential nutrient classes in the correct proportions required to maintain cellular metabolism and homeostasis:",
+      "vi": "Một chế độ ăn cân bằng (Balanced Diet) yêu cầu cung cấp đủ 7 nhóm chất thiết yếu. Mỗi nhóm có nguồn gốc và chức năng riêng biệt.",
+      "duration": 18.71,
+      "startTime": 184.57,
+      "endTime": 203.28,
+      "audioUrl": "/audio/lectures/biology/7/s01_b04.mp3"
     },
     {
-      "id": "sec_digestive_processes",
-      "title": "2. 5 Giai đoạn của Quá trình Tiêu hóa",
-      "selector": "#sec-digestive-processes",
-      "en": "Section 2 outlines the five digestive stages: Ingestion is taking substances into the body through the mouth. Digestion breaks down large insoluble food molecules into small water-soluble molecules. Absorption moves digested food molecules through the intestinal wall into the blood. Assimilation incorporates absorbed food into body cells. Egestion passes out undigested food as faeces through the anus.",
-      "vi": "Mục 2 phác thảo 5 giai đoạn tiêu hóa: Ăn (Ingestion) là đưa thức ăn vào miệng. Tiêu hóa (Digestion) phân giải phân tử lớn khó tan thành phân tử nhỏ tan được. Hấp thụ (Absorption) đưa chất tan qua thành ruột vào máu. Đồng hóa (Assimilation) đưa dưỡng chất vào tế bào cơ thể để sử dụng. Thải bã (Egestion) tống cặn bã không tiêu hóa ra ngoài qua hậu môn dưới dạng phân.",
-      "duration": 64.24,
-      "startTime": 212.43,
-      "endTime": 276.67,
-      "audioUrl": "/audio/lectures/biology/7/sec_digestive_processes.mp3"
+      "id": "s01_b05",
+      "title": "🍞 Carbohydrate",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🍞 Carbohydrates. Sources: Rice, bread, potatoes, pasta. Function: Readily accessible glucose for cellular respiration to generate ATP energy.",
+      "vi": "🍞 Carbohydrate. Vai trò (Function): Nguồn năng lượng tức thời dễ phân giải qua hô hấp tế bào (cellular respiration). Sources: Rice, potatoes, bread, yams, sugars, honey.",
+      "duration": 27.68,
+      "startTime": 203.28,
+      "endTime": 230.96,
+      "audioUrl": "/audio/lectures/biology/7/s01_b05.mp3"
     },
     {
-      "id": "sec_teeth",
-      "title": "3. Răng và Tiêu hóa Cơ học (Types of Teeth)",
-      "selector": "#sec-teeth",
-      "en": "Section 3 examines dentition: Humans possess incisors for biting, canines for tearing, and premolars and molars with broad ridged surfaces for chewing and grinding food to increase surface area for enzyme action.",
-      "vi": "Mục 3 nghiên cứu về bộ răng: Răng cửa dùng để cắn, răng nanh dùng để xé, răng tiền hàm và răng hàm có mặt nhai rộng có gờ dùng để nhai và nghiền nát thức ăn, giúp gia tăng tối đa diện tích bề mặt cho enzyme tiêu hóa tác dụng.",
-      "duration": 41.56,
-      "startTime": 276.67,
-      "endTime": 318.23,
-      "audioUrl": "/audio/lectures/biology/7/sec_teeth.mp3"
+      "id": "s01_b06",
+      "title": "🍗 Proteins",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🍗 Proteins. Sources: Meat, fish, eggs, milk, legumes. Function: Tissue growth, cellular repair, synthesis of enzymes and antibodies.",
+      "vi": "🍗 Proteins. Vai trò (Function): Sinh trưởng và sửa chữa mô, tổng hợp enzyme và kháng thể (antibodies). Sources: Meat, fish, milk, nuts.",
+      "duration": 24.79,
+      "startTime": 230.96,
+      "endTime": 255.75,
+      "audioUrl": "/audio/lectures/biology/7/s01_b06.mp3"
     },
     {
-      "id": "card_tooth_structure",
-      "title": "🦷 Cấu trúc Giải phẫu của Răng",
-      "selector": "#card-tooth-structure",
-      "en": "Internal tooth anatomy: The crown is protected by extremely hard enamel overlying softer bone-like dentine. The inner pulp cavity contains sensitive nerve endings and blood capillaries supplying living cells with nutrients. The root is cemented firmly into the jawbone by cement and periodontal fibers.",
-      "vi": "Giải phẫu răng bên trong: Thân răng bọc bởi lớp men răng (enamel) cực cứng, bên dưới là lớp ngà răng (dentine) mềm hơn. Tủy răng (pulp cavity) ở giữa chứa đầu dây thần kinh cảm giác và mao mạch máu nuôi tế bào sống. Chân răng được cố định vững chắc vào xương hàm nhờ lớp cement và dây chằng nha chu.",
-      "duration": 39.59,
-      "startTime": 318.23,
-      "endTime": 357.82,
-      "audioUrl": "/audio/lectures/biology/7/card_tooth_structure.mp3"
+      "id": "s01_b07",
+      "title": "🥑 Fats",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🥑 Fats & Oils (Lipids). Sources: Butter, vegetable oils, nuts, cheese. Function: Long-term energy store, thermal insulation, organ protection, cell membrane structure.",
+      "vi": "🥑 Fats. Vai trò (Function): Dự trữ năng lượng dài hạn, cách nhiệt dưới da (thermal insulation) và cấu tạo màng tế bào. Sources: Butter, cheese, fat in meats/fish, nuts.",
+      "duration": 29.49,
+      "startTime": 255.75,
+      "endTime": 285.24,
+      "audioUrl": "/audio/lectures/biology/7/s01_b07.mp3"
     },
     {
-      "id": "card_dental_decay",
-      "title": "⚠️ Sâu Răng & Biện pháp Chăm sóc (Tooth Decay)",
-      "selector": "#card-dental_decay",
-      "en": "Tooth decay pathogenesis: Bacteria feeding on sugary food residues produce acidic metabolic by-products. This acid dissolves calcium phosphate in the protective enamel and dentine, creating cavities that expose nerve endings in the pulp cavity, causing toothache.",
-      "vi": "Cơ chế sâu răng: Vi khuẩn trong mảng bám lên men đường dư thừa sinh ra axit. Axit này hòa tan canxi photphat làm mòn lớp men và ngà răng, tạo lỗ sâu ăn sâu vào tủy răng kích thích dây thần kinh gây đau nhức buốt.",
-      "duration": 29.92,
-      "startTime": 357.82,
-      "endTime": 387.74,
-      "audioUrl": "/audio/lectures/biology/7/card_dental_decay.mp3"
+      "id": "s01_b08",
+      "title": "💧 Water & 🥬 Fibre",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "💧 Water & 🥬 Fibre. Fibre: Plant cellulose adds indigestible bulk to stimulate peristalsis, preventing constipation. Water: Universal biochemical solvent and liquid transport medium in blood plasma.",
+      "vi": "💧 Water & 🥬 Fibre. Water: Medium for chemical reactions, transport (blood), excretion (urine/sweat). Fibre (Roughage): Adds bulk to food to help peristalsis (prevents constipation). Made of plant cellulose.",
+      "duration": 32.89,
+      "startTime": 285.24,
+      "endTime": 318.13,
+      "audioUrl": "/audio/lectures/biology/7/s01_b08.mp3"
     },
     {
-      "id": "sec_digestive_organs",
-      "title": "4. Các Cơ quan trong Hệ Tiêu hóa (Alimentary Canal)",
-      "selector": "#sec-digestive-organs",
-      "en": "Section 4 traces food through the alimentary canal: Mouth and salivary glands, bolus transport through oesophagus by peristalsis, protein churning in acidic stomach hydrochloric acid, neutralization and lipid emulsification by liver bile in duodenum, enzyme hydrolysis, nutrient absorption in ileum, water reabsorption in colon, and faecal storage in rectum.",
-      "vi": "Mục 4 theo dõi hành trình thức ăn qua ống tiêu hóa: Khoang miệng và tuyến nước bọt, viên thức ăn di chuyển qua thực quản nhờ nhu động, nhào trộn và tiêu hóa protein trong dạ dày chứa axit HCl, trung hòa và nhũ hóa chất béo nhờ dịch mật từ gan ở tá tràng, enzyme phân giải, hấp thu tại ruột non, tái hấp thu nước ở đại tràng và tích trữ phân ở trực tràng.",
-      "duration": 37.65,
-      "startTime": 387.74,
-      "endTime": 425.39,
-      "audioUrl": "/audio/lectures/biology/7/sec_digestive_organs.mp3"
+      "id": "s01_b09",
+      "title": "🍊 Vitamin C Found in citrus fruits and raw vegetables. Required for collagen syn...",
+      "selector": "[data-lecture-section=\"s01_b09\"], [data-lecture-section=\"s01_grp09\"]",
+      "en": "🍊 Vitamin C Found in citrus fruits and raw vegetables. Required for collagen synthesis and healthy gums. Deficiency: Scurvy (bleeding gums, loose teeth, poor wound healing).",
+      "vi": "Name: Vitamin C; Rich Food Source: Oranges, lemons, citrus fruits; Use in Body: Tissue repair, resistance to disease; Deficiency Disease: Scurvy (Bleeding gums).",
+      "duration": 27.94,
+      "startTime": 318.13,
+      "endTime": 346.07,
+      "audioUrl": "/audio/lectures/biology/7/s01_b09.mp3"
     },
     {
-      "id": "sec_chemical_digestion",
-      "title": "5. Tiêu hóa Hóa học & Các Enzyme Tiêu hóa",
-      "selector": "#sec-chemical-digestion",
-      "en": "Section 5 details enzyme chemistry: Amylase breaks starch into maltose; maltase cleaves maltose into glucose. Proteases include pepsin in acidic stomach and trypsin in alkaline duodenum, breaking proteins into peptides and amino acids. Lipase digests emulsified fats into fatty acids and glycerol. Bile from the liver emulsifies large fat globules into tiny droplets to increase surface area.",
-      "vi": "Mục 5 trình bày chi tiết hóa học enzyme: Amylase phân giải tinh bột thành maltose; maltase cắt maltose thành glucose. Protease gồm pepsin trong môi trường axit dạ dày và trypsin trong môi trường kiềm tá tràng, cắt protein thành peptide và axit amin. Lipase tiêu hóa chất béo đã nhũ hóa thành axit béo và glycerol. Dịch mật nhũ hóa giọt mỡ lớn thành hàng triệu giọt li ti để tăng diện tích bề mặt.",
-      "duration": 55.05,
-      "startTime": 425.39,
-      "endTime": 480.44,
-      "audioUrl": "/audio/lectures/biology/7/sec_chemical_digestion.mp3"
+      "id": "s01_b10",
+      "title": "☀️ Vitamin D & 🥛 Calcium (Ca²⁺) Found in dairy, eggs, oily fish, and skin sun ex...",
+      "selector": "[data-lecture-section=\"s01_b10\"], [data-lecture-section=\"s01_grp09\"]",
+      "en": "☀️ Vitamin D & 🥛 Calcium (Ca²⁺) Found in dairy, eggs, oily fish, and skin sun exposure. Required for mineralising strong bones and teeth. Deficiency: Rickets in children (soft, bowed bones).",
+      "vi": "Name: Vitamin D; Rich Food Source: Fish oil, milk, butter; Use in Body: Absorption of calcium, strengthens bones; Deficiency Disease: Rickets. Name: Iron; Rich Food Source: Liver, meat, cocoa, eggs; Use in Body: Formation of haemoglobin in RBCs; Deficiency Disease: Anaemia (Tiredness).",
+      "duration": 42.59,
+      "startTime": 346.07,
+      "endTime": 388.66,
+      "audioUrl": "/audio/lectures/biology/7/s01_b10.mp3"
     },
     {
-      "id": "sec_absorption_villi",
-      "title": "6. Hấp thụ và Cấu tạo Thích nghi của Lông ruột (Villi)",
-      "selector": "#sec-absorption-villi",
-      "en": "Section 6 examines villi adaptations: The small intestine lining is folded into millions of finger-like villi with microvilli, expanding absorption surface area thousands of times. Each villus has a thin one-cell-thick epithelium for short diffusion distance, a dense capillary network absorbing glucose and amino acids, and a central lacteal absorbing fatty acids and glycerol.",
-      "vi": "Mục 6 khảo sát các đặc điểm thích nghi của lông ruột: Niêm mạc ruột non gấp nếp thành hàng triệu nhung mao (villi) và vi nhung mao (microvilli), mở rộng diện tích tiếp xúc hấp thụ gấp hàng ngàn lần. Mỗi lông ruột có lớp biểu mô mỏng chỉ dày một lớp tế bào giúp rút ngắn khoảng cách khuếch tán, mạng lưới mao mạch dày đặc hấp thu glucose và axit amin, cùng mạch dưỡng chấp trung tâm (lacteal) chuyên hấp thu axit béo và glycerol.",
-      "duration": 49.34,
-      "startTime": 480.44,
-      "endTime": 529.78,
-      "audioUrl": "/audio/lectures/biology/7/sec_absorption_villi.mp3"
+      "id": "s01_b11",
+      "title": "🥩 Iron (Fe²⁺) Found in red meat, liver, and spinach. Core element for synthesisi...",
+      "selector": "[data-lecture-section=\"s01_b11\"], [data-lecture-section=\"s01_grp09\"]",
+      "en": "🥩 Iron (Fe²⁺) Found in red meat, liver, and spinach. Core element for synthesising haemoglobin to transport O₂. Deficiency: Anaemia (extreme fatigue, paleness).",
+      "vi": "Name: Calcium; Rich Food Source: Milk, fish, green vegetables; Use in Body: Strengthens bones and teeth; Deficiency Disease: Brittle bones, muscle cramps.",
+      "duration": 26.92,
+      "startTime": 388.66,
+      "endTime": 415.58,
+      "audioUrl": "/audio/lectures/biology/7/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "Thể phù (Kwashiorkor)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "Kwashiorkor • Cause: Severe deficiency of protein , even when carbohydrate energy intake is adequate.• Key Symptoms: Swollen abdomen (oedema) due to fluid retention in tissues, dry peeling skin, thin brittle reddish hair, enlarged fatty liver.",
+      "vi": "Thể phù (Kwashiorkor) • Nguyên nhân: Thiếu hụt nghiêm trọng Protein dù lượng Carbohydrate (tinh bột) nạp vào vẫn đủ.• Triệu chứng đặc trưng: Bụng phù to (oedema) do ứ đọng dịch trong các mô tế bào, da khô bong tróc, tóc thưa dễ gãy ngả màu hoe đỏ, gan nhiễm mỡ phì đại.",
+      "duration": 38.66,
+      "startTime": 415.58,
+      "endTime": 454.24,
+      "audioUrl": "/audio/lectures/biology/7/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "Thể teo đét (Marasmus)",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "Marasmus • Cause: Severe deficiency of BOTH protein and calories/energy (complete chronic starvation).• Key Symptoms: Extreme emaciation and muscle wasting , ribs clearly visible, dry wrinkled skin (\"old person's face\"), no body fat stores.",
+      "vi": "Thể teo đét (Marasmus) • Nguyên nhân: Thiếu hụt trầm trọng cả Protein VÀ Năng lượng/Calo (tình trạng chết đói kéo dài toàn diện).• Triệu chứng đặc trưng: Cơ thể gầy trơ xương, teo cơ nghiêm trọng , xương sườn lộ rõ, da nhăn nheo già nua (\"mặt cụ già\"), hoàn toàn không có lớp mỡ dưới da.",
+      "duration": 39.66,
+      "startTime": 454.24,
+      "endTime": 493.9,
+      "audioUrl": "/audio/lectures/biology/7/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ A child has soft, bent leg bones, while an adult sailor suffers from bleeding gums and slow wound healing. Which dietary deficiencies explain these two conditions? A. Child: Iron; Sailor: Vitamin D B. Child: Vitamin D; Sailor: Vitamin C C. Child: Vitamin C; Sailor: Calcium D. Child: Fibre; Sailor: Iron ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Soft, deformed leg bones in children indicate rickets , caused by a deficiency of Vitamin D (needed to absorb calcium) or calcium itself. Bleeding gums and poor collagen synthesis indicate scurvy , caused by a deficiency of Vitamin C . Option A confuses iron (anaemia), C swaps the vitamins, and D confuses fibre (constipation).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ A child has soft, bent leg bones, while an adult sailor suffers from bleeding gums and slow wound healing. Which dietary deficiencies explain these two conditions? (Một trẻ nhỏ có xương chân mềm và cong, trong khi một thủy thủ bị chảy máu chân răng và vết thương lâu lành. Sự thiếu hụt dinh dưỡng nào giải thích đúng hai tình trạng này?) A. Child: Iron; Sailor: Vitamin D B. Child: Vitamin D; Sailor: Vitamin C C. Child: Vitamin C; Sailor: Calcium D. Child: Fibre; Sailor: Iron ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Xương chân mềm, biến dạng ở trẻ em là bệnh còi xương (rickets) do thiếu Vitamin D (cần để hấp thụ canxi) hoặc thiếu canxi. Chảy máu lợi, chậm lành vết thương là bệnh Scurvy do thiếu Vitamin C . Loại A và D vì thiếu sắt gây thiếu máu (anaemia), thiếu chất xơ gây táo bón.",
+      "duration": 123.1,
+      "startTime": 493.9,
+      "endTime": 617.0,
+      "audioUrl": "/audio/lectures/biology/7/s01_b14.mp3"
+    },
+    {
+      "id": "s01_b15",
+      "title": "iron",
+      "selector": "[data-lecture-section=\"s01_b15\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) Explain why a pregnant woman requires an increased daily intake of iron and protein . [2](b) Explain how dietary fibre (roughage) helps prevent constipation even though it cannot be digested. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Extra iron is required to synthesise haemoglobin in red blood cells for oxygen transport in both the mother and developing fetus [1m]. Extra protein supplies amino acids for the growth of new fetal cells and tissues [1m]. (b) Fibre consists of indigestible plant cellulose that adds bulk/volume to undigested food in the alimentary canal [1m], giving circular and longitudinal muscles a firm mass to push against during peristalsis [1m]. 💡 Intuition Check: Every nutrient mark scheme links: Source → Biological Molecule/Role → Consequence of Deficiency.",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) Explain why a pregnant woman requires an increased daily intake of iron and protein . (b) Explain how dietary fibre (roughage) helps prevent constipation even though it cannot be digested. ((a) Giải thích vì sao phụ nữ mang thai cần tăng lượng sắt và protein hằng ngày. (b) Giải thích cách chất xơ giúp ngăn ngừa táo bón dù không được tiêu hóa. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Cần thêm iron (sắt) để tổng hợp haemoglobin trong hồng cầu giúp vận chuyển oxy cho cả mẹ và thai nhi . Cần thêm protein cung cấp axit amin cho sự sinh trưởng tế bào và mô mới của thai nhi (fetal growth) . (b) Chất xơ là cellulose thực vật không tiêu hóa được, giúp tạo khối lượng (adds bulk) cho thức ăn trong ống tiêu hóa , giúp các cơ thành ruột co bóp đẩy thức ăn dễ dàng qua nhu động ruột (peristalsis) . 💡 Kiểm tra bản chất: Công thức ăn trọn điểm dinh dưỡng: Nguồn thực phẩm → Phân tử sinh học / Chức năng → Triệu chứng khi thiếu hụt.",
+      "duration": 133.54,
+      "startTime": 617.0,
+      "endTime": 750.54,
+      "audioUrl": "/audio/lectures/biology/7/s01_b15.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⚙️ 2. KEY DIGESTIVE PROCESSES",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⚙️ 2. KEY DIGESTIVE PROCESSES.",
+      "vi": "⚙️ 2. KEY DIGESTIVE PROCESSES.",
+      "duration": 6.68,
+      "startTime": 750.54,
+      "endTime": 757.22,
+      "audioUrl": "/audio/lectures/biology/7/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine an online furniture parcel arriving at your narrow front door: bringing the box onto the porch is ingestion , dismantling the giant wardrobe into flat panels so they fit through the doorway is digestion , carrying panels across the doorway into the hallway is absorption , assembling them inside your bedroom is assimilation , and tossing cardboard packaging out the back door is egestion .",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung việc nhận một kiện hàng tủ gỗ lớn trước cửa nhà hẹp: đưa thùng hàng vào hiên là Ingestion , tháo rời tủ lớn thành từng tấm ván nhỏ vừa khung cửa là Digestion , bê các tấm ván qua ngưỡng cửa vào hành lang (máu) là Absorption , lắp ráp thành chiếc tủ mới ngay trong phòng ngủ (tế bào) là Assimilation , và vứt vỏ thùng carton ra cửa sau là Egestion .",
+      "duration": 50.66,
+      "startTime": 757.22,
+      "endTime": 807.88,
+      "audioUrl": "/audio/lectures/biology/7/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the exact 5-step sequence ( I → D → A → A → E ): Ingestion (mouth) → Digestion (insoluble → soluble) → Absorption (small intestine lumen → blood/lymph) → Assimilation (uptake & use by body cells, e.g. liver/muscle) → Egestion (undigested faeces via anus).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Ghi nhớ đúng thứ tự 5 bước ( I → D → A → A → E ): Ingestion (ăn vào miệng) → Digestion (phân tử lớn không tan → nhỏ tan được) → Absorption (từ lòng ruột non → máu/bạch huyết) → Assimilation (tế bào lấy vào và sử dụng) → Egestion (thải bã không tiêu hóa qua hậu môn).",
+      "duration": 45.08,
+      "startTime": 807.88,
+      "endTime": 852.96,
+      "audioUrl": "/audio/lectures/biology/7/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Egestion ≠ Excretion! Faeces (mainly undigested cellulose fibre, bacteria, and water) has never entered body cells , so passing faeces is egestion . Removing metabolic waste made inside cells (like urea or CO₂) is excretion .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Egestion (Thải phân) ≠ Excretion (Bài tiết)! Phân chủ yếu là chất xơ cellulose chưa từng đi vào bên trong tế bào trao đổi chất nên gọi là egestion . Còn thải sản phẩm thừa của phản ứng hóa học trong tế bào (như urea , CO₂ ) mới là excretion .",
+      "duration": 41.72,
+      "startTime": 852.96,
+      "endTime": 894.68,
+      "audioUrl": "/audio/lectures/biology/7/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "The 5 sequential physiological stages of nutrition in the human alimentary canal...",
+      "selector": "[data-lecture-section=\"s02_b04\"], [data-lecture-section=\"s02_grp04\"]",
+      "en": "The 5 sequential physiological stages of nutrition in the human alimentary canal:",
+      "vi": "1. Ingestion (Ăn / Nuốt).",
+      "duration": 8.82,
+      "startTime": 894.68,
+      "endTime": 903.5,
+      "audioUrl": "/audio/lectures/biology/7/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "1. Ingestion",
+      "selector": "[data-lecture-section=\"s02_b05\"], [data-lecture-section=\"s02_grp04\"]",
+      "en": "1. Ingestion. Taking substances (food and drink) into the body through the mouth.",
+      "vi": "Đưa thức ăn và đồ uống vào cơ thể qua miệng.",
+      "duration": 10.44,
+      "startTime": 903.5,
+      "endTime": 913.94,
+      "audioUrl": "/audio/lectures/biology/7/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "2. Digestion (Tiêu hóa)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "2. Digestion. Breakdown of large, insoluble food molecules into small, water-soluble molecules.",
+      "vi": "2. Digestion (Tiêu hóa). Physical: Breakdown into smaller pieces without chemical change (Teeth, Bile). Chemical: Breakdown of large, insoluble molecules into small soluble molecules (Enzymes).",
+      "duration": 26.33,
+      "startTime": 913.94,
+      "endTime": 940.27,
+      "audioUrl": "/audio/lectures/biology/7/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "3. Absorption (Hấp thụ)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "3. Absorption. Movement of small digested nutrient molecules through the gut wall into blood or lymph.",
+      "vi": "3. Absorption (Hấp thụ). Sự di chuyển của các phân tử dinh dưỡng nhỏ tan được và ion qua thành ruột non vào máu hoặc bạch huyết.",
+      "duration": 17.92,
+      "startTime": 940.27,
+      "endTime": 958.19,
+      "audioUrl": "/audio/lectures/biology/7/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "4. Assimilation (Đồng hóa)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "4. Assimilation. Movement of absorbed food molecules into body cells where they are used, becoming part of cells.",
+      "vi": "4. Assimilation (Đồng hóa). Sự thu nhận và sử dụng các chất dinh dưỡng đã hấp thụ bên trong tế bào cơ thể, trở thành một phần cấu trúc tế bào.",
+      "duration": 19.57,
+      "startTime": 958.19,
+      "endTime": 977.76,
+      "audioUrl": "/audio/lectures/biology/7/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "5. Egestion (Thải bã)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "5. Egestion. Passing out of food that has not been digested or absorbed, as faeces, through the anus.",
+      "vi": "5. Egestion (Thải bã). Sự đào thải thức ăn không tiêu hóa được (undigested food) ra khỏi cơ thể dưới dạng phân qua hậu môn (TUYỆT ĐỐI không nhầm với bài tiết - excretion).",
+      "duration": 21.34,
+      "startTime": 977.76,
+      "endTime": 999.1,
+      "audioUrl": "/audio/lectures/biology/7/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ After a meal, amino acids travel in the hepatic portal vein to liver cells, where they are built into blood plasma proteins. Which process is occurring inside the liver cells? A. Absorption B. Assimilation C. Chemical digestion D. Egestion ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Assimilation is the uptake and use of absorbed nutrient molecules by body cells (such as building amino acids into new proteins or converting glucose to glycogen). Absorption (A) already happened across the ileum wall into capillaries; digestion (C) broke proteins into amino acids; egestion (D) removes undigested faeces.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ After a meal, amino acids travel in the hepatic portal vein to liver cells, where they are built into blood plasma proteins. Which process is occurring inside the liver cells? (Sau bữa ăn, các axit amin theo tĩnh mạch cửa gan về tế bào gan và được tổng hợp thành protein huyết tương. Quá trình nào đang diễn ra bên trong tế bào gan?) A. Absorption (Hấp thụ) B. Assimilation (Đồng hóa) C. Chemical digestion (Tiêu hóa hóa học) D. Egestion (Thải bã) ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Assimilation (Đồng hóa) là quá trình tế bào cơ thể thu nhận và sử dụng các phân tử dinh dưỡng đã hấp thụ (như ghép axit amin thành protein mới). Absorption (A) diễn ra ở vách ruột non vào máu; Chemical digestion (C) phân giải protein thành axit amin trong lòng ống tiêu hóa.",
+      "duration": 109.66,
+      "startTime": 999.1,
+      "endTime": 1108.76,
+      "audioUrl": "/audio/lectures/biology/7/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "absorption",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [3 marks] Distinguish clearly between:(a) absorption and assimilation [2](b) egestion and excretion [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Absorption is the movement of small soluble nutrients from the lumen of the intestines through the gut wall into the blood (or lymph) [1m], whereas assimilation is the uptake and use of those nutrients by body cells to become part of cell structures or stores [1m]. (b) Egestion removes undigested food as faeces via the anus, whereas excretion removes toxic metabolic waste products formed inside cells (e.g. urea, CO₂) [1m]. 💡 Intuition Check: Ask yourself: \"Where is the molecule moving?\" Gut → Blood = Absorption; Blood → Inside Cell Use = Assimilation.",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [3 marks] Distinguish clearly between: (a) absorption and assimilation ; (b) egestion and excretion . (Phân biệt rõ giữa: (a) hấp thụ và đồng hóa ; (b) thải bã và bài tiết .) ✍️ Lời giải chi tiết theo thang điểm: (a) Absorption là sự di chuyển các phân tử dinh dưỡng nhỏ tan được từ lòng ruột qua thành ruột vào máu/bạch huyết ; còn assimilation là sự thu nhận và sử dụng các chất dinh dưỡng đó bên trong tế bào để xây dựng cấu trúc hoặc dự trữ . (b) Egestion đào thải thức ăn không tiêu hóa được (undigested food) dưới dạng phân qua hậu môn, còn excretion đào thải chất thải trao đổi chất (metabolic waste) sinh ra từ tế bào như urea, CO₂ . 💡 Kiểm tra bản chất: Luôn tự hỏi \"Phân tử đang đi qua ranh giới nào?\": Ruột → Máu = Absorption; Máu → Tế bào sử dụng = Assimilation.",
+      "duration": 118.7,
+      "startTime": 1108.76,
+      "endTime": 1227.46,
+      "audioUrl": "/audio/lectures/biology/7/s02_b11.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "👄 3. TYPES OF TEETH (Physical Digestion)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "👄 3. TYPES OF TEETH (Physical Digestion).",
+      "vi": "👄 3. TYPES OF TEETH (Physical Digestion).",
+      "duration": 8.0,
+      "startTime": 1227.46,
+      "endTime": 1235.46,
+      "audioUrl": "/audio/lectures/biology/7/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Crushing an ice cube into shaved ice makes it melt 10 times faster without turning water into a different chemical! Likewise, teeth, stomach churning, and bile emulsification smash food and fat globules into tiny fragments without changing the chemical molecules — giving enzymes huge surface area to attack.",
+      "vi": "🎯 Hình dung đời thường: Đập viên đá lạnh thành đá bào giúp nó tan nhanh gấp 10 lần dù bản chất vẫn là nước H₂O ! Tương tự, răng nghiền thức ăn, dạ dày co bóp, và mật nhũ tương hóa mỡ giúp chia nhỏ thức ăn thành mảnh li ti mà không đổi bản chất hóa học — mở toang diện tích bề mặt cho enzyme tấn công.",
+      "duration": 42.55,
+      "startTime": 1235.46,
+      "endTime": 1278.01,
+      "audioUrl": "/audio/lectures/biology/7/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Physical digestion = smaller pieces, no chemical change , larger surface area for enzymes. 2) Teeth front-to-back: Incisors (chisel: bite/cut) → Canines (pointed: tear) → Premolars & Molars (broad cusps: crush/grind). 3) Tooth layers outside-in: Enamel (hardest, non-living) → Dentine → Pulp (nerves + blood vessels), anchored by cement in jawbone & gums . 4) Supplement: Bile emulsifies fats/oils into tiny droplets.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Physical digestion = mảnh nhỏ hơn, không biến đổi hóa học , tăng diện tích bề mặt cho enzyme. 2) Bốn loại răng: Incisors (cắt) → Canines (xé) → Premolars & Molars (nghiền). 3) Cấu tạo răng từ ngoài vào trong: Enamel (men răng cứng nhất) → Dentine (ngà răng) → Pulp (tủy chứa mạch máu & dây thần kinh), chân răng bọc cement cắm vào xương hàm và gums (lợi) . 4) Supplement: Bile emulsifies fats .",
+      "duration": 71.05,
+      "startTime": 1278.01,
+      "endTime": 1349.06,
+      "audioUrl": "/audio/lectures/biology/7/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students often call emulsification by bile \"chemical digestion\" because bile is a liquid! Wrong! Bile contains zero enzymes and does NOT break ester bonds into fatty acids + glycerol — fat droplets are still chemically lipid molecules, so emulsification is strictly physical digestion .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Rất nhiều thí sinh nhầm nhũ tương hóa bởi dịch mật là tiêu hóa hóa học! Sai hoàn toàn! Dịch mật không chứa enzyme và không cắt liên kết hóa học — giọt mỡ nhỏ vẫn là lipid nên đây là tiêu hóa cơ học (physical digestion) .",
+      "duration": 38.96,
+      "startTime": 1349.06,
+      "endTime": 1388.02,
+      "audioUrl": "/audio/lectures/biology/7/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Physical digestion mechanically breaks food into smaller fragments without alter...",
+      "selector": "[data-lecture-section=\"s03_b04\"], [data-lecture-section=\"s03_grp04\"]",
+      "en": "Physical digestion mechanically breaks food into smaller fragments without altering chemical bonds . This creates a massive surface area for subsequent enzymatic hydrolysis.",
+      "vi": "Type of Tooth: Incisors (Răng cửa); Function in Mechanical Digestion: Cutting or shearing food into small chewable pieces.",
+      "duration": 21.57,
+      "startTime": 1388.02,
+      "endTime": 1409.59,
+      "audioUrl": "/audio/lectures/biology/7/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Incisors (8 total)",
+      "selector": "[data-lecture-section=\"s03_b05\"], [data-lecture-section=\"s03_grp04\"]",
+      "en": "Incisors (8 total) Chisel-shaped with flat sharp edges; adapted for biting and cutting food pieces.",
+      "vi": "Type of Tooth: Canines (Răng nanh); Function in Mechanical Digestion: Piercing / Tearing the food.",
+      "duration": 15.33,
+      "startTime": 1409.59,
+      "endTime": 1424.92,
+      "audioUrl": "/audio/lectures/biology/7/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Canines (4 total)",
+      "selector": "[data-lecture-section=\"s03_b06\"], [data-lecture-section=\"s03_grp04\"]",
+      "en": "Canines (4 total) Pointed conical shape; adapted for gripping, piercing, and tearing tough food.",
+      "vi": "Type of Tooth: Premolars (Răng cối nhỏ); Function in Mechanical Digestion: Chewing / Grinding the food.",
+      "duration": 16.08,
+      "startTime": 1424.92,
+      "endTime": 1441.0,
+      "audioUrl": "/audio/lectures/biology/7/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Premolars (8 total)",
+      "selector": "[data-lecture-section=\"s03_b07\"], [data-lecture-section=\"s03_grp04\"]",
+      "en": "Premolars (8 total) Two cusps on chewing surface; adapted for crushing and chewing food bolus.",
+      "vi": "Type of Tooth: Molars (Răng cối lớn); Function in Mechanical Digestion: Chewing / Grinding the food.",
+      "duration": 15.54,
+      "startTime": 1441.0,
+      "endTime": 1456.54,
+      "audioUrl": "/audio/lectures/biology/7/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Tiêu hóa cơ học (Physical digestion)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Molars (12 total) Broad flat crowns with 4–5 cusps; adapted for heavy crushing, masticating, and grinding.",
+      "vi": "Tiêu hóa cơ học (Physical digestion) nghiền nhỏ thức ăn thành các mảnh nhỏ mà không làm biến đổi hóa học phân tử thức ăn , giúp tăng diện tích bề mặt (surface area) cho enzyme hoạt động hiệu quả.",
+      "duration": 23.47,
+      "startTime": 1456.54,
+      "endTime": 1480.01,
+      "audioUrl": "/audio/lectures/biology/7/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🍲 Co bóp nhào trộn ở Dạ dày (Stomach Churning - 7.3.6)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🍲 Stomach Churning (Core 7.3.6) Muscular walls of the stomach contract rhythmically to churn and mix food with gastric juice into semi-liquid chyme — physically breaking food into smaller pieces without chemical change.",
+      "vi": "🍲 Co bóp nhào trộn ở Dạ dày (Stomach Churning - 7.3.6) Thành cơ khỏe của dạ dày co bóp nhịp nhàng giúp nghiền và nhào trộn thức ăn với dịch vị thành hỗn hợp nhuyễn ( chyme ) — tiêu hóa cơ học làm tăng diện tích tiếp xúc.",
+      "duration": 26.74,
+      "startTime": 1480.01,
+      "endTime": 1506.75,
+      "audioUrl": "/audio/lectures/biology/7/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🥑 Nhũ tương hóa chất béo nhờ Mật (Bile Emulsification - 7.3.7)",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "🥑 Emulsification by Bile (Supplement 7.3.7) Bile (made in liver, stored in gall bladder, released into duodenum) physically breaks large insoluble fat/oil globules into millions of tiny droplets, vastly increasing surface area for chemical digestion by lipase.",
+      "vi": "🥑 Nhũ tương hóa chất béo nhờ Mật (Bile Emulsification - 7.3.7) Dịch mật (Bile) phân tách các giọt mỡ lớn không tan thành hàng triệu giọt mỡ nhỏ li ti (emulsification), làm tăng mạnh diện tích bề mặt cho enzyme lipase phân giải hóa học.",
+      "duration": 33.93,
+      "startTime": 1506.75,
+      "endTime": 1540.68,
+      "audioUrl": "/audio/lectures/biology/7/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "1. Enamel (Men răng)",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "1. Enamel The hardest substance in the human body; non-living mineralised coating covering the tooth crown. Protects against mechanical wear and chewing forces. Can be dissolved by bacterial acids.",
+      "vi": "1. Enamel (Men răng) Chất cứng nhất trong cơ thể người; lớp khoáng hóa không sống bao bọc bên ngoài thân răng. Giúp bảo vệ răng khỏi lực nhai nghiền cơ học. Có thể bị hòa tan và ăn mòn bởi axit vi khuẩn.",
+      "duration": 29.56,
+      "startTime": 1540.68,
+      "endTime": 1570.24,
+      "audioUrl": "/audio/lectures/biology/7/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "2. Dentine (Ngà răng)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "2. Dentine Bone-like mineralised tissue beneath the enamel. Softer than enamel and contains microscopic tubules connected to the pulp. Decays rapidly once enamel is breached.",
+      "vi": "2. Dentine (Ngà răng) Lớp mô khoáng hóa dạng xương nằm bên dưới men răng. Mềm hơn men răng và chứa các ống vi thể nối thông vào tủy. Sâu răng sẽ lan rộng cực nhanh một khi men răng bị thủng.",
+      "duration": 27.84,
+      "startTime": 1570.24,
+      "endTime": 1598.08,
+      "audioUrl": "/audio/lectures/biology/7/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "3. Pulp Cavity (Tủy răng)",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "3. Pulp Cavity The central living core of the tooth. Contains blood capillaries (supply oxygen, glucose, and nutrients; remove waste) and nerve endings (detect pain, temperature, pressure).",
+      "vi": "3. Pulp Cavity (Tủy răng) Khoang sống nằm ở trung tâm của răng. Chứa mao mạch máu (cung cấp oxy, glucose, dưỡng chất; dọn chất thải) và các đầu mút dây thần kinh (cảm nhận cảm giác đau, nhiệt độ, áp lực nhai).",
+      "duration": 32.6,
+      "startTime": 1598.08,
+      "endTime": 1630.68,
+      "audioUrl": "/audio/lectures/biology/7/s03_b13.mp3"
+    },
+    {
+      "id": "s03_b14",
+      "title": "4. Cement & Gums (Xi-măng chân răng & Lợi)",
+      "selector": "[data-lecture-section=\"s03_b14\"]",
+      "en": "4. Cement & Gums Cement (Cementum): Hard bone-like layer covering the root, anchoring the tooth into the jawbone socket via periodontal fibers. Gums: Tissue covering jawbone, creating a tight seal around the tooth neck.",
+      "vi": "4. Cement & Gums (Xi-măng chân răng & Lợi) Xi-măng (Cementum): Lớp chất cứng bao bọc chân răng, neo giữ chân răng chắc chắn vào ổ xương hàm. Nướu/Lợi (Gums): Lớp mô bao phủ xương hàm, ôm sát và bịt kín quanh cổ răng.",
+      "duration": 33.99,
+      "startTime": 1630.68,
+      "endTime": 1664.67,
+      "audioUrl": "/audio/lectures/biology/7/s03_b14.mp3"
+    },
+    {
+      "id": "s03_b15",
+      "title": "⚠️ Sâu răng (Dental Decay) & Biện pháp bảo vệ",
+      "selector": "[data-lecture-section=\"s03_b15\"]",
+      "en": "⚠️ Dental Decay (Tooth Decay) & Care.",
+      "vi": "⚠️ Sâu răng (Dental Decay) & Biện pháp bảo vệ.",
+      "duration": 7.91,
+      "startTime": 1664.67,
+      "endTime": 1672.58,
+      "audioUrl": "/audio/lectures/biology/7/s03_b15.mp3"
+    },
+    {
+      "id": "s03_b16",
+      "title": "Đề thi Cambridge thường yêu cầu trình bày cơ chế từng bước gây sâu răng:",
+      "selector": "[data-lecture-section=\"s03_b16\"]",
+      "en": "Cambridge exams test the step-by-step mechanism of dental caries:",
+      "vi": "Đề thi Cambridge thường yêu cầu trình bày cơ chế từng bước gây sâu răng:",
+      "duration": 10.46,
+      "startTime": 1672.58,
+      "endTime": 1683.04,
+      "audioUrl": "/audio/lectures/biology/7/s03_b16.mp3"
+    },
+    {
+      "id": "s03_b17",
+      "title": "1. Hình thành mảng bám (Plaque): Vi khuẩn kết hợp với cặn thức ăn và nước bọt tạ...",
+      "selector": "[data-lecture-section=\"s03_b17\"]",
+      "en": "1. Plaque Formation: Bacteria coat teeth along with food debris and saliva, forming a sticky invisible coating called plaque .2. Acid Production: Bacteria respire sugars from food, producing acids .3. Enamel Dissolution: Acid dissolves calcium and phosphate minerals in the enamel , forming a small hole (cavity).4. Dentine Invasion: Once through enamel, acid and bacteria penetrate the softer dentine much faster.5. Pulp Infection: If untreated, infection reaches the pulp cavity , infecting nerves (severe toothache) and forming a painful abscess at the root tip.",
+      "vi": "1. Hình thành mảng bám (Plaque): Vi khuẩn kết hợp với cặn thức ăn và nước bọt tạo thành một lớp màng dính không màu gọi là mảng bám răng.2. Tạo axit: Vi khuẩn trong mảng bám thực hiện hô hấp phân giải đường thừa từ thức ăn, tạo ra axit .3. Ăn mòn men răng: Axit hòa tan canxi và phosphat trong men răng , tạo thành các lỗ sâu nhỏ.4. Xâm lấn ngà răng: Axit và vi khuẩn tiếp tục xâm nhập vào lớp ngà răng mềm hơn bên dưới và phá hủy với tốc độ nhanh hơn nhiều.5. Nhiễm trùng tủy răng: Nếu không trám kịp thời, vi khuẩn sẽ ăn sâu vào tủy răng , gây viêm dây thần kinh (đau nhức dữ dội) và tạo ổ mủ áp xe ở chóp chân răng.",
+      "duration": 87.99,
+      "startTime": 1683.04,
+      "endTime": 1771.03,
+      "audioUrl": "/audio/lectures/biology/7/s03_b17.mp3"
+    },
+    {
+      "id": "s03_b18",
+      "title": "🦷 Chăm sóc răng miệng và phòng ngừa sâu răng:",
+      "selector": "[data-lecture-section=\"s03_b18\"]",
+      "en": "🦷 Proper Dental Care & Prevention: • Regular Brushing: Brush twice daily with fluoride toothpaste to remove plaque and strengthen enamel against acid attack.• Dietary Modification: Reduce consumption of sugary foods and fizzy acidic drinks; avoid snacking on sweets between meals.• Dental Checkups: Regular visits to the dentist for professional scaling and early cavity treatment.",
+      "vi": "🦷 Chăm sóc răng miệng và phòng ngừa sâu răng: • Đánh răng đều đặn: Chải răng 2 lần/ngày bằng kem đánh răng chứa Fluoride để loại bỏ mảng bám và tăng cường tái khoáng hóa men răng.• Chế độ ăn hợp lý: Hạn chế đồ ngọt, kẹo bánh và đồ uống có ga chứa nhiều đường; tránh ăn vặt đồ ngọt giữa các bữa chính.• Khám nha khoa định kỳ: Đi lấy cao răng và kiểm tra răng miệng định kỳ 6 tháng/lần để phát hiện sớm các lỗ sâu.",
+      "duration": 54.39,
+      "startTime": 1771.03,
+      "endTime": 1825.42,
+      "audioUrl": "/audio/lectures/biology/7/s03_b18.mp3"
+    },
+    {
+      "id": "s03_b19",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b19\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which statement correctly compares the action of bile salts on fats with the action of lipase on fats? A. Both break chemical bonds in fat molecules to form fatty acids and glycerol. B. Bile causes physical digestion to increase surface area; lipase causes chemical digestion. C. Bile works best at pH 2 in the stomach; lipase works best at pH 8 in the duodenum. D. Bile is an enzyme secreted by the liver; lipase is a hormone secreted by the pancreas. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Bile salts physically emulsify large lipid globules into tiny droplets without chemical change, increasing surface area ( physical digestion ). Lipase chemically hydrolyses lipid molecules into soluble fatty acids and glycerol ( chemical digestion ). Bile is NOT an enzyme (eliminating D) and acts in the duodenum at alkaline pH (eliminating C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Which statement correctly compares the action of bile salts on fats with the action of lipase on fats? (Phát biểu nào so sánh đúng tác động của muối mật lên chất béo với tác động của enzyme lipase lên chất béo?) A. Both break chemical bonds in fat molecules to form fatty acids and glycerol. B. Bile causes physical digestion to increase surface area; lipase causes chemical digestion. C. Bile works best at pH 2 in the stomach; lipase works best at pH 8 in the duodenum. D. Bile is an enzyme secreted by the liver; lipase is a hormone secreted by the pancreas. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Muối mật (bile salts) phân tách giọt mỡ lớn thành giọt nhỏ li ti không biến đổi hóa học để tăng diện tích bề mặt ( physical digestion ), còn lipase thủy phân liên kết hóa học tạo axit béo và glycerol ( chemical digestion ). Dịch mật không phải enzyme (loại D) và hoạt động ở tá tràng pH kiềm (loại C).",
+      "duration": 137.84,
+      "startTime": 1825.42,
+      "endTime": 1963.26,
+      "audioUrl": "/audio/lectures/biology/7/s03_b19.mp3"
+    },
+    {
+      "id": "s03_b20",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b20\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Name the hardest outer layer of a human molar crown and the living central region containing blood vessels and nerves. [2](b) Explain how chewing food thoroughly in the mouth increases the rate of chemical digestion in the stomach. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Outer layer: enamel [1m]; living central region: pulp (cavity) [1m]. (b) Chewing breaks large pieces of food into smaller pieces without chemical change [1m], which increases the total surface area exposed for protease (pepsin) enzymes to bind to substrate molecules more rapidly [1m]. 💡 Intuition Check: Whenever an IGCSE question asks \"Why is physical digestion / chewing / emulsification important?\", the guaranteed 2-mark combo is: smaller pieces/droplets [1m] + increased surface area for enzyme action [1m].",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Name the hardest outer layer of a human molar crown and the living central region containing blood vessels and nerves. (b) Explain how chewing food thoroughly in the mouth increases the rate of chemical digestion in the stomach. ((a) Nêu tên lớp ngoài cứng nhất của thân răng hàm và vùng sống trung tâm chứa mạch máu, thần kinh. (b) Giải thích vì sao nhai kỹ thức ăn ở miệng làm tăng tốc độ tiêu hóa hóa học ở dạ dày. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Lớp ngoài cứng nhất: enamel (men răng) ; vùng trung tâm sống: pulp / pulp cavity (tủy răng) . (b) Nhai nghiền cắt thức ăn lớn thành các mảnh nhỏ mà không biến đổi hóa học , làm tăng tổng diện tích bề mặt để enzyme protease (pepsin) tiếp xúc và phân giải cơ chất nhanh hơn . 💡 Kiểm tra bản chất: Mọi câu hỏi \"Tại sao nhai / co bóp dạ dày / nhũ tương hóa mật lại quan trọng?\" luôn ăn 2 điểm bằng cặp từ khóa: smaller pieces/droplets + increases surface area for enzymes .",
+      "duration": 134.28,
+      "startTime": 1963.26,
+      "endTime": 2097.54,
+      "audioUrl": "/audio/lectures/biology/7/s03_b20.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🗺️ 4. ORGANS OF THE DIGESTIVE SYSTEM",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🗺️ 4. ORGANS OF THE DIGESTIVE SYSTEM.",
+      "vi": "🗺️ 4. ORGANS OF THE DIGESTIVE SYSTEM.",
+      "duration": 8.14,
+      "startTime": 2097.54,
+      "endTime": 2105.68,
+      "audioUrl": "/audio/lectures/biology/7/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture the digestive system as a one-way factory conveyor belt (alimentary canal) with three side-supply tanks (associated glands) squirting juices onto the belt as food passes by: food never enters the salivary glands, liver, gall bladder, or pancreas — their ducts pour saliva, bile, and pancreatic juice into the tube!",
+      "vi": "🎯 Hình dung đời thường: Hãy nhìn hệ tiêu hóa như một băng chuyền khép kín một chiều (alimentary canal) có ba bình phun phụ trợ bên ngoài (associated organs) : thức ăn KHÔNG BAO GIỜ chui vào tuyến nước bọt, gan, túi mật hay tụy — mà các tuyến này chỉ tiết dịch qua ống dẫn đổ vào băng chuyền!",
+      "duration": 42.88,
+      "startTime": 2105.68,
+      "endTime": 2148.56,
+      "audioUrl": "/audio/lectures/biology/7/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Separate Alimentary Canal (food passes through: Mouth → Oesophagus → Stomach → Duodenum → Ileum → Colon → Rectum → Anus ) from Associated Organs ( Salivary glands, Liver, Gall bladder, Pancreas ). Remember: Liver = produces bile ; Gall bladder = stores bile ; Pancreas = secretes amylase, trypsin & lipase into the duodenum .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Phân biệt rõ Ống tiêu hóa chính (Alimentary canal) : Mouth → Oesophagus → Stomach → Duodenum → Ileum → Colon → Rectum → Anus với Các cơ quan phụ trợ (Associated organs) : Salivary glands, Liver, Gall bladder, Pancreas . Nhớ kỹ: Liver sản xuất mật (produces bile) ; Gall bladder dự trữ mật (stores bile) ; Pancreas tiết amylase, trypsin, lipase đổ vào duodenum .",
+      "duration": 59.85,
+      "startTime": 2148.56,
+      "endTime": 2208.41,
+      "audioUrl": "/audio/lectures/biology/7/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never mix up the Liver and Gall Bladder on labelling questions! The large dark-red lobed organ is the liver (makes bile); the small pear-shaped sac tucked underneath it is the gall bladder (only stores & releases bile via the bile duct).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cẩn thận nhầm lẫn Liver (Gan) và Gall Bladder (Túi mật) khi điền chú thích sơ đồ! Tạng lớn màu nâu đỏ phía trên là gan (tạo ra mật), còn túi nhỏ hình quả lê nằm nép ngay mặt dưới gan là túi mật (chỉ chứa và cô đặc mật).",
+      "duration": 35.12,
+      "startTime": 2208.41,
+      "endTime": 2243.53,
+      "audioUrl": "/audio/lectures/biology/7/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Cơ quan nội tạng",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Touch or hover directly over organs or labels on the anatomical diagram to view physiological roles. Stomach. Muscular sac that stores food and churns it into acidic chyme. Hydrochloric Acid (HCl): Kills ingested bacteria and creates optimal pH 1.5–2.0. Pepsin Enzyme: Protease active at low pH; digests proteins into soluble polypeptides.",
+      "vi": "Chạm hoặc lướt chuột trực tiếp vào các Cơ quan nội tạng hoặc Tên gọi (Labels) trên hình để xem chức năng chi tiết. Stomach (Dạ dày). Túi cơ lớn chứa thức ăn và dịch vị. Function: Secretion of gastric juice and hydrochloric acid (HCl) .- Proteins are digested by protease (pepsin).- Germs/bacteria are killed by HCl.",
+      "duration": 54.06,
+      "startTime": 2243.53,
+      "endTime": 2297.59,
+      "audioUrl": "/audio/lectures/biology/7/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Through which sequence of regions in the alimentary canal does an undigested cellulose fibre pass from ingestion to egestion? A. Mouth → Oesophagus → Stomach → Pancreas → Ileum → Colon → Anus B. Mouth → Oesophagus → Stomach → Duodenum → Ileum → Colon → Rectum → Anus C. Mouth → Trachea → Stomach → Duodenum → Liver → Colon → Rectum → Anus D. Mouth → Oesophagus → Stomach → Ileum → Duodenum → Rectum → Colon → Anus ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Food travels strictly along the lumen of the alimentary canal: mouth → oesophagus → stomach → duodenum → ileum (small intestine) → colon → rectum → anus . Food never passes through associated glands like the pancreas (A) or liver (C), nor through the trachea (C), and duodenum always precedes ileum while colon precedes rectum (eliminating D).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Through which sequence of regions in the alimentary canal does an undigested cellulose fibre pass from ingestion to egestion? (Một sợi chất xơ cellulose không tiêu hóa sẽ đi qua trình tự các bộ phận nào của ống tiêu hóa từ lúc ăn vào đến khi thải ra?) A. Mouth → Oesophagus → Stomach → Pancreas → Ileum → Colon → Anus B. Mouth → Oesophagus → Stomach → Duodenum → Ileum → Colon → Rectum → Anus C. Mouth → Trachea → Stomach → Duodenum → Liver → Colon → Rectum → Anus D. Mouth → Oesophagus → Stomach → Ileum → Duodenum → Rectum → Colon → Anus ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Thức ăn chỉ đi trong lòng ống tiêu hóa theo đúng thứ tự: miệng (mouth) → thực quản (oesophagus) → dạ dày (stomach) → tá tràng (duodenum) → hồi tràng (ileum) → kết tràng (colon) → trực tràng (rectum) → hậu môn (anus) . Thức ăn không đi vào tụy (A), gan hay khí quản (C), và duodenum đứng trước ileum (loại D).",
+      "duration": 136.69,
+      "startTime": 2297.59,
+      "endTime": 2434.28,
+      "audioUrl": "/audio/lectures/biology/7/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] A patient has a blockage in the duct leading from the pancreas to the duodenum.(a) Name the two parts of the small intestine in the order food passes through them. [2](b) Predict and explain how this blockage affects the patient's body mass over several weeks. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) First: duodenum [1m]; second: ileum [1m]. (b) Body mass will decrease [1m] because pancreatic juice containing amylase, protease (trypsin), and lipase cannot reach the duodenum, so far fewer carbohydrates, proteins, and fats are chemically digested into small soluble molecules for absorption [1m]. 💡 Intuition Check: The duodenum is the \"mixing crossroads\" where acidic chyme from the stomach meets alkaline bile (from gall bladder) and enzyme-rich pancreatic juice!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] A patient has a blockage in the duct leading from the pancreas to the duodenum.(a) Name the two parts of the small intestine in the order food passes through them. (b) Predict and explain how this blockage affects the patient's body mass over several weeks. (Một bệnh nhân bị tắc ống dẫn từ tuyến tụy sang tá tràng. (a) Kể tên hai phần của ruột non theo thứ tự thức ăn đi qua. (b) Dự đoán và giải thích ảnh hưởng của sự tắc nghẽn này lên khối lượng cơ thể bệnh nhân sau vài tuần. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Phần đầu: duodenum (tá tràng) ; phần sau: ileum (hồi tràng) . (b) Khối lượng cơ thể sẽ giảm sút (decreases) vì dịch tụy chứa amylase, protease (trypsin) và lipase không thể đổ vào tá tràng, khiến tinh bột, protein và chất béo không được tiêu hóa triệt để thành các phân tử nhỏ tan được để hấp thụ vào máu . 💡 Kiểm tra bản chất: Duodenum (tá tràng) chính là \"ngã ba vàng\" nơi vị trấp axit từ dạ dày gặp dịch mật kiềm (từ túi mật) và dịch tụy giàu enzyme!",
+      "duration": 136.62,
+      "startTime": 2434.28,
+      "endTime": 2570.9,
+      "audioUrl": "/audio/lectures/biology/7/s04_b06.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🧪 5. CHEMICAL DIGESTION & ENZYMES (Tiêu hóa hóa học & Enzyme)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🧪 5. CHEMICAL DIGESTION & ENZYMES.",
+      "vi": "🧪 5. CHEMICAL DIGESTION & ENZYMES (Tiêu hóa hóa học & Enzyme).",
+      "duration": 9.37,
+      "startTime": 2570.9,
+      "endTime": 2580.27,
+      "audioUrl": "/audio/lectures/biology/7/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Starch and protein chains are like freight trains too long to fit through station turnstiles . In starch digestion, amylase uncouples the train into 2-carriage pairs ( maltose ), and maltase standing right at the turnstile gate ( epithelium membrane ) splits each pair into single passengers ( glucose ) ready to step straight into the blood!",
+      "vi": "🎯 Hình dung đời thường: Chuỗi tinh bột dài giống như đoàn tàu hàng quá dài không thể lọt qua cửa soát vé nhà ga : trước tiên amylase cắt đoàn tàu thành từng cặp 2 toa ( maltose ), sau đó maltase đứng chốt ngay tại cổng soát vé ( màng tế bào biểu mô ruột non ) tách đôi từng cặp thành hành khách đơn lẻ ( glucose ) bước thẳng vào máu!",
+      "duration": 46.51,
+      "startTime": 2580.27,
+      "endTime": 2626.78,
+      "audioUrl": "/audio/lectures/biology/7/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Starch → (amylase in mouth & duodenum) → maltose → ( maltase on small intestine epithelium membrane ) → glucose . 2) Protein → ( pepsin in stomach, acidic pH ~2 from HCl) → polypeptides → ( trypsin from pancreas in duodenum, alkaline pH ~8 ) → amino acids . 3) Fats/Oils → ( lipase from pancreas in duodenum) → fatty acids + glycerol .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Starch → (amylase ở miệng & tá tràng) → maltose → ( maltase gắn trên membranes of the epithelium lining the small intestine ) → glucose . 2) Protein → ( pepsin ở dạ dày, pH axit ~2 nhờ HCl) → polypeptides → ( trypsin của tụy ở tá tràng, pH kiềm ~8 nhờ mật trung hòa) → amino acids . 3) Fats/Oils → ( lipase ở tá tràng) → fatty acids + glycerol .",
+      "duration": 61.59,
+      "startTime": 2626.78,
+      "endTime": 2688.37,
+      "audioUrl": "/audio/lectures/biology/7/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Examiners love asking: \"Why does salivary amylase stop working in the stomach, and why doesn't pepsin keep working in the duodenum?\" Answer using pH denaturation : stomach HCl (~pH 2) denatures neutral amylase, whereas alkaline bile + pancreatic juice (~pH 8) in the duodenum denatures acidic pepsin!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đề thi rất hay hỏi: \"Vì sao amylase nước bọt ngừng hoạt động khi xuống dạ dày, và pepsin ngừng hoạt động khi sang tá tràng?\" Phải giải thích bằng biến tính do pH (denaturation) : HCl dạ dày (~pH 2) làm biến tính tâm hoạt động của amylase, còn dịch mật kiềm (~pH 8) ở tá tràng làm biến tính pepsin!",
+      "duration": 50.52,
+      "startTime": 2688.37,
+      "endTime": 2738.89,
+      "audioUrl": "/audio/lectures/biology/7/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "Sự phân cắt các phân tử lớn, không tan thành các phân tử nhỏ, tan trong nước nhờ...",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "Carbohydrases • Amylase: Starch ➔ Maltose (reducing sugar). Produced by salivary glands and pancreas.• Maltase (Supplement 7.4.6b): Maltose ➔ Glucose. Located on the membranes of the epithelium lining the small intestine.",
+      "vi": "Sự phân cắt các phân tử lớn, không tan thành các phân tử nhỏ, tan trong nước nhờ các enzyme tiêu hóa chuyên biệt:",
+      "duration": 27.37,
+      "startTime": 2738.89,
+      "endTime": 2766.26,
+      "audioUrl": "/audio/lectures/biology/7/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "Carbohydrases (Enzyme tiêu hóa Tinh bột)",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "Proteases • Pepsin: Proteins ➔ Polypeptides in stomach at acidic pH 1.5–2.0.• Trypsin: Proteins/Polypeptides ➔ Peptides & Amino acids in duodenum at alkaline pH ~8.",
+      "vi": "Carbohydrases (Enzyme tiêu hóa Tinh bột) • Amylase: Starch ➔ Maltose. Tiết ra từ tuyến nước bọt (Mouth) và tuyến tụy (Duodenum).• Maltase (Supplement 7.4.6b): Maltose ➔ Glucose. Nằm cố định trên màng tế bào biểu mô lót thành ruột non.",
+      "duration": 36.37,
+      "startTime": 2766.26,
+      "endTime": 2802.63,
+      "audioUrl": "/audio/lectures/biology/7/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "Proteases (Enzyme tiêu hóa Protein)",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "Lipase • Lipase: Emulsified Lipids ➔ Fatty Acids + Glycerol .Secreted by pancreas into duodenum; requires bile salts for prior lipid emulsification.",
+      "vi": "Proteases (Enzyme tiêu hóa Protein) • Pepsin: Proteins ➔ Polypeptides trong dạ dày (hoạt động ở pH axit mạnh 1.5–2.0).• Trypsin: Proteins/Polypeptides ➔ Peptides & Amino acids trong tá tràng (hoạt động ở pH kiềm ~8).",
+      "duration": 32.68,
+      "startTime": 2802.63,
+      "endTime": 2835.31,
+      "audioUrl": "/audio/lectures/biology/7/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "Lipase (Enzyme tiêu hóa Chất béo)",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "Chemical digestion breaks down large insoluble molecules into small soluble molecules so they can be absorbed across the wall of the small intestine into the blood and lymph.",
+      "vi": "Lipase (Enzyme tiêu hóa Chất béo) • Lipase: Lipids (Fats & Oils) ➔ Fatty Acids + Glycerol .Do tuyến tụy tiết vào tá tràng; cần có muối mật (bile salts) nhũ tương hóa trước để tạo diện tích tiếp xúc lớn.",
+      "duration": 27.22,
+      "startTime": 2835.31,
+      "endTime": 2862.53,
+      "audioUrl": "/audio/lectures/biology/7/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "🧪 Vai trò Axit HCl trong Dịch vị (Core 7.4.5)",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "🧪 Hydrochloric Acid in Gastric Juice (Core 7.4.5) 1. Kills harmful microorganisms (pathogens/bacteria) ingested in food.2. Provides an acidic pH (~2.0) for optimum enzyme activity of pepsin in the stomach.",
+      "vi": "🧪 Vai trò Axit HCl trong Dịch vị (Core 7.4.5) 1. Tiêu diệt vi sinh vật có hại theo thức ăn đi vào.2. Tạo môi trường pH axit tối ưu (~2.0) cho enzyme pepsin hoạt động trong dạ dày.",
+      "duration": 34.62,
+      "startTime": 2862.53,
+      "endTime": 2897.15,
+      "audioUrl": "/audio/lectures/biology/7/s05_b08.mp3"
+    },
+    {
+      "id": "s05_b09",
+      "title": "⚖️ Trung hòa Axit nhờ Dịch mật Kiềm (Supplement 7.4.8)",
+      "selector": "[data-lecture-section=\"s05_b09\"]",
+      "en": "⚖️ Alkaline Bile Neutralisation (Supplement 7.4.8) Bile is an alkaline mixture (containing hydrogencarbonate ions, NO enzymes) that neutralises the acidic mixture of food and gastric juices entering the duodenum from the stomach, providing a suitable alkaline pH (~8) for amylase, trypsin, and lipase.",
+      "vi": "⚖️ Trung hòa Axit nhờ Dịch mật Kiềm (Supplement 7.4.8) Dịch mật là hỗn hợp kiềm (alkaline mixture, không chứa enzyme) giúp trung hòa hỗn hợp thức ăn mang tính axit từ dạ dày đổ sang tá tràng, tạo pH kiềm thích hợp (~8) cho amylase, trypsin và lipase.",
+      "duration": 39.95,
+      "startTime": 2897.15,
+      "endTime": 2937.1,
+      "audioUrl": "/audio/lectures/biology/7/s05_b09.mp3"
+    },
+    {
+      "id": "s05_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Where in the human digestive system is the enzyme maltase located, and what is its product? A. Secreted by salivary glands into the mouth; produces maltose B. Bound to the membranes of the epithelium lining the small intestine; produces glucose C. Secreted by gastric glands in the stomach wall; produces amino acids D. Stored in the gall bladder and released into the duodenum; produces simple sugars ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: In Syllabus 7.4.6(b), maltase is immobilised on the cell surface membranes of the epithelium lining the small intestine , where it hydrolyses the disaccharide maltose into glucose right at the site of absorption. Amylase (not maltase) produces maltose in the mouth/duodenum (A).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Where in the human digestive system is the enzyme maltase located, and what is its product? (Enzyme maltase nằm ở đâu trong hệ tiêu hóa người và sản phẩm của nó là gì?) A. Secreted by salivary glands into the mouth; produces maltose B. Bound to the membranes of the epithelium lining the small intestine; produces glucose C. Secreted by gastric glands in the stomach wall; produces amino acids D. Stored in the gall bladder and released into the duodenum; produces simple sugars ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Theo đúng Syllabus 7.4.6(b), maltase nằm trên màng tế bào biểu mô lót thành ruột non và phân giải maltose thành glucose ngay sát bề mặt hấp thụ. Amylase mới là enzyme tạo maltose ở miệng/tá tràng (loại A).",
+      "duration": 111.88,
+      "startTime": 2937.1,
+      "endTime": 3048.98,
+      "audioUrl": "/audio/lectures/biology/7/s05_b10.mp3"
+    },
+    {
+      "id": "s05_b11",
+      "title": "two",
+      "selector": "[data-lecture-section=\"s05_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State two functions of hydrochloric acid in gastric juice. [2](b) Compare the site of action and optimum pH of pepsin and trypsin , and explain how a suitable pH for trypsin is achieved in the duodenum. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Kills harmful microorganisms/bacteria in food [1m]. 2. Provides an acidic optimum pH (~2) for pepsin enzyme activity [1m]. (b) Pepsin acts in the stomach at an acidic optimum pH (~2) , whereas trypsin acts in the small intestine (duodenum) at an alkaline optimum pH (~8) [2m]. Alkaline bile (and pancreatic juice) neutralises the acidic chyme entering from the stomach to create this alkaline pH [1m]. 💡 Intuition Check: Pepsin = Stomach + Acidic (HCl). Trypsin = Small Intestine + Alkaline (Bile neutralisation). Both digest proteins!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State two functions of hydrochloric acid in gastric juice. (b) Compare the site of action and optimum pH of pepsin and trypsin , and explain how a suitable pH for trypsin is achieved in the duodenum. ((a) Nêu hai chức năng của axit HCl trong dịch vị. (b) So sánh nơi hoạt động và pH tối ưu của pepsin và trypsin, đồng thời giải thích cách tạo ra pH phù hợp cho trypsin tại tá tràng. ) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Tiêu diệt vi sinh vật có hại trong thức ăn . 2. Tạo pH axit tối ưu (~2) cho hoạt động của enzyme pepsin . (b) Pepsin hoạt động ở dạ dày (stomach) với pH tối ưu axit (~2) , trong khi trypsin hoạt động ở ruột non / tá tràng (small intestine) với pH tối ưu kiềm (~8) . Dịch mật mang tính kiềm (alkaline bile) trung hòa hỗn hợp thức ăn axit từ dạ dày đổ sang để tạo môi trường kiềm này . 💡 Kiểm tra bản chất: Mẹo nhớ nhanh hai protease: Pepsin = Dạ dày + Axit (HCl). Trypsin = Ruột non + Kiềm (Mật trung hòa).",
+      "duration": 153.7,
+      "startTime": 3048.98,
+      "endTime": 3202.68,
+      "audioUrl": "/audio/lectures/biology/7/s05_b11.mp3"
+    },
+    {
+      "id": "s06_hdr",
+      "title": "🔬 6. ABSORPTION & ADAPTATIONS OF VILLI (Hấp thụ & Cấu tạo Nhung mao)",
+      "selector": "[data-lecture-section=\"s06_hdr\"]",
+      "en": "🔬 6. ABSORPTION & ADAPTATIONS OF VILLI.",
+      "vi": "🔬 6. ABSORPTION & ADAPTATIONS OF VILLI (Hấp thụ & Cấu tạo Nhung mao).",
+      "duration": 11.07,
+      "startTime": 3202.68,
+      "endTime": 3213.75,
+      "audioUrl": "/audio/lectures/biology/7/s06_hdr.mp3"
+    },
+    {
+      "id": "s06_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s06_b01\"]",
+      "en": "🎯 Real-Life Analogy: Why is a bath towel covered in millions of tiny fluffy loops instead of being a flat plastic sheet? Those loops multiply surface area so water soaks in instantly! Your small intestine lining folds into millions of villi , and each epithelial cell has microscopic microvilli — creating a tennis-court-sized absorbing surface inside your abdomen.",
+      "vi": "🎯 Hình dung đời thường: Tại sao chiếc khăn tắm bông xù thấm nước nhanh gấp chục lần tấm áo mưa phẳng? Nhờ hàng triệu sợi bông nhỏ làm tăng diện tích tiếp xúc! Tương tự, thành ruột non gấp nếp thành hàng triệu lông ruột (villi) , trên mỗi tế bào lại phủ vi nhung mao (microvilli) — mở rộng diện tích hấp thụ tương đương cả một sân quần vợt!",
+      "duration": 46.27,
+      "startTime": 3213.75,
+      "endTime": 3260.02,
+      "audioUrl": "/audio/lectures/biology/7/s06_b01.mp3"
+    },
+    {
+      "id": "s06_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s06_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Link every structural feature of a villus to its transport advantage: 1) Villi & microvilli → massive surface area . 2) One-cell-thick epithelium → minimal diffusion distance . 3) Dense network of blood capillaries → absorbs glucose & amino acids and maintains a steep concentration gradient. 4) Central lacteal → absorbs fatty acids & glycerol into lymph. Also remember: most water is absorbed in the small intestine (some in the colon).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nối từng cấu trúc của villus với chức năng hấp thụ: 1) Villi & microvilli → diện tích bề mặt cực lớn. 2) Biểu mô dày 1 tế bào → khoảng cách khuếch tán ngắn nhất. 3) Mạng lưới mao mạch máu (blood capillaries) → hấp thụ glucose & amino acids , duy trì chênh lệch nồng độ. 4) Mạch dưỡng chấp (lacteal) → hấp thụ fatty acids & glycerol . Nhớ thêm: phần lớn nước hấp thụ ở ruột non , một phần ở colon .",
+      "duration": 68.36,
+      "startTime": 3260.02,
+      "endTime": 3328.38,
+      "audioUrl": "/audio/lectures/biology/7/s06_b02.mp3"
+    },
+    {
+      "id": "s06_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s06_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students frequently think the colon (large intestine) absorbs most of the water! Check Syllabus 7.5.2: most water (~80–90%) is absorbed in the small intestine , while the colon absorbs only the remaining smaller fraction to solidify faeces.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Học sinh rất hay viết nhầm \"ruột già (colon) hấp thụ phần lớn nước\"! Theo chuẩn Syllabus 7.5.2: phần lớn nước (most water) được hấp thụ ở ruột non (small intestine) ; ruột già (colon) chỉ hấp thụ nốt phần nước còn lại để cô đặc phân.",
+      "duration": 38.48,
+      "startTime": 3328.38,
+      "endTime": 3366.86,
+      "audioUrl": "/audio/lectures/biology/7/s06_b03.mp3"
+    },
+    {
+      "id": "s06_b04",
+      "title": "Ruột non (Small intestine)",
+      "selector": "[data-lecture-section=\"s06_b04\"]",
+      "en": "The small intestine is the primary region where digested nutrients and most water are absorbed (with additional water absorbed in the colon ):",
+      "vi": "Ruột non (Small intestine) là nơi hấp thụ các chất dinh dưỡng và phần lớn lượng nước (một phần nước còn lại được hấp thụ tại ruột già / colon ):",
+      "duration": 18.53,
+      "startTime": 3366.86,
+      "endTime": 3385.39,
+      "audioUrl": "/audio/lectures/biology/7/s06_b04.mp3"
+    },
+    {
+      "id": "s06_b05",
+      "title": "🔑 Trọng tâm Syllabus 7.5 (Hấp thụ Nước & Dưỡng chất)",
+      "selector": "[data-lecture-section=\"s06_b05\"]",
+      "en": "🔑 Syllabus 7.5 Key Absorption Facts. Water Absorption (7.5.2): Most water is absorbed in the small intestine , while some remaining water is absorbed from the colon (large intestine). Blood Capillaries (7.5.5): Absorb water-soluble glucose and amino acids (by diffusion and active transport) and carry them via the hepatic portal vein to the liver. Lacteal (7.5.5): Central lymphatic vessel that absorbs fatty acids and glycerol , transporting reformed lipid droplets in lymph to the bloodstream. Goblet Cells: Scattered along the one-cell-thick epithelium, secreting protective mucus.",
+      "vi": "🔑 Trọng tâm Syllabus 7.5 (Hấp thụ Nước & Dưỡng chất). Hấp thụ nước (Water Absorption - 7.5.2): Phần lớn nước (most water) được hấp thụ tại ruột non (small intestine) , và một phần nước còn lại được tái hấp thụ ở ruột già / kết tràng (colon). Mao mạch máu (Blood Capillaries - 7.5.5): Hấp thụ glucose và axit amin (amino acids) bằng khuếch tán & vận chuyển tích cực, đưa về gan qua tĩnh mạch cửa gan. Mạch dưỡng chấp (Central Lacteal - 7.5.5): Mạch bạch huyết ở trục giữa lông ruột chuyên hấp thụ axit béo và glycerol vào hệ bạch huyết. Tế bào đài (Goblet Cells): Nằm xen kẽ trên biểu mô tiết chất nhầy (mucus) bảo vệ niêm mạc ruột.",
+      "duration": 83.89,
+      "startTime": 3385.39,
+      "endTime": 3469.28,
+      "audioUrl": "/audio/lectures/biology/7/s06_b05.mp3"
+    },
+    {
+      "id": "s06_b06",
+      "title": "Diện tích bề mặt khổng lồ (Massive Surface Area)",
+      "selector": "[data-lecture-section=\"s06_b06\"]",
+      "en": "Massive Surface Area Millions of finger-like villi and sub-microscopic microvilli multiply absorption area thousands of times.",
+      "vi": "Diện tích bề mặt khổng lồ Hàng triệu nếp gấp nhung mao ( Villi ) và vi nhung mao ( Microvilli ) tăng diện tích tiếp xúc lên hàng ngàn lần.",
+      "duration": 18.33,
+      "startTime": 3469.28,
+      "endTime": 3487.61,
+      "audioUrl": "/audio/lectures/biology/7/s06_b06.mp3"
+    },
+    {
+      "id": "s06_b07",
+      "title": "Khoảng cách khuếch tán cực ngắn (Thin Epithelium)",
+      "selector": "[data-lecture-section=\"s06_b07\"]",
+      "en": "Short Diffusion Distance Epithelium is only one cell thick , allowing rapid diffusion and active transport into capillaries.",
+      "vi": "Khoảng cách khuếch tán cực ngắn (Thin Epithelium) Lớp biểu mô chỉ dày đúng 1 lớp tế bào , giúp chất dinh dưỡng đi vào máu nhanh nhất.",
+      "duration": 17.39,
+      "startTime": 3487.61,
+      "endTime": 3505.0,
+      "audioUrl": "/audio/lectures/biology/7/s06_b07.mp3"
+    },
+    {
+      "id": "s06_b08",
+      "title": "Mao mạch dày đặc (Dense Capillary Network)",
+      "selector": "[data-lecture-section=\"s06_b08\"]",
+      "en": "Dense Capillaries Dense blood capillary network maintains a steep concentration gradient, converging into the Hepatic Portal Vein to the liver.",
+      "vi": "Mao mạch dày đặc Dòng máu luân chuyển liên tục duy trì chênh lệch nồng độ lớn, đổ về Tĩnh mạch cửa gan.",
+      "duration": 16.33,
+      "startTime": 3505.0,
+      "endTime": 3521.33,
+      "audioUrl": "/audio/lectures/biology/7/s06_b08.mp3"
+    },
+    {
+      "id": "s06_b09",
+      "title": "Mạch dưỡng chấp trung tâm (Central Lacteal)",
+      "selector": "[data-lecture-section=\"s06_b09\"]",
+      "en": "Central Lacteal Lymphatic vessel in centre of each villus for absorbing fatty acids and glycerol into lymph fluid.",
+      "vi": "Mạch dưỡng chấp trung tâm (Central Lacteal) Mạch bạch huyết ở lõi nhung mao chuyên hấp thụ axit béo và glycerol vào hệ bạch huyết.",
+      "duration": 16.95,
+      "startTime": 3521.33,
+      "endTime": 3538.28,
+      "audioUrl": "/audio/lectures/biology/7/s06_b09.mp3"
+    },
+    {
+      "id": "s06_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s06_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ After a meal of bread, chicken, and olive oil, which digested end-products enter the central lacteal of a villus rather than the blood capillaries? A. Glucose and amino acids B. Maltose and polypeptides C. Fatty acids and glycerol D. Mineral ions and Vitamin C ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Water-soluble glucose , amino acids , mineral ions, and Vitamin C pass directly into the dense blood capillaries of the villus. Lipid digestion products — fatty acids and glycerol — enter the epithelial cells, recombine into microscopic fat droplets, and pass into the central lacteal (lymphatic vessel). Maltose and polypeptides (B) are too large and not final absorbed products.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ After a meal of bread, chicken, and olive oil, which digested end-products enter the central lacteal of a villus rather than the blood capillaries? (Sau bữa ăn gồm bánh mì, thịt gà và dầu ô-liu, sản phẩm tiêu hóa cuối cùng nào đi vào mạch dưỡng chấp trung tâm (lacteal) của lông ruột thay vì đi vào mao mạch máu?) A. Glucose and amino acids B. Maltose and polypeptides C. Fatty acids and glycerol D. Mineral ions and Vitamin C ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Các chất tan trong nước như glucose , amino acids , ion khoáng và Vitamin C đi thẳng vào mao mạch máu (blood capillaries) . Ngược lại, sản phẩm tiêu hóa của dầu mỡ là fatty acids và glycerol đi vào mạch dưỡng chấp trung tâm (central lacteal) thuộc hệ bạch huyết. Loại B vì maltose và polypeptide chưa phải sản phẩm tiêu hóa cuối cùng.",
+      "duration": 114.86,
+      "startTime": 3538.28,
+      "endTime": 3653.14,
+      "audioUrl": "/audio/lectures/biology/7/s06_b10.mp3"
+    },
+    {
+      "id": "s06_b11",
+      "title": "giảm mạnh diện tích bề mặt bên trong (internal surface area)",
+      "selector": "[data-lecture-section=\"s06_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Coeliac disease damages the lining of the small intestine, flattening the villi and destroying microvilli.Explain why a person with untreated coeliac disease may suffer from severe weight loss and fatigue despite eating a balanced diet. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. Loss of villi and microvilli drastically reduces the internal surface area of the small intestine [1m].2. Less membrane-bound maltase and slower diffusion/active transport mean fewer digested nutrients (glucose, amino acids, fatty acids) are absorbed into blood capillaries and lacteals [1m].3. Lower glucose uptake reduces cellular aerobic respiration , causing fatigue and forcing the body to respire stored fat/muscle (weight loss) [1m].4. Reduced iron and amino acid absorption impairs haemoglobin synthesis (anaemia) and tissue repair [1m]. 💡 Intuition Check: Every \"damaged villi\" exam question follows the chain: Less Surface Area → Less Absorption of Glucose/Amino Acids → Less Respiration & Assimilation → Fatigue & Weight Loss.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Coeliac disease damages the lining of the small intestine, flattening the villi and destroying microvilli.Explain why a person with untreated coeliac disease may suffer from severe weight loss and fatigue despite eating a balanced diet. (Bệnh Coeliac làm tổn thương niêm mạc ruột non, khiến các lông ruột bị san phẳng và mất vi nhung mao. Giải thích vì sao người mắc bệnh này bị sụt cân nghiêm trọng và mệt mỏi dù ăn chế độ cân bằng. ) ✍️ Lời giải chi tiết theo thang điểm: 1. Mất các nếp gấp villi và microvilli làm giảm mạnh diện tích bề mặt bên trong của ruột non .2. Tốc độ khuếch tán và vận chuyển tích cực giảm khiến ít chất dinh dưỡng được hấp thụ vào mao mạch máu và lacteal hơn .3. Thiếu glucose làm giảm tốc độ hô hấp hiếu khí (aerobic respiration) tạo năng lượng nên gây mệt mỏi, buộc cơ thể phải phân giải mỡ/cơ dự trữ gây sụt cân .4. Giảm hấp thụ sắt (iron) và axit amin làm giảm tạo haemoglobin (thiếu máu) và giảm tái tạo mô . 💡 Kiểm tra bản chất: Chuỗi lập luận kinh điển cho bài toán tổn thương lông ruột: Giảm diện tích bề mặt → Giảm hấp thụ Glucose/Amino acid → Giảm hô hấp tế bào & đồng hóa → Mệt mỏi & Sụt cân.",
+      "duration": 152.43,
+      "startTime": 3653.14,
+      "endTime": 3805.57,
+      "audioUrl": "/audio/lectures/biology/7/s06_b11.mp3"
     }
   ]
 }

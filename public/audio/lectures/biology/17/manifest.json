@@ -2,118 +2,591 @@
   "lectureId": "77f1f7b8-f30e-4b0b-89e2-2e2482242791",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 17: Inheritance",
-  "totalDuration": 334.46,
+  "totalDuration": 3154.09,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_genetic_code": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-genetic-code": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_cell_division": {
-      "start": 3,
+    "s01_int": {
+      "start": 2,
       "end": 4
     },
-    "sec-cell-division": {
-      "start": 3,
-      "end": 4
+    "s01_p1_sub01": {
+      "start": 8,
+      "end": 9
     },
-    "sec_monohybrid_inheritance": {
-      "start": 5,
-      "end": 6
+    "s01_p2_sub01": {
+      "start": 8,
+      "end": 9
     },
-    "sec-monohybrid-inheritance": {
-      "start": 5,
-      "end": 6
+    "s01_wex": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 11
+    },
+    "s02_int": {
+      "start": 13,
+      "end": 15
+    },
+    "s02_wex": {
+      "start": 19,
+      "end": 20
+    },
+    "s02_hdr": {
+      "start": 12,
+      "end": 20
+    },
+    "s03_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s03_p1_sub01": {
+      "start": 31,
+      "end": 32
+    },
+    "s03_p2_sub01": {
+      "start": 31,
+      "end": 32
+    },
+    "s03_wex": {
+      "start": 33,
+      "end": 34
+    },
+    "s03_hdr": {
+      "start": 21,
+      "end": 34
+    },
+    "s04_int": {
+      "start": 36,
+      "end": 38
+    },
+    "s04_p1_sub01": {
+      "start": 42,
+      "end": 43
+    },
+    "s04_p2_sub01": {
+      "start": 42,
+      "end": 43
+    },
+    "s04_wex": {
+      "start": 44,
+      "end": 45
+    },
+    "s04_hdr": {
+      "start": 35,
+      "end": 45
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 17: Cơ chế Di truyền (Inheritance)",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 17: Inheritance. Inheritance is the transmission of genetic information from generation to generation. In this lesson, we study chromosomes and the genetic code, the stages of protein synthesis, mitosis versus meiosis cell divisions, stem cells, monohybrid crosses with Punnett squares, ABO blood codominance, and pedigree diagrams.",
-      "vi": "Chào mừng các bạn đến với Bài 17: Cơ chế Di truyền (Inheritance). Di truyền là sự truyền đạt thông tin di truyền qua các thế hệ. Trong bài học này, chúng ta sẽ học về nhiễm sắc thể và mã di truyền, các giai đoạn tổng hợp protein, phân bào nguyên phân và giảm phân, tế bào gốc, lai đơn tính với bảng Punnett, đồng trội nhóm máu ABO và sơ đồ phả hệ.",
-      "duration": 44.99,
+      "title": "Chuyên đề 17: Cơ chế Di truyền (Inheritance)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 17: Inheritance. Genetic Code, Protein Synthesis, Mitosis vs Meiosis, Punnett Squares & Blood Codominance.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Chuyên đề 17: Cơ chế Di truyền (Inheritance). Mã di truyền, Tổng hợp protein, Nguyên phân/Giảm phân, Bảng Punnett & Nhóm máu ABO.",
+      "duration": 31.73,
       "startTime": 0.0,
-      "endTime": 44.99,
+      "endTime": 31.73,
       "audioUrl": "/audio/lectures/biology/17/intro.mp3"
     },
     {
-      "id": "sec_genetic_code",
-      "title": "1. Cấu trúc Di truyền: Nhiễm sắc thể, Gen & Allele",
-      "selector": "#sec-genetic-code",
-      "en": "Section 1: Genetic hierarchy: A chromosome is a thread-like structure of DNA carrying genes. A gene is a length of DNA coding for a protein. An allele is an alternative version of a gene. A diploid nucleus has two complete sets of chromosomes, while a haploid gamete nucleus contains a single set.",
-      "vi": "Mục 1: Trật tự di truyền: Nhiễm sắc thể là cấu trúc sợi dạng chuỗi của DNA mang các gen. Gen là một đoạn DNA mã hóa cho một phân tử protein. Allele là các trạng thái biểu hiện khác nhau của cùng một gen. Nhân lưỡng bội chứa hai bộ nhiễm sắc thể hoàn chỉnh, còn nhân đơn bội ở giao tử chỉ chứa một bộ đơn.",
-      "duration": 59.13,
-      "startTime": 44.99,
-      "endTime": 104.12,
-      "audioUrl": "/audio/lectures/biology/17/sec_genetic_code.mp3"
+      "id": "s01_hdr",
+      "title": "🧬 1. CHROMOSOMES, DNA & PROTEIN SYNTHESIS (Cấu trúc Di truyền & Tổng hợp Protein)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧬 1. CHROMOSOMES, DNA & PROTEIN SYNTHESIS.",
+      "vi": "🧬 1. CHROMOSOMES, DNA & PROTEIN SYNTHESIS (Cấu trúc Di truyền & Tổng hợp Protein).",
+      "duration": 12.59,
+      "startTime": 31.73,
+      "endTime": 44.32,
+      "audioUrl": "/audio/lectures/biology/17/s01_hdr.mp3"
     },
     {
-      "id": "card_protein_synthesis",
-      "title": "⚙️ Quá trình Tổng hợp Protein (Transcription & Translation)",
-      "selector": "#card-protein-synthesis",
-      "en": "Protein synthesis mechanism: In the nucleus, the DNA code is transcribed into a complementary single-stranded messenger RNA molecule. mRNA travels out through nuclear pores to a ribosome in the cytoplasm. The ribosome reads the mRNA triplet codon sequence, linking specific amino acids together into a polypeptide protein chain.",
-      "vi": "Cơ chế tổng hợp protein: Tại nhân tế bào, mã DNA được phiên mã thành phân tử mARN sợi đơn bổ sung. mARN đi qua lỗ màng nhân ra tế bào chất đến ribosome. Ribosome đọc trình tự bộ ba mã sao (codon) trên mARN và liên kết các axit amin tương ứng thành chuỗi polypeptide hoàn chỉnh.",
-      "duration": 41.58,
-      "startTime": 104.12,
-      "endTime": 145.7,
-      "audioUrl": "/audio/lectures/biology/17/card_protein_synthesis.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of DNA in the nucleus as a priceless master recipe book locked inside a library vault: you never take the master book out to the messy kitchen! Instead, the cell copies just one recipe onto a disposable slip of paper ( mRNA ), carries it out to the kitchen counter ( ribosome ), and links ingredients ( amino acids ) in exact order to fold a working tool ( protein ).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung DNA trong nhân tế bào như cuốn sách công thức gốc quý giá khóa chặt trong kho lưu trữ: ta không bao giờ mang sách gốc ra gian bếp lộn xộn! Thay vào đó, tế bào sao chép đúng 1 công thức cần nấu ra tờ giấy nháp ( mRNA ), mang ra bàn bếp ( ribosome ) để lắp các nguyên liệu ( amino acid ) theo đúng thứ tự tạo thành công cụ hoạt động ( protein ).",
+      "duration": 51.76,
+      "startTime": 44.32,
+      "endTime": 96.08,
+      "audioUrl": "/audio/lectures/biology/17/s01_b01.mp3"
     },
     {
-      "id": "sec_cell_division",
-      "title": "2. Phân bào: Nguyên phân (Mitosis) & Giảm phân (Meiosis)",
-      "selector": "#sec-cell-division",
-      "en": "Section 2: Nuclear divisions: Mitosis is nuclear division producing two genetically identical diploid cells for growth, tissue repair, and asexual reproduction. Meiosis is reduction division producing four genetically distinct haploid gametes, halving chromosome number for sexual reproduction.",
-      "vi": "Mục 2: Phân chia nhân: Nguyên phân là phân bào tạo ra hai tế bào con lưỡng bội giống hệt nhau về mặt di truyền phục vụ sinh trưởng, phục hồi mô tổn thương và sinh sản vô tính. Giảm phân là phân bào giảm nhiễm tạo ra bốn giao tử đơn bội biến dị di truyền, giảm một nửa số nhiễm sắc thể phục vụ sinh sản hữu tính.",
-      "duration": 50.54,
-      "startTime": 145.7,
-      "endTime": 196.24,
-      "audioUrl": "/audio/lectures/biology/17/sec_cell_division.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Base sequence → Amino acid sequence → 3D shape: Changing DNA bases alters amino acid order, changing the 3D active/binding site of enzymes, membrane carriers, or neurotransmitter receptors. 2) mRNA pathway (6 points): Gene stays in nucleus → mRNA copy made in nucleus → mRNA moves to cytoplasm → passes through ribosome → ribosome assembles amino acids into protein → sequence dictated by mRNA bases. 3) Gene expression: Every body cell has the same genes, but only expresses the genes coding for the proteins that cell needs.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Trình tự base → Trình tự amino acid → Hình dạng 3D: Đổi thứ tự base làm đổi hình dạng không gian 3D của enzymes , membrane carriers hoặc receptors for neurotransmitters . 2) Chuỗi 6 ý tổng hợp protein bằng mRNA: Gen ở lại trong nhân → mRNA là bản sao tạo trong nhân → đi ra tế bào chất → đi qua ribosome → ribosome lắp ráp các amino acid thành protein → theo trình tự base trên mRNA. 3) Biểu hiện gen: Mọi tế bào cơ thể có chung bộ gen nhưng chỉ bật các gen cần thiết.",
+      "duration": 81.64,
+      "startTime": 96.08,
+      "endTime": 177.72,
+      "audioUrl": "/audio/lectures/biology/17/s01_b02.mp3"
     },
     {
-      "id": "card_stem_cells",
-      "title": "💡 Tế bào Gốc (Stem Cells)",
-      "selector": "#card-stem-cells",
-      "en": "Stem cells: Unspecialised cells that retain the ability to divide indefinitely by mitosis and differentiate into distinct specialised cell types. Embryonic stem cells can form any body cell, whereas adult bone marrow stem cells differentiate primarily into blood cells.",
-      "vi": "Tế bào gốc: Những tế bào chưa biệt hóa duy trì khả năng phân chia nguyên phân liên tục và có thể biệt hóa thành các loại tế bào chuyên trách khác nhau. Tế bào gốc phôi có thể phát triển thành bất kỳ loại tế bào nào, trong khi tế bào gốc tủy xương người lớn chủ yếu biệt hóa thành các tế bào máu.",
-      "duration": 33.38,
-      "startTime": 196.24,
-      "endTime": 229.62,
-      "audioUrl": "/audio/lectures/biology/17/card_stem_cells.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write that \"DNA leaves the nucleus to go to the ribosome\" or that \"genes turn into proteins\" — the gene (DNA) remains in the nucleus , and mRNA carries the copy to the ribosome!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG viết \"DNA đi ra khỏi nhân tới ribosome\"! Gen (DNA) luôn nằm cố định trong nhân , chỉ có phân tử mRNA di chuyển ra tế bào chất!",
+      "duration": 27.77,
+      "startTime": 177.72,
+      "endTime": 205.49,
+      "audioUrl": "/audio/lectures/biology/17/s01_b03.mp3"
     },
     {
-      "id": "sec_monohybrid_inheritance",
-      "title": "3. Di truyền Đơn gen, Bảng lai Punnett & Giới tính",
-      "selector": "#sec-monohybrid-inheritance",
-      "en": "Section 3: Monohybrid inheritance: Genotype is the genetic makeup; phenotype is the observable feature. A heterozygous cross between two carriers yields a classic three-to-one phenotypic ratio. Sex is determined by XX in human females and XY in human males, giving a fifty percent probability of each sex at conception.",
-      "vi": "Mục 3: Di truyền đơn gen: Kiểu gen là tổ hợp các gen; kiểu hình là đặc điểm biểu hiện ra ngoài quan sát được. Phép lai giữa hai cá thể dị hợp tử tạo tỉ lệ phân ly kiểu hình kinh điển 3 trội : 1 lặn. Giới tính được quyết định bởi cặp XX ở nữ và XY ở nam, cho xác suất 50% nam : 50% nữ trong mỗi lần thụ thai.",
-      "duration": 64.91,
-      "startTime": 229.62,
-      "endTime": 294.53,
-      "audioUrl": "/audio/lectures/biology/17/sec_monohybrid_inheritance.mp3"
+      "id": "s01_b04",
+      "title": "Trật tự Tổ chức Di truyền (The Hierarchy)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "The Biological Hierarchy. Nucleus: Organelle that contains chromosomes and genetic instructions. Chromosome: Thread-like structure of DNA, carrying genetic information in the form of genes. Gene: A length of DNA that codes for a specific protein. Allele: An alternative form of a gene.",
+      "vi": "Trật tự Tổ chức Di truyền (The Hierarchy). Nucleus (Nhân tế bào): Nơi chứa các nhiễm sắc thể và thông tin di truyền. Chromosome (Nhiễm sắc thể): Cấu trúc sợi chứa phân tử DNA cuộn chặt quanh protein histon mang các gen. Gene (Gen): Một đoạn phân tử DNA mã hóa cho một loại protein cụ thể. Allele: Các biến thể khác nhau của cùng một gen.",
+      "duration": 48.61,
+      "startTime": 205.49,
+      "endTime": 254.1,
+      "audioUrl": "/audio/lectures/biology/17/s01_b04.mp3"
     },
     {
-      "id": "card_codominance_blood",
-      "title": "🩸 4. Đồng trội, Nhóm Máu ABO & Sơ đồ Phả hệ",
-      "selector": "#card-codominance-blood",
-      "en": "Codominance and Pedigrees: Codominance occurs when both alleles are expressed in the phenotype, as in blood group AB where alleles IA and IB are codominant over recessive Io. Pedigree family tree diagrams trace inherited phenotypes across generations to determine carrier probabilities and autosomal dominant versus recessive patterns.",
-      "vi": "Đồng trội và Sơ đồ Phả hệ: Hiện tượng đồng trội xảy ra khi cả hai allele đều biểu hiện ra kiểu hình, như nhóm máu AB khi allele IA và IB cùng trội so với allele lặn Io. Sơ đồ phả hệ gia đình theo dõi sự di truyền kiểu hình qua các thế hệ để tính xác suất người lành mang gen và xác định quy luật di truyền trội hay lặn.",
-      "duration": 39.93,
-      "startTime": 294.53,
-      "endTime": 334.46,
-      "audioUrl": "/audio/lectures/biology/17/card_codominance_blood.mp3"
+      "id": "s01_b05",
+      "title": "Bộ nhiễm sắc thể Đơn bội (n) & Lưỡng bội (2n)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Diploid vs Haploid Nuclei. Haploid nucleus (n): Contains a single set of unpaired chromosomes (e.g. human gametes have n = 23). Diploid nucleus (2n): Contains two sets of chromosomes (e.g. human body cells have 2n = 46 = 23 homologous pairs). In a diploid cell, there is a pair of each type of chromosome (one maternal, one paternal).",
+      "vi": "Bộ nhiễm sắc thể Đơn bội (n) & Lưỡng bội (2n). Haploid nucleus (Nhân đơn bội - n): Chứa một bộ nhiễm sắc thể đơn lẻ (ví dụ: giao tử tinh trùng/trứng ở người có n = 23 chiếc). Diploid nucleus (Nhân lưỡng bội - 2n): Chứa hai bộ nhiễm sắc thể tạo thành các cặp tương đồng (ở tế bào sinh dưỡng người có 2n = 46 chiếc = 23 cặp).",
+      "duration": 55.63,
+      "startTime": 254.1,
+      "endTime": 309.73,
+      "audioUrl": "/audio/lectures/biology/17/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "⚙️ Quá trình Tổng hợp Protein (Interactive Protein Synthesis)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "⚙️ How Proteins Are Made (Interactive Diagram). The sequence of bases in a gene determines the sequence of amino acids in a protein. Different sequences of amino acids give different 3D shapes to protein molecules, enabling them to function as specific enzymes, antibodies, and receptors. Steps List 1. Gene remains in nucleus: DNA cannot leave the nucleus because it is too large. 2. mRNA Transcription: Messenger RNA (mRNA) makes a complementary copy of the gene code. 3. mRNA travels to Ribosome: mRNA exits through nuclear pores into cytoplasm and binds to a ribosome. 4. Translation: Ribosome links amino acids in the specific order dictated by mRNA bases to fold into a functional protein. SVG Illustration",
+      "vi": "⚙️ Quá trình Tổng hợp Protein. Trình tự các nucleotide (base) trên gen quyết định trình tự sắp xếp các amino acid. Trình tự amino acid quyết định cấu trúc không gian 3 chiều của protein (enzyme, kháng thể..). Steps List 1. Gen nằm trong nhân: Phân tử DNA quá lớn nên không thể thoát ra khỏi nhân tế bào. 2. Phiên mã tạo mRNA: Phân tử mRNA tạo bản sao đối mã từ đoạn mạch khuôn của gen. 3. mRNA đi tới Ribosome: mRNA chui qua lỗ màng nhân ra tế bào chất và gắn vào Ribosome. 4. Dịch mã tạo Protein: Ribosome ghép các amino acid lại theo đúng thứ tự mã hóa để cuộn gập thành protein hoàn chỉnh. SVG Illustration with -vi IDs",
+      "duration": 105.33,
+      "startTime": 309.73,
+      "endTime": 415.06,
+      "audioUrl": "/audio/lectures/biology/17/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Vai trò của Trình tự Amino Acid (17.1.6–7):",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Why Amino Acid Sequence Matters (17.1.6–7): The sequence of DNA bases determines the exact sequence of amino acids, which folds into a specific 3D shape. DNA controls cell function by controlling the production of key functional proteins, including: Enzymes (specific active site shape for metabolic catalysis). Membrane carriers (specific binding site for active transport / facilitated diffusion). Receptors for neurotransmitters (complementary receptor shape at synapses).",
+      "vi": "Vai trò của Trình tự Amino Acid (17.1.6–7): Trình tự base trên DNA quyết định trình tự các amino acid, từ đó tạo nên cấu hình không gian 3D đặc hiệu. DNA điều khiển hoạt động tế bào thông qua việc kiểm soát tổng hợp các protein chức năng gồm: Enzymes (có trung tâm hoạt động active site khớp đặc hiệu với cơ chất). Membrane carriers / Protein vận chuyển màng (gắn đặc hiệu ion/phân tử trong vận chuyển chủ động). Receptors for neurotransmitters / Thụ thể chất dẫn truyền thần kinh (nằm trên màng sau synapse).",
+      "duration": 67.53,
+      "startTime": 415.06,
+      "endTime": 482.59,
+      "audioUrl": "/audio/lectures/biology/17/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Biểu hiện Gen Chọn lọc ở Tế bào Chuyên hóa (Gene Expression • 17.1.9):",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "Selective Gene Expression in Body Cells (17.1.9): Almost all diploid body cells in an organism (e.g. a neurone, a salivary gland cell, and a muscle cell) contain the exact same set of genes inherited from the zygote. However, many genes in a particular specialised cell are not expressed because each cell only makes the specific proteins it needs for its specialised function (e.g. only pancreatic cells express the insulin gene).",
+      "vi": "Biểu hiện Gen Chọn lọc ở Tế bào Chuyên hóa (Gene Expression • 17.1.9): Hầu hết mọi tế bào sinh dưỡng lưỡng bội trong cơ thể (như tế bào thần kinh, tế bào cơ, tế bào tuyến nước bọt) đều chứa cùng một bộ gen giống hệt nhau . Tuy nhiên, rất nhiều gen trong một tế bào chuyên hóa không được biểu hiện (not expressed / bị khóa lại) vì tế bào chỉ tổng hợp đúng những loại protein chuyên biệt mà nó cần cho chức năng riêng (VD: chỉ tế bào tuyến tụy mới bật gen tổng hợp insulin).",
+      "duration": 58.75,
+      "startTime": 482.59,
+      "endTime": 541.34,
+      "audioUrl": "/audio/lectures/biology/17/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A human neurone and a human salivary gland cell from the same person are compared. Which statement about their genes and proteins is correct? A. They contain different genes and make different proteins. B. They contain the same genes, and all genes are expressed in both cells. C. They contain the same genes, but different genes are expressed to make specific proteins. D. Neither cell contains chromosomes because both are specialised. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: All diploid body cells originate by mitosis from the same zygote, so they contain the same set of genes (eliminating A and D). However, many genes in a specialised cell are not expressed so each cell only makes the specific proteins it requires (e.g. amylase in salivary cells vs neurotransmitter receptors in neurones), eliminating B.",
+      "vi": "BÀI MẪU 1 🟩 MỨC EXTENDED • Trắc nghiệm Paper 2 A human neurone and a human salivary gland cell from the same person are compared. Which statement about their genes and proteins is correct? (So sánh một tế bào thần kinh và một tế bào tuyến nước bọt của cùng một người. Phát biểu nào về gen và protein của chúng là đúng?) A. They contain different genes and make different proteins. B. They contain the same genes, and all genes are expressed in both cells. C. They contain the same genes, but different genes are expressed to make specific proteins. D. Neither cell contains chromosomes because both are specialised. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Mọi tế bào lưỡng bội trong cơ thể đều nguyên phân từ cùng một hợp tử nên chứa cùng một bộ gen giống hệt nhau (same genes) → loại A và D. Tuy nhiên nhiều gen trong tế bào chuyên hóa không biểu hiện ( not expressed ), mỗi tế bào chỉ bật gen tạo protein riêng mà nó cần (VD: amylase ở tuyến nước bọt vs thụ thể dẫn truyền thần kinh ở neurone) → loại B.",
+      "duration": 131.71,
+      "startTime": 541.34,
+      "endTime": 673.05,
+      "audioUrl": "/audio/lectures/biology/17/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Describe how a protein such as a membrane carrier is synthesised in a cell. [4] (b) Explain why a change in the base sequence of a gene can stop a membrane carrier protein from functioning. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) • The gene coding for the protein remains in the nucleus [1m] ;• An mRNA molecule is made as a copy of the gene in the nucleus and moves out into the cytoplasm [1m] ;• The mRNA passes through a ribosome [1m] ;• The ribosome assembles amino acids into a protein in a specific sequence determined by the sequence of bases in the mRNA [1m] .(b) An altered base sequence changes the sequence of amino acids , changing the 3D shape / binding site of the membrane carrier so the ion/molecule no longer fits [1m] . 💡 Intuition Check: Remember the golden chain: Base sequence → mRNA sequence → amino acid sequence → 3D shape → function!",
+      "vi": "BÀI MẪU 2 🟩 MỨC EXTENDED • Tự luận Paper 4 [5 điểm] (a) Describe how a protein such as a membrane carrier is synthesised in a cell. (Mô tả cách một phân tử protein như protein vận chuyển màng được tổng hợp trong tế bào.) (b) Explain why a change in the base sequence of a gene can stop a membrane carrier protein from functioning. (Giải thích tại sao sự thay đổi trình tự base của gen có thể làm protein vận chuyển màng mất chức năng.) ✍️ Lời giải chi tiết theo thang điểm: (a) • Đoạn gen mã hóa protein ở lại trong nhân tế bào ;• Phân tử mRNA được tạo thành trong nhân như một bản sao của gen rồi di chuyển ra tế bào chất (cytoplasm) ;• Phân tử mRNA đi qua ribosome ;• Ribosome lắp ráp các amino acid tạo thành phân tử protein theo đúng trình tự được quyết định bởi trình tự các base trên mRNA .(b) Thay đổi trình tự base làm đổi trình tự amino acid , dẫn tới biến đổi hình dạng không gian 3D / vị trí gắn (binding site) khiến ion/phân tử không còn khớp được nữa . 💡 Kiểm tra bản chất: Chuỗi từ khóa bất bại: Trình tự base → mRNA → trình tự amino acid → hình dạng 3D → chức năng!",
+      "duration": 145.75,
+      "startTime": 673.05,
+      "endTime": 818.8,
+      "audioUrl": "/audio/lectures/biology/17/s01_b10.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "➗ 2. CELL DIVISION (Nguyên phân vs Giảm phân) & TẾ BÀO GỐC",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "➗ 2. CELL DIVISION (Mitosis vs Meiosis) & STEM CELLS.",
+      "vi": "➗ 2. CELL DIVISION (Nguyên phân vs Giảm phân) & TẾ BÀO GỐC.",
+      "duration": 11.52,
+      "startTime": 818.8,
+      "endTime": 830.32,
+      "audioUrl": "/audio/lectures/biology/17/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Mitosis is a photocopier making 2 identical full-length copies ( 2n → 2n ) to grow or repair torn tissue. Meiosis is a deck splitter dealing 4 unique half-decks ( 2n → n ) so when two gametes fuse at fertilisation, the baby gets one full deck ( 46 chromosomes), not double ( 92 )!",
+      "vi": "🎯 Hình dung đời thường: Mitosis (Nguyên phân) giống chiếc máy photocopy in ra 2 bản sao đầy đủ giống hệt bản gốc ( 2n → 2n ) để cơ thể lớn lên và vá lành vết thương. Meiosis (Giảm phân) giống chia một bộ bài thành 4 nửa bộ bài khác nhau ( 2n → n ) để khi tinh trùng và trứng kết hợp lúc thụ tinh, em bé nhận lại đúng 1 bộ bài đủ ( 46 NST) chứ không bị gấp đôi!",
+      "duration": 53.57,
+      "startTime": 830.32,
+      "endTime": 883.89,
+      "audioUrl": "/audio/lectures/biology/17/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Before mitosis, exact replication of chromosomes occurs; during mitosis, the copies separate to maintain 2n . 2) Memorise the 4 roles of mitosis: Growth, Repair of damaged tissues, Replacement of cells, Asexual reproduction . 3) Stem cells are unspecialised cells that divide by mitosis to produce daughter cells that differentiate into specialised cells.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Trước nguyên phân xảy ra nhân đôi chính xác NST (exact replication) ; trong nguyên phân các bản sao tách nhau ra giữ nguyên 2n . 2) Thuộc lòng 4 vai trò của nguyên phân: Growth (tăng trưởng), Repair of damaged tissues (sửa chữa mô hỏng), Replacement of cells (thay thế tế bào cũ), Asexual reproduction (sinh sản vô tính) . 3) Stem cells (tế bào gốc) chưa biệt hóa, phân chia bằng mitosis tạo tế bào con có thể biệt hóa.",
+      "duration": 63.9,
+      "startTime": 883.89,
+      "endTime": 947.79,
+      "audioUrl": "/audio/lectures/biology/17/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Do NOT write \"mitosis repairs damaged cells\"! If an individual cell bursts, mitosis produces whole new cells to repair damaged tissues or replace worn-out cells .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG viết \"mitosis repairs damaged cells\" (sửa chữa tế bào hỏng)! Tế bào đã vỡ thì tạo tế bào mới thay thế — phải viết chuẩn là \"repair of damaged tissues\" (sửa chữa mô bị tổn thương) !",
+      "duration": 29.78,
+      "startTime": 947.79,
+      "endTime": 977.57,
+      "audioUrl": "/audio/lectures/biology/17/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Đặc điểm: Định nghĩa; Mitosis (Nguyên phân): Phân chia nhân tạo ra các tế bào co...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Feature: Definition; Mitosis: Nuclear division giving rise to genetically identical cells; Meiosis: Reduction division in which chromosome number is halved from diploid to haploid. Feature: Number of Divisions; Mitosis: One division producing 2 daughter cells; Meiosis: Two divisions producing 4 daughter cells. Feature: Chromosome Number; Mitosis: Maintains diploid number (2n → 2n); Meiosis: Halved to haploid number (2n → n). Feature: Genetic Variation; Mitosis: No variation; daughter cells are clones; Meiosis: Produces genetically diverse gametes. Feature: Biological Roles; Mitosis: Growth, tissue repair, cell replacement, asexual reproduction; Meiosis: Production of gametes (sperm and egg cells) for sexual reproduction.",
+      "vi": "Đặc điểm: Định nghĩa; Mitosis (Nguyên phân): Phân chia nhân tạo ra các tế bào con giống hệt nhau về mặt di truyền; Meiosis (Giảm phân): Phân bào giảm nhiễm làm số lượng NST giảm một nửa từ lưỡng bội (2n) xuống đơn bội (n). Đặc điểm: Số lần phân chia; Mitosis (Nguyên phân): 1 lần phân bào tạo 2 tế bào con; Meiosis (Giảm phân): 2 lần phân bào liên tiếp tạo 4 tế bào con. Đặc điểm: Bộ nhiễm sắc thể; Mitosis (Nguyên phân): Giữ nguyên số lượng NST lưỡng bội (2n → 2n); Meiosis (Giảm phân): Giảm một nửa thành đơn bội (2n → n). Đặc điểm: Biến dị di truyền; Mitosis (Nguyên phân): Không có biến dị; tế bào con là bản sao dòng vô tính; Meiosis (Giảm phân): Tạo ra biến dị di truyền phong phú qua hoán vị gen và phân ly độc lập. Đặc điểm: Vai trò sinh học; Mitosis (Nguyên phân): Lớn lên (growth), sửa chữa mô tổn thương (repair), thay thế tế bào cũ (replacement), sinh sản vô tính; Meiosis (Giảm phân): Tạo giao tử (gametes: tinh trùng & trứng) cho sinh sản hữu tính.",
+      "duration": 137.35,
+      "startTime": 977.57,
+      "endTime": 1114.92,
+      "audioUrl": "/audio/lectures/biology/17/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "💡 Stem Cells (Tế bào gốc)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "💡 Stem Cells (Cambridge Syllabus 17.2.5). Stem cells are defined as unspecialised cells that divide by mitosis to produce daughter cells that can become specialised for specific functions .• In embryos, embryonic stem cells can differentiate into any tissue type.• In adults, adult stem cells (e.g. in bone marrow) replace worn-out tissues like blood cells.",
+      "vi": "💡 Stem Cells (Tế bào gốc). Tế bào gốc là các tế bào chưa biệt hóa, có khả năng phân chia nguyên phân liên tục để tạo ra các tế bào con có thể biệt hóa thành các tế bào chuyên hóa đảm nhận các chức năng cụ thể .• Tế bào gốc phôi: có thể biệt hóa thành mọi loại tế bào trong cơ thể.• Tế bào gốc trưởng thành: ví dụ trong tủy xương sản sinh các tế bào hồng cầu, bạch cầu và tiểu cầu thay thế.",
+      "duration": 51.58,
+      "startTime": 1114.92,
+      "endTime": 1166.5,
+      "audioUrl": "/audio/lectures/biology/17/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧬 Diễn biến Nhiễm sắc thể Trước & Trong Nguyên phân (Core • 17.2.3–17.2.4)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🧬 Chromosome Events Before & During Mitosis (Core • 17.2.3–17.2.4). Before mitosis begins: Exact replication of chromosomes occurs in the nucleus so each chromosome consists of two identical copies. During mitosis: The copies of chromosomes separate and move to opposite poles, maintaining the diploid chromosome number ( 2n = 46 in humans) in each genetically identical daughter cell. Contrast with Meiosis (Supplement • 17.3): Meiosis occurs in reproductive organs as a reduction division where chromosome number is halved from diploid ( 2n ) to haploid ( n ) , producing genetically different gametes so that fertilisation ( n + n = 2n ) restores the diploid number.",
+      "vi": "🧬 Diễn biến Nhiễm sắc thể Trước & Trong Nguyên phân (Core • 17.2.3–17.2.4). Ngay trước khi nguyên phân (Before mitosis): Xảy ra quá trình nhân đôi chính xác nhiễm sắc thể tạo thành hai bản sao gắn nhau. Trong quá trình nguyên phân (During mitosis): Các bản sao của nhiễm sắc thể tách nhau ra về hai cực đối diện, giúp duy trì nguyên vẹn bộ nhiễm sắc thể lưỡng bội ( 2n = 46 ở người) trong mỗi tế bào con. Đối chiếu với Giảm phân (Meiosis • 17.3): Xảy ra tại cơ quan sinh sản như một lần phân bào giảm nhiễm (reduction division) giảm một nửa số NST từ lưỡng bội ( 2n ) xuống đơn bội ( n ) tạo ra các giao tử khác nhau về mặt di truyền , để khi thụ tinh ( n + n = 2n ) bộ NST loài được khôi phục.",
+      "duration": 99.34,
+      "startTime": 1166.5,
+      "endTime": 1265.84,
+      "audioUrl": "/audio/lectures/biology/17/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A species of mammal has 38 chromosomes in each skin cell. How many chromosomes are present in a sperm cell produced by meiosis, and in a liver cell produced by mitosis? A. Sperm: 19, Liver: 19 B. Sperm: 19, Liver: 38 C. Sperm: 38, Liver: 19 D. Sperm: 38, Liver: 76 ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Skin and liver cells are diploid body cells ( 2n = 38 ). Mitosis maintains the chromosome number ( 38 ), eliminating A, C, and D. Sperm cells are haploid gametes produced by meiosis (reduction division), halving 2n = 38 to n = 19 .",
+      "vi": "BÀI MẪU 1 🟩 MỨC EXTENDED • Trắc nghiệm Paper 2 A species of mammal has 38 chromosomes in each skin cell. How many chromosomes are present in a sperm cell produced by meiosis, and in a liver cell produced by mitosis? (Một loài thú có 38 nhiễm sắc thể trong mỗi tế bào da. Có bao nhiêu nhiễm sắc thể trong một tinh trùng tạo bởi giảm phân và trong một tế bào gan tạo bởi nguyên phân?) A. Sperm: 19, Liver: 19 B. Sperm: 19, Liver: 38 C. Sperm: 38, Liver: 19 D. Sperm: 38, Liver: 76 ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Tế bào da và tế bào gan đều là tế bào cơ thể lưỡng bội ( 2n = 38 ). Nguyên phân bảo toàn nguyên vẹn số lượng NST là 38 → loại A, C, D. Tinh trùng là giao tử đơn bội tạo ra qua giảm phân ( reduction division ), giảm một nửa từ 38 xuống n = 19 .",
+      "duration": 121.99,
+      "startTime": 1265.84,
+      "endTime": 1387.83,
+      "audioUrl": "/audio/lectures/biology/17/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "[2]",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] (a) State what happens to chromosomes immediately before and during mitosis to ensure daughter cells remain diploid. [2] (b) Define the term stem cell . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) • Before mitosis, exact replication of chromosomes occurs [1m] ;• During mitosis, the copies of chromosomes separate into the two daughter nuclei, maintaining the chromosome number [1m] .(b) • An unspecialised cell that divides by mitosis [1m] ;• Producing daughter cells that can become specialised for specific functions [1m] . 💡 Intuition Check: Include both \"unspecialised + divides by mitosis\" [1m] and \"daughter cells become specialised\" [1m] for full stem cell definition marks.",
+      "vi": "BÀI MẪU 2 🟦 MỨC CORE • Tự luận Paper 3/4 [4 điểm] (a) State what happens to chromosomes immediately before and during mitosis to ensure daughter cells remain diploid. (Nêu diễn biến của nhiễm sắc thể ngay trước và trong nguyên phân để đảm bảo tế bào con giữ nguyên bộ lưỡng bội.) (b) Define the term stem cell . (Định nghĩa thuật ngữ tế bào gốc — stem cell.) ✍️ Lời giải chi tiết theo thang điểm: (a) • Trước nguyên phân: xảy ra sự nhân đôi chính xác của các nhiễm sắc thể ;• Trong nguyên phân: các bản sao của nhiễm sắc thể tách nhau ra về hai tế bào con giúp duy trì số lượng NST .(b) • Là tế bào chưa chuyên hóa (unspecialised cell) phân chia bằng nguyên phân (mitosis) ;• Tạo ra các tế bào con có khả năng biệt hóa thành các tế bào chuyên hóa đảm nhận chức năng cụ thể . 💡 Kiểm tra bản chất: Định nghĩa stem cell 2 điểm bắt buộc có đủ 2 vế: \"unspecialised + divides by mitosis\" và \"daughter cells become specialised\" !",
+      "duration": 124.39,
+      "startTime": 1387.83,
+      "endTime": 1512.22,
+      "audioUrl": "/audio/lectures/biology/17/s02_b08.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧮 3. MONOHYBRID INHERITANCE (Di truyền đơn gen) & BẢNG LAI PUNNETT",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧮 3. MONOHYBRID INHERITANCE & PUNNETT SQUARE.",
+      "vi": "🧮 3. MONOHYBRID INHERITANCE (Di truyền đơn gen) & BẢNG LAI PUNNETT.",
+      "duration": 12.69,
+      "startTime": 1512.22,
+      "endTime": 1524.91,
+      "audioUrl": "/audio/lectures/biology/17/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a dominant allele ( T ) as a loud voice and a recessive allele ( t ) as a whisper : you hear the whisper ONLY when two whispers are paired together ( tt ). Crossing an unknown tall plant ( T? ) with a recessive whisper ( tt — a test cross ) immediately reveals any hidden t allele!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi allele trội ( T ) như giọng nói to còn allele lặn ( t ) như tiếng thì thầm : ta chỉ nghe được tiếng thì thầm khi cả hai bên cùng thì thầm ( tt ). Nhờ vậy, đem cây thân cao chưa rõ kiểu gen ( T? ) lai với cây thân thấp đồng hợp lặn ( tt — lai phân tích / test cross ) sẽ làm lộ ngay bất kỳ allele lặn t nào đang ẩn nấp!",
+      "duration": 46.62,
+      "startTime": 1524.91,
+      "endTime": 1571.53,
+      "audioUrl": "/audio/lectures/biology/17/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Distinguish genotype (alleles present, e.g. Tt ) from phenotype (observable feature, e.g. tall). 2) Memorise the two core ratios: Tt × Tt → 3:1 and Tt × tt → 1:1 . 3) Pure-breeding always means homozygous ( TT or tt ). 4) Human sex determination XX × XY always gives 50% (1:1) probability at each birth.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Phân biệt rõ genotype (tổ hợp chữ cái allele: TT, Tt, tt ) với phenotype (đặc điểm quan sát được: Cao, Thấp). 2) Thuộc 2 tỉ lệ cốt lõi: Tt × Tt → 3:1 và Tt × tt → 1:1 . 3) Pure-breeding (thuần chủng) đồng nghĩa với homozygous (đồng hợp) . 4) Xác suất giới tính XX × XY luôn là 50% (1:1) ở mỗi lần sinh độc lập.",
+      "duration": 67.71,
+      "startTime": 1571.53,
+      "endTime": 1639.24,
+      "audioUrl": "/audio/lectures/biology/17/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: If a couple already has three sons, the probability their fourth child is a boy is STILL 50% (0.5) — fertilisation events are independent, and 50% of sperm carry Y every time!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Dù một cặp vợ chồng đã sinh 3 người con trai liên tiếp, xác suất lần thứ 4 sinh con trai VẪN LÀ 50% (0.5) — mỗi lần thụ tinh hoàn toàn độc lập nhau!",
+      "duration": 25.9,
+      "startTime": 1639.24,
+      "endTime": 1665.14,
+      "audioUrl": "/audio/lectures/biology/17/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Genotype vs Phenotype",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Genotype vs Phenotype. • Genotype: The genetic make-up of an organism in terms of the alleles present (e.g. TT, Tt, tt ).• Phenotype: The observable features of an organism (e.g. Tall, Dwarf).",
+      "vi": "Genotype vs Phenotype. • Genotype (Kiểu gen): Tổ hợp các allele có mặt trong cơ thể.• Phenotype (Kiểu hình): Đặc điểm tính trạng quan sát được bên ngoài (VD: Thân cao, Thân thấp).",
+      "duration": 31.54,
+      "startTime": 1665.14,
+      "endTime": 1696.68,
+      "audioUrl": "/audio/lectures/biology/17/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Homozygous vs Heterozygous",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Homozygous vs Heterozygous. • Homozygous: Having two identical alleles of a particular gene (e.g. TT or tt ). Homozygous individuals breed true ( pure-breeding ).• Heterozygous: Having two different alleles of a particular gene (e.g. Tt ). Not pure-breeding.",
+      "vi": "Homozygous vs Heterozygous. • Homozygous (Đồng hợp): Mang 2 allele giống nhau ( TT hoặc tt ). Khi tự thụ phấn sẽ tạo ra dòng thuần chủng (pure-breeding) .• Heterozygous (Dị hợp): Mang 2 allele khác nhau ( Tt ). Không thuần chủng.",
+      "duration": 40.48,
+      "startTime": 1696.68,
+      "endTime": 1737.16,
+      "audioUrl": "/audio/lectures/biology/17/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Dominant vs Recessive",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Dominant vs Recessive. • Dominant: An allele that is expressed if present in the genotype ( TT or Tt ).• Recessive: An allele that is only expressed when there is no dominant allele ( tt ).",
+      "vi": "Dominant vs Recessive. • Dominant (Trội): Allele biểu hiện kiểu hình ngay cả khi chỉ có 1 bản sao trong kiểu gen ( TT hoặc Tt ).• Recessive (Lặn): Allele chỉ biểu hiện ra kiểu hình khi không có mặt allele trội ( tt ).",
+      "duration": 30.8,
+      "startTime": 1737.16,
+      "endTime": 1767.96,
+      "audioUrl": "/audio/lectures/biology/17/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Interactive Punnett Square (Bảng lai dị hợp: Tt × Tt )",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Interactive Punnett Square (Heterozygous Cross: Tt × Tt ). Grid SVG Panel Hover over any offspring cell 👆. Heterozygous cross ( Tt × Tt ) yields a classical 3 : 1 phenotypic ratio (75% Tall : 25% Dwarf) and a 1 : 2 : 1 genotypic ratio (1 TT : 2 Tt : 1 tt ).",
+      "vi": "Interactive Punnett Square (Bảng lai dị hợp: Tt × Tt ). Grid SVG Panel Phép lai dị hợp ( Tt × Tt ) cho tỉ lệ kiểu hình kinh điển 3 Thân cao : 1 Thân thấp (75% : 25%) và tỉ lệ kiểu gen 1 TT : 2 Tt : 1 tt.",
+      "duration": 47.76,
+      "startTime": 1767.96,
+      "endTime": 1815.72,
+      "audioUrl": "/audio/lectures/biology/17/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Lai Phân Tích (Test Cross)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "The Test Cross (Backcross). Used to determine the unknown genotype of an organism displaying a dominant phenotype ( T? ).• Cross the individual with a homozygous recessive individual ( tt ) .• If all offspring are tall ➔ Parent was homozygous dominant ( TT ).• If approx 50% are dwarf ➔ Parent was heterozygous ( Tt ).",
+      "vi": "Lai Phân Tích (Test Cross). Dùng để xác định kiểu gen của cá thể mang kiểu hình trội ( T? ).• Cho cá thể đó lai với cá thể đồng hợp lặn ( tt ) .• Nếu 100% đời con đều mang tính trạng trội ➔ Cá thể ban đầu có kiểu gen TT .• Nếu xuất hiện tỉ lệ 1 trội : 1 lặn (50% : 50%) ➔ Cá thể ban đầu là dị hợp Tt.",
+      "duration": 47.72,
+      "startTime": 1815.72,
+      "endTime": 1863.44,
+      "audioUrl": "/audio/lectures/biology/17/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "Xác định Giới tính (XX vs XY)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "Sex Determination (XX vs XY). Human body cells contain 23 pairs of chromosomes. Pair 23 are the sex chromosomes :• Females are XX (homogametic: all eggs carry an X).• Males are XY (heterogametic: 50% of sperm carry X, 50% carry Y).• A cross of XX × XY gives an exact 1 : 1 ratio (50% probability) for male or female offspring at every fertilisation.",
+      "vi": "Xác định Giới tính (XX vs XY). Cặp nhiễm sắc thể số 23 là cặp nhiễm sắc thể giới tính :• Nữ giới: XX (tất cả các trứng đều mang 1 NST X).• Nam giới: XY (50% tinh trùng mang NST X, 50% mang NST Y).• Phép lai XX × XY cho xác suất sinh con trai hoặc con gái luôn là 1 : 1 (50% : 50%) ở mỗi lần sinh.",
+      "duration": 64.16,
+      "startTime": 1863.44,
+      "endTime": 1927.6,
+      "audioUrl": "/audio/lectures/biology/17/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "1. Dị hợp × Dị hợp ( Tt × Tt ) → Tỉ lệ 3 : 1",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "1. Heterozygous × Heterozygous ( Tt × Tt ) → 3 : 1 • Gametes: T, t × T, t • Offspring genotypes: 1 TT : 2 Tt : 1 tt • Offspring phenotypes: 3 Tall : 1 Dwarf (75% dominant : 25% recessive).",
+      "vi": "1. Dị hợp × Dị hợp ( Tt × Tt ) → Tỉ lệ 3 : 1 • Giao tử: T, t × T, t • Kiểu gen đời con: 1 TT : 2 Tt : 1 tt • Kiểu hình đời con: 3 Cao : 1 Thấp (75% trội : 25% lặn).",
+      "duration": 44.87,
+      "startTime": 1927.6,
+      "endTime": 1972.47,
+      "audioUrl": "/audio/lectures/biology/17/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "2. Dị hợp × Đồng hợp lặn ( Tt × tt ) → Tỉ lệ 1 : 1",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "2. Heterozygous × Homozygous Recessive ( Tt × tt ) → 1 : 1 • Gametes: T, t × t, t • Offspring genotypes: 2 Tt : 2 tt (simplifies to 1 Tt : 1 tt )• Offspring phenotypes: 1 Tall : 1 Dwarf (50% dominant : 50% recessive).",
+      "vi": "2. Dị hợp × Đồng hợp lặn ( Tt × tt ) → Tỉ lệ 1 : 1 • Giao tử: T, t × t, t • Kiểu gen đời con: 2 Tt : 2 tt (rút gọn 1 Tt : 1 tt )• Kiểu hình đời con: 1 Cao : 1 Thấp (50% trội : 50% lặn).",
+      "duration": 47.69,
+      "startTime": 1972.47,
+      "endTime": 2020.16,
+      "audioUrl": "/audio/lectures/biology/17/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • Paper 1/2 MCQ In pea plants, allele R for round seeds is dominant to allele r for wrinkled seeds. A plant with round seeds is crossed with a plant with wrinkled seeds. Out of 160 offspring seeds, 82 are round and 78 are wrinkled. What were the genotypes of the parents? A. RR × rr B. Rr × Rr C. Rr × rr D. rr × rr ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: The wrinkled parent must be homozygous recessive ( rr ), eliminating B. Offspring ratio 82 : 78 is approximately 1 : 1 . Crossing RR × rr (A) would give 100% round ( Rr ), and rr × rr (D) has no round parent. Only Rr × rr gives 1 Rr (round) : 1 rr (wrinkled) !",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE/EXTENDED • Trắc nghiệm Paper 1/2 In pea plants, allele R for round seeds is dominant to allele r for wrinkled seeds. A plant with round seeds is crossed with a plant with wrinkled seeds. Out of 160 offspring seeds, 82 are round and 78 are wrinkled. What were the genotypes of the parents? (Ở đậu Hà Lan, allele R quy định hạt trơn trội so với r hạt nhăn. Lai cây hạt trơn với cây hạt nhăn thu được 160 hạt con gồm 82 hạt trơn và 78 hạt nhăn. Kiểu gen của bố mẹ là gì?) A. RR × rr B. Rr × Rr C. Rr × rr D. rr × rr ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Cây bố/mẹ hạt nhăn bắt buộc mang kiểu gen đồng hợp lặn rr → loại B. Đời con có tỉ lệ 82 : 78 ≈ 1 : 1 . Phép lai RR × rr (A) cho 100% hạt trơn, còn rr × rr (D) cho 100% hạt nhăn. Chỉ có phép lai Rr × rr mới cho 1 Rr (trơn) : 1 rr (nhăn) !",
+      "duration": 140.22,
+      "startTime": 2020.16,
+      "endTime": 2160.38,
+      "audioUrl": "/audio/lectures/biology/17/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / EXTENDED • Paper 4 Genetic Diagram [4 marks] Cystic fibrosis is caused by a recessive allele f ; the normal allele is F . Two unaffected parents have a child with cystic fibrosis. Complete the genetic diagram to find the probability that their next child will be unaffected. [4] ✍️ Step-by-Step Mark Scheme Solution: • Parental genotypes: Ff × Ff (both must carry f to have an ff child while being unaffected) [1m] ;• Gametes: (F) , (f) × (F) , (f) [1m] ;• Offspring genotypes (from Punnett square): FF, Ff, Ff, ff [1m] ;• Probability of unaffected child ( FF or Ff ): 75% (or 0.75 or 3/4) [1m] . 💡 Intuition Check: Read carefully whether the question asks for probability of AFFECTED (25%) or UNAFFECTED (75%)!",
+      "vi": "BÀI MẪU 2 🟦 MỨC CORE/EXTENDED • Sơ đồ lai Paper 4 [4 điểm] Cystic fibrosis is caused by a recessive allele f ; the normal allele is F . Two unaffected parents have a child with cystic fibrosis. Complete the genetic diagram to find the probability that their next child will be unaffected. (Bệnh xơ nang do allele lặn f gây ra; allele bình thường là F . Hai bố mẹ khỏe mạnh sinh ra một con mắc bệnh. Hãy viết sơ đồ lai và tính xác suất đứa con tiếp theo khỏe mạnh bình thường.) ✍️ Lời giải chi tiết theo thang điểm: • Kiểu gen bố mẹ (Parental genotypes): Ff × Ff (cả hai khỏe mạnh nhưng phải mang f để sinh con ff ) ;• Giao tử (Gametes): (F) , (f) × (F) , (f) ;• Kiểu gen đời con (Offspring genotypes): FF, Ff, Ff, ff ;• Xác suất con khỏe mạnh ( FF hoặc Ff ): 75% (hoặc 0.75 hay 3/4) . 💡 Kiểm tra bản chất: Đọc thật kỹ câu hỏi: đề hỏi xác suất con BỊ BỆNH (25%) hay KHÔNG BỊ BỆNH / UNAFFECTED (75%)!",
+      "duration": 141.59,
+      "startTime": 2160.38,
+      "endTime": 2301.97,
+      "audioUrl": "/audio/lectures/biology/17/s03_b13.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🩸 4. CODOMINANCE, NHÓM MÁU ABO & PHẢ HỆ (Pedigree Diagrams)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🩸 4. CODOMINANCE, BLOOD GROUPS & PEDIGREE DIAGRAMS.",
+      "vi": "🩸 4. CODOMINANCE, NHÓM MÁU ABO & PHẢ HỆ (Pedigree Diagrams).",
+      "duration": 12.87,
+      "startTime": 2301.97,
+      "endTime": 2314.84,
+      "audioUrl": "/audio/lectures/biology/17/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: In codominance , neither allele whispers — it is like painting a team jersey with both red stripes ( IA ) and blue stripes ( IB ) side-by-side (Blood Group AB ), not blending into purple! Meanwhile, in X-linked inheritance , females have a backup X chromosome ( XX ), whereas males ( XY ) have no backup allele on the tiny Y chromosome.",
+      "vi": "🎯 Hình dung đời thường: Ở hiện tượng đồng trội (codominance) , không có allele nào chịu lùi bước — giống chiếc áo đấu sơn cả sọc đỏ ( IA ) lẫn sọc xanh ( IB ) song song bên nhau (Nhóm máu AB )! Còn trong di truyền liên kết giới tính (sex linkage) , nữ giới có 2 NST X dự phòng ( XX ), trong khi nam giới ( XY ) chỉ có 1 NST X vì NST Y rất nhỏ không mang gen tương ứng.",
+      "duration": 53.94,
+      "startTime": 2314.84,
+      "endTime": 2368.78,
+      "audioUrl": "/audio/lectures/biology/17/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) ABO Blood Groups: Always write superscripts on I : IA and IB are codominant; both are dominant to recessive IO . 2) Sex linkage: Write alleles as superscripts on X ONLY (e.g. XR , Xr ) and leave Y blank (NEVER write Yr !). 3) Pedigree golden rule: Two unaffected parents having an affected child proves the allele is recessive and both parents are heterozygous .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Nhóm máu ABO: Bắt buộc viết số mũ trên chữ I : IA và IB đồng trội với nhau và cùng trội so với IO . 2) Liên kết giới tính: Chỉ gắn chữ số mũ lên NST X ( XR , Xr ), để trống NST Y . 3) Quy tắc phả hệ: Bố mẹ bình thường sinh con bị bệnh → chắc chắn bệnh do allele lặn và cả bố mẹ đều dị hợp .",
+      "duration": 58.41,
+      "startTime": 2368.78,
+      "endTime": 2427.19,
+      "audioUrl": "/audio/lectures/biology/17/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: NEVER write AO or AB as genotypes (write IAIO and IAIB ), and NEVER put a superscript allele on the Y chromosome in sex-linked crosses (write XrY , NOT XrYr )!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG viết tắt kiểu gen nhóm máu thành AO hay AB (phải viết IAIO , IAIB ), và KHÔNG BAO GIỜ gắn allele lên NST Y như XrYr (phải viết XrY )!",
+      "duration": 28.73,
+      "startTime": 2427.19,
+      "endTime": 2455.92,
+      "audioUrl": "/audio/lectures/biology/17/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Đồng trội (Codominance) & Hệ nhóm máu ABO",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Codominance & ABO Blood Groups. Codominance: A situation in which both alleles in heterozygous organisms contribute to the phenotype (neither allele is dominant over the other).The human ABO blood group system is controlled by one gene with three alleles: I A, I B, and I O : Genotype: I A I A or I A I O; Phenotype (Blood Group): Blood Group A; Allelic Relationship: I A is dominant to I O. Genotype: I B I B or I B I O; Phenotype (Blood Group): Blood Group B; Allelic Relationship: I B is dominant to I O. Genotype: I A I B; Phenotype (Blood Group): Blood Group AB; Allelic Relationship: I A and I B are codominant (both antigens expressed). Genotype: I O I O; Phenotype (Blood Group): Blood Group O; Allelic Relationship: Homozygous recessive.",
+      "vi": "Đồng trội (Codominance) & Hệ nhóm máu ABO. Codominance (Hiện tượng đồng trội): Là hiện tượng cả hai allele trong kiểu gen dị hợp đều cùng biểu hiện ra kiểu hình (không allele nào lấn át allele nào). Hệ nhóm máu ABO do 3 allele quy định: I A, I Bvà I O : Kiểu gen (Genotype): I A I A hoặc I A I O; Kiểu hình (Phenotype): Nhóm máu A; Mối quan hệ Allele: I A trội hoàn toàn so với I O. Kiểu gen (Genotype): I B I B hoặc I B I O; Kiểu hình (Phenotype): Nhóm máu B; Mối quan hệ Allele: I B trội hoàn toàn so với I O. Kiểu gen (Genotype): I A I B; Kiểu hình (Phenotype): Nhóm máu AB; Mối quan hệ Allele: I A và I B đồng trội (biểu hiện cả 2 loại kháng nguyên A và B). Kiểu gen (Genotype): I O I O; Kiểu hình (Phenotype): Nhóm máu O; Mối quan hệ Allele: Đồng hợp lặn (không có kháng nguyên).",
+      "duration": 122.46,
+      "startTime": 2455.92,
+      "endTime": 2578.38,
+      "audioUrl": "/audio/lectures/biology/17/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "Di truyền Liên kết Giới tính (Sex Linkage)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "Sex-Linked Characteristics. A sex-linked characteristic is a feature in which the gene responsible is located on a sex chromosome (usually X).• Red-green colour blindness: Caused by a recessive allele ( X b) carried on the X chromosome.• Females ( X B X Bor X B X b) have normal vision (heterozygous females are carriers).• Males have only one X chromosome ( X b Y ). If they inherit X bfrom their mother, they will inevitably be colour blind!",
+      "vi": "Di truyền Liên kết Giới tính (Sex Linkage). Di truyền liên kết giới tính: Là trường hợp gen quy định tính trạng nằm trên nhiễm sắc thể giới tính (thường là NST X).• Bệnh mù màu đỏ - xanh lục: Do allele lặn X bnằm trên NST X quy định.• Nữ giới có 2 NST X ( X B X Bhoặc X B X b) nên nếu dị hợp vẫn nhìn màu bình thường (chỉ là người mang gen bệnh - carrier).• Nam giới chỉ có 1 NST X ( X b Y ), nếu nhận allele bệnh X btừ mẹ thì sẽ biểu hiện bệnh mù màu ngay lập tức!",
+      "duration": 68.37,
+      "startTime": 2578.38,
+      "endTime": 2646.75,
+      "audioUrl": "/audio/lectures/biology/17/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "Sơ đồ Phả hệ (Pedigree Diagrams)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "Pedigree Diagrams (Family Trees). Used to track the inheritance of alleles across generations:• Square: Male | Circle: Female• Shaded symbol: Affected individual (shows phenotype)• Horizontal line: Mating pair | Vertical line: Offspring• Key Deduction Rule: If two unaffected parents have an affected child, the condition must be caused by a recessive allele , and both parents must be heterozygous carriers !",
+      "vi": "Sơ đồ Phả hệ (Pedigree Diagrams). Dùng để theo dõi sự di truyền tính trạng qua nhiều thế hệ gia đình:• Hình vuông: Nam | Hình tròn: Nữ• Ký hiệu tô màu sẫm: Cá thể biểu hiện bệnh/tính trạng đang xét• Gạch ngang nối 2 người: Cặp bố mẹ kết hôn | Nhánh rẽ xuống: Con cái• Quy tắc suy luận vàng: Nếu bố mẹ bình thường sinh ra con bị bệnh thì bệnh đó chắc chắn do allele lặn quy định, và cả hai bố mẹ đều phải mang kiểu gen dị hợp (carrier) !",
+      "duration": 62.88,
+      "startTime": 2646.75,
+      "endTime": 2709.63,
+      "audioUrl": "/audio/lectures/biology/17/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🩸 Phép lai A: Mẹ máu A dị hợp ( I A I O ) × Bố máu B dị hợp ( I B I O )",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "🩸 Cross A: Heterozygous Group A ( IAIO ) × Heterozygous Group B ( IBIO ) Gametes — I B — I O. I A — I A I B (Group AB) — I A I O (Group A). I O — I B I O (Group B) — I O I O (Group O). Phenotypic ratio: 1 Group AB : 1 Group A : 1 Group B : 1 Group O (25% each!).",
+      "vi": "🩸 Phép lai A: Mẹ máu A dị hợp ( IAIO ) × Bố máu B dị hợp ( IBIO ) Giao tử — I B — I O. I A — I A I B (Máu AB) — I A I O (Máu A). I O — I B I O (Máu B) — I O I O (Máu O). Tỉ lệ kiểu hình: 1 Máu AB : 1 Máu A : 1 Máu B : 1 Máu O (mỗi nhóm máu chiếm 25%).",
+      "duration": 58.4,
+      "startTime": 2709.63,
+      "endTime": 2768.03,
+      "audioUrl": "/audio/lectures/biology/17/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "👁️ Phép lai B: Mù màu Đỏ-Lục — Mẹ mang gen ( X R X r ) × Bố mắt thường ( X R Y )",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "👁️ Cross B: Red-Green Colour Blindness — Carrier Mother ( XRXr ) × Normal Father ( XRY ) Key: XR = normal colour vision (dominant); Xr = red-green colour blindness (recessive); Y carries no allele for this gene. Gametes — X R (sperm) — Y (sperm). X R (egg) — X R X R (Normal ♀) — X R Y (Normal ♂). X r (egg) — X R X r (Carrier ♀) — X r Y (Colour-blind ♂). Why more common in males: Males only need one recessive allele ( XrY ) inherited from their mother, whereas females need two ( XrXr ). A father passes Y to sons, never Xr !",
+      "vi": "👁️ Phép lai B: Mù màu Đỏ-Lục — Mẹ mang gen ( XRXr ) × Bố mắt thường ( XRY ) Quy ước: XR = nhìn màu bình thường (trội); Xr = mù màu đỏ-lục (lặn); NST Y không mang gen này. Giao tử — X R (tinh trùng) — Y (tinh trùng). X R (trứng) — X R X R (Nữ thường) — X R Y (Nam thường). X r (trứng) — X R X r (Nữ carrier) — X r Y (Nam mù màu). Tại sao nam giới dễ mắc hơn: Nam chỉ cần 1 allele lặn ( XrY ) nhận từ mẹ là phát bệnh, còn nữ cần tới 2 allele lặn ( XrXr ). Bố truyền NST Y cho con trai nên không bao giờ truyền Xr cho con trai!",
+      "duration": 97.33,
+      "startTime": 2768.03,
+      "endTime": 2865.36,
+      "audioUrl": "/audio/lectures/biology/17/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A mother has blood group A and a father has blood group B. Their first child has blood group O. What is the probability that their next child will have blood group AB? A. 0% B. 25% C. 50% D. 75% ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Since the first child is blood group O ( IOIO ), the child inherited one IO allele from each parent. Thus the mother must be IAIO and the father must be IBIO . Crossing IAIO× IBIO gives IAIB , IAIO , IBIO , IOIO → 1 in 4 (25%) chance of blood group AB.",
+      "vi": "BÀI MẪU 1 🟩 MỨC EXTENDED • Trắc nghiệm Paper 2 A mother has blood group A and a father has blood group B. Their first child has blood group O. What is the probability that their next child will have blood group AB? (Mẹ có nhóm máu A và bố có nhóm máu B. Đứa con đầu lòng có nhóm máu O. Xác suất đứa con tiếp theo mang nhóm máu AB là bao nhiêu?) A. 0% B. 25% C. 50% D. 75% ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Con đầu lòng nhóm máu O có kiểu gen IOIO → chắc chắn nhận một allele IO từ mẹ và một IO từ bố. Suy ra mẹ có kiểu gen IAIO và bố có kiểu gen IBIO . Phép lai IAIO× IBIO tạo 4 tổ hợp bằng nhau: IAIB , IAIO , IBIO , IOIO → xác suất nhóm máu AB là 1/4 = 25% .",
+      "duration": 112.87,
+      "startTime": 2865.36,
+      "endTime": 2978.23,
+      "audioUrl": "/audio/lectures/biology/17/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Sex-Linkage [5 marks] Red-green colour blindness is a sex-linked recessive condition caused by allele Xr ; normal vision is caused by allele XR .(a) Complete a genetic cross between a female carrier and a male with normal colour vision, stating the phenotypes and ratio of the offspring. [4] (b) Explain why a colour-blind father ( XrY ) cannot pass red-green colour blindness to his son. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) • Parental genotypes: XRXr× XRY [1m] ;• Gametes: XR, Xr and XR, Y [1m] ;• Offspring genotypes: XRXR, XRXr, XRY, XrY [1m] ;• Offspring phenotypes & ratio: 2 normal-vision females : 1 normal-vision male : 1 colour-blind male (or 3 normal vision : 1 colour-blind) [1m] .(b) A father always passes his Y chromosome (not his X chromosome) to a son, and the Y chromosome does not carry the gene/allele for colour vision [1m] . 💡 Intuition Check: Sons always inherit Y from Dad and X from Mum — so X-linked conditions in boys always come from the mother's X chromosome!",
+      "vi": "BÀI MẪU 2 🟩 MỨC EXTENDED • Tự luận Liên kết Giới tính Paper 4 [5 điểm] Red-green colour blindness is a sex-linked recessive condition caused by allele Xr ; normal vision is caused by allele XR .(a) Complete a genetic cross between a female carrier and a male with normal colour vision, stating the phenotypes and ratio of the offspring. (b) Explain why a colour-blind father ( XrY ) cannot pass red-green colour blindness to his son. ((a) Viết sơ đồ lai giữa mẹ mang gen bệnh và bố nhìn màu bình thường, nêu kiểu hình và tỉ lệ đời con. (b) Giải thích vì sao người bố mù màu ( XrY ) không thể truyền bệnh mù màu cho con trai.) ✍️ Lời giải chi tiết theo thang điểm: (a) • Kiểu gen bố mẹ: XRXr× XRY ;• Giao tử: XR, Xr và XR, Y ;• Kiểu gen đời con: XRXR, XRXr, XRY, XrY ;• Kiểu hình & tỉ lệ: 2 nữ nhìn màu thường : 1 nam nhìn màu thường : 1 nam mù màu (hoặc 3 thường : 1 mù màu) .(b) Người bố luôn truyền nhiễm sắc thể Y (không phải NST X) cho con trai, mà NST Y không mang gen quy định thị giác màu . 💡 Kiểm tra bản chất: Con trai luôn nhận Y từ bố và nhận X từ mẹ → mọi gen bệnh liên kết X ở con trai đều nhận từ mẹ!",
+      "duration": 175.86,
+      "startTime": 2978.23,
+      "endTime": 3154.09,
+      "audioUrl": "/audio/lectures/biology/17/s04_b10.mp3"
     }
   ]
 }

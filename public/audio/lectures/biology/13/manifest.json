@@ -2,129 +2,368 @@
   "lectureId": "b8f0539e-9361-4ba4-a96e-74c106494ebe",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 13: Excretion in humans",
-  "totalDuration": 359.57,
+  "totalDuration": 2314.17,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+    "s01_int": {
+      "start": 2,
+      "end": 4
     },
-    "sec_excretion_liver": {
+    "s01_wex": {
+      "start": 8,
+      "end": 9
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 3
+      "end": 9
     },
-    "sec-excretion-liver": {
-      "start": 1,
-      "end": 3
+    "s02_int": {
+      "start": 11,
+      "end": 13
     },
-    "sec_kidneys": {
-      "start": 4,
-      "end": 5
+    "s02_wex": {
+      "start": 18,
+      "end": 19
     },
-    "sec-kidneys": {
-      "start": 4,
-      "end": 5
+    "s02_hdr": {
+      "start": 10,
+      "end": 19
     },
-    "sec_kidney_failure": {
-      "start": 6,
-      "end": 7
+    "s03_int": {
+      "start": 21,
+      "end": 23
     },
-    "sec-kidney-failure": {
-      "start": 6,
-      "end": 7
+    "s03_wex": {
+      "start": 27,
+      "end": 28
+    },
+    "s03_hdr": {
+      "start": 20,
+      "end": 28
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 13: Hệ Bài tiết ở Người & Cấu tạo Thận",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 13: Excretion in Humans. Excretion is the removal of the waste products of metabolism and substances in excess of requirements. In this lesson, we study liver deamination of amino acids, the clear distinction between excretion and egestion, gross kidney anatomy and nephron filtration, and modern treatments for kidney failure.",
-      "vi": "Chào mừng các bạn đến với Bài 13: Hệ Bài tiết ở Người & Cấu tạo Thận. Bài tiết là sự thải loại các chất cặn bã sinh ra từ trao đổi chất cùng các chất dư thừa khỏi cơ thể. Trong bài học này, chúng ta sẽ học về quá trình khử amin tại gan, phân biệt bài tiết và thải phân, giải phẫu thận và nephron lọc máu, cùng các biện pháp điều trị suy thận.",
-      "duration": 44.42,
+      "title": "Chuyên đề 13: Hệ Bài tiết ở Người & Cấu tạo Thận",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 13: Excretion in Humans. Liver Deamination, Excretion vs Egestion, Kidney Anatomy & Dialysis Treatments.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Chuyên đề 13: Hệ Bài tiết ở Người & Cấu tạo Thận. Khử amin ở gan, Bài tiết vs Thải phân, Giải phẫu thận & Máy chạy thận nhân tạo.",
+      "duration": 30.84,
       "startTime": 0.0,
-      "endTime": 44.42,
+      "endTime": 30.84,
       "audioUrl": "/audio/lectures/biology/13/intro.mp3"
     },
     {
-      "id": "sec_excretion_liver",
-      "title": "1. Bài tiết & Quá trình Khử amin tại Gan (Deamination)",
-      "selector": "#sec-excretion-liver",
-      "en": "Section 1: Excretion is defined as the removal of toxic substances and substances in excess of requirements from an organism. The primary excretory organs are lungs excreting carbon dioxide, kidneys excreting urea, excess water and mineral ions, and skin excreting sweat.",
-      "vi": "Mục 1: Bài tiết được định nghĩa là sự đào thải các chất độc hại và các chất dư thừa ra khỏi cơ thể sinh vật. Các cơ quan bài tiết chính gồm phổi bài tiết CO2, thận bài tiết urê, nước và muối khoáng dư thừa, cùng da bài tiết mồ hôi.",
-      "duration": 47.32,
-      "startTime": 44.42,
-      "endTime": 91.74,
-      "audioUrl": "/audio/lectures/biology/13/sec_excretion_liver.mp3"
+      "id": "s01_hdr",
+      "title": "🚽 1. BÀI TIẾT VÀ VAI TRÒ CỦA GAN (EXCRETION & LIVER)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🚽 1. EXCRETION AND THE ROLE OF THE LIVER.",
+      "vi": "🚽 1. BÀI TIẾT VÀ VAI TRÒ CỦA GAN (EXCRETION & LIVER).",
+      "duration": 9.5,
+      "startTime": 30.84,
+      "endTime": 40.34,
+      "audioUrl": "/audio/lectures/biology/13/s01_hdr.mp3"
     },
     {
-      "id": "card_deamination",
-      "title": "🥩 Đồng hóa & Khử Amin tại Gan (Deamination)",
-      "selector": "#card-deamination",
-      "en": "Deamination process: Excess dietary amino acids cannot be stored in the body. In the liver, the nitrogen-containing amino group is chemically removed from each amino acid molecule and converted into toxic ammonia, which is rapidly combined with CO2 into harmless, water-soluble urea excreted by kidneys.",
-      "vi": "Quá trình khử amin: Axit amin dư thừa từ thức ăn không thể tích trữ trong cơ thể. Tại gan, nhóm amin chứa nitơ bị tách khỏi phân tử axit amin tạo thành amoniac độc, sau đó nhanh chóng kết hợp với CO2 tạo thành urê tan trong nước và được thận bài tiết ra ngoài.",
-      "duration": 36.81,
-      "startTime": 91.74,
-      "endTime": 128.55,
-      "audioUrl": "/audio/lectures/biology/13/card_deamination.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of your body as a busy restaurant kitchen. Excretion is venting smoke from the stove ( CO₂ via the lungs) and pouring chemical dishwater down the drain ( urea via the kidneys) — waste made inside the kitchen's chemical reactions. Throwing out unpeeled vegetable scraps that never entered a cooking pot is egestion (faeces), NOT excretion!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung cơ thể giống như một căn bếp nhà hàng đang đỏ lửa. Bài tiết (Excretion) là hút khói bếp ra ống thông gió (thải CO₂ qua phổi) và xả nước rửa hóa chất xuống cống (lọc urea qua thận) — tức là chất thải sinh ra từ bên trong phản ứng hóa học của tế bào . Ngược lại, vứt vỏ rau củ chưa từng cho vào nồi nấu ra thùng rác chính là thải phân (Egestion) , tuyệt đối KHÔNG phải bài tiết!",
+      "duration": 53.27,
+      "startTime": 40.34,
+      "endTime": 93.61,
+      "audioUrl": "/audio/lectures/biology/13/s01_b01.mp3"
     },
     {
-      "id": "card_egestion_vs_excretion",
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Lungs excrete CO₂ (from aerobic respiration); kidneys excrete urea + excess water + excess ions .2) Liver assimilation converts amino acids into proteins (e.g. plasma proteins like fibrinogen).3) Deamination in the liver is the removal of the nitrogen-containing part of excess amino acids to form urea , which must be excreted because urea is toxic to cells.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Phổi (Lungs) bài tiết CO₂ (từ hô hấp hiếu khí); Thận (Kidneys) bài tiết urea + excess water + excess ions .2) Đồng hóa tại gan (Assimilation) : chuyển hóa amino acids thành các proteins cần thiết (như fibrinogen đông máu).3) Khử amin tại gan (Deamination) : tách bỏ phần chứa nitơ của amino acids dư thừa để tạo thành urea — bắt buộc phải thải bỏ vì urea rất độc (toxic) đối với tế bào.",
+      "duration": 64.04,
+      "startTime": 93.61,
+      "endTime": 157.65,
+      "audioUrl": "/audio/lectures/biology/13/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic Mark Scheme traps: (1) Saying \"urea is made in the kidneys\" — WRONG! Urea is formed in the liver and only filtered/excreted by the kidneys . (2) Calling faeces an excretory product — undigested fibre never entered cells or metabolic reactions, so passing faeces is egestion .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy mất điểm kinh điển: (1) Viết \"urea được tạo ra ở thận\" — SAI HOÀN TOÀN! Urea được tổng hợp tại GAN (liver) và chỉ được lọc thải tại THẬN (kidneys) . (2) Gọi phân (faeces) là chất bài tiết — chất xơ không tiêu hóa chưa bao giờ đi vào tế bào nên thải phân là egestion .",
+      "duration": 45.55,
+      "startTime": 157.65,
+      "endTime": 203.2,
+      "audioUrl": "/audio/lectures/biology/13/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Định nghĩa Bài tiết (Excretion)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Definition of Excretion. Excretion: The removal from organisms of the waste products of metabolism (chemical reactions in cells), toxic substances , and substances in excess of requirements. Carbon dioxide (CO₂): Produced by cellular respiration; excreted through the lungs during exhalation. Urea: Produced in the liver from excess amino acids; excreted by the kidneys in urine. Excess water and mineral ions: Excreted by the kidneys to maintain blood osmolarity and volume.",
+      "vi": "Định nghĩa Bài tiết (Excretion). 🇬🇧: The removal of waste products of metabolism, toxic materials, and substances in excess of requirements. 🇻🇳: Sự loại bỏ các sản phẩm thải từ chuyển hóa tế bào , chất độc hại và các chất dư thừa ra khỏi cơ thể. Carbon dioxide (CO₂): Sản phẩm của hô hấp tế bào; bài tiết qua Phổi (Lungs). Urea: Tạo ra tại Gan từ axit amin thừa; bài tiết qua Thận (Kidneys) trong nước tiểu. Nước và Muối khoáng thừa: Bài tiết qua Thận để duy trì cân bằng nội môi dịch cơ thể.",
+      "duration": 73.08,
+      "startTime": 203.2,
+      "endTime": 276.28,
+      "audioUrl": "/audio/lectures/biology/13/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🥩 Vai trò của Gan: Đồng hóa & Khử Amin (Deamination)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🥩 Role of the Liver: Assimilation & Deamination. 1. Assimilation: The liver converts absorbed amino acids into proteins needed by the body, such as plasma proteins (albumin and fibrinogen for blood clotting) and metabolic enzymes. 2. Deamination (Cambridge Supplement Definition): The removal of the nitrogen-containing part of amino acids to form urea. Because the body cannot store excess amino acids or proteins, excess amino acids travel to the liver via the hepatic portal vein and undergo deamination. Steps in Deamination: The nitrogen-containing amino group (-NH₂) is removed from amino acids, forming highly toxic ammonia (NH₃). Liver cells immediately convert ammonia into less toxic, water-soluble urea. Urea enters the bloodstream and travels to the kidneys to be filtered and excreted in urine. The remaining non-nitrogenous carbon skeleton is converted into carbohydrates (glycogen) or fats for cellular respiration or storage.",
+      "vi": "🥩 Vai trò của Gan: Đồng hóa & Khử Amin (Deamination). 1. Đồng hóa (Assimilation): Gan chuyển hóa axit amin thành các protein huyết tương (albumin, fibrinogen hỗ trợ đông máu) và enzym. 2. Khử amin (Deamination — Định nghĩa chuẩn Supplement): Sự tách bỏ phần chứa nitơ của amino acid dư thừa để tạo thành urea . Do cơ thể không thể dự trữ amino acid thừa, chúng được đưa về gan (liver) để phân giải: Các bước khử Amin (Deamination): Nhóm chứa nitơ (-NH₂) bị tách ra tạo thành amoniac (NH₃) cực độc. Gan lập tức chuyển hóa amoniac thành Urea (ít độc hơn, tan trong nước). Urea theo máu tới Thận để lọc ra ngoài qua nước tiểu. Phần mạch carbon còn lại được biến thành carbohydrate hoặc chất béo dự trữ năng lượng.",
+      "duration": 123.9,
+      "startTime": 276.28,
+      "endTime": 400.18,
+      "audioUrl": "/audio/lectures/biology/13/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
       "title": "🚨 BẪY ĐỀ THI: Thải phân (Egestion) vs Bài tiết (Excretion)",
-      "selector": "#card-egestion-vs-excretion",
-      "en": "Critical Cambridge Exam Warning: Never confuse egestion with excretion! Egestion is the passing out of undigested, unabsorbed food material such as cellulose dietary fibre via the anus as faeces; this material never took part in cellular metabolism. Excretion is the removal of metabolic wastes produced inside living cells.",
-      "vi": "Cảnh báo tử huyệt thi cử Cambridge: Tuyệt đối không bao giờ nhầm lẫn giữa thải phân và bài tiết! Thải phân (Egestion) là sự tống chất xơ và bã thức ăn không tiêu hóa không hấp thụ qua hậu môn dưới dạng phân; chúng chưa từng tham gia vào trao đổi chất tế bào. Bài tiết (Excretion) là đào thải các sản phẩm phụ chuyển hóa sinh ra bên trong tế bào sống.",
-      "duration": 43.74,
-      "startTime": 128.55,
-      "endTime": 172.29,
-      "audioUrl": "/audio/lectures/biology/13/card_egestion_vs_excretion.mp3"
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🚨 EXAM WARNING: Egestion vs Excretion. Why is passing faeces NOT excretion? Faeces is undigested food residue that passes straight through the alimentary canal without ever participating in cellular metabolism. Discharging faeces is termed EGESTION , not excretion! Toxicity of Urea: High concentrations of urea in blood denature proteins, disrupt cellular enzyme reactions, alter blood pH, and can cause coma and death.",
+      "vi": "🚨 BẪY ĐỀ THI: Thải phân (Egestion) vs Bài tiết (Excretion). Tại sao thải phân không được coi là bài tiết? Phân là cặn bã thức ăn không tiêu hóa được, đi qua lòng ruột rồi ra ngoài chứ chưa từng tham gia phản ứng hóa học bên trong tế bào. Quá trình này là EGESTION (thải bã), không phải Excretion! Độc tính của Urea: Nồng độ urea cao trong máu làm biến tính protein, ức chế enzyme và gây hôn mê tử vong.",
+      "duration": 62.34,
+      "startTime": 400.18,
+      "endTime": 462.52,
+      "audioUrl": "/audio/lectures/biology/13/s01_b06.mp3"
     },
     {
-      "id": "sec_kidneys",
-      "title": "2. Cấu tạo và Chức năng của Thận (Nephron & Filtration)",
-      "selector": "#sec-kidneys",
-      "en": "Section 2: Urinary system and kidney anatomy: Oxygenated blood high in urea arrives via the renal artery. The outer renal cortex performs ultrafiltration. The inner renal medulla contains loops of Henle reabsorbing water and salts. Purified blood exits via the renal vein, and collected urine drains through the renal pelvis into the ureter to the bladder.",
-      "vi": "Mục 2: Hệ tiết niệu và cấu tạo thận: Máu giàu oxy chứa nhiều urê theo động mạch thận đi vào thận. Vỏ thận (cortex) bên ngoài thực hiện siêu lọc. Tủy thận (medulla) bên trong chứa các quai Henle tái hấp thu nước và muối. Máu đã làm sạch thoát ra theo tĩnh mạch thận, và nước tiểu thu gom tại bể thận chảy qua niệu quản xuống bàng quang.",
-      "duration": 64.14,
-      "startTime": 172.29,
-      "endTime": 236.43,
-      "audioUrl": "/audio/lectures/biology/13/sec_kidneys.mp3"
+      "id": "s01_b07",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦🟩 CORE & SUPPLEMENT • Paper 1/2 MCQ After a person eats a meal very rich in protein, excess amino acids are absorbed into the blood. Where are these excess amino acids broken down, and which excretory organ removes the resulting nitrogenous waste from the body? A. Broken down in the kidney; excreted by the bladder B. Broken down in the liver; excreted by the kidney C. Broken down in the stomach; excreted via the rectum D. Broken down in the liver; excreted by the lungs ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Excess amino acids travel via the hepatic portal vein to the liver , where deamination removes the nitrogen-containing part to form urea . Urea dissolves in blood plasma, travels to the kidneys , and is filtered into urine for excretion. A confuses formation with filtration; C describes digestion/egestion; D is wrong because lungs excrete CO₂ , not urea.",
+      "vi": "BÀI MẪU 1 🟦🟩 CORE & SUPPLEMENT • Paper 1/2 MCQ Exam Question: After a person eats a meal very rich in protein, excess amino acids are absorbed into the blood. Where are these excess amino acids broken down, and which excretory organ removes the resulting nitrogenous waste? (Sau bữa ăn giàu đạm, amino acid dư thừa được hấp thu vào máu. Chúng bị phân giải ở đâu và cơ quan bài tiết nào lọc thải chất thải chứa nitơ tạo thành?) A. Phân giải ở thận; thải bởi bàng quang B. Phân giải ở gan; bài tiết bởi thận C. Phân giải ở dạ dày; thải qua trực tràng D. Phân giải ở gan; bài tiết qua phổi ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Amino acid dư thừa theo tĩnh mạch cửa gan về gan (liver) , tại đây quá trình khử amin (deamination) tách nhóm chứa nitơ để tạo thành urea . Urea tan vào huyết tương, di chuyển tới thận (kidneys) để lọc vào nước tiểu thải ra ngoài. Loại A vì thận không tạo urea; loại C vì đó là tiêu hóa/thải bã (egestion); loại D vì phổi chỉ thải CO₂ .",
+      "duration": 137.26,
+      "startTime": 462.52,
+      "endTime": 599.78,
+      "audioUrl": "/audio/lectures/biology/13/s01_b07.mp3"
     },
     {
-      "id": "card_kidney_regions",
-      "title": "🔍 Sơ đồ Giải phẫu Thận Tương tác (Kidney Anatomy)",
-      "selector": "#card-kidney-regions",
-      "en": "Kidney anatomy zones: The cortex is dense with Bowman's capsules and glomeruli. The medulla contains collecting ducts and medullary pyramids. The renal pelvis funnels urine down the ureter to be stored temporarily in the muscular bladder before release via the urethra.",
-      "vi": "Các phân vùng giải phẫu thận: Vỏ thận tập trung dày đặc các nang Bowman và búi mao mạch cuộn. Tủy thận chứa các ống góp và tháp thận. Bể thận như một chiếc phễu gom nước tiểu dẫn xuống niệu quản để tích trữ tạm thời trong bàng quang trước khi thải ra ngoài qua niệu đạo.",
-      "duration": 32.94,
-      "startTime": 236.43,
-      "endTime": 269.37,
-      "audioUrl": "/audio/lectures/biology/13/card_kidney_regions.mp3"
+      "id": "s01_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Describe the role of the liver in the assimilation of amino acids. [1] (b) Define the term deamination . [2] (c) Explain why it is essential for humans to excrete urea continuously. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The liver absorbs amino acids from blood and converts them into proteins (such as plasma proteins / fibrinogen) [1m]. (b) Deamination is the removal of the nitrogen-containing part of (excess) amino acids [1m] to form urea [1m]. (c) Urea is toxic / poisonous to cells [1m]; if allowed to accumulate in high concentrations in the blood, it damages cells / disrupts metabolic enzyme reactions / lowers blood water potential [1m]. 💡 Intuition Check: Memorise the exact 2-mark Cambridge definition of deamination: \"removal of the nitrogen-containing part of amino acids [1m] to form urea [1m]\".",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Describe the role of the liver in the assimilation of amino acids. (Mô tả vai trò của gan trong quá trình đồng hóa amino acid.) (b) Define the term deamination . (Định nghĩa thuật ngữ khử amin — deamination.) (c) Explain why it is essential for humans to excrete urea continuously. (Giải thích vì sao cơ thể người bắt buộc phải bài tiết urea liên tục.) ✍️ Lời giải chi tiết theo thang điểm: (a) The liver takes up amino acids and converts them into proteins . (Gan hấp thu amino acid và tổng hợp chúng thành protein huyết tương.) (b) Deamination is the removal of the nitrogen-containing part of (excess) amino acids to form urea . (Sự tách bỏ phần chứa nitơ của amino acid thừa để tạo thành urea .) (c) Urea is toxic to cells ; accumulation in blood damages cells / disrupts metabolic enzyme reactions / alters osmotic balance . (Urea có độc tính cao ; tích tụ sẽ gây tổn thương tế bào và rối loạn phản ứng enzyme .) 💡 Kiểm tra bản chất: Thuộc lòng cụm từ khóa vàng ăn trọn 2 điểm định nghĩa Deamination của Cambridge: \"removal of the nitrogen-containing part of amino acids to form urea \".",
+      "duration": 151.35,
+      "startTime": 599.78,
+      "endTime": 751.13,
+      "audioUrl": "/audio/lectures/biology/13/s01_b08.mp3"
     },
     {
-      "id": "sec_kidney_failure",
-      "title": "3. Suy thận: Chạy thận Nhân tạo & Ghép thận",
-      "selector": "#sec-kidney-failure",
-      "en": "Section 3: Treatment of kidney failure: When kidneys fail, toxic urea builds up rapidly to lethal levels. Patients require regular hemodialysis using a dialysis machine or a donor kidney transplant.",
-      "vi": "Mục 3: Điều trị suy thận: Khi thận bị suy, lượng urê độc hại tăng vọt nhanh chóng đe dọa tính mạng. Bệnh nhân cần chạy thận nhân tạo định kỳ bằng máy lọc máu hoặc được ghép thận từ người hiến tặng.",
-      "duration": 47.54,
-      "startTime": 269.37,
-      "endTime": 316.91,
-      "audioUrl": "/audio/lectures/biology/13/sec_kidney_failure.mp3"
+      "id": "s02_hdr",
+      "title": "🩸 2. HỆ TIẾT NIỆU, THẬN & ĐƠN VỊ LỌC NEPHRON (KIDNEY & NEPHRON)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🩸 2. THE URINARY SYSTEM, KIDNEY & NEPHRON FUNCTION.",
+      "vi": "🩸 2. HỆ TIẾT NIỆU, THẬN & ĐƠN VỊ LỌC NEPHRON (KIDNEY & NEPHRON).",
+      "duration": 13.16,
+      "startTime": 751.13,
+      "endTime": 764.29,
+      "audioUrl": "/audio/lectures/biology/13/s02_hdr.mp3"
     },
     {
-      "id": "card_dialysis_machine",
-      "title": "💡 Nguyên lý Máy Chạy thận Nhân tạo (Dialysis Machine)",
-      "selector": "#card-dialysis-machine",
-      "en": "Dialysis mechanism: Patient's blood flows through cellulose dialysis tubing surrounded by dialysis fluid. The tubing is partially permeable: urea, excess water, and salts diffuse out down concentration gradients. The dialysis fluid has identical glucose and amino acid concentrations as normal blood, preventing any net loss of these valuable nutrients.",
-      "vi": "Nguyên lý máy lọc máu: Máu bệnh nhân chảy qua ống màng lọc bán thấm cellulose ngâm trong dịch lọc máu. Màng bán thấm cho phép urê, nước và muối dư thừa khuếch tán ra dịch lọc xuôi theo gradien nồng độ. Dịch lọc có nồng độ glucose và axit amin tương đương máu bình thường để chống thất thoát dưỡng chất quý giá của cơ thể.",
-      "duration": 42.66,
-      "startTime": 316.91,
-      "endTime": 359.57,
-      "audioUrl": "/audio/lectures/biology/13/card_dialysis_machine.mp3"
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine cleaning out a cluttered backpack by dumping everything small onto a table first ( glomerular filtration ), then picking back up 100% of your cash (glucose) , most of your water bottles, and just the coins you need ( selective reabsorption in the nephron tubule), while sweeping the unwanted trash ( urea + excess water + excess ions ) into the bin as urine .",
+      "vi": "🎯 Hình dung đời thường: Cơ chế lọc của đơn vị thận Nephron giống hệt cách dọn balo siêu tốc: Bước 1 là dốc toàn bộ các đồ vật nhỏ trong balo ra bàn ( siêu lọc tại glomerulus ), Bước 2 là nhặt cất lại 100% tiền mặt (glucose) , phần lớn chai nước và lượng muối vừa đủ bỏ lại vào túi ( tái hấp thu chọn lọc tại ống thận ), chỉ quét rác thải ( urea + nước thừa + ion thừa ) vào thùng rác tạo thành nước tiểu (urine) .",
+      "duration": 53.98,
+      "startTime": 764.29,
+      "endTime": 818.27,
+      "audioUrl": "/audio/lectures/biology/13/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Macroscopic pathway: Kidney ➔ Ureter ➔ Bladder ➔ Urethra ; kidney cross-section shows outer cortex and inner medulla .2) Glomerulus filters water, glucose, urea, and ions from blood into Bowman's capsule (proteins & blood cells stay in blood).3) Nephron tubule reabsorbs ALL glucose , some ions , and most water back into blood, leaving urine with urea + excess water + excess ions .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Đường đi nước tiểu: Kidney ➔ Ureter (niệu quản) ➔ Bladder (bàng quang) ➔ Urethra (niệu đạo) ; lát cắt thận gồm vỏ ngoài cortex và tủy trong medulla .2) Glomerulus lọc water, glucose, urea, ions vào nang Bowman (protein & tế bào máu quá lớn nên ở lại máu).3) Nephron tubule tái hấp thu ALL (100%) glucose , some ions và most water về máu; dịch còn lại thành nước tiểu.",
+      "duration": 63.4,
+      "startTime": 818.27,
+      "endTime": 881.67,
+      "audioUrl": "/audio/lectures/biology/13/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never confuse spelling of ureter (kidney to bladder — two tubes) and urethra (bladder to outside — one tube); Cambridge examiners insist on exact spelling when both look similar! Also remember: healthy urine contains 0% glucose (not \"a little glucose\").",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối không viết nhầm chính tả ureter (ống nối thận → bàng quang) với urethra (ống nối bàng quang → ra ngoài)! Và nhớ kỹ: nước tiểu người khỏe mạnh có 0% glucose (nếu có glucose trong nước tiểu là dấu hiệu bệnh tiểu đường — diabetes).",
+      "duration": 39.77,
+      "startTime": 881.67,
+      "endTime": 921.44,
+      "audioUrl": "/audio/lectures/biology/13/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Hệ tiết niệu gồm 4 cơ quan chính: Hai quả thận (Kidneys) (lọc máu tạo nước tiểu)...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "The urinary system consists of four key organs: Kidneys (filter blood and produce urine), Ureters (tubes carrying urine from kidneys to bladder), Bladder (muscular sac storing urine), and Urethra (tube conveying urine out of the body).",
+      "vi": "Hệ tiết niệu gồm 4 cơ quan chính: Hai quả thận (Kidneys) (lọc máu tạo nước tiểu), Niệu quản (Ureters) (dẫn nước tiểu xuống bàng quang), Bàng quang (Bladder) (chứa nước tiểu) và Niệu đạo (Urethra) (ống dẫn nước tiểu ra ngoài).",
+      "duration": 32.37,
+      "startTime": 921.44,
+      "endTime": 953.81,
+      "audioUrl": "/audio/lectures/biology/13/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🧭 Tổng quan Hệ Tiết niệu ở Người — Human Urinary System (Core 13.1)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🧭 Overview of the Human Urinary System (Core 13.1). Structure: Kidneys (2); Syllabus Role & Key Distinction: Filter blood and excrete urea , excess water , and excess ions as urine. Structure: Ureters (2); Syllabus Role & Key Distinction: Pair of tubes carrying urine from each kidney down to the bladder. Structure: Bladder (1); Syllabus Role & Key Distinction: Elastic muscular bag that stores urine temporarily before urination. Structure: Urethra (1); Syllabus Role & Key Distinction: Single tube carrying urine from the bladder out of the body (spell carefully: ureter vs urethra !).",
+      "vi": "🧭 Tổng quan Hệ Tiết niệu ở Người — Human Urinary System (Core 13.1). Cơ quan (Organ): Kidneys (Hai quả thận); Chức năng chuẩn Syllabus & Mẹo phân biệt: Lọc máu và bài tiết urea , nước dư thừa (excess water) và ion khoáng thừa (excess ions) tạo thành nước tiểu. Cơ quan (Organ): Ureters (Hai niệu quản); Chức năng chuẩn Syllabus & Mẹo phân biệt: Cặp ống dẫn nước tiểu từ thận xuống bàng quang. Cơ quan (Organ): Bladder (Bàng quang); Chức năng chuẩn Syllabus & Mẹo phân biệt: Túi cơ co giãn tích trữ tạm thời nước tiểu trước khi thải ra ngoài. Cơ quan (Organ): Urethra (Niệu đạo); Chức năng chuẩn Syllabus & Mẹo phân biệt: Ống đơn dẫn nước tiểu từ bàng quang thoát ra khỏi cơ thể (Chú ý chính tả: ureter ≠ urethra !).",
+      "duration": 100.34,
+      "startTime": 953.81,
+      "endTime": 1054.15,
+      "audioUrl": "/audio/lectures/biology/13/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Interactive Kidney Anatomy (Sơ đồ giải phẫu Thận tương tác)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Interactive Kidney Anatomy. Hover over the Cortex, Medulla, Pelvis, and Blood Vessels to examine filtration and reabsorption. Renal Cortex (Outer Layer). The dark outer region containing Bowman's capsules, glomeruli, and convoluted tubules of over one million nephrons. Ultrafiltration in Glomerulus: High arterial blood pressure forces water, glucose, urea, and mineral ions out of the glomerular capillaries into Bowman's capsule, forming the glomerular filtrate. Blood cells and large plasma proteins are retained.",
+      "vi": "Interactive Kidney Anatomy (Sơ đồ giải phẫu Thận tương tác). Vỏ thận (Renal Cortex). Lớp ngoài sẫm màu, chứa búi mao mạch Glomerulus và nang Bowman của hơn 1 triệu đơn vị thận (Nephron). Quá trình Siêu lọc (Ultrafiltration): Áp suất máu cao ép nước, glucose, urea và muối khoáng lọc qua thành mao mạch vào nang Bowman. Tế bào máu và protein huyết tương lớn bị giữ lại.",
+      "duration": 64.89,
+      "startTime": 1054.15,
+      "endTime": 1119.04,
+      "audioUrl": "/audio/lectures/biology/13/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🔬 Cấu tạo & Hoạt động của Đơn vị Thận — Nephron (Supplement 13.1)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🔬 Structure & Function of a Nephron (Supplement 13.1). 🟩 EXTENDED / SUPPLEMENT FOCUS Each kidney contains roughly one million microscopic filtering units called nephrons spanning the outer cortex and inner medulla . Urine is formed in two precision stages: Stage 1 — Filtration in the Glomerulus: High blood pressure in the glomerulus forces small soluble molecules — water, glucose, urea, and ions — out of the blood into Bowman's capsule . Large plasma proteins and blood cells remain in the blood because they are too big to pass through capillary pores. Stage 2 — Selective Reabsorption in the Nephron Tubule: As filtrate flows along the nephron tubule, useful substances are reabsorbed back into the surrounding blood capillaries: ALL of the glucose (by active transport), some of the ions , and most of the water (by osmosis). Stage 3 — Urine Formation: The remaining fluid entering the collecting duct forms urine , containing urea, excess water, and excess ions (and zero glucose or protein in a healthy person). Fluid Composition Comparison Table Substance: Blood cells & Proteins; Blood Plasma (Renal Artery): Present (high); Glomerular Filtrate: Absent (0.00); Healthy Urine: Absent (0.00); Reason for Change: Too large to pass through glomerular pores. Substance: Glucose; Blood Plasma (Renal Artery): Present (~0.10%); Glomerular Filtrate: Present (~0.10%); Healthy Urine: Absent (0.00); Reason for Change: All (100%) reabsorbed in nephron tubule.",
+      "vi": "🔬 Cấu tạo & Hoạt động của Đơn vị Thận — Nephron (Supplement 13.1). 🟩 TRỌNG TÂM SUPPLEMENT Mỗi quả thận chứa khoảng 1 triệu đơn vị lọc vi thể gọi là nephron nằm trải dài từ vùng vỏ ( cortex ) xuống vùng tủy ( medulla ). Nước tiểu được hình thành qua các bước chuẩn xác: Bước 1 — Lọc tại Quản cầu thận: Áp suất máu cao tại búi mao mạch glomerulus đẩy các phân tử nhỏ hòa tan gồm nước (water), glucose, urea và các ion từ máu sang nang Bowman ( renal capsule ). Tế bào máu và protein huyết tương có kích thước quá lớn nên được giữ lại trong máu. Bước 2 — Tái hấp thu chọn lọc tại Ống thận (Selective Reabsorption): Dọc theo ống thận ( nephron tubule ), cơ thể thu hồi lại vào mao mạch máu: TOÀN BỘ (all / 100%) glucose (nhờ vận chuyển chủ động), một phần ion (some ions) và phần lớn nước (most water) (nhờ thẩm thấu). Bước 3 — Hình thành Nước tiểu: Phần dịch còn lại chảy vào ống góp tạo thành nước tiểu (urine) chứa urea, nước dư thừa và ion khoáng dư thừa (hoàn toàn không có glucose hay protein ở người khỏe mạnh). Bảng đối chiếu thành phần dịch lọc Thành phần (Substance): Tế bào máu & Protein; Huyết tương (Blood Plasma): Có mặt (cao); Dịch lọc cầu thận (Filtrate): Không có (0.00); Nước tiểu (Urine): Không có (0.00); Giải thích cơ chế (Reason): Phân tử quá lớn, không lọt qua lỗ lọc glomerulus.",
+      "duration": 197.5,
+      "startTime": 1119.04,
+      "endTime": 1316.54,
+      "audioUrl": "/audio/lectures/biology/13/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Fluid is sampled from three locations in a healthy human kidney: blood plasma entering the glomerulus (X), fluid inside Bowman's capsule (Y), and fluid leaving the collecting duct (Z). Which row correctly shows the presence (+) or absence (–) of protein and glucose? A. X: protein (+), glucose (+) | Y: protein (+), glucose (+) | Z: protein (–), glucose (–) B. X: protein (+), glucose (+) | Y: protein (–), glucose (+) | Z: protein (–), glucose (–) C. X: protein (+), glucose (+) | Y: protein (–), glucose (–) | Z: protein (–), glucose (–) D. X: protein (–), glucose (+) | Y: protein (–), glucose (+) | Z: protein (–), glucose (+) ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: In X (blood plasma) , both plasma proteins and glucose are present (+/+). During filtration at the glomerulus into Y (Bowman's capsule) , plasma proteins are too large to pass through capillary pores (–), whereas small glucose molecules pass freely (+). Along the nephron tubule before Z (collecting duct / urine) , 100% of glucose is selectively reabsorbed back into the blood, so Z has neither protein nor glucose (–/–).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Exam Question: Fluid is sampled from blood plasma entering the glomerulus (X), fluid inside Bowman's capsule (Y), and fluid leaving the collecting duct (Z) in a healthy person. Which row correctly shows the presence (+) or absence (–) of protein and glucose? (Lấy mẫu dịch tại huyết tương vào quản cầu thận X, dịch trong nang Bowman Y và dịch rời ống góp Z ở người khỏe mạnh. Dòng nào thể hiện đúng sự có mặt (+) hay vắng mặt (–) của protein và glucose?) A. X: protein (+), glucose (+) | Y: protein (+), glucose (+) | Z: protein (–), glucose (–) B. X: protein (+), glucose (+) | Y: protein (–), glucose (+) | Z: protein (–), glucose (–) C. X: protein (+), glucose (+) | Y: protein (–), glucose (–) | Z: protein (–), glucose (–) D. X: protein (–), glucose (+) | Y: protein (–), glucose (+) | Z: protein (–), glucose (+) ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Tại X (huyết tương) có cả protein và glucose (+/+). Khi lọc qua glomerulus sang Y (nang Bowman) , protein quá lớn bị giữ lại (–) còn glucose phân tử nhỏ đi qua dễ dàng (+). Khi đi dọc ống thận trước khi tới Z (ống góp / nước tiểu) , 100% glucose được tái hấp thu chủ động về máu nên Z không còn cả protein lẫn glucose (–/–).",
+      "duration": 197.07,
+      "startTime": 1316.54,
+      "endTime": 1513.61,
+      "audioUrl": "/audio/lectures/biology/13/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Data Analysis [5 marks] A table shows concentrations (in g per 100 cm³) in a healthy adult:• Substance P (Protein): Blood plasma = 8.00 , Glomerular filtrate = 0.00 , Urine = 0.00 • Substance Q (Glucose): Blood plasma = 0.10 , Glomerular filtrate = 0.10 , Urine = 0.00 • Substance R (Urea): Blood plasma = 0.03 , Glomerular filtrate = 0.03 , Urine = 2.00 Explain the changes in concentration from blood plasma to urine for P , Q , and R . [5] ✍️ Step-by-Step Mark Scheme Solution: • Protein (P): Molecules are too large to pass through the capillary wall of the glomerulus / Bowman's capsule during filtration [1m].• Glucose (Q): Small enough to be filtered at the glomerulus [1m], then all (100%) of the glucose is selectively reabsorbed back into the blood along the nephron tubule (by active transport) [1m].• Urea (R): Filtered out at the glomerulus and not reabsorbed [1m]; its concentration rises ~67-fold because most of the water is reabsorbed from the nephron back into the blood [1m]. 💡 Intuition Check: Notice why urea concentration jumps from 0.03 to 2.00 even though the kidney does NOT make urea: removing ~98% of the water concentrates the remaining urea in a much smaller volume of urine!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Data Analysis [5 marks] Exam Question: Concentrations (g / 100 cm³) in a healthy human kidney:• Protein (P): Blood plasma = 8.00 , Filtrate = 0.00 , Urine = 0.00 • Glucose (Q): Blood plasma = 0.10 , Filtrate = 0.10 , Urine = 0.00 • Urea (R): Giải thích sự thay đổi nồng độ từ huyết tương đến nước tiểu của P, Q và R. ✍️ Lời giải chi tiết theo thang điểm: • Protein (P): Phân tử protein quá lớn không qua được màng lọc cầu thận. • Glucose (Q): Small enough to be filtered into filtrate , then all (100%) glucose is selectively reabsorbed back into blood in the nephron tubule . (Glucose lọt qua dịch lọc nhưng được tái hấp thu trọn vẹn 100% ở ống thận.) • Urea (R): Urea không được hấp thu lại và bị cô đặc mạnh do phần lớn nước đã rút về máu. 💡 Kiểm tra bản chất: Nồng độ urea tăng gấp ~67 lần (từ 0.03 lên 2.00) KHÔNG phải vì thận sản xuất thêm urea, mà vì ống thận đã rút lại gần 98% lượng nước về máu làm dung dịch còn lại đặc hơn!",
+      "duration": 193.59,
+      "startTime": 1513.61,
+      "endTime": 1707.2,
+      "audioUrl": "/audio/lectures/biology/13/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🏥 3. ĐIỀU TRỊ SUY THẬN (KIDNEY FAILURE)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🏥 3. TREATMENT OF KIDNEY FAILURE.",
+      "vi": "🏥 3. ĐIỀU TRỊ SUY THẬN (KIDNEY FAILURE).",
+      "duration": 7.21,
+      "startTime": 1707.2,
+      "endTime": 1714.41,
+      "audioUrl": "/audio/lectures/biology/13/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: A dialysis machine works like rinsing a salty, tea-stained sponge in clean sugar-water: if the bathwater already has the exact right amount of sugar (glucose) , no sugar leaks out of the sponge, while the tea stain (urea) — which starts at zero in the bathwater — rushes out down a steep diffusion gradient!",
+      "vi": "🎯 Hình dung đời thường: Máy chạy thận (Dialysis machine) hoạt động giống như ngâm một miếng bọt biển dính mực (urea) và ngấm đường (glucose) vào chậu nước đường sạch có đúng nồng độ đường chuẩn : vì hai bên bằng đường nhau nên đường không hề thất thoát, trong khi chậu nước có 0% mực (urea) nên toàn bộ vết mực khuếch tán nhanh chóng ra ngoài!",
+      "duration": 43.81,
+      "startTime": 1714.41,
+      "endTime": 1758.22,
+      "audioUrl": "/audio/lectures/biology/13/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Kidney failure causes toxic urea accumulation and ion/water imbalance.2) Dialysis fluid contains zero urea (so urea diffuses out of blood), normal blood glucose concentration (so zero net glucose loss), and normal plasma ion concentration (so only excess ions diffuse out).3) Transplant restores permanent nephron filtration & reabsorption, freeing the patient from machines, though requiring immunosuppressants to prevent tissue rejection.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Suy thận làm tích tụ urea gây độc và rối loạn cân bằng nước – muối khoáng.2) Dịch thẩm tách (Dialysis fluid) chứa 0% urea (tạo gradient nồng độ dốc để rút urea khỏi máu), nhưng có nồng độ glucose và ion chuẩn bằng huyết tương (giữ lại toàn bộ glucose cần thiết).3) Ghép thận (Transplant) giúp bệnh nhân thoát khỏi máy lọc lâu dài nhưng phải dùng thuốc ức chế miễn dịch (immunosuppressants) chống thải ghép.",
+      "duration": 65.72,
+      "startTime": 1758.22,
+      "endTime": 1823.94,
+      "audioUrl": "/audio/lectures/biology/13/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students often write that dialysis fluid contains \"pure distilled water\". NEVER write this! Pure water would cause all essential glucose and ions to diffuse out of the patient's blood AND water to enter red blood cells by osmosis until they burst!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng bao giờ viết dịch lọc chạy thận là \"nước cất tinh khiết (pure water)\"! Nếu dùng nước tinh khiết, toàn bộ glucose và muối thiết yếu trong máu bệnh nhân sẽ khuếch tán mất sạch và hồng cầu sẽ hút nước vỡ tung do thẩm thấu!",
+      "duration": 35.32,
+      "startTime": 1823.94,
+      "endTime": 1859.26,
+      "audioUrl": "/audio/lectures/biology/13/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Suy thận làm tích tụ urea gây độc và mất cân bằng điện giải. Hai giải pháp điều ...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Kidney failure leads to lethal urea toxicity, salt imbalance, and fluid retention. The two primary life-saving treatments are kidney dialysis and kidney transplant :",
+      "vi": "Suy thận làm tích tụ urea gây độc và mất cân bằng điện giải. Hai giải pháp điều trị cứu sống người bệnh:",
+      "duration": 19.17,
+      "startTime": 1859.26,
+      "endTime": 1878.43,
+      "audioUrl": "/audio/lectures/biology/13/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🩸 Chạy thận nhân tạo (Dialysis): ✅ Ưu điểm: Luôn có sẵn, không phải chờ đợi thận...",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🩸 Kidney Dialysis: ✅ Advantages: Readily available immediately without waiting for a matched donor organ. No major surgical risks or risk of immune rejection. ❌ Disadvantages: Requires frequent hospital visits (several hours, 2–3 times a week). Strict dietary restrictions (limiting salt, fluid, and protein intake). Repeated punctures increase risk of infection and blood clots. High long-term healthcare costs.; 🩺 Kidney Transplant: ✅ Advantages: Provides permanent freedom and significantly improved quality of life. Normal diet and fluid intake without machine dependence. Cheaper overall than lifetime dialysis maintenance. ❌ Disadvantages: Shortage of donor kidneys; long waiting lists. Risk of surgical complications and organ rejection. Patient must take lifelong immunosuppressant drugs , increasing susceptibility to other infectious diseases.",
+      "vi": "🩸 Chạy thận nhân tạo (Dialysis): ✅ Ưu điểm: Luôn có sẵn, không phải chờ đợi thận hiến tương thích. Không cần phẫu thuật lớn, không có nguy cơ cơ thể đào thải (no rejection). ❌ Nhược điểm: Tốn thời gian (ngồi máy lọc vài tiếng, 2-3 lần/tuần tại viện). Phải ăn kiêng nghiêm ngặt (hạn chế muối, chất đạm, nước). Nguy cơ nhiễm trùng và tạo cục máu đông do chọc kim nhiều lần. Chi phí tích lũy dài hạn rất tốn kém.; 🩺 Ghép thận (Kidney Transplant): ✅ Ưu điểm: Mang lại sự tự do và chất lượng cuộc sống vượt trội. Chế độ ăn uống và sinh hoạt thoải mái, không phụ thuộc máy lọc. Về lâu dài tiết kiệm chi phí hơn chạy thận suốt đời. ❌ Nhược điểm: Khan hiếm thận hiến, danh sách chờ đợi kéo dài. Rủi ro phẫu thuật và nguy cơ hệ miễn dịch đào thải tạng ghép. Phải uống thuốc ức chế miễn dịch (Immunosuppressants) suốt đời làm tăng nguy cơ nhiễm trùng.",
+      "duration": 122.59,
+      "startTime": 1878.43,
+      "endTime": 2001.02,
+      "audioUrl": "/audio/lectures/biology/13/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "💡 Nguyên lý máy chạy thận (Dialysis Machine)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "💡 How a Kidney Dialysis Machine Works. Blood from an artery flows through cellulose dialysis tubing (a partially permeable membrane) bathed in dialysis fluid:➔ Dialysis fluid contains NO urea , setting up a steep concentration gradient so urea diffuses rapidly out of the blood into the fluid.➔ Dialysis fluid has an identical glucose and mineral ion concentration to healthy blood plasma, preventing any net loss of essential glucose or required salts from the patient's blood.",
+      "vi": "💡 Nguyên lý máy chạy thận (Dialysis Machine). Máu bệnh nhân chảy qua ống màng bán thấm ngâm trong dịch lọc (Dialysis fluid):➔ Dịch lọc KHÔNG CHỨA UREA , tạo chênh lệch nồng độ cực lớn để urea khuếch tán ra ngoài.➔ Dịch lọc có nồng độ glucose và khoáng chất giống hệt máu bình thường , đảm bảo cơ thể không bị mất glucose hay muối cần thiết.",
+      "duration": 53.44,
+      "startTime": 2001.02,
+      "endTime": 2054.46,
+      "audioUrl": "/audio/lectures/biology/13/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦🟩 APPLICATION • Paper 1/2 MCQ During kidney dialysis, patient blood flows on one side of a partially permeable membrane while fresh dialysis fluid flows on the other side. What should be the concentrations of glucose and urea in fresh dialysis fluid compared with healthy blood plasma? A. Glucose: same as normal blood plasma | Urea: zero B. Glucose: zero | Urea: zero C. Glucose: higher than normal blood plasma | Urea: same as normal blood plasma D. Glucose: zero | Urea: higher than normal blood plasma ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Fresh dialysis fluid must have the same glucose concentration as normal blood plasma so there is no net diffusion gradient and essential glucose stays in the blood. It must contain zero urea to maintain a steep concentration gradient so toxic urea diffuses rapidly out of the patient's blood across the partially permeable membrane.",
+      "vi": "BÀI MẪU 1 🟦🟩 APPLICATION • Paper 1/2 MCQ Exam Question: What should be the concentrations of glucose and urea in fresh dialysis fluid compared with healthy human blood plasma? (Nồng độ glucose và urea trong dịch chạy thận nhân tạo mới đưa vào phải như thế nào so với huyết tương người khỏe mạnh?) A. Glucose bằng huyết tương chuẩn | Urea bằng 0 B. Glucose: zero | Urea: zero (Cả hai đều bằng 0) C. Glucose cao hơn | Urea bằng huyết tương D. Glucose bằng 0 | Urea cao hơn huyết tương ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Dịch chạy thận phải có nồng độ glucose bằng đúng huyết tương bình thường để không xảy ra khuếch tán mất đường của bệnh nhân, đồng thời không chứa urea (zero urea) để tạo chênh lệch nồng độ lớn nhất giúp urea khuếch tán nhanh từ máu qua màng bán thấm ra dịch lọc.",
+      "duration": 116.55,
+      "startTime": 2054.46,
+      "endTime": 2171.01,
+      "audioUrl": "/audio/lectures/biology/13/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 EXTENDED APPLICATION • Paper 4 Structured [4 marks] (a) Explain why fresh dialysis fluid is continuously replaced rather than left stationary around the dialysis tubing. [2] (b) State one major advantage and one major disadvantage of a kidney transplant compared with long-term dialysis. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Continuously replacing the fluid keeps urea concentration in the dialysis fluid near zero, maintaining a steep concentration gradient [1m] so urea continues to diffuse rapidly out of the blood [1m]. (b) Advantage: Patient has freedom from frequent hospital machine sessions / unrestricted normal diet [1m]. Disadvantage: Risk of tissue rejection by the immune system / need to take lifelong immunosuppressant drugs (increasing infection risk) / shortage of matched donors [1m]. 💡 Intuition Check: Every dialysis explanation boils down to diffusion gradients across a partially permeable membrane: steep gradient for waste (urea = 0 in fluid), zero gradient for essentials (glucose = normal plasma level).",
+      "vi": "BÀI MẪU 2 🟩 EXTENDED APPLICATION • Paper 4 Structured [4 marks] (a) Explain why fresh dialysis fluid must flow continuously through the dialysis machine rather than remaining still. (Giải thích vì sao dịch lọc mới phải chảy liên tục qua máy chạy thận thay vì đứng yên.) (b) State one advantage and one disadvantage of a kidney transplant compared with dialysis. (Nêu một ưu điểm và một nhược điểm của ghép thận so với chạy thận nhân tạo.) ✍️ Lời giải chi tiết theo thang điểm: Giữ nồng độ urea trong dịch lọc luôn sát 0 nhằm duy trì gradient nồng độ dốc giúp urea khuếch tán liên tục ra khỏi máu . (b) Advantage: Ưu: Không phụ thuộc máy lọc hàng tuần, ăn uống bình thường . Nhược: Nguy cơ thải ghép / phải uống thuốc ức chế miễn dịch suốt đời . 💡 Kiểm tra bản chất: Mọi câu hỏi về máy chạy thận đều xoay quanh nguyên lý khuếch tán qua màng bán thấm: chất cần thải (urea) đặt bằng 0 trong dịch lọc; chất cần giữ (glucose) đặt bằng nồng độ máu chuẩn.",
+      "duration": 143.16,
+      "startTime": 2171.01,
+      "endTime": 2314.17,
+      "audioUrl": "/audio/lectures/biology/13/s03_b08.mp3"
     }
   ]
 }

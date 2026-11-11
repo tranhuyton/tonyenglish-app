@@ -2,189 +2,719 @@
   "lectureId": "7777b4df-68dd-4600-b4ba-a4ce56ecc6ac",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 20: Human influences on ecosystems",
-  "totalDuration": 560.44,
+  "totalDuration": 3880.8,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_agriculture": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-agriculture": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_deforestation": {
-      "start": 3,
+    "s01_int": {
+      "start": 2,
       "end": 4
     },
-    "sec-deforestation": {
-      "start": 3,
-      "end": 4
-    },
-    "sec_eutrophication": {
-      "start": 5,
-      "end": 6
-    },
-    "sec-eutrophication": {
-      "start": 5,
-      "end": 6
-    },
-    "sec_climate_acid_rain": {
-      "start": 7,
-      "end": 8
-    },
-    "sec-climate-acid-rain": {
-      "start": 7,
-      "end": 8
-    },
-    "sec_conservation": {
+    "s01_wex": {
       "start": 9,
-      "end": 11
+      "end": 10
     },
-    "sec-conservation": {
-      "start": 9,
-      "end": 11
+    "s01_hdr": {
+      "start": 1,
+      "end": 10
+    },
+    "s02_int": {
+      "start": 12,
+      "end": 14
+    },
+    "s02_wex": {
+      "start": 20,
+      "end": 21
+    },
+    "s02_hdr": {
+      "start": 11,
+      "end": 21
+    },
+    "s03_int": {
+      "start": 23,
+      "end": 25
+    },
+    "s03_wex": {
+      "start": 34,
+      "end": 35
+    },
+    "s03_hdr": {
+      "start": 22,
+      "end": 35
+    },
+    "s04_int": {
+      "start": 37,
+      "end": 39
+    },
+    "s04_p1_sub01": {
+      "start": 40,
+      "end": 43
+    },
+    "s04_p2_sub01": {
+      "start": 40,
+      "end": 43
+    },
+    "s04_wex": {
+      "start": 44,
+      "end": 45
+    },
+    "s04_hdr": {
+      "start": 36,
+      "end": 45
+    },
+    "s05_int": {
+      "start": 47,
+      "end": 49
+    },
+    "s05_wex": {
+      "start": 56,
+      "end": 57
+    },
+    "s05_hdr": {
+      "start": 46,
+      "end": 57
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 20: Tác động của Con người lên Hệ sinh thái",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 20: Human Influences on Ecosystems. Human activities increasingly disrupt ecological balances on a global scale. In this lesson, we evaluate agricultural impacts of monocultures and intensive livestock, mechanisms and consequences of deforestation, aquatic eutrophication cascades, enhanced greenhouse effect, acid rain, and modern conservation strategies for endangered species.",
-      "vi": "Chào mừng các bạn đến với Bài 20: Tác động của Con người lên Hệ sinh thái. Hoạt động của loài người đang làm xáo trộn các cân bằng sinh thái trên quy mô toàn cầu. Trong bài học này, chúng ta sẽ đánh giá tác động của độc canh nông nghiệp và chăn nuôi thâm canh, cơ chế và hậu quả của nạn phá rừng, chuỗi phản ứng phú dưỡng nguồn nước, hiệu ứng nhà kính tăng cường, mưa axit và các chiến lược bảo tồn đa dạng sinh học hiện đại.",
-      "duration": 46.34,
+      "title": "Topic 20: Human Influences on Ecosystems (Tác động Con người)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) • Core & Supplement Topic 20: Human Influences on Ecosystems. Food Supply, Habitat Destruction, Eutrophication, Plastics, Enhanced Greenhouse Effect & Conservation.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Anh - Việt Topic 20: Human Influences on Ecosystems (Tác động Con người). Nguồn cung Lương thực, Phá rừng, Phú dưỡng, Rác thải Nhựa, Hiệu ứng Nhà kính & Bảo tồn Sinh học.",
+      "duration": 36.54,
       "startTime": 0.0,
-      "endTime": 46.34,
+      "endTime": 36.54,
       "audioUrl": "/audio/lectures/biology/20/intro.mp3"
     },
     {
-      "id": "sec_agriculture",
-      "title": "1. Nông nghiệp & Cung ứng Lương thực (Monoculture)",
-      "selector": "#sec-agriculture",
-      "en": "Section 1: Food supply and modern agriculture: Growing human populations demand increased food production through agricultural machinery, chemical fertilizers, synthetic insecticides, herbicides, and selective breeding.",
-      "vi": "Mục 1: Cung ứng lương thực và nông nghiệp hiện đại: Dân số gia tăng nhanh đòi hỏi tăng sản lượng lương thực thông qua cơ giới hóa máy móc, phân bón hóa học, thuốc trừ sâu tổng hợp, thuốc diệt cỏ và chọn lọc nhân tạo giống cây trồng vật nuôi.",
-      "duration": 46.94,
-      "startTime": 46.34,
-      "endTime": 93.28,
-      "audioUrl": "/audio/lectures/biology/20/sec_agriculture.mp3"
+      "id": "s01_hdr",
+      "title": "🌾 1. Food Supply & Modern Agriculture (Cung ứng Lương thực & Nông nghiệp Hiện đại)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🌾 1. Food Supply & Modern Agricultural Technology.",
+      "vi": "🌾 1. Food Supply & Modern Agriculture (Cung ứng Lương thực & Nông nghiệp Hiện đại).",
+      "duration": 11.0,
+      "startTime": 36.54,
+      "endTime": 47.54,
+      "audioUrl": "/audio/lectures/biology/20/s01_hdr.mp3"
     },
     {
-      "id": "card_monoculture_livestock",
-      "title": "🌽 Độc canh Quy mô lớn & Chăn nuôi Thâm canh",
-      "selector": "#card-monoculture-livestock",
-      "en": "Monocultures and intensive livestock: Monoculture is growing a single crop species over large land areas, causing severe biodiversity loss, rapid pest population surges, and soil nutrient depletion. Intensive livestock farming confines animals in high densities, risking antibiotic resistance transmission, high greenhouse gas emissions, and massive slurry pollution.",
-      "vi": "Độc canh và chăn nuôi thâm canh: Độc canh là trồng duy nhất một loài cây trên diện tích lớn, làm suy giảm đa dạng sinh học, bùng phát sâu bệnh và thoái hóa cạn kiệt dinh dưỡng đất. Chăn nuôi thâm canh nuôi nhốt gia súc mật độ cao dẫn đến nguy cơ kháng kháng sinh lây lan, phát thải khí nhà kính và ô nhiễm chất thải phân chuồng nghiêm trọng.",
-      "duration": 41.99,
-      "startTime": 93.28,
-      "endTime": 135.27,
-      "audioUrl": "/audio/lectures/biology/20/card_monoculture_livestock.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: A monoculture is like planting an endless 10,000-seat stadium with identical wheat clones: one combine harvester can reap the whole stadium in hours (huge efficiency!), but if a single wheat-eating beetle arrives, it has an all-you-can-eat buffet with zero barriers and zero natural predators!",
+      "vi": "🎯 Hình dung đời thường: Độc canh (Monoculture) giống như trồng kín một sân vận động 10,000 chỗ bằng cùng một giống lúa mì y hệt nhau: một chiếc máy gặt đập liên hợp có thể thu hoạch sạch trong vài giờ (cực kỳ năng suất!), nhưng chỉ cần một loài bọ cánh cứng chuyên ăn lúa mì bay tới thì cả cánh đồng biến thành \"bàn tiệc buffet bất tận\" không rào cản và không có thiên địch!",
+      "duration": 43.43,
+      "startTime": 47.54,
+      "endTime": 90.97,
+      "audioUrl": "/audio/lectures/biology/20/s01_b01.mp3"
     },
     {
-      "id": "sec_deforestation",
-      "title": "2. Phá hủy Môi trường sống & Nạn Phá rừng (Deforestation)",
-      "selector": "#sec-deforestation",
-      "en": "Section 2: Habitat destruction and deforestation: Clearing forests for agriculture, livestock grazing, timber extraction, and urban expansion destroys habitats, driving biodiversity loss and climate instability.",
-      "vi": "Mục 2: Phá hủy môi trường sống và nạn phá rừng: Chặt phá rừng lấy đất canh tác, chăn thả gia súc, khai thác gỗ và mở rộng đô thị phá hủy nơi cư trú tự nhiên, làm mất đa dạng sinh học và gây mất ổn định khí hậu.",
-      "duration": 47.97,
-      "startTime": 135.27,
-      "endTime": 183.24,
-      "audioUrl": "/audio/lectures/biology/20/sec_deforestation.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Separate how yields are boosted (machinery = larger land/efficiency; fertilisers = mineral ions; insecticides = kill insect pests; herbicides = kill weeds to cut competition for light/water/ions; selective breeding = better alleles) from ecosystem costs (monocultures = low biodiversity, pest outbreaks, soil mineral depletion; intensive livestock = welfare issues, rapid disease → antibiotic resistance, methane, slurry eutrophication).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Phân biệt rõ 2 vế trong đề thi: Cách công nghệ tăng sản lượng (machinery = mở rộng diện tích/nhanh; fertilisers = bổ sung ion khoáng; insecticides = diệt sâu hại; herbicides = diệt cỏ dại giảm cạnh tranh ánh sáng/nước/khoáng; selective breeding = chọn giống tốt) VÀ Tác hại sinh thái (monocultures = mất đa dạng sinh học, bùng phát sâu bệnh, kiệt khoáng đất; intensive livestock = stress phúc lợi, lây bệnh nhanh → kháng kháng sinh, khí methane, phân gây phú dưỡng).",
+      "duration": 72.15,
+      "startTime": 90.97,
+      "endTime": 163.12,
+      "audioUrl": "/audio/lectures/biology/20/s01_b02.mp3"
     },
     {
-      "id": "card_deforestation_impacts",
-      "title": "🔥 Hậu quả của Phá rừng: Xói mòn, Lũ lụt & CO2",
-      "selector": "#card-deforestation-impacts",
-      "en": "Deforestation impacts: Tree clearance reduces photosynthesis while combustion of felled timber releases massive carbon dioxide, accelerating global warming. The absence of tree root networks leads to topsoil erosion by heavy rainfall, siltation of riverbeds, and downstream flash flooding.",
-      "vi": "Hậu quả của nạn phá rừng: Mất cây xanh làm giảm hấp thụ CO2 qua quang hợp, trong khi đốt gỗ giải phóng lượng lớn CO2 đẩy nhanh biến đổi khí hậu. Mất hệ rễ cây giữ đất khiến đất mặt bị mưa xói mòn rửa trôi, bồi lấp lòng sông gây sạt lở và lũ quét ngập lụt vùng hạ lưu.",
-      "duration": 34.72,
-      "startTime": 183.24,
-      "endTime": 217.96,
-      "audioUrl": "/audio/lectures/biology/20/card_deforestation_impacts.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Confusing herbicides with insecticides , or saying \"fertilisers kill weeds\"! Fertilisers add mineral ions (like nitrates); herbicides kill competing weeds; insecticides kill insect pests.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nhầm lẫn giữa herbicides (thuốc diệt cỏ) với insecticides (thuốc trừ sâu) , hoặc viết \"phân bón giết cỏ dại\"! Phân bón cung cấp ion khoáng (như nitrat); thuốc diệt cỏ mới diệt cỏ dại để giảm cạnh tranh.",
+      "duration": 33.44,
+      "startTime": 163.12,
+      "endTime": 196.56,
+      "audioUrl": "/audio/lectures/biology/20/s01_b03.mp3"
     },
     {
-      "id": "sec_eutrophication",
-      "title": "3. Ô nhiễm Nước & Hiện tượng Phú dưỡng (Eutrophication)",
-      "selector": "#sec-eutrophication",
-      "en": "Section 3: Pollution and eutrophication: Runoff of synthetic inorganic nitrate and phosphate fertilizers or untreated sewage into aquatic freshwater ecosystems causes deadly eutrophication.",
-      "vi": "Mục 3: Ô nhiễm nguồn nước và hiện tượng phú dưỡng: Sự rửa trôi phân bón hóa học chứa nitrat, photphat hoặc nước thải chưa qua xử lý vào các hệ sinh thái nước ngọt gây nên hiện tượng phú dưỡng độc hại.",
-      "duration": 69.35,
-      "startTime": 217.96,
-      "endTime": 287.31,
-      "audioUrl": "/audio/lectures/biology/20/sec_eutrophication.mp3"
+      "id": "s01_b04",
+      "title": "🚜 5 Công nghệ Hiện đại giúp Tăng Sản lượng Lương thực (Core 20.1.1)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🚜 Five Ways Modern Technology Increases Food Production (Core 20.1.1). (a) Agricultural machinery: Tractors, ploughs, seed drills, and combine harvesters enable farmers to cultivate much larger areas of land faster and with higher labour efficiency. (b) Chemical fertilisers: Supply soluble mineral ions ( NPK — nitrates for amino acids/proteins, phosphates for DNA/membranes, potassium/magnesium for chlorophyll) to depleted soils, directly increasing crop growth and yield. (c) Insecticides: Kill insect pests that eat crops or transmit plant pathogens, improving both crop quality and yield (though non-selective sprays can harm beneficial pollinators like bees). (d) Herbicides: Kill competing weeds so crop plants face reduced interspecific competition for light, water, and soil mineral ions. (e) Selective breeding: Choosing high-yielding, disease-resistant, or drought-tolerant crop varieties and fast-growing/high-milk livestock as parents over many generations.",
+      "vi": "🚜 5 Công nghệ Hiện đại giúp Tăng Sản lượng Lương thực (Core 20.1.1). (a) Agricultural machinery (Máy móc cơ giới): Máy cày, máy gieo hạt, máy gặt đập liên hợp giúp canh tác trên diện tích đất rộng lớn hơn với hiệu suất cao, tốn ít nhân công. (b) Chemical fertilisers (Phân bón hóa học): Bổ sung các ion khoáng hòa tan ( NPK — nitrat tạo amino acid/protein, phosphat tạo ADN, magie tạo diệp lục) cho đất bạc màu để tăng tốc độ sinh trưởng và năng suất. (c) Insecticides (Thuốc trừ sâu): Tiêu diệt côn trùng ăn phá mùa màng hoặc truyền bệnh thực vật, nâng cao chất lượng và sản lượng nông sản (nhưng có thể hại côn trùng thụ phấn như ong). (d) Herbicides (Thuốc diệt cỏ): Tiêu diệt cỏ dại nhằm giảm sự cạnh tranh (competition) giành ánh sáng, nước và ion khoáng với cây trồng. (e) Selective breeding (Chọn giống nhân tạo): Lai tạo qua nhiều thế hệ các giống cây năng suất cao, kháng bệnh và các giống vật nuôi lớn nhanh, siêu thịt/sữa.",
+      "duration": 135.52,
+      "startTime": 196.56,
+      "endTime": 332.08,
+      "audioUrl": "/audio/lectures/biology/20/s01_b04.mp3"
     },
     {
-      "id": "card_eutrophication_stages",
-      "title": "☠️ 5 Giai đoạn của Hiện tượng Phú dưỡng",
-      "selector": "#card-eutrophication-stages",
-      "en": "The 5 stages of eutrophication: First, fertilizer nutrients leach into lakes. Second, algae rapidly multiply forming dense surface algal blooms that block sunlight. Third, submerged plants die from lack of light. Fourth, aerobic decomposing bacteria feed on dead vegetation, reproducing explosively and consuming dissolved oxygen. Fifth, severe hypoxia leads to mass death of fish and aquatic invertebrates.",
-      "vi": "Năm giai đoạn của hiện tượng phú dưỡng: Thứ nhất, phân bón giàu nitrat rửa trôi vào hồ. Thứ hai, tảo sinh sôi bùng nổ tạo màng tảo xanh dày đặc che khuất ánh sáng. Thứ ba, thực vật thủy sinh dưới đáy chết do thiếu sáng không quang hợp được. Thứ tư, vi khuẩn hiếu khí phân hủy xác thực vật bùng nổ tiêu thụ cạn kiệt oxy hòa tan. Thứ năm, sự thiếu oxy nghiêm trọng làm cá và các động vật thủy sinh chết hàng loạt ngạt thở.",
-      "duration": 56.54,
-      "startTime": 287.31,
-      "endTime": 343.85,
-      "audioUrl": "/audio/lectures/biology/20/card_eutrophication_stages.mp3"
+      "id": "s01_b05",
+      "title": "🌽 Độc canh Quy mô lớn (Large-Scale Monocultures)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🌽 Large-Scale Monocultures. Definition: Growing a single species/variety of crop plant over a vast land area year after year (e.g. oil palm, wheat, maize). Pros: Easy mechanised planting/harvesting with specialised machinery; uniform ripening; high short-term profit. Negative Ecosystem Impacts: Drastic loss of biodiversity (destroys varied habitats & food webs); rapid outbreaks of specialist pests & diseases (requiring heavy insecticide/fungicide spraying); depletion of specific soil mineral ions (requiring heavy fertiliser input & causing leaching); low genetic variation makes entire harvest vulnerable to environmental change.",
+      "vi": "🌽 Độc canh Quy mô lớn. Định nghĩa: Trồng duy nhất một loài cây trồng trên diện tích rộng lớn qua nhiều năm (VD: cọ dầu, ngô, lúa mì). Ưu điểm: Dễ cơ giới hóa đồng bộ khâu gieo trồng, phun tưới và thu hoạch; tối ưu lợi nhuận ngắn hạn. Tác hại lên Hệ sinh thái: Suy giảm nghiêm trọng đa dạng sinh học (biodiversity) và lưới thức ăn; sâu bệnh chuyên biệt bùng phát thành dịch (phải lạm dụng thuốc trừ sâu); cạn kiệt một nhóm khoáng chất nhất định trong đất (phải bón nhiều phân hóa học gây rửa trôi); độ đa dạng di truyền thấp dễ mất trắng mùa màng.",
+      "duration": 82.11,
+      "startTime": 332.08,
+      "endTime": 414.19,
+      "audioUrl": "/audio/lectures/biology/20/s01_b05.mp3"
     },
     {
-      "id": "sec_climate_acid_rain",
-      "title": "4. Biến đổi Khí hậu & Mưa Axit",
-      "selector": "#sec-climate-acid-rain",
-      "en": "Section 4: Climate change and acid rain: Burning fossil fuels produces carbon dioxide and methane that trap outgoing thermal infrared radiation, amplifying the greenhouse effect. Sulfur dioxide and nitrogen oxides dissolve in atmospheric moisture forming dilute sulfuric and nitric acids, which leach toxic aluminium ions from soil and lower freshwater pH.",
-      "vi": "Mục 4: Biến đổi khí hậu và mưa axit: Đốt nhiên liệu hóa thạch phát thải CO2 và mêtan giữ lại bức xạ nhiệt hồng ngoại làm tăng hiệu ứng nhà kính và biến đổi khí hậu toàn cầu. Khí lưu huỳnh đioxit và oxit nitơ hòa tan vào hơi nước tạo mưa axit sunfuric và nitric, làm chua hóa nguồn nước và rửa trôi ion nhôm độc hại vào sông hồ làm chết cá.",
-      "duration": 53.44,
-      "startTime": 343.85,
-      "endTime": 397.29,
-      "audioUrl": "/audio/lectures/biology/20/sec_climate_acid_rain.mp3"
+      "id": "s01_b06",
+      "title": "🐄 Chăn nuôi Thâm canh (Intensive Livestock)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🐄 Intensive Livestock Production. Definition: Keeping high densities of livestock (cattle, pigs, poultry) in temperature-controlled indoor pens with high-energy feed. Pros: Less energy lost in movement and thermoregulation → high meat/milk/egg yield at lower cost per kg. Negative Ecosystem Impacts: Ethical & animal welfare issues (crowding, stress); rapid spread of infectious diseases leading to routine antibiotic use and antibiotic-resistant bacteria ; huge methane ( CH₄ ) emissions enhancing global warming; concentrated slurry/urine runoff causing aquatic eutrophication; land cleared to grow animal feed crops.",
+      "vi": "🐄 Chăn nuôi Thâm canh (Intensive Livestock). Định nghĩa: Nuôi nhốt mật độ lớn gia súc, gia cầm trong chuồng kín kiểm soát nhiệt độ và thức ăn giàu năng lượng. Ưu điểm: Giảm hao phí năng lượng vận động/giữ ấm → tăng trọng cực nhanh, giá thành thịt/trứng/sữa rẻ. Tác hại lên Hệ sinh thái: Vi phạm phúc lợi động vật (chật chội, căng thẳng); dịch bệnh lây lan cực nhanh khiến trại phải dùng kháng sinh định kỳ tạo ra vi khuẩn kháng kháng sinh ; thải lượng lớn khí methane ( CH₄ ) gây ấm lên toàn cầu; phân và nước tiểu tràn ra sông hồ gây phú dưỡng hóa (eutrophication).",
+      "duration": 82.39,
+      "startTime": 414.19,
+      "endTime": 496.58,
+      "audioUrl": "/audio/lectures/biology/20/s01_b06.mp3"
     },
     {
-      "id": "card_greenhouse_acid_rain",
-      "title": "🌍 Hiệu ứng Nhà kính Tăng cường & Biện pháp Khắc phục",
-      "selector": "#card-greenhouse-acid-rain",
-      "en": "Mitigating atmospheric pollution: Solutions require transitioning to renewable energy, installing catalytic converters in vehicles, utilizing scrubbers in power stations to desulfurize flue gases, and reforestation to restore natural carbon sinks.",
-      "vi": "Biện pháp giảm thiểu ô nhiễm khí quyển: Các giải pháp cấp thiết gồm chuyển đổi sang năng lượng tái tạo, lắp bộ lọc xúc tác cho khí thải xe cộ, sử dụng tháp lọc khí để khử lưu huỳnh tại nhà máy nhiệt điện, và tích cực trồng rừng khôi phục bể hấp thụ carbon tự nhiên.",
-      "duration": 30.18,
-      "startTime": 397.29,
-      "endTime": 427.47,
-      "audioUrl": "/audio/lectures/biology/20/card_greenhouse_acid_rain.mp3"
+      "id": "s01_b07",
+      "title": "🌍 Supplement (20.1.4) — Hệ lụy Xã hội, Kinh tế & Môi trường của An ninh Lương thực:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🌍 Supplement (20.1.4) — Social, Environmental & Economic Implications of Global Food Supply: Even though global food output is high, local famines still occur due to unequal distribution , poverty (inability to afford food/seed/fertilisers), extreme weather (droughts & floods worsened by climate change), armed conflict , rapid population growth, and using prime arable land to grow biofuel or cash crops instead of staple food crops.",
+      "vi": "🌍 Supplement (20.1.4) — Hệ lụy Xã hội, Kinh tế & Môi trường của An ninh Lương thực: Nạn đói cục bộ vẫn xảy ra do phân phối bất bình đẳng , đói nghèo (không đủ tiền mua lương thực/phân bón), thiên tai hạn hán — lũ lụt do biến đổi khí hậu, chiến tranh xung đột , tăng dân số quá nhanh và việc chuyển đất trồng lương thực sang trồng cây nhiên liệu sinh học (biofuels) .",
+      "duration": 51.41,
+      "startTime": 496.58,
+      "endTime": 547.99,
+      "audioUrl": "/audio/lectures/biology/20/s01_b07.mp3"
     },
     {
-      "id": "sec_conservation",
-      "title": "5. Bảo tồn Đa dạng Sinh học & Quản lý Tài nguyên Bền vững",
-      "selector": "#sec-conservation",
-      "en": "Section 5: Conservation and sustainable resources: Conservation is the maintenance of biodiversity through the preservation and restoration of natural habitats and sustainable management of natural resources.",
-      "vi": "Mục 5: Bảo tồn đa dạng sinh học và tài nguyên bền vững: Bảo tồn là việc duy trì sự đa dạng sinh học thông qua bảo vệ và phục hồi các môi trường sống tự nhiên, đồng thời quản lý khai thác bền vững các nguồn tài nguyên.",
-      "duration": 51.21,
-      "startTime": 427.47,
-      "endTime": 478.68,
-      "audioUrl": "/audio/lectures/biology/20/sec_conservation.mp3"
+      "id": "s01_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ A farmer replaces a diverse natural meadow with a large-scale monoculture of maize. Which combination of ecological changes is most likely to occur in this field? A. Increased biodiversity and decreased need for chemical fertilisers B. Decreased biodiversity and rapid spread of maize-specific insect pests C. Increased stability of food webs and zero risk of pesticide bioaccumulation D. Decreased competition between weeds and maize without using herbicides ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Growing a single crop species removes diverse plant habitats and food sources ( decreasing biodiversity ), while providing an uninterrupted food supply for specialist maize pests and fungal pathogens to multiply explosively. A, C, and D state the opposite of monoculture effects.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 A farmer replaces a diverse natural meadow with a large-scale monoculture of maize. Which combination of ecological changes is most likely to occur in this field? (Một nông dân phá đồng cỏ tự nhiên đa dạng để trồng độc canh ngô quy mô lớn. Tổ hợp biến đổi sinh thái nào dễ xảy ra nhất trên cánh đồng này?) A. Increased biodiversity and decreased need for chemical fertilisers B. Decreased biodiversity and rapid spread of maize-specific insect pests C. Increased stability of food webs and zero risk of pesticide bioaccumulation D. Decreased competition between weeds and maize without using herbicides ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Trồng một loài cây duy nhất xóa bỏ nơi ở và nguồn thức ăn đa dạng ( giảm đa dạng sinh học — decreased biodiversity ), đồng thời tạo nguồn thức ăn liên tục khiến sâu hại và nấm bệnh chuyên ăn ngô lan truyền bùng nổ. Các câu A, C, D đều ngược với thực tế.",
+      "duration": 127.45,
+      "startTime": 547.99,
+      "endTime": 675.44,
+      "audioUrl": "/audio/lectures/biology/20/s01_b08.mp3"
     },
     {
-      "id": "card_sustainable_resources",
-      "title": "🌲 Quản lý Bền vững Tài nguyên Rừng & Thủy sản",
-      "selector": "#card-sustainable-resources",
-      "en": "Sustainable resource management: Sustainable harvesting meets human needs today without compromising the availability of resources for future generations. Forestry employs quotas, selective felling, and replanting. Fisheries enforce fishing quotas, restricted mesh sizes allowing young fish to escape, and marine protected areas during breeding seasons.",
-      "vi": "Quản lý tài nguyên bền vững: Phát triển bền vững đáp ứng nhu cầu hiện tại mà không làm tổn hại đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. Lâm nghiệp áp dụng hạn ngạch khai thác, đốn hạ có chọn lọc và trồng rừng thay thế. Ngư nghiệp áp đặt hạn ngạch đánh bắt, quy định kích thước mắt lưới mắt lớn để cá non thoát được, và lập khu bảo tồn biển trong mùa sinh sản.",
-      "duration": 43.94,
-      "startTime": 478.68,
-      "endTime": 522.62,
-      "audioUrl": "/audio/lectures/biology/20/card_sustainable_resources.mp3"
+      "id": "s01_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Explain how spraying a selective herbicide increases the yield of a wheat crop. [2](b) State two negative environmental or health impacts associated with intensive livestock production. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The herbicide kills weeds growing among the wheat [1m], reducing competition between weeds and wheat plants for light, water, and soil mineral ions (so wheat photosynthesises and grows faster) [1m]. (b) Any two from: high animal density accelerates disease spread, leading to routine antibiotic use and antibiotic-resistant bacteria [1m]; ruminants release large volumes of methane enhancing global warming [1m]; concentrated manure/urine slurry washes into rivers causing eutrophication (or valid animal welfare stress point). 💡 Intuition Check: Whenever explaining herbicides, always name at least two resources weeds compete for: light, water, and mineral ions!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [4 marks] (a) Explain how spraying a selective herbicide increases the yield of a wheat crop. (b) State two negative environmental or health impacts associated with intensive livestock production. ((a) Giải thích vì sao phun thuốc diệt cỏ chọn lọc làm tăng năng suất lúa mì. (b) Nêu 2 tác động tiêu cực về môi trường hoặc sức khỏe của chăn nuôi thâm canh. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Herbicide tiêu diệt cỏ dại mọc xen trong ruộng , giúp giảm sự cạnh tranh (competition) giành ánh sáng, nước và các ion khoáng trong đất giữa cỏ dại và lúa mì (giúp lúa mì quang hợp và lớn nhanh hơn) . (b) Nêu 2 ý bất kỳ: mật độ nhốt dày làm dịch bệnh lây nhanh, phải lạm dụng kháng sinh dẫn tới vi khuẩn kháng kháng sinh ; gia súc thải nhiều khí methane làm tăng hiệu ứng nhà kính ; nước thải phân chuồng rửa trôi gây phú dưỡng hóa (eutrophication) . 💡 Kiểm tra bản chất: Khi giải thích vai trò thuốc diệt cỏ (herbicide), luôn liệt kê ít nhất 2 tài nguyên mà cỏ dại cạnh tranh: light, water, mineral ions!",
+      "duration": 145.16,
+      "startTime": 675.44,
+      "endTime": 820.6,
+      "audioUrl": "/audio/lectures/biology/20/s01_b09.mp3"
     },
     {
-      "id": "card_captive_breeding_methods",
-      "title": "🐼 Quản lý Loài Nguy cấp & Kỹ thuật Nhân giống Nuôi nhốt",
-      "selector": "#card-captive-breeding-methods",
-      "en": "Endangered species management and captive breeding: Endangered species are protected in national parks and botanic gardens. Captive breeding programs in zoos maintain genetic diversity using studbooks, in vitro fertilization, and embryo transfer, with ultimate reintroduction into protected wild habitats.",
-      "vi": "Quản lý loài nguy cấp và nhân giống nuôi nhốt: Các loài có nguy cơ tuyệt chủng được bảo vệ trong các vườn quốc gia và vườn thực vật. Các chương trình nhân giống nuôi nhốt trong thảo cầm viên duy trì đa dạng di truyền qua sổ theo dõi phả hệ, thụ tinh trong ống nghiệm và chuyển phôi, hướng tới tái thả cá thể trở lại môi trường hoang dã an toàn.",
-      "duration": 37.82,
-      "startTime": 522.62,
-      "endTime": 560.44,
-      "audioUrl": "/audio/lectures/biology/20/card_captive_breeding_methods.mp3"
+      "id": "s02_hdr",
+      "title": "🚜 2. Habitat Destruction & Deforestation (Phá hủy Sinh cảnh & Nạn Phá rừng)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🚜 2. Habitat Destruction & Deforestation.",
+      "vi": "🚜 2. Habitat Destruction & Deforestation (Phá hủy Sinh cảnh & Nạn Phá rừng).",
+      "duration": 10.95,
+      "startTime": 820.6,
+      "endTime": 831.55,
+      "audioUrl": "/audio/lectures/biology/20/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: A rainforest acts as a giant living umbrella, sponge, and carbon vault all at once: the leaf canopy softens torrential rain, roots anchor the soil like steel rebar and drink up water, and trunks lock away tonnes of carbon. Chainsaw the forest, and the umbrella vanishes (erosion), the sponge overflows (floods), and the carbon vault burns into the sky ( CO₂ )!",
+      "vi": "🎯 Hình dung đời thường: Một khu rừng nhiệt đới đóng đồng thời 3 vai trò: chiếc ô khổng lồ, miếng bọt biển hút nước và két sắt khóa Carbon : tán lá giảm lực đập của mưa bão, rễ cây đan như cốt thép giữ đất và hút nước, còn thân gỗ tích trữ hàng tấn carbon. Khi cưa sạch rừng, chiếc ô biến mất (xói mòn đất), bọt biển tràn ngập (lũ quét) và két carbon bốc cháy bay lên trời ( CO₂ )!",
+      "duration": 53.79,
+      "startTime": 831.55,
+      "endTime": 885.34,
+      "audioUrl": "/audio/lectures/biology/20/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the 4 deforestation impacts as cause-and-effect pairs: (1) Extinction: loss of shelter/food/breeding sites breaks food webs; (2) Loss of soil: no canopy interception + no roots binding topsoil → rain washes soil away; (3) Flooding: less root absorption/transpiration + eroded silt raising riverbeds → rapid surface runoff; (4) Increased atmospheric CO₂ : burning/rotting trees releases CO₂ AND fewer trees photosynthesise.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Ghi nhớ 4 hệ quả phá rừng theo cặp nhân-quả chuẩn Mark Scheme: (1) Extinction: mất nơi ở/nguồn ăn/nơi sinh sản làm đứt lưới thức ăn; (2) Loss of soil: mất tán lá cản mưa + mất rễ giữ đất → mưa rửa trôi đất mặt; (3) Flooding: giảm hút nước/thoát hơi nước + bùn bồi nông lòng sông → nước chảy tràn gây lũ; (4) Increased CO₂ : đốt/phân hủy cây nhả CO₂ CỘNG VỚI ít cây quang hợp hút CO₂ .",
+      "duration": 67.2,
+      "startTime": 885.34,
+      "endTime": 952.54,
+      "audioUrl": "/audio/lectures/biology/20/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"deforestation increases CO₂ ONLY because fewer trees photosynthesise\" in a 2-mark question! Always give BOTH halves: (1) less photosynthesis removing CO₂ AND (2) combustion / microbial decomposition of felled trees releasing CO₂ .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Trả lời câu 2 điểm \"Vì sao phá rừng làm tăng CO₂ ?\" mà chỉ viết mỗi ý \"ít cây quang hợp hơn\"! Bắt buộc phải nêu đủ CẢ HAI vế: (1) giảm quang hợp hấp thụ CO₂ VÀ (2) đốt cây (combustion) / vi sinh vật phân hủy cây chết hô hấp thải CO₂ .",
+      "duration": 42.53,
+      "startTime": 952.54,
+      "endTime": 995.07,
+      "audioUrl": "/audio/lectures/biology/20/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🏗️ 3 Nhóm Nguyên nhân Chính gây Phá hủy Sinh cảnh (Core 20.2.1–2)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🏗️ Major Reasons for Habitat Destruction (Core 20.2.1–2). (a) Increased land area needed: Clearing forests, grasslands, and wetlands for urban housing/roads , crop plant production (e.g. soya, palm oil), and livestock grazing. (b) Extraction of natural resources: Open-cast mining for metal ores/coal, quarrying stone, oil drilling, and commercial logging for timber/paper. (c) Freshwater and marine pollution: Untreated sewage, fertiliser runoff, toxic industrial chemicals, oil spills, and plastics degrading rivers, lakes, coral reefs, and oceans. Altering food webs: Removing producers or polluting habitats breaks feeding links, causing trophic cascades across entire ecosystems.",
+      "vi": "🏗️ 3 Nhóm Nguyên nhân Chính gây Phá hủy Sinh cảnh (Core 20.2.1–2). (a) Mở rộng diện tích đất: San lấp rừng và đầm lầy để xây nhà ở đô thị/đường sá (housing) , trồng trọt (crop production) và chăn thả gia súc (livestock). (b) Khai thác tài nguyên thiên nhiên: Khai mỏ lộ thiên lấy quặng kim loại/than đá, khai thác dầu khí và đốn gỗ thương mại. (c) Ô nhiễm nước ngọt và biển: Xả nước thải chưa xử lý, phân bón, hóa chất công nghiệp, tràn dầu và rác thải nhựa. Làm đứt gãy lưới thức ăn: Xóa sổ sinh vật sản xuất hoặc làm ô nhiễm nơi sống gây hiệu ứng sụp đổ dây chuyền lên mọi bậc dinh dưỡng.",
+      "duration": 91.59,
+      "startTime": 995.07,
+      "endTime": 1086.66,
+      "audioUrl": "/audio/lectures/biology/20/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🗺️ Sơ đồ Tương tác: Chuỗi Hậu quả Sinh thái của Phá rừng",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🗺️ Interactive Map: Environmental Effects of Deforestation. Hover or click each zone (Atmosphere, Soil & Water, Biodiversity) to inspect the cause-and-effect chain. 👆 Select a Zone on the Diagram.",
+      "vi": "🗺️ Sơ đồ Tương tác: Chuỗi Hậu quả Sinh thái của Phá rừng. 👆 Chọn một Khu vực trên Sơ đồ.",
+      "duration": 21.8,
+      "startTime": 1086.66,
+      "endTime": 1108.46,
+      "audioUrl": "/audio/lectures/biology/20/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🔥 1. Tăng khí CO₂ khí quyển",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🔥 1. Increase of CO₂ in Atmosphere. Felled trees are often burned (combustion) or left to rot ( decomposition by respiring microbes), releasing stored carbon as CO₂ . Simultaneously, fewer trees remain to remove CO₂ via photosynthesis.",
+      "vi": "🔥 1. Tăng khí CO₂ khí quyển. Cây bị chặt thường bị đốt (combustion) hoặc mục rữa (vi sinh vật phân giải hô hấp ), nhả carbon thành CO₂ . Đồng thời còn rất ít cây sống để hấp thụ CO₂ qua quang hợp.",
+      "duration": 36.45,
+      "startTime": 1108.46,
+      "endTime": 1144.91,
+      "audioUrl": "/audio/lectures/biology/20/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🌊 2. Mất đất (Soil Erosion) & 3. Lũ lụt",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🌊 2. Loss of Soil & 3. Flooding. Without canopy leaves to break rainfall and tree roots to bind soil , heavy rain washes away fertile topsoil ( soil erosion & mineral leaching ). Reduced water uptake/transpiration and silt-clogged riverbeds cause rapid surface runoff and downstream flooding.",
+      "vi": "🌊 2. Mất đất (Soil Erosion) & 3. Lũ lụt. Mất tán lá cản mưa và mất rễ cây giữ đất khiến mưa lớn cuốn trôi lớp đất mặt màu mỡ. Ít cây hút nước/thoát hơi nước cộng với bùn đất bồi cạn lòng sông gây chảy tràn bề mặt và lũ quét (flooding).",
+      "duration": 40.05,
+      "startTime": 1144.91,
+      "endTime": 1184.96,
+      "audioUrl": "/audio/lectures/biology/20/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "☠️ 4. Tuyệt chủng (Extinction)",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "☠️ 4. Extinction & Biodiversity Loss. Tropical rainforests shelter over half of terrestrial species. Clearing trees destroys nesting sites, shelter, and food chains, drastically reducing biodiversity and driving specialist species to extinction.",
+      "vi": "☠️ 4. Tuyệt chủng (Extinction). Rừng mưa nhiệt đới chứa hơn 50% loài trên cạn. Chặt rừng xóa sổ nơi làm tổ, nơi trú ẩn và nguồn thức ăn, làm sụp đổ lưới thức ăn và đẩy các loài bản địa tới tuyệt chủng.",
+      "duration": 33.57,
+      "startTime": 1184.96,
+      "endTime": 1218.53,
+      "audioUrl": "/audio/lectures/biology/20/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Large areas of hillside tropical rainforest are cleared by cutting and burning trees. Which row correctly links an immediate physical change to its downstream consequence? A. More tree roots remain alive → increased soil binding and deeper groundwater recharge B. Absence of roots and leaf canopy → severe topsoil erosion and silting up of rivers causing flooding C. Increased transpiration from bare soil → heavier cloud formation and cooler global temperatures D. Faster photosynthesis by ash → rapid fall in atmospheric carbon dioxide concentration ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Without canopy interception and root networks binding the thin tropical topsoil, heavy rain washes soil down hillsides ( soil erosion ). Silt deposits in river channels reduce water-holding capacity while rapid surface runoff triggers flash flooding . A, C, and D reverse the real biological processes.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 Large areas of hillside tropical rainforest are cleared by cutting and burning trees. Which row correctly links an immediate physical change to its downstream consequence? (Chặt và đốt diện tích lớn rừng mưa nhiệt đới trên sườn đồi. Dòng nào nối đúng biến đổi vật lý trực tiếp với hậu quả ở hạ lưu?) A. More tree roots remain alive → increased soil binding and deeper groundwater recharge B. Absence of roots and leaf canopy → severe topsoil erosion and silting up of rivers causing flooding C. Increased transpiration from bare soil → heavier cloud formation and cooler global temperatures D. Faster photosynthesis by ash → rapid fall in atmospheric carbon dioxide concentration ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mất tán lá che mưa và mất hệ rễ giữ lớp đất mặt mỏng khiến mưa lớn cuốn đất trôi xuống đồi ( soil erosion ). Bùn đất lắng đọng làm cạn lòng sông kết hợp nước mưa chảy tràn cực nhanh gây lũ lụt (flooding) . A, C, D đều sai bản chất sinh học.",
+      "duration": 137.75,
+      "startTime": 1218.53,
+      "endTime": 1356.28,
+      "audioUrl": "/audio/lectures/biology/20/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] Explain why large-scale deforestation of a tropical rainforest leads to:(a) an increase in the concentration of carbon dioxide in the atmosphere [2](b) the extinction of animal species native to the forest. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Felled trees are often burned (combustion) or decomposed by microorganisms (which respire), releasing carbon dioxide into the air [1m]; additionally, fewer living trees remain to absorb carbon dioxide from the atmosphere for photosynthesis [1m]. (b) Deforestation destroys natural habitats, shelter, and breeding sites [1m] and removes producers/prey, disrupting food chains and food webs so specialist animals starve or fail to reproduce [1m]. 💡 Intuition Check: In deforestation questions, link physical structure (roots, canopy, trunks, niches) directly to ecological process (binding soil, interception, photosynthesis, food webs).",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 / Paper 4 [4 marks] Explain why large-scale deforestation of a tropical rainforest leads to:(a) an increase in the concentration of carbon dioxide in the atmosphere (b) the extinction of animal species native to the forest. (Giải thích vì sao chặt phá rừng mưa nhiệt đới quy mô lớn dẫn đến: (a) tăng nồng độ CO₂ trong khí quyển ; (b) tuyệt chủng các loài động vật bản địa. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Cây bị đốn thường bị đốt cháy (combustion) hoặc bị vi sinh vật phân giải (hô hấp), giải phóng khí CO₂ vào không khí ; đồng thời số cây xanh còn lại ít hơn nên lượng CO₂ được hấp thụ qua quang hợp (photosynthesis) giảm mạnh . (b) Phá rừng hủy diệt môi trường sống, nơi trú ẩn và nơi sinh sản , đồng thời xóa bỏ sinh vật sản xuất/con mồi làm đứt gãy chuỗi và lưới thức ăn khiến động vật chết đói hoặc không sinh sản được . 💡 Kiểm tra bản chất: Mẹo ăn trọn điểm bài phá rừng: luôn gắn bộ phận thực vật bị mất (rễ, tán lá, thân gỗ, nơi ở) với quá trình sinh thái tương ứng (giữ đất, cản mưa, quang hợp, lưới thức ăn).",
+      "duration": 150.86,
+      "startTime": 1356.28,
+      "endTime": 1507.14,
+      "audioUrl": "/audio/lectures/biology/20/s02_b10.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "☠️ 3. Eutrophication & Non-Biodegradable Plastics (Phú dưỡng & Ô nhiễm Nhựa)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "☠️ 3. Water & Plastic Pollution: Eutrophication & Non-Biodegradable Plastics.",
+      "vi": "☠️ 3. Eutrophication & Non-Biodegradable Plastics (Phú dưỡng & Ô nhiễm Nhựa).",
+      "duration": 12.58,
+      "startTime": 1507.14,
+      "endTime": 1519.72,
+      "audioUrl": "/audio/lectures/biology/20/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Eutrophication is an ironic tragedy where \"too much plant food\" suffocates a lake: fertiliser acts like Miracle-Gro on surface algae, turning the lake surface into a blackout curtain! Bottom plants die in the dark, bacterial decomposers throw a massive feast on the dead plants, and those bacteria breathe up all the dissolved oxygen until fish suffocate.",
+      "vi": "🎯 Hình dung đời thường: Hiện tượng Phú dưỡng (Eutrophication) là bi kịch trớ trêu khi \"bón quá nhiều thức ăn cho cây\" lại bóp nghẹt cả hồ nước: phân bón làm tảo mặt nước mọc dày như tấm rèm đen che kín mặt hồ! Cây dưới đáy chết vì tối tăm, vi khuẩn phân hủy mở đại tiệc ăn xác cây, và chính đám vi khuẩn này thở hết sạch oxy hòa tan khiến cá chết ngạt.",
+      "duration": 48.96,
+      "startTime": 1519.72,
+      "endTime": 1568.68,
+      "audioUrl": "/audio/lectures/biology/20/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Write the 6 Supplement eutrophication steps in strict chronological order: (1) Nitrate & other ions leach in → (2) Rapid growth of surface producers (algal bloom) blocks light → (3) Submerged plants die, causing increased decomposition → (4) Increased aerobic respiration by decomposers (bacteria) → (5) Reduction in dissolved oxygen → (6) Death of aerobic organisms (fish). For plastics, always start with non-biodegradable (not digested by decomposers) and give both aquatic and terrestrial harms.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Viết đúng thứ tự 6 mắt xích Phú dưỡng (Supplement): (1) Ion nitrate & khoáng rửa trôi vào nước → (2) Tảo mặt nước (producers) tăng trưởng vọt che khuất ánh sáng → (3) Cây ngầm chết gây tăng phân hủy (decomposition) → (4) Vi khuẩn tăng hô hấp hiếu khí (aerobic respiration) → (5) Giảm nồng độ oxy hòa tan → (6) Cá và sinh vật hiếu khí chết ngạt . Với nhựa: nhấn mạnh từ khóa non-biodegradable và nêu tác hại ở cả dưới nước lẫn trên cạn.",
+      "duration": 72.77,
+      "startTime": 1568.68,
+      "endTime": 1641.45,
+      "audioUrl": "/audio/lectures/biology/20/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying \"fertilisers poison fish directly\" or \"algae use up all the oxygen\"! Fertilisers are NOT toxic to fish at normal runoff levels, and living algae actually make oxygen in daylight — it is the aerobic respiration of decomposing bacteria that strips dissolved oxygen from the water!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết \"phân bón đầu độc làm cá chết trực tiếp\" hoặc \"tảo hút hết oxy của cá\"! Phân bón ở nồng độ rửa trôi KHÔNG phải thuốc độc giết cá, và tảo sống còn nhả oxy ban ngày — thủ phạm trực tiếp rút cạn oxy hòa tan là hô hấp hiếu khí của vi khuẩn phân giải !",
+      "duration": 40.41,
+      "startTime": 1641.45,
+      "endTime": 1681.86,
+      "audioUrl": "/audio/lectures/biology/20/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🧪 Phòng Thí nghiệm Tương tác: 6 Bước Hiện tượng Phú dưỡng (Supplement 20.3.4)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🧪 Interactive Eutrophication Sequence (Supplement 20.3.4 — 6 Mark-Scheme Steps). Hover over Steps 1 → 2 → 3 → 4 on the lake diagram to trace how excess nitrates or sewage suffocate fish. 👆 Trace the Eutrophication Cascade. Both excess chemical fertiliser (leached from fields) and untreated sewage (rich in nitrates/phosphates + organic waste + waterborne pathogens like cholera) trigger aquatic oxygen collapse.",
+      "vi": "🧪 Phòng Thí nghiệm Tương tác: 6 Bước Hiện tượng Phú dưỡng (Supplement 20.3.4). 👆 Di chuột theo dõi Chuỗi Phú dưỡng. Cả phân bón hóa học dư thừa rửa trôi từ ruộng lẫn nước thải sinh hoạt chưa xử lý (untreated sewage — chứa thêm mầm bệnh tả/thương hàn) đều gây cạn kiệt oxy hòa tan dưới nước.",
+      "duration": 48.58,
+      "startTime": 1681.86,
+      "endTime": 1730.44,
+      "audioUrl": "/audio/lectures/biology/20/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Bước 1: Tăng ion Nitrat",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Stage 1: Nitrate & Ion Enrichment. Leaching of soluble fertilisers or discharge of untreated sewage causes increased availability of nitrate and other ions (e.g. phosphates) in water.",
+      "vi": "Bước 1: Tăng ion Nitrat. Phân bón hòa tan rửa trôi hoặc nước thải đổ vào làm tăng nồng độ ion nitrate ( NO₃⁻ ) và các ion khoáng khác trong nước.",
+      "duration": 25.49,
+      "startTime": 1730.44,
+      "endTime": 1755.93,
+      "audioUrl": "/audio/lectures/biology/20/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Bước 2: Tảo nở hoa (Algal Bloom)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Stage 2: Rapid Producer Growth. Increased growth of producers (surface algae multiply into a dense algal bloom ), blocking sunlight from reaching rooted submerged plants below.",
+      "vi": "Bước 2: Tảo nở hoa (Algal Bloom). Sinh vật sản xuất (tảo mặt nước) sinh trưởng bùng nổ phủ kín mặt hồ, chặn ánh sáng chiếu xuống thực vật thủy sinh ngầm bên dưới.",
+      "duration": 24.79,
+      "startTime": 1755.93,
+      "endTime": 1780.72,
+      "audioUrl": "/audio/lectures/biology/20/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Bước 3: Cây chết & Phân hủy mạnh",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Stage 3: Death & Decomposition. Submerged plants cannot photosynthesise and die (algae also die). This leads to increased decomposition after death of producers by multiplying bacteria.",
+      "vi": "Bước 3: Cây chết & Phân hủy mạnh. Thực vật chìm thiếu sáng không quang hợp được nên chết hàng loạt (tảo cũng chết sau đó), làm tăng mạnh sự phân hủy (decomposition) bởi vi khuẩn.",
+      "duration": 27.69,
+      "startTime": 1780.72,
+      "endTime": 1808.41,
+      "audioUrl": "/audio/lectures/biology/20/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Bước 4: Hô hấp hiếu khí & Cạn O₂",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "Stage 4: Aerobic Respiration & Low O₂. Increased aerobic respiration by decomposers causes a severe reduction in dissolved oxygen , resulting in the death of organisms requiring dissolved oxygen (fish, insect larvae).",
+      "vi": "Bước 4: Hô hấp hiếu khí & Cạn O₂. Vi khuẩn phân giải tăng hô hấp hiếu khí (aerobic respiration) làm giảm mạnh oxy hòa tan , khiến cá và động vật cần oxy chết ngạt.",
+      "duration": 28.92,
+      "startTime": 1808.41,
+      "endTime": 1837.33,
+      "audioUrl": "/audio/lectures/biology/20/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🛍️ Nhựa Không Phân hủy Sinh học ở Hệ sinh thái Dưới nước & Trên cạn (Core 20.3.2)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🛍️ Non-Biodegradable Plastics in Aquatic & Terrestrial Ecosystems (Core 20.3.2). Most plastics are synthetic polymers that are non-biodegradable — decomposer bacteria and fungi lack the specific enzymes needed to digest their chemical bonds, so plastics persist for centuries:",
+      "vi": "🛍️ Nhựa Không Phân hủy Sinh học ở Hệ sinh thái Dưới nước & Trên cạn (Core 20.3.2). Nhựa tổng hợp là chất không phân hủy sinh học (non-biodegradable) vì vi khuẩn và nấm không có enzyme cắt đứt liên kết polymer nhân tạo, khiến rác nhựa tồn tại hàng trăm năm:",
+      "duration": 34.79,
+      "startTime": 1837.33,
+      "endTime": 1872.12,
+      "audioUrl": "/audio/lectures/biology/20/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🌊 Trong Hệ sinh thái Dưới nước (Aquatic):",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "🌊 In Aquatic Ecosystems: Ingestion & starvation: Turtles, whales, fish, and seabirds mistake plastic bags/pellets for prey (e.g. jellyfish); indigestible plastic blocks the gut, giving a false sense of fullness until the animal starves. Entanglement & suffocation: Seals, dolphins, and fish get trapped in discarded fishing nets/rings, preventing swimming or surfacing to breathe. Microplastics & light blockage: Plastics fragment into microplastics that adsorb toxic pollutants and bioaccumulate up marine food chains; plastic sheets smother coral reefs, blocking light for photosynthesis.",
+      "vi": "🌊 Trong Hệ sinh thái Dưới nước (Aquatic): Nuốt nhầm gây tắc ruột & chết đói: Rùa biển, cá, chim biển tưởng túi nilon là sứa nên nuốt vào; nhựa không tiêu hóa làm tắc ống tiêu hóa gây chết đói. Mắc kẹt & ngạt thở: Hải cẩu, cá heo vướng vào lưới ma/vòng nhựa không bơi lên thở được. Vi nhựa (Microplastics) & che sáng: Vỡ vụn thành hạt vi nhựa tích tụ độc chất dọc chuỗi thức ăn; màng nhựa phủ rạn san hô chặn ánh sáng và trao đổi khí.",
+      "duration": 71.79,
+      "startTime": 1872.12,
+      "endTime": 1943.91,
+      "audioUrl": "/audio/lectures/biology/20/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "🌳 Trong Hệ sinh thái Trên cạn (Terrestrial):",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "🌳 In Terrestrial Ecosystems: Landfill accumulation & habitat loss: Huge land areas are taken up by permanent landfill sites; visual litter degrades habitats. Harm to land animals: Grazing livestock, hedgehogs, and birds swallow plastic fragments or become trapped in packaging, causing internal injuries or starvation. Soil & air damage: Plastic sheeting in soil blocks water drainage and root growth/gas exchange; open burning of waste plastics releases toxic gases (e.g. hydrogen chloride, dioxins).",
+      "vi": "🌳 Trong Hệ sinh thái Trên cạn (Terrestrial): Chiếm đất bãi rác & hủy sinh cảnh: Tích tụ vĩnh viễn tại các bãi chôn lấp (landfills) khổng lồ. Gây hại động vật trên cạn: Gia súc ăn cỏ, nhím, chim nuốt phải mảnh nhựa hoặc mắc kẹt trong bao bì nhựa. Hại đất & không khí: Màng nhựa chôn trong đất ngăn thoát nước và độ thoáng khí của rễ cây; đốt nhựa bừa bãi thải khí độc (HCl, dioxin).",
+      "duration": 62.37,
+      "startTime": 1943.91,
+      "endTime": 2006.28,
+      "audioUrl": "/audio/lectures/biology/20/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Untreated sewage is accidentally discharged into a slow-moving river. Which organism group directly causes the sharp drop in dissolved oxygen concentration downstream of the discharge pipe? A. Rooted submerged water plants photosynthesising rapidly in the dark B. Aerobic bacteria decomposing organic waste and dead plant material C. Fish respiring faster because nitrate ions are a respiratory poison D. Carnivorous insects eating microplastics floating on the water surface ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Decomposer bacteria multiply rapidly as they feed on organic matter in untreated sewage (and dead plants after algal blooms). Their increased aerobic respiration consumes dissolved oxygen faster than it can diffuse from air, causing oxygen depletion. A is impossible in darkness; C and D are biologically false.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Untreated sewage is accidentally discharged into a slow-moving river. Which organism group directly causes the sharp drop in dissolved oxygen concentration downstream of the discharge pipe? (Nước thải sinh hoạt chưa xử lý bị xả vào một con sông chảy chậm. Nhóm sinh vật nào trực tiếp gây ra sự sụt giảm mạnh nồng độ oxy hòa tan ở hạ lưu ống xả?) A. Rooted submerged water plants photosynthesising rapidly in the dark B. Aerobic bacteria decomposing organic waste and dead plant material C. Fish respiring faster because nitrate ions are a respiratory poison D. Carnivorous insects eating microplastics floating on the water surface ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Vi khuẩn phân giải sinh sôi cực nhanh khi phân hủy chất hữu cơ trong nước thải và xác thực vật chết. Quá trình hô hấp hiếu khí tăng vọt của chúng tiêu thụ hết lượng oxy hòa tan trong nước. Câu A vô lý (không quang hợp trong tối); C và D sai kiến thức sinh học.",
+      "duration": 130.14,
+      "startTime": 2006.28,
+      "endTime": 2136.42,
+      "audioUrl": "/audio/lectures/biology/20/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] (a) Nitrate fertiliser applied to farmland just before heavy rain washes into a nearby lake, killing fish two weeks later. Explain the sequence of events that caused the fish to die. [4](b) Describe two ways discarded non-biodegradable plastic waste harms terrestrial (land) ecosystems. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Leached nitrate ions cause rapid growth of algae / surface producers (algal bloom), which blocks sunlight to underwater plants [1m].2. Underwater plants cannot photosynthesise and die (along with short-lived algae) [1m].3. Decomposer bacteria multiply and break down the dead producers [1m].4. Bacteria carry out increased aerobic respiration , depleting dissolved oxygen in the water so fish suffocate and die [1m]. (b) Any two from: land animals/livestock ingest plastic fragments causing gut blockage/starvation (or become entangled/trapped) [1m]; plastics accumulate permanently in landfill destroying habitats / block soil water drainage & root aeration / release toxic gases if burned [1m]. 💡 Intuition Check: Every 4–5 mark eutrophication answer hinges on naming \"aerobic respiration by bacterial decomposers reducing dissolved oxygen\"!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [6 marks] (a) Nitrate fertiliser applied to farmland just before heavy rain washes into a nearby lake, killing fish two weeks later. Explain the sequence of events that caused the fish to die. (b) Describe two ways discarded non-biodegradable plastic waste harms terrestrial (land) ecosystems. ((a) Phân đạm nitrat bón trước cơn mưa lớn bị rửa trôi xuống hồ làm cá chết sau 2 tuần. Giải thích trình tự các sự kiện làm cá chết. (b) Mô tả 2 cách rác thải nhựa không phân hủy sinh học gây hại cho hệ sinh thái trên cạn. ) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Ion nitrat rửa trôi làm tảo / sinh vật sản xuất mặt nước phát triển bùng nổ (algal bloom) , che khuất ánh sáng chiếu xuống cây thủy sinh bên dưới .2. Cây thủy sinh ngầm không quang hợp được nên chết đi (cùng với xác tảo chết) .3. Vi khuẩn phân giải (decomposer bacteria) nhân lên mạnh mẽ để phân hủy xác thực vật chết .4. Vi khuẩn tăng cường hô hấp hiếu khí (aerobic respiration) làm cạn kiệt oxy hòa tan (dissolved oxygen) khiến cá chết ngạt . (b) Động vật trên cạn/gia súc nuốt mảnh nhựa gây tắc ruột chết đói (hoặc mắc kẹt trong bao bì) ; rác nhựa tích tụ lâu dài tại bãi chôn lấp làm mất sinh cảnh / cản trở thoát nước và thoáng khí trong đất . 💡 Kiểm tra bản chất: Chìa khóa vàng của mọi bài tự luận Eutrophication là cụm từ: \"increased aerobic respiration by decomposer bacteria reduces dissolved oxygen\"!",
+      "duration": 196.19,
+      "startTime": 2136.42,
+      "endTime": 2332.61,
+      "audioUrl": "/audio/lectures/biology/20/s03_b13.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🌍 4. Air Pollution: Methane, CO₂ & Enhanced Greenhouse Effect (Hiệu ứng Nhà kính Tăng cường)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🌍 4. Air Pollution: Methane, CO₂ & Enhanced Greenhouse Effect.",
+      "vi": "🌍 4. Hiệu ứng Nhà kính Tăng cường .",
+      "duration": 9.09,
+      "startTime": 2332.61,
+      "endTime": 2341.7,
+      "audioUrl": "/audio/lectures/biology/20/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a parked car on a sunny afternoon: bright short-wave sunlight zips easily IN through the glass windshield and warms the seats, but the warm seats radiate invisible long-wave infrared heat that gets trapped INSIDE by the glass. Extra CO₂ and CH₄ thicken Earth’s atmospheric glass!",
+      "vi": "🎯 Hình dung đời thường: Hãy nghĩ tới chiếc ô tô đỗ ngoài nắng trưa: ánh sáng Mặt Trời sóng ngắn dễ dàng chiếu XUYÊN QUA kính chắn gió làm nóng ghế da, nhưng nhiệt hồng ngoại sóng dài tỏa ra từ ghế nóng lại bị lớp kính GIỮ LẠI BÊN TRONG xe. Khí CO₂ và CH₄ dư thừa chính là lớp kính khí quyển bị làm dày thêm!",
+      "duration": 42.02,
+      "startTime": 2341.7,
+      "endTime": 2383.72,
+      "audioUrl": "/audio/lectures/biology/20/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Pair each gas with its human sources: CO₂ = fossil fuel combustion + deforestation; CH₄ (methane) = cattle digestion + rice paddy fields + landfill decay. Use the word enhanced greenhouse effect: incoming short-wave solar radiation warms Earth → outgoing long-wave infrared radiation is absorbed and re-emitted back to Earth → global warming & climate change.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Ghép chuẩn từng khí với nguồn phát thải: CO₂ = đốt nhiên liệu hóa thạch + phá rừng; CH₄ (methane) = tiêu hóa của bò/gia súc + ruộng lúa nước ngập bùn + bãi rác kỵ khí. Luôn dùng thuật ngữ enhanced greenhouse effect : bức xạ sóng ngắn Mặt Trời làm ấm đất → bức xạ hồng ngoại sóng dài phát ra bị giữ lại → ấm lên toàn cầu & biến đổi khí hậu.",
+      "duration": 56.82,
+      "startTime": 2383.72,
+      "endTime": 2440.54,
+      "audioUrl": "/audio/lectures/biology/20/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Confusing the enhanced greenhouse effect with the hole in the ozone layer ! Greenhouse gases ( CO₂ , CH₄ ) trap outgoing infrared heat radiation ; they do NOT let \"more UV light in through an ozone hole\"!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Trộn lẫn hiệu ứng nhà kính tăng cường với thủng tầng ozone ! Khí nhà kính ( CO₂ , CH₄ ) giữ bức xạ nhiệt hồng ngoại tỏa ra từ mặt đất, hoàn toàn KHÔNG liên quan đến \"lỗ thủng ozone cho tia UV chiếu vào\"!",
+      "duration": 34.27,
+      "startTime": 2440.54,
+      "endTime": 2474.81,
+      "audioUrl": "/audio/lectures/biology/20/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "💨 Nguồn sinh khí Carbon Dioxide ( CO₂ ):",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "💨 Sources of Carbon Dioxide ( CO₂ ): Combustion of fossil fuels (coal, oil, petrol, natural gas) in power stations, factories, and vehicles. Deforestation: Burning felled trees releases stored carbon + fewer trees remain to absorb CO₂ by photosynthesis.",
+      "vi": "💨 Nguồn sinh khí Carbon Dioxide ( CO₂ ): Đốt nhiên liệu hóa thạch: Than đá, dầu mỏ, xăng, khí đốt tại nhà máy điện, công nghiệp và phương tiện giao thông. Phá rừng (Deforestation): Đốt cây rừng nhả carbon tích trữ + mất cây xanh quang hợp hấp thụ CO₂.",
+      "duration": 39.51,
+      "startTime": 2474.81,
+      "endTime": 2514.32,
+      "audioUrl": "/audio/lectures/biology/20/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🐄 Nguồn sinh khí Methane ( CH₄ ):",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🐄 Sources of Methane ( CH₄ ): Digestive systems of cattle/ruminants (methanogenic microbes fermenting cellulose in sheep/cows). Anaerobic decay of organic matter in waterlogged rice paddy fields and buried landfill rubbish sites.",
+      "vi": "🐄 Nguồn sinh khí Methane ( CH₄ ): Hệ tiêu hóa gia súc nhai lại (Cattle digestion): Vi sinh vật lên men cellulose trong dạ cỏ bò, cừu. Phân hủy hữu cơ kỵ khí (Anaerobic decay): Trong bùn ngập nước của ruộng lúa nước và các bãi rác chôn lấp (landfills).",
+      "duration": 35.03,
+      "startTime": 2514.32,
+      "endTime": 2549.35,
+      "audioUrl": "/audio/lectures/biology/20/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "Cơ chế Giữ bức xạ nhiệt:",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "How Radiation Trapping Works: 1. High-energy, short-wavelength radiation from the Sun passes freely through the atmosphere and warms the Earth's surface.2. The warm Earth re-emits lower-energy, long-wavelength infrared (thermal) radiation back toward space.3. Higher concentrations of CO₂ and CH₄ absorb and re-emit this infrared radiation back toward Earth — the enhanced greenhouse effect (note: the natural greenhouse effect keeps Earth habitable; human emissions make it enhanced !). Effects of Climate Change: Rising global average temperatures → melting polar ice caps/glaciers & thermal expansion of oceans → sea-level rise & coastal flooding → more frequent droughts, storms, forest fires, coral bleaching, habitat loss, altered migration/distribution, and species extinction .",
+      "vi": "Cơ chế Giữ bức xạ nhiệt: 1. Bức xạ sóng ngắn từ Mặt Trời đi xuyên qua khí quyển làm ấm bề mặt Trái Đất.2. Mặt đất ấm lên phát xạ ngược lại bức xạ nhiệt hồng ngoại sóng dài ra không gian.3. Nồng độ cao CO₂ và CH₄ hấp thụ và bức xạ ngược nhiệt hồng ngoại trở lại Trái Đất — gây enhanced greenhouse effect (hiệu ứng nhà kính tăng cường) . Hậu quả Biến đổi Khí hậu (Climate Change): Tăng nhiệt độ trung bình toàn cầu → tan băng hai cực & giãn nở nhiệt đại dương → nước biển dâng nhấn chìm vùng ven biển → hạn hán, bão lũ, cháy rừng cực đoan, tẩy trắng san hô, mất sinh cảnh và tuyệt chủng loài .",
+      "duration": 96.11,
+      "startTime": 2549.35,
+      "endTime": 2645.46,
+      "audioUrl": "/audio/lectures/biology/20/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "📌 Lưu ý Trọng tâm Syllabus 0610 (20.3):",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "📌 Syllabus Scope Reminder (0610 Topic 20.3): Current 0610 air pollution outcomes focus strictly on methane ( CH₄ ) and carbon dioxide ( CO₂ ) causing the enhanced greenhouse effect and climate change. Do not confuse greenhouse warming with the ozone layer (CFCs/UV rays) or acid rain ( SO₂ / NOₓ )!",
+      "vi": "📌 Lưu ý Trọng tâm Syllabus 0610 (20.3): Phần ô nhiễm không khí của 0610 hiện hành tập trung vào methane ( CH₄ ) và carbon dioxide ( CO₂ ) gây hiệu ứng nhà kính tăng cường. Tuyệt đối KHÔNG nhầm lẫn hiệu ứng nhà kính với thủng tầng ozone (CFC/tia UV) hay mưa axit ( SO₂ / NOₓ )!",
+      "duration": 48.36,
+      "startTime": 2645.46,
+      "endTime": 2693.82,
+      "audioUrl": "/audio/lectures/biology/20/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "methane",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which pair of human activities directly increases the atmospheric concentration of methane , contributing to the enhanced greenhouse effect? A. Expanding intensive cattle ranching and cultivating flooded rice paddy fields B. Installing catalytic converters in cars and planting deciduous forests C. Using biological washing powders at 35 °C and recycling glass bottles D. Enforcing fishing quotas and establishing seed banks ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Cattle produce large volumes of methane via anaerobic microbial fermentation in their digestive tracts, and waterlogged rice paddy fields harbour anaerobic mud bacteria that release methane during organic decay. Options B, C, and D do not release methane.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 Which pair of human activities directly increases the atmospheric concentration of methane , contributing to the enhanced greenhouse effect? (Cặp hoạt động nào của con người làm tăng trực tiếp nồng độ khí methane trong khí quyển, góp phần gây hiệu ứng nhà kính tăng cường?) A. Expanding intensive cattle ranching and cultivating flooded rice paddy fields B. Installing catalytic converters in cars and planting deciduous forests C. Using biological washing powders at 35 °C and recycling glass bottles D. Enforcing fishing quotas and establishing seed banks ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Chăn nuôi bò (cattle ranching) sinh ra lượng lớn khí methane từ quá trình lên men vi sinh trong dạ cỏ, và ruộng lúa nước ngập bùn chứa vi khuẩn kỵ khí phân hủy chất hữu cơ sinh khí methane. Các đáp án B, C, D không phát thải methane.",
+      "duration": 117.73,
+      "startTime": 2693.82,
+      "endTime": 2811.55,
+      "audioUrl": "/audio/lectures/biology/20/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "bức xạ nhiệt hồng ngoại sóng dài (long-wave infrared radiation)",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] Explain how increased emissions of carbon dioxide and methane from human activities lead to climate change, and state two ecological consequences for wildlife. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. Carbon dioxide and methane accumulate in the atmosphere and absorb/trap outgoing long-wavelength infrared (thermal) radiation re-radiated from Earth’s surface [1m].2. This strengthens the enhanced greenhouse effect , raising average global temperatures (global warming) and altering weather patterns [1m].3. Consequences (any two): melting polar ice caps / rising sea levels flooding coastal habitats [1m]; coral bleaching, severe droughts/wildfires, altered migration routes, or extinction of species unable to adapt [1m]. 💡 Intuition Check: Always write \"enhanced greenhouse effect\" when describing human-caused warming, since the natural greenhouse effect is normal and essential for life.",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 / Paper 4 [4 marks] Explain how increased emissions of carbon dioxide and methane from human activities lead to climate change, and state two ecological consequences for wildlife. (Giải thích vì sao sự gia tăng phát thải CO₂ và methane từ hoạt động con người dẫn đến biến đổi khí hậu, và nêu 2 hậu quả sinh thái đối với sinh vật hoang dã. ) ✍️ Lời giải chi tiết theo thang điểm: 1. Khí CO₂ và CH₄ tích tụ trong khí quyển hấp thụ và giữ lại bức xạ nhiệt hồng ngoại sóng dài phát ra từ bề mặt Trái Đất .2. Quá trình này làm mạnh thêm hiệu ứng nhà kính tăng cường , làm tăng nhiệt độ trung bình toàn cầu và thay đổi khí hậu .3. Hậu quả (nêu 2 ý): tan băng hai cực / nước biển dâng làm ngập mất sinh cảnh ven biển ; tẩy trắng san hô, hạn hán/cháy rừng khắc nghiệt, thay đổi vùng phân bố hoặc gây tuyệt chủng loài không kịp thích nghi . 💡 Kiểm tra bản chất: Luôn viết rõ chữ \"enhanced\" (tăng cường) trước greenhouse effect, vì hiệu ứng nhà kính tự nhiên vốn giúp Trái Đất ấm áp để sự sống tồn tại!",
+      "duration": 140.79,
+      "startTime": 2811.55,
+      "endTime": 2952.34,
+      "audioUrl": "/audio/lectures/biology/20/s04_b09.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🛡️ 5. Conservation: Sustainable Resources & Endangered Species (Bảo tồn & Quản lý Bền vững)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🛡️ 5. Conservation: Sustainable Resources & Endangered Species.",
+      "vi": "🛡️ 5. Bảo tồn & Quản lý Bền vững .",
+      "duration": 8.68,
+      "startTime": 2952.34,
+      "endTime": 2961.02,
+      "audioUrl": "/audio/lectures/biology/20/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Managing a sustainable resource is like living off the interest of a savings account without ever touching the principal: if 1,000 trees grow per year and loggers harvest 1,000 trees while replanting saplings, the forest lasts forever! And AI/IVF + seed banks act as Noah’s Ark in a freezer — trading genes worldwide without putting stressed pandas on aeroplanes.",
+      "vi": "🎯 Hình dung đời thường: Quản lý tài nguyên bền vững giống như tiêu tiền lãi tiết kiệm mà không bao giờ rút lẹm vào tiền gốc: nếu mỗi năm rừng mọc thêm 1,000 cây và lâm trường chỉ đốn 1,000 cây kèm trồng bù cây non thì khu rừng tồn tại mãi mãi! Còn AI/IVF + Ngân hàng hạt giống chính là \"Con tàu Noah trong tủ đông\" — trao đổi nguồn gen khắp thế giới mà không cần bắt gấu trúc lên máy bay.",
+      "duration": 51.55,
+      "startTime": 2961.02,
+      "endTime": 3012.57,
+      "audioUrl": "/audio/lectures/biology/20/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the exact syllabus lists: Forest conservation (4): education, protected areas, quotas, replanting. Fish stock conservation (6): education, closed seasons, protected areas, controlled net types & mesh size, quotas, monitoring. Endangered species (4): monitoring/protecting habitats, education, captive breeding (AI/IVF), seed banks. Link small population risk to inbreeding → reduced genetic variation → vulnerability to disease/climate change .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc bộ từ khóa chuẩn Syllabus: Bảo tồn rừng (4): education, protected areas, quotas, replanting. Bảo tồn đàn cá (6): education, closed seasons, protected areas, controlled net types & mesh size, quotas, monitoring. Loài nguy cấp (4): monitoring/protecting habitats, education, captive breeding (AI/IVF), seed banks. Với quần thể nhỏ: giao phối cận huyết (inbreeding) → giảm biến dị di truyền → dễ tuyệt chủng trước dịch bệnh mới .",
+      "duration": 77.45,
+      "startTime": 3012.57,
+      "endTime": 3090.02,
+      "audioUrl": "/audio/lectures/biology/20/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"use smaller mesh sizes to catch fewer fish\"! Smaller mesh traps tiny juvenile baby fish before they ever breed! You must specify a larger mesh size so young immature fish escape and survive to reproduce!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết nhầm \"dùng mắt lưới nhỏ hơn để bắt ít cá hơn\"! Mắt lưới nhỏ sẽ vơ vét sạch cá con chưa kịp đẻ trứng! Bắt buộc phải viết tăng kích thước mắt lưới tối thiểu để cá non thoát ra và lớn lên sinh sản!",
+      "duration": 34.26,
+      "startTime": 3090.02,
+      "endTime": 3124.28,
+      "audioUrl": "/audio/lectures/biology/20/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "🌲 Quản lý Tài nguyên Bền vững: Rừng & Nguồn lợi Cá (20.4.1–2, 5–6)",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "🌲 Sustainable Management of Forests & Fish Stocks (Core & Supplement 20.4.1–2, 5–6). Sustainable resource definition: One which is produced as rapidly as it is removed from the environment so that it does not run out (e.g. sustainably managed timber forests and wild fish stocks; unlike finite fossil fuels).",
+      "vi": "🌲 Quản lý Tài nguyên Bền vững: Rừng & Nguồn lợi Cá (20.4.1–2, 5–6). Định nghĩa Tài nguyên bền vững (Sustainable resource): Tài nguyên được sản sinh/tái tạo nhanh ngang bằng tốc độ bị khai thác khỏi môi trường để không bị cạn kiệt (VD: rừng gỗ và đàn cá tự nhiên được quản lý chuẩn; ngược lại với nhiên liệu hóa thạch hữu hạn).",
+      "duration": 42.33,
+      "startTime": 3124.28,
+      "endTime": 3166.61,
+      "audioUrl": "/audio/lectures/biology/20/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "🌳 4 Biện pháp Bảo tồn Rừng (20.4.5):",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "🌳 4 Ways to Conserve Forests (20.4.5): 1. Education: Teaching logging companies, local communities, and consumers to use sustainably certified timber and recycle paper. 2. Protected areas: Establishing national parks and biosphere reserves where felling is legally banned. 3. Quotas: Legal limits on the volume/number of mature trees cut per year (selective felling/coppicing rather than clear-cutting). 4. Replanting (Afforestation/Reforestation): Planting native saplings to replace felled trees so regrowth matches harvest rate.",
+      "vi": "🌳 4 Biện pháp Bảo tồn Rừng (20.4.5): 1. Education (Giáo dục): Nâng cao ý thức cộng đồng, doanh nghiệp dùng gỗ có chứng chỉ bền vững và tái chế giấy. 2. Protected areas (Khu bảo tồn): Lập vườn quốc gia và khu dự trữ sinh quyển cấm đốn hạ trái phép. 3. Quotas (Hạn ngạch): Giới hạn pháp lý lượng gỗ/số cây trưởng thành được phép khai thác chọn lọc mỗi năm. 4. Replanting (Trồng lại rừng): Trồng cây con bản địa thay thế ngay cây bị chặt để tốc độ mọc bù kịp tốc độ khai thác.",
+      "duration": 71.22,
+      "startTime": 3166.61,
+      "endTime": 3237.83,
+      "audioUrl": "/audio/lectures/biology/20/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "🐟 6 Biện pháp Bảo tồn Nguồn cá (20.4.6):",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "🐟 6 Ways to Conserve Fish Stocks (20.4.6): 1. Education: Informing fishers of sustainable practices and consumers to avoid endangered fish species. 2. Closed seasons: Banning fishing during breeding/spawning seasons so fish reproduce undisturbed. 3. Protected areas: No-fishing marine reserves / nursery zones where stocks recover. 4. Controlled net types & mesh size: Banning seabed-destroying bottom trawls; enforcing a larger minimum mesh size so young immature fish escape and grow to breeding age. 5. Quotas: Legal limits on the mass and species of fish each boat/country may land. 6. Monitoring: Satellite vessel tracking, coastguard inspections, and scientific population surveys to enforce laws.",
+      "vi": "🐟 6 Biện pháp Bảo tồn Nguồn cá (20.4.6): 1. Education (Giáo dục): Hướng dẫn ngư dân và người tiêu dùng tránh đánh bắt/tiêu thụ loài nguy cấp. 2. Closed seasons (Mùa cấm đánh bắt): Cấm đánh bắt trong mùa sinh sản/đẻ trứng để đàn cá phục hồi. 3. Protected areas (Khu bảo tồn biển): Vùng biển cấm đánh bắt làm nơi ươm giống an toàn. 4. Controlled net types & mesh size (Kiểm soát loại lưới & mắt lưới): Cấm lưới kéo đáy hủy diệt; bắt buộc dùng mắt lưới kích thước lớn hơn để cá non chưa trưởng thành thoát ra và sống tới tuổi sinh sản. 5. Quotas (Hạn ngạch đánh bắt): Giới hạn khối lượng và loài cá mỗi tàu/quốc gia được phép đánh bắt. 6. Monitoring (Giám sát): Định vị vệ tinh tàu cá, tuần tra kiểm ngư và khảo sát trữ lượng khoa học.",
+      "duration": 104.93,
+      "startTime": 3237.83,
+      "endTime": 3342.76,
+      "audioUrl": "/audio/lectures/biology/20/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "🐼 Loài Nguy cấp, Nhân giống Nuôi nhốt (AI & IVF), Ngân hàng Hạt giống & Đa dạng Di truyền",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "🐼 Endangered Species, Captive Breeding (AI & IVF), Seed Banks & Genetic Diversity. 6 Causes of Extinction (Core 20.4.3): (1) Climate change , (2) Habitat destruction , (3) Hunting/poaching , (4) Overharvesting , (5) Pollution , and (6) Introduced (invasive) species.",
+      "vi": "🐼 Loài Nguy cấp, Nhân giống Nuôi nhốt (AI & IVF), Ngân hàng Hạt giống & Đa dạng Di truyền. 6 Nguyên nhân gây Nguy cấp / Tuyệt chủng (Core 20.4.3): (1) Biến đổi khí hậu (Climate change) , (2) Phá hủy sinh cảnh (Habitat destruction) , (3) Săn bắn trái phép (Hunting) , (4) Khai thác quá mức (Overharvesting) , (5) Ô nhiễm (Pollution) , và (6) Loài ngoại lai xâm lấn (Introduced species).",
+      "duration": 53.14,
+      "startTime": 3342.76,
+      "endTime": 3395.9,
+      "audioUrl": "/audio/lectures/biology/20/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "🏥 4 Phương pháp Bảo tồn Loài nguy cấp (20.4.4):",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "🏥 4 Conservation Methods (Core 20.4.4): Monitoring & protecting habitats/species: Rangers, radio-tagging, wildlife corridors, anti-poaching laws (CITES). Education: Raising public awareness & funding local ecotourism. Captive breeding (AI & IVF): Zoos use studbooks to pair unrelated mates; Artificial Insemination (AI) and In Vitro Fertilisation (IVF) allow frozen sperm/ova/embryos to be shipped globally without stressing endangered animals, before reintroduction to the wild. Seed banks: Drying and freezing plant seeds (at -20°C ) stores thousands of endangered plant species cheaply in minimal space, preserving genetic diversity for centuries.",
+      "vi": "🏥 4 Phương pháp Bảo tồn Loài nguy cấp (20.4.4): Monitoring & protecting habitats: Kiểm lâm chống săn trộm, gắn chip theo dõi, lập hành lang sinh thái. Education: Tuyên truyền cộng đồng & tạo sinh kế du lịch sinh thái. Captive breeding (AI & IVF): Vườn thú dùng sổ phả hệ ghép đôi cá thể không cùng huyết thống; dùng Thụ tinh nhân tạo (AI) và Thụ tinh trong ống nghiệm (IVF) để vận chuyển tinh trùng/trứng/phôi đông lạnh xuyên quốc gia mà không gây stress vận chuyển thú, sau đó tái thả tự nhiên. Seed banks (Ngân hàng hạt giống): Sấy khô và bảo quản lạnh hạt giống ( -20°C ) giúp lưu giữ hàng nghìn loài thực vật quý hiếm với chi phí thấp, diện tích nhỏ suốt hàng thế kỷ.",
+      "duration": 94.77,
+      "startTime": 3395.9,
+      "endTime": 3490.67,
+      "audioUrl": "/audio/lectures/biology/20/s05_b08.mp3"
+    },
+    {
+      "id": "s05_b09",
+      "title": "🧬 Ý nghĩa Bảo tồn & Đa dạng Di truyền (Supplement 20.4.7):",
+      "selector": "[data-lecture-section=\"s05_b09\"]",
+      "en": "🧬 Why Conserve Biodiversity & Genetic Diversity (Supplement 20.4.7): Preventing inbreeding depression: Very small populations force mating between close relatives → higher homozygosity for harmful recessive alleles & low genetic variation (a single new pathogen or climate shift can wipe out the entire population!). Maintaining ecosystem functions: Preserves nutrient cycling (carbon/nitrogen cycles, pollination, soil stability), protects vulnerable ecosystems, reduces extinction, and safeguards future resource provision : food , medicinal drugs , fuel , and useful genes for crop breeding/genetic engineering.",
+      "vi": "🧬 Ý nghĩa Bảo tồn & Đa dạng Di truyền (Supplement 20.4.7): Chống thoái hóa cận huyết (Inbreeding depression): Quần thể quá nhỏ buộc cá thể họ hàng giao phối → tăng đồng hợp tử allele lặn có hại & giảm biến dị di truyền (chỉ một dịch bệnh mới là xóa sổ cả loài!). Duy trì chức năng hệ sinh thái: Bảo toàn chu trình dinh dưỡng (nutrient cycling) , bảo vệ hệ sinh thái nhạy cảm, giảm tuyệt chủng và giữ nguồn tài nguyên tương lai : thực phẩm (food) , dược phẩm (drugs) , nhiên liệu (fuel) và nguồn gen quý (genes) cho chọn giống/chuyển gen.",
+      "duration": 76.09,
+      "startTime": 3490.67,
+      "endTime": 3566.76,
+      "audioUrl": "/audio/lectures/biology/20/s05_b09.mp3"
+    },
+    {
+      "id": "s05_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ North Sea cod populations declined sharply due to overfishing. Which combination of regulations best allows young cod to reach sexual maturity and replenish the wild stock sustainably? A. Decreasing net mesh size and encouraging fishing during spawning months B. Increasing minimum net mesh size, enforcing catch quotas, and closing spawning grounds during breeding seasons C. Introducing foreign predatory fish species and removing marine protected areas D. Replacing all wild fish with non-biodegradable drift nets ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: A larger minimum mesh size lets small juvenile cod escape; catch quotas cap total adult removal below replacement rate; and closed seasons / protected spawning grounds allow adults to breed undisturbed. Option A wipes out juveniles and breeding adults!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 North Sea cod populations declined sharply due to overfishing. Which combination of regulations best allows young cod to reach sexual maturity and replenish the wild stock sustainably? (Quần thể cá tuyết Biển Bắc suy giảm mạnh do đánh bắt quá mức. Tổ hợp quy định nào giúp cá tuyết non kịp trưởng thành sinh dục và phục hồi đàn cá bền vững?) A. Decreasing net mesh size and encouraging fishing during spawning months B. Increasing minimum net mesh size, enforcing catch quotas, and closing spawning grounds during breeding seasons C. Introducing foreign predatory fish species and removing marine protected areas D. Replacing all wild fish with non-biodegradable drift nets ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Tăng kích thước mắt lưới tối thiểu giúp cá tuyết non lọt qua lưới sống sót; hạn ngạch (quotas) giới hạn sản lượng đánh bắt; và cấm đánh bắt mùa sinh sản bảo vệ cá bố mẹ đẻ trứng. Câu A tận diệt cả cá con lẫn cá mẹ!",
+      "duration": 127.32,
+      "startTime": 3566.76,
+      "endTime": 3694.08,
+      "audioUrl": "/audio/lectures/biology/20/s05_b10.mp3"
+    },
+    {
+      "id": "s05_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s05_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Only 60 individuals of a rare wild mammal remain in a fragmented forest.(a) Explain why such a small population is at high risk of extinction even if hunting is completely banned. [2](b) Explain how zoos can use captive breeding techniques (including AI or IVF) to conserve this species, and state one advantage of seed banks for conserving endangered plants. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Closely related individuals mate ( inbreeding ), increasing the chance of offspring inheriting harmful recessive alleles (inbreeding depression) [1m]; the resulting low genetic diversity/variation means few or no individuals may possess alleles for resistance if a new disease or environmental change occurs [1m]. (b) Zoos keep genetic studbooks and use artificial insemination (AI) or IVF to exchange gametes between distant zoos without dangerous animal transport, boosting numbers and genetic diversity before reintroducing offspring to the wild [2m]. Seed banks: store huge numbers of dried, frozen seeds in very little space at low cost for decades/centuries without risking habitat loss or disease [1m]. 💡 Intuition Check: Genetic diversity is evolutionary insurance: the smaller the population, the higher the inbreeding and the lower the chance of surviving new diseases!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Only 60 individuals of a rare wild mammal remain in a fragmented forest.(a) Explain why such a small population is at high risk of extinction even if hunting is completely banned. (b) Explain how zoos can use captive breeding techniques to conserve this species, and state one advantage of seed banks for conserving endangered plants. (Chỉ còn 60 cá thể của một loài thú quý hiếm trong khu rừng bị chia cắt. (a) Giải thích vì sao quần thể nhỏ như vậy vẫn có nguy cơ tuyệt chủng cao dù cấm săn bắn hoàn toàn. (b) Giải thích cách vườn thú dùng nhân giống nuôi nhốt (gồm AI/IVF) để bảo tồn loài này, và nêu 1 ưu điểm của ngân hàng hạt giống với thực vật nguy cấp. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Các cá thể có quan hệ huyết thống gần phải giao phối với nhau ( inbreeding — giao phối cận huyết ), làm tăng tỉ lệ con đồng hợp tử về các allele lặn có hại ; độ đa dạng di truyền thấp khiến cả quần thể dễ bị xóa sổ nếu xuất hiện mầm bệnh mới hoặc biến đổi khí hậu . (b) Vườn thú lập sổ phả hệ và dùng thụ tinh nhân tạo (AI) hoặc IVF để trao đổi giao tử đông lạnh giữa các vườn thú xa nhau mà không cần vận chuyển thú gây nguy hiểm, giúp tăng số lượng và đa dạng gen trước khi tái thả tự nhiên . Ngân hàng hạt giống: bảo quản hàng vạn hạt giống khô đông lạnh trong diện tích rất nhỏ với chi phí thấp suốt hàng chục/trăm năm .",
+      "duration": 186.72,
+      "startTime": 3694.08,
+      "endTime": 3880.8,
+      "audioUrl": "/audio/lectures/biology/20/s05_b11.mp3"
     }
   ]
 }

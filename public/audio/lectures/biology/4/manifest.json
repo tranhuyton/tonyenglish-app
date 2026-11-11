@@ -2,195 +2,368 @@
   "lectureId": "821ff271-c9ae-493a-b14c-e3f4b074a9d9",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 4: Biological molecules",
-  "totalDuration": 511.56,
+  "totalDuration": 2271.41,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_biomolecules": {
-      "start": 1,
+    "s01_int": {
+      "start": 2,
       "end": 4
     },
-    "sec-biomolecules": {
+    "s01_wex": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 4
+      "end": 11
     },
-    "sec_dna_water": {
-      "start": 5,
-      "end": 7
+    "s02_int": {
+      "start": 13,
+      "end": 15
     },
-    "sec-dna-water": {
-      "start": 5,
-      "end": 7
+    "s02_wex": {
+      "start": 19,
+      "end": 20
     },
-    "sec_food_tests": {
-      "start": 8,
-      "end": 13
+    "s02_hdr": {
+      "start": 12,
+      "end": 20
     },
-    "sec-food-tests": {
-      "start": 8,
-      "end": 13
+    "s03_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s03_wex": {
+      "start": 27,
+      "end": 28
+    },
+    "s03_hdr": {
+      "start": 21,
+      "end": 28
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 4: Các đại phân tử sinh học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 4: Biological molecules. Living organisms are built from chemical elements carbon, hydrogen, oxygen, nitrogen, and phosphorus. In this lesson, we study carbohydrates, lipids, proteins, DNA, the vital role of water, and master all five Cambridge chemical food tests.",
-      "vi": "Chào mừng các bạn đến với Bài 4: Các đại phân tử sinh học. Mọi sinh vật sống đều được cấu tạo từ các nguyên tố hóa học carbon, hydro, oxy, nitơ và phốt pho. Trong bài học này, chúng ta sẽ tìm hiểu về carbohydrate, lipid, protein, DNA, vai trò sinh học của nước và nắm vững trọn vẹn 5 phép thử hóa học thực phẩm Cambridge.",
-      "duration": 42.04,
+      "title": "Chuyên đề 4: Biological Molecules (Các Đại phân tử Sinh học)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 4: Biological Molecules. Carbohydrates, Lipids, Proteins, 5 Chemical Food Tests (including DCPIP), DNA Double Helix & Water.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Anh - Việt Chuyên đề 4: Biological Molecules (Các Đại phân tử Sinh học). Carbohydrate, Lipid, Protein, 5 Phép thử Thực phẩm (gồm cả DCPIP), Cấu trúc Xoắn kép DNA & Nước.",
+      "duration": 37.41,
       "startTime": 0.0,
-      "endTime": 42.04,
+      "endTime": 37.41,
       "audioUrl": "/audio/lectures/biology/4/intro.mp3"
     },
     {
-      "id": "sec_biomolecules",
-      "title": "1. Cấu trúc Các Đại phân tử Sinh học (Biomolecules)",
-      "selector": "#sec-biomolecules",
-      "en": "Section 1: Biological molecules are large polymers made by linking smaller monomer subunits: Monosaccharides form polysaccharides, fatty acids and glycerol form lipids, and amino acids form proteins.",
-      "vi": "Mục 1: Các đại phân tử sinh học là những polyme lớn được tạo thành từ việc liên kết các đơn phân nhỏ hơn: Đường đơn monosaccharide tạo nên polysaccharide, axit béo và glycerol tạo nên lipid, và các axit amin liên kết tạo nên chuỗi protein.",
-      "duration": 55.1,
-      "startTime": 42.04,
-      "endTime": 97.14,
-      "audioUrl": "/audio/lectures/biology/4/sec_biomolecules.mp3"
+      "id": "s01_hdr",
+      "title": "🧬 1. Nguyên tố Hóa học & Các Đại phân tử Sinh học (Macromolecules)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🟦 CORE 4.1.1 – 4.1.2 🧬 1. Chemical Elements & Biological Macromolecules.",
+      "vi": "🟦 CORE 4.1.1 – 4.1.2 🧬 1. Nguyên tố Hóa học & Các Đại phân tử Sinh học (Macromolecules).",
+      "duration": 11.37,
+      "startTime": 37.41,
+      "endTime": 48.78,
+      "audioUrl": "/audio/lectures/biology/4/s01_hdr.mp3"
     },
     {
-      "id": "card_carbohydrates",
-      "title": "🍞 Carbohydrates (Đường & Tinh bột)",
-      "selector": "#card-carbohydrates",
-      "en": "Carbohydrates contain Carbon, Hydrogen, and Oxygen. Monosaccharides like glucose provide fast energy. Polysaccharides include starch for plant energy storage, glycogen for animal energy storage in liver and muscles, and cellulose for plant cell walls.",
-      "vi": "Carbohydrate chứa Carbon, Hydro và Oxy. Đường đơn như glucose cung cấp năng lượng nhanh cho tế bào. Đa đường polysaccharide gồm tinh bột tích trữ năng lượng ở thực vật, glycogen tích trữ năng lượng ở gan và cơ động vật, và cellulose cấu tạo thành tế bào thực vật.",
-      "duration": 35.32,
-      "startTime": 97.14,
-      "endTime": 132.46,
-      "audioUrl": "/audio/lectures/biology/4/card_carbohydrates.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of biological molecules like LEGO kits : identical blue bricks ( glucose ) snap together into plant storage towers ( starch ), animal fuel packs ( glycogen ), or rigid walls ( cellulose ). Lipids are a 3-pronged plug ( 1 glycerol + 3 fatty acids ), while proteins are necklaces strung from 20 colourful beads ( amino acids ).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung các đại phân tử sinh học giống như bộ xếp hình LEGO : cùng một viên gạch màu xanh ( glucose ) nhưng cách ghép khác nhau sẽ tạo thành kho dự trữ năng lượng của cây ( starch - tinh bột ), kho dự trữ nhanh ở gan và cơ động vật ( glycogen ), hoặc bức tường gạch siêu bền ở thành tế bào thực vật ( cellulose ). Trong khi đó, lipid (chất béo & dầu) có hình phích cắm 3 chân, còn protein là chuỗi vòng cổ kết từ 20 loại hạt cườm ( amino acids ).",
+      "duration": 58.26,
+      "startTime": 48.78,
+      "endTime": 107.04,
+      "audioUrl": "/audio/lectures/biology/4/s01_b01.mp3"
     },
     {
-      "id": "card_lipids",
-      "title": "🥑 Fats & Oils / Lipids (Chất béo)",
-      "selector": "#card-lipids",
-      "en": "Lipids contain Carbon, Hydrogen, and Oxygen. Each lipid molecule is synthesized from one molecule of glycerol chemically bonded to three fatty acid molecules. Lipids provide high-density long-term energy storage, thermal insulation, and cell membrane components.",
-      "vi": "Lipid chứa Carbon, Hydro và Oxy. Mỗi phân tử chất béo được tổng hợp từ một phân tử glycerol liên kết hóa học với ba phân tử axit béo. Lipid cung cấp nguồn năng lượng dự trữ dài hạn đậm đặc, cách nhiệt dưới da và là thành phần cấu tạo màng sinh chất.",
-      "duration": 35.01,
-      "startTime": 132.46,
-      "endTime": 167.47,
-      "audioUrl": "/audio/lectures/biology/4/card_lipids.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Memorise elements using CHO vs CHON : Carbohydrates & Fats contain only C, H, O ; Proteins ALWAYS add N (Nitrogen). 2) Match each polymer to its exact monomer: glucose → starch / glycogen / cellulose ; amino acids → proteins ; fatty acids + glycerol → fats & oils .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Thuộc lòng nguyên tố theo quy tắc CHO và CHON : Carbohydrate và Lipid chỉ chứa C, H, O ; riêng Protein LUÔN có thêm nguyên tố Nitrogen (N) . 2) Ghép chuẩn xác từng đơn phân với đa phân tương ứng: glucose → starch / glycogen / cellulose ; amino acids → proteins ; fatty acids + glycerol → fats & oils .",
+      "duration": 52.95,
+      "startTime": 107.04,
+      "endTime": 159.99,
+      "audioUrl": "/audio/lectures/biology/4/s01_b02.mp3"
     },
     {
-      "id": "card_proteins",
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students frequently claim fats/lipids are polymers of repeating identical monomers or forget glycerol . Always write BOTH fatty acids AND glycerol when asked what smaller molecules make up fats and oils!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Học sinh rất hay quên glycerol khi nêu đơn vị cấu tạo của chất béo, hoặc nhầm lẫn rằng cellulose là chất dự trữ năng lượng. Đi thi bắt buộc ghi đủ cả hai: fatty acids AND glycerol !",
+      "duration": 30.83,
+      "startTime": 159.99,
+      "endTime": 190.82,
+      "audioUrl": "/audio/lectures/biology/4/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "macromolecules / polymers",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Large biological molecules ( macromolecules / polymers ) are synthesised inside cells by joining smaller basic subunits ( monomers ) together. You must know the exact chemical elements and subunits for each class:",
+      "vi": "Các đại phân tử sinh học lớn ( macromolecules / polymers ) được tổng hợp trong tế bào bằng cách liên kết các đơn vị cơ bản nhỏ hơn. Bạn cần nắm chắc bảng tổng hợp nguyên tố hóa học và đơn phân dưới đây:",
+      "duration": 29.16,
+      "startTime": 190.82,
+      "endTime": 219.98,
+      "audioUrl": "/audio/lectures/biology/4/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "Starch",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Macromolecule Group: 🍞 Carbohydrates; Chemical Elements (4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Smaller Subunits (4.1.2): Glucose (simple sugar); Large Molecules Formed: Starch , Glycogen , Cellulose. Macromolecule Group: 🥑 Fats & Oils (Lipids); Chemical Elements (4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Smaller Subunits (4.1.2): Fatty acids + Glycerol; Large Molecules Formed: Fats (solid at room temp) & Oils (liquid). Macromolecule Group: 🥩 Proteins; Chemical Elements (4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ), Nitrogen (N) (sometimes S); Smaller Subunits (4.1.2): Amino acids (~20 types); Large Molecules Formed: Proteins (enzymes, antibodies, carriers, keratin).",
+      "vi": "Nhóm Đại phân tử: 🍞 Carbohydrates (Đường & Tinh bột); Nguyên tố Hóa học (4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Đơn vị nhỏ (Subunits - 4.1.2): Glucose (Đường đơn); Phân tử lớn tạo thành: Starch (Tinh bột), Glycogen , Cellulose. Nhóm Đại phân tử: 🥑 Fats & Oils (Chất béo & Dầu); Nguyên tố Hóa học (4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ); Đơn vị nhỏ (Subunits - 4.1.2): Fatty acids (Axit béo) + Glycerol; Phân tử lớn tạo thành: Fats (Mỡ đặc) & Oils (Dầu lỏng). Nhóm Đại phân tử: 🥩 Proteins (Chất đạm); Nguyên tố Hóa học (4.1.1): Carbon ( C ), Hydrogen ( H ), Oxygen ( O ), Nitrogen (N) (đôi khi có S); Đơn vị nhỏ (Subunits - 4.1.2): Amino acids (~20 loại axit amin); Phân tử lớn tạo thành: Proteins (enzyme, kháng thể, protein màng).",
+      "duration": 116.76,
+      "startTime": 219.98,
+      "endTime": 336.74,
+      "audioUrl": "/audio/lectures/biology/4/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🍞 Carbohydrates",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🍞 Carbohydrates. Elements: C, H, O. Smaller Molecules: Glucose (simple sugars). ⬇️ Join together to form ⬇️ Large Polysaccharides: Starch, Glycogen, Cellulose. Polysaccharide: Starch; Biological Function & Key Site: Insoluble energy store in plants (chloroplast granules, potato tubers, seeds); osmotically inactive. Polysaccharide: Glycogen; Biological Function & Key Site: Insoluble short-term glucose store in animals (stored inside liver and muscle cells). Polysaccharide: Cellulose; Biological Function & Key Site: Structural polysaccharide forming strong criss-crossing fibres in plant cell walls.",
+      "vi": "🍞 Carbohydrates. Nguyên tố: C, H, O. Đơn phân nhỏ (Smaller molecules): Glucose (Đường đơn). ⬇️ Trùng hợp tạo thành ⬇️ Đa đường lớn (Polysaccharides): Starch, Glycogen, Cellulose. Polysaccharide: Starch (Tinh bột); Chức năng sinh học & Vị trí trọng tâm: Chất dự trữ năng lượng không tan ở thực vật (hạt tinh bột trong lục lạp, củ khoai, hạt giống); không gây thẩm thấu. Polysaccharide: Glycogen; Chức năng sinh học & Vị trí trọng tâm: Chất dự trữ glucose ngắn hạn không tan ở động vật (tập trung trong tế bào gan - liver và cơ - muscle ). Polysaccharide: Cellulose; Chức năng sinh học & Vị trí trọng tâm: Đa đường cấu trúc tạo mạng sợi bền chắc cho thành tế bào thực vật.",
+      "duration": 98.65,
+      "startTime": 336.74,
+      "endTime": 435.39,
+      "audioUrl": "/audio/lectures/biology/4/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "🥑 Fats & Oils (Lipids)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🥑 Fats & Oils (Lipids). Elements: C, H, O. Smaller Molecules: 3 Fatty acids + 1 Glycerol. ⬇️ Join together to form ⬇️ Large Molecules: Fats & Oils (Triglycerides). Key Roles: Long-term energy store (yields >2× energy per gram vs carbohydrates), thermal insulation beneath skin, mechanical protection around kidneys/heart, and cell membranes.",
+      "vi": "🥑 Fats & Oils (Lipids). Nguyên tố: C, H, O. Đơn vị nhỏ (Smaller molecules): 3 Fatty acids + 1 Glycerol. ⬇️ Kết hợp tạo thành ⬇️ Phân tử lớn (Large molecules): Fats (Mỡ) & Oils (Dầu). Vai trò sinh học: Dự trữ năng lượng dài hạn (cung cấp gấp đôi năng lượng mỗi gam so với carbohydrate), lớp mỡ cách nhiệt dưới da (thermal insulation), đệm bảo vệ cơ học quanh thận/tim và cấu tạo màng tế bào.",
+      "duration": 62.17,
+      "startTime": 435.39,
+      "endTime": 497.56,
+      "audioUrl": "/audio/lectures/biology/4/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
       "title": "🥩 Proteins (Chất đạm)",
-      "selector": "#card-proteins",
-      "en": "Proteins contain Carbon, Hydrogen, Oxygen, Nitrogen, and often Sulphur. They are long chains of amino acids folded into highly specific 3D shapes. Proteins act as biological catalysts, defense antibodies, and structural tissues.",
-      "vi": "Protein chứa Carbon, Hydro, Oxy, Nitơ và thường có thêm Lưu huỳnh. Chúng là chuỗi dài các axit amin cuộn gập thành hình dạng không gian 3 chiều đặc thù. Protein hoạt động như chất xúc tác sinh học, kháng thể miễn dịch và cấu trúc mô cơ thể.",
-      "duration": 34.7,
-      "startTime": 167.47,
-      "endTime": 202.17,
-      "audioUrl": "/audio/lectures/biology/4/card_proteins.mp3"
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🥩 Proteins. Elements: C, H, O, NITROGEN (N) . Smaller Molecules: 20 different Amino Acids. ⬇️ Join together to form ⬇️ Large Molecules: Proteins (Polypeptides). Why Sequence Matters: The exact sequence of amino acids determines how the protein folds into a specific 3D shape (vital for enzyme active sites and antibody binding sites ).",
+      "vi": "🥩 Proteins (Chất đạm). Nguyên tố: C, H, O, NITROGEN (N) . Đơn phân nhỏ (Smaller molecules): 20 loại Amino Acids (Axit amin). ⬇️ Liên kết tạo thành ⬇️ Đại phân tử (Large molecules): Proteins (Chuỗi Polypeptide). Vì sao trình tự Amino Acid quan trọng? Trình tự sắp xếp các amino acid quyết định cách chuỗi protein cuộn gập thành hình dạng không gian 3D đặc hiệu (quyết định hình dạng trung tâm hoạt động active site của enzyme và vị trí gắn kháng nguyên của kháng thể antibody ).",
+      "duration": 66.04,
+      "startTime": 497.56,
+      "endTime": 563.6,
+      "audioUrl": "/audio/lectures/biology/4/s01_b08.mp3"
     },
     {
-      "id": "sec_dna_water",
-      "title": "🧬 Cấu trúc DNA & Vai trò của Nước",
-      "selector": "#sec-dna-water",
-      "en": "Section 1.2 explores DNA and Water: DNA is a double helix consisting of two complementary strands of nucleotides. Water acts as a universal solvent and metabolic transport medium vital for all biochemical life.",
-      "vi": "Mục 1.2 khám phá cấu trúc DNA và vai trò của Nước: DNA là chuỗi xoắn kép gồm hai mạch bổ sung của các nucleotide. Nước đóng vai trò là dung môi hòa tan phổ quát và môi trường vận chuyển trao đổi chất thiết yếu cho mọi sự sống sinh hóa.",
-      "duration": 47.34,
-      "startTime": 202.17,
-      "endTime": 249.51,
-      "audioUrl": "/audio/lectures/biology/4/sec_dna_water.mp3"
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which row correctly identifies the chemical elements and smaller subunits present in a protein molecule? A. Elements: C, H, O only | Subunits: fatty acids and glycerol B. Elements: C, H, O, N | Subunits: amino acids C. Elements: C, H, O, N | Subunits: glucose D. Elements: C, H, O only | Subunits: amino acids ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: All proteins contain carbon, hydrogen, oxygen, AND nitrogen (N) , and are polymers built from chains of amino acids . Options A and D omit nitrogen; Option C confuses protein monomers with glucose (the monomer of starch, glycogen, and cellulose).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 2 MCQ Which row correctly identifies the chemical elements and smaller subunits present in a protein molecule? (Hàng nào xác định đúng các nguyên tố hóa học và đơn vị cấu tạo nhỏ có trong một phân tử protein?) A. Elements: C, H, O only | Subunits: fatty acids and glycerol B. Elements: C, H, O, N | Subunits: amino acids C. Elements: C, H, O, N | Subunits: glucose D. Elements: C, H, O only | Subunits: amino acids ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mọi phân tử protein đều chứa 4 nguyên tố bắt buộc là Carbon (C), Hydrogen (H), Oxygen (O) và Nitrogen (N) , được trùng hợp từ chuỗi các amino acids (axit amin) . Đáp án A và D sai vì thiếu Nitrogen; đáp án C sai vì glucose là đơn phân của carbohydrate chứ không phải protein.",
+      "duration": 121.31,
+      "startTime": 563.6,
+      "endTime": 684.91,
+      "audioUrl": "/audio/lectures/biology/4/s01_b09.mp3"
     },
     {
-      "id": "card_dna",
-      "title": "🧬 DNA Structure (Cấu trúc Chuỗi xoắn kép)",
-      "selector": "#card-dna",
-      "en": "DNA consists of two nucleotide strands coiled into a double helix. The strands are held together by complementary base pairing: Adenine always pairs with Thymine, and Cytosine always pairs with Guanine.",
-      "vi": "DNA gồm hai mạch polynucleotide xoắn lại tạo thành chuỗi xoắn kép. Hai mạch được liên kết chặt chẽ theo nguyên tắc bổ sung: Adenine (A) luôn liên kết với Thymine (T), và Cytosine (C) luôn liên kết với Guanine (G).",
-      "duration": 29.8,
-      "startTime": 249.51,
-      "endTime": 279.31,
-      "audioUrl": "/audio/lectures/biology/4/card_dna.mp3"
+      "id": "s01_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] (a) State two large carbohydrate molecules used for energy storage: one in plants and one in animals. [2](b) Name the smaller molecules from which fats and oils are synthesised, and list all chemical elements present in fats. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) In plants: starch [1m]; in animals: glycogen (stored in liver and muscle) [1m]. (Reject cellulose — it is structural, not an energy store.) (b) Smaller molecules: fatty acids and glycerol [1m]; chemical elements: carbon, hydrogen, and oxygen (C, H, O) [1m]. 💡 Intuition Check: Both starch and glycogen are compact, insoluble polymers of glucose so they can store fuel inside cells without drawing water in by osmosis.",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] (a) State two large carbohydrate molecules used for energy storage: one in plants and one in animals. (b) Name the smaller molecules from which fats and oils are synthesised, and list all chemical elements present in fats. ((a) Nêu tên hai đại phân tử carbohydrate dùng để dự trữ năng lượng: một ở thực vật và một ở động vật. (b) Nêu tên các phân tử nhỏ tổng hợp nên chất béo/dầu và liệt kê toàn bộ nguyên tố hóa học có trong chất béo. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Ở thực vật (in plants): starch (tinh bột) ; ở động vật (in animals): glycogen (dự trữ ở gan và cơ) . (Không chấp nhận cellulose vì cellulose làm nhiệm vụ cấu trúc thành tế bào, không phải chất dự trữ năng lượng.) (b) Phân tử nhỏ (smaller molecules): fatty acids and glycerol (axit béo và glycerol) ; các nguyên tố hóa học: carbon, hydrogen, and oxygen (C, H, O) . 💡 Kiểm tra bản chất: Cả starch và glycogen đều là đa phân không tan trong nước (insoluble), giúp tế bào tích trữ lượng lớn nhiên liệu mà không làm tăng áp suất thẩm thấu hút nước gây vỡ tế bào.",
+      "duration": 140.89,
+      "startTime": 684.91,
+      "endTime": 825.8,
+      "audioUrl": "/audio/lectures/biology/4/s01_b10.mp3"
     },
     {
-      "id": "card_water",
-      "title": "💧 Tầm quan trọng Sinh học của Nước",
-      "selector": "#card-water",
-      "en": "Water is the universal solvent in biology: Most metabolic reactions occur dissolved in water. It transports dissolved substances in blood plasma and plant sap, dissolves excretion wastes like urea, and cools organisms via evaporation.",
-      "vi": "Nước là dung môi phổ quát của sinh học: Hầu hết các phản ứng hóa sinh diễn ra trong môi trường nước. Nước hòa tan và vận chuyển dưỡng chất trong huyết tương và nhựa cây, hòa tan chất bài tiết như urê và làm mát cơ thể khi bay hơi mồ hôi.",
-      "duration": 29.51,
-      "startTime": 279.31,
-      "endTime": 308.82,
-      "audioUrl": "/audio/lectures/biology/4/card_water.mp3"
+      "id": "s02_hdr",
+      "title": "🧪 2. Năm Phép thử Hóa học Thực phẩm (Gồm cả DCPIP thử Vitamin C)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🟦 CORE 4.1.3 • PAPER 6 LAB 🧪 2. Chemical Food Tests (Including DCPIP for Vitamin C).",
+      "vi": "🟦 CORE 4.1.3 • PAPER 6 LAB 🧪 2. Năm Phép thử Hóa học Thực phẩm (Gồm cả DCPIP thử Vitamin C).",
+      "duration": 17.34,
+      "startTime": 825.8,
+      "endTime": 843.14,
+      "audioUrl": "/audio/lectures/biology/4/s02_hdr.mp3"
     },
     {
-      "id": "sec_food_tests",
-      "title": "🧪 2. Các Phép thử Hóa học Thực phẩm (Food Tests)",
-      "selector": "#sec-food-tests",
-      "en": "Section 2 details the five Cambridge food tests: Benedict's for reducing sugars, Iodine for starch, Biuret for protein, Ethanol emulsion for lipids, and DCPIP for Vitamin C.",
-      "vi": "Mục 2 trình bày chi tiết 5 phép thử hóa học thực phẩm Cambridge: Thuốc thử Benedict tìm đường khử, Dung dịch I-ốt tìm tinh bột, Thuốc thử Biuret tìm protein, Nhũ tương Ethanol tìm chất béo và DCPIP tìm Vitamin C.",
-      "duration": 61.1,
-      "startTime": 308.82,
-      "endTime": 369.92,
-      "audioUrl": "/audio/lectures/biology/4/sec_food_tests.mp3"
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of the 5 food tests as detective colour badges : only ONE test needs a hot stove — Benedict's (boil in an 80°C water bath to turn blue into brick-red!). All other four tests work cold at room temperature.",
+      "vi": "🎯 Hình dung đời thường: Hãy nhớ 5 phép thử thực phẩm như 5 huy hiệu đổi màu của thám tử phòng lab : chỉ có DUY NHẤT 1 phép thử cần bếp đun nóng là Benedict's test (đun cách thủy ~80°C để biến màu xanh lam thành đỏ gạch!). Bốn phép thử còn lại đều thực hiện ngay ở nhiệt độ phòng.",
+      "duration": 36.68,
+      "startTime": 843.14,
+      "endTime": 879.82,
+      "audioUrl": "/audio/lectures/biology/4/s02_b01.mp3"
     },
     {
-      "id": "card_test_sugar",
-      "title": "🍬 Phép thử Benedict: Đường khử (Reducing Sugars)",
-      "selector": "#card-test-sugar",
-      "en": "Benedict's Test: Add equal volume of blue Benedict's solution to food sample and heat in a water bath above eighty degrees Celsius for five minutes. Colour change indicates concentration: blue to green, yellow, orange, or brick-red precipitate.",
-      "vi": "Phép thử Benedict: Cho một lượng thuốc thử Benedict màu xanh dương tương đương vào mẫu thực phẩm và đun cách thủy trên 80 độ C trong 5 phút. Dung dịch đổi màu theo nồng độ: từ xanh dương sang xanh lục, vàng, cam hoặc kết tủa đỏ gạch.",
-      "duration": 29.92,
-      "startTime": 369.92,
-      "endTime": 399.84,
-      "audioUrl": "/audio/lectures/biology/4/card_test_sugar.mp3"
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Use a 4-part template in every Paper 6 food-test answer: 1) Add named reagent → 2) Heat (Benedict's only) or shake/pour (Ethanol into water) → 3) Initial colour → 4) Positive colour . For DCPIP , remember it is an inverse drop test: fewer drops to turn blue → colourless means MORE Vitamin C .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Áp dụng công thức 4 bước ăn trọn điểm Paper 6 cho mọi phép thử: 1) Tên thuốc thử (Reagent) → 2) Cách xử lý / Nhiệt độ (chỉ đun cách thủy với Benedict; lắc với ethanol trước rồi đổ vào nước lạnh với Lipid) → 3) Màu gốc → 4) Màu dương tính . Riêng với DCPIP (Vitamin C) , quy tắc tỉ lệ nghịch: càng cần ÍT giọt nước quả để làm mất màu xanh DCPIP thì nồng độ Vitamin C càng CAO .",
+      "duration": 56.59,
+      "startTime": 879.82,
+      "endTime": 936.41,
+      "audioUrl": "/audio/lectures/biology/4/s02_b02.mp3"
     },
     {
-      "id": "card_test_starch",
-      "title": "🍞 Phép thử I-ốt: Tinh bột (Starch)",
-      "selector": "#card-test-starch",
-      "en": "Iodine Test: Add a few drops of yellow-brown iodine solution to the solid or liquid sample at room temperature. If starch is present, the colour immediately turns blue-black. If absent, it remains yellow-brown.",
-      "vi": "Phép thử I-ốt: Nhỏ vài giọt dung dịch I-ốt màu nâu vàng vào mẫu thử ở nhiệt độ phòng. Nếu có tinh bột, dung dịch lập tức chuyển sang màu xanh đen. Nếu không có tinh bột, dung dịch giữ nguyên màu nâu vàng.",
-      "duration": 28.7,
-      "startTime": 399.84,
-      "endTime": 428.54,
-      "audioUrl": "/audio/lectures/biology/4/card_test_starch.mp3"
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic zero-mark mistakes: (1) Writing \"clear\" instead of colourless for DCPIP (blue Benedict's is already clear/transparent!), and (2) adding water before ethanol in the lipid test (fats cannot dissolve in water first!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi mất trắng điểm phổ biến nhất: (1) Viết \"clear\" thay vì colourless (không màu) cho kết quả DCPIP (vì dung dịch màu xanh lam trong suốt vốn đã \"clear\" sẵn rồi!), và (2) đổ nước vào mẫu trước khi hòa tan bằng ethanol trong phép thử chất béo.",
+      "duration": 39.46,
+      "startTime": 936.41,
+      "endTime": 975.87,
+      "audioUrl": "/audio/lectures/biology/4/s02_b03.mp3"
     },
     {
-      "id": "card_test_protein",
-      "title": "🥩 Phép thử Biuret: Protein",
-      "selector": "#card-test-protein",
-      "en": "Biuret Test: Add Biuret reagent to the liquid food sample at room temperature. A colour change from pale blue to purple or lilac confirms the presence of protein.",
-      "vi": "Phép thử Biuret: Nhỏ thuốc thử Biuret vào mẫu thực phẩm dạng lỏng ở nhiệt độ phòng. Sự chuyển màu từ xanh lam nhạt sang màu tím hoặc tím hoa cà xác nhận có sự hiện diện của protein.",
-      "duration": 22.12,
-      "startTime": 428.54,
-      "endTime": 450.66,
-      "audioUrl": "/audio/lectures/biology/4/card_test_protein.mp3"
+      "id": "s02_b04",
+      "title": "đầy đủ 5 phép thử định tính thực phẩm",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "IGCSE Biology 0610 tests five qualitative food tests heavily in Paper 1/2, Paper 4, and Paper 6. Always state four items: reagent name , heating condition , starting colour , and positive final colour :",
+      "vi": "Chương trình IGCSE Biology 0610 kiểm tra đầy đủ 5 phép thử định tính thực phẩm (xuất hiện dày đặc ở Paper 1/2, Paper 4 và đặc biệt là Paper 6). Khi viết câu trả lời tự luận, luôn nêu đủ 4 ý: tên thuốc thử (reagent) , điều kiện đun nóng , màu ban đầu và màu dương tính :",
+      "duration": 39.41,
+      "startTime": 975.87,
+      "endTime": 1015.28,
+      "audioUrl": "/audio/lectures/biology/4/s02_b04.mp3"
     },
     {
-      "id": "card_test_lipid",
-      "title": "🥑 Phép thử Nhũ tương Ethanol: Chất béo (Lipids)",
-      "selector": "#card-test-lipid",
-      "en": "Ethanol Emulsion Test: Dissolve the test sample thoroughly in pure ethanol, then pour the clear liquid into a tube of cold water. A cloudy white milky emulsion confirms the presence of lipids.",
-      "vi": "Phép thử Nhũ tương Ethanol: Hòa tan mẫu thử vào cồn ethanol nguyên chất, sau đó rót dung dịch trong suốt này vào một ống nghiệm chứa nước lạnh. Sự xuất hiện của vẩn đục màu trắng sữa dạng nhũ tương chứng tỏ có chất béo.",
-      "duration": 25.82,
-      "startTime": 450.66,
-      "endTime": 476.48,
-      "audioUrl": "/audio/lectures/biology/4/card_test_lipid.mp3"
+      "id": "s02_b05",
+      "title": "đun cách thủy (~80°C)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Nutrient Tested: 1. Starch (4.1.3a); Reagent: Iodine solution; Method & Heat: Add drops directly (no heat); Initial Colour: Yellow-brown; Positive Result: Blue-black. Nutrient Tested: 2. Reducing sugars (4.1.3b); Reagent: Benedict's solution; Method & Heat: Mix & heat in water bath (~80°C); Initial Colour: Blue; Positive Result: Green ➔ Yellow ➔ Orange ➔ Brick-red precipitate. Nutrient Tested: 3. Proteins (4.1.3c); Reagent: Biuret reagent; Method & Heat: Add & shake gently (no heat); Initial Colour: Blue; Positive Result: Purple / Violet / Lilac. Nutrient Tested: 4. Fats & Oils (4.1.3d); Reagent: Ethanol + Water; Method & Heat: Dissolve in ethanol , pour into cold water; Initial Colour: Clear / Colourless; Positive Result: Cloudy white emulsion. Nutrient Tested: 5. Vitamin C (4.1.3e); Reagent: DCPIP solution; Method & Heat: Add sample drop-by-drop into DCPIP (no heat); Initial Colour: Blue; Positive Result: Colourless (decolourised).",
+      "vi": "Chất dinh dưỡng: 1. Starch - Tinh bột (4.1.3a); Thuốc thử (Reagent): Iodine solution; Cách làm & Nhiệt độ: Nhỏ trực tiếp lên mẫu (không đun); Màu ban đầu: Yellow-brown (Vàng nâu); Kết quả Dương tính: Blue-black (Xanh đen). Chất dinh dưỡng: 2. Reducing sugars (4.1.3b); Thuốc thử (Reagent): Benedict's solution; Cách làm & Nhiệt độ: Trộn đều & đun cách thủy (~80°C); Màu ban đầu: Blue (Xanh lam); Kết quả Dương tính: Green ➔ Yellow ➔ Orange ➔ Brick-red precipitate. Chất dinh dưỡng: 3. Proteins - Đạm (4.1.3c); Thuốc thử (Reagent): Biuret reagent; Cách làm & Nhiệt độ: Thêm thuốc thử & lắc nhẹ (không đun); Màu ban đầu: Blue (Xanh lam); Kết quả Dương tính: Purple / Violet / Lilac (Màu tím). Chất dinh dưỡng: 4. Fats & Oils (4.1.3d); Thuốc thử (Reagent): Ethanol + Water; Cách làm & Nhiệt độ: Lắc tan trong ethanol , đổ sang nước lạnh; Màu ban đầu: Clear / Colourless (Trong suốt); Kết quả Dương tính: Cloudy white emulsion (Nhũ tương trắng đục). Chất dinh dưỡng: 5. Vitamin C (4.1.3e); Thuốc thử (Reagent): DCPIP solution; Cách làm & Nhiệt độ: Nhỏ mẫu từng giọt vào DCPIP (không đun); Màu ban đầu: Blue (Xanh lam); Kết quả Dương tính: Colourless (Mất màu hoàn toàn).",
+      "duration": 184.46,
+      "startTime": 1015.28,
+      "endTime": 1199.74,
+      "audioUrl": "/audio/lectures/biology/4/s02_b05.mp3"
     },
     {
-      "id": "card_test_vitc",
-      "title": "🍋 Phép thử DCPIP: Vitamin C",
-      "selector": "#card-test-vitc",
-      "en": "DCPIP Test: Add food extract drop by drop to a measured volume of dark blue DCPIP solution. If vitamin C is present, the blue DCPIP turns completely colourless. The fewer drops required, the higher the Vitamin C concentration.",
-      "vi": "Phép thử DCPIP: Nhỏ từng giọt dịch chiết thực phẩm vào một lượng dung dịch DCPIP màu xanh thẫm. Nếu có vitamin C, màu xanh của DCPIP sẽ bị mất màu hoàn toàn thành trong suốt. Càng ít số giọt cần nhỏ thì nồng độ Vitamin C càng cao.",
-      "duration": 35.08,
-      "startTime": 476.48,
-      "endTime": 511.56,
-      "audioUrl": "/audio/lectures/biology/4/card_test_vitc.mp3"
+      "id": "s02_b06",
+      "title": "🍞 1. Iodine Solution Test — Phép thử Tinh bột (4.1.3a)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🖱️ Hover or click a tube to perform test & listen: 🍞 1. Iodine Test for Starch🍬 2. Benedict's Test for Reducing Sugars🥩 3. Biuret Test for Proteins🥑 4. Ethanol Emulsion Test for Lipids🍋 5. DCPIP Test for Vitamin C 🍞 1. Iodine Solution Test for Starch (4.1.3a). 🧪 Reagent: Iodine solution (potassium iodide solution, initially yellow-brown). 🔥 Temperature: Room temperature — no heating required . Add a few drops directly onto the solid or liquid food sample. Positive Result (Starch Present): Yellow-brown ➔ Blue-black . Negative result: Remains yellow-brown / orange-brown. ⚠️ Exam Tip: Always write \"blue-black\" in full. Writing \"blue\" or \"black\" alone scores 0 marks. Blue-black.",
+      "vi": "🖱️ Thử Tinh bột (Iodine Test)🍬 2. Thử Đường khử (Benedict's Test)🥩 3. Thử Protein (Biuret Test)🥑 4. Thử Chất béo (Ethanol Emulsion)🍋 5. Thử Vitamin C (DCPIP Test) 🍞 1. Iodine Solution Test — Phép thử Tinh bột (4.1.3a). 🧪 Thuốc thử (Reagent): Dung dịch Iodine solution (màu gốc vàng nâu / yellow-brown). 🔥 Nhiệt độ (Temperature): Nhiệt độ phòng — KHÔNG cần đun nóng . Nhỏ trực tiếp vài giọt lên mẫu thức ăn rắn hoặc lỏng. Kết quả Dương tính (Có Tinh bột): Yellow-brown (Vàng nâu) ➔ Blue-black (Xanh đen) . Âm tính: Giữ nguyên màu vàng nâu. ⚠️ Lưu ý phòng thi: Bắt buộc viết đủ cụm \"blue-black\". Viết lẻ \"blue\" hoặc \"black\" = 0 điểm. Blue-black.",
+      "duration": 111.55,
+      "startTime": 1199.74,
+      "endTime": 1311.29,
+      "audioUrl": "/audio/lectures/biology/4/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 6 MCQ Students titrated four fruit juices drop-by-drop into identical 1.0 cm³ volumes of blue DCPIP solution until the DCPIP became colourless. Juice P needed 4 drops, Juice Q needed 11 drops, Juice R needed 19 drops, and Juice S stayed blue after 40 drops. Which juice has the highest concentration of vitamin C? A. Juice P (4 drops) B. Juice Q (11 drops) C. Juice R (19 drops) D. Juice S (remained blue after 40 drops) ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Vitamin C decolourises blue DCPIP. The higher the concentration of vitamin C per drop, the fewer drops are needed to supply enough vitamin C molecules to completely decolourise 1.0 cm³ of DCPIP. Juice P required only 4 drops, so it is the most concentrated; Juice S contains little or no vitamin C.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 / Paper 6 MCQ Students titrated four fruit juices drop-by-drop into identical 1.0 cm³ volumes of blue DCPIP solution until the DCPIP became colourless. Juice P needed 4 drops, Juice Q needed 11 drops, Juice R needed 19 drops, and Juice S stayed blue after 40 drops. Which juice has the highest concentration of vitamin C? (Học sinh nhỏ từng giọt 4 loại nước ép trái cây vào các ống chứa cùng 1,0 cm³ dung dịch DCPIP màu xanh lam cho đến khi mất màu. Nước ép P cần 4 giọt, Q cần 11 giọt, R cần 19 giọt và S vẫn giữ màu xanh sau 40 giọt. Loại nước ép nào có nồng độ vitamin C cao nhất?) A. Juice P (4 drops) B. Juice Q (11 drops) C. Juice R (19 drops) D. Juice S ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Vitamin C khử làm mất màu xanh của DCPIP (chuyển sang colourless ). Nước ép càng đậm đặc vitamin C thì mỗi giọt càng chứa nhiều phân tử vitamin C, do đó chỉ cần số giọt ít nhất (4 giọt ở mẫu P) đã đủ làm mất màu hoàn toàn 1,0 cm³ DCPIP. Mẫu S không đổi màu chứng tỏ hầu như không chứa vitamin C.",
+      "duration": 158.1,
+      "startTime": 1311.29,
+      "endTime": 1469.39,
+      "audioUrl": "/audio/lectures/biology/4/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "(a) Đường khử (Reducing sugars):",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 6 Alternative to Practical [5 marks] Describe how you would safely test a liquid mystery food sample for: (a) reducing sugars [3], and (b) fats and oils [2]. Include positive results. ✍️ Step-by-Step Mark Scheme Solution: (a) Reducing sugars: Add an equal volume of Benedict's solution to the sample [1m]; heat in a thermostatic water bath (~80°C) for 3–5 minutes (wearing goggles) [1m]; colour changes from blue to green/yellow/orange/ brick-red precipitate if reducing sugar is present [1m]. (b) Fats and oils: Shake a sample vigorously with pure ethanol to dissolve lipids, then pour the liquid into cold distilled water [1m]; a cloudy white emulsion forms if fat/oil is present [1m]. 💡 Intuition Check: Specifying a thermostatic water bath earns both method and safety credit — especially critical whenever flammable ethanol is used nearby in the lab.",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 6 Alternative to Practical [5 marks] Describe how you would safely test a liquid mystery food sample for: (a) reducing sugars , and (b) fats and oils . Include positive results. (Mô tả cách tiến hành thí nghiệm an toàn để kiểm tra một mẫu thực phẩm lỏng chưa biết cho: (a) đường khử , và (b) chất béo/dầu . Nêu rõ kết quả dương tính.) ✍️ Lời giải chi tiết theo thang điểm: (a) Đường khử (Reducing sugars): Thêm thể tích tương đương dung dịch Benedict's solution vào mẫu thử ; đun nóng trong bể cách thủy nhiệt khoảng 3–5 phút và đeo kính bảo hộ ; nếu có đường khử, dung dịch đổi từ xanh lam (blue) sang xanh lục/vàng/cam/ kết tủa đỏ gạch . (b) Chất béo & dầu (Fats and oils): Lắc mạnh mẫu thử với cồn ethanol nguyên chất để hòa tan lipid, sau đó gạn dịch trong đổ sang ống nghiệm chứa nước cất lạnh ; xuất hiện lớp nhũ tương trắng đục nếu có mặt chất béo/dầu . 💡 Kiểm tra bản chất: Dùng bể đun cách thủy (water bath) thay vì ngọn lửa đèn cồn trần vừa giữ nhiệt ổn định 80°C vừa đảm bảo an toàn cháy nổ tuyệt đối khi trong phòng thí nghiệm có cồn ethanol dễ cháy.",
+      "duration": 145.01,
+      "startTime": 1469.39,
+      "endTime": 1614.4,
+      "audioUrl": "/audio/lectures/biology/4/s02_b08.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧬 3. Cấu trúc Xoắn kép DNA, Quy tắc Bắt cặp Base (A–T, C–G) & Nước",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🟩 SUPPLEMENT 4.1.4 🧬 3. DNA Double Helix Structure, Base Pairing (A–T, C–G) & Water.",
+      "vi": "🟩 SUPPLEMENT 4.1.4 🧬 3. Cấu trúc Xoắn kép DNA, Quy tắc Bắt cặp Base (A–T, C–G) & Nước.",
+      "duration": 18.37,
+      "startTime": 1614.4,
+      "endTime": 1632.77,
+      "audioUrl": "/audio/lectures/biology/4/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture DNA as a spiral staircase (double helix) : the two handrails are the sugar-phosphate strands, and each step is a pair of interlocking puzzle pieces ( bases ) held together in the middle by weak bonds.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng phân tử DNA giống như một chiếc cầu thang xoắn ốc (double helix) : hai tay vịn hai bên là hai mạch khung đường-phosphate, còn mỗi bậc thang ở giữa là một cặp mảnh ghép base khớp khít vào nhau nhờ các liên kết hóa học ngang.",
+      "duration": 31.92,
+      "startTime": 1632.77,
+      "endTime": 1664.69,
+      "audioUrl": "/audio/lectures/biology/4/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the mnemonic \"Apples in the Tree (A–T), Cars in the Garage (C–G)\" : straight-letter bases pair together ( A with T ) and curved-letter bases pair together ( C with G ). In base-percentage problems: %T = %A , and %C = %G = (100% − 2×%A) ÷ 2 .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Mẹo nhớ quy tắc bắt cặp bổ sung không bao giờ nhầm: chữ nét thẳng đi với chữ nét thẳng ( A bắt cặp với T — Apples in the Tree ), chữ nét cong đi với chữ nét cong ( C bắt cặp với G — Cars in the Garage ). Hệ quả toán học cho bài tập tính phần trăm base trên DNA mạch kép: %T = %A và %C = %G = (100% − 2×%A) ÷ 2 .",
+      "duration": 56.79,
+      "startTime": 1664.69,
+      "endTime": 1721.48,
+      "audioUrl": "/audio/lectures/biology/4/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say amino acids pair up inside DNA! DNA contains bases (A, T, C, G) held together by bonds between pairs of bases ; amino acids are the monomers of proteins.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết rằng các \"amino acids\" bắt cặp bên trong DNA! Bên trong hai mạch DNA là các bases (A, T, C, G) giữ nhau bằng liên kết giữa các cặp base ; còn amino acid là đơn phân của protein.",
+      "duration": 35.54,
+      "startTime": 1721.48,
+      "endTime": 1757.02,
+      "audioUrl": "/audio/lectures/biology/4/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🧬 Cấu trúc Phân tử DNA (Syllabus 4.1.4a–d)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🧬 Structure of a DNA Molecule (Syllabus 4.1.4a–d). Deoxyribonucleic acid ( DNA ) stores hereditary instructions coding for the amino acid sequences of proteins. Memorise all four mark-scheme points: Double Helix (4.1.4a): Consists of two strands coiled together to form a twisted ladder called a double helix. Chemical Bases (4.1.4b): Each strand carries a sequence of chemicals called bases projecting inward from its sugar-phosphate backbone. Cross-Links (4.1.4c): Weak chemical bonds between pairs of bases hold the two opposite strands firmly together. Complementary Base Pairing (4.1.4d): Bases always pair up in the exact same way — A pairs with T , and C pairs with G (full names Adenine, Thymine, Cytosine, Guanine are shown for reference; not required in 0610). 🔢 Base-Ratio Consequence: Because every A binds to a T and every C binds to a G , in any double-stranded DNA molecule: %A = %T and %C = %G !",
+      "vi": "🧬 Cấu trúc Phân tử DNA (Syllabus 4.1.4a–d). Deoxyribonucleic acid ( DNA ) lưu giữ thông tin di truyền mã hóa trình tự amino acid của các protein. Học thuộc trọn vẹn 4 ý chấm điểm chuẩn Cambridge: Xoắn kép (Double Helix - 4.1.4a): Gồm hai mạch đơn cuộn xoắn quanh nhau tạo thành xoắn kép (double helix). Các Base hóa học (Bases - 4.1.4b): Mỗi mạch đơn mang một trình tự các nhóm hóa học gọi là các bases hướng vào bên trong. Liên kết ngang (Cross-links - 4.1.4c): Các liên kết hóa học giữa các cặp base giữ chặt hai mạch đơn đối diện lại với nhau. Bắt cặp bổ sung (Base Pairing - 4.1.4d): Các base luôn bắt cặp đặc hiệu không đổi — A bắt cặp với T , và C bắt cặp với G (tên đầy đủ Adenine, Thymine, Cytosine, Guanine chỉ để tham khảo, đề 0610 không bắt học thuộc). 🔢 Hệ quả tính toán tỷ lệ Base: Vì mọi A luôn đi với T và mọi C luôn đi với G , trong phân tử DNA mạch kép ta luôn có: %A = %T và %C = %G !",
+      "duration": 146.75,
+      "startTime": 1757.02,
+      "endTime": 1903.77,
+      "audioUrl": "/audio/lectures/biology/4/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "💧 Vai trò Sinh học của Nước (Water)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "💧 Biological Role of Water. Cells are ~70–80% water. Although inorganic (contains H and O, no carbon), water is indispensable as a universal biological solvent : Metabolic Medium: Cytoplasmic enzymes and substrates must dissolve in water to collide and react. Transport: Blood plasma dissolves glucose, amino acids, ions, hormones, and CO₂; xylem/phloem sap transports minerals and sucrose. Digestion & Excretion: Hydrolysis breaks polymers using water; urea and excess salts dissolve in water to form urine and sweat.",
+      "vi": "💧 Vai trò Sinh học của Nước (Water). Tế bào chứa khoảng 70–80% nước. Dù là chất vô cơ (chỉ gồm H và O, không có Carbon), nước đóng vai trò sống còn là dung môi sinh học vạn năng (universal solvent) : Môi trường trao đổi chất (Metabolism): Enzyme và cơ chất trong tế bào chất phải hòa tan trong nước mới chuyển động va chạm và phản ứng được. Vận chuyển (Transport): Huyết tương máu hòa tan glucose, amino acid, ion khoáng, hormone và CO₂; nhựa mạch gỗ/mạch rây vận chuyển khoáng và sucrose ở cây. Tiêu hóa & Bài tiết: Phản ứng thủy phân cắt đa phân nhờ nước; hòa tan urea và muối dư thừa thải ra qua nước tiểu và mồ hôi.",
+      "duration": 88.47,
+      "startTime": 1903.77,
+      "endTime": 1992.24,
+      "audioUrl": "/audio/lectures/biology/4/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Chemical analysis of a double-stranded DNA molecule shows that 28% of its bases are adenine (A). What percentage of the bases in this DNA molecule are cytosine (C)? A. 14% B. 22% C. 28% D. 44% ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: By complementary base pairing ( A–T and C–G ), %T = %A = 28% . Together, A + T = 28% + 28% = 56% . The remaining bases are C + G = 100% − 56% = 44% . Since %C = %G , cytosine makes up 44% ÷ 2 = 22% (Option B). Option D forgets to divide the C+G total by 2!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Chemical analysis of a double-stranded DNA molecule shows that 28% of its bases are adenine (A). What percentage of the bases in this DNA molecule are cytosine (C)? (Phân tích hóa học một phân tử DNA mạch kép cho thấy 28% tổng số base là adenine (A). Hỏi tỷ lệ phần trăm base cytosine (C) trong phân tử DNA này là bao nhiêu?) A. 14% B. 22% C. 28% D. 44% ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Theo nguyên tắc bắt cặp bổ sung ( A–T và C–G ), ta luôn có %T = %A = 28% . Tổng hai loại base này là A + T = 28% + 28% = 56% . Phần trăm còn lại thuộc về C + G = 100% − 56% = 44% . Vì %C = %G nên tỷ lệ cytosine là 44% ÷ 2 = 22% (Đáp án B). Đáp án D là bẫy rất phổ biến khi học sinh quên chia đôi tổng C + G!",
+      "duration": 141.53,
+      "startTime": 1992.24,
+      "endTime": 2133.77,
+      "audioUrl": "/audio/lectures/biology/4/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe the structure of a DNA molecule. [3](b) One strand of a section of DNA has the base sequence A-T-G-C-C-A . State the complementary base sequence on the opposite strand. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Two strands coiled together to form a double helix [1m]; each strand contains chemicals called bases , and bonds between pairs of bases hold the two strands together [1m]; bases always pair complementarily: A with T and C with G [1m]. (b) Complementary sequence: T-A-C-G-G-T [1m]. 💡 Intuition Check: Double-check every letter position one-by-one (A↔T, T↔A, G↔C, C↔G, C↔G, A↔T) — complementary base pairing guarantees faithful copying of genetic code.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Describe the structure of a DNA molecule. (b) One strand of a section of DNA has the base sequence A-T-G-C-C-A . State the complementary base sequence on the opposite strand. ((a) Mô tả cấu trúc của một phân tử DNA. (b) Một mạch của đoạn DNA có trình tự base là A-T-G-C-C-A . Hãy viết trình tự base bổ sung trên mạch đối diện. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Gồm hai mạch đơn cuộn xoắn lại với nhau tạo thành cấu trúc xoắn kép ; mỗi mạch mang chuỗi các hóa chất gọi là bases , và có các liên kết giữa các cặp base giữ chặt hai mạch với nhau ; các base luôn bắt cặp đặc hiệu: A liên kết với T , và C liên kết với G . (b) Trình tự mạch bổ sung: T-A-C-G-G-T . 💡 Kiểm tra bản chất: Khi dò mạch bổ sung, hãy đối chiếu từng ký tự một theo đúng thứ tự trái sang phải (A↔T, T↔A, G↔C, C↔G, C↔G, A↔T) để tránh nhầm lẫn đáng tiếc.",
+      "duration": 137.64,
+      "startTime": 2133.77,
+      "endTime": 2271.41,
+      "audioUrl": "/audio/lectures/biology/4/s03_b07.mp3"
     }
   ]
 }

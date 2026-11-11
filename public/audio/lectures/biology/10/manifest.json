@@ -2,159 +2,661 @@
   "lectureId": "62278d87-97ea-4fa5-aa46-748bca28db68",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 10: Diseases and immunity",
-  "totalDuration": 437.27,
+  "totalDuration": 3135.82,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_pathogens": {
-      "start": 1,
-      "end": 3
-    },
-    "sec-pathogens": {
-      "start": 1,
-      "end": 3
-    },
-    "sec_body_defences": {
-      "start": 4,
+    "s01_int": {
+      "start": 2,
       "end": 4
     },
-    "sec-body-defences": {
-      "start": 4,
-      "end": 4
-    },
-    "sec_immunity_vaccines": {
-      "start": 5,
+    "s01_p1_sub01": {
+      "start": 6,
       "end": 7
     },
-    "sec-immunity-vaccines": {
-      "start": 5,
-      "end": 7
-    },
-    "sec_control_disease": {
+    "s01_p1_sub02": {
       "start": 8,
       "end": 9
     },
-    "sec-control-disease": {
+    "s01_p2_sub01": {
+      "start": 6,
+      "end": 7
+    },
+    "s01_p2_sub02": {
       "start": 8,
       "end": 9
+    },
+    "s01_wex": {
+      "start": 10,
+      "end": 11
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 11
+    },
+    "s02_int": {
+      "start": 13,
+      "end": 15
+    },
+    "s02_wex": {
+      "start": 19,
+      "end": 20
+    },
+    "s02_hdr": {
+      "start": 12,
+      "end": 20
+    },
+    "s03_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s03_wex": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_hdr": {
+      "start": 21,
+      "end": 30
+    },
+    "s04_int": {
+      "start": 32,
+      "end": 34
+    },
+    "s04_wex": {
+      "start": 40,
+      "end": 41
+    },
+    "s04_hdr": {
+      "start": 31,
+      "end": 41
+    },
+    "s05_int": {
+      "start": 43,
+      "end": 45
+    },
+    "s05_wex": {
+      "start": 50,
+      "end": 51
+    },
+    "s05_hdr": {
+      "start": 42,
+      "end": 51
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 10: Bệnh tật và Hệ Miễn dịch",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 10: Diseases and Immunity. A pathogen is a disease-causing organism, and a transmissible disease can be passed from one host to another. In this lesson, we analyze transmission pathways, mechanical and chemical body barriers, active versus passive immunity, vaccination mechanisms, disease control protocols, and the pathophysiology of cholera.",
-      "vi": "Chào mừng các bạn đến với Bài 10: Bệnh tật và Hệ Miễn dịch. Mầm bệnh là sinh vật gây bệnh, và bệnh truyền nhiễm là bệnh có thể lây từ vật chủ này sang vật chủ khác. Trong bài học này, chúng ta sẽ khảo sát các con đường lây truyền, hàng rào cơ học và hóa học bảo vệ cơ thể, miễn dịch chủ động và thụ động, cơ chế tiêm chủng vaccine, kiểm soát dịch bệnh và cơ chế bệnh tả.",
-      "duration": 43.84,
+      "title": "Chuyên đề 10: Bệnh tật & Hệ Miễn dịch",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 10: Diseases & Immunity. Pathogens, Body Defences, Antigens vs Antibodies, Vaccines & Cholera Mechanism.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Chuyên đề 10: Bệnh tật & Hệ Miễn dịch. Mầm bệnh, Hàng rào phòng thủ, Kháng nguyên/Kháng thể, Vaccine & Cơ chế Bệnh tả.",
+      "duration": 29.46,
       "startTime": 0.0,
-      "endTime": 43.84,
+      "endTime": 29.46,
       "audioUrl": "/audio/lectures/biology/10/intro.mp3"
     },
     {
-      "id": "sec_pathogens",
-      "title": "1. Mầm bệnh & Các Con đường Lây truyền (Pathogens)",
-      "selector": "#sec-pathogens",
-      "en": "Section 1: Pathogens include viruses, bacteria, fungi, and protoctists. Transmissible diseases spread via direct contact—through blood, semen, and other body fluids—or indirect contact—via airborne respiratory droplets, contaminated food and water, domestic surfaces, and animal vectors like mosquitoes.",
-      "vi": "Mục 1: Mầm bệnh gồm virus, vi khuẩn, nấm và nguyên sinh vật. Bệnh truyền nhiễm lây qua tiếp xúc trực tiếp—như máu, tinh dịch và dịch cơ thể—hoặc tiếp xúc gián tiếp—như các giọt bắn đường hô hấp trong không khí, thức ăn và nguồn nước nhiễm bẩn, bề mặt sinh hoạt và động vật trung gian truyền bệnh như muỗi.",
-      "duration": 47.06,
-      "startTime": 43.84,
-      "endTime": 90.9,
-      "audioUrl": "/audio/lectures/biology/10/sec_pathogens.mp3"
+      "id": "s01_hdr",
+      "title": "🦠 1. PATHOGENS AND TRANSMISSIBLE DISEASES",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🦠 1. PATHOGENS AND TRANSMISSIBLE DISEASES.",
+      "vi": "🦠 1. PATHOGENS AND TRANSMISSIBLE DISEASES.",
+      "duration": 9.78,
+      "startTime": 29.46,
+      "endTime": 39.24,
+      "audioUrl": "/audio/lectures/biology/10/s01_hdr.mp3"
     },
     {
-      "id": "card_transmission_modes",
-      "title": "🤝 Tiếp xúc Trực tiếp vs 🌬️ Tiếp xúc Gián tiếp",
-      "selector": "#card-transmission-modes",
-      "en": "Modes of Transmission: Direct contact involves physical transfer of body fluids from person to person, such as HIV transmission via sexual fluids or blood. Indirect contact occurs without person-to-person touch, including airborne inhalation of flu droplets or ingestion of Salmonella from unwashed raw poultry.",
-      "vi": "Các phương thức lây truyền: Tiếp xúc trực tiếp là sự truyền dịch cơ thể từ người sang người, như lây truyền HIV qua đường tình dục hoặc truyền máu. Tiếp xúc gián tiếp không qua va chạm cơ thể, gồm hít phải giọt bắn virus cúm trong không khí hoặc ăn phải vi khuẩn Salmonella từ thịt gia cầm chưa chín.",
-      "duration": 36.02,
-      "startTime": 90.9,
-      "endTime": 126.92,
-      "audioUrl": "/audio/lectures/biology/10/card_transmission_modes.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a pathogen as a burglar trying to enter a house, its surface antigens as the burglar's unique fingerprint, and your body's antibodies as custom-moulded handcuffs made by specialist police ( lymphocytes ) that fit ONLY that exact fingerprint.",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung mầm bệnh (pathogen) như kẻ trộm đột nhập, kháng nguyên (antigen) trên vỏ mầm bệnh là \"dấu vân tay riêng biệt\" của tên trộm đó, còn kháng thể (antibody) là chiếc còng tay đặt thửa do đội cảnh sát đặc nhiệm ( lymphocytes ) đúc riêng chỉ vừa khít với đúng dấu vân tay ấy.",
+      "duration": 38.28,
+      "startTime": 39.24,
+      "endTime": 77.52,
+      "audioUrl": "/audio/lectures/biology/10/s01_b01.mp3"
     },
     {
-      "id": "card_antigens_antibodies",
-      "title": "👾 Kháng nguyên (Antigen) vs 🛡️ Kháng thể (Antibody)",
-      "selector": "#card-antigens-antibodies",
-      "en": "Antigens vs Antibodies: An antigen is a distinctive chemical marker on the pathogen's surface with a specific 3D shape. An antibody is a complementary protein molecule produced by lymphocytes that binds specifically to the antigen, clumping or neutralizing the pathogen.",
-      "vi": "Kháng nguyên vs Kháng thể: Kháng nguyên (Antigen) là phân tử hóa học đặc trưng trên bề mặt mầm bệnh có hình dạng 3 chiều chuyên biệt. Kháng thể (Antibody) là phân tử protein khớp bổ sung do tế bào lympho tiết ra gắn kết đặc hiệu với kháng nguyên, làm ngưng kết hoặc vô hiệu hóa mầm bệnh.",
-      "duration": 35.1,
-      "startTime": 126.92,
-      "endTime": 162.02,
-      "audioUrl": "/audio/lectures/biology/10/card_antigens_antibodies.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Core: Define pathogen (disease-causing organism) and transmissible disease (passed from one host to another via direct contact in blood/body fluids or indirectly via air, food, water, surfaces, or vectors). 2) Supplement: Every pathogen has specific-shaped antigens ; lymphocytes secrete protein antibodies with complementary shapes that bind to antigens to destroy pathogens directly or mark them for phagocytes .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Core: Nắm chắc định nghĩa pathogen (sinh vật gây bệnh) và transmissible disease (bệnh lây từ vật chủ này sang vật chủ khác qua direct contact như máu/dịch cơ thể hoặc indirect contact qua không khí, thức ăn, nước, bề mặt bẩn, động vật trung gian). 2) Supplement: Mỗi mầm bệnh có antigen mang hình dạng đặc trưng (specific shape); bạch cầu lymphocyte tiết antibody bản chất là protein có hình dạng tương thích (complementary shape) gắn vào kháng nguyên để tiêu diệt trực tiếp hoặc đánh dấu cho phagocyte thực bào.",
+      "duration": 70.86,
+      "startTime": 77.52,
+      "endTime": 148.38,
+      "audioUrl": "/audio/lectures/biology/10/s01_b02.mp3"
     },
     {
-      "id": "sec_body_defences",
-      "title": "2. Các Hàng rào Phòng vệ của Cơ thể (Body Defences)",
-      "selector": "#sec-body-defences",
-      "en": "Section 2: Body defences operate in three tiers: Mechanical barriers like unbroken skin and nasal hairs; Chemical barriers like acidic stomach hydrochloric acid and antimicrobial mucus; and Cellular defences including phagocytosis by white blood cells.",
-      "vi": "Mục 2: Hệ thống phòng ngự của cơ thể gồm ba tầng: Hàng rào cơ học như lớp biểu bì da nguyên vẹn và lông mũi; Hàng rào hóa học như axit HCl diệt khuẩn trong dạ dày và chất nhầy đường hô hấp; và Hàng rào tế bào gồm cơ chế thực bào của các bạch cầu.",
-      "duration": 51.35,
-      "startTime": 162.02,
-      "endTime": 213.37,
-      "audioUrl": "/audio/lectures/biology/10/sec_body_defences.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say antibodies and antigens have the \"same shape\" or call antibodies \"cells\"! Antibodies are proteins (not cells) with a complementary shape to the specific antigen—just like a lock and key.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết kháng thể và kháng nguyên có \"cùng hình dạng (same shape)\" hay gọi kháng thể là \"tế bào\"! Kháng thể là phân tử protein có hình dạng bổ sung/tương thích (complementary shape) với kháng nguyên như ổ khóa và chìa khóa.",
+      "duration": 33.81,
+      "startTime": 148.38,
+      "endTime": 182.19,
+      "audioUrl": "/audio/lectures/biology/10/s01_b03.mp3"
     },
     {
-      "id": "sec_immunity_vaccines",
-      "title": "3. Miễn dịch Chủ động, Thụ động & Cơ chế Vaccine",
-      "selector": "#sec-immunity-vaccines",
-      "en": "Section 3: Immunity classification: Active immunity is defense acquired by the body producing its own antibodies and memory cells after infection or vaccination, conferring long-term protection. Passive immunity is temporary defense gained from external antibodies without memory cells, such as maternal antibodies across the placenta or breast milk.",
-      "vi": "Mục 3: Phân loại miễn dịch: Miễn dịch chủ động là khả năng tự sinh kháng thể và tế bào nhớ sau khi nhiễm bệnh hoặc tiêm vaccine, mang lại khả năng bảo vệ lâu dài. Miễn dịch thụ động là sự bảo vệ tạm thời nhờ nhận kháng thể từ bên ngoài mà không tạo tế bào nhớ, như kháng thể mẹ truyền qua nhau thai hoặc sữa mẹ.",
-      "duration": 48.76,
-      "startTime": 213.37,
-      "endTime": 262.13,
-      "audioUrl": "/audio/lectures/biology/10/sec_immunity_vaccines.mp3"
+      "id": "s01_b04",
+      "title": "🇬🇧 Pathogen: A disease-causing organism (such as bacteria, viruses, fungi, or pr...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Pathogen: A disease-causing organism (such as bacteria, viruses, fungi, or protozoa). Transmissible disease: A disease in which the pathogen can be passed from one host to another.",
+      "vi": "🇬🇧 Pathogen: A disease-causing organism. 🇻🇳 Mầm bệnh: Là sinh vật gây bệnh (như vi khuẩn, virus, nấm hoặc động vật nguyên sinh). 🇬🇧 Transmissible disease: A disease in which the pathogen can be passed from one host to another. 🇻🇳 Bệnh truyền nhiễm: Là căn bệnh mà trong đó mầm bệnh có thể lây truyền từ vật chủ này sang vật chủ khác.",
+      "duration": 37.46,
+      "startTime": 182.19,
+      "endTime": 219.65,
+      "audioUrl": "/audio/lectures/biology/10/s01_b04.mp3"
     },
     {
-      "id": "card_active_vs_passive",
-      "title": "🛡️ Miễn dịch Chủ động vs 🍼 Miễn dịch Thụ động",
-      "selector": "#card-active-vs-passive",
-      "en": "Active vs Passive comparison: Active immunity is slow to develop initially but provides durable long-lasting memory cells. Passive immunity provides immediate fast-acting protection but is short-lived as foreign antibodies are naturally broken down and no memory cells are created.",
-      "vi": "So sánh Chủ động vs Thụ động: Miễn dịch chủ động ban đầu phát triển chậm nhưng bền vững nhờ tế bào trí nhớ miễn dịch. Miễn dịch thụ động mang lại hiệu quả bảo vệ tức thì nhưng ngắn hạn vì kháng thể ngoại sinh sẽ bị cơ thể phân hủy tự nhiên và không sinh ra tế bào nhớ.",
-      "duration": 32.75,
-      "startTime": 262.13,
-      "endTime": 294.88,
-      "audioUrl": "/audio/lectures/biology/10/card_active_vs_passive.mp3"
+      "id": "s01_b05",
+      "title": "🤝 Direct Contact (Tiếp xúc trực tiếp)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🤝 Direct Contact. Through blood (e.g., sharing needles, blood transfusions). Through other body fluids (e.g., saliva, semen, vaginal secretions during sexual contact).",
+      "vi": "🤝 Direct Contact (Tiếp xúc trực tiếp). 🇬🇧 Through blood & body fluids: Blood transfusions, sharing syringes, or direct exchange of fluids (saliva, semen) during sexual activity. 🇻🇳 Qua đường máu và dịch cơ thể: Truyền máu, dùng chung kim tiêm hoặc trao đổi trực tiếp dịch tiết sinh dục, nước bọt.",
+      "duration": 37.11,
+      "startTime": 219.65,
+      "endTime": 256.76,
+      "audioUrl": "/audio/lectures/biology/10/s01_b05.mp3"
     },
     {
-      "id": "card_vaccination_process",
-      "title": "💉 Cơ chế Hoạt động của Vaccine (Vaccination)",
-      "selector": "#card-vaccination-process",
-      "en": "Vaccination mechanism: A harmless weakened or dead pathogen, or its isolated surface antigens, is injected. Lymphocytes encounter the antigens and produce complementary antibodies and long-lived memory cells. Upon future natural infection, memory cells rapidly produce large quantities of antibodies to neutralize pathogens before symptoms occur.",
-      "vi": "Cơ chế tiêm vaccine: Đưa mầm bệnh đã làm suy yếu, đã chết hoặc kháng nguyên bề mặt vào cơ thể. Tế bào lympho nhận diện kháng nguyên, sản xuất kháng thể tương ứng và tạo ra các tế bào nhớ miễn dịch tồn tại lâu dài. Khi mầm bệnh thật xâm nhập trong tương lai, tế bào nhớ lập tức tiết ồ ạt kháng thể tiêu diệt mầm bệnh trước khi kịp phát bệnh.",
-      "duration": 42.95,
-      "startTime": 294.88,
-      "endTime": 337.83,
-      "audioUrl": "/audio/lectures/biology/10/card_vaccination_process.mp3"
+      "id": "s01_b06",
+      "title": "🌬️ Indirect Contact (Tiếp xúc gián tiếp)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🌬️ Indirect Contact. From contaminated surfaces and unhygienic objects (door handles, utensils). From contaminated food and water supplies. From animals and insect vectors (e.g., mosquitoes transmitting malaria). Through the air via airborne droplets expelled when coughing or sneezing.",
+      "vi": "🌬️ Indirect Contact (Tiếp xúc gián tiếp). 🇬🇧 Contaminated surfaces, food, air & animal vectors: Contact with contaminated objects, consuming unhygienic food/water, airborne droplets, or mosquito vectors. 🇻🇳 Qua bề mặt bẩn, thức ăn, không khí và vật chủ trung gian:",
+      "duration": 43.37,
+      "startTime": 256.76,
+      "endTime": 300.13,
+      "audioUrl": "/audio/lectures/biology/10/s01_b06.mp3"
     },
     {
-      "id": "sec_control_disease",
-      "title": "4. Kiểm soát Sự lây lan của Dịch bệnh",
-      "selector": "#sec-control-disease",
-      "en": "Section 4: Public health hygiene controls disease transmission: Supplying chlorinated drinking water, thorough cooking and refrigeration of food, washing hands with soap, proper solid waste disposal in covered bins, and modern sewage treatment plants to destroy waterborne pathogens.",
-      "vi": "Mục 4: Vệ sinh y tế cộng đồng kiểm soát lây lan dịch bệnh: Cung cấp nước sạch tiệt trùng clo, nấu chín kỹ và bảo quản lạnh thực phẩm, rửa tay bằng xà phòng, thu gom rác thải trong thùng có nắp đậy và xây dựng nhà máy xử lý nước thải hiện đại để tiêu diệt mầm bệnh truyền qua đường nước.",
-      "duration": 52.12,
-      "startTime": 337.83,
-      "endTime": 389.95,
-      "audioUrl": "/audio/lectures/biology/10/sec_control_disease.mp3"
+      "id": "s01_b07",
+      "title": "👾 Antigen (Kháng nguyên)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "👾 Antigen. Distinctive chemical markers (usually proteins) located on the outer surface of pathogens. When detected as \"foreign\" non-self molecules by the immune system, they stimulate lymphocytes to produce antibodies. Each pathogen species carries its own unique antigens with specific 3D shapes.",
+      "vi": "👾 Antigen (Kháng nguyên). 🇬🇧: Distinctive protein markers on the pathogen's surface that stimulate an immune response by lymphocytes. 🇻🇳: Các phân tử protein đặc trưng nằm trên bề mặt mầm bệnh, kích thích bạch cầu Lymphocyte sản xuất kháng thể. 🔑 Mỗi loài mầm bệnh có kháng nguyên mang hình dáng 3D ĐẶC TRƯNG riêng biệt.",
+      "duration": 43.21,
+      "startTime": 300.13,
+      "endTime": 343.34,
+      "audioUrl": "/audio/lectures/biology/10/s01_b07.mp3"
     },
     {
-      "id": "card_cholera_mechanism",
-      "title": "⚠️ 5. Cơ chế Bệnh Tả & Liệu pháp Bù nước ORT",
-      "selector": "#card-cholera-mechanism",
-      "en": "Cholera pathophysiology: Vibrio cholerae bacteria in the small intestine release a protein toxin. The toxin stimulates epithelial cells to actively secrete chloride ions into the gut lumen. This lowers water potential in the lumen, drawing water from blood by osmosis, causing watery diarrhea, fatal dehydration, and loss of salts, treated effectively with Oral Rehydration Therapy.",
-      "vi": "Sinh bệnh học bệnh tả: Vi khuẩn Vibrio cholerae tại ruột non tiết ra độc tố protein. Độc tố kích thích tế bào niêm mạc ruột bài tiết ồ ạt ion clorua vào lòng ruột. Điều này làm giảm thế nước trong lòng ruột, kéo nước từ máu thẩm thấu vào ruột gây tiêu chảy xối xả mất nước nghiêm trọng và mất muối khoáng, điều trị hiệu quả bằng Liệu pháp Bù nước ORT.",
-      "duration": 47.32,
-      "startTime": 389.95,
-      "endTime": 437.27,
-      "audioUrl": "/audio/lectures/biology/10/card_cholera_mechanism.mp3"
+      "id": "s01_b08",
+      "title": "🛡️ Antibody (Kháng thể)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "🛡️ Antibody. Y-shaped proteins secreted by lymphocytes in response to specific antigens. They bind to antigens leading to direct destruction of pathogens or marking them for destruction by phagocytes. Antibodies have complementary shapes that fit specific antigens with high lock-and-key precision.",
+      "vi": "🛡️ Antibody (Kháng thể). 🇬🇧: Y-shaped proteins made by lymphocytes that bind to complementary antigens to destroy or mark pathogens. 🇻🇳: Phân tử protein hình chữ Y do Lymphocyte tiết ra, gắn khớp với kháng nguyên để tiêu diệt hoặc đánh dấu mầm bệnh. 🔑 Kháng thể có hình dáng TƯƠNG THÍCH (Complementary shape) vừa khít với kháng nguyên tương ứng.",
+      "duration": 44.03,
+      "startTime": 343.34,
+      "endTime": 387.37,
+      "audioUrl": "/audio/lectures/biology/10/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which statement correctly describes the relationship between antigens and antibodies during an immune response? A. Antigens are proteins secreted by phagocytes that have the same shape as antibodies. B. Antibodies are white blood cells that engulf antigens on the surface of all bacteria. C. Antibodies are proteins produced by lymphocytes with shapes complementary to specific antigens. D. Antigens are lipids produced by lymphocytes to neutralize toxins in blood plasma. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: C is correct because lymphocytes synthesize Y-shaped protein antibodies whose binding sites are complementary in shape to one specific foreign antigen. A is wrong because antigens are markers on the pathogen (not secreted by phagocytes) and shapes are complementary, not identical. B is wrong because antibodies are proteins, not cells. D is wrong because lymphocytes make antibodies, not antigens.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Which statement correctly describes the relationship between antigens and antibodies during an immune response? (Phát biểu nào mô tả đúng mối quan hệ giữa kháng nguyên và kháng thể trong đáp ứng miễn dịch?) A. Antigens are proteins secreted by phagocytes that have the same shape as antibodies. B. Antibodies are white blood cells that engulf antigens on the surface of all bacteria. C. Antibodies are proteins produced by lymphocytes with shapes complementary to specific antigens. D. Antigens are lipids produced by lymphocytes to neutralize toxins in blood plasma. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Đáp án C đúng vì bạch cầu lymphocytes tiết ra các phân tử protein hình chữ Y ( antibodies ) có vị trí gắn mang hình dạng tương thích (complementary) với kháng nguyên đặc hiệu. A sai vì kháng nguyên nằm trên mầm bệnh và hình dạng phải là complementary chứ không phải same shape . B sai vì kháng thể là protein chứ không phải tế bào bạch cầu. D sai vì lymphocyte tạo kháng thể chứ không tạo kháng nguyên.",
+      "duration": 141.99,
+      "startTime": 387.37,
+      "endTime": 529.36,
+      "audioUrl": "/audio/lectures/biology/10/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Define the term transmissible disease . [2] (b) State one direct method and one indirect method of pathogen transmission. [2] (c) Explain why antibodies produced against measles virus do not protect a person against influenza virus. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) A disease caused by a pathogen [1m] that can be passed from one host to another [1m]. (b) Direct: Mixing of blood (e.g. sharing needles) or transfer of body fluids during sexual contact [1m]. Indirect: Breathing in airborne droplets / touching contaminated surfaces / eating contaminated food or water / insect vectors [1m]. (c) Influenza virus has different shaped antigens on its surface, so measles antibodies do not have a complementary shape to bind to influenza antigens [1m]. 💡 Intuition Check: Whenever an IGCSE question asks why immunity is disease-specific, always pair the two Mark Scheme keywords: \"specific antigen shape\" + \"complementary antibody shape\".",
+      "vi": "BÀI MẪU 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Define the term transmissible disease . (b) State one direct method and one indirect method of pathogen transmission. (c) Explain why antibodies produced against measles virus do not protect a person against influenza virus. (Định nghĩa bệnh truyền nhiễm; nêu 1 đường lây trực tiếp và 1 đường gián tiếp; giải thích vì sao kháng thể chống sởi không bảo vệ cơ thể khỏi virus cúm.) ✍️ Lời giải chi tiết theo thang điểm: Bệnh do mầm bệnh gây ra và lây truyền được từ vật chủ này sang vật chủ khác. (b) Direct: Blood contact (sharing needles) / sexual body fluids . Virus cúm có kháng nguyên hình dạng khác nên kháng thể sởi không tương thích để gắn khớp. 💡 Kiểm tra bản chất: Cứ gặp câu hỏi vì sao miễn dịch có tính đặc hiệu, hãy ghép bộ đôi từ khóa vàng: \"specific antigen shape\" + \"complementary antibody shape\"!",
+      "duration": 122.9,
+      "startTime": 529.36,
+      "endTime": 652.26,
+      "audioUrl": "/audio/lectures/biology/10/s01_b10.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🛡️ 2. HÀNG RÀO PHÒNG THỦ CỦA CƠ THỂ (BODY'S DEFENCES)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🛡️ 2. BODY'S DEFENCE MECHANISMS.",
+      "vi": "🛡️ 2. HÀNG RÀO PHÒNG THỦ CỦA CƠ THỂ (BODY'S DEFENCES).",
+      "duration": 8.15,
+      "startTime": 652.26,
+      "endTime": 660.41,
+      "audioUrl": "/audio/lectures/biology/10/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Your body defends itself like a medieval castle: mechanical barriers (skin, nose hairs) are the stone walls and iron gate; chemical barriers (mucus, stomach HCl acid) are the sticky tar and boiling acid moat; and white blood cells (phagocytes & lymphocytes) are the guards inside.",
+      "vi": "🎯 Hình dung đời thường: Cơ thể giống như một pháo đài kiên cố: hàng rào cơ học (da, lông mũi) là tường thành và lưới chắn; hàng rào hóa học (chất nhầy mucus, axit dạ dày HCl) là bẫy keo dính và hào axit sôi; còn tế bào bạch cầu (phagocytes & lymphocytes) là đội quân tuần tra bên trong.",
+      "duration": 42.52,
+      "startTime": 660.41,
+      "endTime": 702.93,
+      "audioUrl": "/audio/lectures/biology/10/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Cambridge Core limits body defences to five named items: skin , hairs in the nose , mucus , stomach acid , and white blood cells . Distinguish clearly between phagocytes (non-specific engulfing and digestion by enzymes = phagocytosis) and lymphocytes (specific antibody production).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Syllabus Core giới hạn đúng 5 hàng rào phòng vệ: skin (da), hairs in the nose (lông mũi), mucus (chất nhầy), stomach acid (axit HCl dạ dày) và white blood cells (bạch cầu). Phân biệt rạch ròi phagocytes (bao vây, nuốt và tiêu hóa mầm bệnh bằng enzyme = thực bào) với lymphocytes (tiết kháng thể đặc hiệu).",
+      "duration": 48.89,
+      "startTime": 702.93,
+      "endTime": 751.82,
+      "audioUrl": "/audio/lectures/biology/10/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students frequently confuse mucus (noun: sticky fluid secreted by goblet cells) with mucous (adjective), or say stomach acid \"digests proteins\" instead of answering how it defends against disease: HCl provides a low pH (~2) that kills pathogens in swallowed food, water, and mucus .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng nhầm chính tả giữa mucus (danh từ: chất nhầy) và mucous (tính từ: thuộc màng nhầy), và khi hỏi vai trò của axit dạ dày trong miễn dịch, phải trả lời là tiêu diệt mầm bệnh trong thức ăn/nước uống nhờ pH thấp (~2) chứ không viết là \"tiêu hóa protein\"!",
+      "duration": 43.25,
+      "startTime": 751.82,
+      "endTime": 795.07,
+      "audioUrl": "/audio/lectures/biology/10/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Cơ thể người có 3 lớp phòng vệ chống lại sự xâm nhập của mầm bệnh:",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "The human body has three lines of defence to protect against invading pathogens:",
+      "vi": "Cơ thể người có 3 lớp phòng vệ chống lại sự xâm nhập của mầm bệnh:",
+      "duration": 10.37,
+      "startTime": 795.07,
+      "endTime": 805.44,
+      "audioUrl": "/audio/lectures/biology/10/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "Hàng rào (Barrier): 1. Mechanical Barriers (Rào cản cơ học/vật lý); Cấu trúc (Co...",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Barrier Type: 1. Mechanical Barriers (Physical blocks preventing entry); Component: Skin; How it Works (Function): Tough, waterproof outer layer containing keratin covering the whole body; dead skin cells continuously flake off carrying microbes away; blood clots form scabs over cuts to seal wounds. Hairs in the nose — Trap airborne dust particles and pathogens, filtering inspired air before it enters the lungs. Barrier Type: 2. Chemical Barriers (Chemicals killing or trapping pathogens); Component: Mucus; How it Works (Function): Sticky fluid secreted by goblet cells along the respiratory tract; traps microbes and particles; cilia then sweep mucus upward away from lungs. Stomach acid (HCl) — Hydrochloric acid produces a very low pH (~2), destroying microorganisms present in swallowed food and drink. Barrier Type: 3. White Blood Cells (Internal cellular defence); Component: Phagocytes & Lymphocytes; How it Works (Function): Phagocytes: Engulf and digest pathogens by phagocytosis. Lymphocytes: Produce complementary antibodies and memory cells for targeted defence.",
+      "vi": "Hàng rào (Barrier): 1. Mechanical Barriers (Rào cản cơ học/vật lý); Cấu trúc (Component): Skin (Da); Cơ chế hoạt động (Function): Lớp da chứa keratin bảo vệ toàn bộ cơ thể; tế bào chết liên tục bong ra cuốn theo vi khuẩn; vết thương tạo vảy ngăn vi trùng xâm nhập. Hairs in the nose (Lông mũi) — Lọc và giữ lại các hạt bụi và mầm bệnh trong không khí khi hít vào trước khi đi vào phổi. Hàng rào (Barrier): 2. Chemical Barriers (Rào cản hóa học); Cấu trúc (Component): Mucus (Chất nhầy); Cơ chế hoạt động (Function): Tiết ra từ tế bào hình đài (goblet cells) ở đường hô hấp giúp bẫy vi khuẩn; lông rung (cilia) sau đó quét chất nhầy lên họng để nuốt. Stomach acid (HCl) — Axit clohydric trong dạ dày có pH cực thấp (~2), tiêu diệt hầu hết vi sinh vật lẫn trong đồ ăn và nước uống. Hàng rào (Barrier): 3. White Blood Cells (Tế bào bạch cầu bảo vệ); Cấu trúc (Component): Phagocytes & Lymphocytes; Cơ chế hoạt động (Function): Phagocytes (Đại thực bào): Nuốt và tiêu hóa mầm bệnh bằng hiện tượng thực bào (Phagocytosis). Lymphocytes: Sản xuất kháng thể đặc hiệu và tế bào nhớ.",
+      "duration": 159.05,
+      "startTime": 805.44,
+      "endTime": 964.49,
+      "audioUrl": "/audio/lectures/biology/10/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Interactive Immune Response (Sơ đồ tương tác Miễn dịch)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Interactive Immune Response. Hover over each stage to see how white blood cells recognize, tag, and destroy pathogens. Interact with the diagram 👆. Hover over each stage to see how lymphocytes secrete specific antibodies that lock onto antigens, and how phagocytes engulf and digest marked pathogens.",
+      "vi": "Interactive Immune Response (Sơ đồ tương tác Miễn dịch). Hãy tương tác với sơ đồ bên cạnh 👆.",
+      "duration": 28.35,
+      "startTime": 964.49,
+      "endTime": 992.84,
+      "audioUrl": "/audio/lectures/biology/10/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Which row correctly matches a body defence with how it protects the body against transmissible disease? A. Hairs in the nose — secrete hydrochloric acid to dissolve airborne viruses B. Stomach acid — lowers pH to activate lymphocytes inside the stomach lumen C. Mucus — traps inhaled pathogens and dust particles in the airways D. Phagocytes — secrete complementary antibodies into blood plasma ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: C is correct because goblet cells secrete sticky mucus that traps dust and microbes before cilia sweep it up to the throat. A is wrong because nose hairs mechanically filter dust/microbes without secreting HCl. B is wrong because stomach HCl directly kills microbes (denaturing their enzymes), not activating lymphocytes. D is wrong because lymphocytes secrete antibodies, whereas phagocytes engulf and digest pathogens.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Which row correctly matches a body defence with how it protects the body against transmissible disease? (Hàng nào nối đúng hàng rào phòng vệ với cơ chế bảo vệ cơ thể chống bệnh truyền nhiễm?) A. Hairs in the nose — secrete hydrochloric acid to dissolve airborne viruses B. Stomach acid — lowers pH to activate lymphocytes inside the stomach lumen C. Mucus — traps inhaled pathogens and dust particles in the airways D. Phagocytes — secrete complementary antibodies into blood plasma ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Đáp án C đúng vì tế bào hình đài tiết chất nhầy ( mucus ) dính giữ bụi và vi khuẩn trong đường hô hấp trước khi lông rung quét lên họng. A sai vì lông mũi lọc cơ học chứ không tiết HCl. B sai vì axit HCl trực tiếp giết vi khuẩn chứ không kích hoạt lymphocyte trong dạ dày. D sai vì lymphocytes mới tiết kháng thể, còn phagocytes thực bào.",
+      "duration": 128.91,
+      "startTime": 992.84,
+      "endTime": 1121.75,
+      "audioUrl": "/audio/lectures/biology/10/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "phagocytes",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Pathogens that enter a cut in the skin encounter two main types of white blood cell: phagocytes and lymphocytes.Compare the roles of phagocytes and lymphocytes in destroying these pathogens. [4] ✍️ Step-by-Step Mark Scheme Solution: • Phagocytes carry out phagocytosis by surrounding / engulfing pathogens into a vacuole [1m] and digesting them using enzymes [1m].• Lymphocytes recognize specific foreign antigens and secrete complementary protein antibodies [1m] which bind to antigens to destroy pathogens directly or mark them for destruction by phagocytes [1m]. 💡 Intuition Check: Notice how lymphocytes and phagocytes cooperate: antibodies from lymphocytes clump (\"agglutinate\") and tag bacteria so phagocytes can engulf whole clusters rapidly!",
+      "vi": "BÀI MẪU 2 🟦 CORE & 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Pathogens that enter a cut in the skin encounter two main types of white blood cell: phagocytes and lymphocytes.Compare the roles of phagocytes and lymphocytes in destroying these pathogens. (So sánh vai trò của đại thực bào phagocytes và bạch cầu lymphocytes trong việc tiêu diệt mầm bệnh xâm nhập qua vết đứt tay.) ✍️ Lời giải chi tiết theo thang điểm: • Phagocytes: Bao vây, nuốt mầm bệnh vào không bào và phân giải bằng enzyme. • Lymphocytes: Tiết kháng thể tương thích để tiêu diệt trực tiếp hoặc đánh dấu cho thực bào. 💡 Kiểm tra bản chất: Hai loại bạch cầu phối hợp cực ăn ý: kháng thể của lymphocyte kết dính và gắn thẻ mầm bệnh để phagocyte nuốt gọn cả cụm!",
+      "duration": 99.81,
+      "startTime": 1121.75,
+      "endTime": 1221.56,
+      "audioUrl": "/audio/lectures/biology/10/s02_b08.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "💉 3. ACTIVE AND PASSIVE IMMUNITY (MIỄN DỊCH CHỦ ĐỘNG & THỤ ĐỘNG)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "💉 3. ACTIVE AND PASSIVE IMMUNITY.",
+      "vi": "💉 3. ACTIVE AND PASSIVE IMMUNITY (MIỄN DỊCH CHỦ ĐỘNG & THỤ ĐỘNG).",
+      "duration": 9.09,
+      "startTime": 1221.56,
+      "endTime": 1230.65,
+      "audioUrl": "/audio/lectures/biology/10/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Active immunity is like learning to cook from a recipe book ( memory cells ): it takes a few days to learn, but you can make meals ( antibodies ) for the rest of your life. Passive immunity is ordering takeaway food (ready-made antibodies from mother's milk or an injection): instant protection today, but once eaten, you still don't know the recipe!",
+      "vi": "🎯 Hình dung đời thường: Miễn dịch chủ động (Active immunity) giống như tự học công thức nấu ăn (lưu thành tế bào nhớ - memory cells ): mất vài ngày đầu để học, nhưng cả đời về sau tự nấu (tự tiết kháng thể) cực nhanh. Miễn dịch thụ động (Passive immunity) giống như được mẹ ship đồ ăn nấu sẵn (nhận kháng thể qua nhau thai/sữa mẹ): có ăn ngay lập tức nhưng ăn hết là hết, bản thân không học được công thức!",
+      "duration": 51.77,
+      "startTime": 1230.65,
+      "endTime": 1282.42,
+      "audioUrl": "/audio/lectures/biology/10/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Compare 4 exam criteria every time: 1) Source of antibodies: made by your own lymphocytes (Active) vs received from another individual across placenta / in breast milk / serum injection (Passive). 2) Speed: slower primary response (Active) vs immediate protection (Passive). 3) Memory cells: produced (Active) vs NOT produced (Passive). 4) Duration: long-term (Active) vs short-term as foreign antibodies are broken down (Passive).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Luôn đối chiếu 4 tiêu chí ăn điểm: 1) Nguồn kháng thể: cơ thể tự sản xuất (Active) vs nhận từ cá thể khác qua nhau thai / sữa mẹ / tiêm huyết thanh (Passive). 2) Tốc độ: cần thời gian tạo đáp ứng (Active) vs bảo vệ tức thì (Passive). 3) Memory cells: CÓ sinh ra (Active) vs KHÔNG sinh ra (Passive). 4) Thời hạn: lâu dài/suốt đời (Active) vs ngắn hạn do kháng thể nhận vào bị phân giải dần (Passive).",
+      "duration": 72.99,
+      "startTime": 1282.42,
+      "endTime": 1355.41,
+      "audioUrl": "/audio/lectures/biology/10/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"vaccines contain weak antibodies\"! Vaccines contain weakened/dead pathogens or their antigens to stimulate your lymphocytes to make antibodies and memory cells.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Sai lầm mất điểm nhiều nhất: viết \"vaccine chứa kháng thể yếu\"! Sai hoàn toàn—vaccine chứa mầm bệnh đã làm yếu/bất hoạt hoặc kháng nguyên để kích thích cơ thể tự sinh kháng thể và tế bào nhớ!",
+      "duration": 29.52,
+      "startTime": 1355.41,
+      "endTime": 1384.93,
+      "audioUrl": "/audio/lectures/biology/10/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🛡️ Active Immunity (Miễn dịch chủ động)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🛡️ Active Immunity. Defence against a pathogen achieved by antibody production within the host's own body. Acquired naturally by infection with a pathogen, or artificially by vaccination. 🔑 Memory Cells Produced: Lymphocytes produce memory cells that remain circulating in the blood. If exposed to the same antigen again, antibodies are produced rapidly and in huge numbers. ➔ Provides Long-term Immunity (often lifelong protection).",
+      "vi": "🛡️ Active Immunity (Miễn dịch chủ động). 🇬🇧: Defence against a pathogen by antibody production within the host's body. 🇻🇳: Sự phòng vệ chống mầm bệnh do chính cơ thể tự sản xuất ra kháng thể. Đạt được qua nhiễm bệnh tự nhiên hoặc tiêm vaccine. 🔑 Sinh ra Tế bào nhớ (Memory Cells): Tồn tại lâu dài trong máu. Nếu gặp lại mầm bệnh, kháng thể được sản xuất cực nhanh và nhiều. ➔ Mang lại hiệu quả bảo vệ Lâu dài (Long-term) , thường là suốt đời.",
+      "duration": 61.28,
+      "startTime": 1384.93,
+      "endTime": 1446.21,
+      "audioUrl": "/audio/lectures/biology/10/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🍼 Passive Immunity (Miễn dịch thụ động)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🍼 Passive Immunity. Short-term defence against a pathogen by antibodies acquired from another individual (not made by the recipient's own lymphocytes). Examples: Transfer of maternal antibodies across the placenta into the fetus, and through breast milk (especially colostrum) to a newborn infant. Importance of Breast-feeding: Provides vital immediate protection to infants while their own immune systems are still developing. 🔑 Memory Cells NOT Produced: The body does not produce its own memory cells. ➔ Provides only Short-term Protection ; acquired antibodies are gradually broken down and excreted.",
+      "vi": "🍼 Passive Immunity (Miễn dịch thụ động). 🇬🇧: Short-term defence by antibodies acquired from another individual. 🇻🇳: Sự phòng vệ ngắn hạn nhờ nhận kháng thể từ cơ thể cá thể khác. Ví dụ: Kháng thể mẹ truyền qua nhau thai (placenta) sang thai nhi, hoặc qua sữa mẹ (breast milk) cho trẻ sơ sinh. Tầm quan trọng của bú mẹ: Cung cấp ngay kháng thể bảo vệ bé trong khi hệ miễn dịch của bé còn non nớt. 🔑 KHÔNG tạo ra Tế bào nhớ: Cơ thể bé không tự tạo ra kháng thể. ➔ Chỉ mang lại bảo vệ Tạm thời/Ngắn hạn (Short-term) vì kháng thể ngoại lai sẽ dần bị phân hủy.",
+      "duration": 79.66,
+      "startTime": 1446.21,
+      "endTime": 1525.87,
+      "audioUrl": "/audio/lectures/biology/10/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "💉 Cơ chế hoạt động của Vaccine (Process of Vaccination)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "💉 Process of Vaccination. Vaccination gives artificial active immunity without causing the severe illness associated with natural disease. Weakened (attenuated) or killed pathogens, or their isolated harmless antigens, are introduced into the body (usually via injection or oral drops). The antigens stimulate an immune response by lymphocytes, which synthesize and secrete specific complementary antibodies. Memory cells are formed and persist in the bloodstream, providing long-term immunological memory. Upon future re-infection by the live virulent pathogen, memory cells produce large amounts of antibodies quickly, destroying the pathogen before symptoms occur.",
+      "vi": "💉 Cơ chế hoạt động của Vaccine. Tiêm vaccine giúp cơ thể có được miễn dịch chủ động nhân tạo mà không bị nguy hiểm như mắc bệnh thật. Đưa mầm bệnh đã bị làm yếu, bị bất hoạt hoặc các kháng nguyên vô hại vào cơ thể người. Các kháng nguyên này kích hoạt bạch cầu Lymphocyte sản xuất kháng thể đặc hiệu tương ứng. Tế bào nhớ (Memory cells) được hình thành và lưu trữ trong máu. Khi mầm bệnh thật xâm nhập trong tương lai, tế bào nhớ nhận diện và sản xuất lượng lớn kháng thể cực nhanh để tiêu diệt mầm bệnh trước khi kịp phát bệnh.",
+      "duration": 78.26,
+      "startTime": 1525.87,
+      "endTime": 1604.13,
+      "audioUrl": "/audio/lectures/biology/10/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "✅ Lợi ích của Tiêm chủng (Benefits): Ngăn chặn và dập tắt sự lây lan của các dịc...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "✅ Benefits of Vaccination: Controls and stops the transmission of transmissible diseases (epidemics/pandemics). Provides herd immunity : when a high percentage of the population is vaccinated, vulnerable unvaccinated individuals are protected. Can completely eradicate diseases globally (e.g., smallpox eradicated in 1980). Dramatically reduces child mortality rates and national healthcare treatment burdens.; ⚠️ Risks / Limitations of Vaccination: Mild transient side effects (fever, local swelling, soreness at injection site). Extremely rare severe allergic or anaphylactic reactions to vaccine ingredients. Some pathogens mutate rapidly (e.g., influenza virus, HIV), changing their antigens and rendering previous vaccines ineffective. Periodic booster injections may be needed to maintain protective antibody titres over time.",
+      "vi": "✅ Lợi ích của Tiêm chủng (Benefits): Ngăn chặn và dập tắt sự lây lan của các dịch bệnh nguy hiểm. Tạo Miễn dịch cộng đồng (Herd immunity) : bảo vệ những người không thể tiêm chủng do bệnh nền. Xóa sổ hoàn toàn các đại dịch lịch sử (ví dụ bệnh Đậu mùa - Smallpox). Giảm thiểu tối đa tỷ lệ tử vong và chi phí y tế điều trị.; ⚠️ Rủi ro / Giới hạn (Risks): Phản ứng phụ nhẹ thoáng qua (sốt nhẹ, sưng đau vị trí tiêm). Nguy cơ cực hiếm gặp phản ứng sốc phản vệ dị ứng nghiêm trọng. Một số virus biến đổi kháng nguyên liên tục (cúm, HIV) làm giảm hiệu quả vaccine cũ. Cần tiêm mũi nhắc lại (booster shots) để duy trì nồng độ kháng thể cao.",
+      "duration": 102.38,
+      "startTime": 1604.13,
+      "endTime": 1706.51,
+      "audioUrl": "/audio/lectures/biology/10/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A newborn baby receives antibodies in breast milk from its mother. Which row correctly describes the type of immunity gained by the baby? A. Active immunity | Memory cells produced: Yes | Duration: Long-term B. Active immunity | Memory cells produced: No | Duration: Short-term C. Passive immunity | Memory cells produced: Yes | Duration: Long-term D. Passive immunity | Memory cells produced: No | Duration: Short-term ✅ Correct Answer: D 🧠 Step-by-Step Reasoning: D is correct : antibodies transferred in breast milk (or across the placenta) give passive immunity . Because the infant's own lymphocytes were not stimulated by antigens, no memory cells are produced , and protection is short-term because the maternal antibodies are gradually broken down.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A newborn baby receives antibodies in breast milk from its mother. Which row correctly describes the type of immunity gained by the baby? (Trẻ sơ sinh nhận kháng thể qua sữa mẹ. Hàng nào mô tả đúng loại miễn dịch mà bé nhận được?) A. Active immunity | Memory cells produced: Yes | Duration: Long-term B. Active immunity | Memory cells produced: No | Duration: Short-term C. Passive immunity | Memory cells produced: Yes | Duration: Long-term D. Passive immunity | Memory cells produced: No | Duration: Short-term ✅ Đáp án đúng: D 🧠 Giải thích & Cách loại bẫy: Đáp án D đúng : Kháng thể truyền từ mẹ qua sữa mẹ (hoặc nhau thai) là miễn dịch thụ động (passive immunity) . Vì hệ miễn dịch của bé không tự tiếp xúc kháng nguyên để hoạt hóa lymphocyte nên không tạo tế bào nhớ và chỉ bảo vệ ngắn hạn (short-term) do kháng thể mẹ sẽ bị phân hủy dần.",
+      "duration": 119.77,
+      "startTime": 1706.51,
+      "endTime": 1826.28,
+      "audioUrl": "/audio/lectures/biology/10/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Outline the process of vaccination and explain how it provides long-term protection against a disease. [4] (b) Explain how vaccinating a high percentage of a population helps control the spread of disease. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Harmless / weakened pathogens or their antigens are introduced into the body [1m]. These antigens stimulate an immune response by lymphocytes [1m], which produce complementary antibodies [1m] and memory cells that remain in the blood for long-term immunity (producing antibodies much faster on secondary infection) [1m]. (b) Provides herd immunity — fewer people can catch and transmit the pathogen, protecting unvaccinated individuals and breaking transmission chains [1m]. 💡 Intuition Check: On antibody-concentration vs time graphs: 1st exposure = slow, low peak; 2nd exposure (thanks to memory cells) = steeper, faster, much higher antibody peak!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Outline the process of vaccination and explain how it provides long-term protection against a disease. (b) Explain how vaccinating a high percentage of a population helps control the spread of disease. (Trình bày quy trình tiêm chủng tạo miễn dịch lâu dài và giải thích vai trò của tiêm chủng diện rộng trong kiểm soát dịch bệnh.) ✍️ Lời giải chi tiết theo thang điểm: (a) Weakened pathogens or their antigens are put into the body . Antigens stimulate an immune response by lymphocytes , which produce complementary antibodies and memory cells that stay in the blood to give long-term immunity . (b) Creates herd immunity — very few hosts can carry and pass on the pathogen, protecting vulnerable unvaccinated people . 💡 Kiểm tra bản chất: Trên đồ thị nồng độ kháng thể theo thời gian: lần nhiễm 1 tăng chậm và thấp; lần nhiễm 2 (nhờ memory cells) dựng đứng cực nhanh và cao gấp nhiều lần!",
+      "duration": 128.82,
+      "startTime": 1826.28,
+      "endTime": 1955.1,
+      "audioUrl": "/audio/lectures/biology/10/s03_b09.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🌍 4. KIỂM SOÁT SỰ LÂY LAN CỦA BỆNH (CONTROLLING THE SPREAD)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🌍 4. CONTROLLING THE SPREAD OF DISEASE.",
+      "vi": "🌍 4. KIỂM SOÁT SỰ LÂY LAN CỦA BỆNH.",
+      "duration": 6.5,
+      "startTime": 1955.1,
+      "endTime": 1961.6,
+      "audioUrl": "/audio/lectures/biology/10/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Every transmissible pathogen needs a \"bridge\" from Host A to Host B (water, food, hands, droplets, or vectors). Public health sanitation works by burning those bridges before pathogens can cross.",
+      "vi": "🎯 Hình dung đời thường: Mọi mầm bệnh truyền nhiễm đều cần một \"cây cầu\" để nhảy từ người bệnh sang người lành (nước bẩn, thức ăn sống, bàn tay, giọt bắn, ruồi muỗi). Các biện pháp y tế công cộng chính là chặt đứt từng cây cầu đó .",
+      "duration": 31.99,
+      "startTime": 1961.6,
+      "endTime": 1993.59,
+      "audioUrl": "/audio/lectures/biology/10/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Match each of the 5 Core sanitation pillars to the exact transmission route it blocks: 1) Clean water supply (filtration + chlorination kills water-borne bacteria like cholera). 2) Hygienic food preparation (cooking thoroughly kills bacteria; fridge <5°C slows reproduction; separate chopping boards stop cross-contamination). 3) Personal hygiene (soap removes pathogens from skin; tissues trap airborne droplets). 4) Waste disposal (stops flies/rats breeding). 5) Sewage treatment (prevents faecal pathogens entering drinking water).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Gắn chặt 5 trụ cột vệ sinh Core với con đường lây mà nó chặn: 1) Clean water supply (lọc + khử trùng clo diệt vi khuẩn đường nước như tả). 2) Hygienic food preparation (nấu chín diệt khuẩn, giữ lạnh <5°C làm chậm sinh sản, tách thớt sống/chín chống nhiễm chéo). 3) Good personal hygiene (rửa tay xà phòng, che miệng khi ho). 4) Waste disposal (ngăn ruồi, chuột sinh sôi). 5) Sewage treatment (xử lý phân/nước thải trước khi xả ra sông hồ).",
+      "duration": 79.01,
+      "startTime": 1993.59,
+      "endTime": 2072.6,
+      "audioUrl": "/audio/lectures/biology/10/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Remember the syllabus note: details of the stages of sewage treatment are NOT required here, so don't waste exam time describing trickling filters—instead explain why treating sewage matters (destroying faecal pathogens so rivers/drinking water are not contaminated).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Lưu ý ghi chú trong Syllabus: không cần học chi tiết các bể/công đoạn kỹ thuật của nhà máy xử lý nước thải , mà phải giải thích được tầm quan trọng sinh học : tiêu diệt mầm bệnh trong phân người để không làm ô nhiễm nguồn nước uống!",
+      "duration": 35.34,
+      "startTime": 2072.6,
+      "endTime": 2107.94,
+      "audioUrl": "/audio/lectures/biology/10/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Các biện pháp vệ sinh dịch tễ cộng đồng giúp cắt đứt chuỗi lây truyền của mầm bệ...",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Public health measures and sanitation are critical in interrupting the transmission cycles of pathogens:",
+      "vi": "Các biện pháp vệ sinh dịch tễ cộng đồng giúp cắt đứt chuỗi lây truyền của mầm bệnh:",
+      "duration": 11.89,
+      "startTime": 2107.94,
+      "endTime": 2119.83,
+      "audioUrl": "/audio/lectures/biology/10/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "💧 Clean Water Supply (Cung cấp nước sạch)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "💧 Clean Water Supply. Water treatment (chlorination and filtration) prevents water-borne diseases like cholera and typhoid from contaminating drinking water.",
+      "vi": "💧 Clean Water Supply (Cung cấp nước sạch). Khử trùng bằng clo và lọc nước giúp tiêu diệt các vi khuẩn lây lan qua nước ăn uống như Tả (Cholera), Thương hàn (Typhoid).",
+      "duration": 23.17,
+      "startTime": 2119.83,
+      "endTime": 2143.0,
+      "audioUrl": "/audio/lectures/biology/10/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🍳 Hygienic Food Preparation (Vệ sinh an toàn thực phẩm)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🍳 Hygienic Food Preparation. Thorough cooking, refrigeration below 5°C, washing hands, and separating raw and cooked foods prevent bacterial growth and cross-contamination (e.g., Salmonella ).",
+      "vi": "🍳 Hygienic Food Preparation (Vệ sinh an toàn thực phẩm). Nấu chín kỹ, bảo quản lạnh, rửa sạch tay và dụng cụ thái để tránh vi khuẩn sinh sôi và lây nhiễm chéo.",
+      "duration": 26.42,
+      "startTime": 2143.0,
+      "endTime": 2169.42,
+      "audioUrl": "/audio/lectures/biology/10/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🧼 Good Personal Hygiene (Vệ sinh cá nhân tốt)",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "🧼 Good Personal Hygiene. Regular hand washing with soap, covering coughs and sneezes with tissues, and bathing reduce microbial transfer from surfaces to respiratory or digestive tracts.",
+      "vi": "🧼 Good Personal Hygiene (Vệ sinh cá nhân tốt). Rửa tay thường xuyên bằng xà phòng, che miệng khi ho giúp ngăn chặn giọt bắn truyền mầm bệnh đường hô hấp.",
+      "duration": 23.14,
+      "startTime": 2169.42,
+      "endTime": 2192.56,
+      "audioUrl": "/audio/lectures/biology/10/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "🗑️ Waste Disposal & 🚽 Sewage (Xử lý rác và nước thải)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "🗑️ Waste Disposal & 🚽 Sewage Treatment. Proper sealing of domestic rubbish prevents breeding of vectors (flies, rats). Sewage treatment removes human waste and kills pathogens before water is released into rivers or seas.",
+      "vi": "🗑️ Waste Disposal & 🚽 Sewage (Xử lý rác và nước thải). Thu gom rác và xử lý nước thải sinh hoạt giúp triệt tiêu mầm bệnh và loại bỏ nơi sinh sản của vật trung gian (chuột, ruồi, muỗi).",
+      "duration": 28.1,
+      "startTime": 2192.56,
+      "endTime": 2220.66,
+      "audioUrl": "/audio/lectures/biology/10/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ After a severe flood, untreated sewage overflows into local wells. Which public health measure would most directly prevent an outbreak of transmissible diarrhoeal disease before drinking the well water? A. Taking oral antibiotics daily before drinking untreated water B. Boiling or chlorinating drinking water to destroy water-borne bacteria C. Leaving water in an open sunny bucket so mosquitoes cannot land D. Filtering the water through coarse wire mesh to remove large stones ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct because boiling or chlorination kills microscopic water-borne pathogens (such as Vibrio cholerae ) introduced by faecal sewage contamination. A is wrong because prophylactic antibiotic misuse breeds resistance. C is wrong because open buckets invite vectors and sunlight alone doesn't reliably sterilize polluted water. D is wrong because bacteria (~1–2 µm) easily pass through wire mesh.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ After a severe flood, untreated sewage overflows into local wells. Which public health measure would most directly prevent an outbreak of transmissible diarrhoeal disease before drinking the well water? (Sau trận lũ, nước thải chưa xử lý tràn vào giếng. Biện pháp nào ngăn chặn trực tiếp nhất dịch tiêu chảy trước khi uống nước giếng?) A. Taking oral antibiotics daily before drinking untreated water B. Boiling or chlorinating drinking water to destroy water-borne bacteria C. Leaving water in an open sunny bucket so mosquitoes cannot land D. Filtering the water through coarse wire mesh to remove large stones ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng vì đun sôi hoặc khử trùng bằng clo tiêu diệt trực tiếp vi khuẩn gây bệnh đường nước (như Vibrio cholerae ) từ nước thải phân. A sai vì lạm dụng kháng sinh gây kháng thuốc. C sai vì xô hở thu hút côn trùng và nắng không diệt sạch khuẩn. D sai vì lưới thô không lọc được vi khuẩn kích thước hiển vi.",
+      "duration": 138.9,
+      "startTime": 2220.66,
+      "endTime": 2359.56,
+      "audioUrl": "/audio/lectures/biology/10/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [4 marks] Explain how each of the following measures helps reduce the spread of transmissible diseases in a restaurant: (a) Storing raw chicken at 3°C in a refrigerator, separate from cooked salad. [2] (b) Keeping food waste in sealed bins that are emptied daily. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Low temperature (3°C) slows down enzyme activity and reduces bacterial reproduction [1m]; separating raw meat from ready-to-eat salad prevents cross-contamination of pathogens (e.g. Salmonella ) onto uncooked food [1m]. (b) Prevents animal/insect vectors (such as flies and rats) from feeding and breeding on decaying waste [1m], stopping them from transferring pathogens onto kitchen surfaces and food [1m]. 💡 Intuition Check: Notice the difference: refrigeration at 3°C slows bacterial division (bacteriostatic), whereas thorough cooking at high temperature denatures enzymes and kills bacteria!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [4 marks] Explain how each of the following measures helps reduce the spread of transmissible diseases in a restaurant: (a) Storing raw chicken at 3°C in a refrigerator, separate from cooked salad. (b) Keeping food waste in sealed bins that are emptied daily. (Giải thích cách mỗi biện pháp sau giúp giảm lây lan bệnh truyền nhiễm trong nhà hàng.) ✍️ Lời giải chi tiết theo thang điểm: (a) Low temperature (3°C) slows enzyme reactions and slows bacterial reproduction ; separating raw chicken from salad prevents cross-contamination of pathogens (e.g. Salmonella ) onto ready-to-eat food . (b) Stops insect and animal vectors (flies, rats) from feeding and breeding in waste , preventing transfer of pathogens onto food preparation surfaces . 💡 Kiểm tra bản chất: Nhớ kỹ: tủ lạnh 3°C chỉ làm vi khuẩn ngừng/chậm nhân đôi (không giết hết), còn nấu chín ở nhiệt độ cao mới làm biến tính enzyme và tiêu diệt vi khuẩn!",
+      "duration": 128.45,
+      "startTime": 2359.56,
+      "endTime": 2488.01,
+      "audioUrl": "/audio/lectures/biology/10/s04_b10.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "⚠️ 5. CƠ CHẾ BỆNH TẢ & LIỆU PHÁP BÙ NƯỚC (CHOLERA & ORT) SUPPLEMENT",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "⚠️ 5. CHOLERA MECHANISM & ORT SUPPLEMENT .",
+      "vi": "⚠️ 5. CƠ CHẾ BỆNH TẢ & LIỆU PHÁP BÙ NƯỚC (CHOLERA & ORT) SUPPLEMENT .",
+      "duration": 10.54,
+      "startTime": 2488.01,
+      "endTime": 2498.55,
+      "audioUrl": "/audio/lectures/biology/10/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine sprinkling salt onto a sliced cucumber—water rushes out of the cucumber cells toward the salt! The cholera bacterium does the exact same trick inside your small intestine: its toxin forces gut cells to pump out chloride ions (Cl⁻) into the lumen, turning the gut into a \"salty magnet\" that pulls water out of your blood by osmosis .",
+      "vi": "🎯 Hình dung đời thường: Hãy nhớ lúc rắc muối lên lát dưa chuột—nước trong dưa chuột lập tức bị hút tứa ra ngoài! Vi khuẩn tả làm đúng mẹo đó trong ruột non của bạn: độc tố của nó ép tế bào thành ruột bơm ồ ạt ion clorua (Cl⁻) ra lòng ruột, biến lòng ruột thành \"vùng mặn\" hút nước từ máu tràn vào ruột theo cơ chế thẩm thấu (osmosis) .",
+      "duration": 48.53,
+      "startTime": 2498.55,
+      "endTime": 2547.08,
+      "audioUrl": "/audio/lectures/biology/10/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorize the 5-link Supplement chain in exact causal order: 1) Vibrio cholerae ingested in contaminated water ➔ 2) produces a toxin ➔ 3) causes secretion of chloride ions (Cl⁻) into the small intestine lumen ➔ 4) lowers water potential in lumen, causing osmotic movement of water into the gut ➔ 5) results in watery diarrhoea, dehydration, and loss of ions from the blood .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc lòng chuỗi nhân quả 5 mắt xích Supplement chuẩn từng chữ: 1) Nuốt vi khuẩn Vibrio cholerae qua nước bẩn (contaminated water) ➔ 2) Vi khuẩn tiết độc tố (toxin) ➔ 3) Kích thích tiết ion clorua (Cl⁻) vào lòng ruột non (small intestine) ➔ 4) Làm giảm thế nước trong lòng ruột, kéo nước di chuyển bằng thẩm thấu vào ruột ➔ 5) Gây tiêu chảy cấp (diarrhoea), mất nước (dehydration) và mất ion khỏi máu .",
+      "duration": 61.66,
+      "startTime": 2547.08,
+      "endTime": 2608.74,
+      "audioUrl": "/audio/lectures/biology/10/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic mistakes cost marks in Paper 4: 1) Saying cholera is caused by a virus (it is a bacterium !). 2) Writing \"water diffuses out\" instead of specifying osmotic movement of water (osmosis) down a water potential gradient into the small intestine (NOT the stomach or large intestine!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi sai làm rớt điểm oan ở Paper 4: 1) Nhầm tác nhân gây bệnh tả là virus (phải là vi khuẩn - bacterium !). 2) Viết \"nước khuếch tán\" chung chung hoặc nhầm vị trí là dạ dày/ruột già—bắt buộc ghi rõ osmosis (thẩm thấu) vào small intestine (ruột non) !",
+      "duration": 43.92,
+      "startTime": 2608.74,
+      "endTime": 2652.66,
+      "audioUrl": "/audio/lectures/biology/10/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "Bệnh tả là một bệnh truyền nhiễm đường ruột cấp tính do vi khuẩn Vibrio cholerae...",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "Cholera is an acute diarrhoeal infection caused by ingestion of food or water contaminated with the bacterium Vibrio cholerae.",
+      "vi": "Bệnh tả là một bệnh truyền nhiễm đường ruột cấp tính do vi khuẩn Vibrio cholerae lây lan qua nước uống bị ô nhiễm.",
+      "duration": 15.9,
+      "startTime": 2652.66,
+      "endTime": 2668.56,
+      "audioUrl": "/audio/lectures/biology/10/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "🔬 Các bước sinh bệnh học của Bệnh Tả (Step-by-Step Mechanism)",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "🔬 Step-by-Step Pathophysiology of Cholera. Transmission: Cholera bacteria are ingested via water or food contaminated with human faeces. Colonization & Toxin Release: The bacteria survive stomach acid, reach the small intestine, and multiply. They release a toxic protein (cholera enterotoxin). Chloride Ion Secretion: The enterotoxin binds to receptor proteins on the epithelial lining of the small intestine, stimulating active transport of chloride ions (Cl⁻) out of mucosal cells into the gut lumen. Osmotic Water Movement: The accumulation of Cl⁻ ions drastically lowers the water potential in the lumen. Water moves down the water potential gradient by osmosis from blood and surrounding tissues into the gut. Symptoms: This causes excessive watery diarrhoea (\"rice-water stools\"), acute dehydration, and severe loss of vital mineral ions (Na⁺, K⁺, Cl⁻) from the blood, which can lead to organ failure and death within hours if untreated.",
+      "vi": "🔬 Các bước sinh bệnh học của Bệnh Tả. Lây truyền: Người uống phải nước hoặc ăn thức ăn có chứa vi khuẩn Vibrio cholerae từ phân người bệnh. Tiết Độc tố: Vi khuẩn vượt qua dạ dày xuống ruột non, bám vào niêm mạc và tiết ra chất độc Cholera enterotoxin. Tiết Ion Cl⁻: Độc tố kích thích các tế bào biểu mô ruột non chủ động bơm ion clorua (Cl⁻) vào trong lòng ruột. Thẩm thấu nước: Sự tích tụ ion Cl⁻ làm giảm thế nước (water potential) trong lòng ruột. Nước từ máu và tế bào lập tức bị hút vào lòng ruột theo cơ chế thẩm thấu (osmosis). Hậu quả: Gây tiêu chảy ồ ạt dạng nước vo gạo (watery diarrhoea), mất nước cấp tính (dehydration) và mất ion điện giải nghiêm trọng (Na⁺, K⁺, Cl⁻) trong máu, có thể gây sốc trụy tim và tử vong trong vài giờ nếu không được bù dịch kịp thời.",
+      "duration": 127.29,
+      "startTime": 2668.56,
+      "endTime": 2795.85,
+      "audioUrl": "/audio/lectures/biology/10/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "📊 Sơ đồ Cơ chế: Độc tố Tả gây Tiêu chảy Thẩm thấu (Cholera Osmotic Diarrhoea)",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "📊 Visual Mechanism: How Cholera Toxin Causes Osmotic Diarrhoea.",
+      "vi": "📊 Sơ đồ Cơ chế: Độc tố Tả gây Tiêu chảy Thẩm thấu.",
+      "duration": 9.78,
+      "startTime": 2795.85,
+      "endTime": 2805.63,
+      "audioUrl": "/audio/lectures/biology/10/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "💧 Điều trị: Liệu pháp Bù nước bằng đường uống (Oral Rehydration Therapy - ORT)",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "💧 Treatment: Oral Rehydration Therapy (ORT). Because the cholera toxin does not destroy the intestinal cells themselves, oral rehydration therapy provides an effective, low-cost cure: Composition: A carefully balanced solution of clean water, salts (NaCl and KCl to replace lost ions), and glucose. Mechanism: Glucose actively stimulates the intestinal co-transport of sodium ions (Na⁺) across the epithelial cell membranes back into the blood, dragging water back in by osmosis and reversing dehydration rapidly.",
+      "vi": "💧 Điều trị: Liệu pháp Bù nước bằng đường uống. Độc tố tả không phá hủy cấu trúc tế bào ruột nên phương pháp bù nước điện giải đường uống cứu sống hàng triệu người: Thành phần gói ORT: Gồm nước sạch pha với tỷ lệ chuẩn xác muối khoáng (NaCl, KCl để bù ion mất đi) và đường Glucose. Cơ chế hoạt động: Đường Glucose kích hoạt cơ chế đồng vận chuyển (co-transport) kéo theo ion Natri (Na⁺) qua màng tế bào biểu mô ruột vào máu, kéo theo nước quay trở lại vào máu bằng hiện tượng thẩm thấu, nhanh chóng đảo ngược tình trạng mất nước nguy kịch.",
+      "duration": 74.88,
+      "startTime": 2805.63,
+      "endTime": 2880.51,
+      "audioUrl": "/audio/lectures/biology/10/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ What is the direct effect of the toxin secreted by cholera bacteria on the wall of the small intestine? A. It destroys villi by phagocytosis, stopping glucose digestion. B. It stimulates secretion of chloride ions into the lumen of the small intestine. C. It increases water potential inside the gut lumen so water enters the blood. D. It blocks hydrochloric acid secretion in the stomach. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: B is correct : the cholera toxin binds to epithelial cells of the small intestine and causes active secretion of chloride ions (Cl⁻) into the gut lumen. A is wrong because intestinal cells remain intact (which is why Oral Rehydration Therapy works!). C is wrong because extra Cl⁻ lowers water potential in the lumen, drawing water out of the blood. D is wrong because the toxin acts in the small intestine.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ What is the direct effect of the toxin secreted by cholera bacteria on the wall of the small intestine? (Tác động trực tiếp của độc tố do vi khuẩn tả tiết ra lên thành ruột non là gì?) A. It destroys villi by phagocytosis, stopping glucose digestion. B. It stimulates secretion of chloride ions into the lumen of the small intestine. C. It increases water potential inside the gut lumen so water enters the blood. D. It blocks hydrochloric acid secretion in the stomach. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đáp án B đúng : Độc tố tả gắn vào biểu mô ruột non và kích thích tiết ion clorua (Cl⁻) vào lòng ruột non. A sai vì tế bào nhung mao không bị phá hủy (nhờ vậy uống gói bù nước ORT mới hấp thu lại được nước và muối!). C sai vì Cl⁻ làm giảm thế nước trong lòng ruột khiến nước rút từ máu ra ruột. D sai vì độc tố tác động ở ruột non.",
+      "duration": 132.18,
+      "startTime": 2880.51,
+      "endTime": 3012.69,
+      "audioUrl": "/audio/lectures/biology/10/s05_b08.mp3"
+    },
+    {
+      "id": "s05_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s05_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Cholera is a transmissible disease spread through contaminated water. (a) State the type of organism that causes cholera. [1] (b) Explain how infection with cholera pathogens leads to severe dehydration. [4] ✍️ Step-by-Step Mark Scheme Solution: (a) Bacterium [1m]. (b) Cholera bacteria in the small intestine produce a toxin [1m]. The toxin causes secretion of chloride ions (Cl⁻) into the small intestine [1m]. This lowers the water potential in the gut lumen, causing osmotic movement of water from the blood/tissues into the gut [1m], leading to severe watery diarrhoea (and loss of water and ions from the blood) [1m]. 💡 Intuition Check: Every single mark in part (b) comes straight from Syllabus 10.1 Supplement #17: Toxin ➔ Chloride ions into small intestine ➔ Osmotic movement of water into gut ➔ Diarrhoea & dehydration!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Cholera is a transmissible disease spread through contaminated water. (a) State the type of organism that causes cholera. (b) Explain how infection with cholera pathogens leads to severe dehydration. (Nêu loại sinh vật gây bệnh tả và giải thích cơ chế gây mất nước nghiêm trọng.) ✍️ Lời giải chi tiết theo thang điểm: (a) Bacterium (vi khuẩn) . (b) Bacteria in the small intestine release a toxin which causes secretion of chloride ions (Cl⁻) into the small intestine . This lowers the water potential in the gut lumen, causing osmotic movement of water into the gut , resulting in watery diarrhoea and loss of water/ions from the blood . 💡 Kiểm tra bản chất: Chỉ cần viết đúng 4 cụm từ khóa: Toxin ➔ Chloride ions into small intestine ➔ Osmotic movement of water into gut ➔ Diarrhoea/dehydration là trọn vẹn 4/4 điểm!",
+      "duration": 123.13,
+      "startTime": 3012.69,
+      "endTime": 3135.82,
+      "audioUrl": "/audio/lectures/biology/10/s05_b09.mp3"
     }
   ]
 }

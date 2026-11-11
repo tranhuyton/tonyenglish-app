@@ -2,140 +2,431 @@
   "lectureId": "89750884-8439-4cda-916a-56bf5524741b",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 18: Variation and selection",
-  "totalDuration": 432.73,
+  "totalDuration": 2250.24,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+    "s01_int": {
+      "start": 2,
+      "end": 4
     },
-    "sec_variation_mutation": {
+    "s01_wex": {
+      "start": 12,
+      "end": 13
+    },
+    "s01_hdr": {
       "start": 1,
-      "end": 3
+      "end": 13
     },
-    "sec-variation-mutation": {
-      "start": 1,
-      "end": 3
+    "s02_int": {
+      "start": 15,
+      "end": 17
     },
-    "sec_adaptive_features": {
-      "start": 4,
-      "end": 6
+    "s02_wex": {
+      "start": 22,
+      "end": 23
     },
-    "sec-adaptive-features": {
-      "start": 4,
-      "end": 6
+    "s02_hdr": {
+      "start": 14,
+      "end": 23
     },
-    "sec_natural_selection": {
-      "start": 7,
-      "end": 8
+    "s03_int": {
+      "start": 25,
+      "end": 27
     },
-    "sec-natural-selection": {
-      "start": 7,
-      "end": 8
+    "s03_p1_sub01": {
+      "start": 30,
+      "end": 31
+    },
+    "s03_p2_sub01": {
+      "start": 30,
+      "end": 31
+    },
+    "s03_wex": {
+      "start": 32,
+      "end": 33
+    },
+    "s03_hdr": {
+      "start": 24,
+      "end": 33
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 18: Biến dị, Thích nghi & Chọn lọc Tự nhiên",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 18: Variation and Selection. Biological variation is the differences between individuals of the same species. In this lesson, we distinguish continuous from discontinuous variation, investigate gene mutations and mutagenic agents, analyze adaptive morphological features in desert xerophytes and aquatic hydrophytes, and master the mechanism of natural selection and selective breeding.",
-      "vi": "Chào mừng các bạn đến với Bài 18: Biến dị và Chọn lọc. Biến dị sinh học là những sai khác giữa các cá thể trong cùng một loài. Trong bài học này, chúng ta sẽ phân biệt biến dị liên tục và không liên tục, tìm hiểu đột biến gen và các tác nhân gây đột biến, phân tích đặc điểm thích nghi hình thái ở thực vật chịu hạn sa mạc và thực vật thủy sinh, cùng cơ chế chọn lọc tự nhiên và chọn lọc nhân tạo.",
-      "duration": 46.65,
+      "title": "Chuyên đề 18: Biến dị & Chọn lọc Tự nhiên",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 18: Variation & Selection. Continuous vs Discontinuous, Mutagens, Xerophytes/Hydrophytes & Natural Selection.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Chuyên đề 18: Biến dị & Chọn lọc Tự nhiên. Biến dị liên tục/không liên tục, Đột biến, Cây sa mạc/thủy sinh & Chọn lọc tự nhiên.",
+      "duration": 30.91,
       "startTime": 0.0,
-      "endTime": 46.65,
+      "endTime": 30.91,
       "audioUrl": "/audio/lectures/biology/18/intro.mp3"
     },
     {
-      "id": "sec_variation_mutation",
-      "title": "1. Biến dị Liên tục, Không liên tục & Đột biến (Mutation)",
-      "selector": "#sec-variation-mutation",
-      "en": "Section 1: Variation and mutation: Continuous variation results in a range of phenotypes between two extremes, influenced by both multiple genes and environmental factors, such as human height and body mass. Discontinuous variation produces distinct, non-overlapping phenotypic categories caused solely by genes, such as ABO blood groups.",
-      "vi": "Mục 1: Biến dị và đột biến: Biến dị liên tục tạo ra một dải kiểu hình liên tục giữa hai cực trị, chịu tác động của nhiều gen và môi trường, như chiều cao và cân nặng ở người. Biến dị không liên tục tạo ra các nhóm kiểu hình phân biệt rõ rệt không chồng lấn do gen quy định hoàn toàn, như các nhóm máu hệ ABO.",
-      "duration": 62.06,
-      "startTime": 46.65,
-      "endTime": 108.71,
-      "audioUrl": "/audio/lectures/biology/18/sec_variation_mutation.mp3"
+      "id": "s01_hdr",
+      "title": "🧬 1. VARIATION & MUTATION (Biến dị & Đột biến)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧬 1. VARIATION & MUTATION.",
+      "vi": "🧬 1. VARIATION & MUTATION (Biến dị & Đột biến).",
+      "duration": 7.8,
+      "startTime": 30.91,
+      "endTime": 38.71,
+      "audioUrl": "/audio/lectures/biology/18/s01_hdr.mp3"
     },
     {
-      "id": "card_mutation",
-      "title": "⚠️ Đột biến Gen & Các Tác nhân Gây Đột biến (Mutagens)",
-      "selector": "#card-mutation",
-      "en": "Mutation and mutagens: A mutation is a spontaneous genetic change in a gene or chromosome that forms new alleles. Mutation frequency is increased by exposure to ionizing radiation such as ultraviolet rays, X-rays, and gamma rays, as well as mutagenic chemicals like heavy metals and tobacco tar.",
-      "vi": "Đột biến gen và tác nhân gây đột biến: Đột biến là sự thay đổi di truyền ngẫu nhiên trong cấu trúc của gen hoặc nhiễm sắc thể tạo ra các alen mới. Tần số đột biến gia tăng mạnh khi tiếp xúc với bức xạ ion hóa như tia cực tím UV, tia X, tia phóng xạ gamma, và các hóa chất gây đột biến như kim loại nặng và hắc ín thuốc lá.",
-      "duration": 38.94,
-      "startTime": 108.71,
-      "endTime": 147.65,
-      "audioUrl": "/audio/lectures/biology/18/card_mutation.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Continuous variation is like a dimmer switch (any value from min to max is possible, shaped by genes + diet/environment, e.g. height). Discontinuous variation is like a 4-button elevator panel (you are strictly Group A, B, AB, or O with zero \"A-and-a-half\" in between, controlled by genes only!).",
+      "vi": "🎯 Hình dung đời thường: Biến dị liên tục (Continuous variation) giống núm vặn đèn tăng giảm độ sáng mượt mà (có vô số mức trung gian giữa hai cực, do cả gen + dinh dưỡng/môi trường như chiều cao). Biến dị gián đoạn (Discontinuous variation) giống 4 nút bấm tầng thang máy (bạn chỉ có thể thuộc nhóm máu A, B, AB hoặc O chứ không tồn tại \"nhóm máu A rưỡi\", chỉ do gen quyết định!).",
+      "duration": 50.6,
+      "startTime": 38.71,
+      "endTime": 89.31,
+      "audioUrl": "/audio/lectures/biology/18/s01_b01.mp3"
     },
     {
-      "id": "card_sources_variation",
-      "title": "🧬 4 Nguồn gốc Tạo Biến dị Di truyền",
-      "selector": "#card-sources-variation",
-      "en": "Sources of genetic variation: Genetic variation in populations arises from four primary sources: mutation producing novel alleles, crossing over between homologous chromosomes during meiosis, independent random assortment of chromosomes into gametes, and random fertilisation between haploid gametes.",
-      "vi": "Bốn nguồn gốc tạo biến dị di truyền: Biến dị di truyền trong quần thể xuất phát từ bốn nguồn chính: đột biến sinh ra các alen mới, trao đổi chéo giữa các nhiễm sắc thể tương đồng trong giảm phân, sự phân ly độc lập ngẫu nhiên của các nhiễm sắc thể vào giao tử, và sự thụ tinh ngẫu nhiên giữa các giao tử đơn bội.",
-      "duration": 35.61,
-      "startTime": 147.65,
-      "endTime": 183.26,
-      "audioUrl": "/audio/lectures/biology/18/card_sources_variation.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Always check for intermediates: range + bell curve + genes & environment = continuous ; distinct categories + separate bar chart + genes only = discontinuous . 2) Mutation (random change in DNA base sequence) is the ONLY source of brand-new alleles ; ionising radiation and mutagenic chemicals increase its rate. 3) Meiosis, random mating, and random fertilisation reshuffle existing alleles.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Kiểm tra giá trị trung gian: có dải liên tục + hình chuông + gen & môi trường = continuous ; phân nhóm dứt khoát + biểu đồ cột rời + chỉ do gen = discontinuous . 2) Đột biến gen là nguồn DUY NHẤT tạo ra allele mới ; bức xạ ion hóa và hóa chất làm tăng tần số đột biến. 3) Giảm phân, giao phối ngẫu nhiên và thụ tinh ngẫu nhiên tổ hợp lại các allele.",
+      "duration": 61.45,
+      "startTime": 89.31,
+      "endTime": 150.76,
+      "audioUrl": "/audio/lectures/biology/18/s01_b02.mp3"
     },
     {
-      "id": "sec_adaptive_features",
-      "title": "2. Đặc điểm Thích nghi: Thực vật Chịu hạn & Thủy sinh",
-      "selector": "#sec-adaptive-features",
-      "en": "Section 2: Adaptive features are inherited functional, structural, or behavioral characteristics of an organism that increase its fitness and chances of survival and reproduction in its natural environment.",
-      "vi": "Mục 2: Đặc điểm thích nghi là các đặc tính di truyền về hình thái, sinh lý hoặc tập tính của sinh vật giúp gia tăng độ thích nghi sinh học và nâng cao cơ hội sống sót, sinh sản trong môi trường tự nhiên của chúng.",
-      "duration": 62.06,
-      "startTime": 183.26,
-      "endTime": 245.32,
-      "audioUrl": "/audio/lectures/biology/18/sec_adaptive_features.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never plot discontinuous variation as a connected line graph or histogram without gaps — always use a bar chart with spaces between separate bars !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG vẽ đồ thị đường nối liền cho biến dị gián đoạn — bắt buộc vẽ biểu đồ cột có khoảng cách tách rời giữa các cột (bar chart) !",
+      "duration": 22.15,
+      "startTime": 150.76,
+      "endTime": 172.91,
+      "audioUrl": "/audio/lectures/biology/18/s01_b03.mp3"
     },
     {
-      "id": "card_xerophytes",
-      "title": "🌵 Thích nghi ở Thực vật Chịu hạn (Xerophytes)",
-      "selector": "#card-xerophytes",
-      "en": "Xerophyte adaptations: Desert plants conserve water through sunken stomata creating localized humid microclimates, thick waxy cuticles preventing epidermal evaporation, rolled leaves trapping moist air, reduced leaves forming protective spines, succulent fleshy stems storing water, and deep taproots reaching underground water tables.",
-      "vi": "Thích nghi ở thực vật chịu hạn (Xerophytes): Cây sa mạc tiết kiệm nước nhờ khí khổng thụt sâu tạo vi khí hậu ẩm, lớp cutin sáp dày ngăn bay hơi biểu bì, lá cuộn tròn giữ không khí ẩm, lá tiêu giảm biến thành gai nhọn, thân mọng nước dự trữ nước, và hệ rễ cọc đâm sâu xuống mạch nước ngầm ngầm dưới lòng đất.",
-      "duration": 37.53,
-      "startTime": 245.32,
-      "endTime": 282.85,
-      "audioUrl": "/audio/lectures/biology/18/card_xerophytes.mp3"
+      "id": "s01_b04",
+      "title": "🇬🇧 En: Variation is defined as the differences between individuals of the same s...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Variation is defined as the differences between individuals of the same species.",
+      "vi": "🇬🇧 En: Variation is defined as the differences between individuals of the same species. 🇻🇳 Vi: Biến dị (Variation) là sự khác biệt về đặc điểm giữa các cá thể trong cùng một loài.",
+      "duration": 19.75,
+      "startTime": 172.91,
+      "endTime": 192.66,
+      "audioUrl": "/audio/lectures/biology/18/s01_b04.mp3"
     },
     {
-      "id": "card_hydrophytes",
-      "title": "🪷 Thích nghi ở Thực vật Thủy sinh (Hydrophytes)",
-      "selector": "#card-hydrophytes",
-      "en": "Hydrophyte adaptations: Aquatic plants living submerged or floating in water feature extensive aerenchyma air spaces providing buoyancy and internal oxygen diffusion pathways, stomata restricted exclusively to upper leaf surfaces in floating leaves, highly reduced cuticles, and thin vestigial root systems.",
-      "vi": "Thích nghi ở thực vật thủy sinh (Hydrophytes): Thực vật sống ngập hoặc nổi trên mặt nước sở hữu các khoang khí xốp aerenchyma tạo sức nổi và dẫn khí oxy bên trong, khí khổng chỉ tập trung ở mặt trên của lá nổi, lớp cutin tiêu giảm mỏng manh, và hệ thống rễ rất nhỏ làm nhiệm vụ neo giữ.",
-      "duration": 34.94,
-      "startTime": 282.85,
-      "endTime": 317.79,
-      "audioUrl": "/audio/lectures/biology/18/card_hydrophytes.mp3"
+      "id": "s01_b05",
+      "title": "Tiêu chí: Định nghĩa; Continuous Variation (Biến dị liên tục): Tạo ra một dải bi...",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "Feature: Definition; Continuous Variation: Results in a range of phenotypes between two extremes (shows a normal distribution bell curve).; Discontinuous Variation: Results in a limited number of distinct phenotypes with no intermediates (discrete categories). Feature: Cause; Continuous Variation: Caused by both genes and the environment (polygenic).; Discontinuous Variation: Caused by genes alone ; unaffected by environmental conditions. Feature: Examples; Continuous Variation: Body length (height), body mass, foot size, skin colour; Discontinuous Variation: ABO blood groups, seed shape in peas (round/wrinkled), seed colour in peas (yellow/green), biological sex.",
+      "vi": "Tiêu chí: Định nghĩa; Continuous Variation (Biến dị liên tục): Tạo ra một dải biến thiên liên tục giữa 2 cực đoan (đồ thị hình chuông chuẩn).; Discontinuous Variation (Biến dị gián đoạn): Chỉ có một số kiểu hình rõ rệt, tách biệt nhau , không có giá trị trung gian (biểu đồ cột). Tiêu chí: Nguyên nhân; Continuous Variation (Biến dị liên tục): Do cả Gen và Môi trường tác động (đa gen).; Discontinuous Variation (Biến dị gián đoạn): Chỉ do Gen quy định ; môi trường không làm biến đổi. Tiêu chí: Ví dụ; Continuous Variation (Biến dị liên tục): Chiều dài cơ thể (body length), khối lượng cơ thể (body mass), kích thước bàn chân, màu da; Discontinuous Variation (Biến dị gián đoạn): Nhóm máu ABO, hình dạng hạt đậu Hà Lan (trơn/nhăn), màu hạt đậu Hà Lan (vàng/xanh), giới tính.",
+      "duration": 108.83,
+      "startTime": 192.66,
+      "endTime": 301.49,
+      "audioUrl": "/audio/lectures/biology/18/s01_b05.mp3"
     },
     {
-      "id": "sec_natural_selection",
-      "title": "3. Chọn lọc Tự nhiên vs Chọn lọc Nhân tạo",
-      "selector": "#sec-natural-selection",
-      "en": "Section 3: Natural and artificial selection: Natural selection is the process where individuals with favorable phenotypic adaptations are more likely to survive, reproduce, and pass on their advantageous alleles to the next generation, driving evolutionary adaptation.",
-      "vi": "Mục 3: Chọn lọc tự nhiên và nhân tạo: Chọn lọc tự nhiên là quá trình các cá thể sở hữu kiểu hình thích nghi thuận lợi có xác suất sống sót, sinh sản cao hơn và truyền lại các alen ưu thế cho thế hệ con cháu, thúc đẩy sự tiến hóa thích nghi của loài.",
-      "duration": 61.55,
-      "startTime": 317.79,
-      "endTime": 379.34,
-      "audioUrl": "/audio/lectures/biology/18/sec_natural_selection.mp3"
+      "id": "s01_b06",
+      "title": "⚠️ Mutation (Đột biến gen & Tác nhân)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "⚠️ Mutation & Mutagens. A mutation is a genetic change . It is the fundamental process by which new alleles are formed. Gene mutation (Supplement): A random change in the base sequence of DNA. Rate of mutation is increased by: • Ionising radiation: Ultraviolet (UV) light, X-rays, gamma radiation.• Mutagenic chemicals: Tar in tobacco smoke, benzene, mustard gas.",
+      "vi": "⚠️ Mutation (Đột biến gen & Tác nhân). 🇬🇧 En: A mutation is a genetic change . It forms new alleles. 🇻🇳 Vi: Đột biến (Mutation) là sự biến đổi vật chất di truyền . Đột biến là con đường duy nhất tạo ra các allele mới. Tác nhân đột biến (Mutagens): • Bức xạ ion hóa: Tia UV ánh nắng, tia X, tia gamma phóng xạ.• Hóa chất độc hại: Hắc ín trong khói thuốc lá, benzen, khí độc.",
+      "duration": 61.64,
+      "startTime": 301.49,
+      "endTime": 363.13,
+      "audioUrl": "/audio/lectures/biology/18/s01_b06.mp3"
     },
     {
-      "id": "card_natural_selection_steps",
-      "title": "🌿 5 Bước Cốt lõi của Chọn lọc Tự nhiên",
-      "selector": "#card-natural-selection-steps",
-      "en": "The 5 steps of natural selection: First, overproduction of offspring. Second, struggle for existence due to limited resources. Third, phenotypic variation within the population. Fourth, survival of the fittest possessing advantageous alleles. Fifth, differential reproduction passing advantageous alleles to offspring, increasing allele frequency over generations.",
-      "vi": "Năm bước cốt lõi của chọn lọc tự nhiên: Thứ nhất, sinh vật sinh sản quá mức tạo ra số lượng con non lớn. Thứ hai, xảy ra đấu tranh sinh tồn do tài nguyên môi trường có hạn. Thứ ba, biến dị di truyền tồn tại sẵn trong quần thể. Thứ tư, các cá thể thích nghi nhất sở hữu alen có lợi sẽ sống sót. Thứ năm, sinh sản phân hóa giúp truyền alen có lợi cho đời sau, làm tăng tần số alen thích nghi qua các thế hệ.",
-      "duration": 53.39,
-      "startTime": 379.34,
-      "endTime": 432.73,
-      "audioUrl": "/audio/lectures/biology/18/card_natural_selection_steps.mp3"
+      "id": "s01_b07",
+      "title": "🧬 4 Nguồn gốc tạo Biến dị Di truyền",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🧬 4 Sources of Genetic Variation. Mutation: Generates brand-new alleles. Meiosis: Independent assortment of homologous chromosomes and crossing over between chromatids. Random Mating: Any male individual can mate with any female individual. Random Fertilisation: Any sperm can fertilise any egg, creating novel genetic combinations.",
+      "vi": "🧬 4 Nguồn gốc tạo Biến dị Di truyền. Mutation (Đột biến): Sinh ra allele hoàn toàn mới. Meiosis (Giảm phân): Hoán vị gen và phân ly độc lập các cặp nhiễm sắc thể. Random Mating (Giao phối ngẫu nhiên): Bất kỳ cá thể đực nào cũng có thể kết đôi với cá thể cái. Random Fertilisation (Thụ tinh ngẫu nhiên): Bất kỳ tinh trùng nào cũng có thể thụ tinh cho trứng.",
+      "duration": 52.09,
+      "startTime": 363.13,
+      "endTime": 415.22,
+      "audioUrl": "/audio/lectures/biology/18/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "📈 Đồ Thị Biến Dị & Bộ Ví Dụ Bắt Buộc Thuộc Lòng (Core • 18.1.2–18.1.5)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "📈 Graphing Variation & Syllabus Examples (Core • 18.1.2–18.1.5). Must-Know Syllabus Examples: Continuous variation includes body length and body mass (caused by both genes and the environment ). Discontinuous variation includes ABO blood groups , seed shape in peas (round vs wrinkled), and seed colour in peas (yellow vs green) — caused by genes only !",
+      "vi": "📈 Đồ Thị Biến Dị & Bộ Ví Dụ Bắt Buộc Thuộc Lòng (Core • 18.1.2–18.1.5). Ví dụ chuẩn Syllabus 0610: Biến dị liên tục gồm chiều dài cơ thể (body length) và khối lượng cơ thể (body mass) (do cả gen và môi trường ). Biến dị gián đoạn gồm nhóm máu ABO , hình dạng hạt đậu Hà Lan (seed shape in peas: trơn vs nhăn) và màu sắc hạt đậu Hà Lan (seed colour in peas: vàng vs xanh) — chỉ do gen quy định (genes only) !",
+      "duration": 56.89,
+      "startTime": 415.22,
+      "endTime": 472.11,
+      "audioUrl": "/audio/lectures/biology/18/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "Continuous Variation (Đường cong chuông liên tục)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "Continuous Variation (Normal Bell Curve)",
+      "vi": "Continuous Variation (Đường cong chuông liên tục)",
+      "duration": 7.73,
+      "startTime": 472.11,
+      "endTime": 479.84,
+      "audioUrl": "/audio/lectures/biology/18/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "Discontinuous Variation (Biểu đồ cột rời rạc)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "Discontinuous Variation (Discrete Bar Chart)",
+      "vi": "Discontinuous Variation (Biểu đồ cột rời rạc)",
+      "duration": 8.37,
+      "startTime": 479.84,
+      "endTime": 488.21,
+      "audioUrl": "/audio/lectures/biology/18/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • Paper 1/2 MCQ Which row correctly matches an example of discontinuous variation with its cause? A. Body mass in humans — genes and environment B. Seed colour in pea plants — genes only C. Foot length in adults — genes only D. ABO blood group — environment only ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Seed colour in peas (yellow vs green) and ABO blood groups have distinct categories with no intermediates, so they are discontinuous variation caused by genes only . Body mass (A) and foot length (C) are continuous variation caused by both genes and environment.",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE/EXTENDED • Trắc nghiệm Paper 1/2 Which row correctly matches an example of discontinuous variation with its cause? (Dòng nào ghép đúng một ví dụ của biến dị gián đoạn với nguyên nhân gây ra nó?) A. Body mass in humans — genes and environment B. Seed colour in pea plants — genes only C. Foot length in adults — genes only D. ABO blood group — environment only ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Màu sắc hạt đậu Hà Lan (vàng hoặc xanh) và nhóm máu ABO chia thành các nhóm tách biệt không có dạng trung gian nên là biến dị gián đoạn chỉ do gen quy định (genes only) . Cân nặng (A) và chiều dài bàn chân (C) là biến dị liên tục do cả gen và môi trường.",
+      "duration": 95.09,
+      "startTime": 488.21,
+      "endTime": 583.3,
+      "audioUrl": "/audio/lectures/biology/18/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "[2]",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Define the term gene mutation and state its significance in evolution. [2] (b) State two factors that can increase the rate of mutation, and two other processes in sexual reproduction that produce genetic variation. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) • A random change in the base sequence of DNA [1m] ;• It is the only way in which new alleles are formed [1m] .(b) • Factors increasing rate: ionising radiation (e.g. X-rays / gamma / UV) and some chemicals (e.g. tar in tobacco smoke) [1m] ;• Other processes: any two from meiosis, random mating, random fertilisation [1m] . 💡 Intuition Check: Mutation creates new alleles; meiosis + random mating + random fertilisation shuffle alleles into new combinations!",
+      "vi": "BÀI MẪU 2 🟩 MỨC EXTENDED • Tự luận Paper 4 [4 điểm] (a) Define the term gene mutation and state its significance in evolution. (Định nghĩa đột biến gen và nêu ý nghĩa của nó trong tiến hóa.) (b) State two factors that can increase the rate of mutation, and two other processes in sexual reproduction that produce genetic variation. (Nêu hai tác nhân làm tăng tần số đột biến và hai quá trình khác trong sinh sản hữu tính tạo ra biến dị di truyền.) ✍️ Lời giải chi tiết theo thang điểm: (a) • Là sự thay đổi ngẫu nhiên trong trình tự các base của DNA ;• Là con đường duy nhất tạo ra các allele mới .(b) • Tác nhân tăng đột biến: bức xạ ion hóa và một số hóa chất (some chemicals: nhựa thuốc lá) ;• Hai quá trình khác: chọn 2 trong 3 ý meiosis (giảm phân), random mating (giao phối ngẫu nhiên), random fertilisation (thụ tinh ngẫu nhiên) . 💡 Kiểm tra bản chất: Nhớ kỹ: Đột biến TẠO MỚI allele; còn giảm phân + giao phối/thụ tinh ngẫu nhiên XÁO TRỘN các allele có sẵn!",
+      "duration": 134.53,
+      "startTime": 583.3,
+      "endTime": 717.83,
+      "audioUrl": "/audio/lectures/biology/18/s01_b12.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🌵 2. ADAPTIVE FEATURES (Đặc điểm Thích nghi: Xerophytes & Hydrophytes)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🌵 2. ADAPTIVE FEATURES (Xerophytes & Hydrophytes).",
+      "vi": "🌵 2. ADAPTIVE FEATURES (Đặc điểm Thích nghi: Xerophytes & Hydrophytes).",
+      "duration": 10.71,
+      "startTime": 717.83,
+      "endTime": 728.54,
+      "audioUrl": "/audio/lectures/biology/18/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: A xerophyte (desert cactus / marram grass) dresses like a desert traveller wearing a waxed coat and scarf to trap humid air and hoard every drop of water. A hydrophyte (water lily) wears an inflatable life-jacket ( aerenchyma air spaces ) with its snorkel breathing holes ( stomata ) on top of the floating leaf!",
+      "vi": "🎯 Hình dung đời thường: Cây chịu hạn Xerophyte (xương rồng, cỏ đồi cát marram grass) mặc chiếc áo khoác phủ sáp chống thấm và quàng khăn giữ ẩm để giữ chặt từng giọt nước. Cây thủy sinh Hydrophyte (hoa súng) mặc áo phao bơm hơi ( khoang khí aerenchyma ) và đặt ống thở ( khí khổng / stomata ) ngay trên mặt trên của lá nổi!",
+      "duration": 44.95,
+      "startTime": 728.54,
+      "endTime": 773.49,
+      "audioUrl": "/audio/lectures/biology/18/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Define an adaptive feature as an inherited feature helping an organism survive and reproduce in its environment. 2) For xerophytes, link sunken stomata / rolled leaves / hairs → trap moist air → lower water vapour concentration gradient → less transpiration . 3) For hydrophytes, link air spaces → buoyancy + O2diffusion to roots , and stomata on upper epidermis → gas exchange with air.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Định nghĩa adaptive feature là một đặc điểm di truyền (inherited feature) giúp sinh vật sống sót và sinh sản . 2) Với xerophytes: khí khổng thụt sâu / lá cuộn / lông tơ → giữ không khí ẩm → giảm gradient nồng độ hơi nước → giảm thoát hơi nước . 3) Với hydrophytes: khoang khí → nổi + dẫn O2xuống rễ ; khí khổng ở biểu bì mặt trên → trao đổi khí với khí quyển.",
+      "duration": 60.68,
+      "startTime": 773.49,
+      "endTime": 834.17,
+      "audioUrl": "/audio/lectures/biology/18/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying sunken stomata or leaf hairs \"stop water leaving\" scores 0 marks — you MUST explain that they trap moist/humid air and reduce the water vapour diffusion/concentration gradient !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết chung chung rằng khí khổng chìm hay lông tơ \"ngăn nước chui ra\" sẽ bị 0 điểm — BẮT BUỘC giải thích rằng chúng giữ lớp không khí ẩm làm giảm gradient nồng độ hơi nước !",
+      "duration": 26.76,
+      "startTime": 834.17,
+      "endTime": 860.93,
+      "audioUrl": "/audio/lectures/biology/18/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🇬🇧 En: An adaptive feature is an inherited feature that helps an organism to sur...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "An adaptive feature is defined as an inherited feature that helps an organism to survive and reproduce in its environment.",
+      "vi": "🇬🇧 En: An adaptive feature is an inherited feature that helps an organism to survive and reproduce in its environment. 🇻🇳 Vi: Đặc điểm thích nghi là đặc điểm di truyền giúp sinh vật sống sót và sinh sản thành công trong môi trường sống của nó.",
+      "duration": 25.16,
+      "startTime": 860.93,
+      "endTime": 886.09,
+      "audioUrl": "/audio/lectures/biology/18/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "1. Thực vật sa mạc (Xerophytes - Thực vật chịu hạn)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "1. Desert Plants (Xerophytes). Xerophytes live in environments where liquid water is scarce. They have evolved adaptations to reduce the rate of transpiration and store water: Leaf & Stem Adaptations. Thick waxy cuticle: Forms an impermeable waterproof barrier to cuticular evaporation. Sunken stomata in pits: Traps a layer of moist, humid air outside stomata, reducing the water vapour concentration gradient. Rolled leaves / Leaf hairs: Shields stomata from dry winds and traps humid air. Spines instead of leaves: Dramatically reduces surface area for transpiration; deters herbivores. Fleshy succulent stems: Swollen parenchymal cells that store large volumes of water. Root System Adaptations. Deep taproots: Penetrate deep underground to reach low water tables. Widespread shallow surface roots: Spread over a large surface area to absorb flash rainwater quickly before it evaporates.",
+      "vi": "1. Thực vật sa mạc (Xerophytes - Thực vật chịu hạn). Sống ở nơi cực kỳ thiếu nước; thích nghi nhằm giảm tối đa sự thoát hơi nước (transpiration) và tăng tích trữ nước: Thích nghi ở Lá & Thân. Lớp cutin dày bóng: Ngăn chặn bay hơi nước qua bề mặt lá. Khí khổng thụt sâu trong hố (Sunken stomata): Giữ lớp không khí ẩm để giảm chênh lệch gradient nồng độ hơi nước. Lá cuộn tròn / Có lông tơ: Che chắn khí khổng khỏi gió khô nóng. Lá biến thành gai: Giảm diện tích thoát hơi nước và xua đuổi động vật ăn cỏ. Thân mọng nước (Succulent stem): Dự trữ một lượng nước khổng lồ. Thích nghi ở Hệ rễ. Rễ cọc đâm rất sâu (Deep taproots): Đâm sâu hàng chục mét xuống lòng đất chạm mạch nước ngầm. Rễ chùm nông trải rất rộng: Lan rộng sát mặt đất để hút ngay nước mưa rào trước khi bốc hơi.",
+      "duration": 124.16,
+      "startTime": 886.09,
+      "endTime": 1010.25,
+      "audioUrl": "/audio/lectures/biology/18/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "2. Thực vật thủy sinh (Hydrophytes - VD: Hoa súng)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "2. Aquatic Plants (Hydrophytes - e.g. Water Lily). Hydrophytes live submerged in or floating on water. Water availability is abundant, but dissolved gases and sunlight are limited: Large air spaces (Aerenchyma): Provide buoyancy to float leaves at the water surface for sunlight; allow internal diffusion of oxygen down to submerged stems and roots. Stomata on upper epidermis only: Leaves floating on water have stomata facing the atmosphere so gas exchange (CO2and O2) can occur. Very thin or absent waxy cuticle: Water loss by transpiration is not a hazard. Reduced xylem and root systems: Water supports the plant mechanically, and water/minerals can be absorbed directly through submerged tissues.",
+      "vi": "2. Thực vật thủy sinh (Hydrophytes - VD: Hoa súng). Sống chìm hoặc nổi trên mặt nước; nước vô tận nhưng bị hạn chế ánh sáng và khí hòa tan: Khoang rỗng chứa khí lớn (Aerenchyma): Giúp lá nổi trên mặt nước đón nắng và cho phép oxy khuếch tán xuống thân rễ ngập nước. Khí khổng chỉ nằm ở mặt trên của lá: Để tiếp xúc với không khí phía trên thực hiện trao đổi khí CO2và O2. Cutin rất mỏng hoặc tiêu giảm: Không lo sợ nguy cơ mất nước do thoát hơi nước. Mạch gỗ (Xylem) và hệ rễ tiêu giảm: Nước nâng đỡ cơ thể và hấp thụ trực tiếp qua bề mặt thân lá.",
+      "duration": 89.14,
+      "startTime": 1010.25,
+      "endTime": 1099.39,
+      "audioUrl": "/audio/lectures/biology/18/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🔬 Lập Luận Ăn Trọn Điểm Về Cơ Chế Thích Nghi Của Thực Vật (Supplement • 18.2.3)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🔬 How to Score Full Marks Explaining Plant Adaptations (Supplement • 18.2.3). Sunken stomata / Rolled leaves / Leaf hairs (Xerophytes, e.g. marram grass & cacti): All three trap a pocket of moist, humid air right outside the stomatal pore → this reduces the water vapour concentration gradient between the leaf air spaces and the outside air → slower diffusion of water vapour out of the leaf (reduced transpiration). Flexible underwater stems & finely divided leaves (Hydrophytes): Flexible stems bend with water currents without snapping, and minimal xylem/supporting sclerenchyma is needed because surrounding water provides buoyancy support.",
+      "vi": "🔬 Lập Luận Ăn Trọn Điểm Về Cơ Chế Thích Nghi Của Thực Vật (Supplement • 18.2.3). Khí khổng thụt sâu (Sunken stomata), Lá cuộn tròn (Rolled leaves) & Lông tơ (Leaf hairs) ở cây chịu hạn: Cả ba cấu trúc này đều giúp giữ lại một lớp không khí ẩm ngay bên ngoài lỗ khí khổng → làm giảm sự chênh lệch nồng độ hơi nước giữa khoang khí trong lá và bên ngoài → giảm tốc độ khuếch tán hơi nước ra khỏi lá (giảm thoát hơi nước / transpiration). Thân mềm dẻo (Flexible stems) ở cây thủy sinh: Giúp uốn theo dòng nước chảy mà không bị gãy; mô nâng đỡ và mạch gỗ (xylem) tiêu giảm vì đã có sức đẩy nổi của nước nâng đỡ cây.",
+      "duration": 82.77,
+      "startTime": 1099.39,
+      "endTime": 1182.16,
+      "audioUrl": "/audio/lectures/biology/18/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Leaves of a floating aquatic plant (hydrophyte) such as a water lily are examined under a microscope. Which set of features will be observed? A. Thick waxy cuticle, sunken stomata on lower epidermis, extensive xylem B. Thin cuticle, stomata on upper epidermis, large air spaces in mesophyll C. Rolled leaves, leaf hairs, stomata on lower epidermis only D. No stomata on either epidermis, thick waxy cuticle, deep taproots ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Floating hydrophytes have stomata on the upper epidermis exposed to atmospheric air, large air spaces (aerenchyma) for buoyancy and internal gas diffusion, and a thin/absent waxy cuticle since water conservation is unnecessary. Options A and C describe xerophytes.",
+      "vi": "BÀI MẪU 1 🟩 MỨC EXTENDED • Trắc nghiệm Paper 2 Leaves of a floating aquatic plant (hydrophyte) such as a water lily are examined under a microscope. Which set of features will be observed? (Quan sát lá nổi trên mặt nước của một loài thực vật thủy sinh như hoa súng dưới kính hiển vi. Tổ hợp đặc điểm nào sẽ thấy?) A. Thick waxy cuticle, sunken stomata on lower epidermis, extensive xylem B. Thin cuticle, stomata on upper epidermis, large air spaces in mesophyll C. Rolled leaves, leaf hairs, stomata on lower epidermis only D. No stomata on either epidermis, thick waxy cuticle, deep taproots ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Lá nổi của cây thủy sinh có khí khổng nằm ở biểu bì mặt trên (upper epidermis) tiếp xúc không khí, nhiều khoang chứa khí lớn giúp lá nổi và khuếch tán O2, cùng lớp cutin rất mỏng vì không lo mất nước. Đáp án A và C là đặc điểm của cây chịu hạn.",
+      "duration": 123.83,
+      "startTime": 1182.16,
+      "endTime": 1305.99,
+      "audioUrl": "/audio/lectures/biology/18/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Marram grass is a xerophyte growing on dry, windy sand dunes. Its leaves roll tightly inward, enclosing sunken stomata and fine hairs on the inner surface. Explain how these features help marram grass survive in dry, windy conditions. [4] ✍️ Step-by-Step Mark Scheme Solution: • Rolled leaves, hairs, and sunken pits shield the stomata from wind and trap a layer of moist / humid air near the stomata [1m] ;• This reduces the water vapour concentration gradient between the air spaces inside the leaf and the air just outside the stomata [1m] ;• Therefore less water vapour diffuses out through the stomata, reducing the rate of transpiration [1m] ;• Preventing excessive water loss / wilting / dehydration so the plant retains water for photosynthesis and metabolic reactions [1m] . 💡 Intuition Check: Memorise the 3-step transpiration chain: Trap humid air -> Reduce water vapour concentration gradient -> Reduce diffusion / transpiration!",
+      "vi": "BÀI MẪU 2 🟩 MỨC EXTENDED • Tự luận Paper 4 [4 điểm] Marram grass is a xerophyte growing on dry, windy sand dunes. Its leaves roll tightly inward, enclosing sunken stomata and fine hairs on the inner surface. Explain how these features help marram grass survive in dry, windy conditions. (Cỏ marram là cây chịu hạn mọc trên đồi cát khô đầy gió. Lá của nó cuộn tròn vào trong, bao bọc các khí khổng thụt sâu và nhiều lông mịn ở mặt trong. Giải thích cách các đặc điểm này giúp cây sống sót.) ✍️ Lời giải chi tiết theo thang điểm: • Lá cuộn tròn, lông tơ và hốc lõm giúp che chắn khí khổng khỏi gió và giữ lại một lớp không khí ẩm sát khí khổng ;• Điều này làm giảm chênh lệch nồng độ hơi nước giữa khoang khí bên trong lá và không khí bên ngoài ;• Do đó hơi nước khuếch tán qua khí khổng chậm hơn, làm giảm tốc độ thoát hơi nước (transpiration) ;• Giúp cây tránh mất nước quá mức / héo rũ, giữ đủ nước cho quang hợp và trao đổi chất . 💡 Kiểm tra bản chất: Chuỗi 3 mắt xích ăn điểm tuyệt đối: Giữ không khí ẩm -> Giảm gradient nồng độ hơi nước -> Giảm khuếch tán / thoát hơi nước!",
+      "duration": 145.56,
+      "startTime": 1305.99,
+      "endTime": 1451.55,
+      "audioUrl": "/audio/lectures/biology/18/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧬 3. SELECTION (Chọn lọc Tự nhiên vs Chọn lọc Nhân tạo)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧬 3. SELECTION (Natural vs Artificial Selection).",
+      "vi": "🧬 3. SELECTION (Chọn lọc Tự nhiên vs Chọn lọc Nhân tạo).",
+      "duration": 9.81,
+      "startTime": 1451.55,
+      "endTime": 1461.36,
+      "audioUrl": "/audio/lectures/biology/18/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Natural selection is nature's automatic filter (antibiotics or predators eliminate the poorly adapted, leaving survivors to pass on winning alleles). Selective breeding is a farmer playing matchmaker generation after generation to amplify traits humans want (like sweeter corn or calmer cows).",
+      "vi": "🎯 Hình dung đời thường: Chọn lọc tự nhiên (Natural selection) là \"màng lọc tự động của thiên nhiên\" (thuốc kháng sinh hay thú săn mồi đào thải cá thể kém thích nghi, chỉ giữ lại cá thể mang allele tốt để sinh sản). Chọn lọc nhân tạo (Selective breeding) là khi người nông dân trực tiếp làm \"bà mối\" qua hàng chục thế hệ để nhân lên tính trạng có lợi cho con người.",
+      "duration": 45.14,
+      "startTime": 1461.36,
+      "endTime": 1506.5,
+      "audioUrl": "/audio/lectures/biology/18/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Memorise the 5-step natural selection template: Variation → Overproduction → Struggle/Competition → Better adapted survive & reproduce → Pass on advantageous alleles . 2) Memorise the 4-point selective breeding template: Select parents with desirable feature → Cross them → Select best offspring → Repeat over many generations .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Khung 5 bước chọn lọc tự nhiên: Biến dị di truyền → Sinh sản nhiều con → Đấu tranh sinh tồn/cạnh tranh → Cá thể thích nghi hơn sống sót & sinh sản → Truyền allele có lợi cho đời sau . 2) Khung 4 ý chọn giống nhân tạo: Chọn bố mẹ có đặc tính tốt → Cho lai với nhau → Chọn con mang đặc tính tốt → Lặp lại qua nhiều thế hệ .",
+      "duration": 52.13,
+      "startTime": 1506.5,
+      "endTime": 1558.63,
+      "audioUrl": "/audio/lectures/biology/18/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: NEVER write that bacteria \"mutate in order to resist the antibiotic\" or \"become immune\"! First, antibodies/immunity do not apply to bacteria resisting drugs; second, the mutation is random and ALREADY existed before the antibiotic killed the non-resistant bacteria!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG viết \"vi khuẩn tự đột biến để chống lại kháng sinh\" hay \"vi khuẩn tạo miễn dịch (immune)\"! Đột biến kháng thuốc là ngẫu nhiên và ĐÃ CÓ SẴN từ trước , kháng sinh chỉ đóng vai trò tiêu diệt các vi khuẩn không kháng thuốc!",
+      "duration": 37.17,
+      "startTime": 1558.63,
+      "endTime": 1595.8,
+      "audioUrl": "/audio/lectures/biology/18/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🌿 5 Bước cốt lõi của Chọn lọc Tự nhiên (Natural Selection)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🌿 The 5 Steps of Natural Selection. Genetic Variation: Individuals within a population display genetic variation produced by random mutation. Overproduction of Offspring: Populations produce more offspring than the environment can support. Struggle for Survival: Competition occurs for limited environmental resources (food, water, territory, mates) and evasion of predators/diseases. Survival of the Fittest: Individuals with advantageous features/alleles are better adapted and more likely to survive. Reproduction & Transmission: Survivors reproduce and pass their advantageous alleles on to the next generation. Over many generations, the allele frequency increases ( adaptation ). Classic Exam Example: Development of antibiotic-resistant bacteria like MRSA is a clear case of natural selection where the antibiotic acts as the selective pressure.",
+      "vi": "🌿 5 Bước cốt lõi của Chọn lọc Tự nhiên (Natural Selection). Biến dị di truyền (Genetic Variation): Quần thể luôn có sẵn biến dị di truyền ngẫu nhiên do đột biến. Sinh sản thừa (Overproduction): Số lượng con sinh ra nhiều hơn số lượng môi trường có thể nuôi sống. Đấu tranh sinh tồn: Các cá thể cạnh tranh thức ăn, nơi ở, bạn tình và trốn tránh kẻ thù. Sống sót của cá thể thích nghi nhất: Cá thể có allele có lợi sẽ sống sót tốt hơn. Sinh sản và di truyền (Reproduction & Inheritance): Cá thể sống sót sinh sản và truyền allele có lợi cho đời con, làm tăng tần số allele đó qua nhiều thế hệ ( Thích nghi - Adaptation ). Ví dụ kinh điển trong đề thi: Sự hình thành vi khuẩn kháng kháng sinh (như MRSA ) là minh chứng sống của chọn lọc tự nhiên với áp lực chọn lọc chính là thuốc kháng sinh.",
+      "duration": 115.98,
+      "startTime": 1595.8,
+      "endTime": 1711.78,
+      "audioUrl": "/audio/lectures/biology/18/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Tiêu chí: Tác nhân chọn lọc; Natural Selection (Chọn lọc Tự nhiên): Môi trường t...",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "Feature: Selecting Agent; Natural Selection: The Environment (predators, disease, climate, competition); Artificial Selection (Selective Breeding): Humans choose which individuals breed. Feature: Selected Traits; Natural Selection: Traits that increase survival and reproduction in the wild; Artificial Selection (Selective Breeding): Traits that are economically or aesthetically useful to humans (high crop yield, docility, milk production). Feature: Timescale; Natural Selection: Occurs slowly over hundreds, thousands, or millions of years; Artificial Selection (Selective Breeding): Occurs rapidly over a few generations. Feature: Consequence for Species; Natural Selection: Produces organisms well-adapted to survive independently; Artificial Selection (Selective Breeding): Often reduces genetic variation; organisms may not survive well in the wild without human care (e.g. pedigree dogs with health problems).",
+      "vi": "Tiêu chí: Tác nhân chọn lọc; Natural Selection (Chọn lọc Tự nhiên): Môi trường tự nhiên (khí hậu, bệnh tật, kẻ săn mồi); Artificial Selection (Chọn lọc Nhân tạo / Lai giống): Con người chủ động lựa chọn cá thể có đặc tính mong muốn để nhân giống. Tiêu chí: Mục đích tính trạng; Natural Selection (Chọn lọc Tự nhiên): Giúp sinh vật sinh tồn và sinh sản trong tự nhiên; Artificial Selection (Chọn lọc Nhân tạo / Lai giống): Phục vụ lợi ích kinh tế, thẩm mỹ của con người (năng suất sữa, thịt, quả to, hoa đẹp). Tiêu chí: Thời gian; Natural Selection (Chọn lọc Tự nhiên): Diễn ra chậm qua hàng nghìn, hàng triệu năm; Artificial Selection (Chọn lọc Nhân tạo / Lai giống): Diễn ra rất nhanh qua một vài thế hệ lai chọn lọc. Tiêu chí: Hệ quả với loài; Natural Selection (Chọn lọc Tự nhiên): Sinh vật tự lập sinh tồn tốt trong tự nhiên; Artificial Selection (Chọn lọc Nhân tạo / Lai giống): Làm giảm biến dị di truyền; sinh vật khó tự sống sót ngoài hoang dã nếu thiếu bàn tay con người.",
+      "duration": 135.16,
+      "startTime": 1711.78,
+      "endTime": 1846.94,
+      "audioUrl": "/audio/lectures/biology/18/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "1. Sự hình thành Vi khuẩn Kháng Kháng sinh (Supplement • 18.3.5):",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "1. How Antibiotic Resistance Develops (Supplement • 18.3.5): A random mutation in DNA base sequence creates a new allele giving antibiotic resistance in one bacterium. When an antibiotic is applied (selection pressure), susceptible bacteria are killed. Resistant bacteria survive (with less competition for nutrients) and reproduce rapidly , passing the resistance allele to offspring. Over many generations, the entire bacterial population becomes an antibiotic-resistant strain (e.g. MRSA ).",
+      "vi": "1. Sự hình thành Vi khuẩn Kháng Kháng sinh (Supplement • 18.3.5): Một đột biến ngẫu nhiên (random mutation) làm đổi trình tự base DNA tạo ra allele kháng kháng sinh ở một vài vi khuẩn. Khi dùng thuốc kháng sinh (tác nhân chọn lọc), các vi khuẩn không kháng thuốc bị tiêu diệt. Vi khuẩn mang gen kháng thuốc sống sót (không còn đối thủ cạnh tranh dinh dưỡng) và nhân đôi cực nhanh , truyền allele kháng thuốc cho thế hệ sau. Qua nhiều thế hệ, hình thành chủng vi khuẩn kháng kháng sinh phổ biến (VD: MRSA ).",
+      "duration": 69.97,
+      "startTime": 1846.94,
+      "endTime": 1916.91,
+      "audioUrl": "/audio/lectures/biology/18/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "2. Ba Bước Chọn Lọc Nhân Tạo & Định nghĩa Sự Thích nghi (18.3.2–4):",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "2. Selective Breeding Steps & Adaptation Definition (18.3.2–4): Human selection of parent individuals showing desirable features (e.g. high-yield wheat, high-milk cows). Crossing (breeding) these chosen parents together to produce the next generation. Selecting offspring that show the desirable features and breeding them together — repeated over many generations ! Adaptation (process • 18.3.4): The process, resulting from natural selection , by which populations become more suited to their environment over many generations.",
+      "vi": "2. Ba Bước Chọn Lọc Nhân Tạo & Định nghĩa Sự Thích nghi (18.3.2–4): Con người chọn lọc (Select) các cá thể bố mẹ mang tính trạng mong muốn (lúa mì năng suất cao, bò nhiều sữa). Cho giao phối / lai giống (Cross) các cá thể được chọn để tạo thế hệ tiếp theo. Chọn lọc đời con biểu hiện rõ đặc tính tốt nhất để tiếp tục nhân giống — lặp lại qua nhiều thế hệ (many generations) ! Sự thích nghi (Adaptation process • 18.3.4): Quá trình là kết quả của chọn lọc tự nhiên , nhờ đó quần thể ngày càng phù hợp hơn với môi trường qua nhiều thế hệ.",
+      "duration": 71.01,
+      "startTime": 1916.91,
+      "endTime": 1987.92,
+      "audioUrl": "/audio/lectures/biology/18/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which statement correctly explains how a population of bacteria becomes resistant to an antibiotic? A. Exposure to the antibiotic causes individual bacteria to mutate so they can survive. B. Individual bacteria develop antibodies against the antibiotic and pass them to offspring. C. Bacteria with a pre-existing random mutation for resistance survive the antibiotic and reproduce. D. Humans selectively breed resistant bacteria with non-resistant bacteria over many generations. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Mutations are random and occur before or independently of the antibiotic (eliminating A). Bacteria do not make antibodies (eliminating B), and resistance arises by natural selection, not human selective breeding (eliminating D). The antibiotic acts as selection pressure killing non-resistant cells so pre-existing resistant mutants survive and pass on the allele.",
+      "vi": "BÀI MẪU 1 🟩 MỨC EXTENDED • Trắc nghiệm Paper 2 Which statement correctly explains how a population of bacteria becomes resistant to an antibiotic? (Phát biểu nào giải thích đúng cơ chế một quần thể vi khuẩn trở nên kháng thuốc kháng sinh?) A. Exposure to the antibiotic causes individual bacteria to mutate so they can survive. B. Individual bacteria develop antibodies against the antibiotic and pass them to offspring. C. Bacteria with a pre-existing random mutation for resistance survive the antibiotic and reproduce. D. Humans selectively breed resistant bacteria with non-resistant bacteria over many generations. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Đột biến xảy ra ngẫu nhiên độc lập với kháng sinh → loại A. Vi khuẩn không tạo kháng thể (antibodies) → loại B, và đây là chọn lọc tự nhiên chứ không phải con người lai giống → loại D. Thuốc kháng sinh tiêu diệt vi khuẩn thường, giúp các vi khuẩn đã mang đột biến kháng thuốc sống sót và sinh sản.",
+      "duration": 136.97,
+      "startTime": 1987.92,
+      "endTime": 2124.89,
+      "audioUrl": "/audio/lectures/biology/18/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "[4]",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / EXTENDED • Paper 4 Structured [4 marks] A dairy farmer wants to breed a herd of cattle that produces a much higher volume of milk. Describe how the farmer can use selective breeding to achieve this. [4] ✍️ Step-by-Step Mark Scheme Solution: • Select cows that produce the highest yield of milk and bulls whose female relatives (mothers/daughters) have high milk yield [1m] ;• Cross / breed these selected cattle together to produce offspring [1m] ;• Measure milk yield of the female offspring and select the offspring showing the highest milk yield to breed the next generation [1m] ;• Repeat this process over many generations until all cows in the herd have high milk yield [1m] . 💡 Intuition Check: Notice the smart detail on bulls: bulls don't make milk, so farmers select bulls from high-milk-yielding mothers, and ALWAYS end with \"repeat over many generations\" [1m]!",
+      "vi": "BÀI MẪU 2 🟦 MỨC CORE/EXTENDED • Tự luận Paper 4 [4 điểm] A dairy farmer wants to breed a herd of cattle that produces a much higher volume of milk. Describe how the farmer can use selective breeding to achieve this. (Một nông dân nuôi bò sữa muốn tạo ra đàn bò cho sản lượng sữa cao hơn nhiều. Hãy mô tả cách người nông dân áp dụng chọn lọc nhân tạo để đạt mục tiêu này.) ✍️ Lời giải chi tiết theo thang điểm: • Chọn lọc (Select) những con bò cái cho sản lượng sữa cao nhất và những con bò đực có mẹ/chị em cho nhiều sữa ;• Cho giao phối / lai giống (Cross / breed) các cá thể bò đã chọn với nhau ;• Đo sản lượng sữa của đời con và chọn lọc những bò con cho sản lượng sữa cao nhất để tiếp tục làm giống ;• Lặp lại quy trình này qua nhiều thế hệ cho tới khi toàn bộ đàn bò đều cho nhiều sữa . 💡 Kiểm tra bản chất: Mẹo điểm tối đa: Bò đực không cho sữa nên phải chọn bò đực từ bò mẹ nhiều sữa, và LUÔN kết thúc bằng câu \"lặp lại qua nhiều thế hệ\" !",
+      "duration": 125.35,
+      "startTime": 2124.89,
+      "endTime": 2250.24,
+      "audioUrl": "/audio/lectures/biology/18/s03_b09.mp3"
     }
   ]
 }

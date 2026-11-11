@@ -2,159 +2,608 @@
   "lectureId": "55023dc0-7fdc-46ea-a3e9-9a049306d086",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 21: Biotechnology and Genetic Engineering",
-  "totalDuration": 477.42,
+  "totalDuration": 3733.27,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_why_bacteria": {
-      "start": 1,
-      "end": 2
-    },
-    "sec-why-bacteria": {
-      "start": 1,
-      "end": 2
-    },
-    "sec_biotech_enzymes": {
-      "start": 3,
+    "s01_int": {
+      "start": 2,
       "end": 4
     },
-    "sec-biotech-enzymes": {
-      "start": 3,
-      "end": 4
-    },
-    "sec_industrial_fermenter": {
+    "s01_p1_sub01": {
       "start": 5,
-      "end": 6
+      "end": 13
     },
-    "sec-industrial-fermenter": {
+    "s01_p2_sub01": {
       "start": 5,
-      "end": 6
+      "end": 13
     },
-    "sec_genetic_engineering": {
-      "start": 7,
-      "end": 9
+    "s01_wex": {
+      "start": 14,
+      "end": 15
     },
-    "sec-genetic-engineering": {
-      "start": 7,
-      "end": 9
+    "s01_hdr": {
+      "start": 1,
+      "end": 15
+    },
+    "s02_int": {
+      "start": 17,
+      "end": 19
+    },
+    "s02_wex": {
+      "start": 24,
+      "end": 25
+    },
+    "s02_hdr": {
+      "start": 16,
+      "end": 25
+    },
+    "s03_int": {
+      "start": 27,
+      "end": 29
+    },
+    "s03_wex": {
+      "start": 38,
+      "end": 39
+    },
+    "s03_hdr": {
+      "start": 26,
+      "end": 39
+    },
+    "s04_int": {
+      "start": 41,
+      "end": 43
+    },
+    "s04_wex": {
+      "start": 47,
+      "end": 48
+    },
+    "s04_hdr": {
+      "start": 40,
+      "end": 48
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 21: Công nghệ Sinh học & Kỹ thuật Di truyền",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 21: Biotechnology and Genetic Engineering. Biotechnology is the application of biological organisms, systems, or processes to manufacturing and service industries. In this lesson, we study bacterial and yeast physiology, commercial enzyme applications including pectinase and lactase, industrial fermenter engineering, and recombinant DNA technology producing human insulin and genetically modified crops.",
-      "vi": "Chào mừng các bạn đến với Bài 21: Công nghệ Sinh học và Kỹ thuật Di truyền. Công nghệ sinh học là ứng dụng các sinh vật, hệ thống sinh học vào công nghiệp sản xuất và dịch vụ đời sống. Trong bài học này, chúng ta sẽ học về vi khuẩn và nấm men, ứng dụng enzyme công nghiệp như pectinase và lactase, thiết kế bồn lên men công nghiệp, cùng kỹ thuật tái tổ hợp ADN sản xuất insulin người và cây trồng chuyển gen.",
-      "duration": 39.5,
+      "title": "Topic 21: Biotechnology & Genetic Engineering (Công nghệ Sinh học & Kỹ thuật Di truyền)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) • Core & Supplement Topic 21: Biotechnology & Genetic Engineering. 21.1 Bacteria, Yeast Fermentation, Pectinase, Washing Powders, Lactase & Fermenters • 21.2 Recombinant Insulin & GM Crops.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Anh - Việt Topic 21: Biotechnology & Genetic Engineering (Công nghệ Sinh học & Kỹ thuật Di truyền). 21.1 Vi khuẩn, Lên men Nấm men, Pectinase, Bột giặt Sinh học, Lactase & Nồi lên men • 21.2 Insulin Tái tổ hợp & Cây trồng GM.",
+      "duration": 48.87,
       "startTime": 0.0,
-      "endTime": 39.5,
+      "endTime": 48.87,
       "audioUrl": "/audio/lectures/biology/21/intro.mp3"
     },
     {
-      "id": "sec_why_bacteria",
-      "title": "1. Ứng dụng Vi sinh vật trong Công nghệ Sinh học",
-      "selector": "#sec-why-bacteria",
-      "en": "Section 1: Microorganisms in biotechnology: Bacteria and fungi are ideal for industrial use because they reproduce extremely rapidly, possess simple nutritional requirements, synthesize complex organic molecules, share the universal genetic code, and raise fewer ethical concerns than using animals.",
-      "vi": "Mục 1: Vi sinh vật trong công nghệ sinh học: Vi khuẩn và nấm rất lý tưởng trong công nghiệp vì tốc độ sinh sản cực nhanh, nhu cầu dinh dưỡng đơn giản, khả năng tổng hợp các phân tử hữu cơ phức tạp, dùng chung mã di truyền phổ quát và ít vấp phải vấn đề đạo đức so với sử dụng động vật.",
-      "duration": 39.06,
-      "startTime": 39.5,
-      "endTime": 78.56,
-      "audioUrl": "/audio/lectures/biology/21/sec_why_bacteria.mp3"
+      "id": "s01_hdr",
+      "title": "🦠 1. Microorganisms in Biotechnology: Bacteria & Yeast (Vi khuẩn & Nấm men)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🦠 1. Microorganisms in Biotechnology: Bacteria & Yeast.",
+      "vi": "🦠 1. Microorganisms in Biotechnology: Bacteria & Yeast (Vi khuẩn & Nấm men).",
+      "duration": 12.98,
+      "startTime": 48.87,
+      "endTime": 61.85,
+      "audioUrl": "/audio/lectures/biology/21/s01_hdr.mp3"
     },
     {
-      "id": "card_bacteria_yeast_role",
-      "title": "🧫 Ưu thế của Vi khuẩn & Lên men Rượu ở Nấm men",
-      "selector": "#card-bacteria-yeast-role",
-      "en": "Yeast anaerobic respiration: Yeast respires anaerobically via alcohol fermentation, converting glucose into ethanol and carbon dioxide. Carbon dioxide bubbles trapped in dough cause bread to rise, while ethanol is used in brewing beer and making wine.",
-      "vi": "Hô hấp kỵ khí ở nấm men: Nấm men hô hấp kỵ khí qua lên men rượu, chuyển hóa glucose thành rượu ethanol và khí CO2. Khí CO2 tạo bọt khí nở xốp bột làm bánh mì phồng xốp, còn ethanol được ứng dụng trong sản xuất bia và rượu vang.",
-      "duration": 32.54,
-      "startTime": 78.56,
-      "endTime": 111.1,
-      "audioUrl": "/audio/lectures/biology/21/card_bacteria_yeast_role.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of bacteria as microscopic, self-copying 3D printers that speak the exact same programming language ( universal genetic code ) as human cells and come pre-equipped with removable USB drives ( plasmids ). Meanwhile, yeast in sealed dough or biofuel vats is an oxygen-starved baker: it splits glucose into fizzing CO₂ gas (inflating bread) and volatile ethanol (fuel for cars, or evaporated away in a hot oven)!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung vi khuẩn (bacteria) như những cỗ máy in 3D siêu nhỏ tự nhân đôi mỗi 20 phút, đọc chung đúng một ngôn ngữ lập trình ( bảng mã di truyền phổ quát — universal genetic code ) với tế bào người và có sẵn các ổ cứng USB tháo lắp dễ dàng ( plasmids ). Trong khi đó, nấm men (yeast) trong khối bột bánh mì hay bồn ủ kín giống như người thợ làm bánh thiếu oxy: nó bẻ đôi đường glucose thành bọt khí CO₂ (làm phồng bánh mì) và cồn ethanol (làm nhiên liệu chạy xe, hoặc bay hơi sạch trong lò nướng nóng)!",
+      "duration": 68.49,
+      "startTime": 61.85,
+      "endTime": 130.34,
+      "audioUrl": "/audio/lectures/biology/21/s01_b01.mp3"
     },
     {
-      "id": "sec_biotech_enzymes",
-      "title": "2. Ứng dụng Enzyme trong Công nghệ Sinh học",
-      "selector": "#sec-biotech-enzymes",
-      "en": "Section 2: Enzymes in biotechnology: Enzymes act as biological catalysts functioning at mild temperatures and pressures, lowering industrial operational energy costs.",
-      "vi": "Mục 2: Enzyme trong công nghệ sinh học: Enzyme là chất xúc tác sinh học hoạt động hiệu quả ở nhiệt độ và áp suất ôn hòa, giúp tiết kiệm đáng kể chi phí năng lượng trong vận hành công nghiệp.",
-      "duration": 22.05,
-      "startTime": 111.1,
-      "endTime": 133.15,
-      "audioUrl": "/audio/lectures/biology/21/sec_biotech_enzymes.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Know all 5 bacterial advantages (rapid reproduction, complex molecules, no ethical concerns, plasmids, universal genetic code) and distinguish yeast's two products in glucose → ethanol + CO₂ : bread-making relies on CO₂ bubbles to make dough rise (ethanol evaporates in baking), whereas biofuel production harvests the ethanol under strict anaerobic conditions.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc lòng đủ 5 lợi thế của vi khuẩn (sinh sản nhanh, tạo phân tử phức tạp, không vướng đạo đức, có plasmid, dùng chung bảng mã di truyền) và phân biệt rõ 2 sản phẩm của nấm men trong glucose → ethanol + CO₂ : làm bánh mì cần bọt khí CO₂ làm bột nở (ethanol bay hơi khi nướng), còn sản xuất nhiên liệu sinh học (biofuels) thu hoạch ethanol trong điều kiện kỵ khí nghiêm ngặt .",
+      "duration": 56.69,
+      "startTime": 130.34,
+      "endTime": 187.03,
+      "audioUrl": "/audio/lectures/biology/21/s01_b02.mp3"
     },
     {
-      "id": "card_biotech_enzymes",
-      "title": "🧪 Enzyme Pectinase, Bột giặt Sinh học & Sữa Lactose-Free",
-      "selector": "#card-biotech-enzymes",
-      "en": "Commercial enzyme applications: Pectinase breaks down plant cell wall pectin, increasing juice yield and clarity. Biological washing powders contain proteases and lipases that digest blood and grease stains at low temperatures. Lactase breaks milk sugar lactose into glucose and galactose, producing lactose-free milk for lactose-intolerant people.",
-      "vi": "Các ứng dụng enzyme thương mại: Pectinase phân giải pectin ở thành tế bào thực vật giúp tăng sản lượng nước ép và làm trong nước trái cây. Bột giặt sinh học chứa protease và lipase phân giải vết bẩn protein máu và dầu mỡ ở nhiệt độ giặt thấp. Lactase phân giải đường lactose thành glucose và galactose, sản xuất sữa không chứa lactose cho người không dung nạp đường sữa.",
-      "duration": 44.1,
-      "startTime": 133.15,
-      "endTime": 177.25,
-      "audioUrl": "/audio/lectures/biology/21/card_biotech_enzymes.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing that \"yeast produces lactic acid during anaerobic respiration\" or claiming baked bread contains alcohol! Muscles make lactic acid; yeast makes ethanol + carbon dioxide , and all ethanol evaporates in the hot oven (~200°C)!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết nhầm rằng \"nấm men hô hấp kỵ khí tạo lactic acid\" hoặc tưởng bánh mì nướng xong vẫn còn cồn! Cơ bắp người mới tạo lactic acid; nấm men tạo ethanol + carbon dioxide , và toàn bộ ethanol đều bay hơi hết trong lò nướng nóng (~200°C)!",
+      "duration": 40.03,
+      "startTime": 187.03,
+      "endTime": 227.06,
+      "audioUrl": "/audio/lectures/biology/21/s01_b03.mp3"
     },
     {
-      "id": "sec_industrial_fermenter",
-      "title": "3. Nồi lên men Công nghiệp (The Industrial Fermenter)",
-      "selector": "#sec-industrial-fermenter",
-      "en": "Section 3: The industrial fermenter: A fermenter is a large stainless-steel vessel providing optimal aseptic conditions for mass microorganism culture producing antibiotics, enzymes, or recombinant proteins.",
-      "vi": "Mục 3: Bồn lên men công nghiệp: Bồn lên men là một thiết bị inox lớn cung cấp môi trường vô trùng và các điều kiện tối ưu để nuôi cấy vi sinh vật số lượng lớn nhằm thu hoạch kháng sinh, enzyme hoặc protein tái tổ hợp.",
-      "duration": 56.99,
-      "startTime": 177.25,
-      "endTime": 234.24,
-      "audioUrl": "/audio/lectures/biology/21/sec_industrial_fermenter.mp3"
+      "id": "s01_b04",
+      "title": "1. Rapid Reproduction Rate (Tốc độ sinh sản cực nhanh — Core 21.1.1):",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "1. Rapid Reproduction Rate (Core 21.1.1): Under warm, nutrient-rich conditions, bacteria divide by binary fission every ~20 minutes, producing billions of cells and large quantities of product rapidly.",
+      "vi": "1. Rapid Reproduction Rate (Tốc độ sinh sản cực nhanh — Core 21.1.1): Ở điều kiện ấm và giàu dinh dưỡng tối ưu, vi khuẩn nhân đôi bằng trực phân (binary fission) mỗi ~20 phút, tạo ra hàng tỷ tế bào và lượng sản phẩm khổng lồ trong thời gian ngắn.",
+      "duration": 31.82,
+      "startTime": 227.06,
+      "endTime": 258.88,
+      "audioUrl": "/audio/lectures/biology/21/s01_b04.mp3"
     },
     {
-      "id": "card_fermenter_engineering",
-      "title": "🏭 Thiết kế Bồn Lên men & Tiệt trùng Hơi nước Nóng",
-      "selector": "#card-fermenter-engineering",
-      "en": "Fermenter components and sterile conditions: Cooling water jackets remove metabolic heat, preventing enzyme denaturation. Stirring impellers ensure uniform nutrient and oxygen distribution. Sterile air inlets supply oxygen for aerobic respiration. Probes monitor temperature and pH, adjusted with automated acid or alkali additions. Fermenters are steam-sterilized before inoculation to eliminate contaminating microorganisms that would compete for nutrients or destroy the yield.",
-      "vi": "Cấu tạo bồn lên men và khử trùng vô trùng: Áo làm mát dẫn nước giải nhiệt trao đổi chất, ngăn ngừa biến tính enzyme. Cánh khuấy đảo trộn liên tục đảm bảo dưỡng chất và oxy phân tán đồng đều. Luồng khí vô trùng cung cấp oxy cho hô hấp hiếu khí. Các đầu dò theo dõi nhiệt độ và độ pH, tự động bơm thêm axit hoặc kiềm điều chỉnh. Bồn lên men phải được tiệt trùng bằng hơi nước nóng trước khi cấy giống để tiêu diệt mọi vi sinh vật tạp nhiễm cạnh tranh thức ăn hoặc làm hỏng mẻ nuôi.",
-      "duration": 60.35,
-      "startTime": 234.24,
-      "endTime": 294.59,
-      "audioUrl": "/audio/lectures/biology/21/card_fermenter_engineering.mp3"
+      "id": "s01_b05",
+      "title": "2. Ability to Make Complex Molecules (Tạo phân tử phức tạp — Core 21.1.1):",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "2. Ability to Make Complex Molecules (Core 21.1.1): Bacterial ribosomes and metabolic pathways can synthesise complex biological molecules including large polypeptides (human insulin), enzymes, and vitamins.",
+      "vi": "2. Ability to Make Complex Molecules (Tạo phân tử phức tạp — Core 21.1.1): Ribosome và bộ máy trao đổi chất của vi khuẩn có khả năng tổng hợp chính xác các đại phân tử sinh học phức tạp như chuỗi polypeptide người (insulin), enzyme và vitamin.",
+      "duration": 32.0,
+      "startTime": 258.88,
+      "endTime": 290.88,
+      "audioUrl": "/audio/lectures/biology/21/s01_b05.mp3"
     },
     {
-      "id": "sec_genetic_engineering",
-      "title": "4. Kỹ thuật Di truyền & Sản xuất Insulin Người",
-      "selector": "#sec-genetic-engineering",
-      "en": "Section 4: Genetic engineering: Genetic engineering is the artificial modification of an organism's genome by transferring a specific gene from another organism.",
-      "vi": "Mục 4: Kỹ thuật di truyền: Kỹ thuật di truyền là sự can thiệp biến đổi nhân tạo hệ gen của sinh vật bằng cách chuyển một gen mong muốn từ sinh vật này sang sinh vật khác.",
-      "duration": 69.62,
-      "startTime": 294.59,
-      "endTime": 364.21,
-      "audioUrl": "/audio/lectures/biology/21/sec_genetic_engineering.mp3"
+      "id": "s01_b06",
+      "title": "3. Lack of Ethical Concerns (Ít rào cản đạo đức — Core 21.1.2a):",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "3. Lack of Ethical Concerns (Core 21.1.2a): Few people hold moral or animal-welfare objections to genetically manipulating, culturing, or destroying unicellular prokaryotes compared with mammals.",
+      "vi": "3. Lack of Ethical Concerns (Ít rào cản đạo đức — Core 21.1.2a): Không vấp phải các tranh cãi đạo đức hay quyền lợi động vật khi chỉnh sửa gen, nuôi cấy đại trà hoặc tiêu hủy sinh vật nhân sơ đơn bào.",
+      "duration": 30.44,
+      "startTime": 290.88,
+      "endTime": 321.32,
+      "audioUrl": "/audio/lectures/biology/21/s01_b06.mp3"
     },
     {
-      "id": "card_insulin_production",
-      "title": "🧬 5 Bước Sản xuất Insulin Người bằng ADN Tái tổ hợp",
-      "selector": "#card-insulin-production",
-      "en": "5 steps of human insulin production: First, human insulin gene is isolated and cut using a restriction enzyme. Second, bacterial plasmid DNA is cut with the same restriction enzyme, creating complementary sticky ends. Third, DNA ligase joins the human gene with plasmid forming recombinant DNA. Fourth, recombinant plasmid is inserted into host bacterium. Fifth, transgenic bacteria multiply in fermenters, expressing and secreting identical human insulin.",
-      "vi": "Năm bước sản xuất insulin người: Thứ nhất, phân lập gen mã hóa insulin người và cắt bằng enzyme giới hạn restriction enzyme. Thứ hai, cắt plasmid của vi khuẩn bằng chính enzyme giới hạn đó để tạo các đầu dính bổ sung. Thứ ba, dùng enzyme nối DNA ligase gắn gen người vào plasmid tạo ADN tái tổ hợp. Thứ tư, chuyển plasmid tái tổ hợp vào vi khuẩn chủ. Thứ năm, vi khuẩn chuyển gen nhân lên trong bồn lên men, biểu hiện và tiết ra insulin người tinh khiết.",
-      "duration": 64.07,
-      "startTime": 364.21,
-      "endTime": 428.28,
-      "audioUrl": "/audio/lectures/biology/21/card_insulin_production.mp3"
+      "id": "s01_b07",
+      "title": "4. Presence of Plasmids (Có sẵn vòng Plasmid — Core 21.1.2b):",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "4. Presence of Plasmids (Core 21.1.2b): Alongside their main chromosomal DNA loop, bacteria contain small, circular rings of DNA called plasmids that are easily extracted, cut open, spliced with foreign genes, and transferred between cells as vectors.",
+      "vi": "4. Presence of Plasmids (Có sẵn vòng Plasmid — Core 21.1.2b): Bên cạnh ADN vùng nhân, vi khuẩn có các vòng ADN nhỏ dạng tròn gọi là plasmids rất dễ tách chiết, cắt mở, ghép nối gen ngoại lai và chuyển vào tế bào chủ làm thể truyền (vectors).",
+      "duration": 38.89,
+      "startTime": 321.32,
+      "endTime": 360.21,
+      "audioUrl": "/audio/lectures/biology/21/s01_b07.mp3"
     },
     {
-      "id": "card_gm_crops_pros_cons",
-      "title": "🌾 Cây trồng Chuyển Gen (GM Crops): Lợi ích & Quan ngại",
-      "selector": "#card-gm-crops-pros-cons",
-      "en": "GM crops benefits and concerns: Genetically modified crops can carry genes for herbicide resistance allowing selective weed control, insect resistance reducing pesticide use, and biofortification like Golden Rice producing Vitamin A. Concerns include potential gene transfer to wild weeds creating superweeds, disruption of food chains, pest resistance evolution, and socioeconomic dependence on multinational seed corporations.",
-      "vi": "Lợi ích và mối lo ngại về cây trồng chuyển gen (GM crops): Cây trồng GM có thể mang gen kháng thuốc diệt cỏ giúp làm cỏ chọn lọc, gen kháng sâu bệnh giúp giảm thuốc trừ sâu hóa học, và tăng giá trị dinh dưỡng như Gạo Vàng tổng hợp Vitamin A. Mối lo ngại gồm nguy cơ phát tán gen sang cỏ dại tạo cỏ siêu kháng thuốc, xáo trộn chuỗi thức ăn tự nhiên, sâu hại tiến hóa kháng độc tố và sự phụ thuộc kinh tế vào các tập đoàn hạt giống.",
-      "duration": 49.14,
-      "startTime": 428.28,
-      "endTime": 477.42,
-      "audioUrl": "/audio/lectures/biology/21/card_gm_crops_pros_cons.mp3"
+      "id": "s01_b08",
+      "title": "5. Universal Genetic Code (Dùng chung Bảng Mã Di truyền Phổ quát — Core 21.1.2c):",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "5. Universal Genetic Code (Core 21.1.2c): Bacteria share the exact same genetic code as all other organisms — the same DNA base triplets (codons) code for the exact same amino acids in E. coli as in humans, plants, and fungi, allowing a bacterium to read a human gene and assemble an identical human protein.",
+      "vi": "5. Universal Genetic Code (Dùng chung Bảng Mã Di truyền Phổ quát — Core 21.1.2c): Vi khuẩn chia sẻ cùng một bảng mã di truyền với mọi sinh vật sống khác — cùng bộ ba nucleotide (codon) trên ADN quy định chính xác cùng một loại amino acid ở cả vi khuẩn E. coli lẫn con người, nhờ đó vi khuẩn đọc gen người và lắp ráp ra đúng phân tử protein người!",
+      "duration": 50.5,
+      "startTime": 360.21,
+      "endTime": 410.71,
+      "audioUrl": "/audio/lectures/biology/21/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🍞⛽ Anaerobic Respiration in Yeast: Biofuels & Bread-Making (Hô hấp Kỵ khí ở Nấm men — Core 21.1",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🍞⛽ Anaerobic Respiration in Yeast: Biofuels & Bread-Making (Core 21.1.3–4). Yeast is a single-celled fungus. When oxygen is absent, yeast carries out anaerobic respiration (alcoholic fermentation) :",
+      "vi": "🍞⛽ Anaerobic Respiration in Yeast: Biofuels & Bread-Making (Hô hấp Kỵ khí ở Nấm men — Core 21.1.3–4). Yeast (nấm men) là nấm đơn bào. Khi vắng mặt oxy, nấm men thực hiện hô hấp kỵ khí (anaerobic respiration / lên men rượu) :",
+      "duration": 28.24,
+      "startTime": 410.71,
+      "endTime": 438.95,
+      "audioUrl": "/audio/lectures/biology/21/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "glucose → alcohol (ethanol) + carbon dioxide (+ giải phóng ít năng lượng) Phương...",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "glucose → alcohol (ethanol) + carbon dioxide (+ small amount of energy) Balanced symbol equation (Supplement recall from Topic 12): C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
+      "vi": "glucose → alcohol (ethanol) + carbon dioxide (+ giải phóng ít năng lượng) Phương trình ký hiệu cân bằng (Supplement Topic 12): C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
+      "duration": 31.14,
+      "startTime": 438.95,
+      "endTime": 470.09,
+      "audioUrl": "/audio/lectures/biology/21/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "⛽ Ethanol for Biofuels (Sản xuất Nhiên liệu Sinh học — 21.1.3)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "⛽ Ethanol Production for Biofuels (21.1.3). Sugar source: Maize starch is first broken down into maltose/glucose using amylase , or crushed sugarcane juice is used directly. Anaerobic vessel: Yeast ferments the glucose at ~30–35°C in sealed air-locked tanks so oxygen cannot enter (if O₂ entered, yeast would respire aerobically producing CO₂ + H₂O and zero ethanol !). Distillation & use: Rising ethanol concentration (~15%) eventually kills the yeast; pure bioethanol is separated by fractional distillation and blended with petrol as a renewable transport fuel (growing crops re-absorb CO₂ via photosynthesis, though biofuel crops compete with food crops for farmland).",
+      "vi": "⛽ Ethanol for Biofuels (Sản xuất Nhiên liệu Sinh học — 21.1.3). Nguồn đường: Tinh bột ngô (maize starch) được thủy phân thành đường maltose/glucose nhờ enzyme amylase , hoặc dùng trực tiếp nước ép mía (sugarcane). Bồn kín kỵ khí: Nấm men lên men glucose ở ~30–35°C trong bồn khóa khí ngăn không cho oxy lọt vào (nếu lọt O₂ , nấm men sẽ chuyển sang hô hấp hiếu khí tạo CO₂ + H₂O và không tạo ra ethanol !). Chưng cất & ứng dụng: Khi nồng độ ethanol đạt ~15% sẽ làm chết nấm men; bioethanol tinh khiết được tách bằng chưng cất phân đoạn (fractional distillation) rồi pha vào xăng làm nhiên liệu tái tạo (cây trồng hấp thụ lại CO₂ khi quang hợp, dù nhược điểm là cạnh tranh đất nông nghiệp với cây lương thực).",
+      "duration": 102.52,
+      "startTime": 470.09,
+      "endTime": 572.61,
+      "audioUrl": "/audio/lectures/biology/21/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "🥖 Bread-Making (Làm Bánh mì — 21.1.4)",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "🥖 Bread-Making (21.1.4). Dough preparation: Flour, water, and yeast are kneaded into elastic dough (flour amylase breaks starch into maltose/glucose for the yeast) and left in a warm place (~30–35°C, called proving ). Why dough rises: Once trapped oxygen runs out, yeast respires anaerobically, releasing bubbles of carbon dioxide ( CO₂ ) gas that become trapped inside stretchy gluten protein networks, expanding the dough and giving bread a light, spongy texture. What happens in the oven (~200°C): Heat makes trapped CO₂ gas bubbles expand further, kills the yeast cells, and evaporates all the ethanol (boiling point 78°C), leaving zero alcohol in baked bread!",
+      "vi": "🥖 Bread-Making (Làm Bánh mì — 21.1.4). Nhào & ủ bột: Bột mì, nước và nấm men được nhào thành khối bột dẻo (enzyme amylase phân giải tinh bột thành đường cho nấm men) rồi ủ ấm (~30–35°C). Tại sao bột nở phồng: Khi hết oxy trong khối bột, nấm men hô hấp kỵ khí sinh ra các bọt khí carbon dioxide ( CO₂ ) bị giữ kẹt trong mạng lưới protein gluten đàn hồi, làm khối bột phồng to và tạo kết cấu xốp mềm. Điều gì xảy ra trong lò nướng (~200°C): Nhiệt độ cao làm bọt khí CO₂ giãn nở thêm, tiêu diệt tế bào nấm men, đồng thời làm bay hơi hoàn toàn ethanol (sôi ở 78°C) nên bánh mì chín hoàn toàn không chứa cồn!",
+      "duration": 97.46,
+      "startTime": 572.61,
+      "endTime": 670.07,
+      "audioUrl": "/audio/lectures/biology/21/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ Why are bacteria able to synthesise functional human insulin protein when a human insulin gene is inserted into them? A. Bacteria naturally possess a pancreas and islets of Langerhans. B. Bacteria share the same universal genetic code as humans and can make complex molecules. C. Bacterial cell walls are made of human insulin. D. Bacteria respire anaerobically to convert glucose directly into insulin. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Because the genetic code is universal across all living organisms, bacterial ribosomes read the DNA/mRNA base triplets of the human gene in the exact same way as human beta cells, linking the identical sequence of amino acids into a complex human protein. Options A, C, and D are biologically false.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1 & 2 MCQ Why are bacteria able to synthesise functional human insulin protein when a human insulin gene is inserted into them? (Tại sao vi khuẩn có thể tổng hợp được phân tử protein insulin người hoạt động bình thường khi chèn gen insulin người vào chúng?) A. Vi khuẩn tự nhiên có tuyến tụy và đảo tụy Langerhans. B. Vi khuẩn dùng chung bảng mã di truyền phổ quát với người và tạo được phân tử phức tạp. C. Thành tế bào vi khuẩn được cấu tạo từ insulin người. D. Vi khuẩn hô hấp kỵ khí biến đổi trực tiếp glucose thành insulin. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Vì bảng mã di truyền mang tính phổ quát ở mọi sinh vật sống, ribosome của vi khuẩn đọc các bộ ba nucleotide trên gen người giống hệt tế bào beta tuyến tụy người, lắp ráp đúng trình tự amino acid tạo thành phân tử protein phức tạp của người. Các phương án A, C, D đều sai về mặt sinh học.",
+      "duration": 123.77,
+      "startTime": 670.07,
+      "endTime": 793.84,
+      "audioUrl": "/audio/lectures/biology/21/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [5 marks] (a) State three reasons, other than rapid reproduction, why bacteria are widely used in biotechnology and genetic engineering. [3](b) Explain the role of anaerobic respiration in yeast during bread-making, and explain why baked bread does not contain alcohol. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Any three from: 1. Ability to synthesise complex molecules (such as human proteins) [1m]; 2. Presence of plasmids that are easily cut and transferred as gene vectors [1m]; 3. They share the same universal genetic code as all other organisms (or: lack of ethical concerns over their manipulation and growth) [1m]. (b) Yeast respires anaerobically using sugar in the dough to produce bubbles of carbon dioxide ( CO₂ ) gas , which get trapped in the dough and make it expand/rise [1m]. During baking at high oven temperatures, the ethanol evaporates completely [1m]. 💡 Intuition Check: Read the stem carefully: if the question excludes \"rapid reproduction\", pick from complex molecules, plasmids, universal genetic code, and lack of ethical concerns!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3 / Paper 4 Structured [5 marks] (a) State three reasons, other than rapid reproduction, why bacteria are widely used in biotechnology and genetic engineering. (b) Explain the role of anaerobic respiration in yeast during bread-making, and explain why baked bread does not contain alcohol. ((a) Nêu ba lý do, ngoài tốc độ sinh sản nhanh, giải thích tại sao vi khuẩn được dùng rộng rãi trong công nghệ sinh học và kỹ thuật di truyền. (b) Giải thích vai trò hô hấp kỵ khí của nấm men khi làm bánh mì, và tại sao bánh mì chín không chứa cồn. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Chọn 3 trong 4 ý: 1. Khả năng tổng hợp các phân tử phức tạp như protein người ; 2. Có sẵn vòng plasmids dễ cắt ghép làm thể truyền gen ; 3. Dùng chung bảng mã di truyền với mọi sinh vật khác (hoặc: không gây quan ngại đạo đức — lack of ethical concerns ) . (b) Nấm men hô hấp kỵ khí phân giải đường trong bột sinh ra các bọt khí carbon dioxide ( CO₂ ) bị giữ lại trong bột làm khối bột nở phồng (dough rises) . Trong quá trình nướng ở nhiệt độ cao, ethanol bay hơi hoàn toàn (evaporates) . 💡 Kiểm tra bản chất: Đọc kỹ câu lệnh loại trừ trên đề: khi đề đã ghi \"other than rapid reproduction\", tuyệt đối không lặp lại ý sinh sản nhanh mà phải chọn trong 4 ý còn lại!",
+      "duration": 174.84,
+      "startTime": 793.84,
+      "endTime": 968.68,
+      "audioUrl": "/audio/lectures/biology/21/s01_b14.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🧪 2. Enzymes in Biotechnology: Pectinase, Washing Powders & Lactase (Enzyme Công nghệ Sinh học)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🧪 2. Enzymes in Biotechnology: Pectinase, Washing Powders & Lactase.",
+      "vi": "🧪 2. Enzyme Công nghệ Sinh học .",
+      "duration": 8.92,
+      "startTime": 968.68,
+      "endTime": 977.6,
+      "audioUrl": "/audio/lectures/biology/21/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Industrial enzymes are precision molecular scissors: pectinase snips the pectin \"cement\" between fruit cell walls so juice gushes out crystal-clear; proteases & lipases chop sticky insoluble blood and grease stains into tiny water-soluble building blocks at 35°C; and lactase pre-digests milk lactose so sensitive guts never suffer osmotic water-draw!",
+      "vi": "🎯 Hình dung đời thường: Các enzyme công nghiệp hoạt động như những chiếc kéo phân tử chuyên dụng: pectinase cắt lớp \"xi măng\" pectin gắn giữa các thành tế bào quả giúp nước ép tuôn ra trong vắt; proteases & lipases cắt vụn vết máu và vết dầu mỡ bám chặt không tan thành các đơn phân nhỏ hòa tan sạch ở 35°C; còn lactase tiêu hóa hộ đường sữa lactose để người bất dung nạp không bị hút nước thẩm thấu gây tiêu chảy!",
+      "duration": 52.83,
+      "startTime": 977.6,
+      "endTime": 1030.43,
+      "audioUrl": "/audio/lectures/biology/21/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Always state substrate → soluble product + practical benefit : (1) Pectinase: pectin in plant cell walls → soluble sugars ( higher juice volume + clearer juice ); (2) Biological washing powders: proteases (proteins → amino acids) + lipases (fats → fatty acids & glycerol) at ~30–40°C ( do NOT boil or active site denatures! ); (3) Lactase: lactose → glucose + galactose ( prevents diarrhoea/gas in lactose-intolerant people + sweeter milk ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Luôn trình bày theo công thức cơ chất → sản phẩm hòa tan + lợi ích thực tế : (1) Pectinase: pectin thành tế bào → đường tan ( tăng thể tích nước ép + làm trong nước quả ); (2) Bột giặt sinh học: proteases + lipases (mỡ → fatty acids & glycerol) ở ~30–40°C ( KHÔNG đun sôi kẻo biến tính active site! ); (3) Lactase: lactose → glucose + galactose ( ngừa tiêu chảy/đầy hơi cho người bất dung nạp lactose + sữa ngọt hơn ).",
+      "duration": 74.57,
+      "startTime": 1030.43,
+      "endTime": 1105.0,
+      "audioUrl": "/audio/lectures/biology/21/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying boiling water \"kills\" enzymes in biological washing powders, or saying stain molecules \"evaporate\"! Enzymes are non-living protein molecules — they denature (lose active site shape), and stains must be hydrolysed from insoluble macromolecules into soluble small molecules!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết rằng nước sôi \"giết chết (kills)\" enzyme trong bột giặt sinh học, hoặc nói vết bẩn \"bay hơi\"! Enzyme là phân tử protein không phải sinh vật sống — chúng bị biến tính (denature — mất hình dạng trung tâm hoạt động) , còn vết bẩn phải được thủy phân từ đại phân tử không tan (insoluble) thành phân tử nhỏ hòa tan (soluble) !",
+      "duration": 46.15,
+      "startTime": 1105.0,
+      "endTime": 1151.15,
+      "audioUrl": "/audio/lectures/biology/21/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🍎 Pectinase Sản xuất Nước ép Quả (Core 21.1.5)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🍎 Pectinase in Fruit Juice (Core 21.1.5). Substrate: Plant cell walls in apples and citrus fruits are glued together by an insoluble polysaccharide called pectin. 1. Increases juice volume (yield): Adding fungal pectinase breaks down pectin in cell walls, splitting cells open more easily so a much larger volume of juice is squeezed out and viscosity drops (faster filtration). 2. Clarifies cloudy juice: Pectinase digests suspended insoluble pectin fragments into soluble sugars, turning cloudy juice clear and transparent.",
+      "vi": "🍎 Pectinase Sản xuất Nước ép Quả (Core 21.1.5). Cơ chất (Substrate): Thành tế bào thực vật ở táo, cam quýt được gắn kết bởi polysaccharide không tan tên là pectin. 1. Tăng thể tích/hiệu suất nước ép (increases volume): Thêm enzyme pectinase phân giải pectin trong thành tế bào giúp tế bào vỡ dễ dàng, giải phóng thể tích nước ép lớn hơn nhiều và giảm độ nhớt (lọc nhanh hơn). 2. Làm trong nước ép (clarifies juice): Pectinase thủy phân các mảnh pectin lơ lửng gây đục thành đường hòa tan, biến nước quả đục thành trong suốt.",
+      "duration": 72.27,
+      "startTime": 1151.15,
+      "endTime": 1223.42,
+      "audioUrl": "/audio/lectures/biology/21/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "👕 Biological Washing Powders (Bột giặt Sinh học — Core 21.1.6)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "👕 Biological Washing Powders (Core 21.1.6). Stain digestion: Contain thermostable bacterial enzymes that hydrolyse large, insoluble stain molecules into small, soluble molecules that wash away in water:• Proteases: protein stains (blood, egg, grass, gravy) → soluble amino acids .• Lipases: fat/grease/oil/butter stains → soluble fatty acids & glycerol .• Amylases: starch stains → soluble maltose/sugars. Optimum temperature (~30–40°C): Saves electricity compared with boiling washes and protects delicate dyes/fabrics. NEVER boil (>60°C): High temperatures denature the enzymes (changing the shape of the active site so it is no longer complementary to the stain)!",
+      "vi": "👕 Biological Washing Powders (Bột giặt Sinh học — Core 21.1.6). Phân giải vết bẩn: Chứa enzyme bền nhiệt từ vi khuẩn giúp thủy phân các phân tử vết bẩn lớn, không tan (insoluble) thành phân tử nhỏ, hòa tan (soluble) trôi theo nước:• Proteases: vết bẩn protein (máu, trứng, cỏ, nước sốt thịt) → amino acids hòa tan.• Lipases: vết dầu mỡ, bơ (fat/grease) → fatty acids & glycerol hòa tan.• Amylases: vết tinh bột → đường maltose hòa tan. Nhiệt độ tối ưu (~30–40°C): Tiết kiệm điện năng so với giặt nước nóng và bảo vệ sợi vải mỏng. CẤM đun sôi (>60°C): Nhiệt độ quá cao làm biến tính (denature) enzyme, làm biến đổi hình dạng trung tâm hoạt động (active site) khiến enzyme mất khả năng khớp với vết bẩn!",
+      "duration": 109.21,
+      "startTime": 1223.42,
+      "endTime": 1332.63,
+      "audioUrl": "/audio/lectures/biology/21/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🥛 Lactase & Sữa Không Lactose (Supp 21.1.7)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🥛 Lactase & Lactose-Free Milk (Supp 21.1.7). Why needed: Lactose-intolerant people produce too little intestinal lactase; undigested lactose lowers gut water potential (causing osmotic diarrhoea ) and is fermented by gut bacteria releasing gas (bloating/cramps). Reaction: Enzyme lactase hydrolyses disaccharide lactose → glucose + galactose (two easily absorbed monosaccharides). Immobilised beads & sweetness: Lactase is either added directly to milk or immobilised in alginate beads (enzyme stays out of milk and can be reused continuously). Glucose + galactose taste sweeter than lactose, so less extra sugar is needed in yoghurts/ice cream!",
+      "vi": "🥛 Lactase & Sữa Không Lactose (Supp 21.1.7). Lý do cần thiết: Người bất dung nạp lactose thiếu enzyme lactase ở ruột non; đường lactose không tiêu hóa làm giảm thế nước lòng ruột (hút nước gây tiêu chảy thẩm thấu — diarrhoea ) và bị vi khuẩn ruột lên men sinh hơi (đầy bụng, đau quặn). Phản ứng: Enzyme lactase thủy phân đường đôi lactose → glucose + galactose (hai đường đơn dễ hấp thụ ngay tại ruột non). Cố định enzyme & vị ngọt tự nhiên: Lactase thường được cố định trong hạt alginate (immobilised beads) để sữa chảy qua liên tục (enzyme không lẫn vào sữa và tái sử dụng được nhiều lần). Glucose + galactose ngọt hơn lactose nên sữa chua/kem ngọt tự nhiên mà cần ít đường pha thêm!",
+      "duration": 93.91,
+      "startTime": 1332.63,
+      "endTime": 1426.54,
+      "audioUrl": "/audio/lectures/biology/21/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "🔬 Thiết kế Thí nghiệm Paper 6 ATP: Khảo sát Bột giặt Sinh học vs Bột giặt Thường (Core 21.1.6)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "🔬 Paper 6 ATP Design: Investigating Biological vs Non-Biological Washing Powders (Core 21.1.6). Independent variable: Type of detergent (biological vs non-biological, or wash temperature: 15°C, 35°C, 65°C in thermostatically controlled water baths). Controlled variables: Identical fabric squares, equal mass/volume & type of stain (e.g. 2 cm³ egg yolk), equal detergent concentration & water volume, equal pH, equal stirring rate, and equal wash duration (e.g. 15 min). Dependent variable: Percentage stain removal, dry mass lost from stained cloth, or light transmission of rinse water measured with a colorimeter.",
+      "vi": "🔬 Thiết kế Thí nghiệm Paper 6 ATP: Khảo sát Bột giặt Sinh học vs Bột giặt Thường (Core 21.1.6). Biến độc lập (Independent variable): Loại bột giặt (sinh học vs thường, hoặc nhiệt độ giặt: 15°C, 35°C, 65°C giữ ổn định bằng bể điều nhiệt — water bath). Biến cố định (Controlled variables): Mảnh vải cotton cùng kích thước/chất liệu, cùng thể tích & loại vết bẩn (VD: 2 cm³ lòng đỏ trứng), cùng nồng độ bột giặt & thể tích nước, cùng pH, cùng tốc độ khuấy và cùng thời gian giặt (VD: 15 phút). Biến phụ thuộc (Dependent variable): Phần trăm diện tích/khối lượng vết bẩn được tẩy sạch, hoặc độ truyền sáng của nước giặt đo bằng máy so màu (colorimeter).",
+      "duration": 99.6,
+      "startTime": 1426.54,
+      "endTime": 1526.14,
+      "audioUrl": "/audio/lectures/biology/21/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Milk is passed repeatedly through a column containing alginate beads with immobilised lactase enzyme. How does the milk leaving the column differ from the milk entering the column? A. Lower lactose concentration, higher glucose and galactose concentration, and sweeter taste B. Higher lactose concentration, lower amino acid concentration, and sour taste C. Lower protein concentration, higher fatty acid concentration, and cloudy appearance D. Identical sugar concentrations, but contaminated with dissolved lactase enzyme ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Immobilised lactase hydrolyses disaccharide lactose into monosaccharides glucose and galactose , so lactose concentration drops while glucose and galactose rise, making the lactose-free milk taste naturally sweeter (A). Because the enzyme is trapped inside alginate beads, it does not contaminate the milk (eliminating D).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Milk is passed repeatedly through a column containing alginate beads with immobilised lactase enzyme. How does the milk leaving the column differ from the milk entering the column? (Sữa được cho chảy lặp lại qua cột chứa các hạt alginate gắn cố định enzyme lactase. Sữa chảy ra khỏi cột khác với sữa đi vào cột như thế nào?) A. Nồng độ lactose thấp hơn, glucose và galactose cao hơn, vị ngọt hơn B. Nồng độ lactose cao hơn, amino acid thấp hơn, vị chua C. Nồng độ protein thấp hơn, acid béo cao hơn, đục hơn D. Nồng độ đường giữ nguyên nhưng bị lẫn enzyme lactase hòa tan ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Enzyme lactase cố định thủy phân đường đôi lactose thành hai đường đơn glucose và galactose , làm giảm lactose, tăng glucose + galactose và giúp sữa không lactose có vị ngọt tự nhiên hơn (A). Nhờ enzyme nằm cố định trong hạt alginate nên không bị lẫn vào sữa thành phẩm (loại D).",
+      "duration": 132.49,
+      "startTime": 1526.14,
+      "endTime": 1658.63,
+      "audioUrl": "/audio/lectures/biology/21/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦/🟩 CORE & SUPPLEMENT • Paper 4 Structured [5 marks] (a) Explain why adding pectinase to crushed apples increases both the volume and clarity of apple juice produced. [2](b) A student washes two identical blood-stained shirts using a biological washing powder: Shirt P at 35°C and Shirt Q at 85°C. Shirt P becomes clean, whereas the blood stain remains on Shirt Q. Explain these results. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Pectinase breaks down pectin cementing plant cell walls together, releasing more cell sap to increase juice volume/yield [1m]; breaking down insoluble suspended pectin molecules into soluble sugars makes cloudy juice clear/transparent [1m]. (b) Blood contains insoluble protein; at 35°C (near optimum temperature), protease enzymes digest the insoluble protein stain into soluble amino acids that dissolve in water [1m]. At 85°C, high thermal energy denatures the protease enzymes [1m], permanently changing the shape of the active site so it is no longer complementary to the protein substrate [1m]. 💡 Intuition Check: Every enzyme-wash explanation needs 3 keywords: protease/lipase -> insoluble to soluble products -> denatures active site at high temperature!",
+      "vi": "BÀI MẪU 2 🟦/🟩 CORE & SUPPLEMENT • Paper 4 Structured [5 marks] (a) Explain why adding pectinase to crushed apples increases both the volume and clarity of apple juice produced. (b) A student washes two identical blood-stained shirts using a biological washing powder: Shirt P at 35°C and Shirt Q at 85°C. Shirt P becomes clean, whereas the blood stain remains on Shirt Q. Explain these results. ((a) Giải thích tại sao thêm pectinase vào táo nghiền làm tăng cả thể tích lẫn độ trong của nước táo. (b) Một học sinh giặt hai chiếc áo dính máu giống hệt nhau bằng bột giặt sinh học: Áo P ở 35°C và Áo Q ở 85°C. Áo P sạch vết máu, còn Áo Q vẫn còn nguyên vết máu. Giải thích kết quả. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Pectinase phân giải pectin gắn kết thành tế bào thực vật, giải phóng nhiều dịch bào hơn làm tăng thể tích/hiệu suất nước ép ; đồng thời phân giải các hạt pectin không tan lơ lửng thành đường tan giúp nước ép đục trở nên trong suốt (clear) . (b) Vết máu chứa protein không tan; ở 35°C (gần nhiệt độ tối ưu), enzyme protease thủy phân protein không tan thành các amino acid hòa tan trôi theo nước . Ở 85°C, nhiệt năng quá cao làm biến tính (denatures) enzyme protease , làm thay đổi vĩnh viễn hình dạng trung tâm hoạt động (active site) khiến cơ chất protein không còn gắn khớp bổ sung được nữa .",
+      "duration": 190.09,
+      "startTime": 1658.63,
+      "endTime": 1848.72,
+      "audioUrl": "/audio/lectures/biology/21/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🏭 3. Large-Scale Production: The Industrial Fermenter (Nồi lên men Công nghiệp — Supp 21.1.8)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🏭 3. Large-Scale Production: The Industrial Fermenter (Supplement 21.1.8).",
+      "vi": "🏭 3. Nồi lên men Công nghiệp — Supp 21.1.8 .",
+      "duration": 8.58,
+      "startTime": 1848.72,
+      "endTime": 1857.3,
+      "audioUrl": "/audio/lectures/biology/21/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: An industrial fermenter is a five-star luxury hotel exclusively for one chosen microbe species: first steam-blast the rooms so zero rival guests survive ( aseptic sterilisation ), then pump in food (glucose + nitrogen), breathable air ( sterile O₂ sparger ), gentle circulation ( stirrers ), pH buffers, and air-conditioning ( water-cooled jacket ) because billions of respiring guests generate enough body heat to cook their own enzymes!",
+      "vi": "🎯 Hình dung đời thường: Nồi lên men công nghiệp (industrial fermenter) giống như khách sạn 5 sao dành riêng cho đúng một loài vi sinh vật quý: đầu tiên xông hơi nước nóng diệt sạch mọi vị khách lạ mặt ( tiệt trùng vô khuẩn ), sau đó phục vụ tận nơi thức ăn (glucose + nguồn nitơ), khí thở vô trùng ( vòi sục O₂ ), đảo trộn êm ái ( cánh khuấy ), cân bằng pH, và bật máy lạnh hết công suất ( áo nước làm mát ) vì hàng tỷ vị khách đang hô hấp tỏa nhiệt đủ sức tự luộc chín enzyme của chính mình!",
+      "duration": 64.53,
+      "startTime": 1857.3,
+      "endTime": 1921.83,
+      "audioUrl": "/audio/lectures/biology/21/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: For Supplement 21.1.8, pair every controlled condition with its biological reason : (1) Temperature / cooling jacket: removes respiratory heat to prevent enzyme denaturation; (2) pH probe + acid/alkali: keeps optimum pH so enzymes don't denature; (3) Oxygen sparger: aerobic respiration; (4) Nutrient supply: glucose for respiration + nitrogen/amino acids for protein synthesis; (5) Waste removal: prevents toxic build-up/pressure; (6) Paddles: mixes microbes, O₂ , nutrients & heat evenly; (7) Steam: kills competing microbes without chemical residue.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Ở Supplement 21.1.8, luôn ghép đôi mỗi thông số điều khiển với lý do sinh học : (1) Nhiệt độ / áo nước lạnh: giải nhiệt hô hấp để tránh biến tính enzyme; (2) Đầu dò pH + acid/kiềm: giữ pH tối ưu để enzyme không biến tính; (3) Sục khí oxy: cho hô hấp hiếu khí; (4) Dinh dưỡng: glucose cho hô hấp + nitơ/amino acid để tổng hợp protein; (5) Xả chất thải: tránh ngộ độc/tăng áp suất; (6) Cánh khuấy: phân bố đều vi sinh vật, O₂ , dinh dưỡng & nhiệt; (7) Hơi nước nóng: diệt tạp khuẩn mà không để lại hóa chất tồn dư.",
+      "duration": 86.38,
+      "startTime": 1921.83,
+      "endTime": 2008.21,
+      "audioUrl": "/audio/lectures/biology/21/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying the water jacket \"heats up the fermenter to keep bacteria warm\"! Once fermentation is running, billions of respiring microbes release massive heat — the jacket circulates COLD water to COOL the vessel down so enzymes do not denature!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết nhầm rằng áo nước bao ngoài (water jacket) dùng để \"đun ấm nồi lên men cho vi khuẩn khỏi lạnh\"! Khi quá trình lên men chạy, hàng tỷ vi sinh vật hô hấp tỏa nhiệt cực lớn — áo nước phải bơm NƯỚC LẠNH để LÀM MÁT nhằm ngăn enzyme bị biến tính!",
+      "duration": 36.3,
+      "startTime": 2008.21,
+      "endTime": 2044.51,
+      "audioUrl": "/audio/lectures/biology/21/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Nồi lên men công nghiệp (Industrial fermenters)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Industrial fermenters are sterilised stainless-steel vessels (holding thousands of dm³) used for the large-scale culture of bacteria (e.g. transgenic E. coli producing human insulin) and fungi (e.g. Penicillium mould producing the antibiotic penicillin, Aspergillus producing pectinase, or Fusarium producing mycoprotein) under tightly controlled optimum conditions.",
+      "vi": "Nồi lên men công nghiệp (Industrial fermenters) là các bồn thép không gỉ tiệt trùng cỡ lớn (hàng nghìn dm³) dùng để nuôi cấy quy mô lớn vi khuẩn (bacteria) (VD: E. coli chuyển gen sản xuất insulin người) và nấm (fungi) (VD: nấm mốc Penicillium sản xuất kháng sinh penicillin, Aspergillus sản xuất pectinase, hoặc Fusarium sản xuất mycoprotein) dưới các điều kiện tối ưu được kiểm soát chặt chẽ.",
+      "duration": 56.66,
+      "startTime": 2044.51,
+      "endTime": 2101.17,
+      "audioUrl": "/audio/lectures/biology/21/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🎛️ Mô hình Phân tích Nồi lên men Tương tác (Interactive Fermenter Analyzer)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🎛️ Interactive Industrial Fermenter Analyzer. 👆 Hover Over Any Vessel Component. Inspect how temperature, pH, dissolved oxygen, nutrient mixing, waste removal, and steam sterilisation keep microorganisms growing at maximum rate.",
+      "vi": "🎛️ Mô hình Phân tích Nồi lên men Tương tác. 👆 Khám phá cách kiểm soát nhiệt độ, pH, oxy hòa tan, trộn đều dinh dưỡng, xả chất thải và tiệt trùng hơi nước giúp vi sinh vật sinh trưởng ở tốc độ cực đại.",
+      "duration": 31.54,
+      "startTime": 2101.17,
+      "endTime": 2132.71,
+      "audioUrl": "/audio/lectures/biology/21/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "1. Temperature & Water-Cooled Jacket (Nhiệt độ & Áo nước làm mát)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "1. Temperature & Water-Cooled Jacket. Respiring microbes release huge quantities of thermal energy (heat) . A temperature probe triggers cold water flow through the outer water-cooled jacket to maintain optimum temperature — preventing microbial enzymes from denaturing (if too hot) or slowing down due to low kinetic energy (if too cold).",
+      "vi": "1. Temperature & Water-Cooled Jacket (Nhiệt độ & Áo nước làm mát). Vi sinh vật hô hấp tỏa lượng lớn nhiệt năng trao đổi chất (thermal energy) . Đầu dò nhiệt kích hoạt dòng nước lạnh chạy qua áo nước bao ngoài để giữ nhiệt độ tối ưu (optimum temperature) — ngăn enzyme vi sinh vật bị biến tính (denature) do quá nóng hoặc giảm động năng va chạm do quá lạnh.",
+      "duration": 48.34,
+      "startTime": 2132.71,
+      "endTime": 2181.05,
+      "audioUrl": "/audio/lectures/biology/21/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "2. pH Probes & Buffers (Đầu dò pH & Đệm Acid/Kiềm)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "2. pH Probes & Acid/Alkali Buffers. Metabolic wastes such as dissolved CO₂ or organic acids alter broth pH. Electronic pH probes monitor pH continuously and inject dilute acid or alkali (buffers) to maintain constant optimum pH , preventing active-site denaturation of enzymes.",
+      "vi": "2. pH Probes & Buffers (Đầu dò pH & Đệm Acid/Kiềm). Chất thải trao đổi chất như khí CO₂ hòa tan hoặc acid hữu cơ làm lệch pH dịch nuôi. Đầu dò pH đo liên tục và bơm tự động dung dịch acid hoặc kiềm (buffers) để duy trì pH tối ưu ổn định, bảo vệ trung tâm hoạt động của enzyme.",
+      "duration": 46.16,
+      "startTime": 2181.05,
+      "endTime": 2227.21,
+      "audioUrl": "/audio/lectures/biology/21/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "3. Oxygen Supply / Sparger (Cấp Oxy vô trùng)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "3. Oxygen Supply (Sterile Sparger). Filtered, sterile compressed air is bubbled through a bottom sparger into fine bubbles (large surface area) to supply dissolved oxygen for aerobic respiration , releasing energy for rapid cell division and protein synthesis. Inlet filters block foreign microbes.",
+      "vi": "3. Oxygen Supply / Sparger (Cấp Oxy vô trùng). Không khí nén được lọc tiệt trùng rồi sục qua vòi phun đáy ( sparger ) thành hàng triệu bọt khí nhỏ (tăng diện tích bề mặt) nhằm cung cấp oxy hòa tan cho hô hấp hiếu khí (aerobic respiration) , giải phóng năng lượng tối đa cho phân bào và tổng hợp protein.",
+      "duration": 43.95,
+      "startTime": 2227.21,
+      "endTime": 2271.16,
+      "audioUrl": "/audio/lectures/biology/21/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "4. Paddles / Stirrers (Cánh khuấy trộn đều)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "4. Paddles / Stirrers (Impellers). Motor-driven paddles mix the culture continuously so microorganisms stay in suspension (do not settle at the bottom), stay in constant contact with nutrients and dissolved O₂ , and keep temperature uniform right up to the cooling jacket.",
+      "vi": "4. Paddles / Stirrers (Cánh khuấy trộn đều). Cánh khuấy quay bằng motor giữ vi sinh vật lơ lửng (in suspension) không bị lắng đáy, giúp tế bào tiếp xúc đều với chất dinh dưỡng và oxy hòa tan , đồng thời tản nhiệt đồng đều ra thành áo nước làm mát.",
+      "duration": 35.61,
+      "startTime": 2271.16,
+      "endTime": 2306.77,
+      "audioUrl": "/audio/lectures/biology/21/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "5. Nutrient Supply & 6. Waste Products (Dinh dưỡng & Xả thải)",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "5. Nutrient Supply & 6. Waste Removal. Nutrients: Sterile glucose/starch (carbon & respiratory energy) + ammonium/nitrate ions or amino acids (nitrogen for amino acid, protein & DNA synthesis ). Waste products: Gas vents release excess CO₂ (preventing explosion/acidification) and harvesting removes toxic wastes before they inhibit growth.",
+      "vi": "5. Nutrient Supply & 6. Waste Products (Dinh dưỡng & Xả thải). Dinh dưỡng: Cấp glucose/tinh bột vô trùng (nguồn carbon & năng lượng hô hấp) + ion amoni/nitrat hoặc amino acid (nguồn nitơ để tổng hợp amino acid, protein & ADN ). Chất thải: Van thoát khí xả CO₂ dư (tránh tăng áp/axit hóa) và thu hoạch dịch nuôi kịp thời trước khi chất thải tích tụ gây độc.",
+      "duration": 58.65,
+      "startTime": 2306.77,
+      "endTime": 2365.42,
+      "audioUrl": "/audio/lectures/biology/21/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "7. Aseptic Steam Sterilisation (Tiệt trùng Hơi nước Quá nhiệt)",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "7. Aseptic Steam Sterilisation. Before inoculation, high-pressure superheated steam sterilises the fermenter and pipes to kill competing bacteria and fungi (which would compete for nutrients/ O₂ and contaminate the product with toxins). Steam condenses to pure water, leaving zero chemical disinfectant residue !",
+      "vi": "7. Aseptic Steam Sterilisation (Tiệt trùng Hơi nước Quá nhiệt). Trước khi cấy giống, bồn và đường ống được xông hơi nước nóng áp suất cao (superheated steam) để tiêu diệt mọi vi khuẩn/nấm tạp nhiễm (tránh cạnh tranh dinh dưỡng/ O₂ và tiết độc tố làm hỏng sản phẩm). Hơi nước ngưng tụ thành nước tinh khiết, không để lại tồn dư hóa chất diệt khuẩn !",
+      "duration": 46.83,
+      "startTime": 2365.42,
+      "endTime": 2412.25,
+      "audioUrl": "/audio/lectures/biology/21/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Why is superheated steam preferred over liquid chemical bleach when sterilising an industrial fermenter before adding Penicillium fungus? A. Steam provides carbon and nitrogen nutrients for the Penicillium fungus. B. Steam kills competing microorganisms and condenses to pure water leaving no toxic chemical residue. C. Steam permanently denatures the stainless-steel paddles so they spin faster. D. Steam removes all oxygen so Penicillium must respire anaerobically. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: High-pressure steam kills unwanted competing bacteria and fungi on all internal surfaces and condenses into harmless sterile water, leaving zero toxic residue (whereas leftover bleach would kill the inoculated Penicillium culture!).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Why is superheated steam preferred over liquid chemical bleach when sterilising an industrial fermenter before adding Penicillium fungus? (Tại sao hơi nước quá nhiệt được ưu tiên hơn thuốc tẩy hóa học dạng lỏng khi tiệt trùng nồi lên men công nghiệp trước khi cấy nấm Penicillium?) A. Hơi nước cung cấp nguồn dinh dưỡng carbon và nitơ cho nấm Penicillium. B. Hơi nước diệt sạch vi sinh vật cạnh tranh và ngưng tụ thành nước tinh khiết không để lại tồn dư hóa chất độc hại. C. Hơi nước làm biến tính cánh khuấy thép giúp quay nhanh hơn. D. Hơi nước đuổi hết oxy để Penicillium bắt buộc hô hấp kỵ khí. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Hơi nước áp suất cao tiêu diệt triệt để vi khuẩn và nấm mốc tạp nhiễm trên mọi khe kẽ bề mặt rồi ngưng tụ thành nước vô trùng vô hại, không để lại bất kỳ hóa chất tồn dư nào (nếu dùng thuốc tẩy thì lượng hóa chất sót lại sẽ giết chết luôn giống Penicillium vừa cấy vào!).",
+      "duration": 120.67,
+      "startTime": 2412.25,
+      "endTime": 2532.92,
+      "audioUrl": "/audio/lectures/biology/21/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] An industrial fermenter is used to grow genetically modified bacteria to manufacture a human protein.(a) State two nutrients that must be supplied in the liquid medium and state one use of each by the bacteria. [2](b) Explain what would happen to protein production if:(i) the water-cooled jacket stopped working [2](ii) the stirring paddles stopped rotating. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Glucose / carbohydrate: substrate for aerobic respiration to release energy [1m]. 2. Amino acids / ammonium or nitrate ions (nitrogen source): used to synthesise amino acids and human proteins / DNA [1m]. (b)(i) Respiration by billions of bacteria releases thermal energy (heat), causing temperature inside the fermenter to rise sharply [1m]; bacterial enzymes denature (active sites change shape), halting metabolism and killing the bacteria so protein production falls to zero [1m]. (b)(ii) Bacteria sink/settle to the bottom of the vessel [1m] and receive uneven/insufficient contact with dissolved oxygen and nutrients (plus local hot spots form), reducing aerobic respiration and lowering protein yield [1m]. 💡 Intuition Check: Notice how \"explain what happens if component X fails\" is Cambridge's favourite way to test fermenter engineering — trace failure -> physical change -> biological enzyme/respiration effect!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] An industrial fermenter is used to grow genetically modified bacteria to manufacture a human protein.(a) State two nutrients that must be supplied in the liquid medium and state one use of each by the bacteria. (b) Explain what would happen to protein production if:(i) the water-cooled jacket stopped working (ii) the stirring paddles stopped rotating. (Một nồi lên men công nghiệp được dùng để nuôi vi khuẩn biến đổi gen sản xuất protein người. (a) Nêu hai chất dinh dưỡng phải cung cấp trong môi trường lỏng và nêu một vai trò của mỗi chất. (b) Giải thích điều gì xảy ra với sản lượng protein nếu: (i) áo nước làm mát ngừng hoạt động ; (ii) cánh khuấy ngừng quay .) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Glucose / carbohydrate: nguyên liệu cho hô hấp hiếu khí giải phóng năng lượng . 2. Amino acids / ion amoni hoặc nitrat (nguồn nitơ): dùng để tổng hợp amino acid và protein người / ADN . (b)(i) Hô hấp của hàng tỷ vi khuẩn tỏa nhiệt năng lớn làm nhiệt độ trong nồi tăng vọt ; enzyme vi khuẩn bị biến tính (denature — thay đổi trung tâm hoạt động) làm ngừng trao đổi chất và chết vi khuẩn, khiến sản lượng protein tụt về 0 . (b)(ii) Vi khuẩn bị lắng chìm xuống đáy bồn , không được tiếp xúc đều với oxy hòa tan và chất dinh dưỡng (đồng thời xuất hiện điểm nóng cục bộ), làm giảm hô hấp hiếu khí và sụt giảm mạnh sản lượng protein .",
+      "duration": 203.02,
+      "startTime": 2532.92,
+      "endTime": 2735.94,
+      "audioUrl": "/audio/lectures/biology/21/s03_b13.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🧬 4. Genetic Engineering: Recombinant Insulin & GM Crops (Kỹ thuật Di truyền & Cây trồng GM)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🧬 4. Genetic Engineering: Recombinant Human Insulin & GM Crops.",
+      "vi": "🧬 4. Kỹ thuật Di truyền & Cây trồng GM .",
+      "duration": 9.4,
+      "startTime": 2735.94,
+      "endTime": 2745.34,
+      "audioUrl": "/audio/lectures/biology/21/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Recombinant DNA engineering works like splicing a strip of film using notched puzzle scissors: cut out the human insulin gene with a specific restriction enzyme (leaving jagged Velcro-like sticky ends ), cut a circular bacterial plasmid with the EXACT SAME scissors so the Velcro teeth match ( complementary sticky ends ), then glue the backbone shut with DNA ligase !",
+      "vi": "🎯 Hình dung đời thường: Quy trình tạo ADN tái tổ hợp giống hệt ghép phim bằng chiếc kéo răng cưa định hình: dùng một enzyme cắt giới hạn (restriction enzyme) cắt rời gen insulin người (để lại 2 đầu răng cưa nhám như khóa dán Velcro gọi là đầu dính — sticky ends ), dùng ĐÚNG CÙNG CHIẾC KÉO ĐÓ cắt mở vòng plasmid vi khuẩn để tạo khớp răng cưa ăn khớp hoàn hảo, rồi dùng keo dán DNA ligase hàn kín mạch!",
+      "duration": 52.46,
+      "startTime": 2745.34,
+      "endTime": 2797.8,
+      "audioUrl": "/audio/lectures/biology/21/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the exact Supplement 6-step insulin chain (21.2.3) in chronological order: (1) Restriction enzyme isolates human gene → sticky ends ; (2) Same restriction enzyme cuts bacterial plasmid → complementary sticky ends ; (3) DNA ligase joins human DNA + plasmid → recombinant plasmid ; (4) Insert recombinant plasmid into bacteria; (5) Multiply bacteria in fermenters; (6) Bacteria express human gene to make human insulin. Plus balance GM crop pros & cons (soya, maize, cotton, Golden Rice).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc làu chuỗi 6 bước sản xuất insulin chuẩn Supplement (21.2.3) theo đúng thứ tự thời gian: (1) Restriction enzyme cắt cô lập gen người → tạo sticky ends ; (2) CÙNG loại restriction enzyme cắt mở plasmid vi khuẩn → tạo complementary sticky ends ; (3) DNA ligase nối gen người + plasmid → tạo recombinant plasmid ; (4) Đưa plasmid tái tổ hợp vào vi khuẩn; (5) Nhân bản vi khuẩn trong nồi lên men; (6) Vi khuẩn biểu hiện (express) gen người tạo insulin người. Kết hợp nắm vững ưu & nhược điểm cây GM (đậu tương, ngô, bông, Gạo Vàng).",
+      "duration": 83.84,
+      "startTime": 2797.8,
+      "endTime": 2881.64,
+      "audioUrl": "/audio/lectures/biology/21/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Confusing the two enzymes or forgetting the word \"SAME\" ! Restriction enzymes CUT DNA to create sticky ends (and you MUST use the same restriction enzyme on both human DNA and plasmid so sticky ends are complementary); DNA ligase JOINS the DNA backbones together!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nhầm lẫn chức năng hai loại enzyme hoặc bỏ quên chữ \"CÙNG LOẠI (SAME)\" ! Restriction enzymes dùng để CẮT ADN tạo đầu dính (và BẮT BUỘC phải cắt cả ADN người lẫn plasmid bằng cùng một restriction enzyme thì các đầu dính mới bổ sung cho nhau); còn DNA ligase dùng để NỐI khung ADN!",
+      "duration": 43.76,
+      "startTime": 2881.64,
+      "endTime": 2925.4,
+      "audioUrl": "/audio/lectures/biology/21/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Định nghĩa Chuẩn Core (21.2.1):",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Core Definition (21.2.1): Genetic engineering is changing the genetic material of an organism by removing, changing, or inserting individual genes (often transferring a gene from one species into another to create a transgenic / genetically modified organism). Four Core Syllabus Examples (21.2.2): (a) Inserting the human insulin gene into bacteria to produce human insulin ; (b) inserting genes into crop plants for herbicide resistance (e.g. soya); (c) inserting genes into crops for insect pest resistance (e.g. Bt maize & cotton); (d) inserting genes into crops to provide additional vitamins (e.g. Golden Rice enriched with beta-carotene / Vitamin A precursor).",
+      "vi": "Định nghĩa Chuẩn Core (21.2.1): Genetic engineering (kỹ thuật di truyền) là changing the genetic material of an organism by removing, changing, or inserting individual genes (làm thay đổi vật chất di truyền của một sinh vật bằng cách loại bỏ, biến đổi hoặc chèn thêm từng gen riêng lẻ). 4 Ví dụ Trọng tâm Đề cương (Core 21.2.2): (a) Chèn gen người vào vi khuẩn để sản xuất insulin người (human insulin) ; (b) chèn gen vào cây trồng tạo tính kháng thuốc diệt cỏ (herbicide resistance) như đậu tương GM; (c) chèn gen tạo tính kháng sâu hại như ngô & bông Bt ; (d) chèn gen bổ sung vitamin như Gạo Vàng (Golden Rice) giàu beta-carotene (tiền chất Vitamin A).",
+      "duration": 91.25,
+      "startTime": 2925.4,
+      "endTime": 3016.65,
+      "audioUrl": "/audio/lectures/biology/21/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "✂️🧬 6 Bước Sản xuất Insulin Người bằng Vi khuẩn Tái tổ hợp (Supplement 21.2.3 a–f)",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "✂️🧬 Six-Step Bacterial Production of Human Insulin (Supplement 21.2.3 a–f). Recombinant Plasmid SVG Diagram (a) Isolation of human gene: Restriction enzymes recognise specific DNA base sequences and cut out the DNA making up the human insulin gene from a human chromosome, leaving short unpaired single-stranded overhangs of bases called sticky ends. (b) Cutting bacterial plasmid DNA: Circular plasmid DNA extracted from bacteria is cut open using the EXACT SAME restriction enzyme , forming complementary sticky ends (unpaired bases complementary via A–T and C–G base pairing). (c) Forming a recombinant plasmid: The isolated human DNA and cut plasmid DNA are mixed; complementary sticky ends pair up, and the enzyme DNA ligase joins the sugar-phosphate backbones together to form a recombinant plasmid. (d) Insertion into bacteria: Recombinant plasmids are inserted into host bacteria (acting as vectors carrying the human gene). (e) Multiplication in fermenters: Bacteria containing the recombinant plasmids are cultured in industrial fermenters under optimum conditions, dividing rapidly by binary fission so millions of transgenic bacteria carry cloned copies of the human gene. (f) Gene expression & purification: The bacteria express (transcribe and translate) the human gene to synthesise pure human insulin protein , which is extracted, purified, and bottled for diabetic patients.",
+      "vi": "✂️🧬 6 Bước Sản xuất Insulin Người bằng Vi khuẩn Tái tổ hợp (Supplement 21.2.3 a–f). Recombinant Plasmid SVG Diagram (a) Cô lập gen người: Dùng enzyme cắt giới hạn (restriction enzymes) cắt đoạn ADN chứa gen quy định insulin người ra khỏi nhiễm sắc thể người, tạo các đầu mạch đơn nhô ra có các base chưa bắt cặp gọi là đầu dính (sticky ends). (b) Cắt ADN plasmid vi khuẩn: Tách vòng ADN plasmid từ vi khuẩn và cắt mở bằng CHÍNH CÙNG LOẠI enzyme cắt giới hạn đó , tạo ra các đầu dính bổ sung khớp cặp base A–T , C–G. (c) Tạo plasmid tái tổ hợp: Trộn gen người với plasmid đã cắt để các đầu dính bổ sung bắt cặp với nhau, sau đó dùng enzyme nối DNA ligase hàn liền khung đường-phosphate tạo thành plasmid tái tổ hợp (recombinant plasmid). (d) Đưa vào vi khuẩn: Chuyển các plasmid tái tổ hợp vào trong tế bào vi khuẩn nhận (biến nạp). (e) Nhân bản vi khuẩn (Multiplication): Nuôi cấy vi khuẩn mang plasmid tái tổ hợp trong nồi lên men công nghiệp (industrial fermenters) ở điều kiện tối ưu để chúng phân đôi nhanh chóng tạo hàng tỷ bản sao mang gen người. (f) Biểu hiện gen (Expression): Vi khuẩn biểu hiện (express) gen người (phiên mã & dịch mã) để tổng hợp protein insulin người tinh khiết, sau đó được chiết tách và đóng lọ điều trị tiểu đường tuýp 1.",
+      "duration": 190.13,
+      "startTime": 3016.65,
+      "endTime": 3206.78,
+      "audioUrl": "/audio/lectures/biology/21/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🌾 Cây trồng Biến đổi Gen (GM Crops): Đậu tương, Ngô, Bông & Gạo Vàng (Supplement 21.2.4)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🌾 Genetically Modified (GM) Crops: Soya, Maize, Cotton & Golden Rice (Supplement 21.2.4). GM Crop Trait & Example: Herbicide Resistance (e.g. GM Soya, GM Maize); ✅ Advantages (Arguments For): Farmers spray broad-spectrum herbicide after crops emerge: kills competing weeds without harming the crop → reduces competition for light, water & mineral ions, boosts crop yield, and reduces labour/tillage soil erosion.; ⚠️ Disadvantages & Risks (Arguments Against): Pollen carrying the herbicide-resistance gene may cross-pollinate wild relative weeds, creating herbicide-resistant \"superweeds\" ; heavy herbicide spraying wipes out wildflowers and reduces farmland biodiversity. GM Crop Trait & Example: Insect Pest Resistance (e.g. Bt Cotton, Bt Maize); ✅ Advantages (Arguments For): Bacterial Bt toxin gene kills only caterpillars/borers that chew the crop → higher yields, lower spending on chemical insecticide sprays, and protects non-target beneficial insects (bees, ladybirds) that don't eat the crop.; ⚠️ Disadvantages & Risks (Arguments Against): Strong natural selection pressure causes pest populations to evolve resistance to Bt toxin ; toxin in pollen might harm non-target caterpillars (e.g. butterflies) feeding nearby. GM Crop Trait & Example: Nutritional Enrichment & Socio-Economic Impact (e.g.",
+      "vi": "🌾 Cây trồng Biến đổi Gen (GM Crops): Đậu tương, Ngô, Bông & Gạo Vàng (Supplement 21.2.4). Đặc tính & Ví dụ Cây GM: Kháng Thuốc diệt cỏ (Herbicide Resistance) (Đậu tương GM Soya, Ngô GM); ✅ Ưu điểm (Advantages): Nông dân phun thuốc diệt cỏ diện rộng diệt sạch cỏ dại mà không hại cây trồng → giảm cạnh tranh ánh sáng, nước, ion khoáng; tăng năng suất và giảm công làm cỏ.; ⚠️ Nhược điểm & Rủi ro (Disadvantages): Hạt phấn mang gen kháng thuốc có thể thụ phấn chéo sang họ hàng cỏ dại tạo \"siêu cỏ dại\" (superweeds) kháng thuốc; lạm dụng thuốc diệt cỏ làm mất hoa dại và giảm đa dạng sinh học. Đặc tính & Ví dụ Cây GM: Kháng Sâu hại (Bông Bt Cotton, Ngô Bt Maize); ✅ Ưu điểm (Advantages): Cây tự tổng hợp độc tố Bt chỉ diệt sâu đục thân/ăn lá → tăng sản lượng, giảm chi phí phun thuốc trừ sâu hóa học, và bảo vệ côn trùng có ích (ong thụ phấn, bọ rùa) không ăn lá cây trồng.; ⚠️ Nhược điểm & Rủi ro (Disadvantages): Áp lực chọn lọc tự nhiên mạnh làm quần thể sâu hại tiến hóa kháng độc tố Bt ; phấn hoa chứa độc tố có thể gây hại cho ấu trùng bướm vô hại sống lân cận.",
+      "duration": 169.1,
+      "startTime": 3206.78,
+      "endTime": 3375.88,
+      "audioUrl": "/audio/lectures/biology/21/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ During the genetic engineering of bacteria to produce human insulin, why must the bacterial plasmid be cut with the same restriction enzyme that was used to isolate the human insulin gene? A. To catalyse the joining of sugar-phosphate backbones without needing DNA ligase B. To produce complementary sticky ends so base pairing can occur between the human gene and plasmid C. To convert bacterial RNA into human amino acids before fermentation D. To destroy all bacterial ribosomes inside the host cell ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Each restriction enzyme recognises a specific base sequence and leaves a specific single-stranded overhang. Cutting both human DNA and plasmid DNA with the same restriction enzyme produces complementary sticky ends that pair by complementary base pairing ( A–T , C–G ) before DNA ligase seals the backbone (eliminating A, C, and D).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ During the genetic engineering of bacteria to produce human insulin, why must the bacterial plasmid be cut with the same restriction enzyme that was used to isolate the human insulin gene? (Trong quy trình chuyển gen vào vi khuẩn để sản xuất insulin người, tại sao plasmid vi khuẩn bắt buộc phải được cắt bằng cùng loại enzyme cắt giới hạn đã dùng để cô lập gen insulin người?) A. Để xúc tác nối khung đường-phosphate mà không cần DNA ligase B. Để tạo các đầu dính bổ sung giúp bắt cặp base giữa gen người và plasmid C. Để biến đổi ARN vi khuẩn thành amino acid người trước khi lên men D. Để phá hủy toàn bộ ribosome trong tế bào vi khuẩn chủ ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mỗi enzyme cắt giới hạn nhận diện một trình tự base đặc hiệu và tạo đầu nhô mạch đơn đặc trưng. Cắt cả ADN người và ADN plasmid bằng cùng loại restriction enzyme mới tạo ra các đầu dính bổ sung khớp cặp base ( A–T , C–G ) trước khi DNA ligase hàn liền khung mạch (loại A, C, D).",
+      "duration": 139.49,
+      "startTime": 3375.88,
+      "endTime": 3515.37,
+      "audioUrl": "/audio/lectures/biology/21/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] (a) Outline how a recombinant plasmid containing the human insulin gene is produced from human DNA and bacterial plasmid DNA, and how it is then used to manufacture human insulin. [4](b) Maize crops can be genetically modified to produce an insecticidal toxin ( Bt maize). State one advantage and one disadvantage of growing Bt maize. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Cut out/isolate the human insulin gene using a restriction enzyme to leave sticky ends , and cut bacterial plasmid DNA with the same restriction enzyme to form complementary sticky ends [1m].2. Mix the human gene and cut plasmid and join them using DNA ligase to form a recombinant plasmid [1m].3. Insert the recombinant plasmid into host bacteria [1m].4. Culture/multiply the bacteria in an industrial fermenter where they express the human gene to synthesise human insulin (which is extracted and purified) [1m]. (b) Advantage: Higher maize yield / less chemical insecticide spray needed, saving money and protecting non-target beneficial insects like bees [1m]. Disadvantage: Insect pests may evolve resistance to the Bt toxin over time (or: GM seeds are expensive and must be bought each season / toxin may affect non-target caterpillars) [1m]. 💡 Intuition Check: Underline the 5 golden terms in every insulin answer: restriction enzyme -> SAME restriction enzyme / complementary sticky ends -> DNA ligase -> recombinant plasmid -> express in fermenter!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] (a) Outline how a recombinant plasmid containing the human insulin gene is produced from human DNA and bacterial plasmid DNA, and how it is then used to manufacture human insulin. (b) Maize crops can be genetically modified to produce an insecticidal toxin ( Bt maize). State one advantage and one disadvantage of growing Bt maize. ((a) Trình bày cách tạo plasmid tái tổ hợp mang gen insulin người từ ADN người và ADN plasmid vi khuẩn, sau đó dùng nó sản xuất insulin người như thế nào. (b) Cây ngô có thể được biến đổi gen để tự tiết độc tố diệt sâu (ngô Bt). Nêu một ưu điểm và một nhược điểm của việc trồng ngô Bt. ) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Cắt cô lập gen insulin người bằng restriction enzyme tạo các đầu dính (sticky ends) , đồng thời cắt mở ADN plasmid vi khuẩn bằng cùng loại restriction enzyme tạo các đầu dính bổ sung .2. Trộn gen người với plasmid đã cắt và nối chúng lại bằng enzyme DNA ligase tạo thành plasmid tái tổ hợp (recombinant plasmid) .3. Đưa plasmid tái tổ hợp vào bên trong tế bào vi khuẩn chủ .4. Nuôi nhân bản vi khuẩn trong nồi lên men công nghiệp (fermenter) để chúng biểu hiện (express) gen người tổng hợp ra protein insulin người (rồi chiết tách, tinh sạch) . (b) Ưu điểm: Tăng năng suất ngô / giảm lượng thuốc trừ sâu hóa học phải phun, tiết kiệm chi phí và bảo vệ côn trùng thụ phấn có ích như ong .",
+      "duration": 217.9,
+      "startTime": 3515.37,
+      "endTime": 3733.27,
+      "audioUrl": "/audio/lectures/biology/21/s04_b08.mp3"
     }
   ]
 }

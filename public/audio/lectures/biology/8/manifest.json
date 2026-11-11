@@ -2,170 +2,524 @@
   "lectureId": "37f08657-58e8-4fad-8035-2d935e1259e8",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 8: Transport in plants",
-  "totalDuration": 417.69,
+  "totalDuration": 2669.39,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
-    },
-    "sec_vascular_tissues": {
-      "start": 1,
-      "end": 3
-    },
-    "sec-vascular-tissues": {
-      "start": 1,
-      "end": 3
-    },
-    "sec_vascular_position": {
-      "start": 4,
+    "s01_int": {
+      "start": 2,
       "end": 4
     },
-    "sec-vascular-position": {
-      "start": 4,
-      "end": 4
+    "s01_wex": {
+      "start": 8,
+      "end": 9
     },
-    "sec_transpiration": {
-      "start": 5,
-      "end": 8
+    "s01_hdr": {
+      "start": 1,
+      "end": 9
     },
-    "sec-transpiration": {
-      "start": 5,
-      "end": 8
+    "s02_int": {
+      "start": 11,
+      "end": 13
     },
-    "sec_translocation": {
-      "start": 9,
-      "end": 10
+    "s02_wex": {
+      "start": 16,
+      "end": 17
     },
-    "sec-translocation": {
-      "start": 9,
-      "end": 10
+    "s02_hdr": {
+      "start": 10,
+      "end": 17
+    },
+    "s03_int": {
+      "start": 19,
+      "end": 21
+    },
+    "s03_grp05": {
+      "start": 23,
+      "end": 24
+    },
+    "s03_grp07": {
+      "start": 25,
+      "end": 26
+    },
+    "s03_p1_sub01": {
+      "start": 23,
+      "end": 28
+    },
+    "s03_wex": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_hdr": {
+      "start": 18,
+      "end": 30
+    },
+    "s04_int": {
+      "start": 32,
+      "end": 34
+    },
+    "s04_wex": {
+      "start": 39,
+      "end": 40
+    },
+    "s04_hdr": {
+      "start": 31,
+      "end": 40
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 8: Sự Vận chuyển Các chất ở Thực vật",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 8: Transport in Plants. Multicellular plants require specialized transport systems: Xylem vessels conduct water and dissolved minerals from roots to leaves in a one-way transpiration stream, while Phloem sieve tubes translocate sucrose and amino acids between sources and sinks. In this lesson, we analyze vascular distribution, water uptake, transpiration mechanisms, potometers, and translocation.",
-      "vi": "Chào mừng các bạn đến với Bài 8: Sự Vận chuyển Các chất ở Thực vật. Cây đa bào cần hệ thống vận chuyển chuyên biệt: Mạch gỗ dẫn nước và khoáng hòa tan từ rễ lên lá theo dòng thoát hơi nước một chiều, còn Mạch rây vận chuyển đường sucrose và axit amin giữa cơ quan nguồn và cơ quan chứa. Trong bài học này, chúng ta sẽ khảo sát phân bố bó mạch, sự hút nước, thoát hơi nước, áp kế và dòng mạch rây.",
-      "duration": 46.62,
+      "title": "Chuyên đề 8: Sự Vận chuyển Các chất ở Thực vật",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 8: Transport in Plants. Xylem & Phloem, Dicot Anatomy, Water Pathway, Transpiration Pull & Translocation.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Chuyên đề 8: Sự Vận chuyển Các chất ở Thực vật. Mạch gỗ & Mạch rây, Vị trí bó mạch, Con đường hút nước, Thoát hơi nước & Dòng mạch rây.",
+      "duration": 31.12,
       "startTime": 0.0,
-      "endTime": 46.62,
+      "endTime": 31.12,
       "audioUrl": "/audio/lectures/biology/8/intro.mp3"
     },
     {
-      "id": "sec_vascular_tissues",
-      "title": "1. Mô Dẫn: Mạch gỗ (Xylem) & Mạch rây (Phloem)",
-      "selector": "#sec-vascular-tissues",
-      "en": "Section 1: Vascular tissues: Xylem vessels are non-living hollow tubes reinforced with waterproof lignin that transport water and minerals upward and provide structural support. Phloem sieve tubes are living cells with perforated end sieve plates that transport sucrose and amino acids bidirectionally.",
-      "vi": "Mục 1: Các mô dẫn: Mạch gỗ gồm các ống rỗng không có chất nguyên sinh được tẩm lignin chống thấm, vận chuyển nước và muối khoáng một chiều đi lên và nâng đỡ cơ học. Mạch rây gồm các tế bào sống có bản rây thủng lỗ ở hai đầu, vận chuyển đường sucrose và axit amin theo hai chiều.",
-      "duration": 43.89,
-      "startTime": 46.62,
-      "endTime": 90.51,
-      "audioUrl": "/audio/lectures/biology/8/sec_vascular_tissues.mp3"
+      "id": "s01_hdr",
+      "title": "💧 1. XYLEM AND PHLOEM (Mạch gỗ & Mạch rây)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "💧 1. XYLEM AND PHLOEM (VASCULAR TISSUES).",
+      "vi": "💧 1. XYLEM AND PHLOEM (Mạch gỗ & Mạch rây).",
+      "duration": 10.48,
+      "startTime": 31.12,
+      "endTime": 41.6,
+      "audioUrl": "/audio/lectures/biology/8/s01_hdr.mp3"
     },
     {
-      "id": "card_xylem_tissue",
-      "title": "💧 Mô Mạch Gỗ (Xylem Tissue)",
-      "selector": "#card-xylem-tissue",
-      "en": "Xylem adaptations: Dead hollow cells joined end-to-end with no end cross-walls create an uninterrupted capillary tube for water flow. Thick lignified walls withstand tension without collapsing under high negative hydrostatic pressure.",
-      "vi": "Đặc điểm thích nghi của mạch gỗ: Tế bào chết rỗng ruột nối liền đầu với đầu và tiêu biến vách ngăn ngang tạo thành ống mao dẫn thông suốt cho dòng nước chảy. Thành tế bào dày tẩm lignin chịu được lực căng hút mà không bị xẹp dưới áp suất âm.",
-      "duration": 28.22,
-      "startTime": 90.51,
-      "endTime": 118.73,
-      "audioUrl": "/audio/lectures/biology/8/card_xylem_tissue.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a plant stem as a skyscraper with two separate plumbing networks : Xylem is a bundle of rigid, hollow, dead steel-reinforced water pipes pumping water & mineral ions upwards only , while Phloem is a living two-way courier elevator delivering energy-rich sucrose and amino acids both up and down!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung thân cây như một tòa nhà cao tầng có hai hệ thống đường ống riêng biệt : Mạch gỗ (Xylem) là ống nước bê-tông cốt thép rỗng ruột (tế bào chết hóa gỗ lignin ) chỉ hút nước & ion khoáng đi lên một chiều ; còn Mạch rây (Phloem) là thang máy giao hàng sống chạy hai chiều để phân phối đường sucrose và axit amin đi nuôi khắp cây!",
+      "duration": 44.87,
+      "startTime": 41.6,
+      "endTime": 86.47,
+      "audioUrl": "/audio/lectures/biology/8/s01_b01.mp3"
     },
     {
-      "id": "card_phloem_tissue",
-      "title": "🍯 Mô Mạch Rây (Phloem Tissue)",
-      "selector": "#card-phloem-tissue",
-      "en": "Phloem structure: Composed of sieve tube elements with porous sieve plates allowing flow of sap. Each sieve tube element is supported metabolically by an adjacent companion cell packed with mitochondria supplying ATP.",
-      "vi": "Cấu tạo mạch rây: Gồm các tế bào ống rây có các bản rây đục lỗ cho dòng nhựa chảy qua. Mỗi tế bào ống rây được hỗ trợ trao đổi chất bởi một tế bào kèm liền kề chứa nhiều ti thể cung cấp năng lượng ATP.",
-      "duration": 26.46,
-      "startTime": 118.73,
-      "endTime": 145.19,
-      "audioUrl": "/audio/lectures/biology/8/card_phloem_tissue.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: For 0610 Supplement 8.1.3, link every xylem structural feature directly to its function: 1) Thick walls with lignin → waterproofs & strengthens vessel, preventing collapse under tension + supporting the plant. 2) No cell contents (dead) → no cytoplasm/organelles blocking flow. 3) No cross walls / end walls broken down → continuous hollow tube for an unbroken water column.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Với 0610 Supplement 8.1.3, mỗi đặc điểm cấu tạo của Xylem phải gắn chặt với chức năng: 1) Thành dày chứa lignin → chống thấm, cứng chắc, ngăn ống bị xẹp dưới lực hút âm & nâng đỡ cây. 2) Không có chất nguyên sinh → không cản trở dòng chảy. 3) Không có vách ngăn ngang → tạo ống dẫn liên tục không đứt quãng.",
+      "duration": 54.4,
+      "startTime": 86.47,
+      "endTime": 140.87,
+      "audioUrl": "/audio/lectures/biology/8/s01_b02.mp3"
     },
     {
-      "id": "sec_vascular_position",
-      "title": "2. Vị trí Mô dẫn ở Rễ, Thân và Lá",
-      "selector": "#sec-vascular-position",
-      "en": "Section 2: Anatomical positions in dicotyledonous plants: In roots, xylem forms a central cross-shape with phloem between the arms. In stems, vascular bundles form an outer ring with xylem inside and phloem outside. In leaves, xylem lies on top towards the upper surface and phloem below.",
-      "vi": "Mục 2: Vị trí giải phẫu mô dẫn ở cây hai lá mầm: Ở rễ, mạch gỗ xếp thành hình chữ X ở chính giữa với mạch rây nằm xen giữa các cánh. Ở thân, các bó mạch xếp thành vòng tròn ngoại vi với mạch gỗ ở trong và mạch rây ở ngoài. Ở lá, mạch gỗ nằm bên trên hướng về mặt trên của lá và mạch rây nằm bên dưới.",
-      "duration": 43.41,
-      "startTime": 145.19,
-      "endTime": 188.6,
-      "audioUrl": "/audio/lectures/biology/8/sec_vascular_position.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write that phloem transports \"glucose\" or that xylem uses \"active transport\"! Phloem transports sucrose and amino acids , while water movement up xylem is a passive physical process driven by transpiration pull.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết mạch rây vận chuyển \"glucose\" hay mạch gỗ bơm nước bằng \"active transport\"! Mạch rây chỉ vận chuyển sucrose và amino acids , còn dòng nước trong mạch gỗ đi lên hoàn toàn thụ động nhờ lực hút thoát hơi nước.",
+      "duration": 33.83,
+      "startTime": 140.87,
+      "endTime": 174.7,
+      "audioUrl": "/audio/lectures/biology/8/s01_b03.mp3"
     },
     {
-      "id": "sec_transpiration",
-      "title": "3. Hút nước & Cơ chế Thoát hơi nước (Transpiration)",
-      "selector": "#sec-transpiration",
-      "en": "Section 3: Transpiration is the loss of water vapour from plant leaves by evaporation of water at the surfaces of mesophyll cells followed by diffusion of water vapour through stomata into the atmosphere.",
-      "vi": "Mục 3: Thoát hơi nước là sự mất hơi nước từ lá cây thông qua sự bay hơi nước trên bề mặt các tế bào thịt lá mô xốp, tiếp nối bởi sự khuếch tán của hơi nước qua khí khổng ra ngoài khí quyển.",
-      "duration": 40.6,
-      "startTime": 188.6,
-      "endTime": 229.2,
-      "audioUrl": "/audio/lectures/biology/8/sec_transpiration.mp3"
+      "id": "s01_b04",
+      "title": "Xylem và Phloem là các mô thực vật chứa các Tế bào chuyên biệt (Specialised cell...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Xylem and phloem are plant transport tissues composed of specialised cells adapted for conduction and mechanical support. They run continuously throughout roots, stems, and leaves.",
+      "vi": "Xylem và Phloem là các mô thực vật chứa các Tế bào chuyên biệt (Specialised cells) có nhiệm vụ vận chuyển. Chúng được tìm thấy ở khắp mọi nơi: Rễ, Thân và Lá.",
+      "duration": 24.37,
+      "startTime": 174.7,
+      "endTime": 199.07,
+      "audioUrl": "/audio/lectures/biology/8/s01_b04.mp3"
     },
     {
-      "id": "card_water_pathway",
-      "title": "🛤️ Con đường Vận chuyển Nước trong Cây",
-      "selector": "#card-water-pathway",
-      "en": "Pathway of water: Soil water enters root hair cells by osmosis, travels across the root cortex cells by osmosis, enters root xylem, ascends stem xylem, moves into leaf mesophyll cells, evaporates into air spaces, and diffuses out through open stomata.",
-      "vi": "Con đường vận chuyển nước: Nước trong đất thẩm thấu vào lông hút rễ, đi qua các tế bào vỏ rễ, vào mạch gỗ của rễ, dâng lên mạch gỗ của thân, đi vào tế bào thịt lá, bay hơi vào khoang gian bào và khuếch tán ra ngoài qua lỗ khí khổng.",
-      "duration": 31.24,
-      "startTime": 229.2,
-      "endTime": 260.44,
-      "audioUrl": "/audio/lectures/biology/8/card_water_pathway.mp3"
+      "id": "s01_b05",
+      "title": "💧 Xylem Tissue (Mạch Gỗ)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "💧 Xylem Tissue. Transports: Water and dissolved mineral ions. Provides mechanical support. Structural Adaptations (Syllabus Key): Thick walls with LIGNIN: Waterproof polymer strengthens cell walls, prevents inward collapse under negative tension, and provides upright support. No cell contents (Dead cells): Hollow lumen with no cytoplasm or organelles ensures unobstructed, rapid water flow. Continuous uninterrupted tube: End walls break down entirely, forming continuous open pipelines from root to leaf. Direction of Flow: ONE WAY ONLY (Unidirectional) : From roots ➔ stem ➔ leaves.",
+      "vi": "💧 Xylem Tissue (Mạch Gỗ). Vận chuyển: Nước (Water) và Ion khoáng (Mineral ions). Cung cấp sự nâng đỡ (support). Cấu trúc thích nghi (Adaptations): Thick walls with LIGNIN (Thành dày chứa chất gỗ lignin): Chất thấm kỵ nước gia cố thành mạch cứng chắc, chống xẹp ống dưới lực hút âm (tension) và nâng đỡ cơ học cho cây. No cell contents (Tế bào chết rỗng ruột): Không còn tế bào chất, nhân hay không bào nên không gây cản trở dòng nước đi lên. Continuous tube with no cross walls (Ống thông suốt không vách ngăn ngang): Các vách ngăn đầu-cuối tiêu biến hoàn toàn tạo thành đường ống rỗng liên tục từ rễ lên lá. Direction: Vận chuyển MỘT CHIỀU (One direction) : Từ rễ ➔ Thân ➔ Lá.",
+      "duration": 92.59,
+      "startTime": 199.07,
+      "endTime": 291.66,
+      "audioUrl": "/audio/lectures/biology/8/s01_b05.mp3"
     },
     {
-      "id": "card_transpiration_pull",
-      "title": "💨 Lực Hút Thoát Hơi Nước (Transpiration Pull)",
-      "selector": "#card-transpiration-pull",
-      "en": "Transpiration pull mechanism: Evaporation lowers water potential in mesophyll cells, creating a tension force that draws water from leaf xylem. Due to cohesion between water molecules and adhesion to xylem walls, an unbroken water column is drawn upward from the roots.",
-      "vi": "Cơ chế lực hút thoát hơi nước: Sự bay hơi làm giảm thế nước ở tế bào mô giậu, tạo nên lực căng kéo nước từ mạch gỗ ở lá. Nhờ lực liên kết gắn kết (cohesion) giữa các phân tử nước và lực bám dính (adhesion) vào thành mạch gỗ, cột nước liên tục được kéo thẳng từ rễ lên lá.",
-      "duration": 34.89,
-      "startTime": 260.44,
-      "endTime": 295.33,
-      "audioUrl": "/audio/lectures/biology/8/card_transpiration_pull.mp3"
+      "id": "s01_b06",
+      "title": "🍯 Phloem Tissue (Mạch Rây)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🍯 Phloem Tissue. Transports: Sucrose and amino acids. Important Characteristics: Composed of living cells containing thin strands of cytoplasm. Cambridge Syllabus Note: Detailed internal cellular structure (companion cells, sieve tube elements) is not required for examination. Direction of Flow: TWO DIRECTIONS (Bidirectional) :Leaves ➔ roots (downwards) OR storage organs ➔ young shoots/buds/fruits (upwards).",
+      "vi": "🍯 Phloem Tissue (Mạch Rây). Vận chuyển: Đường Sucrose và Amino acids. Ghi chú quan trọng: Là các tế bào sống (living cells) có chứa một ít tế bào chất (cytoplasm). Theo syllabus mới: Học sinh KHÔNG CẦN học chi tiết cấu trúc bên trong của Phloem. Direction: Vận chuyển HAI CHIỀU (Two directions) :Từ lá ➔ Rễ (xuống) HOẶC Từ lá ➔ Hoa/Quả/Chồi non (lên).",
+      "duration": 58.66,
+      "startTime": 291.66,
+      "endTime": 350.32,
+      "audioUrl": "/audio/lectures/biology/8/s01_b06.mp3"
     },
     {
-      "id": "card_potometer_factors",
-      "title": "🌡️ 4 Yếu tố Môi trường & Dụng cụ Áp kế Potometer",
-      "selector": "#card-potometer-factors",
-      "en": "Factors altering transpiration rate: Rate increases with higher temperature, higher light intensity, and higher wind speed. Rate decreases with higher atmospheric humidity. A potometer measures the rate of water uptake by measuring bubble movement over time.",
-      "vi": "Các yếu tố ảnh hưởng tốc độ thoát hơi nước: Tốc độ tăng khi nhiệt độ cao hơn, ánh sáng mạnh hơn và tốc độ gió lớn hơn. Tốc độ giảm khi độ ẩm không khí tăng cao. Dụng cụ áp kế potometer đo tốc độ hút nước bằng cách đo quãng đường bọt khí di chuyển theo thời gian.",
-      "duration": 33.57,
-      "startTime": 295.33,
-      "endTime": 328.9,
-      "audioUrl": "/audio/lectures/biology/8/card_potometer_factors.mp3"
+      "id": "s01_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which structural feature of xylem vessels directly prevents the tubes from collapsing inwards when water is pulled up under negative pressure (tension)? A. Presence of companion cells with many mitochondria B. Sieve plates with pores between adjacent cells C. Thick cell walls strengthened with waterproof lignin D. Thin strands of living cytoplasm lining the lumen ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Lignin is a rigid, waterproof polymer deposited in thick xylem walls that provides high tensile strength so vessels do not collapse inwards under suction tension (C). Options A, B, and D describe living phloem tissue rather than dead, hollow xylem vessels.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Which structural feature of xylem vessels directly prevents the tubes from collapsing inwards when water is pulled up under negative pressure (tension)? (Đặc điểm cấu tạo nào của mạch gỗ trực tiếp ngăn ống mạch bị xẹp vào trong khi cột nước bị kéo lên dưới áp suất âm?) A. Presence of companion cells with many mitochondria B. Sieve plates with pores between adjacent cells C. Thick cell walls strengthened with waterproof lignin D. Thin strands of living cytoplasm lining the lumen ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Chất gỗ (Lignin) là polyme cứng và không thấm nước thấm vào thành tế bào dày của mạch gỗ, giúp ống mạch chịu được sức căng âm cực lớn mà không bị bẹp (C). Các phương án A, B, D là đặc điểm của mô mạch rây sống (phloem), không phải mạch gỗ chết.",
+      "duration": 104.62,
+      "startTime": 350.32,
+      "endTime": 454.94,
+      "audioUrl": "/audio/lectures/biology/8/s01_b07.mp3"
     },
     {
-      "id": "sec_translocation",
-      "title": "4. Vận chuyển Chất hữu cơ: Dòng Mạch rây (Translocation)",
-      "selector": "#sec-translocation",
-      "en": "Section 4: Translocation is the movement of sucrose and amino acids in phloem from sources to sinks. Sources are regions of production like photosynthesizing leaves. Sinks are regions of utilization or storage like roots, tubers, flowers, and developing fruits.",
-      "vi": "Mục 4: Dòng mạch rây (Translocation) là sự vận chuyển đường sucrose và axit amin trong mạch rây từ nguồn (source) đến nơi chứa (sink). Nguồn là cơ quan sản xuất như lá quang hợp. Nơi chứa là cơ quan tiêu thụ hoặc dự trữ như rễ, củ, hoa và quả non.",
-      "duration": 52.53,
-      "startTime": 328.9,
-      "endTime": 381.43,
-      "audioUrl": "/audio/lectures/biology/8/sec_translocation.mp3"
+      "id": "s01_b08",
+      "title": "xylem",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State two functions of xylem and state the two main substances transported in phloem . [2](b) Explain three ways in which the structure of a xylem vessel is adapted to transport water efficiently. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Xylem: transports water and mineral ions AND provides mechanical support [1m]. Phloem: transports sucrose and amino acids [1m]. (b) 1. Thick walls containing lignin strengthen and waterproof the vessel so it does not collapse under tension [1m].2. No cell contents (no cytoplasm, nucleus, or vacuole), so there is no resistance/obstruction to water flow [1m].3. Cells joined end-to-end with no cross walls (end walls) , forming a long continuous hollow tube [1m]. 💡 Intuition Check: Every \"relate structure to function\" mark in 8.1.3 needs BOTH the structural feature (e.g. no cross walls) AND why it helps (forms a continuous open tube)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) State two functions of xylem and state the two main substances transported in phloem . (b) Explain three ways in which the structure of a xylem vessel is adapted to transport water efficiently. ((a) Nêu 2 chức năng của xylem và 2 chất chính vận chuyển trong phloem. (b) Giải thích 3 đặc điểm cấu tạo giúp mạch gỗ thích nghi vận chuyển nước hiệu quả. ) ✍️ Lời giải chi tiết theo thang điểm: vận chuyển nước, ion khoáng và nâng đỡ cây . vận chuyển đường sucrose và axit amin . (b) 1. thành dày hóa gỗ lignin giúp cứng chắc, chống xẹp mạch .2. No cell contents so water flow is unobstructed (rỗng ruột không còn tế bào chất nên không cản dòng nước) .3. mất vách ngăn ngang tạo đường ống liên tục . 💡 Kiểm tra bản chất: Câu hỏi \"relate structure to function\" 3 điểm luôn yêu cầu ghép cặp: Đặc điểm cấu tạo (ví dụ: không vách ngăn ngang) + Lợi ích chức năng (tạo cột ống thông suốt)!",
+      "duration": 136.58,
+      "startTime": 454.94,
+      "endTime": 591.52,
+      "audioUrl": "/audio/lectures/biology/8/s01_b08.mp3"
     },
     {
-      "id": "card_source_sink_reversal",
-      "title": "🚨 BẪY ĐỀ THI: Sự Đổi Vai giữa Nguồn và Nơi chứa theo Mùa",
-      "selector": "#card-source-sink-reversal",
-      "en": "Seasonal role reversal: In summer, mature leaves are sources synthesizing sucrose, while underground roots and tubers are sinks storing starch. In early spring before new leaves emerge, underground storage organs act as sources, hydrolyzing starch into sucrose transported upward to growing bud sinks.",
-      "vi": "Cảnh báo đổi vai theo mùa: Vào mùa hè, lá trưởng thành là nguồn quang hợp tạo đường, còn rễ và củ dưới đất là nơi chứa tích trữ tinh bột. Vào đầu mùa xuân khi chưa có lá, củ dưới đất đóng vai trò là nguồn, phân giải tinh bột thành đường sucrose vận chuyển ngược lên nuôi chồi non mới mọc.",
-      "duration": 36.26,
-      "startTime": 381.43,
-      "endTime": 417.69,
-      "audioUrl": "/audio/lectures/biology/8/card_source_sink_reversal.mp3"
+      "id": "s02_hdr",
+      "title": "🗺️ 2. POSITION IN DICOT PLANTS (Vị trí phân bố)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🗺️ 2. POSITION IN DICOTYLEDONOUS PLANTS.",
+      "vi": "🗺️ 2. POSITION IN DICOT PLANTS (Vị trí phân bố).",
+      "duration": 9.43,
+      "startTime": 591.52,
+      "endTime": 600.95,
+      "audioUrl": "/audio/lectures/biology/8/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Use the \"Hard Inside / Top, Soft Outside / Bottom\" compass on every cross-section: tough lignified xylem anchors the centre X of a root , sits on the inner face of stem bundles , and forms the upper layer of a leaf vein (imagine holding your arm out like a leaf — the inner side of your arm faces UP!).",
+      "vi": "🎯 Hình dung đời thường: Dùng quy tắc la bàn \"Gỗ Cứng Ở Trong / Ở Trên — Rây Mềm Ở Ngoài / Ở Dưới\" cho mọi thiết đồ cắt ngang cây hai lá mầm (dicot): Xylem cứng chắc luôn chiếm hình chữ X trung tâm ở Rễ , nằm ở nửa TRONG của bó mạch Thân , và nằm ở nửa TRÊN của gân Lá !",
+      "duration": 39.09,
+      "startTime": 600.95,
+      "endTime": 640.04,
+      "audioUrl": "/audio/lectures/biology/8/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Identify xylem vs phloem in all 3 non-woody dicot organs (8.1.2): Root TS → central star/X = xylem, patches between arms = phloem; Stem TS → ring of vascular bundles, inner = xylem, outer = phloem; Leaf TS → vascular bundle in midrib/vein, upper = xylem, lower = phloem.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nhận diện chính xác vị trí trên cả 3 cơ quan cây hai lá mầm thân thảo (8.1.2): Rễ cắt ngang (Root TS) → lõi chữ X/ngôi sao = Xylem, các cụm xen kẽ giữa cánh chữ X = Phloem; Thân cắt ngang (Stem TS) → vòng bó mạch, mặt trong = Xylem, mặt ngoài = Phloem; Lá cắt ngang (Leaf TS) → nửa trên = Xylem, nửa dưới = Phloem.",
+      "duration": 52.04,
+      "startTime": 640.04,
+      "endTime": 692.08,
+      "audioUrl": "/audio/lectures/biology/8/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: A classic Paper 2 trap feeds an aphid (greenfly) stylet into a stem to sample sugary sap and asks which tissue is pierced: aphids feed on sucrose + amino acids in PHLOEM (the outer region of a stem vascular bundle), NOT the inner xylem!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bẫy kinh điển Paper 2: Rệp cây (aphids) chích vòi hút dịch ngọt giàu đường trong thân cây — vòi rệp đâm vào đâu? Rệp hút sucrose + amino acids trong PHLOEM (tức là phần NGOÀI của bó mạch thân), tuyệt đối không phải phần trong Xylem!",
+      "duration": 38.07,
+      "startTime": 692.08,
+      "endTime": 730.15,
+      "audioUrl": "/audio/lectures/biology/8/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Đề thi Paper 2 rất hay hỏi các hình cắt ngang này. Hãy Mẹo nhớ cực mạnh: Xylem (...",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "Transverse sections of dicot organs frequently appear in Paper 2 and Paper 4. Golden Rule: Xylem is rigid and lignified, positioned towards the INSIDE / CENTER . Phloem is softer, positioned towards the OUTSIDE / PERIPHERY.",
+      "vi": "Đề thi Paper 2 rất hay hỏi các hình cắt ngang này. Hãy Mẹo nhớ cực mạnh: Xylem (Gỗ) thường cứng nên nằm ở phía TRONG, Phloem (Rây) mềm nên nằm ở phía NGOÀI.",
+      "duration": 29.07,
+      "startTime": 730.15,
+      "endTime": 759.22,
+      "audioUrl": "/audio/lectures/biology/8/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🌱 In Roots (Rễ)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🌱 In Roots. Xylem forms a central X-shaped or star-shaped core. Phloem bundles sit between the lobes/arms of the X core. 🎋 In Stems. Vascular bundles are arranged in a regular circular ring around the cortex. Xylem is located on the INNER side of each bundle. Phloem is located on the OUTER side of each bundle. 🍃 In Leaves (Midrib & Veins). Vascular bundles form the midrib and leaf veins. Xylem is located in the UPPER half of the bundle (near upper epidermis). Phloem is located in the LOWER half of the bundle.",
+      "vi": "🌱 In Roots (Rễ). Xylem tạo thành hình chữ X ở lõi trung tâm. Phloem nằm chen giữa các nhánh của chữ X. 🎋 In Stem (Thân). Các bó mạch (Vascular bundle) xếp thành một vòng tròn. Xylem ở phía TRONG, Phloem ở phía NGOÀI vòng. 🍃 In Leaves (Lá). Tạo thành hệ thống gân lá (Gân chính ở giữa). Xylem nằm ở NỬA TRÊN, Phloem nằm ở NỬA DƯỚI.",
+      "duration": 65.08,
+      "startTime": 759.22,
+      "endTime": 824.3,
+      "audioUrl": "/audio/lectures/biology/8/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ A leafy dicotyledonous shoot is placed in water containing a red dye for two hours. Transverse sections of the root, stem, and leaf are cut. Where will the red stain be observed? A. Central X-shape in root | Outer part of stem bundles | Lower part of leaf veins B. Central X-shape in root | Inner part of stem bundles | Upper part of leaf veins C. Between arms of X in root | Inner part of stem bundles | Lower part of leaf veins D. Cortex of root | Outer part of stem bundles | Upper part of leaf veins ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Water and dissolved red dye travel upwards exclusively through xylem . Xylem forms the central X-shaped core in dicot roots, the inner side of vascular bundles in dicot stems, and the upper half of vascular bundles in dicot leaves (B).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ A leafy dicotyledonous shoot is placed in water containing a red dye for two hours. Transverse sections of the root, stem, and leaf are cut. Where will the red stain be observed? (Cắm cành cây hai lá mầm vào cốc nước pha phẩm đỏ trong 2 giờ rồi cắt ngang rễ, thân và lá. Vết nhuộm màu đỏ sẽ xuất hiện ở những vị trí nào?) A. Central X-shape in root | Outer part of stem bundles | Lower part of leaf veins B. Central X-shape in root | Inner part of stem bundles | Upper part of leaf veins C. Between arms of X in root | Inner part of stem bundles | Lower part of leaf veins D. Cortex of root | Outer part of stem bundles | Upper part of leaf veins ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Nước pha phẩm màu đỏ đi lên duy nhất qua mạch gỗ (xylem) . Ở cây hai lá mầm, xylem tạo thành hình chữ X trung tâm ở rễ , nằm ở phía trong (inner part) của bó mạch thân, và nằm ở nửa trên (upper part) của bó mạch gân lá (B).",
+      "duration": 126.77,
+      "startTime": 824.3,
+      "endTime": 951.07,
+      "audioUrl": "/audio/lectures/biology/8/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "(a) Phloem",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3/4 Structured [3 marks] Aphids insert hollow mouthparts (stylets) into dicotyledonous plant stems to feed on sap rich in sucrose and amino acids.(a) Name the vascular tissue penetrated by the aphid stylet. [1](b) Describe the exact position of this tissue in a transverse section of (i) a non-woody dicot stem [1] and (ii) a dicot leaf vein [1]. ✍️ Step-by-Step Mark Scheme Solution: (a) Phloem [1m]. (b)(i) Dicot stem: Towards the outside / outer edge of each vascular bundle in the ring (closer to the epidermis) [1m]. (b)(ii) Dicot leaf vein: In the lower half of the vascular bundle (closer to the lower epidermis) [1m]. 💡 Intuition Check: Red stain = water = Xylem (Centre / Inner / Upper). Aphid sap = sucrose = Phloem (Between X-arms / Outer / Lower)!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Paper 3/4 Structured [3 marks] Aphids insert hollow mouthparts (stylets) into dicotyledonous plant stems to feed on sap rich in sucrose and amino acids.(a) Name the vascular tissue penetrated by the aphid stylet. (b) Describe the exact position of this tissue in a transverse section of (i) a non-woody dicot stem and (ii) a dicot leaf vein . ((a) Gọi tên mô dẫn bị vòi rệp đâm vào để hút sucrose và axit amin. (b) Mô tả vị trí của mô này trên lát cắt ngang (i) thân cây hai lá mầm và (ii) gân lá .) ✍️ Lời giải chi tiết theo thang điểm: (a) Phloem (mạch rây) . (b)(i) Dicot stem (Thân): nằm ở phía ngoài của mỗi bó mạch, gần biểu bì hơn . (b)(ii) Dicot leaf vein (Gân lá): nằm ở nửa dưới của bó mạch, gần biểu bì dưới . 💡 Kiểm tra bản chất: Phẩm màu đỏ = Nước = Xylem (Chữ X giữa rễ / Trong thân / Trên lá). Vòi rệp hút đường = Sucrose = Phloem (Xen kẽ chữ X / Ngoài thân / Dưới lá)!",
+      "duration": 138.03,
+      "startTime": 951.07,
+      "endTime": 1089.1,
+      "audioUrl": "/audio/lectures/biology/8/s02_b07.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🌬️ 3. WATER UPTAKE & TRANSPIRATION (Hút nước & Thoát hơi nước)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🌬️ 3. WATER UPTAKE & TRANSPIRATION.",
+      "vi": "🌬️ 3. WATER UPTAKE & TRANSPIRATION (Hút nước & Thoát hơi nước).",
+      "duration": 9.08,
+      "startTime": 1089.1,
+      "endTime": 1098.18,
+      "audioUrl": "/audio/lectures/biology/8/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of transpiration like drinking through a straw : evaporation of water from moist spongy mesophyll walls into interconnecting air spaces and diffusion out of stomata creates suction at the top ( transpiration pull ). Because water molecules cling tightly to each other like a chain of magnets ( forces of attraction / cohesion ), the entire unbroken column of water is pulled up from root to leaf!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng quá trình thoát hơi nước giống như hút trà sữa qua ống hút : nước bay hơi từ vách tế bào thịt lá ẩm ướt vào các khoang khí thông nhau rồi khuếch tán qua khí khổng tạo ra lực hút ở đỉnh ống ( transpiration pull ). Vì các phân tử nước nắm chặt tay nhau như chuỗi nam châm ( lực hút phân tử / cohesion ), cả cột nước liên tục được kéo thẳng từ rễ lên lá!",
+      "duration": 50.78,
+      "startTime": 1098.18,
+      "endTime": 1148.96,
+      "audioUrl": "/audio/lectures/biology/8/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Pathway (8.2.3): root hair cells → root cortex cells → xylem → mesophyll cells (then diffuses out of stomata as water vapour). 2) Internal SA (8.3.4): interconnecting air spaces give huge internal evaporation surface; size & number of stomata control outward diffusion. 3) Factors (8.3.6): ↑ temp, ↑ wind, ↑ light → faster ; ↑ humidity → slower (shallower water vapour concentration gradient).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Con đường đi của nước (8.2.3): root hair cells → root cortex cells → xylem → mesophyll cells (rồi khuếch tán qua stomata dưới dạng hơi nước). 2) Cấu trúc lá (8.3.4): interconnecting air spaces tạo diện tích bề mặt trong lớn cho bay hơi; kích thước & số lượng khí khổng quyết định tốc độ khuếch tán. 3) Ngoại cảnh (8.3.6): ↑ nhiệt độ, ↑ gió, ↑ ánh sáng → tăng tốc ; ↑ độ ẩm (humidity) → giảm tốc .",
+      "duration": 61.06,
+      "startTime": 1148.96,
+      "endTime": 1210.02,
+      "audioUrl": "/audio/lectures/biology/8/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say \"water evaporates out of the stomata\"! Liquid water evaporates from the surfaces of mesophyll cells into the air spaces FIRST, and then water vapour diffuses out through the stomata!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: CẤM viết \"nước bay hơi qua khí khổng\"! Nước lỏng bay hơi (evaporates) từ bề mặt tế bào mesophyll vào khoang khí TRƯỚC, sau đó hơi nước mới khuếch tán (diffuses) qua lỗ khí khổng ra ngoài!",
+      "duration": 30.34,
+      "startTime": 1210.02,
+      "endTime": 1240.36,
+      "audioUrl": "/audio/lectures/biology/8/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "1. Water Uptake in Roots & Pathway (Hút nước ở rễ & Con đường vận chuyển)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "1. Water Uptake in Roots & Pathway Through Plant. Root hair cells provide an extremely large surface area that significantly increases the rate of absorption of water (by osmosis) and mineral ions (by active transport). Key Syllabus Definition: Water passes down a water potential gradient , from a higher water potential in the soil to a lower water potential inside the root hair cell, by osmosis across a partially permeable cell membrane. 🛤️ Pathway of Water Through the Plant (Syllabus Sequence): Soil water ➔ Root Hair Cells ➔ Root Cortex Cells ➔ Xylem Vessels (Root & Stem) ➔ Leaf Mesophyll Cells ➔ Stomata (Water Vapour). Practical Stain Investigation: Place a cut celery stalk or white flower shoot into water stained with red food dye (eosin). After a few hours, the dye ascends via xylem vessels, clearly visible in stem cross-sections and leaf veins.",
+      "vi": "1. Water Uptake in Roots & Pathway (Hút nước ở rễ & Con đường vận chuyển). Tế bào lông hút tạo ra diện tích bề mặt khổng lồ giúp hấp thụ tối đa nước (bằng thẩm thấu) và ion khoáng (bằng vận chuyển chủ động). Nước đi xuôi theo gradien thế nước, từ thế nước cao trong đất vào thế nước thấp hơn trong lông hút qua màng bán thấm . 🛤️ Con đường vận chuyển nước: Soil water ➔ Root Hair Cells ➔ Root Cortex Cells ➔ Xylem ➔ Mesophyll Cells ➔ Stomata. Thí nghiệm nhuộm màu: Cắm cọng cần tây vào dung dịch phẩm màu đỏ (eosin), màu sẽ theo mạch gỗ đi lên thân và các gân lá.",
+      "duration": 95.54,
+      "startTime": 1240.36,
+      "endTime": 1335.9,
+      "audioUrl": "/audio/lectures/biology/8/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Transpiration is the loss of water vapour from leaves. 1. Water evaporates from ...",
+      "selector": "[data-lecture-section=\"s03_b05\"], [data-lecture-section=\"s03_grp05\"]",
+      "en": "Transpiration is the loss of water vapour from leaves. 1. Water evaporates from the moist cell walls of mesophyll cells into the interconnecting air spaces.2. Water vapour diffuses down a concentration gradient out of the leaf through open stomata.",
+      "vi": "2. The Process of Transpiration. Transpiration is the loss of water vapour from the leaves. Sự bốc hơi nước ở lá làm giảm áp suất, tạo ra lực hút (Transpiration pull) kéo cột nước từ rễ lên tận ngọn cây.",
+      "duration": 33.37,
+      "startTime": 1335.9,
+      "endTime": 1369.27,
+      "audioUrl": "/audio/lectures/biology/8/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Transpiration Pull & Cohesion-Tension Theory: Evaporation generates a suction fo...",
+      "selector": "[data-lecture-section=\"s03_b06\"], [data-lecture-section=\"s03_grp05\"]",
+      "en": "Transpiration Pull & Cohesion-Tension Theory: Evaporation generates a suction force (tension) at the top of xylem vessels that draws up a continuous column of water molecules (the transpiration stream ).• Cohesion: Attractive forces between water molecules (hydrogen bonding) holding the water column together without breaking.• Adhesion: Attractive forces between water molecules and the hydrophilic cellulose/lignin xylem walls.",
+      "vi": "Dòng chảy liên tục này gọi là Transpiration stream. Nhờ 2 đặc tính của nước: • Cohesion (Nội kết): Phân tử nước hút dính vào nhau.• Adhesion (Ngoại kết): Phân tử nước hút dính vào vách ống Xylem.",
+      "duration": 42.51,
+      "startTime": 1369.27,
+      "endTime": 1411.78,
+      "audioUrl": "/audio/lectures/biology/8/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Mesophyll cells surface, Air spaces, Through stomata, Water evaporates, Diffuses...",
+      "selector": "[data-lecture-section=\"s03_b07\"], [data-lecture-section=\"s03_grp07\"]",
+      "en": "Mesophyll cells surface, Air spaces, Through stomata, Water evaporates, Diffuses out.",
+      "vi": "🍃 Cấu trúc Bên trong Lá Quyết định Tốc độ Thoát hơi nước (Supplement 8.3.4). Các khoang khí thông nhau giữa các tế bào thịt lá (mesophyll cells): Tạo ra diện tích bề mặt bên trong cực lớn giúp nước lỏng trên bề mặt vách tế bào ẩm bay hơi nhanh chóng thành hơi nước.",
+      "duration": 24.74,
+      "startTime": 1411.78,
+      "endTime": 1436.52,
+      "audioUrl": "/audio/lectures/biology/8/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🍃 Leaf Structural Features Controlling Water Vapour Loss (Supplement 8.3.4)",
+      "selector": "[data-lecture-section=\"s03_b08\"], [data-lecture-section=\"s03_grp07\"]",
+      "en": "🍃 Leaf Structural Features Controlling Water Vapour Loss (Supplement 8.3.4). Interconnecting air spaces between mesophyll cells: Create a very large internal surface area of moist cell walls from which liquid water rapidly evaporates into water vapour. Size and number of stomata: More numerous stomata and wider stomatal apertures provide a larger total pore area, increasing the rate at which water vapour diffuses out of the leaf into the air.",
+      "vi": "Số lượng và kích thước khí khổng: Khí khổng càng nhiều và mở càng rộng thì tổng diện tích lỗ thoáng càng lớn, giúp hơi nước khuếch tán (diffuse) ra ngoài không khí nhanh hơn.",
+      "duration": 38.19,
+      "startTime": 1436.52,
+      "endTime": 1474.71,
+      "audioUrl": "/audio/lectures/biology/8/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🥀 Wilting (Hiện tượng héo rũ — Supplement 8.3.7): Nguyên nhân & Cơ chế",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🥀 Wilting: Cause and Mechanism (Supplement 8.3.7). Wilting occurs when the rate of transpiration exceeds the rate of water absorption by the roots. As plant cells lose water, they lose turgor pressure and become flaccid. The leaves and stems droop. Benefit to plant: Leaves collapse downwards, reducing surface area exposed to direct sunlight and air currents, which conserves water by decreasing transpiration.",
+      "vi": "🥀 Wilting (Hiện tượng héo rũ — Supplement 8.3.7): Nguyên nhân & Cơ chế. Xảy ra khi tốc độ thoát hơi nước vượt quá tốc độ hút nước ở rễ. Tế bào mất nước, giảm áp suất trương (flaccid), làm thân và lá rũ xuống. Lợi ích: Lá rũ xuống làm giảm diện tích tiếp xúc với ánh nắng và gió, giúp bảo toàn lượng nước còn lại.",
+      "duration": 51.19,
+      "startTime": 1474.71,
+      "endTime": 1525.9,
+      "audioUrl": "/audio/lectures/biology/8/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "3. Factors Affecting Transpiration (The Potometer)",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "3. Factors Affecting Transpiration Rate & The Potometer. A potometer measures the rate of water uptake by a leafy shoot, which closely approximates transpiration rate. Movement of an air bubble along a graduated capillary tube is measured over time. How Environmental Conditions Change the Transpiration Rate: ☀️ Light Intensity: Increases rate. Stomata open wider in bright light for photosynthesis, allowing more water vapour to diffuse out. 🌡️ Temperature: Increases rate. Higher temperatures increase the kinetic energy of water molecules, accelerating evaporation from mesophyll cells and outward diffusion. 💨 Wind Speed / Air Movement: Increases rate. Rapid air flow blows away humid air blankets around the leaf, maintaining a steep water vapour concentration gradient. 💧 Humidity: DECREASES rate. High external humidity decreases the concentration gradient between the leaf interior and surrounding air. (This is the ONLY factor that slows transpiration down).",
+      "vi": "3. Factors Affecting Transpiration (The Potometer). Một Potometer (Khí khổng kế) dùng để đo tốc độ hút nước của cành cây, qua đó ước lượng tốc độ thoát hơi nước. Bạn đo sự di chuyển của bọt khí (Air bubble) trong ống mao dẫn. Làm thế nào để thay đổi tốc độ bọt khí chạy? ☀️ Light (Ánh sáng): Càng sáng, khí khổng (stomata) mở càng rộng ➔ Tăng tốc độ thoát hơi nước. 🌡️ Temperature (Nhiệt độ): Nóng lên, nước bay hơi nhanh hơn ➔ Tăng tốc độ. 💨 Wind (Gió): Gió thổi bay lớp hơi nước đọng quanh lá, duy trì độ chênh lệch nồng độ lớn ➔ Tăng tốc độ. 💧 Humidity (Độ ẩm): Độ ẩm ngoài không khí cao làm giảm độ chênh lệch nồng độ hơi nước ➔ LÀM GIẢM tốc độ (Đây là yếu tố duy nhất làm chậm quá trình).",
+      "duration": 118.13,
+      "startTime": 1525.9,
+      "endTime": 1644.03,
+      "audioUrl": "/audio/lectures/biology/8/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ In a potometer experiment, the meniscus/air bubble moves 36 mm along a capillary tube in 3 minutes under warm, windy conditions. The shoot is then enclosed in a clear plastic bag misted with water inside. Which new bubble movement in 3 minutes and explanation is correct? A. 72 mm — higher humidity increases kinetic energy of water molecules B. 8 mm — higher humidity reduces the water vapour concentration gradient out of the stomata C. 8 mm — higher humidity destroys forces of attraction between water molecules in xylem D. 36 mm — humidity has no effect when light intensity is constant ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Enclosing the shoot in a misted bag traps moist air, creating high external humidity and blocking wind. This makes the water vapour concentration gradient between the saturated leaf air spaces and outside air much less steep, slowing diffusion out of stomata and reducing bubble movement from 36 mm to 8 mm (B).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ In a potometer experiment, the air bubble moves 36 mm along a capillary tube in 3 minutes under warm, windy conditions. The shoot is then enclosed in a clear plastic bag misted with water inside. Which new bubble movement in 3 minutes and explanation is correct? (Trong thí nghiệm potometer, bọt khí dịch chuyển 36 mm trong 3 phút khi trời ấm và có gió. Sau đó trùm kín cành cây bằng túi nilon trong suốt có phun sương ẩm bên trong. Quãng đường bọt khí mới trong 3 phút và giải thích nào đúng?) A. 72 mm — higher humidity increases kinetic energy of water molecules B. 8 mm — higher humidity reduces the water vapour concentration gradient out of the stomata C. 8 mm — higher humidity destroys forces of attraction between water molecules in xylem D. 36 mm — humidity has no effect when light intensity is constant ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Túi nilon phun sương giữ hơi nước lại quanh lá làm độ ẩm không khí bên ngoài tăng cao (high humidity) và chắn gió. Điều này làm giảm mạnh gradien nồng độ hơi nước giữa khoang khí trong lá và bên ngoài, khiến hơi nước khuếch tán ra chậm hẳn nên bọt khí chỉ nhích 8 mm (B).",
+      "duration": 164.62,
+      "startTime": 1644.03,
+      "endTime": 1808.65,
+      "audioUrl": "/audio/lectures/biology/8/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] (a) Outline the pathway taken by water from the soil until it leaves a leaf during transpiration. [3](b) Explain how water moves upwards against gravity in xylem vessels. [2](c) Explain why a potted plant wilts on a hot, windy afternoon if the soil is dry. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Water enters root hair cells (by osmosis), moves across root cortex cells into xylem vessels [1m], travels up to leaf mesophyll cells where it evaporates from cell surfaces into interconnecting air spaces [1m], and diffuses as water vapour out through stomata [1m]. (b) Loss of water vapour from leaves creates a transpiration pull (tension) at the top of the xylem [1m], drawing up a continuous column of water molecules held together by forces of attraction (cohesion) between water molecules [1m]. (c) The rate of water loss by transpiration exceeds the rate of water uptake , so cells lose water by osmosis, lose turgor pressure, and become flaccid [1m]. 💡 Intuition Check: Keep the two phase/movement verbs razor-sharp: EVAPORATION happens inside the leaf (mesophyll surface → air space); DIFFUSION happens at the pore (air space → outside via stomata)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] (a) Outline the pathway taken by water from the soil until it leaves a leaf during transpiration. (b) Explain how water moves upwards against gravity in xylem vessels. (c) Explain why a potted plant wilts on a hot, windy afternoon if the soil is dry. ((a) Trình bày con đường nước đi từ đất cho tới khi thoát khỏi lá. (b) Giải thích cơ chế kéo nước đi lên ngược chiều trọng lực trong mạch gỗ. (c) Giải thích tại sao cây chậu bị héo vào buổi chiều nóng, nhiều gió khi đất khô. ) ✍️ Lời giải chi tiết theo thang điểm: tế bào mất nước, mất áp suất trương và trở nên mềm rũ . 💡 Kiểm tra bản chất: Phân biệt sắc bén 2 động từ vật lý: EVAPORATION (bay hơi chuyển pha lỏng → hơi) xảy ra trên vách tế bào thịt lá; DIFFUSION (khuếch tán hơi nước) xảy ra qua lỗ khí khổng!",
+      "duration": 147.4,
+      "startTime": 1808.65,
+      "endTime": 1956.05,
+      "audioUrl": "/audio/lectures/biology/8/s03_b12.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🍯 4. TRANSLOCATION (Sự vận chuyển chất hữu cơ)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🍯 4. TRANSLOCATION (PHLOEM TRANSPORT).",
+      "vi": "🍯 4. TRANSLOCATION (Sự vận chuyển chất hữu cơ).",
+      "duration": 10.81,
+      "startTime": 1956.05,
+      "endTime": 1966.86,
+      "audioUrl": "/audio/lectures/biology/8/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of Sources as bakeries / warehouses shipping food out , and Sinks as hungry construction sites or pantries receiving food . In summer, green leaves bake excess sugar and ship it down to potato tubers (leaves = source, tubers = sink). In early spring, before leaves open, the potato tuber unpacks its starch into sucrose and ships it up to growing buds (tuber = source, buds = sink)!",
+      "vi": "🎯 Hình dung đời thường: Hãy coi Source (Cơ quan nguồn) là nhà máy / kho xuất hàng , còn Sink (Cơ quan chứa/đích) là công trường xây dựng hoặc kho nhập hàng . Mùa hè nắng ấm, lá xanh sản xuất dư đường rồi xuất xuống củ khoai tây (lá = source, củ = sink). Đầu mùa xuân khi chưa có lá, củ khoai tây lại phân giải tinh bột thành sucrose để xuất ngược lên nuôi chồi non đang nhú (củ = source, chồi non = sink)!",
+      "duration": 57.87,
+      "startTime": 1966.86,
+      "endTime": 2024.73,
+      "audioUrl": "/audio/lectures/biology/8/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Master all 3 bullets of 8.4: 1) Definition: movement of sucrose and amino acids in phloem from sources to sinks . 2) Source = part that releases sucrose/amino acids; Sink = part that uses or stores them. 3) Seasonal switch: explain light/photosynthesis vs starch breakdown for growth.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Nắm trọn 3 ý của 8.4: 1) Định nghĩa Translocation : sự vận chuyển sucrose và amino acids trong mạch rây (phloem) từ sources đến sinks . 2) Source = bộ phận giải phóng/xuất (releases) sucrose/axit amin; Sink = bộ phận sử dụng hoặc dự trữ chúng. 3) Giải thích đổi vai theo mùa dựa trên quang hợp vs thủy phân tinh bột dự trữ.",
+      "duration": 54.2,
+      "startTime": 2024.73,
+      "endTime": 2078.93,
+      "audioUrl": "/audio/lectures/biology/8/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When asked to name a source or sink, NEVER name a single cell type like \"palisade cell\" or \"root hair cell\" — Cambridge Mark Schemes require the plant part/organ (e.g. photosynthesising leaf , root / tuber , growing shoot tip / bud / flower / fruit )!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi nêu tên Source hoặc Sink, TUYỆT ĐỐI KHÔNG ghi tên một loại tế bào đơn lẻ như \"tế bào giậu\" hay \"tế bào lông hút\" — đáp án chuẩn bắt buộc phải ghi tên bộ phận / cơ quan của cây (ví dụ: photosynthesising leaves, storage roots/tubers, growing buds/shoots/fruits )!",
+      "duration": 38.88,
+      "startTime": 2078.93,
+      "endTime": 2117.81,
+      "audioUrl": "/audio/lectures/biology/8/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Translocation is the movement of sucrose and amino acids in phloem from sources ...",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Translocation is the movement of sucrose and amino acids in phloem from sources to sinks. Source: Plant parts that produce or release sucrose or amino acids (e.g. photosynthesising leaves or storage organs exporting nutrients). Sink: Plant parts that consume or store sucrose or amino acids (e.g. developing roots, buds, flowers, fruits, seeds). ⚠️ Unlike passive physical transpiration in xylem, translocation is an ACTIVE process requiring cellular energy from living phloem tissue.",
+      "vi": "Translocation is the movement of sucrose and amino acids in phloem from sources to sinks. Source (Nguồn): Nơi tạo ra hoặc giải phóng chất hữu cơ. Sink (Đích/Nơi nhận): Nơi sử dụng (để hô hấp, phát triển) hoặc nơi lưu trữ chất hữu cơ. ⚠️ Khác với Xylem, Translocation là một quá trình CHỦ ĐỘNG (Active process), cần tiêu tốn năng lượng.",
+      "duration": 60.01,
+      "startTime": 2117.81,
+      "endTime": 2177.82,
+      "audioUrl": "/audio/lectures/biology/8/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🚨 CẢNH BÁO BẪY ĐỀ THI: SỰ ĐỔI VAI THEO MÙA",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🚨 EXAM TRAP: SEASONAL ROLE REVERSAL OF SOURCES AND SINKS. Cambridge exams frequently test why a single organ can act as a source at one time and a sink at another: Summer / Growing Season: Mature green leaves photosynthesise at high rates ➔ Leaves are SOURCES . Roots, storage organs, and developing fruits receive sugars ➔ They are SINKS . Phloem flow is directed downwards to roots. Spring / Early Season: Plants produce new buds but lack mature photosynthetic leaves. Underground storage organs (roots/tubers/bulbs) break down stored starch into soluble sucrose ➔ Roots/tubers are SOURCES . Growing shoot tips and developing leaves require energy ➔ They are SINKS . Phloem flow is directed upwards.",
+      "vi": "🚨 CẢNH BÁO BẪY ĐỀ THI: SỰ ĐỔI VAI THEO MÙA. Đề thi cực kỳ thích hỏi về việc \"Một cơ quan có thể vừa là Source, vừa là Sink ở các thời điểm khác nhau\". Summer/Growing season (Mùa hè): Lá quang hợp nhiều ➔ Lá là Source . Rễ cây nhận đường để cất trữ ➔ Rễ là Sink . Dòng chảy đi XUỐNG. Spring/Early season (Mùa xuân): Cây chưa có lá mọc mới, cần năng lượng để nảy mầm. Rễ lấy tinh bột dự trữ chuyển thành sucrose ➔ Rễ là Source . Chồi non/lá non là Sink . Dòng chảy đi LÊN.",
+      "duration": 84.61,
+      "startTime": 2177.82,
+      "endTime": 2262.43,
+      "audioUrl": "/audio/lectures/biology/8/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "Tissue: Xylem; Substances Transported: Water, mineral ions; Source: Roots; Sink:...",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "Tissue: Xylem; Substances Transported: Water, mineral ions; Source: Soil / Roots; Sink: Stem, leaves, flowers, fruits. Tissue: Phloem (Summer / Active Growth); Substances Transported: Sucrose, amino acids; Source: Mature leaves; Sink: Roots, storage organs, fruits. Tissue: Phloem (Spring / Early Germination); Substances Transported: Sucrose, amino acids; Source: Storage organs (roots / tubers); Sink: Young leaves, developing shoots.",
+      "vi": "Tissue: Xylem; Substances Transported: Water, mineral ions; Source: Roots; Sink: Stem, leaves, flowers, fruits. Tissue: Phloem (Mùa quang hợp); Substances Transported: Sucrose, Amino acids; Source: Leaf; Sink: Roots, growing points, flowers, fruits. Tissue: Phloem (Đầu mùa nảy mầm); Substances Transported: Sucrose, Amino acids; Source: Roots (Storage organ); Sink: Young leaves, shoot tips.",
+      "duration": 71.88,
+      "startTime": 2262.43,
+      "endTime": 2334.31,
+      "audioUrl": "/audio/lectures/biology/8/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "❌ TỪ KHÓA BỊ GIÁM KHẢO TỪ CHỐI (REJECTED TERMS):",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "❌ REJECTED EXAM TERMS & COMMON PITFALLS: When naming sources or sinks, NEVER name an individual cell (examiners explicitly REJECT \"root hair cell\" ; you must name the whole organ such as \"roots\" or \"leaves\" ). NEVER write \"glucose\" when referring to phloem transport. The transport sugar in plants is strictly \"sucrose\" . Glucose produced during photosynthesis is immediately converted into sucrose for translocation.",
+      "vi": "❌ TỪ KHÓA BỊ GIÁM KHẢO TỪ CHỐI (REJECTED TERMS): Khi nói về Source hay Sink, KHÔNG dùng tên một tế bào cụ thể (ví dụ: cấm dùng \"root hair cells\" , phải dùng \"roots\" ). KHÔNG dùng từ \"Glucose\" khi nói về mạch rây (Phloem). Đường vận chuyển trong cây bắt buộc phải là \"Sucrose\" . Đường sinh ra lúc quang hợp mới là Glucose.",
+      "duration": 51.13,
+      "startTime": 2334.31,
+      "endTime": 2385.44,
+      "audioUrl": "/audio/lectures/biology/8/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A potato plant sprouts new shoots from an underground tuber in early spring before its leaves have emerged above the soil. Which row correctly identifies the source, the sink, and the transported carbohydrate? A. Source: Underground tuber | Sink: Growing shoot tips | Carbohydrate: Sucrose B. Source: Growing shoot tips | Sink: Underground tuber | Carbohydrate: Sucrose C. Source: Underground tuber | Sink: Growing shoot tips | Carbohydrate: Starch D. Source: Soil | Sink: Underground tuber | Carbohydrate: Glucose ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: In early spring, there are no green leaves to photosynthesise, so insoluble starch stored in the underground tuber is digested into soluble sucrose and released into the phloem (making the tuber the source ) to supply the respiring, dividing cells of the growing shoot tips (the sink ). Starch (C) is insoluble and cannot be transported in phloem.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A potato plant sprouts new shoots from an underground tuber in early spring before its leaves have emerged above the soil. Which row correctly identifies the source, the sink, and the transported carbohydrate? (Cây khoai tây đâm chồi mới từ củ ngầm dưới đất vào đầu mùa xuân trước khi lá nhô lên mặt đất. Hàng nào xác định đúng cơ quan nguồn, cơ quan đích và loại carbohydrate được vận chuyển?) A. Source: Underground tuber | Sink: Growing shoot tips | Carbohydrate: Sucrose B. Source: Growing shoot tips | Sink: Underground tuber | Carbohydrate: Sucrose C. Source: Underground tuber | Sink: Growing shoot tips | Carbohydrate: Starch D. Source: Soil | Sink: Underground tuber | Carbohydrate: Glucose ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Đầu mùa xuân chưa có lá xanh quang hợp, tinh bột không tan dự trữ trong củ khoai tây ngầm (underground tuber) được phân giải thành đường hòa tan sucrose để xuất vào phloem (củ là source ) đi lên cung cấp cho đỉnh chồi đang lớn (growing shoot tips = sink) . Tinh bột (C) không tan nên không thể di chuyển trong mạch rây.",
+      "duration": 145.87,
+      "startTime": 2385.44,
+      "endTime": 2531.31,
+      "audioUrl": "/audio/lectures/biology/8/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "translocation",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Define the term translocation . [2](b) Explain why a potato tuber acts as a sink in summer but acts as a source in early spring. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The movement of sucrose and amino acids in the phloem [1m] from sources (regions of release/production) to sinks (regions of use for respiration/growth or storage) [1m]. (b) In summer: leaves photosynthesise rapidly and export excess sucrose to the tuber, which converts and stores it as starch (acting as a sink) [1m]. In spring: new shoots cannot yet photosynthesise, so stored starch in the tuber is broken down into sucrose and released to growing buds/shoots (acting as a source) [1m]. 💡 Intuition Check: Ask one simple question to classify any plant organ at a given moment: Is net sucrose leaving it (Source) or entering it to be respired/stored (Sink)?",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Define the term translocation . (b) Explain why a potato tuber acts as a sink in summer but acts as a source in early spring. ((a) Định nghĩa thuật ngữ chuyển vị dòng mạch rây (translocation). (b) Giải thích tại sao củ khoai tây đóng vai trò là sink vào mùa hè nhưng lại là source vào đầu mùa xuân. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Movement of sucrose and amino acids in the phloem from sources to sinks . (b) In summer: mature leaves photosynthesise rapidly and export sucrose to the tuber where it is converted and stored as starch (nên củ là sink) . In early spring: shoots cannot yet photosynthesise, so starch in the tuber is broken down into sucrose and released into phloem to feed growing buds/shoots (nên củ là source) . 💡 Kiểm tra bản chất: Chỉ cần tự hỏi 1 câu duy nhất tại thời điểm đề bài nêu: Đường sucrose ròng đang đi RA khỏi bộ phận đó (Source) hay đi VÀO để đốt cháy/cất trữ (Sink)?",
+      "duration": 138.08,
+      "startTime": 2531.31,
+      "endTime": 2669.39,
+      "audioUrl": "/audio/lectures/biology/8/s04_b09.mp3"
     }
   ]
 }

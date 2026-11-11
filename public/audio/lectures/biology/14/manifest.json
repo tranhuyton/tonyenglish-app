@@ -2,189 +2,646 @@
   "lectureId": "c9abc870-7cbd-4c7e-b6c9-2d6237ff7670",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 14: Coordination and response",
-  "totalDuration": 523.7,
+  "totalDuration": 3100.2,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+    "s01_int": {
+      "start": 2,
+      "end": 4
     },
-    "sec_nervous_reflexes": {
-      "start": 1,
-      "end": 3
-    },
-    "sec-nervous-reflexes": {
-      "start": 1,
-      "end": 3
-    },
-    "sec_eye_anatomy": {
-      "start": 4,
-      "end": 5
-    },
-    "sec-eye-anatomy": {
-      "start": 4,
-      "end": 5
-    },
-    "sec_endocrine_system": {
-      "start": 6,
-      "end": 7
-    },
-    "sec-endocrine-system": {
-      "start": 6,
-      "end": 7
-    },
-    "sec_homeostasis": {
-      "start": 8,
+    "s01_wex": {
+      "start": 9,
       "end": 10
     },
-    "sec-homeostasis": {
-      "start": 8,
+    "s01_hdr": {
+      "start": 1,
       "end": 10
     },
-    "sec_plant_tropisms": {
-      "start": 11,
-      "end": 11
+    "s02_int": {
+      "start": 12,
+      "end": 14
     },
-    "sec-plant-tropisms": {
+    "s02_wex": {
+      "start": 19,
+      "end": 20
+    },
+    "s02_hdr": {
       "start": 11,
-      "end": 11
+      "end": 20
+    },
+    "s03_int": {
+      "start": 22,
+      "end": 24
+    },
+    "s03_wex": {
+      "start": 28,
+      "end": 29
+    },
+    "s03_hdr": {
+      "start": 21,
+      "end": 29
+    },
+    "s04_int": {
+      "start": 31,
+      "end": 33
+    },
+    "s04_p1_sub01": {
+      "start": 35,
+      "end": 38
+    },
+    "s04_p2_sub01": {
+      "start": 35,
+      "end": 38
+    },
+    "s04_wex": {
+      "start": 39,
+      "end": 40
+    },
+    "s04_hdr": {
+      "start": 30,
+      "end": 40
+    },
+    "s05_hdr": {
+      "start": 41,
+      "end": 41
+    },
+    "s06_int": {
+      "start": 43,
+      "end": 45
+    },
+    "s06_wex": {
+      "start": 49,
+      "end": 50
+    },
+    "s06_hdr": {
+      "start": 42,
+      "end": 50
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 14: Điều hòa Hoạt động & Đáp ứng Sinh học",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 14: Coordination and Response. Organisms detect changes in their internal and external environment and respond to maintain homeostasis and survival. In this lesson, we study the human nervous system, reflex arcs, synapse neurochemistry, sense organs including the eye and pupil accommodation, endocrine adrenaline regulation, skin thermoregulation, and plant auxin tropisms.",
-      "vi": "Chào mừng các bạn đến với Bài 14: Điều hòa Hoạt động & Đáp ứng Sinh học. Sinh vật cảm nhận sự biến đổi của môi trường nội bào và ngoại cảnh để đáp ứng duy trì cân bằng nội môi và sinh tồn. Trong bài học này, chúng ta sẽ học về hệ thần kinh, cung phản xạ, chất truyền tin sinap, giải phẫu mắt và phản xạ điều tiết, hoocmôn adrenaline, điều hòa thân nhiệt ở da và hướng động auxin ở thực vật.",
-      "duration": 47.87,
+      "title": "Chuyên đề 14: Điều hòa Hoạt động & Đáp ứng Sinh học",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) Topic 14: Coordination & Response. Nervous Reflexes, Synapses, Eye Accommodation, Hormones, Thermoregulation & Auxin.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Chuyên đề 14: Điều hòa Hoạt động & Đáp ứng Sinh học. Hệ thần kinh, Cung phản xạ, Cấu tạo mắt, Hoocmôn, Điều nhiệt da & Hướng động Auxin.",
+      "duration": 31.88,
       "startTime": 0.0,
-      "endTime": 47.87,
+      "endTime": 31.88,
       "audioUrl": "/audio/lectures/biology/14/intro.mp3"
     },
     {
-      "id": "sec_nervous_reflexes",
-      "title": "1. Hệ Thần kinh & Cung Phản xạ (Reflex Arc)",
-      "selector": "#sec-nervous-reflexes",
-      "en": "Section 1: The nervous system consists of the central nervous system—the brain and spinal cord—and the peripheral nervous system. A reflex action is an involuntary, rapid, automatic response to a stimulus that protects the body from injury.",
-      "vi": "Mục 1: Hệ thần kinh gồm hệ thần kinh trung ương—não bộ và tủy sống—cùng hệ thần kinh ngoại biên. Phản xạ là phản ứng tự động, nhanh chóng và vô thức của cơ thể đối với kích thích nhằm bảo vệ cơ thể khỏi tổn thương.",
-      "duration": 47.97,
-      "startTime": 47.87,
-      "endTime": 95.84,
-      "audioUrl": "/audio/lectures/biology/14/sec_nervous_reflexes.mp3"
+      "id": "s01_hdr",
+      "title": "🧠 1. HỆ THẦN KINH & CUNG PHẢN XẠ (NERVOUS SYSTEM & REFLEX ACTIONS)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧠 1. THE NERVOUS SYSTEM & REFLEX ACTIONS.",
+      "vi": "🧠 1. HỆ THẦN KINH & CUNG PHẢN XẠ.",
+      "duration": 7.21,
+      "startTime": 31.88,
+      "endTime": 39.09,
+      "audioUrl": "/audio/lectures/biology/14/s01_hdr.mp3"
     },
     {
-      "id": "card_reflex_arc",
-      "title": "⚡ Chuỗi Cung Phản Xạ (Reflex Arc Sequence)",
-      "selector": "#card-reflex-arc",
-      "en": "The reflex arc pathway: Stimulus is detected by a receptor, triggering electrical impulses along a sensory neurone into the spinal cord. In the CNS, the impulse passes across a synapse to a relay neurone, then along a motor neurone to an effector muscle or gland, producing an immediate protective response.",
-      "vi": "Đường truyền cung phản xạ: Kích thích được thụ thể tiếp nhận, khởi phát xung điện truyền dọc nơ-ron cảm giác vào tủy sống. Tại thần kinh trung ương, xung điện qua khe sinap truyền sang nơ-ron trung gian, rồi theo nơ-ron vận động đến cơ quan đáp ứng (cơ hoặc tuyến) tạo phản xạ tức thì.",
-      "duration": 35.97,
-      "startTime": 95.84,
-      "endTime": 131.81,
-      "audioUrl": "/audio/lectures/biology/14/card_reflex_arc.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: A reflex arc is like a building's automatic fire sprinkler: smoke hits the sensor ( receptor ) and wires immediately trigger water release ( effector ) before the building manager (conscious brain) even reads the alert — saving precious milliseconds when touching a hot pan! Meanwhile, a synapse acts like a ferry across a river gap: electrical cars stop at the bank, chemical passengers ( neurotransmitters ) diffuse across the water, and start a new electrical car on the far bank.",
+      "vi": "🎯 Hình dung đời thường: Cung phản xạ (Reflex arc) giống hệt vòi chữa cháy tự động trong tòa nhà: khói chạm cảm biến ( receptor ) là dây dẫn kích hoạt phun nước ngay lập tức ( effector ) trước cả khi giám đốc tòa nhà (ý thức não bộ) kịp đọc tin nhắn — giúp rụt tay khỏi chảo nóng chỉ trong tích tắc! Còn khe sinap (synapse) giống bến phà qua sông: xe điện dừng ở bờ trước, hành khách hóa học ( neurotransmitter ) khuếch tán qua dòng nước sang bờ bên kia để nổ máy chiếc xe điện tiếp theo.",
+      "duration": 67.04,
+      "startTime": 39.09,
+      "endTime": 106.13,
+      "audioUrl": "/audio/lectures/biology/14/s01_b01.mp3"
     },
     {
-      "id": "card_synapse",
-      "title": "🌉 Khe Sinap & Dẫn truyền Xung 1 Chiều",
-      "selector": "#card-synapse",
-      "en": "Synapse structure and function: A synapse is a junction between two neurones. When an impulse reaches the presynaptic knob, neurotransmitter chemical molecules are released from vesicles into the synaptic cleft. They diffuse across the gap and bind to receptor proteins on the postsynaptic membrane, triggering a new impulse unidirectionally.",
-      "vi": "Cấu tạo và hoạt động của sinap: Sinap là điểm tiếp xúc giữa hai nơ-ron. Khi xung điện đến cúc tận cùng trước sinap, chất truyền tin hóa học được giải phóng từ các bọc vào khe sinap. Chúng khuếch tán qua khe gắn vào thụ thể màng sau sinap, khởi phát xung điện mới truyền theo đúng một chiều.",
-      "duration": 39.14,
-      "startTime": 131.81,
-      "endTime": 170.95,
-      "audioUrl": "/audio/lectures/biology/14/card_synapse.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) CNS = brain + spinal cord; PNS = nerves outside CNS.2) Reflex arc order: Stimulus ➔ Receptor ➔ Sensory neurone ➔ Relay neurone (CNS) ➔ Motor neurone ➔ Effector (muscle/gland) ➔ Response .3) Synapse (Supplement): Impulse triggers vesicles to release neurotransmitter into the synaptic gap ➔ diffuses across ➔ binds to receptor proteins on next neurone ➔ stimulates new impulse ( one-way only!).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) CNS = não + tủy sống; PNS = dây thần kinh ngoại biên.2) Thứ tự cung phản xạ: Stimulus ➔ Receptor ➔ Sensory neurone ➔ Relay neurone (CNS) ➔ Motor neurone ➔ Effector (cơ/tuyến) ➔ Response .3) Tại Sinap (Supplement): Xung điện kích thích vesicles (túi chứa) giải phóng neurotransmitter vào synaptic gap ➔ khuếch tán qua khe ➔ gắn vào receptor proteins màng sau ➔ phát sinh xung điện mới (chỉ truyền 1 chiều duy nhất !).",
+      "duration": 66.17,
+      "startTime": 106.13,
+      "endTime": 172.3,
+      "audioUrl": "/audio/lectures/biology/14/s01_b02.mp3"
     },
     {
-      "id": "sec_eye_anatomy",
-      "title": "2. Cơ quan Thị giác: Cấu tạo Mắt & Cơ chế Điều tiết",
-      "selector": "#sec-eye-anatomy",
-      "en": "Section 2: The human eye: Light passes through the transparent cornea, pupil aperture controlled by the iris, and flexible convex lens onto the photoreceptor retina. The fovea contains the highest density of cone cells providing sharp colour vision.",
-      "vi": "Mục 2: Cơ quan thị giác: Ánh sáng đi qua giác mạc trong suốt, lỗ đồng tử điều khiển bởi mống mắt, thấu kính đàn hồi và hội tụ lên võng mạc. Điểm vàng (fovea) chứa mật độ tế bào nón cao nhất mang lại thị lực sắc nét và nhìn màu chuẩn xác.",
-      "duration": 48.95,
-      "startTime": 170.95,
-      "endTime": 219.9,
-      "audioUrl": "/audio/lectures/biology/14/sec_eye_anatomy.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say \"electrical impulses jump/diffuse across the synaptic gap\"! Along neurones, messages are electrical impulses ; across the synaptic gap, chemical neurotransmitter molecules diffuse .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết \"xung điện nhảy qua / khuếch tán qua khe sinap\"! Dọc sợi nơ-ron là xung điện (electrical impulse) , nhưng băng qua khe sinap bắt buộc là phân tử hóa học neurotransmitter khuếch tán (diffuse) .",
+      "duration": 32.53,
+      "startTime": 172.3,
+      "endTime": 204.83,
+      "audioUrl": "/audio/lectures/biology/14/s01_b03.mp3"
     },
     {
-      "id": "card_eye_accommodation",
-      "title": "👁️ Phản xạ Điều tiết của Thể Thủy tinh (Accommodation)",
-      "selector": "#card-eye-accommodation",
-      "en": "Accommodation reflex: When viewing a near object, ciliary muscles contract, suspensory ligaments become slack, allowing the lens to become thicker and more convex, refracting light strongly. When viewing a distant object, ciliary muscles relax, suspensory ligaments pull tight, stretching the lens thin.",
-      "vi": "Cơ chế điều tiết mắt: Khi nhìn vật ở gần, cơ thể mi co lại, dây chằng treo giãn chùng, thấu kính phồng dày hình cầu khúc xạ ánh sáng mạnh. Khi nhìn vật ở xa, cơ thể mi giãn ra, dây chằng treo căng kéo làm thấu kính dẹt mỏng để hội tụ chuẩn xác lên võng mạc.",
-      "duration": 35.42,
-      "startTime": 219.9,
-      "endTime": 255.32,
-      "audioUrl": "/audio/lectures/biology/14/card_eye_accommodation.mp3"
+      "id": "s01_b04",
+      "title": "Hệ thần kinh người được chia làm hai phần chính: Hệ thần kinh trung ương (CNS): ...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "The human nervous system consists of two major subdivisions: Central Nervous System (CNS): Brain and spinal cord, responsible for integrating information and coordinating responses. Peripheral Nervous System (PNS): Cranial and spinal nerves connecting receptors and effectors to the CNS.",
+      "vi": "Hệ thần kinh người được chia làm hai phần chính: Hệ thần kinh trung ương (CNS): Gồm Não bộ và Tủy sống, tiếp nhận và điều hòa các phản xạ. Hệ thần kinh ngoại biên (PNS): Gồm các dây thần kinh sọ và dây thần kinh tủy nối các thụ thể và cơ quan đáp ứng với CNS.",
+      "duration": 39.47,
+      "startTime": 204.83,
+      "endTime": 244.3,
+      "audioUrl": "/audio/lectures/biology/14/s01_b04.mp3"
     },
     {
-      "id": "sec_endocrine_system",
-      "title": "3. Hệ Nội tiết & Hooc-môn (Adrenaline Focus)",
-      "selector": "#sec-endocrine-system",
-      "en": "Section 3: The endocrine system consists of glands that secrete hormones directly into the bloodstream. Hormones are chemical messengers transported by blood plasma that alter the metabolic activity of specific target organs.",
-      "vi": "Mục 3: Hệ nội tiết gồm các tuyến nội tiết tiết hoocmôn trực tiếp vào máu. Hoocmôn là những chất truyền tin hóa học được huyết tương vận chuyển đến tác động và điều chỉnh hoạt động của các cơ quan đích chuyên biệt.",
-      "duration": 46.12,
-      "startTime": 255.32,
-      "endTime": 301.44,
-      "audioUrl": "/audio/lectures/biology/14/sec_endocrine_system.mp3"
+      "id": "s01_b05",
+      "title": "Chuỗi Cung Phản Xạ (Reflex Arc)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "The Sequence of a Reflex Arc. A reflex action is a rapid, automatic, involuntary response to a specific stimulus that protects the body from injury (e.g. withdrawal reflex from a hot object). 1. Stimulus ➔ 2. Receptor ➔ 3. Sensory Neurone ➔ 4. Relay Neurone (CNS) ➔ 5. Motor Neurone ➔ 6. Effector (Muscle/Gland) ➔ 7. Response",
+      "vi": "Chuỗi Cung Phản Xạ (Reflex Arc). Phản xạ là phản ứng tự động, tức thời và vô thức đối với kích thích nhằm bảo vệ cơ thể khỏi tổn thương. 1. Kích thích (Stimulus) ➔ 2. Thụ thể (Receptor) ➔ 3. Nơ-ron cảm giác ➔ 4. Nơ-ron trung gian (CNS) ➔ 5. Nơ-ron vận động ➔ 6. Cơ quan đáp ứng ➔ 7. Phản ứng (Response)",
+      "duration": 56.62,
+      "startTime": 244.3,
+      "endTime": 300.92,
+      "audioUrl": "/audio/lectures/biology/14/s01_b05.mp3"
     },
     {
-      "id": "card_adrenaline",
-      "title": "🔥 Hoocmôn Adrenaline (Fight or Flight Response)",
-      "selector": "#card-adrenaline",
-      "en": "Adrenaline function: Secreted by adrenal glands in fear or stress, it triggers the 'fight or flight' response: increasing heart rate and stroke volume, accelerating breathing rate, dilating pupils, and stimulating liver glycogenolysis to raise blood glucose for muscular ATP respiration.",
-      "vi": "Tác dụng của Adrenaline: Tiết ra từ tuyến thượng thận khi sợ hãi hoặc căng thẳng, kích hoạt phản ứng 'Chiến-hay-Biến': tăng nhịp tim và lưu lượng máu, tăng nhịp thở, giãn đồng tử và kích thích gan phân giải glycogen thành glucose cung cấp năng lượng ATP cho cơ bắp hoạt động.",
-      "duration": 33.45,
-      "startTime": 301.44,
-      "endTime": 334.89,
-      "audioUrl": "/audio/lectures/biology/14/card_adrenaline.mp3"
+      "id": "s01_b06",
+      "title": "🔌 3 Loại Nơ-ron (Neurones)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🔌 Three Types of Neurones. Sensory Neurone: Transmits electrical impulses from sensory receptors to the spinal cord/brain. Cell body located midway in a dorsal root ganglion. Relay Neurone: Located entirely within the CNS. Connects sensory neurones to motor neurones. Motor Neurone: Transmits electrical impulses from the CNS to effectors (muscles/glands). Cell body located at the dendrite end in the spinal cord. Myelin Sheath: Fatty insulating layer wrapped around axons, accelerating electrical impulse transmission.",
+      "vi": "🔌 3 Loại Nơ-ron (Neurones). Sensory Neurone (Nơ-ron cảm giác): Dẫn truyền xung thần kinh từ thụ thể cảm giác về tủy sống/não. Relay Neurone (Nơ-ron trung gian): Nằm hoàn toàn trong tủy sống/não, nối nơ-ron cảm giác với nơ-ron vận động. Motor Neurone (Nơ-ron vận động): Dẫn truyền xung thần kinh từ CNS đến cơ hoặc tuyến đáp ứng. Myelin Sheath (Bao mi-ê-lin): Lớp màng mỡ cách điện bọc quanh sợi trục giúp xung thần kinh lan truyền cực nhanh.",
+      "duration": 73.09,
+      "startTime": 300.92,
+      "endTime": 374.01,
+      "audioUrl": "/audio/lectures/biology/14/s01_b06.mp3"
     },
     {
-      "id": "sec_homeostasis",
-      "title": "4. Cân bằng Nội môi: Đường huyết & Điều nhiệt",
-      "selector": "#sec-homeostasis",
-      "en": "Section 4: Homeostasis is the maintenance of a constant internal environment within narrow physiological limits. Negative feedback restores variable parameters back towards set point levels.",
-      "vi": "Mục 4: Cân bằng nội môi là sự duy trì môi trường bên trong cơ thể ổn định trong giới hạn sinh lý hẹp. Cơ chế điều hòa ngược âm tính (negative feedback) giúp đưa các chỉ số sinh lý dao động trở lại mức điểm chuẩn.",
-      "duration": 57.42,
-      "startTime": 334.89,
-      "endTime": 392.31,
-      "audioUrl": "/audio/lectures/biology/14/sec_homeostasis.mp3"
+      "id": "s01_b07",
+      "title": "🌉 Khe Sinap (Synapse) & Dẫn truyền 1 chiều",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🌉 Structure and Function of a Synapse. A synapse is a junction between two neurones separated by a microscopic gap (synaptic cleft). Electrical impulse arrives at the presynaptic axon terminal. Vesicles release neurotransmitter molecules into the synaptic gap. Neurotransmitters diffuse across the synaptic cleft down a concentration gradient. They bind to specific complementary receptor proteins on the postsynaptic membrane, triggering a new electrical impulse. One-way transmission: Synapses ensure impulses travel in one direction only because vesicles are only in presynaptic neurones and receptors are only on postsynaptic membranes.",
+      "vi": "🌉 Khe Sinap (Synapse) & Dẫn truyền 1 chiều. Sinap là điểm nối tiếp xúc giữa hai nơ-ron cạnh nhau. Xung điện chạy đến cúc tận cùng trước sinap. Túi bóng chứa chất dẫn truyền thần kinh (neurotransmitter) vỡ ra giải phóng hóa chất vào khe sinap. Chất dẫn truyền khuếch tán qua khe sinap từ nơi nồng độ cao đến nơi nồng độ thấp. Gắn vào thụ thể protein đặc hiệu ở màng sau sinap, làm phát sinh xung điện mới. Dẫn truyền 1 chiều: Do túi chứa chỉ có ở màng trước và thụ thể chỉ có ở màng sau.",
+      "duration": 78.92,
+      "startTime": 374.01,
+      "endTime": 452.93,
+      "audioUrl": "/audio/lectures/biology/14/s01_b07.mp3"
     },
     {
-      "id": "card_blood_glucose",
-      "title": "🩸 Điều hòa Đường huyết bởi Insulin và Glucagon",
-      "selector": "#card-blood-glucose",
-      "en": "Blood glucose regulation: When blood glucose rises after a meal, the pancreas secretes insulin, stimulating liver and muscle cells to absorb glucose and convert it into insoluble glycogen. When blood glucose drops during fasting, the pancreas secretes glucagon, stimulating liver cells to break glycogen back into glucose.",
-      "vi": "Điều hòa đường huyết: Khi nồng độ glucose trong máu tăng cao sau bữa ăn, tuyến tụy tiết insulin kích thích tế bào gan và cơ hấp thu glucose chuyển thành glycogen dự trữ. Khi đường huyết hạ thấp lúc đói, tuyến tụy tiết glucagon kích thích gan phân giải glycogen thành glucose giải phóng vào máu.",
-      "duration": 38.03,
-      "startTime": 392.31,
-      "endTime": 430.34,
-      "audioUrl": "/audio/lectures/biology/14/card_blood_glucose.mp3"
+      "id": "s01_b08",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Why do nerve impulses travel in one direction only across a synapse? A. Myelin sheaths block electrical impulses from travelling backwards B. Vesicles containing neurotransmitter are only on the presynaptic side and receptor proteins are only on the postsynaptic membrane C. Neurotransmitter molecules are pumped across the gap by active transport D. Relay neurones can only carry chemical signals, not electrical impulses ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: One-way transmission at a synapse is guaranteed by structural asymmetry: vesicles containing neurotransmitter exist only in the presynaptic neurone terminal, while complementary receptor proteins are present only on the membrane of the next (postsynaptic) neurone. C is wrong because neurotransmitters cross the cleft by diffusion .",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Exam Question: Why do nerve impulses travel in one direction only across a synapse? (Tại sao xung thần kinh chỉ truyền theo một chiều duy nhất qua khe sinap?) A. Bao myelin chặn xung chạy ngược B. Túi chứa chỉ ở màng trước và thụ thể protein chỉ ở màng sau C. Chất dẫn truyền được bơm chủ động D. Nơ-ron trung gian chỉ truyền hóa chất ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Sự bất đối xứng cấu trúc đảm bảo dẫn truyền 1 chiều: túi chứa chất dẫn truyền (vesicles) chỉ nằm ở đầu tận cùng nơ-ron trước sinap, còn thụ thể protein (receptor proteins) đặc hiệu chỉ nằm trên màng nơ-ron sau sinap. Loại C vì chất dẫn truyền đi qua khe bằng khuếch tán (diffusion) .",
+      "duration": 105.75,
+      "startTime": 452.93,
+      "endTime": 558.68,
+      "audioUrl": "/audio/lectures/biology/14/s01_b08.mp3"
     },
     {
-      "id": "card_thermoregulation_skin",
-      "title": "🌡️ Điều hòa Thân nhiệt ở Da (Thermoregulation)",
-      "selector": "#card-thermoregulation-skin",
-      "en": "Skin thermoregulation: In hot conditions, arterioles near the skin surface dilate (vasodilation) and sweat glands secrete sweat, dissipating latent heat of vaporization. In cold conditions, arterioles constrict (vasoconstriction) redirecting blood to core organs, hair erector muscles contract, and skeletal muscles shiver.",
-      "vi": "Điều hòa thân nhiệt ở da: Khi trời nóng, tiểu động mạch dưới da giãn (vasodilation) và tuyến mồ hôi tiết mồ hôi tỏa nhiệt bay hơi. Khi trời lạnh, tiểu động mạch co lại (vasoconstriction) dồn máu về nội tạng trung tâm, cơ dựng lông co tạo lớp khí cách nhiệt và cơ vân run rẩy sinh nhiệt.",
-      "duration": 39.78,
-      "startTime": 430.34,
-      "endTime": 470.12,
-      "audioUrl": "/audio/lectures/biology/14/card_thermoregulation_skin.mp3"
+      "id": "s01_b09",
+      "title": "vesicles",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Describe the sequence of events that occurs at a synapse when an electrical impulse arrives at the end of a sensory neurone. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. The arriving impulse stimulates vesicles to release neurotransmitter molecules into the synaptic gap [1m].2. Neurotransmitter molecules diffuse across the synaptic gap (down a concentration gradient) [1m].3. Neurotransmitter molecules bind with complementary receptor proteins on the membrane of the next (relay) neurone [1m].4. This binding stimulates a new electrical impulse in the next neurone [1m]. 💡 Intuition Check: Hit all four verbs in order for 4/4 marks: vesicles release ➔ neurotransmitters diffuse ➔ bind to receptor proteins ➔ new impulse stimulated.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] Describe the sequence of events that occurs at a synapse when an electrical impulse arrives at the end of a sensory neurone. (Mô tả trình tự các sự kiện diễn ra tại sinap khi xung điện truyền đến đầu tận cùng nơ-ron cảm giác.) ✍️ Lời giải chi tiết theo thang điểm: 1. Xung điện kích thích túi chứa giải phóng neurotransmitter vào khe sinap. 2. Các phân tử này khuếch tán qua khe sinap. 3. Gắn khớp với protein thụ thể trên màng nơ-ron kế tiếp. 4. Kích thích phát sinh xung điện mới ở nơ-ron tiếp theo. 💡 Kiểm tra bản chất: Nhớ đúng 4 mắt xích ăn trọn 4 điểm: Vesicles release ➔ Diffuse across gap ➔ Bind receptor proteins ➔ Stimulate new impulse.",
+      "duration": 107.91,
+      "startTime": 558.68,
+      "endTime": 666.59,
+      "audioUrl": "/audio/lectures/biology/14/s01_b09.mp3"
     },
     {
-      "id": "sec_plant_tropisms",
-      "title": "🌱 5. Hướng động ở Thực vật & Hooc-môn Auxin",
-      "selector": "#sec-plant-tropisms",
-      "en": "Section 5: Plant tropisms: A tropism is a growth response towards or away from a directional stimulus. Plant shoots exhibit positive phototropism and negative gravitropism. The plant hormone auxin is produced at the shoot tip, diffuses down, and accumulates on the shaded side, stimulating cell elongation so the shoot bends towards light.",
-      "vi": "Mục 5: Hướng động ở thực vật: Hướng động là phản ứng sinh trưởng định hướng đối với kích thích từ một phía. Ngọn cây có tính hướng sáng dương và hướng trọng lực âm. Hoocmôn thực vật auxin được sản sinh ở đỉnh ngọn, khuếch tán xuống dưới và tập trung ở phía bị che tối, kích thích kéo dài tế bào khiến ngọn cây uốn cong về phía ánh sáng.",
-      "duration": 53.58,
-      "startTime": 470.12,
-      "endTime": 523.7,
-      "audioUrl": "/audio/lectures/biology/14/sec_plant_tropisms.mp3"
+      "id": "s02_hdr",
+      "title": "👁️ 2. GIẢI PHẪU VÀ SINH LÝ MẮT (THE HUMAN EYE)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "👁️ 2. SENSE ORGANS: THE HUMAN EYE.",
+      "vi": "👁️ 2. GIẢI PHẪU VÀ SINH LÝ MẮT (THE HUMAN EYE).",
+      "duration": 7.86,
+      "startTime": 666.59,
+      "endTime": 674.45,
+      "audioUrl": "/audio/lectures/biology/14/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Your eye works just like a smart camera: the cornea is the curved front glass doing heavy bending, the iris is the aperture diaphragm widening or narrowing the pupil , the lens is the autofocus ring changing thickness ( accommodation ), and the retina is the digital sensor packed with night-vision pixels ( rods ) and RGB HD pixels at the centre ( cones in the fovea ).",
+      "vi": "🎯 Hình dung đời thường: Mắt người giống một chiếc máy ảnh thông minh: giác mạc (cornea) là lớp kính cong ngoài cùng bẻ sáng mạnh nhất, mống mắt (iris) là lá khẩu mở rộng hay thu hẹp đồng tử (pupil) , thấu kính (lens) là ống kính lấy nét tự động phồng/dẹt ( accommodation ), còn võng mạc (retina) là cảm biến ảnh gồm điểm ảnh ban đêm ( rods ) và cụm điểm ảnh màu siêu nét ở trung tâm ( cones tại fovea ).",
+      "duration": 53.27,
+      "startTime": 674.45,
+      "endTime": 727.72,
+      "audioUrl": "/audio/lectures/biology/14/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Pupil reflex (Iris antagonistic muscles): Bright light ➔ circular contract , radial relax ➔ pupil constricts. Dim light ➔ radial contract , circular relax ➔ pupil dilates.2) Accommodation: Near object (diverging rays need MORE refraction) ➔ ciliary muscles contract , suspensory ligaments slacken ➔ lens becomes thicker/more convex . Distant object ➔ ciliary muscles relax , ligaments pulled tight/taut ➔ lens pulled thinner/less convex .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Phản xạ đồng tử (Iris): Sáng chói ➔ cơ vòng co (circular contract) , cơ nan hoa giãn ➔ đồng tử thu nhỏ. Tối ➔ cơ nan hoa co (radial contract) , cơ vòng giãn ➔ đồng tử mở to.2) Điều tiết (Accommodation): Nhìn GẦN ➔ cơ thể mi co (ciliary contract) , dây chằng chùng (slacken) ➔ thấu kính dày/phồng hơn (khúc xạ mạnh). Nhìn XA ➔ cơ thể mi giãn , dây chằng căng ➔ thấu kính mỏng/dẹt .",
+      "duration": 64.99,
+      "startTime": 727.72,
+      "endTime": 792.71,
+      "audioUrl": "/audio/lectures/biology/14/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students frequently mix up circular/radial muscles (in the iris — pupil reflex) with ciliary muscles/suspensory ligaments (around the lens — accommodation)! Also remember: when ciliary muscles contract , the ring shrinks inward so suspensory ligaments go slack (not tight!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đừng nhầm cặp cơ của mống mắt (circular/radial — chỉnh sáng tối) với cơ của thấu kính (ciliary muscle/suspensory ligaments — chỉnh gần xa)! Mẹo nhớ nhìn GẦN: C lose = C iliary C ontracts (vòng cơ co nhỏ vào trong nên dây chằng phải CHÙNG xuống!).",
+      "duration": 42.1,
+      "startTime": 792.71,
+      "endTime": 834.81,
+      "audioUrl": "/audio/lectures/biology/14/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🎯 Cơ quan Cảm giác & Kích thích đặc hiệu (Sense Organs)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🎯 Sense Organs & Specific Stimuli (Core 14.2). Sense organs are groups of receptor cells responding to specific stimuli : Light: photoreceptors (rods & cones) in the eye (retina) . Sound: sound/vibration receptors in the ear . Touch & Temperature: mechanoreceptors & thermoreceptors in the skin . Chemicals: chemoreceptors in the tongue (taste) and nose (smell).",
+      "vi": "🎯 Cơ quan Cảm giác & Kích thích đặc hiệu (Sense Organs). Cơ quan cảm giác (Sense organs) là nhóm các tế bào thụ cảm đáp ứng với từng loại kích thích đặc hiệu (specific stimuli) : Ánh sáng (Light): tế bào que & nón ở võng mạc mắt (retina) . Âm thanh (Sound): tế bào thụ cảm âm thanh ở tai (ear) . Xúc giác & Nhiệt độ (Touch & Temperature): thụ thể ở da (skin) . Hóa chất (Chemicals): thụ thể hóa học ở lưỡi (vị giác) và mũi (khứu giác).",
+      "duration": 63.51,
+      "startTime": 834.81,
+      "endTime": 898.32,
+      "audioUrl": "/audio/lectures/biology/14/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🔦 Tế bào Que (Rods) vs Nón (Cones), Điểm vàng & Điểm mù",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🔦 Rods vs Cones, Fovea & Blind Spot (Supplement 14.2). Rods (Night Vision): Have greater sensitivity to low-intensity light for black-and-white vision in dim light; distributed across the retina except at the fovea and blind spot. Cones (Colour Vision): Three different kinds of cones absorb light of different colours ( red, green, and blue ) to give sharp, detailed colour vision in bright light. Fovea: Shallow pit at the centre of the retina directly opposite the lens containing the highest concentration of cones (and no rods) — focuses sharp images. Blind Spot: Point where the optic nerve exits the retina — contains zero rods or cones , so light falling here is not detected.",
+      "vi": "🔦 Tế bào Que (Rods) vs Nón (Cones), Điểm vàng & Điểm mù. Tế bào que (Rods — Nhìn ban đêm): Có độ nhạy sáng cao hơn (greater sensitivity) giúp nhìn trắng-đen trong ánh sáng yếu; phân bố khắp võng mạc trừ điểm vàng và điểm mù. Tế bào nón (Cones — Nhìn màu sắc): Có 3 loại tế bào nón khác nhau hấp thụ ánh sáng màu đỏ, lục, lam giúp nhìn màu sắc nét khi đủ sáng. Điểm vàng (Fovea): Hõm trung tâm võng mạc tập trung mật độ tế bào nón dày đặc nhất — nơi hội tụ ảnh sắc nét nhất. Điểm mù (Blind spot): Nơi dây thần kinh thị giác (optic nerve) đi ra khỏi võng mạc — không có tế bào que hay nón nên không cảm nhận được ánh sáng.",
+      "duration": 92.41,
+      "startTime": 898.32,
+      "endTime": 990.73,
+      "audioUrl": "/audio/lectures/biology/14/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "Interactive Eye Anatomy (Sơ đồ Mắt tương tác)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "Interactive Eye Anatomy. Cornea. Transparent, curved front layer of the eye. Function: Refracts (bends) light rays as they enter the eye, providing the greatest contribution to focusing light onto the retina.",
+      "vi": "Interactive Eye Anatomy (Sơ đồ Mắt tương tác). Giác mạc (Cornea). Lớp màng cong trong suốt phía trước nhãn cầu. Chức năng: Khúc xạ ánh sáng khi đi vào mắt, đóng vai trò chính trong việc hội tụ tia sáng lên võng mạc.",
+      "duration": 31.98,
+      "startTime": 990.73,
+      "endTime": 1022.71,
+      "audioUrl": "/audio/lectures/biology/14/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Cơ chế: Phản xạ Đồng tử; Trường hợp A: Sáng chói: Cơ vòng co, cơ nan hoa giãn ➔ ...",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "Function: Pupil Reflex; Condition A: Bright light: Circular muscles contract, radial muscles relax ➔ Pupil constricts (narrows), protecting retina.; Condition B: Dim light: Radial muscles contract, circular muscles relax ➔ Pupil dilates (widens), letting in more light. Function: Accommodation; Condition A: Near object: Ciliary muscles contract, suspensory ligaments slacken ➔ Lens becomes thick and round (high refraction).; Condition B: Distant object: Ciliary muscles relax, suspensory ligaments pull tight ➔ Lens pulled thin and flat (low refraction).",
+      "vi": "Cơ chế: Phản xạ Đồng tử; Trường hợp A: Sáng chói: Cơ vòng co, cơ nan hoa giãn ➔ Đồng tử co nhỏ lại để bảo vệ võng mạc.; Trường hợp B: Tối mờ: Cơ nan hoa co, cơ vòng giãn ➔ Đồng tử giãn to ra để nạp tối đa ánh sáng. Cơ chế: Sự Điều tiết mắt; Trường hợp A: Nhìn vật ở GẦN: Cơ thể mi co, dây chằng chùng ➔ Thấu kính phồng dày lên (khúc xạ mạnh).; Trường hợp B: Nhìn vật ở XA: Cơ thể mi giãn, dây chằng căng ➔ Thấu kính bị kéo dẹt phẳng (khúc xạ yếu).",
+      "duration": 75.0,
+      "startTime": 1022.71,
+      "endTime": 1097.71,
+      "audioUrl": "/audio/lectures/biology/14/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A student looks up from reading a book held 20 cm away to watch an aeroplane flying high in the sky. Which changes occur inside the student's eyes? A. Ciliary muscles contract | Suspensory ligaments slacken | Lens becomes thicker B. Ciliary muscles contract | Suspensory ligaments tighten | Lens becomes thinner C. Ciliary muscles relax | Suspensory ligaments tighten | Lens becomes thinner D. Ciliary muscles relax | Suspensory ligaments slacken | Lens becomes thicker ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Light rays from a distant object arrive nearly parallel and require less refraction . Therefore, the ring of ciliary muscles relaxes (widens), pulling the suspensory ligaments tight (taut) , which stretches the elastic lens thinner (less convex) .",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Exam Question: A student looks up from reading a book held 20 cm away to watch an aeroplane high in the sky. Which changes occur inside the student's eyes? (Một học sinh ngẩng lên từ trang sách cách 20 cm để nhìn máy bay trên bầu trời xa. Thay đổi nào diễn ra trong mắt?) A. Cơ thể mi co | Dây chằng chùng | Thấu kính dày B. Cơ thể mi co | Dây chằng căng | Thấu kính mỏng C. Cơ thể mi giãn | Dây chằng căng | Thấu kính mỏng D. Cơ thể mi giãn | Dây chằng chùng | Thấu kính dày ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Tia sáng từ vật ở xa gần như song song nên cần ít khúc xạ hơn . Do đó vòng cơ thể mi giãn rộng ra (relax) , kéo dây chằng treo căng chặt (tighten) , làm thấu kính bị kéo mỏng dẹt lại (thinner) .",
+      "duration": 108.44,
+      "startTime": 1097.71,
+      "endTime": 1206.15,
+      "audioUrl": "/audio/lectures/biology/14/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Compare the functions and retinal distribution of rods and cones in the human eye. [3] (b) Explain why no image is detected when light falls on the blind spot. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Rods have greater sensitivity to dim light for night vision (monochrome) and are distributed across the retina except at the fovea [1m]. Cones exist in three different types absorbing different colours of light for colour vision in bright light [1m], and are tightly concentrated at the fovea [1m]. (b) There are no photoreceptor cells (no rods or cones) where the optic nerve leaves the retina [1m]. 💡 Intuition Check: Memory hook: Cones = Colour + Concentrated in the Central fovea; Rods = dim Room / night vision.",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] (a) Compare the functions and retinal distribution of rods and cones in the human eye. (So sánh chức năng và sự phân bố của tế bào que và tế bào nón trên võng mạc.) (b) Explain why no image is detected at the blind spot. (Giải thích vì sao không thu nhận được ảnh tại điểm mù.) ✍️ Lời giải chi tiết theo thang điểm: Que nhạy sáng yếu để nhìn đêm, rải khắp võng mạc trừ fovea; 3 loại Nón nhìn màu sắc tập trung dày đặc tại điểm vàng fovea. (b) No light receptor cells are present where the optic nerve leaves the retina . (Không có tế bào thụ cảm ánh sáng tại nơi dây thần kinh thị giác rời mắt.) 💡 Kiểm tra bản chất: Mẹo nhớ: Cones = Colour (màu sắc) + Concentrated tại Central fovea; Rods = nhìn đêm tối (Room tối).",
+      "duration": 113.98,
+      "startTime": 1206.15,
+      "endTime": 1320.13,
+      "audioUrl": "/audio/lectures/biology/14/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🧪 3. HOOCMÔN & HỆ NỘI TIẾT (ENDOCRINE SYSTEM)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🧪 3. HORMONES & THE ENDOCRINE SYSTEM.",
+      "vi": "🧪 3. HOOCMÔN & HỆ NỘI TIẾT (ENDOCRINE SYSTEM).",
+      "duration": 8.12,
+      "startTime": 1320.13,
+      "endTime": 1328.25,
+      "audioUrl": "/audio/lectures/biology/14/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: If the nervous system is a private fibre-optic phone call (instant, targeted to one person, over in seconds), the endocrine system is a radio broadcast into the bloodstream: glands release chemical hormones everywhere in the blood plasma, and only organs tuned to the right frequency (specific target organs with complementary receptors) respond — slower to start, but lasting much longer!",
+      "vi": "🎯 Hình dung đời thường: Nếu hệ thần kinh là cuộc gọi cáp quang riêng tư (tức thì, đúng 1 người nhận, ngắt máy là hết), thì hệ nội tiết là đài phát thanh qua dòng máu: tuyến nội tiết thả hormone trôi khắp huyết tương, và chỉ những cơ quan đích (target organs) có \"ăng-ten\" thụ thể phù hợp mới đáp ứng — khởi động chậm hơn nhưng tác dụng bền bỉ hơn nhiều!",
+      "duration": 48.68,
+      "startTime": 1328.25,
+      "endTime": 1376.93,
+      "audioUrl": "/audio/lectures/biology/14/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Hormone definition: chemical substance produced by a gland , carried by the blood , altering activity of specific target organs .2) Four syllabus gland pairs: Adrenal ➔ Adrenaline , Pancreas ➔ Insulin & Glucagon , Testes ➔ Testosterone , Ovaries ➔ Oestrogen .3) Adrenaline ('fight or flight'): increases heart rate , breathing rate , pupil diameter , and blood glucose concentration .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Định nghĩa Hormone: chất hóa học tiết ra từ tuyến (gland) , vận chuyển bởi máu (blood) , làm thay đổi hoạt động của cơ quan đích (target organs) .2) Bốn cặp tuyến chuẩn: Adrenal ➔ Adrenaline , Pancreas ➔ Insulin & Glucagon , Testes ➔ Testosterone , Ovaries ➔ Oestrogen .3) Adrenaline: tăng nhịp tim , tăng nhịp thở , mở rộng đồng tử và tăng nồng độ glucose máu .",
+      "duration": 58.64,
+      "startTime": 1376.93,
+      "endTime": 1435.57,
+      "audioUrl": "/audio/lectures/biology/14/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: When asked how adrenaline helps vigorous muscle action, don't just list \"heart beats faster\" — link it to aerobic respiration : higher heart & breathing rates + higher blood glucose deliver more glucose and oxygen to muscles for faster aerobic respiration releasing energy!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Khi giải thích vai trò Adrenaline khi vận động/sợ hãi, đừng chỉ liệt kê \"tim đập nhanh\" — phải nối tới hô hấp hiếu khí (aerobic respiration) : bơm nhiều glucose + oxygen tới cơ xương để tăng tốc độ hô hấp tế bào giải phóng năng lượng co cơ!",
+      "duration": 36.64,
+      "startTime": 1435.57,
+      "endTime": 1472.21,
+      "audioUrl": "/audio/lectures/biology/14/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Hormone: Chất hóa học do tuyến nội tiết tiết ra và vận chuyển qua đường máu, làm...",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "Hormone: A chemical substance, produced by an endocrine gland and carried by the blood plasma, which alters the activity of one or more specific target organs. Key Glands & Hormones: Adrenal glands (Adrenaline), Pancreas (Insulin & Glucagon), Testes (Testosterone), Ovaries (Oestrogen & Progesterone).",
+      "vi": "Hormone: Chất hóa học do tuyến nội tiết tiết ra và vận chuyển qua đường máu, làm thay đổi hoạt động của một hoặc nhiều cơ quan đích xác định. Các tuyến chính: Tuyến thượng thận (Adrenaline), Tuyến tụy (Insulin & Glucagon), Tinh hoàn (Testosterone), Buồng trứng (Oestrogen & Progesterone).",
+      "duration": 41.86,
+      "startTime": 1472.21,
+      "endTime": 1514.07,
+      "audioUrl": "/audio/lectures/biology/14/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🔥 Adrenaline (Hoocmôn Chiến-hay-Biến)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🔥 Adrenaline ('Fight or Flight' Hormone). Secreted by adrenal glands in situations of fear, excitement, or physical stress to prepare the body for immediate vigorous action: Increases heart rate and stroke volume: Pumps more oxygenated blood to skeletal muscles. Increases breathing rate and depth: Delivers more oxygen and removes carbon dioxide faster. Dilates pupils: Widens visual field and enhances vision. Increases blood glucose concentration: Stimulates liver cells to break down glycogen into glucose, providing immediate fuel for muscle cell respiration.",
+      "vi": "🔥 Adrenaline (Hoocmôn Chiến-hay-Biến). Tiết ra từ tuyến thượng thận khi gặp tình huống nguy hiểm, căng thẳng chuẩn bị cho cơ thể hành động ngay lập tức: Tăng nhịp tim: Bơm máu giàu oxy tới các cơ xương vận động. Tăng nhịp thở và độ sâu: Cung cấp O₂ và thải CO₂ nhanh chóng. Giãn đồng tử: Mở rộng tầm nhìn quan sát. Tăng đường huyết: Kích thích tế bào gan phân giải glycogen thành glucose cung cấp năng lượng cho cơ hô hấp.",
+      "duration": 67.72,
+      "startTime": 1514.07,
+      "endTime": 1581.79,
+      "audioUrl": "/audio/lectures/biology/14/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "📊 Thần kinh vs Thể dịch (Nội tiết)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "📊 Nervous vs Hormonal Control. Transmission: Nervous uses electrical impulses along neurones; Hormonal uses chemical molecules carried in blood plasma. Speed of action: Nervous is extremely rapid (milliseconds); Hormonal is typically much slower. Duration of effect: Nervous responses are very short-lived; Hormonal effects are longer-lasting. Target area: Nervous impulses are localized to specific effectors; Hormones can affect multiple widespread target organs simultaneously.",
+      "vi": "📊 Thần kinh vs Thể dịch (Nội tiết). Hình thức truyền tin: Thần kinh truyền bằng xung điện qua nơ-ron; Nội tiết truyền bằng phân tử hoocmôn qua huyết tương. Tốc độ đáp ứng: Thần kinh cực nhanh (tính bằng mili-giây); Nội tiết chậm hơn. Thời gian duy trì: Thần kinh ngắn hạn thoáng qua; Nội tiết kéo dài lâu dài. Phạm vi tác động: Thần kinh khu trú tại cơ quan đích; Hoocmôn tác động đồng thời lên nhiều cơ quan khắp cơ thể.",
+      "duration": 63.32,
+      "startTime": 1581.79,
+      "endTime": 1645.11,
+      "audioUrl": "/audio/lectures/biology/14/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1/2 MCQ Compared with nervous control, how are hormonal responses characterised in humans? A. Speed of action: faster | Duration of effect: shorter B. Speed of action: faster | Duration of effect: longer C. Speed of action: slower | Duration of effect: shorter D. Speed of action: slower | Duration of effect: longer ✅ Correct Answer: D 🧠 Step-by-Step Reasoning: Hormones travel via blood circulation rather than high-speed electrical nerve impulses, so their speed of action is slower , and because hormone molecules remain in the blood until broken down by the liver, their duration of effect is longer-lasting .",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 1/2 MCQ Exam Question: Compared with nervous control, how are hormonal responses characterised in humans? (So với điều hòa thần kinh, đáp ứng nội tiết bằng hormone có đặc điểm như thế nào?) A. Nhanh hơn | Ngắn hơn B. Nhanh hơn | Dài hơn C. Chậm hơn | Ngắn hơn D. Chậm hơn | Kéo dài lâu hơn ✅ Đáp án đúng: D 🧠 Giải thích & Cách loại bẫy: Hormone di chuyển theo dòng máu thay vì xung điện siêu tốc nên tốc độ tác động chậm hơn (slower) , nhưng lưu hành trong máu đến khi bị gan phân hủy nên thời gian duy trì hiệu quả kéo dài hơn (longer) .",
+      "duration": 83.39,
+      "startTime": 1645.11,
+      "endTime": 1728.5,
+      "audioUrl": "/audio/lectures/biology/14/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "Increases blood glucose concentration",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A sprinter waiting on the starting blocks secretes adrenaline from the adrenal glands. State two physiological effects of adrenaline and explain how they prepare the sprinter's muscles for the race. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. Increases blood glucose concentration (by stimulating liver to convert glycogen to glucose) [1m] and increases heart rate / breathing rate [1m].2. Faster blood flow and breathing supply more oxygen and glucose per second to skeletal muscle cells [1m].3. Allowing a higher rate of aerobic respiration to release more energy for muscle contraction [1m]. 💡 Intuition Check: Always connect Adrenaline ➔ Glucose + Oxygen delivery ➔ Aerobic Respiration ➔ Energy for muscle contraction!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A sprinter waiting on the starting blocks secretes adrenaline. State two effects of adrenaline and explain how they prepare the muscles for sprinting. (Vận động viên chạy nước rút tiết adrenaline trước vạch xuất phát. Nêu 2 tác động của adrenaline và giải thích cách chúng chuẩn bị cho cơ bắp bứt tốc.) ✍️ Lời giải chi tiết theo thang điểm: 1. Tăng đường huyết và tăng nhịp tim / nhịp thở. 2. Cung cấp nhiều glucose và oxy hơn tới tế bào cơ. 3. Tăng tốc độ hô hấp hiếu khí giải phóng năng lượng cho co cơ. 💡 Kiểm tra bản chất: Công thức ăn điểm tuyệt đối cho Adrenaline: Tăng tim/thở + Tăng glucose máu ➔ Đưa nhiều O₂ & Glucose tới cơ ➔ Tăng Aerobic Respiration ➔ Năng lượng co cơ!",
+      "duration": 102.05,
+      "startTime": 1728.5,
+      "endTime": 1830.55,
+      "audioUrl": "/audio/lectures/biology/14/s03_b08.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🌡️ 4. CÂN BẰNG NỘI MÔI (HOMEOSTASIS)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🌡️ 4. HOMEOSTASIS: GLUCOSE & THERMOREGULATION.",
+      "vi": "🌡️ 4. CÂN BẰNG NỘI MÔI (HOMEOSTASIS).",
+      "duration": 10.49,
+      "startTime": 1830.55,
+      "endTime": 1841.04,
+      "audioUrl": "/audio/lectures/biology/14/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Negative feedback works just like a room thermostat set to 37 °C (the set point ): if the room gets too hot, the AC turns on to push temperature down ; if it gets too cold, the heater turns on to push temperature up . Once 37 °C is restored, the corrective action switches off!",
+      "vi": "🎯 Hình dung đời thường: Điều hòa ngược âm tính (Negative feedback) hoạt động y hệt máy điều hòa nhiệt độ cài đặt ở mức chuẩn 37 °C ( set point ): phòng nóng vượt chuẩn thì máy lạnh bật để kéo nhiệt xuống ; phòng lạnh tụt chuẩn thì máy sưởi bật để đẩy nhiệt lên . Vừa chạm lại 37 °C là hệ thống ngắt!",
+      "duration": 42.7,
+      "startTime": 1841.04,
+      "endTime": 1883.74,
+      "audioUrl": "/audio/lectures/biology/14/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1) Blood glucose: High glucose ➔ pancreas secretes insulin ➔ liver converts glucose to insoluble glycogen (glucose drops). Low glucose ➔ pancreas secretes glucagon ➔ liver breaks down glycogen to glucose (glucose rises).2) Thermoregulation: Brain (hypothalamus) coordinates skin effectors — Hot: sweating (evaporation cools) + vasodilation of arterioles (more blood in surface capillaries). Cold: shivering + insulation + vasoconstriction of arterioles .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1) Đường huyết: Cao ➔ tụy tiết insulin ➔ gan chuyển glucose thành glycogen dự trữ (hạ đường). Thấp ➔ tụy tiết glucagon ➔ gan phân giải glycogen thành glucose vào máu (tăng đường).2) Điều nhiệt (Não bộ / Hypothalamus chỉ huy): Nóng ➔ đổ mồ hôi (bay hơi thu nhiệt) + giãn tiểu động mạch . Lạnh ➔ run cơ (shivering) + dựng lông/mỡ cách nhiệt + co tiểu động mạch (vasoconstriction) .",
+      "duration": 66.1,
+      "startTime": 1883.74,
+      "endTime": 1949.84,
+      "audioUrl": "/audio/lectures/biology/14/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: THE #1 IGCSE BIOLOGY TRAP: NEVER write \"capillaries dilate/constrict\" or \"capillaries move closer to the skin surface\"! Capillaries have one-cell-thick walls with NO muscle and NEVER move! Only arterioles supplying skin surface capillaries dilate (vasodilation) or constrict (vasoconstriction)!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: BẪY SỐ 1 ĐỀ THI IGCSE: TUYỆT ĐỐI CẤM viết \"mao mạch (capillaries) co giãn\" hay \"mao mạch di chuyển lên sát mặt da\"! Mao mạch không có cơ trơn và đứng cố định! Chỉ có tiểu động mạch (arterioles) dẫn máu vào lưới mao mạch da mới giãn (vasodilation) hoặc co (vasoconstriction)!",
+      "duration": 47.63,
+      "startTime": 1949.84,
+      "endTime": 1997.47,
+      "audioUrl": "/audio/lectures/biology/14/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Homeostasis: Sự duy trì môi trường bên trong cơ thể ổn định xung quanh một điểm ...",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Homeostasis: The maintenance of a constant internal environment within physiological tolerance limits. Negative Feedback: A homeostatic control mechanism where any deviation from a normal set point triggers corrective physiological responses that counteract the change, restoring conditions to the set point.",
+      "vi": "Homeostasis: Sự duy trì môi trường bên trong cơ thể ổn định xung quanh một điểm chuẩn (set point). Cơ chế Điều hòa ngược âm tính (Negative Feedback): Bất kỳ sự lệch hướng nào so với điểm chuẩn sẽ kích hoạt cơ chế điều chỉnh đưa trạng thái cơ thể quay trở lại điểm chuẩn ban đầu.",
+      "duration": 37.8,
+      "startTime": 1997.47,
+      "endTime": 2035.27,
+      "audioUrl": "/audio/lectures/biology/14/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "⬇️ Khi Đường huyết Tăng cao (sau bữa ăn):",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "⬇️ When Blood Glucose is High (e.g. after a meal): Pancreas detects elevated glucose and secretes insulin into the blood. Insulin stimulates liver and muscle cells to absorb glucose from blood and convert it into insoluble glycogen for storage. Blood glucose concentration drops back down to normal set point.",
+      "vi": "⬇️ Khi Đường huyết Tăng cao (sau bữa ăn): Tuyến tụy tiết Insulin vào máu. Insulin kích thích gan và cơ hấp thụ glucose từ máu và chuyển hóa thành glycogen không tan để dự trữ. Đường huyết hạ về mức bình thường.",
+      "duration": 36.45,
+      "startTime": 2035.27,
+      "endTime": 2071.72,
+      "audioUrl": "/audio/lectures/biology/14/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "⬆️ Khi Đường huyết Giảm thấp (lúc đói/vận động):",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "⬆️ When Blood Glucose is Low (e.g. during fasting/exercise): Pancreas detects low glucose and secretes glucagon into the blood. Glucagon stimulates liver cells to convert stored glycogen back into soluble glucose and release it into the blood. Blood glucose concentration rises back up to normal set point.",
+      "vi": "⬆️ Khi Đường huyết Giảm thấp (lúc đói/vận động): Tuyến tụy tiết Glucagon vào máu. Glucagon kích thích gan phân giải glycogen dự trữ thành glucose hòa tan vào máu. Đường huyết tăng trở lại mức bình thường.",
+      "duration": 35.98,
+      "startTime": 2071.72,
+      "endTime": 2107.7,
+      "audioUrl": "/audio/lectures/biology/14/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "Bệnh Tiểu đường Tuýp 1 (Type 1 Diabetes): Bệnh tự miễn làm hệ miễn dịch phá hủy ...",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "Type 1 Diabetes: An autoimmune condition where the immune system destroys insulin-secreting cells in the pancreas. Treatment involves regular blood glucose testing, daily insulin injections, and careful dietary management.",
+      "vi": "Bệnh Tiểu đường Tuýp 1 (Type 1 Diabetes): Bệnh tự miễn làm hệ miễn dịch phá hủy các tế bào tiết insulin ở tụy. Cách điều trị: kiểm tra đường huyết thường xuyên, tiêm insulin định kỳ và ăn uống khoa học.",
+      "duration": 30.24,
+      "startTime": 2107.7,
+      "endTime": 2137.94,
+      "audioUrl": "/audio/lectures/biology/14/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "Interactive Skin Map (Sơ đồ điều hòa thân nhiệt ở Da)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "Interactive Skin Map (Thermoregulation). Hover over Hair & Erector Muscle, Sweat Glands, and Blood Vessels to examine temperature control. Arterioles & Shunt Vessels. Blood flow regulation through superficial skin capillaries. Vasodilation (Hot): Arterioles dilate (widen), shunt vessels constrict, increasing blood flow through surface capillaries to radiate heat. Vasoconstriction (Cold): Arterioles constrict, shunt vessels dilate, diverting blood away from skin surface to retain core heat.",
+      "vi": "Interactive Skin Map (Sơ đồ điều hòa thân nhiệt ở Da). Tiểu động mạch & Mạch nối (Shunt vessels). Điều hòa dòng máu qua mao mạch bề mặt da. Giãn mạch (Vasodilation khi nóng): Tiểu động mạch giãn, mạch nối co lại, đưa nhiều máu ra mao mạch sát da để tỏa nhiệt. Co mạch (Vasoconstriction khi lạnh): Tiểu động mạch co, mạch nối giãn mở, giữ máu sâu bên trong để bảo toàn thân nhiệt.",
+      "duration": 64.83,
+      "startTime": 2137.94,
+      "endTime": 2202.77,
+      "audioUrl": "/audio/lectures/biology/14/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Which row correctly describes what happens in a mammal when internal body temperature rises above the normal set point? A. Skin surface capillaries move towards epidermis | Sweat evaporation decreases B. Arterioles supplying skin capillaries dilate | Sweat evaporates from skin surface C. Arterioles supplying skin capillaries constrict | Hair erector muscles contract D. Liver converts glycogen to glucose | Skeletal muscles shiver rapidly ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: When body temperature rises above set point, arterioles supplying skin surface capillaries undergo vasodilation (widen), increasing blood flow near the skin surface so more thermal energy radiates to the air, while sweat glands secrete sweat whose water evaporates using heat from the skin. A falls for the classic \"moving capillaries\" trap!",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Exam Question: Which row correctly describes what happens in a mammal when internal body temperature rises above the normal set point? (Dòng nào mô tả đúng hiện tượng xảy ra ở thú khi thân nhiệt vượt quá điểm chuẩn?) A. Mao mạch dịch sát da | Giảm bay hơi mồ hôi B. Tiểu động mạch giãn rộng | Mồ hôi bay hơi khỏi mặt da C. Tiểu động mạch co | Cơ dựng lông co D. Gan phân giải glycogen | Cơ run ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Khi quá nóng, các tiểu động mạch (arterioles) dẫn máu tới mao mạch dưới da giãn rộng (vasodilation) làm tăng lưu lượng máu tỏa nhiệt qua da, đồng thời nước trong mồ hôi bay hơi (evaporates) lấy đi nhiệt năng làm mát cơ thể. Đáp án A là bẫy kinh điển \"mao mạch di chuyển\"!",
+      "duration": 108.36,
+      "startTime": 2202.77,
+      "endTime": 2311.13,
+      "audioUrl": "/audio/lectures/biology/14/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Explain how negative feedback restores normal blood glucose concentration after a person fasts for 12 hours. [3] (b) Outline how Type 1 diabetes is treated. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Blood glucose falls below the set point and is detected by the pancreas , which secretes the hormone glucagon into the blood [1m]. Glucagon stimulates the liver to break down stored glycogen into glucose and release it into the blood [1m], raising blood glucose back to the normal set point [1m]. (b) Regular monitoring/testing of blood glucose concentration [1m] and injections of insulin (alongside controlled carbohydrate intake) [1m]. 💡 Intuition Check: Spell carefully in exams: INSULIN, GLUCAGON (hormone), and GLYCOGEN (stored polysaccharide in liver) — misspellings that blend glucagon/glycogen lose the mark!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] (a) Explain how negative feedback restores normal blood glucose concentration during fasting. (Giải thích cách điều hòa ngược âm tính khôi phục đường huyết bình thường khi nhịn đói.) (b) Outline the treatment of Type 1 diabetes. (Nêu tóm tắt phương pháp điều trị tiểu đường tuýp 1.) ✍️ Lời giải chi tiết theo thang điểm: (a) Low blood glucose below set point is detected by the pancreas , which secretes glucagon into blood . Glucagon stimulates the liver to break down stored glycogen into glucose and release it into blood , returning blood glucose to the set point . (b) Regular blood glucose testing/monitoring and insulin injections . (Đo đường huyết định kỳ và tiêm insulin kết hợp kiểm soát chế độ ăn .) 💡 Kiểm tra bản chất: Viết thật chuẩn chính tả 3 từ dễ lộn: INSULIN (hạ đường), GLUCAGON (hormone tăng đường), GLYCOGEN (tinh bột động vật dự trữ trong gan)!",
+      "duration": 106.9,
+      "startTime": 2311.13,
+      "endTime": 2418.03,
+      "audioUrl": "/audio/lectures/biology/14/s04_b10.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🧠 Vai trò của Não bộ (Hypothalamus), Run cơ & Cách nhiệt (Supplement 14.4):",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🧠 Role of the Brain, Shivering & Insulation (Supplement 14.4): Thermoreceptors in the brain (hypothalamus) monitor blood temperature continuously (alongside skin receptors) and send nerve impulses to effectors: in cold conditions, skeletal muscles contract rapidly and involuntarily ( shivering ) to release heat from respiration, while subcutaneous fatty tissue and upright hairs provide thermal insulation .",
+      "vi": "🧠 Vai trò của Não bộ (Hypothalamus), Run cơ & Cách nhiệt (Supplement 14.4): Thụ thể nhiệt tại não bộ (hypothalamus) theo dõi sát nhiệt độ máu (cùng thụ thể nhiệt ở da) để điều phối cơ quan đáp ứng: khi trời lạnh, cơ xương co rút nhanh không chủ ý ( shivering — run cơ ) giúp tăng hô hấp sinh nhiệt, kết hợp cùng lớp mô mỡ dưới da (fatty tissue) và lớp không khí tĩnh quanh lông dựng đứng đóng vai trò cách nhiệt (insulation) .",
+      "duration": 58.4,
+      "startTime": 2418.03,
+      "endTime": 2476.43,
+      "audioUrl": "/audio/lectures/biology/14/s05_hdr.mp3"
+    },
+    {
+      "id": "s06_hdr",
+      "title": "🌱 5. HƯỚNG ĐỘNG Ở THỰC VẬT & HOOCMÔN AUXIN",
+      "selector": "[data-lecture-section=\"s06_hdr\"]",
+      "en": "🌱 5. TROPIC RESPONSES & AUXIN CONTROL.",
+      "vi": "🌱 5. HƯỚNG ĐỘNG Ở THỰC VẬT & HOOCMÔN AUXIN.",
+      "duration": 9.07,
+      "startTime": 2476.43,
+      "endTime": 2485.5,
+      "audioUrl": "/audio/lectures/biology/14/s06_hdr.mp3"
+    },
+    {
+      "id": "s06_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s06_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of a plant shoot as a rowboat where auxin makes the oarsmen row faster ( cell elongation ): if sunlight shines from the right, auxin hides on the shaded left side , making the left side grow longer faster — just like rowing faster on the left turns the boat sharply towards the right (towards the light)!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng chồi cây như chiếc thuyền chèo đôi mà auxin là lệnh \"chèo mạnh hơn\" ( kéo dài tế bào — cell elongation ): nếu nắng chiếu từ bên phải, auxin trốn sang mạn trái bị khuất bóng (shaded side) làm mạn trái vươn dài nhanh hơn — giống hệt chèo mạnh bên trái sẽ ép mũi thuyền ngoặt sang bên phải (uốn cong về phía ánh sáng)!",
+      "duration": 43.79,
+      "startTime": 2485.5,
+      "endTime": 2529.29,
+      "audioUrl": "/audio/lectures/biology/14/s06_b01.mp3"
+    },
+    {
+      "id": "s06_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s06_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Four mandatory Supplement points for auxin in shoots :1) Auxin is made in the shoot tip .2) Auxin diffuses down through the plant from the shoot tip.3) Auxin becomes unequally distributed in response to unilateral light (more on shaded side ) or gravity (more on lower side ).4) Auxin stimulates cell elongation in shoots, so the side with more auxin grows faster, bending the shoot towards light (+phototropism) or upwards away from gravity (–gravitropism).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Bốn bước vàng của Auxin ở chồi ngọn (Supplement 14.5) :1) Auxin được tạo ra ở đỉnh chồi (shoot tip) .2) Auxin khuếch tán (diffuses) từ đỉnh chồi xuống vùng dưới.3) Auxin phân bố không đều (unequally distributed) theo ánh sáng (tụ ở phía tối ) hoặc trọng lực (tụ ở mặt dưới ).4) Auxin kích thích tế bào dãn dài làm phía nhiều auxin dài nhanh hơn, uốn chồi hướng sáng (+) hoặc vươn lên ngược trọng lực (–).",
+      "duration": 66.36,
+      "startTime": 2529.29,
+      "endTime": 2595.65,
+      "audioUrl": "/audio/lectures/biology/14/s06_b02.mp3"
+    },
+    {
+      "id": "s06_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s06_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write \"auxin causes more cell division (mitosis)\" or \"light destroys auxin\"! Mark Schemes specifically require: auxin is unequally distributed (accumulates on shaded/lower side) and stimulates cell elongation !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Cấm viết \"auxin làm tế bào phân chia nguyên phân nhiều hơn\" hay \"ánh sáng phá hủy auxin\"! Đáp án chấm thi Cambridge chỉ cho điểm cụm: unequally distributed (tích tụ bên tối/mặt dưới) + stimulates cell elongation (kích thích kéo dài tế bào)!",
+      "duration": 37.88,
+      "startTime": 2595.65,
+      "endTime": 2633.53,
+      "audioUrl": "/audio/lectures/biology/14/s06_b03.mp3"
+    },
+    {
+      "id": "s06_b04",
+      "title": "Khái niệm: Hướng sáng (Phototropism) & Hướng trọng lực (Gravitropism)",
+      "selector": "[data-lecture-section=\"s06_b04\"]",
+      "en": "Definitions: Phototropism vs Gravitropism. Phototropism: A plant growth response in which parts of a plant grow towards (positive) or away from (negative) a directional light source. Gravitropism (Geotropism): A plant growth response in which parts of a plant grow towards (positive) or away from (negative) the pull of gravity.",
+      "vi": "Khái niệm: Hướng sáng (Phototropism) & Hướng trọng lực (Gravitropism). Phototropism (Hướng sáng): Phản ứng sinh trưởng của thực vật về phía nguồn sáng (hướng sáng dương) hoặc ra xa nguồn sáng (hướng sáng âm). Gravitropism (Hướng trọng lực): Phản ứng sinh trưởng của cơ quan thực vật hướng theo chiều trọng lực (hướng trọng lực dương ở rễ) hoặc ngược chiều trọng lực (hướng trọng lực âm ở chồi thân).",
+      "duration": 52.5,
+      "startTime": 2633.53,
+      "endTime": 2686.03,
+      "audioUrl": "/audio/lectures/biology/14/s06_b04.mp3"
+    },
+    {
+      "id": "s06_b05",
+      "title": "Cơ chế kiểm soát sinh trưởng của Auxin",
+      "selector": "[data-lecture-section=\"s06_b05\"]",
+      "en": "Role of Auxin in Controlling Growth. Auxin is a plant growth hormone synthesized primarily in the growing shoot tip. Auxin diffuses downwards through the plant tissue into the zone of elongation. When illuminated from one side (unilateral light), auxin accumulates on the shaded side of the shoot. In shoots, higher auxin concentration stimulates cell elongation . The cells on the shaded side elongate faster than those on the lit side, causing the shoot to bend towards the light ( positive phototropism ). In roots, auxin accumulates on the lower side due to gravity. However, in roots, high auxin concentration inhibits cell elongation . The upper side elongates faster, causing the root to bend downwards ( positive gravitropism ).",
+      "vi": "Cơ chế kiểm soát sinh trưởng của Auxin. Auxin là hoocmôn sinh trưởng được tổng hợp chủ yếu ở đỉnh sinh trưởng chồi ngọn. Auxin khuếch tán xuống dưới vào vùng tế bào kéo dài. Khi có ánh sáng chiếu từ một phía, auxin tập trung nhiều ở phía bị che tối của chồi. Ở chồi, nồng độ auxin cao kích thích tế bào kéo dài nhanh hơn . Phía tối lớn nhanh hơn phía sáng làm chồi uốn cong về phía nguồn sáng ( Hướng sáng dương ). Ở rễ, auxin lắng xuống mặt dưới theo trọng lực. Nhưng ở rễ, nồng độ auxin cao lại ức chế sự dãn dài tế bào , làm mặt trên dài nhanh hơn uốn cong rễ đâm sâu xuống đất ( Hướng trọng lực dương ).",
+      "duration": 93.18,
+      "startTime": 2686.03,
+      "endTime": 2779.21,
+      "audioUrl": "/audio/lectures/biology/14/s06_b05.mp3"
+    },
+    {
+      "id": "s06_b06",
+      "title": "🧪 Hướng trọng lực âm của Chồi & Thí nghiệm Đối chứng Clinostat (14.5)",
+      "selector": "[data-lecture-section=\"s06_b06\"]",
+      "en": "🧪 Shoot Gravitropism & Clinostat Control Investigations (14.5). Negative Gravitropism in a Horizontal Shoot: When a potted seedling is placed horizontally in the dark, auxin made in the shoot tip diffuses and accumulates on the lower side due to gravity. Because auxin stimulates cell elongation in shoots , cells on the lower side elongate faster than those on the upper side, bending the shoot upwards away from gravity. Foil Cap vs Intact Tip Experiment: Covering or removing the shoot tip prevents phototropic bending because auxin is synthesized in the tip and light direction is detected there. Clinostat Control: Rotating a horizontal seedling continuously on a clinostat equalizes gravity on all sides so auxin stays evenly distributed — the shoot and root grow straight horizontally.",
+      "vi": "🧪 Hướng trọng lực âm của Chồi & Thí nghiệm Đối chứng Clinostat (14.5). Hướng trọng lực âm ở Chồi nằm ngang: Khi đặt cây mầm nằm ngang trong tối, auxin sinh ra từ đỉnh chồi khuếch tán và tập trung nhiều ở mặt dưới (lower side) theo trọng lực. Vì ở chồi auxin kích thích tế bào kéo dài , mặt dưới dãn dài nhanh hơn mặt trên làm chồi uốn cong vươn thẳng lên trên ngược chiều trọng lực. Thí nghiệm bọc mũ giấy bạc / cắt đỉnh chồi: Cắt bỏ hoặc chụp kín đỉnh chồi (shoot tip) làm chồi mọc thẳng không uốn về phía sáng vì đỉnh chồi là nơi tạo ra auxin. Máy quay đối chứng (Clinostat): Quay đều cây nằm ngang trên máy clinostat giúp trọng lực tác động đều lên mọi phía, auxin phân bố đồng đều nên chồi và rễ mọc thẳng ngang.",
+      "duration": 97.57,
+      "startTime": 2779.21,
+      "endTime": 2876.78,
+      "audioUrl": "/audio/lectures/biology/14/s06_b06.mp3"
+    },
+    {
+      "id": "s06_b07",
+      "title": "Exam Question:",
+      "selector": "[data-lecture-section=\"s06_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A young plant shoot is illuminated from the left side only. After 48 hours, the shoot has bent towards the left. What caused this bending? A. Auxin accumulated on the left (lit) side and inhibited cell elongation there B. Auxin accumulated on the right (shaded) side and stimulated cell elongation there C. Light stimulated faster photosynthesis on the right (shaded) side D. Auxin diffused up from the roots to the left side of the shoot tip ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Auxin made in the shoot tip diffuses downwards and accumulates on the shaded (right) side . In shoots, higher auxin concentration stimulates greater cell elongation , so cells on the right side elongate more than cells on the left side, pushing the shoot over towards the left (the light source).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Exam Question: A young plant shoot is illuminated from the left side only and bends towards the left. What caused this bending? (Chồi non được chiếu sáng chỉ từ bên trái và uốn cong sang trái. Nguyên nhân nào gây ra hiện tượng này?) A. Auxin tụ bên sáng và ức chế kéo dài B. Auxin tụ bên phải bị che tối và kích thích kéo dài tế bào C. Quang hợp nhanh hơn ở bên tối D. Auxin từ rễ đi lên bên trái ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Auxin tổng hợp ở đỉnh chồi khuếch tán xuống và tập trung nhiều ở phía khuất sáng (bên phải) . Ở chồi cây, nồng độ auxin cao kích thích tế bào kéo dài nhanh hơn , khiến thành phải dài hơn thành trái và đẩy ngọn uốn về phía nguồn sáng bên trái.",
+      "duration": 107.73,
+      "startTime": 2876.78,
+      "endTime": 2984.51,
+      "audioUrl": "/audio/lectures/biology/14/s06_b07.mp3"
+    },
+    {
+      "id": "s06_b08",
+      "title": "upwards, away from gravity",
+      "selector": "[data-lecture-section=\"s06_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A potted seedling is placed on its side (horizontally) inside a completely dark box for two days. State the direction in which the shoot grows and explain the role of auxin in this response. [4] ✍️ Step-by-Step Mark Scheme Solution: 1. The shoot grows upwards, away from gravity (negative gravitropism) [1m].2. Auxin made in the shoot tip diffuses downwards and accumulates on the lower side of the horizontal shoot due to gravity [1m].3. Auxin stimulates cell elongation in shoot cells [1m].4. Cells on the lower side elongate faster/more than cells on the upper side, causing the shoot to bend upwards [1m]. 💡 Intuition Check: Because the seedling is in a dark box, light cannot be the stimulus — this tests pure negative gravitropism of a shoot using the exact same 4 auxin steps!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Structured [4 marks] A potted seedling is placed horizontally inside a completely dark box for two days. State the direction of shoot growth and explain the role of auxin in this response. (Đặt chậu cây mầm nằm ngang trong hộp tối hoàn toàn 2 ngày. Nêu hướng mọc của chồi và giải thích vai trò của auxin.) ✍️ Lời giải chi tiết theo thang điểm: 1. Shoot grows upwards, away from gravity (negative gravitropism) . (Chồi vươn cong lên trên ngược chiều trọng lực.) 2. Auxin từ đỉnh chồi dồn xuống mặt dưới của thân ngang. 3. Auxin kích thích sự kéo dài tế bào ở chồi. 4. Tế bào mặt dưới dãn dài nhanh hơn mặt trên đẩy chồi cong lên. 💡 Kiểm tra bản chất: Đặt trong hộp tối loại bỏ hoàn toàn kích thích ánh sáng — bài toán kiểm tra thuần túy cơ chế Hướng trọng lực âm của chồi bằng đúng 4 bước Auxin!",
+      "duration": 115.69,
+      "startTime": 2984.51,
+      "endTime": 3100.2,
+      "audioUrl": "/audio/lectures/biology/14/s06_b08.mp3"
     }
   ]
 }

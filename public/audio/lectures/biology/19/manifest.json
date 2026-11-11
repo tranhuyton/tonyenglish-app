@@ -2,178 +2,578 @@
   "lectureId": "7b2384dd-b79d-47fe-b36b-7abf36784f06",
   "courseTitle": "Cambridge IGCSE Biology (0610)",
   "lectureTitle": "Topic 19: Organisms and their environment",
-  "totalDuration": 459.51,
+  "totalDuration": 3465.17,
   "majorSections": {
     "intro": {
       "start": 0,
       "end": 0
     },
-    "sec-header": {
-      "start": 0,
-      "end": 0
+    "s01_int": {
+      "start": 2,
+      "end": 4
     },
-    "sec_ecological_definitions": {
-      "start": 1,
-      "end": 3
-    },
-    "sec-ecological-definitions": {
-      "start": 1,
-      "end": 3
-    },
-    "sec_food_chains_energy": {
-      "start": 4,
-      "end": 5
-    },
-    "sec-food-chains-energy": {
-      "start": 4,
-      "end": 5
-    },
-    "sec_nutrient_cycles": {
-      "start": 6,
-      "end": 8
-    },
-    "sec-nutrient-cycles": {
-      "start": 6,
-      "end": 8
-    },
-    "sec_carbon_cycle": {
-      "start": 6,
-      "end": 8
-    },
-    "sec-carbon-cycle": {
-      "start": 6,
-      "end": 8
-    },
-    "sec_populations": {
+    "s01_wex": {
       "start": 9,
       "end": 10
     },
-    "sec-populations": {
-      "start": 9,
+    "s01_hdr": {
+      "start": 1,
       "end": 10
+    },
+    "s02_int": {
+      "start": 12,
+      "end": 14
+    },
+    "s02_wex": {
+      "start": 21,
+      "end": 22
+    },
+    "s02_hdr": {
+      "start": 11,
+      "end": 22
+    },
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_wex": {
+      "start": 33,
+      "end": 34
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 34
+    },
+    "s04_int": {
+      "start": 36,
+      "end": 38
+    },
+    "s04_wex": {
+      "start": 45,
+      "end": 46
+    },
+    "s04_hdr": {
+      "start": 35,
+      "end": 46
     }
   },
   "segments": [
     {
       "id": "intro",
-      "title": "Giới thiệu Topic 19: Sinh vật và Môi trường Sinh thái",
-      "selector": "#sec-header",
-      "en": "Welcome to Topic 19: Organisms and their Environment. Ecology is the scientific study of interactions among organisms and between organisms and their abiotic physical environment. In this lesson, we define ecological levels, analyze energy transfer efficiency across trophic levels, construct ecological pyramids, trace the carbon cycle and microbial nitrogen cycle, and evaluate factors governing population sigmoid growth curves.",
-      "vi": "Chào mừng các bạn đến với Bài 19: Sinh vật và Môi trường Sinh thái. Sinh thái học là ngành khoa học nghiên cứu mối tương tác giữa các sinh vật với nhau và giữa sinh vật với môi trường vật lý vô sinh. Trong bài học này, chúng ta sẽ định nghĩa các cấp độ sinh thái, phân tích hiệu suất truyền năng lượng qua các bậc dinh dưỡng, xây dựng tháp sinh thái, chu trình carbon và chu trình nitơ của vi sinh vật, cùng các giai đoạn tăng trưởng quần thể hình chữ S.",
-      "duration": 43.36,
+      "title": "Topic 19: Organisms & Environment (Sinh vật và Môi trường)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Biology (0610) • Core & Supplement Topic 19: Organisms and Their Environment. Energy Flow, Food Webs, Ecological Pyramids, Carbon & Nitrogen Cycles & Sigmoid Population Growth.",
+      "vi": "Cambridge IGCSE Biology (0610) • Song ngữ Anh - Việt Topic 19: Organisms & Environment (Sinh vật và Môi trường). Dòng năng lượng, Lưới thức ăn, Tháp sinh thái, Chu trình Carbon & Nitrogen và Đường cong Sigmoid.",
+      "duration": 36.82,
       "startTime": 0.0,
-      "endTime": 43.36,
+      "endTime": 36.82,
       "audioUrl": "/audio/lectures/biology/19/intro.mp3"
     },
     {
-      "id": "sec_ecological_definitions",
-      "title": "1. Thuật ngữ Sinh thái: Quần thể, Quần xã & Hệ sinh thái",
-      "selector": "#sec-ecological-definitions",
-      "en": "Section 1: Ecological definitions: A producer makes its own organic nutrients using sunlight energy through photosynthesis. A consumer obtains its energy by feeding on other organisms. Herbivores feed on plants; carnivores feed on other animals; decomposers obtain energy from dead organic waste.",
-      "vi": "Mục 1: Các thuật ngữ sinh thái cốt lõi: Sinh vật sản xuất tự tổng hợp chất hữu cơ bằng năng lượng ánh sáng mặt trời qua quang hợp. Sinh vật tiêu thụ nhận năng lượng bằng cách ăn các sinh vật khác. Động vật ăn cỏ ăn thực vật; động vật ăn thịt ăn động vật khác; sinh vật phân giải lấy năng lượng từ xác và chất thải hữu cơ.",
-      "duration": 46.05,
-      "startTime": 43.36,
-      "endTime": 89.41,
-      "audioUrl": "/audio/lectures/biology/19/sec_ecological_definitions.mp3"
+      "id": "s01_hdr",
+      "title": "🌍 1. Key Ecological Definitions (Thuật ngữ Sinh thái & Vai trò Dinh dưỡng)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🌍 1. Key Ecological Definitions & Trophic Roles.",
+      "vi": "🌍 1. Key Ecological Definitions (Thuật ngữ Sinh thái & Vai trò Dinh dưỡng).",
+      "duration": 10.76,
+      "startTime": 36.82,
+      "endTime": 47.58,
+      "audioUrl": "/audio/lectures/biology/19/s01_hdr.mp3"
     },
     {
-      "id": "card_eco_definitions",
-      "title": "🌱 Sinh vật Sản xuất vs 🦊 Tiêu thụ vs 🪱 Phân giải",
-      "selector": "#card-eco-definitions",
-      "en": "Trophic classifications: Primary consumers are herbivores. Secondary and tertiary consumers are carnivores. Decomposers secrete extracellular digestive enzymes to break down complex dead organic macromolecules into simple inorganic mineral ions returned to the soil.",
-      "vi": "Phân loại bậc dinh dưỡng: Sinh vật tiêu thụ bậc một là động vật ăn cỏ. Sinh vật tiêu thụ bậc hai và bậc ba là động vật ăn thịt. Sinh vật phân giải tiết enzyme ngoại bào phân giải các đại phân tử hữu cơ từ xác chết thành các ion khoáng vô cơ đơn giản trả lại cho đất.",
-      "duration": 34.46,
-      "startTime": 89.41,
-      "endTime": 123.87,
-      "audioUrl": "/audio/lectures/biology/19/card_eco_definitions.mp3"
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of an ecosystem like a bustling city: a population is one family species (all the pigeons in Hyde Park today), the community is every living resident combined (pigeons + oak trees + earthworms + fungi), and the ecosystem is the entire city including both its living residents (community) AND its physical infrastructure (sunlight, rain, air, and soil).",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung hệ sinh thái như một thành phố sôi động: Population (Quần thể) là một hộ gia đình cùng loài (toàn bộ chim bồ câu trong công viên hôm nay), Community (Quần xã) là tổng thể mọi cư dân sống cộng lại (bồ câu + cây sồi + giun đất + nấm), còn Ecosystem (Hệ sinh thái) là cả thành phố gồm toàn bộ cư dân sống (quần xã) CỘNG VỚI hạ tầng vật lý vô sinh (ánh sáng, mưa, không khí, đất) tương tác với nhau.",
+      "duration": 57.2,
+      "startTime": 47.58,
+      "endTime": 104.78,
+      "audioUrl": "/audio/lectures/biology/19/s01_b01.mp3"
     },
     {
-      "id": "card_eco_levels",
-      "title": "🏕️ Quần thể vs Quần xã vs Hệ sinh thái",
-      "selector": "#card-eco-levels",
-      "en": "Levels of ecological organization: A population is a group of organisms of one species living in the same area at the same time. A community is all the populations of different species living in an ecosystem. An ecosystem is a unit containing a community of organisms interacting with their abiotic environment.",
-      "vi": "Các cấp độ tổ chức sinh thái: Quần thể là tập hợp các cá thể cùng một loài cùng sinh sống trong một sinh cảnh tại một thời điểm. Quần xã là tập hợp tất cả các quần thể thuộc các loài khác nhau cùng chung sống trong một hệ sinh thái. Hệ sinh thái là một hệ thống hoàn chỉnh gồm quần xã sinh vật tương tác mật thiết với môi trường vô sinh.",
-      "duration": 38.8,
-      "startTime": 123.87,
-      "endTime": 162.67,
-      "audioUrl": "/audio/lectures/biology/19/card_eco_levels.mp3"
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Cambridge awards definition marks strictly on three precision phrases: (1) Population must include one species + same area + same time ; (2) Community = all populations of different species (living only); (3) Producer = makes its own organic nutrients using sunlight via photosynthesis. Count trophic levels starting at Level 1 = Producer (so a primary consumer sits at Trophic Level 2!).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Cambridge chấm điểm định nghĩa cực gắt theo cụm từ khóa: (1) Population bắt buộc đủ 3 ý: one species + same area + same time ; (2) Community = all populations of different species (chỉ tính sinh vật sống); (3) Producer = tự tạo organic nutrients nhờ ánh sáng qua quang hợp. Đếm bậc dinh dưỡng luôn bắt đầu từ Level 1 = Producer (nên động vật ăn cỏ là Primary consumer nhưng nằm ở Trophic Level 2 !).",
+      "duration": 63.59,
+      "startTime": 104.78,
+      "endTime": 168.37,
+      "audioUrl": "/audio/lectures/biology/19/s01_b02.mp3"
     },
     {
-      "id": "sec_food_chains_energy",
-      "title": "2. Chuỗi Thức ăn, Lưới Thức ăn & Dòng Năng lượng (Quy tắc 10%)",
-      "selector": "#sec-food-chains-energy",
-      "en": "Section 2: Food chains and energy flow: The sun is the principal source of energy input to biological ecosystems. Energy flows unidirectionally through food chains and food webs, being dissipated continually as metabolic heat.",
-      "vi": "Mục 2: Chuỗi thức ăn và dòng năng lượng: Mặt trời là nguồn năng lượng sơ cấp khởi nguồn cho mọi hệ sinh thái sinh học. Năng lượng truyền một chiều qua chuỗi và lưới thức ăn, liên tục bị tiêu hao ra môi trường dưới dạng nhiệt trao đổi chất.",
-      "duration": 61.74,
-      "startTime": 162.67,
-      "endTime": 224.41,
-      "audioUrl": "/audio/lectures/biology/19/sec_food_chains_energy.mp3"
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Calling a primary consumer \"Trophic Level 1\" or forgetting \"at the same time\" in the population definition! Always count the Producer as Trophic Level 1, which pushes Primary, Secondary, Tertiary, and Quaternary consumers to Trophic Levels 2, 3, 4, and 5.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Gọi động vật ăn cỏ (primary consumer) là \"Trophic Level 1\" hoặc quên cụm \"at the same time\" (cùng thời điểm) khi định nghĩa quần thể! Luôn nhớ Producer chiếm Level 1, đẩy Primary, Secondary, Tertiary và Quaternary consumers lên các bậc 2, 3, 4 và 5.",
+      "duration": 42.55,
+      "startTime": 168.37,
+      "endTime": 210.92,
+      "audioUrl": "/audio/lectures/biology/19/s01_b03.mp3"
     },
     {
-      "id": "card_energy_flow_10pct",
-      "title": "📉 Quy tắc 10% & Giới hạn Độ dài Chuỗi Thức ăn",
-      "selector": "#card-energy-flow-10pct",
-      "en": "The 10 percent energy rule: Approximately 90 percent of energy is lost between successive trophic levels through cellular respiration, heat dissipation, incomplete digestion excreted in feces, and uneaten biomass. Consequently, food chains rarely exceed four or five trophic levels.",
-      "vi": "Quy tắc 10 phần trăm năng lượng: Khoảng 90 phần trăm năng lượng bị thất thoát giữa các bậc dinh dưỡng kế tiếp qua hô hấp tế bào, tỏa nhiệt, thức ăn không tiêu hóa đào thải qua phân và các bộ phận không bị ăn. Do đó, chuỗi thức ăn hiếm khi vượt quá bốn đến năm bậc dinh dưỡng.",
-      "duration": 34.5,
-      "startTime": 224.41,
-      "endTime": 258.91,
-      "audioUrl": "/audio/lectures/biology/19/card_energy_flow_10pct.mp3"
+      "id": "s01_b04",
+      "title": "🌱 Producer & Consumer (Sản xuất & Tiêu thụ)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🌱 Producer & Consumer Classes. Producer: An organism that makes its own organic nutrients, usually using energy from sunlight, through photosynthesis (e.g. green plants, algae, phytoplankton). Consumer: An organism that gets its energy by feeding on other organisms. Consumer Ranks: Classified as primary , secondary , tertiary , or quaternary consumers according to their feeding position in a food chain.",
+      "vi": "🌱 Producer & Consumer (Sản xuất & Tiêu thụ). Producer (Sinh vật sản xuất): Sinh vật tự tổng hợp chất dinh dưỡng hữu cơ, thường sử dụng quang năng Mặt Trời qua photosynthesis (quang hợp) (VD: cây xanh, tảo, thực vật phù du). Consumer (Sinh vật tiêu thụ): Sinh vật lấy năng lượng bằng cách ăn các sinh vật khác. Phân bậc Consumer: Chia thành primary (bậc 1), secondary (bậc 2), tertiary (bậc 3) và quaternary consumer (bậc 4) tùy theo vị trí ăn trong chuỗi thức ăn.",
+      "duration": 64.81,
+      "startTime": 210.92,
+      "endTime": 275.73,
+      "audioUrl": "/audio/lectures/biology/19/s01_b04.mp3"
     },
     {
-      "id": "sec_nutrient_cycles",
-      "title": "3. Chu trình Dinh dưỡng (Cacbon & Nitơ)",
-      "selector": "#sec-nutrient-cycles",
-      "en": "Section 3: Nutrient cycles: Unlike energy which flows linearly and dissipates, chemical nutrients like carbon and nitrogen cycle continuously between living organisms and the abiotic environment.",
-      "vi": "Mục 3: Chu trình dinh dưỡng: Khác với năng lượng chỉ truyền một chiều và tiêu hao, các nguyên tố hóa học như cacbon và nitơ tuần hoàn liên tục không ngừng giữa sinh vật sống và môi trường vô sinh.",
-      "duration": 23.25,
-      "startTime": 258.91,
-      "endTime": 282.16,
-      "audioUrl": "/audio/lectures/biology/19/sec_nutrient_cycles.mp3"
+      "id": "s01_b05",
+      "title": "🦊 Herbivore, Carnivore & Decomposer",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🦊 Herbivore, Carnivore & Decomposer. Herbivore: An animal that gets its energy by eating plants (acts as a primary consumer , e.g. caterpillar, rabbit, cow). Carnivore: An animal that gets its energy by eating other animals (secondary, tertiary, or quaternary consumer, e.g. frog, snake, hawk). Decomposer: An organism (typically bacteria and fungi ) that gets its energy by breaking down dead or waste organic material, recycling mineral ions back to the soil.",
+      "vi": "🦊 Herbivore, Carnivore & Decomposer. Herbivore (Động vật ăn cỏ): Động vật lấy năng lượng bằng cách ăn thực vật (đóng vai trò primary consumer , VD: sâu bướm, thỏ, bò). Carnivore (Động vật ăn thịt): Động vật lấy năng lượng bằng cách ăn động vật khác (consumer bậc 2, 3 hoặc 4, VD: ếch, rắn, đại bàng). Decomposer (Sinh vật phân giải): Vi sinh vật (chủ yếu là bacteria & fungi ) lấy năng lượng bằng cách phân hủy xác chết và chất thải hữu cơ, trả lại ion khoáng cho đất.",
+      "duration": 71.09,
+      "startTime": 275.73,
+      "endTime": 346.82,
+      "audioUrl": "/audio/lectures/biology/19/s01_b05.mp3"
     },
     {
-      "id": "card_carbon_cycle",
-      "title": "♻️ Vòng tuần hoàn Cacbon (The Carbon Cycle)",
-      "selector": "#card-carbon-cycle",
-      "en": "The carbon cycle: Carbon dioxide is removed from the atmosphere exclusively by photosynthesis in plants and algae. Carbon is returned to the atmosphere by cellular respiration of plants, animals, and decomposers, and by combustion of fossil fuels.",
-      "vi": "Chu trình cacbon: Khí CO2 chỉ được loại bỏ khỏi khí quyển duy nhất thông qua quá trình quang hợp của thực vật và tảo. Khí CO2 được trả lại khí quyển thông qua hô hấp tế bào của thực vật, động vật, sinh vật phân giải và qua quá trình đốt cháy nhiên liệu hóa thạch.",
-      "duration": 31.48,
-      "startTime": 282.16,
-      "endTime": 313.64,
-      "audioUrl": "/audio/lectures/biology/19/card_carbon_cycle.mp3"
+      "id": "s01_b06",
+      "title": "🏕️ Population, Community & Ecosystem",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🏕️ Population, Community & Ecosystem. Population: A group of organisms of one species , living in the same area , at the same time. Community: All of the populations of different species living together in an ecosystem (biotic component only). Ecosystem: A unit containing the community of organisms and their environment (abiotic factors like light, water, soil pH, temperature), interacting together.",
+      "vi": "🏕️ Population, Community & Ecosystem. Population (Quần thể): Nhóm các cá thể thuộc cùng một loài (one species) , sống trong cùng khu vực (same area) , vào cùng thời điểm. Community (Quần xã): Tập hợp tất cả các quần thể của các loài khác nhau trong một hệ sinh thái (chỉ tính thành phần hữu sinh — biotic ). Ecosystem (Hệ sinh thái): Đơn vị hoàn chỉnh gồm quần xã sinh vật (community) và môi trường vô sinh (environment) tương tác qua lại với nhau.",
+      "duration": 63.63,
+      "startTime": 346.82,
+      "endTime": 410.45,
+      "audioUrl": "/audio/lectures/biology/19/s01_b06.mp3"
     },
     {
-      "id": "card_nitrogen_cycle",
-      "title": "🧪 Chu trình Nitơ & 4 Nhóm Vi khuẩn Cốt lõi",
-      "selector": "#card-nitrogen-cycle",
-      "en": "The nitrogen cycle and 4 bacterial roles: Nitrogen gas in air is inert and unusable by plants. Nitrogen-fixing bacteria in soil and root nodules convert nitrogen gas into ammonium ions. Nitrifying bacteria oxidize ammonium into nitrites then nitrates absorbed by plant roots. Decomposing bacteria convert protein urea in waste into ammonium. Denitrifying bacteria in anaerobic waterlogged soil convert nitrates back into atmospheric nitrogen gas.",
-      "vi": "Chu trình nitơ và bốn nhóm vi khuẩn cốt lõi: Khí nitơ trong khí quyển trơ và thực vật không thể hấp thụ trực tiếp. Vi khuẩn cố định đạm trong đất và nốt sần rễ cây họ Đậu chuyển khí nitơ thành ion amoni. Vi khuẩn nitrat hóa oxy hóa amoni thành nitrit rồi thành nitrat cho rễ cây hấp thụ. Vi khuẩn phân giải biến protein và urê thành amoni. Vi khuẩn phản nitrat hóa trong đất ngập úng kỵ khí biến nitrat thành khí nitơ trả lại khí quyển.",
-      "duration": 61.26,
-      "startTime": 313.64,
-      "endTime": 374.9,
-      "audioUrl": "/audio/lectures/biology/19/card_nitrogen_cycle.mp3"
+      "id": "s01_b07",
+      "title": "📊 Định nghĩa Bậc dinh dưỡng — Trophic Level (Core 19.2.13–14):",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "📊 Trophic Level Definition (Core 19.2.13–14): A trophic level is the position of an organism in a food chain, food web, or ecological pyramid : Level 1 = Producers → Level 2 = Primary consumers → Level 3 = Secondary consumers → Level 4 = Tertiary consumers → Level 5 = Quaternary consumers. Note that an omnivore or top predator in a complex food web can occupy more than one trophic level simultaneously depending on which food chain path you trace!",
+      "vi": "📊 Định nghĩa Bậc dinh dưỡng — Trophic Level (Core 19.2.13–14): Trophic level (Bậc dinh dưỡng) là vị trí của một sinh vật trong chuỗi thức ăn, lưới thức ăn hoặc tháp sinh thái : Bậc 1 (Level 1) = Producers → Bậc 2 (Level 2) = Primary consumers → Bậc 3 (Level 3) = Secondary consumers → Bậc 4 (Level 4) = Tertiary consumers → Bậc 5 (Level 5) = Quaternary consumers. Lưu ý: Trong lưới thức ăn phức tạp, một loài ăn tạp có thể đứng ở nhiều bậc dinh dưỡng khác nhau tùy theo nhánh chuỗi thức ăn!",
+      "duration": 69.41,
+      "startTime": 410.45,
+      "endTime": 479.86,
+      "audioUrl": "/audio/lectures/biology/19/s01_b07.mp3"
     },
     {
-      "id": "sec_populations",
-      "title": "4. Động lực học Quần thể & Đường cong Tăng trưởng Sigmoid",
-      "selector": "#sec-populations",
-      "en": "Section 4: Population dynamics: Population size is determined by the balance between birth rate, death rate, immigration, and emigration. Populations exhibiting exponential growth eventually face limiting factors forming a sigmoid curve.",
-      "vi": "Mục 4: Động lực học quần thể: Kích thước quần thể được quyết định bởi sự cân bằng giữa mức sinh sản, mức tử vong, nhập cư và xuất cư. Quần thể tăng trưởng ban đầu theo cấp số nhân nhưng sau đó chịu sự kìm hãm của các yếu tố giới hạn tạo thành đường cong chữ S (Sigmoid).",
-      "duration": 32.78,
-      "startTime": 374.9,
-      "endTime": 407.68,
-      "audioUrl": "/audio/lectures/biology/19/sec_populations.mp3"
+      "id": "s01_b08",
+      "title": "penguins",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 / Paper 2 MCQ In a marine food web, phytoplankton photosynthesise and are eaten by krill. Squid eat krill, penguins eat squid, and leopard seals eat penguins. What are the trophic level and consumer classification of the penguins in this chain? A. Trophic level 3, secondary consumer B. Trophic level 3, tertiary consumer C. Trophic level 4, tertiary consumer D. Trophic level 4, quaternary consumer ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Trace the food chain from Trophic Level 1: Phytoplankton (Producer = Level 1) → Krill (Primary consumer = Level 2) → Squid (Secondary consumer = Level 3) → Penguins ( Tertiary consumer = Trophic Level 4 ) → Leopard seals (Quaternary consumer = Level 5). Options A and B miscount the producer, while D confuses trophic level number with consumer rank.",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 / Paper 2 In a marine food web, phytoplankton photosynthesise and are eaten by krill. Squid eat krill, penguins eat squid, and leopard seals eat penguins. What are the trophic level and consumer classification of the penguins in this chain? (Trong lưới thức ăn biển, thực vật phù du quang hợp và bị krill ăn. Mực ăn krill, chim cánh cụt ăn mực, và hải cẩu báo ăn chim cánh cụt. Bậc dinh dưỡng và phân hạng tiêu thụ của chim cánh cụt là gì?) A. Trophic level 3, secondary consumer B. Trophic level 3, tertiary consumer C. Trophic level 4, tertiary consumer D. Trophic level 4, quaternary consumer ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Đếm từ Bậc 1: Phytoplankton (Producer = Trophic Level 1) → Krill (Primary consumer = Level 2) → Squid (Secondary consumer = Level 3) → Penguins ( Tertiary consumer = Trophic Level 4 ) → Leopard seals (Quaternary consumer = Level 5). Đáp án A và B quên đếm Producer là bậc 1; đáp án D nhầm số bậc dinh dưỡng với bậc của consumer.",
+      "duration": 142.97,
+      "startTime": 479.86,
+      "endTime": 622.83,
+      "audioUrl": "/audio/lectures/biology/19/s01_b08.mp3"
     },
     {
-      "id": "card_population_sigmoid",
-      "title": "📈 Các Pha của Đường cong Tăng trưởng Chữ S (Sigmoid)",
-      "selector": "#card-population-sigmoid",
-      "en": "Phases of the sigmoid growth curve: The lag phase is slow initial growth as organisms adapt to conditions. The exponential log phase shows rapid multiplying with birth rate far exceeding death rate. The stationary phase occurs when birth rate equals death rate as carrying capacity is reached due to food shortage or disease. The death phase ensues when toxins accumulate and death rate exceeds birth rate.",
-      "vi": "Các pha của đường cong sinh trưởng chữ S: Pha tiềm phát (lag phase) số lượng tăng chậm do sinh vật đang thích nghi. Pha lũy thừa (exponential phase) số lượng bùng nổ do tỷ lệ sinh vượt xa tỷ lệ chết. Pha cân bằng (stationary phase) đạt sức chứa môi trường khi tỷ lệ sinh bằng tỷ lệ chết do thiếu thức ăn hoặc bệnh tật. Pha tử vong (death phase) xảy ra khi độc tố tích tụ khiến tỷ lệ chết vượt tỷ lệ sinh.",
-      "duration": 51.83,
-      "startTime": 407.68,
-      "endTime": 459.51,
-      "audioUrl": "/audio/lectures/biology/19/card_population_sigmoid.mp3"
+      "id": "s01_b09",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 / Paper 4 Structured [4 marks] (a) Define the term population . [2](b) Distinguish clearly between a community and an ecosystem . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) A group of organisms of one species [1m] living in the same area, at the same time [1m]. (b) A community includes only the living (biotic) populations of all different species in an area [1m], whereas an ecosystem includes both the community of organisms and their physical (abiotic) environment interacting together [1m]. 💡 Intuition Check: Community = Biotic only (living species). Ecosystem = Community (biotic) + Environment (abiotic interactions).",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận Paper 3 / Paper 4 [4 marks] (a) Define the term population . (b) Distinguish clearly between a community and an ecosystem . ((a) Định nghĩa thuật ngữ quần thể. (b) Phân biệt rõ giữa quần xã và hệ sinh thái. ) ✍️ Lời giải chi tiết theo thang điểm: (a) A group of organisms of one species (nhóm sinh vật thuộc cùng một loài) living in the same area, at the same time (sống trong cùng khu vực vào cùng thời điểm) . chỉ gồm các quần thể sinh vật sống thuộc nhiều loài , whereas an ecosystem includes both the community of organisms and their abiotic environment interacting together (gồm cả quần xã sinh vật lẫn môi trường vô sinh tương tác với nhau) . 💡 Kiểm tra bản chất: Công thức nhớ nhanh: Community = Chỉ phần sống (Biotic). Ecosystem = Community (Hữu sinh) + Environment (Vô sinh).",
+      "duration": 115.16,
+      "startTime": 622.83,
+      "endTime": 737.99,
+      "audioUrl": "/audio/lectures/biology/19/s01_b09.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "⛓️ 2. Energy Flow, Food Webs & Ecological Pyramids (Dòng Năng lượng & Tháp Sinh thái)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "⛓️ 2. Energy Flow, Food Webs & Ecological Pyramids.",
+      "vi": "⛓️ 2. Dòng Năng lượng & Tháp Sinh thái .",
+      "duration": 8.14,
+      "startTime": 737.99,
+      "endTime": 746.13,
+      "audioUrl": "/audio/lectures/biology/19/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine passing a Leaky Bucket of water down a line of 5 people where 90% spills out at every hand-off: start with 1000 mL → 100 mL → 10 mL → 1 mL → 0.1 mL . By person #5, there is barely a drop left to drink! Eating crops directly is like drinking straight from bucket #2 instead of waiting for bucket #3 after feeding a cow.",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng chuyền một xô nước thủng qua hàng 5 người mà mỗi lần trao tay bị đổ mất 90% : từ 1000 mL → 100 mL → 10 mL → 1 mL → 0.1 mL . Đến người thứ 5 thì chẳng còn giọt nào để uống! Con người ăn trực tiếp ngũ cốc giống như hứng nước ngay ở người số 2, thay vì đổ cho bò uống rồi mới chờ hứng cặn ở người số 3.",
+      "duration": 55.72,
+      "startTime": 746.13,
+      "endTime": 801.85,
+      "audioUrl": "/audio/lectures/biology/19/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Link three Supplement ideas together: (1) Only ~10% of energy passes up each trophic level because ~90% is lost via respiratory heat, movement, uneaten parts (bones/roots), egestion (faeces), and excretion (urine) ; (2) Therefore fewer than 5 trophic levels exist; (3) Pyramids of energy ( kJ m⁻² yr⁻¹ ) are never inverted because thermodynamics forbids creating energy, unlike pyramids of numbers which invert on 1 tree → 5000 insects .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Kết nối 3 trụ cột Supplement: (1) Chỉ ~10% năng lượng truyền lên bậc sau vì ~90% mất qua nhiệt hô hấp (respiratory heat), vận động, phần không ăn được (bones/roots), thải phân (egestion/faeces) và bài tiết nước tiểu (excretion/urine) ; (2) Do đó chuỗi thức ăn có ít hơn 5 bậc dinh dưỡng ; (3) Tháp năng lượng ( kJ m⁻² yr⁻¹ ) luôn đứng thẳng , không bao giờ đảo ngược như tháp số lượng của 1 cây cổ thụ → 5000 sâu .",
+      "duration": 71.78,
+      "startTime": 801.85,
+      "endTime": 873.63,
+      "audioUrl": "/audio/lectures/biology/19/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Writing \"energy is lost in faeces by excretion\"! Faeces is egestion (undigested cellulose/fibre that never entered cells), whereas urea/urine is excretion . Also never say energy is \"recycled\" by decomposers — nutrients cycle, while energy flows one-way and exits as heat!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết \"energy is lost in faeces by excretion\"! Phân (faeces) là chất xơ chưa tiêu hóa nên bắt buộc dùng từ egestion , còn ure trong nước tiểu mới là excretion . Đặc biệt CẤM viết năng lượng được \"tái chế (recycled)\" — chất dinh dưỡng tuần hoàn, còn năng lượng truyền một chiều rồi thoát ra dạng nhiệt!",
+      "duration": 46.68,
+      "startTime": 873.63,
+      "endTime": 920.31,
+      "audioUrl": "/audio/lectures/biology/19/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "☀️ 19.1 Dòng truyền Năng lượng Một chiều (Non-Cyclical Energy Flow)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "☀️ 19.1 Non-Cyclical Flow of Energy Through Living Organisms. The Sun is the principal source of energy input to biological systems. Light energy from the Sun is absorbed by chlorophyll in producers and converted into chemical energy stored in organic molecules (glucose, starch, lipids, proteins) via photosynthesis. Food chains show the transfer of chemical energy from one organism to the next , always beginning with a producer. Arrows ( → ) always point in the direction of energy flow (e.g. Phytoplankton → Krill → Fish → Seal → Killer Whale ). Food webs are networks of interconnected food chains . Unlike mineral nutrients (which recycle indefinitely), energy flows one-way and is eventually transferred to the environment as heat energy via respiration.",
+      "vi": "☀️ 19.1 Dòng truyền Năng lượng Một chiều. Mặt Trời (The Sun) là nguồn cung cấp năng lượng sơ cấp chính cho toàn bộ hệ thống sinh học. Quang năng (Light energy) được diệp lục ở sinh vật sản xuất hấp thụ và chuyển hóa thành hóa năng (chemical energy) tích trữ trong chất hữu cơ (glucose, tinh bột, lipid, protein) nhờ quang hợp. Chuỗi thức ăn (Food chain) biểu diễn sự truyền năng lượng từ sinh vật này sang sinh vật kế tiếp, luôn bắt đầu bằng Producer. Dấu mũi tên ( → ) luôn chỉ chiều truyền năng lượng (VD: Thực vật phù du → Giáp xác Krill → Cá → Hải cẩu → Cá voi sát thủ ). Lưới thức ăn (Food web) là mạng lưới các chuỗi thức ăn đan xen nhau. Khác với chất khoáng tuần hoàn khép kín, năng lượng đi theo một chiều duy nhất và cuối cùng thất thoát ra môi trường dưới dạng nhiệt năng (heat) qua hô hấp.",
+      "duration": 108.85,
+      "startTime": 920.31,
+      "endTime": 1029.16,
+      "audioUrl": "/audio/lectures/biology/19/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🎣 Khai thác quá mức (Overharvesting of Food Species)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🎣 Overharvesting of Food Species. Catching or harvesting a species (e.g. Atlantic cod or krill) faster than it can breed reduces food availability for higher predators (causing seals/sharks to decline or switch prey), while allowing the harvested organism's prey (e.g. zooplankton or small crustaceans) to multiply rapidly, disrupting the entire food web.",
+      "vi": "🎣 Khai thác quá mức. Đánh bắt một loài làm thức ăn (VD: cá tuyết hoặc giáp xác krill) nhanh hơn tốc độ sinh sản làm thú săn mồi bậc cao thiếu thức ăn (giảm số lượng hoặc phải đổi con mồi khác), đồng thời khiến con mồi bên dưới loài bị đánh bắt tăng vọt mất kiểm soát, gây mất cân bằng cả lưới thức ăn.",
+      "duration": 43.88,
+      "startTime": 1029.16,
+      "endTime": 1073.04,
+      "audioUrl": "/audio/lectures/biology/19/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🐍 Du nhập loài ngoại lai (Introducing Foreign Species)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🐍 Introducing Foreign (Invasive) Species. Non-native species introduced to a habitat often have no natural predators or diseases there. Their population grows rapidly, outcompeting native species for food/space or preying heavily on native animals lacking defences, causing native populations to crash or go extinct.",
+      "vi": "🐍 Du nhập loài ngoại lai. Loài ngoại lai xâm lấn thường không có thiên địch tự nhiên hay mầm bệnh kìm hãm ở môi trường mới. Chúng sinh sôi bùng nổ, cạnh tranh gay gắt nguồn thức ăn/nơi ở hoặc ăn thịt các loài bản địa vốn không có cơ chế tự vệ, đẩy loài bản địa đến suy giảm hoặc tuyệt chủng.",
+      "duration": 41.68,
+      "startTime": 1073.04,
+      "endTime": 1114.72,
+      "audioUrl": "/audio/lectures/biology/19/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "📉 Supplement: Quy tắc 10% Thất thoát Năng lượng & Hiệu quả Ăn Thực vật vs. Chăn nuôi",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "📉 Supplement: Inefficiency of Energy Transfer (~10% Rule) & Crop vs. Livestock Efficiency. Only around 10% of chemical energy at one trophic level is converted into new biomass at the next trophic level. Roughly 90% is lost at each step because: Respiratory heat loss: Organisms respire glucose to power movement/muscle contraction, active transport, cell division, and body temperature regulation (especially endothermic mammals/birds), losing heat to surroundings. Uneaten structures: Roots, woody bark, bones, fur, feathers, and shells are not eaten by predators (energy goes to decomposers instead). Indigestible matter (Egestion): Cellulose plant cell walls and tough tissues cannot be digested, passing out as faeces. Metabolic waste (Excretion): Chemical energy is lost in excreted urea in urine. Why food chains usually have fewer than 5 trophic levels: If producers fix 10,000 kJ , primary consumers get 1,000 kJ , secondary get 100 kJ , tertiary get 10 kJ , and quaternary get just 1 kJ — far too little energy remains to sustain a viable breeding population at a 6th level! Why eating crop plants is more energy efficient than eating livestock: Eating soya/wheat directly places humans at Trophic Level 2 (1 transfer loss: Crops → Humans ). Feeding crops to cattle and eating beef places humans at Trophic Level 3 (2 transfer losses: Crops → Livestock → Humans ), losing an extra ~90% of energy to livestock respiration, movement, faeces, and urine. Growing crops directly therefore feeds far more people per hectare!",
+      "vi": "📉 Supplement: Quy tắc 10% Thất thoát Năng lượng & Hiệu quả Ăn Thực vật vs. Chăn nuôi. Chỉ khoảng 10% hóa năng tích lũy ở một bậc dinh dưỡng chuyển thành sinh khối mới ở bậc kế tiếp. Khoảng 90% năng lượng bị hao hụt tại mỗi bậc do: Tỏa nhiệt qua hô hấp: Hô hấp tế bào giải phóng năng lượng cho co cơ vận động, vận chuyển tích cực, phân bào và giữ ấm cơ thể (đặc biệt ở thú và chim đẳng nhiệt). Bộ phận không bị ăn (Uneaten parts): Rễ cây, vỏ gỗ, xương, lông, sừng không được vật ăn thịt tiêu thụ. Thức ăn không tiêu hóa được — Thải phân (Egestion): Thành cellulose của thực vật không tiêu hóa hết bị thải ra ngoài qua phân (faeces). Chất thải trao đổi chất — Bài tiết (Excretion): Hóa năng mất đi qua ure trong nước tiểu (urine). Vì sao chuỗi thức ăn thường có ít hơn 5 bậc dinh dưỡng: Từ 10,000 kJ ở cỏ → bậc 2 còn 1,000 kJ → bậc 3 còn 100 kJ → bậc 4 còn 10 kJ → bậc 5 chỉ còn 1 kJ — quá ít năng lượng để duy trì một quần thể thú săn mồi bậc cao sinh sản ổn định! Vì sao con người ăn trực tiếp cây trồng (crop plants) hiệu quả hơn ăn thịt gia súc (livestock): Ăn đậu nành/lúa mì trực tiếp chỉ qua 1 lần truyền năng lượng ( Cây trồng → Người , bậc 2). Nếu lấy ngũ cốc nuôi bò rồi mới ăn thịt bò ( Cây trồng → Gia súc → Người , bậc 3), ~90% năng lượng ngũ cốc đã bị bò làm tiêu hao qua hô hấp tỏa nhiệt, vận động, phân và nước tiểu!",
+      "duration": 212.62,
+      "startTime": 1114.72,
+      "endTime": 1327.34,
+      "audioUrl": "/audio/lectures/biology/19/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "📐 So sánh 3 Loại Tháp Sinh thái: Numbers, Biomass & Energy",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "📐 Comparing Pyramids of Numbers, Biomass & Energy (Woodland Food Chain). Example chain: 1 Oak Tree → 5,000 Caterpillars → 50 Blue Tits → 1 Sparrowhawk .",
+      "vi": "📐 So sánh 3 Loại Tháp Sinh thái: Numbers, Biomass & Energy. Chuỗi mẫu rừng gỗ: 1 Cây sồi (Oak) → 5,000 Sâu bướm → 50 Chim sẻ ngô → 1 Diều hâu .",
+      "duration": 27.0,
+      "startTime": 1327.34,
+      "endTime": 1354.34,
+      "audioUrl": "/audio/lectures/biology/19/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "Ưu:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "Pyramid Type: Pyramid of Numbers; Units & Definition: Number of individual organisms at each trophic level; Advantages & Limitations (Exam Comparison): Advantage: Easy to count without killing organisms. Limitation: Ignores organism size — 1 oak tree or 10,000 fleas on 1 fox gives a distorted/inverted pyramid. Pyramid Type: Pyramid of Biomass; Units & Definition: Total dry mass of organisms at each trophic level ( g m⁻² ); Advantages & Limitations (Exam Comparison): Advantage over Numbers: Accounts for organism size, so oak-tree & parasite chains become upright. Limitation: Requires killing/drying samples; only a snapshot at one moment (can invert in oceans where phytoplankton reproduce rapidly). Pyramid Type: Pyramid of Energy (Supplement); Units & Definition: Energy transferred per unit area per unit time ( kJ m⁻² year⁻¹ ); Advantages & Limitations (Exam Comparison): Advantages over Biomass & Numbers: Never inverted ; accounts for rate of reproduction over a whole year and differences in energy content per gram of lipid vs carbohydrate.",
+      "vi": "Loại Tháp Sinh thái: Pyramid of Numbers; Đơn vị & Đại lượng đo: Tổng số cá thể ở mỗi bậc dinh dưỡng; Ưu điểm & Nhược điểm (So sánh ăn điểm Thi): Ưu: Dễ đếm nhanh, không cần giết mẫu. Nhược: Không xét kích thước cơ thể — 1 cây sồi lớn hoặc hàng nghìn bọ chét ký sinh làm tháp bị đảo ngược/méo mó. Loại Tháp Sinh thái: Pyramid of Biomass; Đơn vị & Đại lượng đo: Tổng khối lượng khô (dry mass) ở mỗi bậc ( g m⁻² ); Ưu điểm & Nhược điểm (So sánh ăn điểm Thi): Ưu điểm so với Numbers: Đã tính kích thước sinh vật nên tháp cây sồi đứng thẳng chuẩn xác. Nhược: Phải sấy khô mẫu; chỉ đo tại 1 thời điểm (có thể đảo ngược ở biển do tảo phù du sinh sản cực nhanh). Loại Tháp Sinh thái: Pyramid of Energy (Supplement); Đơn vị & Đại lượng đo: Năng lượng truyền qua trên 1 đơn vị diện tích trong 1 năm ( kJ m⁻² year⁻¹ ); Ưu điểm & Nhược điểm (So sánh ăn điểm Thi): Ưu điểm vượt trội hơn Biomass & Numbers: Không bao giờ bị đảo ngược ; phản ánh tốc độ tái tạo sinh khối theo thời gian và mức năng lượng khác nhau của lipid vs carbohydrate.",
+      "duration": 151.96,
+      "startTime": 1354.34,
+      "endTime": 1506.3,
+      "audioUrl": "/audio/lectures/biology/19/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A single large rose bush supports 400 aphids, which are eaten by 15 ladybirds, while 2,000 parasitic mites live on the ladybirds. Which statement about the ecological pyramids for this food chain is correct? A. Both the pyramid of numbers and the pyramid of energy have the widest bar at trophic level 2. B. The pyramid of biomass is inverted at every level, whereas the pyramid of numbers is upright. C. The pyramid of numbers is irregular in shape, whereas the pyramid of energy narrows steadily from trophic level 1 to trophic level 4. D. More energy is transferred from ladybirds to mites than from the rose bush to aphids because there are 2,000 mites. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: In a pyramid of numbers, bar widths are 1 → 400 → 15 → 2,000 (highly irregular due to 1 large bush and 2,000 tiny parasites). However, energy is lost as heat/waste at every transfer, so the pyramid of energy is always strictly upright , narrowing from Trophic Level 1 to Level 4. Thus A, B, and D violate energy loss laws.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 A single large rose bush supports 400 aphids, which are eaten by 15 ladybirds, while 2,000 parasitic mites live on the ladybirds. Which statement about the ecological pyramids for this food chain is correct? (Một bụi hoa hồng lớn nuôi 400 con rệp, bị 15 con bọ rùa ăn, và trên bọ rùa có 2,000 con ve ký sinh. Phát biểu nào về tháp sinh thái của chuỗi này là đúng?) A. Both the pyramid of numbers and the pyramid of energy have the widest bar at trophic level 2. B. The pyramid of biomass is inverted at every level, whereas the pyramid of numbers is upright. C. The pyramid of numbers is irregular in shape, whereas the pyramid of energy narrows steadily from trophic level 1 to trophic level 4. D. More energy is transferred from ladybirds to mites than from the rose bush to aphids because there are 2,000 mites. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Ở tháp số lượng, độ rộng các bậc là 1 → 400 → 15 → 2,000 (hình dạng méo mó bất thường do 1 bụi hồng lớn và 2,000 con ve tí hon). Tuy nhiên, năng lượng luôn thất thoát ở mỗi bậc nên tháp năng lượng luôn thu hẹp dần đều từ bậc 1 lên bậc 4. Các đáp án A, B, D đều sai quy luật nhiệt động lực học.",
+      "duration": 171.75,
+      "startTime": 1506.3,
+      "endTime": 1678.05,
+      "audioUrl": "/audio/lectures/biology/19/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured & Calculation [5 marks] Soya bean plants trap 25,000 kJ m⁻² year⁻¹ of chemical energy. Cattle fed on soya retain 8% of this energy in new biomass, and humans eating beef retain 10% of the cattle biomass energy.(a) Calculate the energy available to humans eating beef per m² per year. Show your working. [2](b) Explain, in terms of energy flow, why feeding a growing human population on soya beans directly is much more efficient than feeding soya beans to cattle. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Energy in cattle = 25,000 × 0.08 = 2,000 kJ m⁻² yr⁻¹ [1m]. Energy available to humans = 2,000 × 0.10 = 200 kJ m⁻² yr⁻¹ [1m]. (b) Eating soya directly shortens the food chain (eliminates one trophic level / cattle) [1m]. Cattle lose ~92% of crop energy as heat during respiration , muscle movement, and body temperature regulation [1m], plus energy lost in undigested faeces (egestion) and urine (excretion) [1m], so far more energy per unit land area reaches humans when eating crops directly. 💡 Intuition Check: Had humans eaten the soya directly at 10% transfer efficiency, they would gain 2,500 kJ instead of 200 kJ — over 12 times more food energy from the exact same farmland!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận & Tính toán Paper 4 [5 marks] Soya bean plants trap 25,000 kJ m⁻² year⁻¹ of chemical energy. Cattle fed on soya retain 8% of this energy in new biomass, and humans eating beef retain 10% of the cattle biomass energy.(a) Calculate the energy available to humans eating beef per m² per year. Show your working. (b) Explain, in terms of energy flow, why feeding a growing human population on soya beans directly is much more efficient than feeding soya beans to cattle. (Cây đậu nành tích lũy 25,000 kJ/m²/năm. Bò ăn đậu giữ lại 8% thành sinh khối mới, người ăn thịt bò giữ lại 10%. (a) Tính năng lượng tới người ăn thịt bò. (b) Giải thích vì sao người ăn trực tiếp đậu nành hiệu quả năng lượng hơn nhiều. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Năng lượng tích lũy ở bò = 25,000 × 0.08 = 2,000 kJ m⁻² yr⁻¹ . Năng lượng truyền tới người = 2,000 × 0.10 = 200 kJ m⁻² yr⁻¹ . (b) Eating soya directly shortens the food chain / removes one trophic level (rút ngắn chuỗi thức ăn, bỏ qua bậc trung gian gia súc) . bò làm mất nhiệt qua hô hấp, vận động, giữ ấm , plus energy lost in undigested faeces (egestion) and urine (excretion) . 💡 Kiểm tra bản chất: Nếu ăn đậu nành trực tiếp với hiệu suất 10%, con người nhận được 2,500 kJ thay vì 200 kJ — tức nuôi sống được gấp hơn 12 lần dân số trên cùng một diện tích đất!",
+      "duration": 222.04,
+      "startTime": 1678.05,
+      "endTime": 1900.09,
+      "audioUrl": "/audio/lectures/biology/19/s02_b11.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "♻️ 3. Nutrient Cycles (Chu trình Carbon & Chu trình Nitrogen)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "♻️ 3. Nutrient Cycles: The Carbon Cycle & Nitrogen Cycle.",
+      "vi": "♻️ 3. Nutrient Cycles (Chu trình Carbon & Chu trình Nitrogen).",
+      "duration": 10.66,
+      "startTime": 1900.09,
+      "endTime": 1910.75,
+      "audioUrl": "/audio/lectures/biology/19/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Atmospheric N₂ gas is like cash locked inside a titanium vault (triple bond N≡N ): plants are starving right next to 78% nitrogen air! Nitrogen-fixing bacteria & lightning are the locksmiths opening the vault; nitrifying bacteria mint soluble NO₃⁻ coins that plant roots spend to build proteins; decomposers recycle old coins; and denitrifying bacteria are thieves in flooded mud throwing nitrogen back into the sky!",
+      "vi": "🎯 Hình dung đời thường: Khí N₂ trong không khí giống như tiền mặt bị khóa trong két sắt titan (liên kết ba N≡N ): cây trồng \"đói đạm\" ngay giữa bầu trời 78% nitrogen! Vi khuẩn cố định đạm & tia sét là thợ mở khóa két; vi khuẩn nitrat hóa đúc thành đồng xu NO₃⁻ hòa tan để rễ cây mua nguyên liệu xây protein; sinh vật phân giải thu gom xu cũ; còn vi khuẩn phản nitrat hóa ở đất ngập úng lại ném tiền ngược lên trời!",
+      "duration": 61.95,
+      "startTime": 1910.75,
+      "endTime": 1972.7,
+      "audioUrl": "/audio/lectures/biology/19/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: Memorise the 4 bacterial roles by chemical direction: (1) Nitrogen fixation: N₂ → NH₄⁺ / NO₃⁻ (lightning + root nodule/soil bacteria); (2) Decomposition: proteins/urea → NH₄⁺ ; (3) Nitrification: NH₄⁺ → NO₂⁻ → NO₃⁻ (needs aerobic soil!); (4) Denitrification: NO₃⁻ → N₂ gas (anaerobic waterlogged soil). Remember: Cambridge 0610 requires functional group names, NOT Latin names like Rhizobium .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Thuộc lòng 4 vai trò vi sinh vật theo chiều biến đổi hóa học: (1) Nitrogen fixation: N₂ → NH₄⁺ / NO₃⁻ (tia sét + vi khuẩn nốt sần cây họ Đậu); (2) Decomposition: protein/ure → NH₄⁺ ; (3) Nitrification: NH₄⁺ → NO₂⁻ → NO₃⁻ (cần đất thoáng khí giàu O₂ !); (4) Denitrification: NO₃⁻ → N₂ (đất ngập úng kỵ khí). Lưu ý: Đề 0610 hỏi tên nhóm chức năng tiếng Anh, không bắt học tên Latin như Rhizobium .",
+      "duration": 83.87,
+      "startTime": 1972.7,
+      "endTime": 2056.57,
+      "audioUrl": "/audio/lectures/biology/19/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Confusing nitrogen-fixing bacteria with nitrifying bacteria ! Nitrogen-fixing bacteria start from N₂ gas (air → ammonium/fixed N in legume root nodules), whereas nitrifying bacteria start from ammonium ions ( NH₄⁺ ) in soil and oxidise them to nitrites and nitrates ( NO₃⁻ ) .",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nhầm lẫn giữa nitrogen-fixing bacteria (cố định đạm) và nitrifying bacteria (nitrat hóa) ! Nitrogen-fixing lấy khí N₂ từ không khí , còn nitrifying lấy ion NH₄⁺ có sẵn trong đất để oxy hóa thành NO₂⁻ và NO₃⁻ .",
+      "duration": 44.41,
+      "startTime": 2056.57,
+      "endTime": 2100.98,
+      "audioUrl": "/audio/lectures/biology/19/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🌍 19.3A Chu trình Carbon — The Carbon Cycle (Core — 6 Quá trình Bắt buộc)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🌍 19.3A The Carbon Cycle (Core — 6 Essential Processes). 1. Photosynthesis (ONLY process removing atmospheric CO₂ ): Green plants and algae absorb CO₂ and convert it using light energy into glucose and starch ( 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ ). 2. Respiration (Releases CO₂ ): Plants, animals, and decomposers break down glucose aerobically to release energy, returning CO₂ to the air ( C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O ). 3. Feeding: Carbon locked in plant carbohydrates, lipids, and proteins passes along food chains to herbivores and carnivores. 4. Decomposition: Decomposers (fungi and bacteria) break down dead organisms, fallen leaves, faeces, and urea, releasing CO₂ as they respire. 5. Formation of fossil fuels (Fossilisation): When dead plants/marine organisms are buried in anaerobic, acidic, or high-pressure conditions where complete decomposition is prevented, they transform over millions of years into coal, oil, and natural gas. 6. Combustion (Releases CO₂ ): Burning fossil fuels or wood in oxygen oxidises locked carbon back into atmospheric CO₂.",
+      "vi": "🌍 19.3A Chu trình Carbon — The Carbon Cycle (Core — 6 Quá trình Bắt buộc). 1. Photosynthesis (Quang hợp — Quá trình DUY NHẤT rút CO₂ khỏi khí quyển): Cây xanh và tảo dùng ánh sáng chuyển CO₂ thành glucose và tinh bột ( 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ ). 2. Respiration (Hô hấp — Thải CO₂ ): Thực vật, động vật và vi sinh vật phân giải glucose để lấy năng lượng, nhả CO₂ lại bầu khí quyển. 3. Feeding (Ăn uống / Tiêu thụ): Chuyển các hợp chất hữu cơ chứa carbon từ thực vật sang động vật ăn cỏ và ăn thịt. 4. Decomposition (Phân hủy): Sinh vật phân giải (nấm, vi khuẩn) phân hủy xác sinh vật chết, phân và ure, hô hấp giải phóng CO₂. 5. Formation of fossil fuels (Hình thành nhiên liệu hóa thạch): Xác thực vật và sinh vật biển bị chôn vùi trong môi trường yếm khí, áp suất & nhiệt độ cao không phân hủy hết qua hàng triệu năm tạo thành than đá, dầu mỏ, khí tự nhiên. 6. Combustion (Đốt cháy — Thải CO₂ ): Đốt nhiên liệu hóa thạch hoặc củi gỗ giải phóng lượng lớn carbon tích trữ thành khí CO₂.",
+      "duration": 170.21,
+      "startTime": 2100.98,
+      "endTime": 2271.19,
+      "audioUrl": "/audio/lectures/biology/19/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🧪 19.3B Chu trình Nitrogen & 4 Nhóm Vi sinh vật Chủ chốt (Supplement)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🧪 19.3B The Nitrogen Cycle & 4 Microorganism Roles (Supplement). Nitrogen gas ( N₂ , ~78% of air) has a strong triple covalent bond, making it too unreactive for plants or animals to use directly. Microorganisms and lightning convert nitrogen into reactive ions:",
+      "vi": "🧪 19.3B Chu trình Nitrogen & 4 Nhóm Vi sinh vật Chủ chốt (Supplement). Khí N₂ chiếm ~78% không khí nhưng cực kỳ trơ do liên kết ba bền vững. Cây trồng không thể hút trực tiếp N₂ mà cần tia sét và 4 nhóm vi khuẩn chuyển hóa:",
+      "duration": 41.04,
+      "startTime": 2271.19,
+      "endTime": 2312.23,
+      "audioUrl": "/audio/lectures/biology/19/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "1. Cố định đạm (Nitrogen Fixation):",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "1. Nitrogen Fixation (Bacteria & Lightning): Nitrogen-fixing bacteria living free in soil or in root nodules of leguminous plants (peas, beans, clover) convert N₂ gas into ammonium/nitrogen compounds. Lightning provides energy to react N₂ + O₂ into nitrogen oxides, washed into soil by rain as nitrates ( NO₃⁻ ).",
+      "vi": "1. Cố định đạm (Nitrogen Fixation): Nitrogen-fixing bacteria sống tự do trong đất hoặc cộng sinh trong nốt sần rễ cây họ Đậu (root nodules) biến N₂ thành hợp chất amoni. Tia sét (Lightning) cung cấp năng lượng cho N₂ + O₂ tạo oxit nitơ, mưa rửa xuống đất thành ion nitrat ( NO₃⁻ ).",
+      "duration": 48.53,
+      "startTime": 2312.23,
+      "endTime": 2360.76,
+      "audioUrl": "/audio/lectures/biology/19/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "2. Tiêu hóa, Khử amin & Phân giải:",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "2. Decomposition & Deamination: Animals eat and digest plant proteins into amino acids. Excess amino acids undergo deamination in the liver to form urea . Decomposers break down dead plant/animal proteins, faeces, and urea into ammonium ions ( NH₄⁺ ).",
+      "vi": "2. Tiêu hóa, Khử amin & Phân giải: Động vật tiêu hóa protein thành amino acid; lượng dư thừa bị khử amin (deamination) tại gan tạo ure (urea) . Decomposers phân hủy protein xác chết, phân và ure thành ion ammonium ( NH₄⁺ ) trong đất.",
+      "duration": 41.1,
+      "startTime": 2360.76,
+      "endTime": 2401.86,
+      "audioUrl": "/audio/lectures/biology/19/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "3. Nitrat hóa (Nitrification) & Hấp thụ ở Rễ:",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "3. Nitrification & Plant Absorption: Aerobic nitrifying bacteria oxidise ammonium ions ( NH₄⁺ ) into nitrites ( NO₂⁻ ) and then nitrate ions ( NO₃⁻ ) . Plant root hair cells absorb NO₃⁻ (by active transport) to make amino acids and plant proteins.",
+      "vi": "3. Nitrat hóa (Nitrification) & Hấp thụ ở Rễ: Nitrifying bacteria (hiếu khí) oxy hóa NH₄⁺ thành nitrit ( NO₂⁻ ) rồi thành ion nitrat ( NO₃⁻ ) . Tế bào lông hút rễ cây hấp thụ NO₃⁻ để tổng hợp amino acid và protein thực vật.",
+      "duration": 44.06,
+      "startTime": 2401.86,
+      "endTime": 2445.92,
+      "audioUrl": "/audio/lectures/biology/19/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "4. Phản nitrat hóa (Denitrification):",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "4. Denitrification (Soil Fertility Loss): Anaerobic denitrifying bacteria thrive in waterlogged, poorly aerated soils and convert nitrate ions ( NO₃⁻ ) back into N₂ gas , which escapes into the air. Farmers plough and drain soil to add oxygen and inhibit denitrification.",
+      "vi": "4. Phản nitrat hóa (Denitrification): Denitrifying bacteria (kỵ khí) phát triển mạnh trong đất ngập nước thiếu oxy, biến đổi NO₃⁻ ngược trở lại thành khí N₂ bay đi, làm đất nghèo đạm (nông dân cày xới, thoát nước để chống quá trình này).",
+      "duration": 40.39,
+      "startTime": 2445.92,
+      "endTime": 2486.31,
+      "audioUrl": "/audio/lectures/biology/19/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Heavy flooding leaves a farmer’s wheat field waterlogged and anaerobic for several weeks, causing the wheat leaves to turn yellow due to mineral deficiency. Which microorganisms are most active in the flooded soil, and what chemical change do they carry out? A. Nitrifying bacteria converting ammonium ions into nitrate ions B. Denitrifying bacteria converting nitrate ions into nitrogen gas C. Nitrogen-fixing bacteria converting nitrate ions into amino acids D. Decomposers converting nitrogen gas into urea ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Waterlogged soil lacks air spaces, creating anaerobic conditions . Anaerobic denitrifying bacteria thrive and reduce soil nitrate ions ( NO₃⁻ ) back into N₂ gas , starving wheat roots of nitrates needed to make amino acids and chlorophyll (causing yellow leaves). Option A requires oxygen (aerobic); C and D have incorrect substrates/products.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Heavy flooding leaves a farmer’s wheat field waterlogged and anaerobic for several weeks, causing the wheat leaves to turn yellow due to mineral deficiency. Which microorganisms are most active in the flooded soil, and what chemical change do they carry out? (Mưa lũ làm ruộng lúa mì bị ngập úng kỵ khí nhiều tuần khiến lá lúa mì bị vàng do thiếu khoáng. Nhóm vi sinh vật nào hoạt động mạnh nhất trong đất ngập và chúng thực hiện biến đổi nào?) A. Nitrifying bacteria converting ammonium ions into nitrate ions B. Denitrifying bacteria converting nitrate ions into nitrogen gas C. Nitrogen-fixing bacteria converting nitrate ions into amino acids D. Decomposers converting nitrogen gas into urea ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Đất ngập nước mất khe thoáng khí tạo môi trường kỵ khí (anaerobic) . Denitrifying bacteria (vi khuẩn phản nitrat hóa) phát triển mạnh, khử ion nitrat ( NO₃⁻ ) thành khí N₂ bay lên trời, làm rễ lúa mì thiếu nitrat để tổng hợp amino acid và diệp lục. Câu A cần oxy hiếu khí; C và D sai chất đầu/sản phẩm.",
+      "duration": 149.18,
+      "startTime": 2486.31,
+      "endTime": 2635.49,
+      "audioUrl": "/audio/lectures/biology/19/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "Decomposers",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured [5 marks] Explain how a nitrogen atom inside an amino acid molecule of a dead mouse can eventually become part of a protein molecule in a nearby grass plant. [5] ✍️ Step-by-Step Mark Scheme Solution: 1. Decomposers (bacteria and fungi) digest and break down the dead mouse’s protein/amino acids into ammonium ions ( NH₄⁺ ) in the soil [1m].2. Aerobic nitrifying bacteria oxidise ammonium ions into nitrite ions ( NO₂⁻ ) and then into nitrate ions ( NO₃⁻ ) (nitrification) [1m + 1m].3. Grass root hair cells absorb nitrate ions from the soil water (by active transport) [1m].4. Inside the plant, nitrate ions combine with carbohydrates from photosynthesis to form amino acids , which are joined at ribosomes to synthesise plant proteins [1m]. 💡 Intuition Check: Every step must name BOTH the chemical form of nitrogen (protein -> ammonium -> nitrite/nitrate -> amino acid -> protein) AND the biological agent!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Paper 4 [5 marks] Explain how a nitrogen atom inside an amino acid molecule of a dead mouse can eventually become part of a protein molecule in a nearby grass plant. (Giải thích làm thế nào một nguyên tử nitrogen nằm trong amino acid của xác một con chuột chết có thể trở thành một phần phân tử protein trong cây cỏ gần đó. ) ✍️ Lời giải chi tiết theo thang điểm: 1. Decomposers break down the dead mouse’s protein/amino acids into ammonium ions ( NH₄⁺ ) in the soil (vi sinh vật phân giải phân hủy protein thành ion amoni) .2. Aerobic nitrifying bacteria oxidise ammonium ions into nitrite ions ( NO₂⁻ ) and then into nitrate ions ( NO₃⁻ ) (nitrification — vi khuẩn nitrat hóa chuyển amoni thành nitrit rồi nitrat) .3. lông hút rễ cỏ hấp thụ ion nitrat .4. Nitrate ions combine with carbohydrates to form amino acids , which are linked to synthesise plant proteins . 💡 Kiểm tra bản chất: Mỗi bước trong bài 5 điểm chu trình Nitrogen phải nêu đủ CẢ HAI yếu tố: dạng hóa học của N VÀ tác nhân sinh học!",
+      "duration": 156.96,
+      "startTime": 2635.49,
+      "endTime": 2792.45,
+      "audioUrl": "/audio/lectures/biology/19/s03_b11.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "📈 4. Population Growth & Sigmoid Curve (Động lực Quần thể & Đường cong Chữ S)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "📈 4. Population Growth & The Sigmoid Growth Curve.",
+      "vi": "📈 4. Population Growth & Sigmoid Curve (Động lực Quần thể & Đường cong Chữ S).",
+      "duration": 10.81,
+      "startTime": 2792.45,
+      "endTime": 2803.26,
+      "audioUrl": "/audio/lectures/biology/19/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Growing yeast in a sealed sugar flask is like opening a brand-new pizza restaurant: Lag = setting up ovens with just 2 chefs; Exponential (Log) = viral boom with unlimited dough and zero queues (doubling every hour!); Stationary = restaurant is 100% full, dough deliveries limit output so new customers entering equal customers leaving; Death = flour runs out completely and smoke fills the room!",
+      "vi": "🎯 Hình dung đời thường: Nuôi nấm men trong bình đường đậy kín giống hệt mở tiệm bánh pizza mới: Lag = mới có 2 đầu bếp đang bật lò làm quen; Exponential (Log) = khách kéo đến ầm ầm khi bột mì còn đầy kho (nhân đôi liên tục!); Stationary = tiệm kín sạch ghế, bột giao có hạn nên số khách mới vào đúng bằng số khách ăn xong đi ra; Death = hết sạch bột mì và khói độc tràn ngập phòng!",
+      "duration": 54.18,
+      "startTime": 2803.26,
+      "endTime": 2857.44,
+      "audioUrl": "/audio/lectures/biology/19/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: For every phase of the sigmoid curve, state BOTH the birth vs. death rate comparison AND the limiting factor reason : Lag ( Birth > Death slightly; small breeding population adapting) → Exponential ( Birth >> Death ; no limiting factors , abundant food/space) → Stationary ( Birth = Death ; food shortage, competition, predation, disease, or toxic waste limit growth) → Death ( Death > Birth ; nutrients exhausted / lethal toxins).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: Khi giải thích từng pha đường cong Sigmoid, luôn nêu CẢ so sánh tỉ lệ sinh vs. tỉ lệ tử LẪN nguyên nhân từ nhân tố giới hạn : Lag ( Birth > Death nhẹ; ít cá thể trưởng thành, đang thích nghi) → Exponential ( Birth >> Death ; no limiting factors , thừa thức ăn/không gian) → Stationary ( Birth = Death ; thiếu thức ăn, cạnh tranh, săn mồi, bệnh dịch, chất thải) → Death ( Death > Birth ; cạn sạch dinh dưỡng / độc tố tích tụ).",
+      "duration": 63.82,
+      "startTime": 2857.44,
+      "endTime": 2921.26,
+      "audioUrl": "/audio/lectures/biology/19/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying \"no births and no deaths occur during the stationary phase\"! Organisms are still being born and dying continuously — the curve is flat because the birth rate equals the death rate !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Viết \"ở pha cân bằng (stationary phase) sinh vật ngừng sinh sản và không có cá thể nào chết\"! Thực tế sinh sản và tử vong vẫn diễn ra liên tục, nhưng đường đồ thị nằm ngang vì tốc độ sinh bằng đúng tốc độ tử (birth rate = death rate) !",
+      "duration": 32.18,
+      "startTime": 2921.26,
+      "endTime": 2953.44,
+      "audioUrl": "/audio/lectures/biology/19/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "⚖️ 4 Nhân tố Giới hạn Tốc độ Tăng trưởng Quần thể (Core 19.4.4)",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "⚖️ 4 Factors Governing Population Growth Rate (Core 19.4.4). Population change depends on the balance between birth rate + immigration vs death rate + emigration . Cambridge syllabus highlights four key limiting factors affecting population growth: (1) Food supply , (2) Competition (for space, mates, water, light, minerals), (3) Predation , and (4) Disease (which spreads rapidly in dense, overcrowded populations).",
+      "vi": "⚖️ 4 Nhân tố Giới hạn Tốc độ Tăng trưởng Quần thể (Core 19.4.4). Kích thước quần thể thay đổi theo tương quan giữa (Sinh + Nhập cư) và (Tử + Xuất cư) . Bốn nhân tố giới hạn ( limiting factors ) trọng tâm trong Syllabus: (1) Nguồn thức ăn (Food supply) , (2) Cạnh tranh (Competition) giành nơi ở, nước, ánh sáng, bạn tình, (3) Vật săn mồi (Predation) , và (4) Dịch bệnh (Disease) lây lan mạnh khi mật độ quá dày.",
+      "duration": 62.65,
+      "startTime": 2953.44,
+      "endTime": 3016.09,
+      "audioUrl": "/audio/lectures/biology/19/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "📊 Đường cong Tăng trưởng Sigmoid (Chữ S) trong Môi trường Giới hạn Tài nguyên",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "📊 Sigmoid (S-Shaped) Curve of Population Growth in Limited Resources.",
+      "vi": "📊 Đường cong Tăng trưởng Sigmoid (Chữ S) trong Môi trường Giới hạn Tài nguyên.",
+      "duration": 10.93,
+      "startTime": 3016.09,
+      "endTime": 3027.02,
+      "audioUrl": "/audio/lectures/biology/19/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "1. Lag Phase (Pha Tiềm phát)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "1. Lag Phase. Slow growth: Very small number of reproducing individuals initially; organisms are adjusting to new conditions, synthesising enzymes, germinating, or reaching sexual maturity. Birth rate only slightly exceeds death rate.",
+      "vi": "1. Lag Phase (Pha Tiềm phát). Tăng rất chậm: Số cá thể sinh sản ban đầu còn ít; sinh vật đang thích nghi môi trường mới, tổng hợp enzyme hoặc chờ trưởng thành sinh dục. Tỉ lệ sinh chỉ nhỉnh hơn tỉ lệ tử đôi chút.",
+      "duration": 33.42,
+      "startTime": 3027.02,
+      "endTime": 3060.44,
+      "audioUrl": "/audio/lectures/biology/19/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "2. Exponential / Log Phase (Pha Lũy thừa)",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "2. Exponential (Log) Phase. Rapid doubling: No limiting factors — food, space, and oxygen are abundant; competition, predation, and waste toxicity are minimal. Birth rate >> death rate.",
+      "vi": "2. Exponential / Log Phase (Pha Lũy thừa). Nhân đôi cực nhanh: Chưa có nhân tố giới hạn — thức ăn, không gian, oxy dồi dào, ít cạnh tranh và chất thải chưa tích tụ. Tỉ lệ sinh >> tỉ lệ tử.",
+      "duration": 32.83,
+      "startTime": 3060.44,
+      "endTime": 3093.27,
+      "audioUrl": "/audio/lectures/biology/19/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "3. Stationary Phase (Pha Cân bằng)",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "3. Stationary Phase. Plateau at carrying capacity: Limiting factors set in — food/minerals run short, competition intensifies, disease spreads, and wastes accumulate. Birth rate = death rate.",
+      "vi": "3. Stationary Phase (Pha Cân bằng). Đi ngang ở sức chứa tối đa: Các nhân tố giới hạn phát huy tác dụng — cạn thức ăn, cạnh tranh gay gắt, dịch bệnh lây lan và chất thải tích tụ. Tỉ lệ sinh = tỉ lệ tử.",
+      "duration": 32.03,
+      "startTime": 3093.27,
+      "endTime": 3125.3,
+      "audioUrl": "/audio/lectures/biology/19/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "4. Death Phase (Pha Suy vong)",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "4. Death Phase. Population crash: Food supply is exhausted and toxic excretory waste (e.g. ethanol or acids in closed bacterial/yeast flasks) reaches lethal levels. Death rate > birth rate.",
+      "vi": "4. Death Phase (Pha Suy vong). Sụp đổ quần thể: Nguồn dinh dưỡng cạn kiệt hoàn toàn và chất thải độc hại (VD: ethanol hoặc axit trong bình nuôi vi khuẩn/nấm men kín) vượt ngưỡng gây chết. Tỉ lệ tử > tỉ lệ sinh.",
+      "duration": 33.18,
+      "startTime": 3125.3,
+      "endTime": 3158.48,
+      "audioUrl": "/audio/lectures/biology/19/s04_b09.mp3"
+    },
+    {
+      "id": "s04_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / SUPPLEMENT • Paper 2 MCQ A small culture of bacteria is added to a sterile flask containing a fixed volume of nutrient broth. During the stationary phase of the sigmoid growth curve, which statement is correct? A. Bacterial cells have stopped dividing completely, and no cells are dying. B. Birth/division rate is much greater than death rate because there are no limiting factors. C. The rate of cell division equals the rate of cell death due to limiting factors such as falling nutrient supply and accumulating toxic waste. D. Predation by viruses is the only factor that can cause a stationary phase in a sterile flask. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: In the stationary phase , population size stays constant at carrying capacity because the rate of reproduction equals the death rate , driven by environmental resistance (depletion of glucose/oxygen and build-up of toxic waste). A is false (both division and death continue); B describes the exponential phase; D is false because a sterile flask has no viruses.",
+      "vi": "BÀI MẪU 1 🟦 CORE / SUPPLEMENT • Trắc nghiệm Paper 2 A small culture of bacteria is added to a sterile flask containing a fixed volume of nutrient broth. During the stationary phase of the sigmoid growth curve, which statement is correct? (Cấy một lượng nhỏ vi khuẩn vào bình vô trùng chứa lượng dịch dinh dưỡng cố định. Trong pha cân bằng của đường cong Sigmoid, phát biểu nào đúng?) A. Bacterial cells have stopped dividing completely, and no cells are dying. B. Birth/division rate is much greater than death rate because there are no limiting factors. C. The rate of cell division equals the rate of cell death due to limiting factors such as falling nutrient supply and accumulating toxic waste. D. Predation by viruses is the only factor that can cause a stationary phase in a sterile flask. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Ở stationary phase (pha cân bằng) , kích thước quần thể giữ nguyên ở mức sức chứa tối đa vì tốc độ phân bào bằng tốc độ chết do cạn dần glucose/oxy và tích tụ chất thải độc. Đáp án A sai (tế bào vẫn sinh và chết); B là pha lũy thừa; D sai vì bình đã tiệt trùng không có virus.",
+      "duration": 154.1,
+      "startTime": 3158.48,
+      "endTime": 3312.58,
+      "audioUrl": "/audio/lectures/biology/19/s04_b10.mp3"
+    },
+    {
+      "id": "s04_b11",
+      "title": "(a)",
+      "selector": "[data-lecture-section=\"s04_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Graph Interpretation [4 marks] A population of Daphnia (water fleas) is introduced into an aquarium given a constant daily supply of algae.(a) Explain why the population grows slowly during the first few days (lag phase) and then very rapidly (exponential phase). [2](b) Suggest two biological factors that eventually cause the population to level off in the stationary phase. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Lag phase: Only a small number of sexually mature individuals are present initially, and they need time to adjust to the new environment [1m]. Exponential phase: Food (algae), oxygen, and space are abundant with no limiting factors , so birth rate far exceeds death rate [1m]. (b) Any two from: increased intraspecific competition for the fixed daily algae supply / shortage of food per individual [1m]; accumulation of toxic excretory wastes or shortage of dissolved oxygen / faster spread of disease in crowded water [1m]. 💡 Intuition Check: Notice how a constant daily food ration becomes a limiting factor once the population grows large enough to eat all of it every day!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Phân tích Đồ thị Paper 4 [4 marks] A population of Daphnia (water fleas) is introduced into an aquarium given a constant daily supply of algae.(a) Explain why the population grows slowly during the first few days (lag phase) and then very rapidly (exponential phase). (b) Suggest two biological factors that eventually cause the population to level off in the stationary phase. (Thả rận nước Daphnia vào bể nuôi được cấp một lượng tảo cố định mỗi ngày. (a) Giải thích vì sao quần thể tăng chậm ở pha tiềm phát rồi tăng vọt ở pha lũy thừa. (b) Nêu 2 nhân tố khiến quần thể đi ngang ở pha cân bằng. ) ✍️ Lời giải chi tiết theo thang điểm: số cá thể sinh sản ban đầu ít, đang thích nghi . thiếu thức ăn bình quân ; build-up of toxic excretory wastes / shortage of dissolved oxygen / rapid spread of disease in crowded water . 💡 Kiểm tra bản chất: Dù mỗi ngày vẫn cho cùng một lượng tảo như cũ, khi số lượng Daphnia quá đông thì khẩu phần chia đầu cá thể giảm mạnh — biến thức ăn thành nhân tố giới hạn!",
+      "duration": 152.59,
+      "startTime": 3312.58,
+      "endTime": 3465.17,
+      "audioUrl": "/audio/lectures/biology/19/s04_b11.mp3"
     }
   ]
 }
