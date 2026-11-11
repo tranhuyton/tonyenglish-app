@@ -1,0 +1,484 @@
+{
+  "lectureId": "8074ead2-53cc-5ebd-ab32-c691b3e8aebf",
+  "courseTitle": "Cambridge IGCSE Physics (0625)",
+  "lectureTitle": "Topic 2: Thermal physics",
+  "totalDuration": 3867.64,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 6,
+      "end": 8
+    },
+    "s01_p2_sub01": {
+      "start": 6,
+      "end": 8
+    },
+    "s01_wex": {
+      "start": 9,
+      "end": 10
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 10
+    },
+    "s02_int": {
+      "start": 12,
+      "end": 14
+    },
+    "s02_wex": {
+      "start": 22,
+      "end": 23
+    },
+    "s02_hdr": {
+      "start": 11,
+      "end": 23
+    },
+    "s03_int": {
+      "start": 25,
+      "end": 27
+    },
+    "s03_p1_sub01": {
+      "start": 31,
+      "end": 35
+    },
+    "s03_p2_sub01": {
+      "start": 31,
+      "end": 35
+    },
+    "s03_wex": {
+      "start": 36,
+      "end": 37
+    },
+    "s03_hdr": {
+      "start": 24,
+      "end": 37
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 2: Vật lý Nhiệt (Thermal Physics)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Physics (0625) Topic 2: Thermal Physics. 2.1 Kinetic Particle Model, Kelvin Scale & Boyle's Law • 2.2 Thermal Expansion, Specific Heat Capacity & Evaporation • 2.3 Conduction, Convection & Radiation.",
+      "vi": "Cambridge IGCSE Physics (0625) • Song ngữ Chuyên đề 2: Vật lý Nhiệt (Thermal Physics). 2.1 Mô hình Động học Hạt, Thang Kelvin & Định luật Boyle • 2.2 Sự nở vì nhiệt, Nhiệt dung riêng (SHC) & Sự bay hơi • 2.3 Dẫn nhiệt, Đối lưu & Bức xạ nhiệt.",
+      "duration": 45.46,
+      "startTime": 0.0,
+      "endTime": 45.46,
+      "audioUrl": "/audio/lectures/physics/2/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "🧊 1. Mô hình Động học Phân tử của Vật chất (Kinetic Particle Model — 2.1)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🧊 1. Kinetic Particle Model of Matter (2.1).",
+      "vi": "🧊 1. Mô hình Động học Phân tử của Vật chất.",
+      "duration": 6.79,
+      "startTime": 45.46,
+      "endTime": 52.25,
+      "audioUrl": "/audio/lectures/physics/2/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture students during three parts of a school day: in assembly they sit in neat rows fidgeting in their seats ( Solid ); at lunch break in a crowded corridor they stay shoulder-to-shoulder while sliding past one another ( Liquid ); out on a giant football pitch they sprint far apart in random straight lines ( Gas ). For Brownian motion , imagine a giant inflatable beach ball (visible smoke speck) getting randomly bounced around by hundreds of invisible ping-pong balls (air molecules). And for gas pressure , picture dodgeballs slamming against gym walls: shrink the gym to half its volume at the same speed and balls hit the walls twice as often, doubling the pressure!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung học sinh trong 3 khung cảnh ở trường: trong giờ chào cờ , các bạn ngồi ngay ngắn theo hàng lối và chỉ nhấp nhổm tại chỗ ( Solid — Rắn ); giờ ra chơi ở hành lang đông , các bạn đứng sát nhau nhưng lách trượt qua nhau ( Liquid — Lỏng ); ra sân bóng rộng , mỗi bạn chạy vọt đi thật xa theo các đường thẳng ngẫu nhiên ( Gas — Khí ). Với Brownian motion , hãy tưởng tượng một quả bóng bãi biển khổng lồ (hạt khói nhìn thấy được) bị hàng trăm quả bóng bàn vô hình (phân tử không khí) bắn đập túi bụi từ mọi hướng. Còn áp suất khí giống như ném bóng vào tường phòng tập: thu hẹp phòng còn một nửa thể tích thì bóng đập tường dày đặc gấp đôi → áp suất tăng gấp đôi!",
+      "duration": 87.67,
+      "startTime": 52.25,
+      "endTime": 139.92,
+      "audioUrl": "/audio/lectures/physics/2/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Particle Model (🟦 Core / 🟩 Supplement 2.1.1–2.1.2): Solids have a regular lattice and very strong intermolecular forces (vibrate about fixed positions); liquids are close and random (slide past each other); gases are far apart with negligible forces (rapid random straight-line motion). 2. Brownian Motion & Kelvin Scale (🟦 Core 2.1.2–2.1.3): Random zig-zag motion of visible microscopic smoke particles is caused by uneven collisions with invisible, light fast-moving air molecules . Raising temperature increases average kinetic energy; at Absolute Zero (−273°C = 0 K) particles have their least kinetic energy . Convert via T (K) = θ (°C) + 273 . 3. Gas Pressure & Boyle’s Law (🟩 Supplement 2.1.2–2.1.3): Molecules rebounding off container walls exert an average force per unit area ( p = F / A ). For a fixed mass of gas at constant temperature, p 1 V 1= p 2 V 2 .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Mô hình Hạt (🟦 Core / 🟩 Supplement 2.1.1–2.1.2): Solid xếp mạng tinh thể đều ( regular lattice ), lực hút rất mạnh, chỉ dao động ( vibrate ) quanh vị trí cố định; Liquid xếp ngẫu nhiên, sát nhau, trượt qua nhau ( slide past ); Gas rất xa nhau, lực liên kết không đáng kể ( negligible forces ), bay thẳng hỗn loạn cực nhanh. 2. Chuyển động Brown & Thang Kelvin (🟦 Core 2.1.2–2.1.3): Các microscopic smoke particles (hạt khói hiển vi nhìn thấy) đi zíc-zắc do bị các light, fast-moving air molecules (phân tử khí vô hình, nhẹ, bay nhanh) va đập không đều. Tại Absolute Zero (−273°C = 0 K) các hạt có động năng nhỏ nhất. Công thức: T (K) = θ (°C) + 273 . 3. Áp suất Khí & Định luật Boyle (🟩 Supplement 2.1.2–2.1.3): Hạt khí đập thành bình tạo lực trên một đơn vị diện tích ( p = F / A ). Khi nhiệt độ không đổi: p 1 V 1= p 2 V 2 .",
+      "duration": 137.11,
+      "startTime": 139.92,
+      "endTime": 277.03,
+      "audioUrl": "/audio/lectures/physics/2/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never write “air molecules move in zig-zags” in Brownian motion — you CANNOT see air molecules! Write: visible microscopic smoke particles move randomly because invisible fast-moving air molecules collide with them. Also remember to ADD 273 (not subtract!) when converting °C to Kelvin.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết “air molecules move in zig-zags” (phân tử không khí nhỏ tới mức kính hiển vi quang học không nhìn thấy được!). Phải viết rõ: microscopic smoke particles chuyển động zíc-zắc do va chạm với fast-moving air molecules . Khi đổi từ °C sang Kelvin nhớ CỘNG 273 (không được trừ!).",
+      "duration": 46.64,
+      "startTime": 277.03,
+      "endTime": 323.67,
+      "audioUrl": "/audio/lectures/physics/2/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "2.1.1 & 2.1.2 Ba Trạng thái Vật chất, Cấu trúc Hạt & Sự Chuyển thể (Changes of State)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "2.1.1 & 2.1.2 States of Matter, Particle Arrangement & Changes of State. State: Solid; Particle Arrangement: Regular 3D lattice pattern; Separation & Intermolecular Forces (Supplement): Tightly packed (touching); very strong attractive forces hold particles in place; Particle Motion: Vibrate only about fixed equilibrium positions; Macroscopic Properties: Fixed shape, fixed volume, incompressible. State: Liquid; Particle Arrangement: Random / irregular; Separation & Intermolecular Forces (Supplement): Close together (mostly touching); strong/moderate forces prevent escape into gas; Particle Motion: Move randomly and slide past one another in clusters; Macroscopic Properties: Flows to take container shape, fixed volume, almost incompressible. State: Gas; Particle Arrangement: Completely random; Separation & Intermolecular Forces (Supplement): Very far apart; negligible intermolecular forces except during collisions; Particle Motion: Move rapidly (~hundreds of m/s) in straight lines in all directions; Macroscopic Properties: No fixed shape or volume; expands to fill container; easily compressed.",
+      "vi": "2.1.1 & 2.1.2 Ba Trạng thái Vật chất, Cấu trúc Hạt & Sự Chuyển thể. Trạng thái: Solid (Rắn); Sự sắp xếp (Arrangement): Mạng tinh thể trật tự đều đặn ( regular lattice ); Khoảng cách & Lực liên kết (Supplement): Xếp rất sát nhau; lực hút liên phân tử rất mạnh giữ chặt hạt; Chuyển động hạt (Motion): Chỉ dao động (vibrate) quanh vị trí cân bằng cố định; Tính chất vĩ mô: Hình dạng & thể tích cố định, không nén được. Trạng thái: Liquid (Lỏng); Sự sắp xếp (Arrangement): Ngẫu nhiên, không có trật tự ( random ); Khoảng cách & Lực liên kết (Supplement): Gần nhau; lực liên kết khá mạnh ngăn hạt bay mất thành khí; Chuyển động hạt (Motion): Chuyển động ngẫu nhiên, trượt qua nhau (slide past); Tính chất vĩ mô: Chảy theo hình dạng bình, thể tích cố định, hầu như không nén được. Trạng thái: Gas (Khí); Sự sắp xếp (Arrangement): Hoàn toàn hỗn loạn ( random ); Khoảng cách & Lực liên kết (Supplement): Rất xa nhau; lực liên kết không đáng kể (negligible) trừ khi va chạm; Chuyển động hạt (Motion): Bay thẳng cực nhanh hỗn loạn theo mọi hướng; Tính chất vĩ mô: Không có hình dạng/thể tích riêng; lấp đầy bình chứa, rất dễ nén.",
+      "duration": 157.14,
+      "startTime": 323.67,
+      "endTime": 480.81,
+      "audioUrl": "/audio/lectures/physics/2/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🔬 Chuyển động Brown (Brownian Motion — Hộp Khói)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🔬 Brownian Motion (Smoke Cell Experiment). Under a microscope, microscopic smoke particles in a brightly illuminated glass cell appear as tiny bright specks dancing in random, jerky zig-zag paths (likewise pollen grains in water). 🚨 STRICT 0625 TERMINOLOGY DISTINCTION: • Visible microscopic particles (smoke specks / pollen grains) move slowly in zig-zags.• Invisible light, fast-moving air/water molecules bombard the larger smoke particle unevenly from random directions, transferring momentum! (Never write \"air molecules move in zig-zags\"!)",
+      "vi": "🔬 Chuyển động Brown (Brownian Motion — Hộp Khói). Dưới kính hiển vi, các hạt khói hiển vi được chiếu sáng lấp lánh như các đốm sáng nhỏ nhảy múa theo đường gấp khúc zíc-zắc ngẫu nhiên (tương tự hạt phấn hoa — pollen grains trong nước). 🚨 PHÂN BIỆT THUẬT NGỮ BẮT BUỘC TRONG ĐỀ 0625: • Microscopic particles (hạt khói / hạt phấn hoa nhìn thấy qua kính hiển vi) đi theo đường zig-zag .• Light, fast-moving air/water molecules (phân tử không khí/nước cực nhẹ, bay cực nhanh, vô hình) bắn phá không đều từ mọi phía làm hạt khói đổi hướng! (CẤM viết \"phân tử không khí đi zíc-zắc\"!)",
+      "duration": 80.94,
+      "startTime": 480.81,
+      "endTime": 561.75,
+      "audioUrl": "/audio/lectures/physics/2/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "🎈 Áp suất Khí, Biến thiên Động lượng & Độ Không Tuyệt đối",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "🎈 Gas Pressure, Momentum & Absolute Zero. Origin of Gas Pressure (Core & Supplement): Fast-moving gas molecules bounce off container walls, undergoing a change of momentum (Δ p ) . This creates an average outward force ( F = Δ p / Δ t ) acting over the wall area: p = F / A . (Collisions between gas molecules themselves do NOT create wall pressure!) . Heating at Constant Volume: Molecules gain kinetic energy and move faster ⇒ hit walls harder (greater Δ p ) AND more frequently ⇒ larger total force ⇒ pressure increases. Absolute Zero (−273°C = 0 K): Lowest possible temperature where particles have the least kinetic energy. Kelvin Conversion: T (K) = θ (°C) + 273 Examples: −273°C = 0 K • 0°C = 273 K • 27°C = 300 K • 100°C = 373 K",
+      "vi": "🎈 Áp suất Khí, Biến thiên Động lượng & Độ Không Tuyệt đối. Bản chất Áp suất Khí (Core & Supplement): Phân tử khí va đập và bật ngược khỏi thành bình, chịu độ biến thiên động lượng . Quá trình này tạo lực đẩy ra ngoài ( F = Δ p / Δ t ) trên một đơn vị diện tích thành bình: p = F / A. Đun nóng khi Thể tích không đổi: Các phân tử tăng động năng và tốc độ ⇒ đập vào thành bình mạnh hơn (Δ p lớn hơn) VÀ thường xuyên hơn (more frequently) ⇒ tổng lực tăng ⇒ áp suất tăng. Độ không tuyệt đối — Absolute Zero (−273°C = 0 K): Nhiệt độ thấp nhất có thể đạt tới, nơi các hạt có động năng nhỏ nhất. Đổi sang thang Kelvin: T (K) = θ (°C) + 273 Ví dụ: −273°C = 0 K • 0°C = 273 K • 27°C = 300 K • 100°C = 373 K",
+      "duration": 140.8,
+      "startTime": 561.75,
+      "endTime": 702.55,
+      "audioUrl": "/audio/lectures/physics/2/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "📉 Định luật Boyle (Boyle's Law): Đẳng nhiệt Khối khí Xác định ( pV = constant)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Supplement 2.1.3 📉 Boyle's Law: Pressure–Volume Relationship at Constant Temperature ( pV = constant). For a fixed mass of gas at constant temperature , pressure is inversely proportional to volume: pV = constant ⇔ p 1 V 1= p 2 V 2 Particle Explanation: Compressing a gas into half the volume at constant temperature leaves average molecular speed unchanged, but halves the distance between walls so molecules collide with the walls twice as frequently per unit area , doubling pressure! Worked Example: Air trapped in a sealed syringe has volume 60 cm³ at atmospheric pressure 100 kPa . The plunger is pushed slowly (keeping temperature constant) until volume is 24 cm³ . Find the new pressure p 2: p 1 V 1= p 2 V 2⇒ 100 × 60 = p 2× 24 ⇒ p 2= 6000 / 24 = 250 kPa .",
+      "vi": "Supplement 2.1.3 📉 Định luật Boyle (Boyle's Law): Đẳng nhiệt Khối khí Xác định ( pV = constant). Đối với một khối lượng khí xác định ở nhiệt độ không đổi (constant temperature) , áp suất tỉ lệ nghịch với thể tích: pV = hằng số ⇔ p 1 V 1= p 2 V 2 Giải thích bằng hạt: Nén khí giảm một nửa thể tích ở nhiệt độ không đổi thì tốc độ trung bình của phân tử không đổi, nhưng mật độ hạt tăng gấp đôi nên số va . Ví dụ mẫu: Không khí trong xi-lanh kín có thể tích 60 cm³ ở áp suất 100 kPa . Đẩy từ từ pít-tông (giữ nhiệt độ không đổi) đến khi thể tích còn 24 cm³ . Tính áp suất mới p 2: p 1 V 1= p 2 V 2⇒ 100 × 60 = p 2× 24 ⇒ p 2= 6000 / 24 = 250 kPa .",
+      "duration": 118.53,
+      "startTime": 702.55,
+      "endTime": 821.08,
+      "audioUrl": "/audio/lectures/physics/2/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • Paper 1 & 2 MCQ Smoke particles trapped in a small glass cell of air are illuminated from the side and viewed through a microscope. Bright specks are seen moving in continuous, jerky, random directions. Which statement correctly explains this observation? A. Air molecules are seen reflecting light as they collide with each other. B. Convection currents in the warm air carry the smoke particles upwards and downwards. C. Large, heavy smoke particles are bombarded unevenly by much smaller, fast-moving air molecules. D. Smoke particles repel one another because they carry identical electrostatic charges. ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: The bright specks are microscopic smoke particles (air molecules are far too small to see under an optical microscope, eliminating A ). Because random motion continues equally in all directions even at uniform temperature, it is not convection (eliminating B ) or electrostatic repulsion (eliminating D ). Invisible, light, fast-moving air molecules hit the smoke particles unevenly from random directions ( C ).",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE / EXTENDED • Trắc nghiệm Paper 1 & 2 Smoke particles trapped in a small glass cell of air are illuminated from the side and viewed through a microscope. Bright specks are seen moving in continuous, jerky, random directions. Which statement correctly explains this observation? (Các hạt khói trong hộp thủy tinh chứa không khí được chiếu sáng ngang và quan sát dưới kính hiển vi thấy các đốm sáng chuyển động giật cục ngẫu nhiên liên tục. Phát biểu nào giải thích đúng hiện tượng này?) A. Nhìn thấy các phân tử khí phản xạ ánh sáng. B. Dòng đối lưu cuốn hạt khói lên xuống. C. Hạt khói lớn bị các phân tử không khí nhỏ hơn nhiều, bay nhanh bắn phá không đều. D. Các hạt khói tích điện cùng dấu đẩy nhau. ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Các đốm sáng nhìn thấy là microscopic smoke particles (phân tử khí quá nhỏ không thể nhìn thấy → loại A ). Chuyển động diễn ra ngẫu nhiên theo mọi hướng ngay cả khi nhiệt độ đồng đều nên không phải đối lưu (loại B ) hay lực đẩy tĩnh điện (loại D ). Nguyên nhân là các fast-moving air molecules vô hình va đập ngẫu nhiên không cân bằng vào hạt khói ( C ).",
+      "duration": 155.15,
+      "startTime": 821.08,
+      "endTime": 976.23,
+      "audioUrl": "/audio/lectures/physics/2/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Calculation & Theory [6 marks] A weather cylinder seals a fixed mass of helium gas of volume 45 cm³ at a pressure of 1.2 × 105Pa and a temperature of 27°C . (a) Calculate the temperature of the helium gas in kelvin (K). [1] (b) The gas is compressed slowly so its temperature stays constant at 27°C until its volume is 18 cm³ . Calculate the new pressure of the gas. [3] (c) The piston is now locked at 18 cm³ and the cylinder is heated. Explain, in terms of molecules, why the gas pressure increases. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Formula: T (K) = θ (°C) + 273 = 27 + 273 = 300 K [1m] (b) Formula: p 1 V 1= p 2 V 2(at constant temperature) [1m]• Unit check: Both volumes are in cm³, so cm³ cancels directly on both sides:• Substitution: (1.2 × 105) × 45 = p 2× 18 [1m]• Answer: p 2= 5.4 × 106/ 18 = 3.0 × 105Pa [1m] (c) Molecules gain kinetic energy and move faster [1m]; they collide with the container walls more frequently and harder (exerting a larger average force per unit area, p = F/A ) [1m]. 💡 Intuition Check: Notice the sanity check in (b): volume shrank from 45 cm³ to 18 cm³ (2.5 times smaller), so at constant temperature the gas pressure MUST become 2.5 times larger (1.2 × 105× 2.5 = 3.0 × 105Pa)!",
+      "vi": "BÀI MẪU 2 🟩 MỨC SUPPLEMENT • Tự luận & Tính toán Paper 4 [6 điểm] A weather cylinder seals a fixed mass of helium gas of volume 45 cm³ at a pressure of 1.2 × 105Pa and a temperature of 27°C . (a) Calculate the temperature of the helium gas in kelvin (K). (b) The gas is compressed slowly so its temperature stays constant at 27°C until its volume is 18 cm³ . Calculate the new pressure of the gas. (c) The piston is now locked at 18 cm³ and the cylinder is heated. Explain, in terms of molecules, why the gas pressure increases. (Một bình kín chứa lượng khí heli xác định có thể tích 45 cm³ ở áp suất 1.2 × 105Pa và nhiệt độ 27°C. (a) Tính nhiệt độ theo thang Kelvin. (b) Nén chậm đẳng nhiệt ở 27°C tới thể tích 18 cm³, tính áp suất mới. (c) Giữ pít-tông cố định ở 18 cm³ rồi đun nóng bình, giải thích bằng phân tử tại sao áp suất tăng.) ✍️ Lời giải chi tiết theo thang điểm: (a) Công thức: T (K) = θ (°C) + 273 = 27 + 273 = 300 K (b) Công thức Định luật Boyle (nhiệt độ không đổi): p 1 V 1= p 2 V 2 • Đổi đơn vị: Cả V 1và V 2đều tính bằng cm³ nên tự triệt tiêu hai vế:• Thay số: (1.2 × 105) × 45 = p 2× 18 • Đáp số: p 2= 5.4 × 106/ 18 = 3.0 × 105Pa (c) Khi đun nóng, các phân tử khí nhận thêm động năng và chuyển động nhanh hơn (faster) ; chúng va g . 💡 Kiểm tra bản chất: Kiểm tra nhanh câu (b): thể tích giảm từ 45 cm³ xuống 18 cm³ (nhỏ đi 2.5 lần) ở nhiệt độ không đổi thì áp suất BẮT BUỘC phải tăng gấp 2.5 lần (1.2 × 105× 2.5 = 3.0 × 105Pa)!",
+      "duration": 281.19,
+      "startTime": 976.23,
+      "endTime": 1257.42,
+      "audioUrl": "/audio/lectures/physics/2/s01_b09.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🌡️ 2. Sự Nở vì Nhiệt, Nhiệt dung riêng & Sự Bay hơi (Thermal Properties — 2.2)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🌡️ 2. Thermal Expansion, Specific Heat Capacity & Evaporation (2.2).",
+      "vi": "🌡️ 2. Sự Nở vì Nhiệt, Nhiệt dung riêng & Sự Bay hơi (Thermal Properties — 2.2).",
+      "duration": 12.87,
+      "startTime": 1257.42,
+      "endTime": 1270.29,
+      "audioUrl": "/audio/lectures/physics/2/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: 1. Thermal Expansion: Imagine dancers on a crowded floor when fast music starts — everyone swings their arms wider and pushes neighbours further apart ( Gases ≫ Liquids > Solids because gas particles aren’t holding hands!). 2. Specific Heat Capacity ( c ): Think of c as the size of a “thermal bucket” per kg: water has a huge bucket ( 4200 J/(kg °C) , warms up slowly and stores huge energy), while copper has a tiny cup ( 390 J/(kg °C) , gets hot in seconds). 3. Evaporation Cooling: Picture the fastest sprinters escaping a swimming pool — the swimmers left behind have a lower average speed , so the pool cools down!",
+      "vi": "🎯 Hình dung đời thường: 1. Sự nở vì nhiệt (Thermal Expansion): Giống như đám đông nhảy theo nhạc nhanh — ai cũng vung tay rộng hơn làm khoảng cách giữa các người dãn ra ( Khí ≫ Lỏng > Rắn vì các hạt khí không hề nắm tay nhau!). 2. Nhiệt dung riêng: Hãy coi c là “độ lớn của chiếc xô chứa nhiệt” cho mỗi kg chất: nước có chiếc xô khổng lồ ( 4200 J/(kg °C) — lâu nóng nhưng tích trữ nhiệt cực lớn), còn đồng chỉ như chiếc cốc nhỏ ( 390 J/(kg °C) — đun vài giây đã bỏng tay). 3. Làm lạnh do bay hơi (Evaporation Cooling): Giống như những vận động viên chạy nhanh nhất thoát khỏi hồ bơi — những người còn lại trong hồ có tốc độ trung bình thấp hơn nên nước hồ mát đi!",
+      "duration": 95.8,
+      "startTime": 1270.29,
+      "endTime": 1366.09,
+      "audioUrl": "/audio/lectures/physics/2/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Expansion (🟦 Core / 🟩 Supplement 2.2.1): Heating increases vibration/speed → average particle separation increases. Order: Gases ≫ Liquids > Solids (solids have strong bonds; gases have negligible forces). A bimetallic strip bends towards the metal that expands less when heated. 2. Internal Energy & SHC (🟩 Supplement 2.2.2): Temperature rise = increase in average kinetic energy of all particles . Use Δ E = mc Δθ (and for an electric heater, Δ E = Pt = IVt ). Units of c : J/(kg °C) . 3. State Changes & Evaporation (🟦 Core / 🟩 Supplement 2.2.3): Melting (0°C) and boiling (100°C) happen at constant temperature because energy breaks intermolecular bonds (potential energy rises, average KE stays constant). Evaporation occurs at any temperature below boiling at the surface only as more-energetic molecules escape ; faster with higher temperature , larger surface area , and air movement (draught) .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Nở vì nhiệt (🟦 Core / 🟩 Supplement 2.2.1): Đun nóng → hạt dao động/bay mạnh hơn → khoảng cách trung bình tăng. Độ nở: Gases ≫ Liquids > Solids (rắn có lực liên kết rất mạnh; khí lực liên kết không đáng kể). Băng kép ( bimetallic strip ) khi nóng luôn uốn cong về phía kim loại nở ít hơn . 2. Nội năng & SHC (🟩 Supplement 2.2.2): Tăng nhiệt độ = tăng average kinetic energy of all particles . Công thức: Δ E = mc Δθ (với dây nung điện: Δ E = Pt = IVt ), đơn vị c : J/(kg °C) . 3. Chuyển thể & Bay hơi (🟦 Core / 🟩 Supplement 2.2.3): Khi melting (0°C) và boiling (100°C) , nhiệt độ không đổi vì nhiệt lượng dùng để phá vỡ liên kết liên phân tử (tăng thế năng, động năng trung bình không đổi). Evaporation xảy ra ở mọi nhiệt độ dưới điểm sôi , chỉ trên bề mặt thoáng khi các more-energetic particles thoát ra; tăng nhanh khi tăng temperature , tăng surface area , và có gió ( air movement ).",
+      "duration": 147.2,
+      "startTime": 1366.09,
+      "endTime": 1513.29,
+      "audioUrl": "/audio/lectures/physics/2/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Trap #1: Writing “particles expand when heated” scores 0 marks — particles stay the exact same size; only the average distance between particles increases! Trap #2: In Δ E = mc Δθ and Δ E = Pt , always convert grams → kg (÷ 1000) and minutes → seconds (× 60) first!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bẫy #1: Viết “các hạt nở to ra khi đun nóng (particles expand)” bị 0 điểm ngay lập tức — kích thước hạt KHÔNG ĐỔI, chỉ có khoảng cách giữa các hạt tăng! Bẫy #2: Trong Δ E = mc Δθ = Pt , bắt buộc đổi gam → kg (÷ 1000) và phút → giây (× 60) trước khi bấm máy!",
+      "duration": 53.5,
+      "startTime": 1513.29,
+      "endTime": 1566.79,
+      "audioUrl": "/audio/lectures/physics/2/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "2.2.1 Sự Nở vì Nhiệt (Thermal Expansion) của Rắn, Lỏng, Khí ở Áp suất Không đổi",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "2.2.1 Thermal Expansion of Solids, Liquids & Gases at Constant Pressure. When matter is heated at constant pressure, particles gain kinetic energy, vibrate/move more vigorously, and push slightly further apart. Supplement Order of Expansion: Gases ≫ Liquids > Solids — solids expand least because very strong intermolecular bonds resist separation, whereas gases expand enormously because intermolecular forces are negligible! (Exception: liquid water contracts slightly when warmed from 0°C to 4°C before expanding above 4°C.) . Useful Applications: • Bimetallic strips in fire alarms & thermostats (brass expands more than iron/invar ⇒ bends towards iron when heated).• Liquid-in-glass thermometers (mercury/alcohol expands linearly up a narrow capillary).• Shrink-fitting steel railway tyres/axles & loosening tight metal jar lids in hot water. Consequences & Precautions: • Bridges & railway tracks buckle in summer heat unless built with expansion gaps and roller bearings.• Overhead power cables are hung slack in summer so winter contraction does not snap them.• Thick glass cracks if boiling water heats the inside faster than the outside.",
+      "vi": "2.2.1 Sự Nở vì Nhiệt (Thermal Expansion) của Rắn, Lỏng, Khí ở Áp suất Không đổi. Khi bị đun nóng ở áp suất không đổi, các hạt nhận thêm động năng, dao động/chuyển động mạnh hơn và đẩy nhau ra xa hơn. Thứ tự độ nở (Supplement): Khí (Gases) ≫ Lỏng (Liquids) > Rắn (Solids) — chất rắn nở ít nhất do lực liên kết giữa các hạt rất mạnh cản trở sự tách xa, còn chất khí nở cực mạnh vì lực liên kết gần như bằng 0! (Ngoại lệ: nước lỏng co lại nhẹ khi tăng từ 0°C lên 4°C rồi mới nở ra trên 4°C.) . Ứng dụng Hữu ích (Applications): • Băng kép (Bimetallic strip) trong chuông báo cháy & rơ-le nhiệt (đồng thau nở nhiều hơn sắt ⇒ uốn cong về phía thanh sắt khi nóng).• Nhiệt kế chất lỏng .• Tán đinh rive nóng, lắp đai thép bánh tàu, mở nắp lọ kim loại bằng nước nóng. Tác hại & Biện pháp (Consequences): • Đường ray tàu hỏa & cầu bê tông bị cong vênh mùa hè nếu không chừa khe hở nhiệt (expansion gaps) và con lăn.• Dây tải điện trên cao phải mắc chùng mùa hè để mùa đông co lại không bị đứt.• Cốc thủy tinh dày dễ nứt vỡ khi rót nước sôi đột ngột.",
+      "duration": 154.88,
+      "startTime": 1566.79,
+      "endTime": 1721.67,
+      "audioUrl": "/audio/lectures/physics/2/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "⚡ Nội năng (Internal Energy) & Nhiệt dung riêng (Specific Heat Capacity — c = Δ E / m Δθ)",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "Supplement 2.2.2 • Essential 0625 Calculation & Practical ⚡ Internal Energy & Specific Heat Capacity ( c = Δ E / m Δθ). Internal energy is the total kinetic and potential energy of all particles in an object. Raising an object's temperature increases its internal energy via an increase in the average kinetic energy of all its particles . Definition of Specific Heat Capacity ( c ): The energy required per unit mass per unit temperature increase (units: J/(kg °C) or J/(kg K) ; pure water has an unusually high c = 4200 J/(kg °C) , making it ideal for central heating and engine coolants). c = Δ E / ( m Δθ) ⇔ Δ E = m × c × Δθ 🧪 Experimental Determination of c (Solid Block & Liquid — Paper 6): Solid Metal Block (e.g. 1.0 kg Aluminium): Weigh mass m ; insert a known-power electric immersion heater ( P = IV ) and a thermometer (with a drop of oil for good thermal contact) into two holes in a heavily insulated (lagged) block. Record initial temperature θ1, switch heater on for measured time t (Δ E = Pt = IVt , or read directly from a joulemeter), switch off, and record the highest final temperature θ2 reached. For a Liquid: Weigh an insulated polystyrene cup/calorimeter empty and with liquid to find m ; submerge heater, thermometer, and stirrer (to ensure uniform temperature). Accuracy Note: Some thermal energy always escapes to the surroundings, making measured Δθ smaller than ideal and giving an experimental c value slightly higher than the true textbook value!",
+      "vi": "Supplement 2.2.2 • Công thức & Thí nghiệm Trọng tâm 0625 ⚡ Nội năng (Internal Energy) & Nhiệt dung riêng (Specific Heat Capacity — c = Δ E / m Δθ). Nội năng (Internal energy) là tổng động năng và thế năng của mọi hạt cấu tạo nên vật. Khi nhiệt độ tăng, nội năng tăng thông qua sự tăng động năng trung bình của toàn bộ các hạt . Định nghĩa Nhiệt dung riêng: Năng lượng nhiệt cần cung cấp để làm tăng nhiệt độ của 1 đơn vị khối lượng (1 kg) chất đó thêm 1 độ (1°C hoặc 1 K) . Đơn vị: J/(kg °C) hoặc J/(kg K) (nước có c rất lớn = 4200 J/(kg °C) , rất tốt để làm mát động cơ và sưởi ấm). c = Δ E / ( m Δθ) ⇔ Δ E = m × c × Δθ 🧪 Thí nghiệm Đo Nhiệt dung riêng c của Khối Kim loại & Chất lỏng (Paper 6): Khối kim loại rắn (VD: Nhôm 1.0 kg): Cân khối lượng m ; đặt dây nung điện công suất đã biết ( P = IV ) và nhiệt kế (nhỏ vài giọt dầu vào lỗ để truyền nhiệt tốt) vào khối kim loại được bọc lớp cách nhiệt dày (lagging/insulation). Đọc nhiệt độ đầu θ1, bật nguồn trong thời gian t (Δ E = Pt = IVt hoặc đọc từ joulemeter ), tắt điện và đợi đọc nhiệt độ cực đại θ2. Với chất lỏng: Cân cốc xốp cách nhiệt rỗng và khi có nước để tìm m ; nhúng ngập dây nung, nhiệt kế và que khuấy (stirrer) để nhiệt độ đồng đều. Lưu ý sai số: Do luôn có thất thoát nhiệt ra môi trường làm Δθ đo được nhỏ hơn lý thuyết, giá trị c tính từ thí nghiệm thường cao hơn một chút so với giá trị thực!",
+      "duration": 224.88,
+      "startTime": 1721.67,
+      "endTime": 1946.55,
+      "audioUrl": "/audio/lectures/physics/2/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "2.2.3 Nóng chảy, Sôi, Ngưng tụ & Đông đặc ở Nhiệt độ Không đổi (Constant Temperature)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "2.2.3 Melting, Boiling, Condensation & Solidification at Constant Temperature. Pure Water Benchmarks (at standard atmospheric pressure): Melting point = 0°C ; Boiling point = 100°C. Why Temperature Stays Constant During Melting & Boiling: Thermal energy supplied is used solely to overcome intermolecular attractive forces (breaking bonds) and increase molecular potential energy , NOT average kinetic energy ⇒ temperature remains flat! Condensation & Solidification (Freezing): Reverse processes at constant temperature where particles move closer together, intermolecular bonds re-form, and thermal energy is transferred out to the surroundings. (Specific latent heat calculations are NOT required in 0625.) . Boiling vs Evaporation Comparison Table Feature: Temperature; Boiling: Occurs ONLY at one fixed boiling temperature (e.g. 100°C for water at 1 atm); Evaporation: Occurs at ANY temperature below the boiling point. Feature: Location & Bubbles; Boiling: Occurs throughout the entire liquid with rapid vapour bubbles; Evaporation: Occurs ONLY at the liquid surface ; no bubbles form. Feature: Thermal Effect; Boiling: Requires continuous external heat source; temperature stays constant; Evaporation: Causes cooling of the remaining liquid and any object in contact with it.",
+      "vi": "2.2.3 Nóng chảy, Sôi, Ngưng tụ & Đông đặc ở Nhiệt độ Không đổi (Constant Temperature). Mốc chuẩn Nước tinh khiết (áp suất khí quyển chuẩn): Điểm nóng chảy ( melting point ) = 0°C ; Điểm sôi ( boiling point ) = 100°C. Tại sao Nhiệt độ không đổi khi Nóng chảy & Sôi? Nhiệt lượng cung cấp lúc này dùng toàn bộ để thắng lực hút liên phân tử (phá vỡ liên kết — breaking bonds) làm tăng thế năng phân tử chứ KHÔNG làm tăng động năng trung bình ⇒ nhiệt độ đi ngang! Ngưng tụ (Condensation) & Đông đặc (Solidification): Quá trình ngược lại ở nhiệt độ không đổi; các hạt xích lại gần nhau tái tạo liên kết và tỏa nhiệt năng ra môi trường . (Đề 0625 KHÔNG yêu cầu công thức ẩn nhiệt L .) . Boiling vs Evaporation Comparison Table Đặc điểm phân biệt: Nhiệt độ xảy ra; Sự Sôi (Boiling): CHỈ xảy ra ở một nhiệt độ sôi xác định (VD: nước ở 100°C); Sự Bay hơi (Evaporation): Xảy ra ở MỌI nhiệt độ thấp hơn nhiệt độ sôi. Đặc điểm phân biệt: Vị trí & Bọt khí; Sự Sôi (Boiling): Xảy ra trong toàn bộ lòng chất lỏng kèm sủi bọt khí; Sự Bay hơi (Evaporation): CHỈ xảy ra trên bề mặt thoáng , không có bọt khí. Đặc điểm phân biệt: Hiệu ứng nhiệt; Sự Sôi (Boiling): Cần nguồn cấp nhiệt liên tục; nhiệt độ giữ không đổi; Sự Bay hơi (Evaporation): Gây làm lạnh (cooling) phần chất lỏng còn lại và vật tiếp xúc.",
+      "duration": 185.49,
+      "startTime": 1946.55,
+      "endTime": 2132.04,
+      "audioUrl": "/audio/lectures/physics/2/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "💨 Tại sao Bay hơi gây Làm lạnh & Làm mát Vật tiếp xúc? (Core & Supplement 2.2.3)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "💨 Why Evaporation Causes Cooling & Cooling of Objects in Contact (Core & Supplement 2.2.3). Molecules in a liquid possess a wide distribution of speeds and kinetic energies. The most-energetic (fastest-moving) molecules near the surface have enough energy to overcome intermolecular attractive forces from neighbours and escape into the air as vapour. The molecules remaining behind have a lower average kinetic energy , so the temperature of the remaining liquid decreases. Supplement — Cooling an Object in Contact (e.g. Sweat on Skin / Wet Cloth): Once evaporation cools the liquid below the object's temperature, thermal energy transfers (by conduction) from the warmer skin/object into the cooler liquid , cooling the object down!",
+      "vi": "💨 Tại sao Bay hơi gây Làm lạnh & Làm mát Vật tiếp xúc? (Core & Supplement 2.2.3). Các phân tử trong chất lỏng luôn chuyển động với nhiều mức tốc độ và động năng khác nhau. Những phân tử có động năng lớn nhất ở sát bề mặt thắng được lực hút của các hạt lân cận và thoát ra ngoài thành hơi. Các phân tử ở lại có động năng trung bình thấp hơn , nên nhiệt độ chất lỏng giảm xuống. Supplement — Làm mát vật tiếp xúc (VD: Mồ hôi trên da / Khăn ướt): Khi chất lỏng bay hơi và lạnh đi thấp hơn nhiệt độ cơ thể, nhiệt năng truyền (bằng dẫn nhiệt — conduction) từ da/vật ấm sang lớp chất lỏng mát hơn , làm cơ thể/vật hạ nhiệt!",
+      "duration": 87.56,
+      "startTime": 2132.04,
+      "endTime": 2219.6,
+      "audioUrl": "/audio/lectures/physics/2/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🌡️ 1. Nhiệt độ cao hơn (Temperature) Nhiều phân tử đạt đủ động năng để thoát khỏ...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🌡️ 1. Higher Temperature Higher average KE ⇒ larger fraction of molecules can escape.",
+      "vi": "🌡️ 1. Nhiệt độ cao hơn (Temperature) Nhiều phân tử đạt đủ động năng để thoát khỏi mặt thoáng.",
+      "duration": 13.42,
+      "startTime": 2219.6,
+      "endTime": 2233.02,
+      "audioUrl": "/audio/lectures/physics/2/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "📏 2. Diện tích mặt thoáng lớn (Surface Area) Nhiều phân tử nằm ở bề mặt cùng lúc...",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "📏 2. Larger Surface Area More molecules lie at the surface ready to break free simultaneously.",
+      "vi": "📏 2. Diện tích mặt thoáng lớn (Surface Area) Nhiều phân tử nằm ở bề mặt cùng lúc có cơ hội thoát ra.",
+      "duration": 14.95,
+      "startTime": 2233.02,
+      "endTime": 2247.97,
+      "audioUrl": "/audio/lectures/physics/2/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "💨 3. Gió thổi qua bề mặt (Air Movement) Cuốn các phân tử hơi đi xa, ngăn chúng q...",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "💨 3. Air Movement (Draught) Sweeps escaped vapour molecules away so they cannot return and condense.",
+      "vi": "💨 3. Gió thổi qua bề mặt (Air Movement) Cuốn các phân tử hơi đi xa, ngăn chúng quay lại ngưng tụ.",
+      "duration": 15.22,
+      "startTime": 2247.97,
+      "endTime": 2263.19,
+      "audioUrl": "/audio/lectures/physics/2/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • Paper 1 & 2 MCQ Pure liquid water at 100°C is heated steadily by a Bunsen burner as it boils into steam at 100°C. What happens to the average kinetic energy of the water molecules and the intermolecular forces during this change of state? A. Average kinetic energy increases; intermolecular forces are overcome. B. Average kinetic energy stays constant; intermolecular forces are overcome. C. Average kinetic energy increases; intermolecular forces become stronger. D. Average kinetic energy stays constant; individual water molecules expand. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Because temperature remains constant at 100°C during boiling, the average kinetic energy of the molecules does NOT change (eliminating A and C ). Molecules themselves never expand (eliminating D ). All thermal energy supplied goes into overcoming intermolecular attractive forces to separate liquid molecules into gas (increasing potential energy), so B is correct.",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE / EXTENDED • Trắc nghiệm Paper 1 & 2 Pure liquid water at 100°C is heated steadily by a Bunsen burner as it boils into steam at 100°C. What happens to the average kinetic energy of the water molecules and the intermolecular forces during this change of state? (Nước tinh khiết ở 100°C được đun đều để sôi thành hơi nước ở 100°C. Động năng trung bình của các phân tử nước và lực liên phân tử thay đổi như thế nào trong quá trình chuyển thể này?) A. Động năng TB tăng; thắng lực liên kết. B. Động năng TB không đổi; thắng lực liên kết. C. Động năng TB tăng; lực liên kết mạnh lên. D. Động năng TB không đổi; từng phân tử phình to. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Vì nhiệt độ giữ nguyên không đổi ở 100°C trong suốt quá trình sôi nên average kinetic energy của các phân tử KHÔNG tăng (loại A, C ). Phân tử không bao giờ tự nở to ra (loại D ). Toàn bộ năng lượng cung cấp dùng để thắng lực hút liên phân tử tách các hạt lỏng thành khí ( B ).",
+      "duration": 148.18,
+      "startTime": 2263.19,
+      "endTime": 2411.37,
+      "audioUrl": "/audio/lectures/physics/2/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Calculation & Practical [7 marks] An insulated beaker holds 500 g of a liquid at an initial temperature of 22°C . A 150 W electric immersion heater is completely submerged in the liquid and switched on for 4.0 minutes . The temperature of the liquid rises to 52°C . (a) Calculate the thermal energy supplied by the heater in 4.0 minutes. [2] (b) Calculate the experimental specific heat capacity c of the liquid. State the unit. [3] (c) Explain why the experimental value of c calculated in (b) is slightly larger than the true textbook value, and suggest one improvement. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Unit conversion: t = 4.0 × 60 = 240 s .• Formula & substitution: Δ E = P × t = 150 × 240 [1m] = 36 000 J (or 3.6 × 104J) [1m] (b) Unit conversion: m = 500 g = 0.50 kg ; Δθ = 52 − 22 = 30°C [1m]• Formula & substitution: c = Δ E / ( m Δθ) = 36 000 / (0.50 × 30) = 36 000 / 15 [1m]• Answer + SI unit: c = 2400 J/(kg °C) [1m] (c) Some thermal energy escapes to the surroundings/beaker, so the measured temperature rise Δθ is smaller than ideal (making Δ E / m Δθ larger) [1m]. Improvement: Add a lid / thicker lagging around the beaker [1m]. 💡 Intuition Check: Check your unit conversions every time: if you forgot 4.0 min → 240 s and 500 g → 0.50 kg, your answer would be off by a factor of 60 × 1000 = 60 000!",
+      "vi": "BÀI MẪU 2 🟩 MỨC SUPPLEMENT • Tự luận & Tính toán Paper 4 [7 điểm] An insulated beaker holds 500 g of a liquid at an initial temperature of 22°C . A 150 W electric immersion heater is completely submerged in the liquid and switched on for 4.0 minutes . The temperature of the liquid rises to 52°C . (a) Calculate the thermal energy supplied by the heater in 4.0 minutes. (b) Calculate the experimental specific heat capacity c of the liquid. State the unit. (c) Explain why the experimental value of c calculated in (b) is slightly larger than the true textbook value, and suggest one improvement. (Một cốc bọc cách nhiệt chứa 500 g chất lỏng ở 22°C. Nhúng ngập dây nung điện 150 W và bật trong 4.0 phút thì nhiệt độ tăng lên 52°C. (a) Tính nhiệt lượng dây nung cung cấp. (b) Tính nhiệt dung riêng thực nghiệm c kèm đơn vị. (c) Giải thích tại sao c thực nghiệm lớn hơn giá trị thực tế và nêu 1 cách cải thiện.) ✍️ Lời giải chi tiết theo thang điểm: (a) Đổi đơn vị thời gian: t = 4.0 × 60 = 240 s .• Công thức & thay số: Δ E = P × t = 150 × 240 = 36 000 J (b) Đổi đơn vị khối lượng: m = 500 g = 0.50 kg ; độ tăng nhiệt độ Δθ = 52 − 22 = 30°C • Công thức & thay số: c = Δ E / ( m Δθ) = 36 000 / (0.50 × 30) = 36 000 / 15 • Đáp số + đơn vị chuẩn: c = 2400 J/(kg °C) (c) Do một phần nhiệt năng thất thoát ra môi trường xung quanh nên Δθ đo được nhỏ hơn lý thuyết (làm thương số Δ E / m Δθ bị lớn hơn giá trị thực) . Cải thiện: Đậy thêm nắp cách nhiệt (lid) hoặc bọc lớp xốp dày hơn .",
+      "duration": 282.74,
+      "startTime": 2411.37,
+      "endTime": 2694.11,
+      "audioUrl": "/audio/lectures/physics/2/s02_b12.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "🔥 3. Ba Cơ chế Truyền Nhiệt: Dẫn nhiệt, Đối lưu & Bức xạ (Thermal Transfers — 2.3)",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "🔥 3. Transfer of Thermal Energy: Conduction, Convection & Radiation (2.3).",
+      "vi": "🔥 3. Ba Cơ chế Truyền Nhiệt: Dẫn nhiệt, Đối lưu & Bức xạ (Thermal Transfers — 2.3).",
+      "duration": 14.02,
+      "startTime": 2694.11,
+      "endTime": 2708.13,
+      "audioUrl": "/audio/lectures/physics/2/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine three ways to get a heavy textbook from the front of a classroom to the back:• Conduction (Solids): Students stay seated and pass the book hand-to-hand down the row ( lattice vibration ) — and in metals, agile hall-monitors also sprint down the aisles carrying books ( delocalised electrons )!• Convection (Liquids & Gases): Students stand up, carry their own book to the back, and cool students walk forward to take their seats ( warm fluid expands → less dense → rises ).• Radiation (Vacuum / Any Space): The teacher throws a ball straight through empty air — no students needed in between ( infrared EM waves )!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung 3 cách chuyển một chồng sách từ bàn đầu xuống cuối lớp:• Conduction — Dẫn nhiệt (Chất rắn): Học sinh ngồi yên tại chỗ, chuyền tay nhau từng cuốn sách dọc theo dãy bàn ( lattice vibration ); riêng trong kim loại còn có thêm các bạn “chạy việc” phóng vù vù dọc lối đi để đưa sách siêu tốc ( delocalised electrons )!• Convection — Đối lưu (Chất lỏng & Khí): Học sinh tự ôm sách đứng dậy đi lên phía trên, còn bạn khác đi xuống thế chỗ ( khối chất lưu nóng nở ra → nhẹ hơn / less dense → nổi lên ).• Radiation — Bức xạ nhiệt (Chân không / Mọi không gian): Thầy giáo ném thẳng quả bóng qua khoảng không mà không cần ai đứng giữa chuyền tay ( tia hồng ngoại — infrared EM waves )!",
+      "duration": 90.58,
+      "startTime": 2708.13,
+      "endTime": 2798.71,
+      "audioUrl": "/audio/lectures/physics/2/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Conduction (🟦 Core / 🟩 Supplement 2.3.1): Occurs mainly in solids via atomic/molecular lattice vibrations PLUS rapid diffusion of free (delocalised) electrons in metals. Liquids/gases conduct poorly because particles are far apart / lack free electrons (trapped air is a superb insulator). 2. Convection (🟦 Core 2.3.2): Occurs ONLY in fluids (liquids & gases) . Heated fluid expands → becomes less dense → rises ; cooler, denser fluid sinks to replace it, forming a convection current . 3. Thermal Radiation (🟦 Core / 🟩 Supplement 2.3.3–2.3.4): Infrared electromagnetic waves ; requires no medium . Matte/dull black = best absorber AND best emitter; shiny silver/white = worst absorber, worst emitter, best reflector. Constant temperature requires rate of energy absorbed = rate of energy emitted .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Dẫn nhiệt — Conduction (🟦 Core / 🟩 Supplement 2.3.1): Xảy ra chủ yếu trong chất rắn nhờ dao động mạng tinh thể (lattice vibrations) CỘNG VỚI dòng free (delocalised) electrons di chuyển cực nhanh trong kim loại. Khí và nước dẫn nhiệt rất kém do các hạt ở xa nhau / không có electron tự do. 2. Đối lưu — Convection (🟦 Core 2.3.2): CHỈ xảy ra trong chất lỏng và chất khí (fluids) . Khối chất lưu nóng expands → trở nên less dense → rises ; phần lạnh denser → sinks tạo thành convection current . 3. Bức xạ — Radiation (🟦 Core / 🟩 Supplement 2.3.3–2.3.4): Là sóng điện từ infrared radiation , không cần môi trường (truyền qua chân không). Mặt đen mờ hấp thụ tốt nhất VÀ phát xạ tốt nhất; mặt trắng/bạc sáng bóng (shiny silver) hấp thụ kém nhất, phát xạ kém nhất, phản xạ tốt nhất. Nhiệt độ vật không đổi khi rate absorbed = rate emitted .",
+      "duration": 121.57,
+      "startTime": 2798.71,
+      "endTime": 2920.28,
+      "audioUrl": "/audio/lectures/physics/2/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Trap #1: Never say “particles become less dense and rise” in convection — individual particles keep the same mass and size; the heated fluid expands and becomes less dense! Trap #2: Students often think white/shiny surfaces emit heat well — FALSE! Dull black wins BOTH absorbing and emitting; shiny silver is worst at BOTH.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Bẫy #1: Cấm viết “các hạt nhẹ đi và bay lên” — khối lượng riêng là tính chất của cả khối chất lưu (fluid) chứ không phải từng hạt! Bẫy #2: Đừng nhầm mặt trắng sáng phát nhiệt tốt — mặt đen mờ đứng số 1 ở CẢ hấp thụ lẫn phát xạ tia hồng ngoại!",
+      "duration": 44.2,
+      "startTime": 2920.28,
+      "endTime": 2964.48,
+      "audioUrl": "/audio/lectures/physics/2/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🍳 Interactive Heat Transfer (Mô phỏng Nồi nước trên Bếp ga)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🍳 Interactive Heat Transfer (Pot on Gas Stove). Hover over parts of the diagram 👆. Thermal energy transfers by Conduction (solids), Convection (fluids), and Radiation (vacuum & infrared waves).",
+      "vi": "🍳 Interactive Heat Transfer (Mô phỏng Nồi nước trên Bếp ga). Nắm vững 3 phương thức truyền nhiệt chuẩn Cambridge 0625: Dẫn nhiệt ( Conduction ), Đối lưu ( Convection ) và Bức xạ ( Radiation ).",
+      "duration": 30.55,
+      "startTime": 2964.48,
+      "endTime": 2995.03,
+      "audioUrl": "/audio/lectures/physics/2/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🧪 2.3.1 Thí nghiệm Dẫn nhiệt & Chất Cách nhiệt",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🧪 2.3.1 Conduction Experiments & Poor Conductors. 1. Ice Under Metal Gauze: Heating the top of a tilted tube boils the upper water while ice trapped at the bottom by gauze does NOT melt — proving water is a very poor conductor (and preventing upward convection from reaching the bottom)! 2. Metal Rods & Wax Pins: Equal-dimension rods of copper, aluminium, brass, and iron heated equally at one end melt wax and drop drawing pins fastest along copper (best conductor). 3. Supplement Why Gases/Liquids Insulate: Particles in gases are widely spaced with rare collisions (air is an excellent insulator when trapped!); non-metallic solids lack free electrons, while semiconductors (e.g. silicon) have intermediate conductivity.",
+      "vi": "🧪 2.3.1 Thí nghiệm Dẫn nhiệt & Chất Cách nhiệt. 1. Viên nước đá dìm dưới lưới kim loại: Đun phần trên ống nghiệm nghiêng làm nước phía trên sôi sùng sục trong khi viên đá ở đáy không tan — chứng minh nước dẫn nhiệt cực kém ! 2. Các thanh kim loại gắn sáp & đinh ghim: Các thanh đồng, nhôm, đồng thau, sắt cùng kích thước đun chung một đầu ⇒ ghim trên thanh đồng (copper) rơi nhanh nhất. 3. Giải thích Supplement: Chất khí/lỏng dẫn nhiệt kém vì các hạt ở xa nhau , ít va chạm truyền dao động; một số chất rắn bán dẫn (silicon) có độ dẫn nhiệt trung gian giữa chất dẫn và chất cách nhiệt.",
+      "duration": 87.71,
+      "startTime": 2995.03,
+      "endTime": 3082.74,
+      "audioUrl": "/audio/lectures/physics/2/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🧪 2.3.2 Thí nghiệm Minh họa Dòng Đối lưu",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🧪 2.3.2 Classic Convection Experiments. 1. Twin-Chimney Smoke Box (Gas): Air heated by a candle rises out of the right chimney; dense cool smoke from smouldering paper is drawn down the left chimney to replace it! 2. Potassium Permanganate in Water (Liquid): Dropping a single purple crystal at the bottom corner of a beaker and heating gently right underneath produces a vivid purple stream rising, spreading across the top, and sinking down the cooler side.",
+      "vi": "🧪 2.3.2 Thí nghiệm Minh họa Dòng Đối lưu. 1. Hộp đối lưu 2 ống khói (Chất khí): Ngọn nến làm không khí nóng bốc lên qua ống phải, hút luồng khói lạnh nặng hơn đi xuống ống trái để thế chỗ! 2. Tinh thể Thuốc tím KMnO4trong Nước (Chất lỏng): Thả một hạt thuốc tím ở góc đáy cốc nước và đun nhẹ ngay bên dưới sẽ thấy dải màu tím dâng thẳng lên trên, lan ngang rồi chìm xuống ở phía thành cốc lạnh.",
+      "duration": 56.48,
+      "startTime": 3082.74,
+      "endTime": 3139.22,
+      "audioUrl": "/audio/lectures/physics/2/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "⚫ Bề mặt Đen mờ / Nhám (Dull / Matte Black)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "⚫ Matte / Dull Black Surfaces. Best absorber of infrared radiation (heats fastest in sunlight). Best emitter of infrared radiation (cools fastest when hot — used on car/fridge cooling fins). Worst reflector of infrared radiation.",
+      "vi": "⚫ Bề mặt Đen mờ / Nhám. Hấp thụ tốt nhất (Best absorber) tia hồng ngoại (nóng lên nhanh nhất). Phát xạ tốt nhất (Best emitter) tia hồng ngoại (nguội nhanh nhất — dùng cho lá tản nhiệt sau tủ lạnh/két nước ô tô). Phản xạ kém nhất (Worst reflector).",
+      "duration": 37.19,
+      "startTime": 3139.22,
+      "endTime": 3176.41,
+      "audioUrl": "/audio/lectures/physics/2/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "⚪ Bề mặt Trắng / Bạc Sáng bóng (Shiny White / Silver)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "⚪ Shiny White / Polished Silver Surfaces. Worst absorber of infrared radiation (white buildings, shiny foil marathon blankets). Worst emitter of infrared radiation (shiny silvered teapot/kettle stays hot longer). Best reflector of infrared radiation.",
+      "vi": "⚪ Bề mặt Trắng / Bạc Sáng bóng. Hấp thụ kém nhất (Worst absorber) (áo cứu hộ tráng bạc, sơn tường trắng). Phát xạ kém nhất (Worst emitter) (ấm trà mạ bạc giữ nước nóng lâu hơn). Phản xạ tốt nhất (Best reflector) tia hồng ngoại.",
+      "duration": 37.33,
+      "startTime": 3176.41,
+      "endTime": 3213.74,
+      "audioUrl": "/audio/lectures/physics/2/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🔬 Thí nghiệm Supplement: Khả năng Phát xạ vs Hấp thụ",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🔬 Supplement Practicals: Emitters vs Absorbers. • Leslie's Cube (Testing Emitters): Fill a hollow metal cube (with 4 vertical faces: matte black, matte white, dull metal, shiny polished silver) with boiling water so all faces share the exact same temperature . Place an infrared detector (thermopile) at an equal fixed distance from each face: matte black gives the highest reading; shiny silver gives the lowest.• Two Vertical Plates (Testing Absorbers): Place a radiant electric heater midway between a dull black plate and a shiny tin plate , each holding a cork on the back with candle wax. The wax on the dull black plate melts first and drops its cork!",
+      "vi": "🔬 Thí nghiệm Supplement: Khả năng Phát xạ vs Hấp thụ. • Khối lập phương Leslie (Leslie's Cube — Đo Phát xạ): Đổ đầy nước sôi vào hộp kim loại rỗng có 4 mặt (đen mờ, trắng mờ, kim loại xỉn, bạc bóng) để cả 4 mặt có cùng nhiệt độ . Đặt cảm biến hồng ngoại (IR detector) ở cùng một khoảng cách : mặt đen mờ phát bức xạ mạnh nhất; mặt bạc bóng yếu nhất.• Hai Tấm Kim loại Đứng (Đo Hấp thụ): Đặt lò sưởi bức xạ ở chính giữa tấm đen mờ và tấm thiếc sáng bóng (mỗi tấm gắn nút bấc bằng sáp nến). Sáp bên tấm đen mờ chảy ra trước làm rơi nút bấc!",
+      "duration": 82.5,
+      "startTime": 3213.74,
+      "endTime": 3296.24,
+      "audioUrl": "/audio/lectures/physics/2/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "🌍 Supplement: Cân bằng Bức xạ & Nhiệt độ Trái Đất",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "🌍 Supplement: Thermal Equilibrium & Earth's Temperature. • Constant Temperature Condition: An object stays at constant temperature only when rate of energy absorbed = rate of energy emitted . If rate absorbed > rate emitted, its temperature rises (and vice versa).• Earth's Radiation Balance: Earth's surface absorbs short-wavelength solar radiation from the Sun and re-emits longer-wavelength infrared radiation back towards space. Atmospheric greenhouse gases (CO2, methane, water vapour) absorb and re-emit part of this outgoing IR back to Earth, reducing net emission so Earth warms until a higher equilibrium temperature is reached.",
+      "vi": "🌍 Supplement: Cân bằng Bức xạ & Nhiệt độ Trái Đất. • Điều kiện Nhiệt độ Không đổi: Vật chỉ giữ nhiệt độ không đổi khi tốc độ hấp thụ năng lượng = tốc độ phát xạ năng lượng . Nếu hấp thụ > phát xạ thì vật nóng lên.• Nhiệt độ Trái Đất: Bề mặt Trái Đất hấp thụ bức xạ sóng ngắn từ Mặt Trời và phát xạ ngược ra vũ trụ tia hồng ngoại sóng dài . Các khí nhà kính (CO2, CH4, hơi nước) hấp thụ và bức xạ ngược một phần hồng ngoại về mặt đất, làm Trái Đất ấm lên tới mức cân bằng mới cao hơn.",
+      "duration": 74.34,
+      "startTime": 3296.24,
+      "endTime": 3370.58,
+      "audioUrl": "/audio/lectures/physics/2/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "🏠 2.3.4 Ứng dụng Thực tế Kết hợp Nhiều Cơ chế Truyền Nhiệt (2.3.4)",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "🏠 2.3.4 Everyday & Multi-Mode Applications (Wood Fire, Car Radiator, Home Insulation & Vacuum Flask). Kitchen Pan & Room Units: Copper/steel pan base conducts heat quickly while a plastic/wooden handle insulates. Room heaters sit low near the floor (hot air rises); air-conditioning units sit high near the ceiling (cold dense air sinks). Wood or Coal Fire in a Room (Multi-Mode!): Hot combustion gases rise up the chimney by convection (drawing cool room air along the floor into the fire), so the room itself is warmed mainly by infrared radiation emitted directly from the glowing embers/flames! Car Radiator (Multi-Mode!): Hot water from the engine heats thin copper/aluminium tubes by conduction ; closely spaced matte-black metal fins provide a large surface area to lose heat rapidly to passing air by convection and radiation. Vacuum Flask (Thermos): (1) Vacuum between double glass walls stops BOTH conduction and convection; (2) Silvered inner walls reflect infrared radiation back inside; (3) Plastic/cork stopper stops conduction, convection, and evaporation!",
+      "vi": "🏠 2.3.4 Ứng dụng Thực tế Kết hợp Nhiều Cơ chế Truyền Nhiệt (2.3.4). Nồi nấu & Thiết bị trong phòng: Đáy nồi bằng kim loại dẫn nhiệt nhanh, tay cầm nhựa/gỗ cách nhiệt. Lò sưởi đặt sát sàn nhà (khí nóng bốc lên); máy điều hòa lắp trên cao sát trần (khí lạnh nặng hơn chìm xuống). Bếp củi / Lò sưởi than trong phòng (Kết hợp!): Khí nóng cháy bay thẳng lên ống khói nhờ đối lưu (convection) , nên căn phòng được sưởi ấm chủ yếu nhờ bức xạ hồng ngoại (infrared radiation) chiếu trực tiếp từ than hồng! Két nước làm mát Ô tô (Car Radiator — Kết hợp!): Nước nóng từ động cơ truyền qua thành ống đồng bằng dẫn nhiệt (conduction) ; các lá tản nhiệt sơn đen mờ có diện tích bề mặt rất lớn giúp tản nhiệt nhanh ra luồng gió qua đối lưu và bức xạ nhiệt. Phích nước / Bình giữ nhiệt (Vacuum Flask): (1) Khoảng chân không (Vacuum) giữa 2 lớp thủy tinh chặn đứng cả dẫn nhiệt và đối lưu; (2) Thành tráng bạc phản xạ tia hồng ngoại; (3) Nút nhựa/bấc ngăn dẫn nhiệt, đối lưu và bay hơi!",
+      "duration": 138.94,
+      "startTime": 3370.58,
+      "endTime": 3509.52,
+      "audioUrl": "/audio/lectures/physics/2/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE / EXTENDED • Paper 1 & 2 MCQ Two identical metal cans are filled with equal volumes of boiling water at 100°C and placed in a cool room. Can X is painted matte black on the outside; Can Y has a polished shiny silver outside. Both cans have tightly fitted plastic lids. Which row correctly identifies which can cools faster and the main reason? A. Can X cools faster because matte black is a better conductor of thermal energy. B. Can X cools faster because matte black is a better emitter of infrared radiation. C. Can Y cools faster because shiny silver reflects thermal energy out into the room. D. Both cans cool at the same rate because both cans are made of the same metal. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Both cans have the same metal wall thickness (same conduction, eliminating A and D ) and lids stopping evaporation. Their outer surfaces differ in colour and texture: matte black is the best emitter of infrared radiation whereas polished shiny silver is the worst emitter, so Can X radiates thermal energy to the room faster ( B ).",
+      "vi": "BÀI MẪU 1 🟦 MỨC CORE / EXTENDED • Trắc nghiệm Paper 1 & 2 Two identical metal cans are filled with equal volumes of boiling water at 100°C and placed in a cool room. Can X is painted matte black on the outside; Can Y has a polished shiny silver outside. Both cans have tightly fitted plastic lids. Which row correctly identifies which can cools faster and the main reason? (Hai lon kim loại giống hệt nhau chứa cùng thể tích nước sôi ở 100°C đặt trong phòng mát và đậy kín nắp nhựa. Lon X sơn đen mờ bên ngoài; Lon Y đánh bóng bạc sáng loáng. Lon nào nguội nhanh hơn và vì sao?) A. Can X cools faster because matte black is a better conductor of thermal energy. B. Can X cools faster because matte black is a better emitter of infrared radiation. C. Can Y cools faster because shiny silver reflects thermal energy out into the room. D. Both cans cool at the same rate because both cans are made of the same metal. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Hai lon làm từ cùng kim loại (dẫn nhiệt như nhau → loại A, D ) và đều đậy kín nắp chống bay hơi. Khác biệt duy nhất là bề mặt ngoài: bề mặt đen mờ (matte black) là vật phát xạ tia hồng ngoại tốt nhất , còn bạc bóng phát xạ kém nhất nên Lon X tỏa nhiệt bức xạ ra phòng nhanh hơn ( B ).",
+      "duration": 167.95,
+      "startTime": 3509.52,
+      "endTime": 3677.47,
+      "audioUrl": "/audio/lectures/physics/2/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured Explanation [7 marks] (a) Explain, in terms of particles and electrons, why a copper saucepan base conducts thermal energy much faster than its plastic handle. [3] (b) An air-conditioning cooling unit is installed high up near the ceiling of a room rather than near the floor. Explain how this cools the whole room effectively. [2] (c) A vacuum flask has double glass walls with a vacuum between them and silvered surfaces. State which method(s) of thermal energy transfer are prevented by: (i) the vacuum, and (ii) the silvered surfaces. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) When heated, atoms/ions in both solids vibrate faster and pass kinetic energy to neighbours ( lattice vibration ) [1m]. However, copper is a metal containing many mobile free (delocalised) electrons [1m] that gain kinetic energy and move rapidly through the lattice colliding with distant ions, whereas plastic has no free electrons [1m]. (b) Air cooled by the high unit contracts and becomes more dense than the warmer room air [1m], so the cold dense air sinks towards the floor while warmer, less dense air rises to be cooled, setting up a room-wide convection current [1m]. (c) (i) Vacuum prevents BOTH conduction and convection (since neither can occur without particles/medium) [1m]. (ii) Silvered surfaces minimise thermal (infrared) radiation by reflecting IR back [1m].",
+      "vi": "BÀI MẪU 2 🟩 MỨC SUPPLEMENT • Tự luận Giải thích Paper 4 [7 điểm] (a) Explain, in terms of particles and electrons, why a copper saucepan base conducts thermal energy much faster than its plastic handle. (b) An air-conditioning cooling unit is installed high up near the ceiling of a room rather than near the floor. Explain how this cools the whole room effectively. (c) A vacuum flask has double glass walls with a vacuum between them and silvered surfaces. State which method(s) of thermal energy transfer are prevented by: (i) the vacuum, and (ii) the silvered surfaces. ((a) Giải thích bằng hạt và electron tại sao đáy nồi bằng đồng dẫn nhiệt nhanh hơn nhiều so với tay cầm nhựa. (b) Giải thích tại sao dàn lạnh điều hòa lắp sát trần nhà lại làm mát toàn bộ phòng hiệu quả. (c) Trong bình giữ nhiệt, (i) lớp chân không và (ii) lớp tráng bạc ngăn cản cơ chế truyền nhiệt nào?) ✍️ Lời giải chi tiết theo thang điểm: (a) Khi đun nóng, các nguyên tử/ion ở cả hai chất rắn đều dao động mạnh hơn và va chạm truyền động năng cho hạt kế cận ( lattice vibrations ) . Tuy nhiên, đồng là kim loại có rất nhiều free / delocalised electrons tự do nhận động năng và lao nhanh xuyên qua mạng tinh thể va chạm với các ion ở xa, trong khi nhựa không có electron tự do .",
+      "duration": 190.17,
+      "startTime": 3677.47,
+      "endTime": 3867.64,
+      "audioUrl": "/audio/lectures/physics/2/s03_b13.mp3"
+    }
+  ]
+}

@@ -1,0 +1,747 @@
+{
+  "lectureId": "6df06f2c-3b0a-556f-a218-3e4d7a9417e0",
+  "courseTitle": "Cambridge IGCSE Physics (0625)",
+  "lectureTitle": "Topic 3: Waves",
+  "totalDuration": 5487.04,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_wex": {
+      "start": 8,
+      "end": 9
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 9
+    },
+    "s02_int": {
+      "start": 11,
+      "end": 13
+    },
+    "s02_p1_sub01": {
+      "start": 15,
+      "end": 17
+    },
+    "s02_p2_sub01": {
+      "start": 15,
+      "end": 17
+    },
+    "s02_wex": {
+      "start": 18,
+      "end": 19
+    },
+    "s02_hdr": {
+      "start": 10,
+      "end": 19
+    },
+    "s03_int": {
+      "start": 21,
+      "end": 23
+    },
+    "s03_grp05": {
+      "start": 25,
+      "end": 27
+    },
+    "s03_p1_sub01": {
+      "start": 33,
+      "end": 35
+    },
+    "s03_p2_sub01": {
+      "start": 25,
+      "end": 32
+    },
+    "s03_p2_sub02": {
+      "start": 33,
+      "end": 35
+    },
+    "s03_wex": {
+      "start": 36,
+      "end": 37
+    },
+    "s03_hdr": {
+      "start": 20,
+      "end": 37
+    },
+    "s04_int": {
+      "start": 39,
+      "end": 41
+    },
+    "s04_wex": {
+      "start": 45,
+      "end": 46
+    },
+    "s04_hdr": {
+      "start": 38,
+      "end": 46
+    },
+    "s05_int": {
+      "start": 48,
+      "end": 50
+    },
+    "s05_wex": {
+      "start": 57,
+      "end": 58
+    },
+    "s05_hdr": {
+      "start": 47,
+      "end": 58
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 3: Sóng, Ánh sáng và Âm thanh (Topic 3: Waves)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Physics (0625) Topic 3: Waves. 3.1 General Properties of Waves & Ripple Tank • 3.2 Light, Snell's Law, TIR, Lenses & Eye Defects • 3.3 Electromagnetic Spectrum & Digital Signals • 3.4 Sound & Ultrasound.",
+      "vi": "Cambridge IGCSE Physics (0625) • Song ngữ Chuyên đề 3: Sóng, Ánh sáng và Âm thanh (Topic 3: Waves). 3.1 Tính chất chung của sóng & Khay gợn sóng • 3.2 Ánh sáng, Định luật Snell, Phản xạ toàn phần, Thấu kính & Tật mắt • 3.3 Thang sóng điện từ & Tín hiệu số • 3.4 Âm thanh & Siêu âm (Sound & Ultrasound).",
+      "duration": 53.22,
+      "startTime": 0.0,
+      "endTime": 53.22,
+      "audioUrl": "/audio/lectures/physics/3/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "🌊 1. Tính chất chung của Sóng (General Properties of Waves — 3.1)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🌊 1. General Properties of Waves (3.1).",
+      "vi": "🌊 1. Tính chất chung của Sóng.",
+      "duration": 5.98,
+      "startTime": 53.22,
+      "endTime": 59.2,
+      "audioUrl": "/audio/lectures/physics/3/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine a bright yellow rubber duck floating on a pond as ripples roll past from left to right. Does the duck surf across the pond to the far bank? No! The duck simply bobs up and down on the spot while the ripple pattern carries energy sideways. Similarly, in a stadium \"Mexican wave\" ( transverse , hands move at 90° to wave travel) versus a push-pull pulse along a slinky queue ( longitudinal , coils oscillate back-and-forth parallel to travel), energy travels forward while matter oscillates about a fixed rest position .",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng một chú vịt cao su màu vàng nổi trên mặt hồ khi các gợn sóng lăn tăn chạy từ trái sang phải. Chú vịt có bị trôi dạt sang bờ bên kia theo sóng không? Hoàn toàn KHÔNG! Chú vịt chỉ nhấp nhô lên xuống tại chỗ , còn gợn sóng mang năng lượng đi ngang qua mặt hồ. Giống như \"làn sóng khán giả\" trên sân vận động ( transverse wave — tay giơ vuông góc 90° với chiều sóng chạy) hay đẩy-kéo lò xo slinky dọc trục ( longitudinal wave — vòng xoắn dao động song song chiều truyền): sóng truyền năng lượng (transfer energy) chứ KHÔNG truyền vật chất !",
+      "duration": 74.19,
+      "startTime": 59.2,
+      "endTime": 133.39,
+      "audioUrl": "/audio/lectures/physics/3/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: (3.1) Master three pillars: (1) Core Principle — waves transfer energy without transferring matter ; (2) Wave Anatomy — read amplitude A (rest-to-crest), wavelength λ (crest-to-crest or compression-to-compression), and frequency f = 1 / T (waves per second in Hz); (3) Core Classification — Transverse (90°: all EM waves, water waves, seismic S -waves = S ideways/ S econdary) vs. Longitudinal (parallel: sound waves, seismic P -waves = P ush-pull/ P rimary).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: (3.1) Nắm chắc 3 trụ cột ăn điểm: (1) Bản chất sóng — transfer energy without transferring matter ; (2) Giải phẫu đồ thị sóng — đọc chuẩn amplitude A (từ vị trí cân bằng đến đỉnh), wavelength λ (từ đỉnh tới đỉnh kế tiếp crest-to-crest hoặc nén tới nén compression-to-compression ), và frequency f = 1 / T (số sóng qua 1 điểm mỗi giây, đơn vị Hz); (3) Phân loại (Core) — Transverse (vuông góc 90°: sóng điện từ EM, sóng nước, sóng địa chấn S-waves = S ideways) vs. Longitudinal (song song: sóng âm, sóng địa chấn P-waves = P ush-pull).",
+      "duration": 83.16,
+      "startTime": 133.39,
+      "endTime": 216.55,
+      "audioUrl": "/audio/lectures/physics/3/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Measuring Amplitude from Crest-to-Trough! Examiners love labelling the full vertical height from peak to trough (e.g. 6.0 cm). Always halve crest-to-trough distance to get the true amplitude A from the centre rest line (3.0 cm). Also watch the \"fence-post trap\": from the 1st crest to the 5th crest spans 4 wavelengths , NOT 5!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Đo nhầm Biên độ (Amplitude) từ Đỉnh xuống Hõm sóng! Đề thi rất hay cho khoảng cách thẳng đứng từ crest xuống trough (ví dụ 6.0 cm) — bạn BẮT BUỘC phải chia đôi để lấy amplitude A = 3.0 cm tính từ đường cân bằng! Đồng thời coi chừng \"bẫy cọc rào\": từ đỉnh sóng thứ 1 đến đỉnh sóng thứ 5 chỉ có 4 bước sóng (4λ) chứ KHÔNG phải 5!",
+      "duration": 54.78,
+      "startTime": 216.55,
+      "endTime": 271.33,
+      "audioUrl": "/audio/lectures/physics/3/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Nguyên lý Cốt lõi của Sóng (Fundamental Wave Principle): Sóng là quá trình truyề...",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "Fundamental Wave Principle: Waves transfer energy from one place to another without transferring matter (demonstrated by shaking a rope up and down, pushing/pulling a slinky spring, or watching a floating cork bob vertically in a ripple tank as water ripples pass underneath).",
+      "vi": "Nguyên lý Cốt lõi của Sóng: Sóng là quá trình truyền năng lượng (transfer energy) từ nơi này sang nơi khác mà KHÔNG truyền vật chất . Minh họa thực nghiệm: lắc dây thừng lên xuống, đẩy/kéo lò xo slinky ( springs ), hoặc quan sát nút bần nổi nhấp nhô tại chỗ theo phương thẳng đứng trên mặt nước trong khay gợn sóng khi gợn sóng truyền qua.",
+      "duration": 39.39,
+      "startTime": 271.33,
+      "endTime": 310.72,
+      "audioUrl": "/audio/lectures/physics/3/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🌊 Mô phỏng Sóng Tương tác: Sóng Ngang & Sóng Dọc (Transverse vs Longitudinal)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🌊 Interactive Wave Visualizer: Transverse vs Longitudinal. Hover over wave types 👆. Distinguish Transverse and Longitudinal waves by comparing the direction of vibration to the direction of wave propagation, and memorise their official 0625 examples.",
+      "vi": "🌊 Mô phỏng Sóng Tương tác: Sóng Ngang & Sóng Dọc. Di chuột lên hình Sóng ngang hoặc Sóng dọc 👆. Phân biệt chuẩn xác Sóng ngang ( Transverse ) và Sóng dọc ( Longitudinal ) dựa trên góc giữa phương dao động và phương truyền sóng, kèm bộ ví dụ bắt buộc của đề thi 0625.",
+      "duration": 37.01,
+      "startTime": 310.72,
+      "endTime": 347.73,
+      "audioUrl": "/audio/lectures/physics/3/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Đại lượng (Term & Unit): Biên độ — Amplitude ( A , m); Định nghĩa Song ngữ Chuẩn...",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "Term (Symbol, Unit): Amplitude ( A , m); Official Cambridge 0625 Definition: Maximum displacement of a particle from its undisturbed (rest) position. Term (Symbol, Unit): Wavelength (λ, m); Official Cambridge 0625 Definition: Distance between two adjacent points in phase (e.g. crest to crest, or compression to compression). Term (Symbol, Unit): Frequency ( f , Hz); Official Cambridge 0625 Definition: Number of complete wavelengths (oscillations) passing a fixed point per second ( f = 1 / T ). Term (Symbol, Unit): Wavefront; Official Cambridge 0625 Definition: An imaginary line joining neighbouring points in phase (e.g. wave crests in a ripple tank), always perpendicular to the direction of wave travel.",
+      "vi": "Đại lượng (Term & Unit): Biên độ — Amplitude ( A , m); Định nghĩa Song ngữ Chuẩn Cambridge 0625: Độ dịch chuyển cực đại của phần tử tính từ vị trí cân bằng ban đầu. Đại lượng (Term & Unit): Bước sóng — Wavelength (λ, m); Định nghĩa Song ngữ Chuẩn Cambridge 0625: Khoảng cách giữa hai điểm lân cận dao động cùng pha, ví dụ hai đỉnh sóng hoặc hai tâm vùng nén liên tiếp. Đại lượng (Term & Unit): Tần số — Frequency ( f , Hz); Định nghĩa Song ngữ Chuẩn Cambridge 0625: Số bước sóng (dao động) toàn phần truyền qua một điểm cố định trong 1 giây ( number of complete waves per second ; f = 1 / T ). Đại lượng (Term & Unit): Mặt đầu sóng — Wavefront; Định nghĩa Song ngữ Chuẩn Cambridge 0625: Đường tưởng tượng nối các điểm lân cận cùng pha (như các gợn đỉnh sóng trong khay nước), luôn vuông góc với tia truyền sóng.",
+      "duration": 117.48,
+      "startTime": 347.73,
+      "endTime": 465.21,
+      "audioUrl": "/audio/lectures/physics/3/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ A water wave in a ripple tank has a vertical distance of 6.0 cm between a crest and an adjacent trough. The horizontal distance across 3 complete waves is 24 cm . Which row gives the correct amplitude and wavelength of the water wave, and the correct wave type for a seismic P-wave ? A. Amplitude = 3.0 cm • Wavelength = 8.0 cm • Seismic P-wave = Longitudinal B. Amplitude = 3.0 cm • Wavelength = 8.0 cm • Seismic P-wave = Transverse C. Amplitude = 6.0 cm • Wavelength = 8.0 cm • Seismic P-wave = Longitudinal D. Amplitude = 6.0 cm • Wavelength = 24 cm • Seismic P-wave = Transverse ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Amplitude A is the maximum displacement from the undisturbed rest position, which is half the crest-to-trough height: A = 6.0 cm ÷ 2 = 3.0 cm (eliminating C and D). Three complete wavelengths span 24 cm, so one wavelength λ = 24 cm ÷ 3 = 8.0 cm . Finally, seismic P-waves (primary) and sound waves are longitudinal (oscillations parallel to propagation), whereas seismic S-waves are transverse (eliminating B).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & 2 Exam Stem: A water wave in a ripple tank has a vertical distance of 6.0 cm between a crest and an adjacent trough. The horizontal distance across 3 complete waves is 24 cm . Which row gives the correct amplitude and wavelength of the water wave, and the correct wave type for a seismic P-wave ? (Một sóng nước trong khay gợn sóng có khoảng cách thẳng đứng giữa đỉnh sóng và hõm sóng kế tiếp là 6.0 cm. Khoảng cách ngang trải dài 3 bước sóng hoàn chỉnh là 24 cm. Dòng nào nêu đúng biên độ, bước sóng của sóng nước và loại sóng của sóng địa chấn sơ cấp P-wave?) A. Amplitude = 3.0 cm • Wavelength = 8.0 cm • Seismic P-wave = Longitudinal B. Amplitude = 3.0 cm • Wavelength = 8.0 cm • Seismic P-wave = Transverse C. Amplitude = 6.0 cm • Wavelength = 8.0 cm • Seismic P-wave = Longitudinal D. Amplitude = 6.0 cm • Wavelength = 24 cm • Seismic P-wave = Transverse ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Biên độ (amplitude A ) tính từ vị trí cân bằng (rest position) đến đỉnh sóng nên bằng một nửa khoảng cách đỉnh–hõm: A = 6.0 cm ÷ 2 = 3.0 cm (loại ngay C và D). Ba bước sóng dài 24 cm nên một bước sóng (wavelength λ) = 24 cm ÷ 3 = 8.0 cm . Cuối cùng, seismic P-waves (primary) và sóng âm đều là longitudinal waves (dao động song song phương truyền), còn S-waves mới là sóng ngang (loại B).",
+      "duration": 227.91,
+      "startTime": 465.21,
+      "endTime": 693.12,
+      "audioUrl": "/audio/lectures/physics/3/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE • Paper 3 & 4 Structured [5 marks] A toy rubber duck floats on a quiet pond. A wave generator creates straight water ripples travelling from left to right. The duck completes 15 full vertical oscillations in 10 s , and the horizontal distance measured from the 1st wave crest to the 5th wave crest is 2.0 m .(a) Describe the motion of the rubber duck and explain why it does not move across the pond with the ripples. [2] (b) Calculate the frequency f of the water waves, stating the correct unit. [1] (c) Calculate the wavelength λ of the water waves. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) The rubber duck oscillates vertically up and down about a fixed spot without moving horizontally across the pond [1m] , because waves transfer energy without transferring matter [1m] . (b) Frequency f = number of complete oscillations ÷ time = 15 ÷ 10 s = 1.5 Hz (unit check: oscillations s−1= Hz) [1m] . (c) Between the 1st crest and the 5th crest there are 5 − 1 = 4 complete wavelengths [1m] .λ = total distance ÷ 4 = 2.0 m ÷ 4 = 0.50 m (unit check: metres, m) [1m] . 💡 Intuition Check: Think of crests like fence posts and wavelengths like the fence panels between them: 5 posts enclose 4 panels (4 × 0.50 m = 2.0 m), and 15 bobs in 10 s makes 1.5 bobs every single second!",
+      "vi": "BÀI MẪU 2 🟦 CORE • Tự luận & Tính toán Paper 3 & 4 [5 marks] Exam Question: A toy rubber duck floats on a quiet pond as straight water ripples travel from left to right. The duck completes 15 full vertical oscillations in 10 s , and the horizontal distance from the 1st wave crest to the 5th wave crest is 2.0 m .(a) Describe the motion of the rubber duck and explain why it does not travel across the pond with the waves. (b) Calculate the frequency f of the water waves, stating the unit. (c) Calculate the wavelength λ of the water waves. (Chú vịt cao su nổi trên mặt hồ yên lặng khi các gợn sóng thẳng truyền từ trái sang phải. Vịt thực hiện 15 dao động toàn phần theo phương thẳng đứng trong 10 s, và khoảng cách ngang từ đỉnh sóng thứ 1 đến đỉnh sóng thứ 5 là 2.0 m. (a) Mô tả chuyển động của vịt và giải thích vì sao vịt không trôi sang bờ bên kia. (b) Tính tần số f kèm đơn vị. (c) Tính bước sóng λ. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Chú vịt chỉ dao động lên xuống theo phương thẳng đứng quanh một vị trí cố định mà không dịch chuyển ngang , vì sóng truyền năng lượng mà không truyền vật chất . (b) Tần số ( frequency ) f = số dao động ÷ thời gian = 15 ÷ 10 s = 1.5 Hz (kiểm tra đơn vị: dao động/s = Hz) . (c) Từ đỉnh sóng thứ 1 đến đỉnh sóng thứ 5 có 5 − 1 = 4 bước sóng hoàn chỉnh (4 complete wavelengths) .Bước sóng λ = 2.0 m ÷ 4 = 0.50 m (đơn vị chuẩn SI: m) .",
+      "duration": 212.83,
+      "startTime": 693.12,
+      "endTime": 905.95,
+      "audioUrl": "/audio/lectures/physics/3/s01_b08.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🧮 2. Phương trình Sóng & Thí nghiệm Khay gợn sóng (Wave Equation & Ripple Tank — 3.1)",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🧮 2. The Wave Equation & Ripple Tank Wavefront Behaviours (3.1).",
+      "vi": "🧮 2. Phương trình Sóng & Thí nghiệm Khay gợn sóng.",
+      "duration": 8.82,
+      "startTime": 905.95,
+      "endTime": 914.77,
+      "audioUrl": "/audio/lectures/physics/3/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture a marching band (or a four-wheel toy cart) rolling at an angle from smooth pavement (deep water) onto sticky mud (shallow water) . The wheel that hits the mud first slows down immediately , while the other wheel still on smooth pavement keeps moving fast — swinging the whole axle towards the perpendicular normal and bunching the rows closer together (shorter λ ). Crucially, the drummer never changes tempo: every row still steps to the exact same beat, so frequency f stays 100% constant !",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung một hàng quân nhạc (hoặc trục hai bánh xe đồ chơi) đang lăn xiên góc từ mặt đường nhựa nhẵn (nước sâu — deep water) sang bãi bùn lầy (nước nông — shallow water) . Bánh xe chạm bùn trước lập tức chậm lại , trong khi bánh kia còn trên đường nhựa vẫn lao nhanh — làm cả trục xe ngoặt bẻ gập về phía pháp tuyến và các hàng quân dồn sát lại gần nhau hơn ( wavelength λ giảm ). Đặc biệt, tiếng trống giữ nhịp không hề đổi: mỗi giây vẫn đúng bấy nhiêu bước chân nên tần số (frequency f ) tuyệt đối KHÔNG ĐỔI !",
+      "duration": 71.03,
+      "startTime": 914.77,
+      "endTime": 985.8,
+      "audioUrl": "/audio/lectures/physics/3/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: (3.1) Connect the equation v = f × λ to all three ripple-tank behaviours: (1) Plane Reflection — bounces at i = r ; v , f , and λ all stay unchanged ; (2) Refraction (Deep → Shallow) — water is shallower ⇒ v decreases , f is constant (set by the dipper), so λ decreases and wavefronts crowd closer; (3) Diffraction through a Narrow Gap — waves spread into circular arcs without changing v , f , or λ, with maximum spreading when gap width ≈ λ (and longer λ diffracts much further around barrier edges).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: (3.1) Kết nối phương trình v = f × λ với 3 hiện tượng mặt đầu sóng: (1) Reflection (Phản xạ phẳng) — góc tới i = góc phản xạ r ; cả v , f và λ đều giữ nguyên ; (2) Refraction (Khúc xạ Sâu → Nông) — vào vùng nước nông tốc độ v giảm , f là hằng số (do thanh rung quyết định), nên λ giảm và các mặt đầu sóng xít gần nhau; (3) Diffraction qua khe hẹp — sóng tỏa rộng không đổi v, f, λ , và loang tròn mạnh nhất khi bề rộng khe ≈ λ (còn tại mép cản, bước sóng λ càng dài thì nhiễu xạ vòng qua vật cản càng mạnh).",
+      "duration": 84.19,
+      "startTime": 985.8,
+      "endTime": 1069.99,
+      "audioUrl": "/audio/lectures/physics/3/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying frequency changes during refraction, or forgetting SI unit conversions! Frequency f is locked by the vibrating source and NEVER changes when a wave enters shallower water or glass. And before using v = fλ , always convert cm → m (÷ 100) , kHz → Hz (× 103) , and MHz → Hz (× 106) !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Ngộ nhận rằng tần số f thay đổi khi khúc xạ, hoặc quên đổi đơn vị chuẩn SI! Hãy khắc cốt ghi tâm: frequency f KHÔNG BAO GIỜ ĐỔI khi sóng truyền từ nước sâu sang nước nông (hay ánh sáng từ không khí vào thủy tinh). Và trước khi bấm máy v = fλ , luôn kiểm tra đổi cm → m (÷ 100) , kHz → Hz (× 103) , MHz → Hz (× 106) !",
+      "duration": 59.6,
+      "startTime": 1069.99,
+      "endTime": 1129.59,
+      "audioUrl": "/audio/lectures/physics/3/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Phương trình Tốc độ Truyền sóng Tổng quát (Universal Wave Speed Equation)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "v = f × λ The Universal Wave Speed Equation. Wave speed ( v ) is the speed at which energy is transferred (or a wavefront moves) through a medium: v (m/s) = f (Hz) × λ (m) , and Period T = 1 / f. Worked Example: An FM radio station broadcasts electromagnetic waves at 100 MHz (1.0 × 108Hz) at speed 3.0 × 108m/s . Calculate its wavelength λ:λ = v / f = (3.0 × 108) / (1.0 × 108) = 3.0 m .",
+      "vi": "v = f × λ Phương trình Tốc độ Truyền sóng Tổng quát. Tốc độ truyền sóng ( wave speed v ) là tốc độ lan truyền năng lượng (hoặc mặt đầu sóng) qua môi trường: v (m/s) = f (Hz) × λ (m) , và chu kỳ T = 1 / f. Ví dụ minh họa (Worked Example): Đài phát thanh FM phát sóng điện từ ở tần số 100 MHz (1.0 × 108Hz) với tốc độ 3.0 × 108m/s . Bước sóng λ bằng:λ = v / f = (3.0 × 108) / (1.0 × 108) = 3.0 m .",
+      "duration": 90.15,
+      "startTime": 1129.59,
+      "endTime": 1219.74,
+      "audioUrl": "/audio/lectures/physics/3/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "1. Phản xạ tại mặt phẳng chắn (Reflection at a Plane Surface): Góc tới i = góc p...",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "1. Reflection at a Plane Barrier: Wavefronts bounce off at equal angles ( i = r measured to the 90° normal). Speed v , frequency f , and wavelength λ all remain completely unchanged .",
+      "vi": "1. Phản xạ tại mặt phẳng chắn: Góc tới i = góc phản xạ r (luôn đo với pháp tuyến 90°). Tốc độ v , tần số f và bước sóng λ hoàn toàn không đổi .",
+      "duration": 27.42,
+      "startTime": 1219.74,
+      "endTime": 1247.16,
+      "audioUrl": "/audio/lectures/physics/3/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "2. Khúc xạ sóng nước (Refraction — Deep → Shallow): Đặt tấm kính phẳng chìm tron...",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "2. Water Refraction (Deep → Shallow): Submerging a flat glass plate creates shallower water where waves travel slower ( v decreases) . Because frequency f is strictly constant , wavelength λ becomes shorter and rays bend towards the normal .",
+      "vi": "2. Khúc xạ sóng nước: Đặt tấm kính phẳng chìm trong khay tạo vùng nước nông làm sóng truyền chậm lại ( v giảm) . Vì tần số f luôn không đổi (do nguồn rung quyết định), bước sóng λ thu ngắn lại và tia sóng lệch lại gần pháp tuyến .",
+      "duration": 32.81,
+      "startTime": 1247.16,
+      "endTime": 1279.97,
+      "audioUrl": "/audio/lectures/physics/3/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "3. Nhiễu xạ qua khe & mép cản (Supplement Diffraction): Sóng loang rộng mà không...",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "3. Supplement Diffraction Rules (Gap & Edge): Waves spread out without changing v , f , or λ. Through a gap: spreading is greatest when gap width ≈ λ . At a barrier edge: longer wavelength λ produces greater spreading into the shadow zone (why radio/sound diffract around hills/doors better than light!).",
+      "vi": "3. Nhiễu xạ qua khe & mép cản (Supplement Diffraction): Sóng loang rộng mà không đổi v, f, λ . Qua khe hở (gap): nhiễu xạ tỏa tròn cực đại khi bề rộng khe ≈ λ . Tại mép vật cản (edge): bước sóng λ càng lớn thì sóng uốn cong vào vùng bóng cản càng mạnh (giải thích vì sao sóng vô tuyến/âm thanh vòng qua đồi/cửa tốt hơn ánh sáng!).",
+      "duration": 48.75,
+      "startTime": 1279.97,
+      "endTime": 1328.72,
+      "audioUrl": "/audio/lectures/physics/3/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE & SUPPLEMENT • Paper 1 & 2 MCQ Straight water waves of frequency 5.0 Hz in a ripple tank travel at an angle from deep water into shallow water . Which row correctly states what happens to the frequency , wave speed , and wavelength in the shallow water? A. Frequency decreases • Speed decreases • Wavelength stays the same B. Frequency stays at 5.0 Hz • Speed decreases • Wavelength decreases C. Frequency stays at 5.0 Hz • Speed increases • Wavelength increases D. Frequency increases • Speed decreases • Wavelength decreases ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: The frequency is determined solely by the oscillating dipper, so f stays fixed at 5.0 Hz (eliminating A and D). Water waves travel slower in shallower water (eliminating C). Since v = fλ and f is constant, a smaller speed v forces the wavelength λ to decrease in exact proportion.",
+      "vi": "BÀI MẪU 1 🟦 CORE & SUPPLEMENT • Trắc nghiệm Paper 1 & 2 Exam Stem: Straight water waves of frequency 5.0 Hz in a ripple tank travel at an angle from deep water into shallow water . Which row correctly states what happens to the frequency , wave speed , and wavelength in the shallow water? (Sóng nước phẳng tần số 5.0 Hz trong khay gợn sóng truyền xiên góc từ vùng nước sâu sang vùng nước nông. Dòng nào mô tả đúng sự thay đổi của tần số, tốc độ truyền sóng và bước sóng ở vùng nước nông?) A. Frequency decreases • Speed decreases • Wavelength stays the same B. Frequency stays at 5.0 Hz • Speed decreases • Wavelength decreases C. Frequency stays at 5.0 Hz • Speed increases • Wavelength increases D. Frequency increases • Speed decreases • Wavelength decreases ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Tần số sóng chỉ phụ thuộc vào nguồn tạo sóng (thanh rung), nên frequency f giữ nguyên ở 5.0 Hz (loại A và D). Vào vùng nước nông (shallow water), sóng nước truyền chậm lại — speed v decreases (loại C). Vì v = fλ mà f không đổi nên khi v giảm thì wavelength λ bắt buộc giảm theo .",
+      "duration": 157.7,
+      "startTime": 1328.72,
+      "endTime": 1486.42,
+      "audioUrl": "/audio/lectures/physics/3/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Calculation & Wavefronts [6 marks] In a ripple tank, a wooden dipper vibrates 20 times in 4.0 s , generating straight wavefronts in deep water with an adjacent crest-to-crest spacing of 3.0 cm .(a) Calculate the frequency f and the wave speed v in m/s in the deep water. [3] (b) The waves pass into a shallow region above a submerged glass sheet where their speed drops to 0.10 m/s . Calculate the new wavelength λshallowin cm . [2] (c) In deep water, the waves encounter a barrier with a narrow gap of width 3.2 cm . Describe and explain the shape of the diffracted wavefronts emerging from the gap. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Frequency f = 20 ÷ 4.0 s = 5.0 Hz [1m] .Convert wavelength to SI metres: λ = 3.0 cm ÷ 100 = 0.030 m [1m] .Wave speed v = f × λ = 5.0 Hz × 0.030 m = 0.15 m/s (unit check: s−1× m = m/s) [1m] . (b) Frequency remains unchanged ( f = 5.0 Hz). Using λshallow= v shallow÷ f = 0.10 m/s ÷ 5.0 Hz = 0.020 m [1m] = 2.0 cm [1m] . (c) The emergent wavefronts spread out widely into semicircular (curved circular) arcs with unchanged spacing (3.0 cm), because the gap width (3.2 cm) is approximately equal to the wavelength (3.0 cm) [1m] . 💡 Intuition Check: Notice the clean proportional check: in shallow water the speed dropped to two-thirds of its original value (0.15 → 0.10 m/s), so at constant 5.0 Hz the wavelength also shrank to two-thirds (3.0 cm → 2.0 cm)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Tính toán & Mặt đầu sóng Paper 4 [6 marks] Exam Question: In a ripple tank, a wooden dipper vibrates 20 times in 4.0 s , generating straight wavefronts in deep water with an adjacent crest-to-crest spacing of 3.0 cm .(a) Calculate the frequency f and the wave speed v in m/s in the deep water. (b) The waves pass into a shallow region above a glass plate where their speed drops to 0.10 m/s . Calculate the new wavelength λshallowin cm . (c) In deep water, the waves hit a barrier with a narrow gap of width 3.2 cm . Describe and explain the shape of the diffracted wavefronts after passing through the gap. (Trong khay gợn sóng, thanh gỗ rung 20 lần trong 4.0 s tạo các mặt đầu sóng phẳng ở nước sâu cách nhau 3.0 cm. (a) Tính tần số f và tốc độ sóng v theo m/s. (b) Sóng đi vào vùng nước nông có tốc độ giảm còn 0.10 m/s; tính bước sóng mới theo cm. (c) Ở nước sâu, sóng gặp khe hẹp rộng 3.2 cm; mô tả và giải thích hình dạng mặt đầu sóng sau khe. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Tần số frequency f = 20 ÷ 4.0 s = 5.0 Hz .Đổi bước sóng sang mét (SI): λ = 3.0 cm ÷ 100 = 0.030 m .Tốc độ sóng wave speed v = f × λ = 5.0 Hz × 0.030 m = 0.15 m/s (kiểm tra đơn vị: s−1× m = m/s) . (b) Khi sang nước nông, tần số giữ nguyên ( f = 5.0 Hz). Ta có λshallow= v shallow÷ f = 0.10 m/s ÷ 5.0 Hz = 0.020 m = 2.0 cm .",
+      "duration": 272.81,
+      "startTime": 1486.42,
+      "endTime": 1759.23,
+      "audioUrl": "/audio/lectures/physics/3/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "👁️ 3. Ánh sáng: Gương phẳng, Định luật Snell, Phản xạ toàn phần, Thấu kính, Tật mắt & Tán sắc (",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "👁️ 3. Light: Plane Mirrors, Snell's Law, TIR, Thin Lenses, Eye Defects & Dispersion (3.2).",
+      "vi": "👁️ 3. Ánh sáng: Gương phẳng, Định luật Snell, Phản xạ toàn phần, Thấu kính, Tật mắt & Tán sắc (3.2).",
+      "duration": 16.12,
+      "startTime": 1759.23,
+      "endTime": 1775.35,
+      "audioUrl": "/audio/lectures/physics/3/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Draw a dashed 90° perpendicular fence post (the Normal) at the exact point a light ray hits a mirror or glass block — every angle in optics is measured from that fence post, NEVER from the surface! Entering denser glass slows light down so it steers towards the normal ; trying to exit glass at an angle steeper than the critical angle c turns the boundary into a 100% mirror ( Total Internal Reflection in optical fibres). For eye defects: a short-sighted eye focuses too strongly (in front of the retina, needing a diverging lens to spread rays slightly), whereas a long-sighted eye focuses too weakly (behind the retina, needing a converging lens).",
+      "vi": "🎯 Hình dung đời thường: Ngay tại điểm tia sáng chạm mặt gương hay khối kính, hãy dựng ngay một cọc tiêu nét đứt vuông góc 90° (pháp tuyến — Normal) : MỌI góc quang học ( i, r, c ) đều đo từ pháp tuyến này, TUYỆT ĐỐI không đo với mặt gương! Đi vào kính đặc hơn làm ánh sáng chậm lại nên bẻ lại gần pháp tuyến ; đi từ kính ra không khí với góc lớn hơn critical angle c sẽ phản xạ toàn phần (TIR) trong cáp quang. Với tật mắt: cận thị (short-sightedness) hội tụ quá mạnh trước võng mạc nên cần thấu kính phân kỳ (diverging lens) loe bớt tia sáng; còn viễn thị (long-sightedness) hội tụ quá yếu sau võng mạc nên cần thấu kính hội tụ (converging lens) hỗ trợ!",
+      "duration": 90.88,
+      "startTime": 1775.35,
+      "endTime": 1866.23,
+      "audioUrl": "/audio/lectures/physics/3/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: (3.2) Five linked sub-topics: (1) Plane Mirror — i = r , virtual image same size & distance; (2) Snell's Law & TIR — n = sin i / sin r = c / v and n = 1 / sin c ; TIR needs denser → less dense medium AND i > c ; (3) Thin Lenses — converging ( u > f real/inverted; u < f magnifying glass: enlarged/upright/virtual) vs. diverging (spreads parallel beam from virtual F ); (4) Eye Correction — myopia → diverging, hyperopia → converging; (5) Dispersion — ROYGBIV (Violet highest f /bends most; single-frequency laser = monochromatic ).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: (3.2) Năm mạch kiến thức liên hoàn: (1) Plane Mirror — i = r , ảnh ảo đối xứng bằng vật; (2) Định luật Snell & TIR — n = sin i / sin r = c / v và n = 1 / sin c (TIR cần đặc → loãng VÀ i > c ); (3) Thin Lenses — TK hội tụ ( u > f ảnh thật ngược chiều; u < f kính lúp cho ảnh ảo, cùng chiều, phóng đại) vs. TK phân kỳ (loe chùm song song từ tiêu điểm ảo F ); (4) Eye Defects — cận thị dùng diverging, viễn thị dùng converging; (5) Dispersion — ROYGBIV (Tím tần số cao nhất, lệch nhiều nhất; ánh sáng đơn tần laser = monochromatic ).",
+      "duration": 97.14,
+      "startTime": 1866.23,
+      "endTime": 1963.37,
+      "audioUrl": "/audio/lectures/physics/3/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Measuring angles from the mirror or block surface instead of the 90° Normal! If a ray makes an angle of 35° with the mirror surface , DO NOT write i = 35°! Subtract from 90° first: i = 90° − 35° = 55° . Also check your calculator is in DEGREE (DEG) mode before pressing sin or sin−1 !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Lấy nhầm góc hợp với mặt gương làm góc tới i ! Nếu tia tới hợp với mặt gương góc 35° thì góc tới chuẩn đo từ pháp tuyến là i = 90° − 35° = 55° ! Ngoài ra, luôn kiểm tra máy tính cầm tay đang ở chế độ ĐỘ (DEG) trước khi bấm sin hay sin−1 !",
+      "duration": 51.34,
+      "startTime": 1963.37,
+      "endTime": 2014.71,
+      "audioUrl": "/audio/lectures/physics/3/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "🪞 3.2.1 Phản xạ Gương phẳng & Ảnh ảo (Plane Mirror)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "🪞 3.2.1 Plane Mirror Reflection & Virtual Image. Law of Reflection: Angle of incidence i = angle of reflection r (both measured strictly from the 90° normal , NEVER from the mirror surface!). 5 Properties of a Plane Mirror Image: (1) Same size as object, (2) Same perpendicular distance behind mirror as object is in front, (3) Upright , (4) Laterally inverted (left–right swapped), and (5) Virtual (rays only appear to diverge from behind the mirror; cannot be projected onto a screen).",
+      "vi": "🪞 3.2.1 Phản xạ Gương phẳng & Ảnh ảo (Plane Mirror). Định luật Phản xạ: Góc tới i = góc phản xạ r (luôn đo từ pháp tuyến vuông góc 90° — normal , TUYỆT ĐỐI không đo với mặt gương!). 5 Đặc điểm Ảnh tạo bởi Gương phẳng: (1) Cùng kích thước (same size) với vật, (2) Cùng khoảng cách vuông góc (same distance d ) sau gương như vật trước gương, (3) Cùng chiều (upright) , (4) Đảo ngược trái-phải (laterally inverted) , và (5) Ảnh ảo (virtual) — tạo bởi đường kéo dài nét đứt sau gương, không hứng được trên màn chắn.",
+      "duration": 72.33,
+      "startTime": 2014.71,
+      "endTime": 2087.04,
+      "audioUrl": "/audio/lectures/physics/3/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "Chiết suất & Định luật Snell n = sin i / sin r = c / v",
+      "selector": "[data-lecture-section=\"s03_b05\"], [data-lecture-section=\"s03_grp05\"]",
+      "en": "Core & Supplement 3.2.2 📐 Snell's Law, Critical Angle & Total Internal Reflection (TIR). Snell's Law & Speeds n = sin i / sin r = c / v Critical Angle ( r = 90°) sin c = 1 / n ⇔ n = 1 / sin c Optical Fibre & Semicircular",
+      "vi": "Chiết suất & Định luật Snell n = sin i / sin r = c / v",
+      "duration": 25.33,
+      "startTime": 2087.04,
+      "endTime": 2112.37,
+      "audioUrl": "/audio/lectures/physics/3/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Góc tới hạn (Critical Angle, r = 90°) sin c = 1 / n ⇔ n = 1 / sin c",
+      "selector": "[data-lecture-section=\"s03_b06\"], [data-lecture-section=\"s03_grp05\"]",
+      "en": "Block SVG • Two Mandatory Conditions for TIR: (1) Ray travels from an optically denser to a less dense medium (glass → air), AND (2) angle of incidence i > critical angle c (for glass n = 1.50 ⇒ c = sin−1(1/1.50) = 41.8° ≈ 42° ).• Worked Example: Light enters glass",
+      "vi": "Góc tới hạn (Critical Angle, r = 90°) sin c = 1 / n ⇔ n = 1 / sin c",
+      "duration": 36.08,
+      "startTime": 2112.37,
+      "endTime": 2148.45,
+      "audioUrl": "/audio/lectures/physics/3/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "• Hai điều kiện BẮT BUỘC của Phản xạ toàn phần (TIR): (1) Ánh sáng truyền từ môi...",
+      "selector": "[data-lecture-section=\"s03_b07\"], [data-lecture-section=\"s03_grp05\"]",
+      "en": "( n = 1.52) from air at i = 45°: sin r = sin 45° / 1.52 = 0.465 ⇒ r = 27.7° (bends towards normal).• Supplement Optical Fibres: Used in medical endoscopes and high-speed telecommunications (glass core carries infrared/visible laser pulses via repeated TIR: huge bandwidth, tiny signal loss, immune to electrical interference!).",
+      "vi": "• Hai điều kiện BẮT BUỘC của Phản xạ toàn phần (TIR): (1) Ánh sáng truyền từ môi trường chiết quang hơn sang kém chiết quang hơn (thủy tinh → không khí), VÀ (2) góc tới i > góc tới hạn c (thủy tinh n = 1.50 ⇒ c = sin−1(1/1.50) = 41.8° ≈ 42° ).• Ví dụ tính nhanh: Tia sáng từ không khí vào thủy tinh ( n = 1.52) với i = 45°: sin r = sin 45° / 1.52 = 0.465 ⇒ r = 27.7° (khúc xạ lại gần pháp tuyến).• Cáp quang: Ứng dụng trong nội soi y tế (endoscopes) và viễn thông băng thông rộng (telecommunications) truyền xung laser hồng ngoại/ánh sáng nhìn thấy nhờ phản xạ toàn phần liên tiếp (tốc độ dữ liệu cực cao, ít suy hao, không bị nhiễu điện từ!).",
+      "duration": 91.96,
+      "startTime": 2148.45,
+      "endTime": 2240.41,
+      "audioUrl": "/audio/lectures/physics/3/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🔬 Thí nghiệm Khúc xạ qua Khối trong suốt (Transparent Blocks — Ray Box / Optical...",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "🔬 Core Practical — Refraction by Transparent Blocks (Ray Box / Optical Pins): Trace the outline of a rectangular Perspex/glass block (or semicircular/triangular block) on white paper. Shine a narrow ray from a ray box at an angle (or align two optical pins on each side of the block), mark the entry and exit points, draw the 90° normals at both boundaries, and measure i and r with a protractor. Entering glass (air → glass), light slows down and bends towards the normal ( r < i ); exiting into air (glass → air), light speeds up and bends away from the normal so the emergent ray from a parallel-sided rectangular block is parallel to the incident ray (laterally displaced). Plotting sin i against sin r gives a straight line through the origin of gradient n .",
+      "vi": "🔬 Thí nghiệm Khúc xạ qua Khối trong suốt: Đặt khối thủy tinh/Perspex chữ nhật (hoặc bán nguyệt) lên giấy trắng, chiếu tia sáng hẹp từ hộp tia sáng (hoặc cắm đinh ghim quang học), đánh dấu điểm vào/ra, kẻ pháp tuyến 90° và đo góc i, r . Khi vào khối đặc hơn (không khí → kính), ánh sáng chậm lại và lệch lại gần pháp tuyến ( r < i ); khi ló ra không khí, ánh sáng nhanh lên và lệch ra xa pháp tuyến khiến tia ló khỏi bản mặt song song song song với tia tới ban đầu . Đồ thị sin i theo sin r là đường thẳng qua gốc tọa độ có hệ số góc bằng chiết suất n .",
+      "duration": 89.48,
+      "startTime": 2240.41,
+      "endTime": 2329.89,
+      "audioUrl": "/audio/lectures/physics/3/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🔍 3.2.3 Thấu kính Hội tụ & Thấu kính Phân kỳ (Thin Converging & Diverging Lenses)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "🔍 3.2.3 Thin Converging (Convex) & Diverging (Concave) Lenses. • Principal Axis: Straight line passing symmetrically through the centres of curvature and the optical centre ( C ) of the lens.• Principal Focus / Focal Point ( F ): For a thin converging lens , the point on the principal axis to which rays initially parallel to the principal axis converge after refraction. For a thin diverging lens , the point on the principal axis from which rays initially parallel to the principal axis appear to diverge after refraction.• Focal Length ( f ): Distance between the optical centre ( C ) and the principal focus ( F ) .• Three Standard Construction Rays (Converging Lens): (1) Ray parallel to principal axis refracts through far F ; (2) Ray through optical centre C continues undeviated in a straight line; (3) Ray through near F refracts parallel to the principal axis.",
+      "vi": "🔍 3.2.3 Thấu kính Hội tụ & Thấu kính Phân kỳ. • Trục chính (Principal Axis): Đường thẳng đi qua quang tâm C (optical centre) và vuông góc với mặt thấu kính.• Tiêu điểm chính — Principal Focus / Focal Point ( F ): Với thấu kính hội tụ , là điểm trên trục chính mà chùm tia tới song song với trục chính hội tụ tại đó sau khúc xạ. Với thấu kính phân kỳ , là điểm trên trục chính mà chùm tia tới song song có đường kéo dài phát xuất từ đó .• Tiêu cự — Focal Length ( f ): Khoảng cách từ quang tâm ( C ) đến tiêu điểm chính ( F ) .• 3 Tia sáng đặc biệt qua Thấu kính Hội tụ: (1) Tia song song trục chính khúc xạ đi qua tiêu điểm F phía bên kia; (2) Tia đi qua quang tâm C truyền thẳng không đổi hướng; (3) Tia qua tiêu điểm F phía trước ló ra song song với trục chính.",
+      "duration": 112.45,
+      "startTime": 2329.89,
+      "endTime": 2442.34,
+      "audioUrl": "/audio/lectures/physics/3/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "1. TK Hội tụ: Ảnh thật (Real Image, u > f ) Các tia ló thực sự cắt nhau hứng đượ...",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "1. Converging Lens: Real Image ( u > f ) Refracted rays physically intersect on a screen: always real & inverted ( u > 2 f : diminished [camera/eye]; u = 2 f : same size; f < u < 2 f : enlarged [projector]).",
+      "vi": "1. TK Hội tụ: Ảnh thật (Real Image, u > f ) Các tia ló thực sự cắt nhau hứng được trên màn: luôn là ảnh thật, ngược chiều (real & inverted) ( u > 2 f : nhỏ hơn vật [máy ảnh/mắt]; u = 2 f : bằng vật; f < u < 2 f : phóng đại [máy chiếu]).",
+      "duration": 41.09,
+      "startTime": 2442.34,
+      "endTime": 2483.43,
+      "audioUrl": "/audio/lectures/physics/3/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "2. Kính lúp — Magnifying Glass ( u < f ) Supplement: Đặt vật trong khoảng tiêu c...",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "2. Supplement Magnifying Glass ( u < f ) Object placed closer than F ( u < f ): emergent rays diverge and are extrapolated backwards (dashed) to form an enlarged, upright, virtual image on the same side (cannot be projected on a screen).",
+      "vi": "2. Kính lúp — Magnifying Glass ( u < f ) Supplement: Đặt vật trong khoảng tiêu cự ( u < f ): chùm tia ló phân kỳ , kéo dài ngược lại (nét đứt) cắt nhau tạo ảnh ảo, cùng chiều, phóng đại lớn hơn vật — không hứng được trên màn!",
+      "duration": 35.61,
+      "startTime": 2483.43,
+      "endTime": 2519.04,
+      "audioUrl": "/audio/lectures/physics/3/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "3. Thấu kính Phân kỳ (Diverging Lens) Phần rìa dày, phần giữa mỏng: làm loe rộng...",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "3. Diverging (Concave) Lens Action Thinner at the centre than the edges: spreads out a parallel beam so refracted rays appear to diverge from principal focus F . Always forms a diminished, upright, virtual image .",
+      "vi": "3. Thấu kính Phân kỳ (Diverging Lens) Phần rìa dày, phần giữa mỏng: làm loe rộng chùm tia tới song song sao cho các tia ló có đường kéo dài đi qua tiêu điểm chính F . Luôn cho ảnh ảo, cùng chiều, nhỏ hơn vật .",
+      "duration": 30.86,
+      "startTime": 2519.04,
+      "endTime": 2549.9,
+      "audioUrl": "/audio/lectures/physics/3/s03_b12.mp3"
+    },
+    {
+      "id": "s03_b13",
+      "title": "1. Cận thị (Short-Sightedness) → Đeo Thấu kính Phân kỳ Nhìn rõ vật ở gần nhưng m...",
+      "selector": "[data-lecture-section=\"s03_b13\"]",
+      "en": "1. Short-Sightedness (Myopia) → Diverging Lens Can see near objects clearly , but distant objects look blurred because eyeball is too long or eye lens is too powerful (thick), bringing parallel rays from distant objects to a focus in front of the retina . Corrected by a diverging (concave) lens that diverges rays slightly before entering the eye.",
+      "vi": "1. Cận thị (Short-Sightedness) → Đeo Thấu kính Phân kỳ Nhìn rõ vật ở gần nhưng mờ vật ở xa do nhãn cầu quá dài hoặc thủy tinh thể quá phồng, làm tia sáng song song từ xa hội tụ trước võng mạc . Sửa bằng thấu kính phân kỳ làm loe nhẹ tia sáng trước khi vào mắt.",
+      "duration": 40.39,
+      "startTime": 2549.9,
+      "endTime": 2590.29,
+      "audioUrl": "/audio/lectures/physics/3/s03_b13.mp3"
+    },
+    {
+      "id": "s03_b14",
+      "title": "2. Viễn thị (Long-Sightedness) → Đeo Thấu kính Hội tụ Nhìn rõ vật ở xa nhưng mờ ...",
+      "selector": "[data-lecture-section=\"s03_b14\"]",
+      "en": "2. Long-Sightedness (Hyperopia) → Converging Lens Can see distant objects clearly , but near objects look blurred because eyeball is too short or eye lens is too weak (thin), so diverging rays from nearby objects would converge behind the retina . Corrected by a converging (convex) lens that adds extra converging power before rays enter the eye.",
+      "vi": "2. Viễn thị (Long-Sightedness) → Đeo Thấu kính Hội tụ Nhìn rõ vật ở xa nhưng mờ vật ở gần do nhãn cầu quá ngắn hoặc thủy tinh thể quá dẹt (yếu), khiến chùm phân kỳ từ vật gần hội tụ sau võng mạc (behind retina) . Sửa bằng thấu kính hội tụ giúp hội tụ bớt tia sáng trước khi vào mắt.",
+      "duration": 43.11,
+      "startTime": 2590.29,
+      "endTime": 2633.4,
+      "audioUrl": "/audio/lectures/physics/3/s03_b14.mp3"
+    },
+    {
+      "id": "s03_b15",
+      "title": "🌈 3.2.4 Tán sắc Ánh sáng Trắng qua Lăng kính & Ánh sáng Đơn sắc (Dispersion & Monochromatic Lig",
+      "selector": "[data-lecture-section=\"s03_b15\"]",
+      "en": "🌈 3.2.4 Dispersion of White Light by a Prism & Monochromatic Light. • 7 Colours of the Visible Spectrum (ROYGBIV): Red → Orange → Yellow → Green → Blue → Indigo → Violet • Order of Wavelength (λ): Red has the longest λ (~700 nm), slows down least in glass, and refracts/deviates least . Violet has the shortest λ (~400 nm).• Order of Frequency ( f ): Red has the lowest frequency f ; Violet has the highest frequency f , slows down most in glass (highest refractive index n ), and refracts/deviates most .• Supplement — Monochromatic Light: Visible light consisting of a single frequency (and therefore a single wavelength in a given medium, e.g., laser light), which refracts at one angle without dispersing into a spectrum.",
+      "vi": "🌈 3.2.4 Tán sắc Ánh sáng Trắng qua Lăng kính & Ánh sáng Đơn sắc. • 7 Màu Quang phổ Nhìn thấy (ROYGBIV): Đỏ (Red) → Cam (Orange) → Vàng (Yellow) → Lục (Green) → Lam (Blue) → Chàm (Indigo) → Tím (Violet) • Thứ tự Bước sóng (λ): Ánh sáng Đỏ có bước sóng dài nhất (~700 nm), giảm tốc ít nhất trong thủy tinh nên khúc xạ/lệch ít nhất . Ánh sáng Tím có bước sóng ngắn nhất (~400 nm).• Thứ tự Tần số ( f ): Đỏ có tần số thấp nhất ; Tím có tần số cao nhất , giảm tốc mạnh nhất trong thủy tinh (chiết suất n lớn nhất) nên khúc xạ/lệch nhiều nhất .• Supplement — Ánh sáng Đơn sắc (Monochromatic Light): Ánh sáng có duy nhất một tần số (single frequency) (ví dụ tia laser), khi qua lăng kính chỉ khúc xạ mà không bị tán sắc.",
+      "duration": 110.12,
+      "startTime": 2633.4,
+      "endTime": 2743.52,
+      "audioUrl": "/audio/lectures/physics/3/s03_b15.mp3"
+    },
+    {
+      "id": "s03_b16",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b16\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A ray of light strikes a plane mirror so that the glancing angle between the incident ray and the mirror surface is 35° . Separately, a short-sighted student cannot focus clearly on distant road signs. Which row gives the correct angle of reflection at the mirror and the correct spectacle lens needed to correct short-sightedness? A. Angle of reflection = 35° • Spectacle lens = Converging (convex) B. Angle of reflection = 35° • Spectacle lens = Diverging (concave) C. Angle of reflection = 55° • Spectacle lens = Converging (convex) D. Angle of reflection = 55° • Spectacle lens = Diverging (concave) ✅ Correct Answer: D 🧠 Step-by-Step Reasoning: Angles in optics are measured strictly from the 90° normal : i = 90° − 35° = 55° , so angle of reflection r = i = 55° (eliminating A and B). In short-sightedness (myopia) , parallel rays from distant objects converge too strongly in front of the retina , so a diverging (concave) lens is required to spread the rays slightly before entering the eye (eliminating C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Trắc nghiệm Paper 2 Exam Stem: A ray of light strikes a plane mirror so that the angle between the incident ray and the mirror surface is 35° . Separately, a short-sighted student cannot focus clearly on distant road signs. Which row gives the correct angle of reflection at the mirror and the correct lens needed to correct short-sightedness? (Tia sáng chiếu tới gương phẳng sao cho góc giữa tia tới và MẶT GƯƠNG là 35°. Ngoài ra, một học sinh bị cận thị không nhìn rõ biển báo ở xa. Dòng nào nêu đúng góc phản xạ trên gương và loại thấu kính đeo để khắc phục tật cận thị?) A. Angle of reflection = 35° • Lens = Converging (convex) lens B. Angle of reflection = 35° • Lens = Diverging (concave) lens C. Angle of reflection = 55° • Lens = Converging (convex) lens D. Angle of reflection = 55° • Lens = Diverging (concave) lens ✅ Đáp án đúng: D 🧠 Giải thích & Cách loại bẫy: Góc tới luôn đo từ pháp tuyến 90° (normal) : i = 90° − 35° = 55° ⇒ góc phản xạ r = i = 55° (loại A và B). Ở mắt cận thị (short-sightedness) , chùm tia song song từ vật ở xa bị hội tụ quá sớm trước võng mạc , nên phải đeo thấu kính phân kỳ để làm loe nhẹ tia sáng trước khi vào mắt (loại C).",
+      "duration": 186.71,
+      "startTime": 2743.52,
+      "endTime": 2930.23,
+      "audioUrl": "/audio/lectures/physics/3/s03_b16.mp3"
+    },
+    {
+      "id": "s03_b17",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b17\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Snell's Law, TIR & Lenses [6 marks] A ray of monochromatic red laser light in air strikes a flat glass block of refractive index n = 1.50 at an angle of incidence i = 48° .(a) Calculate the angle of refraction r inside the glass block. [2] (b) Calculate the critical angle c of this glass. [2] (c) Inside an optical fibre made of the same glass ( n = 1.50), the laser pulse strikes the core–air boundary at an angle of incidence of 50° . State and explain what happens to the ray, and state the three characteristics of the image formed when a thin converging lens is used as a magnifying glass. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Using n = sin i ÷ sin r ⇒ sin r = sin 48° ÷ 1.50 = 0.7431 ÷ 1.50 = 0.4954 [1m] . r = sin−1(0.4954) = 29.7° (or 30° to 2 s.f.; unit: degrees) [1m] . (b) Using n = 1 ÷ sin c ⇒ sin c = 1 ÷ 1.50 = 0.6667 [1m] . c = sin−1(0.6667) = 41.8° (or 42° to 2 s.f.) [1m] . (c) Because the ray travels in the optically denser glass towards air with i = 50° > c (41.8°), it undergoes total internal reflection (TIR) back into the core [1m] . A magnifying glass ( u < f ) forms an enlarged, upright, virtual image [1m] . 💡 Intuition Check: Sanity check: entering glass bends the ray closer to the normal (29.7° < 48°), and inside the fibre 50° exceeds the 41.8° critical threshold so zero light escapes through the side wall!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Định luật Snell, TIR & Thấu kính Paper 4 [6 marks] Exam Question: A ray of monochromatic red laser light in air strikes a flat glass block of refractive index n = 1.50 at an angle of incidence i = 48° .(a) Calculate the angle of refraction r inside the glass block. (b) Calculate the critical angle c of this glass. (c) Inside an optical fibre made of the same glass ( n = 1.50), the laser pulse strikes the core–air boundary at an angle of incidence of 50° . State and explain what happens to the ray, and state three characteristics of the image formed by a magnifying glass. (Tia laser đỏ đơn sắc từ không khí chiếu vào khối thủy tinh phẳng chiết suất n = 1.50 với góc tới i = 48°. (a) Tính góc khúc xạ r. (b) Tính góc tới hạn c của thủy tinh. (c) Trong sợi cáp quang cùng loại kính, tia sáng đập vào mặt phân cách lõi–không khí ở góc tới 50°; nêu kèm giải thích hiện tượng xảy ra, và nêu 3 đặc điểm ảnh của kính lúp. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Theo định luật Snell n = sin i ÷ sin r ⇒ sin r = sin 48° ÷ 1.50 = 0.7431 ÷ 1.50 = 0.4954 . r = sin−1(0.4954) = 29.7° (hoặc 30° làm tròn 2 s.f.) . (b) Áp dụng n = 1 ÷ sin c ⇒ sin c = 1 ÷ 1.50 = 0.6667 .Góc tới hạn c = sin−1(0.6667) = 41.8° (hoặc 42° ) . (c) Vì tia sáng truyền từ thủy tinh đặc hơn ra phía không khí với góc tới i = 50° > c (41.8°) nên xảy ra phản xạ toàn phần vào lại lõi .",
+      "duration": 270.6,
+      "startTime": 2930.23,
+      "endTime": 3200.83,
+      "audioUrl": "/audio/lectures/physics/3/s03_b17.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "📡 4. Thang Sóng Điện từ, Vệ tinh & Tín hiệu Số (EM Spectrum & Digital Signals — 3.3)",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "📡 4. The Electromagnetic Spectrum, Communications & Digital Signals (3.3).",
+      "vi": "📡 4. Thang Sóng Điện từ, Vệ tinh & Tín hiệu Số.",
+      "duration": 10.0,
+      "startTime": 3200.83,
+      "endTime": 3210.83,
+      "audioUrl": "/audio/lectures/physics/3/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture all 7 electromagnetic bands as seven runners locked at the exact same cosmic speed limit in space: c = 3.0 × 108m/s ! Radio waves take giant, lazy strides (longest λ, lowest f ), while Gamma rays take microscopic, ultra-rapid steps (shortest λ, highest f , packing ionising punch). And for Digital vs. Analogue signals: sending an analogue wave long-distance is like photocopying a photocopy (every smudge of noise gets amplified!), whereas a digital signal (1s and 0s) is like re-typing crisp text at each repeater station ( clean signal regeneration )!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung 7 vùng sóng điện từ như 7 vận động viên khóa chặt ở cùng một tốc độ ánh sáng trong chân không: c = 3.0 × 108m/s ! Anh Radio bước sải dài nhịp chậm (λ dài nhất, f thấp nhất), còn anh Gamma guồng bước siêu ngắn nhịp cực nhanh (λ ngắn nhất, f cao nhất). Và để hiểu Digital vs. Analogue : truyền tín hiệu analogue đi xa giống như photocopy đi photocopy lại một bức ảnh (mọi vết bẩn nhiễu đều bị phóng to theo!), còn tín hiệu digital (chỉ gồm số 1 và 0) giống như đánh máy lại văn bản mới tinh tại mỗi trạm lặp ( accurate signal regeneration — sạch bóng nhiễu)!",
+      "duration": 87.77,
+      "startTime": 3210.83,
+      "endTime": 3298.6,
+      "audioUrl": "/audio/lectures/physics/3/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: (3.3) Master four pillars: (1) Order (Low f → High f ) — R ich M en I n V enus U se X -ray G lasses ; (2) Universal Vacuum Speed — 3.0 × 108m/s in vacuum/air for ALL EM waves; (3) Uses & Hazards — match all 7 bands + microwave internal heating, IR burns, UV skin/eye damage, X-ray/gamma cell mutation; (4) Communications & Digital (Supplement) — satellites & phones use microwaves (geostationary 24 h vs low-orbit), Bluetooth uses radio waves, optical fibres use IR/visible, and digital signalling gives higher data rates + accurate regeneration .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: (3.3) Bốn trụ cột điểm tuyệt đối: (1) Thứ tự tăng dần f (giảm dần λ) — R ich M en I n V enus U se X -ray G lasses ; (2) Tốc độ chung — 3.0 × 108m/s trong chân không & không khí; (3) Ứng dụng & Tác hại — nóng trong tế bào (micro), bỏng da (IR), ung thư da/hại mắt (UV), đột biến tế bào (X-ray/gamma); (4) Viễn thông & Digital (Supplement) — vệ tinh địa tĩnh 24h vs quỹ đạo thấp dùng microwaves , Bluetooth dùng radio waves , cáp quang dùng IR/visible , và tín hiệu số giúp tăng tốc độ dữ liệu + tái tạo sạch nhiễu (accurate regeneration) .",
+      "duration": 97.46,
+      "startTime": 3298.6,
+      "endTime": 3396.06,
+      "audioUrl": "/audio/lectures/physics/3/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Saying gamma rays travel faster than radio waves in a vacuum, or saying repeaters \"filter\" analogue noise! In a vacuum, ALL electromagnetic waves travel at 3.0 × 108m/s . And when explaining digital range, use the exact Cambridge phrase: accurate signal regeneration removes noise (amplifying an analogue signal amplifies the noise too!).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Nói tia Gamma truyền nhanh hơn sóng Radio trong chân không, hoặc quên cụm từ khóa \"signal regeneration\"! Mọi sóng điện từ trong chân không đều có c = 3.0 × 108m/s . Khi giải thích vì sao tín hiệu số truyền đi xa hơn, bắt buộc nêu đúng cụm chuẩn Mark Scheme: accurate signal regeneration (khôi phục xung sạch nhiễu, trong khi khuếch đại analogue làm khuếch đại luôn cả nhiễu)!",
+      "duration": 57.72,
+      "startTime": 3396.06,
+      "endTime": 3453.78,
+      "audioUrl": "/audio/lectures/physics/3/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "📡 Thanh Khám phá Thang Sóng Điện từ Tương tác (Interactive EM Spectrum)",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "📡 Interactive Electromagnetic (EM) Spectrum Explorer. Shared Properties of ALL EM Waves: Transverse waves that travel through a vacuum without needing a medium at the universal speed c = 3.0 × 108m/s (and approximately 3.0 × 108m/s in air ; Supplement). Spectrum Bar Radio Micro IR Visible UV X-ray Gamma ← Longest Wavelength (λ) • Lowest Frequency ( f ) Shortest Wavelength (λ) • Highest Frequency ( f ) & Ionising Energy → Info Panel Order of increasing frequency (decreasing wavelength): Radio waves → Microwaves → Infrared → Visible light → Ultraviolet → X-rays → Gamma rays . Because c = fλ is constant in vacuum (3.0 × 108m/s), higher frequency always means shorter wavelength! Hidden text blocksCompact Static Summary Table so all 7 bands are always visible for revision EM Region: Radio waves; Key 0625 Syllabus Applications: Radio & TV transmissions, astronomy, RFID, Bluetooth; Harmful Effects of Excessive Exposure: None at normal levels (non-ionising). EM Region: Microwaves; Key 0625 Syllabus Applications: Satellite TV, mobile (cell) phones, Wi-Fi, microwave ovens; Harmful Effects of Excessive Exposure: Internal heating of body cells. EM Region: Infrared (IR); Key 0625 Syllabus Applications: Electric grills, TV remotes, intruder alarms, thermal imaging, optical fibres; Harmful Effects of Excessive Exposure: Skin burns. EM Region: Visible light; Key 0625 Syllabus Applications: Vision, photography, illumination, optical fibres; Harmful Effects of Excessive Exposure: Retinal damage from intense beams.",
+      "vi": "📡 Thanh Khám phá Thang Sóng Điện từ Tương tác. Tính chất chung của MỌI Sóng điện từ: Đều là sóng ngang (transverse waves) , truyền được trong chân không không cần môi trường vật chất với cùng tốc độ ánh sáng c = 3.0 × 108m/s (và xấp xỉ 3.0 × 108m/s trong không khí ; Supplement). Spectrum Bar Radio Micro IR Visible UV X-ray Gamma ← Bước sóng dài nhất (λ) • Tần số thấp nhất ( f ) Bước sóng ngắn nhất (λ) • Tần số cao nhất ( f ) & Ion hóa mạnh → Info Panel Thứ tự tăng dần tần số (giảm dần bước sóng): Sóng vô tuyến (Radio) → Vi ba (Microwaves) → Hồng ngoại (IR) → Ánh sáng nhìn thấy (Visible) → Tử ngoại (UV) → Tia X (X-rays) → Tia Gamma . Vì c = fλ không đổi nên tần số càng cao thì bước sóng càng ngắn! Hidden text blocksCompact Static Bilingual Summary Table Vùng sóng (EM Region): Radio waves (Vô tuyến); Ứng dụng Trọng tâm 0625 (Typical Uses): Phát thanh/TV, thiên văn học (astronomy), RFID, Bluetooth; Tác hại Phơi nhiễm (Harmful Effects): Không gây ion hóa ở mức thường. Vùng sóng (EM Region): Microwaves (Vi ba); Ứng dụng Trọng tâm 0625 (Typical Uses): Truyền hình vệ tinh, điện thoại di động, Wi-Fi, lò vi sóng; Tác hại Phơi nhiễm (Harmful Effects): Nóng bên trong tế bào. Vùng sóng (EM Region): Infrared — IR (Hồng ngoại); Ứng dụng Trọng tâm 0625 (Typical Uses): Bếp nướng điện, điều khiển TV, báo trộm, ảnh nhiệt, cáp quang; Tác hại Phơi nhiễm (Harmful Effects): Bỏng da (skin burns).",
+      "duration": 242.47,
+      "startTime": 3453.78,
+      "endTime": 3696.25,
+      "audioUrl": "/audio/lectures/physics/3/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🛰️ Vệ tinh Nhân tạo & Hệ thống Viễn thông Hiện đại",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "Core & Supplement 3.3 🛰️ Satellites & Modern Communication Systems. Artificial Satellites use Microwaves (which pass straight through Earth's atmosphere/ionosphere):• Low-orbit artificial satellites (altitude ~200–2000 km, short signal delay, move relative to ground): used by some satellite phones .• Geostationary satellites (24-hour equatorial orbit ~36,000 km, stay fixed above one point so dish aerials need not track): used for direct broadcast satellite television and some satellite phones. Mobile Phones & Wireless Internet (Wi-Fi): Use microwaves because they penetrate some walls and require only a short aerial for transmission and reception. Bluetooth: Uses radio waves because they pass through walls , although the signal is weakened on doing so (limiting range to ~10 m, reducing interference with neighbours). Optical Fibres (Cable TV & High-Speed Broadband): Use visible light or short-wavelength infrared because glass is transparent to them and their ultra-high frequencies carry very high rates of data.",
+      "vi": "Core & Supplement 3.3 🛰️ Vệ tinh Nhân tạo & Hệ thống Viễn thông Hiện đại. Vệ tinh Nhân tạo dùng Sóng Vi ba (Microwaves) xuyên qua tầng điện ly:• Vệ tinh quỹ đạo thấp (Low-orbit satellites , cao ~200–2000 km, độ trễ thấp): dùng cho một số điện thoại vệ tinh (satellite phones) .• Vệ tinh địa tĩnh (Geostationary satellites , chu kỳ 24h ở độ cao ~36,000 km đứng yên trên một điểm xích đạo): dùng cho truyền hình vệ tinh trực tiếp và một số điện thoại vệ tinh. Điện thoại di động & Wi-Fi (Supplement): Dùng sóng vi ba (microwaves) vì xuyên qua được một số bức tường và chỉ cần ăng-ten ngắn (short aerial). Bluetooth (Supplement): Dùng sóng vô tuyến (radio waves) vì đi xuyên qua tường nhưng tín hiệu bị suy yếu (giới hạn phạm vi ngắn, giảm nhiễu lân cận). Cáp quang — Truyền hình cáp & Internet tốc độ cao: Dùng ánh sáng nhìn thấy hoặc hồng ngoại bước sóng ngắn vì thủy tinh trong suốt với chúng và tần số cực cao giúp truyền tốc độ dữ liệu lớn.",
+      "duration": 141.62,
+      "startTime": 3696.25,
+      "endTime": 3837.87,
+      "audioUrl": "/audio/lectures/physics/3/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "💻 Tín hiệu Tương tự (Analogue) vs. Tín hiệu Số (Digital)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "Supplement 3.3 💻 Digital vs. Analogue Signals & Regeneration. Analogue Signal: Voltage/intensity varies continuously over any value in a range. Sound can be transmitted as either an analogue or a digital signal. Digital Signal: Consists of only two discrete states — HIGH ( 1 ) and LOW ( 0 ) binary pulses. Two Key 0625 Benefits of Digital Signalling: 1. Increased rate of transmission of data (faster bit rates & multiplexing many signals along one fibre);2. Increased range due to accurate signal regeneration — repeater stations easily distinguish noisy 1 s from 0 s and rebuild clean, noise-free pulses (whereas amplifying an analogue signal also amplifies background noise!).",
+      "vi": "Supplement 3.3 💻 Tín hiệu Tương tự (Analogue) vs. Tín hiệu Số (Digital). Tín hiệu Tương tự (Analogue Signal): Biến thiên liên tục (continuously) nhận mọi giá trị. Âm thanh có thể truyền dưới dạng tương tự hoặc số. Tín hiệu Số (Digital Signal): Chỉ gồm 2 mức rời rạc — mức CAO ( 1 ) và mức THẤP ( 0 ). 2 Ưu điểm Vàng của Tín hiệu Số trong đề thi 0625: 1. Tăng tốc độ truyền dữ liệu ;2. Tăng cự ly truyền nhờ tái tạo tín hiệu chính xác — bộ lặp nhận diện rõ bit 1 / 0 và khôi phục xung vuông mới sạch hết nhiễu!",
+      "duration": 89.73,
+      "startTime": 3837.87,
+      "endTime": 3927.6,
+      "audioUrl": "/audio/lectures/physics/3/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE & SUPPLEMENT • Paper 2 MCQ Which statement comparing infrared (IR) radiation , ultraviolet (UV) radiation , and gamma rays travelling through a vacuum is completely correct? A. Gamma rays travel faster than infrared radiation in a vacuum and have a longer wavelength. B. All three travel at 3.0 × 108m/s in a vacuum, and frequency increases in the order: IR → UV → Gamma rays. C. All three travel at 3.0 × 108m/s in a vacuum, and wavelength increases in the order: IR → UV → Gamma rays. D. Ultraviolet radiation is a longitudinal wave used in TV remote controllers, whereas infrared sterilises water. ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: All electromagnetic waves are transverse waves (eliminating D) that share the universal vacuum speed 3.0 × 108m/s (eliminating A). Along the spectrum (Radio → Micro → IR → Visible → UV → X-ray → Gamma ), frequency increases and wavelength decreases (confirming B and eliminating C).",
+      "vi": "BÀI MẪU 1 🟦 CORE & SUPPLEMENT • Trắc nghiệm Paper 2 Exam Stem: Which statement comparing infrared (IR) radiation , ultraviolet (UV) radiation , and gamma rays travelling through a vacuum is completely correct? (Phát biểu nào sau đây so sánh hoàn toàn chính xác tia hồng ngoại IR, tia tử ngoại UV và tia gamma khi truyền trong chân không?) A. Gamma rays travel faster than infrared radiation in a vacuum and have a longer wavelength. B. All three travel at 3.0 × 108m/s in a vacuum, and frequency increases in the order: IR → UV → Gamma rays. C. All three travel at 3.0 × 108m/s in a vacuum, and wavelength increases in the order: IR → UV → Gamma rays. D. Ultraviolet radiation is a longitudinal wave used in TV remote controllers, whereas infrared sterilises water. ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Mọi sóng điện từ đều là transverse waves (loại D) và có cùng tốc độ trong chân không là 3.0 × 108m/s (loại A). Theo trật tự Radio → Micro → IR → Visible → UV → X-ray → Gamma , frequency tăng dần còn wavelength giảm dần (B đúng, C sai ngược chiều bước sóng).",
+      "duration": 173.7,
+      "startTime": 3927.6,
+      "endTime": 4101.3,
+      "audioUrl": "/audio/lectures/physics/3/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Satellites, EM Calculation & Digital Signals [5 marks] A direct-broadcast television station transmits a digital signal to a satellite using microwaves of frequency 1.2 × 1010Hz (12 GHz).(a) State the type of satellite orbit used for direct broadcast satellite TV, and calculate the wavelength λ of these microwaves in space. [3] (b) State and explain two advantages of transmitting the television audio and video as a digital signal rather than an analogue signal . [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Orbit type: geostationary satellite orbit (remains fixed above one point on the equator) [1m] .Using c = 3.0 × 108m/s: λ = c ÷ f = (3.0 × 108m/s) ÷ (1.2 × 1010Hz) [1m] = 0.025 m (2.5 cm) [1m] . (b) 1. Increased rate of data transmission (faster bit rates / more channels carried simultaneously) [1m] .2. Increased transmission range due to accurate signal regeneration — repeater stations distinguish 1s and 0s and reconstruct clean, noise-free pulses (whereas amplifying an analogue signal amplifies background noise) [1m] . 💡 Intuition Check: A wavelength of 2.5 cm sits right in the centimetre-wavelength microwave band — short enough for compact dish aerials and able to pass cleanly through Earth's atmosphere!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Vệ tinh, Sóng Vi ba & Tín hiệu Số Paper 4 [5 marks] Exam Question: A direct-broadcast television station transmits a digital signal to a satellite using microwaves of frequency 1.2 × 1010Hz (12 GHz).(a) State the type of satellite orbit used for direct broadcast satellite TV, and calculate the wavelength λ of these microwaves in space. (b) State and explain two benefits of transmitting television signals in digital form rather than analogue form. (Đài truyền hình vệ tinh phát tín hiệu số lên vệ tinh bằng sóng vi ba tần số 1.2 × 1010Hz. (a) Nêu loại quỹ đạo vệ tinh dùng cho truyền hình trực tiếp và tính bước sóng λ ngoài không gian. (b) Nêu và giải thích 2 ưu điểm của việc truyền tín hiệu dưới dạng số digital thay vì tương tự analogue. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Loại quỹ đạo: vệ tinh địa tĩnh (geostationary satellite) (đứng yên cố định phía trên một điểm trên xích đạo) .Với c = 3.0 × 108m/s: λ = c ÷ f = (3.0 × 108m/s) ÷ (1.2 × 1010Hz) = 0.025 m (2.5 cm) . (b) 1. Tăng tốc độ truyền dữ liệu .2. Tăng cự ly truyền nhờ tái tạo tín hiệu chính xác — bộ lặp nhận biết rõ xung 1 và 0 để khôi phục xung vuông sạch nhiễu (trong khi khuếch đại analogue sẽ khuếch đại luôn cả nhiễu nền) .",
+      "duration": 211.23,
+      "startTime": 4101.3,
+      "endTime": 4312.53,
+      "audioUrl": "/audio/lectures/physics/3/s04_b08.mp3"
+    },
+    {
+      "id": "s05_hdr",
+      "title": "🔊 5. Sóng Âm thanh, Thí nghiệm Đo tốc độ, Tiếng vang & Siêu âm (Sound & Ultrasound — 3.4)",
+      "selector": "[data-lecture-section=\"s05_hdr\"]",
+      "en": "🔊 5. Sound Waves, Speed Experiments, Echoes & Ultrasound (3.4).",
+      "vi": "🔊 5. Sóng Âm thanh, Thí nghiệm Đo tốc độ, Tiếng vang & Siêu âm (Sound & Ultrasound — 3.4).",
+      "duration": 13.99,
+      "startTime": 4312.53,
+      "endTime": 4326.52,
+      "audioUrl": "/audio/lectures/physics/3/s05_hdr.mp3"
+    },
+    {
+      "id": "s05_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s05_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of sound particles like a line of dominoes : tightly packed in a solid (~5000 m/s) > liquid (~1500 m/s) > widely spaced in air (~340 m/s) > zero dominoes in a vacuum (complete silence)! And treat every echo, SONAR ping, or ultrasound crack scan like a runner sprinting to a wall and back: your timer records the two-way round trip (2 d ) , so the one-way depth to the seabed or hidden crack is ALWAYS d = ( v × t ) / 2 !",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung các hạt truyền âm như một hàng quân cờ domino : xếp khít trong chất rắn (~5000 m/s) > chất lỏng (~1500 m/s) > thưa thớt trong không khí (~340 m/s) > trống rỗng trong chân không (im lặng tuyệt đối)! Và với mọi bài toán tiếng vang (echo), tàu SONAR hay dò vết nứt siêu âm (NDT) : xung âm phải chạy khứ hồi cả lượt đi lẫn lượt về (tổng quãng đường = 2 d ) , nên độ sâu đáy biển hay vị trí vết nứt một chiều LUÔN BẰNG d = ( v × t ) / 2 !",
+      "duration": 75.86,
+      "startTime": 4326.52,
+      "endTime": 4402.38,
+      "audioUrl": "/audio/lectures/physics/3/s05_b01.mp3"
+    },
+    {
+      "id": "s05_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s05_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: (3.4) Five exam anchors: (1) Longitudinal Mechanics — vibrating sources create high-pressure compressions (particles closer) and low-pressure rarefactions (particles further apart); (2) Speeds & Medium — needs a medium; Solids > Liquids > Gases (330–350 m/s in air); (3) Oscilloscope Traces — Amplitude ⇔ Loudness , Frequency ⇔ Pitch ; (4) Audible & Ultrasound — human range 20 Hz – 20,000 Hz (20 kHz) ; ultrasound has f > 20 kHz ; (5) Pulse-Echo (Supplement) — d = vt / 2 in SONAR , non-destructive metal crack testing (NDT) , and non-ionising medical soft-tissue scanning .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: (3.4) Năm điểm tựa ăn trọn điểm: (1) Bản chất sóng dọc — nguồn dao động tạo vùng compression (hạt sát nhau, áp suất cao) và rarefaction (hạt xa nhau, áp suất thấp); (2) Tốc độ — cần môi trường truyền; Solids > Liquids > Gases (330–350 m/s trong không khí); (3) Dao động ký CRO — Amplitude ⇔ Loudness , Frequency ⇔ Pitch ; (4) Ngưỡng nghe & Siêu âm — người nghe 20 Hz – 20,000 Hz (20 kHz) ; ultrasound có f > 20 kHz ; (5) Ứng dụng Xung–Vang (Supplement) — dùng d = vt / 2 cho SONAR , kiểm tra vết nứt kim loại không phá hủy (NDT) và siêu âm mô mềm y tế (an toàn, không ion hóa).",
+      "duration": 102.43,
+      "startTime": 4402.38,
+      "endTime": 4504.81,
+      "audioUrl": "/audio/lectures/physics/3/s05_b02.mp3"
+    },
+    {
+      "id": "s05_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s05_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Forgetting the factor of 2 in SONAR / Echo questions! Multiplying v × t gives the round-trip distance (there + back) , which is double the true depth! Always write d = ( v × t ) / 2 immediately so you never fall for the #1 distractor.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Quên chia 2 trong công thức SONAR / Echo! Phép nhân v × t mới chỉ ra tổng quãng đường khứ hồi cả đi lẫn về (2 d ) — cao gấp đôi độ sâu thật! Hãy viết ngay công thức d = ( v × t ) / 2 ngay dòng đầu tiên để không bao giờ sập bẫy!",
+      "duration": 39.74,
+      "startTime": 4504.81,
+      "endTime": 4544.55,
+      "audioUrl": "/audio/lectures/physics/3/s05_b03.mp3"
+    },
+    {
+      "id": "s05_b04",
+      "title": "🎵 Nguồn dao động, Vùng nén – Vùng giãn & Môi trường",
+      "selector": "[data-lecture-section=\"s05_b04\"]",
+      "en": "🎵 Vibrating Sources, Compressions & Medium. Production: Sound is produced by vibrating sources (speaker cones, vocal cords, tuning forks) setting surrounding particles into longitudinal oscillation parallel to wave travel. Supplement — Compressions & Rarefactions: • Compression: Region where vibrating particles are pushed closer together than normal ( higher pressure / density).• Rarefaction: Region where vibrating particles are spread further apart than normal ( lower pressure / density). Medium Required (Bell-Jar Experiment): Pumping air out of a sealed glass bell jar containing a ringing electric bell causes the sound to fade to silence even though the hammer is still seen striking — proving sound cannot travel through a vacuum. Human Audible Range: Approximately 20 Hz to 20,000 Hz (20 kHz).",
+      "vi": "🎵 Nguồn dao động, Vùng nén – Vùng giãn & Môi trường. Sự tạo thành âm: Do các nguồn dao động (vibrating sources) như màng loa, dây thanh quản, âm thoa làm các hạt môi trường dao động dạng sóng dọc (longitudinal wave). Supplement — Vùng nén & Vùng giãn: • Vùng nén (Compression): Vùng các phần tử bị ép sát lại gần nhau hơn bình thường ( áp suất cao ).• Vùng giãn (Rarefaction): Vùng các phần tử dãn cách xa nhau hơn bình thường ( áp suất thấp ). Cần môi trường vật chất (Thí nghiệm chuông điện bình chân không): Hút hết không khí khỏi bình thủy tinh chứa chuông điện đang gõ làm tiếng chuông tắt hẳn dù búa vẫn đập — chứng minh âm thanh KHÔNG truyền được trong chân không (vacuum). Ngưỡng nghe của tai người (Audible Range): Khoảng 20 Hz đến 20,000 Hz (20 kHz).",
+      "duration": 108.18,
+      "startTime": 4544.55,
+      "endTime": 4652.73,
+      "audioUrl": "/audio/lectures/physics/3/s05_b04.mp3"
+    },
+    {
+      "id": "s05_b05",
+      "title": "⏱️ Tốc độ Truyền âm & Thí nghiệm Đo trực tiếp",
+      "selector": "[data-lecture-section=\"s05_b05\"]",
+      "en": "⏱️ Speed of Sound & Direct Measurement Method. Speed of Sound in Air: Approximately 330–350 m/s (increases slightly on warmer days). Supplement — Solids vs Liquids vs Gases: Sound travels fastest in solids (~5000 m/s in steel) > slower in liquids (~1500 m/s in water) > slowest in gases (330–350 m/s), because tightly packed particles pass vibrations to neighbours much faster. Experimental Determination in Air ( v = d / t ): • Outdoor method: Measure a large distance d ≥ 100 m (up to 400 m) with a trundle wheel/tape. Observer A fires a starter pistol (or clashes blocks creating smoke/flash); Observer B starts a stopwatch on seeing the flash (light arrives almost instantaneously) and stops it on hearing the bang . Repeat & swap positions to cancel wind effects, then calculate v = d / t .• Lab accuracy upgrade: Place two microphones a measured distance d apart connected to a millisecond digital timer / oscilloscope to eliminate human reaction-time error (~0.2 s)!",
+      "vi": "⏱️ Tốc độ Truyền âm & Thí nghiệm Đo trực tiếp. Tốc độ âm trong không khí: Khoảng 330–350 m/s (tăng nhẹ khi nhiệt độ không khí tăng). Supplement — Rắn > Lỏng > Khí: Âm truyền nhanh nhất trong chất rắn (~5000 m/s trong thép) > chất lỏng (~1500 m/s trong nước) > chậm nhất trong chất khí (330–350 m/s) do hạt chất rắn xếp khít truyền dao động cực nhanh. Phương pháp đo tốc độ âm trong không khí ( v = d / t ): • Ngoài trời: Đo khoảng cách lớn d ≥ 100 m bằng thước dây/bánh xe đo. Người A bắn súng lệnh (hoặc đập hai mảnh gỗ tạo khói/tia chớp); Người B bấm đồng hồ ngay khi nhìn thấy tia chớp/khói và dừng khi nghe tiếng nổ . Lặp lại & đổi chỗ hai người để triệt tiêu gió, rồi tính v = d / t .• Trong phòng thí nghiệm: Đặt hai micro cách nhau đoạn d nối với bộ đếm thời gian điện tử / dao động ký để loại bỏ sai số phản xạ tay (~0.2 s)!",
+      "duration": 150.77,
+      "startTime": 4652.73,
+      "endTime": 4803.5,
+      "audioUrl": "/audio/lectures/physics/3/s05_b05.mp3"
+    },
+    {
+      "id": "s05_b06",
+      "title": "📈 Độ cao của Âm & Tần số (Pitch & Frequency)",
+      "selector": "[data-lecture-section=\"s05_b06\"]",
+      "en": "📈 Pitch & Frequency (Oscilloscope Trace). • Pitch depends ONLY on Frequency ( f ): Higher frequency (more complete waves crowded onto the same oscilloscope timebase screen, shorter period T ) ⇒ higher-pitched note.",
+      "vi": "📈 Độ cao của Âm & Tần số (Pitch & Frequency). • Độ cao (Pitch) CHỈ phụ thuộc vào Tần số ( f ): Tần số càng lớn (nhiều chu kỳ sóng dày đặc hơn trên màn hình dao động ký CRO) ⇒ âm nghe càng cao / bổng (higher pitch).",
+      "duration": 31.29,
+      "startTime": 4803.5,
+      "endTime": 4834.79,
+      "audioUrl": "/audio/lectures/physics/3/s05_b06.mp3"
+    },
+    {
+      "id": "s05_b07",
+      "title": "📢 Độ to của Âm & Biên độ (Loudness & Amplitude)",
+      "selector": "[data-lecture-section=\"s05_b07\"]",
+      "en": "📢 Loudness & Amplitude (Oscilloscope Trace). • Loudness depends ONLY on Amplitude ( A ): Greater amplitude (taller crests and deeper troughs from the centre rest line) ⇒ louder sound transferring greater acoustic energy.",
+      "vi": "📢 Độ to của Âm & Biên độ (Loudness & Amplitude). • Độ to (Loudness) CHỈ phụ thuộc vào Biên độ ( A ): Biên độ càng lớn (đỉnh sóng nhô cao hơn so với đường cân bằng giữa màn CRO) ⇒ âm nghe càng to (louder sound) , mang năng lượng âm lớn hơn.",
+      "duration": 33.0,
+      "startTime": 4834.79,
+      "endTime": 4867.79,
+      "audioUrl": "/audio/lectures/physics/3/s05_b07.mp3"
+    },
+    {
+      "id": "s05_b08",
+      "title": "🚨 Bẫy Phòng Thi Kinh Điển: Tiếng vang — Quãng đường Khứ hồi 2 d !",
+      "selector": "[data-lecture-section=\"s05_b08\"]",
+      "en": "🚨 Echoes & The Classic Two-Way Distance Trap! An echo is the reflection of sound waves from a hard, flat surface (cliff, wall, seabed). Because the pulse travels out to the reflector AND back again , the total distance travelled in echo time t is 2 d : v = 2 d / t ⇔ d = ( v × t ) / 2 Worked SONAR Example: A research ship sends an ultrasound pulse vertically down through seawater ( v = 1500 m/s) and detects the seabed echo after t = 0.80 s:Depth d = (1500 × 0.80) / 2 = 600 m ( not 1200 m!).",
+      "vi": "🚨 Bẫy Phòng Thi Kinh Điển: Tiếng vang — Quãng đường Khứ hồi 2 d ! Tiếng vang (Echo) là sự phản xạ của sóng âm từ vách đá, tường hoặc đáy biển. Vì xung âm phải đi tới vật cản RỒI quay ngược về máy thu nên tổng quãng đường đi trong thời gian t là 2 d : v = 2 d / t ⇔ d = ( v × t ) / 2 Ví dụ SONAR: Tàu khảo sát phát xung siêu âm thẳng xuống nước biển ( v = 1500 m/s) và thu được tiếng vang từ đáy biển sau t = 0.80 s:Độ sâu đáy biển d = (1500 × 0.80) / 2 = 600 m ( tuyệt đối không quên chia 2 thành 1200 m!).",
+      "duration": 86.82,
+      "startTime": 4867.79,
+      "endTime": 4954.61,
+      "audioUrl": "/audio/lectures/physics/3/s05_b08.mp3"
+    },
+    {
+      "id": "s05_b09",
+      "title": "🩺 Siêu âm (Ultrasound, f > 20 kHz) & 3 Ứng dụng Cốt lõi",
+      "selector": "[data-lecture-section=\"s05_b09\"]",
+      "en": "Core & Supplement 3.4 🩺 Ultrasound ( f > 20 kHz) & Pulse-Echo Applications. Definition: Ultrasound is sound with a frequency higher than 20 kHz (20,000 Hz) — above human hearing. 1. Non-Destructive Testing (NDT) of Materials: Ultrasound pulses enter metal castings/welds; an early echo spike returning before the back-wall echo reveals an internal crack and its exact depth d = vt / 2 without damaging the part. 2. Medical Scanning of Soft Tissue: Pulses partially reflect at boundaries between tissues of different density (e.g., prenatal fetus & organ imaging — non-ionising , unlike X-rays!). 3. SONAR (Echo-Sounding): Ships & submarines measure seabed depth or locate shoals of fish via d = vt / 2.",
+      "vi": "Core & Supplement 3.4 🩺 Siêu âm (Ultrasound, f > 20 kHz) & 3 Ứng dụng Cốt lõi. Định nghĩa: Siêu âm (Ultrasound) là sóng âm có tần số cao hơn 20 kHz (20,000 Hz) — vượt quá ngưỡng nghe của người. 1. Kiểm tra vật liệu không phá hủy: Xung phản xạ sớm từ vết nứt bên trong khối kim loại/mối hàn giúp xác định chính xác vị trí lỗi ( d = vt / 2) mà không làm hỏng chi tiết. 2. Siêu âm mô mềm y tế: Phản xạ một phần tại ranh giới các mô (chẩn đoán thai nhi & nội tạng — an toàn, không gây ion hóa như tia X!). 3. SONAR đo độ sâu biển: Tàu thuyền đo độ sâu đáy biển hoặc dò đàn cá bằng d = vt / 2.",
+      "duration": 103.14,
+      "startTime": 4954.61,
+      "endTime": 5057.75,
+      "audioUrl": "/audio/lectures/physics/3/s05_b09.mp3"
+    },
+    {
+      "id": "s05_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s05_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 1 & 2 MCQ A loudspeaker emits a steady musical note of frequency 400 Hz displayed on an oscilloscope screen. The musician then plays a louder note of higher pitch , while nearby a bat emits sound waves of frequency 45 kHz . Which row correctly describes the new oscilloscope trace and the bat's sound wave? A. Taller wave amplitude, crests closer together • Bat emits audible sound B. Taller wave amplitude, crests closer together • Bat emits ultrasound C. Smaller wave amplitude, crests further apart • Bat emits ultrasound D. Taller wave amplitude, crests further apart • Bat emits audible sound ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: A louder note means greater amplitude (taller peaks from the rest line, eliminating C). A higher pitch means higher frequency (more complete cycles on the same timebase, so crests are closer together, eliminating D). Human audible range is 20 Hz to 20,000 Hz (20 kHz) ; because 45 kHz > 20 kHz, the bat emits ultrasound (eliminating A).",
+      "vi": "BÀI MẪU 1 🟦 CORE • Trắc nghiệm Paper 1 & 2 Exam Stem: A loudspeaker emits a steady musical note of frequency 400 Hz displayed on an oscilloscope screen. The musician then plays a louder note of higher pitch , while nearby a bat emits sound waves of frequency 45 kHz . Which row correctly describes the new oscilloscope trace and the bat's sound wave? (Một chiếc loa phát nốt nhạc ổn định 400 Hz hiển thị trên màn hình dao động ký. Sau đó nhạc công chơi một nốt TO HƠN và CAO HƠN, đồng thời một con dơi gần đó phát sóng âm tần số 45 kHz. Dòng nào mô tả đúng đồ thị mới trên màn hình và sóng của dơi?) A. Taller wave amplitude, crests closer together • Bat emits audible sound B. Taller wave amplitude, crests closer together • Bat emits ultrasound C. Smaller wave amplitude, crests further apart • Bat emits ultrasound D. Taller wave amplitude, crests further apart • Bat emits audible sound ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Âm to hơn (louder) có biên độ lớn hơn (taller amplitude) (loại C). Âm cao hơn (higher pitch) có tần số cao hơn (higher frequency) nên các đỉnh sóng mau hơn/sát nhau hơn trên màn hình (loại D). Ngưỡng nghe của tai người là 20 Hz đến 20,000 Hz (20 kHz) ; vì 45 kHz > 20 kHz nên sóng của dơi là siêu âm (ultrasound) (loại A).",
+      "duration": 177.92,
+      "startTime": 5057.75,
+      "endTime": 5235.67,
+      "audioUrl": "/audio/lectures/physics/3/s05_b10.mp3"
+    },
+    {
+      "id": "s05_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s05_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Ultrasound & SONAR Calculation [6 marks] A marine research ship uses SONAR to map the seabed. It transmits an ultrasound pulse of frequency 40 kHz vertically downwards through seawater (where the speed of sound is 1500 m/s ) and detects the seabed echo 0.60 s later.(a) Explain why a 40 kHz wave is classified as ultrasound , and explain why sound travels faster in liquid seawater than in air (340 m/s). [2] (b) Calculate the wavelength λ of this ultrasound wave in seawater. [2] (c) Calculate the depth d of the seabed beneath the ship. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) Ultrasound is sound with a frequency higher than 20 kHz (20,000 Hz) , the upper limit of human hearing (and 40 kHz > 20 kHz) [1m] . Particles in a liquid (seawater) are much closer together than gas molecules in air, so vibrations are passed to neighbours faster [1m] . (b) Convert frequency to Hz: f = 40 kHz = 40,000 Hz .Wavelength λ = v ÷ f = 1500 m/s ÷ 40,000 Hz [1m] = 0.0375 m (or 3.8 cm to 2 s.f.) [1m] . (c) Because the pulse travels down to the seabed AND back up (total distance = 2 d ): d = ( v × t ) ÷ 2 = (1500 m/s × 0.60 s) ÷ 2 [1m] = 450 m (unit check: m/s × s = m) [1m] . 💡 Intuition Check: Trap avoided! Multiplying 1500 × 0.60 gives 900 m — that is the round-trip distance down AND back up. Dividing by 2 gives the true 450 m seabed depth!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Tự luận Siêu âm & Đo độ sâu SONAR Paper 4 [6 marks] Exam Question: A marine research ship uses SONAR to map the seabed. It transmits an ultrasound pulse of frequency 40 kHz vertically downwards through seawater (speed of sound = 1500 m/s ) and detects the seabed echo 0.60 s later.(a) Explain why a 40 kHz wave is classified as ultrasound , and explain why sound travels faster in liquid seawater than in air (340 m/s). (b) Calculate the wavelength λ of this ultrasound wave in seawater. (c) Calculate the depth d of the seabed beneath the ship. (Tàu khảo sát biển dùng SONAR phát xung siêu âm tần số 40 kHz thẳng đứng xuống nước biển có tốc độ truyền âm 1500 m/s và thu được tiếng vang từ đáy biển sau 0.60 s. (a) Giải thích vì sao sóng 40 kHz là siêu âm và vì sao âm truyền trong nước biển nhanh hơn không khí. (b) Tính bước sóng λ trong nước biển. (c) Tính độ sâu d của đáy biển. ) ✍️ Lời giải chi tiết theo thang điểm: (a) Ultrasound (siêu âm) là sóng âm có tần số cao hơn 20 kHz (20,000 Hz) — ngưỡng nghe tối đa của người (40 kHz > 20 kHz) . Các hạt phân tử trong chất lỏng (nước biển) xếp gần nhau hơn nhiều so với chất khí (không khí) nên truyền dao động cho nhau nhanh hơn . (b) Đổi tần số sang Hz: f = 40 kHz = 40,000 Hz .Bước sóng λ = v ÷ f = 1500 m/s ÷ 40,000 Hz = 0.0375 m (tức 3.75 cm ) .",
+      "duration": 251.37,
+      "startTime": 5235.67,
+      "endTime": 5487.04,
+      "audioUrl": "/audio/lectures/physics/3/s05_b11.mp3"
+    }
+  ]
+}

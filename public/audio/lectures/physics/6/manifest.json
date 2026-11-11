@@ -1,0 +1,470 @@
+{
+  "lectureId": "886cd267-2b7b-59a6-a9f2-3fdb24bf2d35",
+  "courseTitle": "Cambridge IGCSE Physics (0625)",
+  "lectureTitle": "Topic 6: Space physics",
+  "totalDuration": 3425.45,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 9,
+      "end": 10
+    },
+    "s01_p2_sub01": {
+      "start": 9,
+      "end": 10
+    },
+    "s01_wex": {
+      "start": 11,
+      "end": 12
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 12
+    },
+    "s02_int": {
+      "start": 14,
+      "end": 16
+    },
+    "s02_wex": {
+      "start": 21,
+      "end": 22
+    },
+    "s02_hdr": {
+      "start": 13,
+      "end": 22
+    },
+    "s03_int": {
+      "start": 24,
+      "end": 26
+    },
+    "s03_p1_sub01": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_p1_sub02": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_p2_sub01": {
+      "start": 29,
+      "end": 30
+    },
+    "s03_p2_sub02": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_wex": {
+      "start": 34,
+      "end": 35
+    },
+    "s03_hdr": {
+      "start": 23,
+      "end": 35
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 6: Vật lý Không gian và Vũ trụ (Topic 6: Space Physics)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Physics (0625) Topic 6: Space Physics. 6.1 The Earth and the Solar System (Day/Night, Seasons, Lunar Phases, Accretion Model, 8-Planet Data, Orbital Speed v = 2πr/T & Elliptical Orbits) • 6.2 Stars and the Universe (The Sun, Light-Years, Stellar Life Cycle, Galactic Redshift, CMBR & Hubble's Law H0= v/d ) — Complete Core & Supplement Master Lecture.",
+      "vi": "Cambridge IGCSE Physics (0625) • Song ngữ Chuyên đề 6: Vật lý Không gian và Vũ trụ. 6.1 Trái Đất và Hệ Mặt Trời ( The Earth & Solar System : ngày/đêm, 4 mùa, pha Mặt Trăng, mô hình bồi tụ Accretion Model, dữ liệu 8 hành tinh, tốc độ quỹ đạo v = 2πr/T & quỹ đạo elip) • 6.2 Các Ngôi sao và Vũ trụ ( Stars & Universe : Mặt Trời, năm ánh sáng, vòng đời sao, dịch chuyển đỏ Redshift, CMBR & định luật Hubble H0= v/d ) — Trọn bộ Core & Supplement chuẩn 0625.",
+      "duration": 70.41,
+      "startTime": 0.0,
+      "endTime": 70.41,
+      "audioUrl": "/audio/lectures/physics/6/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "🌍 6.1.1–6.1.2 Trái Đất, Pha Mặt Trăng, Mô hình Bồi tụ (Accretion) & Hệ Mặt Trời",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "🌍 6.1.1–6.1.2 The Earth, Lunar Phases, Accretion Model & The Solar System.",
+      "vi": "🌍 6.1.1–6.1.2 Trái Đất, Pha Mặt Trăng, Mô hình Bồi tụ (Accretion) & Hệ Mặt Trời.",
+      "duration": 10.81,
+      "startTime": 70.41,
+      "endTime": 81.22,
+      "audioUrl": "/audio/lectures/physics/6/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture two everyday scenes: First, carry a tilted globe (23.5°) in a circle around a campfire without changing the direction its axis points — on one side of the fire the Northern Hemisphere leans into the warmth (steep rays + long days = summer ), while six months later on the opposite side it leans away (spread-out rays + short days = winter ). Second, imagine spinning a ball of wet pizza dough near a hot oven ( accretion disc ): close to the fierce heat, water and light gases boil away leaving only dense rocky crumbs ( Mercury, Venus, Earth, Mars ), whereas out in the freezer zone, gases and ices survive to snowball into giant worlds ( Jupiter, Saturn, Uranus, Neptune )!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung hai khung cảnh quen thuộc: Thứ nhất, bạn cầm một quả địa cầu nghiêng trục 23,5° đi vòng quanh đống lửa trại mà giữ nguyên hướng nghiêng trong không gian — ở nửa bên này Bắc bán cầu chúc về phía lửa (tia nắng chiếu thẳng + ngày dài = mùa hè ), còn 6 tháng sau ở phía đối diện nó ngả ra xa lửa (tia nắng xiên + ngày ngắn = mùa đông ). Thứ hai, hãy tưởng tượng xoay tít cục bột bánh pizza ướt cạnh lò nướng cực nóng ( đĩa bồi tụ — accretion disc ): sát lò nóng, hơi nước và khí nhẹ bốc hơi sạch chỉ còn vụn đá kim loại đặc, còn ở vùng rìa lạnh giá, khí và băng tuyết vón lại thành những hành tinh khổng lồ!",
+      "duration": 80.51,
+      "startTime": 81.22,
+      "endTime": 161.73,
+      "audioUrl": "/audio/lectures/physics/6/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Three Key Cycles (🟦 Core 6.1.1): Earth spins west-to-east once in ~24 hours (day/night + apparent east-to-west motion of the Sun); Moon orbits Earth in ~1 month (periodic lunar phases); Earth orbits Sun in ~365 days on a 23.5° tilted axis (seasons). 2. Solar System & Accretion Model (🟦 Core / 🟩 Supplement 6.1.2): Gravity collapsed an interstellar cloud of gas and supernova dust into a spinning accretion disc around the young Sun (>99.8% of total mass), forming 4 small, dense rocky inner planets and 4 large, low-density gaseous/icy outer planets . 3. Planetary Data Trends (🟩 Supplement): Distance ↑ ⇒ orbital period T ↑ and mean temperature generally ↓ — except Venus (+464 °C) due to its thick CO2greenhouse atmosphere !",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Ba Chu kỳ Cốt lõi (🟦 Core 6.1.1): Trái Đất tự quay Tây → Đông mỗi ~24 giờ (ngày/đêm + Mặt Trời mọc Đông lặn Tây); Mặt Trăng quay quanh Trái Đất ~1 tháng (8 pha Mặt Trăng); Trái Đất quay quanh Mặt Trời ~365 ngày với trục nghiêng 23,5° (sinh ra 4 mùa). 2. Hệ Mặt Trời & Mô hình Bồi tụ (🟦 Core / 🟩 Supplement 6.1.2): Lực hấp dẫn kéo đám mây khí và bụi supernova co lại thành accretion disc quay quanh Mặt Trời (>99,8% khối lượng), tạo 4 hành tinh đá nhỏ đặc ở trong và 4 hành tinh khí/băng khổng lồ ở ngoài. 3. Bảng dữ liệu 8 Hành tinh (🟩 Supplement): Càng xa Mặt Trời thì chu kỳ T tăng và nhiệt độ giảm — trừ ngoại lệ Venus (+464 °C) do bầu khí quyển CO2 gây hiệu ứng nhà kính!",
+      "duration": 99.71,
+      "startTime": 161.73,
+      "endTime": 261.44,
+      "audioUrl": "/audio/lectures/physics/6/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: NEVER write \"Summer happens when the Earth moves closer to the Sun\"! That scores zero marks (Earth is actually slightly closer to the Sun in January during Northern winter!). Always state that seasons are caused by Earth's tilted axis (23.5°) during its 365-day orbit changing solar ray concentration and daylight hours.",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG viết \"Mùa hè xảy ra do Trái Đất bay lại gần Mặt Trời hơn\"! Viết vậy sẽ bị 0 điểm ngay lập tức (thực tế tháng 1 mùa đông Bắc bán cầu Trái Đất lại ở gần Mặt Trời hơn tháng 7!). Luôn giải thích bốn mùa bằng độ nghiêng trục 23,5° (axial tilt) làm thay đổi góc chiếu nắng và độ dài ban ngày.",
+      "duration": 45.64,
+      "startTime": 261.44,
+      "endTime": 307.08,
+      "audioUrl": "/audio/lectures/physics/6/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "🪐 Mô hình Quỹ đạo Tương tác (Interactive Orbit Visualizer)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "🪐 Interactive Orbit Visualizer (Day/Night, Lunar Month & Seasons). 🌍 24h Rotation🌕 ~1 Month Moon☀️ 365d Seasons Hover or click planets / buttons 👆. Compare Earth's 24-hour axial rotation, the Moon's ~1-month orbit, and Earth's 365-day orbit on a 23.5° tilted axis.",
+      "vi": "🪐 Mô hình Quỹ đạo Tương tác. 🌍 Tự quay 24h🌕 ~1 Tháng Trăng☀️ 365 Ngày & 4 Mùa Phân biệt rõ chuyển động tự quay 24 giờ quanh trục của Trái Đất, chu kỳ ~1 tháng của Mặt Trăng và quỹ đạo 365 ngày với trục nghiêng 23,5°.",
+      "duration": 38.65,
+      "startTime": 307.08,
+      "endTime": 345.73,
+      "audioUrl": "/audio/lectures/physics/6/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "🌕 6.1.1.3 Chu kỳ 8 Pha của Mặt Trăng (Phases of the Moon — Chu kỳ ~1 tháng)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "🌕 6.1.1.3 Periodic Cycle of the Phases of the Moon (Viewed from Space vs Earth). 8 Ordered Phases (~29.5 days New Moon → New Moon): 1. New Moon: Moon lies between Earth & Sun; dark unlit side faces Earth.2. Waxing Crescent → 3. First Quarter (right half lit from N. Hemisphere) → 4. Waxing Gibbous (growing).5. Full Moon: Earth lies between Sun & Moon; entire sunlit face is visible.6. Waning Gibbous → 7. Third (Last) Quarter → 8. Waning Crescent (shrinking back to New Moon).",
+      "vi": "🌕 6.1.1.3 Chu kỳ 8 Pha của Mặt Trăng (Phases of the Moon — Chu kỳ ~1 tháng). Thứ tự 8 Pha Mặt Trăng (~29,5 ngày): 1. Trăng mới / Không trăng (New Moon): Mặt Trăng nằm giữa Trái Đất và Mặt Trời, quay nửa tối về Trái Đất.2. Trăng lưỡi liềm đầu tháng (Waxing Crescent) → 3. Bán nguyệt đầu tháng (First Quarter) → 4. Trăng khuyết tăng (Waxing Gibbous) .5. Trăng tròn (Full Moon): Trái Đất nằm giữa Mặt Trời và Mặt Trăng, thấy trọn nửa sáng.6. Waning Gibbous → 7. Bán nguyệt cuối tháng (Third Quarter) → 8. Waning Crescent .",
+      "duration": 79.12,
+      "startTime": 345.73,
+      "endTime": 424.85,
+      "audioUrl": "/audio/lectures/physics/6/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "☄️ 6.1.2.1 Thành phần đầy đủ của Hệ Mặt Trời (Solar System)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "☄️ 6.1.2.1 Complete Inventory of the Solar System. 1 Star: The Sun (contains > 99.8% of the entire Solar System's mass!). 8 Named Planets (exact order from Sun): Mercury, Venus, Earth, Mars (4 rocky inner planets) • [Asteroid Belt] • Jupiter, Saturn, Uranus, Neptune (4 gaseous/icy outer giants). Minor Planets: Dwarf planets (e.g. Pluto, Ceres) and asteroids in the asteroid belt (between Mars & Jupiter). Moons: Natural satellites orbiting planets. Smaller Bodies: Comets (balls of dust & volatile ices in highly elliptical orbits; solar radiation/wind blows their glowing tail away from the Sun ) and natural satellites.",
+      "vi": "☄️ 6.1.2.1 Thành phần đầy đủ của Hệ Mặt Trời (Solar System). 1 Ngôi sao duy nhất: Mặt Trời (The Sun) — chiếm tới >99,8% tổng khối lượng toàn Hệ Mặt Trời! 8 Hành tinh theo đúng thứ tự từ trong ra ngoài: Mercury, Venus, Earth, Mars (4 hành tinh đá vòng trong) • [Vành đai tiểu hành tinh] • Jupiter, Saturn, Uranus, Neptune (4 hành tinh khí/băng khổng lồ vòng ngoài). Hành tinh nhỏ (Minor planets): Hành tinh lùn (Dwarf planets như Pluto, Ceres) và tiểu hành tinh (asteroids) trong vành đai tiểu hành tinh (asteroid belt) nằm giữa Mars và Jupiter. Mặt trăng (Moons): Các vệ tinh tự nhiên quay quanh hành tinh. Thiên thể nhỏ: Sao chổi (Comets) gồm băng và bụi bay theo quỹ đạo elip dẹt (đuôi luôn hướng ra xa Mặt Trời).",
+      "duration": 101.1,
+      "startTime": 424.85,
+      "endTime": 525.95,
+      "audioUrl": "/audio/lectures/physics/6/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "🌀 6.1.2 Mô hình Bồi tụ Hình thành Hệ Mặt Trời (Accretion Model)",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "🌀 6.1.2 Accretion Model of Solar System Formation (Core + Supplement). 1. Interstellar Cloud (Nebula): Rotating cloud of hydrogen, helium , and dust containing heavy elements from ancient supernovae collapsed under gravity (~4.6 billion years ago). 2. Rotating Accretion Disc: As gravity pulled matter inward, conservation of spin made it spin faster and flatten into a rotating accretion disc around the central protostar (Sun). 3. Why 4 Rocky Inner vs 4 Gas/Ice Outer Planets? • Near the hot young Sun: High temperatures vaporised light volatile compounds (H2, He, H2O, CH4); only high-melting-point metals & silicates condensed into 4 small, dense rocky planets .• Further out (cool outer disc): Volatile gases and ices condensed and were captured by strong planetary gravity to form 4 huge, low-density gas/ice giants.",
+      "vi": "🌀 6.1.2 Mô hình Bồi tụ Hình thành Hệ Mặt Trời (Accretion Model). 1. Đám mây liên sao (Interstellar nebula): Đám mây hydrogen, helium và bụi chứa nguyên tố nặng từ các vụ nổ supernova cổ đại co sập dưới tác dụng của lực hấp dẫn (gravity) (~4,6 tỷ năm trước). 2. Đĩa bồi tụ quay: Khi co lại, đám mây quay nhanh dần và dẹt thành đĩa bồi tụ (accretion disc) bao quanh tiền sao Mặt Trời ở tâm. 3. Vì sao 4 hành tinh trong bằng Đá & 4 hành tinh ngoài Khổng lồ Khí/Băng? • Gần Mặt Trời trẻ rất nóng: Các chất dễ bay hơi (H2, He, nước, methane) bị hóa hơi; chỉ kim loại và đá silicat nóng chảy cao mới ngưng tụ thành 4 hành tinh đá nhỏ, khối lượng riêng lớn .• Vùng ngoài lạnh giá: Khí nhẹ và băng ngưng tụ dồi dào, bị lực hấp dẫn lớn hút giữ tạo thành 4 hành tinh khổng lồ khí/băng, khối lượng riêng nhỏ.",
+      "duration": 110.29,
+      "startTime": 525.95,
+      "endTime": 636.24,
+      "audioUrl": "/audio/lectures/physics/6/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "Hành tinh (Planet): 1. Mercury (Sao Thủy); Cách Mặt Trời (10 6 km): 57,9; Chu kỳ...",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "Planet: 1. Mercury; Dist. from Sun (10 6 km): 57.9; Orbital Period T: 88 d; Mean Temp (°C): 167; Density (kg/m 3 ): 5430; Diameter (10 3 km): 4.9; Mass (10 24 kg): 0.33; Surface g (N/kg): 3.7. Planet: 2. Venus ⚠️; Dist. from Sun (10 6 km): 108.2; Orbital Period T: 225 d; Mean Temp (°C): +464 (CO 2 !); Density (kg/m 3 ): 5240; Diameter (10 3 km): 12.1; Mass (10 24 kg): 4.87; Surface g (N/kg): 8.9. Planet: 3. Earth; Dist. from Sun (10 6 km): 149.6; Orbital Period T: 365 d (1 yr); Mean Temp (°C): 15; Density (kg/m 3 ): 5510; Diameter (10 3 km): 12.8; Mass (10 24 kg): 5.97; Surface g (N/kg): 9.8. Planet: 4. Mars; Dist. from Sun (10 6 km): 227.9; Orbital Period T: 687 d; Mean Temp (°C): −65; Density (kg/m 3 ): 3930; Diameter (10 3 km): 6.8; Mass (10 24 kg): 0.64; Surface g (N/kg): 3.7. Planet: 5. Jupiter; Dist. from Sun (10 6 km): 778.6; Orbital Period T: 11.9 yr; Mean Temp (°C): −110; Density (kg/m 3 ): 1330; Diameter (10 3 km): 143.0; Mass (10 24 kg): 1898; Surface g (N/kg): 23.1. Planet: 6. Saturn; Dist. from Sun (10 6 km): 1433.5; Orbital Period T: 29.5 yr; Mean Temp (°C): −140; Density (kg/m 3 ): 687; Diameter (10 3 km): 120.5; Mass (10 24 kg): 568; Surface g (N/kg): 9.0. Planet: 7. Uranus; Dist. from Sun (10 6 km): 2872.5; Orbital Period T: 84.0 yr; Mean Temp (°C): −195; Density (kg/m 3 ): 1270; Diameter (10 3 km): 51.1; Mass (10 24 kg): 86.8; Surface g (N/kg): 8.7. Planet: 8. Neptune; Dist.",
+      "vi": "Hành tinh (Planet): 1. Mercury (Sao Thủy); Cách Mặt Trời (10 6 km): 57,9; Chu kỳ T: 88 ngày; Nhiệt độ (°C): 167; Khối lượng riêng (kg/m 3 ): 5430; Đường kính (10 3 km): 4,9; Khối lượng (10 24 kg): 0,33; g bề mặt (N/kg): 3,7. Hành tinh (Planet): 2. Venus (Sao Kim) ⚠️; Cách Mặt Trời (10 6 km): 108,2; Chu kỳ T: 225 ngày; Nhiệt độ (°C): +464 (CO 2 !); Khối lượng riêng (kg/m 3 ): 5240; Đường kính (10 3 km): 12,1; Khối lượng (10 24 kg): 4,87; g bề mặt (N/kg): 8,9. Hành tinh (Planet): 3. Earth (Trái Đất); Cách Mặt Trời (10 6 km): 149,6; Chu kỳ T: 365 ngày; Nhiệt độ (°C): 15; Khối lượng riêng (kg/m 3 ): 5510; Đường kính (10 3 km): 12,8; Khối lượng (10 24 kg): 5,97; g bề mặt (N/kg): 9,8. Hành tinh (Planet): 4. Mars (Sao Hỏa); Cách Mặt Trời (10 6 km): 227,9; Chu kỳ T: 687 ngày; Nhiệt độ (°C): −65; Khối lượng riêng (kg/m 3 ): 3930; Đường kính (10 3 km): 6,8; Khối lượng (10 24 kg): 0,64; g bề mặt (N/kg): 3,7. Hành tinh (Planet): 5. Jupiter (Sao Mộc); Cách Mặt Trời (10 6 km): 778,6; Chu kỳ T: 11,9 năm; Nhiệt độ (°C): −110; Khối lượng riêng (kg/m 3 ): 1330; Đường kính (10 3 km): 143,0; Khối lượng (10 24 kg): 1898; g bề mặt (N/kg): 23,1. Hành tinh (Planet): 6. Saturn (Sao Thổ); Cách Mặt Trời (10 6 km): 1433,5; Chu kỳ T: 29,5 năm; Nhiệt độ (°C): −140; Khối lượng riêng (kg/m 3 ): 687; Đường kính (10 3 km): 120,5; Khối lượng (10 24 kg): 568; g bề mặt (N/kg): 9,0. Hành tinh (Planet): 7.",
+      "duration": 226.05,
+      "startTime": 636.24,
+      "endTime": 862.29,
+      "audioUrl": "/audio/lectures/physics/6/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "📌 3 Nhận xét Vàng trong Đề thi Paper 4: (1) Ngoại lệ Sao Kim (+464 °C nóng hơn S...",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "📌 3 Classic Paper 4 Data-Analysis Takeaways: (1) Venus Anomaly (+464 °C > Mercury): Venus's thick CO2atmosphere traps infrared radiation via an extreme greenhouse effect . (2) Density Split: Rocky inner 4 have high densities ( 3930–5510 kg/m3 ) vs gaseous/icy outer 4 ( 687–1640 kg/m3 ). (3) Surface g depends on planet mass & radius (Jupiter 23.1 N/kg), NOT distance from the Sun!",
+      "vi": "📌 3 Nhận xét Vàng trong Đề thi Paper 4: (1) Ngoại lệ Sao Kim (+464 °C nóng hơn Sao Thủy): Bầu khí quyển dày đặc CO2 của Venus gây hiệu ứng nhà kính (greenhouse effect) cực mạnh. (2) Sự phân tách khối lượng riêng: 4 hành tinh đá trong rất đặc ( 3930–5510 kg/m3 ) so với 4 hành tinh khí/băng ngoài ( 687–1640 kg/m3 ). (3) Cường độ trường hấp dẫn g bề mặt phụ thuộc vào khối lượng và bán kính hành tinh (Jupiter 23,1 N/kg), KHÔNG phụ thuộc khoảng cách tới Mặt Trời!",
+      "duration": 77.56,
+      "startTime": 862.29,
+      "endTime": 939.85,
+      "audioUrl": "/audio/lectures/physics/6/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "WORKED EXAMPLE 1 🟦 CORE • Paper 2 MCQ In June, countries in the Northern Hemisphere experience summer while countries in the Southern Hemisphere experience winter. Which statement correctly explains why it is summer in the Northern Hemisphere in June? A. The whole Earth is at its closest point to the Sun in its elliptical orbit in June B. The Northern Hemisphere is tilted towards the Sun, giving longer daylight hours and more concentrated solar radiation C. The Earth spins faster on its axis in June, trapping more thermal energy in the northern oceans D. The Moon blocks less sunlight from reaching the Northern Hemisphere during June ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Seasons are caused by the 23.5° tilt of Earth's axis as it orbits the Sun once every 365 days. In June, the Northern Hemisphere is tilted towards the Sun , so sunlight strikes the surface at a steeper angle (higher intensity per m2) AND days are longer than nights. Distractor A is the #1 misconception — if distance caused seasons, both hemispheres would have summer at the same time!",
+      "vi": "BÀI MẪU 1 🟦 CORE • Paper 2 MCQ In June, countries in the Northern Hemisphere experience summer while countries in the Southern Hemisphere experience winter. Which statement correctly explains why it is summer in the Northern Hemisphere in June? (Vào tháng 6, Bắc bán cầu là mùa hè trong khi Nam bán cầu là mùa đông. Phát biểu nào giải thích đúng vì sao Bắc bán cầu có mùa hè vào tháng 6?) A. The whole Earth is at its closest point to the Sun in its elliptical orbit in June B. The Northern Hemisphere is tilted towards the Sun, giving longer daylight hours and more concentrated solar radiation C. The Earth spins faster on its axis in June, trapping more thermal energy in the northern oceans D. The Moon blocks less sunlight from reaching the Northern Hemisphere during June ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Các mùa sinh ra do trục Trái Đất nghiêng 23,5° khi quay quanh Mặt Trời. Vào tháng 6, Bắc bán cầu nghiêng về phía Mặt Trời nên tia sáng chiếu thẳng góc hơn (mật độ năng lượng cao hơn) VÀ thời gian ban ngày dài hơn. Đáp án A là ngộ nhận phổ biến nhất — nếu khoảng cách gây ra mùa thì cả hai bán cầu phải cùng nóng một lúc!",
+      "duration": 135.66,
+      "startTime": 939.85,
+      "endTime": 1075.51,
+      "audioUrl": "/audio/lectures/physics/6/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] The four inner planets (Mercury, Venus, Earth, Mars) are small and rocky, whereas the four outer planets (Jupiter, Saturn, Uranus, Neptune) are large and gaseous. (a) Use the accretion model of Solar System formation to explain how the planets formed from an interstellar cloud and why the inner planets are rocky while the outer planets are gaseous. [4] (b) Planetary data show Mercury is 58 × 106km from the Sun with a mean surface temperature of 167 °C, whereas Venus is 108 × 106km from the Sun with a mean surface temperature of 464 °C. Explain this anomaly. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. An interstellar cloud of gas and dust (containing heavy elements) collapsed inward due to gravitational attraction [1m].2. As it collapsed, it spun faster and flattened into a rotating accretion disc around the central protostar (the Sun), where dust particles stuck together to build planets [1m].3. Close to the hot young Sun, light volatile compounds evaporated, so only high-melting-point metals and rocky silicates condensed into small, dense rocky inner planets [1m].4. Far from the Sun where it was cool, abundant volatile ices and light gases (H2, He) condensed and were pulled in by strong gravity to form massive gas giants [1m]. (b) Venus has a very thick atmosphere of carbon dioxide (CO2) [1m], which traps infrared thermal radiation via an extreme greenhouse effect (whereas Mercury has almost no atmosphere) [1m].",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Tự luận [6 điểm] The four inner planets are small and rocky, whereas the four outer planets are large and gaseous. (a) Use the accretion model to explain how the Solar System formed and why inner planets are rocky while outer planets are gaseous. (Dùng mô hình bồi tụ giải thích sự hình thành Hệ Mặt Trời và sự khác biệt giữa 4 hành tinh trong với 4 hành tinh ngoài.) (b) Mercury (58 × 106km from Sun) has a mean temperature of 167 °C, whereas Venus (108 × 106km) is at 464 °C. Explain why Venus is hotter. (Giải thích vì sao Sao Kim xa Mặt Trời hơn nhưng lại nóng hơn Sao Thủy.) ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Đám mây khí và bụi liên sao (chứa các nguyên tố nặng) co sập lại dưới tác dụng của lực hấp dẫn (gravity) .2. Khi co lại, đám mây quay nhanh hơn và dẹt thành đĩa bồi tụ quay quanh Mặt Trời trẻ, nơi các hạt bụi va chạm kết dính tạo hành tinh .3. Gần Mặt Trời rất nóng, các hợp chất nhẹ dễ bay hơi bị hóa hơi hết, chỉ kim loại và đá silicat nóng chảy cao ngưng tụ thành 4 hành tinh đá nhỏ, đặc .4. Xa Mặt Trời nhiệt độ lạnh, băng và khí nhẹ (H2, He) ngưng tụ nhiều và bị lực hấp dẫn mạnh hút giữ tạo thành 4 hành tinh khí khổng lồ . (b) Sao Kim có bầu khí quyển cực dày chứa khí carbon dioxide (CO2) , giữ lại bức xạ hồng ngoại gây hiệu ứng nhà kính (greenhouse effect) dữ dội .",
+      "duration": 209.39,
+      "startTime": 1075.51,
+      "endTime": 1284.9,
+      "audioUrl": "/audio/lectures/physics/6/s01_b11.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "🚀 6.1.1–6.1.2 Tốc độ Quỹ đạo (Orbital Speed), Thời gian Ánh sáng truyền, Hấp dẫn & Quỹ đạo Elip",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "🚀 6.1.1–6.1.2 Orbital Speed, Light-Travel Time, Gravity & Elliptical Orbits.",
+      "vi": "🚀 6.1.1–6.1.2 Tốc độ Quỹ đạo (Orbital Speed), Thời gian Ánh sáng truyền, Hấp dẫn & Quỹ đạo Elip.",
+      "duration": 11.73,
+      "startTime": 1284.9,
+      "endTime": 1296.63,
+      "audioUrl": "/audio/lectures/physics/6/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine a runner sprinting around a circular stadium track: one full lap covers a circumference of 2π r in lap time T , so average speed is simply v = 2π r / T ! Meanwhile, picture a comet on a stretched elliptical orbit like a skateboarder dropping into a giant frictionless half-pipe toward the Sun: plunging inward trades Gravitational Potential Energy (GPE) for Kinetic Energy (KE) so the comet whips fastest right past the Sun, then slows right down as it climbs back out into deep space!",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung một vận động viên chạy quanh sân vận động hình tròn bán kính r : chạy hết 1 vòng là đi hết chu vi 2π r trong thời gian T , nên tốc độ trung bình hiển nhiên là v = 2π r / T ! Còn với sao chổi bay trên quỹ đạo elip dẹt, hãy tưởng tượng một vận động viên trượt ván lao xuống lòng máng trượt khổng lồ không ma sát : khi lao về phía Mặt Trời, thế năng hấp dẫn (GPE) chuyển thành động năng (KE) làm nó vút nhanh cực đại ở điểm cận nhật, rồi chậm dần khi leo ngược ra vùng không gian sâu!",
+      "duration": 63.01,
+      "startTime": 1296.63,
+      "endTime": 1359.64,
+      "audioUrl": "/audio/lectures/physics/6/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Average Orbital Speed & Light Time (🟦 Core / 🟩 Supplement): Use v = 2π r / T (with r in m and T in s for m/s) and light-travel time t = d / c where c = 3.0 × 108m/s . 2. Solar Mass & Distance Trend (🟦 Core / 🟩 Supplement): The Sun holds >99.8% of Solar System mass, supplying gravitational attraction. Further from the Sun ⇒ weaker solar gravitational field ⇒ lower orbital speed v and longer period T . 3. Elliptical Orbits & Energy (🟩 Supplement): The Sun sits at one focus (NOT the centre, unless circular). Total GPE + KE = constant : closer to Sun ⇒ lower GPE, higher KE, faster speed!",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Tốc độ Quỹ đạo & Ánh sáng (🟦 Core / 🟩 Supplement): Áp dụng v = 2π r / T (đổi r ra m, T ra giây để tính m/s) và thời gian ánh sáng truyền t = d / c với c = 3,0 × 108m/s . 2. Trường hấp dẫn Mặt Trời (🟦 Core / 🟩 Supplement): Mặt Trời chiếm >99,8% khối lượng nên tạo lực hút giữ các hành tinh. Khoảng cách tăng ⇒ trường hấp dẫn Mặt Trời giảm ⇒ tốc độ quỹ đạo v giảm . 3. Quỹ đạo Elip & Bảo toàn Năng lượng (🟩 Supplement): Mặt Trời nằm tại một tiêu điểm (focus) chứ KHÔNG ở tâm hình học. Tổng GPE + KE = hằng số : lại gần Mặt Trời ⇒ GPE giảm, KE tăng, tốc độ tăng!",
+      "duration": 94.89,
+      "startTime": 1359.64,
+      "endTime": 1454.53,
+      "audioUrl": "/audio/lectures/physics/6/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic calculation traps: (1) Substituting T in days or hours directly into v = 2π r / T when asked for m/s — always multiply days × 24 × 3600 ! (2) For an artificial satellite orbiting at height h above a planet of radius R , orbital radius is r = R + h (from the planet's centre , NOT just height h !).",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy mất điểm tính toán kinh điển: (1) Thay thẳng T tính bằng ngày hoặc giờ vào v = 2π r / T khi đề hỏi m/s — bắt buộc nhân ngày × 24 × 3600 ! (2) Với vệ tinh nhân tạo bay ở độ cao h cách mặt đất, bán kính quỹ đạo phải tính từ tâm hành tinh: r = R + h (chứ không phải mỗi h !).",
+      "duration": 49.6,
+      "startTime": 1454.53,
+      "endTime": 1504.13,
+      "audioUrl": "/audio/lectures/physics/6/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "Công thức Tốc độ Quỹ đạo Trung bình (Average Orbital Speed)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "SUPPLEMENT 6.1.1.4 Average Orbital Speed Equation. v = 2π r T v : Average orbital speed (m/s or km/s). r : Average radius of the orbit (m or km; circumference = 2π r ). T : Orbital period — time for 1 complete orbit (convert days/years → seconds for m/s!).",
+      "vi": "SUPPLEMENT 6.1.1.4 Công thức Tốc độ Quỹ đạo Trung bình. v = 2π r T v : Tốc độ quỹ đạo trung bình ( Average orbital speed , m/s hoặc km/s). r : Bán kính quỹ đạo trung bình ( Average orbital radius ; chu vi quỹ đạo = 2π r ). T : Chu kỳ quỹ đạo ( Orbital period — bắt buộc đổi ngày/năm → giây khi tính ra m/s!).",
+      "duration": 52.36,
+      "startTime": 1504.13,
+      "endTime": 1556.49,
+      "audioUrl": "/audio/lectures/physics/6/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "🧮 Bài toán Mẫu: Tốc độ Quỹ đạo & Thời gian Ánh sáng Truyền",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "🧮 Worked Examples: Orbital Speed & Light-Travel Time. 1. Earth's Orbital Speed ( r = 1.50 × 1011m, T = 365.25 days): • Convert T = 365.25 × 24 × 3600 = 3.156 × 107s .• v = 2π(1.50 × 1011) / (3.156 × 107) = 2.99 × 104m/s (≈ 30 km/s) ! 2. Light-Travel Time (Core 6.1.2.6, c = 3.0 × 108m/s): • Sun → Earth: t = d/c = (1.5 × 1011) / (3.0 × 108) = 500 s (8 min 20 s) .• Sun → Neptune (4.5 × 1012m): t = 15,000 s = 250 min (4.17 h) !",
+      "vi": "🧮 Bài toán Mẫu: Tốc độ Quỹ đạo & Thời gian Ánh sáng Truyền. 1. Tốc độ Quỹ đạo Trái Đất ( r = 1,50 × 1011m, T = 365,25 ngày): • Đổi T = 365,25 × 24 × 3600 = 3,156 × 107s .• v = 2π(1,50 × 1011) / (3,156 × 107) = 2,99 × 104m/s (≈ 30 km/s) ! 2. Thời gian ánh sáng truyền đi (Core 6.1.2.6, c = 3,0 × 108m/s): • Mặt Trời → Trái Đất: t = d/c = (1,5 × 1011) / (3,0 × 108) = 500 s (8 phút 20 s) .• Mặt Trời → Neptune (4,5 × 1012m): t = 15.000 s = 250 phút (4,17 giờ) !",
+      "duration": 126.88,
+      "startTime": 1556.49,
+      "endTime": 1683.37,
+      "audioUrl": "/audio/lectures/physics/6/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "🧲 6.1.2 Cường độ Trường Hấp dẫn (Gravitational Field Strength), Khối lượng Mặt Trời & Tốc độ",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "🧲 6.1.2 Gravitational Field Strength, Solar Mass & Orbital Speed. Surface gravitational field strength ( g ): Increases with the mass of the planet (for a given radius), and decreases rapidly as distance from the planet increases. Why planets orbit the Sun: The Sun contains over 99.8% of the mass of the Solar System ; its strong gravitational attraction provides the inward centripetal force keeping planets, asteroids, and comets in orbit. Supplement 6.1.2.10 — Distance vs Orbital Speed: As distance from the Sun increases, the Sun's gravitational field strength decreases ⇒ weaker centripetal gravitational pull ⇒ the orbital speed v of a planet decreases (Mercury ~47.4 km/s vs Neptune ~5.4 km/s) and its orbital period T increases!",
+      "vi": "🧲 6.1.2 Cường độ Trường Hấp dẫn, Khối lượng Mặt Trời & Tốc độ. Cường độ trường hấp dẫn bề mặt ( g ): Tăng khi khối lượng hành tinh tăng, và giảm nhanh khi khoảng cách ra xa hành tinh tăng. Tại sao các hành tinh quay quanh Mặt Trời? Mặt Trời nắm giữ hơn 99,8% tổng khối lượng toàn Hệ Mặt Trời ; lực hút hấp dẫn khổng lồ của Mặt Trời đóng vai trò lực hướng tâm giữ các hành tinh chuyển động trên quỹ đạo. Supplement 6.1.2.10 — Khoảng cách tăng → Tốc độ giảm: Càng ở xa Mặt Trời, trường hấp dẫn của Mặt Trời càng yếu đi ⇒ lực kéo hấp dẫn nhỏ hơn ⇒ tốc độ quỹ đạo v giảm xuống (Mercury ~47,4 km/s so với Neptune ~5,4 km/s) và chu kỳ T dài hơn!",
+      "duration": 90.69,
+      "startTime": 1683.37,
+      "endTime": 1774.06,
+      "audioUrl": "/audio/lectures/physics/6/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Quỹ đạo Elip (Mặt Trời nằm ở Tiêu điểm!) & Bảo toàn Năng lượng (GPE ↔ KE)",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "SUPPLEMENT 6.1.2.7 & 6.1.2.9 Elliptical Orbits (Sun at Focus!) & Conservation of Energy (GPE ↔ KE). Inline SVG of Comet Elliptical Orbit 1. Geometry Rule (Supplement 6.1.2.7): Planets, minor planets, and comets follow elliptical orbits . Crucially, the Sun is NOT at the centre of the ellipse — it sits at one focus , except when the orbit is approximately circular . 2. Conservation of Energy (Supplement 6.1.2.9): In the vacuum of space, total mechanical energy ( GPE + KE = constant ) is conserved:• Approaching the Sun: Distance falls → Gravitational Potential Energy (GPE) decreases and transfers into Kinetic Energy (KE) → object speeds up (fastest at closest approach).• Receding from the Sun: Distance rises → KE transfers back into GPE → object slows down (slowest at furthest point).",
+      "vi": "SUPPLEMENT 6.1.2.7 & 6.1.2.9 Quỹ đạo Elip (Mặt Trời nằm ở Tiêu điểm!) & Bảo toàn Năng lượng (GPE ↔ KE). 1. Quy tắc Hình học (Supplement 6.1.2.7): Hành tinh, hành tinh lùn và sao chổi bay theo quỹ đạo hình elip (elliptical orbits) . Mặt Trời KHÔNG nằm ở tâm hình elip (ngoại trừ khi quỹ đạo gần tròn như Trái Đất), mà nằm tại một tiêu điểm (focus) ! 2. Bảo toàn Năng lượng (Supplement 6.1.2.9): Trong chân không vũ trụ, tổng cơ năng ( GPE + KE = hằng số ) được bảo toàn:• Khi tiến lại gần Mặt Trời: Khoảng cách giảm → Thế năng hấp dẫn (GPE) giảm và chuyển hóa thành Động năng (KE) → thiên thể tăng tốc độ (speeds up) !• Khi bay ra xa Mặt Trời: Khoảng cách tăng → KE chuyển hóa ngược lại thành GPE → thiên thể giảm tốc độ (slows down) !",
+      "duration": 110.2,
+      "startTime": 1774.06,
+      "endTime": 1884.26,
+      "audioUrl": "/audio/lectures/physics/6/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A comet travels around the Sun in a highly elliptical orbit. As the comet moves from its furthest point from the Sun to its closest point to the Sun, how do its gravitational potential energy (GPE), kinetic energy (KE), and orbital speed change? A. GPE increases | KE decreases | Speed decreases B. GPE decreases | KE increases | Speed increases C. GPE stays constant | KE increases | Speed increases D. GPE decreases | KE stays constant | Speed stays constant ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: In the vacuum of space, total mechanical energy is conserved ( GPE + KE = constant ). As the comet moves closer to the Sun, its distance falls so its gravitational potential energy (GPE) decreases . By conservation of energy, this lost GPE is transferred into kinetic energy (KE) , so KE increases and its orbital speed increases (reaching maximum speed at closest approach).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A comet travels around the Sun in a highly elliptical orbit. As the comet moves from its furthest point from the Sun to its closest point to the Sun, how do its GPE, KE, and orbital speed change? (Một sao chổi bay quanh Mặt Trời theo quỹ đạo rất dẹt hình elip. Khi sao chổi đi từ điểm xa nhất tới điểm gần Mặt Trời nhất, thế năng hấp dẫn GPE, động năng KE và tốc độ của nó thay đổi thế nào?) A. GPE increases | KE decreases | Speed decreases B. GPE decreases | KE increases | Speed increases C. GPE stays constant | KE increases | Speed increases D. GPE decreases | KE stays constant | Speed stays constant ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Trong chân không vũ trụ, tổng cơ năng được bảo toàn ( GPE + KE = hằng số ). Khi sao chổi lao lại gần Mặt Trời, khoảng cách giảm làm thế năng hấp dẫn (GPE) giảm . Phần GPE giảm đi chuyển hóa thành động năng (KE) nên KE tăng và tốc độ tăng lên .",
+      "duration": 128.44,
+      "startTime": 1884.26,
+      "endTime": 2012.7,
+      "audioUrl": "/audio/lectures/physics/6/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Calculation [6 marks] Mars orbits the Sun at an average orbital radius of 2.28 × 1011m with an orbital period of 687 Earth days . The speed of light in a vacuum is 3.0 × 108m/s . (a) Calculate the time taken (in minutes) for light from the Sun to reach Mars. [2] (b) Calculate the average orbital speed of Mars around the Sun in m/s . [3] (c) State and explain how the orbital speed of Jupiter compares with that of Mars. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) Using t = d / c = (2.28 × 1011m) ÷ (3.0 × 108m/s) = 760 s [1m].Convert to minutes: 760 ÷ 60 = 12.7 minutes (accept 13 min) [1m]. (b) 1. Convert period T to seconds: T = 687 × 24 × 3600 = 5.936 × 107s [1m].2. Formula & substitution: v = 2πr / T = (2 × π × 2.28 × 1011) ÷ (5.936 × 107) [1m] = 2.41 × 104m/s (24,100 m/s) [1m]. (c) Jupiter's orbital speed is smaller / slower than Mars's (~13 km/s vs 24 km/s) because Jupiter is further from the Sun where the Sun's gravitational field strength is weaker [1m]. 💡 Intuition Check: Sanity check your answer! Earth orbits at ~30,000 m/s (30 km/s). Since Mars is just outside Earth's orbit, getting 24,100 m/s (24.1 km/s) immediately confirms your unit conversions are spot-on!",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Tính toán [6 điểm] Mars orbits the Sun at an average radius of 2.28 × 1011m with an orbital period of 687 Earth days . ( c = 3.0 × 108m/s ). (a) Calculate the time (in minutes) for sunlight to travel from the Sun to Mars. (Tính thời gian ánh sáng đi từ Mặt Trời tới Sao Hỏa theo phút.) Tính tốc độ quỹ đạo trung bình của Sao Hỏa ra m/s. So sánh và giải thích tốc độ quỹ đạo của Sao Mộc so với Sao Hỏa. ✍️ Lời giải chi tiết theo thang điểm: (a) Áp dụng t = d / c = (2,28 × 1011) ÷ (3,0 × 108) = 760 s .Đổi sang phút: 760 ÷ 60 = 12,7 phút (≈ 13 phút) . (b) 1. Đổi chu kỳ T sang giây: T = 687 × 24 × 3600 = 5,936 × 107s .2. Thay vào công thức: v = 2πr / T = (2 × π × 2,28 × 1011) ÷ (5,936 × 107) = 2,41 × 104m/s (24.100 m/s) . (c) Tốc độ quỹ đạo của Sao Mộc nhỏ hơn / chậm hơn Sao Hỏa vì Sao Mộc ở xa Mặt Trời hơn, nơi cường độ trường hấp dẫn của Mặt Trời yếu hơn . 💡 Kiểm tra bản chất: Mẹo tự kiểm tra nghiệm: Trái Đất chạy quanh Mặt Trời với tốc độ ~30.000 m/s (30 km/s). Sao Hỏa nằm ngay vành ngoài Trái Đất nên ra 24.100 m/s là cực kỳ hợp lý!",
+      "duration": 237.11,
+      "startTime": 2012.7,
+      "endTime": 2249.81,
+      "audioUrl": "/audio/lectures/physics/6/s02_b09.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "✨ 6.2 Các Ngôi sao và Vũ trụ — Vòng đời Sao, Dịch chuyển Đỏ (Redshift), CMBR & Định luật Hubble",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "✨ 6.2 Stars and the Universe — Stellar Evolution, Redshift, CMBR & Hubble's Law.",
+      "vi": "✨ 6.2 Các Ngôi sao và Vũ trụ — Vòng đời Sao, Dịch chuyển Đỏ (Redshift), CMBR & Định luật Hubble.",
+      "duration": 15.69,
+      "startTime": 2249.81,
+      "endTime": 2265.5,
+      "audioUrl": "/audio/lectures/physics/6/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: A stable star like our Sun is a multi-billion-year cosmic tug-of-war locked in a tie : inward gravity tries to crush the ball of gas while outward thermal pressure from core hydrogen-to-helium fusion pushes back equally! Meanwhile, Galactic Redshift works just like a receding ambulance siren — as distant galaxies rush away with expanding space, their light waves are stretched to longer (redder) wavelengths; CMBR is the cooled, stretched \"afterglow\" filling the entire Big Bang oven; and 1 / H 0 is rewinding the cosmic movie back to the single point where expansion began!",
+      "vi": "🎯 Hình dung đời thường: Một ngôi sao ổn định như Mặt Trời giống như cuộc kéo co vũ trụ bất phân thắng bại suốt hàng tỷ năm : lực hấp dẫn kéo vào tâm cân bằng hoàn hảo với áp suất nhiệt đẩy ra từ phản ứng nhiệt hạch tổng hợp Hydrogen → Helium ! Trong khi đó, Dịch chuyển đỏ (Redshift) giống hệt tiếng còi xe cứu thương trầm xuống khi xe chạy ra xa — không gian giãn nở kéo dãn sóng ánh sáng thiên hà xa về phía màu đỏ; bức xạ nền CMBR là \"hơi ấm tàn dư\" của lò lửa Big Bang bị kéo giãn thành sóng vi ba; còn 1 / H 0 chính là tua ngược bộ phim vũ trụ về đúng thời điểm khởi nguồn tại một điểm duy nhất!",
+      "duration": 69.49,
+      "startTime": 2265.5,
+      "endTime": 2334.99,
+      "audioUrl": "/audio/lectures/physics/6/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Sun, Light-Years & Stellar Life Cycle (🟦 Core / 🟩 Supplement): Sun = medium star (mostly H & He, emitting IR, visible, UV , powered by H → He fusion). 1 light-year = 9.5 × 1015m ; Milky Way diameter ≈ 100,000 ly . Stellar path: Nebula → Protostar → Stable Star → either Red Giant → Planetary Nebula + White Dwarf (low mass) OR Red Supergiant → Supernova → Neutron Star / Black Hole (high mass). 2. Redshift & CMBR (🟦 Core / 🟩 Supplement): Redshift (Δλ > 0 from receding galaxies) + uniform CMBR (early gamma/hot radiation stretched into microwaves as space expanded) are the two pillars of the Big Bang Theory . 3. Hubble's Law & Age (🟩 Supplement): H 0= v / d = 2.2 × 10−18s−1 ( v from redshift; d from supernova brightness); Universe age ≈ 1 / H 0≈ 4.5 × 1017s (≈ 14 billion years) .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Mặt Trời, Năm ánh sáng & Vòng đời Sao (🟦 Core / 🟩 Supplement): Mặt Trời = sao trung bình (H & He, phát IR, visible, UV nhờ nhiệt hạch H → He). 1 light-year = 9,5 × 1015m ; Ngân Hà rộng ~ 100.000 ly . Vòng đời sao: Nebula → Protostar → Stable Star → rẽ nhánh thành Red Giant → Planetary Nebula + White Dwarf (sao nhỏ) HOẶC Red Supergiant → Supernova → Neutron Star / Black Hole (sao lớn). 2. Redshift & CMBR (🟦 Core / 🟩 Supplement): Dịch chuyển đỏ (Δλ > 0) + bức xạ nền CMBR đồng đều từ mọi hướng là 2 bằng chứng thép cho Thuyết Big Bang . 3. Định luật Hubble & Tuổi Vũ trụ (🟩 Supplement): H 0= v / d = 2,2 × 10−18s−1 ; tuổi Vũ trụ ≈ 1 / H 0≈ 4,5 × 1017s (≈ 14 tỷ năm) .",
+      "duration": 128.49,
+      "startTime": 2334.99,
+      "endTime": 2463.48,
+      "audioUrl": "/audio/lectures/physics/6/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: NEVER call a light-year a unit of time — it is a unit of DISTANCE (9.5 × 1015m) ! And when using H 0= v / d = 2.2 × 10−18s−1 , both v and d MUST have matching length units (e.g. convert v to m/s and d from light-years to metres so metres cancel cleanly to leave s−1)!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: TUYỆT ĐỐI KHÔNG gọi năm ánh sáng (light-year) là đơn vị thời gian — đó là đơn vị KHOẢNG CÁCH (9,5 × 1015m) ! Và khi dùng H 0= v / d = 2,2 × 10−18s−1 , bắt buộc đổi v ra m/s và d ra mét (m) để đơn vị độ dài triệt tiêu chuẩn xác!",
+      "duration": 44.61,
+      "startTime": 2463.48,
+      "endTime": 2508.09,
+      "audioUrl": "/audio/lectures/physics/6/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "☀️ 6.2.1 Mặt Trời là một Ngôi sao (The Sun as a Star)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "☀️ 6.2.1 The Sun as a Star (Core + Supplement). Size & Composition: The Sun is a medium-sized star consisting mostly of hydrogen (~74%) and helium (~24%). Radiated Spectrum: Radiates most of its energy in the infrared (IR), visible light, and ultraviolet (UV) regions of the electromagnetic spectrum. Supplement Energy Source: Stable stars are powered by nuclear reactions in their hot, dense core involving the fusion of hydrogen into helium (411H →42He + energy).",
+      "vi": "☀️ 6.2.1 Mặt Trời là một Ngôi sao. Kích cỡ & Thành phần: Mặt Trời là ngôi sao cỡ trung bình cấu tạo chủ yếu từ hydrogen (~74%) và helium (~24%). Phổ bức xạ: Phát ra phần lớn năng lượng ở vùng tia hồng ngoại (infrared), ánh sáng nhìn thấy (visible light) và tia tử ngoại (ultraviolet). Supplement Nguồn năng lượng: Các ngôi sao ổn định được cung cấp năng lượng bởi phản ứng nhiệt hạch tổng hợp hydrogen thành helium trong lõi cực nóng và đặc.",
+      "duration": 64.24,
+      "startTime": 2508.09,
+      "endTime": 2572.33,
+      "audioUrl": "/audio/lectures/physics/6/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🌌 6.2.2 Dải Ngân Hà (Milky Way) & Năm Ánh sáng (9,5 × 10 15 m)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🌌 6.2.2 The Milky Way & The Light-Year (9.5 × 1015m). Galaxies: Vast gravitationally bound systems each containing many billions of stars. The Milky Way: Spiral galaxy (~ 100,000 light-years across) containing our Sun; all other stars in the Milky Way are much further from Earth than the Sun (nearest star Proxima Centauri ≈ 4.2 light-years away!). Light-Year (Unit of DISTANCE!): Distance travelled in the vacuum of space by light in 1 year. Supplement Recall: 1 light-year = 9.5 × 1015m Derivation: d = c × t = (3.0 × 108m/s) × (365.25 × 24 × 3600 s) = 9.47 × 1015m ≈ 9.5 × 1015m.",
+      "vi": "🌌 6.2.2 Dải Ngân Hà (Milky Way) & Năm Ánh sáng (9,5 × 1015m). Thiên hà (Galaxies): Hệ thống khổng lồ liên kết hấp dẫn gồm hàng tỷ ngôi sao. Dải Ngân Hà (The Milky Way): Thiên hà xoắn ốc đường kính ~ 100.000 năm ánh sáng chứa Mặt Trời; các ngôi sao khác trong Ngân Hà đều ở xa Trái Đất hơn Mặt Trời rất nhiều lần (ngôi sao gần nhất Proxima Centauri cách ~4,2 năm ánh sáng!). Năm ánh sáng (Light-year — ĐƠN VỊ KHOẢNG CÁCH!): Quãng đường ánh sáng đi được trong chân không trong 1 năm. Supplement Bắt buộc thuộc: 1 light-year = 9,5 × 1015m Chứng minh: d = c × t = (3,0 × 108) × (365,25 × 24 × 3600) = 9,47 × 1015m ≈ 9,5 × 1015m.",
+      "duration": 105.21,
+      "startTime": 2572.33,
+      "endTime": 2677.54,
+      "audioUrl": "/audio/lectures/physics/6/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "Giai đoạn 1–3 (Mọi ngôi sao — Cân bằng Thủy tĩnh): • 1. Đám mây liên sao (Inters...",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "Stages 1–3 (All Stars — Hydrostatic Equilibrium): • 1. Interstellar Cloud (Nebula) → 2. Protostar: Gravity pulls H2gas and dust together; GPE converts to internal thermal energy until core reaches ~107K.• 3. Stable Star (Main Sequence): Hydrogen fuses into helium. Stability lasts billions of years because inward gravitational attraction is balanced by outward thermal/radiation pressure from the hot core!",
+      "vi": "Giai đoạn 1–3 (Mọi ngôi sao — Cân bằng Thủy tĩnh): • 1. Đám mây liên sao (Interstellar cloud) → 2. Tiền sao (Protostar): Lực hấp dẫn kéo khí H2và bụi co lại; GPE chuyển thành nội năng làm nhiệt độ lõi tăng vọt.• 3. Sao ổn định: Nhiệt hạch H → He khởi phát. Sao giữ kích thước ổn định vì lực hút hấp dẫn hướng vào tâm cân bằng chính xác với áp suất nhiệt/bức xạ đẩy ra ngoài !",
+      "duration": 58.81,
+      "startTime": 2677.54,
+      "endTime": 2736.35,
+      "audioUrl": "/audio/lectures/physics/6/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "Giai đoạn 4–6 (Khi lõi cạn kiệt Hydrogen — Rẽ nhánh theo Khối lượng): • Sao cỡ M...",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "Stages 4–6 (After Core Hydrogen Runs Out): • Sun-like Star: Core contracts while outer layers expand into a Red Giant → sheds a Planetary Nebula leaving a hot, dense White Dwarf (→ cools to a Black Dwarf ).• Massive Star: Expands into a Red Supergiant → explodes violently as a Supernova (forging heavy elements heavier than iron and scattering a nebula that forms new stars & orbiting rocky planets !) → core collapses into a Neutron Star or (most massive) a Black Hole .",
+      "vi": "Giai đoạn 4–6 (Khi lõi cạn kiệt Hydrogen — Rẽ nhánh theo Khối lượng): • Sao cỡ Mặt Trời: Phồng to thành Sao khổng lồ đỏ (Red Giant) → phóng lớp vỏ tạo Tinh vân hành tinh (Planetary Nebula) với lõi Sao lùn trắng (White Dwarf) ở tâm (→ nguội dần thành Black Dwarf ).• Sao khối lượng lớn: Giãn thành Siêu khổng lồ đỏ (Red Supergiant) → nổ tung thành Siêu tân tinh (Supernova) (tổng hợp các nguyên tố nặng hơn sắt và tung đám mây bụi khí để hình thành thế hệ sao mới & các hành tinh đá quay quanh !) → lõi suy sập thành Sao Neutron (Neutron Star) hoặc Hố đen (Black Hole) .",
+      "duration": 67.89,
+      "startTime": 2736.35,
+      "endTime": 2804.24,
+      "audioUrl": "/audio/lectures/physics/6/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "🌈 1. Dịch chuyển Đỏ Thiên hà (Galactic Redshift — Core 6.2.3.2–6.2.3.3)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "🌈 1. Galactic Redshift (Core 6.2.3.2–6.2.3.3). Redshift is the increase in observed wavelength (Δλ > 0) of electromagnetic radiation emitted from receding stars and galaxies . Dark spectral absorption lines from distant galaxies are shifted towards the red (longer-λ) end compared with laboratory spectra on Earth:",
+      "vi": "🌈 1. Dịch chuyển Đỏ Thiên hà. Dịch chuyển đỏ (Redshift) là sự tăng bước sóng quan sát được (Δλ > 0) của bức xạ điện từ phát ra từ các ngôi sao và thiên hà đang lùi ra xa (receding galaxies) . Các vạch tối hấp thụ dịch chuyển về phía đầu Đỏ (bước sóng dài hơn) :",
+      "duration": 40.43,
+      "startTime": 2804.24,
+      "endTime": 2844.67,
+      "audioUrl": "/audio/lectures/physics/6/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "📡 2. Thuyết Vụ Nổ Lớn (Big Bang) & Bức xạ Nền Vi sóng Vũ trụ (CMBR)",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "📡 2. Big Bang & Cosmic Microwave Background Radiation (CMBR — Supplement). Big Bang Theory: Because distant galaxies are receding in all directions (with further galaxies receding faster), space itself is expanding — running time backwards implies the entire Universe began from a single, extremely hot, dense point ~14 billion years ago. What is CMBR (Supplement 6.2.3.4)? Uniform microwave radiation of a specific temperature (~2.7 K) observed at all points in space in every direction. Origin of CMBR (Supplement 6.2.3.5): Intense short-wavelength electromagnetic radiation produced shortly after the Universe was formed has had its wavelength stretched (expanded) into the microwave region of the EM spectrum as the Universe expanded!",
+      "vi": "📡 2. Thuyết Vụ Nổ Lớn (Big Bang) & Bức xạ Nền Vi sóng Vũ trụ (CMBR). Thuyết Big Bang: Mọi thiên hà xa đều đang lùi ra xa (càng xa càng lùi nhanh) chứng tỏ Vũ trụ đang giãn nở (expanding Universe) ⇒ ngược dòng thời gian, toàn bộ Vũ trụ từng khởi nguồn từ một điểm duy nhất cực nóng và siêu đặc ~14 tỷ năm trước. CMBR là gì (Supplement 6.2.3.4)? Bức xạ vi sóng (microwave radiation) ở nhiệt độ xác định (~2,7 K) quan sát được tại mọi điểm trong không gian từ mọi hướng. Giải thích CMBR (Supplement 6.2.3.5): Bức xạ điện từ năng lượng cao sinh ra ngay sau khi Vũ trụ vừa hình thành đã bị kéo giãn bước sóng vào vùng vi sóng khi Vũ trụ giãn nở suốt hàng tỷ năm!",
+      "duration": 93.76,
+      "startTime": 2844.67,
+      "endTime": 2938.43,
+      "audioUrl": "/audio/lectures/physics/6/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "Định luật Hubble ( H 0 = v / d ), Khoảng cách Supernova & Ước tính Tuổi Vũ trụ",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "SUPPLEMENT 6.2.3.6–6.2.3.9 Hubble's Law ( H 0= v / d ), Supernova Distances & Estimating the Age of the Universe. Inline SVG Hubble Plot • Measuring v & d : Speed v is found from the change in wavelength of starlight due to redshift ; distance d to a distant galaxy is determined using the brightness of a supernova in that galaxy.• Hubble's Law & Constant (Recall Value!): H 0= v / d = 2.2 × 10−18s−1⇒ Age of Universe t = d / v = 1 / H 0 • Proof of Single-Point Origin & Worked Age Calculation: Since t = d / v = 1 / H0 is the same constant for every receding galaxy, all matter in the Universe must have started expanding from one single point at time: t = 1 / (2.2 × 10−18s−1) = 4.55 × 1017s ≈ 1.44 × 1010years (≈ 14 billion years)!",
+      "vi": "SUPPLEMENT 6.2.3.6–6.2.3.9 Định luật Hubble ( H 0= v / d ), Khoảng cách Supernova & Ước tính Tuổi Vũ trụ. • Cách đo v và d : Tốc độ lùi xa v được tính từ độ biến thiên bước sóng ánh sáng sao do dịch chuyển đỏ (redshift) ; khoảng cách d tới thiên hà xa được xác định nhờ độ sáng biểu kiến của sao siêu mới .• Định luật Hubble & Hằng số Hubble (Bắt buộc nhớ giá trị!): H 0= v / d = 2,2 × 10−18s−1⇒ Tuổi Vũ trụ t = d / v = 1 / H 0 • Bằng chứng Khởi nguồn tại Một Điểm & Tính Tuổi Vũ trụ: Vì thời gian t = d / v = 1 / H0 có cùng một giá trị cho mọi thiên hà, toàn bộ vật chất trong Vũ trụ từng tập trung tại một điểm duy nhất cách đây: t = 1 / (2,2 × 10−18s−1) = 4,55 × 1017s ≈ 1,44 × 1010năm (≈ 14 tỷ năm)!",
+      "duration": 114.9,
+      "startTime": 2938.43,
+      "endTime": 3053.33,
+      "audioUrl": "/audio/lectures/physics/6/s03_b10.mp3"
+    },
+    {
+      "id": "s03_b11",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b11\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ Cosmic microwave background radiation (CMBR) is detected coming uniformly from all directions in space. Which statement correctly explains the origin of CMBR and why it is now in the microwave region? A. Microwaves emitted recently by white dwarf stars in the Milky Way have reflected off interstellar dust B. Short-wavelength radiation produced shortly after the Universe formed has had its wavelength stretched into the microwave region as the Universe expanded C. Radio waves from distant supernovae have had their wavelength compressed into microwaves by gravity D. Infrared radiation from the Sun is absorbed and re-emitted as microwaves by Earth's upper atmosphere ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: Shortly after the Big Bang, the hot, dense early Universe was filled with intense high-energy, short-wavelength radiation. As the Universe expanded over ~14 billion years , space stretched the wavelength of this primordial radiation into the microwave region of the electromagnetic spectrum, where it is observed today at all points in space (~2.7 K).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ Cosmic microwave background radiation (CMBR) is detected coming uniformly from all directions in space. Bức xạ nền vi sóng vũ trụ CMBR được ghi nhận đồng đều từ mọi hướng trong không gian. Phát biểu nào giải thích đúng nguồn gốc CMBR và lý do hiện nay nó nằm ở vùng vi sóng? A. Microwaves emitted recently by white dwarf stars in the Milky Way have reflected off interstellar dust B. Short-wavelength radiation produced shortly after the Universe formed has had its wavelength stretched into the microwave region as the Universe expanded C. Radio waves from distant supernovae have had their wavelength compressed into microwaves by gravity D. Infrared radiation from the Sun is absorbed and re-emitted as microwaves by Earth's upper atmosphere ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: Ngay sau Vụ Nổ Lớn (Big Bang), Vũ trụ sơ khai cực nóng tràn ngập bức xạ điện từ bước sóng ngắn. Khi Vũ trụ giãn nở suốt ~14 tỷ năm , không gian đã kéo giãn bước sóng của bức xạ cổ đại này sang vùng vi sóng (microwave region) quan sát thấy tại mọi điểm ngày nay.",
+      "duration": 142.91,
+      "startTime": 3053.33,
+      "endTime": 3196.24,
+      "audioUrl": "/audio/lectures/physics/6/s03_b11.mp3"
+    },
+    {
+      "id": "s03_b12",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b12\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Structured & Calculation [7 marks] Astronomers observe a bright supernova in a distant galaxy G located 5.0 × 108light-years from Earth. (1 light-year = 9.5 × 1015m ; Hubble constant H 0= 2.2 × 10−18s−1 ). (a) Describe what happens to a massive star after it becomes a red supergiant, including what remnants can be left behind. [3] (b) Convert the distance to galaxy G into metres, and calculate the speed v at which galaxy G is receding from Earth. [3] (c) State how astronomers measure this recession speed v directly from galaxy G 's starlight. [1] ✍️ Step-by-Step Mark Scheme Solution: (a) When nuclear fusion fuel runs out in the core of a red supergiant, it explodes violently as a supernova [1m], ejecting a nebula containing hydrogen and newly formed heavy elements [1m], while the dense core collapses to leave behind a neutron star or (if very massive) a black hole [1m]. (b) 1. Distance in metres: d = (5.0 × 108) × (9.5 × 1015m) = 4.75 × 1024m [1m].2. Using Hubble's Law H 0= v / d ⇒ v = H 0× d [1m]: v = (2.2 × 10−18s−1) × (4.75 × 1024m) = 1.05 × 107m/s (1.0 × 107m/s or 10,500 km/s) [1m]. (c) By measuring the change (increase) in wavelength of spectral absorption lines in the galaxy's starlight due to redshift [1m]. 💡 Intuition Check: Look at the unit magic in part (b): multiplying s⁻¹ by metres (10⁻¹⁸ s⁻¹ × 10²⁴ m) automatically gives m/s (1.05 × 10⁷ m/s — about 3.5% of the speed of light, completely physically realistic)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Tự luận & Tính toán [7 điểm] Astronomers observe a supernova in a distant galaxy G at distance 5.0 × 108light-years from Earth. (1 light-year = 9.5 × 1015m ; H 0= 2.2 × 10−18s−1 ). Mô tả diễn biến của sao khối lượng lớn sau giai đoạn siêu khổng lồ đỏ và các tàn dư có thể tạo thành. Đổi khoảng cách sang mét và tính tốc độ lùi xa v của thiên hà G. Nêu cách xác định tốc độ v từ ánh sáng của thiên hà. ✍️ Lời giải chi tiết theo thang điểm: (a) Khi cạn nhiên liệu nhiệt hạch ở lõi, sao siêu khổng lồ đỏ nổ tung dữ dội thành siêu tân tinh (supernova) , phóng ra tinh vân chứa hydrogen và các nguyên tố nặng mới tổng hợp , còn lõi đặc suy sập thành sao neutron (neutron star) hoặc hố đen (black hole) . (b) 1. Đổi sang mét: d = (5,0 × 108) × (9,5 × 1015m) = 4,75 × 1024m .2. Từ định luật Hubble H 0= v / d ⇒ v = H 0× d : v = (2,2 × 10−18s−1) × (4,75 × 1024m) = 1,05 × 107m/s (10.500 km/s) . (c) Đo độ tăng bước sóng của các vạch phổ ánh sáng sao do hiện tượng dịch chuyển đỏ (redshift) .",
+      "duration": 229.21,
+      "startTime": 3196.24,
+      "endTime": 3425.45,
+      "audioUrl": "/audio/lectures/physics/6/s03_b12.mp3"
+    }
+  ]
+}

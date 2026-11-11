@@ -1,0 +1,663 @@
+{
+  "lectureId": "588803a0-fcc4-5582-a53d-1c1925e0e4cf",
+  "courseTitle": "Cambridge IGCSE Physics (0625)",
+  "lectureTitle": "Topic 5: Nuclear physics",
+  "totalDuration": 5554.41,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "s01_int": {
+      "start": 2,
+      "end": 4
+    },
+    "s01_p1_sub01": {
+      "start": 8,
+      "end": 10
+    },
+    "s01_p1_sub02": {
+      "start": 11,
+      "end": 13
+    },
+    "s01_p2_sub01": {
+      "start": 8,
+      "end": 10
+    },
+    "s01_p2_sub02": {
+      "start": 11,
+      "end": 13
+    },
+    "s01_wex": {
+      "start": 14,
+      "end": 15
+    },
+    "s01_hdr": {
+      "start": 1,
+      "end": 15
+    },
+    "s02_int": {
+      "start": 17,
+      "end": 19
+    },
+    "s02_p1_sub01": {
+      "start": 25,
+      "end": 27
+    },
+    "s02_p2_sub01": {
+      "start": 25,
+      "end": 27
+    },
+    "s02_wex": {
+      "start": 28,
+      "end": 29
+    },
+    "s02_hdr": {
+      "start": 16,
+      "end": 29
+    },
+    "s03_int": {
+      "start": 31,
+      "end": 33
+    },
+    "s03_p1_sub01": {
+      "start": 35,
+      "end": 38
+    },
+    "s03_p2_sub01": {
+      "start": 35,
+      "end": 38
+    },
+    "s03_wex": {
+      "start": 39,
+      "end": 40
+    },
+    "s03_hdr": {
+      "start": 30,
+      "end": 40
+    },
+    "s04_int": {
+      "start": 42,
+      "end": 44
+    },
+    "s04_p1_sub01": {
+      "start": 45,
+      "end": 48
+    },
+    "s04_p2_sub01": {
+      "start": 45,
+      "end": 48
+    },
+    "s04_wex": {
+      "start": 49,
+      "end": 50
+    },
+    "s04_hdr": {
+      "start": 41,
+      "end": 50
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Chuyên đề 5: Vật lý hạt nhân (Topic 5: Nuclear Physics)",
+      "selector": "[data-lecture-section=\"intro\"]",
+      "en": "Cambridge IGCSE Physics (0625) Topic 5: Nuclear Physics. 5.1 The Nuclear Model of the Atom (Rutherford Scattering, Ions, Nuclide Notation, Isotopes, Fission & Fusion) • 5.2 Radioactivity (Background Radiation, α/β−/γ Emissions, Field Deflections, Decay Equations, Half-Life & Safety Precautions) — Complete Core & Supplement Master Lecture.",
+      "vi": "Cambridge IGCSE Physics (0625) • Song ngữ Chuyên đề 5: Vật lý hạt nhân. 5.1 Mô hình hạt nhân của nguyên tử ( Nuclear Model of the Atom : tán xạ lá vàng Rutherford, ion, ký hiệu hạt nhân, đồng vị, phân hạch & nhiệt hạch) • 5.2 Phóng xạ ( Radioactivity : phông phóng xạ, 3 tia α/β−/γ, độ lệch trong điện/từ trường, phương trình phân rã, chu kỳ bán rã & an toàn bức xạ) — Trọn bộ Core & Supplement chuẩn Cambridge 0625.",
+      "duration": 67.53,
+      "startTime": 0.0,
+      "endTime": 67.53,
+      "audioUrl": "/audio/lectures/physics/5/intro.mp3"
+    },
+    {
+      "id": "s01_hdr",
+      "title": "⚛️ 5.1 Mô hình Hạt nhân Nguyên tử, Đồng vị, Phân hạch & Nhiệt hạch (The Nuclear Atom)",
+      "selector": "[data-lecture-section=\"s01_hdr\"]",
+      "en": "⚛️ 5.1 The Nuclear Model of the Atom, Isotopes, Fission & Fusion.",
+      "vi": "⚛️ 5.1 Mô hình Hạt nhân Nguyên tử, Đồng vị, Phân hạch & Nhiệt hạch.",
+      "duration": 11.26,
+      "startTime": 67.53,
+      "endTime": 78.79,
+      "audioUrl": "/audio/lectures/physics/5/s01_hdr.mp3"
+    },
+    {
+      "id": "s01_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s01_b01\"]",
+      "en": "🎯 Real-Life Analogy: Imagine placing a tiny glass marble on the centre spot of a giant football stadium while mosquitoes buzz around the outer grandstands: the marble is the dense positive nucleus (~10−15m), the stadium is the whole atom (~10−10m), and 99.999% in between is empty space ! Inside that marble, protons ( Z ) act as the element's permanent passport ID , while neutrons are extra backpack weights creating heavier or lighter isotopes . Splitting an over-packed heavy nucleus is like poking a wobbling giant water drop so it snaps into two fast droplets ( fission ), whereas fusion is slamming two positive magnets together at 100 million °C until they lock into one!",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng bạn đặt một viên bi ve nhỏ xíu ngay chấm giao bóng giữa sân vận động Mỹ Đình trong khi vài con muỗi bay tít ngoài khán đài: viên bi chính là hạt nhân mang điện dương (positive nucleus, ~10−15m) , cả sân vận động là nguyên tử (~10−10m), còn 99,999% khoảng giữa là không gian rỗng (empty space) ! Trong viên bi đó, số proton ( Z ) là thẻ căn cước cố định định danh nguyên tố, còn neutron là những \"túi hành lý\" nặng nhẹ khác nhau tạo nên các đồng vị (isotopes) . Chẻ đôi một hạt nhân siêu nặng giống như chọc vỡ giọt nước khổng lồ đang rung lắc ( phân hạch — fission ), còn nhiệt hạch (fusion) là lao hai cực nam châm cùng dấu vào nhau ở 100 triệu °C cho đến khi chúng dính chặt thành một!",
+      "duration": 100.74,
+      "startTime": 78.79,
+      "endTime": 179.53,
+      "audioUrl": "/audio/lectures/physics/5/s01_b01.mp3"
+    },
+    {
+      "id": "s01_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s01_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Nuclear Atom & Ions (🟦 Core / 🟩 Supplement): Neutral atoms have equal protons (+) and electrons (−); losing/gaining outer electrons ONLY forms positive/negative ions. Rutherford's gold-foil α-scattering proved: most pass straight → mostly empty space ; small deflection → positive nucleus ; rare >90° rebound → tiny, dense mass concentration . 2. Nuclide Notation & Isotopes (🟦 Core / 🟩 Supplement): In A Z X , proton number Z gives relative nuclear charge (+ Z ) ; nucleon number A gives relative nuclear mass ( A ) ; neutrons N = A − Z . Isotopes share the same Z but have different N . 3. Fission, Fusion & Mass Defect (🟩 Supplement): Splitting heavy U-235 ( fission ) or joining light H nuclei ( fusion ) produces products with slightly less total mass ; the missing mass converts into kinetic energy and γ-rays.",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Cấu tạo nguyên tử & Ion (🟦 Core / 🟩 Supplement): Nguyên tử trung hòa có số proton (+) bằng số electron (−); chỉ việc nhường/nhận electron lớp ngoài mới tạo ion dương/âm. Thí nghiệm lá vàng Rutherford chứng minh: đa số đi thẳng → mostly empty space ; lệch góc nhỏ → positively charged nucleus ; ~1/8000 bật ngược >90° → tiny, dense nucleus . 2. Ký hiệu Nuclide & Đồng vị (🟦 Core / 🟩 Supplement): Trong A Z X , Z cho biết điện tích tương đối hạt nhân (+ Z ) ; A cho biết khối lượng tương đối hạt nhân ( A ) ; số neutron N = A − Z . 3. Phân hạch, Nhiệt hạch & Hụt khối (🟩 Supplement): Cả fission (tách hạt nặng) lẫn fusion (gộp hạt nhẹ) đều có tổng khối lượng sau phản ứng nhỏ hơn một chút ( mass defect ) — phần hụt khối chuyển thành động năng và tia γ.",
+      "duration": 126.36,
+      "startTime": 179.53,
+      "endTime": 305.89,
+      "audioUrl": "/audio/lectures/physics/5/s01_b02.mp3"
+    },
+    {
+      "id": "s01_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s01_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Never say an atom forms a positive ion by \"gaining a proton\" — protons are locked inside the nucleus! Also, in nuclide questions on 23892U , never quote 238 as the neutron number: 238 is total nucleons ( A ), so neutrons = 238 − 92 = 146 !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Tuyệt đối KHÔNG viết nguyên tử tạo ion dương do \"nhận thêm proton\" — proton bị khóa chặt trong hạt nhân! Ngoài ra với ký hiệu 23892U , đừng bao giờ trả lời có 238 neutron: 238 là tổng số nucleon ( A ), còn số neutron phải lấy 238 − 92 = 146 !",
+      "duration": 50.48,
+      "startTime": 305.89,
+      "endTime": 356.37,
+      "audioUrl": "/audio/lectures/physics/5/s01_b03.mp3"
+    },
+    {
+      "id": "s01_b04",
+      "title": "Cấu tạo hạt nhân nguyên tử (Atomic Structure)",
+      "selector": "[data-lecture-section=\"s01_b04\"]",
+      "en": "CORE 5.1.1 Nuclear Structure of an Atom. An atom consists of a tiny, positively charged central nucleus surrounded by negatively charged electrons in shells at relatively vast distances. Scale comparison: Atomic radius ≈ 10−10m , whereas nuclear radius ≈ 10−15m (the atom is ~100,000× wider than its nucleus — mostly empty space !). Earlier plum-pudding model (Thomson) wrongly pictured the atom as a solid positively charged sphere studded with electrons; Rutherford replaced it with the nuclear model.",
+      "vi": "CORE 5.1.1 Cấu tạo hạt nhân nguyên tử (Atomic Structure). Nguyên tử gồm một hạt nhân trung tâm mang điện dương cực nhỏ, được bao quanh bởi các electron mang điện âm chuyển động ở khoảng cách rất xa. Tỉ lệ kích thước: Bán kính nguyên tử ≈ 10−10m , trong khi bán kính hạt nhân ≈ 10−15m (nguyên tử rộng gấp ~100.000 lần hạt nhân ⇒ phần lớn thể tích là không gian rỗng — mostly empty space !). Mô hình bánh pudding mận cũ của Thomson đã bị bác bỏ hoàn toàn bởi thí nghiệm tán xạ lá vàng của Rutherford.",
+      "duration": 73.6,
+      "startTime": 356.37,
+      "endTime": 429.97,
+      "audioUrl": "/audio/lectures/physics/5/s01_b04.mp3"
+    },
+    {
+      "id": "s01_b05",
+      "title": "Sự tạo thành Ion dương & Ion âm (Ion Formation)",
+      "selector": "[data-lecture-section=\"s01_b05\"]",
+      "en": "CORE 5.1.1.2 Formation of Positive & Negative Ions. Neutral atom: Equal numbers of protons (+) and electrons (−) ⇒ zero net charge. Positive ion (cation): Formed when a neutral atom loses one or more outer electrons (protons > electrons). Negative ion (anion): Formed when a neutral atom gains one or more electrons (electrons > protons). Exam Warning: Protons are tightly bound inside the nucleus — an atom never forms ions by gaining or losing protons!",
+      "vi": "CORE 5.1.1.2 Sự tạo thành Ion dương & Ion âm (Ion Formation). Nguyên tử trung hòa (Neutral atom): Số protons (+) bằng số electrons (−) ⇒ tổng điện tích bằng 0. Ion dương (Positive ion): Hình thành khi nguyên tử mất đi electron (loses electrons) (số proton > số electron). Ion âm (Negative ion): Hình thành khi nguyên tử nhận thêm electron (gains electrons) (số electron > số proton). Bẫy phòng thi: Proton nằm chặt trong hạt nhân — nguyên tử TUYỆT ĐỐI KHÔNG tạo thành ion bằng cách nhận hay mất proton!",
+      "duration": 77.2,
+      "startTime": 429.97,
+      "endTime": 507.17,
+      "audioUrl": "/audio/lectures/physics/5/s01_b05.mp3"
+    },
+    {
+      "id": "s01_b06",
+      "title": "Thí nghiệm Tán xạ Hạt Alpha trên Lá vàng (Rutherford α-Scattering Experiment)",
+      "selector": "[data-lecture-section=\"s01_b06\"]",
+      "en": "SUPPLEMENT 5.1.1.3 Rutherford α-Particle Gold Foil Scattering Experiment (Geiger & Marsden). A narrow beam of fast, positively charged alpha (α) particles (+2 e ) was fired at an ultra-thin sheet of gold foil inside an evacuated vacuum chamber (vacuum prevents α-particles colliding with air molecules; ultra-thin gold ensures α-particles pass through only a few atomic layers). A movable zinc sulfide screen detected flashes of light where scattered α-particles struck. Inline SVG of Gold Foil Scattering at Atomic Scale 3 Experimental Observations -> 3 Exact Conclusions Experimental Observation: 1. The vast majority of α-particles pass straight through undeflected.; Evidence / Deduction about the Atom: The atom is mostly empty space ; the nucleus is extremely tiny compared with the whole atom. Experimental Observation: 2. Some α-particles passing close to the centre are deflected through small angles (< 90°).; Evidence / Deduction about the Atom: The central nucleus is positively charged , repelling the positively charged (+2) α-particles electrostatically. Experimental Observation: 3. A tiny fraction (~1 in 8000) rebound backwards through angles > 90°.; Evidence / Deduction about the Atom: Almost all the mass (and positive charge) of the atom is concentrated in a tiny, extremely dense nucleus.",
+      "vi": "SUPPLEMENT 5.1.1.3 Thí nghiệm Tán xạ Hạt Alpha trên Lá vàng. Chùm hạt alpha (α-particles) mang điện dương (+2 e ) chuyển động nhanh được bắn vào lá vàng cực mỏng đặt trong buồng chân không (evacuated chamber) (chân không ngăn hạt α va chạm với phân tử không khí; lá vàng dát mỏng vài trăm nguyên tử giúp hạt α chỉ tương tác tối đa 1 hạt nhân). Màn huỳnh quang kẽm sunfua ghi nhận chớp sáng tại các góc lệch: Hiện tượng Quan sát (Observation): 1. Đa số hạt α truyền thẳng qua lá vàng không bị lệch.; Kết luận Khoa học (Evidence / Conclusion): Nguyên tử phần lớn là không gian rỗng ; kích thước hạt nhân vô cùng nhỏ so với nguyên tử. Hiện tượng Quan sát (Observation): 2. Một số ít hạt α bay gần tâm bị lệch góc nhỏ (< 90°).; Kết luận Khoa học (Evidence / Conclusion): Hạt nhân mang điện tích dương (positively charged) , đẩy tĩnh điện các hạt α (+2) bay ngang qua. Hiện tượng Quan sát (Observation): 3. Một tỉ lệ cực nhỏ (~1/8000) bật ngược trở lại với góc > 90°.; Kết luận Khoa học (Evidence / Conclusion): Hầu như toàn bộ khối lượng nguyên tử tập trung tại một hạt nhân cực nhỏ và siêu đặc.",
+      "duration": 173.73,
+      "startTime": 507.17,
+      "endTime": 680.9,
+      "audioUrl": "/audio/lectures/physics/5/s01_b06.mp3"
+    },
+    {
+      "id": "s01_b07",
+      "title": "Hạt hạ nguyên tử (Particle): Proton (p); Vị trí (Location): Trong hạt nhân (Nucl...",
+      "selector": "[data-lecture-section=\"s01_b07\"]",
+      "en": "Subatomic Particle: Proton (p); Location in Atom: Inside Nucleus (nucleon); Relative Mass (u): 1; Relative Charge: +1; Role in Nuclear Properties: Determines chemical element & relative nuclear charge (+ Z ). Subatomic Particle: Neutron (n); Location in Atom: Inside Nucleus (nucleon); Relative Mass (u): 1; Relative Charge: 0 (Neutral); Role in Nuclear Properties: Adds to relative nuclear mass ( A ) & affects nuclear stability / isotopes. Subatomic Particle: Electron (e − ); Location in Atom: Orbiting outside nucleus; Relative Mass (u): ≈ 1 / 1840 (1 / 2000, negligible); Relative Charge: −1; Role in Nuclear Properties: Determines chemical bonding & ion charge when gained/lost.",
+      "vi": "Hạt hạ nguyên tử (Particle): Proton (p); Vị trí (Location): Trong hạt nhân (Nucleon); Khối lượng tương đối (Relative Mass): 1; Điện tích tương đối (Relative Charge): +1; Vai trò trong Hạt nhân: Quyết định nguyên tố hóa học & điện tích tương đối của hạt nhân (+ Z ). Hạt hạ nguyên tử (Particle): Neutron (n); Vị trí (Location): Trong hạt nhân (Nucleon); Khối lượng tương đối (Relative Mass): 1; Điện tích tương đối (Relative Charge): 0 (Trung hòa); Vai trò trong Hạt nhân: Đóng góp vào khối lượng tương đối hạt nhân ( A ) & quyết định đồng vị / độ bền. Hạt hạ nguyên tử (Particle): Electron (e − ); Vị trí (Location): Vỏ nguyên tử (Shells); Khối lượng tương đối (Relative Mass): ≈ 1 / 1840 (1 / 2000, không đáng kể); Điện tích tương đối (Relative Charge): −1; Vai trò trong Hạt nhân: Quyết định tính chất hóa học & sự tạo thành ion khi nhường/nhận.",
+      "duration": 124.49,
+      "startTime": 680.9,
+      "endTime": 805.39,
+      "audioUrl": "/audio/lectures/physics/5/s01_b07.mp3"
+    },
+    {
+      "id": "s01_b08",
+      "title": "📐 Ký hiệu Nuclide & Điện tích / Khối lượng Hạt nhân (Supplement 5.1.2.6)",
+      "selector": "[data-lecture-section=\"s01_b08\"]",
+      "en": "📐 Nuclide Notation & Nuclear Charge / Mass (Supplement 5.1.2.6). A Z X ⇒ Neutrons N = A − Z Proton number (atomic number), Z : Number of protons in the nucleus ⇒ Relative charge of nucleus = + Z. Nucleon number (mass number), A : Total number of protons + neutrons in the nucleus ⇒ Relative mass of nucleus = A. Example (23592U): 92 protons, 235 − 92 = 143 neutrons , nuclear relative charge = +92 , nuclear relative mass = 235.",
+      "vi": "📐 Ký hiệu Nuclide & Điện tích / Khối lượng Hạt nhân (Supplement 5.1.2.6). A Z X ⇒ Số neutron N = A − Z Số proton: Tổng số proton ⇒ Điện tích tương đối của hạt nhân = + Z. Số khối / Số nucleon (Nucleon number, A ): Tổng số proton + neutron ⇒ Khối lượng tương đối của hạt nhân = A. Ví dụ (23592U): Có 92 proton, 235 − 92 = 143 neutron , điện tích hạt nhân = +92 , khối lượng hạt nhân tương đối = 235.",
+      "duration": 78.33,
+      "startTime": 805.39,
+      "endTime": 883.72,
+      "audioUrl": "/audio/lectures/physics/5/s01_b08.mp3"
+    },
+    {
+      "id": "s01_b09",
+      "title": "🧬 Đồng vị của Nguyên tố (Isotopes — Core 5.1.2.4–5.1.2.5)",
+      "selector": "[data-lecture-section=\"s01_b09\"]",
+      "en": "🧬 Isotopes of an Element (Core 5.1.2.4–5.1.2.5). Definition: Isotopes are atoms of the same element that have the same number of protons (same Z ) but different numbers of neutrons (different A ). An element may have multiple isotopes (some stable, some radioactive radioisotopes ). Worked Comparison — Carbon Isotopes: • Carbon-12 (126C): 6 protons, 6 neutrons , 6 electrons (Stable).• Carbon-14 (146C): 6 protons, 8 neutrons , 6 electrons (Radioactive β−emitter). Both react identically with oxygen to form CO2because both have 6 electrons (2,4)!",
+      "vi": "🧬 Đồng vị của Nguyên tố (Isotopes — Core 5.1.2.4–5.1.2.5). Định nghĩa: Đồng vị (Isotopes) là các nguyên tử của cùng một nguyên tố (same element) có cùng số proton (same Z ) nhưng khác số neutron (different A ) . Một nguyên tố có thể có nhiều đồng vị (bền hoặc phóng xạ — radioisotopes ). Ví dụ mẫu — Đồng vị Carbon: • Carbon-12 (126C): 6 proton, 6 neutron , 6 electron (Đồng vị bền).• Carbon-14 (146C): 6 proton, 8 neutron , 6 electron (Đồng vị phóng xạ β−). Cả hai có tính chất hóa học giống hệt nhau vì cùng cấu hình 6 electron!",
+      "duration": 92.73,
+      "startTime": 883.72,
+      "endTime": 976.45,
+      "audioUrl": "/audio/lectures/physics/5/s01_b09.mp3"
+    },
+    {
+      "id": "s01_b10",
+      "title": "💥 1. Phản ứng Phân hạch (Nuclear Fission)",
+      "selector": "[data-lecture-section=\"s01_b10\"]",
+      "en": "💥 1. Nuclear Fission (Splitting Heavy Nuclei). A large, unstable nucleus (e.g. Uranium-235 ) absorbs a slow-moving neutron and splits into two smaller daughter nuclei of roughly comparable size, plus 2 or 3 fast neutrons and a large release of kinetic energy and γ-radiation: 23592U +10n →14456Ba +9036Kr + 210n + energy Reactor Control: Released neutrons trigger further fissions ( chain reaction ). In a nuclear reactor, a graphite/water moderator slows neutrons down, boron control rods absorb excess neutrons to keep the rate steady, and spent fuel creates long-lived radioactive waste.",
+      "vi": "💥 1. Phản ứng Phân hạch (Nuclear Fission). Một hạt nhân nặng không bền (như Uranium-235 ) hấp thụ một neutron chậm rồi vỡ thành hai hạt nhân con nhẹ hơn kèm 2 hoặc 3 neutron nhanh và tỏa năng lượng lớn: 23592U +10n →14456Ba +9036Kr + 210n + năng lượng Lò phản ứng hạt nhân (Nuclear reactor): Các neutron sinh ra kích hoạt phản ứng dây chuyền (chain reaction) . Chất làm chậm (moderator — than chì/nước) giảm tốc neutron, thanh điều khiển boron (control rods) hấp thụ bớt neutron thừa để giữ công suất ổn định; nhược điểm là tạo chất thải phóng xạ (radioactive waste).",
+      "duration": 92.36,
+      "startTime": 976.45,
+      "endTime": 1068.81,
+      "audioUrl": "/audio/lectures/physics/5/s01_b10.mp3"
+    },
+    {
+      "id": "s01_b11",
+      "title": "☀️ 2. Phản ứng Nhiệt hạch / Tổng hợp hạt nhân (Nuclear Fusion)",
+      "selector": "[data-lecture-section=\"s01_b11\"]",
+      "en": "☀️ 2. Nuclear Fusion (Joining Light Nuclei). Nuclear fusion is the joining together of two light nuclei (such as hydrogen isotopes) to form a heavier nucleus (helium), powering the Sun and all main-sequence stars: 21H +31H →42He +10n + energy Why extreme temperature (~108K) is essential: Both hydrogen nuclei are positively charged (+1 e ) and repel each other strongly. Nuclei need enormous kinetic energy (high speed) to overcome electrostatic repulsion and collide close enough to fuse. Why extreme pressure / density is essential: Packs nuclei closely together to ensure a high frequency of collisions so fusion is self-sustaining. Clean advantage: Releases even more energy per kg than fission and produces helium rather than long-lived high-level actinide waste.",
+      "vi": "☀️ 2. Phản ứng Nhiệt hạch / Tổng hợp hạt nhân (Nuclear Fusion). Nhiệt hạch (Nuclear fusion) là sự kết hợp của hai hạt nhân nhẹ (light nuclei) (như đồng vị hydrogen) thành một hạt nhân nặng hơn (helium), cung cấp năng lượng cho Mặt Trời và các ngôi sao: 21H +31H →42He +10n + năng lượng Tại sao cần nhiệt độ cực cao (~108K)? Hai hạt nhân hydrogen đều tích điện dương (+1 e ) nên đẩy nhau mạnh. Cần nhiệt độ cực lớn để các hạt có động năng (kinetic energy) khổng lồ nhằm vượt qua lực đẩy tĩnh điện và tiến sát nhau. Tại sao cần áp suất / mật độ cực lớn? Giữ mật độ hạt cao để tăng tần suất va chạm duy trì phản ứng. Ưu điểm: Tỏa nhiều năng lượng trên mỗi kg nhiên liệu hơn phân hạch và không sinh chất thải phóng xạ chu kỳ dài.",
+      "duration": 113.28,
+      "startTime": 1068.81,
+      "endTime": 1182.09,
+      "audioUrl": "/audio/lectures/physics/5/s01_b11.mp3"
+    },
+    {
+      "id": "s01_b12",
+      "title": "⚡ Sự tương đương Khối lượng – Năng lượng (Mass–Energy Equivalence — Supplement 5...",
+      "selector": "[data-lecture-section=\"s01_b12\"]",
+      "en": "⚡ Mass–Energy Equivalence (Supplement 5.1.2.8): In both nuclear fission and nuclear fusion, the total mass of the products after the reaction is slightly LESS than the total mass of the nuclei/particles before the reaction . Because mass and energy are interchangeable ( ΔE = Δm c2 ), this mass decrease (mass defect) is converted directly into the kinetic energy of the reaction products and electromagnetic (γ) radiation !",
+      "vi": "⚡ Sự tương đương Khối lượng – Năng lượng: Trong cả phản ứng phân hạch lẫn nhiệt hạch, tổng khối lượng các hạt sau phản ứng luôn NHỎ HƠN một chút so với tổng khối lượng trước phản ứng (độ hụt khối — mass defect Δ m ) . Phần khối lượng giảm đi này được chuyển hóa trực tiếp thành động năng (kinetic energy) của sản phẩm và bức xạ điện từ (γ-radiation) !",
+      "duration": 51.57,
+      "startTime": 1182.09,
+      "endTime": 1233.66,
+      "audioUrl": "/audio/lectures/physics/5/s01_b12.mp3"
+    },
+    {
+      "id": "s01_b13",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s01_b13\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ In Rutherford's alpha-particle scattering experiment, a beam of positively charged α-particles is directed at a very thin gold foil in a vacuum. Roughly 1 in 8000 α-particles rebounds backwards through an angle greater than 90°. Which two properties of the gold nucleus are directly deduced from this observation? A. The nucleus contains neutrons and occupies most of the volume of the atom B. The nucleus is negatively charged and has a very small mass compared with an α-particle C. The nucleus is very small compared with the atom and contains almost all the mass of the atom D. Surrounding electrons repel the α-particles strongly at the outer edge of the atom ✅ Correct Answer: C 🧠 Step-by-Step Reasoning: Because only ~1 in 8000 α-particles hits the target head-on, the nucleus must occupy an extremely tiny volume compared with the atom (eliminating A). Because a fast, heavy (+2) α-particle rebounds backwards (>90°) rather than knocking the target aside, almost all the atom's mass and positive charge must be concentrated inside that tiny, dense nucleus (eliminating B and D; electrons are ~7300× lighter than an α-particle and cannot make it rebound).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ In Rutherford's alpha-particle scattering experiment, roughly 1 in 8000 α-particles rebounds backwards through an angle greater than 90° from a thin gold foil. Which two properties of the gold nucleus are deduced from this observation? (Trong thí nghiệm tán xạ hạt alpha của Rutherford, khoảng 1 trên 8000 hạt α bật ngược trở lại với góc lớn hơn 90° từ lá vàng mỏng. Hai tính chất nào của hạt nhân vàng được suy ra trực tiếp từ quan sát này?) A. The nucleus contains neutrons and occupies most of the volume of the atom B. The nucleus is negatively charged and has a very small mass compared with an α-particle C. The nucleus is very small compared with the atom and contains almost all the mass of the atom D. Surrounding electrons repel the α-particles strongly at the outer edge of the atom ✅ Đáp án đúng: C 🧠 Giải thích & Cách loại bẫy: Vì chỉ ~1/8000 hạt α va chạm trực diện và bật ngược nên thể tích hạt nhân phải vô cùng nhỏ (very small) so với nguyên tử (loại A). Việc hạt α nặng (+2) bị đánh bật ngược trở lại (>90°) chứng tỏ hầu như toàn bộ khối lượng nguyên tử và điện tích dương tập trung trong hạt nhân siêu đặc đó (loại B và D vì electron nhẹ hơn hạt α ~7300 lần, không thể làm α bật ngược).",
+      "duration": 177.69,
+      "startTime": 1233.66,
+      "endTime": 1411.35,
+      "audioUrl": "/audio/lectures/physics/5/s01_b13.mp3"
+    },
+    {
+      "id": "s01_b14",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s01_b14\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] Plutonium-239 is represented in nuclide notation as 23994Pu . (a) State the relative charge on a Plutonium-239 nucleus and calculate the number of neutrons it contains. [2] (b) Plutonium-240 ( 24094Pu ) is an isotope of plutonium. Explain, in terms of subatomic particles, why Pu-239 and Pu-240 are isotopes of the same element. [2] (c) Inside a nuclear reactor, a Pu-239 nucleus absorbs a neutron and splits into two smaller nuclei plus three neutrons, releasing energy. State the name of this nuclear process and explain why energy is released in terms of total mass. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) 1. Relative charge on nucleus = +94 (since proton number Z = 94 and each proton has +1 relative charge) [1m].2. Number of neutrons N = A − Z = 239 − 94 = 145 neutrons [1m]. (b) Both nuclei have the same number of protons (94 protons) , so they belong to the same element [1m], but they have different numbers of neutrons (145 vs 146 neutrons) [1m]. (c) Process: Nuclear fission [1m]. The total mass of the products after splitting is slightly less than the total mass of the Pu-239 nucleus and neutron before; this mass decrease (mass defect) is converted into kinetic energy of the products and γ-radiation [1m]. 💡 Intuition Check: Quick sanity check: top number minus bottom number (239 − 94 = 145) ALWAYS gives neutrons, while the bottom number (+94) ALWAYS gives the relative nuclear charge!",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Tự luận [6 điểm] Plutonium-239 has the nuclide notation 23994Pu . (Plutonium-239 có ký hiệu hạt nhân23994Pu.) (a) State the relative charge on a Pu-239 nucleus and calculate the number of neutrons in it. (Nêu điện tích tương đối của hạt nhân Pu-239 và tính số neutron.) Giải thích tại sao Pu-239 và Pu-240 là hai đồng vị của cùng một nguyên tố. Gọi tên phản ứng và giải thích nguồn gốc năng lượng tỏa ra theo khối lượng. ✍️ Lời giải chi tiết theo thang điểm: (a) 1. Điện tích tương đối của hạt nhân = +94 (do Z = 94 proton, mỗi proton mang điện +1) .2. Số neutron N = A − Z = 239 − 94 = 145 neutron . (b) Cả hai hạt nhân có cùng số proton (same number of protons = 94) nên thuộc cùng một nguyên tố , nhưng có số neutron khác nhau (different numbers of neutrons: 145 và 146) . (c) Tên quá trình: Phân hạch hạt nhân (Nuclear fission) . Tổng khối lượng các hạt tạo thành sau phản ứng nhỏ hơn một chút so với tổng khối lượng trước phản ứng; phần độ hụt khối (mass decrease) này chuyển hóa thành động năng của sản phẩm và tia γ .",
+      "duration": 223.81,
+      "startTime": 1411.35,
+      "endTime": 1635.16,
+      "audioUrl": "/audio/lectures/physics/5/s01_b14.mp3"
+    },
+    {
+      "id": "s02_hdr",
+      "title": "☢️ 5.2.1–5.2.2 Phát hiện Phóng xạ, Ba Tia α/β − /γ & Độ lệch trong Trường Điện/Từ",
+      "selector": "[data-lecture-section=\"s02_hdr\"]",
+      "en": "☢️ 5.2.1–5.2.2 Detection of Radioactivity, α/β−/γ Emissions & Field Deflections.",
+      "vi": "☢️ 5.2.1–5.2.2 Phát hiện Phóng xạ, Ba Tia α/β−/γ & Độ lệch trong Trường Điện/Từ.",
+      "duration": 13.69,
+      "startTime": 1635.16,
+      "endTime": 1648.85,
+      "audioUrl": "/audio/lectures/physics/5/s02_hdr.mp3"
+    },
+    {
+      "id": "s02_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s02_b01\"]",
+      "en": "🎯 Real-Life Analogy: Picture the three nuclear emissions charging through a crowded bowling alley of atoms:• Alpha (α, +2, 4 u) is a heavy, slow bowling ball — its big +2 charge rips electrons off thousands of atoms per mm ( strongest ioniser ), losing all its energy so fast a thin sheet of paper stops it dead.• Beta (β−, −1, 1/1840 u) is a featherweight, supersonic glass marble — lighter charge and high speed mean moderate ionisation , stopped by ~5 mm aluminium (and whipped into a sharp curve by electric/magnetic fields!).• Gamma (γ, 0 charge, 0 mass) is a weightless laser beam — zero charge means weakest ionisation , zero field deflection, and deep penetration reduced only by thick lead or concrete .",
+      "vi": "🎯 Hình dung đời thường: Hãy hình dung 3 loại bức xạ lao qua \"hàng ki-lô nguyên tử\" trong sân bowling:• Alpha (α, +2, 4 u) là quả bóng bowling nặng nề bay chậm — điện tích lớn +2 giật tung electron của hàng nghìn nguyên tử mỗi mm ( ion hóa mạnh nhất — strongest ioniser ), nên mất sạch năng lượng ngay trước 1 tờ giấy .• Beta (β−, −1, 1/1840 u) là viên bi ve siêu nhẹ lao gần tốc độ ánh sáng — ion hóa trung bình , xuyên qua giấy nhưng bị chặn bởi ~5 mm nhôm (và bị điện/từ trường bẻ cong rất gấp !).• Gamma (γ, điện tích 0, khối lượng 0) là tia laser không trọng lượng — ion hóa yếu nhất , đi thẳng tắp qua mọi điện/từ trường và chỉ bị cản bớt bởi chì dày hoặc bê tông dày .",
+      "duration": 108.11,
+      "startTime": 1648.85,
+      "endTime": 1756.96,
+      "audioUrl": "/audio/lectures/physics/5/s02_b01.mp3"
+    },
+    {
+      "id": "s02_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s02_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Background & Corrected Rate (🟦 Core / 🟩 Supplement): Natural background comes from radon gas (~50%), rocks/buildings, food/drink, and cosmic rays . Always subtract background first: Corrected rate = Measured GM rate − Background rate . 2. Ionisation vs Penetration Trade-off (🟦 Core / 🟩 Supplement): Ionising power: α > β−> γ (due to α's +2 charge and large KE/slow speed); Penetrating power is the exact reverse: γ > β−> α . 3. Electric & Magnetic Deflections (🟩 Supplement): In an electric field, α (+2) curves gently toward (−) while β−(−1) curves sharply toward (+) ; in a magnetic field, apply Fleming's Left-Hand Rule (remembering β−moving right = conventional current left!). γ never deflects .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Phông nền & Hiệu chỉnh số đếm (🟦 Core / 🟩 Supplement): Nguồn phông tự nhiên gồm radon gas (~50%), rocks/buildings, food/drink, cosmic rays . Luôn trừ phông trước: Corrected rate = Tổng số đếm GM − Background rate . 2. Quy luật Ngược chiều (🟦 Core / 🟩 Supplement): Khả năng ion hóa: α > β−> γ ; Độ đâm xuyên ngược lại hoàn toàn: γ > β−> α . 3. Độ lệch trong Điện & Từ trường (🟩 Supplement): Trong điện trường, α (+2) cong nhẹ về bản (−) còn β−(−1) cong gấp về bản (+) ; trong từ trường, dùng Quy tắc bàn tay trái Fleming (nhớ rằng β−bay sang phải tương đương dòng điện quy ước sang trái!). γ không bao giờ lệch .",
+      "duration": 116.55,
+      "startTime": 1756.96,
+      "endTime": 1873.51,
+      "audioUrl": "/audio/lectures/physics/5/s02_b02.mp3"
+    },
+    {
+      "id": "s02_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s02_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two classic Paper 2/4 traps: (1) Thinking 26 counts/min behind aluminium means radiation is still passing through when background is 24 counts/min — 26 ≈ 24 is just random background fluctuation , meaning 100% of source radiation was stopped! (2) Drawing α curving more sharply than β−because α has double the charge — α is ~7300× heavier, so β−ALWAYS curves much more sharply !",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai bẫy kinh điển: (1) Thấy sau tấm nhôm còn 26 counts/min khi phông nền là 24 counts/min rồi kết luận vẫn còn tia xuyên qua — 26 ≈ 24 chỉ là dao động ngẫu nhiên của phông nền , tức bức xạ từ nguồn đã bị chặn 100%! (2) Vẽ tia α cong gắt hơn β−vì nghĩ điện tích +2 gấp đôi — thực tế α nặng gấp ~7300 lần electron nên β−LUÔN bị bẻ cong gấp hơn rất nhiều !",
+      "duration": 65.64,
+      "startTime": 1873.51,
+      "endTime": 1939.15,
+      "audioUrl": "/audio/lectures/physics/5/s02_b03.mp3"
+    },
+    {
+      "id": "s02_b04",
+      "title": "🌍 5.2.1 Phông phóng xạ tự nhiên (Background Radiation)",
+      "selector": "[data-lecture-section=\"s02_b04\"]",
+      "en": "🌍 5.2.1 Background Radiation & Syllabus Sources. Background radiation is the low-level ionising radiation that is continuously present in our environment from natural (~85%) and artificial (~15%) sources: Radon gas (in the air) (~50%): Largest single source! Radioactive gas seeping from uranium-bearing granite rocks and soil into buildings. Rocks and buildings (~14%): Terrestrial gamma radiation from granite, soil, bricks, and concrete. Food and drink (~12%): Traces of naturally occurring Carbon-14 and Potassium-40 in plants, milk, and living tissue. Cosmic rays (~10%): High-energy particles arriving from the Sun and deep outer space (higher exposure at high altitudes / flights). Artificial (~14%): Medical X-rays/tracers (~13%) plus <1% from nuclear power & historical weapons testing.",
+      "vi": "🌍 5.2.1 Phông phóng xạ tự nhiên (Background Radiation). Phông phóng xạ (Background radiation) là bức xạ ion hóa mức độ thấp luôn tồn tại xung quanh chúng ta từ các nguồn tự nhiên (~85%) và nhân tạo (~15%): Khí Radon trong không khí: Nguồn lớn nhất! Khí phóng xạ rò rỉ từ đá granite chứa uranium và đất nền vào các tòa nhà. Đá và vật liệu xây dựng: Tia gamma tự nhiên từ đá granite, đất, gạch, bê tông. Thực phẩm và đồ uống: Đồng vị Carbon-14 và Potassium-40 tự nhiên trong cây trồng, sữa và cơ thể sống. Tia vũ trụ (Cosmic rays — ~10%): Hạt năng lượng cao từ Mặt Trời và vũ trụ sâu (tăng lên khi bay ở độ cao lớn). Nguồn nhân tạo (Medical & artificial — ~14%): Tia X y tế (~13%) và <1% từ công nghiệp hạt nhân.",
+      "duration": 126.07,
+      "startTime": 1939.15,
+      "endTime": 2065.22,
+      "audioUrl": "/audio/lectures/physics/5/s02_b04.mp3"
+    },
+    {
+      "id": "s02_b05",
+      "title": "📟 Đo Tốc độ đếm (Count Rate) & Bản chất Ngẫu nhiên/Tự phát",
+      "selector": "[data-lecture-section=\"s02_b05\"]",
+      "en": "📟 Measuring Count Rate & Random/Spontaneous Decay. Detector: Measured using an ionising radiation detector — most commonly a Geiger–Müller (GM) tube connected to a counter (or ratemeter). Units of count rate: counts/s or counts/min. Random process: Impossible to predict which nucleus will decay next or when a given nucleus will decay (hence GM counts fluctuate slightly around an average). Spontaneous process: Decay is completely unaffected by external conditions (temperature, pressure, or chemical bonding). Supplement — Correcting Count Rate: First measure average background count rate with no source present , then calculate: Corrected Count Rate = Measured Total Rate − Background Rate",
+      "vi": "📟 Đo Tốc độ đếm (Count Rate) & Bản chất Ngẫu nhiên/Tự phát. Thiết bị đo: Sử dụng đầu dò bức xạ — phổ biến nhất là ống Geiger–Müller (GM tube) nối với bộ đếm (counter). Đơn vị tốc độ đếm (Count rate): counts/s hoặc counts/min. Ngẫu nhiên (Random): Không thể dự đoán hạt nhân nào sẽ phân rã tiếp theo hay khi nào nó phân rã (làm số đếm GM dao động nhẹ quanh giá trị trung bình). Tự phát (Spontaneous): Hoàn toàn không bị ảnh hưởng bởi điều kiện bên ngoài (nhiệt độ, áp suất hay liên kết hóa học). Supplement — Hiệu chỉnh Phông phóng xạ: Đo tốc độ đếm phông nền khi chưa đặt nguồn , sau đó trừ đi: Corrected Count Rate = Tốc độ đếm tổng − Phông phóng xạ nền",
+      "duration": 96.49,
+      "startTime": 2065.22,
+      "endTime": 2161.71,
+      "audioUrl": "/audio/lectures/physics/5/s02_b05.mp3"
+    },
+    {
+      "id": "s02_b06",
+      "title": "☢️ Phòng thí nghiệm Tương tác: Độ đâm xuyên Alpha, Beta, Gamma (Interactive Penetration Lab)",
+      "selector": "[data-lecture-section=\"s02_b06\"]",
+      "en": "☢️ Interactive Penetration Lab (Alpha, Beta, Gamma). Panel Hover or click radiation rays 👆. Alpha (α) particles, Beta (β−) particles, and Gamma (γ) rays differ dramatically in their nature, relative mass, electric charge, ionising effect, and penetrating ability. Hidden text blocks",
+      "vi": "☢️ Phòng thí nghiệm Tương tác: Độ đâm xuyên Alpha, Beta, Gamma. hì. Hạt Alpha (α), hạt Beta (β−) và tia Gamma (γ) khác biệt hoàn toàn về bản chất vật lý, khối lượng, điện tích, khả năng ion hóa (ionising effect) và độ đâm xuyên (penetrating ability).",
+      "duration": 47.16,
+      "startTime": 2161.71,
+      "endTime": 2208.87,
+      "audioUrl": "/audio/lectures/physics/5/s02_b06.mp3"
+    },
+    {
+      "id": "s02_b07",
+      "title": "Đặc tính (Property): Bản chất & Ký hiệu; Alpha (α): Hạt nhân Helium (2p + 2n), 4...",
+      "selector": "[data-lecture-section=\"s02_b07\"]",
+      "en": "Property: Nature & Nuclide Symbol; Alpha (α): Helium nucleus (2p + 2n), 4 2 α; Beta (β − ): Fast-moving nuclear electron, 0 −1 β; Gamma (γ): High-frequency EM wave (photon), γ. Property: Relative Charge & Mass; Alpha (α): Charge +2 • Mass 4 u; Beta (β − ): Charge −1 • Mass 1/1840 u; Gamma (γ): Charge 0 • Mass 0. Property: Typical Speed; Alpha (α): ~0.05 c – 0.1 c (slowest); Beta (β − ): Up to ~0.9 c (very fast); Gamma (γ): c = 3.0 × 10 8 m/s (speed of light). Property: Relative Ionising Effect; Alpha (α): Highest (~10 4 ion pairs/mm); Beta (β − ): Moderate (~10 2 ion pairs/mm); Gamma (γ): Lowest (weak, indirect ionisation). Property: Range in Air & Absorber; Alpha (α): ~3–5 cm air; stopped by paper / skin; Beta (β − ): ~0.5–1 m air; stopped by ~3–5 mm aluminium; Gamma (γ): Many metres in air; reduced by thick lead / concrete.",
+      "vi": "Đặc tính (Property): Bản chất & Ký hiệu; Alpha (α): Hạt nhân Helium (2p + 2n), 4 2 α; Beta (β − ): Electron hạt nhân tốc độ cao, 0 −1 β; Gamma (γ): Sóng điện từ tần số cao, γ. Đặc tính (Property): Điện tích & Khối lượng; Alpha (α): Điện tích +2 • Khối lượng 4 u; Beta (β − ): Điện tích −1 • Khối lượng 1/1840 u; Gamma (γ): Điện tích 0 • Khối lượng 0. Đặc tính (Property): Tốc độ điển hình; Alpha (α): ~0,05 c – 0,1 c (chậm nhất); Beta (β − ): Tới ~0,9 c (rất nhanh); Gamma (γ): c = 3,0 × 10 8 m/s (tốc độ ánh sáng). Đặc tính (Property): Tác dụng Ion hóa (Ionising); Alpha (α): Mạnh nhất (~10 4 cặp ion/mm); Beta (β − ): Trung bình (~10 2 cặp ion/mm); Gamma (γ): Yếu nhất (ion hóa gián tiếp). Đặc tính (Property): Tầm bay & Vật liệu chắn; Alpha (α): ~3–5 cm khí; chặn bởi giấy / da; Beta (β − ): ~0,5–1 m khí; chặn bởi ~3–5 mm nhôm; Gamma (γ): Rất xa; giảm bởi chì dày / bê tông dày.",
+      "duration": 192.04,
+      "startTime": 2208.87,
+      "endTime": 2400.91,
+      "audioUrl": "/audio/lectures/physics/5/s02_b07.mp3"
+    },
+    {
+      "id": "s02_b08",
+      "title": "🔬 Supplement 5.2.2.4 — Giải thích Khả năng Ion hóa qua Động năng (Kinetic Energy...",
+      "selector": "[data-lecture-section=\"s02_b08\"]",
+      "en": "🔬 Supplement 5.2.2.4 — Explaining Relative Ionising Effects via Kinetic Energy & Electric Charge: • Alpha (α) is the strongest ioniser because it carries the largest electric charge (+2 e ) and has high kinetic energy combined with a relatively slow speed (due to its large 4 u mass). It exerts a strong electrostatic pull on orbital electrons for longer as it passes each atom, knocking electrons off thousands of atoms per mm and rapidly losing its kinetic energy (giving it the shortest range).• Beta (β−) is moderately ionising because it has half the magnitude of charge (−1 e ) and moves much faster, spending less time near any atom.• Gamma (γ) is the weakest ioniser because it has zero electric charge and exerts no steady electrostatic force on electrons, losing energy over much greater distances.",
+      "vi": "🔬 Supplement 5.2.2.4 — Giải thích Khả năng Ion hóa qua Động năng (Kinetic Energy) & Điện tích (Electric Charge): • Alpha (α) ion hóa mạnh nhất vì mang điện tích lớn nhất (+2 e ) , có động năng (kinetic energy) lớn nhưng bay tương đối chậm (do khối lượng nặng 4 u). Khi lướt qua nguyên tử, lực hút tĩnh điện mạnh và thời gian tương tác lâu làm nó bứt electron khỏi hàng nghìn nguyên tử trên mỗi mm, khiến hạt α mất hết động năng rất nhanh (tầm bay ngắn nhất).• Beta (β−) ion hóa trung bình vì độ lớn điện tích nhỏ hơn (−1 e ) và bay rất nhanh nên ít va chạm hơn.• Gamma (γ) ion hóa yếu nhất vì không mang điện (zero charge) nên không gây lực tĩnh điện lên các electron vỏ.",
+      "duration": 103.63,
+      "startTime": 2400.91,
+      "endTime": 2504.54,
+      "audioUrl": "/audio/lectures/physics/5/s02_b08.mp3"
+    },
+    {
+      "id": "s02_b09",
+      "title": "⚡ A. Trong Điện trường Đều (Hai bản tụ tích điện trái dấu)",
+      "selector": "[data-lecture-section=\"s02_b09\"]",
+      "en": "⚡ A. Uniform Electric Field (Parallel Charged Plates). β−(−1): Attracted sharply towards the positive (+) plate (tiny electron mass ⇒ huge acceleration a = F/m ). α (+2): Attracted gently towards the negative (−) plate (~7300× heavier than β−, so much smaller curvature!). γ (0): Passes straight through undeflected (uncharged).",
+      "vi": "⚡ A. Trong Điện trường Đều (Hai bản tụ tích điện trái dấu). β−(−1): Bị hút cong gấp về phía bản dương (+) do khối lượng electron siêu nhỏ ⇒ gia tốc cực lớn. α (+2): Bị hút cong thoai thoải về phía bản âm (−) (nặng gấp ~7300 lần hạt β−nên khó bị bẻ cong hơn!). γ (0): Truyền thẳng không đổi hướng.",
+      "duration": 56.89,
+      "startTime": 2504.54,
+      "endTime": 2561.43,
+      "audioUrl": "/audio/lectures/physics/5/s02_b09.mp3"
+    },
+    {
+      "id": "s02_b10",
+      "title": "🧲 B. Trong Từ trường Đều hướng vào trang giấy (⊗, Quy tắc bàn tay trái)",
+      "selector": "[data-lecture-section=\"s02_b10\"]",
+      "en": "🧲 B. Uniform Magnetic Field Into Page (⊗, Fleming's LHR). α (+2 moving right): Conventional current is to the right ; with B into page (⊗), Fleming's Left-Hand Rule gives force upwards (large radius arc). β−(−1 moving right): Equivalent to conventional current to the left ! FLHR gives force downwards (tight arc). γ (0): Zero current ⇒ no magnetic force (straight line).",
+      "vi": "🧲 B. Trong Từ trường Đều hướng vào trang giấy (⊗, Quy tắc bàn tay trái). α (+2 bay sang phải): Chiều dòng điện quy ước sang phải ; từ trường B hướng vào (⊗) ⇒ Quy tắc bàn tay trái Fleming (Fleming's LHR) cho lực từ hướng lên trên (bán kính cong lớn). β−(−1 bay sang phải): Điện tích âm bay sang phải tương đương dòng điện quy ước sang trái ! Lực từ hướng xuống dưới (cung tròn hẹp). γ (0): Không mang điện ⇒ không chịu lực từ.",
+      "duration": 64.24,
+      "startTime": 2561.43,
+      "endTime": 2625.67,
+      "audioUrl": "/audio/lectures/physics/5/s02_b10.mp3"
+    },
+    {
+      "id": "s02_b11",
+      "title": "📝 Bài toán Mẫu Paper 4 — Nhận diện Tia Phóng xạ bằng Tấm chắn (Absorbers)",
+      "selector": "[data-lecture-section=\"s02_b11\"]",
+      "en": "📝 Worked Exam Problem — Deducing Emissions Using Absorbers (Paper 4 Style). Question: The background count rate in a lab is 24 counts/min . A GM tube is placed 2 cm in front of two sources with different absorbers inserted:• Source X: No absorber = 620 counts/min • 1 mm card = 618 counts/min • 4 mm aluminium = 25 counts/min • 20 mm lead = 24 counts/min.• Source Y: No absorber = 850 counts/min • 1 mm card = 310 counts/min • 4 mm aluminium = 308 counts/min • 20 mm lead = 62 counts/min. Step-by-step Deduction: 1. Source X emits β−ONLY: Count rate is unchanged by 1 mm card (620 vs 618 — random fluctuation, so no α ), drops right down to background (25 ≈ 24 counts/min) behind 4 mm aluminium (so all radiation was stopped by Al ⇒ β−present, no γ ).2. Source Y emits BOTH α AND γ (no β−): Count rate drops sharply from 850 to 310 behind 1 mm card ( α present ), stays virtually unchanged behind 4 mm Al (310 vs 308 ⇒ no β− ), and only drops toward 62 (still above 24 background!) behind 20 mm thick lead ( γ present ).",
+      "vi": "📝 Bài toán Mẫu Paper 4 — Nhận diện Tia Phóng xạ bằng Tấm chắn (Absorbers). Đề bài: Phông phóng xạ nền là 24 counts/min . Đặt ống GM cách hai nguồn 2 cm với các tấm chắn khác nhau:• Nguồn X: Không chắn = 620 • Bìa cứng 1 mm = 618 • Nhôm 4 mm = 25 • Chì 20 mm = 24 counts/min.• Nguồn Y: Không chắn = 850 • Bìa cứng 1 mm = 310 • Nhôm 4 mm = 308 • Chì 20 mm = 62 counts/min. Lời giải lập luận chuẩn thang điểm: 1. Nguồn X CHỈ phát tia β−: Tốc độ đếm hầu như không đổi qua bìa 1 mm (620 vs 618 — dao động ngẫu nhiên ⇒ không có α ), nhưng tụt hẳn về mức phông nền (25 ≈ 24) sau tấm nhôm 4 mm (⇒ toàn bộ bức xạ bị nhôm chặn: có β−, không có γ ).2. Nguồn Y phát CẢ α VÀ γ (không có β−): Số đếm giảm mạnh từ 850 xuống 310 sau bìa cứng ( có α ), giữ nguyên qua nhôm 4 mm (310 vs 308 ⇒ không có β− ), và chỉ giảm xuống 62 (vẫn cao hơn nền 24!) sau chì dày 20 mm ( có γ ).",
+      "duration": 196.38,
+      "startTime": 2625.67,
+      "endTime": 2822.05,
+      "audioUrl": "/audio/lectures/physics/5/s02_b11.mp3"
+    },
+    {
+      "id": "s02_b12",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s02_b12\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A narrow beam containing alpha (α) particles, beta (β−) particles, and gamma (γ) rays enters a uniform electric field between a top positively charged plate (+) and a bottom negatively charged plate (−) in a vacuum. Which statement correctly describes the paths of the three emissions? A. α curves sharply downwards, β⁻ curves gently upwards, and γ continues straight B. α curves gently downwards, β⁻ curves sharply upwards, and γ continues straight C. α curves gently upwards, β⁻ curves sharply downwards, and γ curves slightly downwards D. Both α and β⁻ curve equally in opposite directions, and γ continues straight ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: 1) γ-rays have zero electric charge, so they experience no electrostatic force and travel straight through (eliminating C).2) α-particles (+2) are repelled by the top (+) plate and attracted toward the bottom (−) plate → curve downwards ; because their mass (4 u) is ~7300× greater than an electron's, their deflection is gentle .3) β−-particles (−1) are attracted toward the top (+) plate → curve upwards , and because an electron has tiny mass (1/1840 u), its acceleration is huge, producing a sharp curve (eliminating A and D).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A narrow beam containing α-particles, β−-particles, and γ-rays enters a uniform electric field between a top positive plate (+) and a bottom negative plate (−) in a vacuum. Which statement correctly describes their paths? (Chùm hẹp gồm hạt α, hạt β−và tia γ bay vào điện trường đều giữa bản dương (+) ở trên và bản âm (−) ở dưới trong chân không. Mô tả nào đúng về quỹ đạo của 3 tia?) A. α curves sharply downwards, β⁻ curves gently upwards, and γ continues straight B. α curves gently downwards, β⁻ curves sharply upwards, and γ continues straight C. α curves gently upwards, β⁻ curves sharply downwards, and γ curves slightly downwards D. Both α and β⁻ curve equally in opposite directions, and γ continues straight ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: 1) Tia γ không mang điện (charge = 0) nên truyền thẳng (straight) (loại C).2) Hạt α (+2) bị hút về bản âm (−) ở dưới → cong xuống dưới ; nhưng vì khối lượng 4 u nặng gấp ~7300 lần electron nên chỉ cong thoai thoải (gently downwards) .3) Hạt β−(−1) bị hút về bản dương (+) ở trên → cong lên trên với độ cong rất gấp (sharply upwards) do khối lượng electron siêu nhỏ (loại A và D).",
+      "duration": 194.05,
+      "startTime": 2822.05,
+      "endTime": 3016.1,
+      "audioUrl": "/audio/lectures/physics/5/s02_b12.mp3"
+    },
+    {
+      "id": "s02_b13",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s02_b13\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Investigation [5 marks] With no radioactive source in the room, a GM tube connected to a counter records 180 counts in 5.0 minutes .A radioactive source S is then placed 2 cm in front of the GM tube and 1-minute count rates are recorded with different absorbers:• No absorber: 740 counts/min | Sheet of paper: 290 counts/min | 5 mm aluminium: 38 counts/min | 25 mm lead: 35 counts/min . (a) State two natural sources of background radiation and calculate the average background count rate in counts/min. [2] (b) Deduce which types of nuclear emission (α, β−, γ) are emitted by source S . Explain your reasoning for each type. [3] ✍️ Step-by-Step Mark Scheme Solution: (a) Any two from: radon gas (in air), rocks/buildings, food and drink, cosmic rays [1m].Average background rate = 180 counts ÷ 5.0 min = 36 counts/min [1m]. (b) • α is emitted: Inserting paper causes a large drop from 740 to 290 counts/min, showing α-particles were absorbed by paper [1m].• β−is emitted: Inserting 5 mm aluminium drops the count rate further from 290 right down to 38 counts/min (~background 36) [1m].• γ is NOT emitted: Behind 5 mm aluminium the reading (38 counts/min) is already equal to background (36 counts/min within random fluctuation), so no penetrating γ-radiation remains [1m].",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Thực nghiệm [5 điểm] With no source present, a GM counter records 180 counts in 5.0 minutes . Source S is then placed 2 cm from the GM tube with absorbers:• Không chắn: 740 counts/min | Giấy (paper): 290 counts/min | Nhôm 5 mm: 38 counts/min | Chì 25 mm: 35 counts/min . (a) State two natural sources of background radiation and calculate the background count rate in counts/min. (Nêu 2 nguồn phông tự nhiên và tính tốc độ đếm phông nền theo counts/min.) (b) Deduce which emissions (α, β−, γ) come from source S , explaining each. (Biện luận nguồn S phát ra những loại tia nào.) ✍️ Lời giải chi tiết theo thang điểm: (a) Nêu 2 nguồn bất kỳ: khí radon (radon gas), đá/vật liệu xây dựng (rocks/buildings), thực phẩm (food/drink), tia vũ trụ (cosmic rays) .Tốc độ đếm phông nền = 180 ÷ 5,0 phút = 36 counts/min . (b) • Có phát tia α: Chèn tờ giấy làm số đếm sụt mạnh từ 740 xuống 290 counts/min (hạt α bị giấy chặn) .• Có phát tia β−: Chèn nhôm 5 mm làm số đếm sụt tiếp từ 290 về sát phông nền 38 counts/min .• KHÔNG phát tia γ: Sau tấm nhôm 5 mm, số đếm (38) đã xấp xỉ phông nền (36, chênh lệch do dao động ngẫu nhiên), không còn tia đâm xuyên qua nhôm . 💡 Kiểm tra bản chất: Bước đổi \"180 counts trong 5 phút\" thành 36 counts/min chính là chìa khóa vàng: nếu không tính phông nền trước, bạn sẽ nhầm tưởng con số 38 sau tấm nhôm là tia gamma!",
+      "duration": 233.81,
+      "startTime": 3016.1,
+      "endTime": 3249.91,
+      "audioUrl": "/audio/lectures/physics/5/s02_b13.mp3"
+    },
+    {
+      "id": "s03_hdr",
+      "title": "⏱️ 5.2.3–5.2.4 Phân rã Phóng xạ (Radioactive Decay), Phương trình Nuclide & Chu kỳ Bán rã (Half",
+      "selector": "[data-lecture-section=\"s03_hdr\"]",
+      "en": "⏱️ 5.2.3–5.2.4 Radioactive Decay, Nuclide Equations & Half-Life.",
+      "vi": "⏱️ 5.2.3–5.2.4 Phân rã Phóng xạ (Radioactive Decay), Phương trình Nuclide & Chu kỳ Bán rã (Half-Life).",
+      "duration": 12.61,
+      "startTime": 3249.91,
+      "endTime": 3262.52,
+      "audioUrl": "/audio/lectures/physics/5/s03_hdr.mp3"
+    },
+    {
+      "id": "s03_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s03_b01\"]",
+      "en": "🎯 Real-Life Analogy: Think of radioactive decay like heating a giant pot of popcorn kernels (except nuclear decay doesn't even care about heat!): you can never predict which individual kernel will pop next (random), yet if half of the unpopped kernels always pop every 3 minutes ( t 1/2) , a batch of 800 kernels reliably goes 800 → 400 → 200 → 100 at 3, 6, and 9 minutes! And when balancing nuclide equations, treat the arrow ( → ) like a strict equals sign (=) for both the top row ( A ) and bottom row ( Z ).",
+      "vi": "🎯 Hình dung đời thường: Hãy tưởng tượng phân rã phóng xạ giống như một nồi bắp rang bơ khổng lồ (nhưng hạt nhân tự nổ mà chẳng cần đun nóng!): bạn không bao giờ đoán được hạt ngô nào sẽ nổ tiếp theo (ngẫu nhiên — random ), nhưng cứ đúng mỗi 3 phút ( t 1/2) lại có đúng một nửa số hạt chưa nổ bật tung, nên 800 hạt sẽ giảm đều đặn 800 → 400 → 200 → 100 sau 3, 6, 9 phút! Còn khi cân bằng phương trình nuclide, hãy coi dấu mũi tên ( → ) như dấu bằng (=) nghiêm ngặt cho cả dòng trên ( A ) lẫn dòng dưới ( Z ).",
+      "duration": 76.82,
+      "startTime": 3262.52,
+      "endTime": 3339.34,
+      "audioUrl": "/audio/lectures/physics/5/s03_b01.mp3"
+    },
+    {
+      "id": "s03_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s03_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Why Nuclei Decay (🟦 Core / 🟩 Supplement): Heavy nuclei shed 42α (Δ A = −4, Δ Z = −2); neutron-rich nuclei undergo β−decay where 1 neutron → 1 proton + 1 electron (Δ A = 0, Δ Z = +1 ). Both α and β−form a different element ; γ changes neither A nor Z . 2. Half-Life Recipe (🟦 Core / 🟩 Supplement): • Step 1: Subtract background count rate from initial and final GM readings!• Step 2: Halve step-by-step ( C 0→ C 0/2 → C 0/4 →..) to count the number of half-lives n .• Step 3: Use total time = n × t 1/2 .",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Cơ chế phân rã & Phương trình (🟦 Core / 🟩 Supplement): Hạt nhân quá nặng phóng 42α (Δ A = −4, Δ Z = −2); hạt nhân thừa neutron phóng β− do 1 neutron → 1 proton + 1 electron (Δ A = 0, Δ Z = +1 ). Cả α và β−đều tạo nguyên tố mới ; tia γ giữ nguyên A và Z . 2. Công thức 3 bước giải bài Chu kỳ bán rã (🟦 Core / 🟩 Supplement): • Bước 1: Trừ phông phóng xạ ( Background ) khỏi số đếm GM!• Bước 2: Chia đôi liên tiếp ( C 0→ C 0/2 → C 0/4..) để đếm số chu kỳ n .• Bước 3: Áp dụng Tổng thời gian = n × t 1/2 (và cộng lại phông nền nếu đề hỏi số chỉ máy đếm!).",
+      "duration": 109.57,
+      "startTime": 3339.34,
+      "endTime": 3448.91,
+      "audioUrl": "/audio/lectures/physics/5/s03_b02.mp3"
+    },
+    {
+      "id": "s03_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s03_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Two deadly calculation errors: (1) In β−decay ( 146C →147N +0−1β ), students write Z = 5 instead of 7 ! Check the bottom maths: 7 + (−1) = 6 ! (2) Halving raw GM detector readings before subtracting background radiation — ALWAYS subtract background FIRST, halve SECOND, and add background back at the end if asked for the detector reading!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Hai lỗi mất điểm nhiều nhất: (1) Trong phân rã β− ( 146C →147N +0−1β ), học sinh hay viết nhầm Z = 5 thay vì 7 ! Hãy cộng kiểm tra dòng dưới: 7 + (−1) = 6 ! (2) Chia đôi trực tiếp số chỉ ống GM mà quên trừ phông nền trước!",
+      "duration": 55.98,
+      "startTime": 3448.91,
+      "endTime": 3504.89,
+      "audioUrl": "/audio/lectures/physics/5/s03_b03.mp3"
+    },
+    {
+      "id": "s03_b04",
+      "title": "Nguyên nhân Phân rã & Cơ chế Tăng độ bền Hạt nhân (Nuclear Stability)",
+      "selector": "[data-lecture-section=\"s03_b04\"]",
+      "en": "CORE + SUPPLEMENT 5.2.3 Why Unstable Nuclei Decay & How Stability Increases. Radioactive decay is a spontaneous and random change in an unstable nucleus that results in the emission of α-particles or β−-particles, often accompanied by γ-radiation. Transmutation: During α-decay or β−-decay , the proton number Z changes, so the nucleus transforms into that of a different chemical element ! Supplement — Why is a nucleus unstable? Because its nucleus is too heavy overall (too many nucleons, Z > 82) and/or has an excess of neutrons (neutron-to-proton ratio too high):• α-emission sheds 2 protons + 2 neutrons from very heavy nuclei, reducing nuclear size and electrostatic repulsion to increase stability.• β−-emission reduces excess neutrons : inside the nucleus, one neutron changes into one proton and one electron ( 10n →11p +0−1e ), ejecting the fast electron and shifting the neutron-to-proton ratio toward stability.• γ-emission releases surplus nuclear excitation energy as an EM photon without changing A or Z.",
+      "vi": "CORE + SUPPLEMENT 5.2.3 Nguyên nhân Phân rã & Cơ chế Tăng độ bền Hạt nhân (Nuclear Stability). Phân rã phóng xạ (Radioactive decay): Sự biến đổi tự phát và ngẫu nhiên trong một hạt nhân không bền, phát ra hạt α, hạt β−và/hoặc tia γ. Sự biến đổi nguyên tố (Transmutation): Trong phân rã α hoặc β− , số proton Z bị thay đổi nên hạt nhân biến thành một nguyên tố hóa học hoàn toàn khác (different element) ! Supplement — Tại sao hạt nhân kém bền? Do hạt nhân quá nặng (too heavy, Z > 82) và/hoặc có quá nhiều neutron dư thừa :• Phát xạ α: Giải phóng bớt cụm 2p + 2n ở hạt nhân rất nặng, làm giảm kích thước và lực đẩy tĩnh điện để tăng độ bền.• Phát xạ β−: Giảm số neutron dư thừa : bên trong hạt nhân, 1 neutron biến đổi thành 1 proton và 1 electron ( 10n →11p +0−1e ), phóng electron ra ngoài và đưa tỉ lệ neutron/proton về vùng bền vững.• Phát xạ γ: Hạt nhân con giải phóng năng lượng kích thích dư thừa dưới dạng sóng điện từ mà không làm thay đổi A hay Z.",
+      "duration": 151.47,
+      "startTime": 3504.89,
+      "endTime": 3656.36,
+      "audioUrl": "/audio/lectures/physics/5/s03_b04.mp3"
+    },
+    {
+      "id": "s03_b05",
+      "title": "🔴 Phân rã Alpha (Δ A = −4, Δ Z = −2)",
+      "selector": "[data-lecture-section=\"s03_b05\"]",
+      "en": "🔴 Alpha (α) Decay (Δ A = −4, Δ Z = −2). A Z X → A −4 Z −2Y +42α Worked 1 (Smoke alarm Am-241): 24195Am →23793Np +42α Check: 241 = 237 + 4; 95 = 93 + 2. Worked 2 (Radium-226 → Radon): 22688Ra →22286Rn +42α .",
+      "vi": "🔴 Phân rã Alpha (Δ A = −4, Δ Z = −2). A Z X → A −4 Z −2Y +42α Ví dụ 1 (Báo cháy Am-241): 24195Am →23793Np +42α Kiểm tra: 241 = 237 + 4; 95 = 93 + 2. Ví dụ 2 (Radium-226 → Radon): 22688Ra →22286Rn +42α .",
+      "duration": 77.35,
+      "startTime": 3656.36,
+      "endTime": 3733.71,
+      "audioUrl": "/audio/lectures/physics/5/s03_b05.mp3"
+    },
+    {
+      "id": "s03_b06",
+      "title": "🔵 Phân rã Beta β − (Δ A = 0, Δ Z = +1)",
+      "selector": "[data-lecture-section=\"s03_b06\"]",
+      "en": "🔵 Beta (β−) Decay (Δ A = 0, Δ Z = +1). A Z X → A Z +1Y +0−1β Worked 1 (Radiocarbon C-14): 146C →147N +0−1β Check: 14 = 14 + 0; 6 = 7 + (−1) ! Worked 2 (Medical Iodine-131): 13153I →13154Xe +0−1β .",
+      "vi": "🔵 Phân rã Beta β−(Δ A = 0, Δ Z = +1). A Z X → A Z +1Y +0−1β Ví dụ 1 (Đồng vị C-14): 146C →147N +0−1β Kiểm tra: 14 = 14 + 0; 6 = 7 + (−1) (cẩn thận dấu trừ!). Ví dụ 2 (Iodine-131 y tế): 13153I →13154Xe +0−1β .",
+      "duration": 69.89,
+      "startTime": 3733.71,
+      "endTime": 3803.6,
+      "audioUrl": "/audio/lectures/physics/5/s03_b06.mp3"
+    },
+    {
+      "id": "s03_b07",
+      "title": "🟢 Phát xạ Gamma (Δ A = 0, Δ Z = 0)",
+      "selector": "[data-lecture-section=\"s03_b07\"]",
+      "en": "🟢 Gamma (γ) Emission (Δ A = 0, Δ Z = 0). A Z X* → A Z X +00γ Key Exam Point: Pure γ-emission releases excess nuclear energy after α or β−decay. Neither nucleon number A nor proton number Z changes — same isotope, lower energy state !",
+      "vi": "🟢 Phát xạ Gamma (Δ A = 0, Δ Z = 0). A Z X* → A Z X +00γ Lưu ý phòng thi: Phát xạ γ chỉ giải phóng năng lượng dư thừa sau phân rã α hoặc β−. Cả số khối A và số proton Z đều không đổi — giữ nguyên nguyên tố!",
+      "duration": 45.8,
+      "startTime": 3803.6,
+      "endTime": 3849.4,
+      "audioUrl": "/audio/lectures/physics/5/s03_b07.mp3"
+    },
+    {
+      "id": "s03_b08",
+      "title": "📉 5.2.4 Chu kỳ Bán rã (Half-Life, t 1/2 ) & Đồ thị Phân rã (Có & Không có Phông nền)",
+      "selector": "[data-lecture-section=\"s03_b08\"]",
+      "en": "📉 5.2.4 Half-Life ( t 1/2) & Decay Curves (With & Without Background). Syllabus Definition: The half-life of a particular isotope is the time taken for half the nuclei of that isotope in any sample to decay (equivalently, the time taken for the corrected count rate / activity from the isotope to fall to half its initial value). After n half-lives, the remaining undecayed fraction is (1/2) n : 1 → 1/2 (50%) → 1/4 (25%) → 1/8 (12.5%) → 1/16 (6.25%). Inline SVG Decay Curve showing BOTH Uncorrected Total Rate (asymptotic to 40) AND Corrected Rate (asymptotic to 0) 2 Worked Half-Life Calculations 🧮 Worked Example 1 (Pure Sample): A sample of Strontium-90 ( t 1/2= 29 years) initially contains 8.0 × 1012undecayed nuclei . How many remain after 87 years?• Number of half-lives n = 87 / 29 = 3 half-lives .• Remaining nuclei = 8.0 × 1012→ 4.0 × 1012→ 2.0 × 1012→ 1.0 × 1012nuclei (decayed = 7.0 × 1012). 🚨 Worked Example 2 (WITH Background Subtraction!): A GM tube records 520 counts/s initially, 160 counts/s after 60 min, and settles at a steady 40 counts/s after 2 days. Find the half-life.• Step 1 (Background): Steady final reading = 40 counts/s .• Step 2 (Subtract 40!): Corrected initial = 520 − 40 = 480 counts/s ; Corrected at 60 min = 160 − 40 = 120 counts/s .• Step 3 (Count halvings): 480 → 240 → 120 = 2 half-lives in 60 min ⇒ t 1/2= 60 / 2 = 30 min !",
+      "vi": "📉 5.2.4 Chu kỳ Bán rã (Half-Life, t 1/2) & Đồ thị Phân rã (Có & Không có Phông nền). Định nghĩa chuẩn Syllabus: Chu kỳ bán rã (Half-life) của một đồng vị là thời gian cần thiết để một nửa số hạt nhân của đồng vị đó trong mẫu bị phân rã (hoặc thời gian để độ phóng xạ / tốc độ đếm đã hiệu chỉnh giảm xuống còn một nửa giá trị ban đầu). Sau n chu kỳ bán rã, tỉ lệ còn lại là (1/2) n : 1 → 1/2 (50%) → 1/4 (25%) → 1/8 (12,5%) → 1/16 (6,25%). 🧮 Ví dụ 1 (Mẫu tinh khiết không có phông): Một mẫu Strontium-90 ( t 1/2= 29 năm) ban đầu chứa 8,0 × 1012hạt nhân chưa phân rã . Hỏi sau 87 năm còn lại bao nhiêu hạt nhân?• Số chu kỳ bán rã n = 87 / 29 = 3 chu kỳ .• Số hạt còn lại = 8,0 × 1012→ 4,0 × 1012→ 2,0 × 1012→ 1,0 × 1012hạt nhân (đã phân rã = 7,0 × 1012). 🚨 Ví dụ 2 (BẪY PHÒNG THI — Bắt buộc trừ Phông nền!): Ống GM ghi nhận 520 counts/s lúc đầu, 160 counts/s sau 60 phút, và ổn định ở mức 40 counts/s sau 2 ngày. Tính t 1/2.• Bước 1 (Tìm phông nền): Giá trị ổn định cuối cùng = 40 counts/s .• Bước 2 (Trừ 40!): Ban đầu chuẩn = 520 − 40 = 480 counts/s ; Sau 60 phút chuẩn = 160 − 40 = 120 counts/s .• Bước 3 (Đếm lần giảm đôi): 480 → 240 → 120 = 2 chu kỳ bán rã trong 60 phút ⇒ t 1/2= 60 / 2 = 30 phút !",
+      "duration": 266.41,
+      "startTime": 3849.4,
+      "endTime": 4115.81,
+      "audioUrl": "/audio/lectures/physics/5/s03_b08.mp3"
+    },
+    {
+      "id": "s03_b09",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s03_b09\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A radioactive nucleus of Thorium-234 ( 23490Th ) decays by emitting one β−-particle to form nucleus X , which then decays by emitting one α-particle to form nucleus Y . What are the nucleon number A and proton number Z of nucleus Y ? A. A = 230, Z = 89 B. A = 230, Z = 87 C. A = 229, Z = 88 D. A = 234, Z = 89 ✅ Correct Answer: A 🧠 Step-by-Step Reasoning: Step 1 ( β−-decay of23490Th): A stays 234, while Z increases by 1 (90 = 91 − 1) → nucleus X is 23491Pa .Step 2 ( α-decay of23491Pa): Subtract 4 from A (234 − 4 = 230 ) and subtract 2 from Z (91 − 2 = 89 ) → nucleus Y has A = 230, Z = 89 ! Distractor B is the classic trap of subtracting 1 instead of adding 1 during β−-decay.",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A nucleus of Thorium-234 ( 23490Th ) emits one β−-particle to form nucleus X , which then emits one α-particle to form nucleus Y . What are the nucleon number A and proton number Z of nucleus Y ? (Hạt nhân Thorium-234 (23490Th) phóng 1 hạt β−tạo hạt nhân X, sau đó X phóng 1 hạt α tạo hạt nhân Y. Số khối A và số proton Z của Y là bao nhiêu?) A. A = 230, Z = 89 B. A = 230, Z = 87 C. A = 229, Z = 88 D. A = 234, Z = 89 ✅ Đáp án đúng: A 🧠 Giải thích & Cách loại bẫy: Bước 1 ( Phân rã β− từ23490Th): A giữ nguyên 234, còn Z tăng thêm 1 (vì 90 = 91 − 1) → hạt nhân X là 23491Pa .Bước 2 ( Phân rã α từ23491Pa): A giảm 4 (234 − 4 = 230 ) và Z giảm 2 (91 − 2 = 89 ) → hạt nhân Y có A = 230, Z = 89 ! Đáp án B là bẫy kinh điển khi trừ 1 thay vì cộng 1 ở phân rã β−.",
+      "duration": 180.8,
+      "startTime": 4115.81,
+      "endTime": 4296.61,
+      "audioUrl": "/audio/lectures/physics/5/s03_b09.mp3"
+    },
+    {
+      "id": "s03_b10",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s03_b10\"]",
+      "en": "WORKED EXAMPLE 2 🟩 SUPPLEMENT • Paper 4 Calculation [6 marks] Sodium-24 ( 2411Na ) is a radioactive β−-emitter with a half-life of 15 hours . (a) Complete the balanced nuclide equation for the β−-decay of Sodium-24 into Magnesium (Mg): 2411Na →...Mg +...β [2] (b) In a laboratory where the average background count rate is 30 counts/min , a fresh sample of Sodium-24 gives a total GM reading of 670 counts/min . Calculate the total GM reading expected after 45 hours . [4] ✍️ Step-by-Step Mark Scheme Solution: (a) 2411Na →2412Mg +0−1β ( 2412Mg correct [1m]; 0−1β correct [1m]). (b) 1. Subtract background to find initial corrected rate: C 0= 670 − 30 = 640 counts/min [1m].2. Number of half-lives in 45 hours: n = 45 h ÷ 15 h = 3 half-lives [1m].3. Halve corrected rate 3 times: 640 → 320 → 160 → 80 counts/min [1m].4. Add background back for expected total GM reading: 80 + 30 = 110 counts/min [1m]. 💡 Intuition Check: Notice Step 4! Because the question asked for the \"total GM reading expected\", the GM tube still hears the room's 30 counts/min background on top of the sample's remaining 80 counts/min (80 + 30 = 110 counts/min)!",
+      "vi": "BÀI MẪU 2 🟩 SUPPLEMENT • Paper 4 Tính toán [6 điểm] Sodium-24 ( 2411Na ) is a β−-emitter with a half-life of 15 hours . Hoàn thành phương trình phân rã nuclide. Tính tổng số đếm ống GM ghi nhận sau 45 giờ. ✍️ Lời giải chi tiết theo thang điểm: (a) 2411Na →2412Mg +0−1β (đúng 2412Mg ; đúng 0−1β ). (b) 1. Trừ phông nền tìm tốc độ đếm chuẩn ban đầu: C 0= 670 − 30 = 640 counts/min .2. Số chu kỳ bán rã trong 45 giờ: n = 45 ÷ 15 = 3 chu kỳ .3. Chia đôi 3 lần tốc độ đếm của riêng mẫu: 640 → 320 → 160 → 80 counts/min .4. Cộng lại phông nền để ra số chỉ ống GM: 80 + 30 = 110 counts/min . 💡 Kiểm tra bản chất: Đừng quên Bước 4! Vì đề hỏi \"tổng số đếm ống GM dự kiến\", ống GM vẫn đếm cả 30 counts/min phông nền của căn phòng cộng thêm 80 counts/min còn lại của mẫu (= 110 counts/min)!",
+      "duration": 197.34,
+      "startTime": 4296.61,
+      "endTime": 4493.95,
+      "audioUrl": "/audio/lectures/physics/5/s03_b10.mp3"
+    },
+    {
+      "id": "s04_hdr",
+      "title": "🛡️ 5.2.4–5.2.5 Ứng dụng Đồng vị Phóng xạ & Các Biện pháp An toàn Bức xạ",
+      "selector": "[data-lecture-section=\"s04_hdr\"]",
+      "en": "🛡️ 5.2.4–5.2.5 Applications of Radioisotopes & Safety Precautions.",
+      "vi": "🛡️ 5.2.4–5.2.5 Ứng dụng Đồng vị Phóng xạ & Các Biện pháp An toàn Bức xạ.",
+      "duration": 9.22,
+      "startTime": 4493.95,
+      "endTime": 4503.17,
+      "audioUrl": "/audio/lectures/physics/5/s04_hdr.mp3"
+    },
+    {
+      "id": "s04_b01",
+      "title": "🎯 Hình dung đời thường:",
+      "selector": "[data-lecture-section=\"s04_b01\"]",
+      "en": "🎯 Real-Life Analogy: Choosing a radioisotope is like picking the right courier for a package: inside a smoke alarm , you want a courier (α) that stops within centimetres so it stays inside the plastic casing; for paper thickness rollers , you need a courier (β−) that gets partially blocked by thicker paper; and for a medical body scan , you MUST send a courier (γ, short half-life) that passes cleanly out through skin to the camera and vanishes within hours! Meanwhile, remember the difference between sunburn (irradiation) and swallowing glowing dust (contamination) : stepping into the shade stops a sunburn immediately and doesn't make you glow, whereas swallowed radioactive dust keeps firing from inside your body!",
+      "vi": "🎯 Hình dung đời thường: Chọn đồng vị phóng xạ giống hệt chọn \"nhân viên giao hàng\" đúng nhiệm vụ: trong đầu báo khói , cần tia (α) dừng ngay sau vài cm để nằm gọn trong vỏ nhựa; ở máy cán giấy/lá nhôm , cần tia (β−) bị chặn một phần khi tấm dày lên; còn khi tiêm chất đánh dấu vào máu bệnh nhân , BẮT BUỘC chọn tia (γ, chu kỳ ngắn vài giờ) xuyên thẳng ra máy chụp bên ngoài và tự tắt nhanh! Đồng thời, hãy phân biệt cháy nắng (irradiation — chiếu xạ) với nuốt bụi phát sáng (contamination — nhiễm bẩn phóng xạ) : bước vào bóng râm là hết nắng ngay và cơ thể bạn không phát tia, nhưng nuốt phải bụi phóng xạ thì nó sẽ bắn phá tế bào liên tục từ bên trong!",
+      "duration": 92.09,
+      "startTime": 4503.17,
+      "endTime": 4595.26,
+      "audioUrl": "/audio/lectures/physics/5/s04_b01.mp3"
+    },
+    {
+      "id": "s04_b02",
+      "title": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm:",
+      "selector": "[data-lecture-section=\"s04_b02\"]",
+      "en": "🔑 Step-by-Step Syllabus Logic: 1. Matching Type + Half-Life (🟦 Core / 🟩 Supplement): Industrial gauges & smoke alarms need long half-lives (years, no recalibration/replacement); medical tracers injected into patients need γ + short half-lives (hours, escapes body + low dose). 2. Biological Hazards (🟦 Core): Ionising radiation damages DNA, causing cell death, mutations, and cancer . 3. Three Golden Safety Rules — TDS (🟦 Core / 🟩 Supplement): Minimise exposure Time , maximise Distance (long-handled tongs), and use Shielding (lead-lined boxes, concrete/lead-glass screens).",
+      "vi": "🔑 Chuỗi tư duy & Từ khóa Ăn điểm: 1. Chọn Loại tia + Chu kỳ bán rã (🟦 Core / 🟩 Supplement): Đầu báo khói & đo độ dày công nghiệp cần t 1/2dài (nhiều năm) để khỏi thay nguồn; chất đánh dấu y khoa ( medical tracers ) cần tia γ + t 1/2ngắn (vài giờ) . 2. Tác hại sinh học (🟦 Core): Phá hủy DNA gây chết tế bào (cell death), đột biến (mutations) và ung thư (cancer) . 3. Ba nguyên tắc An toàn Vàng — TDS (🟦 Core / 🟩 Supplement): Giảm Time (thời gian tiếp xúc), tăng Distance (dùng kẹp cán dài long-handled tongs ), và dùng Shielding (hộp bọc chì lead-lined boxes , tường bê tông).",
+      "duration": 88.06,
+      "startTime": 4595.26,
+      "endTime": 4683.32,
+      "audioUrl": "/audio/lectures/physics/5/s04_b02.mp3"
+    },
+    {
+      "id": "s04_b03",
+      "title": "⚠️ Bẫy mất điểm kinh điển:",
+      "selector": "[data-lecture-section=\"s04_b03\"]",
+      "en": "⚠️ #1 Exam Trap to Avoid: Students frequently write \"gamma-irradiated strawberries or plastic syringes become slightly radioactive, so handle carefully.\" FALSE! Gamma irradiation kills bacteria from outside and leaves ZERO radioactive atoms behind — the food or syringe does NOT become radioactive!",
+      "vi": "⚠️ Bẫy mất điểm kinh điển: Rất nhiều học sinh viết: \"Dâu tây hoặc ống tiêm y tế sau khi chiếu tia gamma để tiệt trùng sẽ bị nhiễm phóng xạ nhẹ.\" SAI HOÀN TOÀN! Chiếu xạ gamma irradiation chỉ diệt vi khuẩn từ bên ngoài, KHÔNG để lại nguyên tử phóng xạ nào nên thực phẩm/dụng cụ KHÔNG HỀ biến thành chất phóng xạ!",
+      "duration": 41.75,
+      "startTime": 4683.32,
+      "endTime": 4725.07,
+      "audioUrl": "/audio/lectures/physics/5/s04_b03.mp3"
+    },
+    {
+      "id": "s04_b04",
+      "title": "Ứng dụng (Application): (a) Đầu báo khói gia đình (Smoke alarms); Loại tia chọn:...",
+      "selector": "[data-lecture-section=\"s04_b04\"]",
+      "en": "Syllabus Application: (a) Household Fire (Smoke) Alarms; Chosen Emission: Alpha (α) (e.g. Am-241); Required Half-Life: Long (~432 yr); Physical Justification (Exam Mark Scheme Points): Strong α ionisation maintains an air-gap current; smoke absorbs α-particles so current drops and triggers alarm. Stopped by plastic casing/air (safe for residents). Long t 1/2 keeps activity steady without replacing source. Syllabus Application: (b) Thickness Control of Paper / Thin Foil; Chosen Emission: Beta (β − ) ( γ for thick steel ); Required Half-Life: Long (years, e.g. Sr-90); Physical Justification (Exam Mark Scheme Points): α is completely stopped by paper; γ passes unaffected. β − is partially absorbed so thicker sheet ⇒ lower GM count rate ⇒ rollers squeeze harder. Long t 1/2 prevents false thickness readings from source decay. Syllabus Application: (c) Medical Diagnostic Tracers; Chosen Emission: Gamma (γ) (e.g. Tc-99m); Required Half-Life: Short (hours, e.g. 6 h); Physical Justification (Exam Mark Scheme Points): γ penetrates out through body tissue to external gamma camera and has weakest ionisation (least internal cell damage; α/β − would be trapped inside). Short t 1/2 decays rapidly after scan to minimise patient dose. Syllabus Application: (d) Cancer Radiotherapy Treatment; Chosen Emission: Gamma (γ) (e.g.",
+      "vi": "Ứng dụng (Application): (a) Đầu báo khói gia đình (Smoke alarms); Loại tia chọn: Alpha (α) (Am-241); Chu kỳ bán rã ( t 1/2 ): Dài (~432 năm); Lập luận Vật lý (Ý ăn điểm Mark Scheme): Ion hóa mạnh tạo dòng điện qua khe không khí; khói bay vào hấp thụ α làm giảm dòng → hú còi. Không xuyên qua vỏ nhựa nên an toàn. t 1/2 dài giúp độ phóng xạ ổn định nhiều năm. Ứng dụng (Application): (b) Đo & Kiểm soát độ dày giấy / lá nhôm; Loại tia chọn: Beta (β − ) ( γ cho thép dày ); Chu kỳ bán rã ( t 1/2 ): Dài (nhiều năm, Sr-90); Lập luận Vật lý (Ý ăn điểm Mark Scheme): α bị giấy chặn đứng; γ xuyên thẳng không nhạy. β − bị hấp thụ một phần (partially absorbed) theo độ dày tấm → điều chỉnh con lăn ép. t 1/2 dài để số đếm không giảm do nguồn yếu đi. Ứng dụng (Application): (c) Chất đánh dấu chẩn đoán y khoa (Medical tracers); Loại tia chọn: Gamma (γ) (Tc-99m); Chu kỳ bán rã ( t 1/2 ): Ngắn (vài giờ, ~6 h); Lập luận Vật lý (Ý ăn điểm Mark Scheme): γ xuyên từ nội tạng ra ngoài tới gamma camera và ion hóa yếu nhất (ít hại tế bào; α/β − sẽ bị giữ lại trong cơ thể gây tổn thương nặng). t 1/2 ngắn giúp phân rã nhanh sau khi chụp. Ứng dụng (Application): (d) Xạ trị ung thư (Cancer radiotherapy); Loại tia chọn: Gamma (γ) (Co-60); Chu kỳ bán rã ( t 1/2 ): Trung bình/Dài (~5 năm); Lập luận Vật lý (Ý ăn điểm Mark Scheme): Tia γ xuyên sâu qua da/xương để tiêu diệt tế bào khối u ác tính; chiếu quay nhiều góc hội tụ vào khối u để bảo vệ mô lành xung quanh.",
+      "duration": 233.63,
+      "startTime": 4725.07,
+      "endTime": 4958.7,
+      "audioUrl": "/audio/lectures/physics/5/s04_b04.mp3"
+    },
+    {
+      "id": "s04_b05",
+      "title": "🧬 5.2.5 Tác hại Sinh học & Chiếu xạ vs Nhiễm phóng xạ",
+      "selector": "[data-lecture-section=\"s04_b05\"]",
+      "en": "🧬 5.2.5 Biological Effects & Irradiation vs Contamination. 3 Effects on Living Cells (Core 5.2.5.1): Ionising radiation damages DNA and water molecules inside cells, causing:1. Cell death (radiation burns / tissue destruction at high doses)2. Mutations in genetic DNA3. Cancer (uncontrolled division of mutated cells). Irradiation: Exposing an object to external radiation — stops immediately when shielded and does NOT make the object radioactive. Contamination: Unwanted radioactive atoms deposited on or inside the body — continues emitting internally (inhaled/ingested α-sources are deadly inside soft tissue!).",
+      "vi": "🧬 5.2.5 Tác hại Sinh học & Chiếu xạ vs Nhiễm phóng xạ. 3 tác hại lên cơ thể sống (Core 5.2.5.1): Bức xạ ion hóa phá hủy phân tử DNA và tế bào, gây ra:1. Chết tế bào (Cell death) / bỏng bức xạ2. Đột biến gen (Mutations) 3. Ung thư (Cancer) do tế bào đột biến nhân lên mất kiểm soát. Chiếu xạ (Irradiation): Phơi vật dưới chùm tia từ nguồn bên ngoài — dừng ngay khi cất nguồn và KHÔNG làm vật trở thành nguồn phóng xạ. Nhiễm bẩn phóng xạ (Contamination): Bụi/hạt nhân phóng xạ bám trên da hoặc đi vào cơ thể — phát tia liên tục từ bên trong (hít/nuốt bụi α cực kỳ nguy hiểm!).",
+      "duration": 90.73,
+      "startTime": 4958.7,
+      "endTime": 5049.43,
+      "audioUrl": "/audio/lectures/physics/5/s04_b05.mp3"
+    },
+    {
+      "id": "s04_b06",
+      "title": "🛡️ Quy tắc Di chuyển, Sử dụng & Bảo quản An toàn (5.2.5.2–5.2.5.3)",
+      "selector": "[data-lecture-section=\"s04_b06\"]",
+      "en": "🛡️ Safe Moving, Use & Storage (Core + Supplement 5.2.5.3). 1. Reduce Exposure Time: Return sources to storage immediately after use & limit worker shift durations (total dose ∝ exposure time). 2. Increase Distance: Handle sources with long-handled tongs or remote robotic manipulators and point away from eyes/body (intensity drops rapidly with distance + air absorbs α/β−). 3. Use Shielding: Store in locked, thick lead-lined boxes ; work behind lead-glass screens / thick concrete walls ; wear gloves/lab coat to prevent skin contamination. 4. Monitor Dose: Staff wear photographic film badges / dosimeters with absorber windows to track cumulative radiation exposure.",
+      "vi": "🛡️ Quy tắc Di chuyển, Sử dụng & Bảo quản An toàn (5.2.5.2–5.2.5.3). 1. Giảm thời gian tiếp xúc: Cất nguồn ngay sau khi đo, giới hạn giờ làm việc (tổng liều hấp thụ tỉ lệ thuận với thời gian). 2. Tăng khoảng cách (Increase distance): Gắp nguồn bằng kẹp cán dài hoặc cánh tay robot, hướng nguồn ra xa mắt/cơ thể (cường độ giảm mạnh theo khoảng cách). 3. Che chắn bức xạ (Shielding): Bảo quản trong hộp bọc chì dày có khóa; thao tác sau kính pha chì / tường bê tông dày ; đeo găng tay tránh nhiễm bẩn da. 4. Theo dõi liều (Dosimeters): Nhân viên đeo huy hiệu phim ảnh (film badges) để kiểm soát liều tích lũy.",
+      "duration": 93.96,
+      "startTime": 5049.43,
+      "endTime": 5143.39,
+      "audioUrl": "/audio/lectures/physics/5/s04_b06.mp3"
+    },
+    {
+      "id": "s04_b07",
+      "title": "📝 Câu hỏi Phản biện Phòng thi: Tại sao học sinh tuyệt đối không được ăn uống tro...",
+      "selector": "[data-lecture-section=\"s04_b07\"]",
+      "en": "📝 Quick Exam Check — Lab Safety Critique: Why must a student never eat/drink near an open source or pick up an α-source with bare fingers even though α cannot penetrate dead skin? Answer: Bare fingers risk transferring radioactive dust onto hands ( contamination ), which could then be ingested with food — once inside the body, strongly ionising α-particles directly strike living internal cells with no dead-skin protection, causing mutations and cancer!",
+      "vi": "📝 Câu hỏi Phản biện Phòng thi: Tại sao học sinh tuyệt đối không được ăn uống trong phòng thí nghiệm hoặc cầm nguồn α bằng tay trần dù tia α không xuyên qua lớp da chết? Đáp án: Tay trần có thể dính bụi phóng xạ ( contamination ) rồi nuốt vào bụng qua thức ăn — khi vào bên trong cơ thể, hạt α có khả năng ion hóa cực mạnh sẽ bắn trực tiếp vào tế bào nội tạng sống (không có lớp da chết che chở), gây đột biến DNA và ung thư!",
+      "duration": 58.23,
+      "startTime": 5143.39,
+      "endTime": 5201.62,
+      "audioUrl": "/audio/lectures/physics/5/s04_b07.mp3"
+    },
+    {
+      "id": "s04_b08",
+      "title": "🧠 Giải thích & Cách loại bẫy:",
+      "selector": "[data-lecture-section=\"s04_b08\"]",
+      "en": "WORKED EXAMPLE 1 🟩 SUPPLEMENT • Paper 2 MCQ A hospital doctor needs to inject a radioactive tracer into a patient's bloodstream to check kidney function using a radiation detector placed outside the patient's body. Which combination of radiation emitted and half-life is most suitable? A. Alpha (α) emitter with a half-life of 6 hours B. Gamma (γ) emitter with a half-life of 6 hours C. Gamma (γ) emitter with a half-life of 30 years D. Alpha (α) emitter with a half-life of 30 years ✅ Correct Answer: B 🧠 Step-by-Step Reasoning: 1) Emission type: The radiation must penetrate out through body tissue and skin to reach the external camera with minimal internal cell ionisation → Gamma (γ) is essential (alpha particles would be completely absorbed inside the body, causing severe internal cell damage and zero external signal, eliminating A and D).2) Half-life: A 6-hour half-life stays active long enough to complete the scan, then decays rapidly to safe background levels within a couple of days (whereas 30 years would irradiate the patient for life, eliminating C).",
+      "vi": "BÀI MẪU 1 🟩 SUPPLEMENT • Paper 2 MCQ A doctor injects a radioactive tracer into a patient's bloodstream to monitor kidney function using an external gamma camera. Which combination of radiation emitted and half-life is most suitable? (Bác sĩ tiêm chất đánh dấu phóng xạ vào máu bệnh nhân để kiểm tra chức năng thận bằng camera đặt bên ngoài cơ thể. Tổ hợp loại tia và chu kỳ bán rã nào phù hợp nhất?) A. Alpha (α) emitter with a half-life of 6 hours B. Gamma (γ) emitter with a half-life of 6 hours C. Gamma (γ) emitter with a half-life of 30 years D. Alpha (α) emitter with a half-life of 30 years ✅ Đáp án đúng: B 🧠 Giải thích & Cách loại bẫy: 1) Loại bức xạ: Phải xuyên từ thận qua mô và da ra ngoài máy thu đồng thời gây ion hóa nội tạng thấp nhất → bắt buộc dùng Gamma (γ) (hạt α bị giữ chặt toàn bộ trong cơ thể, gây tổn thương tế bào nghiêm trọng và máy ngoài không thu được gì → loại A, D).2) Chu kỳ bán rã: 6 giờ đủ lâu để chụp xong nhưng giảm nhanh về mức an toàn sau 1–2 ngày (30 năm sẽ phơi nhiễm bệnh nhân suốt đời → loại C).",
+      "duration": 153.41,
+      "startTime": 5201.62,
+      "endTime": 5355.03,
+      "audioUrl": "/audio/lectures/physics/5/s04_b08.mp3"
+    },
+    {
+      "id": "s04_b09",
+      "title": "💡 Kiểm tra bản chất:",
+      "selector": "[data-lecture-section=\"s04_b09\"]",
+      "en": "WORKED EXAMPLE 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Structured [6 marks] A factory manufactures thin aluminium foil (0.8 mm thick) by passing it between heavy steel rollers. A radioactive source is placed above the moving foil and a GM detector is placed directly underneath. (a) Explain why a beta (β−) source with a long half-life is chosen rather than an α-source or a short-half-life source. [3] (b) State what happens to the GM count rate if the foil accidentally becomes too thick, and how the control system responds. [1] (c) State two safety precautions workers must follow when moving and storing this radioactive source, explaining how each reduces risk. [2] ✍️ Step-by-Step Mark Scheme Solution: (a) • Why β−(not α): α-particles would be completely stopped even by very thin foil, whereas β−-particles are partially absorbed so changes in foil thickness cause measurable changes in count rate [2m].• Why long half-life: Activity stays nearly constant over years, so the source does not need frequent replacement and count-rate drops are caused only by thicker foil, not source decay [1m]. (b) More β−-particles are absorbed so the count rate decreases , signalling the rollers to press closer together [1m]. (c) 1. Handle with long-handled tongs (increases distance , reducing radiation intensity reaching the worker and preventing skin contamination) [1m].2. Store in a locked lead-lined container when not in use (provides shielding to absorb radiation and reduces exposure time) [1m].",
+      "vi": "BÀI MẪU 2 🟦 CORE / 🟩 SUPPLEMENT • Paper 4 Tự luận [6 điểm] A factory controls the thickness of 0.8 mm aluminium foil using a radioactive source above the moving foil and a GM detector below it. (a) Explain why a β−-source with a long half-life is used instead of an α-source or a short-half-life source. (Giải thích vì sao chọn nguồn β−có chu kỳ bán rã dài.) Số đếm thay đổi thế nào nếu lá nhôm quá dày và con lăn phản ứng ra sao? Nêu và giải thích 2 biện pháp an toàn khi thao tác và cất giữ nguồn. ✍️ Lời giải chi tiết theo thang điểm: (a) • Vì sao chọn β−(không dùng α): Hạt α bị lá nhôm mỏng chặn đứng hoàn toàn , còn hạt β−bị hấp thụ một phần (partially absorbed) nên độ dày thay đổi sẽ làm tốc độ đếm thay đổi rõ rệt .• Vì sao cần chu kỳ bán rã dài: Độ phóng xạ giữ ổn định trong nhiều năm, không phải thay nguồn liên tục và tránh báo sai độ dày do nguồn tự yếu đi . (b) Lá nhôm dày hơn hấp thụ nhiều hạt β−hơn ⇒ tốc độ đếm giảm , hệ thống điều khiển ép hai con lăn sát lại . (c) 1. Dùng kẹp cán dài để tăng khoảng cách (distance) , giảm cường độ tia tới cơ thể và tránh nhiễm bẩn tay .2. Cất trong hộp bọc chì dày có khóa ngay sau khi dùng để che chắn (shielding) và giảm thời gian phơi nhiễm .",
+      "duration": 199.38,
+      "startTime": 5355.03,
+      "endTime": 5554.41,
+      "audioUrl": "/audio/lectures/physics/5/s04_b09.mp3"
+    }
+  ]
+}
