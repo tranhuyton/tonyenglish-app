@@ -525,7 +525,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         setUserProfile(resolvedProfile);
         if (resolvedProfile) {
           if (!newFullName) setNewFullName(resolvedProfile.full_name || '');
-          if (resolvedProfile.phone && !unlockPhone) setUnlockPhone(resolvedProfile.phone);
+          if (resolvedProfile.phone && !unlockPhone) {
+            const digitsOnly = String(resolvedProfile.phone).replace(/\D/g, '');
+            if (digitsOnly.length >= 9) setUnlockPhone(digitsOnly);
+          }
           if (Object.keys(parsedAvatarObj).length > 0) {
             setCourseTargets(parsedAvatarObj);
             try {
@@ -867,9 +870,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleRequestUnlockCourse = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!unlockModalCourse || !currentUser) return;
+    const cleanPhone = unlockPhone.replace(/\D/g, '').trim();
+    if (!/^\d{9,15}$/.test(cleanPhone)) {
+      alert('Vui lòng nhập Số điện thoại hợp lệ (chỉ gồm 9–15 chữ số, ví dụ: 0987654321).');
+      return;
+    }
     setIsSendingUnlockReq(true);
     try {
-      const cleanPhone = unlockPhone.trim();
       let currentMeta: Record<string, any> = { ...courseTargets };
       const existingReqs: string[] = Array.isArray(currentMeta.requested_courses)
         ? currentMeta.requested_courses
@@ -4621,9 +4628,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <input
                       type="tel"
                       required
-                      placeholder="Nhập SĐT / Zalo của bạn (VD: 0987 654 321)"
+                      inputMode="numeric"
+                      pattern="[0-9]{9,15}"
+                      maxLength={15}
+                      placeholder="Nhập SĐT / Zalo của bạn (VD: 0987654321)"
                       value={unlockPhone}
-                      onChange={(e) => setUnlockPhone(e.target.value)}
+                      onChange={(e) => setUnlockPhone(e.target.value.replace(/\D/g, '').slice(0, 15))}
                       className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-bold text-slate-800 outline-none focus:ring-2 focus:ring-[#2ab4e8]"
                     />
                   </div>

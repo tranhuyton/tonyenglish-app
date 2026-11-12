@@ -548,7 +548,14 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     const fullName = formData.get('fullName') as string;
     const email = formData.get('email') as string;
     const password = formData.get('password') as string;
-    const phone = formData.get('phone') as string;
+    const rawPhone = (formData.get('phone') as string) || '';
+    const phone = rawPhone.replace(/\D/g, '').trim();
+
+    if (newUserRole === 'student' && !/^\d{9,15}$/.test(phone)) {
+      alert('⚠️ Vui lòng nhập Số điện thoại hợp lệ (chỉ gồm 9–15 chữ số, không chứa chữ cái hay ký tự).');
+      setIsCreatingUser(false);
+      return;
+    }
     
     try {
       const targetAccountType = mode === 'online' ? 'online' : 'offline';
@@ -606,7 +613,14 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     const formData = new FormData(e.currentTarget);
     const fullName = formData.get('fullName') as string;
     const role = formData.get('role') as string;
-    const phone = formData.get('phone') as string;
+    const rawPhone = (formData.get('phone') as string) || '';
+    const phone = rawPhone.replace(/\D/g, '').trim();
+
+    if (phone && !/^\d{9,15}$/.test(phone)) {
+      alert('⚠️ Số điện thoại không hợp lệ (chỉ gồm 9–15 chữ số, không chứa chữ cái hay ký tự).');
+      setIsUpdatingUser(false);
+      return;
+    }
 
     try {
       const { error } = await supabase.rpc('update_user_profile', {
@@ -1689,7 +1703,7 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
                 
                 <div>
                   <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
-                  <input name="phone" type="text" defaultValue={editingUser.phone || ''} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+                  <input name="phone" type="tel" inputMode="numeric" pattern="[0-9]{9,15}" maxLength={15} defaultValue={(editingUser.phone || '').replace(/\D/g, '')} onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 15); }} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
                 </div>
 
                 <div>
@@ -1873,11 +1887,11 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
                             <div className="text-[13px] font-bold text-slate-700">{student.email}</div>
                           </div>
                         </td>
-                        <td className="px-6 py-4">
+                         <td className="px-6 py-4">
                            <div className="font-bold text-[13px] text-slate-600">
-                              {student.phone || '--'}
+                              {(student.phone && /^\d{9,15}$/.test(String(student.phone).replace(/\D/g, ''))) ? String(student.phone).replace(/\D/g, '') : '--'}
                            </div>
-                        </td>
+                         </td>
                         <td className="px-6 py-4">
                           <div className={`font-bold text-[14px] ${student.full_name ? 'text-[#0a5482]' : 'text-orange-500 italic'}`}>
                              {student.full_name || '[Chưa cập nhật]'}
@@ -1988,8 +2002,8 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
               </div>
               
               <div>
-                <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
-                <input name="phone" type="text" defaultValue="" autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
+                <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại {newUserRole === 'student' ? '*' : ''}</label>
+                <input name="phone" required={newUserRole === 'student'} type="tel" inputMode="numeric" pattern="[0-9]{9,15}" maxLength={15} defaultValue="" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 15); }} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
               </div>
 
               <div>
@@ -2041,7 +2055,7 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
               
               <div>
                 <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
-                <input name="phone" type="text" defaultValue={editingUser.phone || ''} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+                <input name="phone" type="tel" inputMode="numeric" pattern="[0-9]{9,15}" maxLength={15} defaultValue={(editingUser.phone || '').replace(/\D/g, '')} onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 15); }} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
               </div>
 
               <div>

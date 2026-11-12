@@ -205,10 +205,16 @@ export const Layout: React.FC<{
     setLoginLoading(true);
     const cleanEmail = regEmail.trim().toLowerCase();
     const cleanName = regFullName.trim();
-    const cleanPhone = regPhone.trim();
+    const cleanPhone = regPhone.replace(/\D/g, '').trim();
 
-    if (!cleanName || !cleanEmail || regPassword.length < 6) {
-      setLoginError('Vui lòng điền đầy đủ Họ tên, Email và Mật khẩu (tối thiểu 6 ký tự).');
+    if (!cleanName || !cleanPhone || !cleanEmail || regPassword.length < 6) {
+      setLoginError('Vui lòng điền đầy đủ Họ tên, Số điện thoại, Email và Mật khẩu (tối thiểu 6 ký tự).');
+      setLoginLoading(false);
+      return;
+    }
+
+    if (!/^\d{9,15}$/.test(cleanPhone)) {
+      setLoginError('Số điện thoại không hợp lệ! Vui lòng chỉ nhập chữ số (9–15 số, ví dụ: 0987654321).');
       setLoginLoading(false);
       return;
     }
@@ -1165,13 +1171,17 @@ export const Layout: React.FC<{
                       </div>
                       <div className="space-y-1">
                         <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                          Số điện thoại
+                          Số điện thoại *
                         </label>
                         <input
                           type="tel"
-                          placeholder="0987 654 321"
+                          required
+                          inputMode="numeric"
+                          pattern="[0-9]{9,15}"
+                          maxLength={15}
+                          placeholder="0987654321"
                           value={regPhone}
-                          onChange={(e) => setRegPhone(e.target.value)}
+                          onChange={(e) => setRegPhone(e.target.value.replace(/\D/g, '').slice(0, 15))}
                           className="w-full border border-slate-300 rounded-xl px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-[#2ab4e8] text-sm font-medium bg-white"
                         />
                       </div>
