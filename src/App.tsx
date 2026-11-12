@@ -35,9 +35,11 @@ const LoadingFallback = () => (
   </div>
 );
 
-const STUDENT_LMS_VIEWS = [
-  'portal',
-  'lecture',
+// Chỉ lưu các trang chính của Góc Học Viên để khôi phục khi bấm nút "Góc Học Viên"
+// TUYỆT ĐỐI KHÔNG lưu các màn hình làm bài / chữa bài / minigame để tránh kẹt vòng lặp Review
+const RESUMABLE_STUDENT_VIEWS = ['portal', 'lecture'];
+
+const TEST_SESSION_VIEWS = [
   'ielts-writing',
   'ielts-speaking',
   'computer',
@@ -53,14 +55,37 @@ const STUDENT_LMS_VIEWS = [
   'vocab-racing',
 ];
 
+const DATA_REQUIRED_TEST_VIEWS = [
+  'computer',
+  'paper',
+  'mixed-paper',
+  'standard',
+  'standard-splitscreen',
+  'case-study',
+  'igcse',
+  'igcse-direct',
+];
+
+const STUDENT_LMS_VIEWS = [...RESUMABLE_STUDENT_VIEWS, ...TEST_SESSION_VIEWS];
+
 const resolveStudentResumeView = () => {
   try {
     const activeLecCourseId =
       sessionStorage.getItem('lms_active_course_id') ||
       localStorage.getItem('lms_active_course_id');
-    const lastView =
+    const rawLastView =
       sessionStorage.getItem('lms_last_student_view') ||
       localStorage.getItem('lms_last_student_view');
+
+    // Tự động sửa lại nếu bộ nhớ cũ từng lưu nhầm màn hình bài thi / review (VD: 'standard')
+    const lastView =
+      rawLastView && RESUMABLE_STUDENT_VIEWS.includes(rawLastView)
+        ? rawLastView
+        : null;
+    if (rawLastView && !lastView) {
+      sessionStorage.setItem('lms_last_student_view', 'portal');
+      localStorage.setItem('lms_last_student_view', 'portal');
+    }
 
     if (activeLecCourseId && activeLecCourseId !== 'all' && (!lastView || lastView === 'lecture')) {
       return 'lecture';
@@ -74,8 +99,8 @@ const resolveStudentResumeView = () => {
         return 'lecture';
       }
     }
-    if (lastView && STUDENT_LMS_VIEWS.includes(lastView)) {
-      return lastView;
+    if (lastView === 'portal') {
+      return 'portal';
     }
   } catch (e) {}
   return 'portal';
@@ -84,7 +109,18 @@ const resolveStudentResumeView = () => {
 export default function App() {
   const getInitialView = () => {
     const path = window.location.pathname.toLowerCase();
-    if (path === '/admin' || path === '/admin/' || path === '/admincp' || path === '/admincp/') return 'admin-login';
+    const hash = window.location.hash.toLowerCase();
+    if (path === '/admin' || path === '/admin/' || path === '/admincp' || path === '/admincp/') {
+      try {
+        const savedView = sessionStorage.getItem('lms_current_view');
+        const savedTest = sessionStorage.getItem('lms_current_test');
+        if (hash === '#review' && savedView && TEST_SESSION_VIEWS.includes(savedView) && savedTest) {
+          return savedView;
+        }
+        if (savedView === 'admin') return 'admin';
+      } catch (e) {}
+      return 'admin-login';
+    }
     if (
       path.startsWith('/khoa-hoc') ||
       path.startsWith('/hoc-thu') ||
@@ -94,12 +130,27 @@ export default function App() {
       return 'home';
     }
     if (path === '/lms' || path === '/lms/' || path === '/portal' || path === '/portal/') {
+      try {
+        const savedView = sessionStorage.getItem('lms_current_view');
+        const savedTest = sessionStorage.getItem('lms_current_test');
+        if (hash === '#test' && savedView && TEST_SESSION_VIEWS.includes(savedView) && savedTest) {
+          return savedView;
+        }
+      } catch (e) {}
       return resolveStudentResumeView();
     }
     if (path !== '/' && path !== '/vi' && path !== '/en' && path !== '/vi/' && path !== '/en/') {
       return 'home';
     }
-    try { return sessionStorage.getItem('lms_current_view') || 'home'; } catch(e) { return 'home'; }
+    try {
+      const savedView = sessionStorage.getItem('lms_current_view');
+      if (!savedView || TEST_SESSION_VIEWS.includes(savedView)) {
+        return 'home';
+      }
+      return savedView;
+    } catch (e) {
+      return 'home';
+    }
   };
 
   const [currentView, setCurrentView] = useState(getInitialView()); 
@@ -179,6 +230,14 @@ export default function App() {
          }
       } else if (view) {
          const resolved = view === 'student-resume' ? resolveStudentResumeView() : view;
+         if (!TEST_SESSION_VIEWS.includes(resolved)) {
+           setCurrentTestData(null);
+           setReturnView('portal');
+           try {
+             sessionStorage.removeItem('lms_current_test');
+             sessionStorage.removeItem('lms_return_view');
+           } catch (err) {}
+         }
          if (resolved === 'lecture') {
            try {
              const cid = sessionStorage.getItem('lms_active_course_id') || localStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || localStorage.getItem('portal_filter_course');
@@ -188,7 +247,7 @@ export default function App() {
          setCurrentView(resolved);
          try {
            sessionStorage.setItem('lms_current_view', resolved);
-           if (STUDENT_LMS_VIEWS.includes(resolved)) {
+           if (RESUMABLE_STUDENT_VIEWS.includes(resolved)) {
              sessionStorage.setItem('lms_last_student_view', resolved);
              localStorage.setItem('lms_last_student_view', resolved);
            }
@@ -259,48 +318,112 @@ export default function App() {
     try { return sessionStorage.getItem('lms_return_view') || 'portal'; } catch(e) { return 'portal'; }
   });
 
+  const clearActiveTestSession = () => {
+    setCurrentTestData(null);
+    setReturnView('portal');
+    try {
+      sessionStorage.removeItem('lms_current_test');
+      sessionStorage.removeItem('lms_return_view');
+    } catch (e) {}
+  };
+
+  // Tự động thoát khỏi màn hình test rỗng nếu không còn dữ liệu bài thi hợp lệ
+  useEffect(() => {
+    if (DATA_REQUIRED_TEST_VIEWS.includes(currentView) && !currentTestData) {
+      let hasSavedTest = false;
+      try {
+        hasSavedTest = Boolean(sessionStorage.getItem('lms_current_test'));
+      } catch (e) {}
+      if (!hasSavedTest) {
+        const fallback = returnView === 'admin' ? 'admin' : resolveStudentResumeView();
+        setCurrentView(fallback);
+        try {
+          sessionStorage.setItem('lms_current_view', fallback);
+        } catch (e) {}
+      }
+    }
+  }, [currentView, currentTestData, returnView]);
+
   useEffect(() => {
     // 🚀 Xóa lựa chọn giọng khi chuyển trang → hỏi lại khi vào trang mới
     try {
       sessionStorage.removeItem('tony_voice_examiner');
-      if (STUDENT_LMS_VIEWS.includes(currentView)) {
+      // Chỉ ghi nhận 'portal' hoặc 'lecture' làm điểm khôi phục Góc Học Viên
+      if (RESUMABLE_STUDENT_VIEWS.includes(currentView)) {
         sessionStorage.setItem('lms_last_student_view', currentView);
         localStorage.setItem('lms_last_student_view', currentView);
+      } else {
+        // Khử ngay nếu bộ nhớ cũ đang lưu nhầm màn hình bài test/review
+        const staleSessionView = sessionStorage.getItem('lms_last_student_view');
+        const staleLocalView = localStorage.getItem('lms_last_student_view');
+        if (staleSessionView && !RESUMABLE_STUDENT_VIEWS.includes(staleSessionView)) {
+          sessionStorage.setItem('lms_last_student_view', 'portal');
+        }
+        if (staleLocalView && !RESUMABLE_STUDENT_VIEWS.includes(staleLocalView)) {
+          localStorage.setItem('lms_last_student_view', 'portal');
+        }
       }
     } catch(e) {}
+
+    const p = window.location.pathname.toLowerCase();
+    const h = window.location.hash.toLowerCase();
+
     if (currentView === 'admin' || currentView === 'admin-login') {
-      if (window.location.pathname.toLowerCase() !== '/admin') {
+      if (p !== '/admin') {
         window.history.pushState(null, '', '/admin');
+      } else if (h === '#review') {
+        window.history.replaceState(null, '', '/admin');
       }
     }
-    else if (STUDENT_LMS_VIEWS.includes(currentView)) {
-      const p = window.location.pathname.toLowerCase();
+    else if (TEST_SESSION_VIEWS.includes(currentView)) {
+      if (returnView === 'admin') {
+        if (p !== '/admin' || h !== '#review') {
+          window.history.pushState(null, '', '/admin#review');
+        }
+      } else {
+        if ((p !== '/portal' && p !== '/lms') || h !== '#test') {
+          window.history.pushState(null, '', '/portal#test');
+        }
+      }
+    }
+    else if (RESUMABLE_STUDENT_VIEWS.includes(currentView)) {
       if (p !== '/portal' && p !== '/lms') {
         window.history.pushState(null, '', '/portal');
+      } else if (h === '#test') {
+        window.history.replaceState(null, '', p);
       }
     }
     else if (currentView === 'promo') {
-      const p = window.location.pathname.toLowerCase();
       if (!p.startsWith('/khoa-hoc') && !p.startsWith('/hoc-thu') && !p.startsWith('/dang-ky') && !p.startsWith('/promo')) {
         window.history.pushState(null, '', '/khoa-hoc');
       }
     }
     else if (currentView === 'home') {
-      const p = window.location.pathname.toLowerCase();
       if (p === '/admin' || p === '/admin/' || p.startsWith('/khoa-hoc') || p.startsWith('/hoc-thu') || p.startsWith('/dang-ky') || p.startsWith('/promo') || p === '/lms' || p === '/lms/' || p === '/portal' || p === '/portal/') {
         window.history.pushState(null, '', '/');
       }
     }
-  }, [currentView]);
+  }, [currentView, returnView]);
 
   useEffect(() => {
     const handlePopState = () => {
       const p = window.location.pathname.toLowerCase();
+      const h = window.location.hash.toLowerCase();
       if (p === '/admin' || p === '/admin/' || p === '/admincp' || p === '/admincp/') {
-        setCurrentView(prev => (prev === 'admin' ? 'admin' : 'admin-login'));
+        if (h !== '#review') {
+          clearActiveTestSession();
+          setCurrentView(prev => (prev === 'admin' || TEST_SESSION_VIEWS.includes(prev) ? 'admin' : 'admin-login'));
+          try { sessionStorage.setItem('lms_current_view', 'admin'); } catch (e) {}
+        }
       } else if (p === '/portal' || p === '/portal/' || p === '/lms' || p === '/lms/') {
-        setCurrentView(prev => (STUDENT_LMS_VIEWS.includes(prev) ? prev : resolveStudentResumeView()));
+        if (h !== '#test') {
+          clearActiveTestSession();
+          const target = resolveStudentResumeView();
+          setCurrentView(prev => (RESUMABLE_STUDENT_VIEWS.includes(prev) ? prev : target));
+          try { sessionStorage.setItem('lms_current_view', target); } catch (e) {}
+        }
       } else {
+        clearActiveTestSession();
         setCurrentView('home');
         try { sessionStorage.setItem('lms_current_view', 'home'); } catch (e) {}
       }
@@ -430,6 +553,9 @@ export default function App() {
 
   const handleNavigate = (view: string) => {
     const resolved = view === 'student-resume' ? resolveStudentResumeView() : view;
+    if (!TEST_SESSION_VIEWS.includes(resolved)) {
+      clearActiveTestSession();
+    }
     if (resolved === 'lecture' && !activeCourseId) {
       try {
         const cid = sessionStorage.getItem('lms_active_course_id') || localStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || localStorage.getItem('portal_filter_course');
@@ -439,7 +565,7 @@ export default function App() {
     setCurrentView(resolved);
     try {
       sessionStorage.setItem('lms_current_view', resolved);
-      if (STUDENT_LMS_VIEWS.includes(resolved)) {
+      if (RESUMABLE_STUDENT_VIEWS.includes(resolved)) {
         sessionStorage.setItem('lms_last_student_view', resolved);
         localStorage.setItem('lms_last_student_view', resolved);
       }
@@ -447,7 +573,11 @@ export default function App() {
   };
   const handleStartTest = (type: string, data: any) => {
     try {
-      setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
+      const safeOrigin = TEST_SESSION_VIEWS.includes(currentView) ? (returnView || 'portal') : currentView;
+      setCurrentTestData(data);
+      setReturnView(safeOrigin);
+      sessionStorage.setItem('lms_return_view', safeOrigin);
+      sessionStorage.setItem('lms_current_test', JSON.stringify(data));
       let targetView = type.toLowerCase();
       if (data?.title?.includes('Volume 4') || data?.title?.includes('Volume 3') || data?.title?.includes('Volume 2') || data?.title?.includes('Volume 1')) targetView = 'standard-splitscreen';
       else if (targetView.includes('igcse-direct')) targetView = 'igcse-direct';
@@ -457,7 +587,7 @@ export default function App() {
       else if (targetView.includes('standard')) targetView = 'standard';
       else if (targetView.includes('case-study') || targetView.includes('business') || targetView.includes('splitscreen')) targetView = 'case-study';
       else if (targetView.includes('mixed-paper')) targetView = 'mixed-paper';
-      handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
+      handleNavigate(targetView);
     } catch (error) {}
   };
   const handleOpenLecture = (courseId: string, lectureId?: string) => { 
@@ -473,7 +603,12 @@ export default function App() {
     handleNavigate('lecture'); 
   };
   const handleReturnFromTest = () => {
-    handleNavigate(returnView);
+    let targetReturn = returnView || 'portal';
+    if (TEST_SESSION_VIEWS.includes(targetReturn)) {
+      targetReturn = 'portal';
+    }
+    clearActiveTestSession();
+    handleNavigate(targetReturn);
     setTimeout(() => {
       window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
     }, 150);

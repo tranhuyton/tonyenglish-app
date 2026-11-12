@@ -372,7 +372,7 @@ export function TestGuideVideoButton({
   );
 }
 
-// 2. The Video Player View (Inline & Theater Modal with Multi-Video Tabs)
+// 2. The Video Player View (Single Unified DOM Element across Inline & Theater Modal -> Zero Dual Audio & Seamless Playback)
 export function TestGuideVideoPlayer({
   videoUrl,
   videos,
@@ -394,6 +394,10 @@ export function TestGuideVideoPlayer({
   onToggleTheater: (open: boolean) => void;
   testTitle?: string;
 }) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const prevIsOpenRef = useRef<boolean>(isOpen);
+
   const effectiveVideos = useMemo<GuideVideoItem[]>(() => {
     if (videos && videos.length > 0) return videos;
     if (videoUrl && videoUrl.trim()) {
@@ -406,7 +410,85 @@ export function TestGuideVideoPlayer({
   const activeItem = effectiveVideos[safeIdx] || null;
   const sourceInfo = useMemo(() => parseVideoSource(activeItem?.url || videoUrl), [activeItem, videoUrl]);
 
+  const pauseCurrentMedia = () => {
+    if (videoRef.current) {
+      try {
+        videoRef.current.pause();
+      } catch {
+        // ignore
+      }
+    }
+    if (iframeRef.current?.contentWindow && sourceInfo?.type === 'youtube') {
+      try {
+        iframeRef.current.contentWindow.postMessage(
+          JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
+          '*'
+        );
+      } catch {
+        // ignore
+      }
+    }
+  };
+
+  // Ensure closing inline via external button (e.g. "Đóng Video" in toolbar) also closes theater & stops audio
+  useEffect(() => {
+    if (prevIsOpenRef.current && !isOpen) {
+      pauseCurrentMedia();
+      if (isTheaterOpen) {
+        onToggleTheater(false);
+      }
+    }
+    prevIsOpenRef.current = isOpen;
+  }, [isOpen, isTheaterOpen, onToggleTheater]);
+
+  // Allow Escape key to exit Theater Mode smoothly back to inline view
+  useEffect(() => {
+    if (!isTheaterOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        onToggleTheater(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isTheaterOpen, onToggleTheater]);
+
   if (!sourceInfo) return null;
+
+  const handleOpenTheater = () => {
+    onToggleTheater(true);
+    // Resume seamlessly from current position without creating a second player
+    if (videoRef.current) {
+      if (videoRef.current.ended) {
+        videoRef.current.currentTime = 0;
+      }
+      if (videoRef.current.paused) {
+        videoRef.current.play().catch(() => {});
+      }
+    } else if (iframeRef.current?.contentWindow && sourceInfo.type === 'youtube') {
+      try {
+        iframeRef.current.contentWindow.postMessage(
+          JSON.stringify({ event: 'command', func: 'playVideo', args: [] }),
+          '*'
+        );
+      } catch {
+        // ignore
+      }
+    }
+  };
+
+  const handleExitTheater = () => {
+    onToggleTheater(false);
+  };
+
+  const handleCloseCompletely = () => {
+    pauseCurrentMedia();
+    if (isTheaterOpen) {
+      onToggleTheater(false);
+    }
+    onClose();
+  };
 
   const renderVideoTabs = () => {
     if (effectiveVideos.length <= 1) return null;
@@ -453,11 +535,12 @@ export function TestGuideVideoPlayer({
       return (
         <video
           key={sourceInfo.embedUrl}
+          ref={videoRef}
           src={sourceInfo.embedUrl}
           controls
           autoPlay
           playsInline
-          className={`w-full h-full object-contain ${isFullTheater ? 'max-h-[80vh]' : ''}`}
+          className={`w-full h-full object-contain ${isFullTheater ? 'max-h-[82vh]' : ''}`}
         >
           Trình duyệt của bạn không hỗ trợ phát video này.
         </video>
@@ -467,6 +550,7 @@ export function TestGuideVideoPlayer({
     return (
       <iframe
         key={sourceInfo.embedUrl}
+        ref={iframeRef}
         src={sourceInfo.embedUrl}
         title={activeItem?.title || 'Video hướng dẫn & gợi ý'}
         referrerPolicy="strict-origin-when-cross-origin"
@@ -477,77 +561,128 @@ export function TestGuideVideoPlayer({
     );
   };
 
+  const isVisible = isOpen || isTheaterOpen;
+
   return (
     <>
-      {/* INLINE COLLAPSIBLE PLAYER */}
-      {isOpen && (
-        <div className="w-full max-w-[860px] mx-auto my-2.5 rounded-2xl bg-[#18181b] border border-slate-700/80 shadow-xl overflow-hidden shrink-0 animate-in slide-in-from-top-2 duration-200">
-          <div className="px-4 py-2.5 bg-[#27272a] border-b border-[#3f3f46] flex items-center justify-between text-white text-[12px]">
-            <div className="flex items-center gap-2 font-bold truncate">
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0" />
-              <span className="truncate">{activeItem?.title || 'Video hướng dẫn & gợi ý giải bài'}</span>
-              <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-sky-500/20 text-sky-300 border border-sky-400/30 uppercase tracking-wider shrink-0">
-                {sourceInfo.type === 'youtube' ? 'YouTube' : sourceInfo.type === 'drive' ? 'Google Drive' : sourceInfo.type === 'direct' ? 'Full HD 1080p' : 'Embed'}
-              </span>
-            </div>
-            <div className="flex items-center gap-2 shrink-0">
-              <button
-                type="button"
-                onClick={() => onToggleTheater(true)}
-                className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white rounded-lg text-[11px] font-semibold transition flex items-center gap-1 cursor-pointer"
-                title="Mở toàn màn hình / Xem rộng"
-              >
-                <span>⛶</span> Phóng to
-              </button>
-              <button
-                type="button"
-                onClick={onClose}
-                className="px-2.5 py-1 text-slate-400 hover:text-red-400 hover:bg-white/10 rounded-lg transition font-bold cursor-pointer"
-                title="Đóng video"
-              >
-                ✕ Đóng
-              </button>
-            </div>
+      {/* Placeholder in inline layout while expanded to Theater Mode so scroll position stays stable */}
+      {isOpen && isTheaterOpen ? (
+        <div
+          key="inline-theater-placeholder"
+          className="w-full max-w-[860px] mx-auto my-2.5 rounded-2xl bg-slate-900/5 border border-dashed border-slate-300 aspect-video flex flex-col items-center justify-center gap-2.5 text-slate-500 text-xs font-medium shrink-0"
+        >
+          <span>🎬 Video đang phát ở chế độ phóng to toàn màn hình</span>
+          <button
+            type="button"
+            onClick={handleExitTheater}
+            className="px-3 py-1.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-lg text-[11.5px] font-bold transition shadow-sm cursor-pointer"
+          >
+            🗗 Thu nhỏ về khung này
+          </button>
+        </div>
+      ) : null}
+
+      {/* SINGLE UNIFIED PLAYER: keeps exact same <video> / <iframe> DOM instance between Inline and Theater */}
+      {isVisible ? (
+        <div
+          key="unified-guide-video-container"
+          className={
+            isTheaterOpen
+              ? 'fixed inset-0 z-[110] bg-black/90 backdrop-blur-md flex flex-col p-4 sm:p-6'
+              : 'w-full max-w-[860px] mx-auto my-2.5 rounded-2xl bg-[#18181b] border border-slate-700/80 shadow-xl overflow-hidden shrink-0'
+          }
+        >
+          <div
+            key="player-header"
+            className={
+              isTheaterOpen
+                ? 'flex justify-between items-center text-white mb-2 px-2 shrink-0 gap-3'
+                : 'px-4 py-2.5 bg-[#27272a] border-b border-[#3f3f46] flex items-center justify-between text-white text-[12px] gap-2'
+            }
+          >
+            {isTheaterOpen ? (
+              <>
+                <div className="flex items-center gap-3 truncate">
+                  <span className="text-red-500 text-lg shrink-0">▶</span>
+                  <h3 className="font-bold text-base sm:text-lg truncate">
+                    {testTitle ? `[Video Hướng Dẫn] ${testTitle}` : (activeItem?.title || 'Video hướng dẫn & gợi ý cách giải')}
+                  </h3>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    type="button"
+                    onClick={handleExitTheater}
+                    className="px-3.5 py-1.5 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-bold text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg cursor-pointer"
+                    title="Thu nhỏ về khung bên dưới và tiếp tục xem"
+                  >
+                    ✕ Thoát toàn màn hình
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleCloseCompletely}
+                    className="px-3.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-bold text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg cursor-pointer"
+                    title="Đóng hẳn video"
+                  >
+                    ⏹ Đóng hẳn
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="flex items-center gap-2 font-bold truncate">
+                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0" />
+                  <span className="truncate">{activeItem?.title || 'Video hướng dẫn & gợi ý giải bài'}</span>
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-sky-500/20 text-sky-300 border border-sky-400/30 uppercase tracking-wider shrink-0">
+                    {sourceInfo.type === 'youtube' ? 'YouTube' : sourceInfo.type === 'drive' ? 'Google Drive' : sourceInfo.type === 'direct' ? 'Full HD 1080p' : 'Embed'}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    type="button"
+                    onClick={handleOpenTheater}
+                    className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white rounded-lg text-[11px] font-semibold transition flex items-center gap-1 cursor-pointer"
+                    title="Mở toàn màn hình và phát tiếp từ chỗ đang xem"
+                  >
+                    <span>⛶</span> Phóng to
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleCloseCompletely}
+                    className="px-2.5 py-1 text-slate-400 hover:text-red-400 hover:bg-white/10 rounded-lg transition font-bold cursor-pointer"
+                    title="Đóng video"
+                  >
+                    ✕ Đóng
+                  </button>
+                </div>
+              </>
+            )}
           </div>
 
-          {renderVideoTabs()}
+          <div
+            key="player-tabs"
+            className={
+              effectiveVideos.length <= 1
+                ? 'hidden'
+                : isTheaterOpen
+                ? 'w-full max-w-5xl mx-auto mb-2 rounded-xl overflow-hidden border border-slate-700 shrink-0'
+                : 'w-full shrink-0'
+            }
+          >
+            {renderVideoTabs()}
+          </div>
 
-          <div className="relative w-full aspect-video bg-black flex items-center justify-center">
-            {renderPlayer(false)}
+          <div
+            key="player-stage"
+            className={
+              isTheaterOpen
+                ? 'flex-1 w-full max-w-5xl mx-auto aspect-video max-h-[calc(100vh-96px)] min-h-0 bg-black rounded-xl overflow-hidden shadow-2xl border border-slate-800 flex items-center justify-center'
+                : 'relative w-full aspect-video bg-black flex items-center justify-center'
+            }
+          >
+            {renderPlayer(isTheaterOpen)}
           </div>
         </div>
-      )}
-
-      {/* THEATER FULLSCREEN MODAL */}
-      {isTheaterOpen && (
-        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex flex-col p-4 sm:p-6 animate-in fade-in duration-200">
-          <div className="flex justify-between items-center text-white mb-2 px-2">
-            <div className="flex items-center gap-3 truncate">
-              <span className="text-red-500 text-lg">▶</span>
-              <h3 className="font-bold text-base sm:text-lg truncate">
-                {testTitle ? `[Video Hướng Dẫn] ${testTitle}` : (activeItem?.title || 'Video hướng dẫn & gợi ý cách giải')}
-              </h3>
-            </div>
-            <button
-              type="button"
-              onClick={() => onToggleTheater(false)}
-              className="px-4 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-bold text-sm transition flex items-center gap-2 shadow-lg shrink-0"
-            >
-              ✕ Thoát toàn màn hình
-            </button>
-          </div>
-
-          {effectiveVideos.length > 1 && (
-            <div className="w-full max-w-5xl mx-auto mb-2 rounded-xl overflow-hidden border border-slate-700">
-              {renderVideoTabs()}
-            </div>
-          )}
-
-          <div className="flex-1 w-full max-w-5xl mx-auto aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-slate-800 flex items-center justify-center">
-            {renderPlayer(true)}
-          </div>
-        </div>
-      )}
+      ) : null}
     </>
   );
 }
