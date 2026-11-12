@@ -481,8 +481,33 @@ export interface ReadingQuizQuestion {
   explanation?: string;
 }
 
+export function extractArticleEbookPdfUrl(html: string | null | undefined): {
+  pdfUrl: string | null;
+  cleanedHtml: string;
+} {
+  if (!html) return { pdfUrl: null, cleanedHtml: '' };
+  const dataMatch = html.match(/data-ebook-pdf=["']([^"']+\.pdf(?:\?[^"']*)?)["']/i);
+  const hrefMatch = html.match(/href=["']([^"']+\.pdf(?:\?[^"']*)?)["']/i);
+  const pdfUrl = (dataMatch?.[1] || hrefMatch?.[1] || '').trim() || null;
+  if (!pdfUrl) return { pdfUrl: null, cleanedHtml: html };
+
+  const cleanedHtml = html
+    .replace(/<p\b[^>]*>\s*<a\b[^>]*(?:data-ebook-pdf|href=["'][^"']*\.pdf)[^>]*>[\s\S]*?<\/a>\s*<\/p>/gi, '')
+    .replace(/<a\b[^>]*data-ebook-pdf=[^>]*>[\s\S]*?<\/a>(?:\s*<br\s*\/?>)*/gi, '')
+    .trim();
+
+  return { pdfUrl, cleanedHtml };
+}
+
 export function parseArticleInteractiveQuiz(article: any): ReadingQuizQuestion[] {
   if (!article) return [];
+  if (
+    article.news_name_quiz === '__hidden__' ||
+    Number(article.news_id) === 721 ||
+    (article.news_title_url || '').trim().toLowerCase() === 'lukes-english-podcast'
+  ) {
+    return [];
+  }
 
   // 1. Check structured JSON in news_quiz
   if (typeof article.news_quiz === 'string' && article.news_quiz.trim().startsWith('[')) {

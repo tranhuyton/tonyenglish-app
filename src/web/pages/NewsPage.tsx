@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
@@ -7,12 +7,15 @@ import {
   stripTags,
   fixLegacyHtmlContent,
   extractArticleVocabulary,
+  extractArticleEbookPdfUrl,
   parseCambridgeBilingual,
   parseArticleInteractiveQuiz,
   ReadingQuizQuestion,
   updatePageSeo,
 } from '../lib/utils';
 import { IeltsSpeakingPodcast } from '../components/IeltsSpeakingPodcast';
+
+const LibraryEbookViewer = React.lazy(() => import('../components/LibraryEbookViewer'));
 
 const ArticleInteractiveQuiz: React.FC<{
   questions: ReadingQuizQuestion[];
@@ -647,6 +650,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   const [camMode, setCamMode] = useState<'paragraph' | 'sentence' | 'english'>('paragraph');
   const [revealedParas, setRevealedParas] = useState<Record<number, boolean>>({});
   const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
+  const [ebookTheaterTrigger, setEbookTheaterTrigger] = useState<number>(0);
 
   // 🚀 TRACK LOG HỌC VIÊN ĐỌC TÀI LIỆU THƯ VIỆN
   const [authUserId, setAuthUserId] = useState<string | null>(null);
@@ -857,7 +861,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           let query = supabase
             .from('te_news')
             .select(
-              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,news_rank,public,news_quiz',
+              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,news_rank,public,news_quiz,news_name_quiz',
               { count: 'exact' }
             )
             .eq('deleted', 0)
@@ -882,7 +886,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           let query = supabase
             .from('te_news')
             .select(
-              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,public,news_quiz',
+              'news_id,news_cc_id,news_desc,news_title,news_created_at,news_title_url,news_thumb,news_postday,news_byname,public,news_quiz,news_name_quiz',
               { count: 'exact' }
             )
             .eq('deleted', 0)
@@ -1456,6 +1460,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                       </span>
                                     );
                                   })()}
+                                  {Number(item.news_cc_id) === 30 && (
+                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200/90 text-[11px] font-extrabold">
+                                      📖 {lang === 'vi' ? 'Đọc E-book trực tiếp' : 'Read E-book Online'}
+                                    </span>
+                                  )}
                                 </div>
                                 <Link
                                   to={itemUrl}
@@ -1615,9 +1624,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                   {/* Article Body (English or Vietnamese translation) & Extracted Vocabulary */}
                   {(() => {
                     const parsedEn = extractArticleVocabulary(article.news_content);
-                    const cambridgeData = parseCambridgeBilingual(parsedEn.bodyHtml);
+                    const ebookExtracted = extractArticleEbookPdfUrl(parsedEn.bodyHtml);
+                    const ebookPdfUrl = ebookExtracted.pdfUrl;
+                    const enBodyClean = ebookExtracted.cleanedHtml;
+                    const cambridgeData = parseCambridgeBilingual(enBodyClean);
                     const parsedVi = showViTranslation ? extractArticleVocabulary(article.news_desc_vi) : null;
-                    const displayBodyHtml = showViTranslation && parsedVi ? parsedVi.bodyHtml : parsedEn.bodyHtml;
+                    const displayBodyHtml = showViTranslation && parsedVi ? parsedVi.bodyHtml : enBodyClean;
                     const vocabItems = parsedEn.vocabItems;
                     const interactiveQuiz = parseArticleInteractiveQuiz(article);
                     const hasLegacyQuestion =
@@ -1805,12 +1817,89 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                           </div>
                         ) : (
                           <div className="space-y-5">
+                            {/* E-book Quick Action Bar (replaces legacy broken Download link) */}
+                            {ebookPdfUrl && (
+                              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-sky-50/90 via-white to-amber-50/50 border-2 border-sky-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-2xs">
+                                <div className="flex items-center gap-3">
+                                  <span className="w-10 h-10 rounded-xl bg-[#0a5482] text-white flex items-center justify-center text-lg shrink-0 shadow-xs">
+                                    📚
+                                  </span>
+                                  <div>
+                                    <div className="text-sm sm:text-[15.5px] font-black text-[#0a5482]">
+                                      {lang === 'vi'
+                                        ? 'Sách E-book PDF — Đọc trực tiếp trên Web'
+                                        : 'PDF E-book — Read Directly Online'}
+                                    </div>
+                                    <div className="text-xs text-slate-600">
+                                      {lang === 'vi'
+                                        ? 'Hỗ trợ lật trang, tự lưu trang đang đọc và click đúp tra từ điển ngay trên trang sách.'
+                                        : 'Supports page turning, auto-bookmarking, and double-click dictionary lookup.'}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="flex flex-wrap items-center gap-2 shrink-0">
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      const el = document.getElementById('library-ebook-viewer');
+                                      el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }}
+                                    className="px-4 py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs sm:text-sm font-extrabold transition shadow-xs cursor-pointer inline-flex items-center gap-1.5"
+                                  >
+                                    <span>📖</span>
+                                    <span>{lang === 'vi' ? 'Đọc sách ngay ↓' : 'Read Below ↓'}</span>
+                                  </button>
+
+                                  <button
+                                    type="button"
+                                    onClick={() => setEbookTheaterTrigger((n) => n + 1)}
+                                    className="px-3.5 py-2 rounded-xl bg-[#2ab4e8] hover:bg-sky-500 text-white text-xs sm:text-sm font-extrabold transition shadow-xs cursor-pointer inline-flex items-center gap-1.5"
+                                  >
+                                    <span>⛶</span>
+                                    <span>{lang === 'vi' ? 'Toàn màn hình' : 'Fullscreen'}</span>
+                                  </button>
+
+                                  <a
+                                    href={ebookPdfUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 text-xs sm:text-sm font-extrabold transition inline-flex items-center gap-1.5"
+                                  >
+                                    <span>⬇</span>
+                                    <span>{lang === 'vi' ? 'Tải PDF' : 'Download PDF'}</span>
+                                  </a>
+                                </div>
+                              </div>
+                            )}
+
                             <div
                               className="legacy-prose text-left sm:text-justify pt-2"
                               dangerouslySetInnerHTML={{
                                 __html: fixLegacyHtmlContent(displayBodyHtml),
                               }}
                             />
+
+                            {/* Embedded Interactive PDF E-Book Reader */}
+                            {ebookPdfUrl && (
+                              <div className="pt-4">
+                                <Suspense
+                                  fallback={
+                                    <div className="rounded-2xl border-2 border-sky-200/80 bg-slate-900 text-sky-200 p-10 text-center text-sm font-bold">
+                                      📖 Đang khởi tạo trình đọc sách E-book trực tuyến...
+                                    </div>
+                                  }
+                                >
+                                  <LibraryEbookViewer
+                                    pdfUrl={ebookPdfUrl}
+                                    title={article.news_title}
+                                    articleId={article.news_id || article.news_title_url}
+                                    lang={lang}
+                                    externalTheaterTrigger={ebookTheaterTrigger}
+                                  />
+                                </Suspense>
+                              </div>
+                            )}
 
                             {/* Bottom Bilingual Toggle Button (for easy language switching at the end of the article) */}
                             {article.news_desc_vi &&
