@@ -5,6 +5,7 @@ import { parseClassConfig } from './classConfigUtils';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import InteractiveLecturePlayer from './InteractiveLecturePlayer';
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
+import { Wt2PillarStudioModal, Wt2PillarReflexModal, Wt2StudioOpenPayload } from './Wt2PillarStudioModal';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -1522,6 +1523,12 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
             onSwitchPage(targetP);
           }
         }
+        else if (e.data?.type === 'OPEN_WT2_PILLAR_STUDIO') {
+          window.dispatchEvent(new CustomEvent('tony-open-wt2-pillar-studio', { detail: e.data }));
+        }
+        else if (e.data?.type === 'OPEN_WT2_REFLEX_GAME') {
+          window.dispatchEvent(new CustomEvent('tony-open-wt2-reflex-game', { detail: e.data }));
+        }
       };
       
       window.addEventListener('message', handleMessage);
@@ -2970,12 +2977,42 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                !anchor.outerHTML.includes('openIELTSAssessor') && 
                !anchor.classList.contains('btn-ielts-trigger') && 
                !anchor.classList.contains('btn-ai-trigger') && 
-               !anchor.classList.contains('btn-live-trigger')) {
+               !anchor.classList.contains('btn-live-trigger') &&
+               !anchor.classList.contains('btn-wt2-pillar-trigger') &&
+               !anchor.classList.contains('btn-wt2-reflex-trigger')) {
                    
                e.preventDefault(); 
                var rawHref = anchor.getAttribute('href');
                window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: rawHref }, '*'); 
                return; 
+           }
+
+           var wt2Btn = target.closest('.btn-wt2-pillar-trigger');
+           if (wt2Btn) {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               window.parent.postMessage({
+                   type: 'OPEN_WT2_PILLAR_STUDIO',
+                   topic: wt2Btn.getAttribute('data-topic') || '',
+                   label: wt2Btn.getAttribute('data-label') || '',
+                   category: wt2Btn.getAttribute('data-category') || 'auto',
+                   subType: wt2Btn.getAttribute('data-subtype') || '',
+                   taskId: wt2Btn.getAttribute('data-task-id') || ''
+               }, '*');
+               return false;
+           }
+
+           var wt2ReflexBtn = target.closest('.btn-wt2-reflex-trigger');
+           if (wt2ReflexBtn) {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               window.parent.postMessage({
+                   type: 'OPEN_WT2_REFLEX_GAME',
+                   tab: wt2ReflexBtn.getAttribute('data-tab') || 'reflex'
+               }, '*');
+               return false;
            }
 
            var btn = target.closest('.btn-ai-trigger, .btn-ielts-trigger, .btn-live-trigger');
@@ -3193,6 +3230,8 @@ export default function LectureViewer({
 
   const [isLectureThemeModalOpen, setIsLectureThemeModalOpen] = useState(false);
   const [isStudyCoachModalOpen, setIsStudyCoachModalOpen] = useState(false);
+  const [wt2StudioPayload, setWt2StudioPayload] = useState<Wt2StudioOpenPayload | null>(null);
+  const [wt2ReflexModal, setWt2ReflexModal] = useState<{ open: boolean; tab: 'reflex' | 'anchors' }>({ open: false, tab: 'reflex' });
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
@@ -4216,6 +4255,40 @@ export default function LectureViewer({
          return newCompleted;
       });
   }, [currentUser, activeLectureId, lectures, activeLecture]);
+
+  const handleMarkWt2TaskDone = useCallback((taskId: string) => {
+    if (!taskId) return;
+    if (!completedTasks.includes(taskId)) {
+      handleToggleTask(taskId);
+    }
+  }, [completedTasks, handleToggleTask]);
+
+  useEffect(() => {
+    const onOpenStudio = (ev: Event) => {
+      const detail = (ev as CustomEvent).detail || {};
+      if (!detail.topic) return;
+      setWt2StudioPayload({
+        topic: detail.topic,
+        label: detail.label || undefined,
+        category: detail.category || 'auto',
+        subType: detail.subType || undefined,
+        taskId: detail.taskId || undefined
+      });
+    };
+    const onOpenReflex = (ev: Event) => {
+      const detail = (ev as CustomEvent).detail || {};
+      setWt2ReflexModal({
+        open: true,
+        tab: detail.tab === 'anchors' ? 'anchors' : 'reflex'
+      });
+    };
+    window.addEventListener('tony-open-wt2-pillar-studio', onOpenStudio);
+    window.addEventListener('tony-open-wt2-reflex-game', onOpenReflex);
+    return () => {
+      window.removeEventListener('tony-open-wt2-pillar-studio', onOpenStudio);
+      window.removeEventListener('tony-open-wt2-reflex-game', onOpenReflex);
+    };
+  }, []);
 
   const handleStartTaskExercise = async (task: any) => {
       if (!onStartTest || !task.test_id) {
@@ -6140,6 +6213,21 @@ export default function LectureViewer({
         onSelectTheme={handleSelectLectureTheme}
         onApplyCustomColor={handleApplyCustomLectureColor}
         onClose={() => setIsLectureThemeModalOpen(false)}
+      />
+
+      <Wt2PillarStudioModal
+        isOpen={!!wt2StudioPayload}
+        payload={wt2StudioPayload}
+        courseId={currentCourseId}
+        onClose={() => setWt2StudioPayload(null)}
+        onMarkTaskComplete={handleMarkWt2TaskDone}
+      />
+
+      <Wt2PillarReflexModal
+        isOpen={wt2ReflexModal.open}
+        initialTab={wt2ReflexModal.tab}
+        onClose={() => setWt2ReflexModal((prev) => ({ ...prev, open: false }))}
+        onLaunchStudioFromReflex={(p) => setWt2StudioPayload(p)}
       />
     </div>
   );
