@@ -64,7 +64,7 @@ const ArticleInteractiveQuiz: React.FC<{
   return (
     <div
       ref={quizTopRef}
-      className="mt-8 rounded-2xl sm:rounded-3xl border-2 border-sky-200/90 bg-gradient-to-b from-sky-50/40 via-white to-white overflow-hidden shadow-sm scroll-mt-24"
+      className="rounded-2xl sm:rounded-3xl border-2 border-sky-200/90 bg-gradient-to-b from-sky-50/40 via-white to-white overflow-hidden shadow-sm scroll-mt-24"
     >
       {/* Quiz Header */}
       <div className="bg-gradient-to-r from-[#0a5482] to-[#0f2942] px-5 sm:px-7 py-4 sm:py-5 text-white flex flex-wrap items-center justify-between gap-3">
@@ -806,7 +806,15 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
         .eq('news_cc_status', 1)
         .order('news_cc_order_left', { ascending: true })
         .order('news_cc_id', { ascending: true });
-      if (data) setAllCategories(data);
+      if (data) {
+        setAllCategories(
+          data.filter(
+            (c: any) =>
+              Number(c.news_cc_id) !== 23 &&
+              (c.news_cc_name_url || '').trim().toLowerCase() !== 'the-english-we-speak'
+          )
+        );
+      }
     }
     loadCategories();
   }, []);
@@ -1983,17 +1991,20 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         )}
 
                         {interactiveQuiz.length > 0 && (
-                          <ArticleInteractiveQuiz
-                            questions={interactiveQuiz}
-                            articleId={article.news_id || article.news_title_url}
-                            lang={lang}
-                            categoryId={Number(article.news_cc_id)}
-                          />
+                          <div className="pt-8 sm:pt-10">
+                            <ArticleInteractiveQuiz
+                              questions={interactiveQuiz}
+                              articleId={article.news_id || article.news_title_url}
+                              lang={lang}
+                              categoryId={Number(article.news_cc_id)}
+                            />
+                          </div>
                         )}
 
                         {/* 🚀 TRACK LOG STATUS BANNER IN ARTICLE DETAIL */}
                         {authUserId && (
-                          <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50/90 via-sky-50/70 to-white border border-emerald-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                          <div className="pt-2 sm:pt-3">
+                            <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50/90 via-sky-50/70 to-white border border-emerald-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                             <div className="flex items-center gap-3">
                               <span className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-base font-bold shrink-0">
                                 {isCurrentArticleLogged ? '✓' : '⏳'}
@@ -2031,6 +2042,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               >
                                 🎓 Về Góc Học Viên →
                               </button>
+                            </div>
                             </div>
                           </div>
                         )}
