@@ -78,3 +78,11 @@ Các agent khi thực hiện dùng Python PIL để cắt ảnh (cropping) từ 
    - Cần chừa lề (margin) an toàn để không vô tình cắt mất các chi tiết nhỏ nhưng quan trọng: Ví dụ nét võng xuống của lòng sông, phần gạch chân của một biểu đồ, hay các nét chữ kéo dài xuống dưới như chữ `y, g, p`.
 4. **KHÔNG TỰ SUY DIỄN DO ẢNH GỐC BỊ CẮT:**
    - Đôi khi hình ảnh trong sách giáo khoa nguyên bản bị dàn trang làm cắt cụt một cách đột ngột. Nếu người dùng phàn nàn "ảnh bị thiếu", agent cần phải crop thử một vùng rất lớn của ảnh gốc để kiểm tra xem bên dưới thật sự có nội dung hay không. Đừng hoảng hốt chỉnh lại toạ độ nếu chính bản PDF gốc đã bị cắt ngang ở đúng vị trí đó.
+
+# ⚠️ QUY TẮC CÁCH LY TÀI KHOẢN MULTI-TENANT SUPABASE (`tonyenglish-app` vs `tuvi-ai`)
+Hệ thống **TonyEnglish (`tonyenglish-app` - `tonyenglish.vn`)** dùng chung Supabase Project (`ubkvzgwespfvrlpjuxkp.supabase.co`) và bảng `auth.users` với hệ thống **Tử Vi Thầy Tôn (`tuvi-ai` - `tuvithayton.vn`)**.
+Các AI Agent khi viết code liên quan đến Auth / Học viên BẮT BUỘC tuân thủ:
+1. **Bảng dữ liệu:** `tonyenglish-app` chỉ sử dụng bảng `public.profiles` (cùng `enrollments`, `class_students`). Bảng `public.tuvi_profiles` là của hệ thống Tử Vi — tuyệt đối không đụng chạm.
+2. **Định danh khi tạo tài khoản (`signUp`):** Mọi lệnh `supabase.auth.signUp` trong `tonyenglish-app` (tại `Layout.tsx`, `StudentManagement.tsx`...) BẮT BUỘC phải gắn `options.data.app = 'tonyenglish'` và trường `phone` của học viên chỉ được phép chứa chữ số (`9-15` số, bắt buộc khi đăng ký học thử IGCSE).
+3. **Không tự động chèn khách Tử Vi vào `public.profiles`:** Tại `StudentPortal.tsx` hoặc bất kỳ listener `onAuthStateChange` nào, nếu `user.user_metadata?.app === 'tuvi'` thì TUYỆT ĐỐI KHÔNG tự động `upsert` vào bảng `public.profiles`.
+

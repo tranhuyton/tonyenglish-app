@@ -443,7 +443,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         const studentClassList = (cStudents || []).map((c: any) => String(c.class_id));
 
         // Tự động tạo profile nếu đăng nhập qua Google OAuth lần đầu chưa có dòng trong bảng profiles
-        if (!resolvedProfile && user) {
+        // ⚠️ MULTI-TENANT GUARDRAIL: Tuyệt đối KHÔNG tự tạo profile học viên TonyEnglish nếu tài khoản thuộc hệ thống Tử Vi (`app === 'tuvi'`)
+        if (!resolvedProfile && user && user.user_metadata?.app !== 'tuvi') {
           const fallbackName =
             user.user_metadata?.full_name ||
             user.user_metadata?.name ||
