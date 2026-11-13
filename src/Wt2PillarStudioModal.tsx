@@ -5,6 +5,7 @@ import {
   WT2_STRUCTURES,
   WT2_SUBJECT_GROUPS,
   WT2_REFLEX_QUESTIONS,
+  detectWt2QuestionGuide,
   Wt2Category,
   Wt2TemplateId,
   PillarSlotType,
@@ -77,9 +78,16 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
 
   // Category & Template configuration
   const isAutoCategory = !payload?.category || payload.category === 'auto';
+  const [hasConfirmedCategory, setHasConfirmedCategory] = useState<boolean>(!isAutoCategory);
+  const [showAutoGuide, setShowAutoGuide] = useState<boolean>(false);
   const [selectedCategory, setSelectedCategory] = useState<Wt2Category>('discussion');
   const [templateId, setTemplateId] = useState<Wt2TemplateId>('discussion');
   const [stance, setStance] = useState<'agree' | 'disagree'>('disagree');
+
+  const questionGuide = useMemo(
+    () => detectWt2QuestionGuide(payload?.topic || ''),
+    [payload?.topic]
+  );
 
   // Chosen Pillars for Body 1 & Body 2
   const [pillar1Id, setPillar1Id] = useState<number>(1);
@@ -113,11 +121,18 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   // Reset state when modal opens with a new payload
   useEffect(() => {
     if (!isOpen || !payload) return;
+    const autoMode = !payload.category || payload.category === 'auto';
+    const guide = detectWt2QuestionGuide(payload.topic || '');
     const initCat: Wt2Category =
-      payload.category && payload.category !== 'auto' ? payload.category : 'discussion';
-    const initTpl = defaultTemplateForCategory(initCat, payload.subType);
+      !autoMode && payload.category ? payload.category : guide.recommendedCategory;
+    const initTpl = defaultTemplateForCategory(
+      initCat,
+      payload.subType || (autoMode ? guide.recommendedTemplate : undefined)
+    );
 
     setStep(1);
+    setHasConfirmedCategory(!autoMode);
+    setShowAutoGuide(false);
     setSelectedCategory(initCat);
     setTemplateId(initTpl);
     setStance('disagree');
@@ -152,8 +167,12 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   }, [isOpen, payload]);
 
   const handleCategoryChange = (cat: Wt2Category) => {
+    setHasConfirmedCategory(true);
     setSelectedCategory(cat);
-    const nextTpl = defaultTemplateForCategory(cat);
+    const nextTpl =
+      cat === questionGuide.recommendedCategory
+        ? questionGuide.recommendedTemplate
+        : defaultTemplateForCategory(cat);
     setTemplateId(nextTpl);
     setSlottedPillarKeys({});
     if (cat === 'argument') {
@@ -162,7 +181,22 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     } else if (cat === 'mixed') {
       setPillar1Polarity('negative');
       setPillar2Polarity(nextTpl === 'mixed_ps' ? 'positive' : 'negative');
+    } else {
+      setPillar1Polarity('positive');
+      setPillar2Polarity('positive');
     }
+  };
+
+  const handleApplyRecommendedGuide = () => {
+    setShowAutoGuide(true);
+    setHasConfirmedCategory(true);
+    setSelectedCategory(questionGuide.recommendedCategory);
+    setTemplateId(questionGuide.recommendedTemplate);
+    setPillar1Id(questionGuide.suggestedPillar1.id);
+    setPillar1Polarity(questionGuide.suggestedPillar1.polarity);
+    setPillar2Id(questionGuide.suggestedPillar2.id);
+    setPillar2Polarity(questionGuide.suggestedPillar2.polarity);
+    setSlottedPillarKeys({});
   };
 
   const pillar1 = useMemo(
@@ -290,6 +324,10 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   };
 
   const handleProceedToStep2 = () => {
+    if (!hasConfirmedCategory) {
+      alert('Em hãy đọc câu hỏi cuối đề bài và bấm chọn 1 trong 5 Dạng bài ở Bước 1A trước nhé!');
+      return;
+    }
     const assembled = buildAssembledEssay();
     // Only overwrite if draft is empty or user confirms replacing
     if (!essayDraft.trim() || window.confirm('Cập nhật lại bản nháp Bước 2 theo các ô vừa ghép ở Bước 1?')) {
@@ -383,7 +421,7 @@ Hãy chấm kép bài làm trên (vừa theo 4 tiêu chí IELTS chuẩn, vừa t
   "overall": 7.0,
   "formulaScore": 8.5,
   "formulaReview": {
-    "structureCheck": "Nhận xét xem em đã giữ đúng Khung bất biến của dạng ${structureDef.name} chưa...",
+    "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp với yêu cầu câu hỏi của đề chưa, và ` : ''}em đã giữ đúng Khung bất biến của dạng ${structureDef.name} chưa...",
     "pillarFitCheck": "Nhận xét xem 2 Trụ ý (${pillar1.name} & ${pillar2.name}) em chọn và ví dụ đưa vào đã bám sát đề bài chưa...",
     "seamGrammarCheck": "Nhận xét các mối nối ngữ pháp (sau due to / related to / chủ ngữ S / từ nối) đã mượt tự nhiên chưa và chỉ cách gọt..."
   },
@@ -494,6 +532,10 @@ Hãy chấm kép bài làm trên (vừa theo 4 tiêu chí IELTS chuẩn, vừa t
                 onClick={() => {
                   if (s.n === 1) setStep(1);
                   if (s.n === 2) {
+                    if (!hasConfirmedCategory) {
+                      alert('Em hãy chọn 1 trong 5 Dạng bài ở Bước 1A để mở Khung bất biến trước nhé!');
+                      return;
+                    }
                     if (!essayDraft.trim()) setEssayDraft(buildAssembledEssay());
                     setStep(2);
                   }
@@ -650,19 +692,40 @@ Hãy chấm kép bài làm trên (vừa theo 4 tiêu chí IELTS chuẩn, vừa t
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
                     <span className="text-xs font-extrabold uppercase tracking-wider text-sky-600">
-                      Bước 1A • Khung Cấu Trúc Bất Biến
+                      {isAutoCategory
+                        ? 'Bước 1A • Nhận Diện Dạng Đề & Chọn Khung Bất Biến'
+                        : 'Bước 1A • Khung Cấu Trúc Bất Biến'}
                     </span>
                     <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-                      {structureDef.name}{' '}
-                      <span className="font-normal text-slate-500 text-xs sm:text-sm">
-                        — {structureDef.viSubtitle}
-                      </span>
+                      {!hasConfirmedCategory ? (
+                        <span className="text-amber-700">
+                          🎯 Đọc câu hỏi cuối đề bài và bấm chọn đúng 1 trong 5 Dạng bài bên dưới:
+                        </span>
+                      ) : (
+                        <>
+                          {structureDef.name}{' '}
+                          <span className="font-normal text-slate-500 text-xs sm:text-sm">
+                            — {structureDef.viSubtitle}
+                          </span>
+                        </>
+                      )}
                     </h3>
                   </div>
 
-                  {/* Sub-version selectors for Opinion / Mixed */}
                   <div className="flex flex-wrap items-center gap-2">
-                    {selectedCategory === 'opinion' && (
+                    {isAutoCategory && (
+                      <button
+                        type="button"
+                        onClick={handleApplyRecommendedGuide}
+                        className="px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-900 text-xs font-extrabold cursor-pointer transition-colors"
+                        title="Nhờ Thầy gợi ý Dạng đề chuẩn + 2 Trụ ý phù hợp nhất cho đề này"
+                      >
+                        💡 Gợi ý Dạng đề &amp; 2 Trụ ý
+                      </button>
+                    )}
+
+                    {/* Sub-version selectors for Opinion / Mixed */}
+                    {hasConfirmedCategory && selectedCategory === 'opinion' && (
                       <>
                         <select
                           value={templateId}
@@ -693,7 +756,7 @@ Hãy chấm kép bài làm trên (vừa theo 4 tiêu chí IELTS chuẩn, vừa t
                       </>
                     )}
 
-                    {selectedCategory === 'mixed' && (
+                    {hasConfirmedCategory && selectedCategory === 'mixed' && (
                       <select
                         value={templateId}
                         onChange={(e) => {
@@ -712,25 +775,70 @@ Hãy chấm kép bài làm trên (vừa theo 4 tiêu chí IELTS chuẩn, vừa t
 
                 {/* Category selector shown when launched in 'auto' mode (e.g. from 7. Task 2: Questions) */}
                 {isAutoCategory && (
-                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 pt-2 border-t border-slate-100">
-                    {CATEGORY_OPTIONS.map((c) => (
-                      <button
-                        key={c.id}
-                        onClick={() => handleCategoryChange(c.id)}
-                        className={`p-2 rounded-lg border text-left transition-all cursor-pointer ${
-                          selectedCategory === c.id
-                            ? 'border-sky-500 bg-sky-50 ring-1 ring-sky-500'
-                            : 'border-slate-200 hover:bg-slate-50'
-                        }`}
-                      >
-                        <div className="text-xs font-extrabold text-slate-800">{c.label}</div>
-                        <div className="text-[11px] text-slate-500 truncate">{c.shortDesc}</div>
-                      </button>
-                    ))}
+                  <div className="space-y-2.5 pt-2 border-t border-slate-100">
+                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                      {CATEGORY_OPTIONS.map((c) => {
+                        const isChosen = hasConfirmedCategory && selectedCategory === c.id;
+                        return (
+                          <button
+                            key={c.id}
+                            onClick={() => handleCategoryChange(c.id)}
+                            className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
+                              isChosen
+                                ? 'border-sky-600 bg-sky-50 ring-2 ring-sky-500 shadow-2xs'
+                                : 'border-slate-200 hover:border-sky-400 hover:bg-slate-50'
+                            }`}
+                          >
+                            <div className="text-xs font-extrabold text-slate-800">{c.label}</div>
+                            <div className="text-[11px] text-slate-500 truncate">{c.shortDesc}</div>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {hasConfirmedCategory && (
+                      questionGuide.acceptedCategories.includes(selectedCategory) ? (
+                        <div className="bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2 text-xs text-emerald-900 flex flex-wrap items-center justify-between gap-2">
+                          <span>
+                            <strong>✅ Nhận diện dạng đề chuẩn xác!</strong> {questionGuide.signalHint}
+                          </span>
+                          {showAutoGuide && (
+                            <span className="font-bold text-emerald-700">
+                              🎯 Đã gợi ý sẵn Trụ ý #{pillar1.id} ({pillar1.name}) &amp; #{pillar2.id} ({pillar2.name})
+                            </span>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="bg-amber-50 border border-amber-300 rounded-lg px-3 py-2 text-xs text-amber-950 flex flex-wrap items-center justify-between gap-2">
+                          <span>
+                            <strong>💡 Gợi ý nhận diện đề:</strong> {questionGuide.signalHint}. (Em vẫn có thể tự luyện theo khung đang chọn hoặc bấm áp dụng khung chuẩn).
+                          </span>
+                          <button
+                            type="button"
+                            onClick={handleApplyRecommendedGuide}
+                            className="px-2.5 py-1 rounded-md bg-amber-600 hover:bg-amber-700 text-white font-bold cursor-pointer shrink-0"
+                          >
+                            Chuyển sang Khung chuẩn + 2 Trụ ý gợi ý
+                          </button>
+                        </div>
+                      )
+                    )}
                   </div>
                 )}
               </div>
 
+              {!hasConfirmedCategory ? (
+                <div className="bg-sky-50/70 border-2 border-dashed border-sky-300 rounded-2xl p-8 text-center space-y-2">
+                  <div className="text-2xl">🧭</div>
+                  <div className="font-extrabold text-slate-800 text-sm sm:text-base">
+                    Bước đầu tiên khi vào phòng thi: Phân loại đúng Dạng đề!
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
+                    Hãy bấm chọn 1 trong 5 dạng bài (<strong>Discussion, Argument, Opinion, Mixed, Two-part</strong>) ở khung trên để hệ thống mở đúng <strong>Khung Cấu Trúc Bất Biến</strong> và bảng kéo thả <strong>19 Idea Pillars</strong> nhé!
+                  </p>
+                </div>
+              ) : (
+                <>
               {/* 1B. Pick 2 Pillars & Drag/Click Cards */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {[
@@ -1082,6 +1190,8 @@ Hãy chấm kép bài làm trên (vừa theo 4 tiêu chí IELTS chuẩn, vừa t
                   </div>
                 ))}
               </div>
+                </>
+              )}
             </>
           )}
 

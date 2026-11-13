@@ -1688,3 +1688,187 @@ export const WT2_REFLEX_QUESTIONS: ReflexQuestion[] = [
       'Đề hỏi "advantages outweigh disadvantages" → Argument! Body 1 (Lợi ích camera): giảm tội phạm (#12 Crime hoặc #18 Security nhánh +); Body 2 (Bất lợi): xâm phạm đời tư cá nhân (#18 Security & Privacy nhánh -).'
   }
 ];
+
+export interface Wt2QuestionGuide {
+  recommendedCategory: Wt2Category;
+  recommendedTemplate: Wt2TemplateId;
+  acceptedCategories: Wt2Category[];
+  signalHint: string;
+  suggestedPillar1: { id: number; polarity: 'positive' | 'negative' };
+  suggestedPillar2: { id: number; polarity: 'positive' | 'negative' };
+}
+
+export function detectWt2QuestionGuide(topic: string): Wt2QuestionGuide {
+  const q = (topic || '').trim();
+  const ql = q.toLowerCase();
+
+  let recommendedCategory: Wt2Category = 'opinion';
+  let recommendedTemplate: Wt2TemplateId = 'opinion_v2';
+  let acceptedCategories: Wt2Category[] = ['opinion'];
+  let signalHint =
+    'Đề hỏi quan điểm cá nhân ("agree or disagree / what is your opinion") → Khung chuẩn: 3. Opinion (Version 1 hoặc Version 2)';
+
+  if (
+    [
+      'discuss both',
+      'discuss these views',
+      'discuss the two views',
+      'reason in support of and opposing',
+      'which viewpoint do you agree with'
+    ].some((p) => ql.includes(p))
+  ) {
+    recommendedCategory = 'discussion';
+    recommendedTemplate = 'discussion';
+    acceptedCategories = ql.includes('which viewpoint do you agree with')
+      ? ['discussion', 'opinion']
+      : ['discussion'];
+    signalHint =
+      'Đề nêu 2 luồng quan điểm đối lập ("Discuss both views / sides...") → Khung chuẩn: 1. Discussion';
+  } else if (
+    [
+      'advantages and disadvantages',
+      'outweigh',
+      'problems international travelers cause greater than the advantages',
+      'positive or negative',
+      'positive effects or negative effects'
+    ].some((p) => ql.includes(p))
+  ) {
+    recommendedCategory = 'argument';
+    recommendedTemplate = 'argument';
+    acceptedCategories =
+      ql.includes('positive or negative') || ql.includes('positive effects or negative effects')
+        ? ['argument', 'opinion']
+        : ql.includes('what forms do they take')
+        ? ['argument', 'twopart']
+        : ql.includes('both approaches')
+        ? ['argument', 'discussion']
+        : ['argument'];
+    signalHint =
+      'Đề yêu cầu cân nhắc mặt Lợi & Hại ("advantages and disadvantages / outweigh / positive or negative") → Khung chuẩn: 2. Argument';
+  } else if (
+    [
+      'causes and effects',
+      'cause and effects',
+      'reasons for this and the effects',
+      'causes of this problem and what can be done',
+      'cause and possible solutions',
+      'causes of water shortages',
+      'motivated to learn',
+      'what do you think the effects this may be',
+      'what problems do big cities have',
+      'why do you think that is? what are some of the possible problems'
+    ].some((p) => ql.includes(p))
+  ) {
+    const hasSolution = ['solve', 'solution', 'measures', 'can be done', 'motivated'].some((w) =>
+      ql.includes(w)
+    );
+    recommendedCategory = 'mixed';
+    recommendedTemplate = hasSolution ? 'mixed_ps' : 'mixed_ce';
+    acceptedCategories = ['mixed', 'twopart'];
+    signalHint = hasSolution
+      ? 'Đề hỏi Nguyên nhân/Vấn đề kèm Giải pháp ("causes/problems + solutions/measures") → Khung chuẩn: 4. Mixed (Problems/Causes & Solutions)'
+      : 'Đề hỏi Nguyên nhân & Hệ quả ("causes/reasons + effects/problems") → Khung chuẩn: 4. Mixed (Causes & Effects)';
+  } else {
+    const qMarks = (q.match(/\?/g) || []).length;
+    if (
+      qMarks >= 2 ||
+      [
+        'what criteria should be used',
+        'what other measures do you think',
+        'do you think this tendency should be changed',
+        'what measures can be taken to protect them',
+        'what can the arts tell us'
+      ].some((p) => ql.includes(p))
+    ) {
+      recommendedCategory = 'twopart';
+      recommendedTemplate = 'twopart';
+      acceptedCategories = ['twopart', 'mixed'];
+      signalHint =
+        'Đề đặt câu hỏi mở trực tiếp / gồm 2 câu hỏi riêng biệt → Khung chuẩn: 5. Two-part';
+    } else if (ql.includes('critics say')) {
+      acceptedCategories = ['opinion', 'discussion'];
+    }
+  }
+
+  // Pick 2 highly relevant Pillars based on topic keywords
+  const candidateIds: number[] = [];
+  const pushUnique = (id: number) => {
+    if (!candidateIds.includes(id)) candidateIds.push(id);
+  };
+
+  if (/(air travel|petrol|fuel|car|traffic|environment|pollution|global warming|species|consumer goods|disposable|water shortage)/.test(ql)) {
+    pushUnique(2); // Pollution
+    pushUnique(13); // Resource
+    pushUnique(4); // Cost
+  }
+  if (/(crime|criminal|prison|community service|ban|restrict|dangerous)/.test(ql)) {
+    pushUnique(12); // Crime & Social Order
+    pushUnique(1); // Freedom
+    pushUnique(16); // Practical Skills
+  }
+  if (/(animal|laboratory|scientific experimenting|zoo)/.test(ql)) {
+    pushUnique(8); // Unethical Issues & Morality
+    pushUnique(10); // Health
+  }
+  if (/(online|computer|internet|mobile phone|television|communication technology)/.test(ql)) {
+    pushUnique(5); // Convenience
+    pushUnique(9); // Bond & Social Interaction
+    pushUnique(6); // Information & Knowledge
+  }
+  if (/(school|university|college|education|student|subject|learn|language|book|librar|museum)/.test(ql)) {
+    pushUnique(6); // Information & Knowledge
+    pushUnique(16); // Practical Skills
+    pushUnique(14); // Motivation & Independence
+    pushUnique(1); // Freedom
+  }
+  if (/(health|medical|medicine|doctor|diet|eat|older|aged 60|elderly)/.test(ql)) {
+    pushUnique(10); // Health
+    pushUnique(17); // Economic Impact
+    pushUnique(9); // Bond & Social Interaction
+  }
+  if (/(money|tax|fund|billions|financial|salary|paid|wealthy|rich|poor|shopping|advertis)/.test(ql)) {
+    pushUnique(4); // Cost
+    pushUnique(17); // Economic Impact
+    pushUnique(19); // Equality / Disparity
+  }
+  if (/(job|work|career|employ|graduate)/.test(ql)) {
+    pushUnique(7); // Job
+    pushUnique(16); // Practical Skills
+    pushUnique(9); // Bond & Social Interaction
+  }
+  if (/(culture|tradition|art|foreign|travel|passport)/.test(ql)) {
+    pushUnique(11); // Culture & Tradition
+    pushUnique(15); // Creativity & Innovation
+    pushUnique(6); // Information & Knowledge
+  }
+  if (/(family|parent|mother|live alone|friend)/.test(ql)) {
+    pushUnique(9); // Bond & Social Interaction
+    pushUnique(14); // Motivation & Independence
+    pushUnique(4); // Cost
+  }
+
+  pushUnique(6);
+  pushUnique(4);
+
+  const p1Id = candidateIds[0] || 1;
+  const p2Id = candidateIds[1] || 2;
+
+  let pol1: 'positive' | 'negative' = 'positive';
+  let pol2: 'positive' | 'negative' = 'positive';
+  if (recommendedCategory === 'argument') {
+    pol1 = 'positive';
+    pol2 = 'negative';
+  } else if (recommendedCategory === 'mixed') {
+    pol1 = 'negative';
+    pol2 = recommendedTemplate === 'mixed_ps' ? 'positive' : 'negative';
+  }
+
+  return {
+    recommendedCategory,
+    recommendedTemplate,
+    acceptedCategories,
+    signalHint,
+    suggestedPillar1: { id: p1Id, polarity: pol1 },
+    suggestedPillar2: { id: p2Id, polarity: pol2 }
+  };
+}
