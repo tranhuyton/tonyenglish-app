@@ -6,6 +6,7 @@ import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, lo
 import InteractiveLecturePlayer from './InteractiveLecturePlayer';
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 import { Wt2PillarStudioModal, Wt2PillarReflexModal, Wt2StudioOpenPayload } from './Wt2PillarStudioModal';
+import { Spk2LegoStudioModal, Spk2LegoStudioOpenPayload } from './Spk2LegoStudioModal';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -1529,6 +1530,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
         else if (e.data?.type === 'OPEN_WT2_REFLEX_GAME') {
           window.dispatchEvent(new CustomEvent('tony-open-wt2-reflex-game', { detail: e.data }));
         }
+        else if (e.data?.type === 'OPEN_SPK2_LEGO_STUDIO') {
+          window.dispatchEvent(new CustomEvent('tony-open-spk2-lego-studio', { detail: e.data }));
+        }
       };
       
       window.addEventListener('message', handleMessage);
@@ -2979,7 +2983,8 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                !anchor.classList.contains('btn-ai-trigger') && 
                !anchor.classList.contains('btn-live-trigger') &&
                !anchor.classList.contains('btn-wt2-pillar-trigger') &&
-               !anchor.classList.contains('btn-wt2-reflex-trigger')) {
+               !anchor.classList.contains('btn-wt2-reflex-trigger') &&
+               !anchor.classList.contains('btn-spk2-lego-trigger')) {
                    
                e.preventDefault(); 
                var rawHref = anchor.getAttribute('href');
@@ -3011,6 +3016,20 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                window.parent.postMessage({
                    type: 'OPEN_WT2_REFLEX_GAME',
                    tab: wt2ReflexBtn.getAttribute('data-tab') || 'reflex'
+               }, '*');
+               return false;
+           }
+
+           var spk2LegoBtn = target.closest('.btn-spk2-lego-trigger');
+           if (spk2LegoBtn) {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               window.parent.postMessage({
+                   type: 'OPEN_SPK2_LEGO_STUDIO',
+                   topic: spk2LegoBtn.getAttribute('data-topic') || '',
+                   promptNum: spk2LegoBtn.getAttribute('data-num') ? parseInt(spk2LegoBtn.getAttribute('data-num'), 10) : 0,
+                   blindMode: spk2LegoBtn.getAttribute('data-blind') === 'true'
                }, '*');
                return false;
            }
@@ -3232,6 +3251,7 @@ export default function LectureViewer({
   const [isStudyCoachModalOpen, setIsStudyCoachModalOpen] = useState(false);
   const [wt2StudioPayload, setWt2StudioPayload] = useState<Wt2StudioOpenPayload | null>(null);
   const [wt2ReflexModal, setWt2ReflexModal] = useState<{ open: boolean; tab: 'reflex' | 'anchors' }>({ open: false, tab: 'reflex' });
+  const [spk2LegoPayload, setSpk2LegoPayload] = useState<Spk2LegoStudioOpenPayload | null>(null);
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
@@ -4282,11 +4302,21 @@ export default function LectureViewer({
         tab: detail.tab === 'anchors' ? 'anchors' : 'reflex'
       });
     };
+    const onOpenSpk2Lego = (ev: Event) => {
+      const detail = (ev as CustomEvent).detail || {};
+      setSpk2LegoPayload({
+        topic: detail.topic || '',
+        promptNum: detail.promptNum || undefined,
+        blindMode: Boolean(detail.blindMode)
+      });
+    };
     window.addEventListener('tony-open-wt2-pillar-studio', onOpenStudio);
     window.addEventListener('tony-open-wt2-reflex-game', onOpenReflex);
+    window.addEventListener('tony-open-spk2-lego-studio', onOpenSpk2Lego);
     return () => {
       window.removeEventListener('tony-open-wt2-pillar-studio', onOpenStudio);
       window.removeEventListener('tony-open-wt2-reflex-game', onOpenReflex);
+      window.removeEventListener('tony-open-spk2-lego-studio', onOpenSpk2Lego);
     };
   }, []);
 
@@ -6228,6 +6258,13 @@ export default function LectureViewer({
         initialTab={wt2ReflexModal.tab}
         onClose={() => setWt2ReflexModal((prev) => ({ ...prev, open: false }))}
         onLaunchStudioFromReflex={(p) => setWt2StudioPayload(p)}
+      />
+
+      <Spk2LegoStudioModal
+        isOpen={!!spk2LegoPayload}
+        payload={spk2LegoPayload}
+        courseId={currentCourseId}
+        onClose={() => setSpk2LegoPayload(null)}
       />
     </div>
   );
