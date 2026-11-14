@@ -10,13 +10,15 @@ import {
   Spk2StageBrick,
   Spk2PromptItem,
   getSpk2BlockById,
-  findSpk2PromptMeta
+  findSpk2PromptMeta,
+  renderStageBrickText
 } from './spk2LegoData';
 
 export interface Spk2LegoStudioOpenPayload {
   topic: string;
   promptNum?: number;
   blindMode?: boolean;
+  preferredBlockId?: Spk2BlockId;
 }
 
 interface Spk2LegoStudioModalProps {
@@ -60,9 +62,72 @@ function formatSeconds(sec: number): string {
 
 function stripDefaultIntroIfHookPresent(stageText: string, hasCustomHook: boolean): string {
   if (!hasCustomHook) return stageText;
-  return stageText
+  const stripped = stageText
     .replace(/^I would like to talk about[^.]*\.\s*/i, '')
     .trim();
+  if (!stripped) {
+    // Single-sentence Stage 1 (e.g. Food Block Stage 1): preserve the dish/slot description seamlessly!
+    return stageText.replace(/^I would like to talk about\s+/i, 'Specifically, it was ').trim();
+  }
+  return stripped;
+}
+
+function renderBrickWithSlotHighlights(
+  brick: Spk2StageBrick,
+  slotValues: Record<string, string>,
+  mode: 'palette' | 'tower'
+): React.ReactNode {
+  if (!brick.templateEn || !brick.slots || brick.slots.length === 0) {
+    return brick.textEn;
+  }
+  const parts = brick.templateEn.split(/(\{\{[a-z0-9_]+\}\})/gi);
+  return parts.map((part, idx) => {
+    const match = part.match(/^\{\{([a-z0-9_]+)\}\}$/i);
+    if (!match) return <React.Fragment key={idx}>{part}</React.Fragment>;
+    const slotId = match[1];
+    const slotMeta = brick.slots.find((s) => s.id === slotId);
+    if (!slotMeta) return <React.Fragment key={idx}>{part}</React.Fragment>;
+
+    const rawOverride = slotValues[slotId];
+    const hasCustom =
+      mode === 'tower' &&
+      rawOverride !== undefined &&
+      rawOverride.trim() !== '' &&
+      rawOverride.trim() !== slotMeta.defaultEn.trim();
+    const displayVal = hasCustom ? rawOverride.trim() : slotMeta.defaultEn;
+
+    if (mode === 'palette') {
+      return (
+        <span
+          key={idx}
+          title={`${slotMeta.labelVi} — ${slotMeta.hintVi}`}
+          className="inline-flex items-baseline gap-1 px-1.5 py-0.5 mx-0.5 rounded bg-sky-50 text-sky-900 font-semibold border border-dashed border-sky-300"
+        >
+          <span>{slotMeta.defaultEn}</span>
+          <span className="text-[10px] font-extrabold text-sky-600 uppercase">[...]</span>
+        </span>
+      );
+    }
+
+    return hasCustom ? (
+      <span
+        key={idx}
+        title={`Đã tùy biến ${slotMeta.labelVi} (Mặc định gốc: "${slotMeta.defaultEn}")`}
+        className="inline-flex items-baseline gap-1 px-1.5 py-0.5 mx-0.5 rounded bg-amber-100 text-amber-950 font-bold border border-amber-400"
+      >
+        <span>🎯 {displayVal}</span>
+      </span>
+    ) : (
+      <span
+        key={idx}
+        title={`${slotMeta.labelVi} — Đang giữ mặc định gốc. Sửa ở ô bên dưới để bẻ lái sát đề!`}
+        className="inline-flex items-baseline gap-1 px-1.5 py-0.5 mx-0.5 rounded bg-sky-50 text-sky-900 font-semibold border border-dashed border-sky-300"
+      >
+        <span>{displayVal}</span>
+        <span className="text-[10px] font-extrabold text-sky-600">[...]</span>
+      </span>
+    );
+  });
 }
 
 function defaultBridgeForBlock(blockId: Spk2BlockId): string {
@@ -80,7 +145,7 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
 }) => {
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [activePrompt, setActivePrompt] = useState<Spk2PromptItem>(() =>
-    findSpk2PromptMeta(payload?.topic || '', payload?.promptNum)
+    findSpk2PromptMeta(payload?.topic || '', payload?.promptNum, payload?.preferredBlockId)
   );
   const [showTonyHint, setShowTonyHint] = useState<boolean>(false);
   const [showPromptPicker, setShowPromptPicker] = useState<boolean>(false);
@@ -95,6 +160,7 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
   const [hookText, setHookText] = useState<string>('');
   const [selectedHookFormulaId, setSelectedHookFormulaId] = useState<string>('');
   const [towerItems, setTowerItems] = useState<AssembledLegoItem[]>([]);
+  const [slotValues, setSlotValues] = useState<Record<string, string>>({});
   const [closingText, setClosingText] = useState<string>('');
 
   // Step 2: Script Editor + 2-Minute Speaking Practice & Audio Recording
@@ -120,7 +186,11 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
   const practiceTimerRef = useRef<number | null>(null);
 
   // Initialize / Reset whenever modal opens with a prompt
-  const initForPrompt = (promptMeta: Spk2PromptItem, blind?: boolean) => {
+  const initForPrompt = (
+    promptMeta: Spk2PromptItem,
+    blind?: boolean,
+    focusBlockId?: Spk2BlockId
+  ) => {
     setStep(1);
     setActivePrompt(promptMeta);
     setShowTonyHint(!blind && false); // Always let student try assembling first; 1 click to reveal hint!
@@ -128,9 +198,14 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
     setHookText('');
     setSelectedHookFormulaId('');
     setTowerItems([]);
+    setSlotValues({});
     setClosingText('');
     setScriptDraft('');
-    setExpandedBlockIds([promptMeta.recommendedBlockId]);
+    const initialExpanded: Spk2BlockId[] = [promptMeta.recommendedBlockId];
+    if (focusBlockId && !initialExpanded.includes(focusBlockId)) {
+      initialExpanded.unshift(focusBlockId);
+    }
+    setExpandedBlockIds(initialExpanded);
     setAiEvaluation(null);
     setGradeError(null);
     stopAllTimersAndMedia();
@@ -142,8 +217,12 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
 
   useEffect(() => {
     if (isOpen && payload) {
-      const meta = findSpk2PromptMeta(payload.topic, payload.promptNum);
-      initForPrompt(meta, payload.blindMode);
+      const meta = findSpk2PromptMeta(
+        payload.topic,
+        payload.promptNum,
+        payload.preferredBlockId
+      );
+      initForPrompt(meta, payload.blindMode, payload.preferredBlockId);
     }
     return () => {
       stopAllTimersAndMedia();
@@ -214,7 +293,41 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
     return ids;
   }, [towerItems]);
 
-  // Build preview text from Step 1 tower
+  // Anti-Off-Topic Radar stats for "..." Adaptive Slots on the Tower
+  const towerSlotStats = useMemo(() => {
+    let totalSlots = 0;
+    let customizedSlots = 0;
+    let availablePromptSuggestions = 0;
+    const customizedDetails: { stageTitle: string; labelVi: string; value: string }[] = [];
+
+    for (const item of towerItems) {
+      for (const sl of item.brick.slots || []) {
+        totalSlots += 1;
+        const val = slotValues[sl.id];
+        const isCustom =
+          val !== undefined && val.trim() !== '' && val.trim() !== sl.defaultEn.trim();
+        if (isCustom) {
+          customizedSlots += 1;
+          customizedDetails.push({
+            stageTitle: item.brick.stageTitle,
+            labelVi: sl.labelVi,
+            value: val.trim()
+          });
+        }
+        if (activePrompt.slotSuggestions?.[sl.id]) {
+          availablePromptSuggestions += 1;
+        }
+      }
+    }
+    return {
+      totalSlots,
+      customizedSlots,
+      availablePromptSuggestions,
+      customizedDetails
+    };
+  }, [towerItems, slotValues, activePrompt]);
+
+  // Build preview text from Step 1 tower (including customized "..." slots)
   const assembledPreviewText = useMemo(() => {
     const chunks: string[] = [];
     const cleanHook = hookText.trim();
@@ -227,12 +340,14 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
       const isBlockTransition = prevBlockId !== null && prevBlockId !== item.brick.blockId;
       const bridge = isBlockTransition ? (item.bridgeBefore || '').trim() : '';
 
+      const stageWithSlots = renderStageBrickText(item.brick, slotValues);
+
       const cleanStage =
         idx === 0 && cleanHook && item.brick.stageNumber === 1
-          ? stripDefaultIntroIfHookPresent(item.brick.textEn, true)
+          ? stripDefaultIntroIfHookPresent(stageWithSlots, true)
           : isBlockTransition && item.brick.stageNumber === 1 && bridge
-          ? stripDefaultIntroIfHookPresent(item.brick.textEn, true)
-          : item.brick.textEn;
+          ? stripDefaultIntroIfHookPresent(stageWithSlots, true)
+          : stageWithSlots;
 
       if (bridge) {
         chunks.push(`${bridge} ${cleanStage}`.trim());
@@ -247,7 +362,7 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
     }
 
     return chunks.join('\n\n');
-  }, [hookText, towerItems, closingText]);
+  }, [hookText, towerItems, closingText, slotValues]);
 
   const activeWordCount = step === 1 ? countWords(assembledPreviewText) : countWords(scriptDraft);
   const estimatedSpeakSec = Math.round((activeWordCount / 125) * 60); // ~125 wpm natural Band 7.0+ pace
@@ -263,6 +378,32 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
     setExpandedBlockIds((prev) =>
       prev.includes(blockId) ? prev.filter((x) => x !== blockId) : [...prev, blockId]
     );
+  };
+
+  const updateSlotValue = (slotId: string, val: string) => {
+    setSlotValues((prev) => ({ ...prev, [slotId]: val }));
+  };
+
+  const resetSlotToDefault = (slotId: string) => {
+    setSlotValues((prev) => {
+      const next = { ...prev };
+      delete next[slotId];
+      return next;
+    });
+  };
+
+  const applyPromptSlotsToTower = () => {
+    const next: Record<string, string> = { ...slotValues };
+    for (const item of towerItems) {
+      for (const sl of item.brick.slots || []) {
+        if (activePrompt.slotSuggestions?.[sl.id]) {
+          next[sl.id] = activePrompt.slotSuggestions[sl.id];
+        } else if (!next[sl.id] && !activePrompt.isDirectMatch && sl.examples.length > 0) {
+          next[sl.id] = sl.examples[0].valueEn;
+        }
+      }
+    }
+    setSlotValues(next);
   };
 
   const addSingleBrickToTower = (brick: Spk2StageBrick) => {
@@ -298,6 +439,7 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
     setHookText(activePrompt.sampleHookEn);
     setClosingText(activePrompt.sampleClosingEn);
     setSelectedHookFormulaId('recommended');
+    setSlotValues({ ...(activePrompt.slotSuggestions || {}) });
 
     const newItems: AssembledLegoItem[] = mainBlock.stages.map((st, idx) => ({
       uid: `${st.id}_rec_${idx}_${Date.now()}`,
@@ -480,6 +622,13 @@ export const Spk2LegoStudioModal: React.FC<Spk2LegoStudioModalProps> = ({
 2) Chấm điểm Phát âm (Pronunciation), Độ trôi chảy (Fluency) & Ngữ điệu thực tế kết hợp với Kịch bản Lego học viên đã soạn.`
           : `Học viên gửi Kịch bản bài nói Speaking Part 2 đã tự lắp ghép từ hệ thống Lego Blocks (chưa gửi file ghi âm). Hãy chấm chất lượng Kịch bản nói, Độ mượt của câu Hook bẻ lái, Từ vựng, Ngữ pháp và khả năng đạt Band cao khi nói kịch bản này trong 2 phút.`;
 
+      const customizedSlotsSummary =
+        towerSlotStats.customizedDetails.length > 0
+          ? towerSlotStats.customizedDetails
+              .map((d) => `- ${d.stageTitle} (${d.labelVi}): "${d.value}"`)
+              .join('\n')
+          : 'Chưa tùy biến khe "..." nào trong thân bài (đang giữ nguyên văn mẫu gốc).';
+
       const prompt = `
 Bạn là Giám khảo IELTS Speaking kiêm Huấn luyện viên chiến thuật "Lego Blocks & Hook Bẻ Lái" của TonyEnglish.vn. Luôn xưng "Thầy" và gọi học viên là "em".
 
@@ -491,6 +640,9 @@ ${activePrompt.cueBullets.map((b) => `- ${b}`).join('\n')}
 CÁC KHỐI LEGO HỌC VIÊN ĐÃ CHỌN LẮP GHÉP:
 ${chosenBlocksSummary || 'Tự viết tự do'}
 
+CÁC KHE TÙY BIẾN "..." (MỎ NEO CHỐNG LẠC ĐỀ TRONG THÂN BÀI):
+${customizedSlotsSummary}
+
 KỊCH BẢN BÀI NÓI HỌC VIÊN ĐÃ LẮP & CHỈNH SỬA (${countWords(finalScript)} từ):
 """
 ${finalScript}
@@ -501,8 +653,8 @@ ${audioNote}
 
 YÊU CẦU ĐÁNH GIÁ:
 1. Kiểm tra xem Câu Hook mở bài đã "bẻ lái" mượt mà, tự nhiên từ đề bài "${activePrompt.title}" sang Khối Lego (${chosenBlocksSummary}) mà KHÔNG bị lạc đề (off-topic) chưa.
-2. Kiểm tra các khớp nối đại từ/thì động từ/ngữ cảnh giữa Câu Hook, các Stage của Main Block/Plugin Block và Câu chốt cuối bài.
-3. Kiểm tra xem em có giữ được các cấu trúc ăn điểm Band 7.5+ của trung tâm (như "If my memory serves me well", "If it hadn't been for...", "Not only... but also...", "Although / Even though") không.
+2. ĐẶC BIỆT kiểm tra các Khe tùy biến "..." trong thân bài (Stages 1–4): Học viên đã khéo léo cài từ khóa/ngữ cảnh của đề bài vào giữa thân bài chưa, hay câu Hook nói một đằng mà thân bài giữ nguyên chi tiết mẫu gốc gây mâu thuẫn / lộ bài học vẹt?
+3. Kiểm tra các khớp nối đại từ/thì động từ/ngữ cảnh giữa Câu Hook, các Stage của Main Block/Plugin Block và Câu chốt cuối bài, đồng thời kiểm tra các cấu trúc ăn điểm Band 7.5+ ("If my memory serves me well", "If it hadn't been for...", "Not only... but also...", "Although / Even though").
 
 TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
 {
@@ -510,8 +662,8 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
   "recognizedTranscript": "${useAudio && recordedBase64 ? 'Chép lại lời học viên nói trong audio...' : ''}",
   "legoReview": {
     "hookSteeringCheck": "Nhận xét chi tiết bằng tiếng Việt về độ mượt và logic của câu Hook bẻ lái...",
-    "legoComboCheck": "Nhận xét về cách kết hợp các khối Lego, độ dài bài nói 2 phút và việc vận dụng cấu trúc vàng...",
-    "cueCardCheck": "Nhận xét xem bài nói đã bao phủ khéo léo các ý trên Cue Card và chốt bài bám đề chưa..."
+    "legoComboCheck": "Nhận xét về cách kết hợp các khối Lego, cách tùy biến các khe '...' chống lạc đề và việc vận dụng cấu trúc vàng...",
+    "cueCardCheck": "Nhận xét xem bài nói đã bao phủ khéo léo các ý trên Cue Card xuyên suốt thân bài và câu chốt chưa..."
   },
   "criteria": [
     { "name": "Fluency & Coherence", "score": 7.5, "comment": "Nhận xét tiếng Việt..." },
@@ -988,7 +1140,9 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
                                   </div>
 
                                   {brickViewMode === 'en' && (
-                                    <p className="text-slate-700 leading-relaxed">{st.textEn}</p>
+                                    <p className="text-slate-700 leading-relaxed">
+                                      {renderBrickWithSlotHighlights(st, {}, 'palette')}
+                                    </p>
                                   )}
                                   {brickViewMode === 'vi' && (
                                     <p className="text-emerald-900 leading-relaxed">{st.textVi}</p>
@@ -1026,7 +1180,7 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
                       🏗️ Tháp Bài Nói 2 Phút Của Em
                     </h3>
                     <p className="text-xs text-slate-500">
-                      1) Chọn/viết <b>Câu Hook bẻ lái</b> ➔ 2) Lắp <b>Main Block + Plugin</b> ➔ 3) <b>Câu chốt bám đề</b>
+                      1) <b>Câu Hook bẻ lái</b> ➔ 2) Lắp <b>Lego & Điền khe <code className="text-amber-700 font-extrabold">...</code></b> ➔ 3) <b>Câu chốt bám đề</b>
                     </p>
                   </div>
                   {towerItems.length > 0 && (
@@ -1034,6 +1188,7 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
                       type="button"
                       onClick={() => {
                         setTowerItems([]);
+                        setSlotValues({});
                         setHookText('');
                         setClosingText('');
                       }}
@@ -1127,14 +1282,61 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
                         : 'border-slate-300 bg-slate-50/70'
                     }`}
                   >
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                       <span className="text-xs font-extrabold text-slate-700 uppercase">
-                        🧱 Tầng 2: Thân Bài Lego ({towerItems.length} viên gạch • {distinctBlockIds.length} khối)
+                        🧱 Tầng 2: Thân Bài Lego & Khe <code className="text-amber-700">...</code> ({towerItems.length} viên gạch • {distinctBlockIds.length} khối)
                       </span>
-                      <span className="text-[11px] text-slate-500">
-                        Kéo thả hoặc bấm + ở cột trái
-                      </span>
+                      {towerItems.length > 0 ? (
+                        <button
+                          type="button"
+                          onClick={applyPromptSlotsToTower}
+                          className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white shadow-2xs transition cursor-pointer"
+                        >
+                          ✨ Tự điền các khe '...' theo Đề này
+                        </button>
+                      ) : (
+                        <span className="text-[11px] text-slate-500">
+                          Kéo thả hoặc bấm + ở cột trái
+                        </span>
+                      )}
                     </div>
+
+                    {/* Anti-Off-Topic Radar Banner when bricks are on the tower */}
+                    {towerItems.length > 0 && towerSlotStats.totalSlots > 0 && (
+                      <div
+                        className={`mb-2.5 rounded-lg border px-2.5 py-2 text-[11.5px] leading-relaxed flex flex-wrap items-center justify-between gap-2 ${
+                          activePrompt.isDirectMatch
+                            ? 'bg-sky-50 border-sky-200 text-sky-900'
+                            : towerSlotStats.customizedSlots === 0
+                            ? 'bg-amber-50 border-amber-300 text-amber-950'
+                            : 'bg-emerald-50 border-emerald-300 text-emerald-950'
+                        }`}
+                      >
+                        {activePrompt.isDirectMatch ? (
+                          <span>
+                            ✅ <b>Đề khớp trực tiếp với khung gốc:</b> Đã tùy biến{' '}
+                            <b>
+                              {towerSlotStats.customizedSlots}/{towerSlotStats.totalSlots}
+                            </b>{' '}
+                            khe <code>...</code> (em có thể giữ mặc định hoặc đổi nhẹ chi tiết cá nhân).
+                          </span>
+                        ) : towerSlotStats.customizedSlots === 0 ? (
+                          <span>
+                            🛡️ <b>Radar Chống Lạc Đề:</b> Đây là đề bẻ lái! Em đang giữ nguyên{' '}
+                            <b>0/{towerSlotStats.totalSlots}</b> khe <code>...</code> mặc định. Hãy sửa ít nhất{' '}
+                            <b>2 khe ...</b> bên dưới để gài từ khóa đề bài vào giữa thân bài, tránh bị bắt lỗi học vẹt nhé!
+                          </span>
+                        ) : (
+                          <span>
+                            🛡️ <b>Chống Lạc Đề An Toàn:</b> Em đã tùy biến{' '}
+                            <b>
+                              {towerSlotStats.customizedSlots}/{towerSlotStats.totalSlots}
+                            </b>{' '}
+                            khe <code>...</code> bám sát đề bài xuyên suốt thân bài!
+                          </span>
+                        )}
+                      </div>
+                    )}
 
                     {towerItems.length === 0 ? (
                       <div className="py-10 text-center text-xs text-slate-400">
@@ -1242,7 +1444,103 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
                                 ) : brickViewMode === 'vi' ? (
                                   <p className="text-xs text-emerald-900 leading-relaxed">{item.brick.textVi}</p>
                                 ) : (
-                                  <p className="text-xs text-slate-700 leading-relaxed">{item.brick.textEn}</p>
+                                  <p className="text-xs text-slate-700 leading-relaxed">
+                                    {renderBrickWithSlotHighlights(item.brick, slotValues, 'tower')}
+                                  </p>
+                                )}
+
+                                {/* Interactive Adaptive "..." Topic-Anchor Slot Editor */}
+                                {item.brick.slots && item.brick.slots.length > 0 && (
+                                  <div className="mt-2 pt-2 border-t border-slate-100 space-y-2">
+                                    {item.brick.slots.map((sl) => {
+                                      const rawVal = slotValues[sl.id];
+                                      const isCustomized =
+                                        rawVal !== undefined &&
+                                        rawVal.trim() !== '' &&
+                                        rawVal.trim() !== sl.defaultEn.trim();
+                                      const promptSug = activePrompt.slotSuggestions?.[sl.id];
+
+                                      return (
+                                        <div
+                                          key={sl.id}
+                                          className={`rounded-lg p-2 border transition ${
+                                            isCustomized
+                                              ? 'bg-amber-50/70 border-amber-300'
+                                              : 'bg-slate-50/90 border-slate-200'
+                                          }`}
+                                        >
+                                          <div className="flex flex-wrap items-center justify-between gap-1.5 mb-1">
+                                            <span className="text-[11px] font-extrabold text-slate-800 flex items-center gap-1">
+                                              <span>🎯 {sl.labelVi}</span>
+                                              {isCustomized ? (
+                                                <span className="text-[10px] px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-bold">
+                                                  Đã bẻ lái ✓
+                                                </span>
+                                              ) : (
+                                                <span className="text-[10px] px-1.5 py-0.2 rounded bg-sky-100 text-sky-800 font-semibold">
+                                                  Mặc định gốc
+                                                </span>
+                                              )}
+                                            </span>
+
+                                            <div className="flex items-center gap-1 flex-wrap">
+                                              {promptSug && (
+                                                <button
+                                                  type="button"
+                                                  onClick={() => updateSlotValue(sl.id, promptSug)}
+                                                  title={`Gợi ý sát đề: "${promptSug}"`}
+                                                  className="text-[10.5px] font-bold px-2 py-0.5 rounded bg-indigo-600 hover:bg-indigo-700 text-white transition cursor-pointer"
+                                                >
+                                                  ✨ Khớp đề này
+                                                </button>
+                                              )}
+                                              {rawVal !== undefined && (
+                                                <button
+                                                  type="button"
+                                                  onClick={() => resetSlotToDefault(sl.id)}
+                                                  title={`Khôi phục mặc định gốc: "${sl.defaultEn}"`}
+                                                  className="text-[10.5px] font-semibold px-1.5 py-0.5 rounded bg-white border border-slate-300 hover:bg-slate-100 text-slate-600 cursor-pointer"
+                                                >
+                                                  ↺ Gốc
+                                                </button>
+                                              )}
+                                            </div>
+                                          </div>
+
+                                          <input
+                                            type="text"
+                                            value={rawVal !== undefined ? rawVal : sl.defaultEn}
+                                            onChange={(e) => updateSlotValue(sl.id, e.target.value)}
+                                            placeholder={sl.hintVi}
+                                            className="w-full rounded-md border border-slate-300 bg-white px-2.5 py-1 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                                          />
+
+                                          {sl.examples && sl.examples.length > 0 && (
+                                            <div className="flex flex-wrap items-center gap-1 mt-1.5">
+                                              <span className="text-[10px] font-semibold text-slate-400 mr-0.5">
+                                                Mẫu nhanh:
+                                              </span>
+                                              {sl.examples.map((ex, ei) => (
+                                                <button
+                                                  key={ei}
+                                                  type="button"
+                                                  onClick={() => updateSlotValue(sl.id, ex.valueEn)}
+                                                  title={ex.valueEn}
+                                                  className={`text-[10.5px] px-2 py-0.5 rounded-full border transition cursor-pointer ${
+                                                    rawVal === ex.valueEn
+                                                      ? 'bg-amber-600 text-white border-amber-600 font-bold'
+                                                      : 'bg-white hover:bg-amber-50 text-slate-700 border-slate-200'
+                                                  }`}
+                                                >
+                                                  {ex.tagVi}
+                                                </button>
+                                              ))}
+                                            </div>
+                                          )}
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
                                 )}
                               </div>
                             </div>
@@ -1487,6 +1785,10 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
                       )}
                       {towerItems.map((it) => {
                         const blk = getSpk2BlockById(it.brick.blockId);
+                        const customStageSlots = (it.brick.slots || []).filter((sl) => {
+                          const v = slotValues[sl.id];
+                          return v !== undefined && v.trim() !== '' && v.trim() !== sl.defaultEn.trim();
+                        });
                         return (
                           <div key={it.uid} className="bg-white rounded-lg p-2.5 border border-orange-200">
                             <div className="text-[11px] font-extrabold text-orange-800 mb-1">
@@ -1504,6 +1806,18 @@ TRẢ VỀ DUY NHẤT JSON HỢP LỆ (KHÔNG markdown backticks):
                                 </React.Fragment>
                               ))}
                             </div>
+                            {customStageSlots.length > 0 && (
+                              <div className="mt-1.5 pt-1.5 border-t border-amber-100 space-y-1">
+                                {customStageSlots.map((sl) => (
+                                  <div
+                                    key={sl.id}
+                                    className="text-[11.5px] px-2 py-0.5 rounded bg-amber-50 border border-amber-200 text-amber-950 font-semibold"
+                                  >
+                                    🎯 <b>Khe '...' bám đề:</b> {slotValues[sl.id]}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         );
                       })}

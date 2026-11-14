@@ -3038,7 +3038,8 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                    type: 'OPEN_SPK2_LEGO_STUDIO',
                    topic: spk2LegoBtn.getAttribute('data-topic') || '',
                    promptNum: spk2LegoBtn.getAttribute('data-num') ? parseInt(spk2LegoBtn.getAttribute('data-num'), 10) : 0,
-                   blindMode: spk2LegoBtn.getAttribute('data-blind') === 'true'
+                   blindMode: spk2LegoBtn.getAttribute('data-blind') === 'true',
+                   preferredBlockId: spk2LegoBtn.getAttribute('data-block') || ''
                }, '*');
                return false;
            }
@@ -4346,7 +4347,8 @@ export default function LectureViewer({
       setSpk2LegoPayload({
         topic: detail.topic || '',
         promptNum: detail.promptNum || undefined,
-        blindMode: Boolean(detail.blindMode)
+        blindMode: Boolean(detail.blindMode),
+        preferredBlockId: detail.preferredBlockId || undefined
       });
     };
     const onOpenWt1Studio = (ev: Event) => {
