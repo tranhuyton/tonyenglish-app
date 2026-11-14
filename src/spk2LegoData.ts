@@ -1308,8 +1308,8 @@ export const SPK2_CONNECTOR_BRIDGES: Spk2ConnectorBridge[] = [
 export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 1,
-    title: 'Describe an invention changed the people’s life.',
-    cueBullets: ['What it is', 'Who invent it', 'When it was invented', 'And explain how it changed people’s life.'],
+    title: 'Describe an invention that changed people’s lives.',
+    cueBullets: ['What it is', 'Who invented it', 'When it was invented', 'And explain how it changed people’s life.'],
     recommendedBlockId: 'object_entity',
     recommendedPluginIds: [],
     isDirectMatch: true,
@@ -1352,7 +1352,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 4,
     title: 'Describe TV series you like',
-    cueBullets: ['What the TV series are', 'Who act these serie', 'What is the plot', 'And explain how you feel about it'],
+    cueBullets: ['What the TV series are', 'Who acted in this series', 'What is the plot', 'And explain how you feel about it'],
     recommendedBlockId: 'object_entity',
     recommendedPluginIds: ['action_experience'],
     slotSuggestions: {
@@ -1386,7 +1386,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 6,
     title: 'Describe a plan you haven’t done yet',
-    cueBullets: ['What is about', 'When you plan to do it', 'Why do you want to do it', 'And explain why you haven’t done it'],
+    cueBullets: ['What it is about', 'When you plan to do it', 'Why do you want to do it', 'And explain why you haven’t done it'],
     recommendedBlockId: 'action_experience',
     recommendedPluginIds: ['object_entity'],
     slotSuggestions: {
@@ -1420,7 +1420,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 8,
     title: 'Describe one of your favorite clothing.',
-    cueBullets: ['What is it looks like', 'How did you get it', 'Do you often dress it', 'And explain why it is your favorite clothing'],
+    cueBullets: ['What it looks like', 'How did you get it', 'Whether you often wear it', 'And explain why it is your favorite clothing'],
     recommendedBlockId: 'object_entity',
     recommendedPluginIds: ['action_experience'],
     slotSuggestions: {
@@ -1479,7 +1479,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   },
   {
     num: 12,
-    title: 'Describe a favorite sports you watched / a sport you like to watch.',
+    title: 'Describe a favorite sport you watched / a sport you like to watch.',
     cueBullets: ['What it is', 'When you watched it', 'How you watch it', 'And explain why you like watching it'],
     recommendedBlockId: 'action_experience',
     recommendedPluginIds: ['object_entity'],
@@ -1583,7 +1583,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 19,
     title: 'Describe a time when you moved to a new house or a new school',
-    cueBullets: ['When it happened', 'What kind of home did you moved into', 'Why you moved', 'And explain how you felt about the moving'],
+    cueBullets: ['When it happened', 'What kind of home you moved into', 'Why you moved', 'And explain how you felt about the moving'],
     recommendedBlockId: 'place_service',
     recommendedPluginIds: [],
     slotSuggestions: {
@@ -1626,8 +1626,8 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   },
   {
     num: 22,
-    title: 'Describe an organization or company where you live and they employs a lot of people.',
-    cueBullets: ['What it is', 'How many employees work there', 'What its work', 'And explain what you think about it.'],
+    title: 'Describe an organization or company where you live that employs a lot of people.',
+    cueBullets: ['What it is', 'How many employees work there', 'What kind of work it does', 'And explain what you think about it.'],
     recommendedBlockId: 'object_entity',
     recommendedPluginIds: [],
     slotSuggestions: {
@@ -1703,7 +1703,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 27,
     title: 'Describe a bicycle tour.',
-    cueBullets: ['When you had this trip', 'Whom went on with you', 'What did you do during this trip', 'And explain why you like it.'],
+    cueBullets: ['When you had this trip', 'Who went with you', 'What did you do during this trip', 'And explain why you like it.'],
     recommendedBlockId: 'action_experience',
     recommendedPluginIds: ['historical_nature', 'weather'],
     isDirectMatch: true,
@@ -1718,7 +1718,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 28,
     title: 'Describe a useful website that you often visited.',
-    cueBullets: ['What the contents of this website are', 'How you first found this website', 'How often you go to visited this website', 'And explain how this website helps you.'],
+    cueBullets: ['What the contents of this website are', 'How you first found this website', 'How often you visit this website', 'And explain how this website helps you.'],
     recommendedBlockId: 'object_entity',
     recommendedPluginIds: [],
     slotSuggestions: {
@@ -1765,8 +1765,8 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   },
   {
     num: 31,
-    title: 'Describe a decision made by that you disagree with',
-    cueBullets: ['Who made this decision', 'What it is', 'How you told him/her', 'And explain why you disagree the decision'],
+    title: 'Describe a decision made by someone that you disagreed with',
+    cueBullets: ['Who made this decision', 'What it is', 'How you told him/her', 'And explain why you disagreed with the decision'],
     recommendedBlockId: 'person',
     recommendedPluginIds: [],
     slotSuggestions: {
@@ -2031,7 +2031,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   {
     num: 49,
     title: 'Describe a quiet place you visited.',
-    cueBullets: ['Where it was', 'When you went there', 'What you did there', 'And explain why you think it was quite'],
+    cueBullets: ['Where it was', 'When you went there', 'What you did there', 'And explain why you think it was quiet'],
     recommendedBlockId: 'historical_nature',
     recommendedPluginIds: ['weather'],
     isDirectMatch: true,
@@ -2055,7 +2055,7 @@ export const SPK2_PROMPTS_55: Spk2PromptItem[] = [
   },
   {
     num: 51,
-    title: 'A wedding you have been to',
+    title: 'Describe a wedding you have attended',
     cueBullets: ['Where it was', 'Who you went with', 'What you saw', 'And how you felt about the wedding?'],
     recommendedBlockId: 'relation_ceremony',
     recommendedPluginIds: ['food', 'weather'],
