@@ -7,6 +7,7 @@ import InteractiveLecturePlayer from './InteractiveLecturePlayer';
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 import { Wt2PillarStudioModal, Wt2PillarReflexModal, Wt2StudioOpenPayload } from './Wt2PillarStudioModal';
 import { Spk2LegoStudioModal, Spk2LegoStudioOpenPayload } from './Spk2LegoStudioModal';
+import { Wt1StudioModal, Wt1VocabBankModal, Wt1StudioOpenPayload } from './Wt1StudioModal';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -1533,6 +1534,12 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
         else if (e.data?.type === 'OPEN_SPK2_LEGO_STUDIO') {
           window.dispatchEvent(new CustomEvent('tony-open-spk2-lego-studio', { detail: e.data }));
         }
+        else if (e.data?.type === 'OPEN_WT1_STUDIO') {
+          window.dispatchEvent(new CustomEvent('tony-open-wt1-studio', { detail: e.data }));
+        }
+        else if (e.data?.type === 'OPEN_WT1_VOCAB_BANK') {
+          window.dispatchEvent(new CustomEvent('tony-open-wt1-vocab-bank', { detail: e.data }));
+        }
       };
       
       window.addEventListener('message', handleMessage);
@@ -2984,7 +2991,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                !anchor.classList.contains('btn-live-trigger') &&
                !anchor.classList.contains('btn-wt2-pillar-trigger') &&
                !anchor.classList.contains('btn-wt2-reflex-trigger') &&
-               !anchor.classList.contains('btn-spk2-lego-trigger')) {
+               !anchor.classList.contains('btn-spk2-lego-trigger') &&
+               !anchor.classList.contains('btn-wt1-studio-trigger') &&
+               !anchor.classList.contains('btn-wt1-vocab-trigger')) {
                    
                e.preventDefault(); 
                var rawHref = anchor.getAttribute('href');
@@ -3030,6 +3039,34 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                    topic: spk2LegoBtn.getAttribute('data-topic') || '',
                    promptNum: spk2LegoBtn.getAttribute('data-num') ? parseInt(spk2LegoBtn.getAttribute('data-num'), 10) : 0,
                    blindMode: spk2LegoBtn.getAttribute('data-blind') === 'true'
+               }, '*');
+               return false;
+           }
+
+           var wt1StudioBtn = target.closest('.btn-wt1-studio-trigger');
+           if (wt1StudioBtn) {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               window.parent.postMessage({
+                   type: 'OPEN_WT1_STUDIO',
+                   topic: wt1StudioBtn.getAttribute('data-topic') || '',
+                   imageUrl: wt1StudioBtn.getAttribute('data-image') || '',
+                   label: wt1StudioBtn.getAttribute('data-label') || '',
+                   frameworkHint: wt1StudioBtn.getAttribute('data-framework') || 'auto',
+                   pageHint: wt1StudioBtn.getAttribute('data-page-hint') || ''
+               }, '*');
+               return false;
+           }
+
+           var wt1VocabBtn = target.closest('.btn-wt1-vocab-trigger');
+           if (wt1VocabBtn) {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               window.parent.postMessage({
+                   type: 'OPEN_WT1_VOCAB_BANK',
+                   tab: wt1VocabBtn.getAttribute('data-tab') || 'trends'
                }, '*');
                return false;
            }
@@ -3252,6 +3289,8 @@ export default function LectureViewer({
   const [wt2StudioPayload, setWt2StudioPayload] = useState<Wt2StudioOpenPayload | null>(null);
   const [wt2ReflexModal, setWt2ReflexModal] = useState<{ open: boolean; tab: 'reflex' | 'anchors' }>({ open: false, tab: 'reflex' });
   const [spk2LegoPayload, setSpk2LegoPayload] = useState<Spk2LegoStudioOpenPayload | null>(null);
+  const [wt1StudioPayload, setWt1StudioPayload] = useState<Wt1StudioOpenPayload | null>(null);
+  const [wt1VocabModal, setWt1VocabModal] = useState<{ open: boolean; tab: 'trends' | 'degrees' | 'static' | 'process_map' }>({ open: false, tab: 'trends' });
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
@@ -4310,13 +4349,34 @@ export default function LectureViewer({
         blindMode: Boolean(detail.blindMode)
       });
     };
+    const onOpenWt1Studio = (ev: Event) => {
+      const detail = (ev as CustomEvent).detail || {};
+      if (!detail.topic) return;
+      setWt1StudioPayload({
+        topic: detail.topic,
+        imageUrl: detail.imageUrl || undefined,
+        label: detail.label || undefined,
+        frameworkHint: detail.frameworkHint || 'auto',
+        pageHint: detail.pageHint || undefined
+      });
+    };
+    const onOpenWt1Vocab = (ev: Event) => {
+      const detail = (ev as CustomEvent).detail || {};
+      const validTabs = ['trends', 'degrees', 'static', 'process_map'] as const;
+      const tab = validTabs.includes(detail.tab) ? detail.tab : 'trends';
+      setWt1VocabModal({ open: true, tab });
+    };
     window.addEventListener('tony-open-wt2-pillar-studio', onOpenStudio);
     window.addEventListener('tony-open-wt2-reflex-game', onOpenReflex);
     window.addEventListener('tony-open-spk2-lego-studio', onOpenSpk2Lego);
+    window.addEventListener('tony-open-wt1-studio', onOpenWt1Studio);
+    window.addEventListener('tony-open-wt1-vocab-bank', onOpenWt1Vocab);
     return () => {
       window.removeEventListener('tony-open-wt2-pillar-studio', onOpenStudio);
       window.removeEventListener('tony-open-wt2-reflex-game', onOpenReflex);
       window.removeEventListener('tony-open-spk2-lego-studio', onOpenSpk2Lego);
+      window.removeEventListener('tony-open-wt1-studio', onOpenWt1Studio);
+      window.removeEventListener('tony-open-wt1-vocab-bank', onOpenWt1Vocab);
     };
   }, []);
 
@@ -6265,6 +6325,19 @@ export default function LectureViewer({
         payload={spk2LegoPayload}
         courseId={currentCourseId}
         onClose={() => setSpk2LegoPayload(null)}
+      />
+
+      <Wt1StudioModal
+        isOpen={!!wt1StudioPayload}
+        payload={wt1StudioPayload}
+        courseId={currentCourseId}
+        onClose={() => setWt1StudioPayload(null)}
+      />
+
+      <Wt1VocabBankModal
+        isOpen={wt1VocabModal.open}
+        initialTab={wt1VocabModal.tab}
+        onClose={() => setWt1VocabModal((prev) => ({ ...prev, open: false }))}
       />
     </div>
   );
