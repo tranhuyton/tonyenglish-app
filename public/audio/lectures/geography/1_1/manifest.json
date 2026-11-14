@@ -3,6 +3,28 @@
   "courseTitle": "IGCSE-Geography-0460",
   "lectureTitle": "1.1 The main hydrological characteristics and processes that operate in rivers and drainage basins",
   "totalDuration": 823.47,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "drainage_basin": {
+      "start": 1,
+      "end": 7
+    },
+    "bradshaw_model": {
+      "start": 8,
+      "end": 10
+    },
+    "water_cycle": {
+      "start": 11,
+      "end": 18
+    },
+    "fluvial_processes": {
+      "start": 19,
+      "end": 28
+    }
+  },
   "segments": [
     {
       "id": "intro",

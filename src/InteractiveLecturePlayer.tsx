@@ -56,14 +56,8 @@ export default function InteractiveLecturePlayer({
   const [playMode, setPlayMode] = useState<'single' | 'section' | 'all'>('all');
   const [sectionEndIndex, setSectionEndIndex] = useState<number | null>(null);
 
-  // Định nghĩa các mục lớn và khoảng index các tiểu mục tương ứng
-  const MAJOR_SECTION_RANGES: Record<string, { start: number; end: number }> = {
-    intro: { start: 0, end: 7 },
-    drainage_basin: { start: 1, end: 7 },
-    bradshaw_model: { start: 8, end: 10 },
-    water_cycle: { start: 11, end: 18 },
-    fluvial_processes: { start: 19, end: 28 },
-  };
+  // Dự phòng rỗng nếu manifest không khai báo majorSections (mỗi manifest tự định nghĩa majorSections riêng)
+  const MAJOR_SECTION_RANGES: Record<string, { start: number; end: number }> = {};
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
