@@ -2,6 +2,14 @@
 
 export type Wt2Category = 'discussion' | 'argument' | 'opinion' | 'mixed' | 'twopart';
 export type Wt2BodyMode = 'single' | 'multi';
+export type MultiIdeaCount = 1 | 2 | 3 | 4 | 5;
+export type IdeaSentenceDepth = 1 | 2;
+export type LinkerRole = 'solo' | 'start' | 'mid2' | 'mid3' | 'mid4' | 'close';
+
+export interface MultiBodyIdeaSpec {
+  ideaIndex: 1 | 2 | 3 | 4 | 5;
+  sentences: IdeaSentenceDepth;
+}
 export type Wt2TemplateId =
   | 'discussion'
   | 'argument'
@@ -1117,43 +1125,90 @@ export interface LinkingWordGroup {
   chips: { en: string; vi: string }[];
 }
 
-/** Options cho ô chọn Linking Word trực tiếp trong Khung Bất Biến Phiên bản 2 */
-export const WT2_LINKING_OPTIONS: Record<1 | 2 | 3, { en: string; vi: string }[]> = {
-  1: [
-    { en: 'Firstly,', vi: 'Thứ nhất' },
-    { en: 'To begin with,', vi: 'Trước hết' },
+/** Options cho ô chọn Linking Word trực tiếp trong Khung Bất Biến Phiên bản 2 (từ 1 đến 5 ý/Body) */
+export const WT2_LINKER_ROLE_OPTIONS: Record<LinkerRole, { en: string; vi: string }[]> = {
+  solo: [
+    { en: 'Specifically,', vi: 'Cụ thể là (khi Body chỉ nêu 1 ý gọn)' },
+    { en: 'In particular,', vi: 'Đặc biệt là' },
+    { en: 'Notably,', vi: 'Đáng chú ý là' },
+    { en: 'To be specific,', vi: 'Nói cụ thể hơn' }
+  ],
+  start: [
+    { en: 'Firstly,', vi: 'Thứ nhất (Mở ý 1)' },
+    { en: 'To begin with,', vi: 'Trước hết (Mở ý 1)' },
     { en: 'First and foremost,', vi: 'Đầu tiên & quan trọng nhất' },
     { en: 'Primarily,', vi: 'Chủ yếu là' }
   ],
-  2: [
-    { en: 'Furthermore,', vi: 'Hơn nữa (bổ sung ý mạnh)' },
-    { en: 'Moreover,', vi: 'Thêm vào đó (trang trọng)' },
+  mid2: [
+    { en: 'Furthermore,', vi: 'Hơn nữa (Thêm ý 2)' },
+    { en: 'Moreover,', vi: 'Thêm vào đó (Trang trọng)' },
     { en: 'In addition,', vi: 'Ngoài ra' },
     { en: 'Additionally,', vi: 'Bên cạnh đó' },
-    { en: 'Equally importantly,', vi: 'Quan trọng không kém' }
+    { en: 'Second,', vi: 'Thứ hai' }
   ],
-  3: [
-    { en: 'Finally,', vi: 'Cuối cùng' },
+  mid3: [
+    { en: 'In addition,', vi: 'Ngoài ra (Thêm ý 3)' },
+    { en: 'Additionally,', vi: 'Bên cạnh đó' },
+    { en: 'Besides this,', vi: 'Ngoài điều này ra' },
+    { en: 'Equally importantly,', vi: 'Quan trọng không kém' },
+    { en: 'Furthermore,', vi: 'Hơn nữa' }
+  ],
+  mid4: [
+    { en: 'Beyond this,', vi: 'Chưa dừng lại ở đó (Thêm ý 4)' },
+    { en: 'Equally importantly,', vi: 'Quan trọng không kém' },
+    { en: 'What is more,', vi: 'Hơn thế nữa' },
+    { en: 'On top of that,', vi: 'Thêm vào đó' },
+    { en: 'Moreover,', vi: 'Hơn nữa' }
+  ],
+  close: [
+    { en: 'Finally,', vi: 'Cuối cùng (Chốt ý cuối)' },
     { en: 'Last but not least,', vi: 'Cuối cùng nhưng không kém quan trọng' },
-    { en: 'Above all,', vi: 'Trên hết' }
+    { en: 'Above all,', vi: 'Trên hết' },
+    { en: 'Ultimately,', vi: 'Sau cùng' }
   ]
 };
+
+/** Xác định vai trò từ nối chuẩn học thuật cho Ý thứ `ideaIndex` trong đoạn có `totalCount` ý (1..5) */
+export function getLinkerRoleForIdea(
+  ideaIndex: 1 | 2 | 3 | 4 | 5,
+  totalCount: MultiIdeaCount
+): LinkerRole {
+  if (totalCount === 1) return 'solo';
+  if (ideaIndex === 1) return 'start';
+  if (ideaIndex === totalCount && totalCount >= 3) return 'close';
+  if (ideaIndex === 2) return 'mid2';
+  if (ideaIndex === 3) return 'mid3';
+  return 'mid4';
+}
+
+/** Gợi ý tự động số câu (1 hoặc 2 câu) cho từng ý dựa trên tổng số ý (1..5) để đoạn Body cân đối ~70–150 từ */
+export function getRecommendedSentenceDepths(
+  count: MultiIdeaCount
+): [IdeaSentenceDepth, IdeaSentenceDepth, IdeaSentenceDepth, IdeaSentenceDepth, IdeaSentenceDepth] {
+  if (count === 1) return [2, 1, 1, 1, 1];
+  if (count === 2) return [2, 2, 1, 1, 1];
+  if (count === 3) return [2, 1, 1, 1, 1];
+  return [1, 1, 1, 1, 1];
+}
 
 /** Kho Từ nối Điểm cao (Trang 5 bài Idea Pillars) dùng để chèn nhanh ở Bước 2 */
 export const WT2_LINKING_GROUPS: LinkingWordGroup[] = [
   {
     id: 'adding',
-    title: '➕ 1. Mở & Thêm Trụ ý',
-    subtitle: 'Chuyển mượt giữa Ý 1 → Ý 2 → Ý 3 trong cùng Body',
+    title: '➕ 1. Mở & Thêm Trụ ý (1–5 ý)',
+    subtitle: 'Chuyển mượt từ Ý 1 → Ý 5 trong cùng Body (không lặp từ nối)',
     chips: [
-      { en: 'Firstly, ', vi: 'Thứ nhất' },
-      { en: 'To begin with, ', vi: 'Trước hết' },
-      { en: 'Furthermore, ', vi: 'Xa hơn nữa' },
-      { en: 'Moreover, ', vi: 'Hơn thế nữa' },
-      { en: 'In addition, ', vi: 'Thêm vào đó' },
-      { en: 'Additionally, ', vi: 'Ngoài ra' },
-      { en: 'Another significant factor is ', vi: 'Một yếu tố đáng kể khác là' },
-      { en: 'Finally, ', vi: 'Cuối cùng' }
+      { en: 'Specifically, ', vi: 'Cụ thể là (khi Body 1 ý)' },
+      { en: 'Firstly, ', vi: 'Thứ nhất (Mở ý 1)' },
+      { en: 'To begin with, ', vi: 'Trước hết (Mở ý 1)' },
+      { en: 'Furthermore, ', vi: 'Hơn nữa (Ý 2)' },
+      { en: 'Moreover, ', vi: 'Hơn thế nữa (Ý 2)' },
+      { en: 'In addition, ', vi: 'Ngoài ra (Ý 3)' },
+      { en: 'Additionally, ', vi: 'Bên cạnh đó (Ý 3)' },
+      { en: 'Beyond this, ', vi: 'Chưa dừng lại ở đó (Ý 4)' },
+      { en: 'Equally importantly, ', vi: 'Quan trọng không kém (Ý 4)' },
+      { en: 'Finally, ', vi: 'Cuối cùng (Chốt ý cuối)' },
+      { en: 'Last but not least, ', vi: 'Cuối cùng nhưng không kém quan trọng' }
     ]
   },
   {
@@ -1202,10 +1257,10 @@ export interface StructurePartToken {
   slotKey?: string;
   placeholder?: string;
   bodyIndex?: 1 | 2;
-  /** Sub-idea index inside a Body when using Phiên bản 2 (Multi-Idea Body) */
-  ideaIndex?: 1 | 2 | 3;
-  /** Linking word position (1 = Idea 1 starter, 2 = Idea 2 adder, 3 = Idea 3 closer) */
-  linkerPos?: 1 | 2 | 3;
+  /** Sub-idea index inside a Body when using Phiên bản 2 (Multi-Idea Body: 1..5) */
+  ideaIndex?: 1 | 2 | 3 | 4 | 5;
+  /** Semantic linking word role in Phiên bản 2 */
+  linkerRole?: LinkerRole;
   pillarCol?: PillarSlotType;
 }
 
@@ -1727,107 +1782,159 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
 };
 
 /**
- * Helper tạo chuỗi tokens cho phần thân Body ở Phiên bản 2 (Đa Trụ Ý + Linking Words):
- * - Nếu count === 2: Mỗi Trụ ý triển khai 2 câu ([Linker + leadIn + Tên Trụ ý]. [1 câu triển khai gọn Nhân–Quả].)
- * - Nếu count === 3: Mỗi Trụ ý triển khai 1 câu gộp ([Linker + 1 câu phức gộp Trụ ý & Nhân–Quả].)
+ * Helper tạo chuỗi tokens cho phần thân Body ở Phiên bản 2 (Linh hoạt 1 – 5 Trụ Ý / Body):
+ * - Mỗi ý `i` có thể độc lập chọn `sentences: 1` (1 câu phức gộp gọn) hoặc `sentences: 2` (1 câu nêu Trụ ý + 1 câu support Nhân–Quả).
+ * - Tự động chọn vai trò Linking Word theo vị trí (`solo` nếu cả Body chỉ có 1 ý; `start` → `mid2` → `mid3` → `mid4` → `close` khi có 2–5 ý).
  */
 function buildStandardMultiBodyTokens(
   bodyIndex: 1 | 2,
-  count: 2 | 3,
-  leadIn1: string,
-  leadIn2: string
+  ideas: MultiBodyIdeaSpec[],
+  leadIns: [string, string, string, string, string],
+  soloLeadIn?: string
 ): StructurePartToken[] {
-  if (count === 2) {
-    return [
-      { type: 'linker_select', slotKey: `b${bodyIndex}_link_1`, bodyIndex, linkerPos: 1 },
-      { type: 'text', text: ` ${leadIn1}` },
-      {
-        type: 'pillar_slot',
-        slotKey: `b${bodyIndex}_i1_pillar`,
-        bodyIndex,
-        ideaIndex: 1,
-        pillarCol: 'pillar',
-        placeholder: `Thả [Tên Trụ ý ${bodyIndex}.1]`
-      },
-      { type: 'text', text: '. ' },
-      {
-        type: 'pillar_slot',
-        slotKey: `b${bodyIndex}_i1_support`,
-        bodyIndex,
-        ideaIndex: 1,
-        pillarCol: 'compact_support',
-        placeholder: `Thả [Triển khai gọn Ý ${bodyIndex}.1 (1 câu)]`
-      },
-      { type: 'text', text: '. ' },
-      { type: 'linker_select', slotKey: `b${bodyIndex}_link_2`, bodyIndex, linkerPos: 2 },
-      { type: 'text', text: ` ${leadIn2}` },
-      {
-        type: 'pillar_slot',
-        slotKey: `b${bodyIndex}_i2_pillar`,
-        bodyIndex,
-        ideaIndex: 2,
-        pillarCol: 'pillar',
-        placeholder: `Thả [Tên Trụ ý ${bodyIndex}.2]`
-      },
-      { type: 'text', text: '. ' },
-      {
-        type: 'pillar_slot',
-        slotKey: `b${bodyIndex}_i2_support`,
-        bodyIndex,
-        ideaIndex: 2,
-        pillarCol: 'compact_support',
-        placeholder: `Thả [Triển khai gọn Ý ${bodyIndex}.2 (1 câu)]`
-      },
-      { type: 'text', text: '.' }
-    ];
-  }
+  const totalCount = (Math.min(5, Math.max(1, ideas.length)) as MultiIdeaCount);
+  const out: StructurePartToken[] = [];
 
-  return [
-    { type: 'linker_select', slotKey: `b${bodyIndex}_link_1`, bodyIndex, linkerPos: 1 },
-    { type: 'text', text: ' ' },
-    {
-      type: 'pillar_slot',
-      slotKey: `b${bodyIndex}_i1_single`,
+  ideas.slice(0, totalCount).forEach((spec, idx) => {
+    const ideaIndex = spec.ideaIndex;
+    const role = getLinkerRoleForIdea(ideaIndex, totalCount);
+    const isLast = idx === totalCount - 1;
+
+    out.push({
+      type: 'linker_select',
+      slotKey: `b${bodyIndex}_link_${role}`,
       bodyIndex,
-      ideaIndex: 1,
-      pillarCol: 'compact_single',
-      placeholder: `Thả [Câu gộp Trụ ý ${bodyIndex}.1]`
-    },
-    { type: 'text', text: '. ' },
-    { type: 'linker_select', slotKey: `b${bodyIndex}_link_2`, bodyIndex, linkerPos: 2 },
-    { type: 'text', text: ' ' },
-    {
-      type: 'pillar_slot',
-      slotKey: `b${bodyIndex}_i2_single`,
-      bodyIndex,
-      ideaIndex: 2,
-      pillarCol: 'compact_single',
-      placeholder: `Thả [Câu gộp Trụ ý ${bodyIndex}.2]`
-    },
-    { type: 'text', text: '. ' },
-    { type: 'linker_select', slotKey: `b${bodyIndex}_link_3`, bodyIndex, linkerPos: 3 },
-    { type: 'text', text: ' ' },
-    {
-      type: 'pillar_slot',
-      slotKey: `b${bodyIndex}_i3_single`,
-      bodyIndex,
-      ideaIndex: 3,
-      pillarCol: 'compact_single',
-      placeholder: `Thả [Câu gộp Trụ ý ${bodyIndex}.3]`
-    },
-    { type: 'text', text: '.' }
+      linkerRole: role
+    });
+
+    if (spec.sentences === 2) {
+      const leadIn =
+        totalCount === 1 && soloLeadIn ? soloLeadIn : leadIns[idx] || leadIns[leadIns.length - 1];
+      out.push({ type: 'text', text: ` ${leadIn}` });
+      out.push({
+        type: 'pillar_slot',
+        slotKey: `b${bodyIndex}_i${ideaIndex}_pillar`,
+        bodyIndex,
+        ideaIndex,
+        pillarCol: 'pillar',
+        placeholder: `Thả [Tên Trụ ý ${bodyIndex}.${ideaIndex}]`
+      });
+      out.push({ type: 'text', text: '. ' });
+      out.push({
+        type: 'pillar_slot',
+        slotKey: `b${bodyIndex}_i${ideaIndex}_support`,
+        bodyIndex,
+        ideaIndex,
+        pillarCol: 'compact_support',
+        placeholder: `Thả [Support gọn Ý ${bodyIndex}.${ideaIndex} (1 câu)]`
+      });
+      out.push({ type: 'text', text: isLast ? '.' : '. ' });
+    } else {
+      out.push({ type: 'text', text: ' ' });
+      out.push({
+        type: 'pillar_slot',
+        slotKey: `b${bodyIndex}_i${ideaIndex}_single`,
+        bodyIndex,
+        ideaIndex,
+        pillarCol: 'compact_single',
+        placeholder: `Thả [Câu gộp Trụ ý + Support ${bodyIndex}.${ideaIndex}]`
+      });
+      out.push({ type: 'text', text: isLast ? '.' : '. ' });
+    }
+  });
+
+  return out;
+}
+
+function buildMixedPsSolutionsTokens(ideas: MultiBodyIdeaSpec[]): StructurePartToken[] {
+  const totalCount = (Math.min(5, Math.max(1, ideas.length)) as MultiIdeaCount);
+  const actors = [
+    'authorities should ',
+    'schools and organizations ought to ',
+    'communities and businesses can ',
+    'families and local institutions should ',
+    'citizens themselves must '
   ];
+  const twoSentBridges = [
+    ', which directly contributes to ',
+    ', which is vital for ',
+    ', thereby playing a key role in ',
+    ', which effectively supports ',
+    ', helping pave the way for '
+  ];
+  const oneSentBridges = [
+    ', since ',
+    ', as ',
+    ', because ',
+    ', given that ',
+    ', seeing that '
+  ];
+
+  const out: StructurePartToken[] = [];
+  ideas.slice(0, totalCount).forEach((spec, idx) => {
+    const ideaIndex = spec.ideaIndex;
+    const role = getLinkerRoleForIdea(ideaIndex, totalCount);
+    const isLast = idx === totalCount - 1;
+
+    out.push({
+      type: 'linker_select',
+      slotKey: `b2_link_${role}`,
+      bodyIndex: 2,
+      linkerRole: role
+    });
+    out.push({ type: 'text', text: ` ${actors[idx] || actors[0]}` });
+    out.push({
+      type: 'topic_input',
+      slotKey: `b2_sol${ideaIndex}`,
+      placeholder: `Giải pháp ${ideaIndex} (V nguyên thể + chi tiết)`
+    });
+
+    if (spec.sentences === 2) {
+      out.push({ type: 'text', text: twoSentBridges[idx] || twoSentBridges[0] });
+      out.push({
+        type: 'pillar_slot',
+        slotKey: `b2_i${ideaIndex}_pillar`,
+        bodyIndex: 2,
+        ideaIndex,
+        pillarCol: 'pillar',
+        placeholder: `Thả [Tên Trụ ý KQ 2.${ideaIndex}]`
+      });
+      out.push({ type: 'text', text: '. ' });
+      out.push({
+        type: 'pillar_slot',
+        slotKey: `b2_i${ideaIndex}_support`,
+        bodyIndex: 2,
+        ideaIndex,
+        pillarCol: 'compact_support',
+        placeholder: `Thả [Support Kết quả Giải pháp ${ideaIndex} (1 câu)]`
+      });
+      out.push({ type: 'text', text: isLast ? '.' : '. ' });
+    } else {
+      out.push({ type: 'text', text: oneSentBridges[idx] || oneSentBridges[0] });
+      out.push({
+        type: 'pillar_slot',
+        slotKey: `b2_i${ideaIndex}_single`,
+        bodyIndex: 2,
+        ideaIndex,
+        pillarCol: 'compact_single',
+        placeholder: `Thả [Câu gộp Kết quả 2.${ideaIndex}]`
+      });
+      out.push({ type: 'text', text: isLast ? '.' : '. ' });
+    }
+  });
+
+  return out;
 }
 
 /**
- * PHIÊN BẢN 2: Khung Cấu Trúc Bất Biến khi mỗi Body có từ 2–3 Trụ ý trở lên
- * Kết hợp Câu mở đoạn tổng quát (Topic Sentence) + Bộ Linking Words + Rút gọn 1–2 câu/Trụ ý
+ * PHIÊN BẢN 2: Khung Cấu Trúc Bất Biến linh hoạt từ 1 đến 5 Trụ ý / Body,
+ * mỗi Trụ ý tùy chọn support bằng 1 câu gộp hoặc 2 câu súc tích + Bộ Linking Words thông minh.
  */
 export function buildMultiIdeaParagraphs(
   templateId: Wt2TemplateId,
   stance: 'agree' | 'disagree',
-  b1Count: 2 | 3 = 2,
-  b2Count: 2 | 3 = 2
+  b1Specs: MultiBodyIdeaSpec[],
+  b2Specs: MultiBodyIdeaSpec[]
 ): {
   sectionTitle: string;
   borderColor: string;
@@ -1835,12 +1942,14 @@ export function buildMultiIdeaParagraphs(
 }[] {
   const verb = stance === 'agree' ? 'agree' : 'disagree';
   const noun = stance === 'agree' ? 'agreement' : 'disagreement';
+  const b1Count = b1Specs.length;
+  const b2Count = b2Specs.length;
 
   switch (templateId) {
     case 'discussion':
       return [
         {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa ý)',
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 ý/Body)',
           borderColor: '#0ea5e9',
           tokens: [
             { type: 'text', text: 'Over the last few decades, the world has seen that ' },
@@ -1853,32 +1962,56 @@ export function buildMultiIdeaParagraphs(
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 1 (Quan điểm 1 — Ghép ${b1Count} Trụ ý + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 1 (Quan điểm 1 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#8b5cf6',
           tokens: [
-            { type: 'text', text: 'On the one hand, there are several reasons why some people believe that ' },
+            {
+              type: 'text',
+              text:
+                b1Count === 1
+                  ? 'On the one hand, there is a notable reason why some people believe that '
+                  : 'On the one hand, there are several reasons why some people believe that '
+            },
             { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Tóm tắt Quan điểm 1 (S + V)' },
             { type: 'text', text: '. ' },
             ...buildStandardMultiBodyTokens(
               1,
-              b1Count,
-              'this viewpoint is closely related to ',
-              'supporters also point to '
+              b1Specs,
+              [
+                'this viewpoint is closely related to ',
+                'supporters also point to ',
+                'another argument involves ',
+                'this view is further linked to ',
+                'proponents highlight '
+              ],
+              'this viewpoint is closely related to '
             )
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 2 (Quan điểm 2 em ủng hộ — Ghép ${b2Count} Trụ ý + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 2 (Quan điểm 2 em ủng hộ — ${b2Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#f59e0b',
           tokens: [
             { type: 'text', text: 'On the other hand, I would argue that ' },
             { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 2' },
-            { type: 'text', text: ' is a much stronger argument for several key reasons. ' },
+            {
+              type: 'text',
+              text:
+                b2Count === 1
+                  ? ' is a much stronger argument for a key reason. '
+                  : ' is a much stronger argument for several key reasons. '
+            },
             ...buildStandardMultiBodyTokens(
               2,
-              b2Count,
-              'this position is largely justified by ',
-              'another decisive factor is '
+              b2Specs,
+              [
+                'this position is largely justified by ',
+                'another decisive factor is ',
+                'a further compelling point lies in ',
+                'this argument is reinforced by ',
+                'a key consideration involves '
+              ],
+              'this position is largely justified by '
             )
           ]
         },
@@ -1900,44 +2033,72 @@ export function buildMultiIdeaParagraphs(
     case 'argument':
       return [
         {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa Lợi ích & Bất lợi)',
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Lợi ích & Bất lợi)',
           borderColor: '#0ea5e9',
           tokens: [
             { type: 'text', text: 'Over the last few decades, the world has seen that ' },
             { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề bài nêu (S + V)' },
             {
               type: 'text',
-              text: '. However, others see that this trend is not entirely positive. This essay will examine the principal advantages of this development before outlining its key disadvantages.'
+              text: `. However, others see that this trend is not entirely positive. This essay will examine the ${
+                b1Count === 1 ? 'principal advantage' : 'principal advantages'
+              } of this development before outlining its ${
+                b2Count === 1 ? 'key disadvantage' : 'key disadvantages'
+              }.`
             }
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 1 (Advantages — Ghép ${b1Count} Lợi ích + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 1 (Advantages — ${b1Count} Lợi ích • 1–2 câu/ý)`,
           borderColor: '#8b5cf6',
           tokens: [
             { type: 'text', text: 'On the one hand, ' },
             { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
-            { type: 'text', text: ' brings several notable advantages. ' },
+            {
+              type: 'text',
+              text:
+                b1Count === 1
+                  ? ' brings a notable advantage. '
+                  : ' brings several notable advantages. '
+            },
             ...buildStandardMultiBodyTokens(
               1,
-              b1Count,
-              'one major benefit is ',
-              'another significant advantage is '
+              b1Specs,
+              [
+                'one major benefit is ',
+                'another significant advantage is ',
+                'a further positive aspect lies in ',
+                'this trend is also beneficial in terms of ',
+                'a notable strength involves '
+              ],
+              'this benefit lies in '
             )
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 2 (Disadvantages — Ghép ${b2Count} Bất lợi + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 2 (Disadvantages — ${b2Count} Bất lợi • 1–2 câu/ý)`,
           borderColor: '#f59e0b',
           tokens: [
-            { type: 'text', text: 'On the other hand, there are several serious drawbacks associated with ' },
+            {
+              type: 'text',
+              text:
+                b2Count === 1
+                  ? 'On the other hand, there is a serious drawback associated with '
+                  : 'On the other hand, there are several serious drawbacks associated with '
+            },
             { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
             { type: 'text', text: '. ' },
             ...buildStandardMultiBodyTokens(
               2,
-              b2Count,
-              'a primary concern is ',
-              'this trend also leads to '
+              b2Specs,
+              [
+                'a primary concern is ',
+                'this trend also leads to ',
+                'another serious drawback lies in ',
+                'a further negative impact involves ',
+                'critics also point to '
+              ],
+              'a primary concern is '
             )
           ]
         },
@@ -1948,9 +2109,9 @@ export function buildMultiIdeaParagraphs(
             { type: 'text', text: 'To sum up, although there are clear advantages to ' },
             { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
             { type: 'text', text: ', such as ' },
-            { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt các lợi ích Body 1' },
+            { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt lợi ích Body 1' },
             { type: 'text', text: ', these are perhaps outweighed by the significant disadvantages regarding ' },
-            { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt các bất lợi Body 2' },
+            { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt bất lợi Body 2' },
             { type: 'text', text: '.' }
           ]
         }
@@ -1973,33 +2134,54 @@ export function buildMultiIdeaParagraphs(
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 1 (Góc độ Cá nhân / Trực tiếp — Ghép ${b1Count} Trụ ý)`,
+          sectionTitle: `💡 Body Paragraph 1 (Góc độ Cá nhân / Trực tiếp — ${b1Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#8b5cf6',
           tokens: [
-            { type: 'text', text: `There are several compelling reasons why I ${verb} with ` },
+            {
+              type: 'text',
+              text:
+                b1Count === 1
+                  ? `There is a compelling reason why I ${verb} with `
+                  : `There are several compelling reasons why I ${verb} with `
+            },
             { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm V-ing / Danh từ chủ đề đang bàn' },
             { type: 'text', text: ' on an individual level. ' },
             ...buildStandardMultiBodyTokens(
               1,
-              b1Count,
-              'the primary reason is ',
-              'another key factor is '
+              b1Specs,
+              [
+                'the primary reason is ',
+                'another key factor is ',
+                'a further compelling point involves ',
+                'this view is also supported by ',
+                'an important consideration lies in '
+              ],
+              'this centers on '
             )
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 2 (Góc độ Xã hội & Vĩ mô — Ghép ${b2Count} Trụ ý)`,
+          sectionTitle: `💡 Body Paragraph 2 (Góc độ Xã hội & Vĩ mô — ${b2Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#f59e0b',
           tokens: [
             {
               type: 'text',
-              text: `From a wider social and economic perspective, additional arguments further reinforce my ${noun}. `
+              text:
+                b2Count === 1
+                  ? `From a wider social and economic perspective, a further argument reinforces my ${noun}. `
+                  : `From a wider social and economic perspective, additional arguments further reinforce my ${noun}. `
             },
             ...buildStandardMultiBodyTokens(
               2,
-              b2Count,
-              'this stance is strongly supported by ',
-              'it is also closely linked to '
+              b2Specs,
+              [
+                'this stance is strongly supported by ',
+                'it is also closely linked to ',
+                'another macro-level factor involves ',
+                'a further societal reason lies in ',
+                'this position is reinforced by '
+              ],
+              'this stance is strongly supported by '
             )
           ]
         },
@@ -2032,34 +2214,61 @@ export function buildMultiIdeaParagraphs(
             { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (khía cạnh hợp lý)' },
             { type: 'text', text: `, I strongly ${verb} with the argument that ` },
             { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
-            { type: 'text', text: ' for several convincing reasons.' }
+            {
+              type: 'text',
+              text: b2Count === 1 ? ' for a convincing reason.' : ' for several convincing reasons.'
+            }
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 1 (Nhượng bộ — Ghép ${b1Count} khía cạnh hợp lý + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 1 (Nhượng bộ — ${b1Count} khía cạnh hợp lý • 1–2 câu/ý)`,
           borderColor: '#8b5cf6',
           tokens: [
-            { type: 'text', text: 'Admittedly, there are several understandable reasons why some people support ' },
+            {
+              type: 'text',
+              text:
+                b1Count === 1
+                  ? 'Admittedly, there is an understandable reason why some people support '
+                  : 'Admittedly, there are several understandable reasons why some people support '
+            },
             { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
             { type: 'text', text: '. ' },
             ...buildStandardMultiBodyTokens(
               1,
-              b1Count,
-              'one notable point is ',
-              'proponents also highlight '
+              b1Specs,
+              [
+                'one notable point is ',
+                'proponents also highlight ',
+                'another understandable reason involves ',
+                'some people also point to ',
+                'a further consideration lies in '
+              ],
+              'one notable point is '
             )
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 2 (Bảo vệ quan điểm chính — Ghép ${b2Count} Trụ ý + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 2 (Bảo vệ quan điểm chính — ${b2Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#f59e0b',
           tokens: [
-            { type: 'text', text: `Nevertheless, there are far more compelling reasons to support my ${noun}. ` },
+            {
+              type: 'text',
+              text:
+                b2Count === 1
+                  ? `Nevertheless, there is a far more compelling reason to support my ${noun}. `
+                  : `Nevertheless, there are far more compelling reasons to support my ${noun}. `
+            },
             ...buildStandardMultiBodyTokens(
               2,
-              b2Count,
-              'the most crucial factor is ',
-              'another decisive consideration is '
+              b2Specs,
+              [
+                'the most crucial factor is ',
+                'another decisive consideration is ',
+                'a further convincing reason lies in ',
+                'my viewpoint is also justified by ',
+                'an essential point involves '
+              ],
+              'the most crucial factor is '
             )
           ]
         },
@@ -2070,110 +2279,20 @@ export function buildMultiIdeaParagraphs(
             { type: 'text', text: 'To sum up, although there are valid arguments for ' },
             { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ' },
             { type: 'text', text: ' regarding ' },
-            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt các ý nhượng bộ Body 1' },
+            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt ý nhượng bộ Body 1' },
             { type: 'text', text: `, I completely ${verb} that ` },
             { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính' },
             { type: 'text', text: ' due to ' },
-            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt các lý do chính Body 2' },
+            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt lý do chính Body 2' },
             { type: 'text', text: '.' }
           ]
         }
       ];
 
-    case 'mixed_ps': {
-      const body2SolTokens: StructurePartToken[] =
-        b2Count === 2
-          ? [
-              { type: 'linker_select', slotKey: 'b2_link_1', bodyIndex: 2, linkerPos: 1 },
-              { type: 'text', text: ' authorities should ' },
-              { type: 'topic_input', slotKey: 'b2_sol1', placeholder: 'Giải pháp 1 (V nguyên thể + chi tiết)' },
-              { type: 'text', text: ', which directly contributes to ' },
-              {
-                type: 'pillar_slot',
-                slotKey: 'b2_i1_pillar',
-                bodyIndex: 2,
-                ideaIndex: 1,
-                pillarCol: 'pillar',
-                placeholder: 'Thả [Tên Trụ ý KQ 2.1]'
-              },
-              { type: 'text', text: '. ' },
-              {
-                type: 'pillar_slot',
-                slotKey: 'b2_i1_support',
-                bodyIndex: 2,
-                ideaIndex: 1,
-                pillarCol: 'compact_support',
-                placeholder: 'Thả [Kết quả gọn Giải pháp 1 (1 câu)]'
-              },
-              { type: 'text', text: '. ' },
-              { type: 'linker_select', slotKey: 'b2_link_2', bodyIndex: 2, linkerPos: 2 },
-              { type: 'text', text: ' individuals and institutions ought to ' },
-              { type: 'topic_input', slotKey: 'b2_sol2', placeholder: 'Giải pháp 2 (V nguyên thể + chi tiết)' },
-              { type: 'text', text: ', which is vital for ' },
-              {
-                type: 'pillar_slot',
-                slotKey: 'b2_i2_pillar',
-                bodyIndex: 2,
-                ideaIndex: 2,
-                pillarCol: 'pillar',
-                placeholder: 'Thả [Tên Trụ ý KQ 2.2]'
-              },
-              { type: 'text', text: '. ' },
-              {
-                type: 'pillar_slot',
-                slotKey: 'b2_i2_support',
-                bodyIndex: 2,
-                ideaIndex: 2,
-                pillarCol: 'compact_support',
-                placeholder: 'Thả [Kết quả gọn Giải pháp 2 (1 câu)]'
-              },
-              { type: 'text', text: '.' }
-            ]
-          : [
-              { type: 'linker_select', slotKey: 'b2_link_1', bodyIndex: 2, linkerPos: 1 },
-              { type: 'text', text: ' authorities should ' },
-              { type: 'topic_input', slotKey: 'b2_sol1', placeholder: 'Giải pháp 1 (V nguyên thể)' },
-              { type: 'text', text: ', since ' },
-              {
-                type: 'pillar_slot',
-                slotKey: 'b2_i1_single',
-                bodyIndex: 2,
-                ideaIndex: 1,
-                pillarCol: 'compact_single',
-                placeholder: 'Thả [Câu gộp Kết quả 2.1]'
-              },
-              { type: 'text', text: '. ' },
-              { type: 'linker_select', slotKey: 'b2_link_2', bodyIndex: 2, linkerPos: 2 },
-              { type: 'text', text: ' schools and organizations can ' },
-              { type: 'topic_input', slotKey: 'b2_sol2', placeholder: 'Giải pháp 2 (V nguyên thể)' },
-              { type: 'text', text: ', as ' },
-              {
-                type: 'pillar_slot',
-                slotKey: 'b2_i2_single',
-                bodyIndex: 2,
-                ideaIndex: 2,
-                pillarCol: 'compact_single',
-                placeholder: 'Thả [Câu gộp Kết quả 2.2]'
-              },
-              { type: 'text', text: '. ' },
-              { type: 'linker_select', slotKey: 'b2_link_3', bodyIndex: 2, linkerPos: 3 },
-              { type: 'text', text: ' citizens themselves ought to ' },
-              { type: 'topic_input', slotKey: 'b2_sol3', placeholder: 'Giải pháp 3 (V nguyên thể)' },
-              { type: 'text', text: ', because ' },
-              {
-                type: 'pillar_slot',
-                slotKey: 'b2_i3_single',
-                bodyIndex: 2,
-                ideaIndex: 3,
-                pillarCol: 'compact_single',
-                placeholder: 'Thả [Câu gộp Kết quả 2.3]'
-              },
-              { type: 'text', text: '.' }
-            ];
-
+    case 'mixed_ps':
       return [
         {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa Vấn đề & Giải pháp)',
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Vấn đề & Giải pháp)',
           borderColor: '#0ea5e9',
           tokens: [
             { type: 'text', text: 'Over the last few decades, the world has seen that ' },
@@ -2185,29 +2304,44 @@ export function buildMultiIdeaParagraphs(
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 1 (Problems / Causes — Ghép ${b1Count} Trụ ý + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 1 (Problems / Causes — ${b1Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#8b5cf6',
           tokens: [
-            { type: 'text', text: 'There are several pressing problems associated with ' },
+            {
+              type: 'text',
+              text:
+                b1Count === 1
+                  ? 'There is a pressing problem associated with '
+                  : 'There are several pressing problems associated with '
+            },
             { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
             { type: 'text', text: '. ' },
             ...buildStandardMultiBodyTokens(
               1,
-              b1Count,
-              'the most evident issue is ',
-              'this phenomenon also gives rise to '
+              b1Specs,
+              [
+                'the most evident issue is ',
+                'this phenomenon also gives rise to ',
+                'another pressing problem involves ',
+                'a further negative consequence lies in ',
+                'it is also associated with '
+              ],
+              'the most evident issue is '
             )
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 2 (Solutions — Ghép ${b2Count} Giải pháp + Kết quả Trụ ý)`,
+          sectionTitle: `💡 Body Paragraph 2 (Solutions — ${b2Count} Giải pháp + Kết quả • 1–2 câu/ý)`,
           borderColor: '#f59e0b',
           tokens: [
             {
               type: 'text',
-              text: 'However, several effective measures can be implemented to tackle these problems. '
+              text:
+                b2Count === 1
+                  ? 'However, an effective measure can be implemented to tackle this problem. '
+                  : 'However, several effective measures can be implemented to tackle these problems. '
             },
-            ...body2SolTokens
+            ...buildMixedPsSolutionsTokens(b2Specs)
           ]
         },
         {
@@ -2217,19 +2351,18 @@ export function buildMultiIdeaParagraphs(
             { type: 'text', text: 'To sum up, it is evident that ' },
             { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
             { type: 'text', text: ' causes serious problems such as ' },
-            { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Tóm tắt các vấn đề Body 1' },
+            { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Tóm tắt vấn đề Body 1' },
             { type: 'text', text: ', yet practical measures including ' },
-            { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt các giải pháp Body 2' },
+            { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt giải pháp Body 2' },
             { type: 'text', text: ' can effectively mitigate this issue.' }
           ]
         }
       ];
-    }
 
     case 'mixed_ce':
       return [
         {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa Nguyên nhân & Hậu quả)',
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Nguyên nhân & Hậu quả)',
           borderColor: '#0ea5e9',
           tokens: [
             { type: 'text', text: 'Over the last few decades, the world has seen that ' },
@@ -2241,30 +2374,54 @@ export function buildMultiIdeaParagraphs(
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 1 (Causes — Ghép ${b1Count} Nguyên nhân + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 1 (Causes — ${b1Count} Nguyên nhân • 1–2 câu/ý)`,
           borderColor: '#8b5cf6',
           tokens: [
-            { type: 'text', text: 'Several underlying factors explain the rise of ' },
+            {
+              type: 'text',
+              text:
+                b1Count === 1
+                  ? 'An underlying factor explains the rise of '
+                  : 'Several underlying factors explain the rise of '
+            },
             { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
             { type: 'text', text: '. ' },
             ...buildStandardMultiBodyTokens(
               1,
-              b1Count,
-              'one primary driver is ',
-              'another contributing factor is '
+              b1Specs,
+              [
+                'one primary driver is ',
+                'another contributing factor is ',
+                'a further underlying cause lies in ',
+                'this trend is also fueled by ',
+                'a notable root factor involves '
+              ],
+              'a primary driver is '
             )
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 2 (Effects — Ghép ${b2Count} Hậu quả + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 2 (Effects — ${b2Count} Hậu quả • 1–2 câu/ý)`,
           borderColor: '#f59e0b',
           tokens: [
-            { type: 'text', text: 'The consequences of this trend are far-reaching and multifaceted. ' },
+            {
+              type: 'text',
+              text:
+                b2Count === 1
+                  ? 'The consequence of this trend is far-reaching. '
+                  : 'The consequences of this trend are far-reaching and multifaceted. '
+            },
             ...buildStandardMultiBodyTokens(
               2,
-              b2Count,
-              'it directly results in ',
-              'a further major impact is '
+              b2Specs,
+              [
+                'it directly results in ',
+                'a further major impact is ',
+                'another serious consequence involves ',
+                'this situation also leads to ',
+                'a notable repercussion lies in '
+              ],
+              'it directly results in '
             )
           ]
         },
@@ -2273,11 +2430,11 @@ export function buildMultiIdeaParagraphs(
           borderColor: '#10b981',
           tokens: [
             { type: 'text', text: 'To sum up, it is evident that factors such as ' },
-            { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt các nguyên nhân' },
+            { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt nguyên nhân' },
             { type: 'text', text: ' have led to ' },
             { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
             { type: 'text', text: ', resulting in severe repercussions including ' },
-            { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt các hậu quả' },
+            { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt hậu quả' },
             { type: 'text', text: '.' }
           ]
         }
@@ -2286,7 +2443,7 @@ export function buildMultiIdeaParagraphs(
     case 'twopart':
       return [
         {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa ý cho 2 Câu hỏi)',
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 ý cho 2 Câu hỏi)',
           borderColor: '#0ea5e9',
           tokens: [
             { type: 'text', text: 'Over the last few decades, the world has seen that ' },
@@ -2299,32 +2456,56 @@ export function buildMultiIdeaParagraphs(
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 1 (Answer to Question 1 — Ghép ${b1Count} Trụ ý + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 1 (Answer to Question 1 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#8b5cf6',
           tokens: [
-            { type: 'text', text: 'Regarding the first question, several key points account for ' },
+            {
+              type: 'text',
+              text:
+                b1Count === 1
+                  ? 'Regarding the first question, a key point accounts for '
+                  : 'Regarding the first question, several key points account for '
+            },
             { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 1' },
             { type: 'text', text: '. ' },
             ...buildStandardMultiBodyTokens(
               1,
-              b1Count,
-              'a primary aspect is ',
-              'another notable point is '
+              b1Specs,
+              [
+                'a primary aspect is ',
+                'another notable point is ',
+                'a further key factor involves ',
+                'this question is also linked to ',
+                'an important element lies in '
+              ],
+              'a primary aspect is '
             )
           ]
         },
         {
-          sectionTitle: `💡 Body Paragraph 2 (Answer to Question 2 — Ghép ${b2Count} Trụ ý + Linking Words)`,
+          sectionTitle: `💡 Body Paragraph 2 (Answer to Question 2 — ${b2Count} Trụ ý • 1–2 câu/ý)`,
           borderColor: '#f59e0b',
           tokens: [
             { type: 'text', text: 'With regards to the second question, ' },
             { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 2' },
-            { type: 'text', text: ' can be approached from multiple angles. ' },
+            {
+              type: 'text',
+              text:
+                b2Count === 1
+                  ? ' can be addressed through a central factor. '
+                  : ' can be approached from multiple angles. '
+            },
             ...buildStandardMultiBodyTokens(
               2,
-              b2Count,
-              'the most significant point involves ',
-              'an additional factor worth noting is '
+              b2Specs,
+              [
+                'the most significant point involves ',
+                'an additional factor worth noting is ',
+                'another relevant aspect lies in ',
+                'this issue is also connected to ',
+                'a further key consideration is '
+              ],
+              'the most significant point involves '
             )
           ]
         },
@@ -2761,7 +2942,7 @@ export function detectWt2QuestionGuide(topic: string): Wt2QuestionGuide {
     pushUnique(4); // Cost
   }
 
-  [6, 4, 3, 5, 9, 10].forEach(pushUnique);
+  [6, 4, 3, 5, 9, 1, 7, 10, 2, 13, 12, 11].forEach(pushUnique);
 
   const p1Id = candidateIds[0] || 1;
   const p2Id = candidateIds[1] || 2;
@@ -2782,7 +2963,7 @@ export function detectWt2QuestionGuide(topic: string): Wt2QuestionGuide {
     );
   const recommendedBodyMode: Wt2BodyMode = hasPluralTrigger ? 'multi' : 'single';
   const pluralNotice = hasPluralTrigger
-    ? 'Đề bài có từ khóa số nhiều (advantages / problems / causes / solutions...) → Rất hợp luyện Phiên bản 2 (2–3 Trụ ý / Body + Linking Words, 1–2 câu/ý) để ăn tối đa Task Response!'
+    ? 'Đề bài có từ khóa số nhiều (advantages / problems / causes / solutions...) → Rất hợp luyện Phiên bản 2 (Linh hoạt 1–5 Trụ ý / Body, support 1–2 câu/ý) để ăn tối đa Task Response!'
     : undefined;
 
   return {
@@ -2798,12 +2979,16 @@ export function detectWt2QuestionGuide(topic: string): Wt2QuestionGuide {
       b1: [
         { id: candidateIds[0] || 1, polarity: pol1 },
         { id: candidateIds[2] || 3, polarity: pol1 },
-        { id: candidateIds[4] || 5, polarity: pol1 }
+        { id: candidateIds[4] || 5, polarity: pol1 },
+        { id: candidateIds[6] || 6, polarity: pol1 },
+        { id: candidateIds[8] || 7, polarity: pol1 }
       ],
       b2: [
         { id: candidateIds[1] || 2, polarity: pol2 },
         { id: candidateIds[3] || 4, polarity: pol2 },
-        { id: candidateIds[5] || 9, polarity: pol2 }
+        { id: candidateIds[5] || 9, polarity: pol2 },
+        { id: candidateIds[7] || 10, polarity: pol2 },
+        { id: candidateIds[9] || 13, polarity: pol2 }
       ]
     }
   };

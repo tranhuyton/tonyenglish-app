@@ -4,13 +4,19 @@ import {
   WT2_PILLARS,
   WT2_STRUCTURES,
   WT2_SUBJECT_GROUPS,
-  WT2_LINKING_OPTIONS,
+  WT2_LINKER_ROLE_OPTIONS,
   WT2_LINKING_GROUPS,
   WT2_REFLEX_QUESTIONS,
   buildMultiIdeaParagraphs,
   detectWt2QuestionGuide,
+  getLinkerRoleForIdea,
+  getRecommendedSentenceDepths,
   Wt2Category,
   Wt2BodyMode,
+  MultiIdeaCount,
+  IdeaSentenceDepth,
+  LinkerRole,
+  MultiBodyIdeaSpec,
   Wt2TemplateId,
   PillarSlotType,
   Wt2Pillar,
@@ -25,7 +31,7 @@ export interface Wt2StudioOpenPayload {
   taskId?: string;
   presetPillar1?: number;
   presetPillar2?: number;
-  /** Mở thẳng Phiên bản 1 ('single' - 1 ý sâu 4 câu) hoặc Phiên bản 2 ('multi' - 2–3 ý + Linking Words, 1–2 câu/ý) */
+  /** Mở thẳng Phiên bản 1 ('single' - 1 ý sâu 4 câu) hoặc Phiên bản 2 ('multi' - 1–5 ý + Linking Words, 1–2 câu/ý) */
   bodyMode?: Wt2BodyMode;
 }
 
@@ -40,7 +46,16 @@ interface Wt2PillarStudioModalProps {
 interface IdeaSelection {
   id: number;
   polarity: 'positive' | 'negative';
+  sentences: IdeaSentenceDepth;
 }
+
+type MultiBodyTuple = [
+  IdeaSelection,
+  IdeaSelection,
+  IdeaSelection,
+  IdeaSelection,
+  IdeaSelection
+];
 
 const CATEGORY_OPTIONS: { id: Wt2Category; label: string; shortDesc: string }[] = [
   { id: 'discussion', label: '1. Discussion', shortDesc: 'Discuss both views & opinion' },
@@ -147,16 +162,53 @@ const PILLAR_TIER_META: Record<
 };
 
 const DEFAULT_LINKERS: Record<string, string> = {
-  b1_link_1: 'Firstly,',
-  b1_link_2: 'Furthermore,',
-  b1_link_3: 'Finally,',
-  b2_link_1: 'To begin with,',
-  b2_link_2: 'Moreover,',
-  b2_link_3: 'Last but not least,'
+  b1_link_solo: 'Specifically,',
+  b1_link_start: 'Firstly,',
+  b1_link_mid2: 'Furthermore,',
+  b1_link_mid3: 'In addition,',
+  b1_link_mid4: 'Beyond this,',
+  b1_link_close: 'Finally,',
+  b2_link_solo: 'In particular,',
+  b2_link_start: 'To begin with,',
+  b2_link_mid2: 'Moreover,',
+  b2_link_mid3: 'Additionally,',
+  b2_link_mid4: 'Equally importantly,',
+  b2_link_close: 'Last but not least,'
 };
 
-function makeSlotUnitKey(bodyIndex: 1 | 2, col: PillarSlotType, ideaIndex?: 1 | 2 | 3): string {
+function makeSlotUnitKey(
+  bodyIndex: 1 | 2,
+  col: PillarSlotType,
+  ideaIndex?: 1 | 2 | 3 | 4 | 5
+): string {
   return ideaIndex ? `${bodyIndex}_${ideaIndex}_${col}` : `${bodyIndex}_${col}`;
+}
+
+function makeFiveSelections(
+  candidates: { id: number; polarity: 'positive' | 'negative' }[],
+  presetFirstId: number | undefined,
+  defaultPolarity: 'positive' | 'negative',
+  count: MultiIdeaCount = 2
+): MultiBodyTuple {
+  const depths = getRecommendedSentenceDepths(count);
+  const fallbackPool = [1, 3, 5, 6, 7, 2, 4, 9, 10, 13, 16, 17];
+  const chosenIds: number[] = [];
+  if (presetFirstId && presetFirstId >= 1 && presetFirstId <= 19) {
+    chosenIds.push(presetFirstId);
+  }
+  for (const c of candidates) {
+    if (!chosenIds.includes(c.id)) chosenIds.push(c.id);
+    if (chosenIds.length >= 5) break;
+  }
+  for (const fid of fallbackPool) {
+    if (!chosenIds.includes(fid)) chosenIds.push(fid);
+    if (chosenIds.length >= 5) break;
+  }
+  return [0, 1, 2, 3, 4].map((idx) => ({
+    id: chosenIds[idx],
+    polarity: candidates[idx]?.polarity ?? defaultPolarity,
+    sentences: depths[idx]
+  })) as MultiBodyTuple;
 }
 
 function defaultPolaritiesForTemplate(
@@ -222,22 +274,26 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   const [pillar2Id, setPillar2Id] = useState<number>(2);
   const [pillar2Polarity, setPillar2Polarity] = useState<'positive' | 'negative'>('negative');
 
-  // Phiên bản 2: 2–3 Pillars per Body + Linking Words (1–2 compact sentences per idea)
-  const [b1IdeaCount, setB1IdeaCount] = useState<2 | 3>(2);
-  const [b2IdeaCount, setB2IdeaCount] = useState<2 | 3>(2);
+  // Phiên bản 2: 1–5 Pillars per Body + Linking Words (1–2 compact sentences per idea)
+  const [b1IdeaCount, setB1IdeaCount] = useState<MultiIdeaCount>(2);
+  const [b2IdeaCount, setB2IdeaCount] = useState<MultiIdeaCount>(2);
   const [multiPillars, setMultiPillars] = useState<{
-    1: [IdeaSelection, IdeaSelection, IdeaSelection];
-    2: [IdeaSelection, IdeaSelection, IdeaSelection];
+    1: MultiBodyTuple;
+    2: MultiBodyTuple;
   }>({
     1: [
-      { id: 1, polarity: 'positive' },
-      { id: 3, polarity: 'positive' },
-      { id: 5, polarity: 'positive' }
+      { id: 1, polarity: 'positive', sentences: 2 },
+      { id: 3, polarity: 'positive', sentences: 2 },
+      { id: 5, polarity: 'positive', sentences: 1 },
+      { id: 6, polarity: 'positive', sentences: 1 },
+      { id: 7, polarity: 'positive', sentences: 1 }
     ],
     2: [
-      { id: 2, polarity: 'negative' },
-      { id: 4, polarity: 'negative' },
-      { id: 9, polarity: 'negative' }
+      { id: 2, polarity: 'negative', sentences: 2 },
+      { id: 4, polarity: 'negative', sentences: 2 },
+      { id: 9, polarity: 'negative', sentences: 1 },
+      { id: 10, polarity: 'negative', sentences: 1 },
+      { id: 13, polarity: 'negative', sentences: 1 }
     ]
   });
   const [linkers, setLinkers] = useState<Record<string, string>>({ ...DEFAULT_LINKERS });
@@ -252,7 +308,7 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   // Tap-to-place active card (works seamlessly on mobile/iPad & desktop alongside HTML5 drag-drop)
   const [selectedCard, setSelectedCard] = useState<{
     bodyIndex: 1 | 2;
-    ideaIndex?: 1 | 2 | 3;
+    ideaIndex?: 1 | 2 | 3 | 4 | 5;
     col: PillarSlotType;
   } | null>(null);
   const [slotFeedback, setSlotFeedback] = useState<{ type: 'error' | 'ok'; msg: string } | null>(null);
@@ -309,22 +365,8 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     setB2IdeaCount(2);
     const gMulti = guide.suggestedMultiPillars;
     setMultiPillars({
-      1: [
-        { id: payload.presetPillar1 || gMulti.b1[0].id, polarity: pol1 },
-        {
-          id: gMulti.b1[1].id === (payload.presetPillar1 || gMulti.b1[0].id) ? 3 : gMulti.b1[1].id,
-          polarity: pol1
-        },
-        { id: gMulti.b1[2].id, polarity: pol1 }
-      ],
-      2: [
-        { id: payload.presetPillar2 || gMulti.b2[0].id, polarity: pol2 },
-        {
-          id: gMulti.b2[1].id === (payload.presetPillar2 || gMulti.b2[0].id) ? 4 : gMulti.b2[1].id,
-          polarity: pol2
-        },
-        { id: gMulti.b2[2].id, polarity: pol2 }
-      ]
+      1: makeFiveSelections(gMulti.b1, payload.presetPillar1, pol1, 2),
+      2: makeFiveSelections(gMulti.b2, payload.presetPillar2, pol2, 2)
     });
     setLinkers({ ...DEFAULT_LINKERS });
 
@@ -343,16 +385,8 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
 
   const syncMultiPolarities = (pol1: 'positive' | 'negative', pol2: 'positive' | 'negative') => {
     setMultiPillars((prev) => ({
-      1: prev[1].map((item) => ({ ...item, polarity: pol1 })) as [
-        IdeaSelection,
-        IdeaSelection,
-        IdeaSelection
-      ],
-      2: prev[2].map((item) => ({ ...item, polarity: pol2 })) as [
-        IdeaSelection,
-        IdeaSelection,
-        IdeaSelection
-      ]
+      1: prev[1].map((item) => ({ ...item, polarity: pol1 })) as MultiBodyTuple,
+      2: prev[2].map((item) => ({ ...item, polarity: pol2 })) as MultiBodyTuple
     }));
   };
 
@@ -382,16 +416,18 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     setPillar2Id(questionGuide.suggestedPillar2.id);
     setPillar2Polarity(questionGuide.suggestedPillar2.polarity);
     setMultiPillars({
-      1: [
-        questionGuide.suggestedMultiPillars.b1[0],
-        questionGuide.suggestedMultiPillars.b1[1],
-        questionGuide.suggestedMultiPillars.b1[2]
-      ],
-      2: [
-        questionGuide.suggestedMultiPillars.b2[0],
-        questionGuide.suggestedMultiPillars.b2[1],
-        questionGuide.suggestedMultiPillars.b2[2]
-      ]
+      1: makeFiveSelections(
+        questionGuide.suggestedMultiPillars.b1,
+        undefined,
+        questionGuide.suggestedPillar1.polarity,
+        b1IdeaCount
+      ),
+      2: makeFiveSelections(
+        questionGuide.suggestedMultiPillars.b2,
+        undefined,
+        questionGuide.suggestedPillar2.polarity,
+        b2IdeaCount
+      )
     });
     setSlottedPillarKeys({});
     setSelectedCard(null);
@@ -405,13 +441,47 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     setHelperBankTab(nextMode === 'multi' ? 'linkers' : 'subjects');
   };
 
+  const changeBodyIdeaCount = (bodyIdx: 1 | 2, nextCount: MultiIdeaCount) => {
+    if (bodyIdx === 1) {
+      setB1IdeaCount(nextCount);
+    } else {
+      setB2IdeaCount(nextCount);
+    }
+    const recommended = getRecommendedSentenceDepths(nextCount);
+    setMultiPillars((prev) => ({
+      ...prev,
+      [bodyIdx]: prev[bodyIdx].map((item, idx) => ({
+        ...item,
+        sentences: recommended[idx]
+      })) as MultiBodyTuple
+    }));
+    setSelectedCard(null);
+  };
+
+  const applyBodySentencePreset = (
+    bodyIdx: 1 | 2,
+    preset: 'all1' | 'balanced' | 'all2'
+  ) => {
+    const count = bodyIdx === 1 ? b1IdeaCount : b2IdeaCount;
+    const balanced = getRecommendedSentenceDepths(count);
+    setMultiPillars((prev) => ({
+      ...prev,
+      [bodyIdx]: prev[bodyIdx].map((item, idx) => ({
+        ...item,
+        sentences:
+          preset === 'all1' ? 1 : preset === 'all2' ? 2 : balanced[idx]
+      })) as MultiBodyTuple
+    }));
+    setSelectedCard(null);
+  };
+
   const updateMultiIdea = (
     bodyIdx: 1 | 2,
-    ideaIdx: 1 | 2 | 3,
+    ideaIdx: 1 | 2 | 3 | 4 | 5,
     patch: Partial<IdeaSelection>
   ) => {
     setMultiPillars((prev) => {
-      const nextBody = [...prev[bodyIdx]] as [IdeaSelection, IdeaSelection, IdeaSelection];
+      const nextBody = [...prev[bodyIdx]] as MultiBodyTuple;
       nextBody[ideaIdx - 1] = { ...nextBody[ideaIdx - 1], ...patch };
       return { ...prev, [bodyIdx]: nextBody };
     });
@@ -441,14 +511,33 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     WT2_PILLARS.find((p) => p.id === id) || WT2_PILLARS[0];
 
   const structureDef = WT2_STRUCTURES[templateId];
+
+  const b1Specs = useMemo<MultiBodyIdeaSpec[]>(
+    () =>
+      multiPillars[1].slice(0, b1IdeaCount).map((sel, idx) => ({
+        ideaIndex: (idx + 1) as 1 | 2 | 3 | 4 | 5,
+        sentences: sel.sentences
+      })),
+    [multiPillars, b1IdeaCount]
+  );
+
+  const b2Specs = useMemo<MultiBodyIdeaSpec[]>(
+    () =>
+      multiPillars[2].slice(0, b2IdeaCount).map((sel, idx) => ({
+        ideaIndex: (idx + 1) as 1 | 2 | 3 | 4 | 5,
+        sentences: sel.sentences
+      })),
+    [multiPillars, b2IdeaCount]
+  );
+
   const paragraphs = useMemo(() => {
     if (bodyMode === 'multi') {
-      return buildMultiIdeaParagraphs(templateId, stance, b1IdeaCount, b2IdeaCount);
+      return buildMultiIdeaParagraphs(templateId, stance, b1Specs, b2Specs);
     }
     return structureDef.buildParagraphs(stance);
-  }, [bodyMode, templateId, structureDef, stance, b1IdeaCount, b2IdeaCount]);
+  }, [bodyMode, templateId, structureDef, stance, b1Specs, b2Specs]);
 
-  const resolveBranch = (bodyIndex: 1 | 2, ideaIndex?: 1 | 2 | 3) => {
+  const resolveBranch = (bodyIndex: 1 | 2, ideaIndex?: 1 | 2 | 3 | 4 | 5) => {
     if (ideaIndex) {
       const sel = multiPillars[bodyIndex][ideaIndex - 1];
       const p = getPillarById(sel.id);
@@ -457,7 +546,11 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     return bodyIndex === 1 ? branch1 : branch2;
   };
 
-  const getBranchValue = (bodyIndex: 1 | 2, col: PillarSlotType, ideaIndex?: 1 | 2 | 3): string => {
+  const getBranchValue = (
+    bodyIndex: 1 | 2,
+    col: PillarSlotType,
+    ideaIndex?: 1 | 2 | 3 | 4 | 5
+  ): string => {
     const b = resolveBranch(bodyIndex, ideaIndex);
     switch (col) {
       case 'pillar':
@@ -475,7 +568,11 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     }
   };
 
-  const getBranchAnchor = (bodyIndex: 1 | 2, col: PillarSlotType, ideaIndex?: 1 | 2 | 3): string => {
+  const getBranchAnchor = (
+    bodyIndex: 1 | 2,
+    col: PillarSlotType,
+    ideaIndex?: 1 | 2 | 3 | 4 | 5
+  ): string => {
     const b = resolveBranch(bodyIndex, ideaIndex);
     if (col === 'compact_support' || col === 'compact_single') {
       return b.compactAnchor;
@@ -487,6 +584,7 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   // Detect duplicate Pillar IDs within the same Body in Phiên bản 2
   const getDuplicatePillarWarning = (bodyIdx: 1 | 2): string | null => {
     const count = bodyIdx === 1 ? b1IdeaCount : b2IdeaCount;
+    if (count < 2) return null;
     const activeIds = multiPillars[bodyIdx].slice(0, count).map((x) => x.id);
     if (new Set(activeIds).size < activeIds.length) {
       return `Body ${bodyIdx} đang chọn trùng Trụ ý giữa các ý! Em hãy chọn ${count} Trụ ý khác nhau để lập luận đa chiều nhé.`;
@@ -494,20 +592,26 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     return null;
   };
 
-  // Detect duplicate Linking Words across Body 1 & Body 2 in Phiên bản 2
+  // Detect duplicate Linking Words within a Body or across Body 1 & Body 2 in Phiên bản 2
   const crossBodyLinkerWarning = useMemo(() => {
     if (bodyMode !== 'multi') return null;
-    const b1Used = [
-      linkers.b1_link_1,
-      linkers.b1_link_2,
-      ...(b1IdeaCount === 3 ? [linkers.b1_link_3] : [])
-    ];
-    const b2Used = [
-      linkers.b2_link_1,
-      linkers.b2_link_2,
-      ...(b2IdeaCount === 3 ? [linkers.b2_link_3] : [])
-    ];
-    const overlap = b1Used.filter((w) => b2Used.includes(w));
+    const b1Used = Array.from({ length: b1IdeaCount }, (_, idx) => {
+      const role = getLinkerRoleForIdea((idx + 1) as 1 | 2 | 3 | 4 | 5, b1IdeaCount);
+      return linkers[`b1_link_${role}`] || WT2_LINKER_ROLE_OPTIONS[role][0].en;
+    });
+    const b2Used = Array.from({ length: b2IdeaCount }, (_, idx) => {
+      const role = getLinkerRoleForIdea((idx + 1) as 1 | 2 | 3 | 4 | 5, b2IdeaCount);
+      return linkers[`b2_link_${role}`] || WT2_LINKER_ROLE_OPTIONS[role][0].en;
+    });
+
+    const dupInB1 = b1Used.filter((w, i) => b1Used.indexOf(w) !== i);
+    const dupInB2 = b2Used.filter((w, i) => b2Used.indexOf(w) !== i);
+    if (dupInB1.length > 0 || dupInB2.length > 0) {
+      const words = Array.from(new Set([...dupInB1, ...dupInB2])).join(', ');
+      return `Lưu ý Coherence: Từ nối "${words}" đang bị lặp lại ngay trong cùng 1 đoạn Body — em hãy chọn từ nối khác cho các ý tiếp theo nhé!`;
+    }
+
+    const overlap = Array.from(new Set(b1Used.filter((w) => b2Used.includes(w))));
     if (overlap.length > 0) {
       return `Mẹo Band 8.0+ Coherence: Từ nối "${overlap.join(', ')}" đang dùng lặp ở cả Body 1 và Body 2 — em nên đổi sang từ nối khác (VD: Furthermore ↔ Moreover / In addition) để ăn điểm đa dạng từ nối!`;
     }
@@ -537,8 +641,8 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     sourceCol: PillarSlotType,
     targetBody: 1 | 2,
     targetCol: PillarSlotType,
-    sourceIdea?: 1 | 2 | 3,
-    targetIdea?: 1 | 2 | 3
+    sourceIdea?: 1 | 2 | 3 | 4 | 5,
+    targetIdea?: 1 | 2 | 3 | 4 | 5
   ) => {
     if (sourceBody !== targetBody) {
       setSlotFeedback({
@@ -595,8 +699,8 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
           .map((tok) => {
             if (tok.type === 'text') return tok.text || '';
             if (tok.type === 'linker_select' && tok.slotKey) {
-              const pos = tok.linkerPos || 1;
-              return linkers[tok.slotKey] || WT2_LINKING_OPTIONS[pos][0].en;
+              const role: LinkerRole = tok.linkerRole || 'start';
+              return linkers[tok.slotKey] || WT2_LINKER_ROLE_OPTIONS[role][0].en;
             }
             if (tok.type === 'topic_input' && tok.slotKey) {
               const val = (topicInputs[tok.slotKey] || '').trim();
@@ -665,6 +769,9 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
       found.push('Lặp từ nối ví dụ (For instance + For example)');
 
     const trackedLinkers = [
+      'specifically,',
+      'in particular,',
+      'notably,',
       'firstly,',
       'to begin with,',
       'first and foremost,',
@@ -672,14 +779,20 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
       'moreover,',
       'in addition,',
       'additionally,',
+      'besides this,',
+      'beyond this,',
+      'equally importantly,',
+      'what is more,',
+      'on top of that,',
       'finally,',
-      'last but not least,'
+      'last but not least,',
+      'ultimately,'
     ];
     trackedLinkers.forEach((lk) => {
       const escaped = lk.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const hits = low.match(new RegExp(`\\b${escaped}`, 'g'));
       if (hits && hits.length >= 2) {
-        found.push(`Lặp từ nối "${lk}" (${hits.length} lần — nên đổi từ nối khác giữa 2 Body)`);
+        found.push(`Lặp từ nối "${lk}" (${hits.length} lần — nên đổi từ nối khác để đa dạng Coherence)`);
       }
     });
     return found;
@@ -725,27 +838,31 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     const b1MultiDesc = multiPillars[1]
       .slice(0, b1IdeaCount)
       .map((sel, idx) => {
+        const ideaIdx = (idx + 1) as 1 | 2 | 3 | 4 | 5;
+        const role = getLinkerRoleForIdea(ideaIdx, b1IdeaCount);
         const p = getPillarById(sel.id);
-        const lk = linkers[`b1_link_${idx + 1}`] || '';
-        return `Ý 1.${idx + 1} [${lk}]: ${p.code} ${p.name} (${sel.polarity === 'positive' ? '+' : '-'})`;
+        const lk = linkers[`b1_link_${role}`] || WT2_LINKER_ROLE_OPTIONS[role][0].en;
+        return `Ý 1.${ideaIdx} [${lk} • ${sel.sentences} câu]: ${p.code} ${p.name} (${sel.polarity === 'positive' ? '+' : '-'})`;
       })
       .join(' | ');
     const b2MultiDesc = multiPillars[2]
       .slice(0, b2IdeaCount)
       .map((sel, idx) => {
+        const ideaIdx = (idx + 1) as 1 | 2 | 3 | 4 | 5;
+        const role = getLinkerRoleForIdea(ideaIdx, b2IdeaCount);
         const p = getPillarById(sel.id);
-        const lk = linkers[`b2_link_${idx + 1}`] || '';
-        return `Ý 2.${idx + 1} [${lk}]: ${p.code} ${p.name} (${sel.polarity === 'positive' ? '+' : '-'})`;
+        const lk = linkers[`b2_link_${role}`] || WT2_LINKER_ROLE_OPTIONS[role][0].en;
+        return `Ý 2.${ideaIdx} [${lk} • ${sel.sentences} câu]: ${p.code} ${p.name} (${sel.polarity === 'positive' ? '+' : '-'})`;
       })
       .join(' | ');
 
     try {
       const formulaBlock =
         bodyMode === 'multi'
-          ? `- Chế độ luyện: PHIÊN BẢN 2 — ĐA TRỤ Ý + LINKING WORDS (Mỗi Body có 2–3 Trụ ý, rút gọn 1–2 câu/ý thay vì 4 câu PEEL)
+          ? `- Chế độ luyện: PHIÊN BẢN 2 — LINH HOẠT 1–5 TRỤ Ý / BODY + LINKING WORDS (Mỗi Trụ ý rút gọn súc tích 1–2 câu thay vì 4 câu PEEL)
 - Khung bất biến áp dụng: ${structureDef.name} (${structureDef.viSubtitle})
-- Body 1 (${b1IdeaCount} Trụ ý • ${b1IdeaCount === 2 ? '2 câu/ý' : '1 câu gộp/ý'}): ${b1MultiDesc}
-- Body 2 (${b2IdeaCount} Trụ ý • ${b2IdeaCount === 2 ? '2 câu/ý' : '1 câu gộp/ý'}): ${b2MultiDesc}`
+- Body 1 (${b1IdeaCount} Trụ ý): ${b1MultiDesc}
+- Body 2 (${b2IdeaCount} Trụ ý): ${b2MultiDesc}`
           : `- Chế độ luyện: PHIÊN BẢN 1 — 1 TRỤ Ý SÂU / BODY (Triển khai 4 câu PEEL: Giới thiệu → Nhân → Quả → Ví dụ)
 - Khung bất biến áp dụng: ${structureDef.name} (${structureDef.viSubtitle})
 - Trụ ý Body 1 đã chọn: ${pillar1.code} ${pillar1.name} (${branch1.label})
@@ -754,9 +871,9 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
       const reviewJsonHint =
         bodyMode === 'multi'
           ? `  "formulaReview": {
-    "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp câu hỏi đề chưa, và ` : ''}em đã có Câu mở đoạn (Topic Sentence) bao quát số nhiều + giữ chuẩn Khung bất biến Phiên bản 2 của dạng ${structureDef.name} chưa...",
-    "pillarFitCheck": "Nhận xét xem các Trụ ý đa chiều ở Body 1 (${b1IdeaCount} ý) và Body 2 (${b2IdeaCount} ý) đã bám sát đề bài, triển khai gọn 1–2 câu/ý súc tích (không bị liệt kê cụt ngủn cũng không bị lan man quá dài) chưa...",
-    "seamGrammarCheck": "Nhận xét cách dùng bộ Linking Words (Firstly / To begin with / Furthermore / Moreover / In addition / Finally...) đã đa dạng, không lặp giữa 2 Body và ngữ pháp tại các mối nối đã mượt tự nhiên chưa..."
+    "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp câu hỏi đề chưa, và ` : ''}em đã có Câu mở đoạn (Topic Sentence chia chuẩn số ít cho đoạn 1 ý / số nhiều cho đoạn 2–5 ý) + giữ chuẩn Khung bất biến Phiên bản 2 của dạng ${structureDef.name} chưa...",
+    "pillarFitCheck": "Nhận xét xem các Trụ ý ở Body 1 (${b1IdeaCount} ý) và Body 2 (${b2IdeaCount} ý) đã bám sát đề bài, triển khai gọn 1–2 câu/ý súc tích (cân đối độ dài đoạn văn, không bị liệt kê cụt ngủn cũng không bị lan man quá dài) chưa...",
+    "seamGrammarCheck": "Nhận xét cách dùng bộ Linking Words (Specifically / Firstly / To begin with / Furthermore / Moreover / In addition / Beyond this / Finally...) đã hợp vai trò, không lặp từ nối và ngữ pháp tại các mối nối đã mượt tự nhiên chưa..."
   },`
           : `  "formulaReview": {
     "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp với yêu cầu câu hỏi của đề chưa, và ` : ''}em đã giữ đúng Khung bất biến của dạng ${structureDef.name} chưa...",
@@ -1026,7 +1143,7 @@ ${reviewJsonHint}
           };
 
           return (
-            <div className="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 max-h-80 overflow-y-auto shrink-0 space-y-2.5">
+            <div className="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 max-h-96 overflow-y-auto shrink-0 space-y-2.5">
               {/* Top Priority Rule Strip */}
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="text-xs text-slate-600 font-semibold leading-snug">
@@ -1048,6 +1165,55 @@ ${reviewJsonHint}
                   Đóng bảng ▲
                 </button>
               </div>
+
+              {/* Quick 1–5 Idea Count Selector right inside Drawer when Phiên bản 2 is active */}
+              {bodyMode === 'multi' && (
+                <div className="bg-indigo-50/80 border border-indigo-200 rounded-lg px-3 py-1.5 flex flex-wrap items-center justify-between gap-2 text-xs">
+                  <span className="font-extrabold text-indigo-950">
+                    🔗 Phiên bản 2 • Chỉnh nhanh số ý mỗi Body (Min 1 – Max 5):
+                  </span>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex items-center gap-1">
+                      <span className="font-bold text-violet-800 text-[11px]">Body 1:</span>
+                      <div className="inline-flex rounded-md border border-violet-300 bg-white overflow-hidden">
+                        {([1, 2, 3, 4, 5] as const).map((n) => (
+                          <button
+                            key={`drw_b1_${n}`}
+                            type="button"
+                            onClick={() => changeBodyIdeaCount(1, n)}
+                            className={`px-2 py-0.5 text-[11px] font-extrabold cursor-pointer ${
+                              b1IdeaCount === n
+                                ? 'bg-violet-600 text-white'
+                                : 'text-violet-800 hover:bg-violet-50'
+                            }`}
+                          >
+                            {n} ý
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="font-bold text-amber-800 text-[11px]">Body 2:</span>
+                      <div className="inline-flex rounded-md border border-amber-300 bg-white overflow-hidden">
+                        {([1, 2, 3, 4, 5] as const).map((n) => (
+                          <button
+                            key={`drw_b2_${n}`}
+                            type="button"
+                            onClick={() => changeBodyIdeaCount(2, n)}
+                            className={`px-2 py-0.5 text-[11px] font-extrabold cursor-pointer ${
+                              b2IdeaCount === n
+                                ? 'bg-amber-500 text-white'
+                                : 'text-amber-800 hover:bg-amber-50'
+                            }`}
+                          >
+                            {n} ý
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* 3 Color-Coded Inner Tabs (#28a745 Green | #007bff Sky Blue | #6f42c1 Purple) */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
@@ -1107,7 +1273,11 @@ ${reviewJsonHint}
                   {WT2_PILLARS.filter((p) => p.tier === drawerTierTab).map((p) => (
                     <div
                       key={p.id}
-                      className={`border rounded-lg p-2 bg-white flex items-center justify-between gap-2 text-xs shadow-2xs transition-all ${activeMeta.cardBorderCls}`}
+                      className={`border rounded-lg p-2 bg-white text-xs shadow-2xs transition-all ${
+                        bodyMode === 'multi'
+                          ? 'flex flex-col justify-between gap-1.5'
+                          : 'flex items-center justify-between gap-2'
+                      } ${activeMeta.cardBorderCls}`}
                     >
                       <div className="min-w-0">
                         <div className={`font-extrabold truncate ${activeMeta.nameTextCls}`}>
@@ -1157,39 +1327,55 @@ ${reviewJsonHint}
                           </button>
                         </div>
                       ) : (
-                        <div className="flex flex-wrap items-center justify-end gap-1 shrink-0">
-                          {(Array.from({ length: b1IdeaCount }, (_, i) => (i + 1) as 1 | 2 | 3)).map(
-                            (ideaIdx) => (
+                        <div className="flex flex-wrap items-center justify-between gap-1.5 pt-1 border-t border-slate-100">
+                          <div className="flex items-center gap-0.5 flex-wrap">
+                            <span className="text-[10px] font-extrabold text-violet-700 mr-0.5">
+                              B1:
+                            </span>
+                            {(
+                              Array.from(
+                                { length: b1IdeaCount },
+                                (_, i) => (i + 1) as 1 | 2 | 3 | 4 | 5
+                              )
+                            ).map((ideaIdx) => (
                               <button
                                 key={`b1_${ideaIdx}`}
                                 onClick={() => updateMultiIdea(1, ideaIdx, { id: p.id })}
-                                className={`px-1.5 py-0.5 rounded text-[11px] font-bold cursor-pointer ${
+                                className={`px-1.5 py-0.5 rounded text-[10.5px] font-extrabold cursor-pointer ${
                                   multiPillars[1][ideaIdx - 1].id === p.id
                                     ? 'bg-violet-600 text-white'
                                     : 'bg-violet-100 text-violet-700 hover:bg-violet-200'
                                 }`}
                                 title={`Gán vào Body 1 • Ý ${ideaIdx}`}
                               >
-                                B1•Ý{ideaIdx}
+                                Ý{ideaIdx}
                               </button>
-                            )
-                          )}
-                          {(Array.from({ length: b2IdeaCount }, (_, i) => (i + 1) as 1 | 2 | 3)).map(
-                            (ideaIdx) => (
+                            ))}
+                          </div>
+                          <div className="flex items-center gap-0.5 flex-wrap">
+                            <span className="text-[10px] font-extrabold text-amber-700 mr-0.5">
+                              B2:
+                            </span>
+                            {(
+                              Array.from(
+                                { length: b2IdeaCount },
+                                (_, i) => (i + 1) as 1 | 2 | 3 | 4 | 5
+                              )
+                            ).map((ideaIdx) => (
                               <button
                                 key={`b2_${ideaIdx}`}
                                 onClick={() => updateMultiIdea(2, ideaIdx, { id: p.id })}
-                                className={`px-1.5 py-0.5 rounded text-[11px] font-bold cursor-pointer ${
+                                className={`px-1.5 py-0.5 rounded text-[10.5px] font-extrabold cursor-pointer ${
                                   multiPillars[2][ideaIdx - 1].id === p.id
                                     ? 'bg-amber-500 text-white'
                                     : 'bg-amber-100 text-amber-800 hover:bg-amber-200'
                                 }`}
                                 title={`Gán vào Body 2 • Ý ${ideaIdx}`}
                               >
-                                B2•Ý{ideaIdx}
+                                Ý{ideaIdx}
                               </button>
-                            )
-                          )}
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
@@ -1367,7 +1553,7 @@ ${reviewJsonHint}
                       Bước 1B • Chọn Chiến Thuật Triển Khai Đoạn Body (2 Phiên Bản Linh Hoạt)
                     </span>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Cùng 1 bảng 19 Idea Pillars — em có thể đào sâu 1 ý/Body (4 câu PEEL) hoặc ghép 2–3 ý/Body kèm Linking Words (rút gọn 1–2 câu/ý):
+                      Cùng 1 bảng 19 Idea Pillars — em có thể đào sâu 1 ý/Body (4 câu PEEL) hoặc ghép linh hoạt <strong>1–5 ý/Body</strong> kèm Linking Words (support gọn <strong>1–2 câu/ý</strong>):
                     </p>
                   </div>
                 </div>
@@ -1408,7 +1594,7 @@ ${reviewJsonHint}
                   >
                     <div className="flex items-center justify-between gap-2 mb-1">
                       <span className="font-extrabold text-xs sm:text-sm text-slate-900">
-                        🔗 Phiên bản 2: 2–3 Trụ Ý / Body + Linking Words (1–2 câu/ý)
+                        🔗 Phiên bản 2: Linh Hoạt 1–5 Trụ Ý / Body + Support 1–2 Câu/Ý
                       </span>
                       {bodyMode === 'multi' ? (
                         <span className="bg-indigo-600 text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">
@@ -1416,15 +1602,37 @@ ${reviewJsonHint}
                         </span>
                       ) : (
                         <span className="bg-indigo-100 text-indigo-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">
-                          Mới • Đa ý
+                          1–5 ý • Linh hoạt
                         </span>
                       )}
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Mở đoạn bằng <strong>Topic Sentence số nhiều</strong> + dùng <strong>Linking Words</strong> (<em>Firstly, Furthermore, Moreover...</em>) + rút gọn mỗi Trụ ý chỉ còn <strong>1–2 câu súc tích</strong> (tránh quá dài từ).
+                      Tùy chọn độc lập <strong>Min 1 – Max 5 ý</strong> cho từng Body • Tự đổi <strong>Topic Sentence</strong> (số ít / số nhiều) + <strong>Linking Words</strong> thông minh + chọn riêng <strong>1 câu gộp</strong> hoặc <strong>2 câu support</strong> cho từng ý.
                     </p>
                   </button>
                 </div>
+
+                {bodyMode === 'multi' && (
+                  <div className="bg-slate-50 border border-indigo-200/80 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 leading-relaxed space-y-1">
+                    <div className="font-extrabold text-indigo-900">
+                      💡 Công thức vàng phân bổ 1–2 câu support theo số ý (vừa chuẩn Band 8.0+ vừa kịp 40 phút thi):
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pt-0.5 text-[11.5px]">
+                      <div className="bg-white rounded-lg border border-slate-200 px-2.5 py-1.5">
+                        <strong className="text-indigo-800">• 1–2 ý / Body:</strong> Dùng{' '}
+                        <strong>2 câu/ý</strong> (<em>Nêu Trụ ý + 1 câu Nhân–Quả</em>) → Đoạn dài 3–5 câu (~70–105 từ).
+                      </div>
+                      <div className="bg-white rounded-lg border border-slate-200 px-2.5 py-1.5">
+                        <strong className="text-violet-800">• 3 ý / Body:</strong> Chuẩn nhất là{' '}
+                        <strong>Ý 1 (2 câu) + Ý 2, 3 (1 câu gộp)</strong> → Đoạn 5 câu (~105 từ), vừa có điểm nhấn vừa đa diện.
+                      </div>
+                      <div className="bg-white rounded-lg border border-slate-200 px-2.5 py-1.5">
+                        <strong className="text-fuchsia-800">• 4–5 ý / Body:</strong> Ưu tiên{' '}
+                        <strong>1 câu phức gộp/ý</strong> → Đoạn 5–6 câu (~120–145 từ). Vẫn có thể bật <strong>2 câu</strong> cho ý đinh!
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {questionGuide.pluralNotice && (
                   <div className="bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs text-indigo-950 flex flex-wrap items-center justify-between gap-2">
@@ -1437,7 +1645,7 @@ ${reviewJsonHint}
                         onClick={() => handleBodyModeSwitch('multi')}
                         className="px-2.5 py-1 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white font-bold cursor-pointer shrink-0"
                       >
-                        Thử Phiên bản 2 (Đa ý + Linking) →
+                        Thử Phiên bản 2 (1–5 ý + Linking) →
                       </button>
                     )}
                   </div>
@@ -1637,33 +1845,50 @@ ${reviewJsonHint}
                   ))}
                 </div>
               ) : (
-                /* ============ PHIÊN BẢN 2: MULTI-IDEA + LINKING WORDS (1–2 CÂU/Ý) ============ */
+                /* ============ PHIÊN BẢN 2: LINH HOẠT 1–5 TRỤ Ý / BODY + SUPPORT 1–2 CÂU/Ý ============ */
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                   {[
                     {
                       bodyIdx: 1 as const,
-                      title: 'Body 1: Đa Trụ Ý + Linking Words',
+                      title: 'Body 1: Linh Hoạt 1–5 Trụ Ý',
                       accent: 'border-violet-300 bg-violet-50/40',
                       headerBadge: 'bg-violet-600 text-white',
-                      ideaCount: b1IdeaCount,
-                      setIdeaCount: setB1IdeaCount
+                      activeCountBtn: 'bg-violet-600 text-white',
+                      ideaCount: b1IdeaCount
                     },
                     {
                       bodyIdx: 2 as const,
                       title:
                         templateId === 'mixed_ps'
-                          ? 'Body 2: Đa Giải Pháp + Kết Quả Trụ Ý'
-                          : 'Body 2: Đa Trụ Ý + Linking Words',
+                          ? 'Body 2: 1–5 Giải Pháp + Kết Quả'
+                          : 'Body 2: Linh Hoạt 1–5 Trụ Ý',
                       accent: 'border-amber-300 bg-amber-50/40',
                       headerBadge: 'bg-amber-500 text-white',
-                      ideaCount: b2IdeaCount,
-                      setIdeaCount: setB2IdeaCount
+                      activeCountBtn: 'bg-amber-500 text-white',
+                      ideaCount: b2IdeaCount
                     }
                   ].map((bCfg) => {
                     const dupWarn = getDuplicatePillarWarning(bCfg.bodyIdx);
                     const ideaIndices = Array.from(
                       { length: bCfg.ideaCount },
-                      (_, idx) => (idx + 1) as 1 | 2 | 3
+                      (_, idx) => (idx + 1) as 1 | 2 | 3 | 4 | 5
+                    );
+                    const activeSels = multiPillars[bCfg.bodyIdx].slice(0, bCfg.ideaCount);
+                    const totalBodySentences =
+                      1 + activeSels.reduce((acc, s) => acc + s.sentences, 0);
+                    const estBodyWords =
+                      18 +
+                      activeSels.reduce(
+                        (acc, s) => acc + (s.sentences === 2 ? 38 : 25),
+                        0
+                      );
+                    const balancedSlice = getRecommendedSentenceDepths(
+                      bCfg.ideaCount
+                    ).slice(0, bCfg.ideaCount);
+                    const isAll1 = activeSels.every((s) => s.sentences === 1);
+                    const isAll2 = activeSels.every((s) => s.sentences === 2);
+                    const isBalanced = activeSels.every(
+                      (s, i) => s.sentences === balancedSlice[i]
                     );
 
                     return (
@@ -1671,6 +1896,7 @@ ${reviewJsonHint}
                         key={bCfg.bodyIdx}
                         className={`rounded-xl border-2 ${bCfg.accent} p-4 space-y-3`}
                       >
+                        {/* Header Row: Body Title + 1..5 Idea Count Buttons */}
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <span
                             className={`text-xs font-extrabold px-2.5 py-1 rounded-full ${bCfg.headerBadge}`}
@@ -1678,39 +1904,102 @@ ${reviewJsonHint}
                             {bCfg.title}
                           </span>
 
-                          <div className="inline-flex rounded-lg border border-slate-300 bg-white overflow-hidden text-xs font-bold">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-[11px] font-bold text-slate-600">
+                              Số ý:
+                            </span>
+                            <div className="inline-flex rounded-lg border border-slate-300 bg-white overflow-hidden text-xs font-extrabold shadow-2xs">
+                              {([1, 2, 3, 4, 5] as const).map((cnt) => (
+                                <button
+                                  key={cnt}
+                                  type="button"
+                                  onClick={() => changeBodyIdeaCount(bCfg.bodyIdx, cnt)}
+                                  className={`px-2.5 py-1 cursor-pointer transition-colors border-r last:border-r-0 border-slate-200 ${
+                                    bCfg.ideaCount === cnt
+                                      ? bCfg.activeCountBtn
+                                      : 'text-slate-700 hover:bg-slate-100'
+                                  }`}
+                                  title={`Chọn ${cnt} Trụ ý cho Body ${bCfg.bodyIdx} (tự động cân bằng 1–2 câu/ý)`}
+                                >
+                                  {cnt} ý
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Live Sentence & Word Estimate + Quick Batch Presets */}
+                        <div className="bg-white/85 border border-slate-200 rounded-lg px-2.5 py-1.5 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                          <span className="font-bold text-slate-700">
+                            📏 Dự kiến đoạn:{' '}
+                            <strong className="text-indigo-800">
+                              {totalBodySentences} câu (~{estBodyWords} từ)
+                            </strong>{' '}
+                            <span className="text-slate-500 font-normal">
+                              (1 mở đoạn + {totalBodySentences - 1} câu thân)
+                            </span>
+                          </span>
+
+                          <div className="inline-flex items-center rounded-md border border-slate-300 bg-slate-50 overflow-hidden font-bold">
                             <button
                               type="button"
-                              onClick={() => {
-                                bCfg.setIdeaCount(2);
-                                setSelectedCard(null);
-                              }}
-                              className={`px-2.5 py-1 cursor-pointer ${
-                                bCfg.ideaCount === 2
-                                  ? 'bg-indigo-600 text-white'
-                                  : 'text-slate-600 hover:bg-slate-50'
+                              onClick={() => applyBodySentencePreset(bCfg.bodyIdx, 'all1')}
+                              className={`px-2 py-0.5 cursor-pointer border-r border-slate-200 ${
+                                isAll1
+                                  ? 'bg-fuchsia-600 text-white'
+                                  : 'text-slate-600 hover:bg-white'
                               }`}
-                              title="Mỗi Body có 2 Trụ ý — mỗi ý triển khai gọn 2 câu (1 câu nêu ý + 1 câu Nhân–Quả)"
+                              title="Rút gọn tất cả các ý trong Body này thành 1 câu phức/ý"
                             >
-                              2 Ý / Body (2 câu/ý)
+                              Tất cả 1 câu
                             </button>
                             <button
                               type="button"
-                              onClick={() => {
-                                bCfg.setIdeaCount(3);
-                                setSelectedCard(null);
-                              }}
-                              className={`px-2.5 py-1 cursor-pointer ${
-                                bCfg.ideaCount === 3
-                                  ? 'bg-fuchsia-600 text-white'
-                                  : 'text-slate-600 hover:bg-slate-50'
+                              onClick={() =>
+                                applyBodySentencePreset(bCfg.bodyIdx, 'balanced')
+                              }
+                              className={`px-2 py-0.5 cursor-pointer border-r border-slate-200 ${
+                                isBalanced && !isAll1 && !isAll2
+                                  ? 'bg-emerald-600 text-white'
+                                  : 'text-emerald-800 hover:bg-white'
                               }`}
-                              title="Mỗi Body có 3 Trụ ý — mỗi ý triển khai siêu gọn trong 1 câu phức"
+                              title="Tự động cân bằng số câu chuẩn Band 8.0+ theo số ý đã chọn"
                             >
-                              3 Ý / Body (1 câu/ý)
+                              ⚡ Cân bằng
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => applyBodySentencePreset(bCfg.bodyIdx, 'all2')}
+                              className={`px-2 py-0.5 cursor-pointer ${
+                                isAll2
+                                  ? 'bg-indigo-600 text-white'
+                                  : 'text-slate-600 hover:bg-white'
+                              }`}
+                              title="Triển khai đầy đủ 2 câu (Nêu ý + Nhân–Quả) cho mọi ý trong Body này"
+                            >
+                              Tất cả 2 câu
                             </button>
                           </div>
                         </div>
+
+                        {totalBodySentences >= 8 && (
+                          <div className="bg-sky-50 border border-sky-300 text-sky-950 rounded-lg px-3 py-1.5 text-xs flex flex-wrap items-center justify-between gap-2">
+                            <span>
+                              ⏱️ <strong>Mẹo kịp 40 phút phòng thi:</strong> Body {bCfg.bodyIdx} đang dài{' '}
+                              <strong>{totalBodySentences} câu (~{estBodyWords} từ)</strong>. Khi ghép{' '}
+                              {bCfg.ideaCount} ý, em nên để 1 câu gộp/ý (hoặc chỉ giữ 2 câu ở ý đầu)!
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                applyBodySentencePreset(bCfg.bodyIdx, 'balanced')
+                              }
+                              className="px-2 py-0.5 rounded bg-sky-600 hover:bg-sky-700 text-white font-extrabold text-[11px] cursor-pointer shrink-0"
+                            >
+                              ⚡ Cân bằng chuẩn
+                            </button>
+                          </div>
+                        )}
 
                         {dupWarn && (
                           <div className="bg-amber-100 border border-amber-300 text-amber-950 rounded-lg px-3 py-1.5 text-xs font-bold">
@@ -1721,10 +2010,12 @@ ${reviewJsonHint}
                         <div className="space-y-3">
                           {ideaIndices.map((ideaIdx) => {
                             const sel = multiPillars[bCfg.bodyIdx][ideaIdx - 1];
-                            const linkKey = `b${bCfg.bodyIdx}_link_${ideaIdx}`;
+                            const role = getLinkerRoleForIdea(ideaIdx, bCfg.ideaCount);
+                            const roleOpts = WT2_LINKER_ROLE_OPTIONS[role];
+                            const linkKey = `b${bCfg.bodyIdx}_link_${role}`;
                             const colsForIdea: PillarSlotType[] =
-                              bCfg.ideaCount === 2
-                                ? ideaIdx === 1
+                              sel.sentences === 2
+                                ? ideaIdx % 2 === 1
                                   ? ['compact_support', 'pillar']
                                   : ['pillar', 'compact_support']
                                 : ['compact_single'];
@@ -1734,64 +2025,105 @@ ${reviewJsonHint}
                                 key={ideaIdx}
                                 className="bg-white/90 rounded-xl border border-slate-200 p-3 space-y-2 shadow-2xs"
                               >
-                                {/* Row 1: Sub-idea label + Linking Word select + Polarity */}
+                                {/* Row 1: Sub-idea label + Role-based Linking Word + 1-2 Sentence Toggle + Polarity */}
                                 <div className="flex flex-wrap items-center justify-between gap-2">
                                   <div className="flex items-center gap-1.5 flex-wrap">
                                     <span className="px-2 py-0.5 rounded-md bg-slate-800 text-white text-[11px] font-extrabold">
                                       Ý {bCfg.bodyIdx}.{ideaIdx}
                                     </span>
-                                    <span className="text-[11px] font-bold text-indigo-700">
-                                      🔗 Từ nối:
-                                    </span>
                                     <select
-                                      value={linkers[linkKey] || WT2_LINKING_OPTIONS[ideaIdx][0].en}
+                                      value={linkers[linkKey] || roleOpts[0].en}
                                       onChange={(e) =>
                                         setLinkers((prev) => ({
                                           ...prev,
                                           [linkKey]: e.target.value
                                         }))
                                       }
-                                      className="text-xs font-extrabold border border-indigo-300 rounded-md px-2 py-0.5 bg-indigo-50 text-indigo-900 cursor-pointer"
+                                      title="Từ nối tự động gợi ý theo vị trí của ý trong đoạn"
+                                      className="text-xs font-extrabold border border-indigo-300 rounded-md px-2 py-0.5 bg-indigo-50 text-indigo-900 cursor-pointer max-w-[230px]"
                                     >
-                                      {WT2_LINKING_OPTIONS[ideaIdx].map((opt) => (
+                                      {roleOpts.map((opt) => (
                                         <option key={opt.en} value={opt.en}>
-                                          {opt.en} ({opt.vi})
+                                          🔗 {opt.en} ({opt.vi})
                                         </option>
                                       ))}
                                     </select>
                                   </div>
 
-                                  <div className="inline-flex rounded-md border border-slate-300 bg-white overflow-hidden text-[11px] font-bold">
-                                    <button
-                                      type="button"
-                                      onClick={() =>
-                                        updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
-                                          polarity: 'positive'
-                                        })
-                                      }
-                                      className={`px-2 py-0.5 cursor-pointer ${
-                                        sel.polarity === 'positive'
-                                          ? 'bg-emerald-600 text-white'
-                                          : 'text-slate-600 hover:bg-slate-50'
-                                      }`}
+                                  <div className="flex items-center gap-1.5 flex-wrap">
+                                    {/* Per-Idea 1 sentence vs 2 sentences toggle */}
+                                    <div
+                                      className="inline-flex rounded-md border border-indigo-300 bg-white overflow-hidden text-[11px] font-extrabold"
+                                      title="Chọn triển khai ý này bằng 1 câu phức gộp gọn hoặc 2 câu (Nêu ý + Nhân–Quả)"
                                     >
-                                      (+) Tích cực
-                                    </button>
-                                    <button
-                                      type="button"
-                                      onClick={() =>
-                                        updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
-                                          polarity: 'negative'
-                                        })
-                                      }
-                                      className={`px-2 py-0.5 cursor-pointer ${
-                                        sel.polarity === 'negative'
-                                          ? 'bg-rose-600 text-white'
-                                          : 'text-slate-600 hover:bg-slate-50'
-                                      }`}
-                                    >
-                                      (-) Tiêu cực
-                                    </button>
+                                      <button
+                                        type="button"
+                                        onClick={() =>
+                                          updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
+                                            sentences: 1
+                                          })
+                                        }
+                                        className={`px-2 py-0.5 cursor-pointer ${
+                                          sel.sentences === 1
+                                            ? 'bg-fuchsia-600 text-white'
+                                            : 'text-slate-600 hover:bg-slate-50'
+                                        }`}
+                                        title="1 câu phức gộp trọn Trụ ý + Nhân–Quả"
+                                      >
+                                        1 câu
+                                      </button>
+                                      <button
+                                        type="button"
+                                        onClick={() =>
+                                          updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
+                                            sentences: 2
+                                          })
+                                        }
+                                        className={`px-2 py-0.5 cursor-pointer border-l border-indigo-200 ${
+                                          sel.sentences === 2
+                                            ? 'bg-indigo-600 text-white'
+                                            : 'text-slate-600 hover:bg-slate-50'
+                                        }`}
+                                        title="2 câu: 1 câu giới thiệu Trụ ý + 1 câu support Nhân–Quả"
+                                      >
+                                        2 câu
+                                      </button>
+                                    </div>
+
+                                    <div className="inline-flex rounded-md border border-slate-300 bg-white overflow-hidden text-[11px] font-bold">
+                                      <button
+                                        type="button"
+                                        onClick={() =>
+                                          updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
+                                            polarity: 'positive'
+                                          })
+                                        }
+                                        className={`px-1.5 py-0.5 cursor-pointer ${
+                                          sel.polarity === 'positive'
+                                            ? 'bg-emerald-600 text-white'
+                                            : 'text-slate-600 hover:bg-slate-50'
+                                        }`}
+                                        title="Nhánh Tích cực (+)"
+                                      >
+                                        (+)
+                                      </button>
+                                      <button
+                                        type="button"
+                                        onClick={() =>
+                                          updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
+                                            polarity: 'negative'
+                                          })
+                                        }
+                                        className={`px-1.5 py-0.5 cursor-pointer border-l border-slate-200 ${
+                                          sel.polarity === 'negative'
+                                            ? 'bg-rose-600 text-white'
+                                            : 'text-slate-600 hover:bg-slate-50'
+                                        }`}
+                                        title="Nhánh Tiêu cực (-)"
+                                      >
+                                        (-)
+                                      </button>
+                                    </div>
                                   </div>
                                 </div>
 
@@ -2017,8 +2349,9 @@ ${reviewJsonHint}
                         }
 
                         if (tok.type === 'linker_select' && tok.slotKey) {
-                          const pos = tok.linkerPos || 1;
-                          const curVal = linkers[tok.slotKey] || WT2_LINKING_OPTIONS[pos][0].en;
+                          const role: LinkerRole = tok.linkerRole || 'start';
+                          const roleOpts = WT2_LINKER_ROLE_OPTIONS[role];
+                          const curVal = linkers[tok.slotKey] || roleOpts[0].en;
                           return (
                             <select
                               key={tIdx}
@@ -2032,7 +2365,7 @@ ${reviewJsonHint}
                               title="Chọn Linking Word mở ý (tránh lặp từ nối giữa các câu/đoạn)"
                               className="inline-block mx-1 my-0.5 px-2.5 py-0.5 rounded-lg border-2 border-indigo-300 bg-indigo-50 text-indigo-900 font-extrabold text-sm cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500"
                             >
-                              {WT2_LINKING_OPTIONS[pos].map((opt) => (
+                              {roleOpts.map((opt) => (
                                 <option key={opt.en} value={opt.en}>
                                   🔗 {opt.en}
                                 </option>
@@ -2386,7 +2719,7 @@ ${reviewJsonHint}
                   {(bodyMode === 'multi'
                     ? [
                         'Đã thay hết [S] và [...] bằng chủ ngữ & danh từ sát đề bài',
-                        'Mỗi Body có Topic Sentence mở đoạn số nhiều + Linking Words đa dạng (không lặp từ nối giữa 2 Body)',
+                        'Mỗi Body có Topic Sentence chia chuẩn số ít (1 ý) / số nhiều (2–5 ý) + Linking Words đa dạng (không lặp từ nối)',
                         'Mỗi Trụ ý được triển khai súc tích 1–2 câu (có Nhân–Quả gọn, không liệt kê cụt ngủn)',
                         'Độ dài bài viết đạt từ 250–320 từ chuẩn mực, chia rõ 4 đoạn văn'
                       ]
