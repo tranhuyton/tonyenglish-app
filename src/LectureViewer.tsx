@@ -3012,7 +3012,8 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                    label: wt2Btn.getAttribute('data-label') || '',
                    category: wt2Btn.getAttribute('data-category') || 'auto',
                    subType: wt2Btn.getAttribute('data-subtype') || '',
-                   taskId: wt2Btn.getAttribute('data-task-id') || ''
+                   taskId: wt2Btn.getAttribute('data-task-id') || '',
+                   bodyMode: wt2Btn.getAttribute('data-body-mode') || ''
                }, '*');
                return false;
            }
@@ -4332,7 +4333,13 @@ export default function LectureViewer({
         label: detail.label || undefined,
         category: detail.category || 'auto',
         subType: detail.subType || undefined,
-        taskId: detail.taskId || undefined
+        taskId: detail.taskId || undefined,
+        bodyMode:
+          detail.bodyMode === 'multi'
+            ? 'multi'
+            : detail.bodyMode === 'single'
+            ? 'single'
+            : undefined
       });
     };
     const onOpenReflex = (ev: Event) => {

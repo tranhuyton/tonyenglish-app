@@ -1,6 +1,7 @@
 // Data & Invariant Templates for IELTS Writing Task 2 — Idea Pillars Studio & 60s Reflex Game
 
 export type Wt2Category = 'discussion' | 'argument' | 'opinion' | 'mixed' | 'twopart';
+export type Wt2BodyMode = 'single' | 'multi';
 export type Wt2TemplateId =
   | 'discussion'
   | 'argument'
@@ -10,7 +11,13 @@ export type Wt2TemplateId =
   | 'mixed_ce'
   | 'twopart';
 
-export type PillarSlotType = 'pillar' | 'cause' | 'effect' | 'example';
+export type PillarSlotType =
+  | 'pillar'
+  | 'cause'
+  | 'effect'
+  | 'example'
+  | 'compact_support'
+  | 'compact_single';
 
 export interface PillarBranch {
   label: string;
@@ -25,6 +32,12 @@ export interface PillarBranch {
   exampleSlot: string;
   /** 4 short memory-anchor keywords: [Pillar Hook, Cause Hook, Effect Hook, Example Source] */
   anchors: [string, string, string, string];
+  /** Phiên bản 2 (2 Ý/Body — 2 câu/ý): Câu thứ 2 gộp gọn Nhân–Quả / Ví dụ của Trụ ý */
+  compactSupportSlot: string;
+  /** Phiên bản 2 (3 Ý/Body — 1 câu gộp/ý): Mệnh đề hoàn chỉnh đứng sau Linking Word ("Firstly, ...") */
+  compactOneSentenceSlot: string;
+  /** Từ khóa mỏ neo rút gọn cho Level 2 ở Phiên bản 2 */
+  compactAnchor: string;
 }
 
 export interface Wt2Pillar {
@@ -62,7 +75,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'free to choose / do whatever they desire',
         'positive effects on mental well-being & attitude → work efficiently',
         "Saigon Social Science Institution's survey (83%)"
-      ]
+      ],
+      compactSupportSlot:
+        'By [V-ing theo đề], [S] are free to pursue what they desire, which improves their mental well-being and boosts work or study efficiency.',
+      compactOneSentenceSlot:
+        'granting greater personal freedom allows [S] to pursue what they truly desire, thereby improving their mental well-being and overall efficiency',
+      compactAnchor: 'personal freedom → free to do what they desire → boost mental well-being & efficiency'
     },
     negative: {
       label: 'Lack of freedom (Bị gò bó / tước đoạt tự do)',
@@ -79,7 +97,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'not be free to do whatever they desire',
         'negative effects on mental well-being & attitude',
         "Saigon Social Science Institution's survey (83% decreased)"
-      ]
+      ],
+      compactSupportSlot:
+        'When restricted by [chủ đề], [S] cannot freely choose what they desire, which harms their attitude and lowers work or study performance.',
+      compactOneSentenceSlot:
+        'a severe lack of freedom prevents [S] from choosing what they desire, negatively affecting their mental well-being and daily performance',
+      compactAnchor: 'lack of freedom → not free to choose → harm mental well-being & performance'
     }
   },
   {
@@ -105,7 +128,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'curb excessive burning of fuel & chemical substances',
         'prevent environmental degradation & global warming',
         'WHO report — respiratory problems (asthma / lung cancer)'
-      ]
+      ],
+      compactSupportSlot:
+        'Curbing excessive fuel consumption cuts toxic emissions released into the air, thereby mitigating global warming and respiratory diseases like asthma.',
+      compactOneSentenceSlot:
+        '[chủ đề] helps reduce air pollution by curbing fuel emissions, thereby protecting public health from asthma and mitigating global warming',
+      compactAnchor: 'decreasing air pollution → curb fuel & toxic emissions → prevent asthma & global warming'
     },
     negative: {
       label: 'Increasing pollution (Gia tăng ô nhiễm nghiêm trọng)',
@@ -123,7 +151,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'excessive burning of fuel → chemical substances in the air',
         'environmental degradation + exacerbate global warming',
         'WHO — shocking number of patients (asthma / lung cancer)'
-      ]
+      ],
+      compactSupportSlot:
+        'The excessive burning of fuel releases vast amounts of toxic chemicals into the atmosphere, exacerbating global warming and respiratory illnesses like asthma.',
+      compactOneSentenceSlot:
+        'the excessive burning of fuel for [chủ đề] releases toxic emissions into the air, exacerbating global warming and respiratory diseases such as asthma',
+      compactAnchor: 'increasing air pollution → burning fuel releases chemicals → global warming & asthma'
     }
   },
   {
@@ -148,7 +181,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'travel / manage work much more efficiently and effectively',
         'more time for personal interests, family & vacation',
         "Hanoi Social Study's research — 79% save 8 hours/week"
-      ]
+      ],
+      compactSupportSlot:
+        'It enables [S] to manage their work and daily travel far more efficiently, leaving more quality time for family and personal relaxation.',
+      compactOneSentenceSlot:
+        '[chủ đề] saves valuable time by helping [S] work and travel more efficiently, leaving extra hours for family and relaxation',
+      compactAnchor: 'time saving → work/travel efficiently → more time for family & relaxation'
     },
     negative: {
       label: 'Time wasting / Time-consuming (Tốn kém thời gian)',
@@ -165,7 +203,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'manage work much less efficiently',
         'less time for family & relaxing on vacation',
         "Hanoi Social Study's research — 79% spend 8 hours/week"
-      ]
+      ],
+      compactSupportSlot:
+        'It causes [S] to manage their schedules far less efficiently, leaving them with much less time for family life or personal relaxation.',
+      compactOneSentenceSlot:
+        '[chủ đề] wastes considerable time and disrupts daily schedules, leaving [S] with far less time for family and relaxation',
+      compactAnchor: 'time wasting → less efficient schedules → less time for family & relaxation'
     }
   },
   {
@@ -190,7 +233,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'highly economical for S to buy / travel / run',
         'afford other necessary items & save up for future plans',
         'Vietnam Economic Times — save up at least 30% of income'
-      ]
+      ],
+      compactSupportSlot:
+        'Choosing [chủ đề] is highly economical for [S], enabling them to afford other necessities and save up at least 30% of their income for future plans.',
+      compactOneSentenceSlot:
+        'it offers cost-saving affordability for [S], allowing them to cover essential expenses and save money for future plans',
+      compactAnchor: 'cost saving → highly economical for S → save money for necessities & future plans'
     },
     negative: {
       label: 'High cost / Expensive price (Chi phí đắt đỏ)',
@@ -207,7 +255,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'highly uneconomical for S',
         'struggle to save up money for future plans',
         'Vietnam Economic Times — waste 30% of income'
-      ]
+      ],
+      compactSupportSlot:
+        'Paying heavily for [chủ đề] is highly uneconomical for [S], making them struggle to afford other necessities or save money for future plans.',
+      compactOneSentenceSlot:
+        'the excessively high cost of [chủ đề] places financial strain on [S], making it harder to afford necessities or save for the future',
+      compactAnchor: 'high cost → uneconomical for S → struggle to save for future plans'
     }
   },
   {
@@ -232,7 +285,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'allow S to buy / travel / access on a regular basis',
         'promote the efficiency of work / study / business',
         'Vietnamnet interview — access at any time they desire'
-      ]
+      ],
+      compactSupportSlot:
+        'It allows [S] to access essential services anytime without geographical barriers, which greatly enhances the efficiency of their work, study, and business.',
+      compactOneSentenceSlot:
+        'it provides unmatched convenience by allowing [S] to access [chủ đề] anytime anywhere, thereby boosting work and study efficiency',
+      compactAnchor: 'convenience → access anytime without barriers → promote work/study efficiency'
     },
     negative: {
       label: 'Inconvenience (Bất tiện, cản trở sinh hoạt)',
@@ -249,7 +307,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'prevent S from doing ... on a regular basis',
         'reduce efficiency of work / study / business',
         'Vietnamnet interview — dissatisfied with restricted access'
-      ]
+      ],
+      compactSupportSlot:
+        'It prevents [S] from traveling or accessing services smoothly on a regular basis, which disrupts daily routines and lowers overall efficiency.',
+      compactOneSentenceSlot:
+        'it causes considerable inconvenience by restricting regular access to [chủ đề], thereby disrupting daily routines and reducing efficiency',
+      compactAnchor: 'inconvenience → restrict regular access → disrupt routines & reduce efficiency'
     }
   },
   {
@@ -274,7 +337,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'access a vast amount of valuable knowledge',
         'greatly broaden their horizons',
         'sociological report — helped students learn more effectively'
-      ]
+      ],
+      compactSupportSlot:
+        'Engaging with [chủ đề] gives [S] access to vast amounts of valuable knowledge, which broadens their horizons and deepens their understanding of the world.',
+      compactOneSentenceSlot:
+        '[chủ đề] provides valuable knowledge that broadens the horizons of [S] and helps them learn far more effectively',
+      compactAnchor: 'valuable knowledge → access vast information → broaden horizons'
     },
     negative: {
       label: 'Misleading / Fake information (Thông tin sai lệch)',
@@ -291,7 +359,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'exposed to unverified news and fake content',
         'distort perception of reality & cause public panic',
         'sociological report — anxiety among youth from false info'
-      ]
+      ],
+      compactSupportSlot:
+        'Relying heavily on [chủ đề] exposes [S] to unverified news and fake content, distorting their perception of reality and causing public anxiety.',
+      compactOneSentenceSlot:
+        'relying on [chủ đề] exposes [S] to misleading information and fake news, distorting reality and causing unnecessary anxiety',
+      compactAnchor: 'misleading information → unverified fake news → distort reality & cause anxiety'
     }
   },
   {
@@ -316,7 +389,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'attract more investments & open up new markets',
         'lower unemployment rate & improve household living standards',
         'VietnamWorks statistics — created thousands of jobs'
-      ]
+      ],
+      compactSupportSlot:
+        'This development attracts new investments and expands markets for [ngành theo đề], thereby lowering unemployment rates and raising household living standards.',
+      compactOneSentenceSlot:
+        '[chủ đề] creates abundant job opportunities by attracting investments and opening new markets, which lowers unemployment and improves living standards',
+      compactAnchor: 'creates job opportunities → attract investments → lower unemployment & raise living standards'
     },
     negative: {
       label: 'Limits job opportunities (Thu hẹp việc làm / Thất nghiệp)',
@@ -333,7 +411,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'shrink traditional labor demand',
         'higher unemployment rate & lower living standards',
         'VietnamWorks statistics — displaced thousands of jobs'
-      ]
+      ],
+      compactSupportSlot:
+        'This shift replaces traditional human labor and shrinks domestic markets, leading to higher unemployment and threatening household living standards.',
+      compactOneSentenceSlot:
+        '[chủ đề] limits local job opportunities by replacing traditional labor, which drives up unemployment and threatens household incomes',
+      compactAnchor: 'limits job opportunities → shrink labor demand → higher unemployment'
     }
   },
   {
@@ -358,7 +441,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'prevent exploitation of vulnerable groups & fundamental rights',
         'protect societal values & public trust',
         'global ethical committees praise strict regulations'
-      ]
+      ],
+      compactSupportSlot:
+        'Strictly regulating [chủ đề] prevents the exploitation of vulnerable groups and safeguards fundamental rights, thereby preserving societal values and public trust.',
+      compactOneSentenceSlot:
+        'strict regulation of [chủ đề] upholds ethical standards by protecting vulnerable groups from exploitation and preserving public trust',
+      compactAnchor: 'uphold ethical standards → prevent exploitation → preserve societal values & trust'
     },
     negative: {
       label: 'Unethical & Moral concerns (Trái đạo đức, cần cấm)',
@@ -375,7 +463,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'violates fundamental rights / exploits vulnerable groups',
         'fundamentally wrong → strictly prohibited by authorities',
         'widely condemned by global ethical committees'
-      ]
+      ],
+      compactSupportSlot:
+        'The practice of [chủ đề] often violates fundamental rights or exploits vulnerable groups, so authorities should strictly regulate or prohibit it.',
+      compactOneSentenceSlot:
+        '[chủ đề] raises serious moral concerns because it violates fundamental rights and exploits vulnerable groups for commercial gain',
+      compactAnchor: 'unethical issues → violate rights / exploit vulnerable groups → need strict regulation'
     }
   },
   {
@@ -400,7 +493,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'participating in ... increases face-to-face interactions',
         'bond strengthened → sense of community',
         'psychological report — feel more connected to peers'
-      ]
+      ],
+      compactSupportSlot:
+        'Participating in [hoạt động theo đề] increases face-to-face interactions among [S], fostering closer relationships and a strong sense of community.',
+      compactOneSentenceSlot:
+        'engaging in [hoạt động theo đề] strengthens social bonds by increasing face-to-face interactions and building a sense of community among [S]',
+      compactAnchor: 'strengthens social bonds → increase face-to-face interactions → sense of community'
     },
     negative: {
       label: 'Weakens social bonds (Làm phai nhạt tình cảm, cô lập)',
@@ -417,7 +515,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'relying heavily on ... reduces face-to-face interactions',
         'bond severely weakened → sense of isolation',
         'psychological report — feel disconnected from peers'
-      ]
+      ],
+      compactSupportSlot:
+        'Over-reliance on [chủ đề] drastically reduces face-to-face interactions among [S], weakening interpersonal relationships and breeding social isolation.',
+      compactOneSentenceSlot:
+        'excessive reliance on [chủ đề] weakens social bonds by reducing face-to-face interactions, leaving [S] feeling isolated from their peers',
+      compactAnchor: 'weakens social bonds → reduce face-to-face interactions → sense of isolation'
     }
   },
 
@@ -444,7 +547,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'avoid sedentary lifestyle & high levels of stress',
         'prevent obesity, heart disease, or depression',
         "Ministry of Health's report — decrease in patients"
-      ]
+      ],
+      compactSupportSlot:
+        'By [V-ing theo đề], [S] avoid a sedentary lifestyle and chronic stress, effectively preventing serious illnesses such as obesity, heart disease, and depression.',
+      compactOneSentenceSlot:
+        '[chủ đề] improves physical and mental health by helping [S] avoid sedentary habits and stress, reducing risks of obesity and depression',
+      compactAnchor: 'improving health → avoid sedentary lifestyle & stress → prevent obesity & depression'
     },
     negative: {
       label: 'Deteriorating physical & mental health (Suy giảm sức khỏe)',
@@ -461,7 +569,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'exposed to sedentary lifestyle / high levels of stress',
         'lead to obesity, heart disease, or depression',
         "Ministry of Health's report — increase in patients"
-      ]
+      ],
+      compactSupportSlot:
+        'Exposure to a sedentary lifestyle and high stress through [chủ đề] harms overall well-being, leading to chronic conditions like obesity, heart disease, or depression.',
+      compactOneSentenceSlot:
+        '[chủ đề] deteriorates physical and mental health by exposing [S] to sedentary habits and high stress, causing obesity or depression',
+      compactAnchor: 'deteriorating health → sedentary lifestyle & stress → obesity, heart disease, depression'
     }
   },
   {
@@ -486,7 +599,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'more opportunities to be exposed to traditional customs',
         'enrich cultural understanding (essential for youth)',
         'Ministry of Culture survey — 75% feel connected to roots'
-      ]
+      ],
+      compactSupportSlot:
+        'It gives [S] greater exposure to traditional customs and heritage, enriching cultural understanding and keeping younger generations connected to their roots.',
+      compactOneSentenceSlot:
+        '[chủ đề] helps preserve cultural identity by exposing [S] to traditional customs and connecting young people to their national roots',
+      compactAnchor: 'preserving cultural identity → exposure to customs → connect youth to roots'
     },
     negative: {
       label: 'Losing cultural identities (Xói mòn bản sắc truyền thống)',
@@ -503,7 +621,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'fewer opportunities for traditional customs',
         'erode national identity (harmful for youth)',
         'Ministry of Culture survey — 75% disconnected from roots'
-      ]
+      ],
+      compactSupportSlot:
+        'Because of [chủ đề], [S] have fewer opportunities to practice traditional customs, which gradually erodes national identity among the younger generation.',
+      compactOneSentenceSlot:
+        '[chủ đề] erodes cultural identities and traditional values, leaving the younger generation increasingly disconnected from their national roots',
+      compactAnchor: 'losing cultural identity → fewer traditional customs → erode national roots'
     }
   },
   {
@@ -528,7 +651,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'receive proper education, financial support, or strict supervision',
         'create a safer and more stable society',
         'criminology reports — dramatic drop in juvenile delinquency'
-      ]
+      ],
+      compactSupportSlot:
+        'Providing proper education, financial support, or strict supervision deters illegal behaviors like juvenile delinquency and builds a safer, more stable society.',
+      compactOneSentenceSlot:
+        'proper education and strict supervision through [chủ đề] deter juvenile delinquency, thereby reducing crime rates and maintaining social order',
+      compactAnchor: 'reducing crime rates → proper education & supervision → safer, stable society'
     },
     negative: {
       label: 'Breeding social unrest & crime (Gia tăng tội phạm)',
@@ -545,7 +673,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'not receive proper education / strict supervision',
         'drive individuals towards theft or vandalism',
         'criminology reports — dramatic surge in juvenile delinquency'
-      ]
+      ],
+      compactSupportSlot:
+        'Without proper education, support, or supervision under [tình huống theo đề], individuals may turn to theft, vandalism, or juvenile delinquency.',
+      compactOneSentenceSlot:
+        'the lack of proper guidance and supervision associated with [chủ đề] breeds social unrest and drives up juvenile delinquency',
+      compactAnchor: 'breeding crime & unrest → lack education/supervision → theft & juvenile delinquency'
     }
   },
   {
@@ -570,7 +703,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'massive reduction in fossil fuels, clean water & forests use',
         'ensure a greener future for next generations',
         'UN Environment Programme — avoid crisis by 2050'
-      ]
+      ],
+      compactSupportSlot:
+        'Curbing the overconsumption of fossil fuels, clean water, and forests relieves pressure on ecosystems and ensures a greener future for next generations.',
+      compactOneSentenceSlot:
+        '[chủ đề] promotes sustainable development by reducing the consumption of fossil fuels, water, and forests, safeguarding future ecosystems',
+      compactAnchor: 'sustainable development → reduce fossil fuels/water/forests use → greener future'
     },
     negative: {
       label: 'Accelerating resource depletion (Cạn kiệt tài nguyên)',
@@ -587,7 +725,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'excessive consumption of fossil fuels, clean water & forests',
         "enormous pressure on Earth's ecosystem → severe shortages",
         'UN Environment Programme — irreversible crisis by 2050'
-      ]
+      ],
+      compactSupportSlot:
+        'Excessive consumption of fossil fuels, clean water, and forests puts immense pressure on ecosystems and risks an irreversible environmental crisis.',
+      compactOneSentenceSlot:
+        '[chủ đề] accelerates resource depletion through the overconsumption of fossil fuels, water, and forests, straining global ecosystems',
+      compactAnchor: 'resource depletion → excessive use of fuels, water & forests → ecosystem crisis'
     }
   },
 
@@ -614,7 +757,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'overcome challenges by themselves → step out of comfort zones',
         'cultivate responsibility & problem-solving skills',
         'educational psychologists — higher resilience in real life'
-      ]
+      ],
+      compactSupportSlot:
+        'Overcoming challenges independently through [chủ đề] pushes [S] out of their comfort zones, cultivating responsibility, resilience, and problem-solving skills.',
+      compactOneSentenceSlot:
+        '[chủ đề] fosters independence by pushing [S] out of their comfort zones, thereby cultivating responsibility and real-life resilience',
+      compactAnchor: 'fostering independence → step out of comfort zones → responsibility & resilience'
     },
     negative: {
       label: 'Demotivating & Passive dependence (Gây ỷ lại, thụ động)',
@@ -631,7 +779,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'heavily reliant on ... → not step out of comfort zones',
         'become passive and highly dependent on others',
         'educational psychologists — lower resilience in real life'
-      ]
+      ],
+      compactSupportSlot:
+        'Heavy reliance on [chủ đề] keeps [S] inside their comfort zones, making them passive, over-dependent on others, and less resilient in real life.',
+      compactOneSentenceSlot:
+        'over-reliance on [chủ đề] demotivates [S] from stepping out of their comfort zones, making them passive and overly dependent on others',
+      compactAnchor: 'demotivating & passive → stay in comfort zones → over-dependent & low resilience'
     }
   },
   {
@@ -656,7 +809,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'think outside the box & explore new ideas',
         'stimulate imagination (vital for future success)',
         'educational research in Finland — innovative solutions'
-      ]
+      ],
+      compactSupportSlot:
+        'Engaging in [chủ đề] encourages [S] to think outside the box and explore new ideas, stimulating imagination and innovative problem-solving.',
+      compactOneSentenceSlot:
+        '[chủ đề] fosters creativity and innovation by encouraging [S] to think outside the box and devise novel solutions to complex problems',
+      compactAnchor: 'fostering creativity → think outside the box → stimulate imagination & innovation'
     },
     negative: {
       label: 'Stifling creativity & innovation (Bóp nghẹt sự sáng tạo)',
@@ -673,7 +831,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'not encouraged to think outside the box',
         'limit cognitive development & imagination',
         'educational research in Finland — struggle with complex problems'
-      ]
+      ],
+      compactSupportSlot:
+        'Rigid restrictions from [chủ đề] discourage [S] from thinking outside the box, limiting their imagination and cognitive development.',
+      compactOneSentenceSlot:
+        '[chủ đề] stifles creativity and innovation by discouraging [S] from thinking outside the box, which hinders their cognitive growth',
+      compactAnchor: 'stifling creativity → cannot think outside the box → limit cognitive growth'
     }
   },
   {
@@ -698,7 +861,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'practice teamwork, problem-solving & time management',
         'thoroughly prepare for real-world challenges',
         'HR survey by VietnamWorks — over 80% of employers prefer hands-on experience'
-      ]
+      ],
+      compactSupportSlot:
+        'Participating in [chủ đề] lets [S] practice teamwork, problem-solving, and time management, preparing them thoroughly for real-world career challenges.',
+      compactOneSentenceSlot:
+        '[chủ đề] equips [S] with practical skills such as teamwork and time management, preparing them effectively for real-world workplaces',
+      compactAnchor: 'equipping practical skills → teamwork & time management → ready for real world'
     },
     negative: {
       label: 'Failing to equip practical skills (Thiếu hụt kỹ năng thực tế)',
@@ -715,7 +883,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'no chance to practice teamwork, problem-solving & time management',
         'struggle with real-world challenges',
         'HR survey by VietnamWorks — over 80% of employers'
-      ]
+      ],
+      compactSupportSlot:
+        'Overemphasizing [chủ đề] deprives [S] of hands-on practice in teamwork and time management, leaving them unprepared for real-world employment.',
+      compactOneSentenceSlot:
+        'focusing solely on [chủ đề] fails to equip [S] with practical skills like teamwork and time management needed by employers',
+      compactAnchor: 'lack practical skills → no teamwork/time management → struggle in real jobs'
     }
   },
   {
@@ -740,7 +913,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'attract foreign investments & generate enormous tax revenues',
         'greatly contribute to national prosperity',
         "Ministry of Finance's data — boosted local economy"
-      ]
+      ],
+      compactSupportSlot:
+        'Investing in [chủ đề] attracts foreign capital and generates substantial tax revenues, directly contributing to national prosperity and public welfare.',
+      compactOneSentenceSlot:
+        '[chủ đề] boosts the economy by attracting foreign investments and generating tax revenues for national prosperity and public welfare',
+      compactAnchor: 'boosting the economy → attract investments & tax revenues → national prosperity'
     },
     negative: {
       label: 'Financial burden on government (Thâm hụt ngân sách nhà nước)',
@@ -757,7 +935,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'require massive funding from national budget to maintain',
         'lead to budget deficits → less money for healthcare or education',
         "Ministry of Finance's data — cost billions annually"
-      ]
+      ],
+      compactSupportSlot:
+        'Operating [chủ đề] demands massive state funding and causes budget deficits, leaving fewer resources for vital sectors like healthcare and education.',
+      compactOneSentenceSlot:
+        '[chủ đề] places a heavy financial burden on the government, causing budget deficits that divert funds away from healthcare and education',
+      compactAnchor: 'financial burden → massive budget funding → deficits hurting healthcare & education'
     }
   },
   {
@@ -782,7 +965,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'closely monitored / protected by authorities',
         'deter crimes & maintain public order',
         'Global Security Council — crime rates dropped by 30%'
-      ]
+      ],
+      compactSupportSlot:
+        'Close protection and monitoring through [chủ đề] help authorities deter criminal acts, safeguard sensitive records, and maintain public order.',
+      compactOneSentenceSlot:
+        '[chủ đề] enhances public security and data protection, helping authorities deter crime by up to 30% and maintain social order',
+      compactAnchor: 'enhancing security → close protection by authorities → deter crime & keep order'
     },
     negative: {
       label: 'Invading personal privacy (Đe dọa quyền riêng tư & dữ liệu)',
@@ -799,7 +987,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'widely shared on the internet / closely monitored',
         "severe threat to private lives & sensitive information",
         'Global Security Council — cybercrimes risen by 30%'
-      ]
+      ],
+      compactSupportSlot:
+        'When personal data is closely tracked or shared online via [chủ đề], individuals face severe privacy breaches and rising cybercrime risks.',
+      compactOneSentenceSlot:
+        '[chủ đề] invades personal privacy because sensitive data shared or tracked online exposes citizens to cybercrime threats',
+      compactAnchor: 'invading privacy → data tracked/shared online → threat of cybercrimes'
     }
   },
   {
@@ -824,7 +1017,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'provide equal access to education, healthcare & technology',
         'bridge the social divide → creating a fairer society',
         'World Bank statistics — reduced poverty rates'
-      ]
+      ],
+      compactSupportSlot:
+        'It grants all citizens equal access to essential education, healthcare, and technology, thereby bridging the social divide and reducing poverty.',
+      compactOneSentenceSlot:
+        '[chủ đề] promotes social equality by providing equal access to education, healthcare, and technology, which bridges the rich-poor divide',
+      compactAnchor: 'promoting equality → equal access to education & healthcare → bridge social divide'
     },
     negative: {
       label: 'Widening rich-poor gap (Nới rộng bất bình đẳng giàu nghèo)',
@@ -841,7 +1039,12 @@ export const WT2_PILLARS: Wt2Pillar[] = [
         'limit availability of education, healthcare & technology',
         'exacerbate social inequality → polarized society',
         'World Bank statistics — sharp increase in wealth disparity'
-      ]
+      ],
+      compactSupportSlot:
+        'It restricts low-income groups from accessing quality education, healthcare, and technology, exacerbating wealth disparity and polarizing society.',
+      compactOneSentenceSlot:
+        '[chủ đề] widens the gap between the rich and the poor by limiting low-income citizens’ access to quality education and healthcare',
+      compactAnchor: 'widening rich-poor gap → limit access for low-income groups → polarized society'
     }
   }
 ];
@@ -907,14 +1110,102 @@ export const WT2_SUBJECT_GROUPS: SubjectGroup[] = [
   }
 ];
 
+export interface LinkingWordGroup {
+  id: string;
+  title: string;
+  subtitle: string;
+  chips: { en: string; vi: string }[];
+}
+
+/** Options cho ô chọn Linking Word trực tiếp trong Khung Bất Biến Phiên bản 2 */
+export const WT2_LINKING_OPTIONS: Record<1 | 2 | 3, { en: string; vi: string }[]> = {
+  1: [
+    { en: 'Firstly,', vi: 'Thứ nhất' },
+    { en: 'To begin with,', vi: 'Trước hết' },
+    { en: 'First and foremost,', vi: 'Đầu tiên & quan trọng nhất' },
+    { en: 'Primarily,', vi: 'Chủ yếu là' }
+  ],
+  2: [
+    { en: 'Furthermore,', vi: 'Hơn nữa (bổ sung ý mạnh)' },
+    { en: 'Moreover,', vi: 'Thêm vào đó (trang trọng)' },
+    { en: 'In addition,', vi: 'Ngoài ra' },
+    { en: 'Additionally,', vi: 'Bên cạnh đó' },
+    { en: 'Equally importantly,', vi: 'Quan trọng không kém' }
+  ],
+  3: [
+    { en: 'Finally,', vi: 'Cuối cùng' },
+    { en: 'Last but not least,', vi: 'Cuối cùng nhưng không kém quan trọng' },
+    { en: 'Above all,', vi: 'Trên hết' }
+  ]
+};
+
+/** Kho Từ nối Điểm cao (Trang 5 bài Idea Pillars) dùng để chèn nhanh ở Bước 2 */
+export const WT2_LINKING_GROUPS: LinkingWordGroup[] = [
+  {
+    id: 'adding',
+    title: '➕ 1. Mở & Thêm Trụ ý',
+    subtitle: 'Chuyển mượt giữa Ý 1 → Ý 2 → Ý 3 trong cùng Body',
+    chips: [
+      { en: 'Firstly, ', vi: 'Thứ nhất' },
+      { en: 'To begin with, ', vi: 'Trước hết' },
+      { en: 'Furthermore, ', vi: 'Xa hơn nữa' },
+      { en: 'Moreover, ', vi: 'Hơn thế nữa' },
+      { en: 'In addition, ', vi: 'Thêm vào đó' },
+      { en: 'Additionally, ', vi: 'Ngoài ra' },
+      { en: 'Another significant factor is ', vi: 'Một yếu tố đáng kể khác là' },
+      { en: 'Finally, ', vi: 'Cuối cùng' }
+    ]
+  },
+  {
+    id: 'cause',
+    title: '❓ 2. Nối Nhân gọn (Cause)',
+    subtitle: 'Giải thích nguyên nhân gọn trong 1–2 câu',
+    chips: [
+      { en: ', since ', vi: 'bởi vì (gộp gọn 1 câu)' },
+      { en: ', as ', vi: 'vì (gộp mệnh đề)' },
+      { en: 'This is mainly because ', vi: 'Chủ yếu là do' },
+      { en: 'This stems from the fact that ', vi: 'Bắt nguồn từ việc' },
+      { en: 'The primary reason behind this is that ', vi: 'Lý do chính là' }
+    ]
+  },
+  {
+    id: 'effect',
+    title: '🎯 3. Nối Quả gọn (Effect)',
+    subtitle: 'Chốt kết quả súc tích không dài dòng',
+    chips: [
+      { en: ', thereby ', vi: 'nhờ đó + V-ing (gộp siêu gọn)' },
+      { en: ', which in turn leads to ', vi: 'từ đó dẫn đến' },
+      { en: 'As a result, ', vi: 'Kết quả là' },
+      { en: 'Consequently, ', vi: 'Hệ quả là' },
+      { en: 'Therefore, ', vi: 'Vì vậy' }
+    ]
+  },
+  {
+    id: 'example',
+    title: '💡 4. Chèn Ví dụ gọn (Example)',
+    subtitle: 'Minh họa nhanh không tốn thêm câu dài',
+    chips: [
+      { en: ', such as ', vi: 'chẳng hạn như (+ cụm N)' },
+      { en: ', namely ', vi: 'cụ thể là' },
+      { en: 'For instance, ', vi: 'Chẳng hạn' },
+      { en: 'For example, ', vi: 'Ví dụ' },
+      { en: 'To illustrate this, ', vi: 'Để minh họa' }
+    ]
+  }
+];
+
 export interface StructurePartToken {
-  type: 'text' | 'topic_input' | 'pillar_slot';
+  type: 'text' | 'topic_input' | 'pillar_slot' | 'linker_select';
   text?: string;
   /** Used in Level 2 Memory Mode to blank out key template connectors */
   memoryHint?: string;
   slotKey?: string;
   placeholder?: string;
   bodyIndex?: 1 | 2;
+  /** Sub-idea index inside a Body when using Phiên bản 2 (Multi-Idea Body) */
+  ideaIndex?: 1 | 2 | 3;
+  /** Linking word position (1 = Idea 1 starter, 2 = Idea 2 adder, 3 = Idea 3 closer) */
+  linkerPos?: 1 | 2 | 3;
   pillarCol?: PillarSlotType;
 }
 
@@ -1435,6 +1726,623 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
   }
 };
 
+/**
+ * Helper tạo chuỗi tokens cho phần thân Body ở Phiên bản 2 (Đa Trụ Ý + Linking Words):
+ * - Nếu count === 2: Mỗi Trụ ý triển khai 2 câu ([Linker + leadIn + Tên Trụ ý]. [1 câu triển khai gọn Nhân–Quả].)
+ * - Nếu count === 3: Mỗi Trụ ý triển khai 1 câu gộp ([Linker + 1 câu phức gộp Trụ ý & Nhân–Quả].)
+ */
+function buildStandardMultiBodyTokens(
+  bodyIndex: 1 | 2,
+  count: 2 | 3,
+  leadIn1: string,
+  leadIn2: string
+): StructurePartToken[] {
+  if (count === 2) {
+    return [
+      { type: 'linker_select', slotKey: `b${bodyIndex}_link_1`, bodyIndex, linkerPos: 1 },
+      { type: 'text', text: ` ${leadIn1}` },
+      {
+        type: 'pillar_slot',
+        slotKey: `b${bodyIndex}_i1_pillar`,
+        bodyIndex,
+        ideaIndex: 1,
+        pillarCol: 'pillar',
+        placeholder: `Thả [Tên Trụ ý ${bodyIndex}.1]`
+      },
+      { type: 'text', text: '. ' },
+      {
+        type: 'pillar_slot',
+        slotKey: `b${bodyIndex}_i1_support`,
+        bodyIndex,
+        ideaIndex: 1,
+        pillarCol: 'compact_support',
+        placeholder: `Thả [Triển khai gọn Ý ${bodyIndex}.1 (1 câu)]`
+      },
+      { type: 'text', text: '. ' },
+      { type: 'linker_select', slotKey: `b${bodyIndex}_link_2`, bodyIndex, linkerPos: 2 },
+      { type: 'text', text: ` ${leadIn2}` },
+      {
+        type: 'pillar_slot',
+        slotKey: `b${bodyIndex}_i2_pillar`,
+        bodyIndex,
+        ideaIndex: 2,
+        pillarCol: 'pillar',
+        placeholder: `Thả [Tên Trụ ý ${bodyIndex}.2]`
+      },
+      { type: 'text', text: '. ' },
+      {
+        type: 'pillar_slot',
+        slotKey: `b${bodyIndex}_i2_support`,
+        bodyIndex,
+        ideaIndex: 2,
+        pillarCol: 'compact_support',
+        placeholder: `Thả [Triển khai gọn Ý ${bodyIndex}.2 (1 câu)]`
+      },
+      { type: 'text', text: '.' }
+    ];
+  }
+
+  return [
+    { type: 'linker_select', slotKey: `b${bodyIndex}_link_1`, bodyIndex, linkerPos: 1 },
+    { type: 'text', text: ' ' },
+    {
+      type: 'pillar_slot',
+      slotKey: `b${bodyIndex}_i1_single`,
+      bodyIndex,
+      ideaIndex: 1,
+      pillarCol: 'compact_single',
+      placeholder: `Thả [Câu gộp Trụ ý ${bodyIndex}.1]`
+    },
+    { type: 'text', text: '. ' },
+    { type: 'linker_select', slotKey: `b${bodyIndex}_link_2`, bodyIndex, linkerPos: 2 },
+    { type: 'text', text: ' ' },
+    {
+      type: 'pillar_slot',
+      slotKey: `b${bodyIndex}_i2_single`,
+      bodyIndex,
+      ideaIndex: 2,
+      pillarCol: 'compact_single',
+      placeholder: `Thả [Câu gộp Trụ ý ${bodyIndex}.2]`
+    },
+    { type: 'text', text: '. ' },
+    { type: 'linker_select', slotKey: `b${bodyIndex}_link_3`, bodyIndex, linkerPos: 3 },
+    { type: 'text', text: ' ' },
+    {
+      type: 'pillar_slot',
+      slotKey: `b${bodyIndex}_i3_single`,
+      bodyIndex,
+      ideaIndex: 3,
+      pillarCol: 'compact_single',
+      placeholder: `Thả [Câu gộp Trụ ý ${bodyIndex}.3]`
+    },
+    { type: 'text', text: '.' }
+  ];
+}
+
+/**
+ * PHIÊN BẢN 2: Khung Cấu Trúc Bất Biến khi mỗi Body có từ 2–3 Trụ ý trở lên
+ * Kết hợp Câu mở đoạn tổng quát (Topic Sentence) + Bộ Linking Words + Rút gọn 1–2 câu/Trụ ý
+ */
+export function buildMultiIdeaParagraphs(
+  templateId: Wt2TemplateId,
+  stance: 'agree' | 'disagree',
+  b1Count: 2 | 3 = 2,
+  b2Count: 2 | 3 = 2
+): {
+  sectionTitle: string;
+  borderColor: string;
+  tokens: StructurePartToken[];
+}[] {
+  const verb = stance === 'agree' ? 'agree' : 'disagree';
+  const noun = stance === 'agree' ? 'agreement' : 'disagreement';
+
+  switch (templateId) {
+    case 'discussion':
+      return [
+        {
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa ý)',
+          borderColor: '#0ea5e9',
+          tokens: [
+            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
+            { type: 'topic_input', slotKey: 'intro_v1', placeholder: 'Quan điểm 1 của đề (mệnh đề S + V)' },
+            { type: 'text', text: '. However, others see that ' },
+            { type: 'topic_input', slotKey: 'intro_v2', placeholder: 'Quan điểm 2 của đề (mệnh đề S + V)' },
+            { type: 'text', text: '. This essay will discuss both points of view and argue that ' },
+            { type: 'topic_input', slotKey: 'intro_thesis', placeholder: 'Quan điểm cá nhân em ủng hộ (S + V)' },
+            { type: 'text', text: '.' }
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 1 (Quan điểm 1 — Ghép ${b1Count} Trụ ý + Linking Words)`,
+          borderColor: '#8b5cf6',
+          tokens: [
+            { type: 'text', text: 'On the one hand, there are several reasons why some people believe that ' },
+            { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Tóm tắt Quan điểm 1 (S + V)' },
+            { type: 'text', text: '. ' },
+            ...buildStandardMultiBodyTokens(
+              1,
+              b1Count,
+              'this viewpoint is closely related to ',
+              'supporters also point to '
+            )
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 2 (Quan điểm 2 em ủng hộ — Ghép ${b2Count} Trụ ý + Linking Words)`,
+          borderColor: '#f59e0b',
+          tokens: [
+            { type: 'text', text: 'On the other hand, I would argue that ' },
+            { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 2' },
+            { type: 'text', text: ' is a much stronger argument for several key reasons. ' },
+            ...buildStandardMultiBodyTokens(
+              2,
+              b2Count,
+              'this position is largely justified by ',
+              'another decisive factor is '
+            )
+          ]
+        },
+        {
+          sectionTitle: '✅ Conclusion',
+          borderColor: '#10b981',
+          tokens: [
+            { type: 'text', text: 'To sum up, although some people argue that ' },
+            { type: 'topic_input', slotKey: 'conc_v1', placeholder: 'Tóm tắt Quan điểm 1' },
+            { type: 'text', text: ', I would argue there is sufficient evidence to demonstrate that ' },
+            { type: 'topic_input', slotKey: 'conc_v2', placeholder: 'Khẳng định lại Quan điểm 2 em ủng hộ' },
+            { type: 'text', text: ', and therefore ' },
+            { type: 'topic_input', slotKey: 'conc_final', placeholder: 'Lời khuyên / Chốt lại vấn đề' },
+            { type: 'text', text: '.' }
+          ]
+        }
+      ];
+
+    case 'argument':
+      return [
+        {
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa Lợi ích & Bất lợi)',
+          borderColor: '#0ea5e9',
+          tokens: [
+            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
+            { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề bài nêu (S + V)' },
+            {
+              type: 'text',
+              text: '. However, others see that this trend is not entirely positive. This essay will examine the principal advantages of this development before outlining its key disadvantages.'
+            }
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 1 (Advantages — Ghép ${b1Count} Lợi ích + Linking Words)`,
+          borderColor: '#8b5cf6',
+          tokens: [
+            { type: 'text', text: 'On the one hand, ' },
+            { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
+            { type: 'text', text: ' brings several notable advantages. ' },
+            ...buildStandardMultiBodyTokens(
+              1,
+              b1Count,
+              'one major benefit is ',
+              'another significant advantage is '
+            )
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 2 (Disadvantages — Ghép ${b2Count} Bất lợi + Linking Words)`,
+          borderColor: '#f59e0b',
+          tokens: [
+            { type: 'text', text: 'On the other hand, there are several serious drawbacks associated with ' },
+            { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
+            { type: 'text', text: '. ' },
+            ...buildStandardMultiBodyTokens(
+              2,
+              b2Count,
+              'a primary concern is ',
+              'this trend also leads to '
+            )
+          ]
+        },
+        {
+          sectionTitle: '✅ Conclusion',
+          borderColor: '#10b981',
+          tokens: [
+            { type: 'text', text: 'To sum up, although there are clear advantages to ' },
+            { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
+            { type: 'text', text: ', such as ' },
+            { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt các lợi ích Body 1' },
+            { type: 'text', text: ', these are perhaps outweighed by the significant disadvantages regarding ' },
+            { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt các bất lợi Body 2' },
+            { type: 'text', text: '.' }
+          ]
+        }
+      ];
+
+    case 'opinion_v1':
+      return [
+        {
+          sectionTitle: `📝 Introduction (Phiên bản 2 • 100% ${verb.toUpperCase()})`,
+          borderColor: '#0ea5e9',
+          tokens: [
+            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
+            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh / Sự việc đề bài nêu (S + V)' },
+            { type: 'text', text: `. I completely ${verb} with the argument that ` },
+            { type: 'topic_input', slotKey: 'intro_claim', placeholder: 'Quan điểm / Đề xuất của đề bài' },
+            {
+              type: 'text',
+              text: `, and this essay will justify my ${noun} from both individual and broader societal perspectives.`
+            }
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 1 (Góc độ Cá nhân / Trực tiếp — Ghép ${b1Count} Trụ ý)`,
+          borderColor: '#8b5cf6',
+          tokens: [
+            { type: 'text', text: `There are several compelling reasons why I ${verb} with ` },
+            { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm V-ing / Danh từ chủ đề đang bàn' },
+            { type: 'text', text: ' on an individual level. ' },
+            ...buildStandardMultiBodyTokens(
+              1,
+              b1Count,
+              'the primary reason is ',
+              'another key factor is '
+            )
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 2 (Góc độ Xã hội & Vĩ mô — Ghép ${b2Count} Trụ ý)`,
+          borderColor: '#f59e0b',
+          tokens: [
+            {
+              type: 'text',
+              text: `From a wider social and economic perspective, additional arguments further reinforce my ${noun}. `
+            },
+            ...buildStandardMultiBodyTokens(
+              2,
+              b2Count,
+              'this stance is strongly supported by ',
+              'it is also closely linked to '
+            )
+          ]
+        },
+        {
+          sectionTitle: '✅ Conclusion',
+          borderColor: '#10b981',
+          tokens: [
+            { type: 'text', text: `To sum up, I completely ${verb} that ` },
+            { type: 'topic_input', slotKey: 'conc_claim', placeholder: 'Nhắc lại quan điểm / Đề xuất' },
+            { type: 'text', text: ', given its profound impacts on ' },
+            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt nhóm lý do Body 1' },
+            { type: 'text', text: ' as well as ' },
+            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt nhóm lý do Body 2' },
+            { type: 'text', text: '.' }
+          ]
+        }
+      ];
+
+    case 'opinion_v2':
+      return [
+        {
+          sectionTitle: `📝 Introduction (Phiên bản 2 • Concession — Strongly ${verb})`,
+          borderColor: '#0ea5e9',
+          tokens: [
+            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
+            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề bài (S + V)' },
+            { type: 'text', text: '. Some people argue that ' },
+            { type: 'topic_input', slotKey: 'intro_prompt_view', placeholder: 'Quan điểm đề bài đưa ra' },
+            { type: 'text', text: '. Although I accept that ' },
+            { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (khía cạnh hợp lý)' },
+            { type: 'text', text: `, I strongly ${verb} with the argument that ` },
+            { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
+            { type: 'text', text: ' for several convincing reasons.' }
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 1 (Nhượng bộ — Ghép ${b1Count} khía cạnh hợp lý + Linking Words)`,
+          borderColor: '#8b5cf6',
+          tokens: [
+            { type: 'text', text: 'Admittedly, there are several understandable reasons why some people support ' },
+            { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
+            { type: 'text', text: '. ' },
+            ...buildStandardMultiBodyTokens(
+              1,
+              b1Count,
+              'one notable point is ',
+              'proponents also highlight '
+            )
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 2 (Bảo vệ quan điểm chính — Ghép ${b2Count} Trụ ý + Linking Words)`,
+          borderColor: '#f59e0b',
+          tokens: [
+            { type: 'text', text: `Nevertheless, there are far more compelling reasons to support my ${noun}. ` },
+            ...buildStandardMultiBodyTokens(
+              2,
+              b2Count,
+              'the most crucial factor is ',
+              'another decisive consideration is '
+            )
+          ]
+        },
+        {
+          sectionTitle: '✅ Conclusion',
+          borderColor: '#10b981',
+          tokens: [
+            { type: 'text', text: 'To sum up, although there are valid arguments for ' },
+            { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ' },
+            { type: 'text', text: ' regarding ' },
+            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt các ý nhượng bộ Body 1' },
+            { type: 'text', text: `, I completely ${verb} that ` },
+            { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính' },
+            { type: 'text', text: ' due to ' },
+            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt các lý do chính Body 2' },
+            { type: 'text', text: '.' }
+          ]
+        }
+      ];
+
+    case 'mixed_ps': {
+      const body2SolTokens: StructurePartToken[] =
+        b2Count === 2
+          ? [
+              { type: 'linker_select', slotKey: 'b2_link_1', bodyIndex: 2, linkerPos: 1 },
+              { type: 'text', text: ' authorities should ' },
+              { type: 'topic_input', slotKey: 'b2_sol1', placeholder: 'Giải pháp 1 (V nguyên thể + chi tiết)' },
+              { type: 'text', text: ', which directly contributes to ' },
+              {
+                type: 'pillar_slot',
+                slotKey: 'b2_i1_pillar',
+                bodyIndex: 2,
+                ideaIndex: 1,
+                pillarCol: 'pillar',
+                placeholder: 'Thả [Tên Trụ ý KQ 2.1]'
+              },
+              { type: 'text', text: '. ' },
+              {
+                type: 'pillar_slot',
+                slotKey: 'b2_i1_support',
+                bodyIndex: 2,
+                ideaIndex: 1,
+                pillarCol: 'compact_support',
+                placeholder: 'Thả [Kết quả gọn Giải pháp 1 (1 câu)]'
+              },
+              { type: 'text', text: '. ' },
+              { type: 'linker_select', slotKey: 'b2_link_2', bodyIndex: 2, linkerPos: 2 },
+              { type: 'text', text: ' individuals and institutions ought to ' },
+              { type: 'topic_input', slotKey: 'b2_sol2', placeholder: 'Giải pháp 2 (V nguyên thể + chi tiết)' },
+              { type: 'text', text: ', which is vital for ' },
+              {
+                type: 'pillar_slot',
+                slotKey: 'b2_i2_pillar',
+                bodyIndex: 2,
+                ideaIndex: 2,
+                pillarCol: 'pillar',
+                placeholder: 'Thả [Tên Trụ ý KQ 2.2]'
+              },
+              { type: 'text', text: '. ' },
+              {
+                type: 'pillar_slot',
+                slotKey: 'b2_i2_support',
+                bodyIndex: 2,
+                ideaIndex: 2,
+                pillarCol: 'compact_support',
+                placeholder: 'Thả [Kết quả gọn Giải pháp 2 (1 câu)]'
+              },
+              { type: 'text', text: '.' }
+            ]
+          : [
+              { type: 'linker_select', slotKey: 'b2_link_1', bodyIndex: 2, linkerPos: 1 },
+              { type: 'text', text: ' authorities should ' },
+              { type: 'topic_input', slotKey: 'b2_sol1', placeholder: 'Giải pháp 1 (V nguyên thể)' },
+              { type: 'text', text: ', since ' },
+              {
+                type: 'pillar_slot',
+                slotKey: 'b2_i1_single',
+                bodyIndex: 2,
+                ideaIndex: 1,
+                pillarCol: 'compact_single',
+                placeholder: 'Thả [Câu gộp Kết quả 2.1]'
+              },
+              { type: 'text', text: '. ' },
+              { type: 'linker_select', slotKey: 'b2_link_2', bodyIndex: 2, linkerPos: 2 },
+              { type: 'text', text: ' schools and organizations can ' },
+              { type: 'topic_input', slotKey: 'b2_sol2', placeholder: 'Giải pháp 2 (V nguyên thể)' },
+              { type: 'text', text: ', as ' },
+              {
+                type: 'pillar_slot',
+                slotKey: 'b2_i2_single',
+                bodyIndex: 2,
+                ideaIndex: 2,
+                pillarCol: 'compact_single',
+                placeholder: 'Thả [Câu gộp Kết quả 2.2]'
+              },
+              { type: 'text', text: '. ' },
+              { type: 'linker_select', slotKey: 'b2_link_3', bodyIndex: 2, linkerPos: 3 },
+              { type: 'text', text: ' citizens themselves ought to ' },
+              { type: 'topic_input', slotKey: 'b2_sol3', placeholder: 'Giải pháp 3 (V nguyên thể)' },
+              { type: 'text', text: ', because ' },
+              {
+                type: 'pillar_slot',
+                slotKey: 'b2_i3_single',
+                bodyIndex: 2,
+                ideaIndex: 3,
+                pillarCol: 'compact_single',
+                placeholder: 'Thả [Câu gộp Kết quả 2.3]'
+              },
+              { type: 'text', text: '.' }
+            ];
+
+      return [
+        {
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa Vấn đề & Giải pháp)',
+          borderColor: '#0ea5e9',
+          tokens: [
+            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
+            { type: 'topic_input', slotKey: 'intro_issue', placeholder: 'Cụm danh từ / V-ing chỉ hiện tượng đề nêu' },
+            {
+              type: 'text',
+              text: ' has become a major issue. This essay will examine the primary problems resulting from this trend and propose practical solutions to address them.'
+            }
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 1 (Problems / Causes — Ghép ${b1Count} Trụ ý + Linking Words)`,
+          borderColor: '#8b5cf6',
+          tokens: [
+            { type: 'text', text: 'There are several pressing problems associated with ' },
+            { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
+            { type: 'text', text: '. ' },
+            ...buildStandardMultiBodyTokens(
+              1,
+              b1Count,
+              'the most evident issue is ',
+              'this phenomenon also gives rise to '
+            )
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 2 (Solutions — Ghép ${b2Count} Giải pháp + Kết quả Trụ ý)`,
+          borderColor: '#f59e0b',
+          tokens: [
+            {
+              type: 'text',
+              text: 'However, several effective measures can be implemented to tackle these problems. '
+            },
+            ...body2SolTokens
+          ]
+        },
+        {
+          sectionTitle: '✅ Conclusion',
+          borderColor: '#10b981',
+          tokens: [
+            { type: 'text', text: 'To sum up, it is evident that ' },
+            { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+            { type: 'text', text: ' causes serious problems such as ' },
+            { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Tóm tắt các vấn đề Body 1' },
+            { type: 'text', text: ', yet practical measures including ' },
+            { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt các giải pháp Body 2' },
+            { type: 'text', text: ' can effectively mitigate this issue.' }
+          ]
+        }
+      ];
+    }
+
+    case 'mixed_ce':
+      return [
+        {
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa Nguyên nhân & Hậu quả)',
+          borderColor: '#0ea5e9',
+          tokens: [
+            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
+            { type: 'topic_input', slotKey: 'intro_event', placeholder: 'Sự việc / Xu hướng đề bài nêu (S + V)' },
+            {
+              type: 'text',
+              text: '. This essay will examine the main factors contributing to this trend and analyze its serious consequences.'
+            }
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 1 (Causes — Ghép ${b1Count} Nguyên nhân + Linking Words)`,
+          borderColor: '#8b5cf6',
+          tokens: [
+            { type: 'text', text: 'Several underlying factors explain the rise of ' },
+            { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
+            { type: 'text', text: '. ' },
+            ...buildStandardMultiBodyTokens(
+              1,
+              b1Count,
+              'one primary driver is ',
+              'another contributing factor is '
+            )
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 2 (Effects — Ghép ${b2Count} Hậu quả + Linking Words)`,
+          borderColor: '#f59e0b',
+          tokens: [
+            { type: 'text', text: 'The consequences of this trend are far-reaching and multifaceted. ' },
+            ...buildStandardMultiBodyTokens(
+              2,
+              b2Count,
+              'it directly results in ',
+              'a further major impact is '
+            )
+          ]
+        },
+        {
+          sectionTitle: '✅ Conclusion',
+          borderColor: '#10b981',
+          tokens: [
+            { type: 'text', text: 'To sum up, it is evident that factors such as ' },
+            { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt các nguyên nhân' },
+            { type: 'text', text: ' have led to ' },
+            { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+            { type: 'text', text: ', resulting in severe repercussions including ' },
+            { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt các hậu quả' },
+            { type: 'text', text: '.' }
+          ]
+        }
+      ];
+
+    case 'twopart':
+      return [
+        {
+          sectionTitle: '📝 Introduction (Phiên bản 2 • Đa ý cho 2 Câu hỏi)',
+          borderColor: '#0ea5e9',
+          tokens: [
+            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
+            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung đề bài đưa ra (S + V)' },
+            { type: 'text', text: '. This essay will firstly address ' },
+            { type: 'topic_input', slotKey: 'intro_q1', placeholder: 'Trọng tâm Câu hỏi 1' },
+            { type: 'text', text: ' and then examine ' },
+            { type: 'topic_input', slotKey: 'intro_q2', placeholder: 'Trọng tâm Câu hỏi 2' },
+            { type: 'text', text: '.' }
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 1 (Answer to Question 1 — Ghép ${b1Count} Trụ ý + Linking Words)`,
+          borderColor: '#8b5cf6',
+          tokens: [
+            { type: 'text', text: 'Regarding the first question, several key points account for ' },
+            { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 1' },
+            { type: 'text', text: '. ' },
+            ...buildStandardMultiBodyTokens(
+              1,
+              b1Count,
+              'a primary aspect is ',
+              'another notable point is '
+            )
+          ]
+        },
+        {
+          sectionTitle: `💡 Body Paragraph 2 (Answer to Question 2 — Ghép ${b2Count} Trụ ý + Linking Words)`,
+          borderColor: '#f59e0b',
+          tokens: [
+            { type: 'text', text: 'With regards to the second question, ' },
+            { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 2' },
+            { type: 'text', text: ' can be approached from multiple angles. ' },
+            ...buildStandardMultiBodyTokens(
+              2,
+              b2Count,
+              'the most significant point involves ',
+              'an additional factor worth noting is '
+            )
+          ]
+        },
+        {
+          sectionTitle: '✅ Conclusion',
+          borderColor: '#10b981',
+          tokens: [
+            { type: 'text', text: 'To sum up, ' },
+            { type: 'topic_input', slotKey: 'conc_q1', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 1' },
+            { type: 'text', text: ', while ' },
+            { type: 'topic_input', slotKey: 'conc_q2', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 2' },
+            { type: 'text', text: '.' }
+          ]
+        }
+      ];
+  }
+}
+
 export interface ReflexQuestion {
   id: string;
   prompt: string;
@@ -1692,10 +2600,16 @@ export const WT2_REFLEX_QUESTIONS: ReflexQuestion[] = [
 export interface Wt2QuestionGuide {
   recommendedCategory: Wt2Category;
   recommendedTemplate: Wt2TemplateId;
+  recommendedBodyMode: Wt2BodyMode;
+  pluralNotice?: string;
   acceptedCategories: Wt2Category[];
   signalHint: string;
   suggestedPillar1: { id: number; polarity: 'positive' | 'negative' };
   suggestedPillar2: { id: number; polarity: 'positive' | 'negative' };
+  suggestedMultiPillars: {
+    b1: { id: number; polarity: 'positive' | 'negative' }[];
+    b2: { id: number; polarity: 'positive' | 'negative' }[];
+  };
 }
 
 export function detectWt2QuestionGuide(topic: string): Wt2QuestionGuide {
@@ -1847,8 +2761,7 @@ export function detectWt2QuestionGuide(topic: string): Wt2QuestionGuide {
     pushUnique(4); // Cost
   }
 
-  pushUnique(6);
-  pushUnique(4);
+  [6, 4, 3, 5, 9, 10].forEach(pushUnique);
 
   const p1Id = candidateIds[0] || 1;
   const p2Id = candidateIds[1] || 2;
@@ -1863,12 +2776,35 @@ export function detectWt2QuestionGuide(topic: string): Wt2QuestionGuide {
     pol2 = recommendedTemplate === 'mixed_ps' ? 'positive' : 'negative';
   }
 
+  const hasPluralTrigger =
+    /\b(advantages|disadvantages|problems|causes|effects|reasons|solutions|measures|benefits|drawbacks|impacts|factors)\b/.test(
+      ql
+    );
+  const recommendedBodyMode: Wt2BodyMode = hasPluralTrigger ? 'multi' : 'single';
+  const pluralNotice = hasPluralTrigger
+    ? 'Đề bài có từ khóa số nhiều (advantages / problems / causes / solutions...) → Rất hợp luyện Phiên bản 2 (2–3 Trụ ý / Body + Linking Words, 1–2 câu/ý) để ăn tối đa Task Response!'
+    : undefined;
+
   return {
     recommendedCategory,
     recommendedTemplate,
+    recommendedBodyMode,
+    pluralNotice,
     acceptedCategories,
     signalHint,
     suggestedPillar1: { id: p1Id, polarity: pol1 },
-    suggestedPillar2: { id: p2Id, polarity: pol2 }
+    suggestedPillar2: { id: p2Id, polarity: pol2 },
+    suggestedMultiPillars: {
+      b1: [
+        { id: candidateIds[0] || 1, polarity: pol1 },
+        { id: candidateIds[2] || 3, polarity: pol1 },
+        { id: candidateIds[4] || 5, polarity: pol1 }
+      ],
+      b2: [
+        { id: candidateIds[1] || 2, polarity: pol2 },
+        { id: candidateIds[3] || 4, polarity: pol2 },
+        { id: candidateIds[5] || 9, polarity: pol2 }
+      ]
+    }
   };
 }
