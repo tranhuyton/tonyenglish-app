@@ -70,6 +70,82 @@ const COL_LABELS: Record<PillarSlotType, { badge: string; vi: string; color: str
 // Shuffled display order so students actively distinguish Cause / Example / Pillar / Effect
 const SHUFFLED_COLS: PillarSlotType[] = ['cause', 'example', 'pillar', 'effect'];
 
+// 3-Tier color & priority metadata matching Lecture "6. Task 2: Idea Pillars" (#28a745 / #007bff / #6f42c1)
+const PILLAR_TIER_META: Record<
+  1 | 2 | 3,
+  {
+    tier: 1 | 2 | 3;
+    tabTitle: string;
+    tabSub: string;
+    shortBadge: string;
+    headerTitle: string;
+    priorityHint: string;
+    optgroupLabel: string;
+    activeTabCls: string;
+    inactiveTabCls: string;
+    headerCls: string;
+    panelBorderCls: string;
+    cardBorderCls: string;
+    nameTextCls: string;
+    pillBadgeCls: string;
+  }
+> = {
+  1: {
+    tier: 1,
+    tabTitle: '🟢 Ưu tiên 1: Bảng Xanh Lá (9 Trụ ý)',
+    tabSub: 'Phổ biến & dễ dùng nhất • Cần thuộc lòng',
+    shortBadge: '🟢 Bảng Xanh Lá • Ưu tiên 1',
+    headerTitle: 'TIER 1: BASIC (9 TRỤ Ý) — BẢNG MÀU XANH LÁ CÂY • ƯU TIÊN SỐ 1',
+    priorityHint:
+      'Những ý phổ biến & dễ dùng nhất — luôn dò nhặt ở bảng này trước tiên (bắt buộc học thuộc lòng).',
+    optgroupLabel:
+      '🟢 BẢNG XANH LÁ — ƯU TIÊN 1: Phổ biến & dễ dùng nhất • Cần thuộc (#1 - #9)',
+    activeTabCls: 'bg-[#28a745] text-white border-[#28a745] shadow-xs',
+    inactiveTabCls: 'bg-[#eaf8ee] text-[#19692c] border-[#28a745]/45 hover:bg-[#dcf2e2]',
+    headerCls: 'bg-[#28a745] text-white',
+    panelBorderCls: 'border-[#28a745]/45 bg-[#f6fcf8]',
+    cardBorderCls: 'border-l-4 border-l-[#28a745] border-slate-200 hover:border-[#28a745]/65',
+    nameTextCls: 'text-[#1e7e34]',
+    pillBadgeCls: 'bg-[#eaf8ee] text-[#19692c] border-[#28a745]/40'
+  },
+  2: {
+    tier: 2,
+    tabTitle: '🔵 Ưu tiên 2: Bảng Xanh Da Trời (4 Trụ ý)',
+    tabSub: 'Khi Xanh lá chưa hợp • Cần thuộc lòng',
+    shortBadge: '🔵 Bảng Xanh Da Trời • Ưu tiên 2',
+    headerTitle: 'TIER 2: ADVANCED (4 TRỤ Ý BỔ SUNG) — BẢNG XANH DA TRỜI • ƯU TIÊN SỐ 2',
+    priorityHint:
+      'Chỉ chuyển sang bảng này khi Bảng Xanh Lá chưa nhặt được ý phù hợp (cần học thuộc lòng cùng Bảng Xanh Lá).',
+    optgroupLabel:
+      '🔵 BẢNG XANH DA TRỜI — ƯU TIÊN 2: Dùng khi Xanh lá chưa khớp • Cần thuộc (#10 - #13)',
+    activeTabCls: 'bg-[#007bff] text-white border-[#007bff] shadow-xs',
+    inactiveTabCls: 'bg-[#e8f3ff] text-[#0056b3] border-[#007bff]/45 hover:bg-[#d8ebff]',
+    headerCls: 'bg-[#007bff] text-white',
+    panelBorderCls: 'border-[#007bff]/45 bg-[#f5faff]',
+    cardBorderCls: 'border-l-4 border-l-[#007bff] border-slate-200 hover:border-[#007bff]/65',
+    nameTextCls: 'text-[#0062cc]',
+    pillBadgeCls: 'bg-[#e8f3ff] text-[#0056b3] border-[#007bff]/40'
+  },
+  3: {
+    tier: 3,
+    tabTitle: '🟣 Ưu tiên 3: Bảng Tím (6 Trụ ý)',
+    tabSub: 'Dự phòng khi 2 bảng đầu chưa khớp',
+    shortBadge: '🟣 Bảng Tím • Ưu tiên 3 (Dự phòng)',
+    headerTitle: 'TIER 3: PRO MASTER (6 TRỤ Ý CHUYÊN SÂU) — BẢNG TÍM • ƯU TIÊN SỐ 3 (DỰ PHÒNG)',
+    priorityHint:
+      'Chỉ dùng tiếp khi cả Bảng Xanh Lá & Xanh Da Trời đều không khớp đề (học sinh chủ yếu cần thuộc 2 bảng đầu).',
+    optgroupLabel:
+      '🟣 BẢNG TÍM — ƯU TIÊN 3: Dự phòng khi 2 bảng đầu chưa khớp (#14 - #19)',
+    activeTabCls: 'bg-[#6f42c1] text-white border-[#6f42c1] shadow-xs',
+    inactiveTabCls: 'bg-[#f3effb] text-[#533094] border-[#6f42c1]/45 hover:bg-[#e8e0f8]',
+    headerCls: 'bg-[#6f42c1] text-white',
+    panelBorderCls: 'border-[#6f42c1]/45 bg-[#faf8fe]',
+    cardBorderCls: 'border-l-4 border-l-[#6f42c1] border-slate-200 hover:border-[#6f42c1]/65',
+    nameTextCls: 'text-[#59339d]',
+    pillBadgeCls: 'bg-[#f3effb] text-[#533094] border-[#6f42c1]/40'
+  }
+};
+
 const DEFAULT_LINKERS: Record<string, string> = {
   b1_link_1: 'Firstly,',
   b1_link_2: 'Furthermore,',
@@ -121,6 +197,7 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   const [difficulty, setDifficulty] = useState<'level1' | 'level2'>('level1');
   const [bodyMode, setBodyMode] = useState<Wt2BodyMode>('single');
   const [showPillarTableDrawer, setShowPillarTableDrawer] = useState(false);
+  const [drawerTierTab, setDrawerTierTab] = useState<1 | 2 | 3>(1);
 
   // Editable prompt support (when launched from Structure / Idea Pillars pages without a locked taskId)
   const [activeTopic, setActiveTopic] = useState<string>('');
@@ -210,6 +287,7 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     const { pol1, pol2 } = defaultPolaritiesForTemplate(initCat, initTpl);
 
     setStep(1);
+    setDrawerTierTab(1);
     setActiveTopic(initTopic);
     setIsEditingTopic(false);
     setBodyMode(initBodyMode);
@@ -921,123 +999,206 @@ ${reviewJsonHint}
                 onClick={() => setShowPillarTableDrawer((v) => !v)}
                 className="px-3 py-1.5 rounded-lg bg-white border border-sky-300 text-sky-700 hover:bg-sky-50 text-xs font-bold cursor-pointer shadow-2xs"
               >
-                {showPillarTableDrawer ? 'Ẩn bảng 19 Trụ ý' : '📋 Tra cứu nhanh 19 Trụ ý'}
+                {showPillarTableDrawer ? 'Ẩn bảng 19 Trụ ý ▲' : '🟢🔵🟣 Bảng 19 Trụ ý (3 bảng ưu tiên)'}
               </button>
             )}
           </div>
         </div>
 
-        {/* ==================== OPTIONAL 19-PILLAR QUICK DRAWER ==================== */}
-        {showPillarTableDrawer && difficulty === 'level1' && (
-          <div className="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 max-h-60 overflow-y-auto shrink-0">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-extrabold uppercase text-slate-500">
-                {bodyMode === 'multi'
-                  ? 'Bảng Tra Cứu Nhanh 19 Idea Pillars (Bấm để gán vào từng Ý của Body 1 / Body 2)'
-                  : 'Bảng Tra Cứu Nhanh 19 Idea Pillars (Bấm để gán ngay vào Body 1 hoặc Body 2)'}
-              </span>
-              <button
-                onClick={() => setShowPillarTableDrawer(false)}
-                className="text-xs font-bold text-slate-500 hover:text-slate-800 cursor-pointer"
-              >
-                Đóng bảng ▲
-              </button>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {WT2_PILLARS.map((p) => (
-                <div
-                  key={p.id}
-                  className="border border-slate-200 rounded-lg p-2 bg-slate-50/70 flex items-center justify-between gap-2 text-xs"
+        {/* ==================== OPTIONAL 19-PILLAR QUICK DRAWER (3 COLOR-CODED PRIORITY TABS) ==================== */}
+        {showPillarTableDrawer && difficulty === 'level1' && (() => {
+          const activeMeta = PILLAR_TIER_META[drawerTierTab];
+          const getTierAssignedBadge = (tier: 1 | 2 | 3): string | null => {
+            if (bodyMode === 'single') {
+              const tags: string[] = [];
+              if (pillar1.tier === tier) tags.push(`B1(${pillar1.code})`);
+              if (pillar2.tier === tier) tags.push(`B2(${pillar2.code})`);
+              return tags.length > 0 ? `✓ ${tags.join(' • ')}` : null;
+            }
+            const usedB1 = multiPillars[1]
+              .slice(0, b1IdeaCount)
+              .filter((s) => (WT2_PILLARS.find((x) => x.id === s.id)?.tier ?? 1) === tier).length;
+            const usedB2 = multiPillars[2]
+              .slice(0, b2IdeaCount)
+              .filter((s) => (WT2_PILLARS.find((x) => x.id === s.id)?.tier ?? 1) === tier).length;
+            const total = usedB1 + usedB2;
+            return total > 0 ? `✓ Đang chọn ${total} ý` : null;
+          };
+
+          return (
+            <div className="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 max-h-80 overflow-y-auto shrink-0 space-y-2.5">
+              {/* Top Priority Rule Strip */}
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <div className="text-xs text-slate-600 font-semibold leading-snug">
+                  <span className="font-extrabold uppercase text-slate-800 mr-1.5">
+                    Thứ tự ưu tiên nhặt ý:
+                  </span>
+                  <span className="font-bold text-[#19692c]">1. Bảng Xanh Lá</span> →{' '}
+                  <span className="font-bold text-[#0056b3]">2. Bảng Xanh Da Trời</span> →{' '}
+                  <span className="font-bold text-[#533094]">3. Bảng Tím (Dự phòng)</span>
+                  <span className="hidden md:inline text-slate-500">
+                    {' '}
+                    • Chủ yếu chỉ cần thuộc lòng Bảng Xanh Lá &amp; Xanh Da Trời!
+                  </span>
+                </div>
+                <button
+                  onClick={() => setShowPillarTableDrawer(false)}
+                  className="text-xs font-bold text-slate-500 hover:text-slate-800 cursor-pointer shrink-0"
                 >
-                  <div className="min-w-0">
-                    <div className="font-bold text-slate-800 truncate">
-                      {p.icon} {p.code}. {p.name}{' '}
-                      <span className="text-[10px] text-slate-400 font-semibold">(T{p.tier})</span>
-                    </div>
-                    <div className="text-[11px] text-slate-500 truncate">{p.viName}</div>
-                  </div>
-                  {bodyMode === 'single' ? (
-                    <div className="flex items-center gap-1 shrink-0">
-                      <button
-                        onClick={() => {
-                          setPillar1Id(p.id);
-                          setSlottedPillarKeys((prev) => ({
-                            ...prev,
-                            '1_pillar': false,
-                            '1_cause': false,
-                            '1_effect': false,
-                            '1_example': false
-                          }));
-                        }}
-                        className={`px-2 py-1 rounded font-bold cursor-pointer ${
-                          pillar1Id === p.id
-                            ? 'bg-violet-600 text-white'
-                            : 'bg-violet-100 text-violet-700 hover:bg-violet-200'
-                        }`}
-                      >
-                        Body 1
-                      </button>
-                      <button
-                        onClick={() => {
-                          setPillar2Id(p.id);
-                          setSlottedPillarKeys((prev) => ({
-                            ...prev,
-                            '2_pillar': false,
-                            '2_cause': false,
-                            '2_effect': false,
-                            '2_example': false
-                          }));
-                        }}
-                        className={`px-2 py-1 rounded font-bold cursor-pointer ${
-                          pillar2Id === p.id
-                            ? 'bg-amber-500 text-white'
-                            : 'bg-amber-100 text-amber-800 hover:bg-amber-200'
-                        }`}
-                      >
-                        Body 2
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="flex flex-wrap items-center justify-end gap-1 shrink-0">
-                      {(Array.from({ length: b1IdeaCount }, (_, i) => (i + 1) as 1 | 2 | 3)).map(
-                        (ideaIdx) => (
+                  Đóng bảng ▲
+                </button>
+              </div>
+
+              {/* 3 Color-Coded Inner Tabs (#28a745 Green | #007bff Sky Blue | #6f42c1 Purple) */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+                {([1, 2, 3] as const).map((tier) => {
+                  const meta = PILLAR_TIER_META[tier];
+                  const isActive = drawerTierTab === tier;
+                  const assignedBadge = getTierAssignedBadge(tier);
+                  return (
+                    <button
+                      key={tier}
+                      type="button"
+                      onClick={() => setDrawerTierTab(tier)}
+                      className={`rounded-lg border px-3 py-1.5 text-left transition-all cursor-pointer flex items-center justify-between gap-2 ${
+                        isActive ? meta.activeTabCls : meta.inactiveTabCls
+                      }`}
+                    >
+                      <div className="min-w-0">
+                        <div className="text-xs font-extrabold truncate">{meta.tabTitle}</div>
+                        <div
+                          className={`text-[10.5px] truncate ${
+                            isActive ? 'text-white/90 font-medium' : 'opacity-85 font-medium'
+                          }`}
+                        >
+                          {meta.tabSub}
+                        </div>
+                      </div>
+                      {assignedBadge && (
+                        <span
+                          className={`px-1.5 py-0.5 rounded text-[10px] font-extrabold shrink-0 ${
+                            isActive
+                              ? 'bg-white/25 text-white border border-white/40'
+                              : 'bg-white/90 text-slate-800 border border-black/10'
+                          }`}
+                        >
+                          {assignedBadge}
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Active Color Table Container (matching "6. Task 2: Idea Pillars") */}
+              <div className={`rounded-xl border overflow-hidden ${activeMeta.panelBorderCls}`}>
+                <div
+                  className={`px-3 py-1.5 flex flex-wrap items-center justify-between gap-1.5 ${activeMeta.headerCls}`}
+                >
+                  <span className="text-[11px] sm:text-xs font-extrabold tracking-wide uppercase">
+                    {activeMeta.headerTitle}
+                  </span>
+                  <span className="text-[11px] text-white/95 font-medium">
+                    {activeMeta.priorityHint}
+                  </span>
+                </div>
+
+                <div className="p-2.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                  {WT2_PILLARS.filter((p) => p.tier === drawerTierTab).map((p) => (
+                    <div
+                      key={p.id}
+                      className={`border rounded-lg p-2 bg-white flex items-center justify-between gap-2 text-xs shadow-2xs transition-all ${activeMeta.cardBorderCls}`}
+                    >
+                      <div className="min-w-0">
+                        <div className={`font-extrabold truncate ${activeMeta.nameTextCls}`}>
+                          {p.icon} {p.id}. {p.name}
+                        </div>
+                        <div className="text-[11px] text-slate-500 truncate">{p.viName}</div>
+                      </div>
+                      {bodyMode === 'single' ? (
+                        <div className="flex items-center gap-1 shrink-0">
                           <button
-                            key={`b1_${ideaIdx}`}
-                            onClick={() => updateMultiIdea(1, ideaIdx, { id: p.id })}
-                            className={`px-1.5 py-0.5 rounded text-[11px] font-bold cursor-pointer ${
-                              multiPillars[1][ideaIdx - 1].id === p.id
+                            onClick={() => {
+                              setPillar1Id(p.id);
+                              setSlottedPillarKeys((prev) => ({
+                                ...prev,
+                                '1_pillar': false,
+                                '1_cause': false,
+                                '1_effect': false,
+                                '1_example': false
+                              }));
+                            }}
+                            className={`px-2 py-1 rounded font-bold cursor-pointer ${
+                              pillar1Id === p.id
                                 ? 'bg-violet-600 text-white'
                                 : 'bg-violet-100 text-violet-700 hover:bg-violet-200'
                             }`}
-                            title={`Gán vào Body 1 • Ý ${ideaIdx}`}
                           >
-                            B1•Ý{ideaIdx}
+                            Body 1
                           </button>
-                        )
-                      )}
-                      {(Array.from({ length: b2IdeaCount }, (_, i) => (i + 1) as 1 | 2 | 3)).map(
-                        (ideaIdx) => (
                           <button
-                            key={`b2_${ideaIdx}`}
-                            onClick={() => updateMultiIdea(2, ideaIdx, { id: p.id })}
-                            className={`px-1.5 py-0.5 rounded text-[11px] font-bold cursor-pointer ${
-                              multiPillars[2][ideaIdx - 1].id === p.id
+                            onClick={() => {
+                              setPillar2Id(p.id);
+                              setSlottedPillarKeys((prev) => ({
+                                ...prev,
+                                '2_pillar': false,
+                                '2_cause': false,
+                                '2_effect': false,
+                                '2_example': false
+                              }));
+                            }}
+                            className={`px-2 py-1 rounded font-bold cursor-pointer ${
+                              pillar2Id === p.id
                                 ? 'bg-amber-500 text-white'
                                 : 'bg-amber-100 text-amber-800 hover:bg-amber-200'
                             }`}
-                            title={`Gán vào Body 2 • Ý ${ideaIdx}`}
                           >
-                            B2•Ý{ideaIdx}
+                            Body 2
                           </button>
-                        )
+                        </div>
+                      ) : (
+                        <div className="flex flex-wrap items-center justify-end gap-1 shrink-0">
+                          {(Array.from({ length: b1IdeaCount }, (_, i) => (i + 1) as 1 | 2 | 3)).map(
+                            (ideaIdx) => (
+                              <button
+                                key={`b1_${ideaIdx}`}
+                                onClick={() => updateMultiIdea(1, ideaIdx, { id: p.id })}
+                                className={`px-1.5 py-0.5 rounded text-[11px] font-bold cursor-pointer ${
+                                  multiPillars[1][ideaIdx - 1].id === p.id
+                                    ? 'bg-violet-600 text-white'
+                                    : 'bg-violet-100 text-violet-700 hover:bg-violet-200'
+                                }`}
+                                title={`Gán vào Body 1 • Ý ${ideaIdx}`}
+                              >
+                                B1•Ý{ideaIdx}
+                              </button>
+                            )
+                          )}
+                          {(Array.from({ length: b2IdeaCount }, (_, i) => (i + 1) as 1 | 2 | 3)).map(
+                            (ideaIdx) => (
+                              <button
+                                key={`b2_${ideaIdx}`}
+                                onClick={() => updateMultiIdea(2, ideaIdx, { id: p.id })}
+                                className={`px-1.5 py-0.5 rounded text-[11px] font-bold cursor-pointer ${
+                                  multiPillars[2][ideaIdx - 1].id === p.id
+                                    ? 'bg-amber-500 text-white'
+                                    : 'bg-amber-100 text-amber-800 hover:bg-amber-200'
+                                }`}
+                                title={`Gán vào Body 2 • Ý ${ideaIdx}`}
+                              >
+                                B2•Ý{ideaIdx}
+                              </button>
+                            )
+                          )}
+                        </div>
                       )}
                     </div>
-                  )}
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* ==================== MAIN SCROLLABLE BODY ==================== */}
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-5">
@@ -1347,40 +1508,54 @@ ${reviewJsonHint}
                         </div>
                       </div>
 
-                      <select
-                        value={cfg.pillar.id}
-                        onChange={(e) => {
-                          const nextId = Number(e.target.value);
-                          cfg.setPillarId(nextId);
-                          setSlottedPillarKeys((prev) => ({
-                            ...prev,
-                            [`${cfg.bodyIdx}_pillar`]: false,
-                            [`${cfg.bodyIdx}_cause`]: false,
-                            [`${cfg.bodyIdx}_effect`]: false,
-                            [`${cfg.bodyIdx}_example`]: false
-                          }));
-                        }}
-                        className="w-full text-sm font-bold border border-slate-300 rounded-lg px-3 py-2 bg-white text-slate-800 shadow-2xs"
-                      >
-                        {[1, 2, 3].map((tier) => (
-                          <optgroup
-                            key={tier}
-                            label={
-                              tier === 1
-                                ? '🟢 TIER 1: BASIC (#1 - #9)'
-                                : tier === 2
-                                ? '🔵 TIER 2: ADVANCED (#10 - #13)'
-                                : '🟣 TIER 3: PRO MASTER (#14 - #19)'
-                            }
+                      <div className="space-y-1.5">
+                        <div className="flex flex-wrap items-center justify-between gap-1.5 text-[11px]">
+                          <span
+                            className={`px-2 py-0.5 rounded-md border font-extrabold ${
+                              PILLAR_TIER_META[cfg.pillar.tier].pillBadgeCls
+                            }`}
                           >
-                            {WT2_PILLARS.filter((p) => p.tier === tier).map((p) => (
-                              <option key={p.id} value={p.id}>
-                                {p.code}. {p.name} — {p.viName}
-                              </option>
-                            ))}
-                          </optgroup>
-                        ))}
-                      </select>
+                            {PILLAR_TIER_META[cfg.pillar.tier].shortBadge}
+                          </span>
+                          {difficulty === 'level1' && (
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setDrawerTierTab(cfg.pillar.tier);
+                                setShowPillarTableDrawer(true);
+                              }}
+                              className="text-sky-700 hover:text-sky-900 font-bold cursor-pointer underline decoration-dotted"
+                            >
+                              Đổi nhanh từ 3 bảng màu ▲
+                            </button>
+                          )}
+                        </div>
+                        <select
+                          value={cfg.pillar.id}
+                          onChange={(e) => {
+                            const nextId = Number(e.target.value);
+                            cfg.setPillarId(nextId);
+                            setSlottedPillarKeys((prev) => ({
+                              ...prev,
+                              [`${cfg.bodyIdx}_pillar`]: false,
+                              [`${cfg.bodyIdx}_cause`]: false,
+                              [`${cfg.bodyIdx}_effect`]: false,
+                              [`${cfg.bodyIdx}_example`]: false
+                            }));
+                          }}
+                          className="w-full text-sm font-bold border border-slate-300 rounded-lg px-3 py-2 bg-white text-slate-800 shadow-2xs"
+                        >
+                          {([1, 2, 3] as const).map((tier) => (
+                            <optgroup key={tier} label={PILLAR_TIER_META[tier].optgroupLabel}>
+                              {WT2_PILLARS.filter((p) => p.tier === tier).map((p) => (
+                                <option key={p.id} value={p.id}>
+                                  {p.id}. {p.name} — {p.viName}
+                                </option>
+                              ))}
+                            </optgroup>
+                          ))}
+                        </select>
+                      </div>
 
                       <div className="text-xs text-slate-600 font-medium">
                         {difficulty === 'level1'
@@ -1620,35 +1795,58 @@ ${reviewJsonHint}
                                   </div>
                                 </div>
 
-                                {/* Row 2: 19-Pillar dropdown */}
-                                <select
-                                  value={sel.id}
-                                  onChange={(e) =>
-                                    updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
-                                      id: Number(e.target.value)
-                                    })
-                                  }
-                                  className="w-full text-xs sm:text-sm font-bold border border-slate-300 rounded-lg px-2.5 py-1.5 bg-white text-slate-800"
-                                >
-                                  {[1, 2, 3].map((tier) => (
-                                    <optgroup
-                                      key={tier}
-                                      label={
-                                        tier === 1
-                                          ? '🟢 TIER 1: BASIC (#1 - #9)'
-                                          : tier === 2
-                                          ? '🔵 TIER 2: ADVANCED (#10 - #13)'
-                                          : '🟣 TIER 3: PRO MASTER (#14 - #19)'
-                                      }
-                                    >
-                                      {WT2_PILLARS.filter((p) => p.tier === tier).map((p) => (
-                                        <option key={p.id} value={p.id}>
-                                          {p.code}. {p.name} — {p.viName}
-                                        </option>
-                                      ))}
-                                    </optgroup>
-                                  ))}
-                                </select>
+                                {/* Row 2: 19-Pillar dropdown + Tier priority badge */}
+                                {(() => {
+                                  const selPillar =
+                                    WT2_PILLARS.find((x) => x.id === sel.id) || WT2_PILLARS[0];
+                                  return (
+                                    <div className="space-y-1">
+                                      <div className="flex flex-wrap items-center justify-between gap-1 text-[10.5px]">
+                                        <span
+                                          className={`px-1.5 py-0.5 rounded border font-extrabold ${
+                                            PILLAR_TIER_META[selPillar.tier].pillBadgeCls
+                                          }`}
+                                        >
+                                          {PILLAR_TIER_META[selPillar.tier].shortBadge}
+                                        </span>
+                                        {difficulty === 'level1' && (
+                                          <button
+                                            type="button"
+                                            onClick={() => {
+                                              setDrawerTierTab(selPillar.tier);
+                                              setShowPillarTableDrawer(true);
+                                            }}
+                                            className="text-sky-700 hover:text-sky-900 font-bold cursor-pointer underline decoration-dotted"
+                                          >
+                                            Mở 3 bảng màu ▲
+                                          </button>
+                                        )}
+                                      </div>
+                                      <select
+                                        value={sel.id}
+                                        onChange={(e) =>
+                                          updateMultiIdea(bCfg.bodyIdx, ideaIdx, {
+                                            id: Number(e.target.value)
+                                          })
+                                        }
+                                        className="w-full text-xs sm:text-sm font-bold border border-slate-300 rounded-lg px-2.5 py-1.5 bg-white text-slate-800"
+                                      >
+                                        {([1, 2, 3] as const).map((tier) => (
+                                          <optgroup
+                                            key={tier}
+                                            label={PILLAR_TIER_META[tier].optgroupLabel}
+                                          >
+                                            {WT2_PILLARS.filter((p) => p.tier === tier).map((p) => (
+                                              <option key={p.id} value={p.id}>
+                                                {p.id}. {p.name} — {p.viName}
+                                              </option>
+                                            ))}
+                                          </optgroup>
+                                        ))}
+                                      </select>
+                                    </div>
+                                  );
+                                })()}
 
                                 {/* Row 3: Compact 1–2 sentence draggable/clickable cards */}
                                 <div className="space-y-1.5">
@@ -2467,6 +2665,7 @@ export const Wt2PillarReflexModal: React.FC<Wt2PillarReflexModalProps> = ({
   const [qIdx, setQIdx] = useState(0);
   const [pickedCat, setPickedCat] = useState<Wt2Category | null>(null);
   const [pickedPillars, setPickedPillars] = useState<number[]>([]);
+  const [reflexTierTab, setReflexTierTab] = useState<1 | 2 | 3>(1);
   const [checked, setChecked] = useState(false);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
@@ -2475,7 +2674,8 @@ export const Wt2PillarReflexModal: React.FC<Wt2PillarReflexModalProps> = ({
 
   // ---- Tab 2: 4-Anchor Memory Drill State ----
   const [anchorMode, setAnchorMode] = useState<'cards' | 'quiz'>('cards');
-  const [tierFilter, setTierFilter] = useState<0 | 1 | 2 | 3>(0);
+  const [tierFilter, setTierFilter] = useState<0 | 1 | 2 | 3>(1);
+  const [quizCoreOnly, setQuizCoreOnly] = useState<boolean>(true);
   const [flippedIds, setFlippedIds] = useState<Record<number, boolean>>({});
   const [memorizedIds, setMemorizedIds] = useState<number[]>(() => {
     try {
@@ -2502,15 +2702,19 @@ export const Wt2PillarReflexModal: React.FC<Wt2PillarReflexModalProps> = ({
     setQIdx(0);
     setPickedCat(null);
     setPickedPillars([]);
+    setReflexTierTab(1);
     setChecked(false);
     setScore(0);
     setStreak(0);
     setSecondsLeft(60);
   };
 
-  const generateNextAnchorQuiz = () => {
-    const target = WT2_PILLARS[Math.floor(Math.random() * WT2_PILLARS.length)];
-    const distractors = WT2_PILLARS.filter((p) => p.id !== target.id)
+  const generateNextAnchorQuiz = (overrideCoreOnly?: boolean) => {
+    const coreOnly = overrideCoreOnly !== undefined ? overrideCoreOnly : quizCoreOnly;
+    const pool = coreOnly ? WT2_PILLARS.filter((p) => p.tier <= 2) : WT2_PILLARS;
+    const target = pool[Math.floor(Math.random() * pool.length)];
+    const distractors = pool
+      .filter((p) => p.id !== target.id)
       .sort(() => Math.random() - 0.5)
       .slice(0, 3);
     const options = [target, ...distractors].sort(() => Math.random() - 0.5);
@@ -2592,6 +2796,7 @@ export const Wt2PillarReflexModal: React.FC<Wt2PillarReflexModalProps> = ({
     setQIdx((i) => i + 1);
     setPickedCat(null);
     setPickedPillars([]);
+    setReflexTierTab(1);
     setChecked(false);
     setSecondsLeft(60);
   };
@@ -2750,44 +2955,129 @@ export const Wt2PillarReflexModal: React.FC<Wt2PillarReflexModalProps> = ({
                     </div>
                   </div>
 
-                  {/* Question B: Pick 2 Pillars */}
+                  {/* Question B: Pick 2 Pillars (3 Color-Coded Priority Tabs) */}
                   <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-2.5">
                     <div className="flex items-center justify-between flex-wrap gap-2">
                       <span className="text-xs font-extrabold uppercase text-violet-700">
-                        Bước 2 • Nhặt nhanh 2 Trụ Ý khớp nhất cho Body 1 &amp; Body 2 ({pickedPillars.length}/2 đã chọn)
+                        Bước 2 • Nhặt nhanh 2 Trụ Ý theo thứ tự ưu tiên ({pickedPillars.length}/2 đã chọn)
+                      </span>
+                      <span className="text-[11px] font-semibold text-slate-500">
+                        🟢 Xanh Lá trước → 🔵 Xanh Da Trời → 🟣 Tím (Dự phòng)
                       </span>
                     </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-                      {WT2_PILLARS.map((p) => {
-                        const isPicked = pickedPillars.includes(p.id);
-                        const isBest = currentQ.bestPillars.includes(p.id);
-                        const isPrimary = currentQ.primaryPair.includes(p.id);
-                        let cls = 'border-slate-200 bg-white hover:border-violet-400 text-slate-800';
-                        if (checked) {
-                          if (isPrimary)
-                            cls = 'border-emerald-600 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-400';
-                          else if (isBest)
-                            cls = 'border-teal-400 bg-teal-50/70 text-teal-900';
-                          else if (isPicked)
-                            cls = 'border-rose-400 bg-rose-50 text-rose-800';
-                        } else if (isPicked) {
-                          cls = 'border-violet-600 bg-violet-50 text-violet-950 ring-2 ring-violet-500';
-                        }
+
+                    {/* 3 Color-Coded Inner Priority Tabs */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+                      {([1, 2, 3] as const).map((tier) => {
+                        const meta = PILLAR_TIER_META[tier];
+                        const isActive = reflexTierTab === tier;
+                        const pickedInTier = pickedPillars.filter(
+                          (id) => (WT2_PILLARS.find((p) => p.id === id)?.tier ?? 1) === tier
+                        ).length;
+                        const hasPrimaryInTier =
+                          checked &&
+                          currentQ.primaryPair.some(
+                            (id) => (WT2_PILLARS.find((p) => p.id === id)?.tier ?? 1) === tier
+                          );
 
                         return (
                           <button
-                            key={p.id}
-                            disabled={checked}
-                            onClick={() => togglePickPillar(p.id)}
-                            className={`p-2 rounded-lg border text-left text-xs transition-all cursor-pointer ${cls}`}
+                            key={tier}
+                            type="button"
+                            onClick={() => setReflexTierTab(tier)}
+                            className={`rounded-lg border px-2.5 py-1.5 text-left transition-all cursor-pointer flex items-center justify-between gap-1.5 ${
+                              isActive ? meta.activeTabCls : meta.inactiveTabCls
+                            }`}
                           >
-                            <div className="font-extrabold truncate">
-                              {p.icon} {p.code}. {p.name}
+                            <div className="min-w-0">
+                              <div className="text-xs font-extrabold truncate">{meta.tabTitle}</div>
+                              <div
+                                className={`text-[10px] truncate ${
+                                  isActive ? 'text-white/90' : 'opacity-85'
+                                }`}
+                              >
+                                {meta.tabSub}
+                              </div>
                             </div>
-                            <div className="text-[11px] text-slate-500 truncate">{p.viName}</div>
+                            <div className="flex items-center gap-1 shrink-0">
+                              {pickedInTier > 0 && (
+                                <span
+                                  className={`px-1.5 py-0.5 rounded text-[10px] font-extrabold ${
+                                    isActive
+                                      ? 'bg-white/25 text-white border border-white/40'
+                                      : 'bg-white text-slate-800 border border-black/10'
+                                  }`}
+                                >
+                                  Đã chọn {pickedInTier}
+                                </span>
+                              )}
+                              {hasPrimaryInTier && (
+                                <span className="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-amber-300 text-amber-950">
+                                  ⭐ Đáp án
+                                </span>
+                              )}
+                            </div>
                           </button>
                         );
                       })}
+                    </div>
+
+                    <div
+                      className={`rounded-xl border overflow-hidden ${
+                        PILLAR_TIER_META[reflexTierTab].panelBorderCls
+                      }`}
+                    >
+                      <div
+                        className={`px-3 py-1.5 flex flex-wrap items-center justify-between gap-1.5 ${
+                          PILLAR_TIER_META[reflexTierTab].headerCls
+                        }`}
+                      >
+                        <span className="text-[11px] font-extrabold uppercase">
+                          {PILLAR_TIER_META[reflexTierTab].headerTitle}
+                        </span>
+                        <span className="text-[10.5px] text-white/95 font-medium">
+                          {PILLAR_TIER_META[reflexTierTab].priorityHint}
+                        </span>
+                      </div>
+                      <div className="p-2.5 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        {WT2_PILLARS.filter((p) => p.tier === reflexTierTab).map((p) => {
+                          const isPicked = pickedPillars.includes(p.id);
+                          const isBest = currentQ.bestPillars.includes(p.id);
+                          const isPrimary = currentQ.primaryPair.includes(p.id);
+                          const tierMeta = PILLAR_TIER_META[p.tier];
+                          let cls = `bg-white text-slate-800 ${tierMeta.cardBorderCls}`;
+                          if (checked) {
+                            if (isPrimary)
+                              cls =
+                                'border-2 border-emerald-600 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-400';
+                            else if (isBest)
+                              cls = 'border-2 border-teal-400 bg-teal-50/70 text-teal-900';
+                            else if (isPicked)
+                              cls = 'border-2 border-rose-400 bg-rose-50 text-rose-800';
+                          } else if (isPicked) {
+                            cls =
+                              'border-2 border-violet-600 bg-violet-50 text-violet-950 ring-2 ring-violet-500';
+                          }
+
+                          return (
+                            <button
+                              key={p.id}
+                              disabled={checked}
+                              onClick={() => togglePickPillar(p.id)}
+                              className={`p-2 rounded-lg border text-left text-xs transition-all cursor-pointer ${cls}`}
+                            >
+                              <div
+                                className={`font-extrabold truncate ${
+                                  !checked && !isPicked ? tierMeta.nameTextCls : ''
+                                }`}
+                              >
+                                {p.icon} {p.id}. {p.name}
+                              </div>
+                              <div className="text-[11px] text-slate-500 truncate">{p.viName}</div>
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
 
@@ -2879,211 +3169,318 @@ export const Wt2PillarReflexModal: React.FC<Wt2PillarReflexModalProps> = ({
           )}
 
           {/* ==================== TAB 2: 4-ANCHOR MEMORY DRILL ==================== */}
-          {tab === 'anchors' && (
-            <div className="space-y-4">
-              <div className="flex flex-wrap items-center justify-between gap-2 bg-white border border-slate-200 rounded-xl p-3">
-                <div className="inline-flex rounded-lg bg-slate-100 p-1 text-xs font-bold">
-                  <button
-                    onClick={() => setAnchorMode('cards')}
-                    className={`px-3 py-1.5 rounded-md cursor-pointer ${
-                      anchorMode === 'cards' ? 'bg-white text-indigo-900 shadow-2xs' : 'text-slate-600'
-                    }`}
-                  >
-                    🃏 Thẻ 4 Từ Khóa Mỏ Neo (19 Trụ ý)
-                  </button>
-                  <button
-                    onClick={() => setAnchorMode('quiz')}
-                    className={`px-3 py-1.5 rounded-md cursor-pointer ${
-                      anchorMode === 'quiz' ? 'bg-white text-indigo-900 shadow-2xs' : 'text-slate-600'
-                    }`}
-                  >
-                    🎯 Quiz Bắn Tốc Độ Nhớ Số Liệu &amp; Cụm Vàng
-                  </button>
-                </div>
+          {tab === 'anchors' && (() => {
+            const coreMemorizedCount = memorizedIds.filter((id) => {
+              const p = WT2_PILLARS.find((x) => x.id === id);
+              return p && p.tier <= 2;
+            }).length;
 
-                {anchorMode === 'cards' && (
-                  <div className="flex items-center gap-1.5 text-xs font-bold">
-                    {[
-                      { t: 0 as const, lbl: 'Tất cả (19)' },
-                      { t: 1 as const, lbl: 'Tier 1 (9)' },
-                      { t: 2 as const, lbl: 'Tier 2 (4)' },
-                      { t: 3 as const, lbl: 'Tier 3 (6)' }
-                    ].map((f) => (
-                      <button
-                        key={f.t}
-                        onClick={() => setTierFilter(f.t)}
-                        className={`px-2.5 py-1 rounded-lg cursor-pointer ${
-                          tierFilter === f.t
-                            ? 'bg-indigo-600 text-white'
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                        }`}
-                      >
-                        {f.lbl}
-                      </button>
-                    ))}
+            return (
+              <div className="space-y-4">
+                {/* Priority Memorization Strategy Banner */}
+                <div className="bg-gradient-to-r from-[#eaf8ee] via-[#e8f3ff] to-[#f3effb] border border-slate-200 rounded-xl px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs">
+                  <div className="text-slate-800 leading-relaxed">
+                    <strong className="text-[#19692c]">🎯 Thứ tự ưu tiên học thuộc:</strong> Học sinh chủ yếu chỉ cần thuộc nằm lòng{' '}
+                    <strong className="text-[#19692c]">Bảng Xanh Lá (9 ý dễ dùng nhất)</strong> +{' '}
+                    <strong className="text-[#0056b3]">Bảng Xanh Da Trời (4 ý bổ sung)</strong> ={' '}
+                    <strong>13 Trụ ý cốt lõi</strong>. Khi đi thi, dò Bảng Xanh Lá trước → chưa khớp mới sang Xanh Da Trời → bất đắc dĩ mới dùng{' '}
+                    <strong className="text-[#533094]">Bảng Tím (6 ý dự phòng)</strong>.
                   </div>
-                )}
-              </div>
-
-              {anchorMode === 'cards' ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {WT2_PILLARS.filter((p) => tierFilter === 0 || p.tier === tierFilter).map((p) => {
-                    const isFlipped = !!flippedIds[p.id];
-                    const isDone = memorizedIds.includes(p.id);
-
-                    return (
-                      <div
-                        key={p.id}
-                        className={`rounded-xl border-2 p-4 bg-white shadow-2xs flex flex-col justify-between gap-3 transition-all ${
-                          isDone ? 'border-emerald-400 bg-emerald-50/25' : 'border-slate-200'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between gap-2">
-                          <div>
-                            <span className="font-black text-slate-900 text-sm sm:text-base">
-                              {p.icon} {p.code}. {p.name}
-                            </span>
-                            <div className="text-xs text-slate-500">{p.viName}</div>
-                          </div>
-                          <button
-                            onClick={() => toggleMemorized(p.id)}
-                            className={`px-2.5 py-1 rounded-full text-xs font-bold cursor-pointer border ${
-                              isDone
-                                ? 'bg-emerald-600 text-white border-emerald-600'
-                                : 'bg-slate-50 text-slate-600 border-slate-300 hover:bg-slate-100'
-                            }`}
-                          >
-                            {isDone ? '✓ Đã thuộc lòng' : 'Đánh dấu đã thuộc'}
-                          </button>
-                        </div>
-
-                        {!isFlipped ? (
-                          <div className="bg-indigo-50/60 border border-indigo-200 rounded-lg p-3 space-y-1.5 text-xs">
-                            <div className="font-extrabold text-indigo-900 uppercase text-[11px]">
-                              🔑 4 Từ Khóa Neo Trí Nhớ (Nhẩm thành câu trước khi lật):
-                            </div>
-                            <div>
-                              <strong>1. Tên Trụ ý:</strong> {p.positive.anchors[0]} /{' '}
-                              {p.negative.anchors[0]}
-                            </div>
-                            <div>
-                              <strong>2. Cause:</strong> {p.positive.anchors[1]}
-                            </div>
-                            <div>
-                              <strong>3. Effect:</strong> {p.positive.anchors[2]}
-                            </div>
-                            <div>
-                              <strong>4. Example:</strong> {p.positive.anchors[3]}
-                            </div>
-                          </div>
-                        ) : (
-                          <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 space-y-2 text-xs leading-relaxed">
-                            <div>
-                              <span className="font-extrabold text-emerald-700">(+) Nhánh Tích cực (4 câu PEEL):</span>{' '}
-                              {p.positive.pillarSlot} → {p.positive.causeSlot} → {p.positive.effectSlot} →{' '}
-                              <em>{p.positive.exampleSlot}</em>
-                            </div>
-                            <div className="border-t border-slate-200 pt-2">
-                              <span className="font-extrabold text-rose-700">(-) Nhánh Tiêu cực (4 câu PEEL):</span>{' '}
-                              {p.negative.pillarSlot} → {p.negative.causeSlot} → {p.negative.effectSlot} →{' '}
-                              <em>{p.negative.exampleSlot}</em>
-                            </div>
-                            <div className="border-t border-indigo-200 pt-2 bg-indigo-50/60 -mx-3 -mb-3 p-2.5 rounded-b-lg space-y-1">
-                              <div className="font-extrabold text-indigo-800 text-[11px] uppercase">
-                                🔗 Rút gọn 1–2 câu cho Phiên bản 2 (Đa Trụ ý + Linking Words):
-                              </div>
-                              <div>
-                                <strong className="text-emerald-700">(+):</strong> {p.positive.compactOneSentenceSlot}.
-                              </div>
-                              <div>
-                                <strong className="text-rose-700">(-):</strong> {p.negative.compactOneSentenceSlot}.
-                              </div>
-                            </div>
-                          </div>
-                        )}
-
-                        <button
-                          onClick={() =>
-                            setFlippedIds((prev) => ({ ...prev, [p.id]: !prev[p.id] }))
-                          }
-                          className="w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold cursor-pointer"
-                        >
-                          {isFlipped
-                            ? '🙈 Ẩn câu đầy đủ (Quay về 4 Từ khóa mỏ neo)'
-                            : '👀 Lật xem câu đầy đủ (+/-) trong bảng Pillars'}
-                        </button>
-                      </div>
-                    );
-                  })}
+                  <span className="px-2.5 py-1 rounded-full bg-white border border-emerald-300 text-emerald-800 font-extrabold shrink-0">
+                    ✓ Đã thuộc cốt lõi: {coreMemorizedCount}/13 ý
+                  </span>
                 </div>
-              ) : (
-                anchorQuizItem && (
-                  <div className="bg-white rounded-2xl border border-slate-200 p-6 max-w-2xl mx-auto space-y-5 shadow-xs">
-                    <div className="flex items-center justify-between text-xs font-bold text-slate-600">
-                      <span>🎯 Nhìn cụm mỏ neo → Bấm chọn đúng Trụ ý trong 3 giây!</span>
-                      <span className="text-indigo-700 font-extrabold">
-                        🔥 Chuỗi đúng liên tiếp: {anchorQuizStreak}
-                      </span>
-                    </div>
 
-                    <div className="bg-purple-50 border-l-4 border-purple-600 rounded-xl p-5 space-y-1.5">
-                      <div className="text-[11px] font-extrabold uppercase text-purple-700">
-                        {anchorQuizItem.clueType}
-                      </div>
-                      <div className="text-lg font-black text-slate-900">
-                        “{anchorQuizItem.clueText}”
-                      </div>
-                    </div>
+                <div className="flex flex-wrap items-center justify-between gap-2 bg-white border border-slate-200 rounded-xl p-3">
+                  <div className="inline-flex rounded-lg bg-slate-100 p-1 text-xs font-bold">
+                    <button
+                      onClick={() => setAnchorMode('cards')}
+                      className={`px-3 py-1.5 rounded-md cursor-pointer ${
+                        anchorMode === 'cards'
+                          ? 'bg-white text-indigo-900 shadow-2xs'
+                          : 'text-slate-600'
+                      }`}
+                    >
+                      🃏 Thẻ 4 Từ Khóa Mỏ Neo
+                    </button>
+                    <button
+                      onClick={() => setAnchorMode('quiz')}
+                      className={`px-3 py-1.5 rounded-md cursor-pointer ${
+                        anchorMode === 'quiz'
+                          ? 'bg-white text-indigo-900 shadow-2xs'
+                          : 'text-slate-600'
+                      }`}
+                    >
+                      🎯 Quiz Bắn Tốc Độ Nhớ Số Liệu &amp; Cụm Vàng
+                    </button>
+                  </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {anchorQuizItem.options.map((opt) => {
-                        const isPicked = anchorQuizPicked === opt.id;
-                        const isRight = opt.id === anchorQuizItem.correctId;
-                        let cls = 'border-slate-200 bg-slate-50 hover:border-indigo-400 text-slate-800';
-                        if (anchorQuizPicked !== null) {
-                          if (isRight)
-                            cls = 'border-emerald-500 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-400';
-                          else if (isPicked)
-                            cls = 'border-rose-400 bg-rose-50 text-rose-800';
-                        }
+                  {anchorMode === 'cards' ? (
+                    <div className="flex flex-wrap items-center gap-1.5 text-xs font-bold">
+                      {([1, 2, 3] as const).map((t) => {
+                        const meta = PILLAR_TIER_META[t];
+                        const isActive = tierFilter === t;
+                        const lbl =
+                          t === 1
+                            ? '🟢 Ưu tiên 1: Xanh Lá (9)'
+                            : t === 2
+                            ? '🔵 Ưu tiên 2: Xanh Da Trời (4)'
+                            : '🟣 Ưu tiên 3: Tím • Dự phòng (6)';
                         return (
                           <button
-                            key={opt.id}
-                            disabled={anchorQuizPicked !== null}
-                            onClick={() => {
-                              setAnchorQuizPicked(opt.id);
-                              if (opt.id === anchorQuizItem.correctId) {
-                                setAnchorQuizStreak((s) => s + 1);
-                              } else {
-                                setAnchorQuizStreak(0);
-                              }
-                            }}
-                            className={`p-3.5 rounded-xl border text-left transition-all cursor-pointer ${cls}`}
+                            key={t}
+                            onClick={() => setTierFilter(t)}
+                            className={`px-2.5 py-1 rounded-lg border cursor-pointer transition-all ${
+                              isActive ? meta.activeTabCls : meta.inactiveTabCls
+                            }`}
                           >
-                            <div className="font-extrabold text-sm">
-                              {opt.icon} {opt.code}. {opt.name}
-                            </div>
-                            <div className="text-xs text-slate-500">{opt.viName}</div>
+                            {lbl}
                           </button>
                         );
                       })}
+                      <button
+                        onClick={() => setTierFilter(0)}
+                        className={`px-2.5 py-1 rounded-lg border cursor-pointer transition-all ${
+                          tierFilter === 0
+                            ? 'bg-slate-800 text-white border-slate-800'
+                            : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200'
+                        }`}
+                      >
+                        Tất cả (19)
+                      </button>
                     </div>
+                  ) : (
+                    <div className="inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs font-bold">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setQuizCoreOnly(true);
+                          generateNextAnchorQuiz(true);
+                        }}
+                        className={`px-2.5 py-1 rounded-md cursor-pointer ${
+                          quizCoreOnly
+                            ? 'bg-[#28a745] text-white shadow-2xs'
+                            : 'text-slate-600 hover:bg-slate-100'
+                        }`}
+                      >
+                        🟢🔵 13 Trụ ý cốt lõi (Cần thuộc)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setQuizCoreOnly(false);
+                          generateNextAnchorQuiz(false);
+                        }}
+                        className={`px-2.5 py-1 rounded-md cursor-pointer ${
+                          !quizCoreOnly
+                            ? 'bg-[#6f42c1] text-white shadow-2xs'
+                            : 'text-slate-600 hover:bg-slate-100'
+                        }`}
+                      >
+                        Tất cả 19 Trụ ý
+                      </button>
+                    </div>
+                  )}
+                </div>
 
-                    {anchorQuizPicked !== null && (
-                      <div className="flex justify-end">
-                        <button
-                          onClick={generateNextAnchorQuiz}
-                          className="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-sm cursor-pointer"
-                        >
-                          Câu tiếp theo →
-                        </button>
+                {anchorMode === 'cards' ? (
+                  <div className="space-y-2.5">
+                    {tierFilter !== 0 && (
+                      <div
+                        className={`rounded-xl px-3.5 py-2 flex flex-wrap items-center justify-between gap-2 ${
+                          PILLAR_TIER_META[tierFilter].headerCls
+                        }`}
+                      >
+                        <span className="text-xs font-extrabold uppercase">
+                          {PILLAR_TIER_META[tierFilter].headerTitle}
+                        </span>
+                        <span className="text-xs text-white/95 font-medium">
+                          {PILLAR_TIER_META[tierFilter].priorityHint}
+                        </span>
                       </div>
                     )}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {WT2_PILLARS.filter((p) => tierFilter === 0 || p.tier === tierFilter).map(
+                        (p) => {
+                          const isFlipped = !!flippedIds[p.id];
+                          const isDone = memorizedIds.includes(p.id);
+                          const pMeta = PILLAR_TIER_META[p.tier];
+
+                          return (
+                            <div
+                              key={p.id}
+                              className={`rounded-xl border p-4 bg-white shadow-2xs flex flex-col justify-between gap-3 transition-all ${
+                                isDone
+                                  ? 'border-2 border-emerald-400 bg-emerald-50/25'
+                                  : pMeta.cardBorderCls
+                              }`}
+                            >
+                              <div className="flex items-start justify-between gap-2">
+                                <div>
+                                  <div className="flex items-center gap-1.5 flex-wrap mb-0.5">
+                                    <span
+                                      className={`font-black text-sm sm:text-base ${pMeta.nameTextCls}`}
+                                    >
+                                      {p.icon} {p.id}. {p.name}
+                                    </span>
+                                    <span
+                                      className={`text-[10px] font-extrabold px-1.5 py-0.5 rounded border ${pMeta.pillBadgeCls}`}
+                                    >
+                                      {pMeta.shortBadge}
+                                    </span>
+                                  </div>
+                                  <div className="text-xs text-slate-500">{p.viName}</div>
+                                </div>
+                                <button
+                                  onClick={() => toggleMemorized(p.id)}
+                                  className={`px-2.5 py-1 rounded-full text-xs font-bold cursor-pointer border shrink-0 ${
+                                    isDone
+                                      ? 'bg-emerald-600 text-white border-emerald-600'
+                                      : 'bg-slate-50 text-slate-600 border-slate-300 hover:bg-slate-100'
+                                  }`}
+                                >
+                                  {isDone ? '✓ Đã thuộc lòng' : 'Đánh dấu đã thuộc'}
+                                </button>
+                              </div>
+
+                              {!isFlipped ? (
+                                <div className="bg-indigo-50/60 border border-indigo-200 rounded-lg p-3 space-y-1.5 text-xs">
+                                  <div className="font-extrabold text-indigo-900 uppercase text-[11px]">
+                                    🔑 4 Từ Khóa Neo Trí Nhớ (Nhẩm thành câu trước khi lật):
+                                  </div>
+                                  <div>
+                                    <strong>1. Tên Trụ ý:</strong> {p.positive.anchors[0]} /{' '}
+                                    {p.negative.anchors[0]}
+                                  </div>
+                                  <div>
+                                    <strong>2. Cause:</strong> {p.positive.anchors[1]}
+                                  </div>
+                                  <div>
+                                    <strong>3. Effect:</strong> {p.positive.anchors[2]}
+                                  </div>
+                                  <div>
+                                    <strong>4. Example:</strong> {p.positive.anchors[3]}
+                                  </div>
+                                </div>
+                              ) : (
+                                <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 space-y-2 text-xs leading-relaxed">
+                                  <div>
+                                    <span className="font-extrabold text-emerald-700">
+                                      (+) Nhánh Tích cực (4 câu PEEL):
+                                    </span>{' '}
+                                    {p.positive.pillarSlot} → {p.positive.causeSlot} →{' '}
+                                    {p.positive.effectSlot} → <em>{p.positive.exampleSlot}</em>
+                                  </div>
+                                  <div className="border-t border-slate-200 pt-2">
+                                    <span className="font-extrabold text-rose-700">
+                                      (-) Nhánh Tiêu cực (4 câu PEEL):
+                                    </span>{' '}
+                                    {p.negative.pillarSlot} → {p.negative.causeSlot} →{' '}
+                                    {p.negative.effectSlot} → <em>{p.negative.exampleSlot}</em>
+                                  </div>
+                                  <div className="border-t border-indigo-200 pt-2 bg-indigo-50/60 -mx-3 -mb-3 p-2.5 rounded-b-lg space-y-1">
+                                    <div className="font-extrabold text-indigo-800 text-[11px] uppercase">
+                                      🔗 Rút gọn 1–2 câu cho Phiên bản 2 (Đa Trụ ý + Linking Words):
+                                    </div>
+                                    <div>
+                                      <strong className="text-emerald-700">(+):</strong>{' '}
+                                      {p.positive.compactOneSentenceSlot}.
+                                    </div>
+                                    <div>
+                                      <strong className="text-rose-700">(-):</strong>{' '}
+                                      {p.negative.compactOneSentenceSlot}.
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+
+                              <button
+                                onClick={() =>
+                                  setFlippedIds((prev) => ({ ...prev, [p.id]: !prev[p.id] }))
+                                }
+                                className="w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold cursor-pointer"
+                              >
+                                {isFlipped
+                                  ? '🙈 Ẩn câu đầy đủ (Quay về 4 Từ khóa mỏ neo)'
+                                  : '👀 Lật xem câu đầy đủ (+/-) trong bảng Pillars'}
+                              </button>
+                            </div>
+                          );
+                        }
+                      )}
+                    </div>
                   </div>
-                )
-              )}
-            </div>
-          )}
+                ) : (
+                  anchorQuizItem && (
+                    <div className="bg-white rounded-2xl border border-slate-200 p-6 max-w-2xl mx-auto space-y-5 shadow-xs">
+                      <div className="flex items-center justify-between text-xs font-bold text-slate-600">
+                        <span>🎯 Nhìn cụm mỏ neo → Bấm chọn đúng Trụ ý trong 3 giây!</span>
+                        <span className="text-indigo-700 font-extrabold">
+                          🔥 Chuỗi đúng liên tiếp: {anchorQuizStreak}
+                        </span>
+                      </div>
+
+                      <div className="bg-purple-50 border-l-4 border-purple-600 rounded-xl p-5 space-y-1.5">
+                        <div className="text-[11px] font-extrabold uppercase text-purple-700">
+                          {anchorQuizItem.clueType}
+                        </div>
+                        <div className="text-lg font-black text-slate-900">
+                          “{anchorQuizItem.clueText}”
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {anchorQuizItem.options.map((opt) => {
+                          const isPicked = anchorQuizPicked === opt.id;
+                          const isRight = opt.id === anchorQuizItem.correctId;
+                          const optMeta = PILLAR_TIER_META[opt.tier];
+                          let cls = `bg-white text-slate-800 ${optMeta.cardBorderCls}`;
+                          if (anchorQuizPicked !== null) {
+                            if (isRight)
+                              cls =
+                                'border-2 border-emerald-500 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-400';
+                            else if (isPicked)
+                              cls = 'border-2 border-rose-400 bg-rose-50 text-rose-800';
+                          }
+                          return (
+                            <button
+                              key={opt.id}
+                              disabled={anchorQuizPicked !== null}
+                              onClick={() => {
+                                setAnchorQuizPicked(opt.id);
+                                if (opt.id === anchorQuizItem.correctId) {
+                                  setAnchorQuizStreak((s) => s + 1);
+                                } else {
+                                  setAnchorQuizStreak(0);
+                                }
+                              }}
+                              className={`p-3.5 rounded-xl border text-left transition-all cursor-pointer ${cls}`}
+                            >
+                              <div className={`font-extrabold text-sm ${optMeta.nameTextCls}`}>
+                                {opt.icon} {opt.id}. {opt.name}
+                              </div>
+                              <div className="text-xs text-slate-500">{opt.viName}</div>
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {anchorQuizPicked !== null && (
+                        <div className="flex justify-end">
+                          <button
+                            onClick={() => generateNextAnchorQuiz()}
+                            className="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-sm cursor-pointer"
+                          >
+                            Câu tiếp theo →
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  )
+                )}
+              </div>
+            );
+          })()}
         </div>
       </div>
     </div>
