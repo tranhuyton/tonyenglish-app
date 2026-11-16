@@ -481,7 +481,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         const userIds = [...new Set(logs.map(l => l.user_id))];
         const { data: profiles } = await supabase
             .from('profiles')
-            .select('id, full_name, email')
+            .select('id, full_name, email, avatar_url')
             .in('id', userIds);
             
         const profileMap = (profiles || []).reduce((acc:any, p:any) => { 
@@ -489,7 +489,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             return acc; 
         }, {});
         
-        const enrichedLogs = logs.map(l => ({ ...l, user: profileMap[l.user_id] || {} }));
+        const enrichedLogs = logs.map(l => {
+            let parsedDetails = l.details;
+            if (typeof parsedDetails === 'string') {
+              try { parsedDetails = JSON.parse(parsedDetails); } catch {}
+            }
+            return { ...l, details: parsedDetails, user: profileMap[l.user_id] || {} };
+        });
         setNotifications(enrichedLogs);
         setUnreadCount(enrichedLogs.filter(l => !l.is_read).length);
     } catch (e) {
@@ -1867,10 +1873,18 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                     <div key={notif.id} onClick={() => {
                                         setShowNotifications(false);
                                         // Determine which tab to auto-open based on action type
-                                        const targetTab = notif.action_type === 'finish_test' ? 'history' : notif.action_type === 'request_unlock_course' ? 'courses' : 'activity';
+                                        const isLibNotif = notif.action_type === 'read_library' || notif.action_type === 'library_exercise';
+                                        const targetTab = notif.action_type === 'finish_test' ? 'history' : notif.action_type === 'request_unlock_course' ? 'courses' : isLibNotif ? 'library' : 'activity';
+                                        let isOnlineUser = notif.action_type === 'request_unlock_course';
+                                        const rawAv = String(notif.user?.avatar_url || '').trim();
+                                        if (rawAv.startsWith('{')) {
+                                          try { if (JSON.parse(rawAv)?.account_type === 'online') isOnlineUser = true; } catch {}
+                                        } else if (rawAv.startsWith('http')) {
+                                          isOnlineUser = true;
+                                        }
                                         setNotifTargetUserId(notif.user_id);
                                         setNotifTargetTab(targetTab);
-                                        setActiveTab(notif.action_type === 'request_unlock_course' ? 'online-students' : 'students');
+                                        setActiveTab(isOnlineUser ? 'online-students' : 'students');
                                     }} className={`p-4 border-b border-slate-50 hover:bg-slate-100 transition-colors cursor-pointer ${!notif.is_read ? 'bg-blue-50/30' : ''}`}>
                                         <p className="text-[13px] text-slate-700 leading-snug">
                                             <span className="font-bold text-[#0a5482]">{notif.user?.full_name || notif.user?.email || 'Học viên'}</span>
@@ -1878,7 +1892,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                             {notif.action_type === 'finish_test' && ` vừa nộp bài: "${notif.details?.test_title}"`}
                                             {notif.action_type === 'call_tutor' && ` vừa gọi Gia Sư AI (${notif.details?.duration || 0} giây).`}
                                             {notif.action_type === 'finish_lecture' && ` vừa hoàn thành bài giảng: "${notif.details?.lecture_title}"`}
-                                            {notif.action_type === 'read_library' && ` vừa đọc tài liệu Thư viện: "${notif.details?.article_title}" (${notif.details?.category_name || 'Thư viện'})`}
+                                            {notif.action_type === 'read_library' && ` vừa truy cập Thư viện: "${notif.details?.article_title}" (${notif.details?.category_name || 'Thư viện'})`}
+                                            {notif.action_type === 'library_exercise' && (
+                                              typeof notif.details?.score === 'number' && typeof notif.details?.total_questions === 'number'
+                                                ? ` 🎯 vừa nộp bài tập Thư viện: "${notif.details?.item_title || notif.details?.article_title}" — Đạt ${notif.details.score}/${notif.details.total_questions} (${notif.details?.percent ?? 0}%)`
+                                                : ` 🎯 vừa hoàn thành luyện tập Thư viện: "${notif.details?.item_title || notif.details?.article_title}"`
+                                            )}
                                             {notif.action_type === 'request_unlock_course' && ` 🔥 vừa yêu cầu mở khóa IGCSE: "${notif.details?.course_title}" (SĐT: ${notif.details?.phone || '--'})`}
                                         </p>
                                         <span className="text-[10px] text-slate-400 mt-1 block font-bold">{formatDateTime(notif.created_at)}</span>

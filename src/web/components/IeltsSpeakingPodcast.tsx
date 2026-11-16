@@ -61,11 +61,16 @@ type PlaybackPhase =
 
 interface Props {
   newsId: number;
+  onPodcastPractice?: (info: {
+    mode: PracticeMode;
+    practicedCount: number;
+    totalCount: number;
+  }) => void;
 }
 
 let cachedPodcastMap: Record<string, ArticlePodcastData> | null = null;
 
-export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId }) => {
+export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractice }) => {
   const [data, setData] = useState<ArticlePodcastData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [mode, setMode] = useState<PracticeMode>('shadowing');
@@ -91,6 +96,25 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const countdownTimerRef = useRef<number | null>(null);
   const cardRefs = useRef<Record<number, HTMLDivElement | null>>({});
+  const loggedModesRef = useRef<Record<string, boolean>>({});
+  const onPodcastPracticeRef = useRef(onPodcastPractice);
+  onPodcastPracticeRef.current = onPodcastPractice;
+
+  const notifyPracticeMilestone = useCallback(
+    (curMode: PracticeMode, doneCount: number, totalCount: number) => {
+      const key = `${newsId}_${curMode}`;
+      if (loggedModesRef.current[key]) return;
+      if (doneCount >= 2 || (totalCount > 0 && doneCount >= totalCount)) {
+        loggedModesRef.current[key] = true;
+        onPodcastPracticeRef.current?.({
+          mode: curMode,
+          practicedCount: doneCount,
+          totalCount,
+        });
+      }
+    },
+    [newsId]
+  );
 
   // Load podcast dataset
   useEffect(() => {
@@ -406,6 +430,8 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId }) => {
           const shadowPause = Math.max(3, Math.min(10, Math.round(words * 0.38) + pauseBonusSec));
           setPhase('pause_shadow');
           await waitCountdownAsync(shadowPause, myRunId);
+          if (runIdRef.current !== myRunId) break;
+          notifyPracticeMilestone('shadowing', i - startIndex + 1, activeSentences.length);
         }
       } else if (mode === 'reflex') {
         for (let i = startIndex; i < activeSentences.length; i++) {
@@ -435,6 +461,8 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId }) => {
           // 4. Short absorb pause before next sentence
           setPhase('pause_absorb');
           await waitCountdownAsync(2, myRunId);
+          if (runIdRef.current !== myRunId) break;
+          notifyPracticeMilestone('reflex', i - startIndex + 1, activeSentences.length);
         }
       } else if (mode === 'orange_drill') {
         const vocabList = data.orangeVocab;
@@ -471,6 +499,8 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId }) => {
           setPhase('pause_shadow');
           const exWords = vItem.exampleEn.split(/\s+/).length;
           await waitCountdownAsync(Math.max(3, Math.min(8, Math.round(exWords * 0.35) + 1)), myRunId);
+          if (runIdRef.current !== myRunId) break;
+          notifyPracticeMilestone('orange_drill', i - startIndex + 1, vocabList.length);
         }
       }
 

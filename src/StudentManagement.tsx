@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from './supabase';
 import { createClient } from '@supabase/supabase-js';
 import { parseClassConfig } from './classConfigUtils';
+import { parseArticleInteractiveQuiz, extractArticleEbookPdfUrl } from './web/lib/utils';
 
 const authSupabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -11,7 +12,7 @@ const authSupabase = createClient(
 
 let studentSearchTimer: any;
 
-export default function StudentManagement({ mode = 'offline', onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { mode?: 'offline' | 'online', onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | 'assignments' | null, onAutoSelectDone?: () => void }) {
+export default function StudentManagement({ mode = 'offline', onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { mode?: 'offline' | 'online', onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | 'library' | 'assignments' | null, onAutoSelectDone?: () => void }) {
   const [students, setStudents] = useState<any[]>([]);
   const [allEnrollments, setAllEnrollments] = useState<any[]>([]);
   const [courses, setCourses] = useState<any[]>([]);
@@ -27,8 +28,14 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
   const [studentHistory, setStudentHistory] = useState<any[]>([]);
   const [studentEnrollments, setStudentEnrollments] = useState<any[]>([]);
   const [isLoadingDetails, setIsLoadingDetails] = useState(false);
-  const [activeDetailTab, setActiveDetailTab] = useState<'courses' | 'history' | 'activity' | 'assignments'>('courses');
+  const [activeDetailTab, setActiveDetailTab] = useState<'courses' | 'history' | 'activity' | 'library' | 'assignments'>('courses');
   const [studentActivities, setStudentActivities] = useState<any[]>([]);
+  const [libraryNewsMetaMap, setLibraryNewsMetaMap] = useState<Record<number, { hasQuiz: boolean; quizCount: number; hasLegacyQa: boolean; isEbook: boolean; slug: string }>>({});
+  const [libFilterMode, setLibFilterMode] = useState<'all' | 'exercise' | 'read' | 'unsubmitted'>('all');
+  const [libCategoryFilter, setLibCategoryFilter] = useState<string>('all');
+  const [libSearchText, setLibSearchText] = useState<string>('');
+  const [expandedLibLogIds, setExpandedLibLogIds] = useState<Record<string, boolean>>({});
+  const [activitySourceFilter, setActivitySourceFilter] = useState<'all' | 'lms' | 'library'>('all');
 
   const [studentAssignments, setStudentAssignments] = useState<any[]>([]);
   const [assignCalMonth, setAssignCalMonth] = useState(new Date());
@@ -512,6 +519,12 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     setEditingUser(null);
     setIsLoadingDetails(true);
     setActiveDetailTab('courses');
+    setLibFilterMode('all');
+    setLibCategoryFilter('all');
+    setLibSearchText('');
+    setExpandedLibLogIds({});
+    setActivitySourceFilter('all');
+    setLibraryNewsMetaMap({});
     
     try {
       const [{ data: enrollData }, { data: csData }] = await Promise.all([
@@ -524,14 +537,52 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
       const { data: historyData } = await supabase.from('test_results').select('*').eq('user_id', student.id).order('created_at', { ascending: false });
       setStudentHistory(historyData || []);
 
-      // 🚀 FETCH NHẬT KÝ HOẠT ĐỘNG
+      // 🚀 FETCH NHẬT KÝ HOẠT ĐỘNG (LMS + THƯ VIỆN BÊN NGOÀI)
       const { data: actData } = await supabase.from('activity_logs').select('*').eq('user_id', student.id).order('created_at', { ascending: false });
-      setStudentActivities((actData || []).map((a: any) => {
+      const parsedActs = (actData || []).map((a: any) => {
         if (typeof a.details === 'string') {
           try { a.details = JSON.parse(a.details); } catch(e) {}
         }
         return a;
-      }));
+      });
+      setStudentActivities(parsedActs);
+
+      // Tra cứu nhanh metadata bài tập cho các bài Thư viện học sinh đã mở (hỗ trợ cả log lịch sử cũ)
+      const newsIds = Array.from(
+        new Set(
+          parsedActs
+            .filter((a: any) => a.action_type === 'read_library' || a.action_type === 'library_exercise')
+            .map((a: any) => Number(a.details?.news_id))
+            .filter((n: number) => Number.isFinite(n) && n > 0)
+        )
+      );
+      if (newsIds.length > 0) {
+        try {
+          const { data: newsRows } = await supabase
+            .from('te_news')
+            .select('news_id, news_title_url, news_cc_id, news_quiz, news_name_quiz, news_question, news_answer, news_content')
+            .in('news_id', newsIds);
+          if (newsRows && Array.isArray(newsRows)) {
+            const metaMap: Record<number, { hasQuiz: boolean; quizCount: number; hasLegacyQa: boolean; isEbook: boolean; slug: string }> = {};
+            newsRows.forEach((nr: any) => {
+              const qList = parseArticleInteractiveQuiz(nr);
+              const hasLegacyQa = qList.length === 0 && Boolean(nr.news_question && String(nr.news_question).trim() !== '');
+              const ebookInfo = extractArticleEbookPdfUrl(nr.news_content || '');
+              const isEbook = Number(nr.news_cc_id) === 30 || Boolean(ebookInfo.pdfUrl);
+              metaMap[Number(nr.news_id)] = {
+                hasQuiz: qList.length > 0,
+                quizCount: qList.length,
+                hasLegacyQa,
+                isEbook,
+                slug: String(nr.news_title_url || '').trim(),
+              };
+            });
+            setLibraryNewsMetaMap(metaMap);
+          }
+        } catch {
+          // ignore optional metadata lookup error
+        }
+      }
       
     } catch (err: any) {
       console.error("Lỗi tải chi tiết:", err.message);
@@ -922,6 +973,15 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
 
   const availableCourses = courses.filter(c => !studentEnrollments.some(e => e.course_id === c.id));
 
+  const formatDurationShort = (sec?: number) => {
+    const n = Number(sec || 0);
+    if (!Number.isFinite(n) || n <= 0) return '';
+    if (n < 60) return `${Math.round(n)}s`;
+    const mins = Math.floor(n / 60);
+    const rem = Math.round(n % 60);
+    return rem > 0 ? `${mins}p ${rem}s` : `${mins}p`;
+  };
+
   // ==========================================
   // VIEW CHI TIẾT HỌC VIÊN
   // ==========================================
@@ -929,6 +989,162 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     const totalTests = studentHistory.length;
     const avgScore = totalTests > 0 ? (studentHistory.reduce((acc, curr) => acc + (curr.score || 0), 0) / totalTests).toFixed(1) : 0;
     const totalTime = studentHistory.reduce((acc, curr) => acc + Math.round((curr.time_spent || 0) / 60), 0);
+
+    // 📚 PHÂN TÍCH NHẬT KÝ TRUY CẬP & LÀM BÀI TẬP THƯ VIỆN (BÊN NGOÀI)
+    const libraryLogs = studentActivities.filter(
+      (a) => a.action_type === 'read_library' || a.action_type === 'library_exercise'
+    );
+    const libraryReadLogs = libraryLogs.filter((a) => a.action_type === 'read_library');
+    const libraryExerciseLogs = libraryLogs.filter((a) => a.action_type === 'library_exercise');
+
+    const getLibItemKey = (act: any): string => {
+      const d = act.details || {};
+      if (Number(d.news_id) > 0) return `news_${Number(d.news_id)}`;
+      if (Number(d.video_id) > 0) return `vid_${Number(d.video_id)}`;
+      return `title_${String(d.item_title || d.article_title || act.id || '').trim().toLowerCase()}`;
+    };
+
+    const bestExerciseByItemKey: Record<
+      string,
+      { score?: number; total?: number; percent?: number; kind: string; count: number }
+    > = {};
+    libraryExerciseLogs.forEach((act) => {
+      const key = getLibItemKey(act);
+      const d = act.details || {};
+      const prev = bestExerciseByItemKey[key];
+      const curPct = typeof d.percent === 'number' ? d.percent : undefined;
+      if (!prev) {
+        bestExerciseByItemKey[key] = {
+          score: d.score,
+          total: d.total_questions,
+          percent: curPct,
+          kind: d.exercise_kind || 'article_quiz',
+          count: 1,
+        };
+      } else {
+        prev.count += 1;
+        if (curPct !== undefined && (prev.percent === undefined || curPct > prev.percent)) {
+          prev.score = d.score;
+          prev.total = d.total_questions;
+          prev.percent = curPct;
+        }
+      }
+    });
+
+    const getReadItemExerciseRequirement = (act: any): { hasExercise: boolean; quizCount: number; label: string } => {
+      const d = act.details || {};
+      const nid = Number(d.news_id);
+      const dbMeta = nid > 0 ? libraryNewsMetaMap[nid] : undefined;
+      const quizCount =
+        typeof d.quiz_question_count === 'number' && d.quiz_question_count > 0
+          ? d.quiz_question_count
+          : dbMeta?.quizCount || 0;
+      const hasQuiz = Boolean(d.has_quiz || dbMeta?.hasQuiz || quizCount > 0);
+      const hasLegacyQa = Boolean(d.has_legacy_qa || dbMeta?.hasLegacyQa);
+      if (hasQuiz) {
+        return {
+          hasExercise: true,
+          quizCount,
+          label: quizCount > 0 ? `${quizCount} câu trắc nghiệm` : 'Bài tập trắc nghiệm',
+        };
+      }
+      if (hasLegacyQa) {
+        return {
+          hasExercise: true,
+          quizCount: 0,
+          label: 'Câu hỏi đọc hiểu',
+        };
+      }
+      return { hasExercise: false, quizCount: 0, label: '' };
+    };
+
+    const uniqueReadKeys = new Set<string>();
+    const camReadingSet = new Set<string>();
+    const camListeningSet = new Set<string>();
+    const igcseReadingSet = new Set<string>();
+    const videoWatchSet = new Set<string>();
+    const ebookSet = new Set<string>();
+    const sampleSet = new Set<string>();
+    const unsubmittedItemKeySet = new Set<string>();
+
+    libraryReadLogs.forEach((act) => {
+      const d = act.details || {};
+      const key = getLibItemKey(act);
+      uniqueReadKeys.add(key);
+
+      const pCate = Number(d.parent_category_id);
+      const cId = Number(d.category_id);
+      const libType = String(d.library_type || '');
+      const nid = Number(d.news_id);
+      const isEbook = Boolean(
+        d.is_ebook ||
+          cId === 30 ||
+          libType === 'library_ebook' ||
+          d.activity_kind === 'read_ebook' ||
+          (nid > 0 && libraryNewsMetaMap[nid]?.isEbook)
+      );
+
+      if (pCate === 38 || libType === 'cambridge_reading_translation') camReadingSet.add(key);
+      else if (pCate === 87 || libType === 'cambridge_listening_translation') camListeningSet.add(key);
+      else if (pCate === 79 || libType === 'igcse_esl_reading') igcseReadingSet.add(key);
+      else if (libType === 'library_video' || d.activity_kind === 'watch_video' || Number(d.video_id) > 0)
+        videoWatchSet.add(key);
+      else if (isEbook) ebookSet.add(key);
+      else if (pCate === 56 || pCate === 67 || libType.includes('sample')) sampleSet.add(key);
+
+      const req = getReadItemExerciseRequirement(act);
+      if (req.hasExercise && !bestExerciseByItemKey[key]) {
+        unsubmittedItemKeySet.add(key);
+      }
+    });
+
+    const scoredExercises = libraryExerciseLogs.filter((a) => typeof a.details?.percent === 'number');
+    const avgLibQuizPercent =
+      scoredExercises.length > 0
+        ? Math.round(
+            scoredExercises.reduce((sum, a) => sum + Number(a.details.percent || 0), 0) /
+              scoredExercises.length
+          )
+        : null;
+
+    const libCategoriesAvailable = Array.from(
+      new Set(
+        libraryLogs
+          .map((a) => String(a.details?.category_name || 'Thư viện').trim())
+          .filter(Boolean)
+      )
+    );
+
+    const filteredLibraryLogs = libraryLogs.filter((act) => {
+      const d = act.details || {};
+      if (libFilterMode === 'exercise' && act.action_type !== 'library_exercise') return false;
+      if (libFilterMode === 'read' && act.action_type !== 'read_library') return false;
+      if (libFilterMode === 'unsubmitted') {
+        if (act.action_type !== 'read_library') return false;
+        const req = getReadItemExerciseRequirement(act);
+        const key = getLibItemKey(act);
+        if (!req.hasExercise || Boolean(bestExerciseByItemKey[key])) return false;
+      }
+      if (libCategoryFilter !== 'all') {
+        const cName = String(d.category_name || 'Thư viện').trim();
+        if (cName !== libCategoryFilter) return false;
+      }
+      if (libSearchText.trim()) {
+        const q = libSearchText.trim().toLowerCase();
+        const title = String(d.item_title || d.article_title || d.video_title || '').toLowerCase();
+        const sub = String(d.sub_category_name || '').toLowerCase();
+        const cat = String(d.category_name || '').toLowerCase();
+        if (!title.includes(q) && !sub.includes(q) && !cat.includes(q)) return false;
+      }
+      return true;
+    });
+
+    const filteredTimelineActivities = studentActivities.filter((act) => {
+      const isLib = act.action_type === 'read_library' || act.action_type === 'library_exercise';
+      if (activitySourceFilter === 'library') return isLib;
+      if (activitySourceFilter === 'lms') return !isLib;
+      return true;
+    });
 
     return (
       <>
@@ -990,6 +1206,14 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
               <button onClick={() => setActiveDetailTab('courses')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'courses' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📚 Khóa học</button>
               <button onClick={() => setActiveDetailTab('history')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'history' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📊 Lịch sử Điểm</button>
               <button onClick={() => setActiveDetailTab('activity')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'activity' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>👀 Nhật ký Truy cập</button>
+              <button onClick={() => setActiveDetailTab('library')} className={`px-4 md:px-5 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap flex items-center gap-1.5 ${activeDetailTab === 'library' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>
+                <span>📖 Nhật ký Thư viện</span>
+                {libraryLogs.length > 0 && (
+                  <span className={`text-[11px] font-black px-2 py-0.5 rounded-full border ${unsubmittedItemKeySet.size > 0 ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-sky-100 text-[#0a5482] border-sky-200'}`}>
+                    {libraryLogs.length}
+                  </span>
+                )}
+              </button>
               <button onClick={() => setActiveDetailTab('assignments')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'assignments' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📅 Lịch báo bài</button>
             </div>
             
@@ -1171,39 +1395,566 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
 
               ) : activeDetailTab === 'activity' ? (
                 <div className="animate-in fade-in pb-10">
-                  <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest mb-8">Nhật ký truy cập & hành vi</h3>
-                  {studentActivities.length === 0 ? (
-                    <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Chưa có hoạt động nào được ghi nhận.</div>
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-6">
+                    <div>
+                      <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest">Nhật ký truy cập & hành vi tổng hợp</h3>
+                      <p className="text-[12px] text-slate-400 font-medium mt-0.5">Bao gồm hoạt động làm bài trên LMS và hoạt động đọc / làm bài tập ngoài Thư viện</p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <div className="inline-flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
+                        <button
+                          type="button"
+                          onClick={() => setActivitySourceFilter('all')}
+                          className={`px-3 py-1.5 rounded-lg transition ${activitySourceFilter === 'all' ? 'bg-white text-[#0a5482] shadow-2xs' : 'text-slate-500 hover:text-slate-700'}`}
+                        >
+                          Tất cả ({studentActivities.length})
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setActivitySourceFilter('lms')}
+                          className={`px-3 py-1.5 rounded-lg transition ${activitySourceFilter === 'lms' ? 'bg-white text-[#0a5482] shadow-2xs' : 'text-slate-500 hover:text-slate-700'}`}
+                        >
+                          📝 Khóa học LMS ({studentActivities.length - libraryLogs.length})
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setActivitySourceFilter('library')}
+                          className={`px-3 py-1.5 rounded-lg transition ${activitySourceFilter === 'library' ? 'bg-white text-[#0a5482] shadow-2xs' : 'text-slate-500 hover:text-slate-700'}`}
+                        >
+                          📖 Thư viện ngoài ({libraryLogs.length})
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setActiveDetailTab('library')}
+                        className="px-3.5 py-2 rounded-xl bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 font-bold text-xs transition"
+                      >
+                        🔍 Kiểm tra chi tiết Thư viện →
+                      </button>
+                    </div>
+                  </div>
+
+                  {filteredTimelineActivities.length === 0 ? (
+                    <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Chưa có hoạt động nào trong mục đang lọc.</div>
                   ) : (
                     <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
-                      {studentActivities.map((act) => (
-                         <div key={act.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#0a5482] text-white font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 text-[14px]">
-                               {act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : act.action_type === 'read_library' ? '📚' : act.action_type === 'request_unlock_course' ? '🔓' : '📖'}
-                            </div>
-                            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-[#2bd6eb] transition-colors">
-                               <div className="flex justify-between items-start mb-2">
-                                  <h4 className="font-black text-[#0a5482] text-[13px] md:text-[15px] uppercase tracking-tight">
-                                     {act.action_type === 'login' && 'Đăng nhập hệ thống'}
-                                     {act.action_type === 'finish_test' && 'Nộp bài kiểm tra'}
-                                     {act.action_type === 'call_tutor' && 'Hỏi đáp AI / Voice'}
-                                     {act.action_type === 'finish_lecture' && 'Hoàn thành bài giảng'}
-                                     {act.action_type === 'read_library' && 'Đọc bài dịch / Thư viện'}
-                                     {act.action_type === 'request_unlock_course' && '🔥 Yêu cầu mở khóa khóa học IGCSE'}
-                                  </h4>
-                                  <span className="text-[11px] font-bold text-slate-400 whitespace-nowrap ml-2 bg-slate-50 px-2 py-1 rounded border border-slate-100">{formatDate(act.created_at)}</span>
-                               </div>
-                               <p className="text-[13px] text-slate-600 font-medium leading-relaxed">
-                                  {act.action_type === 'login' && 'Học sinh đăng nhập thành công vào LMS.'}
-                                  {act.action_type === 'finish_test' && `Đã nộp bài: "${act.details?.test_title || 'IELTS'}" với số điểm: ${act.details?.score || 0}`}
-                                  {act.action_type === 'call_tutor' && `Thời lượng đàm thoại / hỏi AI: ${act.details?.duration || 0} giây.`}
-                                  {act.action_type === 'finish_lecture' && `Học xong bài giảng: "${act.details?.lecture_title || 'Lecture'}"`}
-                                  {act.action_type === 'read_library' && `Đã đọc bài: "${act.details?.article_title || 'Tài liệu'}" • Chuyên mục: ${act.details?.sub_category_name || act.details?.category_name || 'Thư viện'}`}
-                                  {act.action_type === 'request_unlock_course' && `Khách đăng ký mua / mở khóa: "${act.details?.course_title || 'Khóa học IGCSE'}" • SĐT/Zalo: ${act.details?.phone || selectedStudent.phone || '--'}`}
-                               </p>
-                            </div>
-                         </div>
+                      {filteredTimelineActivities.map((act) => {
+                         const d = act.details || {};
+                         const isLibEx = act.action_type === 'library_exercise';
+                         const isLibRead = act.action_type === 'read_library';
+                         const icon =
+                           act.action_type === 'login'
+                             ? '🔑'
+                             : act.action_type === 'finish_test'
+                             ? '📝'
+                             : act.action_type === 'call_tutor'
+                             ? '📞'
+                             : isLibEx
+                             ? '🎯'
+                             : isLibRead
+                             ? d.activity_kind === 'watch_video' || d.library_type === 'library_video'
+                               ? '🎬'
+                               : d.is_ebook || d.activity_kind === 'read_ebook'
+                               ? '📕'
+                               : '📚'
+                             : act.action_type === 'request_unlock_course'
+                             ? '🔓'
+                             : '📖';
+
+                         return (
+                           <div key={act.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                              <div className={`flex items-center justify-center w-10 h-10 rounded-full border-4 border-white text-white font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 text-[14px] ${isLibEx ? 'bg-emerald-600' : isLibRead ? 'bg-sky-600' : 'bg-[#0a5482]'}`}>
+                                 {icon}
+                              </div>
+                              <div className={`w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-5 rounded-xl border shadow-sm hover:border-[#2bd6eb] transition-colors ${isLibEx ? 'border-emerald-200 bg-emerald-50/20' : isLibRead ? 'border-sky-200/80' : 'border-slate-200'}`}>
+                                 <div className="flex justify-between items-start mb-2">
+                                    <h4 className={`font-black text-[13px] md:text-[15px] uppercase tracking-tight ${isLibEx ? 'text-emerald-800' : 'text-[#0a5482]'}`}>
+                                       {act.action_type === 'login' && 'Đăng nhập hệ thống'}
+                                       {act.action_type === 'finish_test' && 'Nộp bài kiểm tra (LMS)'}
+                                       {act.action_type === 'call_tutor' && 'Hỏi đáp AI / Voice'}
+                                       {act.action_type === 'finish_lecture' && 'Hoàn thành bài giảng'}
+                                       {isLibRead && (
+                                         d.activity_kind === 'watch_video' || d.library_type === 'library_video'
+                                           ? 'Xem Video Thư viện (Bên ngoài)'
+                                           : d.is_ebook || d.activity_kind === 'read_ebook'
+                                           ? 'Đọc Sách E-book Thư viện'
+                                           : 'Đọc bài dịch / Tài liệu Thư viện'
+                                       )}
+                                       {isLibEx && (
+                                         d.exercise_kind === 'video_quiz'
+                                           ? 'Nộp Quiz Video Thư viện'
+                                           : d.exercise_kind === 'speaking_podcast'
+                                           ? 'Luyện Podcast Speaking Thư viện'
+                                           : d.exercise_kind === 'qa_practice'
+                                           ? 'Làm câu hỏi & Xem đáp án Thư viện'
+                                           : 'Nộp Bài tập Trắc nghiệm Thư viện'
+                                       )}
+                                       {act.action_type === 'request_unlock_course' && '🔥 Yêu cầu mở khóa khóa học IGCSE'}
+                                    </h4>
+                                    <span className="text-[11px] font-bold text-slate-400 whitespace-nowrap ml-2 bg-slate-50 px-2 py-1 rounded border border-slate-100">{formatDate(act.created_at)}</span>
+                                 </div>
+                                 <p className="text-[13px] text-slate-600 font-medium leading-relaxed">
+                                    {act.action_type === 'login' && 'Học sinh đăng nhập thành công vào LMS.'}
+                                    {act.action_type === 'finish_test' && `Đã nộp bài: "${d.test_title || 'IELTS'}" với số điểm: ${d.score || 0}`}
+                                    {act.action_type === 'call_tutor' && `Thời lượng đàm thoại / hỏi AI: ${d.duration || 0} giây.`}
+                                    {act.action_type === 'finish_lecture' && `Học xong bài giảng: "${d.lecture_title || 'Lecture'}"`}
+                                    {isLibRead && (
+                                      <>
+                                        Đã mở: <b>"{d.article_title || 'Tài liệu'}"</b> • Chuyên mục: {d.sub_category_name ? `${d.category_name} → ${d.sub_category_name}` : (d.category_name || 'Thư viện')}
+                                        {d.ebook_page ? ` • Tới Trang ${d.ebook_page}${d.ebook_total_pages ? `/${d.ebook_total_pages}` : ''}` : ''}
+                                        {d.duration_sec ? ` • Thời gian đọc: ${formatDurationShort(d.duration_sec)}` : ''}
+                                      </>
+                                    )}
+                                    {isLibEx && (
+                                      <>
+                                        Bài học: <b>"{d.item_title || d.article_title || 'Bài tập Thư viện'}"</b>
+                                        {typeof d.score === 'number' && typeof d.total_questions === 'number'
+                                          ? ` • Kết quả: ${d.score}/${d.total_questions} câu đúng (${d.percent ?? Math.round((d.score / Math.max(1, d.total_questions)) * 100)}%)`
+                                          : d.practice_mode
+                                          ? ` • Chế độ: ${d.practice_mode === 'reflex' ? 'Phản xạ Việt → Anh' : d.practice_mode === 'orange_drill' ? 'Cụm từ da cam' : 'Shadowing'}`
+                                          : ' • Đã mở câu hỏi & đối chiếu đáp án'}
+                                        {d.time_spent_sec ? ` • Làm trong: ${formatDurationShort(d.time_spent_sec)}` : ''}
+                                      </>
+                                    )}
+                                    {act.action_type === 'request_unlock_course' && `Khách đăng ký mua / mở khóa: "${d.course_title || 'Khóa học IGCSE'}" • SĐT/Zalo: ${d.phone || selectedStudent.phone || '--'}`}
+                                 </p>
+                              </div>
+                           </div>
+                         );
+                      })}
+                    </div>
+                  )}
+                </div>
+
+              ) : activeDetailTab === 'library' ? (
+                <div className="animate-in fade-in space-y-6 pb-8">
+                  {/* TOP HEADER */}
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                    <div>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="bg-[#0a5482] text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                          EXTERNAL LIBRARY TRACKER
+                        </span>
+                        <h3 className="font-black text-slate-800 text-[15px] uppercase tracking-wide">
+                          Nhật ký truy cập & Làm bài tập Thư viện (Bên ngoài)
+                        </h3>
+                      </div>
+                      <p className="text-[12.5px] text-slate-500 font-medium mt-1">
+                        Kiểm tra học viên có thực sự mở đọc các bài dịch Cambridge, IGCSE ESL, E-book, Video và nộp các bài tập trắc nghiệm đi kèm ngoài Thư viện hay không.
+                      </p>
+                    </div>
+                    <a
+                      href="/news"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200 font-bold text-xs transition shrink-0 inline-flex items-center gap-1.5 w-fit"
+                    >
+                      <span>🌐 Mở trang Thư viện</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+
+                  {/* 4 KPI SUMMARY CARDS */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
+                    <div className="p-4 rounded-2xl border border-sky-200/80 bg-sky-50/40">
+                      <div className="text-[11px] font-black uppercase tracking-wider text-sky-800 mb-1 flex items-center gap-1.5">
+                        <span>📚</span> Tài liệu / Video đã mở
+                      </div>
+                      <div className="text-2xl font-black text-slate-800">
+                        {uniqueReadKeys.size}{' '}
+                        <span className="text-xs font-bold text-slate-500">
+                          bài ({libraryReadLogs.length} lượt)
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-2xl border border-emerald-200/90 bg-emerald-50/50">
+                      <div className="text-[11px] font-black uppercase tracking-wider text-emerald-800 mb-1 flex items-center gap-1.5">
+                        <span>🎯</span> Bài tập Thư viện đã nộp
+                      </div>
+                      <div className="text-2xl font-black text-emerald-800">
+                        {libraryExerciseLogs.length}{' '}
+                        <span className="text-xs font-bold text-emerald-700/80">
+                          lượt ({Object.keys(bestExerciseByItemKey).length} bài)
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-2xl border border-indigo-200/80 bg-indigo-50/40">
+                      <div className="text-[11px] font-black uppercase tracking-wider text-indigo-800 mb-1 flex items-center gap-1.5">
+                        <span>📊</span> Tỉ lệ đúng TB (Quiz)
+                      </div>
+                      <div className="text-2xl font-black text-indigo-900">
+                        {avgLibQuizPercent !== null ? `${avgLibQuizPercent}%` : '--'}
+                        {scoredExercises.length > 0 && (
+                          <span className="text-xs font-bold text-indigo-600/80 ml-1.5">
+                            ({scoredExercises.length} lượt chấm)
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setLibFilterMode(libFilterMode === 'unsubmitted' ? 'all' : 'unsubmitted')
+                      }
+                      className={`p-4 rounded-2xl border text-left transition cursor-pointer ${
+                        unsubmittedItemKeySet.size > 0
+                          ? 'border-amber-300 bg-amber-50/80 hover:bg-amber-100/70 ring-1 ring-amber-200'
+                          : 'border-slate-200 bg-slate-50/60 hover:bg-slate-100/60'
+                      }`}
+                      title="Bấm để lọc riêng những bài có gắn bài tập nhưng học viên mới mở xem trang mà chưa nộp bài tập"
+                    >
+                      <div className={`text-[11px] font-black uppercase tracking-wider mb-1 flex items-center gap-1.5 ${unsubmittedItemKeySet.size > 0 ? 'text-amber-800' : 'text-slate-500'}`}>
+                        <span>⚠️</span> Đọc nhưng CHƯA nộp BT
+                      </div>
+                      <div className={`text-2xl font-black ${unsubmittedItemKeySet.size > 0 ? 'text-amber-800' : 'text-slate-700'}`}>
+                        {unsubmittedItemKeySet.size}{' '}
+                        <span className="text-xs font-bold opacity-80">
+                          {unsubmittedItemKeySet.size > 0 ? 'bài (Bấm để lọc)' : 'bài'}
+                        </span>
+                      </div>
+                    </button>
+                  </div>
+
+                  {/* CATEGORY PROGRESS PILLS */}
+                  {uniqueReadKeys.size > 0 && (
+                    <div className="flex flex-wrap items-center gap-2 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs font-bold">
+                      <span className="text-slate-400 uppercase text-[10.5px] font-black tracking-wider mr-1">
+                        Phân bổ chuyên mục:
+                      </span>
+                      {camReadingSet.size > 0 && (
+                        <span className="px-2.5 py-1 rounded-lg bg-white border border-sky-200 text-[#0a5482]">
+                          📘 Dịch Đọc Cambridge: <b>{camReadingSet.size}/252</b>
+                        </span>
+                      )}
+                      {camListeningSet.size > 0 && (
+                        <span className="px-2.5 py-1 rounded-lg bg-white border border-indigo-200 text-indigo-800">
+                          🎧 Dịch Nghe Cambridge: <b>{camListeningSet.size}/336</b>
+                        </span>
+                      )}
+                      {igcseReadingSet.size > 0 && (
+                        <span className="px-2.5 py-1 rounded-lg bg-white border border-emerald-200 text-emerald-800">
+                          🌍 IGCSE ESL Reading: <b>{igcseReadingSet.size} bài</b>
+                        </span>
+                      )}
+                      {sampleSet.size > 0 && (
+                        <span className="px-2.5 py-1 rounded-lg bg-white border border-orange-200 text-orange-800">
+                          ✍️ Bài mẫu Writing / Speaking: <b>{sampleSet.size} bài</b>
+                        </span>
+                      )}
+                      {videoWatchSet.size > 0 && (
+                        <span className="px-2.5 py-1 rounded-lg bg-white border border-purple-200 text-purple-800">
+                          🎬 Video tiếng Anh: <b>{videoWatchSet.size} video</b>
+                        </span>
+                      )}
+                      {ebookSet.size > 0 && (
+                        <span className="px-2.5 py-1 rounded-lg bg-white border border-amber-200 text-amber-800">
+                          📕 Sách E-book: <b>{ebookSet.size} quyển</b>
+                        </span>
+                      )}
+                    </div>
+                  )}
+
+                  {/* FILTER & SEARCH BAR */}
+                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      {[
+                        { id: 'all' as const, label: `Tất cả (${libraryLogs.length})` },
+                        { id: 'exercise' as const, label: `🎯 Đã nộp Bài tập / Luyện nói (${libraryExerciseLogs.length})` },
+                        { id: 'read' as const, label: `📚 Mở đọc / Xem Video (${libraryReadLogs.length})` },
+                        ...(unsubmittedItemKeySet.size > 0
+                          ? [{ id: 'unsubmitted' as const, label: `⚠️ Chưa nộp BT đi kèm (${unsubmittedItemKeySet.size})` }]
+                          : []),
+                      ].map((tab) => (
+                        <button
+                          key={tab.id}
+                          type="button"
+                          onClick={() => setLibFilterMode(tab.id)}
+                          className={`px-3.5 py-2 rounded-xl text-xs font-extrabold border transition cursor-pointer ${
+                            libFilterMode === tab.id
+                              ? tab.id === 'unsubmitted'
+                                ? 'bg-amber-600 text-white border-amber-600 shadow-2xs'
+                                : 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
+                              : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                          }`}
+                        >
+                          {tab.label}
+                        </button>
                       ))}
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-2">
+                      {libCategoriesAvailable.length > 1 && (
+                        <select
+                          value={libCategoryFilter}
+                          onChange={(e) => setLibCategoryFilter(e.target.value)}
+                          className="text-xs font-bold px-3 py-2 rounded-xl border border-slate-200 bg-white text-slate-700 outline-none focus:border-[#0a5482]"
+                        >
+                          <option value="all">📂 Tất cả chuyên mục ({libCategoriesAvailable.length})</option>
+                          {libCategoriesAvailable.map((catName) => (
+                            <option key={catName} value={catName}>
+                              {catName}
+                            </option>
+                          ))}
+                        </select>
+                      )}
+                      <input
+                        type="text"
+                        value={libSearchText}
+                        onChange={(e) => setLibSearchText(e.target.value)}
+                        placeholder="🔍 Tìm tên bài đọc, video, e-book..."
+                        className="text-xs font-semibold px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-slate-700 outline-none focus:border-[#0a5482] w-full sm:w-60"
+                      />
+                    </div>
+                  </div>
+
+                  {/* DETAILED LOG LIST */}
+                  {libraryLogs.length === 0 ? (
+                    <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-medium space-y-1">
+                      <div className="text-3xl mb-2">📭</div>
+                      <div className="font-bold text-slate-600">Học viên này chưa có nhật ký truy cập hay làm bài tập nào ở Thư viện bên ngoài.</div>
+                      <div className="text-xs text-slate-400">Khi học viên đăng nhập và mở bài đọc, sách E-book, xem Video hoặc nộp bài tập trắc nghiệm ngoài Thư viện, lịch sử sẽ hiện chi tiết tại đây.</div>
+                    </div>
+                  ) : filteredLibraryLogs.length === 0 ? (
+                    <div className="py-12 text-center border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-medium">
+                      Không có bản ghi nào khớp với bộ lọc hiện tại.
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {filteredLibraryLogs.map((act) => {
+                        const d = act.details || {};
+                        const isExercise = act.action_type === 'library_exercise';
+                        const itemKey = getLibItemKey(act);
+                        const nid = Number(d.news_id);
+                        const dbMeta = nid > 0 ? libraryNewsMetaMap[nid] : undefined;
+                        const slug = String(d.article_slug || dbMeta?.slug || '').trim();
+                        const itemUrl =
+                          d.url_path ||
+                          (slug && !d.video_id ? `/news/view/${slug}` : undefined);
+                        const title =
+                          d.item_title || d.article_title || d.video_title || 'Tài liệu Thư viện';
+                        const cateLabel = d.sub_category_name
+                          ? `${d.category_name || 'Thư viện'} → ${d.sub_category_name}`
+                          : d.category_name || 'Thư viện';
+
+                        const req = !isExercise
+                          ? getReadItemExerciseRequirement(act)
+                          : { hasExercise: false, quizCount: 0, label: '' };
+                        const doneExSummary = bestExerciseByItemKey[itemKey];
+                        const qResults = Array.isArray(d.question_results)
+                          ? d.question_results
+                          : [];
+                        const isExpanded = Boolean(expandedLibLogIds[act.id]);
+
+                        const isVideo =
+                          d.exercise_kind === 'video_quiz' ||
+                          d.activity_kind === 'watch_video' ||
+                          d.library_type === 'library_video' ||
+                          Number(d.video_id) > 0;
+                        const isEbook = Boolean(
+                          d.is_ebook ||
+                            d.activity_kind === 'read_ebook' ||
+                            d.library_type === 'library_ebook' ||
+                            Number(d.category_id) === 30 ||
+                            dbMeta?.isEbook
+                        );
+
+                        return (
+                          <div
+                            key={act.id}
+                            className={`rounded-2xl border p-4 transition-all ${
+                              isExercise
+                                ? 'bg-emerald-50/35 border-emerald-200/90 hover:border-emerald-300'
+                                : req.hasExercise && !doneExSummary
+                                ? 'bg-amber-50/25 border-amber-200/90 hover:border-amber-300'
+                                : 'bg-white border-slate-200 hover:border-sky-300'
+                            }`}
+                          >
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                              {/* Left Info */}
+                              <div className="space-y-1.5 min-w-0 flex-1">
+                                <div className="flex flex-wrap items-center gap-2">
+                                  {isExercise ? (
+                                    <span className="px-2.5 py-0.5 rounded-md bg-emerald-600 text-white text-[10.5px] font-black uppercase tracking-wide">
+                                      {d.exercise_kind === 'video_quiz'
+                                        ? '🎬 NỘP QUIZ VIDEO'
+                                        : d.exercise_kind === 'speaking_podcast'
+                                        ? '🎙️ LUYỆN PODCAST SPEAKING'
+                                        : d.exercise_kind === 'qa_practice'
+                                        ? '✅ LÀM CÂU HỎI & XEM ĐÁP ÁN'
+                                        : '🎯 NỘP BÀI TẬP ĐỌC HIỂU'}
+                                    </span>
+                                  ) : (
+                                    <span className="px-2.5 py-0.5 rounded-md bg-sky-100 text-[#0a5482] border border-sky-200 text-[10.5px] font-black uppercase tracking-wide">
+                                      {isVideo
+                                        ? '🎬 XEM VIDEO'
+                                        : isEbook
+                                        ? '📕 ĐỌC SÁCH E-BOOK'
+                                        : d.library_type === 'cambridge_reading_translation'
+                                        ? '📘 DỊCH ĐỌC CAMBRIDGE'
+                                        : d.library_type === 'cambridge_listening_translation'
+                                        ? '🎧 DỊCH NGHE CAMBRIDGE'
+                                        : '📚 ĐỌC TÀI LIỆU'}
+                                    </span>
+                                  )}
+
+                                  <span className="text-xs font-bold text-slate-500">
+                                    📂 {cateLabel}
+                                  </span>
+
+                                  {(d.duration_sec || d.time_spent_sec) && (
+                                    <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200 text-[11px] font-bold">
+                                      ⏱️ {isExercise ? 'Làm trong' : 'Đọc'}:{' '}
+                                      {formatDurationShort(d.time_spent_sec || d.duration_sec)}
+                                    </span>
+                                  )}
+
+                                  {d.ebook_page && (
+                                    <span className="px-2 py-0.5 rounded bg-purple-100 text-purple-800 border border-purple-200 text-[11px] font-extrabold">
+                                      📖 Đọc tới Trang {d.ebook_page}
+                                      {d.ebook_total_pages ? ` / ${d.ebook_total_pages}` : ''}
+                                      {d.pages_turned ? ` (lật ${d.pages_turned} trang)` : ''}
+                                    </span>
+                                  )}
+                                </div>
+
+                                <div className="flex flex-wrap items-center gap-2.5">
+                                  <h4 className="font-black text-slate-800 text-[14.5px] leading-snug">
+                                    {title}
+                                  </h4>
+                                  {itemUrl && (
+                                    <a
+                                      href={itemUrl}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-[11px] font-extrabold text-[#0a5482] hover:text-[#2ab4e8] bg-sky-50 hover:bg-sky-100 px-2.5 py-0.5 rounded-md border border-sky-200 transition inline-flex items-center gap-1"
+                                    >
+                                      <span>Mở bài gốc</span>
+                                      <span>↗</span>
+                                    </a>
+                                  )}
+                                </div>
+
+                                {/* Homework Exercise Status Badge on Read Rows */}
+                                {!isExercise && req.hasExercise && (
+                                  <div className="pt-0.5">
+                                    {doneExSummary ? (
+                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-100/90 text-emerald-800 border border-emerald-200 text-[11.5px] font-extrabold">
+                                        <span>✅ Đã nộp bài tập đi kèm</span>
+                                        {typeof doneExSummary.score === 'number' &&
+                                          typeof doneExSummary.total === 'number' && (
+                                            <span>
+                                              • Đạt {doneExSummary.score}/{doneExSummary.total} câu ({doneExSummary.percent}%)
+                                            </span>
+                                          )}
+                                      </span>
+                                    ) : (
+                                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 border border-amber-300 text-[11.5px] font-extrabold">
+                                        <span>⚠️ Bài này có {req.label} nhưng học viên CHƯA bấm nộp bài!</span>
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
+
+                                {/* Speaking Podcast Mode Info */}
+                                {isExercise && d.exercise_kind === 'speaking_podcast' && (
+                                  <div className="text-xs font-bold text-emerald-900">
+                                    🎙️ Chế độ luyện:{' '}
+                                    {d.practice_mode === 'reflex'
+                                      ? 'Phản xạ Dịch nói Việt → Anh'
+                                      : d.practice_mode === 'orange_drill'
+                                      ? 'Luyện Cụm từ màu da cam'
+                                      : 'Shadowing nhại giọng bản xứ'}
+                                    {d.practiced_count
+                                      ? ` • Đã thực hành ${d.practiced_count}${
+                                          d.total_questions ? `/${d.total_questions}` : ''
+                                        } câu`
+                                      : ''}
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* Right Score / Timestamp / Expand Button */}
+                              <div className="flex flex-wrap md:flex-col items-center md:items-end justify-between gap-2 shrink-0">
+                                <span className="text-[11.5px] font-bold text-slate-500 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200/80 whitespace-nowrap">
+                                  🕒 {formatDate(act.created_at)}
+                                </span>
+
+                                {isExercise &&
+                                  typeof d.score === 'number' &&
+                                  typeof d.total_questions === 'number' && (
+                                    <div className="flex items-center gap-2">
+                                      <span
+                                        className={`px-3 py-1 rounded-xl text-xs font-black border ${
+                                          (d.percent ?? 0) >= 80
+                                            ? 'bg-emerald-600 text-white border-emerald-600'
+                                            : (d.percent ?? 0) >= 50
+                                            ? 'bg-amber-500 text-white border-amber-500'
+                                            : 'bg-rose-600 text-white border-rose-600'
+                                        }`}
+                                      >
+                                        Điểm: {d.score}/{d.total_questions} ({d.percent ?? 0}%)
+                                      </span>
+
+                                      {qResults.length > 0 && (
+                                        <button
+                                          type="button"
+                                          onClick={() =>
+                                            setExpandedLibLogIds((prev) => ({
+                                              ...prev,
+                                              [act.id]: !prev[act.id],
+                                            }))
+                                          }
+                                          className="px-2.5 py-1 rounded-xl bg-white hover:bg-slate-50 text-[#0a5482] border border-slate-300 text-xs font-extrabold transition cursor-pointer"
+                                        >
+                                          {isExpanded ? 'Ẩn câu chọn ▲' : `👁️ Xem ${qResults.length} câu ▼`}
+                                        </button>
+                                      )}
+                                    </div>
+                                  )}
+                              </div>
+                            </div>
+
+                            {/* EXPANDED QUESTION-BY-QUESTION BREAKDOWN */}
+                            {isExpanded && qResults.length > 0 && (
+                              <div className="mt-3.5 pt-3.5 border-t border-emerald-200/70 grid grid-cols-1 md:grid-cols-2 gap-2">
+                                {qResults.map((qr: any, qIdx: number) => (
+                                  <div
+                                    key={qIdx}
+                                    className={`p-3 rounded-xl border text-xs flex items-start justify-between gap-2.5 ${
+                                      qr.isRight
+                                        ? 'bg-white border-emerald-200'
+                                        : 'bg-rose-50/70 border-rose-200'
+                                    }`}
+                                  >
+                                    <div className="min-w-0 space-y-0.5">
+                                      <div className="font-black text-slate-800">
+                                        Câu {qr.qNum || qIdx + 1}:{' '}
+                                        <span className="font-semibold text-slate-600">
+                                          {qr.question}
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div className="shrink-0 text-right font-extrabold whitespace-nowrap">
+                                      {qr.isRight ? (
+                                        <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">
+                                          ✓ Chọn {qr.picked}
+                                        </span>
+                                      ) : (
+                                        <span className="px-2 py-0.5 rounded bg-rose-100 text-rose-800 border border-rose-200">
+                                          ✗ Chọn {qr.picked} (Đúng: {qr.correct})
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>

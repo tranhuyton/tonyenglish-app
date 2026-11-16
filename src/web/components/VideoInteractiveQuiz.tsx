@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { LibraryExerciseQuestionResult } from '../lib/libraryActivityLogger';
 
 export interface VideoQuizQuestion {
   id: number;
@@ -58,6 +59,14 @@ interface VideoInteractiveQuizProps {
   videoTitle?: string;
   questions: VideoQuizQuestion[];
   lang: 'vi' | 'en';
+  onQuizSubmit?: (summary: {
+    score: number;
+    totalQuestions: number;
+    percent: number;
+    answeredCount: number;
+    timeSpentSec: number;
+    questionResults: LibraryExerciseQuestionResult[];
+  }) => void;
 }
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -66,6 +75,7 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
   videoId,
   questions,
   lang,
+  onQuizSubmit,
 }) => {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -75,6 +85,7 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const quizTopRef = useRef<HTMLDivElement | null>(null);
+  const startedAtRef = useRef<number>(Date.now());
 
   useEffect(() => {
     setSelectedAnswers({});
@@ -83,6 +94,7 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
     setEmptyWarning(false);
     setFilterMode('all');
     setIsCollapsed(false);
+    startedAtRef.current = Date.now();
   }, [videoId]);
 
   const totalQuestions = questions.length;
@@ -165,6 +177,32 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
     setConfirmPartial(false);
     setEmptyWarning(false);
     setFilterMode('all');
+
+    if (onQuizSubmit) {
+      const elapsedSec = Math.max(1, Math.round((Date.now() - startedAtRef.current) / 1000));
+      const questionResults: LibraryExerciseQuestionResult[] = questions.map((q, idx) => {
+        const chosen = selectedAnswers[idx];
+        const pickedLabel =
+          chosen !== undefined ? OPTION_LABELS[chosen] || String(chosen + 1) : 'Bỏ trống';
+        const correctLabel = OPTION_LABELS[q.correctIndex] || String(q.correctIndex + 1);
+        return {
+          qNum: idx + 1,
+          question: q.question,
+          picked: pickedLabel,
+          correct: correctLabel,
+          isRight: chosen === q.correctIndex,
+        };
+      });
+      onQuizSubmit({
+        score: stats.correct,
+        totalQuestions,
+        percent: stats.percent,
+        answeredCount,
+        timeSpentSec: elapsedSec,
+        questionResults,
+      });
+    }
+
     setTimeout(() => {
       quizTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 60);
@@ -190,6 +228,7 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
     setConfirmPartial(false);
     setEmptyWarning(false);
     setFilterMode('all');
+    startedAtRef.current = Date.now();
     setTimeout(() => {
       quizTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 60);

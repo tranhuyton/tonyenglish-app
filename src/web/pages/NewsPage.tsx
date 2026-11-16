@@ -14,6 +14,14 @@ import {
   updatePageSeo,
 } from '../lib/utils';
 import { IeltsSpeakingPodcast } from '../components/IeltsSpeakingPodcast';
+import {
+  getActiveTonyStudentUserId,
+  insertLibraryReadLog,
+  insertLibraryExerciseLog,
+  updateLibraryReadDuration,
+  LibraryExerciseQuestionResult,
+  LibraryReadLogInput,
+} from '../lib/libraryActivityLogger';
 
 const LibraryEbookViewer = React.lazy(() => import('../components/LibraryEbookViewer'));
 
@@ -22,14 +30,24 @@ const ArticleInteractiveQuiz: React.FC<{
   articleId: number | string;
   lang: string;
   categoryId?: number;
-}> = ({ questions, articleId, lang, categoryId }) => {
+  onQuizSubmitted?: (summary: {
+    score: number;
+    totalQuestions: number;
+    percent: number;
+    answeredCount: number;
+    timeSpentSec: number;
+    questionResults: LibraryExerciseQuestionResult[];
+  }) => void;
+}> = ({ questions, articleId, lang, categoryId, onQuizSubmitted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const quizTopRef = useRef<HTMLDivElement | null>(null);
+  const quizStartedAtRef = useRef<number>(Date.now());
 
   useEffect(() => {
     setSelectedAnswers({});
     setSubmitted(false);
+    quizStartedAtRef.current = Date.now();
   }, [articleId]);
 
   if (!questions || questions.length === 0) return null;
@@ -51,6 +69,28 @@ const ArticleInteractiveQuiz: React.FC<{
 
   const handleSubmit = () => {
     setSubmitted(true);
+    if (onQuizSubmitted) {
+      const elapsedSec = Math.max(1, Math.round((Date.now() - quizStartedAtRef.current) / 1000));
+      const questionResults: LibraryExerciseQuestionResult[] = questions.map((q, idx) => {
+        const picked = (selectedAnswers[q.id] || '').toUpperCase();
+        const correct = (q.correctAnswer || 'A').toUpperCase();
+        return {
+          qNum: idx + 1,
+          question: q.question,
+          picked: picked || 'Bỏ trống',
+          correct,
+          isRight: picked !== '' && picked === correct,
+        };
+      });
+      onQuizSubmitted({
+        score: correctCount,
+        totalQuestions: questions.length,
+        percent: scorePercent,
+        answeredCount,
+        timeSpentSec: elapsedSec,
+        questionResults,
+      });
+    }
     setTimeout(() => {
       quizTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 60);
@@ -59,6 +99,7 @@ const ArticleInteractiveQuiz: React.FC<{
   const handleReset = () => {
     setSelectedAnswers({});
     setSubmitted(false);
+    quizStartedAtRef.current = Date.now();
     setTimeout(() => {
       quizTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 60);
@@ -652,32 +693,39 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
   const [ebookTheaterTrigger, setEbookTheaterTrigger] = useState<number>(0);
 
-  // 🚀 TRACK LOG HỌC VIÊN ĐỌC TÀI LIỆU THƯ VIỆN
+  // 🚀 TRACK LOG HỌC VIÊN ĐỌC TÀI LIỆU & LÀM BÀI TẬP THƯ VIỆN
   const [authUserId, setAuthUserId] = useState<string | null>(null);
   const [readNewsIds, setReadNewsIds] = useState<Set<number>>(new Set());
+  const [completedQuizNewsIds, setCompletedQuizNewsIds] = useState<Set<number>>(new Set());
   const [camReadingReadCount, setCamReadingReadCount] = useState<number>(0);
   const [camListeningReadCount, setCamListeningReadCount] = useState<number>(0);
   const [isCurrentArticleLogged, setIsCurrentArticleLogged] = useState<boolean>(false);
+  const articleOpenedAtRef = useRef<number>(Date.now());
+  const activeReadLogRef = useRef<{ id: string | null; details: LibraryReadLogInput | null }>({
+    id: null,
+    details: null,
+  });
+  const lastEbookLoggedPageRef = useRef<number>(0);
 
   const pageSize = 10;
 
   useEffect(() => {
     let mounted = true;
     async function loadUserLibraryLogs() {
-      const { data: { session } } = await supabase.auth.getSession();
-      const uid = session?.user?.id || user?.id || null;
+      const uid = await getActiveTonyStudentUserId();
       if (!mounted) return;
       setAuthUserId(uid);
       if (!uid) return;
 
       const { data: logs } = await supabase
         .from('activity_logs')
-        .select('details')
+        .select('action_type, details')
         .eq('user_id', uid)
-        .eq('action_type', 'read_library');
+        .in('action_type', ['read_library', 'library_exercise']);
 
       if (!mounted || !logs) return;
       const allIds = new Set<number>();
+      const doneQuizIds = new Set<number>();
       const camReadSet = new Set<number>();
       const camListenSet = new Set<number>();
 
@@ -688,17 +736,22 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
         }
         const nid = Number(d?.news_id);
         if (nid > 0) {
-          allIds.add(nid);
-          const pCate = Number(d?.parent_category_id);
-          if (pCate === 38 || d?.library_type === 'cambridge_reading_translation') {
-            camReadSet.add(nid);
-          } else if (pCate === 87 || d?.library_type === 'cambridge_listening_translation') {
-            camListenSet.add(nid);
+          if (row.action_type === 'library_exercise') {
+            doneQuizIds.add(nid);
+          } else {
+            allIds.add(nid);
+            const pCate = Number(d?.parent_category_id);
+            if (pCate === 38 || d?.library_type === 'cambridge_reading_translation') {
+              camReadSet.add(nid);
+            } else if (pCate === 87 || d?.library_type === 'cambridge_listening_translation') {
+              camListenSet.add(nid);
+            }
           }
         }
       });
 
       setReadNewsIds(allIds);
+      setCompletedQuizNewsIds(doneQuizIds);
       setCamReadingReadCount(camReadSet.size);
       setCamListeningReadCount(camListenSet.size);
     }
@@ -707,6 +760,62 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
       mounted = false;
     };
   }, [user?.id]);
+
+  const buildArticleLogContext = (targetArticle: any) => {
+    const nid = Number(targetArticle?.news_id || 0);
+    const cate = allCategories.find(
+      (c) => Number(c.news_cc_id) === Number(targetArticle?.news_cc_id)
+    );
+    const parentCateId = cate
+      ? Number(cate.news_cc_parent) === 0
+        ? Number(cate.news_cc_id)
+        : Number(cate.news_cc_parent)
+      : Number(targetArticle?.news_cc_id || 0);
+    const parentCate = allCategories.find((c) => Number(c.news_cc_id) === parentCateId) || cate;
+
+    const ebookExtracted = extractArticleEbookPdfUrl(targetArticle?.news_content || '');
+    const isEbook = Number(targetArticle?.news_cc_id) === 30 || Boolean(ebookExtracted.pdfUrl);
+    const quizList = targetArticle ? parseArticleInteractiveQuiz(targetArticle) : [];
+    const hasLegacyQa =
+      quizList.length === 0 &&
+      Boolean(targetArticle?.news_question && String(targetArticle.news_question).trim() !== '');
+    const hasPodcast = [67, 68, 69].includes(Number(targetArticle?.news_cc_id));
+
+    let libraryType = isEbook ? 'library_ebook' : 'library_article';
+    if (parentCateId === 38 || parentCateId === 51) libraryType = 'cambridge_reading_translation';
+    else if (parentCateId === 87) libraryType = 'cambridge_listening_translation';
+    else if (parentCateId === 56) libraryType = 'ielts_writing_sample';
+    else if (parentCateId === 67) libraryType = 'ielts_speaking_sample';
+    else if (parentCateId === 79) libraryType = 'igcse_esl_reading';
+    else if (parentCateId === 37) libraryType = 'library_conversation';
+    else if (parentCateId === 19) libraryType = 'library_news_vocab';
+
+    const courseId = [38, 87, 56, 67, 51].includes(parentCateId)
+      ? '239a64f0-c106-40e5-a6e2-4e685a0d70fb' // IELTS Premium
+      : parentCateId === 79
+      ? '16967a7e-3b0d-4293-b7c1-f021a5c14445' // IGCSE ESL
+      : undefined;
+
+    const cleanSlugUrl = String(targetArticle?.news_title_url || '').trim();
+    const urlPath = cleanSlugUrl ? `/news/view/${cleanSlugUrl}` : '/news';
+
+    return {
+      nid,
+      cate,
+      parentCateId,
+      parentCate,
+      libraryType,
+      courseId,
+      cleanSlugUrl,
+      urlPath,
+      isEbook,
+      quizCount: quizList.length,
+      hasLegacyQa,
+      hasPodcast,
+      categoryName: parentCate?.news_cc_name_vi || cate?.news_cc_name_vi || 'Thư viện',
+      subCategoryName: cate?.news_cc_name_vi || '',
+    };
+  };
 
   const recordLibraryReadLog = async (targetArticle: any, forceManual?: boolean) => {
     if (!targetArticle?.news_id) return;
@@ -719,32 +828,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
     let uid = authUserId;
     if (!uid) {
-      const { data: { session } } = await supabase.auth.getSession();
-      uid = session?.user?.id || null;
+      uid = await getActiveTonyStudentUserId();
       if (uid) setAuthUserId(uid);
     }
     if (!uid) return;
 
-    const cate = allCategories.find((c) => Number(c.news_cc_id) === Number(targetArticle.news_cc_id));
-    const parentCateId = cate
-      ? Number(cate.news_cc_parent) === 0
-        ? Number(cate.news_cc_id)
-        : Number(cate.news_cc_parent)
-      : Number(targetArticle.news_cc_id);
-    const parentCate = allCategories.find((c) => Number(c.news_cc_id) === parentCateId) || cate;
-
-    let libraryType = 'library_article';
-    if (parentCateId === 38 || parentCateId === 51) libraryType = 'cambridge_reading_translation';
-    else if (parentCateId === 87) libraryType = 'cambridge_listening_translation';
-    else if (parentCateId === 56) libraryType = 'ielts_writing_sample';
-    else if (parentCateId === 67) libraryType = 'ielts_speaking_sample';
-    else if (parentCateId === 79) libraryType = 'igcse_esl_reading';
-
-    const courseId = [38, 87, 56, 67, 51].includes(parentCateId)
-      ? '239a64f0-c106-40e5-a6e2-4e685a0d70fb' // IELTS Premium
-      : parentCateId === 79
-      ? '16967a7e-3b0d-4293-b7c1-f021a5c14445' // IGCSE ESL
-      : undefined;
+    const ctx = buildArticleLogContext(targetArticle);
 
     try {
       sessionStorage.setItem(sessionKey, '1');
@@ -756,37 +845,45 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
       next.add(nid);
       return next;
     });
-    if (parentCateId === 38) {
+    if (ctx.parentCateId === 38) {
       setCamReadingReadCount((prev) => (readNewsIds.has(nid) ? prev : prev + 1));
-    } else if (parentCateId === 87) {
+    } else if (ctx.parentCateId === 87) {
       setCamListeningReadCount((prev) => (readNewsIds.has(nid) ? prev : prev + 1));
     }
 
-    await supabase.from('activity_logs').insert([
-      {
-        user_id: uid,
-        action_type: 'read_library',
-        details: {
-          news_id: nid,
-          article_title: targetArticle.news_title,
-          article_slug: (targetArticle.news_title_url || '').trim(),
-          category_id: Number(targetArticle.news_cc_id),
-          parent_category_id: parentCateId,
-          category_name: parentCate?.news_cc_name_vi || cate?.news_cc_name_vi || 'Thư viện',
-          sub_category_name: cate?.news_cc_name_vi || '',
-          library_type: libraryType,
-          course_id: courseId,
-        },
-      },
-    ]);
+    const detailsPayload: LibraryReadLogInput = {
+      activity_kind: ctx.isEbook ? 'read_ebook' : 'read_article',
+      news_id: nid,
+      article_title: targetArticle.news_title,
+      article_slug: ctx.cleanSlugUrl,
+      url_path: ctx.urlPath,
+      category_id: Number(targetArticle.news_cc_id),
+      parent_category_id: ctx.parentCateId,
+      category_name: ctx.categoryName,
+      sub_category_name: ctx.subCategoryName,
+      library_type: ctx.libraryType,
+      course_id: ctx.courseId,
+      has_quiz: ctx.quizCount > 0,
+      quiz_question_count: ctx.quizCount,
+      has_legacy_qa: ctx.hasLegacyQa,
+      is_ebook: ctx.isEbook,
+      has_podcast: ctx.hasPodcast,
+    };
+
+    const logId = await insertLibraryReadLog(detailsPayload, uid);
+    activeReadLogRef.current = { id: logId, details: detailsPayload };
   };
 
-  // Tự động ghi nhận log khi học viên mở và đọc bài trong Thư viện sau 4 giây
+  // Tự động ghi nhận log khi học viên mở và đọc bài trong Thư viện sau 4 giây + cập nhật thời lượng đọc khi rời bài
   useEffect(() => {
     if (mode !== 'detail' || !article?.news_id) {
       setIsCurrentArticleLogged(false);
       return;
     }
+    articleOpenedAtRef.current = Date.now();
+    activeReadLogRef.current = { id: null, details: null };
+    lastEbookLoggedPageRef.current = 0;
+
     const nid = Number(article.news_id);
     if (readNewsIds.has(nid) || sessionStorage.getItem(`tony_lib_read_${nid}`)) {
       setIsCurrentArticleLogged(true);
@@ -798,7 +895,17 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
       recordLibraryReadLog(article, false);
     }, 4000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      const elapsedSec = Math.round((Date.now() - articleOpenedAtRef.current) / 1000);
+      if (activeReadLogRef.current.id && activeReadLogRef.current.details && elapsedSec >= 15) {
+        updateLibraryReadDuration(
+          activeReadLogRef.current.id,
+          activeReadLogRef.current.details,
+          elapsedSec
+        );
+      }
+    };
   }, [mode, article?.news_id, authUserId, allCategories.length]);
 
   useEffect(() => {
@@ -1451,6 +1558,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                       ✅ {lang === 'vi' ? 'Đã đọc' : 'Completed'}
                                     </span>
                                   )}
+                                  { completedQuizNewsIds.has(Number(item.news_id)) && (
+                                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200 text-[11px] font-extrabold">
+                                      🎯 {lang === 'vi' ? 'Đã nộp BT' : 'Quiz Done'}
+                                    </span>
+                                  )}
                                   {(() => {
                                     const quizCount = parseArticleInteractiveQuiz(item).length;
                                     if (quizCount <= 0) return null;
@@ -1896,6 +2008,51 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                     articleId={article.news_id || article.news_title_url}
                                     lang={lang}
                                     externalTheaterTrigger={ebookTheaterTrigger}
+                                    onEbookProgress={async (info) => {
+                                      if (info.currentPage === lastEbookLoggedPageRef.current) return;
+                                      lastEbookLoggedPageRef.current = info.currentPage;
+                                      const ctx = buildArticleLogContext(article);
+                                      const ebookDetails: LibraryReadLogInput = {
+                                        activity_kind: 'read_ebook',
+                                        news_id: ctx.nid,
+                                        article_title: article.news_title,
+                                        article_slug: ctx.cleanSlugUrl,
+                                        url_path: ctx.urlPath,
+                                        category_id: Number(article.news_cc_id),
+                                        parent_category_id: ctx.parentCateId,
+                                        category_name: ctx.categoryName,
+                                        sub_category_name: ctx.subCategoryName,
+                                        library_type: 'library_ebook',
+                                        is_ebook: true,
+                                        ebook_page: info.currentPage,
+                                        ebook_max_page: info.maxPage,
+                                        ebook_total_pages: info.totalPages,
+                                        pages_turned: info.pagesTurned,
+                                        duration_sec: Math.max(
+                                          1,
+                                          Math.round(
+                                            (Date.now() - articleOpenedAtRef.current) / 1000
+                                          )
+                                        ),
+                                      };
+                                      if (activeReadLogRef.current.id) {
+                                        activeReadLogRef.current.details = ebookDetails;
+                                        await updateLibraryReadDuration(
+                                          activeReadLogRef.current.id,
+                                          ebookDetails,
+                                          ebookDetails.duration_sec || 15
+                                        );
+                                      } else {
+                                        const newId = await insertLibraryReadLog(
+                                          ebookDetails,
+                                          authUserId
+                                        );
+                                        activeReadLogRef.current = {
+                                          id: newId,
+                                          details: ebookDetails,
+                                        };
+                                      }
+                                    }}
                                   />
                                 </Suspense>
                               </div>
@@ -1924,7 +2081,40 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         {/* IELTS Speaking Interactive Podcast & Orange Phrase Mastery Section */}
                         {[67, 68, 69].includes(Number(article.news_cc_id)) && article.news_id && (
                           <div id="ielts-speaking-podcast-section" className="pt-2">
-                            <IeltsSpeakingPodcast newsId={Number(article.news_id)} />
+                            <IeltsSpeakingPodcast
+                              newsId={Number(article.news_id)}
+                              onPodcastPractice={(info) => {
+                                const ctx = buildArticleLogContext(article);
+                                setCompletedQuizNewsIds((prev) => {
+                                  const next = new Set(prev);
+                                  next.add(ctx.nid);
+                                  return next;
+                                });
+                                insertLibraryExerciseLog(
+                                  {
+                                    exercise_kind: 'speaking_podcast',
+                                    news_id: ctx.nid,
+                                    item_title: article.news_title,
+                                    article_slug: ctx.cleanSlugUrl,
+                                    url_path: ctx.urlPath,
+                                    category_id: Number(article.news_cc_id),
+                                    parent_category_id: ctx.parentCateId,
+                                    category_name: ctx.categoryName,
+                                    sub_category_name: ctx.subCategoryName,
+                                    library_type: ctx.libraryType,
+                                    course_id: ctx.courseId,
+                                    practice_mode: info.mode,
+                                    practiced_count: info.practicedCount,
+                                    total_questions: info.totalCount,
+                                    time_spent_sec: Math.max(
+                                      1,
+                                      Math.round((Date.now() - articleOpenedAtRef.current) / 1000)
+                                    ),
+                                  },
+                                  authUserId
+                                );
+                              }}
+                            />
                           </div>
                         )}
 
@@ -2054,7 +2244,46 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                   <div>
                                     <button
                                       type="button"
-                                      onClick={() => setShowAnswer(!showAnswer)}
+                                      onClick={() => {
+                                        const nextShow = !showAnswer;
+                                        setShowAnswer(nextShow);
+                                        if (nextShow && article?.news_id) {
+                                          const qaKey = `tony_lib_qa_${article.news_id}`;
+                                          if (!sessionStorage.getItem(qaKey)) {
+                                            try {
+                                              sessionStorage.setItem(qaKey, '1');
+                                            } catch {}
+                                            const ctx = buildArticleLogContext(article);
+                                            setCompletedQuizNewsIds((prev) => {
+                                              const next = new Set(prev);
+                                              next.add(ctx.nid);
+                                              return next;
+                                            });
+                                            insertLibraryExerciseLog(
+                                              {
+                                                exercise_kind: 'qa_practice',
+                                                news_id: ctx.nid,
+                                                item_title: article.news_title,
+                                                article_slug: ctx.cleanSlugUrl,
+                                                url_path: ctx.urlPath,
+                                                category_id: Number(article.news_cc_id),
+                                                parent_category_id: ctx.parentCateId,
+                                                category_name: ctx.categoryName,
+                                                sub_category_name: ctx.subCategoryName,
+                                                library_type: ctx.libraryType,
+                                                course_id: ctx.courseId,
+                                                time_spent_sec: Math.max(
+                                                  1,
+                                                  Math.round(
+                                                    (Date.now() - articleOpenedAtRef.current) / 1000
+                                                  )
+                                                ),
+                                              },
+                                              authUserId
+                                            );
+                                          }
+                                        }
+                                      }}
                                       className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2 rounded-xl transition"
                                     >
                                       ✅ {t('View Answer')}
@@ -2086,6 +2315,36 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               articleId={article.news_id || article.news_title_url}
                               lang={lang}
                               categoryId={Number(article.news_cc_id)}
+                              onQuizSubmitted={(summary) => {
+                                const ctx = buildArticleLogContext(article);
+                                setCompletedQuizNewsIds((prev) => {
+                                  const next = new Set(prev);
+                                  next.add(ctx.nid);
+                                  return next;
+                                });
+                                insertLibraryExerciseLog(
+                                  {
+                                    exercise_kind: 'article_quiz',
+                                    news_id: ctx.nid,
+                                    item_title: article.news_title,
+                                    article_slug: ctx.cleanSlugUrl,
+                                    url_path: ctx.urlPath,
+                                    category_id: Number(article.news_cc_id),
+                                    parent_category_id: ctx.parentCateId,
+                                    category_name: ctx.categoryName,
+                                    sub_category_name: ctx.subCategoryName,
+                                    library_type: ctx.libraryType,
+                                    course_id: ctx.courseId,
+                                    score: summary.score,
+                                    total_questions: summary.totalQuestions,
+                                    percent: summary.percent,
+                                    answered_count: summary.answeredCount,
+                                    time_spent_sec: summary.timeSpentSec,
+                                    question_results: summary.questionResults,
+                                  },
+                                  authUserId
+                                );
+                              }}
                             />
                           </div>
                         )}
@@ -2100,12 +2359,17 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               </span>
                               <div>
                                 <div className="text-xs sm:text-sm font-black text-emerald-950">
-                                  {isCurrentArticleLogged
-                                    ? 'Đã ghi nhận hoàn thành bài học này vào Nhật ký & Tiến độ học tập!'
+                                  {completedQuizNewsIds.has(Number(article.news_id))
+                                    ? 'Đã ghi nhận bài đọc & kết quả nộp bài tập Thư viện vào Nhật ký học tập!'
+                                    : isCurrentArticleLogged
+                                    ? 'Đã ghi nhận mở đọc bài học này vào Nhật ký học tập!'
                                     : 'Đang ghi nhận bài đọc vào Tiến độ học tập của bạn...'}
                                 </div>
                                 <div className="text-[11.5px] text-slate-600">
-                                  Giáo viên và hệ thống AI Tutor đã cập nhật hoạt động đọc tài liệu Thư viện của bạn.
+                                  {interactiveQuiz.length > 0 &&
+                                  !completedQuizNewsIds.has(Number(article.news_id))
+                                    ? '💡 Bài này có bài tập trắc nghiệm bên trên — nhớ làm và bấm "Nộp bài & Chấm điểm" để Thầy ghi nhận điểm nhé!'
+                                    : 'Giáo viên và hệ thống AI Tutor đã cập nhật hoạt động học Thư viện của bạn.'}
                                 </div>
                               </div>
                             </div>

@@ -11,6 +11,12 @@ export interface LibraryEbookViewerProps {
   articleId: number | string;
   lang?: string;
   externalTheaterTrigger?: number;
+  onEbookProgress?: (info: {
+    currentPage: number;
+    maxPage: number;
+    totalPages: number | null;
+    pagesTurned: number;
+  }) => void;
 }
 
 export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
@@ -19,6 +25,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
   articleId,
   lang = 'vi',
   externalTheaterTrigger = 0,
+  onEbookProgress,
 }) => {
   const storageKey = `tony_ebook_page_${articleId}`;
 
@@ -40,6 +47,11 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
   const [containerWidth, setContainerWidth] = useState<number>(760);
 
   const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  const pagesTurnedRef = useRef<number>(0);
+  const maxPageRef = useRef<number>(currentPage);
+  const progressTimerRef = useRef<number | null>(null);
+  const onEbookProgressRef = useRef(onEbookProgress);
+  onEbookProgressRef.current = onEbookProgress;
 
   // Reset / restore saved page when switching ebook articles
   useEffect(() => {
@@ -53,6 +65,8 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
     setNumPages(null);
     setIsLoadingPage(true);
     setUseNativeFallback(false);
+    pagesTurnedRef.current = 0;
+    maxPageRef.current = savedPage;
   }, [articleId, pdfUrl]);
 
   // Open theater fullscreen when triggered from top quick-action button
@@ -112,9 +126,29 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
     if (clamped !== currentPage) {
       setIsLoadingPage(true);
       setCurrentPage(clamped);
+      pagesTurnedRef.current += 1;
+      if (clamped > maxPageRef.current) maxPageRef.current = clamped;
       canvasAreaRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (pagesTurnedRef.current >= 2 && onEbookProgressRef.current) {
+        if (progressTimerRef.current) window.clearTimeout(progressTimerRef.current);
+        progressTimerRef.current = window.setTimeout(() => {
+          onEbookProgressRef.current?.({
+            currentPage: clamped,
+            maxPage: maxPageRef.current,
+            totalPages: numPages,
+            pagesTurned: pagesTurnedRef.current,
+          });
+        }, 4000);
+      }
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (progressTimerRef.current) window.clearTimeout(progressTimerRef.current);
+    };
+  }, []);
 
   const handlePrev = () => {
     if (currentPage > 1) goToPage(currentPage - step);

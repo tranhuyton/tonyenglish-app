@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { resolveUploadUrl, getYoutubeEmbedUrl, fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
 import { VideoInteractiveQuiz, parseVideoQuizData } from '../components/VideoInteractiveQuiz';
+import {
+  insertLibraryReadLog,
+  insertLibraryExerciseLog,
+  updateLibraryReadDuration,
+  LibraryReadLogInput,
+} from '../lib/libraryActivityLogger';
 
 export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
   const { cateSlug, videoSlug } = useParams<{ cateSlug?: string; videoSlug?: string }>();
@@ -18,6 +24,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
   const [showAnswer, setShowAnswer] = useState(false);
   const [showSubtitles, setShowSubtitles] = useState(false);
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
+  const videoOpenedAtRef = useRef<number>(Date.now());
 
   useEffect(() => {
     async function loadVideoCategories() {
@@ -128,6 +135,64 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
       updatePageSeo(`${mainHeading} - ${t('Videos Store')}`, activeCate?.vc_desc_vi || activeCate?.vc_desc);
     }
   }, [mode, currentVideo, mainHeading, activeCate]);
+
+  // Ghi nhận học viên xem Video trong Thư viện sau 5 giây + cập nhật thời lượng khi rời trang
+  useEffect(() => {
+    if (mode !== 'watch' || !currentVideo?.video_id) return;
+    videoOpenedAtRef.current = Date.now();
+    const vid = Number(currentVideo.video_id);
+    const sessionKey = `tony_lib_vid_${vid}`;
+    if (sessionStorage.getItem(sessionKey)) return;
+
+    const vCate =
+      allVideoCates.find((vc) => Number(vc.vc_id) === Number(currentVideo.vc_id)) || activeCate;
+    const vParent =
+      vCate && vCate.vc_parent
+        ? allVideoCates.find((vc) => Number(vc.vc_id) === Number(vCate.vc_parent))
+        : parentCate;
+    const quizList = parseVideoQuizData(currentVideo.video_question);
+    const hasLegacyQa =
+      !quizList &&
+      Boolean(currentVideo.video_question && String(currentVideo.video_question).trim() !== '');
+    const cateSlugForUrl = (vCate?.vc_name_url || cleanCateParam || '').trim();
+    const vidSlugForUrl = (currentVideo.video_url || '').trim();
+    const urlPath = vidSlugForUrl
+      ? `/video/${cateSlugForUrl}/${vidSlugForUrl}`
+      : `/video/${cateSlugForUrl}`;
+
+    const logDetails: LibraryReadLogInput = {
+      activity_kind: 'watch_video',
+      video_id: vid,
+      article_title: currentVideo.video_desc || 'Video tiếng Anh',
+      article_slug: vidSlugForUrl,
+      url_path: urlPath,
+      category_id: Number(currentVideo.vc_id) || undefined,
+      parent_category_id: Number(vParent?.vc_id || vCate?.vc_id || 0) || undefined,
+      category_name:
+        vParent?.vc_name_vi || vParent?.vc_name || vCate?.vc_name_vi || vCate?.vc_name || 'Kho Video',
+      sub_category_name: vCate?.vc_name_vi || vCate?.vc_name || '',
+      library_type: 'library_video',
+      has_quiz: Boolean(quizList && quizList.length > 0),
+      quiz_question_count: quizList?.length || 0,
+      has_legacy_qa: hasLegacyQa,
+    };
+
+    let insertedLogId: string | null = null;
+    const timer = window.setTimeout(async () => {
+      try {
+        sessionStorage.setItem(sessionKey, '1');
+      } catch {}
+      insertedLogId = await insertLibraryReadLog(logDetails);
+    }, 5000);
+
+    return () => {
+      window.clearTimeout(timer);
+      const elapsedSec = Math.round((Date.now() - videoOpenedAtRef.current) / 1000);
+      if (insertedLogId && elapsedSec >= 15) {
+        updateLibraryReadDuration(insertedLogId, logDetails, elapsedSec);
+      }
+    };
+  }, [mode, currentVideo?.video_id, allVideoCates.length]);
 
   return (
     <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
@@ -341,6 +406,26 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
 
                         {(() => {
                           const quizQuestions = parseVideoQuizData(currentVideo.video_question);
+                          const vCate =
+                            allVideoCates.find((vc) => Number(vc.vc_id) === Number(currentVideo.vc_id)) ||
+                            activeCate;
+                          const vParent =
+                            vCate && vCate.vc_parent
+                              ? allVideoCates.find((vc) => Number(vc.vc_id) === Number(vCate.vc_parent))
+                              : parentCate;
+                          const cateSlugForUrl = (vCate?.vc_name_url || cleanCateParam || '').trim();
+                          const vidSlugForUrl = (currentVideo.video_url || '').trim();
+                          const urlPath = vidSlugForUrl
+                            ? `/video/${cateSlugForUrl}/${vidSlugForUrl}`
+                            : `/video/${cateSlugForUrl}`;
+                          const resolvedCategoryName =
+                            vParent?.vc_name_vi ||
+                            vParent?.vc_name ||
+                            vCate?.vc_name_vi ||
+                            vCate?.vc_name ||
+                            'Kho Video';
+                          const resolvedSubName = vCate?.vc_name_vi || vCate?.vc_name || '';
+
                           if (quizQuestions) {
                             return (
                               <VideoInteractiveQuiz
@@ -349,6 +434,27 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                                 videoTitle={currentVideo.video_desc}
                                 questions={quizQuestions}
                                 lang={lang}
+                                onQuizSubmit={(summary) => {
+                                  insertLibraryExerciseLog({
+                                    exercise_kind: 'video_quiz',
+                                    video_id: Number(currentVideo.video_id),
+                                    item_title: currentVideo.video_desc || 'Video tiếng Anh',
+                                    article_slug: vidSlugForUrl,
+                                    url_path: urlPath,
+                                    category_id: Number(currentVideo.vc_id) || undefined,
+                                    parent_category_id:
+                                      Number(vParent?.vc_id || vCate?.vc_id || 0) || undefined,
+                                    category_name: resolvedCategoryName,
+                                    sub_category_name: resolvedSubName,
+                                    library_type: 'library_video',
+                                    score: summary.score,
+                                    total_questions: summary.totalQuestions,
+                                    percent: summary.percent,
+                                    answered_count: summary.answeredCount,
+                                    time_spent_sec: summary.timeSpentSec,
+                                    question_results: summary.questionResults,
+                                  });
+                                }}
                               />
                             );
                           }
@@ -380,7 +486,38 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                                       <div>
                                         <button
                                           type="button"
-                                          onClick={() => setShowAnswer(!showAnswer)}
+                                          onClick={() => {
+                                            const nextShow = !showAnswer;
+                                            setShowAnswer(nextShow);
+                                            if (nextShow && currentVideo?.video_id) {
+                                              const qaKey = `tony_lib_vid_qa_${currentVideo.video_id}`;
+                                              if (!sessionStorage.getItem(qaKey)) {
+                                                try {
+                                                  sessionStorage.setItem(qaKey, '1');
+                                                } catch {}
+                                                insertLibraryExerciseLog({
+                                                  exercise_kind: 'qa_practice',
+                                                  video_id: Number(currentVideo.video_id),
+                                                  item_title: currentVideo.video_desc || 'Video tiếng Anh',
+                                                  article_slug: vidSlugForUrl,
+                                                  url_path: urlPath,
+                                                  category_id: Number(currentVideo.vc_id) || undefined,
+                                                  parent_category_id:
+                                                    Number(vParent?.vc_id || vCate?.vc_id || 0) ||
+                                                    undefined,
+                                                  category_name: resolvedCategoryName,
+                                                  sub_category_name: resolvedSubName,
+                                                  library_type: 'library_video',
+                                                  time_spent_sec: Math.max(
+                                                    1,
+                                                    Math.round(
+                                                      (Date.now() - videoOpenedAtRef.current) / 1000
+                                                    )
+                                                  ),
+                                                });
+                                              }
+                                            }
+                                          }}
                                           className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-2 rounded-xl transition"
                                         >
                                           ✅ {t('View Answer')}

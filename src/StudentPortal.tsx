@@ -1599,12 +1599,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         return false;
       }
 
-      // 5. Đọc tài liệu Thư viện / Bài dịch đọc & nghe (read_library)
-      if (act.action_type === 'read_library') {
+      // 5. Đọc tài liệu Thư viện / Làm bài tập Thư viện (read_library / library_exercise)
+      if (act.action_type === 'read_library' || act.action_type === 'library_exercise') {
         const selectedCourseObj = courses.find(c => String(c.id) === targetCourseIdStr);
         const isSelectedIelts = selectedCourseObj ? ((selectedCourseObj.title || '').toLowerCase().includes('ielts') || selectedCourseObj.type === 'IELTS') : false;
         const pCate = Number(details?.parent_category_id);
         const libType = String(details?.library_type || '');
+        if (details?.course_id && String(details.course_id) === targetCourseIdStr) return true;
         if (isSelectedIelts && ([38, 87, 56, 67, 51].includes(pCate) || libType.includes('cambridge') || libType.includes('ielts'))) {
           return true;
         }
@@ -3907,16 +3908,40 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 const lecName = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : 'Bài giảng');
                                 desc = `Đã học xong: "${lecName}"`;
                               } else if (act.action_type === 'read_library') {
-                                icon = '📚';
+                                icon =
+                                  details?.activity_kind === 'watch_video' || details?.library_type === 'library_video'
+                                    ? '🎬'
+                                    : details?.is_ebook || details?.activity_kind === 'read_ebook'
+                                    ? '📕'
+                                    : '📚';
                                 title =
                                   details?.library_type === 'cambridge_reading_translation'
                                     ? 'ĐỌC BÀI DỊCH ĐỌC CAMBRIDGE'
                                     : details?.library_type === 'cambridge_listening_translation'
                                     ? 'NGHE & DỊCH CAMBRIDGE LISTENING'
+                                    : details?.activity_kind === 'watch_video' || details?.library_type === 'library_video'
+                                    ? 'XEM VIDEO THƯ VIỆN'
+                                    : details?.is_ebook || details?.activity_kind === 'read_ebook'
+                                    ? 'ĐỌC SÁCH E-BOOK THƯ VIỆN'
                                     : 'ĐỌC TÀI LIỆU THƯ VIỆN';
                                 const artTitle = details?.article_title || details?.title || 'Tài liệu thư viện';
                                 const cateName = details?.sub_category_name || details?.category_name || '';
-                                desc = `Đã hoàn thành: "${artTitle}"${cateName ? ` • (${cateName})` : ''}`;
+                                const pagePart = details?.ebook_page ? ` • Trang ${details.ebook_page}${details.ebook_total_pages ? `/${details.ebook_total_pages}` : ''}` : '';
+                                desc = `Đã đọc: "${artTitle}"${cateName ? ` • (${cateName})` : ''}${pagePart}`;
+                              } else if (act.action_type === 'library_exercise') {
+                                icon = '🎯';
+                                title =
+                                  details?.exercise_kind === 'video_quiz'
+                                    ? 'NỘP QUIZ VIDEO THƯ VIỆN'
+                                    : details?.exercise_kind === 'speaking_podcast'
+                                    ? 'LUYỆN NÓI PODCAST THƯ VIỆN'
+                                    : 'NỘP BÀI TẬP THƯ VIỆN';
+                                const itemTitle = details?.item_title || details?.article_title || 'Bài tập thư viện';
+                                const scoreStr =
+                                  typeof details?.score === 'number' && typeof details?.total_questions === 'number'
+                                    ? ` • Đạt ${details.score}/${details.total_questions} câu (${details.percent ?? 0}%)`
+                                    : '';
+                                desc = `Đã hoàn thành: "${itemTitle}"${scoreStr}`;
                               } else {
                                 icon = '📌';
                                 title = (act.action_type || 'HOẠT ĐỘNG').toUpperCase();
