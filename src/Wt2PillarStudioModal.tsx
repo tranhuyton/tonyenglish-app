@@ -9,6 +9,7 @@ import {
   WT2_REFLEX_QUESTIONS,
   buildMultiIdeaParagraphs,
   detectWt2QuestionGuide,
+  getBodyRoleLabels,
   getLinkerRoleForIdea,
   getRecommendedSentenceDepths,
   Wt2Category,
@@ -184,6 +185,20 @@ function makeSlotUnitKey(
   return ideaIndex ? `${bodyIndex}_${ideaIndex}_${col}` : `${bodyIndex}_${col}`;
 }
 
+function swapBodyPrefixMap<T>(rec: Record<string, T>): Record<string, T> {
+  const next: Record<string, T> = {};
+  Object.entries(rec).forEach(([k, v]) => {
+    if (k.startsWith('1_')) {
+      next[`2_${k.slice(2)}`] = v;
+    } else if (k.startsWith('2_')) {
+      next[`1_${k.slice(2)}`] = v;
+    } else {
+      next[k] = v;
+    }
+  });
+  return next;
+}
+
 function makeFiveSelections(
   candidates: { id: number; polarity: 'positive' | 'negative' }[],
   presetFirstId: number | undefined,
@@ -238,6 +253,215 @@ function defaultTemplateForCategory(cat: Wt2Category, sub?: Wt2TemplateId): Wt2T
   }
 }
 
+export function normalizeWt2TopicKey(raw: string): string {
+  return (raw || '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
+interface Wt2StudioStateSnapshot {
+  selectedCategory: Wt2Category;
+  templateId: Wt2TemplateId;
+  stance: 'agree' | 'disagree';
+  difficulty: 'level1' | 'level2';
+  bodyMode: Wt2BodyMode;
+  swapBodies?: boolean;
+  pillar1Id: number;
+  pillar1Polarity: 'positive' | 'negative';
+  pillar2Id: number;
+  pillar2Polarity: 'positive' | 'negative';
+  b1IdeaCount: MultiIdeaCount;
+  b2IdeaCount: MultiIdeaCount;
+  multiPillars: { 1: MultiBodyTuple; 2: MultiBodyTuple };
+  linkers: Record<string, string>;
+  slottedPillarKeys: Record<string, boolean>;
+  memoryPillarTexts: Record<string, string>;
+  topicInputs: Record<string, string>;
+  essayDraft: string;
+  checklist: [boolean, boolean, boolean, boolean];
+}
+
+interface SavedWt2Submission {
+  id: string;
+  createdAt: string;
+  overall: number;
+  formulaScore?: number;
+  bodyMode: Wt2BodyMode;
+  templateId: Wt2TemplateId;
+  topic: string;
+  essay: string;
+  wordCount: number;
+  aiFeedback: any;
+  pillar1Summary?: string;
+  pillar2Summary?: string;
+  b1IdeaCount?: MultiIdeaCount;
+  b2IdeaCount?: MultiIdeaCount;
+  multiPillars?: { 1: MultiBodyTuple; 2: MultiBodyTuple };
+  linkers?: Record<string, string>;
+  studioState?: Partial<Wt2StudioStateSnapshot>;
+}
+
+const WT2_LOCAL_GRADED_PREFIX = 'tony_wt2_graded_v1_';
+const WT2_LOCAL_WIP_PREFIX = 'tony_wt2_wip_v1_';
+
+function clampIdeaCount(val: any, fallback: MultiIdeaCount = 2): MultiIdeaCount {
+  const n = Number(val);
+  if (n >= 1 && n <= 5) return Math.round(n) as MultiIdeaCount;
+  return fallback;
+}
+
+function normalizeSavedMultiSide(
+  rawArr: any,
+  count: MultiIdeaCount,
+  defaultPol: 'positive' | 'negative',
+  fallbackIds: [number, number, number, number, number]
+): MultiBodyTuple {
+  const recDepths = getRecommendedSentenceDepths(count);
+  const src = Array.isArray(rawArr) ? rawArr : [];
+  return [0, 1, 2, 3, 4].map((idx) => {
+    const item = src[idx];
+    const id =
+      item && typeof item.id === 'number' && item.id >= 1 && item.id <= 19
+        ? item.id
+        : fallbackIds[idx];
+    const polarity: 'positive' | 'negative' =
+      item?.polarity === 'negative'
+        ? 'negative'
+        : item?.polarity === 'positive'
+        ? 'positive'
+        : defaultPol;
+    const sentences: IdeaSentenceDepth =
+      item?.sentences === 1 || item?.sentences === 2 ? item.sentences : recDepths[idx];
+    return { id, polarity, sentences };
+  }) as MultiBodyTuple;
+}
+
+function parseSavedSubmissionRow(row: any): SavedWt2Submission | null {
+  if (!row) return null;
+  let d = row.details;
+  if (typeof d === 'string') {
+    try {
+      d = JSON.parse(d);
+    } catch {
+      return null;
+    }
+  }
+  if (!d || d.mode !== 'wt2_pillar_studio' || !d.aiFeedback || !d.topic) return null;
+  const tpl: Wt2TemplateId =
+    d.templateId && WT2_STRUCTURES[d.templateId as Wt2TemplateId]
+      ? (d.templateId as Wt2TemplateId)
+      : 'discussion';
+  const bodyMode: Wt2BodyMode = d.bodyMode === 'multi' ? 'multi' : 'single';
+  const b1Cnt = clampIdeaCount(d.studioState?.b1IdeaCount ?? d.b1IdeaCount, 2);
+  const b2Cnt = clampIdeaCount(d.studioState?.b2IdeaCount ?? d.b2IdeaCount, 2);
+  const rawMulti = d.studioState?.multiPillars || d.multiPillars;
+
+  return {
+    id: String(row.id || `local_${row.created_at || Date.now()}`),
+    createdAt: String(row.created_at || new Date().toISOString()),
+    overall: Number(d.aiFeedback?.overall ?? row.score ?? 0),
+    formulaScore:
+      d.aiFeedback?.formulaScore !== undefined ? Number(d.aiFeedback.formulaScore) : undefined,
+    bodyMode,
+    templateId: tpl,
+    topic: String(d.topic),
+    essay: String(d.essay || d.studioState?.essayDraft || ''),
+    wordCount: Number(d.wordCount || 0),
+    aiFeedback: d.aiFeedback,
+    pillar1Summary: typeof d.pillar1 === 'string' ? d.pillar1 : undefined,
+    pillar2Summary: typeof d.pillar2 === 'string' ? d.pillar2 : undefined,
+    b1IdeaCount: b1Cnt,
+    b2IdeaCount: b2Cnt,
+    multiPillars: rawMulti
+      ? {
+          1: normalizeSavedMultiSide(rawMulti[1], b1Cnt, 'positive', [1, 3, 5, 6, 7]),
+          2: normalizeSavedMultiSide(rawMulti[2], b2Cnt, 'negative', [2, 4, 9, 10, 13])
+        }
+      : undefined,
+    linkers: d.studioState?.linkers || d.linkers || undefined,
+    studioState: d.studioState || undefined
+  };
+}
+
+function readLocalGradedForTopic(uid: string, normTopic: string): SavedWt2Submission[] {
+  try {
+    const raw = localStorage.getItem(`${WT2_LOCAL_GRADED_PREFIX}${uid}`);
+    if (!raw) return [];
+    const arr = JSON.parse(raw);
+    if (!Array.isArray(arr)) return [];
+    return arr.filter(
+      (item: SavedWt2Submission) =>
+        item && item.aiFeedback && normalizeWt2TopicKey(item.topic) === normTopic
+    );
+  } catch {
+    return [];
+  }
+}
+
+function saveLocalGradedRecord(uid: string, rec: SavedWt2Submission): void {
+  try {
+    const key = `${WT2_LOCAL_GRADED_PREFIX}${uid}`;
+    const raw = localStorage.getItem(key);
+    const prev: SavedWt2Submission[] = raw ? JSON.parse(raw) : [];
+    const filtered = Array.isArray(prev) ? prev.filter((x) => x && x.id !== rec.id) : [];
+    const next = [rec, ...filtered].slice(0, 80);
+    localStorage.setItem(key, JSON.stringify(next));
+  } catch {
+    // ignore storage quota errors
+  }
+}
+
+function readLocalWipDraft(uid: string, normTopic: string): Partial<Wt2StudioStateSnapshot> | null {
+  if (!normTopic) return null;
+  try {
+    const raw = localStorage.getItem(`${WT2_LOCAL_WIP_PREFIX}${uid}`);
+    if (!raw) return null;
+    const map = JSON.parse(raw);
+    return map && typeof map === 'object' ? map[normTopic] || null : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeLocalWipDraft(
+  uid: string,
+  normTopic: string,
+  snapshot: Wt2StudioStateSnapshot | null
+): void {
+  if (!normTopic) return;
+  try {
+    const key = `${WT2_LOCAL_WIP_PREFIX}${uid}`;
+    const raw = localStorage.getItem(key);
+    const map: Record<string, Wt2StudioStateSnapshot> =
+      raw && typeof JSON.parse(raw) === 'object' ? JSON.parse(raw) : {};
+    if (!snapshot) {
+      delete map[normTopic];
+    } else {
+      delete map[normTopic];
+      map[normTopic] = snapshot;
+      const allKeys = Object.keys(map);
+      while (allKeys.length > 40) {
+        const oldest = allKeys.shift();
+        if (oldest) delete map[oldest];
+      }
+    }
+    localStorage.setItem(key, JSON.stringify(map));
+  } catch {
+    // ignore storage quota errors
+  }
+}
+
+function formatSavedTimestamp(iso?: string): string {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return '';
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${pad(d.getHours())}:${pad(d.getMinutes())} • ${pad(d.getDate())}/${pad(
+    d.getMonth() + 1
+  )}/${d.getFullYear()}`;
+}
+
 export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   isOpen,
   onClose,
@@ -262,6 +486,7 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<Wt2Category>('discussion');
   const [templateId, setTemplateId] = useState<Wt2TemplateId>('discussion');
   const [stance, setStance] = useState<'agree' | 'disagree'>('disagree');
+  const [swapBodies, setSwapBodies] = useState<boolean>(false);
 
   const questionGuide = useMemo(
     () => detectWt2QuestionGuide(activeTopic || payload?.topic || ''),
@@ -321,31 +546,98 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
   const [checklist, setChecklist] = useState<[boolean, boolean, boolean, boolean]>([false, false, false, false]);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
-  // Step 3: AI Grading Result
+  // Step 3: AI Grading Result + Per-Topic Saved History
   const [isGrading, setIsGrading] = useState(false);
   const [gradeError, setGradeError] = useState<string | null>(null);
   const [aiEvaluation, setAiEvaluation] = useState<any | null>(null);
   const [taskMarkedDone, setTaskMarkedDone] = useState(false);
+  const [currentUserId, setCurrentUserId] = useState<string>('guest');
+  const [savedSubmissions, setSavedSubmissions] = useState<SavedWt2Submission[]>([]);
+  const [selectedSavedId, setSelectedSavedId] = useState<string | null>(null);
+  const [restoredDraftNotice, setRestoredDraftNotice] = useState<boolean>(false);
+  const readyForWipSaveTopicRef = useRef<string>('');
 
-  // Reset state when modal opens with a new payload
-  useEffect(() => {
-    if (!isOpen || !payload) return;
-    const initTopic = payload.topic || '';
-    const autoMode = !payload.category || payload.category === 'auto';
-    const guide = detectWt2QuestionGuide(initTopic);
+  const applySavedSubmissionToState = (rec: SavedWt2Submission, jumpToStep3: boolean) => {
+    const st = rec.studioState;
+    const tpl: Wt2TemplateId =
+      st?.templateId && WT2_STRUCTURES[st.templateId] ? st.templateId : rec.templateId;
+    const cat: Wt2Category =
+      st?.selectedCategory || WT2_STRUCTURES[tpl]?.category || 'discussion';
+    const nextMode: Wt2BodyMode = st?.bodyMode || rec.bodyMode || 'single';
+    const { pol1: defPol1, pol2: defPol2 } = defaultPolaritiesForTemplate(cat, tpl);
+
+    setHasConfirmedCategory(true);
+    setSelectedCategory(cat);
+    setTemplateId(tpl);
+    setBodyMode(nextMode);
+    setSwapBodies(Boolean(st?.swapBodies));
+    setHelperBankTab(nextMode === 'multi' ? 'linkers' : 'subjects');
+    if (st?.stance) setStance(st.stance);
+    if (st?.difficulty) setDifficulty(st.difficulty);
+
+    // Restore Phiên bản 1 Pillars (either from studioState or parsed from legacy summary string)
+    if (st?.pillar1Id) {
+      setPillar1Id(st.pillar1Id);
+      setPillar1Polarity(st.pillar1Polarity || defPol1);
+    } else if (rec.pillar1Summary) {
+      const m1 = rec.pillar1Summary.match(/^#(\d+)\b.*?\((positive|negative)\)/i);
+      if (m1) {
+        setPillar1Id(Number(m1[1]));
+        setPillar1Polarity(m1[2].toLowerCase() === 'negative' ? 'negative' : 'positive');
+      }
+    }
+
+    if (st?.pillar2Id) {
+      setPillar2Id(st.pillar2Id);
+      setPillar2Polarity(st.pillar2Polarity || defPol2);
+    } else if (rec.pillar2Summary) {
+      const m2 = rec.pillar2Summary.match(/^#(\d+)\b.*?\((positive|negative)\)/i);
+      if (m2) {
+        setPillar2Id(Number(m2[1]));
+        setPillar2Polarity(m2[2].toLowerCase() === 'negative' ? 'negative' : 'positive');
+      }
+    }
+
+    // Restore Phiên bản 2 Multi-Pillars & Linkers
+    const b1Cnt = clampIdeaCount(st?.b1IdeaCount ?? rec.b1IdeaCount, 2);
+    const b2Cnt = clampIdeaCount(st?.b2IdeaCount ?? rec.b2IdeaCount, 2);
+    setB1IdeaCount(b1Cnt);
+    setB2IdeaCount(b2Cnt);
+    if (rec.multiPillars) {
+      setMultiPillars(rec.multiPillars);
+    }
+    if (rec.linkers) {
+      setLinkers({ ...DEFAULT_LINKERS, ...rec.linkers });
+    }
+
+    setSlottedPillarKeys(st?.slottedPillarKeys || {});
+    setMemoryPillarTexts(st?.memoryPillarTexts || {});
+    setTopicInputs(st?.topicInputs || {});
+    setChecklist(st?.checklist || [true, true, true, true]);
+    setEssayDraft(rec.essay || st?.essayDraft || '');
+    setAiEvaluation(rec.aiFeedback);
+    setSelectedSavedId(rec.id);
+    setGradeError(null);
+    setRestoredDraftNotice(false);
+    if (jumpToStep3) {
+      setStep(3);
+    }
+  };
+
+  const resetInputsForTopic = (topicStr: string, keepSavedList: boolean) => {
+    const autoMode = !payload?.category || payload.category === 'auto';
+    const guide = detectWt2QuestionGuide(topicStr);
     const initCat: Wt2Category =
-      !autoMode && payload.category ? payload.category : guide.recommendedCategory;
+      !autoMode && payload?.category ? payload.category : guide.recommendedCategory;
     const initTpl = defaultTemplateForCategory(
       initCat,
-      payload.subType || (autoMode ? guide.recommendedTemplate : undefined)
+      payload?.subType || (autoMode ? guide.recommendedTemplate : undefined)
     );
-    const initBodyMode: Wt2BodyMode = payload.bodyMode || 'single';
+    const initBodyMode: Wt2BodyMode = payload?.bodyMode || 'single';
     const { pol1, pol2 } = defaultPolaritiesForTemplate(initCat, initTpl);
 
     setStep(1);
     setDrawerTierTab(1);
-    setActiveTopic(initTopic);
-    setIsEditingTopic(false);
     setBodyMode(initBodyMode);
     setHelperBankTab(initBodyMode === 'multi' ? 'linkers' : 'subjects');
     setHasConfirmedCategory(!autoMode);
@@ -353,9 +645,10 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     setSelectedCategory(initCat);
     setTemplateId(initTpl);
     setStance('disagree');
+    setSwapBodies(false);
 
-    const p1 = payload.presetPillar1 || guide.suggestedPillar1.id || (initCat === 'mixed' ? 12 : 1);
-    const p2 = payload.presetPillar2 || guide.suggestedPillar2.id || (initCat === 'mixed' ? 16 : 2);
+    const p1 = payload?.presetPillar1 || guide.suggestedPillar1.id || (initCat === 'mixed' ? 12 : 1);
+    const p2 = payload?.presetPillar2 || guide.suggestedPillar2.id || (initCat === 'mixed' ? 16 : 2);
     setPillar1Id(p1);
     setPillar2Id(p2);
     setPillar1Polarity(pol1);
@@ -365,8 +658,8 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     setB2IdeaCount(2);
     const gMulti = guide.suggestedMultiPillars;
     setMultiPillars({
-      1: makeFiveSelections(gMulti.b1, payload.presetPillar1, pol1, 2),
-      2: makeFiveSelections(gMulti.b2, payload.presetPillar2, pol2, 2)
+      1: makeFiveSelections(gMulti.b1, payload?.presetPillar1, pol1, 2),
+      2: makeFiveSelections(gMulti.b2, payload?.presetPillar2, pol2, 2)
     });
     setLinkers({ ...DEFAULT_LINKERS });
 
@@ -380,8 +673,220 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     setIsGrading(false);
     setGradeError(null);
     setAiEvaluation(null);
-    setTaskMarkedDone(false);
+    setSelectedSavedId(null);
+    setRestoredDraftNotice(false);
+    if (!keepSavedList) {
+      setSavedSubmissions([]);
+      setTaskMarkedDone(false);
+    }
+  };
+
+  const handleStartFreshAttempt = () => {
+    const curTopic = activeTopic || payload?.topic || '';
+    writeLocalWipDraft(currentUserId, normalizeWt2TopicKey(curTopic), null);
+    resetInputsForTopic(curTopic, true);
+  };
+
+  // Reset state & auto-restore saved AI evaluation (or WIP draft) when modal opens with a payload
+  useEffect(() => {
+    if (!isOpen || !payload) return;
+    let cancelled = false;
+    const initTopic = payload.topic || '';
+    readyForWipSaveTopicRef.current = '';
+    setActiveTopic(initTopic);
+    setIsEditingTopic(false);
+    resetInputsForTopic(initTopic, false);
+
+    const loadSavedForTopic = async (topicStr: string) => {
+      const normTopic = normalizeWt2TopicKey(topicStr);
+      if (!normTopic) {
+        readyForWipSaveTopicRef.current = normTopic;
+        return;
+      }
+
+      let uid = 'guest';
+      try {
+        const {
+          data: { user }
+        } = await supabase.auth.getUser();
+        if (user?.id) uid = user.id;
+      } catch {
+        // fallback to guest local storage
+      }
+      if (cancelled) return;
+      setCurrentUserId(uid);
+
+      // 1. Read local graded cache first + query Supabase test_results for user
+      const localList = readLocalGradedForTopic(uid, normTopic);
+      let dbList: SavedWt2Submission[] = [];
+      if (uid !== 'guest') {
+        try {
+          const { data: rows } = await supabase
+            .from('test_results')
+            .select('id, test_title, score, created_at, details')
+            .eq('user_id', uid)
+            .eq('test_type', 'IELTS-Writing')
+            .order('created_at', { ascending: false })
+            .limit(300);
+          if (rows && Array.isArray(rows)) {
+            dbList = rows
+              .map(parseSavedSubmissionRow)
+              .filter(
+                (item): item is SavedWt2Submission =>
+                  item !== null && normalizeWt2TopicKey(item.topic) === normTopic
+              );
+          }
+        } catch {
+          // ignore network errors and rely on localList
+        }
+      }
+      if (cancelled) return;
+
+      // Merge & deduplicate (DB records take priority over local cache with identical essay+score)
+      const merged: SavedWt2Submission[] = [...dbList];
+      for (const loc of localList) {
+        const alreadyInDb = merged.some(
+          (m) =>
+            m.id === loc.id ||
+            (m.essay.trim() === loc.essay.trim() && Number(m.overall) === Number(loc.overall))
+        );
+        if (!alreadyInDb) merged.push(loc);
+      }
+      merged.sort(
+        (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      );
+
+      if (merged.length > 0) {
+        setSavedSubmissions(merged);
+        // If caller forced a specific bodyMode (e.g. demo button on Page 5), prefer matching mode
+        const preferred = payload.bodyMode
+          ? merged.find((m) => m.bodyMode === payload.bodyMode)
+          : merged[0];
+        if (preferred) {
+          applySavedSubmissionToState(preferred, true);
+        }
+        readyForWipSaveTopicRef.current = normTopic;
+        return;
+      }
+
+      // 2. Otherwise restore un-submitted WIP draft if any exists for this topic
+      const wip = readLocalWipDraft(uid, normTopic);
+      if (wip) {
+        const hasWork =
+          Object.values(wip.topicInputs || {}).some((v) => String(v || '').trim().length > 0) ||
+          Object.values(wip.slottedPillarKeys || {}).some(Boolean) ||
+          Object.values(wip.memoryPillarTexts || {}).some((v) => String(v || '').trim().length > 0) ||
+          String(wip.essayDraft || '').trim().length > 0;
+        if (hasWork) {
+          setHasConfirmedCategory(true);
+          if (wip.selectedCategory) setSelectedCategory(wip.selectedCategory);
+          if (wip.templateId && WT2_STRUCTURES[wip.templateId]) setTemplateId(wip.templateId);
+          if (wip.stance) setStance(wip.stance);
+          setSwapBodies(Boolean(wip.swapBodies));
+          if (wip.difficulty) setDifficulty(wip.difficulty);
+          if (wip.bodyMode) {
+            setBodyMode(wip.bodyMode);
+            setHelperBankTab(wip.bodyMode === 'multi' ? 'linkers' : 'subjects');
+          }
+          if (wip.pillar1Id) setPillar1Id(wip.pillar1Id);
+          if (wip.pillar1Polarity) setPillar1Polarity(wip.pillar1Polarity);
+          if (wip.pillar2Id) setPillar2Id(wip.pillar2Id);
+          if (wip.pillar2Polarity) setPillar2Polarity(wip.pillar2Polarity);
+          const b1Cnt = clampIdeaCount(wip.b1IdeaCount, 2);
+          const b2Cnt = clampIdeaCount(wip.b2IdeaCount, 2);
+          setB1IdeaCount(b1Cnt);
+          setB2IdeaCount(b2Cnt);
+          if (wip.multiPillars) {
+            setMultiPillars({
+              1: normalizeSavedMultiSide(wip.multiPillars[1], b1Cnt, 'positive', [1, 3, 5, 6, 7]),
+              2: normalizeSavedMultiSide(wip.multiPillars[2], b2Cnt, 'negative', [2, 4, 9, 10, 13])
+            });
+          }
+          if (wip.linkers) setLinkers({ ...DEFAULT_LINKERS, ...wip.linkers });
+          if (wip.slottedPillarKeys) setSlottedPillarKeys(wip.slottedPillarKeys);
+          if (wip.memoryPillarTexts) setMemoryPillarTexts(wip.memoryPillarTexts);
+          if (wip.topicInputs) setTopicInputs(wip.topicInputs);
+          if (wip.checklist) setChecklist(wip.checklist);
+          if (wip.essayDraft) {
+            setEssayDraft(wip.essayDraft);
+            if (wip.essayDraft.trim().length > 0) setStep(2);
+          }
+          setRestoredDraftNotice(true);
+        }
+      }
+
+      readyForWipSaveTopicRef.current = normTopic;
+    };
+
+    loadSavedForTopic(initTopic);
+    return () => {
+      cancelled = true;
+    };
   }, [isOpen, payload]);
+
+  // Auto-save WIP draft per topic whenever student works in Step 1 / Step 2 before AI grading
+  useEffect(() => {
+    if (!isOpen || !payload || isGrading || aiEvaluation) return;
+    const curTopic = activeTopic || payload.topic || '';
+    const normTopic = normalizeWt2TopicKey(curTopic);
+    if (!normTopic || readyForWipSaveTopicRef.current !== normTopic) return;
+
+    const hasAnyInput =
+      Object.values(topicInputs).some((v) => v.trim().length > 0) ||
+      Object.values(slottedPillarKeys).some(Boolean) ||
+      Object.values(memoryPillarTexts).some((v) => v.trim().length > 0) ||
+      essayDraft.trim().length > 0;
+
+    if (!hasAnyInput) return;
+
+    writeLocalWipDraft(currentUserId, normTopic, {
+      selectedCategory,
+      templateId,
+      stance,
+      difficulty,
+      bodyMode,
+      swapBodies,
+      pillar1Id,
+      pillar1Polarity,
+      pillar2Id,
+      pillar2Polarity,
+      b1IdeaCount,
+      b2IdeaCount,
+      multiPillars,
+      linkers,
+      slottedPillarKeys,
+      memoryPillarTexts,
+      topicInputs,
+      essayDraft,
+      checklist
+    });
+  }, [
+    isOpen,
+    payload,
+    isGrading,
+    aiEvaluation,
+    activeTopic,
+    currentUserId,
+    selectedCategory,
+    templateId,
+    stance,
+    difficulty,
+    bodyMode,
+    swapBodies,
+    pillar1Id,
+    pillar1Polarity,
+    pillar2Id,
+    pillar2Polarity,
+    b1IdeaCount,
+    b2IdeaCount,
+    multiPillars,
+    linkers,
+    slottedPillarKeys,
+    memoryPillarTexts,
+    topicInputs,
+    essayDraft,
+    checklist
+  ]);
 
   const syncMultiPolarities = (pol1: 'positive' | 'negative', pol2: 'positive' | 'negative') => {
     setMultiPillars((prev) => ({
@@ -398,6 +903,7 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
         ? questionGuide.recommendedTemplate
         : defaultTemplateForCategory(cat);
     setTemplateId(nextTpl);
+    setSwapBodies(false);
     setSlottedPillarKeys({});
     setSelectedCard(null);
     const { pol1, pol2 } = defaultPolaritiesForTemplate(cat, nextTpl);
@@ -411,6 +917,7 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     setHasConfirmedCategory(true);
     setSelectedCategory(questionGuide.recommendedCategory);
     setTemplateId(questionGuide.recommendedTemplate);
+    setSwapBodies(false);
     setPillar1Id(questionGuide.suggestedPillar1.id);
     setPillar1Polarity(questionGuide.suggestedPillar1.polarity);
     setPillar2Id(questionGuide.suggestedPillar2.id);
@@ -431,6 +938,38 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     });
     setSlottedPillarKeys({});
     setSelectedCard(null);
+  };
+
+  const handleSwapBodies = () => {
+    const nextSwap = !swapBodies;
+    const nextRoles = getBodyRoleLabels(templateId, nextSwap);
+    setSwapBodies(nextSwap);
+
+    // Swap Phiên bản 1 Pillar IDs & Polarities
+    const prevP1Id = pillar1Id;
+    const prevP1Pol = pillar1Polarity;
+    setPillar1Id(pillar2Id);
+    setPillar1Polarity(pillar2Polarity);
+    setPillar2Id(prevP1Id);
+    setPillar2Polarity(prevP1Pol);
+
+    // Swap Phiên bản 2 Idea Counts & Multi-Pillar Tuples
+    const prevB1Cnt = b1IdeaCount;
+    setB1IdeaCount(b2IdeaCount);
+    setB2IdeaCount(prevB1Cnt);
+    setMultiPillars((prev) => ({
+      1: prev[2],
+      2: prev[1]
+    }));
+
+    // Swap placed cards & Level 2 typed memory texts between Body 1 ('1_*') and Body 2 ('2_*')
+    setSlottedPillarKeys((prev) => swapBodyPrefixMap(prev));
+    setMemoryPillarTexts((prev) => swapBodyPrefixMap(prev));
+    setSelectedCard(null);
+    setSlotFeedback({
+      type: 'ok',
+      msg: `🔄 Đã đảo vị trí Body 1 ↔ Body 2 (${nextRoles.b1Short} → ${nextRoles.b2Short}) và tự động cập nhật câu cuối Mở bài + câu đầu Kết bài!`
+    });
   };
 
   const handleBodyModeSwitch = (nextMode: Wt2BodyMode) => {
@@ -511,6 +1050,10 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
     WT2_PILLARS.find((p) => p.id === id) || WT2_PILLARS[0];
 
   const structureDef = WT2_STRUCTURES[templateId];
+  const bodyRoles = useMemo(
+    () => getBodyRoleLabels(templateId, swapBodies),
+    [templateId, swapBodies]
+  );
 
   const b1Specs = useMemo<MultiBodyIdeaSpec[]>(
     () =>
@@ -532,10 +1075,10 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
 
   const paragraphs = useMemo(() => {
     if (bodyMode === 'multi') {
-      return buildMultiIdeaParagraphs(templateId, stance, b1Specs, b2Specs);
+      return buildMultiIdeaParagraphs(templateId, stance, b1Specs, b2Specs, swapBodies);
     }
-    return structureDef.buildParagraphs(stance);
-  }, [bodyMode, templateId, structureDef, stance, b1Specs, b2Specs]);
+    return structureDef.buildParagraphs(stance, swapBodies);
+  }, [bodyMode, templateId, structureDef, stance, b1Specs, b2Specs, swapBodies]);
 
   const resolveBranch = (bodyIndex: 1 | 2, ideaIndex?: 1 | 2 | 3 | 4 | 5) => {
     if (ideaIndex) {
@@ -857,26 +1400,36 @@ export const Wt2PillarStudioModal: React.FC<Wt2PillarStudioModalProps> = ({
       .join(' | ');
 
     try {
+      const orderLine = swapBodies
+        ? `- Thứ tự thân bài: ĐÃ ĐẢO VỊ TRÍ BODY 1 ↔ BODY 2 (${bodyRoles.orderHint} — câu cuối Mở bài và câu đầu Kết bài cũng được đảo tương ứng)`
+        : `- Thứ tự thân bài: ${bodyRoles.orderHint}`;
+
       const formulaBlock =
         bodyMode === 'multi'
           ? `- Chế độ luyện: PHIÊN BẢN 2 — LINH HOẠT 1–5 TRỤ Ý / BODY + LINKING WORDS (Mỗi Trụ ý rút gọn súc tích 1–2 câu thay vì 4 câu PEEL)
-- Khung bất biến áp dụng: ${structureDef.name} (${structureDef.viSubtitle})
-- Body 1 (${b1IdeaCount} Trụ ý): ${b1MultiDesc}
-- Body 2 (${b2IdeaCount} Trụ ý): ${b2MultiDesc}`
+- Khung bất biến áp dụng: ${structureDef.name}
+${orderLine}
+- Body 1 (${bodyRoles.b1Short} • ${b1IdeaCount} Trụ ý): ${b1MultiDesc}
+- Body 2 (${bodyRoles.b2Short} • ${b2IdeaCount} Trụ ý): ${b2MultiDesc}`
           : `- Chế độ luyện: PHIÊN BẢN 1 — 1 TRỤ Ý SÂU / BODY (Triển khai 4 câu PEEL: Giới thiệu → Nhân → Quả → Ví dụ)
-- Khung bất biến áp dụng: ${structureDef.name} (${structureDef.viSubtitle})
-- Trụ ý Body 1 đã chọn: ${pillar1.code} ${pillar1.name} (${branch1.label})
-- Trụ ý Body 2 đã chọn: ${pillar2.code} ${pillar2.name} (${branch2.label})`;
+- Khung bất biến áp dụng: ${structureDef.name}
+${orderLine}
+- Trụ ý Body 1 (${bodyRoles.b1Short}): ${pillar1.code} ${pillar1.name} (${branch1.label})
+- Trụ ý Body 2 (${bodyRoles.b2Short}): ${pillar2.code} ${pillar2.name} (${branch2.label})`;
+
+      const swapHint = swapBodies
+        ? ' Lưu ý học viên đang chủ động ĐẢO VỊ TRÍ BODY 1 ↔ BODY 2 (đẩy vế nhiều ý/quan trọng hơn xuống Body 2), hãy kiểm tra xem câu cuối Mở bài và câu đầu Kết bài đã khớp thứ tự đã đảo chưa.'
+        : '';
 
       const reviewJsonHint =
         bodyMode === 'multi'
           ? `  "formulaReview": {
-    "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp câu hỏi đề chưa, và ` : ''}em đã có Câu mở đoạn (Topic Sentence chia chuẩn số ít cho đoạn 1 ý / số nhiều cho đoạn 2–5 ý) + giữ chuẩn Khung bất biến Phiên bản 2 của dạng ${structureDef.name} chưa...",
+    "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp câu hỏi đề chưa, và ` : ''}em đã có Câu mở đoạn (Topic Sentence chia chuẩn số ít cho đoạn 1 ý / số nhiều cho đoạn 2–5 ý) + giữ chuẩn Khung bất biến Phiên bản 2 của dạng ${structureDef.name} chưa...${swapHint}",
     "pillarFitCheck": "Nhận xét xem các Trụ ý ở Body 1 (${b1IdeaCount} ý) và Body 2 (${b2IdeaCount} ý) đã bám sát đề bài, triển khai gọn 1–2 câu/ý súc tích (cân đối độ dài đoạn văn, không bị liệt kê cụt ngủn cũng không bị lan man quá dài) chưa...",
     "seamGrammarCheck": "Nhận xét cách dùng bộ Linking Words (Specifically / Firstly / To begin with / Furthermore / Moreover / In addition / Beyond this / Finally...) đã hợp vai trò, không lặp từ nối và ngữ pháp tại các mối nối đã mượt tự nhiên chưa..."
   },`
           : `  "formulaReview": {
-    "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp với yêu cầu câu hỏi của đề chưa, và ` : ''}em đã giữ đúng Khung bất biến của dạng ${structureDef.name} chưa...",
+    "structureCheck": "Nhận xét xem ${isAutoCategory ? `em nhận diện dạng bài (${structureDef.name}) đã khớp với yêu cầu câu hỏi của đề chưa, và ` : ''}em đã giữ đúng Khung bất biến của dạng ${structureDef.name} chưa...${swapHint}",
     "pillarFitCheck": "Nhận xét xem 2 Trụ ý (${pillar1.name} & ${pillar2.name}) em chọn và ví dụ đưa vào đã bám sát đề bài chưa...",
     "seamGrammarCheck": "Nhận xét các mối nối ngữ pháp (sau due to / related to / chủ ngữ S / từ nối) đã mượt tự nhiên chưa và chỉ cách gọt..."
   },`;
@@ -931,43 +1484,122 @@ ${reviewJsonHint}
       const parsed = JSON.parse(cleaned);
       setAiEvaluation(parsed);
 
-      // Save practice record to test_results
+      // Save practice record + full studio snapshot to test_results & local cache
+      const studioSnapshot: Wt2StudioStateSnapshot = {
+        selectedCategory,
+        templateId,
+        stance,
+        difficulty,
+        bodyMode,
+        swapBodies,
+        pillar1Id,
+        pillar1Polarity,
+        pillar2Id,
+        pillar2Polarity,
+        b1IdeaCount,
+        b2IdeaCount,
+        multiPillars,
+        linkers,
+        slottedPillarKeys,
+        memoryPillarTexts,
+        topicInputs,
+        essayDraft,
+        checklist
+      };
+
+      const p1Summary =
+        bodyMode === 'multi'
+          ? b1MultiDesc
+          : `${pillar1.code} ${pillar1.name} (${pillar1Polarity})`;
+      const p2Summary =
+        bodyMode === 'multi'
+          ? b2MultiDesc
+          : `${pillar2.code} ${pillar2.name} (${pillar2Polarity})`;
+
+      let savedId = `local_${Date.now()}`;
+      let savedCreatedAt = new Date().toISOString();
+      let uid = currentUserId;
+
       const {
         data: { user }
       } = await supabase.auth.getUser();
       if (user) {
-        await supabase.from('test_results').insert([
-          {
-            user_id: user.id,
-            course_id: courseId || null,
-            test_title: `[WT2 Pillars ${bodyMode === 'multi' ? 'V2-Multi' : 'V1-PEEL'}] ${payload?.label || structureDef.name}`,
-            test_type: 'IELTS-Writing',
-            score: parsed.overall || 0,
-            total_score: 9,
-            time_spent: 0,
-            details: {
-              mode: 'wt2_pillar_studio',
-              bodyMode,
-              topic: topicToGrade,
-              templateId,
-              pillar1:
-                bodyMode === 'multi'
-                  ? b1MultiDesc
-                  : `${pillar1.code} ${pillar1.name} (${pillar1Polarity})`,
-              pillar2:
-                bodyMode === 'multi'
-                  ? b2MultiDesc
-                  : `${pillar2.code} ${pillar2.name} (${pillar2Polarity})`,
-              ...(bodyMode === 'multi'
-                ? { b1IdeaCount, b2IdeaCount, multiPillars, linkers }
-                : {}),
-              essay: essayDraft,
-              wordCount,
-              aiFeedback: parsed
+        uid = user.id;
+        setCurrentUserId(uid);
+        const { data: inserted } = await supabase
+          .from('test_results')
+          .insert([
+            {
+              user_id: user.id,
+              course_id: courseId || null,
+              test_title: `[WT2 Pillars ${bodyMode === 'multi' ? 'V2-Multi' : 'V1-PEEL'}] ${payload?.label || structureDef.name}`,
+              test_type: 'IELTS-Writing',
+              score: parsed.overall || 0,
+              total_score: 9,
+              time_spent: 0,
+              details: {
+                mode: 'wt2_pillar_studio',
+                bodyMode,
+                topic: topicToGrade,
+                templateId,
+                pillar1: p1Summary,
+                pillar2: p2Summary,
+                ...(bodyMode === 'multi'
+                  ? { b1IdeaCount, b2IdeaCount, multiPillars, linkers }
+                  : {}),
+                essay: essayDraft,
+                wordCount,
+                aiFeedback: parsed,
+                studioState: studioSnapshot
+              }
             }
-          }
-        ]);
+          ])
+          .select('id, created_at')
+          .single();
+
+        if (inserted?.id) savedId = String(inserted.id);
+        if (inserted?.created_at) savedCreatedAt = String(inserted.created_at);
       }
+
+      const newSavedRec: SavedWt2Submission = {
+        id: savedId,
+        createdAt: savedCreatedAt,
+        overall: Number(parsed.overall || 0),
+        formulaScore:
+          parsed.formulaScore !== undefined ? Number(parsed.formulaScore) : undefined,
+        bodyMode,
+        templateId,
+        topic: topicToGrade,
+        essay: essayDraft,
+        wordCount,
+        aiFeedback: parsed,
+        pillar1Summary: p1Summary,
+        pillar2Summary: p2Summary,
+        b1IdeaCount,
+        b2IdeaCount,
+        multiPillars,
+        linkers,
+        studioState: studioSnapshot
+      };
+
+      saveLocalGradedRecord(uid, newSavedRec);
+      writeLocalWipDraft(uid, normalizeWt2TopicKey(topicToGrade), null);
+      setRestoredDraftNotice(false);
+      setSavedSubmissions((prev) => [
+        newSavedRec,
+        ...prev.filter((x) => x.id !== newSavedRec.id)
+      ]);
+      setSelectedSavedId(newSavedRec.id);
+
+      window.dispatchEvent(
+        new CustomEvent('tony-wt2-graded', {
+          detail: {
+            topic: topicToGrade,
+            overall: Number(parsed.overall || 0),
+            formulaScore: parsed.formulaScore
+          }
+        })
+      );
 
       // Auto-tick lecture task if taskId provided
       if (payload?.taskId && onMarkTaskComplete && !taskMarkedDone) {
@@ -1027,12 +1659,18 @@ ${reviewJsonHint}
                     if (!essayDraft.trim()) setEssayDraft(buildAssembledEssay());
                     setStep(2);
                   }
-                  if (s.n === 3 && aiEvaluation) setStep(3);
+                  if (s.n === 3) {
+                    if (aiEvaluation) {
+                      setStep(3);
+                    } else if (savedSubmissions.length > 0) {
+                      applySavedSubmissionToState(savedSubmissions[0], true);
+                    }
+                  }
                 }}
                 className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   step === s.n
                     ? 'bg-white text-[#0a5482] shadow-xs'
-                    : s.n === 3 && !aiEvaluation
+                    : s.n === 3 && !aiEvaluation && savedSubmissions.length === 0
                     ? 'text-white/50 cursor-not-allowed'
                     : 'text-white/90 hover:bg-white/15'
                 }`}
@@ -1064,7 +1702,23 @@ ${reviewJsonHint}
               {!payload.taskId && (
                 <button
                   type="button"
-                  onClick={() => setIsEditingTopic((v) => !v)}
+                  onClick={() => {
+                    if (isEditingTopic) {
+                      setIsEditingTopic(false);
+                      const nextNorm = normalizeWt2TopicKey(activeTopic);
+                      if (nextNorm && nextNorm !== readyForWipSaveTopicRef.current) {
+                        readyForWipSaveTopicRef.current = nextNorm;
+                        resetInputsForTopic(activeTopic, false);
+                        const locHits = readLocalGradedForTopic(currentUserId, nextNorm);
+                        if (locHits.length > 0) {
+                          setSavedSubmissions(locHits);
+                          applySavedSubmissionToState(locHits[0], true);
+                        }
+                      }
+                    } else {
+                      setIsEditingTopic(true);
+                    }
+                  }}
                   className="ml-1 px-2 py-0.5 rounded-md bg-white border border-amber-300 hover:bg-amber-100 text-[11px] font-bold text-amber-900 cursor-pointer"
                   title="Tự nhập đề IELTS Task 2 bất kỳ để luyện ghép"
                 >
@@ -1211,6 +1865,18 @@ ${reviewJsonHint}
                         ))}
                       </div>
                     </div>
+                    <button
+                      type="button"
+                      onClick={handleSwapBodies}
+                      className={`px-2.5 py-0.5 rounded-md border text-[11px] font-extrabold cursor-pointer transition-colors ${
+                        swapBodies
+                          ? 'bg-emerald-600 text-white border-emerald-700'
+                          : 'bg-white text-indigo-800 border-indigo-300 hover:bg-indigo-100'
+                      }`}
+                      title="Đảo vị trí Body 1 ↔ Body 2 (tự động đổi câu cuối Mở bài & câu đầu Kết bài)"
+                    >
+                      🔄 Đảo B1 ↔ B2
+                    </button>
                   </div>
                 </div>
               )}
@@ -1388,6 +2054,56 @@ ${reviewJsonHint}
 
         {/* ==================== MAIN SCROLLABLE BODY ==================== */}
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-5">
+          {/* Quick Saved-Evaluation / WIP-Draft Banner when on Step 1 or Step 2 */}
+          {step !== 3 && savedSubmissions.length > 0 && (
+            <div className="bg-emerald-50 border border-emerald-300 rounded-xl px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs text-emerald-950 shadow-2xs">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="px-2 py-0.5 rounded-full bg-emerald-600 text-white font-extrabold text-[11px]">
+                  💾 Đã lưu {savedSubmissions.length} bài chấm
+                </span>
+                <span className="font-semibold">
+                  Đề này đã có kết quả chấm chữa AI (Lần gần nhất:{' '}
+                  <strong>Band {savedSubmissions[0].overall}</strong>
+                  {savedSubmissions[0].createdAt
+                    ? ` • ${formatSavedTimestamp(savedSubmissions[0].createdAt)}`
+                    : ''}
+                  ).
+                </span>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => applySavedSubmissionToState(savedSubmissions[0], true)}
+                  className="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold cursor-pointer"
+                >
+                  👁️ Xem bài chấm &amp; lời chữa đã lưu →
+                </button>
+                <button
+                  type="button"
+                  onClick={handleStartFreshAttempt}
+                  className="px-2.5 py-1 rounded-lg border border-emerald-300 bg-white hover:bg-emerald-100 text-emerald-900 font-bold cursor-pointer"
+                >
+                  🆕 Làm bản mới
+                </button>
+              </div>
+            </div>
+          )}
+
+          {step !== 3 && savedSubmissions.length === 0 && restoredDraftNotice && (
+            <div className="bg-sky-50 border border-sky-300 rounded-xl px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-xs text-sky-950">
+              <span>
+                📝 <strong>Đã tự động khôi phục bản nháp</strong> em đang ghép dở cho đề này.
+              </span>
+              <button
+                type="button"
+                onClick={handleStartFreshAttempt}
+                className="px-2.5 py-1 rounded-md border border-sky-300 bg-white hover:bg-sky-100 text-sky-800 font-bold cursor-pointer shrink-0"
+              >
+                🔄 Xóa nháp &amp; Làm lại từ đầu
+              </button>
+            </div>
+          )}
+
           {/* -------------------- STEP 1: CHOOSE PILLARS & SLOT -------------------- */}
           {step === 1 && (
             <>
@@ -1409,8 +2125,13 @@ ${reviewJsonHint}
                         <>
                           {structureDef.name}{' '}
                           <span className="font-normal text-slate-500 text-xs sm:text-sm">
-                            — {structureDef.viSubtitle}
+                            — {swapBodies ? bodyRoles.orderHint : structureDef.viSubtitle}
                           </span>
+                          {swapBodies && (
+                            <span className="ml-2 inline-block bg-emerald-100 text-emerald-800 border border-emerald-300 text-[11px] font-extrabold px-2 py-0.5 rounded-full align-middle">
+                              🔄 Đã đảo Body 1 ↔ 2
+                            </span>
+                          )}
                         </>
                       )}
                     </h3>
@@ -1433,7 +2154,10 @@ ${reviewJsonHint}
                       <>
                         <select
                           value={templateId}
-                          onChange={(e) => setTemplateId(e.target.value as Wt2TemplateId)}
+                          onChange={(e) => {
+                            setTemplateId(e.target.value as Wt2TemplateId);
+                            setSwapBodies(false);
+                          }}
                           className="text-xs font-bold border border-slate-300 rounded-lg px-2.5 py-1.5 bg-white text-slate-800"
                         >
                           <option value="opinion_v1">Version 1: One-sided (100% Agree/Disagree)</option>
@@ -1466,7 +2190,9 @@ ${reviewJsonHint}
                         onChange={(e) => {
                           const next = e.target.value as Wt2TemplateId;
                           setTemplateId(next);
+                          setSwapBodies(false);
                           const nextPol2 = next === 'mixed_ps' ? 'positive' : 'negative';
+                          setPillar1Polarity('negative');
                           setPillar2Polarity(nextPol2);
                           syncMultiPolarities('negative', nextPol2);
                         }}
@@ -1652,27 +2378,96 @@ ${reviewJsonHint}
                 )}
               </div>
 
+              {/* 1B-SWAP. BODY ORDER & SWAP BAR (BODY 1 ↔ BODY 2) */}
+              <div
+                className={`rounded-xl border px-4 py-3 shadow-2xs space-y-2.5 transition-colors ${
+                  swapBodies
+                    ? 'bg-emerald-50/75 border-emerald-300'
+                    : 'bg-white border-slate-200'
+                }`}
+              >
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="space-y-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-1.5 text-xs">
+                      <span className="font-extrabold uppercase tracking-wide text-slate-700">
+                        📐 Thứ tự thân bài:
+                      </span>
+                      <span className="px-2 py-0.5 rounded-md bg-violet-100 text-violet-900 border border-violet-300 font-extrabold">
+                        Body 1: {bodyRoles.b1Short}
+                      </span>
+                      <span className="text-slate-400 font-extrabold">→</span>
+                      <span className="px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-300 font-extrabold">
+                        Body 2: {bodyRoles.b2Short}
+                      </span>
+                      {swapBodies && (
+                        <span className="px-2 py-0.5 rounded-full bg-emerald-600 text-white text-[10.5px] font-extrabold">
+                          ✓ Đã đảo vị trí
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-[11.5px] text-slate-600 leading-snug">
+                      Thông thường <strong>Body 2</strong> nên là đoạn nhiều ý hơn (hoặc vế em nghiêng về). Khi đảo vị trí, hệ thống sẽ <strong>tự động chuyển toàn bộ Trụ ý giữa 2 đoạn</strong>, đồng thời <strong>đổi luôn câu cuối Mở bài &amp; câu đầu Kết bài</strong> cho khớp mạch logic!
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={handleSwapBodies}
+                    className={`px-3.5 py-2 rounded-xl border text-xs font-extrabold cursor-pointer transition-all shrink-0 shadow-2xs ${
+                      swapBodies
+                        ? 'bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-700'
+                        : 'bg-indigo-600 hover:bg-indigo-700 text-white border-indigo-700'
+                    }`}
+                  >
+                    {swapBodies
+                      ? '🔄 Đảo lại Body 1 ↔ Body 2 (Về mặc định)'
+                      : '🔄 Đảo vị trí Body 1 ↔ Body 2'}
+                  </button>
+                </div>
+
+                {bodyMode === 'multi' && b1IdeaCount > b2IdeaCount && (
+                  <div className="bg-amber-50 border border-amber-300 rounded-lg px-3 py-2 flex flex-wrap items-center justify-between gap-2 text-xs text-amber-950">
+                    <span>
+                      💡 <strong>Mẹo bố cục Band 8.0+:</strong> Hiện <strong>Body 1 ({b1IdeaCount} ý — {bodyRoles.b1Short})</strong> đang nhiều ý hơn <strong>Body 2 ({b2IdeaCount} ý — {bodyRoles.b2Short})</strong>. Thông thường đoạn nhiều ý hơn nên được đẩy xuống <strong>Body 2</strong> để mạch văn nặng dần và kết luận thuyết phục hơn!
+                    </span>
+                    <button
+                      type="button"
+                      onClick={handleSwapBodies}
+                      className="px-3 py-1 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-extrabold cursor-pointer shrink-0"
+                    >
+                      🔄 Đẩy nhóm {b1IdeaCount} ý xuống Body 2
+                    </button>
+                  </div>
+                )}
+              </div>
+
               {/* 1B. Pick Pillars & Drag/Click Cards (Version 1 vs Version 2) */}
               {bodyMode === 'single' ? (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                   {[
                     {
                       bodyIdx: 1 as const,
-                      title: 'Trụ ý cho Body Paragraph 1 (1 ý sâu • 4 câu)',
+                      title:
+                        templateId === 'mixed_ps' && swapBodies
+                          ? 'Body 1 • Giải pháp & Kết quả (By doing so)'
+                          : `Body 1 • ${bodyRoles.b1Short} (1 ý sâu • 4 câu)`,
                       accent: 'border-violet-300 bg-violet-50/40',
                       headerBadge: 'bg-violet-600 text-white',
                       pillar: pillar1,
                       setPillarId: setPillar1Id,
                       polarity: pillar1Polarity,
                       setPolarity: setPillar1Polarity,
-                      colsToShow: SHUFFLED_COLS
+                      colsToShow:
+                        templateId === 'mixed_ps' && swapBodies
+                          ? (['effect'] as PillarSlotType[])
+                          : SHUFFLED_COLS
                     },
                     {
                       bodyIdx: 2 as const,
                       title:
-                        templateId === 'mixed_ps'
-                          ? 'Trụ ý cho Kết Quả Giải Pháp (Body 2 - By doing so)'
-                          : 'Trụ ý cho Body Paragraph 2 (1 ý sâu • 4 câu)',
+                        templateId === 'mixed_ps' && !swapBodies
+                          ? 'Body 2 • Giải pháp & Kết quả (By doing so)'
+                          : `Body 2 • ${bodyRoles.b2Short} (1 ý sâu • 4 câu)`,
                       accent: 'border-amber-300 bg-amber-50/40',
                       headerBadge: 'bg-amber-500 text-white',
                       pillar: pillar2,
@@ -1680,7 +2475,9 @@ ${reviewJsonHint}
                       polarity: pillar2Polarity,
                       setPolarity: setPillar2Polarity,
                       colsToShow:
-                        templateId === 'mixed_ps' ? (['effect'] as PillarSlotType[]) : SHUFFLED_COLS
+                        templateId === 'mixed_ps' && !swapBodies
+                          ? (['effect'] as PillarSlotType[])
+                          : SHUFFLED_COLS
                     }
                   ].map((cfg) => (
                     <div
@@ -1850,7 +2647,7 @@ ${reviewJsonHint}
                   {[
                     {
                       bodyIdx: 1 as const,
-                      title: 'Body 1: Linh Hoạt 1–5 Trụ Ý',
+                      title: `Body 1 • ${bodyRoles.b1Short}`,
                       accent: 'border-violet-300 bg-violet-50/40',
                       headerBadge: 'bg-violet-600 text-white',
                       activeCountBtn: 'bg-violet-600 text-white',
@@ -1858,10 +2655,7 @@ ${reviewJsonHint}
                     },
                     {
                       bodyIdx: 2 as const,
-                      title:
-                        templateId === 'mixed_ps'
-                          ? 'Body 2: 1–5 Giải Pháp + Kết Quả'
-                          : 'Body 2: Linh Hoạt 1–5 Trụ Ý',
+                      title: `Body 2 • ${bodyRoles.b2Short}`,
                       accent: 'border-amber-300 bg-amber-50/40',
                       headerBadge: 'bg-amber-500 text-white',
                       activeCountBtn: 'bg-amber-500 text-white',
@@ -2791,6 +3585,69 @@ ${reviewJsonHint}
 
               {!isGrading && aiEvaluation && (
                 <>
+                  {/* Saved Submission History & Quick Actions Bar */}
+                  <div className="bg-emerald-50/90 border border-emerald-300 rounded-xl px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-xs">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-600 text-white font-extrabold">
+                        💾 Đã lưu bài chấm vào đề này
+                      </span>
+                      {(() => {
+                        const activeRec =
+                          savedSubmissions.find((x) => x.id === selectedSavedId) ||
+                          savedSubmissions[0];
+                        return activeRec?.createdAt ? (
+                          <span className="text-emerald-900 font-semibold">
+                            🕒 Chấm lúc: {formatSavedTimestamp(activeRec.createdAt)}
+                          </span>
+                        ) : null;
+                      })()}
+
+                      {savedSubmissions.length > 1 && (
+                        <div className="flex items-center gap-1 flex-wrap ml-1">
+                          <span className="text-slate-600 font-bold">Lịch sử các lần chấm:</span>
+                          {savedSubmissions.map((rec, idx) => {
+                            const attemptNo = savedSubmissions.length - idx;
+                            const isCurrent =
+                              (selectedSavedId ? rec.id === selectedSavedId : idx === 0);
+                            return (
+                              <button
+                                key={rec.id}
+                                type="button"
+                                onClick={() => applySavedSubmissionToState(rec, true)}
+                                className={`px-2.5 py-1 rounded-lg border font-extrabold cursor-pointer transition-all ${
+                                  isCurrent
+                                    ? 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
+                                    : 'bg-white text-slate-700 border-slate-300 hover:border-indigo-400'
+                                }`}
+                              >
+                                Lần #{attemptNo}: Band {rec.overall} (
+                                {rec.bodyMode === 'multi' ? 'V2 Đa ý' : 'V1 PEEL'})
+                              </button>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <button
+                        type="button"
+                        onClick={() => setStep(2)}
+                        className="px-3 py-1.5 rounded-lg bg-white border border-sky-300 text-sky-800 hover:bg-sky-50 font-extrabold cursor-pointer"
+                      >
+                        ✏️ Sửa bài viết này (Bước 2)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleStartFreshAttempt}
+                        className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold cursor-pointer"
+                        title="Giữ nguyên lịch sử chấm cũ và mở khung trống để luyện ghép lại đề này từ đầu"
+                      >
+                        🆕 Luyện ghép lại từ đầu (Bước 1)
+                      </button>
+                    </div>
+                  </div>
+
                   {/* Hero Score Banner */}
                   <div className="bg-gradient-to-r from-slate-900 via-[#0a5482] to-indigo-900 text-white rounded-2xl p-5 sm:p-6 flex flex-wrap items-center justify-between gap-4 shadow-md">
                     <div className="space-y-1">
@@ -2952,17 +3809,25 @@ ${reviewJsonHint}
 
           {step === 3 && !isGrading && (
             <>
-              <button
-                onClick={() => setStep(2)}
-                className="px-4 py-2 rounded-xl border border-sky-300 bg-sky-50 text-sky-800 hover:bg-sky-100 font-bold text-xs sm:text-sm cursor-pointer"
-              >
-                ✏️ Quay lại Bước 2 sửa theo góp ý AI để nâng Band
-              </button>
+              <div className="flex items-center gap-2 flex-wrap">
+                <button
+                  onClick={() => setStep(2)}
+                  className="px-4 py-2 rounded-xl border border-sky-300 bg-sky-50 text-sky-800 hover:bg-sky-100 font-bold text-xs sm:text-sm cursor-pointer"
+                >
+                  ✏️ Quay lại Bước 2 sửa theo góp ý AI để nâng Band
+                </button>
+                <button
+                  onClick={handleStartFreshAttempt}
+                  className="px-3.5 py-2 rounded-xl border border-indigo-300 bg-indigo-50 text-indigo-800 hover:bg-indigo-100 font-bold text-xs sm:text-sm cursor-pointer"
+                >
+                  🆕 Ghép bản mới từ đầu
+                </button>
+              </div>
               <button
                 onClick={onClose}
                 className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm cursor-pointer"
               >
-                ✅ Hoàn tất &amp; Đóng
+                ✅ Hoàn tất &amp; Đóng (Đã lưu)
               </button>
             </>
           )}

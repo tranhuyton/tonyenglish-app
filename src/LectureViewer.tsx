@@ -5,7 +5,7 @@ import { parseClassConfig } from './classConfigUtils';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import InteractiveLecturePlayer from './InteractiveLecturePlayer';
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
-import { Wt2PillarStudioModal, Wt2PillarReflexModal, Wt2StudioOpenPayload } from './Wt2PillarStudioModal';
+import { Wt2PillarStudioModal, Wt2PillarReflexModal, Wt2StudioOpenPayload, normalizeWt2TopicKey } from './Wt2PillarStudioModal';
 import { Spk2LegoStudioModal, Spk2LegoStudioOpenPayload } from './Spk2LegoStudioModal';
 import { Wt1StudioModal, Wt1VocabBankModal, Wt1StudioOpenPayload } from './Wt1StudioModal';
 
@@ -3192,6 +3192,25 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                       }
                    }
                 }
+             } else if (e.data && e.data.type === 'SYNC_WT2_GRADED_TOPICS') {
+                var gradedMap = e.data.gradedMap || {};
+                document.querySelectorAll('.btn-wt2-pillar-trigger').forEach(function(btn) {
+                   var rawTopic = btn.getAttribute('data-topic') || '';
+                   var normKey = rawTopic.replace(/\s+/g, ' ').trim().toLowerCase();
+                   if (!normKey || !gradedMap[normKey]) return;
+                   var info = gradedMap[normKey];
+                   if (!btn.hasAttribute('data-orig-label')) {
+                      btn.setAttribute('data-orig-label', btn.innerHTML);
+                   }
+                   var forcedMode = btn.getAttribute('data-body-mode') || '';
+                   if (!forcedMode) {
+                      btn.style.background = 'linear-gradient(135deg, #059669 0%, #0d9488 100%)';
+                      btn.style.boxShadow = '0 2px 6px rgba(5, 150, 105, 0.28)';
+                      btn.innerHTML = '✅ Xem bài chấm (Band ' + info.overall + ')';
+                   } else {
+                      btn.innerHTML = btn.getAttribute('data-orig-label') + ' • ✓ Band ' + info.overall;
+                   }
+                });
              }
           });
 
@@ -3290,6 +3309,25 @@ export default function LectureViewer({
   const [isStudyCoachModalOpen, setIsStudyCoachModalOpen] = useState(false);
   const [wt2StudioPayload, setWt2StudioPayload] = useState<Wt2StudioOpenPayload | null>(null);
   const [wt2ReflexModal, setWt2ReflexModal] = useState<{ open: boolean; tab: 'reflex' | 'anchors' }>({ open: false, tab: 'reflex' });
+  const wt2GradedTopicsRef = useRef<Record<string, { overall: number; count: number }>>({});
+  const broadcastWt2GradedToIframes = useCallback(() => {
+    try {
+      const map = wt2GradedTopicsRef.current;
+      if (!map || Object.keys(map).length === 0) return;
+      document.querySelectorAll('iframe').forEach((ifr) => {
+        try {
+          ifr.contentWindow?.postMessage(
+            { type: 'SYNC_WT2_GRADED_TOPICS', gradedMap: map },
+            '*'
+          );
+        } catch {
+          // ignore cross-origin frames
+        }
+      });
+    } catch {
+      // ignore DOM errors
+    }
+  }, []);
   const [spk2LegoPayload, setSpk2LegoPayload] = useState<Spk2LegoStudioOpenPayload | null>(null);
   const [wt1StudioPayload, setWt1StudioPayload] = useState<Wt1StudioOpenPayload | null>(null);
   const [wt1VocabModal, setWt1VocabModal] = useState<{ open: boolean; tab: 'trends' | 'degrees' | 'static' | 'process_map' }>({ open: false, tab: 'trends' });
@@ -3930,11 +3968,23 @@ export default function LectureViewer({
         ]);
 
         const scoreMap = new Map<string, { score: number; total: number; percent: number; isPassed: boolean }>();
+        const nextWt2Graded: Record<string, { overall: number; count: number }> = {};
         if (trRes && trRes.data) {
             trRes.data.forEach((r: any) => {
                 let d = r.details;
                 if (typeof d === 'string') {
                     try { d = JSON.parse(d); } catch (e) {}
+                }
+                if (d?.mode === 'wt2_pillar_studio' && d?.topic && d?.aiFeedback) {
+                    const normT = normalizeWt2TopicKey(String(d.topic));
+                    if (normT) {
+                        const ov = Number(d.aiFeedback?.overall ?? r.score ?? 0);
+                        if (!nextWt2Graded[normT]) {
+                            nextWt2Graded[normT] = { overall: ov, count: 1 };
+                        } else {
+                            nextWt2Graded[normT].count += 1;
+                        }
+                    }
                 }
                 const testId = d?.test_id ? String(d.test_id) : (r.test_id ? String(r.test_id) : null);
                 const testTitle = r.test_title ? r.test_title.trim().toLowerCase() : null;
@@ -3970,6 +4020,8 @@ export default function LectureViewer({
             });
         }
         setTestScoresMap(scoreMap);
+        wt2GradedTopicsRef.current = nextWt2Graded;
+        setTimeout(() => broadcastWt2GradedToIframes(), 120);
 
         const visiblePages = (pageData || [])
             .filter((p: any) => !String(p.content_html || '').startsWith('<!-- hidden -->'))
@@ -4087,10 +4139,22 @@ export default function LectureViewer({
 
       // Update score map
       const scoreMap = new Map<string, { score: number; total: number; percent: number; isPassed: boolean }>();
+      const refreshedWt2Graded: Record<string, { overall: number; count: number }> = {};
       if (trRes.data) {
         trRes.data.forEach((r: any) => {
           let d = r.details;
           if (typeof d === 'string') { try { d = JSON.parse(d); } catch (e) {} }
+          if (d?.mode === 'wt2_pillar_studio' && d?.topic && d?.aiFeedback) {
+            const normT = normalizeWt2TopicKey(String(d.topic));
+            if (normT) {
+              const ov = Number(d.aiFeedback?.overall ?? r.score ?? 0);
+              if (!refreshedWt2Graded[normT]) {
+                refreshedWt2Graded[normT] = { overall: ov, count: 1 };
+              } else {
+                refreshedWt2Graded[normT].count += 1;
+              }
+            }
+          }
           const testId = d?.test_id ? String(d.test_id) : (r.test_id ? String(r.test_id) : null);
           const testTitle = r.test_title ? r.test_title.trim().toLowerCase() : null;
           const score = parseFloat(r.score != null ? r.score : 0);
@@ -4112,6 +4176,8 @@ export default function LectureViewer({
         });
       }
       setTestScoresMap(scoreMap);
+      wt2GradedTopicsRef.current = refreshedWt2Graded;
+      setTimeout(() => broadcastWt2GradedToIframes(), 120);
 
       // Update completed tasks from progress (reconcile with scores)
       const currentLec = lectures.find(l => l.id === activeLectureId);
@@ -4380,12 +4446,32 @@ export default function LectureViewer({
     window.addEventListener('tony-open-spk2-lego-studio', onOpenSpk2Lego);
     window.addEventListener('tony-open-wt1-studio', onOpenWt1Studio);
     window.addEventListener('tony-open-wt1-vocab-bank', onOpenWt1Vocab);
+    const onRehighlightSyncWt2 = () => broadcastWt2GradedToIframes();
+    const onWt2Graded = (ev: Event) => {
+      const detail = (ev as CustomEvent).detail || {};
+      const normT = normalizeWt2TopicKey(String(detail.topic || ''));
+      if (normT) {
+        const prev = wt2GradedTopicsRef.current[normT];
+        wt2GradedTopicsRef.current = {
+          ...wt2GradedTopicsRef.current,
+          [normT]: {
+            overall: Number(detail.overall || 0),
+            count: (prev?.count || 0) + 1
+          }
+        };
+        broadcastWt2GradedToIframes();
+      }
+    };
+    window.addEventListener('tony-lecture-rehighlight', onRehighlightSyncWt2);
+    window.addEventListener('tony-wt2-graded', onWt2Graded);
     return () => {
       window.removeEventListener('tony-open-wt2-pillar-studio', onOpenStudio);
       window.removeEventListener('tony-open-wt2-reflex-game', onOpenReflex);
       window.removeEventListener('tony-open-spk2-lego-studio', onOpenSpk2Lego);
       window.removeEventListener('tony-open-wt1-studio', onOpenWt1Studio);
       window.removeEventListener('tony-open-wt1-vocab-bank', onOpenWt1Vocab);
+      window.removeEventListener('tony-lecture-rehighlight', onRehighlightSyncWt2);
+      window.removeEventListener('tony-wt2-graded', onWt2Graded);
     };
   }, []);
 

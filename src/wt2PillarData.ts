@@ -1264,6 +1264,104 @@ export interface StructurePartToken {
   pillarCol?: PillarSlotType;
 }
 
+export interface BodyRoleSummary {
+  b1Short: string;
+  b2Short: string;
+  orderHint: string;
+}
+
+export function getBodyRoleLabels(
+  templateId: Wt2TemplateId,
+  swapBodies: boolean = false
+): BodyRoleSummary {
+  switch (templateId) {
+    case 'discussion':
+      return swapBodies
+        ? {
+            b1Short: 'Quan điểm 2 (Không ủng hộ)',
+            b2Short: 'Quan điểm 1 (Ủng hộ • Đẩy xuống B2)',
+            orderHint: 'Đã đảo: Bàn Quan điểm 2 (Body 1) → Bảo vệ Quan điểm 1 mạnh hơn ở Body 2'
+          }
+        : {
+            b1Short: 'Quan điểm 1 (Không ủng hộ)',
+            b2Short: 'Quan điểm 2 (Ủng hộ • Mạnh hơn)',
+            orderHint: 'Mặc định: Quan điểm 1 (Body 1) → Quan điểm 2 ủng hộ (Body 2)'
+          };
+    case 'argument':
+      return swapBodies
+        ? {
+            b1Short: 'Disadvantages (Mặt bất lợi)',
+            b2Short: 'Advantages (Mặt lợi • Vượt trội)',
+            orderHint: 'Đã đảo: Bất lợi lên Body 1 → Đẩy Lợi ích nhiều ý/vượt trội xuống Body 2'
+          }
+        : {
+            b1Short: 'Advantages (Mặt lợi)',
+            b2Short: 'Disadvantages (Mặt bất lợi • Vượt trội)',
+            orderHint: 'Mặc định: Mặt lợi (Body 1) → Mặt bất lợi vượt trội (Body 2)'
+          };
+    case 'opinion_v1':
+      return swapBodies
+        ? {
+            b1Short: 'Góc độ Xã hội / Lý do 1',
+            b2Short: 'Góc độ Cá nhân / Lý do trọng tâm',
+            orderHint: 'Đã đảo: Góc độ Xã hội (Body 1) → Góc độ Cá nhân nhiều ý hơn (Body 2)'
+          }
+        : {
+            b1Short: 'Góc độ Cá nhân / Lý do 1',
+            b2Short: 'Góc độ Xã hội / Lý do 2',
+            orderHint: 'Mặc định: Góc độ Cá nhân (Body 1) → Góc độ Xã hội (Body 2)'
+          };
+    case 'opinion_v2':
+      return swapBodies
+        ? {
+            b1Short: 'Quan điểm chính (Main View)',
+            b2Short: 'Nhượng bộ & Phản biện (Counter)',
+            orderHint: 'Đã đảo: Quan điểm chính (Body 1) → Phản biện ý đối lập (Body 2)'
+          }
+        : {
+            b1Short: 'Nhượng bộ (Concession)',
+            b2Short: 'Bảo vệ Quan điểm chính (Main View)',
+            orderHint: 'Mặc định: Nhượng bộ gọn (Body 1) → Bảo vệ Quan điểm chính (Body 2)'
+          };
+    case 'mixed_ps':
+      return swapBodies
+        ? {
+            b1Short: 'Solutions (Giải pháp)',
+            b2Short: 'Problems / Causes (Vấn đề)',
+            orderHint: 'Đã đảo: Giải pháp (Body 1) → Phân tích Vấn đề sâu hơn (Body 2)'
+          }
+        : {
+            b1Short: 'Problems / Causes (Vấn đề)',
+            b2Short: 'Solutions (Giải pháp)',
+            orderHint: 'Mặc định: Vấn đề (Body 1) → Giải pháp (Body 2)'
+          };
+    case 'mixed_ce':
+      return swapBodies
+        ? {
+            b1Short: 'Effects (Hậu quả)',
+            b2Short: 'Causes (Nguyên nhân • Đẩy xuống B2)',
+            orderHint: 'Đã đảo: Hậu quả lên Body 1 → Đẩy Nguyên nhân nhiều ý hơn xuống Body 2'
+          }
+        : {
+            b1Short: 'Causes (Nguyên nhân)',
+            b2Short: 'Effects (Hậu quả)',
+            orderHint: 'Mặc định: Nguyên nhân (Body 1) → Hậu quả (Body 2)'
+          };
+    case 'twopart':
+      return swapBodies
+        ? {
+            b1Short: 'Trả lời Câu hỏi 2',
+            b2Short: 'Trả lời Câu hỏi 1 (Đẩy xuống B2)',
+            orderHint: 'Đã đảo: Câu hỏi 2 (Body 1) → Câu hỏi 1 nhiều ý hơn ở Body 2'
+          }
+        : {
+            b1Short: 'Trả lời Câu hỏi 1',
+            b2Short: 'Trả lời Câu hỏi 2',
+            orderHint: 'Mặc định: Câu hỏi 1 (Body 1) → Câu hỏi 2 (Body 2)'
+          };
+  }
+}
+
 export interface Wt2StructureDef {
   id: Wt2TemplateId;
   category: Wt2Category;
@@ -1272,7 +1370,10 @@ export interface Wt2StructureDef {
   supportsStance?: boolean;
   /** Whether Body 2 uses Pillar cards (true for 6 templates; for mixed_ps Body 2 uses Solutions + Pillar 2 Effect) */
   body2UsesFullPillar: boolean;
-  buildParagraphs: (stance: 'agree' | 'disagree') => {
+  buildParagraphs: (
+    stance: 'agree' | 'disagree',
+    swapBodies?: boolean
+  ) => {
     sectionTitle: string;
     borderColor: string;
     tokens: StructurePartToken[];
@@ -1286,138 +1387,266 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
     name: 'Discussion: Discuss Both Views',
     viSubtitle: 'Thảo luận 2 luồng ý kiến (Body 1: Ý không ủng hộ → Body 2: Ý ủng hộ)',
     body2UsesFullPillar: true,
-    buildParagraphs: () => [
-      {
-        sectionTitle: '📝 Introduction',
-        borderColor: '#0ea5e9',
-        tokens: [
-          { type: 'text', text: 'Over the last few decades, the world has seen that ', memoryHint: 'Over the last few decades, ...' },
-          { type: 'topic_input', slotKey: 'intro_v1', placeholder: 'Quan điểm 1 của đề (mệnh đề S + V)' },
-          { type: 'text', text: '. However, others see that ', memoryHint: '. However, others ...' },
-          { type: 'topic_input', slotKey: 'intro_v2', placeholder: 'Quan điểm 2 của đề (mệnh đề S + V)' },
-          { type: 'text', text: '. This essay will discuss both points of view and argue that ', memoryHint: '. This essay will discuss ...' },
-          { type: 'topic_input', slotKey: 'intro_thesis', placeholder: 'Quan điểm cá nhân em ủng hộ (thường là Quan điểm 2)' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 1 (Bàn về Quan điểm 1 — Ý không ủng hộ)',
-        borderColor: '#8b5cf6',
-        tokens: [
-          { type: 'text', text: 'The main reason some people believe ', memoryHint: 'The main reason some people ...' },
-          { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Tóm tắt Quan điểm 1 (S + V)' },
-          { type: 'text', text: ' is related to ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
-          { type: 'text', text: '. This may be because of the fact that ', memoryHint: '. This may be because ...' },
-          { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1 - Nguyên nhân]' },
-          { type: 'text', text: '. As a result, ' },
-          { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1 - Kết quả]' },
-          { type: 'text', text: '. For instance, ' },
-          { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1 - Ví dụ số liệu]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 2 (Bàn về Quan điểm 2 — Ý em ủng hộ)',
-        borderColor: '#f59e0b',
-        tokens: [
-          { type: 'text', text: 'However, I would argue that ', memoryHint: 'However, I would argue ...' },
-          { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 2' },
-          { type: 'text', text: ' is a much stronger argument due to ', memoryHint: ' is a much stronger argument due to ' },
-          { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
-          { type: 'text', text: '. This is because of the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2 - Nguyên nhân]' },
-          { type: 'text', text: '. Consequently, ' },
-          { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2 - Kết quả]' },
-          { type: 'text', text: '. For example, ' },
-          { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2 - Ví dụ số liệu]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '✅ Conclusion',
-        borderColor: '#10b981',
-        tokens: [
-          { type: 'text', text: 'To sum up, although some people argue that ', memoryHint: 'To sum up, although ...' },
-          { type: 'topic_input', slotKey: 'conc_v1', placeholder: 'Tóm tắt lại Quan điểm 1' },
-          { type: 'text', text: ', I would argue there is sufficient evidence to demonstrate that ', memoryHint: ', I would argue there is sufficient evidence ...' },
-          { type: 'topic_input', slotKey: 'conc_v2', placeholder: 'Khẳng định lại Quan điểm 2 em ủng hộ' },
-          { type: 'text', text: ', and therefore ' },
-          { type: 'topic_input', slotKey: 'conc_final', placeholder: 'Lời khuyên / Chốt lại vấn đề' },
-          { type: 'text', text: '.' }
-        ]
-      }
-    ]
+    buildParagraphs: (_stance, swapBodies = false) =>
+      swapBodies
+        ? [
+            {
+              sectionTitle: '📝 Introduction (Đảo Body: Bàn Quan điểm 2 trước → Ủng hộ Quan điểm 1 ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ', memoryHint: 'Over the last few decades, ...' },
+                { type: 'topic_input', slotKey: 'intro_v1', placeholder: 'Quan điểm 1 / Bối cảnh (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. However, others see that ', memoryHint: '. However, others ...' },
+                { type: 'topic_input', slotKey: 'intro_v2', placeholder: 'Quan điểm 2 của đề (mệnh đề S + V)' },
+                { type: 'text', text: '. This essay will examine the latter view first before arguing that ', memoryHint: '. This essay will examine ...' },
+                { type: 'topic_input', slotKey: 'intro_thesis', placeholder: 'Quan điểm 1 em ủng hộ (được đẩy xuống Body 2)' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Bàn về Quan điểm 2 — Ý không ủng hộ)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'The main reason some people believe ', memoryHint: 'The main reason some people ...' },
+                { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Tóm tắt Quan điểm 2 (S + V)' },
+                { type: 'text', text: ' is related to ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This may be because of the fact that ', memoryHint: '. This may be because ...' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1 - Nguyên nhân]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1 - Kết quả]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1 - Ví dụ số liệu]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Bảo vệ Quan điểm 1 — Ý em ủng hộ • Mạnh hơn)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'However, I would argue that ', memoryHint: 'However, I would argue ...' },
+                { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 1' },
+                { type: 'text', text: ' is a much stronger argument due to ', memoryHint: ' is a much stronger argument due to ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2 - Nguyên nhân]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2 - Kết quả]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2 - Ví dụ số liệu]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although some people argue that ', memoryHint: 'To sum up, although ...' },
+                { type: 'topic_input', slotKey: 'conc_v2', placeholder: 'Tóm tắt lại Quan điểm 2 (Body 1)' },
+                { type: 'text', text: ', I would argue there is sufficient evidence to demonstrate that ', memoryHint: ', I would argue there is sufficient evidence ...' },
+                { type: 'topic_input', slotKey: 'conc_v1', placeholder: 'Khẳng định lại Quan điểm 1 em ủng hộ (Body 2)' },
+                { type: 'text', text: ', and therefore ' },
+                { type: 'topic_input', slotKey: 'conc_final', placeholder: 'Lời khuyên / Chốt lại vấn đề' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
+        : [
+            {
+              sectionTitle: '📝 Introduction',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ', memoryHint: 'Over the last few decades, ...' },
+                { type: 'topic_input', slotKey: 'intro_v1', placeholder: 'Quan điểm 1 / Bối cảnh (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. However, others see that ', memoryHint: '. However, others ...' },
+                { type: 'topic_input', slotKey: 'intro_v2', placeholder: 'Quan điểm 2 của đề (mệnh đề S + V)' },
+                { type: 'text', text: '. This essay will discuss both points of view and argue that ', memoryHint: '. This essay will discuss ...' },
+                { type: 'topic_input', slotKey: 'intro_thesis', placeholder: 'Quan điểm cá nhân em ủng hộ (thường là Quan điểm 2)' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Bàn về Quan điểm 1 — Ý không ủng hộ)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'The main reason some people believe ', memoryHint: 'The main reason some people ...' },
+                { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Tóm tắt Quan điểm 1 (S + V)' },
+                { type: 'text', text: ' is related to ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This may be because of the fact that ', memoryHint: '. This may be because ...' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1 - Nguyên nhân]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1 - Kết quả]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1 - Ví dụ số liệu]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Bàn về Quan điểm 2 — Ý em ủng hộ)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'However, I would argue that ', memoryHint: 'However, I would argue ...' },
+                { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 2' },
+                { type: 'text', text: ' is a much stronger argument due to ', memoryHint: ' is a much stronger argument due to ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2 - Nguyên nhân]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2 - Kết quả]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2 - Ví dụ số liệu]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although some people argue that ', memoryHint: 'To sum up, although ...' },
+                { type: 'topic_input', slotKey: 'conc_v1', placeholder: 'Tóm tắt lại Quan điểm 1' },
+                { type: 'text', text: ', I would argue there is sufficient evidence to demonstrate that ', memoryHint: ', I would argue there is sufficient evidence ...' },
+                { type: 'topic_input', slotKey: 'conc_v2', placeholder: 'Khẳng định lại Quan điểm 2 em ủng hộ' },
+                { type: 'text', text: ', and therefore ' },
+                { type: 'topic_input', slotKey: 'conc_final', placeholder: 'Lời khuyên / Chốt lại vấn đề' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
   },
 
   argument: {
     id: 'argument',
     category: 'argument',
     name: 'Argument: Advantages & Disadvantages (Outweigh)',
-    viSubtitle: 'Phân tích mặt Lợi ở Body 1 (Advantage) và mặt Hại ở Body 2 (Disadvantage)',
+    viSubtitle: 'Phân tích mặt Lợi & mặt Hại (Đoạn nhiều ý / vượt trội hơn đặt ở Body 2)',
     body2UsesFullPillar: true,
-    buildParagraphs: () => [
-      {
-        sectionTitle: '📝 Introduction',
-        borderColor: '#0ea5e9',
-        tokens: [
-          { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-          { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề bài nêu (S + V)' },
-          { type: 'text', text: '. However, others see that this is not entirely positive. This essay will firstly discuss ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1 - Lợi ích]' },
-          { type: 'text', text: ' as one of the main advantages of this development and then outline ' },
-          { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2 - Bất lợi]' },
-          { type: 'text', text: ' as one of the main disadvantages of it.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 1 (Advantage — Mặt tích cực)',
-        borderColor: '#8b5cf6',
-        tokens: [
-          { type: 'text', text: 'One of the principal advantages of ' },
-          { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
-          { type: 'text', text: ' is ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
-          { type: 'text', text: '. This is because of the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
-          { type: 'text', text: '. As a result, ' },
-          { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
-          { type: 'text', text: '. For instance, ' },
-          { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 2 (Disadvantage — Mặt bất lợi)',
-        borderColor: '#f59e0b',
-        tokens: [
-          { type: 'text', text: 'The main disadvantage associated with ' },
-          { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
-          { type: 'text', text: ' is ' },
-          { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
-          { type: 'text', text: '. This is because of the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
-          { type: 'text', text: '. Consequently, ' },
-          { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
-          { type: 'text', text: '. For example, ' },
-          { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '✅ Conclusion',
-        borderColor: '#10b981',
-        tokens: [
-          { type: 'text', text: 'To sum up, although there are some advantages in ' },
-          { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
-          { type: 'text', text: ', such as ' },
-          { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt ngắn Lợi ích 1' },
-          { type: 'text', text: ', these are perhaps outweighed by the significant disadvantages like ' },
-          { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt ngắn Bất lợi 2' },
-          { type: 'text', text: '.' }
-        ]
-      }
-    ]
+    buildParagraphs: (_stance, swapBodies = false) =>
+      swapBodies
+        ? [
+            {
+              sectionTitle: '📝 Introduction (Đảo Body: Bất lợi trước → Lợi ích vượt trội ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. While some people worry that this is not entirely positive, its benefits are far more significant. This essay will firstly outline ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1 - Bất lợi]' },
+                { type: 'text', text: ' as one of the main disadvantages of this development and then discuss ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2 - Lợi ích]' },
+                { type: 'text', text: ' as one of the main advantages of it.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Disadvantage — Mặt bất lợi)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'The main disadvantage associated with ' },
+                { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Advantage — Mặt tích cực • Vượt trội)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'However, one of the principal advantages of ' },
+                { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo: Lợi ích vượt trội hơn Bất lợi)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although there are some disadvantages in ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: ', such as ' },
+                { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt ngắn Bất lợi Body 1' },
+                { type: 'text', text: ', these are perhaps outweighed by the significant advantages like ' },
+                { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt ngắn Lợi ích Body 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
+        : [
+            {
+              sectionTitle: '📝 Introduction',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. However, others see that this is not entirely positive. This essay will firstly discuss ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1 - Lợi ích]' },
+                { type: 'text', text: ' as one of the main advantages of this development and then outline ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2 - Bất lợi]' },
+                { type: 'text', text: ' as one of the main disadvantages of it.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Advantage — Mặt tích cực)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'One of the principal advantages of ' },
+                { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Disadvantage — Mặt bất lợi)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'The main disadvantage associated with ' },
+                { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although there are some advantages in ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: ', such as ' },
+                { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt ngắn Lợi ích 1' },
+                { type: 'text', text: ', these are perhaps outweighed by the significant disadvantages like ' },
+                { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt ngắn Bất lợi 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
   },
 
   opinion_v1: {
@@ -1427,23 +1656,23 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
     viSubtitle: 'Bảo vệ hoàn toàn 1 phía bằng 2 Trụ ý song song',
     supportsStance: true,
     body2UsesFullPillar: true,
-    buildParagraphs: (stance) => {
+    buildParagraphs: (stance, swapBodies = false) => {
       const verb = stance === 'agree' ? 'agree' : 'disagree';
       const noun = stance === 'agree' ? 'agreement' : 'disagreement';
       return [
         {
-          sectionTitle: `📝 Introduction (100% ${verb.toUpperCase()})`,
+          sectionTitle: `📝 Introduction (100% ${verb.toUpperCase()}${swapBodies ? ' • Đã đảo thứ tự 2 Trụ ý' : ''})`,
           borderColor: '#0ea5e9',
           tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh / Sự việc đề bài nêu (S + V)' },
+            { type: 'text', text: 'Over the last few decades, the world has seen ' },
+            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh / Chủ đề đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
             { type: 'text', text: `. I completely ${verb} with the argument that ` },
             { type: 'topic_input', slotKey: 'intro_claim', placeholder: 'Quan điểm / Đề xuất của đề bài' },
             { type: 'text', text: '. This essay will firstly discuss ' },
             { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
             { type: 'text', text: ` as one of the main reasons for my ${noun}, and then outline ` },
             { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
-            { type: 'text', text: ' as another prominent factor.' }
+            { type: 'text', text: swapBodies ? ' as an even more decisive factor.' : ' as another prominent factor.' }
           ]
         },
         {
@@ -1464,10 +1693,10 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
           ]
         },
         {
-          sectionTitle: '💡 Body Paragraph 2 (Lý do thứ hai)',
+          sectionTitle: swapBodies ? '💡 Body Paragraph 2 (Lý do trọng tâm thứ hai)' : '💡 Body Paragraph 2 (Lý do thứ hai)',
           borderColor: '#f59e0b',
           tokens: [
-            { type: 'text', text: `Another main reason to support my ${noun} is ` },
+            { type: 'text', text: swapBodies ? `More importantly, a further compelling reason to support my ${noun} is ` : `Another main reason to support my ${noun} is ` },
             { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
             { type: 'text', text: '. This is due to the fact that ' },
             { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
@@ -1481,15 +1710,25 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
         {
           sectionTitle: '✅ Conclusion',
           borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: `To sum up, I completely ${verb} that ` },
-            { type: 'topic_input', slotKey: 'conc_claim', placeholder: 'Nhắc lại quan điểm / Đề xuất' },
-            { type: 'text', text: ', mainly because of ' },
-            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt Trụ ý 1' },
-            { type: 'text', text: ' and ' },
-            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt Trụ ý 2' },
-            { type: 'text', text: '.' }
-          ]
+          tokens: swapBodies
+            ? [
+                { type: 'text', text: `To sum up, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_claim', placeholder: 'Nhắc lại quan điểm / Đề xuất' },
+                { type: 'text', text: ', not only because of ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt Trụ ý Body 1' },
+                { type: 'text', text: ' but above all due to ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt Trụ ý trọng tâm Body 2' },
+                { type: 'text', text: '.' }
+              ]
+            : [
+                { type: 'text', text: `To sum up, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_claim', placeholder: 'Nhắc lại quan điểm / Đề xuất' },
+                { type: 'text', text: ', mainly because of ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt Trụ ý 1' },
+                { type: 'text', text: ' and ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt Trụ ý 2' },
+                { type: 'text', text: '.' }
+              ]
         }
       ];
     }
@@ -1502,77 +1741,146 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
     viSubtitle: 'Body 1 nhượng bộ 1 ý hợp lý → Body 2 bảo vệ quan điểm chính (cực hợp đề có từ all / best / only)',
     supportsStance: true,
     body2UsesFullPillar: true,
-    buildParagraphs: (stance) => {
+    buildParagraphs: (stance, swapBodies = false) => {
       const verb = stance === 'agree' ? 'agree' : 'disagree';
       const noun = stance === 'agree' ? 'agreement' : 'disagreement';
-      return [
-        {
-          sectionTitle: `📝 Introduction (Concession — Strongly ${verb})`,
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề bài (S + V)' },
-            { type: 'text', text: '. Some people argue that ' },
-            { type: 'topic_input', slotKey: 'intro_prompt_view', placeholder: 'Quan điểm đề bài đưa ra' },
-            { type: 'text', text: '. Although I accept that ' },
-            { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (mặt hợp lý nhỏ)' },
-            { type: 'text', text: `, I strongly ${verb} with the argument that ` },
-            { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
-            { type: 'text', text: '. This essay will firstly discuss ' },
-            { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1 - Nhượng bộ]' },
-            { type: 'text', text: ' as a valid point, and then outline ' },
-            { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2 - Bảo vệ chính]' },
-            { type: 'text', text: ' as the main reason for my overall view.' }
+      return swapBodies
+        ? [
+            {
+              sectionTitle: `📝 Introduction (Đảo Body: Quan điểm chính trước → Phản biện ý trái chiều sau)`,
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. Some people argue that ' },
+                { type: 'topic_input', slotKey: 'intro_prompt_view', placeholder: 'Quan điểm đề bài đưa ra' },
+                { type: 'text', text: `. I strongly ${verb} with the argument that ` },
+                { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
+                { type: 'text', text: ', even though I accept that ' },
+                { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (mặt hợp lý nhỏ)' },
+                { type: 'text', text: '. This essay will firstly discuss ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1 - Quan điểm chính]' },
+                { type: 'text', text: ` as the primary reason for my ${noun}, before addressing ` },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2 - Ý nhượng bộ]' },
+                { type: 'text', text: ' from the opposing perspective.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Bảo vệ quan điểm chính của em)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: `The main reason to support my ${noun} is ` },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Nhượng bộ & Giữ vững lập trường)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'Admittedly, one reason why some people still support ' },
+                { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is due to the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: `To sum up, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính' },
+                { type: 'text', text: ' primarily due to ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt Trụ ý chính (Body 1)' },
+                { type: 'text', text: ', even though some people point to ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt Trụ ý nhượng bộ (Body 2)' },
+                { type: 'text', text: ' in favor of ' },
+                { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ' },
+                { type: 'text', text: '.' }
+              ]
+            }
           ]
-        },
-        {
-          sectionTitle: '💡 Body Paragraph 1 (Nhượng bộ — Công nhận 1 khía cạnh)',
-          borderColor: '#8b5cf6',
-          tokens: [
-            { type: 'text', text: 'One of the principal reasons why some people support ' },
-            { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
-            { type: 'text', text: ' is ' },
-            { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
-            { type: 'text', text: '. This is because of the fact that ' },
-            { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
-            { type: 'text', text: '. As a result, ' },
-            { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
-            { type: 'text', text: '. For instance, ' },
-            { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
-            { type: 'text', text: '.' }
-          ]
-        },
-        {
-          sectionTitle: '💡 Body Paragraph 2 (Bảo vệ quan điểm chính của em)',
-          borderColor: '#f59e0b',
-          tokens: [
-            { type: 'text', text: `However, the main reason to support my ${noun} is ` },
-            { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
-            { type: 'text', text: '. This is due to the fact that ' },
-            { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
-            { type: 'text', text: '. Consequently, ' },
-            { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
-            { type: 'text', text: '. For example, ' },
-            { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
-            { type: 'text', text: '.' }
-          ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: 'To sum up, although there are some arguments for ' },
-            { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ' },
-            { type: 'text', text: ' mainly because of ' },
-            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt Trụ ý 1' },
-            { type: 'text', text: `, I completely ${verb} that ` },
-            { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính' },
-            { type: 'text', text: ' due to ' },
-            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt Trụ ý 2' },
-            { type: 'text', text: '.' }
-          ]
-        }
-      ];
+        : [
+            {
+              sectionTitle: `📝 Introduction (Concession — Strongly ${verb})`,
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. Some people argue that ' },
+                { type: 'topic_input', slotKey: 'intro_prompt_view', placeholder: 'Quan điểm đề bài đưa ra' },
+                { type: 'text', text: '. Although I accept that ' },
+                { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (mặt hợp lý nhỏ)' },
+                { type: 'text', text: `, I strongly ${verb} with the argument that ` },
+                { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
+                { type: 'text', text: '. This essay will firstly discuss ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1 - Nhượng bộ]' },
+                { type: 'text', text: ' as a valid point, and then outline ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2 - Bảo vệ chính]' },
+                { type: 'text', text: ' as the main reason for my overall view.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Nhượng bộ — Công nhận 1 khía cạnh)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'One of the principal reasons why some people support ' },
+                { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Bảo vệ quan điểm chính của em)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: `However, the main reason to support my ${noun} is ` },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is due to the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although there are some arguments for ' },
+                { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ' },
+                { type: 'text', text: ' mainly because of ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt Trụ ý 1' },
+                { type: 'text', text: `, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính' },
+                { type: 'text', text: ' due to ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt Trụ ý 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ];
     }
   },
 
@@ -1582,66 +1890,128 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
     name: 'Mixed (Trang 1): Problems / Causes & Solutions',
     viSubtitle: 'Body 1 nêu Vấn đề/Nguyên nhân (lắp Pillar 1) → Body 2 nêu 2 Giải pháp + Kết quả kỳ vọng (Pillar 2)',
     body2UsesFullPillar: false,
-    buildParagraphs: () => [
-      {
-        sectionTitle: '📝 Introduction',
-        borderColor: '#0ea5e9',
-        tokens: [
-          { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-          { type: 'topic_input', slotKey: 'intro_issue', placeholder: 'Cụm danh từ / V-ing chỉ hiện tượng đề nêu' },
-          { type: 'text', text: ' has become a major issue. This essay will firstly discuss ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý Vấn đề/Nguyên nhân]' },
-          { type: 'text', text: ' as the main problem caused by this, and then provide some possible solutions, namely ' },
-          { type: 'topic_input', slotKey: 'intro_sol1', placeholder: 'Tóm tắt Giải pháp 1 (V-ing)' },
-          { type: 'text', text: ' and ' },
-          { type: 'topic_input', slotKey: 'intro_sol2', placeholder: 'Tóm tắt Giải pháp 2 (V-ing)' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 1 (Problem / Cause)',
-        borderColor: '#8b5cf6',
-        tokens: [
-          { type: 'text', text: 'The main problem related to ' },
-          { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
-          { type: 'text', text: ' is ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
-          { type: 'text', text: '. This may be because of the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
-          { type: 'text', text: '. As a result, ' },
-          { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
-          { type: 'text', text: '. For example, ' },
-          { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 2 (Solutions — Giải pháp & Kết quả kỳ vọng)',
-        borderColor: '#f59e0b',
-        tokens: [
-          { type: 'text', text: 'However, there are ways to tackle such problems. Firstly, one of the most effective solutions is to ' },
-          { type: 'topic_input', slotKey: 'b2_sol1', placeholder: 'Giải pháp 1 (V nguyên thể + chi tiết cụ thể)' },
-          { type: 'text', text: '. Furthermore, the government and individuals should ' },
-          { type: 'topic_input', slotKey: 'b2_sol2', placeholder: 'Giải pháp 2 (V nguyên thể + chi tiết cụ thể)' },
-          { type: 'text', text: '. By doing so, ' },
-          { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả thẻ [Effect tích cực của Trụ ý 2] làm kết quả giải pháp' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '✅ Conclusion',
-        borderColor: '#10b981',
-        tokens: [
-          { type: 'text', text: 'To sum up, it is evident that ' },
-          { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
-          { type: 'text', text: ' causes several problems related to ' },
-          { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Nhắc lại Vấn đề chính' },
-          { type: 'text', text: ', but measures such as ' },
-          { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt 2 Giải pháp' },
-          { type: 'text', text: ' are available to tackle this issue effectively.' }
-        ]
-      }
-    ]
+    buildParagraphs: (_stance, swapBodies = false) =>
+      swapBodies
+        ? [
+            {
+              sectionTitle: '📝 Introduction (Đảo Body: Nêu Giải pháp trước → Phân tích Vấn đề ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_issue', placeholder: 'Cụm danh từ / V-ing chỉ hiện tượng đề nêu' },
+                { type: 'text', text: ', which has become a major issue. This essay will firstly propose practical solutions, namely ' },
+                { type: 'topic_input', slotKey: 'intro_sol1', placeholder: 'Tóm tắt Giải pháp 1 (V-ing)' },
+                { type: 'text', text: ' and ' },
+                { type: 'topic_input', slotKey: 'intro_sol2', placeholder: 'Tóm tắt Giải pháp 2 (V-ing)' },
+                { type: 'text', text: ', before examining ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý Vấn đề (Body 2)]' },
+                { type: 'text', text: ' as the underlying problem caused by this trend.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Solutions — Giải pháp & Kết quả kỳ vọng)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'There are effective ways to tackle this issue. Firstly, one of the most practical solutions is to ' },
+                { type: 'topic_input', slotKey: 'b2_sol1', placeholder: 'Giải pháp 1 (V nguyên thể + chi tiết cụ thể)' },
+                { type: 'text', text: '. Furthermore, the government and individuals should ' },
+                { type: 'topic_input', slotKey: 'b2_sol2', placeholder: 'Giải pháp 2 (V nguyên thể + chi tiết cụ thể)' },
+                { type: 'text', text: '. By doing so, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả thẻ [Effect tích cực của Trụ ý Body 1] làm kết quả giải pháp' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Problem / Cause — Vấn đề nghiêm trọng cần xử lý)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'These measures are urgently needed because the main problem related to ' },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This may be because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, practical measures such as ' },
+                { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt 2 Giải pháp (Body 1)' },
+                { type: 'text', text: ' should be prioritized, as it is evident that ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ' otherwise causes serious problems related to ' },
+                { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Nhắc lại Vấn đề chính (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
+        : [
+            {
+              sectionTitle: '📝 Introduction',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_issue', placeholder: 'Cụm danh từ / V-ing chỉ hiện tượng đề nêu' },
+                { type: 'text', text: ', which has become a major issue. This essay will firstly discuss ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý Vấn đề/Nguyên nhân]' },
+                { type: 'text', text: ' as the main problem caused by this, and then provide some possible solutions, namely ' },
+                { type: 'topic_input', slotKey: 'intro_sol1', placeholder: 'Tóm tắt Giải pháp 1 (V-ing)' },
+                { type: 'text', text: ' and ' },
+                { type: 'topic_input', slotKey: 'intro_sol2', placeholder: 'Tóm tắt Giải pháp 2 (V-ing)' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Problem / Cause)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'The main problem related to ' },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: ' is ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This may be because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Solutions — Giải pháp & Kết quả kỳ vọng)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'However, there are ways to tackle such problems. Firstly, one of the most effective solutions is to ' },
+                { type: 'topic_input', slotKey: 'b2_sol1', placeholder: 'Giải pháp 1 (V nguyên thể + chi tiết cụ thể)' },
+                { type: 'text', text: '. Furthermore, the government and individuals should ' },
+                { type: 'topic_input', slotKey: 'b2_sol2', placeholder: 'Giải pháp 2 (V nguyên thể + chi tiết cụ thể)' },
+                { type: 'text', text: '. By doing so, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả thẻ [Effect tích cực của Trụ ý 2] làm kết quả giải pháp' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, it is evident that ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ' causes several problems related to ' },
+                { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Nhắc lại Vấn đề chính' },
+                { type: 'text', text: ', but measures such as ' },
+                { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt 2 Giải pháp' },
+                { type: 'text', text: ' are available to tackle this issue effectively.' }
+              ]
+            }
+          ]
   },
 
   mixed_ce: {
@@ -1650,66 +2020,128 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
     name: 'Mixed (Trang 3): Causes & Effects',
     viSubtitle: 'Body 1 phân tích Nguyên nhân (Causes) → Body 2 phân tích Hậu quả nghiêm trọng (Effects)',
     body2UsesFullPillar: true,
-    buildParagraphs: () => [
-      {
-        sectionTitle: '📝 Introduction',
-        borderColor: '#0ea5e9',
-        tokens: [
-          { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-          { type: 'topic_input', slotKey: 'intro_event', placeholder: 'Sự việc / Xu hướng đề bài nêu (S + V)' },
-          { type: 'text', text: '. This essay will firstly discuss the reasons for this, primarily ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý Nguyên nhân]' },
-          { type: 'text', text: ', and then examine the consequences, specifically ' },
-          { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý Hậu quả]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 1 (Causes — Nguyên nhân)',
-        borderColor: '#8b5cf6',
-        tokens: [
-          { type: 'text', text: 'The main reason for ' },
-          { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
-          { type: 'text', text: ' is related to ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
-          { type: 'text', text: '. This is because of the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
-          { type: 'text', text: '. As a result, ' },
-          { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
-          { type: 'text', text: '. For instance, ' },
-          { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 2 (Effects — Hậu quả)',
-        borderColor: '#f59e0b',
-        tokens: [
-          { type: 'text', text: 'The effects of this have been and will continue to be very serious. Firstly, it leads to ' },
-          { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
-          { type: 'text', text: '. This stems from the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
-          { type: 'text', text: '. Consequently, ' },
-          { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
-          { type: 'text', text: '. For example, ' },
-          { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '✅ Conclusion',
-        borderColor: '#10b981',
-        tokens: [
-          { type: 'text', text: 'To sum up, it is evident that factors like ' },
-          { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt Nguyên nhân' },
-          { type: 'text', text: ' have led to ' },
-          { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
-          { type: 'text', text: ', resulting in a variety of negative effects such as ' },
-          { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt Hậu quả' },
-          { type: 'text', text: '.' }
-        ]
-      }
-    ]
+    buildParagraphs: (_stance, swapBodies = false) =>
+      swapBodies
+        ? [
+            {
+              sectionTitle: '📝 Introduction (Đảo Body: Nêu Hậu quả trước → Phân tích Nguyên nhân ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_event', placeholder: 'Sự việc / Xu hướng đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. This essay will firstly examine the consequences of this trend, specifically ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1 - Hậu quả]' },
+                { type: 'text', text: ', and then discuss the underlying reasons behind it, primarily ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2 - Nguyên nhân]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Effects — Hậu quả)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'The effects of this trend have been and will continue to be very serious. Firstly, it leads to ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This stems from the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Causes — Nguyên nhân sâu xa)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'These serious consequences are largely driven by underlying factors, the main reason for ' },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
+                { type: 'text', text: ' being related to ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, it is evident that ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ' has resulted in negative effects such as ' },
+                { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt Hậu quả (Body 1)' },
+                { type: 'text', text: ', which largely stem from factors like ' },
+                { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt Nguyên nhân (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
+        : [
+            {
+              sectionTitle: '📝 Introduction',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_event', placeholder: 'Sự việc / Xu hướng đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. This essay will firstly discuss the reasons for this, primarily ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý Nguyên nhân]' },
+                { type: 'text', text: ', and then examine the consequences, specifically ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý Hậu quả]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Causes — Nguyên nhân)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'The main reason for ' },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
+                { type: 'text', text: ' is related to ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Effects — Hậu quả)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'The effects of this have been and will continue to be very serious. Firstly, it leads to ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This stems from the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, it is evident that factors like ' },
+                { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt Nguyên nhân' },
+                { type: 'text', text: ' have led to ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ', resulting in a variety of negative effects such as ' },
+                { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt Hậu quả' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
   },
 
   twopart: {
@@ -1718,66 +2150,128 @@ export const WT2_STRUCTURES: Record<Wt2TemplateId, Wt2StructureDef> = {
     name: 'Two-part Questions (Trả lời 2 câu hỏi trực tiếp)',
     viSubtitle: 'Body 1 trả lời Câu hỏi 1 (Regarding the first question...) → Body 2 trả lời Câu hỏi 2 (With regards to the second question...)',
     body2UsesFullPillar: true,
-    buildParagraphs: () => [
-      {
-        sectionTitle: '📝 Introduction',
-        borderColor: '#0ea5e9',
-        tokens: [
-          { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-          { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung đề bài đưa ra (S + V)' },
-          { type: 'text', text: '. This essay will firstly discuss ' },
-          { type: 'topic_input', slotKey: 'intro_q1', placeholder: 'Trả lời tóm tắt cho Câu hỏi 1' },
-          { type: 'text', text: ' and it will then address the question of ' },
-          { type: 'topic_input', slotKey: 'intro_q2', placeholder: 'Trả lời tóm tắt cho Câu hỏi 2' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 1 (Answer to Question 1)',
-        borderColor: '#8b5cf6',
-        tokens: [
-          { type: 'text', text: 'Regarding the first question, ' },
-          { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Câu dẫn trả lời Câu 1 (VD: the main purpose of ... is)' },
-          { type: 'text', text: ' ' },
-          { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
-          { type: 'text', text: '. This is because of the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
-          { type: 'text', text: '. As a result, ' },
-          { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
-          { type: 'text', text: '. For example, ' },
-          { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '💡 Body Paragraph 2 (Answer to Question 2)',
-        borderColor: '#f59e0b',
-        tokens: [
-          { type: 'text', text: 'With regards to the second question, ' },
-          { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Câu dẫn trả lời Câu 2 (VD: another vital factor is)' },
-          { type: 'text', text: ' ' },
-          { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
-          { type: 'text', text: '. This is due to the fact that ' },
-          { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
-          { type: 'text', text: '. Consequently, ' },
-          { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
-          { type: 'text', text: '. For instance, ' },
-          { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
-          { type: 'text', text: '.' }
-        ]
-      },
-      {
-        sectionTitle: '✅ Conclusion',
-        borderColor: '#10b981',
-        tokens: [
-          { type: 'text', text: 'To sum up, ' },
-          { type: 'topic_input', slotKey: 'conc_q1', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 1' },
-          { type: 'text', text: ', and ' },
-          { type: 'topic_input', slotKey: 'conc_q2', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 2' },
-          { type: 'text', text: '.' }
-        ]
-      }
-    ]
+    buildParagraphs: (_stance, swapBodies = false) =>
+      swapBodies
+        ? [
+            {
+              sectionTitle: '📝 Introduction (Đảo Body: Câu hỏi 2 trước → Câu hỏi 1 ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. This essay will firstly address ' },
+                { type: 'topic_input', slotKey: 'intro_q2', placeholder: 'Trả lời tóm tắt cho Câu hỏi 2' },
+                { type: 'text', text: ' before examining the question of ' },
+                { type: 'topic_input', slotKey: 'intro_q1', placeholder: 'Trả lời tóm tắt cho Câu hỏi 1' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Answer to Question 2)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'Regarding the second question, ' },
+                { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Câu dẫn trả lời Câu 2 (VD: one vital factor is)' },
+                { type: 'text', text: ' ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Answer to Question 1)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'Turning to the first question, ' },
+                { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Câu dẫn trả lời Câu 1 (VD: the main purpose of ... is)' },
+                { type: 'text', text: ' ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is due to the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, ' },
+                { type: 'topic_input', slotKey: 'conc_q2', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 2 (Body 1)' },
+                { type: 'text', text: ', while ' },
+                { type: 'topic_input', slotKey: 'conc_q1', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 1 (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
+        : [
+            {
+              sectionTitle: '📝 Introduction',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. This essay will firstly discuss ' },
+                { type: 'topic_input', slotKey: 'intro_q1', placeholder: 'Trả lời tóm tắt cho Câu hỏi 1' },
+                { type: 'text', text: ' and it will then address the question of ' },
+                { type: 'topic_input', slotKey: 'intro_q2', placeholder: 'Trả lời tóm tắt cho Câu hỏi 2' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 1 (Answer to Question 1)',
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'Regarding the first question, ' },
+                { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Câu dẫn trả lời Câu 1 (VD: the main purpose of ... is)' },
+                { type: 'text', text: ' ' },
+                { type: 'pillar_slot', slotKey: 'b1_pillar', bodyIndex: 1, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 1]' },
+                { type: 'text', text: '. This is because of the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b1_cause', bodyIndex: 1, pillarCol: 'cause', placeholder: 'Thả [Cause 1]' },
+                { type: 'text', text: '. As a result, ' },
+                { type: 'pillar_slot', slotKey: 'b1_effect', bodyIndex: 1, pillarCol: 'effect', placeholder: 'Thả [Effect 1]' },
+                { type: 'text', text: '. For example, ' },
+                { type: 'pillar_slot', slotKey: 'b1_example', bodyIndex: 1, pillarCol: 'example', placeholder: 'Thả [Example 1]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '💡 Body Paragraph 2 (Answer to Question 2)',
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'With regards to the second question, ' },
+                { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Câu dẫn trả lời Câu 2 (VD: another vital factor is)' },
+                { type: 'text', text: ' ' },
+                { type: 'pillar_slot', slotKey: 'b2_pillar', bodyIndex: 2, pillarCol: 'pillar', placeholder: 'Thả [Tên Trụ ý 2]' },
+                { type: 'text', text: '. This is due to the fact that ' },
+                { type: 'pillar_slot', slotKey: 'b2_cause', bodyIndex: 2, pillarCol: 'cause', placeholder: 'Thả [Cause 2]' },
+                { type: 'text', text: '. Consequently, ' },
+                { type: 'pillar_slot', slotKey: 'b2_effect', bodyIndex: 2, pillarCol: 'effect', placeholder: 'Thả [Effect 2]' },
+                { type: 'text', text: '. For instance, ' },
+                { type: 'pillar_slot', slotKey: 'b2_example', bodyIndex: 2, pillarCol: 'example', placeholder: 'Thả [Example 2]' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, ' },
+                { type: 'topic_input', slotKey: 'conc_q1', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 1' },
+                { type: 'text', text: ', and ' },
+                { type: 'topic_input', slotKey: 'conc_q2', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ]
   }
 };
 
@@ -1846,7 +2340,10 @@ function buildStandardMultiBodyTokens(
   return out;
 }
 
-function buildMixedPsSolutionsTokens(ideas: MultiBodyIdeaSpec[]): StructurePartToken[] {
+function buildMixedPsSolutionsTokens(
+  bodyIndex: 1 | 2,
+  ideas: MultiBodyIdeaSpec[]
+): StructurePartToken[] {
   const totalCount = (Math.min(5, Math.max(1, ideas.length)) as MultiIdeaCount);
   const actors = [
     'authorities should ',
@@ -1878,8 +2375,8 @@ function buildMixedPsSolutionsTokens(ideas: MultiBodyIdeaSpec[]): StructurePartT
 
     out.push({
       type: 'linker_select',
-      slotKey: `b2_link_${role}`,
-      bodyIndex: 2,
+      slotKey: `b${bodyIndex}_link_${role}`,
+      bodyIndex,
       linkerRole: role
     });
     out.push({ type: 'text', text: ` ${actors[idx] || actors[0]}` });
@@ -1893,17 +2390,17 @@ function buildMixedPsSolutionsTokens(ideas: MultiBodyIdeaSpec[]): StructurePartT
       out.push({ type: 'text', text: twoSentBridges[idx] || twoSentBridges[0] });
       out.push({
         type: 'pillar_slot',
-        slotKey: `b2_i${ideaIndex}_pillar`,
-        bodyIndex: 2,
+        slotKey: `b${bodyIndex}_i${ideaIndex}_pillar`,
+        bodyIndex,
         ideaIndex,
         pillarCol: 'pillar',
-        placeholder: `Thả [Tên Trụ ý KQ 2.${ideaIndex}]`
+        placeholder: `Thả [Tên Trụ ý KQ ${bodyIndex}.${ideaIndex}]`
       });
       out.push({ type: 'text', text: '. ' });
       out.push({
         type: 'pillar_slot',
-        slotKey: `b2_i${ideaIndex}_support`,
-        bodyIndex: 2,
+        slotKey: `b${bodyIndex}_i${ideaIndex}_support`,
+        bodyIndex,
         ideaIndex,
         pillarCol: 'compact_support',
         placeholder: `Thả [Support Kết quả Giải pháp ${ideaIndex} (1 câu)]`
@@ -1913,11 +2410,11 @@ function buildMixedPsSolutionsTokens(ideas: MultiBodyIdeaSpec[]): StructurePartT
       out.push({ type: 'text', text: oneSentBridges[idx] || oneSentBridges[0] });
       out.push({
         type: 'pillar_slot',
-        slotKey: `b2_i${ideaIndex}_single`,
-        bodyIndex: 2,
+        slotKey: `b${bodyIndex}_i${ideaIndex}_single`,
+        bodyIndex,
         ideaIndex,
         pillarCol: 'compact_single',
-        placeholder: `Thả [Câu gộp Kết quả 2.${ideaIndex}]`
+        placeholder: `Thả [Câu gộp Kết quả ${bodyIndex}.${ideaIndex}]`
       });
       out.push({ type: 'text', text: isLast ? '.' : '. ' });
     }
@@ -1928,13 +2425,14 @@ function buildMixedPsSolutionsTokens(ideas: MultiBodyIdeaSpec[]): StructurePartT
 
 /**
  * PHIÊN BẢN 2: Khung Cấu Trúc Bất Biến linh hoạt từ 1 đến 5 Trụ ý / Body,
- * mỗi Trụ ý tùy chọn support bằng 1 câu gộp hoặc 2 câu súc tích + Bộ Linking Words thông minh.
+ * mỗi Trụ ý tùy chọn support bằng 1 câu gộp hoặc 2 câu súc tích + Bộ Linking Words thông minh + Hỗ trợ đảo Body 1 ↔ Body 2.
  */
 export function buildMultiIdeaParagraphs(
   templateId: Wt2TemplateId,
   stance: 'agree' | 'disagree',
   b1Specs: MultiBodyIdeaSpec[],
-  b2Specs: MultiBodyIdeaSpec[]
+  b2Specs: MultiBodyIdeaSpec[],
+  swapBodies: boolean = false
 ): {
   sectionTitle: string;
   borderColor: string;
@@ -1947,580 +2445,1151 @@ export function buildMultiIdeaParagraphs(
 
   switch (templateId) {
     case 'discussion':
-      return [
-        {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 ý/Body)',
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_v1', placeholder: 'Quan điểm 1 của đề (mệnh đề S + V)' },
-            { type: 'text', text: '. However, others see that ' },
-            { type: 'topic_input', slotKey: 'intro_v2', placeholder: 'Quan điểm 2 của đề (mệnh đề S + V)' },
-            { type: 'text', text: '. This essay will discuss both points of view and argue that ' },
-            { type: 'topic_input', slotKey: 'intro_thesis', placeholder: 'Quan điểm cá nhân em ủng hộ (S + V)' },
-            { type: 'text', text: '.' }
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 1 (Quan điểm 1 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#8b5cf6',
-          tokens: [
+      return swapBodies
+        ? [
             {
-              type: 'text',
-              text:
-                b1Count === 1
-                  ? 'On the one hand, there is a notable reason why some people believe that '
-                  : 'On the one hand, there are several reasons why some people believe that '
+              sectionTitle:
+                '📝 Introduction (Phiên bản 2 • Đảo Body: Bàn Quan điểm 2 trước → Ủng hộ Quan điểm 1 ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_v1', placeholder: 'Quan điểm 1 / Bối cảnh (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. However, others see that ' },
+                { type: 'topic_input', slotKey: 'intro_v2', placeholder: 'Quan điểm 2 của đề (mệnh đề S + V)' },
+                { type: 'text', text: '. This essay will examine the latter view first before arguing that ' },
+                { type: 'topic_input', slotKey: 'intro_thesis', placeholder: 'Quan điểm 1 em ủng hộ (đẩy xuống Body 2 nhiều ý hơn)' },
+                { type: 'text', text: '.' }
+              ]
             },
-            { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Tóm tắt Quan điểm 1 (S + V)' },
-            { type: 'text', text: '. ' },
-            ...buildStandardMultiBodyTokens(
-              1,
-              b1Specs,
-              [
-                'this viewpoint is closely related to ',
-                'supporters also point to ',
-                'another argument involves ',
-                'this view is further linked to ',
-                'proponents highlight '
-              ],
-              'this viewpoint is closely related to '
-            )
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 2 (Quan điểm 2 em ủng hộ — ${b2Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#f59e0b',
-          tokens: [
-            { type: 'text', text: 'On the other hand, I would argue that ' },
-            { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 2' },
             {
-              type: 'text',
-              text:
-                b2Count === 1
-                  ? ' is a much stronger argument for a key reason. '
-                  : ' is a much stronger argument for several key reasons. '
+              sectionTitle: `💡 Body Paragraph 1 (Quan điểm 2 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'On the one hand, there is a notable reason why some people believe that '
+                      : 'On the one hand, there are several reasons why some people believe that '
+                },
+                { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Tóm tắt Quan điểm 2 (S + V)' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'this viewpoint is closely related to ',
+                    'supporters also point to ',
+                    'another argument involves ',
+                    'this view is further linked to ',
+                    'proponents highlight '
+                  ],
+                  'this viewpoint is closely related to '
+                )
+              ]
             },
-            ...buildStandardMultiBodyTokens(
-              2,
-              b2Specs,
-              [
-                'this position is largely justified by ',
-                'another decisive factor is ',
-                'a further compelling point lies in ',
-                'this argument is reinforced by ',
-                'a key consideration involves '
-              ],
-              'this position is largely justified by '
-            )
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Quan điểm 1 em ủng hộ — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'On the other hand, I would argue that ' },
+                { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 1' },
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? ' is a much stronger argument for a key reason. '
+                      : ' is a much stronger argument for several key reasons. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'this position is largely justified by ',
+                    'another decisive factor is ',
+                    'a further compelling point lies in ',
+                    'this argument is reinforced by ',
+                    'a key consideration involves '
+                  ],
+                  'this position is largely justified by '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although some people argue that ' },
+                { type: 'topic_input', slotKey: 'conc_v2', placeholder: 'Tóm tắt Quan điểm 2 (Body 1)' },
+                { type: 'text', text: ', I would argue there is sufficient evidence to demonstrate that ' },
+                { type: 'topic_input', slotKey: 'conc_v1', placeholder: 'Khẳng định lại Quan điểm 1 em ủng hộ (Body 2)' },
+                { type: 'text', text: ', and therefore ' },
+                { type: 'topic_input', slotKey: 'conc_final', placeholder: 'Lời khuyên / Chốt lại vấn đề' },
+                { type: 'text', text: '.' }
+              ]
+            }
           ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: 'To sum up, although some people argue that ' },
-            { type: 'topic_input', slotKey: 'conc_v1', placeholder: 'Tóm tắt Quan điểm 1' },
-            { type: 'text', text: ', I would argue there is sufficient evidence to demonstrate that ' },
-            { type: 'topic_input', slotKey: 'conc_v2', placeholder: 'Khẳng định lại Quan điểm 2 em ủng hộ' },
-            { type: 'text', text: ', and therefore ' },
-            { type: 'topic_input', slotKey: 'conc_final', placeholder: 'Lời khuyên / Chốt lại vấn đề' },
-            { type: 'text', text: '.' }
-          ]
-        }
-      ];
+        : [
+            {
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 ý/Body)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_v1', placeholder: 'Quan điểm 1 / Bối cảnh (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. However, others see that ' },
+                { type: 'topic_input', slotKey: 'intro_v2', placeholder: 'Quan điểm 2 của đề (mệnh đề S + V)' },
+                { type: 'text', text: '. This essay will discuss both points of view and argue that ' },
+                { type: 'topic_input', slotKey: 'intro_thesis', placeholder: 'Quan điểm cá nhân em ủng hộ (S + V)' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 1 (Quan điểm 1 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'On the one hand, there is a notable reason why some people believe that '
+                      : 'On the one hand, there are several reasons why some people believe that '
+                },
+                { type: 'topic_input', slotKey: 'b1_view', placeholder: 'Tóm tắt Quan điểm 1 (S + V)' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'this viewpoint is closely related to ',
+                    'supporters also point to ',
+                    'another argument involves ',
+                    'this view is further linked to ',
+                    'proponents highlight '
+                  ],
+                  'this viewpoint is closely related to '
+                )
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Quan điểm 2 em ủng hộ — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'On the other hand, I would argue that ' },
+                { type: 'topic_input', slotKey: 'b2_view', placeholder: 'Cụm V-ing / Danh từ chỉ Quan điểm 2' },
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? ' is a much stronger argument for a key reason. '
+                      : ' is a much stronger argument for several key reasons. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'this position is largely justified by ',
+                    'another decisive factor is ',
+                    'a further compelling point lies in ',
+                    'this argument is reinforced by ',
+                    'a key consideration involves '
+                  ],
+                  'this position is largely justified by '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although some people argue that ' },
+                { type: 'topic_input', slotKey: 'conc_v1', placeholder: 'Tóm tắt Quan điểm 1' },
+                { type: 'text', text: ', I would argue there is sufficient evidence to demonstrate that ' },
+                { type: 'topic_input', slotKey: 'conc_v2', placeholder: 'Khẳng định lại Quan điểm 2 em ủng hộ' },
+                { type: 'text', text: ', and therefore ' },
+                { type: 'topic_input', slotKey: 'conc_final', placeholder: 'Lời khuyên / Chốt lại vấn đề' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ];
 
     case 'argument':
-      return [
-        {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Lợi ích & Bất lợi)',
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề bài nêu (S + V)' },
+      return swapBodies
+        ? [
             {
-              type: 'text',
-              text: `. However, others see that this trend is not entirely positive. This essay will examine the ${
-                b1Count === 1 ? 'principal advantage' : 'principal advantages'
-              } of this development before outlining its ${
-                b2Count === 1 ? 'key disadvantage' : 'key disadvantages'
-              }.`
+              sectionTitle:
+                '📝 Introduction (Phiên bản 2 • Đảo Body: Bất lợi lên Body 1 → Lợi ích nhiều ý/vượt trội ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                {
+                  type: 'text',
+                  text: `. While some people worry that this trend is not entirely positive, its benefits are far more significant. This essay will examine the ${
+                    b1Count === 1 ? 'key disadvantage' : 'key disadvantages'
+                  } of this development before outlining its ${
+                    b2Count === 1 ? 'principal advantage' : 'principal advantages'
+                  }.`
+                }
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 1 (Disadvantages — ${b1Count} Bất lợi • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'On the one hand, there is a serious drawback associated with '
+                      : 'On the one hand, there are several serious drawbacks associated with '
+                },
+                { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'a primary concern is ',
+                    'this trend also leads to ',
+                    'another serious drawback lies in ',
+                    'a further negative impact involves ',
+                    'critics also point to '
+                  ],
+                  'a primary concern is '
+                )
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Advantages vượt trội — ${b2Count} Lợi ích • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'On the other hand, ' },
+                { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? ' brings a far more notable advantage. '
+                      : ' brings several far more notable advantages. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'one major benefit is ',
+                    'another significant advantage is ',
+                    'a further positive aspect lies in ',
+                    'this trend is also beneficial in terms of ',
+                    'a notable strength involves '
+                  ],
+                  'this benefit lies in '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo: Lợi ích vượt trội hơn Bất lợi)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although there are certain disadvantages to ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: ', such as ' },
+                { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt bất lợi Body 1' },
+                { type: 'text', text: ', these are perhaps outweighed by the significant advantages regarding ' },
+                { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt lợi ích vượt trội Body 2' },
+                { type: 'text', text: '.' }
+              ]
             }
           ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 1 (Advantages — ${b1Count} Lợi ích • 1–2 câu/ý)`,
-          borderColor: '#8b5cf6',
-          tokens: [
-            { type: 'text', text: 'On the one hand, ' },
-            { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
+        : [
             {
-              type: 'text',
-              text:
-                b1Count === 1
-                  ? ' brings a notable advantage. '
-                  : ' brings several notable advantages. '
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Lợi ích & Bất lợi)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_topic', placeholder: 'Xu hướng / Chủ đề đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                {
+                  type: 'text',
+                  text: `. However, others see that this trend is not entirely positive. This essay will examine the ${
+                    b1Count === 1 ? 'principal advantage' : 'principal advantages'
+                  } of this development before outlining its ${
+                    b2Count === 1 ? 'key disadvantage' : 'key disadvantages'
+                  }.`
+                }
+              ]
             },
-            ...buildStandardMultiBodyTokens(
-              1,
-              b1Specs,
-              [
-                'one major benefit is ',
-                'another significant advantage is ',
-                'a further positive aspect lies in ',
-                'this trend is also beneficial in terms of ',
-                'a notable strength involves '
-              ],
-              'this benefit lies in '
-            )
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 2 (Disadvantages — ${b2Count} Bất lợi • 1–2 câu/ý)`,
-          borderColor: '#f59e0b',
-          tokens: [
             {
-              type: 'text',
-              text:
-                b2Count === 1
-                  ? 'On the other hand, there is a serious drawback associated with '
-                  : 'On the other hand, there are several serious drawbacks associated with '
+              sectionTitle: `💡 Body Paragraph 1 (Advantages — ${b1Count} Lợi ích • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'On the one hand, ' },
+                { type: 'topic_input', slotKey: 'b1_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề' },
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? ' brings a notable advantage. '
+                      : ' brings several notable advantages. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'one major benefit is ',
+                    'another significant advantage is ',
+                    'a further positive aspect lies in ',
+                    'this trend is also beneficial in terms of ',
+                    'a notable strength involves '
+                  ],
+                  'this benefit lies in '
+                )
+              ]
             },
-            { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
-            { type: 'text', text: '. ' },
-            ...buildStandardMultiBodyTokens(
-              2,
-              b2Specs,
-              [
-                'a primary concern is ',
-                'this trend also leads to ',
-                'another serious drawback lies in ',
-                'a further negative impact involves ',
-                'critics also point to '
-              ],
-              'a primary concern is '
-            )
-          ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: 'To sum up, although there are clear advantages to ' },
-            { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
-            { type: 'text', text: ', such as ' },
-            { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt lợi ích Body 1' },
-            { type: 'text', text: ', these are perhaps outweighed by the significant disadvantages regarding ' },
-            { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt bất lợi Body 2' },
-            { type: 'text', text: '.' }
-          ]
-        }
-      ];
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Disadvantages — ${b2Count} Bất lợi • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? 'On the other hand, there is a serious drawback associated with '
+                      : 'On the other hand, there are several serious drawbacks associated with '
+                },
+                { type: 'topic_input', slotKey: 'b2_topic_np', placeholder: 'Cụm danh từ / V-ing chủ đề (paraphrase)' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'a primary concern is ',
+                    'this trend also leads to ',
+                    'another serious drawback lies in ',
+                    'a further negative impact involves ',
+                    'critics also point to '
+                  ],
+                  'a primary concern is '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although there are clear advantages to ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: ', such as ' },
+                { type: 'topic_input', slotKey: 'conc_adv', placeholder: 'Tóm tắt lợi ích Body 1' },
+                { type: 'text', text: ', these are perhaps outweighed by the significant disadvantages regarding ' },
+                { type: 'topic_input', slotKey: 'conc_disadv', placeholder: 'Tóm tắt bất lợi Body 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ];
 
     case 'opinion_v1':
-      return [
-        {
-          sectionTitle: `📝 Introduction (Phiên bản 2 • 100% ${verb.toUpperCase()})`,
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh / Sự việc đề bài nêu (S + V)' },
-            { type: 'text', text: `. I completely ${verb} with the argument that ` },
-            { type: 'topic_input', slotKey: 'intro_claim', placeholder: 'Quan điểm / Đề xuất của đề bài' },
+      return swapBodies
+        ? [
             {
-              type: 'text',
-              text: `, and this essay will justify my ${noun} from both individual and broader societal perspectives.`
+              sectionTitle: `📝 Introduction (Phiên bản 2 • 100% ${verb.toUpperCase()} • Đảo Xã hội lên B1)`,
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh / Chủ đề đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: `. I completely ${verb} with the argument that ` },
+                { type: 'topic_input', slotKey: 'intro_claim', placeholder: 'Quan điểm / Đề xuất của đề bài' },
+                {
+                  type: 'text',
+                  text: `, and this essay will justify my ${noun} from both broader societal and individual perspectives.`
+                }
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 1 (Góc độ Xã hội & Vĩ mô — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? `From a wider social and economic perspective, a compelling argument supports my ${noun}. `
+                      : `From a wider social and economic perspective, several compelling arguments support my ${noun}. `
+                },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'this stance is strongly supported by ',
+                    'it is also closely linked to ',
+                    'another macro-level factor involves ',
+                    'a further societal reason lies in ',
+                    'this position is reinforced by '
+                  ],
+                  'this stance is strongly supported by '
+                )
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Góc độ Cá nhân / Trực tiếp — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? `Furthermore, there is an additional reason why I ${verb} with `
+                      : `Furthermore, there are several compelling reasons why I ${verb} with `
+                },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm V-ing / Danh từ chủ đề đang bàn' },
+                { type: 'text', text: ' on an individual level. ' },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'the primary reason is ',
+                    'another key factor is ',
+                    'a further compelling point involves ',
+                    'this view is also supported by ',
+                    'an important consideration lies in '
+                  ],
+                  'this centers on '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: `To sum up, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_claim', placeholder: 'Nhắc lại quan điểm / Đề xuất' },
+                { type: 'text', text: ', given its wide-ranging societal impacts on ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt nhóm lý do Xã hội (Body 1)' },
+                { type: 'text', text: ' as well as its personal effects regarding ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt nhóm lý do Cá nhân (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
             }
           ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 1 (Góc độ Cá nhân / Trực tiếp — ${b1Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#8b5cf6',
-          tokens: [
+        : [
             {
-              type: 'text',
-              text:
-                b1Count === 1
-                  ? `There is a compelling reason why I ${verb} with `
-                  : `There are several compelling reasons why I ${verb} with `
+              sectionTitle: `📝 Introduction (Phiên bản 2 • 100% ${verb.toUpperCase()})`,
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh / Chủ đề đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: `. I completely ${verb} with the argument that ` },
+                { type: 'topic_input', slotKey: 'intro_claim', placeholder: 'Quan điểm / Đề xuất của đề bài' },
+                {
+                  type: 'text',
+                  text: `, and this essay will justify my ${noun} from both individual and broader societal perspectives.`
+                }
+              ]
             },
-            { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm V-ing / Danh từ chủ đề đang bàn' },
-            { type: 'text', text: ' on an individual level. ' },
-            ...buildStandardMultiBodyTokens(
-              1,
-              b1Specs,
-              [
-                'the primary reason is ',
-                'another key factor is ',
-                'a further compelling point involves ',
-                'this view is also supported by ',
-                'an important consideration lies in '
-              ],
-              'this centers on '
-            )
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 2 (Góc độ Xã hội & Vĩ mô — ${b2Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#f59e0b',
-          tokens: [
             {
-              type: 'text',
-              text:
-                b2Count === 1
-                  ? `From a wider social and economic perspective, a further argument reinforces my ${noun}. `
-                  : `From a wider social and economic perspective, additional arguments further reinforce my ${noun}. `
+              sectionTitle: `💡 Body Paragraph 1 (Góc độ Cá nhân / Trực tiếp — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? `There is a compelling reason why I ${verb} with `
+                      : `There are several compelling reasons why I ${verb} with `
+                },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm V-ing / Danh từ chủ đề đang bàn' },
+                { type: 'text', text: ' on an individual level. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'the primary reason is ',
+                    'another key factor is ',
+                    'a further compelling point involves ',
+                    'this view is also supported by ',
+                    'an important consideration lies in '
+                  ],
+                  'this centers on '
+                )
+              ]
             },
-            ...buildStandardMultiBodyTokens(
-              2,
-              b2Specs,
-              [
-                'this stance is strongly supported by ',
-                'it is also closely linked to ',
-                'another macro-level factor involves ',
-                'a further societal reason lies in ',
-                'this position is reinforced by '
-              ],
-              'this stance is strongly supported by '
-            )
-          ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: `To sum up, I completely ${verb} that ` },
-            { type: 'topic_input', slotKey: 'conc_claim', placeholder: 'Nhắc lại quan điểm / Đề xuất' },
-            { type: 'text', text: ', given its profound impacts on ' },
-            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt nhóm lý do Body 1' },
-            { type: 'text', text: ' as well as ' },
-            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt nhóm lý do Body 2' },
-            { type: 'text', text: '.' }
-          ]
-        }
-      ];
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Góc độ Xã hội & Vĩ mô — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? `From a wider social and economic perspective, a further argument reinforces my ${noun}. `
+                      : `From a wider social and economic perspective, additional arguments further reinforce my ${noun}. `
+                },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'this stance is strongly supported by ',
+                    'it is also closely linked to ',
+                    'another macro-level factor involves ',
+                    'a further societal reason lies in ',
+                    'this position is reinforced by '
+                  ],
+                  'this stance is strongly supported by '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: `To sum up, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_claim', placeholder: 'Nhắc lại quan điểm / Đề xuất' },
+                { type: 'text', text: ', given its profound impacts on ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt nhóm lý do Body 1' },
+                { type: 'text', text: ' as well as ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt nhóm lý do Body 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ];
 
     case 'opinion_v2':
-      return [
-        {
-          sectionTitle: `📝 Introduction (Phiên bản 2 • Concession — Strongly ${verb})`,
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề bài (S + V)' },
-            { type: 'text', text: '. Some people argue that ' },
-            { type: 'topic_input', slotKey: 'intro_prompt_view', placeholder: 'Quan điểm đề bài đưa ra' },
-            { type: 'text', text: '. Although I accept that ' },
-            { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (khía cạnh hợp lý)' },
-            { type: 'text', text: `, I strongly ${verb} with the argument that ` },
-            { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
+      return swapBodies
+        ? [
             {
-              type: 'text',
-              text: b2Count === 1 ? ' for a convincing reason.' : ' for several convincing reasons.'
+              sectionTitle: `📝 Introduction (Phiên bản 2 • Đảo: Nêu Quan điểm chính ở B1 → Nhượng bộ ở B2)`,
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. Some people argue that ' },
+                { type: 'topic_input', slotKey: 'intro_prompt_view', placeholder: 'Quan điểm đề bài đưa ra' },
+                { type: 'text', text: `. I strongly ${verb} with the argument that ` },
+                { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
+                { type: 'text', text: ', even though I accept that ' },
+                { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (khía cạnh đối lập)' },
+                {
+                  type: 'text',
+                  text: `. This essay will first justify my ${noun} before addressing why some people still hold the opposing view.`
+                }
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 1 (Bảo vệ Quan điểm chính — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? `There is a compelling reason to support my ${noun}. `
+                      : `There are several compelling reasons to support my ${noun}. `
+                },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'the most crucial factor is ',
+                    'another decisive consideration is ',
+                    'a further convincing reason lies in ',
+                    'my viewpoint is also justified by ',
+                    'an essential point involves '
+                  ],
+                  'the most crucial factor is '
+                )
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Nhượng bộ & Xử lý góc nhìn đối lập — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? 'Admittedly, there is an understandable reason why some people support '
+                      : 'Admittedly, there are several understandable reasons why some people support '
+                },
+                { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'one notable point is ',
+                    'proponents also highlight ',
+                    'another understandable reason involves ',
+                    'some people also point to ',
+                    'a further consideration lies in '
+                  ],
+                  'one notable point is '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: `To sum up, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính (Body 1)' },
+                { type: 'text', text: ' due to ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt lý do chính (Body 1)' },
+                { type: 'text', text: ', although there are valid arguments for ' },
+                { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ (Body 2)' },
+                { type: 'text', text: ' regarding ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt ý nhượng bộ (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
             }
           ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 1 (Nhượng bộ — ${b1Count} khía cạnh hợp lý • 1–2 câu/ý)`,
-          borderColor: '#8b5cf6',
-          tokens: [
+        : [
             {
-              type: 'text',
-              text:
-                b1Count === 1
-                  ? 'Admittedly, there is an understandable reason why some people support '
-                  : 'Admittedly, there are several understandable reasons why some people support '
+              sectionTitle: `📝 Introduction (Phiên bản 2 • Concession — Strongly ${verb})`,
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. Some people argue that ' },
+                { type: 'topic_input', slotKey: 'intro_prompt_view', placeholder: 'Quan điểm đề bài đưa ra' },
+                { type: 'text', text: '. Although I accept that ' },
+                { type: 'topic_input', slotKey: 'intro_concede', placeholder: 'Ý nhượng bộ (khía cạnh hợp lý)' },
+                { type: 'text', text: `, I strongly ${verb} with the argument that ` },
+                { type: 'topic_input', slotKey: 'intro_main_view', placeholder: 'Quan điểm chính em bảo vệ/phản bác' },
+                {
+                  type: 'text',
+                  text: b2Count === 1 ? ' for a convincing reason.' : ' for several convincing reasons.'
+                }
+              ]
             },
-            { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
-            { type: 'text', text: '. ' },
-            ...buildStandardMultiBodyTokens(
-              1,
-              b1Specs,
-              [
-                'one notable point is ',
-                'proponents also highlight ',
-                'another understandable reason involves ',
-                'some people also point to ',
-                'a further consideration lies in '
-              ],
-              'one notable point is '
-            )
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 2 (Bảo vệ quan điểm chính — ${b2Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#f59e0b',
-          tokens: [
             {
-              type: 'text',
-              text:
-                b2Count === 1
-                  ? `Nevertheless, there is a far more compelling reason to support my ${noun}. `
-                  : `Nevertheless, there are far more compelling reasons to support my ${noun}. `
+              sectionTitle: `💡 Body Paragraph 1 (Nhượng bộ — ${b1Count} khía cạnh hợp lý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'Admittedly, there is an understandable reason why some people support '
+                      : 'Admittedly, there are several understandable reasons why some people support '
+                },
+                { type: 'topic_input', slotKey: 'b1_concede_np', placeholder: 'Cụm V-ing / Danh từ ý nhượng bộ' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'one notable point is ',
+                    'proponents also highlight ',
+                    'another understandable reason involves ',
+                    'some people also point to ',
+                    'a further consideration lies in '
+                  ],
+                  'one notable point is '
+                )
+              ]
             },
-            ...buildStandardMultiBodyTokens(
-              2,
-              b2Specs,
-              [
-                'the most crucial factor is ',
-                'another decisive consideration is ',
-                'a further convincing reason lies in ',
-                'my viewpoint is also justified by ',
-                'an essential point involves '
-              ],
-              'the most crucial factor is '
-            )
-          ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: 'To sum up, although there are valid arguments for ' },
-            { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ' },
-            { type: 'text', text: ' regarding ' },
-            { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt ý nhượng bộ Body 1' },
-            { type: 'text', text: `, I completely ${verb} that ` },
-            { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính' },
-            { type: 'text', text: ' due to ' },
-            { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt lý do chính Body 2' },
-            { type: 'text', text: '.' }
-          ]
-        }
-      ];
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Bảo vệ quan điểm chính — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? `Nevertheless, there is a far more compelling reason to support my ${noun}. `
+                      : `Nevertheless, there are far more compelling reasons to support my ${noun}. `
+                },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'the most crucial factor is ',
+                    'another decisive consideration is ',
+                    'a further convincing reason lies in ',
+                    'my viewpoint is also justified by ',
+                    'an essential point involves '
+                  ],
+                  'the most crucial factor is '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, although there are valid arguments for ' },
+                { type: 'topic_input', slotKey: 'conc_concede', placeholder: 'Cụm danh từ ý nhượng bộ' },
+                { type: 'text', text: ' regarding ' },
+                { type: 'topic_input', slotKey: 'conc_p1', placeholder: 'Tóm tắt ý nhượng bộ Body 1' },
+                { type: 'text', text: `, I completely ${verb} that ` },
+                { type: 'topic_input', slotKey: 'conc_main', placeholder: 'Nhắc lại quan điểm chính' },
+                { type: 'text', text: ' due to ' },
+                { type: 'topic_input', slotKey: 'conc_p2', placeholder: 'Tóm tắt lý do chính Body 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ];
 
     case 'mixed_ps':
-      return [
-        {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Vấn đề & Giải pháp)',
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_issue', placeholder: 'Cụm danh từ / V-ing chỉ hiện tượng đề nêu' },
+      return swapBodies
+        ? [
             {
-              type: 'text',
-              text: ' has become a major issue. This essay will examine the primary problems resulting from this trend and propose practical solutions to address them.'
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Đảo Body: Giải pháp ở B1 → Vấn đề ở B2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_issue', placeholder: 'Cụm danh từ / V-ing chỉ hiện tượng đề nêu' },
+                {
+                  type: 'text',
+                  text: ', which has become a major issue. This essay will first propose practical solutions to address this trend before examining the primary problems resulting from it.'
+                }
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 1 (Solutions — ${b1Count} Giải pháp + Kết quả • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'An effective measure can be implemented to tackle this issue. '
+                      : 'Several effective measures can be implemented to tackle this issue. '
+                },
+                ...buildMixedPsSolutionsTokens(1, b1Specs)
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Problems / Causes — ${b2Count} Vấn đề cần xử lý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? 'Such intervention is urgently needed because there is a pressing problem associated with '
+                      : 'Such interventions are urgently needed because there are several pressing problems associated with '
+                },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'the most evident issue is ',
+                    'this phenomenon also gives rise to ',
+                    'another pressing problem involves ',
+                    'a further negative consequence lies in ',
+                    'it is also associated with '
+                  ],
+                  'the most evident issue is '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, practical measures including ' },
+                { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt giải pháp (Body 1)' },
+                { type: 'text', text: ' should be prioritized, given that ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ' otherwise causes serious problems such as ' },
+                { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Tóm tắt vấn đề (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
             }
           ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 1 (Problems / Causes — ${b1Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#8b5cf6',
-          tokens: [
+        : [
             {
-              type: 'text',
-              text:
-                b1Count === 1
-                  ? 'There is a pressing problem associated with '
-                  : 'There are several pressing problems associated with '
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Vấn đề & Giải pháp)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_issue', placeholder: 'Cụm danh từ / V-ing chỉ hiện tượng đề nêu' },
+                {
+                  type: 'text',
+                  text: ', which has become a major issue. This essay will examine the primary problems resulting from this trend and propose practical solutions to address them.'
+                }
+              ]
             },
-            { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
-            { type: 'text', text: '. ' },
-            ...buildStandardMultiBodyTokens(
-              1,
-              b1Specs,
-              [
-                'the most evident issue is ',
-                'this phenomenon also gives rise to ',
-                'another pressing problem involves ',
-                'a further negative consequence lies in ',
-                'it is also associated with '
-              ],
-              'the most evident issue is '
-            )
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 2 (Solutions — ${b2Count} Giải pháp + Kết quả • 1–2 câu/ý)`,
-          borderColor: '#f59e0b',
-          tokens: [
             {
-              type: 'text',
-              text:
-                b2Count === 1
-                  ? 'However, an effective measure can be implemented to tackle this problem. '
-                  : 'However, several effective measures can be implemented to tackle these problems. '
+              sectionTitle: `💡 Body Paragraph 1 (Problems / Causes — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'There is a pressing problem associated with '
+                      : 'There are several pressing problems associated with '
+                },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chủ đề' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'the most evident issue is ',
+                    'this phenomenon also gives rise to ',
+                    'another pressing problem involves ',
+                    'a further negative consequence lies in ',
+                    'it is also associated with '
+                  ],
+                  'the most evident issue is '
+                )
+              ]
             },
-            ...buildMixedPsSolutionsTokens(b2Specs)
-          ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: 'To sum up, it is evident that ' },
-            { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
-            { type: 'text', text: ' causes serious problems such as ' },
-            { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Tóm tắt vấn đề Body 1' },
-            { type: 'text', text: ', yet practical measures including ' },
-            { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt giải pháp Body 2' },
-            { type: 'text', text: ' can effectively mitigate this issue.' }
-          ]
-        }
-      ];
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Solutions — ${b2Count} Giải pháp + Kết quả • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? 'However, an effective measure can be implemented to tackle this problem. '
+                      : 'However, several effective measures can be implemented to tackle these problems. '
+                },
+                ...buildMixedPsSolutionsTokens(2, b2Specs)
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, it is evident that ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ' causes serious problems such as ' },
+                { type: 'topic_input', slotKey: 'conc_prob', placeholder: 'Tóm tắt vấn đề Body 1' },
+                { type: 'text', text: ', yet practical measures including ' },
+                { type: 'topic_input', slotKey: 'conc_sols', placeholder: 'Tóm tắt giải pháp Body 2' },
+                { type: 'text', text: ' can effectively mitigate this issue.' }
+              ]
+            }
+          ];
 
     case 'mixed_ce':
-      return [
-        {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Nguyên nhân & Hậu quả)',
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_event', placeholder: 'Sự việc / Xu hướng đề bài nêu (S + V)' },
+      return swapBodies
+        ? [
             {
-              type: 'text',
-              text: '. This essay will examine the main factors contributing to this trend and analyze its serious consequences.'
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Đảo Body: Hậu quả ở B1 → Nguyên nhân ở B2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_event', placeholder: 'Sự việc / Xu hướng đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                {
+                  type: 'text',
+                  text: '. This essay will first analyze the serious consequences of this trend before examining the main factors contributing to it.'
+                }
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 1 (Effects — ${b1Count} Hậu quả • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'The consequence of this trend is far-reaching. '
+                      : 'The consequences of this trend are far-reaching and multifaceted. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'it directly results in ',
+                    'a further major impact is ',
+                    'another serious consequence involves ',
+                    'this situation also leads to ',
+                    'a notable repercussion lies in '
+                  ],
+                  'it directly results in '
+                )
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Causes — ${b2Count} Nguyên nhân • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? 'Behind this consequence, an underlying factor explains the rise of '
+                      : 'Behind these consequences, several underlying factors explain the rise of '
+                },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'one primary driver is ',
+                    'another contributing factor is ',
+                    'a further underlying cause lies in ',
+                    'this trend is also fueled by ',
+                    'a notable root factor involves '
+                  ],
+                  'a primary driver is '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, it is evident that ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ' has resulted in severe repercussions including ' },
+                { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt hậu quả (Body 1)' },
+                { type: 'text', text: ', which are largely driven by factors such as ' },
+                { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt nguyên nhân (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
             }
           ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 1 (Causes — ${b1Count} Nguyên nhân • 1–2 câu/ý)`,
-          borderColor: '#8b5cf6',
-          tokens: [
+        : [
             {
-              type: 'text',
-              text:
-                b1Count === 1
-                  ? 'An underlying factor explains the rise of '
-                  : 'Several underlying factors explain the rise of '
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 Nguyên nhân & Hậu quả)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_event', placeholder: 'Sự việc / Xu hướng đề nêu (Cụm danh từ / V-ing hoặc that + S + V)' },
+                {
+                  type: 'text',
+                  text: '. This essay will examine the main factors contributing to this trend and analyze its serious consequences.'
+                }
+              ]
             },
-            { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
-            { type: 'text', text: '. ' },
-            ...buildStandardMultiBodyTokens(
-              1,
-              b1Specs,
-              [
-                'one primary driver is ',
-                'another contributing factor is ',
-                'a further underlying cause lies in ',
-                'this trend is also fueled by ',
-                'a notable root factor involves '
-              ],
-              'a primary driver is '
-            )
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 2 (Effects — ${b2Count} Hậu quả • 1–2 câu/ý)`,
-          borderColor: '#f59e0b',
-          tokens: [
             {
-              type: 'text',
-              text:
-                b2Count === 1
-                  ? 'The consequence of this trend is far-reaching. '
-                  : 'The consequences of this trend are far-reaching and multifaceted. '
+              sectionTitle: `💡 Body Paragraph 1 (Causes — ${b1Count} Nguyên nhân • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'An underlying factor explains the rise of '
+                      : 'Several underlying factors explain the rise of '
+                },
+                { type: 'topic_input', slotKey: 'b1_topic', placeholder: 'Cụm danh từ chỉ hiện tượng' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'one primary driver is ',
+                    'another contributing factor is ',
+                    'a further underlying cause lies in ',
+                    'this trend is also fueled by ',
+                    'a notable root factor involves '
+                  ],
+                  'a primary driver is '
+                )
+              ]
             },
-            ...buildStandardMultiBodyTokens(
-              2,
-              b2Specs,
-              [
-                'it directly results in ',
-                'a further major impact is ',
-                'another serious consequence involves ',
-                'this situation also leads to ',
-                'a notable repercussion lies in '
-              ],
-              'it directly results in '
-            )
-          ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: 'To sum up, it is evident that factors such as ' },
-            { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt nguyên nhân' },
-            { type: 'text', text: ' have led to ' },
-            { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
-            { type: 'text', text: ', resulting in severe repercussions including ' },
-            { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt hậu quả' },
-            { type: 'text', text: '.' }
-          ]
-        }
-      ];
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Effects — ${b2Count} Hậu quả • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? 'The consequence of this trend is far-reaching. '
+                      : 'The consequences of this trend are far-reaching and multifaceted. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'it directly results in ',
+                    'a further major impact is ',
+                    'another serious consequence involves ',
+                    'this situation also leads to ',
+                    'a notable repercussion lies in '
+                  ],
+                  'it directly results in '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, it is evident that factors such as ' },
+                { type: 'topic_input', slotKey: 'conc_cause', placeholder: 'Tóm tắt nguyên nhân' },
+                { type: 'text', text: ' have led to ' },
+                { type: 'topic_input', slotKey: 'conc_topic', placeholder: 'Chủ đề đề bài' },
+                { type: 'text', text: ', resulting in severe repercussions including ' },
+                { type: 'topic_input', slotKey: 'conc_effect', placeholder: 'Tóm tắt hậu quả' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ];
 
     case 'twopart':
-      return [
-        {
-          sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 ý cho 2 Câu hỏi)',
-          borderColor: '#0ea5e9',
-          tokens: [
-            { type: 'text', text: 'Over the last few decades, the world has seen that ' },
-            { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung đề bài đưa ra (S + V)' },
-            { type: 'text', text: '. This essay will firstly address ' },
-            { type: 'topic_input', slotKey: 'intro_q1', placeholder: 'Trọng tâm Câu hỏi 1' },
-            { type: 'text', text: ' and then examine ' },
-            { type: 'topic_input', slotKey: 'intro_q2', placeholder: 'Trọng tâm Câu hỏi 2' },
-            { type: 'text', text: '.' }
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 1 (Answer to Question 1 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#8b5cf6',
-          tokens: [
+      return swapBodies
+        ? [
             {
-              type: 'text',
-              text:
-                b1Count === 1
-                  ? 'Regarding the first question, a key point accounts for '
-                  : 'Regarding the first question, several key points account for '
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Đảo Body: Trả lời Câu hỏi 2 trước → Câu hỏi 1 ở Body 2)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. This essay will firstly address ' },
+                { type: 'topic_input', slotKey: 'intro_q2', placeholder: 'Trọng tâm Câu hỏi 2 (đưa lên Body 1)' },
+                { type: 'text', text: ' before examining ' },
+                { type: 'topic_input', slotKey: 'intro_q1', placeholder: 'Trọng tâm Câu hỏi 1 (đẩy xuống Body 2)' },
+                { type: 'text', text: ' in detail.' }
+              ]
             },
-            { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 1' },
-            { type: 'text', text: '. ' },
-            ...buildStandardMultiBodyTokens(
-              1,
-              b1Specs,
-              [
-                'a primary aspect is ',
-                'another notable point is ',
-                'a further key factor involves ',
-                'this question is also linked to ',
-                'an important element lies in '
-              ],
-              'a primary aspect is '
-            )
-          ]
-        },
-        {
-          sectionTitle: `💡 Body Paragraph 2 (Answer to Question 2 — ${b2Count} Trụ ý • 1–2 câu/ý)`,
-          borderColor: '#f59e0b',
-          tokens: [
-            { type: 'text', text: 'With regards to the second question, ' },
-            { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 2' },
             {
-              type: 'text',
-              text:
-                b2Count === 1
-                  ? ' can be addressed through a central factor. '
-                  : ' can be approached from multiple angles. '
+              sectionTitle: `💡 Body Paragraph 1 (Answer to Question 2 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                { type: 'text', text: 'Addressing the latter question first, ' },
+                { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 2' },
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? ' can be explained through a central factor. '
+                      : ' can be approached from multiple angles. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'the most significant point involves ',
+                    'an additional factor worth noting is ',
+                    'another relevant aspect lies in ',
+                    'this issue is also connected to ',
+                    'a further key consideration is '
+                  ],
+                  'the most significant point involves '
+                )
+              ]
             },
-            ...buildStandardMultiBodyTokens(
-              2,
-              b2Specs,
-              [
-                'the most significant point involves ',
-                'an additional factor worth noting is ',
-                'another relevant aspect lies in ',
-                'this issue is also connected to ',
-                'a further key consideration is '
-              ],
-              'the most significant point involves '
-            )
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Answer to Question 1 — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? 'Turning to the first question, a key point accounts for '
+                      : 'Turning to the first question, several key points account for '
+                },
+                { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 1' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'a primary aspect is ',
+                    'another notable point is ',
+                    'a further key factor involves ',
+                    'this question is also linked to ',
+                    'an important element lies in '
+                  ],
+                  'a primary aspect is '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion (Đã đảo khớp thứ tự Body 1 → Body 2)',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, ' },
+                { type: 'topic_input', slotKey: 'conc_q2', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 2 (Body 1)' },
+                { type: 'text', text: ', while ' },
+                { type: 'topic_input', slotKey: 'conc_q1', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 1 (Body 2)' },
+                { type: 'text', text: '.' }
+              ]
+            }
           ]
-        },
-        {
-          sectionTitle: '✅ Conclusion',
-          borderColor: '#10b981',
-          tokens: [
-            { type: 'text', text: 'To sum up, ' },
-            { type: 'topic_input', slotKey: 'conc_q1', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 1' },
-            { type: 'text', text: ', while ' },
-            { type: 'topic_input', slotKey: 'conc_q2', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 2' },
-            { type: 'text', text: '.' }
-          ]
-        }
-      ];
+        : [
+            {
+              sectionTitle: '📝 Introduction (Phiên bản 2 • Linh hoạt 1–5 ý cho 2 Câu hỏi)',
+              borderColor: '#0ea5e9',
+              tokens: [
+                { type: 'text', text: 'Over the last few decades, the world has seen ' },
+                { type: 'topic_input', slotKey: 'intro_ctx', placeholder: 'Bối cảnh chung của đề (Cụm danh từ / V-ing hoặc that + S + V)' },
+                { type: 'text', text: '. This essay will firstly address ' },
+                { type: 'topic_input', slotKey: 'intro_q1', placeholder: 'Trọng tâm Câu hỏi 1' },
+                { type: 'text', text: ' and then examine ' },
+                { type: 'topic_input', slotKey: 'intro_q2', placeholder: 'Trọng tâm Câu hỏi 2' },
+                { type: 'text', text: '.' }
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 1 (Answer to Question 1 — ${b1Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#8b5cf6',
+              tokens: [
+                {
+                  type: 'text',
+                  text:
+                    b1Count === 1
+                      ? 'Regarding the first question, a key point accounts for '
+                      : 'Regarding the first question, several key points account for '
+                },
+                { type: 'topic_input', slotKey: 'b1_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 1' },
+                { type: 'text', text: '. ' },
+                ...buildStandardMultiBodyTokens(
+                  1,
+                  b1Specs,
+                  [
+                    'a primary aspect is ',
+                    'another notable point is ',
+                    'a further key factor involves ',
+                    'this question is also linked to ',
+                    'an important element lies in '
+                  ],
+                  'a primary aspect is '
+                )
+              ]
+            },
+            {
+              sectionTitle: `💡 Body Paragraph 2 (Answer to Question 2 — ${b2Count} Trụ ý • 1–2 câu/ý)`,
+              borderColor: '#f59e0b',
+              tokens: [
+                { type: 'text', text: 'With regards to the second question, ' },
+                { type: 'topic_input', slotKey: 'b2_lead', placeholder: 'Cụm danh từ trọng tâm Câu hỏi 2' },
+                {
+                  type: 'text',
+                  text:
+                    b2Count === 1
+                      ? ' can be addressed through a central factor. '
+                      : ' can be approached from multiple angles. '
+                },
+                ...buildStandardMultiBodyTokens(
+                  2,
+                  b2Specs,
+                  [
+                    'the most significant point involves ',
+                    'an additional factor worth noting is ',
+                    'another relevant aspect lies in ',
+                    'this issue is also connected to ',
+                    'a further key consideration is '
+                  ],
+                  'the most significant point involves '
+                )
+              ]
+            },
+            {
+              sectionTitle: '✅ Conclusion',
+              borderColor: '#10b981',
+              tokens: [
+                { type: 'text', text: 'To sum up, ' },
+                { type: 'topic_input', slotKey: 'conc_q1', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 1' },
+                { type: 'text', text: ', while ' },
+                { type: 'topic_input', slotKey: 'conc_q2', placeholder: 'Tóm tắt câu trả lời cho Câu hỏi 2' },
+                { type: 'text', text: '.' }
+              ]
+            }
+          ];
   }
 }
 
