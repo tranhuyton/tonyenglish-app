@@ -59,6 +59,18 @@ h4:not(.legacy-prose *):not(.jodit-wysiwyg *) {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
 .line-clamp-none {
   overflow: visible;
   display: block;
@@ -337,4 +349,41 @@ img[alt*="Fill Image"] {
   margin-top: 0.35rem !important;
   margin-bottom: 2.85rem !important;
   line-height: 1.55 !important;
+}
+
+/* Scoped prose helpers for HomePage (Tailwind v3.0.x does not compile [&_...] arbitrary variants) */
+.hero-ad-prose,
+.hero-ad-prose p,
+.hero-ad-prose span,
+.hero-ad-prose strong {
+  color: rgba(255, 255, 255, 0.96) !important;
+  margin-bottom: 0 !important;
+}
+.hero-ad-prose a {
+  color: #7dd3fc !important;
+  text-decoration: none !important;
+}
+.hero-ad-prose a:hover {
+  color: #bae6fd !important;
+}
+
+.testimonial-legacy-prose a {
+  color: #334155 !important;
+  text-decoration: none !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+}
+.testimonial-legacy-prose a:hover {
+  color: #0a5482 !important;
+}
+.testimonial-legacy-prose em,
+.testimonial-legacy-prose i {
+  font-style: normal !important;
+}
+.testimonial-legacy-prose img {
+  max-height: 13rem !important;
+  width: auto !important;
+  object-fit: contain !important;
+  border-radius: 0.75rem !important;
+  margin: 0 auto 0.75rem auto !important;
 }

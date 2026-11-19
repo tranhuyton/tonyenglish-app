@@ -9,7 +9,6 @@ import {
   Sparkles,
   CheckCircle2,
   ArrowRight,
-  Play,
   Calendar,
   MessageCircle,
   Globe,
@@ -18,10 +17,135 @@ import {
   MapPin,
   ChevronLeft,
   ChevronRight,
+  Phone,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
-import { resolveUploadUrl, truncateWords, getYoutubeEmbedUrl, fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
+import {
+  resolveUploadUrl,
+  truncateWords,
+  stripTags,
+  getYoutubeEmbedUrl,
+  fixLegacyHtmlContent,
+  updatePageSeo,
+} from '../lib/utils';
+
+type CardVariant = 'default' | 'horizontal' | 'compact';
+
+function normalizeInternalLink(rawUrl: string | null | undefined, fallback = '/courses'): string {
+  if (!rawUrl || !rawUrl.trim()) return fallback;
+  const cleaned = rawUrl
+    .trim()
+    .replace(/^https?:\/\/(?:www\.)?tonyenglish\.vn/i, '')
+    .replace(/^\/(?:vi|en)(?=\/|$)/i, '')
+    .replace(/\/news\/index$/i, '/news');
+  if (!cleaned) return fallback;
+  return cleaned.startsWith('/') ? cleaned : `/${cleaned}`;
+}
+
+function getBalancedGridClass(count: number): string {
+  if (count <= 1) return 'grid grid-cols-1 gap-6';
+  if (count === 2) return 'grid grid-cols-1 lg:grid-cols-2 gap-6';
+  if (count === 4) return 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5';
+  return 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6';
+}
+
+function getCardVariantForCount(count: number): CardVariant {
+  if (count === 1 || count === 2) return 'horizontal';
+  if (count === 4) return 'compact';
+  return 'default';
+}
+
+interface ParsedTestimonial {
+  badge: string;
+  headline: string;
+  summary: string;
+  imageUrl: string | null;
+  isDiagram: boolean;
+  linkUrl: string;
+  ctaLabel: string;
+  useStructuredCard: boolean;
+}
+
+function parseTestimonialCard(
+  testValue: any,
+  lang: 'vi' | 'en',
+  idx: number
+): ParsedTestimonial {
+  const rawTitle = (
+    lang === 'vi'
+      ? testValue.testimonial_title_vi || testValue.testimonial_title_en
+      : testValue.testimonial_title_en || testValue.testimonial_title_vi
+  )?.trim() || '';
+
+  const rawHtml =
+    (lang === 'vi'
+      ? testValue.testimonial_content_vi || testValue.testimonial_content_en
+      : testValue.testimonial_content_en || testValue.testimonial_content_vi) || '';
+
+  const imgMatch = rawHtml.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
+  const imageUrl = imgMatch?.[1] ? resolveUploadUrl(imgMatch[1]) : null;
+  const isDiagram = Boolean(
+    imageUrl && /\.(png|svg)(?:\?|$)/i.test(imageUrl) && /(venn|blended|diagram|chart)/i.test(imageUrl)
+  );
+
+  const linkMatch = rawHtml.match(/<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>/i);
+  const linkUrl = normalizeInternalLink(linkMatch?.[1], idx === 0 ? '/courses' : '/news');
+
+  const plainText = stripTags(rawHtml);
+  let headline = rawTitle;
+  let summary = plainText;
+
+  const colonIdx = plainText.indexOf(':');
+  if (colonIdx > 5 && colonIdx <= 70) {
+    headline = plainText.slice(0, colonIdx).trim();
+    summary = plainText.slice(colonIdx + 1).trim();
+  } else if (!headline) {
+    headline =
+      idx === 0
+        ? lang === 'vi'
+          ? 'Học trên lớp + Tài khoản Online'
+          : 'Blended 1-on-1 & Online Portal'
+        : lang === 'vi'
+        ? 'Thư viện học liệu & Kho Video'
+        : 'Library & Curated Video Store';
+  }
+
+  const badge =
+    rawTitle ||
+    (idx === 0
+      ? lang === 'vi'
+        ? 'Học tại TonyEnglish'
+        : 'Study at TonyEnglish'
+      : lang === 'vi'
+      ? 'Thư viện & Kho Video'
+      : 'Library & Video Hub');
+
+  const ctaLabel = linkUrl.includes('/courses')
+    ? lang === 'vi'
+      ? 'Xem các khóa học'
+      : 'Explore courses'
+    : linkUrl.includes('/video')
+    ? lang === 'vi'
+      ? 'Mở Kho Video'
+      : 'Explore videos'
+    : lang === 'vi'
+    ? 'Khám phá Thư viện'
+    : 'Explore library';
+
+  const useStructuredCard = Boolean(imageUrl && summary.length > 20 && !/<table\b|<iframe\b/i.test(rawHtml));
+
+  return {
+    badge,
+    headline,
+    summary,
+    imageUrl,
+    isDiagram,
+    linkUrl,
+    ctaLabel,
+    useStructuredCard,
+  };
+}
 
 export const HomePage: React.FC = () => {
   const { lang, t } = useApp();
@@ -48,12 +172,11 @@ export const HomePage: React.FC = () => {
   const [videoSlideIdx, setVideoSlideIdx] = useState(0);
 
   const [testimonials, setTestimonials] = useState<any[]>([]);
-  const [openingClasses, setOpeningClasses] = useState<any[]>([]);
   const [popupVideo, setPopupVideo] = useState<any | null>(null);
 
   useEffect(() => {
     async function fetchHomeData() {
-      const [adsRes, stickyRes, newsCateRes, vFocusRes, vEventRes, vCateRes, testiRes, openRes] = await Promise.all([
+      const [adsRes, stickyRes, newsCateRes, vFocusRes, vEventRes, vCateRes, testiRes] = await Promise.all([
         supabase
           .from('te_ads')
           .select('*')
@@ -104,12 +227,6 @@ export const HomePage: React.FC = () => {
           .eq('deleted', 0)
           .eq('testimonial_status', 1)
           .order('testimonial_order', { ascending: true }),
-        supabase
-          .from('te_user_group')
-          .select('*')
-          .eq('deleted', 0)
-          .eq('ug_status', 1)
-          .eq('ug_opening', 1),
       ]);
 
       if (adsRes.data) setAds(adsRes.data);
@@ -184,7 +301,6 @@ export const HomePage: React.FC = () => {
       }
       if (vCateRes.data) setAllVideoCategories(vCateRes.data);
       if (testiRes.data) setTestimonials(testiRes.data);
-      if (openRes.data) setOpeningClasses(openRes.data);
     }
 
     fetchHomeData();
@@ -202,14 +318,15 @@ export const HomePage: React.FC = () => {
 
   const testiPos0 = testimonials.filter((tItem) => Number(tItem.testimonial_position) === 0);
   const testiPos1 = testimonials.filter((tItem) => Number(tItem.testimonial_position) === 1);
+  const allTestimonials = [...testiPos0, ...testiPos1];
 
   const videoCateMap: Record<number, any> = {};
   allVideoCategories.forEach((vc) => {
     videoCateMap[vc.vc_id] = vc;
   });
 
-  // Render a single modern news category card
-  const renderNewsCateCard = (cate: any) => {
+  // Render a single modern news category card (supports default, horizontal 2-up, and compact 4-up layouts)
+  const renderNewsCateCard = (cate: any, variant: CardVariant = 'default') => {
     const newsItem = latestNewsByCate[cate.news_cc_id];
     if (!newsItem) return null;
 
@@ -218,12 +335,72 @@ export const HomePage: React.FC = () => {
     const articleUrl = `/news/view/${(newsItem.news_title_url || '').trim()}`;
     const rawTitle = (newsItem.news_title || '').trim();
 
+    if (variant === 'horizontal') {
+      return (
+        <div
+          key={cate.news_cc_id}
+          className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col sm:flex-row h-full"
+        >
+          <div className="relative h-48 sm:h-auto sm:w-52 md:w-56 sm:min-h-[216px] shrink-0 overflow-hidden bg-slate-100">
+            <Link to={articleUrl} className="block w-full h-full">
+              <img
+                src={resolveUploadUrl(newsItem.news_thumb)}
+                alt={rawTitle}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                }}
+                className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+              />
+            </Link>
+            <Link
+              to={cateUrl}
+              className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md hover:bg-[#2ab4e8] transition-colors"
+            >
+              {cateTitle}
+            </Link>
+          </div>
+
+          <div className="p-5 flex-1 flex flex-col justify-between min-w-0">
+            <div>
+              <Link
+                to={articleUrl}
+                className="font-extrabold text-[17px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block"
+              >
+                {rawTitle}
+              </Link>
+              <p className="text-slate-600 text-[14.5px] leading-relaxed line-clamp-3">
+                {truncateWords(newsItem.news_desc, 165)}
+              </p>
+            </div>
+
+            <div className="pt-3.5 mt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+              <Link
+                to={cateUrl}
+                className="text-xs sm:text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1 transition-colors"
+              >
+                <span>{t('Related Post')}</span>
+                <span>→</span>
+              </Link>
+              <Link
+                to={articleUrl}
+                className="text-xs sm:text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors"
+              >
+                {lang === 'vi' ? 'Đọc tiếp' : 'Read more'}
+              </Link>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    const isCompact = variant === 'compact';
+
     return (
       <div
         key={cate.news_cc_id}
-        className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col"
+        className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full"
       >
-        <div className="relative h-48 overflow-hidden bg-slate-100">
+        <div className={`relative ${isCompact ? 'h-44' : 'h-48'} overflow-hidden bg-slate-100`}>
           <Link to={articleUrl} className="block w-full h-full">
             <img
               src={resolveUploadUrl(newsItem.news_thumb)}
@@ -231,41 +408,43 @@ export const HomePage: React.FC = () => {
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
               }}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
             />
           </Link>
           <Link
             to={cateUrl}
-            className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md hover:bg-[#2ab4e8] transition-colors"
+            className="absolute top-3 left-3 max-w-[calc(100%-24px)] truncate bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md hover:bg-[#2ab4e8] transition-colors"
           >
             {cateTitle}
           </Link>
         </div>
 
-        <div className="p-5 flex-1 flex flex-col justify-between">
+        <div className={`${isCompact ? 'p-4' : 'p-5'} flex-1 flex flex-col justify-between`}>
           <div>
             <Link
               to={articleUrl}
-              className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2"
+              className={`font-extrabold ${
+                isCompact ? 'text-[15.5px]' : 'text-[17px] sm:text-[18px]'
+              } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
             >
               {rawTitle}
             </Link>
-            <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
-              {truncateWords(newsItem.news_desc, 165)}
+            <p className={`text-slate-600 ${isCompact ? 'text-[13.5px]' : 'text-[15px]'} leading-relaxed line-clamp-3`}>
+              {truncateWords(newsItem.news_desc, isCompact ? 130 : 165)}
             </p>
           </div>
 
-          <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <div className={`${isCompact ? 'pt-3 mt-3.5' : 'pt-4 mt-4'} border-t border-slate-100 flex items-center justify-between gap-2`}>
             <Link
               to={cateUrl}
-              className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1 transition-colors"
+              className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1 transition-colors`}
             >
               <span>{t('Related Post')}</span>
               <span>→</span>
             </Link>
             <Link
               to={articleUrl}
-              className="text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors"
+              className={`${isCompact ? 'text-xs' : 'text-sm'} font-bold text-slate-500 hover:text-slate-800 transition-colors`}
             >
               {lang === 'vi' ? 'Đọc tiếp' : 'Read more'}
             </Link>
@@ -275,51 +454,66 @@ export const HomePage: React.FC = () => {
     );
   };
 
-  // Render a focus section (5 = Reading Practice, 4 = Learning Through Conversation, 1 = Words In The news, 3 = Other)
+  // Render a focus section with adaptive column count so there are never orphan cards or empty right columns
   const renderCategorySection = (focusType: number, sectionTitleKey: string, icon: React.ReactNode) => {
     const matchedCates = newsCategories.filter(
       (nc) => Number(nc.news_cc_focus) === focusType && !!latestNewsByCate[nc.news_cc_id]
     );
-    if (matchedCates.length === 0 && !videoEvent) return null;
+    const totalCount = matchedCates.length + (videoEvent ? 1 : 0);
+    if (totalCount === 0) return null;
 
+    const variant = getCardVariantForCount(totalCount);
+    const gridClass = getBalancedGridClass(totalCount);
     const cards: React.ReactNode[] = [];
+
     if (videoEvent) {
       const vCateUrl = videoCateMap[videoEvent.vc_id]
         ? `/video/${(videoCateMap[videoEvent.vc_id].vc_name_url || '').trim()}/${(videoEvent.video_url || '').trim()}`
         : '/videos';
+      const isHorizontal = variant === 'horizontal';
+      const isCompact = variant === 'compact';
+
       cards.push(
         <div
           key={`video-event-${focusType}`}
-          className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col"
+          className={`group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex ${
+            isHorizontal ? 'flex-col sm:flex-row' : 'flex-col'
+          } h-full`}
         >
-          <div className="relative h-48 overflow-hidden bg-slate-100">
+          <div
+            className={`relative overflow-hidden bg-slate-100 ${
+              isHorizontal ? 'h-48 sm:h-auto sm:w-52 md:w-56 sm:min-h-[216px] shrink-0' : isCompact ? 'h-44' : 'h-48'
+            }`}
+          >
             <Link to={vCateUrl} className="block w-full h-full">
               <img
                 src={resolveUploadUrl(videoEvent.video_thumb)}
                 alt={videoEvent.video_desc}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
               />
             </Link>
             <span className="absolute top-3 left-3 bg-rose-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
               🎬 {t('Video')}
             </span>
           </div>
-          <div className="p-5 flex-1 flex flex-col justify-between">
+          <div className={`${isCompact ? 'p-4' : 'p-5'} flex-1 flex flex-col justify-between min-w-0`}>
             <div>
               <Link
                 to={vCateUrl}
-                className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2"
+                className={`font-extrabold ${
+                  isCompact ? 'text-[15.5px]' : 'text-[17px]'
+                } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
               >
                 {truncateWords(videoEvent.video_desc, 120)}
               </Link>
-              <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
-                {truncateWords(videoEvent.video_cmt, 180)}
+              <p className={`text-slate-600 ${isCompact ? 'text-[13.5px]' : 'text-[14.5px]'} leading-relaxed line-clamp-3`}>
+                {truncateWords(videoEvent.video_cmt, isCompact ? 130 : 180)}
               </p>
             </div>
-            <div className="pt-4 mt-4 border-t border-slate-100">
+            <div className={`${isCompact ? 'pt-3 mt-3.5' : 'pt-4 mt-4'} border-t border-slate-100`}>
               <Link
                 to={vCateUrl}
-                className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1`}
               >
                 <span>{t('Related Post')}</span>
                 <span>→</span>
@@ -331,7 +525,7 @@ export const HomePage: React.FC = () => {
     }
 
     matchedCates.forEach((nc) => {
-      const card = renderNewsCateCard(nc);
+      const card = renderNewsCateCard(nc, variant);
       if (card) cards.push(card);
     });
 
@@ -344,130 +538,160 @@ export const HomePage: React.FC = () => {
             <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center text-lg shadow-2xs shrink-0">
               {icon}
             </span>
-            <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">{t(sectionTitleKey)}</h2>
+            <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
+              {t(sectionTitleKey)}
+            </h2>
           </div>
-          <Link to="/news" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
+          <Link
+            to="/news"
+            className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+          >
             {lang === 'vi' ? 'Xem tất cả →' : 'View all →'}
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{cards}</div>
+        <div className={gridClass}>{cards}</div>
       </section>
     );
   };
 
   const curAd = ads[bannerIdx];
+  const curAdLink = curAd ? normalizeInternalLink(curAd.link, '/courses') : '/courses';
+  const curAdMetaText = curAd
+    ? stripTags(lang === 'vi' ? curAd.meta_vi || curAd.meta : curAd.meta || curAd.meta_vi)
+    : '';
+  const curAdDescText = curAd
+    ? stripTags(lang === 'vi' ? curAd.desc_vi || curAd.desc : curAd.desc || curAd.desc_vi)
+    : '';
+  const showDistinctAdDesc =
+    Boolean(curAdDescText) &&
+    curAdDescText.toLowerCase() !== curAdMetaText.toLowerCase() &&
+    !curAdMetaText.toLowerCase().includes(curAdDescText.toLowerCase());
+
   const curSticky = stickyNews[stickyIdx];
   const featuredVideoParents = allVideoCategories.filter((vc) => Number(vc.vc_type) === 1);
+  const videoStoreVariant = getCardVariantForCount(featuredVideoParents.length);
+  const videoStoreGridClass = getBalancedGridClass(featuredVideoParents.length);
+
   const focusZeroCates = newsCategories.filter(
     (nc) => Number(nc.news_cc_focus) === 0 && !!latestNewsByCate[nc.news_cc_id]
   );
 
   return (
-    <div className="space-y-12 pb-8">
+    <div className="pb-2">
       {/* 1. MODERN EDTECH FLAGSHIP HERO + DYNAMIC SHOWCASE */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#06283d] via-[#0a5482] to-[#0f172a] text-white pt-8 pb-10 sm:pt-12 sm:pb-14 border-b border-slate-800/60">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#06283d] via-[#0a5482] to-[#0f172a] text-white pt-7 pb-14 sm:pt-9 sm:pb-16 lg:pt-10 lg:pb-20 border-b border-slate-800/60">
         {/* Ambient Decorative Glows */}
         <div className="absolute -top-32 -left-24 w-96 h-96 bg-[#2ab4e8]/20 blur-3xl rounded-full pointer-events-none" />
         <div className="absolute -bottom-32 right-0 w-[28rem] h-[28rem] bg-amber-400/10 blur-3xl rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-9 items-stretch">
             {/* Left Value Proposition (7 cols) */}
-            <div className="lg:col-span-7 space-y-5">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-sky-200">
-                <MapPin className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
-                <span>
+            <div className="lg:col-span-7 flex flex-col justify-between space-y-4 sm:space-y-5">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-bold text-sky-200">
+                  <MapPin className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+                  <span>
+                    {lang === 'vi'
+                      ? 'Gia sư 1 kèm 1 & Nhóm nhỏ • R2B Royal City, Hà Nội & Online'
+                      : '1-on-1 & Small Group Tutoring • Royal City Hanoi & Online'}
+                  </span>
+                </div>
+
+                <h1 className="font-display font-black text-[26px] sm:text-[33px] xl:text-[38px] leading-[1.18] tracking-tight text-white">
+                  {lang === 'vi' ? (
+                    <>
+                      Chinh phục <span className="text-[#2ab4e8]">IELTS</span>,{' '}
+                      <span className="text-amber-300">Cambridge IGCSE</span> &amp; Giao tiếp thực chiến{' '}
+                      <span className="whitespace-nowrap">cùng Thầy Tony</span>
+                    </>
+                  ) : (
+                    <>
+                      Master <span className="text-[#2ab4e8]">IELTS</span>,{' '}
+                      <span className="text-amber-300">Cambridge IGCSE</span> &amp; Real-World English{' '}
+                      <span className="whitespace-nowrap">with Teacher Tony</span>
+                    </>
+                  )}
+                </h1>
+
+                <p className="text-slate-200/90 text-[14.5px] sm:text-[15.5px] leading-relaxed max-w-2xl">
                   {lang === 'vi'
-                    ? 'Gia sư 1 kèm 1 & Nhóm nhỏ • R2B Royal City, Hà Nội & Online'
-                    : '1-on-1 & Small Group Tutoring • Royal City Hanoi & Online'}
-                </span>
+                    ? 'Kết hợp sự kèm cặp sát sao từng buổi của Thầy Tony với Hệ sinh thái Phòng học thông minh: Bài giảng song ngữ bám sát Syllabus, Kho đề Past Papers kèm Video chữa bài Full HD & Phòng thi AI chấm chữa 24/7.'
+                    : 'Combining personalized 1-on-1 mentoring with an AI-powered Learning Portal: Bilingual syllabus lectures, Full HD past-paper video walkthroughs, and 24/7 AI exam grading.'}
+                </p>
+
+                {/* Primary & Secondary CTAs (Single Clean Row on Desktop) */}
+                <div className="pt-1 flex flex-wrap items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
+                    className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-extrabold text-sm sm:text-[15px] px-5 sm:px-6 py-3 rounded-2xl shadow-lg transition-all active:scale-95 inline-flex items-center gap-2 cursor-pointer whitespace-nowrap"
+                  >
+                    <Sparkles className="w-4 h-4 shrink-0" />
+                    <span>{lang === 'vi' ? 'Vào Học Thử & Làm Đề Ngay' : 'Start Free Trial Now'}</span>
+                    <ArrowRight className="w-4 h-4 shrink-0" />
+                  </button>
+
+                  <Link
+                    to="/courses"
+                    className="bg-white/12 hover:bg-white/22 text-white border border-white/25 font-bold text-sm sm:text-[15px] px-5 py-3 rounded-2xl backdrop-blur-xs transition-all active:scale-95 inline-flex items-center gap-2 whitespace-nowrap"
+                  >
+                    <BookOpen className="w-4 h-4 text-[#2ab4e8] shrink-0" />
+                    <span>{lang === 'vi' ? 'Các Khóa Học' : 'Explore Courses'}</span>
+                  </Link>
+
+                  <a
+                    href="https://zalo.me/0935058688"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="md:hidden inline-flex items-center gap-1.5 text-xs font-bold text-sky-200 hover:text-white bg-white/10 border border-white/15 px-3.5 py-2.5 rounded-xl transition-colors"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 text-[#2ab4e8]" />
+                    <span>Zalo: 0935 058 688</span>
+                  </a>
+                </div>
               </div>
 
-              <h1 className="font-display font-black text-[28px] sm:text-[38px] xl:text-[44px] leading-[1.15] tracking-tight text-white">
-                {lang === 'vi' ? (
-                  <>
-                    Chinh phục <span className="text-[#2ab4e8]">IELTS</span>,{' '}
-                    <span className="text-amber-300">Cambridge IGCSE</span> &amp; Giao tiếp thực chiến cùng Thầy Tony
-                  </>
-                ) : (
-                  <>
-                    Master <span className="text-[#2ab4e8]">IELTS</span>,{' '}
-                    <span className="text-amber-300">Cambridge IGCSE</span> &amp; Real-World English with Teacher Tony
-                  </>
-                )}
-              </h1>
-
-              <p className="text-slate-200/90 text-[15px] sm:text-[16.5px] leading-relaxed max-w-2xl">
-                {lang === 'vi'
-                  ? 'Kết hợp sự kèm cặp sát sao từng buổi của Thầy Tony với Hệ sinh thái Phòng học thông minh: Bài giảng song ngữ bám sát Syllabus, Kho đề Past Papers kèm Video chữa bài Full HD & Phòng thi AI chấm chữa 24/7.'
-                  : 'Combining personalized 1-on-1 mentoring with an AI-powered Learning Portal: Bilingual syllabus lectures, Full HD past-paper video walkthroughs, and 24/7 AI exam grading.'}
-              </p>
-
-              {/* Primary & Secondary CTAs */}
-              <div className="pt-1 flex flex-wrap items-center gap-3">
-                <button
-                  type="button"
-                  onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
-                  className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-extrabold text-sm sm:text-[15px] px-5 sm:px-6 py-3.5 rounded-2xl shadow-lg transition-all active:scale-95 inline-flex items-center gap-2 cursor-pointer"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  <span>{lang === 'vi' ? 'Vào Học Thử & Làm Đề Ngay' : 'Start Free Trial Now'}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-
-                <Link
-                  to="/courses"
-                  className="bg-white/12 hover:bg-white/22 text-white border border-white/25 font-bold text-sm sm:text-[15px] px-5 py-3.5 rounded-2xl backdrop-blur-xs transition-all active:scale-95 inline-flex items-center gap-2"
-                >
-                  <BookOpen className="w-4 h-4 text-[#2ab4e8]" />
-                  <span>{lang === 'vi' ? 'Các Khóa Học' : 'Explore Courses'}</span>
-                </Link>
-
-                <a
-                  href="https://zalo.me/0935058688"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-xs sm:text-sm font-bold text-sky-200 hover:text-white px-3 py-2 inline-flex items-center gap-1.5 transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#2ab4e8]" />
-                  <span>Zalo tư vấn: 0935 058 688</span>
-                </a>
-              </div>
-
-              {/* 4 Key Proof Metrics */}
-              <div className="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+              {/* 4 Key Proof Metrics (Uniform 1-line subtitle for clean horizontal alignment) */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1">
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
-                  <div className="font-display font-black text-lg sm:text-xl text-white">2013–2026</div>
-                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Kinh nghiệm giảng dạy</div>
+                  <div className="font-display font-black text-[17px] sm:text-lg text-white leading-tight">2013–2026</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium mt-0.5 truncate">
+                    {lang === 'vi' ? '13+ năm giảng dạy' : '13+ years teaching'}
+                  </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
-                  <div className="font-display font-black text-lg sm:text-xl text-[#2ab4e8]">6.5 – 8.0+</div>
-                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Mục tiêu đầu ra IELTS</div>
+                  <div className="font-display font-black text-[17px] sm:text-lg text-[#2ab4e8] leading-tight">6.5 – 8.0+</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium mt-0.5 truncate">
+                    {lang === 'vi' ? 'Mục tiêu IELTS' : 'IELTS Band Target'}
+                  </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
-                  <div className="font-display font-black text-lg sm:text-xl text-amber-300">A / A*</div>
-                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Đầu ra Cambridge IGCSE</div>
+                  <div className="font-display font-black text-[17px] sm:text-lg text-amber-300 leading-tight">A / A*</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium mt-0.5 truncate">
+                    {lang === 'vi' ? 'Cambridge IGCSE' : 'Cambridge IGCSE'}
+                  </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-2xl px-3.5 py-2.5">
-                  <div className="font-display font-black text-lg sm:text-xl text-emerald-300">Full HD + AI</div>
-                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium">Video giải đề &amp; Trợ lý 24/7</div>
+                  <div className="font-display font-black text-[17px] sm:text-lg text-emerald-300 leading-tight">Full HD + AI</div>
+                  <div className="text-[11px] sm:text-xs text-sky-200/85 font-medium mt-0.5 truncate">
+                    {lang === 'vi' ? 'Video & AI 24/7' : 'Video & 24/7 AI'}
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Showcase Frame (5 cols): Dynamic Banner Slider or Smart LMS Card */}
-            <div className="lg:col-span-5">
+            {/* Right Showcase Frame (5 cols): Full-height aligned with left column */}
+            <div className="lg:col-span-5 flex">
               {curAd ? (
-                <div className="rounded-3xl overflow-hidden bg-slate-900/85 backdrop-blur-md border border-white/20 shadow-2xl flex flex-col">
-                  <div className="relative aspect-[16/9] bg-slate-950 overflow-hidden">
+                <div className="w-full rounded-3xl overflow-hidden bg-slate-900/90 backdrop-blur-md border border-white/20 shadow-2xl flex flex-col">
+                  <div className="relative aspect-[16/9] bg-slate-950 overflow-hidden shrink-0">
                     {ads.map((adItem, idx) => {
                       const isActive = idx === bannerIdx;
-                      const targetLink = adItem.link
-                        ? adItem.link.trim().replace(/^https?:\/\/(?:www\.)?tonyenglish\.vn(?:\/(?:vi|en))?/i, '') || '/courses'
-                        : '/courses';
+                      const targetLink = normalizeInternalLink(adItem.link, '/courses');
                       return (
                         <Link
-                          key={adItem.ad_id || idx}
+                          key={adItem.id || adItem.ad_id || idx}
                           to={targetLink}
                           className={`absolute inset-0 block w-full h-full transition-opacity duration-500 ${
                             isActive ? 'opacity-100 z-[1]' : 'opacity-0 pointer-events-none z-0'
@@ -476,6 +700,7 @@ export const HomePage: React.FC = () => {
                           <img
                             src={resolveUploadUrl(adItem.image)}
                             alt={adItem.title || 'TonyEnglish'}
+                            loading={isActive ? 'eager' : 'lazy'}
                             className="w-full h-full object-cover object-center"
                           />
                         </Link>
@@ -492,7 +717,7 @@ export const HomePage: React.FC = () => {
                         >
                           <ChevronLeft className="w-4 h-4" />
                         </button>
-                        <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full backdrop-blur-xs">
+                        <span className="bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full backdrop-blur-xs tabular-nums">
                           {bannerIdx + 1} / {ads.length}
                         </span>
                         <button
@@ -507,44 +732,69 @@ export const HomePage: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="p-5 sm:p-6 space-y-3 bg-gradient-to-b from-slate-900/95 to-[#0f172a]">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-[#2ab4e8] bg-sky-500/15 border border-sky-400/25 px-2.5 py-0.5 rounded-full">
-                        <Sparkles className="w-3 h-3" />
-                        <span>Tiêu điểm TonyEnglish</span>
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
-                        className="text-xs font-extrabold text-amber-300 hover:text-amber-200 inline-flex items-center gap-1 cursor-pointer"
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-3 bg-gradient-to-b from-slate-900/95 to-[#0f172a]">
+                    <div className="space-y-2.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-[#2ab4e8] bg-sky-500/15 border border-sky-400/25 px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                          <Sparkles className="w-3 h-3 shrink-0" />
+                          <span>
+                            {lang === 'vi' ? 'Tiêu điểm' : 'Highlight'}
+                            <span className="hidden sm:inline"> TonyEnglish</span>
+                          </span>
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
+                          className="text-xs font-extrabold text-amber-300 hover:text-amber-200 inline-flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0"
+                        >
+                          <GraduationCap className="w-3.5 h-3.5 shrink-0" />
+                          <span>{lang === 'vi' ? 'Góc Học Viên →' : 'Student Portal →'}</span>
+                        </button>
+                      </div>
+
+                      <Link
+                        to={curAdLink}
+                        className="block text-[15px] sm:text-[16px] font-extrabold leading-snug text-white hover:text-[#2ab4e8] transition-colors line-clamp-2 hero-ad-prose"
                       >
-                        <GraduationCap className="w-3.5 h-3.5" />
-                        <span>Mở Góc Học Viên →</span>
-                      </button>
+                        {curAdMetaText || curAdDescText || (lang === 'vi' ? 'Khám phá lộ trình học tại TonyEnglish' : 'Explore TonyEnglish Programs')}
+                      </Link>
+
+                      {showDistinctAdDesc && (
+                        <p className="text-xs sm:text-[13px] text-slate-300/85 leading-relaxed line-clamp-2">
+                          {curAdDescText}
+                        </p>
+                      )}
                     </div>
 
-                    <div
-                      className="text-[14.5px] sm:text-[15.5px] font-bold leading-relaxed text-white/95 legacy-prose [&_a]:text-sky-300 [&_p]:mb-1.5 line-clamp-2"
-                      dangerouslySetInnerHTML={{
-                        __html: fixLegacyHtmlContent(
-                          lang === 'vi' ? curAd.meta_vi || curAd.meta : curAd.meta || curAd.meta_vi
-                        ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
-                      }}
-                    />
-
-                    <div
-                      className="text-xs text-slate-300/85 leading-relaxed pt-2.5 border-t border-white/10 line-clamp-2"
-                      dangerouslySetInnerHTML={{
-                        __html: fixLegacyHtmlContent(
-                          lang === 'vi' ? curAd.desc_vi || curAd.desc : curAd.desc || curAd.desc_vi
-                        ).replace(/^(?:\s*<br\s*\/?>\s*)+/i, ''),
-                      }}
-                    />
+                    <div className="pt-2.5 border-t border-white/10 flex items-center justify-between gap-2">
+                      <Link
+                        to={curAdLink}
+                        className="text-xs font-bold text-sky-300 hover:text-white inline-flex items-center gap-1 transition-colors"
+                      >
+                        <span>{lang === 'vi' ? 'Xem chi tiết chương trình' : 'View program details'}</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      {ads.length > 1 && (
+                        <div className="flex items-center gap-1.5">
+                          {ads.map((_, idx) => (
+                            <button
+                              key={idx}
+                              type="button"
+                              onClick={() => setBannerIdx(idx)}
+                              aria-label={`Slide ${idx + 1}`}
+                              className={`h-1.5 rounded-full transition-all cursor-pointer ${
+                                idx === bannerIdx ? 'w-5 bg-[#2ab4e8]' : 'w-1.5 bg-white/25 hover:bg-white/50'
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               ) : (
-                <div className="rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-7 shadow-2xl space-y-4">
-                  <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/15 border border-amber-300/30 px-3 py-1 rounded-full">
+                <div className="w-full rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-7 shadow-2xl flex flex-col justify-center space-y-4">
+                  <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/15 border border-amber-300/30 px-3 py-1 rounded-full self-start">
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>Trải nghiệm Hệ sinh thái LMS</span>
                   </div>
@@ -570,23 +820,23 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 1B. BENTO GRID: 4 TRỤ CỘT ĐÀO TẠO & HỆ SINH THÁI TONYENGLISH */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-4 sm:-mt-6 relative z-20">
+      {/* 1B. BENTO GRID: 4 TRỤ CỘT ĐÀO TẠO & HỆ SINH THÁI TONYENGLISH (True Seamless Overlap onto Hero) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-8 sm:-mt-10 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
             to="/courses/luyen-thi-igcse-alevel-cap-toc"
-            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-xs hover:shadow-soft transition-all group flex flex-col justify-between"
+            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center justify-between mb-3.5">
-                <div className="w-11 h-11 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-700 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <div className="flex items-center justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-700 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <Award className="w-5 h-5" />
                 </div>
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/70">
                   Cambridge IGCSE
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16.5px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
                 {lang === 'vi' ? 'Hệ Quốc tế IGCSE (A/A*)' : 'Cambridge IGCSE Prep'}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -603,18 +853,18 @@ export const HomePage: React.FC = () => {
 
           <Link
             to="/courses/ielts"
-            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-xs hover:shadow-soft transition-all group flex flex-col justify-between"
+            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center justify-between mb-3.5">
-                <div className="w-11 h-11 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center group-hover:scale-105 transition-transform">
+              <div className="flex items-center justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center group-hover:scale-105 transition-transform">
                   <Target className="w-5 h-5" />
                 </div>
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0a5482] bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200/70">
                   Band 6.5 – 8.0+
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16.5px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
                 {lang === 'vi' ? 'Luyện thi IELTS 1 kèm 1' : '1-on-1 IELTS Coaching'}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -630,19 +880,19 @@ export const HomePage: React.FC = () => {
           </Link>
 
           <Link
-            to="/courses"
-            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-xs hover:shadow-soft transition-all group flex flex-col justify-between"
+            to="/courses/english-communication 1"
+            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center justify-between mb-3.5">
-                <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <div className="flex items-center justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/70">
                   1-on-1 VIP
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16.5px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
                 {lang === 'vi' ? 'Giao tiếp & Phản xạ Công sở' : 'Executive Communication'}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -660,18 +910,18 @@ export const HomePage: React.FC = () => {
           <button
             type="button"
             onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
-            className="bg-gradient-to-br from-[#0a5482] to-[#0f172a] text-white rounded-2xl p-5 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group text-left flex flex-col justify-between cursor-pointer border border-sky-400/20"
+            className="bg-gradient-to-br from-[#0a5482] to-[#0f172a] text-white rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all group text-left flex flex-col justify-between cursor-pointer border border-sky-400/25"
           >
             <div>
-              <div className="flex items-center justify-between mb-3.5">
-                <div className="w-11 h-11 rounded-xl bg-[#2ab4e8] text-white flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+              <div className="flex items-center justify-between mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#2ab4e8] text-white flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
                   <Bot className="w-5 h-5" />
                 </div>
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/15">
                   Smart LMS
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16.5px] text-white mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-white mb-1.5">
                 {lang === 'vi' ? 'Góc Học Viên & Phòng Thi AI' : 'Student Portal & AI Lab'}
               </h3>
               <p className="text-xs sm:text-[13px] text-sky-100/85 leading-relaxed">
@@ -688,262 +938,278 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. BALANCED TOP 2-COLUMN BAND: FOCUS ON (Left 8 cols) + ENROLMENT (Right 4 cols) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* LEFT MAIN COLUMN (8 cols): FOCUS ON */}
-          <div className="lg:col-span-8">
-            {/* SECTION 1: FOCUS ON (Tiêu điểm) */}
-            <section className="space-y-5">
-              <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center shadow-2xs shrink-0">
-                    <Sparkles className="w-4 h-4" />
-                  </span>
-                  <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">{t('Focus on')}</h2>
-                </div>
-                <Link to="/news" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
-                  {lang === 'vi' ? 'Khám phá Thư viện →' : 'Explore Library →'}
-                </Link>
+      {/* MAIN CONTENT BODY (Clean Vertical Rhythm Below Bento) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 sm:mt-14 space-y-12 sm:space-y-14">
+        {/* 2. BALANCED TOP 2-COLUMN BAND: FOCUS ON (8 cols) + 1-ON-1 ENROLMENT ROADMAP (4 cols) — Exact Top & Bottom Alignment */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-stretch">
+          {/* LEFT COLUMN (8 cols): FOCUS ON */}
+          <section className="lg:col-span-8 flex flex-col space-y-5">
+            <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center shadow-2xs shrink-0">
+                  <Sparkles className="w-4 h-4" />
+                </span>
+                <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
+                  {t('Focus on')}
+                </h2>
               </div>
+              <Link
+                to="/news"
+                className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+              >
+                {lang === 'vi' ? 'Khám phá Thư viện →' : 'Explore Library →'}
+              </Link>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* 1A. Latest Sticky News Card */}
-                {curSticky && (
-                  <div className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col">
-                    <div className="relative h-48 overflow-hidden bg-slate-100">
-                      <Link to={`/news/view/${(curSticky.news_title_url || '').trim()}`} className="block w-full h-full">
-                        <img
-                          src={resolveUploadUrl(curSticky.news_thumb)}
-                          alt={curSticky.news_title}
-                          onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                          }}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </Link>
-                      <span className="absolute top-3 left-3 bg-[#2ab4e8] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
-                        ⚡ {t('Lastest News')}
-                      </span>
-                    </div>
-
-                    <div className="p-5 flex-1 flex flex-col justify-between">
-                      <div>
-                        <Link
-                          to={`/news/view/${(curSticky.news_title_url || '').trim()}`}
-                          className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2"
-                        >
-                          {(curSticky.news_title || '').trim()}
-                        </Link>
-                        <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
-                          {truncateWords(curSticky.news_desc, 160)}
-                        </p>
-                      </div>
-
-                      <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                        <Link
-                          to="/news"
-                          className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
-                        >
-                          <span>{t('Related Post')}</span>
-                          <span>→</span>
-                        </Link>
-                        {stickyNews.length > 1 && (
-                          <div className="flex items-center gap-1">
-                            <button
-                              type="button"
-                              onClick={() => setStickyIdx((prev) => (prev - 1 + stickyNews.length) % stickyNews.length)}
-                              className="w-7 h-7 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
-                            >
-                              ‹
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => setStickyIdx((prev) => (prev + 1) % stickyNews.length)}
-                              className="w-7 h-7 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
-                            >
-                              ›
-                            </button>
-                          </div>
-                        )}
-                      </div>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
+              {/* 1A. Latest Sticky News Card */}
+              {curSticky && (
+                <div className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full">
+                  <div className="relative h-48 overflow-hidden bg-slate-100">
+                    <Link
+                      to={`/news/view/${(curSticky.news_title_url || '').trim()}`}
+                      className="block w-full h-full"
+                    >
+                      <img
+                        src={resolveUploadUrl(curSticky.news_thumb)}
+                        alt={curSticky.news_title}
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                        }}
+                        className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </Link>
+                    <span className="absolute top-3 left-3 bg-[#2ab4e8] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
+                      ⚡ {t('Lastest News')}
+                    </span>
                   </div>
-                )}
 
-                {/* 1B. Video Focus (if present) */}
-                {videoFocus && (
-                  <div className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col">
-                    <div className="relative h-48 overflow-hidden bg-slate-100">
-                      <button
-                        type="button"
-                        onClick={() => setPopupVideo(videoFocus)}
-                        className="block w-full h-full text-left relative cursor-pointer"
+                  <div className="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <Link
+                        to={`/news/view/${(curSticky.news_title_url || '').trim()}`}
+                        className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block"
                       >
-                        <img
-                          src={resolveUploadUrl(videoFocus.video_thumb)}
-                          alt={videoFocus.video_desc}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-slate-900/25 flex items-center justify-center">
-                          <span className="w-12 h-12 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-lg shadow-lg">
-                            ▶
+                        {(curSticky.news_title || '').trim()}
+                      </Link>
+                      <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
+                        {truncateWords(curSticky.news_desc, 160)}
+                      </p>
+                    </div>
+
+                    <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+                      <Link
+                        to="/news"
+                        className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                      >
+                        <span>{t('Related Post')}</span>
+                        <span>→</span>
+                      </Link>
+                      {stickyNews.length > 1 && (
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[11px] font-bold text-slate-400 tabular-nums">
+                            {stickyIdx + 1}/{stickyNews.length}
                           </span>
+                          <button
+                            type="button"
+                            onClick={() => setStickyIdx((prev) => (prev - 1 + stickyNews.length) % stickyNews.length)}
+                            className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer flex items-center justify-center"
+                            title="Previous"
+                          >
+                            ‹
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setStickyIdx((prev) => (prev + 1) % stickyNews.length)}
+                            className="w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer flex items-center justify-center"
+                            title="Next"
+                          >
+                            ›
+                          </button>
                         </div>
-                      </button>
-                      <span className="absolute top-3 left-3 bg-rose-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
-                        🎬 {t('Video')}
-                      </span>
-                    </div>
-
-                    <div className="p-5 flex-1 flex flex-col justify-between">
-                      <div>
-                        <Link
-                          to={
-                            videoCateMap[videoFocus.vc_id]
-                              ? `/video/${(videoCateMap[videoFocus.vc_id].vc_name_url || '').trim()}/${(
-                                  videoFocus.video_url || ''
-                                ).trim()}`
-                              : '/videos'
-                          }
-                          className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2"
-                        >
-                          {truncateWords(videoFocus.video_desc, 150)}
-                        </Link>
-                        <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
-                          {truncateWords(videoFocus.video_cmt, 180)}
-                        </p>
-                      </div>
-
-                      <div className="pt-4 mt-4 border-t border-slate-100">
-                        <Link
-                          to={
-                            videoCateMap[videoFocus.vc_id]
-                              ? `/video/${(videoCateMap[videoFocus.vc_id].vc_name_url || '').trim()}/${(
-                                  videoFocus.video_url || ''
-                                ).trim()}`
-                              : '/videos'
-                          }
-                          className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
-                        >
-                          <span>{t('Related Post')}</span>
-                          <span>→</span>
-                        </Link>
-                      </div>
+                      )}
                     </div>
                   </div>
-                )}
-
-                {/* 1C. Focus 0 Categories (e.g. Bí kíp học) */}
-                {focusZeroCates.map((nc) => renderNewsCateCard(nc))}
-              </div>
-            </section>
-          </div>
-
-          {/* RIGHT SIDEBAR (4 cols): ENROLMENT CARD (Matched height with Top Focus Band) */}
-          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
-            {/* 1. ENROLMENT / OPENING CLASSES CARD */}
-            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
-              <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 py-4 flex items-center justify-between">
-                <h3 className="text-white font-black text-base flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-[#2ab4e8]" />
-                  <span>{t('Enrolment')}</span>
-                </h3>
-                <Link to="/opening" className="text-sm font-bold text-[#2ab4e8] hover:underline whitespace-nowrap shrink-0">
-                  {lang === 'vi' ? 'Chi tiết →' : 'More →'}
-                </Link>
-              </div>
-
-              <div className="p-5 space-y-4">
-                <div className="bg-sky-50/90 border border-sky-200/80 rounded-xl p-3.5">
-                  <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#0a5482] mb-1">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                    <span>{lang === 'vi' ? 'Thông báo tuyển sinh' : 'Enrollment Notice'}</span>
-                  </div>
-                  <p className="text-sm sm:text-[15px] font-bold text-slate-800 leading-snug">
-                    {lang === 'vi'
-                      ? 'Liên tục tuyển sinh gia sư các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE.'
-                      : 'Continuous 1-on-1 private tutoring enrollment for English Communication, IELTS, and IGCSE.'}
-                  </p>
                 </div>
+              )}
 
-                <div className="divide-y divide-slate-100">
-                  <Link
-                    to="/courses/english-communication 1"
-                    className="py-3 first:pt-0 last:pb-0 flex items-center gap-3.5 group"
-                  >
-                    <div className="w-13 h-13 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex flex-col items-center justify-center shrink-0 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482] transition-colors">
-                      <span className="text-base font-black leading-none">1-1</span>
-                      <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">VIP</span>
-                    </div>
-                    <div className="min-w-0">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
-                        {lang === 'vi' ? 'Gia sư tại nhà Thầy & Online' : '1-on-1 Private Tutoring'}
-                      </span>
-                      <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
-                        {lang === 'vi' ? 'Giao tiếp Tiếng Anh (1 kèm 1)' : '1-on-1 English Communication'}
-                      </h4>
-                      <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
-                        {lang === 'vi'
-                          ? 'Phát âm chuẩn IPA, luyện phản xạ & tình huống thực tế'
-                          : 'IPA pronunciation, reflex & real-life communication'}
+              {/* 1B. Video Focus (if present) */}
+              {videoFocus && (
+                <div className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col h-full">
+                  <div className="relative h-48 overflow-hidden bg-slate-100">
+                    <button
+                      type="button"
+                      onClick={() => setPopupVideo(videoFocus)}
+                      className="block w-full h-full text-left relative cursor-pointer"
+                    >
+                      <img
+                        src={resolveUploadUrl(videoFocus.video_thumb)}
+                        alt={videoFocus.video_desc}
+                        className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-slate-900/25 flex items-center justify-center">
+                        <span className="w-12 h-12 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-lg shadow-lg">
+                          ▶
+                        </span>
+                      </div>
+                    </button>
+                    <span className="absolute top-3 left-3 bg-rose-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
+                      🎬 {t('Video')}
+                    </span>
+                  </div>
+
+                  <div className="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <Link
+                        to={
+                          videoCateMap[videoFocus.vc_id]
+                            ? `/video/${(videoCateMap[videoFocus.vc_id].vc_name_url || '').trim()}/${(
+                                videoFocus.video_url || ''
+                              ).trim()}`
+                            : '/videos'
+                        }
+                        className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block"
+                      >
+                        {truncateWords(videoFocus.video_desc, 150)}
+                      </Link>
+                      <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
+                        {truncateWords(videoFocus.video_cmt, 180)}
                       </p>
                     </div>
-                  </Link>
 
-                  <Link
-                    to="/courses/ielts"
-                    className="py-3 first:pt-0 last:pb-0 flex items-center gap-3.5 group"
-                  >
-                    <div className="w-13 h-13 rounded-2xl bg-sky-50 border border-sky-200 text-[#0a5482] flex flex-col items-center justify-center shrink-0 group-hover:bg-[#0a5482] group-hover:text-white transition-colors">
-                      <span className="text-base font-black leading-none">1-1</span>
-                      <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">IELTS</span>
+                    <div className="pt-4 mt-4 border-t border-slate-100">
+                      <Link
+                        to={
+                          videoCateMap[videoFocus.vc_id]
+                            ? `/video/${(videoCateMap[videoFocus.vc_id].vc_name_url || '').trim()}/${(
+                                videoFocus.video_url || ''
+                              ).trim()}`
+                            : '/videos'
+                        }
+                        className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                      >
+                        <span>{t('Related Post')}</span>
+                        <span>→</span>
+                      </Link>
                     </div>
+                  </div>
+                </div>
+              )}
+
+              {/* 1C. Focus 0 Categories (e.g. Bí kíp học) */}
+              {focusZeroCates.map((nc) => renderNewsCateCard(nc, 'default'))}
+            </div>
+          </section>
+
+          {/* RIGHT COLUMN (4 cols): 1-ON-1 ENROLMENT ROADMAP (Matched Section Header + Exact Height Alignment) */}
+          <aside className="lg:col-span-4 flex flex-col space-y-5">
+            <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shadow-2xs shrink-0">
+                  <Calendar className="w-4 h-4" />
+                </span>
+                <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
+                  {t('Enrolment')}
+                </h2>
+              </div>
+              <Link
+                to="/opening"
+                className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+              >
+                {lang === 'vi' ? 'Chi tiết →' : 'More →'}
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden flex flex-col flex-1">
+              <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-5 py-3.5 text-white">
+                <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-wider text-emerald-300 mb-1">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <span>{lang === 'vi' ? 'Đang nhận học viên 1 kèm 1' : 'Open for 1-on-1 Enrollment'}</span>
+                </div>
+                <p className="text-[13.5px] font-bold text-white/95 leading-snug">
+                  {lang === 'vi'
+                    ? 'Học trực tiếp tại R2B Royal City & Online 1-1 cùng Thầy Tony'
+                    : 'Private home tutoring at R2B Royal City & Online with Mr. Tony'}
+                </p>
+              </div>
+
+              <div className="p-5 flex-1 flex flex-col justify-between gap-4">
+                <ol className="space-y-3.5">
+                  <li className="flex items-start gap-3">
+                    <span className="w-7 h-7 rounded-xl bg-sky-50 border border-sky-200 text-[#0a5482] font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                      01
+                    </span>
                     <div className="min-w-0">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
-                        {lang === 'vi' ? 'Gia sư tại nhà Thầy & Online' : '1-on-1 Private Tutoring'}
-                      </span>
-                      <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
-                        {lang === 'vi' ? 'Luyện thi IELTS (1 kèm 1)' : '1-on-1 IELTS Preparation'}
-                      </h4>
-                      <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                      <h3 className="font-extrabold text-[14.5px] text-slate-800 leading-snug">
+                        {lang === 'vi' ? 'Kiểm tra trình độ đầu vào 1-1' : '1-on-1 Placement Assessment'}
+                      </h3>
+                      <p className="text-xs text-slate-500 leading-relaxed mt-0.5">
                         {lang === 'vi'
-                          ? 'Lộ trình cá nhân hóa 4 kỹ năng cam kết đầu ra Band 6.5 - 8.0+'
-                          : 'Personalized 4-skill roadmap for Band 6.5 - 8.0+'}
+                          ? 'Đánh giá chính xác điểm mạnh – yếu của học viên ngay buổi đầu.'
+                          : 'Pinpoint exact strengths and gaps in the initial session.'}
                       </p>
                     </div>
-                  </Link>
+                  </li>
 
-                  <Link
-                    to="/courses/luyen-thi-igcse-alevel-cap-toc"
-                    className="py-3 first:pt-0 last:pb-0 flex items-center gap-3.5 group"
-                  >
-                    <div className="w-13 h-13 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex flex-col items-center justify-center shrink-0 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482] transition-colors">
-                      <span className="text-base font-black leading-none">1-1</span>
-                      <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">IGCSE</span>
-                    </div>
+                  <li className="flex items-start gap-3">
+                    <span className="w-7 h-7 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                      02
+                    </span>
                     <div className="min-w-0">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#2ab4e8] block">
-                        {lang === 'vi' ? 'Gia sư tại nhà Thầy & Online' : '1-on-1 Private Tutoring'}
-                      </span>
-                      <h4 className="font-extrabold text-[15px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug">
-                        {lang === 'vi' ? 'Chương trình Quốc tế IGCSE (1 kèm 1)' : '1-on-1 Cambridge IGCSE'}
-                      </h4>
-                      <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                      <h3 className="font-extrabold text-[14.5px] text-slate-800 leading-snug">
+                        {lang === 'vi' ? 'Thiết kế lộ trình cá nhân hóa' : 'Personalized Study Roadmap'}
+                      </h3>
+                      <p className="text-xs text-slate-500 leading-relaxed mt-0.5">
                         {lang === 'vi'
-                          ? 'Sciences, Maths, Economics, Business, Geography & ESL'
-                          : 'Sciences, Maths, Economics, Business, Geography & ESL'}
+                          ? 'Bám sát Syllabus IGCSE, mục tiêu Band IELTS hoặc Giao tiếp công sở.'
+                          : 'Tailored to IGCSE Syllabus, IELTS targets, or Executive English.'}
                       </p>
                     </div>
-                  </Link>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <span className="w-7 h-7 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                      03
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="font-extrabold text-[14.5px] text-slate-800 leading-snug">
+                        {lang === 'vi' ? 'Kèm sát & học trên Smart LMS' : 'Live Mentoring + Smart LMS'}
+                      </h3>
+                      <p className="text-xs text-slate-500 leading-relaxed mt-0.5">
+                        {lang === 'vi'
+                          ? 'Lịch linh hoạt, kho đề Past Papers có Video chữa & AI chấm bài 24/7.'
+                          : 'Flexible schedule with HD video walkthroughs & 24/7 AI feedback.'}
+                      </p>
+                    </div>
+                  </li>
+                </ol>
+
+                <div className="pt-3.5 border-t border-slate-100 grid grid-cols-2 gap-2.5">
+                  <a
+                    href="https://zalo.me/0935058688"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 shadow-xs whitespace-nowrap"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+                    <span>{lang === 'vi' ? 'Nhắn Zalo tư vấn' : 'Zalo Consult'}</span>
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
+                    className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/90 font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap"
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>{lang === 'vi' ? 'Học thử miễn phí' : 'Free Trial'}</span>
+                  </button>
                 </div>
               </div>
             </div>
           </aside>
         </div>
 
-        {/* FULL-WIDTH SHOWCASE BAND: TESTIMONIALS / HỌC TẠI TONYENGLISH (Clean Modernized Cards, Zero Dead Space) */}
-        {(testiPos0.length > 0 || testiPos1.length > 0) && (
+        {/* 3. FULL-WIDTH SYMMETRICAL SHOWCASE BAND: HỌC TẠI TONYENGLISH (Clean Normalized Cards) */}
+        {allTestimonials.length > 0 && (
           <section className="space-y-5">
             <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
               <div className="flex items-center gap-2.5 min-w-0">
@@ -951,47 +1217,101 @@ export const HomePage: React.FC = () => {
                   <GraduationCap className="w-4 h-4" />
                 </span>
                 <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
-                  {lang === 'vi' ? 'Học tại TonyEnglish & Cảm nhận Học viên' : 'Study at TonyEnglish & Testimonials'}
+                  {lang === 'vi' ? 'Phương pháp Học tại TonyEnglish' : 'The TonyEnglish Learning Ecosystem'}
                 </h2>
               </div>
-              <Link to="/courses" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
+              <Link
+                to="/courses"
+                className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+              >
                 {lang === 'vi' ? 'Xem các khóa học →' : 'View courses →'}
               </Link>
             </div>
-            <div className={`grid grid-cols-1 ${(testiPos0.length + testiPos1.length) >= 2 ? 'md:grid-cols-2' : ''} gap-6`}>
-              {[...testiPos0, ...testiPos1].map((testValue) => {
-                const title =
-                  lang === 'vi'
-                    ? testValue.testimonial_title_vi || testValue.testimonial_title_en
-                    : testValue.testimonial_title_en || testValue.testimonial_title_vi;
-                const contentHtml =
-                  lang === 'vi'
+
+            <div className={`grid grid-cols-1 ${allTestimonials.length >= 2 ? 'lg:grid-cols-2' : ''} gap-6`}>
+              {allTestimonials.map((testValue, idx) => {
+                const parsed = parseTestimonialCard(testValue, lang, idx);
+                const rawHtml =
+                  (lang === 'vi'
                     ? testValue.testimonial_content_vi || testValue.testimonial_content_en
-                    : testValue.testimonial_content_en || testValue.testimonial_content_vi;
-                return (
-                  <div
-                    key={testValue.testimonial_id}
-                    className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow overflow-hidden flex flex-col"
-                  >
-                    {title && title.trim() !== '' && (
-                      <div className="px-6 py-4 bg-gradient-to-r from-slate-50 to-sky-50/40 border-b border-slate-200/80 flex items-center gap-2">
-                        <span className="w-1.5 h-4 rounded-full bg-[#2ab4e8] shrink-0" />
-                        <h3 className="font-black text-slate-800 text-base">{title}</h3>
-                      </div>
-                    )}
+                    : testValue.testimonial_content_en || testValue.testimonial_content_vi) || '';
+
+                if (!parsed.useStructuredCard) {
+                  return (
                     <div
-                      className="p-5 sm:p-6 legacy-prose text-[15px] [&_a]:!no-underline [&_a]:!not-italic [&_a]:text-slate-700 [&_a:hover]:text-[#0a5482] [&_em]:not-italic [&_i]:not-italic [&_img]:max-h-56 [&_img]:object-contain [&_img]:rounded-xl"
-                      dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(contentHtml) }}
-                    />
-                  </div>
+                      key={testValue.testimonial_id}
+                      className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow overflow-hidden flex flex-col"
+                    >
+                      <div className="px-6 py-3.5 bg-gradient-to-r from-slate-50 to-sky-50/40 border-b border-slate-200/80 flex items-center gap-2">
+                        <span className="w-1.5 h-4 rounded-full bg-[#2ab4e8] shrink-0" />
+                        <h3 className="font-black text-slate-800 text-base">{parsed.badge}</h3>
+                      </div>
+                      <div
+                        className="p-5 sm:p-6 legacy-prose testimonial-legacy-prose text-[15px]"
+                        dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(rawHtml) }}
+                      />
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={testValue.testimonial_id}
+                    to={parsed.linkUrl}
+                    className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col sm:flex-row h-full"
+                  >
+                    {/* Identical Media Box for Symmetrical Visual Height */}
+                    <div
+                      className={`relative h-52 sm:h-auto sm:w-56 md:w-60 sm:min-h-[240px] shrink-0 overflow-hidden ${
+                        parsed.isDiagram
+                          ? 'bg-gradient-to-br from-sky-50/80 via-white to-slate-50 flex items-center justify-center p-4 border-b sm:border-b-0 sm:border-r border-slate-100'
+                          : 'bg-slate-100'
+                      }`}
+                    >
+                      {parsed.imageUrl && (
+                        <img
+                          src={parsed.imageUrl}
+                          alt={parsed.headline}
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                          }}
+                          className={
+                            parsed.isDiagram
+                              ? 'max-h-44 w-auto object-contain group-hover:scale-105 transition-transform duration-500'
+                              : 'w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500'
+                          }
+                        />
+                      )}
+                      <span className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md">
+                        {parsed.badge}
+                      </span>
+                    </div>
+
+                    {/* Clean Typography Content */}
+                    <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between min-w-0">
+                      <div>
+                        <h3 className="font-display font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-snug mb-2.5">
+                          {parsed.headline}
+                        </h3>
+                        <p className="text-slate-600 text-[14.5px] leading-relaxed line-clamp-5">
+                          {parsed.summary}
+                        </p>
+                      </div>
+
+                      <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs sm:text-sm font-extrabold text-[#0a5482] group-hover:text-[#2ab4e8] transition-colors">
+                        <span>{parsed.ctaLabel}</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
                 );
               })}
             </div>
           </section>
         )}
 
-        {/* FULL-WIDTH MAGAZINE SECTIONS 2–6 (3-Column Balanced Grid, Zero Empty Right Column) */}
-        <div className="space-y-12">
+        {/* 4. FULL-WIDTH MAGAZINE SECTIONS (Adaptive 2-up Horizontal / 4-up Compact / 3-up — Zero Orphan Slots) */}
+        <div className="space-y-12 sm:space-y-14">
           {/* SECTION 2: READING PRACTICE (focus = 5) */}
           {renderCategorySection(5, 'Reading Practice', <BookOpen className="w-4 h-4" />)}
 
@@ -1013,12 +1333,15 @@ export const HomePage: React.FC = () => {
                     {t('Videos store')}
                   </h2>
                 </div>
-                <Link to="/videos" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
+                <Link
+                  to="/videos"
+                  className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+                >
                   {lang === 'vi' ? 'Xem Kho Video →' : 'All Videos →'}
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className={videoStoreGridClass}>
                 {featuredVideoParents.map((vc) => {
                   const childCates = allVideoCategories.filter(
                     (sub) => Number(sub.vc_parent) === Number(vc.vc_id)
@@ -1036,13 +1359,25 @@ export const HomePage: React.FC = () => {
                     childCates.length > 0
                       ? `/video/${(activeSub.vc_name_url || '').trim()}`
                       : `/videos/${(vc.vc_name_url || '').trim()}`;
+                  const isCompact = videoStoreVariant === 'compact';
+                  const isHorizontal = videoStoreVariant === 'horizontal';
 
                   return (
                     <div
                       key={vc.vc_id}
-                      className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col"
+                      className={`group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex ${
+                        isHorizontal ? 'flex-col sm:flex-row' : 'flex-col'
+                      } h-full`}
                     >
-                      <div className="relative h-48 overflow-hidden bg-slate-900">
+                      <div
+                        className={`relative overflow-hidden bg-slate-900 ${
+                          isHorizontal
+                            ? 'h-48 sm:h-auto sm:w-52 md:w-56 sm:min-h-[216px] shrink-0'
+                            : isCompact
+                            ? 'h-44'
+                            : 'h-48'
+                        }`}
+                      >
                         <Link to={targetUrl} className="block w-full h-full relative">
                           <img
                             src={resolveUploadUrl(activeSub.vc_image || vc.vc_image)}
@@ -1050,7 +1385,7 @@ export const HomePage: React.FC = () => {
                             onError={(e) => {
                               (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
                             }}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95"
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-95"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-transparent to-transparent flex items-center justify-center">
                             <span className="w-11 h-11 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
@@ -1058,28 +1393,34 @@ export const HomePage: React.FC = () => {
                             </span>
                           </div>
                         </Link>
-                        <span className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
+                        <span className="absolute top-3 left-3 max-w-[calc(100%-24px)] truncate bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md">
                           {parentTitle}
                         </span>
                       </div>
 
-                      <div className="p-5 flex-1 flex flex-col justify-between">
+                      <div className={`${isCompact ? 'p-4' : 'p-5'} flex-1 flex flex-col justify-between min-w-0`}>
                         <div>
                           <Link
                             to={targetUrl}
-                            className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2"
+                            className={`font-extrabold ${
+                              isCompact ? 'text-[15.5px]' : 'text-[17px] sm:text-[18px]'
+                            } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
                           >
                             {subTitle}
                           </Link>
-                          <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
-                            {truncateWords(descText, 165)}
+                          <p
+                            className={`text-slate-600 ${
+                              isCompact ? 'text-[13.5px]' : 'text-[15px]'
+                            } leading-relaxed line-clamp-3`}
+                          >
+                            {truncateWords(descText, isCompact ? 130 : 165)}
                           </p>
                         </div>
 
-                        <div className="pt-4 mt-4 border-t border-slate-100">
+                        <div className={`${isCompact ? 'pt-3 mt-3.5' : 'pt-4 mt-4'} border-t border-slate-100`}>
                           <Link
                             to={targetUrl}
-                            className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                            className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1`}
                           >
                             <span>{t('Related Post')}</span>
                             <span>→</span>
@@ -1096,6 +1437,51 @@ export const HomePage: React.FC = () => {
           {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) */}
           {renderCategorySection(3, 'Other learning materials', <Layers className="w-4 h-4" />)}
         </div>
+
+        {/* 5. FINAL CONVERSION CTA BANNER BEFORE FOOTER */}
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#06283d] via-[#0a5482] to-[#0f172a] text-white p-6 sm:p-8 lg:p-10 shadow-xl border border-sky-400/20">
+          <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#2ab4e8]/20 blur-3xl rounded-full pointer-events-none" />
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-white/10 border border-white/15 px-3 py-1 rounded-full">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>{lang === 'vi' ? 'Đồng hành 1 kèm 1 cùng Thầy Tony' : '1-on-1 Mentoring with Teacher Tony'}</span>
+              </div>
+              <h2 className="font-display font-black text-xl sm:text-2xl lg:text-[28px] leading-tight text-white">
+                {lang === 'vi'
+                  ? 'Sẵn sàng bứt phá điểm số IELTS, Cambridge IGCSE & Giao tiếp?'
+                  : 'Ready to Accelerate Your IELTS, Cambridge IGCSE & English Fluency?'}
+              </h2>
+              <p className="text-slate-200/90 text-sm sm:text-[15px] leading-relaxed">
+                {lang === 'vi'
+                  ? 'Tạo tài khoản miễn phí để trải nghiệm Kho bài giảng song ngữ, Phòng thi AI chấm chữa 24/7 hoặc nhắn Zalo đặt lịch kiểm tra trình độ đầu vào cùng Thầy Tony.'
+                  : 'Create a free account to explore bilingual lectures & 24/7 AI mock exams, or message Mr. Tony directly on Zalo for a 1-on-1 placement assessment.'}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
+                className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-extrabold text-sm px-5 py-3 rounded-2xl shadow-lg transition-all active:scale-95 inline-flex items-center gap-2 cursor-pointer whitespace-nowrap"
+              >
+                <Sparkles className="w-4 h-4 shrink-0" />
+                <span>{lang === 'vi' ? 'Vào Học Thử Miễn Phí' : 'Start Free Trial'}</span>
+                <ArrowRight className="w-4 h-4 shrink-0" />
+              </button>
+
+              <a
+                href="https://zalo.me/0935058688"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-white/12 hover:bg-white/22 text-white border border-white/25 font-bold text-sm px-5 py-3 rounded-2xl backdrop-blur-xs transition-all active:scale-95 inline-flex items-center gap-2 whitespace-nowrap"
+              >
+                <Phone className="w-4 h-4 text-[#2ab4e8] shrink-0" />
+                <span>{lang === 'vi' ? 'Zalo: 0935 058 688' : 'Zalo: 0935 058 688'}</span>
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* FOCUS VIDEO POPUP MODAL */}
@@ -1113,7 +1499,7 @@ export const HomePage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setPopupVideo(null)}
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-rose-500 hover:text-white text-slate-600 font-bold flex items-center justify-center transition-colors shrink-0"
+                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-rose-500 hover:text-white text-slate-600 font-bold flex items-center justify-center transition-colors shrink-0 cursor-pointer"
               >
                 ✕
               </button>
