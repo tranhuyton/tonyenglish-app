@@ -157,9 +157,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
               <span className="opacity-80 shrink-0">ℹ️</span>
-              <span className="shrink-0">{t('About us')}</span>
-              <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
-                • {pageHeading}
+              <span className="hidden lg:inline shrink-0">{t('About us')}</span>
+              <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
+                {pageHeading}
               </span>
             </h2>
             <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
@@ -177,6 +177,13 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
           </button>
 
           <ul className={`divide-y divide-slate-100 text-[14.5px] p-2 space-y-1 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
+            {aboutList.length === 0 && (
+              <li className="py-2 px-2 space-y-2 animate-pulse">
+                {[1, 2, 3].map((n) => (
+                  <div key={n} className="h-9 rounded-xl bg-slate-100" />
+                ))}
+              </li>
+            )}
             {aboutList.map((ab) => {
               const title = lang === 'vi' ? ab.about_title_vi : ab.about_title_en;
               const urlSlug = lang === 'vi' ? ab.about_title_url_vi : ab.about_title_url_en;
@@ -187,9 +194,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   <Link
                     to={`/about/${(urlSlug || '').trim()}`}
                     onClick={() => setMobileCateOpen(false)}
-                    className={`block px-3.5 py-3 rounded-xl transition-colors ${
+                    className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
                       isActive
-                        ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                        ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                         : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                     }`}
                   >
@@ -203,9 +210,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               <Link
                 to="/opening"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-3 rounded-xl transition-colors ${
+                className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
                   mode === 'opening'
-                    ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                    ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
@@ -217,9 +224,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               <Link
                 to="/sitemap"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-3 rounded-xl transition-colors ${
+                className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
                   mode === 'sitemap'
-                    ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                    ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
@@ -231,9 +238,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               <Link
                 to="/contact"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-3 rounded-xl transition-colors ${
+                className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
                   mode === 'contact'
-                    ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                    ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
@@ -255,15 +262,25 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
             </div>
 
             <div className="p-4 sm:p-8">
-              {mode === 'about' && currentAbout ? (
-                <div
-                  className="legacy-prose text-justify"
-                  dangerouslySetInnerHTML={{
-                    __html: fixLegacyHtmlContent(
-                      lang === 'vi' ? currentAbout.about_content_vi : currentAbout.about_content_en
-                    ),
-                  }}
-                />
+              {mode === 'about' ? (
+                currentAbout ? (
+                  <div
+                    className="legacy-prose text-left sm:text-justify max-w-[72ch]"
+                    dangerouslySetInnerHTML={{
+                      __html: fixLegacyHtmlContent(
+                        lang === 'vi' ? currentAbout.about_content_vi : currentAbout.about_content_en
+                      ),
+                    }}
+                  />
+                ) : (
+                  <div className="space-y-4 max-w-[72ch] animate-pulse py-2">
+                    <div className="h-6 bg-slate-100 rounded-lg w-2/3" />
+                    <div className="h-4 bg-slate-100 rounded w-full" />
+                    <div className="h-4 bg-slate-100 rounded w-11/12" />
+                    <div className="h-4 bg-slate-100 rounded w-4/5" />
+                    <div className="h-44 bg-slate-100 rounded-2xl w-full mt-4" />
+                  </div>
+                )
               ) : mode === 'opening' ? (
                 <div className="space-y-6">
                   <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5 sm:p-6">

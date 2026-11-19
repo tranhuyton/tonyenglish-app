@@ -150,6 +150,10 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
   const initIsReview = !!safeTestData?.isReview;
   const [testStarted, setTestStarted] = useState(initIsReview);
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong'>('all');
+  useEffect(() => {
+    if (!isReviewMode) setReviewFilter('all');
+  }, [isReviewMode]);
   useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
   const [scoreResult, setScoreResult] = useState({ 
       score: parseInt(safeTestData?.past_score || 0), 
@@ -1369,6 +1373,76 @@ const handleFinish = async () => {
             }}
             ref={containerRef as any}
           >
+            {/* 📊 MODERN REVIEW SCORE BANNER + BỘ LỌC CHỈ XEM CÂU SAI */}
+            {isReviewMode && (() => {
+              const pct = scoreResult.total > 0 ? Math.round((scoreResult.score / scoreResult.total) * 100) : 0;
+              const wrongCount = Math.max(0, scoreResult.total - scoreResult.score);
+              const accentGrad = pct >= 80 ? 'from-emerald-400 to-teal-300' : pct >= 50 ? 'from-amber-400 to-yellow-300' : 'from-rose-400 to-orange-400';
+              const badgeStyle = pct >= 80 ? 'bg-emerald-400/20 text-emerald-200 border-emerald-400/35' : pct >= 50 ? 'bg-amber-400/20 text-amber-200 border-amber-400/35' : 'bg-rose-400/20 text-rose-200 border-rose-400/35';
+              return (
+                <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] rounded-2xl shadow-lg border border-sky-400/20 p-5 sm:p-6 text-white relative overflow-hidden font-sans">
+                  <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#2ab4e8]/20 blur-2xl rounded-full pointer-events-none" />
+                  <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                      <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
+                        <span>📊</span>
+                        <span>Kết quả bài làm</span>
+                      </div>
+                      <div className="flex flex-wrap items-baseline gap-3">
+                        <span className="text-4xl sm:text-5xl font-black tracking-tight tabular-nums">
+                          {scoreResult.score}
+                          <span className="text-xl sm:text-2xl text-sky-200/70 font-bold"> / {scoreResult.total}</span>
+                        </span>
+                        <span className={`px-2.5 py-0.5 rounded-full text-xs font-black border ${badgeStyle}`}>
+                          {pct}% chính xác
+                        </span>
+                        {scoreResult.band && (
+                          <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-400/20 text-amber-200 border border-amber-300/35">
+                            Band {scoreResult.band}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2 text-xs font-bold">
+                      <span className="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-400/25 text-emerald-200">
+                        ✅ Đúng: {scoreResult.score}
+                      </span>
+                      <span className="px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-400/25 text-rose-200">
+                        ❌ Sai/Trống: {wrongCount}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="relative z-10 mt-4 h-2 bg-white/15 rounded-full overflow-hidden">
+                    <div className={`h-full bg-gradient-to-r ${accentGrad} rounded-full transition-all duration-500`} style={{ width: `${pct}%` }} />
+                  </div>
+                  <div className="relative z-10 mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs text-sky-100/80 font-medium">Lọc nhanh câu hỏi khi chữa bài:</span>
+                    <div className="inline-flex bg-slate-900/45 p-1 rounded-xl border border-white/15 gap-1">
+                      <button
+                        type="button"
+                        onClick={() => setReviewFilter('all')}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'all' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-sky-100 hover:text-white'}`}
+                      >
+                        Tất cả ({scoreResult.total})
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setReviewFilter('wrong')}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'wrong' ? 'bg-rose-500 text-white shadow-xs' : 'text-rose-200 hover:text-white'}`}
+                      >
+                        ❌ Chỉ câu sai ({wrongCount})
+                      </button>
+                    </div>
+                  </div>
+                  {reviewFilter === 'wrong' && wrongCount === 0 && scoreResult.total > 0 && (
+                    <div className="relative z-10 mt-3 p-3 rounded-xl bg-emerald-500/20 border border-emerald-400/35 text-emerald-100 text-xs font-bold text-center">
+                      🎉 Tuyệt vời! Bạn đã làm đúng 100% — không có câu sai nào!
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
+
             {parts.map((part: any, pIndex: number) => {
               const hasPassage = part.content && part.content.trim().length > 0;
               // Theo yêu cầu mới nhất của USER: "Không có chia màn hình, Giao diện nó giống hệt dạng PaperTest mà cho Listening ấy"
@@ -1530,6 +1604,8 @@ const handleFinish = async () => {
                                                {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
                                                   if (!q?.id) return null;
                                                   const qIdx = questionIndexMap[String(q.id)] || q.id;
+                                                  const isInlineRight = isAnswerCorrect(String(answers[String(q.id)] || ''), String(q.correctAnswer || ''));
+                                                  if (reviewFilter === 'wrong' && isInlineRight) return null;
                                                   const explanationText = q.explanation || 'Không có lời giải thích.';
                                                   const qContentForAI = q.content || sec.content || 'Điền từ vào chỗ trống trong đoạn văn.';
                                                   
@@ -1581,6 +1657,7 @@ const handleFinish = async () => {
                                   const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
                                   const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
                                   const isCorrect = isAnswerCorrect(userAns, correctAns);
+                                  if (isReviewMode && reviewFilter === 'wrong' && isCorrect) return null;
                                   const displayIndex = questionIndexMap[q.id] || q.id;
                                   
                                   const validOptions = (Array.isArray(q.options) ? q.options : []).filter((opt: any) => String(opt || '').trim() !== '');

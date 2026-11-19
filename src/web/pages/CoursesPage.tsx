@@ -250,6 +250,16 @@ export const CoursesPage: React.FC = () => {
   const [lectureCount, setLectureCount] = useState(0);
   const [openParentId, setOpenParentId] = useState<number | null>(null);
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
+  const [showMobileStickyBar, setShowMobileStickyBar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowMobileStickyBar(window.scrollY > 360);
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // LMS Curriculum data (for course syllabus modal)
   const [lmsCoursesWithModules, setLmsCoursesWithModules] = useState<
@@ -1066,9 +1076,9 @@ export const CoursesPage: React.FC = () => {
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
               <span className="opacity-80 shrink-0">🎓</span>
-              <span className="shrink-0">{t('Courses')}</span>
-              <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
-                • {courseTitle}
+              <span className="hidden lg:inline shrink-0">{t('Courses')}</span>
+              <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
+                {courseTitle}
               </span>
             </h2>
             <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
@@ -1094,15 +1104,23 @@ export const CoursesPage: React.FC = () => {
                     setMobileCateOpen(false);
                     scrollToCourseTop();
                   }}
-                  className={`block px-3.5 py-3 rounded-xl transition-colors ${
+                  className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
                     !currentCourse
-                      ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                      ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                       : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                   }`}
                 >
                   {t('Study at TonyEnglish')}
                 </Link>
               </li>
+
+              {homeParents.length === 0 && (
+                <li className="py-2 px-2 space-y-2 animate-pulse">
+                  {[1, 2, 3, 4].map((n) => (
+                    <div key={n} className="h-9 rounded-xl bg-slate-100" />
+                  ))}
+                </li>
+              )}
 
               {homeParents.map((parent) => {
                 const subs = subCategories(parent.cc_id);
@@ -1123,18 +1141,18 @@ export const CoursesPage: React.FC = () => {
                           if (subs.length === 0) setMobileCateOpen(false);
                           scrollToCourseTop();
                         }}
-                        className={`flex-1 px-3.5 py-3 rounded-xl transition-colors flex items-center justify-between ${
+                        className={`flex-1 px-3.5 py-3 rounded-xl transition-colors flex items-center justify-between relative ${
                           isCurrentParent
-                            ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                            ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                             : isOpen
                             ? 'text-[#0a5482] font-semibold bg-slate-50/70'
                             : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                         }`}
                       >
-                        <span>{parentName}</span>
+                        <span className="leading-snug pr-1">{parentName}</span>
                         {subs.length > 0 && (
                           <span
-                            className={`text-xs transition-transform ${
+                            className={`text-xs transition-transform shrink-0 ${
                               isOpen ? 'rotate-90 text-[#2ab4e8]' : 'text-slate-400'
                             }`}
                           >
@@ -1157,9 +1175,9 @@ export const CoursesPage: React.FC = () => {
                                   setMobileCateOpen(false);
                                   scrollToCourseTop();
                                 }}
-                                className={`block px-3 py-2.5 rounded-lg text-[13.5px] transition-all ${
+                                className={`block px-3 py-2.5 rounded-lg text-[13.5px] transition-all relative ${
                                   isActiveSub
-                                    ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
+                                    ? "bg-sky-50 text-[#0a5482] font-semibold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-1.5 before:bottom-1.5 before:w-0.5 before:rounded-full before:bg-[#2ab4e8]"
                                     : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
                                 }`}
                               >
@@ -1295,7 +1313,7 @@ export const CoursesPage: React.FC = () => {
               {courseDescHtml && (
                 <div className="pt-2 sm:pt-3 space-y-6">
                   <div
-                    className="legacy-prose course-tab-prose text-left sm:text-justify"
+                    className="legacy-prose course-tab-prose text-left sm:text-justify max-w-[74ch]"
                     onClick={handleProseClick}
                     dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
                   />
@@ -1548,8 +1566,12 @@ export const CoursesPage: React.FC = () => {
         </div>
       </div>
 
-      {/* MOBILE STICKY BOTTOM BAR (1-Tap Phone Call & Zalo) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-3 py-2 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] grid grid-cols-2 gap-2">
+      {/* MOBILE STICKY BOTTOM BAR (Appears smoothly after scrolling past top CTA, never duplicates hero CTA) */}
+      <div
+        className={`sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-3 py-2 shadow-[0_-4px_20px_rgba(15,23,42,0.1)] grid grid-cols-2 gap-2 transition-all duration-300 ${
+          showMobileStickyBar ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
+        }`}
+      >
         <a
           href={`tel:${CONTACT_PHONE}`}
           onClick={() => trackCourseConversion('Phone', courseTitle)}

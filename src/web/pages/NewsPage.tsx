@@ -1186,12 +1186,10 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             >
               <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
                 <span className="opacity-80 shrink-0">📚</span>
-                <span className="shrink-0">{t('Library')}</span>
-                {currentCategory && (
-                  <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
-                    • {cateDisplayName}
-                  </span>
-                )}
+                <span className="hidden lg:inline shrink-0">{t('Library')}</span>
+                <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
+                  {currentCategory ? cateDisplayName : t('Library')}
+                </span>
               </h2>
               <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
                 <span>
@@ -1230,15 +1228,23 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                   setOpenParentId(null);
                   setMobileCateOpen(false);
                 }}
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                className={`block px-3.5 py-2.5 rounded-xl transition-colors relative ${
                   mode === 'list' && !slug
-                    ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                    ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
                 ⚡ {t('Lastest news')}
               </Link>
             </li>
+
+            {parentCategories.length === 0 && (
+              <li className="py-2 px-2 space-y-2 animate-pulse">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <div key={n} className="h-9 rounded-xl bg-slate-100" />
+                ))}
+              </li>
+            )}
 
             {parentCategories.map((parent) => {
               const parentIdNum = Number(parent.news_cc_id);
@@ -1265,15 +1271,15 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         setOpenParentId(subs.length > 0 ? parentIdNum : null);
                         if (subs.length === 0) setMobileCateOpen(false);
                       }}
-                      className={`flex-1 min-w-0 px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between gap-2 ${
+                      className={`flex-1 min-w-0 px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between gap-2 relative ${
                         isCurrentParent
-                          ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                          ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                           : isOpen
                           ? 'text-[#0a5482] font-semibold bg-slate-50/70'
                           : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                       }`}
                     >
-                      <span className="truncate">{pName}</span>
+                      <span className="line-clamp-2 leading-snug">{pName}</span>
                       {subs.length > 0 && (
                         <button
                           type="button"
@@ -1352,9 +1358,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               <Link
                                 to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
                                 onClick={() => setMobileCateOpen(false)}
-                                className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all ${
+                                className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all relative ${
                                   isActiveSub
-                                    ? 'bg-sky-50 text-[#0a5482] font-semibold border-l-2 border-[#2ab4e8]'
+                                    ? "bg-sky-50 text-[#0a5482] font-semibold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-1.5 before:bottom-1.5 before:w-0.5 before:rounded-full before:bg-[#2ab4e8]"
                                     : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
                                 }`}
                               >
@@ -1402,7 +1408,44 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
             <div className="p-4 sm:p-8">
               {loading ? (
-                <div className="py-20 text-center text-slate-400 font-bold text-base">Đang tải dữ liệu...</div>
+                mode === 'list' ? (
+                  <div className="space-y-5 animate-pulse">
+                    {[1, 2, 3, 4].map((n) => (
+                      <div
+                        key={n}
+                        className="bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 flex flex-col sm:flex-row gap-5"
+                      >
+                        <div className="w-full sm:w-56 h-44 sm:h-36 rounded-xl bg-slate-100 shrink-0" />
+                        <div className="flex-1 flex flex-col justify-between space-y-3 py-1">
+                          <div className="space-y-2.5">
+                            <div className="h-5 bg-slate-100 rounded-lg w-4/5" />
+                            <div className="h-4 bg-slate-100 rounded w-full" />
+                            <div className="h-4 bg-slate-100 rounded w-2/3" />
+                          </div>
+                          <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div className="h-3.5 bg-slate-100 rounded w-40" />
+                            <div className="h-3.5 bg-slate-100 rounded w-24" />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="space-y-5 animate-pulse">
+                    <div className="h-8 bg-slate-100 rounded-xl w-3/4" />
+                    <div className="flex gap-2">
+                      <div className="h-5 bg-slate-100 rounded-full w-28" />
+                      <div className="h-5 bg-slate-100 rounded-full w-24" />
+                    </div>
+                    <div className="h-56 bg-slate-100 rounded-2xl w-full" />
+                    <div className="space-y-3 pt-2">
+                      <div className="h-4 bg-slate-100 rounded w-full" />
+                      <div className="h-4 bg-slate-100 rounded w-11/12" />
+                      <div className="h-4 bg-slate-100 rounded w-5/6" />
+                      <div className="h-4 bg-slate-100 rounded w-4/5" />
+                    </div>
+                  </div>
+                )
               ) : mode === 'list' ? (
                 <>
                   {/* Quick Subcategory Switcher Bar */}
@@ -1545,14 +1588,19 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 </p>
                               </div>
 
-                              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs sm:text-sm text-slate-400">
-                                <div className="flex items-center gap-2 flex-wrap">
+                              <div className="pt-3 mt-3 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs sm:text-sm text-slate-400">
+                                <div className="flex items-center gap-x-2 gap-y-1.5 flex-wrap min-w-0">
                                   {item.news_byname && (
-                                    <span>
-                                      {t('By')} <strong className="text-[#0a5482]">{item.news_byname}</strong> •
+                                    <span className="text-slate-500">
+                                      {t('By')} <strong className="text-[#0a5482]">{item.news_byname}</strong>
                                     </span>
                                   )}
-                                  <span>{formatDate(item.news_created_at, item.news_postday)}</span>
+                                  {item.news_byname && formatDate(item.news_created_at, item.news_postday) && (
+                                    <span className="text-slate-300 select-none">•</span>
+                                  )}
+                                  {formatDate(item.news_created_at, item.news_postday) && (
+                                    <span className="whitespace-nowrap">{formatDate(item.news_created_at, item.news_postday)}</span>
+                                  )}
                                   { readNewsIds.has(Number(item.news_id)) && (
                                     <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-extrabold">
                                       ✅ {lang === 'vi' ? 'Đã đọc' : 'Completed'}
@@ -1580,7 +1628,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 </div>
                                 <Link
                                   to={itemUrl}
-                                  className="font-extrabold text-[#0a5482] group-hover:text-[#2ab4e8] transition-colors shrink-0"
+                                  className="font-extrabold text-[#0a5482] group-hover:text-[#2ab4e8] transition-colors shrink-0 whitespace-nowrap self-end sm:self-center"
                                 >
                                   {lang === 'vi' ? 'Xem bài học →' : 'Read →'}
                                 </Link>
@@ -1762,49 +1810,55 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               <div>
                                 {cambridgeData.titleVi && (
                                   <div className="text-base sm:text-lg font-extrabold text-[#0a5482] mb-1">
-                                    🇻🇳 {cambridgeData.titleVi}
+                                    <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded-md bg-rose-600 text-white text-[10px] font-black tracking-wider mr-2 align-middle">
+                                      VI
+                                    </span>
+                                    <span>{cambridgeData.titleVi}</span>
                                   </div>
                                 )}
                                 <p className="text-xs sm:text-sm text-slate-500">
                                   {article.news_audio_file && article.news_audio_file.trim() !== ''
-                                    ? 'Chọn chế độ hiển thị bên phải để vừa nghe Audio vừa luyện dịch theo khổ hoặc đối chiếu từng câu'
-                                    : 'Chọn chế độ hiển thị bên phải để luyện đọc hiểu theo khổ hoặc đối chiếu từng câu'}
+                                    ? 'Chọn chế độ hiển thị để vừa nghe Audio vừa luyện dịch theo khổ hoặc đối chiếu từng câu'
+                                    : 'Chọn chế độ hiển thị để luyện đọc hiểu theo khổ hoặc đối chiếu từng câu'}
                                 </p>
                               </div>
 
-                              <div className="inline-flex bg-white p-1 rounded-xl border border-slate-200/90 shadow-2xs self-start lg:self-auto flex-wrap gap-1">
+                              <div className="grid grid-cols-3 sm:inline-flex w-full sm:w-auto bg-white p-1 rounded-xl border border-slate-200/90 shadow-2xs gap-1 shrink-0">
                                 <button
                                   type="button"
                                   onClick={() => setCamMode('paragraph')}
-                                  className={`px-3.5 py-2 rounded-lg text-xs sm:text-[13.5px] font-bold transition-all ${
+                                  className={`px-2 sm:px-3.5 py-2 rounded-lg text-[11.5px] sm:text-[13px] font-bold transition-all whitespace-nowrap flex items-center justify-center gap-1 cursor-pointer ${
                                     camMode === 'paragraph'
                                       ? 'bg-[#0a5482] text-white shadow-2xs'
                                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                                   }`}
                                 >
-                                  📑 Dịch theo Khổ
+                                  <span>📑</span>
+                                  <span>Theo khổ</span>
                                 </button>
                                 <button
                                   type="button"
                                   onClick={() => setCamMode('sentence')}
-                                  className={`px-3.5 py-2 rounded-lg text-xs sm:text-[13.5px] font-bold transition-all ${
+                                  className={`px-2 sm:px-3.5 py-2 rounded-lg text-[11.5px] sm:text-[13px] font-bold transition-all whitespace-nowrap flex items-center justify-center gap-1 cursor-pointer ${
                                     camMode === 'sentence'
                                       ? 'bg-[#0a5482] text-white shadow-2xs'
                                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                                   }`}
                                 >
-                                  🔍 Soi từng Câu
+                                  <span>🔍</span>
+                                  <span>Từng câu</span>
                                 </button>
                                 <button
                                   type="button"
                                   onClick={() => setCamMode('english')}
-                                  className={`px-3.5 py-2 rounded-lg text-xs sm:text-[13.5px] font-bold transition-all ${
+                                  className={`px-2 sm:px-3.5 py-2 rounded-lg text-[11.5px] sm:text-[13px] font-bold transition-all whitespace-nowrap flex items-center justify-center gap-1 cursor-pointer ${
                                     camMode === 'english'
                                       ? 'bg-[#0a5482] text-white shadow-2xs'
                                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                                   }`}
                                 >
-                                  🇬🇧 Chỉ đọc Tiếng Anh
+                                  <span className={`px-1 py-0.2 rounded text-[9.5px] font-black ${camMode === 'english' ? 'bg-white/20 text-white' : 'bg-sky-100 text-[#0a5482]'}`}>EN</span>
+                                  <span>Tiếng Anh</span>
                                 </button>
                               </div>
                             </div>

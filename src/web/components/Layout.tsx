@@ -18,6 +18,7 @@ import {
   Mail,
   ArrowRight,
   ChevronDown,
+  X,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { supabase } from '../../supabase';
@@ -46,11 +47,16 @@ export const Layout: React.FC<{
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Always jump to top of page when navigating between routes (especially on mobile)
+  // Always jump to top of page when navigating between routes (especially on mobile & SPA transitions)
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
+    const scrollTopNow = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+    scrollTopNow();
+    const rafId = window.requestAnimationFrame(scrollTopNow);
+    return () => window.cancelAnimationFrame(rafId);
   }, [location.pathname, location.search]);
 
   // LMS Supabase Auth State
@@ -164,6 +170,10 @@ export const Layout: React.FC<{
         }
       } else if (e.key === 'Escape') {
         setQuickDict(null);
+        setPopupModal(null);
+        setLoginModalOpen(false);
+        setForgotPasswordMode(false);
+        setMobileMenuOpen(false);
       }
     };
 
@@ -873,7 +883,7 @@ export const Layout: React.FC<{
       <main className="flex-1">{children}</main>
 
       {/* 4. MODERN UNIFIED FOOTER */}
-      <footer className="bg-[#0f172a] text-slate-400 pt-14 pb-10 border-t border-slate-800 mt-16">
+      <footer className={`bg-[#0f172a] text-slate-400 pt-14 border-t border-slate-800 mt-16 ${isCourses ? 'pb-24 sm:pb-10' : 'pb-10'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-slate-800">
             {/* Col 1: Brand & Contact */}
@@ -1089,8 +1099,8 @@ export const Layout: React.FC<{
                           : 'text-slate-600 hover:text-slate-900'
                       }`}
                     >
-                      <Gift className="w-3.5 h-3.5 text-amber-600" />
-                      <span className="truncate">{registerTrialTitle}</span>
+                      <Gift className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                      <span className="whitespace-nowrap">Đăng ký học thử</span>
                     </button>
                   </div>
                 </div>
@@ -1321,33 +1331,29 @@ export const Layout: React.FC<{
       {/* 6. DICTIONARY POPUP MODAL */}
       {popupModal && (
         <div
-          className="fixed inset-0 bg-slate-900/20 z-50 flex items-center justify-center p-3 sm:p-6"
+          className="fixed inset-0 bg-slate-900/45 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in"
           onClick={() => setPopupModal(null)}
         >
           <div
-            className="bg-white rounded-xl border-2 border-slate-300 w-full max-w-[920px] h-[82vh] max-h-[720px] shadow-2xl flex flex-col overflow-hidden"
+            className="bg-white rounded-2xl border border-slate-200/90 w-full max-w-[920px] h-[82vh] max-h-[720px] shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="px-5 py-2.5 bg-white border-b border-slate-300 flex flex-wrap items-center justify-between gap-2.5 shrink-0">
+            <div className="px-4 sm:px-5 py-3 bg-slate-50/90 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2.5 shrink-0">
               <div className="flex items-center gap-2.5 min-w-0">
                 <img
-                  src="/logo-text.png"
+                  src="/logo-shield.png"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.display = 'none';
-                  }}
-                  alt="TONYENGLISH"
-                  className="h-6 w-auto object-contain"
-                />
-                <img
-                  src="/logo-shield-old.png"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = '/logo-shield.png';
+                    (e.currentTarget as HTMLImageElement).src = '/logo-shield-old.png';
                   }}
                   alt="TonyEnglish"
-                  className="h-6 w-auto object-contain"
+                  className="h-6 w-auto object-contain shrink-0"
                 />
+                <div className="font-display font-black text-sm tracking-tight shrink-0">
+                  <span className="text-[#2ab4e8]">TONY</span>
+                  <span className="text-[#0a5482]">DICT</span>
+                </div>
                 <span className="hidden sm:inline-block text-slate-300 mx-0.5">|</span>
-                <h3 className="font-bold text-[#0a5482] text-xs sm:text-sm truncate">{popupModal.title}</h3>
+                <h3 className="font-bold text-slate-700 text-xs sm:text-sm truncate">{popupModal.title}</h3>
               </div>
 
               <div className="flex items-center gap-2 ml-auto">
@@ -1365,7 +1371,7 @@ export const Layout: React.FC<{
                       });
                     }
                   }}
-                  className="flex items-center bg-white border-2 border-[#0a5482]/35 rounded-xl overflow-hidden focus-within:border-[#2ab4e8] shadow-2xs"
+                  className="flex items-center bg-white border border-slate-300 rounded-xl overflow-hidden focus-within:border-[#2ab4e8] focus-within:ring-2 focus-within:ring-[#2ab4e8]/20 shadow-2xs transition-all"
                 >
                   <input
                     type="text"
@@ -1375,11 +1381,11 @@ export const Layout: React.FC<{
                     autoCorrect="off"
                     spellCheck={false}
                     placeholder={lang === 'vi' ? 'Nhập từ khác...' : 'Type another word...'}
-                    className="px-2.5 py-1 text-xs sm:text-sm text-slate-800 w-28 sm:w-44 focus:outline-none"
+                    className="px-2.5 py-1.5 text-xs sm:text-sm text-slate-800 w-28 sm:w-44 focus:outline-none"
                   />
                   <button
                     type="submit"
-                    className="px-3 py-1 bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-bold cursor-pointer"
+                    className="px-3 py-1.5 bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-bold cursor-pointer transition-colors"
                   >
                     Tra
                   </button>
@@ -1393,23 +1399,21 @@ export const Layout: React.FC<{
                       url: 'https://dic.tienganh123.com/v2/',
                     })
                   }
-                  className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-300 text-xs font-bold cursor-pointer"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 text-xs font-bold cursor-pointer transition-colors"
                   title="Mở giao diện từ điển đầy đủ"
                 >
-                  📖 Khung đầy đủ
+                  <BookOpen className="w-3.5 h-3.5" />
+                  <span>Khung đầy đủ</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setPopupModal(null)}
-                  className="p-1 hover:opacity-80 transition-opacity cursor-pointer shrink-0"
+                  className="w-8 h-8 rounded-xl bg-white hover:bg-rose-50 text-slate-500 hover:text-rose-600 border border-slate-200 flex items-center justify-center transition-colors cursor-pointer shrink-0"
                   title="Đóng (Esc)"
+                  aria-label="Đóng"
                 >
-                  <img
-                    src="https://dic.tienganh123.com/image/close.gif"
-                    alt="Close"
-                    className="w-5 h-5 block"
-                  />
+                  <X className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -1424,80 +1428,53 @@ export const Layout: React.FC<{
         </div>
       )}
 
-      {/* 7. DOUBLE-CLICK QUICK DICTIONARY POPUP (autosearch.js replica with TonyEnglish branding) */}
+      {/* 7. MODERN DOUBLE-CLICK QUICK DICTIONARY POPUP */}
       {quickDict && (
         <div
           id="addVdictOnYourWeb"
           style={{
-            background: '#FFF',
             position: 'absolute',
-            border: '1px solid #CCC',
             left: `${quickDict.x}px`,
             top: `${quickDict.y}px`,
-            width: '315px',
-            padding: '2px',
+            width: '326px',
             zIndex: 999999,
-            boxShadow: '0 6px 24px rgba(0,0,0,0.18)',
           }}
+          className="bg-white rounded-2xl border border-slate-200/95 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95"
         >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              background: '#ffffff',
-              padding: '3px 4px 4px 6px',
-              borderBottom: '1px solid #CCC',
-            }}
-          >
-            <div
+          <div className="flex items-center justify-between bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-3 py-2 text-white">
+            <button
+              type="button"
               onClick={() => {
                 setPopupModal({
-                  title: t('Look up dictionary'),
-                  url: 'https://dic.tienganh123.com/v2/',
+                  title: `${t('Look up dictionary')}: "${quickDict.word}"`,
+                  url: `https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(quickDict.word)}&dict=ev_ve&m=yes`,
                 });
                 setQuickDict(null);
               }}
-              style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer' }}
+              className="flex items-center gap-2 min-w-0 cursor-pointer hover:opacity-90 transition-opacity"
               title="Bấm để mở Từ điển lớn"
             >
-              <img
-                src="/logo-text.png"
-                alt="TONYENGLISH"
-                style={{ height: '20px', width: 'auto', objectFit: 'contain' }}
-              />
-              <img
-                src="/logo-shield-old.png"
-                alt="Shield"
-                style={{ height: '20px', width: 'auto', objectFit: 'contain' }}
-              />
-            </div>
+              <BookOpen className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+              <span className="text-xs font-extrabold tracking-tight truncate">
+                Tra nhanh: <span className="text-sky-200">{quickDict.word}</span>
+              </span>
+            </button>
             <button
               type="button"
               onClick={() => setQuickDict(null)}
-              style={{
-                border: 'none',
-                background: 'transparent',
-                padding: 0,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-              }}
+              className="w-6 h-6 rounded-lg bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors cursor-pointer shrink-0 ml-2"
               title="Đóng (Esc)"
+              aria-label="Đóng"
             >
-              <img
-                src="https://dic.tienganh123.com/image/close.gif"
-                alt="Close"
-                style={{ width: '16px', height: '16px', display: 'block' }}
-              />
+              <X className="w-3.5 h-3.5" />
             </button>
           </div>
-          <div style={{ background: '#fff', width: '100%', height: '205px' }}>
+          <div className="bg-white w-full h-[210px]">
             <iframe
               src={`https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(quickDict.word)}&dict=ev_ve&m=yes`}
               style={{
                 width: '100%',
-                height: '205px',
+                height: '210px',
                 border: 0,
               }}
               title={`Quick Lookup: ${quickDict.word}`}

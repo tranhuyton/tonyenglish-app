@@ -908,9 +908,19 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     </div>
   );
 };
-const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage }: any) => {
+const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(600);
+   const initialFontScaleRef = useRef<number>(fontScale || 100);
+
+   useEffect(() => {
+     try {
+       iframeRef.current?.contentWindow?.postMessage(
+         { type: 'SET_FONT_SCALE', scale: fontScale || 100 },
+         '*'
+       );
+     } catch (e) {}
+   }, [fontScale]);
 
     // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
     // và các height/width gán cứng vào table/td/th để tránh bị lỗi hiển thị
@@ -1706,7 +1716,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              margin-bottom: 1.5rem; 
              font-size: 0.9rem;
          }
-          #content-wrapper { display: flow-root; width: 100%; padding: 24px 14px 2rem 14px; box-sizing: border-box; }
+          #content-wrapper { display: flow-root; width: 100%; padding: 24px 14px 2rem 14px; box-sizing: border-box; zoom: ${(initialFontScaleRef.current / 100).toFixed(2)}; }
           .audi { display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
           #lib_content { width: 100% !important; max-width: 960px !important; margin: 0 auto !important; box-sizing: border-box !important; }
           @media (max-width: 640px) {
@@ -3207,12 +3217,20 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                       btn.style.background = 'linear-gradient(135deg, #059669 0%, #0d9488 100%)';
                       btn.style.boxShadow = '0 2px 6px rgba(5, 150, 105, 0.28)';
                       btn.innerHTML = '✅ Xem bài chấm (Band ' + info.overall + ')';
-                   } else {
-                      btn.innerHTML = btn.getAttribute('data-orig-label') + ' • ✓ Band ' + info.overall;
-                   }
-                });
-             }
-          });
+                    } else {
+                       btn.innerHTML = btn.getAttribute('data-orig-label') + ' • ✓ Band ' + info.overall;
+                    }
+                 });
+              } else if (e.data && e.data.type === 'SET_FONT_SCALE') {
+                 var scalePct = Number(e.data.scale) || 100;
+                 var cw = document.getElementById('content-wrapper');
+                 if (cw) {
+                    cw.style.zoom = (scalePct / 100).toFixed(2);
+                    setTimeout(reportHeight, 40);
+                    setTimeout(reportHeight, 180);
+                 }
+              }
+           });
 
           // Click vào thẻ trên bài giảng để nghe giảng riêng thẻ đó (bỏ qua nút bấm/tương tác nội bộ trong thẻ)
           document.addEventListener('click', function(e) {
@@ -3332,6 +3350,49 @@ export default function LectureViewer({
   const [wt1StudioPayload, setWt1StudioPayload] = useState<Wt1StudioOpenPayload | null>(null);
   const [wt1VocabModal, setWt1VocabModal] = useState<{ open: boolean; tab: 'trends' | 'degrees' | 'static' | 'process_map' }>({ open: false, tab: 'trends' });
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
+  const [lectureFontScale, setLectureFontScale] = useState<number>(() => {
+    try {
+      const saved = parseInt(localStorage.getItem('tony_lecture_font_scale') || '100', 10);
+      if ([85, 95, 100, 110, 120, 130].includes(saved)) return saved;
+    } catch (e) {}
+    return 100;
+  });
+  const [sidebarSearchQuery, setSidebarSearchQuery] = useState<string>('');
+  const [readProgress, setReadProgress] = useState<number>(0);
+
+  const FONT_SCALE_STEPS = [85, 95, 100, 110, 120, 130];
+  const stepFontScale = (dir: -1 | 1) => {
+    setLectureFontScale((prev) => {
+      const idx = FONT_SCALE_STEPS.indexOf(prev);
+      const nextIdx = Math.max(0, Math.min(FONT_SCALE_STEPS.length - 1, (idx === -1 ? 2 : idx) + dir));
+      const nextVal = FONT_SCALE_STEPS[nextIdx];
+      try { localStorage.setItem('tony_lecture_font_scale', String(nextVal)); } catch (e) {}
+      return nextVal;
+    });
+  };
+  const resetFontScale = () => {
+    setLectureFontScale(100);
+    try { localStorage.setItem('tony_lecture_font_scale', '100'); } catch (e) {}
+  };
+
+  useEffect(() => {
+    setReadProgress(0);
+  }, [activeLectureId, currentPage, currentCourseId]);
+
+  useEffect(() => {
+    setSidebarSearchQuery('');
+  }, [currentCourseId]);
+
+  const handleMainScroll = (e: React.UIEvent<HTMLElement>) => {
+    const el = e.currentTarget;
+    const maxScroll = el.scrollHeight - el.clientHeight;
+    if (maxScroll <= 40) {
+      setReadProgress(0);
+      return;
+    }
+    setReadProgress(Math.min(100, Math.max(0, Math.round((el.scrollTop / maxScroll) * 100))));
+  };
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
   const [selectedVideoSubIndex, setSelectedVideoSubIndex] = useState<number>(0);
@@ -4861,12 +4922,19 @@ export default function LectureViewer({
     <div className="flex flex-col h-[100dvh] w-full bg-[#f8fafc] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
       <header 
-         className="h-[64px] backdrop-blur-md text-white flex items-center px-3.5 sm:px-5 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-white/15 transition-all duration-300"
+         className="relative h-[64px] backdrop-blur-md text-white flex items-center px-3.5 sm:px-5 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-white/15 transition-all duration-300"
          style={{
              background: lectureTheme?.titleBg || 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)',
              color: lectureTheme?.titleText || '#ffffff'
          }}
       >
+         {/* Thanh tiến độ đọc bài giảng mảnh ở mép dưới Header */}
+         <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/10 pointer-events-none overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-[#2ab4e8] via-cyan-300 to-emerald-400 transition-[width] duration-150 ease-out"
+              style={{ width: `${readProgress}%` }}
+            />
+         </div>
          <div className="flex items-center gap-2 md:gap-2.5 min-w-0 flex-1">
             <button 
                 onClick={onBack} 
@@ -5019,6 +5087,36 @@ export default function LectureViewer({
             >
               <span className="text-sm sm:text-base">🎨</span>
             </button>
+
+            {/* 🔤 CHỈNH CỠ CHỮ NHANH (A- / A+) */}
+            <div className="hidden sm:flex items-center bg-white/12 border border-white/20 rounded-xl h-9 p-0.5 shrink-0">
+              <button
+                type="button"
+                onClick={() => stepFontScale(-1)}
+                disabled={lectureFontScale <= 85}
+                className="px-2 h-full rounded-lg text-xs font-extrabold text-white/90 hover:text-white hover:bg-white/15 disabled:opacity-35 transition cursor-pointer"
+                title="Thu nhỏ cỡ chữ"
+              >
+                A-
+              </button>
+              <button
+                type="button"
+                onClick={resetFontScale}
+                className="px-1.5 h-full text-[11px] font-bold text-sky-200 hover:text-white transition cursor-pointer tabular-nums"
+                title="Đặt lại cỡ chữ mặc định (100%)"
+              >
+                {lectureFontScale}%
+              </button>
+              <button
+                type="button"
+                onClick={() => stepFontScale(1)}
+                disabled={lectureFontScale >= 130}
+                className="px-2 h-full rounded-lg text-xs font-extrabold text-white/90 hover:text-white hover:bg-white/15 disabled:opacity-35 transition cursor-pointer"
+                title="Phóng to cỡ chữ"
+              >
+                A+
+              </button>
+            </div>
           </div>
 
 
@@ -5220,6 +5318,34 @@ export default function LectureViewer({
                       >
                         <span>🎨</span> Đổi màu nền bài giảng
                       </button>
+                      <div className="px-4 py-2 border-t border-slate-100 flex items-center justify-between gap-2">
+                        <span className="text-[12px] font-bold text-slate-600">🔤 Cỡ chữ</span>
+                        <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-0.5">
+                          <button
+                            type="button"
+                            onClick={() => stepFontScale(-1)}
+                            disabled={lectureFontScale <= 85}
+                            className="px-2 py-1 rounded-md text-xs font-extrabold text-slate-700 hover:bg-white disabled:opacity-35 cursor-pointer"
+                          >
+                            A-
+                          </button>
+                          <button
+                            type="button"
+                            onClick={resetFontScale}
+                            className="px-1.5 py-1 text-[11px] font-bold text-[#0a5482] tabular-nums cursor-pointer"
+                          >
+                            {lectureFontScale}%
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => stepFontScale(1)}
+                            disabled={lectureFontScale >= 130}
+                            className="px-2 py-1 rounded-md text-xs font-extrabold text-slate-700 hover:bg-white disabled:opacity-35 cursor-pointer"
+                          >
+                            A+
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </>
                 )}
@@ -5378,16 +5504,71 @@ export default function LectureViewer({
                       <div className="h-full bg-gradient-to-r from-[#0a5482] to-[#2ab4e8] rounded-full transition-all duration-500" style={{ width: `${courseProgress}%` }}></div>
                   </div>
               </div>
+              {lectures.length > 5 && (
+                <div className="relative mt-2.5">
+                  <svg className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <input
+                    type="text"
+                    value={sidebarSearchQuery}
+                    onChange={(e) => setSidebarSearchQuery(e.target.value)}
+                    placeholder={`Tìm nhanh trong ${lectures.length} bài...`}
+                    className="w-full pl-9 pr-8 py-2 text-[12.5px] font-medium bg-white border border-slate-200/90 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-[#2ab4e8]/20 transition-all"
+                  />
+                  {sidebarSearchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setSidebarSearchQuery('')}
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 text-[10px] font-bold flex items-center justify-center cursor-pointer"
+                      title="Xóa tìm kiếm"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              )}
            </div>
            
            
            <div className="flex-1 overflow-y-auto custom-scrollbar bg-white pb-24" style={{ WebkitOverflowScrolling: 'touch' }}>
              {modules.length === 0 ? (
                 <div className="p-8 text-center text-slate-400 text-sm">Chưa có nội dung.</div>
-             ) : (
-                modules.map((mod, index) => {
-                  const moduleLectures = lectures.filter(l => l.module_id === mod.id);
-                  const isExpanded = expandedModules.includes(mod.id);
+             ) : (() => {
+                const normalizeSearch = (s: string) =>
+                  (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+                const qNorm = normalizeSearch(sidebarSearchQuery.trim());
+                const filteredModules = modules
+                  .map((mod, origIdx) => {
+                    const modLecs = lectures.filter(l => l.module_id === mod.id);
+                    if (!qNorm) return { mod, origIdx, matchedLectures: modLecs };
+                    const theme = parseModuleTheme(mod.title, mod);
+                    const modMatch = normalizeSearch(theme.cleanTitle).includes(qNorm);
+                    const matchedLectures = modMatch
+                      ? modLecs
+                      : modLecs.filter(l => normalizeSearch(l.title).includes(qNorm));
+                    return { mod, origIdx, matchedLectures };
+                  })
+                  .filter(item => !qNorm || item.matchedLectures.length > 0);
+
+                if (qNorm && filteredModules.length === 0) {
+                  return (
+                    <div className="p-8 text-center space-y-2.5">
+                      <div className="text-2xl">🔍</div>
+                      <p className="text-sm font-bold text-slate-600">Không tìm thấy bài giảng phù hợp</p>
+                      <button
+                        type="button"
+                        onClick={() => setSidebarSearchQuery('')}
+                        className="text-xs font-extrabold text-[#0a5482] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-3 py-1.5 rounded-lg transition cursor-pointer"
+                      >
+                        Xóa tìm kiếm
+                      </button>
+                    </div>
+                  );
+                }
+
+                return filteredModules.map(({ mod, origIdx: index, matchedLectures: moduleLectures }) => {
+                  const isExpanded = qNorm ? true : expandedModules.includes(mod.id);
                   const theme = parseModuleTheme(mod.title, mod);
                   const isModuleAllLocked = isTrialMode && moduleLectures.length > 0 && moduleLectures.every(l => !trialUnlockedLectureIds.has(l.id));
                   
@@ -5580,8 +5761,8 @@ export default function LectureViewer({
                       </div>
                     </div>
                   )
-                })
-             )}
+                });
+             })()}
            </div>
          </aside>
 
@@ -5591,9 +5772,10 @@ export default function LectureViewer({
                  ...(isTeacherBoardOpen ? { paddingRight: `${boardWidthVw}vw` } : {}),
                  backgroundColor: lectureTheme.boardBg
              }}
-             ref={containerRef} 
+             ref={containerRef}
              onMouseUp={handleTextSelection}
              onScroll={(e) => {
+                 handleMainScroll(e);
                  const el = e.currentTarget;
                  // Kiểm tra cuộn đến gần đáy (còn 100px)
                  if (el.scrollHeight - el.scrollTop - el.clientHeight < 100) {
@@ -5960,6 +6142,7 @@ export default function LectureViewer({
                            key={`${activeLectureId}_page_${currentPage}`}
                            html={currentHtmlContent} 
                            isIframeOnly={isIframeOnly}
+                           fontScale={lectureFontScale}
                            onOpenPopup={setPopupUrl} 
                            onOpenDict={triggerDictionary} 
                            onCloseDict={() => { setDictPopup(null); window.dispatchEvent(new CustomEvent('tony-close-quick-dictionary')); }} 

@@ -203,10 +203,6 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
           <span>{t('Home')}</span>
         </Link>
         <span>/</span>
-        <Link to="/news" className="hover:text-[#0a5482]">
-          {t('Library')}
-        </Link>
-        <span>/</span>
         <Link to="/videos" className="hover:text-[#0a5482]">
           {t('Videos Store')}
         </Link>
@@ -236,12 +232,10 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
               <span className="opacity-80 shrink-0">🎬</span>
-              <span className="shrink-0">{t('Video Menu')}</span>
-              {activeCate && (
-                <span className="lg:hidden font-semibold text-[#0a5482] normal-case tracking-normal truncate">
-                  • {mainHeading}
-                </span>
-              )}
+              <span className="hidden lg:inline shrink-0">{t('Video Menu')}</span>
+              <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
+                {activeCate ? mainHeading : t('Video Category')}
+              </span>
             </h2>
             <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
               <span>
@@ -262,15 +256,22 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
               <Link
                 to="/videos"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                className={`block px-3.5 py-2.5 rounded-xl transition-colors relative ${
                   !cateSlug
-                    ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                    ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
                 📺 {t('Video Category')}
               </Link>
             </li>
+            {topCategories.length === 0 && (
+              <li className="py-2 px-2 space-y-2 animate-pulse">
+                {[1, 2, 3, 4].map((n) => (
+                  <div key={n} className="h-9 rounded-xl bg-slate-100" />
+                ))}
+              </li>
+            )}
             {topCategories.map((vc) => {
               const isSelected =
                 (vc.vc_name_url || '').trim() === cleanCateParam ||
@@ -280,9 +281,9 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                   <Link
                     to={`/videos/${(vc.vc_name_url || '').trim()}`}
                     onClick={() => setMobileCateOpen(false)}
-                    className={`block px-3.5 py-2.5 rounded-xl transition-colors ${
+                    className={`block px-3.5 py-2.5 rounded-xl transition-colors relative leading-snug ${
                       isSelected
-                        ? 'bg-sky-50/90 text-[#0a5482] font-semibold border-l-[3px] border-[#2ab4e8]'
+                        ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                         : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                     }`}
                   >
@@ -307,9 +308,22 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
 
             <div className="p-4 sm:p-8">
               {mode === 'cate' ? (
-                /* VIDEO CATEGORY GRID */
+                allVideoCates.length === 0 ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-pulse">
+                    {[1, 2, 3, 4, 5, 6].map((n) => (
+                      <div key={n} className="rounded-2xl border border-slate-200 overflow-hidden bg-white">
+                        <div className="h-44 bg-slate-100" />
+                        <div className="p-4 space-y-2">
+                          <div className="h-4 bg-slate-100 rounded w-3/4" />
+                          <div className="h-3 bg-slate-100 rounded w-1/2" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                /* VIDEO CATEGORY GRID (Balanced Bento span when 5 items so no empty slot on row 2) */
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {subCatesToDisplay.map((sub) => {
+                  {subCatesToDisplay.map((sub, sIdx) => {
                     const childVideos = allVideoCates.filter((c) => Number(c.vc_parent) === Number(sub.vc_id));
                     const imgPath =
                       childVideos.find((c) => c.vc_image)?.vc_image || sub.vc_image || 'No_Image_Wide.svg_1.png';
@@ -317,38 +331,47 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                     const targetRoute = activeCate
                       ? `/video/${(sub.vc_name_url || '').trim()}`
                       : `/videos/${(sub.vc_name_url || '').trim()}`;
+                    const isBentoLead = subCatesToDisplay.length === 5 && sIdx === 0;
 
                     return (
                       <Link
                         key={sub.vc_id}
                         to={targetRoute}
-                        className="group bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                        className={`group bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col ${
+                          isBentoLead ? 'sm:col-span-2' : ''
+                        }`}
                       >
-                        <div className="relative h-44 bg-slate-900 overflow-hidden">
+                        <div className={`relative ${isBentoLead ? 'h-48 sm:h-52' : 'h-44'} bg-slate-800 overflow-hidden`}>
                           <img
                             src={resolveUploadUrl(imgPath)}
                             alt={subTitle}
                             onError={(e) => {
                               (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
                             }}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-105"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent flex items-center justify-center">
-                            <span className="w-11 h-11 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-slate-900/10 to-transparent flex items-center justify-center">
+                            <span className="w-12 h-12 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
                               ▶
                             </span>
                           </div>
+                          {childVideos.length > 0 && (
+                            <span className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-sm">
+                              {childVideos.length} {lang === 'vi' ? 'chủ đề' : 'topics'}
+                            </span>
+                          )}
                         </div>
-                        <div className="p-4 flex-1 flex items-center justify-between gap-2">
-                          <h3 className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] line-clamp-2">
+                        <div className="p-4 sm:p-5 flex-1 flex items-center justify-between gap-2">
+                          <h3 className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] line-clamp-2 leading-snug">
                             {subTitle}
                           </h3>
-                          <span className="text-[#2ab4e8] font-black shrink-0">→</span>
+                          <span className="text-[#2ab4e8] font-black shrink-0 group-hover:translate-x-0.5 transition-transform">→</span>
                         </div>
                       </Link>
                     );
                   })}
                 </div>
+                )
               ) : (
                 /* VIDEO WATCH VIEW */
                 <div className="space-y-8">

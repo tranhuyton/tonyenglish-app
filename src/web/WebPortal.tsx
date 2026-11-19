@@ -26,6 +26,8 @@ export default function WebPortal({
             <Route path="/:lang" element={<HomePage />} />
 
             {/* Courses */}
+            <Route path="/igcse" element={<Navigate to="/courses/luyen-thi-igcse-alevel-cap-toc" replace />} />
+            <Route path="/:lang/igcse" element={<Navigate to="/courses/luyen-thi-igcse-alevel-cap-toc" replace />} />
             <Route path="/courses" element={<CoursesPage />} />
             <Route path="/courses/online" element={<CoursesPage />} />
             <Route path="/courses/:slug" element={<CoursesPage />} />

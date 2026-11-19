@@ -278,6 +278,7 @@ export default function StandardMCQTest({
   useEffect(() => {
     if (!isReviewMode) {
       setShowTranslation(false);
+      setReviewFilter('all');
     }
   }, [isReviewMode]);
 
@@ -312,6 +313,7 @@ export default function StandardMCQTest({
   
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
+  const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong'>('all');
   const [showPalette, setShowPalette] = useState(false); 
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -1397,16 +1399,64 @@ const handleFinish = async () => {
                   style={{ width: window.innerWidth > 768 ? `calc(${leftWidth}% - 8px)` : '100%' }}
               >
                 <div className={`p-2.5 sm:p-6 md:p-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
-                  {isReviewMode && (
-                    <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
-                       <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
-                       <div className="text-5xl font-black text-emerald-600">
-                           {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
-                       </div>
-                       
-                       {/* Removed AI Tutor button */}
-                    </div>
-                  )}
+                  {isReviewMode && (() => {
+                    const pct = scoreResult.total > 0 ? Math.round((scoreResult.score / scoreResult.total) * 100) : 0;
+                    const wrongCount = Math.max(0, scoreResult.total - scoreResult.score);
+                    const accentGrad = pct >= 80 ? 'from-emerald-400 to-teal-300' : pct >= 50 ? 'from-amber-400 to-yellow-300' : 'from-rose-400 to-orange-400';
+                    const badgeStyle = pct >= 80 ? 'bg-emerald-400/20 text-emerald-200 border-emerald-400/35' : pct >= 50 ? 'bg-amber-400/20 text-amber-200 border-amber-400/35' : 'bg-rose-400/20 text-rose-200 border-rose-400/35';
+                    return (
+                      <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] rounded-2xl shadow-lg border border-sky-400/20 p-5 sm:p-6 mb-8 text-white relative overflow-hidden">
+                        <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#2ab4e8]/20 blur-2xl rounded-full pointer-events-none" />
+                        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                          <div>
+                            <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
+                              <span>📊</span>
+                              <span>Kết quả bài làm</span>
+                            </div>
+                            <div className="flex items-baseline gap-3">
+                              <span className="text-4xl sm:text-5xl font-black tracking-tight tabular-nums">
+                                {scoreResult.score}
+                                <span className="text-xl sm:text-2xl text-sky-200/70 font-bold"> / {scoreResult.total}</span>
+                              </span>
+                              <span className={`px-2.5 py-0.5 rounded-full text-xs font-black border ${badgeStyle}`}>
+                                {pct}% chính xác
+                              </span>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap items-center gap-2 text-xs font-bold">
+                            <span className="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-400/25 text-emerald-200">
+                              ✅ Đúng: {scoreResult.score}
+                            </span>
+                            <span className="px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-400/25 text-rose-200">
+                              ❌ Sai/Trống: {wrongCount}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="relative z-10 mt-4 h-2 bg-white/15 rounded-full overflow-hidden">
+                          <div className={`h-full bg-gradient-to-r ${accentGrad} rounded-full transition-all duration-500`} style={{ width: `${pct}%` }} />
+                        </div>
+                        <div className="relative z-10 mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
+                          <span className="text-xs text-sky-100/80 font-medium">Lọc câu hỏi bên khung chữa bài:</span>
+                          <div className="inline-flex bg-slate-900/45 p-1 rounded-xl border border-white/15 gap-1">
+                            <button
+                              type="button"
+                              onClick={() => setReviewFilter('all')}
+                              className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'all' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-sky-100 hover:text-white'}`}
+                            >
+                              Tất cả ({scoreResult.total})
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setReviewFilter('wrong')}
+                              className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'wrong' ? 'bg-rose-500 text-white shadow-xs' : 'text-rose-200 hover:text-white'}`}
+                            >
+                              ❌ Chỉ câu sai ({wrongCount})
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
 
                   {parts?.map((part: any, pIdx: number) => {
                     if (parts.length > 1 && !isListening && pIdx !== currentPartIndex) return null;
@@ -1551,13 +1601,71 @@ const handleFinish = async () => {
                />
 
                {/* HIỂN THỊ ĐIỂM Ở PANEL PHẢI khi không có panel trái hoặc bài Listening */}
-               {isReviewMode && (isListening || !showLeftPane) && (
-                   <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
-                      <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
-                      <div className="text-5xl font-black text-emerald-600">
-                          {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
+               {isReviewMode && (isListening || !showLeftPane) && (() => {
+                    const pct = scoreResult.total > 0 ? Math.round((scoreResult.score / scoreResult.total) * 100) : 0;
+                    const wrongCount = Math.max(0, scoreResult.total - scoreResult.score);
+                    const accentGrad = pct >= 80 ? 'from-emerald-400 to-teal-300' : pct >= 50 ? 'from-amber-400 to-yellow-300' : 'from-rose-400 to-orange-400';
+                    const badgeStyle = pct >= 80 ? 'bg-emerald-400/20 text-emerald-200 border-emerald-400/35' : pct >= 50 ? 'bg-amber-400/20 text-amber-200 border-amber-400/35' : 'bg-rose-400/20 text-rose-200 border-rose-400/35';
+                    return (
+                      <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] rounded-2xl shadow-lg border border-sky-400/20 p-5 sm:p-6 mb-8 text-white relative overflow-hidden">
+                        <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#2ab4e8]/20 blur-2xl rounded-full pointer-events-none" />
+                        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                          <div>
+                            <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
+                              <span>📊</span>
+                              <span>Kết quả bài làm</span>
+                            </div>
+                            <div className="flex items-baseline gap-3">
+                              <span className="text-4xl sm:text-5xl font-black tracking-tight tabular-nums">
+                                {scoreResult.score}
+                                <span className="text-xl sm:text-2xl text-sky-200/70 font-bold"> / {scoreResult.total}</span>
+                              </span>
+                              <span className={`px-2.5 py-0.5 rounded-full text-xs font-black border ${badgeStyle}`}>
+                                {pct}% chính xác
+                              </span>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap items-center gap-2 text-xs font-bold">
+                            <span className="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-400/25 text-emerald-200">
+                              ✅ Đúng: {scoreResult.score}
+                            </span>
+                            <span className="px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-400/25 text-rose-200">
+                              ❌ Sai/Trống: {wrongCount}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="relative z-10 mt-4 h-2 bg-white/15 rounded-full overflow-hidden">
+                          <div className={`h-full bg-gradient-to-r ${accentGrad} rounded-full transition-all duration-500`} style={{ width: `${pct}%` }} />
+                        </div>
+                        <div className="relative z-10 mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
+                          <span className="text-xs text-sky-100/80 font-medium">Chế độ xem chữa bài:</span>
+                          <div className="inline-flex bg-slate-900/45 p-1 rounded-xl border border-white/15 gap-1">
+                            <button
+                              type="button"
+                              onClick={() => setReviewFilter('all')}
+                              className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'all' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-sky-100 hover:text-white'}`}
+                            >
+                              Tất cả ({scoreResult.total})
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setReviewFilter('wrong')}
+                              className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'wrong' ? 'bg-rose-500 text-white shadow-xs' : 'text-rose-200 hover:text-white'}`}
+                            >
+                              ❌ Chỉ câu sai ({wrongCount})
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                   </div>
+                    );
+                  })()}
+
+               {isReviewMode && reviewFilter === 'wrong' && scoreResult.total > 0 && scoreResult.score >= scoreResult.total && (
+                 <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 mb-6 text-center space-y-1.5">
+                   <div className="text-3xl">🎉</div>
+                   <div className="text-base font-black text-emerald-800">Tuyệt vời! Bạn đã làm đúng 100% bài này!</div>
+                   <p className="text-xs text-emerald-700 font-medium">Không có câu sai nào để lọc — bấm &quot;Tất cả&quot; để xem lại lời giải chi tiết từng câu.</p>
+                 </div>
                )}
 
                {parts?.map((part: any, pIdx: number) => {
@@ -1790,6 +1898,10 @@ const handleFinish = async () => {
                                         {sec.questions?.map((q: any) => {
                                            if (!q?.id) return null;
                                            const qIdx = questionIndexMap[String(q.id)] || q.id;
+                                           const userInlineAns = String(answers[String(q.id)] || '').trim();
+                                           const correctInlineAns = String(q.correctAnswer || '').trim();
+                                           const isInlineRight = isOptionAnswerCorrect(userInlineAns, correctInlineAns, q.options);
+                                           if (reviewFilter === 'wrong' && isInlineRight) return null;
                                            const explanationText = q.explanation || 'Không có lời giải thích.';
                                            
                                            return (
@@ -1834,6 +1946,7 @@ const handleFinish = async () => {
                                 const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
                                 const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
                                 const isQuestionCorrect = isOptionAnswerCorrect(userAns, correctAns, q.options);
+                                if (isReviewMode && reviewFilter === 'wrong' && isQuestionCorrect) return null;
                                 const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                 
                                 const isTFNG = sec?.questionType === "TFNG" || (Array.isArray(q.options) && q.options.length > 0 && q.options.length <= 3 && q.options.every((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO', 'T', 'F', 'NG'].includes(String(opt || '').replace(stripHtmlRegex, '').trim().toUpperCase())));
@@ -2065,6 +2178,7 @@ const handleFinish = async () => {
                                       const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
                                       const userAns = String(answers[String(q.id)] || '').trim(); 
                                       const isCorrect = isAnswerCorrect(userAns, correctAns);
+                                      if (isReviewMode && reviewFilter === 'wrong' && isCorrect) return null;
                                       const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                       const validOptions = q.options?.filter(Boolean) || sec.questions[0]?.options?.filter(Boolean) || [];
                                       
@@ -2163,6 +2277,7 @@ const handleFinish = async () => {
                                        const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
                                        const effectiveOpts = (Array.isArray(q.options) && q.options.length > 0) ? q.options : allOpts;
                                        const isCorrect = isOptionAnswerCorrect(userAns, correctAns, effectiveOpts);
+                                       if (isReviewMode && reviewFilter === 'wrong' && isCorrect) return null;
                                        const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                        
                                        const allRoman = allOpts.length > 0 && allOpts.every(o => isRomanNumeralOption(o));

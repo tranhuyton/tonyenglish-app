@@ -339,18 +339,18 @@ export const HomePage: React.FC = () => {
 
     return (
       <section className="space-y-5">
-        <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-          <div className="flex items-center gap-2.5">
-            <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center text-lg shadow-2xs">
+        <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center text-lg shadow-2xs shrink-0">
               {icon}
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight">{t(sectionTitleKey)}</h2>
+            <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">{t(sectionTitleKey)}</h2>
           </div>
-          <Link to="/news" className="text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors">
+          <Link to="/news" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
             {lang === 'vi' ? 'Xem tất cả →' : 'View all →'}
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{cards}</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{cards}</div>
       </section>
     );
   };
@@ -574,7 +574,7 @@ export const HomePage: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-4 sm:-mt-6 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
-            to="/igcse"
+            to="/courses/luyen-thi-igcse-alevel-cap-toc"
             className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-xs hover:shadow-soft transition-all group flex flex-col justify-between"
           >
             <div>
@@ -688,21 +688,21 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. MAIN 2-COLUMN CONTENT AREA */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* LEFT MAIN COLUMN (8 cols) */}
-          <div className="lg:col-span-8 space-y-12">
+      {/* 2. BALANCED TOP 2-COLUMN BAND: FOCUS ON (Left 8 cols) + ENROLMENT (Right 4 cols) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* LEFT MAIN COLUMN (8 cols): FOCUS ON */}
+          <div className="lg:col-span-8">
             {/* SECTION 1: FOCUS ON (Tiêu điểm) */}
             <section className="space-y-5">
-              <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                <div className="flex items-center gap-2.5">
-                  <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center shadow-2xs">
+              <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center shadow-2xs shrink-0">
                     <Sparkles className="w-4 h-4" />
                   </span>
-                  <h2 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight">{t('Focus on')}</h2>
+                  <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">{t('Focus on')}</h2>
                 </div>
-                <Link to="/news" className="text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors">
+                <Link to="/news" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
                   {lang === 'vi' ? 'Khám phá Thư viện →' : 'Explore Library →'}
                 </Link>
               </div>
@@ -753,14 +753,14 @@ export const HomePage: React.FC = () => {
                             <button
                               type="button"
                               onClick={() => setStickyIdx((prev) => (prev - 1 + stickyNews.length) % stickyNews.length)}
-                              className="w-7 h-7 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold"
+                              className="w-7 h-7 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
                             >
                               ‹
                             </button>
                             <button
                               type="button"
                               onClick={() => setStickyIdx((prev) => (prev + 1) % stickyNews.length)}
-                              className="w-7 h-7 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold"
+                              className="w-7 h-7 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
                             >
                               ›
                             </button>
@@ -778,7 +778,7 @@ export const HomePage: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => setPopupVideo(videoFocus)}
-                        className="block w-full h-full text-left relative"
+                        className="block w-full h-full text-left relative cursor-pointer"
                       >
                         <img
                           src={resolveUploadUrl(videoFocus.video_thumb)}
@@ -838,114 +838,10 @@ export const HomePage: React.FC = () => {
                 {focusZeroCates.map((nc) => renderNewsCateCard(nc))}
               </div>
             </section>
-
-            {/* SECTION 2: READING PRACTICE (focus = 5) */}
-            {renderCategorySection(5, 'Reading Practice', <BookOpen className="w-4 h-4" />)}
-
-            {/* SECTION 3: LEARNING THROUGH CONVERSATION (focus = 4) */}
-            {renderCategorySection(4, 'Learning Through Conversation', <MessageCircle className="w-4 h-4" />)}
-
-            {/* SECTION 4: WORDS IN THE NEWS (focus = 1) */}
-            {renderCategorySection(1, 'Words In The news', <Globe className="w-4 h-4" />)}
-
-            {/* SECTION 5: VIDEOS STORE */}
-            {featuredVideoParents.length > 0 && (
-              <section className="space-y-5">
-                <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-2xs">
-                      <Video className="w-4 h-4" />
-                    </span>
-                    <h2 className="text-xl sm:text-2xl font-black text-slate-800 tracking-tight">
-                      {t('Videos store')}
-                    </h2>
-                  </div>
-                  <Link to="/videos" className="text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors">
-                    {lang === 'vi' ? 'Xem toàn bộ Kho Video →' : 'All Videos →'}
-                  </Link>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {featuredVideoParents.map((vc) => {
-                    const childCates = allVideoCategories.filter(
-                      (sub) => Number(sub.vc_parent) === Number(vc.vc_id)
-                    );
-                    const activeSub =
-                      childCates.length > 0 ? childCates[videoSlideIdx % childCates.length] : vc;
-                    const parentTitle = lang === 'vi' ? vc.vc_name_vi || vc.vc_name : vc.vc_name;
-                    const subTitle =
-                      lang === 'vi'
-                        ? activeSub.vc_name_vi || activeSub.vc_name
-                        : activeSub.vc_name || parentTitle;
-                    const descText =
-                      lang === 'vi' ? vc.vc_desc_vi || vc.vc_desc : vc.vc_desc || vc.vc_desc_vi;
-                    const targetUrl =
-                      childCates.length > 0
-                        ? `/video/${(activeSub.vc_name_url || '').trim()}`
-                        : `/videos/${(vc.vc_name_url || '').trim()}`;
-
-                    return (
-                      <div
-                        key={vc.vc_id}
-                        className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col"
-                      >
-                        <div className="relative h-48 overflow-hidden bg-slate-900">
-                          <Link to={targetUrl} className="block w-full h-full relative">
-                            <img
-                              src={resolveUploadUrl(activeSub.vc_image || vc.vc_image)}
-                              alt={subTitle}
-                              onError={(e) => {
-                                (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                              }}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-center justify-center">
-                              <span className="w-11 h-11 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
-                                ▶
-                              </span>
-                            </div>
-                          </Link>
-                          <span className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
-                            {parentTitle}
-                          </span>
-                        </div>
-
-                        <div className="p-5 flex-1 flex flex-col justify-between">
-                          <div>
-                            <Link
-                              to={targetUrl}
-                              className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2"
-                            >
-                              {subTitle}
-                            </Link>
-                            <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
-                              {truncateWords(descText, 165)}
-                            </p>
-                          </div>
-
-                          <div className="pt-4 mt-4 border-t border-slate-100">
-                            <Link
-                              to={targetUrl}
-                              className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
-                            >
-                              <span>{t('Related Post')}</span>
-                              <span>→</span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </section>
-            )}
-
-            {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) */}
-            {renderCategorySection(3, 'Other learning materials', <Layers className="w-4 h-4" />)}
           </div>
 
-          {/* RIGHT SIDEBAR (4 cols) */}
-          <aside className="lg:col-span-4 space-y-6">
+          {/* RIGHT SIDEBAR (4 cols): ENROLMENT CARD (Matched height with Top Focus Band) */}
+          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
             {/* 1. ENROLMENT / OPENING CLASSES CARD */}
             <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
               <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 py-4 flex items-center justify-between">
@@ -953,7 +849,7 @@ export const HomePage: React.FC = () => {
                   <Calendar className="w-4 h-4 text-[#2ab4e8]" />
                   <span>{t('Enrolment')}</span>
                 </h3>
-                <Link to="/opening" className="text-sm font-bold text-[#2ab4e8] hover:underline">
+                <Link to="/opening" className="text-sm font-bold text-[#2ab4e8] hover:underline whitespace-nowrap shrink-0">
                   {lang === 'vi' ? 'Chi tiết →' : 'More →'}
                 </Link>
               </div>
@@ -1043,63 +939,162 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* 2. TESTIMONIALS POSITION 0 */}
-            {testiPos0.map((testValue) => {
-              const title =
-                lang === 'vi'
-                  ? testValue.testimonial_title_vi || testValue.testimonial_title_en
-                  : testValue.testimonial_title_en || testValue.testimonial_title_vi;
-              const contentHtml =
-                lang === 'vi'
-                  ? testValue.testimonial_content_vi || testValue.testimonial_content_en
-                  : testValue.testimonial_content_en || testValue.testimonial_content_vi;
-              return (
-                <div
-                  key={testValue.testimonial_id}
-                  className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden"
-                >
-                  {title && title.trim() !== '' && (
-                    <div className="px-6 py-4 bg-slate-50 border-b border-slate-200">
-                      <h3 className="font-black text-slate-800 text-base">{title}</h3>
-                    </div>
-                  )}
-                  <div
-                    className="p-5 legacy-prose"
-                    dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(contentHtml) }}
-                  />
-                </div>
-              );
-            })}
-
-            {/* 3. TESTIMONIALS POSITION 1 */}
-            {testiPos1.map((testValue) => {
-              const title =
-                lang === 'vi'
-                  ? testValue.testimonial_title_vi || testValue.testimonial_title_en
-                  : testValue.testimonial_title_en || testValue.testimonial_title_vi;
-              const contentHtml =
-                lang === 'vi'
-                  ? testValue.testimonial_content_vi || testValue.testimonial_content_en
-                  : testValue.testimonial_content_en || testValue.testimonial_content_vi;
-              return (
-                <div
-                  key={testValue.testimonial_id}
-                  className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden"
-                >
-                  {title && title.trim() !== '' && (
-                    <div className="px-6 py-4 bg-slate-50 border-b border-slate-200">
-                      <h3 className="font-black text-slate-800 text-base">{title}</h3>
-                    </div>
-                  )}
-                  <div
-                    className="p-5 legacy-prose"
-                    dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(contentHtml) }}
-                  />
-                </div>
-              );
-            })}
           </aside>
+        </div>
+
+        {/* FULL-WIDTH SHOWCASE BAND: TESTIMONIALS / HỌC TẠI TONYENGLISH (Clean Modernized Cards, Zero Dead Space) */}
+        {(testiPos0.length > 0 || testiPos1.length > 0) && (
+          <section className="space-y-5">
+            <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-2xs shrink-0">
+                  <GraduationCap className="w-4 h-4" />
+                </span>
+                <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
+                  {lang === 'vi' ? 'Học tại TonyEnglish & Cảm nhận Học viên' : 'Study at TonyEnglish & Testimonials'}
+                </h2>
+              </div>
+              <Link to="/courses" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
+                {lang === 'vi' ? 'Xem các khóa học →' : 'View courses →'}
+              </Link>
+            </div>
+            <div className={`grid grid-cols-1 ${(testiPos0.length + testiPos1.length) >= 2 ? 'md:grid-cols-2' : ''} gap-6`}>
+              {[...testiPos0, ...testiPos1].map((testValue) => {
+                const title =
+                  lang === 'vi'
+                    ? testValue.testimonial_title_vi || testValue.testimonial_title_en
+                    : testValue.testimonial_title_en || testValue.testimonial_title_vi;
+                const contentHtml =
+                  lang === 'vi'
+                    ? testValue.testimonial_content_vi || testValue.testimonial_content_en
+                    : testValue.testimonial_content_en || testValue.testimonial_content_vi;
+                return (
+                  <div
+                    key={testValue.testimonial_id}
+                    className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow overflow-hidden flex flex-col"
+                  >
+                    {title && title.trim() !== '' && (
+                      <div className="px-6 py-4 bg-gradient-to-r from-slate-50 to-sky-50/40 border-b border-slate-200/80 flex items-center gap-2">
+                        <span className="w-1.5 h-4 rounded-full bg-[#2ab4e8] shrink-0" />
+                        <h3 className="font-black text-slate-800 text-base">{title}</h3>
+                      </div>
+                    )}
+                    <div
+                      className="p-5 sm:p-6 legacy-prose text-[15px] [&_a]:!no-underline [&_a]:!not-italic [&_a]:text-slate-700 [&_a:hover]:text-[#0a5482] [&_em]:not-italic [&_i]:not-italic [&_img]:max-h-56 [&_img]:object-contain [&_img]:rounded-xl"
+                      dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(contentHtml) }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* FULL-WIDTH MAGAZINE SECTIONS 2–6 (3-Column Balanced Grid, Zero Empty Right Column) */}
+        <div className="space-y-12">
+          {/* SECTION 2: READING PRACTICE (focus = 5) */}
+          {renderCategorySection(5, 'Reading Practice', <BookOpen className="w-4 h-4" />)}
+
+          {/* SECTION 3: LEARNING THROUGH CONVERSATION (focus = 4) */}
+          {renderCategorySection(4, 'Learning Through Conversation', <MessageCircle className="w-4 h-4" />)}
+
+          {/* SECTION 4: WORDS IN THE NEWS (focus = 1) */}
+          {renderCategorySection(1, 'Words In The news', <Globe className="w-4 h-4" />)}
+
+          {/* SECTION 5: VIDEOS STORE */}
+          {featuredVideoParents.length > 0 && (
+            <section className="space-y-5">
+              <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-2xs shrink-0">
+                    <Video className="w-4 h-4" />
+                  </span>
+                  <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
+                    {t('Videos store')}
+                  </h2>
+                </div>
+                <Link to="/videos" className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0">
+                  {lang === 'vi' ? 'Xem Kho Video →' : 'All Videos →'}
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {featuredVideoParents.map((vc) => {
+                  const childCates = allVideoCategories.filter(
+                    (sub) => Number(sub.vc_parent) === Number(vc.vc_id)
+                  );
+                  const activeSub =
+                    childCates.length > 0 ? childCates[videoSlideIdx % childCates.length] : vc;
+                  const parentTitle = lang === 'vi' ? vc.vc_name_vi || vc.vc_name : vc.vc_name;
+                  const subTitle =
+                    lang === 'vi'
+                      ? activeSub.vc_name_vi || activeSub.vc_name
+                      : activeSub.vc_name || parentTitle;
+                  const descText =
+                    lang === 'vi' ? vc.vc_desc_vi || vc.vc_desc : vc.vc_desc || vc.vc_desc_vi;
+                  const targetUrl =
+                    childCates.length > 0
+                      ? `/video/${(activeSub.vc_name_url || '').trim()}`
+                      : `/videos/${(vc.vc_name_url || '').trim()}`;
+
+                  return (
+                    <div
+                      key={vc.vc_id}
+                      className="group bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex flex-col"
+                    >
+                      <div className="relative h-48 overflow-hidden bg-slate-900">
+                        <Link to={targetUrl} className="block w-full h-full relative">
+                          <img
+                            src={resolveUploadUrl(activeSub.vc_image || vc.vc_image)}
+                            alt={subTitle}
+                            onError={(e) => {
+                              (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                            }}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-transparent to-transparent flex items-center justify-center">
+                            <span className="w-11 h-11 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
+                              ▶
+                            </span>
+                          </div>
+                        </Link>
+                        <span className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
+                          {parentTitle}
+                        </span>
+                      </div>
+
+                      <div className="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                          <Link
+                            to={targetUrl}
+                            className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2"
+                          >
+                            {subTitle}
+                          </Link>
+                          <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
+                            {truncateWords(descText, 165)}
+                          </p>
+                        </div>
+
+                        <div className="pt-4 mt-4 border-t border-slate-100">
+                          <Link
+                            to={targetUrl}
+                            className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                          >
+                            <span>{t('Related Post')}</span>
+                            <span>→</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) */}
+          {renderCategorySection(3, 'Other learning materials', <Layers className="w-4 h-4" />)}
         </div>
       </div>
 
